@@ -99,11 +99,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nidalee/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate - Prowl:</p><p> While in brush, Nidalee gains ghosting and 10% bonus movement speed, increased to 30% while facing a visible enemy champion within 1400 range. The bonuses persist for 2 seconds after leaving brush.</p></div>",
+            "description": "<span class=\"ability-header\">Innate - Prowl:</span> While in brush, Nidalee gains ghosting and 10% bonus movement speed, increased to 30% while facing a visible enemy champion within 1400 range. The bonuses persist for 2 seconds after leaving brush.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate - Hunt:</p><p> Hitting monsters or enemy champions with Javelin Toss or Bushwhack when Nidalee is nearby grants her ghosting and 10% bonus movement speed for 4 seconds and applies a Hunted mark to the target for the same duration, during which they are revealed as well as grant sight of a 300-unit radius around them. The bonus movement speed is increased to 30% while facing a Hunted target. Additionally, the first cast of both Takedown and Pounce against a Hunted target is enhanced.</p></div>",
+            "description": "<span class=\"ability-header\">Innate - Hunt:</span> Hitting monsters or enemy champions with Javelin Toss or Bushwhack when Nidalee is nearby grants her ghosting and 10% bonus movement speed for 4 seconds and applies a Hunted mark to the target for the same duration, during which they are revealed as well as grant sight of a 300-unit radius around them. The bonus movement speed is increased to 30% while facing a Hunted target. Additionally, the first cast of both Takedown and Pounce against a Hunted target is enhanced.",
             "leveling": []
           },
           {
@@ -112,10 +112,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Enemies, Self",
         "spellshieldable": null,
@@ -138,7 +135,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": "3000 / 5500",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -147,7 +145,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nidalee/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Nidalee hurls a javelin in the target direction that deals magic damage to the first enemy hit, increased by 0% - 200% (based on distance traveled).</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Nidalee hurls a javelin in the target direction that deals magic damage to the first enemy hit, increased by 0% - 200% (based on distance traveled).",
             "leveling": [
               {
                 "attribute": "Minimum Magic Damage",
@@ -203,32 +201,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50,
-              55,
-              60,
-              65,
-              70
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50,
+          55,
+          60,
+          65,
+          70
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                6
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          6
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -251,14 +232,15 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       },
       {
         "name": "Takedown",
         "icon": "https://cdn.communitydragon.org/latest/champion/Nidalee/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Nidalee empowers her next basic attack within 10 seconds to have an uncancellable windup, gain 75 bonus range and deal modified magic damage that is increased by an amount for every 1% of the target's missing health.Takedown can critically strike for (75% + 40%) AD bonus magic damage.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Nidalee empowers her next basic attack within 10 seconds to have an uncancellable windup, gain 75 bonus range and deal modified magic damage that is increased by an amount for every 1% of the target's missing health.Takedown can critically strike for (75% + 40%) AD bonus magic damage.",
             "leveling": [
               {
                 "attribute": "Minimum Magic Damage",
@@ -365,7 +347,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Hunt Bonus:</p><p> Hitting a Hunted target increases Takedown's damage by 30%.</p></div>",
+            "description": "<span class=\"ability-header\">Hunt Bonus:</span> Hitting a Hunted target increases Takedown's damage by 30%.",
             "leveling": [
               {
                 "attribute": "Prowl-Enhanced Minimum Damage",
@@ -444,20 +426,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                6
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          50,
+          55,
+          60,
+          65,
+          70
+        ],
+        "cooldown": [
+          6
+        ],
         "targeting": "Auto",
         "affects": "Self, Enemies",
         "spellshieldable": "True",
@@ -480,7 +458,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -489,7 +468,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nidalee/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Nidalee lays a trap at the target location that becomes stealthed after arming over 1.5 seconds, lasting for up to 120 seconds and granting sight within its radius. The trap will spring upon contact with an enemy, dealing magic damage every second over 4 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Nidalee lays a trap at the target location that becomes stealthed after arming over 1.5 seconds, lasting for up to 120 seconds and granting sight within its radius. The trap will spring upon contact with an enemy, dealing magic damage every second over 4 seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage Per Tick",
@@ -553,36 +532,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              30,
-              35,
-              40,
-              45,
-              50
-            ],
-            "units": [
-              ""
-            ]
-          }
+          30,
+          35,
+          40,
+          45,
+          50
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                13,
-                12,
-                11,
-                10,
-                9
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          13,
+          12,
+          11,
+          10,
+          9
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -605,14 +567,15 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "900"
+        "targetRange": "900",
+        "maxCharges": null
       },
       {
         "name": "Pounce",
         "icon": "https://cdn.communitydragon.org/latest/champion/Nidalee/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Killing an enemy while in Cougar Form or using Pounce's Hunt bonus reduces Pounce's current cooldown to a minimum value.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Killing an enemy while in Cougar Form or using Pounce's Hunt bonus reduces Pounce's current cooldown to a minimum value.",
             "leveling": [
               {
                 "attribute": "Reduced Cooldown",
@@ -633,7 +596,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Nidalee leaps a fixed distance in the target direction. Upon arrival, she deals magic damage to nearby enemies.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Nidalee leaps a fixed distance in the target direction. Upon arrival, she deals magic damage to nearby enemies.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -670,7 +633,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Hunted Bonus:</p><p> Nidalee can perform Pounce from an increased range on a Hunted enemy closest to the cursor. She can Pounce to a target location near a Hunted enemy if she is close to them.</p></div>",
+            "description": "<span class=\"ability-header\">Hunted Bonus:</span> Nidalee can perform Pounce from an increased range on a Hunted enemy closest to the cursor. She can Pounce to a target location near a Hunted enemy if she is close to them.",
             "leveling": []
           },
           {
@@ -678,20 +641,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                6
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          30,
+          35,
+          40,
+          45,
+          50
+        ],
+        "cooldown": [
+          13,
+          12,
+          11,
+          10,
+          9
+        ],
         "targeting": "Direction / Location / Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -714,7 +677,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "200 / 250",
-        "targetRange": "375 / 750"
+        "targetRange": "375 / 750",
+        "maxCharges": null
       }
     ],
     "E": [
@@ -723,7 +687,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nidalee/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Nidalee revitalizes herself or the target allied champion, granting the target bonus attack speed for 7 seconds and healing them for an amount that is increased by 0% - 100% (based on target's missing health).</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Nidalee revitalizes herself or the target allied champion, granting the target bonus attack speed for 7 seconds and healing them for an amount that is increased by 0% - 100% (based on target's missing health).",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -796,32 +760,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50,
-              55,
-              60,
-              65,
-              70
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50,
+          55,
+          60,
+          65,
+          70
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                12
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          12
+        ],
         "targeting": "Unit",
         "affects": "Self, Allies",
         "spellshieldable": null,
@@ -844,14 +791,15 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "900"
+        "targetRange": "900",
+        "maxCharges": -1
       },
       {
         "name": "Swipe",
         "icon": "https://cdn.communitydragon.org/latest/champion/Nidalee/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Nidalee slashes in an arc in the target direction, dealing magic damage to enemies hit.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Nidalee slashes in an arc in the target direction, dealing magic damage to enemies hit.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -888,20 +836,16 @@
             ]
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                6
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          50,
+          55,
+          60,
+          65,
+          70
+        ],
+        "cooldown": [
+          12
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -924,7 +868,8 @@
         "angle": "180°",
         "castTime": "0.25",
         "effectRadius": "310",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -933,15 +878,15 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nidalee/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Nidalee switches between her Human Form and Cougar Form.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Nidalee switches between her Human Form and Cougar Form.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Cougar Form:</p><p> Nidalee transforms into a cougar, gaining melee attacks with 125 range and access to her cougar abilities.</p></div>",
+            "description": "<span class=\"ability-header\">Cougar Form:</span> Nidalee transforms into a cougar, gaining melee attacks with 125 range and access to her cougar abilities.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Human Form:</p><p> Nidalee transforms into a human, gaining ranged attacks with 525 range and access to her human abilities. While in this form, applying a Hunted mark will reset Aspect of the Cougar's cooldown.</p></div>",
+            "description": "<span class=\"ability-header\">Human Form:</span> Nidalee transforms into a human, gaining ranged attacks with 525 range and access to her human abilities. While in this form, applying a Hunted mark will reset Aspect of the Cougar's cooldown.",
             "leveling": []
           },
           {
@@ -949,20 +894,12 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                3
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          3
+        ],
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
@@ -985,10 +922,10 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Raised in the deepest jungle, Nidalee is a master tracker who can shapeshift into a ferocious cougar at will. Neither wholly woman nor beast, she viciously defends her territory from any and all trespassers, with carefully placed traps and deft spear throws. She cripples her quarry before pouncing on them in feline form—the lucky few who survive tell tales of a wild woman with razor-sharp instincts, and even sharper claws...",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/nidalee/skins/base/images/nidalee_splash_tile_0.jpg"
+  "lore": "Raised in the deepest jungle, Nidalee is a master tracker who can shapeshift into a ferocious cougar at will. Neither wholly woman nor beast, she viciously defends her territory from any and all trespassers, with carefully placed traps and deft spear throws. She cripples her quarry before pouncing on them in feline form—the lucky few who survive tell tales of a wild woman with razor-sharp instincts, and even sharper claws..."
 }

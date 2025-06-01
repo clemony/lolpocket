@@ -100,7 +100,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Quinn/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Quinn's Blinding Assault against the primary target, Vault, and Skystrike mark enemies hit with Vulnerable for 4 seconds, during which they are revealed. Valor will periodically mark a nearby visible enemy if no Vulnerable targets exist for 1 second.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Quinn's Blinding Assault against the primary target, Vault, and Skystrike mark enemies hit with Vulnerable for 4 seconds, during which they are revealed. Valor will periodically mark a nearby visible enemy if no Vulnerable targets exist for 1 second.",
             "leveling": []
           },
           {
@@ -113,19 +113,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                8
-              ],
-              "units": [
-                " x (0.99 ^ critical strike chance %)"
-              ]
-            }
-          ],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": "False",
@@ -148,7 +136,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": "525",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -157,7 +146,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Quinn/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Quinn sends Valor in the target direction who stops upon hitting an enemy, marking them as Vulnerable and dealing physical damage to all nearby enemies.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Quinn sends Valor in the target direction who stops upon hitting an enemy, marking them as Vulnerable and dealing physical damage to all nearby enemies.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -204,36 +193,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50,
-              55,
-              60,
-              65,
-              70
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50,
+          55,
+          60,
+          65,
+          70
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                11,
-                10.5,
-                10,
-                9.5,
-                9
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          11,
+          10.5,
+          10,
+          9.5,
+          9
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -256,7 +228,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "210",
-        "targetRange": "1050"
+        "targetRange": "1050",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -265,7 +238,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Quinn/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Whenever Quinn uses a basic attack on-attack against a Vulnerable target or consumes their mark, she gains bonus attack speed and bonus movement speed for 2 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Whenever Quinn uses a basic attack on-attack against a Vulnerable target or consumes their mark, she gains bonus attack speed and bonus movement speed for 2 seconds.",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -304,28 +277,20 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Valor grants sight of the surrounding area for 2 seconds and reveals enemy champions within for the same duration.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Valor grants sight of the surrounding area for 2 seconds and reveals enemy champions within for the same duration.",
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                50,
-                45,
-                40,
-                35,
-                30
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          50,
+          45,
+          40,
+          35,
+          30
+        ],
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": "false",
@@ -348,7 +313,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "2100",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -357,7 +323,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Quinn/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Quinn dashes to the target enemy, marking them as Vulnerable, dealing physical damage, knocking them back a very short distance over 0.5 seconds, and slowing them by 50% decaying over 1.5 seconds. She then leaps back 525 units away from them.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Quinn dashes to the target enemy, marking them as Vulnerable, dealing physical damage, knocking them back a very short distance over 0.5 seconds, and slowing them by 50% decaying over 1.5 seconds. She then leaps back 525 units away from them.",
             "leveling": [
               {
                 "attribute": "Physical damage",
@@ -392,32 +358,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                12,
-                11,
-                10,
-                9,
-                8
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          12,
+          11,
+          10,
+          9,
+          8
+        ],
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -440,7 +389,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": "600"
+        "targetRange": "600",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -449,7 +399,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Quinn/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Quinn channels for 2 seconds, signaling Valor to pair up. Upon completion, he picks her up and they unite, increasing her total movement speed, granting her ghosting, and allowing her to cast Skystrike. Behind Enemy Lines can be recast after 0.5 seconds during the channel.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Quinn channels for 2 seconds, signaling Valor to pair up. Upon completion, he picks her up and they unite, increasing her total movement speed, granting her ghosting, and allowing her to cast Skystrike. Behind Enemy Lines can be recast after 0.5 seconds during the channel.",
             "leveling": [
               {
                 "attribute": "Total Movement Speed Increase",
@@ -477,35 +427,18 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Quinn cancels the channel, placing Behind Enemy Lines on cooldown.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Quinn cancels the channel, placing Behind Enemy Lines on cooldown.",
             "leveling": []
           }
         ],
         "cost": [
-          {
-            "values": [
-              100,
-              50,
-              0
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100,
+          50,
+          0
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                3
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          3
+        ],
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
@@ -528,14 +461,15 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       },
       {
         "name": "Skystrike",
         "icon": "https://cdn.communitydragon.org/latest/champion/Quinn/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Quinn detaches from Valor, ending Behind Enemy Lines' effects and raining arrows down around her, dealing 70% AD physical damage to nearby enemies and marking them as Vulnerable.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Quinn detaches from Valor, ending Behind Enemy Lines' effects and raining arrows down around her, dealing 70% AD physical damage to nearby enemies and marking them as Vulnerable.",
             "leveling": []
           },
           {
@@ -543,11 +477,14 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cost": [
+          100,
+          50,
+          0
+        ],
+        "cooldown": [
+          3
+        ],
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -570,10 +507,10 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "700",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Quinn is an elite ranger-knight of Demacia, who undertakes dangerous missions deep in enemy territory. She and her legendary eagle, Valor, share an unbreakable bond, and their foes are often slain before they realize they are fighting not one, but two of the kingdom's greatest heroes. Nimble and acrobatic when required, Quinn takes aim with her crossbow while Valor marks their elusive targets from above, making them a deadly pair on the battlefield.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/quinn/skins/base/images/quinn_splash_tile_0.jpg"
+  "lore": "Quinn is an elite ranger-knight of Demacia, who undertakes dangerous missions deep in enemy territory. She and her legendary eagle, Valor, share an unbreakable bond, and their foes are often slain before they realize they are fighting not one, but two of the kingdom's greatest heroes. Nimble and acrobatic when required, Quinn takes aim with her crossbow while Valor marks their elusive targets from above, making them a deadly pair on the battlefield."
 }

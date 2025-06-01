@@ -99,19 +99,16 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Twitch/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Twitch's basic attacks on-hit apply a stack of Deadly Venom for 6 seconds, refreshing on subsequent applications and stacking up to 6 times.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Twitch's basic attacks on-hit apply a stack of Deadly Venom for 6 seconds, refreshing on subsequent applications and stacking up to 6 times.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Deadly Venom:</p><p> For each stack, the target is dealt[ 1 / 2 / 3 / 4 / 5 (based on level) (+ 3% AP) true damage per second over the duration, ][ 6 / 12 / 18 / 24 / 30 (based on level) (+ 18% AP) total true damage over the duration, ]for a maximum of[ 6 / 12 / 18 / 24 / 30 (based on level) (+ 18% AP) true damage with each tick. ][ 36 / 72 / 108 / 144 / 180 (based on level) (+ 108% AP) total true damage over the duration. ]This effect is considered a poison.</p></div>",
+            "description": "<span class=\"ability-header\">Deadly Venom:</span> For each stack, the target is dealt[ 1 / 2 / 3 / 4 / 5 (based on level) (+ 3% AP) true damage per second over the duration, ][ 6 / 12 / 18 / 24 / 30 (based on level) (+ 18% AP) total true damage over the duration, ]for a maximum of[ 6 / 12 / 18 / 24 / 30 (based on level) (+ 18% AP) true damage with each tick. ][ 36 / 72 / 108 / 144 / 180 (based on level) (+ 108% AP) total true damage over the duration. ]This effect is considered a poison.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Enemies",
         "spellshieldable": "False",
@@ -134,7 +131,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -143,7 +141,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Twitch/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> After a 1-second delay, Twitch becomes camouflaged for a duration. Attacking or casting Venom Cask or Contaminate ends Ambush immediately.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> After a 1-second delay, Twitch becomes camouflaged for a duration. Attacking or casting Venom Cask or Contaminate ends Ambush immediately.",
             "leveling": [
               {
                 "attribute": "Stealth Duration",
@@ -196,28 +194,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              40
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                16
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          16
+        ],
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
@@ -240,7 +221,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -249,7 +231,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Twitch/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Twitch hurls a cask of venom that explodes at the target location, applying Deadly Venom to enemies hit and granting sight of the area.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Twitch hurls a cask of venom that explodes at the target location, applying Deadly Venom to enemies hit and granting sight of the area.",
             "leveling": []
           },
           {
@@ -284,32 +266,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              70
-            ],
-            "units": [
-              ""
-            ]
-          }
+          70
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                13,
-                12,
-                11,
-                10,
-                9
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          13,
+          12,
+          11,
+          10,
+          9
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -332,7 +297,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "950"
+        "targetRange": "950",
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -341,7 +307,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Twitch/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Twitch sends out a lethal toxin to each nearby enemy afflicted by Deadly Venom, dealing them physical damage.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Twitch sends out a lethal toxin to each nearby enemy afflicted by Deadly Venom, dealing them physical damage.",
             "leveling": [
               {
                 "attribute": "Base Physical Damage",
@@ -363,7 +329,7 @@
             ]
           },
           {
-            "description": "Contaminate deals additional physical damage and 30% AP magic damage for each stack of Deadly Venom on the target.",
+            "description": "Contaminate deals additional physical damage and 35% AP magic damage for each stack of Deadly Venom on the target.",
             "leveling": [
               {
                 "attribute": "Physical Damage Per Stack",
@@ -415,7 +381,7 @@
                   },
                   {
                     "values": [
-                      30
+                      35
                     ],
                     "units": [
                       "% AP"
@@ -448,7 +414,7 @@
                   },
                   {
                     "values": [
-                      180
+                      210
                     ],
                     "units": [
                       "% AP"
@@ -464,36 +430,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50,
-              60,
-              70,
-              80,
-              90
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50,
+          60,
+          70,
+          80,
+          90
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                12,
-                11,
-                10,
-                9,
-                8
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          12,
+          11,
+          10,
+          9,
+          8
+        ],
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -516,7 +465,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "1200",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -525,7 +475,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Twitch/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Twitch gains bonus attack damage and 300 bonus attack range for 6 seconds, during which his basic attacks are replaced by bolts that travel slightly further than his attack range in a straight line, dealing damage to every enemy unit hit.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Twitch gains bonus attack damage and 300 bonus attack range for 6 seconds, during which his basic attacks are replaced by bolts that travel slightly further than his attack range in a straight line, dealing damage to every enemy unit hit.",
             "leveling": [
               {
                 "attribute": "Bonus Attack Damage",
@@ -550,28 +500,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                90
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          90
+        ],
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
@@ -594,10 +527,10 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": "Twitch's  attack range"
+        "targetRange": "Twitch's  attack range",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "A Zaunite plague rat by birth, but a connoisseur of filth by passion, Twitch is not afraid to get his paws dirty. Aiming a chem-powered crossbow at the gilded heart of Piltover, he has vowed to show those in the city above just how filthy they really are. Always a sneaky sneak, when he's not rooting around in the Sump, he's digging deep into other people's garbage for discarded treasures… and perhaps a moldy sandwich.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/twitch/skins/base/images/twitch_splash_tile_0.jpg"
+  "lore": "A Zaunite plague rat by birth, but a connoisseur of filth by passion, Twitch is not afraid to get his paws dirty. Aiming a chem-powered crossbow at the gilded heart of Piltover, he has vowed to show those in the city above just how filthy they really are. Always a sneaky sneak, when he's not rooting around in the Sump, he's digging deep into other people's garbage for discarded treasures… and perhaps a moldy sandwich."
 }

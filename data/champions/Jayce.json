@@ -101,15 +101,12 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jayce/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Whenever Jayce switches between either Hammer Stance or Cannon Stance, he gains ghosting and 40 bonus movement speed for 0.75 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Whenever Jayce switches between either Hammer Stance or Cannon Stance, he gains ghosting and 40 bonus movement speed for 0.75 seconds.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -132,7 +129,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -141,7 +139,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jayce/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Jayce leaps to the target enemy's location over 0.5 seconds. Upon arrival, he smashes his hammer to the ground to deal physical damage to all enemies within an area and slow them for 2 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Jayce leaps to the target enemy's location over 0.5 seconds. Upon arrival, he smashes his hammer to the ground to deal physical damage to all enemies within an area and slow them for 2 seconds.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -195,33 +193,16 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              40
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                16,
-                14,
-                12,
-                10,
-                8,
-                6
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          16,
+          14,
+          12,
+          10,
+          8,
+          6
+        ],
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -244,14 +225,15 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "300",
-        "targetRange": "600"
+        "targetRange": "600",
+        "maxCharges": -1
       },
       {
         "name": "Shock Blast",
         "icon": "https://cdn.communitydragon.org/latest/champion/Jayce/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Jayce fires an electric bolt in the target direction that detonates upon hitting an enemy or reaching maximum range, dealing physical damage to nearby enemies and granting sight of the area for 1.25 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Jayce fires an electric bolt in the target direction that detonates upon hitting an enemy or reaching maximum range, dealing physical damage to nearby enemies and granting sight of the area for 1.25 seconds.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -282,7 +264,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">If the bolt passes through Acceleration Gate, it becomes supercharged:</p><p> increasing its damage by 40% as well as its speed, range and explosion radius.</p></div>",
+            "description": "<span class=\"ability-header\">If the bolt passes through Acceleration Gate, it becomes supercharged:</span> increasing its damage by 40% as well as its speed, range and explosion radius.",
             "leveling": [
               {
                 "attribute": "Increased Damage",
@@ -314,33 +296,16 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              55,
-              60,
-              65,
-              70,
-              75,
-              80
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                8
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          16,
+          14,
+          12,
+          10,
+          8,
+          6
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "true",
@@ -363,7 +328,8 @@
         "angle": null,
         "castTime": "0.2143",
         "effectRadius": "170 / 250 /  160 / 250",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -372,7 +338,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jayce/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Jayce's basic attacks restore mana on-hit.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Jayce's basic attacks restore mana on-hit.",
             "leveling": [
               {
                 "attribute": "Mana Restored",
@@ -395,7 +361,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Jayce surrounds himself with an electric field for 4 seconds that deals magic damage every second to nearby enemies.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Jayce surrounds himself with an electric field for 4 seconds that deals magic damage every second to nearby enemies.",
             "leveling": [
               {
                 "attribute": "Magic Damage Per Tick",
@@ -453,28 +419,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              40
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                10
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          10
+        ],
         "targeting": "Auto",
         "affects": "Self, Enemies",
         "spellshieldable": null,
@@ -497,14 +446,15 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "350",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       },
       {
         "name": "Hyper Charge",
         "icon": "https://cdn.communitydragon.org/latest/champion/Jayce/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Jayce empowers his next 3 basic attacks within 4 seconds to deal modified physical damage and gain 360% bonus attack speed.Hyper Charge's total damage is affected by critical strike modifiers.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Jayce empowers his next 3 basic attacks within 4 seconds to deal modified physical damage and gain 360% bonus attack speed.Hyper Charge's total damage is affected by critical strike modifiers.",
             "leveling": [
               {
                 "attribute": "Damage Modifier",
@@ -532,33 +482,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              40
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                13,
-                11.4,
-                9.8,
-                8.2,
-                6.6,
-                5
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          10
+        ],
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
@@ -581,7 +509,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -590,7 +519,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jayce/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Jayce roots the target enemy over the cast time, then swings his hammer at them to deal magic damage, capped against monsters, and knock them back 600 units.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Jayce roots the target enemy over the cast time, then swings his hammer at them to deal magic damage, capped against monsters, and knock them back 600 units.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -644,33 +573,16 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              55
-            ],
-            "units": [
-              ""
-            ]
-          }
+          55
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                20,
-                18,
-                16,
-                14,
-                12,
-                10
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          20,
+          18,
+          16,
+          14,
+          12,
+          10
+        ],
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -693,14 +605,15 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "240"
+        "targetRange": "240",
+        "maxCharges": -1
       },
       {
         "name": "Acceleration Gate",
         "icon": "https://cdn.communitydragon.org/latest/champion/Jayce/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Jayce deploys an energy gate centered at the target location, lasting for 4 seconds and granting sight of its surroundings. Jayce and all allied champions can move through it to gain bonus movement speed that decays over 3 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Jayce deploys an energy gate centered at the target location, lasting for 4 seconds and granting sight of its surroundings. Jayce and all allied champions can move through it to gain bonus movement speed that decays over 3 seconds.",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -728,28 +641,16 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50
-            ],
-            "units": [
-              ""
-            ]
-          }
+          55
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                16
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          20,
+          18,
+          16,
+          14,
+          12,
+          10
+        ],
         "targeting": "Location",
         "affects": "Allies",
         "spellshieldable": null,
@@ -772,7 +673,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": "650"
+        "targetRange": "650",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -781,7 +683,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jayce/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Jayce transforms into Cannon Stance, receiving access to its abilities, becoming ranged with 500 attack range, and empowering his next basic attack to reduce the target's armor and magic resistance by 10 / 15 / 20 / 25% (based on level) for 5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Jayce transforms into Cannon Stance, receiving access to its abilities, becoming ranged with 500 attack range, and empowering his next basic attack to reduce the target's armor and magic resistance by 10 / 15 / 20 / 25% (based on level) for 5 seconds.",
             "leveling": []
           },
           {
@@ -789,20 +691,12 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                6
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          6
+        ],
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
@@ -825,14 +719,15 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       },
       {
         "name": "Transform Mercury Hammer",
         "icon": "https://cdn.communitydragon.org/latest/champion/Jayce/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Jayce transforms into Hammer Stance, receiving access to its abilities, becoming melee with 125 attack range, gaining 5 / 15 / 25 / 35 (based on level) (+ 7.5% bonus AD) bonus armor and bonus magic resistance, and empowering his next basic attack to deal 25 / 60 / 95 / 130 (based on level) (+ 30% bonus AD) bonus magic damage.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Jayce transforms into Hammer Stance, receiving access to its abilities, becoming melee with 125 attack range, gaining 5 / 15 / 25 / 35 (based on level) (+ 7.5% bonus AD) bonus armor and bonus magic resistance, and empowering his next basic attack to deal 25 / 60 / 95 / 130 (based on level) (+ 30% bonus AD) bonus magic damage.",
             "leveling": []
           },
           {
@@ -840,20 +735,12 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                6
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          6
+        ],
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
@@ -876,10 +763,10 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Jayce Talis is a brilliant inventor who, along with his friend Viktor, made the first great discoveries in the field of hextech. Celebrated across Piltover, he tries to live up to his reputation as \"the Man of Progress,\" but often struggles with the expectations placed upon him. Because of this, Jayce has begun to see the ways in which his invention has furthered the division between Piltover and Zaun—and armed with his hextech hammer, he stands ready to defend tomorrow.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/jayce/skins/base/images/jayce_splash_tile_0.jpg"
+  "lore": "Jayce Talis is a brilliant inventor who, along with his friend Viktor, made the first great discoveries in the field of hextech. Celebrated across Piltover, he tries to live up to his reputation as \"the Man of Progress,\" but often struggles with the expectations placed upon him. Because of this, Jayce has begun to see the ways in which his invention has furthered the division between Piltover and Zaun—and armed with his hextech hammer, he stands ready to defend tomorrow."
 }

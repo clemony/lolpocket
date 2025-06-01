@@ -94,7 +94,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Shen/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> After completing an ability's effects, Shen grants himself a shield for 47 - 120 (based on level) (+ 13% bonus health) for 2.5 seconds. If Shen affects at least one other champion with an ability, Ki Barrier's cooldown is reduced by 4 - 8 (based on level) seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> After completing an ability's effects, Shen grants himself a shield for 47 - 120 (based on level) (+ 13% bonus health) for 2.5 seconds. If Shen affects at least one other champion with an ability, Ki Barrier's cooldown is reduced by 4 - 8 (based on level) seconds.",
             "leveling": []
           },
           {
@@ -103,19 +103,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                11
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -138,7 +126,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -147,7 +136,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Shen/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Shen recalls his Spirit Blade to his location. Enemy champions hit are slowed for the next 2 seconds while moving away from Shen.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Shen recalls his Spirit Blade to his location. Enemy champions hit are slowed for the next 2 seconds while moving away from Shen.",
             "leveling": [
               {
                 "attribute": "Slow",
@@ -370,36 +359,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              140,
-              130,
-              120,
-              110,
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          140,
+          130,
+          120,
+          110,
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                8,
-                7.25,
-                6.5,
-                5.75,
-                5
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          8,
+          7.25,
+          6.5,
+          5.75,
+          5
+        ],
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -422,7 +394,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "Global",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -431,37 +404,20 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Shen/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Shen primes his Spirit Blade, creating an area around it. After 2 seconds, or when Shen or an allied champion enters the area, the Spirit Blade generates a protective zone for 1.75 seconds, blocking all non- turret basic attacks that hit Shen or allied champions in the area.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Shen primes his Spirit Blade, creating an area around it. After 2 seconds, or when Shen or an allied champion enters the area, the Spirit Blade generates a protective zone for 1.75 seconds, blocking all non- turret basic attacks that hit Shen or allied champions in the area.",
             "leveling": []
           }
         ],
         "cost": [
-          {
-            "values": [
-              40
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                16,
-                14.5,
-                13,
-                11.5,
-                10
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          16,
+          14.5,
+          13,
+          11.5,
+          10
+        ],
         "targeting": "Auto",
         "affects": "Allies",
         "spellshieldable": null,
@@ -484,7 +440,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "350",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -493,11 +450,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Shen/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Dealing damage with Twilight Assault or Shadow Dash restores 30 / 40 / 50 (based on level) energy.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Dealing damage with Twilight Assault or Shadow Dash restores 30 / 40 / 50 (based on level) energy.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Shen dashes to the target location, dealing physical damage to enemy champions and monsters he passes through and taunting them for 1.5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Shen dashes to the target location, dealing physical damage to enemy champions and monsters he passes through and taunting them for 1.5 seconds.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -532,32 +489,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              150
-            ],
-            "units": [
-              ""
-            ]
-          }
+          150
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                18,
-                16,
-                14,
-                12,
-                10
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          18,
+          16,
+          14,
+          12,
+          10
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -580,7 +520,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": "600 / 300"
+        "targetRange": "600 / 300",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -589,7 +530,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Shen/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Shen focuses his will, channeling for 3 seconds and granting the target allied champion a shield for 5 seconds at the time of cast, increased by 0% - 60% (based on target's missing health).</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Shen focuses his will, channeling for 3 seconds and granting the target allied champion a shield for 5 seconds at the time of cast, increased by 0% - 60% (based on target's missing health).",
             "leveling": [
               {
                 "attribute": "Minimum Shield Strength",
@@ -660,22 +601,14 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                200,
-                180,
-                160
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          200,
+          180,
+          160
+        ],
         "targeting": "Unit",
         "affects": "Allies",
         "spellshieldable": null,
@@ -698,10 +631,10 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": "Global"
+        "targetRange": "Global",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Among the secretive, Ionian warriors known as the Kinkou, Shen serves as their leader, the Eye of Twilight. He longs to remain free from the confusion of emotion, prejudice, and ego, and walks the unseen path of dispassionate judgment between the spirit realm and the physical world. Tasked with enforcing the equilibrium between them, Shen wields blades of steel and arcane energy against any who would threaten it.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/shen/skins/base/images/shen_splash_tile_0.jpg"
+  "lore": "Among the secretive, Ionian warriors known as the Kinkou, Shen serves as their leader, the Eye of Twilight. He longs to remain free from the confusion of emotion, prejudice, and ego, and walks the unseen path of dispassionate judgment between the spirit realm and the physical world. Tasked with enforcing the equilibrium between them, Shen wields blades of steel and arcane energy against any who would threaten it."
 }

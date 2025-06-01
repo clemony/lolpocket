@@ -99,15 +99,12 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/MissFortune/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Miss Fortune's basic attacks are empowered to apply a mark that expires upon attacking a new enemy. If the enemy was unmarked, this also deals 50% - 100% (based on level) AD bonus physical damage, halved to 25% - 50% (based on level) AD against minions.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Miss Fortune's basic attacks are empowered to apply a mark that expires upon attacking a new enemy. If the enemy was unmarked, this also deals 50% - 100% (based on level) AD bonus physical damage, halved to 25% - 50% (based on level) AD against minions.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Enemies",
         "spellshieldable": null,
@@ -130,7 +127,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -139,7 +137,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/MissFortune/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Miss Fortune fires a shot at the target enemy that deals physical damage, triggers on-attack effects, and bounces to hit another enemy behind them, applying on-hit effects to both enemies hit.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Miss Fortune fires a shot at the target enemy that deals physical damage, triggers on-attack effects, and bounces to hit another enemy behind them, applying on-hit effects to both enemies hit.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -186,32 +184,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              40
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                7,
-                6,
-                5,
-                4,
-                3
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          7,
+          6,
+          5,
+          4,
+          3
+        ],
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "Special",
@@ -234,7 +215,8 @@
         "angle": "160°",
         "castTime": "Basic Attack Timer",
         "effectRadius": "500",
-        "targetRange": "Miss Fortune's  attack range"
+        "targetRange": "Miss Fortune's  attack range",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -243,7 +225,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/MissFortune/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Miss Fortune gains bonus movement speed after 4 seconds without taking non- persistent damage. This bonus is increased after another 3 seconds, and is granted instantly whenever Strut is cast or upon respawning.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Miss Fortune gains bonus movement speed after 4 seconds without taking non- persistent damage. This bonus is increased after another 3 seconds, and is granted instantly whenever Strut is cast or upon respawning.",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -282,7 +264,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Miss Fortune gains bonus attack speed for 4 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Miss Fortune gains bonus attack speed for 4 seconds.",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -309,28 +291,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              45
-            ],
-            "units": [
-              ""
-            ]
-          }
+          45
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                12
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          12
+        ],
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
@@ -353,7 +318,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -362,7 +328,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/MissFortune/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Miss Fortune casts a storm of bullets at the target location for 2 seconds, granting sight of the area, dealing magic damage every 0.25 seconds to enemies within, and slowing them by 40% (+ 6% per 100 AP).</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Miss Fortune casts a storm of bullets at the target location for 2 seconds, granting sight of the area, dealing magic damage every 0.25 seconds to enemies within, and slowing them by 40% (+ 6% per 100 AP).",
             "leveling": [
               {
                 "attribute": "Magic Damage Per Tick",
@@ -422,32 +388,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              80
-            ],
-            "units": [
-              ""
-            ]
-          }
+          80
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                18,
-                17,
-                16,
-                15,
-                14
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          18,
+          17,
+          16,
+          15,
+          14
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "False",
@@ -458,7 +407,7 @@
         "onHitEffects": null,
         "occurrence": null,
         "notes": "Make It Rain's  slow cannot be  cleansed.",
-        "blurb": "Active: Miss Fortune casts a storm of bullets at the target location for a short time, which continually deals magic damage and  slows enemies within.",
+        "blurb": "Active:  Miss Fortune casts a storm of bullets at the target location for a short time, which continually deals magic damage and  slows enemies within.",
         "missileSpeed": null,
         "rechargeRate": null,
         "collisionRadius": null,
@@ -470,7 +419,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "200",
-        "targetRange": "1000"
+        "targetRange": "1000",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -479,7 +429,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/MissFortune/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Miss Fortune channels for up to 3 seconds, firing a number of waves of bullets in the target direction. Each wave is in a spread of 6 projectiles that deals 75% AD (+ 25% AP) physical damage to enemies hit.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Miss Fortune channels for up to 3 seconds, firing a number of waves of bullets in the target direction. Each wave is in a spread of 6 projectiles that deals 75% AD (+ 25% AP) physical damage to enemies hit.",
             "leveling": [
               {
                 "attribute": "Total Waves",
@@ -544,30 +494,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                120,
-                110,
-                100
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          120,
+          110,
+          100
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "False",
@@ -590,10 +523,10 @@
         "angle": "30°",
         "castTime": "none",
         "effectRadius": "1450",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "A Bilgewater captain famed for her looks but feared for her ruthlessness, Sarah Fortune paints a stark figure among the hardened criminals of the port city. As a child, she witnessed the reaver king Gangplank murder her family—an act she brutally avenged years later, blowing up his flagship while he was still aboard. Those who underestimate her will face a beguiling and unpredictable opponent… and, likely, a bullet or two in their guts.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/missfortune/skins/base/images/missfortune_splash_tile_0.jpg"
+  "lore": "A Bilgewater captain famed for her looks but feared for her ruthlessness, Sarah Fortune paints a stark figure among the hardened criminals of the port city. As a child, she witnessed the reaver king Gangplank murder her family—an act she brutally avenged years later, blowing up his flagship while he was still aboard. Those who underestimate her will face a beguiling and unpredictable opponent… and, likely, a bullet or two in their guts."
 }

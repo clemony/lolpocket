@@ -14,7 +14,7 @@ const emit = defineEmits(['update:spell'])
 
 const pocket = ref(props.pocket)
 
-const { spells } = await useIndexLookup()
+const ix = useIndexStore()
 
 const selectedSpell = computed (() => {
   return props.selectedSpell
@@ -48,7 +48,7 @@ const selectedSpell = computed (() => {
       <div class="gap-3 place-content-evenly grid grid-cols-3  ">
         <CustomPopoverArrow />
         <PopoverClose
-          v-for="ss in spells"
+          v-for="ss in ix.spells"
           :key="ss.name"
           :disabled="selectedSpell == ss"
           class="disabled:grayscale transition-all duration-400 disabled:inset-shadow-sm disabled:opacity-70 disabled:scale-80 shadow-sm size-16 rounded-lg border border-b3/30 hover:border-neutral hover:ring-2 hover:ring-b3/60 !cursor-pointer ring-offset-1 ring-offset-neutral">

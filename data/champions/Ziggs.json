@@ -100,7 +100,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ziggs/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Periodically, Ziggs empowers his next basic attack to deal 20 - 160 (based on level) (+ 50% AP) bonus magic damage,[ increased by 75% against structures. ][ increased to 35 - 280 (based on level) (+ 87.5% AP) against structures. ]</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Periodically, Ziggs empowers his next basic attack to deal 20 - 160 (based on level) (+ 50% AP) bonus magic damage,[ increased by 75% against structures. ][ increased to 35 - 280 (based on level) (+ 87.5% AP) against structures. ]",
             "leveling": []
           },
           {
@@ -109,19 +109,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                12
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Enemies",
         "spellshieldable": "False",
@@ -144,7 +132,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -153,7 +142,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ziggs/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Ziggs throws a bomb to the target location that bounces forward up to two times, with the distance traveled each time being based on how far it was originally thrown.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Ziggs throws a bomb to the target location that bounces forward up to two times, with the distance traveled each time being based on how far it was originally thrown.",
             "leveling": []
           },
           {
@@ -192,36 +181,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50,
-              55,
-              60,
-              65,
-              70
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50,
+          55,
+          60,
+          65,
+          70
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                6,
-                5.5,
-                5,
-                4.5,
-                4
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          6,
+          5.5,
+          5,
+          4.5,
+          4
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "true",
@@ -244,7 +216,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "240",
-        "targetRange": "850"
+        "targetRange": "850",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -253,11 +226,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ziggs/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Ziggs hurls a charge to the target location, remaining there for 4 seconds and granting sight of the area. Satchel Charge can be recast within the duration, and does so automatically afterwards. If recast while in flight, the charge will explode immediately upon landing.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Ziggs hurls a charge to the target location, remaining there for 4 seconds and granting sight of the area. Satchel Charge can be recast within the duration, and does so automatically afterwards. If recast while in flight, the charge will explode immediately upon landing.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Ziggs detonates the charge, causing it to explode to deal magic damage to nearby enemies and knock them back up to 500 units away from the center of the explosion, though not through terrain. If this hits Ziggs, he will dash up to 825 units away from the center.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Ziggs detonates the charge, causing it to explode to deal magic damage to nearby enemies and knock them back over 0.5 seconds up to 500 units away from the center of the explosion, though not through terrain. If this hits Ziggs, he will dash up to 825 units away from the center.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -287,7 +260,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Turret Explosion:</p><p> The explosion also executes enemy turrets within that are below a maximum health threshold.</p></div>",
+            "description": "<span class=\"ability-header\">Turret Explosion:</span> The explosion also executes enemy turrets within that are below a maximum health threshold.",
             "leveling": [
               {
                 "attribute": "Demolition Threshold",
@@ -314,32 +287,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              80
-            ],
-            "units": [
-              ""
-            ]
-          }
+          80
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                20,
-                18,
-                16,
-                14,
-                12
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          20,
+          18,
+          16,
+          14,
+          12
+        ],
         "targeting": "Location / Auto",
         "affects": "Enemies / Self",
         "spellshieldable": "True",
@@ -362,7 +318,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "325 /  400",
-        "targetRange": "1000"
+        "targetRange": "1000",
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -371,7 +328,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ziggs/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Ziggs scatters a cluster of 11 proximity mines over the target location that grant sight of the area for 2 seconds, arming after 0.5 seconds and lasting for up to 10 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Ziggs scatters a cluster of 11 proximity mines over the target location that grant sight of the area for 2 seconds, arming after 0.5 seconds and lasting for up to 10 seconds.",
             "leveling": []
           },
           {
@@ -473,32 +430,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              70,
-              80,
-              90,
-              100,
-              110
-            ],
-            "units": [
-              ""
-            ]
-          }
+          70,
+          80,
+          90,
+          100,
+          110
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                16
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          16
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "Special",
@@ -521,7 +461,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "335 /  135",
-        "targetRange": "900"
+        "targetRange": "900",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -530,7 +471,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ziggs/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Ziggs catapults the Mega Inferno Bomb to the target location, granting sight within a 600 radius around its destination for 4 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Ziggs catapults the Mega Inferno Bomb to the target location, granting sight within a 600 radius around its destination for 4 seconds.",
             "leveling": []
           },
           {
@@ -586,30 +527,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                120,
-                95,
-                70
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          120,
+          95,
+          70
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -632,10 +556,10 @@
         "angle": null,
         "castTime": "0.375",
         "effectRadius": "525",
-        "targetRange": "5000"
+        "targetRange": "5000",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "With a love of big bombs and short fuses, the yordle Ziggs is an explosive force of nature. As an inventor's assistant in Piltover, he was bored by his predictable life and befriended a mad, blue-haired bomber named Jinx. After a wild night on the town, Ziggs took her advice and moved to Zaun, where he now explores his fascinations more freely, terrorizing the chem-barons and regular citizens alike in his never ending quest to blow stuff up.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ziggs/skins/base/images/ziggs_splash_tile_0.jpg"
+  "lore": "With a love of big bombs and short fuses, the yordle Ziggs is an explosive force of nature. As an inventor's assistant in Piltover, he was bored by his predictable life and befriended a mad, blue-haired bomber named Jinx. After a wild night on the town, Ziggs took her advice and moved to Zaun, where he now explores his fascinations more freely, terrorizing the chem-barons and regular citizens alike in his never ending quest to blow stuff up."
 }

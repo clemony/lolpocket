@@ -98,15 +98,12 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Fizz/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Fizz is permanently ghosted and reduces every instance of incoming damage by 4 (+ 1% AP), up to a maximum of 50% reduction.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Fizz is permanently ghosted and reduces every instance of incoming damage by 4 (+ 1% AP), up to a maximum of 50% reduction.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -129,7 +126,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -138,7 +136,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Fizz/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Fizz dashes a fixed distance in the direction of the target enemy. If they are in range upon arrival, he deals magic damage plus 100% AD physical damage and applies on-hit effects.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Fizz dashes a fixed distance in the direction of the target enemy. If they are in range upon arrival, he deals magic damage plus 100% AD physical damage and applies on-hit effects.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -173,32 +171,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                8,
-                7.5,
-                7,
-                6.5,
-                6
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          8,
+          7.5,
+          7,
+          6.5,
+          6
+        ],
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -221,7 +202,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": "550"
+        "targetRange": "550",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -230,7 +212,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Fizz/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Fizz's basic attacks rend enemies on-hit, dealing magic damage every 0.5 seconds over 3 seconds, refreshing on subsequent hits.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Fizz's basic attacks rend enemies on-hit, dealing magic damage every 0.5 seconds over 3 seconds, refreshing on subsequent hits.",
             "leveling": [
               {
                 "attribute": "Total Magic Damage",
@@ -285,7 +267,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Fizz empowers his next basic attack within 4 seconds to have an uncancellable windup, gain 50 bonus range, and deal bonus magic damage.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Fizz empowers his next basic attack within 4 seconds to have an uncancellable windup, gain 50 bonus range, and deal bonus magic damage.",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage",
@@ -371,36 +353,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              30,
-              40,
-              50,
-              60,
-              70
-            ],
-            "units": [
-              ""
-            ]
-          }
+          30,
+          40,
+          50,
+          60,
+          70
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                7,
-                6.5,
-                6,
-                5.5,
-                5
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          7,
+          6.5,
+          6,
+          5.5,
+          5
+        ],
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -423,7 +388,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -432,7 +398,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Fizz/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Fizz dashes to the target location while becoming untargetable, balancing on his trident for 0.75 seconds, during which he can cast Trickster after 0.15 seconds into the duration.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Fizz dashes to the target location while becoming untargetable, balancing on his trident for 0.75 seconds, during which he can cast Trickster after 0.15 seconds into the duration.",
             "leveling": []
           },
           {
@@ -488,36 +454,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              75,
-              80,
-              85,
-              90,
-              95
-            ],
-            "units": [
-              ""
-            ]
-          }
+          75,
+          80,
+          85,
+          90,
+          95
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                16,
-                14,
-                12,
-                10,
-                8
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          16,
+          14,
+          12,
+          10,
+          8
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -540,26 +489,62 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "375",
-        "targetRange": "400"
+        "targetRange": "400",
+        "maxCharges": -1
       },
       {
         "name": "Trickster",
         "icon": "https://cdn.communitydragon.org/latest/champion/Fizz/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Fizz dashes to the target location, hopping down and splashing onto the ground prematurely upon arrival to deal the same damage in a smaller radius but not applying the slow.</p></div>",
-            "leveling": []
+            "description": "<span class=\"ability-header\">Active:</span> Fizz dashes to the target location, hopping down and splashing onto the ground prematurely upon arrival to deal the same magic damage in a smaller radius but not applying the slow.",
+            "leveling": [
+              {
+                "attribute": "Magic Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      80,
+                      130,
+                      180,
+                      230,
+                      280
+                    ],
+                    "units": [
+                      ""
+                    ]
+                  },
+                  {
+                    "values": [
+                      90
+                    ],
+                    "units": [
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
           },
           {
             "description": "Trickster will cast at max range if cast beyond that.",
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cost": [
+          75,
+          80,
+          85,
+          90,
+          95
+        ],
+        "cooldown": [
+          16,
+          14,
+          12,
+          10,
+          8
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -582,7 +567,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": "225",
-        "targetRange": "300"
+        "targetRange": "300",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -591,11 +577,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Fizz/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Fizz throws down a lure at the target location that attracts a shark, granting sight of the area before it emerges to chomp at the lure after 2 seconds, dealing magic damage to nearby enemies, knocking them back, though not through terrain, and slowing them for 2 seconds. The further the lure travels in its initial flight, the larger the shark that is attracted; increasing Chum the Waters' damage, slow, eruption radius and knock back distance.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Fizz throws down a lure at the target location that attracts a shark, granting sight of the area before it emerges to chomp at the lure after 2 seconds, dealing magic damage to nearby enemies, knocking them back, though not through terrain, and slowing them for 2 seconds. The further the lure travels in its initial flight, the larger the shark that is attracted; increasing Chum the Waters' damage, slow, eruption radius and knock back distance.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Guppy (<455):</p><p> 40% slow, 200 eruption radius and 150 unit knock back distance.</p></div>",
+            "description": "<span class=\"ability-header\">Guppy (<455):</span> 40% slow, 200 eruption radius and 150 unit knock back distance.",
             "leveling": [
               {
                 "attribute": "Guppy Damage",
@@ -623,7 +609,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Chomper (455-910):</p><p> 60% slow, 325 eruption radius and 250 unit knock back distance.</p></div>",
+            "description": "<span class=\"ability-header\">Chomper (455-910):</span> 60% slow, 325 eruption radius and 250 unit knock back distance.",
             "leveling": [
               {
                 "attribute": "Chomper Damage",
@@ -651,7 +637,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Gigalodon (>910):</p><p> 80% slow, 450 eruption radius and 350 unit knock back distance.</p></div>",
+            "description": "<span class=\"ability-header\">Gigalodon (>910):</span> 80% slow, 450 eruption radius and 350 unit knock back distance.",
             "leveling": [
               {
                 "attribute": "Gigalodon Damage",
@@ -684,30 +670,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                100,
-                85,
-                70
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          100,
+          85,
+          70
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "special",
@@ -730,10 +699,10 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "1300"
+        "targetRange": "1300",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Fizz is an amphibious yordle, who dwells among the reefs surrounding Bilgewater. He often retrieves and returns the tithes cast into the sea by superstitious captains, but even the saltiest of sailors know better than to cross him—for many are the tales of those who have underestimated this slippery character. Often mistaken for some manner of capricious ocean spirit, he seems able to command the beasts of the deep, and delights in confounding his allies and enemies alike.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/base/images/fizz_splash_tile_0.jpg"
+  "lore": "Fizz is an amphibious yordle, who dwells among the reefs surrounding Bilgewater. He often retrieves and returns the tithes cast into the sea by superstitious captains, but even the saltiest of sailors know better than to cross him—for many are the tales of those who have underestimated this slippery character. Often mistaken for some manner of capricious ocean spirit, he seems able to command the beasts of the deep, and delights in confounding his allies and enemies alike."
 }

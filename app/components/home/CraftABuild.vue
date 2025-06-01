@@ -1,10 +1,8 @@
 <script lang="ts" setup>
-const ds = useDataStore()
+const ix = useIndexStore()
 
-const champions = await $fetch<ChampionIndex[]>('/api/index/champion-index.json')
 
-const items = await $fetch<ItemIndex[]>('/api/index/item-index.json')
-const shuffled = champions.sort(() => 0.5 - Math.random())
+const shuffled = ix.champions.sort(() => 0.5 - Math.random())
 
 // Get sub-array of first n elements after shuffled
 const selectedChamps = shuffled.slice(0, 6)
@@ -64,14 +62,14 @@ function setTimer(timer, i?, item?) {
     else if (timer == 'item') {
       itemModel[i].item.value = item
       itemModel[i].visible.value = false
-      getRandom(items)
+      getRandom(ix.items)
       itemIndex[i + 1].visible.value = true
     }
   }, 2000)
 }
 
 onMounted (async () => {
-  currentItems.value = getRandom(items)
+  currentItems.value = getRandom(ix.items)
 })
 </script>
 

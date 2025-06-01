@@ -101,11 +101,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sylas/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Whenever Sylas casts an ability, he generates a stack of Unshackled for 4 seconds, refreshing on subsequent casts and stacking up to 3 times.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Whenever Sylas casts an ability, he generates a stack of Unshackled for 4 seconds, refreshing on subsequent casts and stacking up to 3 times.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Unshackled:</p><p> Sylas' next basic attack gains 125% bonus attack speed and is empowered to consume a stack to whirl his chains around him, which has an uncancellable windup and deals 130% AD (+ 30% AP) magic damage to the primary target and 40% AD (+ 20% AP) magic damage to nearby enemies.</p></div>",
+            "description": "<span class=\"ability-header\">Unshackled:</span> Sylas' next basic attack gains 125% bonus attack speed and is empowered to consume a stack to whirl his chains around him, which has an uncancellable windup and deals 130% AD (+ 30% AP) magic damage to the primary target and 40% AD (+ 20% AP) magic damage to nearby enemies.",
             "leveling": []
           },
           {
@@ -118,10 +118,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": "False",
@@ -144,7 +141,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": "300",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -153,7 +151,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sylas/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Sylas lashes out two chains that converge to the target location and extend beyond it up to a maximum range, dealing magic damage to enemies hit and slowing them for 1.5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Sylas lashes out two chains that converge to the target location and extend beyond it up to a maximum range, dealing magic damage to enemies hit and slowing them for 1.5 seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -310,32 +308,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              55
-            ],
-            "units": [
-              ""
-            ]
-          }
+          55
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                10,
-                9,
-                8,
-                7,
-                6
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          10,
+          9,
+          8,
+          7,
+          6
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -358,7 +339,8 @@
         "angle": null,
         "castTime": "0.4",
         "effectRadius": "180 / 200",
-        "targetRange": "50 / 775"
+        "targetRange": "50 / 775",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -367,7 +349,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sylas/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Sylas dashes to the front of the target enemy's location then strikes them to deal magic damage.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Sylas dashes to the front of the target enemy's location then strikes them to deal magic damage.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -469,36 +451,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50,
-              60,
-              70,
-              80,
-              90
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50,
+          60,
+          70,
+          80,
+          90
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                12,
-                10.5,
-                9,
-                7.5,
-                6
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          12,
+          10.5,
+          9,
+          7.5,
+          6
+        ],
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "true",
@@ -521,7 +486,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -530,7 +496,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sylas/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Sylas dashes to the target location. Within 3.5 seconds, he can cast Abduct after a 0.2-second delay from casting Abscond.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Sylas dashes to the target location. Within 3.5 seconds, he can cast Abduct after a 0.2-second delay from casting Abscond.",
             "leveling": []
           },
           {
@@ -539,32 +505,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              65
-            ],
-            "units": [
-              ""
-            ]
-          }
+          65
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                13,
-                12,
-                11,
-                10,
-                9
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          13,
+          12,
+          11,
+          10,
+          9
+        ],
         "targeting": "Location",
         "affects": "Self",
         "spellshieldable": null,
@@ -587,14 +536,15 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": "400"
+        "targetRange": "400",
+        "maxCharges": -1
       },
       {
         "name": "Abduct",
         "icon": "https://cdn.communitydragon.org/latest/champion/Sylas/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Sylas whips out his chains in the target direction that deal magic damage to the first enemy hit and reveal and stun them for 0.5 seconds. Upon hitting the target, Sylas dashes to their location and knocks them up for 0.5 seconds upon arrival.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Sylas whips out his chains in the target direction that deal magic damage to the first enemy hit and reveal and stun them for 0.5 seconds. Upon hitting the target, Sylas dashes to their location and knocks them up for 0.5 seconds upon arrival.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -628,11 +578,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cost": [
+          65
+        ],
+        "cooldown": [
+          13,
+          12,
+          11,
+          10,
+          9
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -655,7 +610,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -664,11 +620,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sylas/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Sylas launches his chains at the target enemy champion, gaining a copy of their ultimate ability and revealing them for 0.825 seconds at the start of the cast time. Sylas cannot select the same champion again for a set duration, and can hold the hijacked ultimate for up to 90 seconds, during which he can recast Hijack.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Sylas launches his chains at the target enemy champion, gaining a copy of their ultimate ability and revealing them for 0.825 seconds at the start of the cast time. Sylas cannot select the same champion again for a set duration, and can hold the hijacked ultimate for up to 90 seconds, during which he can recast Hijack.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Sylas casts his hijacked ultimate ability at no cost, scaling based on Hijack's rank and his own statistics.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Sylas casts his hijacked ultimate ability at no cost, scaling based on Hijack's rank and his own statistics.",
             "leveling": []
           },
           {
@@ -677,30 +633,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              75
-            ],
-            "units": [
-              ""
-            ]
-          }
+          75
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                80,
-                55,
-                30
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          80,
+          55,
+          30
+        ],
         "targeting": "Unit",
         "affects": "Self, Enemies",
         "spellshieldable": "True",
@@ -723,10 +662,10 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "950"
+        "targetRange": "950",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Raised in one of Demacia's lesser quarters, Sylas of Dregbourne has come to symbolize the darker side of the Great City. As a boy, his ability to root out hidden sorcery caught the attention of the notorious mageseekers, who eventually imprisoned him for turning those same powers against them. Having now broken free, Sylas lives as a hardened revolutionary, using the magic of those around him to destroy the kingdom he once served… and his band of outcast mage followers seems to grow by the day.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/sylas/skins/base/images/sylas_splash_tile_0.jpg"
+  "lore": "Raised in one of Demacia's lesser quarters, Sylas of Dregbourne has come to symbolize the darker side of the Great City. As a boy, his ability to root out hidden sorcery caught the attention of the notorious mageseekers, who eventually imprisoned him for turning those same powers against them. Having now broken free, Sylas lives as a hardened revolutionary, using the magic of those around him to destroy the kingdom he once served… and his band of outcast mage followers seems to grow by the day."
 }

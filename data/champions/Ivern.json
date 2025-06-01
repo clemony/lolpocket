@@ -100,7 +100,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ivern/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Ivern cannot attack nor damage non-epic monsters. Instead, targeting a jungle camp initiates a 2.5 second channel that will plant a grove upon the camp. Placing a grove costs 94.5 - 0.14 (based on level) health and 90 - 0.37 (based on level) mana. The channel cannot be cancelled in the first 0.15 seconds and in the last 0.5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Ivern cannot attack nor damage non-epic monsters. Instead, targeting a jungle camp initiates a 2.5 second channel that will plant a grove upon the camp. Placing a grove costs 94.5 - 0.14 (based on level) health and 90 - 0.37 (based on level) mana. The channel cannot be cancelled in the first 0.15 seconds and in the last 0.5 seconds.",
             "leveling": []
           },
           {
@@ -117,10 +117,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Unit",
         "affects": "Monsters",
         "spellshieldable": null,
@@ -143,7 +140,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -152,7 +150,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ivern/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Ivern throws a vine in the target direction, dealing magic damage to the first enemy hit and rooting them for a duration, during which they are also revealed. Rootcaller can be recast while the target is rooted.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Ivern throws a vine in the target direction, dealing magic damage to the first enemy hit and rooting them for a duration, during which they are also revealed. Rootcaller can be recast while the target is rooted.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -203,7 +201,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Ivern dashes to the rooted target.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Ivern dashes to the rooted target.",
             "leveling": []
           },
           {
@@ -212,32 +210,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              60
-            ],
-            "units": [
-              ""
-            ]
-          }
+          60
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                14,
-                13,
-                12,
-                11,
-                10
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          14,
+          13,
+          12,
+          11,
+          10
+        ],
         "targeting": "Direction / Auto",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -260,7 +241,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "1150 /  0 /  475 /  Attack range"
+        "targetRange": "1150 /  0 /  475 /  Attack range",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -269,7 +251,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ivern/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> While Ivern is in brush, his basic attacks are empowered to deal bonus magic damage on-hit. This bonus persists for 3 seconds after leaving brush.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> While Ivern is in brush, his basic attacks are empowered to deal bonus magic damage on-hit. This bonus persists for 3 seconds after leaving brush.",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage",
@@ -299,7 +281,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Ivern grows a patch of brush at the target location for 45 seconds, granting sight of the area within and around it for 8 seconds. Brushes despawn instantly after allied vision of them is lost. Spawning brush near terrain or other brush increases its radius.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Ivern grows a patch of brush at the target location for 45 seconds, granting sight of the area within and around it for 8 seconds. Brushes despawn instantly after allied vision of them is lost. Spawning brush near terrain or other brush increases its radius.",
             "leveling": []
           },
           {
@@ -338,28 +320,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              30
-            ],
-            "units": [
-              ""
-            ]
-          }
+          30
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                0.5
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": false
-        },
+        "cooldown": [
+          0.5
+        ],
         "targeting": "Location",
         "affects": "Self, Allies",
         "spellshieldable": "False",
@@ -388,7 +353,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "1000"
+        "targetRange": "1000",
+        "maxCharges": 3
       }
     ],
     "E": [
@@ -397,7 +363,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ivern/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Ivern places a seed on the target allied champion, Daisy, or himself, granting the target a shield for 2 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Ivern places a seed on the target allied champion, Daisy, or himself, granting the target a shield for 2 seconds.",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -479,32 +445,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              70
-            ],
-            "units": [
-              ""
-            ]
-          }
+          70
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                11,
-                10,
-                9,
-                8,
-                7
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          11,
+          10,
+          9,
+          8,
+          7
+        ],
         "targeting": "Unit",
         "affects": "Allies, Self, Enemies",
         "spellshieldable": "True",
@@ -527,7 +476,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "500",
-        "targetRange": "750"
+        "targetRange": "750",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -536,7 +486,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ivern/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Ivern summons his sentinel friend Daisy to his side, who lands 350 units away from him in the target direction and remains on the field for up to 45 seconds as a controllable pet.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Ivern summons his sentinel friend Daisy to his side, who lands 350 units away from him in the target direction and remains on the field for up to 45 seconds as a controllable pet.",
             "leveling": []
           },
           {
@@ -544,7 +494,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast - Daisy, wait!:</p><p> Ivern commands Daisy to move to the target location. If cast on Ivern, Daisy will follow him.</p></div>",
+            "description": "<span class=\"ability-header\">Recast - Daisy, wait!:</span> Ivern commands Daisy to move to the target location. If cast on Ivern, Daisy will follow him.",
             "leveling": []
           },
           {
@@ -553,30 +503,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                140,
-                130,
-                120
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          140,
+          130,
+          120
+        ],
         "targeting": "Direction",
         "affects": "None",
         "spellshieldable": null,
@@ -599,10 +532,10 @@
         "angle": null,
         "castTime": "0.5",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Ivern Bramblefoot, known to many as the Green Father, is a peculiar half man, half tree who roams Runeterra's forests, cultivating life everywhere he goes. He knows the secrets of the natural world, and holds deep friendships with all things that grow, fly, and scuttle. Ivern wanders the wilderness, imparting strange wisdom to any he meets, enriching the forests, and occasionally entrusting loose-lipped butterflies with his secrets.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ivern/skins/base/images/ivern_splash_tile_0.jpg"
+  "lore": "Ivern Bramblefoot, known to many as the Green Father, is a peculiar half man, half tree who roams Runeterra's forests, cultivating life everywhere he goes. He knows the secrets of the natural world, and holds deep friendships with all things that grow, fly, and scuttle. Ivern wanders the wilderness, imparting strange wisdom to any he meets, enriching the forests, and occasionally entrusting loose-lipped butterflies with his secrets."
 }

@@ -94,7 +94,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jhin/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate - Death In 4 Acts:</p><p> Jhin's basic attacks consume ammunition within 4 rounds. He will reload over 2.5 seconds immediately after expending all rounds or withholding leftover rounds after 10 seconds of being out of combat and not being affected by crowd control. The latter reload can be interrupted by declaring an attack or casting an ability.</p></div>",
+            "description": "<span class=\"ability-header\">Innate - Death In 4 Acts:</span> Jhin's basic attacks consume ammunition within 4 rounds. He will reload over 2.5 seconds immediately after expending all rounds or withholding leftover rounds after 10 seconds of being out of combat and not being affected by crowd control. The latter reload can be interrupted by declaring an attack or casting an ability.",
             "leveling": []
           },
           {
@@ -102,7 +102,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate - Every Moment Matters:</p><p> Jhin gains bonus attack damage equal to 4% - 44% (based on level)[ (+ 0.35% per 1% critical strike chance) (+ 0.3% per 1% bonus attack speed) ][ (+ 35% critical strike chance) (+ 30% bonus attack speed) ]AD.</p></div>",
+            "description": "<span class=\"ability-header\">Innate - Every Moment Matters:</span> Jhin gains bonus attack damage equal to 4% - 44% (based on level)[ (+ 0.35% per 1% critical strike chance) (+ 0.3% per 1% bonus attack speed) ][ (+ 35% critical strike chance) (+ 30% bonus attack speed) ]AD.",
             "leveling": []
           },
           {
@@ -111,10 +111,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self, Enemies",
         "spellshieldable": null,
@@ -137,7 +134,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -146,7 +144,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jhin/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Jhin throws a grenade at the target enemy that deals physical damage and can bounce to up to three additional nearby enemies, prioritizing the closest enemy that has not been hit.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Jhin throws a grenade at the target enemy that deals physical damage and can bounce to up to three additional nearby enemies, prioritizing the closest enemy that has not been hit.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -268,36 +266,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              40,
-              45,
-              50,
-              55,
-              60
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40,
+          45,
+          50,
+          55,
+          60
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                7,
-                6.5,
-                6,
-                5.5,
-                5
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          7,
+          6.5,
+          6,
+          5.5,
+          5
+        ],
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "Special",
@@ -320,7 +301,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "450",
-        "targetRange": "550"
+        "targetRange": "550",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -329,11 +311,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jhin/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Enemy champions that trigger a Lotus Trap to bloom or are damaged by Jhin or allied champions are marked for 4 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Enemy champions that trigger a Lotus Trap to bloom or are damaged by Jhin or allied champions are marked for 4 seconds.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Jhin fires a shot in the target direction that deals physical damage to all enemies in a line until colliding with an enemy champion, reduced by 25% against minions.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Jhin fires a shot in the target direction that deals physical damage to all enemies in a line until colliding with an enemy champion, reduced by 25% against minions.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -411,32 +393,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50,
-              55,
-              60,
-              65,
-              70
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50,
+          55,
+          60,
+          65,
+          70
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                12
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          12
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -447,7 +412,7 @@
         "onHitEffects": null,
         "occurrence": null,
         "notes": "Applies  spell damage to the enemy champion and  area damage to all other enemy units.\nThe Caught Out mark only appears if Deadly Flourish can potentially  root the target, and will not if the ability's cooldown is longer than 4 seconds or isn't ranked up.\nThis ability will cast from wherever the caster is at the start of the cast time.\nThe ability will not preserve the caster's facing direction when using  Flash and similar effects.\nDeadly Flourish is blocked by  Wind Wall but not  Blade Whirl.\nDeadly Flourish is special cased to be intercepted by the former because it looks like a blockable missile, even though it isn't functionally a missile.\nWhile  disguised as a non-champion,  Neeko cannot be affected by Deadly Flourish.(bug)",
-        "blurb": "Passive: Enemy champions that trigger a  Lotus Trap or damaged by Jhin and his allies are marked with  Caught Out for a few seconds.",
+        "blurb": "Passive: Enemy champions that trigger a  Lotus Trap, or take damage from  Jhin or his allies, are marked with  Caught Out for a few seconds.",
         "missileSpeed": null,
         "rechargeRate": null,
         "collisionRadius": null,
@@ -459,7 +424,8 @@
         "angle": null,
         "castTime": "0.75",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -468,11 +434,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jhin/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive - Beauty in Death:</p><p> Whenever Jhin kills an enemy champion, he summons a Blooming Lotus Trap on their corpse.</p></div>",
+            "description": "<span class=\"ability-header\">Passive - Beauty in Death:</span> Whenever Jhin kills an enemy champion, he summons a Blooming Lotus Trap on their corpse.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Jhin places a Lotus Trap at the target location which, upon landing, becomes stealthed after arming over 1 second, lasting for up to 180 seconds and granting sight within its radius. The Lotus Trap blooms upon enemy contact, with enemies in the area at the time of its trigger becoming revealed for 4 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Jhin places a Lotus Trap at the target location which, upon landing, becomes stealthed after arming over 1 second, lasting for up to 180 seconds and granting sight within its radius. The Lotus Trap blooms upon enemy contact, with enemies in the area at the time of its trigger becoming revealed for 4 seconds.",
             "leveling": []
           },
           {
@@ -556,28 +522,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              30
-            ],
-            "units": [
-              ""
-            ]
-          }
+          30
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                2
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          2
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -606,7 +555,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "260 / 260",
-        "targetRange": "750"
+        "targetRange": "750",
+        "maxCharges": 2
       }
     ],
     "R": [
@@ -615,11 +565,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jhin/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Jhin channels for up to 10 seconds, transforming his weapon into a cannon and gaining the ability to recast Curtain Call 4 times within the duration.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Jhin channels for up to 10 seconds, transforming his weapon into a cannon and gaining the ability to recast Curtain Call 4 times within the duration.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> After 0.2 seconds into the cast time, Jhin fires a round in the target direction that grants sight around its trajectory for 0.5 seconds and deals physical damage to enemies hit, increased by 0% - 300% (based on target's missing health). The bullet stops upon hitting an enemy champion, slowing them by 80% for 0.5 seconds and revealing them for 2 seconds. Each cast has a static cooldown of 1 second.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> After 0.2 seconds into the cast time, Jhin fires a round in the target direction that grants sight around its trajectory for 0.5 seconds and deals physical damage to enemies hit, increased by 0% - 300% (based on target's missing health). The bullet stops upon hitting an enemy champion, slowing them by 80% for 0.5 seconds and revealing them for 2 seconds. Each cast has a static cooldown of 1 second.",
             "leveling": [
               {
                 "attribute": "Minimum Physical Damage per Bullet",
@@ -722,30 +672,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                120,
-                105,
-                90
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          120,
+          105,
+          90
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -768,10 +701,10 @@
         "angle": "60°",
         "castTime": "1 / 0.25",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Jhin is a meticulous criminal psychopath who believes murder is art. Once an Ionian prisoner, but freed by shadowy elements within Ionia's ruling council, the serial killer now works as their cabal's assassin. Using his gun as his paintbrush, Jhin creates works of artistic brutality, horrifying victims and onlookers. He gains a cruel pleasure from putting on his gruesome theater, making him the ideal choice to send the most powerful of messages: terror.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/jhin/skins/base/images/jhin_splash_tile_0.jpg"
+  "lore": "Jhin is a meticulous criminal psychopath who believes murder is art. Once an Ionian prisoner, but freed by shadowy elements within Ionia's ruling council, the serial killer now works as their cabal's assassin. Using his gun as his paintbrush, Jhin creates works of artistic brutality, horrifying victims and onlookers. He gains a cruel pleasure from putting on his gruesome theater, making him the ideal choice to send the most powerful of messages: terror."
 }

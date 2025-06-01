@@ -99,15 +99,12 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Morgana/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Morgana heals herself for 18% of the post-mitigation damage dealt by her abilities against champions, large minions, and medium and large monsters.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Morgana heals herself for 18% of the post-mitigation damage dealt by her abilities against champions, large minions, and medium and large monsters.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -130,7 +127,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -139,7 +137,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Morgana/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Morgana throws a sphere of dark magic in the target direction that deals magic damage to the first enemy hit and roots them for a duration.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Morgana throws a sphere of dark magic in the target direction that deals magic damage to the first enemy hit and roots them for a duration.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -187,32 +185,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50,
-              55,
-              60,
-              65,
-              70
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50,
+          55,
+          60,
+          65,
+          70
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                10
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          10
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -223,7 +204,7 @@
         "onHitEffects": null,
         "occurrence": null,
         "notes": "This ability will cast from wherever the caster is at the start of the cast time.",
-        "blurb": "Active: Morgana throws a sphere of dark magic in the target direction that deals magic damage to the first enemy hit and  roots them for a \"short time\".",
+        "blurb": "Active:  Morgana throws a sphere of dark magic in the target direction that deals magic damage to the first enemy hit and  roots them for a \"short time\".",
         "missileSpeed": null,
         "rechargeRate": null,
         "collisionRadius": null,
@@ -235,7 +216,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -244,11 +226,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Morgana/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Tormented Shadow's current cooldown is reduced by 5% of its total cooldown whenever Soul Siphon triggers. Simultaneous triggers from multiple targets will stack the cooldown reduction.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Tormented Shadow's current cooldown is reduced by 5% of its total cooldown whenever Soul Siphon triggers. Simultaneous triggers from multiple targets will stack the cooldown reduction.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Morgana torments the soil at the target location, causing the area to become desecrated for 5 seconds. Enemies within take magic damage on-cast and every 0.5 seconds, increased by 0% - 170% (based on target's missing health). Tormented Shadow deals 170% damage against monsters.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Morgana torments the soil at the target location, causing the area to become desecrated for 5 seconds. Enemies within take magic damage on-cast and every 0.5 seconds, increased by 0% - 170% (based on target's missing health). Tormented Shadow deals 170% damage against monsters.",
             "leveling": [
               {
                 "attribute": "Minimum Damage Per Tick",
@@ -354,32 +336,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              70,
-              85,
-              100,
-              115,
-              130
-            ],
-            "units": [
-              ""
-            ]
-          }
+          70,
+          85,
+          100,
+          115,
+          130
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                12
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          12
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "False",
@@ -402,7 +367,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "280",
-        "targetRange": "900"
+        "targetRange": "900",
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -411,7 +377,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Morgana/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Morgana grants a shield to the target allied champion or herself for 5 seconds, which absorbs incoming magic damage and grants crowd control immunity while it holds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Morgana grants a shield to the target allied champion or herself for 5 seconds, which absorbs incoming magic damage and grants crowd control immunity while it holds.",
             "leveling": [
               {
                 "attribute": "Magic Shield Strength",
@@ -442,32 +408,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              80
-            ],
-            "units": [
-              ""
-            ]
-          }
+          80
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                26,
-                23.5,
-                21,
-                18.5,
-                16
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          26,
+          23.5,
+          21,
+          18.5,
+          16
+        ],
         "targeting": "Unit",
         "affects": "Self, Allies",
         "spellshieldable": null,
@@ -490,7 +439,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": "800"
+        "targetRange": "800",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -499,7 +449,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Morgana/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Morgana latches chains of energy onto nearby enemy champions over the cast time, dealing magic damage and forming a tether between herself and each target for 3 seconds, during which she gains bonus movement speed and the targets are revealed and slowed by 20%.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Morgana latches chains of energy onto nearby enemy champions over the cast time, dealing magic damage and forming a tether between herself and each target for 3 seconds, during which she gains bonus movement speed and the targets are revealed and slowed by 20%.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -590,30 +540,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                120,
-                110,
-                100
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          120,
+          110,
+          100
+        ],
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "Special",
@@ -636,10 +569,10 @@
         "angle": null,
         "castTime": "0.35",
         "effectRadius": "575 / 625",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Conflicted between her celestial and mortal natures, Morgana bound her wings to embrace humanity, and inflicts her pain and bitterness upon the dishonest and the corrupt. She rejects laws and traditions she believes are unjust, and fights for truth from the shadows of Demacia—even as others seek to repress it—by casting shields and chains of dark fire. More than anything else, Morgana truly believes that even the banished and outcast may one day rise again.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/morgana/skins/base/images/morgana_splash_tile_0.jpg"
+  "lore": "Conflicted between her celestial and mortal natures, Morgana bound her wings to embrace humanity, and inflicts her pain and bitterness upon the dishonest and the corrupt. She rejects laws and traditions she believes are unjust, and fights for truth from the shadows of Demacia—even as others seek to repress it—by casting shields and chains of dark fire. More than anything else, Morgana truly believes that even the banished and outcast may one day rise again."
 }

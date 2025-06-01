@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Varus/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> When Varus kills an enemy, he gains 10 / 15 / 20% (based on level) bonus attack speed as well as bonus attack damage and ability power equal to 10% bonus attack speed for 5 / 7 / 9 / 11 (based on level) seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> When Varus kills an enemy, he gains 10 / 15 / 20% (based on level) bonus attack speed as well as bonus attack damage and ability power equal to 10% bonus attack speed for 5 / 7 / 9 / 11 (based on level) seconds.",
             "leveling": []
           },
           {
@@ -112,10 +112,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -138,7 +135,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -147,7 +145,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Varus/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Varus charges while being slowed by 20% for up to 4 seconds to increase Piercing Arrow's range over the first 1.5 seconds and its effects over the first 1.25 seconds of the channel.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Varus charges while being slowed by 20% for up to 4 seconds to increase Piercing Arrow's range over the first 1.5 seconds and its effects over the first 1.25 seconds of the channel.",
             "leveling": []
           },
           {
@@ -155,7 +153,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Varus fires a piercing arrow in the target direction that deals physical damage to enemies hit. The damage of the arrow as well as any detonated Blight stacks are both increased by 0% - 50% (based on channel time), and the arrow's damage is reduced by 0% - 67% (based on number of enemies hit).</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Varus fires a piercing arrow in the target direction that deals physical damage to enemies hit. The damage of the arrow as well as any detonated Blight stacks are both increased by 0% - 50% (based on channel time), and the arrow's damage is reduced by 0% - 67% (based on number of enemies hit).",
             "leveling": [
               {
                 "attribute": "Minimum Physical Damage",
@@ -277,36 +275,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50,
-              55,
-              60,
-              65,
-              70
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50,
+          55,
+          60,
+          65,
+          70
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                16,
-                15,
-                14,
-                13,
-                12
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          16,
+          15,
+          14,
+          13,
+          12
+        ],
         "targeting": "Auto / Direction",
         "affects": "Self, Enemies",
         "spellshieldable": "True",
@@ -329,7 +310,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -338,7 +320,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Varus/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Varus' basic attacks are empowered to deal bonus magic damage and apply a stack of Blight on-hit for 6 seconds, refreshing on subsequent applications and stacking up to 3 times. Varus' abilities detonate all Blight stacks on enemies hit.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Varus' basic attacks are empowered to deal bonus magic damage and apply a stack of Blight on-hit for 6 seconds, refreshing on subsequent applications and stacking up to 3 times. Varus' abilities detonate all Blight stacks on enemies hit.",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage",
@@ -368,7 +350,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Blight:</p><p> For each stack consumed, the target is dealt bonus magic damage. If the stacks were consumed with Piercing Arrow, this damage is increased by 0% - 50% (based on Piercing Arrow's charge time). This damage is capped at 120 per stack against monsters, for a total cap of 360 at maximum stacks.Additionally, each stack consumed against a champion or epic monster reduces the remaining cooldowns of Varus' basic abilities by 13% of each of their total cooldowns, up to a 39% cooldown reduction per target. If the stacks were consumed with Piercing Arrow, the cooldown reduction is increased by 0% - 50% (based on Piercing Arrow's charge time), up to a 39% - 58.5% cooldown reduction per target from consuming maximum stacks against them.</p></div>",
+            "description": "<span class=\"ability-header\">Blight:</span> For each stack consumed, the target is dealt bonus magic damage. If the stacks were consumed with Piercing Arrow, this damage is increased by 0% - 50% (based on Piercing Arrow's charge time). This damage is capped at 120 per stack against monsters, for a total cap of 360 at maximum stacks.Additionally, each stack consumed against a champion or epic monster reduces the remaining cooldowns of Varus' basic abilities by 13% of each of their total cooldowns, up to a 39% cooldown reduction per target. If the stacks were consumed with Piercing Arrow, the cooldown reduction is increased by 0% - 50% (based on Piercing Arrow's charge time), up to a 39% - 58.5% cooldown reduction per target from consuming maximum stacks against them.",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage per Stack",
@@ -473,7 +455,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Varus' next Piercing Arrow within 5.5 seconds is empowered to deal additional bonus magic damage, increased by 0% - 50% (based on Piercing Arrow's charge time). This damage is capped at 360 against monsters.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Varus' next Piercing Arrow within 5.5 seconds is empowered to deal additional bonus magic damage, increased by 0% - 50% (based on Piercing Arrow's charge time). This damage is capped at 360 against monsters.",
             "leveling": [
               {
                 "attribute": "Active Minimum Magic Damage",
@@ -516,24 +498,16 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Varus ends Blighted Quiver and places it on a 1-second cooldown.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Varus ends Blighted Quiver and places it on a 1-second cooldown.",
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                40
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          40
+        ],
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "Special",
@@ -556,7 +530,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -565,7 +540,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Varus/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Varus fires a hail of arrows at the target location that land after 0.5 seconds, dealing physical damage to enemies hit.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Varus fires a hail of arrows at the target location that land after 0.5 seconds, dealing physical damage to enemies hit.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -622,32 +597,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              90
-            ],
-            "units": [
-              ""
-            ]
-          }
+          90
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                18,
-                16,
-                14,
-                12,
-                10
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          18,
+          16,
+          14,
+          12,
+          10
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -670,7 +628,8 @@
         "angle": null,
         "castTime": "0.2419",
         "effectRadius": "300",
-        "targetRange": "925"
+        "targetRange": "925",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -679,7 +638,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Varus/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Varus unleashes a tendril of corruption in the target direction that infects the first enemy champion hit, dealing magic damage and rooting them for 2 seconds, during which they are revealed. Over the first 1.5 seconds of the root, they are also inflicted with maximum stacks of Blight.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Varus unleashes a tendril of corruption in the target direction that infects the first enemy champion hit, dealing magic damage and rooting them for 2 seconds, during which they are revealed. Over the first 1.5 seconds of the root, they are also inflicted with maximum stacks of Blight.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -716,30 +675,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                100,
-                80,
-                60
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          100,
+          80,
+          60
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -762,10 +704,10 @@
         "angle": null,
         "castTime": "0.2419",
         "effectRadius": "650",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "One of the ancient darkin, Varus was a deadly killer who loved to torment his foes, driving them almost to insanity before delivering the killing arrow. He was imprisoned at the end of the Great Darkin War, but escaped centuries later in the remade flesh of two Ionian hunters—they had unwittingly released him, cursed to bear the bow containing his bound essence. Varus now seeks out those who trapped him, in order to enact his brutal vengeance, but the mortal souls within still resist him every step of the way.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/varus/skins/base/images/varus_splash_tile_0.jpg"
+  "lore": "One of the ancient darkin, Varus was a deadly killer who loved to torment his foes, driving them almost to insanity before delivering the killing arrow. He was imprisoned at the end of the Great Darkin War, but escaped centuries later in the remade flesh of two Ionian hunters—they had unwittingly released him, cursed to bear the bow containing his bound essence. Varus now seeks out those who trapped him, in order to enact his brutal vengeance, but the mortal souls within still resist him every step of the way."
 }

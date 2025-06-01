@@ -98,7 +98,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/KogMaw/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Upon taking fatal damage, Kog'Maw enters a zombie state for 4 seconds, becoming ghosted and gaining 10% bonus movement speed that increases up to 50% over the duration. At the end of the duration, he explodes to deal 140 - 650 (based on level) true damage to nearby enemies.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Upon taking fatal damage, Kog'Maw enters a zombie state for 4 seconds, becoming ghosted and gaining 10% bonus movement speed that increases up to 50% over the duration. At the end of the duration, he explodes to deal 140 - 650 (based on level) true damage to nearby enemies.",
             "leveling": []
           },
           {
@@ -107,10 +107,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -133,7 +130,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": "400",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -142,7 +140,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/KogMaw/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Kog'Maw gains bonus attack speed.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Kog'Maw gains bonus attack speed.",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -164,7 +162,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Kog'Maw ejects a wad of spittle in the target direction that deals magic damage to the first enemy hit and reduces their armor and magic resistance for 4 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Kog'Maw ejects a wad of spittle in the target direction that deals magic damage to the first enemy hit and reduces their armor and magic resistance for 4 seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -212,28 +210,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              40
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                7
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          7
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -256,7 +237,8 @@
         "angle": null,
         "castTime": "Basic attack timer",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -265,7 +247,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/KogMaw/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Kog'Maw empowers his basic attacks for the next 8 seconds to gain bonus attack range and deal bonus magic damage on-hit, capped at 100 against minions and monsters.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Kog'Maw empowers his basic attacks for the next 8 seconds to gain bonus attack range and deal bonus magic damage on-hit, capped at 100 against minions and monsters.",
             "leveling": [
               {
                 "attribute": "Bonus Attack Range",
@@ -313,28 +295,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              40
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                17
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          17
+        ],
         "targeting": "Auto",
         "affects": null,
         "spellshieldable": "false",
@@ -357,7 +322,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -366,7 +332,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/KogMaw/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Kog'Maw spews a gob of ooze in the target direction that deals magic damage to enemies hit.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Kog'Maw spews a gob of ooze in the target direction that deals magic damage to enemies hit.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -419,32 +385,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              40,
-              55,
-              70,
-              85,
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40,
+          55,
+          70,
+          85,
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                12
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          12
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -467,7 +416,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -476,7 +426,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/KogMaw/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Kog'Maw spits a globule of acid into the air that drops to the target location after 0.6 seconds, granting sight of the area before dealing magic damage to enemies hit and revealing them for 2 seconds. Living Artillery's damage is increased by 0% - 50% (based on target's missing health), or instead by 100% if the target is below 40% maximum health.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Kog'Maw spits a globule of acid into the air that drops to the target location after 0.6 seconds, granting sight of the area before dealing magic damage to enemies hit and revealing them for 2 seconds. Living Artillery's damage is increased by 0% - 50% (based on target's missing health), or instead by 100% if the target is below 40% maximum health.",
             "leveling": [
               {
                 "attribute": "Minimum Magic Damage",
@@ -547,35 +497,18 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Living Artillery:</p><p> For each stack, Living Artillery's mana cost is increased by 40.</p></div>",
+            "description": "<span class=\"ability-header\">Living Artillery:</span> For each stack, Living Artillery's mana cost is increased by 40.",
             "leveling": []
           }
         ],
         "cost": [
-          {
-            "values": [
-              40
-            ],
-            "units": [
-              " + 40 for every stack, capped at 9 stacks"
-            ]
-          }
+          40
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                2,
-                1.5,
-                1
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          2,
+          1.5,
+          1
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -598,10 +531,10 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "240",
-        "targetRange": "1300 / 1425 / 1550 / 1675 / 1800"
+        "targetRange": "1300 / 1425 / 1550 / 1675 / 1800",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Belched forth from a rotting Void incursion deep in the wastelands of Icathia, Kog'Maw is an inquisitive yet putrid creature with a caustic, gaping mouth. This particular Void-spawn needs to gnaw and drool on anything within reach to truly understand it. Though not inherently evil, Kog'Maw's beguiling naiveté is dangerous, as it often precedes a feeding frenzy—not for sustenance, but to satisfy its unending curiosity.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kogmaw/skins/base/images/kogmaw_splash_tile_0.jpg"
+  "lore": "Belched forth from a rotting Void incursion deep in the wastelands of Icathia, Kog'Maw is an inquisitive yet putrid creature with a caustic, gaping mouth. This particular Void-spawn needs to gnaw and drool on anything within reach to truly understand it. Though not inherently evil, Kog'Maw's beguiling naiveté is dangerous, as it often precedes a feeding frenzy—not for sustenance, but to satisfy its unending curiosity."
 }

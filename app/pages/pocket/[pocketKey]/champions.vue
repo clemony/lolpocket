@@ -12,12 +12,14 @@ definePageMeta({
   path: '/pocket/:pocketKey',
   alias: '/pocket/:pocketKey/champions',
   section: 'pocket',
-  search: false
+  search: false,
 })
 
 /* const {loading, ready, forceReload} = useSummonerMastery(puuid) */
 
 const activePocket = computed (() => pocket)
+
+const ix = useIndexStore()
 </script>
 
 <template>
@@ -28,7 +30,7 @@ const activePocket = computed (() => pocket)
         :key="champion.id">
         <Champion
           :class="{ ' not-[.checkbox]:**:contrast-110 not-[.checkbox]:**:opacity-65 not-[.checkbox]:**:grayscale border scale-90 border-neutral/60 relative': pocket.champions.includes(champion.key) }"
-          :url="champion.splash" :name="champion.key" class="hover-ring ">
+          :url="ix.centeredByKey(champion.key)" :name="champion.key" class="hover-ring ">
           <slot />
 
           <input

@@ -99,15 +99,12 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nasus/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Nasus gains 12 / 18 / 24% (based on level) life steal.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Nasus gains 12 / 18 / 24% (based on level) life steal.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -130,7 +127,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -139,7 +137,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nasus/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Nasus empowers his next basic attack within 10 seconds to have an uncancellable windup, gain 50 bonus range, and deal bonus physical damage. Siphoning Strike's base damage is affected by critical strike modifiers.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Nasus empowers his next basic attack within 10 seconds to have an uncancellable windup, gain 50 bonus range, and deal bonus physical damage. Siphoning Strike's base damage is affected by critical strike modifiers.",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage",
@@ -178,32 +176,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              20
-            ],
-            "units": [
-              ""
-            ]
-          }
+          20
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                7.5,
-                6.5,
-                5.5,
-                4.5,
-                3.5
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          7.5,
+          6.5,
+          5.5,
+          4.5,
+          3.5
+        ],
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": "false",
@@ -226,7 +207,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -235,7 +217,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nasus/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Nasus ages the target enemy champion for 5 seconds, slowing them by 35% and crippling them by[ 75% of that amount, ][ 26.25%, ]both increasing every second over the duration.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Nasus ages the target enemy champion for 5 seconds, slowing them by 35% and crippling them by[ 75% of that amount, ][ 26.25%, ]both increasing every second over the duration.",
             "leveling": [
               {
                 "attribute": "Maximum Slow",
@@ -309,32 +291,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              80
-            ],
-            "units": [
-              ""
-            ]
-          }
+          80
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                15,
-                14,
-                13,
-                12,
-                11
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          15,
+          14,
+          13,
+          12,
+          11
+        ],
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -357,7 +322,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "700"
+        "targetRange": "700",
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -366,7 +332,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nasus/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Nasus unleashes a spirit fire at the target location, granting sight of the area for 2.5 seconds and, after a 0.264 seconds delay, dealing magic damage to enemies within.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Nasus unleashes a spirit fire at the target location, granting sight of the area for 2.5 seconds and, after a 0.264 seconds delay, dealing magic damage to enemies within.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -469,32 +435,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              60,
-              70,
-              80,
-              90,
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          60,
+          70,
+          80,
+          90,
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                12
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          12
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "False",
@@ -517,7 +466,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "400 /  200",
-        "targetRange": "650"
+        "targetRange": "650",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -526,7 +476,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nasus/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Nasus empowers himself for 15 seconds, gaining bonus health, bonus armor, bonus magic resistance, increased size, and 50 bonus attack range for the duration.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Nasus empowers himself for 15 seconds, gaining bonus health, bonus armor, bonus magic resistance, increased size, and 50 bonus attack range for the duration.",
             "leveling": [
               {
                 "attribute": "Bonus Health",
@@ -628,30 +578,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                120,
-                100,
-                80
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          120,
+          100,
+          80
+        ],
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
@@ -674,10 +607,10 @@
         "angle": null,
         "castTime": "0.2",
         "effectRadius": "400",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Nasus is an imposing, jackal-headed Ascended being from ancient Shurima, a heroic figure regarded as a demigod by the people of the desert. Fiercely intelligent, he was a guardian of knowledge and peerless strategist whose wisdom guided the ancient empire of Shurima to greatness for many centuries. After the fall of the empire, he went into self-imposed exile, becoming little more than a legend. Now that the ancient city of Shurima has risen once more, he has returned, determined to ensure it never falls again.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/nasus/skins/base/images/nasus_splash_tile_0.jpg"
+  "lore": "Nasus is an imposing, jackal-headed Ascended being from ancient Shurima, a heroic figure regarded as a demigod by the people of the desert. Fiercely intelligent, he was a guardian of knowledge and peerless strategist whose wisdom guided the ancient empire of Shurima to greatness for many centuries. After the fall of the empire, he went into self-imposed exile, becoming little more than a legend. Now that the ancient city of Shurima has risen once more, he has returned, determined to ensure it never falls again."
 }

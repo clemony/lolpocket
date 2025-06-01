@@ -90,19 +90,19 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zac/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate - The Secret Weapon:</p><p> Zac gains increased percentage size equal to 1.5% of his bonus health, capped at 35% increased size at 2333.33 bonus health. Zac's size also reduces based on his missing health, down to 70% total size while at 0% health.</p></div>",
+            "description": "<span class=\"ability-header\">Innate - The Secret Weapon:</span> Zac gains increased percentage size equal to 1.5% of his bonus health, capped at 35% increased size at 2333.33 bonus health. Zac's size also reduces based on his missing health, down to 70% total size while at 0% health.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate - Goo:</p><p> Whenever Zac damages at least one enemy with an ability, he sheds a number of chunks of himself to a nearby location, landing towards nearby visible enemy champions and lasting for 6 seconds.</p></div>\n\n\n<div><p class=\"ability-header\"> Stretching Strikes:</p><p> 1 chunk for each strike hit (excluding the collision) on different targets, up to 2</p></div>\n\n\n<div><p class=\"ability-header\"> Unstable Matter:</p><p> 1 chunk if it hits at least one target</p></div>\n\n\n<div><p class=\"ability-header\"> Elastic Slingshot:</p><p> 1 chunk for each enemy champion hit</p></div>\n\n\n<div><p class=\"ability-header\"> Let's Bounce!:</p><p> 1 chunk for each bounce that hits an enemy champion, up to 4</p></div>",
+            "description": "<span class=\"ability-header\">Innate - Goo:</span> Whenever Zac damages at least one enemy with an ability, he sheds a number of chunks of himself to a nearby location, landing towards nearby visible enemy champions and lasting for 6 seconds.\n<span class=\"ability-header\"> Stretching Strikes:</span> 1 chunk for each strike hit (excluding the collision) on different targets, up to 2\n<span class=\"ability-header\"> Unstable Matter:</span> 1 chunk if it hits at least one target\n<span class=\"ability-header\"> Elastic Slingshot:</span> 1 chunk for each enemy champion hit\n<span class=\"ability-header\"> Let's Bounce!:</span> 1 chunk for each bounce that hits an enemy champion, up to 4",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Both Zac and enemy champions can interact with a chunk by being within 50 units of it:</p><p> an enemy will destroy it, while Zac will consume it to heal for 4% - 8% (based on level) of his maximum health.</p></div>",
+            "description": "<span class=\"ability-header\">Both Zac and enemy champions can interact with a chunk by being within 50 units of it:</span> an enemy will destroy it, while Zac will consume it to heal for 4% - 8% (based on level) of his maximum health.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate - Cell Division:</p><p> Periodically, upon taking fatal damage, Zac enters resurrection for 8 / 7 / 6 / 5 / 4 (based on level) seconds, instantly restoring 50% of his maximum health and becoming untargetable and unable to act for the duration. Zac then splits into four uncontrollable bloblets away from his location, though stopping at terrain. After 1.5 seconds of the bloblets being untargetable, they start moving toward Zac's location over the remaining duration. Any damage the bloblets receive, excluding damage dealt in excess of each bloblet's total maximum health, is also redirected to Zac as true damage. While in resurrection, Zac cannot take damage from sources other than the redirected damage from his bloblets.</p></div>",
+            "description": "<span class=\"ability-header\">Innate - Cell Division:</span> Periodically, upon taking fatal damage, Zac enters resurrection for 8 / 7 / 6 / 5 / 4 (based on level) seconds, instantly restoring 50% of his maximum health and becoming untargetable and unable to act for the duration. Zac then splits into four uncontrollable bloblets away from his location, though stopping at terrain. After 1.5 seconds of the bloblets being untargetable, they start moving toward Zac's location over the remaining duration. Any damage the bloblets receive, excluding damage dealt in excess of each bloblet's total maximum health, is also redirected to Zac as true damage. While in resurrection, Zac cannot take damage from sources other than the redirected damage from his bloblets.",
             "leveling": []
           },
           {
@@ -111,19 +111,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                300
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -146,7 +134,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -155,7 +144,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zac/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Zac stretches his left arm in the target direction that catches the first enemy hit, dealing magic damage, slowing them by 40% for 0.5 seconds, and forming a tether between Zac and the target for 2 seconds, during which they are revealed.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Zac stretches his left arm in the target direction that catches the first enemy hit, dealing magic damage, slowing them by 40% for 0.5 seconds, and forming a tether between Zac and the target for 2 seconds, during which they are revealed.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -243,32 +232,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              8
-            ],
-            "units": [
-              "%"
-            ]
-          }
+          0
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                14,
-                12.5,
-                11,
-                9.5,
-                8
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          14,
+          12.5,
+          11,
+          9.5,
+          8
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "special",
@@ -291,7 +263,8 @@
         "angle": null,
         "castTime": "0.33",
         "effectRadius": null,
-        "targetRange": "800 /  80"
+        "targetRange": "800 /  80",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -300,7 +273,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zac/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Zac explodes to deal magic damage to nearby enemies, capped against minions and monsters.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Zac explodes to deal magic damage to nearby enemies, capped against minions and monsters.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -360,28 +333,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              4
-            ],
-            "units": [
-              "%"
-            ]
-          }
+          0
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                5
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          5
+        ],
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -404,7 +360,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": "350"
+        "targetRange": "350",
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -413,7 +370,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zac/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Zac charges for up to 4.5 seconds to increase Elastic Slingshot's range over a cone in the target direction.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Zac charges for up to 4.5 seconds to increase Elastic Slingshot's range over a cone in the target direction.",
             "leveling": [
               {
                 "attribute": "Maximum Range Channel Duration",
@@ -439,7 +396,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Zac leaps to the target location. Upon landing, he deals magic damage to nearby enemies and knocks them up and stuns them for 0.5 seconds, increased to 1 second if Elastic Slingshot was charged for more than 1 second.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Zac leaps to the target location. Upon landing, he deals magic damage to nearby enemies and knocks them up and stuns them for 0.5 seconds, increased to 1 second if Elastic Slingshot was charged for more than 1 second.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -474,32 +431,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              4
-            ],
-            "units": [
-              "%"
-            ]
-          }
+          0
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                22,
-                19,
-                16,
-                13,
-                10
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          22,
+          19,
+          16,
+          13,
+          10
+        ],
         "targeting": "Direction / Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -522,7 +462,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "250",
-        "targetRange": "1200 / 1350 / 1500 / 1650 / 1800"
+        "targetRange": "1200 / 1350 / 1500 / 1650 / 1800",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -531,7 +472,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zac/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Zac bounces after the cast time, then bounces 3 additional times each second over 3 seconds, during which he also gains 20% - 50% (based on duration) bonus movement speed but becomes unable to declare basic attacks and cast Stretching Strikes and Elastic Slingshot.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Zac bounces after the cast time, then bounces 3 additional times each second over 3 seconds, during which he also gains 20% - 50% (based on duration) bonus movement speed but becomes unable to declare basic attacks and cast Stretching Strikes and Elastic Slingshot.",
             "leveling": []
           },
           {
@@ -614,22 +555,14 @@
             ]
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                120,
-                105,
-                90
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          120,
+          105,
+          90
+        ],
         "targeting": "Auto",
         "affects": "Enemies, Self",
         "spellshieldable": "Special",
@@ -652,10 +585,10 @@
         "angle": null,
         "castTime": "0.3",
         "effectRadius": "300",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Zac is the product of a toxic spill that ran through a chemtech seam and pooled in an isolated cavern deep in Zaun's Sump. Despite such humble origins, Zac has grown from primordial ooze into a thinking being who dwells in the city's pipes, occasionally emerging to help those who cannot help themselves or to rebuild the broken infrastructure of Zaun.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/zac/skins/base/images/zac_splash_tile_0.jpg"
+  "lore": "Zac is the product of a toxic spill that ran through a chemtech seam and pooled in an isolated cavern deep in Zaun's Sump. Despite such humble origins, Zac has grown from primordial ooze into a thinking being who dwells in the city's pipes, occasionally emerging to help those who cannot help themselves or to rebuild the broken infrastructure of Zaun."
 }

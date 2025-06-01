@@ -95,7 +95,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rakan/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Periodically, Rakan grants himself a shield for 30 - 225 (based on level) (+ 95% AP) that lasts until broken. After being out of combat for 5 seconds, any leftover shield will be restored to maximum value.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Periodically, Rakan grants himself a shield for 30 - 225 (based on level) (+ 95% AP) that lasts until broken. After being out of combat for 5 seconds, any leftover shield will be restored to maximum value.",
             "leveling": []
           },
           {
@@ -103,41 +103,12 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate - Lover's Leap:</p><p> If either Rakan or Xayah is channeling Recall, the other may move nearby and channel their own to join alongside them. Both reach base at the time of which the initiator's Recall completes.</p></div>",
+            "description": "<span class=\"ability-header\">Innate - Lover's Leap:</span> If either Rakan or Xayah is channeling Recall, the other may move nearby and channel their own to join alongside them. Both reach base at the time of which the initiator's Recall completes.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                40,
-                38.5,
-                37,
-                35.5,
-                34,
-                32.5,
-                31,
-                29.5,
-                28,
-                26.5,
-                25,
-                23.5,
-                22,
-                20.5,
-                19,
-                17.5,
-                16,
-                14.5
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -160,7 +131,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -169,7 +141,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rakan/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Rakan slings an enchanted feather in the target direction that deals magic damage to the first enemy hit.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Rakan slings an enchanted feather in the target direction that deals magic damage to the first enemy hit.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -204,32 +176,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              45
-            ],
-            "units": [
-              ""
-            ]
-          }
+          45
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                11,
-                10,
-                9,
-                8,
-                7
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          11,
+          10,
+          9,
+          8,
+          7
+        ],
         "targeting": "Direction",
         "affects": "Enemies / Allies",
         "spellshieldable": "Special",
@@ -252,7 +207,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "200",
-        "targetRange": "900"
+        "targetRange": "900",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -261,7 +217,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rakan/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Rakan dashes to the target location. After a 0.35-second delay upon arrival, he deals magic damage to nearby enemies and knocks them up for 1 second.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Rakan dashes to the target location. After a 0.35-second delay upon arrival, he deals magic damage to nearby enemies and knocks them up for 1 second.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -300,36 +256,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50,
-              60,
-              70,
-              80,
-              90
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50,
+          60,
+          70,
+          80,
+          90
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                14,
-                13,
-                12,
-                11,
-                10
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          14,
+          13,
+          12,
+          11,
+          10
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -352,7 +291,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "275",
-        "targetRange": "650"
+        "targetRange": "650",
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -361,7 +301,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rakan/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Rakan grants a shield to the target allied champion for 3 seconds and then dashes to and around them. Battle Dance can be recast within 5 seconds at no additional cost.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Rakan grants a shield to the target allied champion for 3 seconds and then dashes to and around them. Battle Dance can be recast within 5 seconds at no additional cost.",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -391,7 +331,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Rakan mimics the first cast's effects.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Rakan mimics the first cast's effects.",
             "leveling": []
           },
           {
@@ -404,36 +344,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              40,
-              45,
-              50,
-              55,
-              60
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40,
+          45,
+          50,
+          55,
+          60
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                20,
-                18,
-                16,
-                14,
-                12
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          0
+        ],
         "targeting": "Unit",
         "affects": "Allies",
         "spellshieldable": null,
@@ -456,7 +375,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": "700 / 1000"
+        "targetRange": "700 / 1000",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -465,7 +385,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rakan/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Rakan breaks into a captivating sprint for 4 seconds, gaining ghosting and 75% bonus movement speed for the duration. During this time, he deals magic damage to enemies he collides with and charms and slows them by 75% for a duration. This cannot affect the same enemy more than once.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Rakan breaks into a captivating sprint for 4 seconds, gaining ghosting and 75% bonus movement speed for the duration. During this time, he deals magic damage to enemies he collides with and charms and slows them by 75% for a duration. This cannot affect the same enemy more than once.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -517,30 +437,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                130,
-                110,
-                90
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          130,
+          110,
+          90
+        ],
         "targeting": "Auto",
         "affects": "Self / Enemies",
         "spellshieldable": "True",
@@ -563,10 +466,10 @@
         "angle": null,
         "castTime": "0.5",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "As mercurial as he is charming, Rakan is an infamous vastayan troublemaker and the greatest battle-dancer in Lhotlan tribal history. To the humans of the Ionian highlands, his name has long been synonymous with wild festivals, uncontrollable parties, and anarchic music. Few would suspect this energetic, traveling showman is also partner to the rebel Xayah, and is dedicated to her cause.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rakan/skins/base/images/rakan_splash_tile_0.jpg"
+  "lore": "As mercurial as he is charming, Rakan is an infamous vastayan troublemaker and the greatest battle-dancer in Lhotlan tribal history. To the humans of the Ionian highlands, his name has long been synonymous with wild festivals, uncontrollable parties, and anarchic music. Few would suspect this energetic, traveling showman is also partner to the rebel Xayah, and is dedicated to her cause."
 }

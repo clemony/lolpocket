@@ -97,7 +97,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Senna/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate - Weakened Soul:</p><p> Senna's basic attacks on-hit and ability hits against enemy champions apply a stack of Mist for 4 seconds, modified to 0.75 seconds if Senna starts winding up a basic attack on them, and limited to once per target per cast. Subsequent hits will collect Mist and deal bonus physical damage equal to 1% - 10% (based on level) of target's current health, rendering the target immune to further Mist infliction for a few seconds. This damage applies life steal at 100% effectiveness.</p></div>",
+            "description": "<span class=\"ability-header\">Innate - Weakened Soul:</span> Senna's basic attacks on-hit and ability hits against enemy champions apply a stack of Mist for 4 seconds, modified to 0.75 seconds if Senna starts winding up a basic attack on them, and limited to once per target per cast. Subsequent hits will collect Mist and deal bonus physical damage equal to 1% - 10% (based on level) of target's current health, rendering the target immune to further Mist infliction for a few seconds. This damage applies life steal at 100% effectiveness.",
             "leveling": []
           },
           {
@@ -105,19 +105,16 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Mist:</p><p> For each stack of Mist, Senna gains 0.75 bonus attack damage. For every 20 stacks, she also gains 20 bonus attack range and 10% critical strike chance. Additionally, every 1% critical strike chance in excess of 100% is converted into 0.35% life steal.</p></div>",
+            "description": "<span class=\"ability-header\">Mist:</span> For each stack of Mist, Senna gains 0.75 bonus attack damage. For every 20 stacks, she also gains 20 bonus attack range and 10% critical strike chance. Additionally, every 1% critical strike chance in excess of 100% is converted into 0.35% life steal.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate - Relic Cannon:</p><p> Senna's basic attacks on-hit deal 20% AD bonus physical damage and grant her 10 / 15 / 20% (based on level) of the target's movement speed as bonus movement speed for 0.5 seconds. This damage applies life steal at 100% effectiveness.</p></div>",
+            "description": "<span class=\"ability-header\">Innate - Relic Cannon:</span> Senna's basic attacks on-hit deal 20% AD bonus physical damage and grant her 10 / 15 / 20% (based on level) of the target's movement speed as bonus movement speed for 0.5 seconds. This damage applies life steal at 100% effectiveness.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self, Enemies",
         "spellshieldable": "False",
@@ -127,7 +124,7 @@
         "projectile": null,
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Despite Senna dealing 1 damage to Mist Wraiths, attacking them will calculate the attack's damage (including  critical strike modifiers) and any on-hit effects for the purposes of  life steal and  drain effects.\nRelic Cannon is only applied if the attack deals more than 0 damage.\nHence, it is not applied if the target is  invulnerable or Senna's basic attack's  attack damage is reduced to 0 or below.\nDealing 0 damage is valid for marking and collecting Mist from champions, but dealing no damage at all is not.\nHence, Senna can mark and collect from  invulnerable enemies.\n Dodge prevents marking and collecting a Mist via Senna's basic attacks and  Piercing Darkness.\nPENDING FOR TEST:: Mist interaction with  block and  blind.\n Nunu & Willump spawn a wraith each.\nEnemies will not see newly spawned wraiths while Senna is not visible.\nA wraith can be hit by  Cosmic Binding and it will interact with it the same way minions or monsters interact with Cosmic Binding but it will not take damage.\nMist Wraith has a spawn animation, but is targetable immediately.\nMist Wraith grants a small amount of  sight around itself.\n Runaan's Hurricane secondary bolts will ignore Mist Wraiths.\nAttacking a Mist Wraith will not consume Energized.\nExcluding the range increase and the bonus shielding on  Dawning Shadow, one stack of Mist is worth  42.25 ( +8 from Mist Wraith pickup),  33.747 if the critical chance is converted to life steal.\n 0.75 AD is worth  26.25‬.\n 0.4% critical strike chance is worth  16.\n 0.14% life steal is worth  7.497.\nThe bonus on-hit damage applies an additional stack of  Black Cleaver's Carve to offset Senna's low attack speed.[citation needed]",
+        "notes": "Despite Senna dealing 1 damage to Mist Wraiths, attacking them will calculate the attack's damage (including  critical strike modifiers) and any on-hit effects for the purposes of  life steal and  drain effects.\nRelic Cannon is only applied if the attack deals more than 0 damage.\nHence, it is not applied if the target is  invulnerable or Senna's basic attack's  attack damage is reduced to 0 or below.\nDealing 0 damage is valid for marking and collecting Mist from champions, but dealing no damage at all is not.\nHence, Senna can mark and collect from  invulnerable enemies.\n Dodge prevents marking and collecting a Mist via Senna's basic attacks and  Piercing Darkness.\nPENDING FOR TEST:: Mist interaction with  block and  blind.\n Nunu & Willump spawn a wraith each.\nEnemies will not see newly spawned wraiths while Senna is not visible.\nA wraith can be hit by  Cosmic Binding and it will interact with it the same way minions or monsters interact with Cosmic Binding but it will not take damage.\nMist Wraith has a spawn animation, but is targetable immediately.\nMist Wraith grants a small amount of  sight around itself.\n Runaan's Hurricane secondary bolts will ignore Mist Wraiths.\nAttacking a Mist Wraith will not consume Energized.\nExcluding the range increase and the bonus shielding on  Dawning Shadow, one stack of Mist is worth  46.25 ( +8 from Mist Wraith pickup ( 54.25 total)),  35.625 if the critical chance is converted to life steal.\n 0.75 AD is worth  26.25‬.\n 0.5% critical strike chance is worth  20.\n 0.175% life steal is worth  9.375.\nThe bonus on-hit damage applies an additional stack of  Black Cleaver's Carve to offset Senna's low attack speed.[citation needed]",
         "blurb": "Innate - Weakened Soul:  Senna's basic attacks and abilities against enemy  champions apply a stack of Mist for a few seconds. Subsequent hits collect the Mist, dealing bonus physical damage based on the target's current health and rendering the target immune to further Mist applications for a few seconds.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -140,7 +137,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": "2000",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -149,7 +147,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Senna/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Senna fires a spectral laser in the direction of the target unit, healing herself and allied champions hit, and dealing physical damage to enemies hit in a thinner line. Enemies hit are slowed by 15% (+ 15% per 100 bonus AD) (+ 10% per 100 AP) for a duration. The damage dealt to enemy champions applies life steal at 100% effectiveness.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Senna fires a spectral laser in the direction of the target unit, healing herself and allied champions hit, and dealing physical damage to enemies hit in a thinner line. Enemies hit are slowed by 15% (+ 15% per 100 bonus AD) (+ 10% per 100 AP) for a duration. The damage dealt to enemy champions applies life steal at 100% effectiveness.",
             "leveling": [
               {
                 "attribute": "Healing",
@@ -238,32 +236,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              70,
-              80,
-              90,
-              100,
-              110
-            ],
-            "units": [
-              ""
-            ]
-          }
+          70,
+          80,
+          90,
+          100,
+          110
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                15
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          15
+        ],
         "targeting": "Unit",
         "affects": "Allies, Enemies, Turrets, Wards",
         "spellshieldable": "special",
@@ -286,7 +267,8 @@
         "angle": null,
         "castTime": "80% of Senna's windup time (0.4 at base attack speed)",
         "effectRadius": null,
-        "targetRange": "600 - 1100"
+        "targetRange": "600 - 1100",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -295,7 +277,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Senna/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Senna throws a globule of Black Mist in the target direction that deals physical damage to the first enemy hit and attaches to them for 1 second.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Senna throws a globule of Black Mist in the target direction that deals physical damage to the first enemy hit and attaches to them for 1 second.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -348,32 +330,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50,
-              55,
-              60,
-              65,
-              70
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50,
+          55,
+          60,
+          65,
+          70
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                11
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          11
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -396,7 +361,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "280",
-        "targetRange": "1300"
+        "targetRange": "1300",
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -405,7 +371,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Senna/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Senna surrounds herself with an aura of mist and gains camouflage for a duration. If Senna breaks the camouflage, she regains it after 1.75 seconds without performing actions that break stealth.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Senna surrounds herself with an aura of mist and gains camouflage for a duration. If Senna breaks the camouflage, she regains it after 1.75 seconds without performing actions that break stealth.",
             "leveling": [
               {
                 "attribute": "Effect Duration",
@@ -431,7 +397,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Wraith Form:</p><p> Gain camouflage. Enemies will have obscured vision of camouflaged Wraiths moving outside of the mist. Wraith Form can be regained if lost by breaking the camouflage after 1.75 seconds without performing actions that break stealth. Wraith Form ends immediately upon Senna's death.</p></div>",
+            "description": "<span class=\"ability-header\">Wraith Form:</span> Gain camouflage. Enemies will have obscured vision of camouflaged Wraiths moving outside of the mist. Wraith Form can be regained if lost by breaking the camouflage after 1.75 seconds without performing actions that break stealth. Wraith Form ends immediately upon Senna's death.",
             "leveling": []
           },
           {
@@ -440,32 +406,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              70
-            ],
-            "units": [
-              ""
-            ]
-          }
+          70
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                26,
-                24.5,
-                23,
-                21.5,
-                20
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          26,
+          24.5,
+          23,
+          21.5,
+          20
+        ],
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
@@ -488,7 +437,8 @@
         "angle": null,
         "castTime": "1",
         "effectRadius": "400",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -497,7 +447,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Senna/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Senna fires two waves of spectral light in the target direction, granting sight of the area briefly along the path. The center wave deals physical damage to enemy champions hit and reveals them for 3 seconds, as well as hits all Mist Wraiths.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Senna fires two waves of spectral light in the target direction, granting sight of the area briefly along the path. The center wave deals physical damage to enemy champions hit and reveals them for 3 seconds, as well as hits all Mist Wraiths.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -570,30 +520,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                140,
-                120,
-                100
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          140,
+          120,
+          100
+        ],
         "targeting": "Direction",
         "affects": "Allies / Enemies",
         "spellshieldable": "true",
@@ -616,10 +549,10 @@
         "angle": null,
         "castTime": "1",
         "effectRadius": null,
-        "targetRange": "Global"
+        "targetRange": "Global",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Cursed from childhood to be haunted by the supernatural Black Mist, Senna joined a sacred order known as the Sentinels of Light, and fiercely fought back—only to be killed, her soul imprisoned in a lantern by the cruel specter Thresh. But refusing to lose hope, within the lantern Senna learned to use the Mist, and reemerged to new life, forever changed. Now wielding darkness along with light, Senna seeks to end the Black Mist by turning it against itself—with every blast of her relic weapon, redeeming the souls lost within.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/senna/skins/base/images/senna_splash_tile_0.jpg"
+  "lore": "Cursed from childhood to be haunted by the supernatural Black Mist, Senna joined a sacred order known as the Sentinels of Light, and fiercely fought back—only to be killed, her soul imprisoned in a lantern by the cruel specter Thresh. But refusing to lose hope, within the lantern Senna learned to use the Mist, and reemerged to new life, forever changed. Now wielding darkness along with light, Senna seeks to end the Black Mist by turning it against itself—with every blast of her relic weapon, redeeming the souls lost within."
 }

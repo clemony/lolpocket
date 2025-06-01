@@ -23,7 +23,7 @@ function onEnd(e) {
   dragging.value = false
 }
 
-// const { spells } = await useIndexLookup()
+// const ix = useIndexStore()
 
 // const img = computed (() => {
 //   return dragging.value

@@ -100,7 +100,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Udyr/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate - Awakened Spirit:</p><p> Udyr has no ultimate ability and instead has 4 basic abilities that each incur a 1.5-second global cooldown when cast. Each ability grants a Stance that empowers his basic attacks, and switching Stances will replace the empowered attacks of the previous Stance.</p></div>",
+            "description": "<span class=\"ability-header\">Innate - Awakened Spirit:</span> Udyr has no ultimate ability and instead has 4 basic abilities that each incur a 1.5-second global cooldown when cast. Each ability grants a Stance that empowers his basic attacks, and switching Stances will replace the empowered attacks of the previous Stance.",
             "leveling": []
           },
           {
@@ -108,15 +108,12 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate - Monk Training:</p><p> After casting an ability, Udyr empowers his next two basic attacks within 4 seconds to gain 30% bonus attack speed and refund 5% of Awakened Spirit's total cooldown, though not if the remaining cooldown is less than 1 second.</p></div>",
+            "description": "<span class=\"ability-header\">Innate - Monk Training:</span> After casting an ability, Udyr empowers his next two basic attacks within 4 seconds to gain 30% bonus attack speed and refund 5% of Awakened Spirit's total cooldown, though not if the remaining cooldown is less than 1 second.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -126,7 +123,7 @@
         "projectile": null,
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Awakened Spirit's cooldown is affected by ultimate haste.\nAwakened ability casts are special cased to trigger  Experimental Hexplate's Overdrive,  Zeke's Convergence's Frostfire Tempest, and  Cloud Dragon Soul's increased movement speed.\nThe Awakened casts of  Wilding Claw and  Wingborne Storm are special cased to trigger  Malignance's Hatefog from their damage.\n Axiom Arc's Flux does not count neither Awakened Spirit nor  Wingborne Storm as ultimate abilities.\nAwakened Spirit's cooldown is tracked on his health bar by an  Awakening resource, visible to all teams. This secondary resource bar is non-descript and represents the effect's percentage charge.\nThe bar has a white color when Awakened Spirit is under 80% charge, a yellow color when at 80% charge or above, and a red color when an Awaken cast is available.\nSwitching Stances will not cause any additional effects granted by the previous one to end prematurely.\nThe global cooldown will not incur on abilities that are currently on a greater cooldown.\nThe empowered attacks will not get consumed if they are parried.\nAwakened Spirit's cast also activates Monk Training and empowers the next 2 attacks by the stances unawakened effects as well, overriding unused unawakened stance attacks.",
+        "notes": "Awakened Spirit's cooldown is affected by ultimate haste.\nAwakened ability casts are special cased to trigger  Experimental Hexplate's Overdrive,  Zeke's Convergence's Frostfire Tempest, and  Cloud Dragon Soul's increased movement speed.\nThe Awakened casts of  Wilding Claw and  Wingborne Storm are special cased to trigger  Malignance's Hatefog from their damage.\n Axiom Arcanist will affect the Awakened cast of all abilities, but does not refund the cooldown of Awakened Spirit.\nOnly  Wilding Claw's lightning damage is amplified. The on-hit damage is not increased.(note)\n Axiom Arc's Flux does not count neither Awakened Spirit nor  Wingborne Storm as ultimate abilities.\nAwakened Spirit's cooldown is tracked on his health bar by an  Awakening resource, visible to all teams. This secondary resource bar is non-descript and represents the effect's percentage charge.\nThe bar has a white color when Awakened Spirit is under 80% charge, a yellow color when at 80% charge or above, and a red color when an Awaken cast is available.\nSwitching Stances will not cause any additional effects granted by the previous one to end prematurely.\nThe global cooldown will not incur on abilities that are currently on a greater cooldown.\nThe empowered attacks will not get consumed if they are parried.\nAwakened Spirit's cast also activates Monk Training and empowers the next 2 attacks by the stances unawakened effects as well, overriding unused unawakened stance attacks.",
         "blurb": "Innate - Awakened Spirit:  Udyr has no ultimate ability and instead he has 4 basic abilities that each incur a  brief global cooldown. Each ability grants a Stance that empowers his next two basic attacks.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -139,7 +136,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -148,7 +146,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Udyr/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active - Stance:</p><p> Udyr enters Claw Stance, empowering his next two basic attacks to gain 50 bonus range and deal bonus physical damage.</p></div>",
+            "description": "<span class=\"ability-header\">Active - Stance:</span> Udyr enters Claw Stance, empowering his next two basic attacks to gain 50 bonus range and deal bonus physical damage.",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage",
@@ -254,33 +252,16 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast - Awaken:</p><p> Udyr gains an additional 20% - 70% (based on level) bonus attack speed. The empowered attacks deal an additional 2% - 4% (based on level) (+ 3% per 100 bonus AD) of the target's maximum health bonus physical damage. Udyr's next two basic attacks in any Stance within 4 seconds are each empowered to strike with lightning[ 6 times over 1 second, ][ every 0.2 seconds over 1 second, ]dealing bonus magic damage equal to 1.5% - 3% (based on level) (+ 0.8% per 100 AP) of the target's maximum health per hit, chaining to up to 3 nearby visible enemies and being able to hit the same target multiple times, for a total of 9% - 18% (based on level) (+ 4.8% per 100 AP) of the target's maximum health. Each lightning strike deals a minimum of 40 - 160 (based on level) against minions and is capped at 15 (+ 100% bonus AD) (+ 50% AP) against monsters.</p></div>",
+            "description": "<span class=\"ability-header\">Recast - Awaken:</span> Udyr gains an additional 20% - 70% (based on level) bonus attack speed. The empowered attacks deal an additional 2% - 4% (based on level) (+ 3% per 100 bonus AD) of the target's maximum health bonus physical damage. Udyr's next two basic attacks in any Stance within 4 seconds are each empowered to strike with lightning[ 6 times over 1 second, ][ every 0.2 seconds over 1 second, ]dealing bonus magic damage equal to 1.5% - 3% (based on level) (+ 0.8% per 100 AP) of the target's maximum health per hit, chaining to up to 3 nearby visible enemies and being able to hit the same target multiple times, for a total of 9% - 18% (based on level) (+ 4.8% per 100 AP) of the target's maximum health. Each lightning strike deals a minimum of 40 - 160 (based on level) against minions and is capped at 15 (+ 100% bonus AD) (+ 50% AP) against monsters.",
             "leveling": []
           }
         ],
         "cost": [
-          {
-            "values": [
-              20
-            ],
-            "units": [
-              ""
-            ]
-          }
+          20
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                6
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          6
+        ],
         "targeting": "Auto",
         "affects": "Self, Enemies",
         "spellshieldable": "special",
@@ -303,7 +284,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "450",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -312,7 +294,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Udyr/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active - Stance:</p><p> Udyr enters Mantle Stance, empowering his next two basic attacks to gain life steal and heal him for 1.2% of his maximum health (+ 8% AP) on-hit.</p></div>",
+            "description": "<span class=\"ability-header\">Active - Stance:</span> Udyr enters Mantle Stance, empowering his next two basic attacks to gain life steal and heal him for 1.2% of his maximum health (+ 8% AP) on-hit.",
             "leveling": [
               {
                 "attribute": "Life Steal",
@@ -379,7 +361,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast - Awaken:</p><p> Udyr increases the shield's strength, stacking with the remaining shield from the first cast, and heals every 0.25 seconds over the next 4 seconds, as well as causes the empowered attacks to instead gain doubled life steal and heal him for 2.4% of his maximum health (+ 16% AP) on-hit.</p></div>",
+            "description": "<span class=\"ability-header\">Recast - Awaken:</span> Udyr increases the shield's strength, stacking with the remaining shield from the first cast, and heals every 0.25 seconds over the next 4 seconds, as well as causes the empowered attacks to instead gain doubled life steal and heal him for 2.4% of his maximum health (+ 16% AP) on-hit.",
             "leveling": [
               {
                 "attribute": "Increased Shield Strength",
@@ -584,45 +566,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              40,
-              39,
-              38,
-              37,
-              36,
-              35,
-              34,
-              33,
-              32,
-              31,
-              30,
-              29,
-              28,
-              27,
-              26,
-              25,
-              24,
-              23
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                6
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          6
+        ],
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
@@ -645,7 +593,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -654,7 +603,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Udyr/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active - Stance:</p><p> Udyr enters Stampede Stance, empowering his basic attacks to have an uncancellable windup and pounce on the target to stun them for 0.75 seconds. This cannot affect the same target more than once every few seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active - Stance:</span> Udyr enters Stampede Stance, empowering his basic attacks to have an uncancellable windup and pounce on the target to stun them for 0.75 seconds. This cannot affect the same target more than once every few seconds.",
             "leveling": []
           },
           {
@@ -699,50 +648,16 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast - Awaken:</p><p> Udyr gains 75 bonus attack range and an additional 30% - 40% (based on level) bonus movement speed. He also gains immunity to crowd control for 1.5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Recast - Awaken:</span> Udyr gains 75 bonus attack range and an additional 30% - 40% (based on level) bonus movement speed. He also gains immunity to crowd control for 1.5 seconds.",
             "leveling": []
           }
         ],
         "cost": [
-          {
-            "values": [
-              40,
-              39,
-              38,
-              37,
-              36,
-              35,
-              34,
-              33,
-              32,
-              31,
-              30,
-              29,
-              28,
-              27,
-              26,
-              25,
-              24,
-              23
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                6
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          6
+        ],
         "targeting": "Auto",
         "affects": "Self, Enemies",
         "spellshieldable": "true",
@@ -765,7 +680,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -774,7 +690,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Udyr/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active - Stance:</p><p> Udyr enters Storm Stance, empowering his next two basic attacks to deal 10 - 30 (based on level) (+ 30% AP) magic damage to nearby enemies.</p></div>",
+            "description": "<span class=\"ability-header\">Active - Stance:</span> Udyr enters Storm Stance, empowering his next two basic attacks to deal 10 - 40 (based on level) (+ 35% AP) magic damage to nearby enemies.",
             "leveling": []
           },
           {
@@ -786,11 +702,11 @@
                   {
                     "values": [
                       10,
-                      17,
-                      24,
-                      31,
-                      38,
-                      45
+                      18,
+                      26,
+                      34,
+                      42,
+                      50
                     ],
                     "units": [
                       ""
@@ -812,11 +728,11 @@
                   {
                     "values": [
                       80,
-                      136,
-                      192,
-                      248,
-                      304,
-                      360
+                      144,
+                      208,
+                      272,
+                      336,
+                      400
                     ],
                     "units": [
                       ""
@@ -853,7 +769,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast - Awaken:</p><p> Udyr ends the blizzard if it is active and unleashes a glacial storm for 4 seconds that is able to move on its own, as well as causes the empowered attacks to instead deal their damage to enemies within that storm. The storm follows the closest nearby visible target and applies the same effects but deals bonus magic damage equal to[ 1% - 1.75% (based on level) (+ 0.4375% per 100 AP) of the target's maximum health per tick, capped at 10 - 50 (based on level) ][ 8% - 14% (based on level) (+ 3.5% per 100 AP) of the target's maximum health over the duration, capped at 80 - 400 (based on level) ]against monsters, and slows by an additional 5%.</p></div>",
+            "description": "<span class=\"ability-header\">Recast - Awaken:</span> Udyr ends the blizzard if it is active and unleashes a glacial storm for 4 seconds that is able to move on its own, as well as causes the empowered attacks to instead deal their damage to enemies within that storm. The storm follows the closest nearby visible target and applies the same effects but deals bonus magic damage equal to[ 1% - 1.75% (based on level) (+ 0.4375% per 100 AP) of the target's maximum health per tick, capped at 10 - 50 (based on level) ][ 8% - 14% (based on level) (+ 3.5% per 100 AP) of the target's maximum health over the duration, capped at 80 - 400 (based on level) ]against monsters, and slows by an additional 5%.",
             "leveling": [
               {
                 "attribute": "Increased Slow",
@@ -881,45 +797,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              40,
-              39,
-              38,
-              37,
-              36,
-              35,
-              34,
-              33,
-              32,
-              31,
-              30,
-              29,
-              28,
-              27,
-              26,
-              25,
-              24,
-              23
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                6
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          6
+        ],
         "targeting": "Auto",
         "affects": "Self, Enemies",
         "spellshieldable": "false",
@@ -942,10 +824,10 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "370 /  1300",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "The most powerful spirit walker alive, Udyr communes with all the spirits of the Freljord, whether by empathically understanding their needs, or by channeling and transforming their ethereal energy into his own primal fighting style. He seeks balance within, so that his mind does not get lost amidst others, but he also seeks balance without—for the Freljord's mystical landscape can only thrive with the growth that comes from conflict and struggle, and Udyr knows that sacrifices must be made to keep peaceful stagnance at bay.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/udyr/skins/base/images/udyr_splash_tile_0.jpg"
+  "lore": "The most powerful spirit walker alive, Udyr communes with all the spirits of the Freljord, whether by empathically understanding their needs, or by channeling and transforming their ethereal energy into his own primal fighting style. He seeks balance within, so that his mind does not get lost amidst others, but he also seeks balance without—for the Freljord's mystical landscape can only thrive with the growth that comes from conflict and struggle, and Udyr knows that sacrifices must be made to keep peaceful stagnance at bay."
 }

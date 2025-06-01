@@ -4435,11 +4435,11 @@
       "Legendary"
     ],
     "stats": {
-      "abilityPower": 110,
+      "abilityPower": 115,
       "abilityHaste": 25
     },
     "purchasable": true,
-    "cost": 2900,
+    "cost": 2800,
     "tags": [
       "Mage"
     ],
@@ -5342,7 +5342,8 @@
     "maps": [
       11,
       12,
-      21
+      21,
+      35
     ]
   },
   "8020": {

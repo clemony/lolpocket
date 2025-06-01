@@ -9,13 +9,6 @@ export const useDataStore = defineStore(
     const patchList = ref<number[]>([])
     const lastFetched = ref<number>(0) // timestamp
 
-    const currentPatchNotes = ref<PatchNotesData>(null)
-    const patchNotesLink = computed(() => {
-      return currentPatch.value
-        ? `https://www.leagueoflegends.com/en-us/news/game-updates/patch-${currentPatch.value.toString().replace('.', '-')}-notes/`
-        : ''
-    })
-
     const loadPatchData = async () => {
       const now = Date.now()
       const oneDay = 1000 * 60 * 60 * 24
@@ -38,13 +31,20 @@ export const useDataStore = defineStore(
       }
     }
 
+    const currentPatchNotes = ref<PatchNotesData>(null)
+    const patchNotesLink = computed(() => {
+      return currentPatch.value
+        ? `https://www.leagueoflegends.com/en-us/news/game-updates/patch-${currentPatch.value.toString().replace('.', '-')}-notes/`
+        : ''
+    })
+
     return {
       currentPatch,
       patchList,
-      currentPatchNotes,
-      patchNotesLink,
       lastFetched,
       loadPatchData,
+      currentPatchNotes,
+      patchNotesLink,
     }
   },
   {

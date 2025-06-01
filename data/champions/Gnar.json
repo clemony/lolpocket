@@ -95,7 +95,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gnar/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate - Rage Gene:</p><p> Mini Gnar generates 4 / 7 / 11 (based on level) Rage over 2 seconds upon dealing or receiving damage, up to 100. Against non-champions, basic attacks and Boomerang Throw instantly generate[ 0.5 / 0.875 / 1.375 (based on level) Rage. ][ 12.5% of the amount. ] Against champions, Boomerang Throw instantly generates[ 1 / 1.75 / 2.75 (based on level) Rage, ][ 25% of the amount, ]and basic attacks instantly generate[ 2 / 3.5 / 5.5 (based on level). ][ 50% of the amount. ] Boomerang Throw can only generate Rage once per cast, and grants Rage based on the first enemy hit. Gnar's Rage decays after being out of combat for 13 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Innate - Rage Gene:</span> Mini Gnar generates 4 / 7 / 11 (based on level) Rage over 2 seconds upon dealing or receiving damage, up to 100. Against non-champions, basic attacks and Boomerang Throw instantly generate[ 0.5 / 0.875 / 1.375 (based on level) Rage. ][ 12.5% of the amount. ] Against champions, Boomerang Throw instantly generates[ 1 / 1.75 / 2.75 (based on level) Rage, ][ 25% of the amount, ]and basic attacks instantly generate[ 2 / 3.5 / 5.5 (based on level). ][ 50% of the amount. ] Boomerang Throw can only generate Rage once per cast, and grants Rage based on the first enemy hit. Gnar's Rage decays after being out of combat for 13 seconds.",
             "leveling": []
           },
           {
@@ -112,10 +112,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -138,7 +135,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -147,7 +145,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gnar/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Gnar throws a boomerang in a line in the target direction that deals physical damage to enemies in its path and slows them for 2 seconds. After reaching its maximum range or hitting an enemy, the boomerang flies back toward Gnar based on his current movement, dealing 50% damage to subsequent targets.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Gnar throws a boomerang in a line in the target direction that deals physical damage to enemies in its path and slows them for 2 seconds. After reaching its maximum range or hitting an enemy, the boomerang flies back toward Gnar based on his current movement, dealing 50% damage to subsequent targets.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -227,24 +225,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                20,
-                17.5,
-                15,
-                12.5,
-                10
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          20,
+          17.5,
+          15,
+          12.5,
+          10
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -267,14 +257,15 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       },
       {
         "name": "Boulder Toss",
         "icon": "https://cdn.communitydragon.org/latest/champion/Gnar/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Gnar throws a boulder in the target direction that stops upon hitting an enemy, dealing physical damage to nearby enemies upon impact and slowing them for 2 seconds. The boulder then remains on the ground for 6 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Gnar throws a boulder in the target direction that stops upon hitting an enemy, dealing physical damage to nearby enemies upon impact and slowing them for 2 seconds. The boulder then remains on the ground for 6 seconds.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -325,24 +316,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                20,
-                17.5,
-                15,
-                12.5,
-                10
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          20,
+          17.5,
+          15,
+          12.5,
+          10
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -365,7 +348,8 @@
         "angle": null,
         "castTime": "0.5",
         "effectRadius": "250",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -374,7 +358,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gnar/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Gnar's basic attacks on-hit and ability hits apply a stack of Hyper to enemies for 3.5 seconds, refreshing on subsequent applications and stacking up to 3 times.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Gnar's basic attacks on-hit and ability hits apply a stack of Hyper to enemies for 3.5 seconds, refreshing on subsequent applications and stacking up to 3 times.",
             "leveling": []
           },
           {
@@ -424,11 +408,12 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          7
+        ],
         "targeting": "Passive",
         "affects": "Enemies",
         "spellshieldable": "False",
@@ -451,14 +436,15 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       },
       {
         "name": "Wallop",
         "icon": "https://cdn.communitydragon.org/latest/champion/Gnar/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Gnar slams his arm down in the target direction, dealing physical damage to all enemies struck within the area and stunning them for 1.25 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Gnar slams his arm down in the target direction, dealing physical damage to all enemies struck within the area and stunning them for 1.25 seconds.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -488,20 +474,12 @@
             ]
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                7
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          7
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -524,7 +502,8 @@
         "angle": null,
         "castTime": "0.6",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -533,7 +512,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gnar/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Gnar leaps to the target location, then gains bonus attack speed for 6 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Gnar leaps to the target location, then gains bonus attack speed for 6 seconds.",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -597,24 +576,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                22,
-                19.5,
-                17,
-                14.5,
-                12
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          22,
+          19.5,
+          17,
+          14.5,
+          12
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -637,14 +608,15 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "150",
-        "targetRange": "475"
+        "targetRange": "475",
+        "maxCharges": -1
       },
       {
         "name": "Crunch",
         "icon": "https://cdn.communitydragon.org/latest/champion/Gnar/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Gnar leaps to the target location and deals physical damage to nearby enemies upon impact. After a 0.25-second delay, Gnar sends out a shockwave, dealing the same damage to additional enemies in a larger radius.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Gnar leaps to the target location and deals physical damage to nearby enemies upon impact. After a 0.25-second delay, Gnar sends out a shockwave, dealing the same damage to additional enemies in a larger radius.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -686,24 +658,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                22,
-                19.5,
-                17,
-                14.5,
-                12
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          22,
+          19.5,
+          17,
+          14.5,
+          12
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -726,7 +690,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "375",
-        "targetRange": "675"
+        "targetRange": "675",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -735,7 +700,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gnar/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Mini Gnar - Passive:</p><p> Hyper's bonus movement speed is increased.</p></div>",
+            "description": "<span class=\"ability-header\">Mini Gnar - Passive:</span> Hyper's bonus movement speed is increased.",
             "leveling": [
               {
                 "attribute": "Hyper Bonus Movement Speed",
@@ -755,7 +720,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Mega Gnar - Active:</p><p> Gnar thrusts in the target direction, knocking away nearby enemies up to 590 units in that direction, though not through terrain, and afterwards dealing them physical damage, as well as slowing them by 45% after a 0.4-second delay for a duration.</p></div>",
+            "description": "<span class=\"ability-header\">Mega Gnar - Active:</span> Gnar thrusts in the target direction, knocking away nearby enemies up to 590 units in that direction, though not through terrain, and afterwards dealing them physical damage, as well as slowing them by 45% after a 0.4-second delay for a duration.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -842,22 +807,14 @@
             ]
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                90,
-                60,
-                30
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          90,
+          60,
+          30
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -880,10 +837,10 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "475",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Gnar is a primeval yordle whose playful antics can erupt into a toddler's outrage in an instant, transforming him into a massive beast bent on destruction. Frozen in True Ice for millennia, the curious creature broke free and now hops about a changed world he sees as exotic and wondrous. Delighted by danger, Gnar flings whatever he can at his enemies, be it his bonetooth boomerang, or a nearby building.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gnar/skins/base/images/gnar_splash_tile_0.jpg"
+  "lore": "Gnar is a primeval yordle whose playful antics can erupt into a toddler's outrage in an instant, transforming him into a massive beast bent on destruction. Frozen in True Ice for millennia, the curious creature broke free and now hops about a changed world he sees as exotic and wondrous. Delighted by danger, Gnar flings whatever he can at his enemies, be it his bonetooth boomerang, or a nearby building."
 }

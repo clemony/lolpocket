@@ -100,15 +100,12 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Trundle/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Whenever a nearby enemy dies, Trundle heals himself for 1.8% - 5.5% (based on level) of the target's maximum health.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Whenever a nearby enemy dies, Trundle heals himself for 1.8% - 5.5% (based on level) of the target's maximum health.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -131,7 +128,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": "1400",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -140,7 +138,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Trundle/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Trundle empowers his next basic attack within 7 seconds to have an uncancellable windup, gain 25 bonus range, deal bonus physical damage and slow the target by 75% for 0.1 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Trundle empowers his next basic attack within 7 seconds to have an uncancellable windup, gain 25 bonus range, deal bonus physical damage and slow the target by 75% for 0.1 seconds.",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage",
@@ -218,28 +216,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              20
-            ],
-            "units": [
-              ""
-            ]
-          }
+          20
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                3.5
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          3.5
+        ],
         "targeting": "Auto",
         "affects": "Self, Enemies",
         "spellshieldable": "special",
@@ -250,7 +231,7 @@
         "onHitEffects": null,
         "occurrence": null,
         "notes": "Chomp will still incur the  attack damage increase for Trundle even if the attack is  dodged,  blocked, missed while he is  blinded, or it is blocked by  spell shield.\n Spell shield will only block the attack damage reduction and  slow.",
-        "blurb": "Active:  Trundle's next basic attack with a few seconds will deal bonus physical damage and briefly  slow the target.",
+        "blurb": "Active:  Trundle's next basic attack within a few seconds will deal bonus physical damage and briefly  slow the target.",
         "missileSpeed": null,
         "rechargeRate": null,
         "collisionRadius": null,
@@ -262,7 +243,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -271,7 +253,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Trundle/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Trundle coats the target location in ice for 8 seconds. While he is within the area, he gains bonus attack speed, bonus movement speed, and 25% increased healing from all sources.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Trundle coats the target location in ice for 8 seconds. While he is within the area, he gains bonus attack speed, bonus movement speed, and 25% increased healing from all sources.",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -315,32 +297,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              40
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                16,
-                15,
-                14,
-                13,
-                12
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          16,
+          15,
+          14,
+          13,
+          12
+        ],
         "targeting": "Location",
         "affects": "Self",
         "spellshieldable": null,
@@ -363,7 +328,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "775",
-        "targetRange": "750"
+        "targetRange": "750",
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -372,7 +338,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Trundle/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Trundle erects a pillar of ice at the target location for 6 seconds, which knocks back units hit to 225 units from its center. The pillar acts as terrain and slows nearby enemies.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Trundle erects a pillar of ice at the target location for 6 seconds, which knocks back units hit to 225 units from its center. The pillar acts as terrain and slows nearby enemies.",
             "leveling": [
               {
                 "attribute": "Slow",
@@ -395,32 +361,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              75
-            ],
-            "units": [
-              ""
-            ]
-          }
+          75
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                21,
-                19.5,
-                18,
-                16.5,
-                15
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          21,
+          19.5,
+          18,
+          16.5,
+          15
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "False",
@@ -443,7 +392,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "360 / 225",
-        "targetRange": "1000"
+        "targetRange": "1000",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -452,7 +402,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Trundle/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Trundle drains the life force out of the target enemy champion, dealing magic damage and healing himself for the same amount. He also steals 40% of their current bonus armor and magic resistance, and increases in size by 18% while reducing the target's size by 9.9%.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Trundle drains the life force out of the target enemy champion, dealing magic damage and healing himself for the same amount. He also steals 40% of their current bonus armor and magic resistance, and increases in size by 18% while reducing the target's size by 9.9%.",
             "leveling": [
               {
                 "attribute": "Total Magic Damage",
@@ -536,30 +486,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                120,
-                100,
-                80
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          120,
+          100,
+          80
+        ],
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -582,10 +515,10 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "650"
+        "targetRange": "650",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Trundle is a hulking and devious troll with a particularly vicious streak, and there is nothing he cannot bludgeon into submission—not even the Freljord itself. Fiercely territorial, he chases down anyone foolish enough to enter his domain. Then, his massive club of True Ice at the ready, he chills his enemies to the bone and impales them with jagged, frozen pillars, laughing as they bleed out onto the tundra.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/trundle/skins/base/images/trundle_splash_tile_0.jpg"
+  "lore": "Trundle is a hulking and devious troll with a particularly vicious streak, and there is nothing he cannot bludgeon into submission—not even the Freljord itself. Fiercely territorial, he chases down anyone foolish enough to enter his domain. Then, his massive club of True Ice at the ready, he chills his enemies to the bone and impales them with jagged, frozen pillars, laughing as they bleed out onto the tundra."
 }

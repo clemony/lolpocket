@@ -100,7 +100,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Leblanc/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Periodically, when LeBlanc is damaged to 40% maximum health, she creates a clone of herself, after which they both instantly become invisible for 1 second.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Periodically, when LeBlanc is damaged to 40% maximum health, she creates a clone of herself, after which they both instantly become invisible for 1 second.",
             "leveling": []
           },
           {
@@ -113,19 +113,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                60
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -148,7 +136,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -157,7 +146,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Leblanc/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> LeBlanc projects an orb at the target enemy that deals magic damage and marks them for 3.5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> LeBlanc projects an orb at the target enemy that deals magic damage and marks them for 3.5 seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -222,28 +211,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                6
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          6
+        ],
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -266,7 +238,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "700"
+        "targetRange": "700",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -275,7 +248,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Leblanc/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> LeBlanc dashes to the target location, dealing magic damage to all nearby enemies upon arrival and leaving a return pad at the cast location for 4 seconds. Distortion can be recast after 0.2 seconds of the dash ending for the pad's duration.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> LeBlanc dashes to the target location, dealing magic damage to all nearby enemies upon arrival and leaving a return pad at the cast location for 4 seconds. Distortion can be recast after 0.2 seconds of the dash ending for the pad's duration.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -305,7 +278,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> LeBlanc blinks to Distortion's return pad, regardless of range.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> LeBlanc blinks to Distortion's return pad, regardless of range.",
             "leveling": []
           },
           {
@@ -314,36 +287,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              60,
-              70,
-              80,
-              90,
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          60,
+          70,
+          80,
+          90,
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                15,
-                13.75,
-                12.5,
-                11.25,
-                10
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          15,
+          13.75,
+          12.5,
+          11.25,
+          10
+        ],
         "targeting": "Location / Auto",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -366,7 +322,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "240",
-        "targetRange": "600 / Global"
+        "targetRange": "600 / Global",
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -375,7 +332,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Leblanc/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> LeBlanc flings an illusory chain in the target direction that deals magic damage to the first enemy it hits and forms a tether between LeBlanc and the target for 1.5 seconds, during which they are revealed.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> LeBlanc flings an illusory chain in the target direction that deals magic damage to the first enemy it hits and forms a tether between LeBlanc and the target for 1.5 seconds, during which they are revealed.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -461,32 +418,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                14,
-                13.25,
-                12.5,
-                11.75,
-                11
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          14,
+          13.25,
+          12.5,
+          11.75,
+          11
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "Special",
@@ -509,7 +449,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "950"
+        "targetRange": "950",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -518,11 +459,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Leblanc/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> LeBlanc casts a mimicked version of her most recently used basic ability, applying the same effects and dealing modified magic damage.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> LeBlanc casts a mimicked version of her most recently used basic ability, applying the same effects and dealing modified magic damage.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Mimic:</p><p> Sigil of Malice: The orb deals modified damage, while the mark consumption deals double that amount.</p></div>",
+            "description": "<span class=\"ability-header\">Mimic:</span> Sigil of Malice: The orb deals modified damage, while the mark consumption deals double that amount.",
             "leveling": [
               {
                 "attribute": "Orb Magic Damage",
@@ -596,7 +537,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Mimic:</p><p> Distortion: Deals modified damage.</p></div>",
+            "description": "<span class=\"ability-header\">Mimic:</span> Distortion: Deals modified damage.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -624,7 +565,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Mimic:</p><p> Ethereal Chains: The tether's application deals modified damage, while its fracturing deals double that amount.</p></div>",
+            "description": "<span class=\"ability-header\">Mimic:</span> Ethereal Chains: The tether's application deals modified damage, while its fracturing deals double that amount.",
             "leveling": [
               {
                 "attribute": "Application Magic Damage",
@@ -698,22 +639,14 @@
             ]
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                50,
-                40,
-                30
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          50,
+          40,
+          30
+        ],
         "targeting": "Varied",
         "affects": "Self",
         "spellshieldable": null,
@@ -736,10 +669,10 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": 2
       }
     ]
   },
-  "lore": "Mysterious even to other members of the Black Rose cabal, LeBlanc is but one of many names for a pale woman who has manipulated people and events since the earliest days of Noxus. Using her magic to mirror herself, the sorceress can appear to anyone, anywhere, and even be in many places at once. Always plotting just out of sight, LeBlanc's true motives are as inscrutable as her shifting identity.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/base/images/leblanc_splash_tile_0.leblanc_rework.jpg"
+  "lore": "Mysterious even to other members of the Black Rose cabal, LeBlanc is but one of many names for a pale woman who has manipulated people and events since the earliest days of Noxus. Using her magic to mirror herself, the sorceress can appear to anyone, anywhere, and even be in many places at once. Always plotting just out of sight, LeBlanc's true motives are as inscrutable as her shifting identity."
 }

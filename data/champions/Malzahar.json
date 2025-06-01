@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Malzahar/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Periodically, Malzahar gains Void Shift until he takes non- minion damage or negates a crowd control effect, to which it then lingers for 0.25 seconds before expiring. Void Shift: Malzahar gains crowd control immunity and 90% damage reduction.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Periodically, Malzahar gains Void Shift until he takes non- minion damage or negates a crowd control effect, to which it then lingers for 0.25 seconds before expiring. Void Shift: Malzahar gains crowd control immunity and 90% damage reduction.",
             "leveling": []
           },
           {
@@ -108,22 +108,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                30,
-                24,
-                18,
-                12
-              ],
-              "units": [
-                " (based on level)"
-              ]
-            }
-          ],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -146,7 +131,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -155,7 +141,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Malzahar/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Malzahar opens two portals to the void centered at the target location, granting sight of the area in between. After 0.4 seconds, enemies between the portals are dealt magic damage and silenced for a duration.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Malzahar opens two portals to the void centered at the target location, granting sight of the area in between. After 0.4 seconds, enemies between the portals are dealt magic damage and silenced for a duration.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -203,32 +189,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              60,
-              65,
-              70,
-              75,
-              80
-            ],
-            "units": [
-              ""
-            ]
-          }
+          60,
+          65,
+          70,
+          75,
+          80
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                6
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          6
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -251,7 +220,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "200",
-        "targetRange": "900"
+        "targetRange": "900",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -260,11 +230,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Malzahar/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Malzahar generates a stack of Zz'Rot Swarm when he casts another ability, up to a maximum of 2.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Malzahar generates a stack of Zz'Rot Swarm when he casts another ability, up to a maximum of 2.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Malzahar consumes all Zz'Rot Swarm stacks and, after a 0.5-second delay, summons a Voidling at the target location. Additional Voidlings are then summoned for each Zz'Rot Swarm stack consumed, with each Voidling being summoned 0.5 seconds after the previous one.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Malzahar consumes all Zz'Rot Swarm stacks and, after a 0.5-second delay, summons a Voidling at the target location. Additional Voidlings are then summoned for each Zz'Rot Swarm stack consumed, with each Voidling being summoned 0.5 seconds after the previous one.",
             "leveling": [
               {
                 "attribute": "Voidling Duration",
@@ -412,32 +382,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              40,
-              45,
-              50,
-              55,
-              60
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40,
+          45,
+          50,
+          55,
+          60
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                8
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          8
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": null,
@@ -460,7 +413,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": "150"
+        "targetRange": "150",
+        "maxCharges": null
       }
     ],
     "E": [
@@ -469,7 +423,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Malzahar/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Malzahar infects the target enemy's mind, dealing magic damage every 0.25 seconds over 4 seconds, which refreshes upon damaging them with Call of the Void or Nether Grasp. Malefic Visions executes minions if they would be damaged below 10 - 30 (based on level) health.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Malzahar infects the target enemy's mind, dealing magic damage every 0.25 seconds over 4 seconds, which refreshes upon damaging them with Call of the Void or Nether Grasp. Malefic Visions executes minions if they would be damaged below 10 - 30 (based on level) health.",
             "leveling": [
               {
                 "attribute": "Total Magic Damage",
@@ -529,36 +483,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              60,
-              70,
-              80,
-              90,
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          60,
+          70,
+          80,
+          90,
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                11,
-                10,
-                9,
-                8,
-                7
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          11,
+          10,
+          9,
+          8,
+          7
+        ],
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -581,7 +518,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "500",
-        "targetRange": "650"
+        "targetRange": "650",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -590,7 +528,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Malzahar/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Malzahar tethers to the target enemy champion, knocking them down. He then channels for up to 2.5 seconds, suppressing and revealing the target and dealing them magic damage every 0.25 seconds, revealing himself in the process.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Malzahar tethers to the target enemy champion, knocking them down. He then channels for up to 2.5 seconds, suppressing and revealing the target and dealing them magic damage every 0.25 seconds, revealing himself in the process.",
             "leveling": [
               {
                 "attribute": "Total Magic Damage",
@@ -701,30 +639,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                140,
-                110,
-                80
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          140,
+          110,
+          80
+        ],
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -747,10 +668,10 @@
         "angle": null,
         "castTime": "0.005",
         "effectRadius": null,
-        "targetRange": "700"
+        "targetRange": "700",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "A zealous seer dedicated to the unification of all life, Malzahar truly believes the newly emergent Void to be the path to Runeterra's salvation. In the desert wastes of Shurima, he followed the voices that whispered in his mind, all the way to ancient Icathia. Amidst the ruins of that land, he gazed into the dark heart of the Void itself, and was gifted new power and purpose. Malzahar now sees himself as a shepherd, empowered to bring others into the fold… or to release the voidling creatures that dwell beneath.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/malzahar/skins/base/images/malzahar_splash_tile_0.jpg"
+  "lore": "A zealous seer dedicated to the unification of all life, Malzahar truly believes the newly emergent Void to be the path to Runeterra's salvation. In the desert wastes of Shurima, he followed the voices that whispered in his mind, all the way to ancient Icathia. Amidst the ruins of that land, he gazed into the dark heart of the Void itself, and was gifted new power and purpose. Malzahar now sees himself as a shepherd, empowered to bring others into the fold… or to release the voidling creatures that dwell beneath."
 }

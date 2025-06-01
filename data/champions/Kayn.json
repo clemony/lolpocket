@@ -100,7 +100,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kayn/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Kayn has a secondary experience bar that tracks progress toward his Darkin and Shadow Assassin forms. He gathers orbs from champion takedowns and each instance of damage (excluding damage over time) dealt against champions. Once he has earned enough orbs, he unlocks a form based on whether he earned more from melee or ranged champions (for Darkin and Shadow Assassin, respectively), with the other form unlocked later.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Kayn has a secondary experience bar that tracks progress toward his Darkin and Shadow Assassin forms. He gathers orbs from champion takedowns and each instance of damage (excluding damage over time) dealt against champions. Once he has earned enough orbs, he unlocks a form based on whether he earned more from melee or ranged champions (for Darkin and Shadow Assassin, respectively), with the other form unlocked later.",
             "leveling": []
           },
           {
@@ -108,19 +108,16 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Shadow Assassin Bonus:</p><p> Upon entering combat with enemy champions, Kayn becomes empowered for 3 seconds to deal 25% - 45% (based on level) of post-mitigation physical and magic damage dealt against enemy champions as bonus magic damage. This effect cannot trigger again until Kayn has been out of combat with champions for over 8 seconds, with the timer being reset if he recasts Umbral Trespass.</p></div>",
+            "description": "<span class=\"ability-header\">Shadow Assassin Bonus:</span> Upon entering combat with enemy champions, Kayn becomes empowered for 3 seconds to deal 25% - 45% (based on level) of post-mitigation physical and magic damage dealt against enemy champions as bonus magic damage. This effect cannot trigger again until Kayn has been out of combat with champions for over 8 seconds, with the timer being reset if he recasts Umbral Trespass.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Darkin Bonus:</p><p> Rhaast heals for 25% (+ 0.5% per 100 bonus health) of the post-mitigation physical damage that he deals to enemy champions with his abilities.</p></div>",
+            "description": "<span class=\"ability-header\">Darkin Bonus:</span> Rhaast heals for 25% (+ 0.5% per 100 bonus health) of the post-mitigation physical damage that he deals to enemy champions with his abilities.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -143,7 +140,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -152,7 +150,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kayn/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Kayn dashes in the target direction, dealing physical damage to enemies he passes through. He then swings his scythe, dealing the same damage to nearby enemies.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Kayn dashes in the target direction, dealing physical damage to enemies he passes through. He then swings his scythe, dealing the same damage to nearby enemies.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -262,7 +260,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Darkin Bonus:</p><p> Reaping Slash's damage is modified to deal 65% AD (+ 6% (+ 3.5% per 100 bonus AD) of the target's maximum health) physical damage with each hit, for a total of 130% AD (+ 12% (+ 7% per 100 bonus AD) of the target's maximum health). This damage has a cap against monsters that does not include the bonus damage.</p></div>",
+            "description": "<span class=\"ability-header\">Darkin Bonus:</span> Reaping Slash's damage is modified to deal 65% AD (+ 6% (+ 3.5% per 100 bonus AD) of the target's maximum health) physical damage with each hit, for a total of 130% AD (+ 12% (+ 7% per 100 bonus AD) of the target's maximum health). This damage has a cap against monsters that does not include the bonus damage.",
             "leveling": [
               {
                 "attribute": "Capped Monster Damage per Hit",
@@ -306,32 +304,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                7,
-                6.5,
-                6,
-                5.5,
-                5
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          7,
+          6.5,
+          6,
+          5.5,
+          5
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "Special",
@@ -354,7 +335,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": "350"
+        "targetRange": "350",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -363,7 +345,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kayn/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Kayn swings his scythe in the target direction, dealing physical damage to enemies hit and slowing them by 90% decaying over 1.5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Kayn swings his scythe in the target direction, dealing physical damage to enemies hit and slowing them by 90% decaying over 1.5 seconds.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -393,45 +375,28 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Shadow Assassin Bonus:</p><p> Blade's Reach's radius is extended by 200 units. Kayn conjures an untargetable shadow at the casting position to perform Blade's Reach's sweep over 0.55 seconds in his stead, removing the ability's cast time.</p></div>",
+            "description": "<span class=\"ability-header\">Shadow Assassin Bonus:</span> Blade's Reach's radius is extended by 200 units. Kayn conjures an untargetable shadow at the casting position to perform Blade's Reach's sweep over 0.55 seconds in his stead, removing the ability's cast time.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Darkin Bonus:</p><p> Blade's Reach knocks up enemies hit for 1 second.</p></div>",
+            "description": "<span class=\"ability-header\">Darkin Bonus:</span> Blade's Reach knocks up enemies hit for 1 second.",
             "leveling": []
           }
         ],
         "cost": [
-          {
-            "values": [
-              60,
-              65,
-              70,
-              75,
-              80
-            ],
-            "units": [
-              ""
-            ]
-          }
+          60,
+          65,
+          70,
+          75,
+          80
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                13,
-                12,
-                11,
-                10,
-                9
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          13,
+          12,
+          11,
+          10,
+          9
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -454,7 +419,8 @@
         "angle": null,
         "castTime": "0.55 / None",
         "effectRadius": null,
-        "targetRange": "700 / 900"
+        "targetRange": "700 / 900",
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -463,7 +429,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kayn/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Kayn gains 40% bonus total movement speed, ghosting and the ability to ignore terrain collision for a duration. If he has been in combat with enemy champions within the last 3 seconds, Shadow Step will instead last 1.5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Kayn gains 40% bonus total movement speed, ghosting and the ability to ignore terrain collision for a duration. If he has been in combat with enemy champions within the last 3 seconds, Shadow Step will instead last 1.5 seconds.",
             "leveling": [
               {
                 "attribute": "Duration",
@@ -519,37 +485,20 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Shadow Assassin Bonus:</p><p> Shadow Step's cooldown is reduced to 10 seconds at all ranks. Kayn gains 100% slow resist while active and, upon entering terrain, the bonus total movement speed is increased to 70% for the remaining duration.</p></div>",
+            "description": "<span class=\"ability-header\">Shadow Assassin Bonus:</span> Shadow Step's cooldown is reduced to 10 seconds at all ranks. Kayn gains 100% slow resist while active and, upon entering terrain, the bonus total movement speed is increased to 70% for the remaining duration.",
             "leveling": []
           }
         ],
         "cost": [
-          {
-            "values": [
-              90
-            ],
-            "units": [
-              ""
-            ]
-          }
+          90
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                21,
-                19,
-                17,
-                15,
-                13
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          21,
+          19,
+          17,
+          15,
+          13
+        ],
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
@@ -572,7 +521,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -581,15 +531,15 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kayn/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Kayn marks enemy champions he damaged in the last 3.15 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Kayn marks enemy champions he damaged in the last 3.15 seconds.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Kayn vanishes and dashes to a marked enemy champion over 0.25 seconds, attaching himself to them at the end of the dash. After 0.5 seconds of his arrival, he channels for up to 2 seconds, during which the target is revealed. Umbral Trespass can be recast during the channel after 0.1 seconds have elapsed, and does so automatically after the duration or if it is interrupted.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Kayn vanishes and dashes to a marked enemy champion over 0.25 seconds, attaching himself to them at the end of the dash. After 0.5 seconds of his arrival, he channels for up to 2 seconds, during which the target is revealed. Umbral Trespass can be recast during the channel after 0.1 seconds have elapsed, and does so automatically after the duration or if it is interrupted.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> After a delay of 0.5 seconds to 0.75 seconds, Kayn deals physical damage to the target and dashes out from their body in the target direction, detaching himself from them and becoming targetable again at the end of the dash.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> After a delay of 0.5 seconds to 0.75 seconds, Kayn deals physical damage to the target and dashes out from their body in the target direction, detaching himself from them and becoming targetable again at the end of the dash.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -617,39 +567,22 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Shadow Assassin Bonus:</p><p> Umbral Trespass gains 200 bonus cast range and emerge range. Additionally, emerging will reset The Darkin Scythe's cooldown.</p></div>",
+            "description": "<span class=\"ability-header\">Shadow Assassin Bonus:</span> Umbral Trespass gains 200 bonus cast range and emerge range. Additionally, emerging will reset The Darkin Scythe's cooldown.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Darkin Bonus:</p><p> Umbral Trespass is modified to deal physical damage equal to 15% (+ 10% per 100 bonus AD) of the target's maximum health, and also heals Rhaast for 11.25% (+ 7.5% per 100 bonus AD) of the target's maximum health after the recast's delay.</p></div>",
+            "description": "<span class=\"ability-header\">Darkin Bonus:</span> Umbral Trespass is modified to deal physical damage equal to 15% (+ 10% per 100 bonus AD) of the target's maximum health, and also heals Rhaast for 11.25% (+ 7.5% per 100 bonus AD) of the target's maximum health after the recast's delay.",
             "leveling": []
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                120,
-                100,
-                80
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          120,
+          100,
+          80
+        ],
         "targeting": "Unit / Direction",
         "affects": "Enemies, Self",
         "spellshieldable": "Special",
@@ -672,10 +605,10 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "300 / 500",
-        "targetRange": "550 / 750"
+        "targetRange": "550 / 750",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "A peerless practitioner of lethal shadow magic, Shieda Kayn battles to achieve his true destiny—to one day lead the Order of Shadow into a new era of Ionian supremacy. He wields the sentient darkin weapon Rhaast, undeterred by its creeping corruption of his body and mind. There are only two possible outcomes: either Kayn bends the weapon to his will... or the malevolent blade consumes him completely, paving the way for the destruction of all Runeterra.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kayn/skins/base/images/kayn_splash_tile_0.jpg"
+  "lore": "A peerless practitioner of lethal shadow magic, Shieda Kayn battles to achieve his true destiny—to one day lead the Order of Shadow into a new era of Ionian supremacy. He wields the sentient darkin weapon Rhaast, undeterred by its creeping corruption of his body and mind. There are only two possible outcomes: either Kayn bends the weapon to his will... or the malevolent blade consumes him completely, paving the way for the destruction of all Runeterra."
 }

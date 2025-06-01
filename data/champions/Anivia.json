@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Anivia/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Periodically, upon taking fatal damage, Anivia enters resurrection for 6 seconds and restores all of her health.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Periodically, upon taking fatal damage, Anivia enters resurrection for 6 seconds and restores all of her health.",
             "leveling": []
           },
           {
@@ -112,19 +112,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                240
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -147,7 +135,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -156,7 +145,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Anivia/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Anivia launches a chunk of ice in the target direction that deals magic damage to enemies hit and slows them by 20% - 40% (based on Glacial Storm's Rank) for 3 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Anivia launches a chunk of ice in the target direction that deals magic damage to enemies hit and slows them by 20% - 40% (based on Glacial Storm's Rank) for 3 seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -190,7 +179,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Anivia shatters the ice, dealing magic damage to nearby enemies and stunning them for a duration, as well as refreshing the slow.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Anivia shatters the ice, dealing magic damage to nearby enemies and stunning them for a duration, as well as refreshing the slow.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -263,36 +252,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              80,
-              85,
-              90,
-              95,
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          80,
+          85,
+          90,
+          95,
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                12,
-                11,
-                10,
-                9,
-                8
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          12,
+          11,
+          10,
+          9,
+          8
+        ],
         "targeting": "Direction / Auto",
         "affects": "Enemies",
         "spellshieldable": "Special",
@@ -315,7 +287,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "225",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -324,7 +297,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Anivia/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Anivia summons a wall of ice at the target location perpendicular to her facing, knocking all units away from it, though not through terrain. The wall lingers as impassable terrain for 5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Anivia summons a wall of ice at the target location perpendicular to her facing, knocking all units away from it, though not through terrain. The wall lingers as impassable terrain for 5 seconds.",
             "leveling": [
               {
                 "attribute": "Width",
@@ -398,28 +371,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              70
-            ],
-            "units": [
-              ""
-            ]
-          }
+          70
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                17
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          17
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "false",
@@ -442,7 +398,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "1000 / 100"
+        "targetRange": "1000 / 100",
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -451,11 +408,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Anivia/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Enemies hit by Flash Frost or a fully formed Glacial Storm become Chilled for 3 seconds, refreshing on subsequent hits.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Enemies hit by Flash Frost or a fully formed Glacial Storm become Chilled for 3 seconds, refreshing on subsequent hits.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Anivia blasts a freezing wind at the target enemy that deals magic damage, doubled if they were Chilled.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Anivia blasts a freezing wind at the target enemy that deals magic damage, doubled if they were Chilled.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -511,28 +468,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                4
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          4
+        ],
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -555,7 +495,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "600"
+        "targetRange": "600",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -564,7 +505,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Anivia/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Anivia calls forth a driving rain of ice and hail at the target location, dealing magic damage every 0.5 seconds to enemies within and slowing them for 1 second, refreshing every 0.5 seconds while they remain inside.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Anivia calls forth a driving rain of ice and hail at the target location, dealing magic damage every 0.5 seconds to enemies within and slowing them for 1 second, refreshing every 0.5 seconds while they remain inside.",
             "leveling": [
               {
                 "attribute": "Magic Damage per Tick",
@@ -654,35 +595,18 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Anivia ends Glacial Storm, dealing one last tick of damage.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Anivia ends Glacial Storm, dealing one last tick of damage.",
             "leveling": []
           }
         ],
         "cost": [
-          {
-            "values": [
-              60
-            ],
-            "units": [
-              ""
-            ]
-          }
+          60
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                4,
-                3,
-                2
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          4,
+          3,
+          2
+        ],
         "targeting": "Location / Auto",
         "affects": "Enemies",
         "spellshieldable": "False",
@@ -705,10 +629,10 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "200 : 400 (based on time active)",
-        "targetRange": "750"
+        "targetRange": "750",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Anivia is a benevolent winged spirit who endures endless cycles of life, death, and rebirth to protect the Freljord. A demigod born of unforgiving ice and bitter winds, she wields those elemental powers to thwart any who dare disturb her homeland. Anivia guides and protects the tribes of the harsh north, who revere her as a symbol of hope, and a portent of great change. She fights with every ounce of her being, knowing that through her sacrifice, her memory will endure, and she will be reborn into a new tomorrow.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/anivia/skins/base/images/anivia_splash_tile_0.jpg"
+  "lore": "Anivia is a benevolent winged spirit who endures endless cycles of life, death, and rebirth to protect the Freljord. A demigod born of unforgiving ice and bitter winds, she wields those elemental powers to thwart any who dare disturb her homeland. Anivia guides and protects the tribes of the harsh north, who revere her as a symbol of hope, and a portent of great change. She fights with every ounce of her being, knowing that through her sacrifice, her memory will endure, and she will be reborn into a new tomorrow."
 }

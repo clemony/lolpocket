@@ -95,7 +95,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Qiyana/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Qiyana's basic attacks and basic abilities deal 15 - 83 (based on level) (+ 30% bonus AD) (+ 30% AP) additional physical damage. This effect cannot occur on the same target more than once every few seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Qiyana's basic attacks and basic abilities deal 15 - 83 (based on level) (+ 30% bonus AD) (+ 30% AP) additional physical damage. This effect cannot occur on the same target more than once every few seconds.",
             "leveling": []
           },
           {
@@ -104,10 +104,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Enemies",
         "spellshieldable": null,
@@ -130,7 +127,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -139,7 +137,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Qiyana/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Qiyana slashes forward in the target direction, dealing physical damage to enemies in a line, reduced to 75% damage against targets beyond the first. Edge of Ixtal deals 175% damage against monsters.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Qiyana slashes forward in the target direction, dealing physical damage to enemies in a line, reduced to 75% damage against targets beyond the first. Edge of Ixtal deals 175% damage against monsters.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -203,28 +201,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              35
-            ],
-            "units": [
-              ""
-            ]
-          }
+          35
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                7
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          7
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "true",
@@ -247,14 +228,15 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       },
       {
         "name": "Elemental Wrath",
         "icon": "https://cdn.communitydragon.org/latest/champion/Qiyana/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Qiyana hurls her blade in the target direction that blasts in a line upon hitting an enemy or maximum range, consuming the current Element to empower the blade with an additional effect.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Qiyana hurls her blade in the target direction that blasts in a line upon hitting an enemy or maximum range, consuming the current Element to empower the blade with an additional effect.",
             "leveling": []
           },
           {
@@ -313,15 +295,15 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Brush:</p><p> The blade creates a grass field around Qiyana that lasts for up to 3 seconds, granting her invisibility and 20% bonus movement speed until she attacks, casts an ability other than Terrashape, or exits the field.</p></div>",
+            "description": "<span class=\"ability-header\">Brush:</span> The blade creates a grass field around Qiyana that lasts for up to 3 seconds, granting her invisibility and 20% bonus movement speed until she attacks, casts an ability other than Terrashape, or exits the field.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">River:</p><p> The blast roots enemies hit for 0.5 seconds, then slows them by 20% for 1 second.</p></div>",
+            "description": "<span class=\"ability-header\">River:</span> The blast roots enemies hit for 0.5 seconds, then slows them by 20% for 1 second.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Terrain:</p><p> The blast deals 60% increased damage against enemies below 50% of their maximum health. Subsequent targets beyond the closest that are below the threshold take 35% increased damage instead.</p></div>",
+            "description": "<span class=\"ability-header\">Terrain:</span> The blast deals 60% increased damage against enemies below 50% of their maximum health. Subsequent targets beyond the closest that are below the threshold take 35% increased damage instead.",
             "leveling": [
               {
                 "attribute": "Increased Damage",
@@ -376,11 +358,12 @@
             ]
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cost": [
+          35
+        ],
+        "cooldown": [
+          7
+        ],
         "targeting": "Direction",
         "affects": "Enemies, Self",
         "spellshieldable": "true",
@@ -403,7 +386,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "W": [
@@ -412,7 +396,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Qiyana/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> While holding an Element, Qiyana gains bonus attack speed, 25 bonus attack range and bonus magic damage on her basic attacks on-hit and basic abilities. While out-of-combat and moving near the Element currently being held, she gains bonus movement speed.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> While holding an Element, Qiyana gains bonus attack speed, 25 bonus attack range and bonus magic damage on her basic attacks on-hit and basic abilities. While out-of-combat and moving near the Element currently being held, she gains bonus movement speed.",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -484,7 +468,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Qiyana dashes up to 300 units towards the target location to gather the Element of the nearest Brush, River or Terrain she targeted.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Qiyana dashes up to 300 units towards the target location to gather the Element of the nearest Brush, River or Terrain she targeted.",
             "leveling": []
           },
           {
@@ -501,32 +485,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              25,
-              30,
-              35,
-              40,
-              45
-            ],
-            "units": [
-              ""
-            ]
-          }
+          25,
+          30,
+          35,
+          40,
+          45
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                7
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          7
+        ],
         "targeting": "Location",
         "affects": "Self",
         "spellshieldable": null,
@@ -549,7 +516,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "366",
-        "targetRange": "1100"
+        "targetRange": "1100",
+        "maxCharges": null
       }
     ],
     "E": [
@@ -558,7 +526,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Qiyana/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Qiyana dashes a fixed distance in the direction of the target enemy. If they are in range upon arrival, she deals physical damage.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Qiyana dashes a fixed distance in the direction of the target enemy. If they are in range upon arrival, she deals physical damage.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -593,36 +561,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              40,
-              45,
-              50,
-              55,
-              60
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40,
+          45,
+          50,
+          55,
+          60
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                11,
-                10,
-                9,
-                8,
-                7
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          11,
+          10,
+          9,
+          8,
+          7
+        ],
         "targeting": "Unit",
         "affects": "Enemies, Self",
         "spellshieldable": "True",
@@ -645,7 +596,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": "650"
+        "targetRange": "650",
+        "maxCharges": null
       }
     ],
     "R": [
@@ -654,7 +606,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Qiyana/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Qiyana sweeps a windblast in the target direction that knocks back enemies hit, though not through terrain, and stops upon hitting Terrain.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Qiyana sweeps a windblast in the target direction that knocks back enemies hit, though not through terrain, and stops upon hitting Terrain.",
             "leveling": []
           },
           {
@@ -718,28 +670,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                120
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          120
+        ],
         "targeting": "Direction",
         "affects": "Enemies, Terrain",
         "spellshieldable": "True",
@@ -762,10 +697,10 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "11000",
-        "targetRange": "875"
+        "targetRange": "875",
+        "maxCharges": null
       }
     ]
   },
-  "lore": "In the jungle city of Ixaocan, Qiyana plots her own ruthless path to the high seat of the Yun Tal. Last in line to succeed her parents, she faces those who stand in her way with brash confidence and unprecedented mastery over elemental magic. With the land itself obeying her every command, Qiyana sees herself as the greatest elementalist in the history of Ixaocan—and by that right, deserving of not only a city, but an empire.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/qiyana/skins/base/images/qiyana_splash_tile_0.jpg"
+  "lore": "In the jungle city of Ixaocan, Qiyana plots her own ruthless path to the high seat of the Yun Tal. Last in line to succeed her parents, she faces those who stand in her way with brash confidence and unprecedented mastery over elemental magic. With the land itself obeying her every command, Qiyana sees herself as the greatest elementalist in the history of Ixaocan—and by that right, deserving of not only a city, but an empire."
 }

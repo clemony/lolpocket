@@ -101,19 +101,16 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Teemo/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Teemo gains invisibility after 1.5 seconds without moving, taking damage, performing actions that break stealth, channeling, or being in stasis. Teemo will maintain stealth so long as he remains idle and is not displaced. While in brush, Teemo gains the stealth even while moving and can move without breaking stealth.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Teemo gains invisibility after 1.5 seconds without moving, taking damage, performing actions that break stealth, channeling, or being in stasis. Teemo will maintain stealth so long as he remains idle and is not displaced. While in brush, Teemo gains the stealth even while moving and can move without breaking stealth.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate - Element of Surprise:</p><p> When Teemo breaks the stealth, he gains 20 / 40 / 60 / 80% (based on level) bonus attack speed for 5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Innate - Element of Surprise:</span> When Teemo breaks the stealth, he gains 20 / 40 / 60 / 80% (based on level) bonus attack speed for 5 seconds.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -136,7 +133,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -145,7 +143,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Teemo/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Teemo shoots a dart at the target enemy that deals magic damage and blinds them for a duration.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Teemo shoots a dart at the target enemy that deals magic damage and blinds them for a duration.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -215,32 +213,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              70,
-              75,
-              80,
-              85,
-              90
-            ],
-            "units": [
-              ""
-            ]
-          }
+          70,
+          75,
+          80,
+          85,
+          90
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                7
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          7
+        ],
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -263,7 +244,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "680"
+        "targetRange": "680",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -272,7 +254,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Teemo/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Teemo gains bonus movement speed after 5 seconds without taking damage from enemy champions or turrets.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Teemo gains bonus movement speed after 5 seconds without taking damage from enemy champions or turrets.",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -294,7 +276,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Teemo doubles the bonus movement speed for 3 seconds, preventing it from being removed for the duration.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Teemo doubles the bonus movement speed for 3 seconds, preventing it from being removed for the duration.",
             "leveling": [
               {
                 "attribute": "Enhanced Bonus Movement Speed",
@@ -321,28 +303,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              40
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                14
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          14
+        ],
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
@@ -365,7 +330,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -374,7 +340,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Teemo/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Teemo's basic attacks are empowered to deal bonus magic damage on-hit and inflict poison.</p></div>\n\n\n<div><p class=\"ability-header\"> poison:</p><p> The target takes magic damage every second over 4 seconds. Subsequent inflictions refresh the duration.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Teemo's basic attacks are empowered to deal bonus magic damage on-hit and inflict poison.\n<span class=\"ability-header\"> poison:</span> The target takes magic damage every second over 4 seconds. Subsequent inflictions refresh the duration.",
             "leveling": [
               {
                 "attribute": "Magic Damage On-Hit",
@@ -534,11 +500,12 @@
             ]
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          0
+        ],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": "False",
@@ -561,7 +528,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -570,7 +538,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Teemo/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Teemo tosses a poisonous mushroom to the target location that becomes stealthed after arming over 1 second, lasting for up to 5 minutes and granting sight of its surroundings. If the mushroom lands on an already-placed one, it will bounce forward again for its cast distance, up to a cap, which can happen repeatedly.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Teemo tosses a poisonous mushroom to the target location that becomes stealthed after arming over 1 second, lasting for up to 5 minutes and granting sight of its surroundings. If the mushroom lands on an already-placed one, it will bounce forward again for its cast distance, up to a cap, which can happen repeatedly.",
             "leveling": [
               {
                 "attribute": "Bounce Distance Cap",
@@ -630,7 +598,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">poison:</p><p> The target takes magic damage every second over 4 seconds. Subsequent inflictions refresh the duration.</p></div>",
+            "description": "<span class=\"ability-header\">poison:</span> The target takes magic damage every second over 4 seconds. Subsequent inflictions refresh the duration.",
             "leveling": [
               {
                 "attribute": "Magic Damage per Tick",
@@ -686,30 +654,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              75,
-              55,
-              35
-            ],
-            "units": [
-              ""
-            ]
-          }
+          75,
+          55,
+          35
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                0.25
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          0.25
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "Special",
@@ -736,10 +687,10 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "450",
-        "targetRange": "600 / 675 / 750 / 825 / 900"
+        "targetRange": "600 / 675 / 750 / 825 / 900",
+        "maxCharges": 3
       }
     ]
   },
-  "lore": "Undeterred by even the most dangerous and threatening of obstacles, Teemo scouts the world with boundless enthusiasm and a cheerful spirit. A yordle with an unwavering sense of morality, he takes pride in following the Bandle Scout's Code, sometimes with such eagerness that he is unaware of the broader consequences of his actions. Though some say the existence of the Scouts is questionable, one thing is for certain: Teemo's conviction is nothing to be trifled with.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/teemo/skins/base/images/teemo_splash_tile_0.asu_teemo.jpg"
+  "lore": "Undeterred by even the most dangerous and threatening of obstacles, Teemo scouts the world with boundless enthusiasm and a cheerful spirit. A yordle with an unwavering sense of morality, he takes pride in following the Bandle Scout's Code, sometimes with such eagerness that he is unaware of the broader consequences of his actions. Though some say the existence of the Scouts is questionable, one thing is for certain: Teemo's conviction is nothing to be trifled with."
 }

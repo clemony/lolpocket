@@ -3,12 +3,14 @@ declare global {
     type ChampionId = number
   type ChampionName = string
 type ChampionKey = string
+type ChampionRecord = Record<ChampionKey, ChampionLite>
 
 interface ChampionIndex {
   id: number
   key: string
   name: string
 }
+
 interface ChampionLite {
   id: ChampionId
   key: ChampionKey
@@ -19,21 +21,15 @@ interface ChampionLite {
   positions: string[]
   roles: string[]
   attributeRatings: Record<string, number>
-  splash?: string
 }
 
-  type ChampionRecord = Record<ChampionKey, ChampionLite>
   interface Champion extends ChampionLite {
     fullName: string
     title: string
     lore?: string
-    abilities: Record<'P' | 'Q' | 'W' | 'E' | 'R', Ability[]>
-    splash?: string
+    abilities: Record<string, Ability[]>
   }
 
-  interface FullChampion extends Champion {
-    skins?: any
-  }
 
   interface StatEntry {
     flat?: number
@@ -43,11 +39,16 @@ interface ChampionLite {
   interface ChampionLiteStat extends ChampionLite {
     attackSpeedRatio?: StatEntry
   }
-
-  interface Skin {
-    name: string
+  
+  interface BaseSkin {
     splashPath: string
+    centeredPath: string
     tilePath: string
+    loadPath: string
+  }
+
+  interface Skin extends BaseSkin {
+    name: string
   }
 
   interface SkinEntry {
@@ -62,37 +63,35 @@ interface ChampionLite {
     name: string
     icon: string
     effects: AbilityEffect[]
-    cost: Modifier[]
-    cooldown: Cooldown
-    targeting: string | null
-    affects: string | null
-    spellshieldable: string | null
-    resource: string | null
-    damageType: string | null
-    spellEffects: string | null
-    projectile: string | null
-    onHitEffects: string | null
-    occurrence: string | null
-    notes: string | null
-    blurb: string | null
-    missileSpeed: string | null
-    rechargeRate: string | null
-    collisionRadius: string | null
-    tetherRadius: string | null
-    onTargetCdStatic: string | null
-    innerRadius: string | null
-    speed: string | null
-    width: string | null
-    angle: string | null
-    castTime: string | null
-    effectRadius: string | null
-    targetRange: string | null
+    cost: number[]
+    cooldown: number[]
+    targeting: string
+    affects: string
+    spellshieldable: string
+    resource: string
+    damageType: string
+    spellEffects: string
+    projectile: string
+    onHitEffects: string
+    occurrence: string
+    notes: string
+    blurb: string
+    missileSpeed: string
+    rechargeRate: number[]
+    collisionRadius: string
+    tetherRadius: string
+    onTargetCdStatic: string
+    innerRadius: string
+    speed: string
+    width: string
+    angle: string
+    castTime: string
+    effectRadius: string
+    targetRange: string
+    maxCharges?: number
+    maxRank?: number
   }
 
-  interface Cooldown {
-    modifiers: Modifier[]
-    affectedByCdr: boolean
-  }
 
   interface Modifier {
     values: number[]

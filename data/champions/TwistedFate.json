@@ -102,7 +102,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TwistedFate/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Whenever Twisted Fate kills an enemy, he generates 1 - 6 (based on probability). He also has a chance equal to his critical strike chance to generate an additional 1 - 6 (based on probability).</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Whenever Twisted Fate kills an enemy, he generates 1 - 6 (based on probability). He also has a chance equal to his critical strike chance to generate an additional 1 - 6 (based on probability).",
             "leveling": []
           },
           {
@@ -111,10 +111,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -137,7 +134,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -146,18 +144,18 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TwistedFate/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Twisted Fate throws a fan of three cards in a cone in the target direction that each deal magic damage to enemies hit.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Twisted Fate throws a fan of three cards in a cone in the target direction that each deal magic damage to enemies hit.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
                 "modifiers": [
                   {
                     "values": [
-                      60,
-                      105,
-                      150,
-                      195,
-                      240
+                      70,
+                      115,
+                      160,
+                      205,
+                      250
                     ],
                     "units": [
                       ""
@@ -189,36 +187,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              60,
-              70,
-              80,
-              90,
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          60,
+          70,
+          80,
+          90,
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                6,
-                5.75,
-                5.5,
-                5.25,
-                5
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          6,
+          5.75,
+          5.5,
+          5.25,
+          5
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -241,7 +222,8 @@
         "angle": "56°",
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "1450"
+        "targetRange": "1450",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -250,15 +232,15 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TwistedFate/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Twisted Fate cycles through three cards for 6 seconds, hovering each for 0.5 seconds at a time. Pick a Card can be recast within the duration, which selects the current card hovered.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Twisted Fate cycles through three cards for 6 seconds, hovering each for 0.5 seconds at a time. Pick a Card can be recast within the duration, which selects the current card hovered.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Twisted Fate empowers his next basic attack within 6 seconds to have a 0.25-second cast time, deal modified magic damage, and apply an additional effect based on the card selected. This damage cannot critically strike but is increased based on critical strike chance.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Twisted Fate empowers his next basic attack within 6 seconds to have a 0.25-second cast time, deal modified magic damage, and apply an additional effect based on the card selected. This damage cannot critically strike but is increased based on critical strike chance.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Blue Card Bonus:</p><p> Deals magic damage, increased by 0% - 57.5% (based on critical strike chance), and restores mana.</p></div>",
+            "description": "<span class=\"ability-header\">Blue Card Bonus:</span> Deals magic damage, increased by 0% - 57.5% (based on critical strike chance), and restores mana.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -313,7 +295,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Red Card Bonus:</p><p> Deals magic damage to the target and surrounding enemies, increased by 0% - 35% (based on critical strike chance). All targets hit are slowed for 2.5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Red Card Bonus:</span> Deals magic damage to the target and surrounding enemies, increased by 0% - 35% (based on critical strike chance). All targets hit are slowed for 2.5 seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -368,7 +350,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Gold Card Bonus:</p><p> Deals magic damage, increased by 0% - 25% (based on critical strike chance), and stuns the target for a duration.</p></div>",
+            "description": "<span class=\"ability-header\">Gold Card Bonus:</span> Deals magic damage, increased by 0% - 25% (based on critical strike chance), and stuns the target for a duration.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -424,32 +406,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50,
-              55,
-              60,
-              65,
-              70
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50,
+          55,
+          60,
+          65,
+          70
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                6
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          6
+        ],
         "targeting": "Auto",
         "affects": "Enemies, Self",
         "spellshieldable": "True",
@@ -472,7 +437,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "325",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -481,7 +447,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TwistedFate/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Twisted Fate gains bonus attack speed. His basic attacks on-hit generate a stack of Stacked Deck, stacking up to 3 times. At 3 stacks, his next basic attack is empowered to consume them all to deal bonus magic damage, reduced to 50% against structures.Twisted Fate gains maximum stacks of Stacked Deck upon respawning.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Twisted Fate gains bonus attack speed. His basic attacks on-hit generate a stack of Stacked Deck, stacking up to 3 times. At 3 stacks, his next basic attack is empowered to consume them all to deal bonus magic damage, reduced to 50% against structures.Twisted Fate gains maximum stacks of Stacked Deck upon respawning.",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -536,11 +502,12 @@
             ]
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          0
+        ],
         "targeting": "Passive",
         "affects": "Enemies, Self",
         "spellshieldable": "false",
@@ -563,7 +530,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -572,7 +540,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TwistedFate/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Twisted Fate marks all targetable enemy champions, revealing them for a duration. Destiny can be recast after 0.5 seconds within the duration.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Twisted Fate marks all targetable enemy champions, revealing them for a duration. Destiny can be recast after 0.5 seconds within the duration.",
             "leveling": [
               {
                 "attribute": "Effect Duration",
@@ -592,35 +560,18 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast - Gate:</p><p> Twisted Fate channels for 1.5 seconds before blinking to the target location, destroying all projectiles targeting him in the process.</p></div>",
+            "description": "<span class=\"ability-header\">Recast - Gate:</span> Twisted Fate channels for 1.5 seconds before blinking to the target location, destroying all projectiles targeting him in the process.",
             "leveling": []
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                180,
-                150,
-                120
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          180,
+          150,
+          120
+        ],
         "targeting": "Auto / Location",
         "affects": "Enemies, Allies, Self",
         "spellshieldable": "True",
@@ -643,10 +594,10 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "Global",
-        "targetRange": "5500"
+        "targetRange": "5500",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Twisted Fate is an infamous cardsharp and swindler who has gambled and charmed his way across much of the known world, earning the enmity and admiration of the rich and foolish alike. He rarely takes things seriously, greeting each day with a mocking smile and an insouciant swagger. In every possible way, Twisted Fate always has an ace up his sleeve.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/twistedfate/skins/base/images/twistedfate_splash_tile_0.jpg"
+  "lore": "Twisted Fate is an infamous cardsharp and swindler who has gambled and charmed his way across much of the known world, earning the enmity and admiration of the rich and foolish alike. He rarely takes things seriously, greeting each day with a mocking smile and an insouciant swagger. In every possible way, Twisted Fate always has an ace up his sleeve."
 }

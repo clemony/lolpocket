@@ -27,7 +27,7 @@ onMounted (() => {
   </Transition> -->
 
   <div class="justify-center w-full h-full flex ">
-    <div class="h-full  w-[43%] pl-10 grid justify-end relative   overflow-y-scroll   no-scrollbar ">
+    <div class="h-full  w-[43%] pl-10 grid justify-end relative   overflow-y-scroll   scrollbar-hidden ">
       <div class="gap-10 pt-34 h-full flex flex-col items-start pr-16">
         <PlayerHeader v-if="summoner" :summoner="summoner" class="px-1 " />
 

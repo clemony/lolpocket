@@ -94,7 +94,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Renekton/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Renekton's basic attacks generate 5 Fury. After 12 seconds of being out of combat, he loses 1 Fury every 0.25 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Renekton's basic attacks generate 5 Fury on-hit. After 12 seconds of being out of combat, he loses 1 Fury every 0.25 seconds.",
             "leveling": []
           },
           {
@@ -107,10 +107,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -121,7 +118,7 @@
         "onHitEffects": null,
         "occurrence": null,
         "notes": "Renekton can generate Fury by collecting  Honeyfruit and Health Relics (interacts with Reign of Anger's bonus generation).",
-        "blurb": "Innate:  Renekton's basic attacks and ability hits generate  Fury, which continually expires after a period without fighting. He generates bonus Fury while below half health.",
+        "blurb": "Innate:  Renekton's basic attacks and ability hits generate  Fury on-hit, which continually expires after a period without fighting. He generates bonus Fury while below half health.",
         "missileSpeed": null,
         "rechargeRate": null,
         "collisionRadius": null,
@@ -133,7 +130,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -142,7 +140,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Renekton/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Renekton cleaves around himself, dealing physical damage to nearby enemies and healing himself for each enemy hit, up to a cap.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Renekton cleaves around himself, dealing physical damage to nearby enemies and healing himself for each enemy hit, up to a cap.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -340,7 +338,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Reign of Anger Bonus:</p><p> Cull the Meek has increased damage, tripled total healing, and a quadrupled healing cap.</p></div>",
+            "description": "<span class=\"ability-header\">Reign of Anger Bonus:</span> Cull the Meek has increased damage, tripled total healing, and a quadrupled healing cap.",
             "leveling": []
           },
           {
@@ -348,20 +346,12 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                7
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          7
+        ],
         "targeting": "Auto",
         "affects": "Enemies / Self",
         "spellshieldable": "True",
@@ -384,7 +374,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "400 / 480",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -393,7 +384,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Renekton/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Renekton empowers his next basic attack within 7 seconds to have a 0.2-second cast time, gain 50 bonus range and strike the target twice, dealing modified physical damage and stunning them for 0.75 seconds. Each strike applies on-hit effects and generates Fury. Hitting an enemy champion generates 10 bonus Fury.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Renekton empowers his next basic attack within 7 seconds to have a 0.2-second cast time, gain 50 bonus range and strike the target twice, dealing modified physical damage and stunning them for 0.75 seconds. Each strike applies on-hit effects and generates Fury. Hitting an enemy champion generates 10 bonus Fury.",
             "leveling": [
               {
                 "attribute": "Total Physical Damage",
@@ -452,7 +443,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Reign of Anger Bonus:</p><p> Renekton instead strikes 3 times, completely destroying damage-mitigating shields on the target upon the first strike if they are not a monster, as well as increasing the stun duration to 1.5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Reign of Anger Bonus:</span> Renekton instead strikes 3 times, completely destroying damage-mitigating shields on the target upon the first strike if they are not a monster, as well as increasing the stun duration to 1.5 seconds.",
             "leveling": [
               {
                 "attribute": "Total Physical Damage",
@@ -486,24 +477,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                16,
-                14,
-                12,
-                10,
-                8
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          16,
+          14,
+          12,
+          10,
+          8
+        ],
         "targeting": "Auto",
         "affects": "Enemies / Self",
         "spellshieldable": "True",
@@ -513,7 +496,7 @@
         "projectile": null,
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Each strike of Ruthless Predator deals  basic damage, but the first strike also triggers spell effects by also being tagged as  spell damage.\nIf the target becomes  untargetable or  dies during the empowered attack's cast time, it is cancelled but not consumed.\nThe empowered attack will not trigger against structures.",
+        "notes": "Each strike of Ruthless Predator deals  basic damage, but the first strike also triggers spell effects by also being tagged as  spell damage.\nIf the target becomes  untargetable or  dies during the empowered attack's cast time, it is cancelled but not consumed.\nThe empowered attack will not trigger against structures.\nThe first two attacks of the  empowered version will generate fury.(bug)\nThe third attack will remove any fury gained this way.\nThis will fail to remove fury gained through  Guinsoo's Rageblade's phantom hit on the first attack.(bug)",
         "blurb": "Active:  Renekton's next basic attack within a few seconds will strike twice, dealing modified physical damage and briefly  stunning the target.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -526,7 +509,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -535,7 +519,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Renekton/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Renekton dashes a fixed distance in the target direction, dealing physical damage to enemies he passes through.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Renekton dashes a fixed distance in the target direction, dealing physical damage to enemies he passes through.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -569,24 +553,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                16,
-                14.5,
-                13,
-                11.5,
-                10
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          16,
+          14.5,
+          13,
+          11.5,
+          10
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -609,14 +585,15 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       },
       {
         "name": "Dice",
         "icon": "https://cdn.communitydragon.org/latest/champion/Renekton/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Renekton dashes a fixed distance in the target direction, dealing the same physical damage to enemies he passes through.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Renekton dashes a fixed distance in the target direction, dealing the same physical damage to enemies he passes through.",
             "leveling": [
               {
                 "attribute": "Total Physical Damage",
@@ -650,7 +627,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Reign of Anger Bonus:</p><p> Dice deals bonus physical damage and inflicts armor reduction to enemies hit for 4 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Reign of Anger Bonus:</span> Dice deals bonus physical damage and inflicts armor reduction to enemies hit for 4 seconds.",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage",
@@ -747,11 +724,16 @@
             ]
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          16,
+          14.5,
+          13,
+          11.5,
+          10
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -774,7 +756,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -783,7 +766,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Renekton/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Renekton empowers himself for 15 seconds, gaining bonus health, 20% increased size, 25 bonus attack range, and 20 Fury, as well as increasing Cull the Meek's effect radius.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Renekton empowers himself for 15 seconds, gaining bonus health, 20% increased size, 25 bonus attack range, and 20 Fury, as well as increasing Cull the Meek's effect radius.",
             "leveling": [
               {
                 "attribute": "Bonus Health",
@@ -870,22 +853,14 @@
             ]
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                120,
-                100,
-                80
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          120,
+          100,
+          80
+        ],
         "targeting": "Auto",
         "affects": "Enemies / Self",
         "spellshieldable": "False",
@@ -908,10 +883,10 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "375",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Renekton is a terrifying, rage-fueled Ascended being from the scorched deserts of Shurima. Once, he was his empire's most esteemed warrior, leading the nation's armies to countless victories. However, after the empire's fall, Renekton was entombed beneath the sands, and slowly, as the world turned and changed, he succumbed to insanity. Now free once more, he is utterly consumed with finding and killing his brother, Nasus, who he blames, in his madness, for the centuries he spent in darkness.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/renekton/skins/base/images/renekton_splash_tile_0.jpg"
+  "lore": "Renekton is a terrifying, rage-fueled Ascended being from the scorched deserts of Shurima. Once, he was his empire's most esteemed warrior, leading the nation's armies to countless victories. However, after the empire's fall, Renekton was entombed beneath the sands, and slowly, as the world turned and changed, he succumbed to insanity. Now free once more, he is utterly consumed with finding and killing his brother, Nasus, who he blames, in his madness, for the centuries he spent in darkness."
 }

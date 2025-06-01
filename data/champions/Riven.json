@@ -92,7 +92,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Riven/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Riven's ability casts generate a stack of Charge for 6 seconds, refreshing on subsequent casts and stacking up to 3 times. Riven's basic attacks are empowered to each consume a stack to deal bonus physical damage equal to 30% - 60% (based on level) AD, reduced to[ 50% ][ 15% - 30% (based on level) AD ]against structures.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Riven's ability casts generate a stack of Charge for 6 seconds, refreshing on subsequent casts and stacking up to 3 times. Riven's basic attacks are empowered to each consume a stack to deal bonus physical damage equal to 30% - 60% (based on level) AD, reduced to[ 50% ][ 15% - 30% (based on level) AD ]against structures.",
             "leveling": []
           },
           {
@@ -101,10 +101,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Enemies",
         "spellshieldable": null,
@@ -127,7 +124,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -136,7 +134,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Riven/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Riven can activate Broken Wings three times before the ability goes on cooldown, with a 0.3125-second static cooldown between casts. If Riven does not recast the ability within 4 seconds of the previous cast, it goes on cooldown.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Riven can activate Broken Wings three times before the ability goes on cooldown, with a 0.3125-second static cooldown between casts. If Riven does not recast the ability within 4 seconds of the previous cast, it goes on cooldown.",
             "leveling": []
           },
           {
@@ -203,32 +201,24 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">First Cast:</p><p> Riven dashes 225 units in the direction she is currently facing, or up to 225 units towards the target enemy, striking enemies in the target area 100 units away. This cast cannot cross terrain.</p></div>",
+            "description": "<span class=\"ability-header\">First Cast:</span> Riven dashes 225 units in the direction she is currently facing, or up to 225 units towards the target enemy, striking enemies in the target area 100 units away. This cast cannot cross terrain.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Second Cast:</p><p> Riven mimics the first cast's effects.</p></div>",
+            "description": "<span class=\"ability-header\">Second Cast:</span> Riven mimics the first cast's effects.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Third Cast:</p><p> Riven mimics the first cast's effects in a larger area while also knocking back enemies hit 75 units over 0.5 seconds. This cast can cross terrain.</p></div>",
+            "description": "<span class=\"ability-header\">Third Cast:</span> Riven mimics the first cast's effects in a larger area while also knocking back enemies hit 75 units over 0.5 seconds. This cast can cross terrain.",
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                13
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          13
+        ],
         "targeting": "Unit / Auto",
         "affects": "Enemies",
         "spellshieldable": "true",
@@ -251,7 +241,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "150 / 250 / 200 / 300",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -260,7 +251,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Riven/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Riven emits a flash of runic energy from the start of the cast time, dealing physical damage to nearby enemies and stunning them for 0.75 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Riven emits a flash of runic energy from the start of the cast time, dealing physical damage to nearby enemies and stunning them for 0.75 seconds.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -290,24 +281,16 @@
             ]
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                11,
-                10,
-                9,
-                8,
-                7
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          11,
+          10,
+          9,
+          8,
+          7
+        ],
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -330,7 +313,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "300 / 360",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -339,7 +323,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Riven/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Riven dashes in the target direction, though not through terrain, while granting herself a shield for 1.5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Riven dashes in the target direction, though not through terrain, while granting herself a shield for 1.5 seconds.",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -373,24 +357,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                10,
-                9,
-                8,
-                7,
-                6
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          10,
+          9,
+          8,
+          7,
+          6
+        ],
         "targeting": "Direction",
         "affects": "Self",
         "spellshieldable": null,
@@ -413,7 +389,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -422,26 +399,18 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Riven/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Riven empowers her blade for 15 seconds, gaining 25% AD bonus attack damage, 75 bonus attack range, and increased range on Broken Wings and Ki Burst. After 0.5 seconds, she can cast Wind Slash within the duration.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Riven empowers her blade for 15 seconds, gaining 25% AD bonus attack damage, 75 bonus attack range, and increased range on Broken Wings and Ki Burst. After 0.5 seconds, she can cast Wind Slash within the duration.",
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                120,
-                90,
-                60
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          120,
+          90,
+          60
+        ],
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
@@ -464,14 +433,15 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       },
       {
         "name": "Wind Slash",
         "icon": "https://cdn.communitydragon.org/latest/champion/Riven/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Riven unleashes a wave of energy in a cone in the target direction that deals physical damage to enemies hit, increased by 0% - 200% (based on target's missing health).</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Riven unleashes a wave of energy in a cone in the target direction that deals physical damage to enemies hit, increased by 0% - 200% (based on target's missing health).",
             "leveling": [
               {
                 "attribute": "Minimum Physical Damage",
@@ -522,11 +492,14 @@
             ]
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          120,
+          90,
+          60
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -549,10 +522,10 @@
         "angle": "18°",
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "1100"
+        "targetRange": "1100",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Once a swordmaster in the warhosts of Noxus, Riven is an expatriate in a land she previously tried to conquer. She rose through the ranks on the strength of her conviction and brutal efficiency, and was rewarded with a legendary runic blade and a warband of her own. However, on the Ionian front, Riven's faith in her homeland was tested and ultimately broken. Having severed all ties to the empire, she now seeks to find her place in a shattered world, even as rumors abound that Noxus itself has been reforged...",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/riven/skins/base/images/riven_splash_tile_0.jpg"
+  "lore": "Once a swordmaster in the warhosts of Noxus, Riven is an expatriate in a land she previously tried to conquer. She rose through the ranks on the strength of her conviction and brutal efficiency, and was rewarded with a legendary runic blade and a warband of her own. However, on the Ionian front, Riven's faith in her homeland was tested and ultimately broken. Having severed all ties to the empire, she now seeks to find her place in a shattered world, even as rumors abound that Noxus itself has been reforged..."
 }

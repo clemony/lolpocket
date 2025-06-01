@@ -96,19 +96,16 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Fiddlesticks/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate - Scarecrow Effigy:</p><p> Fiddlesticks begins the game with an exclusive Scarecrow Effigy, which permanently occupies the trinket slot. Fiddlesticks can pretend to be an Effigy by standing still and not acting nor being acted upon for 2 seconds, during which it adjusts its body into a scarecrow and extends its arm out to expose its lantern.</p></div>",
+            "description": "<span class=\"ability-header\">Innate - Scarecrow Effigy:</span> Fiddlesticks begins the game with an exclusive Scarecrow Effigy, which permanently occupies the trinket slot. Fiddlesticks can pretend to be an Effigy by standing still and not acting nor being acted upon for 2 seconds, during which it adjusts its body into a scarecrow and extends its arm out to expose its lantern.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate - A Harmless Scarecrow:</p><p> From level 6 onward, placing an Effigy also summons a Sweeper Drone at the location for 6 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Innate - A Harmless Scarecrow:</span> From level 6 onward, placing an Effigy also summons a Sweeper Drone at the location for 6 seconds.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Vector",
         "affects": "Self",
         "spellshieldable": null,
@@ -131,7 +128,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": "900",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -140,18 +138,18 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Fiddlesticks/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> While Fiddlesticks has been out of combat for at least 2.5 seconds and is not visible to the enemy team, or is pretending to be an Effigy, its next damaging ability will additionally fear targets hit for a duration.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> While Fiddlesticks has been out of combat for at least 2.5 seconds and is not visible to the enemy team, or is pretending to be an Effigy, its next damaging ability will additionally fear targets hit for a duration.",
             "leveling": [
               {
                 "attribute": "Fear Duration",
                 "modifiers": [
                   {
                     "values": [
-                      1.25,
-                      1.5,
-                      1.75,
-                      2,
-                      2.25
+                      1.2,
+                      1.4,
+                      1.6,
+                      1.8,
+                      2
                     ],
                     "units": [
                       " seconds"
@@ -162,7 +160,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Fiddlesticks launches a crow at the target enemy that deals magic damage and fears them for a duration. Terrify has a minimum damage threshold and is capped at 400 against monsters.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Fiddlesticks launches a crow at the target enemy that deals magic damage and fears them for a duration. Terrify has a minimum damage threshold and is capped at 400 against monsters.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -211,10 +209,10 @@
                 "modifiers": [
                   {
                     "values": [
-                      1.25,
-                      1.4375,
-                      1.625,
-                      1.8125,
+                      1.2,
+                      1.4,
+                      1.6,
+                      1.8,
                       2
                     ],
                     "units": [
@@ -278,32 +276,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              65
-            ],
-            "units": [
-              ""
-            ]
-          }
+          65
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                15,
-                14.5,
-                14,
-                13.5,
-                13
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          15,
+          14.5,
+          14,
+          13.5,
+          13
+        ],
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "true",
@@ -326,7 +307,8 @@
         "angle": null,
         "castTime": "0.35",
         "effectRadius": null,
-        "targetRange": "575"
+        "targetRange": "575",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -335,7 +317,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Fiddlesticks/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Fiddlesticks forms a tether between itself and each nearby enemy over the cast time, then channels for up to 2 seconds to harvest their souls, revealing them in the process.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Fiddlesticks forms a tether between itself and each nearby enemy over the cast time, then channels for up to 2 seconds to harvest their souls, revealing them in the process.",
             "leveling": []
           },
           {
@@ -614,36 +596,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              60,
-              65,
-              70,
-              75,
-              80
-            ],
-            "units": [
-              ""
-            ]
-          }
+          60,
+          65,
+          70,
+          75,
+          80
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                10,
-                9.5,
-                9,
-                8.5,
-                8
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          10,
+          9.5,
+          9,
+          8.5,
+          8
+        ],
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "Special",
@@ -666,7 +631,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "650",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -675,7 +641,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Fiddlesticks/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Fiddlesticks slashes the target location with its scythe, dealing magic damage to enemies within the area and slowing them for 1.25 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Fiddlesticks slashes the target location with its scythe, dealing magic damage to enemies within the area and slowing them for 1.25 seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -727,36 +693,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              40,
-              45,
-              50,
-              55,
-              60
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40,
+          45,
+          50,
+          55,
+          60
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                10,
-                9,
-                8,
-                7,
-                6
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          10,
+          9,
+          8,
+          7,
+          6
+        ],
         "targeting": "Location",
         "affects": null,
         "spellshieldable": "True",
@@ -779,7 +728,8 @@
         "angle": null,
         "castTime": "0.4",
         "effectRadius": null,
-        "targetRange": "850"
+        "targetRange": "850",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -788,7 +738,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Fiddlesticks/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Fiddlesticks channels for 1.5 seconds, then blinks to the target location upon completion with a murder of crows flying wildly around it for 5 seconds, dealing magic damage every 0.25 seconds to nearby enemies.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Fiddlesticks channels for 1.5 seconds, then blinks to the target location upon completion with a murder of crows flying wildly around it for 5 seconds, dealing magic damage every 0.25 seconds to nearby enemies.",
             "leveling": [
               {
                 "attribute": "Magic Damage per Tick",
@@ -844,30 +794,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                140,
-                110,
-                80
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          140,
+          110,
+          80
+        ],
         "targeting": "Location",
         "affects": null,
         "spellshieldable": null,
@@ -890,10 +823,10 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "600",
-        "targetRange": "800"
+        "targetRange": "800",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Something has awoken in Runeterra. Something ancient. Something terrible. The ageless horror known as Fiddlesticks stalks the edges of mortal society, drawn to areas thick with paranoia where it feeds upon terrorized victims. Wielding a jagged scythe, the haggard, makeshift creature reaps fear itself, shattering the minds of those unlucky enough to survive in its wake. Beware the sounding of the crow, or the whispering of the shape that appears <i>almost</i> human… Fiddlesticks has returned.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fiddlesticks/skins/base/images/fiddlesticks_splash_tile_0.jpg"
+  "lore": "Something has awoken in Runeterra. Something ancient. Something terrible. The ageless horror known as Fiddlesticks stalks the edges of mortal society, drawn to areas thick with paranoia where it feeds upon terrorized victims. Wielding a jagged scythe, the haggard, makeshift creature reaps fear itself, shattering the minds of those unlucky enough to survive in its wake. Beware the sounding of the crow, or the whispering of the shape that appears <i>almost</i> human… Fiddlesticks has returned."
 }

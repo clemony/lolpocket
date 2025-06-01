@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zyra/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Periodically, Zyra spawns one or two Seeds nearby that last for 30 seconds, granting sight over the surrounding area for 1 second.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Periodically, Zyra spawns one or two Seeds nearby that last for 30 seconds, granting sight over the surrounding area for 1 second.",
             "leveling": []
           },
           {
@@ -112,36 +112,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                13.6,
-                13.33235294117647,
-                13.064705882352941,
-                12.797058823529412,
-                12.529411764705882,
-                12.261764705882353,
-                11.994117647058824,
-                11.726470588235294,
-                11.458823529411765,
-                11.191176470588236,
-                10.923529411764706,
-                10.655882352941177,
-                10.388235294117647,
-                10.120588235294118,
-                9.852941176470589,
-                9.58529411764706,
-                9.31764705882353,
-                9.05
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -164,7 +135,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": "900",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -173,7 +145,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zyra/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Zyra sprouts thorny spines at the target location that appear after a 0.625-seconds delay, dealing magic damage to enemies hit.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Zyra sprouts thorny spines at the target location that appear after a 0.625-seconds delay, dealing magic damage to enemies hit.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -208,32 +180,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              55
-            ],
-            "units": [
-              ""
-            ]
-          }
+          55
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                7,
-                6.5,
-                6,
-                5.5,
-                5
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          7,
+          6.5,
+          6,
+          5.5,
+          5
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -256,7 +211,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "800"
+        "targetRange": "800",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -265,7 +221,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zyra/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Zyra plants a Seed at the target location that remains for 60 seconds and grants sight over the surrounding area, though decreasing in radius after 1 second. After 1.5 seconds, enemy champions can destroy the Seed by stepping on it, which reveals them for 2 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Zyra plants a Seed at the target location that remains for 60 seconds and grants sight over the surrounding area, though decreasing in radius after 1 second. After 1.5 seconds, enemy champions can destroy the Seed by stepping on it, which reveals them for 2 seconds.",
             "leveling": []
           },
           {
@@ -274,19 +230,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              1
-            ],
-            "units": [
-              ""
-            ]
-          }
+          0
         ],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [
+          0
+        ],
         "targeting": "Location",
         "affects": "Self, Enemies",
         "spellshieldable": "false",
@@ -315,7 +263,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": "850"
+        "targetRange": "850",
+        "maxCharges": 2
       }
     ],
     "E": [
@@ -324,7 +273,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zyra/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Zyra shoots a surge of vines in the target direction that deals magic damage to enemies hit and roots them for a duration.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Zyra shoots a surge of vines in the target direction that deals magic damage to enemies hit and roots them for a duration.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -376,32 +325,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              70,
-              75,
-              80,
-              85,
-              90
-            ],
-            "units": [
-              ""
-            ]
-          }
+          70,
+          75,
+          80,
+          85,
+          90
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                12
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          12
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -424,7 +356,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "1100"
+        "targetRange": "1100",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -433,7 +366,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zyra/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Zyra summons a monstrous thicket at the target location that deals magic damage to enemies hit as it expands.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Zyra summons a monstrous thicket at the target location that deals magic damage to enemies hit as it expands.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -474,30 +407,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                110,
-                100,
-                90
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          110,
+          100,
+          90
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -520,10 +436,10 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "560",
-        "targetRange": "700"
+        "targetRange": "700",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Born in an ancient, sorcerous catastrophe, Zyra is the wrath of nature given form—an alluring hybrid of plant and human, kindling new life with every step. She views the many mortals of Valoran as little more than prey for her seeded progeny, and thinks nothing of slaying them with flurries of deadly spines. Though her true purpose has not been revealed, Zyra wanders the world, indulging her most primal urges to colonize, and strangle all other life from it.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/zyra/skins/base/images/zyra_splash_tile_0.jpg"
+  "lore": "Born in an ancient, sorcerous catastrophe, Zyra is the wrath of nature given form—an alluring hybrid of plant and human, kindling new life with every step. She views the many mortals of Valoran as little more than prey for her seeded progeny, and thinks nothing of slaying them with flurries of deadly spines. Though her true purpose has not been revealed, Zyra wanders the world, indulging her most primal urges to colonize, and strangle all other life from it."
 }

@@ -97,15 +97,12 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Hwei's damaging abilities mark enemies hit for 4 seconds. Subsequent damaging abilities against marked targets consume the mark to create an explosion beneath them, dealing 35 - 230 (based on level) (+ 30% AP) bonus magic damage to enemies in the area after a 0.85-second delay.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Hwei's damaging abilities mark enemies hit for 4 seconds. Subsequent damaging abilities against marked targets consume the mark to create an explosion beneath them, dealing 35 - 230 (based on level) (+ 30% AP) bonus magic damage to enemies in the area after a 0.85-second delay.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self, Enemies",
         "spellshieldable": "true",
@@ -128,7 +125,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": "285",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -137,41 +135,24 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Hwei enters a disastrous mood, gaining access to its abilities as well as Wash Brush. He will exit the mood upon casting any of them.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Hwei enters a disastrous mood, gaining access to its abilities as well as Wash Brush. He will exit the mood upon casting any of them.",
             "leveling": []
           }
         ],
         "cost": [
-          {
-            "values": [
-              80,
-              90,
-              100,
-              110,
-              120
-            ],
-            "units": [
-              ""
-            ]
-          }
+          80,
+          90,
+          100,
+          110,
+          120
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                10,
-                9,
-                8,
-                7,
-                6
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          10,
+          9,
+          8,
+          7,
+          6
+        ],
         "targeting": "Auto",
         "affects": null,
         "spellshieldable": null,
@@ -194,14 +175,15 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       },
       {
         "name": "Devastating Fire",
         "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active - QQ:</p><p> Hwei slings a fireball in the target direction that explodes upon colliding with the first enemy or reaching maximum range, dealing magic damage to all nearby enemies. The damage based on the target's health ratio is capped at 250 against monsters.</p></div>",
+            "description": "<span class=\"ability-header\">Active - QQ:</span> Hwei slings a fireball in the target direction that explodes upon colliding with the first enemy or reaching maximum range, dealing magic damage to all nearby enemies. The damage based on the target's health ratio is capped at 250 against monsters.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -243,11 +225,20 @@
             ]
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cost": [
+          80,
+          90,
+          100,
+          110,
+          120
+        ],
+        "cooldown": [
+          10,
+          9,
+          8,
+          7,
+          6
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "true",
@@ -270,14 +261,15 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "175",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       },
       {
         "name": "Severing Bolt",
         "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active - QW:</p><p> Hwei calls upon a lightning bolt to strike at the target location after 1 second, dealing magic damage to enemies within the area.</p></div>",
+            "description": "<span class=\"ability-header\">Active - QW:</span> Hwei calls upon a lightning bolt to strike at the target location after 1 second, dealing magic damage to enemies within the area.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -362,11 +354,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cost": [
+          80,
+          90,
+          100,
+          110,
+          120
+        ],
+        "cooldown": [
+          10,
+          9,
+          8,
+          7,
+          6
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "true",
@@ -389,14 +390,15 @@
         "angle": null,
         "castTime": "0.5",
         "effectRadius": "225",
-        "targetRange": "1900"
+        "targetRange": "1900",
+        "maxCharges": -1
       },
       {
         "name": "Molten Fissure",
         "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active - QE:</p><p> Hwei marks a blazing path in the target direction. After 0.6 seconds, the path erupts into volcanic explosions every 0.2 seconds from the point of cast. Each explosion creates a shockwave that deals magic damage to nearby enemies.</p></div>",
+            "description": "<span class=\"ability-header\">Active - QE:</span> Hwei marks a blazing path in the target direction. After 0.6 seconds, the path erupts into volcanic explosions every 0.2 seconds from the point of cast. Each explosion creates a shockwave that deals magic damage to nearby enemies.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -510,11 +512,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cost": [
+          80,
+          90,
+          100,
+          110,
+          120
+        ],
+        "cooldown": [
+          10,
+          9,
+          8,
+          7,
+          6
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "special",
@@ -537,7 +548,8 @@
         "angle": null,
         "castTime": "0.35",
         "effectRadius": "225",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -546,41 +558,24 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Hwei enters a serene mood, gaining access to its abilities as well as Wash Brush. He will exit the mood upon casting any of them.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Hwei enters a serene mood, gaining access to its abilities as well as Wash Brush. He will exit the mood upon casting any of them.",
             "leveling": []
           }
         ],
         "cost": [
-          {
-            "values": [
-              90,
-              95,
-              100,
-              105,
-              110
-            ],
-            "units": [
-              ""
-            ]
-          }
+          90,
+          95,
+          100,
+          105,
+          110
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                18,
-                17.5,
-                17,
-                16.5,
-                16
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          18,
+          17.5,
+          17,
+          16.5,
+          16
+        ],
         "targeting": "Auto",
         "affects": null,
         "spellshieldable": null,
@@ -603,14 +598,15 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       },
       {
         "name": "Fleeting Current",
         "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active - WQ:</p><p> Hwei forms a current of water in the target direction, creating a path for a duration that grants him and allied champions bonus movement speed and ghosting for 0.5 seconds, with the bonus refreshing every 0.125 seconds while they remain in the area.</p></div>",
+            "description": "<span class=\"ability-header\">Active - WQ:</span> Hwei forms a current of water in the target direction, creating a path for a duration that grants him and allied champions bonus movement speed and ghosting for 0.5 seconds, with the bonus refreshing every 0.125 seconds while they remain in the area.",
             "leveling": [
               {
                 "attribute": "Path Duration",
@@ -657,11 +653,20 @@
             ]
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cost": [
+          90,
+          95,
+          100,
+          105,
+          110
+        ],
+        "cooldown": [
+          18,
+          17.5,
+          17,
+          16.5,
+          16
+        ],
         "targeting": "Direction",
         "affects": "Self, Allies",
         "spellshieldable": null,
@@ -684,14 +689,15 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       },
       {
         "name": "Pool of Reflection",
         "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active - WW:</p><p> Hwei summons a pool of water at the target location, creating a protective zone for 3 seconds that grants him and allied champions a shield at the start of the cast time and for 0.5 seconds while within the area. The shield refreshes and increases in strength by an amount every 0.264 seconds over the duration while they remain in the area.</p></div>",
+            "description": "<span class=\"ability-header\">Active - WW:</span> Hwei summons a pool of water at the target location, creating a protective zone for 3 seconds that grants him and allied champions a shield at the start of the cast time and for 0.5 seconds while within the area. The shield refreshes and increases in strength by an amount every 0.264 seconds over the duration while they remain in the area.",
             "leveling": [
               {
                 "attribute": "Initial Shield Strength",
@@ -851,11 +857,20 @@
             ]
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cost": [
+          90,
+          95,
+          100,
+          105,
+          110
+        ],
+        "cooldown": [
+          18,
+          17.5,
+          17,
+          16.5,
+          16
+        ],
         "targeting": "Location",
         "affects": "Self, Allies",
         "spellshieldable": null,
@@ -878,14 +893,15 @@
         "angle": null,
         "castTime": "0.3",
         "effectRadius": "350",
-        "targetRange": "650"
+        "targetRange": "650",
+        "maxCharges": -1
       },
       {
         "name": "Stirring Lights",
         "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active - WE:</p><p> Hwei surrounds himself in swirling flares that empower his next 3 basic attacks or ability hits within 9 seconds to each deal bonus magic damage and restore mana.</p></div>",
+            "description": "<span class=\"ability-header\">Active - WE:</span> Hwei surrounds himself in swirling flares that empower his next 3 basic attacks or ability hits within 9 seconds to each deal bonus magic damage and restore mana.",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage",
@@ -1004,11 +1020,20 @@
             ]
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cost": [
+          90,
+          95,
+          100,
+          105,
+          110
+        ],
+        "cooldown": [
+          18,
+          17.5,
+          17,
+          16.5,
+          16
+        ],
         "targeting": "Auto",
         "affects": "Self, Enemies",
         "spellshieldable": "false",
@@ -1031,7 +1056,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -1040,41 +1066,24 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Hwei enters a tumultuous mood, gaining access to its abilities as well as Wash Brush. He will exit the mood upon casting any of them.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Hwei enters a tumultuous mood, gaining access to its abilities as well as Wash Brush. He will exit the mood upon casting any of them.",
             "leveling": []
           }
         ],
         "cost": [
-          {
-            "values": [
-              50,
-              55,
-              60,
-              65,
-              70
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50,
+          55,
+          60,
+          65,
+          70
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                13,
-                12.5,
-                12,
-                11.5,
-                11
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          13,
+          12.5,
+          12,
+          11.5,
+          11
+        ],
         "targeting": "Auto",
         "affects": null,
         "spellshieldable": null,
@@ -1097,14 +1106,15 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       },
       {
         "name": "Grim Visage",
         "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active - EQ:</p><p> Hwei launches a terrifying grin in the target direction that deals magic damage to the first enemy hit, knocks them down, and fears them for a duration, as well as slows them by 60% for the same duration.</p></div>",
+            "description": "<span class=\"ability-header\">Active - EQ:</span> Hwei launches a terrifying grin in the target direction that deals magic damage to the first enemy hit, knocks them down, and fears them for a duration, as well as slows them by 60% for the same duration.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -1151,11 +1161,20 @@
             ]
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cost": [
+          50,
+          55,
+          60,
+          65,
+          70
+        ],
+        "cooldown": [
+          13,
+          12.5,
+          12,
+          11.5,
+          11
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "true",
@@ -1178,14 +1197,15 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       },
       {
         "name": "Gaze of the Abyss",
         "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active - EW:</p><p> Hwei tosses an eyeball to the target location. Upon arrival, it expands over 0.2 seconds into a dark gaze lasting 3 seconds, granting sight in a larger area. After 0.7 seconds of being placed, the eye locks onto the nearest visible enemy champion or otherwise remains there until an enemy champion is in range. Once locked on, the eye launches itself at the target after 0.3 seconds and collides with the first enemy hit to deal magic damage, reveal them for 2.5 seconds, and root them for a duration.</p></div>",
+            "description": "<span class=\"ability-header\">Active - EW:</span> Hwei tosses an eyeball to the target location. Upon arrival, it expands over 0.2 seconds into a dark gaze lasting 3 seconds, granting sight in a larger area. After 0.7 seconds of being placed, the eye locks onto the nearest visible enemy champion or otherwise remains there until an enemy champion is in range. Once locked on, the eye launches itself at the target after 0.3 seconds and collides with the first enemy hit to deal magic damage, reveal them for 2.5 seconds, and root them for a duration.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -1232,11 +1252,20 @@
             ]
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cost": [
+          50,
+          55,
+          60,
+          65,
+          70
+        ],
+        "cooldown": [
+          13,
+          12.5,
+          12,
+          11.5,
+          11
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "true",
@@ -1259,14 +1288,15 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "350 / 600 / 450",
-        "targetRange": "900"
+        "targetRange": "900",
+        "maxCharges": -1
       },
       {
         "name": "Crushing Maw",
         "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active - EE:</p><p> Hwei conjures a jaw at the target location that snaps after 0.6 seconds, dealing magic damage to enemies in the area and slowing them by an amount that decays over 1.25 seconds. Enemies that are not standing at the center when the jaw snaps are pulled there.</p></div>",
+            "description": "<span class=\"ability-header\">Active - EE:</span> Hwei conjures a jaw at the target location that snaps after 0.6 seconds, dealing magic damage to enemies in the area and slowing them by an amount that decays over 1.25 seconds. Enemies that are not standing at the center when the jaw snaps are pulled there.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -1313,11 +1343,20 @@
             ]
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cost": [
+          50,
+          55,
+          60,
+          65,
+          70
+        ],
+        "cooldown": [
+          13,
+          12.5,
+          12,
+          11.5,
+          11
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "true",
@@ -1340,7 +1379,8 @@
         "angle": null,
         "castTime": "0.35",
         "effectRadius": null,
-        "targetRange": "800"
+        "targetRange": "800",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -1349,7 +1389,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Hwei launches a globule of pure despair in the target direction that collides with the first enemy champion hit, afflicting them with an aura that grows over 3 seconds, reveals the target, and grants sight within its radius. Enemies within are both dealt magic damage and applied a stack of Despair every 0.25 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Hwei launches a globule of pure despair in the target direction that collides with the first enemy champion hit, afflicting them with an aura that grows over 3 seconds, reveals the target, and grants sight within its radius. Enemies within are both dealt magic damage and applied a stack of Despair every 0.25 seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage per Tick",
@@ -1400,7 +1440,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Despair:</p><p> For each stack, the target is slowed by 10% for 0.25 seconds, stacking up to 12 times.</p></div>",
+            "description": "<span class=\"ability-header\">Despair:</span> For each stack, the target is slowed by 10% for 0.25 seconds, stacking up to 12 times.",
             "leveling": []
           },
           {
@@ -1460,30 +1500,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                140,
-                115,
-                80
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          140,
+          115,
+          80
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "special",
@@ -1506,14 +1529,15 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "500",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       },
       {
         "name": "Wash Brush",
         "icon": "https://cdn.communitydragon.org/latest/champion/Hwei/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active - QR, WR, ER:</p><p> Hwei exits his current mood without incurring its ability cost or cooldown.</p></div>",
+            "description": "<span class=\"ability-header\">Active - QR, WR, ER:</span> Hwei exits his current mood without incurring its ability cost or cooldown.",
             "leveling": []
           },
           {
@@ -1521,11 +1545,14 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cost": [
+          100
+        ],
+        "cooldown": [
+          140,
+          115,
+          80
+        ],
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
@@ -1548,10 +1575,10 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Hwei is a brooding painter who creates brilliant art in order to confront Ionia's criminals and comfort their victims. Beneath his melancholy roils a torn, emotional mind—haunted by both the vibrant visions of his imagination and the gruesome memories of his temple's massacre. Hwei seeks to understand this light and dark, which drives him inevitably toward the artist who unraveled him. With paintbrush and palette, Hwei shapes endless possibilities as he draws ever closer to earning closure or embracing despair.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/hwei/skins/skin0/images/hwei_splash_tile_0.jpg"
+  "lore": "Hwei is a brooding painter who creates brilliant art in order to confront Ionia's criminals and comfort their victims. Beneath his melancholy roils a torn, emotional mind—haunted by both the vibrant visions of his imagination and the gruesome memories of his temple's massacre. Hwei seeks to understand this light and dark, which drives him inevitably toward the artist who unraveled him. With paintbrush and palette, Hwei shapes endless possibilities as he draws ever closer to earning closure or embracing despair."
 }

@@ -101,27 +101,12 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gragas/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Periodically, after casting an ability, Gragas heals himself for 5.5% of his maximum health.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Periodically, after casting an ability, Gragas heals himself for 5.5% of his maximum health.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                12,
-                10,
-                8,
-                6
-              ],
-              "units": [
-                " (based on level)"
-              ]
-            }
-          ],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -144,7 +129,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -153,11 +139,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gragas/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Gragas rolls a cask to the target location, remaining there for 4 seconds and granting sight of the area. Upon arrival, the cask starts to ferment over the first 2 seconds of its duration to increase its damage and the effectiveness of its slow, up to a maximum of 150% of their initial values. Barrel Roll can be recast at any time within its duration after the cask has fully travelled, and does so automatically after its duration ends.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Gragas rolls a cask to the target location, remaining there for 4 seconds and granting sight of the area. Upon arrival, the cask starts to ferment over the first 2 seconds of its duration to increase its damage and the effectiveness of its slow, up to a maximum of 150% of their initial values. Barrel Roll can be recast at any time within its duration after the cask has fully travelled, and does so automatically after its duration ends.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Gragas detonates the cask, dealing magic damage to nearby enemies, reduced by 30% against minions, and slowing them for 2 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Gragas detonates the cask, dealing magic damage to nearby enemies, reduced by 30% against minions, and slowing them for 2 seconds.",
             "leveling": [
               {
                 "attribute": "Minimum Magic Damage",
@@ -297,32 +283,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              80
-            ],
-            "units": [
-              ""
-            ]
-          }
+          80
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                10,
-                9,
-                8,
-                7,
-                6
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          10,
+          9,
+          8,
+          7,
+          6
+        ],
         "targeting": "Location / Auto",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -345,7 +314,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "250",
-        "targetRange": "850"
+        "targetRange": "850",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -354,7 +324,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gragas/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Gragas channels for 0.75 seconds, drinking out of his brew, and gains damage reduction for 2.5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Gragas channels for 0.75 seconds, drinking out of his brew, and gains damage reduction for 2.5 seconds.",
             "leveling": [
               {
                 "attribute": "Damage Reduction",
@@ -448,28 +418,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              30
-            ],
-            "units": [
-              ""
-            ]
-          }
+          30
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                5
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          5
+        ],
         "targeting": "Auto",
         "affects": "Enemies, Self",
         "spellshieldable": "True",
@@ -492,7 +445,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "250",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -501,7 +455,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gragas/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Gragas charges in the target direction and stops upon colliding with an enemy, dealing magic damage to all nearby enemies, knocking them back, though not through terrain, and stunning them for 1 second.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Gragas charges in the target direction and stops upon colliding with an enemy, dealing magic damage to all nearby enemies, knocking them back, though not through terrain, and stunning them for 1 second.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -540,32 +494,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                14,
-                13.5,
-                13,
-                12.5,
-                12
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          14,
+          13.5,
+          13,
+          12.5,
+          12
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -588,7 +525,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "180 /  180",
-        "targetRange": "600"
+        "targetRange": "600",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -597,7 +535,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gragas/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Gragas hurls a cask that travels to the target location over 0.5 seconds, exploding on impact to deal magic damage to all enemies within the area and knock them back 900 units, though not through terrain, from the epicenter of the explosion, as well as granting sight of the area for 1 second.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Gragas hurls a cask that travels to the target location over 0.5 seconds, exploding on impact to deal magic damage to all enemies within the area and knock them back 900 units, though not through terrain, from the epicenter of the explosion, as well as granting sight of the area for 1 second.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -626,30 +564,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                100,
-                85,
-                70
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          100,
+          85,
+          70
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -672,10 +593,10 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "400",
-        "targetRange": "1000"
+        "targetRange": "1000",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Equal parts jolly and imposing, Gragas is a massive, rowdy brewmaster who's always on the lookout for new ways to raise everyone's spirits. Hailing from parts unknown, he searches for ingredients among the unblemished wastes of the Freljord to help him perfect his latest concoction. He is impulsive, headstrong, and renowned for the brawls he starts, which often end in all-night parties and widespread property damage. Any appearance from Gragas must surely foreshadow merriment and destruction—in that order.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gragas/skins/base/images/gragas_splash_tile_0.jpg"
+  "lore": "Equal parts jolly and imposing, Gragas is a massive, rowdy brewmaster who's always on the lookout for new ways to raise everyone's spirits. Hailing from parts unknown, he searches for ingredients among the unblemished wastes of the Freljord to help him perfect his latest concoction. He is impulsive, headstrong, and renowned for the brawls he starts, which often end in all-night parties and widespread property damage. Any appearance from Gragas must surely foreshadow merriment and destruction—in that order."
 }

@@ -1,2 +1,2 @@
-export * from './championQuotes'
-export * from './championStats'
+export * from './champion-stats'
+

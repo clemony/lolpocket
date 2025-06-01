@@ -94,23 +94,20 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Xayah/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Feathers shot by Xayah will linger in the ground at maximum range for 6 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Feathers shot by Xayah will linger in the ground at maximum range for 6 seconds.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Xayah's ability casts generate 3 stacks of Clean Cuts, lasting for 8 seconds, refreshing on subsequent casts, and stacking up to 5 times. Xayah's basic attacks are empowered to each consume a stack on-attack to instead shoot a Feather that deals the triggering attack's damage to the primary target and 30 / 40 / 50% (based on level) AD physical damage to other enemies hit. The secondary target damage can critically strike for (175% + 40%) damage if the triggering attack does.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Xayah's ability casts generate 3 stacks of Clean Cuts, lasting for 8 seconds, refreshing on subsequent casts, and stacking up to 5 times. Xayah's basic attacks are empowered to each consume a stack on-attack to instead shoot a Feather that deals the triggering attack's damage to the primary target and 30 / 40 / 50% (based on level) AD physical damage to other enemies hit. The secondary target damage can critically strike for (175% + 40%) damage if the triggering attack does.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate - Lover's Leap:</p><p> If either Xayah or Rakan is channeling Recall, the other may move nearby and channel their own to join alongside them. Both reach base at the time of which the initiator's Recall completes.</p></div>",
+            "description": "<span class=\"ability-header\">Innate - Lover's Leap:</span> If either Xayah or Rakan is channeling Recall, the other may move nearby and channel their own to join alongside them. Both reach base at the time of which the initiator's Recall completes.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Enemies",
         "spellshieldable": "False",
@@ -133,7 +130,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": "1000",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -142,7 +140,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Xayah/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Xayah barrages two Feathers in the target direction that each deal physical damage to enemies hit.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Xayah barrages two Feathers in the target direction that each deal physical damage to enemies hit.",
             "leveling": [
               {
                 "attribute": "Physical Damage Per Hit",
@@ -253,32 +251,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                10,
-                9.5,
-                9,
-                8.5,
-                8
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          10,
+          9.5,
+          9,
+          8.5,
+          8
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "Special",
@@ -301,7 +282,8 @@
         "angle": null,
         "castTime": "0.25 : 0.1 (based on bonus attack speed)",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -310,7 +292,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Xayah/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Xayah enters a frenzy for 4 seconds, gaining bonus attack speed and empowering her basic attacks to fire an additional smaller feather at the target on-hit that deals 25% damage of the triggering attack's damage.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Xayah enters a frenzy for 4 seconds, gaining bonus attack speed and empowering her basic attacks to fire an additional smaller feather at the target on-hit that deals 25% damage of the triggering attack's damage.",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -341,36 +323,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              60,
-              55,
-              50,
-              45,
-              40
-            ],
-            "units": [
-              ""
-            ]
-          }
+          60,
+          55,
+          50,
+          45,
+          40
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                20,
-                19,
-                18,
-                17,
-                16
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          20,
+          19,
+          18,
+          17,
+          16
+        ],
         "targeting": "Auto",
         "affects": "Self, Rakan",
         "spellshieldable": null,
@@ -393,7 +358,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -402,7 +368,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Xayah/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Xayah recalls all planted Feathers to shoot back to her, each dealing physical damage to enemies hit, increased by 0% - 75% (based on critical strike chance). Bladecaller deals 50% damage to minions.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Xayah recalls all planted Feathers to shoot back to her, each dealing physical damage to enemies hit, increased by 0% - 75% (based on critical strike chance). Bladecaller deals 50% damage to minions.",
             "leveling": [
               {
                 "attribute": "Physical Damage Per Feather",
@@ -470,32 +436,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              30
-            ],
-            "units": [
-              ""
-            ]
-          }
+          30
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                12,
-                11,
-                10,
-                9,
-                8
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          12,
+          11,
+          10,
+          9,
+          8
+        ],
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "special",
@@ -518,7 +467,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "Global",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -527,7 +477,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Xayah/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Xayah leaps into the air, becoming ghosted and untargetable for 1.5 seconds. After 1 second, she shoots 5 Feathers in a cone in the target direction that deal physical damage to enemies hit.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Xayah leaps into the air, becoming ghosted and untargetable for 1.5 seconds. After 1 second, she shoots 5 Feathers in a cone in the target direction that deal physical damage to enemies hit.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -560,30 +510,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                140,
-                120,
-                100
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          140,
+          120,
+          100
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -606,10 +539,10 @@
         "angle": "30°",
         "castTime": "none",
         "effectRadius": "1060 /  1000",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Deadly and precise, Xayah is a vastayan revolutionary waging a personal war to save her people. She uses her speed, guile, and razor-sharp feather blades to cut down anyone who stands in her way. Xayah fights alongside her partner and lover, Rakan, to protect their dwindling tribe, and restore their race to her vision of its former glory.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/xayah/skins/base/images/xayah_splash_tile_0.jpg"
+  "lore": "Deadly and precise, Xayah is a vastayan revolutionary waging a personal war to save her people. She uses her speed, guile, and razor-sharp feather blades to cut down anyone who stands in her way. Xayah fights alongside her partner and lover, Rakan, to protect their dwindling tribe, and restore their race to her vision of its former glory."
 }

@@ -94,7 +94,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/RekSai/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Rek'Sai basic attacks and ability hits generate 25 Fury. After 8 seconds of being out of combat, she loses 20 Fury per second. Fury gain is reduced[ by 80% ][ to 5 per hit ]against minions, wards, and plants. Prey Seeker will not generate Fury against non- champions.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Rek'Sai basic attacks and ability hits generate 25 Fury. After 8 seconds of being out of combat, she loses 20 Fury per second. Fury gain is reduced[ by 80% ][ to 5 per hit ]against minions, wards, and plants. Prey Seeker will not generate Fury against non- champions.",
             "leveling": []
           },
           {
@@ -103,10 +103,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -129,7 +126,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -138,7 +136,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/RekSai/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Rek'Sai gains 35% bonus attack speed for 3 seconds. Her next basic attack within the duration will have an uncancellable windup and deal bonus physical damage to the target and surrounding enemies. Queen's Wrath's damage to the primary target is affected by critical strike modifiers.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Rek'Sai gains 35% bonus attack speed for 3 seconds. Her next basic attack within the duration will have an uncancellable windup and deal bonus physical damage to the target and surrounding enemies. Queen's Wrath's damage to the primary target is affected by critical strike modifiers.",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage",
@@ -168,24 +166,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                4,
-                3.5,
-                3,
-                2.5,
-                2
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          4,
+          3.5,
+          3,
+          2.5,
+          2
+        ],
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "false",
@@ -208,14 +198,15 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "325",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       },
       {
         "name": "Prey Seeker",
         "icon": "https://cdn.communitydragon.org/latest/champion/RekSai/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Rek'Sai fires a void bolt in the target direction that detonates on the first enemy hit, dealing magic damage to all nearby enemies and revealing them for 5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Rek'Sai fires a void bolt in the target direction that detonates on the first enemy hit, dealing magic damage to all nearby enemies and revealing them for 5 seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -253,20 +244,16 @@
             ]
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                10
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          4,
+          3.5,
+          3,
+          2.5,
+          2
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -289,7 +276,8 @@
         "angle": null,
         "castTime": "0.1",
         "effectRadius": "150",
-        "targetRange": "1500"
+        "targetRange": "1500",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -298,7 +286,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/RekSai/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Rek'Sai becomes Burrowed, reducing her sight radius to 385 units while gaining access to her Burrowed abilities. She also becomes ghosted and gains bonus movement speed, as well as Tremor Sense.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Rek'Sai becomes Burrowed, reducing her sight radius to 385 units while gaining access to her Burrowed abilities. She also becomes ghosted and gains bonus movement speed, as well as Tremor Sense.",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -320,7 +308,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Tremor Sense:</p><p> Rek'Sai and her allies gain obscured vision of nearby enemy units that are moving at a rate of once every second.</p></div>",
+            "description": "<span class=\"ability-header\">Tremor Sense:</span> Rek'Sai and her allies gain obscured vision of nearby enemy units that are moving at a rate of once every second.",
             "leveling": []
           },
           {
@@ -328,20 +316,12 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                4
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          4
+        ],
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
@@ -364,14 +344,15 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "1500",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       },
       {
         "name": "Unburrow",
         "icon": "https://cdn.communitydragon.org/latest/champion/RekSai/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Rek'Sai becomes Un-Burrowed, gaining access to her Un-Burrowed abilities and emerging from the ground to deal magic damage to nearby enemies. Additionally, the nearest enemy, enemy champions, and medium and large monsters hit by the emergence are also knocked up for 1 second. All other enemies hit are instead knocked back a short distance. Targets hit cannot be displaced by Unburrow again for some time.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Rek'Sai becomes Un-Burrowed, gaining access to her Un-Burrowed abilities and emerging from the ground to deal magic damage to nearby enemies. Additionally, the nearest enemy, enemy champions, and medium and large monsters hit by the emergence are also knocked up for 1 second. All other enemies hit are instead knocked back a short distance. Targets hit cannot be displaced by Unburrow again for some time.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -405,20 +386,12 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                1
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": false
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          4
+        ],
         "targeting": "Auto",
         "affects": "Self / Enemies",
         "spellshieldable": "True",
@@ -441,7 +414,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "220 / 75 /  250",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -450,7 +424,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/RekSai/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Rek'Sai bites the target enemy, dealing 100% AD physical damage.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Rek'Sai bites the target enemy, dealing 100% AD physical damage.",
             "leveling": []
           },
           {
@@ -501,20 +475,12 @@
             ]
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                10
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          10
+        ],
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -525,7 +491,7 @@
         "onHitEffects": null,
         "occurrence": null,
         "notes": "If the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
-        "blurb": "Active: Rek'Sai bites the target enemy, dealing physical damage. At maximum  Fury, Furious Bite's deals additional damage based on their maximum health.",
+        "blurb": "Active:  Rek'Sai bites the target enemy, dealing physical damage. At maximum  Fury, Furious Bite's deals additional damage based on their maximum health.",
         "missileSpeed": null,
         "rechargeRate": null,
         "collisionRadius": null,
@@ -537,14 +503,15 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "225"
+        "targetRange": "225",
+        "maxCharges": -1
       },
       {
         "name": "Tunnel",
         "icon": "https://cdn.communitydragon.org/latest/champion/RekSai/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Rek'Sai dashes in the target direction, leaving behind a Tunnel with two interconnected entrances that lasts up to 10 minutes. The Tunnel can be traversed again when Rek'Sai targets either entrance, shutting down the Tunnel for a few seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Rek'Sai dashes in the target direction, leaving behind a Tunnel with two interconnected entrances that lasts up to 10 minutes. The Tunnel can be traversed again when Rek'Sai targets either entrance, shutting down the Tunnel for a few seconds.",
             "leveling": []
           },
           {
@@ -560,24 +527,12 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                18,
-                17,
-                16,
-                15,
-                14
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          10
+        ],
         "targeting": "Direction",
         "affects": "Self",
         "spellshieldable": null,
@@ -600,7 +555,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": "850"
+        "targetRange": "850",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -609,11 +565,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/RekSai/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Rek'Sai applies Marked as Prey to enemy champions she damages, lasting for 5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Rek'Sai applies Marked as Prey to enemy champions she damages, lasting for 5 seconds.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Rek'Sai singles out the target enemy champion Marked as Prey, becoming displacement immune and unable to act and vanishing into the ground, as well as revealing the target for 2 seconds. After 1.5 seconds, she blinks to a location near the target, becoming targetable again and emerging from the ground in Un-Burrowed form to pounce at them. Upon arrival, she slashes at the target with her claws, dealing physical damage, and dashes 125 units through them.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Rek'Sai singles out the target enemy champion Marked as Prey, becoming displacement immune and unable to act and vanishing into the ground, as well as revealing the target for 2 seconds. After 1.5 seconds, she blinks to a location near the target, becoming targetable again and emerging from the ground in Un-Burrowed form to pounce at them. Upon arrival, she slashes at the target with her claws, dealing physical damage, and dashes 125 units through them.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -651,22 +607,14 @@
             ]
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                100,
-                90,
-                80
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          100,
+          90,
+          80
+        ],
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -689,10 +637,10 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "1500"
+        "targetRange": "1500",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "An apex predator, Rek'Sai is a merciless Void-spawn that tunnels beneath the ground to ambush and devour unsuspecting prey. Her insatiable hunger has laid waste to entire regions of the once-great empire of Shurima—merchants, traders, even armed caravans, will go hundreds of miles out of their way to avoid her and her offspring's hunting grounds. All know that once Rek'Sai is seen on the horizon, death from below is all but guaranteed.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/reksai/skins/base/images/reksai_splash_tile_0.jpg"
+  "lore": "An apex predator, Rek'Sai is a merciless Void-spawn that tunnels beneath the ground to ambush and devour unsuspecting prey. Her insatiable hunger has laid waste to entire regions of the once-great empire of Shurima—merchants, traders, even armed caravans, will go hundreds of miles out of their way to avoid her and her offspring's hunting grounds. All know that once Rek'Sai is seen on the horizon, death from below is all but guaranteed."
 }

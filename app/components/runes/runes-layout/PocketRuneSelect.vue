@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from 'motion-v'
 
 const { pathRunes, path, runes, limit } = defineProps<{
   pathRunes: PathRunes
-  runes: Array<Rune[]> | null
+  runes: any
   path: string
   limit?: boolean
 }>()

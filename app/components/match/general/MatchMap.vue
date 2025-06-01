@@ -7,11 +7,11 @@ const { id, class: className } = defineProps<PrimitiveProps & {
   id: number
 }>()
 
-const { mapNameById } = await useIndexLookup()
+const ix = useIndexStore()
 </script>
 
 <template>
   <Primitive v-bind="$props" :class="cn('', className)">
-    {{ mapNameById(id) }}
+    {{ ix.mapNameById(id) }}
   </Primitive>
 </template>

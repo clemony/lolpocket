@@ -100,7 +100,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Velkoz/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Vel'Koz's abilities apply a stack of Deconstruction to enemies hit for 7 seconds, refreshing on basic attacks and subsequent applications and stacking up to 3 times.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Vel'Koz's abilities apply a stack of Deconstruction to enemies hit for 7 seconds, refreshing on basic attacks and subsequent applications and stacking up to 3 times.",
             "leveling": []
           },
           {
@@ -109,10 +109,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Enemies / Self",
         "spellshieldable": "True",
@@ -123,7 +120,7 @@
         "onHitEffects": null,
         "occurrence": null,
         "notes": "No additional notes.",
-        "blurb": "Innate:  Vel'Koz abilities apply a stack of Deconstruction to enemies hit for a few seconds.",
+        "blurb": "Innate:  Vel'Koz's abilities apply a stack of Deconstruction to enemies hit for a few seconds.",
         "missileSpeed": null,
         "rechargeRate": null,
         "collisionRadius": null,
@@ -135,7 +132,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -144,7 +142,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Velkoz/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Vel'Koz fires a plasma bolt in the target direction that deals magic damage to the first enemy hit and slows them by 70% decaying over a duration.</p></div>\nPlasma Fission can be recast after 0.25 seconds while the bolt is in flight, and does so automatically upon hitting an enemy or reaching maximum range.",
+            "description": "<span class=\"ability-header\">Active:</span> Vel'Koz fires a plasma bolt in the target direction that deals magic damage to the first enemy hit and slows them by 70% decaying over a duration.\nPlasma Fission can be recast after 0.25 seconds while the bolt is in flight, and does so automatically upon hitting an enemy or reaching maximum range.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -191,7 +189,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Vel'Koz splits the bolt in two over 0.25 seconds, each part firing perpendicularly in opposite directions and applying the same effects to enemies hit.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Vel'Koz splits the bolt in two over 0.25 seconds, each part firing perpendicularly in opposite directions and applying the same effects to enemies hit.",
             "leveling": []
           },
           {
@@ -235,32 +233,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              40,
-              45,
-              50,
-              55,
-              60
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40,
+          45,
+          50,
+          55,
+          60
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                7
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          7
+        ],
         "targeting": "Direction / Auto",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -283,7 +264,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -292,7 +274,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Velkoz/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Vel'Koz cracks a rift in the target direction that opens after a 0.25-second delay, cascading through the area over 0.65 seconds to deal magic damage to enemies within.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Vel'Koz cracks a rift in the target direction that opens after a 0.25-second delay, cascading through the area over 0.65 seconds to deal magic damage to enemies within.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -382,32 +364,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50,
-              55,
-              60,
-              65,
-              70
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50,
+          55,
+          60,
+          65,
+          70
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                1.5
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": false
-        },
+        "cooldown": [
+          1.5
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "special",
@@ -436,7 +401,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": 2
       }
     ],
     "E": [
@@ -445,7 +411,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Velkoz/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Vel'Koz hurls a disruptive anomaly that lands to the target location after 0.25 - 0.55 (based on cast distance) seconds, dealing magic damage to enemies hit and knocking them up and stunning them for 0.75 seconds, as well as granting sight of the area briefly.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Vel'Koz hurls a disruptive anomaly that lands to the target location after 0.25 - 0.55 (based on cast distance) seconds, dealing magic damage to enemies hit and knocking them up and stunning them for 0.75 seconds, as well as granting sight of the area briefly.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -480,36 +446,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50,
-              55,
-              60,
-              65,
-              70
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50,
+          55,
+          60,
+          65,
+          70
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                14,
-                13.5,
-                13,
-                12.5,
-                12
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          14,
+          13.5,
+          13,
+          12.5,
+          12
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -532,7 +481,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "225",
-        "targetRange": "800"
+        "targetRange": "800",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -541,11 +491,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Velkoz/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive - Researched:</p><p> Applying 3 Deconstruction stacks to an enemy champion marks them as Researched for 7 seconds, refreshing on basic attacks and ability hits against them.</p></div>",
+            "description": "<span class=\"ability-header\">Passive - Researched:</span> Applying 3 Deconstruction stacks to an enemy champion marks them as Researched for 7 seconds, refreshing on basic attacks and ability hits against them.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> After a 0.2-second delay, Vel'Koz channels for up to 2.6 seconds to project an energy beam, during which he can steer the beam in the target direction. Life Form Disintegration Ray can be recast after 1 second during the channel, and does so automatically after the duration.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> After a 0.2-second delay, Vel'Koz channels for up to 2.6 seconds to project an energy beam, during which he can steer the beam in the target direction. Life Form Disintegration Ray can be recast after 1 second during the channel, and does so automatically after the duration.",
             "leveling": []
           },
           {
@@ -600,35 +550,18 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Vel'Koz ends Life Form Disintegration Ray.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Vel'Koz ends Life Form Disintegration Ray.",
             "leveling": []
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                100,
-                90,
-                80
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          100,
+          90,
+          80
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": null,
@@ -651,10 +584,10 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "It is unclear if Vel'Koz was the first Void-spawn to emerge on Runeterra, but there has certainly never been another to match his level of cruel, calculating sentience. While his kin devour or defile everything around them, he seeks instead to scrutinize and study the physical realm—and the strange, warlike beings that dwell there—for any weakness the Void might exploit. But Vel'Koz is far from a passive observer, striking back at threats with deadly plasma, or by disrupting the very fabric of the world itself.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/velkoz/skins/base/images/velkoz_splash_tile_0.jpg"
+  "lore": "It is unclear if Vel'Koz was the first Void-spawn to emerge on Runeterra, but there has certainly never been another to match his level of cruel, calculating sentience. While his kin devour or defile everything around them, he seeks instead to scrutinize and study the physical realm—and the strange, warlike beings that dwell there—for any weakness the Void might exploit. But Vel'Koz is far from a passive observer, striking back at threats with deadly plasma, or by disrupting the very fabric of the world itself."
 }

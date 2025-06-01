@@ -1,5 +1,4 @@
 <script setup lang="ts">
-const ts = useTempStore()
 const as = useAccountStore()
 const viewLogin = ref(false)
 

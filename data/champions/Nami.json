@@ -99,15 +99,12 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nami/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Nami's abilities grant 100 (+ 25% AP) bonus movement speed to allied champions hit, decaying over 1.5 seconds. The bonus is[ doubled ][ increased to 200 (+ 50% AP) ]from Tidal Wave.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Nami's abilities grant 100 (+ 25% AP) bonus movement speed to allied champions hit, decaying over 1.5 seconds. The bonus is[ doubled ][ increased to 200 (+ 50% AP) ]from Tidal Wave.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Allies",
         "spellshieldable": null,
@@ -130,7 +127,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -139,7 +137,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nami/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Nami launches a bubble at the target location that lands after 0.726 seconds, dealing magic damage to enemies hit and suspending them for 1.5 seconds, during which they are revealed.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Nami launches a bubble at the target location that lands after 0.726 seconds, dealing magic damage to enemies hit and suspending them for 1.5 seconds, during which they are revealed.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -174,32 +172,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              60
-            ],
-            "units": [
-              ""
-            ]
-          }
+          60
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                12,
-                11,
-                10,
-                9,
-                8
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          12,
+          11,
+          10,
+          9,
+          8
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -222,7 +203,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "200 / 225",
-        "targetRange": "850*"
+        "targetRange": "850*",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -231,7 +213,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nami/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Nami unleashes a stream of water onto the target champion or herself, which then bounces to nearby unaffected champions up to twice, alternating between enemies and allies and Nami.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Nami unleashes a stream of water onto the target champion or herself, which then bounces to nearby unaffected champions up to twice, alternating between enemies and allies and Nami.",
             "leveling": []
           },
           {
@@ -341,32 +323,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              70,
-              75,
-              80,
-              85,
-              90
-            ],
-            "units": [
-              ""
-            ]
-          }
+          70,
+          75,
+          80,
+          85,
+          90
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                10
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          10
+        ],
         "targeting": "Unit",
         "affects": "Enemies, Allies",
         "spellshieldable": "True",
@@ -389,7 +354,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "800",
-        "targetRange": "725"
+        "targetRange": "725",
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -398,7 +364,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nami/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Nami blesses herself or an allied champion for 6 seconds, empowering their next 3 basic attacks or abilities to each deal bonus magic damage and slow enemies for 1 second.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Nami blesses herself or an allied champion for 6 seconds, empowering their next 3 basic attacks or abilities to each deal bonus magic damage and slow enemies for 1 second.",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage Per Hit",
@@ -483,32 +449,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              55,
-              60,
-              65,
-              70,
-              75
-            ],
-            "units": [
-              ""
-            ]
-          }
+          55,
+          60,
+          65,
+          70,
+          75
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                11
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          11
+        ],
         "targeting": "Unit",
         "affects": "Self, Allies",
         "spellshieldable": "False",
@@ -531,7 +480,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": "800"
+        "targetRange": "800",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -540,7 +490,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nami/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Nami surges a tidal wave in the target direction, granting sight around its trajectory as it travels, dealing magic damage to enemies hit, knocking them up for 0.5 seconds, and slowing them by 70% for 2 - 4 (based on distance traveled) seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Nami surges a tidal wave in the target direction, granting sight around its trajectory as it travels, dealing magic damage to enemies hit, knocking them up for 0.5 seconds, and slowing them by 70% for 2 - 4 (based on distance traveled) seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -569,30 +519,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                120,
-                110,
-                100
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          120,
+          110,
+          100
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -615,10 +548,10 @@
         "angle": null,
         "castTime": "0.5",
         "effectRadius": "750",
-        "targetRange": "2750"
+        "targetRange": "2750",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "A headstrong young vastaya of the seas, Nami was the first of the Marai tribe to leave the waves and venture onto dry land, when their ancient accord with the Targonians was broken. With no other option, she took it upon herself to complete the sacred ritual that would ensure the safety of her people. Amidst the chaos of this new age, Nami faces an uncertain future with grit and determination, using her Tidecaller staff to summon the strength of the oceans themselves.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/nami/skins/base/images/nami_splash_tile_0.jpg"
+  "lore": "A headstrong young vastaya of the seas, Nami was the first of the Marai tribe to leave the waves and venture onto dry land, when their ancient accord with the Targonians was broken. With no other option, she took it upon herself to complete the sacred ritual that would ensure the safety of her people. Amidst the chaos of this new age, Nami faces an uncertain future with grit and determination, using her Tidecaller staff to summon the strength of the oceans themselves."
 }

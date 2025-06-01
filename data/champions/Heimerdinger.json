@@ -102,15 +102,12 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Heimerdinger gains 20% bonus movement speed while near an allied turret or a H-28G Evolution Turret or H-28Q Apex Turret deployed by him.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Heimerdinger gains 20% bonus movement speed while near an allied turret or a H-28G Evolution Turret or H-28Q Apex Turret deployed by him.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -133,7 +130,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": "300",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -142,7 +140,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Heimerdinger deploys a H-28G Evolution Turret at the target location, which lasts until destroyed.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Heimerdinger deploys a H-28G Evolution Turret at the target location, which lasts until destroyed.",
             "leveling": []
           },
           {
@@ -159,28 +157,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              20
-            ],
-            "units": [
-              ""
-            ]
-          }
+          20
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                1
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          1
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "False",
@@ -205,14 +186,15 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "350"
+        "targetRange": "350",
+        "maxCharges": 3
       },
       {
         "name": "H-28Q Apex Turret",
         "icon": "https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">UPGRADE!!! - Active:</p><p> Heimerdinger deploys a H-28Q Apex Turret at the target location, which lasts for 8 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">UPGRADE!!! - Active:</span> Heimerdinger deploys a H-28Q Apex Turret at the target location, which lasts for 8 seconds.",
             "leveling": []
           },
           {
@@ -224,20 +206,12 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                1
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          20
+        ],
+        "cooldown": [
+          1
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "False",
@@ -260,7 +234,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "450"
+        "targetRange": "450",
+        "maxCharges": 3
       }
     ],
     "W": [
@@ -269,7 +244,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Heimerdinger launches a wave of 5 rockets that converge upon the target location and fan beyond it up to a maximum range, with each one dealing magic damage to the first enemy it hits. Every rocket hitting an enemy champion grants 20% beam charge to all turrets within 1000 range, up to a maximum of 100% beam charge when hitting 5 rockets on an enemy champion.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Heimerdinger launches a wave of 5 rockets that converge upon the target location and fan beyond it up to a maximum range, with each one dealing magic damage to the first enemy it hits. Every rocket hitting an enemy champion grants 20% beam charge to all turrets within 1000 range, up to a maximum of 100% beam charge when hitting 5 rockets on an enemy champion.",
             "leveling": [
               {
                 "attribute": "Initial Rocket Magic Damage",
@@ -455,36 +430,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50,
-              60,
-              70,
-              80,
-              90
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50,
+          60,
+          70,
+          80,
+          90
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                11,
-                10,
-                9,
-                8,
-                7
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          11,
+          10,
+          9,
+          8,
+          7
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -507,14 +465,15 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "1150"
+        "targetRange": "1150",
+        "maxCharges": -1
       },
       {
         "name": "Hextech Rocket Swarm",
         "icon": "https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">UPGRADE!!! - Active:</p><p> Heimerdinger unleashes 4 waves of 5 rockets in quick succession that converge upon the target location. Each rocket deals magic damage to the first enemy hit.</p></div>",
+            "description": "<span class=\"ability-header\">UPGRADE!!! - Active:</span> Heimerdinger unleashes 4 waves of 5 rockets in quick succession that converge upon the target location. Each rocket deals magic damage to the first enemy hit.",
             "leveling": [
               {
                 "attribute": "Initial Rocket Damage",
@@ -658,24 +617,20 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                11,
-                10,
-                9,
-                8,
-                7
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          50,
+          60,
+          70,
+          80,
+          90
+        ],
+        "cooldown": [
+          11,
+          10,
+          9,
+          8,
+          7
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -698,7 +653,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "1150"
+        "targetRange": "1150",
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -707,7 +663,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Heimerdinger hurls a grenade at the target location that detonates upon impact, dealing magic damage to nearby enemies and slowing them by 35% for 2 seconds. If the grenade hits an enemy champion, all turrets within 1000 range of the impact gain 100% beam charge.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Heimerdinger hurls a grenade at the target location that detonates upon impact, dealing magic damage to nearby enemies and slowing them by 35% for 2 seconds. If the grenade hits an enemy champion, all turrets within 1000 range of the impact gain 100% beam charge.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -742,28 +698,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              85
-            ],
-            "units": [
-              ""
-            ]
-          }
+          85
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                11
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          11
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -786,14 +725,15 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "250",
-        "targetRange": "925"
+        "targetRange": "925",
+        "maxCharges": -1
       },
       {
         "name": "CH-3X Lightning Grenade",
         "icon": "https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">UPGRADE!!! - Active:</p><p> Heimerdinger hurls a massive grenade at the target location that bounces a fixed distance 3 times in the cast direction. The grenade explodes upon landing each time to deal magic damage to nearby enemies and slow them by 35% for 2 seconds. Enemies hit at the center of the grenade's impact are additionally stunned for 1.5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">UPGRADE!!! - Active:</span> Heimerdinger hurls a massive grenade at the target location that bounces a fixed distance 3 times in the cast direction. The grenade explodes upon landing each time to deal magic damage to nearby enemies and slow them by 35% for 2 seconds. Enemies hit at the center of the grenade's impact are additionally stunned for 1.5 seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -833,20 +773,12 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                11
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          85
+        ],
+        "cooldown": [
+          11
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -869,7 +801,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "300",
-        "targetRange": "925"
+        "targetRange": "925",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -878,11 +811,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Heimerdinger empowers his next basic ability for an additional effect, consuming the empowerment upon cast and placing UPGRADE!!! on full cooldown. These empowered abilities have the same cooldowns as their basic forms, deal modified damage, and do not have a mana cost. UPGRADE!!! can be recast after 3 seconds while the empowerment is available.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Heimerdinger empowers his next basic ability for an additional effect, consuming the empowerment upon cast and placing UPGRADE!!! on full cooldown. These empowered abilities have the same cooldowns as their basic forms, deal modified damage, and do not have a mana cost. UPGRADE!!! can be recast after 3 seconds while the empowerment is available.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Heimerdinger ends UPGRADE!!! and puts it on a 3-second cooldown.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Heimerdinger ends UPGRADE!!! and puts it on a 3-second cooldown.",
             "leveling": []
           },
           {
@@ -891,32 +824,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                100,
-                92.5,
-                85,
-                77.5,
-                70
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          100,
+          85,
+          70
+        ],
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
@@ -939,10 +853,10 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "The eccentric Professor Cecil B. Heimerdinger is one of the most innovative and esteemed inventors the world has ever known. As the longest serving member of the Council of Piltover, he saw the best and the worst of the city's unending desire for progress. Nonetheless, this brilliant scientist and teacher will always remain dedicated to using his unconventional devices to improve the lives of others.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/heimerdinger/skins/base/images/heimerdinger_splash_tile_0.jpg"
+  "lore": "The eccentric Professor Cecil B. Heimerdinger is one of the most innovative and esteemed inventors the world has ever known. As the longest serving member of the Council of Piltover, he saw the best and the worst of the city's unending desire for progress. Nonetheless, this brilliant scientist and teacher will always remain dedicated to using his unconventional devices to improve the lives of others."
 }

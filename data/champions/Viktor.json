@@ -98,7 +98,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Viktor/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Viktor can augment each of his abilities at the cost of 100 Hex Fragments, which he gains from killing enemies:</p></div>\n Minions and monsters generate 1 Hex Fragment.\nSiege minions, super minions, and epic monsters generate 10 Hex Fragments.\nEnemy champion takedowns generate 20 Hex Fragments.",
+            "description": "<span class=\"ability-header\">Innate:</span> Viktor can augment each of his abilities at the cost of 100 Hex Fragments, which he gains from killing enemies:\n Minions and monsters generate 1 Hex Fragment.\nSiege minions, super minions, and epic monsters generate 10 Hex Fragments.\nEnemy champion takedowns generate 20 Hex Fragments.",
             "leveling": []
           },
           {
@@ -107,10 +107,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -133,7 +130,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -142,7 +140,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Viktor/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Viktor throws a draining device at the target enemy that deals magic damage. He also grants himself a shield for 40 - 115 (based on level) (+ 18% AP) for 2.5 seconds and gains Discharge for 3.5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Viktor throws a draining device at the target enemy that deals magic damage. He also grants himself a shield for 40 - 115 (based on level) (+ 18% AP) for 2.5 seconds and gains Discharge for 3.5 seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -172,7 +170,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Discharge:</p><p> Viktor's next basic attack is empowered to become non-projectile and deal modified magic damage.</p></div>",
+            "description": "<span class=\"ability-header\">Discharge:</span> Viktor's next basic attack is empowered to become non-projectile and deal modified magic damage.",
             "leveling": [
               {
                 "attribute": "Modified Magic Damage",
@@ -243,41 +241,24 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Augment:</p><p> Turbocharge — After the device hits, Viktor gains 30% bonus movement speed for 2.5 seconds and the shield's strength is increased[ by 60%. ][ to 64 - 184 (based on level) (+ 32% AP). ]</p></div>",
+            "description": "<span class=\"ability-header\">Augment:</span> Turbocharge — After the device hits, Viktor gains 30% bonus movement speed for 2.5 seconds and the shield's strength is increased[ by 60%. ][ to 64 - 184 (based on level) (+ 32% AP). ]",
             "leveling": []
           }
         ],
         "cost": [
-          {
-            "values": [
-              45,
-              50,
-              55,
-              60,
-              65
-            ],
-            "units": [
-              ""
-            ]
-          }
+          45,
+          50,
+          55,
+          60,
+          65
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                9,
-                8,
-                7,
-                6,
-                5
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          9,
+          8,
+          7,
+          6,
+          5
+        ],
         "targeting": "Unit",
         "affects": "Enemies / Self",
         "spellshieldable": "True",
@@ -300,7 +281,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "600"
+        "targetRange": "600",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -309,7 +291,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Viktor/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Viktor deploys a gravity field at the target location for 4.5 seconds. After a 0.75-second delay, it activates to slow enemies within for 1 second, refreshing every 0.25 seconds while they remain inside.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Viktor deploys a gravity field at the target location for 4.5 seconds. After a 0.75-second delay, it activates to slow enemies within for 1 second, refreshing every 0.25 seconds while they remain inside.",
             "leveling": [
               {
                 "attribute": "Slow",
@@ -335,37 +317,20 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Augment:</p><p> Magnetize — Viktor's other abilities, excluding Arcane Storm's persistent damage, slow enemies hit by 20% for 1 second.</p></div>",
+            "description": "<span class=\"ability-header\">Augment:</span> Magnetize — Viktor's other abilities, excluding Arcane Storm's persistent damage, slow enemies hit by 20% for 1 second.",
             "leveling": []
           }
         ],
         "cost": [
-          {
-            "values": [
-              65
-            ],
-            "units": [
-              ""
-            ]
-          }
+          65
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                17,
-                16,
-                15,
-                14,
-                13
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          17,
+          16,
+          15,
+          14,
+          13
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -388,7 +353,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "340",
-        "targetRange": "800"
+        "targetRange": "800",
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -397,7 +363,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Viktor/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Viktor fires an energy beam along the target path that deals magic damage to enemies hit and briefly grants sight of the area.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Viktor fires an energy beam along the target path that deals magic damage to enemies hit and briefly grants sight of the area.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -427,7 +393,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Augment:</p><p> Aftershock — The path explodes along the beam's wake after 1 second, dealing magic damage to enemies hit.</p></div>",
+            "description": "<span class=\"ability-header\">Augment:</span> Aftershock — The path explodes along the beam's wake after 1 second, dealing magic damage to enemies hit.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -483,36 +449,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              60,
-              70,
-              80,
-              90,
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          60,
+          70,
+          80,
+          90,
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                12,
-                11,
-                10,
-                9,
-                8
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          12,
+          11,
+          10,
+          9,
+          8
+        ],
         "targeting": "Vector",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -535,7 +484,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "500",
-        "targetRange": "550"
+        "targetRange": "550",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -544,7 +494,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Viktor/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Viktor conjures an arcane singularity at the target location, dealing magic damage to enemies within the area and disrupting their channeled abilities.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Viktor conjures an arcane singularity at the target location, dealing magic damage to enemies within the area and disrupting their channeled abilities.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -627,39 +577,22 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Viktor directs the singularity to the target location, or to follow the targeted enemy champion or himself.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Viktor directs the singularity to the target location, or to follow the targeted enemy champion or himself.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Augment:</p><p> Perfect Storm — The singularity moves 25% faster. Additionally, whenever an enemy champion is taken down after being damaged by Arcane Storm, the singularity increases in size by 40% and extends its duration by 3 seconds. The singularity radius can be increased up to 6 times and its duration can be extended only up to the original duration.</p></div>",
+            "description": "<span class=\"ability-header\">Augment:</span> Perfect Storm — The singularity moves 25% faster. Additionally, whenever an enemy champion is taken down after being damaged by Arcane Storm, the singularity increases in size by 40% and extends its duration by 3 seconds. The singularity radius can be increased up to 6 times and its duration can be extended only up to the original duration.",
             "leveling": []
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                120,
-                100,
-                80
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          120,
+          100,
+          80
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -682,10 +615,10 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "325",
-        "targetRange": "700"
+        "targetRange": "700",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "The fully biomechanical evolution of his former self, Viktor has embraced his Glorious Evolution and become something of a messiah to his followers. He sacrificed his own humanity under the logic that eliminating emotion would thereby eliminate suffering—and now seeks to bring the revelation of the hexcore to the rest of the world, even if they're incapable of understanding the benefit. After all, to this master of the arcane, violence is merely a variable necessary to balance the ultimate equation.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/viktor/skins/base/images/viktor_splash_tile_0.viktorvgu.jpg"
+  "lore": "The fully biomechanical evolution of his former self, Viktor has embraced his Glorious Evolution and become something of a messiah to his followers. He sacrificed his own humanity under the logic that eliminating emotion would thereby eliminate suffering—and now seeks to bring the revelation of the hexcore to the rest of the world, even if they're incapable of understanding the benefit. After all, to this master of the arcane, violence is merely a variable necessary to balance the ultimate equation."
 }

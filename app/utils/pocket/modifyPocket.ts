@@ -41,8 +41,7 @@ export function duplicatePocket(original: Pocket): Pocket {
 // edit
 
 export function editPocket(pocket: Pocket) {
-  const ts = useTempStore()
-  ts.selectedPocket = pocket
+  //ts.selectedPocket = pocket
 }
 
 // get

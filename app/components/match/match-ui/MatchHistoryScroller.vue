@@ -24,7 +24,7 @@ const virtualMatches = computedAsync(async () => {
 </script>
 
 <template>
-  <div class="w-full h-full overflow-y-auto no-scrollbar">
+  <div class="w-full h-full overflow-y-auto scrollbar-hidden">
     <!-- Show skeletons while loading -->
     <div v-if="loading" class="flex flex-col gap-6 pt-27">
       <LazyMatchCardSkeleton v-for="i in 20" :key="i" />

@@ -98,7 +98,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Naafiri/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Periodically, Naafiri summons a Packmate that fights alongside her. She may have up to 2 / 3 / 4 / 5 (based on level) Packmates at a time. Naafiri summons the maximum number of Packmates when the game starts and upon respawning.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Periodically, Naafiri summons a Packmate that fights alongside her. She may have up to 2 / 3 / 4 / 5 (based on level) Packmates at a time. Naafiri summons the maximum number of Packmates when the game starts and upon respawning.",
             "leveling": []
           },
           {
@@ -111,21 +111,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                30,
-                20,
-                10
-              ],
-              "units": [
-                " (based on level)"
-              ]
-            }
-          ],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self, Enemies",
         "spellshieldable": null,
@@ -148,7 +134,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -157,7 +144,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Naafiri/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Naafiri hurls a dagger in the target direction that deals physical damage to enemies hit and inflicts them with a bleed that deals bonus physical damage every 0.5 seconds for 5 seconds. The bleed executes minions and non-epic monsters if they would be damaged below 30 - 70 (based on level) health. Darkin Daggers can be recast after 0.5 seconds and within 4 seconds at no additional cost.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Naafiri hurls a dagger in the target direction that deals physical damage to enemies hit and inflicts them with a bleed that deals bonus physical damage every 0.5 seconds for 5 seconds. The bleed executes minions and non-epic monsters if they would be damaged below 30 - 70 (based on level) health. Darkin Daggers can be recast after 0.5 seconds and within 4 seconds at no additional cost.",
             "leveling": [
               {
                 "attribute": "Initial Physical Damage",
@@ -392,41 +379,24 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Naafiri mimics the first cast's effects.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Naafiri mimics the first cast's effects.",
             "leveling": []
           }
         ],
         "cost": [
-          {
-            "values": [
-              55,
-              60,
-              65,
-              70,
-              75
-            ],
-            "units": [
-              ""
-            ]
-          }
+          55,
+          60,
+          65,
+          70,
+          75
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                9,
-                8.5,
-                8,
-                7.5,
-                7
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          9,
+          8.5,
+          8,
+          7.5,
+          7
+        ],
         "targeting": "Direction",
         "affects": "Self, Enemies",
         "spellshieldable": "true",
@@ -449,7 +419,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "900"
+        "targetRange": "900",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -458,7 +429,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Naafiri/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Naafiri goes on the hunt for the next 5 seconds, becoming untargetable for the first 1 second and vanishing all of her active Packmates in the first 0.9 seconds. Her active Packmates will reappear near her after their vanish.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Naafiri goes on the hunt for the next 5 seconds, becoming untargetable for the first 1 second and vanishing all of her active Packmates in the first 0.9 seconds. Her active Packmates will reappear near her after their vanish.",
             "leveling": []
           },
           {
@@ -497,32 +468,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              60
-            ],
-            "units": [
-              ""
-            ]
-          }
+          60
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                26,
-                24,
-                22,
-                20,
-                18
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          26,
+          24,
+          22,
+          20,
+          18
+        ],
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
@@ -545,7 +499,8 @@
         "angle": null,
         "castTime": "0.75",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -554,7 +509,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Naafiri/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Naafiri dashes in the target direction and deals physical damage to enemies she passes through. Upon arrival, she explodes in a flurry of blades to deal physical damage to nearby enemies.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Naafiri dashes in the target direction and deals physical damage to enemies she passes through. Upon arrival, she explodes in a flurry of blades to deal physical damage to nearby enemies.",
             "leveling": [
               {
                 "attribute": "Dash Physical Damage",
@@ -639,32 +594,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              35
-            ],
-            "units": [
-              ""
-            ]
-          }
+          35
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                11,
-                10,
-                9,
-                8,
-                7
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          11,
+          10,
+          9,
+          8,
+          7
+        ],
         "targeting": "Direction",
         "affects": "Self, Enemies",
         "spellshieldable": "true",
@@ -687,7 +625,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "230",
-        "targetRange": "250 : 450 / 650"
+        "targetRange": "250 : 450 / 650",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -696,7 +635,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Naafiri/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Naafiri and her Packmates channel for 0.75 seconds to single out the target enemy champion, revealing them in the duration. Upon completion of the channel, they dash to the target; upon arrival Naafiri deals physical damage and slows the target by 99% for 0.25 seconds, whereas each Packmate deals 10% of that damage. Packmates become untargetable during their channel and dash.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Naafiri and her Packmates channel for 0.75 seconds to single out the target enemy champion, revealing them in the duration. Upon completion of the channel, they dash to the target; upon arrival Naafiri deals physical damage and slows the target by 99% for 0.25 seconds, whereas each Packmate deals 10% of that damage. Packmates become untargetable during their channel and dash.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -751,7 +690,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Naafiri immediately grants herself a shield for 3 seconds before mimicking the first cast's effects.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Naafiri immediately grants herself a shield for 3 seconds before mimicking the first cast's effects.",
             "leveling": [
               {
                 "attribute": "Shield",
@@ -780,30 +719,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                110,
-                95,
-                80
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          110,
+          95,
+          80
+        ],
         "targeting": "Unit",
         "affects": "Self, Enemies",
         "spellshieldable": "special",
@@ -826,10 +748,10 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "2100",
-        "targetRange": "900"
+        "targetRange": "900",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Across the sands of Shurima, a chorus of howls rings out. It is the call of the dune hounds, voracious predators who form packs and compete for the right to hunt in these barren lands. Among them, one pack stands above all, for they are driven not only by canine instincts, but by the ancient power of the Darkin.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/naafiri/skins/base/images/naafiri_splash_tile_0.jpg"
+  "lore": "Across the sands of Shurima, a chorus of howls rings out. It is the call of the dune hounds, voracious predators who form packs and compete for the right to hunt in these barren lands. Among them, one pack stands above all, for they are driven not only by canine instincts, but by the ancient power of the Darkin."
 }

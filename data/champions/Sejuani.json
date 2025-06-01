@@ -96,23 +96,20 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sejuani/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate - Icebreaker:</p><p> Enemies stunned by Sejuani are marked Frozen for the disable's duration. Sejuani's next basic attack or ability against a Frozen enemy will consume the mark to deal bonus magic damage equal to 10% of their maximum health, capped at 250 against epic monsters.</p></div>",
+            "description": "<span class=\"ability-header\">Innate - Icebreaker:</span> Enemies stunned by Sejuani are marked Frozen for the disable's duration. Sejuani's next basic attack or ability against a Frozen enemy will consume the mark to deal bonus magic damage equal to 10% of their maximum health, capped at 250 against epic monsters.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate - Frost Armor:</p><p> Sejuani gains Frost Armor, which lingers for 3 seconds after taking damage from enemy champions, turrets, or large monsters. She restores it after 12 - 6 (based on level) seconds without taking damage from them.</p></div>",
+            "description": "<span class=\"ability-header\">Innate - Frost Armor:</span> Sejuani gains Frost Armor, which lingers for 3 seconds after taking damage from enemy champions, turrets, or large monsters. She restores it after 12 - 6 (based on level) seconds without taking damage from them.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Frost Armor:</p><p> Sejuani gains slow immunity, cripple immunity, 10 (+ 75% bonus armor) bonus armor, and 10 (+ 75% bonus magic resistance) bonus magic resistance.</p></div>",
+            "description": "<span class=\"ability-header\">Frost Armor:</span> Sejuani gains slow immunity, cripple immunity, 10 (+ 75% bonus armor) bonus armor, and 10 (+ 75% bonus magic resistance) bonus magic resistance.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self, Enemies",
         "spellshieldable": "unknown",
@@ -135,7 +132,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -144,7 +142,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sejuani/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Bristle dashes to the target location until he collides with an enemy champion, dealing magic damage to enemies he passes through and knocking them up for 0.5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Bristle dashes to the target location until he collides with an enemy champion, dealing magic damage to enemies he passes through and knocking them up for 0.5 seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -179,36 +177,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              70,
-              75,
-              80,
-              85,
-              90
-            ],
-            "units": [
-              ""
-            ]
-          }
+          70,
+          75,
+          80,
+          85,
+          90
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                19,
-                17.5,
-                16,
-                14.5,
-                13
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          19,
+          17.5,
+          16,
+          14.5,
+          13
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -231,7 +212,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": "650"
+        "targetRange": "650",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -240,7 +222,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sejuani/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> After 0.25 seconds into the cast time, Sejuani swings her flail in a cone in the target direction that deals physical damage to enemies hit and knocks back minions and monsters hit.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> After 0.25 seconds into the cast time, Sejuani swings her flail in a cone in the target direction that deals physical damage to enemies hit and knocks back minions and monsters hit.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -354,32 +336,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              65
-            ],
-            "units": [
-              ""
-            ]
-          }
+          65
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                9,
-                8,
-                7,
-                6,
-                5
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          9,
+          8,
+          7,
+          6,
+          5
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "Special",
@@ -402,7 +367,8 @@
         "angle": null,
         "castTime": "1",
         "effectRadius": null,
-        "targetRange": "600"
+        "targetRange": "600",
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -411,11 +377,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sejuani/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Winter's Wrath and both Sejuani's and nearby allied melee champions' attacks on-hit apply stacks of Frost to enemy champions, medium or large monsters, and large minions for 5 seconds, refreshing on subsequent applications and stacking up to 4 times, though not applying if the target is Frozen. Enemies hit by Permafrost or Glacial Prison's bola have all of their Frost stacks consumed. Enemy champions cannot be affected by Frost for 8 seconds after having it consumed. Sejuani can cast Permafrost against an enemy with 4 stacks.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Winter's Wrath and both Sejuani's and nearby allied melee champions' attacks on-hit apply stacks of Frost to enemy champions, medium or large monsters, and large minions for 5 seconds, refreshing on subsequent applications and stacking up to 4 times, though not applying if the target is Frozen. Enemies hit by Permafrost or Glacial Prison's bola have all of their Frost stacks consumed. Enemy champions cannot be affected by Frost for 8 seconds after having it consumed. Sejuani can cast Permafrost against an enemy with 4 stacks.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Sejuani hurls a trap at the visible enemy with 4 stacks of Frost closest to the cursor, which deals magic damage, displaces them slightly, and stuns them for 1 second.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Sejuani hurls a trap at the visible enemy with 4 stacks of Frost closest to the cursor, which deals magic damage, displaces them slightly, and stuns them for 1 second.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -450,28 +416,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              20
-            ],
-            "units": [
-              ""
-            ]
-          }
+          20
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                1.5
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          1.5
+        ],
         "targeting": "Unit",
         "affects": "Enemies, Allies, Self",
         "spellshieldable": "True",
@@ -494,7 +443,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "1100",
-        "targetRange": "600"
+        "targetRange": "600",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -503,7 +453,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sejuani/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Sejuani throws an ice bola in the target direction that stops upon hitting an enemy champion, dealing magic damage and stunning them for 1 second.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Sejuani throws an ice bola in the target direction that stops upon hitting an enemy champion, dealing magic damage and stunning them for 1 second.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -592,30 +542,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                130,
-                110,
-                90
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          130,
+          110,
+          90
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "Special",
@@ -638,10 +571,10 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "1300"
+        "targetRange": "1300",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Sejuani is the brutal, unforgiving Iceborn warmother of the Winter's Claw, one of the most feared tribes of the Freljord. Her people's survival is a constant, desperate battle against the elements, forcing them to raid Noxians, Demacians, and Avarosans alike to survive the harsh winters. Sejuani herself spearheads the most dangerous of these attacks from the saddle of her drüvask boar Bristle, using her True Ice flail to freeze and shatter her enemies.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/sejuani/skins/base/images/sejuani_splash_tile_0.jpg"
+  "lore": "Sejuani is the brutal, unforgiving Iceborn warmother of the Winter's Claw, one of the most feared tribes of the Freljord. Her people's survival is a constant, desperate battle against the elements, forcing them to raid Noxians, Demacians, and Avarosans alike to survive the harsh winters. Sejuani herself spearheads the most dangerous of these attacks from the saddle of her drüvask boar Bristle, using her True Ice flail to freeze and shatter her enemies."
 }

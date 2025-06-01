@@ -100,7 +100,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/JarvanIV/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Jarvan IV's basic attacks are empowered to deal bonus physical damage equal to 8% of the target's current health, with a minimum threshold of 20 and capped at 400 against non- champion targets.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Jarvan IV's basic attacks are empowered to deal bonus physical damage equal to 8% of the target's current health, with a minimum threshold of 20 and capped at 400 against non- champion targets.",
             "leveling": []
           },
           {
@@ -109,10 +109,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Enemies",
         "spellshieldable": "False",
@@ -135,7 +132,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -144,7 +142,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/JarvanIV/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Jarvan IV extends his lance in the target direction, dealing physical damage to enemies hit and inflicting them with armor reduction for 3 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Jarvan IV extends his lance in the target direction, dealing physical damage to enemies hit and inflicting them with armor reduction for 3 seconds.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -200,36 +198,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              45,
-              50,
-              55,
-              60,
-              65
-            ],
-            "units": [
-              ""
-            ]
-          }
+          45,
+          50,
+          55,
+          60,
+          65
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                10,
-                9,
-                8,
-                7,
-                6
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          10,
+          9,
+          8,
+          7,
+          6
+        ],
         "targeting": "Direction",
         "affects": "Self, Enemies",
         "spellshieldable": "True",
@@ -240,7 +221,7 @@
         "onHitEffects": null,
         "occurrence": null,
         "notes": "The armor reduction is applied after the damage. The damage dealt does not benefit from it in this case.\nThis ability will cast from wherever the caster is at the end of the cast time.\nDragon Strike will still pull Jarvan IV to  Demacian Standard even if he is  immobilized or  grounded.\n Flash will interrupt the  dash to a  Demacian Standard but Jarvan IV will still  knock up and damage enemies he comes in contact with at the new location.\nCasting Flash right before the dash begins will cause Jarvan IV to be pulled to the flag from the new position.\nEnemies already hit by Dragon Strike cannot be affected more than once.\nThe  knockup also slightly moves the target, landing 50-100 units in a random direction.",
-        "blurb": "Active:  Jarvan IV extends his lance in the target direction, dealing physical damage enemies hit and  reducing their armor for a short time.",
+        "blurb": "Active:  Jarvan IV extends his lance in the target direction, dealing physical damage to enemies hit and  reducing their armor for a short time.",
         "missileSpeed": null,
         "rechargeRate": null,
         "collisionRadius": "180",
@@ -252,7 +233,8 @@
         "angle": null,
         "castTime": "0.4",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -261,7 +243,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/JarvanIV/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Jarvan IV slows all nearby enemies for 2 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Jarvan IV slows all nearby enemies for 2 seconds.",
             "leveling": [
               {
                 "attribute": "Slow",
@@ -314,28 +296,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              30
-            ],
-            "units": [
-              ""
-            ]
-          }
+          30
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                9
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          9
+        ],
         "targeting": "Auto",
         "affects": "Self, Enemies",
         "spellshieldable": "True",
@@ -358,7 +323,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "600",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -367,7 +333,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/JarvanIV/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Jarvan IV gains bonus attack speed.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Jarvan IV gains bonus attack speed.",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -389,7 +355,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Jarvan IV throws a Demacian flag to the target location, dealing magic damage to enemies within the area.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Jarvan IV throws a Demacian flag to the target location, dealing magic damage to enemies within the area.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -428,32 +394,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              55
-            ],
-            "units": [
-              ""
-            ]
-          }
+          55
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                12,
-                11.5,
-                11,
-                10.5,
-                10
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          12,
+          11.5,
+          11,
+          10.5,
+          10
+        ],
         "targeting": "Location",
         "affects": "Self, Enemies",
         "spellshieldable": "True",
@@ -476,7 +425,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "200 / 1000 / 700",
-        "targetRange": "860"
+        "targetRange": "860",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -485,7 +435,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/JarvanIV/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Jarvan IV leaps with displacement immunity to the target enemy champion's location over 0.35 seconds, dealing physical damage to all nearby enemies upon arrival.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Jarvan IV leaps with displacement immunity to the target enemy champion's location over 0.35 seconds, dealing physical damage to all nearby enemies upon arrival.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -517,35 +467,18 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Jarvan IV destroys the terrain created by Cataclysm.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Jarvan IV destroys the terrain created by Cataclysm.",
             "leveling": []
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                120,
-                105,
-                90
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          120,
+          105,
+          90
+        ],
         "targeting": "Unit",
         "affects": "Self, Enemies",
         "spellshieldable": "True",
@@ -568,10 +501,10 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "350 / 1700",
-        "targetRange": "650"
+        "targetRange": "650",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Prince Jarvan, scion of the Lightshield dynasty, is heir apparent to the throne of Demacia. Raised to be a paragon of his nation's greatest virtues, he is forced to balance the heavy expectations placed upon him with his own desire to fight on the front lines. Jarvan inspires his troops with his fearsome courage and selfless determination, raising his family's colors high and revealing his true strength as a future leader of his people.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/jarvaniv/skins/base/images/jarvaniv_splash_tile_0.jpg"
+  "lore": "Prince Jarvan, scion of the Lightshield dynasty, is heir apparent to the throne of Demacia. Raised to be a paragon of his nation's greatest virtues, he is forced to balance the heavy expectations placed upon him with his own desire to fight on the front lines. Jarvan inspires his troops with his fearsome courage and selfless determination, raising his family's colors high and revealing his true strength as a future leader of his people."
 }

@@ -97,7 +97,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TahmKench/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Tahm Kench's basic attacks on-hit and Tongue Lash are empowered to deal 6 - 48 (based on level) (+ 1.5% AP per 100 bonus health) (+ 4% of his bonus health) bonus magic damage and apply a stack of An Acquired Taste against enemy champions for 5 seconds, refreshing on subsequent hits and stacking up to 3 times. Stacks expire by one every 0.67 seconds when the duration ends.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Tahm Kench's basic attacks on-hit and Tongue Lash are empowered to deal 6 - 48 (based on level) (+ 1.5% AP per 100 bonus health) (+ 4% of his bonus health) bonus magic damage and apply a stack of An Acquired Taste against enemy champions for 5 seconds, refreshing on subsequent hits and stacking up to 3 times. Stacks expire by one every 0.67 seconds when the duration ends.",
             "leveling": []
           },
           {
@@ -106,10 +106,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -132,7 +129,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -141,7 +139,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TahmKench/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Tahm Kench lashes his tongue in the target direction that deals magic damage to the first enemy hit and slows them by 50% for 2 seconds. If this hits an enemy champion, Tahm Kench also heals himself.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Tahm Kench lashes his tongue in the target direction that deals magic damage to the first enemy hit and slows them by 50% for 2 seconds. If this hits an enemy champion, Tahm Kench also heals himself.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -241,7 +239,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">An Acquired Taste Bonus:</p><p> The target is stunned for 1.5 seconds. Devour can be cast during Tongue Lash at no cost to pull the target to Tahm Kench before swallowing them.</p></div>",
+            "description": "<span class=\"ability-header\">An Acquired Taste Bonus:</span> The target is stunned for 1.5 seconds. Devour can be cast during Tongue Lash at no cost to pull the target to Tahm Kench before swallowing them.",
             "leveling": []
           },
           {
@@ -250,36 +248,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50,
-              46,
-              42,
-              38,
-              34
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50,
+          46,
+          42,
+          38,
+          34
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                7,
-                6.5,
-                6,
-                5.5,
-                5
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          7,
+          6.5,
+          6,
+          5.5,
+          5
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -302,7 +283,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -311,7 +293,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TahmKench/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Tahm Kench channels for 1.35 seconds as he dives into the waters, then blinks to the target location after a 0.15-second delay and remains unable to act for 0.65 seconds after the channel completes. Abyssal Dive grants sight of the area during the channel.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Tahm Kench channels for 1.35 seconds as he dives into the waters, then blinks to the target location after a 0.15-second delay and remains unable to act for 0.65 seconds after the channel completes. Abyssal Dive grants sight of the area during the channel.",
             "leveling": []
           },
           {
@@ -367,36 +349,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              60,
-              75,
-              90,
-              105,
-              120
-            ],
-            "units": [
-              ""
-            ]
-          }
+          60,
+          75,
+          90,
+          105,
+          120
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                21,
-                20,
-                19,
-                18,
-                17
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          21,
+          20,
+          19,
+          18,
+          17
+        ],
         "targeting": "Location",
         "affects": "Self, Allies",
         "spellshieldable": "true",
@@ -419,7 +384,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": "275 /  200",
-        "targetRange": "1000 / 1050 / 1100 / 1150 / 1200"
+        "targetRange": "1000 / 1050 / 1100 / 1150 / 1200",
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -428,7 +394,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TahmKench/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Tahm Kench stores a portion of the post-mitigation damage he takes as grey health on his health bar, increased while there are at least 2 nearby visible enemy champions either dead or alive. He can store up to 300% of his maximum health.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Tahm Kench stores a portion of the post-mitigation damage he takes as grey health on his health bar, increased while there are at least 2 nearby visible enemy champions either dead or alive. He can store up to 300% of his maximum health.",
             "leveling": [
               {
                 "attribute": "Damage Stored into Grey Health",
@@ -471,24 +437,16 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Tahm Kench converts his current grey health into a shield that lasts for 2.5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Tahm Kench converts his current grey health into a shield that lasts for 2.5 seconds.",
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                3
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          3
+        ],
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
@@ -511,7 +469,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -520,7 +479,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TahmKench/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Tahm Kench abducts the target champion, pulling them to him over the cast time and then swallowing them to carry them in his belly for up to 3 seconds. While inside, the target is attached to Tahm Kench and is rendered untargetable and displacement immune. Devour can be cast on enemies only with 3 stacks of An Acquired Taste.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Tahm Kench abducts the target champion, pulling them to him over the cast time and then swallowing them to carry them in his belly for up to 3 seconds. While inside, the target is attached to Tahm Kench and is rendered untargetable and displacement immune. Devour can be cast on enemies only with 3 stacks of An Acquired Taste.",
             "leveling": []
           },
           {
@@ -556,7 +515,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">An Acquired Taste Bonus:</p><p> The target is suppressed during Devour's cast time and while attached. Tahm Kench will also be grounded and slowed by 40% under those same conditions.</p></div>",
+            "description": "<span class=\"ability-header\">An Acquired Taste Bonus:</span> The target is suppressed during Devour's cast time and while attached. Tahm Kench will also be grounded and slowed by 40% under those same conditions.",
             "leveling": []
           },
           {
@@ -565,30 +524,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                120,
-                100,
-                80
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          0
+        ],
         "targeting": "Unit",
         "affects": "Self, Enemies / Allies",
         "spellshieldable": "True",
@@ -598,7 +538,7 @@
         "projectile": null,
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Devour's initial pull is a non- airborne displacement that displaces the target toward Tahm Kench over the ability's cast time.\nThis is also the same displacement that is used for when Devour is cast with  Tongue Lash, though with a greater pull distance as well as faster pull speed to account for Devour's short cast time.\nThe target will  blink to Tahm Kench's location at the end of this displacement, including if it is interrupted.\nAgainst enemies, Devour's pull from abducting the target depends on the application of the  suppression; if the suppression is not applied, neither is the pull. Similarly, if the suppression is removed, the displacement from the pull is stopped.\nThe attachment also depends upon the occurrence of the pull; if the target is not pulled, they are not attached to Tahm Kench and the swallow fails, cancelling the ability entirely.\nIf the target resists the suppression by being  immune to crowd control,  displacement immune, or having a  spell shield, Tahm Kench will not pull the target towards him.\nIf the target removes the suppression by any means, including with an applicable  cleanse effect or  dispel, one of two of the following interactions will occur based on the timing of the removal:\nIf the suppression was removed during Devour's cast time, the target will stop the displacement from the pull instantly and prevent themselves from being attached to Tahm Kench after the cast time.\nIf the suppression was removed while the target is attached to Tahm Kench (in other words, inside of his belly), the target will detach themselves from him instantly without Tahm Kench performing  Regurgitate.\nThe  untargetability and  displacement immunity is granted to the target during Devour's cast time as well. Enemies are granted these effects while they are suppressed; they are removed when the suppression is.\nDevour's suppression against enemies is removed if Tahm Kench dies, enters  resurrection, or transitions in or out of the  Realm of Death.\nEnemies will be dealt  Regurgitate's damage regardless of Tahm Kench casting the ability if Devour's suppression ends by any means other than transitioning out of  Realm of Death(bug) (including during Devour's cast time).\nIf the target transitions into the  Realm of Death or enters  resurrection, Tahm Kench will  Regurgitate them automatically.\nThis only occurs for the former if Tahm Kench is in a different dimension from the target.\nDevour cannot be used on allies that are  channeling or using an ability that preloads UnstoppableForceMarker.\nThe  self-slow is affected by  slow resist.\nTahm Kench cannot use gates during Devour.\nAllies can see if this spell is ready next to Tahm Kench's health bar.\nThe swallowed target is not considered to be  vanished. They are instead hidden below the visible map plane, to maintain ongoing effects such as  Senna's  Curse of the Black Mist.\nDuring Devour's attachment and  Regurgitate's displacement, the swallowed target's camera is locked and centered on their champion.\nThis does not affect Tahm Kench.\nThe following table refers for interactions while the target is unable to act:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nIf an ally, forces Tahm Kench to use  Regurgitate unless movement commands are otherwise restricted. If an enemy, movement commands are disabled.\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll summoner spells are disabled\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath\n\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection",
+        "notes": "Devour's initial pull is a non- airborne displacement that displaces the target toward Tahm Kench over the ability's cast time.\nThis is also the same displacement that is used for when Devour is cast with  Tongue Lash, though with a greater pull distance as well as faster pull speed to account for Devour's short cast time.\nThe target will  blink to Tahm Kench's location at the end of this displacement, including if it is interrupted.\nAgainst enemies, Devour's pull from abducting the target depends on the application of the  suppression; if the suppression is not applied, neither is the pull. Similarly, if the suppression is removed, the displacement from the pull is stopped.\nThe attachment also depends upon the occurrence of the pull; if the target is not pulled, they are not attached to Tahm Kench and the swallow fails, cancelling the ability entirely.\nIf the target resists the suppression by being  immune to crowd control,  displacement immune, or having a  spell shield, Tahm Kench will not pull the target towards him.\nIf the target removes the suppression by any means, including with an applicable  cleanse effect or  dispel, one of two of the following interactions will occur based on the timing of the removal:\nIf the suppression was removed during Devour's cast time, the target will stop the displacement from the pull instantly and prevent themselves from being attached to Tahm Kench after the cast time.\nIf the suppression was removed while the target is attached to Tahm Kench (in other words, inside of his belly), the target will detach themselves from him instantly without Tahm Kench performing  Regurgitate.\nThe  untargetability and  displacement immunity is granted to the target during Devour's cast time as well. Enemies are granted these effects while they are suppressed; they are removed when the suppression is.\nDevour's suppression against enemies is removed if Tahm Kench dies, enters  resurrection, or transitions in or out of the  Realm of Death.\nEnemies will be dealt  Regurgitate's damage regardless of Tahm Kench casting the ability if Devour's suppression ends by any means other than transitioning out of  Realm of Death(bug) or  dismounting(bug) (including during Devour's cast time).\nIf the target transitions into the  Realm of Death or enters  resurrection, Tahm Kench will  Regurgitate them automatically.\nThis only occurs for the former if Tahm Kench is in a different dimension from the target.\nDevour cannot be used on allies that are  channeling or using an ability that preloads UnstoppableForceMarker.\nThe  self-slow is affected by  slow resist.\nTahm Kench cannot use gates during Devour.\nAllies can see if this spell is ready next to Tahm Kench's health bar.\nThe swallowed target is not considered to be  vanished. They are instead hidden below the visible map plane, to maintain ongoing effects such as  Senna's  Curse of the Black Mist.\nDuring Devour's attachment and  Regurgitate's displacement, the swallowed target's camera is locked and centered on their champion.\nThis does not affect Tahm Kench.\nThe following table refers for interactions while the target is unable to act:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nIf an ally, forces Tahm Kench to use  Regurgitate unless movement commands are otherwise restricted. If an enemy, movement commands are disabled.\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll summoner spells are disabled\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath\n\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection",
         "blurb": null,
         "missileSpeed": null,
         "rechargeRate": null,
@@ -611,14 +551,15 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "250"
+        "targetRange": "250",
+        "maxCharges": -1
       },
       {
         "name": "Regurgitate",
         "icon": "https://cdn.communitydragon.org/latest/champion/TahmKench/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Tahm Kench detaches the swallowed champion from himself and spits them out in the target direction. If they are an enemy, he deals magic damage to them at the end of the displacement.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Tahm Kench detaches the swallowed champion from himself and spits them out in the target direction. If they are an enemy, he deals magic damage to them at the end of the displacement.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -650,11 +591,12 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cost": [
+          100
+        ],
+        "cooldown": [
+          0
+        ],
         "targeting": "Direction",
         "affects": "Enemies / Allies",
         "spellshieldable": "false",
@@ -677,10 +619,10 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Known by many names throughout history, the demon Tahm Kench travels the waterways of Runeterra, feeding his insatiable appetite with the misery of others. Though he may appear singularly charming and proud, he swaggers through the physical realm like a vagabond in search of unsuspecting prey. His lashing tongue can stun even a heavily armored warrior from a dozen paces, and to fall into his rumbling belly is to tumble into an abyss from which there is little hope of return.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/tahmkench/skins/base/images/tahmkench_splash_tile_0.jpg"
+  "lore": "Known by many names throughout history, the demon Tahm Kench travels the waterways of Runeterra, feeding his insatiable appetite with the misery of others. Though he may appear singularly charming and proud, he swaggers through the physical realm like a vagabond in search of unsuspecting prey. His lashing tongue can stun even a heavily armored warrior from a dozen paces, and to fall into his rumbling belly is to tumble into an abyss from which there is little hope of return."
 }

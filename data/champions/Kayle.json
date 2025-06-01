@@ -96,31 +96,28 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kayle/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Kayle ascends through four forms that each grant additional bonuses. She ascends upon spending a skill point at levels 1, 6, 11, and 16.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Kayle ascends through four forms that each grant additional bonuses. She ascends upon spending a skill point at levels 1, 6, 11, and 16.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Level 1 - Zealous:</p><p> Kayle's basic attacks on-attack generate a stack of Zeal for 5 seconds, refreshing on subsequent hits and stacking up to 5 times. For each stack, she gains 6% (+ 1% per 100 AP) bonus attack speed, up to a maximum of 30% (+ 5% per 100 AP). At max stacks, she becomes Exalted, gaining 10% bonus movement speed.</p></div>",
+            "description": "<span class=\"ability-header\">Level 1 - Zealous:</span> Kayle's basic attacks on-attack generate a stack of Zeal for 5 seconds, refreshing on subsequent hits and stacking up to 5 times. For each stack, she gains 6% (+ 1% per 100 AP) bonus attack speed, up to a maximum of 30% (+ 5% per 100 AP). At max stacks, she becomes Exalted, gaining 10% bonus movement speed.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Level 6 - Arisen:</p><p> Kayle becomes ranged and gains 350 bonus attack range for a total of 525.</p></div>",
+            "description": "<span class=\"ability-header\">Level 6 - Arisen:</span> Kayle becomes ranged and gains 350 bonus attack range for a total of 525.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Level 11 - Aflame:</p><p> Kayle gains 10% bonus size. While Kayle is Exalted, her basic attacks on-attack also launch a wave of fire forward that deals 20 - 41 (based on level) (+ 10% bonus AD) (+ 25% AP) magic damage to all enemies it passes through. The wave is affected by critical strike modifiers.</p></div>",
+            "description": "<span class=\"ability-header\">Level 11 - Aflame:</span> Kayle gains 10% bonus size. While Kayle is Exalted, her basic attacks on-attack also launch a wave of fire forward that deals 20 - 41 (based on level) (+ 10% bonus AD) (+ 25% AP) magic damage to all enemies it passes through. The wave is affected by critical strike modifiers.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Level 16 - Transcendent:</p><p> Kayle gains an additional 100 bonus attack range for a total of 625, and permanently gains the full effects of Zealous.</p></div>",
+            "description": "<span class=\"ability-header\">Level 16 - Transcendent:</span> Kayle gains an additional 100 bonus attack range for a total of 625, and permanently gains the full effects of Zealous.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self, Enemies",
         "spellshieldable": null,
@@ -143,7 +140,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -152,7 +150,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kayle/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Kayle conjures a portal in front of her that faces the target direction, from which a celestial sword launches forward.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Kayle conjures a portal in front of her that faces the target direction, from which a celestial sword launches forward.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -212,36 +210,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              70,
-              75,
-              80,
-              85,
-              90
-            ],
-            "units": [
-              ""
-            ]
-          }
+          70,
+          75,
+          80,
+          85,
+          90
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                12,
-                11,
-                10,
-                9,
-                8
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          12,
+          11,
+          10,
+          9,
+          8
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "true",
@@ -264,7 +245,8 @@
         "angle": null,
         "castTime": "Attack Windup Time",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -273,7 +255,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kayle/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Kayle and the target allied champion are healed and gain bonus movement speed for 2 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Kayle and the target allied champion are healed and gain bonus movement speed for 2 seconds.",
             "leveling": [
               {
                 "attribute": "Heal",
@@ -333,32 +315,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              70,
-              75,
-              80,
-              85,
-              90
-            ],
-            "units": [
-              ""
-            ]
-          }
+          70,
+          75,
+          80,
+          85,
+          90
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                15
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          15
+        ],
         "targeting": "Unit / Auto",
         "affects": "Self, Allies",
         "spellshieldable": null,
@@ -381,7 +346,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "900"
+        "targetRange": "900",
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -390,7 +356,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kayle/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Kayle deals bonus magic damage on-hit.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Kayle deals bonus magic damage on-hit.",
             "leveling": [
               {
                 "attribute": "Passive Damage",
@@ -428,7 +394,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Kayle kindles her blade, empowering her next basic attack within 6 seconds to have an uncancellable windup and deal additional bonus magic damage on-hit that is capped at 400 against monsters. If Kayle is not yet Arisen, this attack becomes ranged with 525 range.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Kayle kindles her blade, empowering her next basic attack within 6 seconds to have an uncancellable windup and deal additional bonus magic damage on-hit that is capped at 400 against monsters. If Kayle is not yet Arisen, this attack becomes ranged with 525 range.",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage",
@@ -458,7 +424,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Aflame Bonus:</p><p> The attack explodes upon the target, dealing its damage to surrounding enemies and applying on-hit effects. This is affected by critical strike modifiers.</p></div>",
+            "description": "<span class=\"ability-header\">Aflame Bonus:</span> The attack explodes upon the target, dealing its damage to surrounding enemies and applying on-hit effects. This is affected by critical strike modifiers.",
             "leveling": []
           },
           {
@@ -466,24 +432,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                8,
-                7.5,
-                7,
-                6.5,
-                6
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          8,
+          7.5,
+          7,
+          6.5,
+          6
+        ],
         "targeting": "Auto",
         "affects": "Self, Enemies",
         "spellshieldable": "true",
@@ -506,7 +464,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "350",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -515,7 +474,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kayle/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Kayle grants herself or a target allied champion invulnerability for 2.5 seconds and conjures swords of fire.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Kayle grants herself or a target allied champion invulnerability for 2.5 seconds and conjures swords of fire.",
             "leveling": []
           },
           {
@@ -556,32 +515,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100,
-              50,
-              0
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100,
+          50,
+          0
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                160,
-                120,
-                80
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          160,
+          120,
+          80
+        ],
         "targeting": "Unit",
         "affects": "Allies, Self",
         "spellshieldable": "True",
@@ -604,10 +546,10 @@
         "angle": null,
         "castTime": "0.5",
         "effectRadius": "675 / 675 / 775",
-        "targetRange": "900"
+        "targetRange": "900",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Born to a Targonian Aspect at the height of the Rune Wars, Kayle honored her mother's legacy by fighting for justice on wings of divine flame. She and her twin sister Morgana were the protectors of Demacia for many years—until Kayle became disillusioned with the repeated failings of mortals, and abandoned this realm altogether. Still, legends are told of her punishing the unjust with her fiery swords, and many hope that she will one day return…",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kayle/skins/base/images/kayle_splash_tile_0.jpg"
+  "lore": "Born to a Targonian Aspect at the height of the Rune Wars, Kayle honored her mother's legacy by fighting for justice on wings of divine flame. She and her twin sister Morgana were the protectors of Demacia for many years—until Kayle became disillusioned with the repeated failings of mortals, and abandoned this realm altogether. Still, legends are told of her punishing the unjust with her fiery swords, and many hope that she will one day return…"
 }

@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nautilus/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Nautilus' basic attacks are empowered to deal 14 - 116 (based on level) bonus physical damage and root the target for 0.75 - 1.5 (based on level) seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Nautilus' basic attacks are empowered to deal 14 - 116 (based on level) bonus physical damage and root the target for 0.75 - 1.5 (based on level) seconds.",
             "leveling": []
           },
           {
@@ -108,10 +108,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Enemies",
         "spellshieldable": "Special",
@@ -134,7 +131,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -143,7 +141,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nautilus/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Nautilus hurls his anchor in the target direction that stops on the first enemy or terrain hit.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Nautilus hurls his anchor in the target direction that stops on the first enemy or terrain hit.",
             "leveling": []
           },
           {
@@ -186,32 +184,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              60
-            ],
-            "units": [
-              ""
-            ]
-          }
+          60
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                14,
-                13,
-                12,
-                11,
-                10
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          14,
+          13,
+          12,
+          11,
+          10
+        ],
         "targeting": "Direction",
         "affects": "Self, Enemies",
         "spellshieldable": "Special",
@@ -234,7 +215,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -243,7 +225,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nautilus/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Nautilus grants himself a shield for 6 seconds, and while it holds, his basic attacks are empowered to apply Pain of Wrath to the target and surrounding non-structure enemies.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Nautilus grants himself a shield for 6 seconds, and while it holds, his basic attacks are empowered to apply Pain of Wrath to the target and surrounding non-structure enemies.",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -277,7 +259,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Pain of Wrath:</p><p> The target takes magic damage over time, half dealt immediately and the other half dealt after 1.25 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Pain of Wrath:</span> The target takes magic damage over time, half dealt immediately and the other half dealt after 1.25 seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -312,28 +294,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              60
-            ],
-            "units": [
-              ""
-            ]
-          }
+          60
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                12
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          12
+        ],
         "targeting": "Auto",
         "affects": "Self, Enemies",
         "spellshieldable": "special",
@@ -356,7 +321,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "250",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -365,7 +331,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nautilus/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Nautilus sends three waves of explosions that radiate from him over 0.561 seconds. Each wave deals magic damage to enemies hit, reduced to 50% against those hit by subsequent waves beyond the first, and slows them by an amount that decays over 1.5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Nautilus sends three waves of explosions that radiate from him over 0.561 seconds. Each wave deals magic damage to enemies hit, reduced to 50% against those hit by subsequent waves beyond the first, and slows them by an amount that decays over 1.5 seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -543,36 +509,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50,
-              60,
-              70,
-              80,
-              90
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50,
+          60,
+          70,
+          80,
+          90
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                7,
-                6.5,
-                6,
-                5.5,
-                5
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          7,
+          6.5,
+          6,
+          5.5,
+          5
+        ],
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "true",
@@ -595,7 +544,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "0 - 350 / 215 - 465 / 350 - 590",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -604,7 +554,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nautilus/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Nautilus sends out a Depth Charge that chases the target enemy champion, accelerating over time and creating eruptions every 0.264 seconds in its wake that also briefly grant sight of the area. Enemies hit by the eruptions are dealt magic damage, knocked up for 1 second, and stunned for a duration.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Nautilus sends out a Depth Charge that chases the target enemy champion, accelerating over time and creating eruptions every 0.264 seconds in its wake that also briefly grant sight of the area. Enemies hit by the eruptions are dealt magic damage, knocked up for 1 second, and stunned for a duration.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -691,30 +641,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                120,
-                100,
-                80
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          120,
+          100,
+          80
+        ],
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "true",
@@ -737,10 +670,10 @@
         "angle": null,
         "castTime": "0.46",
         "effectRadius": "225 / 300 / 750",
-        "targetRange": "825"
+        "targetRange": "825",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "A lonely legend as old as the first piers sunk in Bilgewater, the armored goliath known as Nautilus roams the dark waters off the coast of the Blue Flame Isles. Driven by a forgotten betrayal, he strikes without warning, swinging his enormous anchor to save the wretched, and drag the greedy to their doom. It is said he comes for those who forget to pay the “Bilgewater tithe”, pulling them down beneath the waves with him—an iron-clad reminder that none can escape the depths.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/nautilus/skins/base/images/nautilus_splash_tile_0.jpg"
+  "lore": "A lonely legend as old as the first piers sunk in Bilgewater, the armored goliath known as Nautilus roams the dark waters off the coast of the Blue Flame Isles. Driven by a forgotten betrayal, he strikes without warning, swinging his enormous anchor to save the wretched, and drag the greedy to their doom. It is said he comes for those who forget to pay the “Bilgewater tithe”, pulling them down beneath the waves with him—an iron-clad reminder that none can escape the depths."
 }

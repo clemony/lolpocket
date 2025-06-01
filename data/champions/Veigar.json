@@ -99,19 +99,16 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Veigar/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Veigar generates a stack of Phenomenal Evil for each enemy champion hit by his abilities, and 5 stacks whenever he scores an enemy champion takedown.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Veigar generates a stack of Phenomenal Evil for each enemy champion hit by his abilities, and 5 stacks whenever he scores an enemy champion takedown.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Phenomenal Evil:</p><p> For each stack, Veigar gains 1 ability power.</p></div>",
+            "description": "<span class=\"ability-header\">Phenomenal Evil:</span> For each stack, Veigar gains 1 ability power.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -134,7 +131,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -143,7 +141,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Veigar/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Veigar blasts a dark bolt in the target direction that deals magic damage to the first two enemies hit.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Veigar blasts a dark bolt in the target direction that deals magic damage to the first two enemies hit.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -182,36 +180,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              30,
-              35,
-              40,
-              45,
-              50
-            ],
-            "units": [
-              ""
-            ]
-          }
+          30,
+          35,
+          40,
+          45,
+          50
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                6,
-                5.5,
-                5,
-                4.5,
-                4
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          6,
+          5.5,
+          5,
+          4.5,
+          4
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -234,7 +215,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "1050 /  990"
+        "targetRange": "1050 /  990",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -243,7 +225,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Veigar/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Veigar casts down a mass of dark matter that strikes the target location after a 1.221 seconds delay, dealing magic damage to enemies hit.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Veigar casts down a mass of dark matter that strikes the target location after a 1.221 seconds delay, dealing magic damage to enemies hit.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -282,32 +264,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              60,
-              65,
-              70,
-              75,
-              80
-            ],
-            "units": [
-              ""
-            ]
-          }
+          60,
+          65,
+          70,
+          75,
+          80
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                8
-              ],
-              "units": [
-                " x (0.9 ^ (Phenominal Evil Stacks / 50))"
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          0
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -330,7 +295,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "240",
-        "targetRange": "950"
+        "targetRange": "950",
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -339,7 +305,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Veigar/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Veigar forms a cage at the target location that erects after a 0.5 second delay, remaining there for 3 seconds. Enemies that collide with the edges of the cage are knocked down and stunned for a duration.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Veigar forms a cage at the target location that erects after a 0.5 second delay, remaining there for 3 seconds. Enemies that collide with the edges of the cage are knocked down and stunned for a duration.",
             "leveling": [
               {
                 "attribute": "Stun Duration",
@@ -366,36 +332,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              70,
-              75,
-              80,
-              85,
-              90
-            ],
-            "units": [
-              ""
-            ]
-          }
+          70,
+          75,
+          80,
+          85,
+          90
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                20,
-                18.5,
-                17,
-                15.5,
-                14
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          20,
+          18.5,
+          17,
+          15.5,
+          14
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -418,7 +367,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "411 / 290 / 390",
-        "targetRange": "725"
+        "targetRange": "725",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -427,7 +377,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Veigar/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Veigar sends a primordial burst at the target enemy champion that deals magic damage, increased by 0% - 100% (based on target's missing health).</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Veigar sends a primordial burst at the target enemy champion that deals magic damage, increased by 0% - 100% (based on target's missing health).",
             "leveling": [
               {
                 "attribute": "Minimum Magic Damage",
@@ -483,30 +433,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                100,
-                80,
-                60
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          100,
+          80,
+          60
+        ],
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -529,10 +462,10 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "650"
+        "targetRange": "650",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "An enthusiastic master of dark sorcery, Veigar has embraced powers that few mortals dare approach. As a free-spirited inhabitant of Bandle City, he longed to push beyond the limitations of yordle magic, and turned instead to arcane texts that had been hidden away for thousands of years. Now a stubborn creature with an endless fascination for the mysteries of the universe, Veigar is often underestimated by others—but even though he believes himself truly evil, he possesses an inner morality that leads some to question his deeper motivations.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/veigar/skins/base/images/veigar_splash_tile_0.jpg"
+  "lore": "An enthusiastic master of dark sorcery, Veigar has embraced powers that few mortals dare approach. As a free-spirited inhabitant of Bandle City, he longed to push beyond the limitations of yordle magic, and turned instead to arcane texts that had been hidden away for thousands of years. Now a stubborn creature with an endless fascination for the mysteries of the universe, Veigar is often underestimated by others—but even though he believes himself truly evil, he possesses an inner morality that leads some to question his deeper motivations."
 }

@@ -95,7 +95,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jinx/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Whenever Jinx scores a takedown against an enemy champion, epic monster, turret, or inhibitor within 3 seconds of damaging them, she gains 175% bonus movement speed decaying over 6 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Whenever Jinx scores a takedown against an enemy champion, epic monster, turret, or inhibitor within 3 seconds of damaging them, she gains 175% bonus movement speed decaying over 6 seconds.",
             "leveling": []
           },
           {
@@ -103,15 +103,12 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Get Excited!:</p><p> For each stack, Jinx gains 25% total attack speed, up to a maximum of 125%.</p></div>",
+            "description": "<span class=\"ability-header\">Get Excited!:</span> For each stack, Jinx gains 25% total attack speed, up to a maximum of 125%.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -134,7 +131,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -143,11 +141,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jinx/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Toggle:</p><p> Jinx switches between Pow-Pow, her minigun, and Fishbones, her rocket launcher.</p></div>",
+            "description": "<span class=\"ability-header\">Toggle:</span> Jinx switches between Pow-Pow, her minigun, and Fishbones, her rocket launcher.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Pow-Pow:</p><p> Basic attacks with Pow-Pow generate a stack of Rev'd up for 2.5 seconds, refreshing on subsequent attacks with Pow-Pow and stacking up to 3 times. Each stack of Rev'd up grants bonus attack speed, with all stacks beyond the first one being 50% effective. Stacks expire by one when the duration ends.</p></div>",
+            "description": "<span class=\"ability-header\">Pow-Pow:</span> Basic attacks with Pow-Pow generate a stack of Rev'd up for 2.5 seconds, refreshing on subsequent attacks with Pow-Pow and stacking up to 3 times. Each stack of Rev'd up grants bonus attack speed, with all stacks beyond the first one being 50% effective. Stacks expire by one when the duration ends.",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -203,7 +201,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Fishbones:</p><p> Basic attacks with Fishbones cost mana on-attack to deal 110% AD modified physical damage to the target and nearby enemies. The damage is affected by critical strike modifiers. While Fishbones is equipped, Jinx gains bonus range but loses 10% of her bonus attack speed.</p></div>",
+            "description": "<span class=\"ability-header\">Fishbones:</span> Basic attacks with Fishbones cost mana on-attack to deal 110% AD modified physical damage to the target and nearby enemies. The damage is affected by critical strike modifiers. While Fishbones is equipped, Jinx gains bonus range but loses 10% of her bonus attack speed.",
             "leveling": [
               {
                 "attribute": "Bonus Range",
@@ -230,28 +228,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              20
-            ],
-            "units": [
-              ""
-            ]
-          }
+          20
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                0.9
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": false
-        },
+        "cooldown": [
+          0.9
+        ],
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": "False",
@@ -274,7 +255,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "250",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -283,7 +265,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jinx/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Jinx fires a shock blast in the target direction that deals physical damage to the first enemy it hits and reveals and slows them for 2 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Jinx fires a shock blast in the target direction that deals physical damage to the first enemy it hits and reveals and slows them for 2 seconds.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -331,36 +313,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              40,
-              45,
-              50,
-              55,
-              60
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40,
+          45,
+          50,
+          55,
+          60
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                8,
-                7,
-                6,
-                5,
-                4
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          8,
+          7,
+          6,
+          5,
+          4
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -383,7 +348,8 @@
         "angle": null,
         "castTime": "0.6 : 0.4 (based on bonus attack speed)",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -392,7 +358,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jinx/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Jinx tosses out 3 Chompers centered at the target location, landing after 0.4 seconds, arming after 0.75 seconds, and exploding after 5 seconds to deal magic damage to nearby enemies.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Jinx tosses out 3 Chompers centered at the target location, landing after 0.4 seconds, arming after 0.75 seconds, and exploding after 5 seconds to deal magic damage to nearby enemies.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -431,32 +397,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              90
-            ],
-            "units": [
-              ""
-            ]
-          }
+          90
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                24,
-                20.5,
-                17,
-                13.5,
-                10
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          24,
+          20.5,
+          17,
+          13.5,
+          10
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "special",
@@ -479,7 +428,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "225",
-        "targetRange": "925"
+        "targetRange": "925",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -488,7 +438,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jinx/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Jinx fires a massive rocket in the target direction, briefly granting sight of its surroundings and exploding upon colliding with an enemy champion. The explosion deals physical damage to nearby enemies and grants sight of the area for 2 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Jinx fires a massive rocket in the target direction, briefly granting sight of its surroundings and exploding upon colliding with an enemy champion. The explosion deals physical damage to nearby enemies and grants sight of the area for 2 seconds.",
             "leveling": []
           },
           {
@@ -635,30 +585,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                85,
-                65,
-                45
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          85,
+          65,
+          45
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "special",
@@ -681,10 +614,10 @@
         "angle": null,
         "castTime": "0.6",
         "effectRadius": "400 /  1000 / 1000",
-        "targetRange": "Global"
+        "targetRange": "Global",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "An unhinged and impulsive criminal from the undercity, Jinx is haunted by the consequences of her past—but that doesn't stop her from bringing her own chaotic brand of pandemonium to Piltover and Zaun. She uses her arsenal of DIY weapons to devastating effect, unleashing torrents of colorful explosions and gunfire, inspiring the disenfranchised to rebellion and resistance with the mayhem she leaves in her wake.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/jinx/skins/base/images/jinx_splash_tile_0.jpg"
+  "lore": "An unhinged and impulsive criminal from the undercity, Jinx is haunted by the consequences of her past—but that doesn't stop her from bringing her own chaotic brand of pandemonium to Piltover and Zaun. She uses her arsenal of DIY weapons to devastating effect, unleashing torrents of colorful explosions and gunfire, inspiring the disenfranchised to rebellion and resistance with the mayhem she leaves in her wake."
 }

@@ -12,7 +12,7 @@
   "removed": false,
   "requiredChampion": "Kalista",
   "requiredAlly": "",
-  "icon": "https://raw.communitydragon.org/15.10/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3599_kalistapassiveitem.png",
+  "icon": "https://raw.communitydragon.org/15.11/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3599_kalistapassiveitem.png",
   "simpleDescription": "Kalista's spear that binds an Oathsworn Ally.",
   "nicknames": [],
   "passives": [],

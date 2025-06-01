@@ -1,10 +1,13 @@
 <script setup lang="ts">
 const as = useAccountStore()
+const ix = useIndexStore()
 const appConfig = useAppConfig()
 
 onMounted(async () => {
   document.documentElement.setAttribute('data-theme', as.dataTheme ? as.dataTheme : 'midnight')
   useAuth()
+
+  ix.fetchAll()
 })
 </script>
 

@@ -97,19 +97,16 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gwen/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Gwen's basic attacks on-hit, the center of Snip Snip!, and Needlework deal bonus magic damage equal to 1% (+ 0.55% per 100 AP) of the target's maximum health.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Gwen's basic attacks on-hit, the center of Snip Snip!, and Needlework deal bonus magic damage equal to 1% (+ 0.55% per 100 AP) of the target's maximum health.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">A Thousand Cuts is modified based on the target:</p><p></p></div>\n Heals Gwen for 50% of post-mitigation damage dealt against champions, capped at 10 - 25 (based on level) (+ 6.5% AP) per instance.\nDeals an additional 8 - 30 (based on level) bonus magic damage against minions that are below 40% health.\nDeals a maximum of 5 (+ 10% AP) magic damage against monsters.",
+            "description": "<span class=\"ability-header\">A Thousand Cuts is modified based on the target:</span>\n Heals Gwen for 50% of post-mitigation damage dealt against champions, capped at 10 - 25 (based on level) (+ 6.5% AP) per instance.\nDeals an additional 8 - 30 (based on level) bonus magic damage against minions that are below 40% health.\nDeals a maximum of 5 (+ 10% AP) magic damage against monsters.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self, Enemies",
         "spellshieldable": null,
@@ -132,7 +129,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -141,11 +139,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gwen/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Gwen's basic attacks generate a stack of Snippy on-hit for 6 seconds, stacking up to 4 times and refreshing on subsequent attacks.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Gwen's basic attacks generate a stack of Snippy on-hit for 6 seconds, stacking up to 4 times and refreshing on subsequent attacks.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Gwen snips at least twice with her scissors in a cone in the target direction over the cast time, dealing magic damage per snip to all enemies within the area, with the final snip dealing increased damage. The center of each snip converts 50% of the damage to true damage, then applies A Thousand Cuts. Snip Snip! deals 75% damage against minions, and executes them on the first damage instance if they are below 20% health.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Gwen snips at least twice with her scissors in a cone in the target direction over the cast time, dealing magic damage per snip to all enemies within the area, with the final snip dealing increased damage. The center of each snip converts 50% of the damage to true damage, then applies A Thousand Cuts. Snip Snip! deals 75% damage against minions, and executes them on the first damage instance if they are below 20% health.",
             "leveling": [
               {
                 "attribute": "Damage per Snip",
@@ -388,32 +386,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              40
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                6.5,
-                5.75,
-                5,
-                4.25,
-                3.5
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          6.5,
+          5.75,
+          5,
+          4.25,
+          3.5
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "special",
@@ -436,7 +417,8 @@
         "angle": null,
         "castTime": "0.5",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -445,7 +427,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gwen/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Gwen summons the Hallowed Mist upon her current location, lasting for 4 seconds. Hallowed Mist can be recast after 0.5 seconds, and does so automatically if Gwen attempts to leave the area.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Gwen summons the Hallowed Mist upon her current location, lasting for 4 seconds. Hallowed Mist can be recast after 0.5 seconds, and does so automatically if Gwen attempts to leave the area.",
             "leveling": []
           },
           {
@@ -453,7 +435,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Gwen commands the mist to move to her current location.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Gwen commands the mist to move to her current location.",
             "leveling": []
           },
           {
@@ -462,32 +444,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              60
-            ],
-            "units": [
-              ""
-            ]
-          }
+          60
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                22,
-                21,
-                20,
-                19,
-                18
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          22,
+          21,
+          20,
+          19,
+          18
+        ],
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
@@ -510,7 +475,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "480",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -519,7 +485,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gwen/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Gwen dashes to the target location, then empowers her basic attacks within the next 4 seconds to deal bonus magic damage on-hit and gain bonus attack speed and 75 bonus attack range.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Gwen dashes to the target location, then empowers her basic attacks within the next 4 seconds to deal bonus magic damage on-hit and gain bonus attack speed and 75 bonus attack range.",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage On-Hit",
@@ -575,32 +541,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              35
-            ],
-            "units": [
-              ""
-            ]
-          }
+          35
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                12,
-                11,
-                10,
-                9,
-                8
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          12,
+          11,
+          10,
+          9,
+          8
+        ],
         "targeting": "Location",
         "affects": "Self",
         "spellshieldable": null,
@@ -623,7 +572,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": "350 / 450"
+        "targetRange": "350 / 450",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -632,7 +582,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gwen/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Gwen launches a needle in the target direction that deals magic damage to enemies hit and slows them by 60% them for 1.5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Gwen launches a needle in the target direction that deals magic damage to enemies hit and slows them by 60% them for 1.5 seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage per Needle",
@@ -695,7 +645,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Gwen mimics the first cast's effects, while barraging three needles on the second cast and five on the third cast.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Gwen mimics the first cast's effects, while barraging three needles on the second cast and five on the third cast.",
             "leveling": [
               {
                 "attribute": "Second Cast Total Damage",
@@ -798,30 +748,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                120,
-                100,
-                80
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          120,
+          100,
+          80
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "special",
@@ -844,10 +777,10 @@
         "angle": null,
         "castTime": "0.25 / 0.5",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "A former doll transformed and brought to life by magic, Gwen wields the very tools that once created her. She carries the weight of her maker's love with every step, taking nothing for granted. At her command is the Hallowed Mist, an ancient and protective magic that has blessed Gwen's scissors, needles, and sewing thread. So much is new to her, but Gwen remains joyfully determined to fight for the good that survives in a broken world.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gwen/skins/base/images/gwen_splash_tile_0.jpg"
+  "lore": "A former doll transformed and brought to life by magic, Gwen wields the very tools that once created her. She carries the weight of her maker's love with every step, taking nothing for granted. At her command is the Hallowed Mist, an ancient and protective magic that has blessed Gwen's scissors, needles, and sewing thread. So much is new to her, but Gwen remains joyfully determined to fight for the good that survives in a broken world."
 }

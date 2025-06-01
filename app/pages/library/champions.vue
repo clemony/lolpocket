@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { LayoutGroup, motion } from 'motion-v'
-
 definePageMeta({
   name: 'champions',
   title: 'Champions',
@@ -8,30 +6,41 @@ definePageMeta({
   icon1: 'lol-champ',
 })
 const cs = useChampStore()
-const { baseTileByChampKey } = await useIndexLookup()
-const {championKeys, filteredKeys} = useChampionFilter(cs.championFilter)
+const { championKeys, filteredKeys, filtered } = useChampionFilter(cs.championFilter)
+
+
+const tabs = ref('grid')
+
+
 </script>
 
 <template>
-  <NuxtLayout  name="champions-layout" class=" after:size-full after:pointer-events-none after:absolute after:top-36 after:rounded-t-[4rem] after:border-x-40 after:border-t-40 after:border-b1 after:z-0 after:scale-x-102 after:-left-0">
 
-        <transition-slide as="div" group
-          class="absolute items-start h-fit inset-0 top-0 pt-50 left-0  pb-8 user-select-none grid grid-flow-row grid-cols-[repeat(auto-fill,minmax(150px,1fr))] auto-rows-min gap-x-1.5 gap-y-1  overflow-auto overflow-x-hidden rounded-lg">
+      <Tabs v-model:model-value="tabs"  class="flex flex-col px-8 size-full relative overflow-hidden" as="div">
+    <ChampionFilters>
+        <IndicatorTabsList class="w-80 shrink-0  **:pointer-events-auto grid grid-cols-2 h-10 border !border-b3/70 bg-b2">
+          <IndicatorTabsTrigger value="grid" :class="{ '!text-nc': tabs == 'grid' }">
+            Grid
+          </IndicatorTabsTrigger>
+          <IndicatorTabsTrigger value="list" :class="{ '!text-nc': tabs == 'list' }" >
+            List
+          </IndicatorTabsTrigger>
+          <TabIndicator contrast />
+        </IndicatorTabsList>
+    </ChampionFilters>
+
+    <TabsContent value="grid" as-child>
+          <LibraryChampions v-if="championKeys"   :champion-keys="championKeys" :filtered-keys="filteredKeys" />
+        </TabsContent>
+
+      <TabsContent value="list" as-child>
+          <LibraryChampionGrid   :filtered />
+        </TabsContent>
+
+
+      </Tabs>
+
    
-          <div
-            v-for="key in championKeys"
-            :key="key" class="max-w-96">
-  <Dialog>
-    <DialogTrigger class="size-full">
-
-      <ChampionTile bg-size="140%" :url="getSplash(baseTileByChampKey(key))" :name="key" text class="min-h-64" object-position="50% -2rem" />
-         
-    </DialogTrigger>
-            <LazyChampionInfoPopover :champion-key="key" class="champion w-full" hydrate-on-interact @click.right.prevent />
-  </Dialog>
-          </div>
-        </transition-slide>
-  </NuxtLayout>
 </template>
 
 <style scoped></style>

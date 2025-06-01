@@ -92,7 +92,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Garen/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Garen regenerates an additional[ 1.5% - 10.1% (based on level) of his maximum health every 5 seconds. ][ 0.15% - 1.01% (based on level) of his maximum health every 0.5 seconds. ]</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Garen regenerates an additional[ 1.5% - 10.1% (based on level) of his maximum health every 5 seconds. ][ 0.15% - 1.01% (based on level) of his maximum health every 0.5 seconds. ]",
             "leveling": []
           },
           {
@@ -101,10 +101,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -127,7 +124,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -136,7 +134,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Garen/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Garen cleanses himself of all slows and gains 35% bonus movement speed for a duration.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Garen cleanses himself of all slows and gains 35% bonus movement speed for a duration.",
             "leveling": [
               {
                 "attribute": "Movement Speed Duration",
@@ -192,20 +190,12 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                8
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          8
+        ],
         "targeting": "Auto",
         "affects": "Self, Enemies",
         "spellshieldable": "Special",
@@ -228,7 +218,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -237,16 +228,33 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Garen/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Whenever Garen kills an enemy, he generates a stack of Courage, stacking up to 150 times.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Whenever Garen kills an enemy, he generates a stack of Courage, stacking up to 150 times.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Courage:</p><p> For each stack, Garen gains 0.2 bonus armor and 0.2 bonus magic resistance, up to a maximum of 30 bonus resistances each. After reaching maximum stacks, Garen gains 10% bonus armor and 10% bonus magic resistance.</p></div>",
+            "description": "<span class=\"ability-header\">Courage:</span> For each stack, Garen gains 0.2 bonus armor and 0.2 bonus magic resistance, up to a maximum of 30 bonus resistances each.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Garen reduces incoming damage by 30% for 4 seconds. For the first 0.75 seconds, Garen additionally grants himself a shield and 60% tenacity.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Garen reduces incoming damage for 4 seconds. For the first 0.75 seconds, Garen additionally grants himself a shield and 60% tenacity.",
             "leveling": [
+              {
+                "attribute": "Damage Reduction",
+                "modifiers": [
+                  {
+                    "values": [
+                      25,
+                      29,
+                      33,
+                      37,
+                      41
+                    ],
+                    "units": [
+                      "%"
+                    ]
+                  }
+                ]
+              },
               {
                 "attribute": "Shield Strength",
                 "modifiers": [
@@ -275,24 +283,16 @@
             ]
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                23,
-                21,
-                19,
-                17,
-                15
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          22,
+          19.5,
+          17,
+          14.5,
+          12
+        ],
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
@@ -315,7 +315,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -324,7 +325,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Garen/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Garen rapidly spins his sword around himself 7 (+ 1 per 25% bonus attack speed) times over 3 seconds, becoming unable to declare basic attacks but gaining ghosting and dealing physical damage to nearby enemies periodically. Judgment can be recast after 1 second while active, and does so automatically after it ends.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Garen rapidly spins his sword around himself 7 (+ 1 per 25% bonus attack speed) times over 3 seconds, becoming unable to declare basic attacks but gaining ghosting and dealing physical damage to nearby enemies periodically. Judgment can be recast after 1 second while active, and does so automatically after it ends.",
             "leveling": [
               {
                 "attribute": "Physical Damage Per Spin",
@@ -343,36 +344,11 @@
                   },
                   {
                     "values": [
-                      0,
-                      0.48235294117647054,
-                      0.9647058823529411,
-                      1.4470588235294115,
-                      1.9294117647058822,
-                      2.411764705882353,
-                      2.894117647058823,
-                      3.3764705882352937,
-                      3.8588235294117643,
-                      4.341176470588235,
-                      4.823529411764706,
-                      5.305882352941176,
-                      5.788235294117646,
-                      6.270588235294117,
-                      6.752941176470587,
-                      7.235294117647058,
-                      7.717647058823529,
-                      8.2
-                    ],
-                    "units": [
-                      ""
-                    ]
-                  },
-                  {
-                    "values": [
                       36,
-                      37,
                       38,
-                      39,
-                      40
+                      40,
+                      42,
+                      44
                     ],
                     "units": [
                       "% AD"
@@ -406,36 +382,11 @@
                   },
                   {
                     "values": [
-                      0,
-                      0.6029411764705882,
-                      1.2058823529411764,
-                      1.8088235294117645,
-                      2.411764705882353,
-                      3.014705882352941,
-                      3.617647058823529,
-                      4.220588235294118,
-                      4.823529411764706,
-                      5.4264705882352935,
-                      6.029411764705882,
-                      6.63235294117647,
-                      7.235294117647058,
-                      7.838235294117647,
-                      8.441176470588236,
-                      9.044117647058822,
-                      9.647058823529411,
-                      10.25
-                    ],
-                    "units": [
-                      ""
-                    ]
-                  },
-                  {
-                    "values": [
                       45,
-                      46.25,
                       47.5,
-                      48.75,
-                      50
+                      50,
+                      52.5,
+                      55
                     ],
                     "units": [
                       "% AD"
@@ -446,28 +397,24 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Garen ends Judgment prematurely, reducing its cooldown by its remaining duration.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Garen ends Judgment.",
             "leveling": []
           },
           {
-            "description": "Judgment can critically strike for (50% + 40%) bonus physical damage. Additionally, Judgment deals 150% damage against monsters.",
+            "description": "Judgment can critically strike for[ (140% + 32%) damage. ][ 80% total critical damage. ]",
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                9
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          9,
+          8.25,
+          7.5,
+          6.75,
+          6
+        ],
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": null,
@@ -490,7 +437,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "325",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -499,7 +447,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Garen/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Garen calls upon the might of Demacia onto the target enemy champion, dealing them true damage as well as revealing them for 1 second at the start of the cast time.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Garen calls upon the might of Demacia onto the target enemy champion, dealing them true damage as well as revealing them for 1 second at the start of the cast time.",
             "leveling": [
               {
                 "attribute": "True Damage",
@@ -507,8 +455,8 @@
                   {
                     "values": [
                       150,
-                      300,
-                      450
+                      250,
+                      350
                     ],
                     "units": [
                       ""
@@ -529,22 +477,14 @@
             ]
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                120,
-                100,
-                80
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          120,
+          100,
+          80
+        ],
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -567,10 +507,10 @@
         "angle": null,
         "castTime": "0.435",
         "effectRadius": null,
-        "targetRange": "400"
+        "targetRange": "400",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "A proud and noble warrior, Garen fights as one of the Dauntless Vanguard. He is popular among his fellows, and respected well enough by his enemies—not least as a scion of the prestigious Crownguard family, entrusted with defending Demacia and its ideals. Clad in magic-resistant armor and bearing a mighty broadsword, Garen stands ready to confront mages and sorcerers on the field of battle, in a veritable whirlwind of righteous steel.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/garen/skins/base/images/garen_splash_tile_0.jpg"
+  "lore": "A proud and noble warrior, Garen fights as one of the Dauntless Vanguard. He is popular among his fellows, and respected well enough by his enemies—not least as a scion of the prestigious Crownguard family, entrusted with defending Demacia and its ideals. Clad in magic-resistant armor and bearing a mighty broadsword, Garen stands ready to confront mages and sorcerers on the field of battle, in a veritable whirlwind of righteous steel."
 }

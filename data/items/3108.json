@@ -41,7 +41,7 @@
     {
       "id": 4628,
       "name": "Horizon Focus",
-      "gold": 2900
+      "gold": 2800
     },
     {
       "id": 3137,
@@ -99,7 +99,7 @@
   "removed": false,
   "requiredChampion": "",
   "requiredAlly": "",
-  "icon": "https://raw.communitydragon.org/15.10/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3108_mage_t2_fiendishcodex.png",
+  "icon": "https://raw.communitydragon.org/15.11/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3108_mage_t2_fiendishcodex.png",
   "simpleDescription": "Increases Ability Power and Cooldown Reduction",
   "nicknames": [
     "book"

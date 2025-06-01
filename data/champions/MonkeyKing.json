@@ -100,19 +100,16 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/MonkeyKing/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Wukong gains 6 - 10 (based on level) bonus armor and regenerates an additional[ 0.35% of his maximum health every 5 seconds. ][ 0.035% of his maximum health every 0.5 seconds. ]Whenever Wukong or his clone damage an enemy champion or monster, he generates a stack of Strength of Stone for 5 seconds, refreshing on subsequent hits and stacking up to 5 times. Stacks expire by one every second when the duration ends.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Wukong gains 6 - 10 (based on level) bonus armor and regenerates an additional[ 0.35% of his maximum health every 5 seconds. ][ 0.035% of his maximum health every 0.5 seconds. ]Whenever Wukong or his clone damage an enemy champion or monster, he generates a stack of Strength of Stone for 5 seconds, refreshing on subsequent hits and stacking up to 5 times. Stacks expire by one every second when the duration ends.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Strength of Stone:</p><p> For each stack,[ Stone Skin's effects are increased by 100%, ][ Wukong gains 6 - 10 (based on level) additional bonus armor and further regenerates an additional 0.35% of his maximum health every 5 seconds, ]up to a maximum of 36 - 60 (based on level) bonus armor and total additional regeneration of[ 2.1% maximum health every 5 seconds. ][ 0.21% maximum health every 0.5 seconds. ]</p></div>",
+            "description": "<span class=\"ability-header\">Strength of Stone:</span> For each stack,[ Stone Skin's effects are increased by 100%, ][ Wukong gains 6 - 10 (based on level) additional bonus armor and further regenerates an additional 0.35% of his maximum health every 5 seconds, ]up to a maximum of 36 - 60 (based on level) bonus armor and total additional regeneration of[ 2.1% maximum health every 5 seconds. ][ 0.21% maximum health every 0.5 seconds. ]",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -135,7 +132,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -144,7 +142,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/MonkeyKing/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Wukong empowers his next basic attack within 5 seconds to have an uncancellable windup, gain bonus range, deal bonus physical damage, and inflict armor reduction for 3 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Wukong empowers his next basic attack within 5 seconds to have an uncancellable windup, gain bonus range, deal bonus physical damage, and inflict armor reduction for 3 seconds.",
             "leveling": [
               {
                 "attribute": "Bonus Range",
@@ -217,32 +215,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              20
-            ],
-            "units": [
-              ""
-            ]
-          }
+          20
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                8,
-                7.5,
-                7,
-                6.5,
-                6
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          8,
+          7.5,
+          7,
+          6.5,
+          6
+        ],
         "targeting": "Auto",
         "affects": "Self, Enemies",
         "spellshieldable": "True",
@@ -265,7 +246,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -274,7 +256,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/MonkeyKing/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Wukong enters invisibility for 1 second and dashes in the target direction, leaving behind a clone of himself at his casting position for 3.25 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Wukong enters invisibility for 1 second and dashes in the target direction, leaving behind a clone of himself at his casting position for 3.25 seconds.",
             "leveling": []
           },
           {
@@ -309,36 +291,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              60,
-              55,
-              50,
-              45,
-              40
-            ],
-            "units": [
-              ""
-            ]
-          }
+          60,
+          55,
+          50,
+          45,
+          40
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                20,
-                19,
-                18,
-                17,
-                16
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          20,
+          19,
+          18,
+          17,
+          16
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -361,7 +326,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "Clone's attack range",
-        "targetRange": "100 / 300"
+        "targetRange": "100 / 300",
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -370,7 +336,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/MonkeyKing/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Wukong dashes to the target enemy's location and sends out untargetable clones to strike up to two additional enemies near the target's location, dealing magic damage.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Wukong dashes to the target enemy's location and sends out untargetable clones to strike up to two additional enemies near the target's location, dealing magic damage.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -427,36 +393,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              30,
-              35,
-              40,
-              45,
-              50
-            ],
-            "units": [
-              ""
-            ]
-          }
+          30,
+          35,
+          40,
+          45,
+          50
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                10,
-                9.25,
-                8.5,
-                7.75,
-                7
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          10,
+          9.25,
+          8.5,
+          7.75,
+          7
+        ],
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -479,7 +428,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "187.5",
-        "targetRange": "625"
+        "targetRange": "625",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -488,7 +438,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/MonkeyKing/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Wukong spins his staff around for up to 2 seconds, becoming ghosted and gaining 20% bonus movement speed. The staff deals physical damage every 0.25 seconds to enemies hit, and can knock them up once for 0.6 seconds. Cyclone will not knock up enemies who were already hit by either Wukong or his clone within the same cast.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Wukong spins his staff around for up to 2 seconds, becoming ghosted and gaining 20% bonus movement speed. The staff deals physical damage every 0.25 seconds to enemies hit, and can knock them up once for 0.6 seconds. Cyclone will not knock up enemies who were already hit by either Wukong or his clone within the same cast.",
             "leveling": [
               {
                 "attribute": "Physical Damage Per Tick",
@@ -543,7 +493,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Wukong ends Cyclone. After 1 second, he can cast Cyclone a second time within 8 seconds of the first cast.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Wukong ends Cyclone. After 1 second, he can cast Cyclone a second time within 8 seconds of the first cast.",
             "leveling": [
               {
                 "attribute": "Maximum Total Physical Damage",
@@ -580,30 +530,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                130,
-                110,
-                90
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          130,
+          110,
+          90
+        ],
         "targeting": "Auto",
         "affects": "Enemies, Self",
         "spellshieldable": "Special",
@@ -626,10 +559,10 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "162.5",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Wukong is a vastayan trickster who uses his strength, agility, and intelligence to confuse his opponents and gain the upper hand. After finding a lifelong friend in the warrior known as Master Yi, Wukong became the last student of the ancient martial art known as Wuju. Armed with an enchanted staff, Wukong seeks to prevent Ionia from falling to ruin.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/monkeyking/skins/base/images/monkeyking_splash_tile_0.jpg"
+  "lore": "Wukong is a vastayan trickster who uses his strength, agility, and intelligence to confuse his opponents and gain the upper hand. After finding a lifelong friend in the warrior known as Master Yi, Wukong became the last student of the ancient martial art known as Wuju. Armed with an enchanted staff, Wukong seeks to prevent Ionia from falling to ruin."
 }

@@ -7,7 +7,6 @@ export function useChampionFilter(filters: ChampionFilter) {
   })
 
   const championData = computed (() => Object.values(rawChampions.value) )
-  console.log("💠 - useChampionFilter - championData:", championData)
 
   const queryRef = computed(() => filters.query || '')
   const debouncedQuery = refDebounced(queryRef, 200)

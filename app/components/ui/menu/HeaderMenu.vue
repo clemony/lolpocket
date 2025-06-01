@@ -1,14 +1,14 @@
 <script setup lang="ts">
 const emit = defineEmits(['update:modelValue'])
 const as = useAccountStore()
-const ts = useTempStore()
+const us = useUiStore()
 
 const summoner = ref(as.userAccount)
 
 function handleClick(mode) {
   emit('update:modelValue', false)
   if (mode == 'in') {
-    ts.loginOpen = true
+    us.loginOpen = true
   }
   else if (mode == 'out') {
     useSignOut()

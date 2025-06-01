@@ -95,19 +95,16 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Evelynn/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Evelynn shrouds herself in Demon Shade after not performing actions that break stealth for 4 seconds. Attacking or casting abilities ends Demon Shade immediately and places it on a 4-second static cooldown, reduced to 1.25 seconds from casting Last Caress. Taking damage from champions or turrets interrupts Demon Shade and places it on a 1.5-second static cooldown.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Evelynn shrouds herself in Demon Shade after not performing actions that break stealth for 4 seconds. Attacking or casting abilities ends Demon Shade immediately and places it on a 4-second static cooldown, reduced to 1.25 seconds from casting Last Caress. Taking damage from champions or turrets interrupts Demon Shade and places it on a 1.5-second static cooldown.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Demon Shade:</p><p> While below 250 - 590 (based on level) (+ 250% AP) health, Evelynn heals herself for 15 - 150 (based on level) every second. From level 6 onward, Demon Shade also grants camouflage.</p></div>",
+            "description": "<span class=\"ability-header\">Demon Shade:</span> While below 250 - 590 (based on level) (+ 250% AP) health, Evelynn heals herself for 15 - 150 (based on level) every second. From level 6 onward, Demon Shade also grants camouflage.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -130,7 +127,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -139,7 +137,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Evelynn/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Evelynn launches a dart in the target direction, dealing magic damage to the first enemy hit and marking them for 4 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Evelynn launches a dart in the target direction, dealing magic damage to the first enemy hit and marking them for 4 seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -228,7 +226,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Evelynn unleashes a line of deadly spikes in the direction of the nearest visible enemy that deals magic damage to all enemies struck.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Evelynn unleashes a line of deadly spikes in the direction of the nearest visible enemy that deals magic damage to all enemies struck.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -313,32 +311,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              40,
-              45,
-              50,
-              55,
-              60
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40,
+          45,
+          50,
+          55,
+          60
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                4
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          4
+        ],
         "targeting": "Direction / Auto",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -361,7 +342,8 @@
         "angle": null,
         "castTime": "0.3",
         "effectRadius": "550",
-        "targetRange": "800 / 680"
+        "targetRange": "800 / 680",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -370,7 +352,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Evelynn/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Evelynn curses the target enemy champion or medium or large monster for 5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Evelynn curses the target enemy champion or medium or large monster for 5 seconds.",
             "leveling": []
           },
           {
@@ -470,36 +452,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              60,
-              70,
-              80,
-              90,
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          60,
+          70,
+          80,
+          90,
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                15,
-                14,
-                13,
-                12,
-                11
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          15,
+          14,
+          13,
+          12,
+          11
+        ],
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "Special",
@@ -522,7 +487,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "1200 / 1300 / 1400 / 1500 / 1600"
+        "targetRange": "1200 / 1300 / 1400 / 1500 / 1600",
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -531,7 +497,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Evelynn/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Evelynn whips the target enemy with her lashers, dealing magic damage and applying on-hit effects.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Evelynn whips the target enemy with her lashers, dealing magic damage and applying on-hit effects.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -588,32 +554,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              40,
-              45,
-              50,
-              55,
-              60
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40,
+          45,
+          50,
+          55,
+          60
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                8
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          8
+        ],
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -636,14 +585,15 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "210"
+        "targetRange": "210",
+        "maxCharges": -1
       },
       {
         "name": "Empowered Whiplash",
         "icon": "https://cdn.communitydragon.org/latest/champion/Evelynn/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Evelynn dashes toward the target enemy with her lashers, dealing increased damage to them upon completion as well as to all enemies within her path.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Evelynn dashes toward the target enemy with her lashers, dealing increased damage to them upon completion as well as to all enemies within her path.",
             "leveling": [
               {
                 "attribute": "Empowered Magic Damage",
@@ -677,11 +627,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cost": [
+          40,
+          45,
+          50,
+          55,
+          60
+        ],
+        "cooldown": [
+          8
+        ],
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -704,7 +659,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -713,7 +669,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Evelynn/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Evelynn reveals her true form, becoming untargetable at the start of the cast time and then unleashing her lashers in a cone in the target direction, dealing magic damage to enemies struck within. After 0.5 seconds, she blinks 700 units in the opposite direction and becomes targetable again.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Evelynn reveals her true form, becoming untargetable at the start of the cast time and then unleashing her lashers in a cone in the target direction, dealing magic damage to enemies struck within. After 0.5 seconds, she blinks 700 units in the opposite direction and becomes targetable again.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -770,30 +726,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                120,
-                100,
-                80
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          120,
+          100,
+          80
+        ],
         "targeting": "Direction",
         "affects": "Enemies / Self",
         "spellshieldable": "True",
@@ -816,10 +755,10 @@
         "angle": "180°",
         "castTime": "0.35",
         "effectRadius": "500",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Within the dark seams of Runeterra, the demon Evelynn searches for her next victim. She lures in prey with the voluptuous façade of a human female, but once a person succumbs to her charms, Evelynn's true form is unleashed. She then subjects her victim to unspeakable torment, gratifying herself with their pain. To the demon, these liaisons are innocent flings. To the rest of Runeterra, they are ghoulish tales of lust gone awry and horrific reminders of the cost of wanton desire.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/evelynn/skins/base/images/evelynn_splash_tile_0.jpg"
+  "lore": "Within the dark seams of Runeterra, the demon Evelynn searches for her next victim. She lures in prey with the voluptuous façade of a human female, but once a person succumbs to her charms, Evelynn's true form is unleashed. She then subjects her victim to unspeakable torment, gratifying herself with their pain. To the demon, these liaisons are innocent flings. To the rest of Runeterra, they are ghoulish tales of lust gone awry and horrific reminders of the cost of wanton desire."
 }

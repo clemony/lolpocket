@@ -28,7 +28,7 @@
   "removed": false,
   "requiredChampion": "",
   "requiredAlly": "",
-  "icon": "https://raw.communitydragon.org/15.10/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4628_mage_t3_horizonfocus.png",
+  "icon": "https://raw.communitydragon.org/15.11/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4628_mage_t3_horizonfocus.png",
   "simpleDescription": "Immobilizing a champion causes lightning to strike them",
   "nicknames": [
     "snipe",
@@ -52,14 +52,14 @@
   ],
   "active": [],
   "stats": {
-    "abilityPower": 110,
+    "abilityPower": 115,
     "abilityHaste": 25
   },
   "shop": {
     "prices": {
-      "total": 2900,
-      "combined": 350,
-      "sell": 1160
+      "total": 2800,
+      "combined": 250,
+      "sell": 1120
     },
     "purchasable": true,
     "tags": [

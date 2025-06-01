@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lillia/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Lillia's abilities apply Dream Dust to enemies hit, which deals[ 5% (+ 1.25% per 100 AP) of the target's maximum health total magic damage over 3 seconds, capped at 65 ][ 0.83% (+ 0.2083% per 100 AP) of the target's maximum health magic damage every 0.5 seconds over 3 seconds, capped at 10.83 per tick ]against monsters.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Lillia's abilities apply Dream Dust to enemies hit, which deals[ 5% (+ 1.25% per 100 AP) of the target's maximum health total magic damage over 3 seconds, capped at 65 ][ 0.83% (+ 0.2083% per 100 AP) of the target's maximum health magic damage every 0.5 seconds over 3 seconds, capped at 10.83 per tick ]against monsters.",
             "leveling": []
           },
           {
@@ -108,10 +108,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Enemies",
         "spellshieldable": "true",
@@ -134,7 +131,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -143,11 +141,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lillia/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Whenever Lillia's abilities hit at least one enemy, she generates a stack of Prance for 6.5 seconds, refreshing on subsequent hits and stacking up to 4 times. Stacks expire by one every 1.5 seconds when the duration ends.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Whenever Lillia's abilities hit at least one enemy, she generates a stack of Prance for 6.5 seconds, refreshing on subsequent hits and stacking up to 4 times. Stacks expire by one every 1.5 seconds when the duration ends.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Prance:</p><p> For each stack, Lillia gains bonus movement speed.</p></div>",
+            "description": "<span class=\"ability-header\">Prance:</span> For each stack, Lillia gains bonus movement speed.",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -202,7 +200,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Lillia swings her censer around her, dealing magic damage to nearby enemies. Enemies hit within the outer edge of the area additionally take the same amount as bonus true damage.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Lillia swings her censer around her, dealing magic damage to nearby enemies. Enemies hit within the outer edge of the area additionally take the same amount as bonus true damage.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -262,32 +260,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              65
-            ],
-            "units": [
-              ""
-            ]
-          }
+          65
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                6,
-                5.5,
-                5,
-                4.5,
-                4
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          6,
+          5.5,
+          5,
+          4.5,
+          4
+        ],
         "targeting": "Auto",
         "affects": "Self, Enemies",
         "spellshieldable": "true",
@@ -310,7 +291,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "225 / 485",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -319,7 +301,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lillia/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Lillia dashes to 150 units in front of the target location over 0.759 seconds, though not through terrain, and deals magic damage in an area around the target spot. Enemies hit within the epicenter are dealt 200% increased damage.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Lillia dashes to 150 units in front of the target location over 0.759 seconds, though not through terrain, and deals magic damage in an area around the target spot. Enemies hit within the epicenter are dealt 200% increased damage.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -434,32 +416,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                14,
-                13,
-                12,
-                11,
-                10
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          14,
+          13,
+          12,
+          11,
+          10
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "true",
@@ -482,7 +447,8 @@
         "angle": null,
         "castTime": "None",
         "effectRadius": "65 /  250",
-        "targetRange": "500 / 350"
+        "targetRange": "500 / 350",
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -491,7 +457,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lillia/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Lillia lobs a seed at the target location that rolls forward indefinitely. The seed detonates upon hitting an enemy or terrain while on the ground, dealing magic damage to enemies in a cone, slowing them by 40% for 3 seconds and revealing them for 2 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Lillia lobs a seed at the target location that rolls forward indefinitely. The seed detonates upon hitting an enemy or terrain while on the ground, dealing magic damage to enemies in a cone, slowing them by 40% for 3 seconds and revealing them for 2 seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -526,28 +492,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              70
-            ],
-            "units": [
-              ""
-            ]
-          }
+          70
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                12
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          12
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "special",
@@ -570,7 +519,8 @@
         "angle": null,
         "castTime": "0.4",
         "effectRadius": "150",
-        "targetRange": "700 / Global"
+        "targetRange": "700 / Global",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -579,7 +529,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lillia/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Lillia casts a magical lullaby over all enemy champions affected by Dream Dust, which arrives after 0.3 seconds and renders them drowsy for 1.5 seconds, slowing them by 10%. After the duration, they fall asleep for 2 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Lillia casts a magical lullaby over all enemy champions affected by Dream Dust, which arrives after 0.3 seconds and renders them drowsy for 1.5 seconds, slowing them by 10%. After the duration, they fall asleep for 2 seconds.",
             "leveling": []
           },
           {
@@ -616,30 +566,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                150,
-                130,
-                110
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          150,
+          130,
+          110
+        ],
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "special",
@@ -662,10 +595,10 @@
         "angle": null,
         "castTime": "0.4",
         "effectRadius": null,
-        "targetRange": "Global"
+        "targetRange": "Global",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Intensely shy, the fae fawn Lillia skittishly wanders Ionia's forests. Hiding just out of sight of mortals—whose mysterious natures have long captivated, but intimidated, her—Lillia hopes to discover why their dreams no longer reach the ancient Dreaming Tree. She now travels Ionia with a magical branch in hand, in an effort to find people's unrealized dreams. Only then can Lillia herself bloom and help others untangle their fears to find the sparkle within. Eep!",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/lillia/skins/base/images/lillia_splash_tile_0.jpg"
+  "lore": "Intensely shy, the fae fawn Lillia skittishly wanders Ionia's forests. Hiding just out of sight of mortals—whose mysterious natures have long captivated, but intimidated, her—Lillia hopes to discover why their dreams no longer reach the ancient Dreaming Tree. She now travels Ionia with a magical branch in hand, in an effort to find people's unrealized dreams. Only then can Lillia herself bloom and help others untangle their fears to find the sparkle within. Eep!"
 }

@@ -100,19 +100,16 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/KSante/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> K'Sante's abilities mark enemies hit for 4 seconds. His basic attacks against marked enemies are empowered to consume the mark on-hit, dealing 12 (+ 1% - 2% (based on level) of target's maximum health) bonus physical damage. The health-based portion deals a minimum of 15 - 100 (based on level) damage against minions and 20 - 105 (based on level) against monsters.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> K'Sante's abilities mark enemies hit for 4 seconds. His basic attacks against marked enemies are empowered to consume the mark on-hit, dealing 12 (+ 1% - 2% (based on level) of target's maximum health) bonus physical damage. The health-based portion deals a minimum of 15 - 100 (based on level) damage against minions and 20 - 105 (based on level) against monsters.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">All Out Bonus:</p><p> K'Sante's basic attacks and ability damage, as well as Dauntless Instinct's mark consumption, are empowered to deal bonus physical damage equal to 1% (+ 1% per 100 bonus armor) (+ 1% per 100 bonus magic resistance) of the target's maximum health.</p></div>",
+            "description": "<span class=\"ability-header\">All Out Bonus:</span> K'Sante's basic attacks and ability damage, as well as Dauntless Instinct's mark consumption, are empowered to deal bonus physical damage equal to 1% (+ 1% per 100 bonus armor) (+ 1% per 100 bonus magic resistance) of the target's maximum health.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Enemies",
         "spellshieldable": "special",
@@ -135,7 +132,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -144,7 +142,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/KSante/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> K'Sante slams his ntofo down in the target direction that deals physical damage to enemies hit and slows them by 80% for 0.5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> K'Sante slams his ntofo down in the target direction that deals physical damage to enemies hit and slows them by 80% for 0.5 seconds.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -186,11 +184,11 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Empowered Active:</p><p> K'Sante fires a shockwave in the target direction that applies the same effects to enemies hit, but also pulls them towards him over 0.65 seconds and stuns them for 0.8 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Empowered Active:</span> K'Sante fires a shockwave in the target direction that applies the same effects to enemies hit, but also pulls them towards him over 0.65 seconds and stuns them for 0.8 seconds.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">All Out Bonus:</p><p> Ntofo Strikes' cooldown is reduced by 33%, with a minimum total cooldown of 1.33 seconds. Upon entering All Out, Ntofo Strikes' stacks are reset. Ntofo Strikes' cooldown is reset if K'Sante had 2 stacks before entering All Out.</p></div>",
+            "description": "<span class=\"ability-header\">All Out Bonus:</span> Ntofo Strikes' cooldown is reduced by 33%, with a minimum total cooldown of 1.33 seconds. Upon entering All Out, Ntofo Strikes' stacks are reset. Ntofo Strikes' cooldown is reset if K'Sante had 2 stacks before entering All Out.",
             "leveling": []
           },
           {
@@ -199,28 +197,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              20
-            ],
-            "units": [
-              ""
-            ]
-          }
+          20
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                3.5
-              ],
-              "units": [
-                " - 0.0125 x bonus resistances, capped at 120 bonus resistances"
-              ]
-            }
-          ],
-          "affectedByCdr": false
-        },
+        "cooldown": [
+          3.5
+        ],
         "targeting": "Direction",
         "affects": "Enemies, Self",
         "spellshieldable": "true",
@@ -243,7 +224,8 @@
         "angle": null,
         "castTime": "0.45 : 0.35 (based on bonus resistances)",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -252,7 +234,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/KSante/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> K'Sante raises his ntofos defensively and prepares to dash in the target direction, charging for a minimum of 0.4 seconds and up to 1 second. During this time, he gains displacement immunity and 30% damage reduction; additionally, Path Maker's range, stun duration, and All Out bonus true damage modifier increase over the first 0.9 seconds of the channel.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> K'Sante raises his ntofos defensively and prepares to dash in the target direction, charging for a minimum of 0.4 seconds and up to 1 second. During this time, he gains displacement immunity and 30% damage reduction; additionally, Path Maker's range, stun duration, and All Out bonus true damage modifier increase over the first 0.9 seconds of the channel.",
             "leveling": []
           },
           {
@@ -260,7 +242,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> K'Sante dashes in the direction he targeted at the time of cast, though not through terrain, dealing physical damage to enemies he passes through, carrying them alongside him, and stunning them for 0.5 - 1.75 (based on channel time) seconds. This damage is capped against monsters.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> K'Sante dashes in the direction he targeted at the time of cast, though not through terrain, dealing physical damage to enemies he passes through, carrying them alongside him, and stunning them for 0.5 - 1.75 (based on channel time) seconds. This damage is capped against monsters.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -307,7 +289,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">All Out Bonus:</p><p> Path Maker no longer applies its knock back and stun, but its damage reduction is increased to 75%, the dash deals 10% - 80% (based on channel time) bonus true damage, and the dash speed is increased by 20%. Upon entering All Out, Path Maker's cooldown is refreshed.</p></div>",
+            "description": "<span class=\"ability-header\">All Out Bonus:</span> Path Maker no longer applies its knock back and stun, but its damage reduction is increased to 75%, the dash deals 10% - 80% (based on channel time) bonus true damage, and the dash speed is increased by 20%. Upon entering All Out, Path Maker's cooldown is refreshed.",
             "leveling": [
               {
                 "attribute": "Minimum Bonus True Damage",
@@ -392,36 +374,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              40,
-              45,
-              50,
-              55,
-              60
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40,
+          45,
+          50,
+          55,
+          60
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                14,
-                13,
-                12,
-                11,
-                10
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          14,
+          13,
+          12,
+          11,
+          10
+        ],
         "targeting": "Direction",
         "affects": "Self, Enemies",
         "spellshieldable": "true",
@@ -444,7 +409,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -453,7 +419,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/KSante/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> K'Sante dashes to the target location, though not through terrain, and grants himself a shield for 2 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> K'Sante dashes to the target location, though not through terrain, and grants himself a shield for 2 seconds.",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -487,7 +453,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">All Out Bonus:</p><p> Footwork's dash speed is increased, and its cooldown is reduced by 50%.</p></div>",
+            "description": "<span class=\"ability-header\">All Out Bonus:</span> Footwork's dash speed is increased, and its cooldown is reduced by 50%.",
             "leveling": []
           },
           {
@@ -496,36 +462,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              45,
-              50,
-              55,
-              60,
-              65
-            ],
-            "units": [
-              ""
-            ]
-          }
+          45,
+          50,
+          55,
+          60,
+          65
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                10,
-                9.5,
-                9,
-                8.5,
-                8
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          10,
+          9.5,
+          9,
+          8.5,
+          8
+        ],
         "targeting": "Location / Unit",
         "affects": "Self, Allies",
         "spellshieldable": null,
@@ -548,7 +497,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -557,7 +507,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/KSante/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> K'Sante roots the target enemy champion for 0.5 seconds and gains displacement immunity over the cast time. He then shatters his ntofos, pulling the target to a location that is 300 units in the cast direction from their location at the time of cast, during which they are revealed, and blinking 175 units behind that location. The target is dealt physical damage near the end of the displacement and is stunned for 0.3 seconds once it ends.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> K'Sante roots the target enemy champion for 0.5 seconds and gains displacement immunity over the cast time. He then shatters his ntofos, pulling the target to a location that is 300 units in the cast direction from their location at the time of cast, during which they are revealed, and blinking 175 units behind that location. The target is dealt physical damage near the end of the displacement and is stunned for 0.3 seconds once it ends.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -632,7 +582,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">All Out:</p><p> K'Sante gains a health threshold equal to 65% maximum health which cannot be modified nor exceeded by any means. Upon entering All Out, his current health is reduced to this threshold if it is above it. Additionally, his base armor and base magic resistance are reduced by 85% bonus armor and 85% bonus magic resistance, respectively. In return, he gains bonus attack speed, 50% bonus-armor penetration, and 20% omnivamp, and modifies his basic abilities which can be cast at no cost.Upon entering All Out, K'Sante is restored to 100% maximum mana. His mana then decays to 0 over the duration of the buff, after which the amount of mana he had prior to entering All Out is restored.</p></div>",
+            "description": "<span class=\"ability-header\">All Out:</span> K'Sante gains a health threshold equal to 65% maximum health which cannot be modified nor exceeded by any means. Upon entering All Out, his current health is reduced to this threshold if it is above it. Additionally, his base armor and base magic resistance are reduced by 85% bonus armor and 85% bonus magic resistance, respectively. In return, he gains bonus attack speed, 50% bonus-armor penetration, and 20% omnivamp, and modifies his basic abilities which can be cast at no cost.Upon entering All Out, K'Sante is restored to 100% maximum mana. His mana then decays to 0 over the duration of the buff, after which the amount of mana he had prior to entering All Out is restored.",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -657,30 +607,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                120,
-                100,
-                80
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          120,
+          100,
+          80
+        ],
         "targeting": "unit",
         "affects": "Self, Enemies",
         "spellshieldable": "true",
@@ -690,7 +623,7 @@
         "projectile": null,
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "All Out's cast has a  forgiveness radius of 50 units.\nIf the terrain behind the target is invalid by not having an opposite side, All Out will not trigger its additional effects from pulling the target over terrain.\nThe pull destination in this case would be inside terrain and thus the displacement would stop at the boundary.\nK'Sante will restore the exact amount of mana he had before going All Out after the buff expires.\nThe amount does not change even if his maximum mana changes during the effect.\nWhile the target is being  pulled over terrain, they are additionally  attached to a missile that travels in the same trajectory as the displacement, becoming detached afterwards.\nRemoving the  airborne debuff will not cause the target to detach from the missile.\nK'Sante will blink 175 units beyond the target's hitbox's edge at the end location.\nIf the target resists the  pull by having a  spell shield or being  immune to crowd control or  displacement immune, K'Sante will still blink beyond the pull's end location as if the target were displaced.\nAll Out's remaining duration is tracked in his secondary resource bar.\nAll Out does not interact with player-generated terrain.\nK'Sante's strike at the end of the displacement when the target is pulled over terrain does not apply  Dauntless Instinct's mark.\nGoing All Out does not override K'Sante's attack or movement commands if the target does not collide with terrain.\nIf the target is however pulled through terrain then K'Sante will be ordered to basic attack the target afterwards.\nThe percentage bonus armor penetration stacks additively with other sources of percentage armor penetration.(note)\nSince K'Sante retains the stats he \"lost\", any effects that scale based on those stats will calculate based on the value prior to him going All Out.\nHis base resistances can be reduced below 0 by his bonus resistances.\nAll Out will not take into account resistances gained through % bonuses (eg.  Conditioning,  Mountainous Vigor, etc) when reducing K'Sante's base resistances.(bug)\n Jak'Sho, The Protean's Voidborn Resilience specifically is taken into account.\nGaining bonus health during All Out causes the health threshold to be briefly increased then reset back to its original value.\nThe bonus health is still applied to his current health.\nDuring All Out's cast and displacement, the target's camera is locked and centered on their champion.\nFor K'Sante, his camera centers on him at the start of the cast time, then once again at the end of the cast time at the location of his blink behind the target, and it is not locked.\nAll Out's granted  untargetability from the  vanish during the target's pull of over 2000 units does not  destroy in-flight  projectiles.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).\nThe following table refers for interactions while K'Sante is in cast time:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection\n\nThe following table refers for interactions while K'Sante is performing All Out's cast:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
+        "notes": "All Out's cast has a  forgiveness radius of  50 units.\nIf the terrain behind the target is invalid by not having an opposite side, All Out will not trigger its additional effects from pulling the target over terrain.\nThe pull destination in this case would be inside terrain and thus the displacement would stop at the boundary.\nK'Sante will restore the exact amount of mana he had before going All Out after the buff expires.\nThe amount does not change even if his maximum mana changes during the effect.\nWhile the target is being  pulled over terrain, they are additionally  attached to a missile that travels in the same trajectory as the displacement, becoming detached afterwards.\nRemoving the  airborne debuff will not cause the target to detach from the missile.\nIf the target resists the  pull by having a  spell shield or being  immune to crowd control or  displacement immune, K'Sante will still blink beyond the pull's end location as if the target were displaced.\nK'Sante's strike at the end of the displacement when the target is pulled over terrain does not apply  Dauntless Instinct's mark.\nGoing All Out does not override K'Sante's attack or movement commands if the target does not collide with terrain.\nIf the target is however pulled through terrain then K'Sante will be ordered to basic attack the target afterwards.\nThe percentage bonus armor penetration stacks additively with other sources of percentage armor penetration.(note)\nSince K'Sante retains the stats he \"lost\", any effects that scale based on those stats will calculate based on the value prior to him going All Out.\nHis base resistances can be reduced below 0 by his bonus resistances.\nAll Out will not take into account resistances gained through % bonuses (eg.  Conditioning,  Mountainous Vigor, etc) when reducing K'Sante's base resistances.(bug)\n Jak'Sho, The Protean's Voidborn Resilience specifically is taken into account.\nGaining bonus health during All Out causes the health threshold to be briefly increased then reset back to its original value.\nThe bonus health is still applied to his current health.\nDuring All Out's cast and displacement, the target's camera is locked and centered on their champion.\nFor K'Sante, his camera centers on him at the start of the cast time, then once again at the end of the cast time at the location of his blink behind the target, and it is not locked.\nAll Out's granted  untargetability from the  vanish during the target's pull of over 2000 units does not  destroy in-flight  projectiles.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).\nThe following table refers for interactions while K'Sante is in cast time:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection\n\nThe following table refers for interactions while K'Sante is performing All Out's cast:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
         "blurb": "Active:  K'Sante  roots an enemy and then shatters his tonfas,  knocking them back,  blinking behind them, and dealing physical damage. If the enemy is pushed into terrain, they will be knocked over it and take additional physical damage.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -703,10 +636,10 @@
         "angle": null,
         "castTime": "0.4",
         "effectRadius": "350 / 5000 / Global",
-        "targetRange": "300"
+        "targetRange": "300",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Defiant and courageous, K'Sante battles colossal beasts and ruthless Ascended to protect his home of Nazumah, a coveted oasis amid the sands of Shurima. But after a falling-out with his former partner, K'Sante realizes that in order to become a warrior worthy of leading his city, he must temper his single-minded drive for success. Only then can he avoid falling prey to his own pride and find the wisdom he needs to defeat the vicious monsters threatening his people.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ksante/skins/base/images/ksante_splash_tile_0.jpg"
+  "lore": "Defiant and courageous, K'Sante battles colossal beasts and ruthless Ascended to protect his home of Nazumah, a coveted oasis amid the sands of Shurima. But after a falling-out with his former partner, K'Sante realizes that in order to become a warrior worthy of leading his city, he must temper his single-minded drive for success. Only then can he avoid falling prey to his own pride and find the wisdom he needs to defeat the vicious monsters threatening his people."
 }

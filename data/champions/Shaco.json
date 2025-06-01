@@ -98,7 +98,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Shaco/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Shaco's basic attacks are empowered to deal 20 - 35 (based on level) (+ 30% bonus AD) bonus physical damage when hitting an enemy from behind. Backstab is affected by critical strike modifiers.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Shaco's basic attacks are empowered to deal 20 - 35 (based on level) (+ 30% bonus AD) bonus physical damage when hitting an enemy from behind. Backstab is affected by critical strike modifiers.",
             "leveling": []
           },
           {
@@ -107,10 +107,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Enemies",
         "spellshieldable": "False",
@@ -133,7 +130,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -142,7 +140,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Shaco/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Shaco becomes invisible for a duration, and after a 0.125-second delay, he blinks to the target location.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Shaco becomes invisible for a duration, and after a 0.125-second delay, he blinks to the target location.",
             "leveling": [
               {
                 "attribute": "Invisibility Duration",
@@ -198,7 +196,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Backstab Bonus:</p><p> The attack will critically strike for (155% + 40%) damage.</p></div>",
+            "description": "<span class=\"ability-header\">Backstab Bonus:</span> The attack will critically strike for (155% + 40%) damage.",
             "leveling": []
           },
           {
@@ -207,32 +205,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              40
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                12,
-                11.5,
-                11,
-                10.5,
-                10
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          12,
+          11.5,
+          11,
+          10.5,
+          10
+        ],
         "targeting": "Location",
         "affects": "Self",
         "spellshieldable": null,
@@ -255,7 +236,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": "400"
+        "targetRange": "400",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -264,11 +246,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Shaco/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Shaco summons a box at the target location that becomes stealthed after arming over 2 seconds, lasting for up to 40 (+ 10% AP) seconds. The box is invulnerable and untargetable to enemies while stealthed.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Shaco summons a box at the target location that becomes stealthed after arming over 2 seconds, lasting for up to 40 (+ 10% AP) seconds. The box is invulnerable and untargetable to enemies while stealthed.",
             "leveling": []
           },
           {
-            "description": "The box will spring out upon enemy contact, fearing nearby enemies for a duration, modified to 2.2 seconds against non-champions, and rooting them for a duration, modified to a 1 second root against non-champions. After a 0.15-second delay of the box's activation, enemies hit also have their movement speed reduced. Enemy champions have their movement speed set to a static 100 for the same duration as the fear plus 0.25 seconds, while non-champions are set to a static 60 for 2.35 seconds.",
+            "description": "The box will spring out upon enemy contact, fearing nearby enemies for a duration, modified to 2.2 seconds against non-champions, and rooting them for a duration, modified to a 1 second root against non-champions. After a 0.15-second delay of the box's activation, enemies hit also have their movement speed reduced. Enemy champions have their movement speed set to a static 100, while non-champions are set to a static 60. The movement speed reduction lasts for the same duration as the fear plus 0.3 seconds.",
             "leveling": [
               {
                 "attribute": "Fear Duration",
@@ -309,11 +291,11 @@
                 "modifiers": [
                   {
                     "values": [
-                      0.75,
-                      1,
-                      1.25,
-                      1.5,
-                      1.75
+                      0.8,
+                      1.05,
+                      1.3,
+                      1.55,
+                      1.8
                     ],
                     "units": [
                       " seconds"
@@ -451,32 +433,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              70,
-              65,
-              60,
-              55,
-              50
-            ],
-            "units": [
-              ""
-            ]
-          }
+          70,
+          65,
+          60,
+          55,
+          50
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                15
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          15
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "true",
@@ -499,7 +464,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "500"
+        "targetRange": "500",
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -508,7 +474,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Shaco/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Shaco's basic attacks slow enemies for 2 seconds while Two-Shiv Poison is not on cooldown.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Shaco's basic attacks slow enemies for 2 seconds while Two-Shiv Poison is not on cooldown.",
             "leveling": [
               {
                 "attribute": "Slow",
@@ -530,7 +496,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Shaco throws a dagger at the target enemy that deals magic damage, increased by 50% if they are below 30% of their maximum health, and slows them for 3 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Shaco throws a dagger at the target enemy that deals magic damage, increased by 50% if they are below 30% of their maximum health, and slows them for 3 seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -618,33 +584,16 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Backstab Bonus:</p><p> The dagger deals an additional 15 - 50 (based on level) (+ 10% AP) bonus magic damage, increased to 22.5 - 75 (based on level) (+ 15% AP) if the target is below 30% of their maximum health.</p></div>",
+            "description": "<span class=\"ability-header\">Backstab Bonus:</span> The dagger deals an additional 15 - 50 (based on level) (+ 10% AP) bonus magic damage, increased to 22.5 - 75 (based on level) (+ 15% AP) if the target is below 30% of their maximum health.",
             "leveling": []
           }
         ],
         "cost": [
-          {
-            "values": [
-              75
-            ],
-            "units": [
-              ""
-            ]
-          }
+          75
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                8
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          8
+        ],
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -667,7 +616,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "625"
+        "targetRange": "625",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -676,15 +626,15 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Shaco/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Shaco vanishes for 0.5 seconds and blinks in the target direction while creating a clone of himself that is summoned in the opposite direction, remaining within control range of him as a controllable clone for up to 18 seconds. Hallucinate can be recast at any time while the clone is alive, and can be used while affected by cast-inhibiting crowd control.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Shaco vanishes for 0.5 seconds and blinks in the target direction while creating a clone of himself that is summoned in the opposite direction, remaining within control range of him as a controllable clone for up to 18 seconds. Hallucinate can be recast at any time while the clone is alive, and can be used while affected by cast-inhibiting crowd control.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Shaco commands the clone to move to the target location.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Shaco commands the clone to move to the target location.",
             "leveling": []
           },
           {
-            "description": "The clone will explode upon dying or expiring to deal magic damage to nearby enemies and deploy three mini-boxes that activate instantly, fearing nearby enemies for 1.25 seconds, increased to 2.2 seconds against non-champions, and rooting them for 0.5 seconds, increased to 0.6 seconds against monsters and 1 second against minions. After a 0.15-second delay of the boxes' activation, enemies hit also have their movement speed reduced. Enemy champions have their movement speed set to a static 100, while non-champions are set to a static 60. The movement speed reduction lasts for[ the same duration as the fear plus 0.25 seconds. ][ 1.25 seconds against champions, 2.25 seconds against minions, and 2.5 seconds against monsters. ]",
+            "description": "The clone will explode upon dying or expiring to deal magic damage to nearby enemies and deploy three mini-boxes that activate instantly, fearing nearby enemies for 1 second, increased to 2.2 seconds against non-champions, and rooting them for 0.5 seconds, increased to 0.6 seconds against monsters and 1 second against minions. After a 0.15-second delay of the boxes' activation, enemies hit also have their movement speed reduced. Enemy champions have their movement speed set to a static 100, while non-champions are set to a static 60. The movement speed reduction lasts for the same duration as the fear plus 0.3 seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -768,30 +718,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                100,
-                90,
-                80
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          100,
+          90,
+          80
+        ],
         "targeting": "Direction",
         "affects": "Self",
         "spellshieldable": "True",
@@ -801,7 +734,7 @@
         "projectile": null,
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "The root and fear are applied at the same time. The target cannot be forced to move by the fear during the root.\nThe target is however allowed to move despite being rooted for the first 0.15 seconds of the root. They can be forced to move by the fear during this time.\nShaco and the Hallucination will face each other the moment of their appearance.\nThe explosion and the boxes apply  area damage, while the clone deals  pet damage.\nHallucinate will cast from wherever Shaco is at the end of the cast time.\nWhen Shaco dies, the clone will automatically target the closest visible enemy champion within 1500 units.\nThe clone will always spawn in the opposite direction of the cursor.\nIf Deceive and Hallucinate are used in quick succession, the clone will spawn in the direction of the cursor instead.",
+        "notes": "If the explosion hits at least one minion, the boxes will fear all enemies regardless of their unit type for 2.2 seconds, causing enemy champions to be feared for the non-champion fear duration.(bug)\nThe root and fear are applied at the same time. The target cannot be forced to move by the fear during the root.\nThe target is however allowed to move despite being rooted for the first 0.15 seconds of the root. They can be forced to move by the fear during this time.\nShaco and the Hallucination will face each other the moment of their appearance.\nThe explosion and the boxes apply  area damage, while the clone deals  pet damage.\nHallucinate will cast from wherever Shaco is at the end of the cast time.\nWhen Shaco dies, the clone will automatically target the closest visible enemy champion within 1500 units.\nThe clone will always spawn in the opposite direction of the cursor.\nIf Deceive and Hallucinate are used in quick succession, the clone will spawn in the direction of the cursor instead.",
         "blurb": "Active:  Shaco briefly  vanishes and  blinks in the target direction, creating a  clone of himself for some time.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -814,10 +747,10 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "250",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Crafted long ago as a plaything for a lonely prince, the enchanted marionette Shaco now delights in murder and mayhem. Corrupted by dark magic and the loss of his beloved charge, the once-kind puppet finds pleasure only in the misery of the poor souls he torments. He uses toys and simple tricks to deadly effect, finding the results of his bloody “games” hilarious—and for those who hear a dark chuckle in the dead of night, the Demon Jester may have marked them as his next plaything.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/shaco/skins/base/images/shaco_splash_tile_0.jpg"
+  "lore": "Crafted long ago as a plaything for a lonely prince, the enchanted marionette Shaco now delights in murder and mayhem. Corrupted by dark magic and the loss of his beloved charge, the once-kind puppet finds pleasure only in the misery of the poor souls he torments. He uses toys and simple tricks to deadly effect, finding the results of his bloody “games” hilarious—and for those who hear a dark chuckle in the dead of night, the Demon Jester may have marked them as his next plaything."
 }

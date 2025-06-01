@@ -13,7 +13,7 @@ const rs = useRuneStore()
 // const pathSet = ref(props.pathSet == 1 ? 'primary' : 'secondary')
 
 const selectedPath = ref(props.modelValue)
-const { allRunes, pathList } = useRunes()
+const { runes, pathList } = useRunes()
 
 onMounted(() => {
   selectedPath.value = props.modelValue
@@ -27,7 +27,7 @@ const selectedRune = ref(null)
     class="ease gradient border-b3 shadow-smooth relative size-full h-fit w-120 max-w-120 rounded-xl bg-clip-border transition-all duration-500"
     :data-path="selectedPath">
     <div class="from-b1/20 via-b1/90 to-b1 flex size-full flex-col justify-center gap-16 justify-self-center rounded-xl bg-linear-to-b via-25% py-12">
-      <div
+      <!-- <div
         v-for="(slot, i) in allRunes[selectedPath]"
         :key="i"
         class="animate-in animate-out fade-out fade-in flex h-16 justify-evenly gap-3 transition-all duration-500"
@@ -59,7 +59,7 @@ const selectedRune = ref(null)
             :alt="rune.name"
             class="size-full" />
         </label>
-      </div>
+      </div>-->
     </div>
   </div>
 </template>

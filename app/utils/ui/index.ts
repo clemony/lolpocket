@@ -1,4 +1,7 @@
+export * from './getGreeting'
 export * from './handleColors'
 export * from './handleGradesPlusColors'
 export * from './handleUi'
+export * from './motion'
 export * from './tableTheme'
+

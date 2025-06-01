@@ -100,11 +100,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Orianna/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate - The Ball:</p><p> Orianna is accompanied by The Ball, which she commands with her abilities. The Ball incurs a 0.01-second global cooldown on all of her abilities when she casts any ability. Additionally, The Ball attaches to Orianna if she is near it, and snaps back to her if she moves too far away from it, which incurs a 0.75-second cooldown on Command: Shockwave.</p></div>",
+            "description": "<span class=\"ability-header\">Innate - The Ball:</span> Orianna is accompanied by The Ball, which she commands with her abilities. The Ball incurs a 0.01-second global cooldown on all of her abilities when she casts any ability. Additionally, The Ball attaches to Orianna if she is near it, and snaps back to her if she moves too far away from it, which incurs a 0.75-second cooldown on Command: Shockwave.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Orianna's basic attacks generate a stack of Clockwork Winding for 4 seconds, refreshing on subsequent attacks and stacking up to 2 times. All stacks are lost when attacking a new enemy.</p></div>\n\n\n<div><p class=\"ability-header\">Clockwork Winding:</p><p> Orianna's basic attacks are empowered to deal 10 - 50 (based on level) (+ 15% AP) bonus magic damage on-hit, increased by[ 20% ][ 2 - 10 (based on level) (+ 3% AP) ]per stack, up to 14 - 70 (based on level) (+ 21% AP) total bonus magic damage.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Orianna's basic attacks generate a stack of Clockwork Winding for 4 seconds, refreshing on subsequent attacks and stacking up to 2 times. All stacks are lost when attacking a new enemy.\n<span class=\"ability-header\">Clockwork Winding:</span> Orianna's basic attacks are empowered to deal 10 - 50 (based on level) (+ 15% AP) bonus magic damage on-hit, increased by[ 20% ][ 2 - 10 (based on level) (+ 3% AP) ]per stack, up to 14 - 70 (based on level) (+ 21% AP) total bonus magic damage.",
             "leveling": []
           },
           {
@@ -113,10 +113,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Enemies, Self",
         "spellshieldable": null,
@@ -139,7 +136,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": "1290 / 1355 / 135",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -148,7 +146,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Orianna/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Orianna commands The Ball to fly to the target location and remain there, dealing magic damage to enemies it passes through and nearby enemies upon arrival, reduced to 70% against those hit beyond the first.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Orianna commands The Ball to fly to the target location and remain there, dealing magic damage to enemies it passes through and nearby enemies upon arrival, reduced to 70% against those hit beyond the first.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -204,32 +202,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              35
-            ],
-            "units": [
-              ""
-            ]
-          }
+          35
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                6,
-                5.25,
-                4.5,
-                3.75,
-                3
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          6,
+          5.25,
+          4.5,
+          3.75,
+          3
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -252,7 +233,8 @@
         "angle": null,
         "castTime": "None",
         "effectRadius": "175",
-        "targetRange": "825"
+        "targetRange": "825",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -261,7 +243,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Orianna/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Orianna commands The Ball to emit an electric pulse that deals magic damage to nearby enemies.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Orianna commands The Ball to emit an electric pulse that deals magic damage to nearby enemies.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -314,32 +296,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              60,
-              65,
-              70,
-              75,
-              80
-            ],
-            "units": [
-              ""
-            ]
-          }
+          60,
+          65,
+          70,
+          75,
+          80
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                7
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          7
+        ],
         "targeting": "Auto",
         "affects": "Enemies, Allies",
         "spellshieldable": "True",
@@ -362,7 +327,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "225",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -371,7 +337,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Orianna/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> The Ball grants bonus armor and bonus magic resistance to the unit it is attached to.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> The Ball grants bonus armor and bonus magic resistance to the unit it is attached to.",
             "leveling": [
               {
                 "attribute": "Bonus Resistances",
@@ -393,7 +359,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Orianna commands The Ball to fly to herself or the target allied champion and attach itself to the target, dealing magic damage to enemies it passes through and granting the target a shield for 2.5 seconds upon arrival.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Orianna commands The Ball to fly to herself or the target allied champion and attach itself to the target, dealing magic damage to enemies it passes through and granting the target a shield for 2.5 seconds upon arrival.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -449,28 +415,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              60
-            ],
-            "units": [
-              ""
-            ]
-          }
+          60
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                9
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          9
+        ],
         "targeting": "Unit",
         "affects": "Enemies, Allies",
         "spellshieldable": "True",
@@ -493,7 +442,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": "1120"
+        "targetRange": "1120",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -502,7 +452,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Orianna/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Orianna commands The Ball to unleash a shockwave that deals magic damage to nearby enemies, stuns them for 0.75 seconds, and pulls them over 325 units, though not through terrain.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Orianna commands The Ball to unleash a shockwave that deals magic damage to nearby enemies, stuns them for 0.75 seconds, and pulls them over 325 units, though not through terrain.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -531,30 +481,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                110,
-                95,
-                80
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          110,
+          95,
+          80
+        ],
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -577,10 +510,10 @@
         "angle": null,
         "castTime": "0.5",
         "effectRadius": "415",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Once a curious girl of flesh and blood, Orianna is now a technological marvel comprised entirely of clockwork. She became gravely ill after an accident in the lower districts of Zaun, and her failing body had to be replaced with exquisite artifice, piece by piece. Accompanied by an extraordinary brass sphere she built for companionship and protection, Orianna is now free to explore the wonders of Piltover, and beyond.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/base/images/orianna_splash_tile_0.jpg"
+  "lore": "Once a curious girl of flesh and blood, Orianna is now a technological marvel comprised entirely of clockwork. She became gravely ill after an accident in the lower districts of Zaun, and her failing body had to be replaced with exquisite artifice, piece by piece. Accompanied by an extraordinary brass sphere she built for companionship and protection, Orianna is now free to explore the wonders of Piltover, and beyond."
 }

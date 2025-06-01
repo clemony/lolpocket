@@ -8,15 +8,15 @@ const player = computed (() => {
   return props.player
 })
 
-const runes = await $fetch<RuneIndex[]>('/api/index/rune-index.json')
+const ix = useIndexStore()
 
 const keystone = computed (() => {
   const id = player.value.perks.keystone
-  return runes.find(r => r.id == id)
+  return ix.runes.find(r => r.id == id)
 })
 
 const secondary = computed (() => {
-  return runes.find(p => p.id == player.value.perks.secondary).path
+  return ix.runes.find(p => p.id == player.value.perks.secondary).path
 })
 </script>
 

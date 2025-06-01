@@ -99,15 +99,12 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Leona/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Leona's abilities mark enemies hit for 2.5 seconds, refreshing on subsequent hits. Allied champions' damaging attacks and abilities against a marked target will consume the mark to deal 32 - 151 (based on level) bonus magic damage.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Leona's abilities mark enemies hit for 2.5 seconds, refreshing on subsequent hits. Allied champions' damaging attacks and abilities against a marked target will consume the mark to deal 32 - 151 (based on level) bonus magic damage.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Enemies",
         "spellshieldable": "true",
@@ -130,7 +127,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -139,7 +137,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Leona/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Leona illuminates her shield, empowering her next basic attack within 6 seconds to have a 0.25-second cast time, gain 50 bonus range, deal bonus magic damage and stun the target for 1 second.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Leona illuminates her shield, empowering her next basic attack within 6 seconds to have a 0.25-second cast time, gain 50 bonus range, deal bonus magic damage and stun the target for 1 second.",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage",
@@ -174,32 +172,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              30,
-              35,
-              40,
-              45,
-              50
-            ],
-            "units": [
-              ""
-            ]
-          }
+          30,
+          35,
+          40,
+          45,
+          50
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                5
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          5
+        ],
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -209,7 +190,7 @@
         "projectile": null,
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "The enhanced attack will apply other  on-hit effects and can  critically strike as normal.\n Critical strikes do not interact with Shield of Daybreak's bonus damage.\nPENDING FOR TEST:: Shield of Daybreak's interactions with  dodging,  blocking.\nShield of Daybreak's attack can  miss, nullifying its effects entirely.\nShield of Daybreak's attack does not put Leona's basic attack on cooldown.\nThis effectively performs a second  attack reset.\nThis is unlike other empowered attacks (including those which, similar to Shield of Daybreak, use a more unconventional spell cast rather than an attack override).\nLeona will wait out Shield of Daybreak's wind-down before automatically attacking, anyway. The player must issue the next attack themselves to gain the full benefit of the second reset.\n High Noon Leona gives the second attack a unique animation.\nIf the target becomes  untargetable,  dies, or is too far away during the empowered attack's cast time, it is cancelled but not consumed.\nThe empowered attack will not trigger against buildings.",
+        "notes": "The enhanced attack will apply other  on-hit effects and can  critically strike as normal.\n Critical strikes do not interact with Shield of Daybreak's bonus damage.\nPENDING FOR TEST:: Shield of Daybreak's interactions with  dodging,  blocking.\nShield of Daybreak's attack can  miss, nullifying its effects entirely.\nShield of Daybreak's attack does not put Leona's basic attack on cooldown.\nThis effectively performs a second  attack reset.\nThis is unlike other empowered attacks (including those which, similar to Shield of Daybreak, use a more unconventional spell cast rather than an attack override).\nLeona will wait out Shield of Daybreak's wind-down before automatically attacking, anyway. The player must issue the next attack themselves to gain the full benefit of the second reset.\n High Noon Leona gives the second attack a unique animation.\nIf the target becomes  untargetable,  dies, or is too far away during the empowered attack's cast time, it is cancelled but not consumed.\nThe empowered attack will not trigger against structures.",
         "blurb": "Active:  Leona illuminates her shield, causing her next basic attack within a few seconds to deal bonus magic damage and briefly  stun the target.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -222,7 +203,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -231,7 +213,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Leona/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Leona raises her guard for 3 seconds, gaining flat damage reduction of up to 50% of the damage instance and bonus armor and bonus magic resistance.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Leona raises her guard for 3 seconds, gaining flat damage reduction of up to 50% of the damage instance and bonus armor and bonus magic resistance.",
             "leveling": [
               {
                 "attribute": "Flat Damage Reduction",
@@ -334,32 +316,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              60
-            ],
-            "units": [
-              ""
-            ]
-          }
+          60
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                14,
-                13,
-                12,
-                11,
-                10
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          14,
+          13,
+          12,
+          11,
+          10
+        ],
         "targeting": "Auto",
         "affects": "Self, Enemies",
         "spellshieldable": "special",
@@ -382,7 +347,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "450",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -391,7 +357,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Leona/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Leona projects her sword in the target direction that deals magic damage to enemies hit.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Leona projects her sword in the target direction that deals magic damage to enemies hit.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -430,36 +396,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              40,
-              45,
-              50,
-              55,
-              60
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40,
+          45,
+          50,
+          55,
+          60
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                12,
-                10.5,
-                9,
-                7.5,
-                6
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          12,
+          10.5,
+          9,
+          7.5,
+          6
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "true",
@@ -482,7 +431,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "900"
+        "targetRange": "900",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -491,7 +441,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Leona/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Leona calls down a solar flare that strikes upon the target location after 0.625 seconds, granting sight of the area before impact and for another 3 seconds afterwards. Enemies hit are dealt magic damage.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Leona calls down a solar flare that strikes upon the target location after 0.625 seconds, granting sight of the area before impact and for another 3 seconds afterwards. Enemies hit are dealt magic damage.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -524,30 +474,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                90,
-                75,
-                60
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          90,
+          75,
+          60
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -570,10 +503,10 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "325 / 175 / 800",
-        "targetRange": "1200"
+        "targetRange": "1200",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Imbued with the fire of the sun, Leona is a holy warrior of the Solari who defends Mount Targon with her Zenith Blade and the Shield of Daybreak. Her skin shimmers with starfire while her eyes burn with the power of the celestial Aspect within her. Armored in gold and bearing a terrible burden of ancient knowledge, Leona brings enlightenment to some, death to others.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leona/skins/base/images/leona_splash_tile_0.jpg"
+  "lore": "Imbued with the fire of the sun, Leona is a holy warrior of the Solari who defends Mount Targon with her Zenith Blade and the Shield of Daybreak. Her skin shimmers with starfire while her eyes burn with the power of the celestial Aspect within her. Armored in gold and bearing a terrible burden of ancient knowledge, Leona brings enlightenment to some, death to others."
 }

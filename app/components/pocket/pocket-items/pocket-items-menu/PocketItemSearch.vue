@@ -22,8 +22,7 @@ const route = useRoute()
 
 const is = useItemStore()
 
-const { data: itemData } = await useFetch('/api/lists/item-index.json')
-const items = Object.values(itemData.value) as ItemIndex[]
+const ix = useIndexStore()
 
 const searchQuery = ref('')
 
@@ -36,7 +35,7 @@ const fuse = ref<Fuse<any> | null>(null)
 
 // Initialize Fuse once the items are available
 watch(
-  () => items,
+  () => Object.values(ix.items),
   (newItems) => {
     if (newItems && newItems.length > 0) {
       fuse.value = new Fuse(newItems, {
@@ -51,7 +50,7 @@ watch(
 
 const searchResult = computed(() => {
   if (!searchQuery.value) {
-    return items || []
+    return ix.items || []
   }
 
   if (!fuse.value)
@@ -62,7 +61,7 @@ const searchResult = computed(() => {
 })
 // TODO result filter
 watch(searchResult, (newSearchResults) => {
-  is.pItemFilter.result = newSearchResults
+  is.pItemFilter.result = Object.values(newSearchResults)
   if (route.path == '/items/stats') {
     setTimeout(() => {
       // is.itemGridApi.setGridOption('rowData', filterDbItems())

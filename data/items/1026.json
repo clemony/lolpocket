@@ -30,7 +30,7 @@
     {
       "id": 4628,
       "name": "Horizon Focus",
-      "gold": 2900
+      "gold": 2800
     },
     {
       "id": 3116,
@@ -73,7 +73,7 @@
   "removed": false,
   "requiredChampion": "",
   "requiredAlly": "",
-  "icon": "https://raw.communitydragon.org/15.10/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1026_mage_t1_blastingwand.png",
+  "icon": "https://raw.communitydragon.org/15.11/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1026_mage_t1_blastingwand.png",
   "simpleDescription": "Moderately increases Ability Power",
   "nicknames": [],
   "passives": [],

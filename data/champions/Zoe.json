@@ -99,15 +99,12 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zoe/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> After casting an ability, Zoe empowers her next basic attack or Spell Thief bolt within 5 seconds to become non-projectile and deal 16 - 130 (based on level) (+ 20% AP) bonus magic damage.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> After casting an ability, Zoe empowers her next basic attack or Spell Thief bolt within 5 seconds to become non-projectile and deal 16 - 130 (based on level) (+ 20% AP) bonus magic damage.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Enemies",
         "spellshieldable": "False",
@@ -130,7 +127,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -139,7 +137,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zoe/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Zoe shoots a star in the target direction that explodes upon hitting an enemy, dealing magic damage to nearby enemies hit. The total damage is increased by 0% - 150% (based on distance traveled).</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Zoe shoots a star in the target direction that explodes upon hitting an enemy, dealing magic damage to nearby enemies hit. The total damage is increased by 0% - 150% (based on distance traveled).",
             "leveling": [
               {
                 "attribute": "Minimum Magic Damage",
@@ -248,7 +246,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Zoe redirects the star in the target path, empowering it with increased speed and radius, and resetting its damage modifier on cast. The redirected star can travel until it reaches 800-units outbound from Zoe.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Zoe redirects the star in the target path, empowering it with increased speed and radius, and resetting its damage modifier on cast. The redirected star can travel until it reaches 800-units outbound from Zoe.",
             "leveling": []
           },
           {
@@ -257,36 +255,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              40,
-              45,
-              50,
-              55,
-              60
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40,
+          45,
+          50,
+          55,
+          60
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                8.5,
-                8,
-                7.5,
-                7,
-                6.5
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          8.5,
+          8,
+          7.5,
+          7,
+          6.5
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -309,7 +290,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "180",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -318,7 +300,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zoe/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive - Wheeeee:</p><p> Whenever Zoe casts Spell Thief or a summoner spell, she gains bonus movement speed for a duration, and summons three bolts that orbit her for the next 10 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Passive - Wheeeee:</span> Whenever Zoe casts Spell Thief or a summoner spell, she gains bonus movement speed for a duration, and summons three bolts that orbit her for the next 10 seconds.",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -412,7 +394,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Whenever a nearby enemy champion casts a specific summoner spell or item active, they drop the corresponding Spell Shard onto the ground that grants sight over a 100-radius area and remains for 40 seconds. Enemy minions have a 10% chance to spawn with a random Spell Shard that drops and remains for 20 seconds if Zoe kills them. Allied champions that kill them will cause the orb to drop only if Zoe is nearby.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Whenever a nearby enemy champion casts a specific summoner spell or item active, they drop the corresponding Spell Shard onto the ground that grants sight over a 100-radius area and remains for 40 seconds. Enemy minions have a 10% chance to spawn with a random Spell Shard that drops and remains for 20 seconds if Zoe kills them. Allied champions that kill them will cause the orb to drop only if Zoe is nearby.",
             "leveling": []
           },
           {
@@ -420,33 +402,16 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Zoe mimics the active effect of the collected Spell Shard.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Zoe mimics the active effect of the collected Spell Shard.",
             "leveling": []
           }
         ],
         "cost": [
-          {
-            "values": [
-              1
-            ],
-            "units": [
-              ""
-            ]
-          }
+          0
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                0.25
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          0.25
+        ],
         "targeting": "Auto",
         "affects": "Self, Enemies",
         "spellshieldable": "true",
@@ -469,7 +434,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": "2200 / Global / 1500 /  525",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -478,7 +444,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zoe/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Zoe kicks a bubble in the target direction that bursts upon the first enemy hit, otherwise lingering at maximum range over 1 second, then becoming a trap for 5 seconds that bursts upon contact with an enemy. The bubble can move through terrain only once, but travels the entire distance as bonus range, and will fall short if it would enter terrain again.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Zoe kicks a bubble in the target direction that bursts upon the first enemy hit, otherwise lingering at maximum range over 1 second, then becoming a trap for 5 seconds that bursts upon contact with an enemy. The bubble can move through terrain only once, but travels the entire distance as bonus range, and will fall short if it would enter terrain again.",
             "leveling": []
           },
           {
@@ -585,32 +551,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              80
-            ],
-            "units": [
-              ""
-            ]
-          }
+          80
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                16,
-                15,
-                14,
-                13,
-                12
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          16,
+          15,
+          14,
+          13,
+          12
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "special",
@@ -620,7 +569,7 @@
         "projectile": "TRUE",
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Applies  spell damage for the bubble and  default damage for the wake-up damage.\n Spell shield will not prevent falling  asleep nor block the wake-up damage.\nThe bubble's damage and  drowsy application will be blocked.\nZoe will gain  obscured vision of the target while they're  asleep if they are not  visible.\nIf exceptionally close to terrain, the bubble will pass through without detection and will still be able to pass through a second piece of terrain - although it sacrifices any range its already used going through the first piece.\nSleepy Trouble Bubble can interact with player-generated terrain.\nAt the end of the path of the initial missile, before continuing with the short bounce, Sleepy Trouble Bubble checks for targets in a  100 radius to immediately collide with.\nThis \"lollipop\" is one of only a few that is larger than the ability's missile width.\nSleepy Trouble Bubble can still be collided with during the short bounce between end of initial missile and the trap being formed.\nThis seems to use a  very small or negative collision radius, rather than normal missile collision.\nThis ability will cast from wherever the caster is at the end of the cast time.\nThe missile's maximum range location, or end position, is determined at the start of the cast and as such will always be fired to the same spot regardless of where Zoe is at the end of the cast time.\nAn applicable example of this can be seen in an interaction with her  Portal Jump. If Sleepy Trouble Bubble is cast right before she blinks back to Portal Jump's original cast position, the range of the missile will be extended for it to fire to the same end position as if she had not blinked back. This interaction occurs in this manner due to the missile's behavior as explained prior and the fact that Zoe blinks back with Portal Jump before the cast time of Sleepy Trouble Bubble finishes, causing the cast time to finish from Portal Jump's original cast position.\nIf the bonus damage from Sleepy Trouble Bubble kills the target, the kill credit is given to the champion that triggered the bonus damage.\nThis will still count as damage dealt by Zoe in the damage recap.\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection",
+        "notes": "Applies  spell damage for the bubble and  default damage for the wake-up damage.\n Spell shield will not prevent falling  asleep nor block the wake-up damage.\nThe bubble's damage and  drowsy application will be blocked.\nZoe will gain  obscured vision of the target while they're  asleep if they are not  visible.\nIf exceptionally close to terrain, the bubble will pass through without detection and will still be able to pass through a second piece of terrain - although it sacrifices any range its already used going through the first piece.\nSleepy Trouble Bubble can interact with player-generated terrain.\nAt the end of the path of the initial missile, before continuing with the short bounce, Sleepy Trouble Bubble checks for targets in a  100 radius to immediately collide with.\nThis \"lollipop\" is one of only a few that is larger than the ability's missile width.\nSleepy Trouble Bubble can still be collided with during the short bounce between end of initial missile and the trap being formed.\nThis seems to use a  very small or negative collision radius, rather than normal missile collision.\nThis ability will cast from wherever the caster is at the end of the cast time.\nThe missile's maximum range location, or end position, is determined at the start of the cast and as such will always be fired to the same spot regardless of where Zoe is at the end of the cast time.\nAn applicable example of this can be seen in an interaction with her  Portal Jump. If Sleepy Trouble Bubble is cast right before she blinks back to Portal Jump's original cast position, the range of the missile will be extended for it to fire to the same end position as if she had not blinked back. This interaction occurs in this manner due to the missile's behavior as explained prior and the fact that Zoe blinks back with Portal Jump before the cast time of Sleepy Trouble Bubble finishes, causing the cast time to finish from Portal Jump's original cast position.\nIf the bonus damage from \"Sleepy Trouble Bubble\" is applied from an ally champion, the bonus damage is applied before the damage from the allied champion.\nIf the bonus damage is enough to kill the enemy champion, Zoe will be awarded the kill credit and the allied champion will not be granted an assist (unless a different assist-granting interaction occurred).\nThis will still count as damage dealt by Zoe in the damage recap.\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection",
         "blurb": null,
         "missileSpeed": null,
         "rechargeRate": null,
@@ -633,7 +582,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "250",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -642,7 +592,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zoe/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> After a 0.15-second delay, Zoe blinks in the target direction and remains there for 0.95 seconds to 1.25 seconds, during which she sets her movement speed to a static 0 and has unobstructed vision. Afterwards, she blinks back to her casting position.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> After a 0.15-second delay, Zoe blinks in the target direction and remains there for 0.95 seconds to 1.25 seconds, during which she sets her movement speed to a static 0 and has unobstructed vision. Afterwards, she blinks back to her casting position.",
             "leveling": []
           },
           {
@@ -651,30 +601,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              40
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                11,
-                8,
-                5
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          11,
+          8,
+          5
+        ],
         "targeting": "Direction",
         "affects": "Self",
         "spellshieldable": null,
@@ -697,10 +630,10 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "As the embodiment of mischief, imagination, and change, Zoe acts as the cosmic messenger of Targon, heralding major events that reshape worlds. Her mere presence warps the arcane mathematics governing realities, sometimes causing cataclysms without conscious effort or malice. This perhaps explains the breezy nonchalance with which Zoe approaches her duties, giving her plenty of time to focus on playing games, tricking mortals, or otherwise amusing herself. An encounter with Zoe can be joyous and life affirming, but it is always more than it appears and often extremely dangerous.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/zoe/skins/base/images/zoe_splash_tile_0.jpg"
+  "lore": "As the embodiment of mischief, imagination, and change, Zoe acts as the cosmic messenger of Targon, heralding major events that reshape worlds. Her mere presence warps the arcane mathematics governing realities, sometimes causing cataclysms without conscious effort or malice. This perhaps explains the breezy nonchalance with which Zoe approaches her duties, giving her plenty of time to focus on playing games, tricking mortals, or otherwise amusing herself. An encounter with Zoe can be joyous and life affirming, but it is always more than it appears and often extremely dangerous."
 }

@@ -1,7 +1,6 @@
 <script setup lang="ts">
 const emit = defineEmits(['update:model'])
 
-const ts = useTempStore()
 
 const to = ref([])
 const categories = ref(itemStats)

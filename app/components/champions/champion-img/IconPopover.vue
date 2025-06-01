@@ -27,11 +27,11 @@ const pocket = computed(() => {
   return props.pocketKey ? getPocket(props.pocketKey) : props.pocket
 })
 
-const championSkins  = await $fetch<SkinRecord>('/api/lists/champion-skins.json')
+const ix = useIndexStore()
 
-const champs = computed(() => Object.values(championSkins || {}))
-const names = computed(() => champs.value.map(c => c.name))
-console.log("💠 - champs:", champs)
+const champs = computed(() => Object.values(ix.skins || {}))
+const names = computed(() => ix.skins.map(c => c.name))
+console.log('💠 - champs:', champs)
 const selectIcon = ref()
 const champSearch = ref(null)
 const selectedResult = ref(null)
@@ -55,20 +55,20 @@ const searchResult = computed(() => {
   if (!champName)
     return null
 
-  const entry = champs.value.find(champ => champ.name === champName)
-  if (!entry)
-    return null
+//   const entry = champs.value.find(champ => champ.name === champName)
+//   if (!entry)
+//     return null
 
-  const splashes = entry.skins.map(s => s.splashPath)
+//   const splashes = ix.skins.map(s => s.splashPath)
 
-  return new Fuse(splashes, { threshold: 0.3 }).search(champName).map(r => ({ splash: r.item, id: entry.id }))
-})
+//   return new Fuse(splashes, { threshold: 0.3 }).search(champName).map(r => ({ splash: r.item, id: entry.id }))
+// })
 
-watch(searchResult, (results) => {
-  const champName = selectedResult.value
-  const entry = champs.value.find(champ => champ.name === champName)
-  if (entry)
-    splashIcons.value = entry.skins.map(s => s.splashPath)
+// watch(searchResult, (results) => {
+//   const champName = selectedResult.value
+//   const entry = champs.value.find(champ => champ.name === champName)
+//   if (entry)
+//     splashIcons.value = entry.skins.map(s => s.splashPath)
 })
 
 function handleInput(e: string) {
@@ -87,11 +87,11 @@ onMounted(() => {
     <ContrastSearchInput v-model:model-value="champSearch" placeholder="Search Splash Icons..." @update:input="handleInput($event)" />
 
     <div v-if="!searchResult" class="pt-2 overflow-y-scroll w-full flex flex-col">
-      <label v-for="result in searchQuery" :key="result.item.id" class="justify-start btn btn-ghost max-h-90 hover:opacity-80 hover:!bg-b3/1   hover:!border-accent/20 hover:text-nc gap-3 text-3">
+      <!-- <label v-for="result in searchQuery" :key="result.item.id" class="justify-start btn btn-ghost max-h-90 hover:opacity-80 hover:!bg-b3/1   hover:!border-accent/20 hover:text-nc gap-3 text-3">
         <input v-model="selectedResult" type="radio" class="peer hidden" :value="result.item" />
         <LazyChampionIcon :id="result.item.id" :alt="result.item.name" class="size-8" hydrate-on-visible />
         {{ result.item.name }}
-      </label>
+      </label> -->
     </div>
 
     <div v-else-if="searchResult" class="mt-3  overflow-y-scroll px-1 self-center pb-3 max-h-90 grid grid-cols-4 pt-1 gap-2">

@@ -95,15 +95,12 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vladimir/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Vladimir gains (3.3% bonus health) as ability power and (160% AP) as bonus health. These two bonuses do not stack with each other.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Vladimir gains (3.3% bonus health) as ability power and (160% AP) as bonus health. These two bonuses do not stack with each other.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -126,7 +123,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -135,7 +133,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vladimir/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Vladimir drains blood from the target enemy, dealing magic damage and healing himself. He then generates 1 point of Crimson Rush over the cooldown.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Vladimir drains blood from the target enemy, dealing magic damage and healing himself. He then generates 1 point of Crimson Rush over the cooldown.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -224,24 +222,16 @@
             ]
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                9,
-                7.9,
-                6.8,
-                5.7,
-                4.6
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          9,
+          7.9,
+          6.8,
+          5.7,
+          4.6
+        ],
         "targeting": "Unit",
         "affects": "Self, Enemies",
         "spellshieldable": "True",
@@ -252,7 +242,7 @@
         "onHitEffects": null,
         "occurrence": null,
         "notes": "Even though the healing effect is visualized as a projectile, the healing itself triggers instantly.\nVladimir's resource bar indicates his current  Crimson Rush and changes colors depending on the charge-up stage of his surge.\nWhite while generating the first stack and while at 1 stack (there is no time-out period).\nOrange while generating the second stack.\nRed while he is surging (Crimson Rush will deplete over 2.5 seconds once triggered).\nEach stack generates over-time (Transfusion's cooldown).\nVladimir can cast  Sanguine Pool and  Hemoplague during Transfusion's cast time.\nThe  Crimson Rush depletes normally while under  resurrection effects.",
-        "blurb": "Vladimir drains blood from the target enemy, dealing magic damage and  healing himself. He then generates 1 point of  Crimson Rush over the  cooldown.",
+        "blurb": "Active:  Vladimir drains blood from the target enemy, dealing magic damage and  healing himself. He then generates 1 point of  Crimson Rush over the  cooldown.",
         "missileSpeed": null,
         "rechargeRate": null,
         "collisionRadius": null,
@@ -264,7 +254,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "600"
+        "targetRange": "600",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -273,7 +264,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vladimir/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Vladimir sinks into a pool of blood, becoming untargetable and ghosted for 2 seconds. He also gains 37.5% bonus movement speed that decays exponentially over 1 second.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Vladimir sinks into a pool of blood, becoming untargetable and ghosted for 2 seconds. He also gains 37.5% bonus movement speed that decays exponentially over 1 second.",
             "leveling": []
           },
           {
@@ -337,32 +328,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              15
-            ],
-            "units": [
-              "%"
-            ]
-          }
+          0
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                28,
-                25,
-                22,
-                19,
-                16
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          28,
+          25,
+          22,
+          19,
+          16
+        ],
         "targeting": "Auto",
         "affects": "Self, Enemies",
         "spellshieldable": null,
@@ -385,7 +359,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "350",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -394,11 +369,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vladimir/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Vladimir charges for up to 1.5 seconds, during which he increases Tides of Blood's damage over the first second of the channel, and becomes slowed by 20% afterwards for the remaining duration. Tides of Blood can be recast within the duration, and does so automatically afterwards or if it is interrupted.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Vladimir charges for up to 1.5 seconds, during which he increases Tides of Blood's damage over the first second of the channel, and becomes slowed by 20% afterwards for the remaining duration. Tides of Blood can be recast within the duration, and does so automatically afterwards or if it is interrupted.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Vladimir unleashes a nova of 15 blood bolts around himself that each deal magic damage to the first enemy hit, increased based on charge time up to the first second.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Vladimir unleashes a nova of 15 blood bolts around himself that each deal magic damage to the first enemy hit, increased based on charge time up to the first second.",
             "leveling": [
               {
                 "attribute": "Minimum Magic Damage",
@@ -500,35 +475,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              2,
-              4,
-              6,
-              8
-            ],
-            "units": [
-              "% (based on charge time)"
-            ]
-          }
+          0
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                13,
-                11,
-                9,
-                7,
-                5
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          13,
+          11,
+          9,
+          7,
+          5
+        ],
         "targeting": "Auto",
         "affects": "Self, Enemies",
         "spellshieldable": "True",
@@ -551,7 +506,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "600",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -560,7 +516,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vladimir/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Vladimir spreads a virulent plague at the target location that infects enemies hit for 4 seconds, increasing the damage they take from all sources by 10%.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Vladimir spreads a virulent plague at the target location that infects enemies hit for 4 seconds, increasing the damage they take from all sources by 10%.",
             "leveling": []
           },
           {
@@ -661,20 +617,12 @@
             ]
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                120
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          120
+        ],
         "targeting": "Location",
         "affects": "Self, Enemies",
         "spellshieldable": "special",
@@ -697,10 +645,10 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "375",
-        "targetRange": "625"
+        "targetRange": "625",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "A fiend with a thirst for mortal blood, Vladimir has influenced the affairs of Noxus since the empire's earliest days. In addition to unnaturally extending his life, his mastery of hemomancy allows him to control the minds and bodies of others as easily as his own. In the flamboyant salons of the Noxian aristocracy, this has enabled him to build a fanatical cult of personality around himself—while in the lowest back alleys, it allows him to bleed his enemies dry.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/vladimir/skins/base/images/vladimir_splash_tile_0.jpg"
+  "lore": "A fiend with a thirst for mortal blood, Vladimir has influenced the affairs of Noxus since the empire's earliest days. In addition to unnaturally extending his life, his mastery of hemomancy allows him to control the minds and bodies of others as easily as his own. In the flamboyant salons of the Noxian aristocracy, this has enabled him to build a fanatical cult of personality around himself—while in the lowest back alleys, it allows him to bleed his enemies dry."
 }

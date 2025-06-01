@@ -98,15 +98,12 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Skarner/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Skarner's basic attacks on-hit, Shattered Earth, Upheaval, and Impale apply a stack of Quaking to enemies hit for 4 seconds, refreshing on subsequent applications and stacking up to 3 times. Enemies afflicted with 3 stacks take magic damage equal to [ 5% - 9% (based on level) of their maximum health over the duration, capped at 100 - 300 (based on level) against monsters. ][ 0.63% - 1.13% (based on level) of their maximum health every 0.5 seconds over the duration, capped at 12.5 - 37.5 (based on level) per tick against monsters. ]</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Skarner's basic attacks on-hit, Shattered Earth, Upheaval, and Impale apply a stack of Quaking to enemies hit for 4 seconds, refreshing on subsequent applications and stacking up to 3 times. Enemies afflicted with 3 stacks take magic damage equal to [ 5% - 9% (based on level) of their maximum health over the duration, capped at 100 - 300 (based on level) against monsters. ][ 0.63% - 1.13% (based on level) of their maximum health every 0.5 seconds over the duration, capped at 12.5 - 37.5 (based on level) per tick against monsters. ]",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Enemies",
         "spellshieldable": "special",
@@ -129,7 +126,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -138,7 +136,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Skarner/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Skarner rips a boulder from the ground, empowering up to three of his next basic attacks within 5 seconds of each other. These attacks gain 25 bonus range, bonus attack speed, and deal bonus physical damage to the target and surrounding enemies, including structures.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Skarner rips a boulder from the ground, empowering up to three of his next basic attacks within 5 seconds of each other. These attacks gain 25 bonus range, bonus attack speed, and deal bonus physical damage to the target and surrounding enemies, including structures.",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage per Hit",
@@ -257,32 +255,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              45
-            ],
-            "units": [
-              ""
-            ]
-          }
+          45
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                13,
-                11.5,
-                10,
-                8.5,
-                7
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          13,
+          11.5,
+          10,
+          8.5,
+          7
+        ],
         "targeting": "Auto",
         "affects": "Self, Enemies",
         "spellshieldable": "false",
@@ -305,14 +286,15 @@
         "angle": null,
         "castTime": "0.35",
         "effectRadius": "300",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       },
       {
         "name": "Upheaval",
         "icon": "https://cdn.communitydragon.org/latest/champion/Skarner/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Skarner ends Shattered Earth by throwing his boulder in the target direction. It explodes upon colliding with the first enemy hit, applying the same damage and slow to the target and surrounding enemies as the final attack would.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Skarner ends Shattered Earth by throwing his boulder in the target direction. It explodes upon colliding with the first enemy hit, applying the same damage and slow to the target and surrounding enemies as the final attack would.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -392,19 +374,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              0
-            ],
-            "units": [
-              ""
-            ]
-          }
+          45
         ],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [
+          13,
+          11.5,
+          10,
+          8.5,
+          7
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "special",
@@ -415,7 +393,7 @@
         "onHitEffects": null,
         "occurrence": null,
         "notes": "General\nWhile Upheaval can deal damage to structures, the missile can't directly hit them. They have to be within the radius of the explosion.\n Spell shield will not prevent the explosion from occurring.\nThis ability will cast from wherever the caster is at the end of the cast time.\nThe direction of cast will be updated to go toward the cast location.\nThe  slow applied by Shattered Earth is a generic slow debuff.\nKnown Issues\nIf Upheaval hits an enemy while a new instance of Shattered Earth is active, Shattered Earth's effects are immediately lost.(bug)",
-        "blurb": "Active: Skarner ends Shattered Earth by throwing his boulder, which explodes upon colliding with the first enemy his, mimicking the final attack's damage and effects.",
+        "blurb": "Active: Skarner ends Shattered Earth by throwing his boulder, which explodes upon colliding with the first enemy hit, mimicking the final attack's damage and effects.",
         "missileSpeed": null,
         "rechargeRate": null,
         "collisionRadius": null,
@@ -427,7 +405,8 @@
         "angle": null,
         "castTime": "0.25 / none",
         "effectRadius": "300",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -436,7 +415,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Skarner/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Skarner slams his claws into the ground, shielding himself equal to 8% of his maximum health for 2.5 seconds and releasing a shockwave that quickly expands in a radius around him to deal magic damage to enemies hit and slow them by 20% for 1 second.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Skarner slams his claws into the ground, shielding himself equal to 8% of his maximum health for 2.5 seconds and releasing a shockwave that quickly expands in a radius around him to deal magic damage to enemies hit and slow them by 20% for 1 second.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -471,36 +450,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              60,
-              65,
-              70,
-              75,
-              80
-            ],
-            "units": [
-              ""
-            ]
-          }
+          60,
+          65,
+          70,
+          75,
+          80
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                10,
-                9,
-                8,
-                7,
-                6
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          10,
+          9,
+          8,
+          7,
+          6
+        ],
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "true",
@@ -523,7 +485,8 @@
         "angle": null,
         "castTime": "0.3",
         "effectRadius": "600 / 700",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -532,7 +495,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Skarner/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Skarner charges forward in the direction of the cursor for up to 2.75 seconds, during which he gains slow immunity, becomes ghosted, ignores terrain collision, and has unobstructed vision of the surrounding 650 units. He automatically navigates his movement along the way and is able to steer himself with a slow turn rate that increases over time, resetting upon changing direction. Ixtal's Impact can be recast after 1 second, and does so automatically after the duration.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Skarner charges forward in the direction of the cursor for up to 2.75 seconds, during which he gains slow immunity, becomes ghosted, ignores terrain collision, and has unobstructed vision of the surrounding 650 units. He automatically navigates his movement along the way and is able to steer himself with a slow turn rate that increases over time, resetting upon changing direction. Ixtal's Impact can be recast after 1 second, and does so automatically after the duration.",
             "leveling": []
           },
           {
@@ -570,7 +533,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Skarner ends Ixtal's Impact. If a target has been grabbed, he detaches them from himself.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Skarner ends Ixtal's Impact. If a target has been grabbed, he detaches them from himself.",
             "leveling": []
           },
           {
@@ -579,36 +542,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50,
-              55,
-              60,
-              65,
-              70
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50,
+          55,
+          60,
+          65,
+          70
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                22,
-                21,
-                20,
-                19,
-                18
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          22,
+          21,
+          20,
+          19,
+          18
+        ],
         "targeting": "Direction",
         "affects": null,
         "spellshieldable": "true",
@@ -631,7 +577,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -640,7 +587,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Skarner/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Skarner winds up his stingers over the cast time, then lashes them forward in an isosceles trapezoid in the target direction, dealing magic damage to enemies hit and impaling up to 3 of the closest enemy champions within the area to suppress them for 1.5 seconds. While suppressed, the targets are revealed and attached to Skarner. If he successfully impales at least one enemy champion, Skarner gains 40% bonus movement speed for the same duration.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Skarner winds up his stingers over the cast time, then lashes them forward in an isosceles trapezoid in the target direction, dealing magic damage to enemies hit and impaling up to 3 of the closest enemy champions within the area to suppress them for 1.5 seconds. While suppressed, the targets are revealed and attached to Skarner. If he successfully impales at least one enemy champion, Skarner gains 40% bonus movement speed for the same duration.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -673,30 +620,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                120,
-                105,
-                90
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          120,
+          105,
+          90
+        ],
         "targeting": "Direction",
         "affects": null,
         "spellshieldable": "true",
@@ -719,10 +649,10 @@
         "angle": null,
         "castTime": "0.65",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "The ancient, colossal brackern Skarner is revered in Ixtal as one of the founding members of its ruling caste, the Yun Tal. Devoted to keeping his nation safe from the rest of the world, Skarner dwells in a chamber beneath Ixaocan where he can hear the vibrations of the earth and detect potential threats. As more members of the Yun Tal begin questioning Ixtal's self-isolation, Skarner grows increasingly paranoid and will do anything to keep Ixtal and its people safe—no matter the cost.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/skarner/skins/base/images/skarner_splash_tile_0.jpg"
+  "lore": "The ancient, colossal brackern Skarner is revered in Ixtal as one of the founding members of its ruling caste, the Yun Tal. Devoted to keeping his nation safe from the rest of the world, Skarner dwells in a chamber beneath Ixaocan where he can hear the vibrations of the earth and detect potential threats. As more members of the Yun Tal begin questioning Ixtal's self-isolation, Skarner grows increasingly paranoid and will do anything to keep Ixtal and its people safe—no matter the cost."
 }

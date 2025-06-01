@@ -99,15 +99,12 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Hecarim/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Hecarim gains bonus attack damage equal to 12% - 24% (based on level) of his bonus movement speed.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Hecarim gains bonus attack damage equal to 12% - 24% (based on level) of his bonus movement speed.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -130,7 +127,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -139,7 +137,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Hecarim/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Hecarim cleaves his glaive around himself, dealing physical damage to nearby enemies, reduced to 60% against minions.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Hecarim cleaves his glaive around himself, dealing physical damage to nearby enemies, reduced to 60% against minions.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -199,32 +197,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              28,
-              26,
-              24,
-              22,
-              20
-            ],
-            "units": [
-              ""
-            ]
-          }
+          28,
+          26,
+          24,
+          22,
+          20
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                4
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          4
+        ],
         "targeting": "Auto",
         "affects": "Self, Enemies",
         "spellshieldable": "True",
@@ -247,7 +228,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "375",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -256,7 +238,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Hecarim/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Hecarim surrounds himself with the Spirit of Dread for 4 seconds, dealing magic damage every second to nearby enemies.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Hecarim surrounds himself with the Spirit of Dread for 4 seconds, dealing magic damage every second to nearby enemies.",
             "leveling": [
               {
                 "attribute": "Magic Damage Per Tick",
@@ -351,32 +333,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50,
-              55,
-              60,
-              65,
-              70
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50,
+          55,
+          60,
+          65,
+          70
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                14
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          14
+        ],
         "targeting": "Auto",
         "affects": "Self, Enemies",
         "spellshieldable": "False",
@@ -399,7 +364,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "525",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -408,7 +374,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Hecarim/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Hecarim becomes ghosted and gains 25% - 65% (based on time active) bonus total movement speed for 4 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Hecarim becomes ghosted and gains 25% - 65% (based on time active) bonus total movement speed for 4 seconds.",
             "leveling": []
           },
           {
@@ -476,32 +442,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              60
-            ],
-            "units": [
-              ""
-            ]
-          }
+          60
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                20,
-                19,
-                18,
-                17,
-                16
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          20,
+          19,
+          18,
+          17,
+          16
+        ],
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": "True",
@@ -524,7 +473,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -533,7 +483,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Hecarim/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Hecarim dashes with displacement immunity to the target location and summons 5 spectral riders in an arrow formation that charge alongside him in the target direction, dealing magic damage to all enemies in their path and revealing them for 2.5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Hecarim dashes with displacement immunity to the target location and summons 5 spectral riders in an arrow formation that charge alongside him in the target direction, dealing magic damage to all enemies in their path and revealing them for 2.5 seconds.",
             "leveling": [
               {
                 "attribute": "Magic damage",
@@ -570,30 +520,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                140,
-                120,
-                100
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          140,
+          120,
+          100
+        ],
         "targeting": "Location",
         "affects": null,
         "spellshieldable": "True",
@@ -616,10 +549,10 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "315",
-        "targetRange": "1000 / 300"
+        "targetRange": "1000 / 300",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Hecarim is a spectral fusion of man and beast, cursed to ride down the souls of the living for all eternity. When the Blessed Isles fell into shadow, this proud knight was obliterated by the destructive energies of the Ruination, along with all his cavalry and their mounts. Now, whenever the Black Mist reaches out across Runeterra, he leads their devastating charge, reveling in the slaughter and crushing the foe beneath his armored hooves.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/hecarim/skins/base/images/hecarim_splash_tile_0.jpg"
+  "lore": "Hecarim is a spectral fusion of man and beast, cursed to ride down the souls of the living for all eternity. When the Blessed Isles fell into shadow, this proud knight was obliterated by the destructive energies of the Ruination, along with all his cavalry and their mounts. Now, whenever the Black Mist reaches out across Runeterra, he leads their devastating charge, reveling in the slaughter and crushing the foe beneath his armored hooves."
 }

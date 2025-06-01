@@ -4,8 +4,6 @@ const props = defineProps<{
 }>()
 
 const emit = defineEmits(['update:grid'])
-const ts = useTempStore()
-const as = useAccountStore()
 const pocket = computedAsync(() => props.pocketData)
 
 // console.log('💠 - pocket:', pocket)

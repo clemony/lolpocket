@@ -1,5 +1,4 @@
 export * from './generateStrings'
 export * from './generateUrls'
-export * from './getItemName'
 export * from './getRandom'
 export * from './getSplash'

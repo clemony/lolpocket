@@ -92,11 +92,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Viego/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Whenever Viego scores an enemy champion takedown while alive and within 3 seconds of damaging them, a Mist Wraith spawns from that champion's corpse for 8 seconds. Viego can basic attack a Mist Wraith to consume it: causing him to blink to its location after winding up for 1 second, during which he is untargetable (except to turrets) and unable to act. He then gains Possession and heals himself for 2% (+ 2.5% per 100 bonus AD) (+ 2% per 100 AP) (+ 5% per 100% bonus attack speed) of the target's maximum health.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Whenever Viego scores an enemy champion takedown while alive and within 3 seconds of damaging them, a Mist Wraith spawns from that champion's corpse for 8 seconds. Viego can basic attack a Mist Wraith to consume it: causing him to blink to its location after winding up for 1 second, during which he is untargetable (except to turrets) and unable to act. He then gains Possession and heals himself for 2% (+ 2.5% per 100 bonus AD) (+ 2% per 100 AP) (+ 5% per 100% bonus attack speed) of the target's maximum health.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Possession:</p><p> For 10 seconds, Viego assumes the enemy champion's form and gains their basic attacks, basic abilities, items, and base stats (based on Viego's level). He also gains a free cast of Heartbreaker, which is initially placed on a 1.5-second cooldown, and 10% bonus movement speed while facing enemy champions within 2500 units.</p></div>",
+            "description": "<span class=\"ability-header\">Possession:</span> For 10 seconds, Viego assumes the enemy champion's form and gains their basic attacks, basic abilities, items, and base stats (based on Viego's level). He also gains a free cast of Heartbreaker, which is initially placed on a 1.5-second cooldown, and 10% bonus movement speed while facing enemy champions within 2500 units.",
             "leveling": []
           },
           {
@@ -109,10 +109,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": null,
         "spellshieldable": null,
@@ -135,7 +132,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -144,7 +142,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Viego/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Viego's basic attacks are empowered to deal bonus physical damage on-hit. This damage is affected by critical strike modifiers, has a minimum threshold and is capped at 80 against monsters.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Viego's basic attacks are empowered to deal bonus physical damage on-hit. This damage is affected by critical strike modifiers, has a minimum threshold and is capped at 80 against monsters.",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage",
@@ -191,7 +189,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Viego stabs in a line in the target direction that deals physical damage to enemies hit, plus 15 bonus physical damage against monsters. The stab's damage is increased by 0% - 100% (based on critical strike chance).</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Viego stabs in a line in the target direction that deals physical damage to enemies hit, plus 15 bonus physical damage against monsters. The stab's damage is increased by 0% - 100% (based on critical strike chance).",
             "leveling": [
               {
                 "attribute": "Minimum Physical Damage",
@@ -300,24 +298,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                5,
-                4.5,
-                4,
-                3.5,
-                3
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          5,
+          4.5,
+          4,
+          3.5,
+          3
+        ],
         "targeting": "Direction",
         "affects": "Self, Enemies",
         "spellshieldable": "true",
@@ -340,7 +330,8 @@
         "angle": null,
         "castTime": "140% of Viego's windup time (0.35 at base attack speed)",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -349,7 +340,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Viego/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Viego charges while being slowed by 10% for up to 3 seconds to increase Spectral Maw's missile range and stun duration over the first second of the channel.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Viego charges while being slowed by 10% for up to 3 seconds to increase Spectral Maw's missile range and stun duration over the first second of the channel.",
             "leveling": []
           },
           {
@@ -357,7 +348,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Viego hurls a blast of mist in the target direction and dashes a fixed distance in the same direction, though not through terrain. The mist deals magic damage to the first enemy hit and stuns them for 0.25 - 1.25 (based on channel time) seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Viego hurls a blast of mist in the target direction and dashes a fixed distance in the same direction, though not through terrain. The mist deals magic damage to the first enemy hit and stuns them for 0.25 - 1.25 (based on channel time) seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -391,20 +382,12 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                8
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          8
+        ],
         "targeting": "Auto / Direction",
         "affects": "Self, Enemies",
         "spellshieldable": "true",
@@ -427,7 +410,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": "300 /  500 : 900 (based on channel time)"
+        "targetRange": "300 /  500 : 900 (based on channel time)",
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -436,7 +420,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Viego/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Viego sends a spectre in the target direction that creates a trail of mist in its wake which lasts 8 seconds. If it hits terrain, the mist will spread further around either side.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Viego sends a spectre in the target direction that creates a trail of mist in its wake which lasts 8 seconds. If it hits terrain, the mist will spread further around either side.",
             "leveling": []
           },
           {
@@ -495,24 +479,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                14,
-                12,
-                10,
-                8,
-                6
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          14,
+          12,
+          10,
+          8,
+          6
+        ],
         "targeting": "Direction",
         "affects": "Self",
         "spellshieldable": null,
@@ -535,7 +511,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -544,7 +521,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Viego/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Viego gains displacement immunity over the cast time, then blinks to the target location. Upon arrival, he strikes the most wounded enemy champion nearby, dealing physical damage, slowing them by 99% for 0.25 seconds, and applying on-hit effects. Other nearby enemies are knocked back up to 400-units away based on proximity, though not through terrain.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Viego gains displacement immunity over the cast time, then blinks to the target location. Upon arrival, he strikes the most wounded enemy champion nearby, dealing physical damage, slowing them by 99% for 0.25 seconds, and applying on-hit effects. Other nearby enemies are knocked back up to 400-units away based on proximity, though not through terrain.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -580,22 +557,14 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                120,
-                100,
-                80
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          120,
+          100,
+          80
+        ],
         "targeting": "Location",
         "affects": "Self, Enemies",
         "spellshieldable": "true",
@@ -618,10 +587,10 @@
         "angle": null,
         "castTime": "0.5",
         "effectRadius": "300",
-        "targetRange": "500"
+        "targetRange": "500",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Once ruler of a long-lost kingdom, Viego perished over a thousand years ago when his attempt to bring his wife back from the dead triggered the magical catastrophe known as the Ruination. Transformed into a powerful, unliving specter tortured by an obsessive longing for his centuries-dead queen, Viego now stands as the Ruined King, controlling the deadly Harrowings as he scours Runeterra for anything that might one day restore her, and destroying all in his path as the Black Mist pours endlessly from his cruel, broken heart.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/viego/skins/base/images/viego_splash_tile_0.jpg"
+  "lore": "Once ruler of a long-lost kingdom, Viego perished over a thousand years ago when his attempt to bring his wife back from the dead triggered the magical catastrophe known as the Ruination. Transformed into a powerful, unliving specter tortured by an obsessive longing for his centuries-dead queen, Viego now stands as the Ruined King, controlling the deadly Harrowings as he scours Runeterra for anything that might one day restore her, and destroying all in his path as the Black Mist pours endlessly from his cruel, broken heart."
 }

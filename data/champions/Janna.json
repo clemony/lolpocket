@@ -100,7 +100,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Janna/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Janna grants 6% bonus movement speed to nearby allied champions that are facing in the direction of her location.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Janna grants 6% bonus movement speed to nearby allied champions that are facing in the direction of her location.",
             "leveling": []
           },
           {
@@ -109,10 +109,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -135,7 +132,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": "1200",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -144,7 +142,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Janna/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Janna summons a whirlwind at her current location that charges up over 3 seconds, increasing its range, speed, damage, and knock up duration every second over the duration. Howling Gale's direction is determined by this cast.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Janna summons a whirlwind at her current location that charges up over 3 seconds, increasing its range, speed, damage, and knock up duration every second over the duration. Howling Gale's direction is determined by this cast.",
             "leveling": [
               {
                 "attribute": "Minimum Magic Damage",
@@ -228,37 +226,20 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Janna launches the whirlwind in the direction she targeted over 1.25 seconds, dealing magic damage to enemies hit and knocking them up for 0.5 - 1.25 (based on seconds charged) seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Janna launches the whirlwind in the direction she targeted over 1.25 seconds, dealing magic damage to enemies hit and knocking them up for 0.5 - 1.25 (based on seconds charged) seconds.",
             "leveling": []
           }
         ],
         "cost": [
-          {
-            "values": [
-              90,
-              95,
-              100,
-              105,
-              110
-            ],
-            "units": [
-              ""
-            ]
-          }
+          90,
+          95,
+          100,
+          105,
+          110
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                14
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          14
+        ],
         "targeting": "Direction / Auto",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -281,7 +262,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -290,7 +272,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Janna/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Janna is ghosted and gains bonus movement speed.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Janna is ghosted and gains bonus movement speed.",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -320,7 +302,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Janna sends an air elemental at the target enemy that deals magic damage and slows them for 2 seconds, capped at 99%.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Janna sends an air elemental at the target enemy that deals magic damage and slows them for 2 seconds, capped at 99%.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -384,36 +366,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50,
-              55,
-              60,
-              65,
-              70
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50,
+          55,
+          60,
+          65,
+          70
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                8,
-                7.5,
-                7,
-                6.5,
-                6
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          8,
+          7.5,
+          7,
+          6.5,
+          6
+        ],
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -436,7 +401,8 @@
         "angle": null,
         "castTime": "0.245",
         "effectRadius": null,
-        "targetRange": "550"
+        "targetRange": "550",
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -445,11 +411,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Janna/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Whenever Janna's abilities slow or knock up at least one enemy champion, 20% of Eye of the Storm's cooldown is refunded. This may occur once per spell cast.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Whenever Janna's abilities slow or knock up at least one enemy champion, 20% of Eye of the Storm's cooldown is refunded. This may occur once per spell cast.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Janna grants the target allied champion or turret, or herself, a shield for 4 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Janna grants the target allied champion or turret, or herself, a shield for 4 seconds.",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -510,36 +476,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              70,
-              75,
-              80,
-              85,
-              90
-            ],
-            "units": [
-              ""
-            ]
-          }
+          70,
+          75,
+          80,
+          85,
+          90
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                16,
-                15,
-                14,
-                13,
-                12
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          16,
+          15,
+          14,
+          13,
+          12
+        ],
         "targeting": "Unit",
         "affects": "Allies, Allied turrets, Self",
         "spellshieldable": null,
@@ -562,7 +511,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": "800"
+        "targetRange": "800",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -571,7 +521,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Janna/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Janna unleashes a blast that knocks back all nearby enemies to up to 875 units over 0.5 seconds based on their proximity, though not through terrain.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Janna unleashes a blast that knocks back all nearby enemies to up to 875 units over 0.5 seconds based on their proximity, though not through terrain.",
             "leveling": []
           },
           {
@@ -627,30 +577,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                130,
-                115,
-                100
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          130,
+          115,
+          100
+        ],
         "targeting": "Auto",
         "affects": "Enemies, Allies",
         "spellshieldable": "true",
@@ -673,10 +606,10 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "700",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Armed with the power of Runeterra's gales, Janna is a mysterious, elemental wind spirit who protects the dispossessed of Zaun. Some believe she was brought into existence by the pleas of Runeterra's sailors who prayed for fair winds as they navigated treacherous waters and braved rough tempests. Her favor and protection has since been called into the depths of Zaun, where Janna has become a beacon of hope to those in need. No one knows where or when she will appear, but more often than not, she's come to help.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/janna/skins/base/images/janna_splash_tile_0.jpg"
+  "lore": "Armed with the power of Runeterra's gales, Janna is a mysterious, elemental wind spirit who protects the dispossessed of Zaun. Some believe she was brought into existence by the pleas of Runeterra's sailors who prayed for fair winds as they navigated treacherous waters and braved rough tempests. Her favor and protection has since been called into the depths of Zaun, where Janna has become a beacon of hope to those in need. No one knows where or when she will appear, but more often than not, she's come to help."
 }

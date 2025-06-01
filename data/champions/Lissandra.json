@@ -98,15 +98,12 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lissandra/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Whenever a nearby enemy champion dies, Lissandra spawns a Frozen Thrall from their corpse.Frozen Thralls are ice spirits that have 33.48 - 325 (based on seconds alive) movement speed and slow nearby enemies by 25%. They will chase nearby visible enemies for 4 seconds, prioritizing champions, after which they shatter to deal 120 - 520 (based on level) (+ 50% AP) magic damage to nearby enemies.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Whenever a nearby enemy champion dies, Lissandra spawns a Frozen Thrall from their corpse.Frozen Thralls are ice spirits that have 33.48 - 325 (based on seconds alive) movement speed and slow nearby enemies by 25%. They will chase nearby visible enemies for 4 seconds, prioritizing champions, after which they shatter to deal 120 - 520 (based on level) (+ 50% AP) magic damage to nearby enemies.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Enemies",
         "spellshieldable": "true",
@@ -129,7 +126,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": "1350 /  450",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -138,7 +136,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lissandra/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Lissandra launches a shard of ice in the target direction that deals magic damage and slows enemies hit for 1.5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Lissandra launches a shard of ice in the target direction that deals magic damage and slows enemies hit for 1.5 seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -190,36 +188,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              55,
-              60,
-              65,
-              70,
-              75
-            ],
-            "units": [
-              ""
-            ]
-          }
+          55,
+          60,
+          65,
+          70,
+          75
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                8,
-                7,
-                6,
-                5,
-                4
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          8,
+          7,
+          6,
+          5,
+          4
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "Special",
@@ -242,7 +223,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -251,7 +233,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lissandra/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Lissandra freezes nearby enemies, dealing magic damage and rooting them for a duration.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Lissandra freezes nearby enemies, dealing magic damage and rooting them for a duration.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -299,32 +281,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              40
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                10,
-                9.5,
-                9,
-                8.5,
-                8
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          10,
+          9.5,
+          9,
+          8.5,
+          8
+        ],
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -347,7 +312,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "450",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -356,7 +322,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lissandra/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Lissandra sends a claw of ice in the target direction that deals magic damage to enemies it passes through, decelerating over 1.25 seconds. Glacial Path can be recast after 0.5 seconds while the claw is active.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Lissandra sends a claw of ice in the target direction that deals magic damage to enemies it passes through, decelerating over 1.25 seconds. Glacial Path can be recast after 0.5 seconds while the claw is active.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -386,41 +352,24 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Lissandra consumes the claw and blinks to its current location.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Lissandra consumes the claw and blinks to its current location.",
             "leveling": []
           }
         ],
         "cost": [
-          {
-            "values": [
-              80,
-              85,
-              90,
-              95,
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          80,
+          85,
+          90,
+          95,
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                24,
-                21,
-                18,
-                15,
-                12
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          24,
+          21,
+          18,
+          15,
+          12
+        ],
         "targeting": "Direction / Auto",
         "affects": "Enemies, Self",
         "spellshieldable": "True",
@@ -443,7 +392,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -452,15 +402,15 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lissandra/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Lissandra can cast Frozen Tomb on herself or an enemy champion.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Lissandra can cast Frozen Tomb on herself or an enemy champion.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Enemy Cast:</p><p> Lissandra freezes the target enemy champion, knocking them down and stunning them for 1.5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Enemy Cast:</span> Lissandra freezes the target enemy champion, knocking them down and stunning them for 1.5 seconds.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Self Cast:</p><p> Lissandra instantly entombs herself in ice, entering stasis for 2.5 seconds and healing herself every 0.25 seconds over the duration. The healing is increased by 0% - 100% (based on missing health at the time of cast).</p></div>",
+            "description": "<span class=\"ability-header\">Self Cast:</span> Lissandra instantly entombs herself in ice, entering stasis for 2.5 seconds and healing herself every 0.25 seconds over the duration. The healing is increased by 0% - 100% (based on missing health at the time of cast).",
             "leveling": [
               {
                 "attribute": "Minimum Heal per Tick",
@@ -503,7 +453,7 @@
                       11
                     ],
                     "units": [
-                      " AP"
+                      "% AP"
                     ]
                   }
                 ]
@@ -601,30 +551,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                120,
-                100,
-                80
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          120,
+          100,
+          80
+        ],
         "targeting": "Unit",
         "affects": "Enemies, Self",
         "spellshieldable": "special",
@@ -647,10 +580,10 @@
         "angle": null,
         "castTime": "0.375 / None",
         "effectRadius": "550",
-        "targetRange": "550"
+        "targetRange": "550",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Lissandra's magic twists the pure power of ice into something dark and terrible. With the force of her black ice, she does more than freeze—she impales and crushes those who oppose her. To the terrified denizens of the north, she is known only as ''The Ice Witch.'' The truth is much more sinister: Lissandra is a corruptor of nature who plots to unleash an ice age on the world.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/lissandra/skins/base/images/lissandra_splash_tile_0.jpg"
+  "lore": "Lissandra's magic twists the pure power of ice into something dark and terrible. With the force of her black ice, she does more than freeze—she impales and crushes those who oppose her. To the terrified denizens of the north, she is known only as ''The Ice Witch.'' The truth is much more sinister: Lissandra is a corruptor of nature who plots to unleash an ice age on the world."
 }

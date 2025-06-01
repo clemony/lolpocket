@@ -28,7 +28,7 @@
   "removed": false,
   "requiredChampion": "",
   "requiredAlly": "",
-  "icon": "https://raw.communitydragon.org/15.10/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3083_tank_t3_warmogs.png",
+  "icon": "https://raw.communitydragon.org/15.11/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3083_tank_t3_warmogs.png",
   "simpleDescription": "Grants massive Health and Health Regen",
   "nicknames": [],
   "passives": [
@@ -42,7 +42,7 @@
     {
       "name": "Warmog's Heart",
       "unique": true,
-      "effects": "<img src=\"/img/icons/health-regeneration.webp\" class=\"tip-icon\" />Health regeneration 1.5% <b>maximum</b> health every 0.5 seconds if damage has not been taken in the last 8 seconds (4 seconds for damage from non-champions).",
+      "effects": "<img src=\"/img/icons/health-regeneration.webp\" class=\"tip-icon\" />Health regeneration 1.5% <b>maximum</b> health every 0.5 seconds if damage has not been taken in the last 8 seconds (3 seconds for damage from non-champions).",
       "cooldown": null,
       "range": null
     },

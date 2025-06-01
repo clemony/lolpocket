@@ -3,7 +3,7 @@ const { modelValue: selectedMap } = defineProps<{
   modelValue?: number
 }>()
 
-const { mapNameById, maps } = await useIndexLookup()
+const ix = useIndexStore()
 
 </script>
 
@@ -14,7 +14,7 @@ const { mapNameById, maps } = await useIndexLookup()
         <span class="size-5 relative grid place-items-center">
           <component :is="`i-maps-${selectedMap}`" class="absolute dst opacity-80 shrink-0" :class="{ 'size-5': selectedMap == 12 || selectedMap == 11, 'size-6': selectedMap == 30 }" />
         </span>
-        {{ mapNameById(selectedMap) }}
+        {{ ix.mapNameById(selectedMap) }}
       </slot>
     </SelectTrigger>
     <LazySelectContent class="w-(--reka-select-trigger-width)">
@@ -25,7 +25,7 @@ const { mapNameById, maps } = await useIndexLookup()
             <span class="size-5 relative grid place-items-center">
               <component :is="`i-maps${map}`" class="absolute opacity-80 dst shrink-0" :class="{ 'size-5': map == 12 || map == 11, 'size-6': map == 30 }" />
             </span>
-            {{ mapNameById(map) }}
+            {{ ix.mapNameById(map) }}
           </div>
         </SelectItem>
       </SelectGroup>

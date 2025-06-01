@@ -98,26 +98,12 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Camille/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Periodically, Camille's next basic attack on-hit against an enemy champion grants her a shield equal to 20% of her maximum health, lasting for 2 seconds and absorbing damage from either exclusively physical damage or magic damage, based on which type the target has previously dealt most of against champions as well as on Camille's current armor and magic resistance.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Periodically, Camille's next basic attack on-hit against an enemy champion grants her a shield equal to 20% of her maximum health, lasting for 2 seconds and absorbing damage from either exclusively physical damage or magic damage, based on which type the target has previously dealt most of against champions as well as on Camille's current armor and magic resistance.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                18,
-                14,
-                10
-              ],
-              "units": [
-                " (based on level)"
-              ]
-            }
-          ],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -140,7 +126,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -149,7 +136,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Camille/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Camille empowers her next basic attack within 4 seconds to have an uncancellable windup, gain 50 bonus range, deal bonus physical damage and grant her bonus movement speed for 1 second.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Camille empowers her next basic attack within 4 seconds to have an uncancellable windup, gain 50 bonus range, deal bonus physical damage and grant her bonus movement speed for 1 second.",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage",
@@ -192,7 +179,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Camille mimics the first cast's effects. If Precision Protocol is recast after 1.5 seconds of the first attack, then the bonus damage is doubled, and 40% - 100% (based on level) of the attack's total damage will be dealt as true damage.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Camille mimics the first cast's effects. If Precision Protocol is recast after 1.5 seconds of the first attack, then the bonus damage is doubled, and 40% - 100% (based on level) of the attack's total damage will be dealt as true damage.",
             "leveling": [
               {
                 "attribute": "Increased Mixed Damage",
@@ -219,32 +206,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              25
-            ],
-            "units": [
-              ""
-            ]
-          }
+          25
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                9,
-                8,
-                7,
-                6,
-                5
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          9,
+          8,
+          7,
+          6,
+          5
+        ],
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": "false",
@@ -267,7 +237,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -276,7 +247,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Camille/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Camille sweeps her leg in a cone in the target direction over 1.1 seconds, during which she is ghosted and unable to declare basic attacks. Afterwards, she deals physical damage to all enemies within.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Camille sweeps her leg in a cone in the target direction over 1.1 seconds, during which she is ghosted and unable to declare basic attacks. Afterwards, she deals physical damage to all enemies within.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -396,36 +367,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50,
-              55,
-              60,
-              65,
-              70
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50,
+          55,
+          60,
+          65,
+          70
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                17,
-                15.5,
-                14,
-                12.5,
-                11
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          17,
+          15.5,
+          14,
+          12.5,
+          11
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "true",
@@ -448,7 +402,8 @@
         "angle": "70°",
         "castTime": "none",
         "effectRadius": "325 / 650",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -457,7 +412,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Camille/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Camille fires a grapple in the target direction. If the grapple collides with terrain, Camille will dash toward and attach to the terrain for 0.75 seconds, during which she gains the ability to cast Wall Dive.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Camille fires a grapple in the target direction. If the grapple collides with terrain, Camille will dash toward and attach to the terrain for 0.75 seconds, during which she gains the ability to cast Wall Dive.",
             "leveling": []
           },
           {
@@ -470,32 +425,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              70
-            ],
-            "units": [
-              ""
-            ]
-          }
+          70
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                16,
-                15,
-                14,
-                13,
-                12
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          16,
+          15,
+          14,
+          13,
+          12
+        ],
         "targeting": "Direction",
         "affects": "Terrain, Self",
         "spellshieldable": null,
@@ -518,14 +456,15 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": "800"
+        "targetRange": "800",
+        "maxCharges": -1
       },
       {
         "name": "Wall Dive",
         "icon": "https://cdn.communitydragon.org/latest/champion/Camille/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Camille dashes in the target direction, dealing physical damage to enemies near the landing location. Wall Dive's range is doubled towards enemy champions within 1400 units. Camille grants ghosting to non-champions she passes through for 4 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Camille dashes in the target direction, dealing physical damage to enemies near the landing location. Wall Dive's range is doubled towards enemy champions within 1400 units. Camille grants ghosting to non-champions she passes through for 4 seconds.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -581,11 +520,16 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cost": [
+          70
+        ],
+        "cooldown": [
+          16,
+          15,
+          14,
+          13,
+          12
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "true",
@@ -608,7 +552,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "130",
-        "targetRange": "400 / 800"
+        "targetRange": "400 / 800",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -617,7 +562,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Camille/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Camille becomes untargetable and leaps with displacement immunity towards the target enemy champion over 0.5 seconds, revealing them for the duration and disrupting their ongoing channels.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Camille becomes untargetable and leaps with displacement immunity towards the target enemy champion over 0.5 seconds, revealing them for the duration and disrupting their ongoing channels.",
             "leveling": []
           },
           {
@@ -666,30 +611,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                140,
-                115,
-                90
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          140,
+          115,
+          90
+        ],
         "targeting": "Unit",
         "affects": "Enemies, Self",
         "spellshieldable": "true",
@@ -712,10 +640,10 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "425",
-        "targetRange": "475"
+        "targetRange": "475",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Weaponized to operate outside the boundaries of the law, Camille is the Principal Intelligencer of Clan Ferros—an elegant and elite agent who ensures the Piltover machine and its Zaunite underbelly runs smoothly. Adaptable and precise, she views sloppy technique as an embarrassment that must be put to order. With a mind as sharp as the blades she bears, Camille's pursuit of superiority through hextech body augmentation has left many to wonder if she is now more machine than woman.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/camille/skins/base/images/camille_splash_tile_0.jpg"
+  "lore": "Weaponized to operate outside the boundaries of the law, Camille is the Principal Intelligencer of Clan Ferros—an elegant and elite agent who ensures the Piltover machine and its Zaunite underbelly runs smoothly. Adaptable and precise, she views sloppy technique as an embarrassment that must be put to order. With a mind as sharp as the blades she bears, Camille's pursuit of superiority through hextech body augmentation has left many to wonder if she is now more machine than woman."
 }

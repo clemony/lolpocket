@@ -1,2 +1,3 @@
-export * from './itemBuffs'
-export * from './itemStats'
+export * from './item-buffs'
+export * from './item-stats'
+

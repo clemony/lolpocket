@@ -5,7 +5,7 @@ const { pocket } = defineProps<{
   pocket: Pocket
 }>()
 
-const { champIdByKey } = await useIndexLookup()
+const ix = useIndexStore()
 
 const variants = {
   visible: {
@@ -44,7 +44,7 @@ const variants = {
           layout
           class="max-w-full min-w-[31%] flex grow">
           <ChampionIcon
-            :id="champIdByKey(champion) as number"
+            :id="ix.champIdByKey(champion) as number"
             :alt="champion" class="aspect-auto h-24  rounded-xl border-b3 border  hover:ring hover:ring-neutral/40 " />
         </motion.div>
       </template>

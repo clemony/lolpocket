@@ -97,15 +97,12 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/XinZhao/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Xin Zhao's basic attacks on-hit and Wind Becomes Lightning strikes generate a stack of Determination, stacking up to 3 times. The third stack consumes them all to deal 15 / 30 / 45 / 60% (based on level) AD bonus physical damage on-attack and heal Xin Zhao for 3 / 3.5 / 4% (based on level) of his maximum health (+ 65% AP) on-hit.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Xin Zhao's basic attacks on-hit and Wind Becomes Lightning strikes generate a stack of Determination, stacking up to 3 times. The third stack consumes them all to deal 15 / 30 / 45 / 60% (based on level) AD bonus physical damage on-attack and heal Xin Zhao for 3 / 3.5 / 4% (based on level) of his maximum health (+ 65% AP) on-hit.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": "special",
@@ -128,7 +125,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -137,7 +135,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/XinZhao/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Xin Zhao empowers his next three basic attacks on-attack within 5 seconds to each have an uncancellable windup, deal bonus physical damage and reduce his other abilities' current cooldowns by 1 second. Each attack refreshes the duration.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Xin Zhao empowers his next three basic attacks on-attack within 5 seconds to each have an uncancellable windup, deal bonus physical damage and reduce his other abilities' current cooldowns by 1 second. Each attack refreshes the duration.",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage",
@@ -205,32 +203,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              30
-            ],
-            "units": [
-              ""
-            ]
-          }
+          30
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                7,
-                6.5,
-                6,
-                5.5,
-                5
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          7,
+          6.5,
+          6,
+          5.5,
+          5
+        ],
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "Special",
@@ -253,7 +234,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -262,7 +244,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/XinZhao/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Xin Zhao slashes in an arc and, after the cast time, thrusts his spear in a line in the target direction. Each strike deals physical damage to enemies hit, modified to 50% - 100% (based on level) against minions.</p></div>\nThe thrust deals increased damage, further by 0% - 33.3% (based on critical strike chance), and slows enemies hit by 50% for 1.5 seconds. Enemy champions and monsters hit are also marked Challenged for 3 seconds, during which they are revealed.",
+            "description": "<span class=\"ability-header\">Active:</span> Xin Zhao slashes in an arc and, after the cast time, thrusts his spear in a line in the target direction. Each strike deals physical damage to enemies hit, modified to 50% - 100% (based on level) against minions.\nThe thrust deals increased damage, further by 0% - 33.3% (based on critical strike chance), and slows enemies hit by 50% for 1.5 seconds. Enemy champions and monsters hit are also marked Challenged for 3 seconds, during which they are revealed.",
             "leveling": [
               {
                 "attribute": "Slash Physical Damage",
@@ -367,36 +349,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              60,
-              55,
-              50,
-              45,
-              40
-            ],
-            "units": [
-              ""
-            ]
-          }
+          60,
+          55,
+          50,
+          45,
+          40
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                12,
-                11,
-                10,
-                9,
-                8
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          12,
+          11,
+          10,
+          9,
+          8
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "Special",
@@ -419,7 +384,8 @@
         "angle": "160°",
         "castTime": "0.5",
         "effectRadius": "275 /  125",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -428,7 +394,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/XinZhao/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Xin Zhao dashes to the target enemy's location, dealing magic damage to enemies near them and slowing them by 30% for 0.5 seconds. Audacious Charge's range is increased against Challenged targets.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Xin Zhao dashes to the target enemy's location, dealing magic damage to enemies near them and slowing them by 30% for 0.5 seconds. Audacious Charge's range is increased against Challenged targets.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -485,28 +451,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                11
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          11
+        ],
         "targeting": "Unit / Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -529,7 +478,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "250",
-        "targetRange": "650 / 1100"
+        "targetRange": "650 / 1100",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -538,11 +488,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/XinZhao/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive - Challenge:</p><p> The last enemy champion hit by Xin Zhao's basic attacks or Audacious Charge is marked Challenged for 3 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Passive - Challenge:</span> The last enemy champion hit by Xin Zhao's basic attacks or Audacious Charge is marked Challenged for 3 seconds.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Xin Zhao sweeps his spear around him, dealing physical damage to nearby enemies, capped at 600 against monsters, and knocking back all non-Challenged targets hit up-to 700 units over 0.75 seconds, as well as stunning them for the same duration.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Xin Zhao sweeps his spear around him, dealing physical damage to nearby enemies, capped at 600 against monsters, and knocking back all non-Challenged targets hit up-to 700 units over 0.75 seconds, as well as stunning them for the same duration.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -591,30 +541,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                120,
-                110,
-                100
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          120,
+          110,
+          100
+        ],
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -637,10 +570,10 @@
         "angle": null,
         "castTime": "0.35",
         "effectRadius": "500 / 450",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Xin Zhao is a resolute warrior loyal to the ruling Lightshield dynasty. Once condemned to the fighting pits of Noxus, he survived countless gladiatorial bouts, but after being freed by Demacian forces, he swore his life and allegiance to these brave liberators. Armed with his favored three-talon spear, Xin Zhao now fights for his adopted kingdom, audaciously challenging any foe, no matter the odds.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/xinzhao/skins/base/images/xinzhao_splash_tile_0.jpg"
+  "lore": "Xin Zhao is a resolute warrior loyal to the ruling Lightshield dynasty. Once condemned to the fighting pits of Noxus, he survived countless gladiatorial bouts, but after being freed by Demacian forces, he swore his life and allegiance to these brave liberators. Armed with his favored three-talon spear, Xin Zhao now fights for his adopted kingdom, audaciously challenging any foe, no matter the odds."
 }

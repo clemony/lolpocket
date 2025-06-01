@@ -6,7 +6,7 @@ const { pocket } = defineProps<{
 const rs = useRuneStore()
 const set = computed(() => pocket.runes[rs.selectedRuneSet])
 
-const { shards } = await useIndexLookup()
+const ix = useIndexStore()
 </script>
 
 <template>
@@ -15,7 +15,7 @@ const { shards } = await useIndexLookup()
     class="flex justify-center  rounded-xl w-full py-10">
     <div class="grid  grid-cols-3 place-items-center gap-x-16 gap-y-7">
       <label
-        v-for="shard in shards"
+        v-for="shard in ix.shards"
         :key="shard.name + shard.slot"
         v-tippy="shard.stats"
         :alt="shard.stats"

@@ -97,7 +97,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vi/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Periodically, Vi's next ability hit grants her a shield equal to 14% of her maximum health for 3 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Periodically, Vi's next ability hit grants her a shield equal to 14% of her maximum health for 3 seconds.",
             "leveling": []
           },
           {
@@ -106,36 +106,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                16,
-                15.764705882352942,
-                15.529411764705882,
-                15.294117647058824,
-                15.058823529411764,
-                14.823529411764707,
-                14.588235294117647,
-                14.352941176470589,
-                14.117647058823529,
-                13.882352941176471,
-                13.647058823529411,
-                13.411764705882353,
-                13.176470588235293,
-                12.941176470588236,
-                12.705882352941178,
-                12.470588235294118,
-                12.235294117647058,
-                12
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -158,7 +129,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -167,7 +139,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vi/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Vi charges while being slowed by 15% for up to 4 seconds to increase Vault Breaker's range, speed, and damage over the first 1.25 seconds of the channel.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Vi charges while being slowed by 15% for up to 4 seconds to increase Vault Breaker's range, speed, and damage over the first 1.25 seconds of the channel.",
             "leveling": []
           },
           {
@@ -175,7 +147,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Vi dashes in the target direction to deal physical damage to enemies within her path, increased by 0% - 150% (based on channel time), and pull all non-champions hit towards her.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Vi dashes in the target direction to deal physical damage to enemies within her path, increased by 0% - 150% (based on channel time), and pull all non-champions hit towards her.",
             "leveling": [
               {
                 "attribute": "Minimum Physical Damage",
@@ -239,36 +211,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50,
-              60,
-              70,
-              80,
-              90
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50,
+          60,
+          70,
+          80,
+          90
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                12,
-                10.5,
-                9,
-                7.5,
-                6
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          12,
+          10.5,
+          9,
+          7.5,
+          6
+        ],
         "targeting": "Auto / Direction",
         "affects": "Enemies, Self",
         "spellshieldable": "true",
@@ -291,7 +246,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": "250 : 725 (based on channel time)"
+        "targetRange": "250 : 725 (based on channel time)",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -300,7 +256,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vi/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Vi's basic attacks on-hit and Vault Breaker apply a stack of Denting Blows to enemies hit for 4 seconds, refreshing on subsequent applications and stacking up to 3 times. The third stack consumes them all to deal bonus physical damage, capped at 300 against non-champions, and inflict 20% armor reduction for 4 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Vi's basic attacks on-hit and Vault Breaker apply a stack of Denting Blows to enemies hit for 4 seconds, refreshing on subsequent applications and stacking up to 3 times. The third stack consumes them all to deal bonus physical damage, capped at 300 against non-champions, and inflict 20% armor reduction for 4 seconds.",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage",
@@ -352,11 +308,12 @@
             ]
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          0
+        ],
         "targeting": "Passive",
         "affects": "Self, Enemies",
         "spellshieldable": "False",
@@ -379,7 +336,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -388,7 +346,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vi/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Vi empowers her next basic attack within 6 seconds to have an uncancellable windup, gain 50 bonus range and trigger a blast in the target's direction that deals modified physical damage to enemies hit in a cone.Relentless Force can critically strike for (90% + 48%) AD bonus physical damage against the primary target. Secondary targets take the same damage but do not count as being critically struck.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Vi empowers her next basic attack within 6 seconds to have an uncancellable windup, gain 50 bonus range and trigger a blast in the target's direction that deals modified physical damage to enemies hit in a cone.Relentless Force can critically strike for (90% + 48%) AD bonus physical damage against the primary target. Secondary targets take the same damage but do not count as being critically struck.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -435,32 +393,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              26,
-              32,
-              38,
-              44,
-              50
-            ],
-            "units": [
-              ""
-            ]
-          }
+          26,
+          32,
+          38,
+          44,
+          50
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                1
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": false
-        },
+        "cooldown": [
+          1
+        ],
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "true",
@@ -489,7 +430,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "600",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": 2
       }
     ],
     "R": [
@@ -498,7 +440,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vi/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Vi singles out the target enemy champion, dashing with displacement immunity towards them and revealing them. Upon approaching within 300 units of the target, she dashes through and grabs them over 1.05 seconds, knocking them up for 1.3 seconds and dealing physical damage after 0.75 seconds into the grab duration.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Vi singles out the target enemy champion, dashing with displacement immunity towards them and revealing them. Upon approaching within 300 units of the target, she dashes through and grabs them over 1.05 seconds, knocking them up for 1.3 seconds and dealing physical damage after 0.75 seconds into the grab duration.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -531,30 +473,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                140,
-                115,
-                90
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          140,
+          115,
+          90
+        ],
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -564,7 +489,7 @@
         "projectile": null,
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Vi will track the target if they change locations.\nShe will stop dashing if the target is too far away or moves beyond 1500 units.\nVi will land to the opposite side of the target from the dash after the grab ends.\nShe will not dash through the target if she would not be able to land to the opposite side of them, such as by terrain.\nSecondary targets will be affected as soon as they come into contact with Vi, and cannot be affected by this again for ~4 seconds.\nThe  airborne debuff cannot be overridden.\nThe dash will not be overridden if Vi  blinks during it.\nVi's  displacement immunity and the target's  reveal both last until the grab ends.\nIf the dash ends from entering resurrection or the target being too far away, the displacement immunity will remain for 7 seconds, and will otherwise be lost.(bug)\nThe dash speed increases with time travelled.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).\nIf the target becomes untargetable during the dash, Vi ends the dash prematurely and moves towards the target briefly, ignoring any movement commands. If Vi enters grabbing range, she will apply the  airborne effect but not deal any damage.\nIf Vi enters  resurrection during the cast time, she will still dash and apply the airborne effect to the target upon entering grabbing range though not dealing any damage.\nCease and Desist will cancel and go on full cooldown if Vi is affected by  Fear Beyond Death's recast during the cast time.\n Displacement immunity will not resist the application of the  stun.\nThe following table refers for interactions while Vi is  dashing and has grabbed the target:\n Flash cannot be used during the grab.\nThis lockout is removed as soon as the grab ends, after which the the target's remaining  airborne time will be 0.25 seconds.\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\n Relentless Force is usable.  Vault Breaker is disabled.\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash  Hexflash\n\n\nDisabled\n\n Teleport  Recall\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
+        "notes": "Vi will track the target if they change locations.\nShe will stop dashing if the target is too far away or moves beyond 1500 units.\nVi will land to the opposite side of the target from the dash after the grab ends.\nShe will not dash through the target if she would not be able to land to the opposite side of them, such as by terrain.\nSecondary targets will be affected as soon as they come into contact with Vi, and cannot be affected by this again for ~4 seconds.\nThe  airborne debuff cannot be overridden.\nThe dash will not be overridden if Vi  blinks during it.\nVi's  displacement immunity and the target's  reveal both last until the grab ends.\nIf the dash ends from entering resurrection or the target being too far away, the displacement immunity will remain for 7 seconds, and will otherwise be lost.(bug)\nThe dash speed increases with time travelled.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).\nThis will also occur for when Vi enters  resurrection during the cast time.\nIf the target becomes untargetable during the dash, Vi ends the dash prematurely and moves towards the target briefly, ignoring any movement commands. If Vi enters grabbing range, she will apply the  airborne effect but not deal any damage.\nCease and Desist will cancel and go on full cooldown if Vi is affected by  Fear Beyond Death's recast during the cast time.\n Displacement immunity will not resist the application of the  stun.\nThe following table refers for interactions while Vi is  dashing and has grabbed the target:\n Flash cannot be used during the grab.\nThis lockout is removed as soon as the grab ends, after which the the target's remaining  airborne time will be 0.25 seconds.\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\n Relentless Force is usable.  Vault Breaker is disabled.\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash  Hexflash\n\n\nDisabled\n\n Teleport  Recall\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
         "blurb": "Active:  Vi  reveals the target enemy champion and  dashes to them with  displacement immunity, dealing physical damage to enemies she passes through and briefly  knocking aside and  stunning them.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -577,10 +502,10 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "800"
+        "targetRange": "800",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Raised on the mean streets of Zaun, Vi is a hotheaded, impulsive, and fearsome woman with very little respect for authority. She has always been a shrewd survivor, both from her youthful troublemaking topside and an unfairly long stint in Stillwater Hold. Now working with the Piltover Enforcers to keep the peace instead of breaking it, she wields mighty hextech gauntlets that can punch through walls—and criminals—with equal ease.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/vi/skins/base/images/vi_splash_tile_0.jpg"
+  "lore": "Raised on the mean streets of Zaun, Vi is a hotheaded, impulsive, and fearsome woman with very little respect for authority. She has always been a shrewd survivor, both from her youthful troublemaking topside and an unfairly long stint in Stillwater Hold. Now working with the Piltover Enforcers to keep the peace instead of breaking it, she wields mighty hextech gauntlets that can punch through walls—and criminals—with equal ease."
 }

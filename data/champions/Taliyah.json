@@ -100,7 +100,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Taliyah/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> While near terrain, Taliyah gains 10 / 15 / 25 / 40% (based on level) bonus movement speed, which builds up over 1 second while in range for at least 0.4 seconds, and decays at the same rate once out of range for at least 3 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> While near terrain, Taliyah gains 10 / 15 / 25 / 40% (based on level) bonus movement speed, which builds up over 1 second while in range for at least 0.4 seconds, and decays at the same rate once out of range for at least 3 seconds.",
             "leveling": []
           },
           {
@@ -109,19 +109,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                2
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -144,7 +132,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -153,7 +142,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Taliyah/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Taliyah barrages 5 Stone Shards in the target direction over 1.5 seconds that each shatter upon the first enemy hit, dealing magic damage to nearby enemies and revealing them for 0.5 seconds. Subsequent hits deal 40% damage.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Taliyah barrages 5 Stone Shards in the target direction over 1.5 seconds that each shatter upon the first enemy hit, dealing magic damage to nearby enemies and revealing them for 0.5 seconds. Subsequent hits deal 40% damage.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -241,7 +230,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Empowered Active:</p><p> Taliyah hurls a Boulder that explodes upon the first enemy hit, dealing 190% damage to them and normal damage to nearby enemies, slowing all targets hit for 1.5 seconds, and revealing them for 0.5 seconds. Monsters hit are also stunned for 3 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Empowered Active:</span> Taliyah hurls a Boulder that explodes upon the first enemy hit, dealing 190% damage to them and normal damage to nearby enemies, slowing all targets hit for 1.5 seconds, and revealing them for 0.5 seconds. Monsters hit are also stunned for 3 seconds.",
             "leveling": [
               {
                 "attribute": "Empowered Damage",
@@ -293,36 +282,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              65,
-              70,
-              75,
-              80,
-              85
-            ],
-            "units": [
-              ""
-            ]
-          }
+          65,
+          70,
+          75,
+          80,
+          85
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                7,
-                6,
-                5,
-                4,
-                3
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          7,
+          6,
+          5,
+          4,
+          3
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "Special",
@@ -345,7 +317,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "175 /  225",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -354,41 +327,24 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Taliyah/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Taliyah marks the target location and selects a direction. After 0.792 seconds, a ledge erupts from the area that knocks enemies hit 400 units in the target direction over 1 second.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Taliyah marks the target location and selects a direction. After 0.792 seconds, a ledge erupts from the area that knocks enemies hit 400 units in the target direction over 1 second.",
             "leveling": []
           }
         ],
         "cost": [
-          {
-            "values": [
-              40,
-              30,
-              20,
-              10,
-              0
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40,
+          30,
+          20,
+          10,
+          0
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                14,
-                12.5,
-                11,
-                9.5,
-                8
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          14,
+          12.5,
+          11,
+          9.5,
+          8
+        ],
         "targeting": "Vector",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -411,7 +367,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "225",
-        "targetRange": "900"
+        "targetRange": "900",
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -420,7 +377,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Taliyah/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Taliyah scatters a field of 22 stones across the ground in the target direction that deals magic damage to enemies hit while they erupt. The stones then remain for 4 seconds and slow enemies within the area by 20%.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Taliyah scatters a field of 22 stones across the ground in the target direction that deals magic damage to enemies hit while they erupt. The stones then remain for 4 seconds and slow enemies within the area by 20%.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -515,32 +472,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              90,
-              95,
-              100,
-              105,
-              110
-            ],
-            "units": [
-              ""
-            ]
-          }
+          90,
+          95,
+          100,
+          105,
+          110
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                14
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          14
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "true",
@@ -563,7 +503,8 @@
         "angle": "80°",
         "castTime": "0.25",
         "effectRadius": "800",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -572,7 +513,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Taliyah/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Taliyah summons a torrent of spiraling rocks that cascades in the target direction, knocking aside champions hit and erecting a wall of terrain in its wake. The wall lasts for 4 seconds after completion, then slowly disintegrates from its starting point.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Taliyah summons a torrent of spiraling rocks that cascades in the target direction, knocking aside champions hit and erecting a wall of terrain in its wake. The wall lasts for 4 seconds after completion, then slowly disintegrates from its starting point.",
             "leveling": []
           },
           {
@@ -580,7 +521,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Upon completing the channel, Taliyah surfs on the wall as it emerges, revealing herself in the process. After 0.75 seconds, she may input a movement command to jump off the wall to the target location, and automatically does so upon being immobilized or silenced or reaching maximum range.Once the wall has fully formed, Taliyah can recast to destroy the wall instantly.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Upon completing the channel, Taliyah surfs on the wall as it emerges, revealing herself in the process. After 0.75 seconds, she may input a movement command to jump off the wall to the target location, and automatically does so upon being immobilized or silenced or reaching maximum range.Once the wall has fully formed, Taliyah can recast to destroy the wall instantly.",
             "leveling": []
           },
           {
@@ -589,30 +530,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                180,
-                150,
-                120
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          180,
+          150,
+          120
+        ],
         "targeting": "Direction / Auto",
         "affects": "Self, Enemies",
         "spellshieldable": "false",
@@ -635,10 +559,10 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": "2500 / 3500 / 4500 / 5500 / 6500"
+        "targetRange": "2500 / 3500 / 4500 / 5500 / 6500",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Taliyah is a nomadic mage from Shurima, torn between teenage wonder and adult responsibility. She has crossed nearly all of Valoran on a journey to learn the true nature of her growing powers, though more recently she has returned to protect her tribe. Some have mistaken her compassion for weakness and paid the ultimate price—for beneath Taliyah's youthful demeanor is a will strong enough to move mountains, and a spirit fierce enough to make the earth itself tremble.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/taliyah/skins/base/images/taliyah_splash_tile_0.jpg"
+  "lore": "Taliyah is a nomadic mage from Shurima, torn between teenage wonder and adult responsibility. She has crossed nearly all of Valoran on a journey to learn the true nature of her growing powers, though more recently she has returned to protect her tribe. Some have mistaken her compassion for weakness and paid the ultimate price—for beneath Taliyah's youthful demeanor is a will strong enough to move mountains, and a spirit fierce enough to make the earth itself tremble."
 }

@@ -100,7 +100,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Xerath/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Periodically, Xerath empowers his next basic attack to restore 30 - 195 (based on level) mana, doubled to 60 - 390 (based on level) against enemy champions.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Periodically, Xerath empowers his next basic attack to restore 30 - 195 (based on level) mana, doubled to 60 - 390 (based on level) against enemy champions.",
             "leveling": []
           },
           {
@@ -113,19 +113,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                16
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -148,7 +136,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -157,7 +146,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Xerath/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Xerath charges while being slowed by 0% - 40% (based on channel time) for up to 3 seconds to increase Arcanopulse's range over the first 1.5 to 1.75 seconds of the channel.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Xerath charges while being slowed by 0% - 40% (based on channel time) for up to 3 seconds to increase Arcanopulse's range over the first 1.5 to 1.75 seconds of the channel.",
             "leveling": []
           },
           {
@@ -183,7 +172,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Xerath becomes unable to act for 0.528 seconds and afterwards fires a beam of energy in a line in the target direction that deals magic damage to enemies hit.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Xerath becomes unable to act for 0.528 seconds and afterwards fires a beam of energy in a line in the target direction that deals magic damage to enemies hit.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -214,36 +203,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              80,
-              90,
-              100,
-              110,
-              120
-            ],
-            "units": [
-              ""
-            ]
-          }
+          80,
+          90,
+          100,
+          110,
+          120
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                9,
-                8,
-                7,
-                6,
-                5
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          9,
+          8,
+          7,
+          6,
+          5
+        ],
         "targeting": "Direction",
         "affects": "Self, Enemies",
         "spellshieldable": "True",
@@ -266,7 +238,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "W": [
@@ -275,7 +248,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Xerath/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Xerath casts down a blast of arcane energy that strikes the target location after 0.528 seconds, briefly granting sight of the area and dealing magic damage to enemies hit and slowing them by 25% for 2.5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Xerath casts down a blast of arcane energy that strikes the target location after 0.528 seconds, briefly granting sight of the area and dealing magic damage to enemies hit and slowing them by 25% for 2.5 seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -353,36 +326,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              80,
-              90,
-              100,
-              110,
-              120
-            ],
-            "units": [
-              ""
-            ]
-          }
+          80,
+          90,
+          100,
+          110,
+          120
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                14,
-                13,
-                12,
-                11,
-                10
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          14,
+          13,
+          12,
+          11,
+          10
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -405,7 +361,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "275 / 125 / 250",
-        "targetRange": "1000"
+        "targetRange": "1000",
+        "maxCharges": null
       }
     ],
     "E": [
@@ -414,7 +371,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Xerath/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Xerath fires an orb of energy in the target direction that deals magic damage to the first enemy hit and stuns them for 0.75 - 2.25 (based on orb travel distance) seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Xerath fires an orb of energy in the target direction that deals magic damage to the first enemy hit and stuns them for 0.75 - 2.25 (based on orb travel distance) seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -445,36 +402,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              60,
-              65,
-              70,
-              75,
-              80
-            ],
-            "units": [
-              ""
-            ]
-          }
+          60,
+          65,
+          70,
+          75,
+          80
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                13,
-                12.5,
-                12,
-                11.5,
-                11
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          13,
+          12.5,
+          12,
+          11.5,
+          11
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -497,7 +437,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "R": [
@@ -506,7 +447,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Xerath/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Xerath channels for up to 10 seconds, gaining the ability to recast Rite of the Arcane multiple times after 0.5 seconds within the duration. If Rite of the Arcane ends without any of the recasts being used, half of its cooldown is refunded.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Xerath channels for up to 10 seconds, gaining the ability to recast Rite of the Arcane multiple times after 0.5 seconds within the duration. If Rite of the Arcane ends without any of the recasts being used, half of its cooldown is refunded.",
             "leveling": [
               {
                 "attribute": "Number of Recasts",
@@ -526,7 +467,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast - Arcane Barrage:</p><p> Xerath catapults an arcane missile that strikes the target location after a 0.627 seconds delay, briefly granting sight of the area and dealing magic damage to enemies hit. Each cast has a static cooldown of 0.5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Recast - Arcane Barrage:</span> Xerath catapults an arcane missile that strikes the target location after a 0.627 seconds delay, briefly granting sight of the area and dealing magic damage to enemies hit. Each cast has a static cooldown of 0.5 seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -647,30 +588,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                130,
-                115,
-                100
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          130,
+          115,
+          100
+        ],
         "targeting": "Auto / Location",
         "affects": "Self, Enemies",
         "spellshieldable": "True",
@@ -693,10 +617,10 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "200",
-        "targetRange": "5000"
+        "targetRange": "5000",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Xerath is an Ascended Magus of ancient Shurima, a being of arcane energy writhing in the broken shards of a magical sarcophagus. For millennia, he was trapped beneath the desert sands, but the rise of Shurima freed him from his ancient prison. Driven insane with power, he now seeks to take what he believes is rightfully his and replace the upstart civilizations of the world with one fashioned in his image.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/xerath/skins/base/images/xerath_splash_tile_0.jpg"
+  "lore": "Xerath is an Ascended Magus of ancient Shurima, a being of arcane energy writhing in the broken shards of a magical sarcophagus. For millennia, he was trapped beneath the desert sands, but the rise of Shurima freed him from his ancient prison. Driven insane with power, he now seeks to take what he believes is rightfully his and replace the upstart civilizations of the world with one fashioned in his image."
 }

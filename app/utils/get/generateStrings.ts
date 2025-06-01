@@ -137,11 +137,10 @@ function generateWords(min: number, max: number): string {
 
 // Shared word generation logic
 async function generateName(length: 'short' | 'medium'): Promise<string> {
-  const champData = await $fetch<ChampionIndex[]>('/api/index/item-index.json')
-  const championWords = champData.flatMap(item => item.name)
+  const ix = useIndexStore()
+  const championWords = ix.champions.map(item => item.name)
 
-  const itemData = await $fetch<ItemIndex[]>('/api/index/item-index.json')
-  const itemWords = itemData.flatMap(item => item.name)
+  const itemWords = ix.items.map(item => item.name)
 
   const leagueWords = [...championWords, ...itemWords, ...moreWords]
   const leagueWord = getRandomElement(leagueWords)

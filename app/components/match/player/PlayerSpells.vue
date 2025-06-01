@@ -6,12 +6,12 @@ const props = defineProps<{
 const player = computed (() => {
   return props.player
 })
-const { spellNameById } = await useIndexLookup()
+const ix = useIndexStore()
 
 const spells = computed (() => {
   return {
-    sum1: spellNameById(player.value.summoner1Id),
-    sum2: spellNameById(player.value.summoner2Id),
+    sum1: ix.spellNameById(player.value.summoner1Id),
+    sum2: ix.spellNameById(player.value.summoner2Id),
   }
 })
 </script>

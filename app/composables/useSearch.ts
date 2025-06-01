@@ -13,25 +13,27 @@ export async function useSearch(query = ref(''), options: UseSearchOptions = {})
   const router = useRouter()
 
   // champion source
+  // TODO runes
+  const ix = useIndexStore()
   const championSource = isRef(options.customChampions)
     ? options.customChampions
-    : ref(options.customChampions ?? await $fetch<ChampionIndex[]>('/api/index/champion-index.json'))
+    : ref(options.customChampions ?? ix.champions)
 
   const itemSource = isRef(options.customItems)
     ? options.customItems
-    : ref(options.customItems ?? await $fetch<ItemIndex[]>('/api/index/item-index.json'))
+    : ref(options.customItems ?? ix.items)
 
-  const champions = computed(() => Object.values(unref(championSource)))
-  const items = computed(() => Object.values(unref(itemSource)))
+  const championRef = computed(() => Object.values(unref(championSource)))
+  const itemsRef = computed(() => Object.values(unref(itemSource)))
 
   const championFuse = ref<Fuse<any> | null>(null)
   const itemFuse = ref<Fuse<any> | null>(null)
 
-  watch(champions, (newVal) => {
+  watch(championRef, (newVal) => {
     championFuse.value = new Fuse(newVal, { keys: ['name'], threshold: 0.3 })
   }, { immediate: true })
 
-  watch(items, (newVal) => {
+  watch(itemsRef, (newVal) => {
     itemFuse.value = new Fuse(newVal, { keys: ['name', 'nickname'], threshold: 0.3 })
   }, { immediate: true })
 

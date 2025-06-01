@@ -6,17 +6,14 @@ const props = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 
-const { data } = await useFetch('/api/index/champion-index.json')
-const champions = computedAsync(async () => {
-  return await Object.values(data.value) as ChampionIndex[]
-}, null)
+const ix = useIndexStore()
 
 const searchQuery = ref('')
 
 const fuse = ref<Fuse<any> | null>(null)
 
 watch(
-  () => champions.value,
+  () => ix.champions,
   (newChampions) => {
     if (newChampions && newChampions.length > 0) {
       fuse.value = new Fuse(newChampions, {
@@ -30,7 +27,7 @@ watch(
 )
 const searchResult = computed(() => {
   if (!searchQuery.value) {
-    return champions.value || []
+    return ix.champions || []
   }
   if (!fuse.value)
     return []

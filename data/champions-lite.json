@@ -80,8 +80,7 @@
       "utility": 2,
       "abilityReliance": 20,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/aatrox/skins/base/images/aatrox_splash_tile_0.jpg"
+    }
   },
   "Ahri": {
     "id": 103,
@@ -175,8 +174,7 @@
       "utility": 1,
       "abilityReliance": 100,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ahri/skins/base/images/ahri_splash_tile_0.jpg"
+    }
   },
   "Akali": {
     "id": 84,
@@ -267,8 +265,7 @@
       "utility": 1,
       "abilityReliance": 65,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/akali/skins/base/images/akali_splash_tile_0.jpg"
+    }
   },
   "Akshan": {
     "id": 166,
@@ -361,8 +358,7 @@
       "utility": 2,
       "abilityReliance": 1,
       "difficulty": 3
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/akshan/skins/base/images/akshan_splash_tile_0.jpg"
+    }
   },
   "Alistar": {
     "id": 12,
@@ -453,8 +449,7 @@
       "utility": 2,
       "abilityReliance": 65,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/alistar/skins/base/images/alistar_splash_tile_0.jpg"
+    }
   },
   "Ambessa": {
     "id": 799,
@@ -544,8 +539,7 @@
       "utility": 1,
       "abilityReliance": 55,
       "difficulty": 3
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ambessa/skins/base/images/ambessa_splash_tile_0.domina.jpg"
+    }
   },
   "Amumu": {
     "id": 32,
@@ -640,8 +634,7 @@
       "utility": 1,
       "abilityReliance": 90,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/amumu/skins/base/images/amumu_splash_tile_0.jpg"
+    }
   },
   "Anivia": {
     "id": 34,
@@ -735,8 +728,7 @@
       "utility": 2,
       "abilityReliance": 100,
       "difficulty": 3
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/anivia/skins/base/images/anivia_splash_tile_0.jpg"
+    }
   },
   "Annie": {
     "id": 1,
@@ -762,8 +754,8 @@
         "perLevel": 0.8
       },
       "armor": {
-        "flat": 19,
-        "perLevel": 4.7
+        "flat": 23,
+        "perLevel": 4
       },
       "magicResistance": {
         "flat": 30,
@@ -830,8 +822,7 @@
       "utility": 2,
       "abilityReliance": 100,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/annie/skins/base/images/annie_splash_tile_0.jpg"
+    }
   },
   "Aphelios": {
     "id": 523,
@@ -920,8 +911,7 @@
       "utility": 1,
       "abilityReliance": 20,
       "difficulty": 3
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/aphelios/skins/base/images/aphelios_splash_tile_0.jpg"
+    }
   },
   "Ashe": {
     "id": 22,
@@ -1015,8 +1005,7 @@
       "utility": 2,
       "abilityReliance": 20,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ashe/skins/base/images/ashe_splash_tile_0.jpg"
+    }
   },
   "AurelionSol": {
     "id": 136,
@@ -1109,8 +1098,7 @@
       "utility": 1,
       "abilityReliance": 100,
       "difficulty": 3
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/aurelionsol/skins/base/images/aurelionsol_splash_tile_0.jpg"
+    }
   },
   "Aurora": {
     "id": 893,
@@ -1205,8 +1193,7 @@
       "utility": 1,
       "abilityReliance": 100,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/aurora/skins/base/images/aurora_splash_tile_0.aurora.jpg"
+    }
   },
   "Azir": {
     "id": 268,
@@ -1300,8 +1287,7 @@
       "utility": 1,
       "abilityReliance": 45,
       "difficulty": 3
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/azir/skins/base/images/azir_splash_tile_0.jpg"
+    }
   },
   "Bard": {
     "id": 432,
@@ -1395,8 +1381,7 @@
       "utility": 3,
       "abilityReliance": 65,
       "difficulty": 3
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/bard/skins/base/images/bard_splash_tile_0.jpg"
+    }
   },
   "Belveth": {
     "id": 200,
@@ -1480,8 +1465,7 @@
       "utility": 1,
       "abilityReliance": 0,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/belveth/skins/base/images/belveth_splash_tile_0.jpg"
+    }
   },
   "Blitzcrank": {
     "id": 53,
@@ -1575,8 +1559,7 @@
       "utility": 1,
       "abilityReliance": 90,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/blitzcrank/skins/base/images/blitzcrank_splash_tile_0.jpg"
+    }
   },
   "Brand": {
     "id": 63,
@@ -1672,8 +1655,7 @@
       "utility": 1,
       "abilityReliance": 100,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/brand/skins/base/images/brand_splash_tile_0.jpg"
+    }
   },
   "Braum": {
     "id": 201,
@@ -1767,8 +1749,7 @@
       "utility": 2,
       "abilityReliance": 90,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/braum/skins/base/images/braum_splash_tile_0.jpg"
+    }
   },
   "Briar": {
     "id": 233,
@@ -1847,8 +1828,7 @@
       "utility": 1,
       "abilityReliance": 10,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/briar/skins/base/images/briar_splash_tile_0.jpg"
+    }
   },
   "Caitlyn": {
     "id": 51,
@@ -1940,8 +1920,7 @@
       "utility": 1,
       "abilityReliance": 10,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/caitlyn/skins/base/images/caitlyn_splash_tile_0.jpg"
+    }
   },
   "Camille": {
     "id": 164,
@@ -2033,8 +2012,7 @@
       "utility": 1,
       "abilityReliance": 40,
       "difficulty": 3
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/camille/skins/base/images/camille_splash_tile_0.jpg"
+    }
   },
   "Cassiopeia": {
     "id": 69,
@@ -2127,8 +2105,7 @@
       "utility": 1,
       "abilityReliance": 100,
       "difficulty": 3
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/cassiopeia/skins/base/images/cassiopeia_splash_tile_0.jpg"
+    }
   },
   "Chogath": {
     "id": 31,
@@ -2155,7 +2132,7 @@
       },
       "armor": {
         "flat": 38,
-        "perLevel": 5
+        "perLevel": 4.5
       },
       "magicResistance": {
         "flat": 32,
@@ -2222,8 +2199,7 @@
       "utility": 1,
       "abilityReliance": 65,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/chogath/skins/base/images/chogath_splash_tile_0.jpg"
+    }
   },
   "Corki": {
     "id": 42,
@@ -2316,8 +2292,7 @@
       "utility": 1,
       "abilityReliance": 45,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/corki/skins/base/images/corki_splash_tile_0.jpg"
+    }
   },
   "Darius": {
     "id": 122,
@@ -2411,8 +2386,7 @@
       "utility": 1,
       "abilityReliance": 55,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/darius/skins/base/images/darius_splash_tile_0.jpg"
+    }
   },
   "Diana": {
     "id": 131,
@@ -2507,8 +2481,7 @@
       "utility": 1,
       "abilityReliance": 65,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/diana/skins/base/images/diana_splash_tile_0.jpg"
+    }
   },
   "DrMundo": {
     "id": 36,
@@ -2594,8 +2567,7 @@
       "utility": 1,
       "abilityReliance": 55,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/drmundo/skins/base/images/drmundo_splash_tile_0.jpg"
+    }
   },
   "Draven": {
     "id": 119,
@@ -2687,8 +2659,7 @@
       "utility": 1,
       "abilityReliance": 10,
       "difficulty": 3
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/draven/skins/base/images/draven_splash_tile_0.jpg"
+    }
   },
   "Ekko": {
     "id": 245,
@@ -2779,8 +2750,7 @@
       "utility": 1,
       "abilityReliance": 75,
       "difficulty": 3
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ekko/skins/base/images/ekko_splash_tile_0.jpg"
+    }
   },
   "Elise": {
     "id": 60,
@@ -2874,8 +2844,7 @@
       "utility": 1,
       "abilityReliance": 65,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/elise/skins/base/images/elise_splash_tile_0.jpg"
+    }
   },
   "Evelynn": {
     "id": 28,
@@ -2965,8 +2934,7 @@
       "utility": 2,
       "abilityReliance": 75,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/evelynn/skins/base/images/evelynn_splash_tile_0.jpg"
+    }
   },
   "Ezreal": {
     "id": 81,
@@ -3059,8 +3027,7 @@
       "utility": 1,
       "abilityReliance": 45,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ezreal/skins/base/images/ezreal_splash_tile_0.jpg"
+    }
   },
   "Fiddlesticks": {
     "id": 9,
@@ -3151,8 +3118,7 @@
       "utility": 1,
       "abilityReliance": 100,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fiddlesticks/skins/base/images/fiddlesticks_splash_tile_0.jpg"
+    }
   },
   "Fiora": {
     "id": 114,
@@ -3243,8 +3209,7 @@
       "utility": 2,
       "abilityReliance": 20,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fiora/skins/base/images/fiora_splash_tile_0.jpg"
+    }
   },
   "Fizz": {
     "id": 105,
@@ -3337,8 +3302,7 @@
       "utility": 1,
       "abilityReliance": 90,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/fizz/skins/base/images/fizz_splash_tile_0.jpg"
+    }
   },
   "Galio": {
     "id": 3,
@@ -3430,8 +3394,7 @@
       "utility": 1,
       "abilityReliance": 100,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/galio/skins/base/images/galio_splash_tile_0.jpg"
+    }
   },
   "Gangplank": {
     "id": 41,
@@ -3521,8 +3484,7 @@
       "utility": 2,
       "abilityReliance": 75,
       "difficulty": 3
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gangplank/skins/base/images/gangplank_splash_tile_0.jpg"
+    }
   },
   "Garen": {
     "id": 86,
@@ -3608,8 +3570,7 @@
       "utility": 1,
       "abilityReliance": 75,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/garen/skins/base/images/garen_splash_tile_0.jpg"
+    }
   },
   "Gnar": {
     "id": 150,
@@ -3699,8 +3660,7 @@
       "utility": 1,
       "abilityReliance": 45,
       "difficulty": 3
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gnar/skins/base/images/gnar_splash_tile_0.jpg"
+    }
   },
   "Gragas": {
     "id": 79,
@@ -3796,8 +3756,7 @@
       "utility": 1,
       "abilityReliance": 90,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gragas/skins/base/images/gragas_splash_tile_0.jpg"
+    }
   },
   "Graves": {
     "id": 104,
@@ -3890,8 +3849,7 @@
       "utility": 2,
       "abilityReliance": 20,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/graves/skins/base/images/graves_splash_tile_0.jpg"
+    }
   },
   "Gwen": {
     "id": 887,
@@ -3983,8 +3941,7 @@
       "utility": 1,
       "abilityReliance": 50,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gwen/skins/base/images/gwen_splash_tile_0.jpg"
+    }
   },
   "Hecarim": {
     "id": 120,
@@ -4078,8 +4035,7 @@
       "utility": 1,
       "abilityReliance": 65,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/hecarim/skins/base/images/hecarim_splash_tile_0.jpg"
+    }
   },
   "Heimerdinger": {
     "id": 74,
@@ -4175,8 +4131,7 @@
       "utility": 2,
       "abilityReliance": 100,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/heimerdinger/skins/base/images/heimerdinger_splash_tile_0.jpg"
+    }
   },
   "Hwei": {
     "id": 910,
@@ -4268,8 +4223,7 @@
       "utility": 2,
       "abilityReliance": 90,
       "difficulty": 3
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/hwei/skins/skin0/images/hwei_splash_tile_0.jpg"
+    }
   },
   "Illaoi": {
     "id": 420,
@@ -4360,8 +4314,7 @@
       "utility": 1,
       "abilityReliance": 65,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/illaoi/skins/base/images/illaoi_splash_tile_0.jpg"
+    }
   },
   "Irelia": {
     "id": 39,
@@ -4453,8 +4406,7 @@
       "utility": 2,
       "abilityReliance": 30,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/irelia/skins/base/images/irelia_splash_tile_0.jpg"
+    }
   },
   "Ivern": {
     "id": 427,
@@ -4548,8 +4500,7 @@
       "utility": 3,
       "abilityReliance": 10,
       "difficulty": 3
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ivern/skins/base/images/ivern_splash_tile_0.jpg"
+    }
   },
   "Janna": {
     "id": 40,
@@ -4643,8 +4594,7 @@
       "utility": 3,
       "abilityReliance": 100,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/janna/skins/base/images/janna_splash_tile_0.jpg"
+    }
   },
   "JarvanIV": {
     "id": 59,
@@ -4738,8 +4688,7 @@
       "utility": 2,
       "abilityReliance": 55,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/jarvaniv/skins/base/images/jarvaniv_splash_tile_0.jpg"
+    }
   },
   "Jax": {
     "id": 24,
@@ -4834,8 +4783,7 @@
       "utility": 1,
       "abilityReliance": 10,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/jax/skins/base/images/jax_splash_tile_0.jpg"
+    }
   },
   "Jayce": {
     "id": 126,
@@ -4930,8 +4878,7 @@
       "utility": 2,
       "abilityReliance": 45,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/jayce/skins/base/images/jayce_splash_tile_0.jpg"
+    }
   },
   "Jhin": {
     "id": 202,
@@ -5019,8 +4966,7 @@
       "utility": 1,
       "abilityReliance": 20,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/jhin/skins/base/images/jhin_splash_tile_0.jpg"
+    }
   },
   "Jinx": {
     "id": 222,
@@ -5109,8 +5055,7 @@
       "utility": 1,
       "abilityReliance": 10,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/jinx/skins/base/images/jinx_splash_tile_0.jpg"
+    }
   },
   "KSante": {
     "id": 897,
@@ -5205,8 +5150,7 @@
       "utility": 2,
       "abilityReliance": 30,
       "difficulty": 3
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ksante/skins/base/images/ksante_splash_tile_0.jpg"
+    }
   },
   "Kaisa": {
     "id": 145,
@@ -5296,8 +5240,7 @@
       "utility": 1,
       "abilityReliance": 10,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kaisa/skins/base/images/kaisa_splash_tile_0.jpg"
+    }
   },
   "Kalista": {
     "id": 429,
@@ -5389,8 +5332,7 @@
       "utility": 2,
       "abilityReliance": 10,
       "difficulty": 3
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kalista/skins/base/images/kalista_splash_tile_0.jpg"
+    }
   },
   "Karma": {
     "id": 43,
@@ -5487,8 +5429,7 @@
       "utility": 2,
       "abilityReliance": 100,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/karma/skins/base/images/karma_splash_tile_0.jpg"
+    }
   },
   "Karthus": {
     "id": 30,
@@ -5581,8 +5522,7 @@
       "utility": 2,
       "abilityReliance": 100,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/karthus/skins/base/images/karthus_splash_tile_0.jpg"
+    }
   },
   "Kassadin": {
     "id": 38,
@@ -5608,7 +5548,7 @@
         "perLevel": 0.8
       },
       "armor": {
-        "flat": 19,
+        "flat": 21,
         "perLevel": 4
       },
       "magicResistance": {
@@ -5675,8 +5615,7 @@
       "utility": 1,
       "abilityReliance": 90,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kassadin/skins/base/images/kassadin_splash_tile_0.jpg"
+    }
   },
   "Katarina": {
     "id": 55,
@@ -5761,8 +5700,7 @@
       "utility": 1,
       "abilityReliance": 100,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/katarina/skins/base/images/katarina_splash_tile_0.jpg"
+    }
   },
   "Kayle": {
     "id": 10,
@@ -5853,8 +5791,7 @@
       "utility": 3,
       "abilityReliance": 20,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kayle/skins/base/images/kayle_splash_tile_0.jpg"
+    }
   },
   "Kayn": {
     "id": 141,
@@ -5948,8 +5885,7 @@
       "utility": 1,
       "abilityReliance": 0,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kayn/skins/base/images/kayn_splash_tile_0.jpg"
+    }
   },
   "Kennen": {
     "id": 85,
@@ -6041,8 +5977,7 @@
       "utility": 1,
       "abilityReliance": 65,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kennen/skins/base/images/kennen_splash_tile_0.jpg"
+    }
   },
   "Khazix": {
     "id": 121,
@@ -6134,8 +6069,7 @@
       "utility": 1,
       "abilityReliance": 55,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/khazix/skins/base/images/khazix_splash_tile_0.jpg"
+    }
   },
   "Kindred": {
     "id": 203,
@@ -6227,8 +6161,7 @@
       "utility": 2,
       "abilityReliance": 20,
       "difficulty": 3
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kindred/skins/base/images/kindred_splash_tile_0.jpg"
+    }
   },
   "Kled": {
     "id": 240,
@@ -6314,8 +6247,7 @@
       "utility": 1,
       "abilityReliance": 30,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kled/skins/base/images/kled_splash_tile_0.jpg"
+    }
   },
   "KogMaw": {
     "id": 96,
@@ -6408,8 +6340,7 @@
       "utility": 1,
       "abilityReliance": 10,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kogmaw/skins/base/images/kogmaw_splash_tile_0.jpg"
+    }
   },
   "Leblanc": {
     "id": 7,
@@ -6503,8 +6434,7 @@
       "utility": 1,
       "abilityReliance": 100,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leblanc/skins/base/images/leblanc_splash_tile_0.leblanc_rework.jpg"
+    }
   },
   "LeeSin": {
     "id": 64,
@@ -6596,8 +6526,7 @@
       "utility": 1,
       "abilityReliance": 55,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leesin/skins/base/images/leesin_splash_tile_0.jpg"
+    }
   },
   "Leona": {
     "id": 89,
@@ -6691,8 +6620,7 @@
       "utility": 1,
       "abilityReliance": 90,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/leona/skins/base/images/leona_splash_tile_0.jpg"
+    }
   },
   "Lillia": {
     "id": 876,
@@ -6786,8 +6714,7 @@
       "utility": 2,
       "abilityReliance": 80,
       "difficulty": 3
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/lillia/skins/base/images/lillia_splash_tile_0.jpg"
+    }
   },
   "Lissandra": {
     "id": 127,
@@ -6880,8 +6807,7 @@
       "utility": 1,
       "abilityReliance": 100,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/lissandra/skins/base/images/lissandra_splash_tile_0.jpg"
+    }
   },
   "Lucian": {
     "id": 236,
@@ -6974,8 +6900,7 @@
       "utility": 1,
       "abilityReliance": 30,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/lucian/skins/base/images/lucian_splash_tile_0.jpg"
+    }
   },
   "Lulu": {
     "id": 117,
@@ -7069,8 +6994,7 @@
       "utility": 3,
       "abilityReliance": 80,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/lulu/skins/base/images/lulu_splash_tile_0.jpg"
+    }
   },
   "Lux": {
     "id": 99,
@@ -7166,8 +7090,7 @@
       "utility": 2,
       "abilityReliance": 90,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/lux/skins/base/images/lux_splash_tile_0.jpg"
+    }
   },
   "Malphite": {
     "id": 54,
@@ -7263,8 +7186,7 @@
       "utility": 1,
       "abilityReliance": 75,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/malphite/skins/base/images/malphite_splash_tile_0.jpg"
+    }
   },
   "Malzahar": {
     "id": 90,
@@ -7358,8 +7280,7 @@
       "utility": 2,
       "abilityReliance": 100,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/malzahar/skins/base/images/malzahar_splash_tile_0.jpg"
+    }
   },
   "Maokai": {
     "id": 57,
@@ -7451,8 +7372,7 @@
       "utility": 2,
       "abilityReliance": 75,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/maokai/skins/base/images/maokai_splash_tile_0.jpg"
+    }
   },
   "MasterYi": {
     "id": 11,
@@ -7546,8 +7466,7 @@
       "utility": 1,
       "abilityReliance": 10,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/masteryi/skins/base/images/masteryi_splash_tile_0.jpg"
+    }
   },
   "Mel": {
     "id": 800,
@@ -7639,8 +7558,7 @@
       "utility": 1,
       "abilityReliance": 100,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/mel/skins/base/images/mel_splash_tile_0.mel.jpg"
+    }
   },
   "Milio": {
     "id": 902,
@@ -7734,8 +7652,7 @@
       "utility": 3,
       "abilityReliance": 80,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/milio/skins/base/images/milio_splash_tile_0.jpg"
+    }
   },
   "MissFortune": {
     "id": 21,
@@ -7828,8 +7745,7 @@
       "utility": 1,
       "abilityReliance": 30,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/missfortune/skins/base/images/missfortune_splash_tile_0.jpg"
+    }
   },
   "Mordekaiser": {
     "id": 82,
@@ -7915,8 +7831,7 @@
       "utility": 2,
       "abilityReliance": 80,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/mordekaiser/skins/base/images/mordekaiser_splash_tile_0.jpg"
+    }
   },
   "Morgana": {
     "id": 25,
@@ -8010,8 +7925,7 @@
       "utility": 2,
       "abilityReliance": 100,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/morgana/skins/base/images/morgana_splash_tile_0.jpg"
+    }
   },
   "Naafiri": {
     "id": 950,
@@ -8104,8 +8018,7 @@
       "utility": 1,
       "abilityReliance": 70,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/naafiri/skins/base/images/naafiri_splash_tile_0.jpg"
+    }
   },
   "Nami": {
     "id": 267,
@@ -8199,8 +8112,7 @@
       "utility": 2,
       "abilityReliance": 90,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/nami/skins/base/images/nami_splash_tile_0.jpg"
+    }
   },
   "Nasus": {
     "id": 75,
@@ -8294,8 +8206,7 @@
       "utility": 1,
       "abilityReliance": 20,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/nasus/skins/base/images/nasus_splash_tile_0.jpg"
+    }
   },
   "Nautilus": {
     "id": 111,
@@ -8389,8 +8300,7 @@
       "utility": 1,
       "abilityReliance": 80,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/nautilus/skins/base/images/nautilus_splash_tile_0.jpg"
+    }
   },
   "Neeko": {
     "id": 518,
@@ -8483,8 +8393,7 @@
       "utility": 1,
       "abilityReliance": 80,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/neeko/skins/base/images/neeko_splash_tile_0.jpg"
+    }
   },
   "Nidalee": {
     "id": 76,
@@ -8578,8 +8487,7 @@
       "utility": 2,
       "abilityReliance": 75,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/nidalee/skins/base/images/nidalee_splash_tile_0.jpg"
+    }
   },
   "Nilah": {
     "id": 895,
@@ -8673,8 +8581,7 @@
       "utility": 2,
       "abilityReliance": 25,
       "difficulty": 3
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/nilah/skins/base/images/nilah_splash_tile_0.jpg"
+    }
   },
   "Nocturne": {
     "id": 56,
@@ -8767,8 +8674,7 @@
       "utility": 2,
       "abilityReliance": 30,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/nocturne/skins/base/images/nocturne_splash_tile_0.jpg"
+    }
   },
   "Nunu": {
     "id": 20,
@@ -8862,8 +8768,7 @@
       "utility": 2,
       "abilityReliance": 80,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/nunu/skins/base/images/nunu_splash_tile_0.jpg"
+    }
   },
   "Olaf": {
     "id": 2,
@@ -8957,8 +8862,7 @@
       "utility": 1,
       "abilityReliance": 30,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/olaf/skins/base/images/olaf_splash_tile_0.jpg"
+    }
   },
   "Orianna": {
     "id": 61,
@@ -9052,8 +8956,7 @@
       "utility": 2,
       "abilityReliance": 90,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/orianna/skins/base/images/orianna_splash_tile_0.jpg"
+    }
   },
   "Ornn": {
     "id": 516,
@@ -9144,8 +9047,7 @@
       "utility": 2,
       "abilityReliance": 60,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ornn/skins/base/images/ornn_splash_tile_0.jpg"
+    }
   },
   "Pantheon": {
     "id": 80,
@@ -9242,8 +9144,7 @@
       "utility": 1,
       "abilityReliance": 75,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/pantheon/skins/base/images/pantheon_splash_tile_0.jpg"
+    }
   },
   "Poppy": {
     "id": 78,
@@ -9335,8 +9236,7 @@
       "utility": 1,
       "abilityReliance": 75,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/poppy/skins/base/images/poppy_splash_tile_0.jpg"
+    }
   },
   "Pyke": {
     "id": 555,
@@ -9427,8 +9327,7 @@
       "utility": 1,
       "abilityReliance": 50,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/pyke/skins/base/images/pyke_splash_tile_0.jpg"
+    }
   },
   "Qiyana": {
     "id": 246,
@@ -9518,8 +9417,7 @@
       "utility": 1,
       "abilityReliance": 70,
       "difficulty": 3
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/qiyana/skins/base/images/qiyana_splash_tile_0.jpg"
+    }
   },
   "Quinn": {
     "id": 133,
@@ -9613,8 +9511,7 @@
       "utility": 1,
       "abilityReliance": 20,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/quinn/skins/base/images/quinn_splash_tile_0.jpg"
+    }
   },
   "Rakan": {
     "id": 497,
@@ -9704,8 +9601,7 @@
       "utility": 3,
       "abilityReliance": 90,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rakan/skins/base/images/rakan_splash_tile_0.jpg"
+    }
   },
   "Rammus": {
     "id": 33,
@@ -9799,8 +9695,7 @@
       "utility": 1,
       "abilityReliance": 65,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rammus/skins/base/images/rammus_splash_tile_0.jpg"
+    }
   },
   "RekSai": {
     "id": 421,
@@ -9889,8 +9784,7 @@
       "utility": 2,
       "abilityReliance": 30,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/reksai/skins/base/images/reksai_splash_tile_0.jpg"
+    }
   },
   "Rell": {
     "id": 526,
@@ -9981,8 +9875,7 @@
       "utility": 2,
       "abilityReliance": 85,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rell/skins/base/images/rell_splash_tile_0.jpg"
+    }
   },
   "Renata": {
     "id": 888,
@@ -10076,8 +9969,7 @@
       "utility": 2,
       "abilityReliance": 80,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/renata/skins/base/images/renata_splash_tile_0.jpg"
+    }
   },
   "Renekton": {
     "id": 58,
@@ -10166,8 +10058,7 @@
       "utility": 1,
       "abilityReliance": 45,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/renekton/skins/base/images/renekton_splash_tile_0.jpg"
+    }
   },
   "Rengar": {
     "id": 107,
@@ -10254,8 +10145,7 @@
       "utility": 1,
       "abilityReliance": 30,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rengar/skins/base/images/rengar_splash_tile_0.jpg"
+    }
   },
   "Riven": {
     "id": 92,
@@ -10341,8 +10231,7 @@
       "utility": 1,
       "abilityReliance": 75,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/riven/skins/base/images/riven_splash_tile_0.jpg"
+    }
   },
   "Rumble": {
     "id": 68,
@@ -10432,8 +10321,7 @@
       "utility": 1,
       "abilityReliance": 90,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rumble/skins/base/images/rumble_splash_tile_0.jpg"
+    }
   },
   "Ryze": {
     "id": 13,
@@ -10527,8 +10415,7 @@
       "utility": 2,
       "abilityReliance": 100,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ryze/skins/base/images/ryze_splash_tile_0.jpg"
+    }
   },
   "Samira": {
     "id": 360,
@@ -10621,8 +10508,7 @@
       "utility": 1,
       "abilityReliance": 0,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/samira/skins/base/images/samira_splash_tile_0.jpg"
+    }
   },
   "Sejuani": {
     "id": 113,
@@ -10713,8 +10599,7 @@
       "utility": 1,
       "abilityReliance": 75,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/sejuani/skins/base/images/sejuani_splash_tile_0.jpg"
+    }
   },
   "Senna": {
     "id": 235,
@@ -10805,8 +10690,7 @@
       "utility": 3,
       "abilityReliance": 30,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/senna/skins/base/images/senna_splash_tile_0.jpg"
+    }
   },
   "Seraphine": {
     "id": 147,
@@ -10902,8 +10786,7 @@
       "utility": 2,
       "abilityReliance": 100,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/seraphine/skins/base/images/seraphine_splash_tile_0.jpg"
+    }
   },
   "Sett": {
     "id": 875,
@@ -10989,8 +10872,7 @@
       "utility": 1,
       "abilityReliance": 40,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/sett/skins/base/images/sett_splash_tile_0.jpg"
+    }
   },
   "Shaco": {
     "id": 35,
@@ -11083,8 +10965,7 @@
       "utility": 2,
       "abilityReliance": 45,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/shaco/skins/base/images/shaco_splash_tile_0.jpg"
+    }
   },
   "Shen": {
     "id": 98,
@@ -11173,8 +11054,7 @@
       "utility": 3,
       "abilityReliance": 45,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/shen/skins/base/images/shen_splash_tile_0.jpg"
+    }
   },
   "Shyvana": {
     "id": 102,
@@ -11263,8 +11143,7 @@
       "utility": 1,
       "abilityReliance": 55,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/shyvana/skins/base/images/shyvana_splash_tile_0.jpg"
+    }
   },
   "Singed": {
     "id": 27,
@@ -11358,8 +11237,7 @@
       "utility": 1,
       "abilityReliance": 100,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/singed/skins/base/images/singed_splash_tile_0.jpg"
+    }
   },
   "Sion": {
     "id": 14,
@@ -11453,8 +11331,7 @@
       "utility": 1,
       "abilityReliance": 65,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/sion/skins/base/images/sion_splash_tile_0.jpg"
+    }
   },
   "Sivir": {
     "id": 15,
@@ -11546,8 +11423,7 @@
       "utility": 2,
       "abilityReliance": 10,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/sivir/skins/base/images/sivir_splash_tile_0.jpg"
+    }
   },
   "Skarner": {
     "id": 72,
@@ -11640,8 +11516,7 @@
       "utility": 1,
       "abilityReliance": 45,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/skarner/skins/base/images/skarner_splash_tile_0.jpg"
+    }
   },
   "Smolder": {
     "id": 901,
@@ -11655,7 +11530,7 @@
         "perLevel": 100
       },
       "healthRegen": {
-        "flat": 4.5,
+        "flat": 3.75,
         "perLevel": 0.6
       },
       "mana": {
@@ -11667,7 +11542,7 @@
         "perLevel": 0.7
       },
       "armor": {
-        "flat": 26,
+        "flat": 24,
         "perLevel": 4.7
       },
       "magicResistance": {
@@ -11736,8 +11611,7 @@
       "utility": 1,
       "abilityReliance": 10,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/smolder/skins/base/images/smolder_splash_tile_0.jpg"
+    }
   },
   "Sona": {
     "id": 37,
@@ -11831,8 +11705,7 @@
       "utility": 2,
       "abilityReliance": 90,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/sona/skins/base/images/sona_splash_tile_0.jpg"
+    }
   },
   "Soraka": {
     "id": 16,
@@ -11926,8 +11799,7 @@
       "utility": 3,
       "abilityReliance": 100,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/soraka/skins/base/images/soraka_splash_tile_0.jpg"
+    }
   },
   "Swain": {
     "id": 50,
@@ -12022,8 +11894,7 @@
       "utility": 1,
       "abilityReliance": 100,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/swain/skins/base/images/swain_splash_tile_0.jpg"
+    }
   },
   "Sylas": {
     "id": 517,
@@ -12119,8 +11990,7 @@
       "utility": 1,
       "abilityReliance": 70,
       "difficulty": 3
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/sylas/skins/base/images/sylas_splash_tile_0.jpg"
+    }
   },
   "Syndra": {
     "id": 134,
@@ -12213,8 +12083,7 @@
       "utility": 1,
       "abilityReliance": 100,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/syndra/skins/base/images/syndra_splash_tile_0.jpg"
+    }
   },
   "TahmKench": {
     "id": 223,
@@ -12306,8 +12175,7 @@
       "utility": 3,
       "abilityReliance": 65,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/tahmkench/skins/base/images/tahmkench_splash_tile_0.jpg"
+    }
   },
   "Taliyah": {
     "id": 163,
@@ -12402,8 +12270,7 @@
       "utility": 3,
       "abilityReliance": 100,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/taliyah/skins/base/images/taliyah_splash_tile_0.jpg"
+    }
   },
   "Talon": {
     "id": 91,
@@ -12492,8 +12359,7 @@
       "utility": 1,
       "abilityReliance": 65,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/talon/skins/base/images/talon_splash_tile_0.jpg"
+    }
   },
   "Taric": {
     "id": 44,
@@ -12589,8 +12455,7 @@
       "utility": 3,
       "abilityReliance": 75,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/taric/skins/base/images/taric_splash_tile_0.jpg"
+    }
   },
   "Teemo": {
     "id": 17,
@@ -12686,8 +12551,7 @@
       "utility": 2,
       "abilityReliance": 30,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/teemo/skins/base/images/teemo_splash_tile_0.asu_teemo.jpg"
+    }
   },
   "Thresh": {
     "id": 412,
@@ -12780,8 +12644,7 @@
       "utility": 3,
       "abilityReliance": 75,
       "difficulty": 3
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/thresh/skins/base/images/thresh_splash_tile_0.jpg"
+    }
   },
   "Tristana": {
     "id": 18,
@@ -12875,8 +12738,7 @@
       "utility": 1,
       "abilityReliance": 20,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/tristana/skins/base/images/tristana_splash_tile_0.jpg"
+    }
   },
   "Trundle": {
     "id": 48,
@@ -12971,8 +12833,7 @@
       "utility": 2,
       "abilityReliance": 20,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/trundle/skins/base/images/trundle_splash_tile_0.jpg"
+    }
   },
   "Tryndamere": {
     "id": 23,
@@ -13061,8 +12922,7 @@
       "utility": 1,
       "abilityReliance": 10,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/tryndamere/skins/base/images/tryndamere_splash_tile_0.jpg"
+    }
   },
   "TwistedFate": {
     "id": 4,
@@ -13158,8 +13018,7 @@
       "utility": 2,
       "abilityReliance": 65,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/twistedfate/skins/base/images/twistedfate_splash_tile_0.jpg"
+    }
   },
   "Twitch": {
     "id": 29,
@@ -13253,8 +13112,7 @@
       "utility": 1,
       "abilityReliance": 0,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/twitch/skins/base/images/twitch_splash_tile_0.jpg"
+    }
   },
   "Udyr": {
     "id": 77,
@@ -13349,8 +13207,7 @@
       "utility": 1,
       "abilityReliance": 35,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/udyr/skins/base/images/udyr_splash_tile_0.jpg"
+    }
   },
   "Urgot": {
     "id": 6,
@@ -13444,8 +13301,7 @@
       "utility": 1,
       "abilityReliance": 55,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/urgot/skins/base/images/urgot_splash_tile_0.jpg"
+    }
   },
   "Varus": {
     "id": 110,
@@ -13539,8 +13395,7 @@
       "utility": 1,
       "abilityReliance": 20,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/varus/skins/base/images/varus_splash_tile_0.jpg"
+    }
   },
   "Vayne": {
     "id": 67,
@@ -13634,8 +13489,7 @@
       "utility": 1,
       "abilityReliance": 0,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/vayne/skins/base/images/vayne_splash_tile_0.jpg"
+    }
   },
   "Veigar": {
     "id": 45,
@@ -13729,8 +13583,7 @@
       "utility": 1,
       "abilityReliance": 100,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/veigar/skins/base/images/veigar_splash_tile_0.jpg"
+    }
   },
   "Velkoz": {
     "id": 161,
@@ -13825,8 +13678,7 @@
       "utility": 1,
       "abilityReliance": 100,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/velkoz/skins/base/images/velkoz_splash_tile_0.jpg"
+    }
   },
   "Vex": {
     "id": 711,
@@ -13919,8 +13771,7 @@
       "utility": 1,
       "abilityReliance": 90,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/vex/skins/base/images/vex_splash_tile_0.jpg"
+    }
   },
   "Vi": {
     "id": 254,
@@ -14011,8 +13862,7 @@
       "utility": 1,
       "abilityReliance": 55,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/vi/skins/base/images/vi_splash_tile_0.jpg"
+    }
   },
   "Viego": {
     "id": 234,
@@ -14098,8 +13948,7 @@
       "utility": 1,
       "abilityReliance": 20,
       "difficulty": 3
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/viego/skins/base/images/viego_splash_tile_0.jpg"
+    }
   },
   "Viktor": {
     "id": 112,
@@ -14192,8 +14041,7 @@
       "utility": 1,
       "abilityReliance": 90,
       "difficulty": 3
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/viktor/skins/base/images/viktor_splash_tile_0.viktorvgu.jpg"
+    }
   },
   "Vladimir": {
     "id": 8,
@@ -14283,8 +14131,7 @@
       "utility": 1,
       "abilityReliance": 100,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/vladimir/skins/base/images/vladimir_splash_tile_0.jpg"
+    }
   },
   "Volibear": {
     "id": 106,
@@ -14376,8 +14223,7 @@
       "utility": 1,
       "abilityReliance": 30,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/volibear/skins/base/images/volibear_splash_tile_0.jpg"
+    }
   },
   "Warwick": {
     "id": 19,
@@ -14472,8 +14318,7 @@
       "utility": 1,
       "abilityReliance": 30,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/warwick/skins/base/images/warwick_splash_tile_0.jpg"
+    }
   },
   "MonkeyKing": {
     "id": 62,
@@ -14568,8 +14413,7 @@
       "utility": 1,
       "abilityReliance": 55,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/monkeyking/skins/base/images/monkeyking_splash_tile_0.jpg"
+    }
   },
   "Xayah": {
     "id": 498,
@@ -14658,8 +14502,7 @@
       "utility": 1,
       "abilityReliance": 30,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/xayah/skins/base/images/xayah_splash_tile_0.jpg"
+    }
   },
   "Xerath": {
     "id": 101,
@@ -14754,8 +14597,7 @@
       "utility": 1,
       "abilityReliance": 90,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/xerath/skins/base/images/xerath_splash_tile_0.jpg"
+    }
   },
   "XinZhao": {
     "id": 5,
@@ -14846,8 +14688,7 @@
       "utility": 1,
       "abilityReliance": 35,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/xinzhao/skins/base/images/xinzhao_splash_tile_0.jpg"
+    }
   },
   "Yasuo": {
     "id": 157,
@@ -14938,8 +14779,7 @@
       "utility": 2,
       "abilityReliance": 20,
       "difficulty": 3
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/yasuo/skins/base/images/yasuo_splash_tile_0.jpg"
+    }
   },
   "Yone": {
     "id": 777,
@@ -15029,8 +14869,7 @@
       "utility": 1,
       "abilityReliance": 45,
       "difficulty": 3
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/yone/skins/base/images/yone_splash_tile_0.jpg"
+    }
   },
   "Yorick": {
     "id": 83,
@@ -15121,8 +14960,7 @@
       "utility": 2,
       "abilityReliance": 55,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/yorick/skins/base/images/yorick_splash_tile_0.jpg"
+    }
   },
   "Yuumi": {
     "id": 350,
@@ -15213,8 +15051,7 @@
       "utility": 3,
       "abilityReliance": 100,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/yuumi/skins/base/images/yuumi_splash_tile_0.jpg"
+    }
   },
   "Zac": {
     "id": 154,
@@ -15299,8 +15136,7 @@
       "utility": 1,
       "abilityReliance": 100,
       "difficulty": 1
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/zac/skins/base/images/zac_splash_tile_0.jpg"
+    }
   },
   "Zed": {
     "id": 238,
@@ -15391,8 +15227,7 @@
       "utility": 1,
       "abilityReliance": 55,
       "difficulty": 3
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/zed/skins/base/images/zed_splash_tile_0.jpg"
+    }
   },
   "Zeri": {
     "id": 221,
@@ -15484,8 +15319,7 @@
       "utility": 0,
       "abilityReliance": 35,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/zeri/skins/base/images/zeri_splash_tile_0.jpg"
+    }
   },
   "Ziggs": {
     "id": 115,
@@ -15579,8 +15413,7 @@
       "utility": 1,
       "abilityReliance": 90,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ziggs/skins/base/images/ziggs_splash_tile_0.jpg"
+    }
   },
   "Zilean": {
     "id": 26,
@@ -15674,8 +15507,7 @@
       "utility": 3,
       "abilityReliance": 100,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/zilean/skins/base/images/zilean_splash_tile_0.jpg"
+    }
   },
   "Zoe": {
     "id": 142,
@@ -15769,8 +15601,7 @@
       "utility": 1,
       "abilityReliance": 100,
       "difficulty": 3
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/zoe/skins/base/images/zoe_splash_tile_0.jpg"
+    }
   },
   "Zyra": {
     "id": 143,
@@ -15864,7 +15695,6 @@
       "utility": 1,
       "abilityReliance": 100,
       "difficulty": 2
-    },
-    "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/zyra/skins/base/images/zyra_splash_tile_0.jpg"
+    }
   }
 }

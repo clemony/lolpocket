@@ -96,7 +96,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zed/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Zed's basic attacks against targets below 50% maximum health are empowered to deal 6 / 8 / 10% (based on level) of the target's maximum health as bonus magic damage.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Zed's basic attacks against targets below 50% maximum health are empowered to deal 6 / 8 / 10% (based on level) of the target's maximum health as bonus magic damage.",
             "leveling": []
           },
           {
@@ -109,10 +109,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Enemies",
         "spellshieldable": "False",
@@ -135,7 +132,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -144,7 +142,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zed/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Zed throws a shuriken in the target direction that deals physical damage to enemies hit, reduced to 60% against targets beyond the first.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Zed throws a shuriken in the target direction that deals physical damage to enemies hit, reduced to 60% against targets beyond the first.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -200,32 +198,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              75,
-              70,
-              65,
-              60,
-              55
-            ],
-            "units": [
-              ""
-            ]
-          }
+          75,
+          70,
+          65,
+          60,
+          55
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                6
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          6
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "true",
@@ -248,7 +229,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "925"
+        "targetRange": "925",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -257,7 +239,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zed/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Zed restores energy whenever he and his Shadows or multiple Shadows hit an ability on the same target. This may only occur once per cast ability.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Zed restores energy whenever he and his Shadows or multiple Shadows hit an ability on the same target. This may only occur once per cast ability.",
             "leveling": [
               {
                 "attribute": "Energy Restored",
@@ -279,11 +261,11 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Zed creates a Shadow that dashes to the target location and remains there for 5.25 seconds, being able to mimic Razor Shuriken and Shadow Slash regardless of range. Living Shadow can be recast while within range of the Shadow.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Zed creates a Shadow that dashes to the target location and remains there for 5.25 seconds, being able to mimic Razor Shuriken and Shadow Slash regardless of range. Living Shadow can be recast while within range of the Shadow.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Zed and the Shadow blink to swap places. If Living Shadow was recast while the Shadow is dashing, the recast will instead occur once it has been placed.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Zed and the Shadow blink to swap places. If Living Shadow was recast while the Shadow is dashing, the recast will instead occur once it has been placed.",
             "leveling": []
           },
           {
@@ -292,36 +274,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              40,
-              35,
-              30,
-              25,
-              20
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40,
+          35,
+          30,
+          25,
+          20
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                20,
-                19,
-                18,
-                17,
-                16
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          20,
+          19,
+          18,
+          17,
+          16
+        ],
         "targeting": "Location / Auto",
         "affects": "Self",
         "spellshieldable": null,
@@ -344,7 +309,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "2000 / Global",
-        "targetRange": "650"
+        "targetRange": "650",
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -353,7 +319,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zed/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Zed slashes to deal physical damage to nearby enemies.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Zed slashes to deal physical damage to nearby enemies.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -427,32 +393,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              40
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                5,
-                4.5,
-                4,
-                3.5,
-                3
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          5,
+          4.5,
+          4,
+          3.5,
+          3
+        ],
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "special",
@@ -475,7 +424,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "315 / 290",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -484,7 +434,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zed/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Zed becomes untargetable and, after a 0.6-second delay, he dashes to 125 units beyond the target enemy champion from his position at the end of the delay over 0.35 seconds. Afterwards, he becomes targetable again, renders the target Marked for Death for 3 seconds, and gains ghosting for the same duration.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Zed becomes untargetable and, after a 0.6-second delay, he dashes to 125 units beyond the target enemy champion from his position at the end of the delay over 0.35 seconds. Afterwards, he becomes targetable again, renders the target Marked for Death for 3 seconds, and gains ghosting for the same duration.",
             "leveling": []
           },
           {
@@ -492,7 +442,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Marked for Death:</p><p> Zed stores a portion of all pre-mitigation physical damage and magic damage he and his Shadows deal to the target, detonating at the end of the duration to deal physical damage.</p></div>",
+            "description": "<span class=\"ability-header\">Marked for Death:</span> Zed stores a portion of all pre-mitigation physical damage and magic damage he and his Shadows deal to the target, detonating at the end of the duration to deal physical damage.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -520,7 +470,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Zed and the Shadow blink to swap places.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Zed and the Shadow blink to swap places.",
             "leveling": []
           },
           {
@@ -528,22 +478,14 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                120,
-                110,
-                100
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          120,
+          110,
+          100
+        ],
         "targeting": "Unit / Auto",
         "affects": "Self, Enemies",
         "spellshieldable": "Special",
@@ -566,10 +508,10 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "Global",
-        "targetRange": "625"
+        "targetRange": "625",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Utterly ruthless and without mercy, Zed is the leader of the Order of Shadow, an organization he created with the intent of militarizing Ionia's magical and martial traditions to drive out Noxian invaders. During the war, desperation led him to unlock the secret shadow form—a malevolent spirit magic as dangerous and corrupting as it is powerful. Zed has mastered all of these forbidden techniques to destroy anything he sees as a threat to his nation, or his new order.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/zed/skins/base/images/zed_splash_tile_0.jpg"
+  "lore": "Utterly ruthless and without mercy, Zed is the leader of the Order of Shadow, an organization he created with the intent of militarizing Ionia's magical and martial traditions to drive out Noxian invaders. During the war, desperation led him to unlock the secret shadow form—a malevolent spirit magic as dangerous and corrupting as it is powerful. Zed has mastered all of these forbidden techniques to destroy anything he sees as a threat to his nation, or his new order."
 }

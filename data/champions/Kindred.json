@@ -98,23 +98,20 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kindred/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Both Lamb and Wolf mark targets to hunt. Scoring a takedown against a hunted target collects a stack of Mark of the Kindred. Mark of the Kindred: Lamb gains 75 - 250 (based on marks) bonus range on her basic attacks and Mounting Dread.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Both Lamb and Wolf mark targets to hunt. Scoring a takedown against a hunted target collects a stack of Mark of the Kindred. Mark of the Kindred: Lamb gains 75 - 250 (based on marks) bonus range on her basic attacks and Mounting Dread.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate - Lamb:</p><p> Lamb is offered a selection of enemy champions to hunt if she has not been in combat with them in the last 6 seconds. Once selected, the mark is applied after an 8-second delay and thereafter it can be collected by Kindred. Lamb gains the ability to select a new target every 75 seconds. Targets successfully hunted cannot be marked again for 4 minutes.</p></div>",
+            "description": "<span class=\"ability-header\">Innate - Lamb:</span> Lamb is offered a selection of enemy champions to hunt if she has not been in combat with them in the last 6 seconds. Once selected, the mark is applied after an 8-second delay and thereafter it can be collected by Kindred. Lamb gains the ability to select a new target every 75 seconds. Targets successfully hunted cannot be marked again for 4 minutes.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate - Wolf:</p><p> Starting at 3 - 15, Wolf periodically marks a random large monster within the enemy team's jungle for 180 seconds. The hunted camp is highlighted on the mini map to both teams. Once the hunted target is slain or the mark expires, Wolf will wait 45 seconds before selecting a new target. The type of monster that Wolf can mark changes based on Kindred's current Mark of the Kindred stacks:</p></div>\n\n\n<div><p class=\"ability-header\">0 :</p><p> Rift Scuttler</p></div>\n\n\n<div><p class=\"ability-header\">1 - 3:</p><p> Rift Scuttler, Crimson Raptor, Gromp</p></div>\n\n\n<div><p class=\"ability-header\">4 - 7:</p><p> Ancient Krug, Blue Sentinel, Greater Murk Wolf, or Red Brambleback</p></div>\n\n\n<div><p class=\"ability-header\">8 + :</p><p> Rift Herald or Baron Nashor, Dragon or Elder Dragon</p></div>",
+            "description": "<span class=\"ability-header\">Innate - Wolf:</span> Starting at 3 - 15, Wolf periodically marks a random large monster within the enemy team's jungle for 180 seconds. The hunted camp is highlighted on the mini map to both teams. Once the hunted target is slain or the mark expires, Wolf will wait 45 seconds before selecting a new target. The type of monster that Wolf can mark changes based on Kindred's current Mark of the Kindred stacks:\n<span class=\"ability-header\">0 :</span> Rift Scuttler\n<span class=\"ability-header\">1 - 3:</span> Rift Scuttler, Crimson Raptor, Gromp\n<span class=\"ability-header\">4 - 7:</span> Ancient Krug, Blue Sentinel, Greater Murk Wolf, or Red Brambleback\n<span class=\"ability-header\">8 + :</span> Rift Herald or Baron Nashor, Dragon or Elder Dragon",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self, Enemies",
         "spellshieldable": null,
@@ -137,7 +134,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -146,7 +144,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kindred/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Lamb dashes toward the target location, gaining 35% (+ 5% per mark) bonus attack speed for 4 seconds and firing an arrow at up to 3 nearby visible enemies that deals physical damage. Her current attack target within any proximity will be prioritized by one of the arrows.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Lamb dashes toward the target location, gaining 35% (+ 5% per mark) bonus attack speed for 4 seconds and firing an arrow at up to 3 nearby visible enemies that deals physical damage. Her current attack target within any proximity will be prioritized by one of the arrows.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -203,28 +201,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              35
-            ],
-            "units": [
-              ""
-            ]
-          }
+          35
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                9
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          9
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -247,7 +228,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "Kindred's  attack range",
-        "targetRange": "300"
+        "targetRange": "300",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -256,11 +238,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kindred/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> As Kindred move and attack, they build up to 100 stacks of Hunter's Vigor. At maximum stacks, Lamb's next basic attack heals her for 0% - 100% (based on Kindred's missing health) of 47 - 81 (based on level). The heal is not triggered if Kindred is at full health.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> As Kindred move and attack, they build up to 100 stacks of Hunter's Vigor. At maximum stacks, Lamb's next basic attack heals her for 0% - 100% (based on Kindred's missing health) of 47 - 81 (based on level). The heal is not triggered if Kindred is at full health.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Wolf dashes to the target location, then claims the surrounding area as his territory for the next 8.5 seconds, separating from Lamb. He automatically attacks the closest nearby visible enemy within the area, prioritizing the last enemy Lamb has attacked, then enemy champions, then non-champions.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Wolf dashes to the target location, then claims the surrounding area as his territory for the next 8.5 seconds, separating from Lamb. He automatically attacks the closest nearby visible enemy within the area, prioritizing the last enemy Lamb has attacked, then enemy champions, then non-champions.",
             "leveling": []
           },
           {
@@ -356,32 +338,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              40
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                18,
-                17,
-                16,
-                15,
-                14
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          18,
+          17,
+          16,
+          15,
+          14
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -404,7 +369,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "800",
-        "targetRange": "500"
+        "targetRange": "500",
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -413,7 +379,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kindred/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Lamb fires a shot at the target enemy that slows them by 30% (+ 5% per 100 AP) for 1 second and marks them for 4 seconds. Her basic attacks against the marked target each apply a stack, refreshing the duration and stacking up to 3 times.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Lamb fires a shot at the target enemy that slows them by 30% (+ 5% per 100 AP) for 1 second and marks them for 4 seconds. Her basic attacks against the marked target each apply a stack, refreshing the duration and stacking up to 3 times.",
             "leveling": []
           },
           {
@@ -493,32 +459,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50
-            ],
-            "units": [
-              ""
-            ]
-          }
+          0
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                14,
-                12.5,
-                11,
-                9.5,
-                8
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          14,
+          12.5,
+          11,
+          9.5,
+          8
+        ],
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -528,7 +477,7 @@
         "projectile": "TRUE",
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "If the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel and not pay its cost but still go on  cooldown.(bug)\nThis ability cannot target a unit with Mounting Dread stacks.\nMounting Dread will prioritize casting on the closest champion within 100 radius of the cursor, even if other eligible targets are closer.\nAs a consequence of this mechanic, Mounting Dread can still be cast on champions with Mounting Dread stacks.(bug)\nReapplying Mounting Dread through this method will apply the slow, but will not reset the stack count.\nPENDING FOR TEST: Reapplying Mounting Dread against  disguised  Neeko will reset the stack count.(bug)",
+        "notes": "If the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel and not pay its cost but still go on  cooldown.(bug)\nThis ability cannot target a unit with Mounting Dread stacks.\nMounting Dread will prioritize casting on the closest champion within  100 radius of the cursor, even if other eligible targets are closer.\nAs a consequence of this mechanic, Mounting Dread can still be cast on champions with Mounting Dread stacks.(bug)\nReapplying Mounting Dread through this method will apply the slow, but will not reset the stack count.\nPENDING FOR TEST: Reapplying Mounting Dread against  disguised  Neeko will reset the stack count.(bug)",
         "blurb": "Active:  Lamb fires a shot at the target enemy that briefly  slows them applies a stack of Mounting Dread. Lamb's basic attacks against this target stack Mounting Dread up to a cap.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -541,7 +490,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "500 : 750 (based on Marks)"
+        "targetRange": "500 : 750 (based on Marks)",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -550,7 +500,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kindred/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Lamb blesses the ground underneath herself and enters a 0.264 seconds cast time, creating a sacred zone at her location at the time of cast that lasts for 4 seconds. All units inside the zone gain a minimum health threshold equal to 10% of their maximum health, and will also become invulnerable while remaining in the area when they reach or are at the threshold, during which they also cannot be healed, but can still regenerate health.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Lamb blesses the ground underneath herself and enters a 0.264 seconds cast time, creating a sacred zone at her location at the time of cast that lasts for 4 seconds. All units inside the zone gain a minimum health threshold equal to 10% of their maximum health, and will also become invulnerable while remaining in the area when they reach or are at the threshold, during which they also cannot be healed, but can still regenerate health.",
             "leveling": []
           },
           {
@@ -575,30 +525,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                180,
-                150,
-                120
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          180,
+          150,
+          120
+        ],
         "targeting": "Auto",
         "affects": "Self, Allies, Enemies",
         "spellshieldable": null,
@@ -621,10 +554,10 @@
         "angle": null,
         "castTime": "None",
         "effectRadius": "535",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Separate, but never parted, Kindred represents the twin essences of death. Lamb's bow offers a swift release from the mortal realm for those who accept their fate. Wolf hunts down those who run from their end, delivering violent finality within his crushing jaws. Though interpretations of Kindred's nature vary across Runeterra, every mortal must choose the true face of their death.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/kindred/skins/base/images/kindred_splash_tile_0.jpg"
+  "lore": "Separate, but never parted, Kindred represents the twin essences of death. Lamb's bow offers a swift release from the mortal realm for those who accept their fate. Wolf hunts down those who run from their end, delivering violent finality within his crushing jaws. Though interpretations of Kindred's nature vary across Runeterra, every mortal must choose the true face of their death."
 }

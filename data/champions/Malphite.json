@@ -101,30 +101,16 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Malphite/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate - Shard of the Monolith:</p><p> Malphite gains increased percentage size equal to 8% of his total armor, capped at 35% increased size at 437.5 armor.</p></div>",
+            "description": "<span class=\"ability-header\">Innate - Shard of the Monolith:</span> Malphite gains increased percentage size equal to 8% of his total armor, capped at 35% increased size at 437.5 armor.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Malphite grants himself a shield equal to 10% of his maximum health. The shield lasts until it is broken, and refreshes after a few seconds of not taking damage.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Malphite grants himself a shield equal to 10% of his maximum health. The shield lasts until it is broken, and refreshes after a few seconds of not taking damage.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                8,
-                7,
-                6
-              ],
-              "units": [
-                " (based on level)"
-              ]
-            }
-          ],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -147,7 +133,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -156,7 +143,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Malphite/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Malphite sends a shard to the target enemy that deals magic damage and slows them for 3 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Malphite sends a shard to the target enemy that deals magic damage and slows them for 3 seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -208,32 +195,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              70,
-              75,
-              80,
-              85,
-              90
-            ],
-            "units": [
-              ""
-            ]
-          }
+          70,
+          75,
+          80,
+          85,
+          90
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                8
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          8
+        ],
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "Special",
@@ -256,7 +226,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "625"
+        "targetRange": "625",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -265,7 +236,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Malphite/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Malphite gains bonus armor, tripled while Granite Shield is active.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Malphite gains bonus armor, tripled while Granite Shield is active.",
             "leveling": [
               {
                 "attribute": "Bonus Armor",
@@ -304,7 +275,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Malphite empowers his next basic attack within 6 seconds to have an uncancelable windup, gain 50 bonus range, and deal bonus physical damage on-hit.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Malphite empowers his next basic attack within 6 seconds to have an uncancelable windup, gain 50 bonus range, and deal bonus physical damage on-hit.",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage",
@@ -385,36 +356,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              30,
-              35,
-              40,
-              45,
-              50
-            ],
-            "units": [
-              ""
-            ]
-          }
+          30,
+          35,
+          40,
+          45,
+          50
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                10,
-                9.5,
-                9,
-                8.5,
-                8
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          10,
+          9.5,
+          9,
+          8.5,
+          8
+        ],
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": "False",
@@ -437,7 +391,8 @@
         "angle": null,
         "castTime": "None",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -446,7 +401,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Malphite/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Malphite slams the ground beneath him, dealing magic damage to nearby enemies and crippling them for 3 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Malphite slams the ground beneath him, dealing magic damage to nearby enemies and crippling them for 3 seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -502,28 +457,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                7
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          7
+        ],
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -546,7 +484,8 @@
         "angle": null,
         "castTime": "0.2419",
         "effectRadius": "400",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -555,7 +494,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Malphite/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Malphite dashes with displacement immunity to the target location. Upon arrival, he deals magic damage to nearby enemies and knocks them up for 1.5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Malphite dashes with displacement immunity to the target location. Upon arrival, he deals magic damage to nearby enemies and knocks them up for 1.5 seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -588,30 +527,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                130,
-                105,
-                80
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          130,
+          105,
+          80
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -634,10 +556,10 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "325",
-        "targetRange": "1000"
+        "targetRange": "1000",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "A massive creature of living stone, Malphite struggles to impose blessed order on a chaotic world. Birthed as a servitor-shard to an otherworldly obelisk known as the Monolith, he used his tremendous elemental strength to maintain and protect his progenitor, but ultimately failed. The only survivor of the destruction that followed, Malphite now endures Runeterra's soft folk and their fluid temperaments, while struggling to find a new role worthy of the last of his kind.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/malphite/skins/base/images/malphite_splash_tile_0.jpg"
+  "lore": "A massive creature of living stone, Malphite struggles to impose blessed order on a chaotic world. Birthed as a servitor-shard to an otherworldly obelisk known as the Monolith, he used his tremendous elemental strength to maintain and protect his progenitor, but ultimately failed. The only survivor of the destruction that followed, Malphite now endures Runeterra's soft folk and their fluid temperaments, while struggling to find a new role worthy of the last of his kind."
 }

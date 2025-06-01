@@ -96,15 +96,15 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Pyke/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Pyke's maximum health cannot increase except through growth (per level), instead he gains[ 1 bonus attack damage per 14 bonus health. ][ bonus attack damage equal to 7.143% of bonus health. ]</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Pyke's maximum health cannot increase except through growth (per level), instead he gains[ 1 bonus attack damage per 14 bonus health. ][ bonus attack damage equal to 7.143% of bonus health. ]",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Pyke gains 1 bonus movement speed while in the river.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Pyke gains 1 bonus movement speed while in the river.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Pyke stores 9% (+ 0.2% per 1 Lethality) of the post-mitigation damage he takes from enemy champions as grey health on his health bar, increased to 40% (+ 0.4% per 1 Lethality) while there are two or more visible enemy champions nearby. He can store up to 80 (+ 800% bonus AD) grey health, with an upper cap of 55% of his maximum health.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Pyke stores 9% (+ 0.2% per 1 Lethality) of the post-mitigation damage he takes from enemy champions as grey health on his health bar, increased to 40% (+ 0.4% per 1 Lethality) while there are two or more visible enemy champions nearby. He can store up to 80 (+ 800% bonus AD) grey health, with an upper cap of 55% of his maximum health.",
             "leveling": []
           },
           {
@@ -113,10 +113,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -139,7 +136,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": "1500",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -148,11 +146,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Pyke/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Pyke charges while being slowed by 20% for up to 3 seconds to increase Bone Skewer's range over the first second of the channel. Bone Skewer can be recast within the duration.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Pyke charges while being slowed by 20% for up to 3 seconds to increase Bone Skewer's range over the first second of the channel. Bone Skewer can be recast within the duration.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Pyke hurls his harpoon in the target direction, becoming unable to act while it is in flight and dealing physical damage to the first enemy hit and pulling them, during which they are also revealed, then slowing them by 90% for 1 second.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Pyke hurls his harpoon in the target direction, becoming unable to act while it is in flight and dealing physical damage to the first enemy hit and pulling them, during which they are also revealed, then slowing them by 90% for 1 second.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -191,36 +189,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              70,
-              75,
-              80,
-              85,
-              90
-            ],
-            "units": [
-              ""
-            ]
-          }
+          70,
+          75,
+          80,
+          85,
+          90
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                10,
-                9.5,
-                9,
-                8.5,
-                8
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          10,
+          9.5,
+          9,
+          8.5,
+          8
+        ],
         "targeting": "Auto / Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -243,7 +224,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "550",
-        "targetRange": "400 : 1100 (based on channel time)"
+        "targetRange": "400 : 1100 (based on channel time)",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -252,7 +234,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Pyke/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Pyke submerges into water for 5 seconds, entering camouflage and gaining 45% (+ 2% per 1 Lethality) bonus movement speed that decays over the duration. Attacking or casting abilities ends Ghostwater Dive immediately.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Pyke submerges into water for 5 seconds, entering camouflage and gaining 45% (+ 2% per 1 Lethality) bonus movement speed that decays over the duration. Attacking or casting abilities ends Ghostwater Dive immediately.",
             "leveling": []
           },
           {
@@ -261,32 +243,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              65
-            ],
-            "units": [
-              ""
-            ]
-          }
+          65
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                14,
-                13,
-                12,
-                11,
-                10
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          14,
+          13,
+          12,
+          11,
+          10
+        ],
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
@@ -309,7 +274,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -318,7 +284,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Pyke/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Pyke dashes in the target direction, leaving behind a Phantom. Pyke is ghosted while the Phantom is active.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Pyke dashes in the target direction, leaving behind a Phantom. Pyke is ghosted while the Phantom is active.",
             "leveling": []
           },
           {
@@ -353,32 +319,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              65
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                14,
-                13,
-                12,
-                11,
-                10
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          15,
+          14,
+          13,
+          12,
+          11
+        ],
         "targeting": "Direction",
         "affects": "Self, Enemies",
         "spellshieldable": "True",
@@ -401,7 +350,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "110",
-        "targetRange": "550"
+        "targetRange": "550",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -410,7 +360,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Pyke/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Pyke marks the target location with the shape of an X before striking it, executing enemy champions within the area that are below 250 - 550 (based on level) (+ 80% bonus AD) (+ 1.5 per 1 Lethality) health. Other enemies hit and enemy champions above the threshold are instead dealt[ 50% of the amount as physical damage. ][ 125 - 275 (based on level) (+ 40% bonus AD) (+ 0.75 per 1 Lethality) physical damage. ]</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Pyke marks the target location with the shape of an X before striking it, executing enemy champions within the area that are below 250 - 550 (based on level) (+ 80% bonus AD) (+ 1.5 per 1 Lethality) health. Other enemies hit and enemy champions above the threshold are instead dealt[ 50% of the amount as physical damage. ][ 125 - 275 (based on level) (+ 40% bonus AD) (+ 0.75 per 1 Lethality) physical damage. ]",
             "leveling": []
           },
           {
@@ -423,30 +373,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                100,
-                85,
-                70
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          100,
+          85,
+          70
+        ],
         "targeting": "Location",
         "affects": "Self, Enemies",
         "spellshieldable": "True",
@@ -469,10 +402,10 @@
         "angle": null,
         "castTime": "0.5",
         "effectRadius": "125 / 282.5  ×  100",
-        "targetRange": "750"
+        "targetRange": "750",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "A renowned harpooner from the slaughter docks of Bilgewater, Pyke should have met his death in the belly of a gigantic jaull-fish… and yet, he returned. Now, stalking the dank alleys and backways of his former hometown, he uses his new supernatural gifts to bring a swift and gruesome end to those who make their fortune by exploiting others—and a city that prides itself on hunting monsters now finds a monster hunting them.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/pyke/skins/base/images/pyke_splash_tile_0.jpg"
+  "lore": "A renowned harpooner from the slaughter docks of Bilgewater, Pyke should have met his death in the belly of a gigantic jaull-fish… and yet, he returned. Now, stalking the dank alleys and backways of his former hometown, he uses his new supernatural gifts to bring a swift and gruesome end to those who make their fortune by exploiting others—and a city that prides itself on hunting monsters now finds a monster hunting them."
 }

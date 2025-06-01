@@ -24,8 +24,8 @@
       "perLevel": 0.8
     },
     "armor": {
-      "flat": 19,
-      "perLevel": 4.7
+      "flat": 23,
+      "perLevel": 4
     },
     "magicResistance": {
       "flat": 30,
@@ -100,11 +100,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Annie/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate - Pyromania:</p><p> Annie generates a stack of Pyromania whenever she hits an enemy with Disintegrate or casts her other abilities, stacking up to 4 times, at which she gains Energized.</p></div>",
+            "description": "<span class=\"ability-header\">Innate - Pyromania:</span> Annie generates a stack of Pyromania whenever she hits an enemy with Disintegrate or casts her other abilities, stacking up to 4 times, at which she gains Energized.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Energized:</p><p> Annie empowers her next cast of Disintegrate, Incinerate, or Summon: Tibbers to consume all Pyromania stacks to stun enemies hit for 1.25 / 1.5 / 1.75 (based on level) seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Energized:</span> Annie empowers her next cast of Disintegrate, Incinerate, or Summon: Tibbers to consume all Pyromania stacks to stun enemies hit for 1.25 / 1.5 / 1.75 (based on level) seconds.",
             "leveling": []
           },
           {
@@ -113,10 +113,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self, Enemies",
         "spellshieldable": "True",
@@ -139,7 +136,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -148,7 +146,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Annie/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Annie hurls a fireball at the target enemy that deals magic damage.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Annie hurls a fireball at the target enemy that deals magic damage.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -183,32 +181,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              60,
-              65,
-              70,
-              75,
-              80
-            ],
-            "units": [
-              ""
-            ]
-          }
+          60,
+          65,
+          70,
+          75,
+          80
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                4
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          4
+        ],
         "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -231,7 +212,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "625"
+        "targetRange": "625",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -240,7 +222,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Annie/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Annie releases fire in a cone in the target direction, dealing magic damage to enemies hit.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Annie releases fire in a cone in the target direction, dealing magic damage to enemies hit.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -248,10 +230,10 @@
                   {
                     "values": [
                       70,
-                      120,
-                      170,
-                      220,
-                      270
+                      115,
+                      160,
+                      205,
+                      250
                     ],
                     "units": [
                       ""
@@ -259,7 +241,7 @@
                   },
                   {
                     "values": [
-                      85
+                      80
                     ],
                     "units": [
                       "% AP"
@@ -271,32 +253,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              70,
-              75,
-              80,
-              85,
-              90
-            ],
-            "units": [
-              ""
-            ]
-          }
+          70,
+          75,
+          80,
+          85,
+          90
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                7
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          7
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -319,7 +284,8 @@
         "angle": "49.52°",
         "castTime": "0.25",
         "effectRadius": "600",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -328,7 +294,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Annie/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Annie grants herself or the target allied champion and Tibbers a shield for 3 seconds and 20% - 50% (based on level) bonus movement speed that decays over 1.5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Annie grants herself or the target allied champion and Tibbers a shield for 3 seconds and 20% - 50% (based on level) bonus movement speed that decays over 1.5 seconds.",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -389,36 +355,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              60,
-              65,
-              70,
-              75,
-              80
-            ],
-            "units": [
-              ""
-            ]
-          }
+          60,
+          65,
+          70,
+          75,
+          80
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                12,
-                11.5,
-                11,
-                10.5,
-                10
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          12,
+          11.5,
+          11,
+          10.5,
+          10
+        ],
         "targeting": "Unit / Location",
         "affects": "Self, Enemies",
         "spellshieldable": null,
@@ -441,7 +390,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": "800"
+        "targetRange": "800",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -450,7 +400,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Annie/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Annie gains magic penetration.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Annie gains magic penetration.",
             "leveling": [
               {
                 "attribute": "Magic Penetration",
@@ -470,7 +420,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Annie summons Tibbers to the target location in a burst of flame, dealing magic damage to enemies near him. Summon: Tibbers can be recast at any time while Tibbers is alive.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Annie summons Tibbers to the target location in a burst of flame, dealing magic damage to enemies near him. Summon: Tibbers can be recast at any time while Tibbers is alive.",
             "leveling": [
               {
                 "attribute": "Initial Magic Damage",
@@ -502,39 +452,22 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Annie directs Tibbers to the target location.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Annie directs Tibbers to the target location.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Summon:</p><p> Tibber's recast can be used while affected by cast-inhibiting crowd control. See Pets for more details about Tibbers.</p></div>",
+            "description": "<span class=\"ability-header\">Summon:</span> Tibber's recast can be used while affected by cast-inhibiting crowd control. See Pets for more details about Tibbers.",
             "leveling": []
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                130,
-                115,
-                100
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          130,
+          115,
+          100
+        ],
         "targeting": "Location",
         "affects": "Enemies / Tibbers",
         "spellshieldable": "True",
@@ -557,10 +490,10 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "250 /  350",
-        "targetRange": "600"
+        "targetRange": "600",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Dangerous, yet disarmingly precocious, Annie is a child mage with immense pyromantic power. Even in the shadows of the mountains north of Noxus, she is a magical outlier. Her natural affinity for fire manifested early in life through unpredictable, emotional outbursts, though she eventually learned to control these “playful tricks.” Her favorite includes the summoning of her beloved teddy bear, Tibbers, as a fiery protector. Lost in the perpetual innocence of childhood, Annie wanders the dark forests, always looking for someone to play with.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/annie/skins/base/images/annie_splash_tile_0.jpg"
+  "lore": "Dangerous, yet disarmingly precocious, Annie is a child mage with immense pyromantic power. Even in the shadows of the mountains north of Noxus, she is a magical outlier. Her natural affinity for fire manifested early in life through unpredictable, emotional outbursts, though she eventually learned to control these “playful tricks.” Her favorite includes the summoning of her beloved teddy bear, Tibbers, as a fiery protector. Lost in the perpetual innocence of childhood, Annie wanders the dark forests, always looking for someone to play with."
 }

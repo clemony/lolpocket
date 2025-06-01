@@ -1,8 +1,7 @@
-@import 'tailwindcss';
-@import './default-theme';
+@import "tailwindcss";
+@import "./default-theme";
 
 @layer components {
-
   .tip-icon {
     @apply inline-flex align-middle mr-2 ml-0.5 mb-0.25 size-4.25;
   }
@@ -11,15 +10,21 @@
     @apply inline-flex align-middle mr-0.5 ml-0.5 mb-0.25 size-4.25;
   }
 
-.item-price-arrow::first-letter {
-  writing-mode: sideways-lr;
-  text-orientation: sideways;
-}
-
+  .item-price-arrow::first-letter {
+    writing-mode: sideways-lr;
+    text-orientation: sideways;
+  }
 
   .color-chip {
     @apply aspect-square size-9 flex items-center justify-center rounded-md
     shadow-sm;
   }
 
+  .ring-check {
+    @apply has-checked:ring has-checked:ring-neutral/50 has-checked:ring-offset-2 has-checked:ring-offset-b2/90  hover:ring hover:ring-neutral/50 hover:ring-offset-2 hover:ring-offset-b2/90 transition-all duration-150 drop-shadow-sm  shadow-sm has-checked:grayscale-0;
+  }
+
+  .ability-header {
+    @apply font-medium  drop-shadow-text tracking-tighter  uppercase;
+  }
 }

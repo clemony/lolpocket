@@ -98,7 +98,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Karthus/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Upon taking fatal damage, Karthus enters a zombie state for 7 seconds, during which he can cast his abilities at no cost. If Defile has been learned, it will remain toggled on for Death Defied's entire duration. Requiem becomes disabled after Death Defied has lasted 4 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Upon taking fatal damage, Karthus enters a zombie state for 7 seconds, during which he can cast his abilities at no cost. If Defile has been learned, it will remain toggled on for Death Defied's entire duration. Requiem becomes disabled after Death Defied has lasted 4 seconds.",
             "leveling": []
           },
           {
@@ -107,10 +107,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -133,7 +130,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -142,7 +140,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Karthus/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Karthus conjures a blast at the target location that detonates after 0.528 seconds to 0.759 seconds, granting sight of the area and dealing magic damage to all enemies within, doubled when only one target is struck.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Karthus conjures a blast at the target location that detonates after 0.528 seconds to 0.759 seconds, granting sight of the area and dealing magic damage to all enemies within, doubled when only one target is struck.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -202,32 +200,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              20,
-              25,
-              30,
-              35,
-              40
-            ],
-            "units": [
-              ""
-            ]
-          }
+          20,
+          25,
+          30,
+          35,
+          40
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                1
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          0
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -250,7 +231,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "160",
-        "targetRange": "875"
+        "targetRange": "875",
+        "maxCharges": 2
       }
     ],
     "W": [
@@ -259,7 +241,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Karthus/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Karthus erects a wall of pain at the target location perpendicular to his facing that lasts 5 seconds, granting sight around its pillars and center.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Karthus erects a wall of pain at the target location perpendicular to his facing that lasts 5 seconds, granting sight around its pillars and center.",
             "leveling": [
               {
                 "attribute": "Wall Length",
@@ -321,28 +303,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              70
-            ],
-            "units": [
-              ""
-            ]
-          }
+          70
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                15
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          15
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "False",
@@ -365,7 +330,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "1000"
+        "targetRange": "1000",
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -374,7 +340,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Karthus/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Karthus restores mana whenever he kills an enemy.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Karthus restores mana whenever he kills an enemy.",
             "leveling": [
               {
                 "attribute": "Mana Restored",
@@ -396,7 +362,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Toggle:</p><p> Karthus surrounds himself in a necrotic aura that deals magic damage every 0.25 seconds to all nearby enemies. Toggling Defile off triggers a final tick of damage.</p></div>",
+            "description": "<span class=\"ability-header\">Toggle:</span> Karthus surrounds himself in a necrotic aura that deals magic damage every 0.25 seconds to all nearby enemies. Toggling Defile off triggers a final tick of damage.",
             "leveling": [
               {
                 "attribute": "Magic Damage Per Tick",
@@ -456,36 +422,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              30,
-              42,
-              54,
-              66,
-              78
-            ],
-            "units": [
-              ""
-            ]
-          }
+          30,
+          42,
+          54,
+          66,
+          78
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                0.5
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": false
-        },
+        "cooldown": [
+          0.5
+        ],
         "targeting": "Auto",
         "affects": "Self, Enemies",
         "spellshieldable": "False",
-        "resource": "Mana per_second",
+        "resource": "Mana / s",
         "damageType": "Magic damage",
         "spellEffects": "aoedot",
         "projectile": null,
@@ -504,7 +453,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "550",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -513,7 +463,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Karthus/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Karthus channels for 3 seconds, then deals magic damage to all targetable enemy champions upon completion.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Karthus channels for 3 seconds, then deals magic damage to all targetable enemy champions upon completion.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -542,30 +492,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                200,
-                180,
-                160
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          200,
+          180,
+          160
+        ],
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -588,10 +521,10 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "Global",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "The harbinger of oblivion, Karthus is an undying spirit whose haunting songs are a prelude to the horror of his nightmarish appearance. The living fear the eternity of undeath, but Karthus sees only beauty and purity in its embrace, a perfect union of life and death. When Karthus emerges from the Shadow Isles, it is to bring the joy of death to mortals, an apostle of the unliving.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/karthus/skins/base/images/karthus_splash_tile_0.jpg"
+  "lore": "The harbinger of oblivion, Karthus is an undying spirit whose haunting songs are a prelude to the horror of his nightmarish appearance. The living fear the eternity of undeath, but Karthus sees only beauty and purity in its embrace, a perfect union of life and death. When Karthus emerges from the Shadow Isles, it is to bring the joy of death to mortals, an apostle of the unliving."
 }

@@ -99,23 +99,20 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ashe/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Ashe's basic attacks deal bonus physical damage equal to (75% + 40%) critical strike chance. Critical strikes do not deal any additional damage.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Ashe's basic attacks deal bonus physical damage equal to (75% + 40%) critical strike chance. Critical strikes do not deal any additional damage.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate - Frost Shot:</p><p> Ashe's basic attacks and ability hits apply Frost to enemies for 2 seconds, which slows them by 20% - 30% (based on level) for the duration.</p></div>",
+            "description": "<span class=\"ability-header\">Innate - Frost Shot:</span> Ashe's basic attacks and ability hits apply Frost to enemies for 2 seconds, which slows them by 20% - 30% (based on level) for the duration.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate - Critical Slow:</p><p> Ashe's critical strikes double Frost's slow strength to 40% - 60% (based on level), decaying over the first second of the duration to its normal strength.</p></div>",
+            "description": "<span class=\"ability-header\">Innate - Critical Slow:</span> Ashe's critical strikes double Frost's slow strength to 40% - 60% (based on level), decaying over the first second of the duration to its normal strength.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -138,7 +135,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -147,11 +145,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ashe/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> While Ranger's Focus is inactive, Ashe's basic attacks on-attack generate a stack of Focus for 4 seconds, which refreshes on subsequent attacks and stacks up to 4 times. Stacks expire by one every 1 second.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> While Ranger's Focus is inactive, Ashe's basic attacks on-attack generate a stack of Focus for 4 seconds, which refreshes on subsequent attacks and stacks up to 4 times. Stacks expire by one every 1 second.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Ashe gains bonus attack speed for 6 seconds and empowers her basic attacks to fire a flurry of five arrows.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Ashe gains bonus attack speed for 6 seconds and empowers her basic attacks to fire a flurry of five arrows.",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -217,19 +215,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              30
-            ],
-            "units": [
-              ""
-            ]
-          }
+          30
         ],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [
+          0
+        ],
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": "false",
@@ -239,7 +229,7 @@
         "projectile": "TRUE",
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "The first attack from Ranger's Focus has 6 arrows, thus dealing 20% more total damage than expected.\nRanger's Focus first bolt deals  basic damage with the subsequent 4 bolts dealing a non-reactive damage type (e.g.  default damage or  proc damage). The entire effect is classified as a basic attack on a script-level, but is considered an ability for other effects (i.e  Sap Magic), which is likely due to a mistaken script-level tag.\nAlthough Ranger's Focus has no actual cooldown, 4 stacks of focus are needed before Ranger's Focus can be reactivated. The time before being able to reactivate Ranger's Focus is 6.08 : 1.6 (based on attack speed) seconds.\nEach arrow from a flurry applies  Frost and the bonus damage from  Frost Shot is calculated individually per arrow.\nSimilarly, since a flurry is 5 instances of physical damage,  Black Cleaver allows her to cleave the enemy target 5 times per flurry.\nSources of flat damage reduction against any (physical) damage such as  Amumu's  Tantrum,  Leona's  Eclipse or  Fizz's  Nimble Fighter will apply the reduction to each arrow's damage, resulting in extremely reduced damaged compared to a normal attack.\nEach additional arrow from  Runaan's Hurricane will also split into 5 arrows.\nThe arrows are evenly distributed among secondary enemies but one enemy cannot be hit by more than 5 arrows.\nThe flurry will trigger on-hit effects once to each enemy hit, but no more than 3 targets per attack.\nThe flurry applies against structures. Stacks of Focus will not be granted when attacking structures.",
+        "notes": "The first attack from Ranger's Focus has 6 arrows, thus dealing 20% more total damage than expected.\nRanger's Focus first bolt deals  basic damage with the subsequent 4 bolts dealing a non-reactive damage type (e.g.  default damage or  proc damage). The entire effect is classified as a basic attack on a script-level, but is considered an ability for other effects (i.e  Sap Magic), which is likely due to a mistaken script-level tag.\nAlthough Ranger's Focus has no actual cooldown, 4 stacks of focus are needed before Ranger's Focus can be reactivated. The time before being able to reactivate Ranger's Focus is 6.08 : 1.6 (based on attack speed) seconds.\nEach arrow from a flurry applies  Frost and the bonus damage from  Frost Shot is calculated individually per arrow.\nSimilarly, since a flurry is 5 instances of physical damage,  Black Cleaver allows her to cleave the enemy target 5 times per flurry.\nSources of flat damage reduction against any (physical) damage such as  Amumu's  Tantrum,  Leona's  Eclipse or  Fizz's  Nimble Fighter will apply the reduction to each arrow's damage, resulting in extremely reduced damaged compared to a normal attack.\nEach additional arrow from  Runaan's Hurricane will also split into 5 arrows.\nThe arrows are evenly distributed among secondary enemies but one enemy cannot be hit by more than 5 arrows.\nThe flurry will trigger on-hit effects once to each enemy hit, but no more than 3 targets per attack.\nThe flurry applies against structures. Stacks of Focus will be granted when attacking structures.",
         "blurb": "Passive:  Ashe's basic attacks generate stacks of Focus, up to a cap. Once the stacks reach the cap, she can cast Ranger's Focus.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -252,7 +242,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -261,7 +252,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ashe/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Ashe shoots a volley of arrows in a cone in the target direction, each dealing physical damage to the first enemy hit, and applying Critical Slow to enemy champions hit.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Ashe shoots a volley of arrows in a cone in the target direction, each dealing physical damage to the first enemy hit, and applying Critical Slow to enemy champions hit.",
             "leveling": [
               {
                 "attribute": "Arrows",
@@ -313,36 +304,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              75,
-              70,
-              65,
-              60,
-              55
-            ],
-            "units": [
-              ""
-            ]
-          }
+          75,
+          70,
+          65,
+          60,
+          55
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                18,
-                14.5,
-                11,
-                7.5,
-                4
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          18,
+          14.5,
+          11,
+          7.5,
+          4
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -365,7 +339,8 @@
         "angle": "27.75°/ 37° / 46.25° / 4.625°",
         "castTime": "0.25",
         "effectRadius": "1200",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -374,7 +349,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ashe/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Ashe sends a hawk spirit toward the target location, granting sight of the area along its path[ repeatedly for 0.5 seconds after every 100 units traveled ][ for effectively up-to 1.8 seconds at any location ]and at its destination for 5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Ashe sends a hawk to a location, granting sight of the area along its path[ repeatedly for 0.5 seconds after every 100 units traveled ][ for effectively up-to 1.8 seconds at any location ]and at its destination for 5 seconds.",
             "leveling": []
           },
           {
@@ -383,28 +358,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              1
-            ],
-            "units": [
-              ""
-            ]
-          }
+          0
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                5
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          5
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "false",
@@ -415,7 +373,7 @@
         "onHitEffects": null,
         "occurrence": null,
         "notes": "Hawkshot's recharge timer seems to start at the beginning of the game, even prior to ranking the ability, but upon actually ranking the ability, it starts with one charge and the recharge timer starts from 0.\nHawkshot will ping enemy champions it spots if allies didn't already have vision of them, and put a 'revealed' visual effect on them for 2.75 seconds, but does not actually reveal the units in particular, and is removed if the champion leaves the area.\nHawkshot will grant assist credit if a previously-unseen enemy champion is killed within 10 seconds of being revealed by the ability.\nHawkshot will trigger upon colliding with  Blade Whirl or  Wind Wall but not  Unbreakable.\nHawkshot will grant 0.33 points of vision score for each champion revealed.",
-        "blurb": "Active:  Ashe sends out her Hawk Spirit. The spirit  exposes the area along its path and a large area at its destination.",
+        "blurb": "Active:  Ashe sends out a hawk to a location,  exposing the area along its path and a large area at its destination.",
         "missileSpeed": null,
         "rechargeRate": [
           90,
@@ -433,7 +391,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "1000",
-        "targetRange": "Global"
+        "targetRange": "Global",
+        "maxCharges": 2
       }
     ],
     "R": [
@@ -442,7 +401,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ashe/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Ashe fires a massive arrow of ice in the target direction, granting sight of the area it flies through each for 1 second. The arrow shatters upon hitting an enemy champion, dealing them magic damage, stunning them for 1 - 3.5 (based on distance traveled) seconds, and granting sight of the area around them for 1 second.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Ashe fires a massive arrow of ice in the target direction, granting sight of the area it flies through each for 1 second. The arrow shatters upon hitting an enemy champion, dealing them magic damage, stunning them for 1 - 3.5 (based on distance traveled) seconds, and granting sight of the area around them for 1 second.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -475,30 +434,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                100,
-                80,
-                60
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          100,
+          80,
+          60
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -521,10 +463,10 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "400 / 350",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Iceborn warmother of the Avarosan tribe, Ashe commands the most populous horde in the north. Stoic, intelligent, and idealistic, yet uncomfortable with her role as leader, she taps into the ancestral magics of her lineage to wield a bow of True Ice. With her people's belief that she is the mythological hero Avarosa reincarnated, Ashe hopes to unify the Freljord once more by retaking their ancient, tribal lands.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ashe/skins/base/images/ashe_splash_tile_0.jpg"
+  "lore": "Iceborn warmother of the Avarosan tribe, Ashe commands the most populous horde in the north. Stoic, intelligent, and idealistic, yet uncomfortable with her role as leader, she taps into the ancestral magics of her lineage to wield a bow of True Ice. With her people's belief that she is the mythological hero Avarosa reincarnated, Ashe hopes to unify the Freljord once more by retaking their ancient, tribal lands."
 }

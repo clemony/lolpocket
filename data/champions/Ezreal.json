@@ -98,19 +98,16 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ezreal/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Ezreal generates a stack of Rising Spell Force for each enemy hit by his abilities, lasting for 6 seconds, refreshing on subsequent hits, and stacking up to 5 times.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Ezreal generates a stack of Rising Spell Force for each enemy hit by his abilities, lasting for 6 seconds, refreshing on subsequent hits, and stacking up to 5 times.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Rising Spell Force:</p><p> For each stack, Ezreal gains 10% bonus attack speed, up to a maximum of 50%.</p></div>",
+            "description": "<span class=\"ability-header\">Rising Spell Force:</span> For each stack, Ezreal gains 10% bonus attack speed, up to a maximum of 50%.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -133,7 +130,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -142,7 +140,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ezreal/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Ezreal fires a bolt of energy in the target direction that deals physical damage to the first enemy hit, applying on-hit effects and triggering on-attack effects.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Ezreal fires a bolt of energy in the target direction that deals physical damage to the first enemy hit, applying on-hit effects and triggering on-attack effects.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -185,36 +183,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              28,
-              31,
-              34,
-              37,
-              40
-            ],
-            "units": [
-              ""
-            ]
-          }
+          28,
+          31,
+          34,
+          37,
+          40
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                5.5,
-                5.25,
-                5,
-                4.75,
-                4.5
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          5.5,
+          5.25,
+          5,
+          4.75,
+          4.5
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "special",
@@ -237,7 +218,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "1200"
+        "targetRange": "1200",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -246,7 +228,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ezreal/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Ezreal fires an orb in the target direction that marks the first enemy champion, epic monster, or structure hit for 4 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Ezreal fires an orb in the target direction that marks the first enemy champion, epic monster, or structure hit for 4 seconds.",
             "leveling": []
           },
           {
@@ -297,28 +279,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                8
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          8
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "Special",
@@ -341,7 +306,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "1200"
+        "targetRange": "1200",
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -350,7 +316,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ezreal/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Ezreal blinks from his current location to up to 475 units towards the target location, then fires a homing bolt towards the nearest enemy that deals magic damage and reveals them for 1 second.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Ezreal blinks from his current location to up to 475 units towards the target location, then fires a homing bolt towards the nearest enemy that deals magic damage and reveals them for 1 second.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -397,32 +363,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              70
-            ],
-            "units": [
-              ""
-            ]
-          }
+          70
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                26,
-                23,
-                20,
-                17,
-                14
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          26,
+          23,
+          20,
+          17,
+          14
+        ],
         "targeting": "Location",
         "affects": "Enemies, Self",
         "spellshieldable": "True",
@@ -445,7 +394,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "750",
-        "targetRange": "475"
+        "targetRange": "475",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -454,7 +404,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ezreal/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Ezreal fires an arc of energy in the target direction that briefly grants sight of its surroundings and deals magic damage to enemies hit.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Ezreal fires an arc of energy in the target direction that briefly grants sight of its surroundings and deals magic damage to enemies hit.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -527,30 +477,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                120,
-                105,
-                90
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          120,
+          105,
+          90
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -573,10 +506,10 @@
         "angle": null,
         "castTime": "1",
         "effectRadius": null,
-        "targetRange": "Global"
+        "targetRange": "Global",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "A dashing adventurer, unknowingly gifted in the magical arts, Ezreal raids long-lost catacombs, tangles with ancient curses, and overcomes seemingly impossible odds with ease. His courage and bravado knowing no bounds, he prefers to improvise his way out of any situation, relying partially on his wits, but mostly on his mystical Shuriman gauntlet, which he uses to unleash devastating arcane blasts. One thing is for sure—whenever Ezreal is around, trouble isn't too far behind. Or ahead. Probably everywhere.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ezreal/skins/base/images/ezreal_splash_tile_0.jpg"
+  "lore": "A dashing adventurer, unknowingly gifted in the magical arts, Ezreal raids long-lost catacombs, tangles with ancient curses, and overcomes seemingly impossible odds with ease. His courage and bravado knowing no bounds, he prefers to improvise his way out of any situation, relying partially on his wits, but mostly on his mystical Shuriman gauntlet, which he uses to unleash devastating arcane blasts. One thing is for sure—whenever Ezreal is around, trouble isn't too far behind. Or ahead. Probably everywhere."
 }

@@ -1,9 +1,9 @@
 <script setup lang="ts">
-const ts = useTempStore()
+const us = useUiStore()
 </script>
 
 <template>
-  <Dialog v-model:open="ts.loginOpen">
+  <Dialog v-model:open="us.loginOpen">
     <DialogTrigger as-child>
       <slot />
     </DialogTrigger>

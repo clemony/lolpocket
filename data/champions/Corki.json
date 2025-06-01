@@ -98,15 +98,12 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Corki/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Corki's basic attacks deal bonus true damage equal to 20% AD. This damage is affected by critical strike modifiers.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Corki's basic attacks deal bonus true damage equal to 20% AD. This damage is affected by critical strike modifiers.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -129,7 +126,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -138,7 +136,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Corki/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Corki launches a bomb at the target location that explodes upon impact, dealing magic damage to enemies hit.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Corki launches a bomb at the target location that explodes upon impact, dealing magic damage to enemies hit.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -181,36 +179,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              60,
-              65,
-              70,
-              75,
-              80
-            ],
-            "units": [
-              ""
-            ]
-          }
+          60,
+          65,
+          70,
+          75,
+          80
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                9,
-                8.5,
-                8,
-                7.5,
-                7
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          9,
+          8.5,
+          8,
+          7.5,
+          7
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -233,7 +214,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "275",
-        "targetRange": "825"
+        "targetRange": "825",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -242,7 +224,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Corki/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Corki dashes to the target location and drops bombs that leave up to 3 blazing patches along his path, depending on the distance traveled. Each patch lasts 2.5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Corki dashes to the target location and drops bombs that leave up to 3 blazing patches along his path, depending on the distance traveled. Each patch lasts 2.5 seconds.",
             "leveling": []
           },
           {
@@ -322,36 +304,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              80,
-              85,
-              90,
-              95,
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          80,
+          85,
+          90,
+          95,
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                20,
-                18,
-                16,
-                14,
-                12
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          20,
+          18,
+          16,
+          14,
+          12
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "False",
@@ -374,7 +339,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "200",
-        "targetRange": "300 / 600"
+        "targetRange": "300 / 600",
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -383,7 +349,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Corki/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Corki sprays bullets in a cone toward his facing direction for 4 seconds, dealing physical damage every 0.25 seconds to all enemies hit and applying a stack to them at the same tick rate for 2 seconds, refreshing with subsequent hits and stacking up to 4 times. Each stack reduces the target's armor and magic resistance.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Corki sprays bullets in a cone toward his facing direction for 4 seconds, dealing physical damage every 0.25 seconds to all enemies hit and applying a stack to them at the same tick rate for 2 seconds, refreshing with subsequent hits and stacking up to 4 times. Each stack reduces the target's armor and magic resistance.",
             "leveling": [
               {
                 "attribute": "Physical Damage Per Tick",
@@ -473,32 +439,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50,
-              55,
-              60,
-              65,
-              70
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50,
+          55,
+          60,
+          65,
+          70
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                12
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          12
+        ],
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "False",
@@ -521,7 +470,8 @@
         "angle": "35°",
         "castTime": "none",
         "effectRadius": "690",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -530,11 +480,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Corki/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Basic attacks on-hit against champions reduce Missile Barrage's remaining recharge time by 2 - 4 (based on critical strike chance) seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Basic attacks on-hit against champions reduce Missile Barrage's remaining recharge time by 2 - 4 (based on critical strike chance) seconds.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Corki fires a missile in the target direction that explodes upon the first enemy hit, dealing physical damage to enemies within the area.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Corki fires a missile in the target direction that explodes upon the first enemy hit, dealing physical damage to enemies within the area.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -595,28 +545,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              35
-            ],
-            "units": [
-              ""
-            ]
-          }
+          35
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                2
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          2
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -643,10 +576,10 @@
         "angle": null,
         "castTime": "0.175",
         "effectRadius": "150 / 300",
-        "targetRange": "1300 / 1500"
+        "targetRange": "1300 / 1500",
+        "maxCharges": 4
       }
     ]
   },
-  "lore": "The yordle pilot Corki loves two things above all others: flying, and his glamorous mustache... though not necessarily in that order. After leaving Bandle City, he settled in Piltover and fell in love with the wondrous machines he found there. He dedicated himself to the development of flying contraptions, leading an aerial defense force of seasoned veterans known as the Screaming Yipsnakes. Calm under fire, Corki patrols the skies around his adopted home, and has never encountered a problem that a good missile barrage couldn't solve.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/corki/skins/base/images/corki_splash_tile_0.jpg"
+  "lore": "The yordle pilot Corki loves two things above all others: flying, and his glamorous mustache... though not necessarily in that order. After leaving Bandle City, he settled in Piltover and fell in love with the wondrous machines he found there. He dedicated himself to the development of flying contraptions, leading an aerial defense force of seasoned veterans known as the Screaming Yipsnakes. Calm under fire, Corki patrols the skies around his adopted home, and has never encountered a problem that a good missile barrage couldn't solve."
 }

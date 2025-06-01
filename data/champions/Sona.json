@@ -100,15 +100,15 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sona/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate - Accelerando:</p><p> Sona generates a stack of Accelerando each time she hits an enemy champion with Hymn of Valor and each time she mitigates sufficient damage or heals damaged allies with Aria of Perseverance, stacking up to 120 times. At maximum stacks, she instead reduces the current cooldown of Crescendo by 1.5 seconds each time.</p></div>\n\n\n<div><p class=\"ability-header\"> Accelerando:</p><p> For each stack, Sona gains 0.5 basic ability haste, up to 60 at maximum stacks.</p></div>",
+            "description": "<span class=\"ability-header\">Innate - Accelerando:</span> Sona generates a stack of Accelerando each time she hits an enemy champion with Hymn of Valor and each time she mitigates sufficient damage or heals damaged allies with Aria of Perseverance, stacking up to 120 times. At maximum stacks, she instead reduces the current cooldown of Crescendo by 1.5 seconds each time.\n<span class=\"ability-header\"> Accelerando:</span> For each stack, Sona gains 0.5 basic ability haste, up to 60 at maximum stacks.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate - Melody:</p><p> Whenever Sona casts a basic ability, her other basic abilities incur a 0.5-second global cooldown and she generates a unique aura for 3 seconds that empowers herself and nearby allied champions.</p></div>",
+            "description": "<span class=\"ability-header\">Innate - Melody:</span> Whenever Sona casts a basic ability, her other basic abilities incur a 0.5-second global cooldown and she generates a unique aura for 3 seconds that empowers herself and nearby allied champions.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate - Power Chord:</p><p> Sona's basic abilities generate a stack of Power Chord, stacking up to 3 times. At 3 stacks, her next basic attack is empowered to consume them all to have an uncancellable windup, deal 20 - 240 (based on level) (+ 20% AP) bonus magic damage, and apply an additional effect based on the last basic ability she cast.</p></div>\n\n\n<div><p class=\"ability-header\"> Hymn of Valor - Staccato:</p><p> Bonus damage is modified to 30 - 360 (based on level) (+ 30% AP).</p></div>\n\n\n<div><p class=\"ability-header\"> Aria of Perseverance - Diminuendo:</p><p> Reduces the target's size by 8% and damage dealt by 25% (+ 4% per 100 AP) for 3 seconds.</p></div>\n\n\n<div><p class=\"ability-header\"> Song of Celerity - Tempo:</p><p> Slows the target by 50% (+ 4% per 100 AP) for 2 seconds, capped at 99%.</p></div>",
+            "description": "<span class=\"ability-header\">Innate - Power Chord:</span> Sona's basic abilities generate a stack of Power Chord, stacking up to 3 times. At 3 stacks, her next basic attack is empowered to consume them all to have an uncancellable windup, deal 20 - 240 (based on level) (+ 20% AP) bonus magic damage, and apply an additional effect based on the last basic ability she cast.\n<span class=\"ability-header\"> Hymn of Valor - Staccato:</span> Bonus damage is modified to 30 - 360 (based on level) (+ 30% AP).\n<span class=\"ability-header\"> Aria of Perseverance - Diminuendo:</span> Reduces the target's size by 8% and damage dealt by 25% (+ 4% per 100 AP) for 3 seconds.\n<span class=\"ability-header\"> Song of Celerity - Tempo:</span> Slows the target by 50% (+ 4% per 100 AP) for 2 seconds, capped at 99%.",
             "leveling": []
           },
           {
@@ -117,10 +117,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": "True",
@@ -143,7 +140,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -152,7 +150,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sona/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Sona sends out bolts of sound to the two nearest visible enemies, prioritizing champions. Each bolt deals magic damage and grants sight of the area around the target for 1 second.Sona gains a stack of Accelerando for each bolt that hits an enemy champion.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Sona sends out bolts of sound to the two nearest visible enemies, prioritizing champions. Each bolt deals magic damage and grants sight of the area around the target for 1 second.Sona gains a stack of Accelerando for each bolt that hits an enemy champion.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -182,7 +180,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Melody Bonus:</p><p> Sona and tagged allied champions deal bonus magic damage on their next basic attack within 5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Melody Bonus:</span> Sona and tagged allied champions deal bonus magic damage on their next basic attack within 5 seconds.",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage",
@@ -213,32 +211,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50,
-              55,
-              60,
-              65,
-              70
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50,
+          55,
+          60,
+          65,
+          70
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                8
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          8
+        ],
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -261,7 +242,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "825 /  400",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -270,7 +252,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sona/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Sona heals herself and sends out a tone to heal the most wounded allied champion nearby.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Sona heals herself and sends out a tone to heal the most wounded allied champion nearby.",
             "leveling": [
               {
                 "attribute": "Heal",
@@ -300,7 +282,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Melody Bonus:</p><p> Sona and tagged allied champions are granted a shield for 1.5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Melody Bonus:</span> Sona and tagged allied champions are granted a shield for 1.5 seconds.",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -353,32 +335,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              80,
-              85,
-              90,
-              95,
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          80,
+          85,
+          90,
+          95,
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                10
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          10
+        ],
         "targeting": "Auto",
         "affects": "Self, Allies",
         "spellshieldable": null,
@@ -401,7 +366,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "1000 /  400",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -410,11 +376,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sona/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Sona gains 20% (+ 2% per 100 AP) bonus movement speed for 7 seconds. If she takes damage during this time, the duration ends prematurely once or if 3 seconds have elapsed.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Sona gains 20% (+ 2% per 100 AP) bonus movement speed for 7 seconds. If she takes damage during this time, the duration ends prematurely once or if 3 seconds have elapsed.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Melody Bonus:</p><p> Tagged allied champions gain bonus movement speed for 3 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Melody Bonus:</span> Tagged allied champions gain bonus movement speed for 3 seconds.",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -445,28 +411,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              65
-            ],
-            "units": [
-              ""
-            ]
-          }
+          65
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                14
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          14
+        ],
         "targeting": "Auto",
         "affects": "Self, Allies",
         "spellshieldable": null,
@@ -489,7 +438,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "400",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -498,7 +448,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sona/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Sona strikes an irresistible chord in the target direction that deals magic damage to enemies hit and stuns them for 1.5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Sona strikes an irresistible chord in the target direction that deals magic damage to enemies hit and stuns them for 1.5 seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -527,30 +477,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                140,
-                120,
-                100
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          140,
+          120,
+          100
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -573,10 +506,10 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Sona is Demacia's foremost virtuoso of the stringed etwahl, speaking only through her graceful chords and vibrant arias. This genteel manner has endeared her to the highborn, though others suspect her spellbinding melodies to actually emanate magic—a Demacian taboo. Silent to outsiders but somehow understood by close companions, Sona plucks her harmonies not only to soothe injured allies, but also to strike down unsuspecting enemies.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/sona/skins/base/images/sona_splash_tile_0.jpg"
+  "lore": "Sona is Demacia's foremost virtuoso of the stringed etwahl, speaking only through her graceful chords and vibrant arias. This genteel manner has endeared her to the highborn, though others suspect her spellbinding melodies to actually emanate magic—a Demacian taboo. Silent to outsiders but somehow understood by close companions, Sona plucks her harmonies not only to soothe injured allies, but also to strike down unsuspecting enemies."
 }

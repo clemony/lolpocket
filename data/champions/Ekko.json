@@ -96,7 +96,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ekko/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate - Resonance:</p><p> Ekko's basic attacks on-hit and damaging abilities apply a stack of Resonance to enemies hit for 4 seconds, refreshing on subsequent hits and stacking up to 3 times. The third stack consumes them all to deal 30 - 140 (based on level) (+ 90% AP) bonus magic damage. Z-Drive Resonance deals 300% damage against monsters.</p></div>",
+            "description": "<span class=\"ability-header\">Innate - Resonance:</span> Ekko's basic attacks on-hit and damaging abilities apply a stack of Resonance to enemies hit for 4 seconds, refreshing on subsequent hits and stacking up to 3 times. The third stack consumes them all to deal 30 - 140 (based on level) (+ 90% AP) bonus magic damage. Z-Drive Resonance deals 300% damage against monsters.",
             "leveling": []
           },
           {
@@ -104,15 +104,12 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate - Stolen Time:</p><p> Triggering Resonance against a champion grants Ekko 50 / 60 / 70 / 80% (based on level) bonus movement speed for 2 / 2.5 / 3 (based on level) seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Innate - Stolen Time:</span> Triggering Resonance against a champion grants Ekko 50 / 60 / 70 / 80% (based on level) bonus movement speed for 2 / 2.5 / 3 (based on level) seconds.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Enemies / Self",
         "spellshieldable": "True",
@@ -135,7 +132,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -144,7 +142,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ekko/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Ekko throws a temporal grenade in the target direction that deals magic damage to enemies hit.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Ekko throws a temporal grenade in the target direction that deals magic damage to enemies hit.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -256,36 +254,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50,
-              60,
-              70,
-              80,
-              90
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50,
+          60,
+          70,
+          80,
+          90
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                9,
-                8.5,
-                8,
-                7.5,
-                7
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          9,
+          8.5,
+          8,
+          7.5,
+          7
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "Special",
@@ -308,7 +289,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "160 : 210",
-        "targetRange": "1100"
+        "targetRange": "1100",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -317,11 +299,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ekko/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Ekko's basic attacks deal bonus magic damage equal to 3% (+ 3% per 100 AP) of the target's missing health against enemies below 30% of their maximum health. The damage has a minimum threshold of 15 and is capped at 150 against minions and monsters.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Ekko's basic attacks deal bonus magic damage equal to 3% (+ 3% per 100 AP) of the target's missing health against enemies below 30% of their maximum health. The damage has a minimum threshold of 15 and is capped at 150 against minions and monsters.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Ekko creates an afterimage of himself that, after 2 seconds, bats a device to the target location and grants sight of the area for 2.5 seconds. After travelling over 1.25 seconds, the device expands into a chronosphere that is visible for 1.5 seconds and which slows enemies within by 40%.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Ekko creates an afterimage of himself that, after 2 seconds, bats a device to the target location and grants sight of the area for 2.5 seconds. After travelling over 1.25 seconds, the device expands into a chronosphere that is visible for 1.5 seconds and which slows enemies within by 40%.",
             "leveling": []
           },
           {
@@ -360,36 +342,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              30,
-              35,
-              40,
-              45,
-              50
-            ],
-            "units": [
-              ""
-            ]
-          }
+          30,
+          35,
+          40,
+          45,
+          50
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                22,
-                20,
-                18,
-                16,
-                14
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          22,
+          20,
+          18,
+          16,
+          14
+        ],
         "targeting": "Location",
         "affects": null,
         "spellshieldable": "True",
@@ -412,7 +377,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "375",
-        "targetRange": "1600"
+        "targetRange": "1600",
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -421,7 +387,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ekko/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Ekko dashes in the target direction, then empowers his next basic attack within 3 seconds to have a 0.25-second cast time, gain 300 bonus range, cause him to blink within 125 range of the target, and deal bonus magic damage.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Ekko dashes in the target direction, then empowers his next basic attack within 3 seconds to have a 0.25-second cast time, gain 300 bonus range, cause him to blink within 125 range of the target, and deal bonus magic damage.",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage",
@@ -456,36 +422,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              40,
-              45,
-              50,
-              55,
-              60
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40,
+          45,
+          50,
+          55,
+          60
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                9,
-                8.5,
-                8,
-                7.5,
-                7
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          9,
+          8.5,
+          8,
+          7.5,
+          7
+        ],
         "targeting": "Direction",
         "affects": "Self",
         "spellshieldable": "true",
@@ -508,7 +457,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": "325 / 550"
+        "targetRange": "325 / 550",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -517,11 +467,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ekko/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Upon learning Chronobreak or if its current cooldown is lower than 4 seconds, Ekko reveals a time-delayed afterimage of himself that constantly tracks where he was 4 seconds ago.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Upon learning Chronobreak or if its current cooldown is lower than 4 seconds, Ekko reveals a time-delayed afterimage of himself that constantly tracks where he was 4 seconds ago.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Ekko enters stasis at the start of the cast time, and afterwards heals himself and dashes to his afterimage's location at the time of cast over 0.5 seconds. Upon arrival, the stasis ends and he creates an explosion that deals magic damage to nearby enemies.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Ekko enters stasis at the start of the cast time, and afterwards heals himself and dashes to his afterimage's location at the time of cast over 0.5 seconds. Upon arrival, the stasis ends and he creates an explosion that deals magic damage to nearby enemies.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -585,30 +535,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                110,
-                80,
-                50
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          110,
+          80,
+          50
+        ],
         "targeting": "Auto",
         "affects": "Enemies / Self",
         "spellshieldable": "True",
@@ -631,10 +564,10 @@
         "angle": null,
         "castTime": "0.5",
         "effectRadius": "375 / Global",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "A prodigy from the rough streets of Zaun, Ekko is able to manipulate time to twist any situation to his advantage. He uses his own invention, the Z-Drive, to explore the branching possibilities of reality, crafting the perfect moment to seemingly achieve the impossible the first time, every time. Though Ekko revels in this freedom, when there's a threat to those he cares about, he and the Firelights will do anything to defend them.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/ekko/skins/base/images/ekko_splash_tile_0.jpg"
+  "lore": "A prodigy from the rough streets of Zaun, Ekko is able to manipulate time to twist any situation to his advantage. He uses his own invention, the Z-Drive, to explore the branching possibilities of reality, crafting the perfect moment to seemingly achieve the impossible the first time, every time. Though Ekko revels in this freedom, when there's a threat to those he cares about, he and the Firelights will do anything to defend them."
 }

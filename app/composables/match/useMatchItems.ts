@@ -1,3 +1,6 @@
+
+const ix = useIndexStore()
+
 export function useMatchItems() {
   const ds = useDataStore()
   const as = useAccountStore()
@@ -14,8 +17,6 @@ export function useMatchItems() {
     gameVersions: number[]
   }>()
 
-  const { data: itemData } = useFetch('/api/lists/item-index.json')
-  const items = Object.values(itemData.value) as ItemIndex[]
 
   const bayesianItems = ref<any[]>([])
 
@@ -74,7 +75,7 @@ export function useMatchItems() {
         const bayesianWinrate = ((1 - confidence) * globalWinrate + confidence * (stats.wins / stats.games)) * 100
 
         return {
-          item: items.find(i => i.id == itemId),
+          item: ix.itemNameById(itemId),
           games: stats.games,
           win: stats.wins,
           loss: stats.losses,

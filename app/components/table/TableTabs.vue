@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 const isChecked = ref('all')
-import ColumnDisplay from 'components/table/panels/ColumnDisplay.vue'
 import TableTrash from './TableTrash.vue'
 
 const ps = usePocketStore()
@@ -24,12 +23,6 @@ const classObject = 'flex'
         <div  class="!flex gap-3 i-c px-2">
            <icon name="search" v-tippy="'Search & Filter'" class="size-4 mb-0.25" />
            Search
-        </div>
-      </TabsTrigger>
-      <TabsTrigger value="account" @click="component = ColumnDisplay" >
-        <div  class="!flex gap-3 i-c px-2">
-         <icon name="gear" class="size-4.5" />
-         Columns
         </div>
       </TabsTrigger>
 

@@ -97,15 +97,12 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sivir/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Sivir's basic attacks and ability hits against enemy champions grant her 55 - 75 (based on level) bonus movement speed decaying over 1.5 seconds, refreshing on subsequent hits.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Sivir's basic attacks and ability hits against enemy champions grant her 55 - 75 (based on level) bonus movement speed decaying over 1.5 seconds, refreshing on subsequent hits.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -128,7 +125,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -137,7 +135,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sivir/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Sivir hurls her crossblade in the target direction, dealing physical damage to enemies within its path, increased by 0% - 50% (based on critical strike chance).</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Sivir hurls her crossblade in the target direction, dealing physical damage to enemies within its path, increased by 0% - 50% (based on critical strike chance).",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -251,36 +249,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              55,
-              60,
-              65,
-              70,
-              75
-            ],
-            "units": [
-              ""
-            ]
-          }
+          55,
+          60,
+          65,
+          70,
+          75
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                10,
-                9.5,
-                9,
-                8.5,
-                8
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          10,
+          9.5,
+          9,
+          8.5,
+          8
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "Special",
@@ -303,7 +284,8 @@
         "angle": null,
         "castTime": "0.25 : 0.1 (based on bonus attack speed)",
         "effectRadius": null,
-        "targetRange": "1250"
+        "targetRange": "1250",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -312,7 +294,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sivir/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Sivir empowers her crossblade for the next 4 seconds, gaining bonus attack speed and causing her basic attacks to bounce to additional surrounding enemies, dealing them physical damage. If the triggering attack critically strikes, the bounces will do so as well for (175% + 40%) damage. Ricochet deals 65% damage against minions and executes them if they would be left below 15 health.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Sivir empowers her crossblade for the next 4 seconds, gaining bonus attack speed and causing her basic attacks to bounce to additional surrounding enemies, dealing them physical damage. If the triggering attack critically strikes, the bounces will do so as well for (175% + 40%) damage. Ricochet deals 65% damage against minions and executes them if they would be left below 15 health.",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -336,10 +318,10 @@
                 "modifiers": [
                   {
                     "values": [
-                      30,
-                      35,
                       40,
+                      42.5,
                       45,
+                      47.5,
                       50
                     ],
                     "units": [
@@ -353,10 +335,10 @@
                 "modifiers": [
                   {
                     "values": [
-                      52.5,
-                      61.25,
                       70,
+                      74.375,
                       78.75,
+                      83.125,
                       87.5
                     ],
                     "units": [
@@ -370,10 +352,10 @@
                 "modifiers": [
                   {
                     "values": [
-                      19.5,
-                      22.75,
                       26,
+                      27.625,
                       29.25,
+                      30.875,
                       32.5
                     ],
                     "units": [
@@ -387,10 +369,10 @@
                 "modifiers": [
                   {
                     "values": [
-                      34.125,
-                      39.8125,
                       45.5,
+                      48.34375,
                       51.1875,
+                      54.03125,
                       56.875
                     ],
                     "units": [
@@ -411,28 +393,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              60
-            ],
-            "units": [
-              ""
-            ]
-          }
+          60
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                12
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          12
+        ],
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": "False",
@@ -443,7 +408,7 @@
         "onHitEffects": null,
         "occurrence": null,
         "notes": "Ricochet-enhanced basic attacks can bounce from structures onto secondary targets but not from nearby units onto structures.\nPENDING FOR TEST:: Ricochet's  interactions with  dodging,  blocking, and  blinding effects.\nRicochet do not apply to additional targets with  Runaan's Hurricane.",
-        "blurb": "Active:  Sivir's gains  bonus attack speed for a few seconds. During this time, her basic attacks create projectiles that repeatedly bounce to nearby surrounding enemies, dealing physical damage.",
+        "blurb": "Active:  Sivir gains  bonus attack speed for a few seconds. During this time, her basic attacks create projectiles that repeatedly bounce to nearby surrounding enemies, dealing physical damage.",
         "missileSpeed": null,
         "rechargeRate": null,
         "collisionRadius": null,
@@ -455,7 +420,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "500",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -464,7 +430,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sivir/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Sivir gains a spell shield for 1.5 seconds. Upon successfully blocking a hostile effect, she heals herself and activates Fleet of Foot after 0.25 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Sivir gains a spell shield for 1.5 seconds. Upon successfully blocking a hostile effect, she heals herself and activates Fleet of Foot after 0.25 seconds.",
             "leveling": [
               {
                 "attribute": "Heal",
@@ -494,24 +460,16 @@
             ]
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                24,
-                22.5,
-                21,
-                19.5,
-                18
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          0
+        ],
+        "cooldown": [
+          24,
+          22.5,
+          21,
+          19.5,
+          18
+        ],
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
@@ -534,7 +492,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -543,7 +502,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sivir/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Sivir gains On the Hunt for a duration and grants it to nearby allied champions for the remaining duration.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Sivir gains On the Hunt for a duration and grants it to nearby allied champions for the remaining duration.",
             "leveling": [
               {
                 "attribute": "Buff Duration",
@@ -563,7 +522,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">On the Hunt:</p><p> Gain bonus movement speed.</p></div>",
+            "description": "<span class=\"ability-header\">On the Hunt:</span> Gain bonus movement speed.",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -592,30 +551,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                120,
-                100,
-                80
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          120,
+          100,
+          80
+        ],
         "targeting": "Auto",
         "affects": "Allies",
         "spellshieldable": null,
@@ -638,10 +580,10 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "1000",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Sivir is a renowned fortune hunter and mercenary captain who plies her trade in the deserts of Shurima. Armed with her legendary jeweled crossblade, she has fought and won countless battles for those who can afford her exorbitant price. Known for her fearless resolve and endless ambition, she prides herself on recovering buried treasures from the perilous tombs of Shurima—for a generous bounty. With ancient forces stirring the very bones of Shurima, Sivir finds herself torn between conflicting destinies.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/sivir/skins/base/images/sivir_splash_tile_0.jpg"
+  "lore": "Sivir is a renowned fortune hunter and mercenary captain who plies her trade in the deserts of Shurima. Armed with her legendary jeweled crossblade, she has fought and won countless battles for those who can afford her exorbitant price. Known for her fearless resolve and endless ambition, she prides herself on recovering buried treasures from the perilous tombs of Shurima—for a generous bounty. With ancient forces stirring the very bones of Shurima, Sivir finds herself torn between conflicting destinies."
 }

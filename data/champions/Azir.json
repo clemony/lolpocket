@@ -100,11 +100,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Azir/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Whenever a turret outside the enemy team's base is destroyed, a marker is placed above its ruins which can be targeted by Azir.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Whenever a turret outside the enemy team's base is destroyed, a marker is placed above its ruins which can be targeted by Azir.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate - Disc of the Sun:</p><p> Azir can select a marker to construct the Sun Disc above the ruins after a 0.5-second cast time. The Sun Disc will activate after being assembled over 5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Innate - Disc of the Sun:</span> Azir can select a marker to construct the Sun Disc above the ruins after a 0.5-second cast time. The Sun Disc will activate after being assembled over 5 seconds.",
             "leveling": []
           },
           {
@@ -121,19 +121,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                90
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Unit",
         "affects": "Turret ruins",
         "spellshieldable": "False",
@@ -156,7 +144,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": "700"
+        "targetRange": "700",
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -165,7 +154,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Azir/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Azir orders all Sand Soldiers to dash toward the target location, dealing magic damage to all enemies they pass through as well as those in front of them upon arrival, and slowing them by 25% for 1 second.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Azir orders all Sand Soldiers to dash toward the target location, dealing magic damage to all enemies they pass through as well as those in front of them upon arrival, and slowing them by 25% for 1 second.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -204,36 +193,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              70,
-              80,
-              90,
-              100,
-              110
-            ],
-            "units": [
-              ""
-            ]
-          }
+          70,
+          80,
+          90,
+          100,
+          110
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                14,
-                12,
-                10,
-                8,
-                6
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          14,
+          12,
+          10,
+          8,
+          6
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -256,7 +228,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "150",
-        "targetRange": "740"
+        "targetRange": "740",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -265,7 +238,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Azir/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Azir summons a Sand Soldier at the target location that is untargetable, lasts 10 seconds, and grants sight of its surroundings. The Sand Soldier expires twice as fast while within range of an enemy turret, and does so instantly if Azir is too far away.Azir periodically stocks a Sand Soldier, up to a maximum of 2.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Azir summons a Sand Soldier at the target location that is untargetable, lasts 10 seconds, and grants sight of its surroundings. The Sand Soldier expires twice as fast while within range of an enemy turret, and does so instantly if Azir is too far away.Azir periodically stocks a Sand Soldier, up to a maximum of 2.",
             "leveling": []
           },
           {
@@ -337,32 +310,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              40,
-              35,
-              30,
-              25,
-              20
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40,
+          35,
+          30,
+          25,
+          20
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                1.5
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          1.5
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "false",
@@ -391,7 +347,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "525"
+        "targetRange": "525",
+        "maxCharges": 2
       }
     ],
     "E": [
@@ -400,7 +357,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Azir/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Azir grants himself a shield for 1.5 seconds and dashes to the Sand Soldier closest to the cursor, dealing magic damage to enemies within his path.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Azir grants himself a shield for 1.5 seconds and dashes to the Sand Soldier closest to the cursor, dealing magic damage to enemies within his path.",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -464,32 +421,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              60
-            ],
-            "units": [
-              ""
-            ]
-          }
+          60
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                22,
-                20.5,
-                19,
-                17.5,
-                16
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          22,
+          20.5,
+          19,
+          17.5,
+          16
+        ],
         "targeting": "Unit",
         "affects": "Self, Enemies",
         "spellshieldable": "True",
@@ -512,7 +452,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": null,
-        "targetRange": "1100"
+        "targetRange": "1100",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -521,7 +462,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Azir/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Azir calls forth a phalanx of soldiers from 175 units behind him, catching enemies from up to 325 units behind him and charging forward 575 units in the target direction.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Azir calls forth a phalanx of soldiers from 175 units behind him, catching enemies from up to 325 units behind him and charging forward 575 units in the target direction.",
             "leveling": [
               {
                 "attribute": "Width",
@@ -604,30 +545,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                120,
-                105,
-                90
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          120,
+          105,
+          90
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -650,10 +574,10 @@
         "angle": null,
         "castTime": "0.5",
         "effectRadius": "125",
-        "targetRange": "400 / -325"
+        "targetRange": "400 / -325",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Azir was a mortal emperor of Shurima in a far distant age, a proud man who stood at the cusp of immortality. His hubris saw him betrayed and murdered at the moment of his greatest triumph, but now, millennia later, he has been reborn as an Ascended being of immense power. With his buried city risen from the sand, Azir seeks to restore Shurima to its former glory.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/azir/skins/base/images/azir_splash_tile_0.jpg"
+  "lore": "Azir was a mortal emperor of Shurima in a far distant age, a proud man who stood at the cusp of immortality. His hubris saw him betrayed and murdered at the moment of his greatest triumph, but now, millennia later, he has been reborn as an Ascended being of immense power. With his buried city risen from the sand, Azir seeks to restore Shurima to its former glory."
 }

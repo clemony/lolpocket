@@ -3,54 +3,56 @@ const { ability, index } = defineProps<{
   ability: Ability
   index: string
 }>()
-console.log('💠 - ability:', ability)
 </script>
 
 <template>
-  <transition-slide group class="flex flex-col h-full">
+  <transition-slide group class="flex flex-col gap-2 h-full">
     <div class="w-full gap-3 flex items-center">
+      <kbd class="kbd kbd-lg drop-shadow-xs  shadow-sm bg-b1/94">{{ index }}</kbd>
       <h2 class="tracking-tight  grow">
         {{ ability.name }}
       </h2>
-      <kbd class="kbd kbd-lg drop-shadow-xs  shadow-sm brightness-97">{{ index }}</kbd>
     </div>
 
-    <transition-slide group class="w-full flex flex-wrap items-center justify-between gap-x-6 gap-y-3 mt-6 **:font-medium pr-1">
-      <p v-if="ability.cooldown.modifiers.length" v-tippy="'Cooldown'" class="flex items-center">
-        <i-stats-ah name="ph:hourglass" class="size-3.5 dst text-bc mr-2" />
-        
-        <span class="flex overflow-x-scroll gap-0 items-center max-w-60 justify-start truncate ">
-        <span v-for="(cd, i) in ability.cooldown.modifiers[0].values" :key="i" class="align-bottom  space-x-px">{{ Math.round(cd * 100) / 100 }}<span v-if="i != ability.cooldown.modifiers[0].values.length - 1" class="tracking-wider">/</span>
-        </span>
-      </span>
-      </p>
+    <transition-slide group class="w-full flex flex-wrap items-center  gap-x-6 gap-y-3 mt-2 mb-4 **:font-medium pr-1">
+      <div v-if="ability.cooldown.length" v-tippy="'Cooldown'" class="badge badge-lg   bg-ah/30 border-black-50/30 ">
+        <i-stats-ah name="ph:hourglass" class="size-3.5 dst text-black" />
 
-      <div v-if="ability.cost.length" v-tippy="`${ability.resource.replace('per_second', '/ second')} Cost`" class="flex gap-2 items-center">
-        <i-stats-mana v-if="ability.resource == 'Mana'" class="dst  size-4 -mt-px  text-bc/80" />
-
-        <i-stats-mana-regen v-if="ability.resource == 'Mana per_second'" class="dst size-4 -mt-px text-bc/80" />
-
-        <i-stats-energy v-if="ability.resource == 'Energy'" class="dst text-bc/80 size-4 -mt-px " />
-        <ValueFormatter :array="ability.cost[0].values" />
+        <ValueFormatter :array="ability.cooldown" />
       </div>
 
-      <!--    <p v-if="ability.occurrence > 0" v-tippy="'Max Charges'" class="flex gap-2 items-center">
-        <span class="size-4 relative">
-          <icon name="streamline:computer-battery-medium-1-phone-mobile-charge-medium-device-electricity-power-battery" class="size-5.5 -mt-1 top-0 left-0 absolute text-bc" /></span>
-        {{ ability.maxammo }}
-      </p> -->
+      <template v-if="ability.resource == 'Charge'">
+        <div v-if="ability.resource" v-tippy="'Max Charges'" class="badge badge-lg border-b3 border bg-b1/90 shadow-black/5">
+          <component :is="`i-stats-charge-${ability.maxCharges}`" class="dst  -mt-px text-bc/80 size-7 *:stroke-[1.3]" />
+          <span>
+            {{ ability.maxCharges }}
+          </span>
+        </div>
 
-      <p v-if="ability.effectRadius" v-tippy="'Effect Radius'" class="flex gap-2 items-center">
+        <div v-if="ability.rechargeRate" v-tippy="'Recharge Rate'" class="badge badge-lg border-b3 border bg-b1/90 shadow-black/5">
+          <icon name="mynaui:battery-charging" class="dst  -mt-px text-bc/80 size-7 *:stroke-[1.3]" />
+
+          <ValueFormatter :array="ability.rechargeRate" />
+        </div>
+      </template>
+
+      <ChampionDataBg v-else-if="ability.cost.length" :name="ability.resource" v-tippy="`${ability.resource} Cost`" class="badge badge-lg border-black-50/40" >
+       <ChampionDataIcon :name="ability.resource" v-if="ability.resource" class="dst size-4 -mt-px text-bc/80" />
+
+        <ValueFormatter :array="ability.cost" />
+      </ChampionDataBg>
+
+      <ChampionDataBg v-if="ability.effectRadius" v-tippy="'Effect Radius'" class="badge badge-lg border-b3 border  ">
         <span class="size-3 relative justify-start">
           <i-stats-radius class="size-4.5 -left-1.5 -top-0.5 absolute text-bc/80 dst" />
         </span>
         {{ ability.effectRadius }}
-      </p>
+      </ChampionDataBg>
 
-      <p v-if="ability.targetRange" v-tippy="'Range'" class="flex gap-2 items-center">
+      <ChampionDataBg v-if="ability.targetRange" v-tippy="'Range'" class="badge badge-lg">
         <i-stats-range class="size-4 text-bc dst text-bc/80" />
         {{ ability.targetRange }}
-      </p>
+      </ChampionDataBg>
 
       <!--  <p v-if="ability.width" v-tippy="'Max Rank'" class="flex gap-2 items-center">
         <span class="size-3 relative justify-start">
@@ -59,9 +61,8 @@ console.log('💠 - ability:', ability)
         {{ ability.maxrank }}
       </p>  -->
     </transition-slide>
-    <Separator class="mb-6 mt-3 !bg-neutral/30" />
 
-    <transition-slide group class="flex flex-col gap-6 h-full items-start overflow-y-auto">
+    <transition-slide group class="flex flex-col gap-2 h-full items-start overflow-y-auto  border border-b3/60 inset-shadow-xs  bg-b1/90 rounded-xl py-4 px-5">
       <AbilityDescription v-for="(effect, i) in ability.effects" :key="i" :effect="effect" />
     </transition-slide>
   </transition-slide>

@@ -97,11 +97,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zeri/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Zeri generates 1 charge for every 40 units she travels by any means and 10 charge every time she casts Burst Fire, up to a maximum of 100 charge. Her basic attacks consume charge to deal modified damage.Zeri gains maximum charge when the game starts and upon respawning.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Zeri generates 1 charge for every 40 units she travels by any means and 10 charge every time she casts Burst Fire, up to a maximum of 100 charge. Her basic attacks consume charge to deal modified damage.Zeri gains maximum charge when the game starts and upon respawning.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Basic Attack:</p><p> Zeri zaps the target, applying spell effects as spell damage, and triggering on-cast effects. This cannot critically strike nor trigger on-hit and on-attack effects.</p></div>",
+            "description": "<span class=\"ability-header\">Basic Attack:</span> Zeri zaps the target, applying spell effects as spell damage, and triggering on-cast effects. This cannot critically strike nor trigger on-hit and on-attack effects.",
             "leveling": []
           },
           {
@@ -114,10 +114,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Unit",
         "affects": "Self",
         "spellshieldable": "special",
@@ -140,7 +137,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -149,7 +147,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zeri/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Zeri fires a burst of 7 rounds in the target direction that each deal physical damage to the first enemy hit.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Zeri fires a burst of 7 rounds in the target direction that each deal physical damage to the first enemy hit.",
             "leveling": [
               {
                 "attribute": "Total Physical Damage",
@@ -212,33 +210,16 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Burst Fire's projectile is treated as a basic attack:</p><p> it hits any enemy unit a typical basic attack can; deals basic damage; can critically strike for (175% + 40%) damage; applies on-hit effects to the first enemy hit; and triggers on-attack effects once. Burst Fire's cooldown and cast time are reduced with attack speed, with the maximum of 1.5 attacks per second. 70% of attack speed in excess of the cap is converted into bonus attack damage.</p></div>",
+            "description": "<span class=\"ability-header\">Burst Fire's projectile is treated as a basic attack:</span> it hits any enemy unit a typical basic attack can; deals basic damage; can critically strike for (175% + 40%) damage; applies on-hit effects to the first enemy hit; and triggers on-attack effects once. Burst Fire's cooldown and cast time are reduced with attack speed, with the maximum of 1.5 attacks per second. 70% of attack speed in excess of the cap is converted into bonus attack damage.",
             "leveling": []
           }
         ],
         "cost": [
-          {
-            "values": [
-              0
-            ],
-            "units": [
-              ""
-            ]
-          }
+          0
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                1
-              ],
-              "units": [
-                " ÷ Zeri's attack speed"
-              ]
-            }
-          ],
-          "affectedByCdr": false
-        },
+        "cooldown": [
+          0
+        ],
         "targeting": "Direction",
         "affects": "Self, Enemies",
         "spellshieldable": "false",
@@ -261,7 +242,8 @@
         "angle": "5° / 2°",
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -270,7 +252,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zeri/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Zeri fires an electric pulse in the target direction that deals physical damage to the first enemy hit and slows them for 2 seconds.If the pulse hits terrain, it transforms into a laser in a line that grants sight of the area for 1.75 seconds and fires after 0.85 seconds, applying the same effects to enemies hit and critically striking for (175% + 40%) damage against champions and monsters.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Zeri fires an electric pulse in the target direction that deals physical damage to the first enemy hit and slows them for 2 seconds.If the pulse hits terrain, it transforms into a laser in a line that grants sight of the area for 1.75 seconds and fires after 0.85 seconds, applying the same effects to enemies hit and critically striking for (175% + 40%) damage against champions and monsters.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -326,36 +308,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50,
-              60,
-              70,
-              80,
-              90
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50,
+          60,
+          70,
+          80,
+          90
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                12,
-                11,
-                10,
-                9,
-                8
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          12,
+          11,
+          10,
+          9,
+          8
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "true",
@@ -378,7 +343,8 @@
         "angle": null,
         "castTime": "0.55 : 0.3 (based on bonus attack speed)",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -387,7 +353,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zeri/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Zeri dashes in the target direction. She will dash farther across terrain if Spark Surge was cast within 50 units of any, gaining unobstructed vision of the surrounding 800 units and revealing herself while there are enemy champions within 1500 units of her.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Zeri dashes in the target direction. She will dash farther across terrain if Spark Surge was cast within 50 units of any, gaining unobstructed vision of the surrounding 800 units and revealing herself while there are enemy champions within 1500 units of her.",
             "leveling": []
           },
           {
@@ -455,36 +421,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              90,
-              85,
-              80,
-              75,
-              70
-            ],
-            "units": [
-              ""
-            ]
-          }
+          90,
+          85,
+          80,
+          75,
+          70
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                22,
-                21,
-                20,
-                19,
-                18
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          22,
+          21,
+          20,
+          19,
+          18
+        ],
         "targeting": "Direction",
         "affects": "Self",
         "spellshieldable": null,
@@ -507,7 +456,8 @@
         "angle": null,
         "castTime": "None",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -516,7 +466,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zeri/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Zeri discharges an electric nova that deals magic damage to nearby enemies. If this hits at least one enemy champion, she enters Overcharged for 5 seconds. Hitting an enemy champion with an ability or charged basic attack will extend the duration by 1.5 seconds, up to its original duration.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Zeri discharges an electric nova that deals magic damage to nearby enemies. If this hits at least one enemy champion, she enters Overcharged for 5 seconds. Hitting an enemy champion with an ability or charged basic attack will extend the duration by 1.5 seconds, up to its original duration.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -552,7 +502,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Overcharged:</p><p> Zeri gains 10% bonus movement speed and 30% bonus attack speed that is allowed to exceed the attack speed cap by the amount gained. Burst Fire is empowered to have a 20% shorter cast time and instead fire 3 rounds that travel with increased speed and chain to the nearest visible enemy within 650 units of the target, up to 4 subsequent targets, to deal 30% AD physical damage. This damage is affected by critical strike modifiers.</p></div>",
+            "description": "<span class=\"ability-header\">Overcharged:</span> Zeri gains 10% bonus movement speed and 30% bonus attack speed that is allowed to exceed the attack speed cap by the amount gained. Burst Fire is empowered to have a 20% shorter cast time and instead fire 3 rounds that travel with increased speed and chain to the nearest visible enemy within 650 units of the target, up to 4 subsequent targets, to deal 30% AD physical damage. This damage is affected by critical strike modifiers.",
             "leveling": []
           },
           {
@@ -560,35 +510,18 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Hypercharged:</p><p> For each stack, Zeri gains 0.5% bonus movement speed.</p></div>",
+            "description": "<span class=\"ability-header\">Hypercharged:</span> For each stack, Zeri gains 0.5% bonus movement speed.",
             "leveling": []
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                80,
-                75,
-                70
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          80,
+          75,
+          70
+        ],
         "targeting": "Auto",
         "affects": "Self, Enemies",
         "spellshieldable": "special",
@@ -611,10 +544,10 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "825",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "A headstrong, spirited young woman from Zaun's working-class, Zeri channels her electric magic to charge herself and her custom-crafted gun. Her volatile power mirrors her emotions, its sparks reflecting her lightning-fast approach to life. Deeply compassionate toward others, Zeri carries the love of her family and her home into every fight. Though her eagerness to help can sometimes backfire, Zeri believes one truth to be certain: stand up for your community, and it will stand up with you.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/zeri/skins/base/images/zeri_splash_tile_0.jpg"
+  "lore": "A headstrong, spirited young woman from Zaun's working-class, Zeri channels her electric magic to charge herself and her custom-crafted gun. Her volatile power mirrors her emotions, its sparks reflecting her lightning-fast approach to life. Deeply compassionate toward others, Zeri carries the love of her family and her home into every fight. Though her eagerness to help can sometimes backfire, Zeri believes one truth to be certain: stand up for your community, and it will stand up with you."
 }

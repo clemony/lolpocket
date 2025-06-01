@@ -95,7 +95,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gangplank/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Periodically, Gangplank empowers his next basic attack to set the target on fire, dealing them[ 50 - 250 (based on level) (+ 100% bonus AD) (+ 2 per 1% critical strike chance) bonus true damage over 2.5 seconds. ][ 5 - 25 (based on level) (+ 10% bonus AD) (+ 0.2 per 1% critical strike chance) bonus true damage every 0.25 seconds over 2.5 seconds. ] Turrets are dealt 50% damage.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Periodically, Gangplank empowers his next basic attack to set the target on fire, dealing them[ 50 - 250 (based on level) (+ 100% bonus AD) (+ 2 per 1% critical strike chance) bonus true damage over 2.5 seconds. ][ 5 - 25 (based on level) (+ 10% bonus AD) (+ 0.2 per 1% critical strike chance) bonus true damage every 0.25 seconds over 2.5 seconds. ] Turrets are dealt 50% damage.",
             "leveling": []
           },
           {
@@ -108,19 +108,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                15
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self, Enemies",
         "spellshieldable": "False",
@@ -131,7 +119,7 @@
         "onHitEffects": null,
         "occurrence": null,
         "notes": "Reapplying Trial by Fire before a previous application has run out will stack the full damage, instead of refreshing the duration.\nThe bonus true damage scaling based on critical strike chance is capped at 100% of the stat.\nIf the attack is  dodged or if Gangplank is  blinded, the effect is not applied nor does Trial by Fire go on cooldown. If the attack is  blocked, the effect is not applied, but Trial by Fire will go on cooldown.(note)\nThe empowered attack will not trigger against non- turret structures nor wards.",
-        "blurb": "Innate: Every few seconds, Gangplank's next basic attack will burn the target, continually dealing bonus true damage and granting him  bonus movement speed.",
+        "blurb": "Innate: Every few seconds,  Gangplank's next basic attack will burn the target, continually dealing bonus true damage and granting him  bonus movement speed.",
         "missileSpeed": null,
         "rechargeRate": null,
         "collisionRadius": null,
@@ -143,7 +131,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -152,7 +141,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gangplank/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Gangplank fires a shot at the target enemy that deals physical damage, applies on-hit effects as a ranged attack, and triggers on-attack effects. Parrrley can critically strike for (175% + 40%) damage.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Gangplank fires a shot at the target enemy that deals physical damage, applies on-hit effects as a ranged attack, and triggers on-attack effects. Parrrley can critically strike for (175% + 40%) damage.",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -226,32 +215,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              55,
-              50,
-              45,
-              40,
-              35
-            ],
-            "units": [
-              ""
-            ]
-          }
+          55,
+          50,
+          45,
+          40,
+          35
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                4.5
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          4.5
+        ],
         "targeting": "Unit",
         "affects": "Enemies, Self",
         "spellshieldable": "True",
@@ -274,7 +246,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "625"
+        "targetRange": "625",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -283,7 +256,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gangplank/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Gangplank consumes a large quantity of citrus fruit, cleansing himself from all crowd control and healing himself.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Gangplank consumes a large quantity of citrus fruit, cleansing himself from all crowd control and healing himself.",
             "leveling": [
               {
                 "attribute": "Heal",
@@ -322,36 +295,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              60,
-              70,
-              80,
-              90,
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          60,
+          70,
+          80,
+          90,
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                22,
-                20,
-                18,
-                16,
-                14
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          22,
+          20,
+          18,
+          16,
+          14
+        ],
         "targeting": "Auto",
         "affects": "Self",
         "spellshieldable": null,
@@ -374,7 +330,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -383,7 +340,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gangplank/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Gangplank consumes a charge to place a powder keg at the target location that lasts for 25 seconds and will connect to other kegs with overlapping connection radius through a trail of black powder. The keg starts with 3 health and loses 1 every 2 / 1 / 0.5 (based on level) seconds until it is left with 1 health.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Gangplank consumes a charge to place a powder keg at the target location that lasts for 25 seconds and will connect to other kegs with overlapping connection radius through a trail of black powder. The keg starts with 3 health and loses 1 every 2 / 1 / 0.5 (based on level) seconds until it is left with 1 health.",
             "leveling": []
           },
           {
@@ -457,28 +414,11 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              1
-            ],
-            "units": [
-              ""
-            ]
-          }
+          0
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                0.5
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": false
-        },
+        "cooldown": [
+          0
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -507,7 +447,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "345 /  360",
-        "targetRange": "1000"
+        "targetRange": "1000",
+        "maxCharges": 3
       }
     ],
     "R": [
@@ -516,7 +457,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gangplank/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Gangplank shoots a flare into the air, signaling his ship off-shore to fire upon the target location for 8 seconds, calling down 12 waves of cannonballs in clusters of 3 every 2 seconds, and granting sight of the area for the duration. Each wave deals magic damage to all enemies within the area and slows them by 30% for 0.5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Gangplank shoots a flare into the air, signaling his ship off-shore to fire upon the target location for 8 seconds, calling down 12 waves of cannonballs in clusters of 3 every 2 seconds, and granting sight of the area for the duration. Each wave deals magic damage to all enemies within the area and slows them by 30% for 0.5 seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage Per Wave",
@@ -590,11 +531,11 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Gangplank can purchase upgrades for his ship in the store at the cost of 500 Silver Serpents each, which improve Cannon Barrage:</p><p></p></div>",
+            "description": "<span class=\"ability-header\">Gangplank can purchase upgrades for his ship in the store at the cost of 500 Silver Serpents each, which improve Cannon Barrage:</span>",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Death's Daughter:</p><p> A large cannonball lands in the center of the barrage after the first cluster of waves occur, dealing a cluster's worth of true damage to enemies within the impact and slowing them by 75% for 1 second.</p></div>",
+            "description": "<span class=\"ability-header\">Death's Daughter:</span> A large cannonball lands in the center of the barrage after the first cluster of waves occur, dealing a cluster's worth of true damage to enemies within the impact and slowing them by 75% for 1 second.",
             "leveling": [
               {
                 "attribute": "True Damage with Death's Daughter",
@@ -645,7 +586,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Fire at Will:</p><p> Cannon Barrage fires[ 6 additional waves ][ 2 additional clusters ] over its duration; 18 waves of cannonballs are called down in clusters of 3 every 1.33 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Fire at Will:</span> Cannon Barrage fires[ 6 additional waves ][ 2 additional clusters ] over its duration; 18 waves of cannonballs are called down in clusters of 3 every 1.33 seconds.",
             "leveling": [
               {
                 "attribute": "Total Magic Damage with Fire at Will",
@@ -696,35 +637,18 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Raise Morale:</p><p> Cannon Barrage grants Gangplank and all allies within the area 40% bonus movement speed, lingering for 2 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Raise Morale:</span> Cannon Barrage grants Gangplank and all allies within the area 40% bonus movement speed, lingering for 2 seconds.",
             "leveling": []
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                170,
-                150,
-                130
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          170,
+          150,
+          130
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -747,10 +671,10 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "580",
-        "targetRange": "Global"
+        "targetRange": "Global",
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "As unpredictable as he is brutal, the dethroned reaver king Gangplank is feared far and wide. Once, he ruled the port city of Bilgewater, and while his reign is over, there are those who believe this has only made him more dangerous. Gangplank would see Bilgewater bathed in blood once more before letting someone else take it—and now with pistol, cutlass, and barrels of gunpowder, he is determined to reclaim what he has lost.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/gangplank/skins/base/images/gangplank_splash_tile_0.jpg"
+  "lore": "As unpredictable as he is brutal, the dethroned reaver king Gangplank is feared far and wide. Once, he ruled the port city of Bilgewater, and while his reign is over, there are those who believe this has only made him more dangerous. Gangplank would see Bilgewater bathed in blood once more before letting someone else take it—and now with pistol, cutlass, and barrels of gunpowder, he is determined to reclaim what he has lost."
 }

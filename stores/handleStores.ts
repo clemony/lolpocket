@@ -1,3 +1,5 @@
+import { useIndexStore } from './indexStore'
+
 /* import { useSidebarStore } from 'stores/sidebarStore'
  */
 export const as = computedAsync(async () => {
@@ -15,8 +17,8 @@ export const ps = computedAsync(async () => {
   return await usePocketStore()
 }, null)
 
-export const ts = computedAsync(async () => {
-  return await useTempStore()
+export const ix = computedAsync(async () => {
+  return await useIndexStore()
 }, null)
 
 export const is = computedAsync(async () => {
@@ -34,4 +36,3 @@ export const cs = computedAsync(async () => {
 export const us = computedAsync(async () => {
   return await useUiStore()
 }, null)
-

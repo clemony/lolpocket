@@ -97,11 +97,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rell/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Rell's basic attacks deal bonus magic damage on-hit equal to the sum of 5% of her total armor and 5% of her total magic resistance.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Rell's basic attacks deal bonus magic damage on-hit equal to the sum of 5% of her total armor and 5% of her total magic resistance.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Rell's basic attacks and abilities against non- minions reduce the target's armor and magic resistance by 3% for 5 seconds, refreshing on subsequent hits and stacking up to 5 times for a maximum of 15% reduction.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Rell's basic attacks and abilities against non- minions reduce the target's armor and magic resistance by 3% for 5 seconds, refreshing on subsequent hits and stacking up to 5 times for a maximum of 15% reduction.",
             "leveling": []
           },
           {
@@ -114,10 +114,7 @@
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self, Enemies",
         "spellshieldable": "false",
@@ -140,7 +137,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -149,7 +147,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rell/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Rell thrusts her lance in the target direction, lunging forward 100 units and destroying the damage-mitigating shields of all enemies hit (excluding the shields of monsters) before dealing them magic damage and stunning them for 0.65 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Rell thrusts her lance in the target direction, lunging forward 100 units and destroying the damage-mitigating shields of all enemies hit (excluding the shields of monsters) before dealing them magic damage and stunning them for 0.65 seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -180,32 +178,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                11,
-                10.5,
-                10,
-                9.5,
-                9
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          11,
+          10.5,
+          10,
+          9.5,
+          9
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "true",
@@ -228,7 +209,8 @@
         "angle": null,
         "castTime": "0.4",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -237,7 +219,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rell/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive - Mounted Alacrity:</p><p> While Rell is Mounted, she gains bonus movement speed.</p></div>",
+            "description": "<span class=\"ability-header\">Passive - Mounted Alacrity:</span> While Rell is Mounted, she gains bonus movement speed.",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -259,7 +241,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Rell becomes Dismounted and leaps to the target location over the cast time, granting herself a shield that lasts until destroyed or casting Ferromancy: Mount Up. Upon arrival, she deals magic damage to nearby enemies, stuns them for 0.8 seconds, and knocks them up for 0.4 seconds. She will continue sliding forward another 320 units over 0.5 seconds, though not through terrain, affecting further enemies along her path.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Rell becomes Dismounted and leaps to the target location over the cast time, granting herself a shield that lasts until destroyed or casting Ferromancy: Mount Up. Upon arrival, she deals magic damage to nearby enemies, stuns them for 0.8 seconds, and knocks them up for 0.4 seconds. She will continue sliding forward another 320 units over 0.5 seconds, though not through terrain, affecting further enemies along her path.",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -314,37 +296,20 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">While Rell is Dismounted, she can cast Ferromancy:</p><p> Mount Up. Upon completing a Recall channel or respawning, Rell will automatically revert to Mounted form without casting the ability and reset Ferromancy: Mount Up's cooldown.</p></div>",
+            "description": "<span class=\"ability-header\">While Rell is Dismounted, she can cast Ferromancy:</span> Mount Up. Upon completing a Recall channel or respawning, Rell will automatically revert to Mounted form without casting the ability and reset Ferromancy: Mount Up's cooldown.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">This ability can be cast only while Rell is Mounted. Rell can cast Magnet Storm during the dash, and is not considered to be dismounted until after the leap ends. Ferromancy:</p><p> Crash Down will cast at max range if cast beyond that.</p></div>",
+            "description": "<span class=\"ability-header\">This ability can be cast only while Rell is Mounted. Rell can cast Magnet Storm during the dash, and is not considered to be dismounted until after the leap ends. Ferromancy:</span> Crash Down will cast at max range if cast beyond that.",
             "leveling": []
           }
         ],
         "cost": [
-          {
-            "values": [
-              40
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                10
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          10
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "true",
@@ -355,7 +320,7 @@
         "onHitEffects": null,
         "occurrence": null,
         "notes": "Rell  slides between 250 and 350 units in testing, depending on how far the spell was targeted. It is not known where this is intended.\nIf Rell dashes before a wall on the map, the slide will cover a shorter distance to the terrain over the same time, moving slower.\nPENDING FOR TEST: Interaction with player-made walls.\nThe following table refers for interactions while Rell is dashing/in cast time:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\n Shattering Strike is disabled.  Full Tilt and  Magnet Storm are usable.\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nAll the other item-actives are usable\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
-        "blurb": "Passive - Mounted Alacrity: While Rell is Mounted, she gains bonus movement speed.",
+        "blurb": "Passive - Mounted Alacrity: While  Rell is Mounted, she gains bonus movement speed.",
         "missileSpeed": null,
         "rechargeRate": null,
         "collisionRadius": "200",
@@ -367,18 +332,19 @@
         "angle": null,
         "castTime": "0.625",
         "effectRadius": "180",
-        "targetRange": "400 / 100"
+        "targetRange": "400 / 100",
+        "maxCharges": -1
       },
       {
         "name": "Ferromancy: Mount Up",
         "icon": "https://cdn.communitydragon.org/latest/champion/Rell/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> While Rell is Dismounted, she gains 15% bonus armor, 15% bonus magic resistance, 20% bonus attack speed, and 75 bonus attack range.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> While Rell is Dismounted, she gains 15% bonus armor, 15% bonus magic resistance, 20% bonus attack speed, and 75 bonus attack range.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Rell becomes Mounted, gaining 30% bonus movement speed decaying over 2 seconds and empowering her next basic attack within 3.5 seconds to have a 0.2-second cast time, gain 100 bonus attack range and cause her to charge at the target's location, during which she also gains 40% bonus attack speed. Upon arrival or collision, she deals bonus magic damage, stuns the target for 0.6 seconds, and flings them 150 units over herself, though not through terrain, over 0.4 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Rell becomes Mounted, gaining 30% bonus movement speed decaying over 2 seconds and empowering her next basic attack within 3.5 seconds to have a 0.2-second cast time, gain 100 bonus attack range and cause her to charge at the target's location, during which she also gains 40% bonus attack speed. Upon arrival or collision, she deals bonus magic damage, stuns the target for 0.6 seconds, and flings them 150 units over herself, though not through terrain, over 0.4 seconds.",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage",
@@ -408,28 +374,20 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">While Rell is Mounted, she can cast Ferromancy:</p><p> Crash Down.</p></div>",
+            "description": "<span class=\"ability-header\">While Rell is Mounted, she can cast Ferromancy:</span> Crash Down.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Ferromancy:</p><p> Mount Up resets Rell's basic attack timer. This ability can be cast only while Rell is Dismounted.</p></div>",
+            "description": "<span class=\"ability-header\">Ferromancy:</span> Mount Up resets Rell's basic attack timer. This ability can be cast only while Rell is Dismounted.",
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                10
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cost": [
+          40
+        ],
+        "cooldown": [
+          10
+        ],
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "true",
@@ -452,7 +410,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -461,7 +420,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rell/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Rell powers up herself and the target allied champion for 3 seconds, both gaining 10% bonus movement speed which increases to 25% while moving within 1200 units of the empowered ally or an enemy.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Rell powers up herself and the target allied champion for 3 seconds, both gaining 10% bonus movement speed which increases to 25% while moving within 1200 units of the empowered ally or an enemy.",
             "leveling": []
           },
           {
@@ -500,32 +459,15 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              40
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                14,
-                13,
-                12,
-                11,
-                10
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          14,
+          13,
+          12,
+          11,
+          10
+        ],
         "targeting": "Unit / Auto",
         "affects": "Self, Allies, Enemies",
         "spellshieldable": "true",
@@ -548,7 +490,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "300",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -557,7 +500,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rell/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Rell erupts with magnetic fury, pulling nearby enemies inward. She then creates a gravitational field around her for the next 2 seconds that deals magic damage every 0.25 seconds to nearby enemies and drags them towards her.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Rell erupts with magnetic fury, pulling nearby enemies inward. She then creates a gravitational field around her for the next 2 seconds that deals magic damage every 0.25 seconds to nearby enemies and drags them towards her.",
             "leveling": [
               {
                 "attribute": "Magic Damage Per Tick",
@@ -609,30 +552,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                120,
-                100,
-                80
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          120,
+          100,
+          80
+        ],
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "special",
@@ -655,10 +581,10 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "450 /  375",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "The product of brutal experimentation at the hands of the Black Rose, Rell is a defiant, living weapon determined to topple Noxus. Her childhood was one of misery and horror, enduring unspeakable procedures to perfect and weaponize her magical control over metal... until she staged a violent escape, killing many of her captors in the process. Now branded as a criminal, Rell attacks Noxian soldiers on sight as she searches for survivors of her old “academy,” defending the meek while delivering violent death to her former overseers.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/rell/skins/base/images/rell_splash_tile_0.jpg"
+  "lore": "The product of brutal experimentation at the hands of the Black Rose, Rell is a defiant, living weapon determined to topple Noxus. Her childhood was one of misery and horror, enduring unspeakable procedures to perfect and weaponize her magical control over metal... until she staged a violent escape, killing many of her captors in the process. Now branded as a criminal, Rell attacks Noxian soldiers on sight as she searches for survivors of her old “academy,” defending the meek while delivering violent death to her former overseers."
 }

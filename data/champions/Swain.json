@@ -101,15 +101,12 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Swain/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Enemy champions that die will leave behind a Soul Fragment for 16 seconds, which can be collected by Swain after 1 second. Swain's ravens collect nearby Soul Fragments, as well as with Vision of Empire and Nevermove.</p></div>\n\n\n<div><p class=\"ability-header\">Soul Fragment:</p><p> For each stack, Swain gains 15 bonus health permanently. Upon collection, he will heal for 3% - 6% (based on level) of his maximum health.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Enemy champions that die will leave behind a Soul Fragment for 16 seconds, which can be collected by Swain after 1 second. Swain's ravens collect nearby Soul Fragments, as well as with Vision of Empire and Nevermove.\n<span class=\"ability-header\">Soul Fragment:</span> For each stack, Swain gains 15 bonus health permanently. Upon collection, he will heal for 3% - 6% (based on level) of his maximum health.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self, Enemies",
         "spellshieldable": null,
@@ -132,7 +129,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": "1100",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -141,7 +139,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Swain/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Swain unleashes five bolts of eldritch power over 0.264 seconds in a cone in the target direction that deal magic damage to enemies hit. Subsequent bolts against an enemy deal 25% bonus damage.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Swain unleashes five bolts of eldritch power over 0.264 seconds in a cone in the target direction that deal magic damage to enemies hit. Subsequent bolts against an enemy deal 25% bonus damage.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -222,36 +220,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              40,
-              45,
-              50,
-              55,
-              60
-            ],
-            "units": [
-              ""
-            ]
-          }
+          40,
+          45,
+          50,
+          55,
+          60
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                7,
-                6,
-                5,
-                4,
-                3
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          7,
+          6,
+          5,
+          4,
+          3
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -274,7 +255,8 @@
         "angle": "32°",
         "castTime": "0.25",
         "effectRadius": "725",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -283,7 +265,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Swain/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Swain summons a demonic eye at the target location that grants sight of the area for 2 seconds and explodes after 1.5 seconds, dealing magic damage to enemies within, halved against minions, and slowing them for 1.5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Swain summons a demonic eye at the target location that grants sight of the area for 2 seconds and explodes after 1.5 seconds, dealing magic damage to enemies within, halved against minions, and slowing them for 1.5 seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -360,36 +342,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              60,
-              65,
-              70,
-              75,
-              80
-            ],
-            "units": [
-              ""
-            ]
-          }
+          60,
+          65,
+          70,
+          75,
+          80
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                22,
-                21,
-                20,
-                19,
-                18
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          22,
+          21,
+          20,
+          19,
+          18
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "Special",
@@ -412,7 +377,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "325",
-        "targetRange": "5500 / 6000 / 6500 / 7000 / 7500"
+        "targetRange": "5500 / 6000 / 6500 / 7000 / 7500",
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -421,7 +387,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Swain/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Swain launches a demonic wave in the target direction.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Swain launches a demonic wave in the target direction.",
             "leveling": []
           },
           {
@@ -455,41 +421,24 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast:</p><p> Swain pulls the rooted champions over 290 units and collects a Soul Fragment from each of them. If the targets would be brought past Swain, they are instead knocked back the excess distance.</p></div>",
+            "description": "<span class=\"ability-header\">Recast:</span> Swain pulls the rooted champions over 290 units and collects a Soul Fragment from each of them. If the targets would be brought past Swain, they are instead knocked back the excess distance.",
             "leveling": []
           }
         ],
         "cost": [
-          {
-            "values": [
-              60,
-              65,
-              70,
-              75,
-              80
-            ],
-            "units": [
-              ""
-            ]
-          }
+          60,
+          65,
+          70,
+          75,
+          80
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                12,
-                11.5,
-                11,
-                10.5,
-                10
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          12,
+          11.5,
+          11,
+          10.5,
+          10
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "special",
@@ -512,7 +461,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "100",
-        "targetRange": "850"
+        "targetRange": "850",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -521,11 +471,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Swain/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Swain frees the demon within himself, gaining Demonic Ascension and generating 50 Demonic Energy. Demonic Ascension is maintained with Demonic Energy, which decays by 5 every 0.5 seconds, increased to 7.5 after 5 seconds have elapsed, and is lost once all Demonic Energy is depleted to 0. Swain generates 10 Demonic Energy every 0.5 seconds while draining from at least one enemy champion, and fully restores it to the maximum of 50 upon scoring a champion takedown.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Swain frees the demon within himself, gaining Demonic Ascension and generating 50 Demonic Energy. Demonic Ascension is maintained with Demonic Energy, which decays by 5 every 0.5 seconds, increased to 7.5 after 5 seconds have elapsed, and is lost once all Demonic Energy is depleted to 0. Swain generates 10 Demonic Energy every 0.5 seconds while draining from at least one enemy champion, and fully restores it to the maximum of 50 upon scoring a champion takedown.",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Demonic Ascension:</p><p> Swain is ghosted and drains the lifeforce of nearby enemies, both dealing magic damage and healing himself every 0.5 seconds per target affected. The heal is reduced by 90% against minions and monsters.</p></div>",
+            "description": "<span class=\"ability-header\">Demonic Ascension:</span> Swain is ghosted and drains the lifeforce of nearby enemies, both dealing magic damage and healing himself every 0.5 seconds per target affected. The heal is reduced by 90% against minions and monsters.",
             "leveling": [
               {
                 "attribute": "Magic Damage per Tick",
@@ -621,31 +571,18 @@
           {
             "description": "The targets do not have to be visible to be hit by this ability.",
             "leveling": []
+          },
+          {
+            "description": "Swain can move during Demonic Ascension's cast time.",
+            "leveling": []
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                120
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          120
+        ],
         "targeting": "Auto",
         "affects": "Self, Enemies",
         "spellshieldable": "False",
@@ -655,7 +592,7 @@
         "projectile": "FALSE",
         "onHitEffects": null,
         "occurrence": null,
-        "notes": "Demonflare will not automatically cast at the end of Demonic Ascension if it occurs due to Swain's death.\nSwain can still move during Demonic Ascension's cast time.\nFile:Swain - R",
+        "notes": "Demonflare will not automatically cast at the end of Demonic Ascension if it occurs due to Swain's death.\nFile:Swain - R",
         "blurb": "Active:  Swain frees the demon within, gaining Demonic Ascension and generating Demonic Energy. Demonic Ascension is maintained with Demonic Energy that gradually decays over time.",
         "missileSpeed": null,
         "rechargeRate": null,
@@ -668,14 +605,15 @@
         "angle": null,
         "castTime": "0.5",
         "effectRadius": "650",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       },
       {
         "name": "Demonflare",
         "icon": "https://cdn.communitydragon.org/latest/champion/Swain/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Swain releases a nova of soulfire that deals magic damage to nearby enemies and slows them by 75%, decaying over 1.5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Swain releases a nova of soulfire that deals magic damage to nearby enemies and slows them by 75%, decaying over 1.5 seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -707,20 +645,12 @@
             "leveling": []
           }
         ],
-        "cost": [],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                8
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": false
-        },
+        "cost": [
+          100
+        ],
+        "cooldown": [
+          120
+        ],
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -743,10 +673,10 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "675",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Jericho Swain is the visionary ruler of Noxus, an expansionist nation that reveres only strength. Though he was cast down and crippled in the Ionian wars, his left arm severed, he seized control of the empire with ruthless determination… and a new, demonic hand. Now, Swain commands from the front lines, marching against a coming darkness that only he can see—in glimpses gathered by shadowy ravens from the corpses all around him. In a swirl of sacrifice and secrets, the greatest secret of all is that the true enemy lies within.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/swain/skins/base/images/swain_splash_tile_0.jpg"
+  "lore": "Jericho Swain is the visionary ruler of Noxus, an expansionist nation that reveres only strength. Though he was cast down and crippled in the Ionian wars, his left arm severed, he seized control of the empire with ruthless determination… and a new, demonic hand. Now, Swain commands from the front lines, marching against a coming darkness that only he can see—in glimpses gathered by shadowy ravens from the corpses all around him. In a swirl of sacrifice and secrets, the greatest secret of all is that the true enemy lies within."
 }

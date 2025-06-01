@@ -19,6 +19,10 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
   ],
 
+  experimental: {
+    payloadExtraction: true,
+  },
+
   icon: {
     provider: 'iconify',
     serverBundle: false,
@@ -67,6 +71,7 @@ export default defineNuxtConfig({
       redirectUrl: 'http://localhost:8080/summoner',
     },
   },
+
   nitro: {
     routeRules: {
       '/api/**': { cors: true, headers: { 'Access-Control-Allow-Origin': '*' } },
@@ -114,6 +119,7 @@ export default defineNuxtConfig({
   pinia: {
     storesDirs: ['./stores/**'],
   },
+
   alias: {
     '#': fileURLToPath(new URL('./', import.meta.url)),
     '@': fileURLToPath(new URL('./app', import.meta.url)),
@@ -130,7 +136,9 @@ export default defineNuxtConfig({
     'modules': fileURLToPath(new URL('./modules', import.meta.url)),
     'content': fileURLToPath(new URL('./app/content', import.meta.url)),
   },
+
   css: ['~/assets/css/tailwind.css'],
+
   app: {
     head: {
       meta: [
@@ -138,14 +146,16 @@ export default defineNuxtConfig({
       ],
     },
   },
+
   devServer: {
     port: 8080,
-  },
-  devtools: {
-    enabled: false,
-    componentInspector: true,
-    viteInspect: true,
-  },
+   },
+
+  // devtools: {
+  //   enabled: true,
+  //   componentInspector: true,
+  //   viteInspect: true,
+  // },
   webpack: {
     loaders: {
       vue: {
@@ -153,9 +163,15 @@ export default defineNuxtConfig({
       },
     },
   },
+
   future: {
     compatibilityVersion: 4,
   },
+
   compatibilityDate: '2024-11-01',
   ssr: false,
+
+  devtools: {
+    enabled: false,
+  },
 })

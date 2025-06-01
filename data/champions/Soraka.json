@@ -99,15 +99,12 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Soraka/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Soraka gains 90% bonus movement speed while facing nearby allied champions that are below 40% of their maximum health.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Soraka gains 90% bonus movement speed while facing nearby allied champions that are below 40% of their maximum health.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -130,7 +127,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": "2500",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -139,7 +137,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Soraka/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Soraka calls down a star upon the target location that grants sight of the area before landing after 0.25 - 1 (based on target range) seconds, dealing magic damage to enemies hit and slowing them by 30% for 1.5 seconds.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Soraka calls down a star upon the target location that grants sight of the area before landing after 0.25 - 1 (based on target range) seconds, dealing magic damage to enemies hit and slowing them by 30% for 1.5 seconds.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -173,7 +171,7 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Rejuvenation:</p><p> The target heals every 0.5 seconds and gains bonus movement speed that decays over the duration.</p></div>",
+            "description": "<span class=\"ability-header\">Rejuvenation:</span> The target heals every 0.5 seconds and gains bonus movement speed that decays over the duration.",
             "leveling": [
               {
                 "attribute": "Total Heal",
@@ -246,36 +244,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              45,
-              50,
-              55,
-              60,
-              65
-            ],
-            "units": [
-              ""
-            ]
-          }
+          45,
+          50,
+          55,
+          60,
+          65
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                8,
-                7,
-                6,
-                5,
-                4
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          8,
+          7,
+          6,
+          5,
+          4
+        ],
         "targeting": "Location",
         "affects": "Self, Enemies",
         "spellshieldable": "True",
@@ -298,7 +279,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "265",
-        "targetRange": "800"
+        "targetRange": "800",
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -307,7 +289,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Soraka/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Soraka heals the target allied champion.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Soraka heals the target allied champion.",
             "leveling": [
               {
                 "attribute": "Heal",
@@ -381,32 +363,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              10
-            ],
-            "units": [
-              "%"
-            ]
-          }
+          40,
+          45,
+          50,
+          55,
+          60
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                6,
-                5,
-                4,
-                3,
-                2
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          6,
+          5,
+          4,
+          3,
+          2
+        ],
         "targeting": "Unit",
         "affects": "Allies / Self",
         "spellshieldable": null,
@@ -429,7 +398,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": null,
-        "targetRange": "550"
+        "targetRange": "550",
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -438,7 +408,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Soraka/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Soraka creates a celestial zone at the target location that deals magic damage to enemy champions within at the time of cast. The zone then persists for 1.5 seconds and silences enemies within.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Soraka creates a celestial zone at the target location that deals magic damage to enemy champions within at the time of cast. The zone then persists for 1.5 seconds and silences enemies within.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -516,36 +486,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              70,
-              75,
-              80,
-              85,
-              90
-            ],
-            "units": [
-              ""
-            ]
-          }
+          70,
+          75,
+          80,
+          85,
+          90
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                20,
-                19,
-                18,
-                17,
-                16
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          20,
+          19,
+          18,
+          17,
+          16
+        ],
         "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "special",
@@ -568,7 +521,8 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "260",
-        "targetRange": "925"
+        "targetRange": "925",
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -577,7 +531,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Soraka/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Soraka calls upon the stars, healing herself and all allied champions, increased by 50% on targets below 40% of their maximum health.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Soraka calls upon the stars, healing herself and all allied champions, increased by 50% on targets below 40% of their maximum health.",
             "leveling": [
               {
                 "attribute": "Heal",
@@ -629,30 +583,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                150,
-                135,
-                120
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          150,
+          135,
+          120
+        ],
         "targeting": "Auto",
         "affects": "Allies",
         "spellshieldable": null,
@@ -663,7 +600,7 @@
         "onHitEffects": null,
         "occurrence": null,
         "notes": "Due to several character stats needing to be recalculated each time a character spawns, casting Wish immediately upon respawning will cause its cooldown to be unaffected by ability haste, and the healing will not be increased by Soraka's ability power. (bug)\n Untargetability does not invalidate the targeting of the heal.\nWish will not credit Soraka for assisting in a champion kill if the target ally is at full health.\nWish will apply heal effects (such as  Summon Aery) prioritizing targets based on the Spawn ID, which is the order in which units were added to an ongoing game. For  champions, this is the order they appear in from left to right in the loading screen.\nWish's effects occur before the cast time.\nWish will apply to units that are affected by Mordekaiser's R even if Soraka is not in the same realm.",
-        "blurb": "Active:  Soraka calls upon the stars,  healing herself and her allies. The healing is increased on targets at low health.",
+        "blurb": "Active:  Soraka calls upon the stars,  healing herself and all allied  champions, regardless of distance. The healing is increased on targets at low health.",
         "missileSpeed": null,
         "rechargeRate": null,
         "collisionRadius": null,
@@ -675,10 +612,10 @@
         "angle": null,
         "castTime": "0.25",
         "effectRadius": "Global",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "A wanderer from the celestial dimensions beyond Mount Targon, Soraka gave up her immortality to protect the mortal races from their own more violent instincts. She endeavors to spread the virtues of compassion and mercy to everyone she meets—even healing those who would wish harm upon her. And, for all Soraka has seen of this world's struggles, she still believes the people of Runeterra have yet to reach their full potential.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/soraka/skins/base/images/soraka_splash_tile_0.jpg"
+  "lore": "A wanderer from the celestial dimensions beyond Mount Targon, Soraka gave up her immortality to protect the mortal races from their own more violent instincts. She endeavors to spread the virtues of compassion and mercy to everyone she meets—even healing those who would wish harm upon her. And, for all Soraka has seen of this world's struggles, she still believes the people of Runeterra have yet to reach their full potential."
 }

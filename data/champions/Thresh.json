@@ -99,11 +99,11 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Thresh/ability-icon/p",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Thresh's armor does not increase through growth (per level).</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Thresh's armor does not increase through growth (per level).",
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Innate:</p><p> Enemy champions, large minions and large monsters that die near Thresh drop a Soul for 8 seconds. Epic monsters drop 2 Souls while lesser minions and monsters have a 33.3% chance to drop a Soul.</p></div>",
+            "description": "<span class=\"ability-header\">Innate:</span> Enemy champions, large minions and large monsters that die near Thresh drop a Soul for 8 seconds. Epic monsters drop 2 Souls while lesser minions and monsters have a 33.3% chance to drop a Soul.",
             "leveling": []
           },
           {
@@ -111,15 +111,12 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Soul:</p><p> For each stack, Thresh gains 1 ability power and 1 bonus armor.</p></div>",
+            "description": "<span class=\"ability-header\">Soul:</span> For each stack, Thresh gains 1 ability power and 1 bonus armor.",
             "leveling": []
           }
         ],
         "cost": [],
-        "cooldown": {
-          "modifiers": [],
-          "affectedByCdr": false
-        },
+        "cooldown": [],
         "targeting": "Passive",
         "affects": "Self",
         "spellshieldable": null,
@@ -142,7 +139,8 @@
         "angle": null,
         "castTime": null,
         "effectRadius": "1900",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": null
       }
     ],
     "Q": [
@@ -151,7 +149,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Thresh/ability-icon/q",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Thresh throws out his scythe in the target direction, becoming unable to move or attack while it is in flight.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Thresh throws out his scythe in the target direction, becoming unable to move or attack while it is in flight.",
             "leveling": []
           },
           {
@@ -189,37 +187,20 @@
             "leveling": []
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Recast - Deathly Leap:</p><p> Thresh stops tugging his hook and dashes to the Shackled enemy, becoming able to attack again upon arrival. He can cast Dark Passage and Flay during the dash.</p></div>",
+            "description": "<span class=\"ability-header\">Recast - Deathly Leap:</span> Thresh stops tugging his hook and dashes to the Shackled enemy, becoming able to attack again upon arrival. He can cast Dark Passage and Flay during the dash.",
             "leveling": []
           }
         ],
         "cost": [
-          {
-            "values": [
-              70
-            ],
-            "units": [
-              ""
-            ]
-          }
+          70
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                19,
-                16.5,
-                14,
-                11.5,
-                9
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          19,
+          16.5,
+          14,
+          11.5,
+          9
+        ],
         "targeting": "Direction / Auto",
         "affects": "Enemies / Self",
         "spellshieldable": "True",
@@ -242,7 +223,8 @@
         "angle": null,
         "castTime": "0.5",
         "effectRadius": "Global / 3000",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "W": [
@@ -251,7 +233,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Thresh/ability-icon/w",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Thresh throws his lantern to the target location over 0.5 seconds, lasting for 6 seconds while he remains nearby and granting sight of its surroundings. If Thresh moves too far away from the lantern, it returns back to him immediately.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Thresh throws his lantern to the target location over 0.5 seconds, lasting for 6 seconds while he remains nearby and granting sight of its surroundings. If Thresh moves too far away from the lantern, it returns back to him immediately.",
             "leveling": []
           },
           {
@@ -290,36 +272,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              50,
-              55,
-              60,
-              65,
-              70
-            ],
-            "units": [
-              ""
-            ]
-          }
+          50,
+          55,
+          60,
+          65,
+          70
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                21,
-                20,
-                19,
-                18,
-                17
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          21,
+          20,
+          19,
+          18,
+          17
+        ],
         "targeting": "Location",
         "affects": "Allies",
         "spellshieldable": null,
@@ -342,7 +307,8 @@
         "angle": null,
         "castTime": "none",
         "effectRadius": "350 / 150",
-        "targetRange": "950"
+        "targetRange": "950",
+        "maxCharges": -1
       }
     ],
     "E": [
@@ -351,7 +317,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Thresh/ability-icon/e",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Passive:</p><p> Thresh's basic attacks are empowered to deal bonus magic damage, with the AD ratio increasing over 10 seconds without basic attacking enemies.</p></div>",
+            "description": "<span class=\"ability-header\">Passive:</span> Thresh's basic attacks are empowered to deal bonus magic damage, with the AD ratio increasing over 10 seconds without basic attacking enemies.",
             "leveling": [
               {
                 "attribute": "Minimum Bonus Magic Damage",
@@ -402,7 +368,7 @@
             ]
           },
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Thresh sweeps his chain across the ground in a broad line and a radius around him, starting behind him and towards the target direction. Enemies hit are dealt magic damage and knocked 200 units in the target direction, and then are slowed for 1 second.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Thresh sweeps his chain across the ground in a broad line and a radius around him, starting behind him and towards the target direction. Enemies hit are dealt magic damage and knocked 200 units in the target direction, and then are slowed for 1 second.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -450,36 +416,19 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              60,
-              65,
-              70,
-              75,
-              80
-            ],
-            "units": [
-              ""
-            ]
-          }
+          60,
+          65,
+          70,
+          75,
+          80
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                13,
-                12.25,
-                11.5,
-                10.75,
-                10
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          13,
+          12.25,
+          11.5,
+          10.75,
+          10
+        ],
         "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -502,7 +451,8 @@
         "angle": null,
         "castTime": "0.3889",
         "effectRadius": "270",
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ],
     "R": [
@@ -511,7 +461,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Thresh/ability-icon/r",
         "effects": [
           {
-            "description": "\n\n<div><p class=\"ability-header\">Active:</p><p> Thresh erects a pentagon of spectral walls around him that each last for 5 seconds. A wall will break upon enemy champion contact, dealing magic damage and slowing them by 99% for 2 seconds. After the first wall breaks, the rest will deal no damage and slow for only 1 second.</p></div>",
+            "description": "<span class=\"ability-header\">Active:</span> Thresh erects a pentagon of spectral walls around him that each last for 5 seconds. A wall will break upon enemy champion contact, dealing magic damage and slowing them by 99% for 2 seconds. After the first wall breaks, the rest will deal no damage and slow for only 1 second.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -544,30 +494,13 @@
           }
         ],
         "cost": [
-          {
-            "values": [
-              100
-            ],
-            "units": [
-              ""
-            ]
-          }
+          100
         ],
-        "cooldown": {
-          "modifiers": [
-            {
-              "values": [
-                120,
-                100,
-                80
-              ],
-              "units": [
-                ""
-              ]
-            }
-          ],
-          "affectedByCdr": true
-        },
+        "cooldown": [
+          120,
+          100,
+          80
+        ],
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "True",
@@ -590,10 +523,10 @@
         "angle": null,
         "castTime": "0.45",
         "effectRadius": null,
-        "targetRange": null
+        "targetRange": null,
+        "maxCharges": -1
       }
     ]
   },
-  "lore": "Sadistic and cunning, Thresh is an ambitious and restless specter of the Shadow Isles. Once the custodian of countless arcane secrets, he was undone by a power greater than life or death, and now sustains himself by tormenting and breaking others with slow, excruciating inventiveness. His victims suffer far beyond their brief mortal coil as Thresh wreaks agony upon their souls, imprisoning them in his unholy lantern to torture for all eternity.",
-  "splash": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/thresh/skins/base/images/thresh_splash_tile_0.jpg"
+  "lore": "Sadistic and cunning, Thresh is an ambitious and restless specter of the Shadow Isles. Once the custodian of countless arcane secrets, he was undone by a power greater than life or death, and now sustains himself by tormenting and breaking others with slow, excruciating inventiveness. His victims suffer far beyond their brief mortal coil as Thresh wreaks agony upon their souls, imprisoning them in his unholy lantern to torture for all eternity."
 }

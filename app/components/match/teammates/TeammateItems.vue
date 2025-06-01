@@ -22,12 +22,13 @@ onMounted (async () => {
   })
 })
 
+const ix = useIndexStore()
 </script>
 
 <template>
   <div class="" :class="cn('gap-1 py-1 flex w-54 max-w-50 grow size-full  items-start *:rounded-md ', props.wrapperClass)">
     <template v-for="item in items" :key="item">
-      <div v-if="item" v-tippy="getItemName(item)" class="" :class="cn('rounded-lg inset-shadow-rounded shadow-sm size-8 ', props.class)">
+      <div v-if="item" v-tippy="ix.itemNameById(item)" class="" :class="cn('rounded-lg inset-shadow-rounded shadow-sm size-8 ', props.class)">
         <div class="size-8  overflow-hidden rounded-lg">
           <img v-if="item" :src="`/img/item/${item}.webp`" />
           <Placeholder v-else />

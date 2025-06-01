@@ -1,6 +1,83 @@
-@import 'tailwindcss';
+@import "tailwindcss";
+@import "./colors.css";
+@import "./default-theme.css";
 
-@import './default-theme.css';
+/* button */
+
+/*  btn */
+
+@utility btn {
+  &:not(.btn-ghost):not(.btn-outline):not(.btn-neutral) {
+    @apply items-center  bg-b2/60 border-b2 font-normal text-3 gap-3;
+  }
+}
+
+@utility btn-neutral {
+  @apply !shadow-xs text-nc bg-neutral *:text-nc hover:text-nc;
+}
+
+@utility btn-ghost {
+  &:hover {
+    @apply border-b3/40 !text-red-500;
+    --btn-bg: --alpha(var(--b2) / 20%);
+  }
+  &.btn-active {
+    --btn-bg: --alpha(var(--b2) / 30%);
+    border-color: --alpha(var(--b3) / 40%);
+  }
+}
+
+/* badge */
+
+@utility badge {
+  @apply rounded-lg shadow-standard shadow-black/2 **:text-3 flex gap-2 drop-shadow-text items-center;
+}
+
+@utility badge-neutral {
+  @apply text-nc;
+}
+
+/* collapse */
+
+@utility collapse-input {
+  @apply !min-h-0 !py-0 h-11 text-nowrap flex-nowrap items-center justify-start;
+}
+
+@utility collapse-title {
+  @apply !min-h-0 !py-0 h-11 text-nowrap flex-nowrap items-center justify-start;
+}
+
+/* input */
+
+@utility input {
+  @apply focus-within:!outline-1 focus-within:!outline-offset-0   focus-within:!outline-b3;
+  border-image-width: 0 !important;
+  --input-color: var(--b3) !important;
+}
+
+/* tabs */
+
+@utility tabs-box {
+  border-radius: var(--radius-lg) !important;
+}
+
+@utility tabs-box {
+  @apply rounded-lg;
+}
+
+@utility tab {
+  --radius-field: 1rem !important;
+  --tab-bg: var(--b1);
+  --tab-border-color: var(--b3);
+  --tab-border-colors: var(--b3);
+}
+
+/* divider */
+
+@utility divider {
+  @apply h-px text-2 font-semibold opacity-50;
+}
+/* mask */
 
 @utility mask-left {
   mask-image: linear-gradient(to right, black 50%, transparent);
@@ -14,7 +91,6 @@
   mask-image: linear-gradient(to left, black 1%, transparent);
 }
 
-
 @utility mask-left-sm {
   mask-image: linear-gradient(to right, black 90%, transparent);
 }
@@ -22,7 +98,6 @@
 @utility mask-right-sm {
   mask-image: linear-gradient(to left, black 90%, transparent);
 }
-
 
 @utility mask-top {
   mask-image: linear-gradient(to top, black 50%, transparent);
@@ -36,11 +111,10 @@
   mask-image: linear-gradient(-45%, #000 50%, transparent);
 }
 @utility mask-edges {
-  mask-image: radial-gradient(circle at 75% 85%,transparent 50%, #000 );
+  mask-image: radial-gradient(circle at 75% 85%, transparent 50%, #000);
 }
 
 @utility btn-depth {
-
   --depth: 1;
   --noise: 0.5;
 }
@@ -50,5 +124,5 @@
 }
 
 @utility text-shadow {
-  text-shadow: 0px 0px 2px rgba(0,0,0,0.11);
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.11);
 }

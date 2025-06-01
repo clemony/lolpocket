@@ -9,6 +9,15 @@ definePageMeta({
 const is = useItemStore()
 const { itemIds, filteredIds, pending } = useItemFilter(is.itemFilter)
 
+onMounted(() => {
+  const { data } = useNuxtData<ItemIndex[]>('item-index')
+  if (data.value) {
+    console.log('🔁 Loaded from cache:', data.value)
+  }
+  else {
+    console.log('📡 No cached data found for item-index')
+  }
+})
 </script>
 
 <template>
@@ -32,7 +41,7 @@ const { itemIds, filteredIds, pending } = useItemFilter(is.itemFilter)
           class="group   data-[state=hidden]:scale-0 data-[state=hidden]:size-0
 data-[state=visible]::scale-100 data-[state=visible]:size-28 grid place-items-center">
           <LazyPopoverItem
-            v-show="filteredIds.includes(id)" :id="id" class=" group-data-[state=visible]:animate-in ease-[cubic-bezier(.81,.47,.61,1.3)]  group-data-[state=visible]:fade-in  group-data-[state=visible]:zoom-in-50  group-data-[state=hidden]:animate-out   group-data-[state=hidden]:fade-out  relative group-data-[state=hidden]:scale-0 h-auto aspect-square  rounded-lg size-22 **:size-22'"/>
+            v-show="filteredIds.includes(id)" :id="id" class=" group-data-[state=visible]:animate-in ease-[cubic-bezier(.81,.47,.61,1.3)]  group-data-[state=visible]:fade-in  group-data-[state=visible]:zoom-in-50  group-data-[state=hidden]:animate-out   group-data-[state=hidden]:fade-out  relative group-data-[state=hidden]:scale-0 h-auto aspect-square  rounded-lg size-22 **:size-22'" />
         </div>
       </transition-slide>
     </div>

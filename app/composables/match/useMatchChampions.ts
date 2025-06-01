@@ -1,5 +1,5 @@
 export async function useMatchChampions(matches: SimplifiedMatchData[]) {
-  const championIndex = await $fetch <ChampionIndex[]>('/api/index/champion-index.json')
+  const ix = useIndexStore()
   const championStats = new Map<string, {
     name: string
     id: number
@@ -73,7 +73,7 @@ export async function useMatchChampions(matches: SimplifiedMatchData[]) {
         const avgDeaths = stats.deaths / stats.games
         const avgAssists = stats.assists / stats.games
         const champion = computed (() => {
-          return championIndex.find(c => c.key == championName)
+          return ix.championByKey(championName)
         })
 
         return {
