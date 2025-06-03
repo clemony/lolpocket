@@ -1,0 +1,8234 @@
+export const skins: FullSkinRecord = {
+  "Aatrox": [
+    {
+      "name": "Original",
+      "tilePath": "/aatrox/skins/base/images/aatrox_splash_tile_0.jpg"
+    },
+    {
+      "name": "Justicar",
+      "tilePath": "/aatrox/skins/skin01/images/aatrox_splash_tile_1.jpg"
+    },
+    {
+      "name": "Mecha",
+      "tilePath": "/aatrox/skins/skin02/images/aatrox_splash_tile_2.jpg"
+    },
+    {
+      "name": "Sea Hunter",
+      "tilePath": "/aatrox/skins/skin03/images/aatrox_splash_tile_3.jpg"
+    },
+    {
+      "name": "Blood Moon",
+      "tilePath": "/aatrox/skins/skin07/images/aatrox_splash_tile_7.jpg"
+    },
+    {
+      "name": "Prestige Blood Moon",
+      "tilePath": "/aatrox/skins/skin08/images/aatrox_splash_tile_8.jpg"
+    },
+    {
+      "name": "Victorious",
+      "tilePath": "/aatrox/skins/skin09/images/aatrox_splash_tile_9.jpg"
+    },
+    {
+      "name": "Odyssey",
+      "tilePath": "/aatrox/skins/skin11/images/aatrox_splash_tile_11.jpg"
+    },
+    {
+      "name": "Prestige Blood Moon (2022)",
+      "tilePath": "/aatrox/skins/skin08/images/aatrox_splash_tile_8.jpg"
+    },
+    {
+      "name": "Lunar Eclipse",
+      "tilePath": "/aatrox/skins/skin21/images/aatrox_splash_tile_21.jpg"
+    },
+    {
+      "name": "DRX",
+      "tilePath": "/aatrox/skins/skin30/images/aatrox_splash_tile_30.jpg"
+    },
+    {
+      "name": "Prestige DRX",
+      "tilePath": "/aatrox/skins/skin31/images/aatrox_splash_tile_31.jpg"
+    },
+    {
+      "name": "Primordian",
+      "tilePath": "/aatrox/skins/skin33/images/aatrox_splash_tile_33.skins_aatrox_skin33.jpg"
+    }
+  ],
+  "Ahri": [
+    {
+      "name": "Original",
+      "tilePath": "/ahri/skins/base/images/ahri_splash_tile_0.jpg"
+    },
+    {
+      "name": "Dynasty",
+      "tilePath": "/ahri/skins/skin01/images/ahri_splash_tile_1.jpg"
+    },
+    {
+      "name": "Midnight",
+      "tilePath": "/ahri/skins/skin02/images/ahri_splash_tile_2.jpg"
+    },
+    {
+      "name": "Foxfire",
+      "tilePath": "/ahri/skins/skin03/images/ahri_splash_tile_3.jpg"
+    },
+    {
+      "name": "Popstar",
+      "tilePath": "/ahri/skins/skin04/images/ahri_splash_tile_4.jpg"
+    },
+    {
+      "name": "Challenger",
+      "tilePath": "/ahri/skins/skin05/images/ahri_splash_tile_5.jpg"
+    },
+    {
+      "name": "Academy",
+      "tilePath": "/ahri/skins/skin06/images/ahri_splash_tile_6.jpg"
+    },
+    {
+      "name": "Arcade",
+      "tilePath": "/ahri/skins/skin07/images/ahri_splash_tile_7.jpg"
+    },
+    {
+      "name": "Star Guardian",
+      "tilePath": "/ahri/skins/skin14/images/ahri_splash_tile_14.jpg"
+    },
+    {
+      "name": "KDA",
+      "tilePath": "/ahri/skins/skin15/images/ahri_splash_tile_15.jpg"
+    },
+    {
+      "name": "Prestige KDA",
+      "tilePath": "/ahri/skins/skin16/images/ahri_splash_tile_16.jpg"
+    },
+    {
+      "name": "Elderwood",
+      "tilePath": "/ahri/skins/skin17/images/ahri_splash_tile_17.jpg"
+    },
+    {
+      "name": "Spirit Blossom",
+      "tilePath": "/ahri/skins/skin27/images/ahri_splash_tile_27.jpg"
+    },
+    {
+      "name": "KDA ALL OUT",
+      "tilePath": "/ahri/skins/skin28/images/ahri_splash_tile_28.jpg"
+    },
+    {
+      "name": "Coven",
+      "tilePath": "/ahri/skins/skin42/images/ahri_splash_tile_42.jpg"
+    },
+    {
+      "name": "Prestige KDA (2022)",
+      "tilePath": "/ahri/skins/skin65/images/ahri_splash_tile_65.jpg"
+    },
+    {
+      "name": "Arcana",
+      "tilePath": "/ahri/skins/skin66/images/ahri_splash_tile_66.jpg"
+    },
+    {
+      "name": "Snow Moon",
+      "tilePath": "/ahri/skins/skin76/images/ahri_splash_tile_76.jpg"
+    },
+    {
+      "name": "Risen Legend",
+      "tilePath": "/ahri/skins/skin85/images/ahri_splash_tile_85.skins_ahri_hol.jpg"
+    }
+  ],
+  "Akali": [
+    {
+      "name": "Original",
+      "tilePath": "/akali/skins/base/images/akali_splash_tile_0.jpg"
+    },
+    {
+      "name": "Stinger",
+      "tilePath": "/akali/skins/skin01/images/akali_splash_tile_1.jpg"
+    },
+    {
+      "name": "Infernal",
+      "tilePath": "/akali/skins/skin02/images/akali_splash_tile_2.jpg"
+    },
+    {
+      "name": "All-star",
+      "tilePath": "/akali/skins/skin03/images/akali_splash_tile_3.jpg"
+    },
+    {
+      "name": "Nurse",
+      "tilePath": "/akali/skins/skin04/images/akali_splash_tile_4.jpg"
+    },
+    {
+      "name": "Blood Moon",
+      "tilePath": "/akali/skins/skin05/images/akali_splash_tile_5.jpg"
+    },
+    {
+      "name": "Silverfang",
+      "tilePath": "/akali/skins/skin06/images/akali_splash_tile_6.jpg"
+    },
+    {
+      "name": "Headhunter",
+      "tilePath": "/akali/skins/skin07/images/akali_splash_tile_7.jpg"
+    },
+    {
+      "name": "Sashimi",
+      "tilePath": "/akali/skins/skin08/images/akali_splash_tile_8.jpg"
+    },
+    {
+      "name": "KDA",
+      "tilePath": "/akali/skins/skin09/images/akali_splash_tile_9.jpg"
+    },
+    {
+      "name": "Prestige KDA",
+      "tilePath": "/akali/skins/skin13/images/akali_splash_tile_13.jpg"
+    },
+    {
+      "name": "PROJECT",
+      "tilePath": "/akali/skins/skin14/images/akali_splash_tile_14.jpg"
+    },
+    {
+      "name": "True Damage",
+      "tilePath": "/akali/skins/skin15/images/akali_splash_tile_15.jpg"
+    },
+    {
+      "name": "KDA ALL OUT",
+      "tilePath": "/akali/skins/skin32/images/akali_splash_tile_32.jpg"
+    },
+    {
+      "name": "Crime City Nightmare",
+      "tilePath": "/akali/skins/skin50/images/akali_splash_tile_50.jpg"
+    },
+    {
+      "name": "Prestige KDA (2022)",
+      "tilePath": "/akali/skins/skin13/images/akali_splash_tile_13.jpg"
+    },
+    {
+      "name": "Star Guardian",
+      "tilePath": "/akali/skins/skin61/images/akali_splash_tile_61.jpg"
+    },
+    {
+      "name": "DRX",
+      "tilePath": "/akali/skins/skin68/images/akali_splash_tile_68.jpg"
+    },
+    {
+      "name": "Coven",
+      "tilePath": "/akali/skins/skin70/images/akali_splash_tile_70.jpg"
+    },
+    {
+      "name": "Prestige Coven",
+      "tilePath": "/akali/skins/skin71/images/akali_splash_tile_71.jpg"
+    },
+    {
+      "name": "Empyrean",
+      "tilePath": "/akali/skins/skin82/images/akali_splash_tile_82.jpg"
+    }
+  ],
+  "Akshan": [
+    {
+      "name": "Original",
+      "tilePath": "/akshan/skins/base/images/akshan_splash_tile_0.jpg"
+    },
+    {
+      "name": "Cyber Pop",
+      "tilePath": "/akshan/skins/skin01/images/akshan_splash_tile_1.jpg"
+    },
+    {
+      "name": "Crystal Rose",
+      "tilePath": "/akshan/skins/skin10/images/akshan_splash_tile_10.jpg"
+    },
+    {
+      "name": "Three Honors",
+      "tilePath": "/akshan/skins/skin20/images/akshan_splash_tile_20.jpg"
+    }
+  ],
+  "Alistar": [
+    {
+      "name": "Original",
+      "tilePath": "/alistar/skins/base/images/alistar_splash_tile_0.jpg"
+    },
+    {
+      "name": "Black",
+      "tilePath": "/alistar/skins/skin01/images/alistar_splash_tile_1.jpg"
+    },
+    {
+      "name": "Golden",
+      "tilePath": "/alistar/skins/skin02/images/alistar_splash_tile_2.jpg"
+    },
+    {
+      "name": "Longhorn",
+      "tilePath": "/alistar/skins/skin04/images/alistar_splash_tile_4.jpg"
+    },
+    {
+      "name": "Matador",
+      "tilePath": "/alistar/skins/skin03/images/alistar_splash_tile_3.jpg"
+    },
+    {
+      "name": "Unchained",
+      "tilePath": "/alistar/skins/skin05/images/alistar_splash_tile_5.jpg"
+    },
+    {
+      "name": "Infernal",
+      "tilePath": "/alistar/skins/skin06/images/alistar_splash_tile_6.jpg"
+    },
+    {
+      "name": "Sweeper",
+      "tilePath": "/alistar/skins/skin07/images/alistar_splash_tile_7.jpg"
+    },
+    {
+      "name": "Marauder",
+      "tilePath": "/alistar/skins/skin08/images/alistar_splash_tile_8.jpg"
+    },
+    {
+      "name": "SKT T1",
+      "tilePath": "/alistar/skins/skin09/images/alistar_splash_tile_9.jpg"
+    },
+    {
+      "name": "Moo Cow",
+      "tilePath": "/alistar/skins/skin10/images/alistar_splash_tile_10.jpg"
+    },
+    {
+      "name": "Hextech",
+      "tilePath": "/alistar/skins/skin19/images/alistar_splash_tile_19.jpg"
+    },
+    {
+      "name": "Conqueror",
+      "tilePath": "/alistar/skins/skin20/images/alistar_splash_tile_20.jpg"
+    },
+    {
+      "name": "Blackfrost",
+      "tilePath": "/alistar/skins/skin22/images/alistar_splash_tile_22.jpg"
+    },
+    {
+      "name": "Lunar Beast",
+      "tilePath": "/alistar/skins/skin29/images/alistar_splash_tile_29.jpg"
+    }
+  ],
+  "Ambessa": [
+    {
+      "name": "Original",
+      "tilePath": "/ambessa/skins/base/images/ambessa_splash_tile_0.domina.jpg"
+    },
+    {
+      "name": "Chosen of the Wolf",
+      "tilePath": "/ambessa/skins/skin01/images/ambessa_splash_tile_1.matcha_ambessa.jpg"
+    }
+  ],
+  "Amumu": [
+    {
+      "name": "Original",
+      "tilePath": "/amumu/skins/base/images/amumu_splash_tile_0.jpg"
+    },
+    {
+      "name": "Pharaoh",
+      "tilePath": "/amumu/skins/skin01/images/amumu_splash_tile_1.jpg"
+    },
+    {
+      "name": "Vancouver",
+      "tilePath": "/amumu/skins/skin02/images/amumu_splash_tile_2.jpg"
+    },
+    {
+      "name": "Emumu",
+      "tilePath": "/amumu/skins/skin03/images/amumu_splash_tile_3.jpg"
+    },
+    {
+      "name": "Re-Gifted",
+      "tilePath": "/amumu/skins/skin04/images/amumu_splash_tile_4.jpg"
+    },
+    {
+      "name": "Almost-Prom King",
+      "tilePath": "/amumu/skins/skin05/images/amumu_splash_tile_5.jpg"
+    },
+    {
+      "name": "Little Knight",
+      "tilePath": "/amumu/skins/skin06/images/amumu_splash_tile_6.jpg"
+    },
+    {
+      "name": "Sad Robot",
+      "tilePath": "/amumu/skins/skin07/images/amumu_splash_tile_7.jpg"
+    },
+    {
+      "name": "Surprise Party",
+      "tilePath": "/amumu/skins/skin08/images/amumu_splash_tile_8.jpg"
+    },
+    {
+      "name": "Infernal",
+      "tilePath": "/amumu/skins/skin17/images/amumu_splash_tile_17.jpg"
+    },
+    {
+      "name": "Hextech",
+      "tilePath": "/amumu/skins/skin23/images/amumu_splash_tile_23.jpg"
+    },
+    {
+      "name": "Pumpkin Prince",
+      "tilePath": "/amumu/skins/skin24/images/amumu_splash_tile_24.jpg"
+    },
+    {
+      "name": "Porcelain",
+      "tilePath": "/amumu/skins/skin34/images/amumu_splash_tile_34.jpg"
+    },
+    {
+      "name": "Heartache",
+      "tilePath": "/amumu/skins/skin44/images/amumu_splash_tile_44.jpg"
+    },
+    {
+      "name": "Dumpling Darlings",
+      "tilePath": "/amumu/skins/skin53/images/amumu_splash_tile_53.skins_amumu_skin53.jpg"
+    }
+  ],
+  "Anivia": [
+    {
+      "name": "Original",
+      "tilePath": "/anivia/skins/base/images/anivia_splash_tile_0.jpg"
+    },
+    {
+      "name": "Team Spirit",
+      "tilePath": "/anivia/skins/skin01/images/anivia_splash_tile_1.jpg"
+    },
+    {
+      "name": "Bird of Prey",
+      "tilePath": "/anivia/skins/skin02/images/anivia_splash_tile_2.jpg"
+    },
+    {
+      "name": "Noxus Hunter",
+      "tilePath": "/anivia/skins/skin03/images/anivia_splash_tile_3.jpg"
+    },
+    {
+      "name": "Hextech",
+      "tilePath": "/anivia/skins/skin04/images/anivia_splash_tile_4.jpg"
+    },
+    {
+      "name": "Blackfrost",
+      "tilePath": "/anivia/skins/skin05/images/anivia_splash_tile_5.jpg"
+    },
+    {
+      "name": "Prehistoric",
+      "tilePath": "/anivia/skins/skin06/images/anivia_splash_tile_6.jpg"
+    },
+    {
+      "name": "Festival Queen",
+      "tilePath": "/anivia/skins/skin07/images/anivia_splash_tile_7.jpg"
+    },
+    {
+      "name": "Papercraft",
+      "tilePath": "/anivia/skins/skin08/images/anivia_splash_tile_8.jpg"
+    },
+    {
+      "name": "Cosmic Flight",
+      "tilePath": "/anivia/skins/skin17/images/anivia_splash_tile_17.jpg"
+    },
+    {
+      "name": "Divine Phoenix",
+      "tilePath": "/anivia/skins/skin27/images/anivia_splash_tile_27.jpg"
+    },
+    {
+      "name": "Bewitching Batnivia",
+      "tilePath": "/anivia/skins/skin37/images/anivia_splash_tile_37.jpg"
+    },
+    {
+      "name": "Victorious",
+      "tilePath": "/anivia/skins/skin46/images/anivia_splash_tile_46.jpg"
+    }
+  ],
+  "Annie": [
+    {
+      "name": "Original",
+      "tilePath": "/annie/skins/base/images/annie_splash_tile_0.jpg"
+    },
+    {
+      "name": "Goth",
+      "tilePath": "/annie/skins/skin01/images/annie_splash_tile_1.jpg"
+    },
+    {
+      "name": "Red Riding",
+      "tilePath": "/annie/skins/skin02/images/annie_splash_tile_2.jpg"
+    },
+    {
+      "name": "Annie in Wonderland",
+      "tilePath": "/annie/skins/skin03/images/annie_splash_tile_3.jpg"
+    },
+    {
+      "name": "Prom Queen",
+      "tilePath": "/annie/skins/skin04/images/annie_splash_tile_4.jpg"
+    },
+    {
+      "name": "Reverse",
+      "tilePath": "/annie/skins/skin06/images/annie_splash_tile_6.jpg"
+    },
+    {
+      "name": "Frostfire",
+      "tilePath": "/annie/skins/skin05/images/annie_splash_tile_5.jpg"
+    },
+    {
+      "name": "FrankenTibbers",
+      "tilePath": "/annie/skins/skin07/images/annie_splash_tile_7.jpg"
+    },
+    {
+      "name": "Panda",
+      "tilePath": "/annie/skins/skin08/images/annie_splash_tile_8.jpg"
+    },
+    {
+      "name": "Sweetheart",
+      "tilePath": "/annie/skins/skin09/images/annie_splash_tile_9.jpg"
+    },
+    {
+      "name": "Hextech",
+      "tilePath": "/annie/skins/skin10/images/annie_splash_tile_10.jpg"
+    },
+    {
+      "name": "Super Galaxy",
+      "tilePath": "/annie/skins/skin11/images/annie_splash_tile_11.jpg"
+    },
+    {
+      "name": "Annie-Versary",
+      "tilePath": "/annie/skins/skin12/images/annie_splash_tile_12.jpg"
+    },
+    {
+      "name": "Lunar Beast",
+      "tilePath": "/annie/skins/skin13/images/annie_splash_tile_13.jpg"
+    },
+    {
+      "name": "Cafe Cuties",
+      "tilePath": "/annie/skins/skin22/images/annie_splash_tile_22.jpg"
+    },
+    {
+      "name": "Fright Night",
+      "tilePath": "/annie/skins/skin31/images/annie_splash_tile_31.jpg"
+    },
+    {
+      "name": "Winterblessed",
+      "tilePath": "/annie/skins/skin40/images/annie_splash_tile_40.jpg"
+    },
+    {
+      "name": "Battle Princess",
+      "tilePath": "/annie/skins/skin50/images/annie_splash_tile_50.skins_annie_skin50.jpg"
+    }
+  ],
+  "Aphelios": [
+    {
+      "name": "Original",
+      "tilePath": "/aphelios/skins/base/images/aphelios_splash_tile_0.jpg"
+    },
+    {
+      "name": "Nightbringer",
+      "tilePath": "/aphelios/skins/skin01/images/aphelios_splash_tile_1.jpg"
+    },
+    {
+      "name": "Lunar Beast",
+      "tilePath": "/aphelios/skins/skin09/images/aphelios_splash_tile_9.jpg"
+    },
+    {
+      "name": "EDG",
+      "tilePath": "/aphelios/skins/skin18/images/aphelios_splash_tile_18.jpg"
+    },
+    {
+      "name": "Spirit Blossom",
+      "tilePath": "/aphelios/skins/skin20/images/aphelios_splash_tile_20.jpg"
+    },
+    {
+      "name": "HEARTSTEEL",
+      "tilePath": "/aphelios/skins/skin30/images/aphelios_splash_tile_30.jpg"
+    }
+  ],
+  "Ashe": [
+    {
+      "name": "Original",
+      "tilePath": "/ashe/skins/base/images/ashe_splash_tile_0.jpg"
+    },
+    {
+      "name": "Freljord",
+      "tilePath": "/ashe/skins/skin01/images/ashe_splash_tile_1.jpg"
+    },
+    {
+      "name": "Sherwood Forest",
+      "tilePath": "/ashe/skins/skin02/images/ashe_splash_tile_2.jpg"
+    },
+    {
+      "name": "Woad",
+      "tilePath": "/ashe/skins/skin03/images/ashe_splash_tile_3.jpg"
+    },
+    {
+      "name": "Queen",
+      "tilePath": "/ashe/skins/skin04/images/ashe_splash_tile_4.jpg"
+    },
+    {
+      "name": "Amethyst",
+      "tilePath": "/ashe/skins/skin05/images/ashe_splash_tile_5.jpg"
+    },
+    {
+      "name": "Heartseeker",
+      "tilePath": "/ashe/skins/skin06/images/ashe_splash_tile_6.jpg"
+    },
+    {
+      "name": "Marauder",
+      "tilePath": "/ashe/skins/skin07/images/ashe_splash_tile_7.jpg"
+    },
+    {
+      "name": "PROJECT",
+      "tilePath": "/ashe/skins/skin08/images/ashe_splash_tile_8.jpg"
+    },
+    {
+      "name": "Worlds 2017",
+      "tilePath": "/ashe/skins/skin09/images/ashe_splash_tile_9.jpg"
+    },
+    {
+      "name": "Cosmic Queen",
+      "tilePath": "/ashe/skins/skin11/images/ashe_splash_tile_11.jpg"
+    },
+    {
+      "name": "High Noon",
+      "tilePath": "/ashe/skins/skin17/images/ashe_splash_tile_17.jpg"
+    },
+    {
+      "name": "Fae Dragon",
+      "tilePath": "/ashe/skins/skin23/images/ashe_splash_tile_23.jpg"
+    },
+    {
+      "name": "Coven",
+      "tilePath": "/ashe/skins/skin32/images/ashe_splash_tile_32.jpg"
+    },
+    {
+      "name": "Ocean Song",
+      "tilePath": "/ashe/skins/skin43/images/ashe_splash_tile_43.jpg"
+    },
+    {
+      "name": "Lunar Empress",
+      "tilePath": "/ashe/skins/skin52/images/ashe_splash_tile_52.jpg"
+    },
+    {
+      "name": "DRX",
+      "tilePath": "/ashe/skins/skin63/images/ashe_splash_tile_63.jpg"
+    },
+    {
+      "name": "Crystalis Motus",
+      "tilePath": "/ashe/skins/skin65/images/ashe_splash_tile_65.jpg"
+    },
+    {
+      "name": "Infernal",
+      "tilePath": "/ashe/skins/skin67/images/ashe_splash_tile_67.skins_ashe_skin67.jpg"
+    },
+    {
+      "name": "Spirit Blossom",
+      "tilePath": "/ashe/skins/skin76/images/ashe_splash_tile_76.skins_ashe_skin76.jpg"
+    }
+  ],
+  "AurelionSol": [
+    {
+      "name": "Original",
+      "tilePath": "/aurelionsol/skins/base/images/aurelionsol_splash_tile_0.jpg"
+    },
+    {
+      "name": "Ashen Lord",
+      "tilePath": "/aurelionsol/skins/skin01/images/aurelionsol_splash_tile_1.jpg"
+    },
+    {
+      "name": "Mecha",
+      "tilePath": "/aurelionsol/skins/skin02/images/aurelionsol_splash_tile_2.jpg"
+    },
+    {
+      "name": "Storm Dragon",
+      "tilePath": "/aurelionsol/skins/skin11/images/aurelionsol_splash_tile_11.jpg"
+    },
+    {
+      "name": "Inkshadow",
+      "tilePath": "/aurelionsol/skins/skin21/images/aurelionsol_splash_tile_21.jpg"
+    },
+    {
+      "name": "Porcelain Protector",
+      "tilePath": "/aurelionsol/skins/skin31/images/aurelionsol_splash_tile_31.jpg"
+    }
+  ],
+  "Aurora": [
+    {
+      "name": "Original",
+      "tilePath": "/aurora/skins/base/images/aurora_splash_tile_0.aurora.jpg"
+    },
+    {
+      "name": "Battle Bunny",
+      "tilePath": "/aurora/skins/skin01/images/aurora_splash_tile_1.aurora.jpg"
+    }
+  ],
+  "Azir": [
+    {
+      "name": "Original",
+      "tilePath": "/azir/skins/base/images/azir_splash_tile_0.jpg"
+    },
+    {
+      "name": "Galactic",
+      "tilePath": "/azir/skins/skin01/images/azir_splash_tile_1.jpg"
+    },
+    {
+      "name": "Gravelord",
+      "tilePath": "/azir/skins/skin02/images/azir_splash_tile_2.jpg"
+    },
+    {
+      "name": "SKT T1",
+      "tilePath": "/azir/skins/skin03/images/azir_splash_tile_3.jpg"
+    },
+    {
+      "name": "Warring Kingdoms",
+      "tilePath": "/azir/skins/skin04/images/azir_splash_tile_4.jpg"
+    },
+    {
+      "name": "Elderwood",
+      "tilePath": "/azir/skins/skin05/images/azir_splash_tile_5.jpg"
+    },
+    {
+      "name": "Worlds 2022",
+      "tilePath": "/azir/skins/skin14/images/azir_splash_tile_14.jpg"
+    },
+    {
+      "name": "Attorney",
+      "tilePath": "/azir/skins/skin19/images/azir_splash_tile_19.skins_azir_skin19.jpg"
+    }
+  ],
+  "Bard": [
+    {
+      "name": "Original",
+      "tilePath": "/bard/skins/base/images/bard_splash_tile_0.jpg"
+    },
+    {
+      "name": "Elderwood",
+      "tilePath": "/bard/skins/skin01/images/bard_splash_tile_1.jpg"
+    },
+    {
+      "name": "Snow Day",
+      "tilePath": "/bard/skins/skin05/images/bard_splash_tile_5.jpg"
+    },
+    {
+      "name": "Bard Bard",
+      "tilePath": "/bard/skins/skin06/images/bard_splash_tile_6.jpg"
+    },
+    {
+      "name": "Astronaut",
+      "tilePath": "/bard/skins/skin08/images/bard_splash_tile_8.jpg"
+    },
+    {
+      "name": "Cafe Cuties",
+      "tilePath": "/bard/skins/skin17/images/bard_splash_tile_17.jpg"
+    },
+    {
+      "name": "Shan Hai Scrolls",
+      "tilePath": "/bard/skins/skin26/images/bard_splash_tile_26.jpg"
+    },
+    {
+      "name": "T1",
+      "tilePath": "/bard/skins/skin35/images/bard_splash_tile_35.skins_bard_skin35.jpg"
+    },
+    {
+      "name": "Spirit Blossom",
+      "tilePath": "/bard/skins/skin37/images/bard_splash_tile_37.skins_bard_skin37.jpg"
+    }
+  ],
+  "Belveth": [
+    {
+      "name": "Original",
+      "tilePath": "/belveth/skins/base/images/belveth_splash_tile_0.jpg"
+    },
+    {
+      "name": "Battle Boss",
+      "tilePath": "/belveth/skins/skin01/images/belveth_splash_tile_1.jpg"
+    },
+    {
+      "name": "Cosmic Matriarch",
+      "tilePath": "/belveth/skins/skin10/images/belveth_splash_tile_10.jpg"
+    },
+    {
+      "name": "Primordian",
+      "tilePath": "/belveth/skins/skin19/images/belveth_splash_tile_19.skins_belveth_skin19.jpg"
+    }
+  ],
+  "Blitzcrank": [
+    {
+      "name": "Original",
+      "tilePath": "/blitzcrank/skins/base/images/blitzcrank_splash_tile_0.jpg"
+    },
+    {
+      "name": "Rusty",
+      "tilePath": "/blitzcrank/skins/skin01/images/blitzcrank_splash_tile_1.jpg"
+    },
+    {
+      "name": "Goalkeeper",
+      "tilePath": "/blitzcrank/skins/skin02/images/blitzcrank_splash_tile_2.jpg"
+    },
+    {
+      "name": "Boom Boom",
+      "tilePath": "/blitzcrank/skins/skin03/images/blitzcrank_splash_tile_3.jpg"
+    },
+    {
+      "name": "Piltover Customs",
+      "tilePath": "/blitzcrank/skins/skin04/images/blitzcrank_splash_tile_4.jpg"
+    },
+    {
+      "name": "Definitely Not",
+      "tilePath": "/blitzcrank/skins/skin05/images/blitzcrank_splash_tile_5.jpg"
+    },
+    {
+      "name": "iBlitzcrank",
+      "tilePath": "/blitzcrank/skins/skin06/images/blitzcrank_splash_tile_6.jpg"
+    },
+    {
+      "name": "Riot",
+      "tilePath": "/blitzcrank/skins/skin07/images/blitzcrank_splash_tile_7.jpg"
+    },
+    {
+      "name": "Battle Boss",
+      "tilePath": "/blitzcrank/skins/skin11/images/blitzcrank_splash_tile_11.jpg"
+    },
+    {
+      "name": "Lancer Paragon",
+      "tilePath": "/blitzcrank/skins/skin21/images/blitzcrank_splash_tile_21.jpg"
+    },
+    {
+      "name": "Lancer Rogue",
+      "tilePath": "/blitzcrank/skins/skin20/images/blitzcrank_splash_tile_20.jpg"
+    },
+    {
+      "name": "Witch's Brew",
+      "tilePath": "/blitzcrank/skins/skin22/images/blitzcrank_splash_tile_22.jpg"
+    },
+    {
+      "name": "Space Groove",
+      "tilePath": "/blitzcrank/skins/skin29/images/blitzcrank_splash_tile_29.jpg"
+    },
+    {
+      "name": "Victorious",
+      "tilePath": "/blitzcrank/skins/skin36/images/blitzcrank_splash_tile_36.jpg"
+    },
+    {
+      "name": "Zenith Games",
+      "tilePath": "/blitzcrank/skins/skin47/images/blitzcrank_splash_tile_47.jpg"
+    },
+    {
+      "name": "Beezcrank",
+      "tilePath": "/blitzcrank/skins/skin56/images/blitzcrank_splash_tile_56.jpg"
+    }
+  ],
+  "Brand": [
+    {
+      "name": "Original",
+      "tilePath": "/brand/skins/base/images/brand_splash_tile_0.jpg"
+    },
+    {
+      "name": "Apocalyptic",
+      "tilePath": "/brand/skins/skin01/images/brand_splash_tile_1.jpg"
+    },
+    {
+      "name": "Vandal",
+      "tilePath": "/brand/skins/skin02/images/brand_splash_tile_2.jpg"
+    },
+    {
+      "name": "Cryocore",
+      "tilePath": "/brand/skins/skin03/images/brand_splash_tile_3.jpg"
+    },
+    {
+      "name": "Zombie",
+      "tilePath": "/brand/skins/skin04/images/brand_splash_tile_4.jpg"
+    },
+    {
+      "name": "Spirit Fire",
+      "tilePath": "/brand/skins/skin05/images/brand_splash_tile_5.jpg"
+    },
+    {
+      "name": "Battle Boss",
+      "tilePath": "/brand/skins/skin06/images/brand_splash_tile_6.jpg"
+    },
+    {
+      "name": "Arclight",
+      "tilePath": "/brand/skins/skin07/images/brand_splash_tile_7.jpg"
+    },
+    {
+      "name": "Eternal Dragon",
+      "tilePath": "/brand/skins/skin08/images/brand_splash_tile_8.jpg"
+    },
+    {
+      "name": "Debonair",
+      "tilePath": "/brand/skins/skin21/images/brand_splash_tile_21.jpg"
+    },
+    {
+      "name": "Prestige Debonair",
+      "tilePath": "/brand/skins/skin22/images/brand_splash_tile_22.jpg"
+    },
+    {
+      "name": "Street Demons",
+      "tilePath": "/brand/skins/skin33/images/brand_splash_tile_33.jpg"
+    },
+    {
+      "name": "Empyrean",
+      "tilePath": "/brand/skins/skin42/images/brand_splash_tile_42.jpg"
+    }
+  ],
+  "Braum": [
+    {
+      "name": "Original",
+      "tilePath": "/braum/skins/base/images/braum_splash_tile_0.jpg"
+    },
+    {
+      "name": "Dragonslayer",
+      "tilePath": "/braum/skins/skin01/images/braum_splash_tile_1.jpg"
+    },
+    {
+      "name": "El Tigre",
+      "tilePath": "/braum/skins/skin02/images/braum_splash_tile_2.jpg"
+    },
+    {
+      "name": "Braum Lionheart",
+      "tilePath": "/braum/skins/skin03/images/braum_splash_tile_3.jpg"
+    },
+    {
+      "name": "Santa",
+      "tilePath": "/braum/skins/skin10/images/braum_splash_tile_10.jpg"
+    },
+    {
+      "name": "Crime City",
+      "tilePath": "/braum/skins/skin11/images/braum_splash_tile_11.jpg"
+    },
+    {
+      "name": "Sugar Rush",
+      "tilePath": "/braum/skins/skin24/images/braum_splash_tile_24.jpg"
+    },
+    {
+      "name": "Pool Party",
+      "tilePath": "/braum/skins/skin33/images/braum_splash_tile_33.jpg"
+    },
+    {
+      "name": "Grill Master",
+      "tilePath": "/braum/skins/skin42/images/braum_splash_tile_42.skins_braum_skin42.jpg"
+    }
+  ],
+  "Briar": [
+    {
+      "name": "Original",
+      "tilePath": "/briar/skins/base/images/briar_splash_tile_0.jpg"
+    },
+    {
+      "name": "Street Demons",
+      "tilePath": "/briar/skins/skin01/images/briar_splash_tile_1.jpg"
+    },
+    {
+      "name": "Primordian",
+      "tilePath": "/briar/skins/skin10/images/briar_splash_tile_10.skins_briar_skin10.jpg"
+    }
+  ],
+  "Caitlyn": [
+    {
+      "name": "Original",
+      "tilePath": "/caitlyn/skins/base/images/caitlyn_splash_tile_0.jpg"
+    },
+    {
+      "name": "Resistance",
+      "tilePath": "/caitlyn/skins/skin01/images/caitlyn_splash_tile_1.jpg"
+    },
+    {
+      "name": "Sheriff",
+      "tilePath": "/caitlyn/skins/skin02/images/caitlyn_splash_tile_2.jpg"
+    },
+    {
+      "name": "Safari",
+      "tilePath": "/caitlyn/skins/skin03/images/caitlyn_splash_tile_3.jpg"
+    },
+    {
+      "name": "Officer",
+      "tilePath": "/caitlyn/skins/skin05/images/caitlyn_splash_tile_5.jpg"
+    },
+    {
+      "name": "Arctic Warfare",
+      "tilePath": "/caitlyn/skins/skin04/images/caitlyn_splash_tile_4.jpg"
+    },
+    {
+      "name": "Headhunter",
+      "tilePath": "/caitlyn/skins/skin06/images/caitlyn_splash_tile_6.jpg"
+    },
+    {
+      "name": "Lunar Wraith",
+      "tilePath": "/caitlyn/skins/skin10/images/caitlyn_splash_tile_10.jpg"
+    },
+    {
+      "name": "Pulsefire",
+      "tilePath": "/caitlyn/skins/skin11/images/caitlyn_splash_tile_11.jpg"
+    },
+    {
+      "name": "Pool Party",
+      "tilePath": "/caitlyn/skins/skin13/images/caitlyn_splash_tile_13.jpg"
+    },
+    {
+      "name": "Arcade",
+      "tilePath": "/caitlyn/skins/skin19/images/caitlyn_splash_tile_19.jpg"
+    },
+    {
+      "name": "Prestige Arcade",
+      "tilePath": "/caitlyn/skins/skin20/images/caitlyn_splash_tile_20.jpg"
+    },
+    {
+      "name": "Battle Academia",
+      "tilePath": "/caitlyn/skins/skin22/images/caitlyn_splash_tile_22.jpg"
+    },
+    {
+      "name": "Arcane Enforcer",
+      "tilePath": "/caitlyn/skins/skin28/images/caitlyn_splash_tile_28.jpg"
+    },
+    {
+      "name": "Prestige Arcade (2022)",
+      "tilePath": "/caitlyn/skins/skin20/images/caitlyn_splash_tile_20.jpg"
+    },
+    {
+      "name": "Snow Moon",
+      "tilePath": "/caitlyn/skins/skin30/images/caitlyn_splash_tile_30.jpg"
+    },
+    {
+      "name": "Heartthrob",
+      "tilePath": "/caitlyn/skins/skin39/images/caitlyn_splash_tile_39.jpg"
+    },
+    {
+      "name": "DRX",
+      "tilePath": "/caitlyn/skins/skin48/images/caitlyn_splash_tile_48.jpg"
+    },
+    {
+      "name": "Arcane Commander",
+      "tilePath": "/caitlyn/skins/skin50/images/caitlyn_splash_tile_50.skins_caitlyn_skin50.jpg"
+    },
+    {
+      "name": "Prestige Arcane Commander",
+      "tilePath": "/caitlyn/skins/skin51/images/caitlyn_splash_tile_51.skins_caitlyn_skin51.jpg"
+    }
+  ],
+  "Camille": [
+    {
+      "name": "Original",
+      "tilePath": "/camille/skins/base/images/camille_splash_tile_0.jpg"
+    },
+    {
+      "name": "Program",
+      "tilePath": "/camille/skins/skin01/images/camille_splash_tile_1.jpg"
+    },
+    {
+      "name": "Coven",
+      "tilePath": "/camille/skins/skin02/images/camille_splash_tile_2.jpg"
+    },
+    {
+      "name": "iG",
+      "tilePath": "/camille/skins/skin10/images/camille_splash_tile_10.jpg"
+    },
+    {
+      "name": "Arcana",
+      "tilePath": "/camille/skins/skin11/images/camille_splash_tile_11.jpg"
+    },
+    {
+      "name": "Strike Commander",
+      "tilePath": "/camille/skins/skin21/images/camille_splash_tile_21.jpg"
+    },
+    {
+      "name": "Winterblessed",
+      "tilePath": "/camille/skins/skin31/images/camille_splash_tile_31.jpg"
+    },
+    {
+      "name": "Prestige Winterblessed",
+      "tilePath": "/camille/skins/skin32/images/camille_splash_tile_32.jpg"
+    }
+  ],
+  "Cassiopeia": [
+    {
+      "name": "Original",
+      "tilePath": "/cassiopeia/skins/base/images/cassiopeia_splash_tile_0.jpg"
+    },
+    {
+      "name": "Desperada",
+      "tilePath": "/cassiopeia/skins/skin01/images/cassiopeia_splash_tile_1.jpg"
+    },
+    {
+      "name": "Siren",
+      "tilePath": "/cassiopeia/skins/skin02/images/cassiopeia_splash_tile_2.jpg"
+    },
+    {
+      "name": "Mythic",
+      "tilePath": "/cassiopeia/skins/skin03/images/cassiopeia_splash_tile_3.jpg"
+    },
+    {
+      "name": "Jade Fang",
+      "tilePath": "/cassiopeia/skins/skin04/images/cassiopeia_splash_tile_4.jpg"
+    },
+    {
+      "name": "Eternum",
+      "tilePath": "/cassiopeia/skins/skin08/images/cassiopeia_splash_tile_8.jpg"
+    },
+    {
+      "name": "Spirit Blossom",
+      "tilePath": "/cassiopeia/skins/skin09/images/cassiopeia_splash_tile_9.jpg"
+    },
+    {
+      "name": "Coven",
+      "tilePath": "/cassiopeia/skins/skin18/images/cassiopeia_splash_tile_18.jpg"
+    },
+    {
+      "name": "Bewitching",
+      "tilePath": "/cassiopeia/skins/skin28/images/cassiopeia_splash_tile_28.jpg"
+    },
+    {
+      "name": "Prestige Mythmaker",
+      "tilePath": "/cassiopeia/skins/skin38/images/cassiopeia_splash_tile_38.skins_cassiopeia_skin38.jpg"
+    }
+  ],
+  "Chogath": [
+    {
+      "name": "Original",
+      "tilePath": "/chogath/skins/base/images/chogath_splash_tile_0.jpg"
+    },
+    {
+      "name": "Nightmare",
+      "tilePath": "/chogath/skins/skin01/images/chogath_splash_tile_1.jpg"
+    },
+    {
+      "name": "Gentleman",
+      "tilePath": "/chogath/skins/skin02/images/chogath_splash_tile_2.jpg"
+    },
+    {
+      "name": "Loch Ness",
+      "tilePath": "/chogath/skins/skin03/images/chogath_splash_tile_3.jpg"
+    },
+    {
+      "name": "Jurassic",
+      "tilePath": "/chogath/skins/skin04/images/chogath_splash_tile_4.jpg"
+    },
+    {
+      "name": "Battlecast Prime",
+      "tilePath": "/chogath/skins/skin05/images/chogath_splash_tile_5.jpg"
+    },
+    {
+      "name": "Prehistoric",
+      "tilePath": "/chogath/skins/skin06/images/chogath_splash_tile_6.jpg"
+    },
+    {
+      "name": "Dark Star",
+      "tilePath": "/chogath/skins/skin07/images/chogath_splash_tile_7.jpg"
+    },
+    {
+      "name": "Shan Hai Scrolls",
+      "tilePath": "/chogath/skins/skin14/images/chogath_splash_tile_14.jpg"
+    },
+    {
+      "name": "Broken Covenant",
+      "tilePath": "/chogath/skins/skin23/images/chogath_splash_tile_23.jpg"
+    },
+    {
+      "name": "Toy Terror",
+      "tilePath": "/chogath/skins/skin32/images/chogath_splash_tile_32.jpg"
+    }
+  ],
+  "Corki": [
+    {
+      "name": "Original",
+      "tilePath": "/corki/skins/base/images/corki_splash_tile_0.jpg"
+    },
+    {
+      "name": "UFO",
+      "tilePath": "/corki/skins/skin01/images/corki_splash_tile_1.jpg"
+    },
+    {
+      "name": "Ice Toboggan",
+      "tilePath": "/corki/skins/skin02/images/corki_splash_tile_2.jpg"
+    },
+    {
+      "name": "Red Baron",
+      "tilePath": "/corki/skins/skin03/images/corki_splash_tile_3.jpg"
+    },
+    {
+      "name": "Hot Rod",
+      "tilePath": "/corki/skins/skin04/images/corki_splash_tile_4.jpg"
+    },
+    {
+      "name": "Urfrider",
+      "tilePath": "/corki/skins/skin05/images/corki_splash_tile_5.jpg"
+    },
+    {
+      "name": "Dragonwing",
+      "tilePath": "/corki/skins/skin06/images/corki_splash_tile_6.jpg"
+    },
+    {
+      "name": "Fnatic",
+      "tilePath": "/corki/skins/skin07/images/corki_splash_tile_7.jpg"
+    },
+    {
+      "name": "Arcade",
+      "tilePath": "/corki/skins/skin08/images/corki_splash_tile_8.jpg"
+    },
+    {
+      "name": "Corgi",
+      "tilePath": "/corki/skins/skin18/images/corki_splash_tile_18.jpg"
+    },
+    {
+      "name": "Astronaut",
+      "tilePath": "/corki/skins/skin26/images/corki_splash_tile_26.jpg"
+    }
+  ],
+  "Darius": [
+    {
+      "name": "Original",
+      "tilePath": "/darius/skins/base/images/darius_splash_tile_0.jpg"
+    },
+    {
+      "name": "Lord",
+      "tilePath": "/darius/skins/skin01/images/darius_splash_tile_1.jpg"
+    },
+    {
+      "name": "Bioforge",
+      "tilePath": "/darius/skins/skin02/images/darius_splash_tile_2.jpg"
+    },
+    {
+      "name": "Woad King",
+      "tilePath": "/darius/skins/skin03/images/darius_splash_tile_3.jpg"
+    },
+    {
+      "name": "Dunkmaster",
+      "tilePath": "/darius/skins/skin04/images/darius_splash_tile_4.jpg"
+    },
+    {
+      "name": "Academy",
+      "tilePath": "/darius/skins/skin08/images/darius_splash_tile_8.jpg"
+    },
+    {
+      "name": "Dreadnova",
+      "tilePath": "/darius/skins/skin14/images/darius_splash_tile_14.jpg"
+    },
+    {
+      "name": "God-King",
+      "tilePath": "/darius/skins/skin15/images/darius_splash_tile_15.jpg"
+    },
+    {
+      "name": "High Noon",
+      "tilePath": "/darius/skins/skin16/images/darius_splash_tile_16.jpg"
+    },
+    {
+      "name": "Lunar Beast",
+      "tilePath": "/darius/skins/skin24/images/darius_splash_tile_24.jpg"
+    },
+    {
+      "name": "Crime City Nightmare",
+      "tilePath": "/darius/skins/skin33/images/darius_splash_tile_33.jpg"
+    },
+    {
+      "name": "Spirit Blossom",
+      "tilePath": "/darius/skins/skin43/images/darius_splash_tile_43.jpg"
+    },
+    {
+      "name": "Porcelain",
+      "tilePath": "/darius/skins/skin54/images/darius_splash_tile_54.jpg"
+    },
+    {
+      "name": "Divine God-King",
+      "tilePath": "/darius/skins/skin64/images/darius_splash_tile_64.skins_darius_skin64.jpg"
+    },
+    {
+      "name": "Prestige Triumphant General",
+      "tilePath": "/darius/skins/skin65/images/darius_splash_tile_65.skins_darius_skin65.jpg"
+    }
+  ],
+  "Diana": [
+    {
+      "name": "Original",
+      "tilePath": "/diana/skins/base/images/diana_splash_tile_0.jpg"
+    },
+    {
+      "name": "Dark Valkyrie",
+      "tilePath": "/diana/skins/skin01/images/diana_splash_tile_1.jpg"
+    },
+    {
+      "name": "Lunar Goddess",
+      "tilePath": "/diana/skins/skin02/images/diana_splash_tile_2.jpg"
+    },
+    {
+      "name": "Infernal",
+      "tilePath": "/diana/skins/skin03/images/diana_splash_tile_3.jpg"
+    },
+    {
+      "name": "Blood Moon",
+      "tilePath": "/diana/skins/skin11/images/diana_splash_tile_11.jpg"
+    },
+    {
+      "name": "Dark Waters",
+      "tilePath": "/diana/skins/skin12/images/diana_splash_tile_12.jpg"
+    },
+    {
+      "name": "Dragonslayer",
+      "tilePath": "/diana/skins/skin18/images/diana_splash_tile_18.jpg"
+    },
+    {
+      "name": "Battle Queen",
+      "tilePath": "/diana/skins/skin25/images/diana_splash_tile_25.jpg"
+    },
+    {
+      "name": "Prestige Battle Queen",
+      "tilePath": "/diana/skins/skin26/images/diana_splash_tile_26.jpg"
+    },
+    {
+      "name": "Sentinel",
+      "tilePath": "/diana/skins/skin27/images/diana_splash_tile_27.jpg"
+    },
+    {
+      "name": "Firecracker",
+      "tilePath": "/diana/skins/skin37/images/diana_splash_tile_37.jpg"
+    },
+    {
+      "name": "Winterblessed",
+      "tilePath": "/diana/skins/skin47/images/diana_splash_tile_47.jpg"
+    },
+    {
+      "name": "Heavenscale",
+      "tilePath": "/diana/skins/skin54/images/diana_splash_tile_54.jpg"
+    },
+    {
+      "name": "Dark Cosmic",
+      "tilePath": "/diana/skins/skin64/images/diana_splash_tile_64.skins_diana_skin64.jpg"
+    },
+    {
+      "name": "Prestige Dark Cosmic",
+      "tilePath": "/diana/skins/skin65/images/diana_splash_tile_65.skins_diana_skin65.jpg"
+    }
+  ],
+  "DrMundo": [
+    {
+      "name": "Original",
+      "tilePath": "/drmundo/skins/base/images/drmundo_splash_tile_0.jpg"
+    },
+    {
+      "name": "Toxic",
+      "tilePath": "/drmundo/skins/skin01/images/drmundo_splash_tile_1.jpg"
+    },
+    {
+      "name": "Mr. Mundoverse",
+      "tilePath": "/drmundo/skins/skin02/images/drmundo_splash_tile_2.jpg"
+    },
+    {
+      "name": "Corporate Mundo",
+      "tilePath": "/drmundo/skins/skin03/images/drmundo_splash_tile_3.jpg"
+    },
+    {
+      "name": "Mundo Mundo",
+      "tilePath": "/drmundo/skins/skin04/images/drmundo_splash_tile_4.jpg"
+    },
+    {
+      "name": "Executioner Mundo",
+      "tilePath": "/drmundo/skins/skin05/images/drmundo_splash_tile_5.jpg"
+    },
+    {
+      "name": "Rageborn Mundo",
+      "tilePath": "/drmundo/skins/skin06/images/drmundo_splash_tile_6.jpg"
+    },
+    {
+      "name": "TPA Mundo",
+      "tilePath": "/drmundo/skins/skin07/images/drmundo_splash_tile_7.jpg"
+    },
+    {
+      "name": "Pool Party Mundo",
+      "tilePath": "/drmundo/skins/skin08/images/drmundo_splash_tile_8.jpg"
+    },
+    {
+      "name": "El Macho Mundo",
+      "tilePath": "/drmundo/skins/skin09/images/drmundo_splash_tile_9.jpg"
+    },
+    {
+      "name": "Frozen Prince Mundo",
+      "tilePath": "/drmundo/skins/skin10/images/drmundo_splash_tile_10.jpg"
+    },
+    {
+      "name": "Street Demons",
+      "tilePath": "/drmundo/skins/skin21/images/drmundo_splash_tile_21.jpg"
+    }
+  ],
+  "Draven": [
+    {
+      "name": "Original",
+      "tilePath": "/draven/skins/base/images/draven_splash_tile_0.jpg"
+    },
+    {
+      "name": "Soul Reaver",
+      "tilePath": "/draven/skins/skin01/images/draven_splash_tile_1.jpg"
+    },
+    {
+      "name": "Gladiator",
+      "tilePath": "/draven/skins/skin02/images/draven_splash_tile_2.jpg"
+    },
+    {
+      "name": "Primetime",
+      "tilePath": "/draven/skins/skin03/images/draven_splash_tile_3.jpg"
+    },
+    {
+      "name": "Pool Party",
+      "tilePath": "/draven/skins/skin04/images/draven_splash_tile_4.jpg"
+    },
+    {
+      "name": "Beast Hunter",
+      "tilePath": "/draven/skins/skin05/images/draven_splash_tile_5.jpg"
+    },
+    {
+      "name": "Draven Draven",
+      "tilePath": "/draven/skins/skin06/images/draven_splash_tile_6.jpg"
+    },
+    {
+      "name": "Santa",
+      "tilePath": "/draven/skins/skin12/images/draven_splash_tile_12.jpg"
+    },
+    {
+      "name": "Mecha Kingdoms",
+      "tilePath": "/draven/skins/skin13/images/draven_splash_tile_13.jpg"
+    },
+    {
+      "name": "Ruined",
+      "tilePath": "/draven/skins/skin20/images/draven_splash_tile_20.jpg"
+    },
+    {
+      "name": "Debonair",
+      "tilePath": "/draven/skins/skin29/images/draven_splash_tile_29.jpg"
+    },
+    {
+      "name": "Fright Night",
+      "tilePath": "/draven/skins/skin39/images/draven_splash_tile_39.jpg"
+    },
+    {
+      "name": "La Ilusión",
+      "tilePath": "/draven/skins/skin48/images/draven_splash_tile_48.jpg"
+    },
+    {
+      "name": "Grand Reckoning",
+      "tilePath": "/draven/skins/skin58/images/draven_splash_tile_58.skins_draven_skin58.jpg"
+    }
+  ],
+  "Ekko": [
+    {
+      "name": "Original",
+      "tilePath": "/ekko/skins/base/images/ekko_splash_tile_0.jpg"
+    },
+    {
+      "name": "Sandstorm",
+      "tilePath": "/ekko/skins/skin01/images/ekko_splash_tile_1.jpg"
+    },
+    {
+      "name": "Academy",
+      "tilePath": "/ekko/skins/skin02/images/ekko_splash_tile_2.jpg"
+    },
+    {
+      "name": "PROJECT",
+      "tilePath": "/ekko/skins/skin03/images/ekko_splash_tile_3.jpg"
+    },
+    {
+      "name": "SKT T1",
+      "tilePath": "/ekko/skins/skin11/images/ekko_splash_tile_11.jpg"
+    },
+    {
+      "name": "Trick or Treat",
+      "tilePath": "/ekko/skins/skin12/images/ekko_splash_tile_12.jpg"
+    },
+    {
+      "name": "True Damage",
+      "tilePath": "/ekko/skins/skin19/images/ekko_splash_tile_19.jpg"
+    },
+    {
+      "name": "Pulsefire",
+      "tilePath": "/ekko/skins/skin28/images/ekko_splash_tile_28.jpg"
+    },
+    {
+      "name": "Arcane Firelight",
+      "tilePath": "/ekko/skins/skin36/images/ekko_splash_tile_36.jpg"
+    },
+    {
+      "name": "Star Guardian",
+      "tilePath": "/ekko/skins/skin45/images/ekko_splash_tile_45.jpg"
+    },
+    {
+      "name": "Prestige Star Guardian",
+      "tilePath": "/ekko/skins/skin46/images/ekko_splash_tile_46.jpg"
+    },
+    {
+      "name": "Breakout True Damage",
+      "tilePath": "/ekko/skins/skin56/images/ekko_splash_tile_56.jpg"
+    },
+    {
+      "name": "Arcane Last Stand",
+      "tilePath": "/ekko/skins/skin57/images/ekko_splash_tile_57.skins_ekko_skin57.jpg"
+    }
+  ],
+  "Elise": [
+    {
+      "name": "Original",
+      "tilePath": "/elise/skins/base/images/elise_splash_tile_0.jpg"
+    },
+    {
+      "name": "Death Blossom",
+      "tilePath": "/elise/skins/skin01/images/elise_splash_tile_1.jpg"
+    },
+    {
+      "name": "Victorious",
+      "tilePath": "/elise/skins/skin02/images/elise_splash_tile_2.jpg"
+    },
+    {
+      "name": "Blood Moon",
+      "tilePath": "/elise/skins/skin03/images/elise_splash_tile_3.jpg"
+    },
+    {
+      "name": "SKT T1",
+      "tilePath": "/elise/skins/skin04/images/elise_splash_tile_4.jpg"
+    },
+    {
+      "name": "Super Galaxy",
+      "tilePath": "/elise/skins/skin05/images/elise_splash_tile_5.jpg"
+    },
+    {
+      "name": "Bewitching",
+      "tilePath": "/elise/skins/skin06/images/elise_splash_tile_6.jpg"
+    },
+    {
+      "name": "Withered Rose",
+      "tilePath": "/elise/skins/skin15/images/elise_splash_tile_15.jpg"
+    },
+    {
+      "name": "Coven",
+      "tilePath": "/elise/skins/skin24/images/elise_splash_tile_24.jpg"
+    },
+    {
+      "name": "Masque of the Black Rose",
+      "tilePath": "/elise/skins/skin34/images/elise_splash_tile_34.skins_elise_care_skin34.jpg"
+    }
+  ],
+  "Evelynn": [
+    {
+      "name": "Original",
+      "tilePath": "/evelynn/skins/base/images/evelynn_splash_tile_0.jpg"
+    },
+    {
+      "name": "Shadow",
+      "tilePath": "/evelynn/skins/skin01/images/evelynn_splash_tile_1.jpg"
+    },
+    {
+      "name": "Masquerade",
+      "tilePath": "/evelynn/skins/skin02/images/evelynn_splash_tile_2.jpg"
+    },
+    {
+      "name": "Tango",
+      "tilePath": "/evelynn/skins/skin03/images/evelynn_splash_tile_3.jpg"
+    },
+    {
+      "name": "Safecracker",
+      "tilePath": "/evelynn/skins/skin04/images/evelynn_splash_tile_4.jpg"
+    },
+    {
+      "name": "Blood Moon",
+      "tilePath": "/evelynn/skins/skin05/images/evelynn_splash_tile_5.jpg"
+    },
+    {
+      "name": "KDA",
+      "tilePath": "/evelynn/skins/skin06/images/evelynn_splash_tile_6.jpg"
+    },
+    {
+      "name": "Prestige KDA",
+      "tilePath": "/evelynn/skins/skin07/images/evelynn_splash_tile_7.jpg"
+    },
+    {
+      "name": "Sugar Rush",
+      "tilePath": "/evelynn/skins/skin08/images/evelynn_splash_tile_8.jpg"
+    },
+    {
+      "name": "KDA ALL OUT",
+      "tilePath": "/evelynn/skins/skin15/images/evelynn_splash_tile_15.jpg"
+    },
+    {
+      "name": "Coven",
+      "tilePath": "/evelynn/skins/skin24/images/evelynn_splash_tile_24.jpg"
+    },
+    {
+      "name": "Prestige KDA (2022)",
+      "tilePath": "/evelynn/skins/skin07/images/evelynn_splash_tile_7.jpg"
+    },
+    {
+      "name": "Spirit Blossom",
+      "tilePath": "/evelynn/skins/skin32/images/evelynn_splash_tile_32.jpg"
+    },
+    {
+      "name": "Soul Fighter",
+      "tilePath": "/evelynn/skins/skin42/images/evelynn_splash_tile_42.jpg"
+    },
+    {
+      "name": "High Noon",
+      "tilePath": "/evelynn/skins/skin52/images/evelynn_splash_tile_52.jpg"
+    },
+    {
+      "name": "Prestige High Noon",
+      "tilePath": "/evelynn/skins/skin53/images/evelynn_splash_tile_53.jpg"
+    }
+  ],
+  "Ezreal": [
+    {
+      "name": "Original",
+      "tilePath": "/ezreal/skins/base/images/ezreal_splash_tile_0.jpg"
+    },
+    {
+      "name": "Nottingham",
+      "tilePath": "/ezreal/skins/skin01/images/ezreal_splash_tile_1.jpg"
+    },
+    {
+      "name": "Striker",
+      "tilePath": "/ezreal/skins/skin02/images/ezreal_splash_tile_2.jpg"
+    },
+    {
+      "name": "Frosted",
+      "tilePath": "/ezreal/skins/skin03/images/ezreal_splash_tile_3.jpg"
+    },
+    {
+      "name": "Explorer",
+      "tilePath": "/ezreal/skins/skin04/images/ezreal_splash_tile_4.jpg"
+    },
+    {
+      "name": "Pulsefire",
+      "tilePath": "/ezreal/skins/skin05/images/ezreal_splash_tile_5.jpg"
+    },
+    {
+      "name": "TPA",
+      "tilePath": "/ezreal/skins/skin06/images/ezreal_splash_tile_6.jpg"
+    },
+    {
+      "name": "Debonair",
+      "tilePath": "/ezreal/skins/skin07/images/ezreal_splash_tile_7.jpg"
+    },
+    {
+      "name": "Ace of Spades",
+      "tilePath": "/ezreal/skins/skin08/images/ezreal_splash_tile_8.jpg"
+    },
+    {
+      "name": "Arcade",
+      "tilePath": "/ezreal/skins/skin09/images/ezreal_splash_tile_9.jpg"
+    },
+    {
+      "name": "Star Guardian",
+      "tilePath": "/ezreal/skins/skin18/images/ezreal_splash_tile_18.jpg"
+    },
+    {
+      "name": "SSG",
+      "tilePath": "/ezreal/skins/skin19/images/ezreal_splash_tile_19.jpg"
+    },
+    {
+      "name": "Pajama Guardian",
+      "tilePath": "/ezreal/skins/skin20/images/ezreal_splash_tile_20.jpg"
+    },
+    {
+      "name": "Battle Academia",
+      "tilePath": "/ezreal/skins/skin21/images/ezreal_splash_tile_21.jpg"
+    },
+    {
+      "name": "PsyOps",
+      "tilePath": "/ezreal/skins/skin22/images/ezreal_splash_tile_22.jpg"
+    },
+    {
+      "name": "Prestige PsyOps",
+      "tilePath": "/ezreal/skins/skin23/images/ezreal_splash_tile_23.jpg"
+    },
+    {
+      "name": "Porcelain Protector",
+      "tilePath": "/ezreal/skins/skin25/images/ezreal_splash_tile_25.jpg"
+    },
+    {
+      "name": "Faerie Court",
+      "tilePath": "/ezreal/skins/skin33/images/ezreal_splash_tile_33.jpg"
+    },
+    {
+      "name": "HEARTSTEEL",
+      "tilePath": "/ezreal/skins/skin43/images/ezreal_splash_tile_43.jpg"
+    },
+    {
+      "name": "Heavenscale",
+      "tilePath": "/ezreal/skins/skin44/images/ezreal_splash_tile_44.jpg"
+    },
+    {
+      "name": "Prestige Heavenscale",
+      "tilePath": "/ezreal/skins/skin54/images/ezreal_splash_tile_54.jpg"
+    },
+    {
+      "name": "Masque of the Black Rose",
+      "tilePath": "/ezreal/skins/skin65/images/ezreal_splash_tile_65.skins_ezreal_skin65.jpg"
+    }
+  ],
+  "Fiddlesticks": [
+    {
+      "name": "Original",
+      "tilePath": "/fiddlesticks/skins/base/images/fiddlesticks_splash_tile_0.jpg"
+    },
+    {
+      "name": "Union Jack",
+      "tilePath": "/fiddlesticks/skins/skin02/images/fiddlesticks_splash_tile_2.jpg"
+    },
+    {
+      "name": "Spectral",
+      "tilePath": "/fiddlesticks/skins/skin01/images/fiddlesticks_splash_tile_1.jpg"
+    },
+    {
+      "name": "Fiddle Me Timbers",
+      "tilePath": "/fiddlesticks/skins/skin05/images/fiddlesticks_splash_tile_5.jpg"
+    },
+    {
+      "name": "Bandito",
+      "tilePath": "/fiddlesticks/skins/skin03/images/fiddlesticks_splash_tile_3.jpg"
+    },
+    {
+      "name": "Pumpkinhead",
+      "tilePath": "/fiddlesticks/skins/skin04/images/fiddlesticks_splash_tile_4.jpg"
+    },
+    {
+      "name": "Surprise Party",
+      "tilePath": "/fiddlesticks/skins/skin06/images/fiddlesticks_splash_tile_6.jpg"
+    },
+    {
+      "name": "Dark Candy",
+      "tilePath": "/fiddlesticks/skins/skin07/images/fiddlesticks_splash_tile_7.jpg"
+    },
+    {
+      "name": "Risen",
+      "tilePath": "/fiddlesticks/skins/skin08/images/fiddlesticks_splash_tile_8.jpg"
+    },
+    {
+      "name": "Praetorian",
+      "tilePath": "/fiddlesticks/skins/skin09/images/fiddlesticks_splash_tile_9.jpg"
+    },
+    {
+      "name": "Star Nemesis",
+      "tilePath": "/fiddlesticks/skins/skin27/images/fiddlesticks_splash_tile_27.jpg"
+    },
+    {
+      "name": "Blood Moon",
+      "tilePath": "/fiddlesticks/skins/skin37/images/fiddlesticks_splash_tile_37.jpg"
+    }
+  ],
+  "Fiora": [
+    {
+      "name": "Original",
+      "tilePath": "/fiora/skins/base/images/fiora_splash_tile_0.jpg"
+    },
+    {
+      "name": "Royal Guard",
+      "tilePath": "/fiora/skins/skin01/images/fiora_splash_tile_1.jpg"
+    },
+    {
+      "name": "Nightraven",
+      "tilePath": "/fiora/skins/skin02/images/fiora_splash_tile_2.jpg"
+    },
+    {
+      "name": "Headmistress",
+      "tilePath": "/fiora/skins/skin03/images/fiora_splash_tile_3.jpg"
+    },
+    {
+      "name": "PROJECT",
+      "tilePath": "/fiora/skins/skin04/images/fiora_splash_tile_4.jpg"
+    },
+    {
+      "name": "Pool Party",
+      "tilePath": "/fiora/skins/skin05/images/fiora_splash_tile_5.jpg"
+    },
+    {
+      "name": "Soaring Sword",
+      "tilePath": "/fiora/skins/skin22/images/fiora_splash_tile_22.jpg"
+    },
+    {
+      "name": "Heartpiercer",
+      "tilePath": "/fiora/skins/skin23/images/fiora_splash_tile_23.jpg"
+    },
+    {
+      "name": "iG",
+      "tilePath": "/fiora/skins/skin31/images/fiora_splash_tile_31.jpg"
+    },
+    {
+      "name": "Pulsefire",
+      "tilePath": "/fiora/skins/skin41/images/fiora_splash_tile_41.jpg"
+    },
+    {
+      "name": "Lunar Beast",
+      "tilePath": "/fiora/skins/skin50/images/fiora_splash_tile_50.jpg"
+    },
+    {
+      "name": "Prestige Lunar Beast",
+      "tilePath": "/fiora/skins/skin51/images/fiora_splash_tile_51.jpg"
+    },
+    {
+      "name": "Bewitching",
+      "tilePath": "/fiora/skins/skin60/images/fiora_splash_tile_60.jpg"
+    },
+    {
+      "name": "Faerie Court",
+      "tilePath": "/fiora/skins/skin69/images/fiora_splash_tile_69.jpg"
+    },
+    {
+      "name": "Dragonmancer",
+      "tilePath": "/fiora/skins/skin80/images/fiora_splash_tile_80.jpg"
+    },
+    {
+      "name": "Battle Queen",
+      "tilePath": "/fiora/skins/skin89/images/fiora_splash_tile_89.skins_fiora_skin89.jpg"
+    }
+  ],
+  "Fizz": [
+    {
+      "name": "Original",
+      "tilePath": "/fizz/skins/base/images/fizz_splash_tile_0.jpg"
+    },
+    {
+      "name": "Atlantean",
+      "tilePath": "/fizz/skins/skin01/images/fizz_splash_tile_1.jpg"
+    },
+    {
+      "name": "Tundra",
+      "tilePath": "/fizz/skins/skin02/images/fizz_splash_tile_2.jpg"
+    },
+    {
+      "name": "Fisherman",
+      "tilePath": "/fizz/skins/skin03/images/fizz_splash_tile_3.jpg"
+    },
+    {
+      "name": "Void",
+      "tilePath": "/fizz/skins/skin04/images/fizz_splash_tile_4.jpg"
+    },
+    {
+      "name": "Cottontail",
+      "tilePath": "/fizz/skins/skin08/images/fizz_splash_tile_8.jpg"
+    },
+    {
+      "name": "Super Galaxy",
+      "tilePath": "/fizz/skins/skin09/images/fizz_splash_tile_9.jpg"
+    },
+    {
+      "name": "Omega Squad",
+      "tilePath": "/fizz/skins/skin10/images/fizz_splash_tile_10.jpg"
+    },
+    {
+      "name": "Fuzz",
+      "tilePath": "/fizz/skins/skin14/images/fizz_splash_tile_14.jpg"
+    },
+    {
+      "name": "Prestige Fuzz",
+      "tilePath": "/fizz/skins/skin15/images/fizz_splash_tile_15.jpg"
+    },
+    {
+      "name": "Little Devil",
+      "tilePath": "/fizz/skins/skin16/images/fizz_splash_tile_16.jpg"
+    },
+    {
+      "name": "Prestige Fuzz (2022)",
+      "tilePath": "/fizz/skins/skin15/images/fizz_splash_tile_15.jpg"
+    },
+    {
+      "name": "Astronaut",
+      "tilePath": "/fizz/skins/skin26/images/fizz_splash_tile_26.jpg"
+    },
+    {
+      "name": "Rain Shepherd",
+      "tilePath": "/fizz/skins/skin35/images/fizz_splash_tile_35.skins_fizz_skin35.jpg"
+    }
+  ],
+  "Galio": [
+    {
+      "name": "Original",
+      "tilePath": "/galio/skins/base/images/galio_splash_tile_0.jpg"
+    },
+    {
+      "name": "Enchanted",
+      "tilePath": "/galio/skins/skin01/images/galio_splash_tile_1.jpg"
+    },
+    {
+      "name": "Hextech",
+      "tilePath": "/galio/skins/skin02/images/galio_splash_tile_2.jpg"
+    },
+    {
+      "name": "Commando",
+      "tilePath": "/galio/skins/skin03/images/galio_splash_tile_3.jpg"
+    },
+    {
+      "name": "Gatekeeper",
+      "tilePath": "/galio/skins/skin04/images/galio_splash_tile_4.jpg"
+    },
+    {
+      "name": "Debonair",
+      "tilePath": "/galio/skins/skin05/images/galio_splash_tile_5.jpg"
+    },
+    {
+      "name": "Birdio",
+      "tilePath": "/galio/skins/skin06/images/galio_splash_tile_6.jpg"
+    },
+    {
+      "name": "Infernal",
+      "tilePath": "/galio/skins/skin13/images/galio_splash_tile_13.jpg"
+    },
+    {
+      "name": "Dragon Guardian",
+      "tilePath": "/galio/skins/skin19/images/galio_splash_tile_19.jpg"
+    },
+    {
+      "name": "Mythmaker",
+      "tilePath": "/galio/skins/skin28/images/galio_splash_tile_28.jpg"
+    }
+  ],
+  "Gangplank": [
+    {
+      "name": "Original",
+      "tilePath": "/gangplank/skins/base/images/gangplank_splash_tile_0.jpg"
+    },
+    {
+      "name": "Spooky",
+      "tilePath": "/gangplank/skins/skin01/images/gangplank_splash_tile_1.jpg"
+    },
+    {
+      "name": "Minuteman",
+      "tilePath": "/gangplank/skins/skin02/images/gangplank_splash_tile_2.jpg"
+    },
+    {
+      "name": "Sailor",
+      "tilePath": "/gangplank/skins/skin03/images/gangplank_splash_tile_3.jpg"
+    },
+    {
+      "name": "Toy Soldier",
+      "tilePath": "/gangplank/skins/skin04/images/gangplank_splash_tile_4.jpg"
+    },
+    {
+      "name": "Special Forces",
+      "tilePath": "/gangplank/skins/skin05/images/gangplank_splash_tile_5.jpg"
+    },
+    {
+      "name": "Sultan",
+      "tilePath": "/gangplank/skins/skin06/images/gangplank_splash_tile_6.jpg"
+    },
+    {
+      "name": "Captain",
+      "tilePath": "/gangplank/skins/skin07/images/gangplank_splash_tile_7.jpg"
+    },
+    {
+      "name": "Dreadnova",
+      "tilePath": "/gangplank/skins/skin08/images/gangplank_splash_tile_8.jpg"
+    },
+    {
+      "name": "Pool Party",
+      "tilePath": "/gangplank/skins/skin14/images/gangplank_splash_tile_14.jpg"
+    },
+    {
+      "name": "FPX",
+      "tilePath": "/gangplank/skins/skin21/images/gangplank_splash_tile_21.jpg"
+    },
+    {
+      "name": "Gangplank the Betrayer",
+      "tilePath": "/gangplank/skins/skin23/images/gangplank_splash_tile_23.jpg"
+    },
+    {
+      "name": "PROJECT",
+      "tilePath": "/gangplank/skins/skin33/images/gangplank_splash_tile_33.jpg"
+    }
+  ],
+  "Garen": [
+    {
+      "name": "Original",
+      "tilePath": "/garen/skins/base/images/garen_splash_tile_0.jpg"
+    },
+    {
+      "name": "Sanguine",
+      "tilePath": "/garen/skins/skin01/images/garen_splash_tile_1.jpg"
+    },
+    {
+      "name": "Desert Trooper",
+      "tilePath": "/garen/skins/skin02/images/garen_splash_tile_2.jpg"
+    },
+    {
+      "name": "Commando",
+      "tilePath": "/garen/skins/skin03/images/garen_splash_tile_3.jpg"
+    },
+    {
+      "name": "Dreadknight",
+      "tilePath": "/garen/skins/skin04/images/garen_splash_tile_4.jpg"
+    },
+    {
+      "name": "Rugged",
+      "tilePath": "/garen/skins/skin05/images/garen_splash_tile_5.jpg"
+    },
+    {
+      "name": "Steel Legion",
+      "tilePath": "/garen/skins/skin06/images/garen_splash_tile_6.jpg"
+    },
+    {
+      "name": "Rogue Admiral",
+      "tilePath": "/garen/skins/skin10/images/garen_splash_tile_10.jpg"
+    },
+    {
+      "name": "Warring Kingdoms",
+      "tilePath": "/garen/skins/skin11/images/garen_splash_tile_11.jpg"
+    },
+    {
+      "name": "God-King",
+      "tilePath": "/garen/skins/skin13/images/garen_splash_tile_13.jpg"
+    },
+    {
+      "name": "Demacia Vice",
+      "tilePath": "/garen/skins/skin14/images/garen_splash_tile_14.jpg"
+    },
+    {
+      "name": "Mecha Kingdoms",
+      "tilePath": "/garen/skins/skin22/images/garen_splash_tile_22.jpg"
+    },
+    {
+      "name": "Prestige Mecha Kingdoms",
+      "tilePath": "/garen/skins/skin23/images/garen_splash_tile_23.jpg"
+    },
+    {
+      "name": "Battle Academia",
+      "tilePath": "/garen/skins/skin24/images/garen_splash_tile_24.jpg"
+    },
+    {
+      "name": "Mythmaker",
+      "tilePath": "/garen/skins/skin33/images/garen_splash_tile_33.jpg"
+    },
+    {
+      "name": "Fallen God-King",
+      "tilePath": "/garen/skins/skin44/images/garen_splash_tile_44.skins_garen_skin44.jpg"
+    },
+    {
+      "name": "Pengu",
+      "tilePath": "/garen/skins/skin43/images/garen_splash_tile_43.pengugaren.jpg"
+    }
+  ],
+  "Gnar": [
+    {
+      "name": "Original",
+      "tilePath": "/gnar/skins/base/images/gnar_splash_tile_0.jpg"
+    },
+    {
+      "name": "Dino",
+      "tilePath": "/gnar/skins/skin01/images/gnar_splash_tile_1.jpg"
+    },
+    {
+      "name": "Gentleman",
+      "tilePath": "/gnar/skins/skin02/images/gnar_splash_tile_2.jpg"
+    },
+    {
+      "name": "Snow Day",
+      "tilePath": "/gnar/skins/skin03/images/gnar_splash_tile_3.jpg"
+    },
+    {
+      "name": "El León",
+      "tilePath": "/gnar/skins/skin04/images/gnar_splash_tile_4.jpg"
+    },
+    {
+      "name": "Super Galaxy",
+      "tilePath": "/gnar/skins/skin13/images/gnar_splash_tile_13.jpg"
+    },
+    {
+      "name": "SSG",
+      "tilePath": "/gnar/skins/skin14/images/gnar_splash_tile_14.jpg"
+    },
+    {
+      "name": "Astronaut",
+      "tilePath": "/gnar/skins/skin15/images/gnar_splash_tile_15.jpg"
+    },
+    {
+      "name": "Elderwood",
+      "tilePath": "/gnar/skins/skin22/images/gnar_splash_tile_22.jpg"
+    },
+    {
+      "name": "La Ilusión",
+      "tilePath": "/gnar/skins/skin31/images/gnar_splash_tile_31.jpg"
+    }
+  ],
+  "Gragas": [
+    {
+      "name": "Original",
+      "tilePath": "/gragas/skins/base/images/gragas_splash_tile_0.jpg"
+    },
+    {
+      "name": "Scuba",
+      "tilePath": "/gragas/skins/skin01/images/gragas_splash_tile_1.jpg"
+    },
+    {
+      "name": "Hillbilly",
+      "tilePath": "/gragas/skins/skin02/images/gragas_splash_tile_2.jpg"
+    },
+    {
+      "name": "Santa",
+      "tilePath": "/gragas/skins/skin03/images/gragas_splash_tile_3.jpg"
+    },
+    {
+      "name": "Gragas, Esq.",
+      "tilePath": "/gragas/skins/skin04/images/gragas_splash_tile_4.jpg"
+    },
+    {
+      "name": "Vandal",
+      "tilePath": "/gragas/skins/skin05/images/gragas_splash_tile_5.jpg"
+    },
+    {
+      "name": "Oktoberfest",
+      "tilePath": "/gragas/skins/skin06/images/gragas_splash_tile_6.jpg"
+    },
+    {
+      "name": "Superfan",
+      "tilePath": "/gragas/skins/skin07/images/gragas_splash_tile_7.jpg"
+    },
+    {
+      "name": "Fnatic",
+      "tilePath": "/gragas/skins/skin08/images/gragas_splash_tile_8.jpg"
+    },
+    {
+      "name": "Gragas Caskbreaker",
+      "tilePath": "/gragas/skins/skin09/images/gragas_splash_tile_9.jpg"
+    },
+    {
+      "name": "Arctic Ops",
+      "tilePath": "/gragas/skins/skin10/images/gragas_splash_tile_10.jpg"
+    },
+    {
+      "name": "Warden",
+      "tilePath": "/gragas/skins/skin11/images/gragas_splash_tile_11.jpg"
+    },
+    {
+      "name": "Space Groove",
+      "tilePath": "/gragas/skins/skin20/images/gragas_splash_tile_20.jpg"
+    },
+    {
+      "name": "High Noon",
+      "tilePath": "/gragas/skins/skin29/images/gragas_splash_tile_29.jpg"
+    },
+    {
+      "name": "Music Fan",
+      "tilePath": "/gragas/skins/skin39/images/gragas_splash_tile_39.skins_gragas_skin39.jpg"
+    }
+  ],
+  "Graves": [
+    {
+      "name": "Original",
+      "tilePath": "/graves/skins/base/images/graves_splash_tile_0.jpg"
+    },
+    {
+      "name": "Hired Gun",
+      "tilePath": "/graves/skins/skin01/images/graves_splash_tile_1.jpg"
+    },
+    {
+      "name": "Jailbreak",
+      "tilePath": "/graves/skins/skin02/images/graves_splash_tile_2.jpg"
+    },
+    {
+      "name": "Crime City",
+      "tilePath": "/graves/skins/skin03/images/graves_splash_tile_3.jpg"
+    },
+    {
+      "name": "Riot",
+      "tilePath": "/graves/skins/skin04/images/graves_splash_tile_4.jpg"
+    },
+    {
+      "name": "Pool Party",
+      "tilePath": "/graves/skins/skin05/images/graves_splash_tile_5.jpg"
+    },
+    {
+      "name": "Cutthroat",
+      "tilePath": "/graves/skins/skin06/images/graves_splash_tile_6.jpg"
+    },
+    {
+      "name": "Snow Day",
+      "tilePath": "/graves/skins/skin07/images/graves_splash_tile_7.jpg"
+    },
+    {
+      "name": "Victorious",
+      "tilePath": "/graves/skins/skin14/images/graves_splash_tile_14.jpg"
+    },
+    {
+      "name": "Praetorian",
+      "tilePath": "/graves/skins/skin18/images/graves_splash_tile_18.jpg"
+    },
+    {
+      "name": "Battle Professor",
+      "tilePath": "/graves/skins/skin25/images/graves_splash_tile_25.jpg"
+    },
+    {
+      "name": "Sentinel",
+      "tilePath": "/graves/skins/skin35/images/graves_splash_tile_35.jpg"
+    },
+    {
+      "name": "EDG",
+      "tilePath": "/graves/skins/skin42/images/graves_splash_tile_42.jpg"
+    },
+    {
+      "name": "Porcelain",
+      "tilePath": "/graves/skins/skin45/images/graves_splash_tile_45.jpg"
+    }
+  ],
+  "Gwen": [
+    {
+      "name": "Original",
+      "tilePath": "/gwen/skins/base/images/gwen_splash_tile_0.jpg"
+    },
+    {
+      "name": "Space Groove",
+      "tilePath": "/gwen/skins/skin01/images/gwen_splash_tile_1.jpg"
+    },
+    {
+      "name": "Cafe Cuties",
+      "tilePath": "/gwen/skins/skin11/images/gwen_splash_tile_11.jpg"
+    },
+    {
+      "name": "Soul Fighter",
+      "tilePath": "/gwen/skins/skin20/images/gwen_splash_tile_20.jpg"
+    },
+    {
+      "name": "Battle Queen",
+      "tilePath": "/gwen/skins/skin30/images/gwen_splash_tile_30.skins_gwen_skin30.jpg"
+    }
+  ],
+  "Hecarim": [
+    {
+      "name": "Original",
+      "tilePath": "/hecarim/skins/base/images/hecarim_splash_tile_0.jpg"
+    },
+    {
+      "name": "Blood Knight",
+      "tilePath": "/hecarim/skins/skin01/images/hecarim_splash_tile_1.jpg"
+    },
+    {
+      "name": "Reaper",
+      "tilePath": "/hecarim/skins/skin02/images/hecarim_splash_tile_2.jpg"
+    },
+    {
+      "name": "Headless",
+      "tilePath": "/hecarim/skins/skin03/images/hecarim_splash_tile_3.jpg"
+    },
+    {
+      "name": "Arcade",
+      "tilePath": "/hecarim/skins/skin04/images/hecarim_splash_tile_4.jpg"
+    },
+    {
+      "name": "Elderwood",
+      "tilePath": "/hecarim/skins/skin05/images/hecarim_splash_tile_5.jpg"
+    },
+    {
+      "name": "Worldbreaker",
+      "tilePath": "/hecarim/skins/skin06/images/hecarim_splash_tile_6.jpg"
+    },
+    {
+      "name": "Lancer Zero",
+      "tilePath": "/hecarim/skins/skin07/images/hecarim_splash_tile_7.jpg"
+    },
+    {
+      "name": "High Noon",
+      "tilePath": "/hecarim/skins/skin08/images/hecarim_splash_tile_8.jpg"
+    },
+    {
+      "name": "Cosmic Charger",
+      "tilePath": "/hecarim/skins/skin14/images/hecarim_splash_tile_14.jpg"
+    },
+    {
+      "name": "Arcana",
+      "tilePath": "/hecarim/skins/skin22/images/hecarim_splash_tile_22.jpg"
+    },
+    {
+      "name": "Winterblessed",
+      "tilePath": "/hecarim/skins/skin31/images/hecarim_splash_tile_31.jpg"
+    }
+  ],
+  "Heimerdinger": [
+    {
+      "name": "Original",
+      "tilePath": "/heimerdinger/skins/base/images/heimerdinger_splash_tile_0.jpg"
+    },
+    {
+      "name": "Blast Zone",
+      "tilePath": "/heimerdinger/skins/skin02/images/heimerdinger_splash_tile_2.jpg"
+    },
+    {
+      "name": "Alien Invader",
+      "tilePath": "/heimerdinger/skins/skin01/images/heimerdinger_splash_tile_1.jpg"
+    },
+    {
+      "name": "Piltover Customs",
+      "tilePath": "/heimerdinger/skins/skin03/images/heimerdinger_splash_tile_3.jpg"
+    },
+    {
+      "name": "Snowmerdinger",
+      "tilePath": "/heimerdinger/skins/skin04/images/heimerdinger_splash_tile_4.jpg"
+    },
+    {
+      "name": "Hazmat",
+      "tilePath": "/heimerdinger/skins/skin05/images/heimerdinger_splash_tile_5.jpg"
+    },
+    {
+      "name": "Dragon Trainer",
+      "tilePath": "/heimerdinger/skins/skin06/images/heimerdinger_splash_tile_6.jpg"
+    },
+    {
+      "name": "Pool Party",
+      "tilePath": "/heimerdinger/skins/skin15/images/heimerdinger_splash_tile_15.jpg"
+    },
+    {
+      "name": "Heimerstinger",
+      "tilePath": "/heimerdinger/skins/skin24/images/heimerdinger_splash_tile_24.jpg"
+    },
+    {
+      "name": "Arcane Professor",
+      "tilePath": "/heimerdinger/skins/skin33/images/heimerdinger_splash_tile_33.skins_heimerdinger_skin33.jpg"
+    }
+  ],
+  "Hwei": [
+    {
+      "name": "Original",
+      "tilePath": "/hwei/skins/skin0/images/hwei_splash_tile_0.jpg"
+    },
+    {
+      "name": "Winterblessed",
+      "tilePath": "/hwei/skins/skin1/images/hwei_splash_tile_1.jpg"
+    }
+  ],
+  "Illaoi": [
+    {
+      "name": "Original",
+      "tilePath": "/illaoi/skins/base/images/illaoi_splash_tile_0.jpg"
+    },
+    {
+      "name": "Void Bringer",
+      "tilePath": "/illaoi/skins/skin01/images/illaoi_splash_tile_1.jpg"
+    },
+    {
+      "name": "Resistance",
+      "tilePath": "/illaoi/skins/skin02/images/illaoi_splash_tile_2.jpg"
+    },
+    {
+      "name": "Cosmic Invoker",
+      "tilePath": "/illaoi/skins/skin10/images/illaoi_splash_tile_10.jpg"
+    },
+    {
+      "name": "Snow Moon",
+      "tilePath": "/illaoi/skins/skin18/images/illaoi_splash_tile_18.jpg"
+    },
+    {
+      "name": "Battle Bear",
+      "tilePath": "/illaoi/skins/skin27/images/illaoi_splash_tile_27.skins_illaoi_skin27.jpg"
+    }
+  ],
+  "Irelia": [
+    {
+      "name": "Original",
+      "tilePath": "/irelia/skins/base/images/irelia_splash_tile_0.jpg"
+    },
+    {
+      "name": "Aviator",
+      "tilePath": "/irelia/skins/skin02/images/irelia_splash_tile_2.jpg"
+    },
+    {
+      "name": "Nightblade",
+      "tilePath": "/irelia/skins/skin01/images/irelia_splash_tile_1.jpg"
+    },
+    {
+      "name": "Infiltrator",
+      "tilePath": "/irelia/skins/skin03/images/irelia_splash_tile_3.jpg"
+    },
+    {
+      "name": "Frostblade",
+      "tilePath": "/irelia/skins/skin04/images/irelia_splash_tile_4.jpg"
+    },
+    {
+      "name": "Order of the Lotus",
+      "tilePath": "/irelia/skins/skin05/images/irelia_splash_tile_5.jpg"
+    },
+    {
+      "name": "Divine Sword",
+      "tilePath": "/irelia/skins/skin06/images/irelia_splash_tile_6.jpg"
+    },
+    {
+      "name": "iG",
+      "tilePath": "/irelia/skins/skin15/images/irelia_splash_tile_15.jpg"
+    },
+    {
+      "name": "PROJECT",
+      "tilePath": "/irelia/skins/skin16/images/irelia_splash_tile_16.jpg"
+    },
+    {
+      "name": "Prestige PROJECT",
+      "tilePath": "/irelia/skins/skin17/images/irelia_splash_tile_17.jpg"
+    },
+    {
+      "name": "High Noon",
+      "tilePath": "/irelia/skins/skin18/images/irelia_splash_tile_18.jpg"
+    },
+    {
+      "name": "Sentinel",
+      "tilePath": "/irelia/skins/skin26/images/irelia_splash_tile_26.jpg"
+    },
+    {
+      "name": "Prestige PROJECT (2022)",
+      "tilePath": "/irelia/skins/skin17/images/irelia_splash_tile_17.jpg"
+    },
+    {
+      "name": "Mythmaker",
+      "tilePath": "/irelia/skins/skin37/images/irelia_splash_tile_37.jpg"
+    },
+    {
+      "name": "Porcelain",
+      "tilePath": "/irelia/skins/skin45/images/irelia_splash_tile_45.jpg"
+    },
+    {
+      "name": "Spirit Blossom",
+      "tilePath": "/irelia/skins/skin55/images/irelia_splash_tile_55.skins_irelia_skin55.jpg"
+    }
+  ],
+  "Ivern": [
+    {
+      "name": "Original",
+      "tilePath": "/ivern/skins/base/images/ivern_splash_tile_0.jpg"
+    },
+    {
+      "name": "Candy King",
+      "tilePath": "/ivern/skins/skin01/images/ivern_splash_tile_1.jpg"
+    },
+    {
+      "name": "Dunkmaster",
+      "tilePath": "/ivern/skins/skin02/images/ivern_splash_tile_2.jpg"
+    },
+    {
+      "name": "Old God",
+      "tilePath": "/ivern/skins/skin11/images/ivern_splash_tile_11.jpg"
+    },
+    {
+      "name": "Astronaut",
+      "tilePath": "/ivern/skins/skin20/images/ivern_splash_tile_20.jpg"
+    },
+    {
+      "name": "Spirit Blossom",
+      "tilePath": "/ivern/skins/skin30/images/ivern_splash_tile_30.skins_ivern_skin30.jpg"
+    }
+  ],
+  "Janna": [
+    {
+      "name": "Original",
+      "tilePath": "/janna/skins/base/images/janna_splash_tile_0.jpg"
+    },
+    {
+      "name": "Tempest",
+      "tilePath": "/janna/skins/skin01/images/janna_splash_tile_1.jpg"
+    },
+    {
+      "name": "Hextech",
+      "tilePath": "/janna/skins/skin02/images/janna_splash_tile_2.jpg"
+    },
+    {
+      "name": "Frost Queen",
+      "tilePath": "/janna/skins/skin03/images/janna_splash_tile_3.jpg"
+    },
+    {
+      "name": "Victorious",
+      "tilePath": "/janna/skins/skin04/images/janna_splash_tile_4.jpg"
+    },
+    {
+      "name": "Forecast",
+      "tilePath": "/janna/skins/skin05/images/janna_splash_tile_5.jpg"
+    },
+    {
+      "name": "Fnatic",
+      "tilePath": "/janna/skins/skin06/images/janna_splash_tile_6.jpg"
+    },
+    {
+      "name": "Star Guardian",
+      "tilePath": "/janna/skins/skin07/images/janna_splash_tile_7.jpg"
+    },
+    {
+      "name": "Sacred Sword",
+      "tilePath": "/janna/skins/skin08/images/janna_splash_tile_8.jpg"
+    },
+    {
+      "name": "Bewitching",
+      "tilePath": "/janna/skins/skin13/images/janna_splash_tile_13.jpg"
+    },
+    {
+      "name": "Guardian of the Sands",
+      "tilePath": "/janna/skins/skin20/images/janna_splash_tile_20.jpg"
+    },
+    {
+      "name": "Battle Queen",
+      "tilePath": "/janna/skins/skin27/images/janna_splash_tile_27.jpg"
+    },
+    {
+      "name": "Crystal Rose",
+      "tilePath": "/janna/skins/skin36/images/janna_splash_tile_36.jpg"
+    },
+    {
+      "name": "Cyber Halo",
+      "tilePath": "/janna/skins/skin45/images/janna_splash_tile_45.jpg"
+    },
+    {
+      "name": "Prestige Cyber Halo",
+      "tilePath": "/janna/skins/skin46/images/janna_splash_tile_46.jpg"
+    },
+    {
+      "name": "Heavenscale",
+      "tilePath": "/janna/skins/skin56/images/janna_splash_tile_56.jpg"
+    }
+  ],
+  "JarvanIV": [
+    {
+      "name": "Original",
+      "tilePath": "/jarvaniv/skins/base/images/jarvaniv_splash_tile_0.jpg"
+    },
+    {
+      "name": "Commando",
+      "tilePath": "/jarvaniv/skins/skin01/images/jarvaniv_splash_tile_1.jpg"
+    },
+    {
+      "name": "Dragonslayer",
+      "tilePath": "/jarvaniv/skins/skin02/images/jarvaniv_splash_tile_2.jpg"
+    },
+    {
+      "name": "Darkforge",
+      "tilePath": "/jarvaniv/skins/skin03/images/jarvaniv_splash_tile_3.jpg"
+    },
+    {
+      "name": "Victorious",
+      "tilePath": "/jarvaniv/skins/skin04/images/jarvaniv_splash_tile_4.jpg"
+    },
+    {
+      "name": "Warring Kingdoms",
+      "tilePath": "/jarvaniv/skins/skin05/images/jarvaniv_splash_tile_5.jpg"
+    },
+    {
+      "name": "Fnatic",
+      "tilePath": "/jarvaniv/skins/skin06/images/jarvaniv_splash_tile_6.jpg"
+    },
+    {
+      "name": "Dark Star",
+      "tilePath": "/jarvaniv/skins/skin07/images/jarvaniv_splash_tile_7.jpg"
+    },
+    {
+      "name": "SSG",
+      "tilePath": "/jarvaniv/skins/skin08/images/jarvaniv_splash_tile_8.jpg"
+    },
+    {
+      "name": "Hextech",
+      "tilePath": "/jarvaniv/skins/skin09/images/jarvaniv_splash_tile_9.jpg"
+    },
+    {
+      "name": "Pool Party",
+      "tilePath": "/jarvaniv/skins/skin11/images/jarvaniv_splash_tile_11.jpg"
+    },
+    {
+      "name": "Lunar Beast",
+      "tilePath": "/jarvaniv/skins/skin21/images/jarvaniv_splash_tile_21.jpg"
+    },
+    {
+      "name": "Worlds 2021",
+      "tilePath": "/jarvaniv/skins/skin30/images/jarvaniv_splash_tile_30.jpg"
+    },
+    {
+      "name": "Nightbringer",
+      "tilePath": "/jarvaniv/skins/skin35/images/jarvaniv_splash_tile_35.jpg"
+    },
+    {
+      "name": "Mythmaker",
+      "tilePath": "/jarvaniv/skins/skin44/images/jarvaniv_splash_tile_44.skins_jarvaniv_skin44.jpg"
+    }
+  ],
+  "Jax": [
+    {
+      "name": "Original",
+      "tilePath": "/jax/skins/base/images/jax_splash_tile_0.jpg"
+    },
+    {
+      "name": "The Mighty",
+      "tilePath": "/jax/skins/skin01/images/jax_splash_tile_1.jpg"
+    },
+    {
+      "name": "Vandal",
+      "tilePath": "/jax/skins/skin02/images/jax_splash_tile_2.jpg"
+    },
+    {
+      "name": "PAX",
+      "tilePath": "/jax/skins/skin04/images/jax_splash_tile_4.jpg"
+    },
+    {
+      "name": "Angler",
+      "tilePath": "/jax/skins/skin03/images/jax_splash_tile_3.jpg"
+    },
+    {
+      "name": "Jaximus",
+      "tilePath": "/jax/skins/skin05/images/jax_splash_tile_5.jpg"
+    },
+    {
+      "name": "Temple",
+      "tilePath": "/jax/skins/skin06/images/jax_splash_tile_6.jpg"
+    },
+    {
+      "name": "Nemesis",
+      "tilePath": "/jax/skins/skin07/images/jax_splash_tile_7.jpg"
+    },
+    {
+      "name": "SKT T1",
+      "tilePath": "/jax/skins/skin08/images/jax_splash_tile_8.jpg"
+    },
+    {
+      "name": "Warden",
+      "tilePath": "/jax/skins/skin12/images/jax_splash_tile_12.jpg"
+    },
+    {
+      "name": "God Staff",
+      "tilePath": "/jax/skins/skin13/images/jax_splash_tile_13.jpg"
+    },
+    {
+      "name": "Mecha Kingdoms",
+      "tilePath": "/jax/skins/skin14/images/jax_splash_tile_14.jpg"
+    },
+    {
+      "name": "Conqueror",
+      "tilePath": "/jax/skins/skin20/images/jax_splash_tile_20.jpg"
+    },
+    {
+      "name": "Prestige Conqueror",
+      "tilePath": "/jax/skins/skin21/images/jax_splash_tile_21.jpg"
+    },
+    {
+      "name": "Empyrean",
+      "tilePath": "/jax/skins/skin22/images/jax_splash_tile_22.jpg"
+    },
+    {
+      "name": "Neo PAX",
+      "tilePath": "/jax/skins/skin32/images/jax_splash_tile_32.jpg"
+    },
+    {
+      "name": "PROJECT",
+      "tilePath": "/jax/skins/skin33/images/jax_splash_tile_33.jpg"
+    }
+  ],
+  "Jayce": [
+    {
+      "name": "Original",
+      "tilePath": "/jayce/skins/base/images/jayce_splash_tile_0.jpg"
+    },
+    {
+      "name": "Full Metal",
+      "tilePath": "/jayce/skins/skin01/images/jayce_splash_tile_1.jpg"
+    },
+    {
+      "name": "Debonair",
+      "tilePath": "/jayce/skins/skin02/images/jayce_splash_tile_2.jpg"
+    },
+    {
+      "name": "Forsaken",
+      "tilePath": "/jayce/skins/skin03/images/jayce_splash_tile_3.jpg"
+    },
+    {
+      "name": "Jayce Brighthammer",
+      "tilePath": "/jayce/skins/skin04/images/jayce_splash_tile_4.jpg"
+    },
+    {
+      "name": "Battle Academia",
+      "tilePath": "/jayce/skins/skin05/images/jayce_splash_tile_5.jpg"
+    },
+    {
+      "name": "Resistance",
+      "tilePath": "/jayce/skins/skin15/images/jayce_splash_tile_15.jpg"
+    },
+    {
+      "name": "Arcane Inventor",
+      "tilePath": "/jayce/skins/skin24/images/jayce_splash_tile_24.jpg"
+    },
+    {
+      "name": "Zenith Games",
+      "tilePath": "/jayce/skins/skin25/images/jayce_splash_tile_25.jpg"
+    },
+    {
+      "name": "T1",
+      "tilePath": "/jayce/skins/skin34/images/jayce_splash_tile_34.skins_jayce_skin34.jpg"
+    },
+    {
+      "name": "Prestige T1",
+      "tilePath": "/jayce/skins/skin36/images/jayce_splash_tile_36.prestige2_worldswinners_jayce.jpg"
+    },
+    {
+      "name": "Arcane Survivor",
+      "tilePath": "/jayce/skins/skin35/images/jayce_splash_tile_35.skins_jayce_skin35.jpg"
+    }
+  ],
+  "Jhin": [
+    {
+      "name": "Original",
+      "tilePath": "/jhin/skins/base/images/jhin_splash_tile_0.jpg"
+    },
+    {
+      "name": "High Noon",
+      "tilePath": "/jhin/skins/skin01/images/jhin_splash_tile_1.jpg"
+    },
+    {
+      "name": "Blood Moon",
+      "tilePath": "/jhin/skins/skin02/images/jhin_splash_tile_2.jpg"
+    },
+    {
+      "name": "SKT T1",
+      "tilePath": "/jhin/skins/skin03/images/jhin_splash_tile_3.jpg"
+    },
+    {
+      "name": "PROJECT",
+      "tilePath": "/jhin/skins/skin04/images/jhin_splash_tile_4.jpg"
+    },
+    {
+      "name": "Dark Cosmic",
+      "tilePath": "/jhin/skins/skin05/images/jhin_splash_tile_5.jpg"
+    },
+    {
+      "name": "Shan Hai Scrolls",
+      "tilePath": "/jhin/skins/skin14/images/jhin_splash_tile_14.jpg"
+    },
+    {
+      "name": "DWG",
+      "tilePath": "/jhin/skins/skin23/images/jhin_splash_tile_23.jpg"
+    },
+    {
+      "name": "Empyrean",
+      "tilePath": "/jhin/skins/skin25/images/jhin_splash_tile_25.jpg"
+    },
+    {
+      "name": "Soul Fighter",
+      "tilePath": "/jhin/skins/skin36/images/jhin_splash_tile_36.jpg"
+    },
+    {
+      "name": "Dark Cosmic Erasure",
+      "tilePath": "/jhin/skins/skin37/images/jhin_splash_tile_37.jpg"
+    },
+    {
+      "name": "Mythmaker",
+      "tilePath": "/jhin/skins/skin47/images/jhin_splash_tile_47.skins_jhin_skin47.jpg"
+    }
+  ],
+  "Jinx": [
+    {
+      "name": "Original",
+      "tilePath": "/jinx/skins/base/images/jinx_splash_tile_0.jpg"
+    },
+    {
+      "name": "Crime City",
+      "tilePath": "/jinx/skins/skin01/images/jinx_splash_tile_1.jpg"
+    },
+    {
+      "name": "Firecracker",
+      "tilePath": "/jinx/skins/skin02/images/jinx_splash_tile_2.jpg"
+    },
+    {
+      "name": "Zombie Slayer",
+      "tilePath": "/jinx/skins/skin03/images/jinx_splash_tile_3.jpg"
+    },
+    {
+      "name": "Star Guardian",
+      "tilePath": "/jinx/skins/skin04/images/jinx_splash_tile_4.jpg"
+    },
+    {
+      "name": "Ambitious Elf",
+      "tilePath": "/jinx/skins/skin12/images/jinx_splash_tile_12.jpg"
+    },
+    {
+      "name": "Odyssey",
+      "tilePath": "/jinx/skins/skin13/images/jinx_splash_tile_13.jpg"
+    },
+    {
+      "name": "PROJECT",
+      "tilePath": "/jinx/skins/skin20/images/jinx_splash_tile_20.jpg"
+    },
+    {
+      "name": "Heartseeker",
+      "tilePath": "/jinx/skins/skin29/images/jinx_splash_tile_29.jpg"
+    },
+    {
+      "name": "Arcane Enemy",
+      "tilePath": "/jinx/skins/skin37/images/jinx_splash_tile_37.jpg"
+    },
+    {
+      "name": "Battle Cat",
+      "tilePath": "/jinx/skins/skin38/images/jinx_splash_tile_38.jpg"
+    },
+    {
+      "name": "Prestige Battle Cat",
+      "tilePath": "/jinx/skins/skin40/images/jinx_splash_tile_40.jpg"
+    },
+    {
+      "name": "Cafe Cuties",
+      "tilePath": "/jinx/skins/skin51/images/jinx_splash_tile_51.jpg"
+    },
+    {
+      "name": "T1",
+      "tilePath": "/jinx/skins/skin62/images/jinx_splash_tile_62.skins_jinx_skin62.jpg"
+    },
+    {
+      "name": "Arcane Fractured",
+      "tilePath": "/jinx/skins/skin60/images/jinx_splash_tile_60.skins_jinx_skin60.jpg"
+    }
+  ],
+  "KSante": [
+    {
+      "name": "Original",
+      "tilePath": "/ksante/skins/base/images/ksante_splash_tile_0.jpg"
+    },
+    {
+      "name": "Empyrean",
+      "tilePath": "/ksante/skins/skin01/images/ksante_splash_tile_1.jpg"
+    },
+    {
+      "name": "Prestige Empyrean",
+      "tilePath": "/ksante/skins/skin02/images/ksante_splash_tile_2.jpg"
+    },
+    {
+      "name": "HEARTSTEEL",
+      "tilePath": "/ksante/skins/skin08/images/ksante_splash_tile_8.jpg"
+    }
+  ],
+  "Kaisa": [
+    {
+      "name": "Original",
+      "tilePath": "/kaisa/skins/base/images/kaisa_splash_tile_0.jpg"
+    },
+    {
+      "name": "Bullet Angel",
+      "tilePath": "/kaisa/skins/skin01/images/kaisa_splash_tile_1.jpg"
+    },
+    {
+      "name": "KDA",
+      "tilePath": "/kaisa/skins/skin14/images/kaisa_splash_tile_14.jpg"
+    },
+    {
+      "name": "Prestige KDA",
+      "tilePath": "/kaisa/skins/skin15/images/kaisa_splash_tile_15.jpg"
+    },
+    {
+      "name": "iG",
+      "tilePath": "/kaisa/skins/skin16/images/kaisa_splash_tile_16.jpg"
+    },
+    {
+      "name": "Arcade",
+      "tilePath": "/kaisa/skins/skin17/images/kaisa_splash_tile_17.jpg"
+    },
+    {
+      "name": "KDA ALL OUT",
+      "tilePath": "/kaisa/skins/skin26/images/kaisa_splash_tile_26.jpg"
+    },
+    {
+      "name": "Prestige KDA ALL OUT",
+      "tilePath": "/kaisa/skins/skin27/images/kaisa_splash_tile_27.jpg"
+    },
+    {
+      "name": "Lagoon Dragon",
+      "tilePath": "/kaisa/skins/skin29/images/kaisa_splash_tile_29.jpg"
+    },
+    {
+      "name": "Prestige KDA (2022)",
+      "tilePath": "/kaisa/skins/skin15/images/kaisa_splash_tile_15.jpg"
+    },
+    {
+      "name": "Star Guardian",
+      "tilePath": "/kaisa/skins/skin40/images/kaisa_splash_tile_40.jpg"
+    },
+    {
+      "name": "Inkshadow",
+      "tilePath": "/kaisa/skins/skin48/images/kaisa_splash_tile_48.jpg"
+    },
+    {
+      "name": "Heavenscale",
+      "tilePath": "/kaisa/skins/skin59/images/kaisa_splash_tile_59.jpg"
+    },
+    {
+      "name": "Dark Star",
+      "tilePath": "/kaisa/skins/skin69/images/kaisa_splash_tile_69.skins_kaisa_skin69.jpg"
+    },
+    {
+      "name": "Risen Legend",
+      "tilePath": "/kaisa/skins/skin70/images/kaisa_splash_tile_70.skins_kaisa_hol.jpg"
+    }
+  ],
+  "Kalista": [
+    {
+      "name": "Original",
+      "tilePath": "/kalista/skins/base/images/kalista_splash_tile_0.jpg"
+    },
+    {
+      "name": "Blood Moon",
+      "tilePath": "/kalista/skins/skin01/images/kalista_splash_tile_1.jpg"
+    },
+    {
+      "name": "Worlds 2015",
+      "tilePath": "/kalista/skins/skin02/images/kalista_splash_tile_2.jpg"
+    },
+    {
+      "name": "SKT T1",
+      "tilePath": "/kalista/skins/skin03/images/kalista_splash_tile_3.jpg"
+    },
+    {
+      "name": "Marauder",
+      "tilePath": "/kalista/skins/skin05/images/kalista_splash_tile_5.jpg"
+    },
+    {
+      "name": "Faerie Court",
+      "tilePath": "/kalista/skins/skin14/images/kalista_splash_tile_14.jpg"
+    }
+  ],
+  "Karma": [
+    {
+      "name": "Original",
+      "tilePath": "/karma/skins/base/images/karma_splash_tile_0.jpg"
+    },
+    {
+      "name": "Sakura",
+      "tilePath": "/karma/skins/skin02/images/karma_splash_tile_2.jpg"
+    },
+    {
+      "name": "Sun Goddess",
+      "tilePath": "/karma/skins/skin01/images/karma_splash_tile_1.jpg"
+    },
+    {
+      "name": "Traditional",
+      "tilePath": "/karma/skins/skin03/images/karma_splash_tile_3.jpg"
+    },
+    {
+      "name": "Order of the Lotus",
+      "tilePath": "/karma/skins/skin04/images/karma_splash_tile_4.jpg"
+    },
+    {
+      "name": "Warden",
+      "tilePath": "/karma/skins/skin05/images/karma_splash_tile_5.jpg"
+    },
+    {
+      "name": "Winter Wonder",
+      "tilePath": "/karma/skins/skin06/images/karma_splash_tile_6.jpg"
+    },
+    {
+      "name": "Conqueror",
+      "tilePath": "/karma/skins/skin07/images/karma_splash_tile_7.jpg"
+    },
+    {
+      "name": "Dark Star",
+      "tilePath": "/karma/skins/skin08/images/karma_splash_tile_8.jpg"
+    },
+    {
+      "name": "Dawnbringer",
+      "tilePath": "/karma/skins/skin19/images/karma_splash_tile_19.jpg"
+    },
+    {
+      "name": "Odyssey",
+      "tilePath": "/karma/skins/skin26/images/karma_splash_tile_26.jpg"
+    },
+    {
+      "name": "Ruined",
+      "tilePath": "/karma/skins/skin27/images/karma_splash_tile_27.jpg"
+    },
+    {
+      "name": "Tranquility Dragon",
+      "tilePath": "/karma/skins/skin44/images/karma_splash_tile_44.jpg"
+    },
+    {
+      "name": "Faerie Queen",
+      "tilePath": "/karma/skins/skin54/images/karma_splash_tile_54.jpg"
+    },
+    {
+      "name": "Infernal",
+      "tilePath": "/karma/skins/skin61/images/karma_splash_tile_61.skins_karma_skin61.jpg"
+    }
+  ],
+  "Karthus": [
+    {
+      "name": "Original",
+      "tilePath": "/karthus/skins/base/images/karthus_splash_tile_0.jpg"
+    },
+    {
+      "name": "Phantom",
+      "tilePath": "/karthus/skins/skin01/images/karthus_splash_tile_1.jpg"
+    },
+    {
+      "name": "Statue of Karthus",
+      "tilePath": "/karthus/skins/skin02/images/karthus_splash_tile_2.jpg"
+    },
+    {
+      "name": "Grim Reaper",
+      "tilePath": "/karthus/skins/skin03/images/karthus_splash_tile_3.jpg"
+    },
+    {
+      "name": "Pentakill",
+      "tilePath": "/karthus/skins/skin04/images/karthus_splash_tile_4.jpg"
+    },
+    {
+      "name": "Fnatic",
+      "tilePath": "/karthus/skins/skin05/images/karthus_splash_tile_5.jpg"
+    },
+    {
+      "name": "Karthus Lightsbane",
+      "tilePath": "/karthus/skins/skin09/images/karthus_splash_tile_9.jpg"
+    },
+    {
+      "name": "Infernal",
+      "tilePath": "/karthus/skins/skin10/images/karthus_splash_tile_10.jpg"
+    },
+    {
+      "name": "Pentakill Lost Chapter",
+      "tilePath": "/karthus/skins/skin17/images/karthus_splash_tile_17.jpg"
+    },
+    {
+      "name": "Elderwood",
+      "tilePath": "/karthus/skins/skin26/images/karthus_splash_tile_26.jpg"
+    }
+  ],
+  "Kassadin": [
+    {
+      "name": "Original",
+      "tilePath": "/kassadin/skins/base/images/kassadin_splash_tile_0.jpg"
+    },
+    {
+      "name": "Festival",
+      "tilePath": "/kassadin/skins/skin01/images/kassadin_splash_tile_1.jpg"
+    },
+    {
+      "name": "Deep One",
+      "tilePath": "/kassadin/skins/skin02/images/kassadin_splash_tile_2.jpg"
+    },
+    {
+      "name": "Pre-Void",
+      "tilePath": "/kassadin/skins/skin03/images/kassadin_splash_tile_3.jpg"
+    },
+    {
+      "name": "Harbinger",
+      "tilePath": "/kassadin/skins/skin04/images/kassadin_splash_tile_4.jpg"
+    },
+    {
+      "name": "Cosmic Reaver",
+      "tilePath": "/kassadin/skins/skin05/images/kassadin_splash_tile_5.jpg"
+    },
+    {
+      "name": "Count",
+      "tilePath": "/kassadin/skins/skin06/images/kassadin_splash_tile_6.jpg"
+    },
+    {
+      "name": "Hextech",
+      "tilePath": "/kassadin/skins/skin14/images/kassadin_splash_tile_14.jpg"
+    },
+    {
+      "name": "Shockblade",
+      "tilePath": "/kassadin/skins/skin15/images/kassadin_splash_tile_15.jpg"
+    },
+    {
+      "name": "Dragonmancer",
+      "tilePath": "/kassadin/skins/skin24/images/kassadin_splash_tile_24.jpg"
+    }
+  ],
+  "Katarina": [
+    {
+      "name": "Original",
+      "tilePath": "/katarina/skins/base/images/katarina_splash_tile_0.jpg"
+    },
+    {
+      "name": "Mercenary",
+      "tilePath": "/katarina/skins/skin01/images/katarina_splash_tile_1.jpg"
+    },
+    {
+      "name": "Red Card",
+      "tilePath": "/katarina/skins/skin02/images/katarina_splash_tile_2.jpg"
+    },
+    {
+      "name": "Bilgewater",
+      "tilePath": "/katarina/skins/skin03/images/katarina_splash_tile_3.jpg"
+    },
+    {
+      "name": "Kitty Cat",
+      "tilePath": "/katarina/skins/skin04/images/katarina_splash_tile_4.jpg"
+    },
+    {
+      "name": "High Command",
+      "tilePath": "/katarina/skins/skin05/images/katarina_splash_tile_5.jpg"
+    },
+    {
+      "name": "Sandstorm",
+      "tilePath": "/katarina/skins/skin06/images/katarina_splash_tile_6.jpg"
+    },
+    {
+      "name": "Slay Belle",
+      "tilePath": "/katarina/skins/skin07/images/katarina_splash_tile_7.jpg"
+    },
+    {
+      "name": "Warring Kingdoms",
+      "tilePath": "/katarina/skins/skin08/images/katarina_splash_tile_8.jpg"
+    },
+    {
+      "name": "PROJECT",
+      "tilePath": "/katarina/skins/skin09/images/katarina_splash_tile_9.jpg"
+    },
+    {
+      "name": "Death Sworn",
+      "tilePath": "/katarina/skins/skin10/images/katarina_splash_tile_10.jpg"
+    },
+    {
+      "name": "Battle Academia",
+      "tilePath": "/katarina/skins/skin12/images/katarina_splash_tile_12.jpg"
+    },
+    {
+      "name": "Blood Moon",
+      "tilePath": "/katarina/skins/skin21/images/katarina_splash_tile_21.jpg"
+    },
+    {
+      "name": "Battle Queen",
+      "tilePath": "/katarina/skins/skin29/images/katarina_splash_tile_29.jpg"
+    },
+    {
+      "name": "High Noon",
+      "tilePath": "/katarina/skins/skin37/images/katarina_splash_tile_37.jpg"
+    },
+    {
+      "name": "Faerie Court",
+      "tilePath": "/katarina/skins/skin47/images/katarina_splash_tile_47.jpg"
+    },
+    {
+      "name": "Prestige Faerie Court",
+      "tilePath": "/katarina/skins/skin48/images/katarina_splash_tile_48.jpg"
+    },
+    {
+      "name": "Chosen of the Wolf",
+      "tilePath": "/katarina/skins/skin59/images/katarina_splash_tile_59.skins_katarina_skin59.jpg"
+    },
+    {
+      "name": "Prestige Masque of the Black Rose",
+      "tilePath": "/katarina/skins/skin60/images/katarina_splash_tile_60.skins_katarina_skin60.jpg"
+    }
+  ],
+  "Kayle": [
+    {
+      "name": "Original",
+      "tilePath": "/kayle/skins/base/images/kayle_splash_tile_0.jpg"
+    },
+    {
+      "name": "Silver",
+      "tilePath": "/kayle/skins/skin01/images/kayle_splash_tile_1.jpg"
+    },
+    {
+      "name": "Viridian",
+      "tilePath": "/kayle/skins/skin02/images/kayle_splash_tile_2.jpg"
+    },
+    {
+      "name": "Transcended",
+      "tilePath": "/kayle/skins/skin03/images/kayle_splash_tile_3.jpg"
+    },
+    {
+      "name": "Battleborn",
+      "tilePath": "/kayle/skins/skin04/images/kayle_splash_tile_4.jpg"
+    },
+    {
+      "name": "Judgment",
+      "tilePath": "/kayle/skins/skin05/images/kayle_splash_tile_5.jpg"
+    },
+    {
+      "name": "Aether Wing",
+      "tilePath": "/kayle/skins/skin06/images/kayle_splash_tile_6.jpg"
+    },
+    {
+      "name": "Riot",
+      "tilePath": "/kayle/skins/skin07/images/kayle_splash_tile_7.jpg"
+    },
+    {
+      "name": "Iron Inquisitor",
+      "tilePath": "/kayle/skins/skin08/images/kayle_splash_tile_8.jpg"
+    },
+    {
+      "name": "Pentakill",
+      "tilePath": "/kayle/skins/skin09/images/kayle_splash_tile_9.jpg"
+    },
+    {
+      "name": "PsyOps",
+      "tilePath": "/kayle/skins/skin15/images/kayle_splash_tile_15.jpg"
+    },
+    {
+      "name": "Dragonslayer",
+      "tilePath": "/kayle/skins/skin24/images/kayle_splash_tile_24.jpg"
+    },
+    {
+      "name": "Pentakill Lost Chapter",
+      "tilePath": "/kayle/skins/skin33/images/kayle_splash_tile_33.jpg"
+    },
+    {
+      "name": "Sun-Eater",
+      "tilePath": "/kayle/skins/skin42/images/kayle_splash_tile_42.jpg"
+    },
+    {
+      "name": "Immortal Journey",
+      "tilePath": "/kayle/skins/skin57/images/kayle_splash_tile_57.jpg"
+    },
+    {
+      "name": "Empyrean",
+      "tilePath": "/kayle/skins/skin66/images/kayle_splash_tile_66.jpg"
+    },
+    {
+      "name": "Prestige Empyrean",
+      "tilePath": "/kayle/skins/skin67/images/kayle_splash_tile_67.jpg"
+    }
+  ],
+  "Kayn": [
+    {
+      "name": "Original",
+      "tilePath": "/kayn/skins/base/images/kayn_splash_tile_0.jpg"
+    },
+    {
+      "name": "Soulhunter",
+      "tilePath": "/kayn/skins/skin01/images/kayn_splash_tile_1.jpg"
+    },
+    {
+      "name": "Odyssey",
+      "tilePath": "/kayn/skins/skin02/images/kayn_splash_tile_2.jpg"
+    },
+    {
+      "name": "Nightbringer",
+      "tilePath": "/kayn/skins/skin08/images/kayn_splash_tile_8.jpg"
+    },
+    {
+      "name": "Prestige Nightbringer",
+      "tilePath": "/kayn/skins/skin09/images/kayn_splash_tile_9.jpg"
+    },
+    {
+      "name": "Snow Moon",
+      "tilePath": "/kayn/skins/skin15/images/kayn_splash_tile_15.jpg"
+    },
+    {
+      "name": "HEARTSTEEL",
+      "tilePath": "/kayn/skins/skin20/images/kayn_splash_tile_20.jpg"
+    },
+    {
+      "name": "Battle Academia",
+      "tilePath": "/kayn/skins/skin26/images/kayn_splash_tile_26.skins_kayn_skin26.jpg"
+    }
+  ],
+  "Kennen": [
+    {
+      "name": "Original",
+      "tilePath": "/kennen/skins/base/images/kennen_splash_tile_0.jpg"
+    },
+    {
+      "name": "Deadly",
+      "tilePath": "/kennen/skins/skin01/images/kennen_splash_tile_1.jpg"
+    },
+    {
+      "name": "Swamp Master",
+      "tilePath": "/kennen/skins/skin02/images/kennen_splash_tile_2.jpg"
+    },
+    {
+      "name": "Karate",
+      "tilePath": "/kennen/skins/skin03/images/kennen_splash_tile_3.jpg"
+    },
+    {
+      "name": "Kennen M.D.",
+      "tilePath": "/kennen/skins/skin04/images/kennen_splash_tile_4.jpg"
+    },
+    {
+      "name": "Arctic Ops",
+      "tilePath": "/kennen/skins/skin05/images/kennen_splash_tile_5.jpg"
+    },
+    {
+      "name": "Blood Moon",
+      "tilePath": "/kennen/skins/skin06/images/kennen_splash_tile_6.jpg"
+    },
+    {
+      "name": "Super",
+      "tilePath": "/kennen/skins/skin07/images/kennen_splash_tile_7.jpg"
+    },
+    {
+      "name": "Infernal",
+      "tilePath": "/kennen/skins/skin08/images/kennen_splash_tile_8.jpg"
+    },
+    {
+      "name": "DWG",
+      "tilePath": "/kennen/skins/skin23/images/kennen_splash_tile_23.jpg"
+    },
+    {
+      "name": "Astronaut",
+      "tilePath": "/kennen/skins/skin25/images/kennen_splash_tile_25.jpg"
+    }
+  ],
+  "Khazix": [
+    {
+      "name": "Original",
+      "tilePath": "/khazix/skins/base/images/khazix_splash_tile_0.jpg"
+    },
+    {
+      "name": "Mecha",
+      "tilePath": "/khazix/skins/skin01/images/khazix_splash_tile_1.jpg"
+    },
+    {
+      "name": "Guardian of the Sands",
+      "tilePath": "/khazix/skins/skin02/images/khazix_splash_tile_2.jpg"
+    },
+    {
+      "name": "Death Blossom",
+      "tilePath": "/khazix/skins/skin03/images/khazix_splash_tile_3.jpg"
+    },
+    {
+      "name": "Dark Star",
+      "tilePath": "/khazix/skins/skin04/images/khazix_splash_tile_4.jpg"
+    },
+    {
+      "name": "Worlds 2018",
+      "tilePath": "/khazix/skins/skin11/images/khazix_splash_tile_11.jpg"
+    },
+    {
+      "name": "Odyssey",
+      "tilePath": "/khazix/skins/skin60/images/khazix_splash_tile_60.jpg"
+    },
+    {
+      "name": "Lunar Guardian",
+      "tilePath": "/khazix/skins/skin69/images/khazix_splash_tile_69.jpg"
+    },
+    {
+      "name": "Crystalis Indomitus",
+      "tilePath": "/khazix/skins/skin79/images/khazix_splash_tile_79.jpg"
+    }
+  ],
+  "Kindred": [
+    {
+      "name": "Original",
+      "tilePath": "/kindred/skins/base/images/kindred_splash_tile_0.jpg"
+    },
+    {
+      "name": "Shadowfire",
+      "tilePath": "/kindred/skins/skin01/images/kindred_splash_tile_1.jpg"
+    },
+    {
+      "name": "Super Galaxy",
+      "tilePath": "/kindred/skins/skin02/images/kindred_splash_tile_2.jpg"
+    },
+    {
+      "name": "Spirit Blossom",
+      "tilePath": "/kindred/skins/skin03/images/kindred_splash_tile_3.jpg"
+    },
+    {
+      "name": "Porcelain",
+      "tilePath": "/kindred/skins/skin12/images/kindred_splash_tile_12.jpg"
+    },
+    {
+      "name": "Woof and Lamb",
+      "tilePath": "/kindred/skins/skin22/images/kindred_splash_tile_22.jpg"
+    },
+    {
+      "name": "DRX",
+      "tilePath": "/kindred/skins/skin23/images/kindred_splash_tile_23.jpg"
+    },
+    {
+      "name": "Prestige Porcelain",
+      "tilePath": "/kindred/skins/skin33/images/kindred_splash_tile_33.jpg"
+    },
+    {
+      "name": "Chosen of the Wolf",
+      "tilePath": "/kindred/skins/skin34/images/kindred_splash_tile_34.skins_kindred_skin34.jpg"
+    }
+  ],
+  "Kled": [
+    {
+      "name": "Original",
+      "tilePath": "/kled/skins/base/images/kled_splash_tile_0.jpg"
+    },
+    {
+      "name": "Sir",
+      "tilePath": "/kled/skins/skin01/images/kled_splash_tile_1.jpg"
+    },
+    {
+      "name": "Count Kledula",
+      "tilePath": "/kled/skins/skin02/images/kled_splash_tile_2.jpg"
+    },
+    {
+      "name": "Marauder",
+      "tilePath": "/kled/skins/skin09/images/kled_splash_tile_9.jpg"
+    },
+    {
+      "name": "Kibble-Head",
+      "tilePath": "/kled/skins/skin18/images/kled_splash_tile_18.jpg"
+    }
+  ],
+  "KogMaw": [
+    {
+      "name": "Original",
+      "tilePath": "/kogmaw/skins/base/images/kogmaw_splash_tile_0.jpg"
+    },
+    {
+      "name": "Caterpillar",
+      "tilePath": "/kogmaw/skins/skin01/images/kogmaw_splash_tile_1.jpg"
+    },
+    {
+      "name": "Sonoran",
+      "tilePath": "/kogmaw/skins/skin02/images/kogmaw_splash_tile_2.jpg"
+    },
+    {
+      "name": "Monarch",
+      "tilePath": "/kogmaw/skins/skin03/images/kogmaw_splash_tile_3.jpg"
+    },
+    {
+      "name": "Reindeer",
+      "tilePath": "/kogmaw/skins/skin04/images/kogmaw_splash_tile_4.jpg"
+    },
+    {
+      "name": "Lion Dance",
+      "tilePath": "/kogmaw/skins/skin05/images/kogmaw_splash_tile_5.jpg"
+    },
+    {
+      "name": "Deep Sea",
+      "tilePath": "/kogmaw/skins/skin06/images/kogmaw_splash_tile_6.jpg"
+    },
+    {
+      "name": "Jurassic",
+      "tilePath": "/kogmaw/skins/skin07/images/kogmaw_splash_tile_7.jpg"
+    },
+    {
+      "name": "Battlecast",
+      "tilePath": "/kogmaw/skins/skin08/images/kogmaw_splash_tile_8.jpg"
+    },
+    {
+      "name": "Pug'Maw",
+      "tilePath": "/kogmaw/skins/skin09/images/kogmaw_splash_tile_9.jpg"
+    },
+    {
+      "name": "Hextech",
+      "tilePath": "/kogmaw/skins/skin10/images/kogmaw_splash_tile_10.jpg"
+    },
+    {
+      "name": "Arcanist",
+      "tilePath": "/kogmaw/skins/skin19/images/kogmaw_splash_tile_19.jpg"
+    },
+    {
+      "name": "Bee'Maw",
+      "tilePath": "/kogmaw/skins/skin28/images/kogmaw_splash_tile_28.jpg"
+    },
+    {
+      "name": "Zap'Maw",
+      "tilePath": "/kogmaw/skins/skin37/images/kogmaw_splash_tile_37.jpg"
+    },
+    {
+      "name": "Shan Hai Scrolls",
+      "tilePath": "/kogmaw/skins/skin46/images/kogmaw_splash_tile_46.jpg"
+    },
+    {
+      "name": "Victorious",
+      "tilePath": "/kogmaw/skins/skin55/images/kogmaw_splash_tile_55.skins_kogmaw_skin55.jpg"
+    }
+  ],
+  "Leblanc": [
+    {
+      "name": "Original",
+      "tilePath": "/leblanc/skins/base/images/leblanc_splash_tile_0.leblanc_rework.jpg"
+    },
+    {
+      "name": "Prestigious",
+      "tilePath": "/leblanc/skins/skin02/images/leblanc_splash_tile_2.leblanc_rework.jpg"
+    },
+    {
+      "name": "Wicked",
+      "tilePath": "/leblanc/skins/skin01/images/leblanc_splash_tile_1.leblanc_rework.jpg"
+    },
+    {
+      "name": "Mistletoe",
+      "tilePath": "/leblanc/skins/skin03/images/leblanc_splash_tile_3.leblanc_rework.jpg"
+    },
+    {
+      "name": "Ravenborn",
+      "tilePath": "/leblanc/skins/skin04/images/leblanc_splash_tile_4.leblanc_rework.jpg"
+    },
+    {
+      "name": "Elderwood",
+      "tilePath": "/leblanc/skins/skin05/images/leblanc_splash_tile_5.leblanc_rework.jpg"
+    },
+    {
+      "name": "Program",
+      "tilePath": "/leblanc/skins/skin12/images/leblanc_splash_tile_12.leblanc_rework.jpg"
+    },
+    {
+      "name": "iG",
+      "tilePath": "/leblanc/skins/skin19/images/leblanc_splash_tile_19.leblanc_rework.jpg"
+    },
+    {
+      "name": "Coven",
+      "tilePath": "/leblanc/skins/skin20/images/leblanc_splash_tile_20.leblanc_rework.jpg"
+    },
+    {
+      "name": "Worlds 2020",
+      "tilePath": "/leblanc/skins/skin29/images/leblanc_splash_tile_29.leblanc_rework.jpg"
+    },
+    {
+      "name": "Prestige Coven",
+      "tilePath": "/leblanc/skins/skin33/images/leblanc_splash_tile_33.leblanc_rework.jpg"
+    },
+    {
+      "name": "Debonair",
+      "tilePath": "/leblanc/skins/skin35/images/leblanc_splash_tile_35.leblanc_rework.jpg"
+    },
+    {
+      "name": "Bewitching",
+      "tilePath": "/leblanc/skins/skin45/images/leblanc_splash_tile_45.leblanc_rework.jpg"
+    },
+    {
+      "name": "Risen Legend",
+      "tilePath": "/leblanc/skins/skin55/images/leblanc_splash_tile_55.leblanc_rework.jpg"
+    }
+  ],
+  "LeeSin": [
+    {
+      "name": "Original",
+      "tilePath": "/leesin/skins/base/images/leesin_splash_tile_0.jpg"
+    },
+    {
+      "name": "Acolyte",
+      "tilePath": "/leesin/skins/skin02/images/leesin_splash_tile_2.jpg"
+    },
+    {
+      "name": "Traditional",
+      "tilePath": "/leesin/skins/skin01/images/leesin_splash_tile_1.jpg"
+    },
+    {
+      "name": "Dragon Fist",
+      "tilePath": "/leesin/skins/skin03/images/leesin_splash_tile_3.jpg"
+    },
+    {
+      "name": "Muay Thai",
+      "tilePath": "/leesin/skins/skin04/images/leesin_splash_tile_4.jpg"
+    },
+    {
+      "name": "Pool Party",
+      "tilePath": "/leesin/skins/skin05/images/leesin_splash_tile_5.jpg"
+    },
+    {
+      "name": "SKT T1",
+      "tilePath": "/leesin/skins/skin06/images/leesin_splash_tile_6.jpg"
+    },
+    {
+      "name": "Knockout",
+      "tilePath": "/leesin/skins/skin10/images/leesin_splash_tile_10.jpg"
+    },
+    {
+      "name": "God Fist",
+      "tilePath": "/leesin/skins/skin11/images/leesin_splash_tile_11.jpg"
+    },
+    {
+      "name": "Playmaker",
+      "tilePath": "/leesin/skins/skin12/images/leesin_splash_tile_12.jpg"
+    },
+    {
+      "name": "Nightbringer",
+      "tilePath": "/leesin/skins/skin27/images/leesin_splash_tile_27.jpg"
+    },
+    {
+      "name": "Prestige Nightbringer",
+      "tilePath": "/leesin/skins/skin28/images/leesin_splash_tile_28.jpg"
+    },
+    {
+      "name": "FPX",
+      "tilePath": "/leesin/skins/skin29/images/leesin_splash_tile_29.jpg"
+    },
+    {
+      "name": "Storm Dragon",
+      "tilePath": "/leesin/skins/skin31/images/leesin_splash_tile_31.jpg"
+    },
+    {
+      "name": "Prestige Nightbringer (2022)",
+      "tilePath": "/leesin/skins/skin39/images/leesin_splash_tile_39.jpg"
+    },
+    {
+      "name": "Zenith Games",
+      "tilePath": "/leesin/skins/skin41/images/leesin_splash_tile_41.jpg"
+    },
+    {
+      "name": "Heavenscale",
+      "tilePath": "/leesin/skins/skin51/images/leesin_splash_tile_51.jpg"
+    },
+    {
+      "name": "Divine Heavenscale",
+      "tilePath": "/leesin/skins/skin52/images/leesin_splash_tile_52.jpg"
+    },
+    {
+      "name": "T1",
+      "tilePath": "/leesin/skins/skin68/images/leesin_splash_tile_68.skins_leesin_skin68.jpg"
+    },
+    {
+      "name": "Inkshadow",
+      "tilePath": "/leesin/skins/skin72/images/leesin_splash_tile_72.skins_leesin_skin72.jpg"
+    }
+  ],
+  "Leona": [
+    {
+      "name": "Original",
+      "tilePath": "/leona/skins/base/images/leona_splash_tile_0.jpg"
+    },
+    {
+      "name": "Valkyrie",
+      "tilePath": "/leona/skins/skin01/images/leona_splash_tile_1.jpg"
+    },
+    {
+      "name": "Defender",
+      "tilePath": "/leona/skins/skin02/images/leona_splash_tile_2.jpg"
+    },
+    {
+      "name": "Iron Solari",
+      "tilePath": "/leona/skins/skin03/images/leona_splash_tile_3.jpg"
+    },
+    {
+      "name": "Pool Party",
+      "tilePath": "/leona/skins/skin04/images/leona_splash_tile_4.jpg"
+    },
+    {
+      "name": "PROJECT",
+      "tilePath": "/leona/skins/skin08/images/leona_splash_tile_8.jpg"
+    },
+    {
+      "name": "Barbecue",
+      "tilePath": "/leona/skins/skin09/images/leona_splash_tile_9.jpg"
+    },
+    {
+      "name": "Solar Eclipse",
+      "tilePath": "/leona/skins/skin10/images/leona_splash_tile_10.jpg"
+    },
+    {
+      "name": "Lunar Eclipse",
+      "tilePath": "/leona/skins/skin11/images/leona_splash_tile_11.jpg"
+    },
+    {
+      "name": "Mecha Kingdoms",
+      "tilePath": "/leona/skins/skin12/images/leona_splash_tile_12.jpg"
+    },
+    {
+      "name": "Battle Academia",
+      "tilePath": "/leona/skins/skin21/images/leona_splash_tile_21.jpg"
+    },
+    {
+      "name": "Prestige Battle Academia",
+      "tilePath": "/leona/skins/skin23/images/leona_splash_tile_23.jpg"
+    },
+    {
+      "name": "DWG",
+      "tilePath": "/leona/skins/skin22/images/leona_splash_tile_22.jpg"
+    },
+    {
+      "name": "Debonair",
+      "tilePath": "/leona/skins/skin33/images/leona_splash_tile_33.jpg"
+    },
+    {
+      "name": "High Noon",
+      "tilePath": "/leona/skins/skin34/images/leona_splash_tile_34.jpg"
+    },
+    {
+      "name": "Crystalis Motus",
+      "tilePath": "/leona/skins/skin50/images/leona_splash_tile_50.jpg"
+    },
+    {
+      "name": "Battle Lion",
+      "tilePath": "/leona/skins/skin52/images/leona_splash_tile_52.skins_leona_skin52.jpg"
+    },
+    {
+      "name": "Prestige Battle Lion",
+      "tilePath": "/leona/skins/skin53/images/leona_splash_tile_53.prestige2_animasquad_leona.jpg"
+    }
+  ],
+  "Lillia": [
+    {
+      "name": "Original",
+      "tilePath": "/lillia/skins/base/images/lillia_splash_tile_0.jpg"
+    },
+    {
+      "name": "Spirit Blossom",
+      "tilePath": "/lillia/skins/skin01/images/lillia_splash_tile_1.jpg"
+    },
+    {
+      "name": "Nightbringer",
+      "tilePath": "/lillia/skins/skin10/images/lillia_splash_tile_10.jpg"
+    },
+    {
+      "name": "Shan Hai Scrolls",
+      "tilePath": "/lillia/skins/skin19/images/lillia_splash_tile_19.jpg"
+    },
+    {
+      "name": "Faerie Court",
+      "tilePath": "/lillia/skins/skin28/images/lillia_splash_tile_28.jpg"
+    }
+  ],
+  "Lissandra": [
+    {
+      "name": "Original",
+      "tilePath": "/lissandra/skins/base/images/lissandra_splash_tile_0.jpg"
+    },
+    {
+      "name": "Bloodstone",
+      "tilePath": "/lissandra/skins/skin01/images/lissandra_splash_tile_1.jpg"
+    },
+    {
+      "name": "Blade Queen",
+      "tilePath": "/lissandra/skins/skin02/images/lissandra_splash_tile_2.jpg"
+    },
+    {
+      "name": "Program",
+      "tilePath": "/lissandra/skins/skin03/images/lissandra_splash_tile_3.jpg"
+    },
+    {
+      "name": "Coven",
+      "tilePath": "/lissandra/skins/skin04/images/lissandra_splash_tile_4.jpg"
+    },
+    {
+      "name": "Dark Cosmic",
+      "tilePath": "/lissandra/skins/skin12/images/lissandra_splash_tile_12.jpg"
+    },
+    {
+      "name": "Porcelain",
+      "tilePath": "/lissandra/skins/skin23/images/lissandra_splash_tile_23.jpg"
+    },
+    {
+      "name": "Space Groove",
+      "tilePath": "/lissandra/skins/skin34/images/lissandra_splash_tile_34.jpg"
+    },
+    {
+      "name": "Prestige Porcelain",
+      "tilePath": "/lissandra/skins/skin33/images/lissandra_splash_tile_33.jpg"
+    }
+  ],
+  "Lucian": [
+    {
+      "name": "Original",
+      "tilePath": "/lucian/skins/base/images/lucian_splash_tile_0.jpg"
+    },
+    {
+      "name": "Hired Gun",
+      "tilePath": "/lucian/skins/skin01/images/lucian_splash_tile_1.jpg"
+    },
+    {
+      "name": "Striker",
+      "tilePath": "/lucian/skins/skin02/images/lucian_splash_tile_2.jpg"
+    },
+    {
+      "name": "PROJECT",
+      "tilePath": "/lucian/skins/skin06/images/lucian_splash_tile_6.jpg"
+    },
+    {
+      "name": "Heartseeker",
+      "tilePath": "/lucian/skins/skin07/images/lucian_splash_tile_7.jpg"
+    },
+    {
+      "name": "High Noon",
+      "tilePath": "/lucian/skins/skin08/images/lucian_splash_tile_8.jpg"
+    },
+    {
+      "name": "Demacia Vice",
+      "tilePath": "/lucian/skins/skin09/images/lucian_splash_tile_9.jpg"
+    },
+    {
+      "name": "Pulsefire",
+      "tilePath": "/lucian/skins/skin18/images/lucian_splash_tile_18.jpg"
+    },
+    {
+      "name": "Prestige Pulsefire",
+      "tilePath": "/lucian/skins/skin19/images/lucian_splash_tile_19.jpg"
+    },
+    {
+      "name": "Victorious",
+      "tilePath": "/lucian/skins/skin25/images/lucian_splash_tile_25.jpg"
+    },
+    {
+      "name": "Arcana",
+      "tilePath": "/lucian/skins/skin31/images/lucian_splash_tile_31.jpg"
+    },
+    {
+      "name": "Strike Paladin",
+      "tilePath": "/lucian/skins/skin40/images/lucian_splash_tile_40.jpg"
+    },
+    {
+      "name": "Winterblessed",
+      "tilePath": "/lucian/skins/skin52/images/lucian_splash_tile_52.jpg"
+    },
+    {
+      "name": "Masked Justice",
+      "tilePath": "/lucian/skins/skin62/images/lucian_splash_tile_62.skins_lucian_skin62.jpg"
+    }
+  ],
+  "Lulu": [
+    {
+      "name": "Original",
+      "tilePath": "/lulu/skins/base/images/lulu_splash_tile_0.jpg"
+    },
+    {
+      "name": "Bittersweet",
+      "tilePath": "/lulu/skins/skin01/images/lulu_splash_tile_1.jpg"
+    },
+    {
+      "name": "Wicked",
+      "tilePath": "/lulu/skins/skin02/images/lulu_splash_tile_2.jpg"
+    },
+    {
+      "name": "Dragon Trainer",
+      "tilePath": "/lulu/skins/skin03/images/lulu_splash_tile_3.jpg"
+    },
+    {
+      "name": "Winter Wonder",
+      "tilePath": "/lulu/skins/skin04/images/lulu_splash_tile_4.jpg"
+    },
+    {
+      "name": "Pool Party",
+      "tilePath": "/lulu/skins/skin05/images/lulu_splash_tile_5.jpg"
+    },
+    {
+      "name": "Star Guardian",
+      "tilePath": "/lulu/skins/skin06/images/lulu_splash_tile_6.jpg"
+    },
+    {
+      "name": "Cosmic Enchantress",
+      "tilePath": "/lulu/skins/skin14/images/lulu_splash_tile_14.jpg"
+    },
+    {
+      "name": "Pajama Guardian",
+      "tilePath": "/lulu/skins/skin15/images/lulu_splash_tile_15.jpg"
+    },
+    {
+      "name": "Space Groove",
+      "tilePath": "/lulu/skins/skin26/images/lulu_splash_tile_26.jpg"
+    },
+    {
+      "name": "Prestige Space Groove",
+      "tilePath": "/lulu/skins/skin27/images/lulu_splash_tile_27.jpg"
+    },
+    {
+      "name": "Monster Tamer",
+      "tilePath": "/lulu/skins/skin37/images/lulu_splash_tile_37.jpg"
+    },
+    {
+      "name": "Cafe Cuties",
+      "tilePath": "/lulu/skins/skin46/images/lulu_splash_tile_46.jpg"
+    }
+  ],
+  "Lux": [
+    {
+      "name": "Original",
+      "tilePath": "/lux/skins/base/images/lux_splash_tile_0.jpg"
+    },
+    {
+      "name": "Sorceress",
+      "tilePath": "/lux/skins/skin01/images/lux_splash_tile_1.jpg"
+    },
+    {
+      "name": "Spellthief",
+      "tilePath": "/lux/skins/skin02/images/lux_splash_tile_2.jpg"
+    },
+    {
+      "name": "Commando",
+      "tilePath": "/lux/skins/skin03/images/lux_splash_tile_3.jpg"
+    },
+    {
+      "name": "Imperial",
+      "tilePath": "/lux/skins/skin04/images/lux_splash_tile_4.jpg"
+    },
+    {
+      "name": "Steel Legion",
+      "tilePath": "/lux/skins/skin05/images/lux_splash_tile_5.jpg"
+    },
+    {
+      "name": "Star Guardian",
+      "tilePath": "/lux/skins/skin06/images/lux_splash_tile_6.jpg"
+    },
+    {
+      "name": "Elementalist",
+      "tilePath": "/lux/skins/skin07/images/lux_splash_tile_7.jpg"
+    },
+    {
+      "name": "Lunar Empress",
+      "tilePath": "/lux/skins/skin08/images/lux_splash_tile_8.jpg"
+    },
+    {
+      "name": "Pajama Guardian",
+      "tilePath": "/lux/skins/skin14/images/lux_splash_tile_14.jpg"
+    },
+    {
+      "name": "Battle Academia",
+      "tilePath": "/lux/skins/skin15/images/lux_splash_tile_15.jpg"
+    },
+    {
+      "name": "Prestige Battle Academia",
+      "tilePath": "/lux/skins/skin16/images/lux_splash_tile_16.jpg"
+    },
+    {
+      "name": "Dark Cosmic",
+      "tilePath": "/lux/skins/skin17/images/lux_splash_tile_17.jpg"
+    },
+    {
+      "name": "Cosmic",
+      "tilePath": "/lux/skins/skin18/images/lux_splash_tile_18.jpg"
+    },
+    {
+      "name": "Space Groove",
+      "tilePath": "/lux/skins/skin19/images/lux_splash_tile_19.jpg"
+    },
+    {
+      "name": "Porcelain",
+      "tilePath": "/lux/skins/skin29/images/lux_splash_tile_29.jpg"
+    },
+    {
+      "name": "Prestige Porcelain",
+      "tilePath": "/lux/skins/skin40/images/lux_splash_tile_40.jpg"
+    },
+    {
+      "name": "Prestige Battle Academia (2022)",
+      "tilePath": "/lux/skins/skin16/images/lux_splash_tile_16.jpg"
+    },
+    {
+      "name": "Empyrean",
+      "tilePath": "/lux/skins/skin42/images/lux_splash_tile_42.jpg"
+    },
+    {
+      "name": "Soul Fighter",
+      "tilePath": "/lux/skins/skin38/images/lux_splash_tile_38.jpg"
+    },
+    {
+      "name": "Faerie Court",
+      "tilePath": "/lux/skins/skin61/images/lux_splash_tile_61.jpg"
+    },
+    {
+      "name": "Prestige Spirit Blossom",
+      "tilePath": "/lux/skins/skin70/images/lux_splash_tile_70.skins_lux_skin70.jpg"
+    }
+  ],
+  "Malphite": [
+    {
+      "name": "Original",
+      "tilePath": "/malphite/skins/base/images/malphite_splash_tile_0.jpg"
+    },
+    {
+      "name": "Shamrock",
+      "tilePath": "/malphite/skins/skin01/images/malphite_splash_tile_1.jpg"
+    },
+    {
+      "name": "Coral Reef",
+      "tilePath": "/malphite/skins/skin02/images/malphite_splash_tile_2.jpg"
+    },
+    {
+      "name": "Marble",
+      "tilePath": "/malphite/skins/skin03/images/malphite_splash_tile_3.jpg"
+    },
+    {
+      "name": "Obsidian",
+      "tilePath": "/malphite/skins/skin04/images/malphite_splash_tile_4.jpg"
+    },
+    {
+      "name": "Glacial",
+      "tilePath": "/malphite/skins/skin05/images/malphite_splash_tile_5.jpg"
+    },
+    {
+      "name": "Mecha",
+      "tilePath": "/malphite/skins/skin06/images/malphite_splash_tile_6.jpg"
+    },
+    {
+      "name": "Ironside",
+      "tilePath": "/malphite/skins/skin07/images/malphite_splash_tile_7.jpg"
+    },
+    {
+      "name": "Odyssey",
+      "tilePath": "/malphite/skins/skin16/images/malphite_splash_tile_16.jpg"
+    },
+    {
+      "name": "Dark Star",
+      "tilePath": "/malphite/skins/skin23/images/malphite_splash_tile_23.jpg"
+    },
+    {
+      "name": "Prestige Dark Star",
+      "tilePath": "/malphite/skins/skin24/images/malphite_splash_tile_24.jpg"
+    },
+    {
+      "name": "FPX",
+      "tilePath": "/malphite/skins/skin25/images/malphite_splash_tile_25.jpg"
+    },
+    {
+      "name": "Old God",
+      "tilePath": "/malphite/skins/skin27/images/malphite_splash_tile_27.jpg"
+    },
+    {
+      "name": "Lunar Guardian",
+      "tilePath": "/malphite/skins/skin37/images/malphite_splash_tile_37.jpg"
+    },
+    {
+      "name": "Pool Party",
+      "tilePath": "/malphite/skins/skin48/images/malphite_splash_tile_48.skins_malphite_skin48.jpg"
+    }
+  ],
+  "Malzahar": [
+    {
+      "name": "Original",
+      "tilePath": "/malzahar/skins/base/images/malzahar_splash_tile_0.jpg"
+    },
+    {
+      "name": "Vizier",
+      "tilePath": "/malzahar/skins/skin01/images/malzahar_splash_tile_1.jpg"
+    },
+    {
+      "name": "Shadow Prince",
+      "tilePath": "/malzahar/skins/skin02/images/malzahar_splash_tile_2.jpg"
+    },
+    {
+      "name": "Djinn",
+      "tilePath": "/malzahar/skins/skin03/images/malzahar_splash_tile_3.jpg"
+    },
+    {
+      "name": "Overlord",
+      "tilePath": "/malzahar/skins/skin04/images/malzahar_splash_tile_4.jpg"
+    },
+    {
+      "name": "Snow Day",
+      "tilePath": "/malzahar/skins/skin05/images/malzahar_splash_tile_5.jpg"
+    },
+    {
+      "name": "Battle Boss",
+      "tilePath": "/malzahar/skins/skin06/images/malzahar_splash_tile_6.jpg"
+    },
+    {
+      "name": "Hextech",
+      "tilePath": "/malzahar/skins/skin07/images/malzahar_splash_tile_7.jpg"
+    },
+    {
+      "name": "Worldbreaker",
+      "tilePath": "/malzahar/skins/skin09/images/malzahar_splash_tile_9.jpg"
+    },
+    {
+      "name": "Beezahar",
+      "tilePath": "/malzahar/skins/skin18/images/malzahar_splash_tile_18.jpg"
+    },
+    {
+      "name": "Debonair",
+      "tilePath": "/malzahar/skins/skin28/images/malzahar_splash_tile_28.jpg"
+    },
+    {
+      "name": "Three Honors",
+      "tilePath": "/malzahar/skins/skin38/images/malzahar_splash_tile_38.jpg"
+    },
+    {
+      "name": "Empyrean",
+      "tilePath": "/malzahar/skins/skin39/images/malzahar_splash_tile_39.jpg"
+    },
+    {
+      "name": "Fatebreaker",
+      "tilePath": "/malzahar/skins/skin49/images/malzahar_splash_tile_49.skins_malzahar_skin49.jpg"
+    }
+  ],
+  "Maokai": [
+    {
+      "name": "Original",
+      "tilePath": "/maokai/skins/base/images/maokai_splash_tile_0.jpg"
+    },
+    {
+      "name": "Charred",
+      "tilePath": "/maokai/skins/skin01/images/maokai_splash_tile_1.jpg"
+    },
+    {
+      "name": "Totemic",
+      "tilePath": "/maokai/skins/skin02/images/maokai_splash_tile_2.jpg"
+    },
+    {
+      "name": "Festive",
+      "tilePath": "/maokai/skins/skin03/images/maokai_splash_tile_3.jpg"
+    },
+    {
+      "name": "Haunted",
+      "tilePath": "/maokai/skins/skin04/images/maokai_splash_tile_4.jpg"
+    },
+    {
+      "name": "Goalkeeper",
+      "tilePath": "/maokai/skins/skin05/images/maokai_splash_tile_5.jpg"
+    },
+    {
+      "name": "Meowkai",
+      "tilePath": "/maokai/skins/skin06/images/maokai_splash_tile_6.jpg"
+    },
+    {
+      "name": "Victorious",
+      "tilePath": "/maokai/skins/skin07/images/maokai_splash_tile_7.jpg"
+    },
+    {
+      "name": "Worldbreaker",
+      "tilePath": "/maokai/skins/skin16/images/maokai_splash_tile_16.jpg"
+    },
+    {
+      "name": "Astronaut",
+      "tilePath": "/maokai/skins/skin24/images/maokai_splash_tile_24.jpg"
+    },
+    {
+      "name": "DRX",
+      "tilePath": "/maokai/skins/skin33/images/maokai_splash_tile_33.jpg"
+    }
+  ],
+  "MasterYi": [
+    {
+      "name": "Original",
+      "tilePath": "/masteryi/skins/base/images/masteryi_splash_tile_0.jpg"
+    },
+    {
+      "name": "Assassin",
+      "tilePath": "/masteryi/skins/skin01/images/masteryi_splash_tile_1.jpg"
+    },
+    {
+      "name": "Chosen",
+      "tilePath": "/masteryi/skins/skin02/images/masteryi_splash_tile_2.jpg"
+    },
+    {
+      "name": "Ionia",
+      "tilePath": "/masteryi/skins/skin03/images/masteryi_splash_tile_3.jpg"
+    },
+    {
+      "name": "Samurai Yi",
+      "tilePath": "/masteryi/skins/skin04/images/masteryi_splash_tile_4.jpg"
+    },
+    {
+      "name": "Headhunter",
+      "tilePath": "/masteryi/skins/skin05/images/masteryi_splash_tile_5.jpg"
+    },
+    {
+      "name": "PROJECT Yi",
+      "tilePath": "/masteryi/skins/skin09/images/masteryi_splash_tile_9.jpg"
+    },
+    {
+      "name": "Cosmic Blade",
+      "tilePath": "/masteryi/skins/skin10/images/masteryi_splash_tile_10.jpg"
+    },
+    {
+      "name": "Eternal Sword Yi",
+      "tilePath": "/masteryi/skins/skin11/images/masteryi_splash_tile_11.jpg"
+    },
+    {
+      "name": "Snow Man Yi",
+      "tilePath": "/masteryi/skins/skin17/images/masteryi_splash_tile_17.jpg"
+    },
+    {
+      "name": "Blood Moon",
+      "tilePath": "/masteryi/skins/skin24/images/masteryi_splash_tile_24.jpg"
+    },
+    {
+      "name": "PsyOps",
+      "tilePath": "/masteryi/skins/skin33/images/masteryi_splash_tile_33.jpg"
+    },
+    {
+      "name": "Debonair",
+      "tilePath": "/masteryi/skins/skin42/images/masteryi_splash_tile_42.jpg"
+    },
+    {
+      "name": "Spirit Blossom",
+      "tilePath": "/masteryi/skins/skin52/images/masteryi_splash_tile_52.jpg"
+    },
+    {
+      "name": "Prestige Spirit Blossom",
+      "tilePath": "/masteryi/skins/skin53/images/masteryi_splash_tile_53.jpg"
+    },
+    {
+      "name": "Inkshadow",
+      "tilePath": "/masteryi/skins/skin89/images/masteryi_splash_tile_89.jpg"
+    },
+    {
+      "name": "Heavenscale",
+      "tilePath": "/masteryi/skins/skin96/images/masteryi_splash_tile_96.jpg"
+    },
+    {
+      "name": "Victorious",
+      "tilePath": "/masteryi/skins/skin106/images/masteryi_splash_tile_106.skins_masteryi_skin106.jpg"
+    }
+  ],
+  "Mel": [
+    {
+      "name": "Original",
+      "tilePath": "/mel/skins/base/images/mel_splash_tile_0.mel.jpg"
+    },
+    {
+      "name": "Arcane Councilor",
+      "tilePath": "/mel/skins/skin01/images/mel_splash_tile_1.mel.jpg"
+    }
+  ],
+  "Milio": [
+    {
+      "name": "Original",
+      "tilePath": "/milio/skins/base/images/milio_splash_tile_0.jpg"
+    },
+    {
+      "name": "Faerie Court",
+      "tilePath": "/milio/skins/skin01/images/milio_splash_tile_1.jpg"
+    },
+    {
+      "name": "Rain Shepherd",
+      "tilePath": "/milio/skins/skin11/images/milio_splash_tile_11.skins_milio_skin11.jpg"
+    }
+  ],
+  "MissFortune": [
+    {
+      "name": "Original",
+      "tilePath": "/missfortune/skins/base/images/missfortune_splash_tile_0.jpg"
+    },
+    {
+      "name": "Cowgirl",
+      "tilePath": "/missfortune/skins/skin01/images/missfortune_splash_tile_1.jpg"
+    },
+    {
+      "name": "Waterloo",
+      "tilePath": "/missfortune/skins/skin02/images/missfortune_splash_tile_2.jpg"
+    },
+    {
+      "name": "Secret Agent",
+      "tilePath": "/missfortune/skins/skin03/images/missfortune_splash_tile_3.jpg"
+    },
+    {
+      "name": "Candy Cane",
+      "tilePath": "/missfortune/skins/skin04/images/missfortune_splash_tile_4.jpg"
+    },
+    {
+      "name": "Road Warrior",
+      "tilePath": "/missfortune/skins/skin05/images/missfortune_splash_tile_5.jpg"
+    },
+    {
+      "name": "Crime City",
+      "tilePath": "/missfortune/skins/skin06/images/missfortune_splash_tile_6.jpg"
+    },
+    {
+      "name": "Arcade",
+      "tilePath": "/missfortune/skins/skin07/images/missfortune_splash_tile_7.jpg"
+    },
+    {
+      "name": "Captain Fortune",
+      "tilePath": "/missfortune/skins/skin08/images/missfortune_splash_tile_8.jpg"
+    },
+    {
+      "name": "Pool Party",
+      "tilePath": "/missfortune/skins/skin09/images/missfortune_splash_tile_9.jpg"
+    },
+    {
+      "name": "Star Guardian",
+      "tilePath": "/missfortune/skins/skin15/images/missfortune_splash_tile_15.jpg"
+    },
+    {
+      "name": "Gun Goddess",
+      "tilePath": "/missfortune/skins/skin16/images/missfortune_splash_tile_16.jpg"
+    },
+    {
+      "name": "Pajama Guardian",
+      "tilePath": "/missfortune/skins/skin17/images/missfortune_splash_tile_17.jpg"
+    },
+    {
+      "name": "Bewitching",
+      "tilePath": "/missfortune/skins/skin18/images/missfortune_splash_tile_18.jpg"
+    },
+    {
+      "name": "Prestige Bewitching",
+      "tilePath": "/missfortune/skins/skin20/images/missfortune_splash_tile_20.jpg"
+    },
+    {
+      "name": "Ruined",
+      "tilePath": "/missfortune/skins/skin21/images/missfortune_splash_tile_21.jpg"
+    },
+    {
+      "name": "Battle Bunny",
+      "tilePath": "/missfortune/skins/skin31/images/missfortune_splash_tile_31.jpg"
+    },
+    {
+      "name": "Prestige Bewitching (2022)",
+      "tilePath": "/missfortune/skins/skin20/images/missfortune_splash_tile_20.jpg"
+    },
+    {
+      "name": "Broken Covenant",
+      "tilePath": "/missfortune/skins/skin40/images/missfortune_splash_tile_40.jpg"
+    },
+    {
+      "name": "Prestige Broken Covenant",
+      "tilePath": "/missfortune/skins/skin41/images/missfortune_splash_tile_41.jpg"
+    },
+    {
+      "name": "Porcelain",
+      "tilePath": "/missfortune/skins/skin50/images/missfortune_splash_tile_50.jpg"
+    },
+    {
+      "name": "Admiral Battle Bunny",
+      "tilePath": "/missfortune/skins/skin32/images/missfortune_splash_tile_32.skins_missfortune_skin32.jpg"
+    },
+    {
+      "name": "Battle Queen",
+      "tilePath": "/missfortune/skins/skin60/images/missfortune_splash_tile_60.skins_missfortune_skin60.jpg"
+    }
+  ],
+  "Mordekaiser": [
+    {
+      "name": "Original",
+      "tilePath": "/mordekaiser/skins/base/images/mordekaiser_splash_tile_0.jpg"
+    },
+    {
+      "name": "Dragon Knight",
+      "tilePath": "/mordekaiser/skins/skin01/images/mordekaiser_splash_tile_1.jpg"
+    },
+    {
+      "name": "Infernal",
+      "tilePath": "/mordekaiser/skins/skin02/images/mordekaiser_splash_tile_2.jpg"
+    },
+    {
+      "name": "Pentakill",
+      "tilePath": "/mordekaiser/skins/skin03/images/mordekaiser_splash_tile_3.jpg"
+    },
+    {
+      "name": "Lord",
+      "tilePath": "/mordekaiser/skins/skin04/images/mordekaiser_splash_tile_4.jpg"
+    },
+    {
+      "name": "King of Clubs",
+      "tilePath": "/mordekaiser/skins/skin05/images/mordekaiser_splash_tile_5.jpg"
+    },
+    {
+      "name": "Dark Star",
+      "tilePath": "/mordekaiser/skins/skin06/images/mordekaiser_splash_tile_6.jpg"
+    },
+    {
+      "name": "PROJECT",
+      "tilePath": "/mordekaiser/skins/skin13/images/mordekaiser_splash_tile_13.jpg"
+    },
+    {
+      "name": "Pentakill Lost Chapter",
+      "tilePath": "/mordekaiser/skins/skin23/images/mordekaiser_splash_tile_23.jpg"
+    },
+    {
+      "name": "High Noon",
+      "tilePath": "/mordekaiser/skins/skin32/images/mordekaiser_splash_tile_32.jpg"
+    },
+    {
+      "name": "Ashen Graveknight",
+      "tilePath": "/mordekaiser/skins/skin42/images/mordekaiser_splash_tile_42.jpg"
+    },
+    {
+      "name": "Old God",
+      "tilePath": "/mordekaiser/skins/skin44/images/mordekaiser_splash_tile_44.jpg"
+    },
+    {
+      "name": "Sahn-Uzal",
+      "tilePath": "/mordekaiser/skins/skin54/images/mordekaiser_splash_tile_54.skins_mordekaiser_skin54.jpg"
+    }
+  ],
+  "Morgana": [
+    {
+      "name": "Original",
+      "tilePath": "/morgana/skins/base/images/morgana_splash_tile_0.jpg"
+    },
+    {
+      "name": "Exiled",
+      "tilePath": "/morgana/skins/skin01/images/morgana_splash_tile_1.jpg"
+    },
+    {
+      "name": "Sinful Succulence",
+      "tilePath": "/morgana/skins/skin02/images/morgana_splash_tile_2.jpg"
+    },
+    {
+      "name": "Blade Mistress",
+      "tilePath": "/morgana/skins/skin03/images/morgana_splash_tile_3.jpg"
+    },
+    {
+      "name": "Blackthorn",
+      "tilePath": "/morgana/skins/skin04/images/morgana_splash_tile_4.jpg"
+    },
+    {
+      "name": "Ghost Bride",
+      "tilePath": "/morgana/skins/skin05/images/morgana_splash_tile_5.jpg"
+    },
+    {
+      "name": "Victorious",
+      "tilePath": "/morgana/skins/skin06/images/morgana_splash_tile_6.jpg"
+    },
+    {
+      "name": "Lunar Wraith",
+      "tilePath": "/morgana/skins/skin10/images/morgana_splash_tile_10.jpg"
+    },
+    {
+      "name": "Bewitching",
+      "tilePath": "/morgana/skins/skin11/images/morgana_splash_tile_11.jpg"
+    },
+    {
+      "name": "Majestic Empress",
+      "tilePath": "/morgana/skins/skin17/images/morgana_splash_tile_17.jpg"
+    },
+    {
+      "name": "Coven",
+      "tilePath": "/morgana/skins/skin26/images/morgana_splash_tile_26.jpg"
+    },
+    {
+      "name": "Dawnbringer",
+      "tilePath": "/morgana/skins/skin39/images/morgana_splash_tile_39.jpg"
+    },
+    {
+      "name": "Prestige Bewitching",
+      "tilePath": "/morgana/skins/skin41/images/morgana_splash_tile_41.jpg"
+    },
+    {
+      "name": "Star Nemesis",
+      "tilePath": "/morgana/skins/skin50/images/morgana_splash_tile_50.jpg"
+    },
+    {
+      "name": "Snow Moon",
+      "tilePath": "/morgana/skins/skin60/images/morgana_splash_tile_60.jpg"
+    },
+    {
+      "name": "Porcelain",
+      "tilePath": "/morgana/skins/skin70/images/morgana_splash_tile_70.jpg"
+    }
+  ],
+  "Naafiri": [
+    {
+      "name": "Original",
+      "tilePath": "/naafiri/skins/base/images/naafiri_splash_tile_0.jpg"
+    },
+    {
+      "name": "Soul Fighter",
+      "tilePath": "/naafiri/skins/skin01/images/naafiri_splash_tile_1.jpg"
+    },
+    {
+      "name": "PROJECT",
+      "tilePath": "/naafiri/skins/skin11/images/naafiri_splash_tile_11.jpg"
+    },
+    {
+      "name": "Glizzy",
+      "tilePath": "/naafiri/skins/skin20/images/naafiri_splash_tile_20.skins_naafiri_skin20.jpg"
+    }
+  ],
+  "Nami": [
+    {
+      "name": "Original",
+      "tilePath": "/nami/skins/base/images/nami_splash_tile_0.jpg"
+    },
+    {
+      "name": "Koi",
+      "tilePath": "/nami/skins/skin01/images/nami_splash_tile_1.jpg"
+    },
+    {
+      "name": "River Spirit",
+      "tilePath": "/nami/skins/skin02/images/nami_splash_tile_2.jpg"
+    },
+    {
+      "name": "Urf the Nami-tee",
+      "tilePath": "/nami/skins/skin03/images/nami_splash_tile_3.jpg"
+    },
+    {
+      "name": "Deep Sea",
+      "tilePath": "/nami/skins/skin07/images/nami_splash_tile_7.jpg"
+    },
+    {
+      "name": "SKT T1",
+      "tilePath": "/nami/skins/skin08/images/nami_splash_tile_8.jpg"
+    },
+    {
+      "name": "Program",
+      "tilePath": "/nami/skins/skin09/images/nami_splash_tile_9.jpg"
+    },
+    {
+      "name": "Splendid Staff",
+      "tilePath": "/nami/skins/skin15/images/nami_splash_tile_15.jpg"
+    },
+    {
+      "name": "Cosmic Destiny",
+      "tilePath": "/nami/skins/skin24/images/nami_splash_tile_24.jpg"
+    },
+    {
+      "name": "Bewitching",
+      "tilePath": "/nami/skins/skin32/images/nami_splash_tile_32.jpg"
+    },
+    {
+      "name": "Space Groove",
+      "tilePath": "/nami/skins/skin41/images/nami_splash_tile_41.jpg"
+    },
+    {
+      "name": "Prestige Space Groove",
+      "tilePath": "/nami/skins/skin42/images/nami_splash_tile_42.jpg"
+    },
+    {
+      "name": "Coven",
+      "tilePath": "/nami/skins/skin51/images/nami_splash_tile_51.jpg"
+    },
+    {
+      "name": "Mythmaker",
+      "tilePath": "/nami/skins/skin58/images/nami_splash_tile_58.skins_nami_skin58.jpg"
+    }
+  ],
+  "Nasus": [
+    {
+      "name": "Original",
+      "tilePath": "/nasus/skins/base/images/nasus_splash_tile_0.jpg"
+    },
+    {
+      "name": "Galactic",
+      "tilePath": "/nasus/skins/skin01/images/nasus_splash_tile_1.jpg"
+    },
+    {
+      "name": "Pharaoh",
+      "tilePath": "/nasus/skins/skin02/images/nasus_splash_tile_2.jpg"
+    },
+    {
+      "name": "Dreadknight",
+      "tilePath": "/nasus/skins/skin03/images/nasus_splash_tile_3.jpg"
+    },
+    {
+      "name": "Riot K-9",
+      "tilePath": "/nasus/skins/skin04/images/nasus_splash_tile_4.jpg"
+    },
+    {
+      "name": "Infernal",
+      "tilePath": "/nasus/skins/skin05/images/nasus_splash_tile_5.jpg"
+    },
+    {
+      "name": "Archduke",
+      "tilePath": "/nasus/skins/skin06/images/nasus_splash_tile_6.jpg"
+    },
+    {
+      "name": "Worldbreaker",
+      "tilePath": "/nasus/skins/skin10/images/nasus_splash_tile_10.jpg"
+    },
+    {
+      "name": "Lunar Guardian",
+      "tilePath": "/nasus/skins/skin11/images/nasus_splash_tile_11.jpg"
+    },
+    {
+      "name": "Battlecast",
+      "tilePath": "/nasus/skins/skin16/images/nasus_splash_tile_16.jpg"
+    },
+    {
+      "name": "Space Groove",
+      "tilePath": "/nasus/skins/skin25/images/nasus_splash_tile_25.jpg"
+    },
+    {
+      "name": "Armored Titan",
+      "tilePath": "/nasus/skins/skin35/images/nasus_splash_tile_35.jpg"
+    },
+    {
+      "name": "Nightbringer",
+      "tilePath": "/nasus/skins/skin45/images/nasus_splash_tile_45.jpg"
+    },
+    {
+      "name": "Fatemaker",
+      "tilePath": "/nasus/skins/skin54/images/nasus_splash_tile_54.skins_nasus_skin54.jpg"
+    }
+  ],
+  "Nautilus": [
+    {
+      "name": "Original",
+      "tilePath": "/nautilus/skins/base/images/nautilus_splash_tile_0.jpg"
+    },
+    {
+      "name": "Abyssal",
+      "tilePath": "/nautilus/skins/skin01/images/nautilus_splash_tile_1.jpg"
+    },
+    {
+      "name": "Subterranean",
+      "tilePath": "/nautilus/skins/skin02/images/nautilus_splash_tile_2.jpg"
+    },
+    {
+      "name": "AstroNautilus",
+      "tilePath": "/nautilus/skins/skin03/images/nautilus_splash_tile_3.jpg"
+    },
+    {
+      "name": "Warden",
+      "tilePath": "/nautilus/skins/skin04/images/nautilus_splash_tile_4.jpg"
+    },
+    {
+      "name": "Worldbreaker",
+      "tilePath": "/nautilus/skins/skin05/images/nautilus_splash_tile_5.jpg"
+    },
+    {
+      "name": "Conqueror",
+      "tilePath": "/nautilus/skins/skin06/images/nautilus_splash_tile_6.jpg"
+    },
+    {
+      "name": "Shan Hai Scrolls",
+      "tilePath": "/nautilus/skins/skin09/images/nautilus_splash_tile_9.jpg"
+    },
+    {
+      "name": "Fright Night",
+      "tilePath": "/nautilus/skins/skin18/images/nautilus_splash_tile_18.jpg"
+    },
+    {
+      "name": "Cosmic Paladin",
+      "tilePath": "/nautilus/skins/skin27/images/nautilus_splash_tile_27.jpg"
+    },
+    {
+      "name": "Crystalis Indomitus",
+      "tilePath": "/nautilus/skins/skin36/images/nautilus_splash_tile_36.skins_nautilus_skin36.jpg"
+    }
+  ],
+  "Neeko": [
+    {
+      "name": "Original",
+      "tilePath": "/neeko/skins/base/images/neeko_splash_tile_0.jpg"
+    },
+    {
+      "name": "Winter Wonder",
+      "tilePath": "/neeko/skins/skin01/images/neeko_splash_tile_1.jpg"
+    },
+    {
+      "name": "Star Guardian",
+      "tilePath": "/neeko/skins/skin10/images/neeko_splash_tile_10.jpg"
+    },
+    {
+      "name": "Prestige Star Guardian",
+      "tilePath": "/neeko/skins/skin11/images/neeko_splash_tile_11.jpg"
+    },
+    {
+      "name": "Shan Hai Scrolls",
+      "tilePath": "/neeko/skins/skin12/images/neeko_splash_tile_12.jpg"
+    },
+    {
+      "name": "Prestige Star Guardian (2022)",
+      "tilePath": "/neeko/skins/skin11/images/neeko_splash_tile_11.jpg"
+    },
+    {
+      "name": "Bewitching",
+      "tilePath": "/neeko/skins/skin22/images/neeko_splash_tile_22.jpg"
+    },
+    {
+      "name": "Street Demons",
+      "tilePath": "/neeko/skins/skin31/images/neeko_splash_tile_31.jpg"
+    },
+    {
+      "name": "Cosplayer",
+      "tilePath": "/neeko/skins/skin40/images/neeko_splash_tile_40.skins_neeko_skin40.jpg"
+    }
+  ],
+  "Nidalee": [
+    {
+      "name": "Original",
+      "tilePath": "/nidalee/skins/base/images/nidalee_splash_tile_0.jpg"
+    },
+    {
+      "name": "Snow Bunny",
+      "tilePath": "/nidalee/skins/skin01/images/nidalee_splash_tile_1.jpg"
+    },
+    {
+      "name": "Leopard",
+      "tilePath": "/nidalee/skins/skin02/images/nidalee_splash_tile_2.jpg"
+    },
+    {
+      "name": "French Maid",
+      "tilePath": "/nidalee/skins/skin03/images/nidalee_splash_tile_3.jpg"
+    },
+    {
+      "name": "Pharaoh",
+      "tilePath": "/nidalee/skins/skin04/images/nidalee_splash_tile_4.jpg"
+    },
+    {
+      "name": "Bewitching",
+      "tilePath": "/nidalee/skins/skin05/images/nidalee_splash_tile_5.jpg"
+    },
+    {
+      "name": "Headhunter",
+      "tilePath": "/nidalee/skins/skin06/images/nidalee_splash_tile_6.jpg"
+    },
+    {
+      "name": "Warring Kingdoms",
+      "tilePath": "/nidalee/skins/skin07/images/nidalee_splash_tile_7.jpg"
+    },
+    {
+      "name": "Challenger",
+      "tilePath": "/nidalee/skins/skin08/images/nidalee_splash_tile_8.jpg"
+    },
+    {
+      "name": "Super Galaxy",
+      "tilePath": "/nidalee/skins/skin09/images/nidalee_splash_tile_9.jpg"
+    },
+    {
+      "name": "Dawnbringer",
+      "tilePath": "/nidalee/skins/skin11/images/nidalee_splash_tile_11.jpg"
+    },
+    {
+      "name": "Cosmic Huntress",
+      "tilePath": "/nidalee/skins/skin18/images/nidalee_splash_tile_18.jpg"
+    },
+    {
+      "name": "DWG",
+      "tilePath": "/nidalee/skins/skin27/images/nidalee_splash_tile_27.jpg"
+    },
+    {
+      "name": "Ocean Song",
+      "tilePath": "/nidalee/skins/skin29/images/nidalee_splash_tile_29.jpg"
+    },
+    {
+      "name": "Kittalee",
+      "tilePath": "/nidalee/skins/skin39/images/nidalee_splash_tile_39.jpg"
+    },
+    {
+      "name": "La Ilusión",
+      "tilePath": "/nidalee/skins/skin48/images/nidalee_splash_tile_48.jpg"
+    }
+  ],
+  "Nilah": [
+    {
+      "name": "Original",
+      "tilePath": "/nilah/skins/base/images/nilah_splash_tile_0.jpg"
+    },
+    {
+      "name": "Star Guardian",
+      "tilePath": "/nilah/skins/skin01/images/nilah_splash_tile_1.jpg"
+    },
+    {
+      "name": "Coven",
+      "tilePath": "/nilah/skins/skin11/images/nilah_splash_tile_11.jpg"
+    },
+    {
+      "name": "Inkshadow",
+      "tilePath": "/nilah/skins/skin21/images/nilah_splash_tile_21.skins_nilah_skin21.jpg"
+    }
+  ],
+  "Nocturne": [
+    {
+      "name": "Original",
+      "tilePath": "/nocturne/skins/base/images/nocturne_splash_tile_0.jpg"
+    },
+    {
+      "name": "Frozen Terror",
+      "tilePath": "/nocturne/skins/skin01/images/nocturne_splash_tile_1.jpg"
+    },
+    {
+      "name": "Void",
+      "tilePath": "/nocturne/skins/skin02/images/nocturne_splash_tile_2.jpg"
+    },
+    {
+      "name": "Ravager",
+      "tilePath": "/nocturne/skins/skin03/images/nocturne_splash_tile_3.jpg"
+    },
+    {
+      "name": "Haunting",
+      "tilePath": "/nocturne/skins/skin04/images/nocturne_splash_tile_4.jpg"
+    },
+    {
+      "name": "Eternum",
+      "tilePath": "/nocturne/skins/skin05/images/nocturne_splash_tile_5.jpg"
+    },
+    {
+      "name": "Cursed Revenant",
+      "tilePath": "/nocturne/skins/skin06/images/nocturne_splash_tile_6.jpg"
+    },
+    {
+      "name": "Old God",
+      "tilePath": "/nocturne/skins/skin07/images/nocturne_splash_tile_7.jpg"
+    },
+    {
+      "name": "Hextech",
+      "tilePath": "/nocturne/skins/skin16/images/nocturne_splash_tile_16.jpg"
+    },
+    {
+      "name": "Broken Covenant",
+      "tilePath": "/nocturne/skins/skin17/images/nocturne_splash_tile_17.jpg"
+    },
+    {
+      "name": "Empyrean",
+      "tilePath": "/nocturne/skins/skin26/images/nocturne_splash_tile_26.jpg"
+    }
+  ],
+  "Nunu": [
+    {
+      "name": "Original",
+      "tilePath": "/nunu/skins/base/images/nunu_splash_tile_0.jpg"
+    },
+    {
+      "name": "Sasquatch",
+      "tilePath": "/nunu/skins/skin01/images/nunu_splash_tile_1.jpg"
+    },
+    {
+      "name": "Workshop",
+      "tilePath": "/nunu/skins/skin02/images/nunu_splash_tile_2.jpg"
+    },
+    {
+      "name": "Grungy",
+      "tilePath": "/nunu/skins/skin03/images/nunu_splash_tile_3.jpg"
+    },
+    {
+      "name": "Nunu Bot",
+      "tilePath": "/nunu/skins/skin04/images/nunu_splash_tile_4.jpg"
+    },
+    {
+      "name": "Demolisher",
+      "tilePath": "/nunu/skins/skin05/images/nunu_splash_tile_5.jpg"
+    },
+    {
+      "name": "TPA",
+      "tilePath": "/nunu/skins/skin06/images/nunu_splash_tile_6.jpg"
+    },
+    {
+      "name": "Zombie",
+      "tilePath": "/nunu/skins/skin07/images/nunu_splash_tile_7.jpg"
+    },
+    {
+      "name": "Papercraft",
+      "tilePath": "/nunu/skins/skin08/images/nunu_splash_tile_8.jpg"
+    },
+    {
+      "name": "Space Groove",
+      "tilePath": "/nunu/skins/skin16/images/nunu_splash_tile_16.jpg"
+    },
+    {
+      "name": "Nunu & Beelump",
+      "tilePath": "/nunu/skins/skin26/images/nunu_splash_tile_26.jpg"
+    },
+    {
+      "name": "Cosmic Paladins",
+      "tilePath": "/nunu/skins/skin35/images/nunu_splash_tile_35.jpg"
+    },
+    {
+      "name": "Fright Night",
+      "tilePath": "/nunu/skins/skin44/images/nunu_splash_tile_44.skins_nunu_skin44.jpg"
+    }
+  ],
+  "Olaf": [
+    {
+      "name": "Original",
+      "tilePath": "/olaf/skins/base/images/olaf_splash_tile_0.jpg"
+    },
+    {
+      "name": "Forsaken",
+      "tilePath": "/olaf/skins/skin01/images/olaf_splash_tile_1.jpg"
+    },
+    {
+      "name": "Glacial",
+      "tilePath": "/olaf/skins/skin02/images/olaf_splash_tile_2.jpg"
+    },
+    {
+      "name": "Brolaf",
+      "tilePath": "/olaf/skins/skin03/images/olaf_splash_tile_3.jpg"
+    },
+    {
+      "name": "Pentakill",
+      "tilePath": "/olaf/skins/skin04/images/olaf_splash_tile_4.jpg"
+    },
+    {
+      "name": "Marauder",
+      "tilePath": "/olaf/skins/skin05/images/olaf_splash_tile_5.jpg"
+    },
+    {
+      "name": "Butcher",
+      "tilePath": "/olaf/skins/skin06/images/olaf_splash_tile_6.jpg"
+    },
+    {
+      "name": "SKT T1",
+      "tilePath": "/olaf/skins/skin15/images/olaf_splash_tile_15.jpg"
+    },
+    {
+      "name": "Dragonslayer",
+      "tilePath": "/olaf/skins/skin16/images/olaf_splash_tile_16.jpg"
+    },
+    {
+      "name": "Sentinel",
+      "tilePath": "/olaf/skins/skin25/images/olaf_splash_tile_25.jpg"
+    },
+    {
+      "name": "Pentakill Lost Chapter",
+      "tilePath": "/olaf/skins/skin35/images/olaf_splash_tile_35.jpg"
+    },
+    {
+      "name": "Infernal",
+      "tilePath": "/olaf/skins/skin44/images/olaf_splash_tile_44.skins_olaf_skin44.jpg"
+    }
+  ],
+  "Orianna": [
+    {
+      "name": "Original",
+      "tilePath": "/orianna/skins/base/images/orianna_splash_tile_0.jpg"
+    },
+    {
+      "name": "Gothic",
+      "tilePath": "/orianna/skins/skin01/images/orianna_splash_tile_1.jpg"
+    },
+    {
+      "name": "Sewn Chaos",
+      "tilePath": "/orianna/skins/skin02/images/orianna_splash_tile_2.jpg"
+    },
+    {
+      "name": "Bladecraft",
+      "tilePath": "/orianna/skins/skin03/images/orianna_splash_tile_3.jpg"
+    },
+    {
+      "name": "TPA",
+      "tilePath": "/orianna/skins/skin04/images/orianna_splash_tile_4.jpg"
+    },
+    {
+      "name": "Winter Wonder",
+      "tilePath": "/orianna/skins/skin05/images/orianna_splash_tile_5.jpg"
+    },
+    {
+      "name": "Heartseeker",
+      "tilePath": "/orianna/skins/skin06/images/orianna_splash_tile_6.jpg"
+    },
+    {
+      "name": "Dark Star",
+      "tilePath": "/orianna/skins/skin07/images/orianna_splash_tile_7.jpg"
+    },
+    {
+      "name": "Victorious",
+      "tilePath": "/orianna/skins/skin08/images/orianna_splash_tile_8.jpg"
+    },
+    {
+      "name": "Pool Party",
+      "tilePath": "/orianna/skins/skin11/images/orianna_splash_tile_11.jpg"
+    },
+    {
+      "name": "Orbeeanna",
+      "tilePath": "/orianna/skins/skin20/images/orianna_splash_tile_20.jpg"
+    },
+    {
+      "name": "Star Guardian",
+      "tilePath": "/orianna/skins/skin29/images/orianna_splash_tile_29.jpg"
+    },
+    {
+      "name": "T1",
+      "tilePath": "/orianna/skins/skin38/images/orianna_splash_tile_38.skins_orianna_skin38.jpg"
+    }
+  ],
+  "Ornn": [
+    {
+      "name": "Original",
+      "tilePath": "/ornn/skins/base/images/ornn_splash_tile_0.jpg"
+    },
+    {
+      "name": "Thunder Lord",
+      "tilePath": "/ornn/skins/skin01/images/ornn_splash_tile_1.jpg"
+    },
+    {
+      "name": "Elderwood",
+      "tilePath": "/ornn/skins/skin02/images/ornn_splash_tile_2.jpg"
+    },
+    {
+      "name": "Space Groove",
+      "tilePath": "/ornn/skins/skin11/images/ornn_splash_tile_11.jpg"
+    },
+    {
+      "name": "Choo-Choo",
+      "tilePath": "/ornn/skins/skin20/images/ornn_splash_tile_20.jpg"
+    }
+  ],
+  "Pantheon": [
+    {
+      "name": "Original",
+      "tilePath": "/pantheon/skins/base/images/pantheon_splash_tile_0.jpg"
+    },
+    {
+      "name": "Myrmidon",
+      "tilePath": "/pantheon/skins/skin01/images/pantheon_splash_tile_1.jpg"
+    },
+    {
+      "name": "Ruthless",
+      "tilePath": "/pantheon/skins/skin02/images/pantheon_splash_tile_2.jpg"
+    },
+    {
+      "name": "Perseus",
+      "tilePath": "/pantheon/skins/skin03/images/pantheon_splash_tile_3.jpg"
+    },
+    {
+      "name": "Full Metal",
+      "tilePath": "/pantheon/skins/skin04/images/pantheon_splash_tile_4.jpg"
+    },
+    {
+      "name": "Glaive Warrior",
+      "tilePath": "/pantheon/skins/skin05/images/pantheon_splash_tile_5.jpg"
+    },
+    {
+      "name": "Dragonslayer",
+      "tilePath": "/pantheon/skins/skin06/images/pantheon_splash_tile_6.jpg"
+    },
+    {
+      "name": "Zombie Slayer",
+      "tilePath": "/pantheon/skins/skin07/images/pantheon_splash_tile_7.jpg"
+    },
+    {
+      "name": "Baker",
+      "tilePath": "/pantheon/skins/skin08/images/pantheon_splash_tile_8.jpg"
+    },
+    {
+      "name": "Pulsefire",
+      "tilePath": "/pantheon/skins/skin16/images/pantheon_splash_tile_16.jpg"
+    },
+    {
+      "name": "Ruined",
+      "tilePath": "/pantheon/skins/skin25/images/pantheon_splash_tile_25.jpg"
+    },
+    {
+      "name": "Prestige Ascended",
+      "tilePath": "/pantheon/skins/skin26/images/pantheon_splash_tile_26.jpg"
+    },
+    {
+      "name": "Ashen Conqueror",
+      "tilePath": "/pantheon/skins/skin36/images/pantheon_splash_tile_36.jpg"
+    },
+    {
+      "name": "Chosen of the Wolf",
+      "tilePath": "/pantheon/skins/skin38/images/pantheon_splash_tile_38.skins_pantheon_skin38.jpg"
+    }
+  ],
+  "Poppy": [
+    {
+      "name": "Original",
+      "tilePath": "/poppy/skins/base/images/poppy_splash_tile_0.jpg"
+    },
+    {
+      "name": "Noxus",
+      "tilePath": "/poppy/skins/skin01/images/poppy_splash_tile_1.jpg"
+    },
+    {
+      "name": "Blacksmith",
+      "tilePath": "/poppy/skins/skin03/images/poppy_splash_tile_3.jpg"
+    },
+    {
+      "name": "Lollipoppy",
+      "tilePath": "/poppy/skins/skin02/images/poppy_splash_tile_2.jpg"
+    },
+    {
+      "name": "Ragdoll",
+      "tilePath": "/poppy/skins/skin04/images/poppy_splash_tile_4.jpg"
+    },
+    {
+      "name": "Battle Regalia",
+      "tilePath": "/poppy/skins/skin05/images/poppy_splash_tile_5.jpg"
+    },
+    {
+      "name": "Scarlet Hammer",
+      "tilePath": "/poppy/skins/skin06/images/poppy_splash_tile_6.jpg"
+    },
+    {
+      "name": "Star Guardian",
+      "tilePath": "/poppy/skins/skin07/images/poppy_splash_tile_7.jpg"
+    },
+    {
+      "name": "Snow Fawn",
+      "tilePath": "/poppy/skins/skin14/images/poppy_splash_tile_14.jpg"
+    },
+    {
+      "name": "Hextech",
+      "tilePath": "/poppy/skins/skin15/images/poppy_splash_tile_15.jpg"
+    },
+    {
+      "name": "Astronaut",
+      "tilePath": "/poppy/skins/skin16/images/poppy_splash_tile_16.jpg"
+    },
+    {
+      "name": "Bewitching",
+      "tilePath": "/poppy/skins/skin24/images/poppy_splash_tile_24.jpg"
+    },
+    {
+      "name": "Cafe Cuties",
+      "tilePath": "/poppy/skins/skin33/images/poppy_splash_tile_33.jpg"
+    }
+  ],
+  "Pyke": [
+    {
+      "name": "Original",
+      "tilePath": "/pyke/skins/base/images/pyke_splash_tile_0.jpg"
+    },
+    {
+      "name": "Sand Wraith",
+      "tilePath": "/pyke/skins/skin01/images/pyke_splash_tile_1.jpg"
+    },
+    {
+      "name": "Blood Moon",
+      "tilePath": "/pyke/skins/skin09/images/pyke_splash_tile_9.jpg"
+    },
+    {
+      "name": "PROJECT",
+      "tilePath": "/pyke/skins/skin16/images/pyke_splash_tile_16.jpg"
+    },
+    {
+      "name": "PsyOps",
+      "tilePath": "/pyke/skins/skin25/images/pyke_splash_tile_25.jpg"
+    },
+    {
+      "name": "Sentinel",
+      "tilePath": "/pyke/skins/skin34/images/pyke_splash_tile_34.jpg"
+    },
+    {
+      "name": "Ashen Knight",
+      "tilePath": "/pyke/skins/skin44/images/pyke_splash_tile_44.jpg"
+    },
+    {
+      "name": "Empyrean",
+      "tilePath": "/pyke/skins/skin45/images/pyke_splash_tile_45.jpg"
+    },
+    {
+      "name": "Soul Fighter",
+      "tilePath": "/pyke/skins/skin53/images/pyke_splash_tile_53.jpg"
+    },
+    {
+      "name": "Prestige Soul Fighter",
+      "tilePath": "/pyke/skins/skin54/images/pyke_splash_tile_54.jpg"
+    },
+    {
+      "name": "Fright Night",
+      "tilePath": "/pyke/skins/skin64/images/pyke_splash_tile_64.skins_pyke_skin64.jpg"
+    },
+    {
+      "name": "Inkshadow",
+      "tilePath": "/pyke/skins/skin74/images/pyke_splash_tile_74.skins_pyke_skin74.jpg"
+    }
+  ],
+  "Qiyana": [
+    {
+      "name": "Original",
+      "tilePath": "/qiyana/skins/base/images/qiyana_splash_tile_0.jpg"
+    },
+    {
+      "name": "Battle Boss",
+      "tilePath": "/qiyana/skins/skin01/images/qiyana_splash_tile_1.jpg"
+    },
+    {
+      "name": "True Damage",
+      "tilePath": "/qiyana/skins/skin02/images/qiyana_splash_tile_2.jpg"
+    },
+    {
+      "name": "Prestige True Damage",
+      "tilePath": "/qiyana/skins/skin10/images/qiyana_splash_tile_10.jpg"
+    },
+    {
+      "name": "Battle Queen",
+      "tilePath": "/qiyana/skins/skin11/images/qiyana_splash_tile_11.jpg"
+    },
+    {
+      "name": "Shockblade",
+      "tilePath": "/qiyana/skins/skin20/images/qiyana_splash_tile_20.jpg"
+    },
+    {
+      "name": "Prestige True Damage (2022)",
+      "tilePath": "/qiyana/skins/skin10/images/qiyana_splash_tile_10.jpg"
+    },
+    {
+      "name": "Lunar Empress",
+      "tilePath": "/qiyana/skins/skin30/images/qiyana_splash_tile_30.jpg"
+    },
+    {
+      "name": "La Ilusión",
+      "tilePath": "/qiyana/skins/skin40/images/qiyana_splash_tile_40.jpg"
+    },
+    {
+      "name": "Prestige Battle Academia",
+      "tilePath": "/qiyana/skins/skin50/images/qiyana_splash_tile_50.skins_qiyana_skin50.jpg"
+    }
+  ],
+  "Quinn": [
+    {
+      "name": "Original",
+      "tilePath": "/quinn/skins/base/images/quinn_splash_tile_0.jpg"
+    },
+    {
+      "name": "Phoenix",
+      "tilePath": "/quinn/skins/skin01/images/quinn_splash_tile_1.jpg"
+    },
+    {
+      "name": "Woad Scout",
+      "tilePath": "/quinn/skins/skin02/images/quinn_splash_tile_2.jpg"
+    },
+    {
+      "name": "Corsair",
+      "tilePath": "/quinn/skins/skin03/images/quinn_splash_tile_3.jpg"
+    },
+    {
+      "name": "Heartseeker",
+      "tilePath": "/quinn/skins/skin04/images/quinn_splash_tile_4.jpg"
+    },
+    {
+      "name": "Warden",
+      "tilePath": "/quinn/skins/skin05/images/quinn_splash_tile_5.jpg"
+    },
+    {
+      "name": "Star Guardian",
+      "tilePath": "/quinn/skins/skin14/images/quinn_splash_tile_14.jpg"
+    }
+  ],
+  "Rakan": [
+    {
+      "name": "Original",
+      "tilePath": "/rakan/skins/base/images/rakan_splash_tile_0.jpg"
+    },
+    {
+      "name": "Cosmic Dawn",
+      "tilePath": "/rakan/skins/skin01/images/rakan_splash_tile_1.jpg"
+    },
+    {
+      "name": "Sweetheart",
+      "tilePath": "/rakan/skins/skin02/images/rakan_splash_tile_2.jpg"
+    },
+    {
+      "name": "SSG",
+      "tilePath": "/rakan/skins/skin03/images/rakan_splash_tile_3.jpg"
+    },
+    {
+      "name": "iG",
+      "tilePath": "/rakan/skins/skin04/images/rakan_splash_tile_4.jpg"
+    },
+    {
+      "name": "Star Guardian",
+      "tilePath": "/rakan/skins/skin05/images/rakan_splash_tile_5.jpg"
+    },
+    {
+      "name": "Elderwood",
+      "tilePath": "/rakan/skins/skin09/images/rakan_splash_tile_9.jpg"
+    },
+    {
+      "name": "Arcana",
+      "tilePath": "/rakan/skins/skin18/images/rakan_splash_tile_18.jpg"
+    },
+    {
+      "name": "Broken Covenant",
+      "tilePath": "/rakan/skins/skin27/images/rakan_splash_tile_27.jpg"
+    },
+    {
+      "name": "Redeemed Star Guardian",
+      "tilePath": "/rakan/skins/skin36/images/rakan_splash_tile_36.jpg"
+    },
+    {
+      "name": "Dragonmancer",
+      "tilePath": "/rakan/skins/skin37/images/rakan_splash_tile_37.jpg"
+    },
+    {
+      "name": "Prestige Dragonmancer",
+      "tilePath": "/rakan/skins/skin38/images/rakan_splash_tile_38.jpg"
+    },
+    {
+      "name": "Battle Academia",
+      "tilePath": "/rakan/skins/skin47/images/rakan_splash_tile_47.skins_rakan_skin47.jpg"
+    }
+  ],
+  "Rammus": [
+    {
+      "name": "Original",
+      "tilePath": "/rammus/skins/base/images/rammus_splash_tile_0.jpg"
+    },
+    {
+      "name": "King",
+      "tilePath": "/rammus/skins/skin01/images/rammus_splash_tile_1.jpg"
+    },
+    {
+      "name": "Chrome",
+      "tilePath": "/rammus/skins/skin02/images/rammus_splash_tile_2.jpg"
+    },
+    {
+      "name": "Molten",
+      "tilePath": "/rammus/skins/skin03/images/rammus_splash_tile_3.jpg"
+    },
+    {
+      "name": "Freljord",
+      "tilePath": "/rammus/skins/skin04/images/rammus_splash_tile_4.jpg"
+    },
+    {
+      "name": "Ninja",
+      "tilePath": "/rammus/skins/skin05/images/rammus_splash_tile_5.jpg"
+    },
+    {
+      "name": "Full Metal",
+      "tilePath": "/rammus/skins/skin06/images/rammus_splash_tile_6.jpg"
+    },
+    {
+      "name": "Guardian of the Sands",
+      "tilePath": "/rammus/skins/skin07/images/rammus_splash_tile_7.jpg"
+    },
+    {
+      "name": "Sweeper",
+      "tilePath": "/rammus/skins/skin08/images/rammus_splash_tile_8.jpg"
+    },
+    {
+      "name": "Hextech",
+      "tilePath": "/rammus/skins/skin16/images/rammus_splash_tile_16.jpg"
+    },
+    {
+      "name": "Astronaut",
+      "tilePath": "/rammus/skins/skin17/images/rammus_splash_tile_17.jpg"
+    },
+    {
+      "name": "Durian Defender",
+      "tilePath": "/rammus/skins/skin26/images/rammus_splash_tile_26.jpg"
+    }
+  ],
+  "RekSai": [
+    {
+      "name": "Original",
+      "tilePath": "/reksai/skins/base/images/reksai_splash_tile_0.jpg"
+    },
+    {
+      "name": "Eternum",
+      "tilePath": "/reksai/skins/skin01/images/reksai_splash_tile_1.jpg"
+    },
+    {
+      "name": "Pool Party",
+      "tilePath": "/reksai/skins/skin02/images/reksai_splash_tile_2.jpg"
+    },
+    {
+      "name": "Blackfrost",
+      "tilePath": "/reksai/skins/skin09/images/reksai_splash_tile_9.jpg"
+    },
+    {
+      "name": "Elderwood",
+      "tilePath": "/reksai/skins/skin17/images/reksai_splash_tile_17.jpg"
+    },
+    {
+      "name": "Primordian",
+      "tilePath": "/reksai/skins/skin26/images/reksai_splash_tile_26.skins_reksai_skin26.jpg"
+    }
+  ],
+  "Rell": [
+    {
+      "name": "Original",
+      "tilePath": "/rell/skins/base/images/rell_splash_tile_0.jpg"
+    },
+    {
+      "name": "Battle Queen",
+      "tilePath": "/rell/skins/skin01/images/rell_splash_tile_1.jpg"
+    },
+    {
+      "name": "Star Guardian",
+      "tilePath": "/rell/skins/skin10/images/rell_splash_tile_10.jpg"
+    },
+    {
+      "name": "High Noon",
+      "tilePath": "/rell/skins/skin20/images/rell_splash_tile_20.jpg"
+    },
+    {
+      "name": "Grand Reckoning",
+      "tilePath": "/rell/skins/skin30/images/rell_splash_tile_30.skins_rell_skin30.jpg"
+    }
+  ],
+  "Renata": [
+    {
+      "name": "Original",
+      "tilePath": "/renata/skins/base/images/renata_splash_tile_0.jpg"
+    },
+    {
+      "name": "Admiral Glasc",
+      "tilePath": "/renata/skins/skin01/images/renata_splash_tile_1.jpg"
+    },
+    {
+      "name": "Fright Night",
+      "tilePath": "/renata/skins/skin10/images/renata_splash_tile_10.jpg"
+    },
+    {
+      "name": "La Ilusión",
+      "tilePath": "/renata/skins/skin20/images/renata_splash_tile_20.jpg"
+    },
+    {
+      "name": "Prestige La Ilusión",
+      "tilePath": "/renata/skins/skin21/images/renata_splash_tile_21.jpg"
+    },
+    {
+      "name": "Masque of the Black Rose",
+      "tilePath": "/renata/skins/skin31/images/renata_splash_tile_31.skins_renata_care_skin31.jpg"
+    }
+  ],
+  "Renekton": [
+    {
+      "name": "Original",
+      "tilePath": "/renekton/skins/base/images/renekton_splash_tile_0.jpg"
+    },
+    {
+      "name": "Galactic",
+      "tilePath": "/renekton/skins/skin01/images/renekton_splash_tile_1.jpg"
+    },
+    {
+      "name": "Outback",
+      "tilePath": "/renekton/skins/skin02/images/renekton_splash_tile_2.jpg"
+    },
+    {
+      "name": "Bloodfury",
+      "tilePath": "/renekton/skins/skin03/images/renekton_splash_tile_3.jpg"
+    },
+    {
+      "name": "Rune Wars",
+      "tilePath": "/renekton/skins/skin04/images/renekton_splash_tile_4.jpg"
+    },
+    {
+      "name": "Pool Party",
+      "tilePath": "/renekton/skins/skin06/images/renekton_splash_tile_6.jpg"
+    },
+    {
+      "name": "Scorched Earth",
+      "tilePath": "/renekton/skins/skin05/images/renekton_splash_tile_5.jpg"
+    },
+    {
+      "name": "Prehistoric",
+      "tilePath": "/renekton/skins/skin07/images/renekton_splash_tile_7.jpg"
+    },
+    {
+      "name": "SKT T1",
+      "tilePath": "/renekton/skins/skin08/images/renekton_splash_tile_8.jpg"
+    },
+    {
+      "name": "Renektoy",
+      "tilePath": "/renekton/skins/skin09/images/renekton_splash_tile_9.jpg"
+    },
+    {
+      "name": "Hextech",
+      "tilePath": "/renekton/skins/skin17/images/renekton_splash_tile_17.jpg"
+    },
+    {
+      "name": "Blackfrost",
+      "tilePath": "/renekton/skins/skin18/images/renekton_splash_tile_18.jpg"
+    },
+    {
+      "name": "PROJECT",
+      "tilePath": "/renekton/skins/skin26/images/renekton_splash_tile_26.jpg"
+    },
+    {
+      "name": "Dawnbringer",
+      "tilePath": "/renekton/skins/skin33/images/renekton_splash_tile_33.jpg"
+    },
+    {
+      "name": "Worlds 2023",
+      "tilePath": "/renekton/skins/skin42/images/renekton_splash_tile_42.jpg"
+    },
+    {
+      "name": "Inkshadow",
+      "tilePath": "/renekton/skins/skin48/images/renekton_splash_tile_48.skins_renekton_skin48.jpg"
+    }
+  ],
+  "Rengar": [
+    {
+      "name": "Original",
+      "tilePath": "/rengar/skins/base/images/rengar_splash_tile_0.jpg"
+    },
+    {
+      "name": "Headhunter",
+      "tilePath": "/rengar/skins/skin01/images/rengar_splash_tile_1.jpg"
+    },
+    {
+      "name": "Night Hunter",
+      "tilePath": "/rengar/skins/skin02/images/rengar_splash_tile_2.jpg"
+    },
+    {
+      "name": "SSW",
+      "tilePath": "/rengar/skins/skin03/images/rengar_splash_tile_3.jpg"
+    },
+    {
+      "name": "Mecha",
+      "tilePath": "/rengar/skins/skin08/images/rengar_splash_tile_8.jpg"
+    },
+    {
+      "name": "Pretty Kitty",
+      "tilePath": "/rengar/skins/skin15/images/rengar_splash_tile_15.jpg"
+    },
+    {
+      "name": "Guardian of the Sands",
+      "tilePath": "/rengar/skins/skin23/images/rengar_splash_tile_23.jpg"
+    },
+    {
+      "name": "Sentinel",
+      "tilePath": "/rengar/skins/skin30/images/rengar_splash_tile_30.jpg"
+    },
+    {
+      "name": "Street Demons",
+      "tilePath": "/rengar/skins/skin40/images/rengar_splash_tile_40.jpg"
+    }
+  ],
+  "Riven": [
+    {
+      "name": "Original",
+      "tilePath": "/riven/skins/base/images/riven_splash_tile_0.jpg"
+    },
+    {
+      "name": "Redeemed",
+      "tilePath": "/riven/skins/skin01/images/riven_splash_tile_1.jpg"
+    },
+    {
+      "name": "Crimson Elite",
+      "tilePath": "/riven/skins/skin02/images/riven_splash_tile_2.jpg"
+    },
+    {
+      "name": "Battle Bunny",
+      "tilePath": "/riven/skins/skin03/images/riven_splash_tile_3.jpg"
+    },
+    {
+      "name": "Worlds 2012",
+      "tilePath": "/riven/skins/skin04/images/riven_splash_tile_4.jpg"
+    },
+    {
+      "name": "Dragonblade",
+      "tilePath": "/riven/skins/skin05/images/riven_splash_tile_5.jpg"
+    },
+    {
+      "name": "Arcade",
+      "tilePath": "/riven/skins/skin06/images/riven_splash_tile_6.jpg"
+    },
+    {
+      "name": "Reignited Worlds 2012",
+      "tilePath": "/riven/skins/skin07/images/riven_splash_tile_7.jpg"
+    },
+    {
+      "name": "Dawnbringer",
+      "tilePath": "/riven/skins/skin16/images/riven_splash_tile_16.jpg"
+    },
+    {
+      "name": "Pulsefire",
+      "tilePath": "/riven/skins/skin18/images/riven_splash_tile_18.jpg"
+    },
+    {
+      "name": "Valiant Sword",
+      "tilePath": "/riven/skins/skin20/images/riven_splash_tile_20.jpg"
+    },
+    {
+      "name": "Prestige Valiant Sword",
+      "tilePath": "/riven/skins/skin22/images/riven_splash_tile_22.jpg"
+    },
+    {
+      "name": "Spirit Blossom",
+      "tilePath": "/riven/skins/skin23/images/riven_splash_tile_23.jpg"
+    },
+    {
+      "name": "Sentinel",
+      "tilePath": "/riven/skins/skin34/images/riven_splash_tile_34.jpg"
+    },
+    {
+      "name": "Battle Bunny Prime",
+      "tilePath": "/riven/skins/skin44/images/riven_splash_tile_44.jpg"
+    },
+    {
+      "name": "Prestige Valiant Sword (2022)",
+      "tilePath": "/riven/skins/skin22/images/riven_splash_tile_22.jpg"
+    },
+    {
+      "name": "Broken Covenant",
+      "tilePath": "/riven/skins/skin55/images/riven_splash_tile_55.jpg"
+    },
+    {
+      "name": "Primal Ambush",
+      "tilePath": "/riven/skins/skin63/images/riven_splash_tile_63.jpg"
+    }
+  ],
+  "Rumble": [
+    {
+      "name": "Original",
+      "tilePath": "/rumble/skins/base/images/rumble_splash_tile_0.jpg"
+    },
+    {
+      "name": "Bilgerat",
+      "tilePath": "/rumble/skins/skin02/images/rumble_splash_tile_2.jpg"
+    },
+    {
+      "name": "Rumble in the Jungle",
+      "tilePath": "/rumble/skins/skin01/images/rumble_splash_tile_1.jpg"
+    },
+    {
+      "name": "Super Galaxy",
+      "tilePath": "/rumble/skins/skin03/images/rumble_splash_tile_3.jpg"
+    },
+    {
+      "name": "Badlands Baron",
+      "tilePath": "/rumble/skins/skin04/images/rumble_splash_tile_4.jpg"
+    },
+    {
+      "name": "Space Groove",
+      "tilePath": "/rumble/skins/skin13/images/rumble_splash_tile_13.jpg"
+    },
+    {
+      "name": "Cafe Cuties",
+      "tilePath": "/rumble/skins/skin23/images/rumble_splash_tile_23.jpg"
+    }
+  ],
+  "Ryze": [
+    {
+      "name": "Original",
+      "tilePath": "/ryze/skins/base/images/ryze_splash_tile_0.jpg"
+    },
+    {
+      "name": "Young",
+      "tilePath": "/ryze/skins/skin01/images/ryze_splash_tile_1.jpg"
+    },
+    {
+      "name": "Tribal",
+      "tilePath": "/ryze/skins/skin02/images/ryze_splash_tile_2.jpg"
+    },
+    {
+      "name": "Uncle",
+      "tilePath": "/ryze/skins/skin03/images/ryze_splash_tile_3.jpg"
+    },
+    {
+      "name": "Triumphant",
+      "tilePath": "/ryze/skins/skin04/images/ryze_splash_tile_4.jpg"
+    },
+    {
+      "name": "Professor",
+      "tilePath": "/ryze/skins/skin05/images/ryze_splash_tile_5.jpg"
+    },
+    {
+      "name": "Zombie",
+      "tilePath": "/ryze/skins/skin06/images/ryze_splash_tile_6.jpg"
+    },
+    {
+      "name": "Dark Crystal",
+      "tilePath": "/ryze/skins/skin07/images/ryze_splash_tile_7.jpg"
+    },
+    {
+      "name": "Pirate",
+      "tilePath": "/ryze/skins/skin08/images/ryze_splash_tile_8.jpg"
+    },
+    {
+      "name": "Ryze Whitebeard",
+      "tilePath": "/ryze/skins/skin09/images/ryze_splash_tile_9.jpg"
+    },
+    {
+      "name": "SKT T1",
+      "tilePath": "/ryze/skins/skin10/images/ryze_splash_tile_10.jpg"
+    },
+    {
+      "name": "Worlds 2019",
+      "tilePath": "/ryze/skins/skin11/images/ryze_splash_tile_11.jpg"
+    },
+    {
+      "name": "Guardian of the Sands",
+      "tilePath": "/ryze/skins/skin13/images/ryze_splash_tile_13.jpg"
+    },
+    {
+      "name": "Arcana",
+      "tilePath": "/ryze/skins/skin20/images/ryze_splash_tile_20.jpg"
+    },
+    {
+      "name": "Blood Moon",
+      "tilePath": "/ryze/skins/skin29/images/ryze_splash_tile_29.skins_ryze_skin29.jpg"
+    }
+  ],
+  "Samira": [
+    {
+      "name": "Original",
+      "tilePath": "/samira/skins/base/images/samira_splash_tile_0.jpg"
+    },
+    {
+      "name": "PsyOps",
+      "tilePath": "/samira/skins/skin01/images/samira_splash_tile_1.jpg"
+    },
+    {
+      "name": "Space Groove",
+      "tilePath": "/samira/skins/skin10/images/samira_splash_tile_10.jpg"
+    },
+    {
+      "name": "High Noon",
+      "tilePath": "/samira/skins/skin20/images/samira_splash_tile_20.jpg"
+    },
+    {
+      "name": "Soul Fighter",
+      "tilePath": "/samira/skins/skin30/images/samira_splash_tile_30.jpg"
+    },
+    {
+      "name": "Masque of the Black Rose",
+      "tilePath": "/samira/skins/skin33/images/samira_splash_tile_33.skins_samira_care_skin33.jpg"
+    }
+  ],
+  "Sejuani": [
+    {
+      "name": "Original",
+      "tilePath": "/sejuani/skins/base/images/sejuani_splash_tile_0.jpg"
+    },
+    {
+      "name": "Sabretusk",
+      "tilePath": "/sejuani/skins/skin01/images/sejuani_splash_tile_1.jpg"
+    },
+    {
+      "name": "Darkrider",
+      "tilePath": "/sejuani/skins/skin02/images/sejuani_splash_tile_2.jpg"
+    },
+    {
+      "name": "Traditional",
+      "tilePath": "/sejuani/skins/skin03/images/sejuani_splash_tile_3.jpg"
+    },
+    {
+      "name": "Bear Cavalry",
+      "tilePath": "/sejuani/skins/skin04/images/sejuani_splash_tile_4.jpg"
+    },
+    {
+      "name": "Poro Rider",
+      "tilePath": "/sejuani/skins/skin05/images/sejuani_splash_tile_5.jpg"
+    },
+    {
+      "name": "Beast Hunter",
+      "tilePath": "/sejuani/skins/skin06/images/sejuani_splash_tile_6.jpg"
+    },
+    {
+      "name": "Sejuani Dawnchaser",
+      "tilePath": "/sejuani/skins/skin07/images/sejuani_splash_tile_7.jpg"
+    },
+    {
+      "name": "Firecracker",
+      "tilePath": "/sejuani/skins/skin08/images/sejuani_splash_tile_8.jpg"
+    },
+    {
+      "name": "Hextech",
+      "tilePath": "/sejuani/skins/skin15/images/sejuani_splash_tile_15.jpg"
+    },
+    {
+      "name": "PROJECT",
+      "tilePath": "/sejuani/skins/skin16/images/sejuani_splash_tile_16.jpg"
+    },
+    {
+      "name": "Solar Eclipse",
+      "tilePath": "/sejuani/skins/skin26/images/sejuani_splash_tile_26.jpg"
+    },
+    {
+      "name": "Victorious",
+      "tilePath": "/sejuani/skins/skin36/images/sejuani_splash_tile_36.jpg"
+    }
+  ],
+  "Senna": [
+    {
+      "name": "Original",
+      "tilePath": "/senna/skins/base/images/senna_splash_tile_0.jpg"
+    },
+    {
+      "name": "True Damage",
+      "tilePath": "/senna/skins/skin01/images/senna_splash_tile_1.jpg"
+    },
+    {
+      "name": "Prestige True Damage",
+      "tilePath": "/senna/skins/skin09/images/senna_splash_tile_9.jpg"
+    },
+    {
+      "name": "High Noon",
+      "tilePath": "/senna/skins/skin10/images/senna_splash_tile_10.jpg"
+    },
+    {
+      "name": "PROJECT",
+      "tilePath": "/senna/skins/skin16/images/senna_splash_tile_16.jpg"
+    },
+    {
+      "name": "Lunar Eclipse",
+      "tilePath": "/senna/skins/skin26/images/senna_splash_tile_26.jpg"
+    },
+    {
+      "name": "Prestige Lunar Eclipse",
+      "tilePath": "/senna/skins/skin27/images/senna_splash_tile_27.jpg"
+    },
+    {
+      "name": "Bewitching",
+      "tilePath": "/senna/skins/skin36/images/senna_splash_tile_36.jpg"
+    },
+    {
+      "name": "Star Guardian",
+      "tilePath": "/senna/skins/skin46/images/senna_splash_tile_46.jpg"
+    },
+    {
+      "name": "Winterblessed",
+      "tilePath": "/senna/skins/skin56/images/senna_splash_tile_56.jpg"
+    },
+    {
+      "name": "Masked Justice",
+      "tilePath": "/senna/skins/skin63/images/senna_splash_tile_63.skins_senna_skin63.jpg"
+    }
+  ],
+  "Seraphine": [
+    {
+      "name": "Original",
+      "tilePath": "/seraphine/skins/base/images/seraphine_splash_tile_0.jpg"
+    },
+    {
+      "name": "KDA ALL OUT Indie",
+      "tilePath": "/seraphine/skins/skin01/images/seraphine_splash_tile_1.jpg"
+    },
+    {
+      "name": "Graceful Phoenix",
+      "tilePath": "/seraphine/skins/skin04/images/seraphine_splash_tile_4.jpg"
+    },
+    {
+      "name": "Ocean Song",
+      "tilePath": "/seraphine/skins/skin14/images/seraphine_splash_tile_14.jpg"
+    },
+    {
+      "name": "Prestige Ocean Song",
+      "tilePath": "/seraphine/skins/skin15/images/seraphine_splash_tile_15.jpg"
+    },
+    {
+      "name": "Faerie Court",
+      "tilePath": "/seraphine/skins/skin24/images/seraphine_splash_tile_24.jpg"
+    },
+    {
+      "name": "Star Guardian",
+      "tilePath": "/seraphine/skins/skin34/images/seraphine_splash_tile_34.jpg"
+    },
+    {
+      "name": "Battle Dove",
+      "tilePath": "/seraphine/skins/skin43/images/seraphine_splash_tile_43.skins_seraphine_skin43.jpg"
+    },
+    {
+      "name": "Dumpling Darlings",
+      "tilePath": "/seraphine/skins/skin50/images/seraphine_splash_tile_50.skins_seraphine_skin50.jpg"
+    }
+  ],
+  "Sett": [
+    {
+      "name": "Original",
+      "tilePath": "/sett/skins/base/images/sett_splash_tile_0.jpg"
+    },
+    {
+      "name": "Mecha Kingdoms",
+      "tilePath": "/sett/skins/skin01/images/sett_splash_tile_1.jpg"
+    },
+    {
+      "name": "Obsidian Dragon",
+      "tilePath": "/sett/skins/skin08/images/sett_splash_tile_8.jpg"
+    },
+    {
+      "name": "Prestige Obsidian Dragon",
+      "tilePath": "/sett/skins/skin09/images/sett_splash_tile_9.jpg"
+    },
+    {
+      "name": "Pool Party",
+      "tilePath": "/sett/skins/skin10/images/sett_splash_tile_10.jpg"
+    },
+    {
+      "name": "Firecracker",
+      "tilePath": "/sett/skins/skin19/images/sett_splash_tile_19.jpg"
+    },
+    {
+      "name": "Spirit Blossom",
+      "tilePath": "/sett/skins/skin38/images/sett_splash_tile_38.jpg"
+    },
+    {
+      "name": "Soul Fighter",
+      "tilePath": "/sett/skins/skin45/images/sett_splash_tile_45.jpg"
+    },
+    {
+      "name": "HEARTSTEEL",
+      "tilePath": "/sett/skins/skin56/images/sett_splash_tile_56.jpg"
+    },
+    {
+      "name": "Radiant Serpent",
+      "tilePath": "/sett/skins/skin66/images/sett_splash_tile_66.skins_sett_skin66.jpg"
+    }
+  ],
+  "Shaco": [
+    {
+      "name": "Original",
+      "tilePath": "/shaco/skins/base/images/shaco_splash_tile_0.jpg"
+    },
+    {
+      "name": "Mad Hatter",
+      "tilePath": "/shaco/skins/skin01/images/shaco_splash_tile_1.jpg"
+    },
+    {
+      "name": "Royal",
+      "tilePath": "/shaco/skins/skin02/images/shaco_splash_tile_2.jpg"
+    },
+    {
+      "name": "Nutcracko",
+      "tilePath": "/shaco/skins/skin03/images/shaco_splash_tile_3.jpg"
+    },
+    {
+      "name": "Workshop",
+      "tilePath": "/shaco/skins/skin04/images/shaco_splash_tile_4.jpg"
+    },
+    {
+      "name": "Asylum",
+      "tilePath": "/shaco/skins/skin05/images/shaco_splash_tile_5.jpg"
+    },
+    {
+      "name": "Masked",
+      "tilePath": "/shaco/skins/skin06/images/shaco_splash_tile_6.jpg"
+    },
+    {
+      "name": "Wild Card",
+      "tilePath": "/shaco/skins/skin07/images/shaco_splash_tile_7.jpg"
+    },
+    {
+      "name": "Dark Star",
+      "tilePath": "/shaco/skins/skin08/images/shaco_splash_tile_8.jpg"
+    },
+    {
+      "name": "Arcanist",
+      "tilePath": "/shaco/skins/skin15/images/shaco_splash_tile_15.jpg"
+    },
+    {
+      "name": "Crime City Nightmare",
+      "tilePath": "/shaco/skins/skin23/images/shaco_splash_tile_23.jpg"
+    },
+    {
+      "name": "Winterblessed",
+      "tilePath": "/shaco/skins/skin33/images/shaco_splash_tile_33.jpg"
+    },
+    {
+      "name": "Soul Fighter",
+      "tilePath": "/shaco/skins/skin43/images/shaco_splash_tile_43.jpg"
+    },
+    {
+      "name": "Prestige Soul Fighter",
+      "tilePath": "/shaco/skins/skin44/images/shaco_splash_tile_44.jpg"
+    },
+    {
+      "name": "Fright Night",
+      "tilePath": "/shaco/skins/skin54/images/shaco_splash_tile_54.skins_shaco_skin54.jpg"
+    },
+    {
+      "name": "Cat-in-the-Box",
+      "tilePath": "/shaco/skins/skin64/images/shaco_splash_tile_64.skins_shaco_skin64.jpg"
+    }
+  ],
+  "Shen": [
+    {
+      "name": "Original",
+      "tilePath": "/shen/skins/base/images/shen_splash_tile_0.jpg"
+    },
+    {
+      "name": "Frozen",
+      "tilePath": "/shen/skins/skin01/images/shen_splash_tile_1.jpg"
+    },
+    {
+      "name": "Yellow Jacket",
+      "tilePath": "/shen/skins/skin02/images/shen_splash_tile_2.jpg"
+    },
+    {
+      "name": "Surgeon",
+      "tilePath": "/shen/skins/skin03/images/shen_splash_tile_3.jpg"
+    },
+    {
+      "name": "Blood Moon",
+      "tilePath": "/shen/skins/skin04/images/shen_splash_tile_4.jpg"
+    },
+    {
+      "name": "Warlord",
+      "tilePath": "/shen/skins/skin05/images/shen_splash_tile_5.jpg"
+    },
+    {
+      "name": "TPA",
+      "tilePath": "/shen/skins/skin06/images/shen_splash_tile_6.jpg"
+    },
+    {
+      "name": "Pulsefire",
+      "tilePath": "/shen/skins/skin15/images/shen_splash_tile_15.jpg"
+    },
+    {
+      "name": "Infernal",
+      "tilePath": "/shen/skins/skin16/images/shen_splash_tile_16.jpg"
+    },
+    {
+      "name": "PsyOps",
+      "tilePath": "/shen/skins/skin22/images/shen_splash_tile_22.jpg"
+    },
+    {
+      "name": "Shockblade",
+      "tilePath": "/shen/skins/skin40/images/shen_splash_tile_40.jpg"
+    },
+    {
+      "name": "Ashen Guardian",
+      "tilePath": "/shen/skins/skin49/images/shen_splash_tile_49.jpg"
+    },
+    {
+      "name": "Three Honors",
+      "tilePath": "/shen/skins/skin51/images/shen_splash_tile_51.skins_shen_skin51.jpg"
+    }
+  ],
+  "Shyvana": [
+    {
+      "name": "Original",
+      "tilePath": "/shyvana/skins/base/images/shyvana_splash_tile_0.jpg"
+    },
+    {
+      "name": "Ironscale",
+      "tilePath": "/shyvana/skins/skin01/images/shyvana_splash_tile_1.jpg"
+    },
+    {
+      "name": "Boneclaw",
+      "tilePath": "/shyvana/skins/skin02/images/shyvana_splash_tile_2.jpg"
+    },
+    {
+      "name": "Darkflame",
+      "tilePath": "/shyvana/skins/skin03/images/shyvana_splash_tile_3.jpg"
+    },
+    {
+      "name": "Ice Drake",
+      "tilePath": "/shyvana/skins/skin04/images/shyvana_splash_tile_4.jpg"
+    },
+    {
+      "name": "Worlds 2014",
+      "tilePath": "/shyvana/skins/skin05/images/shyvana_splash_tile_5.jpg"
+    },
+    {
+      "name": "Super Galaxy",
+      "tilePath": "/shyvana/skins/skin06/images/shyvana_splash_tile_6.jpg"
+    },
+    {
+      "name": "Ruined",
+      "tilePath": "/shyvana/skins/skin08/images/shyvana_splash_tile_8.jpg"
+    },
+    {
+      "name": "Immortal Journey",
+      "tilePath": "/shyvana/skins/skin17/images/shyvana_splash_tile_17.jpg"
+    }
+  ],
+  "Singed": [
+    {
+      "name": "Original",
+      "tilePath": "/singed/skins/base/images/singed_splash_tile_0.jpg"
+    },
+    {
+      "name": "Riot Squad",
+      "tilePath": "/singed/skins/skin01/images/singed_splash_tile_1.jpg"
+    },
+    {
+      "name": "Hextech",
+      "tilePath": "/singed/skins/skin02/images/singed_splash_tile_2.jpg"
+    },
+    {
+      "name": "Surfer",
+      "tilePath": "/singed/skins/skin03/images/singed_splash_tile_3.jpg"
+    },
+    {
+      "name": "Mad Scientist",
+      "tilePath": "/singed/skins/skin04/images/singed_splash_tile_4.jpg"
+    },
+    {
+      "name": "Augmented",
+      "tilePath": "/singed/skins/skin05/images/singed_splash_tile_5.jpg"
+    },
+    {
+      "name": "Snow Day",
+      "tilePath": "/singed/skins/skin06/images/singed_splash_tile_6.jpg"
+    },
+    {
+      "name": "SSW",
+      "tilePath": "/singed/skins/skin07/images/singed_splash_tile_7.jpg"
+    },
+    {
+      "name": "Black Scourge",
+      "tilePath": "/singed/skins/skin08/images/singed_splash_tile_8.jpg"
+    },
+    {
+      "name": "Beekeeper",
+      "tilePath": "/singed/skins/skin09/images/singed_splash_tile_9.jpg"
+    },
+    {
+      "name": "Resistance",
+      "tilePath": "/singed/skins/skin10/images/singed_splash_tile_10.jpg"
+    },
+    {
+      "name": "Astronaut",
+      "tilePath": "/singed/skins/skin19/images/singed_splash_tile_19.jpg"
+    },
+    {
+      "name": "Arcane Shimmer Lab",
+      "tilePath": "/singed/skins/skin28/images/singed_splash_tile_28.skins_singed_skin28.jpg"
+    }
+  ],
+  "Sion": [
+    {
+      "name": "Original",
+      "tilePath": "/sion/skins/base/images/sion_splash_tile_0.jpg"
+    },
+    {
+      "name": "Hextech",
+      "tilePath": "/sion/skins/skin01/images/sion_splash_tile_1.jpg"
+    },
+    {
+      "name": "Barbarian",
+      "tilePath": "/sion/skins/skin02/images/sion_splash_tile_2.jpg"
+    },
+    {
+      "name": "Lumberjack",
+      "tilePath": "/sion/skins/skin03/images/sion_splash_tile_3.jpg"
+    },
+    {
+      "name": "Warmonger",
+      "tilePath": "/sion/skins/skin04/images/sion_splash_tile_4.jpg"
+    },
+    {
+      "name": "Mecha Zero",
+      "tilePath": "/sion/skins/skin05/images/sion_splash_tile_5.jpg"
+    },
+    {
+      "name": "Worldbreaker",
+      "tilePath": "/sion/skins/skin14/images/sion_splash_tile_14.jpg"
+    },
+    {
+      "name": "Blackfrost",
+      "tilePath": "/sion/skins/skin22/images/sion_splash_tile_22.jpg"
+    },
+    {
+      "name": "High Noon",
+      "tilePath": "/sion/skins/skin30/images/sion_splash_tile_30.jpg"
+    },
+    {
+      "name": "Cosmic Paladin",
+      "tilePath": "/sion/skins/skin40/images/sion_splash_tile_40.jpg"
+    },
+    {
+      "name": "Grand Reckoning",
+      "tilePath": "/sion/skins/skin49/images/sion_splash_tile_49.skins_sion_skin49.jpg"
+    }
+  ],
+  "Sivir": [
+    {
+      "name": "Original",
+      "tilePath": "/sivir/skins/base/images/sivir_splash_tile_0.jpg"
+    },
+    {
+      "name": "Warrior Princess",
+      "tilePath": "/sivir/skins/skin01/images/sivir_splash_tile_1.jpg"
+    },
+    {
+      "name": "Spectacular",
+      "tilePath": "/sivir/skins/skin02/images/sivir_splash_tile_2.jpg"
+    },
+    {
+      "name": "Huntress",
+      "tilePath": "/sivir/skins/skin03/images/sivir_splash_tile_3.jpg"
+    },
+    {
+      "name": "Bandit",
+      "tilePath": "/sivir/skins/skin04/images/sivir_splash_tile_4.jpg"
+    },
+    {
+      "name": "PAX",
+      "tilePath": "/sivir/skins/skin05/images/sivir_splash_tile_5.jpg"
+    },
+    {
+      "name": "Snowstorm",
+      "tilePath": "/sivir/skins/skin06/images/sivir_splash_tile_6.jpg"
+    },
+    {
+      "name": "Warden",
+      "tilePath": "/sivir/skins/skin07/images/sivir_splash_tile_7.jpg"
+    },
+    {
+      "name": "Victorious",
+      "tilePath": "/sivir/skins/skin08/images/sivir_splash_tile_8.jpg"
+    },
+    {
+      "name": "Neo PAX",
+      "tilePath": "/sivir/skins/skin09/images/sivir_splash_tile_9.jpg"
+    },
+    {
+      "name": "Pizza Delivery",
+      "tilePath": "/sivir/skins/skin10/images/sivir_splash_tile_10.jpg"
+    },
+    {
+      "name": "Blood Moon",
+      "tilePath": "/sivir/skins/skin16/images/sivir_splash_tile_16.jpg"
+    },
+    {
+      "name": "Odyssey",
+      "tilePath": "/sivir/skins/skin25/images/sivir_splash_tile_25.jpg"
+    },
+    {
+      "name": "Cafe Cuties",
+      "tilePath": "/sivir/skins/skin34/images/sivir_splash_tile_34.jpg"
+    },
+    {
+      "name": "Solar Eclipse",
+      "tilePath": "/sivir/skins/skin43/images/sivir_splash_tile_43.jpg"
+    },
+    {
+      "name": "Mythmaker",
+      "tilePath": "/sivir/skins/skin50/images/sivir_splash_tile_50.jpg"
+    },
+    {
+      "name": "Prestige Mythmaker",
+      "tilePath": "/sivir/skins/skin51/images/sivir_splash_tile_51.jpg"
+    },
+    {
+      "name": "Primal Ambush",
+      "tilePath": "/sivir/skins/skin61/images/sivir_splash_tile_61.jpg"
+    },
+    {
+      "name": "Ann-Sivir-sary",
+      "tilePath": "/sivir/skins/skin70/images/sivir_splash_tile_70.skins_sivir_skin70.jpg"
+    }
+  ],
+  "Skarner": [
+    {
+      "name": "Original",
+      "tilePath": "/skarner/skins/base/images/skarner_splash_tile_0.jpg"
+    },
+    {
+      "name": "Sandscourge",
+      "tilePath": "/skarner/skins/skin01/images/skarner_splash_tile_1.jpg"
+    },
+    {
+      "name": "Earthrune",
+      "tilePath": "/skarner/skins/skin02/images/skarner_splash_tile_2.jpg"
+    },
+    {
+      "name": "Battlecast Alpha",
+      "tilePath": "/skarner/skins/skin03/images/skarner_splash_tile_3.jpg"
+    },
+    {
+      "name": "Guardian of the Sands",
+      "tilePath": "/skarner/skins/skin04/images/skarner_splash_tile_4.jpg"
+    },
+    {
+      "name": "Cosmic Sting",
+      "tilePath": "/skarner/skins/skin05/images/skarner_splash_tile_5.jpg"
+    }
+  ],
+  "Smolder": [
+    {
+      "name": "Original",
+      "tilePath": "/smolder/skins/base/images/smolder_splash_tile_0.jpg"
+    },
+    {
+      "name": "Heavenscale",
+      "tilePath": "/smolder/skins/skin01/images/smolder_splash_tile_1.jpg"
+    }
+  ],
+  "Sona": [
+    {
+      "name": "Original",
+      "tilePath": "/sona/skins/base/images/sona_splash_tile_0.jpg"
+    },
+    {
+      "name": "Muse",
+      "tilePath": "/sona/skins/skin01/images/sona_splash_tile_1.jpg"
+    },
+    {
+      "name": "Pentakill",
+      "tilePath": "/sona/skins/skin02/images/sona_splash_tile_2.jpg"
+    },
+    {
+      "name": "Silent Night",
+      "tilePath": "/sona/skins/skin03/images/sona_splash_tile_3.jpg"
+    },
+    {
+      "name": "Guqin",
+      "tilePath": "/sona/skins/skin04/images/sona_splash_tile_4.jpg"
+    },
+    {
+      "name": "Arcade",
+      "tilePath": "/sona/skins/skin05/images/sona_splash_tile_5.jpg"
+    },
+    {
+      "name": "DJ",
+      "tilePath": "/sona/skins/skin06/images/sona_splash_tile_6.jpg"
+    },
+    {
+      "name": "Sweetheart",
+      "tilePath": "/sona/skins/skin07/images/sona_splash_tile_7.jpg"
+    },
+    {
+      "name": "Odyssey",
+      "tilePath": "/sona/skins/skin09/images/sona_splash_tile_9.jpg"
+    },
+    {
+      "name": "PsyOps",
+      "tilePath": "/sona/skins/skin17/images/sona_splash_tile_17.jpg"
+    },
+    {
+      "name": "Pentakill Lost Chapter",
+      "tilePath": "/sona/skins/skin26/images/sona_splash_tile_26.jpg"
+    },
+    {
+      "name": "Star Guardian",
+      "tilePath": "/sona/skins/skin35/images/sona_splash_tile_35.jpg"
+    },
+    {
+      "name": "Immortal Journey",
+      "tilePath": "/sona/skins/skin45/images/sona_splash_tile_45.jpg"
+    },
+    {
+      "name": "Prestige Immortal Journey",
+      "tilePath": "/sona/skins/skin46/images/sona_splash_tile_46.jpg"
+    },
+    {
+      "name": "Victorious",
+      "tilePath": "/sona/skins/skin56/images/sona_splash_tile_56.skins_sona_skin56.jpg"
+    }
+  ],
+  "Soraka": [
+    {
+      "name": "Original",
+      "tilePath": "/soraka/skins/base/images/soraka_splash_tile_0.jpg"
+    },
+    {
+      "name": "Dryad",
+      "tilePath": "/soraka/skins/skin01/images/soraka_splash_tile_1.jpg"
+    },
+    {
+      "name": "Divine",
+      "tilePath": "/soraka/skins/skin02/images/soraka_splash_tile_2.jpg"
+    },
+    {
+      "name": "Celestine",
+      "tilePath": "/soraka/skins/skin03/images/soraka_splash_tile_3.jpg"
+    },
+    {
+      "name": "Reaper",
+      "tilePath": "/soraka/skins/skin04/images/soraka_splash_tile_4.jpg"
+    },
+    {
+      "name": "Order of the Banana",
+      "tilePath": "/soraka/skins/skin05/images/soraka_splash_tile_5.jpg"
+    },
+    {
+      "name": "Program",
+      "tilePath": "/soraka/skins/skin06/images/soraka_splash_tile_6.jpg"
+    },
+    {
+      "name": "Star Guardian",
+      "tilePath": "/soraka/skins/skin07/images/soraka_splash_tile_7.jpg"
+    },
+    {
+      "name": "Pajama Guardian",
+      "tilePath": "/soraka/skins/skin08/images/soraka_splash_tile_8.jpg"
+    },
+    {
+      "name": "Winter Wonder",
+      "tilePath": "/soraka/skins/skin09/images/soraka_splash_tile_9.jpg"
+    },
+    {
+      "name": "Dawnbringer",
+      "tilePath": "/soraka/skins/skin15/images/soraka_splash_tile_15.jpg"
+    },
+    {
+      "name": "Nightbringer",
+      "tilePath": "/soraka/skins/skin16/images/soraka_splash_tile_16.jpg"
+    },
+    {
+      "name": "Prestige Star Guardian",
+      "tilePath": "/soraka/skins/skin17/images/soraka_splash_tile_17.jpg"
+    },
+    {
+      "name": "Cafe Cuties",
+      "tilePath": "/soraka/skins/skin18/images/soraka_splash_tile_18.jpg"
+    },
+    {
+      "name": "Spirit Blossom",
+      "tilePath": "/soraka/skins/skin27/images/soraka_splash_tile_27.jpg"
+    },
+    {
+      "name": "Immortal Journey",
+      "tilePath": "/soraka/skins/skin37/images/soraka_splash_tile_37.jpg"
+    },
+    {
+      "name": "Faerie Court",
+      "tilePath": "/soraka/skins/skin44/images/soraka_splash_tile_44.skins_soraka_skin44.jpg"
+    }
+  ],
+  "Swain": [
+    {
+      "name": "Original",
+      "tilePath": "/swain/skins/base/images/swain_splash_tile_0.jpg"
+    },
+    {
+      "name": "Bilgewater",
+      "tilePath": "/swain/skins/skin02/images/swain_splash_tile_2.jpg"
+    },
+    {
+      "name": "Northern Front",
+      "tilePath": "/swain/skins/skin01/images/swain_splash_tile_1.jpg"
+    },
+    {
+      "name": "Tyrant",
+      "tilePath": "/swain/skins/skin03/images/swain_splash_tile_3.jpg"
+    },
+    {
+      "name": "Dragon Master",
+      "tilePath": "/swain/skins/skin04/images/swain_splash_tile_4.jpg"
+    },
+    {
+      "name": "Hextech",
+      "tilePath": "/swain/skins/skin11/images/swain_splash_tile_11.jpg"
+    },
+    {
+      "name": "Crystal Rose",
+      "tilePath": "/swain/skins/skin12/images/swain_splash_tile_12.jpg"
+    },
+    {
+      "name": "Winterblessed",
+      "tilePath": "/swain/skins/skin21/images/swain_splash_tile_21.jpg"
+    },
+    {
+      "name": "Chosen of the Wolf",
+      "tilePath": "/swain/skins/skin32/images/swain_splash_tile_32.skins_swain_skin32.jpg"
+    },
+    {
+      "name": "Prestige Chosen of the Wolf",
+      "tilePath": "/swain/skins/skin33/images/swain_splash_tile_33.prestige2_matcha_swain.jpg"
+    }
+  ],
+  "Sylas": [
+    {
+      "name": "Original",
+      "tilePath": "/sylas/skins/base/images/sylas_splash_tile_0.jpg"
+    },
+    {
+      "name": "Lunar Wraith",
+      "tilePath": "/sylas/skins/skin01/images/sylas_splash_tile_1.jpg"
+    },
+    {
+      "name": "Freljord",
+      "tilePath": "/sylas/skins/skin08/images/sylas_splash_tile_8.jpg"
+    },
+    {
+      "name": "PROJECT",
+      "tilePath": "/sylas/skins/skin13/images/sylas_splash_tile_13.jpg"
+    },
+    {
+      "name": "Prestige PROJECT",
+      "tilePath": "/sylas/skins/skin14/images/sylas_splash_tile_14.jpg"
+    },
+    {
+      "name": "Battle Wolf",
+      "tilePath": "/sylas/skins/skin24/images/sylas_splash_tile_24.jpg"
+    },
+    {
+      "name": "Ashen Slayer",
+      "tilePath": "/sylas/skins/skin34/images/sylas_splash_tile_34.jpg"
+    },
+    {
+      "name": "Winterblessed",
+      "tilePath": "/sylas/skins/skin36/images/sylas_splash_tile_36.jpg"
+    },
+    {
+      "name": "Dark Star",
+      "tilePath": "/sylas/skins/skin46/images/sylas_splash_tile_46.skins_sylas_skin46.jpg"
+    }
+  ],
+  "Syndra": [
+    {
+      "name": "Original",
+      "tilePath": "/syndra/skins/base/images/syndra_splash_tile_0.jpg"
+    },
+    {
+      "name": "Justicar",
+      "tilePath": "/syndra/skins/skin01/images/syndra_splash_tile_1.jpg"
+    },
+    {
+      "name": "Atlantean",
+      "tilePath": "/syndra/skins/skin02/images/syndra_splash_tile_2.jpg"
+    },
+    {
+      "name": "Queen of Diamonds",
+      "tilePath": "/syndra/skins/skin03/images/syndra_splash_tile_3.jpg"
+    },
+    {
+      "name": "Snow Day",
+      "tilePath": "/syndra/skins/skin04/images/syndra_splash_tile_4.jpg"
+    },
+    {
+      "name": "SKT T1",
+      "tilePath": "/syndra/skins/skin05/images/syndra_splash_tile_5.jpg"
+    },
+    {
+      "name": "Star Guardian",
+      "tilePath": "/syndra/skins/skin06/images/syndra_splash_tile_6.jpg"
+    },
+    {
+      "name": "Pool Party",
+      "tilePath": "/syndra/skins/skin07/images/syndra_splash_tile_7.jpg"
+    },
+    {
+      "name": "Withered Rose",
+      "tilePath": "/syndra/skins/skin16/images/syndra_splash_tile_16.jpg"
+    },
+    {
+      "name": "Bewitching",
+      "tilePath": "/syndra/skins/skin25/images/syndra_splash_tile_25.jpg"
+    },
+    {
+      "name": "Prestige Star Guardian",
+      "tilePath": "/syndra/skins/skin34/images/syndra_splash_tile_34.jpg"
+    },
+    {
+      "name": "Spirit Blossom",
+      "tilePath": "/syndra/skins/skin44/images/syndra_splash_tile_44.jpg"
+    },
+    {
+      "name": "Coven",
+      "tilePath": "/syndra/skins/skin54/images/syndra_splash_tile_54.jpg"
+    },
+    {
+      "name": "Dumpling Darlings",
+      "tilePath": "/syndra/skins/skin65/images/syndra_splash_tile_65.skins_syndra_skin65.jpg"
+    }
+  ],
+  "TahmKench": [
+    {
+      "name": "Original",
+      "tilePath": "/tahmkench/skins/base/images/tahmkench_splash_tile_0.jpg"
+    },
+    {
+      "name": "Master Chef",
+      "tilePath": "/tahmkench/skins/skin01/images/tahmkench_splash_tile_1.jpg"
+    },
+    {
+      "name": "Urf Kench",
+      "tilePath": "/tahmkench/skins/skin02/images/tahmkench_splash_tile_2.jpg"
+    },
+    {
+      "name": "Coin Emperor",
+      "tilePath": "/tahmkench/skins/skin03/images/tahmkench_splash_tile_3.jpg"
+    },
+    {
+      "name": "Arcana",
+      "tilePath": "/tahmkench/skins/skin11/images/tahmkench_splash_tile_11.jpg"
+    },
+    {
+      "name": "High Noon",
+      "tilePath": "/tahmkench/skins/skin20/images/tahmkench_splash_tile_20.jpg"
+    },
+    {
+      "name": "Shan Hai Scrolls",
+      "tilePath": "/tahmkench/skins/skin30/images/tahmkench_splash_tile_30.jpg"
+    }
+  ],
+  "Taliyah": [
+    {
+      "name": "Original",
+      "tilePath": "/taliyah/skins/base/images/taliyah_splash_tile_0.jpg"
+    },
+    {
+      "name": "Freljord",
+      "tilePath": "/taliyah/skins/skin01/images/taliyah_splash_tile_1.jpg"
+    },
+    {
+      "name": "SSG",
+      "tilePath": "/taliyah/skins/skin02/images/taliyah_splash_tile_2.jpg"
+    },
+    {
+      "name": "Pool Party",
+      "tilePath": "/taliyah/skins/skin03/images/taliyah_splash_tile_3.jpg"
+    },
+    {
+      "name": "Star Guardian",
+      "tilePath": "/taliyah/skins/skin11/images/taliyah_splash_tile_11.jpg"
+    },
+    {
+      "name": "Crystalis Motus",
+      "tilePath": "/taliyah/skins/skin21/images/taliyah_splash_tile_21.jpg"
+    }
+  ],
+  "Talon": [
+    {
+      "name": "Original",
+      "tilePath": "/talon/skins/base/images/talon_splash_tile_0.jpg"
+    },
+    {
+      "name": "Renegade",
+      "tilePath": "/talon/skins/skin01/images/talon_splash_tile_1.jpg"
+    },
+    {
+      "name": "Crimson Elite",
+      "tilePath": "/talon/skins/skin02/images/talon_splash_tile_2.jpg"
+    },
+    {
+      "name": "Dragonblade",
+      "tilePath": "/talon/skins/skin03/images/talon_splash_tile_3.jpg"
+    },
+    {
+      "name": "SSW",
+      "tilePath": "/talon/skins/skin04/images/talon_splash_tile_4.jpg"
+    },
+    {
+      "name": "Blood Moon",
+      "tilePath": "/talon/skins/skin05/images/talon_splash_tile_5.jpg"
+    },
+    {
+      "name": "Enduring Sword",
+      "tilePath": "/talon/skins/skin12/images/talon_splash_tile_12.jpg"
+    },
+    {
+      "name": "Talon Blackwood",
+      "tilePath": "/talon/skins/skin20/images/talon_splash_tile_20.jpg"
+    },
+    {
+      "name": "Withered Rose",
+      "tilePath": "/talon/skins/skin29/images/talon_splash_tile_29.jpg"
+    },
+    {
+      "name": "High Noon",
+      "tilePath": "/talon/skins/skin38/images/talon_splash_tile_38.jpg"
+    },
+    {
+      "name": "Prestige High Noon",
+      "tilePath": "/talon/skins/skin39/images/talon_splash_tile_39.jpg"
+    },
+    {
+      "name": "Primal Ambush",
+      "tilePath": "/talon/skins/skin49/images/talon_splash_tile_49.jpg"
+    },
+    {
+      "name": "Grand Reckoning",
+      "tilePath": "/talon/skins/skin59/images/talon_splash_tile_59.skins_talon_skin59.jpg"
+    }
+  ],
+  "Taric": [
+    {
+      "name": "Original",
+      "tilePath": "/taric/skins/base/images/taric_splash_tile_0.jpg"
+    },
+    {
+      "name": "Emerald",
+      "tilePath": "/taric/skins/skin01/images/taric_splash_tile_1.jpg"
+    },
+    {
+      "name": "Armor of the Fifth Age",
+      "tilePath": "/taric/skins/skin02/images/taric_splash_tile_2.jpg"
+    },
+    {
+      "name": "Bloodstone",
+      "tilePath": "/taric/skins/skin03/images/taric_splash_tile_3.jpg"
+    },
+    {
+      "name": "Pool Party",
+      "tilePath": "/taric/skins/skin04/images/taric_splash_tile_4.jpg"
+    },
+    {
+      "name": "Taric Luminshield",
+      "tilePath": "/taric/skins/skin09/images/taric_splash_tile_9.jpg"
+    },
+    {
+      "name": "Space Groove",
+      "tilePath": "/taric/skins/skin18/images/taric_splash_tile_18.jpg"
+    },
+    {
+      "name": "Fatebreaker",
+      "tilePath": "/taric/skins/skin27/images/taric_splash_tile_27.skins_taric_skin27.jpg"
+    }
+  ],
+  "Teemo": [
+    {
+      "name": "Original",
+      "tilePath": "/teemo/skins/base/images/teemo_splash_tile_0.asu_teemo.jpg"
+    },
+    {
+      "name": "Happy Elf",
+      "tilePath": "/teemo/skins/skin01/images/teemo_splash_tile_1.asu_teemo.jpg"
+    },
+    {
+      "name": "Recon",
+      "tilePath": "/teemo/skins/skin02/images/teemo_splash_tile_2.asu_teemo.jpg"
+    },
+    {
+      "name": "Badger",
+      "tilePath": "/teemo/skins/skin03/images/teemo_splash_tile_3.asu_teemo.jpg"
+    },
+    {
+      "name": "Astronaut",
+      "tilePath": "/teemo/skins/skin04/images/teemo_splash_tile_4.asu_teemo.jpg"
+    },
+    {
+      "name": "Cottontail",
+      "tilePath": "/teemo/skins/skin05/images/teemo_splash_tile_5.asu_teemo.jpg"
+    },
+    {
+      "name": "Super",
+      "tilePath": "/teemo/skins/skin06/images/teemo_splash_tile_6.asu_teemo.jpg"
+    },
+    {
+      "name": "Panda",
+      "tilePath": "/teemo/skins/skin07/images/teemo_splash_tile_7.asu_teemo.jpg"
+    },
+    {
+      "name": "Omega Squad",
+      "tilePath": "/teemo/skins/skin08/images/teemo_splash_tile_8.jpg"
+    },
+    {
+      "name": "Little Devil",
+      "tilePath": "/teemo/skins/skin14/images/teemo_splash_tile_14.asu_teemo.jpg"
+    },
+    {
+      "name": "Beemo",
+      "tilePath": "/teemo/skins/skin18/images/teemo_splash_tile_18.asu_teemo.jpg"
+    },
+    {
+      "name": "Spirit Blossom",
+      "tilePath": "/teemo/skins/skin25/images/teemo_splash_tile_25.asu_teemo.jpg"
+    },
+    {
+      "name": "Prestige Spirit Blossom",
+      "tilePath": "/teemo/skins/skin27/images/teemo_splash_tile_27.asu_teemo.jpg"
+    },
+    {
+      "name": "Firecracker",
+      "tilePath": "/teemo/skins/skin37/images/teemo_splash_tile_37.asu_teemo.jpg"
+    },
+    {
+      "name": "Space Groove",
+      "tilePath": "/teemo/skins/skin47/images/teemo_splash_tile_47.jpg"
+    }
+  ],
+  "Thresh": [
+    {
+      "name": "Original",
+      "tilePath": "/thresh/skins/base/images/thresh_splash_tile_0.jpg"
+    },
+    {
+      "name": "Deep Terror",
+      "tilePath": "/thresh/skins/skin01/images/thresh_splash_tile_1.jpg"
+    },
+    {
+      "name": "Worlds 2013",
+      "tilePath": "/thresh/skins/skin02/images/thresh_splash_tile_2.jpg"
+    },
+    {
+      "name": "Blood Moon",
+      "tilePath": "/thresh/skins/skin03/images/thresh_splash_tile_3.jpg"
+    },
+    {
+      "name": "SSW",
+      "tilePath": "/thresh/skins/skin04/images/thresh_splash_tile_4.jpg"
+    },
+    {
+      "name": "Dark Star",
+      "tilePath": "/thresh/skins/skin05/images/thresh_splash_tile_5.jpg"
+    },
+    {
+      "name": "High Noon",
+      "tilePath": "/thresh/skins/skin06/images/thresh_splash_tile_6.jpg"
+    },
+    {
+      "name": "Pulsefire",
+      "tilePath": "/thresh/skins/skin13/images/thresh_splash_tile_13.jpg"
+    },
+    {
+      "name": "Prestige Pulsefire",
+      "tilePath": "/thresh/skins/skin14/images/thresh_splash_tile_14.jpg"
+    },
+    {
+      "name": "FPX",
+      "tilePath": "/thresh/skins/skin15/images/thresh_splash_tile_15.jpg"
+    },
+    {
+      "name": "Spirit Blossom",
+      "tilePath": "/thresh/skins/skin17/images/thresh_splash_tile_17.jpg"
+    },
+    {
+      "name": "Unbound",
+      "tilePath": "/thresh/skins/skin27/images/thresh_splash_tile_27.jpg"
+    },
+    {
+      "name": "Steel Dragon",
+      "tilePath": "/thresh/skins/skin28/images/thresh_splash_tile_28.jpg"
+    },
+    {
+      "name": "Prestige Pulsefire (2022)",
+      "tilePath": "/thresh/skins/skin14/images/thresh_splash_tile_14.jpg"
+    },
+    {
+      "name": "Lunar Emperor",
+      "tilePath": "/thresh/skins/skin39/images/thresh_splash_tile_39.jpg"
+    },
+    {
+      "name": "Winterblessed",
+      "tilePath": "/thresh/skins/skin49/images/thresh_splash_tile_49.jpg"
+    },
+    {
+      "name": "Janitor",
+      "tilePath": "/thresh/skins/skin59/images/thresh_splash_tile_59.skins_thresh_skin59.jpg"
+    }
+  ],
+  "Tristana": [
+    {
+      "name": "Original",
+      "tilePath": "/tristana/skins/base/images/tristana_splash_tile_0.jpg"
+    },
+    {
+      "name": "Riot Girl",
+      "tilePath": "/tristana/skins/skin01/images/tristana_splash_tile_1.jpg"
+    },
+    {
+      "name": "Earnest Elf",
+      "tilePath": "/tristana/skins/skin02/images/tristana_splash_tile_2.jpg"
+    },
+    {
+      "name": "Firefighter",
+      "tilePath": "/tristana/skins/skin03/images/tristana_splash_tile_3.jpg"
+    },
+    {
+      "name": "Guerilla",
+      "tilePath": "/tristana/skins/skin04/images/tristana_splash_tile_4.jpg"
+    },
+    {
+      "name": "Buccaneer",
+      "tilePath": "/tristana/skins/skin05/images/tristana_splash_tile_5.jpg"
+    },
+    {
+      "name": "Rocket Girl",
+      "tilePath": "/tristana/skins/skin06/images/tristana_splash_tile_6.jpg"
+    },
+    {
+      "name": "Dragon Trainer",
+      "tilePath": "/tristana/skins/skin10/images/tristana_splash_tile_10.jpg"
+    },
+    {
+      "name": "Bewitching",
+      "tilePath": "/tristana/skins/skin11/images/tristana_splash_tile_11.jpg"
+    },
+    {
+      "name": "Omega Squad",
+      "tilePath": "/tristana/skins/skin12/images/tristana_splash_tile_12.jpg"
+    },
+    {
+      "name": "Little Demon",
+      "tilePath": "/tristana/skins/skin24/images/tristana_splash_tile_24.jpg"
+    },
+    {
+      "name": "Pengu Cosplay",
+      "tilePath": "/tristana/skins/skin33/images/tristana_splash_tile_33.jpg"
+    },
+    {
+      "name": "Hextech",
+      "tilePath": "/tristana/skins/skin40/images/tristana_splash_tile_40.jpg"
+    },
+    {
+      "name": "Firecracker",
+      "tilePath": "/tristana/skins/skin41/images/tristana_splash_tile_41.jpg"
+    },
+    {
+      "name": "Spirit Blossom",
+      "tilePath": "/tristana/skins/skin51/images/tristana_splash_tile_51.jpg"
+    },
+    {
+      "name": "Faerie Court",
+      "tilePath": "/tristana/skins/skin61/images/tristana_splash_tile_61.skins_tristana_skin61.jpg"
+    }
+  ],
+  "Trundle": [
+    {
+      "name": "Original",
+      "tilePath": "/trundle/skins/base/images/trundle_splash_tile_0.jpg"
+    },
+    {
+      "name": "Junkyard",
+      "tilePath": "/trundle/skins/skin02/images/trundle_splash_tile_2.jpg"
+    },
+    {
+      "name": "Lil' Slugger",
+      "tilePath": "/trundle/skins/skin01/images/trundle_splash_tile_1.jpg"
+    },
+    {
+      "name": "Traditional",
+      "tilePath": "/trundle/skins/skin03/images/trundle_splash_tile_3.jpg"
+    },
+    {
+      "name": "Constable",
+      "tilePath": "/trundle/skins/skin04/images/trundle_splash_tile_4.jpg"
+    },
+    {
+      "name": "Worldbreaker",
+      "tilePath": "/trundle/skins/skin05/images/trundle_splash_tile_5.jpg"
+    },
+    {
+      "name": "Dragonslayer",
+      "tilePath": "/trundle/skins/skin06/images/trundle_splash_tile_6.jpg"
+    },
+    {
+      "name": "Fright Night",
+      "tilePath": "/trundle/skins/skin12/images/trundle_splash_tile_12.jpg"
+    },
+    {
+      "name": "Esports Fan",
+      "tilePath": "/trundle/skins/skin21/images/trundle_splash_tile_21.skins_trundle_skin21.jpg"
+    }
+  ],
+  "Tryndamere": [
+    {
+      "name": "Original",
+      "tilePath": "/tryndamere/skins/base/images/tryndamere_splash_tile_0.jpg"
+    },
+    {
+      "name": "Highland",
+      "tilePath": "/tryndamere/skins/skin01/images/tryndamere_splash_tile_1.jpg"
+    },
+    {
+      "name": "King",
+      "tilePath": "/tryndamere/skins/skin02/images/tryndamere_splash_tile_2.jpg"
+    },
+    {
+      "name": "Viking",
+      "tilePath": "/tryndamere/skins/skin03/images/tryndamere_splash_tile_3.jpg"
+    },
+    {
+      "name": "Demonblade",
+      "tilePath": "/tryndamere/skins/skin04/images/tryndamere_splash_tile_4.jpg"
+    },
+    {
+      "name": "Sultan",
+      "tilePath": "/tryndamere/skins/skin05/images/tryndamere_splash_tile_5.jpg"
+    },
+    {
+      "name": "Warring Kingdoms",
+      "tilePath": "/tryndamere/skins/skin06/images/tryndamere_splash_tile_6.jpg"
+    },
+    {
+      "name": "Nightmare",
+      "tilePath": "/tryndamere/skins/skin07/images/tryndamere_splash_tile_7.jpg"
+    },
+    {
+      "name": "Beast Hunter",
+      "tilePath": "/tryndamere/skins/skin08/images/tryndamere_splash_tile_8.jpg"
+    },
+    {
+      "name": "Chemtech",
+      "tilePath": "/tryndamere/skins/skin09/images/tryndamere_splash_tile_9.jpg"
+    },
+    {
+      "name": "Blood Moon",
+      "tilePath": "/tryndamere/skins/skin10/images/tryndamere_splash_tile_10.jpg"
+    },
+    {
+      "name": "Nightbringer",
+      "tilePath": "/tryndamere/skins/skin18/images/tryndamere_splash_tile_18.jpg"
+    },
+    {
+      "name": "Victorious",
+      "tilePath": "/tryndamere/skins/skin27/images/tryndamere_splash_tile_27.jpg"
+    }
+  ],
+  "TwistedFate": [
+    {
+      "name": "Original",
+      "tilePath": "/twistedfate/skins/base/images/twistedfate_splash_tile_0.jpg"
+    },
+    {
+      "name": "PAX",
+      "tilePath": "/twistedfate/skins/skin01/images/twistedfate_splash_tile_1.jpg"
+    },
+    {
+      "name": "Jack of Hearts",
+      "tilePath": "/twistedfate/skins/skin02/images/twistedfate_splash_tile_2.jpg"
+    },
+    {
+      "name": "The Magnificent",
+      "tilePath": "/twistedfate/skins/skin03/images/twistedfate_splash_tile_3.jpg"
+    },
+    {
+      "name": "Tango",
+      "tilePath": "/twistedfate/skins/skin04/images/twistedfate_splash_tile_4.jpg"
+    },
+    {
+      "name": "High Noon",
+      "tilePath": "/twistedfate/skins/skin05/images/twistedfate_splash_tile_5.jpg"
+    },
+    {
+      "name": "Musketeer",
+      "tilePath": "/twistedfate/skins/skin06/images/twistedfate_splash_tile_6.jpg"
+    },
+    {
+      "name": "Underworld",
+      "tilePath": "/twistedfate/skins/skin07/images/twistedfate_splash_tile_7.jpg"
+    },
+    {
+      "name": "Red Card",
+      "tilePath": "/twistedfate/skins/skin08/images/twistedfate_splash_tile_8.jpg"
+    },
+    {
+      "name": "Cutpurse",
+      "tilePath": "/twistedfate/skins/skin09/images/twistedfate_splash_tile_9.jpg"
+    },
+    {
+      "name": "Blood Moon",
+      "tilePath": "/twistedfate/skins/skin10/images/twistedfate_splash_tile_10.jpg"
+    },
+    {
+      "name": "Pulsefire",
+      "tilePath": "/twistedfate/skins/skin11/images/twistedfate_splash_tile_11.jpg"
+    },
+    {
+      "name": "Odyssey",
+      "tilePath": "/twistedfate/skins/skin13/images/twistedfate_splash_tile_13.jpg"
+    },
+    {
+      "name": "DWG",
+      "tilePath": "/twistedfate/skins/skin23/images/twistedfate_splash_tile_23.jpg"
+    },
+    {
+      "name": "Crime City Nightmare",
+      "tilePath": "/twistedfate/skins/skin25/images/twistedfate_splash_tile_25.jpg"
+    },
+    {
+      "name": "Space Groove",
+      "tilePath": "/twistedfate/skins/skin36/images/twistedfate_splash_tile_36.jpg"
+    },
+    {
+      "name": "Victorious",
+      "tilePath": "/twistedfate/skins/skin45/images/twistedfate_splash_tile_45.skins_twistedfate_skin45.jpg"
+    }
+  ],
+  "Twitch": [
+    {
+      "name": "Original",
+      "tilePath": "/twitch/skins/base/images/twitch_splash_tile_0.jpg"
+    },
+    {
+      "name": "Kingpin",
+      "tilePath": "/twitch/skins/skin01/images/twitch_splash_tile_1.jpg"
+    },
+    {
+      "name": "Medieval",
+      "tilePath": "/twitch/skins/skin03/images/twitch_splash_tile_3.jpg"
+    },
+    {
+      "name": "Whistler Village",
+      "tilePath": "/twitch/skins/skin02/images/twitch_splash_tile_2.jpg"
+    },
+    {
+      "name": "Crime City",
+      "tilePath": "/twitch/skins/skin04/images/twitch_splash_tile_4.jpg"
+    },
+    {
+      "name": "Vandal",
+      "tilePath": "/twitch/skins/skin05/images/twitch_splash_tile_5.jpg"
+    },
+    {
+      "name": "Pickpocket",
+      "tilePath": "/twitch/skins/skin06/images/twitch_splash_tile_6.jpg"
+    },
+    {
+      "name": "SSW",
+      "tilePath": "/twitch/skins/skin07/images/twitch_splash_tile_7.jpg"
+    },
+    {
+      "name": "Omega Squad",
+      "tilePath": "/twitch/skins/skin08/images/twitch_splash_tile_8.jpg"
+    },
+    {
+      "name": "Ice King",
+      "tilePath": "/twitch/skins/skin12/images/twitch_splash_tile_12.jpg"
+    },
+    {
+      "name": "Twitch Shadowfoot",
+      "tilePath": "/twitch/skins/skin27/images/twitch_splash_tile_27.jpg"
+    },
+    {
+      "name": "Dragonslayer",
+      "tilePath": "/twitch/skins/skin36/images/twitch_splash_tile_36.jpg"
+    },
+    {
+      "name": "High Noon",
+      "tilePath": "/twitch/skins/skin45/images/twitch_splash_tile_45.jpg"
+    },
+    {
+      "name": "Cheddar Chief",
+      "tilePath": "/twitch/skins/skin55/images/twitch_splash_tile_55.jpg"
+    },
+    {
+      "name": "Pool Party",
+      "tilePath": "/twitch/skins/skin64/images/twitch_splash_tile_64.skins_twitch_skin64.jpg"
+    }
+  ],
+  "Udyr": [
+    {
+      "name": "Original",
+      "tilePath": "/udyr/skins/base/images/udyr_splash_tile_0.jpg"
+    },
+    {
+      "name": "Black Belt",
+      "tilePath": "/udyr/skins/skin01/images/udyr_splash_tile_1.jpg"
+    },
+    {
+      "name": "Primal",
+      "tilePath": "/udyr/skins/skin02/images/udyr_splash_tile_2.jpg"
+    },
+    {
+      "name": "Spirit Guard",
+      "tilePath": "/udyr/skins/skin03/images/udyr_splash_tile_3.jpg"
+    },
+    {
+      "name": "Definitely Not",
+      "tilePath": "/udyr/skins/skin04/images/udyr_splash_tile_4.jpg"
+    },
+    {
+      "name": "Dragon Oracle",
+      "tilePath": "/udyr/skins/skin05/images/udyr_splash_tile_5.jpg"
+    },
+    {
+      "name": "Inkshadow",
+      "tilePath": "/udyr/skins/skin06/images/udyr_splash_tile_6.jpg"
+    }
+  ],
+  "Urgot": [
+    {
+      "name": "Original",
+      "tilePath": "/urgot/skins/base/images/urgot_splash_tile_0.jpg"
+    },
+    {
+      "name": "Butcher",
+      "tilePath": "/urgot/skins/skin02/images/urgot_splash_tile_2.jpg"
+    },
+    {
+      "name": "Giant Enemy Crabgot",
+      "tilePath": "/urgot/skins/skin01/images/urgot_splash_tile_1.jpg"
+    },
+    {
+      "name": "Battlecast",
+      "tilePath": "/urgot/skins/skin03/images/urgot_splash_tile_3.jpg"
+    },
+    {
+      "name": "High Noon",
+      "tilePath": "/urgot/skins/skin09/images/urgot_splash_tile_9.jpg"
+    },
+    {
+      "name": "Pajama Guardian Cosplay",
+      "tilePath": "/urgot/skins/skin15/images/urgot_splash_tile_15.jpg"
+    },
+    {
+      "name": "Fright Night",
+      "tilePath": "/urgot/skins/skin23/images/urgot_splash_tile_23.jpg"
+    },
+    {
+      "name": "Urgot the Clogfather",
+      "tilePath": "/urgot/skins/skin32/images/urgot_splash_tile_32.skins_urgot_skin32.jpg"
+    }
+  ],
+  "Varus": [
+    {
+      "name": "Original",
+      "tilePath": "/varus/skins/base/images/varus_splash_tile_0.jpg"
+    },
+    {
+      "name": "Blight Crystal",
+      "tilePath": "/varus/skins/skin01/images/varus_splash_tile_1.jpg"
+    },
+    {
+      "name": "Arclight",
+      "tilePath": "/varus/skins/skin02/images/varus_splash_tile_2.jpg"
+    },
+    {
+      "name": "Arctic Ops",
+      "tilePath": "/varus/skins/skin03/images/varus_splash_tile_3.jpg"
+    },
+    {
+      "name": "Heartseeker",
+      "tilePath": "/varus/skins/skin04/images/varus_splash_tile_4.jpg"
+    },
+    {
+      "name": "Varus Swiftbolt",
+      "tilePath": "/varus/skins/skin05/images/varus_splash_tile_5.jpg"
+    },
+    {
+      "name": "Dark Star",
+      "tilePath": "/varus/skins/skin06/images/varus_splash_tile_6.jpg"
+    },
+    {
+      "name": "Conqueror",
+      "tilePath": "/varus/skins/skin07/images/varus_splash_tile_7.jpg"
+    },
+    {
+      "name": "Infernal",
+      "tilePath": "/varus/skins/skin09/images/varus_splash_tile_9.jpg"
+    },
+    {
+      "name": "Cosmic Hunter",
+      "tilePath": "/varus/skins/skin17/images/varus_splash_tile_17.jpg"
+    },
+    {
+      "name": "PROJECT",
+      "tilePath": "/varus/skins/skin16/images/varus_splash_tile_16.jpg"
+    },
+    {
+      "name": "High Noon",
+      "tilePath": "/varus/skins/skin34/images/varus_splash_tile_34.jpg"
+    },
+    {
+      "name": "Snow Moon",
+      "tilePath": "/varus/skins/skin44/images/varus_splash_tile_44.jpg"
+    },
+    {
+      "name": "Empyrean",
+      "tilePath": "/varus/skins/skin53/images/varus_splash_tile_53.jpg"
+    },
+    {
+      "name": "Spirit Blossom",
+      "tilePath": "/varus/skins/skin60/images/varus_splash_tile_60.skins_varus_skin60.jpg"
+    }
+  ],
+  "Vayne": [
+    {
+      "name": "Original",
+      "tilePath": "/vayne/skins/base/images/vayne_splash_tile_0.jpg"
+    },
+    {
+      "name": "Aristocrat",
+      "tilePath": "/vayne/skins/skin02/images/vayne_splash_tile_2.jpg"
+    },
+    {
+      "name": "Vindicator",
+      "tilePath": "/vayne/skins/skin01/images/vayne_splash_tile_1.jpg"
+    },
+    {
+      "name": "Dragonslayer",
+      "tilePath": "/vayne/skins/skin03/images/vayne_splash_tile_3.jpg"
+    },
+    {
+      "name": "Heartseeker",
+      "tilePath": "/vayne/skins/skin04/images/vayne_splash_tile_4.jpg"
+    },
+    {
+      "name": "SKT T1",
+      "tilePath": "/vayne/skins/skin05/images/vayne_splash_tile_5.jpg"
+    },
+    {
+      "name": "Arclight",
+      "tilePath": "/vayne/skins/skin06/images/vayne_splash_tile_6.jpg"
+    },
+    {
+      "name": "Soulstealer",
+      "tilePath": "/vayne/skins/skin10/images/vayne_splash_tile_10.jpg"
+    },
+    {
+      "name": "PROJECT",
+      "tilePath": "/vayne/skins/skin11/images/vayne_splash_tile_11.jpg"
+    },
+    {
+      "name": "Firecracker",
+      "tilePath": "/vayne/skins/skin12/images/vayne_splash_tile_12.jpg"
+    },
+    {
+      "name": "Prestige Firecracker",
+      "tilePath": "/vayne/skins/skin13/images/vayne_splash_tile_13.jpg"
+    },
+    {
+      "name": "FPX",
+      "tilePath": "/vayne/skins/skin15/images/vayne_splash_tile_15.jpg"
+    },
+    {
+      "name": "Spirit Blossom",
+      "tilePath": "/vayne/skins/skin14/images/vayne_splash_tile_14.jpg"
+    },
+    {
+      "name": "Sentinel",
+      "tilePath": "/vayne/skins/skin25/images/vayne_splash_tile_25.jpg"
+    },
+    {
+      "name": "Battle Bat",
+      "tilePath": "/vayne/skins/skin32/images/vayne_splash_tile_32.jpg"
+    },
+    {
+      "name": "Prestige Firecracker (2022)",
+      "tilePath": "/vayne/skins/skin13/images/vayne_splash_tile_13.jpg"
+    },
+    {
+      "name": "Dawnbringer",
+      "tilePath": "/vayne/skins/skin44/images/vayne_splash_tile_44.jpg"
+    },
+    {
+      "name": "Dragonmancer",
+      "tilePath": "/vayne/skins/skin55/images/vayne_splash_tile_55.jpg"
+    },
+    {
+      "name": "Risen Legend",
+      "tilePath": "/vayne/skins/skin64/images/vayne_splash_tile_64.skins_vayne_skin64.jpg"
+    }
+  ],
+  "Veigar": [
+    {
+      "name": "Original",
+      "tilePath": "/veigar/skins/base/images/veigar_splash_tile_0.jpg"
+    },
+    {
+      "name": "White Mage",
+      "tilePath": "/veigar/skins/skin01/images/veigar_splash_tile_1.jpg"
+    },
+    {
+      "name": "Curling",
+      "tilePath": "/veigar/skins/skin02/images/veigar_splash_tile_2.jpg"
+    },
+    {
+      "name": "Veigar Greybeard",
+      "tilePath": "/veigar/skins/skin03/images/veigar_splash_tile_3.jpg"
+    },
+    {
+      "name": "Leprechaun",
+      "tilePath": "/veigar/skins/skin04/images/veigar_splash_tile_4.jpg"
+    },
+    {
+      "name": "Baron Von",
+      "tilePath": "/veigar/skins/skin05/images/veigar_splash_tile_5.jpg"
+    },
+    {
+      "name": "Superb Villain",
+      "tilePath": "/veigar/skins/skin06/images/veigar_splash_tile_6.jpg"
+    },
+    {
+      "name": "Bad Santa",
+      "tilePath": "/veigar/skins/skin07/images/veigar_splash_tile_7.jpg"
+    },
+    {
+      "name": "Final Boss",
+      "tilePath": "/veigar/skins/skin08/images/veigar_splash_tile_8.jpg"
+    },
+    {
+      "name": "Omega Squad",
+      "tilePath": "/veigar/skins/skin09/images/veigar_splash_tile_9.jpg"
+    },
+    {
+      "name": "Elderwood",
+      "tilePath": "/veigar/skins/skin13/images/veigar_splash_tile_13.jpg"
+    },
+    {
+      "name": "Furyhorn Cosplay",
+      "tilePath": "/veigar/skins/skin23/images/veigar_splash_tile_23.jpg"
+    },
+    {
+      "name": "Astronaut",
+      "tilePath": "/veigar/skins/skin32/images/veigar_splash_tile_32.jpg"
+    },
+    {
+      "name": "Monster Tamer",
+      "tilePath": "/veigar/skins/skin41/images/veigar_splash_tile_41.jpg"
+    },
+    {
+      "name": "King Beegar",
+      "tilePath": "/veigar/skins/skin51/images/veigar_splash_tile_51.jpg"
+    },
+    {
+      "name": "Fright Night",
+      "tilePath": "/veigar/skins/skin60/images/veigar_splash_tile_60.skins_veigar_skin60.jpg"
+    }
+  ],
+  "Velkoz": [
+    {
+      "name": "Original",
+      "tilePath": "/velkoz/skins/base/images/velkoz_splash_tile_0.jpg"
+    },
+    {
+      "name": "Battlecast",
+      "tilePath": "/velkoz/skins/skin01/images/velkoz_splash_tile_1.jpg"
+    },
+    {
+      "name": "Arclight",
+      "tilePath": "/velkoz/skins/skin02/images/velkoz_splash_tile_2.jpg"
+    },
+    {
+      "name": "Definitely Not",
+      "tilePath": "/velkoz/skins/skin03/images/velkoz_splash_tile_3.jpg"
+    },
+    {
+      "name": "Infernal",
+      "tilePath": "/velkoz/skins/skin04/images/velkoz_splash_tile_4.jpg"
+    },
+    {
+      "name": "Blackfrost",
+      "tilePath": "/velkoz/skins/skin11/images/velkoz_splash_tile_11.jpg"
+    },
+    {
+      "name": "Bee'Koz",
+      "tilePath": "/velkoz/skins/skin20/images/velkoz_splash_tile_20.jpg"
+    }
+  ],
+  "Vex": [
+    {
+      "name": "Original",
+      "tilePath": "/vex/skins/base/images/vex_splash_tile_0.jpg"
+    },
+    {
+      "name": "Dawnbringer",
+      "tilePath": "/vex/skins/skin01/images/vex_splash_tile_1.jpg"
+    },
+    {
+      "name": "Empyrean",
+      "tilePath": "/vex/skins/skin10/images/vex_splash_tile_10.jpg"
+    },
+    {
+      "name": "Stargazer",
+      "tilePath": "/vex/skins/skin20/images/vex_splash_tile_20.skins_vex_skin20.jpg"
+    }
+  ],
+  "Vi": [
+    {
+      "name": "Original",
+      "tilePath": "/vi/skins/base/images/vi_splash_tile_0.jpg"
+    },
+    {
+      "name": "Neon Strike",
+      "tilePath": "/vi/skins/skin01/images/vi_splash_tile_1.jpg"
+    },
+    {
+      "name": "Officer",
+      "tilePath": "/vi/skins/skin02/images/vi_splash_tile_2.jpg"
+    },
+    {
+      "name": "Debonair",
+      "tilePath": "/vi/skins/skin03/images/vi_splash_tile_3.jpg"
+    },
+    {
+      "name": "Demon",
+      "tilePath": "/vi/skins/skin04/images/vi_splash_tile_4.jpg"
+    },
+    {
+      "name": "Warring Kingdoms",
+      "tilePath": "/vi/skins/skin05/images/vi_splash_tile_5.jpg"
+    },
+    {
+      "name": "PROJECT",
+      "tilePath": "/vi/skins/skin11/images/vi_splash_tile_11.jpg"
+    },
+    {
+      "name": "Heartbreaker",
+      "tilePath": "/vi/skins/skin12/images/vi_splash_tile_12.jpg"
+    },
+    {
+      "name": "PsyOps",
+      "tilePath": "/vi/skins/skin20/images/vi_splash_tile_20.jpg"
+    },
+    {
+      "name": "Arcane Undercity",
+      "tilePath": "/vi/skins/skin29/images/vi_splash_tile_29.jpg"
+    },
+    {
+      "name": "Heartache",
+      "tilePath": "/vi/skins/skin30/images/vi_splash_tile_30.jpg"
+    },
+    {
+      "name": "Primal Ambush",
+      "tilePath": "/vi/skins/skin39/images/vi_splash_tile_39.jpg"
+    },
+    {
+      "name": "Arcane Brawler",
+      "tilePath": "/vi/skins/skin48/images/vi_splash_tile_48.skins_vi_skin48.jpg"
+    }
+  ],
+  "Viego": [
+    {
+      "name": "Original",
+      "tilePath": "/viego/skins/base/images/viego_splash_tile_0.jpg"
+    },
+    {
+      "name": "Lunar Beast",
+      "tilePath": "/viego/skins/skin01/images/viego_splash_tile_1.jpg"
+    },
+    {
+      "name": "Dissonance of Pentakill",
+      "tilePath": "/viego/skins/skin10/images/viego_splash_tile_10.jpg"
+    },
+    {
+      "name": "EDG",
+      "tilePath": "/viego/skins/skin19/images/viego_splash_tile_19.jpg"
+    },
+    {
+      "name": "King",
+      "tilePath": "/viego/skins/skin21/images/viego_splash_tile_21.jpg"
+    },
+    {
+      "name": "Soul Fighter",
+      "tilePath": "/viego/skins/skin30/images/viego_splash_tile_30.jpg"
+    },
+    {
+      "name": "Worlds 2024",
+      "tilePath": "/viego/skins/skin37/images/viego_splash_tile_37.skins_viego_skin37.jpg"
+    }
+  ],
+  "Viktor": [
+    {
+      "name": "Original",
+      "tilePath": "/viktor/skins/base/images/viktor_splash_tile_0.viktorvgu.jpg"
+    },
+    {
+      "name": "Full Machine",
+      "tilePath": "/viktor/skins/skin01/images/viktor_splash_tile_1.viktorvgu.jpg"
+    },
+    {
+      "name": "Prototype",
+      "tilePath": "/viktor/skins/skin02/images/viktor_splash_tile_2.viktorvgu.jpg"
+    },
+    {
+      "name": "Creator",
+      "tilePath": "/viktor/skins/skin03/images/viktor_splash_tile_3.viktorvgu.jpg"
+    },
+    {
+      "name": "Death Sworn",
+      "tilePath": "/viktor/skins/skin04/images/viktor_splash_tile_4.viktorvgu.jpg"
+    },
+    {
+      "name": "PsyOps",
+      "tilePath": "/viktor/skins/skin05/images/viktor_splash_tile_5.viktorvgu.jpg"
+    },
+    {
+      "name": "High Noon",
+      "tilePath": "/viktor/skins/skin14/images/viktor_splash_tile_14.viktorvgu.jpg"
+    },
+    {
+      "name": "Arcane Savior",
+      "tilePath": "/viktor/skins/skin24/images/viktor_splash_tile_24.skins_viktorrework_skin24.jpg"
+    }
+  ],
+  "Vladimir": [
+    {
+      "name": "Original",
+      "tilePath": "/vladimir/skins/base/images/vladimir_splash_tile_0.jpg"
+    },
+    {
+      "name": "Count",
+      "tilePath": "/vladimir/skins/skin01/images/vladimir_splash_tile_1.jpg"
+    },
+    {
+      "name": "Marquis",
+      "tilePath": "/vladimir/skins/skin02/images/vladimir_splash_tile_2.jpg"
+    },
+    {
+      "name": "Nosferatu",
+      "tilePath": "/vladimir/skins/skin03/images/vladimir_splash_tile_3.jpg"
+    },
+    {
+      "name": "Vandal",
+      "tilePath": "/vladimir/skins/skin04/images/vladimir_splash_tile_4.jpg"
+    },
+    {
+      "name": "Blood Lord",
+      "tilePath": "/vladimir/skins/skin05/images/vladimir_splash_tile_5.jpg"
+    },
+    {
+      "name": "Soulstealer",
+      "tilePath": "/vladimir/skins/skin06/images/vladimir_splash_tile_6.jpg"
+    },
+    {
+      "name": "Academy",
+      "tilePath": "/vladimir/skins/skin07/images/vladimir_splash_tile_7.jpg"
+    },
+    {
+      "name": "Dark Waters",
+      "tilePath": "/vladimir/skins/skin08/images/vladimir_splash_tile_8.jpg"
+    },
+    {
+      "name": "Nightbringer",
+      "tilePath": "/vladimir/skins/skin14/images/vladimir_splash_tile_14.jpg"
+    },
+    {
+      "name": "Cosmic Devourer",
+      "tilePath": "/vladimir/skins/skin21/images/vladimir_splash_tile_21.jpg"
+    },
+    {
+      "name": "Cafe Cuties",
+      "tilePath": "/vladimir/skins/skin30/images/vladimir_splash_tile_30.jpg"
+    },
+    {
+      "name": "Broken Covenant",
+      "tilePath": "/vladimir/skins/skin39/images/vladimir_splash_tile_39.jpg"
+    },
+    {
+      "name": "Masque of the Black Rose",
+      "tilePath": "/vladimir/skins/skin48/images/vladimir_splash_tile_48.skins_vladimir_care_skin48.jpg"
+    }
+  ],
+  "Volibear": [
+    {
+      "name": "Original",
+      "tilePath": "/volibear/skins/base/images/volibear_splash_tile_0.jpg"
+    },
+    {
+      "name": "Thunder Lord",
+      "tilePath": "/volibear/skins/skin01/images/volibear_splash_tile_1.jpg"
+    },
+    {
+      "name": "Northern Storm",
+      "tilePath": "/volibear/skins/skin02/images/volibear_splash_tile_2.jpg"
+    },
+    {
+      "name": "Runeguard",
+      "tilePath": "/volibear/skins/skin03/images/volibear_splash_tile_3.jpg"
+    },
+    {
+      "name": "Captain",
+      "tilePath": "/volibear/skins/skin04/images/volibear_splash_tile_4.jpg"
+    },
+    {
+      "name": "El Rayo",
+      "tilePath": "/volibear/skins/skin05/images/volibear_splash_tile_5.jpg"
+    },
+    {
+      "name": "The Thousand-Pierced Bear",
+      "tilePath": "/volibear/skins/skin06/images/volibear_splash_tile_6.jpg"
+    },
+    {
+      "name": "Duality Dragon",
+      "tilePath": "/volibear/skins/skin07/images/volibear_splash_tile_7.jpg"
+    },
+    {
+      "name": "Prestige Duality Dragon",
+      "tilePath": "/volibear/skins/skin09/images/volibear_splash_tile_9.jpg"
+    },
+    {
+      "name": "Inkshadow",
+      "tilePath": "/volibear/skins/skin19/images/volibear_splash_tile_19.jpg"
+    }
+  ],
+  "Warwick": [
+    {
+      "name": "Original",
+      "tilePath": "/warwick/skins/base/images/warwick_splash_tile_0.jpg"
+    },
+    {
+      "name": "Urf the Manatee",
+      "tilePath": "/warwick/skins/skin02/images/warwick_splash_tile_2.jpg"
+    },
+    {
+      "name": "Big Bad",
+      "tilePath": "/warwick/skins/skin03/images/warwick_splash_tile_3.jpg"
+    },
+    {
+      "name": "Grey",
+      "tilePath": "/warwick/skins/skin01/images/warwick_splash_tile_1.jpg"
+    },
+    {
+      "name": "Tundra Hunter",
+      "tilePath": "/warwick/skins/skin04/images/warwick_splash_tile_4.jpg"
+    },
+    {
+      "name": "Feral",
+      "tilePath": "/warwick/skins/skin05/images/warwick_splash_tile_5.jpg"
+    },
+    {
+      "name": "Firefang",
+      "tilePath": "/warwick/skins/skin06/images/warwick_splash_tile_6.jpg"
+    },
+    {
+      "name": "Hyena",
+      "tilePath": "/warwick/skins/skin07/images/warwick_splash_tile_7.jpg"
+    },
+    {
+      "name": "Marauder",
+      "tilePath": "/warwick/skins/skin08/images/warwick_splash_tile_8.jpg"
+    },
+    {
+      "name": "Urfwick",
+      "tilePath": "/warwick/skins/skin09/images/warwick_splash_tile_9.jpg"
+    },
+    {
+      "name": "Lunar Guardian",
+      "tilePath": "/warwick/skins/skin10/images/warwick_splash_tile_10.jpg"
+    },
+    {
+      "name": "PROJECT",
+      "tilePath": "/warwick/skins/skin16/images/warwick_splash_tile_16.jpg"
+    },
+    {
+      "name": "Old God",
+      "tilePath": "/warwick/skins/skin35/images/warwick_splash_tile_35.jpg"
+    },
+    {
+      "name": "Winterblessed",
+      "tilePath": "/warwick/skins/skin45/images/warwick_splash_tile_45.jpg"
+    },
+    {
+      "name": "Prestige Winterblessed",
+      "tilePath": "/warwick/skins/skin46/images/warwick_splash_tile_46.jpg"
+    },
+    {
+      "name": "Arcane Vander",
+      "tilePath": "/warwick/skins/skin56/images/warwick_splash_tile_56.skins_warwick_skin56.jpg"
+    }
+  ],
+  "MonkeyKing": [
+    {
+      "name": "Original",
+      "tilePath": "/monkeyking/skins/base/images/monkeyking_splash_tile_0.jpg"
+    },
+    {
+      "name": "General",
+      "tilePath": "/monkeyking/skins/skin02/images/monkeyking_splash_tile_2.jpg"
+    },
+    {
+      "name": "Volcanic",
+      "tilePath": "/monkeyking/skins/skin01/images/monkeyking_splash_tile_1.jpg"
+    },
+    {
+      "name": "Jade Dragon",
+      "tilePath": "/monkeyking/skins/skin03/images/monkeyking_splash_tile_3.jpg"
+    },
+    {
+      "name": "Underworld",
+      "tilePath": "/monkeyking/skins/skin04/images/monkeyking_splash_tile_4.jpg"
+    },
+    {
+      "name": "Radiant",
+      "tilePath": "/monkeyking/skins/skin05/images/monkeyking_splash_tile_5.jpg"
+    },
+    {
+      "name": "Lancer Stratus",
+      "tilePath": "/monkeyking/skins/skin06/images/monkeyking_splash_tile_6.jpg"
+    },
+    {
+      "name": "Battle Academia",
+      "tilePath": "/monkeyking/skins/skin07/images/monkeyking_splash_tile_7.jpg"
+    },
+    {
+      "name": "Elderwood",
+      "tilePath": "/monkeyking/skins/skin16/images/monkeyking_splash_tile_16.jpg"
+    }
+  ],
+  "Xayah": [
+    {
+      "name": "Original",
+      "tilePath": "/xayah/skins/base/images/xayah_splash_tile_0.jpg"
+    },
+    {
+      "name": "Cosmic Dusk",
+      "tilePath": "/xayah/skins/skin01/images/xayah_splash_tile_1.jpg"
+    },
+    {
+      "name": "Sweetheart",
+      "tilePath": "/xayah/skins/skin02/images/xayah_splash_tile_2.jpg"
+    },
+    {
+      "name": "SSG",
+      "tilePath": "/xayah/skins/skin03/images/xayah_splash_tile_3.jpg"
+    },
+    {
+      "name": "Star Guardian",
+      "tilePath": "/xayah/skins/skin04/images/xayah_splash_tile_4.jpg"
+    },
+    {
+      "name": "Elderwood",
+      "tilePath": "/xayah/skins/skin08/images/xayah_splash_tile_8.jpg"
+    },
+    {
+      "name": "Brave Phoenix",
+      "tilePath": "/xayah/skins/skin17/images/xayah_splash_tile_17.jpg"
+    },
+    {
+      "name": "Prestige Brave Phoenix",
+      "tilePath": "/xayah/skins/skin26/images/xayah_splash_tile_26.jpg"
+    },
+    {
+      "name": "Arcana",
+      "tilePath": "/xayah/skins/skin28/images/xayah_splash_tile_28.jpg"
+    },
+    {
+      "name": "Broken Covenant",
+      "tilePath": "/xayah/skins/skin37/images/xayah_splash_tile_37.jpg"
+    },
+    {
+      "name": "Redeemed Star Guardian",
+      "tilePath": "/xayah/skins/skin38/images/xayah_splash_tile_38.jpg"
+    },
+    {
+      "name": "Battle Bat",
+      "tilePath": "/xayah/skins/skin47/images/xayah_splash_tile_47.skins_xayah_skin47.jpg"
+    },
+    {
+      "name": "Battle Academia",
+      "tilePath": "/xayah/skins/skin57/images/xayah_splash_tile_57.skins_xayah_skin57.jpg"
+    }
+  ],
+  "Xerath": [
+    {
+      "name": "Original",
+      "tilePath": "/xerath/skins/base/images/xerath_splash_tile_0.jpg"
+    },
+    {
+      "name": "Runeborn",
+      "tilePath": "/xerath/skins/skin01/images/xerath_splash_tile_1.jpg"
+    },
+    {
+      "name": "Battlecast",
+      "tilePath": "/xerath/skins/skin02/images/xerath_splash_tile_2.jpg"
+    },
+    {
+      "name": "Scorched Earth",
+      "tilePath": "/xerath/skins/skin03/images/xerath_splash_tile_3.jpg"
+    },
+    {
+      "name": "Guardian of the Sands",
+      "tilePath": "/xerath/skins/skin04/images/xerath_splash_tile_4.jpg"
+    },
+    {
+      "name": "Dark Star",
+      "tilePath": "/xerath/skins/skin05/images/xerath_splash_tile_5.jpg"
+    },
+    {
+      "name": "Arcana",
+      "tilePath": "/xerath/skins/skin12/images/xerath_splash_tile_12.jpg"
+    },
+    {
+      "name": "Astronaut",
+      "tilePath": "/xerath/skins/skin21/images/xerath_splash_tile_21.jpg"
+    },
+    {
+      "name": "Crystalis Indomitus",
+      "tilePath": "/xerath/skins/skin30/images/xerath_splash_tile_30.skins_xerath_skin30.jpg"
+    }
+  ],
+  "XinZhao": [
+    {
+      "name": "Original",
+      "tilePath": "/xinzhao/skins/base/images/xinzhao_splash_tile_0.jpg"
+    },
+    {
+      "name": "Commando",
+      "tilePath": "/xinzhao/skins/skin01/images/xinzhao_splash_tile_1.jpg"
+    },
+    {
+      "name": "Imperial",
+      "tilePath": "/xinzhao/skins/skin02/images/xinzhao_splash_tile_2.jpg"
+    },
+    {
+      "name": "Viscero",
+      "tilePath": "/xinzhao/skins/skin03/images/xinzhao_splash_tile_3.jpg"
+    },
+    {
+      "name": "Winged Hussar",
+      "tilePath": "/xinzhao/skins/skin04/images/xinzhao_splash_tile_4.jpg"
+    },
+    {
+      "name": "Warring Kingdoms",
+      "tilePath": "/xinzhao/skins/skin05/images/xinzhao_splash_tile_5.jpg"
+    },
+    {
+      "name": "Secret Agent",
+      "tilePath": "/xinzhao/skins/skin06/images/xinzhao_splash_tile_6.jpg"
+    },
+    {
+      "name": "Dragonslayer",
+      "tilePath": "/xinzhao/skins/skin13/images/xinzhao_splash_tile_13.jpg"
+    },
+    {
+      "name": "Cosmic Defender",
+      "tilePath": "/xinzhao/skins/skin20/images/xinzhao_splash_tile_20.jpg"
+    },
+    {
+      "name": "Marauder",
+      "tilePath": "/xinzhao/skins/skin27/images/xinzhao_splash_tile_27.jpg"
+    },
+    {
+      "name": "Firecracker",
+      "tilePath": "/xinzhao/skins/skin36/images/xinzhao_splash_tile_36.jpg"
+    }
+  ],
+  "Yasuo": [
+    {
+      "name": "Original",
+      "tilePath": "/yasuo/skins/base/images/yasuo_splash_tile_0.jpg"
+    },
+    {
+      "name": "High Noon",
+      "tilePath": "/yasuo/skins/skin01/images/yasuo_splash_tile_1.jpg"
+    },
+    {
+      "name": "PROJECT",
+      "tilePath": "/yasuo/skins/skin02/images/yasuo_splash_tile_2.jpg"
+    },
+    {
+      "name": "Blood Moon",
+      "tilePath": "/yasuo/skins/skin03/images/yasuo_splash_tile_3.jpg"
+    },
+    {
+      "name": "Nightbringer",
+      "tilePath": "/yasuo/skins/skin09/images/yasuo_splash_tile_9.jpg"
+    },
+    {
+      "name": "Odyssey",
+      "tilePath": "/yasuo/skins/skin10/images/yasuo_splash_tile_10.jpg"
+    },
+    {
+      "name": "Battle Boss",
+      "tilePath": "/yasuo/skins/skin17/images/yasuo_splash_tile_17.jpg"
+    },
+    {
+      "name": "True Damage",
+      "tilePath": "/yasuo/skins/skin18/images/yasuo_splash_tile_18.jpg"
+    },
+    {
+      "name": "Spirit Blossom",
+      "tilePath": "/yasuo/skins/skin36/images/yasuo_splash_tile_36.jpg"
+    },
+    {
+      "name": "Prestige True Damage",
+      "tilePath": "/yasuo/skins/skin35/images/yasuo_splash_tile_35.jpg"
+    },
+    {
+      "name": "Truth Dragon",
+      "tilePath": "/yasuo/skins/skin54/images/yasuo_splash_tile_54.jpg"
+    },
+    {
+      "name": "Dream Dragon",
+      "tilePath": "/yasuo/skins/skin55/images/yasuo_splash_tile_55.jpg"
+    },
+    {
+      "name": "Sea Dog",
+      "tilePath": "/yasuo/skins/skin45/images/yasuo_splash_tile_45.jpg"
+    },
+    {
+      "name": "Inkshadow",
+      "tilePath": "/yasuo/skins/skin56/images/yasuo_splash_tile_56.jpg"
+    },
+    {
+      "name": "Prestige Inkshadow",
+      "tilePath": "/yasuo/skins/skin57/images/yasuo_splash_tile_57.jpg"
+    },
+    {
+      "name": "Foreseen",
+      "tilePath": "/yasuo/skins/skin68/images/yasuo_splash_tile_68.jpg"
+    },
+    {
+      "name": "Battle Wolf",
+      "tilePath": "/yasuo/skins/skin77/images/yasuo_splash_tile_77.skins_yasuo_skin77.jpg"
+    },
+    {
+      "name": "Genesis Nightbringer",
+      "tilePath": "/yasuo/skins/skin87/images/yasuo_splash_tile_87.skins_yasuo_skin87.jpg"
+    }
+  ],
+  "Yone": [
+    {
+      "name": "Original",
+      "tilePath": "/yone/skins/base/images/yone_splash_tile_0.jpg"
+    },
+    {
+      "name": "Spirit Blossom",
+      "tilePath": "/yone/skins/skin01/images/yone_splash_tile_1.jpg"
+    },
+    {
+      "name": "Battle Academia",
+      "tilePath": "/yone/skins/skin10/images/yone_splash_tile_10.jpg"
+    },
+    {
+      "name": "Dawnbringer",
+      "tilePath": "/yone/skins/skin19/images/yone_splash_tile_19.jpg"
+    },
+    {
+      "name": "Ocean Song",
+      "tilePath": "/yone/skins/skin26/images/yone_splash_tile_26.jpg"
+    },
+    {
+      "name": "Inkshadow",
+      "tilePath": "/yone/skins/skin35/images/yone_splash_tile_35.jpg"
+    },
+    {
+      "name": "HEARTSTEEL",
+      "tilePath": "/yone/skins/skin45/images/yone_splash_tile_45.jpg"
+    },
+    {
+      "name": "Prestige HEARTSTEEL",
+      "tilePath": "/yone/skins/skin46/images/yone_splash_tile_46.jpg"
+    },
+    {
+      "name": "High Noon",
+      "tilePath": "/yone/skins/skin55/images/yone_splash_tile_55.jpg"
+    },
+    {
+      "name": "Peacemaker High Noon",
+      "tilePath": "/yone/skins/skin58/images/yone_splash_tile_58.jpg"
+    },
+    {
+      "name": "Masked Justice",
+      "tilePath": "/yone/skins/skin65/images/yone_splash_tile_65.skins_yone_skin65.jpg"
+    }
+  ],
+  "Yorick": [
+    {
+      "name": "Original",
+      "tilePath": "/yorick/skins/base/images/yorick_splash_tile_0.jpg"
+    },
+    {
+      "name": "Undertaker",
+      "tilePath": "/yorick/skins/skin01/images/yorick_splash_tile_1.jpg"
+    },
+    {
+      "name": "Pentakill",
+      "tilePath": "/yorick/skins/skin02/images/yorick_splash_tile_2.jpg"
+    },
+    {
+      "name": "Arclight",
+      "tilePath": "/yorick/skins/skin03/images/yorick_splash_tile_3.jpg"
+    },
+    {
+      "name": "Meowrick",
+      "tilePath": "/yorick/skins/skin04/images/yorick_splash_tile_4.jpg"
+    },
+    {
+      "name": "Resistance",
+      "tilePath": "/yorick/skins/skin12/images/yorick_splash_tile_12.jpg"
+    },
+    {
+      "name": "Pentakill Lost Chapter",
+      "tilePath": "/yorick/skins/skin21/images/yorick_splash_tile_21.jpg"
+    },
+    {
+      "name": "Spirit Blossom",
+      "tilePath": "/yorick/skins/skin30/images/yorick_splash_tile_30.jpg"
+    },
+    {
+      "name": "Dark Star",
+      "tilePath": "/yorick/skins/skin40/images/yorick_splash_tile_40.skins_yorick_skin40.jpg"
+    },
+    {
+      "name": "High Noon",
+      "tilePath": "/yorick/skins/skin50/images/yorick_splash_tile_50.skins_yorick_skin50.jpg"
+    }
+  ],
+  "Yuumi": [
+    {
+      "name": "Original",
+      "tilePath": "/yuumi/skins/base/images/yuumi_splash_tile_0.jpg"
+    },
+    {
+      "name": "Battle Principal",
+      "tilePath": "/yuumi/skins/skin01/images/yuumi_splash_tile_1.jpg"
+    },
+    {
+      "name": "Heartseeker",
+      "tilePath": "/yuumi/skins/skin11/images/yuumi_splash_tile_11.jpg"
+    },
+    {
+      "name": "Yuubee",
+      "tilePath": "/yuumi/skins/skin19/images/yuumi_splash_tile_19.jpg"
+    },
+    {
+      "name": "Bewitching",
+      "tilePath": "/yuumi/skins/skin28/images/yuumi_splash_tile_28.jpg"
+    },
+    {
+      "name": "EDG",
+      "tilePath": "/yuumi/skins/skin37/images/yuumi_splash_tile_37.jpg"
+    },
+    {
+      "name": "Shiba",
+      "tilePath": "/yuumi/skins/skin39/images/yuumi_splash_tile_39.jpg"
+    },
+    {
+      "name": "Cyber Cat",
+      "tilePath": "/yuumi/skins/skin49/images/yuumi_splash_tile_49.skins_yuumi_skin49.jpg"
+    },
+    {
+      "name": "Prestige Cyber Cat",
+      "tilePath": "/yuumi/skins/skin50/images/yuumi_splash_tile_50.skins_yuumi_skin50.jpg"
+    }
+  ],
+  "Zac": [
+    {
+      "name": "Original",
+      "tilePath": "/zac/skins/base/images/zac_splash_tile_0.jpg"
+    },
+    {
+      "name": "Special Weapon",
+      "tilePath": "/zac/skins/skin01/images/zac_splash_tile_1.jpg"
+    },
+    {
+      "name": "Pool Party",
+      "tilePath": "/zac/skins/skin02/images/zac_splash_tile_2.jpg"
+    },
+    {
+      "name": "SKT T1",
+      "tilePath": "/zac/skins/skin06/images/zac_splash_tile_6.jpg"
+    },
+    {
+      "name": "Battlecast",
+      "tilePath": "/zac/skins/skin07/images/zac_splash_tile_7.jpg"
+    },
+    {
+      "name": "Empyrean",
+      "tilePath": "/zac/skins/skin14/images/zac_splash_tile_14.jpg"
+    },
+    {
+      "name": "Zesty Dip",
+      "tilePath": "/zac/skins/skin24/images/zac_splash_tile_24.jpg"
+    }
+  ],
+  "Zed": [
+    {
+      "name": "Original",
+      "tilePath": "/zed/skins/base/images/zed_splash_tile_0.jpg"
+    },
+    {
+      "name": "Shockblade",
+      "tilePath": "/zed/skins/skin01/images/zed_splash_tile_1.jpg"
+    },
+    {
+      "name": "SKT T1",
+      "tilePath": "/zed/skins/skin02/images/zed_splash_tile_2.jpg"
+    },
+    {
+      "name": "PROJECT",
+      "tilePath": "/zed/skins/skin03/images/zed_splash_tile_3.jpg"
+    },
+    {
+      "name": "Worlds 2016",
+      "tilePath": "/zed/skins/skin10/images/zed_splash_tile_10.jpg"
+    },
+    {
+      "name": "Death Sworn",
+      "tilePath": "/zed/skins/skin11/images/zed_splash_tile_11.jpg"
+    },
+    {
+      "name": "Galaxy Slayer",
+      "tilePath": "/zed/skins/skin13/images/zed_splash_tile_13.jpg"
+    },
+    {
+      "name": "PsyOps",
+      "tilePath": "/zed/skins/skin15/images/zed_splash_tile_15.jpg"
+    },
+    {
+      "name": "Prestige PROJECT",
+      "tilePath": "/zed/skins/skin30/images/zed_splash_tile_30.jpg"
+    },
+    {
+      "name": "Debonair",
+      "tilePath": "/zed/skins/skin31/images/zed_splash_tile_31.jpg"
+    },
+    {
+      "name": "Empyrean",
+      "tilePath": "/zed/skins/skin38/images/zed_splash_tile_38.jpg"
+    },
+    {
+      "name": "Immortal Journey",
+      "tilePath": "/zed/skins/skin49/images/zed_splash_tile_49.jpg"
+    },
+    {
+      "name": "Blood Moon",
+      "tilePath": "/zed/skins/skin58/images/zed_splash_tile_58.jpg"
+    },
+    {
+      "name": "Quantum Galaxy Slayer",
+      "tilePath": "/zed/skins/skin68/images/zed_splash_tile_68.skins_zed_skin68.jpg"
+    }
+  ],
+  "Zeri": [
+    {
+      "name": "Original",
+      "tilePath": "/zeri/skins/base/images/zeri_splash_tile_0.jpg"
+    },
+    {
+      "name": "Withered Rose",
+      "tilePath": "/zeri/skins/skin01/images/zeri_splash_tile_1.jpg"
+    },
+    {
+      "name": "Ocean Song",
+      "tilePath": "/zeri/skins/skin10/images/zeri_splash_tile_10.jpg"
+    },
+    {
+      "name": "Immortal Journey",
+      "tilePath": "/zeri/skins/skin19/images/zeri_splash_tile_19.jpg"
+    },
+    {
+      "name": "Fright Night",
+      "tilePath": "/zeri/skins/skin28/images/zeri_splash_tile_28.skins_zeri_skin28.jpg"
+    },
+    {
+      "name": "Prestige Fright Night",
+      "tilePath": "/zeri/skins/skin29/images/zeri_splash_tile_29.skins_zeri_skin29.jpg"
+    }
+  ],
+  "Ziggs": [
+    {
+      "name": "Original",
+      "tilePath": "/ziggs/skins/base/images/ziggs_splash_tile_0.jpg"
+    },
+    {
+      "name": "Mad Scientist",
+      "tilePath": "/ziggs/skins/skin01/images/ziggs_splash_tile_1.jpg"
+    },
+    {
+      "name": "Major",
+      "tilePath": "/ziggs/skins/skin02/images/ziggs_splash_tile_2.jpg"
+    },
+    {
+      "name": "Pool Party",
+      "tilePath": "/ziggs/skins/skin03/images/ziggs_splash_tile_3.jpg"
+    },
+    {
+      "name": "Snow Day",
+      "tilePath": "/ziggs/skins/skin04/images/ziggs_splash_tile_4.jpg"
+    },
+    {
+      "name": "Master Arcanist",
+      "tilePath": "/ziggs/skins/skin05/images/ziggs_splash_tile_5.jpg"
+    },
+    {
+      "name": "Battle Boss",
+      "tilePath": "/ziggs/skins/skin06/images/ziggs_splash_tile_6.jpg"
+    },
+    {
+      "name": "Odyssey",
+      "tilePath": "/ziggs/skins/skin07/images/ziggs_splash_tile_7.jpg"
+    },
+    {
+      "name": "Sugar Rush",
+      "tilePath": "/ziggs/skins/skin14/images/ziggs_splash_tile_14.jpg"
+    },
+    {
+      "name": "Hextech",
+      "tilePath": "/ziggs/skins/skin23/images/ziggs_splash_tile_23.jpg"
+    },
+    {
+      "name": "BZZZiggs",
+      "tilePath": "/ziggs/skins/skin24/images/ziggs_splash_tile_24.jpg"
+    },
+    {
+      "name": "La Ilusión",
+      "tilePath": "/ziggs/skins/skin33/images/ziggs_splash_tile_33.jpg"
+    }
+  ],
+  "Zilean": [
+    {
+      "name": "Original",
+      "tilePath": "/zilean/skins/base/images/zilean_splash_tile_0.jpg"
+    },
+    {
+      "name": "Old Saint",
+      "tilePath": "/zilean/skins/skin01/images/zilean_splash_tile_1.jpg"
+    },
+    {
+      "name": "Groovy",
+      "tilePath": "/zilean/skins/skin02/images/zilean_splash_tile_2.jpg"
+    },
+    {
+      "name": "Shurima Desert",
+      "tilePath": "/zilean/skins/skin03/images/zilean_splash_tile_3.jpg"
+    },
+    {
+      "name": "Time Machine",
+      "tilePath": "/zilean/skins/skin04/images/zilean_splash_tile_4.jpg"
+    },
+    {
+      "name": "Blood Moon",
+      "tilePath": "/zilean/skins/skin05/images/zilean_splash_tile_5.jpg"
+    },
+    {
+      "name": "Sugar Rush",
+      "tilePath": "/zilean/skins/skin06/images/zilean_splash_tile_6.jpg"
+    },
+    {
+      "name": "Winterblessed",
+      "tilePath": "/zilean/skins/skin14/images/zilean_splash_tile_14.jpg"
+    }
+  ],
+  "Zoe": [
+    {
+      "name": "Original",
+      "tilePath": "/zoe/skins/base/images/zoe_splash_tile_0.jpg"
+    },
+    {
+      "name": "Cyber Pop",
+      "tilePath": "/zoe/skins/skin01/images/zoe_splash_tile_1.jpg"
+    },
+    {
+      "name": "Pool Party",
+      "tilePath": "/zoe/skins/skin02/images/zoe_splash_tile_2.jpg"
+    },
+    {
+      "name": "Star Guardian",
+      "tilePath": "/zoe/skins/skin09/images/zoe_splash_tile_9.jpg"
+    },
+    {
+      "name": "Arcanist",
+      "tilePath": "/zoe/skins/skin18/images/zoe_splash_tile_18.jpg"
+    },
+    {
+      "name": "Prestige Arcanist",
+      "tilePath": "/zoe/skins/skin19/images/zoe_splash_tile_19.jpg"
+    },
+    {
+      "name": "EDG",
+      "tilePath": "/zoe/skins/skin20/images/zoe_splash_tile_20.jpg"
+    },
+    {
+      "name": "Winterblessed",
+      "tilePath": "/zoe/skins/skin22/images/zoe_splash_tile_22.jpg"
+    },
+    {
+      "name": "Dark Star",
+      "tilePath": "/zoe/skins/skin33/images/zoe_splash_tile_33.skins_zoe_skin33.jpg"
+    }
+  ],
+  "Zyra": [
+    {
+      "name": "Original",
+      "tilePath": "/zyra/skins/base/images/zyra_splash_tile_0.jpg"
+    },
+    {
+      "name": "Wildfire",
+      "tilePath": "/zyra/skins/skin01/images/zyra_splash_tile_1.jpg"
+    },
+    {
+      "name": "Haunted",
+      "tilePath": "/zyra/skins/skin02/images/zyra_splash_tile_2.jpg"
+    },
+    {
+      "name": "SKT T1",
+      "tilePath": "/zyra/skins/skin03/images/zyra_splash_tile_3.jpg"
+    },
+    {
+      "name": "Dragon Sorceress",
+      "tilePath": "/zyra/skins/skin04/images/zyra_splash_tile_4.jpg"
+    },
+    {
+      "name": "Coven",
+      "tilePath": "/zyra/skins/skin05/images/zyra_splash_tile_5.jpg"
+    },
+    {
+      "name": "Prestige Coven",
+      "tilePath": "/zyra/skins/skin06/images/zyra_splash_tile_6.jpg"
+    },
+    {
+      "name": "Crystal Rose",
+      "tilePath": "/zyra/skins/skin07/images/zyra_splash_tile_7.jpg"
+    },
+    {
+      "name": "Crime City Nightmare",
+      "tilePath": "/zyra/skins/skin16/images/zyra_splash_tile_16.jpg"
+    },
+    {
+      "name": "Mythmaker",
+      "tilePath": "/zyra/skins/skin36/images/zyra_splash_tile_36.jpg"
+    },
+    {
+      "name": "Street Demons",
+      "tilePath": "/zyra/skins/skin46/images/zyra_splash_tile_46.jpg"
+    },
+    {
+      "name": "Blood Moon",
+      "tilePath": "/zyra/skins/skin55/images/zyra_splash_tile_55.jpg"
+    },
+    {
+      "name": "Spirit Blossom",
+      "tilePath": "/zyra/skins/skin64/images/zyra_splash_tile_64.skins_zyra_skin64.jpg"
+    }
+  ]
+}

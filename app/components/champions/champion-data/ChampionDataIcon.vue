@@ -49,10 +49,34 @@ const icon = [
         icon: 'hp',
 
   },
+  {
+    name: 'Magic damage',
+        icon: 'ap',
+
+  },
+
+  {
+    name: 'Physical damage',
+        icon: 'ad',
+
+  },
+  {
+    name: 'Mixed damage',
+        icon: 'ad',
+
+  },
+
+  {
+    name: 'True damage',
+        icon: 'ad',
+
+  },
 ]
 
 </script>
 
 <template>
+  <span  :class="cn('', className)" >
  <component :is="`i-stats-${icon.find(p => p.name == name).icon}`" :class="cn('', className)" />
+ </span>
 </template>

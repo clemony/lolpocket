@@ -8,7 +8,7 @@ declare global {
   type ItemRecord = Record<ItemId, ItemLite>
   type StatLite = number
   type StatArray = StatLite[]
-  type StatKeys = keyof ItemLite['stats']
+  type StatKeys = keyof ItemLite["stats"]
 
   interface ItemLite {
     id: number
@@ -24,13 +24,13 @@ declare global {
   interface ItemComponent {
     id: number
     name: ItemName
-    gold: number
+    gold?: number
   }
 
   interface Item {
     id: number
     name: ItemName
-    rank: string[]
+    rank?: string[]
     buildsFrom?: ItemComponent[]
     buildsInto?: ItemComponent[]
     specialRecipe?: string | number
@@ -42,7 +42,7 @@ declare global {
     simpleDescription?: string
     nicknames?: string[] | null
     passives?: Effect[]
-    active?: Effect
+    active?: Effect[]
     stats: Record<string, number>
     shop?: {
       prices: {
@@ -50,10 +50,10 @@ declare global {
         combined?: number
         sell?: number
       }
-      purchasable: boolean
-      tags: string[]
+      purchasable?: boolean
+      tags?: string[]
     }
-    maps: number[]
+    maps?: number[]
   }
 
   interface ItemSet {
@@ -68,7 +68,7 @@ declare global {
     cooldown?: number | string
     recharge?: string
     charges?: string | number
-    range?: string
+    range?: number
   }
 
   type effectAmount = number
@@ -84,8 +84,7 @@ declare global {
     icon?: string
   }
 
-type CalculatorSet = ItemIndex[]
-
+  type CalculatorSet = ItemIndex[]
 }
 
-export { }
+export {}

@@ -11,7 +11,7 @@ const { pocket } = defineProps<{
 definePageMeta({
   name: 'card',
   section: 'pocket',
-  search: false
+  search: false,
 
 })
 
@@ -41,9 +41,9 @@ const pocketCardRef = ref(null)
 onMounted (() => {
   ps.pocketCardRef = pocketCardRef.value
 })
-
+// getSplash(pocket.card.splash) ||
 const img = useImage()
-const splash = computed (() => getSplash(pocket.card.splash) || 'https://universe.communitydragon.org/events/2024/anima-squad-embed-2024/images/bg-index-index.2630f6.jpg')
+const splash = computed (() => 'https://universe.communitydragon.org/events/2024/anima-squad-embed-2024/images/bg-index-index.2630f6.jpg')
 console.log('💠 - pocket.card.splash:', pocket.card.splash)
 </script>
 

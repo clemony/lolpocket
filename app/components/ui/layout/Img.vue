@@ -10,11 +10,11 @@ const { alt, img, class: className } = defineProps<{
   loadedClass?: HTMLAttributes['class']
 }>()
 
-const emit = defineEmits(['loaded'])
+const emit = defineEmits(['load'])
 const loaded = ref(false)
 function load() {
   loaded.value = true
-  emit('loaded')
+  emit('load')
 }
 </script>
 

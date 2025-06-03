@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { Radar } from 'vue-chartjs'
 import { Chart, Filler, LineElement, PointElement, RadarController, RadialLinearScale } from 'chart.js'
+import { Radar } from 'vue-chartjs'
 
 const { champion } = defineProps<{
   champion: Champion
@@ -43,10 +43,11 @@ const options = {
       borderWidth: 1,
       borderJoinStyle: 'round' as const,
       borderCapStyle: 'round' as const,
-      fill: true,
+      fill: 'origin',
       backgroundColor: 'rgba(0, 0, 0, 0.6)',
       borderColor: 'rgb(0, 0, 0)',
-      tension: 0.3,
+      tension: 0.1,
+      spanGaps: true,
     },
 
     point: {
@@ -60,6 +61,7 @@ const options = {
   scales: {
     r: {
       backgroundColor: `color-mix(in oklch, ${getColorFromVariable('--color-b3')} 40%, #00000000 60%)`,
+      beginAtZero: true,
       angleLines: {
         display: false,
       },
@@ -79,11 +81,16 @@ const options = {
       },
     },
   },
+  plugins: {
+    filler:{
+      propagate: true,
+    }
+  }
 }
 </script>
 
 <template>
-  <Field class="w-84 bg-b3/30 m-0 relative !pb-0 pt-6 justify-self-center">
+  <Field class="w-full bg-b3/30 m-0 relative !pb-0 pt-6 justify-self-center">
     <div class="absolute top-5 text-3 tracking-tight left-6 text-bc/50 font-bold drop-shadow-sm">
       Champion Attributes
     </div>

@@ -30,7 +30,7 @@ const pocket = computed(() => {
 const ix = useIndexStore()
 
 const champs = computed(() => Object.values(ix.skins || {}))
-const names = computed(() => ix.skins.map(c => c.name))
+
 console.log('💠 - champs:', champs)
 const selectIcon = ref()
 const champSearch = ref(null)
@@ -55,20 +55,23 @@ const searchResult = computed(() => {
   if (!champName)
     return null
 
-//   const entry = champs.value.find(champ => champ.name === champName)
-//   if (!entry)
-//     return null
+  //   const entry = champs.value.find(champ => champ.name === champName)
+  //   if (!entry)
+  //     return null
 
-//   const splashes = ix.skins.map(s => s.splashPath)
+  //   const splashes = ix.skins.map(s => s.splashPath)
 
-//   return new Fuse(splashes, { threshold: 0.3 }).search(champName).map(r => ({ splash: r.item, id: entry.id }))
-// })
+  //   return new Fuse(splashes, { threshold: 0.3 }).search(champName).map(r => ({ splash: r.item, id: entry.id }))
+  // })
 
-// watch(searchResult, (results) => {
-//   const champName = selectedResult.value
-//   const entry = champs.value.find(champ => champ.name === champName)
-//   if (entry)
-//     splashIcons.value = entry.skins.map(s => s.splashPath)
+  // watch(searchResult, (results) => {
+  //   const champName = selectedResult.value
+  //   const entry = champs.value.find(champ => champ.name === champName)
+  //   if (entry)
+  //     splashIcons.value = entry.skins.map(s => s.splashPath)
+  // no fix
+  // TODO FIX
+  return 1
 })
 
 function handleInput(e: string) {
@@ -79,6 +82,8 @@ function handleInput(e: string) {
 
 onMounted(() => {
   selectIcon.value = props.pocket?.icon ?? props.selectedIcon ?? '/img/lp/192.webp'
+
+  ix.loadSkins()
 })
 </script>
 

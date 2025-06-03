@@ -51,7 +51,6 @@ function simplifyArray<T>(arr: T[]): T[] {
 }
 
 export function normalizeAbility(ability: any): Ability {
-  console.log('💠 - normalizeAbility - ability:', ability.occurrence)
   return {
     name: ability.name,
     icon: ability.icon,

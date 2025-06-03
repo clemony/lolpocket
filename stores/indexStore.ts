@@ -1,86 +1,130 @@
-import { defineStore } from 'pinia'
+import { defineStore } from "pinia"
 
-export const useIndexStore = defineStore('indexStore', () => {
-  const champions = ref<ChampionIndex[]>([])
-  const runes = ref<RuneIndex[]>([])
-  const items = ref<ItemIndex[]>([])
-  const maps = ref<MapIndex[]>([])
-  const shards = ref<Shard[]>([])
-  const skin = ref<BaseSkin[]>([])
-  const spells = ref<Spell[]>([])
-  const skins = ref<Skin[]>([])
+export const useIndexStore = defineStore(
+  "indexStore",
+  () => {
+    const champions = ref<ChampionIndex[]>(championIndex)
+    const runes = ref<RuneIndex[]>([])
+    const items = ref<ItemIndex[]>([])
+    const maps = ref<MapIndex[]>([])
+    const shards = ref<Shard[]>([])
+    const skin = ref<SkinRecord>(baseSkin)
+    console.log("💠 - skin:", skin)
+    const spells = ref<Spell[]>([])
+    const skins = ref<FullSkinRecord>({})
 
-  function findInIndex<T extends Record<string, any>>(
-    dataset: T[] | undefined,
-    inputKey: keyof T,
-    value: T[keyof T],
-    outputKey: keyof T,
-  ): T[keyof T] | undefined {
-    return dataset?.find(item => item[inputKey] === value)?.[outputKey]
-  }
+    async function loadSkins() {
+      if (Object.keys(skins.value).length) return
+      const mod = await import("~/data/index/skins-full")
+      skins.value = mod.skins
+    }
 
-  function getByIndex<T extends Record<string, any>>(
-    dataset: T[] | undefined,
-    inputKey: keyof T,
-    value: T[keyof T],
-  ): T | undefined {
-    return dataset?.find(item => item[inputKey] === value)
-  }
+    async function loadChamps() {
+      if (champions.value.length) return
+      const { championIndex } = await import("data/index/champion-index")
+      champions.value = championIndex
+    }
 
-  const fetchAll = () => {
-    useCachedFetch('champions-index', '/api/champion-index', champions)
-    useCachedFetch('item-index', '/api/item-index', items)
-    useCachedFetch('runes-index', '/api/rune-index', runes)
-    useCachedFetch('map-index', '/api/map-index', maps)
-    useCachedFetch('shard-index', '/api/shards', shards)
-    useCachedFetch('spell-index', '/api/spells', spells)
-    useCachedFetch('skindex', '/api/skindex', skin)
-    useCachedFetch('skinsdex', '/api/skinsdex', skins)
-  }
+    async function loadItems() {
+      if (items.value.length) return
+      const { itemIndex } = await import("data/index/item-index")
+      items.value = itemIndex
+    }
 
-  watchEffect(() => {
-    if (items.value.length)
-      console.log('✅ Items loaded:', items.value)
+    async function loadBaseSkins() {
+      if (skin.value.length) return
+      const { baseSkin } = await import("data/index/skins-base")
+      skin.value = baseSkin
+    }
 
-    if (spells.value.length)
-      console.log('✅ Spells loaded:', spells.value)
-  })
+    async function loadRunes() {
+      if (runes.value.length) return
+      const { runeIndex } = await import("data/index/rune-index")
+      runes.value = runeIndex
+    }
 
-  return {
-    champions,
-    items,
-    runes,
-    maps,
-    shards,
-    spells,
-    skin,
-    skins,
+    async function loadDefaults() {
+      loadChamps()
+      loadItems()
+      loadBaseSkins()
+      loadRunes()
+    }
 
-    fetchAll,
+    function findInIndex<T extends Record<string, any>>(
+      dataset: T[] | undefined,
+      inputKey: keyof T,
+      value: T[keyof T],
+      outputKey: keyof T
+    ): T[keyof T] | undefined {
+      return dataset?.find((item) => item[inputKey] === value)?.[outputKey]
+    }
 
-    // helpers
-    findInIndex,
-    getByIndex,
-    spellById: (id: number) => getByIndex(spells.value, 'id', id),
-    itemById: (id: number) => getByIndex(items.value, 'id', id),
-    runeById: (id: number) => getByIndex(runes.value, 'id', id),
-    championByKey: (key: string) => getByIndex(champions.value, 'key', key),
-    champNameById: (id: number) => findInIndex(champions.value, 'id', id, 'name'),
-    champIdByKey: (key: string) => findInIndex(champions.value, 'key', key, 'id'),
-    itemIdByName: (name: string) => findInIndex(items.value, 'name', name, 'id'),
-    itemNameById: (id: number) => findInIndex(items.value, 'id', id, 'name'),
-    runeKeyById: (id: number) => findInIndex(runes.value, 'id', id, 'key'),
-    runeNameById: (id: number) => findInIndex(runes.value, 'id', id, 'name'),
-    spellNameById: (id: number) => findInIndex(spells.value, 'id', id, 'name'),
-    tileByKey: (key: string) => skin.value?.[key]?.tilePath,
-    splashByKey: (key: string) => skin.value?.[key]?.splashPath,
-    centeredByKey: (key: string) => skin.value?.[key]?.centeredPath,
-    loadScreenByKey: (key: string) => skin.value?.[key]?.loadPath,
-    mapNameById: (id: number) => maps.value.find(m => m.id === id)?.aka || maps.value.find(m => m.id === id)?.name || '',
-  }
-}, {
-  persist: {
-    storage: piniaPluginPersistedstate.localStorage(),
-    key: 'indexStore',
+    function getByIndex<T extends Record<string, any>>(
+      dataset: T[] | undefined,
+      inputKey: keyof T,
+      value: T[keyof T]
+    ): T | undefined {
+      return dataset?.find((item) => item[inputKey] === value)
+    }
+
+    watchEffect(() => {
+      if (items.value.length) console.log("✅ Items loaded:", items.value)
+
+      if (spells.value.length) console.log("✅ Spells loaded:", spells.value)
+    })
+
+    return {
+      champions,
+      items,
+      runes,
+      maps,
+      shards,
+      spells,
+      skin,
+      skins,
+
+      // load
+      loadSkins,
+      loadDefaults,
+
+      // helpers
+      findInIndex,
+      getByIndex,
+      spellById: (id: number) => getByIndex(spells.value, "id", id),
+      itemById: (id: number) => getByIndex(items.value, "id", id),
+      runeById: (id: number) => getByIndex(runes.value, "id", id),
+      championByKey: (key: string) => getByIndex(champions.value, "key", key),
+      champKeyById: (id: number) =>
+        findInIndex(champions.value, "id", id, "key"),
+      champNameById: (id: number) =>
+        findInIndex(champions.value, "id", id, "name"),
+      champNameByKey: (key: string) =>
+        findInIndex(champions.value, "key", key, "name") as string,
+      champIdByKey: (key: string) =>
+        findInIndex(champions.value, "key", key, "id") as number,
+      champIdByName: (name: string) =>
+        findInIndex(champions.value, "name", name, "id"),
+      itemIdByName: (name: string) =>
+        findInIndex(items.value, "name", name, "id"),
+      itemNameById: (id: number) => findInIndex(items.value, "id", id, "name"),
+      runeKeyById: (id: number) => findInIndex(runes.value, "id", id, "key"),
+      runeNameById: (id: number) => findInIndex(runes.value, "id", id, "name"),
+      spellNameById: (id: number) =>
+        findInIndex(spells.value, "id", id, "name"),
+      tileByKey: (key: string) => skin.value?.[key]?.tilePath,
+      splashByKey: (key: string) => skin.value?.[key]?.splashPath,
+      centeredByKey: (key: string) => skin.value?.[key]?.centeredPath,
+      loadScreenByKey: (key: string) => skin.value?.[key]?.loadPath,
+      mapNameById: (id: number) =>
+        maps.value.find((m) => m.id === id)?.aka ||
+        maps.value.find((m) => m.id === id)?.name ||
+        "",
+    }
   },
-})
+  {
+    persist: {
+      storage: piniaPluginPersistedstate.localStorage(),
+      key: "indexStore",
+    },
+  }
+)

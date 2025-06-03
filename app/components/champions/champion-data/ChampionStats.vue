@@ -44,8 +44,13 @@ const filteredResolvedStats = computed(() => {
 </script>
 
 <template>
-  <Field class="**:select-text grid gap-y-4 bg-b3/30 m-0">
-    <Select v-model:model-value="level" class="w-fit mb-4">
+  <Field class="**:select-text grid gap-y-4 bg-b3/30 m-0 px-5 py-4">
+    <div class="flex w-full justify-between items-center mb-4">
+      <span class="flex items-center gap-1 capitalize font-3 text-medium">
+        <slot  />
+        BASE STATS
+      </span>
+    <Select v-model:model-value="level" class="w-fit">
       <ContrastSelectTrigger class="!h-7 w-fit flex gap-1 opacity-90 text-nc items-center">
         lvl
         <SelectValue class="!text-nc" :placeholder="level.toString()" />
@@ -58,7 +63,7 @@ const filteredResolvedStats = computed(() => {
         </SelectGroup>
       </ContrastSelectContent>
     </Select>
-
+  </div>
     <div v-for="(value, key) in filteredResolvedStats" :key="key" class="col-start-1 grid h-fit ">
       <div class="justify-between grid grid-cols-[46px_1fr_46px] items-center mb-1.5">
         <span class="font-semibold text-2 tracking-tight text-bc/70 dst">

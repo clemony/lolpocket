@@ -4,8 +4,25 @@ const { id, base } = defineProps<{
   base?: boolean
 }>()
 
-const itemId = ref<number | null>(id)
-const { data: item, pending } = useItemDetails(itemId.value!)
+const itemId = computed (() => id)
+
+const item = ref<Item>()
+async function loadItem() {
+  if (!itemId.value)
+    return
+  const i = await import(`data/items/${id}`)
+  item.value = i
+}
+
+watch(
+  () => itemId.value,
+  (newVal) => {
+    if (!newVal)
+      return
+
+    loadItem()
+  },
+)
 
 /* const itemPrice = computed (() => {
   if (!item.cost)
@@ -58,7 +75,7 @@ const { data: item, pending } = useItemDetails(itemId.value!)
         <ItemStats :stats="item.stats" :base="base" />
       </div>
 
-      <Separator v-if="item.passives.length || item.active.name" class=" mt-2 mb-2 bg-nc/10" />
+      <Separator v-if="!item.noEffects" class=" mt-2 mb-2 bg-nc/10" />
 
       <div v-if="item.passives.length && item.noEffects != true">
         <ItemEffect

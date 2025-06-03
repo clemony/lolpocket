@@ -18,7 +18,7 @@
 
 @utility btn-ghost {
   &:hover {
-    @apply border-b3/40 !text-red-500;
+    @apply border-b3/40;
     --btn-bg: --alpha(var(--b2) / 20%);
   }
   &.btn-active {
@@ -30,7 +30,7 @@
 /* badge */
 
 @utility badge {
-  @apply rounded-lg shadow-standard shadow-black/2 **:text-3 flex gap-2 drop-shadow-text items-center;
+  @apply rounded-lg shadow-standard shadow-black/2 **:text-3 flex gap-2 drop-shadow-text items-center  box-border;
 }
 
 @utility badge-neutral {

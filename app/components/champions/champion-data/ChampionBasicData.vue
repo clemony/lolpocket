@@ -5,9 +5,11 @@ champion: Champion
 </script>
 
 <template>
-  <div class="grid grid-cols-[1fr_1.5fr]">
+  <div class="grid px-5">
     <div class="col-start-1">
-   <ChampionStats  :stats="champion.stats" />
+   <ChampionStats  :stats="champion.stats">
+    {{ champion.name }}
+   </ChampionStats>
     </div>
     <div>
 <ChampionAttributes  :champion="champion" /></div>

@@ -17,4 +17,8 @@ export const visibilityWrapper = {
 
   visible: {},
   hidden: {},
+  transition:{
+    duration: 0.5,
+    type:"easeOut"
+  }
 }

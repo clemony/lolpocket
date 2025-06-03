@@ -1,20 +1,20 @@
 <script lang="ts" setup>
-const { ability, index } = defineProps<{
+const { ability, index} = defineProps<{
   ability: Ability
   index: string
 }>()
 </script>
 
 <template>
-  <transition-slide group class="flex flex-col gap-2 h-full">
-    <div class="w-full gap-3 flex items-center">
+  <transition-slide group class="flex flex-col gap-2 h-full items-center">
+    <div class="w-full gap-3 flex items-center px-5">
       <kbd class="kbd kbd-lg drop-shadow-xs  shadow-sm bg-b1/94">{{ index }}</kbd>
       <h2 class="tracking-tight  grow">
         {{ ability.name }}
       </h2>
     </div>
 
-    <transition-slide group class="w-full flex flex-wrap items-center  gap-x-6 gap-y-3 mt-2 mb-4 **:font-medium pr-1">
+    <transition-slide group class="w-full flex flex-wrap items-center px-5 gap-x-6 gap-y-4 my-2  **:font-medium pr-1">
       <div v-if="ability.cooldown.length" v-tippy="'Cooldown'" class="badge badge-lg   bg-ah/30 border-black-50/30 ">
         <i-stats-ah name="ph:hourglass" class="size-3.5 dst text-black" />
 
@@ -42,14 +42,14 @@ const { ability, index } = defineProps<{
         <ValueFormatter :array="ability.cost" />
       </ChampionDataBg>
 
-      <ChampionDataBg v-if="ability.effectRadius" v-tippy="'Effect Radius'" class="badge badge-lg border-b3 border  ">
+      <ChampionDataBg v-if="ability.effectRadius" v-tippy="'Effect Radius'" class="badge badge-lg border-b4 border  ">
         <span class="size-3 relative justify-start">
           <i-stats-radius class="size-4.5 -left-1.5 -top-0.5 absolute text-bc/80 dst" />
         </span>
         {{ ability.effectRadius }}
       </ChampionDataBg>
 
-      <ChampionDataBg v-if="ability.targetRange" v-tippy="'Range'" class="badge badge-lg">
+      <ChampionDataBg v-if="ability.targetRange" v-tippy="'Range'" class="badge badge-lg  border-b4 border  ">
         <i-stats-range class="size-4 text-bc dst text-bc/80" />
         {{ ability.targetRange }}
       </ChampionDataBg>
@@ -62,8 +62,8 @@ const { ability, index } = defineProps<{
       </p>  -->
     </transition-slide>
 
-    <transition-slide group class="flex flex-col gap-2 h-full items-start overflow-y-auto  border border-b3/60 inset-shadow-xs  bg-b1/90 rounded-xl py-4 px-5">
-      <AbilityDescription v-for="(effect, i) in ability.effects" :key="i" :effect="effect" />
+    <transition-slide group class="flex flex-col self-center gap-2 h-full items-start overflow-y-auto  border border-b3/60 inset-shadow-xs  bg-b1/90 rounded-box py-4 px-5 mr-px">
+      <AbilityDescription v-for="(effect, i) in ability.effects" :key="i" :effect="effect"  />
     </transition-slide>
   </transition-slide>
 </template>

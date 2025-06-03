@@ -13,6 +13,8 @@ watch(
     console.log('💠 - newVal:', newVal)
   },
 )
+
+// TODO FIX
 </script>
 
 <template>
@@ -24,13 +26,13 @@ watch(
     </PopoverTrigger>
 
     <PopoverContent align="start" :side-offset="6" :align-offset="-12" class="grid grid-cols-4 gap-2 w-fit min-w-90">
-      <Label v-for="splash in ix.skins" :key="splash.name">
+      <!-- <Label v-for="splash in ix.skins" :key="splash.name">
         <PopoverClose as-child>
           <ChampionSplash :url="getSplash(splash.tilePath)" class="size-20 min-h-20 shadow-sm drop-shadow-sm" />
 
         </PopoverClose>
         <input v-model="pocket.card.splash" type="radio" :value="splash.splashPath" class="peer hidden" />
-      </Label>
+      </Label> -->
     </PopoverContent>
   </Popover>
 </template>

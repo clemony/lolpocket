@@ -25,6 +25,6 @@
   }
 
   .ability-header {
-    @apply font-medium  drop-shadow-text tracking-tighter  uppercase;
+    @apply font-semibold tracking-normal  drop-shadow-text text-2 uppercase;
   }
 }
