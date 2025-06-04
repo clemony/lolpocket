@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lulu/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Lulu is assisted by Pix, an untargetable faerie, who follows her around and fires a barrage of 3 bolts towards her target whenever she uses a basic attack on-attack. Each bolt deals 5 - 39 (based on level) (+ 5% AP) magic damage to the first enemy it collides with, for a total of 15 - 117 (based on level) (+ 15% AP) on hitting a single target with all three bolts."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Lulu is assisted by Pix, an untargetable faerie, who follows her around and fires a barrage of 3 bolts towards her target whenever she uses a basic attack on-attack. Each bolt deals 5 - 39 (based on level) (+ 5% AP) magic damage to the first enemy it collides with, for a total of 15 - 117 (based on level) (+ 15% AP) on hitting a single target with all three bolts.</p>"
           },
           {
             "description": "Casting Help, Pix! on an ally champion transfers Pix's help to them, causing him to fire the bolts dependent on their basic attacks."
@@ -125,7 +125,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lulu/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Lulu and Pix each fire a magic bolt towards the target point, each one dealing magic damage to enemies hit, reduced to 70% against minions, and slowing them by 80% decaying over 2 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lulu and Pix each fire a magic bolt towards the target point, each one dealing magic damage to enemies hit, reduced to 70% against minions, and slowing them by 80% decaying over 2 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -298,10 +298,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lulu/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Lulu can cast Whimsy on herself or a champion."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lulu can cast Whimsy on herself or a champion.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Enemy Cast:</span> Lulu launches a spell onto the target enemy champion that polymorphs them into a harmless critter for a duration, during which their base movement speed is reduced by 60, and disarms them for the same duration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Enemy Cast:</span> Lulu launches a spell onto the target enemy champion that polymorphs them into a harmless critter for a duration, during which their base movement speed is reduced by 60, and disarms them for the same duration.</p>",
             "leveling": [
               {
                 "attribute": "Disable Duration",
@@ -323,7 +323,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Self / Ally Cast:</span> Lulu instantly casts erratic magic upon the target allied champion or herself, granting the target bonus attack speed and 25% (+ 5% per 100 AP) bonus movement speed for a duration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Self / Ally Cast:</span> Lulu instantly casts erratic magic upon the target allied champion or herself, granting the target bonus attack speed and 25% (+ 5% per 100 AP) bonus movement speed for a duration.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -387,10 +387,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lulu/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Lulu can cast Help, Pix! on herself or an ally or enemy."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lulu can cast Help, Pix! on herself or an ally or enemy.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Enemy Cast:</span> Lulu sends Pix to the far side of the target enemy for 4 seconds, dealing magic damage and revealing them for the same duration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Enemy Cast:</span> Lulu sends Pix to the far side of the target enemy for 4 seconds, dealing magic damage and revealing them for the same duration.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -417,7 +417,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Self / Ally Cast:</span> Lulu sends Pix to the target ally for 6.25 seconds. If the target is a champion, they are granted a shield for 2.5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Self / Ally Cast:</span> Lulu sends Pix to the target ally for 6.25 seconds. If the target is a champion, they are granted a shield for 2.5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -474,7 +474,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lulu/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Lulu enlarges herself or the target allied champion, knocking up nearby enemies for 1 second. For the next 7 seconds, the target gains bonus health and 40% increased size and slows nearby enemies, which lingers for 0.25 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lulu enlarges herself or the target allied champion, knocking up nearby enemies for 1 second. For the next 7 seconds, the target gains bonus health and 40% increased size and slows nearby enemies, which lingers for 0.25 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Health",

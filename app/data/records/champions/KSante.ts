@@ -100,10 +100,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/KSante/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> K'Sante's abilities mark enemies hit for 4 seconds. His basic attacks against marked enemies are empowered to consume the mark on-hit, dealing 12 (+ 1% - 2% (based on level) of target's maximum health) bonus physical damage. The health-based portion deals a minimum of 15 - 100 (based on level) damage against minions and 20 - 105 (based on level) against monsters."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> K'Sante's abilities mark enemies hit for 4 seconds. His basic attacks against marked enemies are empowered to consume the mark on-hit, dealing 12 (+ 1% - 2% (based on level) of target's maximum health) bonus physical damage. The health-based portion deals a minimum of 15 - 100 (based on level) damage against minions and 20 - 105 (based on level) against monsters.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">All Out Bonus:</span> K'Sante's basic attacks and ability damage, as well as Dauntless Instinct's mark consumption, are empowered to deal bonus physical damage equal to 1% (+ 1% per 100 bonus armor) (+ 1% per 100 bonus magic resistance) of the target's maximum health."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">All Out Bonus:</span> K'Sante's basic attacks and ability damage, as well as Dauntless Instinct's mark consumption, are empowered to deal bonus physical damage equal to 1% (+ 1% per 100 bonus armor) (+ 1% per 100 bonus magic resistance) of the target's maximum health.</p>"
           }
         ],
         "targeting": "Passive",
@@ -121,7 +121,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/KSante/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> K'Sante slams his ntofo down in the target direction that deals physical damage to enemies hit and slows them by 80% for 0.5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> K'Sante slams his ntofo down in the target direction that deals physical damage to enemies hit and slows them by 80% for 0.5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -159,10 +159,10 @@
             "description": "If this hits at least one enemy, K'Sante generates a stack for 6 seconds, stacking up to 2 times and refreshing on subsequent hits. At 2 stacks, the next Ntofo Strikes consumes them all to become empowered with a new effect."
           },
           {
-            "description": "<span class=\"ability-header\">Empowered Active:</span> K'Sante fires a shockwave in the target direction that applies the same effects to enemies hit, but also pulls them towards him over 0.65 seconds and stuns them for 0.8 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Empowered Active:</span> K'Sante fires a shockwave in the target direction that applies the same effects to enemies hit, but also pulls them towards him over 0.65 seconds and stuns them for 0.8 seconds.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">All Out Bonus:</span> Ntofo Strikes' cooldown is reduced by 33%, with a minimum total cooldown of 1.33 seconds. Upon entering All Out, Ntofo Strikes' stacks are reset. Ntofo Strikes' cooldown is reset if K'Sante had 2 stacks before entering All Out."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">All Out Bonus:</span> Ntofo Strikes' cooldown is reduced by 33%, with a minimum total cooldown of 1.33 seconds. Upon entering All Out, Ntofo Strikes' stacks are reset. Ntofo Strikes' cooldown is reset if K'Sante had 2 stacks before entering All Out.</p>"
           },
           {
             "description": "Ntofo Strikes resets K'Sante's basic attack timer."
@@ -193,13 +193,13 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/KSante/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> K'Sante raises his ntofos defensively and prepares to dash in the target direction, charging for a minimum of 0.4 seconds and up to 1 second. During this time, he gains displacement immunity and 30% damage reduction; additionally, Path Maker's range, stun duration, and All Out bonus true damage modifier increase over the first 0.9 seconds of the channel."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> K'Sante raises his ntofos defensively and prepares to dash in the target direction, charging for a minimum of 0.4 seconds and up to 1 second. During this time, he gains displacement immunity and 30% damage reduction; additionally, Path Maker's range, stun duration, and All Out bonus true damage modifier increase over the first 0.9 seconds of the channel.</p>"
           },
           {
             "description": "Path Maker can be recast within the duration, and does so automatically afterwards. Path Maker's charge cannot be interrupted by crowd control."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> K'Sante dashes in the direction he targeted at the time of cast, though not through terrain, dealing physical damage to enemies he passes through, carrying them alongside him, and stunning them for 0.5 - 1.75 (based on channel time) seconds. This damage is capped against monsters.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> K'Sante dashes in the direction he targeted at the time of cast, though not through terrain, dealing physical damage to enemies he passes through, carrying them alongside him, and stunning them for 0.5 - 1.75 (based on channel time) seconds. This damage is capped against monsters.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -240,7 +240,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">All Out Bonus:</span> Path Maker no longer applies its knock back and stun, but its damage reduction is increased to 75%, the dash deals 10% - 80% (based on channel time) bonus true damage, and the dash speed is increased by 20%. Upon entering All Out, Path Maker's cooldown is refreshed.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">All Out Bonus:</span> Path Maker no longer applies its knock back and stun, but its damage reduction is increased to 75%, the dash deals 10% - 80% (based on channel time) bonus true damage, and the dash speed is increased by 20%. Upon entering All Out, Path Maker's cooldown is refreshed.</p>",
             "leveling": [
               {
                 "attribute": "Minimum Bonus True Damage",
@@ -346,7 +346,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/KSante/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> K'Sante dashes to the target location, though not through terrain, and grants himself a shield for 2 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> K'Sante dashes to the target location, though not through terrain, and grants himself a shield for 2 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -376,7 +376,7 @@
             "description": "Footwork can also be cast on allies with increased range and speed, and the ability to dash through terrain. If the target ally is a champion, they receive the shield as well."
           },
           {
-            "description": "<span class=\"ability-header\">All Out Bonus:</span> Footwork's dash speed is increased, and its cooldown is reduced by 50%."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">All Out Bonus:</span> Footwork's dash speed is increased, and its cooldown is reduced by 50%.</p>"
           },
           {
             "description": "K'Sante can cast any of his abilities during the dash. Footwork will cast at max range if cast beyond that."
@@ -412,7 +412,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/KSante/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> K'Sante roots the target enemy champion for 0.5 seconds and gains displacement immunity over the cast time. He then shatters his ntofos, pulling the target to a location that is 300 units in the cast direction from their location at the time of cast, during which they are revealed, and blinking 175 units behind that location. The target is dealt physical damage near the end of the displacement and is stunned for 0.3 seconds once it ends.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> K'Sante roots the target enemy champion for 0.5 seconds and gains displacement immunity over the cast time. He then shatters his ntofos, pulling the target to a location that is 300 units in the cast direction from their location at the time of cast, during which they are revealed, and blinking 175 units behind that location. The target is dealt physical damage near the end of the displacement and is stunned for 0.3 seconds once it ends.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -477,7 +477,7 @@
             "description": "After K'Sante blinks, he enters All Out for 15 seconds."
           },
           {
-            "description": "<span class=\"ability-header\">All Out:</span> K'Sante gains a health threshold equal to 65% maximum health which cannot be modified nor exceeded by any means. Upon entering All Out, his current health is reduced to this threshold if it is above it. Additionally, his base armor and base magic resistance are reduced by 85% bonus armor and 85% bonus magic resistance, respectively. In return, he gains bonus attack speed, 50% bonus-armor penetration, and 20% omnivamp, and modifies his basic abilities which can be cast at no cost.Upon entering All Out, K'Sante is restored to 100% maximum mana. His mana then decays to 0 over the duration of the buff, after which the amount of mana he had prior to entering All Out is restored.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">All Out:</span> K'Sante gains a health threshold equal to 65% maximum health which cannot be modified nor exceeded by any means. Upon entering All Out, his current health is reduced to this threshold if it is above it. Additionally, his base armor and base magic resistance are reduced by 85% bonus armor and 85% bonus magic resistance, respectively. In return, he gains bonus attack speed, 50% bonus-armor penetration, and 20% omnivamp, and modifies his basic abilities which can be cast at no cost.Upon entering All Out, K'Sante is restored to 100% maximum mana. His mana then decays to 0 over the duration of the buff, after which the amount of mana he had prior to entering All Out is restored.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",

@@ -97,7 +97,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kennen/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Kennen's abilities apply a stack of Mark of the Storm to enemies hit for 6 seconds, refreshing on subsequent applications and stacking up to 3 times."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Kennen's abilities apply a stack of Mark of the Storm to enemies hit for 6 seconds, refreshing on subsequent applications and stacking up to 3 times.</p>"
           },
           {
             "description": "The third stack against a target consumes them all to stun them for 1.25 seconds and restore 25 energy. The stun duration is reduced to 0.5 seconds if this occurs on the same target again within 6 seconds."
@@ -119,7 +119,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kennen/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Kennen throws a shuriken in the target direction that deals magic damage to the first enemy hit.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kennen throws a shuriken in the target direction that deals magic damage to the first enemy hit.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -182,7 +182,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kennen/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Kennen's basic attacks on-attack generate a stack of Electrical Surge, stacking up to 4 times. At 4 stacks, his next basic attack on-attack is empowered to consume all stacks on-hit to deal bonus magic damage and apply a stack of Mark of the Storm.Kennen gains maximum stacks of Electrical Surge upon respawning.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Kennen's basic attacks on-attack generate a stack of Electrical Surge, stacking up to 4 times. At 4 stacks, his next basic attack on-attack is empowered to consume all stacks on-hit to deal bonus magic damage and apply a stack of Mark of the Storm.Kennen gains maximum stacks of Electrical Surge upon respawning.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage",
@@ -221,7 +221,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Kennen sends out a surge of electricity that deals magic damage to all nearby enemies afflicted by Mark of the Storm or within Slicing Maelstrom.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kennen sends out a surge of electricity that deals magic damage to all nearby enemies afflicted by Mark of the Storm or within Slicing Maelstrom.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -281,7 +281,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kennen/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Kennen turns into lightning for 2 seconds, becoming unable to declare basic attacks but gaining ghosting and 100% bonus movement speed. He deals magic damage to enemies he passes through, reduced to 65% against non-champions, and restores 40 energy upon damaging at least one enemy.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kennen turns into lightning for 2 seconds, becoming unable to declare basic attacks but gaining ghosting and 100% bonus movement speed. He deals magic damage to enemies he passes through, reduced to 65% against non-champions, and restores 40 energy upon damaging at least one enemy.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -333,7 +333,7 @@
             "description": "Lightning Rush can be recast after 0.5 seconds, and does so automatically after the duration."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Kennen ends Lightning Rush to gain bonus attack speed and be allowed to exceed the attack speed cap by the amount gained for 4 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Kennen ends Lightning Rush to gain bonus attack speed and be allowed to exceed the attack speed cap by the amount gained for 4 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -386,7 +386,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kennen/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Kennen summons a storm around himself for 3 seconds, gaining bonus armor and bonus magic resistance for the duration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kennen summons a storm around himself for 3 seconds, gaining bonus armor and bonus magic resistance for the duration.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Resistances",

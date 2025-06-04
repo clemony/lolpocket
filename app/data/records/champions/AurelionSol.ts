@@ -98,7 +98,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/AurelionSol/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Aurelion Sol's damaging abilities against enemies generate him permanent stacks of Stardust, which gradually augments his abilities.\n<span class=\"ability-header\"> Breath of Light:</span> Bursts deal bonus magic damage based on the target's maximum health.\n<span class=\"ability-header\"> Astral Flight:</span> Range is increased equal to 62.5% Stardust.\n<span class=\"ability-header\"> Singularity:</span> Outer and inner radius increased equal to 15% Stardust, and the execution threshold is increased.\n<span class=\"ability-header\"> Falling Star/ The Skies Descend:</span> Impact radius increased equal to 15% Stardust."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Aurelion Sol's damaging abilities against enemies generate him permanent stacks of Stardust, which gradually augments his abilities.</p>\n<p class=\"ability-effect\"><span class=\"ability-header\"> Breath of Light:</span> Bursts deal bonus magic damage based on the target's maximum health.</p>\n<p class=\"ability-effect\"><span class=\"ability-header\"> Astral Flight:</span> Range is increased equal to 62.5% Stardust.</p>\n<p class=\"ability-effect\"><span class=\"ability-header\"> Singularity:</span> Outer and inner radius increased equal to 15% Stardust, and the execution threshold is increased.</p>\n<p class=\"ability-effect\"><span class=\"ability-header\"> Falling Star / The Skies Descend:</span> Impact radius increased equal to 15% Stardust.</p>"
           }
         ],
         "targeting": "Passive",
@@ -113,7 +113,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/AurelionSol/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Aurelion Sol charges for up to 3.25 seconds to exhale a beam of starfire, during which he can steer the beam in the target direction. The beam collides with the first enemy hit to reveal them and deal magic damage every 0.125 seconds, reduced to 50% for other surrounding enemies hit by the beam.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Aurelion Sol charges for up to 3.25 seconds to exhale a beam of starfire, during which he can steer the beam in the target direction. The beam collides with the first enemy hit to reveal them and deal magic damage every 0.125 seconds, reduced to 50% for other surrounding enemies hit by the beam.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage per Tick",
@@ -216,7 +216,7 @@
             "description": "Breath of Light can be recast within the duration, and does so automatically afterwards."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Aurelion Sol ends Breath of Light early."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Aurelion Sol ends Breath of Light early.</p>"
           },
           {
             "description": "At rank 5, Breath of Light's channel duration is increased to 160 seconds."
@@ -250,7 +250,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/AurelionSol/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Aurelion Sol dashes in the target direction and resets Breath of Light's cooldown. During flight, he has unobstructed vision and Breath of Light has no cooldown and maximum channel duration and its flat damage is increased, but Astral Flight's dash speed is reduced by 50% during its channel.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Aurelion Sol dashes in the target direction and resets Breath of Light's cooldown. During flight, he has unobstructed vision and Breath of Light has no cooldown and maximum channel duration and its flat damage is increased, but Astral Flight's dash speed is reduced by 50% during its channel.</p>",
             "leveling": [
               {
                 "attribute": "Breath of Light Flat Damage Modifier",
@@ -278,7 +278,7 @@
             "description": "Astral Flight can be recast after 0.5 seconds during the dash, and does so automatically upon arrival."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Aurelion Sol ends Astral Flight."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Aurelion Sol ends Astral Flight.</p>"
           },
           {
             "description": "Scoring a champion takedown within 3 seconds of damaging them reduces Astral Flight's current cooldown by 90% of its total cooldown."
@@ -311,7 +311,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/AurelionSol/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Aurelion Sol conjures a black hole at the target location after a 0.5-second delay that lasts for 5 seconds, granting sight of the area and dealing magic damage every 0.25 seconds to enemies within.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Aurelion Sol conjures a black hole at the target location after a 0.5-second delay that lasts for 5 seconds, granting sight of the area and dealing magic damage every 0.25 seconds to enemies within.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage per Tick",
@@ -363,7 +363,7 @@
             "description": "Enemies in the black hole are dragged inward until they reach the center, and minions and monsters also have their movement speed reduced to 0. Enemies within the center are executed below 5% (+ 2.6% Stardust)% of their maximum health, excluding epic monsters."
           },
           {
-            "description": "<span class=\"ability-header\">After Singularity ends, it generates 1 Stardust for each full second that enemy champions were inside it, as well as varying amounts for enemy units that were killed while being within the area:</span>\nChampions and epic monsters grant 2 Stardust.\nLarge minions and monsters grant 2 Stardust.\nSmall minions and monsters grant 1 Stardust."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">After Singularity ends, it generates 1 Stardust for each full second that enemy champions were inside it, as well as varying amounts for enemy units that were killed while being within the area:</span></p>\nChampions and epic monsters grant 2 Stardust.\nLarge minions and monsters grant 2 Stardust.\nSmall minions and monsters grant 1 Stardust."
           },
           {
             "description": "Singularity will cast at max range if cast within 200 units beyond. During Astral Flight, it will cast at max range if cast at any range beyond."
@@ -396,7 +396,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/AurelionSol/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Aurelion Sol calls down a star that strikes the target location after 1.25 seconds, dealing magic damage to enemies hit and stunning them for 1 second. This generates 5 Stardust for each enemy champion hit.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Aurelion Sol calls down a star that strikes the target location after 1.25 seconds, dealing magic damage to enemies hit and stunning them for 1 second. This generates 5 Stardust for each enemy champion hit.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -454,7 +454,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/AurelionSol/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Aurelion Sol calls down a giant star that strikes the target location after 2 seconds, dealing 25% increased damage in a larger area and knocking up enemies hit for 1 second.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Aurelion Sol calls down a giant star that strikes the target location after 2 seconds, dealing 25% increased damage in a larger area and knocking up enemies hit for 1 second.</p>",
             "leveling": [
               {
                 "attribute": "Empowered Magic Damage",

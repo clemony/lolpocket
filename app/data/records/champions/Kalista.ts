@@ -98,13 +98,13 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kalista/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Whenever Kalista inputs a movement command during her basic attack windup or the cast time of Pierce, she will dash a short distance in the direction of the inputted location.Kalista cannot dash while immobilized or grounded, and she will be knocked down by any immobilizing or polymorphing crowd control during the dash."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Whenever Kalista inputs a movement command during her basic attack windup or the cast time of Pierce, she will dash a short distance in the direction of the inputted location.Kalista cannot dash while immobilized or grounded, and she will be knocked down by any immobilizing or polymorphing crowd control during the dash.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Martial Poise's dash range and speed details:</span>\nDash range of basic attacks is modified by the tier of Kalista's Boots and the specific angle of the dash.\nAt a 0° angle towards the target, the minimum dash range is 140 / 153 / 166 / 175 (based on Boots Tier) units.\nAt a 90° angle, the maximum dash range is 240 / 263 / 280 / 300 (based on Boots Tier) units.\nDash range of Pierce is 300 units when dashing anywhere in the direction of the point of cast.\nIf the dash is inputted to a location that is away from Pierce's point of cast, the dash range is reduced based on the cast angle, with a minimum distance of 150 units if the inputted location is directly opposite to the point of cast.\nDash speed is increased based on the tier of Kalista's Boots, and is affected by her bonus attack speed as well as multiplicative movement speed modifiers she is under the effect of (including slows)."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Martial Poise's dash range and speed details:</span></p>\nDash range of basic attacks is modified by the tier of Kalista's Boots and the specific angle of the dash.\nAt a 0° angle towards the target, the minimum dash range is 140 / 153 / 166 / 175 (based on Boots Tier) units.\nAt a 90° angle, the maximum dash range is 240 / 263 / 280 / 300 (based on Boots Tier) units.\nDash range of Pierce is 300 units when dashing anywhere in the direction of the point of cast.\nIf the dash is inputted to a location that is away from Pierce's point of cast, the dash range is reduced based on the cast angle, with a minimum distance of 150 units if the inputted location is directly opposite to the point of cast.\nDash speed is increased based on the tier of Kalista's Boots, and is affected by her bonus attack speed as well as multiplicative movement speed modifiers she is under the effect of (including slows)."
           },
           {
-            "description": "<span class=\"ability-header\">Innate - Oathsworn Bond:</span> Kalista begins the game with an exclusive Black Spear that she can activate on an allied champion to force them to swear an oath with her. Once the oath has been sworn, the ally becomes her Oathsworn, causing Kalista to form a tether between her and them. While she and the ally bound as the Oathsworn are within tether range of each other, they can both interact with Soul-Mark and Fate's Call."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Oathsworn Bond:</span> Kalista begins the game with an exclusive Black Spear that she can activate on an allied champion to force them to swear an oath with her. Once the oath has been sworn, the ally becomes her Oathsworn, causing Kalista to form a tether between her and them. While she and the ally bound as the Oathsworn are within tether range of each other, they can both interact with Soul-Mark and Fate's Call.</p>"
           },
           {
             "description": "Kalista can purchase the Black Spear from the shop at no cost to obtain it again and, before 3 minutes of game time, may activate the item again on a different target to rebind and swear an oath with a new ally. See Black Spear for more details."
@@ -123,7 +123,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kalista/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Kalista launches a spear in the target direction that deals physical damage to the first enemy hit.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kalista launches a spear in the target direction that deals physical damage to the first enemy hit.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -185,7 +185,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kalista/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive - Soul-Marked:</span> While Kalista and her Oathsworn are tethered, their basic attacks and Pierce apply a Soul-Mark to the target hit for 4 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive - Soul-Marked:</span> While Kalista and her Oathsworn are tethered, their basic attacks and Pierce apply a Soul-Mark to the target hit for 4 seconds.</p>"
           },
           {
             "description": "If both Kalista's and the Oathsworn's Soul-Mark are applied to the same enemy, the marks are consumed to deal magic damage to the target, capped against non-champions. Soul-Mark cannot affect an enemy more than once every few seconds.",
@@ -224,7 +224,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Kalista summons a Sentinel that patrols back and forth on a path along the target location, granting sight of its surroundings as it travels."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kalista summons a Sentinel that patrols back and forth on a path along the target location, granting sight of its surroundings as it travels.</p>"
           },
           {
             "description": "Kalista periodically stocks a Sentinel charge, up to a maximum of 2."
@@ -265,10 +265,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kalista/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Kalista's basic attacks on-hit and Pierce apply a stack of Rend to enemies for 4 seconds, refreshing on subsequent hits and stacking up to 254 times."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Kalista's basic attacks on-hit and Pierce apply a stack of Rend to enemies for 4 seconds, refreshing on subsequent hits and stacking up to 254 times.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Kalista rips all lodged spears from nearby enemies, consuming all of their stacks to deal them physical damage and slow them for 2 seconds. Each additional spear on the target deals reduced damage. Rend deals 50% damage against epic monsters.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kalista rips all lodged spears from nearby enemies, consuming all of their stacks to deal them physical damage and slow them for 2 seconds. Each additional spear on the target deals reduced damage. Rend deals 50% damage against epic monsters.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -409,7 +409,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kalista/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Kalista invokes her tether to retrieve and hold her Oathsworn for 4 seconds. Kalista cleanses the Oathsworn from all crowd control and renders them invulnerable and untargetable for the duration, and pulls them to her over 1 second."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kalista invokes her tether to retrieve and hold her Oathsworn for 4 seconds. Kalista cleanses the Oathsworn from all crowd control and renders them invulnerable and untargetable for the duration, and pulls them to her over 1 second.</p>"
           },
           {
             "description": "While held, the Oathsworn is vanished and may select a target location to dash to with displacement immunity, ending Fate's Call's invocation and reappearing at the location. If the invocation ends without the Oathsworn selecting a target location, they will automatically do so at maximum range from Kalista's facing direction."

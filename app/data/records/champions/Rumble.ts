@@ -95,13 +95,13 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rumble/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Rumble's basic ability casts generate Heat, which decays by 10 Heat per second after not using any basic ability within 4 seconds or The Equalizer within 2 seconds. Rumble's mech enters the Danger Zone when at or above 50 Heat, and becomes Overheated while at 150 Heat."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Rumble's basic ability casts generate Heat, which decays by 10 Heat per second after not using any basic ability within 4 seconds or The Equalizer within 2 seconds. Rumble's mech enters the Danger Zone when at or above 50 Heat, and becomes Overheated while at 150 Heat.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Danger Zone:</span> Rumble's mech enters the Danger Zone, empowering his basic abilities."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Danger Zone:</span> Rumble's mech enters the Danger Zone, empowering his basic abilities.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Overheated:</span> Rumble's mech becomes Overheated, disabling his abilities as his Heat decays back down to 0 over 4 seconds. During this time, he gains 50% - 130% (based on level) bonus attack speed and empowers his basic attacks to deal 5 - 40 (based on level) (+ 25% AP) (+ 5% of the target's maximum health) bonus magic damage on-hit. The damage based on the target's health ratio is capped at 65 - 150 (based on level) against monsters."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Overheated:</span> Rumble's mech becomes Overheated, disabling his abilities as his Heat decays back down to 0 over 4 seconds. During this time, he gains 50% - 130% (based on level) bonus attack speed and empowers his basic attacks to deal 5 - 40 (based on level) (+ 25% AP) (+ 5% of the target's maximum health) bonus magic damage on-hit. The damage based on the target's health ratio is capped at 65 - 150 (based on level) against monsters.</p>"
           }
         ],
         "targeting": "Passive",
@@ -118,7 +118,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rumble/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Rumble generates 20 Heat to activate his flamethrower for 3 seconds, dealing magic damage every 0.25 seconds to enemies hit in a frontal cone, reduced to 70% against minions.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rumble generates 20 Heat to activate his flamethrower for 3 seconds, dealing magic damage every 0.25 seconds to enemies hit in a frontal cone, reduced to 70% against minions.</p>",
             "leveling": [
               {
                 "attribute": "Total Magic Damage",
@@ -259,7 +259,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Danger Zone Bonus:</span> Flamespitter's damage is increased by 50%.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Danger Zone Bonus:</span> Flamespitter's damage is increased by 50%.</p>",
             "leveling": [
               {
                 "attribute": "Total Enhanced Damage",
@@ -432,7 +432,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rumble/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Rumble generates 20 Heat to grant himself a shield for 1.5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rumble generates 20 Heat to grant himself a shield for 1.5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -489,7 +489,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Danger Zone Bonus:</span> Scrap Shield's shield strength and bonus movement speed are increased in effectiveness by 50%.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Danger Zone Bonus:</span> Scrap Shield's shield strength and bonus movement speed are increased in effectiveness by 50%.</p>",
             "leveling": [
               {
                 "attribute": "Enhanced Shield Strength",
@@ -562,7 +562,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rumble/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Rumble generates 20 Heat to shoot a harpoon in the target direction that deals magic damage to the first enemy hit, inflicting them with magic resistance reduction for 4 seconds and slowing them for 2 seconds. These effects stack additively with multiple harpoons, refreshing their duration and stacking up to 2 times.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rumble generates 20 Heat to shoot a harpoon in the target direction that deals magic damage to the first enemy hit, inflicting them with magic resistance reduction for 4 seconds and slowing them for 2 seconds. These effects stack additively with multiple harpoons, refreshing their duration and stacking up to 2 times.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -682,7 +682,7 @@
             "description": "Rumble periodically stocks an Electro Harpoon charge, up to a maximum of 2."
           },
           {
-            "description": "<span class=\"ability-header\">Danger Zone Bonus:</span> Electro Harpoon's effects are increased by 50%.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Danger Zone Bonus:</span> Electro Harpoon's effects are increased by 50%.</p>",
             "leveling": [
               {
                 "attribute": "Enhanced Damage",
@@ -835,7 +835,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rumble/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Rumble deploys a barrage of rockets along the target path that land in a line over 0.75 seconds, creating a field of fire for 4.5 seconds after the last rocket lands."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rumble deploys a barrage of rockets along the target path that land in a line over 0.75 seconds, creating a field of fire for 4.5 seconds after the last rocket lands.</p>"
           },
           {
             "description": "Enemies struck by the impact or within the field are marked as Burning for 1 second, which deals magic damage every 0.5 seconds, slows by 35%, and refreshes continuously while in the area.",

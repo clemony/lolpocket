@@ -97,7 +97,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sivir/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Sivir's basic attacks and ability hits against enemy champions grant her 55 - 75 (based on level) bonus movement speed decaying over 1.5 seconds, refreshing on subsequent hits."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Sivir's basic attacks and ability hits against enemy champions grant her 55 - 75 (based on level) bonus movement speed decaying over 1.5 seconds, refreshing on subsequent hits.</p>"
           }
         ],
         "targeting": "Passive",
@@ -112,7 +112,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sivir/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Sivir hurls her crossblade in the target direction, dealing physical damage to enemies within its path, increased by 0% - 50% (based on critical strike chance).",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sivir hurls her crossblade in the target direction, dealing physical damage to enemies within its path, increased by 0% - 50% (based on critical strike chance).</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -251,7 +251,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sivir/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Sivir empowers her crossblade for the next 4 seconds, gaining bonus attack speed and causing her basic attacks to bounce to additional surrounding enemies, dealing them physical damage. If the triggering attack critically strikes, the bounces will do so as well for (175% + 40%) damage. Ricochet deals 65% damage against minions and executes them if they would be left below 15 health.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sivir empowers her crossblade for the next 4 seconds, gaining bonus attack speed and causing her basic attacks to bounce to additional surrounding enemies, dealing them physical damage. If the triggering attack critically strikes, the bounces will do so as well for (175% + 40%) damage. Ricochet deals 65% damage against minions and executes them if they would be left below 15 health.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -374,7 +374,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sivir/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Sivir gains a spell shield for 1.5 seconds. Upon successfully blocking a hostile effect, she heals herself and activates Fleet of Foot after 0.25 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sivir gains a spell shield for 1.5 seconds. Upon successfully blocking a hostile effect, she heals herself and activates Fleet of Foot after 0.25 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Heal",
@@ -428,7 +428,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sivir/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Sivir gains On the Hunt for a duration and grants it to nearby allied champions for the remaining duration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sivir gains On the Hunt for a duration and grants it to nearby allied champions for the remaining duration.</p>",
             "leveling": [
               {
                 "attribute": "Buff Duration",
@@ -448,7 +448,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">On the Hunt:</span> Gain bonus movement speed.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">On the Hunt:</span> Gain bonus movement speed.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",

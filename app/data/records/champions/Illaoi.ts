@@ -96,7 +96,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Illaoi/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Periodically, Illaoi spawns a Tentacle on the nearest terrain perpendicular to her location, if no other Tentacles are already nearby it. Tentacles fully spawn after a 2 second delay and are untargetable in the meantime."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Periodically, Illaoi spawns a Tentacle on the nearest terrain perpendicular to her location, if no other Tentacles are already nearby it. Tentacles fully spawn after a 2 second delay and are untargetable in the meantime.</p>"
           },
           {
             "description": "Tentacles are commanded to attack by Illaoi's abilities, dealing 9 - 162 (based on level) (+ 100% AD) (+ 40% AP) physical damage to all enemies struck, increased by 0% - 30% (based on Tentacle Smash's rank).Enemies struck by multiple slams within 0.5 seconds of another, take 50% damage for the second and 25% damage for all other additional slams."
@@ -125,7 +125,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Illaoi/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Tentacle damage is increased.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Tentacle damage is increased.</p>",
             "leveling": [
               {
                 "attribute": "Damage Increase",
@@ -147,7 +147,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Illaoi slams down a Tentacle in the target direction."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Illaoi slams down a Tentacle in the target direction.</p>"
           }
         ],
         "cost": [
@@ -183,7 +183,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Illaoi/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Illaoi's next basic attack within 6 seconds gains 225 bonus range and causes her to leap to the target's location if they're beyond her normal basic attack range."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Illaoi's next basic attack within 6 seconds gains 225 bonus range and causes her to leap to the target's location if they're beyond her normal basic attack range.</p>"
           },
           {
             "description": "The attack deals bonus physical damage, with a minimum threshold, and capped at 300 against non-champions, and commands all Tentacles in range to attack the target. The minimum bonus damage can also be applied against turrets.",
@@ -260,7 +260,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Illaoi/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Illaoi launches a tendril in the target direction that stops at the first enemy hit, pulling their Spirit out in front of Illaoi over 0.75 seconds if they're a champion. The target is tethered to the Spirit for 7 seconds, revealing them in addition to granting sight of the area around them while the tether remains."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Illaoi launches a tendril in the target direction that stops at the first enemy hit, pulling their Spirit out in front of Illaoi over 0.75 seconds if they're a champion. The target is tethered to the Spirit for 7 seconds, revealing them in addition to granting sight of the area around them while the tether remains.</p>"
           },
           {
             "description": "The Spirit spawns with the target's current health, armor and magic resist, and redirects a portion of the pre-mitigation damage received to the tethered champion.",
@@ -337,7 +337,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Illaoi/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Illaoi gains displacement immunity and leaps into the air for the cast time. She then slams her idol into the ground, dealing physical damage to nearby enemies. For each enemy champion hit, a Tentacle is summoned for 8 seconds (up to a maximum of 6 summons).",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Illaoi gains displacement immunity and leaps into the air for the cast time. She then slams her idol into the ground, dealing physical damage to nearby enemies. For each enemy champion hit, a Tentacle is summoned for 8 seconds (up to a maximum of 6 summons).</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",

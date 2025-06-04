@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nasus/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Nasus gains 12 / 18 / 24% (based on level) life steal."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Nasus gains 12 / 18 / 24% (based on level) life steal.</p>"
           }
         ],
         "targeting": "Passive",
@@ -114,7 +114,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nasus/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Nasus empowers his next basic attack within 10 seconds to have an uncancellable windup, gain 50 bonus range, and deal bonus physical damage. Siphoning Strike's base damage is affected by critical strike modifiers.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nasus empowers his next basic attack within 10 seconds to have an uncancellable windup, gain 50 bonus range, and deal bonus physical damage. Siphoning Strike's base damage is affected by critical strike modifiers.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage",
@@ -175,7 +175,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nasus/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Nasus ages the target enemy champion for 5 seconds, slowing them by 35% and crippling them by[ 75% of that amount, ][ 26.25%, ]both increasing every second over the duration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nasus ages the target enemy champion for 5 seconds, slowing them by 35% and crippling them by[ 75% of that amount, ][ 26.25%, ]both increasing every second over the duration.</p>",
             "leveling": [
               {
                 "attribute": "Maximum Slow",
@@ -275,7 +275,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nasus/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Nasus unleashes a spirit fire at the target location, granting sight of the area for 2.5 seconds and, after a 0.264 seconds delay, dealing magic damage to enemies within.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nasus unleashes a spirit fire at the target location, granting sight of the area for 2.5 seconds and, after a 0.264 seconds delay, dealing magic damage to enemies within.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -398,7 +398,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nasus/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Nasus empowers himself for 15 seconds, gaining bonus health, bonus armor, bonus magic resistance, increased size, and 50 bonus attack range for the duration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nasus empowers himself for 15 seconds, gaining bonus health, bonus armor, bonus magic resistance, increased size, and 50 bonus attack range for the duration.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Health",

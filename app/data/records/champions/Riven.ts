@@ -92,7 +92,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Riven/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Riven's ability casts generate a stack of Charge for 6 seconds, refreshing on subsequent casts and stacking up to 3 times. Riven's basic attacks are empowered to each consume a stack to deal bonus physical damage equal to 30% - 60% (based on level) AD, reduced to[ 50% ][ 15% - 30% (based on level) AD ]against structures."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Riven's ability casts generate a stack of Charge for 6 seconds, refreshing on subsequent casts and stacking up to 3 times. Riven's basic attacks are empowered to each consume a stack to deal bonus physical damage equal to 30% - 60% (based on level) AD, reduced to[ 50% ][ 15% - 30% (based on level) AD ]against structures.</p>"
           },
           {
             "description": "The bonus damage is affected by critical strike modifiers and applies life steal at 100% effectiveness."
@@ -112,7 +112,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Riven/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Riven can activate Broken Wings three times before the ability goes on cooldown, with a 0.3125-second static cooldown between casts. If Riven does not recast the ability within 4 seconds of the previous cast, it goes on cooldown."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Riven can activate Broken Wings three times before the ability goes on cooldown, with a 0.3125-second static cooldown between casts. If Riven does not recast the ability within 4 seconds of the previous cast, it goes on cooldown.</p>"
           },
           {
             "description": "Riven slashes with her sword for each of the three casts, dealing physical damage to enemies struck within an area, resetting her basic attack timer, and ordering her to basic attack the target of Broken Wings if there are any.",
@@ -172,13 +172,13 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">First Cast:</span> Riven dashes 225 units in the direction she is currently facing, or up to 225 units towards the target enemy, striking enemies in the target area 100 units away. This cast cannot cross terrain."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">First Cast:</span> Riven dashes 225 units in the direction she is currently facing, or up to 225 units towards the target enemy, striking enemies in the target area 100 units away. This cast cannot cross terrain.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Second Cast:</span> Riven mimics the first cast's effects."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Second Cast:</span> Riven mimics the first cast's effects.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Third Cast:</span> Riven mimics the first cast's effects in a larger area while also knocking back enemies hit 75 units over 0.5 seconds. This cast can cross terrain."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Third Cast:</span> Riven mimics the first cast's effects in a larger area while also knocking back enemies hit 75 units over 0.5 seconds. This cast can cross terrain.</p>"
           }
         ],
         "cost": [
@@ -205,7 +205,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Riven/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Riven emits a flash of runic energy from the start of the cast time, dealing physical damage to nearby enemies and stunning them for 0.75 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Riven emits a flash of runic energy from the start of the cast time, dealing physical damage to nearby enemies and stunning them for 0.75 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -260,7 +260,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Riven/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Riven dashes in the target direction, though not through terrain, while granting herself a shield for 1.5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Riven dashes in the target direction, though not through terrain, while granting herself a shield for 1.5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -314,7 +314,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Riven/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Riven empowers her blade for 15 seconds, gaining 25% AD bonus attack damage, 75 bonus attack range, and increased range on Broken Wings and Ki Burst. After 0.5 seconds, she can cast Wind Slash within the duration."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Riven empowers her blade for 15 seconds, gaining 25% AD bonus attack damage, 75 bonus attack range, and increased range on Broken Wings and Ki Burst. After 0.5 seconds, she can cast Wind Slash within the duration.</p>"
           }
         ],
         "cost": [
@@ -337,7 +337,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Riven/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Riven unleashes a wave of energy in a cone in the target direction that deals physical damage to enemies hit, increased by 0% - 200% (based on target's missing health).",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Riven unleashes a wave of energy in a cone in the target direction that deals physical damage to enemies hit, increased by 0% - 200% (based on target's missing health).</p>",
             "leveling": [
               {
                 "attribute": "Minimum Physical Damage",

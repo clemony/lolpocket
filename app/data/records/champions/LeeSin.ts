@@ -97,7 +97,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/LeeSin/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> After casting an ability, Lee Sin's next 2 basic attacks within 3 seconds gain 40% bonus attack speed and restore energy."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> After casting an ability, Lee Sin's next 2 basic attacks within 3 seconds gain 40% bonus attack speed and restore energy.</p>"
           },
           {
             "description": "The first attack restores 20 / 30 / 40 (based on level) energy and the second attack restores[ 10 / 15 / 20 (based on level) energy. ][ half of the previous amount. ]"
@@ -115,7 +115,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/LeeSin/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Lee Sin fires a sonic blast in the target direction that deals physical damage to the first enemy hit and marks them for 3 seconds, during which they are revealed.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lee Sin fires a sonic blast in the target direction that deals physical damage to the first enemy hit and marks them for 3 seconds, during which they are revealed.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -176,7 +176,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/LeeSin/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Lee Sin dashes to the nearby enemy marked by Sonic Wave. Upon arrival, he consumes the mark and deals physical damage, increased by 0% - 100% (based on target's missing health).",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lee Sin dashes to the nearby enemy marked by Sonic Wave. Upon arrival, he consumes the mark and deals physical damage, increased by 0% - 100% (based on target's missing health).</p>",
             "leveling": [
               {
                 "attribute": "Minimum Physical Damage",
@@ -257,7 +257,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/LeeSin/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Lee Sin dashes to the target allied unit's location. If the ally is a champion upon arrival, both they and Lee Sin gain a shield for 2 seconds and Safeguard's cooldown is halved.\nLee Sin can self-cast Safeguard to shield himself.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lee Sin dashes to the target allied unit's location. If the ally is a champion upon arrival, both they and Lee Sin gain a shield for 2 seconds and Safeguard's cooldown is halved.</p>\nLee Sin can self-cast Safeguard to shield himself.",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -310,7 +310,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/LeeSin/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Lee Sin gains life steal and spell vamp for 4 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lee Sin gains life steal and spell vamp for 4 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Life steal and spell vamp",
@@ -353,7 +353,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/LeeSin/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Lee Sin smashes the ground beneath him, dealing magic damage to nearby enemies, marking them for 4 seconds and, if they are not invisible when struck, revealing them for the same duration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lee Sin smashes the ground beneath him, dealing magic damage to nearby enemies, marking them for 4 seconds and, if they are not invisible when struck, revealing them for the same duration.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -406,7 +406,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/LeeSin/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Lee Sin slows nearby enemies marked by Tempest, decaying over 4 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lee Sin slows nearby enemies marked by Tempest, decaying over 4 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Slow",
@@ -452,7 +452,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/LeeSin/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Lee Sin roots the target enemy champion over the cast time, then roundhouse kicks them to deal physical damage and knock them back up to 800 units over 0.8 seconds, rendering them airborne for 1 second.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lee Sin roots the target enemy champion over the cast time, then roundhouse kicks them to deal physical damage and knock them back up to 800 units over 0.8 seconds, rendering them airborne for 1 second.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",

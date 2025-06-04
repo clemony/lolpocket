@@ -9,7 +9,6 @@ export const useIndexStore = defineStore(
     const maps = ref<MapIndex[]>([])
     const shards = ref<Shard[]>([])
     const skin = ref<SkinRecord>(baseSkin)
-    console.log("💠 - skin:", skin)
     const spells = ref<Spell[]>([])
     const skins = ref<FullSkinRecord>({})
 
@@ -32,7 +31,7 @@ export const useIndexStore = defineStore(
     }
 
     async function loadBaseSkins() {
-      if (skin.value.length) return
+      if (skin?.value[1]?.centeredPath) return
       const { baseSkin } = await import("data/index/skins-base")
       skin.value = baseSkin
     }
@@ -66,12 +65,6 @@ export const useIndexStore = defineStore(
     ): T | undefined {
       return dataset?.find((item) => item[inputKey] === value)
     }
-
-    watchEffect(() => {
-      if (items.value.length) console.log("✅ Items loaded:", items.value)
-
-      if (spells.value.length) console.log("✅ Spells loaded:", spells.value)
-    })
 
     return {
       champions,
@@ -124,7 +117,8 @@ export const useIndexStore = defineStore(
   {
     persist: {
       storage: piniaPluginPersistedstate.localStorage(),
-      key: "indexStore",
+      // key: "indexStore",
+      pick: ["champions", "items", "runes", "skin", "spells", "shards"],
     },
   }
 )

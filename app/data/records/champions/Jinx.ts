@@ -95,13 +95,13 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jinx/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Whenever Jinx scores a takedown against an enemy champion, epic monster, turret, or inhibitor within 3 seconds of damaging them, she gains 175% bonus movement speed decaying over 6 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Whenever Jinx scores a takedown against an enemy champion, epic monster, turret, or inhibitor within 3 seconds of damaging them, she gains 175% bonus movement speed decaying over 6 seconds.</p>"
           },
           {
             "description": "Additionally, she is allowed to exceed the attack speed cap and gains a stack of Get Excited! for the same duration, stacking up to 5 times. Only takedowns against enemy champions can grant stacks beyond the first."
           },
           {
-            "description": "<span class=\"ability-header\">Get Excited!:</span> For each stack, Jinx gains 25% total attack speed, up to a maximum of 125%."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Get Excited!:</span> For each stack, Jinx gains 25% total attack speed, up to a maximum of 125%.</p>"
           }
         ],
         "targeting": "Passive",
@@ -116,10 +116,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jinx/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Toggle:</span> Jinx switches between Pow-Pow, her minigun, and Fishbones, her rocket launcher."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Toggle:</span> Jinx switches between Pow-Pow, her minigun, and Fishbones, her rocket launcher.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Pow-Pow:</span> Basic attacks with Pow-Pow generate a stack of Rev'd up for 2.5 seconds, refreshing on subsequent attacks with Pow-Pow and stacking up to 3 times. Each stack of Rev'd up grants bonus attack speed, with all stacks beyond the first one being 50% effective. Stacks expire by one when the duration ends.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Pow-Pow:</span> Basic attacks with Pow-Pow generate a stack of Rev'd up for 2.5 seconds, refreshing on subsequent attacks with Pow-Pow and stacking up to 3 times. Each stack of Rev'd up grants bonus attack speed, with all stacks beyond the first one being 50% effective. Stacks expire by one when the duration ends.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -175,7 +175,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Fishbones:</span> Basic attacks with Fishbones cost mana on-attack to deal 110% AD modified physical damage to the target and nearby enemies. The damage is affected by critical strike modifiers. While Fishbones is equipped, Jinx gains bonus range but loses 10% of her bonus attack speed.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Fishbones:</span> Basic attacks with Fishbones cost mana on-attack to deal 110% AD modified physical damage to the target and nearby enemies. The damage is affected by critical strike modifiers. While Fishbones is equipped, Jinx gains bonus range but loses 10% of her bonus attack speed.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Range",
@@ -222,7 +222,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jinx/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Jinx fires a shock blast in the target direction that deals physical damage to the first enemy it hits and reveals and slows them for 2 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Jinx fires a shock blast in the target direction that deals physical damage to the first enemy it hits and reveals and slows them for 2 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -301,7 +301,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jinx/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Jinx tosses out 3 Chompers centered at the target location, landing after 0.4 seconds, arming after 0.75 seconds, and exploding after 5 seconds to deal magic damage to nearby enemies.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Jinx tosses out 3 Chompers centered at the target location, landing after 0.4 seconds, arming after 0.75 seconds, and exploding after 5 seconds to deal magic damage to nearby enemies.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -366,7 +366,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jinx/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Jinx fires a massive rocket in the target direction, briefly granting sight of its surroundings and exploding upon colliding with an enemy champion. The explosion deals physical damage to nearby enemies and grants sight of the area for 2 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Jinx fires a massive rocket in the target direction, briefly granting sight of its surroundings and exploding upon colliding with an enemy champion. The explosion deals physical damage to nearby enemies and grants sight of the area for 2 seconds.</p>"
           },
           {
             "description": "Super Mega Death Rocket! deals 10% - 100% (based on distance traveled) damage. This does not affect the bonus damage based on the target's missing health.",

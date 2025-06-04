@@ -99,10 +99,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nilah/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Whenever Nilah kills a minion, she and the nearest allied champion gain an additional 50% of the experience they would have lost from sharing."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Whenever Nilah kills a minion, she and the nearest allied champion gain an additional 50% of the experience they would have lost from sharing.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Whenever a nearby allied champion uses an ability to heal or shield either Nilah or themselves, both they and Nilah receive a bonus amount equal to 7.5% of the healing or 15% of the shielding after a 0.5-second delay. Bonus shielding lasts as long as the shield that triggered the effect, up to a maximum duration of 4 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Whenever a nearby allied champion uses an ability to heal or shield either Nilah or themselves, both they and Nilah receive a bonus amount equal to 7.5% of the healing or 15% of the shielding after a 0.5-second delay. Bonus shielding lasts as long as the shield that triggered the effect, up to a maximum duration of 4 seconds.</p>"
           }
         ],
         "targeting": "Passive",
@@ -118,10 +118,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nilah/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Nilah gains 0% - 33% (based on critical strike chance) armor penetration. Her basic attacks and Formless Blade heal her for 0% - 20% (based on critical strike chance) of the post-mitigation damage dealt to champions, converting each heal instance beyond maximum health into a shield that lasts 6 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Nilah gains 0% - 33% (based on critical strike chance) armor penetration. Her basic attacks and Formless Blade heal her for 0% - 20% (based on critical strike chance) of the post-mitigation damage dealt to champions, converting each heal instance beyond maximum health into a shield that lasts 6 seconds.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Nilah cracks her whip-blade in a line in the target direction that deals physical damage to enemies hit, increased by 0% - 100% (based on critical strike chance). Formless Blade can hit structures and applies life steal at 100% effectiveness to one target.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nilah cracks her whip-blade in a line in the target direction that deals physical damage to enemies hit, increased by 0% - 100% (based on critical strike chance). Formless Blade can hit structures and applies life steal at 100% effectiveness to one target.</p>",
             "leveling": [
               {
                 "attribute": "Minimum Physical Damage",
@@ -181,7 +181,7 @@
             "description": "If Formless Blade is cast during Slipstream, Nilah leaves behind a wave that is sent towards her location at the end of the dash, dealing the same damage to enemies hit."
           },
           {
-            "description": "<span class=\"ability-header\">If Formless Blade hits an enemy, Nilah empowers herself for 4 seconds:</span> gaining 125 bonus attack range and 10% - 60% (based on level) bonus attack speed, and causing her basic attacks to strike in a cone that deals 100% AD physical damage to enemies hit. Against secondary non-champion targets, this is reduced to 33% AD for minions and 10% AD for monsters, and additionally executes minions left below 20 health. On-hit effects are applied only to the primary target."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">If Formless Blade hits an enemy, Nilah empowers herself for 4 seconds:</span> gaining 125 bonus attack range and 10% - 60% (based on level) bonus attack speed, and causing her basic attacks to strike in a cone that deals 100% AD physical damage to enemies hit. Against secondary non-champion targets, this is reduced to 33% AD for minions and 10% AD for monsters, and additionally executes minions left below 20 health. On-hit effects are applied only to the primary target.</p>"
           }
         ],
         "cost": [
@@ -210,7 +210,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nilah/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Nilah envelops herself in mist for 2.25 seconds, during which she becomes ghosted, gains bonus movement speed, reduces all incoming magic damage taken by 25%, and dodges all non- turret basic attacks.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nilah envelops herself in mist for 2.25 seconds, during which she becomes ghosted, gains bonus movement speed, reduces all incoming magic damage taken by 25%, and dodges all non- turret basic attacks.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -265,7 +265,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nilah/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Nilah dashes a fixed distance in the direction of the target unit, dealing physical damage to enemies she passes through.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nilah dashes a fixed distance in the direction of the target unit, dealing physical damage to enemies she passes through.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -332,7 +332,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nilah/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Nilah whirls her whip-blade over 1 second, dealing physical damage to nearby enemies every 0.25 seconds. She then unleashes a burst that deals physical damage and pulls them 250 units towards her. Each hit also slows targets by 10% for 3 seconds, refreshing on subsequent hits.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nilah whirls her whip-blade over 1 second, dealing physical damage to nearby enemies every 0.25 seconds. She then unleashes a burst that deals physical damage and pulls them 250 units towards her. Each hit also slows targets by 10% for 3 seconds, refreshing on subsequent hits.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage per Tick",

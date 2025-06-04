@@ -97,7 +97,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Draven/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> When Draven catches a Spinning Axe, kills a non-champion, or destroys a turret, he gains a stack of Adoration."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> When Draven catches a Spinning Axe, kills a non-champion, or destroys a turret, he gains a stack of Adoration.</p>"
           },
           {
             "description": "When Draven kills an enemy champion, he consumes all of his Adoration stacks and gains 25 + (2 × stacks) bonus gold."
@@ -118,7 +118,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Draven/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Draven starts spinning his axe, empowering his next basic attack within 5.8 seconds to deal bonus physical damage.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Draven starts spinning his axe, empowering his next basic attack within 5.8 seconds to deal bonus physical damage.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage",
@@ -183,7 +183,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Draven/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Draven enters an adrenaline rush, gaining bonus attack speed for 3 seconds as well as decaying bonus movement speed and ghosting for 1.5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Draven enters an adrenaline rush, gaining bonus attack speed for 3 seconds as well as decaying bonus movement speed and ghosting for 1.5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -250,7 +250,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Draven/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Draven throws a fan of axes in a line in the target direction, dealing physical damage to enemies hit, knocking them aside, though not through terrain, and slowing them for 2 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Draven throws a fan of axes in a line in the target direction, dealing physical damage to enemies hit, knocking them aside, though not through terrain, and slowing them for 2 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -326,7 +326,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Draven/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Draven hurls two massive axes in the target direction that briefly grant sight of their surroundings and deal physical damage to enemies hit. Enemy champions that are damaged to or while below a health threshold equal to the number of Adoration stacks are executed.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Draven hurls two massive axes in the target direction that briefly grant sight of their surroundings and deal physical damage to enemies hit. Enemy champions that are damaged to or while below a health threshold equal to the number of Adoration stacks are executed.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -378,7 +378,7 @@
             "description": "Whirling Death can be recast after 1 second while the axes are traveling, and does so automatically after the axes hit an enemy champion or the edge of the map."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Draven forces the axes to reverse direction, slowly coming to a stop before homing back to him, dealing the same damage to enemies hit."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Draven forces the axes to reverse direction, slowly coming to a stop before homing back to him, dealing the same damage to enemies hit.</p>"
           },
           {
             "description": "Whirling Death deals 100% - 40% (based on enemies hit) damage, resetting upon reversing direction.",

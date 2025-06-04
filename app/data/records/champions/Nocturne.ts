@@ -98,7 +98,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nocturne/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Periodically, Nocturne empowers his next basic attack to slash in a circle, dealing 120% AD physical damage to the target and nearby enemies and healing himself for 13 - 30 (based on level) (+ 30% AP) per enemy hit. Against minions, Umbra Blade's damage to secondary targets and healing are reduced by 50% and it applies on-hit effects to all targets(note) at 100% effectiveness."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Periodically, Nocturne empowers his next basic attack to slash in a circle, dealing 120% AD physical damage to the target and nearby enemies and healing himself for 13 - 30 (based on level) (+ 30% AP) per enemy hit. Against minions, Umbra Blade's damage to secondary targets and healing are reduced by 50% and it applies on-hit effects to all targets(note) at 100% effectiveness.</p>"
           },
           {
             "description": "Umbra Blades can critically strike against the primary target, modifying the physical damage dealt to[ (192.5% + 44%) AD. ][ 110% AD × total critical damage. ]"
@@ -123,7 +123,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nocturne/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Nocturne casts out a shadow blade in the target direction that leaves a Dusk Trail in its wake, dealing physical damage to enemies hit. Enemy champions and large monsters hit will leave a Dusk Trail behind while moving. Dusk Trails last 5 seconds and will slowly disappear afterwards.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nocturne casts out a shadow blade in the target direction that leaves a Dusk Trail in its wake, dealing physical damage to enemies hit. Enemy champions and large monsters hit will leave a Dusk Trail behind while moving. Dusk Trails last 5 seconds and will slowly disappear afterwards.</p>",
             "leveling": [
               {
                 "attribute": "Physical damage",
@@ -218,7 +218,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nocturne/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Nocturne gains bonus attack speed.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Nocturne gains bonus attack speed.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -257,7 +257,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Nocturne gains a spell shield for 1.5 seconds. Upon successfully blocking a hostile effect, Shroud of Darkness' bonus attack speed is doubled for 5 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nocturne gains a spell shield for 1.5 seconds. Upon successfully blocking a hostile effect, Shroud of Darkness' bonus attack speed is doubled for 5 seconds.</p>"
           }
         ],
         "cost": [
@@ -285,10 +285,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nocturne/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Nocturne gains 90% bonus movement speed while facing nearby feared targets."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Nocturne gains 90% bonus movement speed while facing nearby feared targets.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Nocturne torments the target, forming a tether between himself and the target for 2 seconds, during which the target takes magic damage every 0.5 seconds over the duration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nocturne torments the target, forming a tether between himself and the target for 2 seconds, during which the target takes magic damage every 0.5 seconds over the duration.</p>",
             "leveling": [
               {
                 "attribute": "Total Magic Damage",
@@ -395,10 +395,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nocturne/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Nocturne terrorizes all enemy champions, nearsighting them for 6 seconds. He can recast Paranoia for the same duration after 0.25 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nocturne terrorizes all enemy champions, nearsighting them for 6 seconds. He can recast Paranoia for the same duration after 0.25 seconds.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Nocturne dashes with displacement immunity to the target enemy champion, dealing physical damage upon arrival.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Nocturne dashes with displacement immunity to the target enemy champion, dealing physical damage upon arrival.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",

@@ -101,10 +101,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Malphite/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate - Shard of the Monolith:</span> Malphite gains increased percentage size equal to 8% of his total armor, capped at 35% increased size at 437.5 armor."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Shard of the Monolith:</span> Malphite gains increased percentage size equal to 8% of his total armor, capped at 35% increased size at 437.5 armor.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Malphite grants himself a shield equal to 10% of his maximum health. The shield lasts until it is broken, and refreshes after a few seconds of not taking damage."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Malphite grants himself a shield equal to 10% of his maximum health. The shield lasts until it is broken, and refreshes after a few seconds of not taking damage.</p>"
           }
         ],
         "targeting": "Passive",
@@ -120,7 +120,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Malphite/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Malphite sends a shard to the target enemy that deals magic damage and slows them for 3 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Malphite sends a shard to the target enemy that deals magic damage and slows them for 3 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -198,7 +198,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Malphite/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Malphite gains bonus armor, tripled while Granite Shield is active.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Malphite gains bonus armor, tripled while Granite Shield is active.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Armor",
@@ -237,7 +237,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Malphite empowers his next basic attack within 6 seconds to have an uncancelable windup, gain 50 bonus range, and deal bonus physical damage on-hit.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Malphite empowers his next basic attack within 6 seconds to have an uncancelable windup, gain 50 bonus range, and deal bonus physical damage on-hit.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage",
@@ -342,7 +342,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Malphite/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Malphite slams the ground beneath him, dealing magic damage to nearby enemies and crippling them for 3 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Malphite slams the ground beneath him, dealing magic damage to nearby enemies and crippling them for 3 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -419,7 +419,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Malphite/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Malphite dashes with displacement immunity to the target location. Upon arrival, he deals magic damage to nearby enemies and knocks them up for 1.5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Malphite dashes with displacement immunity to the target location. Upon arrival, he deals magic damage to nearby enemies and knocks them up for 1.5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",

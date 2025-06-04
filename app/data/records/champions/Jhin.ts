@@ -94,13 +94,13 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jhin/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate - Death In 4 Acts:</span> Jhin's basic attacks consume ammunition within 4 rounds. He will reload over 2.5 seconds immediately after expending all rounds or withholding leftover rounds after 10 seconds of being out of combat and not being affected by crowd control. The latter reload can be interrupted by declaring an attack or casting an ability."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Death In 4 Acts:</span> Jhin's basic attacks consume ammunition within 4 rounds. He will reload over 2.5 seconds immediately after expending all rounds or withholding leftover rounds after 10 seconds of being out of combat and not being affected by crowd control. The latter reload can be interrupted by declaring an attack or casting an ability.</p>"
           },
           {
             "description": "Jhin's final round attack has an uncancellable windup, always critically strikes, including against structures, and deals bonus physical damage equal to 15 / 20 / 25% (based on level) of the target's missing health."
           },
           {
-            "description": "<span class=\"ability-header\">Innate - Every Moment Matters:</span> Jhin gains bonus attack damage equal to 4% - 44% (based on level)[ (+ 0.35% per 1% critical strike chance) (+ 0.3% per 1% bonus attack speed) ][ (+ 35% critical strike chance) (+ 30% bonus attack speed) ]AD."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Every Moment Matters:</span> Jhin gains bonus attack damage equal to 4% - 44% (based on level)[ (+ 0.35% per 1% critical strike chance) (+ 0.3% per 1% bonus attack speed) ][ (+ 35% critical strike chance) (+ 30% bonus attack speed) ]AD.</p>"
           },
           {
             "description": "Additionally, critical strikes against enemies grant Jhin 14% (+ 0.4% per 1% bonus attack speed) bonus movement speed for 2 seconds."
@@ -120,7 +120,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jhin/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Jhin throws a grenade at the target enemy that deals physical damage and can bounce to up to three additional nearby enemies, prioritizing the closest enemy that has not been hit.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Jhin throws a grenade at the target enemy that deals physical damage and can bounce to up to three additional nearby enemies, prioritizing the closest enemy that has not been hit.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -268,10 +268,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jhin/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Enemy champions that trigger a Lotus Trap to bloom or are damaged by Jhin or allied champions are marked for 4 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Enemy champions that trigger a Lotus Trap to bloom or are damaged by Jhin or allied champions are marked for 4 seconds.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Jhin fires a shot in the target direction that deals physical damage to all enemies in a line until colliding with an enemy champion, reduced by 25% against minions.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Jhin fires a shot in the target direction that deals physical damage to all enemies in a line until colliding with an enemy champion, reduced by 25% against minions.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -372,10 +372,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jhin/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive - Beauty in Death:</span> Whenever Jhin kills an enemy champion, he summons a Blooming Lotus Trap on their corpse."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive - Beauty in Death:</span> Whenever Jhin kills an enemy champion, he summons a Blooming Lotus Trap on their corpse.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Jhin places a Lotus Trap at the target location which, upon landing, becomes stealthed after arming over 1 second, lasting for up to 180 seconds and granting sight within its radius. The Lotus Trap blooms upon enemy contact, with enemies in the area at the time of its trigger becoming revealed for 4 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Jhin places a Lotus Trap at the target location which, upon landing, becomes stealthed after arming over 1 second, lasting for up to 180 seconds and granting sight within its radius. The Lotus Trap blooms upon enemy contact, with enemies in the area at the time of its trigger becoming revealed for 4 seconds.</p>"
           },
           {
             "description": "Jhin periodically stocks a Lotus Trap charge, up to a maximum of 2."
@@ -484,10 +484,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jhin/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Jhin channels for up to 10 seconds, transforming his weapon into a cannon and gaining the ability to recast Curtain Call 4 times within the duration."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Jhin channels for up to 10 seconds, transforming his weapon into a cannon and gaining the ability to recast Curtain Call 4 times within the duration.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> After 0.2 seconds into the cast time, Jhin fires a round in the target direction that grants sight around its trajectory for 0.5 seconds and deals physical damage to enemies hit, increased by 0% - 300% (based on target's missing health). The bullet stops upon hitting an enemy champion, slowing them by 80% for 0.5 seconds and revealing them for 2 seconds. Each cast has a static cooldown of 1 second.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> After 0.2 seconds into the cast time, Jhin fires a round in the target direction that grants sight around its trajectory for 0.5 seconds and deals physical damage to enemies hit, increased by 0% - 300% (based on target's missing health). The bullet stops upon hitting an enemy champion, slowing them by 80% for 0.5 seconds and revealing them for 2 seconds. Each cast has a static cooldown of 1 second.</p>",
             "leveling": [
               {
                 "attribute": "Minimum Physical Damage per Bullet",

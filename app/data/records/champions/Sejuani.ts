@@ -96,13 +96,13 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sejuani/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate - Icebreaker:</span> Enemies stunned by Sejuani are marked Frozen for the disable's duration. Sejuani's next basic attack or ability against a Frozen enemy will consume the mark to deal bonus magic damage equal to 10% of their maximum health, capped at 250 against epic monsters."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Icebreaker:</span> Enemies stunned by Sejuani are marked Frozen for the disable's duration. Sejuani's next basic attack or ability against a Frozen enemy will consume the mark to deal bonus magic damage equal to 10% of their maximum health, capped at 250 against epic monsters.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Innate - Frost Armor:</span> Sejuani gains Frost Armor, which lingers for 3 seconds after taking damage from enemy champions, turrets, or large monsters. She restores it after 12 - 6 (based on level) seconds without taking damage from them."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Frost Armor:</span> Sejuani gains Frost Armor, which lingers for 3 seconds after taking damage from enemy champions, turrets, or large monsters. She restores it after 12 - 6 (based on level) seconds without taking damage from them.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Frost Armor:</span> Sejuani gains slow immunity, cripple immunity, 10 (+ 75% bonus armor) bonus armor, and 10 (+ 75% bonus magic resistance) bonus magic resistance."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Frost Armor:</span> Sejuani gains slow immunity, cripple immunity, 10 (+ 75% bonus armor) bonus armor, and 10 (+ 75% bonus magic resistance) bonus magic resistance.</p>"
           }
         ],
         "targeting": "Passive",
@@ -120,7 +120,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sejuani/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Bristle dashes to the target location until he collides with an enemy champion, dealing magic damage to enemies he passes through and knocking them up for 0.5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Bristle dashes to the target location until he collides with an enemy champion, dealing magic damage to enemies he passes through and knocking them up for 0.5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -184,7 +184,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sejuani/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> After 0.25 seconds into the cast time, Sejuani swings her flail in a cone in the target direction that deals physical damage to enemies hit and knocks back minions and monsters hit.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> After 0.25 seconds into the cast time, Sejuani swings her flail in a cone in the target direction that deals physical damage to enemies hit and knocks back minions and monsters hit.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -317,10 +317,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sejuani/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Winter's Wrath and both Sejuani's and nearby allied melee champions' attacks on-hit apply stacks of Frost to enemy champions, medium or large monsters, and large minions for 5 seconds, refreshing on subsequent applications and stacking up to 4 times, though not applying if the target is Frozen. Enemies hit by Permafrost or Glacial Prison's bola have all of their Frost stacks consumed. Enemy champions cannot be affected by Frost for 8 seconds after having it consumed. Sejuani can cast Permafrost against an enemy with 4 stacks."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Winter's Wrath and both Sejuani's and nearby allied melee champions' attacks on-hit apply stacks of Frost to enemy champions, medium or large monsters, and large minions for 5 seconds, refreshing on subsequent applications and stacking up to 4 times, though not applying if the target is Frozen. Enemies hit by Permafrost or Glacial Prison's bola have all of their Frost stacks consumed. Enemy champions cannot be affected by Frost for 8 seconds after having it consumed. Sejuani can cast Permafrost against an enemy with 4 stacks.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Sejuani hurls a trap at the visible enemy with 4 stacks of Frost closest to the cursor, which deals magic damage, displaces them slightly, and stuns them for 1 second.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sejuani hurls a trap at the visible enemy with 4 stacks of Frost closest to the cursor, which deals magic damage, displaces them slightly, and stuns them for 1 second.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -377,7 +377,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sejuani/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Sejuani throws an ice bola in the target direction that stops upon hitting an enemy champion, dealing magic damage and stunning them for 1 second.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sejuani throws an ice bola in the target direction that stops upon hitting an enemy champion, dealing magic damage and stunning them for 1 second.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",

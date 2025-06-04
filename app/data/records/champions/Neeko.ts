@@ -98,13 +98,13 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Neeko/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Neeko has a collection of disguises to take on the appearance of allied champions. She can choose a new champion to switch her disguise or select herself to deactivate her disguise, placing Inherent Glamour on a 0.5-second cooldown. Taking damage from a champion or turret puts Inherent Glamour on a 2-second cooldown."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Neeko has a collection of disguises to take on the appearance of allied champions. She can choose a new champion to switch her disguise or select herself to deactivate her disguise, placing Inherent Glamour on a 0.5-second cooldown. Taking damage from a champion or turret puts Inherent Glamour on a 2-second cooldown.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Standing by the nearest visible allied or neutral non-champion non-structure unit while not disguised will gather its Sho'Ma over 2 seconds, adding its disguise to the collection. Activating this disguise places Inherent Glamour on a 1-second cooldown. Neeko can collect only one Sho'Ma, but can discard or consume it. She can store Sho'Ma from the following units, so long as they are targetable:</span>\n\nNon-epic monsters\n Minions\n Traps\n Wards\n Pets\nJungle plants"
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Standing by the nearest visible allied or neutral non-champion non-structure unit while not disguised will gather its Sho'Ma over 2 seconds, adding its disguise to the collection. Activating this disguise places Inherent Glamour on a 1-second cooldown. Neeko can collect only one Sho'Ma, but can discard or consume it. She can store Sho'Ma from the following units, so long as they are targetable:</span></p>\n\nNon-epic monsters\n Minions\n Traps\n Wards\n Pets\nJungle plants"
           },
           {
-            "description": "<span class=\"ability-header\">While disguised, Neeko can use basic attacks while keeping her form. Her disguise breaks if she:</span>\n\nuses a damaging ability, summoner spell, or item active\nis immobilized\ntakes damage lethal to the disguised form\nis in the enemy spawn platform\nbegins a channel other than Recall and Empowered Recall\ndeals damage to a structure with a non-champion disguise form\n dies"
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">While disguised, Neeko can use basic attacks while keeping her form. Her disguise breaks if she:</span></p>\n\nuses a damaging ability, summoner spell, or item active\nis immobilized\ntakes damage lethal to the disguised form\nis in the enemy spawn platform\nbegins a channel other than Recall and Empowered Recall\ndeals damage to a structure with a non-champion disguise form\n dies"
           },
           {
             "description": "Inherent Glamour's disguise is not deactivated from Pop Blossom until after 0.5 seconds of its cast. Neeko cannot activate Inherent Glamour while she is unable to cast abilities."
@@ -122,7 +122,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Neeko/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Neeko tosses a seed that blooms at the target location, dealing magic damage to nearby enemies.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Neeko tosses a seed that blooms at the target location, dealing magic damage to nearby enemies.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -254,7 +254,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Neeko/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Neeko's basic attacks on-hit generate a stack of Shapesplitter, which refreshes on subsequent attacks and stacks up to 2 times. At 2 stacks, her next basic attack on-attack consumes them all to become non-projectile, deal bonus magic damage and grant her bonus movement speed for 1 second. This attack deals 75 bonus magic damage against monsters.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Neeko's basic attacks on-hit generate a stack of Shapesplitter, which refreshes on subsequent attacks and stacks up to 2 times. At 2 stacks, her next basic attack on-attack consumes them all to become non-projectile, deal bonus magic damage and grant her bonus movement speed for 1 second. This attack deals 75 bonus magic damage against monsters.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage",
@@ -298,7 +298,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Neeko creates a clone of her current form, after which they both instantly become invisible for 0.5 seconds and gain bonus movement speed for 3 seconds. Shapesplitter can be recast at any time while the clone is active.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Neeko creates a clone of her current form, after which they both instantly become invisible for 0.5 seconds and gain bonus movement speed for 3 seconds. Shapesplitter can be recast at any time while the clone is active.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -323,7 +323,7 @@
             "description": "The clone lasts for 3 seconds, starts running a fixed distance in the target direction, and is untargetable to allies and for the first 0.5 seconds of its lifespan to enemies. Once the clone takes damage, it will disappear prematurely, after 0.5 seconds.Additionally, the clone plays the casting animations for Blooming Burst and Tangle-Barbs as well as Pop Blossom's visual effects whenever Neeko casts them. She can also command the clone once to play the animation of her next emote or Recall for a set duration that overrides its original duration."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Neeko sends her clone to the target location if it is not playing an emote or Recall animation."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Neeko sends her clone to the target location if it is not playing an emote or Recall animation.</p>"
           }
         ],
         "cost": [
@@ -354,7 +354,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Neeko/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Neeko slings a magical spiral in the target direction that deals magic damage to enemies hit and roots them for a duration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Neeko slings a magical spiral in the target direction that deals magic damage to enemies hit and roots them for a duration.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -455,7 +455,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Neeko/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Neeko winds up spiritual essence over 1.25 seconds and highlights an area around herself, which is visible to enemies unless she is disguised. If Neeko is in a disguise, it will break after 0.5 seconds into the duration."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Neeko winds up spiritual essence over 1.25 seconds and highlights an area around herself, which is visible to enemies unless she is disguised. If Neeko is in a disguise, it will break after 0.5 seconds into the duration.</p>"
           },
           {
             "description": "After winding up, the cast time begins and Neeko leaps upward, knocking up nearby enemies for 0.6 seconds."

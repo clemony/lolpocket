@@ -95,7 +95,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gangplank/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Periodically, Gangplank empowers his next basic attack to set the target on fire, dealing them[ 50 - 250 (based on level) (+ 100% bonus AD) (+ 2 per 1% critical strike chance) bonus true damage over 2.5 seconds. ][ 5 - 25 (based on level) (+ 10% bonus AD) (+ 0.2 per 1% critical strike chance) bonus true damage every 0.25 seconds over 2.5 seconds. ] Turrets are dealt 50% damage."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Periodically, Gangplank empowers his next basic attack to set the target on fire, dealing them[ 50 - 250 (based on level) (+ 100% bonus AD) (+ 2 per 1% critical strike chance) bonus true damage over 2.5 seconds. ][ 5 - 25 (based on level) (+ 10% bonus AD) (+ 0.2 per 1% critical strike chance) bonus true damage every 0.25 seconds over 2.5 seconds. ] Turrets are dealt 50% damage.</p>"
           },
           {
             "description": "If Gangplank successfully hits a target with Trial by Fire, he gains 15% - 30% (based on level) bonus movement speed for 2 seconds. Every time a Powder Keg explodes, the cooldown for Trial by Fire resets and Gangplank gains its bonus movement speed."
@@ -119,7 +119,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gangplank/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Gangplank fires a shot at the target enemy that deals physical damage, applies on-hit effects as a ranged attack, and triggers on-attack effects. Parrrley can critically strike for (175% + 40%) damage.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Gangplank fires a shot at the target enemy that deals physical damage, applies on-hit effects as a ranged attack, and triggers on-attack effects. Parrrley can critically strike for (175% + 40%) damage.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -213,7 +213,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gangplank/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Gangplank consumes a large quantity of citrus fruit, cleansing himself from all crowd control and healing himself.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Gangplank consumes a large quantity of citrus fruit, cleansing himself from all crowd control and healing himself.</p>",
             "leveling": [
               {
                 "attribute": "Heal",
@@ -278,7 +278,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gangplank/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Gangplank consumes a charge to place a powder keg at the target location that lasts for 25 seconds and will connect to other kegs with overlapping connection radius through a trail of black powder. The keg starts with 3 health and loses 1 every 2 / 1 / 0.5 (based on level) seconds until it is left with 1 health."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Gangplank consumes a charge to place a powder keg at the target location that lasts for 25 seconds and will connect to other kegs with overlapping connection radius through a trail of black powder. The keg starts with 3 health and loses 1 every 2 / 1 / 0.5 (based on level) seconds until it is left with 1 health.</p>"
           },
           {
             "description": "Gangplank periodically stocks a Powder Keg charge, up to a maximum.",
@@ -376,7 +376,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gangplank/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Gangplank shoots a flare into the air, signaling his ship off-shore to fire upon the target location for 8 seconds, calling down 12 waves of cannonballs in clusters of 3 every 2 seconds, and granting sight of the area for the duration. Each wave deals magic damage to all enemies within the area and slows them by 30% for 0.5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Gangplank shoots a flare into the air, signaling his ship off-shore to fire upon the target location for 8 seconds, calling down 12 waves of cannonballs in clusters of 3 every 2 seconds, and granting sight of the area for the duration. Each wave deals magic damage to all enemies within the area and slows them by 30% for 0.5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage Per Wave",
@@ -441,10 +441,10 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Gangplank can purchase upgrades for his ship in the store at the cost of 500 Silver Serpents each, which improve Cannon Barrage:</span>"
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Gangplank can purchase upgrades for his ship in the store at the cost of 500 Silver Serpents each, which improve Cannon Barrage:</span></p>"
           },
           {
-            "description": "<span class=\"ability-header\">Death's Daughter:</span> A large cannonball lands in the center of the barrage after the first cluster of waves occur, dealing a cluster's worth of true damage to enemies within the impact and slowing them by 75% for 1 second.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Death's Daughter:</span> A large cannonball lands in the center of the barrage after the first cluster of waves occur, dealing a cluster's worth of true damage to enemies within the impact and slowing them by 75% for 1 second.</p>",
             "leveling": [
               {
                 "attribute": "True Damage with Death's Daughter",
@@ -489,7 +489,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Fire at Will:</span> Cannon Barrage fires[ 6 additional waves ][ 2 additional clusters ] over its duration; 18 waves of cannonballs are called down in clusters of 3 every 1.33 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Fire at Will:</span> Cannon Barrage fires[ 6 additional waves ][ 2 additional clusters ] over its duration; 18 waves of cannonballs are called down in clusters of 3 every 1.33 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Total Magic Damage with Fire at Will",
@@ -534,7 +534,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Raise Morale:</span> Cannon Barrage grants Gangplank and all allies within the area 40% bonus movement speed, lingering for 2 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Raise Morale:</span> Cannon Barrage grants Gangplank and all allies within the area 40% bonus movement speed, lingering for 2 seconds.</p>"
           }
         ],
         "cost": [

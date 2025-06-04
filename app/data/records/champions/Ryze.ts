@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ryze/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Ryze increases his maximum mana by (10% per 100 AP)."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Ryze increases his maximum mana by (10% per 100 AP).</p>"
           }
         ],
         "targeting": "Passive",
@@ -114,10 +114,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ryze/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Ryze's other basic ability casts reset Overload's cooldown and charge a Rune stack for 4 seconds, refreshing on subsequent casts and stacking up to 2 times."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Ryze's other basic ability casts reset Overload's cooldown and charge a Rune stack for 4 seconds, refreshing on subsequent casts and stacking up to 2 times.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Ryze unleashes a runic blast in the target direction that deals magic damage to the first enemy hit and consumes all Rune stacks.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ryze unleashes a runic blast in the target direction that deals magic damage to the first enemy hit and consumes all Rune stacks.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -174,7 +174,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Flux Bonus:</span> Overload deals 25 / 50 / 75 / 100% (based on Realm Warp's Rank) increased damage and spreads to surrounding Fluxed enemies."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Flux Bonus:</span> Overload deals 25 / 50 / 75 / 100% (based on Realm Warp's Rank) increased damage and spreads to surrounding Fluxed enemies.</p>"
           }
         ],
         "cost": [
@@ -209,7 +209,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ryze/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Ryze seizes the target enemy, dealing magic damage and slowing them by 50% for 1.5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ryze seizes the target enemy, dealing magic damage and slowing them by 50% for 1.5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -244,7 +244,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Flux Bonus:</span> The target is rooted instead of slowed."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Flux Bonus:</span> The target is rooted instead of slowed.</p>"
           }
         ],
         "cost": [
@@ -280,7 +280,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ryze/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Ryze projects an orb upon the target enemy that deals magic damage.\nThe target and surrounding enemies are also marked with Flux for 4 seconds. Ryze's basic abilities against Flux targets consume the mark to become empowered with an additional effect.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ryze projects an orb upon the target enemy that deals magic damage.</p>\nThe target and surrounding enemies are also marked with Flux for 4 seconds. Ryze's basic abilities against Flux targets consume the mark to become empowered with an additional effect.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -315,7 +315,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Flux Bonus:</span> Spell Flux spreads farther."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Flux Bonus:</span> Spell Flux spreads farther.</p>"
           }
         ],
         "cost": [
@@ -354,7 +354,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ryze/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Overload's Flux empowered damage is increased.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Overload's Flux empowered damage is increased.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Overload Damage",
@@ -374,7 +374,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Ryze channels for 2 seconds to open a portal beneath him, marking the target location as its destination and granting sight of the area. Ryze is able to act while channeling, but the portal will cancel if he is interrupted."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ryze channels for 2 seconds to open a portal beneath him, marking the target location as its destination and granting sight of the area. Ryze is able to act while channeling, but the portal will cancel if he is interrupted.</p>"
           },
           {
             "description": "Upon completion, Ryze and allied units within will blink to the location and become rooted, disarmed, silenced and untargetable for 0.75 seconds."

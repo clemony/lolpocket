@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Leona/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Leona's abilities mark enemies hit for 2.5 seconds, refreshing on subsequent hits. Allied champions' damaging attacks and abilities against a marked target will consume the mark to deal 32 - 151 (based on level) bonus magic damage."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Leona's abilities mark enemies hit for 2.5 seconds, refreshing on subsequent hits. Allied champions' damaging attacks and abilities against a marked target will consume the mark to deal 32 - 151 (based on level) bonus magic damage.</p>"
           }
         ],
         "targeting": "Passive",
@@ -117,7 +117,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Leona/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Leona illuminates her shield, empowering her next basic attack within 6 seconds to have a 0.25-second cast time, gain 50 bonus range, deal bonus magic damage and stun the target for 1 second.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Leona illuminates her shield, empowering her next basic attack within 6 seconds to have a 0.25-second cast time, gain 50 bonus range, deal bonus magic damage and stun the target for 1 second.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage",
@@ -175,7 +175,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Leona/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Leona raises her guard for 3 seconds, gaining flat damage reduction of up to 50% of the damage instance and bonus armor and bonus magic resistance.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Leona raises her guard for 3 seconds, gaining flat damage reduction of up to 50% of the damage instance and bonus armor and bonus magic resistance.</p>",
             "leveling": [
               {
                 "attribute": "Flat Damage Reduction",
@@ -294,7 +294,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Leona/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Leona projects her sword in the target direction that deals magic damage to enemies hit.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Leona projects her sword in the target direction that deals magic damage to enemies hit.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -363,7 +363,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Leona/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Leona calls down a solar flare that strikes upon the target location after 0.625 seconds, granting sight of the area before impact and for another 3 seconds afterwards. Enemies hit are dealt magic damage.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Leona calls down a solar flare that strikes upon the target location after 0.625 seconds, granting sight of the area before impact and for another 3 seconds afterwards. Enemies hit are dealt magic damage.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",

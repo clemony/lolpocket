@@ -94,7 +94,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Renekton/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Renekton's basic attacks generate 5 Fury on-hit. After 12 seconds of being out of combat, he loses 1 Fury every 0.25 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Renekton's basic attacks generate 5 Fury on-hit. After 12 seconds of being out of combat, he loses 1 Fury every 0.25 seconds.</p>"
           },
           {
             "description": "While Renekton has at least 50 Fury, his next basic ability consumes 50 Fury to become empowered with an additional effect. Empowered abilities do not generate Fury."
@@ -115,7 +115,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Renekton/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Renekton cleaves around himself, dealing physical damage to nearby enemies and healing himself for each enemy hit, up to a cap.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Renekton cleaves around himself, dealing physical damage to nearby enemies and healing himself for each enemy hit, up to a cap.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -288,7 +288,7 @@
             "description": "Renekton generates 2.5 Fury for each non-champion hit and 10 Fury for each champion hit, with the Fury generated per cast capped at 30."
           },
           {
-            "description": "<span class=\"ability-header\">Reign of Anger Bonus:</span> Cull the Meek has increased damage, tripled total healing, and a quadrupled healing cap."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Reign of Anger Bonus:</span> Cull the Meek has increased damage, tripled total healing, and a quadrupled healing cap.</p>"
           },
           {
             "description": "Renekton cannot basic attack nor cast Slice, Dice, or Dominus for 0.25 seconds after Cull the Meek's activation."
@@ -318,7 +318,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Renekton/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Renekton empowers his next basic attack within 7 seconds to have a 0.2-second cast time, gain 50 bonus range and strike the target twice, dealing modified physical damage and stunning them for 0.75 seconds. Each strike applies on-hit effects and generates Fury. Hitting an enemy champion generates 10 bonus Fury.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Renekton empowers his next basic attack within 7 seconds to have a 0.2-second cast time, gain 50 bonus range and strike the target twice, dealing modified physical damage and stunning them for 0.75 seconds. Each strike applies on-hit effects and generates Fury. Hitting an enemy champion generates 10 bonus Fury.</p>",
             "leveling": [
               {
                 "attribute": "Total Physical Damage",
@@ -370,7 +370,7 @@
             "description": "Ruthless Predator's first strike can critically strike for (75% + 40%) AD bonus physical damage."
           },
           {
-            "description": "<span class=\"ability-header\">Reign of Anger Bonus:</span> Renekton instead strikes 3 times, completely destroying damage-mitigating shields on the target upon the first strike if they are not a monster, as well as increasing the stun duration to 1.5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Reign of Anger Bonus:</span> Renekton instead strikes 3 times, completely destroying damage-mitigating shields on the target upon the first strike if they are not a monster, as well as increasing the stun duration to 1.5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Total Physical Damage",
@@ -427,7 +427,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Renekton/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Renekton dashes a fixed distance in the target direction, dealing physical damage to enemies he passes through.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Renekton dashes a fixed distance in the target direction, dealing physical damage to enemies he passes through.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -483,7 +483,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Renekton/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Renekton dashes a fixed distance in the target direction, dealing the same physical damage to enemies he passes through.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Renekton dashes a fixed distance in the target direction, dealing the same physical damage to enemies he passes through.</p>",
             "leveling": [
               {
                 "attribute": "Total Physical Damage",
@@ -513,7 +513,7 @@
             "description": "Both Slice and Dice generate 2 Fury for each non-champion hit, and 10 Fury for each champion hit, with the Fury generated per dash capped at 30."
           },
           {
-            "description": "<span class=\"ability-header\">Reign of Anger Bonus:</span> Dice deals bonus physical damage and inflicts armor reduction to enemies hit for 4 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Reign of Anger Bonus:</span> Dice deals bonus physical damage and inflicts armor reduction to enemies hit for 4 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage",
@@ -627,7 +627,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Renekton/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Renekton empowers himself for 15 seconds, gaining bonus health, 20% increased size, 25 bonus attack range, and 20 Fury, as well as increasing Cull the Meek's effect radius.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Renekton empowers himself for 15 seconds, gaining bonus health, 20% increased size, 25 bonus attack range, and 20 Fury, as well as increasing Cull the Meek's effect radius.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Health",

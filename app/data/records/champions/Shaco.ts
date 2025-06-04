@@ -98,7 +98,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Shaco/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Shaco's basic attacks are empowered to deal 20 - 35 (based on level) (+ 30% bonus AD) bonus physical damage when hitting an enemy from behind. Backstab is affected by critical strike modifiers."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Shaco's basic attacks are empowered to deal 20 - 35 (based on level) (+ 30% bonus AD) bonus physical damage when hitting an enemy from behind. Backstab is affected by critical strike modifiers.</p>"
           },
           {
             "description": "Deceive and Two-Shiv Poison have additional effects when they hit an enemy from behind."
@@ -119,7 +119,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Shaco/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Shaco becomes invisible for a duration, and after a 0.125-second delay, he blinks to the target location.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Shaco becomes invisible for a duration, and after a 0.125-second delay, he blinks to the target location.</p>",
             "leveling": [
               {
                 "attribute": "Invisibility Duration",
@@ -171,7 +171,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Backstab Bonus:</span> The attack will critically strike for (155% + 40%) damage."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Backstab Bonus:</span> The attack will critically strike for (155% + 40%) damage.</p>"
           },
           {
             "description": "Deceive will cast at max range if cast beyond that."
@@ -205,7 +205,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Shaco/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Shaco summons a box at the target location that becomes stealthed after arming over 2 seconds, lasting for up to 40 (+ 10% AP) seconds. The box is invulnerable and untargetable to enemies while stealthed."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Shaco summons a box at the target location that becomes stealthed after arming over 2 seconds, lasting for up to 40 (+ 10% AP) seconds. The box is invulnerable and untargetable to enemies while stealthed.</p>"
           },
           {
             "description": "The box will spring out upon enemy contact, fearing nearby enemies for a duration, modified to 2.2 seconds against non-champions, and rooting them for a duration, modified to a 1 second root against non-champions. After a 0.15-second delay of the box's activation, enemies hit also have their movement speed reduced. Enemy champions have their movement speed set to a static 100, while non-champions are set to a static 60. The movement speed reduction lasts for the same duration as the fear plus 0.3 seconds.",
@@ -403,7 +403,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Shaco/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Shaco's basic attacks slow enemies for 2 seconds while Two-Shiv Poison is not on cooldown.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Shaco's basic attacks slow enemies for 2 seconds while Two-Shiv Poison is not on cooldown.</p>",
             "leveling": [
               {
                 "attribute": "Slow",
@@ -425,7 +425,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Shaco throws a dagger at the target enemy that deals magic damage, increased by 50% if they are below 30% of their maximum health, and slows them for 3 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Shaco throws a dagger at the target enemy that deals magic damage, increased by 50% if they are below 30% of their maximum health, and slows them for 3 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -507,7 +507,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Backstab Bonus:</span> The dagger deals an additional 15 - 50 (based on level) (+ 10% AP) bonus magic damage, increased to 22.5 - 75 (based on level) (+ 15% AP) if the target is below 30% of their maximum health."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Backstab Bonus:</span> The dagger deals an additional 15 - 50 (based on level) (+ 10% AP) bonus magic damage, increased to 22.5 - 75 (based on level) (+ 15% AP) if the target is below 30% of their maximum health.</p>"
           }
         ],
         "cost": [
@@ -536,10 +536,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Shaco/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Shaco vanishes for 0.5 seconds and blinks in the target direction while creating a clone of himself that is summoned in the opposite direction, remaining within control range of him as a controllable clone for up to 18 seconds. Hallucinate can be recast at any time while the clone is alive, and can be used while affected by cast-inhibiting crowd control."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Shaco vanishes for 0.5 seconds and blinks in the target direction while creating a clone of himself that is summoned in the opposite direction, remaining within control range of him as a controllable clone for up to 18 seconds. Hallucinate can be recast at any time while the clone is alive, and can be used while affected by cast-inhibiting crowd control.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Shaco commands the clone to move to the target location."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Shaco commands the clone to move to the target location.</p>"
           },
           {
             "description": "The clone will explode upon dying or expiring to deal magic damage to nearby enemies and deploy three mini-boxes that activate instantly, fearing nearby enemies for 1 second, increased to 2.2 seconds against non-champions, and rooting them for 0.5 seconds, increased to 0.6 seconds against monsters and 1 second against minions. After a 0.15-second delay of the boxes' activation, enemies hit also have their movement speed reduced. Enemy champions have their movement speed set to a static 100, while non-champions are set to a static 60. The movement speed reduction lasts for the same duration as the fear plus 0.3 seconds.",

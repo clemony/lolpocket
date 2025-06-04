@@ -1,0 +1,7 @@
+.parallax {
+  transition: transform 0.3s ease;
+  transform-style: preserve-3d;
+}
+.parallax:hover {
+  transform: perspective(500px) rotateX(5deg) rotateY(5deg);
+}

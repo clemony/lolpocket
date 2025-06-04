@@ -99,16 +99,16 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Darius/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Darius' damaging basic attacks and abilities apply a stack of Hemorrhage to enemies for 5 seconds, refreshing on subsequent applications and stacking up to 5 times."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Darius' damaging basic attacks and abilities apply a stack of Hemorrhage to enemies for 5 seconds, refreshing on subsequent applications and stacking up to 5 times.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Hemorrhage:</span> For each stack, the target is dealt[ 13 - 30 (based on level) (+ 30% bonus AD) total physical damage over the duration, ][ 3.25 - 7.5 (based on level) (+ 7.5% bonus AD) physical damage every 1.25 seconds over the duration, ]up to a maximum of[ 65 - 150 (based on level) (+ 150% bonus AD) total physical damage over the duration. ][ 16.25 - 37.5 (based on level) (+ 37.5% bonus AD) physical damage with each tick. ]Hemorrhage deals 200% damage against monsters."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Hemorrhage:</span> For each stack, the target is dealt[ 13 - 30 (based on level) (+ 30% bonus AD) total physical damage over the duration, ][ 3.25 - 7.5 (based on level) (+ 7.5% bonus AD) physical damage every 1.25 seconds over the duration, ]up to a maximum of[ 65 - 150 (based on level) (+ 150% bonus AD) total physical damage over the duration. ][ 16.25 - 37.5 (based on level) (+ 37.5% bonus AD) physical damage with each tick. ]Hemorrhage deals 200% damage against monsters.</p>"
           },
           {
             "description": "When Darius kills a champion with Noxian Guillotine, or applies 5 stacks on an enemy champion, he becomes empowered with Noxian Might for 5 seconds."
           },
           {
-            "description": "<span class=\"ability-header\">Noxian Might:</span> Darius gains 30 - 230 (based on level) bonus attack damage and instantly applies 5 Hemorrhage stacks through his usual means."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Noxian Might:</span> Darius gains 30 - 230 (based on level) bonus attack damage and instantly applies 5 Hemorrhage stacks through his usual means.</p>"
           }
         ],
         "targeting": "Passive",
@@ -126,7 +126,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Darius/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Darius becomes ghosted for 1 second and hefts his axe for 0.75 seconds, afterward swinging it around himself to deal physical damage to nearby enemies. Enemies within the inner radius take 35% damage.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Darius becomes ghosted for 1 second and hefts his axe for 0.75 seconds, afterward swinging it around himself to deal physical damage to nearby enemies. Enemies within the inner radius take 35% damage.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage (Blade)",
@@ -222,7 +222,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Darius/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Darius empowers his next basic attack within 4 seconds to have an uncancellable windup, gain 25 bonus range, deal bonus physical damage and slow the target by 90% for 1 second. This damage is affected by critical strike modifiers.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Darius empowers his next basic attack within 4 seconds to have an uncancellable windup, gain 25 bonus range, deal bonus physical damage and slow the target by 90% for 1 second. This damage is affected by critical strike modifiers.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage",
@@ -274,7 +274,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Darius/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Darius gains armor penetration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Darius gains armor penetration.</p>",
             "leveling": [
               {
                 "attribute": "Armor Penetration",
@@ -296,7 +296,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Darius sweeps his axe in a cone in the target direction, granting sight of the area for 1 second while pulling enemies hit towards him. Upon arrival, they rebound 150 units off of him, remaining airborne and becoming slowed by 40% for 1 second."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Darius sweeps his axe in a cone in the target direction, granting sight of the area for 1 second while pulling enemies hit towards him. Upon arrival, they rebound 150 units off of him, remaining airborne and becoming slowed by 40% for 1 second.</p>"
           },
           {
             "description": "Darius is unable to move or cast Decimate or Noxian Guillotine for 0.4 seconds after Apprehend's cast time."
@@ -334,7 +334,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Darius/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Darius attempts to execute the target enemy champion, leaping towards them to deal true damage, increased by 0% - 100% (based on target's Hemorrhage stacks), and granting sight of the area around them for 2.5 seconds from the start of the cast time.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Darius attempts to execute the target enemy champion, leaping towards them to deal true damage, increased by 0% - 100% (based on target's Hemorrhage stacks), and granting sight of the area around them for 2.5 seconds from the start of the cast time.</p>",
             "leveling": [
               {
                 "attribute": "True Damage",

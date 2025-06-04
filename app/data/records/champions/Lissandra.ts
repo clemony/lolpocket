@@ -98,7 +98,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lissandra/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Whenever a nearby enemy champion dies, Lissandra spawns a Frozen Thrall from their corpse.Frozen Thralls are ice spirits that have 33.48 - 325 (based on seconds alive) movement speed and slow nearby enemies by 25%. They will chase nearby visible enemies for 4 seconds, prioritizing champions, after which they shatter to deal 120 - 520 (based on level) (+ 50% AP) magic damage to nearby enemies."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Whenever a nearby enemy champion dies, Lissandra spawns a Frozen Thrall from their corpse.Frozen Thralls are ice spirits that have 33.48 - 325 (based on seconds alive) movement speed and slow nearby enemies by 25%. They will chase nearby visible enemies for 4 seconds, prioritizing champions, after which they shatter to deal 120 - 520 (based on level) (+ 50% AP) magic damage to nearby enemies.</p>"
           }
         ],
         "targeting": "Passive",
@@ -117,7 +117,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lissandra/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Lissandra launches a shard of ice in the target direction that deals magic damage and slows enemies hit for 1.5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lissandra launches a shard of ice in the target direction that deals magic damage and slows enemies hit for 1.5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -199,7 +199,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lissandra/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Lissandra freezes nearby enemies, dealing magic damage and rooting them for a duration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lissandra freezes nearby enemies, dealing magic damage and rooting them for a duration.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -272,7 +272,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lissandra/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Lissandra sends a claw of ice in the target direction that deals magic damage to enemies it passes through, decelerating over 1.25 seconds. Glacial Path can be recast after 0.5 seconds while the claw is active.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lissandra sends a claw of ice in the target direction that deals magic damage to enemies it passes through, decelerating over 1.25 seconds. Glacial Path can be recast after 0.5 seconds while the claw is active.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -299,7 +299,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Lissandra consumes the claw and blinks to its current location."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Lissandra consumes the claw and blinks to its current location.</p>"
           }
         ],
         "cost": [
@@ -337,13 +337,13 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lissandra/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Lissandra can cast Frozen Tomb on herself or an enemy champion."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lissandra can cast Frozen Tomb on herself or an enemy champion.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Enemy Cast:</span> Lissandra freezes the target enemy champion, knocking them down and stunning them for 1.5 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Enemy Cast:</span> Lissandra freezes the target enemy champion, knocking them down and stunning them for 1.5 seconds.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Self Cast:</span> Lissandra instantly entombs herself in ice, entering stasis for 2.5 seconds and healing herself every 0.25 seconds over the duration. The healing is increased by 0% - 100% (based on missing health at the time of cast).",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Self Cast:</span> Lissandra instantly entombs herself in ice, entering stasis for 2.5 seconds and healing herself every 0.25 seconds over the duration. The healing is increased by 0% - 100% (based on missing health at the time of cast).</p>",
             "leveling": [
               {
                 "attribute": "Minimum Heal per Tick",

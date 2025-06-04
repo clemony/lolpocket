@@ -102,7 +102,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Heimerdinger gains 20% bonus movement speed while near an allied turret or a H-28G Evolution Turret or H-28Q Apex Turret deployed by him."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Heimerdinger gains 20% bonus movement speed while near an allied turret or a H-28G Evolution Turret or H-28Q Apex Turret deployed by him.</p>"
           }
         ],
         "targeting": "Passive",
@@ -118,7 +118,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Heimerdinger deploys a H-28G Evolution Turret at the target location, which lasts until destroyed."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Heimerdinger deploys a H-28G Evolution Turret at the target location, which lasts until destroyed.</p>"
           },
           {
             "description": "Heimerdinger periodically stocks a Turret Kit charge, up to a maximum of 3."
@@ -157,7 +157,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">UPGRADE!!! - Active:</span> Heimerdinger deploys a H-28Q Apex Turret at the target location, which lasts for 8 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">UPGRADE!!! - Active:</span> Heimerdinger deploys a H-28Q Apex Turret at the target location, which lasts for 8 seconds.</p>"
           },
           {
             "description": "H-28Q Apex Turret scales with UPGRADE!!!'s rank."
@@ -191,7 +191,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Heimerdinger launches a wave of 5 rockets that converge upon the target location and fan beyond it up to a maximum range, with each one dealing magic damage to the first enemy it hits. Every rocket hitting an enemy champion grants 20% beam charge to all turrets within 1000 range, up to a maximum of 100% beam charge when hitting 5 rockets on an enemy champion.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Heimerdinger launches a wave of 5 rockets that converge upon the target location and fan beyond it up to a maximum range, with each one dealing magic damage to the first enemy it hits. Every rocket hitting an enemy champion grants 20% beam charge to all turrets within 1000 range, up to a maximum of 100% beam charge when hitting 5 rockets on an enemy champion.</p>",
             "leveling": [
               {
                 "attribute": "Initial Rocket Magic Damage",
@@ -387,7 +387,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">UPGRADE!!! - Active:</span> Heimerdinger unleashes 4 waves of 5 rockets in quick succession that converge upon the target location. Each rocket deals magic damage to the first enemy hit.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">UPGRADE!!! - Active:</span> Heimerdinger unleashes 4 waves of 5 rockets in quick succession that converge upon the target location. Each rocket deals magic damage to the first enemy hit.</p>",
             "leveling": [
               {
                 "attribute": "Initial Rocket Damage",
@@ -545,7 +545,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Heimerdinger hurls a grenade at the target location that detonates upon impact, dealing magic damage to nearby enemies and slowing them by 35% for 2 seconds. If the grenade hits an enemy champion, all turrets within 1000 range of the impact gain 100% beam charge.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Heimerdinger hurls a grenade at the target location that detonates upon impact, dealing magic damage to nearby enemies and slowing them by 35% for 2 seconds. If the grenade hits an enemy champion, all turrets within 1000 range of the impact gain 100% beam charge.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -602,7 +602,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">UPGRADE!!! - Active:</span> Heimerdinger hurls a massive grenade at the target location that bounces a fixed distance 3 times in the cast direction. The grenade explodes upon landing each time to deal magic damage to nearby enemies and slow them by 35% for 2 seconds. Enemies hit at the center of the grenade's impact are additionally stunned for 1.5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">UPGRADE!!! - Active:</span> Heimerdinger hurls a massive grenade at the target location that bounces a fixed distance 3 times in the cast direction. The grenade explodes upon landing each time to deal magic damage to nearby enemies and slow them by 35% for 2 seconds. Enemies hit at the center of the grenade's impact are additionally stunned for 1.5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -664,10 +664,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Heimerdinger empowers his next basic ability for an additional effect, consuming the empowerment upon cast and placing UPGRADE!!! on full cooldown. These empowered abilities have the same cooldowns as their basic forms, deal modified damage, and do not have a mana cost. UPGRADE!!! can be recast after 3 seconds while the empowerment is available."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Heimerdinger empowers his next basic ability for an additional effect, consuming the empowerment upon cast and placing UPGRADE!!! on full cooldown. These empowered abilities have the same cooldowns as their basic forms, deal modified damage, and do not have a mana cost. UPGRADE!!! can be recast after 3 seconds while the empowerment is available.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Heimerdinger ends UPGRADE!!! and puts it on a 3-second cooldown."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Heimerdinger ends UPGRADE!!! and puts it on a 3-second cooldown.</p>"
           },
           {
             "description": "UPGRADE!!! can be used while affected by cast-inhibiting crowd control."

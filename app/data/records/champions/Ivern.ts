@@ -100,7 +100,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ivern/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Ivern cannot attack nor damage non-epic monsters. Instead, targeting a jungle camp initiates a 2.5 second channel that will plant a grove upon the camp. Placing a grove costs 94.5 - 0.14 (based on level) health and 90 - 0.37 (based on level) mana. The channel cannot be cancelled in the first 0.15 seconds and in the last 0.5 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Ivern cannot attack nor damage non-epic monsters. Instead, targeting a jungle camp initiates a 2.5 second channel that will plant a grove upon the camp. Placing a grove costs 94.5 - 0.14 (based on level) health and 90 - 0.37 (based on level) mana. The channel cannot be cancelled in the first 0.15 seconds and in the last 0.5 seconds.</p>"
           },
           {
             "description": "Ivern cannot place a grove while he is unable to cast abilities."
@@ -123,7 +123,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ivern/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Ivern throws a vine in the target direction, dealing magic damage to the first enemy hit and rooting them for a duration, during which they are also revealed. Rootcaller can be recast while the target is rooted.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ivern throws a vine in the target direction, dealing magic damage to the first enemy hit and rooting them for a duration, during which they are also revealed. Rootcaller can be recast while the target is rooted.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -170,7 +170,7 @@
             "description": "Ivern and allied champions can select the target rooted by Rootcaller to dash to their location, stopping at their attack range."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Ivern dashes to the rooted target."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Ivern dashes to the rooted target.</p>"
           },
           {
             "description": "Hitting a non-epic monster reduces Rootcaller's cooldown by 50%."
@@ -208,7 +208,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ivern/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> While Ivern is in brush, his basic attacks are empowered to deal bonus magic damage on-hit. This bonus persists for 3 seconds after leaving brush.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> While Ivern is in brush, his basic attacks are empowered to deal bonus magic damage on-hit. This bonus persists for 3 seconds after leaving brush.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage",
@@ -235,7 +235,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Ivern grows a patch of brush at the target location for 45 seconds, granting sight of the area within and around it for 8 seconds. Brushes despawn instantly after allied vision of them is lost. Spawning brush near terrain or other brush increases its radius."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ivern grows a patch of brush at the target location for 45 seconds, granting sight of the area within and around it for 8 seconds. Brushes despawn instantly after allied vision of them is lost. Spawning brush near terrain or other brush increases its radius.</p>"
           },
           {
             "description": "While allied champions are in any brush when Ivern is within 1000 units, their basic attacks are empowered to deal bonus magic damage on-hit. This bonus persists for 1.5 seconds after leaving brush.",
@@ -300,7 +300,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ivern/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Ivern places a seed on the target allied champion, Daisy, or himself, granting the target a shield for 2 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ivern places a seed on the target allied champion, Daisy, or himself, granting the target a shield for 2 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -404,13 +404,13 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ivern/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Ivern summons his sentinel friend Daisy to his side, who lands 350 units away from him in the target direction and remains on the field for up to 45 seconds as a controllable pet."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ivern summons his sentinel friend Daisy to his side, who lands 350 units away from him in the target direction and remains on the field for up to 45 seconds as a controllable pet.</p>"
           },
           {
             "description": "Daisy! can be recast at any time while Daisy is alive."
           },
           {
-            "description": "<span class=\"ability-header\">Recast - Daisy, wait!:</span> Ivern commands Daisy to move to the target location. If cast on Ivern, Daisy will follow him."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast - Daisy, wait!:</span> Ivern commands Daisy to move to the target location. If cast on Ivern, Daisy will follow him.</p>"
           },
           {
             "description": "The recast of Daisy! can be used while affected by cast-inhibiting crowd control. See Pets for more details about Daisy."

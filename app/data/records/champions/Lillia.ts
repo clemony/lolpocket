@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lillia/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Lillia's abilities apply Dream Dust to enemies hit, which deals[ 5% (+ 1.25% per 100 AP) of the target's maximum health total magic damage over 3 seconds, capped at 65 ][ 0.83% (+ 0.2083% per 100 AP) of the target's maximum health magic damage every 0.5 seconds over 3 seconds, capped at 10.83 per tick ]against monsters."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Lillia's abilities apply Dream Dust to enemies hit, which deals[ 5% (+ 1.25% per 100 AP) of the target's maximum health total magic damage over 3 seconds, capped at 65 ][ 0.83% (+ 0.2083% per 100 AP) of the target's maximum health magic damage every 0.5 seconds over 3 seconds, capped at 10.83 per tick ]against monsters.</p>"
           },
           {
             "description": "Lillia heals herself for[ 39 (+ 15% AP) against large monsters and 6 - 90 (based on level) (+ 30% AP) against champions ][ 6.5 (+ 2.5% AP) against large monsters and 1 - 15 (based on level) (+ 5% AP) against champions every 0.5 seconds ]over the duration of Dream Dust, reduced to 15% effectiveness for each target afflicted beyond the first. She may only heal against 1 monster at a time."
@@ -120,10 +120,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lillia/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Whenever Lillia's abilities hit at least one enemy, she generates a stack of Prance for 6.5 seconds, refreshing on subsequent hits and stacking up to 4 times. Stacks expire by one every 1.5 seconds when the duration ends."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Whenever Lillia's abilities hit at least one enemy, she generates a stack of Prance for 6.5 seconds, refreshing on subsequent hits and stacking up to 4 times. Stacks expire by one every 1.5 seconds when the duration ends.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Prance:</span> For each stack, Lillia gains bonus movement speed.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Prance:</span> For each stack, Lillia gains bonus movement speed.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -178,7 +178,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Lillia swings her censer around her, dealing magic damage to nearby enemies. Enemies hit within the outer edge of the area additionally take the same amount as bonus true damage.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lillia swings her censer around her, dealing magic damage to nearby enemies. Enemies hit within the outer edge of the area additionally take the same amount as bonus true damage.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -259,7 +259,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lillia/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Lillia dashes to 150 units in front of the target location over 0.759 seconds, though not through terrain, and deals magic damage in an area around the target spot. Enemies hit within the epicenter are dealt 200% increased damage.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lillia dashes to 150 units in front of the target location over 0.759 seconds, though not through terrain, and deals magic damage in an area around the target spot. Enemies hit within the epicenter are dealt 200% increased damage.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -390,7 +390,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lillia/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Lillia lobs a seed at the target location that rolls forward indefinitely. The seed detonates upon hitting an enemy or terrain while on the ground, dealing magic damage to enemies in a cone, slowing them by 40% for 3 seconds and revealing them for 2 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lillia lobs a seed at the target location that rolls forward indefinitely. The seed detonates upon hitting an enemy or terrain while on the ground, dealing magic damage to enemies in a cone, slowing them by 40% for 3 seconds and revealing them for 2 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -449,7 +449,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lillia/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Lillia casts a magical lullaby over all enemy champions affected by Dream Dust, which arrives after 0.3 seconds and renders them drowsy for 1.5 seconds, slowing them by 10%. After the duration, they fall asleep for 2 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lillia casts a magical lullaby over all enemy champions affected by Dream Dust, which arrives after 0.3 seconds and renders them drowsy for 1.5 seconds, slowing them by 10%. After the duration, they fall asleep for 2 seconds.</p>"
           },
           {
             "description": "The next instance of non- persistent damage that a sleeping target takes from champions, large monsters or turrets consumes the debuff to deal additional magic damage.",

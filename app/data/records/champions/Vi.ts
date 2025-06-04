@@ -97,7 +97,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vi/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Periodically, Vi's next ability hit grants her a shield equal to 14% of her maximum health for 3 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Periodically, Vi's next ability hit grants her a shield equal to 14% of her maximum health for 3 seconds.</p>"
           },
           {
             "description": "Blast Shield's cooldown is reduced by 4 seconds each time Denting Blows is consumed."
@@ -116,13 +116,13 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vi/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Vi charges while being slowed by 15% for up to 4 seconds to increase Vault Breaker's range, speed, and damage over the first 1.25 seconds of the channel."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Vi charges while being slowed by 15% for up to 4 seconds to increase Vault Breaker's range, speed, and damage over the first 1.25 seconds of the channel.</p>"
           },
           {
             "description": "Vault Breaker can be recast within the duration. If the charge completes without reactivation, Vault Breaker is cancelled, 50% of the mana cost is refunded, and it is placed on full cooldown. If the charge is interrupted, 50% of the mana cost is refunded and it is placed on a 3-second cooldown."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Vi dashes in the target direction to deal physical damage to enemies within her path, increased by 0% - 150% (based on channel time), and pull all non-champions hit towards her.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Vi dashes in the target direction to deal physical damage to enemies within her path, increased by 0% - 150% (based on channel time), and pull all non-champions hit towards her.</p>",
             "leveling": [
               {
                 "attribute": "Minimum Physical Damage",
@@ -210,7 +210,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vi/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Vi's basic attacks on-hit and Vault Breaker apply a stack of Denting Blows to enemies hit for 4 seconds, refreshing on subsequent applications and stacking up to 3 times. The third stack consumes them all to deal bonus physical damage, capped at 300 against non-champions, and inflict 20% armor reduction for 4 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Vi's basic attacks on-hit and Vault Breaker apply a stack of Denting Blows to enemies hit for 4 seconds, refreshing on subsequent applications and stacking up to 3 times. The third stack consumes them all to deal bonus physical damage, capped at 300 against non-champions, and inflict 20% armor reduction for 4 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage",
@@ -284,7 +284,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vi/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Vi empowers her next basic attack within 6 seconds to have an uncancellable windup, gain 50 bonus range and trigger a blast in the target's direction that deals modified physical damage to enemies hit in a cone.Relentless Force can critically strike for (90% + 48%) AD bonus physical damage against the primary target. Secondary targets take the same damage but do not count as being critically struck.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Vi empowers her next basic attack within 6 seconds to have an uncancellable windup, gain 50 bonus range and trigger a blast in the target's direction that deals modified physical damage to enemies hit in a cone.Relentless Force can critically strike for (90% + 48%) AD bonus physical damage against the primary target. Secondary targets take the same damage but do not count as being critically struck.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -361,7 +361,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vi/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Vi singles out the target enemy champion, dashing with displacement immunity towards them and revealing them. Upon approaching within 300 units of the target, she dashes through and grabs them over 1.05 seconds, knocking them up for 1.3 seconds and dealing physical damage after 0.75 seconds into the grab duration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Vi singles out the target enemy champion, dashing with displacement immunity towards them and revealing them. Upon approaching within 300 units of the target, she dashes through and grabs them over 1.05 seconds, knocking them up for 1.3 seconds and dealing physical damage after 0.75 seconds into the grab duration.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",

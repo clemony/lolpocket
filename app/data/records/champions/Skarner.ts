@@ -98,7 +98,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Skarner/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Skarner's basic attacks on-hit, Shattered Earth, Upheaval, and Impale apply a stack of Quaking to enemies hit for 4 seconds, refreshing on subsequent applications and stacking up to 3 times. Enemies afflicted with 3 stacks take magic damage equal to [ 5% - 9% (based on level) of their maximum health over the duration, capped at 100 - 300 (based on level) against monsters. ][ 0.63% - 1.13% (based on level) of their maximum health every 0.5 seconds over the duration, capped at 12.5 - 37.5 (based on level) per tick against monsters. ]"
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Skarner's basic attacks on-hit, Shattered Earth, Upheaval, and Impale apply a stack of Quaking to enemies hit for 4 seconds, refreshing on subsequent applications and stacking up to 3 times. Enemies afflicted with 3 stacks take magic damage equal to [ 5% - 9% (based on level) of their maximum health over the duration, capped at 100 - 300 (based on level) against monsters. ][ 0.63% - 1.13% (based on level) of their maximum health every 0.5 seconds over the duration, capped at 12.5 - 37.5 (based on level) per tick against monsters. ]</p>"
           }
         ],
         "targeting": "Passive",
@@ -116,7 +116,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Skarner/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Skarner rips a boulder from the ground, empowering up to three of his next basic attacks within 5 seconds of each other. These attacks gain 25 bonus range, bonus attack speed, and deal bonus physical damage to the target and surrounding enemies, including structures.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Skarner rips a boulder from the ground, empowering up to three of his next basic attacks within 5 seconds of each other. These attacks gain 25 bonus range, bonus attack speed, and deal bonus physical damage to the target and surrounding enemies, including structures.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage per Hit",
@@ -250,7 +250,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Skarner/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Skarner ends Shattered Earth by throwing his boulder in the target direction. It explodes upon colliding with the first enemy hit, applying the same damage and slow to the target and surrounding enemies as the final attack would.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Skarner ends Shattered Earth by throwing his boulder in the target direction. It explodes upon colliding with the first enemy hit, applying the same damage and slow to the target and surrounding enemies as the final attack would.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -354,7 +354,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Skarner/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Skarner slams his claws into the ground, shielding himself equal to 8% of his maximum health for 2.5 seconds and releasing a shockwave that quickly expands in a radius around him to deal magic damage to enemies hit and slow them by 20% for 1 second.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Skarner slams his claws into the ground, shielding himself equal to 8% of his maximum health for 2.5 seconds and releasing a shockwave that quickly expands in a radius around him to deal magic damage to enemies hit and slow them by 20% for 1 second.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -419,7 +419,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Skarner/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Skarner charges forward in the direction of the cursor for up to 2.75 seconds, during which he gains slow immunity, becomes ghosted, ignores terrain collision, and has unobstructed vision of the surrounding 650 units. He automatically navigates his movement along the way and is able to steer himself with a slow turn rate that increases over time, resetting upon changing direction. Ixtal's Impact can be recast after 1 second, and does so automatically after the duration."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Skarner charges forward in the direction of the cursor for up to 2.75 seconds, during which he gains slow immunity, becomes ghosted, ignores terrain collision, and has unobstructed vision of the surrounding 650 units. He automatically navigates his movement along the way and is able to steer himself with a slow turn rate that increases over time, resetting upon changing direction. Ixtal's Impact can be recast after 1 second, and does so automatically after the duration.</p>"
           },
           {
             "description": "Skarner begins the charge at a static amount of 150 movement speed that increases by 100 every 0.264 seconds, up to 950 total movement speed by the end of the duration. If Skarner collides with an enemy champion or large monster, he grabs them with his claws for the time of the remaining charge, attaching them to himself, suppressing them, revealing them, increasing the charge's turn rate to the maximum, and gaining 300 bonus movement speed, with a minimum total of 650 and a maximum total of 1150. If a target has been grabbed before the first 1.75 seconds of the charge, the remaining duration is set to 1 second, and set to 0.5 seconds otherwise. The charge does not ramp up in speed while a target is grabbed."
@@ -452,7 +452,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Skarner ends Ixtal's Impact. If a target has been grabbed, he detaches them from himself."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Skarner ends Ixtal's Impact. If a target has been grabbed, he detaches them from himself.</p>"
           },
           {
             "description": "Ixtal's Impact ends immediately if Skarner becomes immobilized, grounded, or silenced during the charge, detaching the grabbed target. While the target is grabbed, they are attached to Skarner in a position that is directly in front of him."
@@ -490,7 +490,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Skarner/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Skarner winds up his stingers over the cast time, then lashes them forward in an isosceles trapezoid in the target direction, dealing magic damage to enemies hit and impaling up to 3 of the closest enemy champions within the area to suppress them for 1.5 seconds. While suppressed, the targets are revealed and attached to Skarner. If he successfully impales at least one enemy champion, Skarner gains 40% bonus movement speed for the same duration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Skarner winds up his stingers over the cast time, then lashes them forward in an isosceles trapezoid in the target direction, dealing magic damage to enemies hit and impaling up to 3 of the closest enemy champions within the area to suppress them for 1.5 seconds. While suppressed, the targets are revealed and attached to Skarner. If he successfully impales at least one enemy champion, Skarner gains 40% bonus movement speed for the same duration.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",

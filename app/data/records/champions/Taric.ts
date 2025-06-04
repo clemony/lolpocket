@@ -101,7 +101,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Taric/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> After casting an ability, Taric empowers his next two basic attacks within 5 seconds to each gain 100% total attack speed, deal 25 - 93 (based on level) (+ 15% bonus armor) bonus magic damage, and reduce the remaining cooldowns of his basic abilities by 1 - 2 (based on ability haste)\nseconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> After casting an ability, Taric empowers his next two basic attacks within 5 seconds to each gain 100% total attack speed, deal 25 - 93 (based on level) (+ 15% bonus armor) bonus magic damage, and reduce the remaining cooldowns of his basic abilities by 1 - 2 (based on ability haste)</p>\nseconds."
           }
         ],
         "targeting": "Passive",
@@ -118,7 +118,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Taric/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Taric heals himself and nearby allied champions for 25 (+ 15% AP) (+ 1% of his maximum health) per charge of Starlight's Touch that he periodically stocks, up to a maximum amount. Bravado's empowered attacks each grant one charge.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Taric heals himself and nearby allied champions for 25 (+ 15% AP) (+ 1% of his maximum health) per charge of Starlight's Touch that he periodically stocks, up to a maximum amount. Bravado's empowered attacks each grant one charge.</p>",
             "leveling": [
               {
                 "attribute": "Maximum Charges",
@@ -170,7 +170,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Taric/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Taric gains bonus armor and forms a tether between him and the ally bound by Bastion. While the tether persists, the ally also gains the bonus armor and Taric's abilities are mimicked to them, though the effects do not stack.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Taric gains bonus armor and forms a tether between him and the ally bound by Bastion. While the tether persists, the ally also gains the bonus armor and Taric's abilities are mimicked to them, though the effects do not stack.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Armor",
@@ -192,7 +192,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Taric grants himself and the target allied champion a shield for 2.5 seconds, binding them with Bastion.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Taric grants himself and the target allied champion a shield for 2.5 seconds, binding them with Bastion.</p>",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -241,7 +241,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Taric/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Taric winds up over 1 second, granting ghosting to nearby units, then projects a beam of starlight in the target direction that deals magic damage to enemies hit and stuns them for 1.5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Taric winds up over 1 second, granting ghosting to nearby units, then projects a beam of starlight in the target direction that deals magic damage to enemies hit and stuns them for 1.5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -309,7 +309,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Taric/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Taric calls down a star from above that descends to him over 2.5 seconds. Afterwards, he and nearby allied champions become invulnerable for 2.5 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Taric calls down a star from above that descends to him over 2.5 seconds. Afterwards, he and nearby allied champions become invulnerable for 2.5 seconds.</p>"
           }
         ],
         "cost": [

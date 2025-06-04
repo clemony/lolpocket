@@ -94,7 +94,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Shen/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> After completing an ability's effects, Shen grants himself a shield for 47 - 120 (based on level) (+ 13% bonus health) for 2.5 seconds. If Shen affects at least one other champion with an ability, Ki Barrier's cooldown is reduced by 4 - 8 (based on level) seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> After completing an ability's effects, Shen grants himself a shield for 47 - 120 (based on level) (+ 13% bonus health) for 2.5 seconds. If Shen affects at least one other champion with an ability, Ki Barrier's cooldown is reduced by 4 - 8 (based on level) seconds.</p>"
           },
           {
             "description": "Shen manifests a Spirit Blade that he can control with Twilight Assault and Spirit's Refuge."
@@ -113,7 +113,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Shen/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Shen recalls his Spirit Blade to his location. Enemy champions hit are slowed for the next 2 seconds while moving away from Shen.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Shen recalls his Spirit Blade to his location. Enemy champions hit are slowed for the next 2 seconds while moving away from Shen.</p>",
             "leveling": [
               {
                 "attribute": "Slow",
@@ -356,7 +356,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Shen/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Shen primes his Spirit Blade, creating an area around it. After 2 seconds, or when Shen or an allied champion enters the area, the Spirit Blade generates a protective zone for 1.75 seconds, blocking all non- turret basic attacks that hit Shen or allied champions in the area."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Shen primes his Spirit Blade, creating an area around it. After 2 seconds, or when Shen or an allied champion enters the area, the Spirit Blade generates a protective zone for 1.75 seconds, blocking all non- turret basic attacks that hit Shen or allied champions in the area.</p>"
           }
         ],
         "cost": [
@@ -385,10 +385,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Shen/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Dealing damage with Twilight Assault or Shadow Dash restores 30 / 40 / 50 (based on level) energy."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Dealing damage with Twilight Assault or Shadow Dash restores 30 / 40 / 50 (based on level) energy.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Shen dashes to the target location, dealing physical damage to enemy champions and monsters he passes through and taunting them for 1.5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Shen dashes to the target location, dealing physical damage to enemy champions and monsters he passes through and taunting them for 1.5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -449,7 +449,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Shen/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Shen focuses his will, channeling for 3 seconds and granting the target allied champion a shield for 5 seconds at the time of cast, increased by 0% - 60% (based on target's missing health).",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Shen focuses his will, channeling for 3 seconds and granting the target allied champion a shield for 5 seconds at the time of cast, increased by 0% - 60% (based on target's missing health).</p>",
             "leveling": [
               {
                 "attribute": "Minimum Shield Strength",

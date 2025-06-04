@@ -100,10 +100,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Elise/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate - Human Form:</span> Elise gains one dormant Spiderling whenever she hits an enemy with an ability, storing once per cast and up to 2 / 3 / 4 / 5 (based on Human Form's Rank) at a time. She stores the maximum number of Spiderlings when the game starts and upon respawning."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Human Form:</span> Elise gains one dormant Spiderling whenever she hits an enemy with an ability, storing once per cast and up to 2 / 3 / 4 / 5 (based on Human Form's Rank) at a time. She stores the maximum number of Spiderlings when the game starts and upon respawning.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Innate - Spider Form:</span> Elise's basic attacks deal 12 / 22 / 32 / 42 (based on Spider Form's Rank) (+ 15% AP) bonus magic damage and heal her for 6 / 8 / 10 / 12 (based on Spider Form's Rank) (+ 8% AP) on-hit."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Spider Form:</span> Elise's basic attacks deal 12 / 22 / 32 / 42 (based on Spider Form's Rank) (+ 15% AP) bonus magic damage and heal her for 6 / 8 / 10 / 12 (based on Spider Form's Rank) (+ 8% AP) on-hit.</p>"
           },
           {
             "description": "See Pets for more details about Spiderlings."
@@ -122,7 +122,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Elise/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Elise fires a toxin at the target enemy that deals magic damage, with the damage based on the target's health ratio being capped against monsters.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Elise fires a toxin at the target enemy that deals magic damage, with the damage based on the target's health ratio being capped against monsters.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -191,7 +191,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Elise/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Elise pounces at the target enemy with her fangs and bites them, dealing magic damage and applying on-hit effects, as well as revealing them for 0.528 seconds from the start of the cast time. The damage based on the target's health ratio is capped against monsters.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Elise pounces at the target enemy with her fangs and bites them, dealing magic damage and applying on-hit effects, as well as revealing them for 0.528 seconds from the start of the cast time. The damage based on the target's health ratio is capped against monsters.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -264,7 +264,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Elise/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Elise summons an untargetable venom-gorged spider that lasts for 3 seconds. The spider searches for nearby targets and crawls to them after a delay of 0.75 seconds and otherwise crawls to the target location before doing so without incurring a delay, navigating its path upon encountering terrain."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Elise summons an untargetable venom-gorged spider that lasts for 3 seconds. The spider searches for nearby targets and crawls to them after a delay of 0.75 seconds and otherwise crawls to the target location before doing so without incurring a delay, navigating its path upon encountering terrain.</p>"
           },
           {
             "description": "The spider gains bonus movement speed based on its proximity to the detected target. When the spider comes into contact with an enemy, or upon expiring otherwise, it instantly explodes to deal magic damage to nearby enemies.",
@@ -326,7 +326,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Elise/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Elise's Spiderlings gain bonus attack speed.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Elise's Spiderlings gain bonus attack speed.</p>",
             "leveling": [
               {
                 "attribute": "Spiderling Bonus Attack Speed",
@@ -348,7 +348,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Elise and her Spiderlings gain bonus attack speed for 3 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Elise and her Spiderlings gain bonus attack speed for 3 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -397,7 +397,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Elise/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Elise fires a web in the target direction, stunning the first enemy hit for a few seconds, during which they are also revealed.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Elise fires a web in the target direction, stunning the first enemy hit for a few seconds, during which they are also revealed.</p>",
             "leveling": [
               {
                 "attribute": "Stun Duration",
@@ -447,13 +447,13 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Elise/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Elise and her Spiderlings lift up into the air over 0.6 seconds, immediately becoming untargetable and unable to act, and afterwards vanishing for up to 1.95 seconds and granting sight of the surrounding 900 units for the duration."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Elise and her Spiderlings lift up into the air over 0.6 seconds, immediately becoming untargetable and unable to act, and afterwards vanishing for up to 1.95 seconds and granting sight of the surrounding 900 units for the duration.</p>"
           },
           {
             "description": "Rappel can be recast instantly on a target enemy within the duration, or without a target after a delay for the duration, and does the latter automatically after the duration."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Elise and her Spiderlings reappear and descend onto the ground over 0.4 seconds, becoming targetable and able to act again afterwards. Additionally, Spider Queen's bonuses are increased for 5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Elise and her Spiderlings reappear and descend onto the ground over 0.4 seconds, becoming targetable and able to act again afterwards. Additionally, Spider Queen's bonuses are increased for 5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Spider Effects Increase",
@@ -506,16 +506,16 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Elise/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Spider Queen's bonuses are increased."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Spider Queen's bonuses are increased.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Toggle:</span> Elise switches between her Human Form and Spider Form."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Toggle:</span> Elise switches between her Human Form and Spider Form.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Spider Form:</span> Elise transforms into a spider, gaining 25 bonus movement speed, melee basic attacks with 125 range, and access to her arachnid abilities. Additionally, she summons all stored Spiderlings and heals them to full health."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Spider Form:</span> Elise transforms into a spider, gaining 25 bonus movement speed, melee basic attacks with 125 range, and access to her arachnid abilities. Additionally, she summons all stored Spiderlings and heals them to full health.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Human Form:</span> Elise transforms into a human, gaining ranged basic attacks, and access to her human abilities. Additionally, she stores all active Spiderlings."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Human Form:</span> Elise transforms into a human, gaining ranged basic attacks, and access to her human abilities. Additionally, she stores all active Spiderlings.</p>"
           },
           {
             "description": "Elise begins with one rank in Spider Form / Human Form and can increase it at levels 6, 11, and 16."

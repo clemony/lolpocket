@@ -96,10 +96,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Yuumi/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Periodically, Yuumi's next basic attack, which has an uncancelable windup and gains 50 bonus range, ability hit against enemy champions, or Final Chapter hit on ally champions while attached, will heal her for 20 - 110 (based on level) (+ 25% AP). If she is attached to an ally or does so within 4 seconds, they are healed for the same amount."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Periodically, Yuumi's next basic attack, which has an uncancelable windup and gains 50 bonus range, ability hit against enemy champions, or Final Chapter hit on ally champions while attached, will heal her for 20 - 110 (based on level) (+ 25% AP). If she is attached to an ally or does so within 4 seconds, they are healed for the same amount.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Innate:</span> While attached to an ally, Yuumi grants them 2 permanent Friendship stacks whenever they kill enemy champions or minions. The ally with the highest Friendship stacks becomes Yuumi's Best Friend, which empowers her abilities with additional effects while she is attached to them."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> While attached to an ally, Yuumi grants them 2 permanent Friendship stacks whenever they kill enemy champions or minions. The ally with the highest Friendship stacks becomes Yuumi's Best Friend, which empowers her abilities with additional effects while she is attached to them.</p>"
           }
         ],
         "targeting": "Passive",
@@ -114,7 +114,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Yuumi/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Yuumi fires an errant missile in the target direction that deals magic damage to the first enemy hit. If the target is a champion, they are also revealed and slowed by 20% for 1 second.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yuumi fires an errant missile in the target direction that deals magic damage to the first enemy hit. If the target is a champion, they are also revealed and slowed by 20% for 1 second.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -142,7 +142,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Attached Bonus:</span> Yuumi channels for up to 1.35 seconds to steer the missile at a slower speed. After being in flight for the same duration, the missile accelerates in its current direction to deal increased damage and apply a stronger slow against champions that decays to 20% over 2 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Attached Bonus:</span> Yuumi channels for up to 1.35 seconds to steer the missile at a slower speed. After being in flight for the same duration, the missile accelerates in its current direction to deal increased damage and apply a stronger slow against champions that decays to 20% over 2 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Increased Damage",
@@ -188,7 +188,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Best Friend Bonus:</span> Prowling Projectile always applies its enhanced slow against champions and hitting a champion grants her Best Friend bonus magic damage on-hit for 5 seconds, increased by 0% - 75% (based on Anchor's critical strike chance).",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Best Friend Bonus:</span> Prowling Projectile always applies its enhanced slow against champions and hitting a champion grants her Best Friend bonus magic damage on-hit for 5 seconds, increased by 0% - 75% (based on Anchor's critical strike chance).</p>",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage On-Hit",
@@ -248,13 +248,13 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Yuumi/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> While Yuumi is attached, she is untargetable (except by turrets and inbound projectiles) and casts her abilities from the Anchor's position, empowering them with additional effects."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> While Yuumi is attached, she is untargetable (except by turrets and inbound projectiles) and casts her abilities from the Anchor's position, empowering them with additional effects.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Yuumi channels for 0.25 seconds, then upon completion dashes to the target allied champion and attaches to them upon arrival, designating them as her Anchor. You and Me! can be recast after 0.5 seconds of the attachment."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yuumi channels for 0.25 seconds, then upon completion dashes to the target allied champion and attaches to them upon arrival, designating them as her Anchor. You and Me! can be recast after 0.5 seconds of the attachment.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Recast - Change of Plan:</span> Yuumi detaches from her Anchor and dashes to the target allied champion to attach to them, refreshing the recast. She will detach automatically if her Anchor dies or under certain circumstances. If recast without a valid target, Yuumi will detach and dash 250-units in the target direction, placing You and Me! on a 0.25-second cooldown if it is not already on cooldown."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast - Change of Plan:</span> Yuumi detaches from her Anchor and dashes to the target allied champion to attach to them, refreshing the recast. She will detach automatically if her Anchor dies or under certain circumstances. If recast without a valid target, Yuumi will detach and dash 250-units in the target direction, placing You and Me! on a 0.25-second cooldown if it is not already on cooldown.</p>"
           },
           {
             "description": "Yuumi will be knocked down by any immobilizing or polymorphing crowd control during the dash."
@@ -284,7 +284,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Yuumi/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Yuumi grants herself a shield and gains bonus attack speed for 3 seconds. She also gains 20% bonus movement speed while the shield holds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yuumi grants herself a shield and gains bonus attack speed for 3 seconds. She also gains 20% bonus movement speed while the shield holds.</p>",
             "leveling": [
               {
                 "attribute": "Shield",
@@ -336,7 +336,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Attached Bonus:</span> Zoomies affects the Anchor instead of Yuumi and additionally restores mana to the Anchor, increased by 0% - 100% (based on Anchor's missing mana).",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Attached Bonus:</span> Zoomies affects the Anchor instead of Yuumi and additionally restores mana to the Anchor, increased by 0% - 100% (based on Anchor's missing mana).</p>",
             "leveling": [
               {
                 "attribute": "Minimum Mana Restored",
@@ -393,7 +393,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Yuumi/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Yuumi and Book channel for up to 3.5 seconds, during which they are ghosted, to launch 5 magical waves in the target direction."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yuumi and Book channel for up to 3.5 seconds, during which they are ghosted, to launch 5 magical waves in the target direction.</p>"
           },
           {
             "description": "Allied champions hit by the waves are healed, with each heal instance beyond maximum health being converted into a shield that lasts for 1.5 seconds plus the remaining channel duration instead.",
@@ -506,10 +506,10 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Attached Bonus:</span> Yuumi can steer the direction of the waves if initially cast while attached. Detaching causes her to lose this bonus for the duration. Additionally, Feline Friendship can trigger from also hitting allied champions."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Attached Bonus:</span> Yuumi can steer the direction of the waves if initially cast while attached. Detaching causes her to lose this bonus for the duration. Additionally, Feline Friendship can trigger from also hitting allied champions.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Best Friend Bonus:</span> Final Chapter's heal to the Best Friend is increased by 30%.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Best Friend Bonus:</span> Final Chapter's heal to the Best Friend is increased by 30%.</p>",
             "leveling": [
               {
                 "attribute": "Best Friend Heal per Hit",

@@ -100,13 +100,13 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sona/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate - Accelerando:</span> Sona generates a stack of Accelerando each time she hits an enemy champion with Hymn of Valor and each time she mitigates sufficient damage or heals damaged allies with Aria of Perseverance, stacking up to 120 times. At maximum stacks, she instead reduces the current cooldown of Crescendo by 1.5 seconds each time.\n<span class=\"ability-header\"> Accelerando:</span> For each stack, Sona gains 0.5 basic ability haste, up to 60 at maximum stacks."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Accelerando:</span> Sona generates a stack of Accelerando each time she hits an enemy champion with Hymn of Valor and each time she mitigates sufficient damage or heals damaged allies with Aria of Perseverance, stacking up to 120 times. At maximum stacks, she instead reduces the current cooldown of Crescendo by 1.5 seconds each time.</p>\n<p class=\"ability-effect\"><span class=\"ability-header\"> Accelerando:</span> For each stack, Sona gains 0.5 basic ability haste, up to 60 at maximum stacks.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Innate - Melody:</span> Whenever Sona casts a basic ability, her other basic abilities incur a 0.5-second global cooldown and she generates a unique aura for 3 seconds that empowers herself and nearby allied champions."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Melody:</span> Whenever Sona casts a basic ability, her other basic abilities incur a 0.5-second global cooldown and she generates a unique aura for 3 seconds that empowers herself and nearby allied champions.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Innate - Power Chord:</span> Sona's basic abilities generate a stack of Power Chord, stacking up to 3 times. At 3 stacks, her next basic attack is empowered to consume them all to have an uncancellable windup, deal 20 - 240 (based on level) (+ 20% AP) bonus magic damage, and apply an additional effect based on the last basic ability she cast.\n<span class=\"ability-header\"> Hymn of Valor - Staccato:</span> Bonus damage is modified to 30 - 360 (based on level) (+ 30% AP).\n<span class=\"ability-header\"> Aria of Perseverance - Diminuendo:</span> Reduces the target's size by 8% and damage dealt by 25% (+ 4% per 100 AP) for 3 seconds.\n<span class=\"ability-header\"> Song of Celerity - Tempo:</span> Slows the target by 50% (+ 4% per 100 AP) for 2 seconds, capped at 99%."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Power Chord:</span> Sona's basic abilities generate a stack of Power Chord, stacking up to 3 times. At 3 stacks, her next basic attack is empowered to consume them all to have an uncancellable windup, deal 20 - 240 (based on level) (+ 20% AP) bonus magic damage, and apply an additional effect based on the last basic ability she cast.</p>\n<p class=\"ability-effect\"><span class=\"ability-header\"> Hymn of Valor - Staccato:</span> Bonus damage is modified to 30 - 360 (based on level) (+ 30% AP).</p>\n<p class=\"ability-effect\"><span class=\"ability-header\"> Aria of Perseverance - Diminuendo:</span> Reduces the target's size by 8% and damage dealt by 25% (+ 4% per 100 AP) for 3 seconds.</p>\n<p class=\"ability-effect\"><span class=\"ability-header\"> Song of Celerity - Tempo:</span> Slows the target by 50% (+ 4% per 100 AP) for 2 seconds, capped at 99%.</p>"
           },
           {
             "description": "Gaining Power Chord's empowered attack resets Sona's basic attack timer."
@@ -127,7 +127,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sona/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Sona sends out bolts of sound to the two nearest visible enemies, prioritizing champions. Each bolt deals magic damage and grants sight of the area around the target for 1 second.Sona gains a stack of Accelerando for each bolt that hits an enemy champion.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sona sends out bolts of sound to the two nearest visible enemies, prioritizing champions. Each bolt deals magic damage and grants sight of the area around the target for 1 second.Sona gains a stack of Accelerando for each bolt that hits an enemy champion.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -154,7 +154,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Melody Bonus:</span> Sona and tagged allied champions deal bonus magic damage on their next basic attack within 5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Melody Bonus:</span> Sona and tagged allied champions deal bonus magic damage on their next basic attack within 5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage",
@@ -212,7 +212,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sona/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Sona heals herself and sends out a tone to heal the most wounded allied champion nearby.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sona heals herself and sends out a tone to heal the most wounded allied champion nearby.</p>",
             "leveling": [
               {
                 "attribute": "Heal",
@@ -239,7 +239,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Melody Bonus:</span> Sona and tagged allied champions are granted a shield for 1.5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Melody Bonus:</span> Sona and tagged allied champions are granted a shield for 1.5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -314,10 +314,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sona/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Sona gains 20% (+ 2% per 100 AP) bonus movement speed for 7 seconds. If she takes damage during this time, the duration ends prematurely once or if 3 seconds have elapsed."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sona gains 20% (+ 2% per 100 AP) bonus movement speed for 7 seconds. If she takes damage during this time, the duration ends prematurely once or if 3 seconds have elapsed.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Melody Bonus:</span> Tagged allied champions gain bonus movement speed for 3 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Melody Bonus:</span> Tagged allied champions gain bonus movement speed for 3 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -369,7 +369,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sona/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Sona strikes an irresistible chord in the target direction that deals magic damage to enemies hit and stuns them for 1.5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sona strikes an irresistible chord in the target direction that deals magic damage to enemies hit and stuns them for 1.5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",

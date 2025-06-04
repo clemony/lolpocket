@@ -95,13 +95,13 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kaisa/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate - Living Weapon:</span> Kai'Sa can evolve each of her basic abilities by gaining a set amount of permanent stats from items and stat growth, granting them additional effects. Evolving an ability causes her to enter a 2-second cast time. The upgrade is lost if the stat requirement is no longer met."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Living Weapon:</span> Kai'Sa can evolve each of her basic abilities by gaining a set amount of permanent stats from items and stat growth, granting them additional effects. Evolving an ability causes her to enter a 2-second cast time. The upgrade is lost if the stat requirement is no longer met.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Innate - Plasma:</span> Kai'Sa's basic attacks on-hit and Void Seeker apply stacks of Plasma to enemies for 4 seconds, refreshing on subsequent applications and stacking up to 5 times. Basic attacks each apply 1 stack and Void Seeker applies 2 stacks, increased to 3 if it is evolved. Her and nearby allies' immobilizing effects and polymorphs against enemy champions will also apply a stack of Plasma."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Plasma:</span> Kai'Sa's basic attacks on-hit and Void Seeker apply stacks of Plasma to enemies for 4 seconds, refreshing on subsequent applications and stacking up to 5 times. Basic attacks each apply 1 stack and Void Seeker applies 2 stacks, increased to 3 if it is evolved. Her and nearby allies' immobilizing effects and polymorphs against enemy champions will also apply a stack of Plasma.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Innate - Caustic Wounds:</span> Plasma stacks applied by Kai'Sa's basic attacks or Void Seeker deal 4 - 24 (based on level) (+ 1 - 6 (based on level) per Plasma stack before application) (+ 12% - 24% (based on Plasma stacks before application) AP) bonus magic damage. The fifth stack against a target consumes them all to deal additional bonus magic damage equal to 15% (+ 6% per 100 AP) of the target's missing health, capped at 400 against monsters."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Caustic Wounds:</span> Plasma stacks applied by Kai'Sa's basic attacks or Void Seeker deal 4 - 24 (based on level) (+ 1 - 6 (based on level) per Plasma stack before application) (+ 12% - 24% (based on Plasma stacks before application) AP) bonus magic damage. The fifth stack against a target consumes them all to deal additional bonus magic damage equal to 15% (+ 6% per 100 AP) of the target's missing health, capped at 400 against monsters.</p>"
           }
         ],
         "targeting": "Passive",
@@ -120,7 +120,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kaisa/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Kai'Sa releases a swarm of 6 missiles that evenly distributes among nearby visible enemies, each one hitting their target after 0.4 seconds to deal physical damage. Minions below 35% health take double damage.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kai'Sa releases a swarm of 6 missiles that evenly distributes among nearby visible enemies, each one hitting their target after 0.4 seconds to deal physical damage. Minions below 35% health take double damage.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage Per Missile",
@@ -220,7 +220,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Evolution:</span> Requires[ 100 - 56 (based on level) attack damage from items ][ 100 attack damage from items and stat growth ]to upgrade : Icathian Rain instead fires 12 missiles.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Evolution:</span> Requires[ 100 - 56 (based on level) attack damage from items ][ 100 attack damage from items and stat growth ]to upgrade : Icathian Rain instead fires 12 missiles.</p>",
             "leveling": [
               {
                 "attribute": "Total Evolved Single-Target Damage",
@@ -288,7 +288,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kaisa/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Kai'Sa fires a void bolt in the target direction that briefly grants sight around its trajectory as it travels, deals magic damage to the first enemy hit, applies 2 Plasma, and reveals them for 4 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kai'Sa fires a void bolt in the target direction that briefly grants sight around its trajectory as it travels, deals magic damage to the first enemy hit, applies 2 Plasma, and reveals them for 4 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -323,7 +323,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Evolution:</span> Requires 100 ability power from items to upgrade : Void Seeker applies 3 Plasma instead and refunds 75% of its cooldown if it hits an enemy champion."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Evolution:</span> Requires 100 ability power from items to upgrade : Void Seeker applies 3 Plasma instead and refunds 75% of its cooldown if it hits an enemy champion.</p>"
           }
         ],
         "cost": [
@@ -362,7 +362,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kaisa/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Kai'Sa charges up over the cast time, during which she is still able to move, becoming ghosted and gaining bonus movement speed for the duration, with the effectiveness increased by 0% - 100% (based on bonus attack speed).",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kai'Sa charges up over the cast time, during which she is still able to move, becoming ghosted and gaining bonus movement speed for the duration, with the effectiveness increased by 0% - 100% (based on bonus attack speed).</p>",
             "leveling": [
               {
                 "attribute": "Minimum Movement Speed",
@@ -426,7 +426,7 @@
             "description": "Supercharge's current cooldown is reduced by 0.5 seconds on-attack."
           },
           {
-            "description": "<span class=\"ability-header\">Evolution:</span> Requires[ 100% - 70% (based on level) attack speed from items ][ 100% attack speed from items and stat growth ]to upgrade : Supercharge grants invisibility at the start of the cast time for 0.5 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Evolution:</span> Requires[ 100% - 70% (based on level) attack speed from items ][ 100% attack speed from items and stat growth ]to upgrade : Supercharge grants invisibility at the start of the cast time for 0.5 seconds.</p>"
           }
         ],
         "cost": [
@@ -454,7 +454,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kaisa/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Kai'Sa grants herself a shield for 2 seconds and dashes to a target location near a visible enemy champion that was affected by Plasma within the last 4 seconds. The shield's duration is refreshed when the dash ends.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kai'Sa grants herself a shield for 2 seconds and dashes to a target location near a visible enemy champion that was affected by Plasma within the last 4 seconds. The shield's duration is refreshed when the dash ends.</p>",
             "leveling": [
               {
                 "attribute": "Shield Strength",

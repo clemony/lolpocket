@@ -96,7 +96,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zed/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Zed's basic attacks against targets below 50% maximum health are empowered to deal 6 / 8 / 10% (based on level) of the target's maximum health as bonus magic damage."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Zed's basic attacks against targets below 50% maximum health are empowered to deal 6 / 8 / 10% (based on level) of the target's maximum health as bonus magic damage.</p>"
           },
           {
             "description": "Against monsters, Contempt for the Weak deals 200% damage, capped at 300."
@@ -121,7 +121,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zed/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Zed throws a shuriken in the target direction that deals physical damage to enemies hit, reduced to 60% against targets beyond the first.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Zed throws a shuriken in the target direction that deals physical damage to enemies hit, reduced to 60% against targets beyond the first.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -202,7 +202,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zed/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Zed restores energy whenever he and his Shadows or multiple Shadows hit an ability on the same target. This may only occur once per cast ability.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Zed restores energy whenever he and his Shadows or multiple Shadows hit an ability on the same target. This may only occur once per cast ability.</p>",
             "leveling": [
               {
                 "attribute": "Energy Restored",
@@ -221,10 +221,10 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Zed creates a Shadow that dashes to the target location and remains there for 5.25 seconds, being able to mimic Razor Shuriken and Shadow Slash regardless of range. Living Shadow can be recast while within range of the Shadow."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Zed creates a Shadow that dashes to the target location and remains there for 5.25 seconds, being able to mimic Razor Shuriken and Shadow Slash regardless of range. Living Shadow can be recast while within range of the Shadow.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Zed and the Shadow blink to swap places. If Living Shadow was recast while the Shadow is dashing, the recast will instead occur once it has been placed."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Zed and the Shadow blink to swap places. If Living Shadow was recast while the Shadow is dashing, the recast will instead occur once it has been placed.</p>"
           },
           {
             "description": "If an ability is cast while the Shadow is dashing, it will cast that ability once it has been placed. See Pets for more details about Shadows. Living Shadow will cast at max range if cast beyond that."
@@ -262,7 +262,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zed/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Zed slashes to deal physical damage to nearby enemies.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Zed slashes to deal physical damage to nearby enemies.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -360,13 +360,13 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zed/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Zed becomes untargetable and, after a 0.6-second delay, he dashes to 125 units beyond the target enemy champion from his position at the end of the delay over 0.35 seconds. Afterwards, he becomes targetable again, renders the target Marked for Death for 3 seconds, and gains ghosting for the same duration."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Zed becomes untargetable and, after a 0.6-second delay, he dashes to 125 units beyond the target enemy champion from his position at the end of the delay over 0.35 seconds. Afterwards, he becomes targetable again, renders the target Marked for Death for 3 seconds, and gains ghosting for the same duration.</p>"
           },
           {
             "description": "Zed also spawns a Shadow at his casting position for 9 seconds which is able to mimic Razor Shuriken and Shadow Slash regardless of range. Death Mark can be recast after 0.5 seconds of his reappearance while the Shadow is active, though not in the last 1.25 seconds of its duration."
           },
           {
-            "description": "<span class=\"ability-header\">Marked for Death:</span> Zed stores a portion of all pre-mitigation physical damage and magic damage he and his Shadows deal to the target, detonating at the end of the duration to deal physical damage.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Marked for Death:</span> Zed stores a portion of all pre-mitigation physical damage and magic damage he and his Shadows deal to the target, detonating at the end of the duration to deal physical damage.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -394,7 +394,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Zed and the Shadow blink to swap places."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Zed and the Shadow blink to swap places.</p>"
           },
           {
             "description": "If the target dies or is 1950 or more units away before the dash begins, Death Mark is cancelled, causing the ability to go on a 0.5-second cooldown, Zed to reappear at the cast location, and the Shadow he spawned to disappear."

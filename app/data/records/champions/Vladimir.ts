@@ -95,7 +95,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vladimir/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Vladimir gains (3.3% bonus health) as ability power and (160% AP) as bonus health. These two bonuses do not stack with each other."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Vladimir gains (3.3% bonus health) as ability power and (160% AP) as bonus health. These two bonuses do not stack with each other.</p>"
           }
         ],
         "targeting": "Passive",
@@ -110,7 +110,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vladimir/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Vladimir drains blood from the target enemy, dealing magic damage and healing himself. He then generates 1 point of Crimson Rush over the cooldown.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Vladimir drains blood from the target enemy, dealing magic damage and healing himself. He then generates 1 point of Crimson Rush over the cooldown.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -218,7 +218,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vladimir/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Vladimir sinks into a pool of blood, becoming untargetable and ghosted for 2 seconds. He also gains 37.5% bonus movement speed that decays exponentially over 1 second."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Vladimir sinks into a pool of blood, becoming untargetable and ghosted for 2 seconds. He also gains 37.5% bonus movement speed that decays exponentially over 1 second.</p>"
           },
           {
             "description": "Enemies within the pool are dealt magic damage every 0.5 seconds over the duration and are slowed by 40%. Vladimir heals himself for 30% of the pre-mitigation damage dealt, reduced to 18% against minions.",
@@ -301,10 +301,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vladimir/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Vladimir charges for up to 1.5 seconds, during which he increases Tides of Blood's damage over the first second of the channel, and becomes slowed by 20% afterwards for the remaining duration. Tides of Blood can be recast within the duration, and does so automatically afterwards or if it is interrupted."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Vladimir charges for up to 1.5 seconds, during which he increases Tides of Blood's damage over the first second of the channel, and becomes slowed by 20% afterwards for the remaining duration. Tides of Blood can be recast within the duration, and does so automatically afterwards or if it is interrupted.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Vladimir unleashes a nova of 15 blood bolts around himself that each deal magic damage to the first enemy hit, increased based on charge time up to the first second.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Vladimir unleashes a nova of 15 blood bolts around himself that each deal magic damage to the first enemy hit, increased based on charge time up to the first second.</p>",
             "leveling": [
               {
                 "attribute": "Minimum Magic Damage",
@@ -428,7 +428,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vladimir/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Vladimir spreads a virulent plague at the target location that infects enemies hit for 4 seconds, increasing the damage they take from all sources by 10%."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Vladimir spreads a virulent plague at the target location that infects enemies hit for 4 seconds, increasing the damage they take from all sources by 10%.</p>"
           },
           {
             "description": "After the duration, the infection bursts to deal magic damage to all affected targets and, after a 0.4-second delay, heal Vladimir for each infected champion, reduced by 40% for champions beyond the first.",

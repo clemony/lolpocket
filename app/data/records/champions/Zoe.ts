@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zoe/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> After casting an ability, Zoe empowers her next basic attack or Spell Thief bolt within 5 seconds to become non-projectile and deal 16 - 130 (based on level) (+ 20% AP) bonus magic damage."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> After casting an ability, Zoe empowers her next basic attack or Spell Thief bolt within 5 seconds to become non-projectile and deal 16 - 130 (based on level) (+ 20% AP) bonus magic damage.</p>"
           }
         ],
         "targeting": "Passive",
@@ -118,7 +118,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zoe/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Zoe shoots a star in the target direction that explodes upon hitting an enemy, dealing magic damage to nearby enemies hit. The total damage is increased by 0% - 150% (based on distance traveled).",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Zoe shoots a star in the target direction that explodes upon hitting an enemy, dealing magic damage to nearby enemies hit. The total damage is increased by 0% - 150% (based on distance traveled).</p>",
             "leveling": [
               {
                 "attribute": "Minimum Magic Damage",
@@ -214,7 +214,7 @@
             "description": "The star lingers at maximum range for 1 second, during which Paddle Star can be recast after 0.25 seconds in the duration."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Zoe redirects the star in the target path, empowering it with increased speed and radius, and resetting its damage modifier on cast. The redirected star can travel until it reaches 800-units outbound from Zoe."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Zoe redirects the star in the target path, empowering it with increased speed and radius, and resetting its damage modifier on cast. The redirected star can travel until it reaches 800-units outbound from Zoe.</p>"
           },
           {
             "description": "Paddle Star's recast can be used while affected by cast-inhibiting crowd control."
@@ -256,7 +256,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zoe/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive - Wheeeee:</span> Whenever Zoe casts Spell Thief or a summoner spell, she gains bonus movement speed for a duration, and summons three bolts that orbit her for the next 10 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive - Wheeeee:</span> Whenever Zoe casts Spell Thief or a summoner spell, she gains bonus movement speed for a duration, and summons three bolts that orbit her for the next 10 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -344,13 +344,13 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Whenever a nearby enemy champion casts a specific summoner spell or item active, they drop the corresponding Spell Shard onto the ground that grants sight over a 100-radius area and remains for 40 seconds. Enemy minions have a 10% chance to spawn with a random Spell Shard that drops and remains for 20 seconds if Zoe kills them. Allied champions that kill them will cause the orb to drop only if Zoe is nearby."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Whenever a nearby enemy champion casts a specific summoner spell or item active, they drop the corresponding Spell Shard onto the ground that grants sight over a 100-radius area and remains for 40 seconds. Enemy minions have a 10% chance to spawn with a random Spell Shard that drops and remains for 20 seconds if Zoe kills them. Allied champions that kill them will cause the orb to drop only if Zoe is nearby.</p>"
           },
           {
             "description": "Zoe can collect a Spell Shard by moving directly onto it, holding it for up to 60 seconds. Collecting a new Spell Shard replaces the current one."
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Zoe mimics the active effect of the collected Spell Shard."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Zoe mimics the active effect of the collected Spell Shard.</p>"
           }
         ],
         "cost": [
@@ -378,7 +378,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zoe/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Zoe kicks a bubble in the target direction that bursts upon the first enemy hit, otherwise lingering at maximum range over 1 second, then becoming a trap for 5 seconds that bursts upon contact with an enemy. The bubble can move through terrain only once, but travels the entire distance as bonus range, and will fall short if it would enter terrain again."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Zoe kicks a bubble in the target direction that bursts upon the first enemy hit, otherwise lingering at maximum range over 1 second, then becoming a trap for 5 seconds that bursts upon contact with an enemy. The bubble can move through terrain only once, but travels the entire distance as bonus range, and will fall short if it would enter terrain again.</p>"
           },
           {
             "description": "The burst deals magic damage to the target and inflicts them with drowsy for 1.4 seconds, which gradually slows them until they fall asleep for 2.25 seconds. While the target is asleep, they are inflicted with 30% magic resistance reduction.",
@@ -505,7 +505,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zoe/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> After a 0.15-second delay, Zoe blinks in the target direction and remains there for 0.95 seconds to 1.25 seconds, during which she sets her movement speed to a static 0 and has unobstructed vision. Afterwards, she blinks back to her casting position."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> After a 0.15-second delay, Zoe blinks in the target direction and remains there for 0.95 seconds to 1.25 seconds, during which she sets her movement speed to a static 0 and has unobstructed vision. Afterwards, she blinks back to her casting position.</p>"
           },
           {
             "description": "Portal Jump resets Zoe's basic attack timer. Zoe briefly becomes unable to act after casting Portal Jump as well as after blinking back."

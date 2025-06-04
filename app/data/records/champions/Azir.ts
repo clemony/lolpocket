@@ -100,10 +100,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Azir/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Whenever a turret outside the enemy team's base is destroyed, a marker is placed above its ruins which can be targeted by Azir."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Whenever a turret outside the enemy team's base is destroyed, a marker is placed above its ruins which can be targeted by Azir.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Innate - Disc of the Sun:</span> Azir can select a marker to construct the Sun Disc above the ruins after a 0.5-second cast time. The Sun Disc will activate after being assembled over 5 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Disc of the Sun:</span> Azir can select a marker to construct the Sun Disc above the ruins after a 0.5-second cast time. The Sun Disc will activate after being assembled over 5 seconds.</p>"
           },
           {
             "description": "The Sun Disc functions the same as a standard inner turret but deals magic damage, gains 40% AP bonus attack damage, and grants its kill credit to Azir. The Sun Disc's health decays over 45 seconds and loses 100 armor and 100 magic resistance while Azir is not alive or is too far away."
@@ -133,7 +133,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Azir/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Azir orders all Sand Soldiers to dash toward the target location, dealing magic damage to all enemies they pass through as well as those in front of them upon arrival, and slowing them by 25% for 1 second.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Azir orders all Sand Soldiers to dash toward the target location, dealing magic damage to all enemies they pass through as well as those in front of them upon arrival, and slowing them by 25% for 1 second.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -201,7 +201,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Azir/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Azir summons a Sand Soldier at the target location that is untargetable, lasts 10 seconds, and grants sight of its surroundings. The Sand Soldier expires twice as fast while within range of an enemy turret, and does so instantly if Azir is too far away.Azir periodically stocks a Sand Soldier, up to a maximum of 2."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Azir summons a Sand Soldier at the target location that is untargetable, lasts 10 seconds, and grants sight of its surroundings. The Sand Soldier expires twice as fast while within range of an enemy turret, and does so instantly if Azir is too far away.Azir periodically stocks a Sand Soldier, up to a maximum of 2.</p>"
           },
           {
             "description": "When Azir declares a basic attack against an enemy in a soldier's attack range, the Sand Soldier attacks in his stead, thrusting their spear in the target's direction to deal magic damage to enemies struck in a line, applying on-hit effects to the primary target, with on-hit damage reduced to 50% effectiveness, and triggering on-attack effects once. Targets hit beyond the closest take 25 / 50 / 75 / 100% (based on level) damage. Subsequent Sand Soldiers against the same target deal 25% damage.",
@@ -301,7 +301,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Azir/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Azir grants himself a shield for 1.5 seconds and dashes to the Sand Soldier closest to the cursor, dealing magic damage to enemies within his path.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Azir grants himself a shield for 1.5 seconds and dashes to the Sand Soldier closest to the cursor, dealing magic damage to enemies within his path.</p>",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -385,7 +385,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Azir/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Azir calls forth a phalanx of soldiers from 175 units behind him, catching enemies from up to 325 units behind him and charging forward 575 units in the target direction.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Azir calls forth a phalanx of soldiers from 175 units behind him, catching enemies from up to 325 units behind him and charging forward 575 units in the target direction.</p>",
             "leveling": [
               {
                 "attribute": "Width",

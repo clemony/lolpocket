@@ -97,7 +97,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Maokai/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Periodically, Maokai empowers his next basic attack to have an uncancellable windup and heal him for 4% - 12.8% (based on level) maximum health after a 0.25-second delay."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Periodically, Maokai empowers his next basic attack to have an uncancellable windup and heal him for 4% - 12.8% (based on level) maximum health after a 0.25-second delay.</p>"
           },
           {
             "description": "Each time Maokai casts an ability, hits at least one enemy champion or epic monster with Sapling Toss, or is struck by an enemy's ability, Sap Magic's cooldown is reduced by 4 seconds, modified to 1.5 if he is hit by a large monster's basic attack or ability."
@@ -119,7 +119,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Maokai/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Maokai sends a shockwave in the target direction that deals magic damage to enemies hit and slows them by 99% for 0.25 seconds. Bramble Smash deals bonus magic damage to monsters.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Maokai sends a shockwave in the target direction that deals magic damage to enemies hit and slows them by 99% for 0.25 seconds. Bramble Smash deals bonus magic damage to monsters.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -240,7 +240,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Maokai/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Maokai dashes to the target enemy while being untargetable. Upon arrival, he deals magic damage and roots them for a duration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Maokai dashes to the target enemy while being untargetable. Upon arrival, he deals magic damage and roots them for a duration.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -314,7 +314,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Maokai/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Maokai flings a Sapling to the target location, granting sight of the area."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Maokai flings a Sapling to the target location, granting sight of the area.</p>"
           },
           {
             "description": "Once landed, a Sapling remains stationary for 30 seconds or until it reacts to the first nearby visible enemy, chasing them for up to 2.5 seconds. The Sapling explodes upon colliding with an enemy or when it expires, dealing magic damage to nearby enemies, capped at 300 against non-champions, and slowing them by 45% for 2 seconds.",
@@ -456,7 +456,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Maokai/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Maokai summons a colossal wall of five thorny brambles that slowly advances in the target direction, accelerating over time, each stopping when they collide with an enemy champion. Hitting at least one enemy champion grants Maokai bonus movement speed decaying over 2 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Maokai summons a colossal wall of five thorny brambles that slowly advances in the target direction, accelerating over time, each stopping when they collide with an enemy champion. Hitting at least one enemy champion grants Maokai bonus movement speed decaying over 2 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",

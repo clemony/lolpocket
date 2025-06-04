@@ -98,10 +98,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Caitlyn/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Caitlyn's basic attacks generate a stack of Count on-attack, doubled if she is within brush. At 5 stacks, or 4 while in brush, her next basic attack consumes all stacks on-attack to become a Headshot."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Caitlyn's basic attacks generate a stack of Count on-attack, doubled if she is within brush. At 5 stacks, or 4 while in brush, her next basic attack consumes all stacks on-attack to become a Headshot.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Headshot:</span> Caitlyn's basic attack is empowered to have an uncancellable windup and deal 60 / 90 / 120% (based on level) (+ (148.75% + 34%) critical strike chance) AD bonus physical damage, increased to 110 / 115 / 120% (based on level) (+ (148.75% + 34%) critical strike chance) AD against non-champions."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Headshot:</span> Caitlyn's basic attack is empowered to have an uncancellable windup and deal 60 / 90 / 120% (based on level) (+ (148.75% + 34%) critical strike chance) AD bonus physical damage, increased to 110 / 115 / 120% (based on level) (+ (148.75% + 34%) critical strike chance) AD against non-champions.</p>"
           },
           {
             "description": "Enemies that step over a Yordle Snap Trap or are hit by 90 Caliber Net can grant an additional Headshot against them at 1300 range within 1.8 seconds, without consuming stacks. Each method grants only one Headshot at a time."
@@ -124,7 +124,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Caitlyn/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Caitlyn fires a piercing shot in the target direction that deals physical damage to the first enemy it passes through, after which it expands in width but deals only 60% damage to enemies it hits thereafter.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Caitlyn fires a piercing shot in the target direction that deals physical damage to the first enemy it passes through, after which it expands in width but deals only 60% damage to enemies it hits thereafter.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -219,7 +219,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Caitlyn/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Caitlyn sets a visible trap at the target location that is untargetable and arms after 1 second, lasting for a duration. The trap grants sight of the area for 1 second after being placed.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Caitlyn sets a visible trap at the target location that is untargetable and arms after 1 second, lasting for a duration. The trap grants sight of the area for 1 second after being placed.</p>",
             "leveling": [
               {
                 "attribute": "Trap Duration",
@@ -318,7 +318,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Caitlyn/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Caitlyn fires a net in the target direction and recoils 390 units in the opposite direction. The net deals magic damage to the first enemy hit and slows them by 50% for 1 second.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Caitlyn fires a net in the target direction and recoils 390 units in the opposite direction. The net deals magic damage to the first enemy hit and slows them by 50% for 1 second.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -379,7 +379,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Caitlyn/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Caitlyn locks onto the target enemy champion and channels for 1 second, revealing them as well as revealing herself."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Caitlyn locks onto the target enemy champion and channels for 1 second, revealing them as well as revealing herself.</p>"
           },
           {
             "description": "Ace in the Hole is placed on a 5-second cooldown if canceled."

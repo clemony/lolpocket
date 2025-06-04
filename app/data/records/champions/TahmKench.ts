@@ -97,7 +97,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TahmKench/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Tahm Kench's basic attacks on-hit and Tongue Lash are empowered to deal 6 - 48 (based on level) (+ 1.5% AP per 100 bonus health) (+ 4% of his bonus health) bonus magic damage and apply a stack of An Acquired Taste against enemy champions for 5 seconds, refreshing on subsequent hits and stacking up to 3 times. Stacks expire by one every 0.67 seconds when the duration ends."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Tahm Kench's basic attacks on-hit and Tongue Lash are empowered to deal 6 - 48 (based on level) (+ 1.5% AP per 100 bonus health) (+ 4% of his bonus health) bonus magic damage and apply a stack of An Acquired Taste against enemy champions for 5 seconds, refreshing on subsequent hits and stacking up to 3 times. Stacks expire by one every 0.67 seconds when the duration ends.</p>"
           },
           {
             "description": "Tongue Lash and Devour gain additional effects against enemies with 3 stacks, consuming them all."
@@ -117,7 +117,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TahmKench/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Tahm Kench lashes his tongue in the target direction that deals magic damage to the first enemy hit and slows them by 50% for 2 seconds. If this hits an enemy champion, Tahm Kench also heals himself.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Tahm Kench lashes his tongue in the target direction that deals magic damage to the first enemy hit and slows them by 50% for 2 seconds. If this hits an enemy champion, Tahm Kench also heals himself.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -211,7 +211,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">An Acquired Taste Bonus:</span> The target is stunned for 1.5 seconds. Devour can be cast during Tongue Lash at no cost to pull the target to Tahm Kench before swallowing them."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">An Acquired Taste Bonus:</span> The target is stunned for 1.5 seconds. Devour can be cast during Tongue Lash at no cost to pull the target to Tahm Kench before swallowing them.</p>"
           },
           {
             "description": "Tahm Kench is unable to move, attack, or cast Abyssal Dive or Devour on a different target while his tongue is in flight. Tongue Lash's range and travel speed can be increased by Tahm Kench's size."
@@ -251,7 +251,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TahmKench/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Tahm Kench channels for 1.35 seconds as he dives into the waters, then blinks to the target location after a 0.15-second delay and remains unable to act for 0.65 seconds after the channel completes. Abyssal Dive grants sight of the area during the channel."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Tahm Kench channels for 1.35 seconds as he dives into the waters, then blinks to the target location after a 0.15-second delay and remains unable to act for 0.65 seconds after the channel completes. Abyssal Dive grants sight of the area during the channel.</p>"
           },
           {
             "description": "Tahm Kench emerges to deal magic damage to nearby enemies, as well as knock up and stun them for 1 second. If this hits at least one enemy champion, 40% of Abyssal Dive's mana cost as well as a percentage of its cooldown are refunded.",
@@ -334,7 +334,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TahmKench/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Tahm Kench stores a portion of the post-mitigation damage he takes as grey health on his health bar, increased while there are at least 2 nearby visible enemy champions either dead or alive. He can store up to 300% of his maximum health.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Tahm Kench stores a portion of the post-mitigation damage he takes as grey health on his health bar, increased while there are at least 2 nearby visible enemy champions either dead or alive. He can store up to 300% of his maximum health.</p>",
             "leveling": [
               {
                 "attribute": "Damage Stored into Grey Health",
@@ -376,7 +376,7 @@
             "description": "While Thick Skin is not on cooldown, and after 4 seconds without taking damage, Tahm Kench rapidly consumes his grey health to restore 45% - 100% (based on level) of the amount, healing for 10% of his maximum health every 0.264 seconds."
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Tahm Kench converts his current grey health into a shield that lasts for 2.5 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Tahm Kench converts his current grey health into a shield that lasts for 2.5 seconds.</p>"
           }
         ],
         "cost": [
@@ -399,7 +399,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TahmKench/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Tahm Kench abducts the target champion, pulling them to him over the cast time and then swallowing them to carry them in his belly for up to 3 seconds. While inside, the target is attached to Tahm Kench and is rendered untargetable and displacement immune. Devour can be cast on enemies only with 3 stacks of An Acquired Taste."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Tahm Kench abducts the target champion, pulling them to him over the cast time and then swallowing them to carry them in his belly for up to 3 seconds. While inside, the target is attached to Tahm Kench and is rendered untargetable and displacement immune. Devour can be cast on enemies only with 3 stacks of An Acquired Taste.</p>"
           },
           {
             "description": "If the target is an ally, they become unable to act and are granted a shield, which decays in strength by 50 every 0.25 seconds after they are Regurgitated. Tahm Kench will also gain 40% bonus movement speed for 3 seconds and is unable to cast movement spells besides Abyssal Dive while an ally is inside of his belly.",
@@ -430,7 +430,7 @@
             "description": "After 1 second, Tahm Kench can cast Regurgitate while a target is inside of his belly, and automatically does so after the duration. The swallowed ally can also input a movement command to force Tahm Kench to cast Regurgitate in a target direction of their choice, unless they are immobilized."
           },
           {
-            "description": "<span class=\"ability-header\">An Acquired Taste Bonus:</span> The target is suppressed during Devour's cast time and while attached. Tahm Kench will also be grounded and slowed by 40% under those same conditions."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">An Acquired Taste Bonus:</span> The target is suppressed during Devour's cast time and while attached. Tahm Kench will also be grounded and slowed by 40% under those same conditions.</p>"
           },
           {
             "description": "If Tahm Kench is performing Abyssal Dive, Regurgitate will not automatically cast until after he finishes."
@@ -456,7 +456,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/TahmKench/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Tahm Kench detaches the swallowed champion from himself and spits them out in the target direction. If they are an enemy, he deals magic damage to them at the end of the displacement.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Tahm Kench detaches the swallowed champion from himself and spits them out in the target direction. If they are an enemy, he deals magic damage to them at the end of the displacement.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",

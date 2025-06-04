@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Anivia/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Periodically, upon taking fatal damage, Anivia enters resurrection for 6 seconds and restores all of her health."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Periodically, upon taking fatal damage, Anivia enters resurrection for 6 seconds and restores all of her health.</p>"
           },
           {
             "description": "While under resurrection, Anivia is unable to act and gains -40 - 20 (based on level) bonus armor and bonus magic resistance."
@@ -120,7 +120,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Anivia/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Anivia launches a chunk of ice in the target direction that deals magic damage to enemies hit and slows them by 20% - 40% (based on Glacial Storm's Rank) for 3 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Anivia launches a chunk of ice in the target direction that deals magic damage to enemies hit and slows them by 20% - 40% (based on Glacial Storm's Rank) for 3 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -150,7 +150,7 @@
             "description": "Flash Frost can be recast while the ice is in flight after its cast time, and does so automatically at maximum range."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Anivia shatters the ice, dealing magic damage to nearby enemies and stunning them for a duration, as well as refreshing the slow.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Anivia shatters the ice, dealing magic damage to nearby enemies and stunning them for a duration, as well as refreshing the slow.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -252,7 +252,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Anivia/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Anivia summons a wall of ice at the target location perpendicular to her facing, knocking all units away from it, though not through terrain. The wall lingers as impassable terrain for 5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Anivia summons a wall of ice at the target location perpendicular to her facing, knocking all units away from it, though not through terrain. The wall lingers as impassable terrain for 5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Width",
@@ -349,10 +349,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Anivia/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Enemies hit by Flash Frost or a fully formed Glacial Storm become Chilled for 3 seconds, refreshing on subsequent hits."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Enemies hit by Flash Frost or a fully formed Glacial Storm become Chilled for 3 seconds, refreshing on subsequent hits.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Anivia blasts a freezing wind at the target enemy that deals magic damage, doubled if they were Chilled.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Anivia blasts a freezing wind at the target enemy that deals magic damage, doubled if they were Chilled.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -428,7 +428,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Anivia/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Anivia calls forth a driving rain of ice and hail at the target location, dealing magic damage every 0.5 seconds to enemies within and slowing them for 1 second, refreshing every 0.5 seconds while they remain inside.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Anivia calls forth a driving rain of ice and hail at the target location, dealing magic damage every 0.5 seconds to enemies within and slowing them for 1 second, refreshing every 0.5 seconds while they remain inside.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage per Tick",
@@ -511,7 +511,7 @@
             "description": "Glacial Storm can be recast after 1 second, and does so automatically if Anivia is no longer in range or unable to pay the mana cost, or becomes affected by any form of interrupting crowd control."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Anivia ends Glacial Storm, dealing one last tick of damage."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Anivia ends Glacial Storm, dealing one last tick of damage.</p>"
           }
         ],
         "cost": [

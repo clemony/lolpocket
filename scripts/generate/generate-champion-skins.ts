@@ -1,5 +1,6 @@
 import fs from "node:fs"
 import path from "node:path"
+import { cleanImageLink } from "../utils/cleanImageLink"
 
 const championsPath = path.resolve("./data/raw/champions-raw-ma.json")
 
@@ -14,7 +15,7 @@ const primarySkins: SkinRecord = {}
 for (const key in champions) {
   const champ = champions[key]
   const skins = champ.skins || []
-  const rgx = /.*\/skins\/base\/i?m?a?g?e?s?\/?(.*)\.jpg/gi
+
   const baseSkins = skins
     .filter(
       (skin) =>
@@ -24,9 +25,9 @@ for (const key in champions) {
         skin.loadScreenPath
     )
     .map((skin) => ({
-      tilePath: skin.tilePath.replace(rgx, "$1"),
-      centeredPath: skin.splashPath.replace(rgx, "$1"),
-      loadPath: skin.loadScreenPath.replace(rgx, "$1"),
+      tilePath: cleanImageLink(skin.tilePath),
+      centeredPath: cleanImageLink(skin.splashPath),
+      loadPath: cleanImageLink(skin.loadScreenPath),
     }))
 
   if (baseSkins.length > 0) {

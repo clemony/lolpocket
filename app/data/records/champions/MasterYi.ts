@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/MasterYi/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Master Yi's basic attacks on-hit generate a stack of Double Strike for 4 seconds, refreshing on subsequent hits and stacking up to 3 times. At 3 stacks, Master Yi's next basic attack on-attack is empowered to consume the stacks on-hit and strike twice, the second strike dealing 50% AD physical damage."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Master Yi's basic attacks on-hit generate a stack of Double Strike for 4 seconds, refreshing on subsequent hits and stacking up to 3 times. At 3 stacks, Master Yi's next basic attack on-attack is empowered to consume the stacks on-hit and strike twice, the second strike dealing 50% AD physical damage.</p>"
           },
           {
             "description": "The second strike applies on-hit effects, triggers on-attack effects, and is affected by critical strike modifiers."
@@ -125,7 +125,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/MasterYi/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Master Yi vanishes and becomes unable to act. After 0.231 seconds, he marks the target enemy and then proceeds to mark the nearest visible un-marked enemy within 600 units, recurring every 0.231 seconds[ up to 3 times. ][ for a total of 4 marks. ]If there are no other un-marked targets before then, Master Yi can mark the same enemies again. During Alpha Strike, Master Yi can select a direction from the primary target."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Master Yi vanishes and becomes unable to act. After 0.231 seconds, he marks the target enemy and then proceeds to mark the nearest visible un-marked enemy within 600 units, recurring every 0.231 seconds[ up to 3 times. ][ for a total of 4 marks. ]If there are no other un-marked targets before then, Master Yi can mark the same enemies again. During Alpha Strike, Master Yi can select a direction from the primary target.</p>"
           },
           {
             "description": "Upon finishing marking, Master Yi reappears 75 units in the targeted direction, or in front of the target otherwise, and then becomes able to act again[ after 0.165 seconds. ][ 1.087 seconds total after the start of the cast with 4 bounces. ]If the primary target dies or is too far away during the delay, Master Yi will reappear at the initial cast location instead."
@@ -322,7 +322,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/MasterYi/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Master Yi channels for up to 4 seconds, healing himself every 0.5 seconds, increased by 0% - 100% (based on missing health).",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Master Yi channels for up to 4 seconds, healing himself every 0.5 seconds, increased by 0% - 100% (based on missing health).</p>",
             "leveling": [
               {
                 "attribute": "Minimum Heal Per Tick",
@@ -477,7 +477,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/MasterYi/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Master Yi empowers his basic attacks within the next 5 seconds to deal bonus true damage on-hit.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Master Yi empowers his basic attacks within the next 5 seconds to deal bonus true damage on-hit.</p>",
             "leveling": [
               {
                 "attribute": "Bonus True Damage",
@@ -526,10 +526,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/MasterYi/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Scoring a champion takedown reduces the current cooldowns of Master Yi's basic abilities by 70%."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Scoring a champion takedown reduces the current cooldowns of Master Yi's basic abilities by 70%.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Master Yi cleanses himself from all slows and cripples. For the next 7 seconds, he gains ghosting, bonus attack speed, bonus movement speed, slow immunity, and cripple immunity.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Master Yi cleanses himself from all slows and cripples. For the next 7 seconds, he gains ghosting, bonus attack speed, bonus movement speed, slow immunity, and cripple immunity.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",

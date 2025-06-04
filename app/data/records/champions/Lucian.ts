@@ -98,13 +98,13 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lucian/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> After casting an ability, Lucian's next basic attack within 3.5 seconds fires an additional shot on-attack after 0.25 seconds, which deals 50 / 55 / 60% (based on level) AD physical damage, increased to 100% AD against minions. He will shoot the same target, else another target in range."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> After casting an ability, Lucian's next basic attack within 3.5 seconds fires an additional shot on-attack after 0.25 seconds, which deals 50 / 55 / 60% (based on level) AD physical damage, increased to 100% AD against minions. He will shoot the same target, else another target in range.</p>"
           },
           {
             "description": "The second shot applies on-hit effects, triggers on-attack effects, and is affected by critical strike modifiers."
           },
           {
-            "description": "<span class=\"ability-header\">Innate - Vigilance:</span> Whenever Lucian is healed or shielded by an ally, or an enemy champion within 1000 units is immobilized, his next two shots within 6 seconds are empowered to deal 15 (+ 20% AD) bonus magic damage on-hit. He can store up to 4 empowered shots at a time."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Vigilance:</span> Whenever Lucian is healed or shielded by an ally, or an enemy champion within 1000 units is immobilized, his next two shots within 6 seconds are empowered to deal 15 (+ 20% AD) bonus magic damage on-hit. He can store up to 4 empowered shots at a time.</p>"
           }
         ],
         "targeting": "Passive",
@@ -121,7 +121,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lucian/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Lucian fires a laser in a line in the direction of the target enemy that deals physical damage to enemies hit.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lucian fires a laser in a line in the direction of the target enemy that deals physical damage to enemies hit.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -187,7 +187,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lucian/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Lucian fires a missile in the target direction that explodes in a cross pattern upon hitting an enemy or reaching maximum range, dealing magic damage to enemies hit and granting sight of the area for 1 second.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lucian fires a missile in the target direction that explodes in a cross pattern upon hitting an enemy or reaching maximum range, dealing magic damage to enemies hit and granting sight of the area for 1 second.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -267,10 +267,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lucian/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Relentless Pursuit's current cooldown is reduced by 1 second for each Lightslinger shot hit, doubled to 2 seconds against enemy champions."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Relentless Pursuit's current cooldown is reduced by 1 second for each Lightslinger shot hit, doubled to 2 seconds against enemy champions.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Lucian dashes in the target direction."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lucian dashes in the target direction.</p>"
           },
           {
             "description": "Relentless Pursuit resets Lucian's basic attack timer. Lucian can cast any of his abilities during the dash. Relentless Pursuit can be cast during Ardent Blaze's cast time and during The Culling's channel. Relentless Pursuit will cast at max range if cast beyond that."
@@ -307,7 +307,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Lucian/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Lucian channels for up to 3 seconds, rapidly firing up to 22 (+ 1 per 4% critical strike chance) shots in the target direction. Each shot deals physical damage to the first enemy hit, doubled against minions. The Culling can be recast after 0.75 seconds during the channel, and does so automatically when the channel ends.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lucian channels for up to 3 seconds, rapidly firing up to 22 (+ 1 per 4% critical strike chance) shots in the target direction. Each shot deals physical damage to the first enemy hit, doubled against minions. The Culling can be recast after 0.75 seconds during the channel, and does so automatically when the channel ends.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage Per Shot",
@@ -541,7 +541,7 @@
             "description": "While channeling, Lucian is ghosted and may still move."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Lucian ends The Culling."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Lucian ends The Culling.</p>"
           }
         ],
         "cost": [

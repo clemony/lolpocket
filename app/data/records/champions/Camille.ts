@@ -98,7 +98,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Camille/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Periodically, Camille's next basic attack on-hit against an enemy champion grants her a shield equal to 20% of her maximum health, lasting for 2 seconds and absorbing damage from either exclusively physical damage or magic damage, based on which type the target has previously dealt most of against champions as well as on Camille's current armor and magic resistance."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Periodically, Camille's next basic attack on-hit against an enemy champion grants her a shield equal to 20% of her maximum health, lasting for 2 seconds and absorbing damage from either exclusively physical damage or magic damage, based on which type the target has previously dealt most of against champions as well as on Camille's current armor and magic resistance.</p>"
           }
         ],
         "targeting": "Passive",
@@ -114,7 +114,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Camille/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Camille empowers her next basic attack within 4 seconds to have an uncancellable windup, gain 50 bonus range, deal bonus physical damage and grant her bonus movement speed for 1 second.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Camille empowers her next basic attack within 4 seconds to have an uncancellable windup, gain 50 bonus range, deal bonus physical damage and grant her bonus movement speed for 1 second.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage",
@@ -156,7 +156,7 @@
             "description": "After 0.25 seconds, Precision Protocol can then be recast within the next 3.5 seconds at no additional cost."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Camille mimics the first cast's effects. If Precision Protocol is recast after 1.5 seconds of the first attack, then the bonus damage is doubled, and 40% - 100% (based on level) of the attack's total damage will be dealt as true damage.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Camille mimics the first cast's effects. If Precision Protocol is recast after 1.5 seconds of the first attack, then the bonus damage is doubled, and 40% - 100% (based on level) of the attack's total damage will be dealt as true damage.</p>",
             "leveling": [
               {
                 "attribute": "Increased Mixed Damage",
@@ -209,7 +209,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Camille/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Camille sweeps her leg in a cone in the target direction over 1.1 seconds, during which she is ghosted and unable to declare basic attacks. Afterwards, she deals physical damage to all enemies within.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Camille sweeps her leg in a cone in the target direction over 1.1 seconds, during which she is ghosted and unable to declare basic attacks. Afterwards, she deals physical damage to all enemies within.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -356,7 +356,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Camille/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Camille fires a grapple in the target direction. If the grapple collides with terrain, Camille will dash toward and attach to the terrain for 0.75 seconds, during which she gains the ability to cast Wall Dive."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Camille fires a grapple in the target direction. If the grapple collides with terrain, Camille will dash toward and attach to the terrain for 0.75 seconds, during which she gains the ability to cast Wall Dive.</p>"
           },
           {
             "description": "Camille will be knocked down by any immobilizing or polymorphing crowd control during the dash."
@@ -391,7 +391,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Camille/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Camille dashes in the target direction, dealing physical damage to enemies near the landing location. Wall Dive's range is doubled towards enemy champions within 1400 units. Camille grants ghosting to non-champions she passes through for 4 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Camille dashes in the target direction, dealing physical damage to enemies near the landing location. Wall Dive's range is doubled towards enemy champions within 1400 units. Camille grants ghosting to non-champions she passes through for 4 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -473,7 +473,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Camille/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Camille becomes untargetable and leaps with displacement immunity towards the target enemy champion over 0.5 seconds, revealing them for the duration and disrupting their ongoing channels."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Camille becomes untargetable and leaps with displacement immunity towards the target enemy champion over 0.5 seconds, revealing them for the duration and disrupting their ongoing channels.</p>"
           },
           {
             "description": "Upon landing on the target, she becomes targetable again and creates a hexagonal zone around her current location for a duration, knocking away all other nearby enemies on impact, though not through terrain.",

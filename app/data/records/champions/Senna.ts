@@ -97,16 +97,16 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Senna/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate - Weakened Soul:</span> Senna's basic attacks on-hit and ability hits against enemy champions apply a stack of Mist for 4 seconds, modified to 0.75 seconds if Senna starts winding up a basic attack on them, and limited to once per target per cast. Subsequent hits will collect Mist and deal bonus physical damage equal to 1% - 10% (based on level) of target's current health, rendering the target immune to further Mist infliction for a few seconds. This damage applies life steal at 100% effectiveness."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Weakened Soul:</span> Senna's basic attacks on-hit and ability hits against enemy champions apply a stack of Mist for 4 seconds, modified to 0.75 seconds if Senna starts winding up a basic attack on them, and limited to once per target per cast. Subsequent hits will collect Mist and deal bonus physical damage equal to 1% - 10% (based on level) of target's current health, rendering the target immune to further Mist infliction for a few seconds. This damage applies life steal at 100% effectiveness.</p>"
           },
           {
             "description": "Enemies that die near Senna may spawn a Mist Wraith from their corpse. A Mist Wraith lasts 8 seconds and Senna can basic attack or hit it with Piercing Darkness or Dawning Shadow to kill them instantly, granting her 8 and collecting their Mist.\nEnemy champions and large monsters will spawn a Mist Wraith.\nEpic monsters will spawn 2 Mist Wraiths.\n Minions and lesser monsters that Senna kills have a 14% chance to spawn a Mist Wraith.\nLarge minions that Senna does not kill will always spawn a Mist Wraith, while lesser minions and lesser monsters that Senna does not kill have a 28% chance to spawn one.\nLesser minions executed by an allied champion's Support Quest item have a 8.4% chance to spawn a Mist Wraith."
           },
           {
-            "description": "<span class=\"ability-header\">Mist:</span> For each stack of Mist, Senna gains 0.75 bonus attack damage. For every 20 stacks, she also gains 20 bonus attack range and 10% critical strike chance. Additionally, every 1% critical strike chance in excess of 100% is converted into 0.35% life steal."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Mist:</span> For each stack of Mist, Senna gains 0.75 bonus attack damage. For every 20 stacks, she also gains 20 bonus attack range and 10% critical strike chance. Additionally, every 1% critical strike chance in excess of 100% is converted into 0.35% life steal.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Innate - Relic Cannon:</span> Senna's basic attacks on-hit deal 20% AD bonus physical damage and grant her 10 / 15 / 20% (based on level) of the target's movement speed as bonus movement speed for 0.5 seconds. This damage applies life steal at 100% effectiveness."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Relic Cannon:</span> Senna's basic attacks on-hit deal 20% AD bonus physical damage and grant her 10 / 15 / 20% (based on level) of the target's movement speed as bonus movement speed for 0.5 seconds. This damage applies life steal at 100% effectiveness.</p>"
           }
         ],
         "targeting": "Passive",
@@ -124,7 +124,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Senna/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Senna fires a spectral laser in the direction of the target unit, healing herself and allied champions hit, and dealing physical damage to enemies hit in a thinner line. Enemies hit are slowed by 15% (+ 15% per 100 bonus AD) (+ 10% per 100 AP) for a duration. The damage dealt to enemy champions applies life steal at 100% effectiveness.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Senna fires a spectral laser in the direction of the target unit, healing herself and allied champions hit, and dealing physical damage to enemies hit in a thinner line. Enemies hit are slowed by 15% (+ 15% per 100 bonus AD) (+ 10% per 100 AP) for a duration. The damage dealt to enemy champions applies life steal at 100% effectiveness.</p>",
             "leveling": [
               {
                 "attribute": "Healing",
@@ -235,7 +235,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Senna/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Senna throws a globule of Black Mist in the target direction that deals physical damage to the first enemy hit and attaches to them for 1 second.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Senna throws a globule of Black Mist in the target direction that deals physical damage to the first enemy hit and attaches to them for 1 second.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -317,7 +317,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Senna/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Senna surrounds herself with an aura of mist and gains camouflage for a duration. If Senna breaks the camouflage, she regains it after 1.75 seconds without performing actions that break stealth.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Senna surrounds herself with an aura of mist and gains camouflage for a duration. If Senna breaks the camouflage, she regains it after 1.75 seconds without performing actions that break stealth.</p>",
             "leveling": [
               {
                 "attribute": "Effect Duration",
@@ -342,7 +342,7 @@
             "description": "Allied champions who enter the mist gain Wraith Form for a duration equal to the aura's remaining duration."
           },
           {
-            "description": "<span class=\"ability-header\">Wraith Form:</span> Gain camouflage. Enemies will have obscured vision of camouflaged Wraiths moving outside of the mist. Wraith Form can be regained if lost by breaking the camouflage after 1.75 seconds without performing actions that break stealth. Wraith Form ends immediately upon Senna's death."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Wraith Form:</span> Gain camouflage. Enemies will have obscured vision of camouflaged Wraiths moving outside of the mist. Wraith Form can be regained if lost by breaking the camouflage after 1.75 seconds without performing actions that break stealth. Wraith Form ends immediately upon Senna's death.</p>"
           },
           {
             "description": "Senna and allies camouflaged by Curse of the Black Mist also gain 20% (+ 5% per 100 AP) bonus movement speed."
@@ -374,7 +374,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Senna/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Senna fires two waves of spectral light in the target direction, granting sight of the area briefly along the path. The center wave deals physical damage to enemy champions hit and reveals them for 3 seconds, as well as hits all Mist Wraiths.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Senna fires two waves of spectral light in the target direction, granting sight of the area briefly along the path. The center wave deals physical damage to enemy champions hit and reveals them for 3 seconds, as well as hits all Mist Wraiths.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",

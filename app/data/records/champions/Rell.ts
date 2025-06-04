@@ -97,10 +97,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rell/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Rell's basic attacks deal bonus magic damage on-hit equal to the sum of 5% of her total armor and 5% of her total magic resistance."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Rell's basic attacks deal bonus magic damage on-hit equal to the sum of 5% of her total armor and 5% of her total magic resistance.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Rell's basic attacks and abilities against non- minions reduce the target's armor and magic resistance by 3% for 5 seconds, refreshing on subsequent hits and stacking up to 5 times for a maximum of 15% reduction."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Rell's basic attacks and abilities against non- minions reduce the target's armor and magic resistance by 3% for 5 seconds, refreshing on subsequent hits and stacking up to 5 times for a maximum of 15% reduction.</p>"
           },
           {
             "description": "Rell gains bonus armor and bonus magic resistance equal to the sum resistances reduced from all afflicted enemies."
@@ -124,7 +124,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rell/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Rell thrusts her lance in the target direction, lunging forward 100 units and destroying the damage-mitigating shields of all enemies hit (excluding the shields of monsters) before dealing them magic damage and stunning them for 0.65 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rell thrusts her lance in the target direction, lunging forward 100 units and destroying the damage-mitigating shields of all enemies hit (excluding the shields of monsters) before dealing them magic damage and stunning them for 0.65 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -181,7 +181,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rell/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive - Mounted Alacrity:</span> While Rell is Mounted, she gains bonus movement speed.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive - Mounted Alacrity:</span> While Rell is Mounted, she gains bonus movement speed.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -200,7 +200,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Rell becomes Dismounted and leaps to the target location over the cast time, granting herself a shield that lasts until destroyed or casting Ferromancy: Mount Up. Upon arrival, she deals magic damage to nearby enemies, stuns them for 0.8 seconds, and knocks them up for 0.4 seconds. She will continue sliding forward another 320 units over 0.5 seconds, though not through terrain, affecting further enemies along her path.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rell becomes Dismounted and leaps to the target location over the cast time, granting herself a shield that lasts until destroyed or casting Ferromancy: Mount Up. Upon arrival, she deals magic damage to nearby enemies, stuns them for 0.8 seconds, and knocks them up for 0.4 seconds. She will continue sliding forward another 320 units over 0.5 seconds, though not through terrain, affecting further enemies along her path.</p>",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -249,10 +249,10 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">While Rell is Dismounted, she can cast Ferromancy:</span> Mount Up. Upon completing a Recall channel or respawning, Rell will automatically revert to Mounted form without casting the ability and reset Ferromancy: Mount Up's cooldown."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">While Rell is Dismounted, she can cast Ferromancy:</span> Mount Up. Upon completing a Recall channel or respawning, Rell will automatically revert to Mounted form without casting the ability and reset Ferromancy: Mount Up's cooldown.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">This ability can be cast only while Rell is Mounted. Rell can cast Magnet Storm during the dash, and is not considered to be dismounted until after the leap ends. Ferromancy:</span> Crash Down will cast at max range if cast beyond that."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">This ability can be cast only while Rell is Mounted. Rell can cast Magnet Storm during the dash, and is not considered to be dismounted until after the leap ends. Ferromancy:</span> Crash Down will cast at max range if cast beyond that.</p>"
           }
         ],
         "cost": [
@@ -280,10 +280,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rell/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> While Rell is Dismounted, she gains 15% bonus armor, 15% bonus magic resistance, 20% bonus attack speed, and 75 bonus attack range."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> While Rell is Dismounted, she gains 15% bonus armor, 15% bonus magic resistance, 20% bonus attack speed, and 75 bonus attack range.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Rell becomes Mounted, gaining 30% bonus movement speed decaying over 2 seconds and empowering her next basic attack within 3.5 seconds to have a 0.2-second cast time, gain 100 bonus attack range and cause her to charge at the target's location, during which she also gains 40% bonus attack speed. Upon arrival or collision, she deals bonus magic damage, stuns the target for 0.6 seconds, and flings them 150 units over herself, though not through terrain, over 0.4 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rell becomes Mounted, gaining 30% bonus movement speed decaying over 2 seconds and empowering her next basic attack within 3.5 seconds to have a 0.2-second cast time, gain 100 bonus attack range and cause her to charge at the target's location, during which she also gains 40% bonus attack speed. Upon arrival or collision, she deals bonus magic damage, stuns the target for 0.6 seconds, and flings them 150 units over herself, though not through terrain, over 0.4 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage",
@@ -310,10 +310,10 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">While Rell is Mounted, she can cast Ferromancy:</span> Crash Down."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">While Rell is Mounted, she can cast Ferromancy:</span> Crash Down.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Ferromancy:</span> Mount Up resets Rell's basic attack timer. This ability can be cast only while Rell is Dismounted."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Ferromancy:</span> Mount Up resets Rell's basic attack timer. This ability can be cast only while Rell is Dismounted.</p>"
           }
         ],
         "cost": [
@@ -339,7 +339,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rell/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Rell powers up herself and the target allied champion for 3 seconds, both gaining 10% bonus movement speed which increases to 25% while moving within 1200 units of the empowered ally or an enemy."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rell powers up herself and the target allied champion for 3 seconds, both gaining 10% bonus movement speed which increases to 25% while moving within 1200 units of the empowered ally or an enemy.</p>"
           },
           {
             "description": "Additionally, Rell's next basic attack or Shattering Strike within 5 seconds creates an explosion that deals bonus magic damage. The damage based on the target's health ratio is capped at 150 - 300 (based on level) against monsters and structures.",
@@ -404,7 +404,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rell/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Rell erupts with magnetic fury, pulling nearby enemies inward. She then creates a gravitational field around her for the next 2 seconds that deals magic damage every 0.25 seconds to nearby enemies and drags them towards her.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rell erupts with magnetic fury, pulling nearby enemies inward. She then creates a gravitational field around her for the next 2 seconds that deals magic damage every 0.25 seconds to nearby enemies and drags them towards her.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage Per Tick",

@@ -2,72 +2,72 @@ export const baseSkin: SkinRecord = {
   "Aatrox": {
     "tilePath": "aatrox_splash_tile_0",
     "centeredPath": "aatrox_splash_centered_0",
-    "loadPath": "atroxloadscreen"
+    "loadPath": "aatroxloadscreen"
   },
   "Ahri": {
     "tilePath": "ahri_splash_tile_0",
     "centeredPath": "ahri_splash_centered_0",
-    "loadPath": "hriloadscreen_0"
+    "loadPath": "ahriloadscreen_0"
   },
   "Akali": {
     "tilePath": "akali_splash_tile_0",
     "centeredPath": "akali_splash_centered_0",
-    "loadPath": "kaliloadscreen"
+    "loadPath": "akaliloadscreen"
   },
   "Akshan": {
     "tilePath": "akshan_splash_tile_0",
     "centeredPath": "akshan_splash_centered_0",
-    "loadPath": "kshanloadscreen"
+    "loadPath": "akshanloadscreen"
   },
   "Alistar": {
     "tilePath": "alistar_splash_tile_0",
     "centeredPath": "alistar_splash_centered_0",
-    "loadPath": "listarloadscreen"
+    "loadPath": "alistarloadscreen"
   },
   "Ambessa": {
     "tilePath": "ambessa_splash_tile_0.domina",
     "centeredPath": "ambessa_splash_centered_0.domina",
-    "loadPath": "mbessaloadscreen_0.domina"
+    "loadPath": "ambessaloadscreen_0.domina"
   },
   "Amumu": {
     "tilePath": "amumu_splash_tile_0",
     "centeredPath": "amumu_splash_centered_0",
-    "loadPath": "mumuloadscreen"
+    "loadPath": "amumuloadscreen"
   },
   "Anivia": {
     "tilePath": "anivia_splash_tile_0",
     "centeredPath": "anivia_splash_centered_0",
-    "loadPath": "nivialoadscreen"
+    "loadPath": "anivialoadscreen"
   },
   "Annie": {
     "tilePath": "annie_splash_tile_0",
     "centeredPath": "annie_splash_centered_0",
-    "loadPath": "nnieloadscreen"
+    "loadPath": "annieloadscreen"
   },
   "Aphelios": {
     "tilePath": "aphelios_splash_tile_0",
     "centeredPath": "aphelios_splash_centered_0",
-    "loadPath": "pheliosloadscreen"
+    "loadPath": "apheliosloadscreen"
   },
   "Ashe": {
     "tilePath": "ashe_splash_tile_0",
     "centeredPath": "ashe_splash_centered_0",
-    "loadPath": "heloadscreen"
+    "loadPath": "asheloadscreen"
   },
   "AurelionSol": {
     "tilePath": "aurelionsol_splash_tile_0",
     "centeredPath": "aurelionsol_splash_centered_0",
-    "loadPath": "urelionsolloadscreen"
+    "loadPath": "aurelionsolloadscreen"
   },
   "Aurora": {
     "tilePath": "aurora_splash_tile_0.aurora",
     "centeredPath": "aurora_splash_centered_0.aurora",
-    "loadPath": "uroraloadscreen_0.aurora"
+    "loadPath": "auroraloadscreen_0.aurora"
   },
   "Azir": {
     "tilePath": "azir_splash_tile_0",
     "centeredPath": "azir_splash_centered_0",
-    "loadPath": "zirloadscreen"
+    "loadPath": "azirloadscreen"
   },
   "Bard": {
     "tilePath": "bard_splash_tile_0",
@@ -147,22 +147,22 @@ export const baseSkin: SkinRecord = {
   "Ekko": {
     "tilePath": "ekko_splash_tile_0",
     "centeredPath": "ekko_splash_centered_0",
-    "loadPath": "kkoloadscreen"
+    "loadPath": "ekkoloadscreen"
   },
   "Elise": {
     "tilePath": "elise_splash_tile_0",
     "centeredPath": "elise_splash_centered_0",
-    "loadPath": "liseloadscreen"
+    "loadPath": "eliseloadscreen"
   },
   "Evelynn": {
     "tilePath": "evelynn_splash_tile_0",
     "centeredPath": "evelynn_splash_centered_0",
-    "loadPath": "velynnloadscreen"
+    "loadPath": "evelynnloadscreen"
   },
   "Ezreal": {
     "tilePath": "ezreal_splash_tile_0",
     "centeredPath": "ezreal_splash_centered_0",
-    "loadPath": "zrealloadscreen"
+    "loadPath": "ezrealloadscreen"
   },
   "Fiddlesticks": {
     "tilePath": "fiddlesticks_splash_tile_0",
@@ -182,37 +182,37 @@ export const baseSkin: SkinRecord = {
   "Galio": {
     "tilePath": "galio_splash_tile_0",
     "centeredPath": "galio_splash_centered_0",
-    "loadPath": "alioloadscreen"
+    "loadPath": "galioloadscreen"
   },
   "Gangplank": {
     "tilePath": "gangplank_splash_tile_0",
     "centeredPath": "gangplank_splash_centered_0",
-    "loadPath": "angplankloadscreen"
+    "loadPath": "gangplankloadscreen"
   },
   "Garen": {
     "tilePath": "garen_splash_tile_0",
     "centeredPath": "garen_splash_centered_0",
-    "loadPath": "arenloadscreen"
+    "loadPath": "garenloadscreen"
   },
   "Gnar": {
     "tilePath": "gnar_splash_tile_0",
     "centeredPath": "gnar_splash_centered_0",
-    "loadPath": "narloadscreen"
+    "loadPath": "gnarloadscreen"
   },
   "Gragas": {
     "tilePath": "gragas_splash_tile_0",
     "centeredPath": "gragas_splash_centered_0",
-    "loadPath": "ragasloadscreen"
+    "loadPath": "gragasloadscreen"
   },
   "Graves": {
     "tilePath": "graves_splash_tile_0",
     "centeredPath": "graves_splash_centered_0",
-    "loadPath": "ravesloadscreen"
+    "loadPath": "gravesloadscreen"
   },
   "Gwen": {
     "tilePath": "gwen_splash_tile_0",
     "centeredPath": "gwen_splash_centered_0",
-    "loadPath": "wenloadscreen_0"
+    "loadPath": "gwenloadscreen_0"
   },
   "Hecarim": {
     "tilePath": "hecarim_splash_tile_0",
@@ -225,24 +225,24 @@ export const baseSkin: SkinRecord = {
     "loadPath": "heimerdingerloadscreen"
   },
   "Hwei": {
-    "tilePath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/hwei/skins/skin0/images/hwei_splash_tile_0.jpg",
-    "centeredPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/hwei/skins/skin0/images/hwei_splash_centered_0.jpg",
-    "loadPath": "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters/hwei/skins/skin0/hweiloadscreen_0.jpg"
+    "tilePath": "hwei_splash_tile_0",
+    "centeredPath": "hwei_splash_centered_0",
+    "loadPath": "hweiloadscreen_0"
   },
   "Illaoi": {
     "tilePath": "illaoi_splash_tile_0",
     "centeredPath": "illaoi_splash_centered_0",
-    "loadPath": "llaoiloadscreen"
+    "loadPath": "illaoiloadscreen"
   },
   "Irelia": {
     "tilePath": "irelia_splash_tile_0",
     "centeredPath": "irelia_splash_centered_0",
-    "loadPath": "relialoadscreen"
+    "loadPath": "irelialoadscreen"
   },
   "Ivern": {
     "tilePath": "ivern_splash_tile_0",
     "centeredPath": "ivern_splash_centered_0",
-    "loadPath": "vernloadscreen"
+    "loadPath": "ivernloadscreen"
   },
   "Janna": {
     "tilePath": "janna_splash_tile_0",
@@ -387,47 +387,47 @@ export const baseSkin: SkinRecord = {
   "Malphite": {
     "tilePath": "malphite_splash_tile_0",
     "centeredPath": "malphite_splash_centered_0",
-    "loadPath": "lphiteloadscreen"
+    "loadPath": "malphiteloadscreen"
   },
   "Malzahar": {
     "tilePath": "malzahar_splash_tile_0",
     "centeredPath": "malzahar_splash_centered_0",
-    "loadPath": "lzaharloadscreen"
+    "loadPath": "malzaharloadscreen"
   },
   "Maokai": {
     "tilePath": "maokai_splash_tile_0",
     "centeredPath": "maokai_splash_centered_0",
-    "loadPath": "okailoadscreen"
+    "loadPath": "maokailoadscreen"
   },
   "MasterYi": {
     "tilePath": "masteryi_splash_tile_0",
     "centeredPath": "masteryi_splash_centered_0",
-    "loadPath": "teryiloadscreen"
+    "loadPath": "masteryiloadscreen"
   },
   "Mel": {
     "tilePath": "mel_splash_tile_0.mel",
     "centeredPath": "mel_splash_centered_0.mel",
-    "loadPath": "lloadscreen_0.mel"
+    "loadPath": "melloadscreen_0.mel"
   },
   "Milio": {
     "tilePath": "milio_splash_tile_0",
     "centeredPath": "milio_splash_centered_0",
-    "loadPath": "ilioloadscreen_0"
+    "loadPath": "milioloadscreen_0"
   },
   "MissFortune": {
     "tilePath": "missfortune_splash_tile_0",
     "centeredPath": "missfortune_splash_centered_0",
-    "loadPath": "issfortuneloadscreen"
+    "loadPath": "missfortuneloadscreen"
   },
   "Mordekaiser": {
     "tilePath": "mordekaiser_splash_tile_0",
     "centeredPath": "mordekaiser_splash_centered_0",
-    "loadPath": "ordekaiserloadscreen"
+    "loadPath": "mordekaiserloadscreen"
   },
   "Morgana": {
     "tilePath": "morgana_splash_tile_0",
     "centeredPath": "morgana_splash_centered_0",
-    "loadPath": "organaloadscreen"
+    "loadPath": "morganaloadscreen"
   },
   "Naafiri": {
     "tilePath": "naafiri_splash_tile_0",
@@ -567,92 +567,92 @@ export const baseSkin: SkinRecord = {
   "Samira": {
     "tilePath": "samira_splash_tile_0",
     "centeredPath": "samira_splash_centered_0",
-    "loadPath": "amiraloadscreen"
+    "loadPath": "samiraloadscreen"
   },
   "Sejuani": {
     "tilePath": "sejuani_splash_tile_0",
     "centeredPath": "sejuani_splash_centered_0",
-    "loadPath": "ejuaniloadscreen"
+    "loadPath": "sejuaniloadscreen"
   },
   "Senna": {
     "tilePath": "senna_splash_tile_0",
     "centeredPath": "senna_splash_centered_0",
-    "loadPath": "ennaloadscreen"
+    "loadPath": "sennaloadscreen"
   },
   "Seraphine": {
     "tilePath": "seraphine_splash_tile_0",
     "centeredPath": "seraphine_splash_centered_0",
-    "loadPath": "eraphineloadscreen"
+    "loadPath": "seraphineloadscreen"
   },
   "Sett": {
     "tilePath": "sett_splash_tile_0",
     "centeredPath": "sett_splash_centered_0",
-    "loadPath": "ettloadscreen"
+    "loadPath": "settloadscreen"
   },
   "Shaco": {
     "tilePath": "shaco_splash_tile_0",
     "centeredPath": "shaco_splash_centered_0",
-    "loadPath": "hacoloadscreen"
+    "loadPath": "shacoloadscreen"
   },
   "Shen": {
     "tilePath": "shen_splash_tile_0",
     "centeredPath": "shen_splash_centered_0",
-    "loadPath": "henloadscreen"
+    "loadPath": "shenloadscreen"
   },
   "Shyvana": {
     "tilePath": "shyvana_splash_tile_0",
     "centeredPath": "shyvana_splash_centered_0",
-    "loadPath": "hyvanaloadscreen"
+    "loadPath": "shyvanaloadscreen"
   },
   "Singed": {
     "tilePath": "singed_splash_tile_0",
     "centeredPath": "singed_splash_centered_0",
-    "loadPath": "ingedloadscreen"
+    "loadPath": "singedloadscreen"
   },
   "Sion": {
     "tilePath": "sion_splash_tile_0",
     "centeredPath": "sion_splash_centered_0",
-    "loadPath": "ionloadscreen"
+    "loadPath": "sionloadscreen"
   },
   "Sivir": {
     "tilePath": "sivir_splash_tile_0",
     "centeredPath": "sivir_splash_centered_0",
-    "loadPath": "ivirloadscreen_0"
+    "loadPath": "sivirloadscreen_0"
   },
   "Skarner": {
     "tilePath": "skarner_splash_tile_0",
     "centeredPath": "skarner_splash_centered_0",
-    "loadPath": "karnerloadscreen_0"
+    "loadPath": "skarnerloadscreen_0"
   },
   "Smolder": {
     "tilePath": "smolder_splash_tile_0",
     "centeredPath": "smolder_splash_centered_0",
-    "loadPath": "molderloadscreen_0"
+    "loadPath": "smolderloadscreen_0"
   },
   "Sona": {
     "tilePath": "sona_splash_tile_0",
     "centeredPath": "sona_splash_centered_0",
-    "loadPath": "onaloadscreen"
+    "loadPath": "sonaloadscreen"
   },
   "Soraka": {
     "tilePath": "soraka_splash_tile_0",
     "centeredPath": "soraka_splash_centered_0",
-    "loadPath": "orakaloadscreen"
+    "loadPath": "sorakaloadscreen"
   },
   "Swain": {
     "tilePath": "swain_splash_tile_0",
     "centeredPath": "swain_splash_centered_0",
-    "loadPath": "wainloadscreen"
+    "loadPath": "swainloadscreen"
   },
   "Sylas": {
     "tilePath": "sylas_splash_tile_0",
     "centeredPath": "sylas_splash_centered_0",
-    "loadPath": "ylasloadscreen"
+    "loadPath": "sylasloadscreen"
   },
   "Syndra": {
     "tilePath": "syndra_splash_tile_0",
     "centeredPath": "syndra_splash_centered_0",
-    "loadPath": "yndraloadscreen_0"
+    "loadPath": "syndraloadscreen_0"
   },
   "TahmKench": {
     "tilePath": "tahmkench_splash_tile_0",
@@ -777,7 +777,7 @@ export const baseSkin: SkinRecord = {
   "MonkeyKing": {
     "tilePath": "monkeyking_splash_tile_0",
     "centeredPath": "monkeyking_splash_centered_0",
-    "loadPath": "onkeykingloadscreen"
+    "loadPath": "monkeykingloadscreen"
   },
   "Xayah": {
     "tilePath": "xayah_splash_tile_0",

@@ -96,13 +96,13 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Pyke/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Pyke's maximum health cannot increase except through growth (per level), instead he gains[ 1 bonus attack damage per 14 bonus health. ][ bonus attack damage equal to 7.143% of bonus health. ]"
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Pyke's maximum health cannot increase except through growth (per level), instead he gains[ 1 bonus attack damage per 14 bonus health. ][ bonus attack damage equal to 7.143% of bonus health. ]</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Pyke gains 1 bonus movement speed while in the river."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Pyke gains 1 bonus movement speed while in the river.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Pyke stores 9% (+ 0.2% per 1 Lethality) of the post-mitigation damage he takes from enemy champions as grey health on his health bar, increased to 40% (+ 0.4% per 1 Lethality) while there are two or more visible enemy champions nearby. He can store up to 80 (+ 800% bonus AD) grey health, with an upper cap of 55% of his maximum health."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Pyke stores 9% (+ 0.2% per 1 Lethality) of the post-mitigation damage he takes from enemy champions as grey health on his health bar, increased to 40% (+ 0.4% per 1 Lethality) while there are two or more visible enemy champions nearby. He can store up to 80 (+ 800% bonus AD) grey health, with an upper cap of 55% of his maximum health.</p>"
           },
           {
             "description": "While Pyke is not visible to enemies, he rapidly consumes his grey health to heal for the same amount."
@@ -120,10 +120,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Pyke/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Pyke charges while being slowed by 20% for up to 3 seconds to increase Bone Skewer's range over the first second of the channel. Bone Skewer can be recast within the duration."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Pyke charges while being slowed by 20% for up to 3 seconds to increase Bone Skewer's range over the first second of the channel. Bone Skewer can be recast within the duration.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Pyke hurls his harpoon in the target direction, becoming unable to act while it is in flight and dealing physical damage to the first enemy hit and pulling them, during which they are also revealed, then slowing them by 90% for 1 second.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Pyke hurls his harpoon in the target direction, becoming unable to act while it is in flight and dealing physical damage to the first enemy hit and pulling them, during which they are also revealed, then slowing them by 90% for 1 second.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -191,7 +191,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Pyke/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Pyke submerges into water for 5 seconds, entering camouflage and gaining 45% (+ 2% per 1 Lethality) bonus movement speed that decays over the duration. Attacking or casting abilities ends Ghostwater Dive immediately."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Pyke submerges into water for 5 seconds, entering camouflage and gaining 45% (+ 2% per 1 Lethality) bonus movement speed that decays over the duration. Attacking or casting abilities ends Ghostwater Dive immediately.</p>"
           },
           {
             "description": "Enemy champions within 1500 units of Pyke are alerted of his presence and whether he can execute them with Death from Below."
@@ -222,7 +222,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Pyke/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Pyke dashes in the target direction, leaving behind a Phantom. Pyke is ghosted while the Phantom is active."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Pyke dashes in the target direction, leaving behind a Phantom. Pyke is ghosted while the Phantom is active.</p>"
           },
           {
             "description": "After 1 second, the Phantom homes back to Pyke to stun enemies around it and those it passes through along the way for 1.25 (+ 0.1 per 10 Lethality) seconds. Enemy champions hit also take physical damage.",
@@ -285,7 +285,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Pyke/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Pyke marks the target location with the shape of an X before striking it, executing enemy champions within the area that are below 250 - 550 (based on level) (+ 80% bonus AD) (+ 1.5 per 1 Lethality) health. Other enemies hit and enemy champions above the threshold are instead dealt[ 50% of the amount as physical damage. ][ 125 - 275 (based on level) (+ 40% bonus AD) (+ 0.75 per 1 Lethality) physical damage. ]"
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Pyke marks the target location with the shape of an X before striking it, executing enemy champions within the area that are below 250 - 550 (based on level) (+ 80% bonus AD) (+ 1.5 per 1 Lethality) health. Other enemies hit and enemy champions above the threshold are instead dealt[ 50% of the amount as physical damage. ][ 125 - 275 (based on level) (+ 40% bonus AD) (+ 0.75 per 1 Lethality) physical damage. ]</p>"
           },
           {
             "description": "If Death from Below hits an enemy champion or at least one is killed inside the X by the execution or an ally, Pyke will blink to the center of the X. For the latter case Pyke can also recast the ability within 20 seconds at no cost."

@@ -98,13 +98,13 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Akshan/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Whenever Akshan uses a basic attack, he fires an additional shot after a delay that deals 50% AD physical damage, increased to 100% AD against minions. Issuing an attack order on a different target before the additional shot has been launched causes Akshan to fire it at the new target. If the second shot is cancelled instead, he gains 20 - 75 (based on level) × (1 + 100% bonus attack speed) bonus movement speed decaying over 1 second."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Whenever Akshan uses a basic attack, he fires an additional shot after a delay that deals 50% AD physical damage, increased to 100% AD against minions. Issuing an attack order on a different target before the additional shot has been launched causes Akshan to fire it at the new target. If the second shot is cancelled instead, he gains 20 - 75 (based on level) × (1 + 100% bonus attack speed) bonus movement speed decaying over 1 second.</p>"
           },
           {
             "description": "The additional shot applies on-hit effects, triggers on-attack effects, and can critically strike[ for (22.5% + 12%) bonus damage. ][ 100% base damage + 30% bonus critical damage. ]"
           },
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Akshan's basic attacks on-hit and ability hits apply a stack of Dirty Fighting to enemies for 5 seconds, refreshing on subsequent applications and stacking up to 3 times. The third stack against a target consumes them all to deal them 15 / 40 / 80 / 150 (based on level) (+ 60% AP) bonus magic damage; if the target is a champion, Akshan will also gain a 40 - 280 (based on level) (+ 35% bonus AD) shield for 2 seconds. The shield may be gained only once every few seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Akshan's basic attacks on-hit and ability hits apply a stack of Dirty Fighting to enemies for 5 seconds, refreshing on subsequent applications and stacking up to 3 times. The third stack against a target consumes them all to deal them 15 / 40 / 80 / 150 (based on level) (+ 60% AP) bonus magic damage; if the target is a champion, Akshan will also gain a 40 - 280 (based on level) (+ 35% bonus AD) shield for 2 seconds. The shield may be gained only once every few seconds.</p>"
           }
         ],
         "targeting": "Passive",
@@ -124,7 +124,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Akshan/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Akshan throws a boomerang in the target direction that briefly grants sight around its trajectory and deals physical damage to enemies hit, revealing them for 1 second and extending its range each time it hits a target. If this hits an enemy champion, Akshan gains 20% (+ 5% per 100 AP) bonus movement speed that decays over 1 second.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Akshan throws a boomerang in the target direction that briefly grants sight around its trajectory and deals physical damage to enemies hit, revealing them for 1 second and extending its range each time it hits a target. If this hits an enemy champion, Akshan gains 20% (+ 5% per 100 AP) bonus movement speed that decays over 1 second.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -239,13 +239,13 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Akshan/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Akshan marks enemy champions that kill allied champions as Scoundrels for 60 seconds. If Akshan scores a takedown against a Scoundrel while alive and within 3 seconds of damaging them, he receives an additional 100 and resurrects all dead allied champions that they have slain after 1 second."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Akshan marks enemy champions that kill allied champions as Scoundrels for 60 seconds. If Akshan scores a takedown against a Scoundrel while alive and within 3 seconds of damaging them, he receives an additional 100 and resurrects all dead allied champions that they have slain after 1 second.</p>"
           },
           {
             "description": "When Akshan claims a Scoundrel's bounty he removes the marks of all other enemies. Scoundrels refresh their mark duration on subsequent kills, and will have their mark removed when they die by any means. Akshan cannot mark enemies as Scoundrels while they are dead. Allies are resurrected at their summoning platform."
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Akshan enters camouflage, which lasts indefinitely while he is near terrain or inside brush, and for 2 seconds otherwise. During this time. he can see trails leading toward Scoundrels, and while facing them if they are within 5000 units, he gains bonus mana regeneration equal to 12% of his missing mana as well as bonus movement speed.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Akshan enters camouflage, which lasts indefinitely while he is near terrain or inside brush, and for 2 seconds otherwise. During this time. he can see trails leading toward Scoundrels, and while facing them if they are within 5000 units, he gains bonus mana regeneration equal to 12% of his missing mana as well as bonus movement speed.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -299,13 +299,13 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Akshan/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Akshan can activate Heroic Swing three times before the ability goes on cooldown, and can use the third cast only after 0.5 seconds of the second cast. Akshan may input an attack or movement command to use the second and third casts."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Akshan can activate Heroic Swing three times before the ability goes on cooldown, and can use the third cast only after 0.5 seconds of the second cast. Akshan may input an attack or movement command to use the second and third casts.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">First Cast:</span> Akshan fires a hook in the target direction that embeds in the first terrain hit, and enters preparation for up to 2.125 seconds. Heroic Swing's second cast can be used while the hook is attached. If the hook fails to attach or Akshan is moved or becomes immobilized, grounded, or polymorphed within the duration, the preparation will end prematurely, cancelling Heroic Swing in the process."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">First Cast:</span> Akshan fires a hook in the target direction that embeds in the first terrain hit, and enters preparation for up to 2.125 seconds. Heroic Swing's second cast can be used while the hook is attached. If the hook fails to attach or Akshan is moved or becomes immobilized, grounded, or polymorphed within the duration, the preparation will end prematurely, cancelling Heroic Swing in the process.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Second Cast:</span> Akshan swings around the terrain in either a clockwise or counterclockwise direction based on the position of the cursor relative to his facing direction, stopping upon colliding with an enemy champion or terrain. While swinging, he fires at the nearest visible enemy every 0.231 seconds to deal them physical damage and apply on-hit effects for each shot, with on-hit damage reduced to 25% effectiveness.Akshan will be knocked down by any immobilizing or polymorphing crowd control during the dash.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Second Cast:</span> Akshan swings around the terrain in either a clockwise or counterclockwise direction based on the position of the cursor relative to his facing direction, stopping upon colliding with an enemy champion or terrain. While swinging, he fires at the nearest visible enemy every 0.231 seconds to deal them physical damage and apply on-hit effects for each shot, with on-hit damage reduced to 25% effectiveness.Akshan will be knocked down by any immobilizing or polymorphing crowd control during the dash.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage per Shot",
@@ -343,7 +343,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Third Cast:</span> Akshan ends the swing by jumping to the target location and fires one last shot at a nearby visible enemy."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Third Cast:</span> Akshan ends the swing by jumping to the target location and fires one last shot at a nearby visible enemy.</p>"
           },
           {
             "description": "Scoring an enemy champion takedown reduces Heroic Swing's current cooldown to 0.5 seconds. The shots can critically strike for[ (157.5% + 36%) damage ][ 90% total critical damage ]and apply life steal at 100% effectiveness."
@@ -379,7 +379,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Akshan/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Akshan locks onto the target enemy champion and begins channeling for 2.5 seconds, revealing them as well as revealing himself. He gradually stores bullets into his weapon over the duration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Akshan locks onto the target enemy champion and begins channeling for 2.5 seconds, revealing them as well as revealing himself. He gradually stores bullets into his weapon over the duration.</p>",
             "leveling": [
               {
                 "attribute": "Maximum Bullets Stored",
@@ -414,7 +414,7 @@
             "description": "Comeuppance will recast after the duration, or can be recast early after 0.5 seconds. Comeuppance is placed on a 5-second cooldown if the channel is cancelled."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Akshan fires all stored bullets at the target, each briefly granting sight around their trajectory and dealing physical damage to the first enemy hit, increased by 50% of critical chance and critical damage bonuses as well as by 0% - 200% (based on target's missing health). The shots can hit structures.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Akshan fires all stored bullets at the target, each briefly granting sight around their trajectory and dealing physical damage to the first enemy hit, increased by 50% of critical chance and critical damage bonuses as well as by 0% - 200% (based on target's missing health). The shots can hit structures.</p>",
             "leveling": [
               {
                 "attribute": "Minimum Physical Damage per Bullet",

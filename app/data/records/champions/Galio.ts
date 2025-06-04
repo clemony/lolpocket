@@ -97,7 +97,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Galio/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Periodically, Galio's next basic attack is empowered to have an uncancellable windup, gain 40% bonus attack speed and deal 15 - 115 (based on level) (+ 100% AD) (+ 45% AP) (+ 60% bonus magic resistance) modified magic damage to the target and all enemies near them."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Periodically, Galio's next basic attack is empowered to have an uncancellable windup, gain 40% bonus attack speed and deal 15 - 115 (based on level) (+ 100% AD) (+ 45% AP) (+ 60% bonus magic resistance) modified magic damage to the target and all enemies near them.</p>"
           },
           {
             "description": "Whenever Galio hits at least one enemy champion or epic monster with an ability, the cooldown of Colossal Smash is reduced by 3 seconds. This may occur only once per cast."
@@ -122,7 +122,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Galio/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Galio creates two windblasts 250 units to either side of him that arc out before converging to the target location, dealing magic damage to all enemies they pass through.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Galio creates two windblasts 250 units to either side of him that arc out before converging to the target location, dealing magic damage to all enemies they pass through.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -192,7 +192,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Galio/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Galio gains Anti-Magic Bulwark, and restores it after 12 / 10 / 8 (based on level) seconds without taking damage.Anti-Magic Bulwark: Gain a shield that absorbs magic damage.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Galio gains Anti-Magic Bulwark, and restores it after 12 / 10 / 8 (based on level) seconds without taking damage.Anti-Magic Bulwark: Gain a shield that absorbs magic damage.</p>",
             "leveling": [
               {
                 "attribute": "Magic Shield Strength",
@@ -214,7 +214,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Galio charges for up to 2 seconds, slowing himself by 15%, and gaining magic damage reduction and half of that amount as physical damage reduction; charging increases Shield of Durand's radius, damage and taunt duration over the first 1.25 seconds of the channel.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Galio charges for up to 2 seconds, slowing himself by 15%, and gaining magic damage reduction and half of that amount as physical damage reduction; charging increases Shield of Durand's radius, damage and taunt duration over the first 1.25 seconds of the channel.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage Reduction",
@@ -304,7 +304,7 @@
             "description": "Shield of Durand can be recast within the duration and does so automatically afterwards or if it is interrupted."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Galio refreshes the damage reduction for 2 seconds and deals magic damage to nearby enemy champions, increased by 0% - 200% (based on channel time), as well as taunts them for 0.5 - 1.5 (based on channel time) seconds and, after a brief delay, sets their movement speed to a static 60 for the same duration but slightly longer.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Galio refreshes the damage reduction for 2 seconds and deals magic damage to nearby enemy champions, increased by 0% - 200% (based on channel time), as well as taunts them for 0.5 - 1.5 (based on channel time) seconds and, after a brief delay, sets their movement speed to a static 60 for the same duration but slightly longer.</p>",
             "leveling": [
               {
                 "attribute": "Minimum Magic Damage",
@@ -381,7 +381,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Galio/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Galio steps backwards in the opposite direction over the cast time, then dashes to the target location until he hits an enemy champion or terrain."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Galio steps backwards in the opposite direction over the cast time, then dashes to the target location until he hits an enemy champion or terrain.</p>"
           },
           {
             "description": "Galio deals magic damage to enemies he passes through, reduced to 80% against non-champions, and knocks them up for 0.75 seconds as well as reveals them for the same duration.",
@@ -465,7 +465,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Galio/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Galio prepares to make an entrance, channeling for 2.75 seconds and designating the target allied champion's location at the time of cast as his landing spot. Additionally, he resets Shield of Durand's passive shield for himself and grants it to all allied champions within the area for 5 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Galio prepares to make an entrance, channeling for 2.75 seconds and designating the target allied champion's location at the time of cast as his landing spot. Additionally, he resets Shield of Durand's passive shield for himself and grants it to all allied champions within the area for 5 seconds.</p>"
           },
           {
             "description": "After channeling for 1.25 seconds, he gains crowd control immunity for the remaining duration, becomes untargetable, and leaps into the air for 0.8 seconds before dashing to his destination over 0.2 seconds. Afterwards, he lands and becomes targetable again, dealing magic damage to all nearby enemies upon impact, knocking them back 100 units over 0.75 seconds, and remaining in place for 0.5 seconds.",

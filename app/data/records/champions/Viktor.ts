@@ -98,7 +98,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Viktor/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Viktor can augment each of his abilities at the cost of 100 Hex Fragments, which he gains from killing enemies:\n Minions and monsters generate 1 Hex Fragment.\nSiege minions, super minions, and epic monsters generate 10 Hex Fragments.\nEnemy champion takedowns generate 20 Hex Fragments."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Viktor can augment each of his abilities at the cost of 100 Hex Fragments, which he gains from killing enemies:</p>\n Minions and monsters generate 1 Hex Fragment.\nSiege minions, super minions, and epic monsters generate 10 Hex Fragments.\nEnemy champion takedowns generate 20 Hex Fragments."
           },
           {
             "description": "Arcane Storm can be augmented after all of Viktor's basic abilities have been augmented."
@@ -115,7 +115,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Viktor/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Viktor throws a draining device at the target enemy that deals magic damage. He also grants himself a shield for 40 - 115 (based on level) (+ 18% AP) for 2.5 seconds and gains Discharge for 3.5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Viktor throws a draining device at the target enemy that deals magic damage. He also grants himself a shield for 40 - 115 (based on level) (+ 18% AP) for 2.5 seconds and gains Discharge for 3.5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -142,7 +142,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Discharge:</span> Viktor's next basic attack is empowered to become non-projectile and deal modified magic damage.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Discharge:</span> Viktor's next basic attack is empowered to become non-projectile and deal modified magic damage.</p>",
             "leveling": [
               {
                 "attribute": "Modified Magic Damage",
@@ -207,7 +207,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Augment:</span> Turbocharge — After the device hits, Viktor gains 30% bonus movement speed for 2.5 seconds and the shield's strength is increased[ by 60%. ][ to 64 - 184 (based on level) (+ 32% AP). ]"
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Augment:</span> Turbocharge — After the device hits, Viktor gains 30% bonus movement speed for 2.5 seconds and the shield's strength is increased[ by 60%. ][ to 64 - 184 (based on level) (+ 32% AP). ]</p>"
           }
         ],
         "cost": [
@@ -245,7 +245,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Viktor/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Viktor deploys a gravity field at the target location for 4.5 seconds. After a 0.75-second delay, it activates to slow enemies within for 1 second, refreshing every 0.25 seconds while they remain inside.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Viktor deploys a gravity field at the target location for 4.5 seconds. After a 0.75-second delay, it activates to slow enemies within for 1 second, refreshing every 0.25 seconds while they remain inside.</p>",
             "leveling": [
               {
                 "attribute": "Slow",
@@ -270,7 +270,7 @@
             "description": "The field applies a stack to enemies within every 0.25 seconds, stacking up to 5 times. The fifth stack consumes them all to knock down and stun the target for 1.5 seconds. The knockdown and stun can be triggered only once per cast per enemy."
           },
           {
-            "description": "<span class=\"ability-header\">Augment:</span> Magnetize — Viktor's other abilities, excluding Arcane Storm's persistent damage, slow enemies hit by 20% for 1 second."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Augment:</span> Magnetize — Viktor's other abilities, excluding Arcane Storm's persistent damage, slow enemies hit by 20% for 1 second.</p>"
           }
         ],
         "cost": [
@@ -301,7 +301,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Viktor/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Viktor fires an energy beam along the target path that deals magic damage to enemies hit and briefly grants sight of the area.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Viktor fires an energy beam along the target path that deals magic damage to enemies hit and briefly grants sight of the area.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -328,7 +328,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Augment:</span> Aftershock — The path explodes along the beam's wake after 1 second, dealing magic damage to enemies hit.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Augment:</span> Aftershock — The path explodes along the beam's wake after 1 second, dealing magic damage to enemies hit.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -414,7 +414,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Viktor/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Viktor conjures an arcane singularity at the target location, dealing magic damage to enemies within the area and disrupting their channeled abilities.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Viktor conjures an arcane singularity at the target location, dealing magic damage to enemies within the area and disrupting their channeled abilities.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -487,10 +487,10 @@
             "description": "Arcane Storm can be recast at any time while the singularity is active."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Viktor directs the singularity to the target location, or to follow the targeted enemy champion or himself."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Viktor directs the singularity to the target location, or to follow the targeted enemy champion or himself.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Augment:</span> Perfect Storm — The singularity moves 25% faster. Additionally, whenever an enemy champion is taken down after being damaged by Arcane Storm, the singularity increases in size by 40% and extends its duration by 3 seconds. The singularity radius can be increased up to 6 times and its duration can be extended only up to the original duration."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Augment:</span> Perfect Storm — The singularity moves 25% faster. Additionally, whenever an enemy champion is taken down after being damaged by Arcane Storm, the singularity increases in size by 40% and extends its duration by 3 seconds. The singularity radius can be increased up to 6 times and its duration can be extended only up to the original duration.</p>"
           }
         ],
         "cost": [

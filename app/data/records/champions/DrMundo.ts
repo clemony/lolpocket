@@ -92,10 +92,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/DrMundo/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Dr. Mundo regenerates an additional[ 0.4% - 2.3% (based on level) of his maximum health every 5 seconds. ][ 0.04% - 0.23% (based on level) of his maximum health every 0.5 seconds. ]"
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Dr. Mundo regenerates an additional[ 0.4% - 2.3% (based on level) of his maximum health every 5 seconds. ][ 0.04% - 0.23% (based on level) of his maximum health every 0.5 seconds. ]</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Periodically, Dr. Mundo gains immunity to the immobilizing effects of the next hostile spell to affect him. Upon resisting one, Dr. Mundo pays a health cost equal to 4% of his current health and propels a canister that lands 525 units in the general direction of its source, remaining on the ground for 7 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Periodically, Dr. Mundo gains immunity to the immobilizing effects of the next hostile spell to affect him. Upon resisting one, Dr. Mundo pays a health cost equal to 4% of his current health and propels a canister that lands 525 units in the general direction of its source, remaining on the ground for 7 seconds.</p>"
           },
           {
             "description": "Dr. Mundo can move near the canister to consume it, healing himself for 4% of his maximum health and reducing the cooldown of Goes Where He Pleases by 15 seconds. Enemy champions can move near it to destroy it."
@@ -117,7 +117,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/DrMundo/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Dr. Mundo throws an infected bonesaw in the target direction that deals magic damage to the first enemy hit and slows them by 40% for 2 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Dr. Mundo throws an infected bonesaw in the target direction that deals magic damage to the first enemy hit and slows them by 40% for 2 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -203,7 +203,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/DrMundo/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Dr. Mundo charges up a defibrillator for up to 3 seconds, dealing magic damage every 0.25 seconds to nearby enemies and storing 80% - 95% (based on level) of post-mitigation damage he takes as grey health on his health bar, reduced to 25% after the first 0.75 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Dr. Mundo charges up a defibrillator for up to 3 seconds, dealing magic damage every 0.25 seconds to nearby enemies and storing 80% - 95% (based on level) of post-mitigation damage he takes as grey health on his health bar, reduced to 25% after the first 0.75 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage per Tick",
@@ -239,7 +239,7 @@
             "description": "Heart Zapper can be recast after 0.5 seconds within the duration, and does so automatically after the duration."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Dr. Mundo detonates the defibrillator, dealing magic damage to nearby enemies and healing for 50% of grey health, increased to 100% if at least one enemy champion or large monster is hit.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Dr. Mundo detonates the defibrillator, dealing magic damage to nearby enemies and healing for 50% of grey health, increased to 100% if at least one enemy champion or large monster is hit.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -295,7 +295,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/DrMundo/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Dr. Mundo gains bonus attack damage.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Dr. Mundo gains bonus attack damage.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Damage",
@@ -317,7 +317,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Dr. Mundo empowers his next basic attack within 4 seconds to have an uncancellable windup, gain 50 bonus range, and deal bonus physical damage, increased by 0% - 40% (based on Dr. Mundo's missing health). If the target dies or is a small monster, they are sent flying away in a line, though not through terrain, causing all enemies they pass through to take 100% AD physical damage plus Blunt Force Trauma's minimum bonus damage.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Dr. Mundo empowers his next basic attack within 4 seconds to have an uncancellable windup, gain 50 bonus range, and deal bonus physical damage, increased by 0% - 40% (based on Dr. Mundo's missing health). If the target dies or is a small monster, they are sent flying away in a line, though not through terrain, causing all enemies they pass through to take 100% AD physical damage plus Blunt Force Trauma's minimum bonus damage.</p>",
             "leveling": [
               {
                 "attribute": "Minimum Bonus Physical Damage",
@@ -400,7 +400,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/DrMundo/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Dr. Mundo injects himself with chemicals to become enhanced for 10 seconds, gaining increased base health, bonus movement speed, and bonus health regeneration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Dr. Mundo injects himself with chemicals to become enhanced for 10 seconds, gaining increased base health, bonus movement speed, and bonus health regeneration.</p>",
             "leveling": [
               {
                 "attribute": "Increased Base Health",

@@ -94,13 +94,13 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Xayah/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Feathers shot by Xayah will linger in the ground at maximum range for 6 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Feathers shot by Xayah will linger in the ground at maximum range for 6 seconds.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Xayah's ability casts generate 3 stacks of Clean Cuts, lasting for 8 seconds, refreshing on subsequent casts, and stacking up to 5 times. Xayah's basic attacks are empowered to each consume a stack on-attack to instead shoot a Feather that deals the triggering attack's damage to the primary target and 30 / 40 / 50% (based on level) AD physical damage to other enemies hit. The secondary target damage can critically strike for (175% + 40%) damage if the triggering attack does."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Xayah's ability casts generate 3 stacks of Clean Cuts, lasting for 8 seconds, refreshing on subsequent casts, and stacking up to 5 times. Xayah's basic attacks are empowered to each consume a stack on-attack to instead shoot a Feather that deals the triggering attack's damage to the primary target and 30 / 40 / 50% (based on level) AD physical damage to other enemies hit. The secondary target damage can critically strike for (175% + 40%) damage if the triggering attack does.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Innate - Lover's Leap:</span> If either Xayah or Rakan is channeling Recall, the other may move nearby and channel their own to join alongside them. Both reach base at the time of which the initiator's Recall completes."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Lover's Leap:</span> If either Xayah or Rakan is channeling Recall, the other may move nearby and channel their own to join alongside them. Both reach base at the time of which the initiator's Recall completes.</p>"
           }
         ],
         "targeting": "Passive",
@@ -122,7 +122,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Xayah/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Xayah barrages two Feathers in the target direction that each deal physical damage to enemies hit.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Xayah barrages two Feathers in the target direction that each deal physical damage to enemies hit.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage Per Hit",
@@ -250,7 +250,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Xayah/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Xayah enters a frenzy for 4 seconds, gaining bonus attack speed and empowering her basic attacks to fire an additional smaller feather at the target on-hit that deals 25% damage of the triggering attack's damage.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Xayah enters a frenzy for 4 seconds, gaining bonus attack speed and empowering her basic attacks to fire an additional smaller feather at the target on-hit that deals 25% damage of the triggering attack's damage.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -311,7 +311,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Xayah/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Xayah recalls all planted Feathers to shoot back to her, each dealing physical damage to enemies hit, increased by 0% - 75% (based on critical strike chance). Bladecaller deals 50% damage to minions.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Xayah recalls all planted Feathers to shoot back to her, each dealing physical damage to enemies hit, increased by 0% - 75% (based on critical strike chance). Bladecaller deals 50% damage to minions.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage Per Feather",
@@ -401,7 +401,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Xayah/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Xayah leaps into the air, becoming ghosted and untargetable for 1.5 seconds. After 1 second, she shoots 5 Feathers in a cone in the target direction that deal physical damage to enemies hit.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Xayah leaps into the air, becoming ghosted and untargetable for 1.5 seconds. After 1 second, she shoots 5 Feathers in a cone in the target direction that deal physical damage to enemies hit.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",

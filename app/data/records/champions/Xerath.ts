@@ -100,7 +100,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Xerath/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Periodically, Xerath empowers his next basic attack to restore 30 - 195 (based on level) mana, doubled to 60 - 390 (based on level) against enemy champions."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Periodically, Xerath empowers his next basic attack to restore 30 - 195 (based on level) mana, doubled to 60 - 390 (based on level) against enemy champions.</p>"
           },
           {
             "description": "Mana Surge's cooldown is reduced by 3.5 seconds whenever Xerath kills an enemy."
@@ -121,7 +121,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Xerath/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Xerath charges while being slowed by 0% - 40% (based on channel time) for up to 3 seconds to increase Arcanopulse's range over the first 1.5 to 1.75 seconds of the channel."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Xerath charges while being slowed by 0% - 40% (based on channel time) for up to 3 seconds to increase Arcanopulse's range over the first 1.5 to 1.75 seconds of the channel.</p>"
           },
           {
             "description": "Arcanopulse can be recast within the duration. If the charge is interrupted or completes without reactivation, Arcanopulse is cancelled and refunds half the mana cost.",
@@ -143,7 +143,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Xerath becomes unable to act for 0.528 seconds and afterwards fires a beam of energy in a line in the target direction that deals magic damage to enemies hit.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Xerath becomes unable to act for 0.528 seconds and afterwards fires a beam of energy in a line in the target direction that deals magic damage to enemies hit.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -202,7 +202,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Xerath/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Xerath casts down a blast of arcane energy that strikes the target location after 0.528 seconds, briefly granting sight of the area and dealing magic damage to enemies hit and slowing them by 25% for 2.5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Xerath casts down a blast of arcane energy that strikes the target location after 0.528 seconds, briefly granting sight of the area and dealing magic damage to enemies hit and slowing them by 25% for 2.5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -306,7 +306,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Xerath/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Xerath fires an orb of energy in the target direction that deals magic damage to the first enemy hit and stuns them for 0.75 - 2.25 (based on orb travel distance) seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Xerath fires an orb of energy in the target direction that deals magic damage to the first enemy hit and stuns them for 0.75 - 2.25 (based on orb travel distance) seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -367,7 +367,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Xerath/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Xerath channels for up to 10 seconds, gaining the ability to recast Rite of the Arcane multiple times after 0.5 seconds within the duration. If Rite of the Arcane ends without any of the recasts being used, half of its cooldown is refunded.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Xerath channels for up to 10 seconds, gaining the ability to recast Rite of the Arcane multiple times after 0.5 seconds within the duration. If Rite of the Arcane ends without any of the recasts being used, half of its cooldown is refunded.</p>",
             "leveling": [
               {
                 "attribute": "Number of Recasts",
@@ -384,7 +384,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Recast - Arcane Barrage:</span> Xerath catapults an arcane missile that strikes the target location after a 0.627 seconds delay, briefly granting sight of the area and dealing magic damage to enemies hit. Each cast has a static cooldown of 0.5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast - Arcane Barrage:</span> Xerath catapults an arcane missile that strikes the target location after a 0.627 seconds delay, briefly granting sight of the area and dealing magic damage to enemies hit. Each cast has a static cooldown of 0.5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",

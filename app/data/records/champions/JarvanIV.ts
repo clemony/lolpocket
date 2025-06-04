@@ -100,7 +100,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/JarvanIV/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Jarvan IV's basic attacks are empowered to deal bonus physical damage equal to 8% of the target's current health, with a minimum threshold of 20 and capped at 400 against non- champion targets."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Jarvan IV's basic attacks are empowered to deal bonus physical damage equal to 8% of the target's current health, with a minimum threshold of 20 and capped at 400 against non- champion targets.</p>"
           },
           {
             "description": "This effect cannot occur on the same target more than once every few seconds."
@@ -122,7 +122,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/JarvanIV/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Jarvan IV extends his lance in the target direction, dealing physical damage to enemies hit and inflicting them with armor reduction for 3 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Jarvan IV extends his lance in the target direction, dealing physical damage to enemies hit and inflicting them with armor reduction for 3 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -206,7 +206,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/JarvanIV/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Jarvan IV slows all nearby enemies for 2 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Jarvan IV slows all nearby enemies for 2 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Slow",
@@ -279,7 +279,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/JarvanIV/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Jarvan IV gains bonus attack speed.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Jarvan IV gains bonus attack speed.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -301,7 +301,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Jarvan IV throws a Demacian flag to the target location, dealing magic damage to enemies within the area.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Jarvan IV throws a Demacian flag to the target location, dealing magic damage to enemies within the area.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -364,7 +364,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/JarvanIV/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Jarvan IV leaps with displacement immunity to the target enemy champion's location over 0.35 seconds, dealing physical damage to all nearby enemies upon arrival.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Jarvan IV leaps with displacement immunity to the target enemy champion's location over 0.35 seconds, dealing physical damage to all nearby enemies upon arrival.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -392,7 +392,7 @@
             "description": "Upon impact, he creates a circle of impassable terrain that knocks aside enemies within the perimeter over 0.15 seconds, knocking them out of the circle if they are on the outer edge and pulling them in otherwise. The terrain lasts for 3.5 seconds and grants sight of the area. Cataclysm can be recast after 0.75 seconds while the terrain is present."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Jarvan IV destroys the terrain created by Cataclysm."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Jarvan IV destroys the terrain created by Cataclysm.</p>"
           }
         ],
         "cost": [

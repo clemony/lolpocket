@@ -95,7 +95,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Qiyana/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Qiyana's basic attacks and basic abilities deal 15 - 83 (based on level) (+ 30% bonus AD) (+ 30% AP) additional physical damage. This effect cannot occur on the same target more than once every few seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Qiyana's basic attacks and basic abilities deal 15 - 83 (based on level) (+ 30% bonus AD) (+ 30% AP) additional physical damage. This effect cannot occur on the same target more than once every few seconds.</p>"
           },
           {
             "description": "Gathering an Element with Terrashape resets Royal Privilege's per-target cooldown for enemies affected by Royal Privilege using a different Element (or no Element)."
@@ -116,7 +116,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Qiyana/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Qiyana slashes forward in the target direction, dealing physical damage to enemies in a line, reduced to 75% damage against targets beyond the first. Edge of Ixtal deals 175% damage against monsters.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Qiyana slashes forward in the target direction, dealing physical damage to enemies in a line, reduced to 75% damage against targets beyond the first. Edge of Ixtal deals 175% damage against monsters.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -194,7 +194,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Qiyana/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Qiyana hurls her blade in the target direction that blasts in a line upon hitting an enemy or maximum range, consuming the current Element to empower the blade with an additional effect."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Qiyana hurls her blade in the target direction that blasts in a line upon hitting an enemy or maximum range, consuming the current Element to empower the blade with an additional effect.</p>"
           },
           {
             "description": "Enemies hit are dealt Edge of Ixtal's damage, reduced to 75% against subsequent enemies beyond the closest. Elemental Wrath deals 175% damage against monsters.",
@@ -246,13 +246,13 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Brush:</span> The blade creates a grass field around Qiyana that lasts for up to 3 seconds, granting her invisibility and 20% bonus movement speed until she attacks, casts an ability other than Terrashape, or exits the field."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Brush:</span> The blade creates a grass field around Qiyana that lasts for up to 3 seconds, granting her invisibility and 20% bonus movement speed until she attacks, casts an ability other than Terrashape, or exits the field.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">River:</span> The blast roots enemies hit for 0.5 seconds, then slows them by 20% for 1 second."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">River:</span> The blast roots enemies hit for 0.5 seconds, then slows them by 20% for 1 second.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Terrain:</span> The blast deals 60% increased damage against enemies below 50% of their maximum health. Subsequent targets beyond the closest that are below the threshold take 35% increased damage instead.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Terrain:</span> The blast deals 60% increased damage against enemies below 50% of their maximum health. Subsequent targets beyond the closest that are below the threshold take 35% increased damage instead.</p>",
             "leveling": [
               {
                 "attribute": "Increased Damage",
@@ -325,7 +325,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Qiyana/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> While holding an Element, Qiyana gains bonus attack speed, 25 bonus attack range and bonus magic damage on her basic attacks on-hit and basic abilities. While out-of-combat and moving near the Element currently being held, she gains bonus movement speed.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> While holding an Element, Qiyana gains bonus attack speed, 25 bonus attack range and bonus magic damage on her basic attacks on-hit and basic abilities. While out-of-combat and moving near the Element currently being held, she gains bonus movement speed.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -394,7 +394,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Qiyana dashes up to 300 units towards the target location to gather the Element of the nearest Brush, River or Terrain she targeted."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Qiyana dashes up to 300 units towards the target location to gather the Element of the nearest Brush, River or Terrain she targeted.</p>"
           },
           {
             "description": "A target Element is required to cast this ability."
@@ -435,7 +435,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Qiyana/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Qiyana dashes a fixed distance in the direction of the target enemy. If they are in range upon arrival, she deals physical damage.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Qiyana dashes a fixed distance in the direction of the target enemy. If they are in range upon arrival, she deals physical damage.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -498,7 +498,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Qiyana/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Qiyana sweeps a windblast in the target direction that knocks back enemies hit, though not through terrain, and stops upon hitting Terrain."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Qiyana sweeps a windblast in the target direction that knocks back enemies hit, though not through terrain, and stops upon hitting Terrain.</p>"
           },
           {
             "description": "The windblast creates a cascading shockwave across any River or Brush it passes through, as well as around the borders of Terrain it reaches, dealing physical damage to enemies hit, stunning them for 0.5 - 1 (based on proximity) seconds, and briefly granting sight of the area along its path. The damage based on the target's health ratio is capped against monsters.",

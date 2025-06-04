@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Chogath/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Whenever Cho'Gath kills an enemy, it heals for 18 - 52 (based on level) and restores 4.72 - 9.48 (based on level) mana."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Whenever Cho'Gath kills an enemy, it heals for 18 - 52 (based on level) and restores 4.72 - 9.48 (based on level) mana.</p>"
           }
         ],
         "targeting": "Passive",
@@ -115,7 +115,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Chogath/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Cho'Gath ruptures the target location after a 0.627 seconds delay, granting sight of the area before dealing magic damage to enemies within and knocking them up for 1 second, and afterwards slowing them by 60% for 1.5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Cho'Gath ruptures the target location after a 0.627 seconds delay, granting sight of the area before dealing magic damage to enemies within and knocking them up for 1 second, and afterwards slowing them by 60% for 1.5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic damage",
@@ -168,7 +168,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Chogath/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Cho'Gath roars in a cone in the target direction, dealing magic damage to enemies hit.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Cho'Gath roars in a cone in the target direction, dealing magic damage to enemies hit.</p>",
             "leveling": [
               {
                 "attribute": "Magic damage",
@@ -252,7 +252,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Chogath/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Cho'Gath empowers its next 3 basic attacks within 6 seconds to gain 50 bonus range and launch a blast of spikes on-attack in the target's direction. Enemies struck are dealt magic damage and slowed by an amount that decays over 1.5 seconds. The damage based on the target's health ratio is capped at 200 against monsters.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Cho'Gath empowers its next 3 basic attacks within 6 seconds to gain 50 bonus range and launch a blast of spikes on-attack in the target's direction. Enemies struck are dealt magic damage and slowed by an amount that decays over 1.5 seconds. The damage based on the target's health ratio is capped at 200 against monsters.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -378,7 +378,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Chogath/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Cho'Gath attempts to eat the target enemy, dealing them true damage. Against non- champions, the base damage is modified.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Cho'Gath attempts to eat the target enemy, dealing them true damage. Against non- champions, the base damage is modified.</p>",
             "leveling": [
               {
                 "attribute": "Champion True Damage",

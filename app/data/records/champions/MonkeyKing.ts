@@ -100,10 +100,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/MonkeyKing/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Wukong gains 6 - 10 (based on level) bonus armor and regenerates an additional[ 0.35% of his maximum health every 5 seconds. ][ 0.035% of his maximum health every 0.5 seconds. ]Whenever Wukong or his clone damage an enemy champion or monster, he generates a stack of Strength of Stone for 5 seconds, refreshing on subsequent hits and stacking up to 5 times. Stacks expire by one every second when the duration ends."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Wukong gains 6 - 10 (based on level) bonus armor and regenerates an additional[ 0.35% of his maximum health every 5 seconds. ][ 0.035% of his maximum health every 0.5 seconds. ]Whenever Wukong or his clone damage an enemy champion or monster, he generates a stack of Strength of Stone for 5 seconds, refreshing on subsequent hits and stacking up to 5 times. Stacks expire by one every second when the duration ends.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Strength of Stone:</span> For each stack,[ Stone Skin's effects are increased by 100%, ][ Wukong gains 6 - 10 (based on level) additional bonus armor and further regenerates an additional 0.35% of his maximum health every 5 seconds, ]up to a maximum of 36 - 60 (based on level) bonus armor and total additional regeneration of[ 2.1% maximum health every 5 seconds. ][ 0.21% maximum health every 0.5 seconds. ]"
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Strength of Stone:</span> For each stack,[ Stone Skin's effects are increased by 100%, ][ Wukong gains 6 - 10 (based on level) additional bonus armor and further regenerates an additional 0.35% of his maximum health every 5 seconds, ]up to a maximum of 36 - 60 (based on level) bonus armor and total additional regeneration of[ 2.1% maximum health every 5 seconds. ][ 0.21% maximum health every 0.5 seconds. ]</p>"
           }
         ],
         "targeting": "Passive",
@@ -117,7 +117,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/MonkeyKing/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Wukong empowers his next basic attack within 5 seconds to have an uncancellable windup, gain bonus range, deal bonus physical damage, and inflict armor reduction for 3 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Wukong empowers his next basic attack within 5 seconds to have an uncancellable windup, gain bonus range, deal bonus physical damage, and inflict armor reduction for 3 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Range",
@@ -209,7 +209,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/MonkeyKing/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Wukong enters invisibility for 1 second and dashes in the target direction, leaving behind a clone of himself at his casting position for 3.25 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Wukong enters invisibility for 1 second and dashes in the target direction, leaving behind a clone of himself at his casting position for 3.25 seconds.</p>"
           },
           {
             "description": "The clone is untargetable to allies and can basic attack autonomously, prioritizing the last enemy Wukong damaged. It can also gain the effects of Crushing Blow and Nimbus Strike's bonus attack speed, and casts Cyclone whenever Wukong does."
@@ -275,7 +275,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/MonkeyKing/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Wukong dashes to the target enemy's location and sends out untargetable clones to strike up to two additional enemies near the target's location, dealing magic damage.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Wukong dashes to the target enemy's location and sends out untargetable clones to strike up to two additional enemies near the target's location, dealing magic damage.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -362,7 +362,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/MonkeyKing/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Wukong spins his staff around for up to 2 seconds, becoming ghosted and gaining 20% bonus movement speed. The staff deals physical damage every 0.25 seconds to enemies hit, and can knock them up once for 0.6 seconds. Cyclone will not knock up enemies who were already hit by either Wukong or his clone within the same cast.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Wukong spins his staff around for up to 2 seconds, becoming ghosted and gaining 20% bonus movement speed. The staff deals physical damage every 0.25 seconds to enemies hit, and can knock them up once for 0.6 seconds. Cyclone will not knock up enemies who were already hit by either Wukong or his clone within the same cast.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage Per Tick",
@@ -416,7 +416,7 @@
             "description": "Cyclone can be recast after 0.5 seconds within the duration, and does so automatically afterwards or by casting another ability."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Wukong ends Cyclone. After 1 second, he can cast Cyclone a second time within 8 seconds of the first cast.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Wukong ends Cyclone. After 1 second, he can cast Cyclone a second time within 8 seconds of the first cast.</p>",
             "leveling": [
               {
                 "attribute": "Maximum Total Physical Damage",

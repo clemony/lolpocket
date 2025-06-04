@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nautilus/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Nautilus' basic attacks are empowered to deal 14 - 116 (based on level) bonus physical damage and root the target for 0.75 - 1.5 (based on level) seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Nautilus' basic attacks are empowered to deal 14 - 116 (based on level) bonus physical damage and root the target for 0.75 - 1.5 (based on level) seconds.</p>"
           },
           {
             "description": "This effect cannot occur on the same target more than once every few seconds."
@@ -121,7 +121,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nautilus/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Nautilus hurls his anchor in the target direction that stops on the first enemy or terrain hit."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nautilus hurls his anchor in the target direction that stops on the first enemy or terrain hit.</p>"
           },
           {
             "description": "If the anchor hits an enemy, it deals magic damage, reveals them for 1.15 seconds, stuns them for 1 second, and drags them toward Nautilus while he also dashes toward them, both over 0.9 seconds.",
@@ -187,7 +187,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nautilus/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Nautilus grants himself a shield for 6 seconds, and while it holds, his basic attacks are empowered to apply Pain of Wrath to the target and surrounding non-structure enemies.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nautilus grants himself a shield for 6 seconds, and while it holds, his basic attacks are empowered to apply Pain of Wrath to the target and surrounding non-structure enemies.</p>",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -218,7 +218,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Pain of Wrath:</span> The target takes magic damage over time, half dealt immediately and the other half dealt after 1.25 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Pain of Wrath:</span> The target takes magic damage over time, half dealt immediately and the other half dealt after 1.25 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -273,7 +273,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nautilus/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Nautilus sends three waves of explosions that radiate from him over 0.561 seconds. Each wave deals magic damage to enemies hit, reduced to 50% against those hit by subsequent waves beyond the first, and slows them by an amount that decays over 1.5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nautilus sends three waves of explosions that radiate from him over 0.561 seconds. Each wave deals magic damage to enemies hit, reduced to 50% against those hit by subsequent waves beyond the first, and slows them by an amount that decays over 1.5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -465,7 +465,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nautilus/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Nautilus sends out a Depth Charge that chases the target enemy champion, accelerating over time and creating eruptions every 0.264 seconds in its wake that also briefly grant sight of the area. Enemies hit by the eruptions are dealt magic damage, knocked up for 1 second, and stunned for a duration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nautilus sends out a Depth Charge that chases the target enemy champion, accelerating over time and creating eruptions every 0.264 seconds in its wake that also briefly grant sight of the area. Enemies hit by the eruptions are dealt magic damage, knocked up for 1 second, and stunned for a duration.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",

@@ -97,7 +97,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/XinZhao/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Xin Zhao's basic attacks on-hit and Wind Becomes Lightning strikes generate a stack of Determination, stacking up to 3 times. The third stack consumes them all to deal 15 / 30 / 45 / 60% (based on level) AD bonus physical damage on-attack and heal Xin Zhao for 3 / 3.5 / 4% (based on level) of his maximum health (+ 65% AP) on-hit."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Xin Zhao's basic attacks on-hit and Wind Becomes Lightning strikes generate a stack of Determination, stacking up to 3 times. The third stack consumes them all to deal 15 / 30 / 45 / 60% (based on level) AD bonus physical damage on-attack and heal Xin Zhao for 3 / 3.5 / 4% (based on level) of his maximum health (+ 65% AP) on-hit.</p>"
           }
         ],
         "targeting": "Passive",
@@ -115,7 +115,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/XinZhao/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Xin Zhao empowers his next three basic attacks on-attack within 5 seconds to each have an uncancellable windup, deal bonus physical damage and reduce his other abilities' current cooldowns by 1 second. Each attack refreshes the duration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Xin Zhao empowers his next three basic attacks on-attack within 5 seconds to each have an uncancellable windup, deal bonus physical damage and reduce his other abilities' current cooldowns by 1 second. Each attack refreshes the duration.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage",
@@ -201,7 +201,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/XinZhao/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Xin Zhao slashes in an arc and, after the cast time, thrusts his spear in a line in the target direction. Each strike deals physical damage to enemies hit, modified to 50% - 100% (based on level) against minions.\nThe thrust deals increased damage, further by 0% - 33.3% (based on critical strike chance), and slows enemies hit by 50% for 1.5 seconds. Enemy champions and monsters hit are also marked Challenged for 3 seconds, during which they are revealed.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Xin Zhao slashes in an arc and, after the cast time, thrusts his spear in a line in the target direction. Each strike deals physical damage to enemies hit, modified to 50% - 100% (based on level) against minions.</p>\nThe thrust deals increased damage, further by 0% - 33.3% (based on critical strike chance), and slows enemies hit by 50% for 1.5 seconds. Enemy champions and monsters hit are also marked Challenged for 3 seconds, during which they are revealed.",
             "leveling": [
               {
                 "attribute": "Slash Physical Damage",
@@ -331,7 +331,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/XinZhao/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Xin Zhao dashes to the target enemy's location, dealing magic damage to enemies near them and slowing them by 30% for 0.5 seconds. Audacious Charge's range is increased against Challenged targets.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Xin Zhao dashes to the target enemy's location, dealing magic damage to enemies near them and slowing them by 30% for 0.5 seconds. Audacious Charge's range is increased against Challenged targets.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -410,10 +410,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/XinZhao/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive - Challenge:</span> The last enemy champion hit by Xin Zhao's basic attacks or Audacious Charge is marked Challenged for 3 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive - Challenge:</span> The last enemy champion hit by Xin Zhao's basic attacks or Audacious Charge is marked Challenged for 3 seconds.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Xin Zhao sweeps his spear around him, dealing physical damage to nearby enemies, capped at 600 against monsters, and knocking back all non-Challenged targets hit up-to 700 units over 0.75 seconds, as well as stunning them for the same duration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Xin Zhao sweeps his spear around him, dealing physical damage to nearby enemies, capped at 600 against monsters, and knocking back all non-Challenged targets hit up-to 700 units over 0.75 seconds, as well as stunning them for the same duration.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",

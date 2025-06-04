@@ -100,7 +100,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Trundle/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Whenever a nearby enemy dies, Trundle heals himself for 1.8% - 5.5% (based on level) of the target's maximum health."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Whenever a nearby enemy dies, Trundle heals himself for 1.8% - 5.5% (based on level) of the target's maximum health.</p>"
           }
         ],
         "targeting": "Passive",
@@ -117,7 +117,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Trundle/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Trundle empowers his next basic attack within 7 seconds to have an uncancellable windup, gain 25 bonus range, deal bonus physical damage and slow the target by 75% for 0.1 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Trundle empowers his next basic attack within 7 seconds to have an uncancellable windup, gain 25 bonus range, deal bonus physical damage and slow the target by 75% for 0.1 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage",
@@ -208,7 +208,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Trundle/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Trundle coats the target location in ice for 8 seconds. While he is within the area, he gains bonus attack speed, bonus movement speed, and 25% increased healing from all sources.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Trundle coats the target location in ice for 8 seconds. While he is within the area, he gains bonus attack speed, bonus movement speed, and 25% increased healing from all sources.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -277,7 +277,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Trundle/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Trundle erects a pillar of ice at the target location for 6 seconds, which knocks back units hit to 225 units from its center. The pillar acts as terrain and slows nearby enemies.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Trundle erects a pillar of ice at the target location for 6 seconds, which knocks back units hit to 225 units from its center. The pillar acts as terrain and slows nearby enemies.</p>",
             "leveling": [
               {
                 "attribute": "Slow",
@@ -327,7 +327,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Trundle/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Trundle drains the life force out of the target enemy champion, dealing magic damage and healing himself for the same amount. He also steals 40% of their current bonus armor and magic resistance, and increases in size by 18% while reducing the target's size by 9.9%.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Trundle drains the life force out of the target enemy champion, dealing magic damage and healing himself for the same amount. He also steals 40% of their current bonus armor and magic resistance, and increases in size by 18% while reducing the target's size by 9.9%.</p>",
             "leveling": [
               {
                 "attribute": "Total Magic Damage",

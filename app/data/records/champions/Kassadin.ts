@@ -98,7 +98,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kassadin/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Kassadin is permanently ghosted and takes 10% reduced magic damage."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Kassadin is permanently ghosted and takes 10% reduced magic damage.</p>"
           }
         ],
         "targeting": "Passive",
@@ -113,7 +113,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kassadin/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Kassadin fires an orb of void energy at the target enemy that deals magic damage and disrupts their ongoing channels.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kassadin fires an orb of void energy at the target enemy that deals magic damage and disrupts their ongoing channels.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -202,10 +202,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kassadin/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Kassadin's basic attacks deal 20 (+ 10% AP) bonus magic damage on-hit."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Kassadin's basic attacks deal 20 (+ 10% AP) bonus magic damage on-hit.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Kassadin empowers his next basic attack within 5 seconds to have an uncancellable windup, gain 50 bonus range, deal increased bonus magic damage, and restore mana, with the restoration amount quintupled against champions.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kassadin empowers his next basic attack within 5 seconds to have an uncancellable windup, gain 50 bonus range, deal increased bonus magic damage, and restore mana, with the restoration amount quintupled against champions.</p>",
             "leveling": [
               {
                 "attribute": "Increased Bonus Magic Damage",
@@ -293,10 +293,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kassadin/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Each time Kassadin or a nearby champion casts an ability, Force Pulse's current cooldown is reduced by 0.75 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Each time Kassadin or a nearby champion casts an ability, Force Pulse's current cooldown is reduced by 0.75 seconds.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Kassadin emits a pulse of void energy in a cone in the target direction that deals magic damage to enemies hit and slows them for 1 second.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kassadin emits a pulse of void energy in a cone in the target direction that deals magic damage to enemies hit and slows them for 1 second.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -375,7 +375,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kassadin/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Kassadin blinks toward the target location, dealing magic damage to all nearby enemies upon arrival. He then gains a stack of Riftwalk for 15 seconds, refreshing on subsequent casts and stacking up to 4 times.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kassadin blinks toward the target location, dealing magic damage to all nearby enemies upon arrival. He then gains a stack of Riftwalk for 15 seconds, refreshing on subsequent casts and stacking up to 4 times.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -408,7 +408,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Riftwalk:</span> For each stack, Riftwalk deals bonus magic damage at an increased mana cost.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Riftwalk:</span> For each stack, Riftwalk deals bonus magic damage at an increased mana cost.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Damage Per Stack",

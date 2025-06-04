@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zilean/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Zilean generates 2 / 3.5 / 5 / 6 / 12 (based on level) experience (does not count towards his own level up) every 5 seconds. Time in a Bottle is on cooldown when the game starts and becomes disabled when everyone on Zilean's team including himself has reached level 18."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Zilean generates 2 / 3.5 / 5 / 6 / 12 (based on level) experience (does not count towards his own level up) every 5 seconds. Time in a Bottle is on cooldown when the game starts and becomes disabled when everyone on Zilean's team including himself has reached level 18.</p>"
           },
           {
             "description": "When he has stored enough to level up an allied champion and grant the same amount of experience to himself, he can select them to channel for 1.2 seconds after a 0.5-second cast time. The channel is interrupted and disabled upon entering combat with enemy champions or taking damage from turrets, placing it on a 10-second cooldown. If Zilean interrupts it himself, it is placed on a 1-second cooldown, increased to 2 if he used a basic attack against a turret to do so."
@@ -120,7 +120,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zilean/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Zilean throws a ticking time bomb to the target location that grants sight of its surroundings. The bomb will attach itself to units that move within the epicenter, or those hit directly, revealing them."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Zilean throws a ticking time bomb to the target location that grants sight of its surroundings. The bomb will attach itself to units that move within the epicenter, or those hit directly, revealing them.</p>"
           },
           {
             "description": "After 3 seconds, or when the attached unit dies, the bomb explodes to deal magic damage to nearby enemies.",
@@ -208,7 +208,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zilean/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Zilean reduces the remaining cooldowns of Time Bomb and Time Warp by 10 seconds each."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Zilean reduces the remaining cooldowns of Time Bomb and Time Warp by 10 seconds each.</p>"
           },
           {
             "description": "Either Time Bomb or Time Warp must be on cooldown to cast this ability."
@@ -239,10 +239,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zilean/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Zilean applies Time Warp to the target champion which lasts for 2.5 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Zilean applies Time Warp to the target champion which lasts for 2.5 seconds.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Time Warp:</span> If the target is an ally, they gain bonus movement speed. If the target is an enemy, they are slowed.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Time Warp:</span> If the target is an ally, they gain bonus movement speed. If the target is an enemy, they are slowed.</p>",
             "leveling": [
               {
                 "attribute": "Movement Speed Modifier",
@@ -288,7 +288,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Zilean/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Zilean places a protective time rune on the target allied champion or himself for 5 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Zilean places a protective time rune on the target allied champion or himself for 5 seconds.</p>"
           },
           {
             "description": "If the target takes fatal damage within the duration, they enter resurrection for 3 seconds, becoming invulnerable, untargetable, and unable to act. Afterwards, they revive while being healed.",

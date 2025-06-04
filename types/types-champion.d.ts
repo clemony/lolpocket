@@ -2,7 +2,12 @@ declare global {
   type ChampionId = number
   type ChampionName = string
   type ChampionKey = string
-  type ChampionRecord = Record<ChampionKey, ChampionLite>
+  type ChampionRecord = Record<ChampionKey, Champion>
+  type AbilityRecord = Record<"P" | "Q" | "W" | "E" | "R", Ability[]>
+  type SplashType = "tile" | "centered" | "load"
+  type SkinRecord = Record<ChampionKey, Skin>
+  type FullSkinRecord = Record<ChampionKey, Skin[]>
+  type ChampionMasteryEntry = Record<ChampionId, ChampionMasteryIndex>
 
   interface ChampionIndex {
     id: number
@@ -22,11 +27,20 @@ declare global {
     attributeRatings: Record<string, number>
   }
 
-  interface Champion extends ChampionLite {
+  interface Champion {
+    id: ChampionId
+    key: ChampionKey
+    name: ChampionName
+    resource: string
+    attackType: string
+    stats: Record<string, ChampionStat>
+    positions: string[]
+    roles: string[]
+    attributeRatings: Record<string, number>
     fullName?: string
     title: string
     lore?: string
-    abilities: Record<string, Ability[]>
+    abilities: AbilityRecord
   }
 
   interface StatEntry {
@@ -45,10 +59,6 @@ declare global {
     tilePath?: string
     loadPath?: string
   }
-
-  type SplashType = "tile" | "centered" | "load"
-  type SkinRecord = Record<ChampionKey, Skin>
-  type FullSkinRecord = Record<ChampionKey, Skin[]>
 
   interface Ability {
     name?: string
@@ -121,6 +131,5 @@ declare global {
     level: number
     points: number
   }
-  type ChampionMasteryEntry = Record<ChampionId, ChampionMasteryIndex>
 }
 export {}

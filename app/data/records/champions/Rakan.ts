@@ -95,13 +95,13 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rakan/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Periodically, Rakan grants himself a shield for 30 - 225 (based on level) (+ 95% AP) that lasts until broken. After being out of combat for 5 seconds, any leftover shield will be restored to maximum value."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Periodically, Rakan grants himself a shield for 30 - 225 (based on level) (+ 95% AP) that lasts until broken. After being out of combat for 5 seconds, any leftover shield will be restored to maximum value.</p>"
           },
           {
             "description": "Rakan's basic attacks and ability hits reduce Fey Feathers' cooldown by 1 second for each enemy champion hit."
           },
           {
-            "description": "<span class=\"ability-header\">Innate - Lover's Leap:</span> If either Rakan or Xayah is channeling Recall, the other may move nearby and channel their own to join alongside them. Both reach base at the time of which the initiator's Recall completes."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Lover's Leap:</span> If either Rakan or Xayah is channeling Recall, the other may move nearby and channel their own to join alongside them. Both reach base at the time of which the initiator's Recall completes.</p>"
           }
         ],
         "targeting": "Passive",
@@ -117,7 +117,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rakan/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Rakan slings an enchanted feather in the target direction that deals magic damage to the first enemy hit.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rakan slings an enchanted feather in the target direction that deals magic damage to the first enemy hit.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -178,7 +178,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rakan/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Rakan dashes to the target location. After a 0.35-second delay upon arrival, he deals magic damage to nearby enemies and knocks them up for 1 second.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rakan dashes to the target location. After a 0.35-second delay upon arrival, he deals magic damage to nearby enemies and knocks them up for 1 second.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -246,7 +246,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rakan/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Rakan grants a shield to the target allied champion for 3 seconds and then dashes to and around them. Battle Dance can be recast within 5 seconds at no additional cost.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rakan grants a shield to the target allied champion for 3 seconds and then dashes to and around them. Battle Dance can be recast within 5 seconds at no additional cost.</p>",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -273,7 +273,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Rakan mimics the first cast's effects."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Rakan mimics the first cast's effects.</p>"
           },
           {
             "description": "Rakan will be knocked down by any immobilizing or polymorphing crowd control during the dash."
@@ -310,7 +310,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rakan/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Rakan breaks into a captivating sprint for 4 seconds, gaining ghosting and 75% bonus movement speed for the duration. During this time, he deals magic damage to enemies he collides with and charms and slows them by 75% for a duration. This cannot affect the same enemy more than once.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rakan breaks into a captivating sprint for 4 seconds, gaining ghosting and 75% bonus movement speed for the duration. During this time, he deals magic damage to enemies he collides with and charms and slows them by 75% for a duration. This cannot affect the same enemy more than once.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",

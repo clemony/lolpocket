@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Morgana/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Morgana heals herself for 18% of the post-mitigation damage dealt by her abilities against champions, large minions, and medium and large monsters."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Morgana heals herself for 18% of the post-mitigation damage dealt by her abilities against champions, large minions, and medium and large monsters.</p>"
           }
         ],
         "targeting": "Passive",
@@ -115,7 +115,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Morgana/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Morgana throws a sphere of dark magic in the target direction that deals magic damage to the first enemy hit and roots them for a duration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Morgana throws a sphere of dark magic in the target direction that deals magic damage to the first enemy hit and roots them for a duration.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -190,10 +190,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Morgana/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Tormented Shadow's current cooldown is reduced by 5% of its total cooldown whenever Soul Siphon triggers. Simultaneous triggers from multiple targets will stack the cooldown reduction."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Tormented Shadow's current cooldown is reduced by 5% of its total cooldown whenever Soul Siphon triggers. Simultaneous triggers from multiple targets will stack the cooldown reduction.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Morgana torments the soil at the target location, causing the area to become desecrated for 5 seconds. Enemies within take magic damage on-cast and every 0.5 seconds, increased by 0% - 170% (based on target's missing health). Tormented Shadow deals 170% damage against monsters.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Morgana torments the soil at the target location, causing the area to become desecrated for 5 seconds. Enemies within take magic damage on-cast and every 0.5 seconds, increased by 0% - 170% (based on target's missing health). Tormented Shadow deals 170% damage against monsters.</p>",
             "leveling": [
               {
                 "attribute": "Minimum Damage Per Tick",
@@ -316,7 +316,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Morgana/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Morgana grants a shield to the target allied champion or herself for 5 seconds, which absorbs incoming magic damage and grants crowd control immunity while it holds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Morgana grants a shield to the target allied champion or herself for 5 seconds, which absorbs incoming magic damage and grants crowd control immunity while it holds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Shield Strength",
@@ -370,7 +370,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Morgana/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Morgana latches chains of energy onto nearby enemy champions over the cast time, dealing magic damage and forming a tether between herself and each target for 3 seconds, during which she gains bonus movement speed and the targets are revealed and slowed by 20%.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Morgana latches chains of energy onto nearby enemy champions over the cast time, dealing magic damage and forming a tether between herself and each target for 3 seconds, during which she gains bonus movement speed and the targets are revealed and slowed by 20%.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",

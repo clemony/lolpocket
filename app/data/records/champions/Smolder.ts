@@ -101,7 +101,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Smolder/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Smolder generates a stack of Dragon Practice each time he hits an enemy champion with an ability, or whenever Super Scorcher Breath kills a minion or monster. His basic abilities deal bonus magic damage based on stacks.\n<span class=\"ability-header\"> Super Scorcher Breath:</span> Deals bonus magic damage equal to 40% - 70% (+ 0% - 16%) (based on critical strike chance) of Dragon Practice stacks.\n<span class=\"ability-header\"> Achooo!:</span> Explosions deal bonus magic damage equal to 55% of Dragon Practice stacks.\n<span class=\"ability-header\"> Flap, Flap, Flap:</span> Attacks each deal bonus magic damage equal to 12% of Dragon Practice stacks."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Smolder generates a stack of Dragon Practice each time he hits an enemy champion with an ability, or whenever Super Scorcher Breath kills a minion or monster. His basic abilities deal bonus magic damage based on stacks.</p>\n<p class=\"ability-effect\"><span class=\"ability-header\"> Super Scorcher Breath:</span> Deals bonus magic damage equal to 40% - 70% (+ 0% - 16%) (based on critical strike chance) of Dragon Practice stacks.</p>\n<p class=\"ability-effect\"><span class=\"ability-header\"> Achooo!:</span> Explosions deal bonus magic damage equal to 55% of Dragon Practice stacks.</p>\n<p class=\"ability-effect\"><span class=\"ability-header\"> Flap, Flap, Flap:</span> Attacks each deal bonus magic damage equal to 12% of Dragon Practice stacks.</p>"
           }
         ],
         "targeting": "Passive",
@@ -119,7 +119,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Smolder/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Smolder spits a fireball at the target enemy that deals physical damage, increased by 0% - 75% (+ 0% - 40%) (based on critical strike chance); applies on-hit effects; applies life steal at 50% effectiveness; and triggers on-attack effects. If Super Scorcher Breath kills at least one target, Smolder restores 15 mana.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Smolder spits a fireball at the target enemy that deals physical damage, increased by 0% - 75% (+ 0% - 40%) (based on critical strike chance); applies on-hit effects; applies life steal at 50% effectiveness; and triggers on-attack effects. If Super Scorcher Breath kills at least one target, Smolder restores 15 mana.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -190,13 +190,13 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Super Scorcher Breath becomes empowered with new effects based on the number of Dragon Practice stacks:</span>"
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Super Scorcher Breath becomes empowered with new effects based on the number of Dragon Practice stacks:</span></p>"
           },
           {
-            "description": "<span class=\"ability-header\">Tier 1 - 25 stacks:</span> The fireball explodes upon collision to deal the same physical damage to nearby enemies. The explosion benefits from life steal at 50% effectiveness and applies on-hit effects."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Tier 1 - 25 stacks:</span> The fireball explodes upon collision to deal the same physical damage to nearby enemies. The explosion benefits from life steal at 50% effectiveness and applies on-hit effects.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Tier 2 - 125 stacks:</span> The fireball sends forth 2 (+ 0.8 per 100 Dragon Practice stacks) bolts of fire in an arc upon collision that explode at maximum range, dealing 50% of the same damage to enemies hit. The bolts benefit from life steal at 50% effectiveness and apply on-hit effects.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Tier 2 - 125 stacks:</span> The fireball sends forth 2 (+ 0.8 per 100 Dragon Practice stacks) bolts of fire in an arc upon collision that explode at maximum range, dealing 50% of the same damage to enemies hit. The bolts benefit from life steal at 50% effectiveness and apply on-hit effects.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -267,7 +267,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Tier 3 - 225 stacks:</span> Enemies hit are set on fire for 3 seconds, causing them to take bonus true damage equal to[ 2.5% per 100 bonus AD (+ 0.5% per 100 Dragon Practice stacks) of their maximum health over the duration, capped at 300 against monsters. ][ 0.83% per 100 bonus AD (+ 0.17% per 100 Dragon Practice stacks) of their maximum health each second, capped at 100 per tick against monsters. ]Subsequent applications of the burn stack, though not refreshing the duration of the previous burn. Enemy champions afflicted with the burn are also executed once Smolder deals damage to them that would leave them below 6.5% of their maximum health."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Tier 3 - 225 stacks:</span> Enemies hit are set on fire for 3 seconds, causing them to take bonus true damage equal to[ 2.5% per 100 bonus AD (+ 0.5% per 100 Dragon Practice stacks) of their maximum health over the duration, capped at 300 against monsters. ][ 0.83% per 100 bonus AD (+ 0.17% per 100 Dragon Practice stacks) of their maximum health each second, capped at 100 per tick against monsters. ]Subsequent applications of the burn stack, though not refreshing the duration of the previous burn. Enemy champions afflicted with the burn are also executed once Smolder deals damage to them that would leave them below 6.5% of their maximum health.</p>"
           }
         ],
         "cost": [
@@ -303,7 +303,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Smolder/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Smolder sneezes a fiery glob in the target direction that deals physical damage to enemies hit and slows them by 35% for 1.5 seconds, slowing down in missile speed after travelling 1200 units. Hitting an enemy champion creates an explosion that deals physical damage to nearby enemies, with subsequent explosions against the same target dealing 75% damage of the previous explosion's damage.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Smolder sneezes a fiery glob in the target direction that deals physical damage to enemies hit and slows them by 35% for 1.5 seconds, slowing down in missile speed after travelling 1200 units. Hitting an enemy champion creates an explosion that deals physical damage to nearby enemies, with subsequent explosions against the same target dealing 75% damage of the previous explosion's damage.</p>",
             "leveling": [
               {
                 "attribute": "Glob Physical Damage",
@@ -426,7 +426,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Smolder/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Smolder takes flight for 1.25 seconds, becoming ghosted and gaining 75% bonus movement speed, unobstructed vision, and the ability to ignore terrain collision. While in flight, he automatically fires up to 5 (+ 1 per 100 Dragon Practice stacks) bolts at the nearest and most wounded visible enemy, dealing physical damage with each hit and prioritizing enemy champions.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Smolder takes flight for 1.25 seconds, becoming ghosted and gaining 75% bonus movement speed, unobstructed vision, and the ability to ignore terrain collision. While in flight, he automatically fires up to 5 (+ 1 per 100 Dragon Practice stacks) bolts at the nearest and most wounded visible enemy, dealing physical damage with each hit and prioritizing enemy champions.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage per Hit",
@@ -507,7 +507,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Smolder/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Smolder shouts for his mother to attack from above, causing her to exhale a wave of fire from behind him and towards the target direction, granting sight of its surroundings as it travels. The wave heals Smolder and deals physical damage to enemies hit, with those in the center taking 50% increased damage and becoming slowed by 40% for 2 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Smolder shouts for his mother to attack from above, causing her to exhale a wave of fire from behind him and towards the target direction, granting sight of its surroundings as it travels. The wave heals Smolder and deals physical damage to enemies hit, with those in the center taking 50% increased damage and becoming slowed by 40% for 2 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Self Heal",

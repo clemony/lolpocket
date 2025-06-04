@@ -101,10 +101,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Seraphine/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate - Echo:</span> Seraphine's basic ability casts each generate a stack of Echo, stacking up to 2 times. At 2 stacks, Seraphine's next basic ability casts an additional time for 1 mana after a 0.033 seconds delay, consuming all Echo stacks after the cast time of the second cast.Seraphine gains maximum stacks of Echo when the game starts and upon respawning."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Echo:</span> Seraphine's basic ability casts each generate a stack of Echo, stacking up to 2 times. At 2 stacks, Seraphine's next basic ability casts an additional time for 1 mana after a 0.033 seconds delay, consuming all Echo stacks after the cast time of the second cast.Seraphine gains maximum stacks of Echo when the game starts and upon respawning.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Innate - Harmony:</span> Seraphine's ability casts grant a Note to herself and nearby allied champions that lasts 6 seconds, refreshes on subsequent Notes and stacks up to 4 times on each unit."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Harmony:</span> Seraphine's ability casts grant a Note to herself and nearby allied champions that lasts 6 seconds, refreshes on subsequent Notes and stacks up to 4 times on each unit.</p>"
           },
           {
             "description": "While any amount of Notes are active, Seraphine's next basic attack is empowered to have an uncancellable windup, gain 25 bonus attack range per Note, and fire all Notes at the target, with each one dealing 4 - 25 (based on level) (+ 4% AP) magic damage, reduced by 75% for Notes from allies."
@@ -128,7 +128,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Seraphine/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Seraphine hurls a soundwave to the target location that quickly expands in a radius upon arrival, dealing magic damage to enemies within the area.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Seraphine hurls a soundwave to the target location that quickly expands in a radius upon arrival, dealing magic damage to enemies within the area.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -221,7 +221,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Seraphine/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Seraphine grants a shield to herself and nearby allied champions for 2.5 seconds. For the same duration, she also gains 20% (+ 2% per 100 AP) decaying bonus movement speed and grants allies 8% (+ 0.8% per 100 AP) bonus movement speed.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Seraphine grants a shield to herself and nearby allied champions for 2.5 seconds. For the same duration, she also gains 20% (+ 2% per 100 AP) decaying bonus movement speed and grants allies 8% (+ 0.8% per 100 AP) bonus movement speed.</p>",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -301,7 +301,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Seraphine/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Seraphine fires a heavy soundwave in the target direction that deals magic damage to enemies hit, reduced to 70% against minions, and slows them by 99% for a few seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Seraphine fires a heavy soundwave in the target direction that deals magic damage to enemies hit, reduced to 70% against minions, and slows them by 99% for a few seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -405,7 +405,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Seraphine/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Seraphine projects a captivating force in the target direction that deals magic damage to enemies hit, charms them, during which they are revealed, and slows them by 40% for a duration, increasing by 15% every 0.25 seconds over the duration up to 99%.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Seraphine projects a captivating force in the target direction that deals magic damage to enemies hit, charms them, during which they are revealed, and slows them by 40% for a duration, increasing by 15% every 0.25 seconds over the duration up to 99%.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",

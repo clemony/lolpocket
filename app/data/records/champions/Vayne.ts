@@ -100,7 +100,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vayne/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Vayne gains 30 bonus movement speed while facing a nearby visible enemy champion, increased to 90 while under the effects of Final Hour."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Vayne gains 30 bonus movement speed while facing a nearby visible enemy champion, increased to 90 while under the effects of Final Hour.</p>"
           }
         ],
         "targeting": "Passive",
@@ -116,7 +116,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vayne/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Vayne dashes a fixed distance in the target direction, though not through terrain, and empowers her next basic attack within 3 seconds to have an uncancelable windup and deal bonus physical damage.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Vayne dashes a fixed distance in the target direction, though not through terrain, and empowers her next basic attack within 3 seconds to have an uncancelable windup and deal bonus physical damage.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage",
@@ -177,7 +177,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vayne/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Vayne's basic attacks on-hit and Condemn apply a stack of Silver Bolts for 3.5 seconds, refreshing on subsequent applications, expiring upon attacking a new enemy, and stacking up to 3 times."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Vayne's basic attacks on-hit and Condemn apply a stack of Silver Bolts for 3.5 seconds, refreshing on subsequent applications, expiring upon attacking a new enemy, and stacking up to 3 times.</p>"
           },
           {
             "description": "The third stack consumes them all to deal bonus true damage, with a minimum threshold. This damage is capped at 200 against monsters.",
@@ -238,7 +238,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vayne/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Vayne fires a heavy bolt at the target enemy that deals physical damage and knocks them back 475 units, though not through terrain.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Vayne fires a heavy bolt at the target enemy that deals physical damage and knocks them back 475 units, though not through terrain.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -345,7 +345,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vayne/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Vayne equips her crossbow, gaining bonus attack damage for a duration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Vayne equips her crossbow, gaining bonus attack damage for a duration.</p>",
             "leveling": [
               {
                 "attribute": "Effect Duration",

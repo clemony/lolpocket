@@ -99,10 +99,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Twitch/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Twitch's basic attacks on-hit apply a stack of Deadly Venom for 6 seconds, refreshing on subsequent applications and stacking up to 6 times."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Twitch's basic attacks on-hit apply a stack of Deadly Venom for 6 seconds, refreshing on subsequent applications and stacking up to 6 times.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Deadly Venom:</span> For each stack, the target is dealt[ 1 / 2 / 3 / 4 / 5 (based on level) (+ 3% AP) true damage per second over the duration, ][ 6 / 12 / 18 / 24 / 30 (based on level) (+ 18% AP) total true damage over the duration, ]for a maximum of[ 6 / 12 / 18 / 24 / 30 (based on level) (+ 18% AP) true damage with each tick. ][ 36 / 72 / 108 / 144 / 180 (based on level) (+ 108% AP) total true damage over the duration. ]This effect is considered a poison."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Deadly Venom:</span> For each stack, the target is dealt[ 1 / 2 / 3 / 4 / 5 (based on level) (+ 3% AP) true damage per second over the duration, ][ 6 / 12 / 18 / 24 / 30 (based on level) (+ 18% AP) total true damage over the duration, ]for a maximum of[ 6 / 12 / 18 / 24 / 30 (based on level) (+ 18% AP) true damage with each tick. ][ 36 / 72 / 108 / 144 / 180 (based on level) (+ 108% AP) total true damage over the duration. ]This effect is considered a poison.</p>"
           }
         ],
         "targeting": "Passive",
@@ -120,7 +120,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Twitch/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> After a 1-second delay, Twitch becomes camouflaged for a duration. Attacking or casting Venom Cask or Contaminate ends Ambush immediately.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> After a 1-second delay, Twitch becomes camouflaged for a duration. Attacking or casting Venom Cask or Contaminate ends Ambush immediately.</p>",
             "leveling": [
               {
                 "attribute": "Stealth Duration",
@@ -191,7 +191,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Twitch/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Twitch hurls a cask of venom that explodes at the target location, applying Deadly Venom to enemies hit and granting sight of the area."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Twitch hurls a cask of venom that explodes at the target location, applying Deadly Venom to enemies hit and granting sight of the area.</p>"
           },
           {
             "description": "The area then becomes contaminated for 3 seconds, applying a Deadly Venom stack each second to enemies within and slowing them.",
@@ -254,7 +254,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Twitch/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Twitch sends out a lethal toxin to each nearby enemy afflicted by Deadly Venom, dealing them physical damage.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Twitch sends out a lethal toxin to each nearby enemy afflicted by Deadly Venom, dealing them physical damage.</p>",
             "leveling": [
               {
                 "attribute": "Base Physical Damage",
@@ -397,7 +397,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Twitch/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Twitch gains bonus attack damage and 300 bonus attack range for 6 seconds, during which his basic attacks are replaced by bolts that travel slightly further than his attack range in a straight line, dealing damage to every enemy unit hit.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Twitch gains bonus attack damage and 300 bonus attack range for 6 seconds, during which his basic attacks are replaced by bolts that travel slightly further than his attack range in a straight line, dealing damage to every enemy unit hit.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Damage",

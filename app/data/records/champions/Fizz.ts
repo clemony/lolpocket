@@ -98,7 +98,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Fizz/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Fizz is permanently ghosted and reduces every instance of incoming damage by 4 (+ 1% AP), up to a maximum of 50% reduction."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Fizz is permanently ghosted and reduces every instance of incoming damage by 4 (+ 1% AP), up to a maximum of 50% reduction.</p>"
           }
         ],
         "targeting": "Passive",
@@ -113,7 +113,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Fizz/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Fizz dashes a fixed distance in the direction of the target enemy. If they are in range upon arrival, he deals magic damage plus 100% AD physical damage and applies on-hit effects.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Fizz dashes a fixed distance in the direction of the target enemy. If they are in range upon arrival, he deals magic damage plus 100% AD physical damage and applies on-hit effects.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -172,7 +172,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Fizz/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Fizz's basic attacks rend enemies on-hit, dealing magic damage every 0.5 seconds over 3 seconds, refreshing on subsequent hits.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Fizz's basic attacks rend enemies on-hit, dealing magic damage every 0.5 seconds over 3 seconds, refreshing on subsequent hits.</p>",
             "leveling": [
               {
                 "attribute": "Total Magic Damage",
@@ -221,7 +221,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Fizz empowers his next basic attack within 4 seconds to have an uncancellable windup, gain 50 bonus range, and deal bonus magic damage.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Fizz empowers his next basic attack within 4 seconds to have an uncancellable windup, gain 50 bonus range, and deal bonus magic damage.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage",
@@ -327,7 +327,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Fizz/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Fizz dashes to the target location while becoming untargetable, balancing on his trident for 0.75 seconds, during which he can cast Trickster after 0.15 seconds into the duration."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Fizz dashes to the target location while becoming untargetable, balancing on his trident for 0.75 seconds, during which he can cast Trickster after 0.15 seconds into the duration.</p>"
           },
           {
             "description": "He then begins to hop off of his trident over 0.5 seconds, afterwards becoming targetable and landing to create a splash that deals magic damage to nearby enemies and slows them for 2 seconds.",
@@ -409,7 +409,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Fizz/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Fizz dashes to the target location, hopping down and splashing onto the ground prematurely upon arrival to deal the same magic damage in a smaller radius but not applying the slow.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Fizz dashes to the target location, hopping down and splashing onto the ground prematurely upon arrival to deal the same magic damage in a smaller radius but not applying the slow.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -471,10 +471,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Fizz/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Fizz throws down a lure at the target location that attracts a shark, granting sight of the area before it emerges to chomp at the lure after 2 seconds, dealing magic damage to nearby enemies, knocking them back, though not through terrain, and slowing them for 2 seconds. The further the lure travels in its initial flight, the larger the shark that is attracted; increasing Chum the Waters' damage, slow, eruption radius and knock back distance."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Fizz throws down a lure at the target location that attracts a shark, granting sight of the area before it emerges to chomp at the lure after 2 seconds, dealing magic damage to nearby enemies, knocking them back, though not through terrain, and slowing them for 2 seconds. The further the lure travels in its initial flight, the larger the shark that is attracted; increasing Chum the Waters' damage, slow, eruption radius and knock back distance.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Guppy (<455):</span> 40% slow, 200 eruption radius and 150 unit knock back distance.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Guppy (<455):</span> 40% slow, 200 eruption radius and 150 unit knock back distance.</p>",
             "leveling": [
               {
                 "attribute": "Guppy Damage",
@@ -499,7 +499,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Chomper (455-910):</span> 60% slow, 325 eruption radius and 250 unit knock back distance.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Chomper (455-910):</span> 60% slow, 325 eruption radius and 250 unit knock back distance.</p>",
             "leveling": [
               {
                 "attribute": "Chomper Damage",
@@ -524,7 +524,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Gigalodon (>910):</span> 80% slow, 450 eruption radius and 350 unit knock back distance.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Gigalodon (>910):</span> 80% slow, 450 eruption radius and 350 unit knock back distance.</p>",
             "leveling": [
               {
                 "attribute": "Gigalodon Damage",

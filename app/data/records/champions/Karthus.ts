@@ -98,7 +98,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Karthus/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Upon taking fatal damage, Karthus enters a zombie state for 7 seconds, during which he can cast his abilities at no cost. If Defile has been learned, it will remain toggled on for Death Defied's entire duration. Requiem becomes disabled after Death Defied has lasted 4 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Upon taking fatal damage, Karthus enters a zombie state for 7 seconds, during which he can cast his abilities at no cost. If Defile has been learned, it will remain toggled on for Death Defied's entire duration. Requiem becomes disabled after Death Defied has lasted 4 seconds.</p>"
           },
           {
             "description": "While under this state, Karthus becomes untargetable and immune to crowd control as well as prevents all incoming damage, but is also rendered unable to move, declare basic attacks, use summoner spells, and activate items."
@@ -116,7 +116,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Karthus/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Karthus conjures a blast at the target location that detonates after 0.528 seconds to 0.759 seconds, granting sight of the area and dealing magic damage to all enemies within, doubled when only one target is struck.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Karthus conjures a blast at the target location that detonates after 0.528 seconds to 0.759 seconds, granting sight of the area and dealing magic damage to all enemies within, doubled when only one target is struck.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -198,7 +198,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Karthus/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Karthus erects a wall of pain at the target location perpendicular to his facing that lasts 5 seconds, granting sight around its pillars and center.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Karthus erects a wall of pain at the target location perpendicular to his facing that lasts 5 seconds, granting sight around its pillars and center.</p>",
             "leveling": [
               {
                 "attribute": "Wall Length",
@@ -278,7 +278,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Karthus/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Karthus restores mana whenever he kills an enemy.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Karthus restores mana whenever he kills an enemy.</p>",
             "leveling": [
               {
                 "attribute": "Mana Restored",
@@ -297,7 +297,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Toggle:</span> Karthus surrounds himself in a necrotic aura that deals magic damage every 0.25 seconds to all nearby enemies. Toggling Defile off triggers a final tick of damage.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Toggle:</span> Karthus surrounds himself in a necrotic aura that deals magic damage every 0.25 seconds to all nearby enemies. Toggling Defile off triggers a final tick of damage.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage Per Tick",
@@ -378,7 +378,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Karthus/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Karthus channels for 3 seconds, then deals magic damage to all targetable enemy champions upon completion.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Karthus channels for 3 seconds, then deals magic damage to all targetable enemy champions upon completion.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",

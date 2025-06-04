@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Varus/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> When Varus kills an enemy, he gains 10 / 15 / 20% (based on level) bonus attack speed as well as bonus attack damage and ability power equal to 10% bonus attack speed for 5 / 7 / 9 / 11 (based on level) seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> When Varus kills an enemy, he gains 10 / 15 / 20% (based on level) bonus attack speed as well as bonus attack damage and ability power equal to 10% bonus attack speed for 5 / 7 / 9 / 11 (based on level) seconds.</p>"
           },
           {
             "description": "This is increased to 50% bonus attack speed and bonus attack damage and ability power equal to 25% bonus attack speed upon scoring a champion takedown."
@@ -120,13 +120,13 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Varus/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Varus charges while being slowed by 20% for up to 4 seconds to increase Piercing Arrow's range over the first 1.5 seconds and its effects over the first 1.25 seconds of the channel."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Varus charges while being slowed by 20% for up to 4 seconds to increase Piercing Arrow's range over the first 1.5 seconds and its effects over the first 1.25 seconds of the channel.</p>"
           },
           {
             "description": "Piercing Arrow can be recast within the duration. If the charge completes without reactivation, Piercing Arrow is cancelled and refunds 50% of the mana cost."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Varus fires a piercing arrow in the target direction that deals physical damage to enemies hit. The damage of the arrow as well as any detonated Blight stacks are both increased by 0% - 50% (based on channel time), and the arrow's damage is reduced by 0% - 67% (based on number of enemies hit).",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Varus fires a piercing arrow in the target direction that deals physical damage to enemies hit. The damage of the arrow as well as any detonated Blight stacks are both increased by 0% - 50% (based on channel time), and the arrow's damage is reduced by 0% - 67% (based on number of enemies hit).</p>",
             "leveling": [
               {
                 "attribute": "Minimum Physical Damage",
@@ -269,7 +269,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Varus/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Varus' basic attacks are empowered to deal bonus magic damage and apply a stack of Blight on-hit for 6 seconds, refreshing on subsequent applications and stacking up to 3 times. Varus' abilities detonate all Blight stacks on enemies hit.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Varus' basic attacks are empowered to deal bonus magic damage and apply a stack of Blight on-hit for 6 seconds, refreshing on subsequent applications and stacking up to 3 times. Varus' abilities detonate all Blight stacks on enemies hit.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage",
@@ -296,7 +296,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Blight:</span> For each stack consumed, the target is dealt bonus magic damage. If the stacks were consumed with Piercing Arrow, this damage is increased by 0% - 50% (based on Piercing Arrow's charge time). This damage is capped at 120 per stack against monsters, for a total cap of 360 at maximum stacks.Additionally, each stack consumed against a champion or epic monster reduces the remaining cooldowns of Varus' basic abilities by 13% of each of their total cooldowns, up to a 39% cooldown reduction per target. If the stacks were consumed with Piercing Arrow, the cooldown reduction is increased by 0% - 50% (based on Piercing Arrow's charge time), up to a 39% - 58.5% cooldown reduction per target from consuming maximum stacks against them.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Blight:</span> For each stack consumed, the target is dealt bonus magic damage. If the stacks were consumed with Piercing Arrow, this damage is increased by 0% - 50% (based on Piercing Arrow's charge time). This damage is capped at 120 per stack against monsters, for a total cap of 360 at maximum stacks.Additionally, each stack consumed against a champion or epic monster reduces the remaining cooldowns of Varus' basic abilities by 13% of each of their total cooldowns, up to a 39% cooldown reduction per target. If the stacks were consumed with Piercing Arrow, the cooldown reduction is increased by 0% - 50% (based on Piercing Arrow's charge time), up to a 39% - 58.5% cooldown reduction per target from consuming maximum stacks against them.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage per Stack",
@@ -401,7 +401,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Varus' next Piercing Arrow within 5.5 seconds is empowered to deal additional bonus magic damage, increased by 0% - 50% (based on Piercing Arrow's charge time). This damage is capped at 360 against monsters.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Varus' next Piercing Arrow within 5.5 seconds is empowered to deal additional bonus magic damage, increased by 0% - 50% (based on Piercing Arrow's charge time). This damage is capped at 360 against monsters.</p>",
             "leveling": [
               {
                 "attribute": "Active Minimum Magic Damage",
@@ -443,7 +443,7 @@
             "description": "If Varus does not cast Piercing Arrow, Blighted Quiver can be recast after 1 second within the duration, and does so automatically afterwards or when he dies. Blighted Quiver can be cast during the first 0.85 seconds of Piercing Arrow's charge, and will be placed on full cooldown after the charge ends even if Piercing Arrow is not recast."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Varus ends Blighted Quiver and places it on a 1-second cooldown."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Varus ends Blighted Quiver and places it on a 1-second cooldown.</p>"
           }
         ],
         "cost": [
@@ -469,7 +469,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Varus/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Varus fires a hail of arrows at the target location that land after 0.5 seconds, dealing physical damage to enemies hit.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Varus fires a hail of arrows at the target location that land after 0.5 seconds, dealing physical damage to enemies hit.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -552,7 +552,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Varus/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Varus unleashes a tendril of corruption in the target direction that infects the first enemy champion hit, dealing magic damage and rooting them for 2 seconds, during which they are revealed. Over the first 1.5 seconds of the root, they are also inflicted with maximum stacks of Blight.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Varus unleashes a tendril of corruption in the target direction that infects the first enemy champion hit, dealing magic damage and rooting them for 2 seconds, during which they are revealed. Over the first 1.5 seconds of the root, they are also inflicted with maximum stacks of Blight.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",

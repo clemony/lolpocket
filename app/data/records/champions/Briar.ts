@@ -84,7 +84,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Briar/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Briar's basic attacks and abilities inflict a bleed against enemies for 5 seconds, refreshing on subsequent applications, stacking up to 9 times and dealing 25% damage for stacks beyond the first. The bleed deals[ 10 - 50 (based on level) (+ 50% bonus AD) total physical damage over the duration, increased by 2.5 - 12.5 (based on level) (+ 12.5% bonus AD) for each subsequent stack and up to a maximum of 30 - 150 (based on level) (+ 150% bonus AD). ][ 1 - 5 (based on level) (+ 5% bonus AD) physical damage every 0.5 seconds, increased by 0.25 - 1.25 (based on level) (+ 1.25% bonus AD) for each subsequent stack and up to a maximum of 3 - 15 (based on level) (+ 15% bonus AD) per tick. ]Briar heals herself equal to 25% of the pre-mitigation damage dealt. If a target dies while bleeding, she will heal herself equal to 125% of the remaining bleed damage."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Briar's basic attacks and abilities inflict a bleed against enemies for 5 seconds, refreshing on subsequent applications, stacking up to 9 times and dealing 25% damage for stacks beyond the first. The bleed deals[ 10 - 50 (based on level) (+ 50% bonus AD) total physical damage over the duration, increased by 2.5 - 12.5 (based on level) (+ 12.5% bonus AD) for each subsequent stack and up to a maximum of 30 - 150 (based on level) (+ 150% bonus AD). ][ 1 - 5 (based on level) (+ 5% bonus AD) physical damage every 0.5 seconds, increased by 0.25 - 1.25 (based on level) (+ 1.25% bonus AD) for each subsequent stack and up to a maximum of 3 - 15 (based on level) (+ 15% bonus AD) per tick. ]Briar heals herself equal to 25% of the pre-mitigation damage dealt. If a target dies while bleeding, she will heal herself equal to 125% of the remaining bleed damage.</p>"
           },
           {
             "description": "Briar has no base health regeneration, but she increases healing from all sources by 0% - 40% (based on missing health) (+ 0% - 2.5% (based on missing health) per 100 bonus health)."
@@ -105,7 +105,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Briar/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Briar leaps to the target unit. If the target is an enemy, she deals magic damage, applies on-hit effects, triggers on-attack effects, stuns them for 0.85 seconds, and reduces their armor and magic resistance for 5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Briar leaps to the target unit. If the target is an enemy, she deals magic damage, applies on-hit effects, triggers on-attack effects, stuns them for 0.85 seconds, and reduces their armor and magic resistance for 5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -189,10 +189,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Briar/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Briar dashes to the target location. If there is a nearby enemy upon her arrival, she gains Blood Frenzy for 5 seconds, during which she can cast Snack Attack."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Briar dashes to the target location. If there is a nearby enemy upon her arrival, she gains Blood Frenzy for 5 seconds, during which she can cast Snack Attack.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Blood Frenzy:</span> Briar breaks free from her pillory, causing her to become forced to basic attack the nearest enemy. She reveals the target and gains ghosting, bonus attack speed and bonus movement speed, as well as empowering her basic attacks to deal physical damage to enemies surrounding her target. This damage is affected by critical strike modifiers.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Blood Frenzy:</span> Briar breaks free from her pillory, causing her to become forced to basic attack the nearest enemy. She reveals the target and gains ghosting, bonus attack speed and bonus movement speed, as well as empowering her basic attacks to deal physical damage to enemies surrounding her target. This damage is affected by critical strike modifiers.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -282,7 +282,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Briar/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Briar empowers her next basic attack within 5 seconds during Blood Frenzy to take a bite out of the target enemy, having an uncancelable windup, gaining 50 bonus range, dealing bonus physical damage and healing her for 5% of her maximum health plus a percentage of the post-mitigation damage dealt.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Briar empowers her next basic attack within 5 seconds during Blood Frenzy to take a bite out of the target enemy, having an uncancelable windup, gaining 50 bonus range, dealing bonus physical damage and healing her for 5% of her maximum health plus a percentage of the post-mitigation damage dealt.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage",
@@ -399,7 +399,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Briar/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Briar prepares to unleash a scream in the target direction, charging for up to 1 second, during which she increases Chilling Scream's damage and range, and gains 35% damage reduction and heals herself every 0.25 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Briar prepares to unleash a scream in the target direction, charging for up to 1 second, during which she increases Chilling Scream's damage and range, and gains 35% damage reduction and heals herself every 0.25 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Heal Per Tick",
@@ -441,7 +441,7 @@
             "description": "Chilling Scream can be recast within the duration, and does so automatically afterwards. Chilling Scream's charge cannot be interrupted by crowd control."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Briar unleashes the scream in the direction she targeted at the time of cast, dealing magic damage to enemies hit and slowing them by 80% for 0.5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Briar unleashes the scream in the direction she targeted at the time of cast, dealing magic damage to enemies hit and slowing them by 80% for 0.5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Maximum Magic Damage",
@@ -597,7 +597,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Briar/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Briar kicks her pillory's hemolith in the target direction, briefly granting sight of its surroundings as it travels and marking the first enemy champion hit as her prey. The mark's application disrupts the target's ongoing channels. While the target is marked, they are revealed."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Briar kicks her pillory's hemolith in the target direction, briefly granting sight of its surroundings as it travels and marking the first enemy champion hit as her prey. The mark's application disrupts the target's ongoing channels. While the target is marked, they are revealed.</p>"
           },
           {
             "description": "If a target is hit, Briar cleanses herself from all crowd control and destroys her pillory over a cast time, afterwards dashing to them with displacement immunity. Upon arrival, she creates an explosion around the marked target that deals magic damage to them and nearby enemies and fears all non-marked targets for 1.5 seconds, during which they are slowed by 35%. She then enters a state of Hematomania.",
@@ -633,7 +633,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Hematomania:</span> Briar gains all effects of Blood Frenzy as well as bonus armor and bonus magic resistance equal to 20% AD, life steal, and additional bonus movement speed.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Hematomania:</span> Briar gains all effects of Blood Frenzy as well as bonus armor and bonus magic resistance equal to 20% AD, life steal, and additional bonus movement speed.</p>",
             "leveling": [
               {
                 "attribute": "Life Steal",

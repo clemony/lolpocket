@@ -100,7 +100,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Taliyah/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> While near terrain, Taliyah gains 10 / 15 / 25 / 40% (based on level) bonus movement speed, which builds up over 1 second while in range for at least 0.4 seconds, and decays at the same rate once out of range for at least 3 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> While near terrain, Taliyah gains 10 / 15 / 25 / 40% (based on level) bonus movement speed, which builds up over 1 second while in range for at least 0.4 seconds, and decays at the same rate once out of range for at least 3 seconds.</p>"
           },
           {
             "description": "If Taliyah is casting an ability or enters champion combat, Rock Surfing cannot occur again for a few seconds."
@@ -118,7 +118,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Taliyah/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Taliyah barrages 5 Stone Shards in the target direction over 1.5 seconds that each shatter upon the first enemy hit, dealing magic damage to nearby enemies and revealing them for 0.5 seconds. Subsequent hits deal 40% damage.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Taliyah barrages 5 Stone Shards in the target direction over 1.5 seconds that each shatter upon the first enemy hit, dealing magic damage to nearby enemies and revealing them for 0.5 seconds. Subsequent hits deal 40% damage.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -195,7 +195,7 @@
             "description": "Casting Threaded Volley creates an area of Worked Ground at Taliyah's cast location that has a radius of 400 units and lasts 30 seconds. While on Worked Ground, Threaded Volley's cast consumes the area to become empowered with a new effect, costing 20 mana and having 50% reduced cooldown, though not below 0.75 seconds."
           },
           {
-            "description": "<span class=\"ability-header\">Empowered Active:</span> Taliyah hurls a Boulder that explodes upon the first enemy hit, dealing 190% damage to them and normal damage to nearby enemies, slowing all targets hit for 1.5 seconds, and revealing them for 0.5 seconds. Monsters hit are also stunned for 3 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Empowered Active:</span> Taliyah hurls a Boulder that explodes upon the first enemy hit, dealing 190% damage to them and normal damage to nearby enemies, slowing all targets hit for 1.5 seconds, and revealing them for 0.5 seconds. Monsters hit are also stunned for 3 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Empowered Damage",
@@ -278,7 +278,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Taliyah/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Taliyah marks the target location and selects a direction. After 0.792 seconds, a ledge erupts from the area that knocks enemies hit 400 units in the target direction over 1 second."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Taliyah marks the target location and selects a direction. After 0.792 seconds, a ledge erupts from the area that knocks enemies hit 400 units in the target direction over 1 second.</p>"
           }
         ],
         "cost": [
@@ -315,7 +315,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Taliyah/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Taliyah scatters a field of 22 stones across the ground in the target direction that deals magic damage to enemies hit while they erupt. The stones then remain for 4 seconds and slow enemies within the area by 20%.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Taliyah scatters a field of 22 stones across the ground in the target direction that deals magic damage to enemies hit while they erupt. The stones then remain for 4 seconds and slow enemies within the area by 20%.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -430,13 +430,13 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Taliyah/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Taliyah summons a torrent of spiraling rocks that cascades in the target direction, knocking aside champions hit and erecting a wall of terrain in its wake. The wall lasts for 4 seconds after completion, then slowly disintegrates from its starting point."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Taliyah summons a torrent of spiraling rocks that cascades in the target direction, knocking aside champions hit and erecting a wall of terrain in its wake. The wall lasts for 4 seconds after completion, then slowly disintegrates from its starting point.</p>"
           },
           {
             "description": "Taliyah also channels for 1 second, during which Weaver's Wall can be recast and she reveals herself."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Upon completing the channel, Taliyah surfs on the wall as it emerges, revealing herself in the process. After 0.75 seconds, she may input a movement command to jump off the wall to the target location, and automatically does so upon being immobilized or silenced or reaching maximum range.Once the wall has fully formed, Taliyah can recast to destroy the wall instantly."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Upon completing the channel, Taliyah surfs on the wall as it emerges, revealing herself in the process. After 0.75 seconds, she may input a movement command to jump off the wall to the target location, and automatically does so upon being immobilized or silenced or reaching maximum range.Once the wall has fully formed, Taliyah can recast to destroy the wall instantly.</p>"
           },
           {
             "description": "Weaver's Wall is placed on a 3-second static cooldown upon taking champion or turret damage."

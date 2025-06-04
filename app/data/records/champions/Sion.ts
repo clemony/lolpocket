@@ -99,10 +99,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sion/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Upon taking fatal damage, Sion enters stasis for 1.5 seconds to reanimate into a frenzy, restoring 100% of his maximum health but losing 2.3 - 24.4 (based on level) health every 0.264 seconds, increasing by[ 70% of the base value ][ 1.61 - 17.08 (based on level) ]per subsequent tick. Sion's health regeneration and any healing (except life steal) he receives during this time is 0% effective."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Upon taking fatal damage, Sion enters stasis for 1.5 seconds to reanimate into a frenzy, restoring 100% of his maximum health but losing 2.3 - 24.4 (based on level) health every 0.264 seconds, increasing by[ 70% of the base value ][ 1.61 - 17.08 (based on level) ]per subsequent tick. Sion's health regeneration and any healing (except life steal) he receives during this time is 0% effective.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Sion can only move and use his basic attacks and item actives, and empowers himself with the following effects:</span>\n 1.75 attack speed minimum and maximum\n 100% life steal\nDeals bonus physical damage on-hit equal to 10% of the target's maximum health, capped at 75 against non-champions\n Ghosting\nOne cast of Death Surge, which replaces all of his abilities"
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Sion can only move and use his basic attacks and item actives, and empowers himself with the following effects:</span></p>\n 1.75 attack speed minimum and maximum\n 100% life steal\nDeals bonus physical damage on-hit equal to 10% of the target's maximum health, capped at 75 against non-champions\n Ghosting\nOne cast of Death Surge, which replaces all of his abilities"
           },
           {
             "description": "Sion's damage to structures is reduced to 40% under the effects of Glory in Death."
@@ -120,7 +120,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sion/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Sion gains 67%(bug) bonus movement speed that decays over 2.376 seconds.\nOnce at least one ability has been learned, Death Surge can be cast using any ability key, even for the abilities that haven't been learned yet."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sion gains 67%(bug) bonus movement speed that decays over 2.376 seconds.</p>\nOnce at least one ability has been learned, Death Surge can be cast using any ability key, even for the abilities that haven't been learned yet."
           }
         ],
         "targeting": "Auto",
@@ -135,7 +135,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sion/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Sion prepares a strike in the target direction, charging for up to 2 seconds to increase Decimating Smash's range over an area, knock up duration, stun duration, and damage every 0.25 seconds, which has up to a maximum bonus for the base damage and up to a 200% bonus for the scaling damage.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sion prepares a strike in the target direction, charging for up to 2 seconds to increase Decimating Smash's range over an area, knock up duration, stun duration, and damage every 0.25 seconds, which has up to a maximum bonus for the base damage and up to a 200% bonus for the scaling damage.</p>",
             "leveling": [
               {
                 "attribute": "Maximum Base Damage Increase",
@@ -212,7 +212,7 @@
             "description": "Decimating Smash can be recast within the duration, and does so automatically afterwards. If the charge is interrupted, Decimating Smash is placed on a 2-second cooldown."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Sion flails his axe in the direction he targeted at the time of cast, dealing physical damage to enemies hit and slowing them by 50% for 0.25 seconds. Decimating Smash deals 150% damage against monsters and 60% damage against minions.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Sion flails his axe in the direction he targeted at the time of cast, dealing physical damage to enemies hit and slowing them by 50% for 0.25 seconds. Decimating Smash deals 150% damage against monsters and 60% damage against minions.</p>",
             "leveling": [
               {
                 "attribute": "Minimum Monster Damage",
@@ -352,10 +352,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sion/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Sion gains 4 bonus health whenever he kills an enemy, increased to 15 for large enemies and takedowns against enemy champions."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Sion gains 4 bonus health whenever he kills an enemy, increased to 15 for large enemies and takedowns against enemy champions.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Sion grants himself a shield that lasts for up to 6 seconds. Soul Furnace can be recast after 3 seconds while the shield holds, and does so automatically at the end of the duration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sion grants himself a shield that lasts for up to 6 seconds. Soul Furnace can be recast after 3 seconds while the shield holds, and does so automatically at the end of the duration.</p>",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -394,7 +394,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Sion consumes the shield to deal magic damage to nearby enemies, capped at 400 against minions and monsters.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Sion consumes the shield to deal magic damage to nearby enemies, capped at 400 against minions and monsters.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -465,7 +465,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sion/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Sion bellows a shockwave in the target direction that deals magic damage to the first enemy hit, slows them for 2.5 seconds and inflicts them with 20% armor reduction for 4 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sion bellows a shockwave in the target direction that deals magic damage to the first enemy hit, slows them for 2.5 seconds and inflicts them with 20% armor reduction for 4 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -548,7 +548,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sion/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Sion becomes immune to crowd control and ghosted and, after a brief delay, charges forward in the direction of the cursor for up to 8 seconds, during which he is able to steer at a slow turn rate while automatically navigating his movement. Unstoppable Onslaught can be recast after 0.4 seconds during the channel."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sion becomes immune to crowd control and ghosted and, after a brief delay, charges forward in the direction of the cursor for up to 8 seconds, during which he is able to steer at a slow turn rate while automatically navigating his movement. Unstoppable Onslaught can be recast after 0.4 seconds during the channel.</p>"
           },
           {
             "description": "The charge ramps up Sion's movement speed at the time of cast by 40 movement speed every 0.1 seconds, up to 950 total movement speed."

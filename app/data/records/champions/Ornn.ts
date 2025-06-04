@@ -96,13 +96,13 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ornn/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate - Living Forge:</span> Ornn can purchase non-consumable items from anywhere on the field by forging them himself, and is also presented a Forge Menu to quickly forge his recommended items. Once Ornn selects an item to forge, he channels for 4 seconds, building the item and paying its gold cost upon completion. The channel is interrupted if Ornn takes damage from enemy champions or turrets. Living Forge is disabled for 4 seconds after starting the channel."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Living Forge:</span> Ornn can purchase non-consumable items from anywhere on the field by forging them himself, and is also presented a Forge Menu to quickly forge his recommended items. Once Ornn selects an item to forge, he channels for 4 seconds, building the item and paying its gold cost upon completion. The channel is interrupted if Ornn takes damage from enemy champions or turrets. Living Forge is disabled for 4 seconds after starting the channel.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Innate - Master Craftsman:</span> Ornn uses his craftsmanship in forgery to upgrade most Legendary items that he and his teammates own into Masterwork items, increasing the gold value of all upgradeable stats by exactly 1000, shared equally among them. When Ornn reaches level 13, the first eligible Legendary item in his inventory is upgraded automatically. For each level after 13 and before 18 (levels 14 - 17, total of 4, once per ally per game), Ornn can upgrade the first eligible Legendary item in an allied champion's inventory into its Masterwork variant. He can do so by selecting the ally while within 600 range, and forges the item by performing Living Forge's channel.Additionally, Ornn increases his bonus armor, bonus magic resistance and bonus health by 10% from all sources, further increased by 4% each time he upgrades a Legendary item into a Masterwork item, for a total increase of 30% to each stat after the maximum of 5 upgrades."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Master Craftsman:</span> Ornn uses his craftsmanship in forgery to upgrade most Legendary items that he and his teammates own into Masterwork items, increasing the gold value of all upgradeable stats by exactly 1000, shared equally among them. When Ornn reaches level 13, the first eligible Legendary item in his inventory is upgraded automatically. For each level after 13 and before 18 (levels 14 - 17, total of 4, once per ally per game), Ornn can upgrade the first eligible Legendary item in an allied champion's inventory into its Masterwork variant. He can do so by selecting the ally while within 600 range, and forges the item by performing Living Forge's channel.Additionally, Ornn increases his bonus armor, bonus magic resistance and bonus health by 10% from all sources, further increased by 4% each time he upgrades a Legendary item into a Masterwork item, for a total increase of 30% to each stat after the maximum of 5 upgrades.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Innate - Temper:</span> Ornn's basic attacks against Brittle enemies knock them back a short distance. Ornn's and allies' immobilizing effects against Brittle enemies will consume the debuff to deal bonus magic damage equal to 10% - 18% (based on Ornn's level) of the target's maximum health, capped at 250 against monsters, and cause the crowd control to last 30% longer (if applicable)."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Temper:</span> Ornn's basic attacks against Brittle enemies knock them back a short distance. Ornn's and allies' immobilizing effects against Brittle enemies will consume the debuff to deal bonus magic damage equal to 10% - 18% (based on Ornn's level) of the target's maximum health, capped at 250 against monsters, and cause the crowd control to last 30% longer (if applicable).</p>"
           },
           {
             "description": "Ornn will prioritize upgrading the first Legendary item eligible for a Masterwork upgrade based on its position in the inventory, detecting each slot until an eligible item is found."
@@ -122,7 +122,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ornn/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Ornn sends a fissure in the target direction that deals physical damage to enemies hit and slows them by 40% for 2 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ornn sends a fissure in the target direction that deals physical damage to enemies hit and slows them by 40% for 2 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -187,7 +187,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ornn/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Ornn marches forward in the target direction over 0.75 seconds, gaining displacement immunity and becoming unable to act for the duration."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ornn marches forward in the target direction over 0.75 seconds, gaining displacement immunity and becoming unable to act for the duration.</p>"
           },
           {
             "description": "Over the march he belches fire over a cone in front of him, dealing magic damage every 0.15 seconds to enemies hit. The final gout of flame can reach slightly farther and will apply Brittle for 3 seconds.",
@@ -325,7 +325,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ornn/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Ornn charges in the target direction, dealing physical damage to enemies he passes through and stopping upon colliding with terrain.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ornn charges in the target direction, dealing physical damage to enemies he passes through and stopping upon colliding with terrain.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -400,7 +400,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ornn/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Ornn sounds his horn, summoning a lava elemental at maximum range from the target direction that stampedes towards his casting position at increasing speed. The elemental deals magic damage to enemies it passes through and slows them for 2 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ornn sounds his horn, summoning a lava elemental at maximum range from the target direction that stampedes towards his casting position at increasing speed. The elemental deals magic damage to enemies it passes through and slows them for 2 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -443,7 +443,7 @@
             "description": "Call of the Forge God can be recast after 1.25 seconds while the elemental is active."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Ornn dashes in the target direction, though not through terrain. If he collides with the elemental, he sends it stampeding in the same direction. The elemental deals the same damage to enemies it passes through and knocks them up and stuns them for 1 second, reduced to 0.5 seconds after the first enemy champion hit.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Ornn dashes in the target direction, though not through terrain. If he collides with the elemental, he sends it stampeding in the same direction. The elemental deals the same damage to enemies it passes through and knocks them up and stuns them for 1 second, reduced to 0.5 seconds after the first enemy champion hit.</p>",
             "leveling": [
               {
                 "attribute": "Total Magic Damage",

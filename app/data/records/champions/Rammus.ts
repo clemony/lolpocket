@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rammus/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Rammus' basic attacks deal 10 (+ 10% armor) bonus magic damage on-hit, increased to 15 (+ 15% armor) during Defensive Ball Curl."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Rammus' basic attacks deal 10 (+ 10% armor) bonus magic damage on-hit, increased to 15 (+ 15% armor) during Defensive Ball Curl.</p>"
           }
         ],
         "targeting": "Passive",
@@ -116,7 +116,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rammus/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Rammus channels for up to 6 seconds to roll into a ball, gaining 25% - 39.17% (based on level) bonus total movement speed per second over the duration, up to a maximum of 150% - 235% (based on level). Powerball can be recast after 1 second within the duration, and does so automatically afterwards or upon casting Defensive Ball Curl."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rammus channels for up to 6 seconds to roll into a ball, gaining 25% - 39.17% (based on level) bonus total movement speed per second over the duration, up to a maximum of 150% - 235% (based on level). Powerball can be recast after 1 second within the duration, and does so automatically afterwards or upon casting Defensive Ball Curl.</p>"
           },
           {
             "description": "Rammus stops rolling upon colliding with an enemy, dealing magic damage to all nearby enemies and knocking them back 125 units, though not through terrain. Enemies hit are then stunned and revealed for 0.4 seconds, as well as slowed for 1 second.",
@@ -163,7 +163,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Rammus ends Powerball."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Rammus ends Powerball.</p>"
           }
         ],
         "cost": [
@@ -195,7 +195,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rammus/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Rammus enters a defensive stance for 6 seconds, gaining bonus armor and bonus magic resistance. While active, enemies that use a basic attack on-hit against Rammus are dealt magic damage equal to Spiked Shell's bonus damage.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rammus enters a defensive stance for 6 seconds, gaining bonus armor and bonus magic resistance. While active, enemies that use a basic attack on-hit against Rammus are dealt magic damage equal to Spiked Shell's bonus damage.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Armor",
@@ -250,7 +250,7 @@
             "description": "Defensive Ball Curl can be recast after 1 second within the duration, and does so automatically upon casting Powerball or Soaring Slam."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Rammus ends Defensive Ball Curl."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Rammus ends Defensive Ball Curl.</p>"
           }
         ],
         "cost": [
@@ -277,7 +277,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rammus/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Rammus taunts the target enemy champion or monster for a duration and gains bonus attack speed for the same duration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rammus taunts the target enemy champion or monster for a duration and gains bonus attack speed for the same duration.</p>",
             "leveling": [
               {
                 "attribute": "Taunt/Bonus Attack Speed Duration",
@@ -343,7 +343,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Rammus/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Rammus leaps to the target location with immunity to crowd control. Upon arrival, he creates an impact that deals magic damage to nearby enemies and slows them for 1.5 seconds. The impact deals increased damage at the epicenter if Soaring Slam was cast further than 800 units, capped at 1700 units with 50% increased damage.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rammus leaps to the target location with immunity to crowd control. Upon arrival, he creates an impact that deals magic damage to nearby enemies and slows them for 1.5 seconds. The impact deals increased damage at the epicenter if Soaring Slam was cast further than 800 units, capped at 1700 units with 50% increased damage.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",

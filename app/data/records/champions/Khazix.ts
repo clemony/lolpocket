@@ -97,7 +97,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Khazix/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Kha'Zix gains Unseen Threat whenever the enemy loses sight of him or he activates Void Assault. Unseen Threat: Kha'Zix empowers his next basic attack against an enemy champion to deal 17 - 136 (based on level) (+ 50% bonus AD) bonus magic damage and slow them by 25% for 2 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Kha'Zix gains Unseen Threat whenever the enemy loses sight of him or he activates Void Assault. Unseen Threat: Kha'Zix empowers his next basic attack against an enemy champion to deal 17 - 136 (based on level) (+ 50% bonus AD) bonus magic damage and slow them by 25% for 2 seconds.</p>"
           }
         ],
         "targeting": "Passive",
@@ -115,10 +115,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Khazix/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Kha'Zix considers any enemy unit to be Isolated if they are not nearby to one of their allies. Taste Their Fear, Evolved Reaper Claws, and Evolved Spike Racks have special interactions against Isolated targets."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Kha'Zix considers any enemy unit to be Isolated if they are not nearby to one of their allies. Taste Their Fear, Evolved Reaper Claws, and Evolved Spike Racks have special interactions against Isolated targets.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Kha'Zix slashes the target enemy, dealing physical damage, increased by 110% against Isolated targets.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kha'Zix slashes the target enemy, dealing physical damage, increased by 110% against Isolated targets.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -191,7 +191,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Khazix/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Kha'Zix gains 50 bonus range on his basic attacks and Taste Their Fear. Evolved Bonus: If the target is Isolated, the cooldown is reduced by 45%."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Kha'Zix gains 50 bonus range on his basic attacks and Taste Their Fear. Evolved Bonus: If the target is Isolated, the cooldown is reduced by 45%.</p>"
           }
         ],
         "cost": [
@@ -217,7 +217,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Khazix/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Kha'Zix fires a bolt of spikes in the target direction that explodes upon hitting an enemy, dealing physical damage to nearby enemies.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kha'Zix fires a bolt of spikes in the target direction that explodes upon hitting an enemy, dealing physical damage to nearby enemies.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -302,7 +302,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Khazix/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Evolved Bonus:</span> Void Spike now fires three clusters in a cone, slows by 40% and reveals enemy champions hit for 2 seconds. Multiple explosions do not deal extra damage to the same target nor provide Kha'Zix with additional healing."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Evolved Bonus:</span> Void Spike now fires three clusters in a cone, slows by 40% and reveals enemy champions hit for 2 seconds. Multiple explosions do not deal extra damage to the same target nor provide Kha'Zix with additional healing.</p>"
           },
           {
             "description": "Isolated targets hit by Evolved Spike Racks are slowed by 60% instead."
@@ -335,7 +335,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Khazix/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Kha'Zix leaps to the target location, dealing physical damage to nearby enemies upon arrival.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kha'Zix leaps to the target location, dealing physical damage to nearby enemies upon arrival.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -393,7 +393,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Khazix/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Evolved Bonus:</span> Leap gains 200 bonus cast range, and the cooldown resets upon scoring a champion takedown."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Evolved Bonus:</span> Leap gains 200 bonus cast range, and the cooldown resets upon scoring a champion takedown.</p>"
           }
         ],
         "cost": [
@@ -423,16 +423,16 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Khazix/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Each rank in Void Assault allows Kha'Zix to evolve one of his abilities, granting it additional effects. Evolving an ability causes him to enter a 2-second cast time. Kha'Zix cannot evolve while he is unable to cast abilities."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Each rank in Void Assault allows Kha'Zix to evolve one of his abilities, granting it additional effects. Evolving an ability causes him to enter a 2-second cast time. Kha'Zix cannot evolve while he is unable to cast abilities.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Kha'Zix becomes invisible for 1.25 seconds, during which he gains 40% bonus movement speed."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kha'Zix becomes invisible for 1.25 seconds, during which he gains 40% bonus movement speed.</p>"
           },
           {
             "description": "After 2 seconds of leaving invisibility, and for the next 12 seconds, Void Assault can be recast at no additional cost."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Kha'Zix mimics the first cast's effects."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Kha'Zix mimics the first cast's effects.</p>"
           }
         ],
         "cost": [
@@ -456,7 +456,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Khazix/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Evolved Bonus:</span> The invisibility now lasts 2 seconds, and Void Assault can be recast twice."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Evolved Bonus:</span> The invisibility now lasts 2 seconds, and Void Assault can be recast twice.</p>"
           }
         ],
         "cost": [

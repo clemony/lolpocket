@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Soraka/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Soraka gains 90% bonus movement speed while facing nearby allied champions that are below 40% of their maximum health."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Soraka gains 90% bonus movement speed while facing nearby allied champions that are below 40% of their maximum health.</p>"
           }
         ],
         "targeting": "Passive",
@@ -115,7 +115,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Soraka/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Soraka calls down a star upon the target location that grants sight of the area before landing after 0.25 - 1 (based on target range) seconds, dealing magic damage to enemies hit and slowing them by 30% for 1.5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Soraka calls down a star upon the target location that grants sight of the area before landing after 0.25 - 1 (based on target range) seconds, dealing magic damage to enemies hit and slowing them by 30% for 1.5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -145,7 +145,7 @@
             "description": "If this hits at least one enemy champion, the star dust returns to Soraka to grant her Rejuvenation for 2.5 seconds. While Soraka has Rejuvenation, Astral Infusion will also grant the effects of Rejuvenation to the target ally for the same duration."
           },
           {
-            "description": "<span class=\"ability-header\">Rejuvenation:</span> The target heals every 0.5 seconds and gains bonus movement speed that decays over the duration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Rejuvenation:</span> The target heals every 0.5 seconds and gains bonus movement speed that decays over the duration.</p>",
             "leveling": [
               {
                 "attribute": "Total Heal",
@@ -246,7 +246,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Soraka/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Soraka heals the target allied champion.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Soraka heals the target allied champion.</p>",
             "leveling": [
               {
                 "attribute": "Heal",
@@ -347,7 +347,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Soraka/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Soraka creates a celestial zone at the target location that deals magic damage to enemy champions within at the time of cast. The zone then persists for 1.5 seconds and silences enemies within.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Soraka creates a celestial zone at the target location that deals magic damage to enemy champions within at the time of cast. The zone then persists for 1.5 seconds and silences enemies within.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -452,7 +452,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Soraka/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Soraka calls upon the stars, healing herself and all allied champions, increased by 50% on targets below 40% of their maximum health.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Soraka calls upon the stars, healing herself and all allied champions, increased by 50% on targets below 40% of their maximum health.</p>",
             "leveling": [
               {
                 "attribute": "Heal",

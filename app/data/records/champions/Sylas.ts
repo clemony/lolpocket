@@ -101,10 +101,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sylas/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Whenever Sylas casts an ability, he generates a stack of Unshackled for 4 seconds, refreshing on subsequent casts and stacking up to 3 times."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Whenever Sylas casts an ability, he generates a stack of Unshackled for 4 seconds, refreshing on subsequent casts and stacking up to 3 times.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Unshackled:</span> Sylas' next basic attack gains 125% bonus attack speed and is empowered to consume a stack to whirl his chains around him, which has an uncancellable windup and deals 130% AD (+ 30% AP) magic damage to the primary target and 40% AD (+ 20% AP) magic damage to nearby enemies."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Unshackled:</span> Sylas' next basic attack gains 125% bonus attack speed and is empowered to consume a stack to whirl his chains around him, which has an uncancellable windup and deals 130% AD (+ 30% AP) magic damage to the primary target and 40% AD (+ 20% AP) magic damage to nearby enemies.</p>"
           },
           {
             "description": "Damage to secondary targets executes minions that would be left below 25 health."
@@ -129,7 +129,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sylas/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Sylas lashes out two chains that converge to the target location and extend beyond it up to a maximum range, dealing magic damage to enemies hit and slowing them for 1.5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sylas lashes out two chains that converge to the target location and extend beyond it up to a maximum range, dealing magic damage to enemies hit and slowing them for 1.5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -300,7 +300,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sylas/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Sylas dashes to the front of the target enemy's location then strikes them to deal magic damage.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sylas dashes to the front of the target enemy's location then strikes them to deal magic damage.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -424,7 +424,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sylas/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Sylas dashes to the target location. Within 3.5 seconds, he can cast Abduct after a 0.2-second delay from casting Abscond."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sylas dashes to the target location. Within 3.5 seconds, he can cast Abduct after a 0.2-second delay from casting Abscond.</p>"
           },
           {
             "description": "Kingslayer can be cast during the dash. Abscond will cast at max range if cast beyond that."
@@ -455,7 +455,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sylas/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Sylas whips out his chains in the target direction that deal magic damage to the first enemy hit and reveal and stun them for 0.5 seconds. Upon hitting the target, Sylas dashes to their location and knocks them up for 0.5 seconds upon arrival.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sylas whips out his chains in the target direction that deal magic damage to the first enemy hit and reveal and stun them for 0.5 seconds. Upon hitting the target, Sylas dashes to their location and knocks them up for 0.5 seconds upon arrival.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -515,10 +515,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Sylas/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Sylas launches his chains at the target enemy champion, gaining a copy of their ultimate ability and revealing them for 0.825 seconds at the start of the cast time. Sylas cannot select the same champion again for a set duration, and can hold the hijacked ultimate for up to 90 seconds, during which he can recast Hijack."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sylas launches his chains at the target enemy champion, gaining a copy of their ultimate ability and revealing them for 0.825 seconds at the start of the cast time. Sylas cannot select the same champion again for a set duration, and can hold the hijacked ultimate for up to 90 seconds, during which he can recast Hijack.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Sylas casts his hijacked ultimate ability at no cost, scaling based on Hijack's rank and his own statistics."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Sylas casts his hijacked ultimate ability at no cost, scaling based on Hijack's rank and his own statistics.</p>"
           },
           {
             "description": "Hijacked ultimates and abilities that do not scale with ability power have their attack damage ratios converted to ability power ratios, scaling with 0.6% AP per 1% total AD, and 0.4% AP per 1% bonus AD respectively."

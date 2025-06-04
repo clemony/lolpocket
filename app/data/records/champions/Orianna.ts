@@ -100,10 +100,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Orianna/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate - The Ball:</span> Orianna is accompanied by The Ball, which she commands with her abilities. The Ball incurs a 0.01-second global cooldown on all of her abilities when she casts any ability. Additionally, The Ball attaches to Orianna if she is near it, and snaps back to her if she moves too far away from it, which incurs a 0.75-second cooldown on Command: Shockwave."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - The Ball:</span> Orianna is accompanied by The Ball, which she commands with her abilities. The Ball incurs a 0.01-second global cooldown on all of her abilities when she casts any ability. Additionally, The Ball attaches to Orianna if she is near it, and snaps back to her if she moves too far away from it, which incurs a 0.75-second cooldown on Command: Shockwave.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Orianna's basic attacks generate a stack of Clockwork Winding for 4 seconds, refreshing on subsequent attacks and stacking up to 2 times. All stacks are lost when attacking a new enemy.\n<span class=\"ability-header\">Clockwork Winding:</span> Orianna's basic attacks are empowered to deal 10 - 50 (based on level) (+ 15% AP) bonus magic damage on-hit, increased by[ 20% ][ 2 - 10 (based on level) (+ 3% AP) ]per stack, up to 14 - 70 (based on level) (+ 21% AP) total bonus magic damage."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Orianna's basic attacks generate a stack of Clockwork Winding for 4 seconds, refreshing on subsequent attacks and stacking up to 2 times. All stacks are lost when attacking a new enemy.</p>\n<p class=\"ability-effect\"><span class=\"ability-header\">Clockwork Winding:</span> Orianna's basic attacks are empowered to deal 10 - 50 (based on level) (+ 15% AP) bonus magic damage on-hit, increased by[ 20% ][ 2 - 10 (based on level) (+ 3% AP) ]per stack, up to 14 - 70 (based on level) (+ 21% AP) total bonus magic damage.</p>"
           },
           {
             "description": "See Pets for more details about The Ball."
@@ -124,7 +124,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Orianna/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Orianna commands The Ball to fly to the target location and remain there, dealing magic damage to enemies it passes through and nearby enemies upon arrival, reduced to 70% against those hit beyond the first.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Orianna commands The Ball to fly to the target location and remain there, dealing magic damage to enemies it passes through and nearby enemies upon arrival, reduced to 70% against those hit beyond the first.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -206,7 +206,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Orianna/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Orianna commands The Ball to emit an electric pulse that deals magic damage to nearby enemies.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Orianna commands The Ball to emit an electric pulse that deals magic damage to nearby enemies.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -284,7 +284,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Orianna/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> The Ball grants bonus armor and bonus magic resistance to the unit it is attached to.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> The Ball grants bonus armor and bonus magic resistance to the unit it is attached to.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Resistances",
@@ -303,7 +303,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Orianna commands The Ball to fly to herself or the target allied champion and attach itself to the target, dealing magic damage to enemies it passes through and granting the target a shield for 2.5 seconds upon arrival.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Orianna commands The Ball to fly to herself or the target allied champion and attach itself to the target, dealing magic damage to enemies it passes through and granting the target a shield for 2.5 seconds upon arrival.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -380,7 +380,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Orianna/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Orianna commands The Ball to unleash a shockwave that deals magic damage to nearby enemies, stuns them for 0.75 seconds, and pulls them over 325 units, though not through terrain.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Orianna commands The Ball to unleash a shockwave that deals magic damage to nearby enemies, stuns them for 0.75 seconds, and pulls them over 325 units, though not through terrain.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",

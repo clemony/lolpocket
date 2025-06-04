@@ -99,10 +99,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nidalee/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate - Prowl:</span> While in brush, Nidalee gains ghosting and 10% bonus movement speed, increased to 30% while facing a visible enemy champion within 1400 range. The bonuses persist for 2 seconds after leaving brush."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Prowl:</span> While in brush, Nidalee gains ghosting and 10% bonus movement speed, increased to 30% while facing a visible enemy champion within 1400 range. The bonuses persist for 2 seconds after leaving brush.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Innate - Hunt:</span> Hitting monsters or enemy champions with Javelin Toss or Bushwhack when Nidalee is nearby grants her ghosting and 10% bonus movement speed for 4 seconds and applies a Hunted mark to the target for the same duration, during which they are revealed as well as grant sight of a 300-unit radius around them. The bonus movement speed is increased to 30% while facing a Hunted target. Additionally, the first cast of both Takedown and Pounce against a Hunted target is enhanced."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Hunt:</span> Hitting monsters or enemy champions with Javelin Toss or Bushwhack when Nidalee is nearby grants her ghosting and 10% bonus movement speed for 4 seconds and applies a Hunted mark to the target for the same duration, during which they are revealed as well as grant sight of a 300-unit radius around them. The bonus movement speed is increased to 30% while facing a Hunted target. Additionally, the first cast of both Takedown and Pounce against a Hunted target is enhanced.</p>"
           },
           {
             "description": "The bonus movement speed from Prowl and Hunt can stack, but cannot exceed 30%."
@@ -121,7 +121,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nidalee/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Nidalee hurls a javelin in the target direction that deals magic damage to the first enemy hit, increased by 0% - 200% (based on distance traveled).",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nidalee hurls a javelin in the target direction that deals magic damage to the first enemy hit, increased by 0% - 200% (based on distance traveled).</p>",
             "leveling": [
               {
                 "attribute": "Minimum Magic Damage",
@@ -199,7 +199,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nidalee/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Nidalee empowers her next basic attack within 10 seconds to have an uncancellable windup, gain 75 bonus range and deal modified magic damage that is increased by an amount for every 1% of the target's missing health.Takedown can critically strike for (75% + 40%) AD bonus magic damage.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nidalee empowers her next basic attack within 10 seconds to have an uncancellable windup, gain 75 bonus range and deal modified magic damage that is increased by an amount for every 1% of the target's missing health.Takedown can critically strike for (75% + 40%) AD bonus magic damage.</p>",
             "leveling": [
               {
                 "attribute": "Minimum Magic Damage",
@@ -300,7 +300,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Hunt Bonus:</span> Hitting a Hunted target increases Takedown's damage by 30%.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Hunt Bonus:</span> Hitting a Hunted target increases Takedown's damage by 30%.</p>",
             "leveling": [
               {
                 "attribute": "Prowl-Enhanced Minimum Damage",
@@ -399,7 +399,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nidalee/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Nidalee lays a trap at the target location that becomes stealthed after arming over 1.5 seconds, lasting for up to 120 seconds and granting sight within its radius. The trap will spring upon contact with an enemy, dealing magic damage every second over 4 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nidalee lays a trap at the target location that becomes stealthed after arming over 1.5 seconds, lasting for up to 120 seconds and granting sight within its radius. The trap will spring upon contact with an enemy, dealing magic damage every second over 4 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage Per Tick",
@@ -485,7 +485,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nidalee/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Killing an enemy while in Cougar Form or using Pounce's Hunt bonus reduces Pounce's current cooldown to a minimum value.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Killing an enemy while in Cougar Form or using Pounce's Hunt bonus reduces Pounce's current cooldown to a minimum value.</p>",
             "leveling": [
               {
                 "attribute": "Reduced Cooldown",
@@ -506,7 +506,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Nidalee leaps a fixed distance in the target direction. Upon arrival, she deals magic damage to nearby enemies.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nidalee leaps a fixed distance in the target direction. Upon arrival, she deals magic damage to nearby enemies.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -540,7 +540,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Hunted Bonus:</span> Nidalee can perform Pounce from an increased range on a Hunted enemy closest to the cursor. She can Pounce to a target location near a Hunted enemy if she is close to them."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Hunted Bonus:</span> Nidalee can perform Pounce from an increased range on a Hunted enemy closest to the cursor. She can Pounce to a target location near a Hunted enemy if she is close to them.</p>"
           },
           {
             "description": "Takedown and Aspect of the Cougar can be cast during the dash. Pounce will cast at max range if cast beyond that."
@@ -578,7 +578,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nidalee/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Nidalee revitalizes herself or the target allied champion, granting the target bonus attack speed for 7 seconds and healing them for an amount that is increased by 0% - 100% (based on target's missing health).",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nidalee revitalizes herself or the target allied champion, granting the target bonus attack speed for 7 seconds and healing them for an amount that is increased by 0% - 100% (based on target's missing health).</p>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -669,7 +669,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nidalee/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Nidalee slashes in an arc in the target direction, dealing magic damage to enemies hit.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nidalee slashes in an arc in the target direction, dealing magic damage to enemies hit.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -732,13 +732,13 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Nidalee/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Nidalee switches between her Human Form and Cougar Form."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Nidalee switches between her Human Form and Cougar Form.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Cougar Form:</span> Nidalee transforms into a cougar, gaining melee attacks with 125 range and access to her cougar abilities."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Cougar Form:</span> Nidalee transforms into a cougar, gaining melee attacks with 125 range and access to her cougar abilities.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Human Form:</span> Nidalee transforms into a human, gaining ranged attacks with 525 range and access to her human abilities. While in this form, applying a Hunted mark will reset Aspect of the Cougar's cooldown."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Human Form:</span> Nidalee transforms into a human, gaining ranged attacks with 525 range and access to her human abilities. While in this form, applying a Hunted mark will reset Aspect of the Cougar's cooldown.</p>"
           },
           {
             "description": "Nidalee begins with one rank in Aspect of the Cougar and can increase it at levels 6, 11, and 16. Cougar Form's abilities scale based on Aspect of the Cougar's rank."

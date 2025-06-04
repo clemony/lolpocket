@@ -101,7 +101,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Swain/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Enemy champions that die will leave behind a Soul Fragment for 16 seconds, which can be collected by Swain after 1 second. Swain's ravens collect nearby Soul Fragments, as well as with Vision of Empire and Nevermove.\n<span class=\"ability-header\">Soul Fragment:</span> For each stack, Swain gains 15 bonus health permanently. Upon collection, he will heal for 3% - 6% (based on level) of his maximum health."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Enemy champions that die will leave behind a Soul Fragment for 16 seconds, which can be collected by Swain after 1 second. Swain's ravens collect nearby Soul Fragments, as well as with Vision of Empire and Nevermove.</p>\n<p class=\"ability-effect\"><span class=\"ability-header\">Soul Fragment:</span> For each stack, Swain gains 15 bonus health permanently. Upon collection, he will heal for 3% - 6% (based on level) of his maximum health.</p>"
           }
         ],
         "targeting": "Passive",
@@ -119,7 +119,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Swain/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Swain unleashes five bolts of eldritch power over 0.264 seconds in a cone in the target direction that deal magic damage to enemies hit. Subsequent bolts against an enemy deal 25% bonus damage.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Swain unleashes five bolts of eldritch power over 0.264 seconds in a cone in the target direction that deal magic damage to enemies hit. Subsequent bolts against an enemy deal 25% bonus damage.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -225,7 +225,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Swain/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Swain summons a demonic eye at the target location that grants sight of the area for 2 seconds and explodes after 1.5 seconds, dealing magic damage to enemies within, halved against minions, and slowing them for 1.5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Swain summons a demonic eye at the target location that grants sight of the area for 2 seconds and explodes after 1.5 seconds, dealing magic damage to enemies within, halved against minions, and slowing them for 1.5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -328,7 +328,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Swain/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Swain launches a demonic wave in the target direction."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Swain launches a demonic wave in the target direction.</p>"
           },
           {
             "description": "At maximum range, the wave homes back to Swain and detonates upon the first enemy hit, dealing magic damage to nearby enemies and rooting them for 1.5 seconds, during which they are revealed. Nevermove can be recast while champions hit are rooted.",
@@ -358,7 +358,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Swain pulls the rooted champions over 290 units and collects a Soul Fragment from each of them. If the targets would be brought past Swain, they are instead knocked back the excess distance."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Swain pulls the rooted champions over 290 units and collects a Soul Fragment from each of them. If the targets would be brought past Swain, they are instead knocked back the excess distance.</p>"
           }
         ],
         "cost": [
@@ -398,10 +398,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Swain/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Swain frees the demon within himself, gaining Demonic Ascension and generating 50 Demonic Energy. Demonic Ascension is maintained with Demonic Energy, which decays by 5 every 0.5 seconds, increased to 7.5 after 5 seconds have elapsed, and is lost once all Demonic Energy is depleted to 0. Swain generates 10 Demonic Energy every 0.5 seconds while draining from at least one enemy champion, and fully restores it to the maximum of 50 upon scoring a champion takedown."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Swain frees the demon within himself, gaining Demonic Ascension and generating 50 Demonic Energy. Demonic Ascension is maintained with Demonic Energy, which decays by 5 every 0.5 seconds, increased to 7.5 after 5 seconds have elapsed, and is lost once all Demonic Energy is depleted to 0. Swain generates 10 Demonic Energy every 0.5 seconds while draining from at least one enemy champion, and fully restores it to the maximum of 50 upon scoring a champion takedown.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Demonic Ascension:</span> Swain is ghosted and drains the lifeforce of nearby enemies, both dealing magic damage and healing himself every 0.5 seconds per target affected. The heal is reduced by 90% against minions and monsters.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Demonic Ascension:</span> Swain is ghosted and drains the lifeforce of nearby enemies, both dealing magic damage and healing himself every 0.5 seconds per target affected. The heal is reduced by 90% against minions and monsters.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage per Tick",
@@ -515,7 +515,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Swain/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Swain releases a nova of soulfire that deals magic damage to nearby enemies and slows them by 75%, decaying over 1.5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Swain releases a nova of soulfire that deals magic damage to nearby enemies and slows them by 75%, decaying over 1.5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",

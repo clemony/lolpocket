@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Olaf/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Olaf gains bonus attack speed and life steal based on his missing health, up to 50% - 100% (based on level) bonus attack speed and 8% - 25% (based on level) life steal at 70% missing health."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Olaf gains bonus attack speed and life steal based on his missing health, up to 50% - 100% (based on level) bonus attack speed and 8% - 25% (based on level) life steal at 70% missing health.</p>"
           }
         ],
         "targeting": "Passive",
@@ -114,7 +114,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Olaf/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Olaf throws an axe to the target location that deals physical damage to enemies it passes through and slows them for 1.5 - 2.5 (based on distance traveled) seconds. Enemy champions hit are also inflicted with 20% armor reduction for 4 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Olaf throws an axe to the target location that deals physical damage to enemies it passes through and slows them for 1.5 - 2.5 (based on distance traveled) seconds. Enemy champions hit are also inflicted with 20% armor reduction for 4 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -238,7 +238,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Olaf/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Olaf gains bonus attack speed for 5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Olaf gains bonus attack speed for 5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -315,7 +315,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Olaf/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Olaf strikes thunder onto the target enemy, dealing true damage.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Olaf strikes thunder onto the target enemy, dealing true damage.</p>",
             "leveling": [
               {
                 "attribute": "True Damage",
@@ -377,7 +377,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Olaf/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Olaf gains bonus armor and bonus magic resistance.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Olaf gains bonus armor and bonus magic resistance.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Resistances",
@@ -394,7 +394,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Olaf becomes enraged for 3 seconds, cleansing himself of all crowd control and becoming immune to them, as well as gaining bonus attack damage and 10% increased size. For the first second of Ragnarok, he also gains bonus movement speed while facing visible enemy champions within 2000 units.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Olaf becomes enraged for 3 seconds, cleansing himself of all crowd control and becoming immune to them, as well as gaining bonus attack damage and 10% increased size. For the first second of Ragnarok, he also gains bonus movement speed while facing visible enemy champions within 2000 units.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Damage",

@@ -103,7 +103,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Karma/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Mantra's current cooldown is reduced by 4 seconds for each enemy champion hit by Karma's damaging abilities."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Mantra's current cooldown is reduced by 4 seconds for each enemy champion hit by Karma's damaging abilities.</p>"
           }
         ],
         "targeting": "Passive",
@@ -118,7 +118,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Karma/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Karma fires a bolt in the target direction that explodes on the first enemy hit, dealing magic damage to nearby enemies and slowing them by 40% for 1.5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Karma fires a bolt in the target direction that explodes on the first enemy hit, dealing magic damage to nearby enemies and slowing them by 40% for 1.5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -180,7 +180,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Karma/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Mantra Bonus:</span> Inner Flame deals increased damage, and fires a larger bolt that also explodes at maximum range.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Mantra Bonus:</span> Inner Flame deals increased damage, and fires a larger bolt that also explodes at maximum range.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage",
@@ -349,7 +349,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Karma/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Karma deals magic damage to the target enemy champion, monster or pet and forms a tether between her and them for 2 seconds, during which they are revealed.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Karma deals magic damage to the target enemy champion, monster or pet and forms a tether between her and them for 2 seconds, during which they are revealed.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -449,7 +449,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Karma/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Mantra Bonus:</span> Focused Resolve's root duration is increased. Karma heals for 17% (+ 1% per 100 AP) of her missing health once on-cast, and again once the tether lasts its full duration or the target dies while tethered.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Mantra Bonus:</span> Focused Resolve's root duration is increased. Karma heals for 17% (+ 1% per 100 AP) of her missing health once on-cast, and again once the tether lasts its full duration or the target dies while tethered.</p>",
             "leveling": [
               {
                 "attribute": "Root Duration Increase",
@@ -525,7 +525,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Karma/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Karma grants a shield to herself or the target allied champion for 2.5 seconds as well as 40% bonus movement speed for 2 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Karma grants a shield to herself or the target allied champion for 2.5 seconds as well as 40% bonus movement speed for 2 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -581,7 +581,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Karma/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Mantra - Active:</span> Inspire's shield strength is increased. Inspire spreads to surrounding allied champions, granting them a shield equal to Defiance's bonus shield and[ Inspire's bonus movement speed at 37.5% effectiveness. ][ 15% bonus movement speed. ]",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Mantra - Active:</span> Inspire's shield strength is increased. Inspire spreads to surrounding allied champions, granting them a shield equal to Defiance's bonus shield and[ Inspire's bonus movement speed at 37.5% effectiveness. ][ 15% bonus movement speed. ]</p>",
             "leveling": [
               {
                 "attribute": "Bonus Shield/Secondary Target Shield",
@@ -671,7 +671,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Karma/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Karma empowers her next basic ability within 8 seconds for an additional effect. Mantra can be used while affected by cast-inhibiting crowd control."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Karma empowers her next basic ability within 8 seconds for an additional effect. Mantra can be used while affected by cast-inhibiting crowd control.</p>"
           },
           {
             "description": "Karma begins the game with one rank in Mantra. Her empowered abilities scale based on Mantra's rank."

@@ -96,10 +96,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Fiddlesticks/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate - Scarecrow Effigy:</span> Fiddlesticks begins the game with an exclusive Scarecrow Effigy, which permanently occupies the trinket slot. Fiddlesticks can pretend to be an Effigy by standing still and not acting nor being acted upon for 2 seconds, during which it adjusts its body into a scarecrow and extends its arm out to expose its lantern."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Scarecrow Effigy:</span> Fiddlesticks begins the game with an exclusive Scarecrow Effigy, which permanently occupies the trinket slot. Fiddlesticks can pretend to be an Effigy by standing still and not acting nor being acted upon for 2 seconds, during which it adjusts its body into a scarecrow and extends its arm out to expose its lantern.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Innate - A Harmless Scarecrow:</span> From level 6 onward, placing an Effigy also summons a Sweeper Drone at the location for 6 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - A Harmless Scarecrow:</span> From level 6 onward, placing an Effigy also summons a Sweeper Drone at the location for 6 seconds.</p>"
           }
         ],
         "targeting": "Vector",
@@ -115,7 +115,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Fiddlesticks/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> While Fiddlesticks has been out of combat for at least 2.5 seconds and is not visible to the enemy team, or is pretending to be an Effigy, its next damaging ability will additionally fear targets hit for a duration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> While Fiddlesticks has been out of combat for at least 2.5 seconds and is not visible to the enemy team, or is pretending to be an Effigy, its next damaging ability will additionally fear targets hit for a duration.</p>",
             "leveling": [
               {
                 "attribute": "Fear Duration",
@@ -137,7 +137,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Fiddlesticks launches a crow at the target enemy that deals magic damage and fears them for a duration. Terrify has a minimum damage threshold and is capped at 400 against monsters.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Fiddlesticks launches a crow at the target enemy that deals magic damage and fears them for a duration. Terrify has a minimum damage threshold and is capped at 400 against monsters.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -275,7 +275,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Fiddlesticks/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Fiddlesticks forms a tether between itself and each nearby enemy over the cast time, then channels for up to 2 seconds to harvest their souls, revealing them in the process."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Fiddlesticks forms a tether between itself and each nearby enemy over the cast time, then channels for up to 2 seconds to harvest their souls, revealing them in the process.</p>"
           },
           {
             "description": "While Fiddlesticks is channeling, the tethered enemies are dealt magic damage every 0.25 seconds, with the final tick at the end of the channel dealing additional magic damage. Bountiful Harvest deals 135% damage against monsters and 50% damage against minions.",
@@ -562,7 +562,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Fiddlesticks/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Fiddlesticks slashes the target location with its scythe, dealing magic damage to enemies within the area and slowing them for 1.25 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Fiddlesticks slashes the target location with its scythe, dealing magic damage to enemies within the area and slowing them for 1.25 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -641,7 +641,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Fiddlesticks/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Fiddlesticks channels for 1.5 seconds, then blinks to the target location upon completion with a murder of crows flying wildly around it for 5 seconds, dealing magic damage every 0.25 seconds to nearby enemies.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Fiddlesticks channels for 1.5 seconds, then blinks to the target location upon completion with a murder of crows flying wildly around it for 5 seconds, dealing magic damage every 0.25 seconds to nearby enemies.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage per Tick",

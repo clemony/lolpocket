@@ -99,13 +99,13 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ashe/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Ashe's basic attacks deal bonus physical damage equal to (75% + 40%) critical strike chance. Critical strikes do not deal any additional damage."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Ashe's basic attacks deal bonus physical damage equal to (75% + 40%) critical strike chance. Critical strikes do not deal any additional damage.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Innate - Frost Shot:</span> Ashe's basic attacks and ability hits apply Frost to enemies for 2 seconds, which slows them by 20% - 30% (based on level) for the duration."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Frost Shot:</span> Ashe's basic attacks and ability hits apply Frost to enemies for 2 seconds, which slows them by 20% - 30% (based on level) for the duration.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Innate - Critical Slow:</span> Ashe's critical strikes double Frost's slow strength to 40% - 60% (based on level), decaying over the first second of the duration to its normal strength."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Critical Slow:</span> Ashe's critical strikes double Frost's slow strength to 40% - 60% (based on level), decaying over the first second of the duration to its normal strength.</p>"
           }
         ],
         "targeting": "Passive",
@@ -122,10 +122,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ashe/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> While Ranger's Focus is inactive, Ashe's basic attacks on-attack generate a stack of Focus for 4 seconds, which refreshes on subsequent attacks and stacks up to 4 times. Stacks expire by one every 1 second."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> While Ranger's Focus is inactive, Ashe's basic attacks on-attack generate a stack of Focus for 4 seconds, which refreshes on subsequent attacks and stacks up to 4 times. Stacks expire by one every 1 second.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Ashe gains bonus attack speed for 6 seconds and empowers her basic attacks to fire a flurry of five arrows.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ashe gains bonus attack speed for 6 seconds and empowers her basic attacks to fire a flurry of five arrows.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -214,7 +214,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ashe/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Ashe shoots a volley of arrows in a cone in the target direction, each dealing physical damage to the first enemy hit, and applying Critical Slow to enemy champions hit.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ashe shoots a volley of arrows in a cone in the target direction, each dealing physical damage to the first enemy hit, and applying Critical Slow to enemy champions hit.</p>",
             "leveling": [
               {
                 "attribute": "Arrows",
@@ -295,7 +295,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ashe/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Ashe sends a hawk to a location, granting sight of the area along its path[ repeatedly for 0.5 seconds after every 100 units traveled ][ for effectively up-to 1.8 seconds at any location ]and at its destination for 5 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ashe sends a hawk to a location, granting sight of the area along its path[ repeatedly for 0.5 seconds after every 100 units traveled ][ for effectively up-to 1.8 seconds at any location ]and at its destination for 5 seconds.</p>"
           },
           {
             "description": "Ashe periodically stocks a Hawkshot charge, up to a maximum of 2."
@@ -334,7 +334,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Ashe/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Ashe fires a massive arrow of ice in the target direction, granting sight of the area it flies through each for 1 second. The arrow shatters upon hitting an enemy champion, dealing them magic damage, stunning them for 1 - 3.5 (based on distance traveled) seconds, and granting sight of the area around them for 1 second.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ashe fires a massive arrow of ice in the target direction, granting sight of the area it flies through each for 1 second. The arrow shatters upon hitting an enemy champion, dealing them magic damage, stunning them for 1 - 3.5 (based on distance traveled) seconds, and granting sight of the area around them for 1 second.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",

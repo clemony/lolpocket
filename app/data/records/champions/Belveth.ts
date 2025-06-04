@@ -89,13 +89,13 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Belveth/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Bel'Veth attacks 36% faster than the median champion and her attack speed cap is modified to 9999.0, but all sources of damage (including on-hit damage) dealt by her basic attacks are reduced to 75%. Her attack speed does not increase through growth (per level)."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Bel'Veth attacks 36% faster than the median champion and her attack speed cap is modified to 9999.0, but all sources of damage (including on-hit damage) dealt by her basic attacks are reduced to 75%. Her attack speed does not increase through growth (per level).</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Bel'Veth's ability casts each generate 2 stacks of Death in Lavender, lasting for 5 seconds, refreshing on basic attacks and subsequent casts, and stacking up to 6 times. While Bel'Veth has stacks, she becomes ghosted and gains 20% - 40% (based on level) bonus attack speed. Her basic attacks each consume 1 stack."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Bel'Veth's ability casts each generate 2 stacks of Death in Lavender, lasting for 5 seconds, refreshing on basic attacks and subsequent casts, and stacking up to 6 times. While Bel'Veth has stacks, she becomes ghosted and gains 20% - 40% (based on level) bonus attack speed. Her basic attacks each consume 1 stack.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Whenever Bel'Veth scores a takedown against a champion, monster, or large minion within 3 seconds of damaging them, she generates a permanent stack of Lavender. Large minions and monsters generate 1 stack, champions and epic monsters generate 2 stacks.\n<span class=\"ability-header\">Lavender:</span> For each stack, Bel'Veth gains 0.28% - 1% (based on level) bonus attack speed."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Whenever Bel'Veth scores a takedown against a champion, monster, or large minion within 3 seconds of damaging them, she generates a permanent stack of Lavender. Large minions and monsters generate 1 stack, champions and epic monsters generate 2 stacks.</p>\n<p class=\"ability-effect\"><span class=\"ability-header\">Lavender:</span> For each stack, Bel'Veth gains 0.28% - 1% (based on level) bonus attack speed.</p>"
           }
         ],
         "targeting": "Passive",
@@ -110,7 +110,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Belveth/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Bel'Veth dashes in the designated direction, though not through terrain, dealing physical damage to enemies she passes through. Against the first target, Void Surge can critically strike for (175% + 40%) damage and applies on-hit effects, with on-hit damage reduced to 75% effectiveness, and life steal at 100% effectiveness.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Bel'Veth dashes in the designated direction, though not through terrain, dealing physical damage to enemies she passes through. Against the first target, Void Surge can critically strike for (175% + 40%) damage and applies on-hit effects, with on-hit damage reduced to 75% effectiveness, and life steal at 100% effectiveness.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -226,7 +226,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Belveth/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Bel'Veth slams her tail down in the target direction that deals magic damage to enemies hit, knocks them up for 0.75 seconds, and slows them by 50% for a duration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Bel'Veth slams her tail down in the target direction that deals magic damage to enemies hit, knocks them up for 0.75 seconds, and slows them by 50% for a duration.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -310,7 +310,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Belveth/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Bel'Veth enters a defensive stance for 1.5 seconds, during which she is unable to move, but gains damage reduction and 20% (+ 100% life steal) life steal.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Bel'Veth enters a defensive stance for 1.5 seconds, during which she is unable to move, but gains damage reduction and 20% (+ 100% life steal) life steal.</p>",
             "leveling": [
               {
                 "attribute": "Damage Reduction",
@@ -433,7 +433,7 @@
             "description": "Royal Maelstrom can be recast after 0.75 seconds within the duration, and does so automatically after the duration or when Bel'Veth casts an ability."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Bel'Veth ends Royal Maelstrom."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Bel'Veth ends Royal Maelstrom.</p>"
           }
         ],
         "cost": [
@@ -464,7 +464,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Belveth/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Bel'Veth's basic attacks on-hit apply a mark to the target for 5 seconds, refreshing on subsequent hits. Every second attack on-hit against the marked target deals bonus true damage and generates a stack of Endless Banquet that increases this damage by the same value. This effect stacks infinitely, but is capped at 5 stacks against epic monsters. The mark and stacks expire upon attacking a new target.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Bel'Veth's basic attacks on-hit apply a mark to the target for 5 seconds, refreshing on subsequent hits. Every second attack on-hit against the marked target deals bonus true damage and generates a stack of Endless Banquet that increases this damage by the same value. This effect stacks infinitely, but is capped at 5 stacks against epic monsters. The mark and stacks expire upon attacking a new target.</p>",
             "leveling": [
               {
                 "attribute": "Bonus True Damage",
@@ -509,10 +509,10 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Passive:</span> When Bel'Veth scores a takedown against an enemy champion or epic monster while alive, a Void Coral is spawned from their corpse for 15 seconds. Baron Nashor, the pit Rift Herald, and Voidgrubs (once per spawn group) spawn an Enhanced Void Coral."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> When Bel'Veth scores a takedown against an enemy champion or epic monster while alive, a Void Coral is spawned from their corpse for 15 seconds. Baron Nashor, the pit Rift Herald, and Voidgrubs (once per spawn group) spawn an Enhanced Void Coral.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Bel'Veth dashes to the target Void Coral to consume it over the cast time, slowing nearby enemies by 25% - 96% (based on seconds elapsed) for the duration. She then creates an explosion at the location to deal true damage to enemies within, capped at 1500 versus monsters, and assumes her True Form for 60 seconds.\nBel'Veth consumes all existing Void Corals at once, generating a stack of Lavender for each one consumed.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Bel'Veth dashes to the target Void Coral to consume it over the cast time, slowing nearby enemies by 25% - 96% (based on seconds elapsed) for the duration. She then creates an explosion at the location to deal true damage to enemies within, capped at 1500 versus monsters, and assumes her True Form for 60 seconds.</p>\nBel'Veth consumes all existing Void Corals at once, generating a stack of Lavender for each one consumed.",
             "leveling": [
               {
                 "attribute": "True Damage",
@@ -545,7 +545,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">True Form:</span> Bel'Veth evolves into a monster, gaining bonus health, bonus movement speed out-of-combat, 75 bonus attack range, as well as increased total attack speed. Void Surge can dash through terrain. Consuming a Void Coral refreshes the duration of True Form and heals Bel'Veth.\n<span class=\"ability-header\">Enhanced Void Coral Bonus:</span> True Form is empowered to last 180 seconds and causes Void Remora to spawn from allied and enemy minions that die nearby.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">True Form:</span> Bel'Veth evolves into a monster, gaining bonus health, bonus movement speed out-of-combat, 75 bonus attack range, as well as increased total attack speed. Void Surge can dash through terrain. Consuming a Void Coral refreshes the duration of True Form and heals Bel'Veth.</p>\n<p class=\"ability-effect\"><span class=\"ability-header\">Enhanced Void Coral Bonus:</span> True Form is empowered to last 180 seconds and causes Void Remora to spawn from allied and enemy minions that die nearby.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Health",

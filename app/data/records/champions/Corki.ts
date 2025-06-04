@@ -98,7 +98,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Corki/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Corki's basic attacks deal bonus true damage equal to 20% AD. This damage is affected by critical strike modifiers."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Corki's basic attacks deal bonus true damage equal to 20% AD. This damage is affected by critical strike modifiers.</p>"
           }
         ],
         "targeting": "Passive",
@@ -115,7 +115,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Corki/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Corki launches a bomb at the target location that explodes upon impact, dealing magic damage to enemies hit.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Corki launches a bomb at the target location that explodes upon impact, dealing magic damage to enemies hit.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -189,7 +189,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Corki/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Corki dashes to the target location and drops bombs that leave up to 3 blazing patches along his path, depending on the distance traveled. Each patch lasts 2.5 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Corki dashes to the target location and drops bombs that leave up to 3 blazing patches along his path, depending on the distance traveled. Each patch lasts 2.5 seconds.</p>"
           },
           {
             "description": "Enemies within the patches are dealt magic damage every 0.5 seconds, lingering for 1 second.",
@@ -296,7 +296,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Corki/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Corki sprays bullets in a cone toward his facing direction for 4 seconds, dealing physical damage every 0.25 seconds to all enemies hit and applying a stack to them at the same tick rate for 2 seconds, refreshing with subsequent hits and stacking up to 4 times. Each stack reduces the target's armor and magic resistance.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Corki sprays bullets in a cone toward his facing direction for 4 seconds, dealing physical damage every 0.25 seconds to all enemies hit and applying a stack to them at the same tick rate for 2 seconds, refreshing with subsequent hits and stacking up to 4 times. Each stack reduces the target's armor and magic resistance.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage Per Tick",
@@ -404,10 +404,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Corki/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Basic attacks on-hit against champions reduce Missile Barrage's remaining recharge time by 2 - 4 (based on critical strike chance) seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Basic attacks on-hit against champions reduce Missile Barrage's remaining recharge time by 2 - 4 (based on critical strike chance) seconds.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Corki fires a missile in the target direction that explodes upon the first enemy hit, dealing physical damage to enemies within the area.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Corki fires a missile in the target direction that explodes upon the first enemy hit, dealing physical damage to enemies within the area.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",

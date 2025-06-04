@@ -98,10 +98,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vex/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive - Doom:</span> Periodically, Vex empowers her next basic ability to knock down and fear enemies hit for 0.75 / 1 / 1.25 / 1.5 (based on level) seconds, during which they are slowed by 60% - 99% (based on distance from Vex). If Looming Darkness triggers Doom, enemies hit will flee from the epicenter instead.Doom's cooldown resets upon respawning."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive - Doom:</span> Periodically, Vex empowers her next basic ability to knock down and fear enemies hit for 0.75 / 1 / 1.25 / 1.5 (based on level) seconds, during which they are slowed by 60% - 99% (based on distance from Vex). If Looming Darkness triggers Doom, enemies hit will flee from the epicenter instead.Doom's cooldown resets upon respawning.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Innate - Gloom:</span> Nearby enemy champions and monsters that dash or blink will be marked with Gloom for 6 seconds. Vex's next basic attack, which becomes non-projectile, or basic ability hit against an enemy with Gloom will detonate the mark. Looming Darkness will also inflict Gloom, but cannot detonate it."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Gloom:</span> Nearby enemy champions and monsters that dash or blink will be marked with Gloom for 6 seconds. Vex's next basic attack, which becomes non-projectile, or basic ability hit against an enemy with Gloom will detonate the mark. Looming Darkness will also inflict Gloom, but cannot detonate it.</p>"
           },
           {
             "description": "Gloom's detonation deals 40 - 150 (based on level) (+ 25% AP) bonus magic damage and refunds 25% of Doom's cooldown. Against non-champions, this instead deals 40 / 45 / 50 / 55 / 60% (based on level) damage and refunds 10% of Doom's cooldown."
@@ -124,7 +124,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vex/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Vex launches a wave of mist in the target direction that deals magic damage to enemies hit. After travelling 500 units, the wave accelerates but also narrows itself.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Vex launches a wave of mist in the target direction that deals magic damage to enemies hit. After travelling 500 units, the wave accelerates but also narrows itself.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -186,7 +186,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vex/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Vex emits a shockwave around her before the cast time, dealing magic damage to nearby enemies and granting herself a shield for 2.5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Vex emits a shockwave around her before the cast time, dealing magic damage to nearby enemies and granting herself a shield for 2.5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Shield Strength",
@@ -267,7 +267,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vex/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Vex tosses her Shadow to explode at the target location, dealing magic damage to enemies hit and slowing them for 2 seconds. The explosion's radius increases based on cast distance.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Vex tosses her Shadow to explode at the target location, dealing magic damage to enemies hit and slowing them for 2 seconds. The explosion's radius increases based on cast distance.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -353,7 +353,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Vex/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Vex sends her Shadow in the target direction that grants sight around its trajectory and deals magic damage to enemies hit.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Vex sends her Shadow in the target direction that grants sight around its trajectory and deals magic damage to enemies hit.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -381,7 +381,7 @@
             "description": "Shadow stops upon hitting an enemy champion to mark them for 4 seconds, during which they are revealed. Shadow Surge can be recast while the target is marked."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Vex dashes towards the marked target with displacement immunity. Upon arrival, she consumes their mark and deals magic damage.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Vex dashes towards the marked target with displacement immunity. Upon arrival, she consumes their mark and deals magic damage.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",

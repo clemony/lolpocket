@@ -98,13 +98,13 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Samira/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Samira's damaging basic attacks and abilities against at least one enemy champion different from the previous damaging hit made against champions generate a stack of Style for 6 seconds, refreshing on subsequent hits and stacking up to 6 times."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Samira's damaging basic attacks and abilities against at least one enemy champion different from the previous damaging hit made against champions generate a stack of Style for 6 seconds, refreshing on subsequent hits and stacking up to 6 times.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Style:</span> For each stack, Samira gains 2 / 2.5 / 3 / 3.5% (based on level) bonus movement speed, up to a maximum of 12 / 15 / 18 / 21% (based on level). At maximum stacks, Samira can cast Inferno Trigger."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Style:</span> For each stack, Samira gains 2 / 2.5 / 3 / 3.5% (based on level) bonus movement speed, up to a maximum of 12 / 15 / 18 / 21% (based on level). At maximum stacks, Samira can cast Inferno Trigger.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Samira's basic attacks against targets within 200 units of her use her blade, becoming non-projectile. Blade attacks post-hit, Blade Whirl, Wild Rush, and the slash and explosives of Flair deal 2 - 19 (based on level) (+ 3.5% - 10.5% (based on level) AD) bonus magic damage, increased by 0% - 100% (based on target's missing health)."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Samira's basic attacks against targets within 200 units of her use her blade, becoming non-projectile. Blade attacks post-hit, Blade Whirl, Wild Rush, and the slash and explosives of Flair deal 2 - 19 (based on level) (+ 3.5% - 10.5% (based on level) AD) bonus magic damage, increased by 0% - 100% (based on target's missing health).</p>"
           },
           {
             "description": "Samira's basic attack against an immobilized target is empowered to have an uncancellable windup and deal the attack's damage over 6 strikes in 0.5 seconds. If the target is a monster or is airborne, the attack also knocks them up for 0.5 seconds. Samira will dash into her attack range of the target if they are nearby."
@@ -131,7 +131,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Samira/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Samira fires a shot in the target direction that deals physical damage to the first enemy hit.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Samira fires a shot in the target direction that deals physical damage to the first enemy hit.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -203,7 +203,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Samira/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Samira spins her blade over 0.75 seconds, destroying all hostile non- turret projectiles within the area for the duration."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Samira spins her blade over 0.75 seconds, destroying all hostile non- turret projectiles within the area for the duration.</p>"
           },
           {
             "description": "Samira slashes twice during Blade Whirl, each one dealing physical damage to all nearby enemies. The first slash occurs immediately and the second one occurs after the duration.",
@@ -287,7 +287,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Samira/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Samira dashes a fixed distance in the direction of the target enemy or enemy structure, dealing magic damage to enemies she passes through. She also gains bonus attack speed for 5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Samira dashes a fixed distance in the direction of the target enemy or enemy structure, dealing magic damage to enemies she passes through. She also gains bonus attack speed for 5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -368,7 +368,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Samira/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Samira unleashes a torrent of shots for 2.277 seconds, reducing her movement speed by 30% and rapidly shooting at nearby enemies over 2.013 seconds at sporadic times in 0.2-second intervals each (10 times per enemy), dealing physical damage with each shot, reduced by 75% against minions. This damage is affected by critical strike modifiers and applies life steal at 80% effectiveness.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Samira unleashes a torrent of shots for 2.277 seconds, reducing her movement speed by 30% and rapidly shooting at nearby enemies over 2.013 seconds at sporadic times in 0.2-second intervals each (10 times per enemy), dealing physical damage with each shot, reduced by 75% against minions. This damage is affected by critical strike modifiers and applies life steal at 80% effectiveness.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage Per Shot",

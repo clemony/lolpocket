@@ -94,7 +94,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Shyvana/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Shyvana gains 5 bonus armor and 5 bonus magic resistance, which are each increased by 5 for every elemental drake and Elder Dragon her team slays."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Shyvana gains 5 bonus armor and 5 bonus magic resistance, which are each increased by 5 for every elemental drake and Elder Dragon her team slays.</p>"
           },
           {
             "description": "Additionally, Shyvana deals 20% increased damage to Dragons."
@@ -112,7 +112,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Shyvana/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Shyvana empowers her next basic attack within 6 seconds to gain 25 bonus range, deal 100% AD (+ 50% AP) physical damage, and cause her to strike again after 0.25 seconds to deal bonus physical damage.The second strike applies on-hit effects, triggers on-attack effects, and can critically strike for (175% + 40%) damage if the triggering attack does.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Shyvana empowers her next basic attack within 6 seconds to gain 25 bonus range, deal 100% AD (+ 50% AP) physical damage, and cause her to strike again after 0.25 seconds to deal bonus physical damage.The second strike applies on-hit effects, triggers on-attack effects, and can critically strike for (175% + 40%) damage if the triggering attack does.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage",
@@ -167,7 +167,7 @@
             "description": "Basic attacks reduce Twin Bite's current cooldown by 0.5 seconds on-hit."
           },
           {
-            "description": "<span class=\"ability-header\">Dragon Form Bonus:</span> Shyvana attacks enemies in a cone in front of her and additionally applies the second strike to enemies surrounding the primary target. Both the attack and the strike occur at the same time and each of them apply Twin Bite's respective effects to all targets hit, with the exception of the second strike not triggering on-attack effects for secondary targets struck. The attack is affected by critical strike modifiers, applies on-hit effects to all enemies hit, and triggers on-attack effects for every target hit. Additionally, Twin Bite's empowered attack has an uncancellable windup."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Dragon Form Bonus:</span> Shyvana attacks enemies in a cone in front of her and additionally applies the second strike to enemies surrounding the primary target. Both the attack and the strike occur at the same time and each of them apply Twin Bite's respective effects to all targets hit, with the exception of the second strike not triggering on-attack effects for secondary targets struck. The attack is affected by critical strike modifiers, applies on-hit effects to all enemies hit, and triggers on-attack effects for every target hit. Additionally, Twin Bite's empowered attack has an uncancellable windup.</p>"
           },
           {
             "description": "Twin Bite resets Shyvana's basic attack timer."
@@ -202,7 +202,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Shyvana/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Shyvana surrounds herself in flames for 3 seconds, gaining decaying bonus movement speed and dealing magic damage every 0.5 seconds to nearby enemies.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Shyvana surrounds herself in flames for 3 seconds, gaining decaying bonus movement speed and dealing magic damage every 0.5 seconds to nearby enemies.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -298,7 +298,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Dragon Form Bonus:</span> Burnout's radius increases, scaling with Dragon's Descent's rank."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Dragon Form Bonus:</span> Burnout's radius increases, scaling with Dragon's Descent's rank.</p>"
           }
         ],
         "cost": [
@@ -325,7 +325,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Shyvana/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Shyvana unleashes a fireball in the target direction that stops upon hitting an enemy champion, dealing magic damage to all enemies hit and marking them for 5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Shyvana unleashes a fireball in the target direction that stops upon hitting an enemy champion, dealing magic damage to all enemies hit and marking them for 5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -363,7 +363,7 @@
             "description": "Shyvana's basic attacks against marked enemies are empowered to deal bonus magic damage on-hit equal to 3% (+ 1% per 100 bonus AD) of the target's maximum health, capped at 150 against monsters."
           },
           {
-            "description": "<span class=\"ability-header\">Dragon Form Bonus:</span> The fireball explodes upon hitting an enemy champion or reaching the target location, dealing increased magic damage and creating a scorched field for 4 seconds. Enemies within the field are marked once and dealt 20 - 50 (based on level) (+ 7.5% bonus AD) (+ 10% AP) magic damage every 0.5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Dragon Form Bonus:</span> The fireball explodes upon hitting an enemy champion or reaching the target location, dealing increased magic damage and creating a scorched field for 4 seconds. Enemies within the field are marked once and dealt 20 - 50 (based on level) (+ 7.5% bonus AD) (+ 10% AP) magic damage every 0.5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Increased Damage",
@@ -455,7 +455,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Shyvana/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive - Fury:</span> Dragon's Descent requires 100 Fury to be cast. Shyvana generates Fury per second while alive and in Human form and 2 Fury per basic attack on-hit in either form. Shyvana gains 100 Fury upon learning Dragon's Descent.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive - Fury:</span> Dragon's Descent requires 100 Fury to be cast. Shyvana generates Fury per second while alive and in Human form and 2 Fury per basic attack on-hit in either form. Shyvana gains 100 Fury upon learning Dragon's Descent.</p>",
             "leveling": [
               {
                 "attribute": "Fury Generation per Second",
@@ -472,7 +472,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Shyvana transforms into Dragon Form and dashes with displacement immunity to the target location, dealing magic damage to enemies she passes through and carrying them alongside her.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Shyvana transforms into Dragon Form and dashes with displacement immunity to the target location, dealing magic damage to enemies she passes through and carrying them alongside her.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -497,7 +497,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Dragon Form:</span> Shyvana gains bonus health, bonus attack range, and increased size. Her abilities are also empowered to apply an additional effect. She maintains Dragon Form at a recurring cost of Fury, returning to Human Form once all Fury has been depleted.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Dragon Form:</span> Shyvana gains bonus health, bonus attack range, and increased size. Her abilities are also empowered to apply an additional effect. She maintains Dragon Form at a recurring cost of Fury, returning to Human Form once all Fury has been depleted.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Health",

@@ -97,10 +97,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gwen/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Gwen's basic attacks on-hit, the center of Snip Snip!, and Needlework deal bonus magic damage equal to 1% (+ 0.55% per 100 AP) of the target's maximum health."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Gwen's basic attacks on-hit, the center of Snip Snip!, and Needlework deal bonus magic damage equal to 1% (+ 0.55% per 100 AP) of the target's maximum health.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">A Thousand Cuts is modified based on the target:</span>\n Heals Gwen for 50% of post-mitigation damage dealt against champions, capped at 10 - 25 (based on level) (+ 6.5% AP) per instance.\nDeals an additional 8 - 30 (based on level) bonus magic damage against minions that are below 40% health.\nDeals a maximum of 5 (+ 10% AP) magic damage against monsters."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">A Thousand Cuts is modified based on the target:</span></p>\n Heals Gwen for 50% of post-mitigation damage dealt against champions, capped at 10 - 25 (based on level) (+ 6.5% AP) per instance.\nDeals an additional 8 - 30 (based on level) bonus magic damage against minions that are below 40% health.\nDeals a maximum of 5 (+ 10% AP) magic damage against monsters."
           }
         ],
         "targeting": "Passive",
@@ -117,10 +117,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gwen/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Gwen's basic attacks generate a stack of Snippy on-hit for 6 seconds, stacking up to 4 times and refreshing on subsequent attacks."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Gwen's basic attacks generate a stack of Snippy on-hit for 6 seconds, stacking up to 4 times and refreshing on subsequent attacks.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Gwen snips at least twice with her scissors in a cone in the target direction over the cast time, dealing magic damage per snip to all enemies within the area, with the final snip dealing increased damage. The center of each snip converts 50% of the damage to true damage, then applies A Thousand Cuts. Snip Snip! deals 75% damage against minions, and executes them on the first damage instance if they are below 20% health.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Gwen snips at least twice with her scissors in a cone in the target direction over the cast time, dealing magic damage per snip to all enemies within the area, with the final snip dealing increased damage. The center of each snip converts 50% of the damage to true damage, then applies A Thousand Cuts. Snip Snip! deals 75% damage against minions, and executes them on the first damage instance if they are below 20% health.</p>",
             "leveling": [
               {
                 "attribute": "Damage per Snip",
@@ -366,13 +366,13 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gwen/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Gwen summons the Hallowed Mist upon her current location, lasting for 4 seconds. Hallowed Mist can be recast after 0.5 seconds, and does so automatically if Gwen attempts to leave the area."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Gwen summons the Hallowed Mist upon her current location, lasting for 4 seconds. Hallowed Mist can be recast after 0.5 seconds, and does so automatically if Gwen attempts to leave the area.</p>"
           },
           {
             "description": "While inside the mist, Gwen becomes ghosted, gains 22 (+ 7% AP) bonus armor and bonus magic resistance and is untargetable to all enemies (except turrets and monsters) outside of the mist."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Gwen commands the mist to move to her current location."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Gwen commands the mist to move to her current location.</p>"
           },
           {
             "description": "Gwen negates all attacks by monsters outside of the mist."
@@ -405,7 +405,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gwen/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Gwen dashes to the target location, then empowers her basic attacks within the next 4 seconds to deal bonus magic damage on-hit and gain bonus attack speed and 75 bonus attack range.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Gwen dashes to the target location, then empowers her basic attacks within the next 4 seconds to deal bonus magic damage on-hit and gain bonus attack speed and 75 bonus attack range.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Magic Damage On-Hit",
@@ -483,7 +483,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Gwen/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Gwen launches a needle in the target direction that deals magic damage to enemies hit and slows them by 60% them for 1.5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Gwen launches a needle in the target direction that deals magic damage to enemies hit and slows them by 60% them for 1.5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage per Needle",
@@ -539,7 +539,7 @@
             "description": "Needlework can be recast twice more within 6 seconds of the activation at no additional cost, with a 1-second static cooldown between casts. Each subsequent cast refreshes the duration and increases the number of needles launched by 2. Needle hits beyond the first apply a slow of 25% against each individual target."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Gwen mimics the first cast's effects, while barraging three needles on the second cast and five on the third cast.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Gwen mimics the first cast's effects, while barraging three needles on the second cast and five on the third cast.</p>",
             "leveling": [
               {
                 "attribute": "Second Cast Total Damage",

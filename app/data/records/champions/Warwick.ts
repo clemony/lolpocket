@@ -101,7 +101,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Warwick/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Warwick deals 12 - 46 (based on level) (+ 15% bonus AD) (+ 10% AP) bonus magic damage on-hit.\nWhile below 50% maximum health, Warwick also heals for 100% of the post-mitigation damage dealt by Eternal Hunger, increased to 250% while below 25% maximum health."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Warwick deals 12 - 46 (based on level) (+ 15% bonus AD) (+ 10% AP) bonus magic damage on-hit.</p>\nWhile below 50% maximum health, Warwick also heals for 100% of the post-mitigation damage dealt by Eternal Hunger, increased to 250% while below 25% maximum health."
           }
         ],
         "targeting": "Passive",
@@ -119,7 +119,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Warwick/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Warwick lunges at the target enemy over 0.264 seconds and bites them, dealing magic damage, healing himself for a percentage of the post-mitigation damage dealt, applying on-hit effects and life steal at 100% effectiveness, and triggering on-attack effects. The damage based on the target's health ratio is capped against monsters.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Warwick lunges at the target enemy over 0.264 seconds and bites them, dealing magic damage, healing himself for a percentage of the post-mitigation damage dealt, applying on-hit effects and life steal at 100% effectiveness, and triggering on-attack effects. The damage based on the target's health ratio is capped against monsters.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -207,7 +207,7 @@
             "description": "While Jaws of the Beast is active, Warwick is displacement immune and clamps his jaw on the target, following all of their movement. The ability can be held for additional effects."
           },
           {
-            "description": "<span class=\"ability-header\">Hold:</span> Warwick performs the bite, and then begins to charge for 0.5 seconds, extended if the target is under effects of a dash or displacement. During the charge, he leaps behind the target."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Hold:</span> Warwick performs the bite, and then begins to charge for 0.5 seconds, extended if the target is under effects of a dash or displacement. During the charge, he leaps behind the target.</p>"
           }
         ],
         "cost": [
@@ -242,7 +242,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Warwick/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Warwick gains bonus attack speed for 1.25 seconds upon damaging a target to or while they are below 50% of their maximum health with a basic attack or ability damage, refreshing with subsequent damaging basic attacks or ability damage to enemies below the threshold. If Warwick does not have the bonus attack speed already, he also gains it upon initiating an attack windup against an enemy below the threshold.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Warwick gains bonus attack speed for 1.25 seconds upon damaging a target to or while they are below 50% of their maximum health with a basic attack or ability damage, refreshing with subsequent damaging basic attacks or ability damage to enemies below the threshold. If Warwick does not have the bonus attack speed already, he also gains it upon initiating an attack windup against an enemy below the threshold.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -264,7 +264,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Warwick senses all enemy champions on the map who are damaged below 50% of their maximum health by him or an allied source, marking them with Blood Hunt until they regenerate or heal above this threshold again. He sees trails leading toward them and gains bonus movement speed while following a trail. This bonus is lost for 0.5 seconds upon entering champion combat, but will build up again over 3.5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Warwick senses all enemy champions on the map who are damaged below 50% of their maximum health by him or an allied source, marking them with Blood Hunt until they regenerate or heal above this threshold again. He sees trails leading toward them and gains bonus movement speed while following a trail. This bonus is lost for 0.5 seconds upon entering champion combat, but will build up again over 3.5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -325,7 +325,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Warwick senses the nearest enemy champion in the area at the start of the cast time, marking them with Blood Hunt for 8 seconds, gaining both passive bonuses against them regardless of their current health."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Warwick senses the nearest enemy champion in the area at the start of the cast time, marking them with Blood Hunt for 8 seconds, gaining both passive bonuses against them regardless of their current health.</p>"
           },
           {
             "description": "Blood Hunt's cooldown is reduced by 30% if no enemy champions are found within range."
@@ -358,7 +358,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Warwick/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Warwick gains damage reduction for up to 2.5 seconds. Primal Howl can be recast after 1 second, and does so automatically after the duration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Warwick gains damage reduction for up to 2.5 seconds. Primal Howl can be recast after 1 second, and does so automatically after the duration.</p>",
             "leveling": [
               {
                 "attribute": "Damage Reduction",
@@ -380,7 +380,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Warwick howls, ending Primal Howl's effects and fearing nearby enemies for 1 second, slowing them by 90%."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Warwick howls, ending Primal Howl's effects and fearing nearby enemies for 1 second, slowing them by 90%.</p>"
           },
           {
             "description": "Starting Infinite Duress' channel while Primal Howl is active will initiate the recast without ending the damage reduction buff prematurely."
@@ -413,7 +413,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Warwick/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Warwick leaps in the target direction with crowd control immunity, stopping upon hitting an enemy champion. He then knocks them down and channels for up to 1.5 seconds to suppress, reveal, and deal magic damage every 0.25 seconds, revealing himself in the process.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Warwick leaps in the target direction with crowd control immunity, stopping upon hitting an enemy champion. He then knocks them down and channels for up to 1.5 seconds to suppress, reveal, and deal magic damage every 0.25 seconds, revealing himself in the process.</p>",
             "leveling": [
               {
                 "attribute": "Total Magic Damage",

@@ -99,7 +99,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Malzahar/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Periodically, Malzahar gains Void Shift until he takes non- minion damage or negates a crowd control effect, to which it then lingers for 0.25 seconds before expiring. Void Shift: Malzahar gains crowd control immunity and 90% damage reduction."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Periodically, Malzahar gains Void Shift until he takes non- minion damage or negates a crowd control effect, to which it then lingers for 0.25 seconds before expiring. Void Shift: Malzahar gains crowd control immunity and 90% damage reduction.</p>"
           },
           {
             "description": "Void Shift's cooldown refreshes whenever Malzahar takes non- minion damage or is affected by a crowd control effect, and resets upon respawning."
@@ -117,7 +117,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Malzahar/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Malzahar opens two portals to the void centered at the target location, granting sight of the area in between. After 0.4 seconds, enemies between the portals are dealt magic damage and silenced for a duration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Malzahar opens two portals to the void centered at the target location, granting sight of the area in between. After 0.4 seconds, enemies between the portals are dealt magic damage and silenced for a duration.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -191,10 +191,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Malzahar/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Malzahar generates a stack of Zz'Rot Swarm when he casts another ability, up to a maximum of 2."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Malzahar generates a stack of Zz'Rot Swarm when he casts another ability, up to a maximum of 2.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Malzahar consumes all Zz'Rot Swarm stacks and, after a 0.5-second delay, summons a Voidling at the target location. Additional Voidlings are then summoned for each Zz'Rot Swarm stack consumed, with each Voidling being summoned 0.5 seconds after the previous one.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Malzahar consumes all Zz'Rot Swarm stacks and, after a 0.5-second delay, summons a Voidling at the target location. Additional Voidlings are then summoned for each Zz'Rot Swarm stack consumed, with each Voidling being summoned 0.5 seconds after the previous one.</p>",
             "leveling": [
               {
                 "attribute": "Voidling Duration",
@@ -355,7 +355,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Malzahar/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Malzahar infects the target enemy's mind, dealing magic damage every 0.25 seconds over 4 seconds, which refreshes upon damaging them with Call of the Void or Nether Grasp. Malefic Visions executes minions if they would be damaged below 10 - 30 (based on level) health.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Malzahar infects the target enemy's mind, dealing magic damage every 0.25 seconds over 4 seconds, which refreshes upon damaging them with Call of the Void or Nether Grasp. Malefic Visions executes minions if they would be damaged below 10 - 30 (based on level) health.</p>",
             "leveling": [
               {
                 "attribute": "Total Magic Damage",
@@ -442,7 +442,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Malzahar/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Malzahar tethers to the target enemy champion, knocking them down. He then channels for up to 2.5 seconds, suppressing and revealing the target and dealing them magic damage every 0.25 seconds, revealing himself in the process.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Malzahar tethers to the target enemy champion, knocking them down. He then channels for up to 2.5 seconds, suppressing and revealing the target and dealing them magic damage every 0.25 seconds, revealing himself in the process.</p>",
             "leveling": [
               {
                 "attribute": "Total Magic Damage",

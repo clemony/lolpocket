@@ -99,10 +99,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Veigar/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Veigar generates a stack of Phenomenal Evil for each enemy champion hit by his abilities, and 5 stacks whenever he scores an enemy champion takedown."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Veigar generates a stack of Phenomenal Evil for each enemy champion hit by his abilities, and 5 stacks whenever he scores an enemy champion takedown.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Phenomenal Evil:</span> For each stack, Veigar gains 1 ability power."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Phenomenal Evil:</span> For each stack, Veigar gains 1 ability power.</p>"
           }
         ],
         "targeting": "Passive",
@@ -117,7 +117,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Veigar/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Veigar blasts a dark bolt in the target direction that deals magic damage to the first two enemies hit.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Veigar blasts a dark bolt in the target direction that deals magic damage to the first two enemies hit.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -187,7 +187,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Veigar/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Veigar casts down a mass of dark matter that strikes the target location after a 1.221 seconds delay, dealing magic damage to enemies hit.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Veigar casts down a mass of dark matter that strikes the target location after a 1.221 seconds delay, dealing magic damage to enemies hit.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -251,7 +251,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Veigar/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Veigar forms a cage at the target location that erects after a 0.5 second delay, remaining there for 3 seconds. Enemies that collide with the edges of the cage are knocked down and stunned for a duration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Veigar forms a cage at the target location that erects after a 0.5 second delay, remaining there for 3 seconds. Enemies that collide with the edges of the cage are knocked down and stunned for a duration.</p>",
             "leveling": [
               {
                 "attribute": "Stun Duration",
@@ -308,7 +308,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Veigar/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Veigar sends a primordial burst at the target enemy champion that deals magic damage, increased by 0% - 100% (based on target's missing health).",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Veigar sends a primordial burst at the target enemy champion that deals magic damage, increased by 0% - 100% (based on target's missing health).</p>",
             "leveling": [
               {
                 "attribute": "Minimum Magic Damage",

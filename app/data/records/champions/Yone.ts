@@ -95,10 +95,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Yone/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate - Intent:</span> Yone's total critical strike chance is doubled from all other sources. Additionally,[ every 1% critical strike chance in excess of 100% is converted into 0.5 bonus attack damage. ][ every 50% critical strike chance in excess of 100% is converted into 25 bonus attack damage. ]"
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Intent:</span> Yone's total critical strike chance is doubled from all other sources. Additionally,[ every 1% critical strike chance in excess of 100% is converted into 0.5 bonus attack damage. ][ every 50% critical strike chance in excess of 100% is converted into 25 bonus attack damage. ]</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Innate - Steel and Spirit:</span> Yone's basic attacks alternate between his Steel Sword and Azakana Sword on-attack. Yone begins attacking with Steel Sword, and basic attacks with Azakana Sword deal 50% AD physical damage and 50% AD magic damage."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Steel and Spirit:</span> Yone's basic attacks alternate between his Steel Sword and Azakana Sword on-attack. Yone begins attacking with Steel Sword, and basic attacks with Azakana Sword deal 50% AD physical damage and 50% AD magic damage.</p>"
           }
         ],
         "targeting": "Passive",
@@ -115,7 +115,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Yone/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Yone thrusts his Steel Sword in a line in the target direction that deals physical damage to enemies hit, applies on-hit effects to the first enemy hit, and triggers on-attack effects once. Mortal Steel's damage based on its AD ratio can critically strike for (175% + 40%) damage.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yone thrusts his Steel Sword in a line in the target direction that deals physical damage to enemies hit, applies on-hit effects to the first enemy hit, and triggers on-attack effects once. Mortal Steel's damage based on its AD ratio can critically strike for (175% + 40%) damage.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -145,7 +145,7 @@
             "description": "If this hits at least one enemy, Yone generates a stack of Gathering Storm for 6 seconds, stacking up to 2 times and refreshing on subsequent hits. At 2 stacks, the next Mortal Steel consumes them all to become empowered with a new effect."
           },
           {
-            "description": "<span class=\"ability-header\">Gathering Storm Bonus:</span> Yone dashes a fixed distance in the target direction and unleashes a whirlwind in the same direction, both dealing the same damage to enemies hit in their path and knocking them up for 0.75 seconds, but being unable to affect the same target twice."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Gathering Storm Bonus:</span> Yone dashes a fixed distance in the target direction and unleashes a whirlwind in the same direction, both dealing the same damage to enemies hit in their path and knocking them up for 0.75 seconds, but being unable to affect the same target twice.</p>"
           },
           {
             "description": "Mortal Steel's thrust will fail to hit targets after the cast time if Yone was affected by disarming crowd control during it, but the cooldown of the ability is reset to 0.1 seconds."
@@ -178,7 +178,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Yone/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Yone cleaves with his Azakana Sword in a cone in the target direction, dealing equal parts physical and magic damage to enemies hit. The total mixed damage has a minimum threshold of 40 - 410 (based on level) against minions and a maximum threshold of 150 - 320 (based on level) against monsters.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yone cleaves with his Azakana Sword in a cone in the target direction, dealing equal parts physical and magic damage to enemies hit. The total mixed damage has a minimum threshold of 40 - 410 (based on level) against minions and a maximum threshold of 150 - 320 (based on level) against monsters.</p>",
             "leveling": [
               {
                 "attribute": "Total Mixed Damage",
@@ -290,10 +290,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Yone/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Yone dashes a fixed distance in the target direction, including through terrain, discarding his body and entering Spirit Form for 5 seconds. Yone's body is untargetable and is sent the same distance behind the cast location, though not through terrain, and is reclaimed when Soul Unbound ends."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yone dashes a fixed distance in the target direction, including through terrain, discarding his body and entering Spirit Form for 5 seconds. Yone's body is untargetable and is sent the same distance behind the cast location, though not through terrain, and is reclaimed when Soul Unbound ends.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Spirit Form:</span> Yone becomes ghosted and gains 10% - 30% (based on seconds active) bonus movement speed. His damaging basic attacks and abilities against enemy champions apply a mark that stores a portion of the post-mitigation damage dealt to the target by his attacks and abilities.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Spirit Form:</span> Yone becomes ghosted and gains 10% - 30% (based on seconds active) bonus movement speed. His damaging basic attacks and abilities against enemy champions apply a mark that stores a portion of the post-mitigation damage dealt to the target by his attacks and abilities.</p>",
             "leveling": [
               {
                 "attribute": "Damage Stored",
@@ -318,7 +318,7 @@
             "description": "Activation resets Way of the Hunter's current sword state. Soul Unbound can be recast after 0.5 seconds, and automatically does so after the duration."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Yone dashes back to his body with displacement immunity, ending Spirit Form and consuming the marks on each champion to deal true damage equal to the total amount of damage stored against each of them."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Yone dashes back to his body with displacement immunity, ending Spirit Form and consuming the marks on each champion to deal true damage equal to the total amount of damage stored against each of them.</p>"
           },
           {
             "description": "The automatic recast is delayed if Yone is winding up a basic attack or is unable to recast Soul Unbound under any circumstances, which includes if he cannot move or cast abilities. Soul Unbound will also immediately recast upon death or entering resurrection."
@@ -353,7 +353,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Yone/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Yone prepares a strike over the cast time, then marks all enemies within an area in the target direction, knocking them down and stunning them for 1 second. He blinks 200 units beyond the center of the last enemy champion struck, or else to maximum range instead."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yone prepares a strike over the cast time, then marks all enemies within an area in the target direction, knocking them down and stunning them for 1 second. He blinks 200 units beyond the center of the last enemy champion struck, or else to maximum range instead.</p>"
           },
           {
             "description": "After 0.3 seconds, a gust rushes along the same area that deals equal parts physical and magic damage to marked enemies within and pulls them towards the location Yone blinked to, then knocks them up for 0.75 seconds.",

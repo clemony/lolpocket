@@ -94,7 +94,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/RekSai/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Rek'Sai basic attacks and ability hits generate 25 Fury. After 8 seconds of being out of combat, she loses 20 Fury per second. Fury gain is reduced[ by 80% ][ to 5 per hit ]against minions, wards, and plants. Prey Seeker will not generate Fury against non- champions."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Rek'Sai basic attacks and ability hits generate 25 Fury. After 8 seconds of being out of combat, she loses 20 Fury per second. Fury gain is reduced[ by 80% ][ to 5 per hit ]against minions, wards, and plants. Prey Seeker will not generate Fury against non- champions.</p>"
           },
           {
             "description": "When Rek'Sai becomes Burrowed, she consumes her current Fury over 3 seconds to heal for up to 10% - 20% (based on level) maximum health at 100 Fury, stopping once fully consumed or she reaches full health. If she starts generating Fury while Burrowed, the consumption occurs after 5 seconds."
@@ -113,7 +113,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/RekSai/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Rek'Sai gains 35% bonus attack speed for 3 seconds. Her next basic attack within the duration will have an uncancellable windup and deal bonus physical damage to the target and surrounding enemies. Queen's Wrath's damage to the primary target is affected by critical strike modifiers.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rek'Sai gains 35% bonus attack speed for 3 seconds. Her next basic attack within the duration will have an uncancellable windup and deal bonus physical damage to the target and surrounding enemies. Queen's Wrath's damage to the primary target is affected by critical strike modifiers.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage",
@@ -167,7 +167,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/RekSai/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Rek'Sai fires a void bolt in the target direction that detonates on the first enemy hit, dealing magic damage to all nearby enemies and revealing them for 5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rek'Sai fires a void bolt in the target direction that detonates on the first enemy hit, dealing magic damage to all nearby enemies and revealing them for 5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -234,7 +234,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/RekSai/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Rek'Sai becomes Burrowed, reducing her sight radius to 385 units while gaining access to her Burrowed abilities. She also becomes ghosted and gains bonus movement speed, as well as Tremor Sense.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rek'Sai becomes Burrowed, reducing her sight radius to 385 units while gaining access to her Burrowed abilities. She also becomes ghosted and gains bonus movement speed, as well as Tremor Sense.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -253,7 +253,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Tremor Sense:</span> Rek'Sai and her allies gain obscured vision of nearby enemy units that are moving at a rate of once every second."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Tremor Sense:</span> Rek'Sai and her allies gain obscured vision of nearby enemy units that are moving at a rate of once every second.</p>"
           },
           {
             "description": "Once Burrow has been learned, Rek'Sai automatically becomes Burrowed upon completing a Recall channel or respawning."
@@ -278,7 +278,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/RekSai/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Rek'Sai becomes Un-Burrowed, gaining access to her Un-Burrowed abilities and emerging from the ground to deal magic damage to nearby enemies. Additionally, the nearest enemy, enemy champions, and medium and large monsters hit by the emergence are also knocked up for 1 second. All other enemies hit are instead knocked back a short distance. Targets hit cannot be displaced by Unburrow again for some time.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rek'Sai becomes Un-Burrowed, gaining access to her Un-Burrowed abilities and emerging from the ground to deal magic damage to nearby enemies. Additionally, the nearest enemy, enemy champions, and medium and large monsters hit by the emergence are also knocked up for 1 second. All other enemies hit are instead knocked back a short distance. Targets hit cannot be displaced by Unburrow again for some time.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -333,7 +333,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/RekSai/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Rek'Sai bites the target enemy, dealing 100% AD physical damage."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rek'Sai bites the target enemy, dealing 100% AD physical damage.</p>"
           },
           {
             "description": "At maximum Fury, Furious Bite deals bonus physical damage, capped at 75 - 400 (based on level) against monsters.",
@@ -405,7 +405,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/RekSai/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Rek'Sai dashes in the target direction, leaving behind a Tunnel with two interconnected entrances that lasts up to 10 minutes. The Tunnel can be traversed again when Rek'Sai targets either entrance, shutting down the Tunnel for a few seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rek'Sai dashes in the target direction, leaving behind a Tunnel with two interconnected entrances that lasts up to 10 minutes. The Tunnel can be traversed again when Rek'Sai targets either entrance, shutting down the Tunnel for a few seconds.</p>"
           },
           {
             "description": "Rek'Sai can have up to 8 Tunnels active on the map at once, but deploying beyond the maximum destroys the oldest one. Enemy champions can destroy a Tunnel by standing on either entrance for 1.5 seconds, granting them 5 upon successfully destroying the Tunnel."
@@ -439,10 +439,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/RekSai/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Rek'Sai applies Marked as Prey to enemy champions she damages, lasting for 5 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Rek'Sai applies Marked as Prey to enemy champions she damages, lasting for 5 seconds.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Rek'Sai singles out the target enemy champion Marked as Prey, becoming displacement immune and unable to act and vanishing into the ground, as well as revealing the target for 2 seconds. After 1.5 seconds, she blinks to a location near the target, becoming targetable again and emerging from the ground in Un-Burrowed form to pounce at them. Upon arrival, she slashes at the target with her claws, dealing physical damage, and dashes 125 units through them.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rek'Sai singles out the target enemy champion Marked as Prey, becoming displacement immune and unable to act and vanishing into the ground, as well as revealing the target for 2 seconds. After 1.5 seconds, she blinks to a location near the target, becoming targetable again and emerging from the ground in Un-Burrowed form to pounce at them. Upon arrival, she slashes at the target with her claws, dealing physical damage, and dashes 125 units through them.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",

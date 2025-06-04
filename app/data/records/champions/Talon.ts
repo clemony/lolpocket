@@ -95,7 +95,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Talon/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Talon's abilities apply a stack of Wound to enemy champions and large monsters hit for 6 seconds, refreshing on basic attacks and subsequent applications and stacking up to 3 times."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Talon's abilities apply a stack of Wound to enemy champions and large monsters hit for 6 seconds, refreshing on basic attacks and subsequent applications and stacking up to 3 times.</p>"
           },
           {
             "description": "Talon's next basic attack against an enemy with 3 Wound stacks is empowered to consume them all to cause the target to bleed, dealing[ 80 - 280 (based on level) (+ 210% bonus AD) total physical damage over 2 seconds, ][ 5 - 17.5 (based on level) (+ 13.125% bonus AD) physical damage every 0.125 seconds over 2 seconds, ]increased to 110% damage against monsters. The target cannot gain Wound stacks during this time."
@@ -116,7 +116,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Talon/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Talon dashes toward the target enemy, stabbing the target upon arrival to deal physical damage. If cast within close range, Talon dashes to the target over the cast time instead and Noxian Diplomacy critically strikes for (150% + 40%) damage, as well as grants him 75 bonus attack range on his next basic attack within 1 second.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Talon dashes toward the target enemy, stabbing the target upon arrival to deal physical damage. If cast within close range, Talon dashes to the target over the cast time instead and Noxian Diplomacy critically strikes for (150% + 40%) damage, as well as grants him 75 bonus attack range on his next basic attack within 1 second.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -201,7 +201,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Talon/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Talon throws a fan of daggers in a cone in the target direction that deals physical damage to enemies hit.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Talon throws a fan of daggers in a cone in the target direction that deals physical damage to enemies hit.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -333,7 +333,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Talon/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Talon dashes up to 800 units over the target area of terrain, during which he gains unobstructed vision."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Talon dashes up to 800 units over the target area of terrain, during which he gains unobstructed vision.</p>"
           },
           {
             "description": "Talon cannot cast Assassin's Path on the same area of terrain for a set duration."
@@ -364,7 +364,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Talon/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Talon disperses a ring of blades around him that deals physical damage to enemies hit and lingers at maximum range for up to 2.5 seconds, during which he gains invisibility and bonus movement speed.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Talon disperses a ring of blades around him that deals physical damage to enemies hit and lingers at maximum range for up to 2.5 seconds, during which he gains invisibility and bonus movement speed.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -407,7 +407,7 @@
             "description": "Shadow Assault can be recast after 1 second within the duration, and does so automatically after the duration or if Talon breaks stealth."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Talon breaks stealth and converges the blades to him, dealing the same physical damage to enemies hit. Breaking stealth with a basic attack or Noxian Diplomacy will converge the blades to the target instead.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Talon breaks stealth and converges the blades to him, dealing the same physical damage to enemies hit. Breaking stealth with a basic attack or Noxian Diplomacy will converge the blades to the target instead.</p>",
             "leveling": [
               {
                 "attribute": "Total Physical Damage",

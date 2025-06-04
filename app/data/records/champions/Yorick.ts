@@ -97,13 +97,13 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Yorick/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate - Final Service:</span> Whenever Yorick uses Last Rites to score the killing blow on any enemy or damage an enemy champion or large monster, he raises a grave at their location. Additionally, a grave is passively raised for every 8th : 2nd (based on level) enemy that dies otherwise near him. Up to 4 graves can exist at once, lasting until Yorick exits the general area or dies, with the furthest one always being replaced by the newest upon raising one over the limit."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Final Service:</span> Whenever Yorick uses Last Rites to score the killing blow on any enemy or damage an enemy champion or large monster, he raises a grave at their location. Additionally, a grave is passively raised for every 8th : 2nd (based on level) enemy that dies otherwise near him. Up to 4 graves can exist at once, lasting until Yorick exits the general area or dies, with the furthest one always being replaced by the newest upon raising one over the limit.</p>"
           },
           {
             "description": "Yorick can use Awakening and Mourning Mist's mark to raise 1 Mist Walker from each grave after a 1-second delay, consuming the graves in the process."
           },
           {
-            "description": "<span class=\"ability-header\">Innate - The Cursed Horde:</span> Up to 4 Mist Walkers can be active at once near Yorick or near The Maiden, with the nearest one always being replaced by the newest upon raising one over the limit."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - The Cursed Horde:</span> Up to 4 Mist Walkers can be active at once near Yorick or near The Maiden, with the nearest one always being replaced by the newest upon raising one over the limit.</p>"
           },
           {
             "description": "See Pets for more details about Mist Walkers."
@@ -122,7 +122,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Yorick/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Yorick empowers his next basic attack within 5 seconds to have an uncancellable windup, gain 50 bonus range, deal bonus physical damage, and heal him. The heal is reduced by 50% against non-champions.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yorick empowers his next basic attack within 5 seconds to have an uncancellable windup, gain 50 bonus range, deal bonus physical damage, and heal him. The heal is reduced by 50% against non-champions.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage",
@@ -259,7 +259,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Yorick/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Yorick exhumes a Mist Walker under his command from each nearby grave."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yorick exhumes a Mist Walker under his command from each nearby grave.</p>"
           }
         ],
         "cost": [
@@ -286,7 +286,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Yorick/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Yorick summons a ring of spirits around the target location that arises after a 0.75-second delay, knocking aside enemies hit over 0.25 seconds, though not through terrain. Within 210-units, they are pulled inside; otherwise they are pushed away. The ring remains for 4 seconds as impassible terrain against enemies, granting sight inside the ring."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yorick summons a ring of spirits around the target location that arises after a 0.75-second delay, knocking aside enemies hit over 0.25 seconds, though not through terrain. Within 210-units, they are pulled inside; otherwise they are pushed away. The ring remains for 4 seconds as impassible terrain against enemies, granting sight inside the ring.</p>"
           },
           {
             "description": "Dark Procession can only be targeted by enemy champion basic attacks and turrets. The wall takes 1 damage per attack from champions and is destroyed instantly from turret attacks.",
@@ -336,7 +336,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Yorick/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Yorick hurls a globule of Black Mist that splashes across an area at the target location, dealing magic damage to enemies hit, down to a minimum threshold against minions, and capped against monsters. Enemy champions and monsters hit are slowed by 30% for 1.5 seconds and marked as Cursed for 4 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yorick hurls a globule of Black Mist that splashes across an area at the target location, dealing magic damage to enemies hit, down to a minimum threshold against minions, and capped against monsters. Enemy champions and monsters hit are slowed by 30% for 1.5 seconds and marked as Cursed for 4 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -410,7 +410,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Cursed:</span> The target is revealed, has reduced armor, and continually raises a Mist Walker from each nearby grave, up to a maximum of 4.\nYorick, Mist Walkers and the The Maiden gain bonus movement speed while facing nearby Cursed enemies. Mist Walkers will leap to nearby Cursed enemy champions and large monsters, attacking them upon arrival.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Cursed:</span> The target is revealed, has reduced armor, and continually raises a Mist Walker from each nearby grave, up to a maximum of 4.</p>\nYorick, Mist Walkers and the The Maiden gain bonus movement speed while facing nearby Cursed enemies. Mist Walkers will leap to nearby Cursed enemy champions and large monsters, attacking them upon arrival.",
             "leveling": [
               {
                 "attribute": "Armor Reduction",
@@ -487,7 +487,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Yorick/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Yorick summons the Maiden of the Mist over 1.5 seconds, along with a number of Mist Walkers surrounding her at the target location, which remain on the battlefield until she or Yorick dies. Eulogy of the Isles can be recast once while the Maiden is alive after 10 seconds of the activation.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yorick summons the Maiden of the Mist over 1.5 seconds, along with a number of Mist Walkers surrounding her at the target location, which remain on the battlefield until she or Yorick dies. Eulogy of the Isles can be recast once while the Maiden is alive after 10 seconds of the activation.</p>",
             "leveling": [
               {
                 "attribute": "Mist Walkers",
@@ -504,7 +504,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Yorick sets the Maiden free, allowing her to push the nearest lane until she dies."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Yorick sets the Maiden free, allowing her to push the nearest lane until she dies.</p>"
           },
           {
             "description": "See Pets for more details about The Maiden of the Mist. Eulogy of the Isles will cast at max range if cast beyond that."

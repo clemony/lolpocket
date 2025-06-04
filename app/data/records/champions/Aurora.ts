@@ -100,7 +100,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Aurora/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Aurora's damaging basic attacks and abilities apply a stack of Spirit Abjuration to enemies for 4 seconds, refreshing on subsequent applications and stacking up to 3 times. The third stack against a target consumes them all to deal bonus magic damage equal to 2.5% (+ 2% per 100 AP) of the target's maximum health, capped at 100 - 180 (based on level) against monsters."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Aurora's damaging basic attacks and abilities apply a stack of Spirit Abjuration to enemies for 4 seconds, refreshing on subsequent applications and stacking up to 3 times. The third stack against a target consumes them all to deal bonus magic damage equal to 2.5% (+ 2% per 100 AP) of the target's maximum health, capped at 100 - 180 (based on level) against monsters.</p>"
           },
           {
             "description": "Upon consuming the stacks from a champion, Aurora additionally exorcises them, freeing a Spirit from the target that follows her for the same duration. For each active Spirit, Aurora is healed for 3 - 20 (based on level) (+ 2% AP) every second. Subsequent exorcisms free further Spirits and refresh all active Spirits. Aurora may have up to 4 Spirits at a time, for a maximum heal per tick of 12 - 80 (based on level) (+ 8% AP)."
@@ -121,7 +121,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Aurora/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Aurora fires a bolt of energy in the target direction that deals magic damage to enemies hit and marks them with a curse for 3.5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Aurora fires a bolt of energy in the target direction that deals magic damage to enemies hit and marks them with a curse for 3.5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -151,7 +151,7 @@
             "description": "Twofold Hex can be recast after 0.1 seconds while at least one target is marked, and does so automatically at the end of the mark's duration."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Aurora expunges the curse from all marked targets, drawing the spiritual energy back to her as bolts that each deal magic damage to all enemies they pass through, reduced to 40% against minions and 50% against monsters and increased by 0% - 50% (based on target's missing health). Subsequent bolts against an enemy deal 20% damage.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Aurora expunges the curse from all marked targets, drawing the spiritual energy back to her as bolts that each deal magic damage to all enemies they pass through, reduced to 40% against minions and 50% against monsters and increased by 0% - 50% (based on target's missing health). Subsequent bolts against an enemy deal 20% damage.</p>",
             "leveling": [
               {
                 "attribute": "Minimum Magic Damage",
@@ -276,7 +276,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Aurora/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Aurora hops in the target direction inside a portal to the Spirit Realm. Upon completing the dash, she becomes invisible for a duration and gains Realm Hopper for 4 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Aurora hops in the target direction inside a portal to the Spirit Realm. Upon completing the dash, she becomes invisible for a duration and gains Realm Hopper for 4 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Invisibility Duration",
@@ -298,7 +298,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Realm Hopper:</span> Aurora becomes ghosted and gains bonus movement speed for the duration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Realm Hopper:</span> Aurora becomes ghosted and gains bonus movement speed for the duration.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -349,7 +349,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Aurora/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Aurora blasts energy in a line in the target direction and recoils 250 units in the opposite direction. The blast deals magic damage to enemies hit and slows them by 80% for 1 second decaying after the first 0.15 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Aurora blasts energy in a line in the target direction and recoils 250 units in the opposite direction. The blast deals magic damage to enemies hit and slows them by 80% for 1 second decaying after the first 0.15 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -407,7 +407,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Aurora/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Aurora leaps in the target direction with displacement immunity over 0.4 seconds. She then gains Realm Hopper for 3.5 seconds and unleashes a shockwave from 425 units in front of her, expanding over 0.75 seconds to deal magic damage to enemies hit and slow them by 30% for 2 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Aurora leaps in the target direction with displacement immunity over 0.4 seconds. She then gains Realm Hopper for 3.5 seconds and unleashes a shockwave from 425 units in front of her, expanding over 0.75 seconds to deal magic damage to enemies hit and slow them by 30% for 2 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -470,7 +470,7 @@
             "description": "Between Worlds can be recast after 1 second of unleashing the shockwave while the rift is active."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Aurora closes the rift prematurely."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Aurora closes the rift prematurely.</p>"
           },
           {
             "description": "The rift closes immediately if Aurora dies, enters resurrection, leaves the area, or is not within the area upon creation."

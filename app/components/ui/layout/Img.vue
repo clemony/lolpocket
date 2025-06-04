@@ -5,7 +5,7 @@ defineOptions({
 
 const { alt, img, class: className } = defineProps<{
   alt: string
-  img: string
+  img: string | null
   class?: HTMLAttributes['class']
   loadedClass?: HTMLAttributes['class']
 }>()

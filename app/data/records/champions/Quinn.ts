@@ -100,7 +100,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Quinn/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Quinn's Blinding Assault against the primary target, Vault, and Skystrike mark enemies hit with Vulnerable for 4 seconds, during which they are revealed. Valor will periodically mark a nearby visible enemy if no Vulnerable targets exist for 1 second."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Quinn's Blinding Assault against the primary target, Vault, and Skystrike mark enemies hit with Vulnerable for 4 seconds, during which they are revealed. Valor will periodically mark a nearby visible enemy if no Vulnerable targets exist for 1 second.</p>"
           },
           {
             "description": "Quinn's basic attacks against Vulnerable targets are empowered to consume the mark to deal 10 - 95 (based on level) (+ 16% - 50% (based on level) AD) bonus physical damage."
@@ -125,7 +125,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Quinn/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Quinn sends Valor in the target direction who stops upon hitting an enemy, marking them as Vulnerable and dealing physical damage to all nearby enemies.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Quinn sends Valor in the target direction who stops upon hitting an enemy, marking them as Vulnerable and dealing physical damage to all nearby enemies.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -204,7 +204,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Quinn/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Whenever Quinn uses a basic attack on-attack against a Vulnerable target or consumes their mark, she gains bonus attack speed and bonus movement speed for 2 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Whenever Quinn uses a basic attack on-attack against a Vulnerable target or consumes their mark, she gains bonus attack speed and bonus movement speed for 2 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",
@@ -243,7 +243,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Valor grants sight of the surrounding area for 2 seconds and reveals enemy champions within for the same duration."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Valor grants sight of the surrounding area for 2 seconds and reveals enemy champions within for the same duration.</p>"
           }
         ],
         "cost": [
@@ -272,7 +272,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Quinn/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Quinn dashes to the target enemy, marking them as Vulnerable, dealing physical damage, knocking them back a very short distance over 0.5 seconds, and slowing them by 50% decaying over 1.5 seconds. She then leaps back 525 units away from them.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Quinn dashes to the target enemy, marking them as Vulnerable, dealing physical damage, knocking them back a very short distance over 0.5 seconds, and slowing them by 50% decaying over 1.5 seconds. She then leaps back 525 units away from them.</p>",
             "leveling": [
               {
                 "attribute": "Physical damage",
@@ -332,7 +332,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Quinn/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Quinn channels for 2 seconds, signaling Valor to pair up. Upon completion, he picks her up and they unite, increasing her total movement speed, granting her ghosting, and allowing her to cast Skystrike. Behind Enemy Lines can be recast after 0.5 seconds during the channel.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Quinn channels for 2 seconds, signaling Valor to pair up. Upon completion, he picks her up and they unite, increasing her total movement speed, granting her ghosting, and allowing her to cast Skystrike. Behind Enemy Lines can be recast after 0.5 seconds during the channel.</p>",
             "leveling": [
               {
                 "attribute": "Total Movement Speed Increase",
@@ -358,7 +358,7 @@
             "description": "Once Behind Enemy Lines has been learned, respawning or returning to the allied summoning platform will spawn Valor instantly."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Quinn cancels the channel, placing Behind Enemy Lines on cooldown."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Quinn cancels the channel, placing Behind Enemy Lines on cooldown.</p>"
           }
         ],
         "cost": [
@@ -381,7 +381,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Quinn/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Quinn detaches from Valor, ending Behind Enemy Lines' effects and raining arrows down around her, dealing 70% AD physical damage to nearby enemies and marking them as Vulnerable."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Quinn detaches from Valor, ending Behind Enemy Lines' effects and raining arrows down around her, dealing 70% AD physical damage to nearby enemies and marking them as Vulnerable.</p>"
           },
           {
             "description": "Declaring a basic attack or casting Blinding Assault or Vault during Behind Enemy Lines automatically activates Skystrike."

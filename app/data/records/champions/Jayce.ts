@@ -101,7 +101,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jayce/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Whenever Jayce switches between either Hammer Stance or Cannon Stance, he gains ghosting and 40 bonus movement speed for 0.75 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Whenever Jayce switches between either Hammer Stance or Cannon Stance, he gains ghosting and 40 bonus movement speed for 0.75 seconds.</p>"
           }
         ],
         "targeting": "Passive",
@@ -116,7 +116,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jayce/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Jayce leaps to the target enemy's location over 0.5 seconds. Upon arrival, he smashes his hammer to the ground to deal physical damage to all enemies within an area and slow them for 2 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Jayce leaps to the target enemy's location over 0.5 seconds. Upon arrival, he smashes his hammer to the ground to deal physical damage to all enemies within an area and slow them for 2 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -194,7 +194,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jayce/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Jayce fires an electric bolt in the target direction that detonates upon hitting an enemy or reaching maximum range, dealing physical damage to nearby enemies and granting sight of the area for 1.25 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Jayce fires an electric bolt in the target direction that detonates upon hitting an enemy or reaching maximum range, dealing physical damage to nearby enemies and granting sight of the area for 1.25 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -222,7 +222,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">If the bolt passes through Acceleration Gate, it becomes supercharged:</span> increasing its damage by 40% as well as its speed, range and explosion radius.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">If the bolt passes through Acceleration Gate, it becomes supercharged:</span> increasing its damage by 40% as well as its speed, range and explosion radius.</p>",
             "leveling": [
               {
                 "attribute": "Increased Damage",
@@ -283,7 +283,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jayce/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Jayce's basic attacks restore mana on-hit.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Jayce's basic attacks restore mana on-hit.</p>",
             "leveling": [
               {
                 "attribute": "Mana Restored",
@@ -303,7 +303,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Jayce surrounds himself with an electric field for 4 seconds that deals magic damage every second to nearby enemies.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Jayce surrounds himself with an electric field for 4 seconds that deals magic damage every second to nearby enemies.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage Per Tick",
@@ -376,7 +376,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jayce/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Jayce empowers his next 3 basic attacks within 4 seconds to deal modified physical damage and gain 360% bonus attack speed.Hyper Charge's total damage is affected by critical strike modifiers.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Jayce empowers his next 3 basic attacks within 4 seconds to deal modified physical damage and gain 360% bonus attack speed.Hyper Charge's total damage is affected by critical strike modifiers.</p>",
             "leveling": [
               {
                 "attribute": "Damage Modifier",
@@ -425,7 +425,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jayce/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Jayce roots the target enemy over the cast time, then swings his hammer at them to deal magic damage, capped against monsters, and knock them back 600 units.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Jayce roots the target enemy over the cast time, then swings his hammer at them to deal magic damage, capped against monsters, and knock them back 600 units.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -502,7 +502,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jayce/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Jayce deploys an energy gate centered at the target location, lasting for 4 seconds and granting sight of its surroundings. Jayce and all allied champions can move through it to gain bonus movement speed that decays over 3 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Jayce deploys an energy gate centered at the target location, lasting for 4 seconds and granting sight of its surroundings. Jayce and all allied champions can move through it to gain bonus movement speed that decays over 3 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -556,7 +556,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jayce/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Jayce transforms into Cannon Stance, receiving access to its abilities, becoming ranged with 500 attack range, and empowering his next basic attack to reduce the target's armor and magic resistance by 10 / 15 / 20 / 25% (based on level) for 5 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Jayce transforms into Cannon Stance, receiving access to its abilities, becoming ranged with 500 attack range, and empowering his next basic attack to reduce the target's armor and magic resistance by 10 / 15 / 20 / 25% (based on level) for 5 seconds.</p>"
           },
           {
             "description": "Jayce begins the game with Transform but cannot increase its rank. Instead, his basic abilities each have 6 ranks."
@@ -580,7 +580,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Jayce/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Jayce transforms into Hammer Stance, receiving access to its abilities, becoming melee with 125 attack range, gaining 5 / 15 / 25 / 35 (based on level) (+ 7.5% bonus AD) bonus armor and bonus magic resistance, and empowering his next basic attack to deal 25 / 60 / 95 / 130 (based on level) (+ 30% bonus AD) bonus magic damage."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Jayce transforms into Hammer Stance, receiving access to its abilities, becoming melee with 125 attack range, gaining 5 / 15 / 25 / 35 (based on level) (+ 7.5% bonus AD) bonus armor and bonus magic resistance, and empowering his next basic attack to deal 25 / 60 / 95 / 130 (based on level) (+ 30% bonus AD) bonus magic damage.</p>"
           },
           {
             "description": "Jayce begins the game with Transform but cannot increase its rank. Instead, his basic abilities each have 6 ranks."

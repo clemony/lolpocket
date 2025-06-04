@@ -92,10 +92,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Viego/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Whenever Viego scores an enemy champion takedown while alive and within 3 seconds of damaging them, a Mist Wraith spawns from that champion's corpse for 8 seconds. Viego can basic attack a Mist Wraith to consume it: causing him to blink to its location after winding up for 1 second, during which he is untargetable (except to turrets) and unable to act. He then gains Possession and heals himself for 2% (+ 2.5% per 100 bonus AD) (+ 2% per 100 AP) (+ 5% per 100% bonus attack speed) of the target's maximum health."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Whenever Viego scores an enemy champion takedown while alive and within 3 seconds of damaging them, a Mist Wraith spawns from that champion's corpse for 8 seconds. Viego can basic attack a Mist Wraith to consume it: causing him to blink to its location after winding up for 1 second, during which he is untargetable (except to turrets) and unable to act. He then gains Possession and heals himself for 2% (+ 2.5% per 100 bonus AD) (+ 2% per 100 AP) (+ 5% per 100% bonus attack speed) of the target's maximum health.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Possession:</span> For 10 seconds, Viego assumes the enemy champion's form and gains their basic attacks, basic abilities, items, and base stats (based on Viego's level). He also gains a free cast of Heartbreaker, which is initially placed on a 1.5-second cooldown, and 10% bonus movement speed while facing enemy champions within 2500 units."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Possession:</span> For 10 seconds, Viego assumes the enemy champion's form and gains their basic attacks, basic abilities, items, and base stats (based on Viego's level). He also gains a free cast of Heartbreaker, which is initially placed on a 1.5-second cooldown, and 10% bonus movement speed while facing enemy champions within 2500 units.</p>"
           },
           {
             "description": "Viego cannot use item actives, consumable items, nor the shop during Possession. Casting Heartbreaker or attacking a Mist Wraith ends Possession immediately."
@@ -115,7 +115,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Viego/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Viego's basic attacks are empowered to deal bonus physical damage on-hit. This damage is affected by critical strike modifiers, has a minimum threshold and is capped at 80 against monsters.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Viego's basic attacks are empowered to deal bonus physical damage on-hit. This damage is affected by critical strike modifiers, has a minimum threshold and is capped at 80 against monsters.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Physical Damage",
@@ -157,7 +157,7 @@
             "description": "The second strike applies on-hit effects and can critically strike for (175% + 40%) damage."
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Viego stabs in a line in the target direction that deals physical damage to enemies hit, plus 15 bonus physical damage against monsters. The stab's damage is increased by 0% - 100% (based on critical strike chance).",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Viego stabs in a line in the target direction that deals physical damage to enemies hit, plus 15 bonus physical damage against monsters. The stab's damage is increased by 0% - 100% (based on critical strike chance).</p>",
             "leveling": [
               {
                 "attribute": "Minimum Physical Damage",
@@ -250,7 +250,7 @@
             ]
           },
           {
-            "description": "Blade of the Ruined King's passive remains under Possession, and while transformed, the second strike is instead converted to bonus damage on-hit which no longer applies on-hit effects but can still critically strike (based on the Possession's stats, abiilities and/or item effects)."
+            "description": "Blade of the Ruined King's passive remains under Possession, and while transformed, the second strike is instead converted to bonus damage on-hit which no longer applies on-hit effects but can still critically strike (based on the Possession's stats, abiilities and / or item effects)."
           }
         ],
         "cost": [
@@ -282,13 +282,13 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Viego/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Viego charges while being slowed by 10% for up to 3 seconds to increase Spectral Maw's missile range and stun duration over the first second of the channel."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Viego charges while being slowed by 10% for up to 3 seconds to increase Spectral Maw's missile range and stun duration over the first second of the channel.</p>"
           },
           {
             "description": "Spectral Maw can be recast within the duration. If the charge completes without reactivation, Spectral Maw is cancelled and placed on full cooldown. If the charge is interrupted, it will be placed on a 3-second cooldown."
           },
           {
-            "description": "<span class=\"ability-header\">Recast:</span> Viego hurls a blast of mist in the target direction and dashes a fixed distance in the same direction, though not through terrain. The mist deals magic damage to the first enemy hit and stuns them for 0.25 - 1.25 (based on channel time) seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Viego hurls a blast of mist in the target direction and dashes a fixed distance in the same direction, though not through terrain. The mist deals magic damage to the first enemy hit and stuns them for 0.25 - 1.25 (based on channel time) seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -344,7 +344,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Viego/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Viego sends a spectre in the target direction that creates a trail of mist in its wake which lasts 8 seconds. If it hits terrain, the mist will spread further around either side."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Viego sends a spectre in the target direction that creates a trail of mist in its wake which lasts 8 seconds. If it hits terrain, the mist will spread further around either side.</p>"
           },
           {
             "description": "While inside the mist, Viego gains bonus attack speed. If he does not attack or cast abilities, he also gains bonus movement speed and camouflage.",
@@ -427,7 +427,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Viego/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Viego gains displacement immunity over the cast time, then blinks to the target location. Upon arrival, he strikes the most wounded enemy champion nearby, dealing physical damage, slowing them by 99% for 0.25 seconds, and applying on-hit effects. Other nearby enemies are knocked back up to 400-units away based on proximity, though not through terrain.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Viego gains displacement immunity over the cast time, then blinks to the target location. Upon arrival, he strikes the most wounded enemy champion nearby, dealing physical damage, slowing them by 99% for 0.25 seconds, and applying on-hit effects. Other nearby enemies are knocked back up to 400-units away based on proximity, though not through terrain.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",

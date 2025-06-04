@@ -100,10 +100,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Singed/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Whenever Singed moves near a champion, he gains a stack of Noxious Slipstream for 2 seconds, refreshing on subsequent passes and stacking up to 25 times."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Whenever Singed moves near a champion, he gains a stack of Noxious Slipstream for 2 seconds, refreshing on subsequent passes and stacking up to 25 times.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Noxious Slipstream:</span> For each stack, Singed gains 25% bonus movement speed, up to a maximum of 625%."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Noxious Slipstream:</span> For each stack, Singed gains 25% bonus movement speed, up to a maximum of 625%.</p>"
           },
           {
             "description": "This effect cannot occur on the same target more than once every few seconds."
@@ -123,10 +123,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Singed/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Toggle:</span> Singed continually creates a toxic cloud in his wake that lingers for 3.25 seconds. The cloud inflicts poison to enemies within, and resets the duration every 0.5 seconds while they remain."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Toggle:</span> Singed continually creates a toxic cloud in his wake that lingers for 3.25 seconds. The cloud inflicts poison to enemies within, and resets the duration every 0.5 seconds while they remain.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">poison:</span> The target takes magic damage every 0.25 seconds over 2 seconds. Subsequent inflictions refresh the duration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">poison:</span> The target takes magic damage every 0.25 seconds over 2 seconds. Subsequent inflictions refresh the duration.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage per Tick",
@@ -202,7 +202,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Singed/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Singed spills a potent adhesive that lands at the target location after 0.375 seconds, creating a field for 3 seconds that grounds enemies within and slows them.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Singed spills a potent adhesive that lands at the target location after 0.375 seconds, creating a field for 3 seconds that grounds enemies within and slows them.</p>",
             "leveling": [
               {
                 "attribute": "Slow",
@@ -257,7 +257,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Singed/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Singed flings the target enemy 550 units over himself over 0.693 seconds, dealing magic damage. The damage based on the target's health ratio is capped at 300 against minions and monsters.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Singed flings the target enemy 550 units over himself over 0.693 seconds, dealing magic damage. The damage based on the target's health ratio is capped at 300 against minions and monsters.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -351,7 +351,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Singed/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Singed empowers himself for 25 seconds with ability power, bonus armor, bonus magic resistance, bonus movement speed, bonus health regeneration, and bonus mana regeneration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Singed empowers himself for 25 seconds with ability power, bonus armor, bonus magic resistance, bonus movement speed, bonus health regeneration, and bonus mana regeneration.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Stats",

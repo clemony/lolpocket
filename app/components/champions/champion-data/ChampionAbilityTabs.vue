@@ -2,14 +2,18 @@
 import { onKeyDown, onKeyUp } from '@vueuse/core'
 
 const { abilities } = defineProps<{
-  abilities: Record<'P' | 'Q' | 'W' | 'E' | 'R', Ability[]>
+  abilities: AbilityRecord
 }>()
 
-const champAbilities = computed (() => abilities)
 const emit = defineEmits(['update:ability'])
+const loaded = ref(false)
+const champAbilities = computed (() => abilities)
 const selectedAbility = ref('P')
 
-
+watch(() => champAbilities.value.P[0].name, (newVal) => {
+  if (newVal)
+    loaded.value = false
+})
 
 const keyDown = ref(false)
 
@@ -27,15 +31,16 @@ onKeyUp(['p', 'q', 'w', 'e', 'r'], (e) => {
 </script>
 
 <template>
-  <Tabs v-model:model-value="selectedAbility" class="grid w-full " activation-mode="manual" @update:model-value="emit('update:ability', selectedAbility)">
-    
-    <IndicatorTabsList class="grid grid-cols-5 gap-1 place-items-center    h-16 w-88   bg-transparent border-0 shadow-none pointer-events-auto z-1 p-0 m-0">
-      <IndicatorTabsTrigger v-for="(ability, i) in champAbilities" :key="i" :value="i" class="!p-0 aspect-square size-16 rounded-lg relative shadow-sm drop-shadow-xs bg-b2/40 shrink-0 cursor-pointer focus:!outline-0 transition-all duration-150 drop-shadow-sm  shadow-sm focus:!ring-0 focus:!ring-offset-0">
-          <Img
-            :img="ability[0].icon" alt="passive icon" class="size-full rounded-lg pointer-events-auto border border-neutral/80   grayscale contrast-80 opacity-70 group-hover/img:opacity-100 group-hover/img:contrast-100 group-hover/img:grayscale-0" :class="{ 'opacity-100 contrast-100 grayscale-0  ': selectedAbility == i }" />
-       
-        <kbd class="bg-b2 absolute border border-neutral/80 size-5 -left-0 -top-0 grid place-items-center shadow-sm rounded-md kbd-md brightness-94 aspect-square text-2" :class="{ 'inset-shadow-sm inset-shadow-black/50 bg-b3 ': keyDown && selectedAbility == i }">{{ i }}</kbd>
-      </IndicatorTabsTrigger>
-    </IndicatorTabsList>
-  </Tabs>
+  <menu class="flex w-full h-20 items-center px-8 justify-between  gap-2.5 pointer-events-auto z-1">
+    <Label
+      v-for="(ability, i) in champAbilities" :key="i" :value="i" class="!p-0 aspect-square size-20 rounded-lg relative bg-b3 group shrink-0 cursor-pointer hover:scale-110  transition-transform duration-300 " :class="{
+        'scale-110 hover:scale-115 ': selectedAbility == i, '  drop-shadow-sm  shadow-sm ': loaded,
+      }">
+      <input v-model="selectedAbility" :value="i" type="radio" name="selected-ability" class="peer hidden" @change="emit('update:ability', selectedAbility)" />
+      <Img
+        :img="ability[0].icon" alt="passive icon" class="size-full rounded-lg pointer-events-auto  duration-300 transition  grayscale contrast-80 opacity-70 group-hover:opacity-100 group-hover:contrast-100 group-hover:grayscale-0" :class="{ 'opacity-100 contrast-100 grayscale-0  ': selectedAbility == i, 'animate-in fade-in duration-500 border border-black-50 ': loaded, 'animate-out  duration-500 fade-out-50': loaded }" @load="loaded = true" />
+
+      <h3 class="absolute !text-5 opacity-0 group-hover:opacity-100 transition duration-300 group-hover:text-shadow-black/50  group-hover:drop-shadow-black/70 text-shadow-xs text-white/86 drop-shadow-sm  bottom-1 right-1.5">{{ i }}</h3>
+    </Label>
+  </menu>
 </template>

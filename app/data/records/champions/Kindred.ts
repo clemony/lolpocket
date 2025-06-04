@@ -98,13 +98,13 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kindred/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Both Lamb and Wolf mark targets to hunt. Scoring a takedown against a hunted target collects a stack of Mark of the Kindred. Mark of the Kindred: Lamb gains 75 - 250 (based on marks) bonus range on her basic attacks and Mounting Dread."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Both Lamb and Wolf mark targets to hunt. Scoring a takedown against a hunted target collects a stack of Mark of the Kindred. Mark of the Kindred: Lamb gains 75 - 250 (based on marks) bonus range on her basic attacks and Mounting Dread.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Innate - Lamb:</span> Lamb is offered a selection of enemy champions to hunt if she has not been in combat with them in the last 6 seconds. Once selected, the mark is applied after an 8-second delay and thereafter it can be collected by Kindred. Lamb gains the ability to select a new target every 75 seconds. Targets successfully hunted cannot be marked again for 4 minutes."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Lamb:</span> Lamb is offered a selection of enemy champions to hunt if she has not been in combat with them in the last 6 seconds. Once selected, the mark is applied after an 8-second delay and thereafter it can be collected by Kindred. Lamb gains the ability to select a new target every 75 seconds. Targets successfully hunted cannot be marked again for 4 minutes.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Innate - Wolf:</span> Starting at 3 - 15, Wolf periodically marks a random large monster within the enemy team's jungle for 180 seconds. The hunted camp is highlighted on the mini map to both teams. Once the hunted target is slain or the mark expires, Wolf will wait 45 seconds before selecting a new target. The type of monster that Wolf can mark changes based on Kindred's current Mark of the Kindred stacks:\n<span class=\"ability-header\">0 :</span> Rift Scuttler\n<span class=\"ability-header\">1 - 3:</span> Rift Scuttler, Crimson Raptor, Gromp\n<span class=\"ability-header\">4 - 7:</span> Ancient Krug, Blue Sentinel, Greater Murk Wolf, or Red Brambleback\n<span class=\"ability-header\">8 + :</span> Rift Herald or Baron Nashor, Dragon or Elder Dragon"
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Wolf:</span> Starting at 3 - 15, Wolf periodically marks a random large monster within the enemy team's jungle for 180 seconds. The hunted camp is highlighted on the mini map to both teams. Once the hunted target is slain or the mark expires, Wolf will wait 45 seconds before selecting a new target. The type of monster that Wolf can mark changes based on Kindred's current Mark of the Kindred stacks:</p>\n<p class=\"ability-effect\"><span class=\"ability-header\">0 :</span> Rift Scuttler</p>\n<p class=\"ability-effect\"><span class=\"ability-header\">1 - 3:</span> Rift Scuttler, Crimson Raptor, Gromp</p>\n<p class=\"ability-effect\"><span class=\"ability-header\">4 - 7:</span> Ancient Krug, Blue Sentinel, Greater Murk Wolf, or Red Brambleback</p>\n<p class=\"ability-effect\"><span class=\"ability-header\">8 + :</span> Rift Herald or Baron Nashor, Dragon or Elder Dragon</p>"
           }
         ],
         "targeting": "Passive",
@@ -120,7 +120,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kindred/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Lamb dashes toward the target location, gaining 35% (+ 5% per mark) bonus attack speed for 4 seconds and firing an arrow at up to 3 nearby visible enemies that deals physical damage. Her current attack target within any proximity will be prioritized by one of the arrows.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lamb dashes toward the target location, gaining 35% (+ 5% per mark) bonus attack speed for 4 seconds and firing an arrow at up to 3 nearby visible enemies that deals physical damage. Her current attack target within any proximity will be prioritized by one of the arrows.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -200,10 +200,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kindred/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> As Kindred move and attack, they build up to 100 stacks of Hunter's Vigor. At maximum stacks, Lamb's next basic attack heals her for 0% - 100% (based on Kindred's missing health) of 47 - 81 (based on level). The heal is not triggered if Kindred is at full health."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> As Kindred move and attack, they build up to 100 stacks of Hunter's Vigor. At maximum stacks, Lamb's next basic attack heals her for 0% - 100% (based on Kindred's missing health) of 47 - 81 (based on level). The heal is not triggered if Kindred is at full health.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Wolf dashes to the target location, then claims the surrounding area as his territory for the next 8.5 seconds, separating from Lamb. He automatically attacks the closest nearby visible enemy within the area, prioritizing the last enemy Lamb has attacked, then enemy champions, then non-champions."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Wolf dashes to the target location, then claims the surrounding area as his territory for the next 8.5 seconds, separating from Lamb. He automatically attacks the closest nearby visible enemy within the area, prioritizing the last enemy Lamb has attacked, then enemy champions, then non-champions.</p>"
           },
           {
             "description": "Wolf's attacks deal magic damage and the rate at which he attacks scale with 25% of Kindred's bonus attack speed. Against monsters, his attacks deal 150% damage and slow the target by 50% for 2 seconds.",
@@ -322,7 +322,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kindred/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Lamb fires a shot at the target enemy that slows them by 30% (+ 5% per 100 AP) for 1 second and marks them for 4 seconds. Her basic attacks against the marked target each apply a stack, refreshing the duration and stacking up to 3 times."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lamb fires a shot at the target enemy that slows them by 30% (+ 5% per 100 AP) for 1 second and marks them for 4 seconds. Her basic attacks against the marked target each apply a stack, refreshing the duration and stacking up to 3 times.</p>"
           },
           {
             "description": "The third stack directs Wolf to pounce on the target, consuming all stacks to deal additional physical damage, capped at 300 against monsters.",
@@ -423,7 +423,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Kindred/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Lamb blesses the ground underneath herself and enters a 0.264 seconds cast time, creating a sacred zone at her location at the time of cast that lasts for 4 seconds. All units inside the zone gain a minimum health threshold equal to 10% of their maximum health, and will also become invulnerable while remaining in the area when they reach or are at the threshold, during which they also cannot be healed, but can still regenerate health."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lamb blesses the ground underneath herself and enters a 0.264 seconds cast time, creating a sacred zone at her location at the time of cast that lasts for 4 seconds. All units inside the zone gain a minimum health threshold equal to 10% of their maximum health, and will also become invulnerable while remaining in the area when they reach or are at the threshold, during which they also cannot be healed, but can still regenerate health.</p>"
           },
           {
             "description": "All targetable units within the zone are healed when the blessing ends.",

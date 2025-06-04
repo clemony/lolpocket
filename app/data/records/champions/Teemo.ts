@@ -101,10 +101,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Teemo/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate:</span> Teemo gains invisibility after 1.5 seconds without moving, taking damage, performing actions that break stealth, channeling, or being in stasis. Teemo will maintain stealth so long as he remains idle and is not displaced. While in brush, Teemo gains the stealth even while moving and can move without breaking stealth."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Teemo gains invisibility after 1.5 seconds without moving, taking damage, performing actions that break stealth, channeling, or being in stasis. Teemo will maintain stealth so long as he remains idle and is not displaced. While in brush, Teemo gains the stealth even while moving and can move without breaking stealth.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Innate - Element of Surprise:</span> When Teemo breaks the stealth, he gains 20 / 40 / 60 / 80% (based on level) bonus attack speed for 5 seconds."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Element of Surprise:</span> When Teemo breaks the stealth, he gains 20 / 40 / 60 / 80% (based on level) bonus attack speed for 5 seconds.</p>"
           }
         ],
         "targeting": "Passive",
@@ -119,7 +119,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Teemo/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Teemo shoots a dart at the target enemy that deals magic damage and blinds them for a duration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Teemo shoots a dart at the target enemy that deals magic damage and blinds them for a duration.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -216,7 +216,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Teemo/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Teemo gains bonus movement speed after 5 seconds without taking damage from enemy champions or turrets.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Teemo gains bonus movement speed after 5 seconds without taking damage from enemy champions or turrets.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -238,7 +238,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Active:</span> Teemo doubles the bonus movement speed for 3 seconds, preventing it from being removed for the duration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Teemo doubles the bonus movement speed for 3 seconds, preventing it from being removed for the duration.</p>",
             "leveling": [
               {
                 "attribute": "Enhanced Bonus Movement Speed",
@@ -284,7 +284,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Teemo/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Passive:</span> Teemo's basic attacks are empowered to deal bonus magic damage on-hit and inflict poison.\n<span class=\"ability-header\"> poison:</span> The target takes magic damage every second over 4 seconds. Subsequent inflictions refresh the duration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Teemo's basic attacks are empowered to deal bonus magic damage on-hit and inflict poison.</p>\n<p class=\"ability-effect\"><span class=\"ability-header\"> poison:</span> The target takes magic damage every second over 4 seconds. Subsequent inflictions refresh the duration.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage On-Hit",
@@ -448,7 +448,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Teemo/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Teemo tosses a poisonous mushroom to the target location that becomes stealthed after arming over 1 second, lasting for up to 5 minutes and granting sight of its surroundings. If the mushroom lands on an already-placed one, it will bounce forward again for its cast distance, up to a cap, which can happen repeatedly.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Teemo tosses a poisonous mushroom to the target location that becomes stealthed after arming over 1 second, lasting for up to 5 minutes and granting sight of its surroundings. If the mushroom lands on an already-placed one, it will bounce forward again for its cast distance, up to a cap, which can happen repeatedly.</p>",
             "leveling": [
               {
                 "attribute": "Bounce Distance Cap",
@@ -502,7 +502,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">poison:</span> The target takes magic damage every second over 4 seconds. Subsequent inflictions refresh the duration.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">poison:</span> The target takes magic damage every second over 4 seconds. Subsequent inflictions refresh the duration.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage per Tick",

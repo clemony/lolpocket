@@ -96,10 +96,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Yasuo/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate - Intent:</span> Yasuo's total critical strike chance is doubled from all other sources. Additionally,[ every 1% critical strike chance in excess of 100% is converted into 0.5 bonus attack damage. ][ every 50% critical strike chance in excess of 100% is converted into 25 bonus attack damage. ]"
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Intent:</span> Yasuo's total critical strike chance is doubled from all other sources. Additionally,[ every 1% critical strike chance in excess of 100% is converted into 0.5 bonus attack damage. ][ every 50% critical strike chance in excess of 100% is converted into 25 bonus attack damage. ]</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Innate - Resolve:</span> Yasuo generates Flow for every 59 / 52.5 / 46 (based on level) units he travels by any means. At[ 100 stacks ][ 5900 / 5250 / 4600 (based on level) units traveled ]and upon taking damage from an enemy champion or monster, Yasuo consumes all Flow to grant himself a shield for 125 - 600 (based on level) that lasts up to 1 second."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Resolve:</span> Yasuo generates Flow for every 59 / 52.5 / 46 (based on level) units he travels by any means. At[ 100 stacks ][ 5900 / 5250 / 4600 (based on level) units traveled ]and upon taking damage from an enemy champion or monster, Yasuo consumes all Flow to grant himself a shield for 125 - 600 (based on level) that lasts up to 1 second.</p>"
           }
         ],
         "targeting": "Passive",
@@ -115,7 +115,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Yasuo/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Yasuo thrusts his sword in a line in the target direction that deals physical damage to enemies hit, applies on-hit effects to the first enemy hit, and triggers on-attack effects once. Steel Tempest's damage based on its AD ratio can critically strike for (175% + 40%) damage.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yasuo thrusts his sword in a line in the target direction that deals physical damage to enemies hit, applies on-hit effects to the first enemy hit, and triggers on-attack effects once. Steel Tempest's damage based on its AD ratio can critically strike for (175% + 40%) damage.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -142,10 +142,10 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Steel Wind Rising:</span> If this hits at least one enemy, Yasuo generates a stack of Gathering Storm for 6 seconds, stacking up to 2 times and refreshing on subsequent hits. At 2 stacks, the next Steel Tempest consumes them all to become empowered with a new effect."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Steel Wind Rising:</span> If this hits at least one enemy, Yasuo generates a stack of Gathering Storm for 6 seconds, stacking up to 2 times and refreshing on subsequent hits. At 2 stacks, the next Steel Tempest consumes them all to become empowered with a new effect.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Gathering Storm Bonus:</span> Yasuo unleashes a whirlwind in the target direction that deals the same damage to enemies hit and knocks them up for 0.75 seconds, or 0.9 seconds in combination with Sweeping Blade."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Gathering Storm Bonus:</span> Yasuo unleashes a whirlwind in the target direction that deals the same damage to enemies hit and knocks them up for 0.75 seconds, or 0.9 seconds in combination with Sweeping Blade.</p>"
           },
           {
             "description": "Steel Tempest's thrust will fail to hit targets after the cast time if Yasuo was affected by disarming crowd control during it, but the cooldown of the ability is reset to 0.1 seconds."
@@ -181,7 +181,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Yasuo/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Yasuo raises a wall of wind that travels in the target direction over 0.25 seconds. It then drifts another 50 units over 3.75 seconds, blocking all hostile non- turret projectiles that hit it and granting sight of its surroundings.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yasuo raises a wall of wind that travels in the target direction over 0.25 seconds. It then drifts another 50 units over 3.75 seconds, blocking all hostile non- turret projectiles that hit it and granting sight of its surroundings.</p>",
             "leveling": [
               {
                 "attribute": "Wall Width",
@@ -226,7 +226,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Yasuo/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Yasuo dashes a fixed distance in the direction of the target enemy and becomes ghosted for 2 seconds, refreshing on subsequent casts. Upon impact, he deals magic damage to the target and generates a stack of Ride the Wind for 5 seconds, which refreshes on subsequent hits and stacks up to 4 times.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yasuo dashes a fixed distance in the direction of the target enemy and becomes ghosted for 2 seconds, refreshing on subsequent casts. Upon impact, he deals magic damage to the target and generates a stack of Ride the Wind for 5 seconds, which refreshes on subsequent hits and stacks up to 4 times.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -261,7 +261,7 @@
             ]
           },
           {
-            "description": "<span class=\"ability-header\">Ride the Wind:</span> Sweeping Blade's damage is increased by 25% per stack, up to 100% at maximum stacks.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Ride the Wind:</span> Sweeping Blade's damage is increased by 25% per stack, up to 100% at maximum stacks.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Damage per Stack",
@@ -394,7 +394,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Yasuo/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Yasuo blinks to the other side of a visible airborne enemy champion nearest to the cursor, instantly generating maximum Flow while resetting Gathering Storm stacks."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yasuo blinks to the other side of a visible airborne enemy champion nearest to the cursor, instantly generating maximum Flow while resetting Gathering Storm stacks.</p>"
           },
           {
             "description": "Upon arrival, he knocks up all nearby airborne enemy champions for 1 second, revealing them, becoming unable to act himself, and slashing them with his sword over the duration to deal physical damage thereafter. Surrounding enemy champions that become airborne during this time will also be affected by Last Breath through the remaining duration.",

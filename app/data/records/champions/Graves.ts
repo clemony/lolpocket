@@ -99,10 +99,10 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Graves/ability-icon/p",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Innate - Double Barrel:</span> Graves' basic attacks fire his shotgun to consume ammunition within 2 shells. He will reload over a few seconds immediately after expending all shells or withholding leftover shells for a while. The reload time is reduced by Graves' level and bonus attack speed, and can be interrupted by declaring an attack or casting an ability."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Double Barrel:</span> Graves' basic attacks fire his shotgun to consume ammunition within 2 shells. He will reload over a few seconds immediately after expending all shells or withholding leftover shells for a while. The reload time is reduced by Graves' level and bonus attack speed, and can be interrupted by declaring an attack or casting an ability.</p>"
           },
           {
-            "description": "<span class=\"ability-header\">Innate - 12-Gauge:</span> Graves' basic attack sprays 4 pellets in a cone, each colliding with the first enemy unit in their path, dealing 70% - 100.01% (based on level) AD physical damage plus[ 23.31% - 33.3% (based on level) AD additional physical damage ][ about one-third of the damage ]for each subsequent pellet hitting the same target, up to 139.93% - 199.92% (based on level) AD total physical damage against a single target. Pellets deal 25% reduced damage against structures."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - 12-Gauge:</span> Graves' basic attack sprays 4 pellets in a cone, each colliding with the first enemy unit in their path, dealing 70% - 100.01% (based on level) AD physical damage plus[ 23.31% - 33.3% (based on level) AD additional physical damage ][ about one-third of the damage ]for each subsequent pellet hitting the same target, up to 139.93% - 199.92% (based on level) AD total physical damage against a single target. Pellets deal 25% reduced damage against structures.</p>"
           },
           {
             "description": "Critical strikes spray 6 pellets over a 25% wider cone, with each pellet dealing[ (33.75% + 18%) increased damage, ][ increased damage equal to 45% bonus critical damage, ]resulting in[ 178.312% (+ 23.997%) total damage ][ 249.52% - 356.48% (based on level) (+ 33.58% - 47.97% (based on level)) AD total physical damage ]if all pellets hit a single target."
@@ -111,7 +111,7 @@
             "description": "Pellets apply life steal at 100% effectiveness. Only the first pellet to hit each enemy applies on-hit effects."
           },
           {
-            "description": "<span class=\"ability-header\">Innate - Buckshot:</span> Non-champion units hit by more than one pellet are knocked back, though not through terrain."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Buckshot:</span> Non-champion units hit by more than one pellet are knocked back, though not through terrain.</p>"
           }
         ],
         "targeting": "Passive",
@@ -134,7 +134,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Graves/ability-icon/q",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Graves fires a round in the target direction that deals physical damage to enemies it passes through and leaves behind a powder trail.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Graves fires a round in the target direction that deals physical damage to enemies it passes through and leaves behind a powder trail.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
@@ -248,7 +248,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Graves/ability-icon/w",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Graves fires a smoke canister at the target location that upon impact deals magic damage to enemies within the area and slows them by 50% for 0.5 seconds.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Graves fires a smoke canister at the target location that upon impact deals magic damage to enemies within the area and slows them by 50% for 0.5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -314,13 +314,13 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Graves/ability-icon/e",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Graves dashes to the target location, reloading one shell while generating a stack of True Grit for 4 seconds, stacking up to 8 times. Dashing towards an enemy champion generates 2 stacks of True Grit."
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Graves dashes to the target location, reloading one shell while generating a stack of True Grit for 4 seconds, stacking up to 8 times. Dashing towards an enemy champion generates 2 stacks of True Grit.</p>"
           },
           {
             "description": "Quickdraw's current cooldown is reduced by 0.5 seconds for every pellet impacting an enemy."
           },
           {
-            "description": "<span class=\"ability-header\">True Grit:</span> For each stack, Graves gains bonus armor. Subsequent casts of Quickdraw and attacks versus non- minions will refresh the duration of True Grit.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">True Grit:</span> For each stack, Graves gains bonus armor. Subsequent casts of Quickdraw and attacks versus non- minions will refresh the duration of True Grit.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Armor",
@@ -382,7 +382,7 @@
         "icon": "https://cdn.communitydragon.org/latest/champion/Graves/ability-icon/r",
         "effects": [
           {
-            "description": "<span class=\"ability-header\">Active:</span> Graves fires an explosive shell in the target direction that deals physical damage to enemies hit and causes him to recoil 400 units in the opposite direction.",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Graves fires an explosive shell in the target direction that deals physical damage to enemies hit and causes him to recoil 400 units in the opposite direction.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
