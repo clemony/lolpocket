@@ -1,9 +1,7 @@
-export const HorizonFocus: Item = {
+const item: Item =  {
   "name": "Horizon Focus",
   "id": 4628,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3108,
@@ -53,7 +51,6 @@ export const HorizonFocus: Item = {
       "combined": 250,
       "sell": 1120
     },
-    "purchasable": true,
     "tags": [
       "MAGE"
     ]
@@ -65,3 +62,4 @@ export const HorizonFocus: Item = {
     35
   ]
 }
+export default item

@@ -1,9 +1,7 @@
-export const FiendishCodex: Item = {
+const item: Item =  {
   "name": "Fiendish Codex",
   "id": 3108,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1052,
@@ -111,7 +109,6 @@ export const FiendishCodex: Item = {
       "combined": 200,
       "sell": 340
     },
-    "purchasable": true,
     "tags": [
       "MAGE"
     ]
@@ -123,3 +120,4 @@ export const FiendishCodex: Item = {
     35
   ]
 }
+export default item

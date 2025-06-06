@@ -1,4 +1,6 @@
- export const Varus: Champion =  {
+// Updated Patch 25.11 - 06/06/2025 12:19:16 PM CDT
+
+const champion: Champion =  {
   "id": 110,
   "key": "Varus",
   "name": "Varus",
@@ -611,3 +613,4 @@
   },
   "lore": "One of the ancient darkin, Varus was a deadly killer who loved to torment his foes, driving them almost to insanity before delivering the killing arrow. He was imprisoned at the end of the Great Darkin War, but escaped centuries later in the remade flesh of two Ionian hunters—they had unwittingly released him, cursed to bear the bow containing his bound essence. Varus now seeks out those who trapped him, in order to enact his brutal vengeance, but the mortal souls within still resist him every step of the way."
 }
+    export default champion

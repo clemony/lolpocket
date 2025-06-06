@@ -1,9 +1,7 @@
-export const GamblersBlade: Item = {
+const item: Item =  {
   "name": "Gambler's Blade",
   "id": 447101,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
@@ -25,10 +23,10 @@ export const GamblersBlade: Item = {
       "total": 0,
       "combined": 1000,
       "sell": 0
-    },
-    "purchasable": true
+    }
   },
   "maps": [
     30
   ]
 }
+export default item

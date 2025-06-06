@@ -1,9 +1,7 @@
-export const UnendingDespair: Item = {
+const item: Item =  {
   "name": "Unending Despair",
   "id": 2502,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3105,
@@ -39,7 +37,6 @@ export const UnendingDespair: Item = {
       "combined": 800,
       "sell": 1120
     },
-    "purchasable": true,
     "tags": [
       "TANK"
     ]
@@ -51,3 +48,4 @@ export const UnendingDespair: Item = {
     35
   ]
 }
+export default item

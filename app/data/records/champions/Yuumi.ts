@@ -1,4 +1,6 @@
- export const Yuumi: Champion =  {
+// Updated Patch 25.11 - 06/06/2025 12:19:16 PM CDT
+
+const champion: Champion =  {
   "id": 350,
   "key": "Yuumi",
   "name": "Yuumi",
@@ -580,3 +582,4 @@
   },
   "lore": "A magical cat from Bandle City, Yuumi was once the familiar of a yordle enchantress, Norra. When her master mysteriously disappeared, Yuumi became the Keeper of Norra's sentient Book of Thresholds, traveling through portals in its pages to search for her. Yearning for affection, Yuumi seeks friendly companions to partner with on her journey, protecting them with luminous shields and fierce resolve. While Book strives to keep her on task, Yuumi is often drawn to worldly comforts, such as naps and fish. In the end, however, she always returns to her quest to find her friend."
 }
+    export default champion

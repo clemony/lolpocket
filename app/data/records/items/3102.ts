@@ -1,9 +1,7 @@
-export const BansheesVeil: Item = {
+const item: Item =  {
   "name": "Banshee's Veil",
   "id": 3102,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 1058,
@@ -42,7 +40,6 @@ export const BansheesVeil: Item = {
       "combined": 200,
       "sell": 1200
     },
-    "purchasable": true,
     "tags": [
       "MAGE"
     ]
@@ -54,3 +51,4 @@ export const BansheesVeil: Item = {
     35
   ]
 }
+export default item

@@ -1,9 +1,7 @@
-export const ElixirOfIron: Item = {
+const item: Item =  {
   "name": "Elixir of Iron",
   "id": 2138,
-  "rank": [
-    "Consumable"
-  ],
+  "rank": "Consumable",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -20,7 +18,6 @@ export const ElixirOfIron: Item = {
       "combined": 500,
       "sell": 200
     },
-    "purchasable": true,
     "tags": [
       "HEALTH_AND_REG",
       "MOVEMENT"
@@ -32,3 +29,4 @@ export const ElixirOfIron: Item = {
     21
   ]
 }
+export default item

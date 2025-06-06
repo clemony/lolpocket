@@ -1,4 +1,6 @@
- export const Neeko: Champion =  {
+// Updated Patch 25.11 - 06/06/2025 12:19:16 PM CDT
+
+const champion: Champion =  {
   "id": 518,
   "key": "Neeko",
   "name": "Neeko",
@@ -509,3 +511,4 @@
   },
   "lore": "Hailing from a long lost tribe of vastaya, Neeko can blend into any crowd by borrowing the appearances of others, even absorbing something of their emotional state to tell friend from foe in an instant. No one is ever sure where—or who—Neeko might be, but those who intend to do her harm will soon witness her true colors revealed, and feel the full power of her primordial spirit magic unleashed upon them."
 }
+    export default champion

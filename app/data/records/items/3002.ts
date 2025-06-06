@@ -1,9 +1,7 @@
-export const Trailblazer: Item = {
+const item: Item =  {
   "name": "Trailblazer",
   "id": 3002,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3066,
@@ -38,7 +36,6 @@ export const Trailblazer: Item = {
       "combined": 800,
       "sell": 960
     },
-    "purchasable": true,
     "tags": [
       "SUPPORT",
       "TANK"
@@ -51,3 +48,4 @@ export const Trailblazer: Item = {
     35
   ]
 }
+export default item

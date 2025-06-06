@@ -1,9 +1,7 @@
-export const GuardianAngel: Item = {
+const item: Item =  {
   "name": "Guardian Angel",
   "id": 3026,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 2019,
@@ -41,7 +39,6 @@ export const GuardianAngel: Item = {
       "combined": 800,
       "sell": 1280
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "MARKSMAN",
@@ -52,3 +49,4 @@ export const GuardianAngel: Item = {
     11
   ]
 }
+export default item

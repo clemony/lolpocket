@@ -1,9 +1,7 @@
-export const JuiceOfPower: Item = {
+const item: Item =  {
   "name": "Juice of Power",
   "id": 2142,
-  "rank": [
-    "Consumable"
-  ],
+  "rank": "Consumable",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -15,7 +13,6 @@ export const JuiceOfPower: Item = {
       "combined": 500,
       "sell": 200
     },
-    "purchasable": true,
     "tags": [
       "ATTACK_DAMAGE",
       "ABILITY_POWER"
@@ -25,3 +22,4 @@ export const JuiceOfPower: Item = {
     30
   ]
 }
+export default item

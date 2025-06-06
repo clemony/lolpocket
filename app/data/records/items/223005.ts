@@ -1,9 +1,7 @@
-export const Ghostcrawlers: Item = {
+const item: Item =  {
   "name": "Ghostcrawlers",
   "id": 223005,
-  "rank": [
-    "Boots"
-  ],
+  "rank": "Boots",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -23,10 +21,10 @@ export const Ghostcrawlers: Item = {
       "total": 500,
       "combined": 500,
       "sell": 200
-    },
-    "purchasable": true
+    }
   },
   "maps": [
     30
   ]
 }
+export default item

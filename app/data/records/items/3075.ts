@@ -1,9 +1,7 @@
-export const Thornmail: Item = {
+const item: Item =  {
   "name": "Thornmail",
   "id": 3075,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3076,
@@ -45,7 +43,6 @@ export const Thornmail: Item = {
       "combined": 450,
       "sell": 980
     },
-    "purchasable": true,
     "tags": [
       "TANK"
     ]
@@ -57,3 +54,4 @@ export const Thornmail: Item = {
     35
   ]
 }
+export default item

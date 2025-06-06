@@ -1,9 +1,7 @@
-export const SunderedSky: Item = {
+const item: Item =  {
   "name": "Sundered Sky",
   "id": 6610,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 2021,
@@ -43,7 +41,6 @@ export const SunderedSky: Item = {
       "combined": 500,
       "sell": 1240
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER"
     ]
@@ -55,3 +52,4 @@ export const SunderedSky: Item = {
     35
   ]
 }
+export default item

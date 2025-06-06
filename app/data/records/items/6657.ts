@@ -1,9 +1,7 @@
-export const RodOfAges: Item = {
+const item: Item =  {
   "name": "Rod of Ages",
   "id": 6657,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 1026,
@@ -43,7 +41,6 @@ export const RodOfAges: Item = {
       "combined": 450,
       "sell": 1040
     },
-    "purchasable": true,
     "tags": [
       "MAGE"
     ]
@@ -55,3 +52,4 @@ export const RodOfAges: Item = {
     35
   ]
 }
+export default item

@@ -1,9 +1,7 @@
-export const SolsticeSleigh: Item = {
+const item: Item =  {
   "name": "Solstice Sleigh",
   "id": 3876,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3867,
@@ -47,7 +45,6 @@ export const SolsticeSleigh: Item = {
       "combined": 0,
       "sell": 160
     },
-    "purchasable": true,
     "tags": [
       "SUPPORT"
     ]
@@ -56,3 +53,4 @@ export const SolsticeSleigh: Item = {
     11
   ]
 }
+export default item

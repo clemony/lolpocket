@@ -1,9 +1,7 @@
-export const Noonquiver: Item = {
+const item: Item =  {
   "name": "Noonquiver",
   "id": 6670,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1036,
@@ -47,7 +45,6 @@ export const Noonquiver: Item = {
       "combined": 350,
       "sell": 520
     },
-    "purchasable": true,
     "tags": [
       "MARKSMAN",
       "ONHIT_EFFECTS"
@@ -60,3 +57,4 @@ export const Noonquiver: Item = {
     35
   ]
 }
+export default item

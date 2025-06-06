@@ -1,4 +1,6 @@
- export const Hecarim: Champion =  {
+// Updated Patch 25.11 - 06/06/2025 12:19:16 PM CDT
+
+const champion: Champion =  {
   "id": 120,
   "key": "Hecarim",
   "name": "Hecarim",
@@ -450,3 +452,4 @@
   },
   "lore": "Hecarim is a spectral fusion of man and beast, cursed to ride down the souls of the living for all eternity. When the Blessed Isles fell into shadow, this proud knight was obliterated by the destructive energies of the Ruination, along with all his cavalry and their mounts. Now, whenever the Black Mist reaches out across Runeterra, he leads their devastating charge, reveling in the slaughter and crushing the foe beneath his armored hooves."
 }
+    export default champion

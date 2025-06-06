@@ -1,9 +1,7 @@
-export const MirageBlade: Item = {
+const item: Item =  {
   "name": "Mirage Blade",
   "id": 447100,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
@@ -24,10 +22,10 @@ export const MirageBlade: Item = {
       "total": 0,
       "combined": 1000,
       "sell": 0
-    },
-    "purchasable": true
+    }
   },
   "maps": [
     30
   ]
 }
+export default item

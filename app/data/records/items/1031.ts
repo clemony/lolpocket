@@ -1,9 +1,7 @@
-export const ChainVest: Item = {
+const item: Item =  {
   "name": "Chain Vest",
   "id": 1031,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1029,
@@ -77,7 +75,6 @@ export const ChainVest: Item = {
       "combined": 500,
       "sell": 320
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "MARKSMAN",
@@ -92,3 +89,4 @@ export const ChainVest: Item = {
     35
   ]
 }
+export default item

@@ -1,9 +1,7 @@
-export const BountyOfWorlds: Item = {
+const item: Item =  {
   "name": "Bounty of Worlds",
   "id": 3867,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsInto": [
     {
       "id": 3869,
@@ -75,3 +73,4 @@ export const BountyOfWorlds: Item = {
     11
   ]
 }
+export default item

@@ -1,9 +1,7 @@
-export const Boots: Item = {
+const item: Item =  {
   "name": "Boots",
   "id": 1001,
-  "rank": [
-    "Boots"
-  ],
+  "rank": "Boots",
   "buildsInto": [
     {
       "id": 3117,
@@ -64,8 +62,7 @@ export const Boots: Item = {
       "total": 300,
       "combined": 300,
       "sell": 120
-    },
-    "purchasable": true
+    }
   },
   "maps": [
     11,
@@ -74,3 +71,4 @@ export const Boots: Item = {
     35
   ]
 }
+export default item

@@ -1,4 +1,6 @@
- export const Belveth: Champion =  {
+// Updated Patch 25.11 - 06/06/2025 12:19:16 PM CDT
+
+const champion: Champion =  {
   "id": 200,
   "key": "Belveth",
   "name": "Bel'Veth",
@@ -657,3 +659,4 @@
   },
   "lore": "A nightmarish empress created from the raw material of an entire devoured city, Bel'Veth is the end of Runeterra itself... and the beginning of a monstrous reality of her own design. Driven by epochs of repurposed history, knowledge, and memories from the world above, she voraciously feeds an ever-expanding need for new experiences and emotions, consuming all that crosses her path. Yet her wants could never be sated by only one world as she turns her hungry eyes toward the Void's old masters..."
 }
+    export default champion

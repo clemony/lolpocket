@@ -1,9 +1,7 @@
-export const ForceOfEntropy: Item = {
+const item: Item =  {
   "name": "Force of Entropy",
   "id": 443061,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
@@ -26,7 +24,6 @@ export const ForceOfEntropy: Item = {
       "combined": 1000,
       "sell": 0
     },
-    "purchasable": true,
     "tags": [
       "TANK"
     ]
@@ -35,3 +32,4 @@ export const ForceOfEntropy: Item = {
     30
   ]
 }
+export default item

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ListboxContent,  ListboxItem, ListboxRoot } from 'reka-ui'
+import { ListboxContent, ListboxItem, ListboxItemIndicator, ListboxRoot } from 'reka-ui'
 const is = useItemStore()
 
 </script>
@@ -10,9 +10,12 @@ const is = useItemStore()
             <ListboxContent class="w-full py-4 ">
        <ListboxItem
           v-for="stat in itemStats.filter(s => s.id != 'msflat' && s.id != 'mpenflat')"
-          :key="stat.id" :value="stat.id" class=" grid grid-cols-[4fr_repeat(2,1fr)] gap-3 rounded-lg cursor-pointer  focus:outline-0 hover:border-b3 px-5 hover:bg-b3/30  py-1.5  grid shrink-0 w-full items-center  **:font-medium *:text-bc  dst" :class="{ 'bg-b3/40 border-b3 shadow-xs inset-shadow-sides bg-noise inset-shadow-b3/10': is.itemFilter.stats && is.itemFilter.stats.includes(stat.id) }">
+          :key="stat.id" :value="stat.id" class="!flex items-center gap-3 rounded-lg cursor-pointer w-full  focus:outline-0 hover:border-b3 px-5 hover:bg-b3/30  py-1.5  shrink-0 w-full justify-between **:font-medium *:text-bc  dst" :class="{ 'bg-b3/40 border-b3 shadow-xs inset-shadow-sides bg-noise inset-shadow-b3/10': is.itemFilter.stats && is.itemFilter.stats.includes(stat.id) }">
 
           {{ stat.displayName }}
+<ListboxItemIndicator class="w-fit justify-self-end justify-end">
+          <icon name="tick-sm" />
+        </ListboxItemIndicator>
        </ListboxItem>
             </ListboxContent>
     </ListboxRoot>

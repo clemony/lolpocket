@@ -1,9 +1,7 @@
-export const ChempunkChainsword: Item = {
+const item: Item =  {
   "name": "Chempunk Chainsword",
   "id": 6609,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3123,
@@ -46,7 +44,6 @@ export const ChempunkChainsword: Item = {
       "combined": 350,
       "sell": 1240
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "ASSASSIN"
@@ -59,3 +56,4 @@ export const ChempunkChainsword: Item = {
     35
   ]
 }
+export default item

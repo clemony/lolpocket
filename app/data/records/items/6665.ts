@@ -1,9 +1,7 @@
-export const JakshoTheProtean: Item = {
+const item: Item =  {
   "name": "Jak'Sho, The Protean",
   "id": 6665,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 1011,
@@ -43,7 +41,6 @@ export const JakshoTheProtean: Item = {
       "combined": 650,
       "sell": 1280
     },
-    "purchasable": true,
     "tags": [
       "TANK"
     ]
@@ -55,3 +52,4 @@ export const JakshoTheProtean: Item = {
     35
   ]
 }
+export default item

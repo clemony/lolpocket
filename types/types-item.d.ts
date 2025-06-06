@@ -1,24 +1,26 @@
 declare global {
   type ItemId = number
   type ItemName = string
-  interface ItemIndex {
-    name: ItemName
-    id: number
-  }
   type ItemRecord = Record<ItemId, ItemLite>
   type StatLite = number
   type StatArray = StatLite[]
   type StatKeys = keyof ItemLite["stats"]
+  type CalculatorSet = ItemIndex[]
+  type effectAmount = number
 
-  interface ItemLite {
-    id: number
+  interface ItemIndex {
     name: ItemName
-    rank: string[]
-    stats: Record<string, number>
-    purchasable: boolean
-    cost: number
-    tags: string[]
-    maps: number[]
+    id: number
+  }
+
+  interface ItemLite extends ItemIndex {
+    aka?: string[]
+    rank?: string
+    stats?: Record<string, number>
+    purchasable?: boolean
+    cost?: number
+    tags?: string[]
+    maps?: number[]
   }
 
   interface ItemComponent {
@@ -30,7 +32,7 @@ declare global {
   interface Item {
     id: number
     name: ItemName
-    rank?: string[]
+    rank?: string
     buildsFrom?: ItemComponent[]
     buildsInto?: ItemComponent[]
     specialRecipe?: string | number
@@ -71,8 +73,6 @@ declare global {
     range?: number
   }
 
-  type effectAmount = number
-
   interface ItemClone extends ItemId {
     id: number
     cloneId: string
@@ -83,8 +83,6 @@ declare global {
     shortName?: string
     icon?: string
   }
-
-  type CalculatorSet = ItemIndex[]
 }
 
 export {}

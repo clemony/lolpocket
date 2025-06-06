@@ -1,9 +1,7 @@
-export const KrakenSlayer: Item = {
+const item: Item =  {
   "name": "Kraken Slayer",
   "id": 6672,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 6690,
@@ -43,7 +41,6 @@ export const KrakenSlayer: Item = {
       "combined": 425,
       "sell": 1240
     },
-    "purchasable": true,
     "tags": [
       "MARKSMAN"
     ]
@@ -55,3 +52,4 @@ export const KrakenSlayer: Item = {
     35
   ]
 }
+export default item

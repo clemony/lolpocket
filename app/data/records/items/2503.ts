@@ -1,9 +1,7 @@
-export const BlackfireTorch: Item = {
+const item: Item =  {
   "name": "Blackfire Torch",
   "id": 2503,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3802,
@@ -46,7 +44,6 @@ export const BlackfireTorch: Item = {
       "combined": 700,
       "sell": 1120
     },
-    "purchasable": true,
     "tags": [
       "MAGE"
     ]
@@ -58,3 +55,4 @@ export const BlackfireTorch: Item = {
     35
   ]
 }
+export default item

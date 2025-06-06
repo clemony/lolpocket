@@ -1,9 +1,7 @@
-export const Stormsurge: Item = {
+const item: Item =  {
   "name": "Stormsurge",
   "id": 4646,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3145,
@@ -43,7 +41,6 @@ export const Stormsurge: Item = {
       "combined": 800,
       "sell": 1120
     },
-    "purchasable": true,
     "tags": [
       "MAGE"
     ]
@@ -55,3 +52,4 @@ export const Stormsurge: Item = {
     35
   ]
 }
+export default item

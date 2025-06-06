@@ -1,9 +1,7 @@
-export const TheBrutalizer: Item = {
+const item: Item =  {
   "name": "The Brutalizer",
   "id": 2020,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 2022,
@@ -48,7 +46,6 @@ export const TheBrutalizer: Item = {
       "combined": 212,
       "sell": 534
     },
-    "purchasable": true,
     "tags": [
       "ASSASSIN"
     ]
@@ -60,3 +57,4 @@ export const TheBrutalizer: Item = {
     35
   ]
 }
+export default item

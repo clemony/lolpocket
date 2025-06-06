@@ -1,9 +1,7 @@
-export const Puppeteer: Item = {
+const item: Item =  {
   "name": "Puppeteer",
   "id": 447123,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
@@ -31,7 +29,6 @@ export const Puppeteer: Item = {
       "combined": 1000,
       "sell": 0
     },
-    "purchasable": true,
     "tags": [
       "SUPPORT"
     ]
@@ -40,3 +37,4 @@ export const Puppeteer: Item = {
     30
   ]
 }
+export default item

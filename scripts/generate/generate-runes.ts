@@ -1,16 +1,15 @@
-import fs from 'node:fs'
+import fs from "node:fs"
+import path from "node:path"
+import { markUpdate } from "../utils/mark-update"
 
-const raw = JSON.parse(fs.readFileSync('./data/raw/runes-raw.json', 'utf-8'))
+const raw = JSON.parse(fs.readFileSync("./data/raw/runes-raw.json", "utf-8"))
+const outputDir = path.resolve("./app/data/runes.ts")
 
 const output = {}
 
 for (const tree of raw) {
   const lite = {}
-  const formatted = {
-    id: tree.id,
-    key: tree.key,
-    name: tree.name,
-  }
+  const formatted = {}
 
   // Add each slot (number keys)
   tree.slots.forEach((slot, slotIndex) => {
@@ -24,8 +23,13 @@ for (const tree of raw) {
     formatted[slotIndex] = updatedSlot
   })
 
-  output[tree.key] = formatted
+  output[tree.key] = Object.values(formatted)
 }
 
-fs.writeFileSync('./data/runes.json', JSON.stringify(output, null, 2))
-console.log('✅ runes.json updated with runeIndex')
+fs.writeFileSync(
+  outputDir,
+  `// ${markUpdate()}
+
+export const runePaths: PathRecord = ${JSON.stringify(output, null, 2)}`
+)
+console.log("✅ runes.json updated with runeIndex")

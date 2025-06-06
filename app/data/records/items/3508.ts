@@ -1,9 +1,7 @@
-export const EssenceReaver: Item = {
+const item: Item =  {
   "name": "Essence Reaver",
   "id": 3508,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 1037,
@@ -47,7 +45,6 @@ export const EssenceReaver: Item = {
       "combined": 375,
       "sell": 1160
     },
-    "purchasable": true,
     "tags": [
       "MARKSMAN",
       "MANA_AND_REG",
@@ -61,3 +58,4 @@ export const EssenceReaver: Item = {
     35
   ]
 }
+export default item

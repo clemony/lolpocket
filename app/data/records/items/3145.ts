@@ -1,9 +1,7 @@
-export const HextechAlternator: Item = {
+const item: Item =  {
   "name": "Hextech Alternator",
   "id": 3145,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1052,
@@ -69,7 +67,6 @@ export const HextechAlternator: Item = {
       "combined": 300,
       "sell": 440
     },
-    "purchasable": true,
     "tags": [
       "MAGE"
     ]
@@ -81,3 +78,4 @@ export const HextechAlternator: Item = {
     35
   ]
 }
+export default item

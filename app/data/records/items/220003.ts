@@ -1,9 +1,7 @@
-export const LegendaryAssassinItem: Item = {
+const item: Item =  {
   "name": "Legendary Assassin Item",
   "id": 220003,
-  "rank": [
-    "Consumable"
-  ],
+  "rank": "Consumable",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -14,10 +12,10 @@ export const LegendaryAssassinItem: Item = {
       "total": 2000,
       "combined": 2000,
       "sell": 800
-    },
-    "purchasable": true
+    }
   },
   "maps": [
     30
   ]
 }
+export default item

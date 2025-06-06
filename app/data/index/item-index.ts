@@ -1,3 +1,5 @@
+// Updated Patch 25.11 - 06/06/2025 12:22:44 PM CDT
+
 export const itemIndex: ItemIndex[] = [
   {
     "name": "Boots",
@@ -1247,4 +1249,4 @@ export const itemIndex: ItemIndex[] = [
     "name": "Puppeteer",
     "id": 447123
   }
-] as const
+]

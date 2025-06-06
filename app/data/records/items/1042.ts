@@ -1,9 +1,7 @@
-export const Dagger: Item = {
+const item: Item =  {
   "name": "Dagger",
   "id": 1042,
-  "rank": [
-    "Basic"
-  ],
+  "rank": "Basic",
   "buildsInto": [
     {
       "id": 6631,
@@ -75,7 +73,6 @@ export const Dagger: Item = {
       "combined": 250,
       "sell": 100
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "MARKSMAN",
@@ -89,3 +86,4 @@ export const Dagger: Item = {
     35
   ]
 }
+export default item

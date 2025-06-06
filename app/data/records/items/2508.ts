@@ -1,9 +1,7 @@
-export const FatedAshes: Item = {
+const item: Item =  {
   "name": "Fated Ashes",
   "id": 2508,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1052,
@@ -43,7 +41,6 @@ export const FatedAshes: Item = {
       "combined": 500,
       "sell": 360
     },
-    "purchasable": true,
     "tags": [
       "MAGE"
     ]
@@ -55,3 +52,4 @@ export const FatedAshes: Item = {
     35
   ]
 }
+export default item

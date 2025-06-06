@@ -1,9 +1,7 @@
-export const SwordOfTheDivine: Item = {
+const item: Item =  {
   "name": "Sword of the Divine",
   "id": 443060,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
@@ -27,7 +25,6 @@ export const SwordOfTheDivine: Item = {
       "combined": 1000,
       "sell": 0
     },
-    "purchasable": true,
     "tags": [
       "ASSASSIN"
     ]
@@ -36,3 +33,4 @@ export const SwordOfTheDivine: Item = {
     30
   ]
 }
+export default item

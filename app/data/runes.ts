@@ -1,6 +1,8 @@
-{
-  "Domination": {
-    "0": [
+// Updated Patch 25.11 - 06/06/2025 12:26:58 PM CDT
+
+export const runePaths: PathRecord = {
+  "Domination": [
+    [
       {
         "id": 8112,
         "key": "Electrocute",
@@ -29,7 +31,7 @@
         "runeIndex": 2
       }
     ],
-    "1": [
+    [
       {
         "id": 8126,
         "key": "CheapShot",
@@ -58,7 +60,7 @@
         "runeIndex": 2
       }
     ],
-    "2": [
+    [
       {
         "id": 8137,
         "key": "SixthSense",
@@ -87,7 +89,7 @@
         "runeIndex": 2
       }
     ],
-    "3": [
+    [
       {
         "id": 8135,
         "key": "TreasureHunter",
@@ -115,13 +117,10 @@
         "path": "Domination",
         "runeIndex": 2
       }
-    ],
-    "id": 8100,
-    "key": "Domination",
-    "name": "Domination"
-  },
-  "Inspiration": {
-    "0": [
+    ]
+  ],
+  "Inspiration": [
+    [
       {
         "id": 8351,
         "key": "GlacialAugment",
@@ -150,7 +149,7 @@
         "runeIndex": 2
       }
     ],
-    "1": [
+    [
       {
         "id": 8306,
         "key": "HextechFlashtraption",
@@ -179,7 +178,7 @@
         "runeIndex": 2
       }
     ],
-    "2": [
+    [
       {
         "id": 8313,
         "key": "PerfectTiming",
@@ -208,7 +207,7 @@
         "runeIndex": 2
       }
     ],
-    "3": [
+    [
       {
         "id": 8347,
         "key": "CosmicInsight",
@@ -236,13 +235,10 @@
         "path": "Inspiration",
         "runeIndex": 2
       }
-    ],
-    "id": 8300,
-    "key": "Inspiration",
-    "name": "Inspiration"
-  },
-  "Precision": {
-    "0": [
+    ]
+  ],
+  "Precision": [
+    [
       {
         "id": 8005,
         "key": "PressTheAttack",
@@ -280,7 +276,7 @@
         "runeIndex": 3
       }
     ],
-    "1": [
+    [
       {
         "id": 9101,
         "key": "AbsorbLife",
@@ -309,7 +305,7 @@
         "runeIndex": 2
       }
     ],
-    "2": [
+    [
       {
         "id": 9104,
         "key": "LegendAlacrity",
@@ -338,7 +334,7 @@
         "runeIndex": 2
       }
     ],
-    "3": [
+    [
       {
         "id": 8014,
         "key": "CoupDeGrace",
@@ -366,13 +362,10 @@
         "path": "Precision",
         "runeIndex": 2
       }
-    ],
-    "id": 8000,
-    "key": "Precision",
-    "name": "Precision"
-  },
-  "Resolve": {
-    "0": [
+    ]
+  ],
+  "Resolve": [
+    [
       {
         "id": 8437,
         "key": "GraspOfTheUndying",
@@ -401,7 +394,7 @@
         "runeIndex": 2
       }
     ],
-    "1": [
+    [
       {
         "id": 8446,
         "key": "Demolish",
@@ -430,7 +423,7 @@
         "runeIndex": 2
       }
     ],
-    "2": [
+    [
       {
         "id": 8429,
         "key": "Conditioning",
@@ -459,7 +452,7 @@
         "runeIndex": 2
       }
     ],
-    "3": [
+    [
       {
         "id": 8451,
         "key": "Overgrowth",
@@ -487,13 +480,10 @@
         "path": "Resolve",
         "runeIndex": 2
       }
-    ],
-    "id": 8400,
-    "key": "Resolve",
-    "name": "Resolve"
-  },
-  "Sorcery": {
-    "0": [
+    ]
+  ],
+  "Sorcery": [
+    [
       {
         "id": 8214,
         "key": "SummonAery",
@@ -522,7 +512,7 @@
         "runeIndex": 2
       }
     ],
-    "1": [
+    [
       {
         "id": 8224,
         "key": "NullifyingOrb",
@@ -551,7 +541,7 @@
         "runeIndex": 2
       }
     ],
-    "2": [
+    [
       {
         "id": 8210,
         "key": "Transcendence",
@@ -580,7 +570,7 @@
         "runeIndex": 2
       }
     ],
-    "3": [
+    [
       {
         "id": 8237,
         "key": "Scorch",
@@ -608,9 +598,6 @@
         "path": "Sorcery",
         "runeIndex": 2
       }
-    ],
-    "id": 8200,
-    "key": "Sorcery",
-    "name": "Sorcery"
-  }
+    ]
+  ]
 }

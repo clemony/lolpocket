@@ -1,9 +1,7 @@
-export const SorcerersShoes: Item = {
+const item: Item =  {
   "name": "Sorcerer's Shoes",
   "id": 3020,
-  "rank": [
-    "Boots"
-  ],
+  "rank": "Boots",
   "buildsFrom": [
     {
       "id": 1001,
@@ -36,8 +34,7 @@ export const SorcerersShoes: Item = {
       "total": 1100,
       "combined": 800,
       "sell": 440
-    },
-    "purchasable": true
+    }
   },
   "maps": [
     11,
@@ -46,3 +43,4 @@ export const SorcerersShoes: Item = {
     35
   ]
 }
+export default item

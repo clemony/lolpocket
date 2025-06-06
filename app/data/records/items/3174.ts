@@ -1,9 +1,7 @@
-export const ArmoredAdvance: Item = {
+const item: Item =  {
   "name": "Armored Advance",
   "id": 3174,
-  "rank": [
-    "Boots"
-  ],
+  "rank": "Boots",
   "buildsFrom": [
     {
       "id": 3047,
@@ -38,10 +36,10 @@ export const ArmoredAdvance: Item = {
       "total": 1700,
       "combined": 500,
       "sell": 680
-    },
-    "purchasable": true
+    }
   },
   "maps": [
     11
   ]
 }
+export default item

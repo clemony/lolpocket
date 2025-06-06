@@ -1,9 +1,7 @@
-export const OracleLens: Item = {
+const item: Item =  {
   "name": "Oracle Lens",
   "id": 3364,
-  "rank": [
-    "Consumable"
-  ],
+  "rank": "Consumable",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -29,11 +27,11 @@ export const OracleLens: Item = {
       "total": 0,
       "combined": 0,
       "sell": 0
-    },
-    "purchasable": true
+    }
   },
   "maps": [
     11,
     21
   ]
 }
+export default item

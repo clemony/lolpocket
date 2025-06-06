@@ -1,9 +1,7 @@
-export const TotalBiscuitOfEverlastingWill: Item = {
+const item: Item =  {
   "name": "Total Biscuit of Everlasting Will",
   "id": 2010,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -28,3 +26,4 @@ export const TotalBiscuitOfEverlastingWill: Item = {
     35
   ]
 }
+export default item

@@ -1,9 +1,7 @@
-export const ReinforcedArmor: Item = {
+const item: Item =  {
   "name": "Reinforced Armor (Turret Item)",
   "id": 1502,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -31,3 +29,4 @@ export const ReinforcedArmor: Item = {
     35
   ]
 }
+export default item

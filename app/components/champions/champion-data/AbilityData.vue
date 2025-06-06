@@ -76,6 +76,15 @@ watch(() => ability.value, (newVal) => {
     <div v-if="ability" class="self-center relative overflow-hidden size-full">
       <div class="relative absolute top-0 left-0 inset-0  gap-3 size-full items-start overflow-y-auto  pb-4 px-5 mr-px flex flex-col ">
         <AbilityDescription v-for="(effect, i) in ability.effects" :key="i" :effect="effect" />
+
+        <Collapsible v-if="ability.notes" class="w-full">
+       <CollapsibleContent class="CollapsibleContent px-3 leading-5 text-balanced">
+{{ ability.notes }}
+       <CollapsibleTrigger class="ability-header flex px-3 flex-nowrap justify-between w-full" >
+      <icon name="add-sm" />
+      </CollapsibleTrigger>
+</CollapsibleContent>
+        </Collapsible>
       </div>
     </div>
   </div>

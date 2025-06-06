@@ -1,9 +1,7 @@
-export const Reverberation: Item = {
+const item: Item =  {
   "name": "Reverberation",
   "id": 447114,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
@@ -36,7 +34,6 @@ export const Reverberation: Item = {
       "combined": 1000,
       "sell": 0
     },
-    "purchasable": true,
     "tags": [
       "TANK"
     ]
@@ -45,3 +42,4 @@ export const Reverberation: Item = {
     30
   ]
 }
+export default item

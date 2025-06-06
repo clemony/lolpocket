@@ -3,6 +3,7 @@ declare global {
   type ChampionName = string
   type ChampionKey = string
   type ChampionRecord = Record<ChampionKey, Champion>
+  type ChampionLiteRecord = Record<ChampionKey, ChampionLite>
   type AbilityRecord = Record<"P" | "Q" | "W" | "E" | "R", Ability[]>
   type SplashType = "tile" | "centered" | "load"
   type SkinRecord = Record<ChampionKey, Skin>
@@ -15,22 +16,16 @@ declare global {
     name: string
   }
 
-  interface ChampionLite {
-    id: ChampionId
-    key: ChampionKey
-    name: ChampionName
-    resource: string
-    attackType: string
-    stats: Record<string, ChampionStat>
-    positions: string[]
-    roles: string[]
-    attributeRatings: Record<string, number>
+  interface ChampionLite extends ChampionIndex {
+    resource?: string
+    attackType?: string
+    stats?: Record<string, ChampionStat>
+    positions?: string[]
+    roles?: string[]
+    attributeRatings?: Record<string, number>
   }
 
-  interface Champion {
-    id: ChampionId
-    key: ChampionKey
-    name: ChampionName
+  interface Champion extends ChampionIndex {
     resource: string
     attackType: string
     stats: Record<string, ChampionStat>

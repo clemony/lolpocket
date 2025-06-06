@@ -1,9 +1,7 @@
-export const ProwlersClaw: Item = {
+const item: Item =  {
   "name": "Prowler's Claw",
   "id": 446693,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
@@ -28,9 +26,9 @@ export const ProwlersClaw: Item = {
       "combined": 1000,
       "sell": 0
     },
-    "purchasable": true,
     "tags": [
       "ASSASSIN"
     ]
   }
 }
+export default item

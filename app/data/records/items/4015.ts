@@ -1,9 +1,7 @@
-export const Perplexity: Item = {
+const item: Item =  {
   "name": "Perplexity",
   "id": 4015,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -27,7 +25,6 @@ export const Perplexity: Item = {
       "combined": 2500,
       "sell": 1000
     },
-    "purchasable": true,
     "tags": [
       "MAGE"
     ]
@@ -36,3 +33,4 @@ export const Perplexity: Item = {
     30
   ]
 }
+export default item

@@ -1,9 +1,7 @@
-export const WitsEnd: Item = {
+const item: Item =  {
   "name": "Wit's End",
   "id": 3091,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 1043,
@@ -44,7 +42,6 @@ export const WitsEnd: Item = {
       "combined": 550,
       "sell": 1120
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "MARKSMAN",
@@ -58,3 +55,4 @@ export const WitsEnd: Item = {
     35
   ]
 }
+export default item

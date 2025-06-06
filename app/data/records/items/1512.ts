@@ -1,9 +1,7 @@
-export const SuperMechPowerField: Item = {
+const item: Item =  {
   "name": "Super Mech Power Field",
   "id": 1512,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -31,3 +29,4 @@ export const SuperMechPowerField: Item = {
     35
   ]
 }
+export default item

@@ -1,9 +1,7 @@
-export const SlightlyMagicalBoots: Item = {
+const item: Item =  {
   "name": "Slightly Magical Boots",
   "id": 2422,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "buildsInto": [
     {
       "id": 3006,
@@ -70,3 +68,4 @@ export const SlightlyMagicalBoots: Item = {
     35
   ]
 }
+export default item

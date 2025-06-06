@@ -1,9 +1,7 @@
-export const ImmortalShieldbow: Item = {
+const item: Item =  {
   "name": "Immortal Shieldbow",
   "id": 6673,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 1037,
@@ -38,7 +36,6 @@ export const ImmortalShieldbow: Item = {
       "combined": 825,
       "sell": 1200
     },
-    "purchasable": true,
     "tags": [
       "MARKSMAN",
       "HEALTH_AND_REG"
@@ -51,3 +48,4 @@ export const ImmortalShieldbow: Item = {
     35
   ]
 }
+export default item

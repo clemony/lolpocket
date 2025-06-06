@@ -1,4 +1,6 @@
- export const TwistedFate: Champion =  {
+// Updated Patch 25.11 - 06/06/2025 12:19:16 PM CDT
+
+const champion: Champion =  {
   "id": 4,
   "key": "TwistedFate",
   "name": "Twisted Fate",
@@ -504,3 +506,4 @@
   },
   "lore": "Twisted Fate is an infamous cardsharp and swindler who has gambled and charmed his way across much of the known world, earning the enmity and admiration of the rich and foolish alike. He rarely takes things seriously, greeting each day with a mocking smile and an insouciant swagger. In every possible way, Twisted Fate always has an ace up his sleeve."
 }
+    export default champion

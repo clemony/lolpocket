@@ -1,9 +1,7 @@
-export const GuardiansBlade: Item = {
+const item: Item =  {
   "name": "Guardian's Blade",
   "id": 3177,
-  "rank": [
-    "Starter"
-  ],
+  "rank": "Starter",
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
@@ -20,7 +18,6 @@ export const GuardiansBlade: Item = {
       "combined": 950,
       "sell": 380
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "MARKSMAN",
@@ -33,3 +30,4 @@ export const GuardiansBlade: Item = {
     35
   ]
 }
+export default item

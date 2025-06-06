@@ -1,9 +1,7 @@
-export const Flesheater: Item = {
+const item: Item =  {
   "name": "Flesheater",
   "id": 447112,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
@@ -28,10 +26,10 @@ export const Flesheater: Item = {
       "total": 0,
       "combined": 1000,
       "sell": 0
-    },
-    "purchasable": true
+    }
   },
   "maps": [
     30
   ]
 }
+export default item

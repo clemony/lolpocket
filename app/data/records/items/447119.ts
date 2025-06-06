@@ -1,9 +1,7 @@
-export const LightningRod: Item = {
+const item: Item =  {
   "name": "Lightning Rod",
   "id": 447119,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
@@ -34,7 +32,6 @@ export const LightningRod: Item = {
       "combined": 1000,
       "sell": 0
     },
-    "purchasable": true,
     "tags": [
       "TANK"
     ]
@@ -43,3 +40,4 @@ export const LightningRod: Item = {
     30
   ]
 }
+export default item

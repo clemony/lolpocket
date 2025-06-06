@@ -1,9 +1,7 @@
-export const SeekersArmguard: Item = {
+const item: Item =  {
   "name": "Seeker's Armguard",
   "id": 2420,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1052,
@@ -60,7 +58,6 @@ export const SeekersArmguard: Item = {
       "combined": 500,
       "sell": 640
     },
-    "purchasable": true,
     "tags": [
       "MAGE"
     ]
@@ -72,3 +69,4 @@ export const SeekersArmguard: Item = {
     35
   ]
 }
+export default item

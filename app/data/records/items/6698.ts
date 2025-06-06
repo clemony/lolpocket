@@ -1,9 +1,7 @@
-export const ProfaneHydra: Item = {
+const item: Item =  {
   "name": "Profane Hydra",
   "id": 6698,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3077,
@@ -45,7 +43,6 @@ export const ProfaneHydra: Item = {
       "combined": 663,
       "sell": 1280
     },
-    "purchasable": true,
     "tags": [
       "ASSASSIN"
     ]
@@ -57,3 +54,4 @@ export const ProfaneHydra: Item = {
     35
   ]
 }
+export default item

@@ -1,9 +1,7 @@
-export const Galeforce: Item = {
+const item: Item =  {
   "name": "Galeforce",
   "id": 446671,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
@@ -31,7 +29,6 @@ export const Galeforce: Item = {
       "combined": 1000,
       "sell": 0
     },
-    "purchasable": true,
     "tags": [
       "MARKSMAN"
     ]
@@ -40,3 +37,4 @@ export const Galeforce: Item = {
     30
   ]
 }
+export default item

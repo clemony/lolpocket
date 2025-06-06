@@ -1,4 +1,6 @@
- export const Yorick: Champion =  {
+// Updated Patch 25.11 - 06/06/2025 12:19:16 PM CDT
+
+const champion: Champion =  {
   "id": 83,
   "key": "Yorick",
   "name": "Yorick",
@@ -531,3 +533,4 @@
   },
   "lore": "The last survivor of a long-forgotten religious order, Yorick is both blessed and cursed with power over the dead. Trapped on the Shadow Isles, his only companions are the rotting corpses and shrieking wraiths that he gathers to him. Yorick's monstrous actions belie his noble purpose: to free his home from the curse of the Ruination."
 }
+    export default champion

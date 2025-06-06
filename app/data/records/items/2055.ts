@@ -1,9 +1,7 @@
-export const ControlWard: Item = {
+const item: Item =  {
   "name": "Control Ward",
   "id": 2055,
-  "rank": [
-    "Consumable"
-  ],
+  "rank": "Consumable",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -21,10 +19,10 @@ export const ControlWard: Item = {
       "total": 75,
       "combined": 75,
       "sell": 30
-    },
-    "purchasable": true
+    }
   },
   "maps": [
     11
   ]
 }
+export default item

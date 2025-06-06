@@ -1,9 +1,7 @@
-export const GargoyleStoneplate: Item = {
+const item: Item =  {
   "name": "Gargoyle Stoneplate",
   "id": 443193,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
@@ -27,7 +25,6 @@ export const GargoyleStoneplate: Item = {
       "combined": 1000,
       "sell": 0
     },
-    "purchasable": true,
     "tags": [
       "TANK"
     ]
@@ -36,3 +33,4 @@ export const GargoyleStoneplate: Item = {
     30
   ]
 }
+export default item

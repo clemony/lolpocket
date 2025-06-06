@@ -1,9 +1,7 @@
-export const WingedMoonplate: Item = {
+const item: Item =  {
   "name": "Winged Moonplate",
   "id": 3066,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1028,
@@ -58,7 +56,6 @@ export const WingedMoonplate: Item = {
       "combined": 400,
       "sell": 320
     },
-    "purchasable": true,
     "tags": [
       "TANK",
       "MOVEMENT"
@@ -71,3 +68,4 @@ export const WingedMoonplate: Item = {
     35
   ]
 }
+export default item

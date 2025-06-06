@@ -1,9 +1,7 @@
-export const WarmogsArmor: Item = {
+const item: Item =  {
   "name": "Warmog's Armor",
   "id": 3083,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 1011,
@@ -52,7 +50,6 @@ export const WarmogsArmor: Item = {
       "combined": 500,
       "sell": 1240
     },
-    "purchasable": true,
     "tags": [
       "TANK"
     ]
@@ -64,3 +61,4 @@ export const WarmogsArmor: Item = {
     35
   ]
 }
+export default item

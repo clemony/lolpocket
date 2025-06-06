@@ -30,7 +30,8 @@ export function capitalize(str: string): string {
   return str.charAt(0).toUpperCase() + str.slice(1)
 }
 
-// Utility to normalize string arrays
-export function normalizeArray(arr) {
-  return arr.map(normalize)
+export function normalizeArray(arr: unknown): string[] {
+  if (!arr) return []
+  if (!Array.isArray(arr)) arr = [arr]
+  return (arr as unknown[]).map(normalize).filter(Boolean) as string[]
 }

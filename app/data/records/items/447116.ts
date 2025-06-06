@@ -1,9 +1,7 @@
-export const KinkouJitte: Item = {
+const item: Item =  {
   "name": "Kinkou Jitte",
   "id": 447116,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
@@ -25,7 +23,6 @@ export const KinkouJitte: Item = {
       "combined": 1000,
       "sell": 0
     },
-    "purchasable": true,
     "tags": [
       "ASSASSIN",
       "FIGHTER",
@@ -36,3 +33,4 @@ export const KinkouJitte: Item = {
     30
   ]
 }
+export default item

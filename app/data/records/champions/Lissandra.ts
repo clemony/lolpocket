@@ -1,4 +1,6 @@
- export const Lissandra: Champion =  {
+// Updated Patch 25.11 - 06/06/2025 12:19:16 PM CDT
+
+const champion: Champion =  {
   "id": 127,
   "key": "Lissandra",
   "name": "Lissandra",
@@ -493,3 +495,4 @@
   },
   "lore": "Lissandra's magic twists the pure power of ice into something dark and terrible. With the force of her black ice, she does more than freeze—she impales and crushes those who oppose her. To the terrified denizens of the north, she is known only as ''The Ice Witch.'' The truth is much more sinister: Lissandra is a corruptor of nature who plots to unleash an ice age on the world."
 }
+    export default champion

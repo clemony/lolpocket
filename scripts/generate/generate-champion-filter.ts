@@ -1,4 +1,5 @@
 import fs from "node:fs"
+import { markUpdate } from "../utils/mark-update"
 import { normalize, normalizeArray } from "../utils/normalize-strings"
 
 const champions = JSON.parse(
@@ -7,10 +8,12 @@ const champions = JSON.parse(
 const filter = {
   roles: {},
   positions: {},
+  attackType: {},
+  resource: {},
 }
 
 for (const champ of Object.values(champions)) {
-  const { id, positions = [], roles = [] } = champ
+  const { id, positions, attackType, resource = [], roles = [] } = champ
 
   if (!id) continue
 
@@ -24,9 +27,20 @@ for (const champ of Object.values(champions)) {
     if (!filter.roles[role]) filter.roles[role] = []
     filter.roles[role].push(id)
   }
+  // Attack Type
+  const atk = normalize(attackType)
+  if (!filter.attackType[atk]) filter.attackType[atk] = []
+  filter.attackType[atk].push(id)
+
+  // Resource
+  const res = normalize(resource)
+  if (!filter.resource[res]) filter.resource[res] = []
+  filter.resource[res].push(id)
 }
 
 fs.writeFileSync(
   "./app/data/filters/champion-filters.ts",
-  `export const championFilters = ${JSON.stringify(filter, null, 2)}`
+  `// ${markUpdate()}
+
+export const championFilters = ${JSON.stringify(filter, null, 2)}`
 )

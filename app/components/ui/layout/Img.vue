@@ -27,10 +27,10 @@ function load() {
     v-bind="$attrs"
     :alt="alt"
     preload
-    :class="cn('size-full transition-opacity duration-500 ease',
+    :class="cn('size-full',
                {
-                 'opacity-100': loaded,
-                 'opacity-0 ': !loaded,
+                 '': loaded,
+                 '': !loaded,
                  'loadedClass': loaded,
                },
                className)"

@@ -1,9 +1,7 @@
-export const RunaansHurricane: Item = {
+const item: Item =  {
   "name": "Runaan's Hurricane",
   "id": 3085,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3086,
@@ -39,7 +37,6 @@ export const RunaansHurricane: Item = {
       "combined": 850,
       "sell": 1060
     },
-    "purchasable": true,
     "tags": [
       "MARKSMAN",
       "ONHIT_EFFECTS",
@@ -53,3 +50,4 @@ export const RunaansHurricane: Item = {
     35
   ]
 }
+export default item

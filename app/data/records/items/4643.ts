@@ -1,9 +1,7 @@
-export const VigilantWardstone: Item = {
+const item: Item =  {
   "name": "Vigilant Wardstone",
   "id": 4643,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 4638,
@@ -50,7 +48,6 @@ export const VigilantWardstone: Item = {
       "combined": 1200,
       "sell": 920
     },
-    "purchasable": true,
     "tags": [
       "SUPPORT"
     ]
@@ -59,3 +56,4 @@ export const VigilantWardstone: Item = {
     11
   ]
 }
+export default item

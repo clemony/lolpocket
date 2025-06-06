@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { champKey, class: className, quality = 20, bgPosition = '50% -1.8rem', bgSize = '190%' }
   = defineProps<{
-    champKey: string
+    champKey: string | null
     type?: SplashType
     class?: HTMLAttributes['class']
     bgSize?: string

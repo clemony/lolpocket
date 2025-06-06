@@ -1,9 +1,7 @@
-export const WoogletsWitchcap: Item = {
+const item: Item =  {
   "name": "Wooglet's Witchcap",
   "id": 228002,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -33,7 +31,6 @@ export const WoogletsWitchcap: Item = {
       "combined": 6000,
       "sell": 0
     },
-    "purchasable": true,
     "tags": [
       "MAGE"
     ]
@@ -42,3 +39,4 @@ export const WoogletsWitchcap: Item = {
     30
   ]
 }
+export default item

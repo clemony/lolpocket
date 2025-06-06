@@ -1,9 +1,7 @@
-export const EyeOfTheHerald: Item = {
+const item: Item =  {
   "name": "Eye of the Herald",
   "id": 3513,
-  "rank": [
-    "Consumable"
-  ],
+  "rank": "Consumable",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -19,3 +17,4 @@ export const EyeOfTheHerald: Item = {
     "purchasable": false
   }
 }
+export default item

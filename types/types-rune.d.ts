@@ -1,6 +1,18 @@
 declare global {
-
+  type PathName =
+    | "Precision"
+    | "Domination"
+    | "Sorcery"
+    | "Resolve"
+    | "Inspiration"
   type RuneKey = string
+  type PathSlots = Rune[]
+  type PathRecord = Record<PathName, PathSlots[]>
+
+  interface PathIndex {
+    name: PathName
+    id: number
+  }
 
   interface RuneIndex {
     name: string
@@ -8,7 +20,7 @@ declare global {
     key: string
     path: string
   }
-  
+
   interface PathRunes {
     1: RuneId | null
     2: RuneId | null
@@ -59,8 +71,7 @@ declare global {
     id: number
     key: string
     name: string
-    slots: [Rune[]]
+    slots: Slot[]
   }
-
 }
-export { }
+export {}

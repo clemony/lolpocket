@@ -1,9 +1,7 @@
-export const BlackSpear: Item = {
+const item: Item =  {
   "name": "Black Spear",
   "id": 3599,
-  "rank": [
-    "Starter"
-  ],
+  "rank": "Starter",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -23,8 +21,7 @@ export const BlackSpear: Item = {
       "total": 0,
       "combined": 0,
       "sell": 0
-    },
-    "purchasable": true
+    }
   },
   "maps": [
     11,
@@ -34,3 +31,4 @@ export const BlackSpear: Item = {
     35
   ]
 }
+export default item

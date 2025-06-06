@@ -1,9 +1,7 @@
-export const SpearOfShojin: Item = {
+const item: Item =  {
   "name": "Spear of Shojin",
   "id": 3161,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 1037,
@@ -48,7 +46,6 @@ export const SpearOfShojin: Item = {
       "combined": 675,
       "sell": 1240
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "ABILITY_HASTE"
@@ -61,3 +58,4 @@ export const SpearOfShojin: Item = {
     35
   ]
 }
+export default item

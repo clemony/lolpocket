@@ -1,9 +1,7 @@
-export const DeathsDance: Item = {
+const item: Item =  {
   "name": "Death's Dance",
   "id": 6333,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 2019,
@@ -52,7 +50,6 @@ export const DeathsDance: Item = {
       "combined": 275,
       "sell": 1320
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER"
     ]
@@ -64,3 +61,4 @@ export const DeathsDance: Item = {
     35
   ]
 }
+export default item

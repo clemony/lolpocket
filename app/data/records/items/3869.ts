@@ -1,9 +1,7 @@
-export const CelestialOpposition: Item = {
+const item: Item =  {
   "name": "Celestial Opposition",
   "id": 3869,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3867,
@@ -46,7 +44,6 @@ export const CelestialOpposition: Item = {
       "combined": 0,
       "sell": 160
     },
-    "purchasable": true,
     "tags": [
       "SUPPORT"
     ]
@@ -55,3 +52,4 @@ export const CelestialOpposition: Item = {
     11
   ]
 }
+export default item

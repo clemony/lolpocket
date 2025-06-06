@@ -1,9 +1,7 @@
-export const HemomancersHelm: Item = {
+const item: Item =  {
   "name": "Hemomancer's Helm",
   "id": 447103,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
@@ -26,7 +24,6 @@ export const HemomancersHelm: Item = {
       "combined": 1000,
       "sell": 0
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER"
     ]
@@ -35,3 +32,4 @@ export const HemomancersHelm: Item = {
     30
   ]
 }
+export default item

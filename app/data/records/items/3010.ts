@@ -1,9 +1,7 @@
-export const SymbioticSoles: Item = {
+const item: Item =  {
   "name": "Symbiotic Soles",
   "id": 3010,
-  "rank": [
-    "Boots"
-  ],
+  "rank": "Boots",
   "buildsFrom": [
     {
       "id": 1001,
@@ -46,11 +44,11 @@ export const SymbioticSoles: Item = {
       "total": 900,
       "combined": 600,
       "sell": 360
-    },
-    "purchasable": true
+    }
   },
   "maps": [
     11,
     21
   ]
 }
+export default item

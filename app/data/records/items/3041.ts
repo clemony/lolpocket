@@ -1,9 +1,7 @@
-export const MejaisSoulstealer: Item = {
+const item: Item =  {
   "name": "Mejai's Soulstealer",
   "id": 3041,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 1082,
@@ -36,7 +34,6 @@ export const MejaisSoulstealer: Item = {
       "combined": 1150,
       "sell": 600
     },
-    "purchasable": true,
     "tags": [
       "MAGE",
       "MOVEMENT"
@@ -46,3 +43,4 @@ export const MejaisSoulstealer: Item = {
     11
   ]
 }
+export default item

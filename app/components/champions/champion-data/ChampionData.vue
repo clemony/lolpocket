@@ -4,7 +4,6 @@ const { championKey } = defineProps<{
 }>()
 const champion = ref<Champion>(null)
 const loaded = ref(false)
-const tab = ref()
 
 watchEffect(async () => {
   if (!championKey)
@@ -14,7 +13,7 @@ watchEffect(async () => {
 
   try {
     const module = await import(`data/records/champions/${championKey}.ts`)
-    champion.value = module[championKey] || null
+    champion.value = module.default || null
   }
   catch (err) {
     console.error(`Failed to load champion for ${championKey}`, err)
@@ -26,8 +25,8 @@ const tabs = ref('abilities')
 </script>
 
 <template>
-  <div class="relative flex flex-col w-full max-h-full  field-box border-b3/80 bg-b2/40 drop-shadow-sm rounded-xl">
-    <div class="overflow-hidden rounded-t-lg   h-50 w-full drop-shadow-sm relative inset-shadow-sm bg-b2/30 " :class="{ 'shadow-warm': !champion }">
+  <div class="relative flex flex-col w-full max-h-full  field-box border-b3/80 bg-b2/40 drop-shadow-sm !rounded-xxl">
+    <div class="overflow-hidden rounded-t-xxl   h-50 w-full drop-shadow-sm relative inset-shadow-sm bg-b2/30 " :class="{ 'shadow-warm': !champion }">
       <ChampionSplash v-if="championKey" :key="championKey" v-model:loaded="loaded" :champ-key="championKey" bg-position="top" :name="champion?.name" type="centered" class="z-1 size-full  scale-180  " @loaded="loaded = true" />
 
       <header class="absolute bottom-4 *:text-right right-5 *:text-white/86 drop-shadow-sm z-2 *:dst *:text-shadow-sm w-full">

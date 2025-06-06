@@ -1,9 +1,7 @@
-export const Overcharged: Item = {
+const item: Item =  {
   "name": "Overcharged",
   "id": 1507,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -31,3 +29,4 @@ export const Overcharged: Item = {
     35
   ]
 }
+export default item

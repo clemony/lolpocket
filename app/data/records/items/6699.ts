@@ -1,9 +1,7 @@
-export const VoltaicCyclosword: Item = {
+const item: Item =  {
   "name": "Voltaic Cyclosword",
   "id": 6699,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 2020,
@@ -53,7 +51,6 @@ export const VoltaicCyclosword: Item = {
       "combined": 963,
       "sell": 1200
     },
-    "purchasable": true,
     "tags": [
       "ASSASSIN"
     ]
@@ -65,3 +62,4 @@ export const VoltaicCyclosword: Item = {
     35
   ]
 }
+export default item

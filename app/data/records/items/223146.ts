@@ -1,9 +1,7 @@
-export const HextechGunblade: Item = {
+const item: Item =  {
   "name": "Hextech Gunblade",
   "id": 223146,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -27,7 +25,6 @@ export const HextechGunblade: Item = {
       "combined": 2500,
       "sell": 1000
     },
-    "purchasable": true,
     "tags": [
       "MAGE"
     ]
@@ -36,3 +33,4 @@ export const HextechGunblade: Item = {
     30
   ]
 }
+export default item

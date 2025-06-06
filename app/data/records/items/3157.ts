@@ -1,9 +1,7 @@
-export const ZhonyasHourglass: Item = {
+const item: Item =  {
   "name": "Zhonya's Hourglass",
   "id": 3157,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 1058,
@@ -43,7 +41,6 @@ export const ZhonyasHourglass: Item = {
       "combined": 450,
       "sell": 1300
     },
-    "purchasable": true,
     "tags": [
       "MAGE"
     ]
@@ -55,3 +52,4 @@ export const ZhonyasHourglass: Item = {
     35
   ]
 }
+export default item

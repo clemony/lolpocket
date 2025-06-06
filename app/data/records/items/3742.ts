@@ -1,9 +1,7 @@
-export const DeadMansPlate: Item = {
+const item: Item =  {
   "name": "Dead Man's Plate",
   "id": 3742,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3066,
@@ -55,7 +53,6 @@ export const DeadMansPlate: Item = {
       "combined": 900,
       "sell": 1160
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "TANK"
@@ -68,3 +65,4 @@ export const DeadMansPlate: Item = {
     35
   ]
 }
+export default item

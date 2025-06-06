@@ -1,4 +1,6 @@
- export const Heimerdinger: Champion =  {
+// Updated Patch 25.11 - 06/06/2025 12:19:16 PM CDT
+
+const champion: Champion =  {
   "id": 74,
   "key": "Heimerdinger",
   "name": "Heimerdinger",
@@ -693,3 +695,4 @@
   },
   "lore": "The eccentric Professor Cecil B. Heimerdinger is one of the most innovative and esteemed inventors the world has ever known. As the longest serving member of the Council of Piltover, he saw the best and the worst of the city's unending desire for progress. Nonetheless, this brilliant scientist and teacher will always remain dedicated to using his unconventional devices to improve the lives of others."
 }
+    export default champion

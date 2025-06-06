@@ -1,9 +1,7 @@
-export const WardensMail: Item = {
+const item: Item =  {
   "name": "Warden's Mail",
   "id": 3082,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1029,
@@ -53,7 +51,6 @@ export const WardensMail: Item = {
       "combined": 400,
       "sell": 400
     },
-    "purchasable": true,
     "tags": [
       "TANK"
     ]
@@ -65,3 +62,4 @@ export const WardensMail: Item = {
     35
   ]
 }
+export default item

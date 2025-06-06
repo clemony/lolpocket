@@ -1,9 +1,7 @@
-export const ElixirOfSorcery: Item = {
+const item: Item =  {
   "name": "Elixir of Sorcery",
   "id": 2139,
-  "rank": [
-    "Consumable"
-  ],
+  "rank": "Consumable",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -21,7 +19,6 @@ export const ElixirOfSorcery: Item = {
       "combined": 500,
       "sell": 200
     },
-    "purchasable": true,
     "tags": [
       "ABILITY_POWER",
       "MANA_AND_REG",
@@ -34,3 +31,4 @@ export const ElixirOfSorcery: Item = {
     21
   ]
 }
+export default item

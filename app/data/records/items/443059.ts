@@ -1,9 +1,7 @@
-export const CloakOfStarryNight: Item = {
+const item: Item =  {
   "name": "Cloak of Starry Night",
   "id": 443059,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
@@ -25,7 +23,6 @@ export const CloakOfStarryNight: Item = {
       "combined": 1000,
       "sell": 0
     },
-    "purchasable": true,
     "tags": [
       "TANK"
     ]
@@ -34,3 +31,4 @@ export const CloakOfStarryNight: Item = {
     30
   ]
 }
+export default item

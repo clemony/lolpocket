@@ -1,9 +1,7 @@
-export const SpectresCowl: Item = {
+const item: Item =  {
   "name": "Spectre's Cowl",
   "id": 3211,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1028,
@@ -58,7 +56,6 @@ export const SpectresCowl: Item = {
       "combined": 150,
       "sell": 500
     },
-    "purchasable": true,
     "tags": [
       "TANK"
     ]
@@ -70,3 +67,4 @@ export const SpectresCowl: Item = {
     35
   ]
 }
+export default item

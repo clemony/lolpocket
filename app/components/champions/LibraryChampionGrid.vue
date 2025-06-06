@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+
 import type { ColDef, ColGroupDef, GridApi, GridOptions, GridPreDestroyedEvent, GridReadyEvent } from 'ag-grid-community'
 import { CellStyleModule, ClientSideRowModelModule, ColumnApiModule, ColumnAutoSizeModule, ColumnHoverModule, GridStateModule, ModuleRegistry, RenderApiModule, RowSelectionModule, ValidationModule } from 'ag-grid-community'
 import { AgGridVue } from 'ag-grid-vue3'
@@ -15,13 +16,16 @@ defineExpose({
 })
 
 const cs = useChampStore()
-const { championKeys, filteredKeys, filtered } = useChampionFilter(cs.championFilter)
+const {  filteredKeys, filtered } = useChampionFilter(cs.championFilter)
 
 const theme = ref(pocketTheme)
 
 const gridApi = shallowRef<GridApi | null>(null)
+const filteredChamps = computed<ChampionLite[]>(() => championsLite.filter(c => filteredKeys.value.includes(c.key)))
+
 
 const gridOptions: GridOptions<ChampionLite> = {
+  rowData: filteredChamps.value,
   columnHoverHighlight: true,
   rowSelection: {
     mode: 'multiRow',
@@ -263,7 +267,6 @@ ModuleRegistry.registerModules([ClientSideRowModelModule, ValidationModule, RowS
       :grid-options="gridOptions"
       :theme="theme"
       :column-defs="colDefs"
-      :row-data="filtered"
       @grid-pre-destroyed="onGridPreDestroyed"
       @grid-ready="onGridReady" />
   </article>

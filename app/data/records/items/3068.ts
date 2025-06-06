@@ -1,9 +1,7 @@
-export const SunfireAegis: Item = {
+const item: Item =  {
   "name": "Sunfire Aegis",
   "id": 3068,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 6660,
@@ -43,7 +41,6 @@ export const SunfireAegis: Item = {
       "combined": 1000,
       "sell": 1080
     },
-    "purchasable": true,
     "tags": [
       "TANK"
     ]
@@ -55,3 +52,4 @@ export const SunfireAegis: Item = {
     35
   ]
 }
+export default item

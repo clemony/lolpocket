@@ -1,9 +1,7 @@
-export const BlightingJewel: Item = {
+const item: Item =  {
   "name": "Blighting Jewel",
   "id": 4630,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1052,
@@ -40,7 +38,6 @@ export const BlightingJewel: Item = {
       "combined": 700,
       "sell": 440
     },
-    "purchasable": true,
     "tags": [
       "MAGE"
     ]
@@ -52,3 +49,4 @@ export const BlightingJewel: Item = {
     35
   ]
 }
+export default item

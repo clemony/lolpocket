@@ -1,9 +1,7 @@
-export const RabadonsDeathcap: Item = {
+const item: Item =  {
   "name": "Rabadon's Deathcap",
   "id": 3089,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 1058,
@@ -43,7 +41,6 @@ export const RabadonsDeathcap: Item = {
       "combined": 1100,
       "sell": 1400
     },
-    "purchasable": true,
     "tags": [
       "MAGE"
     ]
@@ -55,3 +52,4 @@ export const RabadonsDeathcap: Item = {
     35
   ]
 }
+export default item

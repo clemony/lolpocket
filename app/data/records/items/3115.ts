@@ -1,9 +1,7 @@
-export const NashorsTooth: Item = {
+const item: Item =  {
   "name": "Nashor's Tooth",
   "id": 3115,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 1043,
@@ -47,7 +45,6 @@ export const NashorsTooth: Item = {
       "combined": 500,
       "sell": 1160
     },
-    "purchasable": true,
     "tags": [
       "MARKSMAN",
       "MAGE",
@@ -61,3 +58,4 @@ export const NashorsTooth: Item = {
     35
   ]
 }
+export default item

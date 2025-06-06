@@ -1,9 +1,7 @@
-export const Tunneler: Item = {
+const item: Item =  {
   "name": "Tunneler",
   "id": 2021,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1036,
@@ -72,7 +70,6 @@ export const Tunneler: Item = {
       "combined": 400,
       "sell": 460
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER"
     ]
@@ -84,3 +81,4 @@ export const Tunneler: Item = {
     35
   ]
 }
+export default item

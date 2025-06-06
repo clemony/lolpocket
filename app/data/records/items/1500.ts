@@ -1,9 +1,7 @@
-export const Ohmwrecker: Item = {
+const item: Item =  {
   "name": "Ohmwrecker (Turret Item)",
   "id": 1500,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -39,3 +37,4 @@ export const Ohmwrecker: Item = {
     35
   ]
 }
+export default item

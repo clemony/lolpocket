@@ -1,9 +1,7 @@
-export const CloakOfAgility: Item = {
+const item: Item =  {
   "name": "Cloak of Agility",
   "id": 1018,
-  "rank": [
-    "Basic"
-  ],
+  "rank": "Basic",
   "buildsInto": [
     {
       "id": 6670,
@@ -55,7 +53,6 @@ export const CloakOfAgility: Item = {
       "combined": 600,
       "sell": 240
     },
-    "purchasable": true,
     "tags": [
       "MARKSMAN"
     ]
@@ -67,3 +64,4 @@ export const CloakOfAgility: Item = {
     35
   ]
 }
+export default item

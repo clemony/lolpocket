@@ -1,9 +1,7 @@
-export const AetherWisp: Item = {
+const item: Item =  {
   "name": "Aether Wisp",
   "id": 3113,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1052,
@@ -66,7 +64,6 @@ export const AetherWisp: Item = {
       "combined": 500,
       "sell": 360
     },
-    "purchasable": true,
     "tags": [
       "MAGE",
       "MOVEMENT"
@@ -79,3 +76,4 @@ export const AetherWisp: Item = {
     35
   ]
 }
+export default item

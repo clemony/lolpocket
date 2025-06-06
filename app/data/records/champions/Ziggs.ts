@@ -1,4 +1,6 @@
- export const Ziggs: Champion =  {
+// Updated Patch 25.11 - 06/06/2025 12:19:17 PM CDT
+
+const champion: Champion =  {
   "id": 115,
   "key": "Ziggs",
   "name": "Ziggs",
@@ -478,3 +480,4 @@
   },
   "lore": "With a love of big bombs and short fuses, the yordle Ziggs is an explosive force of nature. As an inventor's assistant in Piltover, he was bored by his predictable life and befriended a mad, blue-haired bomber named Jinx. After a wild night on the town, Ziggs took her advice and moved to Zaun, where he now explores his fascinations more freely, terrorizing the chem-barons and regular citizens alike in his never ending quest to blow stuff up."
 }
+    export default champion

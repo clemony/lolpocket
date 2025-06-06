@@ -1,9 +1,7 @@
-export const Cull: Item = {
+const item: Item =  {
   "name": "Cull",
   "id": 1083,
-  "rank": [
-    "Starter"
-  ],
+  "rank": "Starter",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -28,7 +26,6 @@ export const Cull: Item = {
       "combined": 450,
       "sell": 180
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "MARKSMAN",
@@ -41,3 +38,4 @@ export const Cull: Item = {
     11
   ]
 }
+export default item

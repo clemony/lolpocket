@@ -1,9 +1,7 @@
-export const Tiamat: Item = {
+const item: Item =  {
   "name": "Tiamat",
   "id": 3077,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1036,
@@ -66,7 +64,6 @@ export const Tiamat: Item = {
       "combined": 500,
       "sell": 480
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "TANK",
@@ -80,3 +77,4 @@ export const Tiamat: Item = {
     35
   ]
 }
+export default item

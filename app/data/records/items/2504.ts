@@ -1,9 +1,7 @@
-export const KaenicRookern: Item = {
+const item: Item =  {
   "name": "Kaenic Rookern",
   "id": 2504,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3211,
@@ -38,7 +36,6 @@ export const KaenicRookern: Item = {
       "combined": 800,
       "sell": 1160
     },
-    "purchasable": true,
     "tags": [
       "TANK"
     ]
@@ -50,3 +47,4 @@ export const KaenicRookern: Item = {
     35
   ]
 }
+export default item

@@ -1,9 +1,7 @@
-export const RefillablePotion: Item = {
+const item: Item =  {
   "name": "Refillable Potion",
   "id": 2031,
-  "rank": [
-    "Consumable"
-  ],
+  "rank": "Consumable",
   "buildsInto": [
     {
       "id": 2033,
@@ -32,7 +30,6 @@ export const RefillablePotion: Item = {
       "combined": 150,
       "sell": 60
     },
-    "purchasable": true,
     "tags": [
       "HEALTH_AND_REG"
     ]
@@ -43,3 +40,4 @@ export const RefillablePotion: Item = {
     21
   ]
 }
+export default item

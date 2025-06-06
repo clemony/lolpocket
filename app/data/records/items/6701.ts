@@ -1,9 +1,7 @@
-export const Opportunity: Item = {
+const item: Item =  {
   "name": "Opportunity",
   "id": 6701,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 1037,
@@ -47,7 +45,6 @@ export const Opportunity: Item = {
       "combined": 475,
       "sell": 1080
     },
-    "purchasable": true,
     "tags": [
       "ASSASSIN",
       "MOVEMENT"
@@ -60,3 +57,4 @@ export const Opportunity: Item = {
     35
   ]
 }
+export default item

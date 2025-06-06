@@ -1,4 +1,6 @@
- export const Kindred: Champion =  {
+// Updated Patch 25.11 - 06/06/2025 12:19:16 PM CDT
+
+const champion: Champion =  {
   "id": 203,
   "key": "Kindred",
   "name": "Kindred",
@@ -465,3 +467,4 @@
   },
   "lore": "Separate, but never parted, Kindred represents the twin essences of death. Lamb's bow offers a swift release from the mortal realm for those who accept their fate. Wolf hunts down those who run from their end, delivering violent finality within his crushing jaws. Though interpretations of Kindred's nature vary across Runeterra, every mortal must choose the true face of their death."
 }
+    export default champion

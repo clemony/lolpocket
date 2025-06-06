@@ -1,9 +1,7 @@
-export const TheCollector: Item = {
+const item: Item =  {
   "name": "The Collector",
   "id": 6676,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 1037,
@@ -52,7 +50,6 @@ export const TheCollector: Item = {
       "combined": 525,
       "sell": 1200
     },
-    "purchasable": true,
     "tags": [
       "MARKSMAN",
       "ASSASSIN"
@@ -65,3 +62,4 @@ export const TheCollector: Item = {
     35
   ]
 }
+export default item

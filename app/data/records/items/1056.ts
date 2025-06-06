@@ -1,9 +1,7 @@
-export const DoransRing: Item = {
+const item: Item =  {
   "name": "Doran's Ring",
   "id": 1056,
-  "rank": [
-    "Starter"
-  ],
+  "rank": "Starter",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -34,7 +32,6 @@ export const DoransRing: Item = {
       "combined": 400,
       "sell": 160
     },
-    "purchasable": true,
     "tags": [
       "MAGE",
       "MANA_AND_REG",
@@ -47,3 +44,4 @@ export const DoransRing: Item = {
     21
   ]
 }
+export default item

@@ -1,9 +1,7 @@
-export const Morellonomicon: Item = {
+const item: Item =  {
   "name": "Morellonomicon",
   "id": 3165,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3916,
@@ -51,7 +49,6 @@ export const Morellonomicon: Item = {
       "combined": 400,
       "sell": 1140
     },
-    "purchasable": true,
     "tags": [
       "MAGE",
       "SUPPORT"
@@ -64,3 +61,4 @@ export const Morellonomicon: Item = {
     35
   ]
 }
+export default item

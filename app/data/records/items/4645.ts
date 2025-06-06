@@ -1,9 +1,7 @@
-export const Shadowflame: Item = {
+const item: Item =  {
   "name": "Shadowflame",
   "id": 4645,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3145,
@@ -37,7 +35,6 @@ export const Shadowflame: Item = {
       "combined": 900,
       "sell": 1280
     },
-    "purchasable": true,
     "tags": [
       "MAGE"
     ]
@@ -49,3 +46,4 @@ export const Shadowflame: Item = {
     35
   ]
 }
+export default item

@@ -1,16 +1,12 @@
-{
-  "1001": {
+export const itemsLite: ItemLite[] = [
+  {
     "id": 1001,
     "name": "Boots",
-    "rank": [
-      "Boots"
-    ],
+    "rank": "Boots",
     "stats": {
       "flatMovespeed": 25
     },
-    "purchasable": true,
     "cost": 300,
-    "tags": [],
     "maps": [
       11,
       12,
@@ -18,16 +14,13 @@
       35
     ]
   },
-  "1004": {
+  {
     "id": 1004,
     "name": "Faerie Charm",
-    "rank": [
-      "Basic"
-    ],
+    "rank": "Basic",
     "stats": {
       "manaRegen": 50
     },
-    "purchasable": true,
     "cost": 200,
     "tags": [
       "Mage",
@@ -40,16 +33,13 @@
       35
     ]
   },
-  "1006": {
+  {
     "id": 1006,
     "name": "Rejuvenation Bead",
-    "rank": [
-      "Basic"
-    ],
+    "rank": "Basic",
     "stats": {
       "healthRegen": 100
     },
-    "purchasable": true,
     "cost": 300,
     "tags": [
       "Tank"
@@ -61,16 +51,13 @@
       35
     ]
   },
-  "1011": {
+  {
     "id": 1011,
     "name": "Giant's Belt",
-    "rank": [
-      "Epic"
-    ],
+    "rank": "Epic",
     "stats": {
       "health": 350
     },
-    "purchasable": true,
     "cost": 900,
     "tags": [
       "Fighter",
@@ -84,16 +71,13 @@
       35
     ]
   },
-  "1018": {
+  {
     "id": 1018,
     "name": "Cloak of Agility",
-    "rank": [
-      "Basic"
-    ],
+    "rank": "Basic",
     "stats": {
       "criticalStrikeChance": 15
     },
-    "purchasable": true,
     "cost": 600,
     "tags": [
       "Marksman"
@@ -105,16 +89,13 @@
       35
     ]
   },
-  "1026": {
+  {
     "id": 1026,
     "name": "Blasting Wand",
-    "rank": [
-      "Basic"
-    ],
+    "rank": "Basic",
     "stats": {
       "abilityPower": 45
     },
-    "purchasable": true,
     "cost": 850,
     "tags": [
       "Mage",
@@ -127,16 +108,16 @@
       35
     ]
   },
-  "1027": {
+  {
     "id": 1027,
     "name": "Sapphire Crystal",
-    "rank": [
-      "Basic"
+    "aka": [
+      "blue"
     ],
+    "rank": "Basic",
     "stats": {
       "mana": 300
     },
-    "purchasable": true,
     "cost": 300,
     "tags": [
       "Mage",
@@ -149,16 +130,16 @@
       35
     ]
   },
-  "1028": {
+  {
     "id": 1028,
     "name": "Ruby Crystal",
-    "rank": [
-      "Basic"
+    "aka": [
+      "red"
     ],
+    "rank": "Basic",
     "stats": {
       "health": 150
     },
-    "purchasable": true,
     "cost": 400,
     "tags": [
       "Fighter",
@@ -175,16 +156,13 @@
       35
     ]
   },
-  "1029": {
+  {
     "id": 1029,
     "name": "Cloth Armor",
-    "rank": [
-      "Basic"
-    ],
+    "rank": "Basic",
     "stats": {
       "armor": 15
     },
-    "purchasable": true,
     "cost": 300,
     "tags": [
       "Fighter",
@@ -201,16 +179,13 @@
       35
     ]
   },
-  "1031": {
+  {
     "id": 1031,
     "name": "Chain Vest",
-    "rank": [
-      "Epic"
-    ],
+    "rank": "Epic",
     "stats": {
       "armor": 40
     },
-    "purchasable": true,
     "cost": 800,
     "tags": [
       "Fighter",
@@ -225,16 +200,13 @@
       35
     ]
   },
-  "1033": {
+  {
     "id": 1033,
     "name": "Null-Magic Mantle",
-    "rank": [
-      "Basic"
-    ],
+    "rank": "Basic",
     "stats": {
       "magicResistance": 20
     },
-    "purchasable": true,
     "cost": 400,
     "tags": [
       "Fighter",
@@ -251,16 +223,13 @@
       35
     ]
   },
-  "1036": {
+  {
     "id": 1036,
     "name": "Long Sword",
-    "rank": [
-      "Basic"
-    ],
+    "rank": "Basic",
     "stats": {
       "attackDamage": 10
     },
-    "purchasable": true,
     "cost": 350,
     "tags": [
       "Fighter",
@@ -274,16 +243,13 @@
       35
     ]
   },
-  "1037": {
+  {
     "id": 1037,
     "name": "Pickaxe",
-    "rank": [
-      "Basic"
-    ],
+    "rank": "Basic",
     "stats": {
       "attackDamage": 25
     },
-    "purchasable": true,
     "cost": 875,
     "tags": [
       "Fighter",
@@ -297,16 +263,16 @@
       35
     ]
   },
-  "1038": {
+  {
     "id": 1038,
     "name": "B. F. Sword",
-    "rank": [
-      "Basic"
+    "aka": [
+      "bf"
     ],
+    "rank": "Basic",
     "stats": {
       "attackDamage": 40
     },
-    "purchasable": true,
     "cost": 1300,
     "tags": [
       "Fighter",
@@ -320,16 +286,13 @@
       35
     ]
   },
-  "1042": {
+  {
     "id": 1042,
     "name": "Dagger",
-    "rank": [
-      "Basic"
-    ],
+    "rank": "Basic",
     "stats": {
       "attackSpeed": 10
     },
-    "purchasable": true,
     "cost": 250,
     "tags": [
       "Fighter",
@@ -343,16 +306,13 @@
       35
     ]
   },
-  "1043": {
+  {
     "id": 1043,
     "name": "Recurve Bow",
-    "rank": [
-      "Epic"
-    ],
+    "rank": "Epic",
     "stats": {
       "attackSpeed": 15
     },
-    "purchasable": true,
     "cost": 700,
     "tags": [
       "Fighter",
@@ -366,16 +326,17 @@
       35
     ]
   },
-  "1052": {
+  {
     "id": 1052,
     "name": "Amplifying Tome",
-    "rank": [
-      "Basic"
+    "aka": [
+      "amptome",
+      "book"
     ],
+    "rank": "Basic",
     "stats": {
       "abilityPower": 20
     },
-    "purchasable": true,
     "cost": 400,
     "tags": [
       "Mage",
@@ -388,17 +349,14 @@
       35
     ]
   },
-  "1053": {
+  {
     "id": 1053,
     "name": "Vampiric Scepter",
-    "rank": [
-      "Epic"
-    ],
+    "rank": "Epic",
     "stats": {
       "attackDamage": 15,
       "lifesteal": 7
     },
-    "purchasable": true,
     "cost": 900,
     "tags": [
       "Fighter",
@@ -412,17 +370,17 @@
       35
     ]
   },
-  "1054": {
+  {
     "id": 1054,
     "name": "Doran's Shield",
-    "rank": [
-      "Starter"
+    "aka": [
+      "dshield"
     ],
+    "rank": "Starter",
     "stats": {
       "health": 110,
       "healthRegen": 4
     },
-    "purchasable": true,
     "cost": 450,
     "tags": [
       "Fighter",
@@ -438,18 +396,18 @@
       21
     ]
   },
-  "1055": {
+  {
     "id": 1055,
     "name": "Doran's Blade",
-    "rank": [
-      "Starter"
+    "aka": [
+      "dblade"
     ],
+    "rank": "Starter",
     "stats": {
       "attackDamage": 10,
       "health": 80,
       "lifesteal": 3
     },
-    "purchasable": true,
     "cost": 450,
     "tags": [
       "Fighter",
@@ -463,17 +421,17 @@
       21
     ]
   },
-  "1056": {
+  {
     "id": 1056,
     "name": "Doran's Ring",
-    "rank": [
-      "Starter"
+    "aka": [
+      "dring"
     ],
+    "rank": "Starter",
     "stats": {
       "abilityPower": 18,
       "health": 90
     },
-    "purchasable": true,
     "cost": 400,
     "tags": [
       "Mage",
@@ -486,16 +444,13 @@
       21
     ]
   },
-  "1057": {
+  {
     "id": 1057,
     "name": "Negatron Cloak",
-    "rank": [
-      "Epic"
-    ],
+    "rank": "Epic",
     "stats": {
       "magicResistance": 45
     },
-    "purchasable": true,
     "cost": 850,
     "tags": [
       "Fighter",
@@ -509,16 +464,16 @@
       35
     ]
   },
-  "1058": {
+  {
     "id": 1058,
     "name": "Needlessly Large Rod",
-    "rank": [
-      "Basic"
+    "aka": [
+      "nlr"
     ],
+    "rank": "Basic",
     "stats": {
       "abilityPower": 65
     },
-    "purchasable": true,
     "cost": 1200,
     "tags": [
       "Mage"
@@ -530,17 +485,17 @@
       35
     ]
   },
-  "1082": {
+  {
     "id": 1082,
     "name": "Dark Seal",
-    "rank": [
-      "Starter"
+    "aka": [
+      "Noxian"
     ],
+    "rank": "Starter",
     "stats": {
       "abilityPower": 15,
       "health": 50
     },
-    "purchasable": true,
     "cost": 350,
     "tags": [
       "Mage"
@@ -549,16 +504,16 @@
       11
     ]
   },
-  "1083": {
+  {
     "id": 1083,
     "name": "Cull",
-    "rank": [
-      "Starter"
+    "aka": [
+      "dblade"
     ],
+    "rank": "Starter",
     "stats": {
       "attackDamage": 7
     },
-    "purchasable": true,
     "cost": 450,
     "tags": [
       "Fighter",
@@ -571,14 +526,14 @@
       11
     ]
   },
-  "1101": {
+  {
     "id": 1101,
     "name": "Scorchclaw Pup",
-    "rank": [
-      "Starter"
+    "aka": [
+      "jungle"
     ],
+    "rank": "Starter",
     "stats": {},
-    "purchasable": true,
     "cost": 450,
     "tags": [
       "Fighter",
@@ -593,14 +548,14 @@
       21
     ]
   },
-  "1102": {
+  {
     "id": 1102,
     "name": "Gustwalker Hatchling",
-    "rank": [
-      "Starter"
+    "aka": [
+      "jungle"
     ],
+    "rank": "Starter",
     "stats": {},
-    "purchasable": true,
     "cost": 450,
     "tags": [
       "Fighter",
@@ -615,14 +570,14 @@
       21
     ]
   },
-  "1103": {
+  {
     "id": 1103,
     "name": "Mosstomper Seedling",
-    "rank": [
-      "Starter"
+    "aka": [
+      "jungle"
     ],
+    "rank": "Starter",
     "stats": {},
-    "purchasable": true,
     "cost": 450,
     "tags": [
       "Fighter",
@@ -637,18 +592,15 @@
       21
     ]
   },
-  "1500": {
+  {
     "id": 1500,
     "name": "Ohmwrecker (Turret Item)",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "armorPenetration": 30
     },
     "purchasable": false,
     "cost": 0,
-    "tags": [],
     "maps": [
       11,
       12,
@@ -657,16 +609,13 @@
       35
     ]
   },
-  "1501": {
+  {
     "id": 1501,
     "name": "Lane Swap Detector",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": [],
     "maps": [
       11,
       12,
@@ -675,16 +624,13 @@
       35
     ]
   },
-  "1502": {
+  {
     "id": 1502,
     "name": "Reinforced Armor (Turret Item)",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": [],
     "maps": [
       11,
       12,
@@ -693,16 +639,13 @@
       35
     ]
   },
-  "1503": {
+  {
     "id": 1503,
     "name": "Warden's Eye",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": [],
     "maps": [
       11,
       12,
@@ -711,16 +654,13 @@
       35
     ]
   },
-  "1506": {
+  {
     "id": 1506,
     "name": "Base Turret Reinforced Armor (Turret Item)",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": [],
     "maps": [
       11,
       12,
@@ -729,16 +669,13 @@
       35
     ]
   },
-  "1507": {
+  {
     "id": 1507,
     "name": "Overcharged",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": [],
     "maps": [
       11,
       12,
@@ -747,16 +684,13 @@
       35
     ]
   },
-  "1508": {
+  {
     "id": 1508,
     "name": "Anti-Tower Socks",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": [],
     "maps": [
       11,
       12,
@@ -765,16 +699,13 @@
       35
     ]
   },
-  "1509": {
+  {
     "id": 1509,
     "name": "Gusto",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": [],
     "maps": [
       11,
       12,
@@ -783,16 +714,13 @@
       35
     ]
   },
-  "1510": {
+  {
     "id": 1510,
     "name": "Phreakish Gusto",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": [],
     "maps": [
       11,
       12,
@@ -801,16 +729,13 @@
       35
     ]
   },
-  "1511": {
+  {
     "id": 1511,
     "name": "Super Mech Armor",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": [],
     "maps": [
       11,
       12,
@@ -819,16 +744,13 @@
       35
     ]
   },
-  "1512": {
+  {
     "id": 1512,
     "name": "Super Mech Power Field",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": [],
     "maps": [
       11,
       12,
@@ -837,16 +759,13 @@
       35
     ]
   },
-  "1515": {
+  {
     "id": 1515,
     "name": "Turret Plating",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": [],
     "maps": [
       11,
       12,
@@ -855,14 +774,14 @@
       35
     ]
   },
-  "2003": {
+  {
     "id": 2003,
     "name": "Health Potion",
-    "rank": [
-      "Consumable"
+    "aka": [
+      "red"
     ],
+    "rank": "Consumable",
     "stats": {},
-    "purchasable": true,
     "cost": 50,
     "tags": [
       "Health and_reg"
@@ -873,16 +792,16 @@
       21
     ]
   },
-  "2010": {
+  {
     "id": 2010,
     "name": "Total Biscuit of Everlasting Will",
-    "rank": [
-      "Special"
+    "aka": [
+      "kleptomancy"
     ],
+    "rank": "Special",
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": [],
     "maps": [
       11,
       12,
@@ -891,17 +810,14 @@
       35
     ]
   },
-  "2019": {
+  {
     "id": 2019,
     "name": "Steel Sigil",
-    "rank": [
-      "Epic"
-    ],
+    "rank": "Epic",
     "stats": {
       "armor": 30,
       "attackDamage": 15
     },
-    "purchasable": true,
     "cost": 1100,
     "tags": [
       "Fighter"
@@ -913,18 +829,15 @@
       35
     ]
   },
-  "2020": {
+  {
     "id": 2020,
     "name": "The Brutalizer",
-    "rank": [
-      "Epic"
-    ],
+    "rank": "Epic",
     "stats": {
       "attackDamage": 25,
       "lethality": 5,
       "abilityHaste": 10
     },
-    "purchasable": true,
     "cost": 1337,
     "tags": [
       "Assassin"
@@ -936,17 +849,14 @@
       35
     ]
   },
-  "2021": {
+  {
     "id": 2021,
     "name": "Tunneler",
-    "rank": [
-      "Epic"
-    ],
+    "rank": "Epic",
     "stats": {
       "attackDamage": 15,
       "health": 250
     },
-    "purchasable": true,
     "cost": 1150,
     "tags": [
       "Fighter"
@@ -958,16 +868,13 @@
       35
     ]
   },
-  "2022": {
+  {
     "id": 2022,
     "name": "Glowing Mote",
-    "rank": [
-      "Basic"
-    ],
+    "rank": "Basic",
     "stats": {
       "abilityHaste": 5
     },
-    "purchasable": true,
     "cost": 250,
     "tags": [
       "Fighter",
@@ -984,14 +891,14 @@
       35
     ]
   },
-  "2031": {
+  {
     "id": 2031,
     "name": "Refillable Potion",
-    "rank": [
-      "Consumable"
+    "aka": [
+      "Green Potion"
     ],
+    "rank": "Consumable",
     "stats": {},
-    "purchasable": true,
     "cost": 150,
     "tags": [
       "Health and_reg"
@@ -1002,18 +909,15 @@
       21
     ]
   },
-  "2049": {
+  {
     "id": 2049,
     "name": "Guardian's Amulet",
-    "rank": [
-      "Starter"
-    ],
+    "rank": "Starter",
     "stats": {
       "abilityPower": 20,
       "healAndShieldPower": 15,
       "abilityHaste": 20
     },
-    "purchasable": true,
     "cost": 500,
     "tags": [
       "Support"
@@ -1022,18 +926,15 @@
       30
     ]
   },
-  "2050": {
+  {
     "id": 2050,
     "name": "Guardian's Shroud",
-    "rank": [
-      "Starter"
-    ],
+    "rank": "Starter",
     "stats": {
       "abilityPower": 35,
       "health": 300,
       "abilityHaste": 15
     },
-    "purchasable": true,
     "cost": 500,
     "tags": [
       "Mage",
@@ -1043,17 +944,21 @@
       30
     ]
   },
-  "2051": {
+  {
     "id": 2051,
     "name": "Guardian's Horn",
-    "rank": [
-      "Starter"
+    "aka": [
+      "Golden Arm of Kobe",
+      "Golden Bicep of Kobe",
+      "Horn",
+      "Horn of the ManWolf",
+      "ManWolf"
     ],
+    "rank": "Starter",
     "stats": {
       "health": 150,
       "healthRegen": 20
     },
-    "purchasable": true,
     "cost": 950,
     "tags": [
       "Fighter",
@@ -1065,16 +970,13 @@
       35
     ]
   },
-  "2052": {
+  {
     "id": 2052,
     "name": "Poro-Snax",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": [],
     "maps": [
       11,
       12,
@@ -1083,33 +985,36 @@
       35
     ]
   },
-  "2055": {
+  {
     "id": 2055,
     "name": "Control Ward",
-    "rank": [
-      "Consumable"
+    "aka": [
+      "kleptomancy",
+      "orange",
+      "red",
+      "pink"
     ],
+    "rank": "Consumable",
     "stats": {},
-    "purchasable": true,
     "cost": 75,
-    "tags": [],
     "maps": [
       11
     ]
   },
-  "2065": {
+  {
     "id": 2065,
     "name": "Shurelya's Battlesong",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "shurelya",
+      "reverie"
     ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 50,
       "manaRegen": 125,
       "percentMovespeed": 4,
       "abilityHaste": 15
     },
-    "purchasable": true,
     "cost": 2200,
     "tags": [
       "Support",
@@ -1122,14 +1027,15 @@
       35
     ]
   },
-  "2138": {
+  {
     "id": 2138,
     "name": "Elixir of Iron",
-    "rank": [
-      "Consumable"
+    "aka": [
+      "orange",
+      "white"
     ],
+    "rank": "Consumable",
     "stats": {},
-    "purchasable": true,
     "cost": 500,
     "tags": [
       "Health and_reg",
@@ -1141,14 +1047,16 @@
       21
     ]
   },
-  "2139": {
+  {
     "id": 2139,
     "name": "Elixir of Sorcery",
-    "rank": [
-      "Consumable"
+    "aka": [
+      "blue",
+      "brilliance",
+      "illumination"
     ],
+    "rank": "Consumable",
     "stats": {},
-    "purchasable": true,
     "cost": 500,
     "tags": [
       "Ability power",
@@ -1161,14 +1069,16 @@
       21
     ]
   },
-  "2140": {
+  {
     "id": 2140,
     "name": "Elixir of Wrath",
-    "rank": [
-      "Consumable"
+    "aka": [
+      "red potion",
+      "fortitude",
+      "rage"
     ],
+    "rank": "Consumable",
     "stats": {},
-    "purchasable": true,
     "cost": 500,
     "tags": [
       "Attack damage",
@@ -1180,30 +1090,23 @@
       21
     ]
   },
-  "2141": {
+  {
     "id": 2141,
     "name": "Cappa Juice",
-    "rank": [
-      "Consumable"
-    ],
+    "rank": "Consumable",
     "stats": {},
-    "purchasable": true,
     "cost": 300,
-    "tags": [],
     "maps": [
       11,
       12,
       35
     ]
   },
-  "2142": {
+  {
     "id": 2142,
     "name": "Juice of Power",
-    "rank": [
-      "Consumable"
-    ],
+    "rank": "Consumable",
     "stats": {},
-    "purchasable": true,
     "cost": 500,
     "tags": [
       "Attack damage",
@@ -1213,14 +1116,11 @@
       30
     ]
   },
-  "2143": {
+  {
     "id": 2143,
     "name": "Juice of Vitality",
-    "rank": [
-      "Consumable"
-    ],
+    "rank": "Consumable",
     "stats": {},
-    "purchasable": true,
     "cost": 500,
     "tags": [
       "Health and_reg"
@@ -1229,44 +1129,34 @@
       30
     ]
   },
-  "2144": {
+  {
     "id": 2144,
     "name": "Juice of Haste",
-    "rank": [
-      "Consumable"
-    ],
+    "rank": "Consumable",
     "stats": {},
-    "purchasable": true,
     "cost": 500,
-    "tags": [],
     "maps": [
       30
     ]
   },
-  "2145": {
+  {
     "id": 2145,
     "name": "Lucky Dice",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": [],
     "maps": [
       30
     ]
   },
-  "2150": {
+  {
     "id": 2150,
     "name": "Elixir of Skill",
-    "rank": [
-      "Consumable"
-    ],
+    "rank": "Consumable",
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": [],
     "maps": [
       11,
       12,
@@ -1274,16 +1164,13 @@
       35
     ]
   },
-  "2151": {
+  {
     "id": 2151,
     "name": "Elixir of Avarice",
-    "rank": [
-      "Consumable"
-    ],
+    "rank": "Consumable",
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": [],
     "maps": [
       11,
       12,
@@ -1291,16 +1178,13 @@
       35
     ]
   },
-  "2152": {
+  {
     "id": 2152,
     "name": "Elixir of Force",
-    "rank": [
-      "Consumable"
-    ],
+    "rank": "Consumable",
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": [],
     "maps": [
       11,
       12,
@@ -1308,17 +1192,19 @@
       35
     ]
   },
-  "2420": {
+  {
     "id": 2420,
     "name": "Seeker's Armguard",
-    "rank": [
-      "Epic"
+    "aka": [
+      "zhg",
+      "zonyas",
+      "zhonyas"
     ],
+    "rank": "Epic",
     "stats": {
       "abilityPower": 40,
       "armor": 25
     },
-    "purchasable": true,
     "cost": 1600,
     "tags": [
       "Mage"
@@ -1330,19 +1216,15 @@
       35
     ]
   },
-  "2421": {
+  {
     "id": 2421,
     "name": "Shattered Armguard",
-    "rank": [
-      "Epic"
-    ],
+    "rank": "Epic",
     "stats": {
       "abilityPower": 40,
       "armor": 25
     },
-    "purchasable": true,
     "cost": 1600,
-    "tags": [],
     "maps": [
       11,
       12,
@@ -1350,18 +1232,15 @@
       35
     ]
   },
-  "2422": {
+  {
     "id": 2422,
     "name": "Slightly Magical Boots",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "flatMovespeed": 25
     },
     "purchasable": false,
     "cost": 0,
-    "tags": [],
     "maps": [
       11,
       12,
@@ -1369,17 +1248,14 @@
       35
     ]
   },
-  "2501": {
+  {
     "id": 2501,
     "name": "Overlord's Bloodmail",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 30,
       "health": 550
     },
-    "purchasable": true,
     "cost": 3300,
     "tags": [
       "Fighter",
@@ -1392,19 +1268,16 @@
       35
     ]
   },
-  "2502": {
+  {
     "id": 2502,
     "name": "Unending Despair",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "armor": 25,
       "health": 400,
       "magicResistance": 25,
       "abilityHaste": 10
     },
-    "purchasable": true,
     "cost": 2800,
     "tags": [
       "Tank"
@@ -1416,18 +1289,18 @@
       35
     ]
   },
-  "2503": {
+  {
     "id": 2503,
     "name": "Blackfire Torch",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "bft"
     ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 80,
       "mana": 600,
       "abilityHaste": 20
     },
-    "purchasable": true,
     "cost": 2800,
     "tags": [
       "Mage"
@@ -1439,18 +1312,15 @@
       35
     ]
   },
-  "2504": {
+  {
     "id": 2504,
     "name": "Kaenic Rookern",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "health": 400,
       "healthRegen": 100,
       "magicResistance": 80
     },
-    "purchasable": true,
     "cost": 2900,
     "tags": [
       "Tank"
@@ -1462,16 +1332,13 @@
       35
     ]
   },
-  "2508": {
+  {
     "id": 2508,
     "name": "Fated Ashes",
-    "rank": [
-      "Epic"
-    ],
+    "rank": "Epic",
     "stats": {
       "abilityPower": 30
     },
-    "purchasable": true,
     "cost": 900,
     "tags": [
       "Mage"
@@ -1483,18 +1350,15 @@
       35
     ]
   },
-  "3002": {
+  {
     "id": 3002,
     "name": "Trailblazer",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "armor": 40,
       "health": 250,
       "percentMovespeed": 4
     },
-    "purchasable": true,
     "cost": 2400,
     "tags": [
       "Support",
@@ -1507,18 +1371,18 @@
       35
     ]
   },
-  "3003": {
+  {
     "id": 3003,
     "name": "Archangel's Staff",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "aa"
     ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 70,
       "mana": 600,
       "abilityHaste": 25
     },
-    "purchasable": true,
     "cost": 2900,
     "tags": [
       "Mage"
@@ -1530,18 +1394,15 @@
       35
     ]
   },
-  "3004": {
+  {
     "id": 3004,
     "name": "Manamune",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 35,
       "mana": 500,
       "abilityHaste": 15
     },
-    "purchasable": true,
     "cost": 2900,
     "tags": [
       "Fighter",
@@ -1556,19 +1417,19 @@
       35
     ]
   },
-  "3006": {
+  {
     "id": 3006,
     "name": "Berserker's Greaves",
-    "rank": [
-      "Boots"
+    "aka": [
+      "boots",
+      "zerker"
     ],
+    "rank": "Boots",
     "stats": {
       "attackSpeed": 25,
       "flatMovespeed": 45
     },
-    "purchasable": true,
     "cost": 1100,
-    "tags": [],
     "maps": [
       11,
       12,
@@ -1576,18 +1437,17 @@
       35
     ]
   },
-  "3009": {
+  {
     "id": 3009,
     "name": "Boots of Swiftness",
-    "rank": [
-      "Boots"
+    "aka": [
+      "swifties"
     ],
+    "rank": "Boots",
     "stats": {
       "flatMovespeed": 55
     },
-    "purchasable": true,
     "cost": 1000,
-    "tags": [],
     "maps": [
       11,
       12,
@@ -1595,53 +1455,52 @@
       35
     ]
   },
-  "3010": {
+  {
     "id": 3010,
     "name": "Symbiotic Soles",
-    "rank": [
-      "Boots"
+    "aka": [
+      "boots"
     ],
+    "rank": "Boots",
     "stats": {
       "flatMovespeed": 40
     },
-    "purchasable": true,
     "cost": 900,
-    "tags": [],
     "maps": [
       11,
       21
     ]
   },
-  "3013": {
+  {
     "id": 3013,
     "name": "Synchronized Souls",
-    "rank": [
-      "Boots"
+    "aka": [
+      "boots"
     ],
+    "rank": "Boots",
     "stats": {
       "flatMovespeed": 45
     },
     "purchasable": false,
     "cost": 900,
-    "tags": [],
     "maps": [
       11,
       21
     ]
   },
-  "3020": {
+  {
     "id": 3020,
     "name": "Sorcerer's Shoes",
-    "rank": [
-      "Boots"
+    "aka": [
+      "boots",
+      "sorcs"
     ],
+    "rank": "Boots",
     "stats": {
       "flatMagicPenetration": 12,
       "flatMovespeed": 45
     },
-    "purchasable": true,
     "cost": 1100,
-    "tags": [],
     "maps": [
       11,
       12,
@@ -1649,18 +1508,15 @@
       35
     ]
   },
-  "3024": {
+  {
     "id": 3024,
     "name": "Glacial Buckler",
-    "rank": [
-      "Epic"
-    ],
+    "rank": "Epic",
     "stats": {
       "armor": 25,
       "mana": 300,
       "abilityHaste": 10
     },
-    "purchasable": true,
     "cost": 900,
     "tags": [
       "Tank",
@@ -1673,17 +1529,17 @@
       35
     ]
   },
-  "3026": {
+  {
     "id": 3026,
     "name": "Guardian Angel",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "ga"
     ],
+    "rank": "Legendary",
     "stats": {
       "armor": 45,
       "attackDamage": 55
     },
-    "purchasable": true,
     "cost": 3200,
     "tags": [
       "Fighter",
@@ -1694,18 +1550,18 @@
       11
     ]
   },
-  "3031": {
+  {
     "id": 3031,
     "name": "Infinity Edge",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "ie"
     ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 65,
       "criticalStrikeChance": 25,
       "criticalStrikeDamage": 40
     },
-    "purchasable": true,
     "cost": 3450,
     "tags": [
       "Marksman"
@@ -1717,17 +1573,18 @@
       35
     ]
   },
-  "3032": {
+  {
     "id": 3032,
     "name": "Yun Tal Wildarrows",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "arrow",
+      "yuntal"
     ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 55,
       "attackSpeed": 35
     },
-    "purchasable": true,
     "cost": 3000,
     "tags": [
       "Marksman",
@@ -1740,18 +1597,19 @@
       35
     ]
   },
-  "3033": {
+  {
     "id": 3033,
     "name": "Mortal Reminder",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "lw",
+      "grievous"
     ],
+    "rank": "Legendary",
     "stats": {
       "armorPenetration": 35,
       "attackDamage": 35,
       "criticalStrikeChance": 25
     },
-    "purchasable": true,
     "cost": 3300,
     "tags": [
       "Marksman"
@@ -1763,17 +1621,17 @@
       35
     ]
   },
-  "3035": {
+  {
     "id": 3035,
     "name": "Last Whisper",
-    "rank": [
-      "Epic"
+    "aka": [
+      "lw"
     ],
+    "rank": "Epic",
     "stats": {
       "armorPenetration": 18,
       "attackDamage": 20
     },
-    "purchasable": true,
     "cost": 1450,
     "tags": [
       "Fighter",
@@ -1787,18 +1645,20 @@
       35
     ]
   },
-  "3036": {
+  {
     "id": 3036,
     "name": "Lord Dominik's Regards",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "lw",
+      "ldr",
+      "doms"
     ],
+    "rank": "Legendary",
     "stats": {
       "armorPenetration": 40,
       "attackDamage": 35,
       "criticalStrikeChance": 25
     },
-    "purchasable": true,
     "cost": 3100,
     "tags": [
       "Marksman"
@@ -1810,12 +1670,10 @@
       35
     ]
   },
-  "3040": {
+  {
     "id": 3040,
     "name": "Seraph's Embrace",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 70,
       "mana": 1000,
@@ -1823,7 +1681,6 @@
     },
     "purchasable": false,
     "cost": 2900,
-    "tags": [],
     "maps": [
       11,
       12,
@@ -1831,17 +1688,17 @@
       35
     ]
   },
-  "3041": {
+  {
     "id": 3041,
     "name": "Mejai's Soulstealer",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "book"
     ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 20,
       "health": 100
     },
-    "purchasable": true,
     "cost": 1500,
     "tags": [
       "Mage",
@@ -1851,12 +1708,10 @@
       11
     ]
   },
-  "3042": {
+  {
     "id": 3042,
     "name": "Muramana",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 35,
       "mana": 860,
@@ -1877,17 +1732,17 @@
       35
     ]
   },
-  "3044": {
+  {
     "id": 3044,
     "name": "Phage",
-    "rank": [
-      "Epic"
+    "aka": [
+      "mallet"
     ],
+    "rank": "Epic",
     "stats": {
       "attackDamage": 15,
       "health": 200
     },
-    "purchasable": true,
     "cost": 1100,
     "tags": [
       "Fighter",
@@ -1900,18 +1755,18 @@
       35
     ]
   },
-  "3046": {
+  {
     "id": 3046,
     "name": "Phantom Dancer",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "pd"
     ],
+    "rank": "Legendary",
     "stats": {
       "attackSpeed": 60,
       "criticalStrikeChance": 25,
       "percentMovespeed": 8
     },
-    "purchasable": true,
     "cost": 2650,
     "tags": [
       "Marksman",
@@ -1924,19 +1779,19 @@
       35
     ]
   },
-  "3047": {
+  {
     "id": 3047,
     "name": "Plated Steelcaps",
-    "rank": [
-      "Boots"
+    "aka": [
+      "boots",
+      "ninja tabi"
     ],
+    "rank": "Boots",
     "stats": {
       "armor": 25,
       "flatMovespeed": 45
     },
-    "purchasable": true,
     "cost": 1200,
-    "tags": [],
     "maps": [
       11,
       12,
@@ -1944,19 +1799,19 @@
       35
     ]
   },
-  "3050": {
+  {
     "id": 3050,
     "name": "Zeke's Convergence",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "haroldandkumar"
     ],
+    "rank": "Legendary",
     "stats": {
       "armor": 25,
       "health": 300,
       "magicResistance": 25,
       "abilityHaste": 10
     },
-    "purchasable": true,
     "cost": 2200,
     "tags": [
       "Tank",
@@ -1969,17 +1824,17 @@
       35
     ]
   },
-  "3051": {
+  {
     "id": 3051,
     "name": "Hearthbound Axe",
-    "rank": [
-      "Epic"
+    "aka": [
+      "blue arrow"
     ],
+    "rank": "Epic",
     "stats": {
       "attackDamage": 20,
       "attackSpeed": 20
     },
-    "purchasable": true,
     "cost": 1200,
     "tags": [
       "Fighter",
@@ -1993,17 +1848,20 @@
       35
     ]
   },
-  "3053": {
+  {
     "id": 3053,
     "name": "Sterak's Gage",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "juggernaut",
+      "primal",
+      "shield",
+      "sterak's cage"
     ],
+    "rank": "Legendary",
     "stats": {
       "health": 400,
       "tenacity": 20
     },
-    "purchasable": true,
     "cost": 3200,
     "tags": [
       "Fighter",
@@ -2016,16 +1874,16 @@
       35
     ]
   },
-  "3057": {
+  {
     "id": 3057,
     "name": "Sheen",
-    "rank": [
-      "Epic"
+    "aka": [
+      "jimmy neutron"
     ],
+    "rank": "Epic",
     "stats": {
       "abilityHaste": 10
     },
-    "purchasable": true,
     "cost": 900,
     "tags": [
       "Fighter",
@@ -2040,19 +1898,19 @@
       35
     ]
   },
-  "3065": {
+  {
     "id": 3065,
     "name": "Spirit Visage",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "sv"
     ],
+    "rank": "Legendary",
     "stats": {
       "health": 400,
       "healthRegen": 100,
       "magicResistance": 50,
       "abilityHaste": 10
     },
-    "purchasable": true,
     "cost": 2700,
     "tags": [
       "Tank"
@@ -2064,17 +1922,20 @@
       35
     ]
   },
-  "3066": {
+  {
     "id": 3066,
     "name": "Winged Moonplate",
-    "rank": [
-      "Epic"
+    "aka": [
+      "chaps",
+      "pants",
+      "leggings",
+      "zoomin"
     ],
+    "rank": "Epic",
     "stats": {
       "health": 200,
       "percentMovespeed": 4
     },
-    "purchasable": true,
     "cost": 800,
     "tags": [
       "Tank",
@@ -2087,17 +1948,14 @@
       35
     ]
   },
-  "3067": {
+  {
     "id": 3067,
     "name": "Kindlegem",
-    "rank": [
-      "Epic"
-    ],
+    "rank": "Epic",
     "stats": {
       "health": 200,
       "abilityHaste": 10
     },
-    "purchasable": true,
     "cost": 800,
     "tags": [
       "Fighter",
@@ -2114,18 +1972,19 @@
       35
     ]
   },
-  "3068": {
+  {
     "id": 3068,
     "name": "Sunfire Aegis",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "funfire",
+      "sunborn"
     ],
+    "rank": "Legendary",
     "stats": {
       "armor": 50,
       "health": 350,
       "abilityHaste": 10
     },
-    "purchasable": true,
     "cost": 2700,
     "tags": [
       "Tank"
@@ -2137,16 +1996,13 @@
       35
     ]
   },
-  "3070": {
+  {
     "id": 3070,
     "name": "Tear of the Goddess",
-    "rank": [
-      "Starter"
-    ],
+    "rank": "Starter",
     "stats": {
       "mana": 240
     },
-    "purchasable": true,
     "cost": 400,
     "tags": [
       "Marksman",
@@ -2159,18 +2015,18 @@
       35
     ]
   },
-  "3071": {
+  {
     "id": 3071,
     "name": "Black Cleaver",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "bc"
     ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 40,
       "health": 400,
       "abilityHaste": 20
     },
-    "purchasable": true,
     "cost": 3000,
     "tags": [
       "Fighter",
@@ -2185,17 +2041,18 @@
       35
     ]
   },
-  "3072": {
+  {
     "id": 3072,
     "name": "Bloodthirster",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "bt",
+      "healsword"
     ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 80,
       "lifesteal": 15
     },
-    "purchasable": true,
     "cost": 3400,
     "tags": [
       "Marksman"
@@ -2207,18 +2064,15 @@
       35
     ]
   },
-  "3073": {
+  {
     "id": 3073,
     "name": "Experimental Hexplate",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 40,
       "attackSpeed": 20,
       "health": 450
     },
-    "purchasable": true,
     "cost": 3000,
     "tags": [
       "Fighter",
@@ -2232,18 +2086,18 @@
       35
     ]
   },
-  "3074": {
+  {
     "id": 3074,
     "name": "Ravenous Hydra",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "rav hydra"
     ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 65,
       "lifesteal": 12,
       "abilityHaste": 15
     },
-    "purchasable": true,
     "cost": 3300,
     "tags": [
       "Fighter"
@@ -2255,17 +2109,17 @@
       35
     ]
   },
-  "3075": {
+  {
     "id": 3075,
     "name": "Thornmail",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "grievous wounds"
     ],
+    "rank": "Legendary",
     "stats": {
       "armor": 75,
       "health": 150
     },
-    "purchasable": true,
     "cost": 2450,
     "tags": [
       "Tank"
@@ -2277,16 +2131,16 @@
       35
     ]
   },
-  "3076": {
+  {
     "id": 3076,
     "name": "Bramble Vest",
-    "rank": [
-      "Epic"
+    "aka": [
+      "grievous wounds"
     ],
+    "rank": "Epic",
     "stats": {
       "armor": 30
     },
-    "purchasable": true,
     "cost": 800,
     "tags": [
       "Tank"
@@ -2298,16 +2152,13 @@
       35
     ]
   },
-  "3077": {
+  {
     "id": 3077,
     "name": "Tiamat",
-    "rank": [
-      "Epic"
-    ],
+    "rank": "Epic",
     "stats": {
       "attackDamage": 20
     },
-    "purchasable": true,
     "cost": 1200,
     "tags": [
       "Fighter",
@@ -2321,19 +2172,21 @@
       35
     ]
   },
-  "3078": {
+  {
     "id": 3078,
     "name": "Trinity Force",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "triforce",
+      "tons of damage",
+      "3333"
     ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 36,
       "attackSpeed": 30,
       "health": 333,
       "abilityHaste": 15
     },
-    "purchasable": true,
     "cost": 3333,
     "tags": [
       "Fighter",
@@ -2347,16 +2200,13 @@
       35
     ]
   },
-  "3082": {
+  {
     "id": 3082,
     "name": "Warden's Mail",
-    "rank": [
-      "Epic"
-    ],
+    "rank": "Epic",
     "stats": {
       "armor": 40
     },
-    "purchasable": true,
     "cost": 1000,
     "tags": [
       "Tank"
@@ -2368,17 +2218,14 @@
       35
     ]
   },
-  "3083": {
+  {
     "id": 3083,
     "name": "Warmog's Armor",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "health": 1000,
       "healthRegen": 100
     },
-    "purchasable": true,
     "cost": 3100,
     "tags": [
       "Tank"
@@ -2390,17 +2237,14 @@
       35
     ]
   },
-  "3084": {
+  {
     "id": 3084,
     "name": "Heartsteel",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "health": 900,
       "healthRegen": 100
     },
-    "purchasable": true,
     "cost": 3000,
     "tags": [
       "Tank"
@@ -2412,18 +2256,15 @@
       35
     ]
   },
-  "3085": {
+  {
     "id": 3085,
     "name": "Runaan's Hurricane",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "attackSpeed": 40,
       "criticalStrikeChance": 25,
       "percentMovespeed": 4
     },
-    "purchasable": true,
     "cost": 2650,
     "tags": [
       "Marksman",
@@ -2437,18 +2278,15 @@
       35
     ]
   },
-  "3086": {
+  {
     "id": 3086,
     "name": "Zeal",
-    "rank": [
-      "Epic"
-    ],
+    "rank": "Epic",
     "stats": {
       "attackSpeed": 15,
       "criticalStrikeChance": 15,
       "percentMovespeed": 4
     },
-    "purchasable": true,
     "cost": 1200,
     "tags": [
       "Marksman",
@@ -2461,18 +2299,15 @@
       35
     ]
   },
-  "3087": {
+  {
     "id": 3087,
     "name": "Statikk Shiv",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 45,
       "attackSpeed": 30,
       "percentMovespeed": 4
     },
-    "purchasable": true,
     "cost": 2700,
     "tags": [
       "Marksman",
@@ -2485,16 +2320,19 @@
       35
     ]
   },
-  "3089": {
+  {
     "id": 3089,
     "name": "Rabadon's Deathcap",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "banksys",
+      "dc",
+      "dcap",
+      "hat"
     ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 130
     },
-    "purchasable": true,
     "cost": 3500,
     "tags": [
       "Mage"
@@ -2506,18 +2344,15 @@
       35
     ]
   },
-  "3091": {
+  {
     "id": 3091,
     "name": "Wit's End",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "attackSpeed": 50,
       "magicResistance": 45,
       "tenacity": 20
     },
-    "purchasable": true,
     "cost": 2800,
     "tags": [
       "Fighter",
@@ -2531,18 +2366,21 @@
       35
     ]
   },
-  "3094": {
+  {
     "id": 3094,
     "name": "Rapid Firecannon",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "canon",
+      "gun",
+      "rapidfire",
+      "rfc"
     ],
+    "rank": "Legendary",
     "stats": {
       "attackSpeed": 35,
       "criticalStrikeChance": 25,
       "percentMovespeed": 4
     },
-    "purchasable": true,
     "cost": 2650,
     "tags": [
       "Marksman",
@@ -2555,18 +2393,15 @@
       35
     ]
   },
-  "3100": {
+  {
     "id": 3100,
     "name": "Lich Bane",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 100,
       "percentMovespeed": 4,
       "abilityHaste": 10
     },
-    "purchasable": true,
     "cost": 2900,
     "tags": [
       "Mage",
@@ -2579,17 +2414,18 @@
       35
     ]
   },
-  "3102": {
+  {
     "id": 3102,
     "name": "Banshee's Veil",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "bv",
+      "spellshield"
     ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 105,
       "magicResistance": 40
     },
-    "purchasable": true,
     "cost": 3000,
     "tags": [
       "Mage"
@@ -2601,18 +2437,15 @@
       35
     ]
   },
-  "3105": {
+  {
     "id": 3105,
     "name": "Aegis of the Legion",
-    "rank": [
-      "Epic"
-    ],
+    "rank": "Epic",
     "stats": {
       "armor": 25,
       "magicResistance": 25,
       "abilityHaste": 10
     },
-    "purchasable": true,
     "cost": 1100,
     "tags": [
       "Tank",
@@ -2625,19 +2458,16 @@
       35
     ]
   },
-  "3107": {
+  {
     "id": 3107,
     "name": "Redemption",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "healAndShieldPower": 10,
       "health": 200,
       "manaRegen": 100,
       "abilityHaste": 15
     },
-    "purchasable": true,
     "cost": 2300,
     "tags": [
       "Support"
@@ -2649,17 +2479,17 @@
       35
     ]
   },
-  "3108": {
+  {
     "id": 3108,
     "name": "Fiendish Codex",
-    "rank": [
-      "Epic"
+    "aka": [
+      "book"
     ],
+    "rank": "Epic",
     "stats": {
       "abilityPower": 25,
       "abilityHaste": 10
     },
-    "purchasable": true,
     "cost": 850,
     "tags": [
       "Mage"
@@ -2671,19 +2501,19 @@
       35
     ]
   },
-  "3109": {
+  {
     "id": 3109,
     "name": "Knight's Vow",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "kv"
     ],
+    "rank": "Legendary",
     "stats": {
       "armor": 40,
       "health": 200,
       "healthRegen": 100,
       "abilityHaste": 10
     },
-    "purchasable": true,
     "cost": 2300,
     "tags": [
       "Tank",
@@ -2696,18 +2526,18 @@
       35
     ]
   },
-  "3110": {
+  {
     "id": 3110,
     "name": "Frozen Heart",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "fh"
     ],
+    "rank": "Legendary",
     "stats": {
       "armor": 75,
       "mana": 400,
       "abilityHaste": 20
     },
-    "purchasable": true,
     "cost": 2500,
     "tags": [
       "Tank",
@@ -2720,20 +2550,20 @@
       35
     ]
   },
-  "3111": {
+  {
     "id": 3111,
     "name": "Mercury's Treads",
-    "rank": [
-      "Boots"
+    "aka": [
+      "boots",
+      "mercs"
     ],
+    "rank": "Boots",
     "stats": {
       "magicResistance": 20,
       "flatMovespeed": 45,
       "tenacity": 30
     },
-    "purchasable": true,
     "cost": 1250,
-    "tags": [],
     "maps": [
       11,
       12,
@@ -2741,17 +2571,14 @@
       35
     ]
   },
-  "3112": {
+  {
     "id": 3112,
     "name": "Guardian's Orb",
-    "rank": [
-      "Starter"
-    ],
+    "rank": "Starter",
     "stats": {
       "abilityPower": 50,
       "health": 150
     },
-    "purchasable": true,
     "cost": 950,
     "tags": [
       "Mage",
@@ -2764,17 +2591,17 @@
       35
     ]
   },
-  "3113": {
+  {
     "id": 3113,
     "name": "Aether Wisp",
-    "rank": [
-      "Epic"
+    "aka": [
+      "spooky ghost"
     ],
+    "rank": "Epic",
     "stats": {
       "abilityPower": 30,
       "percentMovespeed": 4
     },
-    "purchasable": true,
     "cost": 900,
     "tags": [
       "Mage",
@@ -2787,17 +2614,14 @@
       35
     ]
   },
-  "3114": {
+  {
     "id": 3114,
     "name": "Forbidden Idol",
-    "rank": [
-      "Epic"
-    ],
+    "rank": "Epic",
     "stats": {
       "healAndShieldPower": 8,
       "manaRegen": 50
     },
-    "purchasable": true,
     "cost": 600,
     "tags": [
       "Support"
@@ -2809,18 +2633,18 @@
       35
     ]
   },
-  "3115": {
+  {
     "id": 3115,
     "name": "Nashor's Tooth",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "nashors"
     ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 80,
       "attackSpeed": 50,
       "abilityHaste": 15
     },
-    "purchasable": true,
     "cost": 2900,
     "tags": [
       "Marksman",
@@ -2834,17 +2658,17 @@
       35
     ]
   },
-  "3116": {
+  {
     "id": 3116,
     "name": "Rylai's Crystal Scepter",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "rylais"
     ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 65,
       "health": 400
     },
-    "purchasable": true,
     "cost": 2600,
     "tags": [
       "Mage"
@@ -2856,18 +2680,15 @@
       35
     ]
   },
-  "3118": {
+  {
     "id": 3118,
     "name": "Malignance",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 90,
       "mana": 600,
       "abilityHaste": 15
     },
-    "purchasable": true,
     "cost": 2700,
     "tags": [
       "Mage",
@@ -2880,18 +2701,15 @@
       35
     ]
   },
-  "3119": {
+  {
     "id": 3119,
     "name": "Winter's Approach",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "health": 550,
       "mana": 500,
       "abilityHaste": 15
     },
-    "purchasable": true,
     "cost": 2400,
     "tags": [
       "Tank"
@@ -2903,12 +2721,10 @@
       35
     ]
   },
-  "3121": {
+  {
     "id": 3121,
     "name": "Fimbulwinter",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "health": 550,
       "mana": 860,
@@ -2926,16 +2742,16 @@
       35
     ]
   },
-  "3123": {
+  {
     "id": 3123,
     "name": "Executioner's Calling",
-    "rank": [
-      "Epic"
+    "aka": [
+      "grievous"
     ],
+    "rank": "Epic",
     "stats": {
       "attackDamage": 15
     },
-    "purchasable": true,
     "cost": 800,
     "tags": [
       "Fighter",
@@ -2949,18 +2765,15 @@
       35
     ]
   },
-  "3124": {
+  {
     "id": 3124,
     "name": "Guinsoo's Rageblade",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 30,
       "attackDamage": 30,
       "attackSpeed": 25
     },
-    "purchasable": true,
     "cost": 3000,
     "tags": [
       "Fighter",
@@ -2974,17 +2787,14 @@
       35
     ]
   },
-  "3133": {
+  {
     "id": 3133,
     "name": "Caulfield's Warhammer",
-    "rank": [
-      "Epic"
-    ],
+    "rank": "Epic",
     "stats": {
       "attackDamage": 20,
       "abilityHaste": 10
     },
-    "purchasable": true,
     "cost": 1050,
     "tags": [
       "Fighter",
@@ -2998,17 +2808,14 @@
       35
     ]
   },
-  "3134": {
+  {
     "id": 3134,
     "name": "Serrated Dirk",
-    "rank": [
-      "Epic"
-    ],
+    "rank": "Epic",
     "stats": {
       "attackDamage": 20,
       "lethality": 10
     },
-    "purchasable": true,
     "cost": 1000,
     "tags": [
       "Assassin",
@@ -3021,17 +2828,14 @@
       35
     ]
   },
-  "3135": {
+  {
     "id": 3135,
     "name": "Void Staff",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 95,
       "percentMagicPenetration": 40
     },
-    "purchasable": true,
     "cost": 3000,
     "tags": [
       "Mage"
@@ -3043,18 +2847,15 @@
       35
     ]
   },
-  "3137": {
+  {
     "id": 3137,
     "name": "Cryptbloom",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 75,
       "percentMagicPenetration": 30,
       "abilityHaste": 20
     },
-    "purchasable": true,
     "cost": 3000,
     "tags": [
       "Mage"
@@ -3066,18 +2867,18 @@
       35
     ]
   },
-  "3139": {
+  {
     "id": 3139,
     "name": "Mercurial Scimitar",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "merc scim"
     ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 40,
       "lifesteal": 10,
       "magicResistance": 40
     },
-    "purchasable": true,
     "cost": 3200,
     "tags": [
       "Fighter",
@@ -3091,16 +2892,16 @@
       35
     ]
   },
-  "3140": {
+  {
     "id": 3140,
     "name": "Quicksilver Sash",
-    "rank": [
-      "Epic"
+    "aka": [
+      "qss"
     ],
+    "rank": "Epic",
     "stats": {
       "magicResistance": 30
     },
-    "purchasable": true,
     "cost": 1300,
     "tags": [
       "Fighter",
@@ -3114,18 +2915,15 @@
       35
     ]
   },
-  "3142": {
+  {
     "id": 3142,
     "name": "Youmuu's Ghostblade",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 55,
       "lethality": 18,
       "percentMovespeed": 4
     },
-    "purchasable": true,
     "cost": 2800,
     "tags": [
       "Assassin",
@@ -3138,17 +2936,14 @@
       35
     ]
   },
-  "3143": {
+  {
     "id": 3143,
     "name": "Randuin's Omen",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "armor": 75,
       "health": 350
     },
-    "purchasable": true,
     "cost": 2700,
     "tags": [
       "Tank"
@@ -3160,16 +2955,13 @@
       35
     ]
   },
-  "3144": {
+  {
     "id": 3144,
     "name": "Scout's Slingshot",
-    "rank": [
-      "Epic"
-    ],
+    "rank": "Epic",
     "stats": {
       "attackSpeed": 20
     },
-    "purchasable": true,
     "cost": 600,
     "tags": [
       "Marksman",
@@ -3182,16 +2974,17 @@
       35
     ]
   },
-  "3145": {
+  {
     "id": 3145,
     "name": "Hextech Alternator",
-    "rank": [
-      "Epic"
+    "aka": [
+      "revolver",
+      "pewpew"
     ],
+    "rank": "Epic",
     "stats": {
       "abilityPower": 45
     },
-    "purchasable": true,
     "cost": 1100,
     "tags": [
       "Mage"
@@ -3203,17 +2996,17 @@
       35
     ]
   },
-  "3147": {
+  {
     "id": 3147,
     "name": "Haunting Guise",
-    "rank": [
-      "Epic"
+    "aka": [
+      "mask"
     ],
+    "rank": "Epic",
     "stats": {
       "abilityPower": 30,
       "health": 200
     },
-    "purchasable": true,
     "cost": 1300,
     "tags": [
       "Mage"
@@ -3225,18 +3018,19 @@
       35
     ]
   },
-  "3152": {
+  {
     "id": 3152,
     "name": "Hextech Rocketbelt",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "protobelt",
+      "rocket belt"
     ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 70,
       "health": 300,
       "abilityHaste": 20
     },
-    "purchasable": true,
     "cost": 2650,
     "tags": [
       "Mage",
@@ -3249,18 +3043,21 @@
       35
     ]
   },
-  "3153": {
+  {
     "id": 3153,
     "name": "Blade of the Ruined King",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "brk",
+      "bork",
+      "botrk",
+      "mist"
     ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 40,
       "attackSpeed": 25,
       "lifesteal": 10
     },
-    "purchasable": true,
     "cost": 3200,
     "tags": [
       "Fighter",
@@ -3274,17 +3071,14 @@
       35
     ]
   },
-  "3155": {
+  {
     "id": 3155,
     "name": "Hexdrinker",
-    "rank": [
-      "Epic"
-    ],
+    "rank": "Epic",
     "stats": {
       "attackDamage": 25,
       "magicResistance": 25
     },
-    "purchasable": true,
     "cost": 1300,
     "tags": [
       "Fighter",
@@ -3298,18 +3092,15 @@
       35
     ]
   },
-  "3156": {
+  {
     "id": 3156,
     "name": "Maw of Malmortius",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 60,
       "magicResistance": 40,
       "abilityHaste": 15
     },
-    "purchasable": true,
     "cost": 3100,
     "tags": [
       "Fighter",
@@ -3323,17 +3114,19 @@
       35
     ]
   },
-  "3157": {
+  {
     "id": 3157,
     "name": "Zhonya's Hourglass",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "zhg",
+      "zonyas",
+      "zhonyas"
     ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 105,
       "armor": 50
     },
-    "purchasable": true,
     "cost": 3250,
     "tags": [
       "Mage"
@@ -3345,19 +3138,15 @@
       35
     ]
   },
-  "3158": {
+  {
     "id": 3158,
     "name": "Ionian Boots of Lucidity",
-    "rank": [
-      "Boots"
-    ],
+    "rank": "Boots",
     "stats": {
       "flatMovespeed": 45,
       "abilityHaste": 10
     },
-    "purchasable": true,
     "cost": 900,
-    "tags": [],
     "maps": [
       11,
       12,
@@ -3365,17 +3154,14 @@
       35
     ]
   },
-  "3161": {
+  {
     "id": 3161,
     "name": "Spear of Shojin",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 45,
       "health": 450
     },
-    "purchasable": true,
     "cost": 3100,
     "tags": [
       "Fighter",
@@ -3388,18 +3174,22 @@
       35
     ]
   },
-  "3165": {
+  {
     "id": 3165,
     "name": "Morellonomicon",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "nmst",
+      "grievous",
+      "last shadow",
+      "book",
+      "forbidden book"
     ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 75,
       "health": 350,
       "abilityHaste": 15
     },
-    "purchasable": true,
     "cost": 2850,
     "tags": [
       "Mage",
@@ -3412,52 +3202,41 @@
       35
     ]
   },
-  "3170": {
+  {
     "id": 3170,
     "name": "Swiftmarch",
-    "rank": [
-      "Boots"
-    ],
+    "rank": "Boots",
     "stats": {
       "flatMovespeed": 65
     },
-    "purchasable": true,
     "cost": 1500,
-    "tags": [],
     "maps": [
       11
     ]
   },
-  "3171": {
+  {
     "id": 3171,
     "name": "Crimson Lucidity",
-    "rank": [
-      "Boots"
-    ],
+    "rank": "Boots",
     "stats": {
       "flatMovespeed": 50,
       "abilityHaste": 25
     },
-    "purchasable": true,
     "cost": 1400,
-    "tags": [],
     "maps": [
       11
     ]
   },
-  "3172": {
+  {
     "id": 3172,
     "name": "Zephyr",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "attackSpeed": 50,
       "percentMovespeed": 10,
       "abilityHaste": 30,
       "tenacity": 20
     },
-    "purchasable": true,
     "cost": 2500,
     "tags": [
       "Marksman",
@@ -3469,86 +3248,67 @@
       35
     ]
   },
-  "3173": {
+  {
     "id": 3173,
     "name": "Chainlaced Crushers",
-    "rank": [
-      "Boots"
-    ],
+    "rank": "Boots",
     "stats": {
       "magicResistance": 35,
       "flatMovespeed": 50,
       "tenacity": 30
     },
-    "purchasable": true,
     "cost": 1750,
-    "tags": [],
     "maps": [
       11
     ]
   },
-  "3174": {
+  {
     "id": 3174,
     "name": "Armored Advance",
-    "rank": [
-      "Boots"
-    ],
+    "rank": "Boots",
     "stats": {
       "armor": 40,
       "flatMovespeed": 50
     },
-    "purchasable": true,
     "cost": 1700,
-    "tags": [],
     "maps": [
       11
     ]
   },
-  "3175": {
+  {
     "id": 3175,
     "name": "Spellslinger's Shoes",
-    "rank": [
-      "Boots"
-    ],
+    "rank": "Boots",
     "stats": {
       "flatMagicPenetration": 18,
       "flatMovespeed": 50
     },
-    "purchasable": true,
     "cost": 1600,
-    "tags": [],
     "maps": [
       11
     ]
   },
-  "3176": {
+  {
     "id": 3176,
     "name": "Forever Forward",
-    "rank": [
-      "Boots"
-    ],
+    "rank": "Boots",
     "stats": {
       "flatMovespeed": 55
     },
-    "purchasable": true,
     "cost": 1400,
-    "tags": [],
     "maps": [
       11
     ]
   },
-  "3177": {
+  {
     "id": 3177,
     "name": "Guardian's Blade",
-    "rank": [
-      "Starter"
-    ],
+    "rank": "Starter",
     "stats": {
       "attackDamage": 30,
       "health": 150,
       "abilityHaste": 15
     },
-    "purchasable": true,
     "cost": 950,
     "tags": [
       "Fighter",
@@ -3561,18 +3321,15 @@
       35
     ]
   },
-  "3179": {
+  {
     "id": 3179,
     "name": "Umbral Glaive",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 55,
       "lethality": 15,
       "abilityHaste": 10
     },
-    "purchasable": true,
     "cost": 2500,
     "tags": [
       "Assassin"
@@ -3584,18 +3341,20 @@
       35
     ]
   },
-  "3181": {
+  {
     "id": 3181,
     "name": "Hullbreaker",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "ahoy",
+      "pirate",
+      "yarrr"
     ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 40,
       "health": 500,
       "percentMovespeed": 4
     },
-    "purchasable": true,
     "cost": 3000,
     "tags": [
       "Fighter"
@@ -3606,18 +3365,15 @@
       21
     ]
   },
-  "3184": {
+  {
     "id": 3184,
     "name": "Guardian's Hammer",
-    "rank": [
-      "Starter"
-    ],
+    "rank": "Starter",
     "stats": {
       "attackDamage": 25,
       "health": 150,
       "lifesteal": 5
     },
-    "purchasable": true,
     "cost": 950,
     "tags": [
       "Fighter",
@@ -3629,19 +3385,16 @@
       35
     ]
   },
-  "3190": {
+  {
     "id": 3190,
     "name": "Locket of the Iron Solari",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "armor": 25,
       "health": 200,
       "magicResistance": 25,
       "abilityHaste": 10
     },
-    "purchasable": true,
     "cost": 2200,
     "tags": [
       "Tank",
@@ -3654,18 +3407,19 @@
       35
     ]
   },
-  "3211": {
+  {
     "id": 3211,
     "name": "Spectre's Cowl",
-    "rank": [
-      "Epic"
+    "aka": [
+      "hat",
+      "ghost"
     ],
+    "rank": "Epic",
     "stats": {
       "health": 200,
       "healthRegen": 100,
       "magicResistance": 35
     },
-    "purchasable": true,
     "cost": 1250,
     "tags": [
       "Tank"
@@ -3677,19 +3431,20 @@
       35
     ]
   },
-  "3222": {
+  {
     "id": 3222,
     "name": "Mikael's Blessing",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "crucible",
+      "michael"
     ],
+    "rank": "Legendary",
     "stats": {
       "healAndShieldPower": 12,
       "health": 250,
       "manaRegen": 100,
       "abilityHaste": 15
     },
-    "purchasable": true,
     "cost": 2300,
     "tags": [
       "Support"
@@ -3701,17 +3456,18 @@
       35
     ]
   },
-  "3302": {
+  {
     "id": 3302,
     "name": "Terminus",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "bow",
+      "sentinel"
     ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 30,
       "attackSpeed": 35
     },
-    "purchasable": true,
     "cost": 3000,
     "tags": [
       "Fighter",
@@ -3727,16 +3483,12 @@
       35
     ]
   },
-  "3330": {
+  {
     "id": 3330,
     "name": "Scarecrow Effigy",
-    "rank": [
-      "Consumable"
-    ],
+    "rank": "Consumable",
     "stats": {},
-    "purchasable": true,
     "cost": 0,
-    "tags": [],
     "maps": [
       11,
       12,
@@ -3745,76 +3497,75 @@
       35
     ]
   },
-  "3340": {
+  {
     "id": 3340,
     "name": "Stealth Ward",
-    "rank": [
-      "Consumable"
+    "aka": [
+      "yellow",
+      "totem",
+      "trinket"
     ],
+    "rank": "Consumable",
     "stats": {},
-    "purchasable": true,
     "cost": 0,
-    "tags": [],
     "maps": [
       11,
       21
     ]
   },
-  "3348": {
+  {
     "id": 3348,
     "name": "Arcane Sweeper (Trinket)",
-    "rank": [
-      "Consumable"
-    ],
+    "rank": "Consumable",
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": [],
     "maps": [
       30
     ]
   },
-  "3363": {
+  {
     "id": 3363,
     "name": "Farsight Alteration",
-    "rank": [
-      "Consumable"
+    "aka": [
+      "blue",
+      "totem",
+      "trinket"
     ],
+    "rank": "Consumable",
     "stats": {},
-    "purchasable": true,
     "cost": 0,
-    "tags": [],
     "maps": [
       11,
       12,
       21
     ]
   },
-  "3364": {
+  {
     "id": 3364,
     "name": "Oracle Lens",
-    "rank": [
-      "Consumable"
+    "aka": [
+      "red",
+      "totem",
+      "trinket",
+      "sweeper",
+      "spinny"
     ],
+    "rank": "Consumable",
     "stats": {},
-    "purchasable": true,
     "cost": 0,
-    "tags": [],
     "maps": [
       11,
       21
     ]
   },
-  "3400": {
+  {
     "id": 3400,
     "name": "Your Cut",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": [],
     "maps": [
       11,
       12,
@@ -3823,18 +3574,15 @@
       35
     ]
   },
-  "3430": {
+  {
     "id": 3430,
     "name": "Rite of Ruin",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 50,
       "criticalStrikeChance": 25,
       "abilityHaste": 15
     },
-    "purchasable": true,
     "cost": 2500,
     "tags": [
       "Mage"
@@ -3843,19 +3591,16 @@
       30
     ]
   },
-  "3504": {
+  {
     "id": 3504,
     "name": "Ardent Censer",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 45,
       "healAndShieldPower": 10,
       "manaRegen": 125,
       "percentMovespeed": 4
     },
-    "purchasable": true,
     "cost": 2200,
     "tags": [
       "Support",
@@ -3868,18 +3613,19 @@
       35
     ]
   },
-  "3508": {
+  {
     "id": 3508,
     "name": "Essence Reaver",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "er",
+      "<s>bloothirster</s>"
     ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 60,
       "criticalStrikeChance": 25,
       "abilityHaste": 15
     },
-    "purchasable": true,
     "cost": 2900,
     "tags": [
       "Marksman",
@@ -3893,28 +3639,20 @@
       35
     ]
   },
-  "3513": {
+  {
     "id": 3513,
     "name": "Eye of the Herald",
-    "rank": [
-      "Consumable"
-    ],
+    "rank": "Consumable",
     "stats": {},
     "purchasable": false,
-    "cost": 0,
-    "tags": [],
-    "maps": []
+    "cost": 0
   },
-  "3599": {
+  {
     "id": 3599,
     "name": "Black Spear",
-    "rank": [
-      "Starter"
-    ],
+    "rank": "Starter",
     "stats": {},
-    "purchasable": true,
     "cost": 0,
-    "tags": [],
     "maps": [
       11,
       12,
@@ -3923,18 +3661,21 @@
       35
     ]
   },
-  "3742": {
+  {
     "id": 3742,
     "name": "Dead Man's Plate",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "dmp",
+      "gangplank",
+      "juggernaut",
+      "dreadnought"
     ],
+    "rank": "Legendary",
     "stats": {
       "armor": 55,
       "health": 350,
       "percentMovespeed": 4
     },
-    "purchasable": true,
     "cost": 2900,
     "tags": [
       "Fighter",
@@ -3947,17 +3688,18 @@
       35
     ]
   },
-  "3748": {
+  {
     "id": 3748,
     "name": "Titanic Hydra",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "beefer",
+      "juggernaut"
     ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 40,
       "health": 600
     },
-    "purchasable": true,
     "cost": 3300,
     "tags": [
       "Fighter",
@@ -3971,17 +3713,14 @@
       35
     ]
   },
-  "3801": {
+  {
     "id": 3801,
     "name": "Crystalline Bracer",
-    "rank": [
-      "Epic"
-    ],
+    "rank": "Epic",
     "stats": {
       "health": 200,
       "healthRegen": 100
     },
-    "purchasable": true,
     "cost": 800,
     "tags": [
       "Tank",
@@ -3994,18 +3733,18 @@
       35
     ]
   },
-  "3802": {
+  {
     "id": 3802,
     "name": "Lost Chapter",
-    "rank": [
-      "Epic"
+    "aka": [
+      "book"
     ],
+    "rank": "Epic",
     "stats": {
       "abilityPower": 40,
       "mana": 300,
       "abilityHaste": 10
     },
-    "purchasable": true,
     "cost": 1200,
     "tags": [
       "Mage"
@@ -4017,17 +3756,14 @@
       35
     ]
   },
-  "3803": {
+  {
     "id": 3803,
     "name": "Catalyst of Aeons",
-    "rank": [
-      "Epic"
-    ],
+    "rank": "Epic",
     "stats": {
       "health": 350,
       "mana": 375
     },
-    "purchasable": true,
     "cost": 1300,
     "tags": [
       "Mage"
@@ -4039,18 +3775,20 @@
       35
     ]
   },
-  "3814": {
+  {
     "id": 3814,
     "name": "Edge of Night",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "eon",
+      "spellshield",
+      "spell shield"
     ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 50,
       "health": 250,
       "lethality": 15
     },
-    "purchasable": true,
     "cost": 3000,
     "tags": [
       "Assassin"
@@ -4062,19 +3800,16 @@
       35
     ]
   },
-  "3865": {
+  {
     "id": 3865,
     "name": "World Atlas",
-    "rank": [
-      "Starter"
-    ],
+    "rank": "Starter",
     "stats": {
       "goldPer10": 3,
       "health": 30,
       "healthRegen": 25,
       "manaRegen": 25
     },
-    "purchasable": true,
     "cost": 400,
     "tags": [
       "Support",
@@ -4084,12 +3819,10 @@
       11
     ]
   },
-  "3866": {
+  {
     "id": 3866,
     "name": "Runic Compass",
-    "rank": [
-      "Epic"
-    ],
+    "rank": "Epic",
     "stats": {
       "goldPer10": 5,
       "health": 100,
@@ -4105,12 +3838,10 @@
       11
     ]
   },
-  "3867": {
+  {
     "id": 3867,
     "name": "Bounty of Worlds",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "goldPer10": 5,
       "health": 200,
@@ -4126,19 +3857,16 @@
       11
     ]
   },
-  "3869": {
+  {
     "id": 3869,
     "name": "Celestial Opposition",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "goldPer10": 5,
       "health": 200,
       "healthRegen": 75,
       "manaRegen": 75
     },
-    "purchasable": true,
     "cost": 400,
     "tags": [
       "Support"
@@ -4147,19 +3875,16 @@
       11
     ]
   },
-  "3870": {
+  {
     "id": 3870,
     "name": "Dream Maker",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "goldPer10": 5,
       "health": 200,
       "healthRegen": 75,
       "manaRegen": 75
     },
-    "purchasable": true,
     "cost": 400,
     "tags": [
       "Support"
@@ -4168,19 +3893,16 @@
       11
     ]
   },
-  "3871": {
+  {
     "id": 3871,
     "name": "Zaz'Zak's Realmspike",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "goldPer10": 5,
       "health": 200,
       "healthRegen": 75,
       "manaRegen": 75
     },
-    "purchasable": true,
     "cost": 400,
     "tags": [
       "Support"
@@ -4189,19 +3911,16 @@
       11
     ]
   },
-  "3876": {
+  {
     "id": 3876,
     "name": "Solstice Sleigh",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "goldPer10": 5,
       "health": 200,
       "healthRegen": 75,
       "manaRegen": 75
     },
-    "purchasable": true,
     "cost": 400,
     "tags": [
       "Support"
@@ -4210,19 +3929,16 @@
       11
     ]
   },
-  "3877": {
+  {
     "id": 3877,
     "name": "Bloodsong",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "goldPer10": 5,
       "health": 200,
       "healthRegen": 75,
       "manaRegen": 75
     },
-    "purchasable": true,
     "cost": 400,
     "tags": [
       "Support"
@@ -4231,14 +3947,12 @@
       11
     ]
   },
-  "3901": {
+  {
     "id": 3901,
     "name": "Fire at Will",
-    "rank": [],
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": [],
     "maps": [
       11,
       12,
@@ -4247,14 +3961,12 @@
       35
     ]
   },
-  "3902": {
+  {
     "id": 3902,
     "name": "Death's Daughter",
-    "rank": [],
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": [],
     "maps": [
       11,
       12,
@@ -4263,14 +3975,12 @@
       35
     ]
   },
-  "3903": {
+  {
     "id": 3903,
     "name": "Raise Morale",
-    "rank": [],
     "stats": {},
     "purchasable": false,
     "cost": 0,
-    "tags": [],
     "maps": [
       11,
       12,
@@ -4279,16 +3989,16 @@
       35
     ]
   },
-  "3916": {
+  {
     "id": 3916,
     "name": "Oblivion Orb",
-    "rank": [
-      "Epic"
+    "aka": [
+      "grievous"
     ],
+    "rank": "Epic",
     "stats": {
       "abilityPower": 25
     },
-    "purchasable": true,
     "cost": 800,
     "tags": [
       "Mage",
@@ -4301,18 +4011,19 @@
       35
     ]
   },
-  "4005": {
+  {
     "id": 4005,
     "name": "Imperial Mandate",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "banner of command",
+      "flag"
     ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 60,
       "manaRegen": 125,
       "abilityHaste": 20
     },
-    "purchasable": true,
     "cost": 2250,
     "tags": [
       "Support"
@@ -4324,19 +4035,16 @@
       35
     ]
   },
-  "4011": {
+  {
     "id": 4011,
     "name": "Sword of Blossoming Dawn",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 45,
       "healAndShieldPower": 12,
       "health": 200,
       "abilityHaste": 15
     },
-    "purchasable": true,
     "cost": 2500,
     "tags": [
       "Support"
@@ -4345,19 +4053,16 @@
       30
     ]
   },
-  "4015": {
+  {
     "id": 4015,
     "name": "Perplexity",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 60,
       "armorPenetration": 22,
       "percentMagicPenetration": 30,
       "percentMovespeed": 5
     },
-    "purchasable": true,
     "cost": 2500,
     "tags": [
       "Mage"
@@ -4366,18 +4071,15 @@
       30
     ]
   },
-  "4016": {
+  {
     "id": 4016,
     "name": "Wordless Promise",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 50,
       "healAndShieldPower": 25,
       "abilityHaste": 25
     },
-    "purchasable": true,
     "cost": 2500,
     "tags": [
       "Support"
@@ -4386,17 +4088,14 @@
       30
     ]
   },
-  "4017": {
+  {
     "id": 4017,
     "name": "Hellfire Hatchet",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 35,
       "lethality": 12
     },
-    "purchasable": true,
     "cost": 2500,
     "tags": [
       "Assassin"
@@ -4405,18 +4104,18 @@
       30
     ]
   },
-  "4401": {
+  {
     "id": 4401,
     "name": "Force of Nature",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "fon"
     ],
+    "rank": "Legendary",
     "stats": {
       "health": 400,
       "magicResistance": 55,
       "percentMovespeed": 4
     },
-    "purchasable": true,
     "cost": 2800,
     "tags": [
       "Tank"
@@ -4428,17 +4127,18 @@
       35
     ]
   },
-  "4628": {
+  {
     "id": 4628,
     "name": "Horizon Focus",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "snipe",
+      "lock on"
     ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 115,
       "abilityHaste": 25
     },
-    "purchasable": true,
     "cost": 2800,
     "tags": [
       "Mage"
@@ -4450,19 +4150,19 @@
       35
     ]
   },
-  "4629": {
+  {
     "id": 4629,
     "name": "Cosmic Drive",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "hat"
     ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 70,
       "health": 350,
       "percentMovespeed": 4,
       "abilityHaste": 25
     },
-    "purchasable": true,
     "cost": 3000,
     "tags": [
       "Mage",
@@ -4475,17 +4175,17 @@
       35
     ]
   },
-  "4630": {
+  {
     "id": 4630,
     "name": "Blighting Jewel",
-    "rank": [
-      "Epic"
+    "aka": [
+      "purple"
     ],
+    "rank": "Epic",
     "stats": {
       "abilityPower": 25,
       "percentMagicPenetration": 13
     },
-    "purchasable": true,
     "cost": 1100,
     "tags": [
       "Mage"
@@ -4497,17 +4197,17 @@
       35
     ]
   },
-  "4632": {
+  {
     "id": 4632,
     "name": "Verdant Barrier",
-    "rank": [
-      "Epic"
+    "aka": [
+      "necklace"
     ],
+    "rank": "Epic",
     "stats": {
       "abilityPower": 40,
       "magicResistance": 25
     },
-    "purchasable": true,
     "cost": 1600,
     "tags": [
       "Mage"
@@ -4519,18 +4219,18 @@
       35
     ]
   },
-  "4633": {
+  {
     "id": 4633,
     "name": "Riftmaker",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "velkoz"
     ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 70,
       "health": 350,
       "abilityHaste": 15
     },
-    "purchasable": true,
     "cost": 3100,
     "tags": [
       "Mage",
@@ -4543,19 +4243,20 @@
       35
     ]
   },
-  "4638": {
+  {
     "id": 4638,
     "name": "Watchful Wardstone",
-    "rank": [
-      "Epic"
+    "aka": [
+      "Support",
+      "Ward"
     ],
+    "rank": "Epic",
     "stats": {
       "armor": 10,
       "health": 150,
       "magicResistance": 15,
       "abilityHaste": 10
     },
-    "purchasable": true,
     "cost": 1100,
     "tags": [
       "Support"
@@ -4564,18 +4265,18 @@
       11
     ]
   },
-  "4642": {
+  {
     "id": 4642,
     "name": "Bandleglass Mirror",
-    "rank": [
-      "Epic"
+    "aka": [
+      "yordle"
     ],
+    "rank": "Epic",
     "stats": {
       "abilityPower": 20,
       "manaRegen": 100,
       "abilityHaste": 10
     },
-    "purchasable": true,
     "cost": 900,
     "tags": [
       "Support"
@@ -4587,19 +4288,21 @@
       35
     ]
   },
-  "4643": {
+  {
     "id": 4643,
     "name": "Vigilant Wardstone",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "Support",
+      "Ward",
+      "sightstone"
     ],
+    "rank": "Legendary",
     "stats": {
       "armor": 25,
       "health": 250,
       "magicResistance": 30,
       "abilityHaste": 20
     },
-    "purchasable": true,
     "cost": 2300,
     "tags": [
       "Support"
@@ -4608,17 +4311,14 @@
       11
     ]
   },
-  "4645": {
+  {
     "id": 4645,
     "name": "Shadowflame",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 110,
       "flatMagicPenetration": 15
     },
-    "purchasable": true,
     "cost": 3200,
     "tags": [
       "Mage"
@@ -4630,18 +4330,15 @@
       35
     ]
   },
-  "4646": {
+  {
     "id": 4646,
     "name": "Stormsurge",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 90,
       "flatMagicPenetration": 15,
       "percentMovespeed": 6
     },
-    "purchasable": true,
     "cost": 2800,
     "tags": [
       "Mage"
@@ -4653,18 +4350,19 @@
       35
     ]
   },
-  "6333": {
+  {
     "id": 6333,
     "name": "Death's Dance",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "dd",
+      "<s>Bloodbag</s>"
     ],
+    "rank": "Legendary",
     "stats": {
       "armor": 50,
       "attackDamage": 60,
       "abilityHaste": 15
     },
-    "purchasable": true,
     "cost": 3300,
     "tags": [
       "Fighter"
@@ -4676,18 +4374,18 @@
       35
     ]
   },
-  "6609": {
+  {
     "id": 6609,
     "name": "Chempunk Chainsword",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "grievous"
     ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 45,
       "health": 450,
       "abilityHaste": 15
     },
-    "purchasable": true,
     "cost": 3100,
     "tags": [
       "Fighter",
@@ -4700,18 +4398,15 @@
       35
     ]
   },
-  "6610": {
+  {
     "id": 6610,
     "name": "Sundered Sky",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 40,
       "health": 400,
       "abilityHaste": 10
     },
-    "purchasable": true,
     "cost": 3100,
     "tags": [
       "Fighter"
@@ -4723,19 +4418,19 @@
       35
     ]
   },
-  "6616": {
+  {
     "id": 6616,
     "name": "Staff of Flowing Water",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "nami"
     ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 35,
       "healAndShieldPower": 10,
       "manaRegen": 125,
       "abilityHaste": 15
     },
-    "purchasable": true,
     "cost": 2250,
     "tags": [
       "Support"
@@ -4747,19 +4442,19 @@
       35
     ]
   },
-  "6617": {
+  {
     "id": 6617,
     "name": "Moonstone Renewer",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "yuumi"
     ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 25,
       "health": 200,
       "manaRegen": 125,
       "abilityHaste": 20
     },
-    "purchasable": true,
     "cost": 2200,
     "tags": [
       "Support"
@@ -4771,19 +4466,19 @@
       35
     ]
   },
-  "6620": {
+  {
     "id": 6620,
     "name": "Echoes of Helia",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "spooky cup"
     ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 35,
       "health": 200,
       "manaRegen": 125,
       "abilityHaste": 20
     },
-    "purchasable": true,
     "cost": 2200,
     "tags": [
       "Support"
@@ -4795,18 +4490,15 @@
       35
     ]
   },
-  "6621": {
+  {
     "id": 6621,
     "name": "Dawncore",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 45,
       "healAndShieldPower": 16,
       "manaRegen": 100
     },
-    "purchasable": true,
     "cost": 2500,
     "tags": [
       "Support"
@@ -4818,18 +4510,19 @@
       35
     ]
   },
-  "6631": {
+  {
     "id": 6631,
     "name": "Stridebreaker",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "kneecapper",
+      "whipchain"
     ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 40,
       "attackSpeed": 25,
       "health": 450
     },
-    "purchasable": true,
     "cost": 3300,
     "tags": [
       "Fighter",
@@ -4842,17 +4535,18 @@
       35
     ]
   },
-  "6653": {
+  {
     "id": 6653,
     "name": "Liandry's Torment",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "last shadow",
+      "ls"
     ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 60,
       "health": 300
     },
-    "purchasable": true,
     "cost": 3000,
     "tags": [
       "Mage"
@@ -4864,18 +4558,19 @@
       35
     ]
   },
-  "6655": {
+  {
     "id": 6655,
     "name": "Luden's Companion",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "boomstick",
+      "gun"
     ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 100,
       "mana": 600,
       "abilityHaste": 10
     },
-    "purchasable": true,
     "cost": 2750,
     "tags": [
       "Mage"
@@ -4887,18 +4582,15 @@
       35
     ]
   },
-  "6657": {
+  {
     "id": 6657,
     "name": "Rod of Ages",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 45,
       "health": 350,
       "mana": 400
     },
-    "purchasable": true,
     "cost": 2600,
     "tags": [
       "Mage"
@@ -4910,17 +4602,17 @@
       35
     ]
   },
-  "6660": {
+  {
     "id": 6660,
     "name": "Bami's Cinder",
-    "rank": [
-      "Epic"
+    "aka": [
+      "fire"
     ],
+    "rank": "Epic",
     "stats": {
       "health": 150,
       "abilityHaste": 5
     },
-    "purchasable": true,
     "cost": 900,
     "tags": [
       "Tank"
@@ -4932,18 +4624,15 @@
       35
     ]
   },
-  "6662": {
+  {
     "id": 6662,
     "name": "Iceborn Gauntlet",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "armor": 50,
       "health": 300,
       "abilityHaste": 15
     },
-    "purchasable": true,
     "cost": 2900,
     "tags": [
       "Fighter",
@@ -4957,19 +4646,16 @@
       35
     ]
   },
-  "6664": {
+  {
     "id": 6664,
     "name": "Hollow Radiance",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "health": 400,
       "healthRegen": 100,
       "magicResistance": 40,
       "abilityHaste": 10
     },
-    "purchasable": true,
     "cost": 2800,
     "tags": [
       "Tank"
@@ -4981,18 +4667,15 @@
       35
     ]
   },
-  "6665": {
+  {
     "id": 6665,
     "name": "Jak'Sho, The Protean",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "armor": 45,
       "health": 350,
       "magicResistance": 45
     },
-    "purchasable": true,
     "cost": 3200,
     "tags": [
       "Tank"
@@ -5004,17 +4687,14 @@
       35
     ]
   },
-  "6670": {
+  {
     "id": 6670,
     "name": "Noonquiver",
-    "rank": [
-      "Epic"
-    ],
+    "rank": "Epic",
     "stats": {
       "attackDamage": 15,
       "criticalStrikeChance": 20
     },
-    "purchasable": true,
     "cost": 1300,
     "tags": [
       "Marksman",
@@ -5027,18 +4707,15 @@
       35
     ]
   },
-  "6672": {
+  {
     "id": 6672,
     "name": "Kraken Slayer",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 45,
       "attackSpeed": 40,
       "percentMovespeed": 4
     },
-    "purchasable": true,
     "cost": 3100,
     "tags": [
       "Marksman"
@@ -5050,17 +4727,14 @@
       35
     ]
   },
-  "6673": {
+  {
     "id": 6673,
     "name": "Immortal Shieldbow",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 55,
       "criticalStrikeChance": 25
     },
-    "purchasable": true,
     "cost": 3000,
     "tags": [
       "Marksman",
@@ -5073,18 +4747,15 @@
       35
     ]
   },
-  "6675": {
+  {
     "id": 6675,
     "name": "Navori Flickerblade",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "attackSpeed": 40,
       "criticalStrikeChance": 25,
       "percentMovespeed": 4
     },
-    "purchasable": true,
     "cost": 2650,
     "tags": [
       "Marksman"
@@ -5096,18 +4767,19 @@
       35
     ]
   },
-  "6676": {
+  {
     "id": 6676,
     "name": "The Collector",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "deathblade",
+      "gun"
     ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 50,
       "criticalStrikeChance": 25,
       "lethality": 10
     },
-    "purchasable": true,
     "cost": 3000,
     "tags": [
       "Marksman",
@@ -5120,17 +4792,14 @@
       35
     ]
   },
-  "6690": {
+  {
     "id": 6690,
     "name": "Rectrix",
-    "rank": [
-      "Epic"
-    ],
+    "rank": "Epic",
     "stats": {
       "attackDamage": 15,
       "percentMovespeed": 4
     },
-    "purchasable": true,
     "cost": 775,
     "tags": [
       "Assassin",
@@ -5143,17 +4812,14 @@
       35
     ]
   },
-  "6692": {
+  {
     "id": 6692,
     "name": "Eclipse",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 60,
       "abilityHaste": 15
     },
-    "purchasable": true,
     "cost": 2900,
     "tags": [
       "Fighter"
@@ -5165,18 +4831,15 @@
       35
     ]
   },
-  "6694": {
+  {
     "id": 6694,
     "name": "Serylda's Grudge",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "armorPenetration": 35,
       "attackDamage": 45,
       "abilityHaste": 15
     },
-    "purchasable": true,
     "cost": 3000,
     "tags": [
       "Assassin"
@@ -5188,17 +4851,14 @@
       35
     ]
   },
-  "6695": {
+  {
     "id": 6695,
     "name": "Serpent's Fang",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 55,
       "lethality": 15
     },
-    "purchasable": true,
     "cost": 2500,
     "tags": [
       "Assassin"
@@ -5210,18 +4870,15 @@
       35
     ]
   },
-  "6696": {
+  {
     "id": 6696,
     "name": "Axiom Arc",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 55,
       "lethality": 18,
       "abilityHaste": 20
     },
-    "purchasable": true,
     "cost": 3000,
     "tags": [
       "Assassin"
@@ -5233,18 +4890,15 @@
       35
     ]
   },
-  "6697": {
+  {
     "id": 6697,
     "name": "Hubris",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 60,
       "lethality": 18,
       "abilityHaste": 10
     },
-    "purchasable": true,
     "cost": 3000,
     "tags": [
       "Assassin"
@@ -5254,18 +4908,15 @@
       21
     ]
   },
-  "6698": {
+  {
     "id": 6698,
     "name": "Profane Hydra",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 60,
       "lethality": 18,
       "abilityHaste": 10
     },
-    "purchasable": true,
     "cost": 3200,
     "tags": [
       "Assassin"
@@ -5277,18 +4928,15 @@
       35
     ]
   },
-  "6699": {
+  {
     "id": 6699,
     "name": "Voltaic Cyclosword",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 55,
       "lethality": 18,
       "abilityHaste": 10
     },
-    "purchasable": true,
     "cost": 3000,
     "tags": [
       "Assassin"
@@ -5300,17 +4948,14 @@
       35
     ]
   },
-  "6701": {
+  {
     "id": 6701,
     "name": "Opportunity",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 55,
       "lethality": 18
     },
-    "purchasable": true,
     "cost": 2700,
     "tags": [
       "Assassin",
@@ -5323,18 +4968,15 @@
       35
     ]
   },
-  "8010": {
+  {
     "id": 8010,
     "name": "Bloodletter's Curse",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 65,
       "health": 400,
       "abilityHaste": 15
     },
-    "purchasable": true,
     "cost": 2900,
     "tags": [
       "Mage"
@@ -5346,18 +4988,15 @@
       35
     ]
   },
-  "8020": {
+  {
     "id": 8020,
     "name": "Abyssal Mask",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "health": 350,
       "magicResistance": 45,
       "abilityHaste": 15
     },
-    "purchasable": true,
     "cost": 2650,
     "tags": [
       "Tank",
@@ -5370,145 +5009,109 @@
       35
     ]
   },
-  "220000": {
+  {
     "id": 220000,
     "name": "Stat Bonus",
-    "rank": [
-      "Consumable"
-    ],
+    "rank": "Consumable",
     "stats": {},
-    "purchasable": true,
     "cost": 750,
-    "tags": [],
     "maps": [
       30
     ]
   },
-  "220001": {
+  {
     "id": 220001,
     "name": "Legendary Fighter Item",
-    "rank": [
-      "Consumable"
-    ],
+    "rank": "Consumable",
     "stats": {},
-    "purchasable": true,
     "cost": 2000,
-    "tags": [],
     "maps": [
       30
     ]
   },
-  "220002": {
+  {
     "id": 220002,
     "name": "Legendary Marksman Item",
-    "rank": [
-      "Consumable"
-    ],
+    "rank": "Consumable",
     "stats": {},
-    "purchasable": true,
     "cost": 2000,
-    "tags": [],
     "maps": [
       30
     ]
   },
-  "220003": {
+  {
     "id": 220003,
     "name": "Legendary Assassin Item",
-    "rank": [
-      "Consumable"
-    ],
+    "rank": "Consumable",
     "stats": {},
-    "purchasable": true,
     "cost": 2000,
-    "tags": [],
     "maps": [
       30
     ]
   },
-  "220004": {
+  {
     "id": 220004,
     "name": "Legendary Mage Item",
-    "rank": [
-      "Consumable"
-    ],
+    "rank": "Consumable",
     "stats": {},
-    "purchasable": true,
     "cost": 2000,
-    "tags": [],
     "maps": [
       30
     ]
   },
-  "220005": {
+  {
     "id": 220005,
     "name": "Legendary Tank Item",
-    "rank": [
-      "Consumable"
-    ],
+    "rank": "Consumable",
     "stats": {},
-    "purchasable": true,
     "cost": 2000,
-    "tags": [],
     "maps": [
       30
     ]
   },
-  "220006": {
+  {
     "id": 220006,
     "name": "Legendary Support Item",
-    "rank": [
-      "Consumable"
-    ],
+    "rank": "Consumable",
     "stats": {},
-    "purchasable": true,
     "cost": 2000,
-    "tags": [],
     "maps": [
       30
     ]
   },
-  "220007": {
+  {
     "id": 220007,
     "name": "Prismatic Item",
-    "rank": [
-      "Consumable"
-    ],
+    "rank": "Consumable",
     "stats": {},
-    "purchasable": true,
     "cost": 4000,
-    "tags": [],
     "maps": [
       30
     ]
   },
-  "223005": {
+  {
     "id": 223005,
     "name": "Ghostcrawlers",
-    "rank": [
-      "Boots"
-    ],
+    "rank": "Boots",
     "stats": {
       "flatMovespeed": 70
     },
-    "purchasable": true,
     "cost": 500,
-    "tags": [],
     "maps": [
       30
     ]
   },
-  "223039": {
+  {
     "id": 223039,
     "name": "Atma's Reckoning",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "wreckoning"
     ],
+    "rank": "Legendary",
     "stats": {
       "criticalStrikeChance": 20,
       "health": 700
     },
-    "purchasable": true,
     "cost": 2500,
     "tags": [
       "Fighter"
@@ -5517,18 +5120,18 @@
       30
     ]
   },
-  "223095": {
+  {
     "id": 223095,
     "name": "Stormrazor",
-    "rank": [
-      "Legendary"
+    "aka": [
+      "Windblade"
     ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 45,
       "attackSpeed": 25,
       "criticalStrikeChance": 25
     },
-    "purchasable": true,
     "cost": 2500,
     "tags": [
       "Marksman",
@@ -5538,18 +5141,15 @@
       30
     ]
   },
-  "223146": {
+  {
     "id": 223146,
     "name": "Hextech Gunblade",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "abilityPower": 90,
       "attackDamage": 45,
       "omnivamp": 15
     },
-    "purchasable": true,
     "cost": 2500,
     "tags": [
       "Mage"
@@ -5558,18 +5158,15 @@
       30
     ]
   },
-  "223185": {
+  {
     "id": 223185,
     "name": "Guardian's Dirk",
-    "rank": [
-      "Starter"
-    ],
+    "rank": "Starter",
     "stats": {
       "attackDamage": 25,
       "lethality": 11,
       "abilityHaste": 10
     },
-    "purchasable": true,
     "cost": 500,
     "tags": [
       "Fighter",
@@ -5579,17 +5176,14 @@
       30
     ]
   },
-  "224004": {
+  {
     "id": 224004,
     "name": "Spectral Cutlass",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "attackDamage": 55,
       "lethality": 21
     },
-    "purchasable": true,
     "cost": 2500,
     "tags": [
       "Assassin"
@@ -5598,12 +5192,13 @@
       30
     ]
   },
-  "224403": {
+  {
     "id": 224403,
     "name": "The Golden Spatula",
-    "rank": [
-      "Special"
+    "aka": [
+      "debug"
     ],
+    "rank": "Special",
     "stats": {
       "abilityPower": 125,
       "armor": 40,
@@ -5619,25 +5214,23 @@
       "percentMovespeed": 10,
       "abilityHaste": 20
     },
-    "purchasable": true,
     "cost": 0,
-    "tags": [],
     "maps": [
       30
     ]
   },
-  "226630": {
+  {
     "id": 226630,
     "name": "Goredrinker",
-    "rank": [
-      "Special"
+    "aka": [
+      "slurp"
     ],
+    "rank": "Special",
     "stats": {
       "attackDamage": 55,
       "health": 400,
       "abilityHaste": 20
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Fighter"
@@ -5646,17 +5239,14 @@
       30
     ]
   },
-  "228001": {
+  {
     "id": 228001,
     "name": "Anathema's Chains",
-    "rank": [
-      "Legendary"
-    ],
+    "rank": "Legendary",
     "stats": {
       "health": 650,
       "abilityHaste": 20
     },
-    "purchasable": true,
     "cost": 2500,
     "tags": [
       "Tank",
@@ -5666,18 +5256,15 @@
       30
     ]
   },
-  "228002": {
+  {
     "id": 228002,
     "name": "Wooglet's Witchcap",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "abilityPower": 300,
       "armor": 50,
       "abilityHaste": 20
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Mage"
@@ -5686,18 +5273,15 @@
       30
     ]
   },
-  "443054": {
+  {
     "id": 443054,
     "name": "Darksteel Talons",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "armor": 55,
       "attackSpeed": 50,
       "percentMovespeed": 10
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Tank"
@@ -5706,18 +5290,15 @@
       30
     ]
   },
-  "443055": {
+  {
     "id": 443055,
     "name": "Fulmination",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "attackDamage": 55,
       "attackSpeed": 45,
       "percentMovespeed": 15
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Marksman"
@@ -5726,31 +5307,24 @@
       30
     ]
   },
-  "443056": {
+  {
     "id": 443056,
     "name": "Demon King's Crown",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {},
-    "purchasable": true,
     "cost": 0,
-    "tags": [],
     "maps": [
       30
     ]
   },
-  "443058": {
+  {
     "id": 443058,
     "name": "Shield of Molten Stone",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "armor": 100,
       "health": 300
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Tank"
@@ -5759,17 +5333,14 @@
       30
     ]
   },
-  "443059": {
+  {
     "id": 443059,
     "name": "Cloak of Starry Night",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "health": 300,
       "magicResistance": 100
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Tank"
@@ -5778,16 +5349,16 @@
       30
     ]
   },
-  "443060": {
+  {
     "id": 443060,
     "name": "Sword of the Divine",
-    "rank": [
-      "Special"
+    "aka": [
+      "sotd"
     ],
+    "rank": "Special",
     "stats": {
       "criticalStrikeChance": 50
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Assassin"
@@ -5796,18 +5367,15 @@
       30
     ]
   },
-  "443061": {
+  {
     "id": 443061,
     "name": "Force of Entropy",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "criticalStrikeChance": 25,
       "health": 900,
       "abilityHaste": 30
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Tank"
@@ -5816,18 +5384,15 @@
       30
     ]
   },
-  "443062": {
+  {
     "id": 443062,
     "name": "Sanguine Gift",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "abilityPower": 80,
       "healAndShieldPower": 15,
       "abilityHaste": 20
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Mage"
@@ -5836,18 +5401,15 @@
       30
     ]
   },
-  "443063": {
+  {
     "id": 443063,
     "name": "Eleisa's Miracle",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "armor": 50,
       "magicResistance": 50,
       "abilityHaste": 25
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Support"
@@ -5856,32 +5418,30 @@
       30
     ]
   },
-  "443064": {
+  {
     "id": 443064,
     "name": "Talisman of Ascension",
-    "rank": [
-      "Special"
+    "aka": [
+      "Support",
+      "Economy",
+      "Gold"
     ],
+    "rank": "Special",
     "stats": {},
-    "purchasable": true,
     "cost": 0,
-    "tags": [],
     "maps": [
       30
     ]
   },
-  "443069": {
+  {
     "id": 443069,
     "name": "Hamstringer",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "attackDamage": 45,
       "attackSpeed": 40,
       "criticalStrikeChance": 25
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Marksman"
@@ -5890,16 +5450,16 @@
       30
     ]
   },
-  "443079": {
+  {
     "id": 443079,
     "name": "Turbo Chemtank",
-    "rank": [
-      "Special"
+    "aka": [
+      "catastrophe"
     ],
+    "rank": "Special",
     "stats": {
       "health": 600
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Tank"
@@ -5908,31 +5468,24 @@
       30
     ]
   },
-  "443080": {
+  {
     "id": 443080,
     "name": "Twin Mask",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {},
-    "purchasable": true,
     "cost": 0,
-    "tags": [],
     "maps": [
       30
     ]
   },
-  "443081": {
+  {
     "id": 443081,
     "name": "Hexbolt Companion",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "attackSpeed": 75,
       "health": 500
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Tank"
@@ -5941,17 +5494,14 @@
       30
     ]
   },
-  "443090": {
+  {
     "id": 443090,
     "name": "Reaper's Toll",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "attackSpeed": 50,
       "percentMovespeed": 10
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Marksman"
@@ -5960,19 +5510,16 @@
       30
     ]
   },
-  "443193": {
+  {
     "id": 443193,
     "name": "Gargoyle Stoneplate",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "armor": 65,
       "magicResistance": 65,
       "percentMovespeed": 10,
       "abilityHaste": 15
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Tank"
@@ -5981,18 +5528,19 @@
       30
     ]
   },
-  "444636": {
+  {
     "id": 444636,
     "name": "Night Harvester",
-    "rank": [
-      "Special"
+    "aka": [
+      "dark",
+      "scythe"
     ],
+    "rank": "Special",
     "stats": {
       "abilityPower": 90,
       "health": 300,
       "abilityHaste": 25
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Mage"
@@ -6001,17 +5549,17 @@
       30
     ]
   },
-  "444637": {
+  {
     "id": 444637,
     "name": "Demonic Embrace",
-    "rank": [
-      "Special"
+    "aka": [
+      "helmet"
     ],
+    "rank": "Special",
     "stats": {
       "abilityPower": 80,
       "health": 700
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Mage"
@@ -6020,19 +5568,16 @@
       30
     ]
   },
-  "444644": {
+  {
     "id": 444644,
     "name": "Crown of the Shattered Queen",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "abilityPower": 85,
       "health": 300,
       "mana": 600,
       "abilityHaste": 25
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Mage"
@@ -6041,18 +5586,18 @@
       30
     ]
   },
-  "446632": {
+  {
     "id": 446632,
     "name": "Divine Sunderer",
-    "rank": [
-      "Special"
+    "aka": [
+      "devourer"
     ],
+    "rank": "Special",
     "stats": {
       "attackDamage": 55,
       "health": 350,
       "abilityHaste": 20
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Fighter"
@@ -6061,19 +5606,21 @@
       30
     ]
   },
-  "446656": {
+  {
     "id": 446656,
     "name": "Everfrost",
-    "rank": [
-      "Special"
+    "aka": [
+      "GLP",
+      "hose",
+      "supersoaker"
     ],
+    "rank": "Special",
     "stats": {
       "abilityPower": 100,
       "health": 250,
       "mana": 600,
       "abilityHaste": 25
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Mage"
@@ -6082,19 +5629,16 @@
       30
     ]
   },
-  "446667": {
+  {
     "id": 446667,
     "name": "Radiant Virtue",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "armor": 35,
       "healAndShieldPower": 12,
       "health": 400,
       "magicResistance": 35
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Tank"
@@ -6103,19 +5647,19 @@
       30
     ]
   },
-  "446671": {
+  {
     "id": 446671,
     "name": "Galeforce",
-    "rank": [
-      "Special"
+    "aka": [
+      "squallrider"
     ],
+    "rank": "Special",
     "stats": {
       "attackDamage": 65,
       "attackSpeed": 30,
       "criticalStrikeChance": 25,
       "percentMovespeed": 12
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Marksman"
@@ -6124,18 +5668,15 @@
       30
     ]
   },
-  "446691": {
+  {
     "id": 446691,
     "name": "Duskblade of Draktharr",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "attackDamage": 50,
       "lethality": 20,
       "abilityHaste": 20
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Assassin"
@@ -6144,71 +5685,56 @@
       30
     ]
   },
-  "446693": {
+  {
     "id": 446693,
     "name": "Prowler's Claw",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "attackDamage": 55,
       "lethality": 22,
       "abilityHaste": 20
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Assassin"
-    ],
-    "maps": []
+    ]
   },
-  "447100": {
+  {
     "id": 447100,
     "name": "Mirage Blade",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "attackSpeed": 60,
       "percentMovespeed": 12
     },
-    "purchasable": true,
     "cost": 0,
-    "tags": [],
     "maps": [
       30
     ]
   },
-  "447101": {
+  {
     "id": 447101,
     "name": "Gambler's Blade",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "attackSpeed": 70,
       "percentMovespeed": 8,
       "abilityHaste": 40
     },
-    "purchasable": true,
     "cost": 0,
-    "tags": [],
     "maps": [
       30
     ]
   },
-  "447102": {
+  {
     "id": 447102,
     "name": "Reality Fracture",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "abilityPower": 80,
       "attackSpeed": 40,
       "health": 300
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Mage"
@@ -6217,18 +5743,15 @@
       30
     ]
   },
-  "447103": {
+  {
     "id": 447103,
     "name": "Hemomancer's Helm",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "attackDamage": 60,
       "abilityHaste": 30,
       "omnivamp": 15
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Fighter"
@@ -6237,18 +5760,15 @@
       30
     ]
   },
-  "447104": {
+  {
     "id": 447104,
     "name": "Innervating Locket",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "abilityPower": 70,
       "health": 200,
       "abilityHaste": 20
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Mage"
@@ -6257,19 +5777,16 @@
       30
     ]
   },
-  "447105": {
+  {
     "id": 447105,
     "name": "Empyrean Promise",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "abilityPower": 70,
       "healAndShieldPower": 18,
       "manaRegen": 125,
       "abilityHaste": 30
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Mage"
@@ -6278,49 +5795,38 @@
       30
     ]
   },
-  "447106": {
+  {
     "id": 447106,
     "name": "Dragonheart",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {},
-    "purchasable": true,
     "cost": 0,
-    "tags": [],
     "maps": [
       30
     ]
   },
-  "447107": {
+  {
     "id": 447107,
     "name": "Decapitator",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "attackSpeed": 50,
       "percentMovespeed": 12
     },
-    "purchasable": true,
     "cost": 0,
-    "tags": [],
     "maps": [
       30
     ]
   },
-  "447108": {
+  {
     "id": 447108,
     "name": "Runecarver",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "abilityPower": 80,
       "percentMovespeed": 8,
       "abilityHaste": 20
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Mage"
@@ -6329,18 +5835,15 @@
       30
     ]
   },
-  "447109": {
+  {
     "id": 447109,
     "name": "Cruelty",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "abilityPower": 80,
       "armor": 30,
       "magicResistance": 30
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Mage"
@@ -6349,18 +5852,15 @@
       30
     ]
   },
-  "447110": {
+  {
     "id": 447110,
     "name": "Moonflair Spellblade",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "abilityPower": 85,
       "health": 400,
       "tenacity": 30
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Mage"
@@ -6369,35 +5869,28 @@
       30
     ]
   },
-  "447112": {
+  {
     "id": 447112,
     "name": "Flesheater",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "health": 500
     },
-    "purchasable": true,
     "cost": 0,
-    "tags": [],
     "maps": [
       30
     ]
   },
-  "447113": {
+  {
     "id": 447113,
     "name": "Detonation Orb",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "abilityPower": 90,
       "flatMagicPenetration": 12,
       "mana": 600,
       "abilityHaste": 20
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Mage"
@@ -6406,18 +5899,15 @@
       30
     ]
   },
-  "447114": {
+  {
     "id": 447114,
     "name": "Reverberation",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "armor": 35,
       "attackSpeed": 40,
       "magicResistance": 35
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Tank"
@@ -6426,18 +5916,15 @@
       30
     ]
   },
-  "447115": {
+  {
     "id": 447115,
     "name": "Regicide",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "attackDamage": 60,
       "lethality": 15,
       "percentMovespeed": 8
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Assassin"
@@ -6446,17 +5933,14 @@
       30
     ]
   },
-  "447116": {
+  {
     "id": 447116,
     "name": "Kinkou Jitte",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "health": 400,
       "abilityHaste": 30
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Assassin",
@@ -6467,17 +5951,14 @@
       30
     ]
   },
-  "447118": {
+  {
     "id": 447118,
     "name": "Pyromancer's Cloak",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "health": 400,
       "abilityHaste": 15
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Fighter",
@@ -6488,12 +5969,10 @@
       30
     ]
   },
-  "447119": {
+  {
     "id": 447119,
     "name": "Lightning Rod",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "armor": 30,
       "attackSpeed": 30,
@@ -6501,7 +5980,6 @@
       "magicResistance": 30,
       "percentMovespeed": 8
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Tank"
@@ -6510,16 +5988,13 @@
       30
     ]
   },
-  "447120": {
+  {
     "id": 447120,
     "name": "Diamond-Tipped Spear",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "attackSpeed": 30
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Marksman",
@@ -6529,17 +6004,14 @@
       30
     ]
   },
-  "447121": {
+  {
     "id": 447121,
     "name": "Twilight's Edge",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "abilityPower": 100,
       "attackDamage": 70
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Marksman",
@@ -6549,17 +6021,14 @@
       30
     ]
   },
-  "447122": {
+  {
     "id": 447122,
     "name": "Black Hole Gauntlet",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "health": 900,
       "abilityHaste": 25
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Tank"
@@ -6568,19 +6037,16 @@
       30
     ]
   },
-  "447123": {
+  {
     "id": 447123,
     "name": "Puppeteer",
-    "rank": [
-      "Special"
-    ],
+    "rank": "Special",
     "stats": {
       "attackSpeed": 30,
       "healAndShieldPower": 15,
       "manaRegen": 150,
       "abilityHaste": 40
     },
-    "purchasable": true,
     "cost": 0,
     "tags": [
       "Support"
@@ -6589,4 +6055,4 @@
       30
     ]
   }
-}
+]

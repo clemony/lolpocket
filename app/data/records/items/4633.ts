@@ -1,9 +1,7 @@
-export const Riftmaker: Item = {
+const item: Item =  {
   "name": "Riftmaker",
   "id": 4633,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3147,
@@ -46,7 +44,6 @@ export const Riftmaker: Item = {
       "combined": 950,
       "sell": 1240
     },
-    "purchasable": true,
     "tags": [
       "MAGE",
       "LIFESTEAL_VAMP"
@@ -59,3 +56,4 @@ export const Riftmaker: Item = {
     35
   ]
 }
+export default item

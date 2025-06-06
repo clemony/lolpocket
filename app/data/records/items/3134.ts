@@ -1,9 +1,7 @@
-export const SerratedDirk: Item = {
+const item: Item =  {
   "name": "Serrated Dirk",
   "id": 3134,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1036,
@@ -93,7 +91,6 @@ export const SerratedDirk: Item = {
       "combined": 300,
       "sell": 400
     },
-    "purchasable": true,
     "tags": [
       "ASSASSIN",
       "ARMOR_PEN"
@@ -106,3 +103,4 @@ export const SerratedDirk: Item = {
     35
   ]
 }
+export default item

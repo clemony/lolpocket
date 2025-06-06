@@ -1,9 +1,7 @@
-export const DuskbladeOfDraktharr: Item = {
+const item: Item =  {
   "name": "Duskblade of Draktharr",
   "id": 446691,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
@@ -26,7 +24,6 @@ export const DuskbladeOfDraktharr: Item = {
       "combined": 1000,
       "sell": 0
     },
-    "purchasable": true,
     "tags": [
       "ASSASSIN"
     ]
@@ -35,3 +32,4 @@ export const DuskbladeOfDraktharr: Item = {
     30
   ]
 }
+export default item

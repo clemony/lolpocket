@@ -1,9 +1,7 @@
-export const AnathemasChains: Item = {
+const item: Item =  {
   "name": "Anathema's Chains",
   "id": 228001,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -33,7 +31,6 @@ export const AnathemasChains: Item = {
       "combined": 2500,
       "sell": 1000
     },
-    "purchasable": true,
     "tags": [
       "TANK",
       "SUPPORT"
@@ -43,3 +40,4 @@ export const AnathemasChains: Item = {
     30
   ]
 }
+export default item

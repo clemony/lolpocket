@@ -1,9 +1,7 @@
-export const ArdentCenser: Item = {
+const item: Item =  {
   "name": "Ardent Censer",
   "id": 3504,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3113,
@@ -40,7 +38,6 @@ export const ArdentCenser: Item = {
       "combined": 700,
       "sell": 880
     },
-    "purchasable": true,
     "tags": [
       "SUPPORT",
       "ATTACK_SPEED"
@@ -53,3 +50,4 @@ export const ArdentCenser: Item = {
     35
   ]
 }
+export default item

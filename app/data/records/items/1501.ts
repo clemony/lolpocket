@@ -1,9 +1,7 @@
-export const LaneSwapDetector: Item = {
+const item: Item =  {
   "name": "Lane Swap Detector",
   "id": 1501,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -31,3 +29,4 @@ export const LaneSwapDetector: Item = {
     35
   ]
 }
+export default item

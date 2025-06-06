@@ -1,9 +1,7 @@
-export const WorldAtlas: Item = {
+const item: Item =  {
   "name": "World Atlas",
   "id": 3865,
-  "rank": [
-    "Starter"
-  ],
+  "rank": "Starter",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -40,7 +38,6 @@ export const WorldAtlas: Item = {
       "combined": 400,
       "sell": 160
     },
-    "purchasable": true,
     "tags": [
       "SUPPORT",
       "MAGE"
@@ -50,3 +47,4 @@ export const WorldAtlas: Item = {
     11
   ]
 }
+export default item

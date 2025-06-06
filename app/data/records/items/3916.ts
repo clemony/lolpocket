@@ -1,9 +1,7 @@
-export const OblivionOrb: Item = {
+const item: Item =  {
   "name": "Oblivion Orb",
   "id": 3916,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1052,
@@ -52,7 +50,6 @@ export const OblivionOrb: Item = {
       "combined": 400,
       "sell": 320
     },
-    "purchasable": true,
     "tags": [
       "MAGE",
       "SUPPORT"
@@ -65,3 +62,4 @@ export const OblivionOrb: Item = {
     35
   ]
 }
+export default item

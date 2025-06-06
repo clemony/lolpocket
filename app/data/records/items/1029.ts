@@ -1,9 +1,7 @@
-export const ClothArmor: Item = {
+const item: Item =  {
   "name": "Cloth Armor",
   "id": 1029,
-  "rank": [
-    "Basic"
-  ],
+  "rank": "Basic",
   "buildsInto": [
     {
       "id": 1031,
@@ -90,7 +88,6 @@ export const ClothArmor: Item = {
       "combined": 300,
       "sell": 120
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "MARKSMAN",
@@ -107,3 +104,4 @@ export const ClothArmor: Item = {
     35
   ]
 }
+export default item

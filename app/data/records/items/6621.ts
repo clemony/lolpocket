@@ -1,9 +1,7 @@
-export const Dawncore: Item = {
+const item: Item =  {
   "name": "Dawncore",
   "id": 6621,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 1026,
@@ -43,7 +41,6 @@ export const Dawncore: Item = {
       "combined": 450,
       "sell": 1000
     },
-    "purchasable": true,
     "tags": [
       "SUPPORT"
     ]
@@ -55,3 +52,4 @@ export const Dawncore: Item = {
     35
   ]
 }
+export default item

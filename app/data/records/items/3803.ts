@@ -1,9 +1,7 @@
-export const CatalystOfAeons: Item = {
+const item: Item =  {
   "name": "Catalyst of Aeons",
   "id": 3803,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1028,
@@ -59,7 +57,6 @@ export const CatalystOfAeons: Item = {
       "combined": 200,
       "sell": 520
     },
-    "purchasable": true,
     "tags": [
       "MAGE"
     ]
@@ -71,3 +68,4 @@ export const CatalystOfAeons: Item = {
     35
   ]
 }
+export default item

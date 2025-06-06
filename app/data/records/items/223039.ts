@@ -1,9 +1,7 @@
-export const AtmasReckoning: Item = {
+const item: Item =  {
   "name": "Atma's Reckoning",
   "id": 223039,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -28,7 +26,6 @@ export const AtmasReckoning: Item = {
       "combined": 2500,
       "sell": 1000
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER"
     ]
@@ -37,3 +34,4 @@ export const AtmasReckoning: Item = {
     30
   ]
 }
+export default item

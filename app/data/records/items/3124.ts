@@ -1,9 +1,7 @@
-export const GuinsoosRageblade: Item = {
+const item: Item =  {
   "name": "Guinsoo's Rageblade",
   "id": 3124,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 1052,
@@ -48,7 +46,6 @@ export const GuinsoosRageblade: Item = {
       "combined": 1025,
       "sell": 1200
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "MARKSMAN",
@@ -62,3 +59,4 @@ export const GuinsoosRageblade: Item = {
     35
   ]
 }
+export default item

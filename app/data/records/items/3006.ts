@@ -1,9 +1,7 @@
-export const BerserkersGreaves: Item = {
+const item: Item =  {
   "name": "Berserker's Greaves",
   "id": 3006,
-  "rank": [
-    "Boots"
-  ],
+  "rank": "Boots",
   "buildsFrom": [
     {
       "id": 1001,
@@ -46,8 +44,7 @@ export const BerserkersGreaves: Item = {
       "total": 1100,
       "combined": 300,
       "sell": 440
-    },
-    "purchasable": true
+    }
   },
   "maps": [
     11,
@@ -56,3 +53,4 @@ export const BerserkersGreaves: Item = {
     35
   ]
 }
+export default item

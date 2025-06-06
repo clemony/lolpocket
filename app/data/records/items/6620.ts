@@ -1,9 +1,7 @@
-export const EchoesOfHelia: Item = {
+const item: Item =  {
   "name": "Echoes of Helia",
   "id": 6620,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3067,
@@ -43,7 +41,6 @@ export const EchoesOfHelia: Item = {
       "combined": 500,
       "sell": 880
     },
-    "purchasable": true,
     "tags": [
       "SUPPORT"
     ]
@@ -55,3 +52,4 @@ export const EchoesOfHelia: Item = {
     35
   ]
 }
+export default item

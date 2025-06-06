@@ -1,9 +1,7 @@
-export const SynchronizedSouls: Item = {
+const item: Item =  {
   "name": "Synchronized Souls",
   "id": 3013,
-  "rank": [
-    "Boots"
-  ],
+  "rank": "Boots",
   "buildsFrom": [
     {
       "id": 3010,
@@ -53,3 +51,4 @@ export const SynchronizedSouls: Item = {
     21
   ]
 }
+export default item

@@ -1,9 +1,7 @@
-export const DiamondtippedSpear: Item = {
+const item: Item =  {
   "name": "Diamond-Tipped Spear",
   "id": 447120,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
@@ -29,7 +27,6 @@ export const DiamondtippedSpear: Item = {
       "combined": 1000,
       "sell": 0
     },
-    "purchasable": true,
     "tags": [
       "MARKSMAN",
       "MAGE"
@@ -39,3 +36,4 @@ export const DiamondtippedSpear: Item = {
     30
   ]
 }
+export default item

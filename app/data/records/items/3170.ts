@@ -1,9 +1,7 @@
-export const Swiftmarch: Item = {
+const item: Item =  {
   "name": "Swiftmarch",
   "id": 3170,
-  "rank": [
-    "Boots"
-  ],
+  "rank": "Boots",
   "buildsFrom": [
     {
       "id": 3009,
@@ -36,10 +34,10 @@ export const Swiftmarch: Item = {
       "total": 1500,
       "combined": 500,
       "sell": 600
-    },
-    "purchasable": true
+    }
   },
   "maps": [
     11
   ]
 }
+export default item

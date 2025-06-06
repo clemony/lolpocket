@@ -1,9 +1,7 @@
-export const ScarecrowEffigy: Item = {
+const item: Item =  {
   "name": "Scarecrow Effigy",
   "id": 3330,
-  "rank": [
-    "Consumable"
-  ],
+  "rank": "Consumable",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -24,8 +22,7 @@ export const ScarecrowEffigy: Item = {
       "total": 0,
       "combined": 0,
       "sell": 0
-    },
-    "purchasable": true
+    }
   },
   "maps": [
     11,
@@ -35,3 +32,4 @@ export const ScarecrowEffigy: Item = {
     35
   ]
 }
+export default item

@@ -4,32 +4,22 @@ const { id, base } = defineProps<{
   base?: boolean
 }>()
 
-const itemId = computed (() => id)
-
 const item = ref<Item>()
-async function loadItem() {
-  if (!itemId.value)
+
+
+watchEffect(async () => {
+  if (!id)
     return
-  const i = await import(`data/items/${id}`)
-  item.value = i
-}
 
-watch(
-  () => itemId.value,
-  (newVal) => {
-    if (!newVal)
-      return
-
-    loadItem()
-  },
-)
-
-/* const itemPrice = computed (() => {
-  if (!item.cost)
-  return
-
-  return typeof item.cost === 'number' ? `${ item.cost} G` : typeof  item.cost === 'string' ? `<span>${ item.cost.toString().replace('=>', '')}</span>` : null
-}) */
+  try {
+    const module = await import(`data/records/items/${id}.ts`)
+    item.value = module.default || null
+  }
+  catch (err) {
+    console.error(`Failed to load champion for ${id}`, err)
+    item.value = null
+  }
+})
 </script>
 
 <template>
@@ -39,7 +29,7 @@ watch(
         <Img
           v-if="item"
           :key="item.name"
-          :img="`/img/item/${item.id}.webp`"
+          :img="`/img/item/${id}.webp`"
           :alt="`${item.name} Image`"
           class="!size-full rounded-lg" />
       </div>
@@ -48,6 +38,7 @@ watch(
         <div class=" flex items-center justify-between  gap-1">
           <a
             v-tippy="'Official Wiki'"
+            v-if="item.name"
             :href="getWikiLink(item.name)"
             target="_blank"
             alt="link to league wiki"
@@ -58,7 +49,7 @@ watch(
           </a>
         </div>
         <div class="flex gap-1 ">
-          <ItemTier :ranks="item.rank" />
+          <div v-if="item.rank">{{item.rank}}</div>
           <Grow />
           <div v-if="item && item.shop?.prices?.total" class="flex items-end gap-1 text-2 !text-nc">
             <Img img="/img/icons/gold-coin.webp" alt="coin" class="size-4 ml-1 self-center opacity-80" />
@@ -77,19 +68,19 @@ watch(
 
       <Separator v-if="!item.noEffects" class=" mt-2 mb-2 bg-nc/10" />
 
-      <div v-if="item.passives.length && item.noEffects != true">
+      <div v-if="item.passives?.length && item.noEffects != true">
         <ItemEffect
           v-for="(passive, i) in item.passives" :key="i"
           :data="passive" type="Passive" />
       </div>
 
-      <div v-if="item.active[0] && item.noEffects != true">
+      <div v-if="item.active?.[0] && item.noEffects != true">
         <ItemEffect
           :data="item.active[0]" type="Active" />
       </div>
 
-      <LazyItemFrom v-if="item.buildsFrom.length" :from="item.buildsFrom" :gold=" item.shop?.prices?.combined" />
-      <LazyItemTo v-if="item.buildsInto.length" :to="item.buildsInto" />
+      <LazyItemFrom v-if="item.buildsFrom?.length" :from="item.buildsFrom" :gold=" item.shop?.prices?.combined" />
+      <LazyItemTo v-if="item.buildsInto?.length" :to="item.buildsInto" />
 
       <!-- <Separator v-if="item.passives.length || item.active.name" class=" mt-3 mb-2 bg-nc/10" />
 

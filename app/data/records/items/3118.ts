@@ -1,9 +1,7 @@
-export const Malignance: Item = {
+const item: Item =  {
   "name": "Malignance",
   "id": 3118,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3802,
@@ -44,7 +42,6 @@ export const Malignance: Item = {
       "combined": 650,
       "sell": 1080
     },
-    "purchasable": true,
     "tags": [
       "MAGE",
       "ABILITY_HASTE"
@@ -57,3 +54,4 @@ export const Malignance: Item = {
     35
   ]
 }
+export default item

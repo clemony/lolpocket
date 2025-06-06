@@ -1,9 +1,7 @@
-export const CappaJuice: Item = {
+const item: Item =  {
   "name": "Cappa Juice",
   "id": 2141,
-  "rank": [
-    "Consumable"
-  ],
+  "rank": "Consumable",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -23,3 +21,4 @@ export const CappaJuice: Item = {
     35
   ]
 }
+export default item

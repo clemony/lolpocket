@@ -1,9 +1,7 @@
-export const WintersApproach: Item = {
+const item: Item =  {
   "name": "Winter's Approach",
   "id": 3119,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3070,
@@ -52,7 +50,6 @@ export const WintersApproach: Item = {
       "combined": 300,
       "sell": 960
     },
-    "purchasable": true,
     "tags": [
       "TANK"
     ]
@@ -64,3 +61,4 @@ export const WintersApproach: Item = {
     35
   ]
 }
+export default item

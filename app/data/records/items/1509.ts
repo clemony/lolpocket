@@ -1,9 +1,7 @@
-export const Gusto: Item = {
+const item: Item =  {
   "name": "Gusto",
   "id": 1509,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -31,3 +29,4 @@ export const Gusto: Item = {
     35
   ]
 }
+export default item

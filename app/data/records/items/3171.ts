@@ -1,9 +1,7 @@
-export const CrimsonLucidity: Item = {
+const item: Item =  {
   "name": "Crimson Lucidity",
   "id": 3171,
-  "rank": [
-    "Boots"
-  ],
+  "rank": "Boots",
   "buildsFrom": [
     {
       "id": 3158,
@@ -36,10 +34,10 @@ export const CrimsonLucidity: Item = {
       "total": 1400,
       "combined": 500,
       "sell": 560
-    },
-    "purchasable": true
+    }
   },
   "maps": [
     11
   ]
 }
+export default item

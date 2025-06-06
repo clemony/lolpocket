@@ -1,9 +1,7 @@
-export const Fimbulwinter: Item = {
+const item: Item =  {
   "name": "Fimbulwinter",
   "id": 3121,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "specialRecipe": 3119,
   "noEffects": false,
   "removed": false,
@@ -43,3 +41,4 @@ export const Fimbulwinter: Item = {
     35
   ]
 }
+export default item

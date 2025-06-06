@@ -1,9 +1,7 @@
-export const AmplifyingTome: Item = {
+const item: Item =  {
   "name": "Amplifying Tome",
   "id": 1052,
-  "rank": [
-    "Basic"
-  ],
+  "rank": "Basic",
   "buildsInto": [
     {
       "id": 4642,
@@ -129,7 +127,6 @@ export const AmplifyingTome: Item = {
       "combined": 400,
       "sell": 160
     },
-    "purchasable": true,
     "tags": [
       "MAGE",
       "SUPPORT"
@@ -142,3 +139,4 @@ export const AmplifyingTome: Item = {
     35
   ]
 }
+export default item

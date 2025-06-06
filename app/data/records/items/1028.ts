@@ -1,9 +1,7 @@
-export const RubyCrystal: Item = {
+const item: Item =  {
   "name": "Ruby Crystal",
   "id": 1028,
-  "rank": [
-    "Basic"
-  ],
+  "rank": "Basic",
   "buildsInto": [
     {
       "id": 323075,
@@ -158,7 +156,6 @@ export const RubyCrystal: Item = {
       "combined": 400,
       "sell": 160
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "MARKSMAN",
@@ -175,3 +172,4 @@ export const RubyCrystal: Item = {
     35
   ]
 }
+export default item

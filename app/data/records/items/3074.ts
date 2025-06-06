@@ -1,9 +1,7 @@
-export const RavenousHydra: Item = {
+const item: Item =  {
   "name": "Ravenous Hydra",
   "id": 3074,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3077,
@@ -54,7 +52,6 @@ export const RavenousHydra: Item = {
       "combined": 150,
       "sell": 1320
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER"
     ]
@@ -66,3 +63,4 @@ export const RavenousHydra: Item = {
     35
   ]
 }
+export default item

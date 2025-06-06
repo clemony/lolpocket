@@ -1,9 +1,7 @@
-export const SuperMechArmor: Item = {
+const item: Item =  {
   "name": "Super Mech Armor",
   "id": 1511,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -31,3 +29,4 @@ export const SuperMechArmor: Item = {
     35
   ]
 }
+export default item

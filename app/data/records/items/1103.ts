@@ -1,9 +1,7 @@
-export const MosstomperSeedling: Item = {
+const item: Item =  {
   "name": "Mosstomper Seedling",
   "id": 1103,
-  "rank": [
-    "Starter"
-  ],
+  "rank": "Starter",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -30,7 +28,6 @@ export const MosstomperSeedling: Item = {
       "combined": 450,
       "sell": 180
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "MARKSMAN",
@@ -45,3 +42,4 @@ export const MosstomperSeedling: Item = {
     21
   ]
 }
+export default item

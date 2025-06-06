@@ -1,9 +1,7 @@
-export const UmbralGlaive: Item = {
+const item: Item =  {
   "name": "Umbral Glaive",
   "id": 3179,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3134,
@@ -51,7 +49,6 @@ export const UmbralGlaive: Item = {
       "combined": 450,
       "sell": 1000
     },
-    "purchasable": true,
     "tags": [
       "ASSASSIN"
     ]
@@ -63,3 +60,4 @@ export const UmbralGlaive: Item = {
     35
   ]
 }
+export default item

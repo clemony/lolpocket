@@ -1,9 +1,7 @@
-export const KnightsVow: Item = {
+const item: Item =  {
   "name": "Knight's Vow",
   "id": 3109,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3067,
@@ -56,7 +54,6 @@ export const KnightsVow: Item = {
       "combined": 400,
       "sell": 920
     },
-    "purchasable": true,
     "tags": [
       "TANK",
       "SUPPORT"
@@ -69,3 +66,4 @@ export const KnightsVow: Item = {
     35
   ]
 }
+export default item

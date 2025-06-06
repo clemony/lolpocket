@@ -1,9 +1,7 @@
-export const ElixirOfAvarice: Item = {
+const item: Item =  {
   "name": "Elixir of Avarice",
   "id": 2151,
-  "rank": [
-    "Consumable"
-  ],
+  "rank": "Consumable",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -24,3 +22,4 @@ export const ElixirOfAvarice: Item = {
     35
   ]
 }
+export default item

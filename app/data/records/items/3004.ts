@@ -1,9 +1,7 @@
-export const Manamune: Item = {
+const item: Item =  {
   "name": "Manamune",
   "id": 3004,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3070,
@@ -53,7 +51,6 @@ export const Manamune: Item = {
       "combined": 1100,
       "sell": 1160
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "MARKSMAN",
@@ -68,3 +65,4 @@ export const Manamune: Item = {
     35
   ]
 }
+export default item

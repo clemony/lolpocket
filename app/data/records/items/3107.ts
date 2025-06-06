@@ -1,9 +1,7 @@
-export const Redemption: Item = {
+const item: Item =  {
   "name": "Redemption",
   "id": 3107,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3067,
@@ -41,7 +39,6 @@ export const Redemption: Item = {
       "combined": 900,
       "sell": 920
     },
-    "purchasable": true,
     "tags": [
       "SUPPORT"
     ]
@@ -53,3 +50,4 @@ export const Redemption: Item = {
     35
   ]
 }
+export default item

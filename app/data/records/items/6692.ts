@@ -1,9 +1,7 @@
-export const Eclipse: Item = {
+const item: Item =  {
   "name": "Eclipse",
   "id": 6692,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3133,
@@ -43,7 +41,6 @@ export const Eclipse: Item = {
       "combined": 625,
       "sell": 1160
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER"
     ]
@@ -55,3 +52,4 @@ export const Eclipse: Item = {
     35
   ]
 }
+export default item

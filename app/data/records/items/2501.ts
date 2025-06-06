@@ -1,9 +1,7 @@
-export const OverlordsBloodmail: Item = {
+const item: Item =  {
   "name": "Overlord's Bloodmail",
   "id": 2501,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 2021,
@@ -42,7 +40,6 @@ export const OverlordsBloodmail: Item = {
       "combined": 1000,
       "sell": 1320
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "TANK"
@@ -55,3 +52,4 @@ export const OverlordsBloodmail: Item = {
     35
   ]
 }
+export default item

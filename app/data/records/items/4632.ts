@@ -1,9 +1,7 @@
-export const VerdantBarrier: Item = {
+const item: Item =  {
   "name": "Verdant Barrier",
   "id": 4632,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1052,
@@ -52,7 +50,6 @@ export const VerdantBarrier: Item = {
       "combined": 400,
       "sell": 640
     },
-    "purchasable": true,
     "tags": [
       "MAGE"
     ]
@@ -64,3 +61,4 @@ export const VerdantBarrier: Item = {
     35
   ]
 }
+export default item

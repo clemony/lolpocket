@@ -1,4 +1,6 @@
- export const Zoe: Champion =  {
+// Updated Patch 25.11 - 06/06/2025 12:19:17 PM CDT
+
+const champion: Champion =  {
   "id": 142,
   "key": "Zoe",
   "name": "Zoe",
@@ -531,3 +533,4 @@
   },
   "lore": "As the embodiment of mischief, imagination, and change, Zoe acts as the cosmic messenger of Targon, heralding major events that reshape worlds. Her mere presence warps the arcane mathematics governing realities, sometimes causing cataclysms without conscious effort or malice. This perhaps explains the breezy nonchalance with which Zoe approaches her duties, giving her plenty of time to focus on playing games, tricking mortals, or otherwise amusing herself. An encounter with Zoe can be joyous and life affirming, but it is always more than it appears and often extremely dangerous."
 }
+    export default champion

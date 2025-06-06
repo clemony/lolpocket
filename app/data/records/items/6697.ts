@@ -1,9 +1,7 @@
-export const Hubris: Item = {
+const item: Item =  {
   "name": "Hubris",
   "id": 6697,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3134,
@@ -38,7 +36,6 @@ export const Hubris: Item = {
       "combined": 950,
       "sell": 1200
     },
-    "purchasable": true,
     "tags": [
       "ASSASSIN"
     ]
@@ -48,3 +45,4 @@ export const Hubris: Item = {
     21
   ]
 }
+export default item

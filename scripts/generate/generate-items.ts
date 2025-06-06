@@ -2,14 +2,14 @@ import fs from "node:fs"
 import path from "node:path"
 import { formatStats, normalizeItemData } from "../utils/format-items"
 import { handleWikiText } from "../utils/format-wiki-text"
-import { normalizeName } from "../utils/normalize-strings"
+import { markUpdate } from "../utils/mark-update"
 import { stripEmpty } from "../utils/strip-empty.ts"
 import { ludensPreProcess } from "../utils/wikitext/processing"
 
 const inputPath = path.resolve("./data/raw/items-raw.json")
 
 const outputIndex = path.resolve("./app/data/index/item-index.ts")
-const outputLitePath = path.resolve("./data/items-lite.json")
+const outputLitePath = path.resolve("./app/data/records/items-lite.ts")
 const itemOutputDir = path.resolve("./app/data/records/items/")
 const fullData = JSON.parse(fs.readFileSync(inputPath, "utf-8"))
 
@@ -40,16 +40,17 @@ async function buildItems() {
     }
 
     // Enrich the "lite" output
-    simplified[id] = {
+    simplified[id] = stripEmpty({
       id: item.id,
       name: item.name,
-      rank,
+      aka: item.nicknames,
+      rank: rank[0],
       stats,
       purchasable: item.shop?.purchasable,
       cost: item.shop?.prices?.total ?? 0,
       tags,
       maps,
-    }
+    })
 
     // Handle shop override
     if (item.id === 2141 && item.shop) {
@@ -96,7 +97,7 @@ async function buildItems() {
     const { tier, iconOverlay, ...rest } = item
     const fullItem = {
       ...rest,
-      rank,
+      rank: rank[0],
       stats,
       active: expandedActive,
       passives: expandedPassives,
@@ -107,16 +108,28 @@ async function buildItems() {
 
     fs.writeFileSync(
       path.resolve(itemOutputDir, `${item.id}.ts`),
-      `export const ${normalizeName(item.name)}: Item = ${JSON.stringify(cleanedItem, null, 2)}\n`
+      `const item: Item =  ${JSON.stringify(cleanedItem, null, 2)}
+export default item`
     )
   }
 
   // Write outputs
   fs.writeFileSync(
-    outputIndex.replace(".json", ".ts"),
-    `export const itemIndex: ItemIndex[] = ${JSON.stringify(Object.values(index), null, 2)} as const`
+    outputIndex,
+    `// ${markUpdate()}
+
+export const itemIndex: ItemIndex[] = ${JSON.stringify(Object.values(index), null, 2)}`
   )
-  fs.writeFileSync(outputLitePath, JSON.stringify(simplified, null, 2))
+  fs.writeFileSync(
+    outputLitePath,
+    `// ${markUpdate()}
+
+export const itemsLite: ItemLite[] = ${JSON.stringify(Object.values(simplified), null, 2)}`
+  )
+  fs.writeFileSync(
+    "./data/items-lite.json",
+    JSON.stringify(Object.values(simplified), null, 2)
+  )
   fs.writeFileSync(
     "./data/dev/unique-tags.json",
     JSON.stringify([...uniqueTags].sort(), null, 2)

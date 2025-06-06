@@ -1,4 +1,6 @@
- export const MonkeyKing: Champion =  {
+// Updated Patch 25.11 - 06/06/2025 12:19:16 PM CDT
+
+const champion: Champion =  {
   "id": 62,
   "key": "MonkeyKing",
   "name": "Wukong",
@@ -474,3 +476,4 @@
   },
   "lore": "Wukong is a vastayan trickster who uses his strength, agility, and intelligence to confuse his opponents and gain the upper hand. After finding a lifelong friend in the warrior known as Master Yi, Wukong became the last student of the ancient martial art known as Wuju. Armed with an enchanted staff, Wukong seeks to prevent Ionia from falling to ruin."
 }
+    export default champion

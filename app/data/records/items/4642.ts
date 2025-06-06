@@ -1,9 +1,7 @@
-export const BandleglassMirror: Item = {
+const item: Item =  {
   "name": "Bandleglass Mirror",
   "id": 4642,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1004,
@@ -81,7 +79,6 @@ export const BandleglassMirror: Item = {
       "combined": 50,
       "sell": 360
     },
-    "purchasable": true,
     "tags": [
       "SUPPORT"
     ]
@@ -93,3 +90,4 @@ export const BandleglassMirror: Item = {
     35
   ]
 }
+export default item

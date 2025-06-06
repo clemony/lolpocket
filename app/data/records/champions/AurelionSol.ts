@@ -1,4 +1,6 @@
- export const AurelionSol: Champion =  {
+// Updated Patch 25.11 - 06/06/2025 12:19:16 PM CDT
+
+const champion: Champion =  {
   "id": 136,
   "key": "AurelionSol",
   "name": "Aurelion Sol",
@@ -531,3 +533,4 @@
   },
   "lore": "Aurelion Sol once graced the vast emptiness of the cosmos with celestial wonders of his own devising. Now, he is forced to wield his awesome power at the behest of a space-faring empire that tricked him into servitude. Desiring a return to his star-forging ways, Aurelion Sol will drag the very stars from the sky, if he must, in order to regain his freedom."
 }
+    export default champion

@@ -1,9 +1,7 @@
-export const VampiricScepter: Item = {
+const item: Item =  {
   "name": "Vampiric Scepter",
   "id": 1053,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1036,
@@ -53,7 +51,6 @@ export const VampiricScepter: Item = {
       "combined": 550,
       "sell": 360
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "MARKSMAN",
@@ -67,3 +64,4 @@ export const VampiricScepter: Item = {
     35
   ]
 }
+export default item

@@ -1,9 +1,7 @@
-export const Zephyr: Item = {
+const item: Item =  {
   "name": "Zephyr",
   "id": 3172,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3006,
@@ -35,7 +33,6 @@ export const Zephyr: Item = {
       "combined": 500,
       "sell": 1000
     },
-    "purchasable": true,
     "tags": [
       "MARKSMAN",
       "FIGHTER"
@@ -47,3 +44,4 @@ export const Zephyr: Item = {
     35
   ]
 }
+export default item

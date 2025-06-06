@@ -1,9 +1,7 @@
-export const SpectralCutlass: Item = {
+const item: Item =  {
   "name": "Spectral Cutlass",
   "id": 224004,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -26,7 +24,6 @@ export const SpectralCutlass: Item = {
       "combined": 2500,
       "sell": 1000
     },
-    "purchasable": true,
     "tags": [
       "ASSASSIN"
     ]
@@ -35,3 +32,4 @@ export const SpectralCutlass: Item = {
     30
   ]
 }
+export default item

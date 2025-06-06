@@ -1,9 +1,7 @@
-export const PyromancersCloak: Item = {
+const item: Item =  {
   "name": "Pyromancer's Cloak",
   "id": 447118,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
@@ -31,7 +29,6 @@ export const PyromancersCloak: Item = {
       "combined": 1000,
       "sell": 0
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "MARKSMAN",
@@ -42,3 +39,4 @@ export const PyromancersCloak: Item = {
     30
   ]
 }
+export default item

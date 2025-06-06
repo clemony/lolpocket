@@ -1,9 +1,7 @@
-export const CosmicDrive: Item = {
+const item: Item =  {
   "name": "Cosmic Drive",
   "id": 4629,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3067,
@@ -48,7 +46,6 @@ export const CosmicDrive: Item = {
       "combined": 450,
       "sell": 1200
     },
-    "purchasable": true,
     "tags": [
       "MAGE",
       "MOVEMENT"
@@ -61,3 +58,4 @@ export const CosmicDrive: Item = {
     35
   ]
 }
+export default item

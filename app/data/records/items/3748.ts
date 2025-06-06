@@ -1,9 +1,7 @@
-export const TitanicHydra: Item = {
+const item: Item =  {
   "name": "Titanic Hydra",
   "id": 3748,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3077,
@@ -55,7 +53,6 @@ export const TitanicHydra: Item = {
       "combined": 50,
       "sell": 1320
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "TANK",
@@ -69,3 +66,4 @@ export const TitanicHydra: Item = {
     35
   ]
 }
+export default item

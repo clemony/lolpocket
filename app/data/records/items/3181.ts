@@ -1,9 +1,7 @@
-export const Hullbreaker: Item = {
+const item: Item =  {
   "name": "Hullbreaker",
   "id": 3181,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 2021,
@@ -53,7 +51,6 @@ export const Hullbreaker: Item = {
       "combined": 175,
       "sell": 1200
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER"
     ]
@@ -64,3 +61,4 @@ export const Hullbreaker: Item = {
     21
   ]
 }
+export default item

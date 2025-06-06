@@ -1,9 +1,7 @@
-export const SteraksGage: Item = {
+const item: Item =  {
   "name": "Sterak's Gage",
   "id": 3053,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 1037,
@@ -55,7 +53,6 @@ export const SteraksGage: Item = {
       "combined": 775,
       "sell": 1280
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "ATTACK_DAMAGE"
@@ -68,3 +65,4 @@ export const SteraksGage: Item = {
     35
   ]
 }
+export default item

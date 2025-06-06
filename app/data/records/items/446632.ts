@@ -1,9 +1,7 @@
-export const DivineSunderer: Item = {
+const item: Item =  {
   "name": "Divine Sunderer",
   "id": 446632,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
@@ -29,7 +27,6 @@ export const DivineSunderer: Item = {
       "combined": 1000,
       "sell": 0
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER"
     ]
@@ -38,3 +35,4 @@ export const DivineSunderer: Item = {
     30
   ]
 }
+export default item

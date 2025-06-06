@@ -1,9 +1,7 @@
-export const TheGoldenSpatula: Item = {
+const item: Item =  {
   "name": "The Golden Spatula",
   "id": 224403,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -38,10 +36,10 @@ export const TheGoldenSpatula: Item = {
       "total": 0,
       "combined": 2500,
       "sell": 0
-    },
-    "purchasable": true
+    }
   },
   "maps": [
     30
   ]
 }
+export default item

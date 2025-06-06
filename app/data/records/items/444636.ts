@@ -1,9 +1,7 @@
-export const NightHarvester: Item = {
+const item: Item =  {
   "name": "Night Harvester",
   "id": 444636,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
@@ -30,7 +28,6 @@ export const NightHarvester: Item = {
       "combined": 1000,
       "sell": 0
     },
-    "purchasable": true,
     "tags": [
       "MAGE"
     ]
@@ -39,3 +36,4 @@ export const NightHarvester: Item = {
     30
   ]
 }
+export default item

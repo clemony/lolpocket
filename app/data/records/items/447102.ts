@@ -1,9 +1,7 @@
-export const RealityFracture: Item = {
+const item: Item =  {
   "name": "Reality Fracture",
   "id": 447102,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
@@ -26,7 +24,6 @@ export const RealityFracture: Item = {
       "combined": 1000,
       "sell": 0
     },
-    "purchasable": true,
     "tags": [
       "MAGE"
     ]
@@ -35,3 +32,4 @@ export const RealityFracture: Item = {
     30
   ]
 }
+export default item

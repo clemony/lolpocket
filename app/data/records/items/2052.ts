@@ -1,9 +1,7 @@
-export const Porosnax: Item = {
+const item: Item =  {
   "name": "Poro-Snax",
   "id": 2052,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -25,3 +23,4 @@ export const Porosnax: Item = {
     35
   ]
 }
+export default item

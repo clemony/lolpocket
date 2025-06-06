@@ -1,9 +1,7 @@
-export const Pickaxe: Item = {
+const item: Item =  {
   "name": "Pickaxe",
   "id": 1037,
-  "rank": [
-    "Basic"
-  ],
+  "rank": "Basic",
   "buildsInto": [
     {
       "id": 6035,
@@ -125,7 +123,6 @@ export const Pickaxe: Item = {
       "combined": 875,
       "sell": 350
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "MARKSMAN",
@@ -139,3 +136,4 @@ export const Pickaxe: Item = {
     35
   ]
 }
+export default item

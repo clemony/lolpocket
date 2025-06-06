@@ -1,9 +1,7 @@
-export const Dragonheart: Item = {
+const item: Item =  {
   "name": "Dragonheart",
   "id": 447106,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
@@ -21,10 +19,10 @@ export const Dragonheart: Item = {
       "total": 0,
       "combined": 1000,
       "sell": 0
-    },
-    "purchasable": true
+    }
   },
   "maps": [
     30
   ]
 }
+export default item

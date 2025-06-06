@@ -1,9 +1,7 @@
-export const AntitowerSocks: Item = {
+const item: Item =  {
   "name": "Anti-Tower Socks",
   "id": 1508,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -31,3 +29,4 @@ export const AntitowerSocks: Item = {
     35
   ]
 }
+export default item

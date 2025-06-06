@@ -1,9 +1,7 @@
-export const SpiritVisage: Item = {
+const item: Item =  {
   "name": "Spirit Visage",
   "id": 3065,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3211,
@@ -43,7 +41,6 @@ export const SpiritVisage: Item = {
       "combined": 650,
       "sell": 1080
     },
-    "purchasable": true,
     "tags": [
       "TANK"
     ]
@@ -55,3 +52,4 @@ export const SpiritVisage: Item = {
     35
   ]
 }
+export default item

@@ -1,9 +1,7 @@
-export const Decapitator: Item = {
+const item: Item =  {
   "name": "Decapitator",
   "id": 447107,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
@@ -24,10 +22,10 @@ export const Decapitator: Item = {
       "total": 0,
       "combined": 1000,
       "sell": 0
-    },
-    "purchasable": true
+    }
   },
   "maps": [
     30
   ]
 }
+export default item

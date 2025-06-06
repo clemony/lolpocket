@@ -1,9 +1,7 @@
-export const Cryptbloom: Item = {
+const item: Item =  {
   "name": "Cryptbloom",
   "id": 3137,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 4630,
@@ -45,7 +43,6 @@ export const Cryptbloom: Item = {
       "combined": 200,
       "sell": 1200
     },
-    "purchasable": true,
     "tags": [
       "MAGE"
     ]
@@ -57,3 +54,4 @@ export const Cryptbloom: Item = {
     35
   ]
 }
+export default item

@@ -1,9 +1,7 @@
-export const ExperimentalHexplate: Item = {
+const item: Item =  {
   "name": "Experimental Hexplate",
   "id": 3073,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 2021,
@@ -49,7 +47,6 @@ export const ExperimentalHexplate: Item = {
       "combined": 500,
       "sell": 1200
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "ABILITY_HASTE",
@@ -63,3 +60,4 @@ export const ExperimentalHexplate: Item = {
     35
   ]
 }
+export default item

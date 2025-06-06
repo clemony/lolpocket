@@ -1,9 +1,7 @@
-export const GlowingMote: Item = {
+const item: Item =  {
   "name": "Glowing Mote",
   "id": 2022,
-  "rank": [
-    "Basic"
-  ],
+  "rank": "Basic",
   "buildsInto": [
     {
       "id": 3158,
@@ -69,7 +67,6 @@ export const GlowingMote: Item = {
       "combined": 250,
       "sell": 100
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "MARKSMAN",
@@ -86,3 +83,4 @@ export const GlowingMote: Item = {
     35
   ]
 }
+export default item

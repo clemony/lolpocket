@@ -1,4 +1,4 @@
-export const RaiseMorale: Item = {
+const item: Item =  {
   "name": "Raise Morale",
   "id": 3903,
   "specialRecipe": 0,
@@ -31,3 +31,4 @@ export const RaiseMorale: Item = {
     35
   ]
 }
+export default item

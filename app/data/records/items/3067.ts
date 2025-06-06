@@ -1,9 +1,7 @@
-export const Kindlegem: Item = {
+const item: Item =  {
   "name": "Kindlegem",
   "id": 3067,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1028,
@@ -168,7 +166,6 @@ export const Kindlegem: Item = {
       "combined": 150,
       "sell": 320
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "MARKSMAN",
@@ -185,3 +182,4 @@ export const Kindlegem: Item = {
     35
   ]
 }
+export default item

@@ -1,9 +1,7 @@
-export const LiandrysTorment: Item = {
+const item: Item =  {
   "name": "Liandry's Torment",
   "id": 6653,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3147,
@@ -47,7 +45,6 @@ export const LiandrysTorment: Item = {
       "combined": 800,
       "sell": 1200
     },
-    "purchasable": true,
     "tags": [
       "MAGE"
     ]
@@ -59,3 +56,4 @@ export const LiandrysTorment: Item = {
     35
   ]
 }
+export default item

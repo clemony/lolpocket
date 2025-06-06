@@ -1,9 +1,7 @@
-export const ArcaneSweeper: Item = {
+const item: Item =  {
   "name": "Arcane Sweeper (Trinket)",
   "id": 3348,
-  "rank": [
-    "Consumable"
-  ],
+  "rank": "Consumable",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -29,3 +27,4 @@ export const ArcaneSweeper: Item = {
     30
   ]
 }
+export default item

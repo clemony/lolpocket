@@ -1,9 +1,7 @@
-export const HollowRadiance: Item = {
+const item: Item =  {
   "name": "Hollow Radiance",
   "id": 6664,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 6660,
@@ -45,7 +43,6 @@ export const HollowRadiance: Item = {
       "combined": 650,
       "sell": 1120
     },
-    "purchasable": true,
     "tags": [
       "TANK"
     ]
@@ -57,3 +54,4 @@ export const HollowRadiance: Item = {
     35
   ]
 }
+export default item

@@ -1,9 +1,7 @@
-export const HealthPotion: Item = {
+const item: Item =  {
   "name": "Health Potion",
   "id": 2003,
-  "rank": [
-    "Consumable"
-  ],
+  "rank": "Consumable",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -19,7 +17,6 @@ export const HealthPotion: Item = {
       "combined": 50,
       "sell": 20
     },
-    "purchasable": true,
     "tags": [
       "HEALTH_AND_REG"
     ]
@@ -30,3 +27,4 @@ export const HealthPotion: Item = {
     21
   ]
 }
+export default item

@@ -1,9 +1,7 @@
-export const LuckyDice: Item = {
+const item: Item =  {
   "name": "Lucky Dice",
   "id": 2145,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -21,3 +19,4 @@ export const LuckyDice: Item = {
     30
   ]
 }
+export default item

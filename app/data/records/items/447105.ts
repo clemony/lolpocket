@@ -1,9 +1,7 @@
-export const EmpyreanPromise: Item = {
+const item: Item =  {
   "name": "Empyrean Promise",
   "id": 447105,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
@@ -27,7 +25,6 @@ export const EmpyreanPromise: Item = {
       "combined": 1000,
       "sell": 0
     },
-    "purchasable": true,
     "tags": [
       "MAGE"
     ]
@@ -36,3 +33,4 @@ export const EmpyreanPromise: Item = {
     30
   ]
 }
+export default item

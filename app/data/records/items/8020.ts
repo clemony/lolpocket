@@ -1,9 +1,7 @@
-export const AbyssalMask: Item = {
+const item: Item =  {
   "name": "Abyssal Mask",
   "id": 8020,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3067,
@@ -38,7 +36,6 @@ export const AbyssalMask: Item = {
       "combined": 1000,
       "sell": 1060
     },
-    "purchasable": true,
     "tags": [
       "TANK",
       "SUPPORT"
@@ -51,3 +48,4 @@ export const AbyssalMask: Item = {
     35
   ]
 }
+export default item

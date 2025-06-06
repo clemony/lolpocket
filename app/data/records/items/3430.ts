@@ -1,9 +1,7 @@
-export const RiteOfRuin: Item = {
+const item: Item =  {
   "name": "Rite of Ruin",
   "id": 3430,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -31,7 +29,6 @@ export const RiteOfRuin: Item = {
       "combined": 2500,
       "sell": 1000
     },
-    "purchasable": true,
     "tags": [
       "MAGE"
     ]
@@ -40,3 +37,4 @@ export const RiteOfRuin: Item = {
     30
   ]
 }
+export default item

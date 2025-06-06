@@ -1,9 +1,7 @@
-export const HexboltCompanion: Item = {
+const item: Item =  {
   "name": "Hexbolt Companion",
   "id": 443081,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
@@ -25,7 +23,6 @@ export const HexboltCompanion: Item = {
       "combined": 1000,
       "sell": 0
     },
-    "purchasable": true,
     "tags": [
       "TANK"
     ]
@@ -34,3 +31,4 @@ export const HexboltCompanion: Item = {
     30
   ]
 }
+export default item

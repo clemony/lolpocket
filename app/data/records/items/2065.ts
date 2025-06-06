@@ -1,9 +1,7 @@
-export const ShurelyasBattlesong: Item = {
+const item: Item =  {
   "name": "Shurelya's Battlesong",
   "id": 2065,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3113,
@@ -44,7 +42,6 @@ export const ShurelyasBattlesong: Item = {
       "combined": 400,
       "sell": 880
     },
-    "purchasable": true,
     "tags": [
       "SUPPORT",
       "MOVEMENT"
@@ -57,3 +54,4 @@ export const ShurelyasBattlesong: Item = {
     35
   ]
 }
+export default item

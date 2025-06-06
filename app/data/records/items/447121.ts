@@ -1,9 +1,7 @@
-export const TwilightsEdge: Item = {
+const item: Item =  {
   "name": "Twilight's Edge",
   "id": 447121,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
@@ -25,7 +23,6 @@ export const TwilightsEdge: Item = {
       "combined": 1000,
       "sell": 0
     },
-    "purchasable": true,
     "tags": [
       "MARKSMAN",
       "MAGE"
@@ -35,3 +32,4 @@ export const TwilightsEdge: Item = {
     30
   ]
 }
+export default item

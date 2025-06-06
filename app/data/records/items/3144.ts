@@ -1,9 +1,7 @@
-export const ScoutsSlingshot: Item = {
+const item: Item =  {
   "name": "Scout's Slingshot",
   "id": 3144,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1042,
@@ -59,7 +57,6 @@ export const ScoutsSlingshot: Item = {
       "combined": 100,
       "sell": 240
     },
-    "purchasable": true,
     "tags": [
       "MARKSMAN",
       "ONHIT_EFFECTS"
@@ -72,3 +69,4 @@ export const ScoutsSlingshot: Item = {
     35
   ]
 }
+export default item

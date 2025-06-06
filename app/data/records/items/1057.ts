@@ -1,9 +1,7 @@
-export const NegatronCloak: Item = {
+const item: Item =  {
   "name": "Negatron Cloak",
   "id": 1057,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1033,
@@ -57,7 +55,6 @@ export const NegatronCloak: Item = {
       "combined": 450,
       "sell": 340
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "TANK",
@@ -71,3 +68,4 @@ export const NegatronCloak: Item = {
     35
   ]
 }
+export default item

@@ -1,9 +1,7 @@
-export const QuicksilverSash: Item = {
+const item: Item =  {
   "name": "Quicksilver Sash",
   "id": 3140,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1033,
@@ -47,7 +45,6 @@ export const QuicksilverSash: Item = {
       "combined": 900,
       "sell": 520
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "MARKSMAN",
@@ -61,3 +58,4 @@ export const QuicksilverSash: Item = {
     35
   ]
 }
+export default item

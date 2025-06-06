@@ -1,9 +1,7 @@
-export const GiantsBelt: Item = {
+const item: Item =  {
   "name": "Giant's Belt",
   "id": 1011,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1028,
@@ -92,7 +90,6 @@ export const GiantsBelt: Item = {
       "combined": 500,
       "sell": 360
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "MAGE",
@@ -106,3 +103,4 @@ export const GiantsBelt: Item = {
     35
   ]
 }
+export default item

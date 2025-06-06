@@ -14,7 +14,7 @@ const toID = hexoid()
 const filteredIds = computed (() => {
   if (!filtered)
     return null
-  return filtered.value.map(i => i.id)
+  return filtered
 })
 </script>
 
@@ -47,7 +47,7 @@ const filteredIds = computed (() => {
         },
       ]"
       class=" grid grid-flow-row auto-cols-auto select-none h-fit   grid-cols-[repeat(auto-fill,minmax(54px,1fr))] justify-center gap-4 px-10  pb-10 pt-30">
-      <LazyPopoverItem v-for="item in filteredIds" :id="item" :key="item" hydrate-on-visible />
+      <LazyPopoverItem v-for="item in filtered" :id="item" :key="item" hydrate-on-visible />
     </div>
   </div>
 </template>

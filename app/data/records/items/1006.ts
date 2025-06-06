@@ -1,9 +1,7 @@
-export const RejuvenationBead: Item = {
+const item: Item =  {
   "name": "Rejuvenation Bead",
   "id": 1006,
-  "rank": [
-    "Basic"
-  ],
+  "rank": "Basic",
   "buildsInto": [
     {
       "id": 3211,
@@ -40,7 +38,6 @@ export const RejuvenationBead: Item = {
       "combined": 300,
       "sell": 120
     },
-    "purchasable": true,
     "tags": [
       "TANK"
     ]
@@ -52,3 +49,4 @@ export const RejuvenationBead: Item = {
     35
   ]
 }
+export default item

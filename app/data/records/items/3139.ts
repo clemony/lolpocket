@@ -1,9 +1,7 @@
-export const MercurialScimitar: Item = {
+const item: Item =  {
   "name": "Mercurial Scimitar",
   "id": 3139,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3140,
@@ -47,7 +45,6 @@ export const MercurialScimitar: Item = {
       "combined": 125,
       "sell": 1280
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "MARKSMAN",
@@ -61,3 +58,4 @@ export const MercurialScimitar: Item = {
     35
   ]
 }
+export default item

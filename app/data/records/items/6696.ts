@@ -1,9 +1,7 @@
-export const AxiomArc: Item = {
+const item: Item =  {
   "name": "Axiom Arc",
   "id": 6696,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 2020,
@@ -38,7 +36,6 @@ export const AxiomArc: Item = {
       "combined": 613,
       "sell": 1200
     },
-    "purchasable": true,
     "tags": [
       "ASSASSIN"
     ]
@@ -50,3 +47,4 @@ export const AxiomArc: Item = {
     35
   ]
 }
+export default item

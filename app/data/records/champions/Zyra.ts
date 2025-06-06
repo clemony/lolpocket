@@ -1,4 +1,6 @@
- export const Zyra: Champion =  {
+// Updated Patch 25.11 - 06/06/2025 12:19:17 PM CDT
+
+const champion: Champion =  {
   "id": 143,
   "key": "Zyra",
   "name": "Zyra",
@@ -353,3 +355,4 @@
   },
   "lore": "Born in an ancient, sorcerous catastrophe, Zyra is the wrath of nature given form—an alluring hybrid of plant and human, kindling new life with every step. She views the many mortals of Valoran as little more than prey for her seeded progeny, and thinks nothing of slaying them with flurries of deadly spines. Though her true purpose has not been revealed, Zyra wanders the world, indulging her most primal urges to colonize, and strangle all other life from it."
 }
+    export default champion

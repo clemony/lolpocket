@@ -1,4 +1,4 @@
-export const DeathsDaughter: Item = {
+const item: Item =  {
   "name": "Death's Daughter",
   "id": 3902,
   "specialRecipe": 0,
@@ -31,3 +31,4 @@ export const DeathsDaughter: Item = {
     35
   ]
 }
+export default item

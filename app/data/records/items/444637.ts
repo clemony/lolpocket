@@ -1,9 +1,7 @@
-export const DemonicEmbrace: Item = {
+const item: Item =  {
   "name": "Demonic Embrace",
   "id": 444637,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
@@ -28,7 +26,6 @@ export const DemonicEmbrace: Item = {
       "combined": 1000,
       "sell": 0
     },
-    "purchasable": true,
     "tags": [
       "MAGE"
     ]
@@ -37,3 +34,4 @@ export const DemonicEmbrace: Item = {
     30
   ]
 }
+export default item

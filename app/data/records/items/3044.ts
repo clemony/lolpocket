@@ -1,9 +1,7 @@
-export const Phage: Item = {
+const item: Item =  {
   "name": "Phage",
   "id": 3044,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1028,
@@ -68,7 +66,6 @@ export const Phage: Item = {
       "combined": 350,
       "sell": 440
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "TANK"
@@ -81,3 +78,4 @@ export const Phage: Item = {
     35
   ]
 }
+export default item

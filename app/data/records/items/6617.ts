@@ -1,9 +1,7 @@
-export const MoonstoneRenewer: Item = {
+const item: Item =  {
   "name": "Moonstone Renewer",
   "id": 6617,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3067,
@@ -43,7 +41,6 @@ export const MoonstoneRenewer: Item = {
       "combined": 500,
       "sell": 880
     },
-    "purchasable": true,
     "tags": [
       "SUPPORT"
     ]
@@ -55,3 +52,4 @@ export const MoonstoneRenewer: Item = {
     35
   ]
 }
+export default item

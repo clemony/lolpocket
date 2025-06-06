@@ -1,9 +1,7 @@
-export const ForeverForward: Item = {
+const item: Item =  {
   "name": "Forever Forward",
   "id": 3176,
-  "rank": [
-    "Boots"
-  ],
+  "rank": "Boots",
   "buildsFrom": [
     {
       "id": 3013,
@@ -35,10 +33,10 @@ export const ForeverForward: Item = {
       "total": 1400,
       "combined": 500,
       "sell": 560
-    },
-    "purchasable": true
+    }
   },
   "maps": [
     11
   ]
 }
+export default item

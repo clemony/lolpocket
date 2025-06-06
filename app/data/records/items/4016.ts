@@ -1,9 +1,7 @@
-export const WordlessPromise: Item = {
+const item: Item =  {
   "name": "Wordless Promise",
   "id": 4016,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -33,7 +31,6 @@ export const WordlessPromise: Item = {
       "combined": 2500,
       "sell": 1000
     },
-    "purchasable": true,
     "tags": [
       "SUPPORT"
     ]
@@ -42,3 +39,4 @@ export const WordlessPromise: Item = {
     30
   ]
 }
+export default item

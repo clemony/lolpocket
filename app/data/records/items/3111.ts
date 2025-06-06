@@ -1,9 +1,7 @@
-export const MercurysTreads: Item = {
+const item: Item =  {
   "name": "Mercury's Treads",
   "id": 3111,
-  "rank": [
-    "Boots"
-  ],
+  "rank": "Boots",
   "buildsFrom": [
     {
       "id": 1001,
@@ -42,8 +40,7 @@ export const MercurysTreads: Item = {
       "total": 1250,
       "combined": 550,
       "sell": 500
-    },
-    "purchasable": true
+    }
   },
   "maps": [
     11,
@@ -52,3 +49,4 @@ export const MercurysTreads: Item = {
     35
   ]
 }
+export default item

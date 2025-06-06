@@ -1,9 +1,7 @@
-export const PhantomDancer: Item = {
+const item: Item =  {
   "name": "Phantom Dancer",
   "id": 3046,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 1042,
@@ -47,7 +45,6 @@ export const PhantomDancer: Item = {
       "combined": 950,
       "sell": 1060
     },
-    "purchasable": true,
     "tags": [
       "MARKSMAN",
       "MOVEMENT"
@@ -60,3 +57,4 @@ export const PhantomDancer: Item = {
     35
   ]
 }
+export default item

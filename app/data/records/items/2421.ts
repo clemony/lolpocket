@@ -1,9 +1,7 @@
-export const ShatteredArmguard: Item = {
+const item: Item =  {
   "name": "Shattered Armguard",
   "id": 2421,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1052,
@@ -42,8 +40,7 @@ export const ShatteredArmguard: Item = {
       "total": 1600,
       "combined": 500,
       "sell": 640
-    },
-    "purchasable": true
+    }
   },
   "maps": [
     11,
@@ -52,3 +49,4 @@ export const ShatteredArmguard: Item = {
     35
   ]
 }
+export default item

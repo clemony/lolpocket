@@ -3,12 +3,12 @@ import { defineStore } from "pinia"
 export const useIndexStore = defineStore(
   "indexStore",
   () => {
-    const champions = ref<ChampionIndex[]>(championIndex)
+    const champions = ref<ChampionIndex[]>()
     const runes = ref<RuneIndex[]>([])
     const items = ref<ItemIndex[]>([])
     const maps = ref<MapIndex[]>([])
     const shards = ref<Shard[]>([])
-    const skin = ref<SkinRecord>(baseSkin)
+    const skin = ref<SkinRecord>()
     const spells = ref<Spell[]>([])
     const skins = ref<FullSkinRecord>({})
 
@@ -85,23 +85,33 @@ export const useIndexStore = defineStore(
       getByIndex,
       spellById: (id: number) => getByIndex(spells.value, "id", id),
       itemById: (id: number) => getByIndex(items.value, "id", id),
-      runeById: (id: number) => getByIndex(runes.value, "id", id),
+
+      // champion helpers
+
       championByKey: (key: string) => getByIndex(champions.value, "key", key),
       champKeyById: (id: number) =>
-        findInIndex(champions.value, "id", id, "key"),
+        findInIndex(champions.value, "id", id, "key") as string,
       champNameById: (id: number) =>
-        findInIndex(champions.value, "id", id, "name"),
+        findInIndex(champions.value, "id", id, "name") as string,
       champNameByKey: (key: string) =>
         findInIndex(champions.value, "key", key, "name") as string,
       champIdByKey: (key: string) =>
         findInIndex(champions.value, "key", key, "id") as number,
       champIdByName: (name: string) =>
         findInIndex(champions.value, "name", name, "id"),
+
+      // item helpers
+
       itemIdByName: (name: string) =>
         findInIndex(items.value, "name", name, "id"),
       itemNameById: (id: number) => findInIndex(items.value, "id", id, "name"),
+
+      // runes
+
+      runeById: (id: number) => getByIndex(runes.value, "id", id),
       runeKeyById: (id: number) => findInIndex(runes.value, "id", id, "key"),
       runeNameById: (id: number) => findInIndex(runes.value, "id", id, "name"),
+
       spellNameById: (id: number) =>
         findInIndex(spells.value, "id", id, "name"),
       tileByKey: (key: string) => skin.value?.[key]?.tilePath,
@@ -118,7 +128,15 @@ export const useIndexStore = defineStore(
     persist: {
       storage: piniaPluginPersistedstate.localStorage(),
       // key: "indexStore",
-      pick: ["champions", "items", "runes", "skin", "spells", "shards"],
+      pick: [
+        "champions",
+        "items",
+        "runes",
+        "skin",
+        "spells",
+        "shards",
+        "skins",
+      ],
     },
   }
 )

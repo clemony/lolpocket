@@ -1,9 +1,7 @@
-export const ForceOfNature: Item = {
+const item: Item =  {
   "name": "Force of Nature",
   "id": 4401,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 1057,
@@ -47,7 +45,6 @@ export const ForceOfNature: Item = {
       "combined": 750,
       "sell": 1120
     },
-    "purchasable": true,
     "tags": [
       "TANK"
     ]
@@ -59,3 +56,4 @@ export const ForceOfNature: Item = {
     35
   ]
 }
+export default item

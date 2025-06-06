@@ -1,9 +1,7 @@
-export const SapphireCrystal: Item = {
+const item: Item =  {
   "name": "Sapphire Crystal",
   "id": 1027,
-  "rank": [
-    "Basic"
-  ],
+  "rank": "Basic",
   "buildsInto": [
     {
       "id": 3803,
@@ -38,7 +36,6 @@ export const SapphireCrystal: Item = {
       "combined": 300,
       "sell": 120
     },
-    "purchasable": true,
     "tags": [
       "MAGE",
       "TANK"
@@ -51,3 +48,4 @@ export const SapphireCrystal: Item = {
     35
   ]
 }
+export default item

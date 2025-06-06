@@ -1,9 +1,7 @@
-export const HearthboundAxe: Item = {
+const item: Item =  {
   "name": "Hearthbound Axe",
   "id": 3051,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1036,
@@ -55,7 +53,6 @@ export const HearthboundAxe: Item = {
       "combined": 250,
       "sell": 480
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "MOVEMENT",
@@ -69,3 +66,4 @@ export const HearthboundAxe: Item = {
     35
   ]
 }
+export default item

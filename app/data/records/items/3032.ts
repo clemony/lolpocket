@@ -1,9 +1,7 @@
-export const YunTalWildarrows: Item = {
+const item: Item =  {
   "name": "Yun Tal Wildarrows",
   "id": 3032,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 1038,
@@ -51,7 +49,6 @@ export const YunTalWildarrows: Item = {
       "combined": 750,
       "sell": 1200
     },
-    "purchasable": true,
     "tags": [
       "MARKSMAN",
       "ARMOR_PEN"
@@ -64,3 +61,4 @@ export const YunTalWildarrows: Item = {
     35
   ]
 }
+export default item

@@ -1,9 +1,7 @@
-export const DoransShield: Item = {
+const item: Item =  {
   "name": "Doran's Shield",
   "id": 1054,
-  "rank": [
-    "Starter"
-  ],
+  "rank": "Starter",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -34,7 +32,6 @@ export const DoransShield: Item = {
       "combined": 450,
       "sell": 180
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "MARKSMAN",
@@ -50,3 +47,4 @@ export const DoransShield: Item = {
     21
   ]
 }
+export default item

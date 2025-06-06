@@ -1,9 +1,7 @@
-export const LudensCompanion: Item = {
+const item: Item =  {
   "name": "Luden's Companion",
   "id": 6655,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3802,
@@ -44,7 +42,6 @@ export const LudensCompanion: Item = {
       "combined": 450,
       "sell": 1100
     },
-    "purchasable": true,
     "tags": [
       "MAGE"
     ]
@@ -56,3 +53,4 @@ export const LudensCompanion: Item = {
     35
   ]
 }
+export default item

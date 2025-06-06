@@ -1,9 +1,7 @@
-export const SerpentsFang: Item = {
+const item: Item =  {
   "name": "Serpent's Fang",
   "id": 6695,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3134,
@@ -37,7 +35,6 @@ export const SerpentsFang: Item = {
       "combined": 625,
       "sell": 1000
     },
-    "purchasable": true,
     "tags": [
       "ASSASSIN"
     ]
@@ -49,3 +46,4 @@ export const SerpentsFang: Item = {
     35
   ]
 }
+export default item

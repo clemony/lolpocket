@@ -1,36 +1,88 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { motion } from 'motion-v'
+
+const h1Variants = {
+
+  initial: {
+    opacity: 1,
+    maxWidth: '100%',
+  },
+  animate: {
+    opacity: 0,
+    maxWidth: 0,
+    transition: {
+      delay: 1,
+      duration: 1.5,
+      type: 'spring',
+      bounce: 0.25,
+    },
+  },
+}
+</script>
 
 <template>
   <div class="relative grid gap-12 shrink-0 w-170 **:text-bc">
-    <div class="**:!text-12 flex items-center **:!font-bold **:tracking-tight w-170">
-      <div class="ws-nowrap relative items-center shrink-0 -ml-1 flex drop-shadow-sm w-170">
+    <div class="**:!text-14 flex items-center **:!font-bold  w-170">
+      <motion.div
+        class="ws-nowrap relative items-center shrink-0 -ml-1 flex drop-shadow-sm w-170"
+        :initial="{}"
+        :animate="{}"
+        :transition="{}">
         <h1 class="">
           l
         </h1>
-        <h1 class="tracking-in-expand ">
+        <motion.h1 :variants="h1Variants" initial="initial" animate="animate">
           ol
-        </h1>
+        </motion.h1>
         <h1 class="">
           p
         </h1>
-        <h1 class="tracking-in-expand">
+        <motion.h1 :variants="h1Variants" initial="initial" animate="animate">
           ocket
-        </h1>
+        </motion.h1>
 
-        <div class="animate-fade-up animate-once animate-duration-500 animate-delay-2500 animate-fill-both -ml-2 flex animate-[cubic-bezier(.74,.3,.44,1.39)] gap-6 !tracking-tight text-nowrap">
+        <motion.div
+          class="flex ml-2  gap-4 text-nowrap"
+          :initial="{
+            opacity: 0,
+            transform: 'translateY(100%)',
+          }"
+          :animate="{
+            opacity: 1,
+            transform: 'translateY(0)' }"
+          :transition="{
+            delay: 2.25,
+            duration: 0.5,
+            type: 'spring',
+            bounce: 0.25,
+          }">
           up
-          <icon
-            name="streamline:arrow-up-1"
-            class="mt-6  size-12"
-          />
-        </div>
-      </div>
+
+          <motion.div
+            :initial="{
+              opacity: 0,
+              transform: 'translateY(100%)',
+            }"
+            :animate="{
+              opacity: 1,
+              transform: 'translateY(0)' }"
+            :transition="{
+              delay: 2.75,
+              duration: 0.5,
+              type: 'spring',
+              bounce: 0.25,
+            }">
+            <icon
+              name="streamline:arrow-up-1"
+              class="mt-7  size-10" />
+          </motion.div>
+        </motion.div>
+      </motion.div>
     </div>
 
     <div
 
-      class="text-bc space-y-3 justify-self-start shrink-0 animate-in fade-in duration-1000 w-170"
-    >
+      class="text-bc space-y-3 justify-self-start shrink-0 animate-in fade-in duration-1000 w-170">
       <div class="flex items-center gap-2 drop-shadow-sm">
         <h1 class="!text-9">
           lolpocket

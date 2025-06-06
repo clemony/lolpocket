@@ -1,9 +1,7 @@
-export const MortalReminder: Item = {
+const item: Item =  {
   "name": "Mortal Reminder",
   "id": 3033,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3123,
@@ -48,7 +46,6 @@ export const MortalReminder: Item = {
       "combined": 450,
       "sell": 1320
     },
-    "purchasable": true,
     "tags": [
       "MARKSMAN"
     ]
@@ -60,3 +57,4 @@ export const MortalReminder: Item = {
     35
   ]
 }
+export default item

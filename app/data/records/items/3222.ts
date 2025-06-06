@@ -1,9 +1,7 @@
-export const MikaelsBlessing: Item = {
+const item: Item =  {
   "name": "Mikael's Blessing",
   "id": 3222,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3067,
@@ -45,7 +43,6 @@ export const MikaelsBlessing: Item = {
       "combined": 900,
       "sell": 920
     },
-    "purchasable": true,
     "tags": [
       "SUPPORT"
     ]
@@ -57,3 +54,4 @@ export const MikaelsBlessing: Item = {
     35
   ]
 }
+export default item

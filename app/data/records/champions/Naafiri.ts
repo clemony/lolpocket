@@ -1,4 +1,6 @@
- export const Naafiri: Champion =  {
+// Updated Patch 25.11 - 06/06/2025 12:19:16 PM CDT
+
+const champion: Champion =  {
   "id": 950,
   "key": "Naafiri",
   "name": "Naafiri",
@@ -629,3 +631,4 @@
   },
   "lore": "Across the sands of Shurima, a chorus of howls rings out. It is the call of the dune hounds, voracious predators who form packs and compete for the right to hunt in these barren lands. Among them, one pack stands above all, for they are driven not only by canine instincts, but by the ancient power of the Darkin."
 }
+    export default champion

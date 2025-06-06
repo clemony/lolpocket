@@ -1,9 +1,7 @@
-export const RanduinsOmen: Item = {
+const item: Item =  {
   "name": "Randuin's Omen",
   "id": 3143,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3082,
@@ -46,7 +44,6 @@ export const RanduinsOmen: Item = {
       "combined": 800,
       "sell": 1080
     },
-    "purchasable": true,
     "tags": [
       "TANK"
     ]
@@ -58,3 +55,4 @@ export const RanduinsOmen: Item = {
     35
   ]
 }
+export default item

@@ -1,4 +1,6 @@
- export const Blitzcrank: Champion =  {
+// Updated Patch 25.11 - 06/06/2025 12:19:16 PM CDT
+
+const champion: Champion =  {
   "id": 53,
   "key": "Blitzcrank",
   "name": "Blitzcrank",
@@ -358,3 +360,4 @@
   },
   "lore": "Blitzcrank is an enormous, near-indestructible automaton from Zaun, originally built to dispose of hazardous waste. However, he found this primary purpose too restricting, and modified his own form to better serve the fragile people of the Sump. Blitzcrank selflessly uses his strength and durability to protect others, extending a helpful metal fist or burst of energy to subdue any troublemakers."
 }
+    export default champion

@@ -1,9 +1,7 @@
-export const IcebornGauntlet: Item = {
+const item: Item =  {
   "name": "Iceborn Gauntlet",
   "id": 6662,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3057,
@@ -44,7 +42,6 @@ export const IcebornGauntlet: Item = {
       "combined": 800,
       "sell": 1160
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "TANK",
@@ -58,3 +55,4 @@ export const IcebornGauntlet: Item = {
     35
   ]
 }
+export default item

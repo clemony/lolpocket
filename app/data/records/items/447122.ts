@@ -1,9 +1,7 @@
-export const BlackHoleGauntlet: Item = {
+const item: Item =  {
   "name": "Black Hole Gauntlet",
   "id": 447122,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
@@ -32,7 +30,6 @@ export const BlackHoleGauntlet: Item = {
       "combined": 1000,
       "sell": 0
     },
-    "purchasable": true,
     "tags": [
       "TANK"
     ]
@@ -41,3 +38,4 @@ export const BlackHoleGauntlet: Item = {
     30
   ]
 }
+export default item

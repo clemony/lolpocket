@@ -1,9 +1,7 @@
-export const NullmagicMantle: Item = {
+const item: Item =  {
   "name": "Null-Magic Mantle",
   "id": 1033,
-  "rank": [
-    "Basic"
-  ],
+  "rank": "Basic",
   "buildsInto": [
     {
       "id": 1057,
@@ -80,7 +78,6 @@ export const NullmagicMantle: Item = {
       "combined": 400,
       "sell": 160
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "MARKSMAN",
@@ -97,3 +94,4 @@ export const NullmagicMantle: Item = {
     35
   ]
 }
+export default item

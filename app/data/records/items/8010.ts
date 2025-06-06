@@ -1,9 +1,7 @@
-export const BloodlettersCurse: Item = {
+const item: Item =  {
   "name": "Bloodletter's Curse",
   "id": 8010,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3147,
@@ -38,7 +36,6 @@ export const BloodlettersCurse: Item = {
       "combined": 750,
       "sell": 1160
     },
-    "purchasable": true,
     "tags": [
       "MAGE"
     ]
@@ -50,3 +47,4 @@ export const BloodlettersCurse: Item = {
     35
   ]
 }
+export default item

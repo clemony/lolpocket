@@ -1,9 +1,7 @@
-export const LichBane: Item = {
+const item: Item =  {
   "name": "Lich Bane",
   "id": 3100,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3057,
@@ -44,7 +42,6 @@ export const LichBane: Item = {
       "combined": 250,
       "sell": 1160
     },
-    "purchasable": true,
     "tags": [
       "MAGE",
       "ONHIT_EFFECTS"
@@ -57,3 +54,4 @@ export const LichBane: Item = {
     35
   ]
 }
+export default item

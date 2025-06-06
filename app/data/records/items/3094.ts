@@ -1,9 +1,7 @@
-export const RapidFirecannon: Item = {
+const item: Item =  {
   "name": "Rapid Firecannon",
   "id": 3094,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3086,
@@ -50,7 +48,6 @@ export const RapidFirecannon: Item = {
       "combined": 850,
       "sell": 1060
     },
-    "purchasable": true,
     "tags": [
       "MARKSMAN",
       "MOVEMENT"
@@ -63,3 +60,4 @@ export const RapidFirecannon: Item = {
     35
   ]
 }
+export default item

@@ -1,4 +1,6 @@
- export const Mordekaiser: Champion =  {
+// Updated Patch 25.11 - 06/06/2025 12:19:16 PM CDT
+
+const champion: Champion =  {
   "id": 82,
   "key": "Mordekaiser",
   "name": "Mordekaiser",
@@ -373,3 +375,4 @@
   },
   "lore": "Twice slain and thrice born, Mordekaiser is a brutal warlord from a foregone epoch who uses his necromantic sorcery to bind souls into an eternity of servitude. Few now remain who remember his earlier conquests, or know the true extent of his powers—but there are some ancient souls that do, and they fear the day when he may return to claim dominion over both the living and the dead."
 }
+    export default champion

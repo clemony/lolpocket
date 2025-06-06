@@ -1,9 +1,7 @@
-export const Hexdrinker: Item = {
+const item: Item =  {
   "name": "Hexdrinker",
   "id": 3155,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1036,
@@ -51,7 +49,6 @@ export const Hexdrinker: Item = {
       "combined": 200,
       "sell": 520
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "MARKSMAN",
@@ -65,3 +62,4 @@ export const Hexdrinker: Item = {
     35
   ]
 }
+export default item

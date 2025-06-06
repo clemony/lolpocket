@@ -1,9 +1,7 @@
-export const AegisOfTheLegion: Item = {
+const item: Item =  {
   "name": "Aegis of the Legion",
   "id": 3105,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1033,
@@ -64,7 +62,6 @@ export const AegisOfTheLegion: Item = {
       "combined": 400,
       "sell": 440
     },
-    "purchasable": true,
     "tags": [
       "TANK",
       "SUPPORT"
@@ -77,3 +74,4 @@ export const AegisOfTheLegion: Item = {
     35
   ]
 }
+export default item

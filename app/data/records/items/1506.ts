@@ -1,9 +1,7 @@
-export const BaseTurretReinforcedArmor: Item = {
+const item: Item =  {
   "name": "Base Turret Reinforced Armor (Turret Item)",
   "id": 1506,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -35,3 +33,4 @@ export const BaseTurretReinforcedArmor: Item = {
     35
   ]
 }
+export default item

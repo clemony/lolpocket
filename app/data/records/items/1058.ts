@@ -1,9 +1,7 @@
-export const NeedlesslyLargeRod: Item = {
+const item: Item =  {
   "name": "Needlessly Large Rod",
   "id": 1058,
-  "rank": [
-    "Basic"
-  ],
+  "rank": "Basic",
   "buildsInto": [
     {
       "id": 3146,
@@ -58,7 +56,6 @@ export const NeedlesslyLargeRod: Item = {
       "combined": 1200,
       "sell": 480
     },
-    "purchasable": true,
     "tags": [
       "MAGE"
     ]
@@ -70,3 +67,4 @@ export const NeedlesslyLargeRod: Item = {
     35
   ]
 }
+export default item

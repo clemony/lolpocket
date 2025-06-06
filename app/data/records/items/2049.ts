@@ -1,9 +1,7 @@
-export const GuardiansAmulet: Item = {
+const item: Item =  {
   "name": "Guardian's Amulet",
   "id": 2049,
-  "rank": [
-    "Starter"
-  ],
+  "rank": "Starter",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -27,7 +25,6 @@ export const GuardiansAmulet: Item = {
       "combined": 500,
       "sell": 200
     },
-    "purchasable": true,
     "tags": [
       "SUPPORT"
     ]
@@ -36,3 +33,4 @@ export const GuardiansAmulet: Item = {
     30
   ]
 }
+export default item

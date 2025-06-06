@@ -1,9 +1,7 @@
-export const LongSword: Item = {
+const item: Item =  {
   "name": "Long Sword",
   "id": 1036,
-  "rank": [
-    "Basic"
-  ],
+  "rank": "Basic",
   "buildsInto": [
     {
       "id": 3032,
@@ -135,7 +133,6 @@ export const LongSword: Item = {
       "combined": 350,
       "sell": 140
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "MARKSMAN",
@@ -149,3 +146,4 @@ export const LongSword: Item = {
     35
   ]
 }
+export default item

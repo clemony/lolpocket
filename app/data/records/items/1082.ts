@@ -1,9 +1,7 @@
-export const DarkSeal: Item = {
+const item: Item =  {
   "name": "Dark Seal",
   "id": 1082,
-  "rank": [
-    "Starter"
-  ],
+  "rank": "Starter",
   "buildsInto": [
     {
       "id": 3041,
@@ -36,7 +34,6 @@ export const DarkSeal: Item = {
       "combined": 350,
       "sell": 140
     },
-    "purchasable": true,
     "tags": [
       "MAGE"
     ]
@@ -45,3 +42,4 @@ export const DarkSeal: Item = {
     11
   ]
 }
+export default item

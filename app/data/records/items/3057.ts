@@ -1,9 +1,7 @@
-export const Sheen: Item = {
+const item: Item =  {
   "name": "Sheen",
   "id": 3057,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 2022,
@@ -57,7 +55,6 @@ export const Sheen: Item = {
       "combined": 650,
       "sell": 360
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "MARKSMAN",
@@ -72,3 +69,4 @@ export const Sheen: Item = {
     35
   ]
 }
+export default item

@@ -1,4 +1,6 @@
- export const Zeri: Champion =  {
+// Updated Patch 25.11 - 06/06/2025 12:19:17 PM CDT
+
+const champion: Champion =  {
   "id": 221,
   "key": "Zeri",
   "name": "Zeri",
@@ -457,3 +459,4 @@
   },
   "lore": "A headstrong, spirited young woman from Zaun's working-class, Zeri channels her electric magic to charge herself and her custom-crafted gun. Her volatile power mirrors her emotions, its sparks reflecting her lightning-fast approach to life. Deeply compassionate toward others, Zeri carries the love of her family and her home into every fight. Though her eagerness to help can sometimes backfire, Zeri believes one truth to be certain: stand up for your community, and it will stand up with you."
 }
+    export default champion

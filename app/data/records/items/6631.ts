@@ -1,9 +1,7 @@
-export const Stridebreaker: Item = {
+const item: Item =  {
   "name": "Stridebreaker",
   "id": 6631,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3077,
@@ -54,7 +52,6 @@ export const Stridebreaker: Item = {
       "combined": 750,
       "sell": 1320
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "MOVEMENT"
@@ -67,3 +64,4 @@ export const Stridebreaker: Item = {
     35
   ]
 }
+export default item

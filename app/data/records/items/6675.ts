@@ -1,9 +1,7 @@
-export const NavoriFlickerblade: Item = {
+const item: Item =  {
   "name": "Navori Flickerblade",
   "id": 6675,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 1042,
@@ -43,7 +41,6 @@ export const NavoriFlickerblade: Item = {
       "combined": 950,
       "sell": 1060
     },
-    "purchasable": true,
     "tags": [
       "MARKSMAN"
     ]
@@ -55,3 +52,4 @@ export const NavoriFlickerblade: Item = {
     35
   ]
 }
+export default item

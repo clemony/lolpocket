@@ -1,4 +1,4 @@
-export const FireAtWill: Item = {
+const item: Item =  {
   "name": "Fire at Will",
   "id": 3901,
   "specialRecipe": 0,
@@ -31,3 +31,4 @@ export const FireAtWill: Item = {
     35
   ]
 }
+export default item

@@ -1,9 +1,7 @@
-export const Muramana: Item = {
+const item: Item =  {
   "name": "Muramana",
   "id": 3042,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "specialRecipe": 3004,
   "noEffects": false,
   "removed": false,
@@ -46,3 +44,4 @@ export const Muramana: Item = {
     35
   ]
 }
+export default item

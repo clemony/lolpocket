@@ -1,9 +1,7 @@
-export const GlacialBuckler: Item = {
+const item: Item =  {
   "name": "Glacial Buckler",
   "id": 3024,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1029,
@@ -49,7 +47,6 @@ export const GlacialBuckler: Item = {
       "combined": 50,
       "sell": 360
     },
-    "purchasable": true,
     "tags": [
       "TANK",
       "SUPPORT"
@@ -62,3 +59,4 @@ export const GlacialBuckler: Item = {
     35
   ]
 }
+export default item

@@ -1,9 +1,7 @@
-export const YourCut: Item = {
+const item: Item =  {
   "name": "Your Cut",
   "id": 3400,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -25,3 +23,4 @@ export const YourCut: Item = {
     35
   ]
 }
+export default item

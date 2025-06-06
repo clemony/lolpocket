@@ -1,9 +1,7 @@
-export const HellfireHatchet: Item = {
+const item: Item =  {
   "name": "Hellfire Hatchet",
   "id": 4017,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -26,7 +24,6 @@ export const HellfireHatchet: Item = {
       "combined": 2500,
       "sell": 1000
     },
-    "purchasable": true,
     "tags": [
       "ASSASSIN"
     ]
@@ -35,3 +32,4 @@ export const HellfireHatchet: Item = {
     30
   ]
 }
+export default item

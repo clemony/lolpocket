@@ -1,9 +1,7 @@
-export const Bloodthirster: Item = {
+const item: Item =  {
   "name": "Bloodthirster",
   "id": 3072,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 1038,
@@ -47,7 +45,6 @@ export const Bloodthirster: Item = {
       "combined": 325,
       "sell": 1360
     },
-    "purchasable": true,
     "tags": [
       "MARKSMAN"
     ]
@@ -59,3 +56,4 @@ export const Bloodthirster: Item = {
     35
   ]
 }
+export default item

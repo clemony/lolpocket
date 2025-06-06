@@ -1,9 +1,7 @@
-export const IonianBootsOfLucidity: Item = {
+const item: Item =  {
   "name": "Ionian Boots of Lucidity",
   "id": 3158,
-  "rank": [
-    "Boots"
-  ],
+  "rank": "Boots",
   "buildsFrom": [
     {
       "id": 1001,
@@ -44,8 +42,7 @@ export const IonianBootsOfLucidity: Item = {
       "total": 900,
       "combined": 350,
       "sell": 360
-    },
-    "purchasable": true
+    }
   },
   "maps": [
     11,
@@ -54,3 +51,4 @@ export const IonianBootsOfLucidity: Item = {
     35
   ]
 }
+export default item

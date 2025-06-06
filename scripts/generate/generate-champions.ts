@@ -1,5 +1,6 @@
 import fs from "node:fs"
 import path from "node:path"
+import { markUpdate } from "../utils/mark-update.js"
 import { normalizeAbility } from "../utils/normalize-ability.js"
 import { normalize, normalizeArray } from "../utils/normalize-strings.js"
 import { stripEmpty } from "../utils/strip-empty.ts"
@@ -135,7 +136,10 @@ for (const champ of Object.values(champions) as Champion[]) {
   console.log("💠 - outputTsPath:", outputTsPath)
   fs.writeFileSync(
     outputTsPath,
-    ` export const ${toValidIdentifier(key)}: Champion =  ${JSON.stringify(stripEmpty(champData), null, 2)}\n`
+    `// ${markUpdate()}
+
+const champion: Champion =  ${JSON.stringify(stripEmpty(champData), null, 2)}
+    export default champion`
   )
 }
 

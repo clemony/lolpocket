@@ -1,6 +1,6 @@
 <script lang="ts" setup>
+import { queueIndex } from 'data/index/queue-index'
 import type { PrimitiveProps } from 'reka-ui'
-import { queueDictionary, queues } from '~~/data/records/queues'
 
 const props = defineProps<PrimitiveProps & {
   class?: HTMLAttributes['class']
@@ -8,14 +8,10 @@ const props = defineProps<PrimitiveProps & {
 }>()
 
 const queue = computed(() => {
-  const foundQueue = queues.find(q => q.queueId == props.queueId)
+  const foundQueue = queueIndex.find(q => q.queueId == props.queueId)
   if (!foundQueue)
     return null
-
-  // Get the map replacement
-  return foundQueue.map === 'Summoner\'s Rift'
-    ? queueDictionary[0][foundQueue.description] || foundQueue.description
-    : foundQueue.description
+  return foundQueue.description
 })
 </script>
 

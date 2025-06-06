@@ -1,9 +1,7 @@
-export const StatikkShiv: Item = {
+const item: Item =  {
   "name": "Statikk Shiv",
   "id": 3087,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3144,
@@ -49,7 +47,6 @@ export const StatikkShiv: Item = {
       "combined": 450,
       "sell": 1080
     },
-    "purchasable": true,
     "tags": [
       "MARKSMAN",
       "ONHIT_EFFECTS"
@@ -62,3 +59,4 @@ export const StatikkShiv: Item = {
     35
   ]
 }
+export default item

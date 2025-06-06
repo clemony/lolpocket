@@ -1,9 +1,7 @@
-export const LostChapter: Item = {
+const item: Item =  {
   "name": "Lost Chapter",
   "id": 3802,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1052,
@@ -84,7 +82,6 @@ export const LostChapter: Item = {
       "combined": 250,
       "sell": 480
     },
-    "purchasable": true,
     "tags": [
       "MAGE"
     ]
@@ -96,3 +93,4 @@ export const LostChapter: Item = {
     35
   ]
 }
+export default item

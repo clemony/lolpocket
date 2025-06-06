@@ -1,9 +1,7 @@
-export const LastWhisper: Item = {
+const item: Item =  {
   "name": "Last Whisper",
   "id": 3035,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1036,
@@ -51,7 +49,6 @@ export const LastWhisper: Item = {
       "combined": 750,
       "sell": 580
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "MARKSMAN",
@@ -65,3 +62,4 @@ export const LastWhisper: Item = {
     35
   ]
 }
+export default item

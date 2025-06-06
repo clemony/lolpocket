@@ -1,9 +1,7 @@
-export const TurboChemtank: Item = {
+const item: Item =  {
   "name": "Turbo Chemtank",
   "id": 443079,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
@@ -27,7 +25,6 @@ export const TurboChemtank: Item = {
       "combined": 1000,
       "sell": 0
     },
-    "purchasable": true,
     "tags": [
       "TANK"
     ]
@@ -36,3 +33,4 @@ export const TurboChemtank: Item = {
     30
   ]
 }
+export default item

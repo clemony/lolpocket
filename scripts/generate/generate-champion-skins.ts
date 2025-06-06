@@ -1,6 +1,7 @@
 import fs from "node:fs"
 import path from "node:path"
 import { cleanImageLink } from "../utils/cleanImageLink"
+import { markUpdate } from "../utils/mark-update"
 
 const championsPath = path.resolve("./data/raw/champions-raw-ma.json")
 
@@ -56,14 +57,14 @@ for (const key in champions) {
   }
 }
 
-const fullSkinsTs = `export const skins: FullSkinRecord = ${JSON.stringify(fullSkins, null, 2)}`
-const primarySkinsTs = `export const baseSkin: SkinRecord = ${JSON.stringify(primarySkins, null, 2)}`
+const fullSkinsTs = `// ${markUpdate()}
+
+export const skins: FullSkinRecord = ${JSON.stringify(fullSkins, null, 2)}`
+const primarySkinsTs = `// ${markUpdate()}
+
+export const baseSkin: SkinRecord = ${JSON.stringify(primarySkins, null, 2)}`
 
 fs.writeFileSync("./app/data/index/skins-full.ts", fullSkinsTs)
 fs.writeFileSync("./app/data/index/skins-base.ts", primarySkinsTs)
 
 console.log(`✅ skins-full.ts and skins-base.ts written as modules`)
-// splashPath: skin.uncenteredSplashPath.replace('https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters', ''),
-// splashPath: skin.uncenteredSplashPath.replace('https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters', ''),
-// centeredPath: skin.splashPath.replace('https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters', ''),
-// loadPath: skin.loadScreenPath.replace('https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters', ''),

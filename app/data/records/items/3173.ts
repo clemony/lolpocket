@@ -1,9 +1,7 @@
-export const ChainlacedCrushers: Item = {
+const item: Item =  {
   "name": "Chainlaced Crushers",
   "id": 3173,
-  "rank": [
-    "Boots"
-  ],
+  "rank": "Boots",
   "buildsFrom": [
     {
       "id": 3111,
@@ -34,10 +32,10 @@ export const ChainlacedCrushers: Item = {
       "total": 1750,
       "combined": 500,
       "sell": 700
-    },
-    "purchasable": true
+    }
   },
   "maps": [
     11
   ]
 }
+export default item

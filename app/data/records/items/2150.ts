@@ -1,9 +1,7 @@
-export const ElixirOfSkill: Item = {
+const item: Item =  {
   "name": "Elixir of Skill",
   "id": 2150,
-  "rank": [
-    "Consumable"
-  ],
+  "rank": "Consumable",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -24,3 +22,4 @@ export const ElixirOfSkill: Item = {
     35
   ]
 }
+export default item

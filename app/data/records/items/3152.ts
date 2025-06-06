@@ -1,9 +1,7 @@
-export const HextechRocketbelt: Item = {
+const item: Item =  {
   "name": "Hextech Rocketbelt",
   "id": 3152,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3145,
@@ -48,7 +46,6 @@ export const HextechRocketbelt: Item = {
       "combined": 300,
       "sell": 1060
     },
-    "purchasable": true,
     "tags": [
       "MAGE",
       "MOVEMENT"
@@ -61,3 +58,4 @@ export const HextechRocketbelt: Item = {
     35
   ]
 }
+export default item

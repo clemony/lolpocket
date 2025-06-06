@@ -1,9 +1,7 @@
-export const ElixirOfWrath: Item = {
+const item: Item =  {
   "name": "Elixir of Wrath",
   "id": 2140,
-  "rank": [
-    "Consumable"
-  ],
+  "rank": "Consumable",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -21,7 +19,6 @@ export const ElixirOfWrath: Item = {
       "combined": 500,
       "sell": 200
     },
-    "purchasable": true,
     "tags": [
       "ATTACK_DAMAGE",
       "LIFESTEAL_VAMP"
@@ -33,3 +30,4 @@ export const ElixirOfWrath: Item = {
     21
   ]
 }
+export default item

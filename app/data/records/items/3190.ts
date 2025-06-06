@@ -1,9 +1,7 @@
-export const LocketOfTheIronSolari: Item = {
+const item: Item =  {
   "name": "Locket of the Iron Solari",
   "id": 3190,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3067,
@@ -45,7 +43,6 @@ export const LocketOfTheIronSolari: Item = {
       "combined": 700,
       "sell": 880
     },
-    "purchasable": true,
     "tags": [
       "TANK",
       "SUPPORT"
@@ -58,3 +55,4 @@ export const LocketOfTheIronSolari: Item = {
     35
   ]
 }
+export default item

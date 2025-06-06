@@ -1,9 +1,7 @@
-export const GuardiansOrb: Item = {
+const item: Item =  {
   "name": "Guardian's Orb",
   "id": 3112,
-  "rank": [
-    "Starter"
-  ],
+  "rank": "Starter",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -26,7 +24,6 @@ export const GuardiansOrb: Item = {
       "combined": 950,
       "sell": 380
     },
-    "purchasable": true,
     "tags": [
       "MAGE",
       "TANK",
@@ -39,3 +36,4 @@ export const GuardiansOrb: Item = {
     35
   ]
 }
+export default item

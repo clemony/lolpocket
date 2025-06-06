@@ -1,9 +1,7 @@
-export const CaulfieldsWarhammer: Item = {
+const item: Item =  {
   "name": "Caulfield's Warhammer",
   "id": 3133,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1036,
@@ -128,7 +126,6 @@ export const CaulfieldsWarhammer: Item = {
       "combined": 100,
       "sell": 420
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "MARKSMAN",
@@ -142,3 +139,4 @@ export const CaulfieldsWarhammer: Item = {
     35
   ]
 }
+export default item

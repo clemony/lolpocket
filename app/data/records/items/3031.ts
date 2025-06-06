@@ -1,9 +1,7 @@
-export const InfinityEdge: Item = {
+const item: Item =  {
   "name": "Infinity Edge",
   "id": 3031,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 1038,
@@ -40,7 +38,6 @@ export const InfinityEdge: Item = {
       "combined": 675,
       "sell": 1380
     },
-    "purchasable": true,
     "tags": [
       "MARKSMAN"
     ]
@@ -52,3 +49,4 @@ export const InfinityEdge: Item = {
     35
   ]
 }
+export default item

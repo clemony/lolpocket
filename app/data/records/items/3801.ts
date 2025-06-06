@@ -1,9 +1,7 @@
-export const CrystallineBracer: Item = {
+const item: Item =  {
   "name": "Crystalline Bracer",
   "id": 3801,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1028,
@@ -43,7 +41,6 @@ export const CrystallineBracer: Item = {
       "combined": 100,
       "sell": 320
     },
-    "purchasable": true,
     "tags": [
       "TANK",
       "SUPPORT"
@@ -56,3 +53,4 @@ export const CrystallineBracer: Item = {
     35
   ]
 }
+export default item

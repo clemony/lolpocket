@@ -25,7 +25,7 @@ const loaded = ref(false)
 
 
     <NuxtImg
-      v-if="summonerName && url"
+      v-else-if="summonerName && url"
       :src="url"
       :alt="`${name}'s icon`"
       :class="{ 'inset-shadow-sm inset-shadow-black/90 avatar': loaded }"

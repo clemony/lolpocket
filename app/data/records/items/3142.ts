@@ -1,9 +1,7 @@
-export const YoumuusGhostblade: Item = {
+const item: Item =  {
   "name": "Youmuu's Ghostblade",
   "id": 3142,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3134,
@@ -51,7 +49,6 @@ export const YoumuusGhostblade: Item = {
       "combined": 675,
       "sell": 1120
     },
-    "purchasable": true,
     "tags": [
       "ASSASSIN",
       "MOVEMENT"
@@ -64,3 +61,4 @@ export const YoumuusGhostblade: Item = {
     35
   ]
 }
+export default item

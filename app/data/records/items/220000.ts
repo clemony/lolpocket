@@ -1,9 +1,7 @@
-export const StatBonus: Item = {
+const item: Item =  {
   "name": "Stat Bonus",
   "id": 220000,
-  "rank": [
-    "Consumable"
-  ],
+  "rank": "Consumable",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -14,10 +12,10 @@ export const StatBonus: Item = {
       "total": 750,
       "combined": 750,
       "sell": 300
-    },
-    "purchasable": true
+    }
   },
   "maps": [
     30
   ]
 }
+export default item

@@ -1,3 +1,5 @@
+// Updated Patch 25.11 - 06/06/2025 12:21:38 PM CDT
+
 export const baseSkin: SkinRecord = {
   "Aatrox": {
     "tilePath": "aatrox_splash_tile_0",

@@ -1,9 +1,7 @@
-export const TearOfTheGoddess: Item = {
+const item: Item =  {
   "name": "Tear of the Goddess",
   "id": 3070,
-  "rank": [
-    "Starter"
-  ],
+  "rank": "Starter",
   "buildsInto": [
     {
       "id": 3003,
@@ -47,7 +45,6 @@ export const TearOfTheGoddess: Item = {
       "combined": 400,
       "sell": 160
     },
-    "purchasable": true,
     "tags": [
       "MARKSMAN",
       "MAGE"
@@ -60,3 +57,4 @@ export const TearOfTheGoddess: Item = {
     35
   ]
 }
+export default item

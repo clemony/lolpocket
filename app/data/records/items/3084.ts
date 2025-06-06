@@ -1,9 +1,7 @@
-export const Heartsteel: Item = {
+const item: Item =  {
   "name": "Heartsteel",
   "id": 3084,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 1011,
@@ -48,7 +46,6 @@ export const Heartsteel: Item = {
       "combined": 400,
       "sell": 1200
     },
-    "purchasable": true,
     "tags": [
       "TANK"
     ]
@@ -60,3 +57,4 @@ export const Heartsteel: Item = {
     35
   ]
 }
+export default item

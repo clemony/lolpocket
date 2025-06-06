@@ -1,9 +1,7 @@
-export const SeryldasGrudge: Item = {
+const item: Item =  {
   "name": "Serylda's Grudge",
   "id": 6694,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3133,
@@ -38,7 +36,6 @@ export const SeryldasGrudge: Item = {
       "combined": 500,
       "sell": 1200
     },
-    "purchasable": true,
     "tags": [
       "ASSASSIN"
     ]
@@ -50,3 +47,4 @@ export const SeryldasGrudge: Item = {
     35
   ]
 }
+export default item

@@ -22,8 +22,7 @@ logs
 .code-workspace
 
 # data folders
-/data/dev/
-/data/raw/
+/data/
 
 # Local env files
 .env

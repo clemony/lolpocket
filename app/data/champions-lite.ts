@@ -1,5 +1,5 @@
-{
-  "Aatrox": {
+export const championsLite: ChampionLite[] = [
+  {
     "id": 266,
     "key": "Aatrox",
     "name": "Aatrox",
@@ -52,13 +52,13 @@
         "perLevel": 2.5
       },
       "attackSpeedRatio": {
-        "flat": 0.651000022888183
+        "flat": 0.651
       },
       "attackCastTime": {
-        "flat": 0.300000011920928
+        "flat": 0.3
       },
       "attackTotalTime": {
-        "flat": 1.51999998092651
+        "flat": 1.52
       },
       "attackRange": {
         "flat": 175
@@ -82,7 +82,7 @@
       "difficulty": 2
     }
   },
-  "Ahri": {
+  {
     "id": 103,
     "key": "Ahri",
     "name": "Ahri",
@@ -176,7 +176,7 @@
       "difficulty": 2
     }
   },
-  "Akali": {
+  {
     "id": 84,
     "key": "Akali",
     "name": "Akali",
@@ -244,7 +244,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.160999998450279
+        "flat": -0.161
       },
       "attackRange": {
         "flat": 125
@@ -267,7 +267,7 @@
       "difficulty": 2
     }
   },
-  "Akshan": {
+  {
     "id": 166,
     "key": "Akshan",
     "name": "Akshan",
@@ -337,7 +337,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.1667
+        "flat": -0.167
       },
       "attackRange": {
         "flat": 500
@@ -360,7 +360,7 @@
       "difficulty": 3
     }
   },
-  "Alistar": {
+  {
     "id": 12,
     "key": "Alistar",
     "name": "Alistar",
@@ -451,7 +451,7 @@
       "difficulty": 1
     }
   },
-  "Ambessa": {
+  {
     "id": 799,
     "key": "Ambessa",
     "name": "Ambessa",
@@ -541,7 +541,7 @@
       "difficulty": 3
     }
   },
-  "Amumu": {
+  {
     "id": 32,
     "key": "Amumu",
     "name": "Amumu",
@@ -602,7 +602,7 @@
         "perLevel": 2.18
       },
       "attackSpeedRatio": {
-        "flat": 0.638000011444091
+        "flat": 0.638
       },
       "attackCastTime": {
         "flat": 0.3
@@ -611,7 +611,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.0661564618349075
+        "flat": -0.066
       },
       "attackRange": {
         "flat": 125
@@ -636,7 +636,7 @@
       "difficulty": 1
     }
   },
-  "Anivia": {
+  {
     "id": 34,
     "key": "Anivia",
     "name": "Anivia",
@@ -730,7 +730,7 @@
       "difficulty": 3
     }
   },
-  "Annie": {
+  {
     "id": 1,
     "key": "Annie",
     "name": "Annie",
@@ -800,7 +800,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.10420524328947
+        "flat": -0.104
       },
       "attackRange": {
         "flat": 625
@@ -824,7 +824,7 @@
       "difficulty": 1
     }
   },
-  "Aphelios": {
+  {
     "id": 523,
     "key": "Aphelios",
     "name": "Aphelios",
@@ -888,7 +888,7 @@
         "flat": 0.658
       },
       "attackCastTime": {
-        "flat": 0.23000000417232513
+        "flat": 0.23
       },
       "attackTotalTime": {
         "flat": 1.5
@@ -913,7 +913,7 @@
       "difficulty": 3
     }
   },
-  "Ashe": {
+  {
     "id": 22,
     "key": "Ashe",
     "name": "Ashe",
@@ -974,7 +974,7 @@
         "perLevel": 3.33
       },
       "attackSpeedRatio": {
-        "flat": 0.657999992370605
+        "flat": 0.658
       },
       "attackCastTime": {
         "flat": 0.3
@@ -983,7 +983,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.0807017534971237
+        "flat": -0.081
       },
       "attackRange": {
         "flat": 600
@@ -1007,7 +1007,7 @@
       "difficulty": 1
     }
   },
-  "AurelionSol": {
+  {
     "id": 136,
     "key": "AurelionSol",
     "name": "Aurelion Sol",
@@ -1077,7 +1077,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.100000001490116
+        "flat": -0.1
       },
       "attackRange": {
         "flat": 550
@@ -1100,7 +1100,7 @@
       "difficulty": 3
     }
   },
-  "Aurora": {
+  {
     "id": 893,
     "key": "Aurora",
     "name": "Aurora",
@@ -1170,7 +1170,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.099465
+        "flat": -0.099
       },
       "attackRange": {
         "flat": 550
@@ -1195,7 +1195,7 @@
       "difficulty": 2
     }
   },
-  "Azir": {
+  {
     "id": 268,
     "key": "Azir",
     "name": "Azir",
@@ -1262,10 +1262,10 @@
         "flat": 0.25
       },
       "attackTotalTime": {
-        "flat": 1.60000002384185
+        "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.150000005960464
+        "flat": -0.15
       },
       "attackRange": {
         "flat": 525
@@ -1289,7 +1289,7 @@
       "difficulty": 3
     }
   },
-  "Bard": {
+  {
     "id": 432,
     "key": "Bard",
     "name": "Bard",
@@ -1353,13 +1353,13 @@
         "flat": 0.658
       },
       "attackCastTime": {
-        "flat": 0.300000011920928
+        "flat": 0.3
       },
       "attackTotalTime": {
-        "flat": 1.60000002384185
+        "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.100000001490116
+        "flat": -0.1
       },
       "attackRange": {
         "flat": 500
@@ -1383,7 +1383,7 @@
       "difficulty": 3
     }
   },
-  "Belveth": {
+  {
     "id": 200,
     "key": "Belveth",
     "name": "Bel'Veth",
@@ -1444,7 +1444,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.0525
+        "flat": -0.052
       },
       "attackRange": {
         "flat": 150
@@ -1467,7 +1467,7 @@
       "difficulty": 2
     }
   },
-  "Blitzcrank": {
+  {
     "id": 53,
     "key": "Blitzcrank",
     "name": "Blitzcrank",
@@ -1537,7 +1537,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.0299999993294477
+        "flat": -0.03
       },
       "attackRange": {
         "flat": 125
@@ -1561,7 +1561,7 @@
       "difficulty": 1
     }
   },
-  "Brand": {
+  {
     "id": 63,
     "key": "Brand",
     "name": "Brand",
@@ -1631,7 +1631,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.112499997019767
+        "flat": -0.112
       },
       "attackRange": {
         "flat": 550
@@ -1657,7 +1657,7 @@
       "difficulty": 2
     }
   },
-  "Braum": {
+  {
     "id": 201,
     "key": "Braum",
     "name": "Braum",
@@ -1718,7 +1718,7 @@
         "perLevel": 3.5
       },
       "attackSpeedRatio": {
-        "flat": 0.643999993801116
+        "flat": 0.644
       },
       "attackCastTime": {
         "flat": 0.3
@@ -1727,7 +1727,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.0700000002980232
+        "flat": -0.07
       },
       "attackRange": {
         "flat": 125
@@ -1751,7 +1751,7 @@
       "difficulty": 2
     }
   },
-  "Briar": {
+  {
     "id": 233,
     "key": "Briar",
     "name": "Briar",
@@ -1830,7 +1830,7 @@
       "difficulty": 2
     }
   },
-  "Caitlyn": {
+  {
     "id": 51,
     "key": "Caitlyn",
     "name": "Caitlyn",
@@ -1900,7 +1900,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.122916668653488
+        "flat": -0.123
       },
       "attackRange": {
         "flat": 650
@@ -1922,7 +1922,7 @@
       "difficulty": 1
     }
   },
-  "Camille": {
+  {
     "id": 164,
     "key": "Camille",
     "name": "Camille",
@@ -1983,13 +1983,13 @@
         "perLevel": 2.5
       },
       "attackSpeedRatio": {
-        "flat": 0.643999993801116
+        "flat": 0.644
       },
       "attackCastTime": {
-        "flat": 0.300000011920928
+        "flat": 0.3
       },
       "attackTotalTime": {
-        "flat": 1.55200004577636
+        "flat": 1.552
       },
       "attackRange": {
         "flat": 125
@@ -2014,7 +2014,7 @@
       "difficulty": 3
     }
   },
-  "Cassiopeia": {
+  {
     "id": 69,
     "key": "Cassiopeia",
     "name": "Cassiopeia",
@@ -2075,7 +2075,7 @@
         "perLevel": 1.5
       },
       "attackSpeedRatio": {
-        "flat": 0.647000014781951
+        "flat": 0.647
       },
       "attackCastTime": {
         "flat": 0.3
@@ -2084,7 +2084,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.108000002801418
+        "flat": -0.108
       },
       "attackRange": {
         "flat": 550
@@ -2107,7 +2107,7 @@
       "difficulty": 3
     }
   },
-  "Chogath": {
+  {
     "id": 31,
     "key": "Chogath",
     "name": "Cho'Gath",
@@ -2177,7 +2177,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.0810000002384185
+        "flat": -0.081
       },
       "attackRange": {
         "flat": 125
@@ -2201,7 +2201,7 @@
       "difficulty": 1
     }
   },
-  "Corki": {
+  {
     "id": 42,
     "key": "Corki",
     "name": "Corki",
@@ -2271,7 +2271,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.0299999993294477
+        "flat": -0.03
       },
       "attackRange": {
         "flat": 550
@@ -2294,7 +2294,7 @@
       "difficulty": 2
     }
   },
-  "Darius": {
+  {
     "id": 122,
     "key": "Darius",
     "name": "Darius",
@@ -2339,7 +2339,7 @@
         "flat": 120
       },
       "pathingRadius": {
-        "flat": 25.7665996551513
+        "flat": 25.767
       },
       "gameplayRadius": {
         "flat": 65
@@ -2364,7 +2364,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.100000001490116
+        "flat": -0.1
       },
       "attackRange": {
         "flat": 175
@@ -2388,7 +2388,7 @@
       "difficulty": 2
     }
   },
-  "Diana": {
+  {
     "id": 131,
     "key": "Diana",
     "name": "Diana",
@@ -2458,7 +2458,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.0916666686534881
+        "flat": -0.092
       },
       "attackRange": {
         "flat": 150
@@ -2483,7 +2483,7 @@
       "difficulty": 1
     }
   },
-  "DrMundo": {
+  {
     "id": 36,
     "key": "DrMundo",
     "name": "Dr. Mundo",
@@ -2545,7 +2545,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.139687493443489
+        "flat": -0.14
       },
       "attackRange": {
         "flat": 125
@@ -2569,7 +2569,7 @@
       "difficulty": 1
     }
   },
-  "Draven": {
+  {
     "id": 119,
     "key": "Draven",
     "name": "Draven",
@@ -2611,7 +2611,7 @@
         "flat": 600
       },
       "selectionRadius": {
-        "flat": 111.111099243164
+        "flat": 111.111
       },
       "pathingRadius": {
         "flat": 35
@@ -2630,16 +2630,16 @@
         "perLevel": 2.7
       },
       "attackSpeedRatio": {
-        "flat": 0.67900002002716
+        "flat": 0.679
       },
       "attackCastTime": {
-        "flat": 0.230000004172325
+        "flat": 0.23
       },
       "attackTotalTime": {
-        "flat": 1.47300004959106
+        "flat": 1.473
       },
       "attackDelayOffset": {
-        "flat": -0.118840597569942
+        "flat": -0.119
       },
       "attackRange": {
         "flat": 550
@@ -2661,7 +2661,7 @@
       "difficulty": 3
     }
   },
-  "Ekko": {
+  {
     "id": 245,
     "key": "Ekko",
     "name": "Ekko",
@@ -2725,10 +2725,10 @@
         "flat": 0.625
       },
       "attackCastTime": {
-        "flat": 0.259999990463256
+        "flat": 0.26
       },
       "attackTotalTime": {
-        "flat": 1.60000002384185
+        "flat": 1.6
       },
       "attackRange": {
         "flat": 125
@@ -2752,7 +2752,7 @@
       "difficulty": 3
     }
   },
-  "Elise": {
+  {
     "id": 60,
     "key": "Elise",
     "name": "Elise",
@@ -2822,7 +2822,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.112499997019767
+        "flat": -0.112
       },
       "attackRange": {
         "flat": 550
@@ -2846,7 +2846,7 @@
       "difficulty": 2
     }
   },
-  "Evelynn": {
+  {
     "id": 28,
     "key": "Evelynn",
     "name": "Evelynn",
@@ -2907,10 +2907,10 @@
         "perLevel": 2.1
       },
       "attackSpeedRatio": {
-        "flat": 0.666999995708465
+        "flat": 0.667
       },
       "attackCastTime": {
-        "flat": 0.230000004172325
+        "flat": 0.23
       },
       "attackTotalTime": {
         "flat": 1.5
@@ -2936,7 +2936,7 @@
       "difficulty": 2
     }
   },
-  "Ezreal": {
+  {
     "id": 81,
     "key": "Ezreal",
     "name": "Ezreal",
@@ -3006,7 +3006,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.111613474786281
+        "flat": -0.112
       },
       "attackRange": {
         "flat": 550
@@ -3029,7 +3029,7 @@
       "difficulty": 1
     }
   },
-  "Fiddlesticks": {
+  {
     "id": 9,
     "key": "Fiddlesticks",
     "name": "Fiddlesticks",
@@ -3120,7 +3120,7 @@
       "difficulty": 2
     }
   },
-  "Fiora": {
+  {
     "id": 114,
     "key": "Fiora",
     "name": "Fiora",
@@ -3181,13 +3181,13 @@
         "perLevel": 3.2
       },
       "attackSpeedRatio": {
-        "flat": 0.689999997615814
+        "flat": 0.69
       },
       "attackCastTime": {
-        "flat": 0.200000002980232
+        "flat": 0.2
       },
       "attackTotalTime": {
-        "flat": 1.45000004768371
+        "flat": 1.45
       },
       "attackRange": {
         "flat": 150
@@ -3211,7 +3211,7 @@
       "difficulty": 2
     }
   },
-  "Fizz": {
+  {
     "id": 105,
     "key": "Fizz",
     "name": "Fizz",
@@ -3253,7 +3253,7 @@
         "flat": 400
       },
       "selectionRadius": {
-        "flat": 108.333297729492
+        "flat": 108.333
       },
       "pathingRadius": {
         "flat": 30
@@ -3272,7 +3272,7 @@
         "perLevel": 3.1
       },
       "attackSpeedRatio": {
-        "flat": 0.657999992370605
+        "flat": 0.658
       },
       "attackCastTime": {
         "flat": 0.3
@@ -3281,7 +3281,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.0970000028610229
+        "flat": -0.097
       },
       "attackRange": {
         "flat": 175
@@ -3304,7 +3304,7 @@
       "difficulty": 2
     }
   },
-  "Galio": {
+  {
     "id": 3,
     "key": "Galio",
     "name": "Galio",
@@ -3368,10 +3368,10 @@
         "flat": 0.625
       },
       "attackCastTime": {
-        "flat": 0.330000013113021
+        "flat": 0.33
       },
       "attackTotalTime": {
-        "flat": 1.60000002384185
+        "flat": 1.6
       },
       "attackRange": {
         "flat": 150
@@ -3396,7 +3396,7 @@
       "difficulty": 2
     }
   },
-  "Gangplank": {
+  {
     "id": 41,
     "key": "Gangplank",
     "name": "Gangplank",
@@ -3463,7 +3463,7 @@
         "flat": 0.25
       },
       "attackTotalTime": {
-        "flat": 1.51999998092651
+        "flat": 1.52
       },
       "attackRange": {
         "flat": 125
@@ -3486,7 +3486,7 @@
       "difficulty": 3
     }
   },
-  "Garen": {
+  {
     "id": 86,
     "key": "Garen",
     "name": "Garen",
@@ -3548,7 +3548,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.11999999731779
+        "flat": -0.12
       },
       "attackRange": {
         "flat": 175
@@ -3572,7 +3572,7 @@
       "difficulty": 1
     }
   },
-  "Gnar": {
+  {
     "id": 150,
     "key": "Gnar",
     "name": "Gnar",
@@ -3637,7 +3637,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.153999999165534
+        "flat": -0.154
       },
       "attackRange": {
         "flat": 175,
@@ -3662,7 +3662,7 @@
       "difficulty": 3
     }
   },
-  "Gragas": {
+  {
     "id": 79,
     "key": "Gragas",
     "name": "Gragas",
@@ -3732,7 +3732,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.050000000745058
+        "flat": -0.05
       },
       "attackRange": {
         "flat": 125
@@ -3758,7 +3758,7 @@
       "difficulty": 2
     }
   },
-  "Graves": {
+  {
     "id": 104,
     "key": "Graves",
     "name": "Graves",
@@ -3819,7 +3819,7 @@
         "perLevel": 3
       },
       "attackSpeedRatio": {
-        "flat": 0.490000009536743
+        "flat": 0.49
       },
       "attackCastTime": {
         "flat": 0.3
@@ -3828,7 +3828,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.294999986886978
+        "flat": -0.295
       },
       "attackRange": {
         "flat": 425
@@ -3851,7 +3851,7 @@
       "difficulty": 2
     }
   },
-  "Gwen": {
+  {
     "id": 887,
     "key": "Gwen",
     "name": "Gwen",
@@ -3915,10 +3915,10 @@
         "flat": 0.69
       },
       "attackCastTime": {
-        "flat": 0.300000012
+        "flat": 0.3
       },
       "attackTotalTime": {
-        "flat": 1.52499998
+        "flat": 1.525
       },
       "attackRange": {
         "flat": 150
@@ -3943,7 +3943,7 @@
       "difficulty": 2
     }
   },
-  "Hecarim": {
+  {
     "id": 120,
     "key": "Hecarim",
     "name": "Hecarim",
@@ -4004,7 +4004,7 @@
         "perLevel": 2.5
       },
       "attackSpeedRatio": {
-        "flat": 0.6700000166893
+        "flat": 0.67
       },
       "attackCastTime": {
         "flat": 0.3
@@ -4013,7 +4013,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.050000000745058
+        "flat": -0.05
       },
       "attackRange": {
         "flat": 175
@@ -4037,7 +4037,7 @@
       "difficulty": 2
     }
   },
-  "Heimerdinger": {
+  {
     "id": 74,
     "key": "Heimerdinger",
     "name": "Heimerdinger",
@@ -4082,7 +4082,7 @@
         "flat": 100
       },
       "pathingRadius": {
-        "flat": 30.5443992614746
+        "flat": 30.544
       },
       "gameplayRadius": {
         "flat": 55
@@ -4133,7 +4133,7 @@
       "difficulty": 2
     }
   },
-  "Hwei": {
+  {
     "id": 910,
     "key": "Hwei",
     "name": "Hwei",
@@ -4225,7 +4225,7 @@
       "difficulty": 3
     }
   },
-  "Illaoi": {
+  {
     "id": 420,
     "key": "Illaoi",
     "name": "Illaoi",
@@ -4316,7 +4316,7 @@
       "difficulty": 2
     }
   },
-  "Irelia": {
+  {
     "id": 39,
     "key": "Irelia",
     "name": "Irelia",
@@ -4377,13 +4377,13 @@
         "perLevel": 2.5
       },
       "attackSpeedRatio": {
-        "flat": 0.656000018119812
+        "flat": 0.656
       },
       "attackCastTime": {
-        "flat": 0.300000011920928
+        "flat": 0.3
       },
       "attackTotalTime": {
-        "flat": 1.52499997615814
+        "flat": 1.525
       },
       "attackRange": {
         "flat": 200
@@ -4408,7 +4408,7 @@
       "difficulty": 2
     }
   },
-  "Ivern": {
+  {
     "id": 427,
     "key": "Ivern",
     "name": "Ivern",
@@ -4469,7 +4469,7 @@
         "perLevel": 3.4
       },
       "attackSpeedRatio": {
-        "flat": 0.643999993801116
+        "flat": 0.644
       },
       "attackCastTime": {
         "flat": 0.3
@@ -4502,7 +4502,7 @@
       "difficulty": 3
     }
   },
-  "Janna": {
+  {
     "id": 40,
     "key": "Janna",
     "name": "Janna",
@@ -4596,7 +4596,7 @@
       "difficulty": 1
     }
   },
-  "JarvanIV": {
+  {
     "id": 59,
     "key": "JarvanIV",
     "name": "Jarvan IV",
@@ -4657,7 +4657,7 @@
         "perLevel": 2.5
       },
       "attackSpeedRatio": {
-        "flat": 0.657999992370605
+        "flat": 0.658
       },
       "attackCastTime": {
         "flat": 0.3
@@ -4666,7 +4666,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.124559998512268
+        "flat": -0.125
       },
       "attackRange": {
         "flat": 175
@@ -4690,7 +4690,7 @@
       "difficulty": 1
     }
   },
-  "Jax": {
+  {
     "id": 24,
     "key": "Jax",
     "name": "Jax",
@@ -4751,7 +4751,7 @@
         "perLevel": 3.4
       },
       "attackSpeedRatio": {
-        "flat": 0.638000011444091
+        "flat": 0.638
       },
       "attackCastTime": {
         "flat": 0.3
@@ -4760,7 +4760,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.0918904393911361
+        "flat": -0.092
       },
       "attackRange": {
         "flat": 125
@@ -4785,7 +4785,7 @@
       "difficulty": 1
     }
   },
-  "Jayce": {
+  {
     "id": 126,
     "key": "Jayce",
     "name": "Jayce",
@@ -4846,7 +4846,7 @@
         "perLevel": 3
       },
       "attackSpeedRatio": {
-        "flat": 0.657999992370605
+        "flat": 0.658
       },
       "attackCastTime": {
         "flat": 0.3
@@ -4855,7 +4855,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.20499999821186
+        "flat": -0.205
       },
       "attackRange": {
         "flat": 125
@@ -4880,7 +4880,7 @@
       "difficulty": 2
     }
   },
-  "Jhin": {
+  {
     "id": 202,
     "key": "Jhin",
     "name": "Jhin",
@@ -4944,7 +4944,7 @@
         "flat": 0.25
       },
       "attackTotalTime": {
-        "flat": 1.60000002384185
+        "flat": 1.6
       },
       "attackRange": {
         "flat": 550
@@ -4968,7 +4968,7 @@
       "difficulty": 2
     }
   },
-  "Jinx": {
+  {
     "id": 222,
     "key": "Jinx",
     "name": "Jinx",
@@ -5032,10 +5032,10 @@
         "flat": 0.625
       },
       "attackCastTime": {
-        "flat": 0.270000010728836
+        "flat": 0.27
       },
       "attackTotalTime": {
-        "flat": 1.60000002384185
+        "flat": 1.6
       },
       "attackRange": {
         "flat": 525
@@ -5057,7 +5057,7 @@
       "difficulty": 2
     }
   },
-  "KSante": {
+  {
     "id": 897,
     "key": "KSante",
     "name": "K'Sante",
@@ -5127,7 +5127,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.1046875
+        "flat": -0.105
       },
       "attackRange": {
         "flat": 150
@@ -5152,7 +5152,7 @@
       "difficulty": 3
     }
   },
-  "Kaisa": {
+  {
     "id": 145,
     "key": "Kaisa",
     "name": "Kai'Sa",
@@ -5197,7 +5197,7 @@
         "flat": 100
       },
       "pathingRadius": {
-        "flat": 40.6800003051757
+        "flat": 40.68
       },
       "gameplayRadius": {
         "flat": 65
@@ -5213,13 +5213,13 @@
         "perLevel": 1.8
       },
       "attackSpeedRatio": {
-        "flat": 0.643999993801116
+        "flat": 0.644
       },
       "attackCastTime": {
         "flat": 0.25
       },
       "attackTotalTime": {
-        "flat": 1.55200004577636
+        "flat": 1.552
       },
       "attackRange": {
         "flat": 525
@@ -5242,7 +5242,7 @@
       "difficulty": 2
     }
   },
-  "Kalista": {
+  {
     "id": 429,
     "key": "Kalista",
     "name": "Kalista",
@@ -5303,7 +5303,7 @@
         "perLevel": 4.5
       },
       "attackSpeedRatio": {
-        "flat": 0.694000005722045
+        "flat": 0.694
       },
       "attackCastTime": {
         "flat": 0.3
@@ -5312,7 +5312,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": 0.0599999986588954
+        "flat": 0.06
       },
       "attackRange": {
         "flat": 525
@@ -5334,7 +5334,7 @@
       "difficulty": 3
     }
   },
-  "Karma": {
+  {
     "id": 43,
     "key": "Karma",
     "name": "Karma",
@@ -5404,7 +5404,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.138541668653488
+        "flat": -0.139
       },
       "attackRange": {
         "flat": 525
@@ -5431,7 +5431,7 @@
       "difficulty": 1
     }
   },
-  "Karthus": {
+  {
     "id": 30,
     "key": "Karthus",
     "name": "Karthus",
@@ -5501,7 +5501,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": 0.0437499992549419
+        "flat": 0.044
       },
       "attackRange": {
         "flat": 450
@@ -5524,7 +5524,7 @@
       "difficulty": 2
     }
   },
-  "Kassadin": {
+  {
     "id": 38,
     "key": "Kassadin",
     "name": "Kassadin",
@@ -5585,7 +5585,7 @@
         "perLevel": 3.7
       },
       "attackSpeedRatio": {
-        "flat": 0.639999985694885
+        "flat": 0.64
       },
       "attackCastTime": {
         "flat": 0.3
@@ -5594,7 +5594,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.150000005960464
+        "flat": -0.15
       },
       "attackRange": {
         "flat": 150
@@ -5617,7 +5617,7 @@
       "difficulty": 2
     }
   },
-  "Katarina": {
+  {
     "id": 55,
     "key": "Katarina",
     "name": "Katarina",
@@ -5670,7 +5670,7 @@
         "perLevel": 2.74
       },
       "attackSpeedRatio": {
-        "flat": 0.657999992370605
+        "flat": 0.658
       },
       "attackCastTime": {
         "flat": 0.3
@@ -5679,7 +5679,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.150000005960464
+        "flat": -0.15
       },
       "attackRange": {
         "flat": 125
@@ -5702,7 +5702,7 @@
       "difficulty": 2
     }
   },
-  "Kayle": {
+  {
     "id": 10,
     "key": "Kayle",
     "name": "Kayle",
@@ -5763,13 +5763,13 @@
         "perLevel": 1.5
       },
       "attackSpeedRatio": {
-        "flat": 0.666999995708465
+        "flat": 0.667
       },
       "attackCastTime": {
-        "flat": 0.300000011920928
+        "flat": 0.3
       },
       "attackTotalTime": {
-        "flat": 1.54999995231628
+        "flat": 1.55
       },
       "attackRange": {
         "flat": 175
@@ -5793,7 +5793,7 @@
       "difficulty": 2
     }
   },
-  "Kayn": {
+  {
     "id": 141,
     "key": "Kayn",
     "name": "Kayn",
@@ -5854,16 +5854,16 @@
         "perLevel": 2.7
       },
       "attackSpeedRatio": {
-        "flat": 0.669000029563903
+        "flat": 0.669
       },
       "attackCastTime": {
-        "flat": 0.280000001192092
+        "flat": 0.28
       },
       "attackTotalTime": {
-        "flat": 1.49500000476837
+        "flat": 1.495
       },
       "attackDelayOffset": {
-        "flat": -0.100000001490116
+        "flat": -0.1
       },
       "attackRange": {
         "flat": 175
@@ -5887,7 +5887,7 @@
       "difficulty": 2
     }
   },
-  "Kennen": {
+  {
     "id": 85,
     "key": "Kennen",
     "name": "Kennen",
@@ -5946,7 +5946,7 @@
         "perLevel": 3.4
       },
       "attackSpeedRatio": {
-        "flat": 0.689999997615814
+        "flat": 0.69
       },
       "attackCastTime": {
         "flat": 0.3
@@ -5955,7 +5955,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.100000001490116
+        "flat": -0.1
       },
       "attackRange": {
         "flat": 550
@@ -5979,7 +5979,7 @@
       "difficulty": 2
     }
   },
-  "Khazix": {
+  {
     "id": 121,
     "key": "Khazix",
     "name": "Kha'Zix",
@@ -6040,7 +6040,7 @@
         "perLevel": 2.7
       },
       "attackSpeedRatio": {
-        "flat": 0.667999982833862
+        "flat": 0.668
       },
       "attackCastTime": {
         "flat": 0.3
@@ -6049,7 +6049,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.0994652435183525
+        "flat": -0.099
       },
       "attackRange": {
         "flat": 125
@@ -6071,7 +6071,7 @@
       "difficulty": 2
     }
   },
-  "Kindred": {
+  {
     "id": 203,
     "key": "Kindred",
     "name": "Kindred",
@@ -6141,7 +6141,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.12456139922142
+        "flat": -0.125
       },
       "attackRange": {
         "flat": 500
@@ -6163,7 +6163,7 @@
       "difficulty": 3
     }
   },
-  "Kled": {
+  {
     "id": 240,
     "key": "Kled",
     "name": "Kled",
@@ -6222,10 +6222,10 @@
         "flat": 0.625
       },
       "attackCastTime": {
-        "flat": 0.280000001192092
+        "flat": 0.28
       },
       "attackTotalTime": {
-        "flat": 1.60000002384185
+        "flat": 1.6
       },
       "attackRange": {
         "flat": 250
@@ -6249,7 +6249,7 @@
       "difficulty": 2
     }
   },
-  "KogMaw": {
+  {
     "id": 96,
     "key": "KogMaw",
     "name": "Kog'Maw",
@@ -6310,7 +6310,7 @@
         "perLevel": 2.65
       },
       "attackSpeedRatio": {
-        "flat": 0.665000021457672
+        "flat": 0.665
       },
       "attackCastTime": {
         "flat": 0.3
@@ -6319,7 +6319,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.13377659022808
+        "flat": -0.134
       },
       "attackRange": {
         "flat": 500
@@ -6342,7 +6342,7 @@
       "difficulty": 2
     }
   },
-  "Leblanc": {
+  {
     "id": 7,
     "key": "Leblanc",
     "name": "LeBlanc",
@@ -6412,7 +6412,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.133333340287208
+        "flat": -0.133
       },
       "attackRange": {
         "flat": 525
@@ -6436,7 +6436,7 @@
       "difficulty": 2
     }
   },
-  "LeeSin": {
+  {
     "id": 64,
     "key": "LeeSin",
     "name": "Lee Sin",
@@ -6476,7 +6476,7 @@
         "flat": 400
       },
       "selectionRadius": {
-        "flat": 102.777801513671
+        "flat": 102.778
       },
       "pathingRadius": {
         "flat": 35
@@ -6495,7 +6495,7 @@
         "perLevel": 3
       },
       "attackSpeedRatio": {
-        "flat": 0.651000022888183
+        "flat": 0.651
       },
       "attackCastTime": {
         "flat": 0.3
@@ -6504,7 +6504,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.104687497019767
+        "flat": -0.105
       },
       "attackRange": {
         "flat": 125
@@ -6528,7 +6528,7 @@
       "difficulty": 2
     }
   },
-  "Leona": {
+  {
     "id": 89,
     "key": "Leona",
     "name": "Leona",
@@ -6598,7 +6598,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.0708333328366279
+        "flat": -0.071
       },
       "attackRange": {
         "flat": 125
@@ -6622,7 +6622,7 @@
       "difficulty": 1
     }
   },
-  "Lillia": {
+  {
     "id": 876,
     "key": "Lillia",
     "name": "Lillia",
@@ -6692,7 +6692,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.1529411765
+        "flat": -0.153
       },
       "attackRange": {
         "flat": 325
@@ -6716,7 +6716,7 @@
       "difficulty": 3
     }
   },
-  "Lissandra": {
+  {
     "id": 127,
     "key": "Lissandra",
     "name": "Lissandra",
@@ -6786,7 +6786,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.112499997019767
+        "flat": -0.112
       },
       "attackRange": {
         "flat": 550
@@ -6809,7 +6809,7 @@
       "difficulty": 2
     }
   },
-  "Lucian": {
+  {
     "id": 236,
     "key": "Lucian",
     "name": "Lucian",
@@ -6854,7 +6854,7 @@
         "flat": 100
       },
       "pathingRadius": {
-        "flat": 40.6800003051757
+        "flat": 40.68
       },
       "gameplayRadius": {
         "flat": 65
@@ -6870,7 +6870,7 @@
         "perLevel": 3.3
       },
       "attackSpeedRatio": {
-        "flat": 0.638000011444091
+        "flat": 0.638
       },
       "attackCastTime": {
         "flat": 0.3
@@ -6879,7 +6879,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.150000005960464
+        "flat": -0.15
       },
       "attackRange": {
         "flat": 500
@@ -6902,7 +6902,7 @@
       "difficulty": 2
     }
   },
-  "Lulu": {
+  {
     "id": 117,
     "key": "Lulu",
     "name": "Lulu",
@@ -6972,7 +6972,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.112499997019767
+        "flat": -0.112
       },
       "attackRange": {
         "flat": 550
@@ -6996,7 +6996,7 @@
       "difficulty": 2
     }
   },
-  "Lux": {
+  {
     "id": 99,
     "key": "Lux",
     "name": "Lux",
@@ -7066,7 +7066,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.143749997019767
+        "flat": -0.144
       },
       "attackRange": {
         "flat": 550
@@ -7092,7 +7092,7 @@
       "difficulty": 1
     }
   },
-  "Malphite": {
+  {
     "id": 54,
     "key": "Malphite",
     "name": "Malphite",
@@ -7153,7 +7153,7 @@
         "perLevel": 3.4
       },
       "attackSpeedRatio": {
-        "flat": 0.638000011444091
+        "flat": 0.638
       },
       "attackCastTime": {
         "flat": 0.3
@@ -7162,7 +7162,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.0503188781440258
+        "flat": -0.05
       },
       "attackRange": {
         "flat": 125
@@ -7188,7 +7188,7 @@
       "difficulty": 1
     }
   },
-  "Malzahar": {
+  {
     "id": 90,
     "key": "Malzahar",
     "name": "Malzahar",
@@ -7258,7 +7258,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.109999999403953
+        "flat": -0.11
       },
       "attackRange": {
         "flat": 500
@@ -7282,7 +7282,7 @@
       "difficulty": 1
     }
   },
-  "Maokai": {
+  {
     "id": 57,
     "key": "Maokai",
     "name": "Maokai",
@@ -7343,7 +7343,7 @@
         "perLevel": 2.125
       },
       "attackSpeedRatio": {
-        "flat": 0.694999992847442
+        "flat": 0.695
       },
       "attackCastTime": {
         "flat": 0.3
@@ -7374,7 +7374,7 @@
       "difficulty": 1
     }
   },
-  "MasterYi": {
+  {
     "id": 11,
     "key": "MasterYi",
     "name": "Master Yi",
@@ -7435,7 +7435,7 @@
         "perLevel": 2.5
       },
       "attackSpeedRatio": {
-        "flat": 0.67900002002716
+        "flat": 0.679
       },
       "attackCastTime": {
         "flat": 0.3
@@ -7444,7 +7444,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.0562499985098838
+        "flat": -0.056
       },
       "attackRange": {
         "flat": 175
@@ -7468,7 +7468,7 @@
       "difficulty": 1
     }
   },
-  "Mel": {
+  {
     "id": 800,
     "key": "Mel",
     "name": "Mel",
@@ -7560,7 +7560,7 @@
       "difficulty": 2
     }
   },
-  "Milio": {
+  {
     "id": 902,
     "key": "Milio",
     "name": "Milio",
@@ -7630,7 +7630,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.1285714
+        "flat": -0.129
       },
       "attackRange": {
         "flat": 525
@@ -7654,7 +7654,7 @@
       "difficulty": 1
     }
   },
-  "MissFortune": {
+  {
     "id": 21,
     "key": "MissFortune",
     "name": "Miss Fortune",
@@ -7715,7 +7715,7 @@
         "perLevel": 3
       },
       "attackSpeedRatio": {
-        "flat": 0.656000018119812
+        "flat": 0.656
       },
       "attackCastTime": {
         "flat": 0.3
@@ -7724,7 +7724,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.151993364095687
+        "flat": -0.152
       },
       "attackRange": {
         "flat": 550
@@ -7747,7 +7747,7 @@
       "difficulty": 1
     }
   },
-  "Mordekaiser": {
+  {
     "id": 82,
     "key": "Mordekaiser",
     "name": "Mordekaiser",
@@ -7806,10 +7806,10 @@
         "flat": 0.5
       },
       "attackTotalTime": {
-        "flat": 2.36599993705749
+        "flat": 2.366
       },
       "attackDelayOffset": {
-        "flat": -0.100000001490116
+        "flat": -0.1
       },
       "attackRange": {
         "flat": 175
@@ -7833,7 +7833,7 @@
       "difficulty": 2
     }
   },
-  "Morgana": {
+  {
     "id": 25,
     "key": "Morgana",
     "name": "Morgana",
@@ -7903,7 +7903,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.159999996423721
+        "flat": -0.16
       },
       "attackRange": {
         "flat": 450
@@ -7927,7 +7927,7 @@
       "difficulty": 1
     }
   },
-  "Naafiri": {
+  {
     "id": 950,
     "key": "Naafiri",
     "name": "Naafiri",
@@ -8020,7 +8020,7 @@
       "difficulty": 1
     }
   },
-  "Nami": {
+  {
     "id": 267,
     "key": "Nami",
     "name": "Nami",
@@ -8081,7 +8081,7 @@
         "perLevel": 2.61
       },
       "attackSpeedRatio": {
-        "flat": 0.643999993801116
+        "flat": 0.644
       },
       "attackCastTime": {
         "flat": 0.3
@@ -8090,7 +8090,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.11999999731779
+        "flat": -0.12
       },
       "attackRange": {
         "flat": 550
@@ -8114,7 +8114,7 @@
       "difficulty": 2
     }
   },
-  "Nasus": {
+  {
     "id": 75,
     "key": "Nasus",
     "name": "Nasus",
@@ -8175,7 +8175,7 @@
         "perLevel": 3.48
       },
       "attackSpeedRatio": {
-        "flat": 0.638000011444091
+        "flat": 0.638
       },
       "attackCastTime": {
         "flat": 0.3
@@ -8184,7 +8184,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.0986036509275436
+        "flat": -0.099
       },
       "attackRange": {
         "flat": 125
@@ -8208,7 +8208,7 @@
       "difficulty": 1
     }
   },
-  "Nautilus": {
+  {
     "id": 111,
     "key": "Nautilus",
     "name": "Nautilus",
@@ -8269,7 +8269,7 @@
         "perLevel": 1
       },
       "attackSpeedRatio": {
-        "flat": 0.611999988555908
+        "flat": 0.612
       },
       "attackCastTime": {
         "flat": 0.3
@@ -8278,7 +8278,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": 0.00637254910543561
+        "flat": 0.006
       },
       "attackRange": {
         "flat": 175
@@ -8302,7 +8302,7 @@
       "difficulty": 2
     }
   },
-  "Neeko": {
+  {
     "id": 518,
     "key": "Neeko",
     "name": "Neeko",
@@ -8366,10 +8366,10 @@
         "flat": 0.67
       },
       "attackCastTime": {
-        "flat": 0.3100000023841858
+        "flat": 0.31
       },
       "attackTotalTime": {
-        "flat": 1.54999995231628
+        "flat": 1.55
       },
       "attackRange": {
         "flat": 550
@@ -8395,7 +8395,7 @@
       "difficulty": 1
     }
   },
-  "Nidalee": {
+  {
     "id": 76,
     "key": "Nidalee",
     "name": "Nidalee",
@@ -8456,7 +8456,7 @@
         "perLevel": 3.22
       },
       "attackSpeedRatio": {
-        "flat": 0.638000011444091
+        "flat": 0.638
       },
       "attackCastTime": {
         "flat": 0.3
@@ -8465,7 +8465,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.150000005960464
+        "flat": -0.15
       },
       "attackRange": {
         "flat": 525
@@ -8489,7 +8489,7 @@
       "difficulty": 2
     }
   },
-  "Nilah": {
+  {
     "id": 895,
     "key": "Nilah",
     "name": "Nilah",
@@ -8583,7 +8583,7 @@
       "difficulty": 3
     }
   },
-  "Nocturne": {
+  {
     "id": 56,
     "key": "Nocturne",
     "name": "Nocturne",
@@ -8653,7 +8653,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.0994652435183525
+        "flat": -0.099
       },
       "attackRange": {
         "flat": 125
@@ -8676,7 +8676,7 @@
       "difficulty": 1
     }
   },
-  "Nunu": {
+  {
     "id": 20,
     "key": "Nunu",
     "name": "Nunu & Willump",
@@ -8746,7 +8746,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.106413997709751
+        "flat": -0.106
       },
       "attackRange": {
         "flat": 125
@@ -8770,7 +8770,7 @@
       "difficulty": 1
     }
   },
-  "Olaf": {
+  {
     "id": 2,
     "key": "Olaf",
     "name": "Olaf",
@@ -8812,7 +8812,7 @@
         "flat": 400
       },
       "selectionRadius": {
-        "flat": 111.111099243164
+        "flat": 111.111
       },
       "pathingRadius": {
         "flat": 35
@@ -8831,7 +8831,7 @@
         "perLevel": 2.7
       },
       "attackSpeedRatio": {
-        "flat": 0.694000005722045
+        "flat": 0.694
       },
       "attackCastTime": {
         "flat": 0.3
@@ -8840,7 +8840,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.0656249970197677
+        "flat": -0.066
       },
       "attackRange": {
         "flat": 125
@@ -8864,7 +8864,7 @@
       "difficulty": 1
     }
   },
-  "Orianna": {
+  {
     "id": 61,
     "key": "Orianna",
     "name": "Orianna",
@@ -8925,7 +8925,7 @@
         "perLevel": 3.5
       },
       "attackSpeedRatio": {
-        "flat": 0.657999992370605
+        "flat": 0.658
       },
       "attackCastTime": {
         "flat": 0.3
@@ -8934,7 +8934,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.124561406672
+        "flat": -0.125
       },
       "attackRange": {
         "flat": 525
@@ -8958,7 +8958,7 @@
       "difficulty": 2
     }
   },
-  "Ornn": {
+  {
     "id": 516,
     "key": "Ornn",
     "name": "Ornn",
@@ -9003,7 +9003,7 @@
         "flat": 125
       },
       "pathingRadius": {
-        "flat": 25.7665996551513
+        "flat": 25.767
       },
       "gameplayRadius": {
         "flat": 80
@@ -9022,10 +9022,10 @@
         "flat": 0.625
       },
       "attackCastTime": {
-        "flat": 0.349999994039535
+        "flat": 0.35
       },
       "attackTotalTime": {
-        "flat": 1.60000002384185
+        "flat": 1.6
       },
       "attackRange": {
         "flat": 175
@@ -9049,7 +9049,7 @@
       "difficulty": 2
     }
   },
-  "Pantheon": {
+  {
     "id": 80,
     "key": "Pantheon",
     "name": "Pantheon",
@@ -9119,7 +9119,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.109687499701976
+        "flat": -0.11
       },
       "attackRange": {
         "flat": 175
@@ -9146,7 +9146,7 @@
       "difficulty": 1
     }
   },
-  "Poppy": {
+  {
     "id": 78,
     "key": "Poppy",
     "name": "Poppy",
@@ -9213,7 +9213,7 @@
         "flat": 0.375
       },
       "attackTotalTime": {
-        "flat": 1.60000002384185
+        "flat": 1.6
       },
       "attackRange": {
         "flat": 125
@@ -9238,7 +9238,7 @@
       "difficulty": 2
     }
   },
-  "Pyke": {
+  {
     "id": 555,
     "key": "Pyke",
     "name": "Pyke",
@@ -9299,10 +9299,10 @@
         "perLevel": 2.5
       },
       "attackSpeedRatio": {
-        "flat": 0.666999995708465
+        "flat": 0.667
       },
       "attackCastTime": {
-        "flat": 0.300000011920928
+        "flat": 0.3
       },
       "attackTotalTime": {
         "flat": 1.5
@@ -9329,7 +9329,7 @@
       "difficulty": 2
     }
   },
-  "Qiyana": {
+  {
     "id": 246,
     "key": "Qiyana",
     "name": "Qiyana",
@@ -9393,7 +9393,7 @@
         "flat": 0.625
       },
       "attackCastTime": {
-        "flat": 0.230000004172325
+        "flat": 0.23
       },
       "attackTotalTime": {
         "flat": 1.5
@@ -9419,7 +9419,7 @@
       "difficulty": 3
     }
   },
-  "Quinn": {
+  {
     "id": 133,
     "key": "Quinn",
     "name": "Quinn",
@@ -9480,7 +9480,7 @@
         "perLevel": 3.1
       },
       "attackSpeedRatio": {
-        "flat": 0.667999982833862
+        "flat": 0.668
       },
       "attackCastTime": {
         "flat": 0.3
@@ -9489,7 +9489,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.12456139922142
+        "flat": -0.125
       },
       "attackRange": {
         "flat": 525
@@ -9513,7 +9513,7 @@
       "difficulty": 2
     }
   },
-  "Rakan": {
+  {
     "id": 497,
     "key": "Rakan",
     "name": "Rakan",
@@ -9574,13 +9574,13 @@
         "perLevel": 3
       },
       "attackSpeedRatio": {
-        "flat": 0.634999990463256
+        "flat": 0.635
       },
       "attackCastTime": {
-        "flat": 0.270000010728836
+        "flat": 0.27
       },
       "attackTotalTime": {
-        "flat": 1.57500004768371
+        "flat": 1.575
       },
       "attackRange": {
         "flat": 300
@@ -9603,7 +9603,7 @@
       "difficulty": 2
     }
   },
-  "Rammus": {
+  {
     "id": 33,
     "key": "Rammus",
     "name": "Rammus",
@@ -9673,7 +9673,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.0708333328366279
+        "flat": -0.071
       },
       "attackRange": {
         "flat": 125
@@ -9697,7 +9697,7 @@
       "difficulty": 1
     }
   },
-  "RekSai": {
+  {
     "id": 421,
     "key": "RekSai",
     "name": "Rek'Sai",
@@ -9753,16 +9753,16 @@
         "perLevel": 2
       },
       "attackSpeedRatio": {
-        "flat": 0.666999995708465
+        "flat": 0.667
       },
       "attackCastTime": {
-        "flat": 0.400000005960464
+        "flat": 0.4
       },
       "attackTotalTime": {
         "flat": 1.5
       },
       "attackDelayOffset": {
-        "flat": -0.0916666686534881
+        "flat": -0.092
       },
       "attackRange": {
         "flat": 175
@@ -9786,7 +9786,7 @@
       "difficulty": 2
     }
   },
-  "Rell": {
+  {
     "id": 526,
     "key": "Rell",
     "name": "Rell",
@@ -9877,7 +9877,7 @@
       "difficulty": 2
     }
   },
-  "Renata": {
+  {
     "id": 888,
     "key": "Renata",
     "name": "Renata Glasc",
@@ -9971,7 +9971,7 @@
       "difficulty": 2
     }
   },
-  "Renekton": {
+  {
     "id": 58,
     "key": "Renekton",
     "name": "Renekton",
@@ -10027,7 +10027,7 @@
         "perLevel": 2.75
       },
       "attackSpeedRatio": {
-        "flat": 0.665000021457672
+        "flat": 0.665
       },
       "attackCastTime": {
         "flat": 0.3
@@ -10036,7 +10036,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.122695036232471
+        "flat": -0.123
       },
       "attackRange": {
         "flat": 125
@@ -10060,7 +10060,7 @@
       "difficulty": 1
     }
   },
-  "Rengar": {
+  {
     "id": 107,
     "key": "Rengar",
     "name": "Rengar",
@@ -10116,10 +10116,10 @@
         "perLevel": 3
       },
       "attackSpeedRatio": {
-        "flat": 0.666999995708465
+        "flat": 0.667
       },
       "attackCastTime": {
-        "flat": 0.300000011920928
+        "flat": 0.3
       },
       "attackTotalTime": {
         "flat": 1.5
@@ -10147,7 +10147,7 @@
       "difficulty": 2
     }
   },
-  "Riven": {
+  {
     "id": 92,
     "key": "Riven",
     "name": "Riven",
@@ -10209,7 +10209,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.133333340287208
+        "flat": -0.133
       },
       "attackRange": {
         "flat": 125
@@ -10233,7 +10233,7 @@
       "difficulty": 2
     }
   },
-  "Rumble": {
+  {
     "id": 68,
     "key": "Rumble",
     "name": "Rumble",
@@ -10289,7 +10289,7 @@
         "perLevel": 1.85
       },
       "attackSpeedRatio": {
-        "flat": 0.643999993801116
+        "flat": 0.644
       },
       "attackCastTime": {
         "flat": 0.3
@@ -10323,7 +10323,7 @@
       "difficulty": 2
     }
   },
-  "Ryze": {
+  {
     "id": 13,
     "key": "Ryze",
     "name": "Ryze",
@@ -10393,7 +10393,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.100000001490116
+        "flat": -0.1
       },
       "attackRange": {
         "flat": 550
@@ -10417,7 +10417,7 @@
       "difficulty": 2
     }
   },
-  "Samira": {
+  {
     "id": 360,
     "key": "Samira",
     "name": "Samira",
@@ -10487,7 +10487,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.150000006
+        "flat": -0.15
       },
       "attackRange": {
         "flat": 500
@@ -10510,7 +10510,7 @@
       "difficulty": 2
     }
   },
-  "Sejuani": {
+  {
     "id": 113,
     "key": "Sejuani",
     "name": "Sejuani",
@@ -10574,10 +10574,10 @@
         "flat": 0.625
       },
       "attackCastTime": {
-        "flat": 0.300000011920928
+        "flat": 0.3
       },
       "attackTotalTime": {
-        "flat": 1.60000002384185
+        "flat": 1.6
       },
       "attackRange": {
         "flat": 150
@@ -10601,7 +10601,7 @@
       "difficulty": 2
     }
   },
-  "Senna": {
+  {
     "id": 235,
     "key": "Senna",
     "name": "Senna",
@@ -10667,7 +10667,7 @@
         "flat": 0.5
       },
       "attackTotalTime": {
-        "flat": 1.60000002384185
+        "flat": 1.6
       },
       "attackRange": {
         "flat": 600
@@ -10692,7 +10692,7 @@
       "difficulty": 2
     }
   },
-  "Seraphine": {
+  {
     "id": 147,
     "key": "Seraphine",
     "name": "Seraphine",
@@ -10762,7 +10762,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.112999998
+        "flat": -0.113
       },
       "attackRange": {
         "flat": 525
@@ -10788,7 +10788,7 @@
       "difficulty": 1
     }
   },
-  "Sett": {
+  {
     "id": 875,
     "key": "Sett",
     "name": "Sett",
@@ -10850,7 +10850,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.0857142857
+        "flat": -0.086
       },
       "attackRange": {
         "flat": 125
@@ -10874,7 +10874,7 @@
       "difficulty": 2
     }
   },
-  "Shaco": {
+  {
     "id": 35,
     "key": "Shaco",
     "name": "Shaco",
@@ -10935,7 +10935,7 @@
         "perLevel": 3
       },
       "attackSpeedRatio": {
-        "flat": 0.694000005722045
+        "flat": 0.694
       },
       "attackCastTime": {
         "flat": 0.3
@@ -10944,7 +10944,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.0784961655735969
+        "flat": -0.078
       },
       "attackRange": {
         "flat": 125
@@ -10967,7 +10967,7 @@
       "difficulty": 2
     }
   },
-  "Shen": {
+  {
     "id": 98,
     "key": "Shen",
     "name": "Shen",
@@ -11026,13 +11026,13 @@
         "perLevel": 3
       },
       "attackSpeedRatio": {
-        "flat": 0.651000022888183
+        "flat": 0.651
       },
       "attackCastTime": {
-        "flat": 0.266660004854202
+        "flat": 0.267
       },
       "attackTotalTime": {
-        "flat": 1.53600001335144
+        "flat": 1.536
       },
       "attackRange": {
         "flat": 125
@@ -11056,7 +11056,7 @@
       "difficulty": 2
     }
   },
-  "Shyvana": {
+  {
     "id": 102,
     "key": "Shyvana",
     "name": "Shyvana",
@@ -11112,7 +11112,7 @@
         "perLevel": 2.5
       },
       "attackSpeedRatio": {
-        "flat": 0.657999992370605
+        "flat": 0.658
       },
       "attackCastTime": {
         "flat": 0.3
@@ -11121,7 +11121,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.102631576359272
+        "flat": -0.103
       },
       "attackRange": {
         "flat": 125
@@ -11145,7 +11145,7 @@
       "difficulty": 1
     }
   },
-  "Singed": {
+  {
     "id": 27,
     "key": "Singed",
     "name": "Singed",
@@ -11239,7 +11239,7 @@
       "difficulty": 2
     }
   },
-  "Sion": {
+  {
     "id": 14,
     "key": "Sion",
     "name": "Sion",
@@ -11284,7 +11284,7 @@
         "flat": 125
       },
       "pathingRadius": {
-        "flat": 25.7665996551513
+        "flat": 25.767
       },
       "gameplayRadius": {
         "flat": 80
@@ -11300,7 +11300,7 @@
         "perLevel": 1.3
       },
       "attackSpeedRatio": {
-        "flat": 0.67900002002716
+        "flat": 0.679
       },
       "attackCastTime": {
         "flat": 0.3
@@ -11309,7 +11309,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.0509057976305484
+        "flat": -0.051
       },
       "attackRange": {
         "flat": 175
@@ -11333,7 +11333,7 @@
       "difficulty": 1
     }
   },
-  "Sivir": {
+  {
     "id": 15,
     "key": "Sivir",
     "name": "Sivir",
@@ -11403,7 +11403,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.180000007152557
+        "flat": -0.18
       },
       "attackRange": {
         "flat": 500
@@ -11425,7 +11425,7 @@
       "difficulty": 2
     }
   },
-  "Skarner": {
+  {
     "id": 72,
     "key": "Skarner",
     "name": "Skarner",
@@ -11518,7 +11518,7 @@
       "difficulty": 2
     }
   },
-  "Smolder": {
+  {
     "id": 901,
     "key": "Smolder",
     "name": "Smolder",
@@ -11588,7 +11588,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.13377659
+        "flat": -0.134
       },
       "attackRange": {
         "flat": 550
@@ -11613,7 +11613,7 @@
       "difficulty": 2
     }
   },
-  "Sona": {
+  {
     "id": 37,
     "key": "Sona",
     "name": "Sona",
@@ -11674,7 +11674,7 @@
         "perLevel": 2.3
       },
       "attackSpeedRatio": {
-        "flat": 0.643999993801116
+        "flat": 0.644
       },
       "attackCastTime": {
         "flat": 0.3
@@ -11683,7 +11683,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.12817870080471
+        "flat": -0.128
       },
       "attackRange": {
         "flat": 550
@@ -11707,7 +11707,7 @@
       "difficulty": 1
     }
   },
-  "Soraka": {
+  {
     "id": 16,
     "key": "Soraka",
     "name": "Soraka",
@@ -11752,7 +11752,7 @@
         "flat": 110
       },
       "pathingRadius": {
-        "flat": 44.2000007629394
+        "flat": 44.2
       },
       "gameplayRadius": {
         "flat": 65
@@ -11777,7 +11777,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.112999998033046
+        "flat": -0.113
       },
       "attackRange": {
         "flat": 550
@@ -11801,7 +11801,7 @@
       "difficulty": 1
     }
   },
-  "Swain": {
+  {
     "id": 50,
     "key": "Swain",
     "name": "Swain",
@@ -11871,7 +11871,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.159999996423721
+        "flat": -0.16
       },
       "attackRange": {
         "flat": 525
@@ -11896,7 +11896,7 @@
       "difficulty": 2
     }
   },
-  "Sylas": {
+  {
     "id": 517,
     "key": "Sylas",
     "name": "Sylas",
@@ -11957,16 +11957,16 @@
         "perLevel": 3.5
       },
       "attackSpeedRatio": {
-        "flat": 0.644999980926513
+        "flat": 0.645
       },
       "attackCastTime": {
-        "flat": 0.259999990463256
+        "flat": 0.26
       },
       "attackTotalTime": {
-        "flat": 1.54999995231628
+        "flat": 1.55
       },
       "attackDelayOffset": {
-        "flat": -0.0994649976491928
+        "flat": -0.099
       },
       "attackRange": {
         "flat": 175
@@ -11992,7 +11992,7 @@
       "difficulty": 3
     }
   },
-  "Syndra": {
+  {
     "id": 134,
     "key": "Syndra",
     "name": "Syndra",
@@ -12062,7 +12062,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.112499997019767
+        "flat": -0.112
       },
       "attackRange": {
         "flat": 550
@@ -12085,7 +12085,7 @@
       "difficulty": 2
     }
   },
-  "TahmKench": {
+  {
     "id": 223,
     "key": "TahmKench",
     "name": "Tahm Kench",
@@ -12146,13 +12146,13 @@
         "perLevel": 2.5
       },
       "attackSpeedRatio": {
-        "flat": 0.657999992370605
+        "flat": 0.658
       },
       "attackCastTime": {
-        "flat": 0.379999995231628
+        "flat": 0.38
       },
       "attackTotalTime": {
-        "flat": 1.51900005340576
+        "flat": 1.519
       },
       "attackRange": {
         "flat": 175
@@ -12177,7 +12177,7 @@
       "difficulty": 1
     }
   },
-  "Taliyah": {
+  {
     "id": 163,
     "key": "Taliyah",
     "name": "Taliyah",
@@ -12247,7 +12247,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.138541668653488
+        "flat": -0.139
       },
       "attackRange": {
         "flat": 525
@@ -12272,7 +12272,7 @@
       "difficulty": 2
     }
   },
-  "Talon": {
+  {
     "id": 91,
     "key": "Talon",
     "name": "Talon",
@@ -12336,10 +12336,10 @@
         "flat": 0.625
       },
       "attackCastTime": {
-        "flat": 0.197999998927116
+        "flat": 0.198
       },
       "attackTotalTime": {
-        "flat": 1.60000002384185
+        "flat": 1.6
       },
       "attackRange": {
         "flat": 125
@@ -12361,7 +12361,7 @@
       "difficulty": 2
     }
   },
-  "Taric": {
+  {
     "id": 44,
     "key": "Taric",
     "name": "Taric",
@@ -12431,7 +12431,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.11999999731779
+        "flat": -0.12
       },
       "attackRange": {
         "flat": 150
@@ -12457,7 +12457,7 @@
       "difficulty": 2
     }
   },
-  "Teemo": {
+  {
     "id": 17,
     "key": "Teemo",
     "name": "Teemo",
@@ -12518,7 +12518,7 @@
         "perLevel": 3.38
       },
       "attackSpeedRatio": {
-        "flat": 0.689999997615814
+        "flat": 0.69
       },
       "attackCastTime": {
         "flat": 0.3
@@ -12553,7 +12553,7 @@
       "difficulty": 1
     }
   },
-  "Thresh": {
+  {
     "id": 412,
     "key": "Thresh",
     "name": "Thresh",
@@ -12622,7 +12622,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.0604166686534881
+        "flat": -0.06
       },
       "attackRange": {
         "flat": 450
@@ -12646,7 +12646,7 @@
       "difficulty": 3
     }
   },
-  "Tristana": {
+  {
     "id": 18,
     "key": "Tristana",
     "name": "Tristana",
@@ -12716,7 +12716,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.151993364095687
+        "flat": -0.152
       },
       "attackRange": {
         "flat": 550
@@ -12740,7 +12740,7 @@
       "difficulty": 1
     }
   },
-  "Trundle": {
+  {
     "id": 48,
     "key": "Trundle",
     "name": "Trundle",
@@ -12785,7 +12785,7 @@
         "flat": 135
       },
       "pathingRadius": {
-        "flat": 25.7665996551513
+        "flat": 25.767
       },
       "gameplayRadius": {
         "flat": 65
@@ -12801,7 +12801,7 @@
         "perLevel": 2.9
       },
       "attackSpeedRatio": {
-        "flat": 0.6700000166893
+        "flat": 0.67
       },
       "attackCastTime": {
         "flat": 0.3
@@ -12810,7 +12810,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.0916666686534881
+        "flat": -0.092
       },
       "attackRange": {
         "flat": 175
@@ -12835,7 +12835,7 @@
       "difficulty": 1
     }
   },
-  "Tryndamere": {
+  {
     "id": 23,
     "key": "Tryndamere",
     "name": "Tryndamere",
@@ -12900,7 +12900,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.109999999403953
+        "flat": -0.11
       },
       "attackRange": {
         "flat": 175
@@ -12924,7 +12924,7 @@
       "difficulty": 1
     }
   },
-  "TwistedFate": {
+  {
     "id": 4,
     "key": "TwistedFate",
     "name": "Twisted Fate",
@@ -12985,7 +12985,7 @@
         "perLevel": 2.5
       },
       "attackSpeedRatio": {
-        "flat": 0.651000022888183
+        "flat": 0.651
       },
       "attackCastTime": {
         "flat": 0.3
@@ -13020,7 +13020,7 @@
       "difficulty": 2
     }
   },
-  "Twitch": {
+  {
     "id": 29,
     "key": "Twitch",
     "name": "Twitch",
@@ -13081,7 +13081,7 @@
         "perLevel": 3.38
       },
       "attackSpeedRatio": {
-        "flat": 0.67900002002716
+        "flat": 0.679
       },
       "attackCastTime": {
         "flat": 0.3
@@ -13090,7 +13090,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.0980840176343917
+        "flat": -0.098
       },
       "attackRange": {
         "flat": 550
@@ -13114,7 +13114,7 @@
       "difficulty": 2
     }
   },
-  "Udyr": {
+  {
     "id": 77,
     "key": "Udyr",
     "name": "Udyr",
@@ -13175,7 +13175,7 @@
         "perLevel": 3
       },
       "attackSpeedRatio": {
-        "flat": 0.6499999761581421
+        "flat": 0.65
       },
       "attackCastTime": {
         "flat": 0.3
@@ -13184,7 +13184,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.10199999809265137
+        "flat": -0.102
       },
       "attackRange": {
         "flat": 125
@@ -13209,7 +13209,7 @@
       "difficulty": 1
     }
   },
-  "Urgot": {
+  {
     "id": 6,
     "key": "Urgot",
     "name": "Urgot",
@@ -13251,7 +13251,7 @@
         "flat": 550
       },
       "selectionRadius": {
-        "flat": 136.111099243164
+        "flat": 136.111
       },
       "pathingRadius": {
         "flat": 50
@@ -13279,7 +13279,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.150000005960464
+        "flat": -0.15
       },
       "attackRange": {
         "flat": 350
@@ -13303,7 +13303,7 @@
       "difficulty": 2
     }
   },
-  "Varus": {
+  {
     "id": 110,
     "key": "Varus",
     "name": "Varus",
@@ -13364,7 +13364,7 @@
         "perLevel": 3.5
       },
       "attackSpeedRatio": {
-        "flat": 0.657999992370605
+        "flat": 0.658
       },
       "attackCastTime": {
         "flat": 0.3
@@ -13373,7 +13373,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.124561406672
+        "flat": -0.125
       },
       "attackRange": {
         "flat": 575
@@ -13397,7 +13397,7 @@
       "difficulty": 2
     }
   },
-  "Vayne": {
+  {
     "id": 67,
     "key": "Vayne",
     "name": "Vayne",
@@ -13458,7 +13458,7 @@
         "perLevel": 3.3
       },
       "attackSpeedRatio": {
-        "flat": 0.657999992370605
+        "flat": 0.658
       },
       "attackCastTime": {
         "flat": 0.3
@@ -13467,7 +13467,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.124561406672
+        "flat": -0.125
       },
       "attackRange": {
         "flat": 550
@@ -13491,7 +13491,7 @@
       "difficulty": 2
     }
   },
-  "Veigar": {
+  {
     "id": 45,
     "key": "Veigar",
     "name": "Veigar",
@@ -13561,7 +13561,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.109062500298023
+        "flat": -0.109
       },
       "attackRange": {
         "flat": 550
@@ -13585,7 +13585,7 @@
       "difficulty": 2
     }
   },
-  "Velkoz": {
+  {
     "id": 161,
     "key": "Velkoz",
     "name": "Vel'Koz",
@@ -13618,7 +13618,7 @@
       },
       "attackDamage": {
         "flat": 55,
-        "perLevel": 3.1416
+        "perLevel": 3.142
       },
       "movespeed": {
         "flat": 340
@@ -13655,7 +13655,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.100000001490116
+        "flat": -0.1
       },
       "attackRange": {
         "flat": 525
@@ -13680,7 +13680,7 @@
       "difficulty": 2
     }
   },
-  "Vex": {
+  {
     "id": 711,
     "key": "Vex",
     "name": "Vex",
@@ -13750,7 +13750,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.14375
+        "flat": -0.144
       },
       "attackRange": {
         "flat": 550
@@ -13773,7 +13773,7 @@
       "difficulty": 2
     }
   },
-  "Vi": {
+  {
     "id": 254,
     "key": "Vi",
     "name": "Vi",
@@ -13834,13 +13834,13 @@
         "perLevel": 2
       },
       "attackSpeedRatio": {
-        "flat": 0.643999993801116
+        "flat": 0.644
       },
       "attackCastTime": {
-        "flat": 0.360000014305114
+        "flat": 0.36
       },
       "attackTotalTime": {
-        "flat": 1.60000002384185
+        "flat": 1.6
       },
       "attackRange": {
         "flat": 125
@@ -13864,7 +13864,7 @@
       "difficulty": 1
     }
   },
-  "Viego": {
+  {
     "id": 234,
     "key": "Viego",
     "name": "Viego",
@@ -13926,7 +13926,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.13553
+        "flat": -0.136
       },
       "attackRange": {
         "flat": 200
@@ -13950,7 +13950,7 @@
       "difficulty": 3
     }
   },
-  "Viktor": {
+  {
     "id": 112,
     "key": "Viktor",
     "name": "Viktor",
@@ -14011,7 +14011,7 @@
         "perLevel": 2.11
       },
       "attackSpeedRatio": {
-        "flat": 0.657999992370605
+        "flat": 0.658
       },
       "attackCastTime": {
         "flat": 0.3
@@ -14020,7 +14020,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.11999999731779
+        "flat": -0.12
       },
       "attackRange": {
         "flat": 525
@@ -14043,7 +14043,7 @@
       "difficulty": 3
     }
   },
-  "Vladimir": {
+  {
     "id": 8,
     "key": "Vladimir",
     "name": "Vladimir",
@@ -14099,16 +14099,16 @@
         "perLevel": 2
       },
       "attackSpeedRatio": {
-        "flat": 0.657999992370605
+        "flat": 0.658
       },
       "attackCastTime": {
-        "flat": 0.300000011920928
+        "flat": 0.3
       },
       "attackTotalTime": {
-        "flat": 1.51999998092651
+        "flat": 1.52
       },
       "attackDelayOffset": {
-        "flat": -0.0721089988946914
+        "flat": -0.072
       },
       "attackRange": {
         "flat": 450
@@ -14133,7 +14133,7 @@
       "difficulty": 2
     }
   },
-  "Volibear": {
+  {
     "id": 106,
     "key": "Volibear",
     "name": "Volibear",
@@ -14225,7 +14225,7 @@
       "difficulty": 1
     }
   },
-  "Warwick": {
+  {
     "id": 19,
     "key": "Warwick",
     "name": "Warwick",
@@ -14286,7 +14286,7 @@
         "perLevel": 2.3
       },
       "attackSpeedRatio": {
-        "flat": 0.638000011444091
+        "flat": 0.638
       },
       "attackCastTime": {
         "flat": 0.3
@@ -14320,7 +14320,7 @@
       "difficulty": 1
     }
   },
-  "MonkeyKing": {
+  {
     "id": 62,
     "key": "MonkeyKing",
     "name": "Wukong",
@@ -14381,7 +14381,7 @@
         "perLevel": 3
       },
       "attackSpeedRatio": {
-        "flat": 0.657999992370605
+        "flat": 0.658
       },
       "attackCastTime": {
         "flat": 0.3
@@ -14390,7 +14390,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.0916666686534881
+        "flat": -0.092
       },
       "attackRange": {
         "flat": 175
@@ -14415,7 +14415,7 @@
       "difficulty": 1
     }
   },
-  "Xayah": {
+  {
     "id": 498,
     "key": "Xayah",
     "name": "Xayah",
@@ -14479,10 +14479,10 @@
         "flat": 0.658
       },
       "attackCastTime": {
-        "flat": 0.282999992370605
+        "flat": 0.283
       },
       "attackTotalTime": {
-        "flat": 1.60000002384185
+        "flat": 1.6
       },
       "attackRange": {
         "flat": 525
@@ -14504,7 +14504,7 @@
       "difficulty": 2
     }
   },
-  "Xerath": {
+  {
     "id": 101,
     "key": "Xerath",
     "name": "Xerath",
@@ -14599,7 +14599,7 @@
       "difficulty": 2
     }
   },
-  "XinZhao": {
+  {
     "id": 5,
     "key": "XinZhao",
     "name": "Xin Zhao",
@@ -14641,7 +14641,7 @@
         "flat": 800
       },
       "selectionRadius": {
-        "flat": 108.333297729492
+        "flat": 108.333
       },
       "pathingRadius": {
         "flat": 35
@@ -14660,13 +14660,13 @@
         "perLevel": 3.5
       },
       "attackSpeedRatio": {
-        "flat": 0.644999980926513
+        "flat": 0.645
       },
       "attackCastTime": {
-        "flat": 0.289999991655349
+        "flat": 0.29
       },
       "attackTotalTime": {
-        "flat": 1.54999995231628
+        "flat": 1.55
       },
       "attackRange": {
         "flat": 175
@@ -14690,7 +14690,7 @@
       "difficulty": 1
     }
   },
-  "Yasuo": {
+  {
     "id": 157,
     "key": "Yasuo",
     "name": "Yasuo",
@@ -14746,7 +14746,7 @@
         "perLevel": 3.5
       },
       "attackSpeedRatio": {
-        "flat": 0.6700000166893
+        "flat": 0.67
       },
       "attackCastTime": {
         "flat": 0.3
@@ -14755,7 +14755,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.0799999982118606
+        "flat": -0.08
       },
       "attackRange": {
         "flat": 175
@@ -14781,7 +14781,7 @@
       "difficulty": 3
     }
   },
-  "Yone": {
+  {
     "id": 777,
     "key": "Yone",
     "name": "Yone",
@@ -14846,7 +14846,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.0799999982118606
+        "flat": -0.08
       },
       "attackRange": {
         "flat": 175
@@ -14871,7 +14871,7 @@
       "difficulty": 3
     }
   },
-  "Yorick": {
+  {
     "id": 83,
     "key": "Yorick",
     "name": "Yorick",
@@ -14935,10 +14935,10 @@
         "flat": 0.625
       },
       "attackCastTime": {
-        "flat": 0.330000013113021
+        "flat": 0.33
       },
       "attackTotalTime": {
-        "flat": 1.60000002384185
+        "flat": 1.6
       },
       "attackRange": {
         "flat": 175
@@ -14962,7 +14962,7 @@
       "difficulty": 2
     }
   },
-  "Yuumi": {
+  {
     "id": 350,
     "key": "Yuumi",
     "name": "Yuumi",
@@ -15029,7 +15029,7 @@
         "flat": 0.25
       },
       "attackTotalTime": {
-        "flat": 1.60000002384185
+        "flat": 1.6
       },
       "attackRange": {
         "flat": 425
@@ -15053,7 +15053,7 @@
       "difficulty": 1
     }
   },
-  "Zac": {
+  {
     "id": 154,
     "key": "Zac",
     "name": "Zac",
@@ -15090,7 +15090,7 @@
         "flat": 140
       },
       "pathingRadius": {
-        "flat": 43.0749015808105
+        "flat": 43.075
       },
       "gameplayRadius": {
         "flat": 80
@@ -15106,13 +15106,13 @@
         "perLevel": 1.6
       },
       "attackSpeedRatio": {
-        "flat": 0.638000011444091
+        "flat": 0.638
       },
       "attackCastTime": {
-        "flat": 0.363000005483627
+        "flat": 0.363
       },
       "attackTotalTime": {
-        "flat": 1.567999958992
+        "flat": 1.568
       },
       "attackRange": {
         "flat": 175
@@ -15138,7 +15138,7 @@
       "difficulty": 1
     }
   },
-  "Zed": {
+  {
     "id": 238,
     "key": "Zed",
     "name": "Zed",
@@ -15197,7 +15197,7 @@
         "perLevel": 3.3
       },
       "attackSpeedRatio": {
-        "flat": 0.651000022888183
+        "flat": 0.651
       },
       "attackCastTime": {
         "flat": 0.3
@@ -15206,7 +15206,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.102405503392219
+        "flat": -0.102
       },
       "attackRange": {
         "flat": 125
@@ -15229,7 +15229,7 @@
       "difficulty": 3
     }
   },
-  "Zeri": {
+  {
     "id": 221,
     "key": "Zeri",
     "name": "Zeri",
@@ -15299,7 +15299,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.14375
+        "flat": -0.144
       },
       "attackRange": {
         "flat": 500
@@ -15321,7 +15321,7 @@
       "difficulty": 2
     }
   },
-  "Ziggs": {
+  {
     "id": 115,
     "key": "Ziggs",
     "name": "Ziggs",
@@ -15382,7 +15382,7 @@
         "perLevel": 2
       },
       "attackSpeedRatio": {
-        "flat": 0.656000018119812
+        "flat": 0.656
       },
       "attackCastTime": {
         "flat": 0.3
@@ -15415,7 +15415,7 @@
       "difficulty": 2
     }
   },
-  "Zilean": {
+  {
     "id": 26,
     "key": "Zilean",
     "name": "Zilean",
@@ -15485,7 +15485,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.11999999731779
+        "flat": -0.12
       },
       "attackRange": {
         "flat": 550
@@ -15509,7 +15509,7 @@
       "difficulty": 2
     }
   },
-  "Zoe": {
+  {
     "id": 142,
     "key": "Zoe",
     "name": "Zoe",
@@ -15579,7 +15579,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.138541668653488
+        "flat": -0.139
       },
       "attackRange": {
         "flat": 550
@@ -15603,7 +15603,7 @@
       "difficulty": 3
     }
   },
-  "Zyra": {
+  {
     "id": 143,
     "key": "Zyra",
     "name": "Zyra",
@@ -15673,7 +15673,7 @@
         "flat": 1.6
       },
       "attackDelayOffset": {
-        "flat": -0.154166668653488
+        "flat": -0.154
       },
       "attackRange": {
         "flat": 575
@@ -15697,4 +15697,4 @@
       "difficulty": 2
     }
   }
-}
+]

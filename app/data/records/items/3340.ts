@@ -1,9 +1,7 @@
-export const StealthWard: Item = {
+const item: Item =  {
   "name": "Stealth Ward",
   "id": 3340,
-  "rank": [
-    "Consumable"
-  ],
+  "rank": "Consumable",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -28,11 +26,11 @@ export const StealthWard: Item = {
       "total": 0,
       "combined": 0,
       "sell": 0
-    },
-    "purchasable": true
+    }
   },
   "maps": [
     11,
     21
   ]
 }
+export default item

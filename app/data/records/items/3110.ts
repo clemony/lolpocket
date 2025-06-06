@@ -1,9 +1,7 @@
-export const FrozenHeart: Item = {
+const item: Item =  {
   "name": "Frozen Heart",
   "id": 3110,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3082,
@@ -42,7 +40,6 @@ export const FrozenHeart: Item = {
       "combined": 600,
       "sell": 1000
     },
-    "purchasable": true,
     "tags": [
       "TANK",
       "SUPPORT"
@@ -55,3 +52,4 @@ export const FrozenHeart: Item = {
     35
   ]
 }
+export default item

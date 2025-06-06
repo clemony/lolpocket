@@ -1,9 +1,7 @@
-export const CrownOfTheShatteredQueen: Item = {
+const item: Item =  {
   "name": "Crown of the Shattered Queen",
   "id": 444644,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
@@ -27,7 +25,6 @@ export const CrownOfTheShatteredQueen: Item = {
       "combined": 1000,
       "sell": 0
     },
-    "purchasable": true,
     "tags": [
       "MAGE"
     ]
@@ -36,3 +33,4 @@ export const CrownOfTheShatteredQueen: Item = {
     30
   ]
 }
+export default item

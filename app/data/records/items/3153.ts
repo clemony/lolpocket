@@ -1,9 +1,7 @@
-export const BladeOfTheRuinedKing: Item = {
+const item: Item =  {
   "name": "Blade of the Ruined King",
   "id": 3153,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 1053,
@@ -56,7 +54,6 @@ export const BladeOfTheRuinedKing: Item = {
       "combined": 725,
       "sell": 1280
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "MARKSMAN",
@@ -70,3 +67,4 @@ export const BladeOfTheRuinedKing: Item = {
     35
   ]
 }
+export default item

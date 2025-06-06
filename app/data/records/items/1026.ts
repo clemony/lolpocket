@@ -1,9 +1,7 @@
-export const BlastingWand: Item = {
+const item: Item =  {
   "name": "Blasting Wand",
   "id": 1026,
-  "rank": [
-    "Basic"
-  ],
+  "rank": "Basic",
   "buildsInto": [
     {
       "id": 3115,
@@ -80,7 +78,6 @@ export const BlastingWand: Item = {
       "combined": 850,
       "sell": 340
     },
-    "purchasable": true,
     "tags": [
       "MAGE",
       "SUPPORT"
@@ -93,3 +90,4 @@ export const BlastingWand: Item = {
     35
   ]
 }
+export default item

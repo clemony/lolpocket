@@ -1,9 +1,7 @@
-export const Rectrix: Item = {
+const item: Item =  {
   "name": "Rectrix",
   "id": 6690,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1036,
@@ -47,7 +45,6 @@ export const Rectrix: Item = {
       "combined": 425,
       "sell": 310
     },
-    "purchasable": true,
     "tags": [
       "ASSASSIN",
       "FIGHTER"
@@ -60,3 +57,4 @@ export const Rectrix: Item = {
     35
   ]
 }
+export default item

@@ -1,9 +1,7 @@
-export const Terminus: Item = {
+const item: Item =  {
   "name": "Terminus",
   "id": 3302,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3051,
@@ -47,7 +45,6 @@ export const Terminus: Item = {
       "combined": 1100,
       "sell": 1200
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "MARKSMAN",
@@ -63,3 +60,4 @@ export const Terminus: Item = {
     35
   ]
 }
+export default item

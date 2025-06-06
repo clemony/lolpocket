@@ -1,9 +1,7 @@
-export const RadiantVirtue: Item = {
+const item: Item =  {
   "name": "Radiant Virtue",
   "id": 446667,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
@@ -28,7 +26,6 @@ export const RadiantVirtue: Item = {
       "combined": 1000,
       "sell": 0
     },
-    "purchasable": true,
     "tags": [
       "TANK"
     ]
@@ -37,3 +34,4 @@ export const RadiantVirtue: Item = {
     30
   ]
 }
+export default item

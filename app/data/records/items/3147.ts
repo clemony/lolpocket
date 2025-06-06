@@ -1,9 +1,7 @@
-export const HauntingGuise: Item = {
+const item: Item =  {
   "name": "Haunting Guise",
   "id": 3147,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1052,
@@ -58,7 +56,6 @@ export const HauntingGuise: Item = {
       "combined": 500,
       "sell": 520
     },
-    "purchasable": true,
     "tags": [
       "MAGE"
     ]
@@ -70,3 +67,4 @@ export const HauntingGuise: Item = {
     35
   ]
 }
+export default item

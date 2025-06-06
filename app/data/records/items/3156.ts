@@ -1,9 +1,7 @@
-export const MawOfMalmortius: Item = {
+const item: Item =  {
   "name": "Maw of Malmortius",
   "id": 3156,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3155,
@@ -40,7 +38,6 @@ export const MawOfMalmortius: Item = {
       "combined": 750,
       "sell": 1240
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "MARKSMAN",
@@ -54,3 +51,4 @@ export const MawOfMalmortius: Item = {
     35
   ]
 }
+export default item

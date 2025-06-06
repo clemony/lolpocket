@@ -1,9 +1,7 @@
-export const BamisCinder: Item = {
+const item: Item =  {
   "name": "Bami's Cinder",
   "id": 6660,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1028,
@@ -52,7 +50,6 @@ export const BamisCinder: Item = {
       "combined": 250,
       "sell": 360
     },
-    "purchasable": true,
     "tags": [
       "TANK"
     ]
@@ -64,3 +61,4 @@ export const BamisCinder: Item = {
     35
   ]
 }
+export default item

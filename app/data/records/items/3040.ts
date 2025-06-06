@@ -1,9 +1,7 @@
-export const SeraphsEmbrace: Item = {
+const item: Item =  {
   "name": "Seraph's Embrace",
   "id": 3040,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "specialRecipe": 3003,
   "noEffects": false,
   "removed": false,
@@ -41,3 +39,4 @@ export const SeraphsEmbrace: Item = {
     35
   ]
 }
+export default item

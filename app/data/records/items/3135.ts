@@ -1,9 +1,7 @@
-export const VoidStaff: Item = {
+const item: Item =  {
   "name": "Void Staff",
   "id": 3135,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 4630,
@@ -31,7 +29,6 @@ export const VoidStaff: Item = {
       "combined": 1050,
       "sell": 1200
     },
-    "purchasable": true,
     "tags": [
       "MAGE"
     ]
@@ -43,3 +40,4 @@ export const VoidStaff: Item = {
     35
   ]
 }
+export default item

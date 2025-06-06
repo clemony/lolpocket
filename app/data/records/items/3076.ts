@@ -1,9 +1,7 @@
-export const BrambleVest: Item = {
+const item: Item =  {
   "name": "Bramble Vest",
   "id": 3076,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1029,
@@ -51,7 +49,6 @@ export const BrambleVest: Item = {
       "combined": 200,
       "sell": 320
     },
-    "purchasable": true,
     "tags": [
       "TANK"
     ]
@@ -63,3 +60,4 @@ export const BrambleVest: Item = {
     35
   ]
 }
+export default item

@@ -1,9 +1,7 @@
-export const FaerieCharm: Item = {
+const item: Item =  {
   "name": "Faerie Charm",
   "id": 1004,
-  "rank": [
-    "Basic"
-  ],
+  "rank": "Basic",
   "buildsInto": [
     {
       "id": 3114,
@@ -35,7 +33,6 @@ export const FaerieCharm: Item = {
       "combined": 200,
       "sell": 80
     },
-    "purchasable": true,
     "tags": [
       "MAGE",
       "SUPPORT"
@@ -48,3 +45,4 @@ export const FaerieCharm: Item = {
     35
   ]
 }
+export default item

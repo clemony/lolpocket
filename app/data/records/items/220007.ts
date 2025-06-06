@@ -1,9 +1,7 @@
-export const PrismaticItem: Item = {
+const item: Item =  {
   "name": "Prismatic Item",
   "id": 220007,
-  "rank": [
-    "Consumable"
-  ],
+  "rank": "Consumable",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -14,10 +12,10 @@ export const PrismaticItem: Item = {
       "total": 4000,
       "combined": 4000,
       "sell": 1600
-    },
-    "purchasable": true
+    }
   },
   "maps": [
     30
   ]
 }
+export default item

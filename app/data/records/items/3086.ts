@@ -1,9 +1,7 @@
-export const Zeal: Item = {
+const item: Item =  {
   "name": "Zeal",
   "id": 3086,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1018,
@@ -64,7 +62,6 @@ export const Zeal: Item = {
       "combined": 350,
       "sell": 480
     },
-    "purchasable": true,
     "tags": [
       "MARKSMAN",
       "MOVEMENT"
@@ -77,3 +74,4 @@ export const Zeal: Item = {
     35
   ]
 }
+export default item

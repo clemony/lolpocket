@@ -1,9 +1,7 @@
-export const ReapersToll: Item = {
+const item: Item =  {
   "name": "Reaper's Toll",
   "id": 443090,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
@@ -30,7 +28,6 @@ export const ReapersToll: Item = {
       "combined": 1000,
       "sell": 0
     },
-    "purchasable": true,
     "tags": [
       "MARKSMAN"
     ]
@@ -39,3 +36,4 @@ export const ReapersToll: Item = {
     30
   ]
 }
+export default item

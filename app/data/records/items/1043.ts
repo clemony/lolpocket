@@ -1,9 +1,7 @@
-export const RecurveBow: Item = {
+const item: Item =  {
   "name": "Recurve Bow",
   "id": 1043,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1042,
@@ -64,7 +62,6 @@ export const RecurveBow: Item = {
       "combined": 450,
       "sell": 280
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "MARKSMAN",
@@ -78,3 +75,4 @@ export const RecurveBow: Item = {
     35
   ]
 }
+export default item

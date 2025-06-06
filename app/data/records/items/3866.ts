@@ -1,9 +1,7 @@
-export const RunicCompass: Item = {
+const item: Item =  {
   "name": "Runic Compass",
   "id": 3866,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "specialRecipe": 3865,
   "noEffects": false,
   "removed": false,
@@ -53,3 +51,4 @@ export const RunicCompass: Item = {
     11
   ]
 }
+export default item

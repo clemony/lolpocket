@@ -1,9 +1,7 @@
-export const ForbiddenIdol: Item = {
+const item: Item =  {
   "name": "Forbidden Idol",
   "id": 3114,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1004,
@@ -88,7 +86,6 @@ export const ForbiddenIdol: Item = {
       "combined": 400,
       "sell": 240
     },
-    "purchasable": true,
     "tags": [
       "SUPPORT"
     ]
@@ -100,3 +97,4 @@ export const ForbiddenIdol: Item = {
     35
   ]
 }
+export default item

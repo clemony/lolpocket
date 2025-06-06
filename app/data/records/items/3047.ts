@@ -1,9 +1,7 @@
-export const PlatedSteelcaps: Item = {
+const item: Item =  {
   "name": "Plated Steelcaps",
   "id": 3047,
-  "rank": [
-    "Boots"
-  ],
+  "rank": "Boots",
   "buildsFrom": [
     {
       "id": 1001,
@@ -48,8 +46,7 @@ export const PlatedSteelcaps: Item = {
       "total": 1200,
       "combined": 600,
       "sell": 480
-    },
-    "purchasable": true
+    }
   },
   "maps": [
     11,
@@ -58,3 +55,4 @@ export const PlatedSteelcaps: Item = {
     35
   ]
 }
+export default item

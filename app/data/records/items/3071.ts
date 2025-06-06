@@ -1,9 +1,7 @@
-export const BlackCleaver: Item = {
+const item: Item =  {
   "name": "Black Cleaver",
   "id": 3071,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3044,
@@ -52,7 +50,6 @@ export const BlackCleaver: Item = {
       "combined": 225,
       "sell": 1200
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "ONHIT_EFFECTS",
@@ -67,3 +64,4 @@ export const BlackCleaver: Item = {
     35
   ]
 }
+export default item

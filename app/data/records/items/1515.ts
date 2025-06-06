@@ -1,9 +1,7 @@
-export const TurretPlating: Item = {
+const item: Item =  {
   "name": "Turret Plating",
   "id": 1515,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -31,3 +29,4 @@ export const TurretPlating: Item = {
     35
   ]
 }
+export default item

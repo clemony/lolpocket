@@ -14,7 +14,7 @@ function handleLoad() {
 
 <template>
   <label
-    class="" :class="cn('rounded-lg  shadow-sm  drop-shadow-sm  aspect-square', className)">
+    class="" :class="cn('rounded-lg  shadow-sm shadow-black/50  drop-shadow-sm  aspect-square', className)">
 
     <Img
       v-if="id"

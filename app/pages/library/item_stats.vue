@@ -2,6 +2,7 @@
 import type { ColDef, GridApi, GridOptions, GridPreDestroyedEvent, GridReadyEvent } from 'ag-grid-community'
 import { CellStyleModule, ClientSideRowModelModule, ColumnApiModule, ColumnAutoSizeModule, ColumnHoverModule, GridStateModule, ModuleRegistry, RenderApiModule, RowSelectionModule, ValidationModule } from 'ag-grid-community'
 import { AgGridVue } from 'ag-grid-vue3'
+import { itemsLite } from '~/data/items-lite'
 
 definePageMeta({
   name: 'Item Stats',
@@ -11,10 +12,11 @@ definePageMeta({
 
 
 const is = useItemStore()
-const {  filtered, pending } = useItemFilter(is.itemFilter)
+const {  filtered } = useItemFilter(is.itemFilter)
 const theme = ref(pocketTheme)
 
 const gridOptions: GridOptions<ItemLite> = {
+  rowData: itemsLite.filter(i => filtered.value.includes(i.id)),
   columnHoverHighlight: true,
 
   rowSelection: {
@@ -206,7 +208,6 @@ ModuleRegistry.registerModules([ClientSideRowModelModule, ValidationModule, RowS
     <AgGridVue
       :initial-state="is.dbItemGridState"
       :grid-options="gridOptions"
-      :row-data="filtered as ItemLite[]"
       :theme="theme"
       :column-defs="colDefs"
       class="h-full grow stat-grid pt-16"

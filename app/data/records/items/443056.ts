@@ -1,9 +1,7 @@
-export const DemonKingsCrown: Item = {
+const item: Item =  {
   "name": "Demon King's Crown",
   "id": 443056,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
@@ -21,10 +19,10 @@ export const DemonKingsCrown: Item = {
       "total": 0,
       "combined": 1000,
       "sell": 0
-    },
-    "purchasable": true
+    }
   },
   "maps": [
     30
   ]
 }
+export default item

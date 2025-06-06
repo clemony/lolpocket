@@ -1,9 +1,7 @@
-export const JuiceOfHaste: Item = {
+const item: Item =  {
   "name": "Juice of Haste",
   "id": 2144,
-  "rank": [
-    "Consumable"
-  ],
+  "rank": "Consumable",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -14,10 +12,10 @@ export const JuiceOfHaste: Item = {
       "total": 500,
       "combined": 500,
       "sell": 200
-    },
-    "purchasable": true
+    }
   },
   "maps": [
     30
   ]
 }
+export default item

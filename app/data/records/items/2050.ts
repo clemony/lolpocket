@@ -1,9 +1,7 @@
-export const GuardiansShroud: Item = {
+const item: Item =  {
   "name": "Guardian's Shroud",
   "id": 2050,
-  "rank": [
-    "Starter"
-  ],
+  "rank": "Starter",
   "specialRecipe": 0,
   "noEffects": true,
   "removed": false,
@@ -19,7 +17,6 @@ export const GuardiansShroud: Item = {
       "combined": 500,
       "sell": 200
     },
-    "purchasable": true,
     "tags": [
       "MAGE",
       "TANK"
@@ -29,3 +26,4 @@ export const GuardiansShroud: Item = {
     30
   ]
 }
+export default item

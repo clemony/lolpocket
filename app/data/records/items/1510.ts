@@ -1,9 +1,7 @@
-export const PhreakishGusto: Item = {
+const item: Item =  {
   "name": "Phreakish Gusto",
   "id": 1510,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -31,3 +29,4 @@ export const PhreakishGusto: Item = {
     35
   ]
 }
+export default item

@@ -1,9 +1,7 @@
-export const JuiceOfVitality: Item = {
+const item: Item =  {
   "name": "Juice of Vitality",
   "id": 2143,
-  "rank": [
-    "Consumable"
-  ],
+  "rank": "Consumable",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -15,7 +13,6 @@ export const JuiceOfVitality: Item = {
       "combined": 500,
       "sell": 200
     },
-    "purchasable": true,
     "tags": [
       "HEALTH_AND_REG"
     ]
@@ -24,3 +21,4 @@ export const JuiceOfVitality: Item = {
     30
   ]
 }
+export default item

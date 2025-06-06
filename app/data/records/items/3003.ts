@@ -1,9 +1,7 @@
-export const ArchangelsStaff: Item = {
+const item: Item =  {
   "name": "Archangel's Staff",
   "id": 3003,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3070,
@@ -56,7 +54,6 @@ export const ArchangelsStaff: Item = {
       "combined": 450,
       "sell": 1160
     },
-    "purchasable": true,
     "tags": [
       "MAGE"
     ]
@@ -68,3 +65,4 @@ export const ArchangelsStaff: Item = {
     35
   ]
 }
+export default item

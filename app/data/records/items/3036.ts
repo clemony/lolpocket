@@ -1,9 +1,7 @@
-export const LordDominiksRegards: Item = {
+const item: Item =  {
   "name": "Lord Dominik's Regards",
   "id": 3036,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3035,
@@ -37,7 +35,6 @@ export const LordDominiksRegards: Item = {
       "combined": 350,
       "sell": 1240
     },
-    "purchasable": true,
     "tags": [
       "MARKSMAN"
     ]
@@ -49,3 +46,4 @@ export const LordDominiksRegards: Item = {
     35
   ]
 }
+export default item

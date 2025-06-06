@@ -1,9 +1,7 @@
-export const EdgeOfNight: Item = {
+const item: Item =  {
   "name": "Edge of Night",
   "id": 3814,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3134,
@@ -44,7 +42,6 @@ export const EdgeOfNight: Item = {
       "combined": 850,
       "sell": 1200
     },
-    "purchasable": true,
     "tags": [
       "ASSASSIN"
     ]
@@ -56,3 +53,4 @@ export const EdgeOfNight: Item = {
     35
   ]
 }
+export default item

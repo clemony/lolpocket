@@ -1,4 +1,6 @@
- export const Xayah: Champion =  {
+// Updated Patch 25.11 - 06/06/2025 12:19:16 PM CDT
+
+const champion: Champion =  {
   "id": 498,
   "key": "Xayah",
   "name": "Xayah",
@@ -455,3 +457,4 @@
   },
   "lore": "Deadly and precise, Xayah is a vastayan revolutionary waging a personal war to save her people. She uses her speed, guile, and razor-sharp feather blades to cut down anyone who stands in her way. Xayah fights alongside her partner and lover, Rakan, to protect their dwindling tribe, and restore their race to her vision of its former glory."
 }
+    export default champion

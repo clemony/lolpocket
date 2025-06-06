@@ -1,9 +1,7 @@
-export const TalismanOfAscension: Item = {
+const item: Item =  {
   "name": "Talisman of Ascension",
   "id": 443064,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
@@ -26,10 +24,10 @@ export const TalismanOfAscension: Item = {
       "total": 0,
       "combined": 1000,
       "sell": 0
-    },
-    "purchasable": true
+    }
   },
   "maps": [
     30
   ]
 }
+export default item

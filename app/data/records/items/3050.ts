@@ -1,9 +1,7 @@
-export const ZekesConvergence: Item = {
+const item: Item =  {
   "name": "Zeke's Convergence",
   "id": 3050,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3067,
@@ -48,7 +46,6 @@ export const ZekesConvergence: Item = {
       "combined": 700,
       "sell": 880
     },
-    "purchasable": true,
     "tags": [
       "TANK",
       "SUPPORT"
@@ -61,3 +58,4 @@ export const ZekesConvergence: Item = {
     35
   ]
 }
+export default item

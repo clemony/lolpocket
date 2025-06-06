@@ -1,9 +1,7 @@
-export const TrinityForce: Item = {
+const item: Item =  {
   "name": "Trinity Force",
   "id": 3078,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3057,
@@ -55,7 +53,6 @@ export const TrinityForce: Item = {
       "combined": 133,
       "sell": 1333
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "MARKSMAN",
@@ -69,3 +66,4 @@ export const TrinityForce: Item = {
     35
   ]
 }
+export default item

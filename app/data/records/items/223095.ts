@@ -1,9 +1,7 @@
-export const Stormrazor: Item = {
+const item: Item =  {
   "name": "Stormrazor",
   "id": 223095,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -34,7 +32,6 @@ export const Stormrazor: Item = {
       "combined": 2500,
       "sell": 1000
     },
-    "purchasable": true,
     "tags": [
       "MARKSMAN",
       "ONHIT_EFFECTS"
@@ -44,3 +41,4 @@ export const Stormrazor: Item = {
     30
   ]
 }
+export default item

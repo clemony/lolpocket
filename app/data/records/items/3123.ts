@@ -1,9 +1,7 @@
-export const ExecutionersCalling: Item = {
+const item: Item =  {
   "name": "Executioner's Calling",
   "id": 3123,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1036,
@@ -47,7 +45,6 @@ export const ExecutionersCalling: Item = {
       "combined": 450,
       "sell": 320
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "MARKSMAN",
@@ -61,3 +58,4 @@ export const ExecutionersCalling: Item = {
     35
   ]
 }
+export default item

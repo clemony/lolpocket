@@ -1,9 +1,7 @@
-export const ZazzaksRealmspike: Item = {
+const item: Item =  {
   "name": "Zaz'Zak's Realmspike",
   "id": 3871,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3867,
@@ -47,7 +45,6 @@ export const ZazzaksRealmspike: Item = {
       "combined": 0,
       "sell": 160
     },
-    "purchasable": true,
     "tags": [
       "SUPPORT"
     ]
@@ -56,3 +53,4 @@ export const ZazzaksRealmspike: Item = {
     11
   ]
 }
+export default item

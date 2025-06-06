@@ -1,9 +1,7 @@
-export const LegendaryTankItem: Item = {
+const item: Item =  {
   "name": "Legendary Tank Item",
   "id": 220005,
-  "rank": [
-    "Consumable"
-  ],
+  "rank": "Consumable",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -14,10 +12,10 @@ export const LegendaryTankItem: Item = {
       "total": 2000,
       "combined": 2000,
       "sell": 800
-    },
-    "purchasable": true
+    }
   },
   "maps": [
     30
   ]
 }
+export default item

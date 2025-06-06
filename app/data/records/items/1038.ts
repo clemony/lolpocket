@@ -1,9 +1,7 @@
-export const BFSword: Item = {
+const item: Item =  {
   "name": "B. F. Sword",
   "id": 1038,
-  "rank": [
-    "Basic"
-  ],
+  "rank": "Basic",
   "buildsInto": [
     {
       "id": 3032,
@@ -58,7 +56,6 @@ export const BFSword: Item = {
       "combined": 1300,
       "sell": 520
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "MARKSMAN",
@@ -72,3 +69,4 @@ export const BFSword: Item = {
     35
   ]
 }
+export default item

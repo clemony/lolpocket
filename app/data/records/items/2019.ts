@@ -1,9 +1,7 @@
-export const SteelSigil: Item = {
+const item: Item =  {
   "name": "Steel Sigil",
   "id": 2019,
-  "rank": [
-    "Epic"
-  ],
+  "rank": "Epic",
   "buildsFrom": [
     {
       "id": 1029,
@@ -52,7 +50,6 @@ export const SteelSigil: Item = {
       "combined": 150,
       "sell": 440
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER"
     ]
@@ -64,3 +61,4 @@ export const SteelSigil: Item = {
     35
   ]
 }
+export default item

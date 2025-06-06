@@ -1,9 +1,7 @@
-export const Runecarver: Item = {
+const item: Item =  {
   "name": "Runecarver",
   "id": 447108,
-  "rank": [
-    "Special"
-  ],
+  "rank": "Special",
   "specialRecipe": 220007,
   "noEffects": false,
   "removed": false,
@@ -36,7 +34,6 @@ export const Runecarver: Item = {
       "combined": 1000,
       "sell": 0
     },
-    "purchasable": true,
     "tags": [
       "MAGE"
     ]
@@ -45,3 +42,4 @@ export const Runecarver: Item = {
     30
   ]
 }
+export default item

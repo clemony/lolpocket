@@ -1,9 +1,7 @@
-export const StaffOfFlowingWater: Item = {
+const item: Item =  {
   "name": "Staff of Flowing Water",
   "id": 6616,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3108,
@@ -43,7 +41,6 @@ export const StaffOfFlowingWater: Item = {
       "combined": 800,
       "sell": 900
     },
-    "purchasable": true,
     "tags": [
       "SUPPORT"
     ]
@@ -55,3 +52,4 @@ export const StaffOfFlowingWater: Item = {
     35
   ]
 }
+export default item

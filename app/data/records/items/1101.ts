@@ -1,9 +1,7 @@
-export const ScorchclawPup: Item = {
+const item: Item =  {
   "name": "Scorchclaw Pup",
   "id": 1101,
-  "rank": [
-    "Starter"
-  ],
+  "rank": "Starter",
   "specialRecipe": 0,
   "noEffects": false,
   "removed": false,
@@ -30,7 +28,6 @@ export const ScorchclawPup: Item = {
       "combined": 450,
       "sell": 180
     },
-    "purchasable": true,
     "tags": [
       "FIGHTER",
       "MARKSMAN",
@@ -45,3 +42,4 @@ export const ScorchclawPup: Item = {
     21
   ]
 }
+export default item

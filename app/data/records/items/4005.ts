@@ -1,9 +1,7 @@
-export const ImperialMandate: Item = {
+const item: Item =  {
   "name": "Imperial Mandate",
   "id": 4005,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 3108,
@@ -43,7 +41,6 @@ export const ImperialMandate: Item = {
       "combined": 500,
       "sell": 900
     },
-    "purchasable": true,
     "tags": [
       "SUPPORT"
     ]
@@ -55,3 +52,4 @@ export const ImperialMandate: Item = {
     35
   ]
 }
+export default item

@@ -1,9 +1,7 @@
-export const RylaisCrystalScepter: Item = {
+const item: Item =  {
   "name": "Rylai's Crystal Scepter",
   "id": 3116,
-  "rank": [
-    "Legendary"
-  ],
+  "rank": "Legendary",
   "buildsFrom": [
     {
       "id": 1026,
@@ -46,7 +44,6 @@ export const RylaisCrystalScepter: Item = {
       "combined": 450,
       "sell": 1040
     },
-    "purchasable": true,
     "tags": [
       "MAGE"
     ]
@@ -58,3 +55,4 @@ export const RylaisCrystalScepter: Item = {
     35
   ]
 }
+export default item
