@@ -1,7 +1,12 @@
-import { hexoid } from 'hexoid'
-import { toast } from 'vue-sonner'
+import { hexoid } from "hexoid"
+import { toast } from "vue-sonner"
 
-export async function addPocket(name: string, tags: string[], icon: string, key?: string) {
+export async function addPocket(
+  name: string,
+  tags: string[],
+  icon: string,
+  key?: string
+) {
   const toID = hexoid()
   const pocketKey = key || toID()
 
@@ -13,27 +18,27 @@ export async function addPocket(name: string, tags: string[], icon: string, key?
 
   const newPocket: Pocket = {
     key: pocketKey,
-    name: name || await generateShortString(),
-    roles: ['all'],
-    icon: icon || '/img/lp/192.webp',
+    name: name || generateName(),
+    roles: ["all"],
+    icon: icon || "/img/lp/192.webp",
     champions: [],
-    items: [await itemSet as ItemSet],
+    items: [(await itemSet) as ItemSet],
     runes: [runeSet],
     spells: [spellSet],
-    tags: tags?.length ? tags : [''],
+    tags: tags?.length ? tags : [""],
     location: {
       pinned: false,
-      folder: 'all',
+      folder: "all",
     },
-    notes: [''],
+    notes: [""],
     card: {
       splash: null,
-      align: '',
-      color: '#FFFFFF',
-      filter: 'grayscale',
+      align: "",
+      color: "#FFFFFF",
+      filter: "grayscale",
       font: {
-        0: 'var(--font-serif)',
-        1: 'var(--font-sans)',
+        0: "var(--font-serif)",
+        1: "var(--font-sans)",
       },
     },
     complete: {
@@ -44,20 +49,20 @@ export async function addPocket(name: string, tags: string[], icon: string, key?
     dateUpdated: createDateObject(),
   }
 
-  console.log('💠 - addPocket - newPocket:', newPocket)
+  console.log("💠 - addPocket - newPocket:", newPocket)
 
   ps.pockets.push(newPocket)
 
-  console.log('💠 - addPocket - ps.pocket:', ps.pockets)
+  console.log("💠 - addPocket - ps.pocket:", ps.pockets)
   const newPocketToast = toast.success(`Pocket ${newPocket.name} created.`, {
-    description: 'Head to your new pocket and start planning?',
+    description: "Head to your new pocket and start planning?",
     duration: 7000,
     action: {
-      label: 'Open Pocket',
+      label: "Open Pocket",
       onClick: () => navigateTo({ path: `/pocket/${newPocket.key}` }),
     },
     cancel: {
-      label: '×',
+      label: "×",
       onClick: () => toast.dismiss(newPocketToast),
     },
   })

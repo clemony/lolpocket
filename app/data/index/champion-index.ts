@@ -1,4 +1,4 @@
-// Auto-generated. Do not edit manually.
+// Updated Patch 25.11 - 06/08/2025 12:09:48 PM CDT
 
 export const championIndex: ChampionIndex[] = [
   {
@@ -422,11 +422,6 @@ export const championIndex: ChampionIndex[] = [
     "name": "Miss Fortune"
   },
   {
-    "id": 62,
-    "key": "MonkeyKing",
-    "name": "Wukong"
-  },
-  {
     "id": 82,
     "key": "Mordekaiser",
     "name": "Mordekaiser"
@@ -780,6 +775,11 @@ export const championIndex: ChampionIndex[] = [
     "id": 19,
     "key": "Warwick",
     "name": "Warwick"
+  },
+  {
+    "id": 62,
+    "key": "MonkeyKing",
+    "name": "Wukong"
   },
   {
     "id": 498,

@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "./default-theme";
+@import "./theme";
 
 @theme {
   --color-precision: oklch(85.49% 0.0892 84.09);
@@ -261,17 +261,6 @@
     @apply bg-resolve;
   }
 }
-.gradient {
-  background: linear-gradient(
-    137deg,
-    rgba(231, 207, 120, 0.7) 0%,
-    rgba(220, 124, 124, 0.7) 20%,
-    rgba(178, 164, 221, 0.7) 40%,
-    rgba(175, 212, 150, 0.7) 60%,
-    rgba(165, 226, 229, 0.7) 80%
-  );
-  background-size: 550%;
-}
 
 .empty {
   background: linear-gradient(
@@ -302,31 +291,39 @@
   );
 }
 
-.none,
-.precision,
-.domination,
-.sorcery,
-.resolve,
-.inspiration {
+.gradient {
+  background:
+    linear-gradient(
+      137deg,
+      rgba(231, 207, 120, 0.7) 0%,
+      rgba(220, 124, 124, 0.7) 20%,
+      rgba(178, 164, 221, 0.7) 36%,
+      rgba(100, 158, 236, 0.6) 46%,
+      rgba(175, 212, 150, 0.7) 62%,
+      rgba(165, 226, 229, 0.7) 80%,
+      rgba(174, 220, 242, 0.7) 100%
+    ),
+    var(--background-image-noise);
+  background-size: 580%;
   transition: all 0.5s ease-in-out;
 }
 
-.precision {
+.gradient[data-path="Precision"] {
   background-position: 0%;
 }
 
-.domination {
+.gradient[data-path="Domination"] {
   background-position: 20%;
 }
 
-.sorcery {
-  background-position: 42%;
+.gradient[data-path="Sorcery"] {
+  background-position: 44%;
 }
 
-.resolve {
-  background-position: 83%;
+.gradient[data-path="Resolve"] {
+  background-position: 80%;
 }
 
-.inspiration {
+.gradient[data-path="Inspiration"] {
   background-position: 100%;
 }

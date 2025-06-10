@@ -38,10 +38,10 @@ onMounted(() => {
           :key="item.id"
           :data-state="filtered.includes(item.id) ? 'visible' : 'hidden'"
 
-          class="group   data-[state=hidden]:scale-0 data-[state=hidden]:size-0
+          class="group relative  overflow-hidden data-[state=hidden]:scale-0 data-[state=hidden]:size-0
 data-[state=visible]::scale-100 data-[state=visible]:size-28 grid place-items-center">
           <LazyPopoverItem
-            v-show="filtered.includes(item.id)" :id="item.id" class=" group-data-[state=visible]:animate-in ease-[cubic-bezier(.81,.47,.61,1.3)]  group-data-[state=visible]:fade-in  group-data-[state=visible]:zoom-in-50  group-data-[state=hidden]:animate-out   group-data-[state=hidden]:fade-out  relative group-data-[state=hidden]:scale-0 h-auto aspect-square  rounded-lg size-22 **:size-22'" />
+            v-show="filtered.includes(item.id)" :id="item.id" class=" group-data-[state=visible]:animate-in ease-[cubic-bezier(.81,.47,.61,1.3)]  group-data-[state=visible]:fade-in  group-data-[state=visible]:zoom-in-50  group-data-[state=hidden]:animate-out   group-data-[state=hidden]:fade-out group-data-[state=hidden]:opacity-0  relative group-data-[state=hidden]:scale-0 h-auto aspect-square  rounded-lg relative max-w-22 size-22 **:size-22'" />
         </div>
       </transition-slide>
     </div>

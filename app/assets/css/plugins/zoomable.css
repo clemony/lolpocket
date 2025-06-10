@@ -1,20 +1,20 @@
-@import 'tailwindcss';
-@import '../default-theme';
+@import "tailwindcss";
+@import "../theme";
 
 .controll {
-    @apply !flex flex-row !bg-b2/40 items-start opacity-0 scale-75 ;
+  @apply !flex flex-row !bg-b2/40 items-start opacity-0 scale-75;
 }
 
 #v-zoomable-control-btns {
-    @apply -top-12 -right-px absolute h-fit bg-transparent flex items-start !border-none !border-0 !border-transparent;
+  @apply -top-12 -right-px absolute h-fit bg-transparent flex items-start !border-none !border-0 !border-transparent;
 }
 .controll__item--circle {
-    @apply hidden;
+  @apply hidden;
 }
 
-.controll__zoom-in{
-    @apply order-1;
+.controll__zoom-in {
+  @apply order-1;
 }
-.controll__zoom-out{
-    @apply order-2;
+.controll__zoom-out {
+  @apply order-2;
 }

@@ -38,12 +38,6 @@ defineExpose({
   clearForm,
   name,
 })
-
-async function randomizeName(){
-  const n = await generateShortString()
-  name.value = n
-  emit('update:name', name.value)
-}
 </script>
 
 <template>
@@ -59,7 +53,6 @@ async function randomizeName(){
       </DialogHeader>
 
       <div class=" grid grid-cols-[0.7fr_2fr] gap-6 size-full">
-
         <div class="flex gap-7 flex-col items-center size-full pt-5 pb-4">
           <p class="w-full text-left flex items-center gap-2 text-4 px-5 font-semibold tracking-tight">
             Icon <icon name="select" />
@@ -67,7 +60,7 @@ async function randomizeName(){
           <Popover>
             <PopoverTrigger class="justify-self-center group">
               <LazyPocketIcon
-              :url="selectedIcon"
+                :url="selectedIcon"
                 class="**:!rounded-xl size-4 tldr-20 group-data-[state=open]:ring-1 cursor-pointer !rounded-xl overflow-hidden inset-shadow-rounded ring-offset-3 ring-offset-b1 shadow-rounded size-28 inset-shadow-black shadow-black/30  hover:ring-1" />
             </PopoverTrigger>
             <IconPopover v-model:selected-icon="selectedIcon" side="right" :side-offset="70" align="start" :align-offset="-136" @update:selected-icon="(e) => selectedIcon = e" />
@@ -88,7 +81,7 @@ async function randomizeName(){
 
               <span class="flex gap-2">
                 <CloseButton />
-                <RandomButton v-tippy="'No brain? Meet Button.'" @click.stop="randomizeName()" />
+                <RandomButton v-tippy="'No brain? Meet Button.'" @click.stop="name = generateName()" />
               </span>
             </div>
 

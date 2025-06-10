@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "./default-theme.css";
+@import "./theme.css";
 
 @layer components {
   .btn-ghost-dark {

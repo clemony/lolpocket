@@ -2,22 +2,24 @@ import fs from "node:fs"
 import path from "node:path"
 import { markUpdate } from "../utils/mark-update"
 
-const championsDir = path.resolve("./data/champions")
 const outputFile = path.resolve("./app/data/index/champion-index.ts")
 
-const files = fs
-  .readdirSync(championsDir)
-  .filter((file) => file.endsWith(".json"))
+const champs: Champion[] = JSON.parse(
+  fs.readFileSync("./data/raw/champions-raw.json", "utf-8")
+)
 
-const index = files.map((file) => {
-  const filePath = path.join(championsDir, file)
-  const data = JSON.parse(fs.readFileSync(filePath, "utf-8"))
-  return {
-    id: data.id ?? path.basename(file, ".json"),
-    key: data.key,
-    name: data.name,
-  }
-})
+// Extract id, name, and path
+const index: { id: number; key: string; name: string }[] = []
+
+for (const champ in champs) {
+  const champion = champs[champ]
+
+  index.push({
+    id: champion.id,
+    key: champion.key,
+    name: champion.name,
+  })
+}
 
 // Create the TypeScript content
 const output = `// ${markUpdate()}

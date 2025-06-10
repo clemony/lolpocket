@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "./default-theme";
+@import "./theme";
 
 @layer components {
   .tip-icon {

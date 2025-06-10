@@ -3,7 +3,7 @@ import type { PrimitiveProps } from 'reka-ui'
 import { Primitive } from 'reka-ui'
 
 const {as = "span", class: className} = defineProps<PrimitiveProps &  {
-  as: string
+  as?: string
     class?: HTMLAttributes['class']
 }>()
 

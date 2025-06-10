@@ -1,9 +1,5 @@
 import fs from "node:fs"
 
-const loadPatch = JSON.parse(
-  fs.readFileSync("./data/index/patch-index.json", "utf-8")
-)
-
 export function getFormattedDateTime(): string {
   const now = new Date()
 
@@ -33,5 +29,9 @@ export function getFormattedDateTime(): string {
 }
 
 export function markUpdate() {
+  const loadPatch = JSON.parse(
+    fs.readFileSync("./data/patch-index.json", "utf-8")
+  )
+
   return `Updated Patch ${loadPatch[0]} - ${getFormattedDateTime()}`
 }

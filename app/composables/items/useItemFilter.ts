@@ -43,7 +43,7 @@ export function useItemFilter(filters: ItemFilter) {
       matchedIds = new Set(mapIds.filter((id) => matchedIds.has(id)))
     }
 
-    if (filters.purchasable === false) {
+    if (filters.purchasable === true) {
       const unpurchasableSet = new Set(itemFilters.unpurchasable)
       matchedIds = new Set(
         [...matchedIds].filter((id) => !unpurchasableSet.has(id))

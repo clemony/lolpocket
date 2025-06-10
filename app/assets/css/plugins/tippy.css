@@ -1,5 +1,5 @@
-@import 'tailwindcss';
-@import '../default-theme.css';
+@import "tailwindcss";
+@import "../theme.css";
 
 .tippy-content {
   @apply text-3;
@@ -9,16 +9,15 @@
   @apply shadow-pretty bg-neutral/80 text-nc/80 rounded-lg px-4 py-1.25 backdrop-blur-md;
 }
 
-.tippy-box[data-inertia][data-state='visible'] {
+.tippy-box[data-inertia][data-state="visible"] {
   transition-timing-function: cubic-bezier(0.28, 0.93, 0.75, 1.38);
 }
 
-.tippy-box[data-theme~='basic'] {
+.tippy-box[data-theme~="basic"] {
   background-color: var(--color-b1);
   color: var(--color-bc);
 }
 
-.tippy-box[data-theme~='field'] {
-      @apply fieldset mt-1 !shadow-warm-soft !drop-shadow-sm drop-shadow-black/5 relative w-full h-fit bg-b2 border border-b3 p-4 rounded-box;
-    }
-
+.tippy-box[data-theme~="field"] {
+  @apply fieldset mt-1 !shadow-warm-soft !drop-shadow-sm drop-shadow-black/5 relative w-full h-fit bg-b2 border border-b3 p-4 rounded-box;
+}

@@ -60,7 +60,7 @@ declare global {
 
   interface ItemSet {
     name: string
-    items: ItemId[]
+    items: number[]
   }
 
   interface Effect {

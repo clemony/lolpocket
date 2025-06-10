@@ -19,6 +19,7 @@ function handleLoad() {
     <Img
       v-if="id"
       :img="`/img/item/${id}.webp`"
+      quality="100"
       alt="Item Image"
       class="aspect-square opacity-96 size-full rounded-lg" @loaded="handleLoad()" />
 

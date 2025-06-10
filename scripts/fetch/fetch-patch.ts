@@ -26,7 +26,7 @@ async function main() {
     const normalized = filtered.map((patch) => normalizePatch(patch))
 
     await writeFile(
-      "./data/index/patch-index.json",
+      "./data/patch-index.json",
       JSON.stringify(normalized, null, 2)
     )
 

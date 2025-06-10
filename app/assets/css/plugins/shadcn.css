@@ -1,43 +1,39 @@
-@import 'tailwindcss';
-@import './default-theme';
+@import "tailwindcss";
+@import "./theme";
 
 @layer base {
   :root {
-
-
-
   }
 }
 @theme inline {
-    --background: var(--color-b1);
-    --foreground: var(--color-bc);
+  --background: var(--color-b1);
+  --foreground: var(--color-bc);
 
-    --muted: var(--color-b2);
-    --muted-foreground: var(--color-bc);
+  --muted: var(--color-b2);
+  --muted-foreground: var(--color-bc);
 
-    --popover: var(--color-b1) ;
-    --popover-foreground: var(--color-b1);
+  --popover: var(--color-b1);
+  --popover-foreground: var(--color-b1);
 
-    --card: var(--color-b1);
-    --card-foreground:var(--color-bc);
+  --card: var(--color-b1);
+  --card-foreground: var(--color-bc);
 
-    --border: var(--color-b2);
-    --input: var(--color-b2);
+  --border: var(--color-b2);
+  --input: var(--color-b2);
 
-    --primary: var(--color-neutral) !important;
-    --primary-foreground: var(--color-nc);
+  --primary: var(--color-neutral) !important;
+  --primary-foreground: var(--color-nc);
 
-    --secondary: var(--color-b3) !important;
-    --secondary-foreground:var(--color-bc);
+  --secondary: var(--color-b3) !important;
+  --secondary-foreground: var(--color-bc);
 
-    --accent: var(--color-b2);
-    --accent-foreground: var(--color-bc);
+  --accent: var(--color-b2);
+  --accent-foreground: var(--color-bc);
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
 
-    --ring: var(--color-b2);
-
+  --ring: var(--color-b2);
 
   --sidebar-background: 0 0% 98%;
 
@@ -53,9 +49,8 @@
 
   --sidebar-border: 220 13% 91%;
 
-  --sidebar-ring: 217.2 91.2% 59.8%
-
-  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --sidebar-ring: 217.2 91.2% 59.8% --animate-accordion-down: accordion-down
+    0.2s ease-out;
 
   --animate-accordion-up: accordion-up 0.2s ease-out;
 }
@@ -68,4 +63,3 @@
     @apply bg-background text-foreground;
   }
 }
-

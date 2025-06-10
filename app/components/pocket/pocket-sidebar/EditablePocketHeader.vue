@@ -7,7 +7,7 @@ import {
   EditableRoot,
 } from 'reka-ui'
 
-const {pocket,  class: className, wrapperClass, buttonClass } = defineProps<{
+const { pocket: p, class: className, wrapperClass, buttonClass } = defineProps<{
   pocket?: Pocket
   class?: HTMLAttributes['class']
   wrapperClass?: HTMLAttributes['class']
@@ -15,19 +15,13 @@ const {pocket,  class: className, wrapperClass, buttonClass } = defineProps<{
 }>()
 
 const emit = defineEmits(['submit', 'update:model-value'])
-
+const pocket = computed(() => p)
 const modelValue = ref(null)
-
 
 function update(e) {
   modelValue.value = e
   emit('update:model-value', modelValue.value)
 }
-onMounted (() => {
-  if (pocket)
-  modelValue.value = pocket.name ?? 'Pocket'
-
-})
 
 const editableRef = ref()
 
@@ -37,13 +31,16 @@ function activateEdit(e: MouseEvent, editFn: () => void) {
   editFn()
 }
 
+onMounted (async () => {
+  modelValue.value = pocket.value.name
+})
 </script>
 
 <template>
   <!-- -->
   <EditableRoot
-    ref="editableRef"
     v-if="pocket && modelValue"
+    ref="editableRef"
     v-slot="{ isEditing, edit }"
     v-model:model-value="pocket.name"
     activation-mode="none"
@@ -89,7 +86,7 @@ function activateEdit(e: MouseEvent, editFn: () => void) {
           class="absolute inset-0 flex items-center justify-end gap-1 px-1 pointer-events-auto">
           <button
             class="btn btn-ghost btn-xs btn-square hover:!bg-b3/40 hover:border-b3/80 hover:inset-shadow-xxs"
-            @click="generateShortString().then(r => modelValue = r)">
+            @click="pocket.name = generateName()">
             <icon name="shuffle" class="size-3 dst" />
           </button>
 

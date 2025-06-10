@@ -5,6 +5,7 @@ export const useIndexStore = defineStore(
   () => {
     const champions = ref<ChampionIndex[]>()
     const runes = ref<RuneIndex[]>([])
+    const paths = ref<PathIndex[]>([])
     const items = ref<ItemIndex[]>([])
     const maps = ref<MapIndex[]>([])
     const shards = ref<Shard[]>([])
@@ -19,7 +20,7 @@ export const useIndexStore = defineStore(
     }
 
     async function loadChamps() {
-      if (champions.value.length) return
+      // if (champions.value.length) return
       const { championIndex } = await import("data/index/champion-index")
       champions.value = championIndex
     }
@@ -40,6 +41,12 @@ export const useIndexStore = defineStore(
       if (runes.value.length) return
       const { runeIndex } = await import("data/index/rune-index")
       runes.value = runeIndex
+    }
+
+    async function loadPaths() {
+      if (paths.value.length) return
+      const { pathIndex } = await import("data/index/path-index")
+      paths.value = pathIndex
     }
 
     async function loadDefaults() {
@@ -78,13 +85,13 @@ export const useIndexStore = defineStore(
 
       // load
       loadSkins,
+      loadPaths,
       loadDefaults,
 
       // helpers
       findInIndex,
       getByIndex,
       spellById: (id: number) => getByIndex(spells.value, "id", id),
-      itemById: (id: number) => getByIndex(items.value, "id", id),
 
       // champion helpers
 
@@ -102,6 +109,7 @@ export const useIndexStore = defineStore(
 
       // item helpers
 
+      itemById: (id: number) => getByIndex(items.value, "id", id),
       itemIdByName: (name: string) =>
         findInIndex(items.value, "name", name, "id"),
       itemNameById: (id: number) => findInIndex(items.value, "id", id, "name"),
@@ -112,6 +120,11 @@ export const useIndexStore = defineStore(
       runeKeyById: (id: number) => findInIndex(runes.value, "id", id, "key"),
       runeNameById: (id: number) => findInIndex(runes.value, "id", id, "name"),
 
+      // paths
+
+      pathNameById: (id: number) =>
+        findInIndex(paths.value, "id", id, "name") as string,
+
       spellNameById: (id: number) =>
         findInIndex(spells.value, "id", id, "name"),
       tileByKey: (key: string) => skin.value?.[key]?.tilePath,
@@ -119,7 +132,7 @@ export const useIndexStore = defineStore(
       centeredByKey: (key: string) => skin.value?.[key]?.centeredPath,
       loadScreenByKey: (key: string) => skin.value?.[key]?.loadPath,
       mapNameById: (id: number) =>
-        maps.value.find((m) => m.id === id)?.aka ||
+        maps.value.find((m) => m.id === id)?.mapStringId ||
         maps.value.find((m) => m.id === id)?.name ||
         "",
     }

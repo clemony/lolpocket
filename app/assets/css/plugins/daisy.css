@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "../default-theme.css" ;
+@import "../theme.css";
 @plugin "daisyui";
 
 @plugin "daisyui" {
@@ -39,13 +39,11 @@
     --input-color: var(--color-b3);
   }
 
-    --tab-border-color: var(--b3);
-    --tab-border-colors: var(--b3);
-      --radius-selector: 0.4rem;
+  --tab-border-color: var(--b3);
+  --tab-border-colors: var(--b3);
+  --radius-selector: 0.4rem;
   --radius-box: 1rem;
   --radius-field: 0.55rem !important;
   --depth: 1;
   --noise: 1;
 }
-
-

@@ -1,6 +1,6 @@
 @import "tailwindcss";
-@import "./colors.css";
-@import "./default-theme.css";
+@import "../colors.css";
+@import "../theme.css";
 
 /* button */
 
@@ -77,46 +77,6 @@
 @utility divider {
   @apply h-px text-2 font-semibold opacity-50;
 }
-/* mask */
-
-@utility mask-left {
-  mask-image: linear-gradient(to right, black 50%, transparent);
-}
-
-@utility mask-right {
-  mask-image: linear-gradient(to left, black 50%, transparent);
-}
-
-@utility mask-right-100 {
-  mask-image: linear-gradient(to left, black 1%, transparent);
-}
-
-@utility mask-left-sm {
-  mask-image: linear-gradient(to right, black 90%, transparent);
-}
-
-@utility mask-right-sm {
-  mask-image: linear-gradient(to left, black 90%, transparent);
-}
-
-@utility mask-top {
-  mask-image: linear-gradient(to top, black 50%, transparent);
-}
-
-@utility mask-bottom-right {
-  mask-image: linear-gradient(-45deg, black 70%, transparent);
-}
-
-@utility mask-bottom {
-  mask-image: linear-gradient(to bottom, #000 50%, transparent);
-}
-
-@utility mask-top-right {
-  mask-image: linear-gradient(-45%, #000 50%, transparent);
-}
-@utility mask-edges {
-  mask-image: radial-gradient(circle at 75% 85%, transparent 50%, #000);
-}
 
 @utility btn-depth {
   --depth: 1;
@@ -129,4 +89,13 @@
 
 @utility text-shadow {
   text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.11);
+}
+
+@utility tldr-* {
+  transition-property: all;
+  transition-duration: calc(--value(integer) * 10) ms;
+}
+
+@utility dr-* {
+  transition-duration: calc(--value(integer) * 10) ms;
 }

@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/06/2025 12:19:17 PM CDT
+// Updated Patch 25.11 - 06/08/2025 12:01:48 PM CDT
 
 const champion: Champion =  {
   "id": 26,

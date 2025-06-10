@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 const ix = useIndexStore()
 
-
 const shuffled = ix.champions.sort(() => 0.5 - Math.random())
 
 // Get sub-array of first n elements after shuffled
 const selectedChamps = shuffled.slice(0, 6)
+console.log('💠 - selectedChamps:', selectedChamps)
 
 const currentItems = ref()
 
@@ -77,10 +77,9 @@ onMounted (async () => {
   <div class="bg-b2/40 shadow-smooth mt-10 h-90 w-full rounded-lg relative flex flex-col gap-6 items-center justify-center">
     <div class="flex gap-4 absolute top-5 h-16">
       <div v-if="champModel && champComplete" v-tippy="champModel.name" class="size-16   hover:scale-110 hover:ring-1 hover:ring-neutral rounded-lg shadow-sm drop-shadow-sm transition-all duration-400 animate-in slide-in-from-bottom-10 hover:ring-offset-2 hover:ring-offset-b2">
-        <div class="overflow-hidden size-16 rounded-lg">
-          <img :src="`/img/champion/${champModel.id}.webp`" class="size-full scale-115" />
-        </div>
+        <ChampionIcon :id="champModel" class="overflow-hidden size-16 rounded-lg" />
       </div>
+
       <template v-for="(item, i) in itemModel">
         <div v-if="itemModel[i].item && itemModel[i].complete.value == true" :key="i" v-tippy="itemModel[i].item.value.name" class="size-16   hover:scale-110 hover:ring-1 hover:ring-neutral rounded-lg shadow-sm drop-shadow-sm transition-all duration-400 animate-in slide-in-from-bottom-10 hover:ring-offset-2 hover:ring-offset-b2">
           <div class="overflow-hidden size-16 rounded-lg">
@@ -97,12 +96,9 @@ onMounted (async () => {
       </Transition>
       <transition-slide group :offset="[8, 0]" :duration="1000" class="flex items-center justify-center gap-4">
         <template v-for="champion in selectedChamps" :key="champion.name">
-          <label v-if="champModel ? champion == champModel : selectedChamps.includes(champion)" v-tippy="champion.name" class="size-16 cursor-pointer hover:scale-110 hover:ring-1 hover:ring-neutral rounded-lg shadow-sm drop-shadow-sm transition-all duration-300 hover:ring-offset-2 hover:ring-offset-b2" :class="{ hidden: champModel != null && champion != champModel }">
+          <ChampionIcon v-if="champModel ? champion == champModel : selectedChamps.includes(champion)" :id="champion.id" v-tippy="champion.name" class="size-16 cursor-pointer hover:scale-110 hover:ring-1 hover:ring-neutral rounded-lg shadow-sm drop-shadow-sm transition-all duration-200 hover:ring-offset-2 hover:ring-offset-b2" :class="{ hidden: champModel != null && champion != champModel }">
             <input v-model="champModel" name="champion" type="radio" class="peer hidden" :value="champion" @change="setTimer('champ')" />
-            <div class="overflow-hidden size-16 rounded-lg">
-              <img :src="`/img/champion/${champion.id}.webp`" class="size-full scale-115" />
-            </div>
-          </label>
+          </ChampionIcon>
 
           <h1
             v-if="champion == champModel" class="flex gap-3 items-center ">

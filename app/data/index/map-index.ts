@@ -1,49 +1,38 @@
-export const mapIndex = [
+// Updated Patch 25.11 - 06/06/2025 05:41:20 PM CDT
+export const mapIndex: MapIndex[] = [
   {
-    id: 1,
-    name: "Summoner's Rift",
+    "id": 11,
+    "name": "Summoner's Rift",
+    "mapStringId": "SR"
   },
   {
-    id: 2,
-    name: "Summoner's Rift",
+    "id": 12,
+    "name": "Howling Abyss",
+    "mapStringId": "HA"
   },
   {
-    id: 3,
-    name: "The Proving Grounds",
+    "id": 21,
+    "name": "Nexus Blitz",
+    "mapStringId": "NB"
   },
   {
-    id: 4,
-    name: "Twisted Treeline",
+    "id": 22,
+    "name": "Teamfight Tactics",
+    "mapStringId": "TFT"
   },
   {
-    id: 8,
-    name: "The Crystal Scar",
+    "id": 30,
+    "name": "Arena",
+    "mapStringId": "TGR"
   },
   {
-    id: 10,
-    name: "Twisted Treeline",
+    "id": 33,
+    "name": "Swarm",
+    "mapStringId": "Strawberry"
   },
   {
-    id: 11,
-    name: "Summoner's Rift",
-    aka: "SR",
-  },
-  {
-    id: 12,
-    name: "Howling Abyss",
-    aka: "ARAM",
-  },
-  {
-    id: 20,
-    name: "Crash Site",
-  },
-  {
-    id: 21,
-    name: "Nexus Blitz",
-  },
-  {
-    id: 30,
-    name: "Rings of Wrath",
-    aka: "Arena",
-  },
+    "id": 35,
+    "name": "The Bandlewood",
+    "mapStringId": "BDW"
+  }
 ]

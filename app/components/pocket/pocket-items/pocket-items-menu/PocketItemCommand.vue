@@ -3,10 +3,8 @@ const props = defineProps<{
   class?: HTMLAttributes['class']
   sideOffset?: number
   type?: string
-  pocket: Pocket
   hasData?: boolean
 }>()
-
 
 const emit = defineEmits(['update:open'])
 
@@ -15,7 +13,6 @@ const hasData = computed (() => props.hasData)
 watchEffect(() => {
   emit('update:open', isOpen.value)
 })
-
 </script>
 
 <template>
@@ -32,24 +29,22 @@ watchEffect(() => {
         placeholder="Type or click a suggestion"
         class="w-full rounded-t-lg z-2 sticky top-0 left-0   shadow-none h-13 [&_svg]:size-4 **:!text-nc !bg-accent border-neutral/30 border-4" set-focus @update:query="e => e" />
 
-      <div class="grid grid-cols-[100px_1fr] overflow-hidden ">
-        <div class="size-full border-r border-r-accent overflow-y-auto max-h-115">
+      <div class="grid overflow-hidden ">
+        <!--   <div class="size-full border-r border-r-accent overflow-y-auto max-h-115">
           <ItemSorting />
 
           <Separator class="bg-accent mt-3 mb-3 " />
           <LazyItemCommandTags />
-        </div>
+        </div> -->
         <div class=" relative overflow-hidden size-full h-117">
-      
-            <div as="div" class="absolute top-0 left-0 inset-0 overflow-y-scroll">
-              <div>
-                <LazyItemCommandTypes />
+          <div as="div" class="absolute top-0 left-0 inset-0 overflow-y-scroll">
+            <div>
+              <LazyItemCommandTypes />
 
-                <Separator class="bg-accent mt-3 mb-1.5 " />
-                <LazyItemCommandStats />
-              </div>
+              <Separator class="bg-accent mt-3 mb-1.5 " />
+              <LazyItemCommandStats />
             </div>
-  
+          </div>
         </div>
       </div>
     </CustomPopoverContent>

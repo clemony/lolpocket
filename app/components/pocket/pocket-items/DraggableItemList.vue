@@ -25,20 +25,23 @@ const filteredIds = computed (() => {
       v-draggable="[
         filteredIds,
         {
-          'group': {
+          group: {
             name: 'items',
             put: false,
             pull: 'clone',
             revertClone: true,
           },
-          'sort': false,
-          'bubbleScroll': false,
-          'scroll': false,
-          'delay': 0,
+          sort: false,
+          bubbleScroll: false,
+          scroll: false,
+          delay: 0,
+          chosenClass: 'item-set-item-chosen',
+          ghostClass: 'draggable-item-ghost',
+          fallbackClass: 'draggable-item-fallback',
 
-          'force-fallback': true,
-          'fallbackTolerance': 0,
-          'fallbackOnBody': true,
+          forceFallback: true,
+          fallbackTolerance: 0,
+          fallbackOnBody: true,
 
         /*         'clone': (item) => ({
           ...item,
@@ -46,8 +49,8 @@ const filteredIds = computed (() => {
         }),*/
         },
       ]"
-      class=" grid grid-flow-row auto-cols-auto select-none h-fit   grid-cols-[repeat(auto-fill,minmax(54px,1fr))] justify-center gap-4 px-10  pb-10 pt-30">
-      <LazyPopoverItem v-for="item in filtered" :id="item" :key="item" hydrate-on-visible />
+      class="flex flex-wrap select-none  justify-self-center justify-start gap-4 px-10  pb-10 pt-30">
+      <LazyPopoverItem v-for="item in filtered" :id="item" :key="item" hydrate-on-visible class="size-20 aspect-square shadow-sm drop-shadow-sm rounded-lg" />
     </div>
   </div>
 </template>

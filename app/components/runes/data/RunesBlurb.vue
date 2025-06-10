@@ -1,10 +1,8 @@
 <script lang="ts" setup>
-import { motion } from 'motion-v'
 
-const { currentPath, title, layoutId } = defineProps<{
+const { currentPath, title} = defineProps<{
   currentPath: string | null
   title?: string
-  layoutId: string
 }>()
 
 const pathDescriptions = [
@@ -47,19 +45,15 @@ const a = computed(() => {
 </script>
 
 <template>
-  <motion.div layout :layoutId="layoutId" :key="currentPath"
-  :animate="{ opacity: 1}"
-  :initial="{opacity: 0}"
-  
-  :exit="{opacity: 0}">
+  <transition-fade group v-if="currentPath == currentPath">
     <div class="flex items-center gap-6 leading-none">
-      <h1 class="tracking-tight transition-all duration-300 text-8">
+      <h1 class="dst transition-all duration-300 text-8">
         {{ currentPath ?? (title || 'Runes') }}
       </h1>
-      <span class="pt-1 text-3 lowercase">{{ a.tag ?? 'select a path' }}</span>
+      <span class="pt-1 text-2 lowercase">{{ a.tag ?? 'select a path' }}</span>
     </div>
     <p class="text-4 mt-2.5 font-serif">
       {{ a.description || 'Precision, Domination, Sorcery, Resolve, Inspiration' }}.
     </p>
-  </motion.div>
+  </transition-fade>
 </template>

@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/06/2025 12:26:58 PM CDT
+// Updated Patch 25.11 - 06/07/2025 01:03:58 PM CDT
 
 export const runePaths: PathRecord = {
   "Domination": [

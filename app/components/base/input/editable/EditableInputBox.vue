@@ -25,7 +25,7 @@ const modelValue = ref(props.modelValue)
       <EditableEditTrigger class="edit-trigger group-hover:opacity-100 absolute right-0 pointer-events-none w-fit p-0">
         <icon name="mingcute:edit-line" class="opacity-85 size-3.5 shrink-0 " />
       </EditableEditTrigger>
-      <RandomButton class="btn-ghost hidden group-focus-within:block absolute right-0" @click="modelValue = generateMediumString()" />
+      <RandomButton class="btn-ghost hidden group-focus-within:block absolute right-0" @click="modelValue = generateName()" />
     </EditableArea>
   </EditableRoot>
 </template>

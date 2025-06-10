@@ -1,9 +1,12 @@
 declare global {
-
   interface MapIndex {
     id: number
     name: string
-    aka?: string
+    mapStringId: string
+  }
+
+  interface MapData extends MapIndex {
+    description: string
   }
 
   interface Role {
@@ -21,7 +24,7 @@ declare global {
     text?: string
   }
 
-type SpellSet = [string, string]
+  type SpellSet = [string, string]
 
   interface UserSummoner {
     name: string
@@ -54,6 +57,5 @@ type SpellSet = [string, string]
     matches: MatchData[]
     simplifiedMatches: SimplifiedMatchData[]
   }
-
 }
-export { }
+export {}

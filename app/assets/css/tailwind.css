@@ -1,5 +1,5 @@
-@import 'tailwindcss';
-@import './index.css';
+@import "tailwindcss";
+@import "./index.css";
 
 @layer base {
   :root {
@@ -7,35 +7,68 @@
     font-size: 12px;
     user-select: none;
   }
-  
-  
- 
+
   html,
   body,
   #app {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Helvetica, Arial, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: var(--text-3);
+    font-family: var(--font-sans);
     @apply text-3 subpixel-antialiased text-bc selection:bg-neutral/80 selection:text-nc overflow-hidden h-screen w-screen;
   }
-  
+
   input,
-  input:where(:not([type='button'], [type='reset'], [type='submit'])),
-    select,
-    textarea,
-    .reset-input {
+  input:where(:not([type="button"], [type="reset"], [type="submit"])),
+  select,
+  textarea,
+  .reset-input {
     @apply outline-0 ring-0 ring-offset-0 focus:outline-0 focus:ring-0 border-transparent;
   }
-  
+
   html {
     font-size: 12px;
   }
-  
+
   body {
-    @apply bg-b1 @container/app relative ;
+    @apply bg-b1 @container/app relative;
   }
-  
+}
+
+@layer components {
+  h1 {
+    font-size: var(--text-9);
+    font-weight: 600;
+    line-height: none;
+  }
+
+  h2 {
+    font-size: var(--text-7);
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: var(--text-6);
+    font-weight: 600;
+  }
+
+  h4 {
+    font-size: var(--text-5);
+    font-weight: 600;
+  }
+
+  h5 {
+    font-size: var(--text-4);
+    font-weight: 500;
+  }
+
+  h5 {
+    font-size: var(--text-3);
+    font-weight: 500;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
   p {
     @apply leading-none;
   }
