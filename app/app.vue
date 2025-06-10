@@ -5,7 +5,7 @@ const appConfig = useAppConfig()
 
 onMounted(async () => {
   document.documentElement.setAttribute('data-theme', as.dataTheme ? as.dataTheme : 'midnight')
-  useAuth()
+  // useAuth()
   ix.loadDefaults()
 })
 </script>

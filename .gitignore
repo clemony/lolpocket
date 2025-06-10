@@ -24,6 +24,10 @@ logs
 # data folders
 /data/
 
+#wrangler
+.wrangler
+.dev.vars*
+
 # Local env files
 .env
 .env.*
