@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 33,
@@ -25,15 +25,15 @@ const champion: Champion =  {
       "perLevel": 0.5
     },
     "armor": {
-      "flat": 40,
-      "perLevel": 5.5
+      "flat": 35,
+      "perLevel": 4.5
     },
     "magicResistance": {
       "flat": 32,
       "perLevel": 2.05
     },
     "attackDamage": {
-      "flat": 55,
+      "flat": 65,
       "perLevel": 2.75
     },
     "movespeed": {
@@ -58,7 +58,7 @@ const champion: Champion =  {
       "flat": 1
     },
     "attackSpeed": {
-      "flat": 0.656,
+      "flat": 0.7,
       "perLevel": 2.215
     },
     "attackSpeedRatio": {
@@ -101,15 +101,13 @@ const champion: Champion =  {
         "icon": "https://cdn.communitydragon.org/latest/champion/Rammus/ability-icon/p",
         "effects": [
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Rammus' basic attacks deal 10 (+ 10% armor) bonus magic damage on-hit, increased to 15 (+ 15% armor) during Defensive Ball Curl.</p>"
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Rammus gains bonus attack damage equal to the sum of 15% total armor and 15% total magic resistance.</p>"
           }
         ],
         "targeting": "Passive",
         "affects": "Self",
-        "damageType": "Magic damage",
-        "spellEffects": "proc",
-        "notes": "Spiked Shell applies to structures.",
-        "blurb": "Innate:  Rammus' basic attacks deal bonus magic damage based on his  armor. This effect is increased during  Defensive Ball Curl."
+        "notes": "No additional details.",
+        "blurb": "Innate:  Rammus gains bonus AD equal to a percentage of his total armor and total magic resistance."
       }
     ],
     "Q": [
@@ -129,10 +127,10 @@ const champion: Champion =  {
                   {
                     "values": [
                       80,
-                      110,
-                      140,
-                      170,
-                      200
+                      120,
+                      160,
+                      200,
+                      240
                     ]
                   },
                   {
@@ -197,23 +195,23 @@ const champion: Champion =  {
         "icon": "https://cdn.communitydragon.org/latest/champion/Rammus/ability-icon/w",
         "effects": [
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rammus enters a defensive stance for 6 seconds, gaining bonus armor and bonus magic resistance. While active, enemies that use a basic attack on-hit against Rammus are dealt magic damage equal to Spiked Shell's bonus damage.</p>",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rammus enters a defensive stance for 7 seconds, gaining bonus armor and bonus magic resistance. While active, enemies that use a basic attack on-hit against Rammus are dealt 15 (+ 10% total armor) (+ 10% total magic resistance) magic damage.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Armor",
                 "modifiers": [
                   {
                     "values": [
-                      40
+                      27
                     ]
                   },
                   {
                     "values": [
-                      35,
+                      30,
+                      37.5,
                       45,
-                      55,
-                      65,
-                      75
+                      52.5,
+                      60
                     ],
                     "units": [
                       "% total armor"
@@ -226,16 +224,16 @@ const champion: Champion =  {
                 "modifiers": [
                   {
                     "values": [
-                      10
+                      27
                     ]
                   },
                   {
                     "values": [
                       30,
-                      35,
-                      40,
+                      37.5,
                       45,
-                      50
+                      52.5,
+                      60
                     ],
                     "units": [
                       "% total magic resistance"
@@ -244,9 +242,6 @@ const champion: Champion =  {
                 ]
               }
             ]
-          },
-          {
-            "description": "Rammus' basic attacks extend the remaining duration of Defensive Ball Curl by 0.4 seconds, up to a maximum of 4 additional seconds."
           },
           {
             "description": "Defensive Ball Curl can be recast after 1 second within the duration, and does so automatically upon casting Powerball or Soaring Slam."
@@ -268,7 +263,7 @@ const champion: Champion =  {
         "damageType": "Magic damage",
         "spellEffects": "aoe",
         "notes": "The initial cast counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nDeactivating the ability manually does not.\nDefensive Ball Curl ends immediately if  Powerball is cast.\nDefensive Ball Curl will return damage from attacks and/or abilities that apply on-hit effects ( Mystic Shot) as well as from  Runaan's Hurricane's Wind's Fury (will not return damage from turrets,  H-28G Evolution Turret, or  Jack in the Box).\nThe resistance scaling will factor from all sources, including Defensive Ball Curl's flat bonus. This will recalculate over the duration.",
-        "blurb": "Active:  Rammus enters a defensive stance for a few seconds, gaining  bonus armor and  bonus magic resist. During this time,  Spiked Shell's damage is increased and also applies to enemies that land a basic attack against Rammus.",
+        "blurb": "Active:  Rammus enters a defensive stance for a few seconds, gaining  bonus armor and  bonus magic resist. During this time, enemies that land a basic attack against Rammus are dealt magic damage.",
         "castTime": "none",
         "maxCharges": -1
       }
@@ -279,10 +274,10 @@ const champion: Champion =  {
         "icon": "https://cdn.communitydragon.org/latest/champion/Rammus/ability-icon/e",
         "effects": [
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rammus taunts the target enemy champion or monster for a duration and gains bonus attack speed for the same duration.</p>",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rammus taunts the target enemy champion or monster for a duration. Monsters are additionally dealt magic damage upon being affected.</p>",
             "leveling": [
               {
-                "attribute": "Taunt/Bonus Attack Speed Duration",
+                "attribute": "Taunt Duration",
                 "modifiers": [
                   {
                     "values": [
@@ -299,26 +294,28 @@ const champion: Champion =  {
                 ]
               },
               {
-                "attribute": "Bonus Attack Speed",
+                "attribute": "Monster Magic Damage",
                 "modifiers": [
                   {
                     "values": [
-                      20,
-                      25,
-                      30,
-                      35,
-                      40
+                      80,
+                      100,
+                      120,
+                      140,
+                      160
+                    ]
+                  },
+                  {
+                    "values": [
+                      70
                     ],
                     "units": [
-                      "%"
+                      "% AP"
                     ]
                   }
                 ]
               }
             ]
-          },
-          {
-            "description": "The duration of the bonus attack speed continuously refreshes during Powerball, Defensive Ball Curl and Soaring Slam."
           }
         ],
         "cost": [
@@ -331,9 +328,8 @@ const champion: Champion =  {
         "affects": "Enemies, Self",
         "spellshieldable": "True",
         "resource": "Mana",
-        "spellEffects": "false",
-        "notes": "Frenzying Taunt, despite being usable on  monsters, does not force them to attack Rammus. He does not draw aggro since the ability does not deal damage.\nThe bonus attack speed duration is separate from the  taunt duration.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
-        "blurb": "Active:  Rammus briefly  taunts the target enemy  champion or  monster, and gains  bonus attack speed for the same duration.",
+        "notes": "Frenzying Taunt, despite being usable on  monsters, does not force them to attack Rammus. He does not draw aggro since the ability does not deal damage.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
+        "blurb": "Active:  Rammus briefly  taunts the target enemy  champion or  monster.",
         "castTime": "0.25",
         "targetRange": "325",
         "maxCharges": -1
@@ -345,41 +341,21 @@ const champion: Champion =  {
         "icon": "https://cdn.communitydragon.org/latest/champion/Rammus/ability-icon/r",
         "effects": [
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rammus leaps to the target location with immunity to crowd control. Upon arrival, he creates an impact that deals magic damage to nearby enemies and slows them for 1.5 seconds. The impact deals increased damage at the epicenter if Soaring Slam was cast further than 800 units, capped at 1700 units with 50% increased damage.</p>",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rammus leaps to the target location with immunity to crowd control. Upon arrival, he creates an impact that deals magic damage to nearby enemies and slows them for 1.5 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
                 "modifiers": [
                   {
                     "values": [
-                      100,
-                      175,
-                      250
+                      150,
+                      250,
+                      350
                     ]
                   },
                   {
                     "values": [
                       60
-                    ],
-                    "units": [
-                      "% AP"
-                    ]
-                  }
-                ]
-              },
-              {
-                "attribute": "Center Increased Damage",
-                "modifiers": [
-                  {
-                    "values": [
-                      150,
-                      262.5,
-                      375
-                    ]
-                  },
-                  {
-                    "values": [
-                      90
                     ],
                     "units": [
                       "% AP"
@@ -392,134 +368,9 @@ const champion: Champion =  {
                 "modifiers": [
                   {
                     "values": [
-                      15,
-                      17.5,
-                      20
-                    ],
-                    "units": [
-                      "%"
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "If Soaring Slam was cast during Powerball, enemies within the epicenter are also knocked up for 0.75 seconds and are dealt Powerball's damage. Powerball will not collide with enemies during the dash, and its channel will be maintained for the dash and end afterwards.",
-            "leveling": [
-              {
-                "attribute": "Center Minimum Damage",
-                "modifiers": [
-                  {
-                    "values": [
-                      100,
-                      175,
-                      250
-                    ]
-                  },
-                  {
-                    "values": [
-                      60
-                    ],
-                    "units": [
-                      "% AP"
-                    ]
-                  },
-                  {
-                    "values": [
-                      80,
-                      140,
-                      200
-                    ],
-                    "units": [
-                      " (+ 100% AP)"
-                    ]
-                  }
-                ]
-              },
-              {
-                "attribute": "Center Maximum Damage",
-                "modifiers": [
-                  {
-                    "values": [
-                      150,
-                      262.5,
-                      375
-                    ]
-                  },
-                  {
-                    "values": [
-                      90
-                    ],
-                    "units": [
-                      "% AP"
-                    ]
-                  },
-                  {
-                    "values": [
-                      80,
-                      140,
-                      200
-                    ],
-                    "units": [
-                      " (+ 100% AP)"
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "description": "The impact causes 3 aftershocks to burst from the area over 3.5 seconds, each one dealing magic damage to enemies within and applying the initial slow, which stacks up to 4 times.",
-            "leveling": [
-              {
-                "attribute": "Magic Damage per Hit",
-                "modifiers": [
-                  {
-                    "values": [
-                      20,
                       30,
-                      40
-                    ]
-                  },
-                  {
-                    "values": [
-                      10
-                    ],
-                    "units": [
-                      "% AP"
-                    ]
-                  }
-                ]
-              },
-              {
-                "attribute": "Total Magic Damage",
-                "modifiers": [
-                  {
-                    "values": [
-                      60,
-                      90,
-                      120
-                    ]
-                  },
-                  {
-                    "values": [
-                      30
-                    ],
-                    "units": [
-                      "% AP"
-                    ]
-                  }
-                ]
-              },
-              {
-                "attribute": "Maximum Slow",
-                "modifiers": [
-                  {
-                    "values": [
-                      60,
-                      70,
-                      80
+                      40,
+                      50
                     ],
                     "units": [
                       "%"
@@ -528,12 +379,15 @@ const champion: Champion =  {
                 ]
               }
             ]
+          },
+          {
+            "description": "If Soaring Slam was cast during Powerball, enemies within the epicenter are also knocked up for 0.75 seconds and are dealt Powerball's damage. Powerball will not collide with enemies during the dash, and its channel will be maintained for the dash and end afterwards."
+          },
+          {
+            "description": "The impact causes 3 aftershocks to burst from the area over 3.5 seconds, each one applying and refreshing the duration of the initial slow."
           },
           {
             "description": "Soaring Slam's damage affects structures and is doubled against turrets."
-          },
-          {
-            "description": "Soaring Slam will cast at max range if cast beyond that."
           }
         ],
         "cost": [
@@ -547,9 +401,9 @@ const champion: Champion =  {
         "spellshieldable": "special",
         "resource": "Mana",
         "damageType": "Magic damage",
-        "spellEffects": "special",
-        "notes": "Applies  area damage for the impact and  persistent area damage for the aftershocks.\n Spell shield will block the impact (including with  Powerball) but not each aftershock.\nRammus is required to have had at least 461.5 movement speed average over the last second to be able to cast Soaring Slam further than its minimum cast range and thereby deal the increased center damage.\nThe maximum increased center damage is reachable once  Rammus has had at least 1307.69 movement speed average for the past second.\nSoaring Slam will not impact nor generate aftershocks if the dash is interrupted.\nThe following table refers for interactions while Rammus is dashing:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
-        "blurb": "Active:  Rammus  leaps to the target location with  Cc-immunity, dealing magic damage to nearby enemies and briefly  slowing them. The impact deals increased damage at the epicenter based on how far Soaring Slam was cast.",
+        "spellEffects": "AoE",
+        "notes": "Spell shield will block the impact (including with  Powerball) but not each aftershock.\nRammus is required to have had at least 461.5 movement speed average over the last second to be able to cast Soaring Slam further than its minimum cast range and thereby deal the increased damage at the epicenter.\nThe maximum increased center damage is reachable once  Rammus has had at least 1307.69 movement speed average for the past second.\nSoaring Slam will not impact nor generate aftershocks if the dash is interrupted.\nThe following table refers for interactions while Rammus is dashing:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
+        "blurb": "Active:  Rammus  leaps to the target location with  Cc-immunity, dealing magic damage to nearby enemies and briefly  slowing them.",
         "speed": "900 / 2000",
         "castTime": "None",
         "effectRadius": "400 / 200 / 400",

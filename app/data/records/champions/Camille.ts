@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 164,
@@ -105,7 +105,6 @@ const champion: Champion =  {
         ],
         "targeting": "Passive",
         "affects": "Self",
-        "spellEffects": "Shield",
         "notes": "Adaptive Defenses goes on cooldown after the shield expires or is destroyed.\nThe shield-typing is determined based on the total damage the target has dealt to champions that game (as a percentage) versus Camille's current  armor and  magic resistance.\nFor example, with little bonus resistances Camille would likely gain the most obvious shield-typing - i.e. physical shield versus champions primarily dealing physical damage and magic shield versus champions primarily dealing magic damage. However, if she has a sufficient amount of armor against a champion dealing both alternates of physical damage and magic damage, she will receive a magic shield as the physical damage threat is already being mitigated by her armor, and vice versa.\nThe type of shield that will be granted to Camille when she attacks any one enemy champion is shown as an icon beneath their health bar: orange for physical shield and blue for magic shield.\nAdaptive Defenses takes priority over all other  shields except  Black Shield.\nAdaptive Defenses Will not grant Camille the shield is the attack is  dodged,  blocked, or if she is  blinded.",
         "blurb": "Innate: Periodically,  Camille's next basic attack against a champion will  on-hit grant her a  shield against their damage type (physical or magical) for a short time."
       }

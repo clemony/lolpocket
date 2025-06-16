@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 120,
@@ -419,10 +419,10 @@ const champion: Champion =  {
             ]
           },
           {
-            "description": "Upon arrival, he fears nearby enemies for 0.75 - 1.5 (based on distance traveled) seconds and slows them, ramping to 99% over the duration."
+            "description": "Upon arrival, he fears nearby enemies for 0.75 - 1.5 (based on distance traveled) seconds and slows them by 0% - 99% (based on distance from Hecarim)."
           },
           {
-            "description": "The wave of spectral riders travels independently of Hecarim and will always charge at the same distance. The slow's strength cannot be reduced and is increased based on how far away the affected units are from Hecarim. Onslaught of Shadows will cast at max range if cast beyond that."
+            "description": "The wave of spectral riders travels independently of Hecarim and will always charge at the same distance."
           }
         ],
         "cost": [
@@ -439,13 +439,13 @@ const champion: Champion =  {
         "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
-        "notes": "The spectral rider missiles originate at Hecarim's location, 145 units behind and 100 units to either side of him, and 290 units behind and 200 units to either side. They travel 1510 units forward parallel to Hecarim from their origin each.\nOnly the spectral riders deal damage to enemies they pierce, Hecarim only dashes and fears enemies at the end of it.",
+        "notes": "The spectral rider missiles originate at Hecarim's location, 145 units behind and 100 units to either side of him, and 290 units behind and 200 units to either side. They travel 1510 units forward parallel to Hecarim from their origin each.\nOnly the spectral riders deal damage to enemies they pierce, Hecarim only dashes and fears enemies at the end of it.\nThe slow strength cannot be reduced by  slow resist.",
         "blurb": "Active:  Hecarim summons spectral riders and  charges in the target direction, dealing magic damage to enemies they pass through.",
         "speed": "1100",
         "width": "80 / 480",
         "castTime": "none",
         "effectRadius": "315",
-        "targetRange": "1000 / 300",
+        "targetRange": "300 / 1000",
         "maxCharges": -1
       }
     ]

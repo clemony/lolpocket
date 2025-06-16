@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 27,
@@ -177,7 +177,7 @@ const champion: Champion =  {
             ]
           },
           {
-            "description": "Singed gain minion kill credit if an affected minion would die to minion damage within the time before the next damage instance."
+            "description": "Singed earns the kill credit of enemy minions that are poisoned and would die to the damage of allied minions within the time before the next damage instance."
           }
         ],
         "cost": [

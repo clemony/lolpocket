@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 412,
@@ -243,7 +243,6 @@ const champion: Champion =  {
         "targeting": "Location",
         "affects": "Allies",
         "resource": "Mana",
-        "spellEffects": "Shield",
         "projectile": "TRUE",
         "notes": "The dashing ally will track Thresh if he changes locations.\nThey will dash to Thresh's previous location if he is too far away or moves beyond 2200 units.\nThe lantern is considered a unit and can be targeted by an allied  Teleport,  Leap Strike,  Shunpo, and  Safeguard.\nIt is  untargetable to enemies.\nThe lantern's duration and maximum leash range are each displayed as a circle on the ground.\nThresh will gain Dark Passage's shield from moving out of leash range of the lantern.\nDark Passage is special cased to trigger  Guardian.",
         "blurb": "Active:  Thresh throws his lantern to the target location that remains for a few seconds while he remains nearby. He and the first allied champion to come near the lantern are granted a  shield for a few seconds, with the amount based on  Souls.",

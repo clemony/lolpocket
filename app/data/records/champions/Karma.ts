@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 43,
@@ -571,7 +571,6 @@ const champion: Champion =  {
         "targeting": "Unit",
         "affects": "Allies",
         "resource": "Mana",
-        "spellEffects": "Shield",
         "notes": "Inspire has a  forgiveness radius of 175 units.",
         "blurb": "Active:  Karma applies a  shield on herself or the target allied champion for a short time, which briefly grants  bonus movement speed.",
         "castTime": "none",
@@ -659,7 +658,6 @@ const champion: Champion =  {
         "targeting": "Unit",
         "affects": "Allies",
         "resource": "Mana",
-        "spellEffects": "Shield",
         "notes": "Defiance has a  forgiveness radius of 175 units.",
         "blurb": "Mantra Bonus:\nInspire's shield is increased, and Inspire spreads to surrounding allied champions at reduced power.",
         "castTime": "none",

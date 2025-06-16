@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 1,
@@ -310,7 +310,7 @@ const champion: Champion =  {
           10.5,
           10
         ],
-        "targeting": "Unit / Location",
+        "targeting": "Unit / Auto",
         "affects": "Self, Enemies",
         "resource": "Mana",
         "damageType": "Magic damage",
@@ -396,7 +396,7 @@ const champion: Champion =  {
         "resource": "Mana",
         "damageType": "Magic damage",
         "spellEffects": "special",
-        "notes": "Burst of flame deals  area damage and Tibbers'  basic attacks apply  pet damage.\nTibbers will  blink back next to Annie if he gets too far away.",
+        "notes": "Burst of flame deals  area damage and Tibbers' basic attacks deal  pet damage.\nTibbers will  blink back next to Annie if he gets too far away.\nRecasting Summon: Tibbers does not interrupt  Recall's channel.",
         "blurb": "Active:  Annie summons her bear  Tibbers, dealing magic damage to enemies in the area.",
         "castTime": "0.25",
         "effectRadius": "250 /  350",

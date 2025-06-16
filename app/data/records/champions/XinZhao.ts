@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:47 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:43 PM CDT
 
 const champion: Champion =  {
   "id": 5,
@@ -391,13 +391,13 @@ const champion: Champion =  {
         "cooldown": [
           11
         ],
-        "targeting": "Unit / Location",
+        "targeting": "Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
         "resource": "Mana",
         "damageType": "Magic damage",
         "spellEffects": "Area of effect",
-        "notes": "The primary target cannot dodge Audacious Charge's effects.\nThe target will always emit the area of effect from their position.\nIf no unit is targeted directly, Audacious Charge will search for possible targets in a 200 radius around the target location.",
+        "notes": "The primary target cannot dodge Audacious Charge's effects.\nThe target will always emit the area of effect from their position.\nAudacious Charge has a  forgiveness radius of 200 units.",
         "blurb": "Active:  Xin Zhao  dashes to the target enemy, dealing magic damage to nearby enemies and briefly  slowing them. He then gains  bonus attack speed for a few seconds.",
         "speed": "2500",
         "castTime": "none",

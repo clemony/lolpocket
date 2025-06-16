@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 136,
@@ -222,6 +222,9 @@ const champion: Champion =  {
           },
           {
             "description": "At rank 5, Breath of Light's channel duration is increased to 160 seconds."
+          },
+          {
+            "description": "Breath of Light cannot be cast for 1 second if the channel is cancelled within the first 0.25 seconds."
           }
         ],
         "cost": [
@@ -284,6 +287,9 @@ const champion: Champion =  {
           },
           {
             "description": "Scoring a champion takedown within 3 seconds of damaging them reduces Astral Flight's current cooldown by 90% of its total cooldown."
+          },
+          {
+            "description": "Aurelion Sol will not dash if he is immobilized or grounded during the cast time. He can cast any of his abilities during the dash. Breath of Light's channel will be interrupted if Astral Flight ends or Singularity is cast during the flight, but the ability will automatically be cast afterwards."
           }
         ],
         "cost": [
@@ -366,9 +372,6 @@ const champion: Champion =  {
           },
           {
             "description": "<p class=\"ability-effect\"><span class=\"ability-header\">After Singularity ends, it generates 1 Stardust for each full second that enemy champions were inside it, as well as varying amounts for enemy units that were killed while being within the area:</span></p>\nChampions and epic monsters grant 2 Stardust.\nLarge minions and monsters grant 2 Stardust.\nSmall minions and monsters grant 1 Stardust."
-          },
-          {
-            "description": "Singularity will cast at max range if cast within 200 units beyond. During Astral Flight, it will cast at max range if cast at any range beyond."
           }
         ],
         "cost": [
@@ -424,9 +427,6 @@ const champion: Champion =  {
           },
           {
             "description": "Once Falling Star has been learned, gathering 75 Stardust causes the next cast of Falling Star to transform into The Skies Descend, empowering the impact with new effects."
-          },
-          {
-            "description": "Falling Star will cast at max range if cast within 200 units beyond that. During Astral Flight, it will do so at any range beyond the max."
           }
         ],
         "cost": [
@@ -506,7 +506,7 @@ const champion: Champion =  {
             ]
           },
           {
-            "description": "The Skies Descend will cast at max range if cast within 200 units beyond that. During Astral Flight, it will do so at any range beyond the max. Enemies hit by the star are immune to the shockwave."
+            "description": "Enemies hit by the star are immune to the shockwave."
           }
         ],
         "cost": [

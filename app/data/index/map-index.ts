@@ -1,4 +1,5 @@
-// Updated Patch 25.11 - 06/06/2025 05:41:20 PM CDT
+// Updated Patch 25.12 - 06/16/2025 01:46:40 PM CDT
+
 export const mapIndex: MapIndex[] = [
   {
     "id": 11,

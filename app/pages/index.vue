@@ -1,9 +1,5 @@
 <script setup lang="ts">
-import type { UseScrollReturn } from '@vueuse/core'
-import { vScroll } from '@vueuse/components'
-import { useScroll } from '@vueuse/core'
-
-const emit = defineEmits(['update:open'])
+import { motion } from 'motion-v'
 
 definePageMeta({
   name: 'home',
@@ -11,78 +7,62 @@ definePageMeta({
   title: 'lolpocket',
   searchKeys: ['home', 'landing', 'testimonials'],
   icon: 'teenyicons:home-alt-outline',
-  section: 'home'
+  section: 'home',
 })
 
-const us = useUiStore()
-const shadow = ref(false)
+const homeWrapper = ref<HTMLElement | null>()
+const home = ref<HTMLElement | null>()
+const steps = ref<HTMLElement | null>()
 
-function onScroll(state: UseScrollReturn) {
-  // console.log(state) // {x, y, isScrolling, arrivedState, directions}
-  state.y.value > 0 ? (shadow.value = true) : (shadow.value = false)
-}
-
-const etc = ref(false)
-const steps = ref(null)
-
-const { top } = useElementBounding(steps)
-const stepTop = ref(top)
-
-const el = ref<HTMLElement | null>(null)
-
-const { x, y, isScrolling, arrivedState, directions } = useScroll(el)
-
-const direction = ref('')
-watch(
-  () => directions.bottom,
-  (newVal) => {
-    if (newVal) {
-      direction.value = 'right'
-    }
-  },
-)
-
-watch(
-  () => directions.top,
-  (newVal) => {
-    if (newVal) {
-      direction.value = 'left'
-    }
-  },
-)
-
-onMounted(() => {
-  emit('update:open', false)
+const { scrollYProgress: stepProgress } = useScroll({
+  container: homeWrapper,
+  target: steps,
+  offset: ['start end', 'end start'],
 })
 
-onBeforeMount(() => {
-  if (us.sidebarExpanded) {
-    us.triggerSidebar = true
-  }
+const progStep = ref(0)
+
+useMotionValueEvent(stepProgress, 'change', (latest) => {
+  const x = latest * 80
+  progStep.value = Math.round(x * 100) / 100
+
+  if (progStep.value)
+    console.log('💠 - useMotionValueEvent - progStep.value:', progStep.value)
+})
+
+const { scrollYProgress } = useScroll({
+  container: homeWrapper,
+  target: home,
+  offset: ['start end', 'end start'],
+})
+
+const progressY = ref(0)
+
+useMotionValueEvent(scrollYProgress, 'change', (latest) => {
+  const x = latest * 80
+  progressY.value = Math.round(x * 100) / 100
+
+  if (progressY.value > 0)
+    console.log('💠 - useMotionValueEvent - progressY.value:', progressY.value)
 })
 </script>
 
 <template>
   <div
-    ref="el"
-    class="relative *:pt-[0vh] size-full overflow-y-scroll !border-none outline-hidden">
-    <Hero />
-    <div
-      v-scroll="onScroll"
-      class="absolute inset-0 top-full z-2 w-full">
-      <div
-        ref="steps"
-        class="size-full relative">
-        <HomeSteps
-          ref="steps"
-          :shadow="shadow" />
+    ref="homeWrapper"
+    class="relative home-wrapper size-full overflow-y-scroll">
+    <Hero :progress="progStep" />
 
-        <HomeEtc :element="el" />
-        <UserReviews />
-        <SiteMap />
-        <HomeFooter />
-      </div>
+    <div ref="steps">
+      <HomeSteps :scroll-ref="homeWrapper" />
     </div>
+
+    <div ref="home">
+      <LazyHomeAdditional :progress-y="progressY" hydrate-on-visible />
+    </div>
+    <LazyUserReviews hydrate-on-visible />
+    <LazySiteMap hydrate-on-visible />
+    <HomeFooter />
   </div>
 </template>
 

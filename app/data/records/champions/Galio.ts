@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 3,
@@ -152,9 +152,6 @@ const champion: Champion =  {
           },
           {
             "description": "When the blasts meet, the gusts form a tornado that persists for 2 seconds, slowly moving forward and dealing magic damage equal to[ 2.5% (+ 1% per 100 AP) of target's maximum health every 0.5 seconds ][ 10% (+ 4% per 100 AP) of target's maximum health over the duration ]to enemies within the area, capped at[ 150 per tick ][ 600 total ]against monsters."
-          },
-          {
-            "description": "Winds of War will cast at max range if cast beyond that."
           }
         ],
         "cost": [
@@ -433,9 +430,6 @@ const champion: Champion =  {
                 ]
               }
             ]
-          },
-          {
-            "description": "Justice Punch will cast at max range if cast beyond that."
           }
         ],
         "cost": [
@@ -453,7 +447,7 @@ const champion: Champion =  {
         "resource": "Mana",
         "damageType": "Magic damage",
         "spellEffects": "spellaoe",
-        "notes": "Galio will initiate the  dash even if his step backwards is  knocked down.\nGalio's second dash will always dash the distance of the target direction. Having the step backwards cut short has no effect on the total distance gained.\nThe following table refers for interactions during Justice Punch's cast time and  dash:\n\n\nAttacking\n\nInterrupts\n\n\nAbilities\n\nInterrupts\n\n\nMovement\n\nInterrupts\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\nN/A\n\n\nPending for Test\n\nAll items are PENDING FOR TEST:\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Recall\n\n\nDisabled\n\n Flash  Teleport  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath Cast-inhibiting effects",
+        "notes": "Galio will initiate the  dash even if his step backwards is  knocked down.\nGalio's second dash will always dash the distance of the target direction. Having the step backwards cut short has no effect on the total distance gained.\nThe following table refers for interactions during Justice Punch's cast time and  dash:\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Recall\n\n\nDisabled\n\n Flash  Teleport  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection",
         "speed": "2300",
         "width": "400",
         "castTime": "0.4",

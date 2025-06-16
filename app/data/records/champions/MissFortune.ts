@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 21,
@@ -318,9 +318,6 @@ const champion: Champion =  {
                 ]
               }
             ]
-          },
-          {
-            "description": "Make It Rain will cast at max range if cast beyond that."
           }
         ],
         "cost": [

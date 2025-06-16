@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:48 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:45 PM CDT
 
 const champion: Champion =  {
   "id": 143,
@@ -112,7 +112,7 @@ const champion: Champion =  {
         ],
         "targeting": "Passive",
         "affects": "Self",
-        "notes": "Zyra tries to plant Seeds in brush and not on top of walls.\nZyra tries not to plant Seeds too close together and at different angles.\nZyra does not plant any Seeds if she is concealed within a brush (unless there is an enemy ward in it, in which case it takes her a little longer to plant the Seed) or when there is no room for additional ones.\nZyra does not plant any Seeds if she is within  1400 units of the coordinate points (400, 400) or (14000, 14000), which are roughly at the center of the fountains on  Summoner's Rift.\nThese same coordinates may not hold as fountain positions on other maps (e.g. on the  Arena map, the Magma Chamber area overlaps with the second exclusion radius) and may prompt the implementation of this behaviour to be changed in the future.(bug)\nZyra tries to plant Seeds close to an enemy near her.\nPENDING FOR TEST:: Zyra tries to plant Seeds under enemy structures only if she is in basic attack range of them.\nPENDING FOR TEST:: Zyra tries to plant Seeds on the other side of the wall she is facing and/or standing right next to.\nPENDING FOR TEST:: Zyra tries to plant Seeds in the direction she is facing and/or moving.\nZyra tries to plant Seeds near jungle path entrances.\nPENDING FOR TEST:: Zyra tries to plant Seeds behind herself when she is walking through the river and there are no jungle path entrances near her.\nZyra tries to plant Seeds between herself and the enemy champion she has vision of (or is heading towards her) in a 45° angle to the left or to the right depending on where on lane she is standing.\nZyra tries to plant Seeds against the inner walls of epic monster pits ( Dragon,  Rift Herald,  Baron Nashor)\nZyra has a hidden passive that grants her 10% increased size for 33 seconds after having  Leona's  Sunlight applied to her.",
+        "notes": "PENDING FOR TEST:: The pattern/probability of Garden of Thorns spawning one seed or two.\nZyra tries to plant Seeds in brush and not on top of walls.\nZyra tries not to plant Seeds too close together and at different angles.\nZyra does not plant any Seeds if she is concealed within a brush (unless there is an enemy ward in it, in which case it takes her a little longer to plant the Seed) or when there is no room for additional ones.\nZyra does not plant any Seeds if she is within  1400 units of the coordinate points (400, 400) or (14000, 14000), which are roughly at the center of the fountains on  Summoner's Rift.\nThese same coordinates may not hold as fountain positions on other maps (e.g. on the  Arena map, the Magma Chamber area overlaps with the second exclusion radius) and may prompt the implementation of this behaviour to be changed in the future.(bug)\nZyra tries to plant Seeds close to an enemy near her.\nPENDING FOR TEST:: Zyra tries to plant Seeds under enemy structures only if she is in basic attack range of them.\nPENDING FOR TEST:: Zyra tries to plant Seeds on the other side of the wall she is facing and/or standing right next to.\nPENDING FOR TEST:: Zyra tries to plant Seeds in the direction she is facing and/or moving.\nZyra tries to plant Seeds near jungle path entrances.\nPENDING FOR TEST:: Zyra tries to plant Seeds behind herself when she is walking through the river and there are no jungle path entrances near her.\nZyra tries to plant Seeds between herself and the enemy champion she has vision of (or is heading towards her) in a 45° angle to the left or to the right depending on where on lane she is standing.\nZyra tries to plant Seeds against the inner walls of epic monster pits ( Dragon,  Rift Herald,  Baron Nashor)\nZyra has a hidden passive that grants her 10% increased size for 33 seconds after having  Leona's  Sunlight applied to her.",
         "blurb": "Innate:  Zyra's Seeds can be turned into plants by hitting them with her basic abilities. Enemy  champions can step over a Seed to destroy it.",
         "effectRadius": "900"
       }
@@ -199,7 +199,7 @@ const champion: Champion =  {
         "spellshieldable": "false",
         "resource": "Other",
         "notes": "Upon first rank up, Rampant Growth gains 2 charges.\nSeeds are  untargetable.",
-        "blurb": "Active:  Zyra plants a Seed at the target location that remains for a while. It will briefly  reveal the enemy that destroys it.",
+        "blurb": "Active:  Zyra plants a Seed at the target location that remains for a while. Enemy  champions can step on the seed to destroy it and become briefly  revealed.",
         "rechargeRate": [
           18,
           16,
@@ -285,6 +285,7 @@ const champion: Champion =  {
         "notes": "This ability will cast from wherever the caster is at the end of the cast time.\nZyra will be locked out of actions for 0.15 seconds after casting Grasping Roots.\nEach  Vine Lasher will generate 2 stacks of  Conqueror and 1 stack of each of  Phase Rush and  Electrocute.",
         "blurb": "Active:  Zyra shoots a surge of vines in the target direction that deals magic damage to enemies hit and briefly  roots them.",
         "speed": "1150",
+        "width": "140",
         "castTime": "0.25",
         "targetRange": "1100",
         "maxCharges": -1
@@ -325,9 +326,6 @@ const champion: Champion =  {
           },
           {
             "description": "Plants hit by the thicket become enraged, restoring 50% of their current health, increasing their maximum health by 50%, gaining 25% increased size and refreshing their duration while the thicket expands. Additionally they attack in a flurry, launching two shots per attack, dealing [ 150% damage per flurry. ][ 75% damage per shot. ]"
-          },
-          {
-            "description": "Stranglethorns will cast at max range if cast beyond that."
           }
         ],
         "cost": [

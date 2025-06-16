@@ -8,7 +8,7 @@
 @utility mask-left-* {
     mask-image: linear-gradient(to right,
     #000 calc(--value(integer) * 1%),
-    transparent calc((--value(integer) + 40) * 1%)
+    transparent calc((--value(integer) + 60) * 1%)
   );
   }
 

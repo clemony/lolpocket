@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:43 PM CDT
 
 const champion: Champion =  {
   "id": 110,
@@ -25,7 +25,7 @@ const champion: Champion =  {
       "perLevel": 0.8
     },
     "armor": {
-      "flat": 27,
+      "flat": 24,
       "perLevel": 4.6
     },
     "magicResistance": {
@@ -446,6 +446,9 @@ const champion: Champion =  {
           },
           {
             "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Varus ends Blighted Quiver and places it on a 1-second cooldown.</p>"
+          },
+          {
+            "description": "Blighted Quiver's active and recast can both be used while affected by cast-inhibiting crowd control."
           }
         ],
         "cost": [
@@ -518,9 +521,6 @@ const champion: Champion =  {
                 ]
               }
             ]
-          },
-          {
-            "description": "Hail of Arrows will cast at max range if cast beyond that."
           }
         ],
         "cost": [
@@ -600,13 +600,12 @@ const champion: Champion =  {
         "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
-        "notes": "Enemy champions can be targeted again by the corruption's tether if they were not infected the previous time, even if they were targeted and got out of range.\nA tendril that roots into the ground will only seek nearby enemy champions that were already in the area.\nChain of Corruption will not infect  crowd control immune targets or those protected by  spell shields (but will still seek them).\nVarus will turn to face the target direction at the start of the cast.\nThe tendril cannot seek enemy champions that are  untargetable.\nThis ability will cast from wherever the caster is at the end of the cast time.\nConsuming the Blight's stacks applied by Chain of Corruption will deal bonus magic damage based on  Blighted Quiver's rank. If the ability hasn't been ranked yet, the three Blight stacks will still be applied but they will be considered to be at rank 0, dealing 1.25% (+ 2% per 100 AP) of the target's maximum health per stack.",
+        "notes": "The tendril seeks and registers valid targets every 0.264 seconds.\nEnemy champions can be targeted again by the corruption's tether if they were not infected the previous time, even if they were targeted and exited its range.\nA tendril that roots into the ground will only seek nearby enemy champions that were already in the area.\nChain of Corruption will not infect  crowd control immune targets or those protected by  spell shields (but will still seek them).\nVarus will turn to face the target direction at the start of the cast.\nThe tendril cannot seek enemy champions that are  untargetable, and will also stop seeking a target if it becomes untargetable (fails to apply its effects if they remain in the area).\nThis ability will cast from wherever the caster is at the end of the cast time.\nConsuming the Blight's stacks applied by Chain of Corruption will deal bonus magic damage based on  Blighted Quiver's rank. If the ability hasn't been ranked yet, the three Blight stacks will still be applied but they will be considered to be at rank 0, dealing 1.25% (+ 2% per 100 AP) of the target's maximum health per stack.",
         "blurb": "Active:  Varus unleashes a tendril in the target direction that infects the first enemy champion hit, dealing magic damage and  rooting them for a short time. They are also  revealed and rapidly inflicted with  Blight stacks.",
-        "tetherRadius": "650",
+        "tetherRadius": "650 /  600",
         "speed": "1500",
         "width": "240",
         "castTime": "0.2419",
-        "effectRadius": "650",
         "maxCharges": -1
       }
     ]

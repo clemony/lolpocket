@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 98,
@@ -104,7 +104,6 @@ const champion: Champion =  {
         ],
         "targeting": "Passive",
         "affects": "Self",
-        "spellEffects": "Shield",
         "notes": "The Spirit Blade spawns with Shen, teleports closer to him if he gets too far away, and instantly blinks to him if he uses any global  blink ( Teleport,  Recall, or  Stand United). It will also dissappear if Shen dies and reappear upon respawning.\nEnemies see an arrow pointing from Shen to the location of his Spirit Blade even if it is not visible.\n Twilight Assault will grant the shield if the Spirit Blade reaches Shen. If it is stopped, no shield is granted. It will grant the cooldown reduction upon hitting an enemy champion.\n Spirit's Refuge will grant the shield and/or the cooldown reduction after the protective zone disappears. It does not need to block attacks to trigger the cooldown reduction, just touch an ally champion at any point of the duration.\n Shadow Dash will grant the shield when the dash ends. It will grant the cooldown reduction upon hitting an enemy champion.\nIf the dash is  interrupted, the shield will instead be received the moment the  crowd control source is applied, before damage calculation (if any).\n Stand United will give the shield and/or the cooldown reduction upon completing the channel.",
         "blurb": "Innate: Shen manifests a Spirit Blade that he can control with his abilities."
       }
@@ -406,7 +405,7 @@ const champion: Champion =  {
                   },
                   {
                     "values": [
-                      15
+                      11
                     ],
                     "units": [
                       "% bonus health"
@@ -417,7 +416,7 @@ const champion: Champion =  {
             ]
           },
           {
-            "description": "Twilight Assault and Spirit's Refuge can be cast during the dash. Shadow Dash will cast at max range if cast beyond that."
+            "description": "Twilight Assault and Spirit's Refuge can be cast during the dash."
           }
         ],
         "cost": [
@@ -525,7 +524,6 @@ const champion: Champion =  {
         ],
         "targeting": "Unit",
         "affects": "Allies",
-        "spellEffects": "Shield",
         "notes": "Due to several character stats needing to be recalculated each time a character spawns, casting Stand United immediately upon respawning will cause its cooldown to be unaffected by ability haste, and the shielding will not be increased by Shen's ability power, but will be increased by his bonus maximum health. (bug)\nStand United can target allies via the mini map or on their portraits or by using the F2 - F5 keys (none of this can be done if Shen is affected by  nearsight or his target is  untargetable).\nShen will turn to face towards his target ally at the start of the channel.\nIf the target is  stealthed, enemies could, in theory, use this to estimate their location.\nShen will channel so long as his target is alive (even if the granted shield is broken). If his target dies, the channel is canceled and Stand United goes on full cooldown.\n Interrupting Stand United's channel will not remove the shield prematurely.\nThe target's screen will glow purple to telegraph that Shen has targeted them with Stand United.\nIt will change back when the channel ends.\nShen finds the nearest visible enemy champion within 2000 range from the ally or the nearest invisible champion within 600 range to place himself 175 units from his ally towards that enemy.\nStand United has a  forgiveness radius of 100 units.\nThe following table refers for interactions while Shen is  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll summoner spells are disabled\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath Grounding effects Immobilizing effects Cast-inhibiting effects",
         "castTime": "none",
         "targetRange": "Global",

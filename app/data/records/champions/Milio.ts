@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 902,
@@ -65,13 +65,10 @@ const champion: Champion =  {
       "flat": 0.625
     },
     "attackCastTime": {
-      "flat": 0.3
+      "flat": 0.27
     },
     "attackTotalTime": {
-      "flat": 1.6
-    },
-    "attackDelayOffset": {
-      "flat": -0.129
+      "flat": 1.575
     },
     "attackRange": {
       "flat": 525
@@ -110,7 +107,7 @@ const champion: Champion =  {
         "damageType": "Magic damage",
         "spellEffects": "periodic",
         "notes": "Both the burst and the burn respect  enchantment redirection.\nSubsequent applications of Fired Up! only refresh the duration.\n Spell shield will not block the effect if applied by a basic attack.",
-        "blurb": "Innate: Milio's abilities enchant allied  champions on-contact, causing their next basic attack or ability hit shortly after to apply a  burst and then a short burn to the target enemy, both parts dealing magic damage."
+        "blurb": "Innate:  Milio's abilities enchant allied  champions on-contact, causing their next basic attack or ability hit shortly after to apply a  burst and then a short burn to the target enemy, both parts dealing magic damage."
       }
     ],
     "Q": [
@@ -197,7 +194,7 @@ const champion: Champion =  {
         "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "TRUE",
-        "blurb": "Active: Milio kicks a fireball in the target direction that briefly  knocks back and  stuns the first enemy hit. The ball then bounces once toward the target and explodes, dealing magic damage and  slowing enemies hit.",
+        "blurb": "Active:  Milio kicks a fireball in the target direction that briefly  knocks back and  stuns the first enemy hit. The ball then bounces once toward the target and explodes, dealing magic damage and  slowing enemies hit.",
         "speed": "1200",
         "width": "60",
         "castTime": "none",
@@ -303,8 +300,8 @@ const champion: Champion =  {
         "targeting": "Location / Unit",
         "affects": "Self, Allies",
         "resource": "Mana",
-        "notes": "Cozy Campfire's initial cast and recast have a  forgiveness radius of 175 units for their unit-targeted version.\nThe  attack range increase lingers on allies for the entire duration of Cozy Campfire, even if they leave the zone.",
-        "blurb": "Active: Milio summons a fuemigo that lasts for 6 seconds and follows the closest allied champion. Allied champions near the fuemigo gain increased  attack range and are continually  healed.",
+        "notes": "Cozy Campfire's initial cast and recast have a  forgiveness radius of 175 units for their unit-targeted version.\nThe summoned fuemigo will still follow the nearest allied champion in range, even if the initial cast was targeted on a different ally.\nThe  attack range increase lingers on allies for the entire duration of Cozy Campfire, even if they leave the zone.",
+        "blurb": "Active:  Milio summons a fuemigo that lasts for 6 seconds and follows the closest allied  champion. Allied champions near the fuemigo gain increased  attack range and are continually  healed.",
         "castTime": "0.25",
         "effectRadius": "415",
         "targetRange": "650 / 3000",
@@ -381,7 +378,7 @@ const champion: Champion =  {
         "affects": "Self, Allies",
         "resource": "Mana",
         "notes": "Warm Hugs has a  forgiveness radius of 175 units.",
-        "blurb": "Active: Milio envelops himself or the target ally in protective flames, granting them a  shield and  bonus move speed for a short time.",
+        "blurb": "Active:  Milio envelops himself or the target ally in protective flames, granting them a  shield and  bonus move speed for a short time.",
         "rechargeRate": [
           17,
           16,
@@ -440,7 +437,7 @@ const champion: Champion =  {
         "affects": "Self, Allies",
         "resource": "Mana",
         "notes": "Breath of Life affects  untargetable units.",
-        "blurb": "Active: Milio explodes in soothing flames,  healing and  cleansing himself and nearby allied champions of non- airborne  crowd control, and granting them  tenacity for short time.",
+        "blurb": "Active:  Milio explodes in soothing flames,  healing and  cleansing himself and nearby allied  champions of non- airborne  crowd control and granting them  tenacity for a short time.",
         "castTime": "none",
         "effectRadius": "700",
         "maxCharges": -1

@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:47 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:43 PM CDT
 
 const champion: Champion =  {
   "id": 157,
@@ -101,13 +101,12 @@ const champion: Champion =  {
             "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Intent:</span> Yasuo's total critical strike chance is doubled from all other sources. Additionally,[ every 1% critical strike chance in excess of 100% is converted into 0.5 bonus attack damage. ][ every 50% critical strike chance in excess of 100% is converted into 25 bonus attack damage. ]</p>"
           },
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Resolve:</span> Yasuo generates Flow for every 59 / 52.5 / 46 (based on level) units he travels by any means. At[ 100 stacks ][ 5900 / 5250 / 4600 (based on level) units traveled ]and upon taking damage from an enemy champion or monster, Yasuo consumes all Flow to grant himself a shield for 125 - 600 (based on level) that lasts up to 1 second.</p>"
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Resolve:</span> Yasuo generates a stack of Flow for every 59 / 52.5 / 46 (based on level) units he travels by any means. At[ 100 stacks ][ 5900 / 5250 / 4600 (based on level) units traveled ]and upon taking damage from an enemy champion or monster, Yasuo consumes all Flow to grant himself a shield for 125 - 600 (based on level) that lasts up to 1 second.</p>"
           }
         ],
         "targeting": "Passive",
         "affects": "Self",
-        "spellEffects": "Shield",
-        "notes": "Yasuo is able to reach 100% critical strike chance with Way of the Wanderer's multiplier after obtaining a total of  50% critical strike chance.",
+        "notes": "Yasuo gains the shield before the damage instance; the shield will mitigate the damage that triggered it.\nYasuo is able to reach 100% critical strike chance with Way of the Wanderer's multiplier after obtaining a total of  50% critical strike chance.",
         "blurb": "Innate - Intent:  Yasuo gains increased  critical strike chance."
       }
     ],
@@ -162,13 +161,13 @@ const champion: Champion =  {
         "cooldown": [
           4
         ],
-        "targeting": "Direction",
+        "targeting": "Direction / Auto",
         "affects": "Enemies",
         "spellshieldable": "true",
         "damageType": "Physical damage",
         "spellEffects": "Special",
         "projectile": "SPECIAL",
-        "notes": "Casting  Sweeping Blade when Steel Tempest's remaining cooldown is less than 0.5 seconds resets this remaining cooldown to allow casting it in combination, but adds the refunded time to the cooldown of that cast. If Yasuo becomes unable to cast abilities during the dash after buffering, Steel Tempest will not cast, but will still go on cooldown.(note)\nThe whirlwind from consuming stacks of Gathering Storm can strike targets whose center is behind Yasuo, unlike most missiles.\nThe whirlwind is not released when cast during  Sweeping Blade, but instead  knocks up all enemies hit around Yasuo at the end of the dash.\nSteel Tempest applies  basic damage to the first (closest) enemy hit and  area damage to secondary enemies:\nSteel Tempest will apply  on-hit effects to the first target hit, but will not do so to the secondary ones.\nSteel Tempest will not apply spell effects to the first target hit, but will do so to the secondary ones.\n Spell vamp will only grant  healing from the damage dealt to secondary targets, and healing is reduced to 33% effectiveness, accordingly.\n Life steal will heal based on the damage dealt to the first target hit.\nThe whirlwind is a missile and can therefore be  intercepted.\nSteel Tempest will only draw minion aggro if the first target is a champion.\nThis ability will cast from wherever the caster is at the end of the cast time.\nEach parry has different interactions with this ability, whether it's the first target of Steel Tempest or the secondary one. In either case Yasuo still gains a stack of Gathering Storm and his whirlwind knock-up cannot be negated by parries:\n Dodge: both first target and secondary target do not take damage.\n Block: first target does not take damage, secondary target does take damage.\n Blind: both first target and secondary target do take damage.\nSteel Tempest rolls its  critical strikes individually against each enemy hit.\nCasting  Last Breath during Steel Tempest will buffer it to cast after the cast time has completed.\nHowever, if  Last Breath is used on a target affected by an  airborne source that is not Yasuo, it is cast immediately due to Steel Tempest's cast time ending prematurely. Steel Tempest will still cast in this case.\n Spell shield does not prevent a stack of Gathering Storm from being gained.\nWhile at two stacks, a range indicator will be shown for the effective range of the whirlwind.",
+        "notes": "Casting  Sweeping Blade when Steel Tempest's remaining cooldown is less than 0.5 seconds resets this remaining cooldown to allow casting it in combination, but adds the refunded time to Steel Tempest's cooldown.\nIf Yasuo becomes unable to cast abilities during the dash after buffering, Steel Tempest will not cast, but will still go on cooldown.(note)\nThe whirlwind from consuming stacks of Gathering Storm can strike targets whose center is behind Yasuo, unlike most missiles.\nThe whirlwind is not released when cast during  Sweeping Blade, but instead  knocks up all enemies hit around Yasuo at the end of the dash.\nSteel Tempest applies  basic damage to the first (closest) enemy hit and  area damage to secondary enemies:\nSteel Tempest will apply  on-hit effects to the first target hit, but will not do so to the secondary ones.\nSteel Tempest will not apply spell effects to the first target hit, but will do so to the secondary ones.\n Spell vamp will only grant  healing from the damage dealt to secondary targets, and healing is reduced to 33% effectiveness, accordingly.\n Life steal will heal based on the damage dealt to the first target hit.\nThe whirlwind is a missile and can therefore be  intercepted.\nSteel Tempest will only draw minion aggro if the first target is a champion.\nThis ability will cast from wherever the caster is at the end of the cast time.\nEach parry has different interactions with this ability, whether it's the first target of Steel Tempest or the secondary one. In either case Yasuo still gains a stack of Gathering Storm and his whirlwind knock-up cannot be negated by parries:\n Dodge: both first target and secondary target do not take damage.\n Block: first target does not take damage, secondary target does take damage.\n Blind: both first target and secondary target do take damage.\nSteel Tempest rolls its  critical strikes individually against each enemy hit.\nCasting  Last Breath during Steel Tempest will buffer it to cast after the cast time has completed.\nHowever, if  Last Breath is used on a target affected by an  airborne source that is not Yasuo, it is cast immediately due to Steel Tempest's cast time ending prematurely. Steel Tempest will still cast in this case.\n Spell shield does not prevent a stack of Gathering Storm from being gained.\nWhile at two stacks, a range indicator will be shown for the effective range of the whirlwind.",
         "blurb": "Active:  Yasuo thrusts his sword in a line in the target direction that deals physical damage to enemies hit and applies  on-hit and on-attack effects to the first enemy hit. This can  critically strike.",
         "speed": "1200",
         "width": "80 /  180",
@@ -364,7 +363,7 @@ const champion: Champion =  {
             "description": "Yasuo will be knocked down by any immobilizing or polymorphing crowd control during the dash."
           },
           {
-            "description": "Last Breath can be cast during the dash. If Steel Tempest has been buffered, Wind Wall may also be cast during it. (note)"
+            "description": "Last Breath can be cast during the dash."
           }
         ],
         "cost": [
@@ -382,7 +381,7 @@ const champion: Champion =  {
         "spellshieldable": "True",
         "damageType": "Magic damage",
         "spellEffects": "Single target",
-        "notes": "The on-target cooldown will be applied upon starting the dash.\nSweeping Blade's dash speed is affected by  movement speed.\nSweeping Blade will generate 7.5  Flow stacks per cast that travels the maximum distance.\nYasuo can use Sweeping Blade's fixed dash distance to cross walls both before and after hitting his target (provided his proximity to the wall and/or target allows it).\nAfter Sweeping Blade, Yasuo becomes  ghosted for a moment to prevent situations where he would face extreme cases of body block.\n Sleep does not count for knocking the dash down.(bug)",
+        "notes": "If  Steel Tempest has been buffered,  Wind Wall may also be cast during the dash.(note)\nThe on-target cooldown will be applied upon starting the dash.\nSweeping Blade's dash speed is affected by  movement speed.\nSweeping Blade will generate 7.5  Flow stacks per cast that travels the maximum distance.\nYasuo can use Sweeping Blade's fixed dash distance to cross walls both before and after hitting his target (provided his proximity to the wall and/or target allows it).\nAfter Sweeping Blade, Yasuo becomes  ghosted for a moment to prevent situations where he would face extreme cases of body block.\n Sleep does not count for knocking the dash down.(bug)",
         "blurb": "Active:  Yasuo dashes in the target enemy's direction, dealing magic damage,  briefly becoming  ghosted, and generating a stack of Ride the Wind for a few seconds, stacking up to a cap.",
         "onTargetCdStatic": "10 / 9 / 8 / 7 / 6",
         "speed": "750 + 60% movement speed",
@@ -396,7 +395,7 @@ const champion: Champion =  {
         "icon": "https://cdn.communitydragon.org/latest/champion/Yasuo/ability-icon/r",
         "effects": [
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yasuo blinks to the other side of a visible airborne enemy champion nearest to the cursor, instantly generating maximum Flow while resetting Gathering Storm stacks.</p>"
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Yasuo blinks to the opposite side of a visible airborne enemy champion nearest to the cursor, instantly generating maximum Flow while resetting Gathering Storm stacks.</p>"
           },
           {
             "description": "Upon arrival, he knocks up all nearby airborne enemy champions for 1 second, revealing them, becoming unable to act himself, and slashing them with his sword over the duration to deal physical damage thereafter. Surrounding enemy champions that become airborne during this time will also be affected by Last Breath through the remaining duration.",
@@ -438,7 +437,7 @@ const champion: Champion =  {
           50,
           30
         ],
-        "targeting": "Auto",
+        "targeting": "Unit / Proximity",
         "affects": "Enemies",
         "spellshieldable": "special",
         "damageType": "Physical damage",

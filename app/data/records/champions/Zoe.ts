@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:48 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:45 PM CDT
 
 const champion: Champion =  {
   "id": 142,
@@ -116,7 +116,7 @@ const champion: Champion =  {
     ],
     "Q": [
       {
-        "name": "Paddle Star",
+        "name": "Paddle Star!",
         "icon": "https://cdn.communitydragon.org/latest/champion/Zoe/ability-icon/q",
         "effects": [
           {
@@ -213,13 +213,13 @@ const champion: Champion =  {
             ]
           },
           {
-            "description": "The star lingers at maximum range for 1 second, during which Paddle Star can be recast after 0.25 seconds in the duration."
+            "description": "The star lingers at maximum range for 1 second, during which Paddle Star! can be recast after 0.25 seconds in the duration."
           },
           {
             "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Zoe redirects the star in the target path, empowering it with increased speed and radius, and resetting its damage modifier on cast. The redirected star can travel until it reaches 800-units outbound from Zoe.</p>"
           },
           {
-            "description": "Paddle Star's recast can be used while affected by cast-inhibiting crowd control."
+            "description": "Paddle Star!'s recast can be used while affected by cast-inhibiting crowd control."
           }
         ],
         "cost": [
@@ -243,7 +243,7 @@ const champion: Champion =  {
         "damageType": "Magic damage",
         "spellEffects": "Area of effect",
         "projectile": "TRUE",
-        "notes": "Both casts count as ability activations for the purposes of on-cast effects such as  More Sparkles!,  Spellblade and triggering  Force Pulse's passive.\nThe recast radius matches the initial cast radius of the ability, but Zoe can move any amount of distance away from the projectile before reactivating.\nPaddle Star's effect radius is centered around the location of the missile as it collides.\nPaddle Star plays new SFX while an enemy is affected by  Sleepy Trouble Bubble.",
+        "notes": "Both casts count as ability activations for the purposes of on-cast effects such as  More Sparkles!,  Spellblade and triggering  Force Pulse's passive.\nThe recast radius matches the initial cast radius of the ability, but Zoe can move any amount of distance away from the projectile before reactivating.\nPaddle Star!'s effect radius is centered around the location of the missile as it collides.",
         "blurb": "Active:  Zoe shoots a star in the target direction that explodes upon hitting an enemy, dealing magic damage to nearby enemies hit based on the distance travelled.",
         "speed": "1200 / 2500",
         "width": "100 / 140",

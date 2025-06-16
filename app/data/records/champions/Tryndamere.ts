@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:43 PM CDT
 
 const champion: Champion =  {
   "id": 23,
@@ -306,7 +306,7 @@ const champion: Champion =  {
         "cooldown": [
           14
         ],
-        "targeting": "Auto",
+        "targeting": "Proximity",
         "affects": "Enemies",
         "spellshieldable": "True",
         "notes": "Mocking Shout very briefly  reveals Tryndamere if he uses it while in the fog of war to enemies.",
@@ -360,7 +360,7 @@ const champion: Champion =  {
             "description": "Critical strikes on-hit reduce Spinning Slash's current cooldown by 0.75 seconds, doubled to 1.5 seconds against champions."
           },
           {
-            "description": "Bloodlust and Undying Rage can be cast during the dash. Spinning Slash will cast at max range if cast beyond that."
+            "description": "Bloodlust and Undying Rage can be cast during the dash."
           }
         ],
         "cost": [

@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 113,
@@ -113,7 +113,7 @@ const champion: Champion =  {
         "damageType": "Magic damage",
         "spellEffects": "proc",
         "notes": "Gaining Frost Armor does not remove any pre-existing  slows or  cripples.\nIcebreaker will not trigger if the basic attack is  blocked.\nPENDING FOR TEST:: Icebreaker's  interactions with  dodging and  blinding effects via basic attack.\nPENDING FOR TEST::  Spell shield interaction with Icebreaker.",
-        "blurb": "Innate - Icebreaker: Enemies  stunned by  Sejuani are also marked Frozen at the same time. Her next basic attack against a Frozen target will consume the mark to deal bonus magic damage based on their maximum health."
+        "blurb": "Innate - Icebreaker: Enemies  stunned by  Sejuani are also marked Frozen at the same time. Her next basic attack or ability against a Frozen target will consume the mark to deal bonus magic damage based on their maximum health."
       }
     ],
     "Q": [
@@ -149,7 +149,7 @@ const champion: Champion =  {
             ]
           },
           {
-            "description": "Arctic Assault can be cast during her other abilities without cancelling them and vice versa. Arctic Assault will cast at max range if cast beyond that."
+            "description": "Arctic Assault can be cast during her other abilities without cancelling them and vice versa."
           }
         ],
         "cost": [
@@ -365,7 +365,7 @@ const champion: Champion =  {
         "damageType": "Magic damage",
         "spellEffects": "Single target",
         "projectile": "TRUE",
-        "notes": "Permafrost's targeting prioritizes champions within  50 units of the cursor's selection, then non-champions within  50 units of the cursor's selection, then champions within  350 units of the cursor's selection, then the closest unit to the cursor within  2500 units (the last case strictly applies if there is no target being selected).\nFrost stacks will not be applied if the basic attack is  blocked.\nPENDING FOR TEST:: Permafrost's stack application interaction with parrying effects ( dodge,  blind).\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but still go on  cooldown and pay its cost.(bug)",
+        "notes": "Permafrost's targeting prioritizes champions within  50 units of the cursor's selection, then non-champions within  50 units of the cursor's selection, then champions within  350 units of the cursor's selection, then the closest unit to the cursor within  2500 units (the last case strictly applies if there is no target being selected).\nFrost stacks will not be applied if the basic attack is  blocked.\nPENDING FOR TEST:: Permafrost's stack application interaction with parrying effects ( dodge,  blind).\n Master Yi's  Alpha Strike does not interact with Permafrost.(note)\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but still go on  cooldown and pay its cost.(bug)",
         "blurb": "Passive:  Winter's Wrath and both  Sejuani's and nearby allied  melee champions' attacks apply stacks of Frost against  champions, medium / large  monsters and large  minions, which lasts a few seconds and stacks up to a cap. Sejuani can cast Permafrost against an enemy with max stacks.",
         "castTime": "0.25",
         "effectRadius": "1100",

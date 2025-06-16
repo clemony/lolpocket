@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 102,
@@ -190,7 +190,7 @@ const champion: Champion =  {
         "spellshieldable": "True",
         "damageType": "Physical damage",
         "spellEffects": "special",
-        "notes": "Applies  spell damage and procs  basic damage required effects.\nDragon Form's Twin Bite cannot apply  Tiamat's Cleave on each target hit because of Cleave's internal 0.05 seconds interval during which it cannot be applied on a different target.\nDragon Form's Twin Bite only applies the attack to enemies that would be hit by the second strike.\nIn Dragon Form, both strikes belong to the same cast instance. In Human Form, they belong in separate ones.\nSince the second strike applies after the ability goes on cooldown, it will reduce its own cooldown.\nUnlike most on-hit effects, the one reducing the cooldown of Twin Bite also triggers against  structures.\nIn Dragon Form, Twin Bite consumes an additional stack of  Hail of Blades. (bug)",
+        "notes": "Applies  spell damage and procs  basic damage required effects.\nDragon Form's Twin Bite only applies the attack to enemies that would be hit by the second strike.\nIn Dragon Form, both strikes belong to the same cast instance. In Human Form, they belong in separate ones.\nSince the second strike applies after the ability goes on cooldown, it will reduce its own cooldown.\nUnlike most on-hit effects, the one reducing the cooldown of Twin Bite also triggers against  structures.\nIn Dragon Form, Twin Bite consumes an additional stack of  Hail of Blades. (bug)",
         "blurb": "Active:  Shyvana's next basic attack within a few seconds will cause her to quickly strike again, dealing bonus physical damage.",
         "angle": "180°",
         "castTime": "none",
@@ -420,9 +420,6 @@ const champion: Champion =  {
                 ]
               }
             ]
-          },
-          {
-            "description": "Flame Breath while in Dragon Form will cast at max range if cast beyond that."
           }
         ],
         "cost": [
@@ -541,9 +538,6 @@ const champion: Champion =  {
                 ]
               }
             ]
-          },
-          {
-            "description": "Dragon's Descent will cast at max range if cast beyond that."
           }
         ],
         "cost": [

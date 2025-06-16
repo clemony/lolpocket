@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 134,
@@ -152,9 +152,6 @@ const champion: Champion =  {
           },
           {
             "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Transcendent Bonus:</span> Collecting 40 Splinters of Wrath causes Syndra to periodically stock a Dark Sphere charge, up to a maximum of 2.</p>"
-          },
-          {
-            "description": "Dark Sphere will cast at max range if cast beyond that."
           }
         ],
         "cost": [

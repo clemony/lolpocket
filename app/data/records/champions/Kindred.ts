@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 203,
@@ -171,7 +171,7 @@ const champion: Champion =  {
             ]
           },
           {
-            "description": "Dance of Arrows resets Lamb's basic attack timer. Lamb can cast any of her abilities during the dash. Dance of Arrows will cast at max range if cast beyond that."
+            "description": "Dance of Arrows resets Lamb's basic attack timer. Lamb can cast any of her abilities during the dash."
           }
         ],
         "cost": [
@@ -456,7 +456,6 @@ const champion: Champion =  {
         "targeting": "Auto",
         "affects": "Self, Allies, Enemies",
         "resource": "Mana",
-        "spellEffects": "Heal",
         "notes": "Lamb's Respite will affect all  champions,  minions, and  monsters, but not  wards,  turrets, or jungle plants.\nLamb's Respite will affect  untargetable units but does not grant them the  heal at the end of the blessing.\nIt will specifically not affect champions that are  resurrecting from  Guardian Angel.\n Health costs will ignore Lamb's Respite's threshold.\nThe cost will not be paid if the caster is below the threshold.\nLamb's Respite has no effect on  zombie state or  clone units.\nThe effects are applied before the cast time.\nPENDING FOR TEST: Lamb's Respite will have no effect if cast while Kindred is  untargetable.",
         "blurb": "Active:  Lamb blesses the ground under herself for a few seconds. Any unit inside the area will become  invulnerable upon reaching  low health.",
         "castTime": "None",

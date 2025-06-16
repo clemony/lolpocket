@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="bg-b2/40 shadow-smooth mt-10 h-90 w-full rounded-lg">
+  <div class="size-full rounded-lg">
   </div>
 </template>
 

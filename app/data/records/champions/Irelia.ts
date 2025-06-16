@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 39,
@@ -344,7 +344,7 @@ const champion: Champion =  {
             ]
           },
           {
-            "description": "Flawless Duet's recast can be used during Bladesurge and the cast time of Vanguard's Edge. Each of the blades' travel times are 0.264 seconds. Flawless Duet will cast at max range if cast beyond that."
+            "description": "Flawless Duet's recast can be used during Bladesurge and the cast time of Vanguard's Edge. Each of the blades' travel times are 0.264 seconds."
           }
         ],
         "cost": [

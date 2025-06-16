@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 360,
@@ -103,7 +103,7 @@ const champion: Champion =  {
             "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Samira's damaging basic attacks and abilities against at least one enemy champion different from the previous damaging hit made against champions generate a stack of Style for 6 seconds, refreshing on subsequent hits and stacking up to 6 times.</p>"
           },
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Style:</span> For each stack, Samira gains 2 / 2.5 / 3 / 3.5% (based on level) bonus movement speed, up to a maximum of 12 / 15 / 18 / 21% (based on level). At maximum stacks, Samira can cast Inferno Trigger.</p>"
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Style:</span> For each stack, Samira gains 2.75 / 3 / 3.25 / 3.5% (based on level) bonus movement speed, up to a maximum of 16.5 / 18 / 19.5 / 21% (based on level). At maximum stacks, Samira can cast Inferno Trigger.</p>"
           },
           {
             "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Samira's basic attacks against targets within 200 units of her use her blade, becoming non-projectile. Blade attacks post-hit, Blade Whirl, Wild Rush, and the slash and explosives of Flair deal 2 - 19 (based on level) (+ 3.5% - 10.5% (based on level) AD) bonus magic damage, increased by 0% - 100% (based on target's missing health).</p>"
@@ -140,11 +140,11 @@ const champion: Champion =  {
                 "modifiers": [
                   {
                     "values": [
-                      0,
                       5,
                       10,
                       15,
-                      20
+                      20,
+                      25
                     ]
                   },
                   {
@@ -190,7 +190,7 @@ const champion: Champion =  {
         "damageType": "Physical damage",
         "spellEffects": "special",
         "projectile": "SPECIAL",
-        "notes": "Applies  spell damage on the shot and  area damage on the slash and explosives.\n Life steal will always benefit from the damage dealt at 66.6% effectiveness and does not take into account of the ability's spell effects, whereas on the other hand for  omnivamp does, and it will modify the  healing accordingly.\nFlair's shot against an enemy champion will aggro nearby enemy minions.\nFlair can be cast during  Wild Rush even if  Blade Whirl or  Inferno Trigger are active.\nThe slash and explosives roll their  critical strike against each target individually.\nThe shot and the slash do not count as different abilities for stacking  Style.\nSamira's next attack after using Flair will occasionally come out faster.(note)\nSamira can use  Wild Rush during Flair's cast time.\nThis ability will cast from wherever the caster is at the end of the cast time.\nFlair will fire or slash from wherever Samira is at the end of the cast time.\nSamira will always slash in her facing direction, and she will turn to face the target direction only once at the start of the cast time.\nFlair can be buffered 0.5 seconds before it comes off cooldown.\nOnly the shot will be destroyed by  projectile-intercepting effects.\nThe explosive placement is illustrated in  Wild Rush regardless of whether Flair is available.\nThe VFX always covers the the full dash's distance even if  Wild Rush is interrupted mid-dash.",
+        "notes": "Applies  spell damage on the shot and  area damage on the slash and explosives.\n Life steal will always benefit from the damage dealt at 80% effectiveness and does not take into account of the ability's spell effects, whereas on the other hand for  omnivamp does, and it will modify the  healing accordingly.\nFlair's shot against an enemy champion will aggro nearby enemy minions.\nFlair can be cast during  Wild Rush even if  Blade Whirl or  Inferno Trigger are active.\nThe slash and explosives roll their  critical strike against each target individually.\nThe shot and the slash do not count as different abilities for stacking  Style.\nSamira's next attack after using Flair will occasionally come out faster.(note)\nSamira can use  Wild Rush during Flair's cast time.\nThis ability will cast from wherever the caster is at the end of the cast time.\nFlair will fire or slash from wherever Samira is at the end of the cast time.\nSamira will always slash in her facing direction, and she will turn to face the target direction only once at the start of the cast time.\nFlair can be buffered 0.5 seconds before it comes off cooldown.\nOnly the shot will be destroyed by  projectile-intercepting effects.\nThe explosive placement is illustrated in  Wild Rush regardless of whether Flair is available.\nThe VFX always covers the the full dash's distance even if  Wild Rush is interrupted mid-dash.",
         "blurb": "Active:  Samira fires a shot in the target direction that deals physical damage to the first enemy hit.",
         "speed": "2600",
         "width": "120 / 130",
@@ -370,7 +370,7 @@ const champion: Champion =  {
         "icon": "https://cdn.communitydragon.org/latest/champion/Samira/ability-icon/r",
         "effects": [
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Samira unleashes a torrent of shots for 2.277 seconds, reducing her movement speed by 30% and rapidly shooting at nearby enemies over 2.013 seconds at sporadic times in 0.2-second intervals each (10 times per enemy), dealing physical damage with each shot, reduced by 75% against minions. This damage is affected by critical strike modifiers and applies life steal at 80% effectiveness.</p>",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Samira unleashes a torrent of shots for 2.277 seconds, reducing her movement speed by 30% and rapidly shooting at nearby enemies over 2.013 seconds at sporadic times in 0.2-second intervals each (up to 10 times per enemy), dealing physical damage with each shot, reduced by 75% against minions. This damage is affected by critical strike modifiers and applies life steal at 80% effectiveness.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage Per Shot",
@@ -467,7 +467,7 @@ const champion: Champion =  {
         "cooldown": [
           5
         ],
-        "targeting": "Auto",
+        "targeting": "Proximity",
         "affects": "Enemies",
         "spellshieldable": "special",
         "damageType": "Physical damage",

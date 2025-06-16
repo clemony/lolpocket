@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:48 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:45 PM CDT
 
 const champion: Champion =  {
   "id": 154,
@@ -105,11 +105,13 @@ const champion: Champion =  {
           },
           {
             "description": "After the duration, Zac is revived with 10 - 50% maximum health. Zac will die once all bloblets are killed."
+          },
+          {
+            "description": "See Pets for stats and details for bloblets."
           }
         ],
         "targeting": "Passive",
         "affects": "Self",
-        "spellEffects": "Heal",
         "notes": "The damage directed to Zac is  internal raw damage.\nZac's health when the bloblets are sent out is set to what it would be if all bloblets recombined, and is actively updated when the bloblets take damage.\nZac's increased size does not consider his base stats.\nCell Division's chunks spawn in two versions:\nContestable: They will fall to the ground at a point which is roughly equidistant from Zac and the nearest  visible enemy champion within 1000 range of him (dropping slightly in Zac's favor). The location at which they fall to the ground is influenced by the direction in which Zac is currently facing. Cannot be interacted with for the first 0.25 seconds (except during  Let's Bounce!).\nUncontestable: They will fall to the ground near Zac and can be picked up immediately (version used by default).\nZac's  untargetability upon triggering Cell Division does not  destroy in-flight  projectiles.\n Chronoshift and  Guardian Angel will take priority over Cell Division.\n Spirit Visage and  Heal Power increases the healing of both chunks and bloblets.\n Ryze's  Realm Warp is able to individually teleport Zac or his bloblets during Cell Division.\nIf Zac is transported to a new location before the bloblets landed, they will travel to form at his new position, adjusting their speed accordingly. If Cell Division's duration permits during this time, Zac will be revived even if the bloblets fail to physically recombine.\nCell Division's bloblets can be targeted by  Teleport and  Syndra's  Force of Will.\nOther bloblets are not interrupted by the conditions above and will continue to recombine instinctively.\nIf Zac's health is higher than it is supposed to be when the bloblets converge on him, his health will be set to the correct value.\nThe following table refers for interactions while Zac is in resurrection:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll summoner spells are disabled\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
         "blurb": "Innate - Goo:  Zac's abilities have a  health cost. Whenever Zac's abilities damage an enemy, he sheds a number of chunks on the ground that remain for a few seconds. Zac and enemy champions can collect the chunks; an enemy will destroy it, while Zac will  heal a portion of his maximum health."
       }
@@ -330,7 +332,7 @@ const champion: Champion =  {
             "description": "Elastic Slingshot can be recast within the duration. If Zac cancels the channel himself, or the charge completes without reactivation, 50% of Elastic Slingshot's health cost and cooldown are refunded."
           },
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Zac leaps to the target location. Upon landing, he deals magic damage to nearby enemies and knocks them up and stuns them for 0.5 seconds, increased to 1 second if Elastic Slingshot was charged for more than 1 second.</p>",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Zac leaps to the target location within the boundaries of the cone. Upon landing, he deals magic damage to nearby enemies and knocks them up and stuns them for 0.5 seconds, increased to 1 second if Elastic Slingshot was charged for more than 1 second.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -355,9 +357,6 @@ const champion: Champion =  {
                 ]
               }
             ]
-          },
-          {
-            "description": "Elastic Slingshot will cast at max range if cast beyond that."
           }
         ],
         "cost": [

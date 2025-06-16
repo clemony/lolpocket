@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 114,
@@ -415,8 +415,6 @@ const champion: Champion =  {
         "affects": "Self, Enemies",
         "spellshieldable": "false",
         "resource": "Mana",
-        "damageType": "True damage",
-        "spellEffects": "Heal",
         "notes": "Grand Challenge is dispelled instantly if targeting a decoy.\nGrand Challenge can't be cast on  Sion's  Glory in Death.\nThe damage of this ability scales with  Duelist's Dance.\nEven if Fiora dies, the  Victory Zone will trigger so long as she hit at least one Vital and they die before the Vitals wear off.\n Resurrection effects will not prevent the activation of the  Victory Zone.\nThe  Victory Zone will not heal  untargetable units.\nFiora will automatically attack the target upon casting if the target was selected while they weren't in range of the ability.",
         "blurb": "Passive:  Duelist's Dance's  bonus movement speed is increased.",
         "castTime": "none",

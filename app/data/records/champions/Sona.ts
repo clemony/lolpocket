@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 37,
@@ -300,7 +300,6 @@ const champion: Champion =  {
         "targeting": "Auto",
         "affects": "Self, Allies",
         "resource": "Mana",
-        "spellEffects": "Heal",
         "projectile": "TRUE",
         "notes": "If no one is injured, Aria of Perseverance will target the closest allied champion.\nThe projectile of Aria of Perseverance will follow an ally in stealth but will not reveal them.",
         "blurb": "Active:  Sona  heals herself and projects a sound bolt that heals the most wounded allied champion nearby.",

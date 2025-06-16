@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 25,
@@ -106,7 +106,6 @@ const champion: Champion =  {
         ],
         "targeting": "Passive",
         "affects": "Self",
-        "spellEffects": "Heal",
         "notes": "No additional details.",
         "blurb": "Innate:  Morgana  heals herself for a portion of the damage dealt by her abilities against  champions, large  minions, and medium and large  monsters."
       }
@@ -358,7 +357,6 @@ const champion: Champion =  {
         "targeting": "Unit",
         "affects": "Self, Allies",
         "resource": "Mana",
-        "spellEffects": "Shield",
         "notes": "Black Shield will not resist self nor allied  crowd control (including e.g. an allied  Tempered Fate).\nBlack Shield will not resist  nearsight.\nBlack Shield negates  crowd control effects before any magic damage is absorbed; even if the shield is broken by an enemy dealing enough damage, its associated disables will not apply. Shield-destroying effects bypass this however, since they destroy the shield before applying their effects.\nBlack Shield will not prevent effects other than  crowd control from triggering (e.g.  Malzahar's  Nether Grasp will not  suppress a target protected by Black Shield but the  tether still applies).\nAlthough not considered a crowd control effect, Black Shield is special-cased to block  Illaoi's  Test of Spirit's spirit pull.\nBlack Shield takes priority over other sources of  crowd control immunity and those that grant immunity to specific types of crowd control ( displacement immunity and  slow immunity).\n Spell shield will take priority over Black Shield.\nBlack Shield will always take priority over regular  shields. If used in conjunction with Lifeline, the most recently-applied one will have priority however.\nBlack Shield has a  forgiveness radius of 175 units.",
         "blurb": "Active:  Morgana  shields the target allied champion or herself for a few seconds, which absorbs magic damage and grants  crowd control immunity while the shield holds.",
         "castTime": "none",
@@ -463,7 +461,7 @@ const champion: Champion =  {
           110,
           100
         ],
-        "targeting": "Auto",
+        "targeting": "Proximity",
         "affects": "Enemies",
         "spellshieldable": "Special",
         "resource": "Mana",

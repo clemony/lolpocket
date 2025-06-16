@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:43 PM CDT
 
 const champion: Champion =  {
   "id": 29,
@@ -240,9 +240,8 @@ const champion: Champion =  {
         "affects": "Enemies",
         "spellshieldable": "True",
         "resource": "Mana",
-        "spellEffects": "False",
         "projectile": "TRUE",
-        "notes": "Venom Cask can apply a maximum of 4  Deadly Venom stacks per enemy.\nVenom Cask's missile will fail to fire if Twitch is  suppressed during the cast time.(note)",
+        "notes": "Venom Cask can apply a maximum of 4  Deadly Venom stacks per enemy per cast.\nVenom Cask's missile will fail to fire if Twitch is  suppressed during the cast time.(note)",
         "blurb": "Active:  Twitch tosses a cask that explodes at the target location, inflicting  Deadly Venom to enemies hit.",
         "speed": "1400",
         "castTime": "0.25",
@@ -379,7 +378,7 @@ const champion: Champion =  {
           9,
           8
         ],
-        "targeting": "Auto",
+        "targeting": "Proximity",
         "affects": "Enemies",
         "spellshieldable": "True",
         "resource": "Mana",
@@ -431,8 +430,8 @@ const champion: Champion =  {
         "damageType": "Physical damage",
         "spellEffects": "basic",
         "projectile": "TRUE",
-        "notes": "The extra distance that the bolts travel scales with bonus attack range.\nSpray and Pray allows Twitch to outrange  turrets by 50 units, allowing him to hit them without them returning fire.\nTwitch targets his line attack at his target's location at the start of his attack windup.\nThe bolts reach targets at a delay, composed of Twitch's windup time and distance the bolt has to travel at finite speed. Even the primary target can dodge the attack if they are moving quickly enough.\nThe bolt projectiles will naturally pass through terrain and enemy structures (the latter will be damaged by bolts even if they are not directly targeted).\nIf Twitch is  blinded before winding up the attack, the hits will miss against all targets.\n Runaan's Hurricane's Wind's Fury interacts with Spray and Pray's  bonus attack range but not with the modified missile effect (the secondary bolts will not have pass-through effects).\nWhenever the bolts penetrate a target, a small elongated cloud appears at the location, which's VFX and SFX can be seen and heard inside the Fog of War.\nThe bolts' travel distance scales with the full value of Twitch's  attack range increases such as  Rapid Firecannon, but not with size increases (which only increase his effective attack range, thereby the target range).\n(Outdated as of V10.13, now can hit everything with edge range, except for turrets) The  center of a unit must be within the maximum travel distance of the bolt missile, and in front of the spawn location (Twitch's  center) for the bolt to be able to hit them.\nOther than this condition, the bolt missile has to only touch (pass within its half width of 60 units) the  edge of the unit's radius.\nThis is standard behaviour for linear skillshots.\n Malignance's Hatefog is special cased to work with Spray and Pray.\n Axiom Arcanist increases the total damage of each bolt by 14%.(note)",
-        "blurb": "Active:  Twitch gains  bonus attack damage and  bonus attack range for a few seconds, during which his basic attacks are replaced with bolts that deal the attack's damage to enemies hit.",
+        "notes": "The extra distance that the bolts travel scales with bonus attack range.\nSpray and Pray allows Twitch to outrange  turrets by 50 units, allowing him to hit them without them returning fire.\nTwitch targets his line attack at his target's location at the start of his attack windup.\nThe bolts reach targets at a delay, composed of Twitch's windup time and distance the bolt has to travel at finite speed. Even the primary target can dodge the attack if they are moving quickly enough.\nThe bolt projectiles will naturally pass through terrain and enemy structures (the latter will be damaged by bolts even if they are not directly targeted).\nIf Twitch is  blinded before winding up the attack, the hits will miss against all targets.\n Runaan's Hurricane's Wind's Fury interacts with Spray and Pray's  bonus attack range but not with the modified missile effect (the secondary bolts will not have pass-through effects).\nWhenever the bolts penetrate a target, a small elongated cloud appears at the location, which's VFX and SFX can be seen and heard inside the Fog of War.\nThe bolts' travel distance scales with the full value of Twitch's  attack range increases such as  Rapid Firecannon, but not with size increases (which only increase his effective attack range, thereby the target range).\n(Outdated as of V10.13, now can hit everything with edge range, except for turrets) The  center of a unit must be within the maximum travel distance of the bolt missile, and in front of the spawn location (Twitch's  center) for the bolt to be able to hit them.\nOther than this condition, the bolt missile has to only touch (pass within its half width of 60 units) the  edge of the unit's radius.\nThis is standard behaviour for linear skillshots.\n Malignance's Hatefog is special cased to work with Spray and Pray.\n Axiom Arcanist amplifies bolt damage as  area of effect.",
+        "blurb": "Active:  Twitch gains  bonus attack damage and  bonus attack range for a few seconds, during which his basic attacks are replaced with bolts that deal the attack's damage to all enemies in a line.",
         "speed": "5000",
         "width": "120",
         "castTime": "none",

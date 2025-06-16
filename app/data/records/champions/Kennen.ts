@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 85,
@@ -263,7 +263,7 @@ const champion: Champion =  {
           7.75,
           6
         ],
-        "targeting": "Auto",
+        "targeting": "Proximity",
         "affects": "Enemies",
         "spellshieldable": "True",
         "resource": "Energy",

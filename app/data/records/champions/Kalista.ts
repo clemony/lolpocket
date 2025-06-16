@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 429,
@@ -10,7 +10,7 @@ const champion: Champion =  {
   "attackType": "Ranged",
   "stats": {
     "health": {
-      "flat": 580,
+      "flat": 560,
       "perLevel": 114
     },
     "healthRegen": {
@@ -115,7 +115,7 @@ const champion: Champion =  {
         "targeting": "Direction",
         "affects": "Self",
         "notes": "Movement commands inputted during an attack windup or the cast time of  Pierce while Kalista is  immobilized or  grounded will fail to cast and thus prevent the dash from triggering.\nThe movement command will still be buffered to the end of the immobilization or the end of the attack windup or cast time of  Pierce while grounded if it has not been overridden by other inputs.\nIf multiple movement commands are inputted during the attack windup, the most recent one is used for the dash's targeting.\nIf the most recent input is not a movement command, the dash will not trigger.\nIn this case, the buffer for the previous movement command was cancelled by a new non-movement command such as an input for an attack or ability cast.\nDash distance decreases as the dash direction becomes closer to the minimum direction. This defines a forward distance for basic attacks and a backwards distance for  Pierce. Empirical testing has given the following values below.\nBasic attack dash range given the angle θ:\n{(175+(125×sin⁡(θ)))×T\nWhere T=0.800,0.875,0.950,1.000 depending on the tier of Boots (T0, T1, T2, T3)\nMinimum dash range of 225 units when dashing backwards\n Pierce's dash range given the angle θ:\n{150+(150×sin⁡(θ))Backwards300Otherwise\nThere is a very brief grace period after completing a basic attack windup wherein  Kalista can still input a movement command to trigger the dash.\nThe dash speed is unaffected by additive movement speed modifiers.\nThere are a total of 24 different dash ranges based on direction with Boots and  Pierce being cast.\nKalista will automatically be issued an attack command on her attack target at the end of the dash, as long as they remain in her attack range by then.\nThe attack move (default A + MB1) click feature checks for targets in brief intervals only if Kalista is not dashing.\nKalista's facing direction when dashing is considered to be in the direction of the dash, not her apparent facing direction based on her model's animation state.\n Sleep does not count for knocking the dash down.(bug)",
-        "blurb": "Innate: During each basic attack or casting of  Pierce,  Kalista can optionally choose a target direction to quickly  dash to. The range is based on dash angle and Kalista's Boots tier. The dash speed scales withbonus attack speed and certain movement speed effects.",
+        "blurb": "Innate: During each basic attack or casting of  Pierce,  Kalista can optionally choose a target direction to quickly  dash to. The range is based on dash angle and Kalista's Boots tier. The dash speed scales with bonus attack speed and certain movement speed effects.",
         "tetherRadius": "1100"
       }
     ],
@@ -226,7 +226,7 @@ const champion: Champion =  {
             ]
           },
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kalista summons a Sentinel that patrols back and forth on a path along the target location, granting sight of its surroundings as it travels.</p>"
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kalista summons a Sentinel that patrols back and forth on a path along the target direction, granting sight of its surroundings as it travels.</p>"
           },
           {
             "description": "Kalista periodically stocks a Sentinel charge, up to a maximum of 2."
@@ -241,7 +241,7 @@ const champion: Champion =  {
         "cooldown": [
           30
         ],
-        "targeting": "Direction",
+        "targeting": "Location",
         "affects": "Enemies",
         "damageType": "Magic damage",
         "spellEffects": "proc",
@@ -392,13 +392,13 @@ const champion: Champion =  {
         "cooldown": [
           0
         ],
-        "targeting": "Auto",
+        "targeting": "Proximity",
         "affects": "Enemies",
         "spellshieldable": "True",
         "resource": "Mana",
         "damageType": "Physical damage",
         "spellEffects": "Area of effect",
-        "notes": "Rend at maximum stacks will deal a total of 2044 / 3066 / 4341 / 5869 / 7650 (+ 5914.3 / 7079.618 / 8186.493 / 9293.368 / 10400.243% AD) physical damage.\nRend cannot activate on  untargetable enemies.\nRend applies its effects instantly on cast.\nThe cooldown will not reset if the target is protected by  resurrection effects.\nIf Rend is used against  Sion under the effects of  Glory in Death, the cooldown will reset even if it does not kill him.(bug)\nA stack is not applied if the attack is  dodged,  blocked or missed while Kalista is  blinded.\n Pierce does not apply a stack of Rend if blocked by  spell shield.\nWhile  berserk, Kalista's attacks will also apply Rend stacks on allies.\nKalista will be unable to cast Rend if there are no stacks on an enemy in range.\nRend cannot cast on allies, even if a valid enemy target exists. As such, any spears on allied units are purely cosmetic.\nRend has a lower cast range than effect range.",
+        "notes": "Rend cannot activate on  untargetable enemies.\nRend applies its effects instantly on cast.\nThe cooldown will not reset if the target is protected by  resurrection effects.\nIf Rend is used against  Sion under the effects of  Glory in Death, the cooldown will reset even if it does not kill him.(bug)\nA stack is not applied if the attack is  dodged,  blocked or missed while Kalista is  blinded.\n Pierce does not apply a stack of Rend if blocked by  spell shield.\nWhile  berserk, Kalista's attacks will also apply Rend stacks on allies.\nKalista will be unable to cast Rend if there are no stacks on an enemy in range.\nRend cannot cast on allies, even if a valid enemy target exists. As such, any spears on allied units are purely cosmetic.\nRend has a lower cast range than effect range.\nRend at maximum stacks will deal a total of 2044 / 3066 / 4341 / 5869 / 7650 (+ 5914.3 / 7079.618 / 8186.493 / 9293.368 / 10400.243% AD) physical damage.",
         "blurb": "Passive:  Kalista's basic attacks and  Pierce lodge a spear into their target, applying a stack of Rend for a few seconds.",
         "castTime": "0.25",
         "effectRadius": "1100",
@@ -448,7 +448,7 @@ const champion: Champion =  {
           140,
           120
         ],
-        "targeting": "Auto",
+        "targeting": "Proximity",
         "affects": "Oathsworn Ally / Enemies",
         "spellshieldable": "True",
         "resource": "Mana",

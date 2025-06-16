@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 145,
@@ -270,7 +270,7 @@ const champion: Champion =  {
           7,
           6
         ],
-        "targeting": "Auto",
+        "targeting": "Proximity",
         "affects": "Enemies",
         "spellshieldable": "Special",
         "resource": "Mana",
@@ -403,7 +403,7 @@ const champion: Champion =  {
             ]
           },
           {
-            "description": "After completing the charge, she gains bonus attack speed and reduces her basic attack windup percentage by 6.44% for 4 seconds.",
+            "description": "After completing the charge, she gains bonus attack speed for 4 seconds, during which her attacks have a lower windup of 6.44% and an increased missile speed.",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",

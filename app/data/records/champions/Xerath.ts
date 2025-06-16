@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:47 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:43 PM CDT
 
 const champion: Champion =  {
   "id": 101,
@@ -113,7 +113,7 @@ const champion: Champion =  {
         ],
         "targeting": "Passive",
         "affects": "Self",
-        "notes": "Mana Surge triggers against structures.\nMana Surge will trigger even if the attack is  blocked.\nThe empowered attack will not trigger against structures.\nPENDING FOR TEST:: Mana Surge's  interactions with  dodging, and  blinding effects.",
+        "notes": "Mana Surge will trigger even if the attack is  blocked.\nThe empowered attack will trigger against structures.\nPENDING FOR TEST:: Mana Surge's  interactions with  dodging, and  blinding effects.",
         "blurb": "Innate: Periodically,  Xerath's next basic attack restores  mana, doubled against an enemy  champion."
       }
     ],
@@ -186,7 +186,7 @@ const champion: Champion =  {
           6,
           5
         ],
-        "targeting": "Direction",
+        "targeting": "Auto / Direction",
         "affects": "Self, Enemies",
         "spellshieldable": "True",
         "resource": "Mana",
@@ -473,7 +473,7 @@ const champion: Champion =  {
             "description": "Xerath will reveal himself if a missile strikes near an enemy.",
             "leveling": [
               {
-                "attribute": "Distance",
+                "attribute": "Impact Distance to Reveal",
                 "modifiers": [
                   {
                     "values": [
@@ -485,9 +485,6 @@ const champion: Champion =  {
                 ]
               }
             ]
-          },
-          {
-            "description": "Rite of the Arcane's recast will cast at max range if cast beyond that."
           }
         ],
         "cost": [

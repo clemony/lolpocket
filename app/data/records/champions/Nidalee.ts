@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 76,
@@ -542,10 +542,10 @@ const champion: Champion =  {
             ]
           },
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Hunted Bonus:</span> Nidalee can perform Pounce from an increased range on a Hunted enemy closest to the cursor. She can Pounce to a target location near a Hunted enemy if she is close to them.</p>"
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Hunted Bonus:</span> Nidalee can perform Pounce from an increased range on a Hunted enemy closest to the cursor. She will leap to the front of the target.</p>"
           },
           {
-            "description": "Takedown and Aspect of the Cougar can be cast during the dash. Pounce will cast at max range if cast beyond that."
+            "description": "Takedown and Aspect of the Cougar can be cast during the dash."
           }
         ],
         "cost": [
@@ -562,12 +562,12 @@ const champion: Champion =  {
           10,
           9
         ],
-        "targeting": "Direction / Location / Unit",
+        "targeting": "Direction / Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
         "damageType": "Magic damage",
         "spellEffects": "Area of effect",
-        "notes": "Pounce will not receive the reduced cooldown if the target becomes Hunted mid-air.\nPounce without a Hunted target will have a fixed distance and use direction-targeting.\nPounce in the direction of a Hunted target that is inside of normal ability range will use location-targeting and place Nidalee at the target location.\nPounce on a Hunted target that is out of normal ability range will use unit-targeting and place Nidalee on the side of the target that the target is facing.\nPounce on a Hunted target will extend the remaining duration of the  Hunted debuff on the target by 1.5 seconds.",
+        "notes": "Pounce will not receive the reduced cooldown if the target becomes  Hunted mid-air.\nCasting Pounce on a Hunted target will extend the remaining duration of their  Hunted debuff by 1.5 seconds, up to the original duration.",
         "blurb": "Passive: Killing an enemy or using Pounce's  Hunted bonus will  reduce Pounce's cooldown.",
         "castTime": "none",
         "effectRadius": "200 / 250",
@@ -659,7 +659,6 @@ const champion: Champion =  {
         "targeting": "Unit",
         "affects": "Self, Allies",
         "resource": "Mana",
-        "spellEffects": "Heal",
         "notes": "The bonus attack speed will persist through  Cougar Form if Nidalee uses Primal Surge on herself.",
         "blurb": "Active:  Nidalee revitalizes herself or the target allied champion, granting  bonus attack speed for a few seconds and  healing the target based on their missing health.",
         "castTime": "0.25",
@@ -694,7 +693,7 @@ const champion: Champion =  {
                   },
                   {
                     "values": [
-                      40
+                      55
                     ],
                     "units": [
                       "% AP"

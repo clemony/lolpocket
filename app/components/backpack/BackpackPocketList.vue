@@ -35,9 +35,9 @@ onMounted (() => {
         <SidebarCollapsibleTrigger as-child>
           <i-ui-pocket class="size-5 -mt-px -left-0.25 group-not-disabled/pin:text-bc group-disabled/all:text-bc/35" />
 
-          
+
             All
-          
+
           <SidebarBadge class="font-mono !text-1 pr-4">
             <span v-if="!ps.pockets || ps.pockets.length == null || ps.pockets.length == 0">0</span>
             <span v-else>
@@ -49,10 +49,10 @@ onMounted (() => {
         <SidebarCollapsibleContent class="pb-6">
           <NuxtLink v-for="pocket in ps.pockets" :key="pocket.key" :to="`/pocket/${pocket.key}`">
             <Btn v-if="pocket">
-              <PocketIcon :url="pocket.icon" class="size-5" />
-              
+              <PocketIcon :url="pocket.icon" class="size-5 rounded-full" size="29-2x" />
+
                 {{ pocket.name }}
-              
+
             </Btn>
           </NuxtLink>
         </SidebarCollapsibleContent>
@@ -69,7 +69,7 @@ onMounted (() => {
         </SidebarBadge>
       </Btn>
 
-      <Btn @click="navigateTo('/pockets/trash')">
+      <Btn @click="navigateTo('/pockets/trash')" class="w-full">
         <icon name="trash" />
         Trash
         <SidebarBadge class="font-mono !text-1 pr-4">

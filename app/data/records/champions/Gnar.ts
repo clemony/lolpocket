@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 150,
@@ -470,7 +470,7 @@ const champion: Champion =  {
             "description": "Gnar will not bounce if he is immobilized during the first leap."
           },
           {
-            "description": "Boomerang Throw can be cast during the dash. Hop will cast at max range if cast beyond that."
+            "description": "Boomerang Throw can be cast during the dash."
           }
         ],
         "cost": [
@@ -531,9 +531,6 @@ const champion: Champion =  {
           },
           {
             "description": "Enemies Gnar lands directly on top of are affected by Hop's slow."
-          },
-          {
-            "description": "Crunch will cast at max range if cast beyond that."
           }
         ],
         "cost": [

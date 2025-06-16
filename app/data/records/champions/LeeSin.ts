@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 64,
@@ -227,7 +227,7 @@ const champion: Champion =  {
             ]
           },
           {
-            "description": "Iron Will and Cripple can be cast during the dash."
+            "description": "The marked enemy must be within range in order to cast this ability. Iron Will and Cripple can be cast during the dash."
           }
         ],
         "cost": [
@@ -240,7 +240,7 @@ const champion: Champion =  {
           7,
           6
         ],
-        "targeting": "Auto",
+        "targeting": "Proximity",
         "affects": "Enemies",
         "spellshieldable": "True",
         "resource": "Energy",
@@ -415,11 +415,11 @@ const champion: Champion =  {
                 "modifiers": [
                   {
                     "values": [
-                      20,
                       35,
-                      50,
+                      45,
+                      55,
                       65,
-                      80
+                      75
                     ],
                     "units": [
                       "%"
@@ -428,6 +428,9 @@ const champion: Champion =  {
                 ]
               }
             ]
+          },
+          {
+            "description": "A nearby marked enemy is required to cast this ability."
           }
         ],
         "cost": [
@@ -436,7 +439,7 @@ const champion: Champion =  {
         "cooldown": [
           9
         ],
-        "targeting": "Auto",
+        "targeting": "Proximity",
         "affects": "Enemies",
         "spellshieldable": "True",
         "resource": "Energy",
@@ -528,7 +531,7 @@ const champion: Champion =  {
         "damageType": "Physical damage",
         "spellEffects": "Special",
         "notes": "Applies  spell damage to the primary target and  area damage to secondary targets.\nThe spell indicator for this ability also displays the direction for the knock back relative to Lee Sin's position.\nIf the target of Dragon Rage  dies initially on the first hit there will be no displacement of any kind.\nThe  displacement's direction is decided at the moment of impact and not by Lee Sin and his target's relative locations at the start of the cast (the only way for Lee Sin to control where his target is displaced is by using  Flash before the cast time of Dragon's Rage ends).\nIf the  airborne debuff is removed from the target, its ability to collide with enemies is removed aswell, even if the target has not come to a stop yet.(note)\nThe airborne debuff and with it collision of the target remains for the normal duration even if its trajectory is  displaced by another source (i.e -  Headbutt).\nThe target may still collide with other enemies for the remaining airborne duration after they reach their destination, as the airborne debuff lasts longer than the displacement.\nThe knockback distance is intended to be 800, but due to a bug, this is reduced by up-to the sum of Lee Sin's and his target's  gameplay radius, depending on how far they are away from one another at the end of the cast time.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
-        "blurb": "Active: Lee Sin  roots the target enemy champion and roundhouse kicks them, dealing physical damage and  knocking them back.",
+        "blurb": "Active:  Lee Sin  roots the target enemy  champion and roundhouse kicks them, dealing physical damage and  knocking them back.",
         "collisionRadius": "160",
         "castTime": "0.25",
         "targetRange": "375",

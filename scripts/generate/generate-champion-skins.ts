@@ -1,6 +1,6 @@
 import fs from "node:fs"
 import path from "node:path"
-import { cleanImageLink } from "../utils/cleanImageLink"
+import { cleanImageLink, cleanImageNum } from "../utils/cleanImageLink"
 import { markUpdate } from "../utils/mark-update"
 
 const championsPath = path.resolve("./data/raw/champions-raw-ma.json")
@@ -45,10 +45,7 @@ for (const key in champions) {
     )
     .map((skin) => ({
       name: skin.name,
-      tilePath: skin.tilePath.replace(
-        "https://raw.communitydragon.org/pbe/plugins/rcp-be-lol-game-data/global/default/assets/characters",
-        ""
-      ),
+      id: cleanImageNum(skin.tilePath),
     }))
 
   if (allSkins.length > 0) {

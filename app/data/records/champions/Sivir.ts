@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 15,
@@ -253,7 +253,7 @@ const champion: Champion =  {
         "icon": "https://cdn.communitydragon.org/latest/champion/Sivir/ability-icon/w",
         "effects": [
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sivir empowers her crossblade for the next 4 seconds, gaining bonus attack speed and causing her basic attacks to bounce to additional surrounding enemies, dealing them physical damage. If the triggering attack critically strikes, the bounces will do so as well for (175% + 40%) damage. Ricochet deals 65% damage against minions and executes them if they would be left below 15 health.</p>",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Sivir empowers her crossblade for the next 4 seconds, gaining bonus attack speed and causing her basic attacks to bounce to additional surrounding enemies, dealing physical damage to them. If the triggering attack critically strikes, the bounces will do so as well for (175% + 40%) damage. Ricochet deals 65% damage against minions and executes them if they would be left below 15 health.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Attack Speed",

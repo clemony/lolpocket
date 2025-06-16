@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:48 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:45 PM CDT
 
 const champion: Champion =  {
   "id": 238,
@@ -229,7 +229,7 @@ const champion: Champion =  {
             "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Zed and the Shadow blink to swap places. If Living Shadow was recast while the Shadow is dashing, the recast will instead occur once it has been placed.</p>"
           },
           {
-            "description": "If an ability is cast while the Shadow is dashing, it will cast that ability once it has been placed. See Pets for more details about Shadows. Living Shadow will cast at max range if cast beyond that."
+            "description": "If an ability is cast while the Shadow is dashing, it will cast that ability once it has been placed. See Pets for more details about Shadows."
           }
         ],
         "cost": [

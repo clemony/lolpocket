@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 497,
@@ -108,7 +108,6 @@ const champion: Champion =  {
         ],
         "targeting": "Passive",
         "affects": "Self",
-        "spellEffects": "Shield",
         "notes": "Revitalize will record bonus shielding when a new shield is created, but not when it regenerates. In either case, there is no bonus shielding received.\nThe cooldown reduction is granted even if the ability is blocked by a  spell shield.",
         "blurb": "Innate: Periodically,  Rakan generates a  shield that regenerates out of combat if not broken."
       }
@@ -208,9 +207,6 @@ const champion: Champion =  {
           },
           {
             "description": "Rakan will be knocked down by any immobilizing or polymorphing crowd control during the dash."
-          },
-          {
-            "description": "Grand Entrance will cast at max range if cast beyond that."
           }
         ],
         "cost": [
@@ -297,7 +293,6 @@ const champion: Champion =  {
         "targeting": "Unit",
         "affects": "Allies",
         "resource": "Mana",
-        "spellEffects": "Shield",
         "notes": "Both casts count as ability activations for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nThe shields do not stack if Battle Dance is cast on the same target twice. Only the duration and shield amount is refreshed.\nBattle Dance, its recast, and its empowered version on  Xayah all have a  forgiveness radius of 175 units.\n Sleep does not count for knocking the dash down.(bug)",
         "blurb": "Passive:  Rakan can cast or re-cast Battle Dance at an increased  range when targeting  Xayah.",
         "speed": "1250 + 80% movement speed",

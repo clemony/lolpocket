@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 54,
@@ -111,7 +111,6 @@ const champion: Champion =  {
         ],
         "targeting": "Passive",
         "affects": "Self",
-        "spellEffects": "Shield",
         "notes": "Malphite's increased size is affected by his base armor and growth, but also reduced by  Black Cleaver. His increased size does not consider  Thunderclap's bonus armor.\nThe bonus will become a size reduction if Malphite is dropped to negative armor values.\nGranite Shield does not refresh its cooldown from damage that is mitigated by  shields.",
         "blurb": "Innate:  Malphite  shields himself equal to a portion of his maximum health, which refreshes after a few seconds without taking damage."
       }
@@ -444,9 +443,6 @@ const champion: Champion =  {
                 ]
               }
             ]
-          },
-          {
-            "description": "Unstoppable Force will cast at max range if cast beyond that."
           }
         ],
         "cost": [

@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 893,
@@ -29,7 +29,7 @@ const champion: Champion =  {
       "perLevel": 4.5
     },
     "magicResistance": {
-      "flat": 30,
+      "flat": 32,
       "perLevel": 1.3
     },
     "attackDamage": {
@@ -423,7 +423,7 @@ const champion: Champion =  {
                   },
                   {
                     "values": [
-                      60
+                      70
                     ],
                     "units": [
                       "% AP"
@@ -486,7 +486,7 @@ const champion: Champion =  {
           120,
           100
         ],
-        "targeting": "Direction",
+        "targeting": "Direction / Auto",
         "affects": "Enemies, self",
         "spellshieldable": "true",
         "resource": "Mana",

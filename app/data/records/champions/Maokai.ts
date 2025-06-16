@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 57,
@@ -110,7 +110,6 @@ const champion: Champion =  {
         ],
         "targeting": "Passive",
         "affects": "Self",
-        "spellEffects": "Heal",
         "notes": "Sap Magic does not occur if the attack is  dodged and/or missed if Maokai is  blinded. It will occur if it is  blocked.\nThe striking ability has to trigger spell effects such as  spell damage or  area damage for the cooldown to be reduced.\nIf Maokai possesses a  spell shield and it consumes an enemy ability, he will still receive the cooldown reduction.\nThe empowered attack will not trigger against structures nor wards.",
         "blurb": "Innate: Periodically,  Maokai's next basic attack will  heal him for a portion of his maximum health."
       }

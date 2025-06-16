@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 2,
@@ -204,7 +204,7 @@ const champion: Champion =  {
             "description": "The axe remains in place for a duration equal to Undertow's cooldown, granting sight of its surroundings for 0.5 seconds. Olaf can pick up the axe to reduce Undertow's current cooldown to 2.5 seconds, which resets the cooldown if that has already elapsed."
           },
           {
-            "description": "Undertow will cast at max range if cast beyond that. Nearby monsters are granted ghosting for 5 seconds upon Undertow's cast."
+            "description": "Nearby monsters are granted ghosting for 5 seconds upon Undertow's cast."
           }
         ],
         "cost": [

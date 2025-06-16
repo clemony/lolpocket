@@ -74,7 +74,7 @@ onMounted (async () => {
 </script>
 
 <template>
-  <div class="bg-b2/40 shadow-smooth mt-10 h-90 w-full rounded-lg relative flex flex-col gap-6 items-center justify-center">
+  <div class=" size-full  relative flex flex-col gap-6 items-center justify-center">
     <div class="flex gap-4 absolute top-5 h-16">
       <div v-if="champModel && champComplete" v-tippy="champModel.name" class="size-16   hover:scale-110 hover:ring-1 hover:ring-neutral rounded-lg shadow-sm drop-shadow-sm transition-all duration-400 animate-in slide-in-from-bottom-10 hover:ring-offset-2 hover:ring-offset-b2">
         <ChampionIcon :id="champModel" class="overflow-hidden size-16 rounded-lg" />

@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 79,
@@ -108,7 +108,6 @@ const champion: Champion =  {
         ],
         "targeting": "Passive",
         "affects": "Self",
-        "spellEffects": "Heal",
         "notes": "No additional details.",
         "blurb": "Passive: Every few seconds,  Gragas will  heal a portion of his maximum health upon casting an ability."
       }

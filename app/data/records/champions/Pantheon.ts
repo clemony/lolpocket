@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 80,
@@ -304,6 +304,9 @@ const champion: Champion =  {
           },
           {
             "description": "If the charge is interrupted or completes without reactivation, Comet Spear is cancelled and the ability is put on full cooldown but refunds half the mana cost."
+          },
+          {
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Mortal Will:</span> Comet Spear deals 20 - 240 (based on level) (+ 115% bonus AD) bonus physical damage, affected by the previous damage reductions. Consumes the stacks upon recasting.</p>"
           }
         ],
         "cost": [
@@ -546,7 +549,7 @@ const champion: Champion =  {
             ]
           },
           {
-            "description": "Grand Starfall is put on a 30-second cooldown if the first channel is canceled."
+            "description": "Grand Starfall is placed on a 30-second cooldown if the first channel is canceled."
           }
         ],
         "cost": [

@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 17,
@@ -550,6 +550,9 @@ const champion: Champion =  {
           },
           {
             "description": "A mushroom has 6 maximum health and can only be damaged by champion basic attacks (2 damage from ranged and 3 from melee)."
+          },
+          {
+            "description": "See Pets for more details about mushroom traps."
           }
         ],
         "cost": [

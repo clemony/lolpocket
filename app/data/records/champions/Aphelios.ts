@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 523,
@@ -58,7 +58,7 @@ const champion: Champion =  {
       "flat": 1
     },
     "attackSpeed": {
-      "flat": 0.64,
+      "flat": 0.665,
       "perLevel": 2.1
     },
     "attackSpeedRatio": {
@@ -253,7 +253,7 @@ const champion: Champion =  {
             "description": "Whenever Aphelios casts an ability that would require him to throw Crescendum, he instead fires a spectral Chakram at the target that similarly returns to him. Aphelios accumulates the Chakrams he catches, up to 20, which last for 5 seconds or until Crescendum is depleted of Moonlight. Attacks with Crescendum against champions will refresh the duration of Chakrams."
           },
           {
-            "description": "Basic attacks with Crescendum are empowered to deal 0% - 138.5% (based on number of Chakrams) AD bonus physical damage and have a 10.67% wind up percentage, decreased to 6.67% when critically striking. The bonus damage from Chakrams is affected by critical strike modifiers."
+            "description": "Attacks with Crescendum are empowered to deal 0% - 138.5% (based on number of Chakrams) AD bonus physical damage and have a lower windup of 10.67%, further decreased to 6.67% when critically striking. The bonus damage from Chakrams is affected by critical strike modifiers."
           }
         ],
         "targeting": "Passive",
@@ -262,9 +262,8 @@ const champion: Champion =  {
         "damageType": "Physical damage",
         "spellEffects": "attack",
         "projectile": "TRUE",
-        "notes": "Accumulated Chakrams accompany Crescendum whenever Aphelios performs a basic attack. This is merely a visual representation of the increased damage, and the separate blades are not considered separate damage sources nor  projectiles.\nAll Chakram stacks are lost if the Crescendum projectile is destroyed (i.e  Wind Wall,  Unbreakable).\nAt high attack speeds Crescendum will lower Aphelios' total attack speed, even when right next to his target.",
-        "blurb": "Aphelios throws a chakram as his basic attack and he cannot attack again until it returns to him. Other abilities will create mirror chakrams that he gathers, and his basic attacks deal bonus physical damage based on how many mirror chakrams he holds.",
-        "speed": "600 (+ 75 per 10% bonus attack speed)"
+        "notes": "Accumulated Chakrams accompany Crescendum whenever Aphelios performs a basic attack. This is merely a visual representation of the increased damage, and the separate blades are not considered separate damage sources nor  projectiles.\nAll Chakram stacks are lost if the Crescendum projectile is destroyed (i.e  Wind Wall,  Unbreakable).\nDue to the return time, at high attack speeds Crescendum will increase Aphelios' effective time to cast attacks, even when right next to his target.",
+        "blurb": "Aphelios throws a chakram as his basic attack and he cannot attack again until it returns to him. Other abilities will create mirror chakrams that he gathers, and his basic attacks deal bonus physical damage based on how many mirror chakrams he holds."
       }
     ],
     "Q": [
@@ -294,7 +293,7 @@ const champion: Champion =  {
         "icon": "https://cdn.communitydragon.org/latest/champion/Aphelios/ability-icon/q",
         "effects": [
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Aphelios fires a bolt of energy in the target direction that deals 60 - 160 (based on level) (+ 42% - 60% (based on level) bonus AD) (+ 100% AP) physical damage to the first enemy hit.</p>"
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Aphelios fires a bolt of energy in the target direction that deals 70 - 160 (based on level) (+ 42% - 60% (based on level) bonus AD) (+ 100% AP) physical damage to the first enemy hit.</p>"
           }
         ],
         "cost": [
@@ -323,7 +322,7 @@ const champion: Champion =  {
         "icon": "https://cdn.communitydragon.org/latest/champion/Aphelios/ability-icon/q",
         "effects": [
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Aphelios enters an onslaught for 1.75 seconds, gaining 20% (+ 10% per 100 AP) bonus movement speed and automatically performing up to 6 (+ 2 per 100% bonus attack speed) attacks over the duration against the nearest visible enemy, prioritizing enemy champions.</p>"
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Aphelios enters an onslaught for 1.75 seconds, gaining 25% (+ 10% per 100 AP) bonus movement speed and automatically performing up to 6 (+ 2 per 100% bonus attack speed) attacks over the duration against the nearest visible enemy, prioritizing enemy champions.</p>"
           },
           {
             "description": "Attacks alternate between Severum and his current off-hand weapon, each dealing 10 - 40 (based on level) (+ 22% - 40% (based on level) bonus AD) physical damage, affected by critical strike modifiers, and applying on-hit effects, with on-hit damage reduced to 25% effectiveness."
@@ -418,7 +417,7 @@ const champion: Champion =  {
             "description": "The sentry grants sight of its surroundings and autonomously attacks the nearest visible enemy in range with a replica of Aphelios' current off-hand weapon, dealing 35 - 125 (based on level) (+ 42% - 60% (based on level) bonus AD) (+ 50% AP) physical damage per hit. The sentry can critically strike for (175% + 40%) damage and benefits from both Aphelios' attack speed and critical strike chance at 100% effectiveness."
           },
           {
-            "description": "See Pets for more details about the sentry. Sentry will cast at max range if cast beyond that."
+            "description": "See Pets for more details about the sentry."
           }
         ],
         "cost": [

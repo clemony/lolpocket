@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 55,
@@ -227,7 +227,7 @@ const champion: Champion =  {
         "icon": "https://cdn.communitydragon.org/latest/champion/Katarina/ability-icon/e",
         "effects": [
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Katarina blinks to the target location around the target unit or Dagger, dealing magic damage to the nearest enemy in range and applying on-hit effects.</p>",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Katarina blinks to a target location near the unit or Dagger closest to the cursor, dealing magic damage to the nearest enemy in range and applying on-hit effects.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -262,6 +262,9 @@ const champion: Champion =  {
             ]
           },
           {
+            "description": "Katarina prioritizes blinking to the location near Daggers, then enemy champions, then enemy non-champions, and then any other unit."
+          },
+          {
             "description": "Shunpo resets Katarina's basic attack timer. Upon blinking, Katarina enters a 0.15-second cast time."
           }
         ],
@@ -275,12 +278,12 @@ const champion: Champion =  {
           9,
           8
         ],
-        "targeting": "Location / Unit",
+        "targeting": "Location",
         "affects": "Enemies",
         "spellshieldable": "True",
         "damageType": "Magic damage",
         "spellEffects": "Single target",
-        "notes": "Shunpo does not reset Katarina's basic attack timer if it killed the target.(note)\nShunpo can be used on any unit except structures and  wards.\nShunpo can be cast on Daggers that haven't landed yet.\nShunpo prioritizes damaging enemy champions within range at the targetted location.\nAfter the cast time, Katarina will attempt to move towards the closest enemy in  acquisition range and basic attack them, prioritizing champions, unless an attack command was already active on another target in range or any attack command was applied during the cast time. Movement commands applied during cast time will override the automatic attack, but they may not override an already active manually applied attack command. If no enemy is in range, pre-cast commands will remain active, and attack commands applied during the cast time will be ignored (note).\nIf a Dagger is picked during the cast time, pre-cast commands will be cancelled, even if no enemy is nearby. And if an enemy is nearby, Katarina may or may not start an automatic attack (note).\nIf the target is very close to a wall and Katarina targets Shunpo behind the target, she can blink over the wall.\nShunpo  will still deal damage but not apply on-hit effects if  dodged. It cannot be  blocked nor can it be missed while Katarina is  blinded.\nShunpo does not require the enemy to be within targeting range to damage them. It only requires them to be within the max range around a unit that Shunpo allows them to blink to.\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash\n\n\nDisabled\n\n Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection",
+        "notes": "Shunpo does not reset Katarina's basic attack timer if it killed the target.(note)\nShunpo can be used on any unit except structures and  wards.\nShunpo can be cast on Daggers that haven't landed yet.\nShunpo prioritizes damaging enemy champions within range at the targeted location.\nAfter the cast time, Katarina will attempt to move towards the closest enemy in  acquisition range and basic attack them, prioritizing champions, unless an attack command was already active on another target in range or any attack command was applied during the cast time. Movement commands applied during cast time will override the automatic attack, but they may not override an already active manually applied attack command. If no enemy is in range, pre-cast commands will remain active, and attack commands applied during the cast time will be ignored (note).\nIf a Dagger is picked during the cast time, pre-cast commands will be cancelled, even if no enemy is nearby. And if an enemy is nearby, Katarina may or may not start an automatic attack (note).\nIf the target is very close to a wall and Katarina targets Shunpo behind the target, she can blink over the wall.\nShunpo will still deal damage but not apply on-hit effects if  dodged. It cannot be  blocked nor can it be missed while Katarina is  blinded.\nShunpo does not require the enemy to be within targeting range to damage them. It only requires them to be within the max range around a unit that Shunpo allows them to blink to.\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash\n\n\nDisabled\n\n Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection",
         "castTime": "None",
         "targetRange": "725 / 775",
         "maxCharges": -1
@@ -405,13 +408,13 @@ const champion: Champion =  {
           60,
           45
         ],
-        "targeting": "Auto",
+        "targeting": "Proximity",
         "affects": "Enemies",
         "spellshieldable": "Special",
         "damageType": "Magic damage",
         "spellEffects": "aoe",
         "projectile": "TRUE",
-        "notes": "An alternate form of writing the formula for the bonus AD ratio (and which the game data is using internally) is (16% × (1 + 312.5% per 100% bonus attack speed) bonus AD).\nAt level 6, Katarina has a minimum of 10.82% bonus attack speed.\nThe minimum physical damage per dagger is 21.41% bonus AD.\nIn addition to already revealing herself, Katarina will  reveal her location (400 radius) for 4.5 seconds every time she throws a dagger at an enemy while the enemy team does not otherwise have vision of her.(bug)\nBecause of this, the vision on Katarina's location will persist for up-to 4.5 seconds after the channel ends.\nDeath Lotus will not end if no enemies remain in range.\n Spell shield will block and be consumed by only one dagger.\nEach dagger counts as a separate hit for effects such as  Conqueror,  Electrocute, and  Eclipse's Ever Rising Moon.\nThe following table refers for interactions while Katarina is  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled in the first and last 0.25 seconds of channel, otherwise, interrupts.\n\n\nAbilities\n\nInterrupts\n\n\nMovement\n\nDisabled in the first and last 0.25 seconds of channel, otherwise, interrupts.\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\nAll item-actives not specified above interrupt\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Recall  Hexflash\n\n\nInterrupted by\n\n Flash  Teleport\n\n\nInterrupted by\n\nDeath Cast-inhibiting effects\n\nTrying to cast a disabled active (excluding  Hextech Rocketbelt) will buffer it to cast at the completion of the channel.",
+        "notes": "An alternate form of writing the formula for the bonus AD ratio (and which the game data is using internally) is (16% × (1 + 312.5% per 100% bonus attack speed) bonus AD).\nAt level 6, Katarina has a minimum of 10.82% bonus attack speed.\nThe minimum physical damage per dagger is 21.41% bonus AD.\nIn addition to already revealing herself, Katarina will  reveal her location (400 radius) for 4.5 seconds every time she throws a dagger at an enemy while the enemy team does not otherwise have vision of her.(bug)\nBecause of this, the vision on Katarina's location will persist for up-to 4.5 seconds after the channel ends.\nDeath Lotus will not end if no enemies remain in range.\n Spell shield will block and be consumed by only one dagger.\nEach dagger counts as a separate hit for effects such as  Conqueror,  Electrocute, and  Eclipse's Ever Rising Moon.\nThe following table refers for interactions while Katarina is  channeling:\nTrying to cast a disabled active (excluding  Hextech Rocketbelt) will buffer it to cast at the completion of the channel.\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled in the first and last 0.25 seconds of channel, otherwise, interrupts.\n\n\nAbilities\n\nInterrupts\n\n\nMovement\n\nDisabled in the first and last 0.25 seconds of channel, otherwise, interrupts.\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\nAll item-actives not specified above interrupt\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Recall  Hexflash\n\n\nInterrupted by\n\n Flash  Teleport\n\n\nInterrupted by\n\nDeath Cast-inhibiting effects",
         "speed": "2400",
         "castTime": "none",
         "effectRadius": "550",

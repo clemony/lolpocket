@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 86,
@@ -267,19 +267,19 @@ const champion: Champion =  {
                   {
                     "values": [
                       4,
-                      8,
-                      12,
-                      16,
-                      20
+                      7,
+                      10,
+                      13,
+                      16
                     ]
                   },
                   {
                     "values": [
                       36,
-                      38,
-                      40,
+                      39,
                       42,
-                      44
+                      45,
+                      48
                     ],
                     "units": [
                       "% AD"
@@ -301,19 +301,19 @@ const champion: Champion =  {
                   {
                     "values": [
                       5,
-                      10,
-                      15,
-                      20,
-                      25
+                      8.75,
+                      12.5,
+                      16.25,
+                      20
                     ]
                   },
                   {
                     "values": [
                       45,
-                      47.5,
-                      50,
+                      48.75,
                       52.5,
-                      55
+                      56.25,
+                      60
                     ],
                     "units": [
                       "% AD"
@@ -344,7 +344,7 @@ const champion: Champion =  {
         "affects": "Enemies",
         "damageType": "Physical damage",
         "spellEffects": "aoedot",
-        "notes": "The initial casts count as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nDeactivating the ability manually does not.\nEach spin triggers a stack of  Conqueror.\nFor the purpose of moving closer to an enemy when right clicking them, Judgment also reduces Garen's  attack range [ to 100 ][ by 75 ] for the duration.\nJudgment cancels Garen's last movement command upon ending.\nEach spin deals damage simultaneously to all enemies within its range when the spin is completed.\nThe spin animation is capped at once per 0.2 seconds, but the amount of ticks will keep on scaling.\nThe armor reduction stacks multiplicatively with other percentage armor penetration effects.\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\n Decisive Strike and  Courage are usable.  Demacian Justice interrupts.\n\n\nMovement\n\nAllowed\n\n\nItems\n\nUsable\n\nAll items are usable\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash  Teleport  Hexflash\n\n\nDisabled\n\n Recall\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
+        "notes": "Deactivating the ability manually does not count as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nEach spin triggers a stack of  Conqueror.\nFor the purpose of moving closer to an enemy when right clicking them, Judgment also reduces Garen's  attack range [ to 100 ][ by 75 ] for the duration.\nJudgment cancels Garen's last movement command upon ending.\nEach spin deals damage simultaneously to all enemies within its range when the spin is completed.\nThe spin animation is capped at once per 0.2 seconds, but the amount of ticks will keep on scaling.\nThe armor reduction stacks multiplicatively with other percentage armor penetration effects.\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\n Decisive Strike and  Courage are usable.  Demacian Justice interrupts.\n\n\nMovement\n\nAllowed\n\n\nItems\n\nUsable\n\nAll items are usable\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash  Teleport  Hexflash\n\n\nDisabled\n\n Recall\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
         "blurb": "Active:  Garen rapidly spins with his sword for a short time while  ghosted, continually dealing physical damage to nearby enemies. He spins more based on his  bonus attack speed.",
         "castTime": "none",
         "effectRadius": "325",
@@ -397,7 +397,7 @@ const champion: Champion =  {
         "spellshieldable": "True",
         "damageType": "True damage",
         "spellEffects": "spell",
-        "notes": "The target will die if they're at least under 20 / 21.57 / 23.08 / 24.53 / 25.93% maximum health + 120 / 176.47 / 230.77 / 283.02 / 333.33 flat health on top of that. This does not count effects that mitigate true damage, such as  shields.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
+        "notes": "The target will die if they're at least under 20 / 21.57 / 23.08 / 24.53 / 25.93% maximum health + 120 / 156.86 / 192.31 / 226.42 / 259.26 flat health on top of that. This does not count effects that mitigate true damage, such as  shields.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
         "blurb": "Active:  Garen strikes a lethal blow to an enemy champion that deals true damage based on the target's missing health.",
         "castTime": "0.435",
         "targetRange": "400",

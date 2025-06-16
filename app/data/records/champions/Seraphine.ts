@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 147,
@@ -182,9 +182,6 @@ const champion: Champion =  {
                 ]
               }
             ]
-          },
-          {
-            "description": "High Note will cast at max range if cast beyond that."
           }
         ],
         "cost": [
@@ -288,7 +285,6 @@ const champion: Champion =  {
         "targeting": "Auto",
         "affects": "Self, Allies",
         "resource": "Mana",
-        "spellEffects": "Shield",
         "projectile": "SPECIAL",
         "notes": "Surround Sound uses a modified icon for the  second and  third stack of  Stage Presence.\nAll effects are gained at the start of the cast time.\nSeraphine can move during the cast time.\nSurround Sound's  shield buff can have up to 2 stacks, for a total of 200% shield strength at a time.\nMost shields in the game can only have one stack, refreshing their shield strength when reapplied.\nSurround Sound will empower from any  shield that Seraphine has. It does not have to be sourced from Surround Sound.\nCasting Surround Sound during the 2.5-second delay refreshes the delay.\nThe  heal affects  clones and counts them for increasing the missing health percentage.\nA large indicator similar to  Redemption's signals the heal area of effect and delay.\nThe heal will be canceled and the indicator disappears when Seraphine dies.\nThe heal occurs instantly on Seraphine and all nearby allied champions once the delay ends.\nThere is a missile that flows through all allied champions which can be blocked by  Wind Wall. The heal is unaffected by this.\nSurround Sound will affect  untargetable allies.",
         "blurb": "Active:  Seraphine  shields herself and nearby allied champions for a short time. She also gains a burst of  movement speed and grants allies  bonus movement speed.",

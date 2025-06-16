@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/06/2025 12:20:39 PM CDT
+// Updated Patch 25.12 - 06/16/2025 01:44:38 PM CDT
 
 export const championFilters = {
   "roles": {
@@ -732,6 +732,7 @@ export const championFilters = {
       147,
       15,
       901,
+      50,
       18,
       4,
       29,

@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 22,
@@ -297,7 +297,7 @@ const champion: Champion =  {
         "icon": "https://cdn.communitydragon.org/latest/champion/Ashe/ability-icon/e",
         "effects": [
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ashe sends a hawk to a location, granting sight of the area along its path[ repeatedly for 0.5 seconds after every 100 units traveled ][ for effectively up-to 1.8 seconds at any location ]and at its destination for 5 seconds.</p>"
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ashe sends a hawk spirit to a location, granting sight of the area along its path[ repeatedly for 0.5 seconds after every 100 units traveled ][ for effectively up-to 1.8 seconds at any location ]and at its destination for 5 seconds.</p>"
           },
           {
             "description": "Ashe periodically stocks a Hawkshot charge, up to a maximum of 2."
@@ -315,7 +315,7 @@ const champion: Champion =  {
         "resource": "Charge",
         "projectile": "SPECIAL",
         "notes": "Hawkshot's recharge timer seems to start at the beginning of the game, even prior to ranking the ability, but upon actually ranking the ability, it starts with one charge and the recharge timer starts from 0.\nHawkshot will ping enemy champions it spots if allies didn't already have vision of them, and put a 'revealed' visual effect on them for 2.75 seconds, but does not actually reveal the units in particular, and is removed if the champion leaves the area.\nHawkshot will grant assist credit if a previously-unseen enemy champion is killed within 10 seconds of being revealed by the ability.\nHawkshot will trigger upon colliding with  Blade Whirl or  Wind Wall but not  Unbreakable.\nHawkshot will grant 0.33 points of vision score for each champion revealed.",
-        "blurb": "Active:  Ashe sends out a hawk to a location,  exposing the area along its path and a large area at its destination.",
+        "blurb": "Active:  Ashe sends a hawk spirit to a location,  exposing the area along its path and a large area at its destination.",
         "rechargeRate": [
           90,
           80,

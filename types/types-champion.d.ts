@@ -53,6 +53,7 @@ declare global {
     centeredPath?: string
     tilePath?: string
     loadPath?: string
+    id?: string
   }
 
   interface Ability {

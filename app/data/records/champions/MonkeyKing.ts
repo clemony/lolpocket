@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:47 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:43 PM CDT
 
 const champion: Champion =  {
   "id": 62,
@@ -214,7 +214,7 @@ const champion: Champion =  {
             "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Wukong enters invisibility for 1 second and dashes in the target direction, leaving behind a clone of himself at his casting position for 3.25 seconds.</p>"
           },
           {
-            "description": "The clone is untargetable to allies and can basic attack autonomously, prioritizing the last enemy Wukong damaged. It can also gain the effects of Crushing Blow and Nimbus Strike's bonus attack speed, and casts Cyclone whenever Wukong does."
+            "description": "The clone is untargetable to allies and can basic attack autonomously, prioritizing the last enemy Wukong damaged. It can also gain the effects of Crushing Blow, Nimbus Strike's bonus attack speed, and casts Cyclone whenever Wukong does."
           },
           {
             "description": "The clone deals reduced damage.",
@@ -239,7 +239,7 @@ const champion: Champion =  {
             ]
           },
           {
-            "description": "See Pets for more details about Wukong's clone. Wukong can cast any of his abilities during the dash. Warrior Trickster will cast at max range if cast beyond that."
+            "description": "See Pets for more details about Wukong's clone. Wukong can cast any of his abilities during the dash."
           }
         ],
         "cost": [

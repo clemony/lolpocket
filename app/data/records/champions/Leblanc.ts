@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 7,
@@ -235,9 +235,6 @@ const champion: Champion =  {
           },
           {
             "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> LeBlanc blinks to Distortion's return pad, regardless of range.</p>"
-          },
-          {
-            "description": "Distortion will cast at max range if cast beyond that."
           }
         ],
         "cost": [
@@ -318,7 +315,7 @@ const champion: Champion =  {
                   },
                   {
                     "values": [
-                      80
+                      85
                     ],
                     "units": [
                       "% AP"
@@ -340,7 +337,7 @@ const champion: Champion =  {
                   },
                   {
                     "values": [
-                      120
+                      125
                     ],
                     "units": [
                       "% AP"
@@ -511,7 +508,7 @@ const champion: Champion =  {
                   },
                   {
                     "values": [
-                      80
+                      85
                     ],
                     "units": [
                       "% AP"
@@ -531,7 +528,7 @@ const champion: Champion =  {
                   },
                   {
                     "values": [
-                      120
+                      125
                     ],
                     "units": [
                       "% AP"

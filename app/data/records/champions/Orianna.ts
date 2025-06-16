@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 61,
@@ -192,7 +192,7 @@ const champion: Champion =  {
         "damageType": "Magic damage",
         "spellEffects": "Spellaoe",
         "projectile": "SPECIAL",
-        "notes": "If The Ball is currently on Orianna herself, Command: Attack will have it cast to fly at least 150 units if the player attempts to cast it closer.\nThe Ball does not grant  sight while in flight, but the sound effect of striking an enemy is audible through the Fog of War.\nOrianna cannot use  Command: Protect while The Ball is in transit with Command: Attack but she may buffer  Command: Dissonance and  Command: Shockwave to cast once it has reached the location.\nThe Ball will remain at the target location until Orianna retrieves it or if she goes beyond its leash range.\nOrianna will attempt to walk to Command: Attack's cast point if it lies outside cast range (The Ball will never exceed its leash range regardless of target direction).\nPENDING FOR TEST: The Ball will drop to the ground upon colliding with  Yasuo's  Wind Wall but not with  Braum's  Unbreakable.\n Samira's  Blade Whirl?",
+        "notes": "If The Ball is currently on Orianna herself, Command: Attack will have it cast to fly at least 150 units if the player attempts to cast it closer.\nThe Ball does not grant  sight while in flight, but the sound effect of striking an enemy is audible through the Fog of War.\nOrianna cannot use  Command: Protect while The Ball is in transit with Command: Attack but she may buffer  Command: Dissonance and  Command: Shockwave to cast once it has reached the location.\nThe Ball will remain at the target location until Orianna retrieves it or if she goes beyond its leash range.\nThe Ball will also never exceed its leash range regardless of target direction.\nPENDING FOR TEST: The Ball will drop to the ground upon colliding with  Yasuo's  Wind Wall but not with  Braum's  Unbreakable.\n Samira's  Blade Whirl?",
         "blurb": "Active:  Orianna commands  The Ball to fly to the target location and remain there, dealing magic damage to enemies it passes through and nearby enemies upon arrival.",
         "speed": "1400",
         "width": "160",

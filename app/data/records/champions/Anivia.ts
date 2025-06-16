@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 34,
@@ -337,7 +337,6 @@ const champion: Champion =  {
         "affects": "Enemies",
         "spellshieldable": "false",
         "resource": "Mana",
-        "spellEffects": "False",
         "notes": "Crystallize's displacement triggers in-combat effects by dealing 0  proc  true damage, such as drawing turret aggro,  Sudden Impact and applying  Elixir of Sorcery.\nIndividual ice chunks have both 100 units  pathing radius and  gameplay radius.\n Champions are knocked 120 units to either side of a wall segment, non-champions 250 units.\nPENDING FOR TEST: Knockback speed?\nPlayer-generated terrain such as Crystallize does not block  sight.",
         "blurb": "Active:  Anivia  erects a wall of ice that lingers for a few seconds, blocking movement.",
         "castTime": "0.25",

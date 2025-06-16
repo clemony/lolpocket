@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 526,
@@ -254,7 +254,7 @@ const champion: Champion =  {
             "description": "<p class=\"ability-effect\"><span class=\"ability-header\">While Rell is Dismounted, she can cast Ferromancy:</span> Mount Up. Upon completing a Recall channel or respawning, Rell will automatically revert to Mounted form without casting the ability and reset Ferromancy: Mount Up's cooldown.</p>"
           },
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">This ability can be cast only while Rell is Mounted. Rell can cast Magnet Storm during the dash, and is not considered to be dismounted until after the leap ends. Ferromancy:</span> Crash Down will cast at max range if cast beyond that.</p>"
+            "description": "This ability can be cast only while Rell is Mounted. Rell can cast Magnet Storm during the dash, and is not considered to be dismounted until after the leap ends."
           }
         ],
         "cost": [

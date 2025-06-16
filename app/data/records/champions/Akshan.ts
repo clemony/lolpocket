@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 166,
@@ -115,7 +115,7 @@ const champion: Champion =  {
         "damageType": "Mixed damage",
         "spellEffects": "special",
         "projectile": "TRUE",
-        "notes": "Applies  basic damage for the second shot and  proc damage for the bonus damage.\nThe second shot:\nIs treated as a basic attack.\nCritically strikes independently from the first shot.\nCan be cancelled by inputting a different command right after using the first shot.\nCounts as a separate hit for effects such as  Electrocute,  Muramana's Shock, and  Eclipse's Ever Rising Moon.\nStarts the attack windup's cooldown after it is used, rather than when the first shot is.\nThe attack speed scaling on the movement speed buff includes the bonus attack speed gained from Akshan's innate attack speed growth.\nAt level 18, at minimum it grants 126 decaying movement speed.\nChanging targets for the second shot will also acquire the new target.\nThe second shot, if the first shot's target was killed, will prioritize  visible enemy champions, then  minions on  low health.\nThis ability's damage is calculated based on the caster's current stats and changes dynamically.\nIf the first shot's target is killed, issuing an attack order to a different target can extend the second shot's range to  650.(bug)",
+        "notes": "If the first shot has killed its target, Akshan will automatically acquire another enemy within 200 units beyond his  basic attack range, else he can do so by issuing an attack order to a different target.\nApplies  basic damage for the second shot and  proc damage for the bonus damage.\nThe second shot:\nIs treated as a basic attack.\nCritically strikes independently from the first shot.\nCan be cancelled by inputting a different command right after using the first shot.\nCounts as a separate hit for effects such as  Electrocute,  Muramana's Shock, and  Eclipse's Ever Rising Moon.\nStarts the attack windup's cooldown after it is used, rather than when the first shot is.\nThe attack speed scaling on the movement speed buff includes the bonus attack speed gained from Akshan's innate attack speed growth.\nAt level 18, at minimum it grants 126 decaying movement speed.\nChanging targets for the second shot will also acquire the new target.\nThe second shot, if the first shot's target was killed, will prioritize  visible enemy champions, then  minions on  low health.\nThis ability's damage is calculated based on the caster's current stats and changes dynamically.",
         "blurb": "Innate:  Akshan's basic attack causes him to fire a second attack that deals reduced physical damage. If Akshan cancels the second attack, he gains a brief burst of  move speed, increased based on his  attack speed.",
         "speed": "2000 / 5000"
       }
@@ -270,6 +270,9 @@ const champion: Champion =  {
           },
           {
             "description": "Akshan can move during Going Rogue's cast time."
+          },
+          {
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Akshan ends Going Rogue.</p>"
           }
         ],
         "cost": [
@@ -349,6 +352,9 @@ const champion: Champion =  {
           },
           {
             "description": "Scoring an enemy champion takedown reduces Heroic Swing's current cooldown to 0.5 seconds. The shots can critically strike for[ (157.5% + 36%) damage ][ 90% total critical damage ]and apply life steal at 100% effectiveness."
+          },
+          {
+            "description": "Avengerang and Going Rogue can be cast during the third cast's dash. Comeuppance can be cast at all points during Heroic Swing, though Akshan cannot fire during the swing while it is active. Akshan prioritizes firing at enemy champions with stacks of Dirty Fighting, then those damaged by his targeted spells in the last 4 seconds, then the nearest enemy. Heroic Swing can be cast during Akshan's other abilities."
           }
         ],
         "cost": [

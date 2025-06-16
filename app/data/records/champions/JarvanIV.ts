@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 59,
@@ -267,7 +267,6 @@ const champion: Champion =  {
         "affects": "Self, Enemies",
         "spellshieldable": "True",
         "resource": "Mana",
-        "spellEffects": "Shield",
         "notes": "Golden Aegis  deals no damage and thus does not trigger  turret aggro, or effects such as  Elixir of Sorcery and  Sudden Impact's activation.\nGolden Aegis will activate combat status despite not dealing any damage.",
         "blurb": "Active:  Jarvan IV  slows nearby enemies for a short time.",
         "castTime": "none",
@@ -331,9 +330,6 @@ const champion: Champion =  {
           },
           {
             "description": "The flag then remains for 8 seconds, granting sight of its surroundings and providing an aura that grants Demacian Standard's passive bonus attack speed to all nearby allied champions as well as Jarvan IV himself."
-          },
-          {
-            "description": "Demacian Standard will cast at max range if cast beyond that."
           }
         ],
         "cost": [

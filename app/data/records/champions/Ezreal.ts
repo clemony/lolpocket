@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 81,
@@ -303,7 +303,7 @@ const champion: Champion =  {
             "description": "Arcane Shift prioritizes firing at the nearest enemy marked by Essence Flux."
           },
           {
-            "description": "The target does not have to be visible to be hit by this ability. Arcane Shift will cast at max range if cast beyond that."
+            "description": "The target does not have to be visible to be hit by this ability."
           }
         ],
         "cost": [

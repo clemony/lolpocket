@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 246,
@@ -500,7 +500,7 @@ const champion: Champion =  {
         "icon": "https://cdn.communitydragon.org/latest/champion/Qiyana/ability-icon/r",
         "effects": [
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Qiyana sweeps a windblast in the target direction that knocks back enemies hit, though not through terrain, and stops upon hitting Terrain.</p>"
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Qiyana sweeps a windblast in the target direction that knocks back enemies hit by 375 units, though not through terrain, and stops upon hitting Terrain.</p>"
           },
           {
             "description": "The windblast creates a cascading shockwave across any River or Brush it passes through, as well as around the borders of Terrain it reaches, dealing physical damage to enemies hit, stunning them for 0.5 - 1 (based on proximity) seconds, and briefly granting sight of the area along its path. The damage based on the target's health ratio is capped against monsters.",

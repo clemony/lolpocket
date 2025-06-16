@@ -45,7 +45,7 @@ const cardStyle = computed(() => ({
 </script>
 
 <template>
-  <div ref="target" class="bg-b2/40 shadow-smooth mt-10 h-90 w-full rounded-lg relative  transition-all ease-out duration-300" :style="containerStyle">
+  <div ref="target" class="size-full rounded-lg relative" :style="containerStyle">
     <div class="size-full absolute" :style="layer0">
       <div
         class="bg-b1/90 h-[95%] w-[45%] rounded-xl shadow-md shadow-black/10 right-10 top-2 absolute z-0  flex pt-7 px-8"

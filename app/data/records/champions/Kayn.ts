@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 141,
@@ -423,7 +423,6 @@ const champion: Champion =  {
         "targeting": "Auto",
         "affects": "Self",
         "resource": "Mana",
-        "spellEffects": "Heal",
         "notes": "As  Rhaast, an  alternate icon for Shadow Step is used but has no modified effect.\nThe bonus movement speed  stacks multiplicatively with other sources of movement speed boosts.\nSelf  immobilizations such as  Zhonya's Hourglass also count for interrupting Shadow Step.\n Recall is disabled while Kayn is inside terrain.\nEnemies cannot see Kayn while he is inside of terrain unless they have terrain-piercing vision, such as  Heightened Senses,  Hawkshot or  unobstructed vision.\nHowever, enemies and allies (including Kayn) will be notified when nearby terrain is infested if Kayn is within 1000 units of an enemy champion - with an indicator being placed on the terrain with a direct line between Kayn and the enemy champion. Slightly less than standard sight radius, but more than the  camouflage detection radius.\nKayn can move up to 550 units beyond the outer-edge of the battlefield.\nShadow Step can interact with player-generated terrain.\nIf Kayn is inside terrain when the effect ends, he will be placed correspondingly to the nearest valid space.\n Sleep will not interrupt Shadow Step.(bug)",
         "blurb": "Active:  Kayn gains  bonus movement speed,  ghosting and the ability to enter terrain for a duration. If he has recently been in combat with enemy champions, the duration is dramatically reduced.",
         "castTime": "none",

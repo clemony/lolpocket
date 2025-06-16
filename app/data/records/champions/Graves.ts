@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 104,
@@ -355,7 +355,7 @@ const champion: Champion =  {
             ]
           },
           {
-            "description": "Quickdraw resets Graves' basic attack timer. If Graves dashes while reloading, he can cast any of his abilities during the dash.(bug) Quickdraw will cast at max range if cast beyond that."
+            "description": "Quickdraw resets Graves' basic attack timer."
           }
         ],
         "cost": [
@@ -371,10 +371,10 @@ const champion: Champion =  {
         "targeting": "Location",
         "affects": "Self",
         "resource": "Mana",
-        "notes": "Graves gains the one additional stack of True Grit from Quickdraw if at any point during the dash a  visible enemy champion is in front of Graves within  1300 distance.\nEnemy champions have to be targetable to grant the additional stack.\nThe additional stack of True Grit is gained when dashing towards  clones just like actual champions.\nThis check never happens if Graves dashes 0 distance (impossible outside of bugs), and will not always repeat a final time at the very end of the dash. Otherwise, it occurs continously while Graves is dashing.\nThis works for a 180 degree sector from Graves to the Champion, as such dashing parallel to the champ will also give a bonus stack.",
+        "notes": "If Graves dashes while reloading, he can cast any of his abilities during the dash.(bug)\nGraves gains the one additional stack of True Grit from Quickdraw if at any point during the dash a  visible enemy champion is in front of Graves within  1300 distance.\nEnemy champions have to be targetable to grant the additional stack.\nThe additional stack of True Grit is gained when dashing towards  clones just like actual champions.\nThis check never happens if Graves dashes 0 distance (impossible outside of bugs), and will not always repeat a final time at the very end of the dash. Otherwise, it occurs continously while Graves is dashing.\nThis works for a 180 degree sector from Graves to the Champion, as such dashing parallel to the champ will also give a bonus stack.",
         "blurb": "Active:  Graves  dashes in the target direction and reloads 1 shell. He also gains a stack of True Grit, doubled if he dashed toward an enemy  champion.",
         "castTime": "none",
-        "targetRange": "375 / 275",
+        "targetRange": "275 / 375",
         "maxCharges": -1
       }
     ],

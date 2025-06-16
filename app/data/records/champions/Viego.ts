@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:43 PM CDT
 
 const champion: Champion =  {
   "id": 234,
@@ -460,7 +460,7 @@ const champion: Champion =  {
             "description": "All targets hit are dealt 120% - 240% (based on critical strike chance) AD physical damage."
           },
           {
-            "description": "If a Possession is discarded, Heartbreaker will be placed on a 1.5-second cooldown if it is not already on cooldown. Heartbreaker will cast at max range if cast beyond that."
+            "description": "If a Possession is discarded, Heartbreaker will be placed on a 1.5-second cooldown if it is not already on cooldown."
           }
         ],
         "cost": [

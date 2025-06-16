@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 875,
@@ -249,7 +249,7 @@ const champion: Champion =  {
         "damageType": "Mixed damage",
         "spellEffects": "aoe",
         "projectile": "FALSE",
-        "notes": "PENDING FOR TEST: Trapezoid effect hitbox geometry values, backwards range (true damage rectangle does NOT start at 0 distance from Sett; doesn't have as much reach backwards while still being edge range).\nThe shield is granted at the start of the cast time and will decay afterwards.\nThe buff for the shield is named Down But Not Out.\nSett does not store Grit from damage that was mitigated by  shields.\nThis ability will cast from wherever the caster is at the end of the cast time.\nSett will turn towards the target direction at the start of the cast time.\nSett will glow when attaining 90% Grit. Casting Haymaker at this amount has a different visual and audio effect.\nSett will turn golden (base skin).",
+        "notes": "The shield is granted at the start of the cast time and will decay afterwards.\nThe buff for the shield is named Down But Not Out.\nSett does not store Grit from damage that was mitigated by  shields.\nThis ability will cast from wherever the caster is at the end of the cast time.\nSett will turn towards the target direction at the start of the cast time.\nPENDING FOR TEST: Trapezoid effect hitbox geometry values, backwards range (true damage rectangle does NOT start at 0 distance from Sett; doesn't have as much reach backwards while still being edge range).\nSett will glow when attaining 90% Grit. Casting Haymaker at this amount has a different visual and audio effect.\nSett will turn golden (base skin).",
         "blurb": "Passive:  Sett stores Grit equal to damage taken, which gradually expires after a few seconds.",
         "width": "60",
         "angle": "27°",
@@ -315,7 +315,7 @@ const champion: Champion =  {
             "description": "If Facebreaker affects at least one enemy on each side, all enemies are stunned for 1 second upon landing."
           },
           {
-            "description": "If no enemies are hit, Sett is unable to move or attack for 0.25 seconds after Facebreaker's cast time."
+            "description": "If no enemies are hit, Sett becomes unable to move or attack for 0.25 seconds after Facebreaker's cast time."
           }
         ],
         "cost": [

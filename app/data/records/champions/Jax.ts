@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 24,
@@ -103,10 +103,10 @@ const champion: Champion =  {
         "icon": "https://cdn.communitydragon.org/latest/champion/Jax/ability-icon/p",
         "effects": [
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Jax's basic attacks generate a stack of Relentless Assault on-attack for 2.5 seconds, refreshing on subsequent attacks and stacking up to 8 times. Stacks expire by one every 0.25 seconds when the duration ends.</p>"
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Jax's basic attacks generate a stack of Relentless Assault on-attack for 2.5 seconds, refreshing on subsequent attacks and stacking up to 8 times. Stacks expire one by one every 0.25 seconds when the duration ends.</p>"
           },
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Relentless Assault:</span> For each stack, Jax gains 3.5% - 11% (based on level) bonus attack speed, up to a maximum of 28% - 88% (based on level).</p>"
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Relentless Assault:</span> For each stack, Jax gains 5% - 12.5% (based on level) bonus attack speed, up to a maximum of 40% - 100% (based on level).</p>"
           },
           {
             "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Grandmaster at Angling:</span> While out-of-combat with champions and idle in the river for 10 seconds, Jax will occasionally catch a fish, granting him 1 and 1 ability power for 5 seconds. He catches a fish at an average rate of one every 15 seconds. He also has a 5% chance to catch a rare fish that grants 10 and 10 ability power for 5 seconds.</p>"
@@ -340,7 +340,7 @@ const champion: Champion =  {
     ],
     "R": [
       {
-        "name": "Grandmaster-At-Arms",
+        "name": "Grandmaster-at-Arms",
         "icon": "https://cdn.communitydragon.org/latest/champion/Jax/ability-icon/r",
         "effects": [
           {

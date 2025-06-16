@@ -9,10 +9,10 @@
     "cssVariables": true
   },
   "aliases": {
-    "components": "./.cli",
+    "components": "components/base",
     "composables": "composables",
-    "utils": "utils/lib",
-    "ui": "./.cli",
+    "utils": "utils",
+    "ui": "components/base",
     "lib": "utils/lib"
   },
   "iconLibrary": "radix"

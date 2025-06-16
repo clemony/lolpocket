@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:47 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:43 PM CDT
 
 const champion: Champion =  {
   "id": 498,
@@ -96,7 +96,7 @@ const champion: Champion =  {
         "icon": "https://cdn.communitydragon.org/latest/champion/Xayah/ability-icon/p",
         "effects": [
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Feathers shot by Xayah will linger in the ground at maximum range for 6 seconds.</p>"
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Feathers shot by Xayah will linger and be planted in the ground at maximum range for 6 seconds.</p>"
           },
           {
             "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Xayah's ability casts generate 3 stacks of Clean Cuts, lasting for 8 seconds, refreshing on subsequent casts, and stacking up to 5 times. Xayah's basic attacks are empowered to each consume a stack on-attack to instead shoot a Feather that deals the triggering attack's damage to the primary target and 30 / 40 / 50% (based on level) AD physical damage to other enemies hit. The secondary target damage can critically strike for (175% + 40%) damage if the triggering attack does.</p>"
@@ -368,7 +368,7 @@ const champion: Champion =  {
             "description": "A target hit by at least three Feathers is rooted for 1.25 seconds."
           },
           {
-            "description": "Enemies can be hit by an individual Feather only once per pass."
+            "description": "A planted Feather is required to cast this ability. Enemies can be hit by an individual Feather only once per pass."
           }
         ],
         "cost": [

@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 51,
@@ -299,7 +299,7 @@ const champion: Champion =  {
         "affects": "Enemies",
         "spellshieldable": "True",
         "resource": "Mana",
-        "notes": "Immunity vs  Airborne moveblocks and  Kinematics?:\nMultiple armed traps on the same location will spring all at once if an enemy steps on one of them.",
+        "notes": "Multiple armed traps on the same location will spring all at once if an enemy steps on one of them.",
         "blurb": "Active:  Caitlyn sets a trap at the target location that lasts for a while. The trap springs when an enemy champion steps on it,  revealing and  rooting them.",
         "rechargeRate": [
           26,

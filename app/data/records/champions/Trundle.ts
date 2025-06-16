@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:43 PM CDT
 
 const champion: Champion =  {
   "id": 48,
@@ -107,7 +107,6 @@ const champion: Champion =  {
         ],
         "targeting": "Passive",
         "affects": "Self",
-        "spellEffects": "Heal",
         "notes": "King's Tribute does not trigger when an enemy structure is destroyed.",
         "blurb": "Innate: Enemies that die near  Trundle cause him to  heal based on their maximum health.",
         "effectRadius": "1400"
@@ -247,9 +246,6 @@ const champion: Champion =  {
                 ]
               }
             ]
-          },
-          {
-            "description": "Frozen Domain will cast at max range if cast beyond that."
           }
         ],
         "cost": [

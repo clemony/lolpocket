@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 268,
@@ -38,7 +38,7 @@ const champion: Champion =  {
       "perLevel": 3.5
     },
     "movespeed": {
-      "flat": 335
+      "flat": 330
     },
     "acquisitionRadius": {
       "flat": 700
@@ -60,7 +60,7 @@ const champion: Champion =  {
     },
     "attackSpeed": {
       "flat": 0.625,
-      "perLevel": 6
+      "perLevel": 5.5
     },
     "attackSpeedRatio": {
       "flat": 0.694
@@ -165,7 +165,7 @@ const champion: Champion =  {
             "description": "Enemies hit by subsequent soldiers take no additional damage and are instead slowed by an additional 25% per soldier."
           },
           {
-            "description": "Conquering Sands will cast at max range if cast beyond that."
+            "description": "A summoned Sand Soldier is required to cast this ability."
           }
         ],
         "cost": [
@@ -262,7 +262,7 @@ const champion: Champion =  {
             "description": "Sand Soldiers cannot attack structures, wards, nor traps."
           },
           {
-            "description": "Arise! will cast at max range if cast beyond that. See Pets for more details about Sand Soldiers."
+            "description": "See Pets for more details about Sand Soldiers."
           }
         ],
         "cost": [
@@ -355,7 +355,7 @@ const champion: Champion =  {
             "description": "If Azir dashes into an enemy champion, he stops and gains a charge of Arise!."
           },
           {
-            "description": "Azir can cast of any of his abilities during the dash."
+            "description": "A summoned Sand Soldier is required to cast this ability. Azir can cast of any of his abilities during the dash."
           }
         ],
         "cost": [
@@ -387,7 +387,7 @@ const champion: Champion =  {
         "icon": "https://cdn.communitydragon.org/latest/champion/Azir/ability-icon/r",
         "effects": [
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Azir calls forth a phalanx of soldiers from 175 units behind him, catching enemies from up to 325 units behind him and charging forward 575 units in the target direction.</p>",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Azir calls forth a phalanx of soldiers from 175 units behind him, catching enemy champions from up to 325 units behind him and charging forward 575 units in the target direction.</p>",
             "leveling": [
               {
                 "attribute": "Width",
@@ -431,7 +431,7 @@ const champion: Champion =  {
             ]
           },
           {
-            "description": "Enemies impacted by the charge are dealt magic damage and knocked away over 1 second to a line 650 units in front of Azir.",
+            "description": "Enemy champions impacted by the charge are dealt magic damage and knocked away over 1 second to a line 650 units in front of Azir.",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -474,8 +474,8 @@ const champion: Champion =  {
         "damageType": "Magic damage",
         "spellEffects": "spellaoe",
         "projectile": "SPECIAL",
-        "notes": "The soldier units are spawned only 175 units behind Azir, but do not control the  knock back directly. Each comes with a missile that travels the same path and conveys the damage and knockback effect.\nThe furthest area (from 325 to 175 units behind Azir) is covered by a separate set of missiles with the same effects.\nAll of the soldiers and their missiles will end the charge prematurely when one encounters  Wind Wall /  Unbreakable /  Blade Whirl /  Rebuttal or upon colliding with terrain that they cannot charge through.\nThe charge starts at 0.25 seconds into the cast time.\nThis ability will cast from wherever the caster is at the start of the cast time.\nWhen the dash of the soldiers comes to a halt, all not-yet-affected enemies on top of the soldiers' landing locations (125 radius) are also knocked back.\nEmperor's Divide will not be canceled if Azir dies during the cast time.\nWhile the soldiers are charging forward, the wall is not impassable terrain.\nThis means enemies that are immune to  airborne effects can pass through the wall while its moving.\nThe wall will count as terrain for the purposes of 'into terrain' effects (e.g.  Condemn,  Dredge Line,  Heroic Charge). This will only affect enemies, allies will pass through the wall in all circumstances, even if knocked into it by an enemy.",
-        "blurb": "Active:  Azir summons a wall of soldiers that charges forward, dealing magic damage and  knocking back enemies hit.",
+        "notes": "An undocumented change to Emperor's Divide in V14.10 caused the soldiers to no longer be able to  knock back non-champions.(bug)\nThe soldier units are spawned only 175 units behind Azir, but do not control the  knock back directly. Each comes with a missile that travels the same path and conveys the damage and knockback effect.\nThe furthest area (from 325 to 175 units behind Azir) is covered by a separate set of missiles with the same effects.\nAll of the soldiers and their missiles will end the charge prematurely when one encounters  Wind Wall /  Unbreakable /  Blade Whirl /  Rebuttal or upon colliding with terrain that they cannot charge through.\nThe charge starts at 0.25 seconds into the cast time.\nThis ability will cast from wherever the caster is at the start of the cast time.\nWhen the dash of the soldiers comes to a halt, all not-yet-affected enemies on top of the soldiers' landing locations (125 radius) are also knocked back.\nEmperor's Divide will not be canceled if Azir dies during the cast time.\nWhile the soldiers are charging forward, the wall is not impassable terrain.\nThis means enemies that are immune to  airborne effects can pass through the wall while its moving.\nThe wall will count as terrain for the purposes of 'into terrain' effects (e.g.  Condemn,  Dredge Line,  Heroic Charge). This will only affect enemies, allies will pass through the wall in all circumstances, even if knocked into it by an enemy.",
+        "blurb": "Active:  Azir summons a wall of soldiers that charges forward, dealing magic damage and  knocking back enemy  champions hit.",
         "speed": "1000 / 1400",
         "castTime": "0.5",
         "effectRadius": "125",

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import Fuse from 'fuse.js'
-// adjust the path as needed
+import { motion } from 'motion-v'
 
 const props = withDefaults(
   defineProps<{
@@ -8,10 +8,11 @@ const props = withDefaults(
     pocket?: Pocket
     selectedIcon?: string
     alignOffset?: number
-    align?: 'start' | 'center' | 'end'
+    align?: Align
     sideOffset?: number
-    side?: 'bottom' | 'top' | 'left' | 'right'
+    side?: Side
     class?: HTMLAttributes['class']
+    popoverClass?: HTMLAttributes['class']
   }>(),
   {
     align: 'start',
@@ -20,63 +21,47 @@ const props = withDefaults(
     alignOffset: 0,
   },
 )
-
 const emit = defineEmits(['update:selectedIcon'])
 
 const pocket = computed(() => {
   return props.pocketKey ? getPocket(props.pocketKey) : props.pocket
 })
 
+console.log('💠 - pocket - pocket:', pocket)
+watch(() => pocket.value.icon, (newVal) => {
+  console.log('💠 - watch - newVal:', newVal)
+})
 const ix = useIndexStore()
 
-const champs = computed(() => Object.values(ix.skins || {}))
-
-console.log('💠 - champs:', champs)
 const selectIcon = ref()
 const champSearch = ref(null)
-const selectedResult = ref(null)
-const splashIcons = ref<string[]>([])
+const selectedChampion = ref(null)
+const championSkins = ref<Skin[]>([])
 
-const champFuse = computed(() => new Fuse(champs.value, {
+watchEffect(() => {
+  if (!selectedChampion.value)
+    return
+
+  championSkins.value = ix.skins[selectedChampion.value]
+  console.log('💠 - watchEffect - ix.skins:', ix.skins)
+  console.log('💠 - watchEffect - skins.value:', championSkins.value)
+})
+const champFuse = computed(() => new Fuse(ix.champions, {
 
   keys: ['name'],
   findAllMatches: true,
   threshold: 0.3,
 }))
 
-const searchQuery = computed(() => {
+const champSearchResults = computed(() => {
   if (!champSearch.value)
     return []
   return champFuse.value.search(champSearch.value)
 })
 
-const searchResult = computed(() => {
-  const champName = selectedResult.value
-  if (!champName)
-    return null
-
-  //   const entry = champs.value.find(champ => champ.name === champName)
-  //   if (!entry)
-  //     return null
-
-  //   const splashes = ix.skins.map(s => s.splashPath)
-
-  //   return new Fuse(splashes, { threshold: 0.3 }).search(champName).map(r => ({ splash: r.item, id: entry.id }))
-  // })
-
-  // watch(searchResult, (results) => {
-  //   const champName = selectedResult.value
-  //   const entry = champs.value.find(champ => champ.name === champName)
-  //   if (entry)
-  //     splashIcons.value = entry.skins.map(s => s.splashPath)
-  // no fix
-  // TODO FIX
-  return 1
-})
-
 function handleInput(e: string) {
-  if (selectedResult.value)
-    selectedResult.value = null
+  if (selectedChampion.value)
+    selectedChampion.value = null
   champSearch.value = e
 }
 
@@ -88,31 +73,52 @@ onMounted(() => {
 </script>
 
 <template>
-  <LazyCustomPopoverContent :side-offset="props.sideOffset" :align-offset="props.alignOffset" :align="props.align" :side="props.side" :class="cn('w-(--reka-popover-trigger-width) px-2 py-2 flex flex-col max-h-96 overflow-y-scroll  ', props.class)">
-    <ContrastSearchInput v-model:model-value="champSearch" placeholder="Search Splash Icons..." @update:input="handleInput($event)" />
+  <LazyPopover>
+    <PopoverTrigger class="group/picon z-0 shrink-0 !cursor-pointer self-center  !size-14   rounded-full !pointer-events-auto  aspect-square  grid place-items-center relative  ">
+      <PocketIcon v-if="pocket" :url="pocket?.icon" alt="pocket icon" bg-size="160%" class=" group-hover/picon:brightness-50 z-1 group-data-[state=open]/picon:brightness-50   tldr-30 shadow-sm drop-shadow-sm group-data-[state=open]/picon:ring group-data-[state=open]/picon:ring-offset-2 ring-neutral/40 ring-offset-b1 rounded-full " />
 
-    <div v-if="!searchResult" class="pt-2 overflow-y-scroll w-full flex flex-col">
-      <!-- <label v-for="result in searchQuery" :key="result.item.id" class="justify-start btn btn-ghost max-h-90 hover:opacity-80 hover:!bg-b3/1   hover:!border-accent/20 hover:text-nc gap-3 text-3">
-        <input v-model="selectedResult" type="radio" class="peer hidden" :value="result.item" />
-        <LazyChampionIcon :id="result.item.id" :alt="result.item.name" class="size-8" hydrate-on-visible />
-        {{ result.item.name }}
-      </label> -->
-    </div>
+      <icon name="images" class="size-6 !text-nc absolute opacity-0  group-hover/picon:opacity-80 z-2 transition-all  duration-300 group-data-[state=open]/picon:opacity-100" />
+    </PopoverTrigger>
+    <LazyCustomPopoverContent
+      hydrate-on-interaction
+      :side-offset="props.sideOffset"
+      :align-offset="props.alignOffset"
+      :align="props.align"
+      :side="props.side"
+      :class="cn('w-96 py-2 overflow-hidden px-2', popoverClass)"
+      as-child>
+      <motion.div
+        class=" flex flex-col  overflow-y-scroll"
+        :style="{ maxHeight: !champSearch ? '60px' : '250px' }">
+        <ContrastSearchInput v-model:model-value="champSearch" placeholder="Search Splash Icons..." @update:input="handleInput($event)" />
 
-    <div v-else-if="searchResult" class="mt-3  overflow-y-scroll px-1 self-center pb-3 max-h-90 grid grid-cols-4 pt-1 gap-2">
-      <template v-for="splash in splashIcons" :key="splash">
-        <PopoverClose as-child>
-          <LazySplashIcon
-            alt="champion splash"
-            :img="splash"
-            class="!size-17 border-0 shrink-0 hover:ring-b3/80">
-            <input v-model="selectIcon" type="radio" :value="splash" class="peer hidden" hydrate-on-visible @change="pocket.icon = selectIcon" />
-          </LazySplashIcon>
-        </PopoverClose>
-      </template>
-    </div>
-    <div v-else class="w-full  px-2  pt-3 pb-4">
-      <p>Search for a champion to select a splash art.</p>
-    </div>
-  </LazyCustomPopoverContent>
+        <transition-slide v-if="!selectedChampion" group class="pt-2 overflow-y-scroll w-full flex flex-col">
+          <label v-for="result in champSearchResults" :key="result.item.id" class="justify-start btn btn-ghost btn-ghost-dark  gap-3 text-3">
+            <input v-model="selectedChampion" type="radio" class="peer hidden" :value="result.item.key" />
+            <span class="size-8 ">
+              <LazyChampionIcon :id="result.item.id" :alt="result.item.name" class="size-8 pointer-events-none rounded-lg" hydrate-on-visible />
+            </span>
+            {{ result.item.name }}
+          </label>
+        </transition-slide>
+
+        <div v-else-if="selectedChampion" class="mt-3  overflow-y-scroll px-1 self-center pb-3 max-h-90 grid grid-cols-4 pt-1 gap-2">
+          <template v-for="skin in ix.skins[selectedChampion]" :key="skin.name">
+            <PopoverClose as-child>
+              <PocketIcon
+                v-tippy="skin.name"
+                :alt="skin.name"
+                :url="getSkinSplash(selectedChampion, skin, 'tile')"
+                class="size-20.5  cursor-pointer rounded-md shrink-0 hover:ring-b3/80">
+                <input v-model="selectIcon" type="radio" :value="skin.id" class="peer hidden" hydrate-on-visible @change="pocket.icon = selectIcon" />
+              </PocketIcon>
+            </PopoverClose>
+          </template>
+        </div>
+        <div v-else class="w-full  px-2  pt-3 pb-4">
+          <p>Search for a champion to select a splash art.</p>
+        </div>
+      </motion.div>
+    </LazyCustomPopoverContent>
+  </LazyPopover>
 </template>

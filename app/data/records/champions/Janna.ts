@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 40,
@@ -429,9 +429,8 @@ const champion: Champion =  {
         "targeting": "Unit",
         "affects": "Allies, Allied turrets, Self",
         "resource": "Mana",
-        "spellEffects": "Shield",
         "notes": "Eye of the Storm has a  forgiveness radius of 175 units.\n Attack speed slows applied to enemy champions by Janna (e.g.  Frozen Heart) also trigger the passive.(note)\nJanna receives kill credit on enemy champions that are killed by turrets shielded by Eye of the Storm.\nAllied turrets will benefit from the bonus attack damage when targeted by Eye of the Storm.",
-        "blurb": "Whenever  Janna's abilities  slow or  knock up at least one enemy  champion, she refunds a portion of  Eye of the Storm's cooldown.",
+        "blurb": "Passive: Whenever  Janna's abilities  slow or  knock up at least one enemy  champion, she  refunds a portion of  Eye of the Storm's cooldown.",
         "castTime": "none",
         "targetRange": "800",
         "maxCharges": -1

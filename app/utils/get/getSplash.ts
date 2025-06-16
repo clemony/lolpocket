@@ -5,6 +5,25 @@ export function getLoadSplash(key: string, img: string) {
   return `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/${key.toLowerCase()}/skins/base/${img}.jpg`
 }
 
+export function getSkinSplash(key: string, skin: Skin, type: SplashType) {
+  const champ = key.toLowerCase()
+
+  const folder = computed(() => {
+    function id() {
+      const a = skin.id.replace(/(\d+)\..*/, "$1")
+      return a.length == 1 ? `0${a}` : a
+    }
+    return skin.name == "Original" ? "base" : `skin${id()}`
+  })
+
+  const partialUrl =
+    type == "centered" ? `images/${champ}_splash_centered_${skin.id}`
+    : type == "tile" ? `images/${champ}_splash_tile_${skin.id}`
+    : type == "load" ? `${champ}loadscreen_skin`
+    : null
+  return `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/${champ}/skins/${folder.value}/${partialUrl}.jpg`
+}
+
 export function getSplash(key: string, type: SplashType) {
   if (!key) return
   const ix = useIndexStore()

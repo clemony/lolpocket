@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:48 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:45 PM CDT
 
 const champion: Champion =  {
   "id": 115,
@@ -152,9 +152,6 @@ const champion: Champion =  {
                 ]
               }
             ]
-          },
-          {
-            "description": "Bouncing Bomb will cast at max range if cast beyond that."
           }
         ],
         "cost": [

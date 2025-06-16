@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 18,
@@ -205,7 +205,7 @@ const champion: Champion =  {
             "description": "Scoring an enemy champion takedown or detonating Explosive Charge at maximum stacks on a champion will reset Rocket Jump's cooldown."
           },
           {
-            "description": "Tristana can cast any of her abilities during the dash. Rocket Jump will cast at max range if cast beyond that."
+            "description": "Tristana can cast any of her abilities during the dash."
           }
         ],
         "cost": [

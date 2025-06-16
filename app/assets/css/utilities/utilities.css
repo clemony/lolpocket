@@ -2,87 +2,6 @@
 @import "../colors.css";
 @import "../theme.css";
 
-/* button */
-
-/*  btn */
-
-@utility btn {
-  &:not(.btn-ghost):not(.btn-outline):not(.btn-neutral) {
-    @apply items-center  bg-b2/60 border-b2 font-normal text-3 gap-3;
-  }
-}
-
-@utility btn-neutral {
-  @apply !shadow-xs text-nc bg-neutral *:text-nc hover:text-nc;
-}
-
-@utility btn-ghost {
-  &:hover {
-    @apply border-b3/40;
-    --btn-bg: --alpha(var(--b2) / 20%);
-  }
-  &.btn-active {
-    --btn-bg: --alpha(var(--b2) / 30%);
-    border-color: --alpha(var(--b3) / 40%);
-  }
-}
-
-/* badge */
-
-@utility badge {
-  @apply rounded-lg shadow-standard shadow-black/2 **:text-3 flex gap-2 drop-shadow-text items-center  box-border;
-}
-
-@utility badge-neutral {
-  @apply text-nc;
-}
-
-/* collapse */
-
-@utility collapse-input {
-  @apply !min-h-0 !py-0 h-11 text-nowrap flex-nowrap items-center justify-start;
-}
-
-@utility collapse-title {
-  @apply !min-h-0 !py-0 h-11 text-nowrap flex-nowrap items-center justify-start;
-}
-
-/* input */
-
-@utility input {
-  @apply focus-within:!outline-1 focus-within:!outline-offset-0   focus-within:!outline-b3;
-  border-image-width: 0 !important;
-  --input-color: var(--b3) !important;
-}
-
-/* tabs */
-
-@utility tabs-box {
-  border-radius: var(--radius-lg) !important;
-}
-
-@utility tabs-box {
-  @apply rounded-lg;
-}
-
-@utility tab {
-  --radius-field: 1rem !important;
-  --tab-bg: var(--b1);
-  --tab-border-color: var(--b3);
-  --tab-border-colors: var(--b3);
-}
-
-/* divider */
-
-@utility divider {
-  @apply h-px text-2 font-semibold opacity-50;
-}
-
-@utility btn-depth {
-  --depth: 1;
-  --noise: 0.5;
-}
-
 @utility col-span-all {
   column-span: all;
 }
@@ -98,4 +17,8 @@
 
 @utility dr-* {
   transition-duration: calc(--value(integer) * 10) ms;
+}
+
+@utility wp-* {
+  width: --value(percentage);
 }

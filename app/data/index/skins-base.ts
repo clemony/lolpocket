@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/06/2025 12:21:38 PM CDT
+// Updated Patch 25.12 - 06/16/2025 01:56:55 PM CDT
 
 export const baseSkin: SkinRecord = {
   "Aatrox": {

@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 421,
@@ -104,7 +104,6 @@ const champion: Champion =  {
         ],
         "targeting": "Passive",
         "affects": "Self",
-        "spellEffects": "Heal",
         "notes": "Fury bar changes from Yellow to Red when full.\nWhen Rek'Sai automatically consumes Fury while Burrowed (no transformation), the healing buff will refresh every second while she has/maintains over 25 Fury.(note) This causes the healing to last 6 seconds at 100 Fury.",
         "blurb": "Innate:  Rek'Sai's basic attacks and ability hits generate  Fury, which continually expires after a few seconds out of combat."
       }
@@ -158,7 +157,7 @@ const champion: Champion =  {
         "spellshieldable": "false",
         "damageType": "Physical damage",
         "spellEffects": "special",
-        "notes": "Damage to the primary target applies  proc damage and damage to secondary targets applies  default damage.\nQueen's Wrath's bonus damage applies against structures.\nWhen  dodged or  blocked, or if Rek'Sai is  blinded, the damage dealt to the primary target is nullified, but the damage around her will still occur.",
+        "notes": "Damage to the primary target applies  spell damage and damage to secondary targets applies  default damage.\nQueen's Wrath's bonus damage applies against structures.\nWhen  dodged or  blocked, or if Rek'Sai is  blinded, the damage dealt to the primary target is nullified, but the damage around her will still occur.",
         "blurb": "Active:  Rek'Sai empowers her next 3 basic attacks within a few seconds to gain a moderate amount of  attack speed and deal bonus physical damage to the target and surrounding enemies.",
         "castTime": "none",
         "effectRadius": "325",
@@ -236,7 +235,7 @@ const champion: Champion =  {
         "icon": "https://cdn.communitydragon.org/latest/champion/RekSai/ability-icon/w",
         "effects": [
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rek'Sai becomes Burrowed, reducing her sight radius to 385 units while gaining access to her Burrowed abilities. She also becomes ghosted and gains bonus movement speed, as well as Tremor Sense.</p>",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rek'Sai becomes Burrowed, reducing her attack range by 50 and her sight radius to 385 units, while gaining access to her Burrowed abilities. She also becomes ghosted and gains bonus movement speed, as well as Tremor Sense.</p>",
             "leveling": [
               {
                 "attribute": "Bonus Movement Speed",
@@ -270,7 +269,7 @@ const champion: Champion =  {
         "targeting": "Auto",
         "affects": "Self",
         "notes": "Burrow does not count as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nEnemies detected by Tremor Sense are displayed as rings on the ground. Champions display larger rings and Rek'Sai will react to this detection.\nVisible enemies will not be detected by Tremor Sense. Enemies standing still while Rek'Sai is nearby are insensible by Tremor Sense.\nRek'Sai sensing a nearby enemy with Tremor Sense.",
-        "blurb": "Active:  Rek'Sai becomes Burrowed, reducing her  sight while gaining access to her Burrowed abilities. She also becomes  ghosted and gains  bonus movement speed, as well as Tremor Sense.",
+        "blurb": "Active:  Rek'Sai becomes Burrowed, reducing her  attack range and her  sight radius while gaining access to her Burrowed abilities. She also becomes  ghosted and gains  bonus movement speed, as well as Tremor Sense.",
         "castTime": "none",
         "effectRadius": "1500",
         "maxCharges": -1
@@ -280,7 +279,7 @@ const champion: Champion =  {
         "icon": "https://cdn.communitydragon.org/latest/champion/RekSai/ability-icon/w",
         "effects": [
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rek'Sai becomes Un-Burrowed, gaining access to her Un-Burrowed abilities and emerging from the ground to deal magic damage to nearby enemies. Additionally, the nearest enemy, enemy champions, and medium and large monsters hit by the emergence are also knocked up for 1 second. All other enemies hit are instead knocked back a short distance. Targets hit cannot be displaced by Unburrow again for some time.</p>",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Rek'Sai becomes Un-Burrowed, gaining access to her Un-Burrowed abilities and emerging from the ground to deal magic damage to nearby enemies, knocking them up for 1 second. Targets hit cannot be knocked up by Unburrow again for some time.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",
@@ -321,11 +320,11 @@ const champion: Champion =  {
         "spellshieldable": "True",
         "damageType": "Magic damage",
         "spellEffects": "spellaoe",
-        "notes": "Unburrow will not knock up the nearest target if they're a minion or small monster.(bug)\nMinions or small monsters are only knocked up only in the case of Rek'Sai casting Unburrow by declaring an attack command against them.\nRek'Sai's attack range is reduced by 50 while Burrowed, which makes an automatic cast of Unburrow always put Rek'Sai at least 50 units within her attack range against the target to follow up with.\nNote that the Unborrow effect radius is usually greater than  75, meaning Rek'Sai can knock up a single target from slightly further away when she casts Unburrow the standard way, but may have to walk slightly closer to attack that target afterwards.\nUnburrow does not count as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nUnburrow is still considered an ability and is thus stopped by  silence. She can basic attack normally during this time, without leaving unburrow.\nFor a brief moment during the beginning animation of  Tunnel, Rek'Sai can trigger Unburrow by issuing an attack command.",
-        "blurb": "Active:  Rek'Sai becomes Un-Burrowed, gaining access to her Un-Burrowed abilities. Additionally, she deals magic damage to nearby enemies and  knocks them aside. The nearest enemy hit is instead  knocked up, and cannot be affected again by Unburrow for some time.",
+        "notes": "Unburrow will not knock up the nearest target if they're a minion or small monster.(bug)\nMinions or small monsters are only knocked up only in the case of Rek'Sai casting Unburrow by declaring an attack command against them.\nUnburrow does not count as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nUnburrow is still considered an ability and is thus stopped by  silence. She can basic attack normally during this time, without leaving unburrow.\nFor a brief moment during the beginning animation of  Tunnel, Rek'Sai can trigger Unburrow by issuing an attack command.",
+        "blurb": "Active:  Rek'Sai becomes Un-Burrowed, gaining access to her Un-Burrowed abilities. Additionally, she deals magic damage to nearby enemies and  knocks them up. The enemies and cannot be affected again by Unburrow for some time.",
         "onTargetCdStatic": "10",
         "castTime": "none",
-        "effectRadius": "220 / 75 /  250",
+        "effectRadius": "220 /  75",
         "maxCharges": -1
       }
     ],

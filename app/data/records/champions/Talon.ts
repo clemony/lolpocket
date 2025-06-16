@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 91,
@@ -192,7 +192,7 @@ const champion: Champion =  {
         "notes": "Talon will track the target if they change locations with the ranged version of Noxian Diplomacy, landing at an offset of 100 units before reaching them.\nHe will dash to the target's previous location while still dealing damage if the target is too far away or moves beyond 800 units.\nWhen cast in close range, Noxian Diplomacy deals its damage at the completion of the cast time, rather than at the dash's completion.\nThe damage will be dealt even if Talon's dash is interrupted, so long as the cast time is completed.\nTalon will be ordered to basic attack the target at the end of the dash.\nWhile  grounded or  rooted, Noxian Diplomacy can only be cast within close range.\nTalon will still dash to the target in both cases.\nNoxian Diplomacy will also grant the heal if the target dies upon Talon's completion of the dash.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).\nThis only applies to the close dash attack.",
         "blurb": "Active:  Talon  leaps to the target enemy, dealing physical damage. If the target is within melee range, Talon instead  critically strikes the target.",
         "speed": "1400",
-        "castTime": "None / Attack Windup Time",
+        "castTime": "None / 100% of Talon's windup time (0.198 at base attack speed)",
         "targetRange": "575 /  170",
         "maxCharges": -1
       }
@@ -335,7 +335,7 @@ const champion: Champion =  {
         "icon": "https://cdn.communitydragon.org/latest/champion/Talon/ability-icon/e",
         "effects": [
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Talon dashes up to 800 units over the target area of terrain, during which he gains unobstructed vision.</p>"
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Talon dashes up to 800 units over the target area of terrain while within proximity of it, during which he gains unobstructed vision.</p>"
           },
           {
             "description": "Talon cannot cast Assassin's Path on the same area of terrain for a set duration."
@@ -350,9 +350,9 @@ const champion: Champion =  {
         "cooldown": [
           0
         ],
-        "targeting": "Direction",
+        "targeting": "Location",
         "affects": "Self",
-        "notes": "Assassin's Path can interact with player-generated terrain.\nTalon will stop dashing upon entering  stasis but will continue to do so afterwards.\nTalon will reveal himself for 0.6 seconds upon casting Assassin's Path if he is visible to an enemy champion or there is a nearby enemy champion or minion within 400 units of the landing position.",
+        "notes": "When Assassin's Path is cast on terrain that is out of range, Talon will walk to the location where he is able to cast the ability and dash over this area of terrain. If he encounters other terrain along the way, however, he will cast Assassin's Path over the obstructive area of terrain instead.\nThis override will fail if his path to the location would be obstructed by terrain that is on cooldown. In this case, the ability will not cast at all.\nAssassin's Path can interact with player-generated terrain.\nTalon will stop dashing upon entering  stasis but will continue to do so afterwards.\nTalon will reveal himself for 0.6 seconds upon casting Assassin's Path if he is visible to an enemy champion or there is a nearby enemy champion or minion within 400 units of the landing position.\nWalls eligible for Assassin's Path display a border indicator that fades over the cooldown. The closer the wall is to becoming traversable, the lighter the indicator becomes.",
         "blurb": "Active:  Talon  vaults over the target terrain.",
         "speed": "100% movement speed",
         "castTime": "none",

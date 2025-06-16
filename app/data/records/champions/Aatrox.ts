@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 266,
@@ -90,7 +90,7 @@ const champion: Champion =  {
         "icon": "https://cdn.communitydragon.org/latest/champion/Aatrox/ability-icon/p",
         "effects": [
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Periodically, Aatrox empowers his next basic attack to gain 50 bonus range and deal bonus magic damage equal to 4% - 8% (based on level) of the target's maximum health, capped at 100 against monsters. Aatrox heals for 80% of the post-mitigation bonus damage dealt, reduced to 25% against minions.</p>"
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Periodically, Aatrox empowers his next basic attack to gain 50 bonus range and deal bonus magic damage equal to 4% - 8% (based on level) of the target's maximum health, capped at 100 against monsters. Deathbringer Stance's damage applies life steal at 100% effectiveness.Aatrox heals for 100% of the post-mitigation bonus damage dealt, reduced to 25% against minions.</p>"
           },
           {
             "description": "Whenever Aatrox hits at least one enemy champion or large monster with a basic attack on-hit or an ability, the cooldown of Deathbringer Stance is reduced by 2 seconds, modified to 4 if he hits with the Sweetspot of The Darkin Blade."
@@ -286,6 +286,63 @@ const champion: Champion =  {
                 ]
               }
             ]
+          },
+          {
+            "description": "The Darkin Blade deals 55 / 60 / 65 / 70% (based on level) damage against minions, and the knock up duration from hitting the Sweetspot is doubled to 0.5 seconds against monsters.",
+            "leveling": [
+              {
+                "attribute": "Maximum Non-Minion Non-Sweetspot Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      37.5,
+                      93.75,
+                      150,
+                      206.25,
+                      262.5
+                    ]
+                  },
+                  {
+                    "values": [
+                      225,
+                      253.125,
+                      281.25,
+                      309.375,
+                      337.5
+                    ],
+                    "units": [
+                      "% AD"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Maximum Non-Minion Sweetspot Damage",
+                "modifiers": [
+                  {
+                    "values": [
+                      63.75,
+                      159.375,
+                      255,
+                      350.625,
+                      446.25
+                    ]
+                  },
+                  {
+                    "values": [
+                      382.5,
+                      430.3125,
+                      478.125,
+                      525.9375,
+                      573.75
+                    ],
+                    "units": [
+                      "% AD"
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ],
         "cost": [
@@ -440,7 +497,7 @@ const champion: Champion =  {
         "icon": "https://cdn.communitydragon.org/latest/champion/Aatrox/ability-icon/e",
         "effects": [
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Aatrox heals for 16% (+ 0.9% per 100 bonus health) of non- persistent post-mitigation damage he deals against enemy champions.</p>"
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Aatrox heals for 16% (+ 1.1% per 100 bonus health) of non- persistent post-mitigation damage he deals against enemy champions.</p>"
           },
           {
             "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Aatrox dashes in the target direction.</p>"

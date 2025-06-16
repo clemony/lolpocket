@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:47 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:45 PM CDT
 
 const champion: Champion =  {
   "id": 350,
@@ -263,6 +263,50 @@ const champion: Champion =  {
           },
           {
             "description": "Yuumi starts with a skill point in You and Me! and Prowling Projectile instead has 6 ranks."
+          },
+          {
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Best Friend Bonus:</span> Yuumi gains heal and shield power and her Best Friend gains healing on-hit.You and Me! is placed on a 5-second cooldown if Yuumi becomes immobilized, grounded, or polymorphed.</p>",
+            "leveling": [
+              {
+                "attribute": "Heal and Shield Power",
+                "modifiers": [
+                  {
+                    "values": [
+                      5,
+                      7.5,
+                      10,
+                      12.5,
+                      15
+                    ],
+                    "units": [
+                      "%"
+                    ]
+                  }
+                ]
+              },
+              {
+                "attribute": "Healing On-Hit",
+                "modifiers": [
+                  {
+                    "values": [
+                      3,
+                      5,
+                      7,
+                      9,
+                      11
+                    ]
+                  },
+                  {
+                    "values": [
+                      4
+                    ],
+                    "units": [
+                      "% AP"
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ],
         "cost": [
@@ -273,7 +317,7 @@ const champion: Champion =  {
         ],
         "targeting": "Unit / Direction",
         "affects": "Allies",
-        "notes": "The Best Friend's healing on-hit is affected by Yuumi's heal and shield power.\nYuumi will track the target if they change locations.\nShe will not stop tracking the target until she reaches them, as there is no maximum tracking distance.\nThe 0.5-second cooldown will be incurred whenever Yuumi attaches to an Anchor, whether by the active or the recast.\nIf the target moves 2000 or more units away during the dash, it will be interrupted and You and Me! will be placed on full cooldown.\nYou and Me! does not count as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nYou and Me! does not count as a buff for  Summon Aery.\nYou and Me! initial cast and recast have a  forgiveness radius of 175 units.\nThis behavior can override her direction-targeted  dash to discard any target.\nYuumi can channel the  Eye of the Herald while attached.\nYuumi will automatically detach in the following circumstances:\nWhen her Anchor starts a  Teleport channel.\nAfter the Anchor completes a  Recall channel.\nHer Anchor is sent to the  Realm of Death.\nShe is pulled by  Fate's Call.\nWhen she or her Anchor enters  resurrection.\nIf Yuumi is channeling You and Me! or already dashing towards an ally who enters  resurrection, then she will successfully attach to the resurrecting ally, and she will be able to heal/shield them during it.\nYuumi can dash to targetable  zombie state allies (currently only  Sion's  Glory in Death), but she cannot attach when she reaches them.\nThe same goes for allies channeling  Teleport.\nWhile attached to the Anchor, Yuumi is considered in being at her Anchor's position, regardless of where she is visually placed near them. For example,  turret shots will appear as if they were hitting the Anchor, but in reality they're actually hitting Yuumi.\nHowever, for the purposes of You and Me!, such as casting it or being unattached for other reasons, Yuumi will be in the position where she visually is. For example, when she is in the blue team, dashing to a north-east ally is considerably slower than dashing to a south-west ally.\nHer  monster aggression transfers to the Anchor.\nEnemies gain an assist on Yuumi if they damaged the Anchor.\nYuumi will always be  visible if her Anchor can be seen, and she will always not be visible if her Anchor cannot be seen. These rules apply regardless of  reveal effects and  stealth.\nYuumi will not  vanish if her Anchor does.\nIf Yuumi is on the blue team, she will remain attached on the southwest side; if Yuumi is on the red team, she will remain on the northeast. While channeling  Final Chapter, she will be behind her Anchor.\nThe player's screen will briefly flash red if Yuumi is affected by a  immobilizing or  grounding effect, or if she forcibly detaches from her Anchor.\nThe Anchor's health bar will have a different frame to indicate the attached status:\n\nThe following table refers for interactions while Yuumi is  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Teleport  Recall  Hexflash\n\n\nInterrupted by\n\n Flash\n\n\nInterrupted by\n\nDeath Grounding effects Immobilizing effects Cast-inhibiting effects\n\nThe following table refers for interactions while Yuumi is  attached:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nAllowed\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nAll the other item-actives are usable\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
+        "notes": "The Best Friend's healing on-hit is affected by Yuumi's heal and shield power.\nYuumi will track the target if they change locations.\nShe will not stop tracking the target until she reaches them, as there is no maximum tracking distance.\nThe 0.5-second cooldown will be incurred whenever Yuumi attaches to an Anchor, whether by the active or the recast.\nIf the target moves 2000 or more units away during the dash, it will be interrupted and You and Me! will be placed on full cooldown.\nAttempting to recast You and Me! on an ally that is out of range will briefly glow a range indicator of the ability and indicate that the target is \"Out of Range!\".\nYou and Me! does not count as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nYou and Me! does not count as a buff for  Summon Aery.\nThe initial cast and recast of You and Me! have a  forgiveness radius of 175 units.\nThis behavior can override her direction-targeted  dash to discard any target.\nYuumi can channel the  Eye of the Herald while attached.\nYuumi will automatically detach in the following circumstances:\nWhen her Anchor starts a  Teleport channel.\nAfter the Anchor completes a  Recall channel.\nHer Anchor is sent to the  Realm of Death.\nShe is pulled by  Fate's Call.\nWhen she or her Anchor enters  resurrection.\nIf Yuumi is channeling You and Me! or already dashing towards an ally who enters  resurrection, then she will successfully attach to the resurrecting ally, and she will be able to heal/shield them during it.\nYuumi can dash to targetable  zombie state allies (currently only  Sion's  Glory in Death), but she cannot attach when she reaches them.\nThe same goes for allies channeling  Teleport.\nWhile attached to the Anchor, Yuumi is considered in being at her Anchor's position, regardless of where she is visually placed near them. For example,  turret shots will appear as if they were hitting the Anchor, but in reality they're actually hitting Yuumi.\nHowever, for the purposes of You and Me!, such as casting it or being unattached for other reasons, Yuumi will be in the position where she visually is. For example, when she is in the blue team, dashing to a north-east ally is considerably slower than dashing to a south-west ally.\nHer  monster aggression transfers to the Anchor.\nEnemies gain an assist on Yuumi if they damaged the Anchor.\nYuumi will always be  visible if her Anchor can be seen, and she will always not be visible if her Anchor cannot be seen. These rules apply regardless of  reveal effects and  stealth.\nYuumi will not  vanish if her Anchor does.\nIf Yuumi is on the blue team, she will remain attached on the southwest side; if Yuumi is on the red team, she will remain on the northeast. While channeling  Final Chapter, she will be behind her Anchor.\nThe player's screen will briefly flash red if Yuumi is affected by a  immobilizing or  grounding effect, or if she forcibly detaches from her Anchor.\nThe Anchor's health bar will have a different frame to indicate the attached status:\n\nThe following table refers for interactions while Yuumi is  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Teleport  Recall  Hexflash\n\n\nInterrupted by\n\n Flash\n\n\nInterrupted by\n\nDeath Grounding effects Immobilizing effects Cast-inhibiting effects\n\nThe following table refers for interactions while Yuumi is  attached:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nAllowed\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nAll the other item-actives are usable\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
         "speed": "1200 / 1300 / 1400 / 1500 / 1600",
         "castTime": "none",
         "targetRange": "700",

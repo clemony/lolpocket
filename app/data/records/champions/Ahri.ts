@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 103,
@@ -390,10 +390,10 @@ const champion: Champion =  {
                   {
                     "values": [
                       1.2,
-                      1.4,
-                      1.6,
-                      1.8,
-                      2
+                      1.35,
+                      1.5,
+                      1.65,
+                      1.8
                     ],
                     "units": [
                       " seconds"
@@ -459,7 +459,7 @@ const champion: Champion =  {
             "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Ahri mimics the first cast's effects.</p>"
           },
           {
-            "description": "Spirit Rush's recast duration will persist even after using all recasts. Fox-Fire can be cast during the dash. Spirit Rush will cast at max range if cast beyond that."
+            "description": "Spirit Rush's recast duration will persist even after using all recasts. Fox-Fire can be cast during the dash."
           }
         ],
         "cost": [

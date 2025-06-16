@@ -7,17 +7,18 @@ import {
   useForwardPropsEmits,
 } from 'reka-ui'
 
-defineOptions({
-  inheritAttrs: false,
+const props = withDefaults(defineProps<PopoverContentProps & {
+  class?: HTMLAttributes['class']
+  sideOffset?: number
+  alignOffset?: number
+  align?: Align
+  side?: Side
+  to?: string
+}>(), {
+  align: 'center',
+  sideOffset: 8,
 })
 
-const props = withDefaults(
-  defineProps<PopoverContentProps & { class?: HTMLAttributes['class'], to?: string }>(),
-  {
-    align: 'center',
-    sideOffset: 4,
-  },
-)
 const emits = defineEmits<PopoverContentEmits>()
 
 const delegatedProps = reactiveOmit(props, 'class')
@@ -37,6 +38,5 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
       ">
       <slot />
     </PopoverContent>
-    
   </PopoverPortal>
 </template>

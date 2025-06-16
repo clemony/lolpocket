@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 44,
@@ -110,7 +110,7 @@ const champion: Champion =  {
         "affects": "Self",
         "damageType": "Magic damage",
         "spellEffects": "proc",
-        "notes": "The first attack refreshes Bravado's duration.\nThe bonus damage will not apply against  structures.\nBravado can be  dodged and  blocked but it cannot miss if Taric is  blinded. The cooldown reduction cannot be negated in any cases.",
+        "notes": "The first attack refreshes Bravado's duration.\nThe bonus damage will not apply against  structures.\nBravado can be  dodged and  blocked but it cannot miss if Taric is  blinded. The cooldown reduction cannot be negated in any case.",
         "blurb": "Innate: After casting an ability,  Taric empowers his next two basic attacks to gain tremendous  total attack speed, deal bonus magic damage based on his bonus armor, and  reduce the cooldowns of his basic abilities."
       }
     ],
@@ -151,7 +151,6 @@ const champion: Champion =  {
         "targeting": "Auto",
         "affects": "Allies",
         "resource": "Mana",
-        "spellEffects": "Heal",
         "notes": "The healing will apply heal effects (such as  Summon Aery) prioritizing targets in Taric's circle, based on proximity to him, then in the  Bastioned ally's circle, based on proximity to that ally (including it).",
         "blurb": "Active:  Taric  heals himself and nearby allied champions based on his maximum health per charge of Starlight's Touch that he periodically stocks, up to a cap.  Bravado-empowered attacks each grant one charge.",
         "rechargeRate": [
@@ -216,7 +215,7 @@ const champion: Champion =  {
             ]
           },
           {
-            "description": "Taric can also self-cast to shield himself; if he self-casts and is untethered, he will become tethered to the nearest ally. Only one ally can be bound at a time, and selecting a new ally overrides the previous bind."
+            "description": "Taric can also self-cast to shield himself; if he self-casts and is untethered, he will become tethered to the nearest ally. Similarly, if he is tethered to an ally and self-casts, both he and the ally will be shielded. Only one ally can be bound at a time, and selecting a new ally overrides the previous bind."
           }
         ],
         "cost": [
@@ -228,7 +227,6 @@ const champion: Champion =  {
         "targeting": "Unit",
         "affects": "Self, Allies",
         "resource": "Mana",
-        "spellEffects": "Shield",
         "notes": "The mimicked abilities will still complete even if Taric dies or leaves range.\nAbilities are not mimicked to the bound ally if they are  vanished via  Alpha Strike,  Hallucinate,  Rappel, or  Void Rush.\nMimicked abilities will also cancel if they vanish as above.\nBastion has a  forgiveness radius of 175 units.",
         "blurb": "Passive:  Taric gains  bonus armor and forms a  tether to the ally bound by Bastion. While the tether persists, the ally gains the bonus armor and Taric's abilities are mimicked to them.",
         "tetherRadius": "1300",

@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 876,
@@ -101,7 +101,7 @@ const champion: Champion =  {
         "icon": "https://cdn.communitydragon.org/latest/champion/Lillia/ability-icon/p",
         "effects": [
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Lillia's abilities apply Dream Dust to enemies hit, which deals[ 5% (+ 1.25% per 100 AP) of the target's maximum health total magic damage over 3 seconds, capped at 65 ][ 0.83% (+ 0.2083% per 100 AP) of the target's maximum health magic damage every 0.5 seconds over 3 seconds, capped at 10.83 per tick ]against monsters.</p>"
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Lillia's abilities apply Dream Dust to enemies hit, which deals[ 5% (+ 1.25% per 100 AP) of the target's maximum health total magic damage over 3 seconds, capped at 65 against monsters. ][ 0.83% (+ 0.2083% per 100 AP) of the target's maximum health magic damage every 0.5 seconds over 3 seconds, capped at 10.83 per tick against monsters. ]</p>"
           },
           {
             "description": "Lillia heals herself for[ 39 (+ 15% AP) against large monsters and 6 - 90 (based on level) (+ 30% AP) against champions ][ 6.5 (+ 2.5% AP) against large monsters and 1 - 15 (based on level) (+ 5% AP) against champions every 0.5 seconds ]over the duration of Dream Dust, reduced to 15% effectiveness for each target afflicted beyond the first. She may only heal against 1 monster at a time."
@@ -128,7 +128,7 @@ const champion: Champion =  {
             "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Prance:</span> For each stack, Lillia gains bonus movement speed.</p>",
             "leveling": [
               {
-                "attribute": "Bonus Movement Speed",
+                "attribute": "Bonus Movement Speed per Stack",
                 "modifiers": [
                   {
                     "values": [
@@ -357,9 +357,6 @@ const champion: Champion =  {
                 ]
               }
             ]
-          },
-          {
-            "description": "Watch Out! Eep! will cast at max range if cast beyond that."
           }
         ],
         "cost": [
@@ -417,9 +414,6 @@ const champion: Champion =  {
                 ]
               }
             ]
-          },
-          {
-            "description": "Swirlseed will cast at max range if cast beyond that."
           }
         ],
         "cost": [

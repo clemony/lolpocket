@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 236,
@@ -100,7 +100,7 @@ const champion: Champion =  {
         "icon": "https://cdn.communitydragon.org/latest/champion/Lucian/ability-icon/p",
         "effects": [
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> After casting an ability, Lucian's next basic attack within 3.5 seconds fires an additional shot on-attack after 0.25 seconds, which deals 50 / 55 / 60% (based on level) AD physical damage, increased to 100% AD against minions. He will shoot the same target, else another target in range.</p>"
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> After casting an ability, Lucian's next basic attack within 3.5 seconds fires an additional shot on-attack after 0.25 seconds, which deals 50 / 55 / 60% (based on level) AD physical damage, increased to 100% AD against minions. He will shoot the same target, else another target within 50 units beyond his basic attack range automatically.</p>"
           },
           {
             "description": "The second shot applies on-hit effects, triggers on-attack effects, and is affected by critical strike modifiers."
@@ -113,7 +113,7 @@ const champion: Champion =  {
         "affects": "Enemies",
         "damageType": "Physical damage",
         "spellEffects": "attack",
-        "notes": "Lightslinger is triggered and consumed by the first attack, even if no target can be found upon firing the second attack.\nThe second attack, if the initial target was killed, will prioritize enemy champions regardless of having  sight of them or not and enemy  minions with  low health.\nLucian can perform actions freely while firing Lightslinger since the second attack is integrated into the first one.\nThe second attack has special movement animations depending on the direction Lucian is moving while firing.\nThe second attack counts as a separate hit for effects such as  Electrocute,  Muramana's Shock, and  Eclipse's Ever Rising Moon.\nThe second attack separately rolls a  critical strike.\nThe second attack does not trigger  Sundered Sky's Lightshield Strike.(note)\nThe empowered shots will apply against structures.",
+        "notes": "Lightslinger is triggered and consumed by the first attack, even if no target can be found upon firing the second attack.\nThe second attack, if the initial target was killed, will prioritize enemy champions regardless of having  sight of them or not and enemy  minions with  low health.\nLucian can perform actions freely while firing Lightslinger's second attack.\nThe second attack has special movement animations depending on the direction Lucian is moving while firing.\nThe second attack counts as a separate hit for effects such as  Electrocute,  Muramana's Shock, and  Eclipse's Ever Rising Moon.\nThe second attack separately rolls a  critical strike.\nThe second attack does not trigger  Sundered Sky's Lightshield Strike.(note)\nThe empowered shots will apply against structures.",
         "blurb": "Innate: After casting an ability,  Lucian's next basic attack within a few seconds fires a second attack that deals reduced physical damage."
       }
     ],
@@ -275,7 +275,7 @@ const champion: Champion =  {
             "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lucian dashes in the target direction.</p>"
           },
           {
-            "description": "Relentless Pursuit resets Lucian's basic attack timer. Lucian can cast any of his abilities during the dash. Relentless Pursuit can be cast during Ardent Blaze's cast time and during The Culling's channel. Relentless Pursuit will cast at max range if cast beyond that."
+            "description": "Relentless Pursuit resets Lucian's basic attack timer. Lucian can cast any of his abilities during the dash. Relentless Pursuit can be cast during Ardent Blaze's cast time and during The Culling's channel."
           }
         ],
         "cost": [

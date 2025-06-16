@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 888,
@@ -306,7 +306,7 @@ const champion: Champion =  {
         ],
         "targeting": "Unit",
         "resource": "Mana",
-        "notes": "Damage taken in excess of the fatal damage taken does not apply to the target's health after it was restored.\nThe self-damage taken is considered  raw damage and is calculated based on the target's maximum health at the time of taking lethal damage.\nBailout's bonuses will not reset in effectiveness if its duration is refreshed.\nBailout takes priority over all  resurrection and  zombie state effects.\nBailout will stop refreshing its duration while the target is burning after 250 seconds have elapsed.\nBailout cannot be used on  clones nor  zombie state units.\nIf Bailout is cast on a target that is already burning from a previous Bailout cast, they can trigger a subsequent health restore as well as be inflicted with another burn. This may occur an infinite number of times as long as the target stays burning and does not reach 0 health.\nCasting Bailout on a target that already has the buff will only refresh the duration (without resetting the bonuses).\nIf the target takes fatal damage during Bailout, upon destroying a turret while being targeted by it, they will receive their own bonus shut-down bounty (ignoring the base kill reward of 300 gold) instead of being executed.(bug)",
+        "notes": "Damage taken in excess of the fatal damage taken does not apply to the target's health after it was restored.\nThe self-damage taken is considered  raw damage and is calculated based on the target's maximum health at the time of taking lethal damage.\nBailout's bonuses will not reset in effectiveness if its duration is refreshed.\nBailout takes priority over all  resurrection and  zombie state effects.\nBailout will stop refreshing its duration while the target is burning after 250 seconds have elapsed.\nBailout cannot be used on  clones nor  zombie state units.\nIf Bailout is cast on a target that is already burning from a previous Bailout cast, they can trigger a subsequent health restore as well as be inflicted with another burn. This may occur an infinite number of times as long as the target stays burning and does not reach 0 health.\nCasting Bailout on a target that already has the buff will only refresh the duration (without resetting the bonuses).\nIf the target takes fatal damage during Bailout, upon destroying a turret while being targeted by it, they will receive their own Shut-Down gold (specifically ignoring the base bounty) instead of being executed.(bug)",
         "blurb": "Active:  Renata grants herself or the target allied champion ramping  bonus attack speed in addition to  bonus movement speed toward enemies. Bailout's duration resets whenever the target scores a  takedown against an enemy champion.",
         "castTime": "none",
         "effectRadius": "1300",
@@ -370,9 +370,6 @@ const champion: Champion =  {
                 ]
               }
             ]
-          },
-          {
-            "description": "Loyalty Program will cast at max range if cast beyond that."
           }
         ],
         "cost": [

@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 887,
@@ -9,7 +9,7 @@ const champion: Champion =  {
   "attackType": "Melee",
   "stats": {
     "health": {
-      "flat": 620,
+      "flat": 600,
       "perLevel": 110
     },
     "healthRegen": {
@@ -454,7 +454,7 @@ const champion: Champion =  {
             "description": "Gwen's first basic attack within the duration reduces Skip 'n Slash's cooldown by 50%."
           },
           {
-            "description": "Skip 'n Slash resets Gwen's basic attack timer, and can be cast during any of her abilities, and vice versa. Skip 'n Slash will cast at max range if cast beyond that."
+            "description": "Skip 'n Slash resets Gwen's basic attack timer, and can be cast during any of her abilities, and vice versa."
           }
         ],
         "cost": [

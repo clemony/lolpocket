@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:43 PM CDT
 
 const champion: Champion =  {
   "id": 112,
@@ -489,10 +489,13 @@ const champion: Champion =  {
             "description": "Arcane Storm can be recast at any time while the singularity is active."
           },
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Viktor directs the singularity to the target location, or to follow the targeted enemy champion or himself.</p>"
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Viktor directs the singularity to the target location, or to follow the target enemy champion or himself.</p>"
           },
           {
             "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Augment:</span> Perfect Storm — The singularity moves 25% faster. Additionally, whenever an enemy champion is taken down after being damaged by Arcane Storm, the singularity increases in size by 40% and extends its duration by 3 seconds. The singularity radius can be increased up to 6 times and its duration can be extended only up to the original duration.</p>"
+          },
+          {
+            "description": "Arcane Storm's recast can be used while affected by cast-inhibiting crowd control."
           }
         ],
         "cost": [
@@ -503,13 +506,13 @@ const champion: Champion =  {
           100,
           80
         ],
-        "targeting": "Location",
+        "targeting": "Location / Unit",
         "affects": "Enemies",
         "spellshieldable": "True",
         "resource": "Mana",
         "damageType": "Magic damage",
         "spellEffects": "spellaoe",
-        "notes": "The  disrupt is 'wrapped' into a status effect that says the target is  Silenced for 0.25 seconds, but it does not actually silence. It however makes sure that the disrupt is prevented by  immunity to silences.\nViktor can command the singularity regardless of how far away he is from it.\nThe singularity will remain active even if Viktor dies. Any commands it was issued prior to his death will not be interrupted.\nThe base duration allows for 7 strikes (including the initial one).\nThe storm will follow its target even if they are not  visible, effectively giving away their position.\nArcane Storm is not obstructed by terrain.\nAfter becoming augmented, an  alternate icon is used for the recast of Arcane Storm.\nThe champion that Arcane Storm is following will have an overhead indicator.",
+        "notes": "The  disrupt is 'wrapped' into a status effect that says the target is  Silenced for 0.25 seconds, but it does not actually silence. It however makes sure that the disrupt is prevented by  immunity to silences.\nViktor can command the singularity regardless of how far away he is from it.\nThe singularity will remain active even if Viktor dies and will automatically follow the nearest enemy champion in range at the time of his death, if it wasn't locked on already.\nThe singularity will only be issued to automatically follow a nearby champion once; it will not lock on to a new target if its current target becomes invalid.\nAny commands it was issued prior to his death will not be interrupted.\nThe base duration allows for 7 strikes (including the initial one).\nThe storm will follow its target even if they are not  visible, effectively giving away their position.\nArcane Storm is not obstructed by terrain.\nAfter becoming augmented, an  alternate icon is used for the recast of Arcane Storm.\nThe champion that Arcane Storm is following will have an overhead indicator.",
         "blurb": "Active:  Viktor conjures an arcane singularity at the target location that deals magic damage to enemies within and  disrupts their channeled abilities. The singularity then remains for a duration, continually dealing magic damage to enemies within the area. If the initial hit has struck at least one enemy  champion, it will automatically follow the nearest one hit.",
         "speed": "200 : 300 / 250 : 375",
         "castTime": "0.25",

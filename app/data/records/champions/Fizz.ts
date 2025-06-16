@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 105,
@@ -318,7 +318,7 @@ const champion: Champion =  {
         "damageType": "Magic damage",
         "spellEffects": "special",
         "notes": "Applies  spell damage on the empowered attack,  persistent damage on the damage over time effect, and  proc damage on the bonus damage on-hit.\nSeastone Trident's  interactions with  dodging,  blocking, and  blinding effects.\nThe passive bonus damage gets negated by  dodging or  blocking the attack, or if Fizz is  blinded.\nThe active:\nIf the attacked enemy is  dodging or if Fizz is  blinded, the empowered attack won't deal any damage, but the empowered attack won't be consumed.\nIf the attacked enemy is  blocking, the empowered attack won't deal any damage despite being consumed. But the attack will apply the passive bonus damage of Seastone Trident.\nThe empowered attack will trigger against structures.\nThe damage over time effect is not applied to inhibitors.",
-        "blurb": "Passive:  Fizz basic attacks bleed his enemies, continually dealing magic damage.",
+        "blurb": "Passive:  Fizz's basic attacks bleed his enemies, continually dealing magic damage.",
         "castTime": "none",
         "maxCharges": -1
       }
@@ -376,7 +376,7 @@ const champion: Champion =  {
             ]
           },
           {
-            "description": "While hopping off of the trident, Fizz may input movement commands to direct his landing. Playful will cast at max range if cast beyond that."
+            "description": "While hopping off of the trident, Fizz may input movement commands to direct his landing."
           }
         ],
         "cost": [
@@ -436,9 +436,6 @@ const champion: Champion =  {
                 ]
               }
             ]
-          },
-          {
-            "description": "Trickster will cast at max range if cast beyond that."
           }
         ],
         "cost": [

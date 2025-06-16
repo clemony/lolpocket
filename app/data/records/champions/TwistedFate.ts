@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:43 PM CDT
 
 const champion: Champion =  {
   "id": 4,
@@ -353,6 +353,9 @@ const champion: Champion =  {
                 ]
               }
             ]
+          },
+          {
+            "description": "Pick a Card's recast resets Twisted Fate's basic attack timer. The recast can be used while affected by cast-inhibiting crowd control."
           }
         ],
         "cost": [
@@ -393,11 +396,11 @@ const champion: Champion =  {
                 "modifiers": [
                   {
                     "values": [
-                      10,
-                      20,
-                      30,
-                      40,
-                      50
+                      15,
+                      25,
+                      35,
+                      45,
+                      55
                     ],
                     "units": [
                       "%"

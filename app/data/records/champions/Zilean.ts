@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:48 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:45 PM CDT
 
 const champion: Champion =  {
   "id": 26,
@@ -331,7 +331,6 @@ const champion: Champion =  {
         "targeting": "Unit",
         "affects": "Self, Allies",
         "resource": "Mana",
-        "spellEffects": "Heal",
         "notes": "Upon trigger, Chronoshift places all summoner spells that are not already on cooldown on a 3-second  cooldown.\nChronoshift's  untargetability does not  destroy in-flight  projectiles.\nChronoshift cannot target  clones.\nChronoshift takes priority over all other  resurrection effects as well as all  zombie state effects.\nChronoshift does not activate if the target is killed by the  Nexus Obelisk.\nChronoshift has a  forgiveness radius of 175 units.\nWhile in resurrection, the target's health regeneration is set to 0.\nThe target's screen will have a white tint.\nThe following table refers for interactions while the target is unable to act:\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash  Mark  Dash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath",
         "blurb": "Active:  Zilean places a protective time rune on himself or the target allied champion for a few seconds.",
         "castTime": "none",

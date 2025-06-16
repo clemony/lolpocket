@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const us = useUiStore()
 const as = useAccountStore()
+const route = useRoute()
 console.log('💠 - as:', as.userAccount)
 
 watch(
@@ -20,7 +21,7 @@ function handleMenu() {
 </script>
 
 <template>
-  <nav class="flex gap-4 fixed flex-nowrap top-0 left-0 w-screen h-16 items-center border-b border-b-b3/60 px-5 z-10 bg-b1/88 backdrop-blur-md">
+  <nav class="flex gap-4 fixed flex-nowrap top-0 left-0 w-screen h-16 items-center border-b border-b-b3/60 px-5 z-10 bg-b1/88 backdrop-blur-md" :class="{ '!bg-b1/50': route.path == '/' }">
     <Btn class=" btn-square" @click="navigateTo('/')">
       <h3 class="dst select-none !tracking-normal bg-transparent">
         LP

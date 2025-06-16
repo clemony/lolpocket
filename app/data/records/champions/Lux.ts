@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 99,
@@ -229,7 +229,7 @@ const champion: Champion =  {
             ]
           },
           {
-            "description": "Lux receives the shield upon throwing the wand and upon its return."
+            "description": "Lux gains the shield upon throwing and upon retrieving the wand."
           }
         ],
         "cost": [
@@ -249,7 +249,6 @@ const champion: Champion =  {
         "targeting": "Direction",
         "affects": "Allies",
         "resource": "Mana",
-        "spellEffects": "Shield",
         "projectile": "SPECIAL",
         "notes": "Each pass of the wand grants a shield to each target once.\nPrismatic Barrier may only stack up to 2 times. Subsequent instances of passing through the wand have no effect on the shield's strength nor duration.\nThe shield will also be granted to allies near the wand's return location.\nBoth passes of Prismatic Barrier cannot hit units whose  center is beyond the missile range or behind its origin, even if their  hitbox radius overlaps.\nAt the return location, this behaviour is overridden by an additional center check with the same diameter as the missile width.\nIf Lux  dies before her wand returns it will fizzle upon reaching maximum range.\nThere is an additional circle check at the end of the missile's length that allows it to hit the edge of an ally's radius. This is intended.\nLux's wand decelerates on the way out and accelerates on the way back.\nThis ability will cast from wherever the caster is at the start of the cast time.\nPrismatic Barrier is destroyed by  Wind Wall and  Blade Whirl but not  Unbreakable.",
         "blurb": "Active:  Lux throws her wand in the target direction that homes back to her after reaching maximum range.",
@@ -357,7 +356,7 @@ const champion: Champion =  {
         "icon": "https://cdn.communitydragon.org/latest/champion/Lux/ability-icon/r",
         "effects": [
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lux fires a massive laser in a line in the target direction that deals magic damage to enemies hit and reveals them for 1.5 seconds, as well as granting sight of the surrounding area.</p>",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lux fires a massive light beam in a line in the target direction that deals magic damage to enemies hit and reveals them for 1.5 seconds, as well as granting sight of the surrounding area.</p>",
             "leveling": [
               {
                 "attribute": "Magic Damage",

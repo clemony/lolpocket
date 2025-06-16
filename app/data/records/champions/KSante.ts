@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 897,
@@ -330,7 +330,7 @@ const champion: Champion =  {
           11,
           10
         ],
-        "targeting": "Direction",
+        "targeting": "Direction / Auto",
         "affects": "Self, Enemies",
         "spellshieldable": "true",
         "resource": "Mana",
@@ -381,7 +381,7 @@ const champion: Champion =  {
             "description": "<p class=\"ability-effect\"><span class=\"ability-header\">All Out Bonus:</span> Footwork's dash speed is increased, and its cooldown is reduced by 50%.</p>"
           },
           {
-            "description": "K'Sante can cast any of his abilities during the dash. Footwork will cast at max range if cast beyond that."
+            "description": "K'Sante can cast any of his abilities during the dash."
           }
         ],
         "cost": [

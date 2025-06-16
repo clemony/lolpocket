@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/07/2025 01:03:58 PM CDT
+// Updated Patch 25.12 - 06/16/2025 01:46:56 PM CDT
 
 const rune: Rune =
         {

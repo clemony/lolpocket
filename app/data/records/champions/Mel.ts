@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 800,
@@ -70,6 +70,9 @@ const champion: Champion =  {
     },
     "attackTotalTime": {
       "flat": 1.6
+    },
+    "attackDelayOffset": {
+      "flat": -0.144
     },
     "attackRange": {
       "flat": 550
@@ -333,7 +336,7 @@ const champion: Champion =  {
         "damageType": "Magic damage",
         "spellEffects": "special",
         "projectile": "SPECIAL",
-        "notes": "Rebuttal's barrier will also instantly destroy missiles that are already within its radius when the ability is cast.\nThe replicated missile will mimic all of the original missile's properties, which includes its range, width, speed, acceleration, angle (if a cone), height, and sight radius.\nSpell effects, as well as interactions with  spell shield and  projectile-interception effects, all vary based on the original missile that was replicated.\nThe only exception to this is the copied missile's path, or trajectory, which is based on the targeting paradigm that the original missile used when fired by its source. The replicated missile acquires the original missile source as the target.\nIf the original missile was fired by a unit or auto-targeted effect, the replicated missile will be fired as a homing missile with the target being the original missile source.\nHealing projectiles, such as  Soraka's  Rejuvenation and  Sona's  Aria of Perseverance, will instead target Mel.\nIf the original missile was fired via any other targeting paradigm, the replicated missile will by default fire in the direction of the original missile source at the time of replication. This includes vector-targeted projectiles (currently only  Viktor's  Hextech Ray), for which the origin will always be Mel's center (since she cannot control the cast point).\nThe replicated missile will mimic all of the functions of and copy the behavior of the original missile, unless otherwise stated. This includes every aspect and effect of the missile conforming to the attack or spell from which the missile originated.\nThe scaling of the effects of the copied missile is calculated using the original missile source's attributes (namely their stats). The damage of the missile only benefits from Mel's damage modifiers and magic penetration, and not the original source's.\nThe following missiles are destroyed, but not replicated:\n Draven's  Whirling Death on its way back to him.\n Gnar's  Boomerang Throw on its way back to him.\n Illaoi's  Test of Spirit\n Sivir's  Boomerang Blade on its way back to her.\n Sylas'  Hijack\n Xayah's  Bladecaller and  Featherstorm\n Zac's  Stretching Strikes\n Spheres thrown with  Syndra's  Scatter the Weak will only stop upon colliding with Mel.",
+        "notes": "Rebuttal's barrier will also instantly destroy missiles that are already within its radius when the ability is cast.\nThe replicated missile will mimic all of the original missile's properties, which includes its range, width, speed, acceleration, angle (if a cone), height, and sight radius.\nSpell effects, as well as interactions with  spell shield and  projectile-interception effects, all vary based on the original missile that was replicated.\nThe only exception to this is the copied missile's path, or trajectory, which is based on the targeting paradigm that the original missile used when fired by its source. The replicated missile acquires the original missile source as the target.\nIf the original missile was fired by a unit or auto-targeted effect, the replicated missile will be fired as a homing missile with the target being the original missile source.\nHealing projectiles, such as  Soraka's  Rejuvenation and  Sona's  Aria of Perseverance, will instead target Mel.\nIf the original missile was fired via any other targeting paradigm, the replicated missile will by default fire in the direction of the original missile source at the time of replication. This includes vector-targeted projectiles (currently only  Viktor's  Hextech Ray), for which the origin will always be Mel's center (since she cannot control the cast point).\nThe replicated missile will mimic all of the functions of and copy the behavior of the original missile, unless otherwise stated. This includes every aspect and effect of the missile conforming to the attack or spell from which the missile originated.\nThe scaling of the effects of the copied missile is calculated using the original missile source's attributes (namely their stats). The damage of the missile only benefits from Mel's damage modifiers and magic penetration, and not the original source's.\nThe following missiles are destroyed, but not replicated:\n Draven's  Whirling Death on its way back to him.\n Gnar's  Boomerang Throw on its way back to him.\n Illaoi's  Test of Spirit\n Sivir's  Boomerang Blade on its way back to her.\n Sylas'  Hijack\n Xayah's  Bladecaller and  Featherstorm\n Zac's  Stretching Strikes\n Azir's  Emperor's Divide Soldiers will end their charge prematurely upon colliding with Rebuttal.\n Syndra's  Spheres thrown with  Syndra's  Scatter the Weak will only stop upon colliding with Mel.\nMel may occasionally fail to attribute  Echoes of Helia's Soul Siphon's damage projectile to herself.(bug)\nThis can cause the enemy to be able to kill their own allies, and gain all the kill's rewards.",
         "blurb": "Active:  Mel forms a protective barrier around herself for 0.75 seconds, becoming  invulnerable to non- turret damage and gaining decaying  bonus move speed.",
         "castTime": "none",
         "maxCharges": -1
@@ -523,7 +526,7 @@ const champion: Champion =  {
           10.5,
           10
         ],
-        "targeting": "Location",
+        "targeting": "Direction",
         "affects": "Enemies",
         "spellshieldable": "special",
         "resource": "Mana",

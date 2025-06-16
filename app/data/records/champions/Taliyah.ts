@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 163,
@@ -29,7 +29,7 @@ const champion: Champion =  {
       "perLevel": 4.7
     },
     "magicResistance": {
-      "flat": 30,
+      "flat": 28,
       "perLevel": 1.3
     },
     "attackDamage": {
@@ -197,23 +197,23 @@ const champion: Champion =  {
             "description": "Casting Threaded Volley creates an area of Worked Ground at Taliyah's cast location that has a radius of 400 units and lasts 30 seconds. While on Worked Ground, Threaded Volley's cast consumes the area to become empowered with a new effect, costing 20 mana and having 50% reduced cooldown, though not below 0.75 seconds."
           },
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Empowered Active:</span> Taliyah hurls a Boulder that explodes upon the first enemy hit, dealing 190% damage to them and normal damage to nearby enemies, slowing all targets hit for 1.5 seconds, and revealing them for 0.5 seconds. Monsters hit are also stunned for 3 seconds.</p>",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Empowered Active:</span> Taliyah hurls a Boulder that explodes upon the first enemy hit, dealing 180% damage to them and normal damage to nearby enemies, slowing all targets hit for 1.5 seconds, and revealing them for 0.5 seconds. Monsters hit are also stunned for 3 seconds.</p>",
             "leveling": [
               {
                 "attribute": "Empowered Damage",
                 "modifiers": [
                   {
                     "values": [
-                      106.4,
-                      141.55,
-                      176.7,
-                      211.85,
-                      247
+                      100.8,
+                      134.1,
+                      167.4,
+                      200.7,
+                      234
                     ]
                   },
                   {
                     "values": [
-                      95
+                      90
                     ],
                     "units": [
                       "% AP"
@@ -241,7 +241,7 @@ const champion: Champion =  {
             ]
           },
           {
-            "description": "Against monsters, Threaded Volley deals 10 bonus magic damage per Stone Shard, and the Boulder deals 19 bonus magic damage against the primary target. This bonus damage is unaffected by the damage modifier from subsequent hits."
+            "description": "Against monsters, Threaded Volley deals 10 bonus magic damage per Stone Shard, and the Boulder deals 18 bonus magic damage against the primary target. This bonus damage is unaffected by the damage modifier from subsequent hits."
           }
         ],
         "cost": [
@@ -457,7 +457,7 @@ const champion: Champion =  {
         "spellshieldable": "false",
         "resource": "Mana",
         "projectile": "TRUE",
-        "notes": "The  jump off distance can be extended to up to 1000 units when targeting across terrain.\nThe initial cast counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nHowever neither recasts do.\nTaliyah can recast to destroy the wall even if she did not surf it or it is in the process of disintegrating.\nTaliyah almost always jumps off of the wall to her left from when it reaches maximum range. If she is forced to jump off of the wall, she will do so towards the source that dealt damage or applied the crowd control to her.\nWeaver's Wall, while  channeling, can be recast while  grounded but not while  rooted.\nThe channel cannot be started while affected by either crowd control effects.\n Wind Wall and  Blade Whirl will prevent Weaver's Wall from summoning any further but does not destroy any initial terrain it spawned. If Taliyah is surfing during the collision, she immediately becomes  stunned for 0.25 seconds, interrupting the surf.\nIf Taliyah would enter terrain and the wall reaches maximum range inside, she is preemptively forced off the wall before entering.\nThe wall can surpass the edges of the map, but Taliyah cannot.\nThe following table refers for interactions while Taliyah is  channeling:\nThe channel is not  interrupted by  ground despite being a movement channel.\nThis lockout persists for another 0.65 seconds during the surf after the channel is completed.\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\nN/A\n\n\nDisabled\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath Immobilizing effects Cast-inhibiting effects\n\nThe following table refers for interactions while Taliyah is  surfing after the first 0.65 seconds.\nOnce 0.35 seconds have elapsed afterwards, her lockout is modified for the rest of the surf.\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\nN/A\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nInterrupted by\n\nDeath Immobilizing effects Cast-inhibiting effects\n\nThe following table refers for interactions while Taliyah is  surfing after 1 second from the channel's completion.\nInterrupting the surf by casting a non-auto targeted ability, spell, or item active causes her to jump off the wall to the location of where the spell was targeted. She will dash to maximum range if the spell was cast outside of it.\n\n\nType\n\nChannel\n\n\nAttacking\n\nInterrupts\n\n\nAbilities\n\nInterrupts\n\n\nMovement\n\nInterrupts\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\nAll items interrupt\n\n\nConsumables\n\nInterrupts\n\n\nSpells\n\nUsable\n\nN/A\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\nAll summoner spells interrupt\n\n\nInterrupted by\n\nDeath Immobilizing effects Cast-inhibiting effects",
+        "notes": "The  jump off distance can be extended to up to 1000 units when targeting across terrain.\nIf a champion is standing next to a portion of the generated terrain and that portion expires by any means, enemies'  spell shield will be consumed.(bug)\nThe initial cast counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nHowever neither recasts do.\nTaliyah can recast to destroy the wall even if she did not surf it or it is in the process of disintegrating.\nTaliyah almost always jumps off of the wall to her left from when it reaches maximum range. If she is forced to jump off of the wall, she will do so towards the source that dealt damage or applied the crowd control to her.\nWeaver's Wall, while  channeling, can be recast while  grounded but not while  rooted.\nThe channel cannot be started while affected by either crowd control effects.\n Wind Wall and  Blade Whirl will prevent Weaver's Wall from summoning any further but does not destroy any initial terrain it spawned. If Taliyah is surfing during the collision, she immediately becomes  stunned for 0.25 seconds, interrupting the surf.\nIf Taliyah would enter terrain and the wall reaches maximum range inside, she is preemptively forced off the wall before entering.\nThe wall can surpass the edges of the map, but Taliyah cannot.\nThe following table refers for interactions while Taliyah is  channeling:\nThe channel is not  interrupted by  ground despite being a movement channel.\nThis lockout persists for another 0.65 seconds during the surf after the channel is completed.\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\nN/A\n\n\nDisabled\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath Immobilizing effects Cast-inhibiting effects\n\nThe following table refers for interactions while Taliyah is  surfing after the first 0.65 seconds.\nOnce 0.35 seconds have elapsed afterwards, her lockout is modified for the rest of the surf.\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nAll items are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nDisabled\n\n\nSpells\n\nUsable\n\nN/A\n\n\nDisabled\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nInterrupted by\n\nDeath Immobilizing effects Cast-inhibiting effects\n\nThe following table refers for interactions while Taliyah is  surfing after 1 second from the channel's completion.\nInterrupting the surf by casting a non-auto targeted ability, spell, or item active causes her to jump off the wall to the location of where the spell was targeted. She will dash to maximum range if the spell was cast outside of it.\n\n\nType\n\nChannel\n\n\nAttacking\n\nInterrupts\n\n\nAbilities\n\nInterrupts\n\n\nMovement\n\nInterrupts\n\n\nItems\n\nUsable\n\nN/A\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\nAll items interrupt\n\n\nConsumables\n\nInterrupts\n\n\nSpells\n\nUsable\n\nN/A\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\nAll summoner spells interrupt\n\n\nInterrupted by\n\nDeath Immobilizing effects Cast-inhibiting effects",
         "blurb": "Active:  Taliyah summons a torrent of spiraling rocks that cascades in the target direction, which  knocks aside champions hit and erects a wall of terrain in its wake. The wall lasts a few seconds before slowly disintegrating from the starting end.",
         "speed": "1500 / 1200",
         "castTime": "none",

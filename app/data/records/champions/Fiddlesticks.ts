@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 9,
@@ -545,7 +545,7 @@ const champion: Champion =  {
           8.5,
           8
         ],
-        "targeting": "Auto",
+        "targeting": "Proximity",
         "affects": "Enemies",
         "spellshieldable": "Special",
         "resource": "Mana",
@@ -686,9 +686,6 @@ const champion: Champion =  {
                 ]
               }
             ]
-          },
-          {
-            "description": "Crowstorm will cast at max range if cast beyond that."
           }
         ],
         "cost": [

@@ -14,13 +14,13 @@ export const useIndexStore = defineStore(
     const skins = ref<FullSkinRecord>({})
 
     async function loadSkins() {
-      if (Object.keys(skins.value).length) return
-      const mod = await import("~/data/index/skins-full")
-      skins.value = mod.skins
+      //if (Object.keys(skins.value).length) return
+      const { skins: skinIndex } = await import("data/index/skins-full")
+      skins.value = skinIndex
     }
 
     async function loadChamps() {
-      // if (champions.value.length) return
+      if (champions.value.length) return
       const { championIndex } = await import("data/index/champion-index")
       champions.value = championIndex
     }

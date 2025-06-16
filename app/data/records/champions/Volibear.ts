@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:43 PM CDT
 
 const champion: Champion =  {
   "id": 106,
@@ -490,7 +490,7 @@ const champion: Champion =  {
             ]
           },
           {
-            "description": "Stormbringer will cast at max range if cast beyond that. Thundering Smash's duration will be paused for the leap."
+            "description": "Thundering Smash's duration will be paused for the leap."
           }
         ],
         "cost": [

@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 16,
@@ -334,7 +334,6 @@ const champion: Champion =  {
         "targeting": "Unit",
         "affects": "Allies / Self",
         "resource": "Other",
-        "spellEffects": "Heal",
         "projectile": "FALSE",
         "notes": "Astral Infusion can also be targeted on allied  decoys.\nAstral Infusion can be cast even if Soraka doesn't have the sufficient amount of health to pay for the health cost while above  5% of her maximum health.\nAs with all abilities with health costs, Astral Infusion will not reduce Soraka's health below 1.\n Spirit Visage will only increase the health donated to allies if the target ally possesses it, although owning it will boost the heal that Soraka receives from  Starcall and  Wish.\nAstral Infusion's effects occur before the cast time.\nAstral Infusion has a  forgiveness radius of 175 units.",
         "blurb": "Active:  Soraka consumes a portion of her maximum health to  heal the target allied champion.",
@@ -510,7 +509,6 @@ const champion: Champion =  {
         "targeting": "Auto",
         "affects": "Allies",
         "resource": "Mana",
-        "spellEffects": "Heal",
         "notes": "Due to several character stats needing to be recalculated each time a character spawns, casting Wish immediately upon respawning will cause its cooldown to be unaffected by ability haste, and the healing will not be increased by Soraka's ability power. (bug)\n Untargetability does not invalidate the targeting of the heal.\nWish will not credit Soraka for assisting in a champion kill if the target ally is at full health.\nWish will apply heal effects (such as  Summon Aery) prioritizing targets based on the Spawn ID, which is the order in which units were added to an ongoing game. For  champions, this is the order they appear in from left to right in the loading screen.\nWish's effects occur before the cast time.\nWish will apply to units that are affected by Mordekaiser's R even if Soraka is not in the same realm.",
         "blurb": "Active:  Soraka calls upon the stars,  healing herself and all allied  champions, regardless of distance. The healing is increased on targets at low health.",
         "castTime": "0.25",

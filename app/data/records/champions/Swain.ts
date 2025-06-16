@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 50,
@@ -79,6 +79,7 @@ const champion: Champion =  {
     }
   },
   "positions": [
+    "Bottom",
     "Middle",
     "Support"
   ],
@@ -377,19 +378,19 @@ const champion: Champion =  {
           10.5,
           10
         ],
-        "targeting": "Direction",
+        "targeting": "Direction / Auto",
         "affects": "Enemies",
         "spellshieldable": "special",
         "resource": "Mana",
         "damageType": "Magic damage",
         "spellEffects": "Area of effect",
         "projectile": "TRUE",
-        "notes": "Nevermove's missiles have their speed update to accelerate at specific times by the server. The client applies these speed increases after additional specified delays, while the hitbox behaviour itself only uses the timings noted above.\nNevermove's recast can be used during the cast time of other spells.\n Spell shields block either the pass-through or the detonation, not both.\nIf the root is not applied to or is removed from all champions, the recast does not become available.\nThe pull will interrupt  channels at the very beginning, but does not keep the target stunned for the rest of the movement.\n Channels can be started successfully during the pull, provided the previous crowd control does not prevent them still.\nThis ability will cast from wherever the caster is at the start of the cast time.\nif the target champion is rooted by Nevermove but becomes spell-immune before the pull, Swain will not receive a soul fragment on reactivation since the champion cannot be displaced.",
+        "notes": "Nevermove's missiles have their speed update to accelerate at specific times by the server. The client applies these speed increases after additional specified delays, while the hitbox behaviour itself only uses the timings noted above.\nNevermove's recast can be used during the cast time of other spells.\n Spell shield will block either the detonation on the first cast or the pull from the recast.\nIf the recast is blocked, the target will also prevent a Soul Fragment being collected from them.\nIf the root is not applied to or is removed from all champions, the recast does not become available.\nThe pull will interrupt  channels at the very beginning, but does not keep the target stunned for the rest of the movement.\n Channels can be started successfully during the pull, provided the previous crowd control does not prevent them still.\nThis ability will cast from wherever the caster is at the start of the cast time.",
         "blurb": "Active:  Swain launches a demonic wave in the target direction.",
         "speed": "1125 : 1800 (based on seconds) / 2000 : 2800 (based on seconds)",
         "width": "180",
         "castTime": "0.25",
-        "effectRadius": "100",
+        "effectRadius": "100 / Global",
         "targetRange": "850",
         "maxCharges": -1
       }

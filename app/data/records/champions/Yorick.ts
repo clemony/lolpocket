@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:47 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:43 PM CDT
 
 const champion: Champion =  {
   "id": 83,
@@ -132,10 +132,10 @@ const champion: Champion =  {
                   {
                     "values": [
                       30,
-                      55,
-                      80,
-                      105,
-                      130
+                      50,
+                      70,
+                      90,
+                      110
                     ]
                   },
                   {
@@ -274,7 +274,7 @@ const champion: Champion =  {
           4.5,
           4
         ],
-        "targeting": "Auto",
+        "targeting": "Proximity",
         "affects": "Self",
         "notes": "Awakening counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nMist Walkers update their statistics correspondingly to Yorick's  during the periodic stat update, with the exception of their maximum health.\nAwakening cannot be cast without enough graves in range.",
         "blurb": "Active:  Yorick summons Mist Walkers from the graves around him.",
@@ -449,9 +449,6 @@ const champion: Champion =  {
                 ]
               }
             ]
-          },
-          {
-            "description": "Mourning Mist will cast at max range if cast beyond that."
           }
         ],
         "cost": [
@@ -509,7 +506,7 @@ const champion: Champion =  {
             "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Yorick sets the Maiden free, allowing her to push the nearest lane until she dies.</p>"
           },
           {
-            "description": "See Pets for more details about The Maiden of the Mist. Eulogy of the Isles will cast at max range if cast beyond that."
+            "description": "See Pets for more details about The Maiden of the Mist."
           }
         ],
         "cost": [

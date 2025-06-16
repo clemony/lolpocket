@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 28,
@@ -105,8 +105,7 @@ const champion: Champion =  {
         ],
         "targeting": "Passive",
         "affects": "Self",
-        "spellEffects": "Heal",
-        "notes": "Demon Shade is also placed on a 1.5 second cooldown upon respawning.\nDemon Shade's cooldown incurs upon starting the attack windup of the basic attack and upon the cast time of the ability.\nDemon Shade activates even if Evelynn is  Recalling.\nWhenever Demon Shade activates, a puff of purple smoke will briefly appear around her.\nUsing a basic attack breaks the stealth at the start of the attack windup.",
+        "notes": "Demon Shade is also placed on a 1.5 second cooldown upon respawning.\nDemon Shade's cooldown incurs upon starting the attack windup of the basic attack and upon the cast time of the ability.\nDemon Shade activates even if Evelynn is  Recalling.\nUpon Evelynn's transition into the stealth, Demon Shade will interrupt her in-progress cast commands for unit-targeted spells, excluding  Whiplash and its  empowered cast.\nIf Evelynn's last issued order was to cast  Whiplash, her transition into the stealth will be followed by an automatic command for casting the ability (if no other orders were issued in the meantime).\nWhenever Demon Shade activates, a puff of purple smoke will briefly appear around her.\nUsing a basic attack breaks the stealth at the start of the attack windup.",
         "blurb": "Innate: While out of combat,  Evelynn gains Demon Shade."
       }
     ],
@@ -267,6 +266,9 @@ const champion: Champion =  {
           },
           {
             "description": "Hate Spike's recast prioritizes targeting Evelynn's attack target, then the nearest enemy champion, then the nearest non-champion."
+          },
+          {
+            "description": "A nearby visible enemy is required to recast this ability."
           }
         ],
         "cost": [
@@ -279,7 +281,7 @@ const champion: Champion =  {
         "cooldown": [
           4
         ],
-        "targeting": "Direction / Auto",
+        "targeting": "Direction / Proximity",
         "affects": "Enemies",
         "spellshieldable": "True",
         "resource": "Mana",
@@ -394,6 +396,9 @@ const champion: Champion =  {
                 ]
               }
             ]
+          },
+          {
+            "description": "Casting Allure does not break Demon Shade nor its fade into it."
           }
         ],
         "cost": [

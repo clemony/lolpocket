@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:43 PM CDT
 
 const champion: Champion =  {
   "id": 254,
@@ -107,7 +107,6 @@ const champion: Champion =  {
         ],
         "targeting": "Passive",
         "affects": "Self",
-        "spellEffects": "Shield",
         "notes": "Denting Blows will not activate Blast Shield.",
         "blurb": "Innate: Periodically,  Vi's next ability hit will generate a  shield by a portion of her maximum health for a short time."
       }
@@ -220,10 +219,10 @@ const champion: Champion =  {
                   {
                     "values": [
                       4,
-                      5.5,
+                      5,
+                      6,
                       7,
-                      8.5,
-                      10
+                      8
                     ],
                     "units": [
                       "%  of target's maximum health"
@@ -231,7 +230,7 @@ const champion: Champion =  {
                   },
                   {
                     "values": [
-                      2.86
+                      3.5
                     ],
                     "units": [
                       "% per 100 bonus AD"
@@ -250,10 +249,10 @@ const champion: Champion =  {
                   {
                     "values": [
                       30,
-                      37.5,
+                      35,
+                      40,
                       45,
-                      52.5,
-                      60
+                      50
                     ],
                     "units": [
                       "%"
@@ -286,23 +285,23 @@ const champion: Champion =  {
         "icon": "https://cdn.communitydragon.org/latest/champion/Vi/ability-icon/e",
         "effects": [
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Vi empowers her next basic attack within 6 seconds to have an uncancellable windup, gain 50 bonus range and trigger a blast in the target's direction that deals modified physical damage to enemies hit in a cone.Relentless Force can critically strike for (90% + 48%) AD bonus physical damage against the primary target. Secondary targets take the same damage but do not count as being critically struck.</p>",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Vi empowers her next basic attack within 6 seconds to have an uncancellable windup, gain 50 bonus range and trigger a blast in the target's direction that deals modified physical damage to enemies hit in a cone.Relentless Force can critically strike for (75% + 40%) AD bonus physical damage against the primary target. Secondary targets take the same damage but do not count as being critically struck.</p>",
             "leveling": [
               {
                 "attribute": "Physical Damage",
                 "modifiers": [
                   {
                     "values": [
-                      0,
-                      15,
+                      10,
                       30,
-                      45,
-                      60
+                      50,
+                      70,
+                      90
                     ]
                   },
                   {
                     "values": [
-                      120
+                      110
                     ],
                     "units": [
                       "% AD"

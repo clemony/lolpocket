@@ -1,4 +1,4 @@
-// Updated Patch 25.11 - 06/08/2025 12:01:46 PM CDT
+// Updated Patch 25.11 - 06/16/2025 01:01:42 PM CDT
 
 const champion: Champion =  {
   "id": 68,
@@ -145,10 +145,10 @@ const champion: Champion =  {
                   {
                     "values": [
                       6,
-                      7,
-                      8,
-                      9,
-                      10
+                      6.8,
+                      7.6,
+                      8.4,
+                      9.2
                     ],
                     "units": [
                       "% of target's maximum health"
@@ -179,10 +179,10 @@ const champion: Champion =  {
                   {
                     "values": [
                       0.5,
-                      0.583,
-                      0.667,
-                      0.75,
-                      0.833
+                      0.567,
+                      0.633,
+                      0.7,
+                      0.767
                     ],
                     "units": [
                       "% of target's maximum health"
@@ -213,10 +213,10 @@ const champion: Champion =  {
                   {
                     "values": [
                       4.2,
-                      4.9,
-                      5.6,
-                      6.3,
-                      7
+                      4.76,
+                      5.32,
+                      5.88,
+                      6.44
                     ],
                     "units": [
                       "% of target's maximum health"
@@ -247,10 +247,10 @@ const champion: Champion =  {
                   {
                     "values": [
                       0.35,
-                      0.408,
-                      0.467,
-                      0.525,
-                      0.583
+                      0.397,
+                      0.443,
+                      0.49,
+                      0.537
                     ],
                     "units": [
                       "% of target's maximum health"
@@ -286,10 +286,10 @@ const champion: Champion =  {
                   {
                     "values": [
                       9,
-                      10.5,
-                      12,
-                      13.5,
-                      15
+                      10.2,
+                      11.4,
+                      12.6,
+                      13.8
                     ],
                     "units": [
                       "% of target's maximum health"
@@ -320,10 +320,10 @@ const champion: Champion =  {
                   {
                     "values": [
                       0.75,
-                      0.875,
-                      1,
-                      1.125,
-                      1.25
+                      0.85,
+                      0.95,
+                      1.05,
+                      1.15
                     ],
                     "units": [
                       "% of target's maximum health"
@@ -354,10 +354,10 @@ const champion: Champion =  {
                   {
                     "values": [
                       6.3,
-                      7.35,
-                      8.4,
-                      9.45,
-                      10.5
+                      7.14,
+                      7.98,
+                      8.82,
+                      9.66
                     ],
                     "units": [
                       "% of target's maximum health"
@@ -388,10 +388,10 @@ const champion: Champion =  {
                   {
                     "values": [
                       0.525,
-                      0.6125,
-                      0.7,
-                      0.7875,
-                      0.875
+                      0.595,
+                      0.665,
+                      0.735,
+                      0.805
                     ],
                     "units": [
                       "% of target's maximum health"
@@ -551,7 +551,6 @@ const champion: Champion =  {
         ],
         "targeting": "Auto",
         "affects": "Self",
-        "spellEffects": "Shield",
         "notes": "The movement speed buff is supposed to last for 1 second, but due to a bug may last 0.264 seconds longer.\nLike most buffs, the stat bonus is already only gained at the next stat update (every 0.264 seconds). Despite this, the duration still inconsistent.",
         "blurb": "Active:  Rumble briefly  shields himself and gains  bonus movement speed.",
         "castTime": "none",
