@@ -18,7 +18,7 @@ const red = computed (() => {
 })
 
 const modelValue = ref<string | number>('Scoreboard')
-const list = ['Scoreboard', 'Data','Credits']
+const list = ['Scoreboard', 'Data', 'Credits']
 
 watch(
   () => modelValue.value,
@@ -35,6 +35,7 @@ watch(
         {{ tab }}
       </TabsTrigger>
     </TabsList>
+
     <TabsContent value="Scoreboard" class="px-2 ">
       <LazyMatchScoreboard :match="match" :blue="blue" :red="red" />
     </TabsContent>
@@ -42,7 +43,6 @@ watch(
     <TabsContent value="Credits" class="px-2 ">
       <LazyMatchTributes :match="match" :blue="blue" :red="red" />
     </TabsContent>
-
 
     <TabsContent value="Data" class="">
       <LazyMatchDataTable :match="match" :blue="blue" :red="red" />

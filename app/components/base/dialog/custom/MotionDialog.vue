@@ -11,11 +11,13 @@ const props = defineProps<{
     <DialogTrigger>
       <slot name="trigger" />
     </DialogTrigger>
+
     <MotionDialogContent class="" :class="cn('!rounded-xl top-[10%] translate-y-1/4 !max-w-171', props.class)">
       <DialogHeader>
         <DialogTitle>
           {{ props.title }}
         </DialogTitle>
+
         <DialogDescription>
           {{ props.text }}
         </DialogDescription>

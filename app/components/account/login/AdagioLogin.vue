@@ -7,6 +7,7 @@
     <SheetTitle class="text-8 font-serif font-black">
       Adagio, Summoner.
     </SheetTitle>
+
     <SheetDescription>
       <p class="my-2 leading-snug">
         Log in or create an account to secure your backpack's pockets.

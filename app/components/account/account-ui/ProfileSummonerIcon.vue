@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const { account, class: className, url, summonerName } = defineProps<{
-  account?: userAccount
+  account?: UserAccount
   summonerName?: string
   url?: string
   class?: HTMLAttributes['class']
@@ -8,9 +8,8 @@ const { account, class: className, url, summonerName } = defineProps<{
 
 // wtf
 const icon = computedAsync (() => account.riot.profileIcon)
-const name =  computedAsync (() => account.riot.name || summonerName)
+const name = computedAsync (() => account.riot.name || summonerName)
 const loaded = ref(false)
-
 </script>
 
 <template>
@@ -22,7 +21,6 @@ const loaded = ref(false)
       :class="{ 'inset-shadow-sm inset-shadow-black/90 avatar': loaded }"
       class="size-full  rounded-full  "
       @load="loaded = true" />
-
 
     <NuxtImg
       v-else-if="summonerName && url"

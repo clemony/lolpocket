@@ -12,16 +12,16 @@ const route = useRoute()
 definePageMeta({
   props: true,
   section: 'pocket',
-  search: false
+  search: false,
 })
 
 const pocket = ref(getPocket(route.params.pocketKey))
-
 </script>
 
 <template>
   <main class="flex relative size-full overflow-hidden">
     <PocketSidebar />
+
     <article class="size-full relative overflow-y-auto">
       <LazyNuxtPage
         :pocket="pocket"

@@ -4,8 +4,8 @@ declare global {
   type ChampionKey = string
   type ChampionRecord = Record<ChampionKey, Champion>
   type ChampionLiteRecord = Record<ChampionKey, ChampionLite>
-  type AbilityRecord = Record<"P" | "Q" | "W" | "E" | "R", Ability[]>
-  type SplashType = "tile" | "centered" | "load"
+  type AbilityRecord = Record<'P' | 'Q' | 'W' | 'E' | 'R', Ability[]>
+  type SplashType = 'tile' | 'centered' | 'load'
   type SkinRecord = Record<ChampionKey, Skin>
   type FullSkinRecord = Record<ChampionKey, Skin[]>
   type ChampionMasteryEntry = Record<ChampionId, ChampionMasteryIndex>

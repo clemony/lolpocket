@@ -9,6 +9,7 @@ const itemClass = 'flex items-center gap-2 hover:underline-offset-2 hover:underl
     <div class="flex w-full flex-wrap justify-evenly gap-x-10 gap-y-16 px-12 pt-36 pb-40 [&_h3]:drop-shadow-sm [&_li]:drop-shadow-sm">
       <ul :class="listClass">
         <h3>Tools</h3>
+
         <li
           :class="itemClass">
           Create a Pocket
@@ -20,6 +21,7 @@ const itemClass = 'flex items-center gap-2 hover:underline-offset-2 hover:underl
           v-if="section.name"
           :class="listClass">
           <h3>{{ section.name }}</h3>
+
           <li
             v-for="link in section.submenu"
             :key="link.name"
@@ -27,6 +29,7 @@ const itemClass = 'flex items-center gap-2 hover:underline-offset-2 hover:underl
             {{ link.name }}
           </li>
         </ul>
+
         <template v-else-if="section.submenu">
           <ul
             v-for="menu in section.submenu"
@@ -50,13 +53,14 @@ const itemClass = 'flex items-center gap-2 hover:underline-offset-2 hover:underl
 
       <ul :class="listClass">
         <h3>Info</h3>
+
         <li
-          v-for="link in infoLinks"
+          v-for="link in contactLinks"
           :key="link.name"
           class="flex items-center gap-2">
           <NuxtLink
-            v-if="link.type == 'i'"
-            :to="{ path: link.url }">
+            v-if="link.external"
+            :to="{ path: link.link }">
             {{ link.name }}
           </NuxtLink>
 
@@ -64,7 +68,7 @@ const itemClass = 'flex items-center gap-2 hover:underline-offset-2 hover:underl
             v-else
             :key="link.name"
             target="_blank"
-            :href="link.url">
+            :href="link.link">
             {{ link.name }}
           </a>
         </li>

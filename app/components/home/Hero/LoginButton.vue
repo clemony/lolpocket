@@ -13,14 +13,12 @@ const viewLogin = ref(false)
       :button="true"
       variant="outline"
       size="lg"
-      class="hover:bg-neutral hover:text-nc !font-sans"
-    >
+      class="hover:bg-neutral hover:text-nc !font-sans">
       <input
         v-model="viewLogin"
         type="checkbox"
         class="peer hidden"
-        @change="emit('update:login', viewLogin)"
-      />
+        @change="emit('update:login', viewLogin)" />
       {{ viewLogin ? 'Log In' : 'Back' }}
     </Label>
   </div>

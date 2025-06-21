@@ -84,6 +84,7 @@ const wrapperVariants = {
             )
           ">
           <CustomPopoverArrow class="group-data-[state=visible]:opacity-70 group-data-[state=hidden]:opacity-0 tldr-40 delay-400" />
+
           <MotionMin
             :variants="wrapperVariants" initial="hidden" animate="visible" exit="hidden" class="size-full" :transition="{
               type: 'spring',

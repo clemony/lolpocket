@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-
 const ds = useDataStore()
 const us = useUiStore()
 </script>
@@ -11,6 +10,7 @@ const us = useUiStore()
         <h4 class="dst select-none !tracking-normal ">
           LP
         </h4>
+
         <span class="flex gap-1 pl-3 mt-0.5 items-center translate-y-3 opacity-0 pointer-events-none group-hover/up:translate-y-0 group-hover/up:opacity-100 transition-[translate_opacity] dr-30 ease-in-out expand-hide">
           up
           <icon name="arrow-up" class="size-5" />

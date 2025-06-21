@@ -46,6 +46,7 @@ function handleClick() {
     <DialogClose class="pointer-events-auto" as-child @click="handleClick">
     <!--   <DialogOverlay class="top-[5vh] isolate data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-57 bg-black/40" /> -->
     </DialogClose>
+
     <DialogContent
       ref="target"
       :class="cn('', sheetVariants({ side }), props.class)"
@@ -55,12 +56,13 @@ function handleClick() {
       @interact-outside="event => {
         const target = event.target as HTMLElement;
         if (target?.closest('.sidebar-button')) return event.preventDefault()
-      }"
-    >
+      }">
       <Hide>
         <DialogTitle> </DialogTitle>
+
         <DialogDescription> </DialogDescription>
       </Hide>
+
       <slot />
     </DialogContent>
   </DialogPortal>

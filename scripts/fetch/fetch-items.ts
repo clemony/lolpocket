@@ -3,7 +3,6 @@ import { $fetch } from 'ofetch'
 
 const loadPatch = JSON.parse(fs.readFileSync('./data/raw/patch-index-raw.json', 'utf-8'))
 
-
 async function run() {
   try {
     const urlMA

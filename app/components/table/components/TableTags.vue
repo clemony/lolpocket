@@ -2,7 +2,6 @@
 const props = defineProps<{
   params: any
 }>()
-
 </script>
 
 <template>

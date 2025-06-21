@@ -110,6 +110,7 @@ console.log('💠 - pocket.card.splash:', pocket.card.splash)
                 :class="fontClass2">
                 {{ pocket.champions[0] && pocket.champions[0] ? `${pocket.champions[0]}\'s` : '' }} Pocket
               </h3>
+
               <h1
                 class="text-12 tracking-tight drop-shadow-sm"
                 :style="{ fontFamily: pocket.card.font[0] }"
@@ -129,6 +130,7 @@ console.log('💠 - pocket.card.splash:', pocket.card.splash)
         </div>
       </div>
     </VueZoomable>
+
     <CardSettings :pocket="pocket" />
   </div>
 </template>

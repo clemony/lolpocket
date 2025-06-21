@@ -62,6 +62,7 @@ onMounted (async () => {
             :class="cn('w-full truncate min-w-0', className)">
             {{ pocket.name || 'Pocket' }}
           </EditablePreview>
+
           <EditableInput
             :class="cn('w-full truncate min-w-0', className)"
             spellcheck="false" />

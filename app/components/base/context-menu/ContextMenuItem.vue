@@ -21,8 +21,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
       'relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-2 outline-none focus:bg-b2 focus:text-neutral-bc data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
       inset && 'pl-8',
       props.class,
-    )"
-  >
+    )">
     <slot />
   </ContextMenuItem>
 </template>

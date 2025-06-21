@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const props = defineProps<{
-active: boolean
+  active: boolean
 }>()
 const tabStyles = {
   tabs: '',
@@ -19,7 +19,7 @@ const tabs = ref()
   <Label
     role="tab" class="tab !cursor-pointer before:opacity-90 flex gap-2 items-center flex-nowrap " :class="props.active ? tabStyles.activeClass : ''" :style="props.active ? tabStyles.activeStyle : ''">
     <span v-if="props.active" class="w-[116%] absolute flex justify-between h-1 -bottom-0">
-      <span v-for="index in 2" class="size-3.5 rotate-40  bg-[color-mix(in_oklch,var(--color-b2)_40%,white_60%)] shadow-md shadow-[color-mix(in_oklch,var(--color-b2)_40%,white_60%)]"></span>
+      <span v-for="index in 2" :key="index" class="size-3.5 rotate-40  bg-[color-mix(in_oklch,var(--color-b2)_40%,white_60%)] shadow-md shadow-[color-mix(in_oklch,var(--color-b2)_40%,white_60%)]"></span>
     </span>
 
     <slot />

@@ -17,5 +17,4 @@
         closeButton: '!bg-transparent absolute !right-0 ',
       },
     }" />
-
 </template>

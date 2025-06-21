@@ -52,9 +52,11 @@ function handleClick(i) {
         <LazySpellSet :set="pocket.spells[0]" :pocket="pocket" :set-index="0" hydrate-on-visible class="cursor-pointer" />
 
         <Grow />
+
         <PlusMinusExpand />
       </Btn>
     </CollapsibleTrigger>
+
     <LazyCollapsibleContent class="CollapsibleContent ">
       <VueDraggable
         v-if="pocket.spells"
@@ -72,6 +74,7 @@ function handleClick(i) {
       </VueDraggable>
 
       <Separator class="bg-b3/40 mt-4" />
+
       <Btn class="rounded-t-none w-full !text-2 !font-medium justify-end opacity-70 hover:opacity-100 !gap-2" @click="newSpellSet(pocket.key)">
         <icon name="add-sm" />New Spell Set
       </Btn>

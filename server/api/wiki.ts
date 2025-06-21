@@ -2,7 +2,7 @@ import qs from 'qs'
 
 export default defineEventHandler(async (event) => {
   try {
-    const body = await readBody(event)  // Grab the request body
+    const body = await readBody(event) // Grab the request body
     console.log('💠 Received body:', body)
 
     // Check if data is coming in correctly
@@ -24,13 +24,13 @@ export default defineEventHandler(async (event) => {
       body: qs.stringify(params), // Ensure qs is used to serialize the body
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     })
-    
+
     console.log('💠 Response from external API:', response)
-    
+
     // Return the response back to the client
     return response
-
-  } catch (error: any) {
+  }
+  catch (error: any) {
     console.error('Error in API handler:', error) // Log the error
     return { error: 'Wiki API request failed', details: error.message }
   }

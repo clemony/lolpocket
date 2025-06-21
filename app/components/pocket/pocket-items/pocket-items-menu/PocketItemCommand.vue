@@ -19,8 +19,10 @@ watchEffect(() => {
   <Popover v-model:open="isOpen">
     <PopoverTrigger class="btn btn-neutral flex items-center btn-square relative">
       <icon name="search-bold" class="text-nc shrink-0 size-4.5 -mt-px" />
+
       <StatusIndicator v-if="hasData" class="-top-0.5 -right-0.25" />
     </PopoverTrigger>
+
     <CustomPopoverContent
       class=""
       :class="cn('w-140 rounded-lg h-130  p-0', props.class)"
@@ -42,6 +44,7 @@ watchEffect(() => {
               <LazyItemCommandTypes />
 
               <Separator class="bg-accent mt-3 mb-1.5 " />
+
               <LazyItemCommandStats />
             </div>
           </div>

@@ -27,12 +27,11 @@ async function signInWithGoogle() {
     variant="outline"
     size="lg"
     class="hover:border-neutral/80 h-14 gap-4.5 shadow-xs"
-    @click="signInWithGoogle()"
-  >
+    @click="signInWithGoogle()">
     <icon
       name="mdi:google"
-      class="-ml-6.5 size-6"
-    />
+      class="-ml-6.5 size-6" />
+
     <div class="">
       Log in with Google
     </div>

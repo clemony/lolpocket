@@ -4,10 +4,13 @@
   <div class="grid space-y-4">
     <div>
       <Label for="username">Username</Label>
+
       <Input id="username" class="border-b3 h-10" />
     </div>
+
     <div>
       <Label for="password">Password</Label>
+
       <Input id="password" class="border-b3 h-10" />
     </div>
 

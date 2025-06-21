@@ -30,6 +30,7 @@ onMounted (async () => {
       ref="video" :src="runeVideo"
       :class="cn('grayscale bg-cover opacity-15 absolute inset-0 top-0 left-0 contrast-400 brightness-380 size-full  z-0 ', className)">
     </video-background>
+
     <div class="absolute inset-0 top-0 left-0 flex justify-end">
       <slot />
     </div>

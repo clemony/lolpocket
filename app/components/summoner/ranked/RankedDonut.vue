@@ -9,7 +9,7 @@ const winrate = computed (() => {
 })
 
 const rank = computed (() => {
-return props.rank
+  return props.rank
 })
 
 const labels = ['Loss', 'Win']

@@ -21,6 +21,7 @@ const { filterState } = useCommand()
 <template>
   <div class="flex items-center border-b-b3/65 border-b px-3" cmdk-input-wrapper>
     <icon name="search" class="mr-2 h-4 w-4 shrink-0 opacity-50" />
+
     <ListboxFilter
       v-bind="{ ...forwarded, ...$attrs }"
       v-model="filterState.search"

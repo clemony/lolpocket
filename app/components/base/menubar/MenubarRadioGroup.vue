@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import {
   MenubarRadioGroup,
-  type MenubarRadioGroupEmits,
-  type MenubarRadioGroupProps,
+
   useForwardPropsEmits,
 } from 'reka-ui'
+import type { MenubarRadioGroupEmits, MenubarRadioGroupProps } from 'reka-ui'
 
 const props = defineProps<MenubarRadioGroupProps>()
 

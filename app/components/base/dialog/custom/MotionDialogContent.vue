@@ -1,52 +1,37 @@
 <script setup lang="ts">
 import { reactiveOmit } from '@vueuse/core'
+import type { DialogContentEmits, DialogContentProps } from 'reka-ui'
 import {
   DialogClose,
   DialogContent,
-  type DialogContentEmits,
-  type DialogContentProps,
+
   DialogOverlay,
   DialogPortal,
   useForwardPropsEmits,
 } from 'reka-ui'
+
+const props = defineProps<DialogContentProps & { class?: HTMLAttributes['class'], noOverlay?: boolean, noButton?: boolean, delay?: number }>()
+
 const emits = defineEmits<DialogContentEmits>()
 
-const props = defineProps<DialogContentProps & { class?: HTMLAttributes['class']
-  noOverlay?: boolean
-  noButton?: boolean
-  delay?: number
- }>()
 const delegatedProps = reactiveOmit(props, 'class')
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
-const dialogOpenState = {
-  opacity: 1,
-  filter: 'blur(0px)',
-  rotateX: 0,
-  rotateY: 0,
-  z: 0,
-  transition: {
-    delay: props.delay || 0.2,
-    duration: 0.3,
-    ease: [0.17, 0.67, 0.51, 1],
-    opacity: {
-      delay: 0.2,
-      duration: 0.2,
-      ease: 'easeOut',
-    },
+const variants = {
+  dialogOpenState: {
+    opacity: 1,
+    filter: 'blur(0px)',
+    rotateX: 0,
+    rotateY: 0,
+    z: 0,
   },
-}
-
-const dialogInitialState = {
-  opacity: 0,
-  filter: 'blur(10px)',
-  z: -100,
-  rotateY: 25,
-  rotateX: 5,
-  transformPerspective: 500,
-  transition: {
-    duration: 0.2,
-    ease: [0.67, 0.17, 0.62, 0.64],
+  dialogInitialState: {
+    opacity: 0,
+    filter: 'blur(10px)',
+    z: -100,
+    rotateY: 25,
+    rotateX: 5,
+    transformPerspective: 500,
   },
 }
 </script>
@@ -54,12 +39,13 @@ const dialogInitialState = {
 <template>
   <DialogPortal>
     <DialogOverlay
-      class="fixed inset-0 z-50 isolate bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0" :class="{'opacity-0 invisible': props.noOverlay}">
+      class="fixed inset-0 z-50 isolate bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0" :class="{ 'opacity-0 invisible': props.noOverlay }">
       <Motion class="overlay" :initial="{ opacity: 0 }" :animate="{ opacity: 1 }" :exit="{ opacity: 0 }" />
     </DialogOverlay>
 
     <DialogContent
       as-child
+
       v-bind="forwarded"
       :class="
         cn(
@@ -67,13 +53,19 @@ const dialogInitialState = {
           props.class,
         )">
       <Motion
-        class="modal-container" :initial="dialogInitialState" :animate="dialogOpenState"
-        :exit="dialogInitialState" :style="{ transformPerspective: 500 }">
+        class="modal-container" :variants="variants"
+        :transition="{
+          duration: 0.2,
+          ease: 'easeOut',
+        }" initial="dialogInitialState" animate="dialogOpenState"
+        exit="dialogInitialState" :style="{ transformPerspective: 500 }">
         <slot />
 
-        <DialogClose v-if="props.noButton"
+        <DialogClose
+          v-if="props.noButton"
           class="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring focus:ring-neutral disabled:pointer-events-none ">
           <icon name="x-sm" class="size-6" />
+
           <span class="sr-only">Close</span>
         </DialogClose>
       </Motion>
@@ -82,7 +74,6 @@ const dialogInitialState = {
 </template>
 
 <style scoped>
-
 .overlay {
   background: rgba(0, 0, 0, 0.5);
   position: fixed;
@@ -90,5 +81,4 @@ const dialogInitialState = {
   z-index: 9999998;
   backdrop-filter: blur(3px);
 }
-
 </style>

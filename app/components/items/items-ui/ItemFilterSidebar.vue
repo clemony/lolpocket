@@ -8,7 +8,7 @@ function resetItems() {
 /*   sortItemsAZ.value = 0
   // sortPrice.value = 0 */
 
-  //TODO disable no filter avail
+  // TODO disable no filter avail
   Object.assign(is.itemFilter, is.defaultItemFilter)
   console.log('💠 - resetItems - is.defaultItemFilter:', is.defaultItemFilter)
   console.log('💠 - resetItems - itemFilter:', is.itemFilter)
@@ -30,15 +30,18 @@ onMounted (() => {
           <IndicatorTabsTrigger value="/library/items">
             Grid
           </IndicatorTabsTrigger>
+
           <IndicatorTabsTrigger value="/library/item_stats">
             List
           </IndicatorTabsTrigger>
+
           <TabIndicator />
         </IndicatorTabsList>
       </Tabs>
 
       <ItemSearch class="input w-full mt-9 shadow-sm drop-shadow-sm !bg-neutral/85 inset-shadow-sm border-accent text-nc **:text-nc" />
     </div>
+
     <div class="px-5 mt-10 w-full">
       <ItemRankFilter />
     </div>
@@ -46,24 +49,30 @@ onMounted (() => {
     <div class="px-5 pt-12 pb-8 w-full">
       <ItemStatsChecklist />
     </div>
+
     <div class="mt-2 mb-4 px-5 gap-6 flex items-center  w-full">
       <ItemMapFilter v-model:model-value="is.itemFilter.map">
       </ItemMapFilter>
+
       <div class="gap-5 px-5 text-2  tracking-tight  flex items-center w-full justify-end ">
         <MotionFade v-if="is.itemFilter.purchasable" layout-id="text">
           Purchasable
         </MotionFade>
+
         <MotionFade v-else layout-id="text">
           All
         </MotionFade>
+
         <Switch v-model:model-value="is.itemFilter.purchasable" class="dst">
         </Switch>
       </div>
     </div>
+
     <div class="px-7">
       <div class="divider divider-start before:bg-b3/60 font-semibold  mb-8">
         Tags
       </div>
+
       <ItemTagsFilter />
     </div>
 
@@ -71,6 +80,7 @@ onMounted (() => {
       <div class="w-full">
         <ItemColumnDisplay v-if="route.path == '/items/stats'" />
       </div>
+
       <button
         class="btn w-[49%] btn-neutral bg-neutral/95 hover:opacity-85 font-normal "
         @click="resetItems()">

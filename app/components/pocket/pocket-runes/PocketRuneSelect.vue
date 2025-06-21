@@ -74,6 +74,7 @@ onMounted(() => {
               <Placeholder
                 v-if="rune.name === 'empty'"
                 class="size-17 cursor-not-allowed border rounded-full border-b3/50 bg-gradient-to-br shadow-inset-sm from-b3/60 to-b3/80" />
+
               <img
                 v-else
                 :src="`/img/runes/${path}/${rune.key}.webp`"

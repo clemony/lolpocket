@@ -14,6 +14,7 @@ const route = useRoute()
         <icon v-if="section.icon" :name="section.icon" :class="section.iconClass" />
         {{ section.name }}
       </MenubarLabel>
+
       <MenubarGroup :class="cn(className)" class="space-y-1">
         <MenubarItem v-for="item in section.items" :key="item.name" :class="{ 'bg-b2/40': route.path == item.route }" @click="navigateTo(item.route)">
           <component :is="`i-${item.icon}`" v-if="item.icon" :class="item.iconClass" />

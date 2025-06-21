@@ -8,6 +8,7 @@ const { page, class: className } = defineProps<{
 <template>
   <span class="" :class="cn('size-4.5 relative place-items-center grid', className)">
     <icon v-if="page.meta.section == 'analysis' && page.path != '/analysis'" name="guidance:search" class="absolute size-4.5 dst stroke-[1.3]" />
+
     <icon
       v-if="page.meta.icon" :name="page.meta.icon" :alt="page.name" class="size-4 absolute"
       :class="{

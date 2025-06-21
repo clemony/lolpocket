@@ -29,7 +29,7 @@ watchEffect(() => {
             <i-ui-hitter class="absolute pointer-events-none size-5.5 -ml-1 -mt-1 opacity-70 dst" />
           </span>
 
-            Item Data
+          Item Data
         </SidebarCollapsibleTrigger>
 
         <SidebarCollapsibleContent class="-mt-1.5">
@@ -43,7 +43,7 @@ watchEffect(() => {
             <i-lol-no-champ class="absolute pointer-events-none size-5 -ml-1 -mt-1  dst" />
           </span>
 
-            Champion Data
+          Champion Data
         </SidebarCollapsibleTrigger>
 
         <SidebarCollapsibleContent class="-mt-1.5">

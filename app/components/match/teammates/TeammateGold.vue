@@ -19,6 +19,7 @@ const cs = computed (() => {
       {{ cs }}
       <span class="font-mono"> CS</span>
     </p>
+
     <p>
       {{ player.goldEarned.toLocaleString() }}
       <span class="font-mono"> G</span>

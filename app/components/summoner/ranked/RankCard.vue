@@ -29,11 +29,11 @@ const winrate = computed (() => entry.value.wins / (entry.value.wins + entry.val
       <div class="relative grid place-items-center size-full">
         <div class="relative size-21 overflow-hidden mt-1 grid place-items-center rounded-lg">
           <DonutSkeleton class="absolute size-21" />
+
           <div class="radial-progress dst absolute " :style="{ '--value': winrate, '--size': '5.25rem', 'color': getColorFromVariable(`--color-${entry.tier.toLowerCase()}`) }" role="progressbar">
             <span class="text-bc font-medium dst">
               {{ winrate.toFixed(1).replace('.0', '') }}%
             </span>
-
           </div>
         </div>
       </div>
@@ -49,6 +49,7 @@ const winrate = computed (() => entry.value.wins / (entry.value.wins + entry.val
 
         <p v-tippy="`${entry.wins + entry.losses} total`" class="hover:border-b-bc border-b-transparent border-b  flex text-1 items-center gap-1 text-end justify-end text-nowrap">
           <span>{{ entry.wins }}W </span>
+
           <span>{{ entry.losses }}L</span>
         </p>
       </div>

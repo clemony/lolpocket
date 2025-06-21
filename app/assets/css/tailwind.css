@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "./index.css";
+@import 'tailwindcss';
+@import './index.css';
 
 @layer base {
   :root {
@@ -16,7 +16,7 @@
   }
 
   input,
-  input:where(:not([type="button"], [type="reset"], [type="submit"])),
+  input:where(:not([type='button'], [type='reset'], [type='submit'])),
   select,
   textarea,
   .reset-input {
@@ -59,7 +59,7 @@
     font-weight: 500;
   }
 
-  h5 {
+  h6 {
     font-size: var(--text-3);
     font-weight: 500;
   }

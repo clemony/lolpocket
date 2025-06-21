@@ -1,22 +1,23 @@
 <script lang="ts" setup>
+defineOptions({
+  inheritAttrs: false,
+})
+
 const props = defineProps<{
   class?: HTMLAttributes['class']
-inputClass?: HTMLAttributes['class']
+  inputClass?: HTMLAttributes['class']
   search?: boolean
   placeholder?: string
 }>()
-
-
-defineOptions({
-  inheritAttrs: false
-})
 </script>
 
 <template>
- <div :class="cn(' text-3 items-center gap-4  flex h-12 border py-3.5 px-3 input w-full  shadow-sm drop-shadow-sm !bg-neutral/85 inset-shadow-sm border-accent text-nc **:text-nc', props.class)">
-    <icon v-if="props.search"
+  <div :class="cn(' text-3 items-center gap-4  flex h-12 border py-3.5 px-3 input w-full  shadow-sm drop-shadow-sm !bg-neutral/85 inset-shadow-sm border-accent text-nc **:text-nc', props.class)">
+    <icon
+      v-if="props.search"
       name="search"
       class="pointer-events-none size-5 opacity-80" />
+
     <input
       v-bind="$attrs"
       :placeholder="props.placeholder"

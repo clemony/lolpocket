@@ -1,7 +1,7 @@
-import fs from "node:fs"
+import fs from 'node:fs'
 
 const championsLite = JSON.parse(
-  fs.readFileSync("./data/champions-lite.json", "utf-8")
+  fs.readFileSync('./data/champions-lite.json', 'utf-8'),
 )
 
 const level = 18
@@ -59,7 +59,7 @@ const highestStats = {}
 // })
 
 fs.writeFileSync(
-  "./data/dev/stat-max-values.json",
-  JSON.stringify(highestStats, null, 2)
+  './data/dev/stat-max-values.json',
+  JSON.stringify(highestStats, null, 2),
 )
-console.log("✅ stat-max-values.json written!")
+console.log('✅ stat-max-values.json written!')

@@ -48,9 +48,11 @@ const messages = ref(false)
 
       <button v-tippy="{ content: 'Messages', placement: 'bottom' }" class="flex  cursor-pointer  h-full ml-px  place-items-center  group/b relative">
         <StatusIndicator v-if="messages" class="group-hover:opacity-100 tldr-60 top-3.25 right-4 *:!status-md" />
+
         <icon
           name="tabler:mail-filled"
           class="size-6 shrink-0 drop-shadow-sm   group-hover/b:text-nc/0 text-nc/80 absolute" />
+
         <icon
           name="tabler:mail-opened-filled"
           class="size-6 shrink-0 drop-shadow-sm   text-nc/0 absolute group-hover/b:!text-nc/90 bottom-4" />

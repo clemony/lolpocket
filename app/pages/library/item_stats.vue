@@ -10,9 +10,8 @@ definePageMeta({
   icon: 'bi:list-ul',
 })
 
-
 const is = useItemStore()
-const {  filtered } = useItemFilter(is.itemFilter)
+const { filtered } = useItemFilter(is.itemFilter)
 const theme = ref(pocketTheme)
 
 const gridOptions: GridOptions<ItemLite> = {
@@ -204,7 +203,7 @@ ModuleRegistry.registerModules([ClientSideRowModelModule, ValidationModule, RowS
 </script>
 
 <template>
-  <NuxtLayout  name="items-layout">
+  <NuxtLayout name="items-layout">
     <AgGridVue
       :initial-state="is.dbItemGridState"
       :grid-options="gridOptions"

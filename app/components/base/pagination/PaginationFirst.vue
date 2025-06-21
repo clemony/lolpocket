@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { PaginationFirst, type PaginationFirstProps } from 'reka-ui'
-import { computed, type HTMLAttributes } from 'vue'
+import { PaginationFirst } from 'reka-ui'
+import type { PaginationFirstProps } from 'reka-ui'
+import { computed } from 'vue'
+import type { HTMLAttributes } from 'vue'
 
 const props = withDefaults(defineProps<PaginationFirstProps & { class?: HTMLAttributes['class'] }>(), {
   asChild: true,
@@ -16,8 +18,8 @@ const delegatedProps = computed(() => {
 <template>
   <PaginationFirst v-bind="delegatedProps">
     <button :class="cn('btn btn-ghost btn-square btn-sm ', props.class)" v>
-      <slot>    <icon name="teenyicons:double-caret-left-small-outline"  class="size-6.25 opacity-80 "/>
-
+      <slot>
+        <icon name="teenyicons:double-caret-left-small-outline" class="size-6.25 opacity-80 " />
       </slot>
     </button>
   </PaginationFirst>

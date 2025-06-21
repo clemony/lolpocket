@@ -54,14 +54,14 @@ const data = [
           :ref="`item${i}`"
           :variants="itemVariants"
           initial="hidden"
-         while-in-view="visible"
+          while-in-view="visible"
           :transition="{
             type: 'spring',
             visualDuration: 0.5,
             bounce: 0.2,
           }"
           :in-view-options="{
-            amount: 0.7,
+            amount: 0.8,
           }"
           class="grid -translate-y-[40px] p-6">
           <div class="mb-5 grid w-full items-center ">
@@ -74,9 +74,11 @@ const data = [
               {{ item.title }}
             </h3>
           </div>
+
           <p
             class="text-pretty leading-loose font-light text-4 " v-html="item.text" />
         </motion.div>
+
         <div />
       </div>
 

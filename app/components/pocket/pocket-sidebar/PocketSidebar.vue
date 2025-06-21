@@ -16,23 +16,26 @@ onMounted (() => {
 
 <template>
   <aside class="h-full gap-6 pl-7 pt-22 pb-16 flex flex-col   relative min-w-105  max-w-105">
-      <PocketHeader :pocket="pocket" @update:model-value="e => pocket.name = e" />
-      <PocketTabs
-        :pocket="pocket" />
+    <PocketHeader :pocket="pocket" @update:model-value="e => pocket.name = e" />
 
-      <div class="size-full *:shrink-0 overflow-y-auto   flex flex-col gap-6 ">
-        <PocketRoles :pocket="pocket" />
-        <SidebarSelectedChampions :pocket="pocket"  />
+    <PocketTabs
+      :pocket="pocket" />
 
-        <PocketItemsSidebarMenu :pocket="pocket"  />
-        <PocketSidebarRunes :pocket="pocket" />
+    <div class="size-full *:shrink-0 overflow-y-auto   flex flex-col gap-6 ">
+      <PocketRoles :pocket="pocket" />
 
-        <PocketSpellsCollapsible v-if="pocket" :pocket="pocket" />
+      <SidebarSelectedChampions :pocket="pocket" />
+
+      <PocketItemsSidebarMenu :pocket="pocket" />
+
+      <PocketSidebarRunes :pocket="pocket" />
+
+      <PocketSpellsCollapsible v-if="pocket" :pocket="pocket" />
 
       <!--       <PocketCardButton :pocket="pocket" @click="pocketNav = null" />
  -->
-      </div>
-      <PocketSidebarMenu :pocket="pocket" />
-    
+    </div>
+
+    <PocketSidebarMenu :pocket="pocket" />
   </aside>
 </template>

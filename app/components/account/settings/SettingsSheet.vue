@@ -12,8 +12,9 @@ function handleChange(theme) {
 <template>
   <Sheet>
     <SheetTrigger as-child>
-<slot  />
+      <slot />
     </SheetTrigger>
+
     <LazyNestedSheetContent class="grid h-screen max-h-screen gap-6 px-0 pt-12 overflow-hidden ">
       <SheetHeader>
         <NestedSheetTitle>
@@ -30,6 +31,7 @@ function handleChange(theme) {
           Themes
         </p>
       </div>
+
       <ListboxRoot v-model:model-value="as.dataTheme" class="w-full   overflow-y-scroll overscroll-auto z-0 " :multiple="false" @entry-focus.prevent @update:model-value="handleChange(as.dataTheme)">
         <ListboxContent class="w-full grid py-8 gap-6  px-6">
           <ListboxItem v-for="theme in themes" :key="theme.name" :value="theme.name" class=" grid gap-3 rounded-box cursor-pointer  focus:outline-0 hover:border-b3  hover:bg-b3/30  py-1.5   shrink-0 w-full items-center  dst" :class="{ 'bg-b2 border-b3 shadow-sm inset-shadow-sides bg-noise inset-shadow-b3/10': theme.name == as.dataTheme }">

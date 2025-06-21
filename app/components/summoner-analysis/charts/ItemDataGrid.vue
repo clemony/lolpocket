@@ -19,6 +19,7 @@ const { bayesianItems } = useMatchItems()
             <APDtooltip>
               Absolute
             </APDtooltip>
+
             <BayesianTooltip>
               Weighted
             </BayesianTooltip>
@@ -38,20 +39,25 @@ const { bayesianItems } = useMatchItems()
                   {{ getGrade(entry.bayesianWinrate) }}
                 </span>
               </div>
+
               <div>
                 <img class="size-10 rounded-xl" :src="`/img/item/${entry.item?.id}.webp`" />
               </div>
+
               <div class="list-col-grow -space-y-1">
                 <div class="text-3 truncate">
                   {{ entry.item?.name }}
                 </div>
+
                 <div class="text-1 uppercase font-semibold opacity-60">
                   {{ entry.win }}W {{ entry.loss }}L
                 </div>
               </div>
+
               <div class="text-end text-2">
                 {{ entry.winrate.toFixed(1) }}%
               </div>
+
               <div class="text-end text-2">
                 {{ entry.bayesianWinrate.toFixed(1) }}%
               </div>

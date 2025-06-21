@@ -4,7 +4,6 @@ const { modelValue: selectedMap } = defineProps<{
 }>()
 
 const ix = useIndexStore()
-
 </script>
 
 <template>
@@ -17,9 +16,11 @@ const ix = useIndexStore()
         {{ ix.mapNameById(selectedMap) }}
       </slot>
     </SelectTrigger>
+
     <LazySelectContent class="w-(--reka-select-trigger-width)">
       <SelectGroup>
         <SelectLabel>Maps</SelectLabel>
+
         <SelectItem v-for="map in [11, 12, 30]" :key="map" :value="map">
           <div class="flex gap-3 items-center">
             <span class="size-5 relative grid place-items-center">

@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-
 const tabs = ref('stats')
 </script>
 
 <template>
-        <div class="flex gap-3 text-2 font-medium items-center"><!--
+  <div class="flex gap-3 text-2 font-medium items-center">
+    <!--
     <Tabs v-model:model-value="tabs" class="">
       <IndicatorTabsList class="bg-b2 text-2 w-full h-9 grid grid-cols-[0.75fr_1fr]">
         <IndicatorTabsTrigger value="stats"  class="text-bc/70">
@@ -17,8 +17,7 @@ const tabs = ref('stats')
         <TabIndicator />
       </IndicatorTabsList>
     </Tabs> -->
-<Switch  />
-Live Match
-
-</div>
+    <Switch />
+    Live Match
+  </div>
 </template>

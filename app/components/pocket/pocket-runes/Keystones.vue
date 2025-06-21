@@ -30,10 +30,12 @@ const set = computed(() => pocket.runes[rs.selectedRuneSet])
             :value="rune.key"
             class="absolute hidden peer"
             :checked="rune.key == set[0].runes[0]" />
+
           <Img
             :img="`/img/runes/${set[0].path}/${rune.key}.webp`"
             :alt="rune.name"
             class="absolute drop-shadow-sm drop-shadow-black/40   opacity-0 group-hover/r:opacity-90 duration-400  transition-all shrink-0   h-19 w-auto " :class="{ 'opacity-100': set.keystone == rune.key }" />
+
           <Img
             :img="`/img/runes/${set[0].path}/${rune.key}_grayscale.webp`"
             :alt="rune.name"

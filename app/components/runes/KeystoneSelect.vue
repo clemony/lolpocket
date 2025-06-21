@@ -22,6 +22,7 @@ watch(() => selected, (newVal) => {
     <div class="absolute size-full top-0 left-0 rounded-box overflow-hidden opacity-26">
       <div class="absolute size-full top-0 left-0 gradient mask-bottom-right" :data-path="runes[0].path" />
     </div>
+
     <RadioGroup
       v-model:model-value="selectedRune"
       :class="cn(
@@ -39,10 +40,12 @@ watch(() => selected, (newVal) => {
           :id="rune.key"
           :value="rune.id"
           class="hidden peer" />
+
         <Img
           :img="`/img/runes/${rune.path}/${rune.key}.webp`"
           :alt="rune.name"
           class="absolute drop-shadow-sm pointer-events-none drop-shadow-black/40   opacity-0 group-hover/r:opacity-90 duration-400  transition-all shrink-0   h-19 w-auto " :class="{ 'opacity-100': selectedRune == rune.id }" />
+
         <Img
           :img="`/img/runes/${rune.path}/${rune.key}_grayscale.webp`"
           :alt="rune.name"

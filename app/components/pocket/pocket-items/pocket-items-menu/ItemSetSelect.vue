@@ -19,6 +19,7 @@ const pocket = computed (() => {
           <ItemSelectSet :model-value="pocket.complete.items[props.index]" />
         </SelectValue>
       </SelectTrigger>
+
       <SelectContent position="popper" class="w-[var(--reka-select-trigger-width)] !rounded-box">
         <SelectGroup>
           <SelectItem v-for="set in pocket.items" :key="set.name" :value="set" class="rounded-xl">

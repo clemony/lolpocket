@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-
 const props = defineProps<{
   name?: string
   class?: HTMLAttributes['class']

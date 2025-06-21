@@ -15,11 +15,14 @@ const modelValue = ref(ms.af.patch ?? ds.currentPatch)
     <SelectTrigger class="bg-transparent border-none shadow-none focus:ring-0 focus:outline-0 px-2" :class="cn('', props.class)" no-arrow>
       <icon name="more" class="size-5 shrink-0" />
     </SelectTrigger>
+
     <SelectContent position="popper" class="!w-[var(--reka-select-trigger-width)]">
       <SelectGroup>
         <SelectLabel>Patch</SelectLabel>
+
         <SelectItem v-for="patch in ds.patchList" :key="patch" :value="patch" no-tick>
           <slot :value="patch.toString()" />
+
           <span class="flex gap-2 items-center">
             <span class="size-4.5">
               <icon v-if="ms.af.patch == patch" name="tick-sm" class="size-4.5 dst" /></span> {{ patch }}

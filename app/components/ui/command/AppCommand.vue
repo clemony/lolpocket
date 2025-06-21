@@ -43,6 +43,7 @@ watch(
       <LazyCommandPopover v-model:open="itemOpen" hydrate-on-visible @close-popover="itemOpen = null">
         <LazyItemData v-model:id="activeItem" class="*:px-2.5 py-4 max-h-200" hydrate-on-visible />
       </LazyCommandPopover>
+
       <motion.div
         class="bg-black-20/80    **:text-white/60 overflow-hidden w-140 drop-shadow-lg inset-shadow-sm  relative rounded-box !p-0  border drop-shadow-black/30 shadow-black/20 shadow-md ring-black-15/60 ring-1 border-black-25 "
 
@@ -52,7 +53,9 @@ watch(
         exit="hidden">
         <div class="w-full h-15 flex   backdrop-blur-3xl  items-center relative" :class="{ 'border-b border-b-black-25/80': searchQuery }">
           <icon name="search" class="absolute left-4  top-4.25 opacity-30 dst size-6" />
+
           <input v-model="searchQuery" :spellcheck="false" class="w-full rounded-3xl text-bc/50 h-14 pl-14 !text-6" />
+
           <button v-if="searchQuery != ''" class="btn-ghost-dark btn-square !size-9  mr-5.5" @click="searchQuery = ''">
             <icon name="x-sm" class="shrink-0" />
           </button>
@@ -63,6 +66,7 @@ watch(
             <PageLinkResult v-for="page in pageResult.slice(0, 3)" :key="page.name" :page="page" :link="page.path">
               <PageIcon :page="page" class="ml-1 -mr-1" />
             </PageLinkResult>
+
             <CommandMoreResults v-if="pageResult.length > 3" :results="pageResult">
               <template
                 v-for="group in groupedPages.slice(3)"
@@ -82,6 +86,7 @@ watch(
             <PageLinkResult v-for="pocket in pocketResult.slice(0, 3)" :key="pocket.key" :link="`/pocket/${pocket.key}/`" :page="pocket">
               <PocketIcon :url="pocket.icon" :alt="pocket.key" class="size-7 rounded-lg **:text-1 -mr-2 " transparent />
             </PageLinkResult>
+
             <CommandMoreResults v-if="pocketResult.length > 3" :results="pocketResult">
               <PageLinkResult v-for="pocket in pocketResult.slice(3)" :key="pocket.key" :link="`/pocket/${pocket.key}/`" :page="pocket">
                 <PocketIcon :url="pocket.icon" :alt="pocket.key" class="size-7 rounded-lg **:text-1" transparent />
@@ -94,6 +99,7 @@ watch(
               <ChampionIcon :id="champion.id" :alt="champion.key" class="size-7 rounded-lg" />
               {{ champion.name }}
             </CommandResult>
+
             <CommandMoreResults v-if="championResult.length > 3" :results="championResult">
               <CommandResult v-for="champion in championResult.slice(3)" :key="champion.id">
                 <ChampionIcon :id="champion.id" :alt="champion.key" class="size-7 rounded-lg" />

@@ -1,7 +1,7 @@
 export function parseTemplates(
   depth: number,
   MAX_DEPTH: number,
-  state: { str: string; i: number }
+  state: { str: string, i: number },
 ) {
   let template = ''
   const params: string[] = []
@@ -15,7 +15,8 @@ export function parseTemplates(
     if (char === '|' && nesting === 0) {
       if (!template) {
         template = buffer.trim()
-      } else {
+      }
+      else {
         params.push(buffer.trim())
       }
       buffer = ''
@@ -40,7 +41,8 @@ export function parseTemplates(
     if (char === '}' && state.str[state.i + 1] === '}' && nesting === 0) {
       if (!template) {
         template = buffer.trim()
-      } else {
+      }
+      else {
         params.push(buffer.trim())
       }
       state.i += 2
@@ -55,12 +57,13 @@ export function parseTemplates(
   if (buffer.trim()) {
     if (!template) {
       template = buffer.trim()
-    } else {
+    }
+    else {
       params.push(buffer.trim())
     }
   }
 
-  //handle templates like `#var:foo` and split on first colon
+  // handle templates like `#var:foo` and split on first colon
   const colonIndex = template.indexOf(':')
   if (colonIndex !== -1) {
     const rawTemplate = template

@@ -19,9 +19,11 @@ watchEffect(() => {
     <icon
       name="search"
       class="size-4 shrink-0 opacity-70 group-hover:opacity-100 dst" />
+
     <span class=" text-bc/70 text-left mt-px  font-medium tracking-tight  text-2 grow truncate ">
       <slot />
     </span>
+
     <span
       class="!text-3 font-medium  text-bc/60">
       {{ getDeviceKey() }} K

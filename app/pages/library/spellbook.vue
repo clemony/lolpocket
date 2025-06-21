@@ -6,8 +6,6 @@ definePageMeta({
   icon: 'teenyicons:book-outline',
 })
 
-
-
 const ix = useIndexStore()
 
 const selectedSpellId = ref(1)
@@ -19,6 +17,7 @@ const selectedSpell = computed (() => ix.spellById(selectedSpellId.value))
     <div class="w-full pt-28">
       <h1>Summoner Spells</h1>
     </div>
+
     <div v-if="ix.spells.length" class="w-full  flex gap-[8%] px-3 py-24">
       <div class="flex flex-col gap-14 w-114">
         <div class="grid grid-cols-3 grid-rows-3 gap-4 py-8 border-b3/80 rounded-box shadow-smooth  px-9 h-fit  ">
@@ -45,6 +44,7 @@ const selectedSpell = computed (() => ix.spellById(selectedSpellId.value))
             <p class="font-serif text-4 leading-9 dst">
               {{ selectedSpell.text }}
             </p>
+
             <p class="italic w-full flex justify-end mt-6 pr-3 font-thin ">
               —<a :href="`https://wiki.leagueoflegends.com/en-us/${selectedSpell.name}`" target="_blank" class="!font-sans underline-offset-2 hover:underline items-center gap-2 flex flex-nowrap">summary from LolWiki
                 <icon name="link" class="mb-1 size-4" /></a>
@@ -52,6 +52,7 @@ const selectedSpell = computed (() => ix.spellById(selectedSpellId.value))
           </div>
         </Transition>
       </div>
+
       <Transition
         enter-active-class="transition-all duration-500"
         enter-from-class="opacity-0 -translate-y-2"
@@ -62,12 +63,14 @@ const selectedSpell = computed (() => ix.spellById(selectedSpellId.value))
         mode="out-in">
         <div :key="selectedSpell.name" class="flex flex-col gap-14 w-160 transition-all duration-300">
           <div class="border-b3/80 rounded-xl shadow-smooth pt-7 pb-8 px-9  w-full border flex max-h-min flex-col gap-6 transition-all duration-300">
-          <div class="w-full flex gap-6 i-c">
+            <div class="w-full flex gap-6 i-c">
               <img :src="`/img/spells/${selectedSpell.name.toLowerCase()}.webp`" class="rounded-lg shadow-sm  shadow-black/20 size-24" />
+
               <div class="h-full grid items-between py-2">
                 <p class="font-medium">
                   Summoner
                 </p>
+
                 <h1 class="text-9 dst tracking-tight">
                   {{ selectedSpell.name }}
                 </h1>
@@ -81,6 +84,7 @@ const selectedSpell = computed (() => ix.spellById(selectedSpellId.value))
                 <p class="font-semibold tracking-tight">
                   Cooldown:
                 </p>
+
                 <p class="font-medium">
                   {{ selectedSpell.cd }} seconds
                 </p>
@@ -90,6 +94,7 @@ const selectedSpell = computed (() => ix.spellById(selectedSpellId.value))
                 <p class="font-semibold tracking-tight">
                   Charges:
                 </p>
+
                 <p class="font-medium">
                   {{ selectedSpell.charges }}
                 </p>
@@ -99,6 +104,7 @@ const selectedSpell = computed (() => ix.spellById(selectedSpellId.value))
                 <p class="font-semibold tracking-tight">
                   Recharge Time:
                 </p>
+
                 <p class="font-medium">
                   {{ selectedSpell.recharge }} seconds
                 </p>

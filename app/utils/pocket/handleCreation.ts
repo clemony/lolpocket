@@ -4,14 +4,14 @@ export function createDateObject() {
   const now = new Date()
   const patch = useDataStore().currentPatch
 
-  const date = now.toLocaleDateString("en-US", {
-    year: "2-digit",
-    month: "2-digit",
-    day: "2-digit",
+  const date = now.toLocaleDateString('en-US', {
+    year: '2-digit',
+    month: '2-digit',
+    day: '2-digit',
   })
   const time = now
-    .toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
-    .replace(/^0/, "") // remove leading zero if present
+    .toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+    .replace(/^0/, '') // remove leading zero if present
   return { date, time, patch }
 }
 
@@ -48,7 +48,7 @@ export function newRuneSet(pocketKey?: string) {
   const newSet: RuneSet = {
     keystone: null,
     0: {
-      path: "Precision",
+      path: 'Precision',
       runes: {
         1: null,
         2: null,
@@ -56,7 +56,7 @@ export function newRuneSet(pocketKey?: string) {
       },
     },
     1: {
-      path: "Inspiration",
+      path: 'Inspiration',
       runes: {
         1: null,
         2: null,
@@ -97,7 +97,8 @@ export function newSpellSet(key?) {
   if (key) {
     const pocket = getPocket(key)
     pocket.spells.push(newSet)
-  } else {
+  }
+  else {
     return newSet
   }
 }

@@ -27,6 +27,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
         <icon name="dot" />
       </ContextMenuItemIndicator>
     </span>
+
     <slot />
   </ContextMenuRadioItem>
 </template>

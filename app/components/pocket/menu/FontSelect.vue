@@ -17,6 +17,7 @@ const props = defineProps<{
         </div>
       </SelectValue>
     </SelectTrigger>
+
     <SelectContent align="end" class="rounded-xl">
       <SelectGroup>
         <SelectItem

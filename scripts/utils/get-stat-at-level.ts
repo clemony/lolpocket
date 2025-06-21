@@ -1,4 +1,8 @@
-export function getStatAtLevel(base?: number, growth?: number, level = 18): number | null {
+export function getStatAtLevel(
+  base?: number,
+  growth?: number,
+  level = 18
+): number | null {
   if (base == null) return null
   const totalLevelUps = level - 1
 
@@ -9,7 +13,12 @@ export function getStatAtLevel(base?: number, growth?: number, level = 18): numb
   return base + totalGrowth
 }
 
-export function getAttackSpeedAtLevel(base?: number, growth?: number, ratio?: number, level = 18): number | null {
+export function getAttackSpeedAtLevel(
+  base?: number,
+  growth?: number,
+  ratio?: number,
+  level = 18
+): number | null {
   if (base == null || ratio == null) return null
   const totalLevelUps = level - 1
 
@@ -18,7 +27,7 @@ export function getAttackSpeedAtLevel(base?: number, growth?: number, ratio?: nu
   const levelGrowth = 0.0175 * totalLevelUps + 0.7025
   const bonusAS = growth * totalLevelUps * levelGrowth
   return base + bonusAS * ratio
-}export default () => {
-  return 'Hello Util'
 }
-
+export default () => {
+  return "Hello Util"
+}

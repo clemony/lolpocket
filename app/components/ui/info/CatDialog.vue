@@ -11,11 +11,13 @@ const showClem = ref('/img/cat/clem1.webp')
     <DialogTrigger class="hover:underline underline-offset-2  flex  hover:bg-b2/35  cursor-pointer">
       <slot />
     </DialogTrigger>
+
     <MotionDialogContent class="!rounded-xl top-[10%] translate-y-1/4 !max-w-171">
       <DialogHeader>
         <DialogTitle>
           Clem
         </DialogTitle>
+
         <DialogDescription>
           Clementine Breakfast Cat
         </DialogDescription>

@@ -27,54 +27,35 @@ function handleMenu() {
         LP
       </h3>
     </Btn>
+
+    <NavigationMenu>
+      <NavigationMenuList>
+        <template v-for="item in navLinks" :key="item.name">
+          <NavigationMenuItem v-if="item.link">
+            <NavigationMenuLink @click="item.link ? navigateTo(item.link) : null">
+              {{ item.name }}
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+
+          <NavigationMenuItem v-else-if="item.links">
+            <NavigationMenuTrigger>
+              {{ item.name }}
+            </NavigationMenuTrigger>
+
+            <LazyNavigationMenuContent class="min-w-90 min-h-90">
+              <component :is="item.component" />
+            </LazyNavigationMenuContent>
+          </NavigationMenuItem>
+        </template>
+      </NavigationMenuList>
+    </NavigationMenu>
+
+    <Grow />
+    <!-- -->
+
     <CommandSearch /><!--
     <SidebarAddPocket /> -->
     <!-- <SummonerInGameToggle  /> -->
-    <Grow />
-    <!-- -->
-    <IndicatorMenubar v-model:model-value="tabs" @update:model-value="handleMenu()">
-      <IndicatorTabsList class=" **:text-3  bg-transparent shadow-none inset-shadow-none border-none py-0 overflow-y-visible h-10" :class="{ 'grid-cols-6': as.userAccount.session, 'grid-cols-5': !as.userAccount.session }">
-        <IndicatorTabsTrigger value="/nexus">
-          Nexus
-        </IndicatorTabsTrigger>
-        <IndicatorTabsTrigger value="/summoner">
-          Summoner
-        </IndicatorTabsTrigger>
-
-        <IndicatorTabsTrigger value="/backpack">
-          Backpack
-        </IndicatorTabsTrigger>
-
-        <IndicatorTabsTrigger
-          value="/calculator">
-          Calculator
-        </IndicatorTabsTrigger>
-
-        <IndicatorMenu
-          value="library">
-          <IndicatorMenuTrigger>
-            Library
-          </IndicatorMenuTrigger>
-          <NestedMenu :routes="libraryLinks" :align-offset="-8">
-            <PatchNotesLink />
-          </NestedMenu>
-        </IndicatorMenu>
-
-        <IndicatorMenu
-          v-if="as.userAccount.session"
-          value="data">
-          <IndicatorMenuTrigger>
-            <SummonerName class="capitalize" />
-          </IndicatorMenuTrigger>
-          <NestedMenu :routes="dataRoutes" :align-offset="-15" class="!ml-4">
-            <PredictionsLink />
-          </NestedMenu>
-        </IndicatorMenu>
-
-        <TabIndicator class="*:bg-b2/60 px-1" />
-      </IndicatorTabsList>
-    </IndicatorMenubar>
-
     <AccountSidebar :account="as.userAccount" />
   </nav>
 </template>

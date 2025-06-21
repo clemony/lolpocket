@@ -10,30 +10,37 @@ export function getSkinSplash(key: string, skin: Skin, type: SplashType) {
 
   const folder = computed(() => {
     function id() {
-      const a = skin.id.replace(/(\d+)\..*/, "$1")
+      const a = skin.id.replace(/(\d+)\..*/, '$1')
       return a.length == 1 ? `0${a}` : a
     }
-    return skin.name == "Original" ? "base" : `skin${id()}`
+    return skin.name == 'Original' ? 'base' : `skin${id()}`
   })
 
-  const partialUrl =
-    type == "centered" ? `images/${champ}_splash_centered_${skin.id}`
-    : type == "tile" ? `images/${champ}_splash_tile_${skin.id}`
-    : type == "load" ? `${champ}loadscreen_skin`
-    : null
+  const partialUrl
+    = type == 'centered'
+      ? `images/${champ}_splash_centered_${skin.id}`
+      : type == 'tile'
+        ? `images/${champ}_splash_tile_${skin.id}`
+        : type == 'load'
+          ? `${champ}loadscreen_skin`
+          : null
   return `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/${champ}/skins/${folder.value}/${partialUrl}.jpg`
 }
 
 export function getSplash(key: string, type: SplashType) {
-  if (!key) return
+  if (!key)
+    return
   const ix = useIndexStore()
-  const img =
-    type == "centered" ? ix.centeredByKey(key)
-    : type == "tile" ? ix.tileByKey(key)
-    : type == "load" ? ix.loadScreenByKey(key)
-    : null
+  const img
+    = type == 'centered'
+      ? ix.centeredByKey(key)
+      : type == 'tile'
+        ? ix.tileByKey(key)
+        : type == 'load'
+          ? ix.loadScreenByKey(key)
+          : null
 
-  return `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/${key.toLowerCase()}/skins/${key == "Hwei" ? "skin0/" : "base/"}${type != "load" ? "images/" : ""}${img}.jpg`
+  return `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/${key.toLowerCase()}/skins/${key == 'Hwei' ? 'skin0/' : 'base/'}${type != 'load' ? 'images/' : ''}${img}.jpg`
 }
 
 // function getSplash() {

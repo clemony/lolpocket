@@ -19,6 +19,7 @@ const pocket = ref(props.pocket)
     <icon
       name="iconoir:star-dashed"
       class="absolute z-10 opacity-20 group-hover/star:opacity-15 peer-checked:opacity-20" />
+
     <icon
       id="solid"
       name="iconoir:star-solid"

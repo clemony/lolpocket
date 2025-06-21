@@ -1,13 +1,13 @@
-import fs from "node:fs"
-import path from "node:path"
-import { cleanImageLink, cleanImageNum } from "../utils/cleanImageLink"
-import { markUpdate } from "../utils/mark-update"
+import fs from 'node:fs'
+import path from 'node:path'
+import { cleanImageLink, cleanImageNum } from '../utils/cleanImageLink'
+import { markUpdate } from '../utils/mark-update'
 
-const championsPath = path.resolve("./data/raw/champions-raw-ma.json")
+const championsPath = path.resolve('./data/raw/champions-raw-ma.json')
 
-const championsRaw = fs.readFileSync(championsPath, "utf-8")
+const championsRaw = fs.readFileSync(championsPath, 'utf-8')
 const champions = JSON.parse(championsRaw)
-console.log("💠 - champions:", champions)
+console.log('💠 - champions:', champions)
 
 const fullSkins: FullSkinRecord = {}
 
@@ -19,13 +19,13 @@ for (const key in champions) {
 
   const baseSkins = skins
     .filter(
-      (skin) =>
-        skin.tilePath &&
-        skin.uncenteredSplashPath &&
-        skin.splashPath &&
-        skin.loadScreenPath
+      skin =>
+        skin.tilePath
+        && skin.uncenteredSplashPath
+        && skin.splashPath
+        && skin.loadScreenPath,
     )
-    .map((skin) => ({
+    .map(skin => ({
       tilePath: cleanImageLink(skin.tilePath),
       centeredPath: cleanImageLink(skin.splashPath),
       loadPath: cleanImageLink(skin.loadScreenPath),
@@ -37,20 +37,20 @@ for (const key in champions) {
 
   const allSkins = skins
     .filter(
-      (skin) =>
-        skin.tilePath &&
-        skin.uncenteredSplashPath &&
-        skin.splashPath &&
-        skin.loadScreenPath
+      skin =>
+        skin.tilePath
+        && skin.uncenteredSplashPath
+        && skin.splashPath
+        && skin.loadScreenPath,
     )
-    .map((skin) => ({
+    .map(skin => ({
       name: skin.name,
       id: cleanImageNum(skin.tilePath),
     }))
 
   if (allSkins.length > 0) {
     fullSkins[key] = allSkins
-    console.log("💠 - cleanedSkins:", allSkins)
+    console.log('💠 - cleanedSkins:', allSkins)
   }
 }
 
@@ -61,7 +61,7 @@ const primarySkinsTs = `// ${markUpdate()}
 
 export const baseSkin: SkinRecord = ${JSON.stringify(primarySkins, null, 2)}`
 
-fs.writeFileSync("./app/data/index/skins-full.ts", fullSkinsTs)
-fs.writeFileSync("./app/data/index/skins-base.ts", primarySkinsTs)
+fs.writeFileSync('./app/data/index/skins-full.ts', fullSkinsTs)
+fs.writeFileSync('./app/data/index/skins-base.ts', primarySkinsTs)
 
 console.log(`✅ skins-full.ts and skins-base.ts written as modules`)

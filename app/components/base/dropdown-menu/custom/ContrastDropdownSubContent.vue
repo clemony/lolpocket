@@ -1,26 +1,23 @@
 <script lang="ts" setup>
 import {
-  DropdownMenuPortal
+  DropdownMenuPortal,
 } from 'reka-ui'
+
+defineOptions({
+  inheritAttrs: false,
+})
 
 const props = defineProps<{
   class?: HTMLAttributes['class']
 }>()
-
-defineOptions({
-inheritAttrs: false
-})
 </script>
 
-
-
 <template>
-    <DropdownMenuPortal>
-<DropdownMenuSubContent
-v-bind="$attrs"
-    :class="cn(' rounded-lg ml-1  border-b3/50 border  bg-neutral/80 backdrop-blur-md p-1 text-nc ', props.class)"
-  >
-    <slot />
-  </DropdownMenuSubContent>
-    </DropdownMenuPortal>
+  <DropdownMenuPortal>
+    <DropdownMenuSubContent
+      v-bind="$attrs"
+      :class="cn(' rounded-lg ml-1  border-b4/30 border  bg-neutral/74 backdrop-blur-lg p-1 text-nc/80 text-2 ', props.class)">
+      <slot />
+    </DropdownMenuSubContent>
+  </DropdownMenuPortal>
 </template>

@@ -13,50 +13,51 @@ const winrateDiff = computed (() => {
 </script>
 
 <template>
-
-      <!--     <NoDataOverlay v-if="!summoner.simplifiedMatches.length" /> -->
-
+  <!--     <NoDataOverlay v-if="!summoner.simplifiedMatches.length" /> -->
 
   <div class="stats border-shadow-sm w-210 h-34">
     <div class="stat items-center">
       <div class="stat-figure">
         <div class="size-8 leading-none tracking-wide font-mono font-bold relative grid place-items-center">
-    
-        <span class="text-9 object-center absolute object-center  right-1.5">
-          S+
-        </span>
-    
-          </div>
+          <span class="text-9 object-center absolute object-center  right-1.5">
+            S+
+          </span>
+        </div>
       </div>
+
       <div class="stat-title">
         Pocket Pick
       </div>
+
       <div class="stat-value text-primary">
-           {{ champion.champion }}
+        {{ champion.champion }}
       </div>
+
       <div class="stat-desc">
-         games in {{ ms.af.patch }}
+        games in {{ ms.af.patch }}
       </div>
     </div>
 
     <div class="stat">
       <div class="stat-figure text-secondary">
-
         <div class="size-8 leading-none tracking-wider  !font-black relative grid place-items-center">
-          <icon name="teenyicons:heart-circle-solid"  class="size-8 text-bc  -mt-0.5 dst"/>
-  
-          </div>
+          <icon name="teenyicons:heart-circle-solid" class="size-8 text-bc  -mt-0.5 dst" />
+        </div>
       </div>
+
       <div class="stat-title">
         Participation
       </div>
+
       <div class="stat-value">
-{{champion.avgKp}}%
+        {{ champion.avgKp }}%
       </div>
+
       <div class="stat-desc !tracking-wide">
-               {{champion.avgKills}}&hairsp;&#47;&hairsp;{{champion.avgDeaths}}&hairsp;&#47;&hairsp;{{champion.avgAssists}}
+        {{ champion.avgKills }}&hairsp;&#47;&hairsp;{{ champion.avgDeaths }}&hairsp;&#47;&hairsp;{{ champion.avgAssists }}
       </div>
     </div>
+
     <div class="stat">
       <div class="stat-figure text-secondary">
         <div class="avatar online shadow-md drop-shadow-sm rounded-full size-16 relative grid place-items-center">
@@ -65,14 +66,17 @@ const winrateDiff = computed (() => {
           </div>
         </div>
       </div>
+
       <div class="stat-value">
         86% wr
       </div>
+
       <div class="stat-title">
-       Winrate
+        Winrate
       </div>
+
       <div class="stat-desc">
-        {{champion.games}} games played
+        {{ champion.games }} games played
       </div>
     </div>
   </div>

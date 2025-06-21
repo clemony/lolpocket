@@ -47,6 +47,7 @@ watchEffect(async () => {
 
         <div class="flex gap-3 pl-3 items-center w-full">
           <img :src="`/img/runes/${rune.path}.webp`" class="h-5 w-auto dst" />
+
           <span class="text-4 font-medium grow">{{ rune.path }}</span>
         </div>
       </div>

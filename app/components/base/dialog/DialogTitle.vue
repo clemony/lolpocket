@@ -3,7 +3,7 @@ import type { DialogTitleProps } from 'reka-ui'
 import { DialogTitle, useForwardProps, useForwardPropsEmits } from 'reka-ui'
 
 const props = defineProps<DialogTitleProps & { class?: HTMLAttributes['class'] }>()
-  const delegatedProps = reactiveOmit(props, 'class')
+const delegatedProps = reactiveOmit(props, 'class')
 
 const forwarded = useForwardProps(delegatedProps)
 </script>
@@ -16,8 +16,7 @@ const forwarded = useForwardProps(delegatedProps)
         'text-lg font-semibold leading-none tracking-tight',
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </DialogTitle>
 </template>

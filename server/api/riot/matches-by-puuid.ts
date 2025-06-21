@@ -10,7 +10,6 @@ export default defineEventHandler(async (event) => {
     count: Number(query.count ?? 20),
   })
   console.log('💠 - defineEventHandler - matches:', matches)
-  
 
   return matches
 })

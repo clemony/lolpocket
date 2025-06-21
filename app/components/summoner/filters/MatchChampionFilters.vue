@@ -36,10 +36,12 @@ const displayChampions = computedAsync (() => {
                   class="size-15 scale-114" />
               </div>
             </div>
+
             <div class="grid size-full dst  gap-1.5  font-medium">
               <p class="!text-3 self-end">
                 {{ champion.champion }}
               </p>
+
               <p class="text-nowrap text-2 ">
                 {{ `${champion.games} Games` }}
               </p>
@@ -49,6 +51,7 @@ const displayChampions = computedAsync (() => {
               <p class=" self-end dst font-medium text-nowrap">
                 {{ champion.wins }}&nbsp;Win
               </p>
+
               <p class=" font-medium  text-nowrap">
                 {{ champion.games - champion.wins }}&nbsp;Loss
               </p>

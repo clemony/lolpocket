@@ -14,6 +14,7 @@ const emit = defineEmits(['update:popover'])
       <icon name="f7:delete-right" />
       Remove Item
     </ContrastGhostButton>
+
     <ContrastGhostButton class="btn-sm text-2 rounded-lg pl-2.5" @click="emit('update:popover', 'data')">
       <icon name="bi:clipboard-data" />
       Item Data

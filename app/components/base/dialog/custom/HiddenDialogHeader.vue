@@ -13,6 +13,7 @@ const props = defineProps<{
       <DialogTitle>
         {{ props.title }}
       </DialogTitle>
+
       <DialogDescription>
         {{ props.desc }}
       </DialogDescription>

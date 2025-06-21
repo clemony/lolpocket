@@ -43,6 +43,7 @@ const ix = useIndexStore()
           :name="shard.slotName"
           :value="shard"
           class="peer hidden" />
+
         <input
           v-if="shard.slot == 3"
           v-model="set.shards[3]"

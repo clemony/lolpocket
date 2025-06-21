@@ -1,9 +1,16 @@
 <script lang="ts" setup>
-const { video } = defineProps<{
-  video: string
+const { src } = defineProps<{
+  src: string
 }>()
 
 const videoRef = ref<HTMLMediaElement>()
+
+function canPlay() {
+  if (!videoRef.value)
+    return
+
+  videoRef.value.play()
+}
 </script>
 
 <template>
@@ -17,9 +24,9 @@ const videoRef = ref<HTMLMediaElement>()
     controlslist=" nodownload "
     playsinline
     class="size-full  overflow-hidden   object-cover"
-    @canplay="videoRef.play()">
+    @canplay="canPlay()">
     <source
-      :src="video"
+      :src="src"
       type="video/webm" />
 
   </video>

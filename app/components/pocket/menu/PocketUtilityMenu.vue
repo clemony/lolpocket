@@ -11,8 +11,7 @@ const pocket = ref(props.pocket)
     <button
       class="group btn btn-ghost btn-lg"
 
-      @click="duplicatePocket(pocket)"
-    >
+      @click="duplicatePocket(pocket)">
       <span>Duplicate</span>
     </button>
 
@@ -26,8 +25,7 @@ const pocket = ref(props.pocket)
 
     <button
       class="group btn btn-ghost btn-lg cursor-pointer "
-      @click="deletePocket(pocket)"
-    >
+      @click="deletePocket(pocket)">
       Send Pocket to Trash
     </button>
   </div>

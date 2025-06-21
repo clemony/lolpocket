@@ -1,10 +1,10 @@
 declare global {
-  type PathName =
-    | "Precision"
-    | "Domination"
-    | "Sorcery"
-    | "Resolve"
-    | "Inspiration"
+  type PathName
+    = | 'Precision'
+      | 'Domination'
+      | 'Sorcery'
+      | 'Resolve'
+      | 'Inspiration'
   type RuneKey = string
   type PathSlots = Rune[]
   type PathRecord = Record<PathName, PathSlots[]>

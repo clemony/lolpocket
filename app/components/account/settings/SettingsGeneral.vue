@@ -38,14 +38,17 @@ const settingsData = {
         <h4 class=" mb-2">
           {{ item.title }}
         </h4>
+
         <p class=" opacity-80 text-balance tracking-tight">
           {{ item.description }}
         </p>
       </div>
+
       <label
         class="flex w-full cursor-pointer items-end gap-4"
         @click="toggleSetting(item.model)">
         <Switch v-model:checked="item.model" class="drop-shadow-xs" />
+
         <span class="label-text w-full text-left">
           {{ item.text }}
         </span>

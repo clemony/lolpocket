@@ -1,10 +1,9 @@
 <script lang="ts" setup>
-import { reactiveOmit } from '@vueuse/core';
-import type { StepperIndicatorProps } from 'reka-ui';
-import type { HTMLAttributes } from 'vue';
+import { reactiveOmit } from '@vueuse/core'
+import type { StepperIndicatorProps } from 'reka-ui'
+import type { HTMLAttributes } from 'vue'
 
-import { StepperIndicator, useForwardProps } from 'reka-ui';
-
+import { StepperIndicator, useForwardProps } from 'reka-ui'
 
 const props = defineProps<StepperIndicatorProps & { class?: HTMLAttributes['class'] }>()
 
@@ -25,8 +24,7 @@ const forwarded = useForwardProps(delegatedProps)
       // Completed
       'group-data-[state=completed]:bg-accent group-data-[state=completed]:text-accent-foreground',
       props.class,
-    )"
-  >
+    )">
     <slot />
   </StepperIndicator>
 </template>

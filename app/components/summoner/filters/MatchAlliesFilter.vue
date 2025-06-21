@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ListboxContent,  ListboxItem, ListboxRoot } from 'reka-ui'
+import { ListboxContent, ListboxItem, ListboxRoot } from 'reka-ui'
 
 const { summoner } = defineProps<{
   summoner: Summoner
@@ -13,7 +13,7 @@ const winrateFormula = ref('absolute')
 </script>
 
 <template>
-  <Field  class="p-0 w-120">
+  <Field class="p-0 w-120">
     <ListboxRoot v-model:model-value="ms.mf.ally" class="w-full overflow-y-scroll overscroll-auto px-1.5  h-120 " :multiple="false" @entry-focus.prevent>
       <ListboxContent class="w-full py-4 ">
         <template v-if="!loading">
@@ -24,9 +24,11 @@ const winrateFormula = ref('absolute')
 
               <icon v-if="ally == topBayesianTeammates[0]" v-tippy="'Great Teamwork'" name="ion:star" class="size-3.5 dst  **:!text-bc/80 " />
             </div>
+
             <div class="text-2 text-end">
               {{ ally.games }}
             </div>
+
             <div class="text-2 text-end">
               {{ winrateFormula == 'absolute' ? ally.winrate : ally.bayesianWinrate }} %
             </div>
@@ -36,6 +38,7 @@ const winrateFormula = ref('absolute')
         <template v-else>
           <div v-for="i in 10" :key="i" class="grid py-3 grid-cols-[20px_1fr] gap-3 items-center w-full justify-items-end btn btn-ghost pointer-events-none opacity-60">
             <Skeleton class="rounded-full size-7" />
+
             <Skeleton class="w-full h-5" />
           </div>
         </template>

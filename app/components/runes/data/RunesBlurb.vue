@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-
-const { currentPath, title} = defineProps<{
+const { currentPath, title } = defineProps<{
   currentPath: string | null
   title?: string
 }>()
@@ -45,13 +44,15 @@ const a = computed(() => {
 </script>
 
 <template>
-  <transition-fade group v-if="currentPath == currentPath">
+  <transition-fade v-if="currentPath == currentPath" group>
     <div class="flex items-center gap-6 leading-none">
       <h1 class="dst transition-all duration-300 text-8">
         {{ currentPath ?? (title || 'Runes') }}
       </h1>
+
       <span class="pt-1 text-2 lowercase">{{ a.tag ?? 'select a path' }}</span>
     </div>
+
     <p class="text-4 mt-2.5 font-serif">
       {{ a.description || 'Precision, Domination, Sorcery, Resolve, Inspiration' }}.
     </p>

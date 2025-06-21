@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { motion } from 'motion-v'
+
 const emit = defineEmits(['update:menu'])
 
 const menuOpen = ref(false)
@@ -23,21 +25,19 @@ const variants = {
 
 <template>
   <AnimatePresence as="div" class="absolute grid place-items-center right-4 top-4 z-3">
-
     <Motion
       :animate="menuOpen ? 'open' : 'closed'"
       :variants="variants"
       :transition="{
-        type: 'ease-in-out',
+        ease: 'easeInOut',
         duration: 0.4,
       }"
-      as="button"
       class="btn z-1 peer  btn-md cursor-pointer pointer-events-auto   relative overflow-hidden justify-center items-center  w-6 px-0  !bg-[#00000000] !border-[#00000000] group-hover:!bg-[#000000] group-hover:!border-[#464646]  hover:!bg-[#00000090] hover:!border-[#46464690] cursor-pointer"
       :style="{ '--depth': 'none' }"
-      :class="{'!bg-[#00000099]  !z-10': menuOpen }"
+      :class="{ '!bg-[#00000099]  !z-10': menuOpen }"
       @click.stop.prevent="handleClick()">
       <AnimatePresence mode="popLayout">
-        <Motion
+        <motion.button
           v-if="!menuOpen"
           key="menu-more"
           as="div"
@@ -48,7 +48,7 @@ const variants = {
             duration: 0.5,
           }">
           <icon name="more" class="rotate-90 !text-[rgba(255,255,255,0.7)]  size-6 dst " />
-        </Motion>
+        </motion.button>
 
         <Motion
           v-if="menuOpen"

@@ -8,7 +8,9 @@ const route = useRoute()
   <LayoutGroup>
     <motion.div :transition="{}" class="flex flex-nowrap h-screen w-screen overflow-hidden" :class="{ '!bg-b2/10': route.name == 'card' }" layout>
       <AppNavbar />
+
       <AppCommand />
+
       <div class="flex h-screen min-h-screen w-full overflow-hidden relative grow">
         <div class="inset-0 left-0 top-0 z-0 absolute" :class="{ 'overflow-y-auto ': route.path != '/' }">
           <slot />

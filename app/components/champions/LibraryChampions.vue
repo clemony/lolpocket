@@ -20,18 +20,18 @@ const loaded = ref(false)
         <LibraryChampionCard v-show="key" :champ-key="key" class="min-w-56 max-w-62 h-78" hydrate-on-visible @loaded="loaded = true" />
 
       </label>
+
       <div class="w-58 h-78 grow" />
     </transition-slide>
 
     <div v-if="selectedChampion" group class="size-full overflow-hidden relative" :class="{ 'max-w-0 ': !selectedChampion, 'max-w-full ': selectedChampion }">
-
       <div class="absolute inset-0 left-0 top-1  mb-4">
-      <button class="btn group/btn btn-circle border-none top-3 left-3 z-2 btn-ghost absolute" @click="selectedChampion = null">
-        <icon name="x-sm" class="text-white/70" />
-      </button>
-      <ChampionData :champion-key="selectedChampion" />
+        <button class="btn group/btn btn-circle border-none top-3 left-3 z-2 btn-ghost absolute" @click="selectedChampion = null">
+          <icon name="x-sm" class="text-white/70" />
+        </button>
+
+        <ChampionData :champion-key="selectedChampion" />
+      </div>
     </div>
-    
-  </div>
   </transition-slide>
 </template>

@@ -22,8 +22,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
         'flex h-9 items-center space-x-1 rounded-md border border-b2  bg-b1 p-1 shadow-sm',
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </MenubarRoot>
 </template>

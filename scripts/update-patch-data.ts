@@ -14,7 +14,6 @@ function run(label: string, cmd: string) {
 
 async function main() {
   try {
-
     // --- Patch ---
     run('fetch:patch', 'tsx scripts/fetch-patch.ts')
 
@@ -28,7 +27,7 @@ async function main() {
     run('generate:champions', 'tsx scripts/generate-champions.ts')
     run('generate:champion-skins', 'tsx scripts/generate-champion-skins.ts')
     run('generate:champions-lite', 'tsx scripts/generate-champions-lite.ts')
-   run('generate:max-stats', 'tsx scripts/generate-max-stats.ts')
+    run('generate:max-stats', 'tsx scripts/generate-max-stats.ts')
 
     // --- Runes ---
     run('fetch:runes', 'tsx scripts/fetch-runes.ts')

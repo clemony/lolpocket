@@ -9,7 +9,9 @@ const { data, type } = defineProps<{
   <div
     class="w-full    text-pretty leading-normal  gap-x-1 align-middle first:mt-2 not-first:mt-3">
     <span v-if="data.unique" class=" italic  !text-precision/90 tracking-tight">Unique {{ type }}</span>
+
     <span v-if="data.name" class="italic !text-precision/90 tracking-tight"> -&nbsp;{{ data.name }}</span>
+
     <span v-if="data.unique || data.name" class=" !text-precision/90">
       :&nbsp;
     </span>

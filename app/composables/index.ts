@@ -21,4 +21,3 @@ export * from './useFetchSummonerData'
 export * from './useRunes'
 export * from './useSearch'
 export * from './useSummoner'
-

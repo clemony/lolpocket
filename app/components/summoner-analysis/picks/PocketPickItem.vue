@@ -33,6 +33,7 @@ console.log('💠 - itemColor - itemColor:', itemColor)
         <p class="text-3 font-medium tracking-tight text-bc/60">
           {{ bayesianItems[itemNum].games }} Total Matches
         </p>
+
         <p class="text-3 font-medium text-bc/60">
           {{ bayesianItems[itemNum].win }}W {{ bayesianItems[itemNum].loss }}L
         </p>
@@ -49,22 +50,27 @@ console.log('💠 - itemColor - itemColor:', itemColor)
         </span>
       </div>
     </div>
+
     <Separator />
 
     <div class="dst text-2 flex justify-between px-6">
       <div class="items-end grid text-2 font-medium text-bc/60">
         <Grow />
+
         <p>
           {{ ms.af.patch }}
         </p>
+
         <p class="-mb-px">
           Winrate
         </p>
       </div>
+
       <p class="flex flex-col  gap-1 ">
         <span class="mb-px  opacity-60 font-medium">
           Absolute
         </span>
+
         <span class="text-7 font-bold dst flex text-bc">
           {{ bayesianItems[itemNum].winrate.toFixed(2) }}
           <icon name="ph:percent-bold" class="size-5" />
@@ -73,6 +79,7 @@ console.log('💠 - itemColor - itemColor:', itemColor)
 
       <p class="flex flex-col gap-1 ">
         <span class="mb-px  opacity-60 font-medium">Weighted</span>
+
         <span class="text-7 dst font-bold text-bc flex">
           {{ bayesianItems[itemNum].bayesianWinrate.toFixed(2) }}
           <icon name="ph:percent-bold" class="size-5" />

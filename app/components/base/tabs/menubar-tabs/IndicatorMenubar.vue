@@ -32,7 +32,7 @@ watch(
 
 onMounted (() => {
   if (route.path != '/')
-  route.meta.section.toString().charAt(0) != '/' ? tabs.value = route.path : tabs.value = route.meta.section.toString()
+    route.meta.section.toString().charAt(0) != '/' ? tabs.value = route.path : tabs.value = route.meta.section.toString()
 })
 </script>
 

@@ -75,18 +75,17 @@ function handleReset() {
   is.pItemFilter.result = null
 }
 
-
 const variants = {
   collapsed: {
     borderRadius: '100%',
     gap: 0,
-    padding: 0
+    padding: 0,
   },
   expanded: {
     width: '220px',
     borderRadius: '1.2rem',
     padding: '10px',
-    gap: '10px'
+    gap: '10px',
   },
 }
 
@@ -102,36 +101,33 @@ const inputVariants = {
 }
 
 watchEffect(() => {
-if (searchQuery.value == '' || searchQuery.value == undefined)
-searchQuery.value = null
+  if (searchQuery.value == '' || searchQuery.value == undefined)
+    searchQuery.value = null
 })
 </script>
 
 <template>
-
-<motion.div
+  <motion.div
     :class="cn('border bg-neutral/84 text-nc btn-neutral  btn-circle relative flex btn   rounded-full items-center', props.class)"
     :variants="variants"
     initial="collapsed"
     :transition="{
       duration: 0.3,
-      type: 'easeOut' }"
+      ease: 'easeOut' }"
     while-hover="expanded"
-    :animate="searchQuery != null  ? 'expanded' : 'collapsed'">
+    :animate="searchQuery != null ? 'expanded' : 'collapsed'">
     <motion.div :variants="inputVariants">
       <slot>
-      <Input v-model="searchQuery" type="text" class="size-full pl-5 border-0 shadow-none py-0 m-0" :placeholder="props.placeholder" />
+        <Input v-model="searchQuery" type="text" class="size-full pl-5 border-0 shadow-none py-0 m-0" :placeholder="props.placeholder" />
       </slot>
     </motion.div>
-    <button  @click="handleReset"  :disabled="searchQuery == null" class="btn btn-ghost btn-circle btn-xs  hover:bg-b3/40 absolute  z-2 left-1.5 top-1.5 pointer-events-auto">
-      <icon name="x-sm" v-if="searchQuery" class="size-5.5 shrink-0 text-bc/70 absolute dst"/>
-      <icon v-else   name="search" class="size-4.75 shrink-0 text-bc/70 absolute   dst" />
+
+    <button :disabled="searchQuery == null" class="btn btn-ghost btn-circle btn-xs  hover:bg-b3/40 absolute  z-2 left-1.5 top-1.5 pointer-events-auto" @click="handleReset">
+      <icon v-if="searchQuery" name="x-sm" class="size-5.5 shrink-0 text-bc/70 absolute dst" />
+
+      <icon v-else name="search" class="size-4.75 shrink-0 text-bc/70 absolute   dst" />
     </button>
-
-
-    
   </motion.div>
-
 </template>
 
 <style></style>

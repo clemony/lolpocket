@@ -6,33 +6,64 @@ import { UseClipboard } from '@vueuse/components'
 const copyMsg = computed (() => {
   return copied ? 'Copied!' : 'Copy'
 }) */
+
+const links = [
+  {
+    name: 'Discord',
+    link: 'https://discord.gg/Jzuu7bYTZY',
+    icon: 'prime:discord',
+    iconClass: 'size-10 ',
+  },
+  {
+    name: 'Githu',
+    link: 'https://github.com/clemony/lolpocket',
+    icon: 'prime:github',
+    iconClass: 'size-11 ',
+  },
+]
 </script>
 
 <template>
-  <footer class="h-24 max-h-24 min-h-24 footer sm:footer-horizontal bg-neutral text-nc items-center p-6">
-    <aside class="grid-flow-col items-center">
-      <div class="font-bold text-9">
+  <footer class="h-32 max-h-32 flex min-h-32 w-full footer sm:footer-horizontal bg-neutral text-nc items-center p-6 z-2">
+    <aside class="flex grow items-center gap-6">
+      <h1 class="font-bold text-10">
         LP
-      </div>
-      <p class="max-w-4/5">
-        Lolpockets isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.
+      </h1>
+
+      <p class="max-w-4/5 leading-5">
+        {{ riotDisclaimer }}
       </p>
     </aside>
-    <nav class="grid-flow-col gap-2 items-center justify-center *:grid *:place-items-center">
-      <a v-tippy="{ content: 'Discord', placement: 'top', offset: [0, 13] }" href="https://discord.gg/Jzuu7bYTZY" target="_blank" class="size-12">
-        <icon name="prime:discord" class="size-11 text-nc" />
-      </a>
+
+    <menu class="grid-flow-col gap-3 items-center justify-self-end justify-end *:grid *:place-items-center">
+      <NuxtLink
+        v-for="link in links"
+        :key="link.name"
+        v-tippy="{
+          content: link.name,
+          placement: 'top',
+          offset: [0, 13],
+          followCursor: false,
+        }"
+        external
+        :href="link.link"
+        target="_blank"
+        class="size-12 grid place-items-center *:text-nc">
+        <icon :name="link.icon" :class="link.iconClass" />
+      </NuxtLink>
+
       <a
-        class="size-12"
-      >
-        <tippy tag="button" content-tag="div" content-class="content-wrapper" interactive :offset="[0, 13]" :follow-cursor="false" placement="top" :hide-on-click="false">
+        class="size-12">
+        <tippy tag="button" content-tag="div" :follow-cursor="false" content-class="content-wrapper" interactive :offset="[0, 13]" placement="top" :hide-on-click="false">
           <template #default>
-            <icon name="teenyicons:at-outline" class="size-8 stroke-1/2 shrink-0 text-nc" />
+            <icon name="teenyicons:at-outline" class="size-7 stroke-1/2 shrink-0 text-nc" />
           </template>
+
           <template #content>
             <UseClipboard v-slot="{ copy, copied }" source="contact@lolpocket.win">
               <button v-tippy="{ content: !copied ? 'Copy' : 'Copied!', placement: 'top', offset: [0, 5], hideOnClick: false }" class="flex items-center  py-2 gap-2" @click="copy()">
                 <span>contact@lolpocket.win</span>
+
                 <icon name="copy" class="*:text-nc !size-4" />
 
               </button>
@@ -40,10 +71,7 @@ const copyMsg = computed (() => {
           </template>
         </tippy>
       </a>
-      <a v-tippy="{ content: 'Github', placement: 'top', offset: [0, 13] }" href="https://github.com/clemony/lolpocket" target="_blank" class="size-12">
-        <icon name="prime:github" class="size-12 text-nc" />
-      </a>
-    </nav>
+    </menu>
   </footer>
 </template>
 

@@ -52,12 +52,15 @@ watchEffect(() => {
         <RadioGroup v-model:model-value="tabs" class="tabs absolute top-8 flex  flex-row-reverse flex-nowrap tabs-lift tabs-xl w-full grow pb-13.25 ">
           <label class="aspect-square has-disabled:pointer-events-none has-disabled:opacity-60 size-13 grid place-items-center ">
             <input v-model="showFilter" type="checkbox" :disabled="tabs == 'calculator'" class="peer hidden" />
+
             <div class="rounded-full size-6 grid place-items-center peer-checked:shadow-sm peer-checked:drop-shadow-sm peer-checked:bg-neutral/90 peer-checked:stroke-[1.5] hover:stroke-[1.4] tldr-20  peer-checked:*:text-nc">
               <icon name="teenyicons:filter-outline" class="dst rotate-90 shrink-0 size-3.75 " />
             </div>
           </label>
+
           <TabResizeHandle v-for="tab in tabValues" :key="tab.name" :active="tabs == tab.value" class="group text-3">
             <RadioGroupItem :value="tab.value" class="peer hidden absolute pointer-events-none" />
+
             <icon :name="tab.icon" class="shrink-0 size-3.75 " />
             {{ tab.name }}
           </TabResizeHandle>
@@ -70,6 +73,7 @@ watchEffect(() => {
             backgroundColor: 'color-mix(in oklch, var(--color-b2) 40%, white 60%)',
           }">
           <LazyDraggableItemList v-if="tabs != 'calculator'" :pocket="pocket" />
+
           <PocketItemFilters :visible="showFilter" />
         </Field>
       </ResizablePanel>

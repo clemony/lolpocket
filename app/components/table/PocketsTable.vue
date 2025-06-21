@@ -44,7 +44,6 @@ async function onGridReady(params: GridReadyEvent) {
   await params.api
   gridApi.value = params.api
   ps.pocketGridApi = gridApi.value
-
 }
 
 function handleRightClick() {
@@ -53,7 +52,6 @@ function handleRightClick() {
     gridApi.value.setGridOption('rowData', rowData.value)
   })
 }
-
 
 const pinned = computed (() => {
   return ps.pockets.filter(p => p.location.pinned == true)
@@ -68,7 +66,7 @@ function refreshGrid() {
 
 const gridOptions: GridOptions<Pocket> = {
   columnHoverHighlight: false,
-  pinnedTopRowData:  pinned.value,
+  pinnedTopRowData: pinned.value,
   rowHeight: 70,
   rowSelection: {
     mode: 'multiRow',
@@ -76,7 +74,7 @@ const gridOptions: GridOptions<Pocket> = {
     headerCheckbox: false,
     enableClickSelection: true,
   },
-/*    rowClassRules: {
+  /*    rowClassRules: {
   '!hidden': (params) => {return pinnedKeys.includes(params.data.key) ? true : false}
 }, */
   defaultColDef: {
@@ -300,13 +298,10 @@ watch(ps.pockets, (newValue, oldValue) => {
   }
 })
 
-
-
-
 ModuleRegistry.registerModules([AllCommunityModule])
 
 function onMouseEnter(event) {
-  //console.log("💠 - onMouseEnter - event:", event)
+  // console.log("💠 - onMouseEnter - event:", event)
 
 }
 
@@ -315,14 +310,13 @@ function handleClick(event) {
   event.node.setSelected(true)
   event.node.isSelected()
   pocketData.value = event.node.data
-  //console.log('💠 - handleClick -  event.node.data:', event.node.data)
+  // console.log('💠 - handleClick -  event.node.data:', event.node.data)
 }
 
 const pocketContextTarget = ref()
 </script>
 
 <template>
-
   <PocketContextMenu class="size-full" :pocket-data="pocketData" @update:grid="refreshGrid()">
     <AgGridVue
       :grid-options="gridOptions"
@@ -336,11 +330,9 @@ const pocketContextTarget = ref()
       :get-row-id="getRowId"
       @grid-ready="onGridReady"
       @cell-mouse-over="onMouseEnter($event)"
-      @cell-context-menu="handleClick($event)"
-    >
+      @cell-context-menu="handleClick($event)">
     </AgGridVue>
   </PocketContextMenu>
-
 </template>
 
 <style>

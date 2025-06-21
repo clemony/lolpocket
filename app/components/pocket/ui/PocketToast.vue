@@ -16,8 +16,8 @@ onMounted(() => {
   <div class="flex gap-3">
     <PocketIcon
       :pocket="pocket" :url="pocket.icon"
-      class="rounded-md **:rounded-md"
-    />
+      class="rounded-md **:rounded-md" />
+
     <div class="flex flex-col gap-3">
       <h5 class="!text-4 pt-0.5 leading-none tracking-tight">
         New Pocket Created!
@@ -30,15 +30,16 @@ onMounted(() => {
         </span>
         created. Click the button below to view or begin editing.
       </p>
+
       <div class="flex">
         <Grow />
+
         <NuxtLink :to="`/pocket/${pocket.key}`">
           <Button
             ref="viewButton"
             variant="outline"
             size="sm"
-            class=""
-          >
+            class="">
             View
           </Button>
         </NuxtLink>

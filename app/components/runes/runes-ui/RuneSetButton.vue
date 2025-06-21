@@ -44,6 +44,7 @@ const bgStyle = computed (() => {
     <div class="grid place-items-center aspect-square  size-full ">
       <div class="p-1.5 size-full grid place-items-center">
         <i-rune-icon v-if="!set.keystone || !set[0].path" class="size-6.5 opacity-40 dst" />
+
         <NuxtImg
           v-else
           :src="`/img/runes/${set[0].path}/${set.keystone}.webp`"

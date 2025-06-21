@@ -25,6 +25,7 @@ const tabListClass = 'bg-b1/45  shadow-smooth h-18 w-120 justify-evenly gap-5  o
         mode="out-in">
         <RunesBlurb :current-path="selectedPath" layout-id="path1" />
       </Transition>
+
       <div class="shadow-smooth relative h-18 w-120 rounded-xl">
         <div
           class="gradient absolute z-0 size-full rounded-xl"
@@ -45,6 +46,7 @@ const tabListClass = 'bg-b1/45  shadow-smooth h-18 w-120 justify-evenly gap-5  o
               :value="path"
               class="hidden"
               name="selected-primary" />
+
             <Img
               :img="`/img/runes/${path}.webp`"
               :alt="`${path} icon`"
@@ -55,8 +57,6 @@ const tabListClass = 'bg-b1/45  shadow-smooth h-18 w-120 justify-evenly gap-5  o
           </label>
         </div>
       </div>
-
-
     </div>
   </div>
 </template>

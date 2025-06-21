@@ -1,3 +1,1 @@
-
-export { PopoverArrow, PopoverClose,PopoverRoot, PopoverTrigger, PopoverAnchor } from 'reka-ui'
-
+export { PopoverAnchor, PopoverArrow, PopoverClose, PopoverRoot, PopoverTrigger } from 'reka-ui'

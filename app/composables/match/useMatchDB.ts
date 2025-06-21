@@ -3,9 +3,9 @@ import { matchDB } from 'stores/matchDB'
 
 export function useMatchDexie() {
   const addMatches = async (matches: MatchData[]) => {
-    console.log("💠 - addMatches - MatchData:")
+    console.log('💠 - addMatches - MatchData:')
     await matchDB.matchData.bulkPut(matches)
-    console.log("💠 - addMatches - matches:", matches)
+    console.log('💠 - addMatches - matches:', matches)
   }
 
   const getAllMatches = async () => {
@@ -21,7 +21,7 @@ export function useMatchDexie() {
   }
 
   const refreshMatches = async () => {
-    console.log("💠 - refreshMatches - matchDB.matchData.toArray():", matchDB.matchData.toArray())
+    console.log('💠 - refreshMatches - matchDB.matchData.toArray():', matchDB.matchData.toArray())
     return await matchDB.matchData.toArray()
   }
 

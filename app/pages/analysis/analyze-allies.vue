@@ -8,7 +8,7 @@ definePageMeta({
   altName: 'allies',
   path: '/analysis/allies',
   section: 'analysis',
-  icon: 'typcn:heart'
+  icon: 'typcn:heart',
 })
 </script>
 

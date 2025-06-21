@@ -23,18 +23,21 @@ onMounted (async () => {
     <ContextMenuTrigger class="">
       <slot />
     </ContextMenuTrigger>
+
     <ContextMenuPortal>
       <ContextMenuContent class="context-menu w-74 h-max z-999 pointer-events-auto text-2  **:text-2" @interact-outside="emit('update:grid')">
         <ContextMenuItem icon="basil:add-outline" icon-class="!size-5.5 opacity-60 -mt-0.5 shrink-0" class=" [&_svg]:stroke-2">
           New Pocket
           <ContextMenuShortcut>{{ getDeviceKey() }}P</ContextMenuShortcut>
         </ContextMenuItem>
+
         <ContextMenuSeparator />
 
         <ContextMenuSub>
           <ContextMenuSubTrigger>
             Sort Table
           </ContextMenuSubTrigger>
+
           <ContextMenuPortal>
             <ContextMenuSubContent>
               <ContextMenuRadioGroup v-model="sort">
@@ -42,9 +45,11 @@ onMounted (async () => {
                   By Item ID
                   <ContextMenuShortcut>⌘⇧B</ContextMenuShortcut>
                 </ContextMenuRadioItem>
+
                 <ContextMenuRadioItem value="az" @select.prevent>
                   Alphabetically
                 </ContextMenuRadioItem>
+
                 <ContextMenuRadioItem value="price" @select.prevent>
                   Price
                 </ContextMenuRadioItem>
@@ -75,11 +80,13 @@ onMounted (async () => {
         </ContextMenuSub> -->
 
           <ContextMenuSeparator />
+
           <ContextMenuItem>
             <NuxtLink :to="`/pocket/${pocket.key}/`">
               Edit
             </NuxtLink>
           </ContextMenuItem>
+
           <ContextMenuItem @click="duplicatePocket(pocket)">
             Duplicate
 
@@ -89,11 +96,13 @@ onMounted (async () => {
           <ContextMenuItem inset disabled>
             Pin
           </ContextMenuItem>
+
           <ContextMenuItem inset disabled>
             Archive
           </ContextMenuItem>
 
           <ContextMenuSeparator />
+
           <ContextMenuItem @click="deletePocket(pocket.key)">
             Delete
           </ContextMenuItem>

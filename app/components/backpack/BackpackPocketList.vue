@@ -27,19 +27,21 @@ onMounted (() => {
     <div class="mt-2   pt-3 flex items-center font-semibold text-bc/70 tracking-tight">
       Pockets
     </div>
+
     <div class="">
       <SidebarAddPocket class="w-full btn bg-b2/40 border-b3/40 my-3 btn-md" />
+
       <LazyCollapsiblePinned />
 
       <LazyCollapsible v-model:open="all" :disabled="!ps.pockets || ps.pockets.length == null || ps.pockets.length == 0" class="group/all">
-        <SidebarCollapsibleTrigger as-child>
+        <SidebarCollapsibleTrigger class="gap-3">
           <i-ui-pocket class="size-5 -mt-px -left-0.25 group-not-disabled/pin:text-bc group-disabled/all:text-bc/35" />
 
-
-            All
+          All
 
           <SidebarBadge class="font-mono !text-1 pr-4">
             <span v-if="!ps.pockets || ps.pockets.length == null || ps.pockets.length == 0">0</span>
+
             <span v-else>
               {{ ps.pockets.length }}
             </span>
@@ -48,32 +50,33 @@ onMounted (() => {
 
         <SidebarCollapsibleContent class="pb-6">
           <NuxtLink v-for="pocket in ps.pockets" :key="pocket.key" :to="`/pocket/${pocket.key}`">
-            <Btn v-if="pocket">
+            <Btn v-if="pocket" class="w-full btn-md gap-3">
               <PocketIcon :url="pocket.icon" class="size-5 rounded-full" size="29-2x" />
 
-                {{ pocket.name }}
-
+              {{ pocket.name }}
             </Btn>
           </NuxtLink>
         </SidebarCollapsibleContent>
       </LazyCollapsible>
 
-      <Btn @click="navigateTo('/pockets/archive')">
+      <Btn class="w-full btn-md gap-3" @click="navigateTo('/pockets/archive')">
         <icon name="archive" class="size-4 ml-0.25" />
         Archive
         <SidebarBadge class="font-mono !text-1 pr-4">
           <span v-if="!ps.archiveFolder || ps.archiveFolder == null || ps.archiveFolder.length == 0">0</span>
+
           <span v-else>
             {{ ps.archiveFolder.length }}
           </span>
         </SidebarBadge>
       </Btn>
 
-      <Btn @click="navigateTo('/pockets/trash')" class="w-full">
+      <Btn class="w-full btn-md gap-3" @click="navigateTo('/pockets/trash')">
         <icon name="trash" />
         Trash
         <SidebarBadge class="font-mono !text-1 pr-4">
           <span v-if="!ps.trashFolder || ps.trashFolder == null || ps.trashFolder.length == 0">0</span>
+
           <span v-else>
             {{ ps.trashFolder.length }}
           </span>

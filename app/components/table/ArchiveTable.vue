@@ -53,7 +53,6 @@ function handleRightClick() {
   })
 }
 
-
 function refreshGrid() {
   selectData.value = null
   nextTick(() => {
@@ -325,8 +324,7 @@ const pocketContextTarget = ref()
       :get-row-id="getRowId"
       @grid-ready="onGridReady"
       @cell-mouse-over="onMouseEnter($event)"
-      @cell-context-menu="handleClick($event)"
-    >
+      @cell-context-menu="handleClick($event)">
     </AgGridVue>
   </PocketContextMenu>
 </template>

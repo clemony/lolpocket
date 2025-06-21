@@ -11,7 +11,7 @@ definePageMeta({
   title: 'Summoner Profile',
   section: 'summoner',
   path: '/summoner/:puuid',
-  search: false
+  search: false,
 })
 
 onMounted (() => {
@@ -31,30 +31,32 @@ onMounted (() => {
       <div class="gap-10 pt-34 h-full flex flex-col items-start pr-16">
         <PlayerHeader v-if="summoner" :summoner="summoner" class="px-1 " />
 
+        <LayoutGroup>
+          <transition-expand group class="gap-8 flex flex-col items-start gap-8 pt-2">
+            <RankCard v-if="summoner.ranked.solo.tier != 'UNRANKED'" title="Solo/Duo" :entry="summoner.ranked.solo" />
 
-<LayoutGroup>
-        <transition-expand group class="gap-8 flex flex-col items-start gap-8 pt-2">
-          <RankCard v-if="summoner.ranked.solo.tier != 'UNRANKED'" title="Solo/Duo" :entry="summoner.ranked.solo" />
-          <Unranked v-else title="Solo/Duo" />
+            <Unranked v-else title="Solo/Duo" />
 
-          <RankCard v-if="summoner.ranked.flex.tier != 'UNRANKED'" title="Flex" :entry="summoner.ranked.flex" />
-          <Unranked v-else title="Flex" />
+            <RankCard v-if="summoner.ranked.flex.tier != 'UNRANKED'" title="Flex" :entry="summoner.ranked.flex" />
 
-          <QueueFilters v-if="summoner" :summoner="summoner" />
-   
+            <Unranked v-else title="Flex" />
+
+            <QueueFilters v-if="summoner" :summoner="summoner" />
 
             <MatchChampionFilters v-if="summoner" :summoner="summoner" />
-          <MatchPositionFilter v-if="summoner" :summoner="summoner" />
-          <MatchAlliesFilter v-if="summoner" :summoner="summoner" />
-        </transition-expand>
+
+            <MatchPositionFilter v-if="summoner" :summoner="summoner" />
+
+            <MatchAlliesFilter v-if="summoner" :summoner="summoner" />
+          </transition-expand>
         </LayoutGroup>
       </div>
+
       <div class="h-28 w-full" />
     </div>
+
     <div class=" grid items-center  relative  w-[57%]  pl-2  ">
-
       <MatchHistoryScroller v-if="puuid" :puuid="puuid" :summoner="summoner" />
-
     </div>
   </div>
 </template>

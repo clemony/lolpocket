@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 const props = defineProps<{
   roles: any
   datasets: any
@@ -14,9 +13,6 @@ const hexColors = {
   jungle: '#a3be8c',
   top: '#e0746b',
 }
-
-
-
 </script>
 
 <template>
@@ -26,6 +22,7 @@ const hexColors = {
       :colors="props.colors"
       type="gauge"
       aria="Playrate by role in percentage" />
+
     <div class="absolute top-7 left-7">
       <component
         :is="`i-roles-${props.mostRoled}`"

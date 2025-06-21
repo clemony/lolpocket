@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 const isLoading = ref(false)
 useRuntimeHook('page:loading:start', () => {
   isLoading.value = true

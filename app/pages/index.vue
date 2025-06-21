@@ -13,21 +13,12 @@ definePageMeta({
 const homeWrapper = ref<HTMLElement | null>()
 const home = ref<HTMLElement | null>()
 const steps = ref<HTMLElement | null>()
+const hero = ref<HTMLElement | null>()
 
 const { scrollYProgress: stepProgress } = useScroll({
   container: homeWrapper,
   target: steps,
   offset: ['start end', 'end start'],
-})
-
-const progStep = ref(0)
-
-useMotionValueEvent(stepProgress, 'change', (latest) => {
-  const x = latest * 80
-  progStep.value = Math.round(x * 100) / 100
-
-  if (progStep.value)
-    console.log('💠 - useMotionValueEvent - progStep.value:', progStep.value)
 })
 
 const { scrollYProgress } = useScroll({
@@ -41,27 +32,43 @@ const progressY = ref(0)
 useMotionValueEvent(scrollYProgress, 'change', (latest) => {
   const x = latest * 80
   progressY.value = Math.round(x * 100) / 100
+})
 
-  if (progressY.value > 0)
-    console.log('💠 - useMotionValueEvent - progressY.value:', progressY.value)
+const heroVisible = shallowRef(false)
+
+const { stop } = useIntersectionObserver(
+  hero,
+  ([entry], observerElement) => {
+    console.log('💠 - entry:', entry)
+    heroVisible.value = entry?.isIntersecting || false
+  },
+)
+
+watch(() => heroVisible.value, (newVal) => {
+  console.log('💠 - watch - newVal:', newVal)
 })
 </script>
 
 <template>
   <div
     ref="homeWrapper"
-    class="relative home-wrapper size-full overflow-y-scroll">
-    <Hero :progress="progStep" />
+    class="relative w-screen overflow-x-hidden home-wrapper size-full overflow-y-scroll">
+    <Hero :progress="stepProgress" :visible="heroVisible" />
+
+    <div ref="hero" class="absolute pointer-events-none  left-0  size-px  overflow-hidden bg-transparent" />
 
     <div ref="steps">
-      <HomeSteps :scroll-ref="homeWrapper" />
+      <LazyHomeSteps :scroll-ref="homeWrapper" :scroll-prog="stepProgress" hydrate-on-visible />
     </div>
 
     <div ref="home">
       <LazyHomeAdditional :progress-y="progressY" hydrate-on-visible />
     </div>
+
     <LazyUserReviews hydrate-on-visible />
+
     <LazySiteMap hydrate-on-visible />
+
     <HomeFooter />
   </div>
 </template>

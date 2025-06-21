@@ -29,11 +29,11 @@ declare global {
   type TipInput = string[]
 type AsInput = any
 
-  type FormatMapArgs =
-    | { type: 'pp', input: PpInput, depth: number }
-    | { type: 'rd', input: RdInput, depth: number }
-    | { type: 'tip', input: TipInput, depth: number }
-    | { type: 'as', input: AsInput, depth: number }
+  type FormatMapArgs
+    = | { type: 'pp', input: PpInput, depth: number }
+      | { type: 'rd', input: RdInput, depth: number }
+      | { type: 'tip', input: TipInput, depth: number }
+      | { type: 'as', input: AsInput, depth: number }
 
     type FormatFn<T> = (args: T) => string | TemplateResult
 

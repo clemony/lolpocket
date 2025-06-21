@@ -9,7 +9,7 @@ defineOptions({
 
 const { value, class: className } = defineProps<{
   value: string
-    class?: HTMLAttributes['class']
+  class?: HTMLAttributes['class']
 }>()
 
 const emit = defineEmits(['update:path'])
@@ -21,13 +21,13 @@ const emit = defineEmits(['update:path'])
     :value="value"
     class=" rounded-full relative group aspect-square size-15 place-self-center disabled:pointer-events-none shrink-0" :class="cn('', className)">
     <div class="size-full relative grid place-items-center">
-    <img
-      :src="`/img/runes/${value}.webp`"
-      :alt="`${value} icon`"
-      class="z-10 h-9 w-auto absolute brightness-90 grayscale transition-all duration-300 dst shrink-0 group-data-[state=active]:grayscale-0 group-data-[state=active]:brightness-100" />
-      </div>
+      <img
+        :src="`/img/runes/${value}.webp`"
+        :alt="`${value} icon`"
+        class="z-10 h-9 w-auto absolute brightness-90 grayscale transition-all duration-300 dst shrink-0 group-data-[state=active]:grayscale-0 group-data-[state=active]:brightness-100" />
+    </div>
 
-      <slot  />
+    <slot />
   </IndicatorTabsTrigger>
 </template>
 

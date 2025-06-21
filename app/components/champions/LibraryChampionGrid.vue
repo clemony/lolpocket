@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-
 import type { ColDef, ColGroupDef, GridApi, GridOptions, GridPreDestroyedEvent, GridReadyEvent } from 'ag-grid-community'
 import { CellStyleModule, ClientSideRowModelModule, ColumnApiModule, ColumnAutoSizeModule, ColumnHoverModule, GridStateModule, ModuleRegistry, RenderApiModule, RowSelectionModule, ValidationModule } from 'ag-grid-community'
 import { AgGridVue } from 'ag-grid-vue3'
@@ -16,13 +15,12 @@ defineExpose({
 })
 
 const cs = useChampStore()
-const {  filteredKeys, filtered } = useChampionFilter(cs.championFilter)
+const { filteredKeys, filtered } = useChampionFilter(cs.championFilter)
 
 const theme = ref(pocketTheme)
 
 const gridApi = shallowRef<GridApi | null>(null)
 const filteredChamps = computed<ChampionLite[]>(() => championsLite.filter(c => filteredKeys.value.includes(c.key)))
-
 
 const gridOptions: GridOptions<ChampionLite> = {
   rowData: filteredChamps.value,

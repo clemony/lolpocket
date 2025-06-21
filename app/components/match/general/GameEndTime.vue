@@ -4,19 +4,16 @@ import { formatTimeAgo } from '@vueuse/core'
 
 const props = defineProps<PrimitiveProps & {
   class?: HTMLAttributes['class']
-endTime: number
+  endTime: number
 }>()
 
 const matchEnd = computed (() => {
-return formatTimeAgo(new Date(props.endTime))
+  return formatTimeAgo(new Date(props.endTime))
 })
-   
-
 </script>
 
 <template>
   <Primitive v-bind="props">
-   {{ matchEnd }}
+    {{ matchEnd }}
   </Primitive>
-
 </template>

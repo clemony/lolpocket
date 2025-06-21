@@ -25,6 +25,7 @@ const red = computed (() => {
               <ChampionImage :player="player" :size="5.5" class="rounded-tiny size-full" />
             </div>
           </div>
+
           <a class="text-1 tracking-tight h-full align-middle w-full  text-nowrap  hover:underline decoration-1 font-medium truncate">
             {{ player.riotIdGameName }}
           </a>
@@ -40,6 +41,7 @@ const red = computed (() => {
               <ChampionImage :player="player" :size="5.5" class="rounded-tiny size-full" />
             </div>
           </div>
+
           <a class="@max-lg/match:hidden @max-lg/match:opacity-0 text-1 tracking-tight h-full align-middle w-full text-nowrap  hover:underline decoration-1 font-medium truncate">
             {{ player.riotIdGameName }}
           </a>

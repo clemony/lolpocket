@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import Fuse from 'fuse.js'
 import { motion } from 'motion-v'
+import { PopoverClose } from 'reka-ui'
 
 const props = withDefaults(
   defineProps<{
@@ -41,11 +42,16 @@ const championSkins = ref<Skin[]>([])
 watchEffect(() => {
   if (!selectedChampion.value)
     return
-
   championSkins.value = ix.skins[selectedChampion.value]
-  console.log('💠 - watchEffect - ix.skins:', ix.skins)
-  console.log('💠 - watchEffect - skins.value:', championSkins.value)
 })
+watch(() => selectIcon.value, (newVal) => {
+  if (!pocket.value)
+    return
+  pocket.value.icon = newVal
+  console.log('💠 - watch - newVal:', newVal)
+  console.log('💠 - watch - pocket.value.icon:', pocket.value.icon)
+})
+
 const champFuse = computed(() => new Fuse(ix.champions, {
 
   keys: ['name'],
@@ -66,19 +72,22 @@ function handleInput(e: string) {
 }
 
 onMounted(() => {
-  selectIcon.value = props.pocket?.icon ?? props.selectedIcon ?? '/img/lp/192.webp'
+  selectIcon.value = props.pocket?.icon ?? props.selectedIcon
 
   ix.loadSkins()
 })
+
+const isOpen = ref(false)
 </script>
 
 <template>
-  <LazyPopover>
+  <Popover v-model:open="isOpen">
     <PopoverTrigger class="group/picon z-0 shrink-0 !cursor-pointer self-center  !size-14   rounded-full !pointer-events-auto  aspect-square  grid place-items-center relative  ">
       <PocketIcon v-if="pocket" :url="pocket?.icon" alt="pocket icon" bg-size="160%" class=" group-hover/picon:brightness-50 z-1 group-data-[state=open]/picon:brightness-50   tldr-30 shadow-sm drop-shadow-sm group-data-[state=open]/picon:ring group-data-[state=open]/picon:ring-offset-2 ring-neutral/40 ring-offset-b1 rounded-full " />
 
       <icon name="images" class="size-6 !text-nc absolute opacity-0  group-hover/picon:opacity-80 z-2 transition-all  duration-300 group-data-[state=open]/picon:opacity-100" />
     </PopoverTrigger>
+
     <LazyCustomPopoverContent
       hydrate-on-interaction
       :side-offset="props.sideOffset"
@@ -95,6 +104,7 @@ onMounted(() => {
         <transition-slide v-if="!selectedChampion" group class="pt-2 overflow-y-scroll w-full flex flex-col">
           <label v-for="result in champSearchResults" :key="result.item.id" class="justify-start btn btn-ghost btn-ghost-dark  gap-3 text-3">
             <input v-model="selectedChampion" type="radio" class="peer hidden" :value="result.item.key" />
+
             <span class="size-8 ">
               <LazyChampionIcon :id="result.item.id" :alt="result.item.name" class="size-8 pointer-events-none rounded-lg" hydrate-on-visible />
             </span>
@@ -102,23 +112,21 @@ onMounted(() => {
           </label>
         </transition-slide>
 
-        <div v-else-if="selectedChampion" class="mt-3  overflow-y-scroll px-1 self-center pb-3 max-h-90 grid grid-cols-4 pt-1 gap-2">
-          <template v-for="skin in ix.skins[selectedChampion]" :key="skin.name">
-            <PopoverClose as-child>
-              <PocketIcon
-                v-tippy="skin.name"
-                :alt="skin.name"
-                :url="getSkinSplash(selectedChampion, skin, 'tile')"
-                class="size-20.5  cursor-pointer rounded-md shrink-0 hover:ring-b3/80">
-                <input v-model="selectIcon" type="radio" :value="skin.id" class="peer hidden" hydrate-on-visible @change="pocket.icon = selectIcon" />
-              </PocketIcon>
-            </PopoverClose>
-          </template>
+        <div v-else-if="selectedChampion" class="mt-3  overflow-y-scroll px-1 self-center pb-3 max-h-90 grid  grid-cols-4 pt-1 gap-2">
+          <PocketIcon
+            v-for="skin in ix.skins[selectedChampion]"
+            :key="skin.name" v-tippy="skin.name"
+            :alt="skin.name"
+            :url="getSkinSplash(selectedChampion, skin, 'tile')"
+            class="size-20.5  cursor-pointer rounded-md shrink-0 hover:ring-b3/80">
+            <input v-model="selectIcon" type="radio" :value="getSkinSplash(selectedChampion, skin, 'tile')" class="peer hidden" @change="isOpen = false" />
+          </PocketIcon>
         </div>
+
         <div v-else class="w-full  px-2  pt-3 pb-4">
           <p>Search for a champion to select a splash art.</p>
         </div>
       </motion.div>
     </LazyCustomPopoverContent>
-  </LazyPopover>
+  </Popover>
 </template>

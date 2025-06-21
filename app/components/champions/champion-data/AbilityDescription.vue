@@ -17,13 +17,16 @@ watch(() => effect, (newVal) => {
         <p class="chat-header !text-1 mb-1.5">
           {{ attribute.attribute?.trim() }}:
         </p>
+
         <div class="chat-bubble !m-0 drop-shadow-xs drop-shadow-black/4 w-full bg-b1/90">
           <ValueFormatter v-if="attribute.modifiers?.[0]?.values?.length" class="inline-flex dst" :array="attribute.modifiers?.[0]?.values" />
         </div>
+
         <div v-if="attribute.modifiers?.[1]?.units?.length && attribute.modifiers?.[0]?.values?.length" class="chat-footer mt-0.5 !text-1 **:!text-1 text-nowrap items-center justify-start opacity-50">
           <icon name="add-sm" class="size-4 shrink-0 -mr-1" />
-            <ValueFormatter v-if="attribute.modifiers?.[1]?.values?.length" :array="attribute.modifiers?.[1].values">
-            </ValueFormatter>
+
+          <ValueFormatter v-if="attribute.modifiers?.[1]?.values?.length" :array="attribute.modifiers?.[1].values">
+          </ValueFormatter>
           {{ attribute.modifiers?.[1]?.units[0] }}
         </div>
       </div>

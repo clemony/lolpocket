@@ -8,7 +8,7 @@ definePageMeta({
   title: 'analysis',
   path: '/analysis',
   section: 'analysis',
-  icon: 'chart'
+  icon: 'chart',
 })
 </script>
 

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-const {  account } = defineProps<{
-  account: userAccount
+const { account } = defineProps<{
+  account: UserAccount
 }>()
 
 const classObject = 'btn justify-start !font-medium tracking-tight !gap-5 btn-ghost px-4 btn-lg w-full '
@@ -30,6 +30,7 @@ const classObject = 'btn justify-start !font-medium tracking-tight !gap-5 btn-gh
       </IconWrapper>
       Sign Out
     </SheetClose>
+
     <SheetClose as-child>
       <PatchNotesDaysAgoLink />
     </SheetClose>

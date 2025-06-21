@@ -3,26 +3,26 @@ export function stripEmpty(obj: any): any {
     return obj
       .map(stripEmpty)
       .filter(
-        (v) =>
-          v !== undefined &&
-          v !== null &&
-          v !== "" &&
-          !(Array.isArray(v) && v.length === 0)
+        v =>
+          v !== undefined
+          && v !== null
+          && v !== ''
+          && !(Array.isArray(v) && v.length === 0),
       )
   }
 
-  if (obj && typeof obj === "object") {
+  if (obj && typeof obj === 'object') {
     return Object.fromEntries(
       Object.entries(obj)
         .map(([k, v]) => [k, stripEmpty(v)])
         .filter(
           ([k, v]) =>
-            v !== undefined &&
-            v !== null &&
-            v !== "" &&
-            !(Array.isArray(v) && v.length === 0) &&
-            !(k === "purchasable" && v === true)
-        )
+            v !== undefined
+            && v !== null
+            && v !== ''
+            && !(Array.isArray(v) && v.length === 0)
+            && !(k === 'purchasable' && v === true),
+        ),
     )
   }
 

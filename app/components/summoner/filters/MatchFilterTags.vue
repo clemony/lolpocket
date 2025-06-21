@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-
 const { summoner, class: className } = defineProps<{
   summoner: Summoner
   class?: HTMLAttributes['class']
@@ -23,10 +22,8 @@ const roleStats = useMatchRoles(filteredSimplifiedNoRole)
       </FilterLabel>
     </ListboxGroupLabel> -->
 
-
-        <FilterLabel v-model="ms.mf.role" :active="ms.mf.role != 'ALL'" @click="ms.mf.role = 'ALL'">
+    <FilterLabel v-model="ms.mf.role" :active="ms.mf.role != 'ALL'" @click="ms.mf.role = 'ALL'">
       {{ ms.mf.role != 'ALL' ? roleStats.find(r => r.role == ms.mf.role).displayName : 'Position' }}
     </FilterLabel>
-
   </div>
 </template>

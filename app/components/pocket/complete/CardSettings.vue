@@ -28,7 +28,9 @@ watch(
 
     <label v-tippy="'Filter'" class="swap swap-rotate btn  btn-square group btn-ghost ">
       <input v-model="pocket.card.filter" type="checkbox" class="peer" :disabled="!pocket.card.splash" />
+
       <icon name="hugeicons:monocle" class="size-5.5 dst swap-off peer-disabled:text-bc/20" />
+
       <icon name="streamline:rainbow" class="swap-on dst size-6  peer-disabled:text-bc/20" />
 
     </label>
@@ -39,6 +41,7 @@ watch(
           <icon name="ph:arrows-out-line-horizontal" class="size-5.5  dst shrink-0" />
         </button>
       </PopoverTrigger>
+
       <PopoverContent align="start" :side-offset="10" side="bottom" class=" w-44 PopoverContent   border border-b3">
         <input v-model="align" type="range" min="0" max="100" class="range range-neutral range-xs" />
       </PopoverContent>

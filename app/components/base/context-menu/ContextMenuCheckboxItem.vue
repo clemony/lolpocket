@@ -27,6 +27,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
         <icon name="tick-sm" class="h-4 w-4" />
       </ContextMenuItemIndicator>
     </span>
+
     <slot />
   </ContextMenuCheckboxItem>
 </template>

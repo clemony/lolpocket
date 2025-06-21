@@ -1,18 +1,19 @@
-import { normalize } from "./normalize-strings"
+import { normalize } from './normalize-strings'
 
 function cleanModifiers(modifiers: Modifier[] | null | undefined): Modifier[] {
-  if (!Array.isArray(modifiers)) return []
+  if (!Array.isArray(modifiers))
+    return []
 
   return modifiers
     .map((m) => {
-      const values =
-        m.values?.filter((v) => v !== null && v !== undefined) ?? []
+      const values
+        = m.values?.filter(v => v !== null && v !== undefined) ?? []
       const units = m.units ?? []
 
-      const allValuesSame =
-        values.length > 0 && values.every((v) => v === values[0])
-      const allUnitsSame =
-        units.length > 0 && units.every((u) => u === units[0])
+      const allValuesSame
+        = values.length > 0 && values.every(v => v === values[0])
+      const allUnitsSame
+        = units.length > 0 && units.every(u => u === units[0])
 
       const cleanedValues = allValuesSame ? [values[0]] : values
       const cleanedUnits = allUnitsSame ? [units[0]] : units
@@ -20,42 +21,43 @@ function cleanModifiers(modifiers: Modifier[] | null | undefined): Modifier[] {
       return { values: cleanedValues, units: cleanedUnits }
     })
 
-    .filter((m) => m.values.length > 0 || m.units.length > 0)
+    .filter(m => m.values.length > 0 || m.units.length > 0)
 }
 
 function cleanAbilityEffects(effects: any[]): any[] {
-  if (!Array.isArray(effects)) return []
+  if (!Array.isArray(effects))
+    return []
 
-  return effects.map((effect) => ({
+  return effects.map(effect => ({
     ...effect,
     description:
-      typeof effect.description === "string" ?
-        effect.description
+      typeof effect.description === 'string'
+        ? effect.description
           // Replace `x : y` with `x - y`
-          .replace(/(\d) ?: ?(\d)/g, "$1 - $2")
+            .replace(/(\d) ?: ?(\d)/g, '$1 - $2')
           // Replace `% : x` with `% - x`
-          .replace(/(%) ?: ?(\d)/g, "$1 - $2")
+            .replace(/(%) ?: ?(\d)/g, '$1 - $2')
           // fix sona
-          .replace(/\s?\/\s?/g, " / ")
-          .replace("ability she cast:", "ability she cast.")
-          .replace(/(.*?:)(.*)/g, '<span class="ability-header">$1</span>$2') // Wrap headers
-          .replace(
-            /(<span class="ability-header">.*?<\/span>.*?)(?=\n|$)/gs,
-            '<p class="ability-effect">$1</p>'
-          )
-      : effect.description,
+            .replace(/\s?\/\s?/g, ' / ')
+            .replace('ability she cast:', 'ability she cast.')
+            .replace(/(.*?:)(.*)/g, '<span class="ability-header">$1</span>$2') // Wrap headers
+            .replace(
+              /(<span class="ability-header">.*?<\/span>.*?)(?=\n|$)/gs,
+              '<p class="ability-effect">$1</p>',
+            )
+        : effect.description,
     leveling:
-      Array.isArray(effect.leveling) ?
-        effect.leveling.map((level) => ({
-          ...level,
-          modifiers: cleanModifiers(level.modifiers),
-        }))
-      : [],
+      Array.isArray(effect.leveling)
+        ? effect.leveling.map(level => ({
+            ...level,
+            modifiers: cleanModifiers(level.modifiers),
+          }))
+        : [],
   }))
 }
 
 function simplifyArray<T>(arr: T[]): T[] {
-  return arr.length && arr.every((v) => v === arr[0]) ? [arr[0]] : arr
+  return arr.length && arr.every(v => v === arr[0]) ? [arr[0]] : arr
 }
 
 export function normalizeAbility(ability: any): Ability {

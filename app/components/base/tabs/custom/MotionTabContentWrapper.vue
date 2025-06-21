@@ -1,4 +1,8 @@
 <script lang="ts" setup>
+defineOptions({
+  inheritAttrs: false,
+})
+
 const props = defineProps<{
   class?: HTMLAttributes['class']
   defaultTab?: number
@@ -33,15 +37,12 @@ const offset = computed((): {
     }
   }
 })
-
-defineOptions({
-  inheritAttrs: false
-})
 </script>
 
 <template>
   <div :class="cn('', props.class)">
-  <transition-slide v-bind="$attrs" :offset="offset" mode="out-in" as="div">
-    <slot />
-  </transition-slide></div>
+    <transition-slide v-bind="$attrs" :offset="offset" mode="out-in" as="div">
+      <slot />
+    </transition-slide>
+  </div>
 </template>

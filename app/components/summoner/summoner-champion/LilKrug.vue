@@ -12,12 +12,14 @@
 
     <div class="flex  flex-col dst  justify-center font-medium">
       <p>Krug</p>
+
       <p>0 Games </p>
     </div>
 
     <div class="flex  grow  text-2 flex-col items-end justify-center px-3">
       <p class=" items-center dst font-medium text-nowrap">
       </p>
+
       <p class=" dst font-medium items-center text-nowrap">
       </p>
     </div>

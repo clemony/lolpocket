@@ -5,13 +5,15 @@ const cs = useChampStore()
 <template>
   <ToggleGroup v-model:model-value="cs.championGridType" type="single">
     <ToggleGroupItem value="calculated">
-  Level
+      Level
     </ToggleGroupItem>
+
     <ToggleGroupItem value="base">
-   Base
+      Base
     </ToggleGroupItem>
+
     <ToggleGroupItem value="growth">
-   Growth
+      Growth
     </ToggleGroupItem>
   </ToggleGroup>
 </template>

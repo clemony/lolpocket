@@ -1,45 +1,42 @@
 @import 'tailwindcss';
 
-
-         .push-up-enter-from{
-opacity: 0;
-transform: translateY(100%);
+.push-up-enter-from {
+  opacity: 0;
+  transform: translateY(100%);
 }
-        .push-up-enter-to,
-         .push-up-leave-from{
-opacity: 1;
-transform: translateY(0);
+.push-up-enter-to,
+.push-up-leave-from {
+  opacity: 1;
+  transform: translateY(0);
 }
-         .push-up-leave-active,
-         .push-up-enter-active {
-position: absolute;
-transition: all 500ms;
-height: 100%;
-width: calc(100% - 66px);
-left: 66px;
-top: 0;
-}
-
-         .push-over-leave-to{
-opacity: 0;
+.push-up-leave-active,
+.push-up-enter-active {
+  position: absolute;
+  transition: all 500ms;
+  height: 100%;
+  width: calc(100% - 66px);
+  left: 66px;
+  top: 0;
 }
 
-         .push-over-enter-from{
-opacity: 0;
-}
-        .push-over-enter-to,
-         .push-over-leave-from{
-opacity: 1;
-
-}
-         .push-over-leave-active,
-         .push-over-enter-active {
-
-transition: all 300ms;
-height: 100%;
-overflow: hidden;
+.push-over-leave-to {
+  opacity: 0;
 }
 
-         .push-over-leave-to{
-opacity: 0;
+.push-over-enter-from {
+  opacity: 0;
+}
+.push-over-enter-to,
+.push-over-leave-from {
+  opacity: 1;
+}
+.push-over-leave-active,
+.push-over-enter-active {
+  transition: all 300ms;
+  height: 100%;
+  overflow: hidden;
+}
+
+.push-over-leave-to {
+  opacity: 0;
 }

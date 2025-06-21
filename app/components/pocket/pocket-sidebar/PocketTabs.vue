@@ -6,7 +6,6 @@ import ItemsCounter from 'components/pocket/ui/counters/ItemsCounter.vue'
 
 import RunesCounter from 'components/pocket/ui/counters/RunesCounter.vue'
 
-
 const { pocket } = defineProps<{
   pocket: Pocket
 }>()
@@ -16,8 +15,8 @@ const route = useRoute()
 const pocketNav = ref(route.path)
 
 watchEffect(() => {
-if (pocketNav.value != route.path)
-pocketNav.value = route.path
+  if (pocketNav.value != route.path)
+    pocketNav.value = route.path
 })
 
 // TODO when complete initial link click goes to summary. change champions link always to champions and outline will be on empty
@@ -73,9 +72,11 @@ const plinks = [
               type: 'spring',
               bounce: 0.25,
             }" />
+
           <component :is="link.component" v-if="pocket" :pocket="pocket" class=" w-auto transition duration-400  group-data-[state=active]:**:!text-nc z-2" />
         </AnimatePresence>
       </IndicatorTabsTrigger>
+
       <TabIndicator orientation="vertical" />
     </IndicatorTabsList>
   </Tabs>

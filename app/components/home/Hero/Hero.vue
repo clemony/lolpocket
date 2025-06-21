@@ -1,19 +1,29 @@
 <script setup lang="ts">
-import type { CarouselApi } from 'components/base/carousel'
 import Autoplay from 'embla-carousel-autoplay'
 import Fade from 'embla-carousel-fade'
 import { motion } from 'motion-v'
+import type { CarouselApi } from '~/components/base/carousel/carousel-index'
 
-const { progress } = defineProps<{
-  progress: number
+const { progress: p, visible } = defineProps<{
+  progress: MotionValue
+  visible: boolean
 }>()
 
+const prog = ref(0)
+
+useMotionValueEvent(p, 'change', (latest) => {
+  let a = latest * 80
+  a = Math.round(a * 100) / 100
+  prog.value = a
+})
+
+const as = useAccountStore()
 const api = ref<CarouselApi>()
 const carousel = ref()
-
-function setApi(val: CarouselApi) {
-  api.value = val
-}
+const welcome = ref<HTMLElement>()
+const selectedDisplay = ref(null)
+const isVisible = ref(false)
+const { x, y } = useMouse()
 
 const autoplay = Autoplay({
   delay: 9000,
@@ -36,6 +46,20 @@ onMounted(() => {
 onUnmounted(() => {
   if (interval !== undefined)
     clearInterval(interval)
+})
+
+// pause carousel when not visible
+
+watch(() => visible, (newVal) => {
+  console.log('💠 - watch - newVal:', newVal)
+  if (!api.value || !autoplay)
+    return
+
+  if (!visible)
+    api.value.plugins().autoplay.stop()
+
+  else if (visible)
+    api.value.plugins().autoplay.play()
 })
 
 const isPlaying = ref(true)
@@ -64,65 +88,128 @@ function handleNext() {
   api.value.scrollNext()
   api.value.plugins().autoplay.reset()
 }
+
+function setApi(val: CarouselApi) {
+  api.value = val
+}
+
+//  hide element 3s after last movement
+const { start, stop } = useTimeoutFn(() => {
+  isVisible.value = false
+}, 2500)
+
+// Watch mouse
+watch([x, y], () => {
+  isVisible.value = true
+  start() // restart
+})
+
+watch(api, (api) => {
+  if (!api)
+    return
+
+  api.on('scroll', () => {
+    // Do something on select.
+    // console.log(`💠 - {api.slidesInView():`, api.selectedScrollSnap())
+  })
+})
 </script>
 
 <template>
   <Carousel
     ref="carousel"
-    class="h-screen w-screen relative *:size-full relative *:z-0  sticky top-0 left-0 "
+    class="h-screen w-screen relative overflow-hidden *:size-full  *:z-0   top-0 left-0 z-0"
+    :class="{ sticky: visible }"
     :opts="{
       loop: true,
     }"
     :plugins="[autoplay, Fade()]"
     @init-api="setApi"
+
     @autoplay:stop="console.log('hi')">
-    <CarouselContent>
+    <CarouselContent
+      v-show="visible">
       <CarouselItem v-for="(video, i) in heroDisplays" :key="i" hydrate-on-visible as-child>
-        <motion.div class="size-full z-0" :style="{ transform: `translateY(-${progress}%)` }">
-          <video-background
-            :src="video"
+        <motion.div
+          class="size-full z-0 overflow-hidden"
+          :style="{ transform: `translate(0, -${prog}%)` }">
+          <Video
+
+            :ref="video.ref"
+            :src="video.url"
             :style="{
               height: '100vh',
               backgroundPosition: '50% 50%',
             }"
-            class="ml-[30vh]  -scale-x-100  opacity-50 brightness-125 contrast-160 grayscale" />
+            class="ml-[30vh]  -scale-x-100  opacity-50 brightness-125 contrast-160 grayscale"
+            @error="console.log('error')" />
         </motion.div>
       </CarouselItem>
     </CarouselContent>
   </Carousel>
 
-  <div class="absolute left-0 top-0 inset-0 grid grid-cols-2 z-1  place-items-center pointer-events-none from-b1 from-25% to-90% to-transparent bg-linear-to-r">
-    <div class="">
-    <HeroWelcome />
-  </div>
-     <div class=" z-2  size-full  gap-3 flex justify-end pr-5 items-end pb-5 ">
-      <div class="flex items-center gap-2 pointer-events-auto">
-      <button
-        v-tippy="isPlaying ? 'Pause' : 'Play'"
-        class="btn btn-square btn-ghost btn-sm"
-        @click="togglePlay">
-        <icon v-if="isPlaying" name="teenyicons:pause-solid" class="opacity-60" />
-        <icon v-else name="teenyicons:play-solid" class="opacity-60" />
-      </button>
-      <motion.progress
-        v-if="api" class="progress opacity-60 w-26" :value="timeLeft" max="9000"
-        :transition="{ type: 'spring' }" />
-
-
-      <button
-        v-tippy="'Previous'"
-        class="btn btn-square btn-ghost btn-sm"
-        @click="handlePrev()">
-        <icon name="teenyicons:next-solid" class="rotate-180 size-4 opacity-60" />
-      </button>
-      <button
-        v-tippy="'Next'"
-        class="btn-ghost btn btn-square btn-sm"
-        @click="handleNext()">
-        <icon name="teenyicons:next-solid" class=" size-4  opacity-60" />
-      </button>
+  <div ref="welcome" class="absolute left-0 top-0 inset-0 grid grid-cols-2 z-1  place-items-center  from-b1 from-25% to-90% to-transparent bg-linear-to-r">
+    <div class="justify-self-start">
+      <HeroWelcome />
     </div>
-  </div>
+
+    <div class=" z-2  size-full transition-opacity duration-500 pointer-events-auto  opacity-0 gap-3 flex justify-end pr-5 items-end pb-5 " :class="{ 'opacity-100': isVisible, 'opacity-0': !isVisible }">
+      <div class="flex items-center gap-2 ">
+        <HoverBtnSm :tip="isPlaying ? 'Pause' : 'Play'" @click="togglePlay">
+          <icon v-if="isPlaying" name="teenyicons:pause-solid" class="opacity-60" />
+
+          <icon v-else name="teenyicons:play-solid" class="opacity-60" />
+        </HoverBtnSm>
+
+        <motion.progress
+          v-if="api" class="progress opacity-60 w-26" :value="timeLeft" max="9000"
+          :transition="{ type: 'spring' }" />
+
+        <HoverBtnSm tip="Previous" @click="handlePrev()">
+          <icon name="teenyicons:next-solid" class="rotate-180 size-4 opacity-60" />
+        </HoverBtnSm>
+
+        <HoverBtnSm tip="Next" @click="handleNext()">
+          <icon name="teenyicons:next-solid" class=" size-4  opacity-60" />
+        </HoverBtnSm>
+
+        <DropdownMenu>
+          <DropdownMenuTrigger as-child>
+            <HoverBtnSm tip="Options">
+              <icon name="gear-solid" class="size-4 opacity-50" />
+            </HoverBtnSm>
+          </DropdownMenuTrigger>
+
+          <ContrastDropdownContent side="top" align="end" :align-offset="-10" class="mr-3 w-60">
+            <div class="w-full items-center px-1.5 gap-3 flex py-1 text-2 text-nc/80">
+              <icon :name=" as.userAccount.settings.motion ? 'ph:video-camera-fill' : 'ph:video-camera-slash'" class=" opacity-90 shrink-0" />
+              {{ as.userAccount.settings.motion ? 'Motion On' : 'Motion Off' }}
+              <Grow />
+
+              <Switch v-model="as.userAccount.settings.motion" class=" data-[state=unchecked]:bg-b3/40 inset-shadow-xs data-[state=checked]:bg-linear-to-br to-ah/90 to-60% from-lime-400/90 border-b4/50 justify-self-end scale-85" />
+            </div>
+
+            <DropdownMenuSub>
+              <ContrastDropdownSubTrigger>
+                Jump To...
+              </ContrastDropdownSubTrigger>
+
+              <ContrastDropdownSubContent :align-offset="-3" :side-offset="4">
+                <DropdownMenuRadioGroup v-model:model-value="as.userAccount.settings.hero">
+                  <DropdownRadioItemCT :value="null">
+                    All
+                  </DropdownRadioItemCT>
+
+                  <DropdownRadioItemCT v-for="video in heroDisplays" :key="video.champ" :value="video.champ" class="">
+                    {{ video.champ }}
+                  </DropdownRadioItemCT>
+                </DropdownMenuRadioGroup>
+              </ContrastDropdownSubContent>
+            </DropdownMenuSub>
+          </ContrastDropdownContent>
+        </DropdownMenu>
+      </div>
+    </div>
   </div>
 </template>
 

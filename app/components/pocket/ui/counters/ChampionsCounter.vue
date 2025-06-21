@@ -1,14 +1,14 @@
 <script lang="ts" setup>
 const props = defineProps<{
   pocket?: Pocket
-    class?: HTMLAttributes['class']
+  class?: HTMLAttributes['class']
 }>()
 
 const pocket = ref(props.pocket)
 
 const championsLength = computed (() => {
   if (!pocket.value.champions.length)
-  return 0
+    return 0
   return pocket.value.champions.length
 })
 </script>

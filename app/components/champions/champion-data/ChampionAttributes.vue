@@ -82,10 +82,10 @@ const options = {
     },
   },
   plugins: {
-    filler:{
+    filler: {
       propagate: true,
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -94,6 +94,7 @@ const options = {
     <div class="absolute top-5 text-3 tracking-tight left-6 text-bc/50 font-bold drop-shadow-sm">
       Champion Attributes
     </div>
+
     <Radar :data="data" :options="options" class="drop-shadow-sm" />
   </Field>
 </template>

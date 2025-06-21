@@ -35,15 +35,17 @@ function navigate() {
     <a
       class="btn-ghost-dark group " :class="cn('', className)"
       @click="navigate()">
-    <slot />
-    <span class="group-hover:underline grow ml-2">
-      {{ page.altName ?? page.name }}
-    </span>
+      <slot />
 
-    <Badge class="capitalize justify-self-end opacity-40 text-1 group-hover:opacity-80 mr-1">
-      {{ page.meta?.section ?? ''}}
-    </Badge>
-    <icon name="link" class="size-3.5 justify-self-end opacity-0 group-hover:opacity-100 tldr-20 -ml-1" />
-  </a>
+      <span class="group-hover:underline grow ml-2">
+        {{ page.altName ?? page.name }}
+      </span>
+
+      <Badge class="capitalize justify-self-end opacity-40 text-1 group-hover:opacity-80 mr-1">
+        {{ page.meta?.section ?? '' }}
+      </Badge>
+
+      <icon name="link" class="size-3.5 justify-self-end opacity-0 group-hover:opacity-100 tldr-20 -ml-1" />
+    </a>
   </motion.li>
 </template>

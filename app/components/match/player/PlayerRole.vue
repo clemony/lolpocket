@@ -14,6 +14,7 @@ const player = computed (() => {
     <p>
       {{ player.role }}
     </p>
+
     <p>
       {{ player.individualPosition }}
     </p>

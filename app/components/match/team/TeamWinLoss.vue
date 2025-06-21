@@ -23,10 +23,13 @@ const teamWin = computed (() => {
       v-if="teamWin"
       name="ph:star-fill"
       class="size-3.5 text-white shrink-0 dst" />
+
     <icon
       v-else name="vaadin:close"
       class="size-3 text-white shrink-0 dst mt-px" />
+
     <slot />
+
     <span class="flex w-full  text-center grow"> {{ teamWin ? 'Win' : 'Loss' }}</span>
   </div>
 </template>

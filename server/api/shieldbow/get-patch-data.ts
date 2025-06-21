@@ -9,16 +9,15 @@ export default defineEventHandler(async (event) => {
 
   const query = getQuery(event)
 
-
   await client.initialize({
     region: 'na',
     fetch: false,
-storage:{
-  enable:{
-    dragon:false,
-    api: false}
+    storage: {
+      enable: {
+        dragon: false,
+        api: false,
+      },
 
-}
- })
-
+    },
+  })
 })

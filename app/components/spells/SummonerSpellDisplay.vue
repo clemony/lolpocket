@@ -33,6 +33,7 @@ const imgArr = ['/img/spells/heal.webp', '/img/spells/ignite.webp', '/img/spells
         class=" rounded-full overflow-hidden grayscale-0 transition-all duration-500"
         />
       </PopoverTrigger>
+
       <SpellPicker
         :model="0"
         :pocket="pocket"
@@ -55,6 +56,7 @@ const imgArr = ['/img/spells/heal.webp', '/img/spells/ignite.webp', '/img/spells
         class=" rounded-full overflow-hidden grayscale-0 transition-all duration-500"
       /> -->
       </PopoverTrigger>
+
       <SpellPicker
         :model="1"
         :pocket="pocket"

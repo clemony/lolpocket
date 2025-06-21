@@ -4,29 +4,26 @@ import { UseClipboard } from '@vueuse/components'
 const isOpen = ref(true)
 const us = useUiStore()
 
-function navigate(){
-  if (us.sidebarExpanded )
-  return
+function navigate() {
+  if (us.sidebarExpanded)
+    return
 
-navigateTo('/docs')
+  navigateTo('/docs')
 }
-
-
 </script>
 
 <template>
   <Collapsible v-model:is-open="isOpen" :disabled="!us.sidebarExpanded">
- 
-      <component  v-tippy="!us.sidebarExpanded ? 'Info' : null" @click="navigate()"   class="disabled:text-bc">
-        <IconWrapper name="ph:question-mark" class="size-4.5 dst" />
-        Info
-      </component>
+    <div v-tippy="!us.sidebarExpanded ? 'Info' : null" class="disabled:text-bc" @click="navigate()">
+      <IconWrapper name="ph:question-mark" class="size-4.5 dst" />
+      Info
+    </div>
 
     <SidebarCollapsibleContent v-if="us.sidebarExpanded">
       <NuxtLink
         to="/docs">
         <Btn>
-            <IconWrapper name="icon-park-outline:notebook" class="size-3.75 dst" />
+          <IconWrapper name="icon-park-outline:notebook" class="size-3.75 dst" />
           Guide
         </Btn>
       </NuxtLink>
@@ -34,17 +31,18 @@ navigateTo('/docs')
       <NuxtLink
         to="/about">
         <Btn>
-                  <IconWrapper name="ph:cat" class="size-4.25 dst" />
+          <IconWrapper name="ph:cat" class="size-4.25 dst" />
           About
-        <SidebarBadge>+ CATS
-   <!--          <i-fat-cat class="size-8 shrink-0 fill-bc dst -mt-2.5 stroke-[1.2]" /> -->
-    </SidebarBadge>
+          <SidebarBadge>
+            + CATS
+            <!--          <i-fat-cat class="size-8 shrink-0 fill-bc dst -mt-2.5 stroke-[1.2]" /> -->
+          </SidebarBadge>
         </Btn>
       </NuxtLink>
 
       <Collapsible>
         <SidebarCollapsibleTrigger>
-            <IconWrapper name="ph:envelope" class="size-4.5 dst" />
+          <IconWrapper name="ph:envelope" class="size-4.5 dst" />
           Contact
         </SidebarCollapsibleTrigger>
 

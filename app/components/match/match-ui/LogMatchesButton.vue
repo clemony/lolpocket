@@ -8,7 +8,7 @@ async function logAllMatches() {
 </script>
 
 <template>
-<button class="btn" @click="logAllMatches()">
-  log all matches
-</button>
+  <button class="btn" @click="logAllMatches()">
+    log all matches
+  </button>
 </template>

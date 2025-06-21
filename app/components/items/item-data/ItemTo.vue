@@ -12,6 +12,7 @@ const filtered = computed (() => to.filter(to => to.id < 9999))
     <div class="divider divider-start after:h-px my-2 after:bg-nc/10 !text-0">
       BUILDS INTO
     </div>
+
     <div class="group flex items-center pt-2 px-1 flex-wrap gap-4" :class="{ 'justify-start': filtered.length > 7 }">
       <div
         v-for="(item, i) in filtered"

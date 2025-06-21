@@ -20,6 +20,7 @@ onMounted(async () => {
       :duration="Infinity" />
 
     <LazyNewPocketDialog />
+
     <LazyNuxtPage :puuid="as.userAccount.riot.puuid" />
   </NuxtLayout>
 </template>

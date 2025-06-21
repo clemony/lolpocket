@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { ScrollAreaScrollbar, type ScrollAreaScrollbarProps, ScrollAreaThumb } from 'reka-ui'
-import { computed, type HTMLAttributes } from 'vue'
+import { ScrollAreaScrollbar, ScrollAreaThumb } from 'reka-ui'
+import type { ScrollAreaScrollbarProps } from 'reka-ui'
+import { computed } from 'vue'
+import type { HTMLAttributes } from 'vue'
 
 const props = withDefaults(defineProps<ScrollAreaScrollbarProps & { class?: HTMLAttributes['class'] }>(), {
   orientation: 'vertical',
@@ -23,11 +25,9 @@ const delegatedProps = computed(() => {
            && 'h-full w-2.5 border-l border-l-transparent',
          orientation === 'horizontal'
            && 'h-2.5 flex-col border-t border-t-transparent',
-         props.class)"
-  >
+         props.class)">
     <ScrollAreaThumb
       data-slot="scroll-area-thumb"
-      class="bg-border relative flex-1 rounded-full"
-    />
+      class="bg-border relative flex-1 rounded-full" />
   </ScrollAreaScrollbar>
 </template>

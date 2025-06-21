@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { motion } from 'motion-v'
 import { reviewVariants } from './variants'
-
 </script>
 
 <template>
@@ -9,8 +8,7 @@ import { reviewVariants } from './variants'
     <Carousel
       :opts="{
         loop: true,
-      }"
-   >
+      }">
       <CarouselContent class="size-full">
         <CarouselItem
           v-for="page, i in reviews" :key="i"
@@ -18,7 +16,7 @@ import { reviewVariants } from './variants'
           <motion.div
             v-for="r in page" :key="r.id"
             :variants="reviewVariants"
-            initial="hidden" class="flex  flex-col gap-4"
+            initial="hidden" class="flex w-full flex-col gap-4"
             while-in-view="visible"
             :transition="{
               type: 'spring',
@@ -31,6 +29,7 @@ import { reviewVariants } from './variants'
 
             <div class="flex gap-8 justify-start items-start">
               <ChampionIcon :id="r.id" :alt="r.name" class=" size-22 overflow-hidden rounded-full shrink-0 mt-4" />
+
               <div>
                 <p class="text-bc text-4 w-full [&_u]:decoration-dotted   dst mt-5" v-html="r.text" />
 
@@ -43,14 +42,18 @@ import { reviewVariants } from './variants'
           </motion.div>
         </CarouselItem>
       </CarouselContent>
+
       <CarouselPrevious class="scale-120" />
+
       <CarouselNext class="scale-120" />
     </Carousel>
+
     <div class="w-full flex justify-center items-center gap-1 pt-10">
       <label
         v-for="i in 2" :key="i"
-        class="size-5   cursor-pointer rounded-full grid place-items-center overflow-hidden group " >
-        <input type="radio" :value="i"  class="peer hidden" />
+        class="size-5   cursor-pointer rounded-full grid place-items-center overflow-hidden group ">
+        <input type="radio" :value="i" class="peer hidden" />
+
         <div class="group-hover:bg-b4 group-hover:ring-1 ring-neutral  bg-b3 size-2 btn btn-circle pointer-events-none tldr-20 ring-offset-2" :class="{ 'bg-neutral group-hover:bg-neutral': i == i }" />
       </label>
     </div>

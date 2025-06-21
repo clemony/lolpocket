@@ -22,7 +22,7 @@ const runeSetsLength = computed (() => {
 
     const secondaryRunes = computed (() => {
       const a = Object.values(set.value[1].runes)
-     
+
       return a.length ? a.length : 0
     })
 
@@ -36,7 +36,7 @@ const runeSetsLength = computed (() => {
 </script>
 
 <template>
- <span v-tippy="`${runeSetsLength ? runeSetsLength : 'no'} rune`"  :class="cn('flex gap-1.5 items-center', props.class)">
+  <span v-tippy="`${runeSetsLength ? runeSetsLength : 'no'} rune`" :class="cn('flex gap-1.5 items-center', props.class)">
     <span class="dst font-mono text-1 ">{{ runeSetsLength }}</span>
   </span>
 </template>

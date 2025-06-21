@@ -1,4 +1,3 @@
-
 const ix = useIndexStore()
 
 export function useMatchItems() {
@@ -16,7 +15,6 @@ export function useMatchItems() {
     matchIndexes: number[]
     gameVersions: number[]
   }>()
-
 
   const bayesianItems = ref<any[]>([])
 

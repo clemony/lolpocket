@@ -40,6 +40,7 @@ watch(
           <icon name="fluent:mail-28-regular" />
           Email
         </IndicatorTabsTrigger>
+
         <TabIndicator class="bg-b1/50" />
       </IndicatorTabsList>
 
@@ -47,6 +48,7 @@ watch(
         v-if="tabModel == 'connect'"
         class="z-0 mt-12 w-full gap-2 px-1">
         <h3>Connect</h3>
+
         <p class="mb-10">
           Log in with another account.
         </p>
@@ -65,6 +67,7 @@ watch(
         v-if="tabModel == 'email'"
         class="z-0 mt-12 w-4/5 px-1">
         <h3>Email</h3>
+
         <p class="mb-10">
           Log in with email address.
         </p>

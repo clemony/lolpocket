@@ -8,7 +8,7 @@ definePageMeta({
 
 const is = useItemStore()
 const ix = useIndexStore()
-const { filtered} = useItemFilter(is.itemFilter)
+const { filtered } = useItemFilter(is.itemFilter)
 
 onMounted(() => {
   const { data } = useNuxtData<ItemIndex[]>('item-index')

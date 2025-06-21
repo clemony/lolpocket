@@ -40,7 +40,7 @@ const emit = defineEmits(['loaded'])
           :animate="{ opacity: [0, 100] }"
           :transition="{
             duration: 0.3,
-            type: 'easeIn',
+            ease: 'easeIn',
           }"
           v-bind="imgAttrs"
 
@@ -54,7 +54,7 @@ const emit = defineEmits(['loaded'])
           :animate="{ opacity: [100, 0] }"
           :transition="{
             duration: 0.3,
-            type: 'easeOut',
+            ease: 'easeOut',
           }"
           as-child>
           <Skeleton

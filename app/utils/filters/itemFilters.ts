@@ -1,11 +1,11 @@
 export const itemRanks = [
-  "Basic",
-  "Boots",
-  "Consumable",
-  "Epic",
-  "Legendary",
-  "Special",
-  "Starter"
+  'Basic',
+  'Boots',
+  'Consumable',
+  'Epic',
+  'Legendary',
+  'Special',
+  'Starter',
 ]
 
 export const itemTags = [

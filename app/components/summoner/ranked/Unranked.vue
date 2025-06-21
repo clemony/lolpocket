@@ -35,6 +35,7 @@ const props = defineProps<{
 
         <p v-tippy="`0 total`" class="hover:border-b-bc border-b-transparent border-b  flex text-1 items-center gap-1 text-end justify-end text-nowrap">
           <span>0W </span>
+
           <span>0L</span>
         </p>
       </div>

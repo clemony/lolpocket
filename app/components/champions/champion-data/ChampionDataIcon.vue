@@ -1,82 +1,81 @@
 <script lang="ts" setup>
-const {name, class: className} = defineProps<{
-name: string
-class?: HTMLAttributes['class']
+const { name, class: className } = defineProps<{
+  name: string
+  class?: HTMLAttributes['class']
 }>()
 
 const icon = [
   {
     name: 'Charge',
-        icon: 'charge',
+    icon: 'charge',
 
   },
   {
     name: 'Current health',
-        icon: 'health',
+    icon: 'health',
 
   },
   {
     name: 'Energy',
-        icon: 'energy',
+    icon: 'energy',
 
   },
   {
     name: 'Fury',
-        icon: 'fury',
+    icon: 'fury',
 
   },
   {
     name: 'Grit',
-    
+
   },
   {
     name: 'Health',
-        icon: 'health',
+    icon: 'health',
 
   },
   {
     name: 'Mana',
-        icon: 'mana',
+    icon: 'mana',
 
   },
   {
     name: 'Mana / s',
-        icon: 'mana',
+    icon: 'mana',
 
   },
   {
     name: 'Maximum health',
-        icon: 'hp',
+    icon: 'hp',
 
   },
   {
     name: 'Magic damage',
-        icon: 'ap',
+    icon: 'ap',
 
   },
 
   {
     name: 'Physical damage',
-        icon: 'ad',
+    icon: 'ad',
 
   },
   {
     name: 'Mixed damage',
-        icon: 'ad',
+    icon: 'ad',
 
   },
 
   {
     name: 'True damage',
-        icon: 'ad',
+    icon: 'ad',
 
   },
 ]
-
 </script>
 
 <template>
-  <span  :class="cn('', className)" >
- <component :is="`i-stats-${icon.find(p => p.name == name).icon}`" :class="cn('', className)" />
- </span>
+  <span :class="cn('', className)">
+    <component :is="`i-stats-${icon.find(p => p.name == name).icon}`" :class="cn('', className)" />
+  </span>
 </template>

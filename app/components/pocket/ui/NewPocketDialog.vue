@@ -47,6 +47,7 @@ defineExpose({
         <DialogTitle class="text-6 dst">
           New Pocket
         </DialogTitle>
+
         <DialogDescription class="text-2 leading-6 mt-1 dst mb-4">
           Choose a pocket name, tag your pocket (for easier searching), and create your pocket icon. <span class="font-semibold">All items can be left blank</span> and edited later.
         </DialogDescription>
@@ -57,12 +58,14 @@ defineExpose({
           <p class="w-full text-left flex items-center gap-2 text-4 px-5 font-semibold tracking-tight">
             Icon <icon name="select" />
           </p>
+
           <Popover>
             <PopoverTrigger class="justify-self-center group">
               <LazyPocketIcon
                 :url="selectedIcon"
                 class="**:!rounded-xl size-4 tldr-20 group-data-[state=open]:ring-1 cursor-pointer !rounded-xl overflow-hidden inset-shadow-rounded ring-offset-3 ring-offset-b1 shadow-rounded size-28 inset-shadow-black shadow-black/30  hover:ring-1" />
             </PopoverTrigger>
+
             <IconPopover v-model:selected-icon="selectedIcon" side="right" :side-offset="70" align="start" :align-offset="-136" @update:selected-icon="(e) => selectedIcon = e" />
           </Popover>
         </div>
@@ -81,6 +84,7 @@ defineExpose({
 
               <span class="flex gap-2">
                 <CloseButton />
+
                 <RandomButton v-tippy="'No brain? Meet Button.'" @click.stop="name = generateName()" />
               </span>
             </div>
@@ -106,25 +110,30 @@ defineExpose({
                   <TagsInputItem value="# optional">
                     <TagsInputItemText />
                   </TagsInputItem>
+
                   <TagsInputItem value="# tags">
                     <TagsInputItemText />
                   </TagsInputItem>
+
                   <TagsInputItem value="# here">
                     <TagsInputItemText />
                   </TagsInputItem>
                 </template>
               </div>
+
               <TagsInputInput
                 placeholder="optional"
                 class="text-3 min-h-10 w-full rounded-md border-0 focus:border-0"
                 name="pocket-tags " />
             </TagsInput>
           </div>
+
           <div class="relative inset-0 h-full">
             <slot />
           </div>
         </div>
       </div>
+
       <DialogFooter class="mt-3 justify-start">
         <button
           type="submit"

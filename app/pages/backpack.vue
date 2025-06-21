@@ -4,14 +4,15 @@ const ps = usePocketStore()
 definePageMeta({
   name: 'backpack',
   section: 'backpack',
-  icon: 'backpack'
+  icon: 'backpack',
 })
 </script>
 
 <template>
   <div class="w-full flex">
     <BackpackPocketList />
-    <div class="w-full pb-2 pt-22 pr-18 grid grid-cols-[repeat(auto-fill,25rem)] grid-flow-row pl-10 gap-x-8 gap-y-10 justify-between  items-center overflow-x-hidden auto-rows-fr">
+
+    <div class="w-full pb-2 pt-22  pr-18 flex flex-wrap pl-10 gap-x-8 gap-y-10   items-center overflow-x-hidden overflow-hidden">
       <BackpackCard v-for="pocket in ps.pockets" :key="pocket.key" :pocket="pocket" />
     </div>
   </div>

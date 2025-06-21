@@ -13,15 +13,17 @@ watchEffect(() => {
   <Collapsible v-model="isOpen" :default-open="true" class="group">
     <SidebarCollapsibleTrigger>
       <icon name="teenyicons:compass-outline" class="size-4 dst " />
-       <SummonerName class="capitalize" />
+
+      <SummonerName class="capitalize" />
     </SidebarCollapsibleTrigger>
+
     <SidebarCollapsibleContent class="tldr-30" :class="{ 'gap-1': !us.sidebarExpanded }">
       <LazyNuxtLink
         v-for="link in summonerLinks" :key="link.name"
         :to="link.link" class="group">
         <Btn class="capitalize">
           <IconWrapper :name="link.icon" class="size-4.5 dst shrink-0" :class="link.iconClass" />
-           {{ link.name }}
+          {{ link.name }}
         </Btn>
       </LazyNuxtLink>
     </SidebarCollapsibleContent>

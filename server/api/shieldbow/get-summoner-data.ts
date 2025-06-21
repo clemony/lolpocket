@@ -12,15 +12,13 @@ export default defineEventHandler(async (event) => {
     throw new Error('puuid is required')
   }
 
-  await client.initialize({ region: 'na',
-    fetch: false,
-storage:{
-  enable:{
-    dragon:false,
-    api: false}
+  await client.initialize({ region: 'na', fetch: false, storage: {
+    enable: {
+      dragon: false,
+      api: false,
+    },
 
-},
-cache: { enable: { api: true } } })
+  }, cache: { enable: { api: true } } })
 
   const summoner = await client.summoners.fetchByPlayerId(query.puuid.toString())
 

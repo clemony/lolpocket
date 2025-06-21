@@ -27,10 +27,12 @@ function onEnd() {
       <DropdownMenuTrigger class="group/trig z-2 top-2.5 absolute right-4  data-[state=open]:!bg-neutral/85 hover:border-b2 btn btn-sm btn-ghost !pointer-events-auto dst hover:!bg-b1/90  rounded-lg btn-square">
         <icon name="more" class="size-5 shrink-0 group-data-[state=open]/trig:!text-nc" />
       </DropdownMenuTrigger>
+
       <LazyContrastDropdownContent align="end" :side-offset="1" class="w-64">
         <LazyItemSetMenu :pocket="pocket" :set="itemSet" />
       </LazyContrastDropdownContent>
     </DropdownMenu>
+
     <div
       :key="`${set.join('-')}-${count}`"
       v-draggable="[
@@ -71,8 +73,10 @@ function onEnd() {
             class="shadow-sm shrink-0 !size-19  *:rounded-lg"
             @click.prevent />
         </PopoverTrigger>
+
         <LazyCustomPopoverContent class="p-2 w-114">
           <CustomPopoverArrow />
+
           <LazyItemData
             :id="item" />
           <!-- <LazyItemInSetMenu v-else :pocket="pocket" :set="props.set" :item="item" @update:popover="showData = true" /> -->

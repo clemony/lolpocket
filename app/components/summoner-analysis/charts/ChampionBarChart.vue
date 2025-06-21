@@ -169,7 +169,8 @@ onMounted(() => {
         height: '32px',
       }">
       <div class="size-[32px] rounded-lg overflow-hidden">
-        <ChampionIcon :id="champions[idx].championId"
+        <ChampionIcon
+          :id="champions[idx].championId"
           :alt="pos.label"
           class="size-full scale-115" />
       </div>

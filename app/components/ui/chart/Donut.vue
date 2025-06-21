@@ -52,4 +52,3 @@ const chartData = computed(() => ({
     role="img"
     :class="props.class" />
 </template>
-

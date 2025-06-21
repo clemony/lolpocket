@@ -11,7 +11,6 @@ interface RoleStats {
   color: string
 }
 
-
 const hexColors = {
   support: '#99c4c8',
   bottom: '#ebcb8b',
@@ -30,10 +29,12 @@ export function useMatchRoles(matches: Ref<SimplifiedMatchData[]>): ComputedRef<
 
     for (const match of matches.value) {
       const role = match.teamPosition.toUpperCase()
-      if (!roles.includes(role)) continue
+      if (!roles.includes(role))
+        continue
 
       allGames++
-      if (match.win) allWins++
+      if (match.win)
+        allWins++
 
       if (!roleStatsMap.has(role)) {
         roleStatsMap.set(role, { games: 0, wins: 0 })
@@ -41,7 +42,8 @@ export function useMatchRoles(matches: Ref<SimplifiedMatchData[]>): ComputedRef<
 
       const stats = roleStatsMap.get(role)!
       stats.games++
-      if (match.win) stats.wins++
+      if (match.win)
+        stats.wins++
     }
 
     roleStatsMap.set('ALL', { games: allGames, wins: allWins })
@@ -49,17 +51,17 @@ export function useMatchRoles(matches: Ref<SimplifiedMatchData[]>): ComputedRef<
     const globalWinrate = allGames === 0 ? 0 : allWins / allGames
     const m = 500
 
-const formatDisplay = (role: string) => {
-  switch (role) {
-    case 'UTILITY': return 'Support'
-    case 'MIDDLE': return 'Mid'
-    case 'BOTTOM': return 'Bot'
-    case 'ALL': return 'All'
-    default: return role.charAt(0) + role.slice(1).toLowerCase()
-  }
-}
+    const formatDisplay = (role: string) => {
+      switch (role) {
+        case 'UTILITY': return 'Support'
+        case 'MIDDLE': return 'Mid'
+        case 'BOTTOM': return 'Bot'
+        case 'ALL': return 'All'
+        default: return role.charAt(0) + role.slice(1).toLowerCase()
+      }
+    }
 
-    return ['ALL', ...roles].map(role => {
+    return ['ALL', ...roles].map((role) => {
       const { games = 0, wins = 0 } = roleStatsMap.get(role) ?? {}
       const displayName = formatDisplay(role)
 

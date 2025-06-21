@@ -56,6 +56,7 @@ watch(
         </CustomTabTrigger>
       </template>
     </TabsList>
+
     <slot />
   </Tabs>
 </template>

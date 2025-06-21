@@ -1,15 +1,15 @@
-import fs from "node:fs"
-import path from "node:path"
-import { markUpdate } from "../utils/mark-update"
+import fs from 'node:fs'
+import path from 'node:path'
+import { markUpdate } from '../utils/mark-update'
 
-const outputFile = path.resolve("./app/data/index/champion-index.ts")
+const outputFile = path.resolve('./app/data/index/champion-index.ts')
 
 const champs: Champion[] = JSON.parse(
-  fs.readFileSync("./data/raw/champions-raw.json", "utf-8")
+  fs.readFileSync('./data/raw/champions-raw.json', 'utf-8'),
 )
 
 // Extract id, name, and path
-const index: { id: number; key: string; name: string }[] = []
+const index: { id: number, key: string, name: string }[] = []
 
 for (const champ in champs) {
   const champion = champs[champ]

@@ -1,17 +1,17 @@
-import fs from "node:fs"
-import path from "node:path"
-import { formatStats, normalizeItemData } from "../utils/format-items"
-import { handleWikiText } from "../utils/format-wiki-text"
-import { markUpdate } from "../utils/mark-update"
-import { stripEmpty } from "../utils/strip-empty.ts"
-import { ludensPreProcess } from "../utils/wikitext/processing"
+import fs from 'node:fs'
+import path from 'node:path'
+import { formatStats, normalizeItemData } from '../utils/format-items'
+import { handleWikiText } from '../utils/format-wiki-text'
+import { markUpdate } from '../utils/mark-update'
+import { stripEmpty } from '../utils/strip-empty.ts'
+import { ludensPreProcess } from '../utils/wikitext/processing'
 
-const inputPath = path.resolve("./data/raw/items-raw.json")
+const inputPath = path.resolve('./data/raw/items-raw.json')
 
-const outputIndex = path.resolve("./app/data/index/item-index.ts")
-const outputLitePath = path.resolve("./app/data/records/items-lite.ts")
-const itemOutputDir = path.resolve("./app/data/records/items/")
-const fullData = JSON.parse(fs.readFileSync(inputPath, "utf-8"))
+const outputIndex = path.resolve('./app/data/index/item-index.ts')
+const outputLitePath = path.resolve('./app/data/records/items-lite.ts')
+const itemOutputDir = path.resolve('./app/data/records/items/')
+const fullData = JSON.parse(fs.readFileSync(inputPath, 'utf-8'))
 
 const index = {}
 const simplified = {}
@@ -23,7 +23,8 @@ fs.mkdirSync(itemOutputDir, { recursive: true })
 async function buildItems() {
   for (const id in fullData) {
     const item = fullData[id]
-    if (item.id === 2146) continue
+    if (item.id === 2146)
+      continue
 
     const sharedVars = new Map<string, string>()
 
@@ -31,8 +32,8 @@ async function buildItems() {
     const { rank, tags, maps } = normalizeItemData(item)
 
     // Collect unique metadata
-    tags.forEach((t) => uniqueTags.add(t))
-    rank.forEach((r) => uniqueRanks.add(r))
+    tags.forEach(t => uniqueTags.add(t))
+    rank.forEach(r => uniqueRanks.add(r))
 
     index[id] = {
       name: item.name,
@@ -70,7 +71,7 @@ async function buildItems() {
           charges: a.charges,
           range: a.range,
         }
-      })
+      }),
     )
 
     const passives = item.passives || []
@@ -78,9 +79,9 @@ async function buildItems() {
     const expandedPassives = await Promise.all(
       passives.map(async (p) => {
         let pText = p.effects
-        if (item.id === 6655 && p.effects?.includes("Shot Charges")) {
+        if (item.id === 6655 && p.effects?.includes('Shot Charges')) {
           pText = ludensPreProcess(p.effects)
-          console.log("💠 - passives.map - pText:", pText)
+          console.log('💠 - passives.map - pText:', pText)
         }
         const effects = await handleWikiText(pText, sharedVars)
         return {
@@ -92,7 +93,7 @@ async function buildItems() {
           charges: p.charges,
           range: p.range,
         }
-      })
+      }),
     )
     const { tier, iconOverlay, ...rest } = item
     const fullItem = {
@@ -109,7 +110,7 @@ async function buildItems() {
     fs.writeFileSync(
       path.resolve(itemOutputDir, `${item.id}.ts`),
       `const item: Item =  ${JSON.stringify(cleanedItem, null, 2)}
-export default item`
+export default item`,
     )
   }
 
@@ -118,30 +119,30 @@ export default item`
     outputIndex,
     `// ${markUpdate()}
 
-export const itemIndex: ItemIndex[] = ${JSON.stringify(Object.values(index), null, 2)}`
+export const itemIndex: ItemIndex[] = ${JSON.stringify(Object.values(index), null, 2)}`,
   )
   fs.writeFileSync(
     outputLitePath,
     `// ${markUpdate()}
 
-export const itemsLite: ItemLite[] = ${JSON.stringify(Object.values(simplified), null, 2)}`
+export const itemsLite: ItemLite[] = ${JSON.stringify(Object.values(simplified), null, 2)}`,
   )
   fs.writeFileSync(
-    "./data/items-lite.json",
-    JSON.stringify(Object.values(simplified), null, 2)
+    './data/items-lite.json',
+    JSON.stringify(Object.values(simplified), null, 2),
   )
   fs.writeFileSync(
-    "./data/dev/unique-tags.json",
-    JSON.stringify([...uniqueTags].sort(), null, 2)
+    './data/dev/unique-tags.json',
+    JSON.stringify([...uniqueTags].sort(), null, 2),
   )
   fs.writeFileSync(
-    "./data/dev/unique-ranks.json",
-    JSON.stringify([...uniqueRanks].sort(), null, 2)
+    './data/dev/unique-ranks.json',
+    JSON.stringify([...uniqueRanks].sort(), null, 2),
   )
 }
 
 buildItems()
 
-console.log("✅ items-lite.json written")
-console.log("📁 individual item files written to ./data/items/")
-console.log("🔖 unique-tags.json and unique-ranks.json written")
+console.log('✅ items-lite.json written')
+console.log('📁 individual item files written to ./data/items/')
+console.log('🔖 unique-tags.json and unique-ranks.json written')

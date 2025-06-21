@@ -1,7 +1,7 @@
-<!-- eslint-disable vue/no-irregular-whitespace -->
 <script lang="ts" setup>
-import type { CSSProperties } from 'vue'
-
+const { scrollProg } = defineProps<{
+  scrollProg: MotionValue
+}>()
 const target = ref(null)
 
 const parallax = reactive(useParallax(target))
@@ -48,7 +48,7 @@ const cardStyle = computed(() => ({
   <div ref="target" class="size-full rounded-lg relative" :style="containerStyle">
     <div class="size-full absolute" :style="layer0">
       <div
-        class="bg-b1/90 h-[95%] w-[45%] rounded-xl shadow-md shadow-black/10 right-10 top-2 absolute z-0  flex pt-7 px-8"
+        class="bg-b1/90 h-[95%] w-[45%] rounded-xl shadow-md shadow-black/5 right-10 top-2 absolute z-0  flex pt-7 px-8"
         :style="containerStyle">
         <div class="grid grid-cols-1 h-fit w-full justify-start justify-items-start gap-3">
           <p class="font-medium tracking-tight dst">
@@ -60,13 +60,16 @@ const cardStyle = computed(() => ({
           <p class="text-1">
             Search Tags
           </p>
+
           <div class="grid grid-cols-2 w-full h-fit grid-flow-row grid-rows-2 gap-y-5" :style="layer0">
             <div class="badge badge-md z-10 bg-b1 text-3 shadow-md shadow-black/10 ring ring-b3">
               # jungle
             </div>
+
             <div class="badge badge-md z-10 bg-b1 text-3 shadow-md shadow-black/10 ring ring-b3">
               # support
             </div>
+
             <div class="badge badge-md z-10 bg-b1 text-3 shadow-md shadow-black/10 ring ring-b3">
               # marksman
             </div>
@@ -86,6 +89,7 @@ const cardStyle = computed(() => ({
         class="h-10 absolute bg-b1 border-b3 shadow-pretty shadow-b3/70 border rounded-lg flex px-3 items-center w-54 justify-between select-none top-23 left-9 align-end"
         :style="layerBase">
         <span class="dst">Pocket Name</span>
+
         <div class="btn pointer-events-none btn-xs shadow-sm px-0.5 aspect-square">
           <icon name="tick-sm" class="size-5 dst" />
         </div>

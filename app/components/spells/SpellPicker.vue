@@ -47,6 +47,7 @@ const selectedSpell = computed (() => {
       align="center">
       <div class="gap-3 place-content-evenly grid grid-cols-3  ">
         <CustomPopoverArrow />
+
         <PopoverClose
           v-for="ss in ix.spells"
           :key="ss.name"
@@ -60,6 +61,7 @@ const selectedSpell = computed (() => {
               class="hidden"
               :disabled="selectedSpell == ss"
               @change="emit('update:spell', ss)" />
+
             <img
               :src="`/img/spells/${ss.name}.webp`"
               class="size-full rounded-lg" />

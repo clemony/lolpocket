@@ -16,22 +16,29 @@ const tab = ref('stats')
         <IndicatorTabsTrigger value="stats">
           Stat Totals
         </IndicatorTabsTrigger>
+
         <IndicatorTabsTrigger value="effects">
           Item Effects
         </IndicatorTabsTrigger>
+
         <IndicatorTabsTrigger value="options">
           Options
         </IndicatorTabsTrigger>
+
         <TabIndicator />
       </IndicatorTabsList>
+
       <TabsContent value="stats" class="mt-8 bg-b1 w-full rounded-lg">
         <LazyCalculatorStatTotals />
       </TabsContent>
+
       <LazyTabsContent value="effects" class="m-0 ">
         effects
       </LazyTabsContent>
+
       <LazyTabsContent value="options" class="m-0 ">
         <CalculatorMenu />
+
         <LazyCalculatorOptions />
       </LazyTabsContent>
     </Tabs>

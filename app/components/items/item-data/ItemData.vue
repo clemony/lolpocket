@@ -6,7 +6,6 @@ const { id, base } = defineProps<{
 
 const item = ref<Item>()
 
-
 watchEffect(async () => {
   if (!id)
     return
@@ -37,30 +36,38 @@ watchEffect(async () => {
       <div class="flex flex-col  text-4 w-full">
         <div class=" flex items-center justify-between  gap-1">
           <a
-            v-tippy="'Official Wiki'"
             v-if="item.name"
+            v-tippy="'Official Wiki'"
             :href="getWikiLink(item.name)"
             target="_blank"
             alt="link to league wiki"
             class=" flex items-center  w-full gap-1.5">
             {{ item.name || '' }}
             <icon name="link-lg" class="size-3.75 dst" />
+
             <Grow />
           </a>
         </div>
+
         <div class="flex gap-1 ">
-          <div v-if="item.rank">{{item.rank}}</div>
+          <div v-if="item.rank">
+            {{ item.rank }}
+          </div>
+
           <Grow />
+
           <div v-if="item && item.shop?.prices?.total" class="flex items-end gap-1 text-2 !text-nc">
             <Img img="/img/icons/gold-coin.webp" alt="coin" class="size-4 ml-1 self-center opacity-80" />
             {{ item.shop.prices.total }}
           </div>
         </div>
       </div>
+
       <div v-if="item.requiredChampion" class="my-2 -mt-2">
         <i>Unique to <b>{{ item.requiredChampion }}.</b></i>
       </div>
     </div>
+
     <div class="  py-2    relative overflow-y-auto    flex flex-col ">
       <div v-if="item.stats && Object.entries(item.stats).length" class="pb-1">
         <ItemStats :stats="item.stats" :base="base" />
@@ -80,6 +87,7 @@ watchEffect(async () => {
       </div>
 
       <LazyItemFrom v-if="item.buildsFrom?.length" :from="item.buildsFrom" :gold=" item.shop?.prices?.combined" />
+
       <LazyItemTo v-if="item.buildsInto?.length" :to="item.buildsInto" />
 
       <!-- <Separator v-if="item.passives.length || item.active.name" class=" mt-3 mb-2 bg-nc/10" />

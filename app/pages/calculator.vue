@@ -25,7 +25,9 @@ console.log('💠 - is.calculatorSets:', is.calculatorSets)
     <ResizablePanel :default-size="30" class="size-full relative">
       <CalculatorResults />
     </ResizablePanel>
+
     <ResizableHandle with-handle />
+
     <ResizablePanel
       class="flex justify-center h-full  pt-8  overflow-y-auto">
       <div>
@@ -35,6 +37,7 @@ console.log('💠 - is.calculatorSets:', is.calculatorSets)
           <ListboxContent class="pt-14 px-14">
             <ListboxGroup>
               <ListboxGroupLabel>Sets</ListboxGroupLabel>
+
               <transition-slide group :offset="{ enter: [0, 16], leave: [0, 16] }" class=" grid gap-y-8">
                 <ListboxItem v-for="(set, i) in is.calculatorSets" :key="i" :value="set[i]">
                   <Field class="!flex flex-row gap-3 items-center items-center pl-6 gap-4 w-fit bg-b2/30  drop-shadow-xs ">
@@ -47,6 +50,7 @@ console.log('💠 - is.calculatorSets:', is.calculatorSets)
                     </template>
 
                     <CalculatorSet :num="i" :set="set" />
+
                     <div class="size-6.5">
                       <div class="size-6 grid justify-start items-center shadow-sm dst inset-shadow-sm rounded-tiny border-neutral/50 bg-b1/50 border">
                         <ListboxItemIndicator :key="i" as-child>

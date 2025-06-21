@@ -31,9 +31,11 @@ const set = computed(() => pocket.runes[rs.selectedRuneSet])
             v-tippy="path"
             class=" rounded-full relative group aspect-square size-15 place-self-center invisible opacity-0"
             :value="path" />
+
           <TabIndicator round-disabled />
         </IndicatorTabsList>
       </Tabs>
+
       <TabIndicator round />
     </IndicatorTabsList>
   </Tabs>

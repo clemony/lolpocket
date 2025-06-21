@@ -1,98 +1,37 @@
-import type { Session } from '@supabase/supabase-js'
 import type { RefOrElement } from 'vue-draggable-plus'
 
 declare global {
+  interface OgResponse {
+    title: string
+    description: string
+    image: string
+    url: string
+  }
+  interface PatchNotesData extends OgResponse {
+    patch: string
+  }
 
-  type Side = 'top' | 'right' | 'bottom' | 'left'
-  type Align = 'start' | 'center' | 'end'
+  type LinkGroup = LinkObject[]
 
- type AccountRole = 'admin' | 'summoner'
- interface userAccount {
-   name: string
-   role: AccountRole
-   id: string
-   session: Session
-   accessToken: string
-   refreshToken: string
-   riot: UserSummoner | null
- }
+  interface LinkObject {
+    name: string
+    link?: string
+    links?: LinkObject[]
+    icon?: string
+    iconClass?: string
+    external?: boolean
+    component?: any
+    blurb?: string
+  }
 
- interface OgResponse {
-   title: string
-   description: string
-   image: string
-   url: string
- }
- interface PatchNotesData extends OgResponse {
-   patch: string
- }
- interface MatchFilter {
-   patch?: number | null
-   queue?: number | null
-   champion?: string | null
-   ally?: string | null
-   role?: string | null
-   ignoreRole?: boolean
- }
-
- interface ChampionFilter {
-   position?: string | null
-   role?: string | null
-   query: string | null
-   result: any[] | null
- }
-
- interface ItemFilter {
-   purchasable: boolean
-   rank: string | null
-   stats: string[] | null
-   tags: string | null
-   map: number | null
-   query: string | null
-   result: any[] | null
- }
-
- interface Folder {
-   name: string
-   key: string
-   type?: string
-   description?: string
-   buttonRef?: any
-   link?: string
-   items?: any[]
-   icon?: string
-   permanent?: boolean
-   locked?: boolean
-   iconSolid?: string
- }
-
- interface Tabs {
-   currentValue: {
-     pos: number
-     width: number
-   }
-   returnValue: {
-     pos: number
-     width: number
-   }
- }
-
- interface Note {
-   title: string
-   content: string
-   icon: string
-   date: string
-   heart?: boolean
- }
-
- interface Category {
-   id: string
-   displayName?: string
-   checked: boolean
-   icon?: string
-   color?: string
-   champions?: Array<string>
- }
+  interface Category {
+    id: string
+    displayName?: string
+    checked: boolean
+    icon?: string
+    color?: string
+    champions?: Array<string>
+  }
 
   type categories = Category[]
 
@@ -114,4 +53,4 @@ declare global {
     time: string
   }
 }
-export { }
+export {}

@@ -3,7 +3,7 @@ import type { PrimitiveProps } from 'reka-ui'
 
 const props = defineProps<PrimitiveProps & {
   class?: HTMLAttributes['class']
- duration: number
+  duration: number
 }>()
 
 const time = computed (() => {
@@ -11,13 +11,10 @@ const time = computed (() => {
   const b = a.toFixed(2)
   return b.toString().replace('.', ':')
 })
-
-
 </script>
 
 <template>
   <Primitive v-bind="props">
     {{ time }}
   </Primitive>
-
 </template>

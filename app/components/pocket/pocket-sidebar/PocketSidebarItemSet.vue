@@ -64,6 +64,7 @@ const hovered = ref(false)
         </template>
       </template>
     </PopoverTrigger>
+
     <PopoverPortal>
       <AnimatePresence>
         <PopoverContent
@@ -86,6 +87,7 @@ const hovered = ref(false)
               <span class="grow capitalize font-medium tracking-tight">
                 {{ set.name }}
               </span>
+
               <button class="btn btn-sm btn-square btn-ghost" @click="deleteItemSet(pocket, set)">
                 <icon name="trash" />
               </button>
@@ -97,7 +99,7 @@ const hovered = ref(false)
               initial="closed"
               animate="open"
               exit="closed"
-              :variants="setWrapperVariants" :transition="{ delay: 0.3, type: 'easeOut' }">
+              :variants="setWrapperVariants" :transition="{ delay: 0.3, ease: 'easeOut' }">
               <motion.div
                 v-for="item in set.items" :key="item"
                 :variants="itemVariants"

@@ -15,6 +15,7 @@ console.log('💠 - summoner:', summoner.value.profileIcon)
       :src="summoner.profileIcon"
       alt="summoner icon"
       class="size-full [&_img]:scale-115 rounded-full  inset-shadow-sm inset-shadow-black/90 avatar" />
+
     <div
       v-else
       class="rounded-full avatar bg-neutral grid place-items-center text-nc text-2 pl-px pt-px size-full font-semibold">

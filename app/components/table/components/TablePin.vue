@@ -32,8 +32,7 @@ function handlePin(pocket) {
       <input
         type="checkbox"
         :value="pocket"
-        class="checkbox checkbox-sm border-neutral/60 rounded-sm border"
-      />
+        class="checkbox checkbox-sm border-neutral/60 rounded-sm border" />
     </label>
   </div>
 </template>

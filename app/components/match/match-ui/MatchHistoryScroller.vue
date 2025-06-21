@@ -51,8 +51,8 @@ const virtualMatches = computedAsync(async () => {
       </template>
     </DynamicScroller>
 
-        <div v-else-if="!loading && !filteredMatches.length" class="grid place-items-center w-220 pt-57 h-54 font-medium">
-          No matches found with these filters.
-        </div>
+    <div v-else-if="!loading && !filteredMatches.length" class="grid place-items-center w-220 pt-57 h-54 font-medium">
+      No matches found with these filters.
+    </div>
   </div>
 </template>

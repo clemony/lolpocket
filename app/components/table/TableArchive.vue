@@ -16,6 +16,7 @@ function handleDelete() {
     <h1 class="-mt-7 px-8 pb-6">
       Trash
     </h1>
+
     <Separator class="ml-3 bg-b3/0" />
 
     <div class="flex overflow-y-auto flex-col gap-3 pl-5 pt-6 size-full">
@@ -24,6 +25,7 @@ function handleDelete() {
           <div class="flex gap-6">
             <PocketIcon :url="pocket.icon" class="size-13 **:rounded-lg rounded-lg" />
           </div>
+
           <div class="grid items-between text-start">
             <h5 class="tracking-tight pt-1">
               {{ pocket.name }}
@@ -36,11 +38,14 @@ function handleDelete() {
               </div>
             </div> -->
           </div>
+
           <Grow />
+
           <div class=" justify-self-end ">
             <icon name="bi:arrow-return-left" class="size-6 shrink-0 opacity-20 group-hover:opacity-100" />
           </div>
         </div>
+
         <Separator class="group-last-of-type:hidden w-full col-span-full bg-b3/30 mt-1 group-hover:opacity-0 transition-all duration-200" />
       </div>
     </div>
@@ -51,13 +56,13 @@ function handleDelete() {
       <label
         class="toggle rounded-full  toggle-lg  peer items-center    absolute left-4 bg-b3 has-checked:!bg-b1  before:rounded-full  border-b3
 
-    before:!bg-b1  has-checked:before:!bg-domination "
-      >
+    before:!bg-b1  has-checked:before:!bg-domination ">
         <input v-model="isDeletable" type="checkbox">
 
       </label>
 
       <icon v-if="isDeletable" name="clarity:unlock-line" class="size-6.5 shrink-0  text-b1 " />
+
       <icon v-else name="clarity:lock-line" class=" size-6.5 !text-b1 shrink-0 " />
     </div>
 

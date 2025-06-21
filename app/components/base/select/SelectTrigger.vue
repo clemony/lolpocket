@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { reactiveOmit } from '@vueuse/core'
-import { SelectIcon, SelectTrigger, type SelectTriggerProps, useForwardProps } from 'reka-ui'
+import { SelectIcon, SelectTrigger, useForwardProps } from 'reka-ui'
+import type { SelectTriggerProps } from 'reka-ui'
 
 const props = defineProps<SelectTriggerProps & { class?: HTMLAttributes['class'], noArrow?: boolean }>()
 
@@ -17,6 +18,7 @@ const forwarded = useForwardProps(delegatedProps)
       props.class,
     )">
     <slot />
+
     <SelectIcon :class="{ hidden: props.noArrow }" as-child class="relative">
       <icon name="select" class="size-5.25 opacity-50 shrink-0  absolute  right-0" />
     </SelectIcon>

@@ -16,8 +16,7 @@ const delegatedProps = computed(() => {
 <template>
   <TabsContent
     :class="cn('mt-2 ring-offset-b1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-b2 focus-visible:ring-offset-2', props.class)"
-    v-bind="delegatedProps"
-  >
+    v-bind="delegatedProps">
     <slot />
   </TabsContent>
 </template>

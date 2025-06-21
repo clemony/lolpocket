@@ -19,6 +19,7 @@ const spells = computed (() => {
 <template>
   <div class="" :class="cn('flex items-center gap-1 flex-col shrink-0', props.class)">
     <img v-tippy="spells.sum1" :src="`/img/spells/${spells.sum1}.webp`" class="size-8 shadow-sm rounded-md" />
+
     <img v-tippy="spells.sum2" :src="`/img/spells/${spells.sum2}.webp`" class="size-8 shadow-sm rounded-md" />
   </div>
 </template>

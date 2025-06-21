@@ -22,13 +22,18 @@ const isOpen = ref(false)
         <CollapsibleTrigger class="flex gap-7 py-6 w-full items-start overflow-hidden  cursor-pointer group/collapse pl-6 pr-4 ">
           <div class="flex w-38 h-full **:select-none flex-col justify-start gap-1.5">
             <WinLossButton v-if=" player.teamId && match" :player="player" :match="match" />
+
             <div class="font-medium dst tracking-tight text-left w-full space-y-1 ">
               <MatchQueue v-if="match.queueId" as="p" class="text-2 text-left text-nowrap" :queue-id="match.queueId" />
+
               <MatchMap v-if="match.info.mapId" :id="match.info.mapId" as="p" class="text-2" />
+
               <GameDuration as="p" :duration="match.info.gameDuration" class="tracking-wide" />
+
               <GameEndTime v-if="match.info.gameEndTimestamp" as="p" class="text-2 capitalize" :end-time="match.info.gameEndTimestamp" />
             </div>
           </div>
+
           <div class="flex gap-3 w-full">
             <div class="flex flex-col gap-3 grow ">
               <div class="flex items-start">
@@ -56,8 +61,10 @@ const isOpen = ref(false)
                 <MatchItems v-if="player.item0" :player="player" />
               </div>
             </div>
+
             <TeamsOverview :match="match" />
           </div>
+
           <div class="h-full relative w-8 absolute flex items-center overflow-visible justify-self-end">
             <icon name="up-sm" class="dst group-hover/collapse:stroke-[1.3] tldr-20" :class="{ '-rotate-180': isOpen }" />
           </div>
@@ -65,6 +72,7 @@ const isOpen = ref(false)
 
         <CollapsibleContent class=" CollapsibleContent w-full ">
           <Separator class="!bg-b3/60" />
+
           <MatchCollapse :match="match" />
         </CollapsibleContent>
       </div>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { account, class: className, regionId } = defineProps<{
   class?: HTMLAttributes['class']
-  account?: userAccount
+  account?: UserAccount
   regionId?: string
 }>()
 

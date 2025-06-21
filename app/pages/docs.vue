@@ -8,6 +8,7 @@ definePageMeta({
 
 <template>
   <AppTitlebar />
+
   <PagePlaceholder />
 </template>
 

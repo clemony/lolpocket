@@ -48,14 +48,12 @@ watch(
     :alt="`move to${props.text}`"
     :disabled="!ps.selectedRows.length"
     class="join-item relative -mt-px w-14"
-    @click="move"
-  >
+    @click="move">
     <slot />
 
     <div
       v-if="ps.selectedRows.length"
-      class="bg-neutral text-bc pointer-events-none absolute top-[1px] right-1 grid aspect-square size-3.5 place-content-center place-items-center rounded-full"
-    >
+      class="bg-neutral text-bc pointer-events-none absolute top-[1px] right-1 grid aspect-square size-3.5 place-content-center place-items-center rounded-full">
       {{ selectedCount }}
     </div>
   </Button>

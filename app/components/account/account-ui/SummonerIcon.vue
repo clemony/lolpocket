@@ -13,6 +13,7 @@ const props = defineProps<{
       :src="`https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/profile-icons/${props.iconId}.jpg`"
       :alt="props.alt"
       class="size-full [&_img]:scale-115 rounded-full  inset-shadow-sm inset-shadow-black/90 avatar" />
+
     <div
       v-else
       class="rounded-full avatar bg-neutral grid place-items-center text-nc text-2 size-full font-semibold">

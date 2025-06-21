@@ -16,8 +16,7 @@ const delegatedProps = computed(() => {
 <template>
   <DialogTitle
     :class="cn('text-lg font-semibold text-foreground', props.class)"
-    v-bind="delegatedProps"
-  >
+    v-bind="delegatedProps">
     <slot />
   </DialogTitle>
 </template>

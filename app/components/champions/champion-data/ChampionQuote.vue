@@ -2,9 +2,9 @@
 import type { PrimitiveProps } from 'reka-ui'
 import { Primitive } from 'reka-ui'
 
-const {as = "span", class: className} = defineProps<PrimitiveProps &  {
+const { as = 'span', class: className } = defineProps<PrimitiveProps & {
   as?: string
-    class?: HTMLAttributes['class']
+  class?: HTMLAttributes['class']
 }>()
 
 const quotes = [
@@ -76,17 +76,14 @@ const quotes = [
   '"Cute mask. Your, uh, mom sew that?" -Yasuo, to Shen',
 ]
 
+const quote = ref(null)
 onMounted (async () => {
   quote.value = getRandom(quotes)
 })
-
-const quote = ref(null)
 </script>
 
 <template>
-
-<Primitive v-bind="$attrs" :as="as" :class="cn('', className)">
-      {{ quote }}
+  <Primitive v-bind="$attrs" :as="as" :class="cn('', className)">
+    {{ quote }}
   </Primitive>
-
 </template>

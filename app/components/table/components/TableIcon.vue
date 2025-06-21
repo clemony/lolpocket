@@ -15,8 +15,10 @@ const props = defineProps<{
             backgroundSize: props.params.value == '/img/champion-centered/1.webp' ? '100%' : '450%',
             backgroundPosition: 'center 20%' }">
         </div>
+
         <icon name="ph:gear-six-fill" class="size-7 text-nc absolute opacity-0  group-hover:opacity-85  transition-all  duration-400" />
       </PopoverTrigger>
+
       <LazyIconPopover :pocket-key="props.params.data.key" />
     </div>
   </Popover>

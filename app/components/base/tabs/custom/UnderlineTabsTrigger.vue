@@ -1,14 +1,13 @@
-
 <script lang="ts" setup>
-  import { TabsTrigger } from "reka-ui";
-  import type { TabsTriggerProps } from "reka-ui";
+import { TabsTrigger } from 'reka-ui'
+import type { TabsTriggerProps } from 'reka-ui'
 
-  const props =  defineProps<
-      TabsTriggerProps & {
-         class?: HTMLAttributes['class']
-      }
+const props = defineProps<
+  TabsTriggerProps & {
+    class?: HTMLAttributes['class']
+  }
     >()
-  const forwarded = reactiveOmit(props, "class");
+const forwarded = reactiveOmit(props, 'class')
 </script>
 
 <template>

@@ -4,7 +4,7 @@ declare global {
   type ItemRecord = Record<ItemId, ItemLite>
   type StatLite = number
   type StatArray = StatLite[]
-  type StatKeys = keyof ItemLite["stats"]
+  type StatKeys = keyof ItemLite['stats']
   type CalculatorSet = ItemIndex[]
   type effectAmount = number
 

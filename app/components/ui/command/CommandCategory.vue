@@ -47,14 +47,18 @@ const contentVariants = {
         exit="hidden"
         class="z-1 g h-10 flex gap-3 relative backdrop-brightness-40   sticky px-6 top-0 left-0 backdrop-blur-md  items-center  bg-black-21/69  font-medium w-full group cursor-pointer">
         <div class="backdrop-blur-md mix-blend-screen  backdrop-brightness-[103.5%] size-full absolute top-0 left-0 z-0" />
+
         <span class="flex z-1 tldr-20 capitalize items-center group-hover:text-white/80 group-hover:**:text-white/60 text-white/40  gap-3">
           <slot name="icon" />
           {{ name }}
         </span>
+
         <Grow />
+
         <Badge class="mr-1 z-1 group-hover:opacity-100">
           {{ results.length ?? 'no results' }}
         </Badge>
+
         <PlusMinusExpand v-if="results.length" class="!text-bc " />
       </motion.button>
     </CollapsibleTrigger>

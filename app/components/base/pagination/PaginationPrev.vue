@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { PaginationPrev, type PaginationPrevProps } from 'reka-ui'
-import { computed, type HTMLAttributes } from 'vue'
+import { PaginationPrev } from 'reka-ui'
+import type { PaginationPrevProps } from 'reka-ui'
+import { computed } from 'vue'
+import type { HTMLAttributes } from 'vue'
 
 const props = withDefaults(defineProps<PaginationPrevProps & { class?: HTMLAttributes['class'] }>(), {
   asChild: true,
@@ -15,9 +17,9 @@ const delegatedProps = computed(() => {
 
 <template>
   <PaginationPrev v-bind="delegatedProps">
-    <button :class="cn('btn btn-ghost btn-square btn-sm', props.class)" >
+    <button :class="cn('btn btn-ghost btn-square btn-sm', props.class)">
       <slot>
-       <icon name="left-sm" class="size-4 stroke-[1.7]  "/>
+        <icon name="left-sm" class="size-4 stroke-[1.7]  " />
       </slot>
     </button>
   </PaginationPrev>

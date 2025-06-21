@@ -39,6 +39,7 @@ const math = computed (() => {
 <template>
   <tippy class="" :offset="[2, -2]" :class="cn('flex gap-1 justify-end w-42', props.class)">
     <i-ui-gold-icon class="size-4 text-[#C2A76E] dst " />
+
     <p class="flex font-medium dst items-center tracking-wide">
       {{ `${spent.ally.toLocaleString()}/${totalGold.ally.toLocaleString()}` }}
     </p>
@@ -47,6 +48,7 @@ const math = computed (() => {
       <p>
         * Spent / Total Gold
       </p>
+
       <p>
         <!-- {{`${} gold  ${adv} enemy team.`}} -->
       </p>

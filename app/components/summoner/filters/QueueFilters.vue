@@ -21,6 +21,7 @@ const ms = useMatchStore()
         <IndicatorTabsTrigger :value="400">
           Normal
         </IndicatorTabsTrigger>
+
         <IndicatorTabsTrigger :value="-1">
           <icon name="ri:more-line" class="shrink-0 size-5.5 opacity-60 dst" />
         </IndicatorTabsTrigger>

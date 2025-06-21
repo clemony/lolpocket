@@ -8,14 +8,14 @@ const pinned = computed (() => {
 
 <template>
   <Collapsible :disabled="!pinned || pinned.length == null || pinned.length == 0" class="group/pin">
-    <SidebarCollapsibleTrigger as-child>
+    <SidebarCollapsibleTrigger class="gap-3 ">
       <IconWrapper name="pin" class="size-5 -mt-px -left-0.25 group-not-disabled/pin:text-bc group-disabled/pin:text-bc/35" />
 
-      
-        Pinned
-      
+      Pinned
+
       <SidebarBadge class="font-mono !text-1 pr-4 ">
         <span v-if="!pinned || pinned.length == null || pinned.length == 0">0</span>
+
         <span v-else>
           {{ pinned.length }}
         </span>

@@ -9,6 +9,7 @@ const { summoner } = defineProps<{
     <div class=" size-fit grid place-items-center rounded-full drop-shadow-sm  shadow-sm shrink-0 relative">
       <LazyProfileSummonerIcon v-if="summoner" :summoner-name="summoner.name" :url="summoner.profileIcon" class="size-19 rounded-full" />
     </div>
+
     <div class="flex flex-col grow justify-center gap-1.5 drop-shadow-sm">
       <div class="flex items-center gap-6">
         <h1 class="!text-8 font-serif leading-none grow font-bold">
@@ -27,15 +28,19 @@ const { summoner } = defineProps<{
         <span class=" flex items-center">
           <icon name="hash" class="size-3.75" />
           {{ summoner.tag }}</span>
+
         <span class="lowercase flex items-center grow">
           <icon name="at" class="size-3.25 dst" />
+
           <SummonerRegion :region-id="summoner.region" /></span>
       </div>
     </div>
+
     <div class="grid h-full items-center justify-items-end justify-self-end">
       <p class="pt-1.25">
         lv. {{ summoner.level }}
       </p>
+
       <UpdateMatchHistoryButton v-if="summoner" :summoner="summoner" class="" />
     </div>
   </div>

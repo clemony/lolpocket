@@ -3,12 +3,12 @@ definePageMeta({
   title: 'Archive',
   name: 'archived pockets',
   section: 'backpack',
-  icon: 'archive'
+  icon: 'archive',
 })
 </script>
 
 <template>
-<PagePlaceholder  />
+  <PagePlaceholder />
 </template>
 
 <style scoped></style>

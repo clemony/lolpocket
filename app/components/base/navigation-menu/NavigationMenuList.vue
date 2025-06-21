@@ -5,7 +5,6 @@ import { NavigationMenuList, useForwardProps } from 'reka-ui'
 const props = defineProps<NavigationMenuListProps & { class?: HTMLAttributes['class'] }>()
 
 const delegatedProps = reactiveOmit(props, 'class')
-
 const forwarded = useForwardProps(delegatedProps)
 </script>
 
@@ -17,8 +16,7 @@ const forwarded = useForwardProps(delegatedProps)
         'group flex flex-1 list-none items-center justify-center gap-x-1',
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </NavigationMenuList>
 </template>

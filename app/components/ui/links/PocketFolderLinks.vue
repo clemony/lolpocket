@@ -1,12 +1,12 @@
 <script lang="ts" setup>
 const us = useUiStore()
-
+// TODO DELETE
 const as = useAccountStore()
 </script>
 
 <template>
-  <NuxtLink
-    v-for="(link, i) in getFolderLinks()"
+  <!-- <NuxtLink
+    v-for="(link, i) in backpackLinks"
     :key="link.key"
     :to="link.link">
     <Btn v-tippy="!us.sidebarExpanded ? link.name : null" class="indicator">
@@ -18,9 +18,8 @@ const as = useAccountStore()
         <i-ui-pocket class="size-4.5" />
       </IconWrapper>
       <IconWrapper v-else :name="link.icon" class=" size-4.5" />
-      
+
         {{ link.name }}
-      
 
       <SidebarBadge class="font-mono !text-1 pr-3">
         <span v-if="!link.pockets || link.pockets.length == null || link.pockets.length == 0">0</span>
@@ -29,5 +28,5 @@ const as = useAccountStore()
         </span>
       </SidebarBadge>
     </Btn>
-  </NuxtLink>
+  </NuxtLink> -->h
 </template>

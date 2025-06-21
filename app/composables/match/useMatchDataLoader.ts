@@ -1,5 +1,3 @@
-
-
 export function useMatchDataLoader() {
   const matchData = ref<MatchData[]>([])
   const loading = ref(false)

@@ -18,10 +18,13 @@ const { theme } = defineProps<{
         <div class=" px-4 h-full  py-3 grid">
           <span class="text-4 text-bc font-semibold capitalize">{{ theme.name }}
           </span>
+
           <div class="flex items-center gap-2 self-end justify-self-end">
 
             <div class="color-chip bg-b2 text-bc"></div>
+
             <div class="color-chip text-bc bg-b3"></div>
+
             <div class="color-chip !bg-neutral !text-nc"></div>
           </div>
         </div>

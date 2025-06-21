@@ -86,13 +86,16 @@ const range = computed (() => {
       <div class="text-1 stat-desc font-medium mb-1">
         {{ range }}
       </div>
+
       <div class=" text-5  font-semibold dst">
         Recent Patch
       </div>
+
       <div class="text-3 stat-desc ">
         Winrate vs. Games
       </div>
     </div>
+
     <LineChart :data="data" :options="options" />
 
     <NoDataOverlay v-if="!userMatchData.length" />

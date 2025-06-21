@@ -11,7 +11,7 @@ export const useAccountStore = defineStore(
     const favoriteChamps = ref<Champion[]>([])
     const favoriteItems = ref<number[]>([])
 
-    const defaultUser: userAccount = {
+    const defaultUser: UserAccount = {
       name: 'Summoner',
       role: null,
       id: null,
@@ -25,9 +25,13 @@ export const useAccountStore = defineStore(
         profileIcon: null,
         level: null,
         region: 'Runeterra',
+      },
+      settings: {
+        motion: true,
+        hero: null,
       },
     }
-    const userAccount = ref<userAccount>({
+    const userAccount = ref<UserAccount>({
       name: 'Summoner',
       role: null,
       id: null,
@@ -42,7 +46,13 @@ export const useAccountStore = defineStore(
         level: null,
         region: 'Runeterra',
       },
+      settings: {
+        motion: true,
+        hero: null,
+      },
     })
+
+    const signedIn = computed(() => !!userAccount.value.session)
 
     function resetUserAccount() {
       userAccount.value = {
@@ -59,6 +69,10 @@ export const useAccountStore = defineStore(
           profileIcon: null,
           level: null,
           region: 'Runeterra',
+        },
+        settings: {
+          motion: true,
+          hero: null,
         },
       }
     }

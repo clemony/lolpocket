@@ -14,13 +14,17 @@ const props = defineProps<{
     <CardHeader class="w-full grow">
       <CardTitle class="flex items-center gap-6 drop-shadow-text">
         <slot name="header-icon" />
+
         <h4 class="capitalize grow items-center">
           {{ props.title }}
         </h4>
+
         <slot name="header-badge" />
       </CardTitle>
+
       <CardDescription>{{ props.description }}</CardDescription>
     </CardHeader>
+
     <CardContent :class="cn('px-8 h-fit w-full', props.contentClass)">
       <slot />
     </CardContent>

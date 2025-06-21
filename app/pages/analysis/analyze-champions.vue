@@ -9,7 +9,7 @@ definePageMeta({
   altName: 'champions',
   path: '/analysis/champions',
   section: 'analysis',
-  icon: 'typcn:user'
+  icon: 'typcn:user',
 })
 
 const { bayesianChampions } = await useMatchChampions(matches)
@@ -23,6 +23,7 @@ const { bayesianChampions } = await useMatchChampions(matches)
 
         <ChampionBarChart v-if="bayesianChampions.length" :champions="bayesianChampions" />
       </div>
+
       <div class="grid h-190  ">
         <ChampionDataGrid :champions="bayesianChampions" />
       </div>

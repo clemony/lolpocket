@@ -9,6 +9,7 @@ const route = useRoute()
 <template>
   <Btn :class="{ 'btn-active [&_span]:border-b1 [&_span]:inset-shadow-black/16 [&_span]:bg-b1/60  border-r-b2': route.name == 'complete' }" @click="navigateTo(`/pocket/${pocket.key}/complete`)">
     <slot />
+
     <span>
       <icon
         name="infinity"

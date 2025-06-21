@@ -3,5 +3,5 @@
 </script>
 
 <template>
-  <ContextMenuSeparator class="bg-b3/15"/>
+  <ContextMenuSeparator class="bg-b3/15" />
 </template>

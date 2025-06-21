@@ -1,22 +1,21 @@
-import fs from "node:fs"
-import path from "node:path"
-import { markUpdate } from "../utils/mark-update.js"
-import { normalizeAbility } from "../utils/normalize-ability.js"
-import { normalize, normalizeArray } from "../utils/normalize-strings.js"
-import { stripEmpty } from "../utils/strip-empty.ts"
-import { toValidIdentifier } from "../utils/validate-identifier"
+import fs from 'node:fs'
+import path from 'node:path'
+import { markUpdate } from '../utils/mark-update.js'
+import { normalizeAbility } from '../utils/normalize-ability.js'
+import { normalize, normalizeArray } from '../utils/normalize-strings.js'
+import { stripEmpty } from '../utils/strip-empty.ts'
 
 // Load saved raw data
 const champions = JSON.parse(
-  fs.readFileSync("./data/raw/champions-raw-ma.json", "utf-8")
+  fs.readFileSync('./data/raw/champions-raw-ma.json', 'utf-8'),
 )
 const ddData = JSON.parse(
-  fs.readFileSync("./data/raw/champions-raw-dd.json", "utf-8")
+  fs.readFileSync('./data/raw/champions-raw-dd.json', 'utf-8'),
 )
 
 // Create output dirs
-const outputDir = "./app/data/records/champions/"
-const outputMergedRaw = "./data/raw/champions-raw.json"
+const outputDir = './app/data/records/champions/'
+const outputMergedRaw = './data/raw/champions-raw.json'
 fs.mkdirSync(outputDir, { recursive: true })
 
 const championsMergedRaw: Record<string, any> = {}
@@ -50,10 +49,11 @@ for (const champ of Object.values(champions) as Champion[]) {
     mergedAbilities[slot] = abilityGroup.map((ability, index) => {
       let riotAbility
 
-      if (slot === "P") {
+      if (slot === 'P') {
         riotAbility = riotChamp.passive
-      } else {
-        const spellIndex = ["Q", "W", "E", "R"].indexOf(slot)
+      }
+      else {
+        const spellIndex = ['Q', 'W', 'E', 'R'].indexOf(slot)
         riotAbility = riotChamp.spells?.[spellIndex]
       }
 
@@ -62,11 +62,11 @@ for (const champ of Object.values(champions) as Champion[]) {
       const safeMaxAmmo = Number.isNaN(maxAmmo) ? null : maxAmmo
 
       const maxRankRaw = riotAbility?.maxrank
-      const safeMaxRank = typeof maxRankRaw === "number" ? maxRankRaw : null
+      const safeMaxRank = typeof maxRankRaw === 'number' ? maxRankRaw : null
 
       // Get Riot cooldown/cost arrays (may be undefined)
-      const riotCooldown =
-        Array.isArray(riotAbility?.cooldown) ? riotAbility.cooldown : []
+      const riotCooldown
+        = Array.isArray(riotAbility?.cooldown) ? riotAbility.cooldown : []
       const riotCost = Array.isArray(riotAbility?.cost) ? riotAbility.cost : []
 
       return {
@@ -84,12 +84,12 @@ for (const champ of Object.values(champions) as Champion[]) {
     Object.entries(mergedAbilities).map(([slot, entries]) => [
       slot,
       entries.map(normalizeAbility),
-    ])
+    ]),
   )
 
   const filteredStats = Object.fromEntries(
     Object.entries(stats)
-      .filter(([key]) => !key.startsWith("aram") && !key.startsWith("urf"))
+      .filter(([key]) => !key.startsWith('aram') && !key.startsWith('urf'))
       .map(([key, val]) => [
         key,
         Object.fromEntries(
@@ -97,11 +97,11 @@ for (const champ of Object.values(champions) as Champion[]) {
             .filter(([, v]) => v !== 0 && v != null)
             .map(([k, v]) => [
               k,
-              typeof v === "number" ? Number(v.toFixed(3)) : v,
-            ])
+              typeof v === 'number' ? Number(v.toFixed(3)) : v,
+            ]),
         ),
       ])
-      .filter(([, val]) => Object.keys(val).length > 0)
+      .filter(([, val]) => Object.keys(val).length > 0),
   )
 
   const champDataRaw = {
@@ -124,22 +124,22 @@ for (const champ of Object.values(champions) as Champion[]) {
   const champData = Object.fromEntries(
     Object.entries(champDataRaw).filter(
       ([, value]) =>
-        value != null &&
-        value !== "" &&
-        !(Array.isArray(value) && value.length === 0)
-    )
+        value != null
+        && value !== ''
+        && !(Array.isArray(value) && value.length === 0),
+    ),
   )
 
   championsMergedRaw[key] = champData
 
   const outputTsPath = path.join(outputDir, `${key}.ts`)
-  console.log("💠 - outputTsPath:", outputTsPath)
+  console.log('💠 - outputTsPath:', outputTsPath)
   fs.writeFileSync(
     outputTsPath,
     `// ${markUpdate()}
 
 const champion: Champion =  ${JSON.stringify(stripEmpty(champData), null, 2)}
-    export default champion`
+    export default champion`,
   )
 }
 

@@ -13,6 +13,7 @@ onMounted (() => {
       <TabsTrigger value="/research/champions">
         Champions
       </TabsTrigger>
+
       <TabsTrigger value="/research/items">
         Items
       </TabsTrigger>

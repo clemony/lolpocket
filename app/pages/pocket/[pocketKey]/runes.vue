@@ -6,7 +6,7 @@ const { pocket } = defineProps<{
 definePageMeta({
   name: 'pocket runes',
   section: 'pocket',
-  search: false
+  search: false,
 })
 
 const rs = useRuneStore()
@@ -45,6 +45,7 @@ function handleDelete() {
       <button v-tippy="'Delete Set'" class="btn  btn-square btn-ghost  *:dst  " @click="handleDelete()">
         <icon name="trash" class=" shrink-0" />
       </button>
+
       <button v-tippy="'Delete Set'" class="btn  btn-square btn-ghost  *:dst  " @click="resetRunes(set)">
         <icon name="reset" class=" shrink-0 size-4.5" />
       </button>
@@ -62,18 +63,25 @@ function handleDelete() {
                 :key="path"
                 v-tippy="path"
                 :value="path" />
+
               <TabIndicator round />
             </IndicatorTabsList>
           </Tabs>
+
           <Keystones
             :set="set"
             :pocket="pocket" :runes="getKeystones(computed (() => set)).value" />
+
           <LazyPocketRuneSelect :path-runes="set[0].runes" :runes="getPrimarySlots(computed (() => set)).value" :path="set[0].path" @update:runes="e => set[0].runes = e" />
         </div>
+
         <div class="flex flex-col gap-7 w-1/2 min-w-90 flex overflow-hidden  max-w-114">
           <RunesBlurb layout-id="path2" :current-path=" set[1].path " />
+
           <SecondaryRunePathTabs :pocket="pocket" @update:model-value="handlePath2()" />
+
           <LazyPocketRuneSelect :path-runes="set[1].runes" limit :runes="getSecondarySlots(computed (() => set)).value" :path="set[1].path" />
+
           <RuneShards :pocket="pocket" />
         </div>
       </div>

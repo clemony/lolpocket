@@ -1,4 +1,3 @@
-
 import type { Session } from '@supabase/supabase-js'
 import { jwtDecode } from 'jwt-decode'
 import { toast } from 'vue-sonner'
@@ -18,7 +17,8 @@ export function useAuth() {
 
     else if (event === 'SIGNED_OUT') {
       as.resetUserAccount()
-      if (route.path !== '/') router.push('/')
+      if (route.path !== '/')
+        router.push('/')
       else location.reload()
       toast.success('Successfully logged out')
     }
@@ -40,9 +40,9 @@ async function hydrateUser(session: Session) {
   const as = useAccountStore()
   const decoded = jwtDecode<AuthRoleJwtPayload>(session.access_token)
 
-  const name = session.user.user_metadata?.custom_claims?.global_name ??
-               session.user.user_metadata?.name ??
-               'Summoner'
+  const name = session.user.user_metadata?.custom_claims?.global_name
+    ?? session.user.user_metadata?.name
+    ?? 'Summoner'
 
   as.userAccount = {
     ...as.userAccount, // keep previous shape
@@ -58,8 +58,8 @@ async function hydrateUser(session: Session) {
   if (summoner) {
     Object.assign(as.userAccount.riot, summoner)
   }
-const {fetchSummoner} = useSummoner(summoner.puuid)
-fetchSummoner()
+  const { fetchSummoner } = useSummoner(summoner.puuid)
+  fetchSummoner()
   as.$persist
 }
 
@@ -78,7 +78,6 @@ async function fetchSummonerData(userId: string): Promise<Partial<UserSummoner> 
 
   return data
 }
-
 
 export async function useSignOut() {
   const client = useSupabaseClient()

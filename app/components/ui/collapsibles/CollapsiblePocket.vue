@@ -4,7 +4,7 @@ import CollapsiblePinned from './CollapsiblePinned.vue'
 import PopoverPinned from './PopoverPinned.vue'
 
 const props = defineProps<{
-  summoner: userAccount
+  summoner: UserAccount
 }>()
 
 const us = useUiStore()
@@ -29,21 +29,18 @@ watchEffect(() => {
 <template>
   <Collapsible v-model:open="isOpen" :disabled="!us.sidebarExpanded" as-child>
     <SidebarCollapsibleTrigger v-if="us.sidebarExpanded">
-      
-        Pockets
-      
+      Pockets
     </SidebarCollapsibleTrigger>
 
     <SidebarCollapsibleContent class="tldr-30 !overflow-visible" :class="{ 'gap-1': !us.sidebarExpanded }">
       <component :is="pinnedComponent" v-slot="{ pinned }">
-
         <IconWrapper name="pin" class="size-5 -mt-px -left-0.25 group-not-disabled/pin:text-bc group-disabled/pin:text-bc/35" />
-   
-        
-          Pinned
-        
+
+        Pinned
+
         <SidebarBadge class="font-mono !text-1 pr-3">
           <span v-if="!pinned || pinned.length == null || pinned.length == 0">0</span>
+
           <span v-else>
             {{ pinned.length }}
           </span>

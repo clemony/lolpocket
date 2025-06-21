@@ -40,22 +40,27 @@ const props = defineProps<{
 
     <div class="flex gap-2">
       <icon name="solar:running-bold" />
+
       <icon name="arcticons:shadow-fight-2" class="stroke-3 size-7" />
     </div>
     killing spree
 
     <icon name="fluent-mdl2:group" />
+
     <icon name="fa6-solid:people-pulling" />
     kill participation
 
     <div class="flex gap-2">
       <icon name="ix:sword-swing" />
+
       <icon name="covid:graph-death-rate-increasing" />
+
       <icon name="mdi:karate" />
     </div>
     damage done
 
     <icon name="fa6-solid:people-robbery" />
+
     <icon name="solar:target-outline" />
     skillshots hit
   </div>

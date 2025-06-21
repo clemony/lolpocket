@@ -8,7 +8,7 @@ definePageMeta({
   altName: 'items',
   path: '/analysis/items',
   section: 'analysis',
-  icon: 'fa:shield'
+  icon: 'fa:shield',
 })
 const ms = useMatchStore()
 </script>
@@ -34,15 +34,20 @@ const ms = useMatchStore()
       <h1 class="font-semibold dst text-8 pb-2">
         Item Data
       </h1>
+
       <p class="font-medium text-bc/70">
         Your best items during patch {{ ms.af.patch }}
       </p>
     </div>
+
     <div class="size-full overflow-hidden ">
       <div class="grid-cols-4 grid gap-10 overflow-hidden pb-2 place-items-center w-full">
         <PocketPickItem :patch-games="ms.patchGames" :item-num="0" title="Pocket Pick" />
+
         <PocketPickItem :patch-games="ms.patchGames" :item-num="1" title="Pocket Pick" />
+
         <PocketPickItem :patch-games="ms.patchGames" :item-num="2" title="Pocket Pick" />
+
         <PocketPickItem :patch-games="ms.patchGames" :item-num="2" title="☆ Rising Star" />
       </div>
 
@@ -50,6 +55,7 @@ const ms = useMatchStore()
         <h1 class="font-semibold dst pb-2  text-8 ">
           Winrates & Playrates
         </h1>
+
         <p class="font-medium  text-bc/70">
           How are your most played be doing well  left right ->
         </p>

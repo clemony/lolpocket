@@ -19,6 +19,7 @@ watch(() => selected, (newVal) => {
     <div class="absolute pointer-events-none size-full z-0 top-0 left-0 rounded-box overflow-hidden opacity-40">
       <div class="absolute size-full top-0 left-0 gradient !bg-size-[700%] mask-bottom-right-1 " :data-path="runes[0][0].path" />
     </div>
+
     <template v-if="runes && runes.length">
       <div
         v-for="(slot, i) in runes" :key="i" layout-id="slot"

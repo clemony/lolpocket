@@ -3,6 +3,7 @@ import type { ContextMenuRadioItemEmits, ContextMenuRadioItemProps } from 'reka-
 import {
   useForwardPropsEmits,
 } from 'reka-ui'
+
 const props = defineProps<ContextMenuRadioItemProps & { class?: HTMLAttributes['class'] }>()
 const emits = defineEmits<ContextMenuRadioItemEmits>()
 
@@ -15,5 +16,5 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
   <ContextMenuRadioItem
     v-bind="forwarded" class="cursor-pointer text-nc/90 **:text-nc/90 rounded-md  focus:bg-b3/20 focus:text-nc ">
     <slot />
-</ContextMenuRadioItem>
+  </ContextMenuRadioItem>
 </template>

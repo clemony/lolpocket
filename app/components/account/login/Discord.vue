@@ -19,12 +19,11 @@ async function signInWithDiscord() {
     variant="outline"
     size="lg"
     class="hover:border-neutral/80 h-14 gap-4 shadow-xs"
-    @click="signInWithDiscord"
-  >
+    @click="signInWithDiscord">
     <icon
       name="prime:discord"
-      class="-ml-6 size-7"
-    />
+      class="-ml-6 size-7" />
+
     <div class="">
       Log in with Discord
     </div>

@@ -21,8 +21,7 @@ function select(e) {
       class="checkbox checkbox-xs"
       :indeterminate="ps.selectedRows.length > 0 && ps.selectedRows.length < ps.pockets.length"
       :checked="ps.selectedRows.length == ps.pockets.length"
-      @change="select($event)"
-    />
+      @change="select($event)" />
   </div>
 </template>
 

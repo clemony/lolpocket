@@ -23,12 +23,14 @@ const cs = computed (() => {
       {{ cs }}
       <span class="font-mono"> CS</span>
     </p>
+
     <p
       v-tippy="'Gold Spent'"
       class="flex gap-1 items-center hover:underline decoration-1">
       {{ player.goldSpent.toLocaleString() }}
       <span class="font-mono"> G</span>
     </p>
+
     <p
       v-tippy="'Gold Earned'"
       class="flex gap-1 items-center hover:underline decoration-1">

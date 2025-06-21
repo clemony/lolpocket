@@ -22,6 +22,7 @@ onMounted (async () => {
     <menu class="overflow-hidden shadow-warm-2 shadow-black/7 border-r border-r-b3/40">
       <DataFilterPanel />
     </menu>
+
     <main class="overflow-y-auto grow relative px-10 w-full overflow-x-hidden">
       <NuxtPage v-if="summoner" :matches="summoner.simplifiedMatches" />
     </main>

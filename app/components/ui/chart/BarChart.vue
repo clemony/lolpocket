@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { Bar } from 'vue-chartjs'
-import { BarElement, CategoryScale, Chart,  LinearScale, Title, Tooltip } from 'chart.js'
+import { BarElement, CategoryScale, Chart, LinearScale, Title, Tooltip } from 'chart.js'
 
 const props = defineProps<{
   data: any
@@ -9,7 +9,7 @@ const props = defineProps<{
 
 const styles = getComputedStyle(document.documentElement)
 
-Chart.register(Title, Tooltip,  BarElement, CategoryScale, LinearScale)
+Chart.register(Title, Tooltip, BarElement, CategoryScale, LinearScale)
 Chart.defaults.color = styles.getPropertyValue('--color-neutral')
 Chart.defaults.font.family = styles.getPropertyValue('--font-sans')
 Chart.defaults.font.weight = 400
@@ -23,10 +23,10 @@ const options = {
   color: styles.getPropertyValue('--color-neutral'),
   maxBarThickness: 32,
   barThickness: 32,
-   responsive: true,
-     maintainAspectRatio: false,
+  responsive: true,
+  maintainAspectRatio: false,
   skipNull: false,
-  minBarLength:4,
+  minBarLength: 4,
   elements: {
     bar: {
       borderRadius: 4,
@@ -50,7 +50,7 @@ const options = {
           size: 16,
         },
 
-      stepSize: 20,
+        stepSize: 20,
         callback(value, index, ticks) {
           return `${value}%`
         },
@@ -66,30 +66,29 @@ const options = {
       },
       ticks: {
         display: false,
-        },
+      },
       border: {
         color: `${styles.getPropertyValue('--color-b2')}`,
       },
-      title:{
+      title: {
         display: false,
-      }
+      },
     },
   },
   plugins: {
     tooltip: {
 
-titleMarginBottom: 0,
-displayColors: false,
-caretPadding: 20,
-          intersect: false,
-        enabled: true,
+      titleMarginBottom: 0,
+      displayColors: false,
+      caretPadding: 20,
+      intersect: false,
+      enabled: true,
       callbacks: {
-           label: (context) => {
+        label: (context) => {
           const dataPoint = context.raw
           return `${dataPoint.toFixed(2)}% winrate`
-     
         },
-      }
+      },
     },
   },
 }

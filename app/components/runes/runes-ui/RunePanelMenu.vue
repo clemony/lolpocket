@@ -8,24 +8,24 @@ const rs = useRuneStore()
 const pocket = ref(props.pocket)
 
 function handleDelete() {
- rs.selectedRuneSet = 0
+  rs.selectedRuneSet = 0
   deleteRuneSet(props.pocket, props.set)
 }
 
 function handleNewSet() {
   const a = newRuneSet(pocket.value.key)
- nextTick(() => {
-  const b = pocket.value.runes.findIndex(s => s == a)
+  nextTick(() => {
+    const b = pocket.value.runes.findIndex(s => s == a)
     rs.selectedRuneSet = b
   })
 }
 
-//TODO MOVE
+// TODO MOVE
 </script>
 
 <template>
   <div class="flex gap-2 items-center">
-<!--     <button
+    <!--     <button
       v-tippy="'New Rune Set'"
       class="btn btn-md btn-square"
       @click="handleNewSet()">

@@ -37,6 +37,7 @@ onKeyUp(['p', 'q', 'w', 'e', 'r'], (e) => {
         'scale-110 hover:scale-115 ': selectedAbility == i, '  drop-shadow-sm  shadow-sm ': loaded,
       }">
       <input v-model="selectedAbility" :value="i" type="radio" name="selected-ability" class="peer hidden" @change="emit('update:ability', selectedAbility)" />
+
       <Img
         :img="ability[0].icon" alt="passive icon" class="size-full rounded-lg pointer-events-none  duration-300 transition  grayscale contrast-80 opacity-70 group-hover:opacity-100 group-hover:contrast-100 group-hover:grayscale-0" :class="{ 'opacity-100 contrast-100 grayscale-0  ': selectedAbility == i, 'animate-in fade-in duration-500  ': loaded, 'animate-out  duration-500 fade-out-50': loaded }" @load="loaded = true" />
 

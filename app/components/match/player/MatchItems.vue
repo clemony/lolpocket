@@ -31,6 +31,7 @@ const ix = useIndexStore()
       <div v-if="item" v-tippy="ix.itemNameById(item)" class="" :class="cn('rounded-lg inset-shadow-rounded shadow-sm  size-10', props.class)">
         <div class="size-10 overflow-hidden rounded-lg">
           <img v-if="item" :src="`/img/item/${item}.webp`" />
+
           <Placeholder v-else />
         </div>
       </div>

@@ -41,7 +41,7 @@ export function duplicatePocket(original: Pocket): Pocket {
 // edit
 
 export function editPocket(pocket: Pocket) {
-  //ts.selectedPocket = pocket
+  // ts.selectedPocket = pocket
 }
 
 // get

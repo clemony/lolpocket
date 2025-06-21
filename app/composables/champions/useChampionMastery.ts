@@ -12,7 +12,8 @@ export function useSummonerMastery(queryPuuid?: string) {
     const tooOld = !cs.lastFetchedAt || now - cs.lastFetchedAt > SIX_HOURS
     const needsFetch = options?.force || tooOld || !Object.keys(cs.summonerMastery).length
 
-    if (!queryPuuid || !needsFetch) return
+    if (!queryPuuid || !needsFetch)
+      return
 
     loading.value = true
     try {
@@ -25,9 +26,11 @@ export function useSummonerMastery(queryPuuid?: string) {
       as.userAccount.riot.puuid = puuid // Optional: update puuid if needed
 
       ready.value = true
-    } catch (e) {
+    }
+    catch (e) {
       console.error('Error fetching mastery:', e)
-    } finally {
+    }
+    finally {
       loading.value = false
     }
   }

@@ -8,17 +8,16 @@ const pocket = computed (() => {
 })
 
 const roles = computed (() => {
-  return props.pocket.roles.filter(r => r != '' && r != null)
+  const a = props.pocket.roles.filter(r => r != '' && r != null)
+  const b = a.join(', ')
+  return b.replace(/,/, ' &')
 })
 </script>
 
 <template>
-  <p class="divider divider-start text-nowrap flex-nowrap mt-0 mb-3 divider-neutral after:opacity-40 grow" :class="{'opacity-20': !roles.length}">
-    <span v-for="(role, i) in roles" :key="role" class="group/role capitalize">
-
-      <template v-if="role">{{ role }}<span v-if="i == roles.length - 2 && roles.length != 1" class="-mr-2" > &</span><span v-else-if="i != roles.length - 1" >, </span>
-      </template>
-
+  <p class="divider divider-start text-nowrap flex-nowrap mt-0 mb-3 divider-neutral after:opacity-40 grow" :class="{ 'opacity-20': !roles.length }">
+    <span class="group/role capitalize">
+      {{ roles }}
     </span>
   </p>
 </template>

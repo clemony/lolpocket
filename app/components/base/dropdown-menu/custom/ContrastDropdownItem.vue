@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <DropdownMenuItem class="hover:!bg-b3/15 cursor-pointer">
+  <DropdownMenuItem class="hover:!bg-b3/15 text-2 !text-nc/80 cursor-pointer">
     <slot />
   </DropdownMenuItem>
 </template>

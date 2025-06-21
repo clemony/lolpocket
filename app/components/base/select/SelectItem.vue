@@ -3,10 +3,11 @@ import { reactiveOmit } from '@vueuse/core'
 import {
   SelectItem,
   SelectItemIndicator,
-  type SelectItemProps,
+
   SelectItemText,
   useForwardProps,
 } from 'reka-ui'
+import type { SelectItemProps } from 'reka-ui'
 
 const props = defineProps<SelectItemProps & { class?: HTMLAttributes['class'], noTick?: boolean }>()
 

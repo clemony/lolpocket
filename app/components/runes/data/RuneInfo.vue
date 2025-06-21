@@ -33,6 +33,7 @@ const rune = computed(() => {
         class="frost border-b-b3 sticky top-0 left-0 z-50 flex h-fit! w-full flex-wrap items-center justify-end gap-4 rounded-t-xl border-b px-4 py-1">
         <h2 class="sub-text flex grow items-center justify-start gap-3">
           <span class="grow">{{ rune.name || 'Rune Detail' }}</span>
+
           <div v-if="rune">
             <img
               :src="`/img/runes/${rune.path}.webp`"
@@ -58,6 +59,7 @@ const rune = computed(() => {
               id="runeImg"
               :src="rune.img"
               class="float-right mt-1 ml-2.5 rounded-full" />
+
             <div class="link-icon flex items-center justify-center">
               <Icon
                 name="teenyicons:link-outline"
@@ -65,6 +67,7 @@ const rune = computed(() => {
             </div>
           </div>
         </div>
+
         <div
           id="runeStats"
           :key="`${rune.name}3`"
@@ -74,6 +77,7 @@ const rune = computed(() => {
       </div>
     </div>
   </div>
+
   <div v-else></div>
 </template>
 

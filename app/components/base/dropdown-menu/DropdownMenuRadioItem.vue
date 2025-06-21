@@ -25,9 +25,10 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
     )">
     <span class="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
       <DropdownMenuItemIndicator>
-        <icon name="dot" class="size-3 fill-current" />
+        <icon name="radix-icons:radiobutton" class="size-4 fill-current" />
       </DropdownMenuItemIndicator>
     </span>
+
     <slot />
   </DropdownMenuRadioItem>
 </template>

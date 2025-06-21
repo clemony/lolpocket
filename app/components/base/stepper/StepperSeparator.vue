@@ -1,10 +1,9 @@
 <script lang="ts" setup>
-import { reactiveOmit } from '@vueuse/core';
-import type { StepperSeparatorProps } from 'reka-ui';
-import type { HTMLAttributes } from 'vue';
+import { reactiveOmit } from '@vueuse/core'
+import type { StepperSeparatorProps } from 'reka-ui'
+import type { HTMLAttributes } from 'vue'
 
-import { StepperSeparator, useForwardProps } from 'reka-ui';
-
+import { StepperSeparator, useForwardProps } from 'reka-ui'
 
 const props = defineProps<StepperSeparatorProps & { class?: HTMLAttributes['class'] }>()
 
@@ -23,6 +22,5 @@ const forwarded = useForwardProps(delegatedProps)
       // Completed
       'group-data-[state=completed]:bg-accent-foreground',
       props.class,
-    )"
-  />
+    )" />
 </template>

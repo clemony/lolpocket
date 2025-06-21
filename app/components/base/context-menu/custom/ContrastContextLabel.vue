@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <ContextMenuLabel  class="text-nc/50 font-medium">
-    <slot  />
+  <ContextMenuLabel class="text-nc/50 font-medium">
+    <slot />
   </ContextMenuLabel>
 </template>

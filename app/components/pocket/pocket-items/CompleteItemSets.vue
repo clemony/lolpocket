@@ -10,6 +10,7 @@ const props = defineProps<{
     <div class="w-full justify-start">
       <span class="text-5 dst font-medium" :style="{ fontFamily: pocket.card.font[1] || 'Geist Mono' }"> {{ set.name }}</span>
     </div>
+
     <div class="flex gap-2 mt-2">
       <template v-if="set && set.items.length">
         <template v-for="(item, i) in set.items">

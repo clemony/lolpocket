@@ -1,6 +1,6 @@
-@import "tailwindcss";
-@import "../colors.css";
-@import "../theme.css";
+@import 'tailwindcss';
+@import '../colors.css';
+@import '../theme.css';
 
 /* button */
 

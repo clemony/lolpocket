@@ -12,6 +12,7 @@ const ds = useDataStore()
       <span class="size-5 relative grid place-items-center ">
         <icon name="mingcute:crystal-ball-line" class="size-5 text-bc/80" />
       </span>
+
       <span class="pt-px">Predictions</span>
     </NuxtLink>
   </MenubarItem>

@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 /* .ghostClass {
   @apply border-b2 bg-b2/30 aspect-square size-full cursor-pointer items-center justify-center gap-2 self-center rounded-md border opacity-70 shadow-xs;

@@ -42,6 +42,9 @@ export default antfu({
         },
       },
     ],
+    'vue/padding-line-between-tags': ['error', [
+      { blankLine: 'always', prev: '*', next: '*' },
+    ]],
   },
   formatters: {
     /**

@@ -11,6 +11,7 @@ const ms = useMatchStore()
   <Field class="" :class="{ 'w-full !justify-between !flex py-2 !px-4 gap-2.5 ': props.class }">
     <label v-for="position in positions" :key="position" class="btn btn-ghost  rounded-[0.85rem] hover:bg-b3/40 btn-square has-checked:!btn-neutral has-checked:bg-neutral">
       <input v-model="ms.mf.role" name="research-positions" type="radio" class="peer hidden" value="all" />
+
       <span class="w-8.5 flex items-center justify-center">
         <component
           :is="`i-roles-${position.replace(' ', '-')}`"

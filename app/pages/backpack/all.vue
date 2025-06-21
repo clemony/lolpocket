@@ -20,8 +20,8 @@ const emit = defineEmits(['update:gridApi'])
 definePageMeta({
   path: '/pockets',
   title: 'All',
-  section:  'backpack',
-  icon: 'backpack'
+  section: 'backpack',
+  icon: 'backpack',
 })
 
 defineExpose({
@@ -62,7 +62,6 @@ function handleRightClick() {
     gridApi.value.setGridOption('rowData', rowData.value)
   })
 }
-
 
 const pinned = computed (() => {
   return ps.pockets.filter(p => p.location.pinned == true)

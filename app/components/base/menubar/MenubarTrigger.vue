@@ -17,8 +17,7 @@ const forwarded = useForwardProps(delegatedProps)
         'flex cursor-default select-none items-center rounded-sm px-3 py-1 text-2 font-medium outline-none focus:bg-b2 focus:text-neutral-bc data-[state=open]:bg-b2 data-[state=open]:text-neutral-bc',
         props.class,
       )
-    "
-  >
+    ">
     <slot />
   </MenubarTrigger>
 </template>

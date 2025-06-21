@@ -1,6 +1,6 @@
-@import "tailwindcss";
-@import "../colors.css";
-@import "../theme.css";
+@import 'tailwindcss';
+@import '../colors.css';
+@import '../theme.css';
 
 /* mask */
 
@@ -21,19 +21,11 @@
 }
 
 @utility mask-top-* {
-  mask-image: linear-gradient(
-    to top,
-    #000 calc(--value(integer) * 1%),
-    transparent calc((--value(integer) + 40) * 1%)
-  );
+  mask-image: linear-gradient(to top, #000 calc(--value(integer) * 1%), transparent calc((--value(integer) + 40) * 1%));
 }
 
 @utility mask-bottom-right-* {
-  mask-image: linear-gradient(
-    170deg,
-    #000 calc(--value(integer) * 1%),
-    transparent calc((--value(integer) + 60) * 1%)
-  );
+  mask-image: linear-gradient(170deg, #000 calc(--value(integer) * 1%), transparent calc((--value(integer) + 60) * 1%));
 }
 
 @utility -mask-bottom-right-* {
@@ -61,12 +53,24 @@
 }
 
 @utility mask-top-right-* {
-  mask-image: linear-gradient(
-    -45%,
-    #000 calc(--value(integer) * 1%),
-    transparent calc((--value(integer) + 40) * 1%)
-  );
+  mask-image: linear-gradient(-45%, #000 calc(--value(integer) * 1%), transparent calc((--value(integer) + 40) * 1%));
 }
 @utility mask-edges {
   mask-image: radial-gradient(circle at 75% 85%, transparent 50%, #000);
+}
+
+@layer utilities {
+  .right-top-radial::after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    background-image: radial-gradient(
+      ellipse farthest-side at right top,
+      hsla(0, 0%, 100%, 0) 0%,
+      hsla(0, 0%, 100%, 0.41) 50%,
+      hsla(0, 0%, 100%, 0.81) 70%,
+      hsl(0, 0%, 100%) 100%
+    );
+  }
 }

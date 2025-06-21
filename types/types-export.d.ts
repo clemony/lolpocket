@@ -1,14 +1,12 @@
-import type { HTMLAttributes } from 'vue'
-import type { AcceptableValue } from 'reka-ui'
-import type { PrimitiveProps } from 'reka-ui'
+import { MotionValue } from 'motion-v'
+import type { AcceptableValue, PrimitiveProps } from 'reka-ui'
+import type { CSSProperties, HTMLAttributes } from 'vue'
 
 declare global {
+  interface HTMLAttr extends HTMLAttributes {}
 
-  interface HTMLAttr extends HTMLAttributes { }
-
+  export type { MotionValue } from 'motion-v'
   export type { AcceptableValue, PrimitiveProps } from 'reka-ui'
-
-  export type { HTMLAttributes } from 'vue'
-
+  export type { CSSProperties, HTMLAttributes } from 'vue'
 }
-export { }
+export {}

@@ -15,17 +15,16 @@ watch(() => ability.value, (newVal) => {
 <template>
   <div class="flex flex-col pt-6 **:text-3 gap-6 size-full max-h-full items-center">
     <div class="h-20 w-full">
-    <LazyChampionAbilityTabs v-model:model-value="selected" :abilities="abilities" @update:ability="e => selected = e" />
+      <LazyChampionAbilityTabs v-model:model-value="selected" :abilities="abilities" @update:ability="e => selected = e" />
+    </div>
 
-  </div>
     <div class="w-full gap-3 flex items-center mt-2  px-7 justify-between">
       <h2 v-if="ability?.name" class="tracking-tight !text-8  grow">
         {{ ability.name }}
       </h2>
     </div>
 
-    <div class="w-full flex flex-wrap items-center px-9 gap-x-8 gap-y-4 **:font-medium pr-1" v-if="ability && ( ability.resource || ability.cooldown?.length || ability.rechargeRate || ability.cost?.length || ability.effectRadius || ability.targetRange)">
-
+    <div v-if="ability && (ability.resource || ability.cooldown?.length || ability.rechargeRate || ability.cost?.length || ability.effectRadius || ability.targetRange)" class="w-full flex flex-wrap items-center px-9 gap-x-8 gap-y-4 **:font-medium pr-1">
       <div v-if="ability.cooldown?.length" v-tippy="'Cooldown'" class="flex gap-2 items-center ">
         <i-stats-ah name="ph:hourglass" class="size-3.5 inline shrink-0 dst mt-px text-black" />
 
@@ -35,6 +34,7 @@ watch(() => ability.value, (newVal) => {
       <template v-if="ability.resource == 'Charge'">
         <div v-if="ability.resource" v-tippy="'Max Charges'" class="flex gap-2 items-center">
           <component :is="`i-stats-charge-${ability.maxCharges}`" class="dst  -mt-px text-bc/80 size-7 inline *:stroke-[1.3]" />
+
           <span>
             {{ ability.maxCharges }}
           </span>
@@ -73,17 +73,18 @@ watch(() => ability.value, (newVal) => {
       </p>
 <Separator class="bg-b3"  /> -->
     </div>
+
     <div v-if="ability" class="self-center relative overflow-hidden size-full">
       <div class="relative absolute top-0 left-0 inset-0  gap-3 size-full items-start overflow-y-auto  pb-4 px-5 mr-px flex flex-col ">
         <AbilityDescription v-for="(effect, i) in ability.effects" :key="i" :effect="effect" />
 
         <Collapsible v-if="ability.notes" class="w-full">
-       <CollapsibleContent class="CollapsibleContent px-3 leading-5 text-balanced">
-{{ ability.notes }}
-       <CollapsibleTrigger class="ability-header flex px-3 flex-nowrap justify-between w-full" >
-      <icon name="add-sm" />
-      </CollapsibleTrigger>
-</CollapsibleContent>
+          <CollapsibleContent class="CollapsibleContent px-3 leading-5 text-balanced">
+            {{ ability.notes }}
+            <CollapsibleTrigger class="ability-header flex px-3 flex-nowrap justify-between w-full">
+              <icon name="add-sm" />
+            </CollapsibleTrigger>
+          </CollapsibleContent>
         </Collapsible>
       </div>
     </div>

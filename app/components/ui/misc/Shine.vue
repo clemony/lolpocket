@@ -6,7 +6,7 @@ const props = defineProps<{
 
 }>()
 const target = ref()
-const {  isOutside } = useMouseInElement(target)
+const { isOutside } = useMouseInElement(target)
 </script>
 
 <template>
@@ -16,8 +16,7 @@ const {  isOutside } = useMouseInElement(target)
 
       <slot />
 
-      <div class="absolute top-0 -translate-x-[150%]  h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white/40  group-hover:translate-x-full opacity-0 group-hover:opacity-100 tldr-40 " :class="{'opacity-0 hidden': isOutside}" />
+      <div class="absolute top-0 -translate-x-[150%]  h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white/40  group-hover:translate-x-full opacity-0 group-hover:opacity-100 tldr-40 " :class="{ 'opacity-0 hidden': isOutside }" />
     </div>
   </label>
 </template>
-

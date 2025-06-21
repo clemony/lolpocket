@@ -24,21 +24,26 @@ console.log('💠 - notThisPocket - notThisPocket:', notThisPocket)
       <icon name="material-symbols-light:how-to-vote" class="size-7 -ml-1 mr-1.25" />
       Copy to Pocket
     </ContrastDropdownSubTrigger>
+
     <ContrastDropdownSubContent>
       <ContrastDropdownItem v-for="friendlyPocket in notThisPocket" :key="friendlyPocket.key" @click="copyItemSetToPocket(friendlyPocket, props.set)">
         {{ friendlyPocket.name }}
       </ContrastDropdownItem>
     </ContrastDropdownSubContent>
   </DropdownMenuSub>
+
   <ContrastDropdownItem @click="''">
     <icon name="icon-park-outline:add-item" />
     New Pocket with Set
   </ContrastDropdownItem>
+
   <ContrastDropdownSeparator />
+
   <ContrastDropdownItem @click="resetItems(set)">
     <icon name="reset" />
     Reset Items
   </ContrastDropdownItem>
+
   <ContrastDropdownItem @click="deleteItemSet(pocket, set)">
     <icon name="trash" />
     Delete Set

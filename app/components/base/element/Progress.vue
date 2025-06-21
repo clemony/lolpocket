@@ -9,12 +9,11 @@ const props = withDefaults(
   defineProps<ProgressRootProps & { class?: HTMLAttributes['class'] }>(),
   {
     modelValue: 0,
-    max: 100
+    max: 100,
   },
 )
 
 const delegatedProps = reactiveOmit(props, 'class')
-
 </script>
 
 <template>

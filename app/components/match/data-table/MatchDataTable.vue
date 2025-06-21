@@ -6,20 +6,20 @@ const props = defineProps<{
 }>()
 
 const gameOutcome = computed (() => {
-return props.match.teams[0].win == true ? 'Blue Team Win' : 'Red Team Win'
+  return props.match.teams[0].win == true ? 'Blue Team Win' : 'Red Team Win'
 })
 const gameEnd = computed (() => {
-return props.blue[0].gameEndedInSurrender == true ? 'Enemy Surrender' :  null
+  return props.blue[0].gameEndedInSurrender == true ? 'Enemy Surrender' : null
 })
 const endGameStats = {
 
   damage: [
-  {
-    id: 'Damage Dealt to Champions',
-    data: '',
-    i: 0
-  },
-    
+    {
+      id: 'Damage Dealt to Champions',
+      data: '',
+      i: 0,
+    },
+
     {
       id: 'total',
       data: 'totalDamageDealtToChampions',
@@ -43,11 +43,11 @@ const endGameStats = {
   ],
 
   healing: [
-  {
-    id: 'Effective Healing and Shielding',
-    data: '',
-    i: 1,
-  },
+    {
+      id: 'Effective Healing and Shielding',
+      data: '',
+      i: 1,
+    },
     {
       id: 'ally heal & shield',
       data: 'effectiveHealAndShielding',
@@ -67,11 +67,11 @@ const endGameStats = {
   ],
 
   utility: [
-  {
-    id: 'Team Utility',
-    data: '',
-    i: 7,
-  },
+    {
+      id: 'Team Utility',
+      data: '',
+      i: 7,
+    },
     {
       id: 'dmg taken',
       data: 'totalDamageTaken',
@@ -79,7 +79,7 @@ const endGameStats = {
     {
       id: 'dmg taken %',
       data: `damageTakenOnTeamPercentage`,
-      spec: 'round'
+      spec: 'round',
     },
     {
       id: 'CC output',
@@ -91,7 +91,7 @@ const endGameStats = {
   {
     id: 'vision',
     data: '',
-    i: 3
+    i: 3,
   },
   {
     id: 'score',
@@ -112,11 +112,11 @@ const endGameStats = {
   },
 ],
   objectives: [
-  {
-    id: 'Objectives',
-    data: '',
-    i: 4
-  },
+    {
+      id: 'Objectives',
+      data: '',
+      i: 4,
+    },
     {
       id: 'dmg to turrets',
       data: 'damageDealtToObjectives',
@@ -148,11 +148,11 @@ const endGameStats = {
   ],
 
   kills: [
-  {
-    id: 'Kills',
-    data: '',
-    i: 5
-  },
+    {
+      id: 'Kills',
+      data: '',
+      i: 5,
+    },
     {
       id: 'kills',
       data: 'kills',
@@ -173,12 +173,12 @@ const endGameStats = {
     {
       id: 'kda',
       data: 'kda',
-      spec: 'round'
+      spec: 'round',
     },
     {
       id: 'bounty',
       data: 'bountyGold',
-      spec: 'round'
+      spec: 'round',
     },
     {
       id: 'sprees',
@@ -204,16 +204,16 @@ const endGameStats = {
   ],
 
   farming: [
-  {
-    id: 'Farming',
-    data: '',
-    i: 6
-  },
+    {
+      id: 'Farming',
+      data: '',
+      i: 6,
+    },
 
     {
       id: 'gold/min',
       data: 'goldPerMinute',
-      spec: 'round'
+      spec: 'round',
     },
     {
       id: 'neutral',
@@ -246,16 +246,18 @@ const ds = useDataStore()
       <thead class="relative">
         <tr class="!bg-b1/95 brightness-99 backdrop-blur-md">
           <th class="z-1 flex-grow">
-            {{gameOutcome}}<br  />
-            {{gameEnd ?? ''}}
+            {{ gameOutcome }}<br />
+            {{ gameEnd ?? '' }}
           </th>
-          <td v-for="(player, i) in props.blue.concat(props.red)" :key="player.playerId" class="!max-w-12 w-12 min-w-12 overflow-hidden first-of-type:rounded-l-xl last-of-type:rounded-r-xl z-0" :class="{'bg-inspiration/30': player.teamId == 100, 'bg-domination/30': player.teamId == 200, 'rounded-r-xl  border-r-4 border-r-b2': i == 4, 'rounded-l-xl  border-l-4 border-l-b2': i == 5}">
+
+          <td v-for="(player, i) in props.blue.concat(props.red)" :key="player.playerId" class="!max-w-12 w-12 min-w-12 overflow-hidden first-of-type:rounded-l-xl last-of-type:rounded-r-xl z-0" :class="{ 'bg-inspiration/30': player.teamId == 100, 'bg-domination/30': player.teamId == 200, 'rounded-r-xl  border-r-4 border-r-b2': i == 4, 'rounded-l-xl  border-l-4 border-l-b2': i == 5 }">
             <div class="rounded-lg size-fit shadow-sm">
-            <div class="!size-10 overflow-hidden rounded-lg">
-              <ChampionIcon :id="player.championId" :alt="player.championName"  class="size-full scale-118"/>
-            </div>
+              <div class="!size-10 overflow-hidden rounded-lg">
+                <ChampionIcon :id="player.championId" :alt="player.championName" class="size-full scale-118" />
+              </div>
             </div>
           </td>
+
           <th class="opacity-10"></th>
         </tr>
       </thead>
@@ -265,35 +267,35 @@ const ds = useDataStore()
           <tr class="relative">
             <td v-if="statIndex.includes(stat.i)" class="capitalize bg-b2 font-semibold text-nowrap h-7 sticky left-0">
               <span class="absolute  bottom-1">
-              {{ stat.id }}
+                {{ stat.id }}
               </span>
             </td>
+
             <td v-if="statIndex.includes(stat.i)" class="bg-b2">
             </td>
+
             <th v-else class="capitalize font-medium tracking-tight">
               {{ stat.id }}
             </th>
+
             <template v-for="player in props.blue.concat(props.red)" :key="player.id ">
-              <td :class="{ 'bg-b2': statIndex.includes(stat.i), 'text-bc/15 **:text-bc/15': player[stat.data] == 0, }" class=" text-end !text-1 *:!text-1 tracking-tight font-medium">
+              <td :class="{ 'bg-b2': statIndex.includes(stat.i), 'text-bc/15 **:text-bc/15': player[stat.data] == 0 }" class=" text-end !text-1 *:!text-1 tracking-tight font-medium">
                 {{ computed (() => {
-                const  a = player[stat.data] ?? player.challenges[stat.data]
-        
+                  const a = player[stat.data] ?? player.challenges[stat.data]
 
-const b  = a && a.toString().length > 6 ? a : 0
+                  const b = a && a.toString().length > 6 ? a : 0
 
+                  let c = b ? b.toFixed(2) : a
+                  c = stat.data == 'effectiveHealAndShielding' || stat.data == 'bountyGold' || stat.data == 'goldPerMinute' ? Math.round(c) : c
 
-              
-              let c =  b ?  b.toFixed(2) : a
-              c = stat.data == 'effectiveHealAndShielding' || stat.data == 'bountyGold' || stat.data == 'goldPerMinute' ? Math.round(c) : c
+                  // units
 
-              // units
+                  c = stat.data == 'damageTakenOnTeamPercentage' && c ? `${Math.round(c * 100)}%` : c
+                  c = stat.data == 'timeCCingOthers' ? `${c}s` : c
 
-              c = stat.data == 'damageTakenOnTeamPercentage' && c ? `${Math.round(c * 100)}%` : c
-c = stat.data == 'timeCCingOthers' ? `${c}s` : c
-
-              c =  c ? c.toLocaleString() : c
-         return c
-                })}}
+                  c = c ? c.toLocaleString() : c
+                  return c
+                }) }}
               </td>
             </template>
           </tr>

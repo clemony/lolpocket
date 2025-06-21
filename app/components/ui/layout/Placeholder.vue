@@ -25,10 +25,12 @@ const size = `${props.size}px`
       v-if="props.icon == 'plus'"
       name="teenyicons:add-outline"
       class="group-hover:stroke-[1.5]" />
+
     <img
       v-if="props.img"
       :src="props.img"
       :class="cn('', props.iClass)" />
+
     <slot />
   </label>
 </template>

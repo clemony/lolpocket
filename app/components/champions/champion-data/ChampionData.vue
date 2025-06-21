@@ -31,9 +31,11 @@ const tabs = ref('abilities')
 
       <header class="absolute bottom-4 *:text-right right-5 *:text-white/86 drop-shadow-sm z-2 *:dst *:text-shadow-sm w-full">
         <Grow />
+
         <h1 class="text-11  font-bold tracking-tight">
           {{ champion?.name }}
         </h1>
+
         <p class="text-3 tracking-tight font-medium uppercase ">
           {{ champion?.title }}
         </p>
@@ -45,12 +47,15 @@ const tabs = ref('abilities')
         <IndicatorTabsTrigger value="abilities">
           Abilities
         </IndicatorTabsTrigger>
+
         <IndicatorTabsTrigger value="stats">
           Stats
         </IndicatorTabsTrigger>
+
         <IndicatorTabsTrigger value="bio">
           Bio
         </IndicatorTabsTrigger>
+
         <TabIndicator />
       </IndicatorTabsList>
 

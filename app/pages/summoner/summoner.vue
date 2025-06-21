@@ -3,24 +3,19 @@ definePageMeta({
   title: 'Summoner',
   section: 'search',
   path: '/summoner',
-  icon: 'search'
+  icon: 'search',
 })
-
 
 const as = useAccountStore()
 const user = computed (() => as.userAccount)
-console.log("💠 - user:", user)
+console.log('💠 - user:', user)
 const router = useRouter()
-
-
-
 
 onMounted(() => {
   if (user.value?.riot.puuid) {
     router.replace(`/summoner/${user.value.riot.puuid}`)
   }
 })
-
 </script>
 
 <template>
@@ -28,9 +23,7 @@ onMounted(() => {
     <!-- build search later -->
   </div>
 
-<div  v-else >
-  <!--loading skeleton here blah blah -->
-  
-    </div>
+  <div v-else>
+  <!-- loading skeleton here blah blah -->
+  </div>
 </template>
-

@@ -1,12 +1,10 @@
 <script lang="ts" setup>
-
-const {summoner, class: className} = defineProps<{
+const { summoner, class: className } = defineProps<{
   summoner: Summoner
-    class?: HTMLAttributes['class']
+  class?: HTMLAttributes['class']
 }>()
 
-
-  const { getAllMatchIds, refreshMatches } = useMatchDexie()
+const { getAllMatchIds, refreshMatches } = useMatchDexie()
 async function updateMatchData() {
   const existingIds = (await getAllMatchIds()).map(String)
 
@@ -18,7 +16,7 @@ async function updateMatchData() {
   console.log('💠 - updateMatchData - newMatches:', newMatches)
 }
 
-  refreshMatches()
+refreshMatches()
 const { forceReload, loading } = useSummoner()
 </script>
 
@@ -28,6 +26,7 @@ const { forceReload, loading } = useSummoner()
       <icon name="update" class="dst size-3.5  hover:text-bc tldr-20" />
       Update
     </span>
+
     <span v-else class="flex gap-3 items-center">
       <icon name="svg-spinners:ring-resize" class=" size-4 opacity-60" />
       Checking
