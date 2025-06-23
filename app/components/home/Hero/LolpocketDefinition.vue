@@ -16,7 +16,7 @@ const h1Variants = {
 </script>
 
 <template>
-  <div class="relative grid gap-8  [&_svg]:text-bc  ml-22">
+  <div class="relative grid gap-8 size-full  [&_svg]:text-bc  ">
     <div class="w-100 h-40 grid items-end  relative">
       <motion.div
         class="ws-nowrap **:text-12 relative font-bold items-end  flex drop-shadow-sm w-full h-full origin-bottom-left "
@@ -100,7 +100,7 @@ const h1Variants = {
       :animate="{ opacity: 1, transform: 'translateY(0)' }"
       :transition="{ duration: 0.5, delay: 2, ease: 'easeInOut',
       }"
-      class="text-bc space-y-3 justify-self-start shrink-0 animate-in fade-in duration-1000 w-170">
+      class="text-bc space-y-3 justify-self-start shrink-0 animate-in fade-in duration-1000 w-140">
       <div class="flex items-center gap-2 drop-shadow-sm">
         <h1 class="!text-9">
           lolpocket

@@ -2,7 +2,7 @@
 const { account } = defineProps<{
   account: UserAccount
 }>()
-
+const as = useAccountStore()
 const classObject = 'btn justify-start !font-medium tracking-tight !gap-5 btn-ghost px-4 btn-lg w-full '
 </script>
 
@@ -24,7 +24,7 @@ const classObject = 'btn justify-start !font-medium tracking-tight !gap-5 btn-gh
       </SheetClose>
     </LazySettingsSheet>
 
-    <SheetClose v-if="account.session" :class="classObject" @click="useSignOut()">
+    <SheetClose v-if="as.currentSession.session" :class="classObject" @click="useSignOut()">
       <IconWrapper>
         <icon name="mdi:sign-out" class="size-4.75 dst absolute left-0.25" />
       </IconWrapper>

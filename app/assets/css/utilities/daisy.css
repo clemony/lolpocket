@@ -1,6 +1,6 @@
-@import 'tailwindcss';
-@import '../colors.css';
-@import '../theme.css';
+@import "tailwindcss";
+@import "../colors.css";
+@import "../theme.css";
 
 /* button */
 
@@ -13,7 +13,7 @@
 }
 
 @utility btn-neutral {
-  @apply !shadow-xs text-nc bg-neutral *:text-nc hover:text-nc;
+  @apply !shadow-xs text-nc bg-neutral *:text-nc hover:text-nc hover:bg-neutral/85 items-center [&_svg]:inline-flex align-middle text-2;
 }
 
 @utility btn-ghost {
@@ -64,7 +64,7 @@
 /* input */
 
 @utility input {
-  @apply focus-within:!outline-1 focus-within:!outline-offset-0   focus-within:!outline-b3;
+  @apply focus-within:!outline-0 focus-within:!outline-offset-0   focus-within:!outline-0 focus-within:ring-neutral/60 focus-within:ring-1  h-12;
   border-image-width: 0 !important;
   --input-color: var(--b3) !important;
 }

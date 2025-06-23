@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const as = useAccountStore()
+console.log('💠 - ajjjjjs:', as.currentSession)
 const ix = useIndexStore()
 const appConfig = useAppConfig()
 

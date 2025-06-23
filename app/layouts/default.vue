@@ -6,7 +6,7 @@ const route = useRoute()
 
 <template>
   <LayoutGroup>
-    <motion.div :transition="{}" class="flex flex-nowrap h-screen w-screen overflow-hidden" :class="{ '!bg-b2/10': route.name == 'card' }" layout>
+    <motion.div id="app" vaul-drawer-wrapper :transition="{}" class="flex flex-nowrap h-screen w-screen overflow-hidden bg-b1" :class="{ '!bg-b2/10': route.name == 'card' }" layout>
       <AppNavbar />
 
       <AppCommand />

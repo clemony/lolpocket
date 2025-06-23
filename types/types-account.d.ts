@@ -1,14 +1,11 @@
-import type { Session } from '@supabase/supabase-js'
+import type { Session } from "@supabase/supabase-js"
 
 declare global {
-  type AccountRole = 'admin' | 'summoner'
+  type AccountRole = "admin" | "summoner"
   interface UserAccount {
     name: string
     role: AccountRole
     id: string
-    session: Session
-    accessToken: string
-    refreshToken: string
     riot: UserSummoner | null
     settings: UserSettings
   }
@@ -16,6 +13,12 @@ declare global {
   interface UserSettings {
     motion: boolean
     hero: string | null
+  }
+
+  interface CurrentSession {
+    session: Session
+    accessToken: string
+    refreshToken: string
   }
 
   interface Note {

@@ -23,18 +23,14 @@ async function signInWithGoogle() {
 </script>
 
 <template>
-  <Button
-    variant="outline"
-    size="lg"
-    class="hover:border-neutral/80 h-14 gap-4.5 shadow-xs"
+  <button
+    v-tippy="'Sign in with Google'" alt="Sign in with
+    Google"
+    class="btn btn-square size-26"
     @click="signInWithGoogle()">
     <icon
       name="mdi:google"
       class="-ml-6.5 size-6" />
-
-    <div class="">
-      Log in with Google
-    </div>
   </Button>
 </template>
 

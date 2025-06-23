@@ -2,7 +2,7 @@
 import type { ColDef, ColGroupDef, GridApi, GridOptions, GridPreDestroyedEvent, GridReadyEvent } from 'ag-grid-community'
 import { CellStyleModule, ClientSideRowModelModule, ColumnApiModule, ColumnAutoSizeModule, ColumnHoverModule, GridStateModule, ModuleRegistry, RenderApiModule, RowSelectionModule, ValidationModule } from 'ag-grid-community'
 import { AgGridVue } from 'ag-grid-vue3'
-import ChampionGridIcon from 'components/summoner-analysis/charts/chart-comps/ChampionGridIcon.vue'
+import ChampionGridIcon from 'components/analytics/charts/chart-comps/ChampionGridIcon.vue'
 
 definePageMeta({
   name: 'Champion Stats',

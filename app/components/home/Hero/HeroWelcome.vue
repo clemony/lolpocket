@@ -12,7 +12,7 @@ function onChange() {
 }
 
 watch(
-  () => as.userAccount.session,
+  () => as.currentSession.session,
   (newVal) => {
     newVal ? (viewLogin.value = false) : ''
   },
@@ -20,14 +20,14 @@ watch(
 </script>
 
 <template>
-  <div class="grid items-center size-full relative">
-    <TransitionSlide>
+  <div class="grid items-center size-full relative max-w-140 w-140 pl-22">
+    <TransitionSlide class="size-full">
       <LolpocketDefinition v-if="!viewLogin" />
 
       <Login v-else-if="viewLogin" />
     </TransitionSlide>
 
-    <div
+    <!--     <div
       v-if="visible"
       class="pointer-events-none absolute top-12 left-10 size-110 overflow-hidden object-center">
       <video-background
@@ -35,28 +35,24 @@ watch(
         style="height: 100%"
         :loop="false"
         class="z-50 bg-center opacity-65 brightness-180 grayscale aspect-video"></video-background>
-    </div>
+    </div> -->
 
-    <button
-      v-show="!as.userAccount.session"
+    <label
+      v-show="!as.currentSession.session"
+      class="pointer-events-auto hover:bg-neutral btn-lg mt-3 btn btn-outline border-b3 hover:text-nc text-2 w-fit self-end justify-self-end overflow-hidden shadow-xs transition-all duration-200">
+      <input
+        v-model="viewLogin"
+        type="checkbox"
+        class="peer hidden"
+        @change="onChange" />
 
-      class="pointer-events-auto hover:bg-neutral btn-lg btn btn-outline border-b3 hover:text-nc w-fit self-start overflow-hidden shadow-xs transition-all duration-200"
-      as-child>
-      <label>
-        <input
-          v-model="viewLogin"
-          type="checkbox"
-          class="peer hidden"
-          @change="onChange" />
+      <span v-if="!viewLogin">Log In</span>
 
-        <span v-if="!viewLogin">Log In</span>
-
-        <icon
-          v-else
-          name="mynaui:arrow-long-left"
-          class="size-7 object-center opacity-70" />
-      </label>
-    </button>
+      <icon
+        v-else
+        name="mynaui:arrow-long-left"
+        class="size-7 object-center opacity-70" />
+    </label>
   </div>
   <!-- bg-b1/20 backdrop-blur-md  size-16 rounded-full  shadow-xs -->
   <div class="absolute bottom-5 w-full self-end justify-center grid">

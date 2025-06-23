@@ -1,26 +1,12 @@
 <script lang="ts" setup>
 import { UseClipboard } from '@vueuse/components'
 
-/* const { text, copy, copied, isSupported } = useClipboard({ source })
+const source = 'contact@lolpocket.win'
+const { text, copy, copied, isSupported } = useClipboard({ source })
 
 const copyMsg = computed (() => {
   return copied ? 'Copied!' : 'Copy'
-}) */
-
-const links = [
-  {
-    name: 'Discord',
-    link: 'https://discord.gg/Jzuu7bYTZY',
-    icon: 'prime:discord',
-    iconClass: 'size-10 ',
-  },
-  {
-    name: 'Githu',
-    link: 'https://github.com/clemony/lolpocket',
-    icon: 'prime:github',
-    iconClass: 'size-11 ',
-  },
-]
+})
 </script>
 
 <template>
@@ -37,7 +23,7 @@ const links = [
 
     <menu class="grid-flow-col gap-3 items-center justify-self-end justify-end *:grid *:place-items-center">
       <NuxtLink
-        v-for="link in links"
+        v-for="link in contactLinks"
         :key="link.name"
         v-tippy="{
           content: link.name,
@@ -60,7 +46,7 @@ const links = [
           </template>
 
           <template #content>
-            <UseClipboard v-slot="{ copy, copied }" source="contact@lolpocket.win">
+            <UseClipboard>
               <button v-tippy="{ content: !copied ? 'Copy' : 'Copied!', placement: 'top', offset: [0, 5], hideOnClick: false }" class="flex items-center  py-2 gap-2" @click="copy()">
                 <span>contact@lolpocket.win</span>
 

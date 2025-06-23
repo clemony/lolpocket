@@ -28,9 +28,9 @@ watch(
 </script>
 
 <template>
-  <div class="mt-18 ">
-    <Tabs v-model:model-value="tabModel">
-      <IndicatorTabsList class="grid-cols-2 bg-b3/60 h-10 ">
+  <div class="size-full">
+    <Tabs v-model:model-value="tabModel" class="w-full">
+      <IndicatorTabsList class="grid-cols-2 bg-b3/60 h-10 w-full">
         <IndicatorTabsTrigger value="connect">
           <icon name="fluent-mdl2:plug-disconnected" />
           Connect
@@ -47,14 +47,14 @@ watch(
       <div
         v-if="tabModel == 'connect'"
         class="z-0 mt-12 w-full gap-2 px-1">
-        <h3>Connect</h3>
+        <h3>Sign in</h3>
 
         <p class="mb-10">
           Log in with another account.
         </p>
 
         <div
-          class="grid w-[60%] gap-4">
+          class="grid grid-cols-3 gap-4">
           <Riot />
 
           <Discord />

@@ -1,11 +1,7 @@
 export function useMatchSimplifier(puuid: string) {
   const simplifyMatch = (match: MatchData): SimplifiedMatchData | null => {
-    const participant = match.info.participants.find(p => p.puuid === puuid)
-    if (!participant)
-      return null
-
-    console.log('🔶 simplifyMatch: finding participant for puuid:', puuid)
-    console.log('🔶 match participants:', match.info.participants.map(p => p.puuid))
+    const participant = match.info.participants.find((p) => p.puuid === puuid)
+    if (!participant) return null
 
     return {
       puuid: participant.puuid,
@@ -34,7 +30,7 @@ export function useMatchSimplifier(puuid: string) {
         primary: participant.perks.primary ?? 0,
         secondary: participant.perks.secondary ?? 0,
       },
-      participants: match.info.participants.map(p => ({
+      participants: match.info.participants.map((p) => ({
         riotIdGameName: p.riotIdGameName,
         profileIcon: p.profileIcon,
       })),

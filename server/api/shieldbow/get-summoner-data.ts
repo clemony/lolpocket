@@ -1,6 +1,6 @@
-import { Client } from 'shieldbow'
-import process from 'node:process'
-import dotenv from 'dotenv'
+import dotenv from "dotenv"
+import process from "node:process"
+import { Client } from "shieldbow"
 
 dotenv.config()
 
@@ -9,18 +9,24 @@ export default defineEventHandler(async (event) => {
 
   const query = getQuery(event)
   if (!query.puuid) {
-    throw new Error('puuid is required')
+    throw new Error("puuid is required")
   }
 
-  await client.initialize({ region: 'na', fetch: false, storage: {
-    enable: {
-      dragon: false,
-      api: false,
+  await client.initialize({
+    region: "na",
+    fetch: false,
+    storage: {
+      enable: {
+        dragon: false,
+        api: false,
+      },
     },
+    cache: { enable: { api: true } },
+  })
 
-  }, cache: { enable: { api: true } } })
-
-  const summoner = await client.summoners.fetchByPlayerId(query.puuid.toString())
+  const summoner = await client.summoners.fetchByPlayerId(
+    query.puuid.toString()
+  )
 
   const account = await summoner.fetchAccount()
   const leagueEntry = await summoner.fetchLeagueEntries()
@@ -37,7 +43,7 @@ export default defineEventHandler(async (event) => {
       queueType: entry.queueType,
     }
   }
-  console.log('💠 - defineEventHandler - entries:', entries)
+  // console.log('💠 - defineEventHandler - entries:', entries)
 
   return {
     name: account.username,

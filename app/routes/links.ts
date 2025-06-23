@@ -2,7 +2,7 @@ import { AnalyticsMenu, BackpackMenu, LibraryMenu } from "#components"
 
 const accountName = computed(() => {
   const as = useAccountStore()
-  if (!as.userAccount.session || !as.userAccount.riot.name) return null
+  if (!as.currentSession.session || !as.userAccount.riot.name) return null
 
   return as.userAccount.riot.name
 })

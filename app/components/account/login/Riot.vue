@@ -3,18 +3,14 @@ const supabase = useSupabaseClient()
 </script>
 
 <template>
-  <Button
-    variant="outline"
-    size="lg"
-    class="hover:border-neutral/80 h-14 gap-5 shadow-xs">
+  <button
+    v-tippy="'Sign in with Riot ID'"
+    alt="Sign in with Riot ID"
+    class="btn btn-square size-26">
     <icon
       name="simple-icons:riotgames"
-      class="-ml-8 size-5.5" />
-
-    <div class="">
-      Log in with Riot ID
-    </div>
-  </Button>
+      class="size-8" />
+  </button>
 </template>
 
 <style scoped></style>

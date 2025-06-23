@@ -11,6 +11,13 @@ function canPlay() {
 
   videoRef.value.play()
 }
+
+function reload() {
+  if (!videoRef.value)
+    return
+
+  videoRef.value.load()
+}
 </script>
 
 <template>
@@ -24,7 +31,8 @@ function canPlay() {
     controlslist=" nodownload "
     playsinline
     class="size-full  overflow-hidden   object-cover"
-    @canplay="canPlay()">
+    @canplay="canPlay()"
+    @error="reload()">
     <source
       :src="src"
       type="video/webm" />

@@ -12,7 +12,7 @@ const forwarded = useForwardPropsEmits(props, emits)
 </script>
 
 <template>
-  <NavigationMenuLink v-bind="forwarded" :class="cn(navigationMenuTriggerStyle(), props.class)">
+  <NavigationMenuLink v-bind="forwarded" :class="cn('relative cursor-pointer', props.class)">
     <slot />
   </NavigationMenuLink>
 </template>

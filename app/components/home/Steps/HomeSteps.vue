@@ -70,7 +70,7 @@ const steps = [
     :while-in-view="{ boxShadow: '0px -10px 20px 5px #00000010' }">
     <ul
       class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical    ">
-      <li v-for="(step, i) in steps" :key="i" class="w-full group relative -mt-1.5">
+      <li v-for="(step, i) in steps" :key="i" class="w-full group relative ">
         <div class="timeline-middle drop-shadow-sm rounded-full scale-110 z-2" :class="{ 'bg-b2 ': isShown[i] && !isShown?.[i].value }">
           <Motion
             as-child
@@ -81,7 +81,7 @@ const steps = [
             }">
             <icon
               name="check-fill"
-              class="size-5" />
+              class="size-5 text-bc/80" />
           </Motion>
         </div>
 
@@ -125,12 +125,12 @@ const steps = [
         </motion.div>
 
         <motion.hr
-          v-if="scrollProg" class="group-last:hidden !bg/b2 !mt-1 !w-1.25  relative grid items-start">
+          v-if="scrollProg" class="group-last:hidden !bg/b2 !mt-2 !w-1.25  relative grid items-start !rounded-full overflow-hidden">
           <motion.hr
             v-if="isShown[i] && isShown?.[i].value"
             :style="{
               scaleY: progress[i] || 0 }"
-            class="group-last:hidden absolute origin-top !bg-neutral/80  size-full starting:scale-y-0 !overflow-visible !rounded-full  -top-1.5 -left-16">
+            class="group-last:hidden absolute origin-top  !bg-linear-to-b from-neutral/40 via-neutral/70 to-neutral/30   size-full starting:scale-y-0 !overflow-visible !rounded-full  -top-1.5 -left-16">
           </motion.hr>
         </motion.hr>
       </li>

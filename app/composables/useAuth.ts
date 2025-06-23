@@ -1,6 +1,6 @@
-import type { Session } from '@supabase/supabase-js'
-import { jwtDecode } from 'jwt-decode'
-import { toast } from 'vue-sonner'
+import type { Session } from "@supabase/supabase-js"
+import { jwtDecode } from "jwt-decode"
+import { toast } from "vue-sonner"
 
 export function useAuth() {
   const client = useSupabaseClient()
@@ -9,21 +9,16 @@ export function useAuth() {
   const as = useAccountStore()
 
   client.auth.onAuthStateChange(async (event, session) => {
-    console.log('💠 Auth change:', event)
+    console.log("💠 Auth change:", event)
 
-    if (event === 'INITIAL_SESSION' && session) {
+    if (event === "INITIAL_SESSION" && session) {
       await hydrateUser(session)
-    }
-
-    else if (event === 'SIGNED_OUT') {
+    } else if (event === "SIGNED_OUT") {
       as.resetUserAccount()
-      if (route.path !== '/')
-        router.push('/')
+      if (route.path !== "/") router.push("/")
       else location.reload()
-      toast.success('Successfully logged out')
-    }
-
-    else if (event === 'SIGNED_IN' && session) {
+      toast.success("Successfully logged out")
+    } else if (event === "SIGNED_IN" && session) {
       const { data } = await client.auth.setSession({
         access_token: session.access_token,
         refresh_token: session.refresh_token,
@@ -40,15 +35,19 @@ async function hydrateUser(session: Session) {
   const as = useAccountStore()
   const decoded = jwtDecode<AuthRoleJwtPayload>(session.access_token)
 
-  const name = session.user.user_metadata?.custom_claims?.global_name
-    ?? session.user.user_metadata?.name
-    ?? 'Summoner'
+  const name =
+    session.user.user_metadata?.custom_claims?.global_name ??
+    session.user.user_metadata?.name ??
+    "Summoner"
 
   as.userAccount = {
     ...as.userAccount, // keep previous shape
     name,
     role: decoded.app_metadata.user_role as AccountRole,
     id: session.user.id,
+  }
+
+  as.currentSession = {
     session,
     accessToken: session.access_token,
     refreshToken: session.refresh_token,
@@ -63,16 +62,18 @@ async function hydrateUser(session: Session) {
   as.$persist
 }
 
-async function fetchSummonerData(userId: string): Promise<Partial<UserSummoner> | null> {
+async function fetchSummonerData(
+  userId: string
+): Promise<Partial<UserSummoner> | null> {
   const client = useSupabaseClient()
   const { data, error } = await client
-    .from('user_data')
+    .from("user_data")
     .select('"name", "tag", "profileIcon", "level", "region", "puuid"')
-    .eq('user_id', userId)
+    .eq("user_id", userId)
     .single()
 
   if (error) {
-    console.error('Summoner fetch failed:', error)
+    console.error("Summoner fetch failed:", error)
     return null
   }
 

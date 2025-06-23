@@ -1,30 +1,33 @@
-import { defineStore } from 'pinia'
+import { defineStore } from "pinia"
 
 export const useAccountStore = defineStore(
-  'as',
+  "as",
   () => {
-    const themeClass = ref('daylight')
-    const dataTheme = ref('daylight')
+    const themeClass = ref("daylight")
+    const dataTheme = ref("daylight")
     const userNotes = ref<Note[]>([])
     const reducedMotion = ref(false)
     const userNoShowDeletePocketConfirm = ref(false)
     const favoriteChamps = ref<Champion[]>([])
     const favoriteItems = ref<number[]>([])
 
-    const defaultUser: UserAccount = {
-      name: 'Summoner',
-      role: null,
-      id: null,
+    const currentSession = ref<CurrentSession>({
       session: null,
       accessToken: null,
       refreshToken: null,
+    })
+
+    const defaultUser: UserAccount = {
+      name: "Summoner",
+      role: null,
+      id: null,
       riot: {
-        name: 'Summoner',
+        name: "Summoner",
         tag: null,
         puuid: null,
         profileIcon: null,
         level: null,
-        region: 'Runeterra',
+        region: "Runeterra",
       },
       settings: {
         motion: true,
@@ -32,19 +35,16 @@ export const useAccountStore = defineStore(
       },
     }
     const userAccount = ref<UserAccount>({
-      name: 'Summoner',
+      name: "Summoner",
       role: null,
       id: null,
-      session: null,
-      accessToken: null,
-      refreshToken: null,
       riot: {
-        name: 'Summoner',
+        name: "Summoner",
         tag: null,
         puuid: null,
         profileIcon: null,
         level: null,
-        region: 'Runeterra',
+        region: "Runeterra",
       },
       settings: {
         motion: true,
@@ -52,23 +52,20 @@ export const useAccountStore = defineStore(
       },
     })
 
-    const signedIn = computed(() => !!userAccount.value.session)
+    const signedIn = computed(() => !!currentSession.value.session)
 
     function resetUserAccount() {
       userAccount.value = {
-        name: 'Summoner',
+        name: "Summoner",
         role: null,
         id: null,
-        session: null,
-        accessToken: null,
-        refreshToken: null,
         riot: {
-          name: 'Summoner',
+          name: "Summoner",
           tag: null,
           puuid: null,
           profileIcon: null,
           level: null,
-          region: 'Runeterra',
+          region: "Runeterra",
         },
         settings: {
           motion: true,
@@ -79,6 +76,7 @@ export const useAccountStore = defineStore(
 
     return {
       // account
+      currentSession,
       userAccount,
       resetUserAccount,
       defaultUser,
@@ -100,7 +98,7 @@ export const useAccountStore = defineStore(
   {
     persist: {
       storage: piniaPluginPersistedstate.localStorage(),
-      key: 'accountStore',
+      key: "accountStore",
     },
-  },
+  }
 )

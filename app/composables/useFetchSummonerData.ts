@@ -1,7 +1,8 @@
 export async function useFetchSummonerData(queryPuuid: string) {
-  const { name, profileIcon, puuid, tag, level, region, leagueEntry } = await $fetch('/api/shieldbow/get-summoner-data', {
-    query: { puuid: queryPuuid },
-  })
+  const { name, profileIcon, puuid, tag, level, region, leagueEntry } =
+    await $fetch("/api/shieldbow/get-summoner-data", {
+      query: { puuid: queryPuuid },
+    })
   const as = useAccountStore()
   const rankedEntries: Record<string, RankedEntry> = {}
 
@@ -20,21 +21,21 @@ export async function useFetchSummonerData(queryPuuid: string) {
 
   // Provide fallback data if a specific queue type is missing
   const soloQueue = rankedEntries.RANKED_SOLO_5x5 ?? {
-    tier: 'UNRANKED',
-    division: '',
+    tier: "UNRANKED",
+    division: "",
     lp: 0,
     wins: 0,
     losses: 0,
-    queueType: 'RANKED_SOLO_5x5',
+    queueType: "RANKED_SOLO_5x5",
   }
 
   const flexQueue = rankedEntries.RANKED_FLEX_SR ?? {
-    tier: 'UNRANKED',
-    division: '',
+    tier: "UNRANKED",
+    division: "",
     lp: 0,
     wins: 0,
     losses: 0,
-    queueType: 'RANKED_FLEX_SR',
+    queueType: "RANKED_FLEX_SR",
   }
 
   // Summoner object with both queues (if they exist)
@@ -52,13 +53,9 @@ export async function useFetchSummonerData(queryPuuid: string) {
     matches: [],
   }
   if (summoner.puuid == as.userAccount.riot.puuid) {
-    console.log('💠 - useFetchSummonerData - as.userAccount.puuid:', as.userAccount.riot.puuid)
-    console.log('💠 - useFetchSummonerData - summoner.puuid:', summoner.puuid)
-
     as.userAccount.riot.tag = tag
     as.userAccount.riot.puuid = puuid
     as.userAccount.riot.profileIcon = profileIcon
-    console.log('💠 - useFetchSummonerData - as.userAccount.riot.profileIcon:', as.userAccount.riot.profileIcon)
     as.userAccount.riot.level = level
     as.userAccount.riot.region = region
     as.userAccount.riot.name = name

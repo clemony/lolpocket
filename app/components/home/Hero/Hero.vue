@@ -103,16 +103,6 @@ watch([x, y], () => {
   isVisible.value = true
   start() // restart
 })
-
-watch(api, (api) => {
-  if (!api)
-    return
-
-  api.on('scroll', () => {
-    // Do something on select.
-    // console.log(`💠 - {api.slidesInView():`, api.selectedScrollSnap())
-  })
-})
 </script>
 
 <template>
@@ -131,18 +121,17 @@ watch(api, (api) => {
       v-show="visible">
       <CarouselItem v-for="(video, i) in heroDisplays" :key="i" hydrate-on-visible as-child>
         <motion.div
-          class="size-full z-0 overflow-hidden"
+          class="size-full z-0 overflow-hidden grid  items-start justify-start"
           :style="{ transform: `translate(0, -${prog}%)` }">
-          <Video
+          <div class="h-screen w-screen relative">
+            <Video
 
-            :ref="video.ref"
-            :src="video.url"
-            :style="{
-              height: '100vh',
-              backgroundPosition: '50% 50%',
-            }"
-            class="ml-[30vh]  -scale-x-100  opacity-50 brightness-125 contrast-160 grayscale"
-            @error="console.log('error')" />
+              :ref="video.ref"
+              :src="video.url"
+              class=" opacity-50  absolute grayscale"
+              :class="video.class"
+              @error="console.log('error')" />
+          </div>
         </motion.div>
       </CarouselItem>
     </CarouselContent>
@@ -156,9 +145,9 @@ watch(api, (api) => {
     <div class=" z-2  size-full transition-opacity duration-500 pointer-events-auto  opacity-0 gap-3 flex justify-end pr-5 items-end pb-5 " :class="{ 'opacity-100': isVisible, 'opacity-0': !isVisible }">
       <div class="flex items-center gap-2 ">
         <HoverBtnSm :tip="isPlaying ? 'Pause' : 'Play'" @click="togglePlay">
-          <icon v-if="isPlaying" name="teenyicons:pause-solid" class="opacity-60" />
+          <icon v-if="isPlaying" name="pause" class="opacity-60" />
 
-          <icon v-else name="teenyicons:play-solid" class="opacity-60" />
+          <icon v-else name="play" class="opacity-60" />
         </HoverBtnSm>
 
         <motion.progress
@@ -166,11 +155,11 @@ watch(api, (api) => {
           :transition="{ type: 'spring' }" />
 
         <HoverBtnSm tip="Previous" @click="handlePrev()">
-          <icon name="teenyicons:next-solid" class="rotate-180 size-4 opacity-60" />
+          <icon name="next" class="rotate-180 size-4 opacity-60" />
         </HoverBtnSm>
 
         <HoverBtnSm tip="Next" @click="handleNext()">
-          <icon name="teenyicons:next-solid" class=" size-4  opacity-60" />
+          <icon name="next" class=" size-4  opacity-60" />
         </HoverBtnSm>
 
         <DropdownMenu>

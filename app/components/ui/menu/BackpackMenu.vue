@@ -1,26 +1,48 @@
 <script lang="ts" setup>
-console.log('💠 - backpackLinks:', backpackLinks)
+import { currentBagArt } from 'data/content/current-art'
 </script>
 
 <template>
-  <ul class="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[minmax(0,.75fr)_minmax(0,1fr)]">
-    <li class="row-span-3">
-      <NavigationMenuLink v-for="(link, i) in backpackLinks" :key="i">
-        <a
-          class="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-          href="/">
-          <img src="https://www.reka-ui.com/logo.svg" class="h-6 w-6">
+  <TwoColNav class="grid-rows-1 overflow-hidden  ">
+    <div class="size-full gap-1 items-center grid col-start-1 overflow-hidden">
+      <NavigationMenuLink class="self-start text-start flex-col size-full" @click="navigateTo(backpackLinks[0].link)">
+        <NavMenuItemTitle>
+          <icon :name="backpackLinks[0].icon" class="size-5 shrink-0" />
 
-          <div class="mb-2 mt-4 text-lg font-medium">
-            shadcn/ui
-          </div>
+          <h4 class="mt-1 mb-3 dst">
+            {{ backpackLinks[0].name }}
+          </h4>
+        </NavMenuItemTitle>
 
-          <p class="text-sm leading-tight text-muted-foreground">
-            Beautifully designed components built with Radix UI and
-            Tailwind CSS.
-          </p>
-        </a>
+        <NavBlurb class="">
+          {{ backpackLinks[0].blurb }}
+        </NavBlurb>
       </NavigationMenuLink>
-    </li>
-  </ul>
+
+      <button class=" btn btn-neutral w-full gap-2 justify-end text-end">
+        <!--
+        <icon name="add-sm" class="text-nc -ml-2.5 size-5.5  shrink-0" /> -->
+        <icon name="material-symbols-light:fast-forward-outline-rounded" class="text-nc  size-6.5 shrink-0" />
+        Quick Start New Pocket
+      </button>
+
+      <NavigationMenuLink v-for="(item, i) in backpackLinks.filter(item => item != backpackLinks[0])" :key="i" class="size-full flex flex-col justify-start items-start text-start px-3 py-2">
+        <NavMenuItemTitle>
+          <icon :name="item.icon" :class="{ 'size-4.25': i == 1, 'size-4.75': i == 0 }" />
+
+          <h5>
+            {{ item.name }}
+          </h5>
+        </NavMenuItemTitle>
+
+        <NavBlurb>
+          {{ item.blurb }}
+        </NavBlurb>
+      </NavigationMenuLink>
+    </div>
+
+    <div class="field-box size-full">
+      <PocketPinEditor />
+    </div>
+  </TwoColNav>
 </template>

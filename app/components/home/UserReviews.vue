@@ -1,6 +1,30 @@
 <script lang="ts" setup>
 import { motion } from 'motion-v'
+import type { CarouselApi } from '../base/carousel/carousel-index'
 import { reviewVariants } from './variants'
+
+const api = ref<CarouselApi>()
+const inView = ref(0)
+function setApi(val: CarouselApi) {
+  api.value = val
+  console.log('💠 - setApi - api.value :', api.value)
+}
+
+computed (() => {
+  if (!api.value)
+    return null
+
+  return api.value.selectedScrollSnap()
+})
+
+watchOnce(api, (api) => {
+  if (!api)
+    return
+
+  api.on('select', () => {
+    inView.value = api.selectedScrollSnap()
+  })
+})
 </script>
 
 <template>
@@ -8,7 +32,8 @@ import { reviewVariants } from './variants'
     <Carousel
       :opts="{
         loop: true,
-      }">
+      }"
+      @init-api="setApi">
       <CarouselContent class="size-full">
         <CarouselItem
           v-for="page, i in reviews" :key="i"
@@ -16,8 +41,10 @@ import { reviewVariants } from './variants'
           <motion.div
             v-for="r in page" :key="r.id"
             :variants="reviewVariants"
-            initial="hidden" class="flex w-full flex-col gap-4"
-            while-in-view="visible"
+            :animate="api && inView == i ? 'visible' : 'hidden'"
+            initial="hidden"
+            exit="hidden"
+            class="flex w-full flex-col gap-4"
             :transition="{
               type: 'spring',
               delay: 0.3,

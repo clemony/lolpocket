@@ -28,13 +28,13 @@ function handleMenu() {
       </h3>
     </Btn>
 
-    <NavigationMenu>
+    <NavigationMenu disable-pointer-leave-close>
       <NavigationMenuList>
         <template v-for="item in navLinks" :key="item.name">
           <NavigationMenuItem v-if="item.link">
-            <NavigationMenuLink @click="item.link ? navigateTo(item.link) : null">
+            <NavMenuLink @click="item.link ? navigateTo(item.link) : null">
               {{ item.name }}
-            </NavigationMenuLink>
+            </NavMenuLink>
           </NavigationMenuItem>
 
           <NavigationMenuItem v-else-if="item.links">

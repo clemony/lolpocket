@@ -16,7 +16,7 @@ const itemClass = 'flex items-center gap-2 hover:underline-offset-2 hover:underl
         </li>
       </ul>
 
-      <template v-for="section in externalLinks" :key="section">
+      <!-- <template v-for="section in externalLinks" :key="section">
         <ul
           v-if="section.name"
           :class="listClass">
@@ -49,28 +49,28 @@ const itemClass = 'flex items-center gap-2 hover:underline-offset-2 hover:underl
             </li>
           </ul>
         </template>
-      </template>
+      </template> -->
 
       <ul :class="listClass">
         <h3>Info</h3>
 
         <li
-          v-for="link in contactLinks"
+          v-for="link in siteInfoLinks.concat(contactLinks)"
           :key="link.name"
           class="flex items-center gap-2">
-          <NuxtLink
+          <ULink
             v-if="link.external"
+            external
             :to="{ path: link.link }">
             {{ link.name }}
-          </NuxtLink>
+          </ULink>
 
-          <a
+          <ULink
             v-else
             :key="link.name"
-            target="_blank"
-            :href="link.link">
+            :to="link.link">
             {{ link.name }}
-          </a>
+          </ULink>
         </li>
       </ul>
     </div>

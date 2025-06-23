@@ -1,4 +1,4 @@
-import type { RefOrElement } from 'vue-draggable-plus'
+import type { RefOrElement } from "vue-draggable-plus"
 
 declare global {
   interface OgResponse {
@@ -19,6 +19,8 @@ declare global {
     links?: LinkObject[]
     icon?: string
     iconClass?: string
+    img?: string
+    imgClass?: string
     external?: boolean
     component?: any
     blurb?: string
