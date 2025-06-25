@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { reactiveOmit } from '@vueuse/core'
+import type { Easing, EasingDefinition } from 'motion-v'
+import { AnimatePresence } from 'motion-v'
 import type { DialogContentEmits, DialogContentProps } from 'reka-ui'
 import {
   DialogClose,
@@ -10,30 +12,55 @@ import {
   useForwardPropsEmits,
 } from 'reka-ui'
 
-const props = defineProps<DialogContentProps & { class?: HTMLAttributes['class'], noOverlay?: boolean, noButton?: boolean, delay?: number }>()
+const props = defineProps<DialogContentProps & { class?: HTMLAttributes['class'], noOverlay?: boolean, noButton?: boolean, delay?: number, side?: Side }>()
 
 const emits = defineEmits<DialogContentEmits>()
 
-const delegatedProps = reactiveOmit(props, 'class')
+const delegatedProps = reactiveOmit(props,  'class')
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 const dialogOpenState = {
   opacity: 1,
-  filter: 'blur(0px)',
-
+  transform: 'translate(0, 0px)',
+transition: {
+  ease: 'linear' as EasingDefinition,
+  duration: 0.2,
+}
 }
 
 const dialogInitialState = {
   opacity: 0,
-  filter: 'blur(10px)',
+  transform: 'translate(0, 10px)',
+transition: {
+  ease: 'easeOut' as EasingDefinition,
+  duration: 0.2,
+}
+}
+
+
+const overlayOpenState = {
+  opacity: 1,
+transition: {
+  ease: 'linear' as EasingDefinition,
+  duration: 0.3,
+}
+}
+
+const overlayInitialState = {
+  opacity: 0,
+transition: {
+  ease: 'easeOut' as EasingDefinition,
+  duration: 0.4,
+}
 }
 </script>
 
 <template>
   <DialogPortal>
+<AnimatePresence>
     <DialogOverlay
       class="fixed inset-0 z-50 isolate bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0" :class="{ 'opacity-0 invisible': props.noOverlay }">
-      <Motion class="overlay" :initial="{ opacity: 0 }" :animate="{ opacity: 1 }" :exit="{ opacity: 0 }" />
+      <Motion class="overlay" :initial="overlayInitialState" :animate="overlayOpenState" :exit="overlayInitialState" />
     </DialogOverlay>
 
     <DialogContent
@@ -46,16 +73,7 @@ const dialogInitialState = {
         )">
       <Motion
         class="modal-container" :initial="dialogInitialState" :animate="dialogOpenState"
-        :transition="{
-          delay: props.delay || 0.2,
-          duration: 0.3,
-          ease: 'easeOut',
-          opacity: {
-            delay: 0.2,
-            duration: 0.2,
-            ease: 'easeOut',
-          } }"
-        :exit="dialogInitialState" :style="{ transformPerspective: 500 }">
+        :exit="dialogInitialState" >
         <slot />
 
         <DialogClose
@@ -67,6 +85,7 @@ const dialogInitialState = {
         </DialogClose>
       </Motion>
     </DialogContent>
+  </AnimatePresence>
   </DialogPortal>
 </template>
 

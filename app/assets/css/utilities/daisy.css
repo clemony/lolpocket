@@ -17,6 +17,7 @@
 }
 
 @utility btn-ghost {
+  @apply text-3 font-normal gap-3 px-3;
   &:hover {
     @apply border-b3/40;
     --btn-bg: --alpha(var(--b2) / 20%);
@@ -72,7 +73,7 @@
 /* tabs */
 
 @utility tabs-box {
-  border-radius: var(--radius-lg) !important;
+  border-radius: var(--radius-lg);
 }
 
 @utility tabs-box {
@@ -80,7 +81,7 @@
 }
 
 @utility tab {
-  --radius-field: 1rem !important;
+  --radius-field: 1rem;
   --tab-bg: var(--b1);
   --tab-border-color: var(--b3);
   --tab-border-colors: var(--b3);

@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 .glow {
   background: linear-gradient(
     137deg,
@@ -9,22 +11,16 @@
   );
   background-size: 1000% 1000%;
   animation: GradientBackground 5s ease infinite;
-  /*mask-image: radial-gradient(circle at 0% 1%, rgba(0, 0, 0, 0) 50px, #fff 51px);
-  mask-position: center;
-  mask-repeat: no-repeat;
-  mask-size: 100% 100%;*/
 }
 
-@keyframes GradientBackground {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
+.glow-blue {
+  background: linear-gradient(
+    137deg,
+    var(--color-ah) 0%,
+    var(--color-b1) 20%,
+    var(--color-challenger) 30%,
+    var(--color-resolve) 60%
+  );
+  background-size: 1000% 1000%;
+  animation: GradientBackground 5s ease infinite;
 }

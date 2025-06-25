@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+const emit = defineEmits(['open:settings'])
 </script>
 
 <template>
@@ -6,21 +7,9 @@
     <div class="row-span-4 col-start-1 size-full overflow-hidden flex flex-col gap-1">
       <SummonerCard />
 
-      <LazySettingsSheet>
-        <NavMenuLink>
-          <IconWrapper>
-            <icon name="gear-solid" class="size-4.75 opacity-60 dst" />
-          </IconWrapper>
-          Settings
-        </NavMenuLink>
-      </LazySettingsSheet>
 
-      <NavMenuLink @click="useSignOut()">
-        <IconWrapper>
-          <icon name="mdi:sign-out" class="size-4.75 dst absolute left-0.25" />
-        </IconWrapper>
-        Sign Out
-      </NavMenuLink>
+
+
     </div>
 
     <li class="size-full col-start-2 grid justify-end items-center">

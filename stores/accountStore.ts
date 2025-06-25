@@ -6,7 +6,6 @@ export const useAccountStore = defineStore(
     const themeClass = ref("daylight")
     const dataTheme = ref("daylight")
     const userNotes = ref<Note[]>([])
-    const reducedMotion = ref(false)
     const userNoShowDeletePocketConfirm = ref(false)
     const favoriteChamps = ref<Champion[]>([])
     const favoriteItems = ref<number[]>([])
@@ -33,6 +32,15 @@ export const useAccountStore = defineStore(
         motion: true,
         hero: null,
       },
+      pockets: {
+        all: [],
+        pinned: [],
+        archived: [],
+      },
+      inbox: {
+        mail: [],
+        notifications: [],
+      },
     }
     const userAccount = ref<UserAccount>({
       name: "Summoner",
@@ -50,28 +58,21 @@ export const useAccountStore = defineStore(
         motion: true,
         hero: null,
       },
+      pockets: {
+        all: [],
+        pinned: [],
+        archived: [],
+      },
+      inbox: {
+        mail: [],
+        notifications: [],
+      },
     })
 
     const signedIn = computed(() => !!currentSession.value.session)
 
     function resetUserAccount() {
-      userAccount.value = {
-        name: "Summoner",
-        role: null,
-        id: null,
-        riot: {
-          name: "Summoner",
-          tag: null,
-          puuid: null,
-          profileIcon: null,
-          level: null,
-          region: "Runeterra",
-        },
-        settings: {
-          motion: true,
-          hero: null,
-        },
-      }
+      Object.assign(userAccount.value, defaultUser)
     }
 
     return {
@@ -86,7 +87,6 @@ export const useAccountStore = defineStore(
       // settings
       themeClass,
       dataTheme,
-      reducedMotion,
 
       // champs
       favoriteChamps,

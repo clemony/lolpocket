@@ -107,6 +107,7 @@ watch([x, y], () => {
 
 <template>
   <Carousel
+  v-if="progress"
     ref="carousel"
     class="h-screen w-screen relative overflow-hidden *:size-full  *:z-0   top-0 left-0 z-0"
     :class="{ sticky: visible }"
@@ -125,7 +126,7 @@ watch([x, y], () => {
           :style="{ transform: `translate(0, -${prog}%)` }">
           <div class="h-screen w-screen relative">
             <Video
-
+autoplay
               :ref="video.ref"
               :src="video.url"
               class=" opacity-50  absolute grayscale"
@@ -145,9 +146,9 @@ watch([x, y], () => {
     <div class=" z-2  size-full transition-opacity duration-500 pointer-events-auto  opacity-0 gap-3 flex justify-end pr-5 items-end pb-5 " :class="{ 'opacity-100': isVisible, 'opacity-0': !isVisible }">
       <div class="flex items-center gap-2 ">
         <HoverBtnSm :tip="isPlaying ? 'Pause' : 'Play'" @click="togglePlay">
-          <icon v-if="isPlaying" name="pause" class="opacity-60" />
+          <icon v-if="isPlaying" name="pause" class="opacity-60  shrink-0" />
 
-          <icon v-else name="play" class="opacity-60" />
+          <icon v-else name="play" class="opacity-60  shrink-0" />
         </HoverBtnSm>
 
         <motion.progress
@@ -155,17 +156,17 @@ watch([x, y], () => {
           :transition="{ type: 'spring' }" />
 
         <HoverBtnSm tip="Previous" @click="handlePrev()">
-          <icon name="next" class="rotate-180 size-4 opacity-60" />
+          <icon name="next" class="rotate-180 size-4 opacity-60 shrink-0" />
         </HoverBtnSm>
 
         <HoverBtnSm tip="Next" @click="handleNext()">
-          <icon name="next" class=" size-4  opacity-60" />
+          <icon name="next" class=" size-4  opacity-60  shrink-0" />
         </HoverBtnSm>
 
         <DropdownMenu>
           <DropdownMenuTrigger as-child>
             <HoverBtnSm tip="Options">
-              <icon name="gear-solid" class="size-4 opacity-50" />
+              <icon name="gear-solid" class="size-4 opacity-50  shrink-0" />
             </HoverBtnSm>
           </DropdownMenuTrigger>
 

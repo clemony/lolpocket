@@ -1,10 +1,16 @@
 <script lang="ts" setup>
 const ix = useIndexStore()
 
-const shuffled = ix.champions.sort(() => 0.5 - Math.random())
 
-// Get sub-array of first n elements after shuffled
-const selectedChamps = shuffled.slice(0, 6)
+
+
+const selectedChamps  = computed (() => {
+  ix.loadDefaults()
+  const shuffled = ix.champions.sort(() => 0.5 - Math.random())
+  console.log("💠 - selectedChamps - ix.champions:", ix.champions)
+  return shuffled.slice(0, 6)
+})
+
 console.log('💠 - selectedChamps:', selectedChamps)
 
 const currentItems = ref()
@@ -79,14 +85,14 @@ onMounted (async () => {
       <div v-if="champModel && champComplete" v-tippy="champModel.name" class="size-16   hover:scale-110 hover:ring-1 hover:ring-neutral rounded-lg shadow-sm drop-shadow-sm transition-all duration-400 animate-in slide-in-from-bottom-10 hover:ring-offset-2 hover:ring-offset-b2">
         <ChampionIcon :id="champModel" class="overflow-hidden size-16 rounded-lg" />
       </div>
-
+<!--
       <template v-for="(item, i) in itemModel">
         <div v-if="itemModel[i].item && itemModel[i].complete.value == true" :key="i" v-tippy="itemModel[i].item.value.name" class="size-16   hover:scale-110 hover:ring-1 hover:ring-neutral rounded-lg shadow-sm drop-shadow-sm transition-all duration-400 animate-in slide-in-from-bottom-10 hover:ring-offset-2 hover:ring-offset-b2">
           <div class="overflow-hidden size-16 rounded-lg">
             <img :src="`/img/champion/${itemModel[i].item.value.id}.webp`" class="size-full scale-115" />
           </div>
         </div>
-      </template>
+      </template> -->
     </div>
 
     <template v-if="isChampVisible">

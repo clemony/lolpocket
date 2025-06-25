@@ -4,6 +4,8 @@ const { account: acc } = defineProps<{
 }>()
 
 const as = useAccountStore()
+// @todo
+// @delete
 
 const account = computed (() => {
   if (acc)

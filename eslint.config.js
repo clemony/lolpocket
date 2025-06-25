@@ -31,6 +31,7 @@ export default antfu({
     'vue/no-irregular-whitespace': 'off',
     'no-irregular-whitespace': 'off',
     'eslint-comments/no-unlimited-disable': 'off',
+    'vue/custom-event-name-casing': 'off',
     'vue/html-closing-bracket-newline': [
       'error',
       {
@@ -42,9 +43,10 @@ export default antfu({
         },
       },
     ],
-    'vue/padding-line-between-tags': ['error', [
+    'vue/padding-line-between-tags': ['warning', [
       { blankLine: 'always', prev: '*', next: '*' },
     ]],
+    'vue/padding-line-between-blocks': ["error", "always"]
   },
   formatters: {
     /**

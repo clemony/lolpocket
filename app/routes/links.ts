@@ -1,11 +1,11 @@
 import { AnalyticsMenu, BackpackMenu, LibraryMenu } from "#components"
 
-const accountName = computed(() => {
+function getAccountName() {
   const as = useAccountStore()
   if (!as.currentSession.session || !as.userAccount.riot.name) return null
 
   return as.userAccount.riot.name
-})
+}
 
 export const navLinks: LinkGroup = [
   {
@@ -22,16 +22,28 @@ export const navLinks: LinkGroup = [
     link: "/summoner",
   },
   {
+    name: "Calculator",
+    link: "/calculator",
+  },
+]
+
+export const userLinks = [
+  {
+    // icon: "cil:briefcase",
     name: "Backpack",
+    icon: {
+      name: "lol-backpack",
+      class: "size-5.75 opacity-70",
+    },
     links: backpackLinks,
     component: BackpackMenu,
   },
   {
-    name: "Calculator",
-    link: "/calculator",
-  },
-  {
-    name: accountName.value ?? "Analysis",
+    name: getAccountName ?? "Analysis",
+    icon: {
+      name: "ri:bar-chart-fill",
+      class: "size-5.25 scale-x-112 opacity-80",
+    },
     links: analyticsLinks,
     component: AnalyticsMenu,
   },

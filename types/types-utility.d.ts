@@ -11,16 +11,24 @@ declare global {
     patch: string
   }
 
+  interface IconObject {
+    name: string
+    class?: string
+  }
+
+  interface ImgObject {
+    src: string
+    class?: string
+  }
+
   type LinkGroup = LinkObject[]
 
   interface LinkObject {
     name: string
     link?: string
     links?: LinkObject[]
-    icon?: string
-    iconClass?: string
-    img?: string
-    imgClass?: string
+    icon?: IconObject
+    img?: ImgObject
     external?: boolean
     component?: any
     blurb?: string

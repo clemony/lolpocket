@@ -6,7 +6,7 @@
     <li v-for="item in libraryLinks" :key="item.name" class="size-full ">
       <NavigationMenuLink @click="navigateTo(item.link)">
         <NavMenuImgWrapper>
-          <Img :img="item.img" alt="items" :class="cn(' absolute  object-cover size-full z-0', item.imgClass)" />
+          <Img :img="item.img.src" alt="items" :class="cn(' absolute  object-cover size-full z-0', item.img.class)" />
 
           <div
             class="flex select-none grow items-start absolute self-end flex-col text-start bottom-0 p-4  **:text-white/92 z-2">

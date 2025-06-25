@@ -1,15 +1,15 @@
-@import 'tailwindcss';
-@import '../theme.css';
+@import "tailwindcss";
+@import "../theme.css";
 @plugin "daisyui";
 
 @plugin "daisyui" {
-  root: ':root';
+  root: ":root";
   themes: lofi;
   styled: true;
 }
 
 @plugin "daisyui/theme" {
-  name: 'lofi';
+  name: "lofi";
   default: true;
   prefersdark: true, false;
   color-scheme: dark, light;
@@ -43,7 +43,7 @@
   --tab-border-colors: var(--b3);
   --radius-selector: 0.4rem;
   --radius-box: 1rem;
-  --radius-field: 0.55rem !important;
+  --radius-field: 0.55rem;
   --depth: 1;
   --noise: 1;
 }

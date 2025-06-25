@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { currentBagArt } from 'data/content/current-art'
+const emit = defineEmits(['open:pins'])
 </script>
 
 <template>
@@ -7,7 +8,7 @@ import { currentBagArt } from 'data/content/current-art'
     <div class="size-full gap-1 items-center grid col-start-1 overflow-hidden">
       <NavigationMenuLink class="self-start text-start flex-col size-full" @click="navigateTo(backpackLinks[0].link)">
         <NavMenuItemTitle>
-          <icon :name="backpackLinks[0].icon" class="size-5 shrink-0" />
+          <icon :name="backpackLinks[0].icon.name" class="size-5 shrink-0" />
 
           <h4 class="mt-1 mb-3 dst">
             {{ backpackLinks[0].name }}
@@ -28,7 +29,7 @@ import { currentBagArt } from 'data/content/current-art'
 
       <NavigationMenuLink v-for="(item, i) in backpackLinks.filter(item => item != backpackLinks[0])" :key="i" class="size-full flex flex-col justify-start items-start text-start px-3 py-2">
         <NavMenuItemTitle>
-          <icon :name="item.icon" :class="{ 'size-4.25': i == 1, 'size-4.75': i == 0 }" />
+          <icon :name="item.icon.name" :class="{ 'size-4.25': i == 1, 'size-4.75': i == 0 }" />
 
           <h5>
             {{ item.name }}
@@ -42,7 +43,10 @@ import { currentBagArt } from 'data/content/current-art'
     </div>
 
     <div class="field-box size-full">
-      <PocketPinEditor />
+
+      <NavMenuLink @click="emit('open:pins')">
+      edit
+    </NavMenuLink>
     </div>
   </TwoColNav>
 </template>

@@ -13,7 +13,7 @@ const loaded = ref(false)
 </script>
 
 <template>
-  <div :class="cn({ 'inset-shadow-sm inset-shadow-black/90 avatar': loaded }, className)">
+  <div :class="cn({ 'inset-shadow-sm shrink-0 inset-shadow-black/90 avatar': loaded }, className)">
     <NuxtImg
       v-if="name && icon"
       :src="`https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/profile-icons/${icon}.jpg`"
@@ -32,8 +32,8 @@ const loaded = ref(false)
 
     <div
       v-else
-      class="rounded-full avatar bg-neutral grid place-items-center text-nc text-2 size-full font-semibold">
-      LP
+      class="rounded-full avatar bg-neutral relative grid place-items-center size-full **:text-nc">
+     <icon name="carbon:connect" class="size-5 absolute shrink-0 text-nc *:text-nc **:text-nc"/>
     </div>
   </div>
 </template>

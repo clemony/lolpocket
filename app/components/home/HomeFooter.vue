@@ -35,7 +35,7 @@ const copyMsg = computed (() => {
         :href="link.link"
         target="_blank"
         class="size-12 grid place-items-center *:text-nc">
-        <icon :name="link.icon" :class="link.iconClass" />
+        <icon :name="link.icon.name" :class="link.icon.class" />
       </NuxtLink>
 
       <a

@@ -22,7 +22,7 @@ watchEffect(() => {
         v-for="link in summonerLinks" :key="link.name"
         :to="link.link" class="group">
         <Btn class="capitalize">
-          <IconWrapper :name="link.icon" class="size-4.5 dst shrink-0" :class="link.iconClass" />
+          <IconWrapper :name="link.icon.name" class="size-4.5 dst shrink-0" :class="link.icon.class" />
           {{ link.name }}
         </Btn>
       </LazyNuxtLink>

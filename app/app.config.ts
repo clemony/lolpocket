@@ -115,6 +115,7 @@ export default defineAppConfig({
       clock: "radix-icons:clock",
       chart: "uis:analytics",
       backpack: "radix-icons:backpack",
+      "lol-backpack": "lp-lol:backpack",
       book: "teenyicons:book-outline",
       history: "radix-icons:counter-clockwise-clock",
     },

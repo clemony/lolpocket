@@ -6,6 +6,9 @@ export const siteInfoLinks: LinkGroup = [
   {
     name: "About",
     link: "/About",
-    icon: "ph:cat",
+
+    icon: {
+      name: "ph:cat",
+    },
   },
 ]

@@ -1,29 +1,39 @@
 <script setup lang="ts">
 const as = useAccountStore()
-console.log('💠 - ajjjjjs:', as.currentSession)
+const us = useUiStore()
+
+const route = useRoute()
+
 const ix = useIndexStore()
 const appConfig = useAppConfig()
 
 onMounted(async () => {
   document.documentElement.setAttribute('data-theme', as.dataTheme ? as.dataTheme : 'midnight')
-  // useAuth()
-  ix.loadDefaults()
+//  useAuth()
+ ix.loadDefaults()
 })
 </script>
 
 <template>
-  <NuxtLayout>
-    <NuxtLoadingIndicator color="var(--color-neutral)" />
+    <div id="app" vaul-drawer-wrapper  class="flex flex-nowrap h-screen w-screen overflow-hidden bg-b1" :class="{ '!bg-b2/10': route.name == 'card' }" >
+      <AppNavbar />
+
+      <LazyAppCommand />
+
+      <div class="flex h-screen min-h-screen w-full overflow-hidden relative grow">
+        <div class="inset-0 left-0 top-0 z-0 absolute" :class="{ 'overflow-y-auto ': route.path != '/' }">
+ <NuxtLoadingIndicator color="var(--color-neutral)" />
 
     <Toast
       position="top-right"
       :expand="true"
       :duration="Infinity" />
 
-    <LazyNewPocketDialog />
 
-    <LazyNuxtPage :puuid="as.userAccount.riot.puuid" />
-  </NuxtLayout>
+    <LazyNuxtPage :puuid="as.userAccount.riot.puuid"/>
+  </div>
+      </div>
+    </div>
 </template>
 
 <style></style>

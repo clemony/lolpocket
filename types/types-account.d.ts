@@ -8,8 +8,26 @@ declare global {
     id: string
     riot: UserSummoner | null
     settings: UserSettings
+    pockets: UserPockets
+    inbox: UserInbox
   }
 
+  interface UserInbox {
+    mail: Message[]
+    notifications: Message[]
+  }
+
+  interface Message {
+    title: string
+    icon?: string
+    content: string
+  }
+
+  interface UserPockets {
+    all: Pocket[]
+    pinned: string[]
+    archived: string[]
+  }
   interface UserSettings {
     motion: boolean
     hero: string | null

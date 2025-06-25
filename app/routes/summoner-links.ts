@@ -1,33 +1,37 @@
 export const summonerLinks = [
   {
     name: `Nexus`,
-    link: '/nexus',
-    section: 'nexus',
-    icon: 'nexus',
-    iconClass: '!size-4.5 -ml-0.5',
+    link: "/nexus",
+    section: "nexus",
+    icon: {
+      name: "nexus",
+      class: "!size-4.5 -ml-0.5",
+    },
   },
   {
-    name: 'Analytics',
-    link: '/analytics/champions',
-    icon: 'chart',
-    iconSolid: 'mdi:graph-box',
-    iconClass: '',
+    name: "Analytics",
+    link: "/analytics/champions",
+    icon: {
+      name: "chart",
+      class: "",
+    },
     subLinks: [
       {
-        name: 'Champions',
-        link: '/analytics/champions',
+        name: "Champions",
+        link: "/analytics/champions",
       },
       {
-        name: 'Items',
-        link: '/analytics/items',
+        name: "Items",
+        link: "/analytics/items",
       },
     ],
   },
   {
-    name: 'Match History',
-    link: '/match',
-    icon: 'clock',
-    tftIcon: 'i-time-icon',
-    class: 'size-5',
+    name: "Match History",
+    link: "/match",
+    icon: {
+      name: "clock",
+      class: "size-5",
+    },
   },
 ]

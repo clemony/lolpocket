@@ -28,7 +28,7 @@ watch(
 </script>
 
 <template>
-  <div class="size-full">
+  <div class="size-full grid">
     <Tabs v-model:model-value="tabModel" class="w-full">
       <IndicatorTabsList class="grid-cols-2 bg-b3/60 h-10 w-full">
         <IndicatorTabsTrigger value="connect">
@@ -75,6 +75,8 @@ watch(
         <Email class="email-form" />
       </div>
     </Tabs>
+
+    <slot  />
   </div>
 </template>
 

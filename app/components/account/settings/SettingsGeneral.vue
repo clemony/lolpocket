@@ -13,8 +13,8 @@ const settingsData = {
     {
       title: 'Reduce Motion',
       description: 'Reduce the wobblies.',
-      model: as.reducedMotion,
-      text: as.reducedMotion == false ? 'Wigglies On' : 'Less Wobblies',
+      // model: as.reducedMotion,
+      // text: as.reducedMotion == false ? 'Wigglies On' : 'Less Wobblies',
     },
     {
       title: 'Automatic Archiving',
@@ -44,7 +44,7 @@ const settingsData = {
         </p>
       </div>
 
-      <label
+      <!-- <label
         class="flex w-full cursor-pointer items-end gap-4"
         @click="toggleSetting(item.model)">
         <Switch v-model:checked="item.model" class="drop-shadow-xs" />
@@ -52,7 +52,7 @@ const settingsData = {
         <span class="label-text w-full text-left">
           {{ item.text }}
         </span>
-      </label>
+      </label> -->
     </div>
   </div>
 </template>
