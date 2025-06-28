@@ -12,6 +12,11 @@
   }
 }
 
+@utility hover-neutral {
+  &:hover {
+    @apply !bg-neutral/90 text-nc **:text-nc;
+  }
+}
 @utility btn-neutral {
   @apply !shadow-xs text-nc bg-neutral *:text-nc hover:text-nc hover:bg-neutral/85 items-center [&_svg]:inline-flex align-middle text-2;
 }

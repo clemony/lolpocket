@@ -2,35 +2,32 @@
 const props = defineProps<{
   class?: HTMLAttributes['class']
   sideOffset?: number
-  i?: number
+  setIndex?: number
   set?: CalculatorSet
-  item?: ItemIndex
+  itemId?: number
   type?: string
 }>()
 
 const emit = defineEmits(['update:open', 'update:set'])
 
 const is = useItemStore()
-
 const isOpen = ref(false)
 
 watchEffect(() => {
   emit('update:open', isOpen.value)
 })
 
-const item = ref(props.item)
 
-const set = ref(props.set)
+const set = computed (() => set)
 function handleItem(e) {
-  item.value = e
-  set.value[props.i] = e
+  set.value[props.setIndex] = e
   emit('update:set', set.value)
 }
 </script>
 
 <template>
   <Popover v-model:open="isOpen" @click.stop.prevent>
-    <ItemDisplayTrigger v-if="props.type == 'image'" :item="item" />
+    <ItemDisplayTrigger v-if="props.type == 'image'" :item-id="itemId" />
 
     <CustomPopoverContent
       class=""

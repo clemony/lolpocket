@@ -10,7 +10,7 @@ watch(() => effect, (newVal) => {
 
 <template>
   <div class="grid size-full max-h-full gap-3 pl-3  rounded-box " :class="{ ' grid-cols-[56%_44%]': effect.leveling?.[0] && effect.leveling?.[0]?.attribute }">
-    <div class="*: group/d items-start  leading-5  flex flex-col justify-start pr-2 text-3 " v-html="effect.description" />
+    <div class="*: group/d items-start *:last-of-type:mb-5  leading-6 **:leading-6 flex flex-col justify-start pr-2 text-3 " v-html="effect.description" />
 
     <div v-if="effect.leveling?.[0] && effect.leveling?.[0].attribute" class="w-full">
       <div v-for="attribute in effect.leveling" :key="attribute.attribute" class="w-full !p-0 !mx-0 !mt-0 mb-3 chat chat-start">

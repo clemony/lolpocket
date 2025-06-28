@@ -36,8 +36,8 @@ watch(
 </script>
 
 <template>
-  <Dialog v-model:open="us.commandOpen" :modal="true">
-    <LazyFadeDialogContent class="bg-transparent min-w-130  w-130 p-0 m-0 min-h-200 max-h-200 shadow-none border-none outline-none focus:outline-none focus:ring-none" @interact-outside="us.commandOpen = false">
+  <Dialog  :modal="true">
+    <LazyFadeDialogContent class="bg-transparent min-w-130  w-130 p-0 m-0 min-h-200 max-h-200 shadow-none border-none outline-none focus:outline-none focus:ring-none" >
       <HiddenDialogHeader title="search lolpocket" desc="search pages, pockets, items, champions, summoners, & more" />
 
       <LazyCommandPopover v-model:open="itemOpen" hydrate-on-visible @close-popover="itemOpen = null">

@@ -32,8 +32,8 @@ const loaded = ref(false)
 
     <div
       v-else
-      class="rounded-full avatar bg-neutral relative grid place-items-center size-full **:text-nc">
-     <icon name="carbon:connect" class="size-5 absolute shrink-0 text-nc *:text-nc **:text-nc"/>
+      class="rounded-full bg-neutral grid place-items-center text-nc text-2 size-full font-semibold">
+         <icon name="add" class="size-5 absolute shrink-0 text-nc *:text-nc **:text-nc"/>
     </div>
   </div>
 </template>

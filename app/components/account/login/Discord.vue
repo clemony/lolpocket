@@ -15,15 +15,19 @@ async function signInWithDiscord() {
 </script>
 
 <template>
-  <button
+
+
+
+  <button class="btn  w-full group h-18 relative overflow-hidden   hover:!btn-neutral hover:bg-neutral/90 "
     v-tippy="'Sign in with Discord'" alt="Sign in with
     Discord"
-    class="btn btn-square size-26"
     @click="signInWithDiscord">
-    <icon
-      name="discord"
-      class=" size-10" />
-  </button>
+
+<div class="size-full relative grid place-items-center" >
+<icon name="discord" :class="cn('absolute dst  transition-colors duration-200  size-8  group-hover:!text-nc text-bc/80  ')" />
+</div>
+
+</button>
 </template>
 
 <style scoped></style>

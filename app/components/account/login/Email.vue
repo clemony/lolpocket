@@ -1,22 +1,28 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="grid space-y-4">
-    <div>
+  <div class="grid gap-4 mt-4">
+
+    <div class="grid gap-1 w-full">
       <Label for="username">Username</Label>
 
-      <Input id="username" class="border-b3 h-10" />
+      <input id="username" class="input  inset-shadow-xxs shadow-xs  h-12 w-full" />
     </div>
 
-    <div>
+    <div class="grid gap-1 w-full">
       <Label for="password">Password</Label>
 
-      <Input id="password" class="border-b3 h-10" />
+      <input id="password" class="input  inset-shadow-xxs shadow-xs  h-12 w-full" />
     </div>
 
-    <a href="" class="text-2 mt-2 underline-offset-2 hover:underline">
+    <div class="w-full flex gap-4  justify-end items-center mt-5 mb-3">
+    <a href="" class="text-2 mt-2 underline-offset-2 hover:underline  ">
       Forgot Password?
     </a>
+<button class="btn btn-neutral ">
+  Sign in / up
+</button>
+  </div>
   </div>
 </template>
 

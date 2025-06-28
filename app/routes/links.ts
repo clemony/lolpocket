@@ -30,19 +30,19 @@ export const navLinks: LinkGroup = [
 export const userLinks = [
   {
     // icon: "cil:briefcase",
-    name: "Backpack",
+    name: "backpack",
     icon: {
       name: "lol-backpack",
-      class: "size-5.75 opacity-70",
+      class: "size-6.5 opacity-70",
     },
     links: backpackLinks,
     component: BackpackMenu,
   },
   {
-    name: getAccountName ?? "Analysis",
+    name: "analytics",
     icon: {
       name: "ri:bar-chart-fill",
-      class: "size-5.25 scale-x-112 opacity-80",
+      class: "size-5.75 scale-x-112 opacity-80",
     },
     links: analyticsLinks,
     component: AnalyticsMenu,

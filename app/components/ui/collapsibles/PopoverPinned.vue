@@ -4,6 +4,8 @@ const ps = usePocketStore()
 const pinned = computed (() => {
   return ps.pockets.filter(p => p.location.pinned == true)
 })
+
+const us = useUiStore()
 </script>
 
 <template>

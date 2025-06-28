@@ -20,7 +20,7 @@ const variants = {
   },
   hidden: {
     opacity: 0,
-    transform: 'translate(0, -12px)',
+    transform: 'translate(0, 12px)',
     scale: 0.6,
   },
 }
@@ -32,12 +32,9 @@ const variants = {
       <NavigationMenuViewport
       :align="props.align"
         v-bind="forwarded"
-        :style="{
-          backdropFilter: 'blur(40px)',
-        }"
           :class="
             cn(
-              'origin-top-center  bg-b1/90 backdrop-blur-md relative mt-1.5  h(--reka-navigation-menu-viewport-height)  overflow-hidden  border border-b2 rounded-lg text-bc shadow  md:w-(--reka-navigation-menu-viewport-width)',
+              'origin-top-center bg-blend-screen  bg-b1/84 backdrop-blur-md relative mt-1.5  h(--reka-navigation-menu-viewport-height)  overflow-hidden  border border-b3 rounded-xl text-bc shadow-lg shadow-black/10 w-(--reka-navigation-menu-viewport-width)',
               props.class,
             )
           " as-child>
@@ -46,6 +43,8 @@ const variants = {
           initial="hidden"
           animate="visible"
           exit="hidden" />
+          <slot  />
+
       </NavigationMenuViewport>
     </AnimatePresence>
   </div>

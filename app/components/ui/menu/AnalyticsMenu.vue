@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-const emit = defineEmits(['open:settings'])
+const emit = defineEmits(['open:sign-in'])
 </script>
 
 <template>
   <TwoColNav class="grid-rows-4 gap-6 p-4">
     <div class="row-span-4 col-start-1 size-full overflow-hidden flex flex-col gap-1">
-      <SummonerCard />
+      <SummonerCard @click="emit('open:sign-in')" />
 
 
 

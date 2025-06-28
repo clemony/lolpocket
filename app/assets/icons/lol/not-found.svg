@@ -1,9 +1,9 @@
 <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71 71" width="71" height="71">
-	<title>not-found</title>
+
 	<style>
-		.s0 { opacity: .4;fill: currentColor } 
-		.s1 { opacity: .67;fill: currentColor } 
-		.s2 { opacity: .98;fill: currentColor } 
+		.s0 { opacity: .4;fill: currentColor }
+		.s1 { opacity: .67;fill: currentColor }
+		.s2 { opacity: .98;fill: currentColor }
 	</style>
 	<g id="Background">
 		<path id="Path 0" class="s0" d="m51 5h1v1h-1zm-19 3l3-2v1l-2 1zm6-2h1v1h-1zm11 0h1v1h-1zm14 0h1v1h-1zm-24 1h1v1h-1zm9 0h1v1h-1zm17 0h1v1h-1zm-39 4l4-2v1l-1 1h-1zm14-3h1v1h-1zm4 1l3-1v1h-1zm-3 1v-1h2v1zm25-1h1v1h-1zm-42 1h1v1h-1zm-2 2l2-1v1h-1zm45-1h1v1h-1zm-50 3l3-1v1h-2zm3-1l2-1v1zm47 5l1-4 1 11h-1v-1l-1-1v-2-2zm-61 0l4-2v1h-1l-1 1zm-1 0h1v1h-1zm0 2h1v1h-1zm-3 6h1v1h-1zm2 9l-3-1 1-6 1 5 1 1zm64-2h1v1h-1zm-62 4l-1-2h2v2zm58-1v-1h2l-2 8v-1-4zm-57 8l-1-2h1v1zm56 3v-4h1v4zm1 4v-3 6zm0 5v-1l1 4h-1v-2zm-59 1h1v1h-1zm11 0h1v1h-1zm-11 2h1v1h-1zm-1 1h1v1h-1zm5 0h1v1h-1zm11 4v-3h1zm46-3h1v1h-1zm-62 1h1v1h-1zm61 2v-1h1l-1 2zm-60 0h1v1h-1zm1 1h1v1h-1zm58 0h1v1h-1zm-55 2l-2-1h1 1zm53 0v-1h1 1zm-49 1l-3-1h1 2zm45 0v-1h3 1zm-24 0h1v1h-1zm18 0h1v1h-1z"/>

@@ -2,6 +2,8 @@
 const props = defineProps<{
   class?: HTMLAttributes['class']
 }>()
+
+const is = useItemStore()
 </script>
 
 <template>

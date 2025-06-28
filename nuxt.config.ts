@@ -40,10 +40,6 @@ export default defineNuxtConfig({
         prefix: "lp-lp",
         dir: "./app/assets/icons/lp",
       },
-      {
-        prefix: "lp-stats",
-        dir: "./app/assets/icons/stats",
-      },
     ],
   },
 

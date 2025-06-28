@@ -1,15 +1,15 @@
 <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 44" width="40" height="44">
-	<title>40px-Champion_card</title>
+
 	<style>
-		.s0 { opacity: .99;fill: #000000 } 
-		.s1 { opacity: .3;fill: #000000 } 
-		.s2 { opacity: .56;fill: #000000 } 
-		.s3 { opacity: .77;fill: #000000 } 
-		.s4 { opacity: .49;fill: #000000 } 
-		.s5 { opacity: .38;fill: #000000 } 
-		.s6 { opacity: .63;fill: #000000 } 
-		.s7 { opacity: .92;fill: #000000 } 
-		.s8 { opacity: .19;fill: #000000 } 
+		.s0 { opacity: .99;fill: #000000 }
+		.s1 { opacity: .3;fill: #000000 }
+		.s2 { opacity: .56;fill: #000000 }
+		.s3 { opacity: .77;fill: #000000 }
+		.s4 { opacity: .49;fill: #000000 }
+		.s5 { opacity: .38;fill: #000000 }
+		.s6 { opacity: .63;fill: #000000 }
+		.s7 { opacity: .92;fill: #000000 }
+		.s8 { opacity: .19;fill: #000000 }
 	</style>
 	<g id="Background">
 		<path id="Path 0" class="s0" d="m3 3l1-1h1l1 1v1l1 1v1l1 1v1l1 1 1 1 1-1 1-1 1-1h1l1-1h1 1 1 4 1 1 1l1 1h1l1 1 1 1 1 1h1v-1l1-1v-1l1-1v-1l1-1v-1l1-1h1l1 1v1 1l1 1v1 1 1 1 1 1l1 1v2l-1 1v1l-1 1-1 1 1 1v2 1l-1 1v1l-1 1-1 1v1l-1 1v2l-1 1v1 1 1l-1 1-1 1v1l-1 1-1 1-1 1h-1l-1 1h-1-1-1v-1-1-1l1-1v-1-1-1-1l1-1h1l1-6v-1l1-1 1-1v-4l-1-1-1 1-1 1-1 1-1 1v3 2l-1 1v1h-4v-1l-1-1v-4-1l-1-1-1-1-1-1-1-1-1 1v4l1 1 1 1v1 1 1 3l1 1h1l1 1v1 1 1l1 1v1 1 1 1h-1-1-1l-1-1h-1l-1-1-1-1-1-1v-1l-1-1-1-1v-1-1-1l-1-1v-2l-1-1v-1l-1-1-1-1v-1l-1-1v-1-2l1-1-1-1-1-1v-1l-1-1v-2l1-1v-1-1-1-1-1-1l1-1v-1z"/>

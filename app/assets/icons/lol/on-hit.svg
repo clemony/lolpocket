@@ -1,9 +1,9 @@
 <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 34" width="40" height="34">
-	<title>40px-On-hit_icon</title>
+
 	<style>
-		.s0 { opacity: .49;fill: #000000 } 
-		.s1 { opacity: .83;fill: #000000 } 
-		.s2 { opacity: 1;fill: #000000 } 
+		.s0 { opacity: .49;fill: #000000 }
+		.s1 { opacity: .83;fill: #000000 }
+		.s2 { opacity: 1;fill: #000000 }
 	</style>
 	<g id="Background">
 		<path id="Path 0" class="s0" d="m33 7h1v1h-1zm3 4l4-1v1zm-3 1h1v1h-1zm2 1h1v1h-1zm2 1h1v1h-1zm-7 3h1v1h-1zm1 2h1v1h-1zm8 4v-4h1v4zm-32-2h1v1h-1zm25 0h1v1h-1zm1 2h1v1h-1zm5 0h1v1h-1zm-19 5h1v1h-1zm-1 1h1v1h-1zm-18 2h1v1h-1zm2 2h1v1h-1zm2 0h1v1h-1z"/>

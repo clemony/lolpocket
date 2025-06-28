@@ -12,7 +12,7 @@ const statEntries = computed(() =>
   <div class="">
     <Separator class="bg-nc/10  mt-0" />
 
-    <div class="w-full mt-4 items-center stat-grid grid grid-cols-[auto_1fr_auto] gap-x-3 gap-y-0.75 *:flex *:text-3">
+    <div class="w-full mt-4 items-center  grid grid-cols-[auto_1fr_auto] gap-x-3 gap-y-0.75 *:flex *:text-3">
       <template v-for="stat in statEntries" :key="stat.key">
         <p class="font-medium  flex flex-nowrap ">
           {{ stat.value }}

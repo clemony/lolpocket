@@ -12,7 +12,7 @@ const tab = ref('stats')
 
   <div class="size-full pt-26 px-3">
     <Tabs default-value="stats" class="">
-      <IndicatorTabsList class="h-13  w-full  grid grid-cols-3 ">
+      <IndicatorTabsList class="h-11  w-full max-w-110  grid grid-cols-3 ">
         <IndicatorTabsTrigger value="stats">
           Stat Totals
         </IndicatorTabsTrigger>

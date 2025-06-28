@@ -3,13 +3,14 @@
 const us = useUiStore()
 const as = useAccountStore()
 const route = useRoute()
+const userNavRef = ref(null)
 const userNav = ref(null)
 
 
-const { width} = useElementBounding(userNav)
+const { width} = useElementBounding(userNavRef)
 
 watch(
-  () => us.commandOpen,
+  () => userNav.value,
   (newVal) => {
     console.log('💠 - newVal:', newVal)
   },
@@ -25,10 +26,11 @@ function handleMenu() {
 
 const settingsOpen = ref(false)
 const pinsOpen = ref(false)
+const signInOpen = ref(false)
 </script>
 
 <template>
-<nav  class=" w-full justify-between    flex fixed flex-nowrap top-0 inset-x-0 w-screen h-14 items-center border-b border-b-b3/60 px-2  z-10">
+<nav  class=" w-full justify-between    flex fixed flex-nowrap top-0 inset-x-0 w-screen h-16 items-center border-b border-b-b3/60 px-2  z-10">
   <div class="size-full absolute top-0 left-0 inset-0  bg-b1/88 backdrop-blur-md" :class="{ '!bg-b1/50': route.path == '/' }"/>
 
     <NavigationMenu disablePointerLeaveClose>
@@ -52,7 +54,7 @@ const pinsOpen = ref(false)
               {{ item.name }}
             </NavigationMenuTrigger>
 
-            <LazyNavigationMenuContent @focus-outside.prevent class="min-w-90 min-h-90">
+            <LazyNavigationMenuContent @focus-outside.prevent class="">
               <component :is="item.component"
               @open:pins="pinsOpen = true">
 
@@ -62,24 +64,24 @@ const pinsOpen = ref(false)
         </template>
 
       </NavigationMenuList>
-      <NavigationMenuViewport  class="!mt-2" />
+      <NavigationMenuViewport  class="!mt-2  w-(--reka-navigation-menu-viewport-width) h-(--reka-navigation-menu-viewport-height) " />
     </NavigationMenu>
 
 
 
-  <NavigationMenu disablePointerLeaveClose  ref="userNav"  class="justify-end">
+  <NavigationMenu disablePointerLeaveClose  ref="userNavRef" v-model:model-value="userNav"  class="justify-end">
     <NavigationMenuList class="justify-end ">
 
 
-    <NavigationMenuItem v-for="item in userLinks" :key="item.name.toString()">
+    <NavigationMenuItem v-for="item in userLinks" :key="item.name.toString()"  :value="item.name">
 
     <NavigationMenuTrigger :arrow="false">
       <icon :name="item.icon.name"  :class="cn('dst shrink-0', item.icon.class)"/>
     </NavigationMenuTrigger>
 
 
-            <LazyNavigationMenuContent @focus-outside.prevent class="min-w-90 min-h-90">
-<component :is="item.component"/>
+            <LazyNavigationMenuContent @focus-outside.prevent class="0">
+<component :is="item.component" @open:sign-in="userNav = 'signIn'"/>
             </LazyNavigationMenuContent>
           </NavigationMenuItem>
 
@@ -89,9 +91,12 @@ const pinsOpen = ref(false)
 
 
   <LazyAccountMenu  @open:settings="settingsOpen = true"  />
+
+
+<!--   <NavigationMenuIndicator class="bottom-4" :align-offset="6"  :side-offset="6"/> -->
       </NavigationMenuList>
 
-      <NavigationMenuViewport align="end" class=" !mt-1 w-(--reka-navigation-menu-viewport-width) h-(--reka-navigation-menu-viewport-height) !right-0 absolute"
+      <NavigationMenuViewport align="end" class="translate-y-1 w-(--reka-navigation-menu-viewport-width) h-(--reka-navigation-menu-viewport-height)"
       :style="{
         left: `calc((var(--reka-navigation-menu-viewport-width) - ${width}) * -1)`
       }"/>

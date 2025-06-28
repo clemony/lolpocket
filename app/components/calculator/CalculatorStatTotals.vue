@@ -1,21 +1,28 @@
 <script lang="ts" setup>
+import { itemStatRecord } from "@/data/index/item-stat-index"
+
 import { motion } from 'motion-v'
 
 const checkedStats = ref([])
 
 const is = useItemStore()
+const ix = useIndexStore()
 const stats = ref()
 const stats2 = ref()
 
-function mergeItemStats(set) {
-  return set.reduce((mergedStats, item) => {
-    if (item.stats) {
-      for (const [stat, value] of Object.entries(item.stats)) {
-        mergedStats[stat] = (mergedStats[stat] || 0) + value
-      }
+function mergeItemStats(set: number[]) {
+  const mergedStats: Record<string, number> = {}
+
+  for (const itemId of set) {
+    const stats = itemStatRecord[itemId]
+    if (!stats) continue
+
+    for (const [stat, value] of Object.entries(stats)) {
+      mergedStats[stat] = (mergedStats[stat] || 0) + value
     }
-    return mergedStats
-  }, {})
+  }
+
+  return mergedStats
 }
 
 const totalCost = ref()
@@ -24,28 +31,29 @@ const totalCost2 = ref()
 function getTotalCost(set) {
   return set.reduce((sum, item) => sum + (item.buy || 0), 0)
 }
-
-watchEffect(() => {
-  if (is.calculateSet && !is.isComparing) {
-    stats.value = mergeItemStats(is.calculateSet)
-    totalCost.value = getTotalCost(is.calculateSet)
+const set1 = computed (() => is.calculatorSet)
+const set2 = computed (() => is.calculatorSet2)
+/* watchEffect(() => {
+  if (set1.value && !is.isComparing) {
+    stats.value = mergeItemStats(set1.value)
+    totalCost.value = getTotalCost(set1.value)
   }
   else if (is.isComparing == true) {
-    stats.value = mergeItemStats(is.calculateSet)
-    totalCost.value = getTotalCost(is.calculateSet)
+    stats.value = mergeItemStats(set1.value)
+    totalCost.value = getTotalCost(set1.value)
 
-    stats2.value = mergeItemStats(is.calculateSet2)
+    stats2.value = mergeItemStats(set2.value)
     console.log('💠 - watchEffect - stats2.value:', stats2.value)
 
-    totalCost2.value = getTotalCost(is.calculateSet)
+    totalCost2.value = getTotalCost(set2.value)
   }
-})
+}) */
 </script>
 
 <template>
-  <div class="w-full rounded-xl overflow-hidden border-b3/60 border">
+  <div class="w-full overflow-hidden ">
     <!-- head -->
-    <div class="w-full grid grid-cols-[40px_1fr_30px_30px]  bg-b2   z-1 py-2 *:text-2 items-center btn-depth h-13">
+    <div class="w-full grid grid-cols-[40px_1fr_30px_30px]  z-1 py-2 *:text-2 items-center btn-depth h-13">
       <div class="dst col-start-2 font-medium">
         STAT
       </div>
@@ -81,7 +89,7 @@ watchEffect(() => {
       </LayoutGroup>
     </div>
 
-    <div class="w-full grid grid-cols-[40px_1fr_30px_30px]  bg-b2 h-13  border-y border-y-b3/50  z-1 py-2 *:text-2 items-center">
+    <div class="w-full grid grid-cols-[40px_1fr_30px_30px] h-13  border-y border-y-b3/50  z-1 py-2 *:text-2 items-center">
       <div class="justify-center ml-4">
         <i-ui-gold class="text-bc/80 size-6" />
       </div>

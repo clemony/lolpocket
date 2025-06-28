@@ -17,67 +17,58 @@ const accountTypes = [
   },
 ]
 
-const tabModel = ref('connect')
+const emailChecked = ref(false)
 
-watch(
-  () => tabModel.value,
-  (newVal) => {
-    console.log('💠 - newVal:', newVal)
-  },
-)
 </script>
 
 <template>
-  <div class="size-full grid">
-    <Tabs v-model:model-value="tabModel" class="w-full">
-      <IndicatorTabsList class="grid-cols-2 bg-b3/60 h-10 w-full">
-        <IndicatorTabsTrigger value="connect">
-          <icon name="fluent-mdl2:plug-disconnected" />
-          Connect
-        </IndicatorTabsTrigger>
+<transition-slide group   :offset="['-100%', 0]" class="grid size-full mt-1">
 
-        <IndicatorTabsTrigger value="email">
-          <icon name="fluent:mail-28-regular" />
-          Email
-        </IndicatorTabsTrigger>
 
-        <TabIndicator class="bg-b1/50" />
-      </IndicatorTabsList>
-
-      <div
-        v-if="tabModel == 'connect'"
-        class="z-0 mt-12 w-full gap-2 px-1">
-        <h3>Sign in</h3>
-
-        <p class="mb-10">
-          Log in with another account.
-        </p>
-
-        <div
-          class="grid grid-cols-3 gap-4">
-          <Riot />
-
-          <Discord />
-
-          <Google />
-        </div>
-      </div>
-
-      <div
-        v-if="tabModel == 'email'"
-        class="z-0 mt-12 w-4/5 px-1">
-        <h3>Email</h3>
-
-        <p class="mb-10">
+<div v-if="emailChecked">
+  <div
+  class="z-0 my-2 w-full gap-4 px-1 grid dst">
+        <div  class="w-fit h-5 items-center flex gap-0.5">
+          <label class="btn-ghost btn  -ml-2 btn-square">
+          <icon name="arrow-left" class="shrink-0" />
+          <input type="checkbox" v-model="emailChecked"  class="peer hidden" />
+        </label>
+          <h3>Email
+          </h3>
+          </div>
+          <p >
           Log in with email address.
         </p>
 
-        <Email class="email-form" />
-      </div>
-    </Tabs>
+          </div>
+<div class="px-1 py-2">
+<Email class="email-form" />
+</div>
+</div>
 
-    <slot  />
-  </div>
+<div v-else>
+  <div
+        class="z-0 my-2 w-full gap-3 px-1 grid dst">
+
+        <h3>Sign in / up</h3>
+
+
+        <p >
+          Choose a in method to get started.
+        </p>
+
+      </div>
+   <div
+    class="grid grid-cols-4 mb-3 mt-5 gap-2">
+    <component  v-for="provider in providers" :key="provider.name" :is="provider.component">
+
+<input v-if="provider.name = 'Email'" type="checkbox" v-model="emailChecked"  class="peer hidden" />
+    </component>
+</div>
+</div>
+
+      </transition-slide>
+
 </template>
 
 <style scoped></style>

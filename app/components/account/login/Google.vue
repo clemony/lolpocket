@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const config = useRuntimeConfig()
-console.log('💠 - config:', config)
 
 const supabase = useSupabaseClient()
 
@@ -11,7 +10,6 @@ async function signInWithGoogle() {
       redirectTo: config.public.redirectUrl,
     },
   })
-  console.log('💠 - signInWithGoogle - data:', data)
   if (data) {
     console.log('💠 - signInWithGoogle - data:', data)
     return data
@@ -23,15 +21,16 @@ async function signInWithGoogle() {
 </script>
 
 <template>
+
   <button
     v-tippy="'Sign in with Google'" alt="Sign in with
-    Google"
-    class="btn btn-square size-26"
+    Google"  class="btn  w-full group h-18 relative overflow-hidden   hover:!btn-neutral hover:bg-neutral/90 "
     @click="signInWithGoogle()">
-    <icon
-      name="mdi:google"
-      class="-ml-6.5 size-6" />
-  </Button>
+
+<div class="size-full relative grid place-items-center" >
+<hicon name="devicon-plain:google" :class="cn('absolute transition-opacity duration-200  dst size-7  group-hover:!text-nc text-bc/80  ')" />
+</div>
+</button>
 </template>
 
-<style scoped></style>
+

@@ -4,8 +4,7 @@ declare global {
   type ItemRecord = Record<ItemId, ItemLite>
   type StatLite = number
   type StatArray = StatLite[]
-  type StatKeys = keyof ItemLite['stats']
-  type CalculatorSet = ItemIndex[]
+  type StatKeys = keyof ItemLite["stats"]
   type effectAmount = number
 
   interface ItemIndex {
@@ -21,6 +20,15 @@ declare global {
     cost?: number
     tags?: string[]
     maps?: number[]
+  }
+
+  interface CalculatorSet {
+    0: number
+    1: number
+    2: number
+    3: number
+    4: number
+    5: number
   }
 
   interface ItemComponent {

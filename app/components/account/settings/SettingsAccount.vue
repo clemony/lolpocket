@@ -16,7 +16,7 @@ const user = useSupabaseUser()
         class="flex gap-4 items-center">
 
         <icon
-          :name="provider.icon"
+          :name="provider.icon.name"
           class="size-6 dst" />
 
         <h4 class="tracking-tight dst ">

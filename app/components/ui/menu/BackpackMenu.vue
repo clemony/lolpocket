@@ -42,7 +42,7 @@ const emit = defineEmits(['open:pins'])
       </NavigationMenuLink>
     </div>
 
-    <div class="field-box size-full">
+    <div class="field-box bg-b2/60 size-full">
 
       <NavMenuLink @click="emit('open:pins')">
       edit
