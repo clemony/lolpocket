@@ -1,5 +1,7 @@
-@import 'tailwindcss';
-@import './index.css';
+@import "tailwindcss";
+@import "./index.css";
+@source not "../icons";
+@source not "../img";
 
 @layer base {
   :root {
@@ -16,7 +18,7 @@
   }
 
   input,
-  input:where(:not([type='button'], [type='reset'], [type='submit'])),
+  input:where(:not([type="button"], [type="reset"], [type="submit"])),
   select,
   textarea,
   .reset-input {

@@ -13,7 +13,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
   <NavigationMenuContent
     v-bind="forwarded"
     :class="cn(
-      'left-0 top-0 w-full    md:absolute md:w-auto',
+      'left-0   bg-blend-screen  bg-b1/92 backdrop-blur-md overflow-hidden  border border-b3 rounded-xl  text-bc shadow-lg shadow-black/10 absolute w-auto',
       props.class,
     )">
     <slot />

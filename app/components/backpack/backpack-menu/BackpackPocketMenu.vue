@@ -1,60 +1,60 @@
 <script lang="ts" setup>
+
 const props = defineProps<{
   pocket: Pocket
 }>()
 
 const pocket = computed (() => props.pocket)
 
-const classObject = 'font-normal text-4 justify-start gap-3  w-full btn btn-ghost cursor-pointer !text-[#000000]'
 </script>
 
 <template>
-  <div
-    class=" flex flex-col  z-3 bg-white  size-full relative py-4.5 px-6 *:text-start">
-    <div
-      class="h-10  relative w-fit">
-      <EditablePocketHeader :pocket="pocket" wrapper-class="w-64 h-full justify-start h-10 rounded-lg **:!text-[#000000] justify-items-start **:pr-6 pr-6 focus-within:!bg-[#00000000] font-medium flex flex-col focus-within:!border-[#000000] **:text-left **:justify-start flex-nowrap text-nowrap px-3 hover:!bg-[#00000000] !border-[#00000060]" class=" text-left justify-start text-4 tracking-tight " button-class="right-0 **:opacity-100" />
-    </div>
 
-    <div class="absolute right-0 bottom-6 justify-end **:justify-items-end **:font-medium **:text-[#000000] **:tracking-tight **:justify-end **:text-right max-w-32">
-      <NuxtLink
-        :to="`/pocket/${pocket.key}`"
-        :class="classObject">
-        <!--
-            <icon name="radix-icons:external-link" /> -->
+<ContextMenuContent class="w-64">
+
+      <ContextMenuItem inset @click="navigateTo(`/pocket/${pocket.key}`)" class="justify-between ">
+
         Open
-      </NuxtLink>
+            <icon name="link-lg" class="size-4  dst"/>
+      </ContextMenuItem>
+      <ContextMenuItem inset class="justify-between ">
 
-      <div>
-        <icon name="radix-icons:image" />
+        Pocket Pic Editor
+        <icon name="link-lg" class="size-4  dst"/>
+      </ContextMenuItem>
+
+
+      <ContextMenuSeparator  />
+
+      <ContextMenuItem >
+        <icon name="ph:text-a-underline-bold" class="size-4.5"/>
+        Edit Name</ContextMenuItem>
+
+      <ContextMenuItem>
+        <icon name="material-symbols:imagesmode-outline"  class="size-4.5"/>
         Edit Splash
-      </div>
+      </ContextMenuItem>
 
-      <button>
-        <!--
-          <icon name="radix-icons:card-stack" /> -->
-        Card
-      </button>
-
-      <button
+      <ContextMenuSeparator  />
+      <ContextMenuItem
         @click="duplicatePocket(pocket)">
-        <!--
-          <icon name="copy" /> -->
+
+          <icon name="copy"  class="size-4.5"/>
         Duplicate
-      </button>
+      </ContextMenuItem>
 
-      <button>
-        <!--
-          <icon name="export" /> -->
+      <ContextMenuItem>
+
+          <icon name="export"  class="size-4.5"/>
         Export
-      </button>
+      </ContextMenuItem>
 
-      <button
+      <ContextMenuItem
         @click="deletePocket(pocket)">
-        <!--
-          <icon name="trash" /> -->
+
+          <icon name="trash" class="size-4.25"/>
         Trash
-      </button>
-    </div>
-  </div>
+      </ContextMenuItem>
+
+  </ContextMenuContent>
 </template>

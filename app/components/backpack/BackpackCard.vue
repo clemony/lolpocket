@@ -12,10 +12,11 @@ const menuOpen = ref(false)
 </script>
 
 <template>
-  <label
-    class=" **:select-none max-w-140 min-w-100 h-80 grow max-h-80 size-full hover:border-b3 hover:ring-1 hover:ring-b2 hover:shadow-pretty relative border group border-transparent  rounded-xl  shadow-warm gap-3 overflow-hidden ">
+  <ContextMenu   >
+    <ContextMenuTrigger @click="navigateTo(`/pocket/${pocket.key}`)"
+    class=" **:select-none drop-shadow-sm cursor-pointer drop-shadow-black/5 size-full hover:border-b3 hover:ring-1 hover:ring-b2 hover:shadow-warm relative border group border-b2  rounded-xl  shadow-warm-soft gap-3 overflow-hidden ">
 
-    <div class=" swap-off size-full">
+    <div class=" size-full "  >
       <BackpackCardBackground :pocket="pocket" />
 
       <div
@@ -24,9 +25,7 @@ const menuOpen = ref(false)
 
           <BackpackRunes :pocket="pocket" />
 
-          <button v-tippy="'Open Pocket'" class="btn-ghost cursor-pointer hover:bg-b2/60 btn btn-square backdrop-blur-md absolute right-3 top-2 pointer-events-auto" @click="navigateTo(`/pocket/${pocket.key}`)">
-            <icon name="open" class=" size-7 " />
-          </button>
+
 
           <div class="flex gap-6 self-end w-full">
             <div class="font-medium self-end pb-4 pl-3 grow flex flex-col gap-2">
@@ -49,9 +48,7 @@ const menuOpen = ref(false)
       </div>
 
     </div>
-
-    <div class=" bg-white size-full gap-3 hidden ">
-      <BackpackMenu :pocket="pocket" :menu-open="menuOpen" />
-    </div>
-  </label>
+</ContextMenuTrigger>
+<LazyBackpackPocketMenu :pocket="pocket"  hydrate-on-interact/>
+  </ContextMenu>
 </template>

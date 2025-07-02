@@ -18,22 +18,22 @@ console.log('💠 - is.calculatorSets:', is.calculatorSet)
 <template>
   <ResizablePanelGroup class="size-full" direction="horizontal">
     <ResizablePanel :default-size="50" class="size-full relative pt-26 flex flex-col">
-              <transition-slide group :offset="{ enter: [0, 16], leave: [0, 16] }" class="basis-1 grid items-center p-14">
+              <Collapsible group :offset="{ enter: [0, 16], leave: [0, 16] }" class="basis-1 grid items-center p-14">
 
-
+<div class=" relative">
                     <CalculatorSet :num="1" :set="is.calculatorSet" />
+                  <CollapsibleTrigger class="absolute right-0 top-0 btn btn-square btn-ghost">
+                  hi
+                  </CollapsibleTrigger>
+                  </div>
+<CollapsibleContent class="CollapsibleContent pt-14">
 
-
-
-
-<!--                   <Field class="!flex hidden flex-row gap-3 items-center items-center pl-6 gap-4 w-fit bg-b2/30  drop-shadow-xs ">
-
-                    <div class="basis-2 w-full">
 <CalculatorSet :num="2" :set="is.calculatorSet2" />
-</div>
 
-</Field> -->
-              </transition-slide>
+</CollapsibleContent>
+
+
+              </Collapsible>
 
               <Separator  />
       <CalculatorResults />

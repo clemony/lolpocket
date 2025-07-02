@@ -10,6 +10,12 @@ definePageMeta({
   section: 'home',
 })
 
+
+const { signInOpen } = defineProps<{
+signInOpen: boolean
+}>()
+const emit = defineEmits(['open:sign-in'])
+
 const homeWrapper = ref<HTMLElement | null>()
 const home = ref<HTMLElement | null>()
 const steps = ref<HTMLElement | null>()
@@ -53,7 +59,7 @@ watch(() => heroVisible.value, (newVal) => {
   <div
     ref="homeWrapper"
     class="relative w-screen overflow-x-hidden home-wrapper size-full overflow-y-scroll">
-    <Hero :progress="stepProgress" :visible="heroVisible" />
+    <Hero :progress="stepProgress" :visible="heroVisible" @open:sign-in="emit('open:sign-in')"  :sign-in-open="signInOpen" />
 
     <div ref="hero" class="absolute pointer-events-none  left-0  size-px  overflow-hidden bg-transparent" />
 

@@ -1,11 +1,30 @@
 <script setup lang="ts">
 
-const us = useUiStore()
-const as = useAccountStore()
+const { signInOpen } = defineProps<{
+signInOpen: boolean
+}>()
+
 const route = useRoute()
 const userNavRef = ref(null)
 const userNav = ref(null)
 
+const emit = defineEmits(['reset:sign-in'])
+watch(() => signInOpen, (newVal) => {
+console.log("💠 - watch - newVal:", newVal)
+if (newVal){
+  userNav.value = 'signIn'
+}
+}
+)
+
+watch(() => userNav.value, (newVal) => {
+console.log("💠 - watch - newVal:", newVal)
+if (!newVal){
+
+emit('reset:sign-in')
+}
+}
+)
 
 const { width} = useElementBounding(userNavRef)
 
@@ -16,17 +35,8 @@ watch(
   },
 )
 
-const tabs = ref('/nexus')
-
-function handleMenu() {
-  if (tabs.value.charAt(0) != '/')
-    return
-  navigateTo(tabs.value)
-}
-
 const settingsOpen = ref(false)
 const pinsOpen = ref(false)
-const signInOpen = ref(false)
 </script>
 
 <template>
@@ -35,12 +45,11 @@ const signInOpen = ref(false)
 
     <NavigationMenu disablePointerLeaveClose>
       <NavigationMenuList class="gap-x-2">
-    <NavMenuLink class=" btn-square" @click="navigateTo('/')">
+    <NavigationMenuLink class="btn !btn-square btn-ghost size-12" @click="navigateTo('/')">
       <h3 class="dst select-none !tracking-normal bg-transparent">
         LP
       </h3>
-    </NavMenuLink>
-
+    </NavigationMenuLink>
 
         <template v-for="item in navLinks" :key="item.name">
           <NavigationMenuItem v-if="item.link">
@@ -69,14 +78,13 @@ const signInOpen = ref(false)
 
 
 
-  <NavigationMenu disablePointerLeaveClose  ref="userNavRef" v-model:model-value="userNav"  class="justify-end">
-    <NavigationMenuList class="justify-end ">
-
+  <NavigationMenu disable-pointer-leave-close  ref="userNavRef" v-model:model-value="userNav"  class="justify-end">
+    <NavigationMenuList class="justify-end px-1">
 
     <NavigationMenuItem v-for="item in userLinks" :key="item.name.toString()"  :value="item.name">
 
     <NavigationMenuTrigger :arrow="false">
-      <icon :name="item.icon.name"  :class="cn('dst shrink-0', item.icon.class)"/>
+      <hicon :name="item.icon.name"  :class="cn('dst shrink-0', item.icon.class)"/>
     </NavigationMenuTrigger>
 
 
@@ -85,20 +93,18 @@ const signInOpen = ref(false)
             </LazyNavigationMenuContent>
           </NavigationMenuItem>
 
-        <NavigationMenuLink as-child class="ml-2 mr-4">
+        <NavigationMenuLink as-child class="ml-2 mr-2.5">
     <CommandSearch />
   </NavigationMenuLink>
 
 
   <LazyAccountMenu  @open:settings="settingsOpen = true"  />
 
-
-<!--   <NavigationMenuIndicator class="bottom-4" :align-offset="6"  :side-offset="6"/> -->
       </NavigationMenuList>
 
-      <NavigationMenuViewport align="end" class="translate-y-1 w-(--reka-navigation-menu-viewport-width) h-(--reka-navigation-menu-viewport-height)"
+      <NavigationMenuViewport align="end" :class="cn('pt-4 -translate-x-1  w-(--reka-navigation-menu-viewport-width) h-(--reka-navigation-menu-viewport-height)', {'rounded-tr-none': userNav == 'signIn'})"
       :style="{
-        left: `calc((var(--reka-navigation-menu-viewport-width) - ${width}) * -1)`
+        left: `calc(((var(--reka-navigation-menu-viewport-width) - ${width}) * -1))`
       }"/>
     </NavigationMenu>
 

@@ -22,12 +22,12 @@ const emailChecked = ref(false)
 </script>
 
 <template>
-<transition-slide group   :offset="['-100%', 0]" class="grid size-full mt-1">
+<transition-slide group   :offset="['-100%', 0]" class="grid size-full mt-5">
 
 
 <div v-if="emailChecked">
   <div
-  class="z-0 my-2 w-full gap-4 px-1 grid dst">
+  class="z-0  w-full gap-4 px-1 grid dst">
         <div  class="w-fit h-5 items-center flex gap-0.5">
           <label class="btn-ghost btn  -ml-2 btn-square">
           <icon name="arrow-left" class="shrink-0" />
@@ -42,7 +42,7 @@ const emailChecked = ref(false)
 
           </div>
 <div class="px-1 py-2">
-<Email class="email-form" />
+<Email  />
 </div>
 </div>
 

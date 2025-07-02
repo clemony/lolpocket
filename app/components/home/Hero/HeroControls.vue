@@ -76,7 +76,7 @@ function handleNext() {
           :transition="{ type: 'spring' }" />
 
           <label v-show="!isPlaying"
-          :class="cn('text-2 font-semibold overflow-hidden align-end mt-0.5 text-bc/60 ')">Paused</label>
+          :class="cn('text-2 font-semibold overflow-hidden align-end mt-px text-bc/60 ')">Paused</label>
         </div>
         <HoverBtnSm tip="Previous" @click="handlePrev()">
           <icon name="next" class="rotate-180 size-4 opacity-60 shrink-0" />
@@ -95,11 +95,11 @@ function handleNext() {
 
           <ContrastDropdownContent side="top" align="end" :align-offset="-10" class="mr-3 w-60">
             <div class="w-full items-center px-1.5 gap-3 flex py-1 text-2 text-nc/80">
-              <icon :name=" as.userAccount.settings.motion ? 'ph:video-camera-fill' : 'ph:video-camera-slash'" class=" opacity-90 shrink-0" />
-              {{ as.userAccount.settings.motion ? 'Motion On' : 'Motion Off' }}
+              <icon :name=" as.userAccount.settings.general.motion ? 'ph:video-camera-fill' : 'ph:video-camera-slash'" class=" opacity-90 shrink-0" />
+              {{ as.userAccount.settings.general.motion ? 'Motion On' : 'Motion Off' }}
               <Grow />
 
-              <Switch v-model="as.userAccount.settings.motion" class=" data-[state=unchecked]:bg-b3/40 inset-shadow-xs data-[state=checked]:bg-linear-to-br to-ah/90 to-60% from-lime-400/90 border-b4/50 justify-self-end scale-85" />
+              <Switch v-model="as.userAccount.settings.general.motion as boolean" class=" data-[state=unchecked]:bg-b3/40 inset-shadow-xs data-[state=checked]:bg-linear-to-br to-ah/90 to-60% from-lime-400/90 border-b4/50 justify-self-end scale-85" />
             </div>
 
             <DropdownMenuSub>
@@ -108,7 +108,7 @@ function handleNext() {
               </ContrastDropdownSubTrigger>
 
               <ContrastDropdownSubContent :align-offset="-3" :side-offset="4">
-                <DropdownMenuRadioGroup v-model:model-value="as.userAccount.settings.hero">
+                <DropdownMenuRadioGroup v-model:model-value="as.userAccount.settings.general.hero as string">
                   <DropdownRadioItemCT :value="null">
                     All
                   </DropdownRadioItemCT>
@@ -122,5 +122,6 @@ function handleNext() {
           </ContrastDropdownContent>
         </DropdownMenu>
       </div>
+
     </div>
 </template>

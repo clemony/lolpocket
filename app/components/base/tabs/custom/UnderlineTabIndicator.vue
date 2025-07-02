@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { motion } from 'motion-v'
-import { TabsIndicator } from 'reka-ui'
 import type { TabsIndicatorProps } from 'reka-ui'
+import { TabsIndicator } from 'reka-ui'
 
 defineOptions({ inheritAttrs: false })
 
@@ -24,8 +24,8 @@ const forwarded = reactiveOmit(props, 'class')
       :transition="{
         duration: 0.3,
       }"
-      :class="cn('absolute -bottom-2.5 left-0 h-[2px] transition-all  px-2', props.class)">
-      <motion.div class="h-full w-full rounded-md bg-neutral/60 dst" />
+      :class="cn('absolute -bottom-1 left-0 h-[2px] transition-all  px-2', props.class)">
+      <motion.div class="h-full w-full rounded-md bg-neutral/50 h-2px " />
     </motion.div>
   </TabsIndicator>
 </template>

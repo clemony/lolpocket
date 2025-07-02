@@ -1,36 +1,37 @@
 import type { Session } from "@supabase/supabase-js"
 
 declare global {
-  type AccountRole = "admin" | "summoner"
+  type AccountRole = "admin" | "summoner" | "default"
   interface UserAccount {
     name: string
     role: AccountRole
     id: string
     riot: UserSummoner | null
-    settings: UserSettings
+    settings: {
+      general: Record<string, string | boolean>
+      notifications: Record<string, string | boolean>
+    }
     pockets: UserPockets
     inbox: UserInbox
   }
 
   interface UserInbox {
-    mail: Message[]
-    notifications: Message[]
+    messages: InboxItemMsg[]
+    notifications: InboxItem[]
   }
 
-  interface Message {
+  interface InboxItem {
     title: string
-    icon?: string
-    content: string
+    badge?: string
+    vars?: Record<string, string>
+    time: Date
+    message?: string
   }
 
   interface UserPockets {
     all: Pocket[]
     pinned: string[]
     archived: string[]
-  }
-  interface UserSettings {
-    motion: boolean
-    hero: string | null
   }
 
   interface CurrentSession {

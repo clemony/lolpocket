@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { AnimatePresence, motion, type EasingDefinition } from 'motion-v'
 
-const as = useAccountStore()
 
 const h1Variants = {
 
@@ -177,12 +176,7 @@ const h1Visibility = {
         </p>
       </div>
 
-
-    <button
-      v-show="!as.currentSession?.session"
-      class="pointer-events-auto  justify-self-end hover:bg-neutral btn-lg mt-3 btn btn-outline border-b3 hover:text-nc text-2 w-fit self-end justify-self-end overflow-hidden shadow-xs transition-all duration-200">
-Sign in
-    </button>
+<slot  />
 
     </motion.div>
   </div>

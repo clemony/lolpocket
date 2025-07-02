@@ -51,6 +51,8 @@
   --text-14: 4rem;
   --text-15: 7rem;
 
+  --tracking-bold: 0.023em;
+
   --shadow-pretty: 0 3px 10px rgba(0, 0, 0, 0.2);
   --shadow-warm: rgba(0, 0, 0, 0.08) 0px 2px 7px;
   --shadow-warm-2: rgba(0, 0, 0, 0.1) 0px 2px 8px;

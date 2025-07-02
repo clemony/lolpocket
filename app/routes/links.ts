@@ -32,8 +32,8 @@ export const userLinks = [
     // icon: "cil:briefcase",
     name: "backpack",
     icon: {
-      name: "lol-backpack",
-      class: "size-6.5 opacity-70",
+      name: "i-lol-backpack",
+      class: "size-6 opacity-70",
     },
     links: backpackLinks,
     component: BackpackMenu,

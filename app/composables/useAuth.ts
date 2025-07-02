@@ -12,6 +12,10 @@ export function useAuth() {
     console.log("💠 Auth change:", event)
 
     if (event === "INITIAL_SESSION" && session) {
+      console.log(
+        `💠 - client.auth.onAuthStateChange - "INITIAL_SESSION":`,
+        "INITIAL_SESSION"
+      )
       await hydrateUser(session)
     } else if (event === "SIGNED_OUT") {
       as.resetUserAccount()
@@ -41,11 +45,23 @@ async function hydrateUser(session: Session) {
     "Summoner"
 
   as.userAccount = {
-    ...as.userAccount, // keep previous shape
+    ...as.userAccount,
     name,
     role: decoded.app_metadata.user_role as AccountRole,
     id: session.user.id,
   }
+
+  /*   const needsRiotData = !as.userAccount.riot.puuid
+
+  if (needsRiotData) {
+    const summoner = await fetchSummonerData(session.user.id)
+    if (summoner) {
+      Object.assign(as.userAccount.riot, summoner)
+    }
+  }
+
+  const { fetchSummoner } = useSummoner(as.userAccount.riot.puuid)
+  fetchSummoner() */
 
   as.currentSession = {
     session,
@@ -53,12 +69,6 @@ async function hydrateUser(session: Session) {
     refreshToken: session.refresh_token,
   }
 
-  const summoner = await fetchSummonerData(session.user.id)
-  if (summoner) {
-    Object.assign(as.userAccount.riot, summoner)
-  }
-  const { fetchSummoner } = useSummoner(summoner.puuid)
-  fetchSummoner()
   as.$persist
 }
 

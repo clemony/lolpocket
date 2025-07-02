@@ -4,9 +4,10 @@ export const backpackLinks: LinkObject[] = [
     link: "/backpack",
 
     icon: {
-      name: "backpack",
+      name: "i-lol-backpack-outline-bold",
     },
-    blurb: "Your main pocket storage tool. Keeps them safe and warm.",
+    blurb:
+      '<p class="leading-5 text-pretty">Your main <i><b>pocket</b></i> storage tool. Magically keeps pockets safe and warm in list or grid form.</p>',
   },
   {
     name: "Trash",
@@ -15,7 +16,7 @@ export const backpackLinks: LinkObject[] = [
     icon: {
       name: "trash",
     },
-    blurb: "Ideas that didn't quite pan out.",
+    blurb: "A chance to grab it back for 30 days.",
   },
   {
     name: "Archive",
@@ -24,7 +25,7 @@ export const backpackLinks: LinkObject[] = [
     icon: {
       name: "archive",
     },
-    blurb: "A storage pouch. Hold pockets not ready for the rift.",
+    blurb: "Outdated or unfinished pockets.",
   },
 ]
 

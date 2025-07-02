@@ -16,6 +16,12 @@ declare global {
     class?: string
   }
 
+  interface BadgeObject {
+    text?: string
+    icon?: IconObject
+    class?: string
+  }
+
   interface ImgObject {
     src: string
     class?: string
@@ -32,6 +38,9 @@ declare global {
     external?: boolean
     component?: any
     blurb?: string
+  }
+  interface DataObject extends LinkObject {
+    data: Object
   }
 
   interface Category {

@@ -1,7 +1,11 @@
-@import 'tailwindcss';
-@import './theme.css';
+@import "tailwindcss";
+@import "./theme.css";
 
 @layer components {
+  .bg-dashed {
+    background-color: black;
+    border: 1px solid red;
+  }
   /* progress */
 
   .progress {

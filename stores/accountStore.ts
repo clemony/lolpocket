@@ -18,7 +18,7 @@ export const useAccountStore = defineStore(
 
     const defaultUser: UserAccount = {
       name: "Summoner",
-      role: null,
+      role: "default",
       id: null,
       riot: {
         name: "Summoner",
@@ -29,8 +29,14 @@ export const useAccountStore = defineStore(
         region: "Runeterra",
       },
       settings: {
-        motion: true,
-        hero: null,
+        general: {
+          motion: true,
+          hero: null,
+        },
+        notifications: {
+          newPocket: true,
+          deletePocket: true,
+        },
       },
       pockets: {
         all: [],
@@ -38,13 +44,13 @@ export const useAccountStore = defineStore(
         archived: [],
       },
       inbox: {
-        mail: [],
+        messages: [],
         notifications: [],
       },
     }
     const userAccount = ref<UserAccount>({
       name: "Summoner",
-      role: null,
+      role: "default",
       id: null,
       riot: {
         name: "Summoner",
@@ -55,8 +61,14 @@ export const useAccountStore = defineStore(
         region: "Runeterra",
       },
       settings: {
-        motion: true,
-        hero: null,
+        general: {
+          motion: true,
+          hero: null,
+        },
+        notifications: {
+          newPocket: true,
+          deletePocket: true,
+        },
       },
       pockets: {
         all: [],
@@ -64,12 +76,10 @@ export const useAccountStore = defineStore(
         archived: [],
       },
       inbox: {
-        mail: [],
+        messages: [],
         notifications: [],
       },
     })
-
-    const signedIn = computed(() => !!currentSession.value.session)
 
     function resetUserAccount() {
       Object.assign(userAccount.value, defaultUser)

@@ -130,12 +130,16 @@ const steps = [
             v-if="isShown[i] && isShown?.[i].value"
             :style="{
               scaleY: progress[i] || 0 }"
-            class="group-last:hidden absolute origin-top  !bg-linear-to-b from-neutral/40 via-neutral/70 to-neutral/30   size-full starting:scale-y-0 !overflow-visible !rounded-full  -top-1.5 -left-16">
+            class="group-last:hidden absolute origin-top  !bg-linear-to-b from-neutral/40 via-neutral/70 to-neutral/30 border-l border-dashed  size-full starting:scale-y-0 !overflow-visible !rounded-full  -top-1.5 -left-16">
           </motion.hr>
         </motion.hr>
       </li>
     </ul>
   </motion.div>
 </template>
-
-<style scoped></style>
+<!-- !bg-linear-to-b from-neutral/40 via-neutral/70 to-neutral/30 border-r border-dashed w-1/2  -->
+<style scoped>
+.bg-dashed {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23333' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+</style>

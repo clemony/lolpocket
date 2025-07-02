@@ -32,19 +32,21 @@ const variants = {
       <NavigationMenuViewport
       :align="props.align"
         v-bind="forwarded"
-          :class="
-            cn(
-              'origin-top-center bg-blend-screen  bg-b1/84 backdrop-blur-md relative mt-1.5  h(--reka-navigation-menu-viewport-height)  overflow-hidden  border border-b3 rounded-xl text-bc shadow-lg shadow-black/10 w-(--reka-navigation-menu-viewport-width)',
-              props.class,
-            )
-          " as-child>
+        as-child>
         <motion.div
           :variants="variants"
           initial="hidden"
           animate="visible"
-          exit="hidden" />
+          exit="hidden"
+          :class="
+            cn(
+              'origin-top-center relative  h(--reka-navigation-menu-viewport-height)  w-(--reka-navigation-menu-viewport-width)',
+              props.class,
+            )
+          ">
           <slot  />
 
+      </motion.div>
       </NavigationMenuViewport>
     </AnimatePresence>
   </div>

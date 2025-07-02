@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.33 13.01">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: .0px;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke: #000;
+      }
+
+      .cls-2 {
+        stroke-width: .0px;
+        opacity: 0.6;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1px;
+      }
+    </style>
+  </defs>
+  <path class="cls-3" d="M2.66,2.42h10c.4,0,.7.3.7.7v.5c0,.2-.07.37-.2.5l-4.6,3.5c-.13.13-.3.2-.5.2h-.9c-.13,0-.27-.07-.4-.2l-4.6-3.5c-.1-.1-.2-.3-.2-.5v-.5c0-.4.3-.7.7-.7Z"/>
+  <path class="cls-3" d="M12.66,4.92v6.08c0,.75-.6,1.39-1.4,1.39h-7.2c-.8,0-1.4-.64-1.4-1.39v-6.08"/>
+  <path class="cls-1" d="M5.76,2.03h-.9v-.4c0-.4.2-.8.4-1.1.3-.2.7-.4,1.1-.4h2.6c.4,0,.8.2,1.1.4.2.3.4.7.4,1.1v.4h-.9v-.4c0-.13-.07-.27-.2-.4s-.27-.2-.4-.2h-2.6c-.13,0-.27.07-.4.2s-.2.27-.2.4v.4Z"/>
+  <path class="cls-2" d="M14.48,11.79h-.3v-6.87l1.1,1.78v3.82c0,.64-.4,1.27-.8,1.27Z"/>
+  <path class="cls-2" d="M.05,10.52v-3.82s1.1-1.78,1.1-1.78v6.87h-.3c-.4,0-.8-.64-.8-1.27Z"/>
+</svg>

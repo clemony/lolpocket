@@ -8,7 +8,7 @@
 
 @utility btn {
   &:not(.btn-ghost):not(.btn-outline):not(.btn-neutral) {
-    @apply items-center  bg-b2/60 border-b2 font-normal text-3 gap-3;
+    @apply items-center  bg-b2/60 border-b2 font-normal px-3 text-3 gap-3;
   }
 }
 
@@ -18,7 +18,7 @@
   }
 }
 @utility btn-neutral {
-  @apply !shadow-xs text-nc bg-neutral *:text-nc hover:text-nc hover:bg-neutral/85 items-center [&_svg]:inline-flex align-middle text-2;
+  @apply !shadow-xs text-nc bg-neutral *:text-nc hover:text-nc hover:bg-neutral/85 items-center [&_svg]:inline-flex align-middle px-3 font-normal text-3;
 }
 
 @utility btn-ghost {
