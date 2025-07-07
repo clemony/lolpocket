@@ -33,10 +33,10 @@ const data = [
 </script>
 
 <template>
-  <div ref="wrapper" class="bg-neutral text-nc @container relative z-0  h-[80vh] w-full flex overflow-hidden  items-center justify-center px-10">
-    <div class="border-b1 ring-offset-b1 absolute z-20 m-auto size-[95%] rounded-3xl border inset-shadow-sm ring-1 ring-b1 ring-offset-50" />
+  <div ref="wrapper" class="bg-b1 relative z-2  h-[80vh] w-full  items-center justify-center ">
+    <div class="bg-neutral items-center text-nc flex overflow-hidden px-10  z-20 m-auto h-[98%] w-[95%] rounded-3xl grid grid-cols-2 gap-10">
 
-    <div class="size-full grid wp-47% justify-items-center relative py-20">
+    <div class="size-full grid wp-77% justify-items-center relative py-20 overflow-hidden">
       <motion.h2
         :style="{ transform: `translateY(${progressY}%)` }"
         class="text-14 absolute pr-14 h-full"
@@ -45,9 +45,8 @@ const data = [
       </motion.h2>
     </div>
 
-    <div class="flex h-full wp-53% items-center">
-      <div
-        class="grid items-center wp-77%  grow justify-start ">
+
+<div class="grid h-full items-center  grow justify-start  wp-82%  py-22">
         <motion.div
           v-for="(item, i) in data"
           :key="item.title"
@@ -63,28 +62,29 @@ const data = [
           :in-view-options="{
             amount: 0.8,
           }"
-          class="grid -translate-y-[40px] p-6">
-          <div class="mb-5 grid w-full items-center ">
+          class="">
+          <div class="mb-5  gap-5 flex w-full items-center ">
             <icon
               v-if="item.icon"
               :name="item.icon"
-              class="size-14 justify-self-center stroke-[0.5]" />
+              class="size-7 justify-self-center text-nc stroke-[0.5]" />
 
-            <h3 class="!text-7 grow !font-semibold">
+            <h3 class="!text-7 grow text-nc !font-semibold">
               {{ item.title }}
             </h3>
           </div>
 
           <p
-            class="text-pretty leading-loose font-light text-4 " v-html="item.text" />
+            class="text-pretty leading-loose text-nc font-light text-4 " v-html="item.text" />
         </motion.div>
 
-        <div />
       </div>
 
-      <div class="min-w-32 wp-17% shrink" />
     </div>
+
+      <div class="min-w-32 wp-17% shrink" />
   </div>
+
 </template>
 
 <style>

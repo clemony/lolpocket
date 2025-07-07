@@ -1,4 +1,6 @@
-[
+// Updated Patch 25.12 - 07/04/2025 06:04:10 PM CDT
+
+export const spellIndex: Record<string, string | number>[] = [
   {
     "id": 1,
     "name": "Cleanse"

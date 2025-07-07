@@ -7,7 +7,7 @@ const { account } = defineProps<{
 <template>
   <Sheet>
     <SheetTrigger class="btn btn-ghost  gap-0 btn-circle hover:bg-b2 hover:border-b3/80 relative group/btn relative">
-      <LazyProfileSummonerIcon :account="account" hydrate-on-visible class="rounded-full **:rounded-full size-9 grayscale transition duration-200 group-hover/btn:grayscale-0 shadow-sm drop-shadow-sm " />
+
       <!-- <div class="absolute right-3.5 dst opacity-80 -top-1.5 *:absolute *:size-7 *:shrink-0">
       <icon name="basil:chat-solid" class=" text-b1" />
       <icon name="basil:chat-outline" class=" text-bc/60" />

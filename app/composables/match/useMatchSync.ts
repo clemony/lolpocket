@@ -29,26 +29,25 @@ export function useMatchSync(puuid: string) {
   } */
 
   const loadMoreMatches = async ({
-    direction = 'new',
+    direction = "new",
     count = 20,
   }: {
-    direction?: 'new' | 'old'
+    direction?: "new" | "old"
     count?: number
   } = {}) => {
     loading.value = true
     try {
       const existingIds = (await getAllMatchIds()).map(String)
-      const { newMatches } = await useGetMatches({
+      const { full } = await useGetMatches({
         puuid,
         existingIds,
         count,
         direction,
       })
 
-      matchData.value.push(...newMatches)
+      matchData.value.push(...full)
       matchData.value.sort((a, b) => b.info.gameCreation - a.info.gameCreation)
-    }
-    finally {
+    } finally {
       loading.value = false
     }
   }
@@ -57,7 +56,7 @@ export function useMatchSync(puuid: string) {
     if (puuid && ms.matches.length === 0) {
       initialSync()
     }
-  }) */
+  })  */
 
   return {
     matchData,

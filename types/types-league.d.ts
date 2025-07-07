@@ -26,16 +26,13 @@ declare global {
 
   type SpellSet = [string, string]
 
-  interface UserSummoner {
+  interface Summoner {
     name: string
     tag: string
     puuid: string
     profileIcon: string
     level: number
     region: string
-  }
-
-  interface Summoner extends UserSummoner {
     ranked?: {
       solo?: RankedEntry
       flex?: RankedEntry

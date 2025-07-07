@@ -1,15 +1,23 @@
 <script lang="ts" setup>
 import { DrawerContent, FadeDialogContent } from '#components'
 
-const isDesktop = useMediaQuery('(min-width: 768px)')
+defineOptions({
+  inheritAttrs: false,
+})
 
 const { side } = defineProps<{
-side?: Side
+  side?: Side
 }>()
+
+const isDesktop = useMediaQuery('(min-width: 768px)')
 </script>
 
 <template>
-  <component :is="isDesktop ? FadeDialogContent : DrawerContent" :side="side">
+  <FadeDialogContent v-if="isDesktop" v-bind="$attrs">
     <slot />
-  </component>
+  </FadeDialogContent>
+
+  <DrawerContent v-else :side="side" v-bind="$attrs">
+    <slot />
+  </DrawerContent>
 </template>

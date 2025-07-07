@@ -2,12 +2,13 @@
 const { summoner } = defineProps<{
   summoner: Summoner
 }>()
+  console.log("💠 - summonjjjjjer:", summoner)
 </script>
 
 <template>
   <div class="flex  w-120 h-fit items-center gap-5 ">
     <div class=" size-fit grid place-items-center rounded-full drop-shadow-sm  shadow-sm shrink-0 relative">
-      <LazyProfileSummonerIcon v-if="summoner" :summoner-name="summoner.name" :url="summoner.profileIcon" class="size-19 rounded-full" />
+      <LazyProfileSummonerIcon v-if="summoner" :summoner="summoner" class="size-19 rounded-full" />
     </div>
 
     <div class="flex flex-col grow justify-center gap-1.5 drop-shadow-sm">

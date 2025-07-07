@@ -1,0 +1,148 @@
+.NavigationMenuIndicator[data-state="visible"][data-orientation="vertical"] {
+  top: var(--reka-navigation-menu-indicator-position);
+  left: 0;
+}
+
+.NavigationMenuIndicator[data-state="visible"][data-orientation="horizontal"] {
+  left: var(--reka-navigation-menu-indicator-position);
+  top: 0;
+}
+
+.NavigationMenuIndicator {
+  transition:
+    top 250ms ease-out,
+    left 250ms ease-out,
+    opacity 500ms 200ms ease,
+    transform 500ms 200ms ease;
+
+  &[data-state="hidden"] {
+    opacity: 0;
+    scale: 0.6;
+  }
+}
+
+.NavigationMenuContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation-duration: 250ms;
+  animation-timing-function: ease;
+}
+
+.NavigationMenuContent[data-motion="from-start"][data-orientation="horizontal"] {
+  animation-name: enterFromLeft;
+}
+.NavigationMenuContent[data-motion="from-end"][data-orientation="horizontal"] {
+  animation-name: enterFromRight;
+}
+.NavigationMenuContent[data-motion="to-start"][data-orientation="horizontal"] {
+  animation-name: exitToLeft;
+}
+.NavigationMenuContent[data-motion="to-end"][data-orientation="horizontal"] {
+  animation-name: exitToRight;
+}
+
+@keyframes enterFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes enterFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes exitToRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+}
+
+@keyframes exitToLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+}
+
+.NavigationMenuContent[data-motion="from-start"][data-orientation="vertical"] {
+  animation-name: enterFromTop;
+}
+.NavigationMenuContent[data-motion="from-end"][data-orientation="vertical"] {
+  animation-name: enterFromBottom;
+}
+.NavigationMenuContent[data-motion="to-start"][data-orientation="vertical"] {
+  animation-name: exitToTop;
+}
+.NavigationMenuContent[data-motion="to-end"][data-orientation="vertical"] {
+  animation-name: exitToBottom;
+}
+
+.NavigationMenuViewport {
+  position: relative;
+}
+
+@keyframes enterFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes enterFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes exitToBottom {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+}
+
+@keyframes exitToTop {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+}

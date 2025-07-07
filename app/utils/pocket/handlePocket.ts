@@ -70,10 +70,11 @@ export async function addPocket(
       },
     })
 
-    constructNotification(
-      `Pocket ${newPocket.name} created.`,
-      newPocket.key,
-      "newPocket"
-    )
+    const vars = {
+      pocketKey: newPocket.key,
+      pocketName: newPocket.name,
+    }
+
+    saveNotificationData(vars, "newPocket")
   }
 }

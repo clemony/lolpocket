@@ -3,18 +3,19 @@ export function useSummoner(initialPuuid?: string) {
   const summonerStore = useSummonerStore() // Get the Pinia store
 
   const currentPuuid = ref(initialPuuid || as.userAccount.riot.puuid)
-  const usingOwnAccount = computed(() => !currentPuuid.value || currentPuuid.value === as.userAccount.riot.puuid)
+  const usingOwnAccount = computed(
+    () =>
+      !currentPuuid.value || currentPuuid.value === as.userAccount.riot.puuid
+  )
 
   const summoner = ref<Summoner | null>(null)
   const loading = ref(false)
   const ready = ref(false)
 
   const loadingMessage = computed(() => {
-    if (!loading.value)
-      return ''
-    if (usingOwnAccount.value)
-      return 'Loading your matches...'
-    return 'Searching for summoner...'
+    if (!loading.value) return ""
+    if (usingOwnAccount.value) return "Loading your matches..."
+    return "Searching for summoner..."
   })
 
   const matchData = ref<MatchData[]>([])
@@ -43,26 +44,33 @@ export function useSummoner(initialPuuid?: string) {
 
     const matchesPromise = (async () => {
       if (usingOwnAccount.value) {
-        const { matchData: initialMatches, fetchInitialMatches } = useInitialMatchSync(puuid)
+        const { matchData: initialMatches, fetchInitialMatches } =
+          useInitialMatchSync(puuid)
         await fetchInitialMatches()
         return initialMatches.value
-      }
-      else {
-        const { newMatches } = await useGetMatches({ puuid, start: 0, count: 20 })
-        return newMatches
+      } else {
+        const { full } = await useGetMatches({
+          puuid,
+          start: 0,
+          count: 20,
+        })
+        return full
       }
     })()
 
     const summonerPromise = useFetchSummonerData(puuid)
 
-    const [matchesResult, summonerResult] = await Promise.all([matchesPromise, summonerPromise])
+    const [matchesResult, summonerResult] = await Promise.all([
+      matchesPromise,
+      summonerPromise,
+    ])
     summonerResult.matches = matchesResult
     matchData.value = matchesResult
 
-    const normalizedSummoner = normalizeSummonerForStore(summonerResult)
-    if (puuid === as.userAccount.riot.puuid) {
+    const normalizedSummoner = await normalizeSummonerForStore(summonerResult)
+    /*     if (puuid === as.userAccount.riot.puuid) {
       as.userAccount.riot = normalizedSummoner
-    }
+    } */
 
     summoner.value = normalizedSummoner
 
@@ -75,9 +83,13 @@ export function useSummoner(initialPuuid?: string) {
 
   const forceReload = () => fetchSummoner({ force: true })
 
-  watch(currentPuuid, () => {
-    fetchSummoner()
-  }, { immediate: true })
+  watch(
+    currentPuuid,
+    () => {
+      fetchSummoner()
+    },
+    { immediate: true }
+  )
 
   const setPuuid = (newPuuid: string) => {
     currentPuuid.value = newPuuid

@@ -51,17 +51,15 @@ async function hydrateUser(session: Session) {
     id: session.user.id,
   }
 
-  /*   const needsRiotData = !as.userAccount.riot.puuid
+  const needsRiotData = !as.userAccount.riot.puuid
 
-  if (needsRiotData) {
-    const summoner = await fetchSummonerData(session.user.id)
-    if (summoner) {
-      Object.assign(as.userAccount.riot, summoner)
-    }
+  const summoner = await fetchSummonerData(session.user.id)
+  if (summoner) {
+    Object.assign(as.userAccount.riot, summoner)
   }
 
   const { fetchSummoner } = useSummoner(as.userAccount.riot.puuid)
-  fetchSummoner() */
+  fetchSummoner()
 
   as.currentSession = {
     session,
@@ -74,7 +72,7 @@ async function hydrateUser(session: Session) {
 
 async function fetchSummonerData(
   userId: string
-): Promise<Partial<UserSummoner> | null> {
+): Promise<Partial<Summoner> | null> {
   const client = useSupabaseClient()
   const { data, error } = await client
     .from("user_data")

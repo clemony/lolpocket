@@ -51,7 +51,7 @@ const selectedSpell = computed (() => {
         <PopoverClose
           v-for="ss in ix.spells"
           :key="ss.name"
-          :disabled="selectedSpell == ss"
+          :disabled="selectedSpell.name == ss.name"
           class="disabled:grayscale transition-all duration-400 disabled:inset-shadow-sm disabled:opacity-70 disabled:scale-80 shadow-sm size-16 rounded-lg border border-b3/30 hover:border-neutral hover:ring-2 hover:ring-b3/60 !cursor-pointer ring-offset-1 ring-offset-neutral">
           <label class=" !cursor-pointer ">
             <input
@@ -59,7 +59,7 @@ const selectedSpell = computed (() => {
               type="radio"
               :value="ss.name"
               class="hidden"
-              :disabled="selectedSpell == ss"
+              :disabled="selectedSpell.name == ss.name"
               @change="emit('update:spell', ss)" />
 
             <img

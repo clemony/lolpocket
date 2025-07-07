@@ -40,7 +40,8 @@ declare global {
     blurb?: string
   }
   interface DataObject extends LinkObject {
-    data: Object
+    data?: object
+    new?: number
   }
 
   interface Category {

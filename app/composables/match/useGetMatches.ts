@@ -1,26 +1,26 @@
-// composables/useGetMatches.ts
-
 export async function useGetMatches({
   puuid,
   existingIds = [],
   start = 0,
   count = 20,
-  direction = 'new',
+  direction = "new",
   lastMatchTimestamp = null,
 }: {
   puuid: string
   existingIds?: string[]
   start?: number
   count?: number
-  direction?: 'new' | 'old'
+  direction?: "new" | "old"
   lastMatchTimestamp?: number | null
 }) {
   const { addMatches } = useMatchDexie()
-  const ms = useMatchStore()
   const as = useAccountStore()
 
-  const newMatches = await $fetch<MatchData[]>('/api/riot/matches-by-puuid', {
-    method: 'GET',
+  const result = await $fetch<{
+    full: MatchData[]
+    simplified: SimplifiedMatchData[]
+  }>("/api/riot/matches-by-puuid", {
+    method: "GET",
     query: {
       puuid,
       start,
@@ -31,13 +31,9 @@ export async function useGetMatches({
     },
   })
 
-  if (newMatches.length > 0 && puuid == as.userAccount.riot.puuid) {
-    await addMatches(newMatches)
-    const { simplifyMatch } = useMatchSimplifier(puuid)
-    const simplified = newMatches.map(simplifyMatch).filter(Boolean) as SimplifiedMatchData[]
-
-    return { newMatches, simplified }
+  if (result.full.length && puuid === as.userAccount.riot.puuid) {
+    await addMatches(result.full)
   }
 
-  return { newMatches: [], simplified: [] }
+  return result
 }

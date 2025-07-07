@@ -9,7 +9,6 @@ export const usePocketStore = defineStore(
 
     const downloadCard = refAutoReset(false, 1000)
     const pocketCardRef = ref<HTMLElement>(null)
-    console.log("💠 - pocketCardRef:", pocketCardRef)
 
     const trashFolder = ref<Pocket[]>([])
     const archiveFolder = ref<Pocket[]>([])

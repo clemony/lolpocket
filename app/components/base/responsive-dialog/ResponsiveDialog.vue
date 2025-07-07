@@ -1,19 +1,18 @@
 <script lang="ts" setup>
 import { Dialog, Drawer } from '#components'
 
-const isDesktop = useMediaQuery('(min-width: 768px)')
-
 const { drawerOnly } = defineProps<{
-drawerOnly?: boolean
+  drawerOnly?: boolean
 }>()
+const isDesktop = useMediaQuery('(min-width: 768px)')
 </script>
 
 <template>
   <Drawer v-if="drawerOnly">
-    <slot  />
+    <slot />
   </Drawer>
 
-  <component v-else :is="isDesktop ? Dialog : Drawer">
+  <component :is="isDesktop ? Dialog : Drawer" v-else>
     <slot />
   </component>
 </template>

@@ -12,13 +12,16 @@ const isDesktop = useMediaQuery('(min-width: 768px)')
 <template>
   <component :is="isDesktop ? DialogHeader : DrawerHeader">
     <component :is="isDesktop ? DialogTitle : DrawerTitle">
-      {{ title }}
-      <slot name="title" />
+      <slot name="title">
+
+ <h1>{{ title }}</h1>
+      </slot>
     </component>
 
     <component :is="isDesktop ? DialogDescription : DrawerDescription">
-      {{ description }}
-      <slot name="description" />
+      <slot name="description" >
+      <p class="font-medium opacity-60 mt-1">{{ description }}</p>
+      </slot>
     </component>
   </component>
 </template>

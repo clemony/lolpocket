@@ -126,7 +126,7 @@ export default defineNuxtConfig({
   },
 
   imports: {
-    dirs: ["@vueuse/components", "content", "stores", "routes", "data"],
+    dirs: ["@vueuse/components", "stores", "routes", "data"],
   },
 
   pinia: {

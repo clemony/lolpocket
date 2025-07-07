@@ -18,7 +18,7 @@
   }
 }
 @utility btn-neutral {
-  @apply !shadow-xs text-nc bg-neutral *:text-nc hover:text-nc hover:bg-neutral/85 items-center [&_svg]:inline-flex align-middle px-3 font-normal text-3;
+  @apply text-nc bg-neutral *:text-nc hover:text-nc hover:bg-neutral/85 items-center [&_svg]:inline-flex align-middle px-3 font-normal text-3;
 }
 
 @utility btn-ghost {

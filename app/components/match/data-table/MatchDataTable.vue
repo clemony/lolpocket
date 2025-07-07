@@ -241,66 +241,66 @@ const ds = useDataStore()
 </script>
 
 <template>
-  <div class="overflow-x-auto overscroll-none rounded-bo grid    h-180  bg-b1/30">
-    <table class="table table-sm table-pin-rows table-pin-cols [&_th]:!bg-b1/94 [&_th]:brightness-97 [&_th]:backdrop-blur-md">
-      <thead class="relative">
-        <tr class="!bg-b1/95 brightness-99 backdrop-blur-md">
-          <th class="z-1 flex-grow">
-            {{ gameOutcome }}<br />
-            {{ gameEnd ?? '' }}
-          </th>
+  <div class="size-full">
+    <div class="grid  grid-cols-[2.3fr_repeat(10,1fr)]   grid-flow-row w-full  gap-1 px-2 py-1 h-18 group/head  ">
+      <div class="size-full items-center">
+        <p :class="cn('font-medium dst', { 'text-inspiration': props.match.teams[0].win != true, 'text-domination': props.match.teams[0].win != true })">
+          {{ gameOutcome }}
+        </p>
+        {{ gameEnd ?? '' }}
+      </div>
 
-          <td v-for="(player, i) in props.blue.concat(props.red)" :key="player.playerId" class="!max-w-12 w-12 min-w-12 overflow-hidden first-of-type:rounded-l-xl last-of-type:rounded-r-xl z-0" :class="{ 'bg-inspiration/30': player.teamId == 100, 'bg-domination/30': player.teamId == 200, 'rounded-r-xl  border-r-4 border-r-b2': i == 4, 'rounded-l-xl  border-l-4 border-l-b2': i == 5 }">
-            <div class="rounded-lg size-fit shadow-sm">
-              <div class="!size-10 overflow-hidden rounded-lg">
-                <ChampionIcon :id="player.championId" :alt="player.championName" class="size-full scale-118" />
-              </div>
-            </div>
-          </td>
+      <div
+        v-for="player in props.blue.concat(props.red)" :key="player.playerId"
+        :class="cn(' place-items-center grid size-full rounded-xl z-0',
+                   { 'bg-inspiration/30': player.teamId == 100,
+                     'bg-domination/30': player.teamId == 200 })">
+        <div class="shrink-0 overflow-hidden rounded-lg size-13 aspect-square grid place-items-center">
+          <ChampionIcon :id="player.championId" :alt="player.championName" class="rounded-lg !size-full" />
+        </div>
+      </div>
+    </div>
 
-          <th class="opacity-10"></th>
-        </tr>
-      </thead>
-
+    <div class="overflow-auto mt-2 **:text-1 grid  grid-cols-[2fr_repeat(10,1fr)]   grid-flow-row overscroll-none relative grid px-2  h-180  ">
       <template v-for="category in endGameStats" :key="category">
-        <tbody v-for="stat in category" :key="stat.id" class="**:!text-1 ">
-          <tr class="relative">
-            <td v-if="statIndex.includes(stat.i)" class="capitalize bg-b2 font-semibold text-nowrap h-7 sticky left-0">
-              <span class="absolute  bottom-1">
-                {{ stat.id }}
-              </span>
-            </td>
-
-            <td v-if="statIndex.includes(stat.i)" class="bg-b2">
-            </td>
-
-            <th v-else class="capitalize font-medium tracking-tight">
+        <div v-for="stat in category" :key="stat.id" class="contents">
+          <div v-if="statIndex.includes(stat.i)" class="capitalize top-0 bg-b2 font-semibold items-center rounded-lg text-nowrap  py-1 px-2 !sticky left-0  grid col-span-11">
+            <span class="">
               {{ stat.id }}
-            </th>
+            </span>
+          </div>
 
-            <template v-for="player in props.blue.concat(props.red)" :key="player.id ">
-              <td :class="{ 'bg-b2': statIndex.includes(stat.i), 'text-bc/15 **:text-bc/15': player[stat.data] == 0 }" class=" text-end !text-1 *:!text-1 tracking-tight font-medium">
-                {{ computed (() => {
-                  const a = player[stat.data] ?? player.challenges[stat.data]
+          <!--       <div v-if="statIndex.includes(stat.i)" class="bg-b2">
+            </div>
+ -->
+          <div v-else class="capitalize pl-2 col-start-1 font-medium tracking-tight">
+            {{ stat.id }}
+          </div>
 
-                  const b = a && a.toString().length > 6 ? a : 0
+          <div
+            v-for="player in props.blue.concat(props.red)" :key="player.id " :class="cn(
+              'text-end !text-1 *:!text-1 py-1 tracking-tight last:pr-2 font-medium',
+              {
+                'text-bc/15 **:text-bc/15': player[stat.data] == 0 })">
+            {{ computed (() => {
+              const a = player[stat.data] ?? player.challenges[stat.data]
 
-                  let c = b ? b.toFixed(2) : a
-                  c = stat.data == 'effectiveHealAndShielding' || stat.data == 'bountyGold' || stat.data == 'goldPerMinute' ? Math.round(c) : c
+              const b = a && a.toString().length > 6 ? a : 0
 
-                  // units
+              let c = b ? b.toFixed(2) : a
+              c = stat.data == 'effectiveHealAndShielding' || stat.data == 'bountyGold' || stat.data == 'goldPerMinute' ? Math.round(c) : c
 
-                  c = stat.data == 'damageTakenOnTeamPercentage' && c ? `${Math.round(c * 100)}%` : c
-                  c = stat.data == 'timeCCingOthers' ? `${c}s` : c
+              // units
 
-                  c = c ? c.toLocaleString() : c
-                  return c
-                }) }}
-              </td>
-            </template>
-          </tr>
-        </tbody>
+              c = stat.data == 'damageTakenOnTeamPercentage' && c ? `${Math.round(c * 100)}%` : c
+              c = stat.data == 'timeCCingOthers' ? `${c}s` : c
+
+              c = c ? c.toLocaleString() : c
+              return c
+            }) }}
+          </div>
+        </div>
       </template>
-    </table>
+    </div>
   </div>
 </template>

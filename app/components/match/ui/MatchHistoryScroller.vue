@@ -2,14 +2,15 @@
 import { DynamicScroller, DynamicScrollerItem } from 'vue-virtual-scroller'
 import 'vue-virtual-scroller/dist/vue-virtual-scroller.css'
 
-const { summoner } = defineProps<{
+const { summoner, puuid } = defineProps<{
   summoner: Summoner
+  puuid: string
 }>()
 
 const matches = computed(() => summoner.matches)
 const ms = useMatchStore()
 
-const { filteredMatches } = useFilteredMatches(matches, summoner.puuid, ms.mf)
+const { filteredMatches } = useFilteredMatches(matches, puuid, ms.mf)
 
 const safeFilteredMatches = computed(() => filteredMatches.value ?? [])
 

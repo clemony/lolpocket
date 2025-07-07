@@ -20,10 +20,10 @@ const isOpen = ref(false)
       <div
         class="field grid justify-center **:select-none text-2 shadow-warm-soft overflow-visible bg-b2/30 drop-shadow-xs border-b3/40 w-full p-0  @container/match min-w-134 cursor-pointer group/collapse ">
         <CollapsibleTrigger class="flex gap-7 py-6 w-full items-start overflow-hidden  cursor-pointer group/collapse pl-6 pr-4 ">
-          <div class="flex w-38 h-full **:select-none flex-col justify-start gap-1.5">
+          <div class="flex w-38 h-full **:select-none flex-col justify-start gap-1">
             <WinLossButton v-if=" player.teamId && match" :player="player" :match="match" />
 
-            <div class="font-medium dst tracking-tight text-left w-full space-y-1 ">
+            <div class="font-medium dst  text-left w-full space-y-1.25 ">
               <MatchQueue v-if="match.queueId" as="p" class="text-2 text-left text-nowrap" :queue-id="match.queueId" />
 
               <MatchMap v-if="match.info.mapId" :id="match.info.mapId" as="p" class="text-2" />
@@ -73,7 +73,7 @@ const isOpen = ref(false)
         <CollapsibleContent class=" CollapsibleContent w-full ">
           <Separator class="!bg-b3/60" />
 
-          <MatchCollapse :match="match" />
+          <LazyMatchCollapse :match="match" />
         </CollapsibleContent>
       </div>
     </Collapsible>

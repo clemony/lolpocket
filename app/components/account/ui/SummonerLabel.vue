@@ -20,7 +20,7 @@ const account = computed (() => {
 <template>
   <div class="flex  w-full h-fit items-center gap-5 ">
     <div class=" size-fit grid place-items-center rounded-full drop-shadow-sm  shadow-sm shrink-0 relative">
-      <ProfileSummonerIcon v-if="account" :account="account" class="size-15 rounded-full" />
+      <AccountSummonerIcon v-if="account" :account="account" class="size-15 rounded-full" />
     </div>
 
     <div class="flex flex-col grow justify-center gap-1.5 drop-shadow-sm">

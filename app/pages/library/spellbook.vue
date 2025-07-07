@@ -24,7 +24,7 @@ const selectedSpell = computed (() => ix.spellById(selectedSpellId.value))
           <div v-for="spell in ix.spells" :key="spell.name" v-tippy="spell.name" class="size-fit">
             <label class="btn    py-2 !cursor-pointer btn-ghost px-2.5  size-27  has-checked:bg-b3/70 has-checked:border-b3 has-checked:shadow-sm hover:bg-b2 hover:border-b3   ">
 
-              <img :src="`/img/spells/${spell.name?.toLowerCase()}.webp`" class="size-22 rounded-lg shadow-sm inset-shadow-sm shadow-black/20 border border-b3 peer-checked:border-neutral/90" />
+              <img :src="`/img/spells/${spell.name}.webp`" class="size-22 rounded-lg shadow-sm inset-shadow-sm shadow-black/20 border border-b3 peer-checked:border-neutral/90" />
 
               <input v-model="selectedSpellId" type="radio" class="peer hidden" :value="spell.id" />
             </label>
@@ -64,7 +64,7 @@ const selectedSpell = computed (() => ix.spellById(selectedSpellId.value))
         <div :key="selectedSpell.name" class="flex flex-col gap-14 w-160 transition-all duration-300">
           <div class="border-b3/80 rounded-xl shadow-smooth pt-7 pb-8 px-9  w-full border flex max-h-min flex-col gap-6 transition-all duration-300">
             <div class="w-full flex gap-6 i-c">
-              <img :src="`/img/spells/${selectedSpell.name.toLowerCase()}.webp`" class="rounded-lg shadow-sm  shadow-black/20 size-24" />
+              <img :src="`/img/spells/${selectedSpell.name}.webp`" class="rounded-lg shadow-sm  shadow-black/20 size-24" />
 
               <div class="h-full grid items-between py-2">
                 <p class="font-medium">

@@ -6,31 +6,42 @@ import {
   useForwardProps,
 } from 'reka-ui'
 
-const props = defineProps<NavigationMenuViewportProps & { class?: HTMLAttributes['class'], align?: Align }>()
+const props = defineProps<NavigationMenuViewportProps & {
+  class?: HTMLAttributes['class']
+  align?: Align
+  wrapperClass?: HTMLAttributes['class']
+}>()
 
 const delegatedProps = reactiveOmit(props, 'class')
 
 const forwarded = useForwardProps(delegatedProps)
 
+const target = ref<HTMLElement | null>(null)
+console.log('💠 - target:', target)
+
+watch(() => target.value?.dataset?.state, (newVal) => {
+  console.log('💠 - watch - newVal:', newVal)
+})
+
 const variants = {
   visible: {
     opacity: 1,
-    transform: 'translate(0, 0)',
     scale: 1,
+
   },
   hidden: {
     opacity: 0,
-    transform: 'translate(0, 12px)',
-    scale: 0.6,
+    scale: 0.8,
   },
 }
 </script>
 
 <template>
-  <div class="absolute left-0 top-full flex justify-center  ">
+  <div :class="cn('absolute left-0 top-full grid justify-center')">
     <AnimatePresence>
       <NavigationMenuViewport
-      :align="props.align"
+        ref="target"
+        :align="props.align"
         v-bind="forwarded"
         as-child>
         <motion.div
@@ -38,15 +49,18 @@ const variants = {
           initial="hidden"
           animate="visible"
           exit="hidden"
+          :style="{
+            width: 'var(--reka-navigation-menu-viewport-width)',
+            height: 'var(--reka-navigation-menu-viewport-height)',
+          }"
           :class="
             cn(
-              'origin-top-center relative  h(--reka-navigation-menu-viewport-height)  w-(--reka-navigation-menu-viewport-width)',
+              '  bg-blend-screen items-center bg-b1/92 backdrop-blur-md overflow-hidden  border border-b3 rounded-xl  text-bc shadow-lg shadow-black/10 relative justify-center grid ',
               props.class,
             )
           ">
-          <slot  />
-
-      </motion.div>
+          <slot />
+        </motion.div>
       </NavigationMenuViewport>
     </AnimatePresence>
   </div>

@@ -8,7 +8,7 @@ const { scrollRef, scrollProg } = defineProps<{
 }>()
 
 const progressRef = useMotionValue(scrollProg)
-
+const {greaterOrEqual, lessThan} = useBreakpoint('x1024')
 const progress = [
   useTransform(progressRef.get(), [0.1, 0.3], ['0%', '110%']),
   useTransform(progressRef.get(), [0.3, 0.5], ['0%', '110%']),
@@ -64,13 +64,14 @@ const steps = [
 
 <template>
   <motion.div
-    class="[&_hr]:bg-b2 pt-46  bg-b1 border-b2/30 relative z-10 w-full border-t px-18 pb-6 [&_hr]:mx-16"
+    class="[&_hr]:bg-b2 pt-46  bg-b1 border-b2/30 relative z-1 w-full border-t px-18 pb-6 [&_hr]:mx-16"
 
     :initial="{ boxShadow: '0 0 0 0 #00000000' }"
     :while-in-view="{ boxShadow: '0px -10px 20px 5px #00000010' }">
     <ul
-      class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical    ">
-      <li v-for="(step, i) in steps" :key="i" class="w-full group relative ">
+      class="timeline timeline-snap-icon  timeline-vertical    " >
+      <li v-for="(step, i) in steps" :key="i" class="group relative  " :class="cn('',
+            { '!grid-cols-1 !justify-start !-left-20': lessThan, },)">
         <div class="timeline-middle drop-shadow-sm rounded-full scale-110 z-2" :class="{ 'bg-b2 ': isShown[i] && !isShown?.[i].value }">
           <Motion
             as-child
@@ -89,7 +90,7 @@ const steps = [
 
           :initial="{
             opacity: 0,
-            transform: isEven(i) ? 'translateX(-30%)' : 'translateX(30%)',
+            transform: isEven(i)  && greaterOrEqual ? 'translateX(-30%)' : 'translateX(30%)',
           }"
           :while-in-view="{
             opacity: [0.4, 1],
@@ -105,8 +106,9 @@ const steps = [
             visualDuration: 0.5,
             bounce: 0.2,
           }"
-          class=" group-last:ml-16 relative grid justify-center  pb-44 max-w-160 mb-10 w-full will-change-[transform,opacity]"
-          :class="isEven(i) ? 'timeline-start  md:text-end' : 'timeline-end'">
+          :class="cn( 'group-last:ml-16 relative grid  pb-44 max-w-160 mb-10 w-full will-change-[transform,opacity] justify-start',
+            isEven(i) && greaterOrEqual ?  'timeline-start  md:text-end' : 'timeline-end'
+            )">
           <p class="font-mono italic py-2 dst text-4">
             Step {{ i }}
           </p>
@@ -125,18 +127,20 @@ const steps = [
         </motion.div>
 
         <motion.hr
-          v-if="scrollProg" class="group-last:hidden !bg/b2 !mt-2 !w-1.25  relative grid items-start !rounded-full overflow-hidden">
+          v-if="scrollProg" class="group-last:hidden !bg/b2 !mt-2 !w-0.75  relative grid items-start !rounded-full overflow-hidden">
           <motion.hr
             v-if="isShown[i] && isShown?.[i].value"
             :style="{
               scaleY: progress[i] || 0 }"
-            class="group-last:hidden absolute origin-top  !bg-linear-to-b from-neutral/40 via-neutral/70 to-neutral/30 border-l border-dashed  size-full starting:scale-y-0 !overflow-visible !rounded-full  -top-1.5 -left-16">
+            class="group-last:hidden absolute origin-top !bg-neutral/70  size-full starting:scale-y-0 !overflow-hidden !rounded-full  -top-1.5 -left-16">
           </motion.hr>
         </motion.hr>
       </li>
     </ul>
   </motion.div>
 </template>
+<!-- w-1/2 after:h-600 after:absolute after:border-r after:scale-y-600   after:overflow-hidden after:border-dashed after:shrink-0-->
+<!-- linear-to-b from-neutral/40 via-neutral/70 to-neutral/30 -->
 <!-- !bg-linear-to-b from-neutral/40 via-neutral/70 to-neutral/30 border-r border-dashed w-1/2  -->
 <style scoped>
 .bg-dashed {

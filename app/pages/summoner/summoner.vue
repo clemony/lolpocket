@@ -7,19 +7,17 @@ definePageMeta({
 })
 
 const as = useAccountStore()
-const user = computed (() => as.userAccount)
-console.log('💠 - user:', user)
 const router = useRouter()
 
 onMounted(() => {
-  if (user.value?.riot.puuid) {
-    router.replace(`/summoner/${user.value.riot.puuid}`)
+  if (as.userAccount.riot.puuid) {
+    router.replace(`/summoner/${as.userAccount.riot.puuid}`)
   }
 })
 </script>
 
 <template>
-  <div v-if="!user?.riot.puuid">
+  <div v-if="!as.userAccount.riot.puuid">
     <!-- build search later -->
   </div>
 

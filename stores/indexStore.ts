@@ -10,7 +10,7 @@ export const useIndexStore = defineStore(
     const maps = ref<MapIndex[]>([])
     const shards = ref<Shard[]>([])
     const skin = ref<SkinRecord>()
-    const spells = ref<Spell[]>([])
+    const spells = ref<Record<string, string | number>[]>([])
     const skins = ref<FullSkinRecord>({})
 
     async function loadSkins() {
@@ -31,6 +31,12 @@ export const useIndexStore = defineStore(
       items.value = itemIndex
     }
 
+    async function loadSpells() {
+      if (spells.value.length) return
+      const { spellIndex } = await import("data/index/spell-index")
+      spells.value = spellIndex
+    }
+
     async function loadBaseSkins() {
       if (skin?.value?.centeredPath) return
       const { baseSkin } = await import("data/index/skins-base")
@@ -49,11 +55,19 @@ export const useIndexStore = defineStore(
       paths.value = pathIndex
     }
 
+    async function loadMaps() {
+      if (maps.value.length) return
+      const { mapIndex } = await import("data/index/map-index")
+      maps.value = mapIndex
+    }
+
     async function loadDefaults() {
       loadChamps()
       loadItems()
+      loadSpells()
       loadBaseSkins()
       loadRunes()
+      loadMaps()
     }
 
     function findInIndex<T extends Record<string, any>>(

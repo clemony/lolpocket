@@ -36,11 +36,12 @@ export function deletePocket(pocket) {
       }
     )
 
-    constructNotification(
-      `Pocket ${pocket.name} sent to trash.`,
-      pocket.key,
-      "deletePocket"
-    )
+    const vars = {
+      pocketKey: pocket.key,
+      pocketName: pocket.name,
+    }
+
+    saveNotificationData(vars, "deletePocket")
   }
 }
 

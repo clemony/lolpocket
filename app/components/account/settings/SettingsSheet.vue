@@ -1,18 +1,9 @@
 <script lang="ts" setup>
-import { ListboxContent, ListboxItem, ListboxRoot, VisuallyHidden } from 'reka-ui'
-import {
-  DrawerClose,
-  DrawerContent,
-  DrawerPortal,
-  DrawerTrigger,
-} from 'vaul-vue'
+import { DrawerTrigger } from 'vaul-vue'
 
 const as = useAccountStore()
-function handleChange(theme) {
-  as.dataTheme = theme
-  as.themeClass = theme
-  document.documentElement.setAttribute('data-theme', theme)
-}
+
+const tabs = ref('App')
 </script>
 
 <template>
@@ -22,34 +13,56 @@ function handleChange(theme) {
     </DrawerTrigger>
 
     <LazyDrawerContent side="right">
-      <div class="grid max-w-140 h-screen max-h-screen gap-6 px-0 pt-6 overflow-hidden ">
-        <DrawerHeader>
-          <DrawerTitle>
-            Settings
-          </DrawerTitle>
+      <div class="flex flex-col max-w-140 h-screen max-h-screen gap-6 px-0 pt-6 overflow-hidden ">
+        <Tabs v-model:model-value="tabs">
+          <DrawerHeader class="px-0 pb-0 flex mb-6 px-6 items-center justify-between gap-8  w-full  ">
+            <DrawerTitle>
+              Settings
+            </DrawerTitle>
 
-          <VisuallyHidden>
-            <DrawerDescription>Modify Account Details</DrawerDescription>
-          </VisuallyHidden>
-        </DrawerHeader>
+            <Hide>
+              <DrawerDescription>Modify Account Details</DrawerDescription>
+            </Hide>
 
-        <SettingsAccount />
+            <IndicatorTabsList class="**:!font-medium  grid-cols-2 *:w-26">
+              <IndicatorTabsTrigger value="App">
+                App
+              </IndicatorTabsTrigger>
 
-        <div class="w-full h-full px-6">
-          <SettingsGeneral />
+              <IndicatorTabsTrigger value="Account">
+                Account
+              </IndicatorTabsTrigger>
 
-          <p class="font-semibold tracking-tight  text-5 w-full h-6 border-b border-b-b3 text-end -mb-6">
-            Themes
-          </p>
-        </div>
+              <TabIndicator class="-bottom-0.25" />
+            </IndicatorTabsList>
+          </DrawerHeader>
 
-        <ListboxRoot v-model:model-value="as.dataTheme" class="w-full   overflow-y-scroll overscroll-auto z-0 " :multiple="false" @entry-focus.prevent @update:model-value="handleChange(as.dataTheme)">
-          <ListboxContent class="w-full grid py-8 gap-6  px-6">
-            <ListboxItem v-for="theme in themes" :key="theme.name" :value="theme.name" class=" grid gap-3 rounded-box cursor-pointer  focus:outline-0 hover:border-b3  hover:bg-b3/30  py-1.5   shrink-0 w-full items-center  dst" :class="{ 'bg-b2 border-b3 shadow-sm inset-shadow-sides bg-noise inset-shadow-b3/10': theme.name == as.dataTheme }">
-              <ThemeCard :theme="theme" />
-            </ListboxItem>
-          </ListboxContent>
-        </ListboxRoot>
+          <TransitionSlide group :offset="[-16, 0]">
+            <TabsContent v-if="tabs == 'App'" value="App" class="flex flex-col w-130 h-screen max-h-screen gap-6 px-6  overflow-hidden ">
+              <SettingsGeneral />
+
+              <p class="w-full border-b font-semibold    text-5 w-full h-7  border-b-b3">
+                Themes
+              </p>
+
+              <SettingsTheme />
+            </TabsContent>
+
+            <TabsContent v-if="tabs == 'Account'" value="Account" class="flex flex-col w-130 h-screen max-h-screen gap-8 px-6 overflow-hidden ">
+              <p class="w-full border-b mt-6 font-semibold text-5 w-full h-7  border-b-b3">
+                Connected Accounts
+              </p>
+
+              <SettingsAccount />
+
+              <p class="w-full border-b font-semibold   text-5 w-full h-7 pb-4 border-b-b3">
+                Notifications
+              </p>
+
+              <SettingsNotifications />
+            </TabsContent>
+          </TransitionSlide>
+        </Tabs>
 
         <div class="h-8" />
 

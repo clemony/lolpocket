@@ -15,8 +15,6 @@ whenever(keys.shift_a, () => {
 
 <template>
   <Sheet v-model:open="isOpen">
-    <SheetTrigger :class="cn('', className)" class="btn-xs btn-ghost btn-square grid place-items-center shrink-0">
-    </SheetTrigger>
 
     <LazyNestedSheetContent class="h-screen max-h-screen overflow-hidden ">
       <SheetHeader>

@@ -43,9 +43,7 @@ export default antfu({
         },
       },
     ],
-    'vue/padding-line-between-tags': ['warning', [
-      { blankLine: 'always', prev: '*', next: '*' },
-    ]],
+    'vue/padding-line-between-tags': 'warn',
     'vue/padding-line-between-blocks': ["error", "always"]
   },
   formatters: {

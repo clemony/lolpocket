@@ -10,27 +10,28 @@ export function useSummonerMastery(queryPuuid?: string) {
   async function fetchSummonerMastery(options?: { force?: boolean }) {
     const now = Date.now()
     const tooOld = !cs.lastFetchedAt || now - cs.lastFetchedAt > SIX_HOURS
-    const needsFetch = options?.force || tooOld || !Object.keys(cs.summonerMastery).length
+    const needsFetch =
+      options?.force || tooOld || !Object.keys(cs.summonerMastery).length
 
-    if (!queryPuuid || !needsFetch)
-      return
+    if (!queryPuuid || !needsFetch) return
 
     loading.value = true
     try {
-      const { puuid, mastery } = await $fetch('/api/shieldbow/get-summoner-mastery', {
-        query: { puuid: queryPuuid },
-      })
+      const { puuid, mastery } = await $fetch(
+        "/api/riot/get-summoner-mastery",
+        {
+          query: { puuid: queryPuuid },
+        }
+      )
 
       cs.summonerMastery = mastery
       cs.lastFetchedAt = now
       as.userAccount.riot.puuid = puuid // Optional: update puuid if needed
 
       ready.value = true
-    }
-    catch (e) {
-      console.error('Error fetching mastery:', e)
-    }
-    finally {
+    } catch (e) {
+      console.error("Error fetching mastery:", e)
+    } finally {
       loading.value = false
     }
   }

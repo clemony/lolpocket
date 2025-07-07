@@ -3,7 +3,6 @@ const props = defineProps<{
   match: any
 }>()
 
-const us = useUiStore()
 
 const match = computed (() => {
   return props.match
@@ -29,12 +28,14 @@ watch(
 </script>
 
 <template>
-  <Tabs default-value="Scoreboard" class="pt-14 relative">
-    <TabsList class="absolute top-4.25 right-6">
-      <TabsTrigger v-for="tab in list" :key="tab" :value="tab" class="cursor-pointer">
+  <Tabs v-model:model-value="modelValue" class="pt-14 relative">
+    <IndicatorTabsList class="absolute grid-cols-3 top-4.25 right-6">
+      <IndicatorTabsTrigger v-for="tab in list" :key="tab" :value="tab" class="cursor-pointer">
         {{ tab }}
-      </TabsTrigger>
-    </TabsList>
+      </IndicatorTabsTrigger>
+
+      <TabIndicator  />
+    </IndicatorTabsList>
 
     <TabsContent value="Scoreboard" class="px-2 ">
       <LazyMatchScoreboard :match="match" :blue="blue" :red="red" />

@@ -18,11 +18,12 @@ declare global {
   interface UserInbox {
     messages: InboxItemMsg[]
     notifications: InboxItem[]
+    newMessages: number
+    newNotifications: number
   }
 
   interface InboxItem {
-    title: string
-    badge?: string
+    template?: string
     vars?: Record<string, string>
     time: Date
     message?: string

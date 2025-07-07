@@ -3,9 +3,13 @@ import { LayoutGroup } from 'motion-v'
 
 const route = useRoute()
 const puuid = computed (() => route.params.puuid.toString())
-const { summoner, fetchSummoner, loading, ready } = useSummoner(puuid.value)
+const { summoner, fetchSummoner, loading, ready, forceReload } = useSummoner(puuid.value)
 console.log('💠 - summoner:', summoner)
 
+const as = useAccountStore()
+const {fetchInitialMatches, matchData} = useInitialMatchSync(as.userAccount.riot.puuid)
+console.log("💠 - matchData:", matchData)
+fetchInitialMatches()
 definePageMeta({
   name: 'summoner',
   title: 'Summoner Profile',
@@ -13,7 +17,7 @@ definePageMeta({
   path: '/summoner/:puuid',
   search: false,
 })
-
+//forceReload()
 onMounted (() => {
   fetchSummoner()
 })
@@ -33,11 +37,11 @@ onMounted (() => {
 
         <LayoutGroup>
           <transition-expand group class="gap-8 flex flex-col items-start gap-8 pt-2">
-            <RankCard v-if="summoner.ranked.solo.tier != 'UNRANKED'" title="Solo/Duo" :entry="summoner.ranked.solo" />
+            <RankCard v-if="summoner.ranked?.solo" title="Solo/Duo" :entry="summoner.ranked.solo" />
 
             <Unranked v-else title="Solo/Duo" />
 
-            <RankCard v-if="summoner.ranked.flex.tier != 'UNRANKED'" title="Flex" :entry="summoner.ranked.flex" />
+            <RankCard v-if="summoner.ranked?.flex" title="Flex" :entry="summoner.ranked.flex" />
 
             <Unranked v-else title="Flex" />
 
@@ -56,7 +60,7 @@ onMounted (() => {
     </div>
 
     <div class=" grid items-center  relative  w-[57%]  pl-2  ">
-      <MatchHistoryScroller v-if="puuid" :puuid="puuid" :summoner="summoner" />
+      <MatchHistoryScroller v-if="puuid && summoner" :puuid="puuid" :summoner="summoner" />
     </div>
   </div>
 </template>
