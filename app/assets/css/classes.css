@@ -16,7 +16,7 @@
   }
 
   .ring-check {
-    @apply has-checked:ring has-checked:ring-neutral/50 has-checked:ring-offset-2 has-checked:ring-offset-b2/90  hover:ring hover:ring-neutral/50 hover:ring-offset-2 hover:ring-offset-b2/90 transition-all duration-150 drop-shadow-sm  shadow-sm has-checked:grayscale-0;
+    @apply has-checked:ring has-checked:ring-n1/50 has-checked:ring-offset-2 has-checked:ring-offset-b2/90  hover:ring hover:ring-n1/50 hover:ring-offset-2 hover:ring-offset-b2/90 transition-all duration-150 drop-shadow-sm  shadow-sm has-checked:grayscale-0;
   }
   .ability-effect {
     @apply inline-block justify-self-center align-middle not-first:ml-2 not-first:pl-4 not-first:border-l not-first:border-l-b4  drop-shadow-text not-first:not-nth-of-type-2:pt-3 nth-of-type-2:mt-3 leading-5;

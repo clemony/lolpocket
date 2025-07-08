@@ -1,96 +1,97 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
-[data-theme='daylight'] {
+[data-theme="daylight"] {
   --b1: oklch(100% 0 0);
   --b2: oklch(95.12% 0 0);
   --b3: oklch(89% 0 0);
   --b4: oklch(79% 0 0);
   --bc: oklch(0% 0.02476 255.701624);
-  --neutral: oklch(0% 0.02476 255.701624);
+  --n3: oklch(29.68% 0 59.9);
+  --n2: oklch(22% 0% 68deg);
+  --n1: oklch(0% 0.02476 255.701624);
   --nc: oklch(87% 0 0);
-  --accent: oklch(29.68% 0 59.9);
 }
 
-[data-theme='dawn'] {
+[data-theme="dawn"] {
   --b1: oklch(97.04% 0.0029 84.56);
   --b2: oklch(94.91% 0.0067 53.44);
   --b3: oklch(89.96% 0.007 67.74);
   --bc: oklch(0% 0.02476 255.701624);
-  --neutral: oklch(27% 0.006 286.033);
+  --n1: oklch(27% 0.006 286.033);
   --nc: oklch(97.788% 0.004 56.375);
 }
 
-[data-theme='dusk'] {
+[data-theme="dusk"] {
   --b1: oklch(29% 0.018 264.15);
   --b2: oklch(33% 0.019 264.15);
   --b3: oklch(36% 0.012 262.18);
   --bc: oklch(84.8707% 0 0);
-  --neutral: oklch(84.8707% 0 0);
+  --n1: oklch(84.8707% 0 0);
   --nc: oklch(24.73% 0.0205 264.09);
 }
 
-[data-theme='midnight'] {
+[data-theme="midnight"] {
   --b1: oklch(22% 0 0);
   --b2: oklch(27% 0 0);
   --b3: oklch(31% 0 0);
   --b4: oklch(37% 0 0);
   --bc: oklch(87.609% 0 0);
-  --neutral: oklch(10% 0 0);
+  --n1: oklch(10% 0 0);
   --nc: oklch(80% 0 0);
 }
 
-[data-theme='cloudy'] {
+[data-theme="cloudy"] {
   --b1: oklch(95.814% 0 0);
   --b2: oklch(89.107% 0 0);
   --b3: oklch(82.4% 0 0);
   --bc: oklch(19.162% 0 0);
-  --neutral: oklch(26% 0 0);
+  --n1: oklch(26% 0 0);
   --nc: oklch(90.873% 0.007 51.902);
 }
 
-[data-theme='spring'] {
+[data-theme="spring"] {
   --b1: oklch(99% 0.001 12.422);
   --b2: oklch(93% 0.009 12.422);
   --b3: oklch(88% 0.018 12.422);
   --bc: oklch(37% 0 0);
-  --neutral: oklch(55% 0.046 257.417);
+  --n1: oklch(55% 0.046 257.417);
   --nc: oklch(92% 0.013 255.508);
 }
 
-[data-theme='summer'] {
+[data-theme="summer"] {
   --b1: #ecdfd5;
   --b2: #9ebec5;
   --b3: #a1959c;
   --bc: oklch(26% 0.007 34.298);
-  --neutral: #d99587;
+  --n1: #d99587;
   --nc: oklch(97% 0.013 17.38);
 }
-[data-theme='autumn'] {
+[data-theme="autumn"] {
   --b1: #635a53;
   --b2: #706a63;
   --b3: #5b5550;
   --bc: #ded9d6;
-  --neutral: ##534c48;
+  --n1: ##534c48;
   --nc: oklch(98% 0.016 73.684);
 }
-[data-theme='winter'] {
+[data-theme="winter"] {
   --b1: oklch(95.127% 0.007 260.731);
   --b2: oklch(45.229% 0.035 264.131);
-  --neutral: oklch(89.925% 0.016 262.749);
+  --n1: oklch(89.925% 0.016 262.749);
   --b3: oklch(93.299% 0.01 261.788);
   --bc: oklch(32.437% 0.022 264.182);
   --nc: oklch(45.229% 0.035 264.131);
 }
 
-:is([data-theme='daylight']),
-:is([data-theme='dawn']) {
+:is([data-theme="daylight"]),
+:is([data-theme="dawn"]) {
   .invert-light {
     @apply invert;
   }
 }
 
-:is([data-theme='dusk']),
-:is([data-theme='midnight']) {
+:is([data-theme="dusk"]),
+:is([data-theme="midnight"]) {
   .invert-dark {
     @apply invert;
   }
@@ -103,7 +104,9 @@
     --color-b3: var(--b3);
     --color-b4: var(--b4);
     --color-bc: var(--bc);
-    --color-neutral: var(--neutral);
+    --color-n3: var(--n3);
+    --color-n2: var(--n2);
+    --color-n1: var(--n1);
     --color-nc: var(--nc);
     --color-accent: var(--accent);
     /* base */

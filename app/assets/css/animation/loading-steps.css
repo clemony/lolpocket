@@ -21,7 +21,7 @@
   height: 34px;
   width: 34px;
   border-radius: 50%;
-  background: var(--color-neutral);
+  background: var(--color-n1);
   animation: loading-bounce 0.5s ease-in-out infinite alternate;
 }
 

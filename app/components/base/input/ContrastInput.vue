@@ -12,7 +12,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div :class="cn(' text-3 items-center gap-4  flex h-12 border py-3.5 px-3 input w-full  shadow-sm drop-shadow-sm !bg-neutral/85 inset-shadow-sm border-accent text-nc **:text-nc', props.class)">
+  <div :class="cn(' text-3 items-center gap-4  flex h-12 border py-3.5 px-3 input w-full  shadow-sm drop-shadow-sm !bg-n1/85 inset-shadow-sm border-accent text-nc **:text-nc', props.class)">
     <icon
       v-if="props.search"
       name="search"

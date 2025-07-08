@@ -8,7 +8,7 @@ function reset() {
 
 <template>
   <transition-fade group class="items-center flex">
-    <button v-if="cs.championFilter.role" class="btn !h-9 w-36 border-b3 border  btn-neutral pr-2.5 inset-shadow-xs inset-shadow-b3/53 shadow-sm drop-shadow-sm !bg-neutral/90 rounded-xl hover:opacity-90" @click="reset()">
+    <button v-if="cs.championFilter.role" class="btn !h-9 w-36 border-b3 border  btn-n1 pr-2.5 inset-shadow-xs inset-shadow-b3/53 shadow-sm drop-shadow-sm !bg-n1/90 rounded-xl hover:opacity-90" @click="reset()">
       <span class="grow">
         {{ cs.championFilter.role }}
       </span>

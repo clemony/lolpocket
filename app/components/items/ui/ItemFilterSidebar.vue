@@ -39,7 +39,7 @@ onMounted (() => {
         </IndicatorTabsList>
       </Tabs>
 
-      <ItemSearch class="input w-full mt-9 shadow-sm drop-shadow-sm !bg-neutral/85 inset-shadow-sm border-accent text-nc **:text-nc" />
+      <ItemSearch class="input w-full mt-9 shadow-sm drop-shadow-sm !bg-n1/85 inset-shadow-sm border-accent text-nc **:text-nc" />
     </div>
 
     <div class="px-5 mt-10 w-full">
@@ -82,7 +82,7 @@ onMounted (() => {
       </div>
 
       <button
-        class="btn w-[49%] btn-neutral bg-neutral/95 hover:opacity-85 font-normal "
+        class="btn w-[49%] btn-n1 bg-n1/95 hover:opacity-85 font-normal "
         @click="resetItems()">
         Reset Filters
       </button>

@@ -1,6 +1,6 @@
-@import 'tailwindcss';
-@import '../colors.css';
-@import '../theme.css';
+@import "tailwindcss";
+@import "../colors.css";
+@import "../theme.css";
 
 @utility col-span-all {
   column-span: all;
@@ -21,4 +21,20 @@
 
 @utility wp-* {
   width: --value(percentage);
+}
+
+@utility w-inherit {
+  width: inherit;
+}
+
+@utility h-inherit {
+  height: inherit;
+}
+
+@utility min-w-inherit {
+  min-width: inherit;
+}
+
+@utility min-h-inherit {
+  min-height: inherit;
 }

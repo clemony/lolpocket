@@ -7,7 +7,7 @@ const props = defineProps<{
 <template>
   <Popover>
     <div class="items-center size-full flex" :class="{ '**:pointer-events-none ': props.params.location == 'trash' }">
-      <PopoverTrigger :disabled="props.params.location == 'trash'" class="ti-container pointer-events-auto group cursor-pointer bg-gradient-to-br from-neutral/60 to-neutral grid place-items-center relative">
+      <PopoverTrigger :disabled="props.params.location == 'trash'" class="ti-container pointer-events-auto group cursor-pointer bg-gradient-to-br from-n1/60 to-n1 grid place-items-center relative">
         <div
           class="ti-wrapper group-hover:opacity-0 transition-all  duration-400 "
           :style="{

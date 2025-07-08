@@ -1,5 +1,5 @@
-@import 'tailwindcss';
-@import './theme';
+@import "tailwindcss";
+@import "./theme";
 
 @layer base {
   :root {
@@ -21,7 +21,7 @@
   --border: var(--color-b2);
   --input: var(--color-b2);
 
-  --primary: var(--color-neutral) !important;
+  --primary: var(--color-n1) !important;
   --primary-foreground: var(--color-nc);
 
   --secondary: var(--color-b3) !important;
@@ -49,7 +49,8 @@
 
   --sidebar-border: 220 13% 91%;
 
-  --sidebar-ring: 217.2 91.2% 59.8% --animate-accordion-down: accordion-down 0.2s ease-out;
+  --sidebar-ring: 217.2 91.2% 59.8% --animate-accordion-down: accordion-down
+    0.2s ease-out;
 
   --animate-accordion-up: accordion-up 0.2s ease-out;
 }

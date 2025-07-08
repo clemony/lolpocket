@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { Line } from 'vue-chartjs'
 import {
   CategoryScale,
   Chart as ChartJS,
@@ -9,6 +8,7 @@ import {
   Title,
   Tooltip,
 } from 'chart.js'
+import { Line } from 'vue-chartjs'
 
 const props = defineProps<{
   data: any
@@ -36,12 +36,12 @@ const options = {
     point: {
       hitRadius: 6,
       backgroundColor: `${styles.getPropertyValue('--color-nc')}`,
-      borderColor: `${styles.getPropertyValue('--color-neutral')}`,
+      borderColor: `${styles.getPropertyValue('--color-n1')}`,
       borderWidth: 1.5,
       hoverRadius: 4,
     },
     line: {
-      borderColor: `${styles.getPropertyValue('--color-neutral')}`,
+      borderColor: `${styles.getPropertyValue('--color-n1')}`,
       borderWidth: 1.5,
       tension: props.options.elements.line.tension,
       cubicInterpolationMode: props.options.elements.line.cubicInterpolationMode,

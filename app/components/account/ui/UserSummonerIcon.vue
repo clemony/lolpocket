@@ -18,7 +18,7 @@ console.log('💠 - summoner:', summoner.value.profileIcon)
 
     <div
       v-else
-      class="rounded-full avatar bg-neutral grid place-items-center text-nc text-2 pl-px pt-px size-full font-semibold">
+      class="rounded-full avatar bg-n1 grid place-items-center text-nc text-2 pl-px pt-px size-full font-semibold">
       LP
     </div>
 

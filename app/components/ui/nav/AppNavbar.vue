@@ -69,7 +69,7 @@ function resetInbox(e) {
       <NavigationMenuViewport class="!mt-2  w-(--reka-navigation-menu-viewport-width) h-(--reka-navigation-menu-viewport-height) " />
     </NavigationMenu>
 
-    <NavigationMenu ref="userNavRef" v-model:model-value="userNav" disable-pointer-leave-close class="justify-end">
+    <NavigationMenu ref="userNavRef" v-model:model-value="userNav" :disable-click-trigger="isDesktop()" disable-pointer-leave-close class="justify-end" @click="isDesktop() ? navigateTo('/backpack') : null">
       <NavigationMenuList class="justify-end px-1 z-1">
         <NavigationMenuItem v-for="item in userLinks" :key="item.name.toString()" :value="item.name">
           <NavigationMenuTrigger :arrow="false">

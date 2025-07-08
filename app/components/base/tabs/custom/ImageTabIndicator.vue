@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { motion } from 'motion-v'
-import { TabsIndicator } from 'reka-ui'
 import type { TabsIndicatorProps } from 'reka-ui'
+import { TabsIndicator } from 'reka-ui'
 
 defineOptions({ inheritAttrs: false })
 
@@ -45,7 +45,7 @@ const variants = {
       :class="cn(' -top-0 absolute transition-all rounded-lg ', { '!top-0 left-1': props.orientation == 'vertical' }, props.class)">
       <motion.div
         class="h-full w-full rounded-lg bg-b1 text-bc shadow"
-        :class="cn('   ', { 'shadow-sm shadow-black/3 !bg-b1/90 ': props.orientation == 'vertical', 'bg-neutral/80 border-accent border drop-shadow-sm ': props.contrast })" />
+        :class="cn('   ', { 'shadow-sm shadow-black/3 !bg-b1/90 ': props.orientation == 'vertical', 'bg-n1/80 border-accent border drop-shadow-sm ': props.contrast })" />
     </motion.div>
   </TabsIndicator>
 </template>

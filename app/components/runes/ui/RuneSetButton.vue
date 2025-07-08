@@ -33,7 +33,7 @@ const bgStyle = computed (() => {
   <div
     v-if="set"
     :key="setKey"
-    :class="cn('relative !pointer-events-auto size-20 cursor-pointer transition-all overflow-hidden duration-500 grid  hover:ring hover:ring-neutral/40  aspect-square rounded-xl  place-items-center overflow-visible hover:!bg-b2/60 ease-out hover:!border-b3/30 z-0 *:z-2 ', className, { 'tldr-50  ring ring-b3/60  inset-shadow-sm after:size-full after:absolute after:rounded-xl after:z-1 after:bg-b1/65  ': set == pocket.runes[rs.selectedRuneSet] && route.name == 'pocket runes' })" :style="bgStyle">
+    :class="cn('relative !pointer-events-auto size-20 cursor-pointer transition-all overflow-hidden duration-500 grid  hover:ring hover:ring-n1/40  aspect-square rounded-xl  place-items-center overflow-visible hover:!bg-b2/60 ease-out hover:!border-b3/30 z-0 *:z-2 ', className, { 'tldr-50  ring ring-b3/60  inset-shadow-sm after:size-full after:absolute after:rounded-xl after:z-1 after:bg-b1/65  ': set == pocket.runes[rs.selectedRuneSet] && route.name == 'pocket runes' })" :style="bgStyle">
     <input
       v-model="rs.selectedRuneSet"
       :value="setKey"

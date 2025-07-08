@@ -21,16 +21,12 @@ async function signInWithGoogle() {
 </script>
 
 <template>
-
   <button
     v-tippy="'Sign in with Google'" alt="Sign in with
-    Google"  class="btn  w-full group h-18 relative overflow-hidden   hover:!btn-neutral hover:bg-neutral/90 "
+    Google"  class="btn  w-full group h-18 relative overflow-hidden   hover:!btn-n1 hover:bg-n1/90 "
     @click="signInWithGoogle()">
-
-<div class="size-full relative grid place-items-center" >
-<hicon name="devicon-plain:google" :class="cn('absolute transition-opacity duration-200  dst size-7  group-hover:!text-nc text-bc/80  ')" />
-</div>
-</button>
+    <div class="size-full relative grid place-items-center">
+      <hicon name="devicon-plain:google" :class="cn('absolute transition-opacity duration-200  dst size-7  group-hover:!text-nc text-bc/80  ')" />
+    </div>
+  </button>
 </template>
-
-

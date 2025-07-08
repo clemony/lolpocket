@@ -17,7 +17,6 @@ watchEffect(() => {
   emit('update:open', isOpen.value)
 })
 
-
 const set = computed (() => set)
 function handleItem(e) {
   set.value[props.setIndex] = e
@@ -36,7 +35,7 @@ function handleItem(e) {
       <ItemSearch
         placeholder="Type or click a suggestion"
         input-class=" text-nc"
-        class="w-full rounded-t-lg z-2 sticky top-0 left-0   shadow-none h-13 [&_svg]:size-4 **:!text-nc !bg-accent border-neutral/30 border-4" set-focus @update:query="e => e" />
+        class="w-full rounded-t-lg z-2 sticky top-0 left-0   shadow-none h-13 [&_svg]:size-4 **:!text-nc !bg-accent border-n1/30 border-4" set-focus @update:query="e => e" />
 
       <div class="z-0 size-full ">
         <LazyItemCommandTags />

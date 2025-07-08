@@ -36,7 +36,7 @@ const roleStats = useMatchRoles(filteredSimplifiedNoRole)
             v-if="ms.mf.role == 'ALL' || ms.mf.role == role.role"
 
             v-tippy="{ content: `${role.displayName} - ${role.games} game${role.games > 1 ? 's' : ''}` }"
-            class="size-14 grid place-items-center " :class="cn({ 'bg-neutral border-neutral shadow-neutral/20 shadow-sm order-2  ': role.role == ms.mf.role, 'border-b3/80 btn  size-14  mr-0 btn-square': role.games })">
+            class="size-14 grid place-items-center " :class="cn({ 'bg-n1 border-n1 shadow-n1/20 shadow-sm order-2  ': role.role == ms.mf.role, 'border-b3/80 btn  size-14  mr-0 btn-square': role.games })">
 
             <input
               v-model="ms.mf.role" class="peer hidden absolute"

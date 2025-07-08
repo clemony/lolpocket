@@ -12,7 +12,7 @@ onMounted (() => {
 </script>
 
 <template>
-  <div class="pl-8 pt-19 relative w-120">
+  <div class="pl-8 pt-19 relative min-w-80">
     <!--       <Tabs v-model:model-value="model" class="absolute right-5.25 top-3.75 **:pointer-events-auto z-5">
         <IndicatorTabsList class="grid grid-cols-2 ">
           <IndicatorTabsTrigger value="Grid" @click="navigateTo('/items')">
@@ -50,10 +50,12 @@ onMounted (() => {
 
         <SidebarCollapsibleContent class="pb-6">
           <NuxtLink v-for="pocket in ps.pockets" :key="pocket.key" :to="`/pocket/${pocket.key}`">
-            <Btn v-if="pocket" class="w-full btn-md gap-3">
-              <PocketIcon :url="pocket.icon" class="size-5 rounded-full" size="29-2x" />
+            <Btn v-if="pocket" class="w-full btn-md gap-3 flex-nowrap text-nowrap">
+              <PocketIcon :url="pocket.icon" class="size-5 rounded-full" size="sm" />
 
-              {{ pocket.name }}
+              <span class="truncate">
+                {{ pocket.name }}
+              </span>
             </Btn>
           </NuxtLink>
         </SidebarCollapsibleContent>

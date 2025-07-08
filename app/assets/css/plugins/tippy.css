@@ -6,7 +6,7 @@
 }
 
 .tippy-box {
-  @apply shadow-md bg-neutral/80 text-nc/80 rounded-lg px-4 py-1.25 backdrop-blur-md;
+  @apply shadow-md bg-n1/80 text-nc/80 rounded-lg px-4 py-1.25 backdrop-blur-md;
 }
 
 .tippy-box[data-inertia][data-state="visible"] {
@@ -14,16 +14,16 @@
 }
 
 .tippy-box[data-placement^="top"] > .tippy-arrow::before {
-  border-top-color: neutral;
+  border-top-color: n1;
 }
 .tippy-box[data-placement^="bottom"] > .tippy-arrow::before {
-  border-bottom-color: neutral;
+  border-bottom-color: n1;
 }
 .tippy-box[data-placement^="left"] > .tippy-arrow::before {
-  border-left-color: neutral;
+  border-left-color: n1;
 }
 .tippy-box[data-placement^="right"] > .tippy-arrow::before {
-  border-right-color: neutral;
+  border-right-color: n1;
 }
 
 .tippy-box[data-theme~="basic"] {

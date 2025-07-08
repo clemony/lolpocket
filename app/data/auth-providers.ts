@@ -20,7 +20,7 @@ export const providers = [
       name: "logos:discord-icon",
       class: "size-8",
     },
-    model: providerMap.value.includes("discord"),
+    model: providerMap.value?.includes("discord"),
     component: Discord,
     class: "",
   },
@@ -29,7 +29,7 @@ export const providers = [
     icon: {
       name: "devicon:google",
     },
-    model: providerMap.value.includes("google"),
+    model: providerMap.value?.includes("google"),
     component: Google,
     class: "",
   },
@@ -38,8 +38,8 @@ export const providers = [
     icon: {
       name: "at",
     },
-    model: user.value.email != null,
-    id: user.value.email,
+    model: user.value?.email != null,
+    id: user.value?.email,
     component: EmailTrigger,
     class: "",
   },

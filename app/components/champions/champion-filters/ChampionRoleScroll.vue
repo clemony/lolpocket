@@ -19,9 +19,9 @@ function reset() {
         <label
           v-for="(role, i) in championRoles"
           :key="role + i"
-          class="btn has-checked:!bg-neutral has-checked:!text-nc has-checked:!border-neutral !rounded-lg-2 !bg-b2/20 shadow-sm shadow-black/7 border-b2 hover:!border-b3 hover:scale-110 tldr-30
+          class="btn has-checked:!bg-n1 has-checked:!text-nc has-checked:!border-n1 !rounded-lg-2 !bg-b2/20 shadow-sm shadow-black/7 border-b2 hover:!border-b3 hover:scale-110 tldr-30
         hover:drop-shadow-sm
-        hover:!bg-b3/40 has-checked:!shadow-neutral/20 btn-sm !text-3 mr-0 rounded-md font-medium tracking-normal capitalize checked:!shadow-sm"
+        hover:!bg-b3/40 has-checked:!shadow-n1/20 btn-sm !text-3 mr-0 rounded-md font-medium tracking-normal capitalize checked:!shadow-sm"
           :class="{ hidden: cs.championFilter.role && role != cs.championFilter.role }">
           <input
             v-model="cs.championFilter.role"

@@ -1,6 +1,6 @@
 /* @layer components {
   .my-toast {
-    @apply !bg-b1/97 backdrop-blur-md !border-b3 border !top-[3.6vh]  !shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] shadow-neutral/3 [&_div[data-title]]:!font-semibold [&_div[data-title]]:!tracking-tight [&_div[data-title]]:dst !-right-3 !pl-6;
+    @apply !bg-b1/97 backdrop-blur-md !border-b3 border !top-[3.6vh]  !shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] shadow-n1/3 [&_div[data-title]]:!font-semibold [&_div[data-title]]:!tracking-tight [&_div[data-title]]:dst !-right-3 !pl-6;
   }
 
   .my-toast-description {

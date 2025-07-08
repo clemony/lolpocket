@@ -17,7 +17,7 @@ const forwarded = useForwardProps(delegatedProps)
   <ContextMenuSubTrigger
     v-bind="forwarded"
     :class="cn(
-      'flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-2 outline-none focus:bg-b2 focus:text-neutral-bc data-[state=open]:bg-b2 data-[state=open]:text-neutral-bc',
+      'flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-2 outline-none focus:bg-b2 focus:text-n1-bc data-[state=open]:bg-b2 data-[state=open]:text-n1-bc',
       inset && 'pl-8',
       props.class,
     )">

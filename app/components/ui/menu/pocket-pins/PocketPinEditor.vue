@@ -39,7 +39,7 @@ const editor = [
     model: pinnedKeys.value,
     from: pocketKeys.value,
     value: as.userAccount.pockets.pinned,
-    class: 'col-start-3',
+    class: 'col-start-3 max-h-76',
     indicatorClass: 'translate-x-88   z-3',
     iconClass: '-rotate-90 *:text-b1',
     viewportClass: '-translate-y-130 translate-x-58.75',
@@ -65,10 +65,23 @@ const editor = [
           :delay-duration="1200"
           :skip-delay-duration="0"
           :class="cn('min-w-full max-w-full size-full relative  max-h-100', column.class)">
-          <div class="w-full justify-end rounded-t-box border-t border-x border-b3/60 overflow-hidden flex -z-1 no-drag absolute bg-b2/40 z-1 py-2 backdrop-blur-md top-0 left-0  px-6">
-            <h4 class="text-4">
+          <div class="w-full justify-between items-center rounded-t-box border-t border-x border-b3/60 overflow-hidden flex -z-1 no-drag absolute bg-b2/40 z-1 py-2 backdrop-blur-md top-0 left-0  px-6">
+            <h4 class="text-4 ">
               {{ column.name }}
             </h4>
+
+            <div v-if="i == 1" class="flex items-center drop-shadow-xs   join **:font-semibold rounded-lg    **:text-3 h-5.5  ">
+              <div class="join-item badge badge-n1 border-[color-mix(var(--color-n1),var(--color-white)_20%)]">
+                <span class="z-1">
+                  {{ as.userAccount.pockets.pinned.length }}
+                </span>
+              </div>
+
+              <span class="flex items-center badge border-b4 join-item z-0">
+                <!-- <icon name="slash" class="size-4.5 " /> -->
+                5
+              </span>
+            </div>
           </div>
 
           <VueDraggable
@@ -81,11 +94,11 @@ const editor = [
             chosen-class=""
             filter=".no-drag"
             :sortable="false"
-            class="w-full z-0  h-100 *:h-100 *:w-full inset-shadow-sm inset-shadow-black/3 field-box"
+            class="w-full z-0  h-full *:w-full inset-shadow-sm inset-shadow-black/3 field-box"
             @add="addPin($event, column.from, column.value)">
             <NavigationMenuList
 
-              class="flex flex-col scrollbar-hidden  max-h-100 gap-1 w-full h-100 px-2 pb-2 pt-9 items-start justify-start overflow-y-auto target">
+              class="flex flex-col scrollbar-hidden  max-h-100 gap-1 w-full h-100 px-2 pb-2 pt-9.5 items-start justify-start overflow-y-auto target">
               <PocketPeek v-for="pocketKey in column.value" :key="pocketKey" :pocket-key="pocketKey" />
 
               <NavigationMenuIndicator orientation="vertical" :class="column.indicatorClass" :icon-class="column.iconClass" />

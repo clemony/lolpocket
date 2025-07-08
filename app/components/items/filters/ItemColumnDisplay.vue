@@ -32,7 +32,7 @@ const filteredCols = computedAsync (() => cols.value.filter(c => c.getColDef().h
 
 <template>
   <DropdownMenu v-if="cols" :key="is.dbItemStatListKey" class="">
-    <DropdownMenuTrigger class=" w-full h-10 rounded-lg shadow-sm drop-shadow-sm !bg-neutral/85 inset-shadow-sm  items-center font-medium border-accent text-2 grow px-4  **:text-nc justify-start flex group/b">
+    <DropdownMenuTrigger class=" w-full h-10 rounded-lg shadow-sm drop-shadow-sm !bg-n1/85 inset-shadow-sm  items-center font-medium border-accent text-2 grow px-4  **:text-nc justify-start flex group/b">
       <span class="flex  !text-nc text-start justify-start grow">Hide Columns</span>
 
       <icon name="down-sm" class="group-data-[state=open]/b:rotate-180 tldr-20" />

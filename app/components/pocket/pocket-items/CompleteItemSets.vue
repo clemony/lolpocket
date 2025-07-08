@@ -32,7 +32,7 @@ const props = defineProps<{
       </template>
     </div>
   </div>
-  <!--     <div class="badge badge-neutral badge-xl absolute !py-5 px-7 rounded-2xl bg-neutral/80 backdrop-blur-md shadow-smooth drop-shadow-md -top-8 left-0 border border-neutral ring ring-1 ring-neutral ring-offset-1 ring-offset-neutral/60">
+  <!--     <div class="badge badge-n1 badge-xl absolute !py-5 px-7 rounded-2xl bg-n1/80 backdrop-blur-md shadow-smooth drop-shadow-md -top-8 left-0 border border-n1 ring ring-1 ring-n1 ring-offset-1 ring-offset-n1/60">
     </div> -->
 </template>
 

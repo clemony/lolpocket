@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { RadioGroupIndicator } from 'reka-ui'
 import type { AcceptableValue } from 'reka-ui'
+import { RadioGroupIndicator } from 'reka-ui'
 
 const props = defineProps<{
   class?: HTMLAttributes['class']
@@ -36,7 +36,7 @@ const props = defineProps<{
           damping: 20,
           duration: 1,
         }">
-        <icon name="codicon:circle-filled" class="size-5.25 -mt-px text-neutral  opacity-100 group-disabled:opacity-0 absolute" />
+        <icon name="codicon:circle-filled" class="size-5.25 -mt-px text-n1  opacity-100 group-disabled:opacity-0 absolute" />
       </Motion>
     </RadioGroupIndicator>
   </RadioGroupItem>

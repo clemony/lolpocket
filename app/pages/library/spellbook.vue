@@ -24,7 +24,7 @@ const selectedSpell = computed (() => ix.spellById(selectedSpellId.value))
           <div v-for="spell in ix.spells" :key="spell.name" v-tippy="spell.name" class="size-fit">
             <label class="btn    py-2 !cursor-pointer btn-ghost px-2.5  size-27  has-checked:bg-b3/70 has-checked:border-b3 has-checked:shadow-sm hover:bg-b2 hover:border-b3   ">
 
-              <img :src="`/img/spells/${spell.name}.webp`" class="size-22 rounded-lg shadow-sm inset-shadow-sm shadow-black/20 border border-b3 peer-checked:border-neutral/90" />
+              <img :src="`/img/spells/${spell.name}.webp`" class="size-22 rounded-lg shadow-sm inset-shadow-sm shadow-black/20 border border-b3 peer-checked:border-n1/90" />
 
               <input v-model="selectedSpellId" type="radio" class="peer hidden" :value="spell.id" />
             </label>

@@ -10,7 +10,7 @@ const copyMsg = computed (() => {
 </script>
 
 <template>
-  <footer class="h-32 max-h-32 flex min-h-32 w-full footer sm:footer-horizontal bg-neutral text-nc items-center p-6 z-2">
+  <footer class="h-32 max-h-32 flex min-h-32 w-full footer sm:footer-horizontal bg-n1 text-nc items-center p-6 z-2">
     <aside class="flex grow items-center gap-6">
       <h1 class="font-bold text-10">
         LP

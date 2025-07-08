@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <ContextMenuContent class="bg-neutral/85 border-accent !backdrop-blur-lg !rounded-xl min-w-60">
+  <ContextMenuContent class="bg-n1/85 border-accent !backdrop-blur-lg !rounded-xl min-w-60">
     <slot />
   </ContextMenuContent>
 </template>

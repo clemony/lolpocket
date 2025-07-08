@@ -64,7 +64,7 @@ export default defineAppConfig({
 
       // editing
       backspace: "iconamoon:backspace-light",
-      edit: "radix-icons:pencil-2",
+      edit: "material-symbols-light:edit-square-outline",
       erase: "radix-icons:eraser",
       pin: "iconoir:pin",
       "pin-solid": "iconoir:pin-solid",

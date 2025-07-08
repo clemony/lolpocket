@@ -1,14 +1,14 @@
 <script setup lang="ts">
+import { BarElement, CategoryScale, Chart as ChartJS, LinearScale, Title, Tooltip } from 'chart.js'
 import { nextTick, onMounted, ref, watch } from 'vue'
 import { Bar } from 'vue-chartjs'
-import { BarElement, CategoryScale, Chart as ChartJS, LinearScale, Title, Tooltip } from 'chart.js'
 
 const { champions } = defineProps<{
   champions: any
 }>()
 
 const styles = getComputedStyle(document.documentElement)
-ChartJS.defaults.color = styles.getPropertyValue('--color-neutral')
+ChartJS.defaults.color = styles.getPropertyValue('--color-n1')
 ChartJS.defaults.font.weight = 400
 ChartJS.defaults.scale.grid.color = getColorFromVariable('--color-b3')
 
@@ -33,8 +33,8 @@ const options = {
       bottom: 60,
     },
   },
-  backgroundColor: getColorFromVariable('--color-neutral'),
-  color: getColorFromVariable('--color-neutral'),
+  backgroundColor: getColorFromVariable('--color-n1'),
+  color: getColorFromVariable('--color-n1'),
   maxBarThickness: 32,
   barThickness: 32,
   responsive: true,

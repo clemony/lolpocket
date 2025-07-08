@@ -34,7 +34,7 @@ function handleReset() {
     <label
       v-for="rank in itemRanks"
       :key="rank"
-      class="!font-semibold   btn btn-sm  uppercase !text-0 group/filter  mr-0  " :class="{ '!bg-neutral !border-neutral text-nc !shadow-neutral/20 shadow-sm order-first  ml-12': is.itemFilter.rank && is.itemFilter.rank.includes(rank), 'first-of-type:ml-12': !is.itemFilter.rank || is.itemFilter.rank == null }">
+      class="!font-semibold   btn btn-sm  uppercase !text-0 group/filter  mr-0  " :class="{ '!bg-n1 !border-n1 text-nc !shadow-n1/20 shadow-sm order-first  ml-12': is.itemFilter.rank && is.itemFilter.rank.includes(rank), 'first-of-type:ml-12': !is.itemFilter.rank || is.itemFilter.rank == null }">
 
       <input
         v-model="is.itemFilter.rank" class="peer hidden absolute"

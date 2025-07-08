@@ -1,9 +1,11 @@
 <script lang="ts" setup>
-
+const { class: className } = defineProps<{
+  class?: HTMLAttributes['class']
+}>()
 </script>
 
 <template>
-  <p class="leading-tight text-2 normal-case text-pretty text-start">
+  <p :class="cn('leading-tight text-2 normal-case text-balanced text-start', className)">
     <slot />
   </p>
 </template>

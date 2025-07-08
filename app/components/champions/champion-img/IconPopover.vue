@@ -80,7 +80,7 @@ const isOpen = ref(false)
 <template>
   <Popover v-model:open="isOpen">
     <PopoverTrigger :class="cn('group/picon z-0 shrink-0 cursor-pointer self-center  size-14   rounded-full pointer-events-auto  aspect-square  grid place-items-center relative', props.class) ">
-      <PocketIcon :url=" pocket ? pocket?.icon : selectIcon" alt="pocket icon" class="group-hover/picon:brightness-50 pointer-events-none z-1 group-data-[state=open]/picon:brightness-50  tldr-30 shadow-sm drop-shadow-sm group-data-[state=open]/picon:ring group-data-[state=open]/picon:ring-offset-2 ring-neutral/40 ring-offset-b1 rounded-full" />
+      <PocketIcon :url=" pocket ? pocket?.icon : selectIcon" alt="pocket icon" class="group-hover/picon:brightness-50 pointer-events-none z-1 group-data-[state=open]/picon:brightness-50  tldr-30 shadow-sm drop-shadow-sm group-data-[state=open]/picon:ring group-data-[state=open]/picon:ring-offset-2 ring-n1/40 ring-offset-b1 rounded-full" />
 
       <icon name="images" class="size-6 !text-nc absolute opacity-0  group-hover/picon:opacity-80 z-2 transition-all pointer-events-none  duration-300 group-data-[state=open]/picon:opacity-100" />
     </PopoverTrigger>

@@ -36,7 +36,7 @@ watch(
       <input
         v-model="selected"
         type="checkbox"
-        class="checkbox checkbox-sm border-neutral/60 rounded-sm border"
+        class="checkbox checkbox-sm border-n1/60 rounded-sm border"
         @change="select($event)" />
     </label>
   </div>

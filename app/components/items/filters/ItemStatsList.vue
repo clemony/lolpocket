@@ -47,7 +47,7 @@ function handleReset() {
         v-for="stat in ''"
         :key="stat.id"
         v-model="to"
-        class="btn checked:bg-neutral checked:border-neutral checked:shadow-neutral/20 btn-sm !text-3 mr-0 rounded-md font-medium tracking-normal capitalize checked:shadow-sm"
+        class="btn checked:bg-n1 checked:border-n1 checked:shadow-n1/20 btn-sm !text-3 mr-0 rounded-md font-medium tracking-normal capitalize checked:shadow-sm"
         :value="stat.id"
         type="checkbox"
         name="categories"

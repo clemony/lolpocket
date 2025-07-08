@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { reactiveOmit } from '@vueuse/core'
+import type { SelectItemProps } from 'reka-ui'
 import {
   SelectItem,
   SelectItemIndicator,
@@ -7,7 +8,6 @@ import {
   SelectItemText,
   useForwardProps,
 } from 'reka-ui'
-import type { SelectItemProps } from 'reka-ui'
 
 const props = defineProps<SelectItemProps & { class?: HTMLAttributes['class'], noTick?: boolean }>()
 
@@ -21,7 +21,7 @@ const forwarded = useForwardProps(delegatedProps)
     v-bind="forwarded"
     :class="
       cn(
-        'relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-2 pr-8 text-2 outline-none focus:bg-b2 focus:text-neutral-bc data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
+        'relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-2 pr-8 text-2 outline-none focus:bg-b2 focus:text-n1-bc data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
         props.class,
       )
     ">

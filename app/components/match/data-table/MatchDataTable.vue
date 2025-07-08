@@ -216,8 +216,8 @@ const endGameStats = {
       spec: 'round',
     },
     {
-      id: 'neutral',
-      data: 'neutralMinionsKilled',
+      id: 'n1',
+      data: 'n1MinionsKilled',
     },
     {
       id: 'scuttle',

@@ -7,18 +7,18 @@
 /*  btn */
 
 @utility btn {
-  &:not(.btn-ghost):not(.btn-outline):not(.btn-neutral) {
+  &:not(.btn-ghost):not(.btn-outline):not(.btn-n1) {
     @apply items-center  bg-b2/60 border-b2 font-normal px-3 text-3 gap-3;
   }
 }
 
-@utility hover-neutral {
+@utility hover-n1 {
   &:hover {
-    @apply !bg-neutral/90 text-nc **:text-nc;
+    @apply !bg-n1/90 text-nc **:text-nc;
   }
 }
-@utility btn-neutral {
-  @apply text-nc bg-neutral *:text-nc hover:text-nc hover:bg-neutral/85 items-center [&_svg]:inline-flex align-middle px-3 font-normal text-3;
+@utility btn-n1 {
+  @apply text-nc bg-n1 *:text-nc hover:text-nc shadow-sm drop-shadow-sm hover:bg-n1/85 items-center [&_svg]:inline-flex align-middle px-3 font-normal text-3;
 }
 
 @utility btn-ghost {
@@ -53,7 +53,7 @@
   @apply rounded-lg shadow-standard shadow-black/2 **:text-3 flex gap-2 drop-shadow-text items-center  box-border;
 }
 
-@utility badge-neutral {
+@utility badge-n1 {
   @apply text-nc;
 }
 
@@ -70,7 +70,7 @@
 /* input */
 
 @utility input {
-  @apply focus-within:!outline-0 focus-within:!outline-offset-0   focus-within:!outline-0 focus-within:ring-neutral/60 focus-within:ring-1  h-12;
+  @apply focus-within:!outline-0 focus-within:!outline-offset-0   focus-within:!outline-0 focus-within:ring-n1/60 focus-within:ring-1  h-12;
   border-image-width: 0 !important;
   --input-color: var(--b3) !important;
 }

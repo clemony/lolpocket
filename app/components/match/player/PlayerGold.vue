@@ -9,7 +9,7 @@ const player = computed (() => {
 })
 
 const cs = computed (() => {
-  return player.value.totalMinionsKilled + player.value.neutralMinionsKilled + player.value.totalEnemyJungleMinionsKilled + player.value.totalAllyJungleMinionsKilled
+  return player.value.totalMinionsKilled + player.value.n1MinionsKilled + player.value.totalEnemyJungleMinionsKilled + player.value.totalAllyJungleMinionsKilled
 })
 </script>
 

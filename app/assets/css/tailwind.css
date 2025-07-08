@@ -14,7 +14,7 @@
   body,
   #app {
     font-family: var(--font-sans);
-    @apply text-3 subpixel-antialiased text-bc selection:bg-neutral/80 selection:text-nc overflow-hidden h-screen w-screen;
+    @apply text-3 subpixel-antialiased text-bc selection:bg-n1/80 selection:text-nc overflow-hidden h-screen w-screen;
   }
 
   input,
