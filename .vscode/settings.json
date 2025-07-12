@@ -11,6 +11,7 @@
   "[vue]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
+
   "tslint.enable": false,
   "cSpell.words": [
     "armpen",

@@ -1,24 +1,31 @@
 <script lang="ts" setup>
 const emit = defineEmits(['open:pins'])
 const as = useAccountStore()
+const ps = usePocketStore()
+
+console.log('💠 - as.userAccount.pockets.pinned.length:', as.userAccount.pockets.pinned.length)
 </script>
 
 <template>
   <TwoColNav class="overflow-hidden grid-rows-1 gap-6 size-full min-h-90 max-h-90 min-w-160 grid-cols-[0.8fr_1fr]">
-    <div class="h-full w-full gap-6 pr-1 items-center grid grid-rows-[1fr_0.4fr_0.6fr] col-start-1 overflow-hidden">
-      <NavMenuLink class="self-start pt-2 text-start " @click="navigateTo(backpackLinks[0].link)">
+    <div class="h-full w-full gap-3 pr-1 items-center grid auto-rows-max  overflow-hidden">
+      <NavMenuLink class="self-start pt-2 text-start group/navlink" @click="navigateTo(backpackLinks[0].link)">
         <NavMenuItemTitle>
-          <i-lol-backpack class="size-5 shrink-0 dst opacity-80" />
+          <i-lol-backpack class="size-5 shrink-0 dst opacity-84" />
 
           <h4 class="align-bottom">
             {{ backpackLinks[0].name }}
           </h4>
         </NavMenuItemTitle>
 
-        <NavBlurb class="mt-2 font-normal  text-bc/60" v-html="backpackLinks[0].blurb" />
+        <NavBlurb class="mt-1 font-normal  text-bc/60" v-html="backpackLinks[0].blurb" />
+
+        <p class="w-full justify-end normal-case text-end transition duration-200 flex font-medium text-bc/75 tracking-tight pt-2 pb-1 group-hover/navlink:text-bc group-hover/navlink:underline italic">
+          view all pockets...
+        </p>
       </NavMenuLink>
 
-      <NavigationMenuLink class=" btn btn-n1 w-full gap-2 font-medium text-2 justify-start pr-6 self-center" @click="addPocket()">
+      <NavigationMenuLink class=" btn btn-n1  w-full gap-2 font-medium text-2 justify-start pr-6 self-start" @click="addPocket()">
         <icon name="add-sm" class="text-nc  stroke-[1.5] mb-px shrink-0" />
 
         Create New Pocket
@@ -34,7 +41,7 @@ const as = useAccountStore()
             </h4>
           </NavMenuItemTitle>
 
-          <NavBlurb class=" px-0 mt-2  font-normal  text-bc/60">
+          <NavBlurb class=" px-0 mt-1  font-normal  text-bc/60">
             {{ item.blurb }}
           </NavBlurb>
         </NavMenuLink>
@@ -42,28 +49,67 @@ const as = useAccountStore()
     </div>
 
     <div class="size-full overflow-hidden relative before:h-[calc(100%-16px)] before:border-l before:w-px  before:left-0 before:top-[10px]  before:absolute before:border-b4/40 grid-rows-[26px_1fr] grid  pl-5">
-      <NavigationMenuLink class="mt-1.75  group/edit " @click="emit('open:pins')">
-        <NavMenuItemTitle class="gap-4  items-center w-full px-3.5">
-          <icon name="pin-solid" class="size-5 shrink-0 dst opacity-80" />
+      <!-- titlebar -->
 
-          <h4 class="grow">
+      <NavMenuItemTitle class="gap-4 mt-2  items-center w-full px-1 flex justify-between">
+        <span class="flex items-center gap-3">
+          <icon name="pin-solid" class="size-5 shrink-0 dst opacity-84" />
+
+          <h4>
             Pockets
           </h4>
+        </span>
 
-          <div class="z-1 items-center   *:transition-opacity *:duration-250 cursor-pointer flex gap-2">
-            <span class="opacity-0 text-2 group-hover/edit:underline underline-offset-2 group-hover/edit:opacity-60">
-              edit
-            </span>
+        <NavigationMenuLink v-tippy="'Edit pins'" class="flex  dst btn-xs btn btn-ghost !px-1 gap-0 group  hover:border-b3" @click="emit('open:pins')">
+          <div class="relative size-4 *:transition-opacity *:duration-200 pl-px group-hover:*:last:opacity-100  group-hover:*:first:opacity-0">
+            <icon name="pin" class="size-4 absolute" />
 
-            <icon name="edit" class="size-4.5 opacity-0 dst group-hover/edit:opacity-100" />
+            <icon name="pin-solid" class="size-4 absolute  opacity-0" />
           </div>
-        </NavMenuItemTitle>
-      </NavigationMenuLink>
 
-      <div class=" w-full max-w-full overflow-hidden h-full  py-2  items-end grid">
+          <icon name="add-sm" class="size-4 mt-0.25 -ml-0.25 group-hover:stroke-[1.4]" />
+        </NavigationMenuLink>
+      </NavMenuItemTitle>
+
+      <div class="size-full overflow-hidden  grow py-2 items-center grid-rows-3 grid-cols-2 gap-2 grid">
         <template v-for="pocketKey, i in as.userAccount.pockets.pinned" :key="pocketKey">
-          <LazyPocketLabel v-if="i < 5" :pocket-key="pocketKey" hydrate-on-visible />
+          <NavigationMenuLink v-if="i < 6" class="group/link size-full grid items-end rounded-field shadow-sm drop-shadow-sm overflow-hidden relative **:select-none select-none **:pointer-events-none" @click="navigateTo(`/pocket/${pocketKey}`)">
+            <LazyPocketPinButton :pocket-key="pocketKey" hydrate-on-visible />
+          </NavigationMenuLink>
         </template>
+
+        <NavigationMenuLink v-if="ps.pockets.length && !as.userAccount.pockets.pinned.length" as-child @click="emit('open:pins')">
+          <Badge variant="outline" class="!text-2 row-start-2 col-span-2 dst w-38 justify-self-center grid group/badge py-1.25 pl-3 *:leading-4.5">
+            <p class="inline-flex  gap-1 items-center  align-middle">
+              <span class="font-serif -mt-px font-black align-middle">
+                Protip:
+              </span>
+
+              <span>
+                &nbsp;Pin your
+              </span>
+
+              <br />
+            </p>
+
+            <p class="inline-flex">
+              favorite
+              <span class="group-hover/badge:underline  group-hover/badge:font-semibold transition-all duration-200">
+                &nbsp;pockets.
+              </span>
+            </p>
+          </Badge>
+        </NavigationMenuLink>
+
+        <NavigationMenuLink v-else-if="!ps.pockets.length" as-child @click="addPocket()">
+          <Badge variant="outline" class="!text-2 row-start-2 justify-self-center grid group/badge text-center py-1.25 leading-4.25">
+            No pockets yet!<br />
+
+            <p class="group-hover/badge:underline group-hover/badge:font-semibold transition-all duration-200">
+              Create one?
+            </p>
+          </Badge>
+        </NavigationMenuLink>
       </div>
     </div>
   </TwoColNav>

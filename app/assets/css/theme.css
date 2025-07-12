@@ -1,5 +1,26 @@
 @import "tailwindcss";
 
+:root {
+  @theme inline {
+    --color-b1: var(--b1);
+    --color-b2: var(--b2);
+    --color-b3: var(--b3);
+    --color-b4: var(--b4);
+    --color-bc: var(--bc);
+    --color-n3: var(--n3);
+    --color-n2: var(--n2);
+    --color-n1: var(--n1);
+    --color-nc: var(--nc);
+    --color-accent: var(--accent);
+    /* base */
+    --b2w2: color-mix(in oklch, var(--b2) 100%, white 20%);
+
+    --b2b1: color-mix(in oklch, var(--b2) 100%, black 10%);
+
+    --b3b1: color-mix(in oklch, var(--b3) 100%, black 50%);
+  }
+}
+
 @theme {
   --default-font-family:
     "Inter Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,

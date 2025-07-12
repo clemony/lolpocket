@@ -22,6 +22,7 @@ export default defineAppConfig({
       and: "mynaui:ampersand",
       "x-solid": "teenyicons:x-circle-solid",
       info: "teenyicons:info-outline",
+      "info-circle": "mdi:information-slab-circle-outline",
       slash: "radix-icons:slash",
 
       // check

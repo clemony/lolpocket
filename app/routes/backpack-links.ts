@@ -16,7 +16,7 @@ export const backpackLinks: LinkObject[] = [
     icon: {
       name: "trash",
     },
-    blurb: "A chance to grab it back for 30 days.",
+    blurb: "Self deletes after 30 days.",
   },
   {
     name: "Archive",
@@ -25,7 +25,7 @@ export const backpackLinks: LinkObject[] = [
     icon: {
       name: "archive",
     },
-    blurb: "Outdated or unfinished pockets.",
+    blurb: "Outdated or unfinished.",
   },
 ]
 

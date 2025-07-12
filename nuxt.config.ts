@@ -17,7 +17,6 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "nuxt-svgo",
     "motion-v/nuxt",
-    "@nuxtjs/tailwindcss",
   ],
 
   experimental: {
@@ -75,6 +74,9 @@ export default defineNuxtConfig({
     key: process.env.SUPABASE_KEY,
     redirect: false,
   },
+  /*   tailwindcss: {
+    exposeConfig: true,
+  }, */
 
   runtimeConfig: {
     supabaseUrl: process.env.NUXT_PUBLIC_SUPABASE_URL,
@@ -131,6 +133,12 @@ export default defineNuxtConfig({
 
   pinia: {
     storesDirs: ["./stores/**"],
+  },
+
+  postcss: {
+    plugins: {
+      "@tailwindcss/postcss": {},
+    },
   },
 
   alias: {

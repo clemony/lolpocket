@@ -11,7 +11,7 @@ const signInOpen = ref(false)
 
 onMounted(async () => {
   document.documentElement.setAttribute('data-theme', as.dataTheme ? as.dataTheme : 'midnight')
-  // useAuth()
+   useAuth()
   const us = useUiStore()
   const ix = useIndexStore()
   ix.loadDefaults()

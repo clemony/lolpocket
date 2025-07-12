@@ -9,6 +9,7 @@ export const useAccountStore = defineStore(
     const userNoShowDeletePocketConfirm = ref(false)
     const favoriteChamps = ref<Champion[]>([])
     const favoriteItems = ref<number[]>([])
+    const ps = usePocketStore()
 
     const currentSession = ref<CurrentSession>({
       session: null,

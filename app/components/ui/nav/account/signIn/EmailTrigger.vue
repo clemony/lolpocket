@@ -5,7 +5,7 @@ defineOptions({
 </script>
 
 <template>
-  <label class="btn  w-full group h-18 relative overflow-hidden  hover:!btn-n1 hover:bg-n1/90  ">
+  <label v-tippy="'Email'" class="btn  w-full group h-18 relative overflow-hidden  hover:!btn-n1 hover:bg-n1/90  ">
 
     <!-- <div class="size-8   -mt-px dst bg-center bg-contain relative grid place-items-center bg-[url('/assets/img/grayscale-grain.svg')] mask-[url('/assets/icons/ui/at.svg')]" />
 

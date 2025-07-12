@@ -26,8 +26,8 @@
     --color-secondary-content: var(--nc);
     --color-accent: var(--n1) !important;
     --color-accent-content: var(--nc);
-    --color-n1: var(--n1) !important;
-    --color-n1-content: var(--nc);
+    --color-neutral: var(--n1) !important;
+    --color-neutral-content: var(--nc);
     --color-info: var(--sorcery);
     --color-info-content: var(--sorcery-light);
     --color-success: var(--resolve);

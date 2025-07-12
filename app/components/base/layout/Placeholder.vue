@@ -16,7 +16,7 @@ const size = `${props.size}px`
 
 <template>
   <label
-    :class="cn('group pointer-events-none size-full items-center justify-center gap-2 self-center aspect-square btn btn-square  ', props.class)"
+    :class="cn('group pointer-events-none size-full items-center justify-center gap-2 self-center aspect-square btn btn-square !p-0 ', props.class)"
     :style="{
       height: size || `${width}px`,
       width: size || `${height}px`,

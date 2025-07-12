@@ -6,15 +6,11 @@ const emit = defineEmits(['open:sign-in'])
   <TwoColNav class="grid-rows-4 gap-6 p-4">
     <div class="row-span-4 col-start-1 size-full overflow-hidden flex flex-col gap-1">
       <SummonerCard @click="emit('open:sign-in')" />
-
-
-
-
     </div>
 
     <li class="size-full col-start-2 grid justify-end items-center">
-
       <icon name="streamline:interface-content-chart-product-data-analysis-analytics-graph-line-business-board-chart" />
+
       <h4 class="dst mb-1">
         Match Analytics
       </h4>

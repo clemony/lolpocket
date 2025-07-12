@@ -16,7 +16,7 @@ async function signInWithDiscord() {
 
 <template>
   <button
-    v-tippy="'Sign in with Discord'"
+    v-tippy="'Discord'"
     class="btn  w-full group h-18 relative overflow-hidden   hover:!btn-n1 hover:bg-n1/90 " alt="Sign in with
     Discord"
     @click="signInWithDiscord">

@@ -1,6 +1,12 @@
 <script setup lang="ts">
-const { pocketKey } = defineProps<{
+import { getRoleColor } from '~/data/formatting/role-colors'
+
+const { pocketKey, side, align, class: className, wrapperClass } = defineProps<{
   pocketKey?: string
+  side?: Side
+  align?: Align
+  class?: HTMLAttributes['class']
+  wrapperClass?: HTMLAttributes['class']
 }>()
 
 const ps = usePocketStore()
@@ -12,40 +18,58 @@ const pocket = computed<Pocket | null>(() => {
   return ps.pockets.find(p => p.key == pocketKey)
 })
 const ix = useIndexStore()
+
+const wrapper = 'rounded-full  !grid !place-items-center   !p-0 shadow-sm drop-shadow-sm !shrink-0 overflow-hidden'
 </script>
 
 <template>
-  <NavigationMenuItem class="w-full !justify-self-start self-start   min-w-full  max-w-full flex z-1">
-    <NavSimpleTrigger class="flex justify-start h-12 w-full gap-4 z-1">
-      <LazyPocketIcon :image="pocket.icon" class="size-9 rounded-full shrink-0" hydrate-on-visible />
+  <div :class="cn('w-full h-fit draggable', wrapperClass)">
+    <ContextMenu v-if="pocket">
+      <ContextMenuTrigger :class="cn(className)">
+        <slot />
+      </ContextMenuTrigger>
 
-      <span class="truncate text-nowrap">
-        {{ pocket.name }}
-      </span>
-    </NavSimpleTrigger>
+      <LazyContextMenuContent :align="align" :side="side" class=" isolate z-126  p-3  size-max  overflow-hidden !origin-top-left ">
+        <!-- <ContextMenuArrow class="**:bg-b1 **:fill-b1 **:stroke-b1 z-100 **:text-b1 visible" /> -->
 
-    <LazyNavigationMenuContent class="bg-b1 z-2 p-3 w-18 grid gap-3 grid grid-cols-1 gap-2 *:size-12.5 h-136 place-items-center *:rounded-full !origin-right">
-      <div v-if="pocket.champions[0]" class="grid place-items-center overflow-hidden shadow-sm drop-shadow-sm ">
-        <ChampionIcon :id="ix.champIdByKey(pocket.champions[0])" class="size-12" />
-      </div>
+        <div class="avatar-group items-center -space-x-3">
+          <!-- champ -->
 
-      <Placeholder v-else />
+          <div class="avatar !border-shade-6">
+            <Placeholder :class="cn(wrapper, 'size-15 ')">
+              <ChampionIcon v-if="pocket.champions[0]" :id="ix.champIdByKey(pocket.champions[0])" class="size-full" />
+            </Placeholder>
+          </div>
+          <!-- role -->
 
-      <div class="place-items-center grid">
-        <component :is="`i-roles-${pocket.roles[0].toLowerCase() ?? 'all'}`" class="size-6" />
-      </div>
+          <div class="avatar !border-shade-6 size-12">
+            <div :class="cn(' p-0.5 size-10 bg-n1', wrapper)">
+              <component :is="`i-roles-${pocket.roles[0].toLowerCase() ?? 'all'}`" :class="cn('!size-4 text-nc shrink-0')" />
+            </div>
+          </div>
+          <!-- rune -->
 
-      <Img v-if="pocket.runes[0].keystone" :img="`/img/runes/${ix.runeKeyById(pocket.runes[0].keystone)}.webp`" :alt="ix.runeNameById(pocket.runes[0].keystone).toString()" class="size-12 rounded-full" />
+          <div class="avatar !border-shade-6 size-12">
+            <div :class="cn(' p-0.5 size-10 bg-n1', wrapper)">
+              <Img v-if="pocket.runes[0].keystone" :img="`/img/runes/${ix.runeKeyById(pocket.runes[0].keystone)}.webp`" :alt="ix.runeNameById(pocket.runes[0].keystone).toString()" class="shrink-0 wrapper" />
+            </div>
+          </div>
 
-      <Placeholder v-else class="grid place-items-center ">
-        <i-lol-rune-icon class="text-bc" />
-      </Placeholder>
+          <div class="avatar !border-shade-6 size-12">
+            <div :class="cn(' p-0.5 size-10 bg-n1', wrapper)">
+              <Img v-if="pocket.runes[0][1].path" :img="`/img/runes/${pocket.runes[0][1].path}.webp`" :alt="pocket.runes[0][1].path" class="!h-4.5 !w-auto z-1" />
+            </div>
+          </div>
+        </div>
 
-      <template v-for="i in 6">
-        <Item v-if="pocket.items[0].items[i - 1]" :id="pocket.items[0].items[i - 1]" :key="i" :class="{ 'row-start-2': i <= 3, 'row-start-3': i < 3 }" />
+        <!-- items -->
 
-        <Placeholder v-else-if="i < 7" :key="`p${i}`" />
-      </template>
-    </LazyNavigationMenuContent>
-  </NavigationMenuItem>
+        <div class="grid grid-cols-6 place-items-center gap-1">
+          <Placeholder v-for="i in 6" :key="i" :class="cn(' size-12 ', wrapper)">
+            <Item v-if="pocket.items[0].items[i - 1]" :id="pocket.items[0].items[i - 1]" class="rounded-full size-full *:rounded-full" />
+          </Placeholder>
+        </div>
+      </LazyContextMenuContent>
+    </ContextMenu>
+  </div>
 </template>

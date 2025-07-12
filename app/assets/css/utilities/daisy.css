@@ -7,30 +7,22 @@
 /*  btn */
 
 @utility btn {
+  --btn-depth: 1;
+  --btn-noise: 1;
   &:not(.btn-ghost):not(.btn-outline):not(.btn-n1) {
-    @apply items-center  bg-b2/60 border-b2 font-normal px-3 text-3 gap-3;
+    @apply items-center   bg-b2/60 border-b2 font-normal px-3 text-3 gap-3;
   }
 }
 
-@utility hover-n1 {
-  &:hover {
-    @apply !bg-n1/90 text-nc **:text-nc;
-  }
-}
 @utility btn-n1 {
-  @apply text-nc bg-n1 *:text-nc hover:text-nc shadow-sm drop-shadow-sm hover:bg-n1/85 items-center [&_svg]:inline-flex align-middle px-3 font-normal text-3;
+  @apply text-nc bg-n1 btn-neutral  *:text-nc  hover:text-nc shadow-sm drop-shadow-sm border-n1 hover:bg-n1/85 items-center [&_svg]:inline-flex align-middle px-3 font-normal text-3;
+  &:hover {
+    @apply !bg-n1/80 text-nc **:text-nc;
+  }
 }
 
 @utility btn-ghost {
-  @apply text-3 font-normal gap-3 px-3;
-  &:hover {
-    @apply border-b3/40;
-    --btn-bg: --alpha(var(--b2) / 20%);
-  }
-  &.btn-active {
-    --btn-bg: --alpha(var(--b2) / 30%);
-    border-color: --alpha(var(--b3) / 40%);
-  }
+  @apply text-3 font-normal gap-3 px-3 hover:border-b3/60 hover:bg-b2/80;
 }
 
 @layer utilities {
@@ -54,7 +46,7 @@
 }
 
 @utility badge-n1 {
-  @apply text-nc;
+  @apply text-nc bg-n1;
 }
 
 /* collapse */

@@ -22,7 +22,7 @@ async function signInWithGoogle() {
 
 <template>
   <button
-    v-tippy="'Sign in with Google'" alt="Sign in with
+    v-tippy="'Google'" alt="Sign in with
     Google"  class="btn  w-full group h-18 relative overflow-hidden   hover:!btn-n1 hover:bg-n1/90 "
     @click="signInWithGoogle()">
     <div class="size-full relative grid place-items-center">
