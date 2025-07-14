@@ -3,6 +3,7 @@ const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 const as = useAccountStore()
+const ss = useSummonerStore()
 const { forceReload, loading } = useSummoner(as.userAccount.riot.puuid)
 
 const keys = useMagicKeys()
@@ -15,7 +16,6 @@ whenever(keys.shift_a, () => {
 
 <template>
   <Sheet v-model:open="isOpen">
-
     <LazyNestedSheetContent class="h-screen max-h-screen overflow-hidden ">
       <SheetHeader>
         <NestedSheetTitle>
@@ -28,6 +28,10 @@ whenever(keys.shift_a, () => {
       </SheetHeader>
 
       <div class="w-full *:w-full pt-10 grid grid-cols-1 h-fit">
+        <button class="btn w-full" @click="ss.clearAll()">
+          clear summoner store
+        </button>
+
         <ClearMatchesButton />
 
         <LogMatchesButton />

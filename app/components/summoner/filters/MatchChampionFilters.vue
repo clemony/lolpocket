@@ -7,7 +7,7 @@ const { summoner } = defineProps<{
 
 const ms = useMatchStore()
 
-const { bayesianChampions } = await useMatchChampions(summoner.simplifiedMatches)
+const { bayesianChampions } = await useMatchChampions(summoner.matches.simplified)
 
 const displayChampions = computedAsync (() => {
   if (!bayesianChampions)

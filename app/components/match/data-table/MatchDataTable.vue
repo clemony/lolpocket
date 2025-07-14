@@ -1,15 +1,15 @@
 <script lang="ts" setup>
-const props = defineProps<{
+const { match, red, blue } = defineProps<{
   match: any
   blue: any
   red: any
 }>()
 
 const gameOutcome = computed (() => {
-  return props.match.teams[0].win == true ? 'Blue Team Win' : 'Red Team Win'
+  return match.teams[0].win == true ? 'Blue Team Win' : 'Red Team Win'
 })
 const gameEnd = computed (() => {
-  return props.blue[0].gameEndedInSurrender == true ? 'Enemy Surrender' : null
+  return blue[0].gameEndedInSurrender == true ? 'Enemy Surrender' : null
 })
 const endGameStats = {
 
@@ -244,14 +244,14 @@ const ds = useDataStore()
   <div class="size-full">
     <div class="grid  grid-cols-[2.3fr_repeat(10,1fr)]   grid-flow-row w-full  gap-1 px-2 py-1 h-18 group/head  ">
       <div class="size-full items-center">
-        <p :class="cn('font-medium dst', { 'text-inspiration': props.match.teams[0].win != true, 'text-domination': props.match.teams[0].win != true })">
+        <p :class="cn('font-medium dst', { 'text-inspiration': match.teams[0].win != true, 'text-domination': match.teams[0].win != true })">
           {{ gameOutcome }}
         </p>
         {{ gameEnd ?? '' }}
       </div>
 
       <div
-        v-for="player in props.blue.concat(props.red)" :key="player.playerId"
+        v-for="player in blue.concat(red)" :key="player.playerId"
         :class="cn(' place-items-center grid size-full rounded-xl z-0',
                    { 'bg-inspiration/30': player.teamId == 100,
                      'bg-domination/30': player.teamId == 200 })">
@@ -278,7 +278,7 @@ const ds = useDataStore()
           </div>
 
           <div
-            v-for="player in props.blue.concat(props.red)" :key="player.id " :class="cn(
+            v-for="player in blue.concat(red)" :key="player.id " :class="cn(
               'text-end !text-1 *:!text-1 py-1 tracking-tight last:pr-2 font-medium',
               {
                 'text-bc/15 **:text-bc/15': player[stat.data] == 0 })">

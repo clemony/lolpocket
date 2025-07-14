@@ -203,7 +203,7 @@ ModuleRegistry.registerModules([ClientSideRowModelModule, ValidationModule, RowS
 </script>
 
 <template>
-  <NuxtLayout name="items-layout">
+  <div>
     <AgGridVue
       :initial-state="is.dbItemGridState"
       :grid-options="gridOptions"
@@ -214,5 +214,5 @@ ModuleRegistry.registerModules([ClientSideRowModelModule, ValidationModule, RowS
       @grid-pre-destroyed="onGridPreDestroyed"
       @grid-ready="onGridReady">
     </AgGridVue>
-  </NuxtLayout>
+  </div>
 </template>

@@ -1,47 +1,53 @@
 <script lang="ts" setup>
+import { computed } from 'vue'
+
 const { summoner, class: className } = defineProps<{
   summoner: Summoner
   class?: HTMLAttributes['class']
 }>()
 
-const { getAllMatchIds, refreshMatches } = useMatchDexie()
-async function updateMatchData() {
-  const existingIds = (await getAllMatchIds()).map(String)
+const ss = useSummonerStore()
 
-  const newMatches = await useGetMatches({
-    puuid: summoner.puuid,
-    existingIds,
-    direction: 'new',
-  })
-  console.log('💠 - updateMatchData - newMatches:', newMatches)
+const { refreshMatches } = useSummoner(summoner.puuid)
+const {
+  throttled: throttledRefresh,
+  isLoading,
+} = useThrottledFn(refreshMatches, 60000)
+
+const lastUpdate = computed(() => parseDate(summoner?.matches?.lastUpdate))
+
+const timeRemaining = computed(() => {
+  if (!lastUpdate.value) return null
+
+  const now = Date.now()
+  const diff = Math.max(0, 600000 - (now - lastUpdate.value.getTime()))
+  return diff > 0 ? `${Math.floor(diff / 1000)}` : null
+})
+
+watch(() => timeRemaining.value, (newVal) => {
+console.log("💠 - watch - newVal:", newVal)
 }
-
-refreshMatches()
-const { forceReload, loading } = useSummoner()
+)
 </script>
 
 <template>
-  <button :disabled="loading" :class="cn('btn rounded-lg border-b2 hover:border-b3/40  btn-xs bg-b2/40 hover:bg-b2 text-1 px-2.5', className)" @click="updateMatchData()">
-    <span v-if="!loading" class="flex gap-3 items-center">
+  <button v-tippy="`Last Update: ${useTimeAgo(summoner.matches.lastUpdate).value}`" :class="cn('btn rounded-lg border-b2 hover:border-b3/40  btn-sm bg-b2/40 hover:bg-b2 text-1 px-2.5', className)" @click="throttledRefresh()">
+    <span v-if="(!timeRemaining || timeRemaining === '0s') && !isLoading" class="flex gap-3 items-center">
       <icon name="update" class="dst size-3.5  hover:text-bc tldr-20" />
       Update
     </span>
 
-    <span v-else class="flex gap-3 items-center">
+    <div class="" v-else-if="timeRemaining" >
+      <span class="countdown">
+  <span :style="{'--value': timeRemaining}" aria-live="polite" :aria-label="timeRemaining">
+      {{ computed (() => timeRemaining).value }}</span>
+</span>
+  {{ computed (() => timeRemaining).value }}
+    </div>
+
+    <span v-else-if="isLoading" class="flex gap-3 items-center">
       <icon name="svg-spinners:ring-resize" class=" size-4 opacity-60" />
       Checking
     </span>
   </button>
-
-<!--
-  <div>
-    <button @click="forceReload()" :disabled="loading">
-      {{ loading ? 'Reloading...' : 'Force Reload Summoner' }}
-    </button>
-
-    <div v-if="ready && summoner">
-      <h1>{{ summoner.name }}</h1>
-      <p>Level: {{ summoner.level }}</p>
-    </div>
-  </div> -->
 </template>

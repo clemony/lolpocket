@@ -1,5 +1,4 @@
 declare global {
-
   interface MatchData {
     metadata: {
       dataVersion: string
@@ -18,14 +17,14 @@ declare global {
       gameType: string
       gameVersion: string
       mapId: number
-      participants: MatchParticipant[]
+      participants: Player[]
     }
     platformId: string
     queueId: number
     teams: MatchTeam[]
   }
 
-  interface MatchParticipant {
+  interface Player {
     riotIdGameName: string
     riotIdTagline: string
     puuid: string
@@ -137,6 +136,7 @@ declare global {
   }
 
   interface SimplifiedMatchData {
+    matchId: string
     puuid: string
     gameCreation: number
     gameEndTimestamp: number
@@ -177,4 +177,4 @@ declare global {
     queueType: string
   }
 }
-export { }
+export {}

@@ -39,6 +39,14 @@ async function hydrateUser(session: Session) {
   const as = useAccountStore()
   const decoded = jwtDecode<AuthRoleJwtPayload>(session.access_token)
 
+  if (!session.user) {
+    throw new Error("hydrateUser: session.user is null or undefined")
+  }
+
+  if (!decoded.app_metadata?.user_role) {
+    throw new Error("hydrateUser: user_role is null or undefined")
+  }
+
   const name =
     session.user.user_metadata?.custom_claims?.global_name ??
     session.user.user_metadata?.name ??
@@ -53,13 +61,19 @@ async function hydrateUser(session: Session) {
 
   const needsRiotData = !as.userAccount.riot.puuid
 
-  const summoner = await fetchSummonerData(session.user.id)
-  if (summoner) {
-    Object.assign(as.userAccount.riot, summoner)
+  if (needsRiotData) {
+    const summoner = await fetchSummonerData(session.user.id)
+    if (summoner) {
+      Object.assign(as.userAccount.riot, summoner)
+    }
   }
 
-  const { fetchSummoner } = useSummoner(as.userAccount.riot.puuid)
+  const { fetchSummoner, summoner } = useSummoner(as.userAccount.riot.puuid)
   fetchSummoner()
+  const ss = useSummonerStore()
+  console.log("💠 - hydrateUser - ss:", ss.summoners)
+
+  console.log("💠 - hydrateUser - summoner:", summoner.value)
 
   as.currentSession = {
     session,

@@ -1,4 +1,4 @@
-import { storeToRefs } from 'pinia'
+import { storeToRefs } from "pinia"
 
 interface Teammate {
   riotIdGameName: string
@@ -9,10 +9,14 @@ interface Teammate {
   bayesianWinrate: number
 }
 
-export function useRepeatedTeammates(currentName: string, puuid: string, options?: { delayUntilReady?: Ref<boolean> }) {
+export function useRepeatedTeammates(
+  currentName: string,
+  puuid: string,
+  options?: { delayUntilReady?: Ref<boolean> }
+) {
   const ss = useSummonerStore()
 
-  const matches = computed (() => ss.getSummoner(puuid).simplifiedMatches)
+  const matches = computed(() => ss.getSummoner(puuid).matches.simplified)
   const loading = ref(false)
 
   const repeatedTeammates = computedAsync(async () => {
@@ -22,20 +26,22 @@ export function useRepeatedTeammates(currentName: string, puuid: string, options
       if (options?.delayUntilReady)
         await until(options.delayUntilReady).toBe(true)
 
-      const teammateStats = new Map<string, { games: number, wins: number, profileIcon: number }>()
+      const teammateStats = new Map<
+        string,
+        { games: number; wins: number; profileIcon: number }
+      >()
 
       for (const match of matches.value) {
         const { participants, win } = match
-        if (!participants)
-          continue
+        if (!participants) continue
 
-        const hasPlayer = participants.some(p => p.riotIdGameName === currentName)
-        if (!hasPlayer)
-          continue
+        const hasPlayer = participants.some(
+          (p) => p.riotIdGameName === currentName
+        )
+        if (!hasPlayer) continue
 
         for (const teammate of participants) {
-          if (teammate.riotIdGameName === currentName)
-            continue
+          if (teammate.riotIdGameName === currentName) continue
 
           const existing = teammateStats.get(teammate.riotIdGameName) || {
             games: 0,
@@ -44,8 +50,7 @@ export function useRepeatedTeammates(currentName: string, puuid: string, options
           }
 
           existing.games++
-          if (win)
-            existing.wins++
+          if (win) existing.wins++
 
           teammateStats.set(teammate.riotIdGameName, existing)
         }
@@ -58,7 +63,8 @@ export function useRepeatedTeammates(currentName: string, puuid: string, options
         .map(([riotIdGameName, stats]) => {
           const rawWinrate = stats.wins / stats.games
           const confidence = Math.min(1, stats.games / 10)
-          const bayesianWinrate = (confidence * rawWinrate + (1 - confidence) * priorWinrate) * 100
+          const bayesianWinrate =
+            (confidence * rawWinrate + (1 - confidence) * priorWinrate) * 100
 
           return {
             riotIdGameName,
@@ -68,14 +74,15 @@ export function useRepeatedTeammates(currentName: string, puuid: string, options
           }
         })
         .sort((a, b) => b.games - a.games)
-    }
-    finally {
+    } finally {
       loading.value = false
     }
   }, [])
 
   const topBayesianTeammates = computed(() =>
-    [...repeatedTeammates.value].sort((a, b) => b.bayesianWinrate - a.bayesianWinrate).slice(0, 3),
+    [...repeatedTeammates.value]
+      .sort((a, b) => b.bayesianWinrate - a.bayesianWinrate)
+      .slice(0, 3)
   )
 
   return {

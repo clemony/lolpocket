@@ -1,42 +1,28 @@
 <script lang="ts" setup>
-const props = defineProps<{
-  player: any
+const { player, class: className, wrapperClass } = defineProps<{
+  player: Player
   class?: HTMLAttributes['class']
   wrapperClass?: HTMLAttributes['class']
 }>()
 
 const ds = useDataStore()
-const player = ref(props.player)
 const items = computed (() => {
-  const p = player.value
-  const list = [p.item0, p.item1, p.item2, p.item3, p.item4, p.item5]
+  const list = [player.item0, player.item1, player.item2, player.item3, player.item4, player.item5]
 
   return Object.values(list)
-})
-
-onMounted (async () => {
-  await props.player
-
-  nextTick(() => {
-    player.value = props.player
-  })
 })
 
 const ix = useIndexStore()
 </script>
 
 <template>
-  <div class="" :class="cn('flex gap-1 size-full max-w-66   items-start *:rounded-md ', props.wrapperClass)">
-    <template v-for="item in items" :key="item">
-      <div v-if="item" v-tippy="ix.itemNameById(item)" class="" :class="cn('rounded-lg inset-shadow-rounded shadow-sm  size-10', props.class)">
-        <div class="size-10 overflow-hidden rounded-lg">
-          <img v-if="item" :src="`/img/item/${item}.webp`" />
+  <div v-if="player" :class="cn('flex gap-1 size-full max-w-66   items-start *:rounded-md ', wrapperClass)">
+    <template v-for="i in 6" :key="i">
 
-          <Placeholder v-else />
-        </div>
-      </div>
+        <Item v-if="items[i]" v-tippy="ix.itemNameById(items[i])"  :id="items[i]" :alt="items[i]" class="size-10  rounded-lg"/>
 
-      <Placeholder v-else class="" :class="cn('size-10 bg-b3/50 rounded-lg', props.class)" />
+          <Placeholder v-else  :class="cn('size-10 !bg-b3/60 rounded-lg', className)"/>
+
     </template>
   </div>
 </template>

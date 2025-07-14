@@ -17,11 +17,6 @@ const delegatedProps = reactiveOmit(props, 'class')
 const forwarded = useForwardProps(delegatedProps)
 
 const target = ref<HTMLElement | null>(null)
-console.log('💠 - target:', target)
-
-watch(() => target.value?.dataset?.state, (newVal) => {
-  console.log('💠 - watch - newVal:', newVal)
-})
 
 const variants = {
   visible: {

@@ -9,6 +9,7 @@ export function simplifyMatchData(
   if (!participant) return null
 
   return {
+    matchId: match.metadata.matchId,
     puuid: participant.puuid,
     gameCreation: match.info.gameCreation,
     gameEndTimestamp: match.info.gameEndTimestamp,
@@ -40,3 +41,4 @@ export function simplifyMatchData(
     })),
   }
 }
+0

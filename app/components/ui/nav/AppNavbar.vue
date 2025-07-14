@@ -30,10 +30,15 @@ function resetInbox(e) {
     as.userAccount.inbox.newMessages = 0
   }
 }
+
+function verifySignIn() {
+  if (!as.currentSession.session)
+    userNav.value = 'signIn'
+}
 </script>
 
 <template>
-  <nav class=" w-full justify-between    flex fixed flex-nowrap top-0 inset-x-0 w-screen h-16 items-center border-b border-b-b3/60 px-2  z-10">
+  <nav class=" w-full justify-between    flex fixed flex-nowrap top-0 inset-x-0 w-screen h-16 items-center border-b border-b-b3/60 px-3  z-10">
     <div class="size-full absolute top-0 left-0 inset-0  bg-b1/88 backdrop-blur-md" :class="{ '!bg-b1/50': route.path == '/' }" />
 
     <NavigationMenu disable-pointer-leave-close>
@@ -77,7 +82,7 @@ function resetInbox(e) {
           </NavigationMenuTrigger>
 
           <LazyNavigationMenuContent class="0" @focus-outside.prevent>
-            <component :is="item.component" @open:sign-in="userNav = 'signIn'" @open:pins="pinsOpen = true" />
+            <component :is="item.component" @open:sign-in="verifySignIn()" @open:pins="pinsOpen = true" />
           </LazyNavigationMenuContent>
         </NavigationMenuItem>
 

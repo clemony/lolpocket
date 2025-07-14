@@ -1,16 +1,13 @@
 <script lang="ts" setup>
-const props = defineProps<{
+const { team, enemy, class: className } = defineProps<{
   team: any
   enemy: any
   class?: HTMLAttributes['class']
 }>()
 
-const team = computed (() => {
-  return props.team
-})
 const totalGold = computed (() => {
-  const a = team.value.map(p => p.goldEarned)
-  const b = props.enemy.map(p => p.goldEarned)
+  const a = team.map(p => p.goldEarned)
+  const b = enemy.map(p => p.goldEarned)
   return {
     ally: a.reduce((partialSum, a) => partialSum + a, 0),
     enemey: b.reduce((partialSum, b) => partialSum + b, 0),
@@ -18,8 +15,8 @@ const totalGold = computed (() => {
 })
 
 const spent = computed (() => {
-  const a = team.value.map(p => p.goldSpent)
-  const b = props.enemy.map(p => p.goldSpent)
+  const a = team.map(p => p.goldSpent)
+  const b = enemy.map(p => p.goldSpent)
   return {
     ally: a.reduce((partialSum, a) => partialSum + a, 0),
     enemy: b.reduce((partialSum, b) => partialSum + b, 0),
@@ -37,7 +34,7 @@ const math = computed (() => {
 </script>
 
 <template>
-  <tippy class="" :offset="[2, -2]" :class="cn('flex gap-1 justify-end w-42', props.class)">
+  <tippy class="" :offset="[2, -2]" :class="cn('flex gap-1 justify-end w-42', className)">
     <i-ui-gold-icon class="size-4 text-[#C2A76E] dst " />
 
     <p class="flex font-medium dst items-center tracking-wide">

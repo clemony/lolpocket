@@ -14,14 +14,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="flex size-full oveflow-hidden">
-    <menu class="overflow-hidden">
-      <ItemFilterSidebar />
-    </menu>
+  <div class="size-full overflow-hidden relative">
+    <ItemFilterSidebar />
 
-    <main class="overflow-y-auto grow relative  border-l border-l-b3/80">
-      <slot :filtered="filtered" />
-    </main>
+    <LazyNuxtPage :filtered="filtered" />
   </div>
 
   <!--      <div

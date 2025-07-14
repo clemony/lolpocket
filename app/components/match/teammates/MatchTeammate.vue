@@ -1,11 +1,8 @@
 <script lang="ts" setup>
-const props = defineProps<{
-  player: any
+const { player } = defineProps<{
+  player: Player
 }>()
-
-const player = computed (() => {
-  return props.player
-})
+console.log('💠 - player:', player)
 </script>
 
 <template>
@@ -14,7 +11,7 @@ const player = computed (() => {
 
     <PlayerSpells :player="player" class="[&_img]:size-5.5 [&_img]:rounded-[4px] gap-0.75 ml-1 " />
 
-    <TeammateRunes :player="player" />
+    <!--     <TeammateRunes :player="player" /> -->
 
     <div class="overflow-hidden p-1 w-36 max-w-36 tracking-tight ">
       <p class="font-semibold  text-nowrap truncate w-full">

@@ -41,7 +41,7 @@
   }
 
   .field-box {
-    @apply shadow-warm-soft overflow-visible border bg-b2/30 drop-shadow-xs border-b3/40 rounded-box **:select-none text-2   relative;
+    @apply shadow-warm-soft overflow-visible border bg-b2/40 drop-shadow-xs border-b3/60 rounded-box **:select-none text-2   relative;
   }
 
   /* stat display  */

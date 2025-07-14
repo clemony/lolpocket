@@ -5,16 +5,21 @@ export function useMatchItems() {
   const as = useAccountStore()
   const ss = useSummonerStore()
 
-  const matches = computed (() => ss.getSummoner(as.userAccount.riot.puuid).simplifiedMatches)
+  const matches = computed(
+    () => ss.getSummoner(as.userAccount.riot.puuid).matches.simplified
+  )
 
-  const itemStats = new Map<number, {
-    games: number
-    wins: number
-    losses: number
-    winrate: number
-    matchIndexes: number[]
-    gameVersions: number[]
-  }>()
+  const itemStats = new Map<
+    number,
+    {
+      games: number
+      wins: number
+      losses: number
+      winrate: number
+      matchIndexes: number[]
+      gameVersions: number[]
+    }
+  >()
 
   const bayesianItems = ref<any[]>([])
 
@@ -40,8 +45,7 @@ export function useMatchItems() {
       ]
 
       items.forEach((itemId) => {
-        if (!itemId || itemId === 0)
-          return
+        if (!itemId || itemId === 0) return
 
         if (!itemStats.has(itemId)) {
           itemStats.set(itemId, {
@@ -63,14 +67,22 @@ export function useMatchItems() {
       })
     })
 
-    const totalGames = [...itemStats.values()].reduce((sum, s) => sum + s.games, 0)
-    const globalWinrate = [...itemStats.values()].reduce((sum, s) => sum + s.wins, 0) / totalGames || 0
+    const totalGames = [...itemStats.values()].reduce(
+      (sum, s) => sum + s.games,
+      0
+    )
+    const globalWinrate =
+      [...itemStats.values()].reduce((sum, s) => sum + s.wins, 0) /
+        totalGames || 0
 
     bayesianItems.value = [...itemStats.entries()]
       .map(([itemId, stats]) => {
         const adjustedWeight = stats.games ** 0.7
         const confidence = adjustedWeight / (adjustedWeight + 15)
-        const bayesianWinrate = ((1 - confidence) * globalWinrate + confidence * (stats.wins / stats.games)) * 100
+        const bayesianWinrate =
+          ((1 - confidence) * globalWinrate +
+            confidence * (stats.wins / stats.games)) *
+          100
 
         return {
           item: ix.itemNameById(itemId),

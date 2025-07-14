@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-const props = defineProps<{
+const { team, class: className } = defineProps<{
   team: any
   class?: HTMLAttributes['class']
 }>()
 </script>
 
 <template>
-  <div class="" :class="cn('flex gap-4 pb-4 h-full justify-items-start items-center **:font-medium', props.class)">
+  <div class="" :class="cn('flex gap-4 pb-4 h-full justify-items-start items-center **:font-medium', className)">
     <div class="flex items-center gap-1">
       <img
         v-tippy="'Towers Taken'"

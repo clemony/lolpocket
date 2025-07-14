@@ -12,6 +12,6 @@ const ix = useIndexStore()
 
 <template>
   <Primitive v-bind="$props" :class="cn('', className)">
-    {{ ix.mapNameById(id) }}
+    {{ ix.mapIdById(id) }}
   </Primitive>
 </template>

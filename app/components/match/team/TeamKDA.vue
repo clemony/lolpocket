@@ -1,24 +1,21 @@
 <script lang="ts" setup>
-const props = defineProps<{
+const { team, class: className } = defineProps<{
   team: any
   class?: HTMLAttributes['class']
 }>()
 
-const team = computed (() => {
-  return props.team
-})
 const kills = computed (() => {
-  const a = team.value.map(p => p.kills)
+  const a = team.map(p => p.kills)
   return a.reduce((partialSum, a) => partialSum + a, 0)
 })
 
 const assists = computed (() => {
-  const a = team.value.map(p => p.assists)
+  const a = team.map(p => p.assists)
   return a.reduce((partialSum, a) => partialSum + a, 0)
 })
 
 const deaths = computed (() => {
-  const a = team.value.map(p => p.deaths)
+  const a = team.map(p => p.deaths)
   return a.reduce((partialSum, a) => partialSum + a, 0)
 })
 
@@ -28,7 +25,7 @@ const math = computed (() => {
 </script>
 
 <template>
-  <div class="" :class="cn('flex gap-4 w-26 flex-nowrap justify-items-start ', props.class)">
+  <div class="" :class="cn('flex gap-4 w-26 flex-nowrap justify-items-start ', className)">
     <p class="text-4 flex font-semibold   text-nowrap items-center tracking-wide">
       <span>{{ kills }}</span>
 

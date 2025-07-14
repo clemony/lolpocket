@@ -1,15 +1,11 @@
 <script lang="ts" setup>
-const props = defineProps<{
-  player: any
+const { player, class: className } = defineProps<{
+  player: Player
   class?: HTMLAttributes['class']
 }>()
 
-const player = computed (() => {
-  return props.player
-})
-
 const heal = computed (() => {
-  return player.value.challenges.effectiveHealAndShielding > 0 ? player.value.challenges.effectiveHealAndShielding : null
+  return player.challenges.effectiveHealAndShielding > 0 ? player.challenges.effectiveHealAndShielding : null
 })
 </script>
 

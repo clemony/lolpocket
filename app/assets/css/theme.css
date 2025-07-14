@@ -11,7 +11,7 @@
     --color-n2: var(--n2);
     --color-n1: var(--n1);
     --color-nc: var(--nc);
-    --color-accent: var(--accent);
+    --color-a1: var(--a1);
     /* base */
     --b2w2: color-mix(in oklch, var(--b2) 100%, white 20%);
 

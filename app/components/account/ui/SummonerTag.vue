@@ -3,17 +3,15 @@ const props = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 const as = useAccountStore()
-
 </script>
 
 <template>
-  <span v-if="as.userAccount.riot.puuid && as.userAccount.riot.tag" :class="props.class">
+  <span v-if="as.userAccount.riot.puuid && as.userAccount.riot.tag" :class="cn('flex items-center', props.class)">
     <icon name="lucide:hash" class="size-3.75" />
     {{ as.userAccount.riot.tag }}
-    </span>
-
+  </span>
 
   <span v-else :class="cn('', props.class)">
-  Disconnected
-    </span>
+    Disconnected
+  </span>
 </template>

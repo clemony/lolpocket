@@ -7,7 +7,7 @@ const { class: className } = defineProps<{
 </script>
 
 <template>
-  <button :class="cn(navigationMenuTriggerStyle(),'flex flex-col size-full py-2', className)">
+  <button :class="cn(navigationMenuTriggerStyle(), 'flex flex-col justify-center size-full items-start py-2', className)">
     <slot />
   </button>
 </template>

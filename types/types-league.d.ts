@@ -37,8 +37,11 @@ declare global {
       solo?: RankedEntry
       flex?: RankedEntry
     }
-    matches?: MatchData[]
-    simplifiedMatches?: SimplifiedMatchData[]
+    matches?: {
+      full: MatchData[]
+      simplified: SimplifiedMatchData[]
+      lastUpdate: Date
+    }
   }
 
   interface RankedEntry {

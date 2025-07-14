@@ -5,11 +5,11 @@ const is = useItemStore()
 
 function handleReset() {
   is.itemFilter.tags = null
-  // is.itemGridApi.refreshCells()
+  is.itemGridApi?.refreshCells()
 }
-// TODO FIx this
+// TODO FIx this for ag grid rfresh
 function handleChange() {
-  // is.itemGridApi.refreshCells()
+  is.itemGridApi?.refreshCells()
 }
 </script>
 

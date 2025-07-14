@@ -1,22 +1,18 @@
 <script lang="ts" setup>
-const props = defineProps<{
-  player: any
+const { player, class: className } = defineProps<{
+  player: Player
   class?: HTMLAttributes['class']
 }>()
 
-const player = computed (() => {
-  return props.player
-})
-
 const cs = computed (() => {
-  return player.value.totalMinionsKilled + player.value.n1MinionsKilled + player.value.totalEnemyJungleMinionsKilled + player.value.totalAllyJungleMinionsKilled
+  return player.totalMinionsKilled + player.neutralMinionsKilled + player.totalEnemyJungleMinionsKilled + player.totalAllyJungleMinionsKilled
 })
 </script>
 
 <template>
   <div
     class="" :offset="[2, -2]"
-    :class="cn('flex flex-col *:py-0.5 *:text-1 py-1 *:leading-none font-medium items-end justify-start size-full **:text-nowrap', props.class)">
+    :class="cn('flex flex-col *:py-0.5 *:text-1 py-1 *:leading-none font-medium items-end justify-start size-full **:text-nowrap', className)">
     <p
       v-tippy="'Minions Farmed'"
       class="flex gap-1 items-center hover:underline decoration-1">

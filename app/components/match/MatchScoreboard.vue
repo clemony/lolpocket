@@ -19,7 +19,7 @@ const red = computed (() => {
 </script>
 
 <template>
-  <div class="gap-2 flex flex-col overflow-x-scroll pl-6 pr-4 ">
+  <div class="gap-2 flex flex-col overflow-x-scroll px-2">
     <!--   teammate -->
     <div class=" size-full ">
       <template v-for="(player, i) in blue" :key="i">

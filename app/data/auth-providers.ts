@@ -2,7 +2,6 @@ import { Discord, EmailTrigger, Google, Riot } from "#components"
 
 const user = useSupabaseUser()
 const providerMap = computed(() => user.value?.app_metadata?.providers ?? null)
-console.log("💠 - user:", user)
 
 export const providers = [
   {

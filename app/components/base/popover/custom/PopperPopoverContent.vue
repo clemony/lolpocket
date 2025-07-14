@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { motion } from 'motion-v'
+
 import type { PopoverContentEmits, PopoverContentProps } from 'reka-ui'
 import {
   PopoverContent,
@@ -27,20 +29,14 @@ console.log('💠 - forwarded:', forwarded)
 const variants = {
   visible: {
     opacity: 1,
-    scale: 1,
     maxHeight: '420px',
     maxWidth: '340px',
     visibility: 'visible',
-    transform: 'translate(0,0)',
-    borderRadius: '0.75rem',
+    scale: 1,
   },
   hidden: {
     opacity: 0,
-    scale: 0,
-    maxWidth: '50%',
-    maxHeight: '50%',
-    borderRadius: '1rem',
-    transform: `translate(0, -9px`,
+    scale: 0.4,
     transitionEnd: { visibility: 'hidden' },
   },
 }
@@ -50,17 +46,14 @@ const wrapperVariants = {
     opacity: 1,
     scale: 1,
     visibility: 'visible',
-    transform: 'translate(0,0)',
     transition: {
 
-      delay: 0.3,
+      delay: 0.2,
     },
   },
   hidden: {
     opacity: 0,
-    scale: 0,
-    borderRadius: '5rem',
-    transform: `translate(0, -6px`,
+    scale: 1,
     transitionEnd: { visibility: 'hidden' },
   },
 }
@@ -70,7 +63,7 @@ const wrapperVariants = {
   <PopoverPortal :to="props.to">
     <AnimatePresence>
       <PopoverContent as-child>
-        <MotionMin
+        <motion.div
           :variants="variants" initial="hidden" animate="visible" exit="hidden" :transition="{
             type: 'spring',
             duration: 0.3,
@@ -79,21 +72,21 @@ const wrapperVariants = {
           v-bind="{ forwarded }"
           :class="
             cn(
-              'z-50 w-72 rounded-xll border border backdrop-blur-lg drop-shadow-md !border-black-30  bg-black-22/94 text-nc/80 p-4 text-bc shadow-md outline-none group-data-[state=visible]:**:opacity-100 group-data-[state=hidden]:**:opacity-0',
+              'z-50 w-72 rounded-xl border border backdrop-blur-lg drop-shadow-md !border-black-30  bg-black-22/94 text-nc/80 p-4 text-bc shadow-md outline-none group-data-[state=visible]:**:opacity-100 group-data-[state=hidden]:**:opacity-0',
               props.class,
             )
           ">
-          <CustomPopoverArrow class="group-data-[state=visible]:opacity-70 group-data-[state=hidden]:opacity-0 tldr-40 delay-400" />
+          <CustomPopoverArrow class="" />
 
-          <MotionMin
+          <motion.div
             :variants="wrapperVariants" initial="hidden" animate="visible" exit="hidden" class="size-full" :transition="{
               type: 'spring',
               bounce: 0.25,
               duration: 0.4,
             }">
             <slot />
-          </MotionMin>
-        </MotionMin>
+          </motion.div>
+        </motion.div>
       </PopoverContent>
     </AnimatePresence>
   </PopoverPortal>

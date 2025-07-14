@@ -4,7 +4,7 @@ import { $fetch } from "ofetch"
 import pLimit from "p-limit"
 
 const limit = pLimit(10)
-const RIOT_API_KEY = process.env.RIOT_API_KEY!
+const NUXT_RIOT_API = process.env.NUXT_RIOT_API!
 export const REGION = "na1"
 const BASE = `https://${REGION}.api.riotgames.com`
 const REGIONAL = "americas"
@@ -16,7 +16,7 @@ async function safeFetch<T>(
 ): Promise<T> {
   try {
     return await $fetch<T>(url, {
-      headers: { "X-Riot-Token": RIOT_API_KEY },
+      headers: { "X-Riot-Token": NUXT_RIOT_API },
       ...(params ? { params } : {}),
     })
   } catch (err: any) {

@@ -7,7 +7,7 @@ export const backpackLinks: LinkObject[] = [
       name: "i-lol-backpack-outline-bold",
     },
     blurb:
-      '<p class="leading-5 text-pretty">Your main <i><b>pocket</b></i> storage tool. Magically keeps pockets safe and warm in list or grid form.</p>',
+      '<p class="leading-5 text-pretty">Your main <i><b>pocket</b></i> storage tool. Magically keeps pockets safe and warm in list and grid form.</p>',
   },
   {
     name: "Trash",

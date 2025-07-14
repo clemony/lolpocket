@@ -29,10 +29,10 @@ export function useMatchSync(puuid: string) {
   } */
 
   const loadMoreMatches = async ({
-    direction = "new",
+    fetchMode = "new",
     count = 20,
   }: {
-    direction?: "new" | "old"
+    fetchMode?: "new" | "old"
     count?: number
   } = {}) => {
     loading.value = true
@@ -42,7 +42,7 @@ export function useMatchSync(puuid: string) {
         puuid,
         existingIds,
         count,
-        direction,
+        fetchMode,
       })
 
       matchData.value.push(...full)

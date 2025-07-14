@@ -19,13 +19,9 @@ function handleReset() {
 </script>
 
 <template>
-  <div class="divider divider-start before:bg-b3/60 font-semibold  mb-8">
-    Categories
-  </div>
-
-  <transition-slide group class="flex w-full flex-wrap gap-4 relative ">
+  <transition-slide group class="flex w-full flex-wrap gap-3 relative ">
     <input
-      class="btn btn-sm   before:size-14 absolute  left-0 !text-5 font-normal "
+      class="btn    before:size-14 absolute  left-0 !text-5 font-normal "
       aria-label="All"
       type="reset"
       value="×"
@@ -34,7 +30,7 @@ function handleReset() {
     <label
       v-for="rank in itemRanks"
       :key="rank"
-      class="!font-semibold   btn btn-sm  uppercase !text-0 group/filter  mr-0  " :class="{ '!bg-n1 !border-n1 text-nc !shadow-n1/20 shadow-sm order-first  ml-12': is.itemFilter.rank && is.itemFilter.rank.includes(rank), 'first-of-type:ml-12': !is.itemFilter.rank || is.itemFilter.rank == null }">
+      class="!font-medium  !text-2 btn   !text-0 group/filter  mr-0  " :class="{ '!bg-n1 !border-n1 text-nc !shadow-n1/20 shadow-sm order-first  ml-12': is.itemFilter.rank && is.itemFilter.rank.includes(rank), 'first-of-type:ml-12': !is.itemFilter.rank || is.itemFilter.rank == null }">
 
       <input
         v-model="is.itemFilter.rank" class="peer hidden absolute"

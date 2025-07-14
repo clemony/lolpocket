@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-const props = defineProps<{
-  player: any
+const { player, class: className } = defineProps<{
+  player: Player
   class?: HTMLAttributes['class']
 }>()
 </script>
 
 <template>
-  <div v-tippy="'Wards Placed/Killed'" :class="cn('flex *:w-full *:items-end flex-col items-end group/v *:tracking-tight max-w-12 w-12   p-1 mr-4  ', props.class)">
+  <div v-tippy="'Wards Placed/Killed'" :class="cn('flex *:w-full *:items-end flex-col items-end group/v *:tracking-tight max-w-12 w-12   p-1 mr-4  ', className)">
     <p class="text-1  font-semibold  truncate justify-end text-nowrap flex gap-1 flex-nowrap items-center">
       <i-roles-support class="size-3.5 dst text-bc" />
       {{ player.visionScore }}

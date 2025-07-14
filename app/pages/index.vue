@@ -1,5 +1,22 @@
 <script setup lang="ts">
-import { motion } from 'motion-v'
+const { signInOpen } = defineProps<{
+  signInOpen: boolean
+}>()
+
+const emit = defineEmits(['open:sign-in'])
+
+useSeoMeta({
+  title: 'lolpocket',
+  description: 'is that lp in your pocket?',
+  ogTitle: 'lolpocket',
+  ogDescription: 'is that lp in your pocket?',
+  ogImage: '[og:image]',
+  ogUrl: 'https://www.lolpocket.com',
+  twitterTitle: 'lolpocket',
+  twitterDescription: 'is that lp in your pocket?',
+  twitterImage: '[twitter:image]',
+  twitterCard: 'summary',
+})
 
 definePageMeta({
   name: 'home',
@@ -9,12 +26,6 @@ definePageMeta({
   icon: 'teenyicons:home-alt-outline',
   section: 'home',
 })
-
-
-const { signInOpen } = defineProps<{
-signInOpen: boolean
-}>()
-const emit = defineEmits(['open:sign-in'])
 
 const homeWrapper = ref<HTMLElement | null>()
 const home = ref<HTMLElement | null>()
@@ -45,21 +56,16 @@ const heroVisible = shallowRef(false)
 const { stop } = useIntersectionObserver(
   hero,
   ([entry], observerElement) => {
-    console.log('💠 - entry:', entry)
     heroVisible.value = entry?.isIntersecting || false
   },
 )
-
-watch(() => heroVisible.value, (newVal) => {
-  console.log('💠 - watch - newVal:', newVal)
-})
 </script>
 
 <template>
   <div
     ref="homeWrapper"
     class="relative w-screen overflow-x-hidden home-wrapper size-full overflow-y-scroll">
-    <Hero :progress="stepProgress" :visible="heroVisible" @open:sign-in="emit('open:sign-in')"  :sign-in-open="signInOpen" />
+    <Hero :progress="stepProgress" :visible="heroVisible" :sign-in-open="signInOpen" @open:sign-in="emit('open:sign-in')" />
 
     <div ref="hero" class="absolute pointer-events-none  left-0  size-px  overflow-hidden bg-transparent" />
 

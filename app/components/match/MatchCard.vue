@@ -1,69 +1,77 @@
 <script setup lang="ts">
-const props = defineProps<{
-  match: any
+const { match } = defineProps<{
+  match: MatchData
 }>()
+
 const as = useAccountStore()
-const match = computed (() => {
-  return props.match
+const player = computed(() => {
+  return match?.info?.participants.find(p => p.puuid == as.userAccount.riot.puuid)
 })
 
-const player = computed(() => {
-  return match.value.info.participants.find(p => p.puuid == as.userAccount.riot.puuid)
+const playerWin = computed (() => {
+  const a = match?.teams[0].win ? 100 : 200
+  const b = player.value.teamId
+
+  return a == b
 })
 
 const isOpen = ref(false)
 </script>
 
 <template>
-  <div class="size-fit " :class="{ 'min-h-53': !isOpen, 'min-h-267': isOpen }">
-    <Collapsible v-if="player && match" :key="match.matchId" v-model:open="isOpen" as="div" class="animate-in fade-in group w-220 justify-start max-w-220 group/collapse ">
-      <div
-        class="field grid justify-center **:select-none text-2 shadow-warm-soft overflow-visible bg-b2/30 drop-shadow-xs border-b3/40 w-full p-0  @container/match min-w-134 cursor-pointer group/collapse ">
-        <CollapsibleTrigger class="flex gap-7 py-6 w-full items-start overflow-hidden  cursor-pointer group/collapse pl-6 pr-4 ">
-          <div class="flex w-38 h-full **:select-none flex-col justify-start gap-1">
-            <WinLossButton v-if=" player.teamId && match" :player="player" :match="match" />
+  <div v-if="match" class="size-fit " :class="{ 'min-h-42': !isOpen, 'min-h-267': isOpen }">
+    <Collapsible v-if="player && match" :key="match.metadata.matchId" v-model:open="isOpen" as="div" class="animate-in fade-in group w-220 justify-start max-w-220 group/collapse ">
+      <div :class="cn('field-box grid bg-clip-padding justify-center **:select-none text-2  w-full p-0  @container/match min-w-134   border-2  cursor-pointer group/collapse bg-linear-to-r to-b2/40 to-40%', playerWin ? 'from-inspiration/80' : 'from-domination/80')">
+        <CollapsibleTrigger class="flex gap-7 py-3 w-full relative items-center justify-items-start overflow-hidden  cursor-pointer group/collapse px-4 justify-start">
+          <div class="flex w-34  **:antialiased-subpixel h-full **:select-none flex-col justify-start gap-1 py-1">
+            <div
+              class="text-5  dst w-full text-start text-nowrap text-white/86  font-bold uppercase  ">
+              {{ playerWin ? 'Win' : 'Loss' }}
+            </div>
 
-            <div class="font-medium dst  text-left w-full space-y-1.25 ">
-              <MatchQueue v-if="match.queueId" as="p" class="text-2 text-left text-nowrap" :queue-id="match.queueId" />
+            <div class=" font-semibold *:text-left opacity-76  *:w-full w-full *:space-y-1 h-full justify-between flex flex-col">
+              <span>
+                <MatchQueue v-if="match.queueId" as="p" class="text-4    text-left text-nowrap  font-bold" :queue-id="match.queueId" />
 
-              <MatchMap v-if="match.info.mapId" :id="match.info.mapId" as="p" class="text-2" />
+                <MatchMap v-if="match.info.mapId" :id="match.info.mapId" as="p" class="text-2 leading-5" />
+              </span>
 
-              <GameDuration as="p" :duration="match.info.gameDuration" class="tracking-wide" />
+              <span>
+                <GameDuration as="p" :duration="match.info.gameDuration" class="tracking-wide" />
 
-              <GameEndTime v-if="match.info.gameEndTimestamp" as="p" class="text-2 capitalize" :end-time="match.info.gameEndTimestamp" />
+                <GameEndTime v-if="match.info.gameEndTimestamp" as="p" class="text-2 italic capitalize" :end-time="match.info.gameEndTimestamp" />
+              </span>
             </div>
           </div>
 
-          <div class="flex gap-3 w-full">
-            <div class="flex flex-col gap-3 grow ">
-              <div class="flex items-start">
-                <!-- champ image -->
+          <div class="flex  flex-col gap-1 grow ">
+            <div class="flex items-start">
+              <!-- champ image -->
 
-                <ChampionImage v-if="player" :player="player" />
+              <ChampionImage v-if="player" :player="player" />
 
-                <!--  spells -->
+              <!--  spells -->
 
-                <PlayerSpells :match="match" :player="player" class="mr-2 ml-2 shrink-0" />
+              <PlayerSpells :match="match" :player="player" class="mr-2 ml-2 shrink-0" />
 
-                <!-- runes -->
+              <!-- runes -->
 
-                <PlayerRunes :match="match" :player="player" />
-                <!--   kda -->
+              <PlayerRunes :match="match" :player="player" />
+              <!--   kda -->
 
-                <KDA :player="player" />
+              <KDA :player="player"  />
 
               <!--   stats -->
 
               <!--   <PlayerScoreboardStats :player="player" /> -->
-              </div>
-
-              <div class="flex gap-3 min-w-64">
-                <MatchItems v-if="player.item0" :player="player" />
-              </div>
             </div>
 
-            <TeamsOverview :match="match" />
+            <div class="flex gap-3 min-w-64 ">
+              <MatchItems v-if="player.item0" :player="player" />
+            </div>
           </div>
+
+          <TeamsOverview :match="match" />
 
           <div class="h-full relative w-8 absolute flex items-center overflow-visible justify-self-end">
             <icon name="up-sm" class="dst group-hover/collapse:stroke-[1.3] tldr-20" :class="{ '-rotate-180': isOpen }" />
@@ -71,7 +79,7 @@ const isOpen = ref(false)
         </CollapsibleTrigger>
 
         <CollapsibleContent class=" CollapsibleContent w-full ">
-          <Separator class="!bg-b3/60" />
+          <Separator v-if="isOpen"  :class="cn(' bg-linear-to-r to-b3/40 to-40%', playerWin ? 'from-inspiration' : 'from-domination')"/>
 
           <LazyMatchCollapse :match="match" />
         </CollapsibleContent>

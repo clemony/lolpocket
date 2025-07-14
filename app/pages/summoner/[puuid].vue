@@ -1,15 +1,4 @@
 <script lang="ts" setup>
-import { LayoutGroup } from 'motion-v'
-
-const route = useRoute()
-const puuid = computed (() => route.params.puuid.toString())
-const { summoner, fetchSummoner, loading, ready, forceReload } = useSummoner(puuid.value)
-console.log('💠 - summoner:', summoner)
-
-const as = useAccountStore()
-const {fetchInitialMatches, matchData} = useInitialMatchSync(as.userAccount.riot.puuid)
-console.log("💠 - matchData:", matchData)
-fetchInitialMatches()
 definePageMeta({
   name: 'summoner',
   title: 'Summoner Profile',
@@ -17,10 +6,15 @@ definePageMeta({
   path: '/summoner/:puuid',
   search: false,
 })
-//forceReload()
-onMounted (() => {
-  fetchSummoner()
-})
+const route = useRoute()
+const puuid = computed (() => route.params.puuid.toString())
+
+const { summoner, fetchSummoner, loading, ready, forceReload } = useSummoner(puuid.value)
+console.log('💠 - summoner:', summoner)
+
+const as = useAccountStore()
+
+// forceReload()
 </script>
 
 <template>

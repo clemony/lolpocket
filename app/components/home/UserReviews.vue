@@ -7,7 +7,6 @@ const api = ref<CarouselApi>()
 const inView = ref(0)
 function setApi(val: CarouselApi) {
   api.value = val
-  console.log('💠 - setApi - api.value :', api.value)
 }
 
 computed (() => {

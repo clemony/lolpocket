@@ -23,66 +23,57 @@ onMounted (() => {
 </script>
 
 <template>
-  <transition-expand group class="flex pl-4 pr-2 w-116 h-full flex-col items-center pt-19 justify-start  relative">
-    <div class="w-full px-5 mt-4">
-      <Tabs v-model:model-value="tabs" class=" w-full  **:pointer-events-auto " @update:model-value="navigateTo(tabs)">
-        <IndicatorTabsList class="grid grid-cols-2 h-10">
-          <IndicatorTabsTrigger value="/library/items">
-            Grid
-          </IndicatorTabsTrigger>
-
-          <IndicatorTabsTrigger value="/library/item_stats">
-            List
-          </IndicatorTabsTrigger>
-
-          <TabIndicator />
-        </IndicatorTabsList>
-      </Tabs>
-
-      <ItemSearch class="input w-full mt-9 shadow-sm drop-shadow-sm !bg-n1/85 inset-shadow-sm border-accent text-nc **:text-nc" />
+  <transition-expand group class="flex pl-4 pr-2   items-center top-19 bg-b1 z-1 justify-start  absolute inset-x-0">
+    <div class=" flex items-center pb-12">
+      <h1 class="grow">
+        Items
+      </h1>
     </div>
 
-    <div class="px-5 mt-10 w-full">
-      <ItemRankFilter />
+    <Tabs v-model:model-value="tabs" class="  **:pointer-events-auto " @update:model-value="navigateTo(tabs)">
+      <IndicatorTabsList class="grid grid-cols-2 h-10">
+        <IndicatorTabsTrigger value="/library/items">
+          Grid
+        </IndicatorTabsTrigger>
+
+        <IndicatorTabsTrigger value="/library/items/list">
+          List
+        </IndicatorTabsTrigger>
+
+        <TabIndicator />
+      </IndicatorTabsList>
+    </Tabs>
+
+    <ItemSearch class="input w-54  shadow-sm drop-shadow-sm !bg-n1/85 inset-shadow-sm border-accent text-nc **:text-nc" />
+
+    <ItemRankFilter />
+
+    <!--     <ItemStatsChecklist /> -->
+
+    <ItemMapFilter v-model:model-value="is.itemFilter.map" />
+
+    <div class="gap-4  text-2  tracking-tight  flex items-center justify-end ">
+      <MotionFade v-if="is.itemFilter.purchasable" layout-id="text">
+        Purchasable
+      </MotionFade>
+
+      <MotionFade v-else layout-id="text">
+        All
+      </MotionFade>
+
+      <Switch v-model:model-value="is.itemFilter.purchasable" class="dst">
+      </Switch>
     </div>
 
-    <div class="px-5 pt-12 pb-8 w-full">
-      <ItemStatsChecklist />
-    </div>
+    <ItemTagsFilter />
 
-    <div class="mt-2 mb-4 px-5 gap-6 flex items-center  w-full">
-      <ItemMapFilter v-model:model-value="is.itemFilter.map">
-      </ItemMapFilter>
-
-      <div class="gap-5 px-5 text-2  tracking-tight  flex items-center w-full justify-end ">
-        <MotionFade v-if="is.itemFilter.purchasable" layout-id="text">
-          Purchasable
-        </MotionFade>
-
-        <MotionFade v-else layout-id="text">
-          All
-        </MotionFade>
-
-        <Switch v-model:model-value="is.itemFilter.purchasable" class="dst">
-        </Switch>
-      </div>
-    </div>
-
-    <div class="px-7">
-      <div class="divider divider-start before:bg-b3/60 font-semibold  mb-8">
-        Tags
-      </div>
-
-      <ItemTagsFilter />
-    </div>
-
-    <div class=" absolute bottom-6 w-full px-4 flex gap-2">
+    <div class=" absolute bottom-6  px-4 flex gap-2">
       <div class="w-full">
         <ItemColumnDisplay v-if="route.path == '/items/stats'" />
       </div>
 
       <button
-        class="btn w-[49%] btn-n1 bg-n1/95 hover:opacity-85 font-normal "
+        class="btn btn-n1 bg-n1/85 hover:opacity-85 font-normal "
         @click="resetItems()">
         Reset Filters
       </button>

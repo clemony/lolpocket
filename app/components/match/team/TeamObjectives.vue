@@ -1,17 +1,17 @@
 <script lang="ts" setup>
-const props = defineProps<{
+const { team, teamObject, class: className } = defineProps<{
   team: any
   teamObject: any
   class?: HTMLAttributes['class']
 }>()
 
 const elder = computed (() => {
-  return props.teamObject[0].challenges.teamElderDragonKills
+  return teamObject[0].challenges.teamElderDragonKills
 })
 </script>
 
 <template>
-  <div class="" :class="cn('flex  *:hover:underline tldr-20 **:font-medium', props.class)">
+  <div class="" :class="cn('flex  *:hover:underline tldr-20 **:font-medium', className)">
     <div
       v-tippy="'Dragon Kills'" class="flex items-center gap-1">
       <img

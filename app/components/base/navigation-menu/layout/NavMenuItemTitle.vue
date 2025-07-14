@@ -5,7 +5,7 @@ const { class: className } = defineProps<{
 </script>
 
 <template>
-  <div :class="cn('flex items-center gap-3 mt-1 mb-1 dst justify-start w-full', className)">
+  <div :class="cn('flex items-center gap-3 mt-1 mb-1  justify-start w-full', className)">
     <slot />
   </div>
 </template>

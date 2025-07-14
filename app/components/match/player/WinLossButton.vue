@@ -1,22 +1,7 @@
 <script lang="ts" setup>
-const props = defineProps<{
-  player: any
-  match: any
+const { playerWin } = defineProps<{
+  playerWin: boolean
 }>()
-const player = computed (() => {
-  return props.player
-})
-
-const match = computed (() => {
-  return props.match
-})
-
-const playerWin = computed (() => {
-  const a = match.value.teams[0].win ? 100 : 200
-  const b = player.value.teamId
-
-  return a == b
-})
 </script>
 
 <template>

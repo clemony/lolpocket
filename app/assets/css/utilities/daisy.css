@@ -15,7 +15,9 @@
 }
 
 @utility btn-n1 {
-  @apply text-nc bg-n1 btn-neutral  *:text-nc  hover:text-nc shadow-sm drop-shadow-sm border-n1 hover:bg-n1/85 items-center [&_svg]:inline-flex align-middle px-3 font-normal text-3;
+  --btn-depth: 1;
+  --btn-noise: 1;
+  @apply text-nc bg-n1   *:text-nc  hover:text-nc shadow-sm drop-shadow-sm border-n1 hover:bg-n1/85 items-center [&_svg]:inline-flex align-middle px-3 font-normal text-3;
   &:hover {
     @apply !bg-n1/80 text-nc **:text-nc;
   }

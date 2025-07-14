@@ -12,7 +12,7 @@ async function getOldMatches() {
   const oldMatches = await useGetMatches({
     puuid: summoner.puuid,
     existingIds,
-    direction: 'old',
+    fetchMode: 'old',
   })
 }
 </script>

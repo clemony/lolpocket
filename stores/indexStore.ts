@@ -141,14 +141,18 @@ export const useIndexStore = defineStore(
 
       spellNameById: (id: number) =>
         findInIndex(spells.value, "id", id, "name"),
+
+      // images
+
       tileByKey: (key: string) => skin.value?.[key]?.tilePath,
       splashByKey: (key: string) => skin.value?.[key]?.splashPath,
       centeredByKey: (key: string) => skin.value?.[key]?.centeredPath,
       loadScreenByKey: (key: string) => skin.value?.[key]?.loadPath,
-      mapNameById: (id: number) =>
-        maps.value.find((m) => m.id === id)?.mapStringId ||
-        maps.value.find((m) => m.id === id)?.name ||
-        "",
+
+      // maps
+      mapNameById: (id: number) => maps.value.find((m) => m.id === id)?.name,
+      mapIdById: (id: number) =>
+        maps.value.find((m) => m.id === id)?.mapStringId,
     }
   },
   {

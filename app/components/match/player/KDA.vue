@@ -1,33 +1,45 @@
 <script lang="ts" setup>
-const props = defineProps<{
-  player: any
+const { player, class: className } = defineProps<{
+  player: Player
   class?: HTMLAttributes['class']
 }>()
 
-const player = computed (() => {
-  return props.player
-})
 const math = computed (() => {
-  return Math.round((player.value.kills + player.value.assists) / player.value.deaths * 100)
+  return Math.round((player.kills + player.assists) / player.deaths * 100)
 })
+/* aspect-square btn !bg-b1/84  inset-shadow-xs size-10 bg-linear-to-t shadow-sm drop-shadow-sm inset-shadow-xs */
+const statBadgeStyle = 'flex  leading-4 items-end  tracking-tight  font-medium text-1 rounded-md relative '
+const badgeLabelStyle = ' text-2 tracking-wide flex mb-px   text-nowrap !text-00  text-shadow-xs  text-end lowercase   font-normal '
+
 </script>
 
 <template>
-  <div class="" :class="cn('flex max-w-32 min-w-32 flex-col py-1 ml-4 items-start ', props.class)">
-    <p class="text-4 grid items-start font-semibold grid   justify-start tracking-wider text-nowrap inline-flex flex-nowrap">
-      {{ player.kills }}/<span class="text-domination">{{ player.deaths }}/</span>{{ player.assists }}
+  <div
+    class="flex w-25  gap-1 grid auto-rows-max *:w-full justify-start *:justify-start py-1 ml-2 items-center *:items-center *:justify-items-start">
+    <p class="text-5 grid items-center font-bold grid   justify-start tracking-tight text-nowrap inline-flex flex-nowrap">
+      {{ player.kills }}
+      <icon name="slash" class="-mx-px dst" />
+      {{ player.deaths }}
+      <icon name="slash" class="-mx-px dst" />
+      {{ player.assists }}
     </p>
+<div class="grid size-ful gap-0 ">
+    <div  :class="cn(statBadgeStyle)">
+        {{ Math.round(player.challenges.killParticipation * 100) }}
+      <p :class="badgeLabelStyle">% KP</p>
 
-    <p class="text-1 text-bc/80 text-nowrap mt-3 truncate font-medium ">
-      {{ Math.round(player.challenges.killParticipation * 100) }}% <span class=""> KP</span>
-    </p>
 
-    <p class="text-1 text-bc/80 text-nowrap  truncate font-medium ">
-      <span v-if="!player.deaths" class="tracking-tight mr-0.5">PERFECT</span>
+    </div>
 
-      <span v-else>{{ math / 100 }}:1 </span>
+    <div v-if="!player.deaths" class=" text-nowrap tracking-tight  truncate font-bold ">
+      PERFECT KDA
+    </div>
 
-      <span class=" contents">KDA</span>
-    </p>
+    <div v-else  :class="cn(statBadgeStyle)">
+        {{ (math / 100).toFixed(1) }}
+      <p :class="badgeLabelStyle">&nbsp;KDA</p>
+
+    </div>
+    </div>
   </div>
 </template>

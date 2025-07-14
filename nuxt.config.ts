@@ -2,7 +2,6 @@
 import tailwindcss from "@tailwindcss/vite"
 import process from "node:process"
 import { fileURLToPath } from "node:url"
-import VueDevTools from "vite-plugin-vue-devtools"
 
 export default defineNuxtConfig({
   modules: [
@@ -17,6 +16,7 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "nuxt-svgo",
     "motion-v/nuxt",
+    "nuxt-og-image",
   ],
 
   experimental: {
@@ -51,12 +51,7 @@ export default defineNuxtConfig({
   vite: {
     clearScreen: false,
     logLevel: "info",
-    plugins: [
-      VueDevTools({
-        appendTo: /\/entry\.m?js$/,
-      }),
-      tailwindcss(),
-    ],
+    plugins: [tailwindcss()],
     vue: {
       customElement: true,
     },
@@ -81,7 +76,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     supabaseUrl: process.env.NUXT_PUBLIC_SUPABASE_URL,
     supabaseAnonKey: process.env.NUXT_PUBLIC_SUPABASE_ANON_KEY,
-    riotApiKey: process.env.RIOT_API_KEY,
+    riotApiKey: process.env.NUXT_RIOT_API,
 
     public: {
       baseUrl: process.env.BASE_URL || "http://localhost:8080",
@@ -193,6 +188,6 @@ export default defineNuxtConfig({
   ssr: false,
 
   devtools: {
-    enabled: false,
+    enabled: true,
   },
 })

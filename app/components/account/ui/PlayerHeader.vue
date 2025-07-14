@@ -2,7 +2,7 @@
 const { summoner } = defineProps<{
   summoner: Summoner
 }>()
-  console.log("💠 - summonjjjjjer:", summoner)
+console.log('💠 - summonjjjjjer:', summoner)
 </script>
 
 <template>
@@ -13,9 +13,7 @@ const { summoner } = defineProps<{
 
     <div class="flex flex-col grow justify-center gap-1.5 drop-shadow-sm">
       <div class="flex items-center gap-6">
-        <h1 class="!text-8 font-serif leading-none grow font-bold">
-          {{ summoner.name || 'Summoner' }}
-        </h1>
+        <SummonerName class="!text-8 font-serif leading-none grow font-bold" />
 
         <!--
           <img
@@ -26,9 +24,7 @@ const { summoner } = defineProps<{
       </div>
 
       <div class="flex items-center lowercase gap-4 pl-0.5 font-normal">
-        <span class=" flex items-center">
-          <icon name="hash" class="size-3.75" />
-          {{ summoner.tag }}</span>
+        <SummonerTag :summoner="summoner" />
 
         <span class="lowercase flex items-center grow">
           <icon name="at" class="size-3.25 dst" />

@@ -1,22 +1,18 @@
 <script lang="ts" setup>
-const props = defineProps<{
-  player: any
+const { player, class: className } = defineProps<{
+  player: Player
   class?: HTMLAttributes['class']
 }>()
-
-const player = computed (() => {
-  return props.player
-})
 </script>
 
 <template>
-  <div class="" :offset="[2, -2]" :class="cn('flex flex-col gap-1 *:text-1 py-1 *:leading-none font-medium items-start tracking-tight justify-start size-full **:text-nowrap', props.class)">
+  <div class="" :offset="[2, -2]" :class="cn('flex flex-col gap-1 *:text-1 py-1 *:leading-none font-medium items-start tracking-tight justify-start size-full **:text-nowrap', className)">
     <p>
       {{ player.role }}
     </p>
 
     <p>
-      {{ player.individualPosition }}
+      {{ player.teamPosition }}
     </p>
   </div>
 </template>
