@@ -1,4 +1,4 @@
-import { normalizePatchNumber } from "../../app/utils/format/normalizePatch"
+import { normalizePatchNumber } from "../../app/utils/normalize/normalizePatch"
 
 // utils/simplify-match.ts
 export function simplifyMatchData(

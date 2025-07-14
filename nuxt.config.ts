@@ -25,21 +25,7 @@ export default defineNuxtConfig({
 
   icon: {
     provider: "iconify",
-    serverBundle: false,
-    customCollections: [
-      {
-        prefix: "lp-lol",
-        dir: "./app/assets/icons/lol",
-      },
-      {
-        prefix: "lp-ui",
-        dir: "./app/assets/icons/ui",
-      },
-      {
-        prefix: "lp-lp",
-        dir: "./app/assets/icons/lp",
-      },
-    ],
+    serverBundle: "local",
   },
 
   image: {

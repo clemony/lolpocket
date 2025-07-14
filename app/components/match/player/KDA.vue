@@ -10,7 +10,6 @@ const math = computed (() => {
 /* aspect-square btn !bg-b1/84  inset-shadow-xs size-10 bg-linear-to-t shadow-sm drop-shadow-sm inset-shadow-xs */
 const statBadgeStyle = 'flex  leading-4 items-end  tracking-tight  font-medium text-1 rounded-md relative '
 const badgeLabelStyle = ' text-2 tracking-wide flex mb-px   text-nowrap !text-00  text-shadow-xs  text-end lowercase   font-normal '
-
 </script>
 
 <template>
@@ -23,23 +22,25 @@ const badgeLabelStyle = ' text-2 tracking-wide flex mb-px   text-nowrap !text-00
       <icon name="slash" class="-mx-px dst" />
       {{ player.assists }}
     </p>
-<div class="grid size-ful gap-0 ">
-    <div  :class="cn(statBadgeStyle)">
+
+    <div class="grid size-ful gap-0 ">
+      <div :class="cn(statBadgeStyle)">
         {{ Math.round(player.challenges.killParticipation * 100) }}
-      <p :class="badgeLabelStyle">% KP</p>
+        <p :class="badgeLabelStyle">
+          % KP
+        </p>
+      </div>
 
+      <div v-if="!player.deaths" class=" text-nowrap tracking-tight  truncate font-bold ">
+        PERFECT KDA
+      </div>
 
-    </div>
-
-    <div v-if="!player.deaths" class=" text-nowrap tracking-tight  truncate font-bold ">
-      PERFECT KDA
-    </div>
-
-    <div v-else  :class="cn(statBadgeStyle)">
+      <div v-else :class="cn(statBadgeStyle)">
         {{ (math / 100).toFixed(1) }}
-      <p :class="badgeLabelStyle">&nbsp;KDA</p>
-
-    </div>
+        <p :class="badgeLabelStyle">
+          &nbsp;KDA
+        </p>
+      </div>
     </div>
   </div>
 </template>

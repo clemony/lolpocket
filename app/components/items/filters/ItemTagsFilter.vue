@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { itemTags } from 'utils/filters/itemFilters'
+import { itemTags } from '~/utils/filter/itemFilters'
 
 const is = useItemStore()
 

@@ -109,6 +109,11 @@ declare global {
   interface MatchTeam {
     teamId: number
     win: boolean
+    gold?: number
+    goldSpent?: number
+    kills?: number
+    deaths?: number
+    assists?: number
     feats: {
       EPIC_MONSTER_KILL: Feat
       FIRST_BLOOD: Feat

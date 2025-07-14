@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { itemRanks } from 'utils/filters/itemFilters'
+import { itemRanks } from '~/utils/filter/itemFilters'
 
 const emit = defineEmits(['update:model'])
 

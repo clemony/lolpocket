@@ -1,243 +1,18 @@
 <script lang="ts" setup>
-const { match, red, blue } = defineProps<{
+import { matchDataStats } from 'data/content/match-data-stats'
+
+const { match } = defineProps<{
   match: any
-  blue: any
-  red: any
 }>()
 
 const gameOutcome = computed (() => {
   return match.teams[0].win == true ? 'Blue Team Win' : 'Red Team Win'
 })
 const gameEnd = computed (() => {
-  return blue[0].gameEndedInSurrender == true ? 'Enemy Surrender' : null
+  return match.teams[0].gameEndedInSurrender == true ? 'Enemy Surrender' : null
 })
-const endGameStats = {
-
-  damage: [
-    {
-      id: 'Damage Dealt to Champions',
-      data: '',
-      i: 0,
-    },
-
-    {
-      id: 'total',
-      data: 'totalDamageDealtToChampions',
-    },
-    {
-      id: 'physical',
-      data: 'physicalDamageDealtToChampions',
-    },
-    {
-      id: 'magic',
-      data: 'magicDamageDealtToChampions',
-    },
-    {
-      id: 'true',
-      data: 'trueDamageDealtToChampions',
-    },
-    {
-      id: 'big crit',
-      data: 'largestCriticalStrike',
-    },
-  ],
-
-  healing: [
-    {
-      id: 'Effective Healing and Shielding',
-      data: '',
-      i: 1,
-    },
-    {
-      id: 'ally heal & shield',
-      data: 'effectiveHealAndShielding',
-    },
-    {
-      id: 'ally heal',
-      data: 'totalHealsOnTeammates',
-    },
-    {
-      id: 'ally shield',
-      data: 'totalDamageShieldedOnTeammates',
-    },
-    {
-      id: 'saved',
-      data: 'saveAllyFromDeath',
-    },
-  ],
-
-  utility: [
-    {
-      id: 'Team Utility',
-      data: '',
-      i: 7,
-    },
-    {
-      id: 'dmg taken',
-      data: 'totalDamageTaken',
-    },
-    {
-      id: 'dmg taken %',
-      data: `damageTakenOnTeamPercentage`,
-      spec: 'round',
-    },
-    {
-      id: 'CC output',
-      data: 'timeCCingOthers',
-    },
-  ],
-  vision:
-[
-  {
-    id: 'vision',
-    data: '',
-    i: 3,
-  },
-  {
-    id: 'score',
-    data: 'visionScore',
-  },
-  {
-    id: 'sight',
-    data: 'controlWardsPlaced',
-  },
-
-  {
-    id: 'place',
-    data: 'wardsPlaced',
-  },
-  {
-    id: 'guard',
-    data: 'wardsGuarded',
-  },
-],
-  objectives: [
-    {
-      id: 'Objectives',
-      data: '',
-      i: 4,
-    },
-    {
-      id: 'dmg to turrets',
-      data: 'damageDealtToObjectives',
-    },
-    {
-      id: 'turret takedowns',
-      data: 'turretKills',
-    },
-    {
-      id: 'inhib takedowns',
-      data: 'inhibitorTakedowns',
-    },
-    {
-      id: 'dmg to objectives',
-      data: 'damageDealtToObjectives',
-    },
-    {
-      id: 'steals',
-      data: 'objectivesStolen',
-    },
-    {
-      id: 'dragon kills',
-      data: 'dragonKills',
-    },
-    {
-      id: 'Baron kills',
-      data: 'teamBaronKills',
-    },
-  ],
-
-  kills: [
-    {
-      id: 'Kills',
-      data: '',
-      i: 5,
-    },
-    {
-      id: 'kills',
-      data: 'kills',
-    },
-    {
-      id: 'deaths',
-      data: 'deaths',
-    },
-    {
-      id: 'assists',
-      data: 'assists',
-    },
-    {
-      id: 'first blood',
-      data: 'firstBloodKill',
-    },
-
-    {
-      id: 'kda',
-      data: 'kda',
-      spec: 'round',
-    },
-    {
-      id: 'bounty',
-      data: 'bountyGold',
-      spec: 'round',
-    },
-    {
-      id: 'sprees',
-      data: 'killingSprees',
-    },
-    {
-      id: 'double',
-      data: 'doubleKills',
-    },
-    {
-      id: 'triple',
-      data: 'tripleKills',
-    },
-    {
-      id: 'quadra',
-      data: 'quadraKills',
-    },
-    {
-      id: 'penta',
-      data: 'pentaKills',
-    },
-
-  ],
-
-  farming: [
-    {
-      id: 'Farming',
-      data: '',
-      i: 6,
-    },
-
-    {
-      id: 'gold/min',
-      data: 'goldPerMinute',
-      spec: 'round',
-    },
-    {
-      id: 'n1',
-      data: 'n1MinionsKilled',
-    },
-    {
-      id: 'scuttle',
-      data: 'scuttleCrabKills',
-    },
-    {
-      id: 'void monster',
-      data: 'voidMonsterKill',
-    },
-    {
-      id: 'buffs Stolen',
-      data: 'buffsStolen',
-    },
-  ],
-
-}
 
 const statIndex = [0, 1, 2, 3, 4, 5, 6, 7]
-
-const ds = useDataStore()
 </script>
 
 <template>
@@ -251,7 +26,7 @@ const ds = useDataStore()
       </div>
 
       <div
-        v-for="player in blue.concat(red)" :key="player.playerId"
+        v-for="player in match.info.participants" :key="player.playerId"
         :class="cn(' place-items-center grid size-full rounded-xl z-0',
                    { 'bg-inspiration/30': player.teamId == 100,
                      'bg-domination/30': player.teamId == 200 })">
@@ -262,7 +37,7 @@ const ds = useDataStore()
     </div>
 
     <div class="overflow-auto mt-2 **:text-1 grid  grid-cols-[2fr_repeat(10,1fr)]   grid-flow-row overscroll-none relative grid px-2  h-180  ">
-      <template v-for="category in endGameStats" :key="category">
+      <template v-for="category in matchDataStats" :key="category">
         <div v-for="stat in category" :key="stat.id" class="contents">
           <div v-if="statIndex.includes(stat.i)" class="capitalize top-0 bg-b2 font-semibold items-center rounded-lg text-nowrap  py-1 px-2 !sticky left-0  grid col-span-11">
             <span class="">
@@ -278,7 +53,7 @@ const ds = useDataStore()
           </div>
 
           <div
-            v-for="player in blue.concat(red)" :key="player.id " :class="cn(
+            v-for="player in match.info.participants" :key="player.id " :class="cn(
               'text-end !text-1 *:!text-1 py-1 tracking-tight last:pr-2 font-medium',
               {
                 'text-bc/15 **:text-bc/15': player[stat.data] == 0 })">

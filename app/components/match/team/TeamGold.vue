@@ -5,28 +5,6 @@ const { team, enemy, class: className } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 
-const totalGold = computed (() => {
-  const a = team.map(p => p.goldEarned)
-  const b = enemy.map(p => p.goldEarned)
-  return {
-    ally: a.reduce((partialSum, a) => partialSum + a, 0),
-    enemey: b.reduce((partialSum, b) => partialSum + b, 0),
-  }
-})
-
-const spent = computed (() => {
-  const a = team.map(p => p.goldSpent)
-  const b = enemy.map(p => p.goldSpent)
-  return {
-    ally: a.reduce((partialSum, a) => partialSum + a, 0),
-    enemy: b.reduce((partialSum, b) => partialSum + b, 0),
-  }
-})
-
-const adv = computed (() => {
-  return totalGold.value.ally > totalGold.value.enemey ? 'advantage over' : 'disadvantage compared to'
-})
-
 /*
 const math = computed (() => {
   return Math.round((kills.value + assists.value) / deaths.value * 100)
@@ -34,11 +12,11 @@ const math = computed (() => {
 </script>
 
 <template>
-  <tippy class="" :offset="[2, -2]" :class="cn('flex gap-1 justify-end w-42', className)">
+  <tippy class="" :offset="[2, -2]" :class="cn('flex gap-1 justify-end ', className)">
     <i-ui-gold-icon class="size-4 text-[#C2A76E] dst " />
 
     <p class="flex font-medium dst items-center tracking-wide">
-      {{ `${spent.ally.toLocaleString()}/${totalGold.ally.toLocaleString()}` }}
+      {{ team.totalGold.toLocaleString() }}
     </p>
 
     <template #content>
@@ -47,7 +25,7 @@ const math = computed (() => {
       </p>
 
       <p>
-        <!-- {{`${} gold  ${adv} enemy team.`}} -->
+        <!-- total gold spent ${spent.ally.toLocaleString()}/ {{`${} gold  ${adv} enemy team.`}} -->
       </p>
 
       <p>

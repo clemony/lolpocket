@@ -1,44 +1,53 @@
 <script lang="ts" setup>
-const props = defineProps<{
+const { match } = defineProps<{
   match: any
-  red: any
-  blue: any
 }>()
 
-const match = computed (() => {
-  return props.match
-})
-
-const blue = computed (() => {
-  return props.blue
-})
-
-const red = computed (() => {
-  return props.red
+const teams = computed (() => {
+  return {
+    blue: match.info.participants.filter(p => p.teamId == 100),
+    red: match.info.participants.filter(p => p.teamId == 200),
+  }
 })
 </script>
 
 <template>
-  <div class="gap-2 flex flex-col overflow-x-scroll px-2">
+  <div class="gap-2 flex flex-col overflow-x-scroll ">
     <!--   teammate -->
     <div class=" size-full ">
-      <template v-for="(player, i) in blue" :key="i">
-        <MatchTeammate v-if="match && blue && player" :player="player" />
+      <template v-for="(player, i) in teams.blue" :key="i">
+        <MatchTeammate v-if="match && teams.blue && player" :player="player" />
+
+        <Separator v-if="i != 4" class="bg-b3/60 " />
       </template>
     </div>
-    <!-- team stats -->
-    <MatchTeamData :match="match" :team="blue" :team-id="100" :index="0" :enemy="red" />
 
-    <Separator class="bg-b3/60 " />
+    <div class="bg-linear-to-r h-14 from-inspiration/40 via-transparent to-domination/40 inset-shadow-xs w-full overflow-hidden max-w-full flex">
+      <!-- Team Stats -->
 
-    <!-- team stats -->
-    <MatchTeamData :match="match" :team="red" :team-id="200" :index="1" :enemy="blue" />
+      <div v-for="team, i in match.teams" :key="team.teamId" :class="cn('flex items-center gap-2 h-full')">
+        <div class="h-full grid items-center ">
+          <MatchOutcome :win="team.win" />
 
+          <TeamKDA :team="team" />
+        </div>
+
+        <div class="font-medium opacity-60 w-24 pl-2 flex justify-start">
+          {{ team.teamId == 100 ? 'Blue' : 'Red' }}
+        </div>
+
+        <div class="h-full grid items-center ">
+          <TeamGold :team="team" :enemy="match.teams[i == 100 ? 1 : 0]" />
+
+          <TeamObjectives :team="team" :team-object="team" />
+        </div>
+      </div>
+    </div>
     <!--   teammate -->
 
     <div class=" size-fit mt-1">
-      <template v-for="(player, i) in red" :key="i">
-        <MatchTeammate v-if="match && red && player" :player="player" />
+      <template v-for="(player, i) in teams.red" :key="i">
+        <MatchTeammate v-if="match && teams.red && player" :player="player" />
       </template>
     </div>
   </div>

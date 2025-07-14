@@ -88,6 +88,21 @@ export function transformMatchData(raw: any): MatchData {
     (team: any): MatchTeam => ({
       teamId: team.teamId,
       win: team.win,
+      gold: team.participants
+        .map((p: Player) => p.goldEarned)
+        .reduce((acc, curr) => acc + curr, 0),
+      goldSpent: team.participants
+        .map((p: Player) => p.goldSpent)
+        .reduce((acc, curr) => acc + curr, 0),
+      kills: team.participants
+        .map((p: Player) => p.kills)
+        .reduce((acc, curr) => acc + curr, 0),
+      deaths: team.participants
+        .map((p: Player) => p.deaths)
+        .reduce((acc, curr) => acc + curr, 0),
+      assists: team.participants
+        .map((p: Player) => p.assists)
+        .reduce((acc, curr) => acc + curr, 0),
       feats: {
         EPIC_MONSTER_KILL: {
           featState: team.feats?.EPIC_MONSTER_KILL?.featState ?? 0,

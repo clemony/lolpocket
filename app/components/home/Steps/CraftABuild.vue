@@ -1,13 +1,12 @@
 <script lang="ts" setup>
 const ix = useIndexStore()
 
+/* const shuffled = [...ix.champions.sort(() => 0.5 - Math.random())]
 const selectedChamps = computed (() => {
-  ix.loadDefaults()
-  const shuffled = ix.champions.sort(() => 0.5 - Math.random())
   console.log('💠 - selectedChamps - ix.champions:', ix.champions)
   return shuffled.slice(0, 6)
 })
-
+ */
 const currentItems = ref()
 
 const champModel = ref(null)
@@ -97,7 +96,7 @@ onMounted (async () => {
       </Transition>
 
       <transition-slide group :offset="[8, 0]" :duration="1000" class="flex items-center justify-center gap-4">
-        <template v-for="champion in selectedChamps" :key="champion.name">
+        <!--  <template v-for="champion in selectedChamps" :key="champion.name">
           <ChampionIcon v-if="champModel ? champion == champModel : selectedChamps.includes(champion)" :id="champion.id" v-tippy="champion.name" class="size-16 cursor-pointer hover:scale-110 hover:ring-1 hover:ring-neutral rounded-lg shadow-sm drop-shadow-sm transition-all duration-200 hover:ring-offset-2 hover:ring-offset-b2" :class="{ hidden: champModel != null && champion != champModel }">
             <input v-model="champModel" name="champion" type="radio" class="peer hidden" :value="champion" @change="setTimer('champ')" />
           </ChampionIcon>
@@ -107,7 +106,7 @@ onMounted (async () => {
             {{ champion.name }}
             <icon name="line-md:confirm-circle" class="size-7" />
           </h1>
-        </template>
+        </template> -->
       </transition-slide>
     </template>
 

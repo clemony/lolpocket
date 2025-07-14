@@ -8,7 +8,7 @@ const { scrollRef, scrollProg } = defineProps<{
 }>()
 
 const progressRef = useMotionValue(scrollProg)
-const {greaterOrEqual, lessThan} = useBreakpoint('x1024')
+const { greaterOrEqual, lessThan } = useBreakpoint('x1024')
 const progress = [
   useTransform(progressRef.get(), [0.1, 0.3], ['0%', '110%']),
   useTransform(progressRef.get(), [0.3, 0.5], ['0%', '110%']),
@@ -69,9 +69,10 @@ const steps = [
     :initial="{ boxShadow: '0 0 0 0 #00000000' }"
     :while-in-view="{ boxShadow: '0px -10px 20px 5px #00000010' }">
     <ul
-      class="timeline timeline-snap-icon  timeline-vertical    " >
-      <li v-for="(step, i) in steps" :key="i" class="group relative  " :class="cn('',
-            { '!grid-cols-1 !justify-start !-left-20': lessThan, },)">
+      class="timeline timeline-snap-icon  timeline-vertical    ">
+      <li
+        v-for="(step, i) in steps" :key="i" class="group relative  " :class="cn('',
+                                                                                { '!grid-cols-1 !justify-start !-left-20': lessThan })">
         <div class="timeline-middle drop-shadow-sm rounded-full scale-110 z-2" :class="{ 'bg-b2 ': isShown[i] && !isShown?.[i].value }">
           <Motion
             as-child
@@ -90,7 +91,7 @@ const steps = [
 
           :initial="{
             opacity: 0,
-            transform: isEven(i)  && greaterOrEqual ? 'translateX(-30%)' : 'translateX(30%)',
+            transform: isEven(i) && greaterOrEqual ? 'translateX(-30%)' : 'translateX(30%)',
           }"
           :while-in-view="{
             opacity: [0.4, 1],
@@ -106,9 +107,9 @@ const steps = [
             visualDuration: 0.5,
             bounce: 0.2,
           }"
-          :class="cn( 'group-last:ml-16 relative grid  pb-44 max-w-160 mb-10 w-full will-change-[transform,opacity] justify-start',
-            isEven(i) && greaterOrEqual ?  'timeline-start  md:text-end' : 'timeline-end'
-            )">
+          :class="cn('group-last:ml-16 relative grid  pb-44 max-w-160 mb-10 w-full will-change-[transform,opacity] justify-start',
+                     isEven(i) && greaterOrEqual ? 'timeline-start  md:text-end' : 'timeline-end',
+          )">
           <p class="font-mono italic py-2 dst text-4">
             Step {{ i }}
           </p>
@@ -139,7 +140,8 @@ const steps = [
     </ul>
   </motion.div>
 </template>
-<!-- w-1/2 after:h-600 after:absolute after:border-r after:scale-y-600   after:overflow-hidden after:border-dashed after:shrink-0-->
+
+<!-- w-1/2 after:h-600 after:absolute after:border-r after:scale-y-600   after:overflow-hidden after:border-dashed after:shrink-0 -->
 <!-- linear-to-b from-neutral/40 via-neutral/70 to-neutral/30 -->
 <!-- !bg-linear-to-b from-neutral/40 via-neutral/70 to-neutral/30 border-r border-dashed w-1/2  -->
 <style scoped>

@@ -1,4 +1,4 @@
-import { matchFilters } from "utils/filters/matchFilters"
+import { matchFilters } from "~/utils/filter/matchFilters"
 
 export function useFilteredMatches(
   puuid: string,
