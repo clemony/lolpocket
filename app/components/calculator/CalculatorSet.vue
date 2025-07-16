@@ -35,12 +35,9 @@ const is = useItemStore()
         'fallbackOnBody': true,
       },
     ]"
-    :offset="[0, -16]"
-    group
     ghost-class="item-set-item-ghost"
     fallback-class="item-set-item-fallback"
     filter=".no-drag"
-    class=" "
     :class="cn('grid items-center size-full justify-center place-self-center gap-4 group relative field-box p-4 w-150 grid-cols-6', { '': props.split, '': !props.split }, props.class)">
     <ItemCommand
       v-for="(itemId, i) in set" :key="itemId" :set-number="props.num"
