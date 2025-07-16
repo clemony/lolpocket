@@ -1,8 +1,4 @@
 <script setup lang="ts">
-const { signInOpen } = defineProps<{
-  signInOpen: boolean
-}>()
-
 const emit = defineEmits(['reset:sign-in'])
 const route = useRoute()
 const userNavRef = ref(null)

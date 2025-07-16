@@ -22,10 +22,17 @@ const modelValue = ref<string | number>('Scoreboard')
 
 <template>
   <div v-if="match" class="size-fit " :class="{ 'min-h-42': !isOpen, 'min-h-267': isOpen }">
-    <Collapsible v-if="player && match" :key="match.metadata.matchId" v-model:open="isOpen" as="div" class="field-box fade-in group w-220 justify-start max-w-220 group/collapse  bg-clip-padding justify-center **:select-none text-2  border-2  overflow-hidden p-0  @container/match min-w-134   cursor-pointer group/collapse ">
+    <Collapsible
+      v-if="player && match" :key="match.metadata.matchId" v-model:open="isOpen" as="div"
+      :class="cn(
+        'field-box fade-in group w-220 justify-start max-w-220 group/collapse  bg-clip-padding justify-center **:select-none text-2 overflow-hidden p-0  @container/match min-w-134  cursor-pointer group/collapse',
+
+        'before:absolute before:h-full before:w-1/2 before:brightness-94 before:opacity-40 before:mask-r-from-0 before:border before:rounded-box before:shadow-sm before:shadow-black',
+
+        playerWin ? 'before:border-inspiration ' : 'before:border-domination')">
       <CollapsibleTrigger
-        class="flex gap-7 py-3 w-full relative items-center justify-items-start overflow-hidden  cursor-pointer group/collapse px-4 justify-start"
-        :class="cn('bg-linear-to-r to-transparent to-40%', playerWin ? 'from-inspiration/80' : 'from-domination/80')">
+        class="flex gap-7 py-3 w-full relative items-center justify-items-start overflow-hidden  cursor-pointer group/collapse pl-5 justify-start"
+        :class="cn('bg-linear-to-r to-transparent to-40%', playerWin ? 'from-inspiration/80 ' : 'from-domination/80')">
         <div class="flex w-30  **:antialiased-subpixel h-full  **:select-none flex-col justify-start gap-1 py-1">
           <MatchOutcome :win="playerWin" />
 

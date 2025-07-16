@@ -1,15 +1,3 @@
-/**
- * Normalize a summoner's data for storage in the store.
- * @param summoner The summoner data to normalize
- * @returns The normalized summoner data
- *
- * This function will:
- * - fetch the newest matches for the summoner (up to 50 matches)
- * - merge the new matches with the existing matches
- * - dedupe the matches
- * - sort the matches by game creation date
- * - update the summoner data with the new matches
- */
 export async function normalizeSummonerForStore(
   summoner: Summoner
 ): Promise<Summoner> {

@@ -4,10 +4,9 @@ import Fade from 'embla-carousel-fade'
 import { motion } from 'motion-v'
 import type { CarouselApi } from '~/components/base/carousel/carousel-index'
 
-const { progress: p, visible, signInOpen } = defineProps<{
+const { progress: p, visible } = defineProps<{
   progress: MotionValue
   visible: boolean
-  signInOpen: boolean
 }>()
 
 const emit = defineEmits(['open:sign-in'])
@@ -59,6 +58,8 @@ watch([x, y], () => {
   isVisible.value = true
   start() // restart
 })
+
+const signInOpen = inject('signInOpen')
 </script>
 
 <template>

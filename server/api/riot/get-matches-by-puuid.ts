@@ -30,7 +30,7 @@ export default defineEventHandler(async (event) => {
     fetchMode?: "new" | "old"
   }
 
-  console.log("💠 - defineEventHandler - puuid:", puuid)
+  console.log("💠 - defineEventHandler FETCHING FROM API - puuid:", puuid)
   let offset = start
   let matchIds: string[] = []
 

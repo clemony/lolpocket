@@ -1,17 +1,26 @@
 <script setup lang="ts">
-const { account, class: className, regionId } = defineProps<{
+const { summoner, class: className } = defineProps<{
   class?: HTMLAttributes['class']
-  account?: UserAccount
-  regionId?: string
+  summoner?: Summoner
 }>()
 
-const { data } = await useFetch<Record<string, string>>('/api/region-index')
-
 const region = computed(() => {
-  return account ? data.value[account.riot.region.toLowerCase()] : regionId
+  if (summoner?.region)
+    return summoner.region
+
+  const user = inject<UserAccount>('user')
+  return user.riot.region
 })
 </script>
 
 <template>
-  <span :class="cn('', className)">{{ region || 'Runeterra' || '' }}</span>
+  <span v-if="region" :class="cn('flex items-center lowercase', className)">
+
+    <icon name="at" class="size-3.25 dst" />
+    {{ region }}
+  </span>
+
+  <span v-else :class="cn('', className)">
+    Runeterra
+  </span>
 </template>

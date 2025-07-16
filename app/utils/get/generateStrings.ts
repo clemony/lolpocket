@@ -25,6 +25,7 @@ const moreWords = [
   "Ban Phase",
   "Baron Steal",
   "Big Brain",
+  "Blaze It",
   "Blue Side Diff",
   "Boosted",
   "Bot Gap",

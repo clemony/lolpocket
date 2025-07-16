@@ -12,7 +12,7 @@ const REGIONAL = "americas"
 async function safeFetch<T>(
   url: string,
   params?: Record<string, any>,
-  retries = 2
+  retries = 1
 ): Promise<T> {
   try {
     return await $fetch<T>(url, {
@@ -105,4 +105,20 @@ export async function getMatchById(matchId: string, region = "americas") {
     `https://${region}.api.riotgames.com`,
     `/lol/match/v5/matches/${matchId}`
   )
+}
+
+export async function fetchPuuidByRiotId(
+  region: string,
+  name: string,
+  tag: string
+) {
+  const response = await $fetch(
+    `https://americas.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${encodeURIComponent(name)}/${encodeURIComponent(tag)}`,
+    {
+      headers: {
+        "X-Riot-Token": process.env.NUXT_RIOT_API!,
+      },
+    }
+  )
+  return response.puuid
 }

@@ -1,24 +1,27 @@
 export async function useMatchChampions(matches: SimplifiedMatchData[]) {
   const ix = useIndexStore()
-  const championStats = new Map<string, {
-    name: string
-    id: number
-    games: number
-    wins: number
-    losses: number
-    winrate: number
-    kills: number
-    deaths: number
-    assists: number
-    killParticipation: number
-    matchIndexes: number[]
-    gameVersions: number[]
-  }>()
+  const championStats = new Map<
+    string,
+    {
+      name: string
+      id: number
+      games: number
+      wins: number
+      losses: number
+      winrate: number
+      kills: number
+      deaths: number
+      assists: number
+      killParticipation: number
+      matchIndexes: number[]
+      gameVersions: number[]
+    }
+  >()
 
   const bayesianChampions = ref<any[]>([])
 
   watchEffect(() => {
-    if (!matches.length) {
+    if (!matches?.length) {
       bayesianChampions.value = []
       return
     }
@@ -27,8 +30,7 @@ export async function useMatchChampions(matches: SimplifiedMatchData[]) {
 
     matches.forEach((match, index) => {
       const champ = match.championName
-      if (!champ)
-        return
+      if (!champ) return
 
       if (!championStats.has(champ)) {
         championStats.set(champ, {
@@ -59,20 +61,28 @@ export async function useMatchChampions(matches: SimplifiedMatchData[]) {
       stats.winrate = (stats.wins / stats.games) * 100
     })
 
-    const totalGames = [...championStats.values()].reduce((sum, s) => sum + s.games, 0)
-    const globalWinrate = [...championStats.values()].reduce((sum, s) => sum + s.wins, 0) / totalGames || 0
+    const totalGames = [...championStats.values()].reduce(
+      (sum, s) => sum + s.games,
+      0
+    )
+    const globalWinrate =
+      [...championStats.values()].reduce((sum, s) => sum + s.wins, 0) /
+        totalGames || 0
 
     bayesianChampions.value = [...championStats.entries()]
       .map(([championName, stats]) => {
         const adjustedWeight = stats.games ** 0.7
         const confidence = adjustedWeight / (adjustedWeight + 15)
-        const bayesianWinrate = ((1 - confidence) * globalWinrate + confidence * (stats.wins / stats.games)) * 100
+        const bayesianWinrate =
+          ((1 - confidence) * globalWinrate +
+            confidence * (stats.wins / stats.games)) *
+          100
         const kda = (stats.kills + stats.assists) / Math.max(1, stats.deaths)
         const avgKP = stats.killParticipation / stats.games
         const avgKills = stats.kills / stats.games
         const avgDeaths = stats.deaths / stats.games
         const avgAssists = stats.assists / stats.games
-        const champion = computed (() => {
+        const champion = computed(() => {
           return ix.championByKey(championName)
         })
 

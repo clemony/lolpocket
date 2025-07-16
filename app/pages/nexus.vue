@@ -15,16 +15,22 @@ const as = useAccountStore()
 
 <template>
   <div class="pt-24 w-full flex flex-col h-full max-h-screen px-14 pb-6">
-    <div class="h-full">
-      <div class="w-100 h-60">
-        <!-- <RecentPatchWinrates /> -->
-      </div>
+    <header class="w-full">
+      <h1>Nexus</h1>
+    </header>
+
+    <div class="w-full">
+      <SummonerCard v-if="as.userAccount.riot" :summoner="as.userAccount.riot" />
     </div>
 
     <Separator class="bg-b3/60 w-full" />
 
+    <div class="w-100 h-60">
+      <!-- <RecentPatchWinrates /> -->
+    </div>
+    <!--
     <div class="w-full h-80 self-end ">
       <News />
-    </div>
+    </div> -->
   </div>
 </template>

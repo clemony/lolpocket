@@ -1,14 +1,23 @@
 <script setup lang="ts">
 const props = defineProps<{
   class?: HTMLAttributes['class']
+  summoner?: Summoner
 }>()
 const as = useAccountStore()
+
+const tag = computed (() => {
+  if (props.summoner?.tag)
+    return props.summoner.tag
+
+  const user = inject<UserAccount>('user')
+  return user.riot.tag
+})
 </script>
 
 <template>
-  <span v-if="as.userAccount.riot.puuid && as.userAccount.riot.tag" :class="cn('flex items-center', props.class)">
+  <span v-if="tag" :class="cn('flex items-center', props.class)">
     <icon name="lucide:hash" class="size-3.75" />
-    {{ as.userAccount.riot.tag }}
+    {{ tag }}
   </span>
 
   <span v-else :class="cn('', props.class)">

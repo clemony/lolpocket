@@ -1,64 +1,63 @@
-export function useSummoner(initialPuuid?: string) {
-  console.log("useSummoner:", initialPuuid)
+interface SummonerIdentifier {
+  puuid?: string
+  region?: string
+  name?: string
+  tag?: string
+}
 
+export async function resolveSummonerFromRiot(
+  region: string,
+  name: string,
+  tag: string
+): Promise<Summoner> {
+  const result = await $fetch<Summoner>("/api/resolve-summoner", {
+    params: { region, name, tag },
+  })
+  return result
+}
+
+export function useSummoner(identifier: string | SummonerIdentifier = {}) {
   const as = useAccountStore()
-  const summonerStore = useSummonerStore()
-
-  const currentPuuid = ref(initialPuuid || as.userAccount.riot.puuid)
-
-  const usingOwnAccount = computed(
-    () =>
-      !currentPuuid.value || currentPuuid.value === as.userAccount.riot.puuid
-  )
-
-  const summoner = computed(
-    () => summonerStore.getSummoner(currentPuuid.value) ?? null
-  )
+  const ss = useSummonerStore()
 
   const loading = ref(false)
   const ready = ref(false)
 
   const loadingMessage = computed(() => {
     if (!loading.value) return ""
-    return usingOwnAccount.value ?
-        "Loading your matches..."
-      : "Searching for summoner..."
+    return "Loading Summoner..."
   })
 
+  const currentPuuid = ref<string | null>(
+    typeof identifier === "string" ? identifier : identifier.puuid || null
+  )
+  const summoner = ref<Summoner | null>(null)
+
   const fetchSummoner = async (options?: { force?: boolean }) => {
-    console.log("fetchSummoner:", options?.force ? "force" : "not force")
-    console.log("fetchSummoner: puuid:", currentPuuid.value)
     loading.value = true
     ready.value = false
 
-    const puuid = currentPuuid.value
-    if (!puuid) {
-      console.log("fetchSummoner: return early, puuid is null")
-      loading.value = false
-      ready.value = true
-      return
-    }
-
-    console.log("fetchSummoner: querying cache")
-    const cached = summonerStore.getSummoner(puuid)
-    if (cached && !options?.force) {
-      console.log("fetchSummoner: return early, cached")
-      ready.value = true
-      loading.value = false
-      return
-    }
-
-    console.log("fetchSummoner: fetching data from API")
     try {
-      const rawSummoner = await useFetchSummonerData(puuid)
-      console.log("fetchSummoner: fetched rawSummoner:", rawSummoner)
-      await summonerStore.setSummoner(rawSummoner)
-      console.log("fetchSummoner: set summoner in store")
-      summonerStore.limitCache(10)
+      if (!options?.force && currentPuuid.value) {
+        const cached = ss.getSummoner(currentPuuid.value)
+        if (cached) {
+          summoner.value = cached
+          ready.value = true
+          loading.value = false
+          return
+        }
+      }
+
+      const resolved = await ss.resolveSummoner({
+        puuid: currentPuuid.value,
+      })
+
+      summoner.value = resolved
+      currentPuuid.value = resolved.puuid // in case it was resolved from name+tag
+      ss.limitCache(10)
     } catch (e) {
-      console.error("❌ Error fetching summoner:", e)
+      console.error("❌ fetchSummoner failed:", e)
     } finally {
-      console.log("fetchSummoner: finally")
       loading.value = false
       ready.value = true
     }
@@ -70,7 +69,7 @@ export function useSummoner(initialPuuid?: string) {
 
     const updated = await normalizeSummonerForStore(summoner.value)
 
-    summonerStore.setSummoner(updated)
+    ss.setSummoner(updated)
   }
 
   const forceReload = () => fetchSummoner({ force: true })
@@ -92,7 +91,6 @@ export function useSummoner(initialPuuid?: string) {
     loading,
     loadingMessage,
     ready,
-    usingOwnAccount,
     fetchSummoner,
     forceReload,
     refreshMatches,

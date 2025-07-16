@@ -17,7 +17,6 @@ export async function useGetMatches({
   full: MatchData[]
   simplified: SimplifiedMatchData[]
 }> {
-  console.log("💠 - puuid:", puuid)
   if (!puuid) {
     throw new Error("puuid is required")
   }
@@ -67,7 +66,6 @@ export async function useGetMatches({
         lastMatchTimestamp,
       },
     })
-    console.log("useGetMatches result:", result)
     return result
   } catch (error) {
     if (error instanceof Error) {

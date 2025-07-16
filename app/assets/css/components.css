@@ -33,7 +33,7 @@
   /* field  */
 
   .field {
-    @apply fieldset mt-2 relative w-full h-fit bg-b2 border border-b3 p-4 rounded-box;
+    @apply fieldset mt-2 relative w-full h-fit bg-b2 border border-b3/60 p-4 rounded-box;
   }
 
   .field-legend {

@@ -1,8 +1,4 @@
 <script setup lang="ts">
-const { signInOpen } = defineProps<{
-  signInOpen: boolean
-}>()
-
 const emit = defineEmits(['open:sign-in'])
 
 useSeoMeta({
@@ -65,7 +61,7 @@ const { stop } = useIntersectionObserver(
   <div
     ref="homeWrapper"
     class="relative w-screen overflow-x-hidden home-wrapper size-full overflow-y-scroll">
-    <Hero :progress="stepProgress" :visible="heroVisible" :sign-in-open="signInOpen" @open:sign-in="emit('open:sign-in')" />
+    <Hero :progress="stepProgress" :visible="heroVisible" @open:sign-in="emit('open:sign-in')" />
 
     <div ref="hero" class="absolute pointer-events-none  left-0  size-px  overflow-hidden bg-transparent" />
 

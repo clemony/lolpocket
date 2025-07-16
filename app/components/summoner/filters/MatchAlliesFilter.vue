@@ -1,8 +1,9 @@
 <script lang="ts" setup>
 import { ListboxContent, ListboxItem, ListboxRoot } from 'reka-ui'
 
-const { summoner } = defineProps<{
+const { summoner, class: className } = defineProps<{
   summoner: Summoner
+  class?: HTMLAttributes['class']
 }>()
 
 const ms = useMatchStore()
@@ -13,8 +14,8 @@ const winrateFormula = ref('absolute')
 </script>
 
 <template>
-  <Field class="p-0 w-120">
-    <ListboxRoot v-model:model-value="ms.mf.ally" class="w-full overflow-y-scroll overscroll-auto px-1.5  h-120 " :multiple="false" @entry-focus.prevent>
+  <Field :class="cn('p-0 w-120 ', className)">
+    <ListboxRoot v-model:model-value="ms.mf.ally" class="w-full overflow-y-scroll overscroll-auto px-1.5  h-max max-h-120 " :multiple="false" @entry-focus.prevent>
       <ListboxContent class="w-full py-4 ">
         <template v-if="!loading">
           <ListboxItem v-for="ally in repeatedTeammates" :key="ally.riotIdGameName" :value="ally.riotIdGameName" class=" grid grid-cols-[4fr_repeat(2,1fr)] gap-3 rounded-xl cursor-pointer  focus:outline-0 hover:border-b3 px-5 hover:bg-b3/30  py-1.5  grid shrink-0 w-full items-center  **:font-medium *:text-bc  dst" :class="{ 'bg-b3/40 border-b3 shadow-xs inset-shadow-sides bg-noise inset-shadow-b3/10': ally.riotIdGameName == ms.mf.ally }">

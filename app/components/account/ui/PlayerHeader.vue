@@ -2,13 +2,13 @@
 const { summoner } = defineProps<{
   summoner: Summoner
 }>()
-console.log('💠 - summonjjjjjer:', summoner)
 </script>
 
 <template>
+  <div class=" pt-34 flex ">
   <div class="flex  w-120 h-fit items-center gap-5 ">
     <div class=" size-fit grid place-items-center rounded-full drop-shadow-sm  shadow-sm shrink-0 relative">
-      <LazyProfileSummonerIcon v-if="summoner" :summoner="summoner" class="size-19 rounded-full" />
+      <LazySummonerIcon v-if="summoner" :summoner="summoner" class="size-19 rounded-full" />
     </div>
 
     <div class="flex flex-col grow justify-center gap-1.5 drop-shadow-sm">
@@ -26,10 +26,7 @@ console.log('💠 - summonjjjjjer:', summoner)
       <div class="flex items-center lowercase gap-4 pl-0.5 font-normal">
         <SummonerTag :summoner="summoner" />
 
-        <span class="lowercase flex items-center grow">
-          <icon name="at" class="size-3.25 dst" />
-
-          <SummonerRegion :region-id="summoner.region" /></span>
+        <SummonerRegion :region-id="summoner.region" />
       </div>
     </div>
 
@@ -40,6 +37,7 @@ console.log('💠 - summonjjjjjer:', summoner)
 
       <UpdateMatchHistoryButton v-if="summoner" :summoner="summoner" class="" />
     </div>
+  </div>
   </div>
 </template>
 

@@ -2,40 +2,9 @@ import type { Session } from "@supabase/supabase-js"
 import { jwtDecode } from "jwt-decode"
 import { toast } from "vue-sonner"
 
-export function useAuth() {
-  const client = useSupabaseClient()
-  const router = useRouter()
-  const route = useRoute()
-  const as = useAccountStore()
+export function useAuth() {}
 
-  client.auth.onAuthStateChange(async (event, session) => {
-    console.log("💠 Auth change:", event)
-
-    if (event === "INITIAL_SESSION" && session) {
-      console.log(
-        `💠 - client.auth.onAuthStateChange - "INITIAL_SESSION":`,
-        "INITIAL_SESSION"
-      )
-      await hydrateUser(session)
-    } else if (event === "SIGNED_OUT") {
-      as.resetUserAccount()
-      if (route.path !== "/") router.push("/")
-      else location.reload()
-      toast.success("Successfully logged out")
-    } else if (event === "SIGNED_IN" && session) {
-      const { data } = await client.auth.setSession({
-        access_token: session.access_token,
-        refresh_token: session.refresh_token,
-      })
-
-      if (data.session) {
-        await hydrateUser(data.session)
-      }
-    }
-  })
-}
-
-async function hydrateUser(session: Session) {
+export async function hydrateUser(session: Session) {
   const as = useAccountStore()
   const decoded = jwtDecode<AuthRoleJwtPayload>(session.access_token)
 
@@ -68,13 +37,6 @@ async function hydrateUser(session: Session) {
     }
   }
 
-  const { fetchSummoner, summoner } = useSummoner(as.userAccount.riot.puuid)
-  fetchSummoner()
-  const ss = useSummonerStore()
-  console.log("💠 - hydrateUser - ss:", ss.summoners)
-
-  console.log("💠 - hydrateUser - summoner:", summoner.value)
-
   as.currentSession = {
     session,
     accessToken: session.access_token,
@@ -90,7 +52,7 @@ async function fetchSummonerData(
   const client = useSupabaseClient()
   const { data, error } = await client
     .from("user_data")
-    .select('"name", "tag", "profileIcon", "level", "region", "puuid"')
+    .select('"name", "tag",  "puuid"')
     .eq("user_id", userId)
     .single()
 
@@ -103,6 +65,17 @@ async function fetchSummonerData(
 }
 
 export async function useSignOut() {
-  const client = useSupabaseClient()
-  await client.auth.signOut()
+  const accountStore = useAccountStore()
+  const supabaseClient = useSupabaseClient()
+  const router = useRouter()
+
+  accountStore.currentSession = {
+    session: null,
+    accessToken: null,
+    refreshToken: null,
+  }
+
+  await supabaseClient.auth.signOut()
+  router.push("/")
+  toast.success("Successfully logged out")
 }

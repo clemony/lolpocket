@@ -7,7 +7,6 @@ const { data: ogData, error } = await useFetch<PatchNotesData>('/api/fetch-og', 
     url: 'https://www.leagueoflegends.com/en-us/news/game-updates/patch-25-07-notes/',
   },
 })
-console.log('💠 - ogData:', ogData)
 
 const img = useImage()
 
@@ -16,7 +15,6 @@ const backgroundStyles = computed(() => {
 
   return { backgroundImage: `url('${imgUrl}')` }
 })
-console.log('💠 - backgroundStyles - backgroundStyles:', backgroundStyles)
 </script>
 
 <template>

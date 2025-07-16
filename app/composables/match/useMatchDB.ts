@@ -9,12 +9,10 @@ export function useMatchDexie() {
     simplified?: SimplifiedMatchData[]
   }) => {
     if (full.length) {
-      console.log("💠 - addMatches - MatchData:")
       await matchDB.matchData.bulkPut(full)
     }
 
     if (simplified.length) {
-      console.log("💠 - addMatches - SimplifiedMatchData:")
       await matchDB.simplifiedMatchData.bulkPut(simplified)
     }
   }

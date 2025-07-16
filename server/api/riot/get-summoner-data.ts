@@ -1,18 +1,5 @@
 import { fetchLeagueEntriesByPuuid, fetchSummonerByPuuid } from "../riot-client"
 
-interface SummonerResponse {
-  name: string
-  tag: string
-  puuid: string
-  profileIcon: string
-  level: number
-  region: string
-  ranked: {
-    solo?: RankedEntry
-    flex?: RankedEntry
-  }
-}
-
 export default defineEventHandler(async (event) => {
   const { puuid } = getQuery(event)
 

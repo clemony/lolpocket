@@ -2,9 +2,9 @@
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
-const as = useAccountStore()
 const ss = useSummonerStore()
-const { forceReload, loading } = useSummoner(as.userAccount.riot.puuid)
+const user = inject<UserAccount>('user')
+const { forceReload, loading } = useSummoner(user.riot.puuid)
 
 const keys = useMagicKeys()
 

@@ -7,7 +7,7 @@ const { summoner } = defineProps<{
 
 const ms = useMatchStore()
 
-const { bayesianChampions } = await useMatchChampions(summoner.matches.simplified)
+const { bayesianChampions } = await useMatchChampions(summoner.matches?.simplified)
 
 const displayChampions = computedAsync (() => {
   if (!bayesianChampions)
@@ -18,7 +18,7 @@ const displayChampions = computedAsync (() => {
 </script>
 
 <template>
-  <FieldTransition expand class="p-0 w-full gap-0">
+  <FieldTransition v-if="summoner.matches " expand class="p-0 w-full gap-0">
     <ListboxRoot v-model:model-value="ms.mf.champion" class="w-full  p-0 " :multiple="false" @entry-focus.prevent>
       <ListboxContent class="w-full ">
         <transition-slide group class="grid overflow-hidden h-fit gap-1   px-1 py-2.5">

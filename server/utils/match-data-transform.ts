@@ -84,25 +84,21 @@ export function transformMatchData(raw: any): MatchData {
     })
   )
 
-  const teams: MatchTeam[] = raw.info.teams.map(
-    (team: any): MatchTeam => ({
+  const teams: MatchTeam[] = raw.info.teams.map((team: any): MatchTeam => {
+    const teamParticipants = participants.filter(
+      (p) => p.teamId === team.teamId
+    )
+
+    return {
       teamId: team.teamId,
       win: team.win,
-      gold: team.participants
-        .map((p: Player) => p.goldEarned)
-        .reduce((acc, curr) => acc + curr, 0),
-      goldSpent: team.participants
-        .map((p: Player) => p.goldSpent)
-        .reduce((acc, curr) => acc + curr, 0),
-      kills: team.participants
-        .map((p: Player) => p.kills)
-        .reduce((acc, curr) => acc + curr, 0),
-      deaths: team.participants
-        .map((p: Player) => p.deaths)
-        .reduce((acc, curr) => acc + curr, 0),
-      assists: team.participants
-        .map((p: Player) => p.assists)
-        .reduce((acc, curr) => acc + curr, 0),
+
+      gold: teamParticipants.reduce((sum, p) => sum + p.goldEarned, 0),
+      goldSpent: teamParticipants.reduce((sum, p) => sum + p.goldSpent, 0),
+      kills: teamParticipants.reduce((sum, p) => sum + p.kills, 0),
+      deaths: teamParticipants.reduce((sum, p) => sum + p.deaths, 0),
+      assists: teamParticipants.reduce((sum, p) => sum + p.assists, 0),
+
       feats: {
         EPIC_MONSTER_KILL: {
           featState: team.feats?.EPIC_MONSTER_KILL?.featState ?? 0,
@@ -124,8 +120,8 @@ export function transformMatchData(raw: any): MatchData {
         riftHerald: team.objectives?.riftHerald ?? { first: false, kills: 0 },
         tower: team.objectives?.tower ?? { first: false, kills: 0 },
       },
-    })
-  )
+    }
+  })
 
   const matchData: MatchData = {
     metadata: {
