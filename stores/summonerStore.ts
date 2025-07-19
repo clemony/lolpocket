@@ -7,9 +7,21 @@ export const useSummonerStore = defineStore(
 
     // 🔄 Centralized setter: always normalizes
     async function setSummoner(rawSummoner: Summoner) {
-      console.log("💠 - setSummoner - rawSummoner:", rawSummoner)
       const normalized = await normalizeSummonerForStore(rawSummoner)
       summoners.value[normalized.puuid] = normalized
+    }
+
+    async function mergeSummonerData(
+      puuid: string,
+      partial: Partial<Summoner>
+    ) {
+      const existing = summoners.value[puuid]
+      if (!existing) return
+
+      summoners.value[puuid] = {
+        ...existing,
+        ...partial,
+      }
     }
 
     const getSummoner = (puuid: string) => summoners.value[puuid] || null
@@ -98,6 +110,7 @@ export const useSummonerStore = defineStore(
     return {
       summoners,
       setSummoner,
+      mergeSummonerData,
       getSummoner,
       resolveSummoner,
       clearSummoner,

@@ -22,12 +22,9 @@ export const useAccountStore = defineStore(
       role: "default",
       id: null,
       riot: {
-        name: "Summoner",
+        name: null,
         tag: null,
         puuid: null,
-        profileIcon: null,
-        level: null,
-        region: "Runeterra",
       },
       settings: {
         general: {
@@ -37,6 +34,9 @@ export const useAccountStore = defineStore(
         notifications: {
           newPocket: true,
           deletePocket: true,
+        },
+        profile: {
+          splash: null,
         },
       },
       pockets: {
@@ -59,9 +59,6 @@ export const useAccountStore = defineStore(
         name: "Summoner",
         tag: null,
         puuid: null,
-        profileIcon: null,
-        level: null,
-        region: "Runeterra",
       },
       settings: {
         general: {
@@ -71,6 +68,9 @@ export const useAccountStore = defineStore(
         notifications: {
           newPocket: true,
           deletePocket: true,
+        },
+        profile: {
+          splash: null,
         },
       },
       pockets: {

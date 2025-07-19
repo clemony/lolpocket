@@ -2,9 +2,9 @@
 const username = ref(null)
 const password = ref(null)
 
-const passwordError = computed (() => {
+/* const passwordError = computed (() => {
 
-})
+}) */
 </script>
 
 <template>
@@ -35,7 +35,7 @@ const passwordError = computed (() => {
       Forgot Password?
     </a>
 
-    <button class="btn btn-n1">
+    <button class="btn btn-neutral">
       Sign in / up
     </button>
   </div>

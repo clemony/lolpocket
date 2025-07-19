@@ -1,6 +1,10 @@
 import type { RefOrElement } from "vue-draggable-plus"
 
 declare global {
+  type DeepPartial<T> = {
+    [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P]
+  }
+
   interface OgResponse {
     title: string
     description: string

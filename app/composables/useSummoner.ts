@@ -1,25 +1,7 @@
-interface SummonerIdentifier {
-  puuid?: string
-  region?: string
-  name?: string
-  tag?: string
-}
-
-export async function resolveSummonerFromRiot(
-  region: string,
-  name: string,
-  tag: string
-): Promise<Summoner> {
-  const result = await $fetch<Summoner>("/api/resolve-summoner", {
-    params: { region, name, tag },
-  })
-  return result
-}
+import { fetchSummonerMastery } from "./helpers/fetchSummonerMastery"
 
 export function useSummoner(identifier: string | SummonerIdentifier = {}) {
-  const as = useAccountStore()
   const ss = useSummonerStore()
-
   const loading = ref(false)
   const ready = ref(false)
 
@@ -36,7 +18,6 @@ export function useSummoner(identifier: string | SummonerIdentifier = {}) {
   const fetchSummoner = async (options?: { force?: boolean }) => {
     loading.value = true
     ready.value = false
-
     try {
       if (!options?.force && currentPuuid.value) {
         const cached = ss.getSummoner(currentPuuid.value)
@@ -48,12 +29,12 @@ export function useSummoner(identifier: string | SummonerIdentifier = {}) {
         }
       }
 
-      const resolved = await ss.resolveSummoner({
-        puuid: currentPuuid.value,
-      })
+      const resolved = await ss.resolveSummoner(
+        typeof identifier === "string" ? { puuid: identifier } : identifier
+      )
 
       summoner.value = resolved
-      currentPuuid.value = resolved.puuid // in case it was resolved from name+tag
+      currentPuuid.value = resolved.puuid
       ss.limitCache(10)
     } catch (e) {
       console.error("❌ fetchSummoner failed:", e)
@@ -72,8 +53,6 @@ export function useSummoner(identifier: string | SummonerIdentifier = {}) {
     ss.setSummoner(updated)
   }
 
-  const forceReload = () => fetchSummoner({ force: true })
-
   watch(
     currentPuuid,
     () => {
@@ -82,8 +61,9 @@ export function useSummoner(identifier: string | SummonerIdentifier = {}) {
     { immediate: true }
   )
 
-  const setPuuid = (newPuuid: string) => {
-    currentPuuid.value = newPuuid
+  async function fetchMastery(full = false) {
+    if (!currentPuuid.value) return null
+    return await fetchSummonerMastery(currentPuuid.value, full)
   }
 
   return {
@@ -92,8 +72,9 @@ export function useSummoner(identifier: string | SummonerIdentifier = {}) {
     loadingMessage,
     ready,
     fetchSummoner,
-    forceReload,
     refreshMatches,
-    setPuuid,
+    forceReload: () => fetchSummoner({ force: true }),
+    fetchMastery,
+    setPuuid: (newPuuid: string) => (currentPuuid.value = newPuuid),
   }
 }

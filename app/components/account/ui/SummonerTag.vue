@@ -9,8 +9,8 @@ const tag = computed (() => {
   if (props.summoner?.tag)
     return props.summoner.tag
 
-  const user = inject<UserAccount>('user')
-  return user.riot.tag
+  const user = inject<User>('user')
+  return user.account.riot.tag
 })
 </script>
 

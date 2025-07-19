@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { AnalyzeResults, CraftABuild, CreateAPocket, PlayGames } from '#components'
 import { motion } from 'motion-v'
+import { useBreakpoint } from '~/utils/ui/useBreakpoints'
 
 const { scrollRef, scrollProg } = defineProps<{
   scrollRef: HTMLElement

@@ -1,5 +1,3 @@
-import { ref, watchEffect } from "vue"
-
 export function useInitialMatchSync(puuid: string) {
   const ready = ref(false)
   const loading = ref(false)

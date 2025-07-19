@@ -1,34 +1,40 @@
 @import "tailwindcss";
 @import "../theme.css";
+@import "tippy.js/dist/svg-arrow.css";
 
 .tippy-content {
   @apply text-3;
 }
 
 .tippy-box {
-  @apply shadow-md bg-n1/80 text-nc/80 rounded-lg px-4 py-1.25 backdrop-blur-md;
+  @apply shadow-md bg-n1/80 text-nc/80 inset-shadow-xs rounded-lg px-4 py-1.25 backdrop-blur-md;
+
+  & > .tippy-svg-arrow {
+    @apply drop-shadow-sm -translate-y-px;
+  }
+  & > .tippy-svg-arrow > svg:first-child {
+    @apply fill-n1 scale-90;
+  }
+  & > .tippy-svg-arrow > svg:last-child {
+    @apply fill-n2 scale-90;
+  }
 }
 
 .tippy-box[data-inertia][data-state="visible"] {
   transition-timing-function: cubic-bezier(0.28, 0.93, 0.75, 1.38);
 }
 
-.tippy-box[data-placement^="top"] > .tippy-arrow::before {
-  border-top-color: n1;
-}
-.tippy-box[data-placement^="bottom"] > .tippy-arrow::before {
-  border-bottom-color: n1;
-}
-.tippy-box[data-placement^="left"] > .tippy-arrow::before {
-  border-left-color: n1;
-}
-.tippy-box[data-placement^="right"] > .tippy-arrow::before {
-  border-right-color: n1;
-}
-
 .tippy-box[data-theme~="basic"] {
-  background-color: var(--color-b1);
-  color: var(--color-bc);
+  @apply border border-b3 bg-b1/85 rounded-field backdrop-blur-md text-bc/90 **:text-2 drop-shadow-[1px_3px_2px_#00000020] shadow-none py-2;
+  & > .tippy-svg-arrow {
+    @apply drop-shadow-[0px_1px_0_#00000016];
+  }
+  & > .tippy-svg-arrow > svg:first-child {
+    @apply fill-b4 scale-90;
+  }
+  & > .tippy-svg-arrow > svg:last-child {
+    @apply fill-b1 scale-90;
+  }
 }
 
 .tippy-box[data-theme~="field"] {

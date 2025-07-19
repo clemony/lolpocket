@@ -25,7 +25,7 @@ console.log('💠 - as.userAccount.pockets.pinned.length:', as.userAccount.pocke
         </p>
       </NavMenuLink>
 
-      <NavigationMenuLink class=" btn btn-n1  w-full gap-2 font-medium text-2 justify-start pr-6 self-start" @click="addPocket()">
+      <NavigationMenuLink class=" btn btn-neutral  w-full gap-2 font-medium text-2 justify-start pr-6 self-start" @click="addPocket()">
         <icon name="add-sm" class="text-nc  stroke-[1.5] mb-px shrink-0" />
 
         Create New Pocket

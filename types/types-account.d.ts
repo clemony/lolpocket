@@ -2,14 +2,25 @@ import type { Session } from "@supabase/supabase-js"
 
 declare global {
   type AccountRole = "admin" | "summoner" | "default"
+
+  interface User {
+    account: UserAccount
+    summoner: Summoner
+  }
+
   interface UserAccount {
     name: string
     role: AccountRole
     id: string
-    riot: UserSummoner | null
+    riot: {
+      puuid: string
+      name: string
+      tag: string
+    }
     settings: {
       general: Record<string, string | boolean>
       notifications: Record<string, string | boolean>
+      profile: Record<string, string | boolean>
     }
     pockets: UserPockets
     inbox: UserInbox

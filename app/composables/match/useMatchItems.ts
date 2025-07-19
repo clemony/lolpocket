@@ -1,7 +1,5 @@
-const ix = useIndexStore()
-
 export function useMatchItems() {
-  const ds = useDataStore()
+  const ix = useIndexStore()
   const as = useAccountStore()
   const ss = useSummonerStore()
 

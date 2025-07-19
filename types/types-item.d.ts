@@ -81,11 +81,11 @@ declare global {
     range?: number
   }
 
-  interface ItemClone extends ItemId {
+  interface ItemClone {
     id: number
     cloneId: string
   }
-  interface ItemStat extends StatLite {
+  interface ItemStat {
     id: string
     displayName?: string
     shortName?: string

@@ -108,7 +108,7 @@ watchEffect(() => {
 
 <template>
   <motion.div
-    :class="cn('border bg-n1/84 text-nc btn-n1  btn-circle relative flex btn   rounded-full items-center', props.class)"
+    :class="cn('border bg-n1/84 text-nc btn-neutral  btn-circle relative flex btn   rounded-full items-center', props.class)"
     :variants="variants"
     initial="collapsed"
     :transition="{

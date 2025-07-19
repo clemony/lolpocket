@@ -15,20 +15,15 @@ export default defineNuxtConfig({
     "vue-sonner/nuxt",
     "@nuxt/icon",
     "nuxt-svgo",
-    "motion-v/nuxt",
-    "nuxt-og-image",
+    "motion-v/nuxt" /*     "nuxt-og-image", */,
+    /*     "@nuxtjs/tailwindcss", */
   ],
 
   experimental: {
     payloadExtraction: true,
   },
 
-  icon: {
-    provider: "iconify",
-    serverBundle: "local",
-  },
-
-  ogImage: { enabled: false },
+  /*   ogImage: { enabled: false }, */
 
   image: {
     domains: ["ddragon.leagueoflegends.com", "cdn.communitydragon.org"],
@@ -98,50 +93,43 @@ export default defineNuxtConfig({
       },
     },
   },
-
   components: [
     {
       path: "~/components",
       pathPrefix: false,
     },
   ],
-
   svgo: {
     componentPrefix: "i",
   },
-
-  imports: {
-    dirs: ["@vueuse/components", "stores", "routes", "data"],
+  icon: {
+    provider: "iconify",
+    serverBundle: "local",
   },
-
+  imports: {
+    dirs: ["@vueuse/components", "routes", "data"],
+  },
   pinia: {
     storesDirs: ["./stores/**"],
   },
-
+  css: ["~/assets/css/tailwind.css"],
   postcss: {
-    plugins: {
-      "@tailwindcss/postcss": {},
-    },
+    plugins: {},
   },
 
   alias: {
-    "#": fileURLToPath(new URL("./", import.meta.url)),
-    "@": fileURLToPath(new URL("./app", import.meta.url)),
     css: fileURLToPath(new URL("./app/assets/css", import.meta.url)),
     types: fileURLToPath(new URL("./types", import.meta.url)),
     stores: fileURLToPath(new URL("./stores", import.meta.url)),
     composables: fileURLToPath(new URL("./app/composables", import.meta.url)),
     shared: fileURLToPath(new URL("./shared", import.meta.url)),
     utils: fileURLToPath(new URL("./app/utils", import.meta.url)),
-
     api: fileURLToPath(new URL("./public/api", import.meta.url)),
     components: fileURLToPath(new URL("./app/components", import.meta.url)),
     plugins: fileURLToPath(new URL("./app/plugins", import.meta.url)),
     modules: fileURLToPath(new URL("./modules", import.meta.url)),
     data: fileURLToPath(new URL("./app/data", import.meta.url)),
   },
-
-  css: ["~/assets/css/tailwind.css"],
 
   app: {
     head: {
@@ -150,16 +138,14 @@ export default defineNuxtConfig({
       ],
     },
   },
-
   devServer: {
     port: 8080,
   },
-
-  // devtools: {
-  //   enabled: true,
-  //   componentInspector: true,
-  //   viteInspect: true,
-  // },
+  devtools: {
+    enabled: true,
+    componentInspector: true,
+    viteInspect: true,
+  },
   webpack: {
     loaders: {
       vue: {
@@ -174,8 +160,4 @@ export default defineNuxtConfig({
 
   compatibilityDate: "2024-11-01",
   ssr: false,
-
-  devtools: {
-    enabled: true,
-  },
 })

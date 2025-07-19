@@ -17,7 +17,7 @@ async function signInWithDiscord() {
 <template>
   <button
     v-tippy="'Discord'"
-    class="btn  w-full group h-18 relative overflow-hidden   hover:!btn-n1 hover:bg-n1/90 " alt="Sign in with
+    class="btn  w-full group h-18 relative overflow-hidden   hover:!btn-neutral hover:bg-n1/90 " alt="Sign in with
     Discord"
     @click="signInWithDiscord">
     <div class="size-full relative grid place-items-center">

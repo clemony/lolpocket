@@ -37,7 +37,7 @@ const data = [
     <div class="bg-n1 items-center text-nc flex overflow-hidden px-10  z-20 m-auto h-[98%] w-[95%] rounded-3xl grid grid-cols-2 gap-10">
       <div class="size-full grid wp-77% justify-items-center relative py-20 overflow-hidden">
         <motion.h2
-          :style="{ transform: `translateY(${progressY}%)` }"
+          :style="{ transform: `translateY(${Math.round(progressY * 100) / 100}%)` }"
           class="text-14 absolute pr-14 h-full"
           :transition="{ type: 'inertia' }">
           Additional Tools.

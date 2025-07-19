@@ -4,25 +4,23 @@ import { getChampionMastery } from "../riot-client"
 
 export default defineEventHandler(async (event) => {
   const query = getQuery(event)
+  const puuid = query.puuid?.toString()
+  const full = query.full === "true"
 
-  if (!query.puuid)
+  if (!puuid)
     throw createError({ statusCode: 400, statusMessage: "Missing puuid" })
 
-  const mastery = await getChampionMastery(query.puuid.toString())
+  const masteryData = await getChampionMastery(puuid, full)
 
-  const formatted = Object.fromEntries(
-    mastery.map((m: any) => [
-      m.championId,
-      {
-        key: m.championId,
-        level: m.championLevel,
-        points: m.championPoints,
-      },
-    ])
-  )
+  const mastery = masteryData.map((m: any) => ({
+    id: m.championId,
+    level: m.championLevel,
+    points: m.championPoints,
+    lastPlayed: m.lastPlayTime, // fixed typo: `lastedPlayed` → `lastPlayed`
+  }))
 
   return {
-    puuid: query.puuid,
-    mastery: formatted,
+    puuid,
+    mastery,
   }
 })

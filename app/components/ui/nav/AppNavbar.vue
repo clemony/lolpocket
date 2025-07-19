@@ -1,16 +1,19 @@
 <script setup lang="ts">
-const emit = defineEmits(['reset:sign-in'])
 const route = useRoute()
 const userNavRef = ref(null)
 const userNav = ref(null)
 const as = useAccountStore()
 
-watch(() => userNav.value, (newVal) => {
-  if (!newVal) {
-    emit('reset:sign-in')
-  }
+const { toggleSignIn } = inject('signIn', {
+  signInOpen: ref(false),
+  toggleSignIn: () => {},
 })
 
+watch(() => userNav.value, (newVal) => {
+  if (!newVal) {
+    toggleSignIn()
+  }
+})
 const { width } = useElementBounding(userNavRef)
 
 const settingsOpen = ref(false)
@@ -18,7 +21,9 @@ const pinsOpen = ref(false)
 const adminOpen = ref(false)
 
 function resetInbox(e) {
-  console.log('💠 - resetInbox - e:', e)
+  if (!as.userAccount)
+    return
+
   if (e == 'Messages') {
     as.userAccount.inbox.newNotifications = 0
   }
@@ -28,14 +33,14 @@ function resetInbox(e) {
 }
 
 function verifySignIn() {
-  if (!as.currentSession.session)
+  if (!as.currentSession?.session)
     userNav.value = 'signIn'
 }
 </script>
 
 <template>
-  <nav class=" w-full justify-between    flex fixed flex-nowrap top-0 inset-x-0 w-screen h-16 items-center border-b border-b-b3/60 px-3  z-10">
-    <div class="size-full absolute top-0 left-0 inset-0  bg-b1/88 backdrop-blur-md" :class="{ '!bg-b1/50': route.path == '/' }" />
+  <nav class=" w-full justify-between    flex fixed flex-nowrap top-0 inset-x-0 w-screen h-(--navbar-height) items-center border-b border-b-b3/60 px-3  z-10">
+    <div class="size-full absolute top-0 left-0 inset-0  bg-b1/88 backdrop-blur-md" :class="{ '!bg-b1/50': route?.path == '/' }" />
 
     <NavigationMenu disable-pointer-leave-close>
       <NavigationMenuList class="gap-x-2">
@@ -86,7 +91,7 @@ function verifySignIn() {
           <CommandSearch />
         </NavigationMenuLink>
 
-        <LazyAccountMenu :nav="userNav" @open:settings="settingsOpen = true" @reset-count="e => resetInbox(e)" @open:admin="adminOpen = true" />
+        <LazyAccountMenu :nav="userNav" @open:settings="settingsOpen = true" @open:admin="adminOpen = true" />
       </NavigationMenuList>
 
       <NavigationMenuViewport
@@ -99,12 +104,15 @@ function verifySignIn() {
     </NavigationMenu>
   </nav>
 
-  <!-- <SummonerName class="normal-case font-medium" /> -->
+
   <LazySettingsSheet v-model:open="settingsOpen" hydrate-on-interact />
 
   <LazyPocketPinEditor v-model:open="pinsOpen" />
 
-  <LazyAdminSheet v-if="as.userAccount && as.userAccount.role == 'admin'" v-model:open="adminOpen" :account="as.userAccount" hydrate-on-interact />
+  <LazyAdminSheet
+    v-if="as && as.userAccount?.role === 'admin'"
+    v-model:open="adminOpen"
+    :account="as.userAccount" />
 </template>
 
 <style scoped></style>

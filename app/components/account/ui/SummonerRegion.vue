@@ -8,8 +8,8 @@ const region = computed(() => {
   if (summoner?.region)
     return summoner.region
 
-  const user = inject<UserAccount>('user')
-  return user.riot.region
+  const user = inject<User>('user')
+  return user.summoner.region
 })
 </script>
 

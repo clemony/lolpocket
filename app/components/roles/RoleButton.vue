@@ -10,7 +10,7 @@ const pocket = computed (() => props.pocket)
 <template>
   <label
 
-    class="btn btn-sm justify-start btn-n1 !text-2   gap-2 text-nc  group/role   capitalize relative overflow-hidden" @click.stop>
+    class="btn btn-sm justify-start btn-neutral !text-2   gap-2 text-nc  group/role   capitalize relative overflow-hidden" @click.stop>
 
     <input
       v-model="pocket.roles" class="peer hidden absolute"

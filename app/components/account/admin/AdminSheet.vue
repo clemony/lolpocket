@@ -3,8 +3,9 @@ const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 const ss = useSummonerStore()
-const user = inject<UserAccount>('user')
-const { forceReload, loading } = useSummoner(user.riot.puuid)
+const as = useAccountStore()
+const user = inject<User | null>('user')
+const { forceReload, loading } = useSummoner(user?.account?.riot?.puuid)
 
 const keys = useMagicKeys()
 
@@ -15,7 +16,7 @@ whenever(keys.shift_a, () => {
 </script>
 
 <template>
-  <Sheet v-model:open="isOpen">
+  <Sheet v-if="as && as.userAccount?.role == 'admin'" v-model:open="isOpen">
     <LazyNestedSheetContent class="h-screen max-h-screen overflow-hidden ">
       <SheetHeader>
         <NestedSheetTitle>

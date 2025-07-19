@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 definePageMeta({
   name: 'summoner',
   title: 'Summoner Profile',
@@ -7,15 +8,13 @@ definePageMeta({
   search: false,
 })
 
+const user = inject<User>('user')
 const route = useRoute()
 const region = computed(() => route.params.region?.toString())
 const slug = computed(() => route.params.slug?.toString())
-
 const name = computed(() => slug.value?.split('_')?.[0] ?? '')
 const tag = computed(() => slug.value?.split('_')?.[1] ?? '')
-
 const ss = useSummonerStore()
-console.log('💠 - ss:', ss.summoners)
 const puuid = ref<string | null>(null)
 const summoner = ref<Summoner | null>(null)
 const loading = ref(true)
@@ -46,53 +45,58 @@ async function resolveAndFetch() {
 }
 
 watch([region, name, tag], resolveAndFetch, { immediate: true })
+
+
+
 </script>
 
 <template>
-  <div class="self-center w-fit">
-    <template v-if="summoner">
+  <div v-if="summoner">
+    <NuxtLayout name="splash-tabs-layout">
 
-          <PlayerHeader v-if="summoner" :summoner="summoner" class="px-1" />
-      <main class=" flex size-full justify-center">
-      <div class="h-full w-[43%] pl-10 grid justify-end relative overflow-y-scroll scrollbar-hidden">
-        <div class="gap-10h-full flex flex-col items-start pr-16">
+      <template #backdrop>
+    <SummonerBackdrop :summoner />
+</template>
 
-          <transition-expand group class="gap-8 grid auto-rows-max items-start pt-2">
-            <RankCard v-if="summoner.ranked?.solo" title="Solo/Duo" :entry="summoner.ranked.solo" class="order-first" />
 
-            <Unranked v-else title="Solo/Duo" class="order-first" />
+<template #header>
+  <PlayerHeader v-if="summoner" :summoner />
+</template>
 
-            <RankCard v-if="summoner.ranked?.flex" title="Flex" :entry="summoner.ranked.flex" class="order-2" />
+<template #tabs>
+        <SummonerProfileTabs :region :slug :summoner />
+</template>
 
-            <Unranked v-else title="Flex" class="order-2" />
 
-            <QueueFilters :summoner="summoner" class="order-3" />
+<template #header-utils>
 
-            <MatchChampionFilters :summoner="summoner" class="order-4" />
+    <UpdateMatchHistoryButton :summoner class="tab " button-class="btn-square rounded-lg " />
 
-          </transition-expand>
-              <transition-expand group class="gap-8 grid auto-rows-max items-start pt-2">
-            <MatchPositionFilter :summoner="summoner" class="" />
 
-            <MatchAlliesFilter :summoner="summoner" class="order-last" />
-            </transition-expand>
-        </div>
+        <tippy class="has-disabled:!cursor-help">
+          <Button :disabled="summoner.puuid != user.summoner.puuid" variant="ghost" size="sm">
+            <icon name="ph:gear-six-fill" class="shrink-0 size-4.5 " />
+          </Button>
 
-        <div class="h-28 w-full" />
-      </div>
+          <template #content>
+            <div v-if="summoner.puuid != user.summoner.puuid" class="max-w-64">
+              <h4>Is this yours?</h4>
 
-      <div class="grid items-center relative w-[57%] pl-2">
-        <MatchHistoryScroller v-if="puuid" :puuid="puuid" :summoner="summoner" />
-      </div>
-      </main>
-    </template>
+              <p>
+                Connect your Riot ID to claim, access more statistics, and customize.
+              </p>
+            </div>
 
-    <div v-else-if="loading">
-      Loading...
-    </div>
+            <p v-else>
+              Settings
+            </p>
+          </template>
+        </tippy>
+</template>
 
-    <div v-else>
-      Error: Summoner not found
-    </div>
+<template #page>
+      <NuxtPage v-if="summoner" :summoner :transition="{name: 'global-page-transition'}" class="size-full flex relative mx-auto  justify-center bg-b1 overflow-y-auto" />
+</template>
+    </NuxtLayout>
   </div>
 </template>

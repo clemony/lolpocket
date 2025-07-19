@@ -1,6 +1,4 @@
 <script setup lang="ts">
-const emit = defineEmits(['open:sign-in'])
-
 useSeoMeta({
   title: 'lolpocket',
   description: 'is that lp in your pocket?',
@@ -61,21 +59,21 @@ const { stop } = useIntersectionObserver(
   <div
     ref="homeWrapper"
     class="relative w-screen overflow-x-hidden home-wrapper size-full overflow-y-scroll">
-    <Hero :progress="stepProgress" :visible="heroVisible" @open:sign-in="emit('open:sign-in')" />
+    <Hero :progress="stepProgress" :visible="heroVisible" />
 
     <div ref="hero" class="absolute pointer-events-none  left-0  size-px  overflow-hidden bg-transparent" />
 
     <div ref="steps">
-      <LazyHomeSteps :scroll-ref="homeWrapper" :scroll-prog="stepProgress" hydrate-on-visible />
+      <LazyHomeSteps :scroll-ref="homeWrapper" :scroll-prog="stepProgress" />
     </div>
 
     <div ref="home">
-      <LazyHomeAdditional :progress-y="progressY" hydrate-on-visible />
+      <LazyHomeAdditional :progress-y="progressY" />
     </div>
 
-    <LazyUserReviews hydrate-on-visible />
+    <LazyUserReviews />
 
-    <LazySiteMap hydrate-on-visible />
+    <LazySiteMap />
 
     <HomeFooter />
   </div>

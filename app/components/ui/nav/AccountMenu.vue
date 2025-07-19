@@ -66,19 +66,19 @@ watch(() => nav, (newVal) => {
   <NavigationMenuItem value="signIn" avoid-collisions>
     <NavigationMenuTrigger :arrow="false" class="relative size-11.5 rounded-full grid bg-transparent place-items-center group/acc-btn hover:shadow-sm hover:drop-shadow-sm  data-[state=open]:ring-bc/20 hover:ring-bc/20  ring ring-transparent">
       <!--  <div class=" absolute inset-0 opacity-0 transition-opacity duration-250 group-hover/acc-btn:opacity-100  group-data-[state=open]/acc-btn:opacity-100 " /> -->
-      <AccountSummonerIcon
-        :account="as.userAccount" :class="cn(
+      <SummonerIcon
+        :class="cn(
           'rounded-full  shadow-sm place-self-center size-9.5 grayscale transition duration-200 ring-1 ring-offset-2 ring-transparent ring-offset-transparent drop-shadow-sm',
           'group-data-[state=open]/acc-btn:grayscale-0  group-data-[state=open]/acc-btn:ring-bc group-data-[state=open]/acc-btn:ring-offset-b1',
           'group-hover/acc-btn:grayscale-0 group-hover/acc-btn:ring-bc group-hover/acc-btn:ring-offset-b2 ',
         )">
-      </AccountSummonerIcon>
+      </SummonerIcon>
     </NavigationMenuTrigger>
 
     <NavigationMenuContent align="end" class="gap-6  pb-2  flex flex-col gap-1 inset-shadow-xxs w-max" @focus-outside.prevent>
       <div v-if="as.currentSession.session" class="size-full w-130  bg-b2/40  h-130 flex flex-col">
         <div class="px-4 pt-4 mb-9 flex gap-4 h-14 items-center w-full">
-          <AccountSummonerIcon class="size-14 shadow-sm drop-shadow-xs rounded-full mt-2" />
+          <SummonerIcon class="size-14 shadow-sm drop-shadow-xs rounded-full mt-2" />
 
           <div class="flex flex-col space-between size-full">
             <div class="flex gap-1 items-center w-full h-5 relative">
@@ -88,7 +88,7 @@ watch(() => nav, (newVal) => {
 
               <Grow />
 
-              <NavigationMenuLink v-if="as.userAccount && as.userAccount.role == 'admin'" v-tippy="'Admin'" class="size-10 grid place-items-center -mr-2 opacity-60 hover:opacity-100 cursor-pointer" @click="emit('open:admin')">
+              <NavigationMenuLink v-if="as && as.userAccount?.role == 'admin'" v-tippy="'Admin'" class="size-10 grid place-items-center -mr-2 opacity-60 hover:opacity-100 cursor-pointer" @click="emit('open:admin')">
                 <icon name="ri:key-2-line" class="size-6 shrink-0 dst pointer-events-none" />
               </NavigationMenuLink>
 

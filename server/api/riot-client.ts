@@ -75,11 +75,13 @@ export async function getMatchDetails(matchId: string) {
   )
 }
 
-export async function getChampionMastery(puuid: string) {
-  return riotGet(
-    `https://${REGION}.api.riotgames.com`,
-    `/lol/champion-mastery/v4/champion-masteries/by-puuid/${puuid}`
-  )
+export async function getChampionMastery(puuid: string, full = false) {
+  const endpoint =
+    full ?
+      `/lol/champion-mastery/v4/champion-masteries/by-puuid/${puuid}`
+    : `/lol/champion-mastery/v4/champion-masteries/by-puuid/${puuid}/top?count=10`
+
+  return riotGet(`https://${REGION}.api.riotgames.com`, endpoint)
 }
 
 export async function getMatchIdsByPuuid({

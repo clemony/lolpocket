@@ -73,7 +73,7 @@ onMounted (() => {
       </div>
 
       <button
-        class="btn btn-n1 bg-n1/85 hover:opacity-85 font-normal "
+        class="btn btn-neutral bg-n1/85 hover:opacity-85 font-normal "
         @click="resetItems()">
         Reset Filters
       </button>
