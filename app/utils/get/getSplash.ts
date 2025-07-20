@@ -1,12 +1,11 @@
 // https://raw.communitydragon.org/plugins/rcp-be-lol-game-data/global/default/assets/characters/akshan/skins/base/images/akshan_splash_tile_0.jpg
-//
 
 export function getLoadSplash(key: string, img: string) {
   return `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/${key.toLowerCase()}/skins/base/${img}.jpg`
 }
 
 export function getSkinSplash(key: string, skin: Skin, type: SplashType) {
-  const champ = key.toLowerCase()
+  const champ = key.toLowerCase().replace("'", "").replace(". ", "")
 
   const folder = computed(() => {
     function id() {

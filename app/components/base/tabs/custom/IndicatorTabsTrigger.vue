@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { TabsTrigger, useForwardProps } from 'reka-ui'
-import type { TabsTriggerPropsWithNullableValue } from '~~/types/types-extend'
+import type { TabsTriggerPropsWithNullableValue } from '~~/shared/types/types-extend'
 
 const props = defineProps<TabsTriggerPropsWithNullableValue & {
   class?: HTMLAttributes['class']

@@ -27,11 +27,16 @@
 }
 
 @utility badge-default {
-  @apply bg-b1/94 backdrop-blur-sm border-b4/70 border-b4 text-bc;
+  @apply bg-b1/94 backdrop-blur-sm border-b4/70  text-bc;
 }
 
 @utility btn-ghost {
   @apply text-3 font-normal gap-3 px-3 hover:border-b3/60 hover:bg-b2/80;
+  &.btn-active {
+    --btn-depth: 1;
+    --btn-noise: 1;
+    @apply bg-b2/60 border-b3/60;
+  }
 }
 
 @layer utilities {
@@ -71,7 +76,7 @@
 /* input */
 
 @utility input {
-  @apply focus-within:!outline-0 focus-within:!outline-offset-0   focus-within:!outline-0 focus-within:ring-n1/60 focus-within:ring-1  h-12;
+  @apply focus-within:!outline-0 focus-within:!outline-offset-0    focus-within:ring-n1/60 focus-within:ring-1  h-12;
   border-image-width: 0 !important;
   --input-color: var(--b3) !important;
 }

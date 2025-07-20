@@ -29,9 +29,6 @@ useMotionValueEvent(headerHeight, 'change', (latest) => {
       <div class="flex gap-1  items-center">
         <slot name="tabs" />
 
-        <span class="flex pb-1">
-        <slot name="header-utils" />
-        </span>
       </div>
 
       </div>

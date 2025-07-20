@@ -52,7 +52,7 @@ async function fetchSummonerData(
   const client = useSupabaseClient()
   const { data, error } = await client
     .from("user_data")
-    .select('"name", "tag",  "puuid"')
+    .select('"name", "tag",  "puuid", "region"')
     .eq("user_id", userId)
     .single()
 

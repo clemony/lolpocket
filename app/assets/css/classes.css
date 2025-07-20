@@ -1,7 +1,81 @@
 @import "tailwindcss";
-@import "./theme";
+@import "./theme.css";
 
 @layer components {
+  .dst {
+    @apply drop-shadow-text;
+  }
+
+  .set-absolute {
+    @apply absolute top-0 left-0 inset-0;
+  }
+
+  .frost {
+    @apply bg-b1/94 backdrop-blur-md;
+  }
+
+  .border-shadow {
+    @apply shadow-[#000]/5 border border-b3/60 rounded-box shadow-warm-2;
+  }
+  .border-shadow-sm {
+    @apply shadow-md drop-shadow-sm shadow-[#000]/4 border border-b3/60 rounded-box;
+  }
+  .hover-ring {
+    @apply hover:ring hover:ring-n1 hover:ring-offset-2 hover:ring-offset-b2 transition-all duration-200 cursor-pointer;
+  }
+
+  .hover-ring-sm {
+    @apply hover:ring hover:ring-n1/60 hover:drop-shadow-sm inset-shadow-sm  cursor-pointer  hover:shadow-black/40;
+  }
+
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  h1 {
+    font-size: var(--text-9);
+    font-weight: 600;
+    line-height: none;
+  }
+
+  h2 {
+    font-size: var(--text-7);
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: var(--text-6);
+    font-weight: 600;
+  }
+
+  h4 {
+    font-size: var(--text-5);
+    font-weight: 600;
+  }
+
+  h5 {
+    font-size: var(--text-4);
+    font-weight: 500;
+  }
+
+  h5 {
+    font-size: var(--text-3);
+    font-weight: 500;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply leading-none;
+  }
+
   .tip-icon {
     @apply inline-flex align-middle mr-2 ml-0.5 mb-0.25 size-4.25;
   }
@@ -24,5 +98,23 @@
 
   .ability-header {
     @apply font-semibold tracking-normal  drop-shadow-text !text-2 uppercase;
+  }
+
+  .corner-mask {
+    --r: 4px; /* the radius */
+    --s: 40px; /* the size of the cut */
+
+    --_m: /calc(2 * var(--r)) calc(2 * var(--r))
+      radial-gradient(#000 70%, #0000 72%) no-repeat;
+    mask:
+      calc(var(--s) + var(--r)) 0 var(--_m),
+      0 calc(var(--s) + var(--r)) var(--_m),
+      radial-gradient(var(--s) at 0 0, #0000 99%, #000 101%) var(--r) var(--r)
+        no-repeat,
+      conic-gradient(
+        at calc(var(--s) + 2 * var(--r)) calc(var(--s) + 2 * var(--r)),
+        #000 75%,
+        #0000 0
+      );
   }
 }

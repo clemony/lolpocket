@@ -7,7 +7,6 @@
   "editor.formatOnSave": true,
   "editor.formatOnSaveMode": "file",
   "files.autoSave": "onFocusChange",
-  "vs-code-prettier-eslint.prettierLast": false,
   "[vue]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   }

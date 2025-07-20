@@ -10,7 +10,7 @@
   @apply shadow-md bg-n1/80 text-nc/80 inset-shadow-xs rounded-lg px-4 py-1.25 backdrop-blur-md;
 
   & > .tippy-svg-arrow {
-    @apply drop-shadow-sm -translate-y-px;
+    @apply drop-shadow-sm translate-y-px;
   }
   & > .tippy-svg-arrow > svg:first-child {
     @apply fill-n1 scale-90;

@@ -120,6 +120,8 @@ export const useIndexStore = defineStore(
         findInIndex(champions.value, "key", key, "id") as number,
       champIdByName: (name: string) =>
         findInIndex(champions.value, "name", name, "id"),
+      champKeyByName: (name: string) =>
+        findInIndex(champions.value, "name", name, "key"),
 
       // item helpers
 

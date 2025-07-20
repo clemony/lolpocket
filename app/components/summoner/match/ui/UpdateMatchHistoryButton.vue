@@ -47,14 +47,14 @@ watch(() => timeRemaining.value, (newVal) => {
     v-if="summoner.matches" tag="div"
     :follow-cursor="false"
     :arrow="roundArrow + roundArrow"
-    placement="top-start"
-    :offset="[-14, 6]"
-    :class="cn('group/load **:[.tippy_arrow]:!translate-y-0.25', className)"
+    placement="bottom-start"
+    :offset="[-6, 10]"
+    :class="cn('group/load size-fit **:[.tippy_arrow]:!translate-y-2.5', className)"
     @click="throttledRefresh()">
-    <button v-if="!timeRemaining" :class="cn('  btn  btn-sm btn-ghost ', buttonClass)">
+    <button v-if="!timeRemaining" :class="cn('  btn   btn-ghost ', buttonClass)">
       <icon name="mingcute:refresh-2-line"
       :class="cn(
-        ' size-4.5  mt-px shrink-0  text-bc/40 group-hover/load:!text-bc tldr-20',  {'animate-rotate': isLoading}
+        ' size-5  mt-px shrink-0   group-hover/load:!text-bc tldr-20',  {'animate-rotate': isLoading}
         )"/>
     </button>
 

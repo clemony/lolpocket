@@ -46,6 +46,14 @@ export default antfu({
     'vue/padding-line-between-tags': 'off',
     'vue/padding-line-between-blocks': ['error', 'always'],
     'vue/multiline-html-element-content-newline': ['error', 'always'],
+    "vue/max-attributes-per-line": ["error", {
+    "singleline": {
+      "max": 1
+    },
+    "multiline": {
+      "max": 1
+    }
+  }]
   },
   formatters: {
     /**

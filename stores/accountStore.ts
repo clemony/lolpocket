@@ -25,6 +25,7 @@ export const useAccountStore = defineStore(
         name: null,
         tag: null,
         puuid: null,
+        region: null,
       },
       settings: {
         general: {
@@ -59,6 +60,7 @@ export const useAccountStore = defineStore(
         name: "Summoner",
         tag: null,
         puuid: null,
+        region: null,
       },
       settings: {
         general: {

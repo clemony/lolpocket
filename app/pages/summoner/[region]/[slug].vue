@@ -8,7 +8,7 @@ definePageMeta({
   search: false,
 })
 
-const user = inject<User>('user')
+
 const route = useRoute()
 const region = computed(() => route.params.region?.toString())
 const slug = computed(() => route.params.slug?.toString())
@@ -19,6 +19,15 @@ const puuid = ref<string | null>(null)
 const summoner = ref<Summoner | null>(null)
 const loading = ref(true)
 
+/* watch(() => summoner.value, (newVal) => {
+if(summoner.value)
+summoner.value.mastery =
+   {
+      champions: [],
+      lastUpdate: null
+    }
+}
+) */
 async function resolveAndFetch() {
   loading.value = true
   try {
@@ -68,31 +77,7 @@ watch([region, name, tag], resolveAndFetch, { immediate: true })
 </template>
 
 
-<template #header-utils>
 
-    <UpdateMatchHistoryButton :summoner class="tab " button-class="btn-square rounded-lg " />
-
-
-        <tippy class="has-disabled:!cursor-help">
-          <Button :disabled="summoner.puuid != user.summoner.puuid" variant="ghost" size="sm">
-            <icon name="ph:gear-six-fill" class="shrink-0 size-4.5 " />
-          </Button>
-
-          <template #content>
-            <div v-if="summoner.puuid != user.summoner.puuid" class="max-w-64">
-              <h4>Is this yours?</h4>
-
-              <p>
-                Connect your Riot ID to claim, access more statistics, and customize.
-              </p>
-            </div>
-
-            <p v-else>
-              Settings
-            </p>
-          </template>
-        </tippy>
-</template>
 
 <template #page>
       <NuxtPage v-if="summoner" :summoner :transition="{name: 'global-page-transition'}" class="size-full flex relative mx-auto  justify-center bg-b1 overflow-y-auto" />

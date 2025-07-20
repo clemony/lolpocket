@@ -2,6 +2,22 @@
   transition: transform 0.3s ease;
   transform-style: preserve-3d;
 }
-.parallax:hover {
+.parallax:where(:not(.photo)):hover {
   transform: perspective(500px) rotateX(5deg) rotateY(5deg);
 }
+
+.parallax.photo:hover {
+  @apply ring ring-b4/80 drop-shadow-md;
+  transform: perspective(800px) rotateX(10deg) rotateY(10deg);
+}
+
+/* @utility parallax-* {
+  transition: transform 0.3s ease;
+  transform-style: preserve-3d;
+
+  &:hover {
+    transform: perspective(calc(--value(integer) * 10)) px
+      rotateX(--modifier(integer) deg) rotateY(--modifier(integer) deg);
+  }
+}
+ */

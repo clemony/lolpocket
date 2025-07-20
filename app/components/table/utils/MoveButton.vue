@@ -44,7 +44,7 @@ watch(
 <template>
   <Button
     variant="outline"
-    size="icon"
+    shape="square"
     :alt="`move to${props.text}`"
     :disabled="!ps.selectedRows.length"
     class="join-item relative -mt-px w-14"

@@ -16,7 +16,7 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "nuxt-svgo",
     "motion-v/nuxt" /*     "nuxt-og-image", */,
-    /*     "@nuxtjs/tailwindcss", */
+    "@nuxtjs/tailwindcss",
   ],
 
   experimental: {
@@ -52,9 +52,9 @@ export default defineNuxtConfig({
     key: process.env.SUPABASE_KEY,
     redirect: false,
   },
-  /*   tailwindcss: {
+  tailwindcss: {
     exposeConfig: true,
-  }, */
+  },
 
   runtimeConfig: {
     supabaseUrl: process.env.SUPABASE_URL,
@@ -116,7 +116,6 @@ export default defineNuxtConfig({
   postcss: {
     plugins: {},
   },
-
   alias: {
     css: fileURLToPath(new URL("./app/assets/css", import.meta.url)),
     types: fileURLToPath(new URL("./types", import.meta.url)),
@@ -144,6 +143,7 @@ export default defineNuxtConfig({
   devtools: {
     enabled: true,
     componentInspector: true,
+    vueDevTools: true,
     viteInspect: true,
   },
   webpack: {
@@ -153,11 +153,6 @@ export default defineNuxtConfig({
       },
     },
   },
-
-  future: {
-    compatibilityVersion: 4,
-  },
-
-  compatibilityDate: "2024-11-01",
+  compatibilityDate: "2025-07-18",
   ssr: false,
 })

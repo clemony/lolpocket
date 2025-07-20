@@ -39,7 +39,8 @@ export async function fetchSummonerMastery(puuid: string, full = false) {
 
     await ss.mergeSummonerData(puuid, {
       mastery: {
-        top: result.mastery,
+        top: updated.top,
+        full: updated.full,
         lastUpdate: new Date(),
       } as Summoner["mastery"],
     })

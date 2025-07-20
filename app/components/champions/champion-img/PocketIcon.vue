@@ -6,13 +6,15 @@ const { class: className, url, size, transparent } = defineProps<{
   size?: string | number
   transparent?: boolean
 }>()
-
+const loaded = ref(false)
 </script>
 
 <template>
   <label :class="cn(' size-full overflow-hidden  shrink-0 grid place-items-center', { 'shadow-sm drop-shadow-sm': !transparent || (transparent && !url) }, className)">
 
-    <Img v-if="url" :img="url" alt="pocket icon" :class="cn(' pointer-events-none  size-full  scale-160 mt-1.5 shrink-0', imgClass)"/>
+    <Img v-if="url" :img="url" alt="pocket icon"  :class="cn(' pointer-events-none  size-full  scale-160 mt-1.5 shrink-0 size-full absolute object-center opacity-0 transition-opacity duration-300', {'opacity-100': loaded}, imgClass)" @load="loaded = true"/>
+
+<icon v-if="!loaded" name="svg-spinners:3-dots-fade" class="absolute opacity-80" />
 
 
 

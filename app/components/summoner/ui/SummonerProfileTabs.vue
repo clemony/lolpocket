@@ -16,7 +16,8 @@ function navigateToChildRoute(childPath: string) {
   router.push(`/summoner/${region}/${slug}${childPath}`)
 }
 
-const location = ref('')
+const user = inject<User>('user')
+
 const directory = [
   {
     name: 'history',
@@ -44,11 +45,15 @@ console.log('💠 - pathName:', pathName.value)
       v-for="item in directory"
       :key="item.name" role="tab"
       :value="item.name"
-      class="" :class="cn('group/tab  tab-menu tab ', { '!pb-[4px] ': pathName != item.name, 'tab-active hi-this-one': pathName == item.name || pathName == item.path })"
+    :class="cn('group/tab  tab-menu tab ', { '!pb-[4px] ': pathName != item.name, 'tab-active hi-this-one': pathName == item.name || pathName == item.path })"
       @click="navigateToChildRoute(item.path)">
       {{ item.name }}
     </li>
 
+    <li
+     v-if="summoner.puuid == user.summoner.puuid"
+      :class="cn('group/tab  tab-menu tab ', { '!pb-[4px] ': pathName != 'settings', 'tab-active hi-this-one': pathName == 'settings'  })"
+      @click="navigateToChildRoute('/settings')">Settings</li>
     <FakeTab />
 
     <div class="tab-content" />
