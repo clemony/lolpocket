@@ -1,6 +1,6 @@
 <script lang="ts" setup>
+import type { CarouselApi } from 'base/carousel/carousel-index'
 import { motion } from 'motion-v'
-import type { CarouselApi } from '../base/carousel/carousel-index'
 import { reviewVariants } from './variants'
 
 const api = ref<CarouselApi>()

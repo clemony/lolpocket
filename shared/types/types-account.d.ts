@@ -21,7 +21,9 @@ declare global {
     settings: {
       general: Record<string, string | boolean>
       notifications: Record<string, string | boolean>
-      profile: Record<string, string | boolean>
+      profile: {
+        splash: string
+      }
     }
     pockets: UserPockets
     inbox: UserInbox
@@ -61,4 +63,3 @@ declare global {
     heart?: boolean
   }
 }
-export {}

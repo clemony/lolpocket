@@ -21,7 +21,7 @@
     @apply shadow-md drop-shadow-sm shadow-[#000]/4 border border-b3/60 rounded-box;
   }
   .hover-ring {
-    @apply hover:ring hover:ring-n1 hover:ring-offset-2 hover:ring-offset-b2 transition-all duration-200 cursor-pointer;
+    @apply hover:!ring hover:!ring-n1 hover:!ring-offset-2 hover:!ring-offset-b2 transition-all duration-200 cursor-pointer;
   }
 
   .hover-ring-sm {

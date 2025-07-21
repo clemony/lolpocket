@@ -2,7 +2,7 @@
 import type { DialogContentEmits, DialogContentProps } from 'reka-ui'
 import { DialogClose, DialogContent, DialogPortal, useForwardPropsEmits } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
-import type { SheetVariants } from '~/components/base/sheet/sheetIndex'
+import type { SheetVariants } from '~/base/sheet/sheetIndex'
 
 import { sheetVariants } from './sheetIndex'
 

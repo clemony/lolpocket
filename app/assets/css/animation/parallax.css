@@ -7,7 +7,7 @@
 }
 
 .parallax.photo:hover {
-  @apply ring ring-b4/80 drop-shadow-md;
+  @apply ring ring-b4 drop-shadow-md;
   transform: perspective(800px) rotateX(10deg) rotateY(10deg);
 }
 

@@ -1,5 +1,6 @@
 export * from "./champions/useChampionDetails"
 export * from "./champions/useChampionFilter"
+export * from "./champions/useChampions"
 export * from "./champions/useChampionStatGrowth"
 export * from "./helpers/fetchSummonerMastery"
 export * from "./helpers/resolveSummonerFromRiot"

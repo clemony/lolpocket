@@ -23,6 +23,11 @@ export default defineNuxtConfig({
     payloadExtraction: true,
   },
 
+  router: {
+    options: {
+      scrollBehaviorType: "smooth",
+    },
+  },
   /*   ogImage: { enabled: false }, */
 
   image: {
@@ -95,9 +100,14 @@ export default defineNuxtConfig({
   },
   components: [
     {
-      path: "~/components",
+      path: "components",
       pathPrefix: false,
     },
+    {
+      path: "base",
+      pathPrefix: false,
+    },
+    "~/components",
   ],
   svgo: {
     componentPrefix: "i",
@@ -125,6 +135,7 @@ export default defineNuxtConfig({
     utils: fileURLToPath(new URL("./app/utils", import.meta.url)),
     api: fileURLToPath(new URL("./public/api", import.meta.url)),
     components: fileURLToPath(new URL("./app/components", import.meta.url)),
+    base: fileURLToPath(new URL("./app/base", import.meta.url)),
     plugins: fileURLToPath(new URL("./app/plugins", import.meta.url)),
     modules: fileURLToPath(new URL("./modules", import.meta.url)),
     data: fileURLToPath(new URL("./app/data", import.meta.url)),

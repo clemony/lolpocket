@@ -1,17 +1,17 @@
 <script setup lang="ts">
 import type { DialogContentEmits, DialogContentProps } from 'reka-ui'
 import {
-  DialogClose,
-  DialogContent,
+    DialogClose,
+    DialogContent,
 
-  DialogOverlay,
-  DialogPortal,
-  useForwardPropsEmits,
+    DialogOverlay,
+    DialogPortal,
+    useForwardPropsEmits,
 } from 'reka-ui'
 
 import type { HTMLAttributes } from 'vue'
-import type { SheetVariants } from '~/components/base/sheet/sheetIndex'
-import { sheetVariants } from '~/components/base/sheet/sheetIndex'
+import type { SheetVariants } from '~/base/sheet/sheetIndex'
+import { sheetVariants } from '~/base/sheet/sheetIndex'
 
 interface SheetContentProps extends DialogContentProps {
   class?: HTMLAttributes['class']

@@ -120,5 +120,29 @@ declare global {
     matchIndexes: number[]
     gameVersions: string[]
   }
+
+  export interface ChampionStats {
+    name: string
+    id: number
+    games: number
+    wins: number
+    losses: number
+    winrate: number
+    kills: number
+    deaths: number
+    assists: number
+    killParticipation: number
+    matchIndexes: number[]
+    gameVersions: number[]
+  }
+
+  export interface BayesianChampionStats extends ChampionStats {
+    bayesianWinrate: number
+    kda: number
+    avgKills: number
+    avgDeaths: number
+    avgAssists: number
+    avgKp: number
+  }
 }
 export {}

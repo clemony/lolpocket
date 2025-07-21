@@ -13,10 +13,17 @@ defineOptions({
 })
 
 const props = withDefaults(
-  defineProps<PopoverContentProps & { class?: HTMLAttributes['class'], to?: string }>(),
+  defineProps<PopoverContentProps & {
+    class?: HTMLAttributes['class']
+    to?: string,
+    sideOffset?: number
+    align?: string
+    scaleStart?: number
+   }>(),
   {
     align: 'center',
     sideOffset: 4,
+    scaleStart: 0.6,
   },
 )
 const emits = defineEmits<PopoverContentEmits>()
@@ -29,14 +36,12 @@ console.log('💠 - forwarded:', forwarded)
 const variants = {
   visible: {
     opacity: 1,
-    maxHeight: '420px',
-    maxWidth: '340px',
     visibility: 'visible',
     scale: 1,
   },
   hidden: {
     opacity: 0,
-    scale: 0.4,
+    scale: props.scaleStart,
     transitionEnd: { visibility: 'hidden' },
   },
 }
@@ -62,7 +67,7 @@ const wrapperVariants = {
 <template>
   <PopoverPortal :to="props.to">
     <AnimatePresence>
-      <PopoverContent as-child>
+      <PopoverContent as-child :align="align" v-bind="forwarded">
         <motion.div
           :variants="variants" initial="hidden" animate="visible" exit="hidden" :transition="{
             type: 'spring',
@@ -72,12 +77,10 @@ const wrapperVariants = {
           v-bind="{ forwarded }"
           :class="
             cn(
-              'z-50 w-72 rounded-xl border border backdrop-blur-lg drop-shadow-md !border-black-30  bg-black-22/94 text-nc/80 p-4 text-bc shadow-md outline-none group-data-[state=visible]:**:opacity-100 group-data-[state=hidden]:**:opacity-0',
+              'z-50 w-72 rounded-xl border backdrop-blur-lg drop-shadow-md !border-b3  bg-b1/94  p-4 text-bc shadow-md outline-none group-data-[state=visible]:**:opacity-100 group-data-[state=hidden]:**:opacity-0',
               props.class,
             )
           ">
-          <CustomPopoverArrow class="" />
-
           <motion.div
             :variants="wrapperVariants" initial="hidden" animate="visible" exit="hidden" class="size-full" :transition="{
               type: 'spring',

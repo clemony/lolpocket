@@ -70,8 +70,11 @@
   h2,
   h3,
   h4,
-  h5,
-  p {
+  h5 {
     @apply leading-none;
+  }
+
+  p {
+    @apply leading-5.25;
   }
 }
