@@ -8,7 +8,10 @@ const props = defineProps<{
 </script>
 
 <template>
-  <transition-slide v-if="props.slide" group :class="cn('field-box', { '!mt-0': !props.title }, props.class)">
+  <transition-slide
+    v-if="props.slide"
+    group
+    :class="cn('field-box', { '!mt-0': !props.title }, props.class)">
     <div class="field-legend capitalize text-bc !overflow-visible">
       {{ props.title }}
       <slot name="title" />
@@ -17,7 +20,10 @@ const props = defineProps<{
     <slot />
   </transition-slide>
 
-  <transition-expand v-else-if="props.expand" group :class="cn('field-box', { '!mt-0': !props.title }, props.class)">
+  <transition-expand
+    v-else-if="props.expand"
+    group
+    :class="cn('field-box', { '!mt-0': !props.title }, props.class)">
     <div class="field-legend capitalize text-bc !overflow-visible">
       {{ props.title }}
       <slot name="title" />

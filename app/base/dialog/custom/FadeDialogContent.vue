@@ -62,8 +62,13 @@ const overlayInitialState = {
   <DialogPortal>
     <AnimatePresence>
       <DialogOverlay
-        class="fixed inset-0 z-50 isolate bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0" :class="{ 'opacity-0 invisible': props.noOverlay }">
-        <Motion class="overlay" :initial="overlayInitialState" :animate="overlayOpenState" :exit="overlayInitialState" />
+        class="fixed inset-0 z-50 isolate bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0"
+        :class="{ 'opacity-0 invisible': props.noOverlay }">
+        <Motion
+          class="overlay"
+          :initial="overlayInitialState"
+          :animate="overlayOpenState"
+          :exit="overlayInitialState" />
       </DialogOverlay>
 
       <DialogContent
@@ -75,14 +80,18 @@ const overlayInitialState = {
             props.class,
           )">
         <Motion
-          class="modal-container" :initial="dialogInitialState" :animate="dialogOpenState"
+          class="modal-container"
+          :initial="dialogInitialState"
+          :animate="dialogOpenState"
           :exit="dialogInitialState">
           <slot />
 
           <DialogClose
             v-if="props.noButton"
             class="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring focus:ring-n1 disabled:pointer-events-none ">
-            <icon name="x-sm" class="size-6" />
+            <icon
+              name="x-sm"
+              class="size-6" />
 
             <span class="sr-only">Close</span>
           </DialogClose>

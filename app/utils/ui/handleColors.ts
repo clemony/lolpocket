@@ -16,7 +16,7 @@ export function makeGradient(
   fromOpacity: number,
   to: string,
   toOpacity: number,
-  direction: string
+  direction: string,
 ) {
   let a = `from-${from}`
   a = fromOpacity ? `${a}/${fromOpacity}` : a
@@ -35,11 +35,11 @@ export function getColorFromVariable(variable) {
 
 export const themes = [
   {
-    name: "daylight",
-    id: "theme-daylight",
-    icon: "iconoir:sun-light",
+    name: 'daylight',
+    id: 'theme-daylight',
+    icon: 'iconoir:sun-light',
     description: '"If you can smile, you can be the light." -Lux',
-    color: "var(--b1)",
+    color: 'var(--b1)',
   },
   // {
   //   name: "dawn",
@@ -49,18 +49,18 @@ export const themes = [
   //   color: "var(--b1)",
   // },
   {
-    name: "dusk",
-    id: "theme-dusk",
-    icon: "si:sun-set-line",
+    name: 'dusk',
+    id: 'theme-dusk',
+    icon: 'si:sun-set-line',
     description: '"Dusk approaches. Embrace the night." -Diana',
-    color: "var(--b1)",
+    color: 'var(--b1)',
   },
   {
-    name: "midnight",
-    id: "theme-night",
-    icon: "ph:moon",
+    name: 'midnight',
+    id: 'theme-night',
+    icon: 'ph:moon',
     description: '"The truth lies in darkness." -Zed',
-    color: "var(--b1)",
+    color: 'var(--b1)',
   },
 
   // {
@@ -96,10 +96,10 @@ export const themes = [
   //   color: 'var(--b1)',
   // },
   {
-    name: "winter",
-    id: "theme-winter",
-    icon: "clarity:snowflake-line",
+    name: 'winter',
+    id: 'theme-winter',
+    icon: 'clarity:snowflake-line',
     description: '"Sometimes icy heart just needs warm smile." -Braum',
-    color: "var(--b1)",
+    color: 'var(--b1)',
   },
 ]

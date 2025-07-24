@@ -90,5 +90,8 @@ const options = {
 </script>
 
 <template>
-  <Line :data="data" :options="options" class="z-1" />
+  <Line
+    :data="data"
+    :options="options"
+    class="z-1" />
 </template>

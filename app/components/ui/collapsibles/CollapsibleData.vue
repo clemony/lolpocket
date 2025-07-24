@@ -16,14 +16,20 @@ watchEffect(() => {
 </script>
 
 <template>
-  <Collapsible v-model:is-open="isOpen" :default-open="true">
+  <Collapsible
+    v-model:is-open="isOpen"
+    :default-open="true">
     <SidebarCollapsibleTrigger class="select-none ">
-      <IconWrapper name="book" class="size-4.5 dst  -top-px" />
+      <IconWrapper
+        name="book"
+        class="size-4.5 dst  -top-px" />
       Library
     </SidebarCollapsibleTrigger>
 
     <SidebarCollapsibleContent>
-      <Collapsible v-model:open="itemIsOpen" class="data-disabled:**:text-bc/90 ">
+      <Collapsible
+        v-model:open="itemIsOpen"
+        class="data-disabled:**:text-bc/90 ">
         <SidebarCollapsibleTrigger>
           <span class="relative size-4">
             <i-ui-hitter class="absolute pointer-events-none size-5.5 -ml-1 -mt-1 opacity-70 dst" />
@@ -37,7 +43,9 @@ watchEffect(() => {
         </SidebarCollapsibleContent>
       </Collapsible>
 
-      <Collapsible v-model:open="champsIsOpen" class="data-disabled:**:text-bc/90 ">
+      <Collapsible
+        v-model:open="champsIsOpen"
+        class="data-disabled:**:text-bc/90 ">
         <SidebarCollapsibleTrigger>
           <span class="relative size-4">
             <i-lol-no-champ class="absolute pointer-events-none size-5 -ml-1 -mt-1  dst" />
@@ -51,16 +59,22 @@ watchEffect(() => {
         </SidebarCollapsibleContent>
       </Collapsible>
 
-      <Btn :class="{ 'btn-active': route.path == '/runes' }" @click="navigateTo('/runes')">
+      <Btn
+        :class="{ 'btn-active': route.path == '/runes' }"
+        @click="navigateTo('/runes')">
         <IconWrapper>
           <i-ui-rune class="-ml-1 absolute size-5.5 pointer-events-none" />
         </IconWrapper>
         Runes
       </Btn>
 
-      <Btn :class="{ 'btn-active': route.path == '/spells' }" @click="navigateTo('/spells')">
+      <Btn
+        :class="{ 'btn-active': route.path == '/spells' }"
+        @click="navigateTo('/spells')">
         <IconWrapper>
-          <icon name="radix-icons:magic-wand" class="-ml-1 absolute  pointer-events-none" />
+          <icon
+            name="radix-icons:magic-wand"
+            class="-ml-1 absolute  pointer-events-none" />
         </IconWrapper>
         Spells
       </Btn>

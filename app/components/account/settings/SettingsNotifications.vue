@@ -3,10 +3,9 @@ const as = useAccountStore()
 </script>
 
 <template>
-  <div class=" gap-9 pb-8 grid pl-2">
+  <div class="gap-9 pb-8 grid pl-2">
     <MotionHoverLabel>
-      <p
-        class="font-medium text-4">
+      <p class="font-medium text-4">
         New Pocket Creation
       </p>
 
@@ -15,11 +14,12 @@ const as = useAccountStore()
       <MotionArrowSlide />
 
       <Switch
-        v-model:model-value="as.userAccount.settings.notifications.newPocket as boolean" class="scale-90 -mt-0.25 dst" />
+        v-model:model-value="as.settings.alertNewPocket as boolean"
+        class="scale-90 -mt-0.25 dst" />
     </MotionHoverLabel>
 
     <MotionHoverLabel>
-      <p class="font-medium text-4 ">
+      <p class="font-medium text-4">
         Pocket Deletion
       </p>
 
@@ -28,8 +28,8 @@ const as = useAccountStore()
       <MotionArrowSlide />
 
       <Switch
-        v-model:model-value="as.userAccount.settings.notifications.deletePocket as boolean"
-        class=" scale-90 -mt-0.25 dst" />
+        v-model:model-value="as.settings.alertDeletePocket as boolean"
+        class="scale-90 -mt-0.25 dst" />
     </MotionHoverLabel>
   </div>
 </template>

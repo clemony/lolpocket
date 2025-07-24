@@ -4,8 +4,8 @@ declare global {
   type ChampionKey = string
   type ChampionRecord = Record<ChampionKey, Champion>
   type ChampionLiteRecord = Record<ChampionKey, ChampionLite>
-  type AbilityRecord = Record<"P" | "Q" | "W" | "E" | "R", Ability[]>
-  type SplashType = "tile" | "centered" | "load"
+  type AbilityRecord = Record<'P' | 'Q' | 'W' | 'E' | 'R', Ability[]>
+  type SplashType = 'tile' | 'centered' | 'load' | 'uncentered'
   type SkinRecord = Record<ChampionKey, Skin>
   type FullSkinRecord = Record<ChampionKey, Skin[]>
 
@@ -121,7 +121,7 @@ declare global {
     gameVersions: string[]
   }
 
-  export interface ChampionStats {
+  interface ChampionStats {
     name: string
     id: number
     games: number
@@ -133,10 +133,10 @@ declare global {
     assists: number
     killParticipation: number
     matchIndexes: number[]
-    gameVersions: number[]
+    gameVersions: string[]
   }
 
-  export interface BayesianChampionStats extends ChampionStats {
+  interface BayesianChampionStats extends ChampionStats {
     bayesianWinrate: number
     kda: number
     avgKills: number

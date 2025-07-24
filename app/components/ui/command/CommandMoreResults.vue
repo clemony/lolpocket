@@ -7,7 +7,9 @@ const isOpen = ref(false)
 </script>
 
 <template>
-  <Collapsible v-model:open="isOpen" class="">
+  <Collapsible
+    v-model:open="isOpen"
+    class="">
     <LazyCollapsibleContent class="CollapsibleContent ">
       <slot />
     </LazyCollapsibleContent>

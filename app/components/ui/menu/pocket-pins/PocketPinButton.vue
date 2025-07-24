@@ -9,9 +9,15 @@ const pocket = computed (() => ps.pockets.find(p => p.key == pocketKey) ?? null)
 </script>
 
 <template>
-  <LazyPocketIcon v-if="pocket?.icon" :url="pocket?.icon" img-class="  mt-0 scale-100 -mt-5" hydrate-on-visible />
+  <LazyPocketIcon
+    v-if="pocket?.icon"
+    :url="pocket?.icon"
+    img-class="  mt-0 scale-100 -mt-5"
+    hydrate-on-visible />
 
-  <div v-else class="bg-linear-to-br from-n1/80 to-n1 py-1.5 px-2 size-full ">
+  <div
+    v-else
+    class="bg-linear-to-br from-n1/80 to-n1 py-1.5 px-2 size-full ">
     <p class="justify-end flex gap-2 text-nc font-semibold items-center font-mono text-2 w-full">
       <span> LP</span>
     </p>
@@ -23,18 +29,28 @@ const pocket = computed (() => ps.pockets.find(p => p.key == pocketKey) ?? null)
     </p>
 
     <div class="w-full flex gap-2 items-center  px-1">
-      <div v-if="pocket.champions[0]" :class="cn('rounded-lg size-4 !grid !place-items-center   overflow-hidden')">
-        <ChampionIcon :id="ix.champIdByKey(pocket.champions[0])" class="size-full rounded-lg" />
+      <div
+        v-if="pocket.champions[0]"
+        :class="cn('rounded-lg size-4 !grid !place-items-center   overflow-hidden')">
+        <ChampionIcon
+          :id="ix.champIdByKey(pocket.champions[0])"
+          class="size-full rounded-lg" />
       </div>
 
-      <span v-if="pocket.champions[0]" class="text-0 italic grow">
+      <span
+        v-if="pocket.champions[0]"
+        class="text-0 italic grow">
         {{ ix.champNameByKey(pocket.champions[0]) }}
       </span>
       <!-- role -->
 
-      <component :is="`i-roles-${pocket.roles[0].toLowerCase() ?? 'all'}`" :class="cn('!size-2.5 text-nc shrink-0')" />
+      <component
+        :is="`i-roles-${pocket.roles[0].toLowerCase() ?? 'all'}`"
+        :class="cn('!size-2.5 text-nc shrink-0')" />
 
-      <span v-if="!pocket.champions[0]" class="text-0 italic capitalize">
+      <span
+        v-if="!pocket.champions[0]"
+        class="text-0 italic capitalize">
         {{ pocket.roles[0] == 'all' ? 'All Positions' : pocket.roles[0] }}
       </span>
     </div>

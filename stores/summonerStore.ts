@@ -1,7 +1,7 @@
-import { defineStore } from "pinia"
+import { defineStore } from 'pinia'
 
 export const useSummonerStore = defineStore(
-  "SummonerStore",
+  'SummonerStore',
   () => {
     const summoners = ref<Record<string, Summoner>>({})
 
@@ -13,10 +13,11 @@ export const useSummonerStore = defineStore(
 
     async function mergeSummonerData(
       puuid: string,
-      partial: Partial<Summoner>
+      partial: Partial<Summoner>,
     ) {
       const existing = summoners.value[puuid]
-      if (!existing) return
+      if (!existing)
+        return
 
       summoners.value[puuid] = {
         ...existing,
@@ -33,18 +34,19 @@ export const useSummonerStore = defineStore(
       tag?: string
     }): Promise<Summoner> {
       if (
-        !identifier.puuid &&
-        (!identifier.region || !identifier.name || !identifier.tag)
+        !identifier.puuid
+        && (!identifier.region || !identifier.name || !identifier.tag)
       ) {
         throw new Error(
-          "resolveSummoner: Must provide either puuid or region + name + tag"
+          'resolveSummoner: Must provide either puuid or region + name + tag',
         )
       }
 
       // 1. Try to resolve by puuid
       if (identifier.puuid) {
         const existing = getSummoner(identifier.puuid)
-        if (existing) return existing
+        if (existing)
+          return existing
 
         const fetched = await useFetchSummonerData(identifier.puuid)
         await setSummoner(fetched)
@@ -53,17 +55,18 @@ export const useSummonerStore = defineStore(
 
       // 2. Try to match cached summoner by region + name + tag
       const match = Object.values(summoners.value).find(
-        (s) =>
-          s.region === identifier.region &&
-          s.name?.toLowerCase() === identifier.name?.toLowerCase() &&
-          s.tag?.toLowerCase() === identifier.tag?.toLowerCase()
+        s =>
+          s.region === identifier.region
+          && s.name?.toLowerCase() === identifier.name?.toLowerCase()
+          && s.tag?.toLowerCase() === identifier.tag?.toLowerCase(),
       )
 
-      if (match) return match
+      if (match)
+        return match
 
       // 3. Fallback to API-based resolution if still not found
       try {
-        const resolved = await $fetch<Summoner>("/api/resolve-summoner", {
+        const resolved = await $fetch<Summoner>('/api/resolve-summoner', {
           params: {
             region: identifier.region,
             name: identifier.name,
@@ -78,10 +81,11 @@ export const useSummonerStore = defineStore(
         }
         await setSummoner(summonerId)
         return resolved
-      } catch (error) {
+      }
+      catch (error) {
         console.error(
-          "resolveSummoner: Failed to resolve summoner via API",
-          error
+          'resolveSummoner: Failed to resolve summoner via API',
+          error,
         )
         throw error
       }
@@ -104,7 +108,7 @@ export const useSummonerStore = defineStore(
     const clearAll = () => {
       summoners.value = {}
       console.log(summoners.value)
-      console.log("💠 - clearAll - summoners.value:", summoners.value)
+      console.log('💠 - clearAll - summoners.value:', summoners.value)
     }
 
     return {
@@ -121,7 +125,7 @@ export const useSummonerStore = defineStore(
   {
     persist: {
       storage: piniaPluginPersistedstate.localStorage(),
-      key: "summonerStore",
+      key: 'summonerStore',
     },
-  }
+  },
 )

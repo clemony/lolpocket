@@ -1,6 +1,6 @@
-@import "tailwindcss";
-@import "../colors.css";
-@import "../theme.css";
+@import 'tailwindcss';
+@import '../colors.css';
+@import '../theme.css';
 
 /* button */
 
@@ -24,6 +24,10 @@
   &:disabled {
     @apply !bg-n1/60 !border-n1/50 opacity-80;
   }
+}
+
+@utility btn-outline {
+  @apply border-b3;
 }
 
 @utility badge-default {
@@ -116,17 +120,27 @@
   --noise: 0.5;
 }
 
+@utility collapse-title {
+  @apply p-0 w-auto h-auto;
+}
+
 @layer utilities {
-  .tab-menu.tab {
-    --tab-radius-min: 0.65rem !important;
-    --tab-border-colors: --alpha(var(--color-b3) / 80%) !important;
-    --tab-paddings: 5px 26px !important;
+  .tab-menu.tabs {
     --tabs-height: 30px !important;
 
-    @apply gap-2 z-1 text-3  !font-medium flex items-center !border-b-0 !text-start capitalize has-checked:!border-t-2 has-checked:!border-x-2;
+    & .tab {
+      --tab-radius-min: 0.65rem !important;
+      --tab-border-colors: --alpha(var(--color-b3) / 80%) !important;
+      --tab-paddings: 4px 26px !important;
 
-    &.tab-active {
-      @apply !border-t-2 !border-x-2;
+      @apply gap-2 z-1 text-3  !font-medium flex items-center !border-b-0 !text-start capitalize has-checked:!border-t-2 has-checked:!border-x-2;
+
+      &:not(.tab-active) {
+        @apply border-transparent border-2;
+      }
+      &.tab-active {
+        @apply !border-t-2 !border-x-2;
+      }
     }
   }
 }

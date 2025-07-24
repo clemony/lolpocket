@@ -1,8 +1,8 @@
-import type { GridApi } from "ag-grid-community"
-import { defineStore } from "pinia"
+import type { GridApi } from 'ag-grid-community'
+import { defineStore } from 'pinia'
 
 export const useItemStore = defineStore(
-  "itemStore",
+  'itemStore',
   () => {
     const itemFilter = ref<ItemFilter>({
       purchasable: true,
@@ -105,8 +105,8 @@ export const useItemStore = defineStore(
   {
     persist: {
       storage: piniaPluginPersistedstate.localStorage(),
-      key: "itemStore",
-      pick: ["itemGridApi"],
+      key: 'itemStore',
+      pick: ['itemGridApi'],
     },
-  }
+  },
 )

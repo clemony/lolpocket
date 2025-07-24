@@ -1,12 +1,13 @@
-import { normalizePatchNumber } from "../../app/utils/normalize/normalizePatch"
+import { normalizePatchNumber } from '../../app/utils/normalize/normalizePatch'
 
 // utils/simplify-match.ts
 export function simplifyMatchData(
   puuid: string,
-  match: MatchData
+  match: MatchData,
 ): SimplifiedMatchData | null {
-  const participant = match.info.participants.find((p) => p.puuid === puuid)
-  if (!participant) return null
+  const participant = match.info.participants.find(p => p.puuid === puuid)
+  if (!participant)
+    return null
 
   return {
     matchId: match.metadata.matchId,
@@ -35,7 +36,7 @@ export function simplifyMatchData(
       primary: participant.perks?.primary ?? 0,
       secondary: participant.perks?.secondary ?? 0,
     },
-    participants: match.info.participants.map((p) => ({
+    participants: match.info.participants.map(p => ({
       riotIdGameName: p.riotIdGameName,
       profileIcon: p.profileIcon,
     })),

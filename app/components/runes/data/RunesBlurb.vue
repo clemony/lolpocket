@@ -44,7 +44,9 @@ const a = computed(() => {
 </script>
 
 <template>
-  <transition-fade v-if="currentPath == currentPath" group>
+  <transition-fade
+    v-if="currentPath == currentPath"
+    group>
     <div class="flex items-center gap-6 leading-none">
       <h1 class="dst transition-all duration-300 text-8">
         {{ currentPath ?? (title || 'Runes') }}

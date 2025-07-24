@@ -11,7 +11,10 @@ const ix = useIndexStore()
     <SelectTrigger class="w-50  items-center flex gap-3   ">
       <slot>
         <span class="size-5 relative grid place-items-center">
-          <component :is="`i-maps-${selectedMap}`" class="absolute dst opacity-80 shrink-0" :class="{ 'size-5': selectedMap == 12 || selectedMap == 11, 'size-6': selectedMap == 30 }" />
+          <component
+            :is="`i-maps-${selectedMap}`"
+            class="absolute dst opacity-80 shrink-0"
+            :class="{ 'size-5': selectedMap == 12 || selectedMap == 11, 'size-6': selectedMap == 30 }" />
         </span>
         {{ ix.mapNameById(selectedMap) }}
       </slot>
@@ -21,10 +24,16 @@ const ix = useIndexStore()
       <SelectGroup>
         <SelectLabel>Maps</SelectLabel>
 
-        <SelectItem v-for="map in [11, 12, 30]" :key="map" :value="map">
+        <SelectItem
+          v-for="map in [11, 12, 30]"
+          :key="map"
+          :value="map">
           <div class="flex gap-3 items-center">
             <span class="size-5 relative grid place-items-center">
-              <component :is="`i-maps${map}`" class="absolute opacity-80 dst shrink-0" :class="{ 'size-5': map == 12 || map == 11, 'size-6': map == 30 }" />
+              <component
+                :is="`i-maps${map}`"
+                class="absolute opacity-80 dst shrink-0"
+                :class="{ 'size-5': map == 12 || map == 11, 'size-6': map == 30 }" />
             </span>
             {{ ix.mapNameById(map) }}
           </div>

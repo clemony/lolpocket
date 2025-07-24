@@ -42,7 +42,9 @@ defineExpose({
 
 <template>
   <Dialog :open="ps.newPocketOpen">
-    <MotionDialogContent class="!rounded-xl w-110 pt-8 pb-6 px-7" @interact-outside="ps.newPocketOpen = false">
+    <MotionDialogContent
+      class="!rounded-xl w-110 pt-8 pb-6 px-7"
+      @interact-outside="ps.newPocketOpen = false">
       <DialogHeader>
         <DialogTitle class="text-6 dst">
           New Pocket
@@ -54,7 +56,14 @@ defineExpose({
       </DialogHeader>
 
       <div class=" grid field-box  gap-4 size-full">
-        <IconPopover v-model:selected-icon="selectedIcon" side="right" :side-offset="70" align="start" :align-offset="-136" class="size-30 place-self-center cursor-pointer" @update:selected-icon="(e) => selectedIcon = e" />
+        <IconPopover
+          v-model:selected-icon="selectedIcon"
+          side="right"
+          :side-offset="70"
+          align="start"
+          :align-offset="-136"
+          class="size-30 place-self-center cursor-pointer"
+          @update:selected-icon="(e) => selectedIcon = e" />
 
         <div class="[&_label]:text-3  w-full flex flex-col justify-start gap-6  pt-4 px-0.5 h-full">
           <div class="flex flex-col  gap-1">
@@ -71,7 +80,9 @@ defineExpose({
               <span class="flex gap-2">
                 <CloseButton />
 
-                <RandomButton v-tippy="'No brain? Meet Button.'" @click.stop="name = generateName()" />
+                <RandomButton
+                  v-tippy="'No brain? Meet Button.'"
+                  @click.stop="name = generateName()" />
               </span>
             </div>
 

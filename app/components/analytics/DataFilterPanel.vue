@@ -30,9 +30,15 @@ const entries = [
     <PatchNumberField />
 
     <div class="w-full">
-      <Tabs v-model:model-value="tabs" class="max-w-100">
+      <Tabs
+        v-model:model-value="tabs"
+        class="max-w-100">
         <IndicatorTabsList class="grid-cols-3 *:!text-3">
-          <IndicatorTabsTrigger v-for="tab in entries" :key="tab.name" :value="tab.value" contrast>
+          <IndicatorTabsTrigger
+            v-for="tab in entries"
+            :key="tab.name"
+            :value="tab.value"
+            contrast>
             {{ tab.name }}
           </IndicatorTabsTrigger>
 

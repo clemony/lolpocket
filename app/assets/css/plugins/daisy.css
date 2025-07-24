@@ -1,15 +1,15 @@
-@import "tailwindcss";
-@import "../theme.css";
+@import 'tailwindcss';
+@import '../theme.css';
 @plugin "daisyui";
 
 @plugin "daisyui" {
-  root: ":root";
+  root: ':root';
   themes: lofi;
   styled: true;
 }
 
 @plugin "daisyui/theme" {
-  name: "lofi";
+  name: 'lofi';
   default: true;
   prefersdark: true, false;
   color-scheme: dark, light;

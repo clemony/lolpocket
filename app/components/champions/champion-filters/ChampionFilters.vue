@@ -22,8 +22,13 @@ const query = ref(null)
   <menu class="overflow-hidden inset-x-0 px-8 pt-11 flex flex-col gap-5 h-32 z-1 top-16  bg-b1 absolute ">
     <div class="flex  items-center gap-10 ">
       <div class="flex relative items-center grow gap-6 ">
-        <ExpandSearch class="absolute **:[&_svg]:!opacity-96  left-0 btn-neutral max-w-60 " @update:reset="cs.championFilter.query = null">
-          <input v-model="cs.championFilter.query" type="text" class="size-full" />
+        <ExpandSearch
+          class="absolute **:[&_svg]:!opacity-96  left-0 btn-neutral max-w-60 "
+          @update:reset="cs.championFilter.query = null">
+          <input
+            v-model="cs.championFilter.query"
+            type="text"
+            class="size-full" />
         </ExpandSearch>
 
         <h1 class="!text-9 tracking-tight mr-1">

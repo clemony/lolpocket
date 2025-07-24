@@ -11,7 +11,9 @@ const props = defineProps<{
 </script>
 
 <template>
-  <SelectItem :value="props.value" :class="cn(' data-[state=highlighted]:bg-accent rounded-lg  btn-depth ', props.class)">
+  <SelectItem
+    :value="props.value"
+    :class="cn(' data-[state=highlighted]:bg-accent rounded-lg  btn-depth ', props.class)">
     <slot />
   </SelectItem>
 </template>

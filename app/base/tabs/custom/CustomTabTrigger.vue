@@ -60,7 +60,9 @@ function handleClick(event) {
         props.class,
       )">
       <span class="truncate pointer-events-none">
-        <slot :current-value="currentValue" :return-value="returnValue" />
+        <slot
+          :current-value="currentValue"
+          :return-value="returnValue" />
       </span>
     </TabsTrigger>
   </Motion>

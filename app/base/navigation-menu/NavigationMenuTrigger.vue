@@ -18,8 +18,13 @@ const forwarded = useForwardProps(delegatedProps)
     :class="cn(navigationMenuTriggerStyle(), 'group', props.class)">
     <slot />
 
-    <span v-if="props.arrow" class="size-5 max-w-5 min-w-5 relative ">
-      <icon name="up-sm" class="absolute top-px ml-1 transition duration-300 shrink-0 group-data-[state=open]:rotate-180 size-4.5" aria-hidden="true" />
+    <span
+      v-if="props.arrow"
+      class="size-5 max-w-5 min-w-5 relative ">
+      <icon
+        name="up-sm"
+        class="absolute top-px ml-1 transition duration-300 shrink-0 group-data-[state=open]:rotate-180 size-4.5"
+        aria-hidden="true" />
     </span>
 
     <slot name="right" />

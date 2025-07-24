@@ -9,13 +9,17 @@ const as = useAccountStore()
 <template>
   <div class="w-full flex ">
     <Motion as-child>
-      <Collapsible class="py-8 w-184" arrow>
+      <Collapsible
+        class="py-8 w-184"
+        arrow>
         <CollapsibleTrigger class="group/c flex items-center px-2.25 w-full  text-left max-w-184 gap-6 cursor-pointer">
           <h3 class="dst font-semibold">
             Item Sets
           </h3>
 
-          <icon name="up-sm" class=" dst group-data-[state=open]/c:rotate-180" />
+          <icon
+            name="up-sm"
+            class=" dst group-data-[state=open]/c:rotate-180" />
         </CollapsibleTrigger>
 
         <Motion as-child>

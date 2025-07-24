@@ -8,12 +8,18 @@ const { team, class: className } = defineProps<{
 </script>
 
 <template>
-  <div class="" :class="cn('flex  w-26 flex-nowrap justify-items-start ', className)">
+  <div
+    class=""
+    :class="cn('flex  w-26 flex-nowrap justify-items-start ', className)">
     <p class="text-3 grid items-center font-semibold grid   justify-start tracking-tight text-nowrap inline-flex flex-nowrap">
       {{ team.kills }}
-      <icon name="slash" class="-mx-px dst size-4" />
+      <icon
+        name="slash"
+        class="-mx-px dst size-4" />
       {{ team.deaths }}
-      <icon name="slash" class="-mx-px dst size-4" />
+      <icon
+        name="slash"
+        class="-mx-px dst size-4" />
       {{ team.assists }}
     </p><!--
     <p class="text-3 text-bc/80  pb-0.25 text-nowrap font-medium items-center">

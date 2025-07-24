@@ -12,7 +12,9 @@ const isDesktop = useMediaQuery('(min-width: 768px)')
     <slot />
   </Drawer>
 
-  <component :is="isDesktop ? Dialog : Drawer" v-else>
+  <component
+    :is="isDesktop ? Dialog : Drawer"
+    v-else>
     <slot />
   </component>
 </template>

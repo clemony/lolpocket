@@ -21,7 +21,9 @@ const { orientation, canScrollNext, scrollNext } = useCarousel()
     variant="outline"
     @click="scrollNext">
     <slot>
-      <icon name="right-sm" class="h-4 w-4 text-current" />
+      <icon
+        name="right-sm"
+        class="h-4 w-4 text-current" />
 
       <span class="sr-only">Next Slide</span>
     </slot>

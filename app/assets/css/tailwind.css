@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "./index.css";
+@import 'tailwindcss';
+@import './index.css';
 @source not "../icons";
 @source not "../img";
 
@@ -18,7 +18,7 @@
   }
 
   input,
-  input:where(:not([type="button"], [type="reset"], [type="submit"])),
+  input:where(:not([type='button'], [type='reset'], [type='submit'])),
   select,
   textarea,
   .reset-input {
@@ -71,10 +71,14 @@
   h3,
   h4,
   h5 {
-    @apply leading-none;
+    @apply leading-none antialiased;
   }
 
   p {
-    @apply leading-5.25;
+    @apply leading-5.25 antialiased;
+  }
+
+  span {
+    @apply antialiased;
   }
 }

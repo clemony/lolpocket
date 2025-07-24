@@ -1,83 +1,133 @@
 <script lang="ts" setup>
+import { vScroll } from '@vueuse/components'
+import type { UseScrollReturn } from '@vueuse/core'
+import { profileSettingsData } from 'components/summoner/settings/profile-settings-data'
+import { profileSettingsLinks } from 'components/summoner/settings/profile-settings-links'
+
+const { topChampion } = defineProps<{
+  summoner: Summoner
+  region: string
+  slug: string
+  topChampion: TopChampion
+}>()
+
+const emit = defineEmits<{
+  (e: 'update:scroll-y-position', value: number): void
+}>()
 
 definePageMeta({
   middleware: 'check-if-user',
 })
-const { summoner, class: className } = defineProps<{
-  summoner: Summoner
-  class?: HTMLAttributes['class']
-}>()
 
-const ix = useIndexStore()
-const user = inject<User>('user')
-const { championStats: lite } = useChampions(user.summoner.matches.simplified, { mode: 'lite', limit: 1 })
+const as = useAccountStore()
 
-const opt = computed (() => user.account.settings)
-const splash =  computed (() => opt.value.profile.splash)
+function onScroll(state: UseScrollReturn) {
+  console.log(state.y.value) // {x, y, isScrolling, arrivedState, directions}
+  emit('update:scroll-y-position', state.y.value)
+}
 
-const automatic = computed (() => {
-  const champ = Object.keys(lite.value)[0]
-  return {
-    name: ix.champNameByKey(champ),
-    splash: getSplash(champ, 'tile')
-  }
-  })
-
-  const cardClass = 'flex px-3 items-center group/photo-button rounded-xl group/photo !gap-6 photo btn  h-50 max-w-110 w-110 w-110 hover-ring  justify-start **:text-start'
-
-  const activeClass = ' shadow-sm hover:!bg-b2/60 !border-b3 !bg-b2/30 inset-shadow-sm-reverse'
-  const inactiveClass = 'btn-ghost  grayscale    '
+watch(
+  () => as.settings.showSolo,
+  (newVal) => {
+    console.log('💠 - watch - newVal:', newVal)
+  },
+)
 </script>
 
 <template>
-  <div :class="cn('max-w-[1040px] py-14 px-1 flex-col gap-14 scrollbar-hidden !justify-start !items-center ', className)">
-<div class="grid grid-cols-[1.2fr_4fr] w-full">
-<h2 class="col-span-full dst font-bold mb-8">
-  Profile Settings
-</h2>
+  <main
+    v-scroll="onScroll"
+    class="flex size-full !justify-start !items-start">
+    <aside
+      class="w-[37.4%] shrink-0 z-1 sticky top-0 px-1 py-18 grid justify-end left-0">
+      <menu class="w-90">
+        <h2 class="dst font-bold mb-8">
+          Profile Settings
+        </h2>
 
-  <menu class="col-start-1 grid w-full h-max pl-1 *:hover:underline *:underline-offset-2 *:font-medium gap-3 *:cursor-pointer">
-    <li>Profile Splash</li>
-    <li>Display Options</li>
-  </menu>
+        <nav class="grid w-full h-fit pl-1 gap-1">
+          <li
+            v-for="link in profileSettingsLinks"
+            :key="link.hash">
+            <NuxtLink
+              class="hover:underline underline-offset-2 h-11 grid items-center font-medium cursor-pointer text-bc/60"
+              exact-active-class="text-bc"
+              :to="{
+                path: `/summoner/${region}/${slug}/settings`,
+                hash: `#${link.hash}`,
+              }">
+              {{ link.name }}
+            </NuxtLink>
+          </li>
+        </nav>
+      </menu>
+    </aside>
 
-  <div class="w-full flex flex-col gap-22">
-      <h1 class="dst font-bold"  id="profile-splash" >Profile Splash</h1>
-  <div class=" flex gap-x-16 h-max w-full justify-around">
+    <article class="size-full">
+      <div
+        class="max-w-250 w-full flex flex-col pt-18 pb-62 gap-20 overflow-hidden px-1">
+        <h1
+          id="splash"
+          class="dst font-bold">
+          Profile Splash
+        </h1>
+        <ProfileSplashOptions :top-champion />
+        <Separator class="my-4" />
+        <h1
+          id="display"
+          class="dst font-bold">
+          Display Options
+        </h1>
+        <div class="grid gap-10 grid-cols-2 mr-6">
+          <ActionCard
+            v-model:model-value="as.settings.showSolo"
+            :title="profileSettingsData.solo.title"
+            :text="profileSettingsData.solo.text">
+            {{ as.settings.showSolo ? "Visible" : "Hidden" }}
+          </ActionCard>
+          <ActionCard
+            v-model:model-value="as.settings.showFlex"
+            :title="profileSettingsData.flex.title"
+            :text="profileSettingsData.flex.text">
+            {{ as.settings.showFlex ? "Visible" : "Hidden" }}
+          </ActionCard>
+          <ActionCard
+            v-model:model-value="as.settings.showAllies"
+            :title="profileSettingsData.allies.title"
+            :text="profileSettingsData.allies.text">
+            {{ as.settings.showAllies ? "Visible" : "Hidden" }}
+          </ActionCard>
+        </div>
 
-<button @click="opt.profile.splash = null"  :class="cn(splash ? inactiveClass : activeClass,  cardClass)">
-      <SplashCard :skin-url="automatic.splash" :text="automatic.name" :alt="`${user.summoner.name}'s icon`" />
-      <div class="flex flex-col h-full pt-6 gap-4">
-        <h4 class="dst">Automatic</h4>
-        <p>Displays your most played champion in recent games.</p>
-
-<ActiveTick v-if="!splash"  class="h-6  mt-2 "/>
+        <Separator class="my-4" />
+        <h1
+          id="display"
+          class="dst font-bold">
+          Display Options
+        </h1>
+        <div class="grid gap-10 grid-cols-2 mr-6">
+          <ActionCard
+            as="div"
+            button="Clear Matches"
+            class="h-60 cursor-default">
+            <template #title>
+              Clear all Match Data
+            </template>
+            <template #text>
+              Match data is cached in your browser's internal database to limit
+              strain on Riot's API servers. If you're having issues updating
+              matches, try this, or
+              <ResponsiveDialog>
+                <ResponsiveDialogTrigger class=" items-center !overflow-visible align-baseline w-24  !h-4   justify-center  origin-center relative inline-flex self-center">
+                  <span class="absolute font-medium w-24 !h-6 mt-0.5  text-center hover:font-bold transition-all underline duration-200 ">
+                    contact me.
+                  </span>
+                </ResponsiveDialogTrigger>
+              </ResponsiveDialog>
+            </template>
+          </ActionCard>
+        </div>
       </div>
-      </button>
-
-
-<SplashSelectPanel @update:splash="e => opt.profile.splash = e">
-<button  :class="cn(!splash ? inactiveClass : activeClass, cardClass)">
-  <SplashCard :skin-url="splash" :alt="`${user.summoner.name}'s icon`" />
-      <div class="flex flex-col  h-full pt-6 gap-4">
-        <h4 class="dst">Custom</h4>
-        <p>
-          <span  class="italic">
-Never played a champ?
-          </span><br  />
-          No problem. Rep your guy.</p>
-
-          <ActiveTick v-if="splash"  class="h-6 mt-2 "/>
-      </div>
-      </button>
-</SplashSelectPanel>
-    </div>
-
-    <Separator class="my-4" />
-
-      <h1 class="dst font-bold"  id="profile-display" >Display Options</h1>
-        <h4 class="dst">Hide Ranked Solo</h4>
-  </div>
-</div>
-</div>
+    </article>
+  </main>
 </template>

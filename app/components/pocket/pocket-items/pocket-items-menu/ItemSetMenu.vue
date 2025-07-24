@@ -14,19 +14,26 @@ console.log('💠 - notThisPocket - notThisPocket:', notThisPocket)
 </script>
 
 <template>
-  <ContrastDropdownItem class="" @click="duplicateItemSet(props.pocket, props.set)">
+  <ContrastDropdownItem
+    class=""
+    @click="duplicateItemSet(props.pocket, props.set)">
     <icon name="copy" />
     Duplicate
   </ContrastDropdownItem>
 
   <DropdownMenuSub>
     <ContrastDropdownSubTrigger>
-      <icon name="material-symbols-light:how-to-vote" class="size-7 -ml-1 mr-1.25" />
+      <icon
+        name="material-symbols-light:how-to-vote"
+        class="size-7 -ml-1 mr-1.25" />
       Copy to Pocket
     </ContrastDropdownSubTrigger>
 
     <ContrastDropdownSubContent>
-      <ContrastDropdownItem v-for="friendlyPocket in notThisPocket" :key="friendlyPocket.key" @click="copyItemSetToPocket(friendlyPocket, props.set)">
+      <ContrastDropdownItem
+        v-for="friendlyPocket in notThisPocket"
+        :key="friendlyPocket.key"
+        @click="copyItemSetToPocket(friendlyPocket, props.set)">
         {{ friendlyPocket.name }}
       </ContrastDropdownItem>
     </ContrastDropdownSubContent>

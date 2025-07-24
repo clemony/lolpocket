@@ -34,11 +34,17 @@ const ix = useIndexStore()
         v-for="champion in ix.champions"
         :id="champion.id"
         :key="champion.id"
-        as="label" :class="{ ' not-[.checkbox]:**:contrast-110 not-[.checkbox]:**:opacity-65 not-[.checkbox]:**:grayscale border scale-90 border-n1/60 relative': pocket.champions.includes(champion.key) }" class="hover-ring  rounded-lg size-26 ">
+        as="label"
+        :class="{ ' not-[.checkbox]:**:contrast-110 not-[.checkbox]:**:opacity-65 not-[.checkbox]:**:grayscale border scale-90 border-n1/60 relative': pocket.champions.includes(champion.key) }"
+        class="hover-ring  rounded-lg size-26 ">
         <slot />
 
         <input
-          v-model="activePocket.champions" type="checkbox" :value="champion.key" class="absolute tldr-30 opacity-0 scale-0 checkbox checkbox-n1 rounded-full drop-shadow-sm top-0 right-0 z-1" :class="{ 'scale-100 opacity-100': pocket.champions.includes(champion.key) }" />
+          v-model="activePocket.champions"
+          type="checkbox"
+          :value="champion.key"
+          class="absolute tldr-30 opacity-0 scale-0 checkbox checkbox-n1 rounded-full drop-shadow-sm top-0 right-0 z-1"
+          :class="{ 'scale-100 opacity-100': pocket.champions.includes(champion.key) }" />
       </ChampionIcon>
     </div>
   </div>

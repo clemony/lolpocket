@@ -17,12 +17,16 @@ watch(() => selected, (newVal) => {
 <template>
   <Field class=" !px-4 !m-0 items-center justify-center gap-y-16 flex flex-col relative w-full h-100 rounded-box  shadow-warm  **:select-none pb-12 ">
     <div class="absolute pointer-events-none size-full z-0 top-0 left-0 rounded-box overflow-hidden opacity-40">
-      <div class="absolute size-full top-0 left-0 gradient !bg-size-[700%] mask-bottom-right-1 " :data-path="runes[0][0].path" />
+      <div
+        class="absolute size-full top-0 left-0 gradient !bg-size-[700%] mask-bottom-right-1 "
+        :data-path="runes[0][0].path" />
     </div>
 
     <template v-if="runes && runes.length">
       <div
-        v-for="(slot, i) in runes" :key="i" layout-id="slot"
+        v-for="(slot, i) in runes"
+        :key="i"
+        layout-id="slot"
         class="cursor-pointer flex z-1 -mt-2  justify-around w-full gap-3 ">
         <template v-if="i != 0">
           <div
@@ -58,8 +62,13 @@ watch(() => selected, (newVal) => {
       </div>
     </template>
 
-    <div v-else class="size-full grid grid-cols-3 gap-y-14">
-      <Placeholder v-for="i in 9" :key="i" class="size-18 rounded-full place-self-center" />
+    <div
+      v-else
+      class="size-full grid grid-cols-3 gap-y-14">
+      <Placeholder
+        v-for="i in 9"
+        :key="i"
+        class="size-18 rounded-full place-self-center" />
     </div>
   </Field>
 </template>

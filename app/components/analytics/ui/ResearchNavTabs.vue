@@ -8,7 +8,10 @@ onMounted (() => {
 </script>
 
 <template>
-  <Tabs v-model:model-value="researchNav" class="w-full" @update:model-value="e => navigateTo(e.toString())">
+  <Tabs
+    v-model:model-value="researchNav"
+    class="w-full"
+    @update:model-value="e => navigateTo(e.toString())">
     <TabsList class="w-full grid grid-cols-2">
       <TabsTrigger value="/research/champions">
         Champions

@@ -1,4 +1,4 @@
-import { storeToRefs } from "pinia"
+import { storeToRefs } from 'pinia'
 
 interface Teammate {
   riotIdGameName: string
@@ -12,7 +12,7 @@ interface Teammate {
 export function useRepeatedTeammates(
   currentName: string,
   puuid: string,
-  options?: { delayUntilReady?: Ref<boolean> }
+  options?: { delayUntilReady?: Ref<boolean> },
 ) {
   const ss = useSummonerStore()
 
@@ -28,20 +28,23 @@ export function useRepeatedTeammates(
 
       const teammateStats = new Map<
         string,
-        { games: number; wins: number; profileIcon: number }
+        { games: number, wins: number, profileIcon: number }
       >()
 
       for (const match of matches.value) {
         const { participants, win } = match
-        if (!participants) continue
+        if (!participants)
+          continue
 
         const hasPlayer = participants.some(
-          (p) => p.riotIdGameName === currentName
+          p => p.riotIdGameName === currentName,
         )
-        if (!hasPlayer) continue
+        if (!hasPlayer)
+          continue
 
         for (const teammate of participants) {
-          if (teammate.riotIdGameName === currentName) continue
+          if (teammate.riotIdGameName === currentName)
+            continue
 
           const existing = teammateStats.get(teammate.riotIdGameName) || {
             games: 0,
@@ -50,7 +53,8 @@ export function useRepeatedTeammates(
           }
 
           existing.games++
-          if (win) existing.wins++
+          if (win)
+            existing.wins++
 
           teammateStats.set(teammate.riotIdGameName, existing)
         }
@@ -63,8 +67,8 @@ export function useRepeatedTeammates(
         .map(([riotIdGameName, stats]) => {
           const rawWinrate = stats.wins / stats.games
           const confidence = Math.min(1, stats.games / 10)
-          const bayesianWinrate =
-            (confidence * rawWinrate + (1 - confidence) * priorWinrate) * 100
+          const bayesianWinrate
+            = (confidence * rawWinrate + (1 - confidence) * priorWinrate) * 100
 
           return {
             riotIdGameName,
@@ -74,7 +78,8 @@ export function useRepeatedTeammates(
           }
         })
         .sort((a, b) => b.games - a.games)
-    } finally {
+    }
+    finally {
       loading.value = false
     }
   }, [])
@@ -82,7 +87,7 @@ export function useRepeatedTeammates(
   const topBayesianTeammates = computed(() =>
     [...repeatedTeammates.value]
       .sort((a, b) => b.bayesianWinrate - a.bayesianWinrate)
-      .slice(0, 3)
+      .slice(0, 3),
   )
 
   return {

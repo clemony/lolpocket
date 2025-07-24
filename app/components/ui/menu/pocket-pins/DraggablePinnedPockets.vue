@@ -49,10 +49,21 @@ function removePin(e: SortableEvent) {
       @remove="removePin($event)"
       @start="isDragging = true">
       <transition-slide
-        as="div" group
+        as="div"
+        group
         class=" grid-rows-3 grid-cols-2 grid scrollbar-hidden  max-h-92 gap-1 size-full  px-1  items-start justify-start  target">
-        <PocketPeek v-for="pocketKey in as.userAccount.pockets.pinned" :key="pocketKey" :pocket-key="pocketKey" side="right" align="start" class="group/link size-full grid items-end rounded-field shadow-sm drop-shadow-sm overflow-hidden relative **:select-none select-none **:pointer-events-none" wrapper-class="group/link size-full grid items-end rounded-field shadow-sm drop-shadow-sm overflow-hidden relative **:select-none select-none **:pointer-events-none" @click="navigateTo(`/pocket/${pocketKey}`)">
-          <LazyPocketPinButton :pocket-key="pocketKey" hydrate-on-visible />
+        <PocketPeek
+          v-for="pocketKey in as.userAccount.pockets.pinned"
+          :key="pocketKey"
+          :pocket-key="pocketKey"
+          side="right"
+          align="start"
+          class="group/link size-full grid items-end rounded-field shadow-sm drop-shadow-sm overflow-hidden relative **:select-none select-none **:pointer-events-none"
+          wrapper-class="group/link size-full grid items-end rounded-field shadow-sm drop-shadow-sm overflow-hidden relative **:select-none select-none **:pointer-events-none"
+          @click="navigateTo(`/pocket/${pocketKey}`)">
+          <LazyPocketPinButton
+            :pocket-key="pocketKey"
+            hydrate-on-visible />
         </PocketPeek>
       </transition-slide>
     </VueDraggable>
@@ -61,8 +72,12 @@ function removePin(e: SortableEvent) {
       <p class="">
       </p>
 
-      <Badge v-tippy="{ content: `pinned / limit` }" class="font-medium col-start-2  text-bc/80  justify-self-end">
-        <icon name="pin-solid" class="size-4  mr-1.5 dst text-bc/70" />
+      <Badge
+        v-tippy="{ content: `pinned / limit` }"
+        class="font-medium col-start-2  text-bc/80  justify-self-end">
+        <icon
+          name="pin-solid"
+          class="size-4  mr-1.5 dst text-bc/70" />
         {{ computed (() => as.userAccount.pockets.pinned.length) }}
         /
         6

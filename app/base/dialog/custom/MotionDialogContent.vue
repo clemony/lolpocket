@@ -39,8 +39,13 @@ const variants = {
 <template>
   <DialogPortal>
     <DialogOverlay
-      class="fixed inset-0 z-50 isolate bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0" :class="{ 'opacity-0 invisible': props.noOverlay }">
-      <Motion class="overlay" :initial="{ opacity: 0 }" :animate="{ opacity: 1 }" :exit="{ opacity: 0 }" />
+      class="fixed inset-0 z-50 isolate bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0"
+      :class="{ 'opacity-0 invisible': props.noOverlay }">
+      <Motion
+        class="overlay"
+        :initial="{ opacity: 0 }"
+        :animate="{ opacity: 1 }"
+        :exit="{ opacity: 0 }" />
     </DialogOverlay>
 
     <DialogContent
@@ -53,18 +58,24 @@ const variants = {
           props.class,
         )">
       <Motion
-        class="modal-container" :variants="variants"
+        class="modal-container"
+        :variants="variants"
         :transition="{
           duration: 0.2,
           ease: 'easeOut',
-        }" initial="dialogInitialState" animate="dialogOpenState"
-        exit="dialogInitialState" :style="{ transformPerspective: 500 }">
+        }"
+        initial="dialogInitialState"
+        animate="dialogOpenState"
+        exit="dialogInitialState"
+        :style="{ transformPerspective: 500 }">
         <slot />
 
         <DialogClose
           v-if="props.noButton"
           class="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring focus:ring-n1 disabled:pointer-events-none ">
-          <icon name="x-sm" class="size-6" />
+          <icon
+            name="x-sm"
+            class="size-6" />
 
           <span class="sr-only">Close</span>
         </DialogClose>

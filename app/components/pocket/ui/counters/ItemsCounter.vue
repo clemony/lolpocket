@@ -17,7 +17,9 @@ const itemsLength = computed (() => {
 </script>
 
 <template>
-  <div v-tippy="`${itemsLength ? itemsLength : 'no'} item sets`" :class="cn('flex gap-1.5 items-center', props.class)">
+  <div
+    v-tippy="`${itemsLength ? itemsLength : 'no'} item sets`"
+    :class="cn('flex gap-1.5 items-center', props.class)">
     <span class="dst font-mono text-1 ">{{ itemsLength }}</span>
   </div>
 </template>

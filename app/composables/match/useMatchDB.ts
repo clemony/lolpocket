@@ -1,4 +1,4 @@
-import { matchDB } from "stores/matchDB"
+import { matchDB } from 'stores/matchDB'
 
 export function useMatchDexie() {
   const addMatches = async ({
@@ -26,11 +26,11 @@ export function useMatchDexie() {
   }
 
   const getAllMatchIds = async () => {
-    return await matchDB.matchData.orderBy("metadata.matchId").keys()
+    return await matchDB.matchData.orderBy('metadata.matchId').keys()
   }
 
   const getAllSimplifiedMatchIds = async () => {
-    return await matchDB.simplifiedMatchData.orderBy("matchId").keys()
+    return await matchDB.simplifiedMatchData.orderBy('matchId').keys()
   }
 
   const clearMatches = async () => {
@@ -42,12 +42,12 @@ export function useMatchDexie() {
 
   const refreshMatches = async () => {
     console.log(
-      "💠 - refreshMatches (full):",
-      await matchDB.matchData.toArray()
+      '💠 - refreshMatches (full):',
+      await matchDB.matchData.toArray(),
     )
     console.log(
-      "💠 - refreshMatches (simplified):",
-      await matchDB.simplifiedMatchData.toArray()
+      '💠 - refreshMatches (simplified):',
+      await matchDB.simplifiedMatchData.toArray(),
     )
     return {
       full: await matchDB.matchData.toArray(),

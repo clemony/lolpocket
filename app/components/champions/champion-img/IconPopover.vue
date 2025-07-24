@@ -80,9 +80,14 @@ const isOpen = ref(false)
 <template>
   <Popover v-model:open="isOpen">
     <PopoverTrigger :class="cn('group/picon z-0 shrink-0 cursor-pointer self-center  size-14   rounded-full pointer-events-auto  aspect-square  grid place-items-center relative', props.class) ">
-      <PocketIcon :url=" pocket ? pocket?.icon : selectIcon" alt="pocket icon" class="group-hover/picon:brightness-50 pointer-events-none z-1 group-data-[state=open]/picon:brightness-50  tldr-30 shadow-sm drop-shadow-sm group-data-[state=open]/picon:ring group-data-[state=open]/picon:ring-offset-2 ring-n1/40 ring-offset-b1 rounded-full" />
+      <PocketIcon
+        :url=" pocket ? pocket?.icon : selectIcon"
+        alt="pocket icon"
+        class="group-hover/picon:brightness-50 pointer-events-none z-1 group-data-[state=open]/picon:brightness-50  tldr-30 shadow-sm drop-shadow-sm group-data-[state=open]/picon:ring group-data-[state=open]/picon:ring-offset-2 ring-n1/40 ring-offset-b1 rounded-full" />
 
-      <icon name="images" class="size-6 !text-nc absolute opacity-0  group-hover/picon:opacity-80 z-2 transition-all pointer-events-none  duration-300 group-data-[state=open]/picon:opacity-100" />
+      <icon
+        name="images"
+        class="size-6 !text-nc absolute opacity-0  group-hover/picon:opacity-80 z-2 transition-all pointer-events-none  duration-300 group-data-[state=open]/picon:opacity-100" />
     </PopoverTrigger>
 
     <LazyCustomPopoverContent
@@ -96,31 +101,58 @@ const isOpen = ref(false)
       <motion.div
         class=" flex flex-col  overflow-y-scroll"
         :style="{ maxHeight: !champSearch ? '60px' : '250px' }">
-        <ContrastSearchInput v-model:model-value="champSearch" placeholder="Search Splash Icons..." @update:input="handleInput($event)" />
+        <ContrastSearchInput
+          v-model:model-value="champSearch"
+          placeholder="Search Splash Icons..."
+          @update:input="handleInput($event)" />
 
-        <transition-slide v-if="!selectedChampion" group class="pt-2 overflow-y-scroll w-full flex flex-col">
-          <label v-for="result in champSearchResults" :key="result.item.id" class="justify-start btn btn-ghost btn-ghost-dark  gap-3 text-3">
-            <input v-model="selectedChampion" type="radio" class="peer hidden" :value="result.item.key" />
+        <transition-slide
+          v-if="!selectedChampion"
+          group
+          class="pt-2 overflow-y-scroll w-full flex flex-col">
+          <label
+            v-for="result in champSearchResults"
+            :key="result.item.id"
+            class="justify-start btn btn-ghost btn-ghost-dark  gap-3 text-3">
+            <input
+              v-model="selectedChampion"
+              type="radio"
+              class="peer hidden"
+              :value="result.item.key" />
 
             <span class="size-8 ">
-              <LazyChampionIcon :id="result.item.id" :alt="result.item.name" class="size-8 pointer-events-none rounded-lg" hydrate-on-visible />
+              <LazyChampionIcon
+                :id="result.item.id"
+                :alt="result.item.name"
+                class="size-8 pointer-events-none rounded-lg"
+                hydrate-on-visible />
             </span>
             {{ result.item.name }}
           </label>
         </transition-slide>
 
-        <div v-else-if="selectedChampion" class="mt-3  overflow-y-scroll px-1 self-center pb-3 max-h-90 grid  grid-cols-4 pt-1 gap-2">
+        <div
+          v-else-if="selectedChampion"
+          class="mt-3  overflow-y-scroll px-1 self-center pb-3 max-h-90 grid  grid-cols-4 pt-1 gap-2">
           <PocketIcon
             v-for="skin in ix.skins[selectedChampion]"
-            :key="skin.name" v-tippy="skin.name"
+            :key="skin.name"
+            v-tippy="skin.name"
             :alt="skin.name"
             :url="getSkinSplash(selectedChampion, skin, 'tile')"
             class="size-20.5  cursor-pointer rounded-md shrink-0 hover:ring-b3/80">
-            <input v-model="selectIcon" type="radio" :value="getSkinSplash(selectedChampion, skin, 'tile')" class="peer hidden" @change="isOpen = false" />
+            <input
+              v-model="selectIcon"
+              type="radio"
+              :value="getSkinSplash(selectedChampion, skin, 'tile')"
+              class="peer hidden"
+              @change="isOpen = false" />
           </PocketIcon>
         </div>
 
-        <div v-else class="w-full  px-2  pt-3 pb-4">
+        <div
+          v-else
+          class="w-full  px-2  pt-3 pb-4">
           <p>Search for a champion to select a splash art.</p>
         </div>
       </motion.div>

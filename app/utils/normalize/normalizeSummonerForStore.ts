@@ -1,10 +1,11 @@
 export async function normalizeSummonerForStore(
-  summoner: Summoner
+  summoner: Summoner,
 ): Promise<Summoner> {
-  console.log(" - normalizeSummonerForStore:", summoner)
+  console.log(' - normalizeSummonerForStore:', summoner)
 
   const puuid = summoner.puuid
-  if (!puuid) throw new Error("normalizeSummonerForStore: puuid is null")
+  if (!puuid)
+    throw new Error('normalizeSummonerForStore: puuid is null')
 
   const as = useAccountStore()
   const { addMatches } = useMatchDexie()
@@ -12,14 +13,14 @@ export async function normalizeSummonerForStore(
   let newFull: MatchData[] = []
   let newSimplified: SimplifiedMatchData[] = []
 
-  const recentExistingIds =
-    summoner.matches?.full
+  const recentExistingIds
+    = summoner.matches?.full
       ?.slice(0, 50) // or 100, depending on your appetite
-      .map((m) => m.metadata.matchId) ?? []
+      .map(m => m.metadata.matchId) ?? []
 
   if (puuid === as.userAccount.riot.puuid) {
-    const { matchData: syncedMatches, fetchInitialMatches } =
-      useInitialMatchSync(puuid)
+    const { matchData: syncedMatches, fetchInitialMatches }
+      = useInitialMatchSync(puuid)
     await fetchInitialMatches()
     newFull = syncedMatches.full.value
     newSimplified = syncedMatches.simplified.value
@@ -28,22 +29,23 @@ export async function normalizeSummonerForStore(
       puuid,
       existingIds: recentExistingIds,
 
-      fetchMode: "new",
+      fetchMode: 'new',
     })
-    console.log(" - result:", result)
+    console.log(' - result:', result)
 
     newFull = result.full
     newSimplified = result.simplified
 
     await addMatches({ full: newFull, simplified: newSimplified })
-  } else {
+  }
+  else {
     const result = await useGetMatches({
       puuid,
       existingIds: recentExistingIds,
 
-      fetchMode: "new",
+      fetchMode: 'new',
     })
-    console.log(" - result:", result)
+    console.log(' - result:', result)
 
     newFull = result.full
     newSimplified = result.simplified
@@ -61,7 +63,7 @@ export async function normalizeSummonerForStore(
   }
 
   const sortedFull = Array.from(fullMap.values()).sort(
-    (a, b) => b.info.gameCreation - a.info.gameCreation
+    (a, b) => b.info.gameCreation - a.info.gameCreation,
   )
 
   const sortedSimplified = Array.from(simplifiedMap.values())
@@ -69,10 +71,10 @@ export async function normalizeSummonerForStore(
     .filter(isSimplifiedMatchData)
 
   if (!sortedFull[0]?.info?.participants) {
-    throw new Error("normalizeSummonerForStore: invalid first match")
+    throw new Error('normalizeSummonerForStore: invalid first match')
   }
 
-  console.log(" - normalizeSummonerForStore: final summoner:", {
+  console.log(' - normalizeSummonerForStore: final summoner:', {
     ...summoner,
     matches: {
       full: sortedFull,

@@ -53,7 +53,8 @@ const ix = useIndexStore()
           class="peer hidden" />
 
         <component
-          :is="`i-stats-${shard.icon}`" :alt="`shard-${shard.name}`"
+          :is="`i-stats-${shard.icon}`"
+          :alt="`shard-${shard.name}`"
           class="size-6 brightness-0 opacity-40 group-hover:opacity-100 group-hover:brightness-100 peer-checked:brightness-100  drop-shadow-md grayscale peer-checked:opacity-100 peer-checked:grayscale-0 group-hover:grayscale-0"
           :class="cn(shard.iconClass, `${shard.color}`)" />
       </label>

@@ -41,7 +41,11 @@ const offset = computed((): {
 
 <template>
   <div :class="cn('', props.class)">
-    <transition-slide v-bind="$attrs" :offset="offset" mode="out-in" as="div">
+    <transition-slide
+      v-bind="$attrs"
+      :offset="offset"
+      mode="out-in"
+      as="div">
       <slot />
     </transition-slide>
   </div>

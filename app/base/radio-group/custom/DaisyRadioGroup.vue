@@ -16,7 +16,9 @@ onMounted (() => {
 </script>
 
 <template>
-  <div v-bind="forwarded" class="flex flex-col gap-3">
+  <div
+    v-bind="forwarded"
+    class="flex flex-col gap-3">
     <slot />
   </div>
 </template>

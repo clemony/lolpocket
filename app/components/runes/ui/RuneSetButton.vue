@@ -33,17 +33,21 @@ const bgStyle = computed (() => {
   <div
     v-if="set"
     :key="setKey"
-    :class="cn('relative !pointer-events-auto size-20 cursor-pointer transition-all overflow-hidden duration-500 grid  hover:ring hover:ring-n1/40  aspect-square rounded-xl  place-items-center overflow-visible hover:!bg-b2/60 ease-out hover:!border-b3/30 z-0 *:z-2 ', className, { 'tldr-50  ring ring-b3/60  inset-shadow-sm after:size-full after:absolute after:rounded-xl after:z-1 after:bg-b1/65  ': set == pocket.runes[rs.selectedRuneSet] && route.name == 'pocket runes' })" :style="bgStyle">
+    :class="cn('relative !pointer-events-auto size-20 cursor-pointer transition-all overflow-hidden duration-500 grid  hover:ring hover:ring-n1/40  aspect-square rounded-xl  place-items-center overflow-visible hover:!bg-b2/60 ease-out hover:!border-b3/30 z-0 *:z-2 ', className, { 'tldr-50  ring ring-b3/60  inset-shadow-sm after:size-full after:absolute after:rounded-xl after:z-1 after:bg-b1/65  ': set == pocket.runes[rs.selectedRuneSet] && route.name == 'pocket runes' })"
+    :style="bgStyle">
     <input
       v-model="rs.selectedRuneSet"
       :value="setKey"
       name="selected-rune-set"
       type="radio"
-      class="peer hidden" @change="navigateTo(`/pocket/${pocket.key}/runes`)" />
+      class="peer hidden"
+      @change="navigateTo(`/pocket/${pocket.key}/runes`)" />
 
     <div class="grid place-items-center aspect-square  size-full ">
       <div class="p-1.5 size-full grid place-items-center">
-        <i-rune-icon v-if="!set.keystone || !set[0].path" class="size-6.5 opacity-40 dst" />
+        <i-rune-icon
+          v-if="!set.keystone || !set[0].path"
+          class="size-6.5 opacity-40 dst" />
 
         <NuxtImg
           v-else

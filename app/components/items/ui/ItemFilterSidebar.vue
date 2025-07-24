@@ -23,14 +23,19 @@ onMounted (() => {
 </script>
 
 <template>
-  <transition-expand group class="flex pl-4 pr-2   items-center top-19 bg-b1 z-1 justify-start  absolute inset-x-0">
+  <transition-expand
+    group
+    class="flex pl-4 pr-2   items-center top-19 bg-b1 z-1 justify-start  absolute inset-x-0">
     <div class=" flex items-center pb-12">
       <h1 class="grow">
         Items
       </h1>
     </div>
 
-    <Tabs v-model:model-value="tabs" class="  **:pointer-events-auto " @update:model-value="navigateTo(tabs)">
+    <Tabs
+      v-model:model-value="tabs"
+      class="  **:pointer-events-auto "
+      @update:model-value="navigateTo(tabs)">
       <IndicatorTabsList class="grid grid-cols-2 h-10">
         <IndicatorTabsTrigger value="/library/items">
           Grid
@@ -53,15 +58,21 @@ onMounted (() => {
     <ItemMapFilter v-model:model-value="is.itemFilter.map" />
 
     <div class="gap-4  text-2  tracking-tight  flex items-center justify-end ">
-      <MotionFade v-if="is.itemFilter.purchasable" layout-id="text">
+      <MotionFade
+        v-if="is.itemFilter.purchasable"
+        layout-id="text">
         Purchasable
       </MotionFade>
 
-      <MotionFade v-else layout-id="text">
+      <MotionFade
+        v-else
+        layout-id="text">
         All
       </MotionFade>
 
-      <Switch v-model:model-value="is.itemFilter.purchasable" class="dst">
+      <Switch
+        v-model:model-value="is.itemFilter.purchasable"
+        class="dst">
       </Switch>
     </div>
 

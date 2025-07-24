@@ -19,8 +19,13 @@ const forwarded = useForwardProps(delegatedProps)
     )">
     <slot />
 
-    <SelectIcon :class="{ hidden: props.noArrow }" as-child class="relative">
-      <icon name="select" class="size-5.25 opacity-50 shrink-0  absolute  right-0" />
+    <SelectIcon
+      :class="{ hidden: props.noArrow }"
+      as-child
+      class="relative">
+      <icon
+        name="select"
+        class="size-5.25 opacity-50 shrink-0  absolute  right-0" />
     </SelectIcon>
   </SelectTrigger>
 </template>

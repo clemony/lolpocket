@@ -23,7 +23,9 @@ const tabListClass = 'bg-b1/45  shadow-smooth h-18 w-120 justify-evenly gap-5  o
         leave-from-class="opacity-100 "
         leave-to-class="opacity-0 -translate-y-2"
         mode="out-in">
-        <RunesBlurb :current-path="selectedPath" layout-id="path1" />
+        <RunesBlurb
+          :current-path="selectedPath"
+          layout-id="path1" />
       </Transition>
 
       <div class="shadow-smooth relative h-18 w-120 rounded-xl">

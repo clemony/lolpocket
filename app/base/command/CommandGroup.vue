@@ -38,7 +38,9 @@ onUnmounted(() => {
     :id="id"
     :class="cn('overflow-hidden p-1 text-bc [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]:text-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-bc/60', props.class)"
     :hidden="isRender ? undefined : true">
-    <ListboxGroupLabel v-if="heading" class="px-2 py-1.5 text-2 font-medium text-bc/60">
+    <ListboxGroupLabel
+      v-if="heading"
+      class="px-2 py-1.5 text-2 font-medium text-bc/60">
       {{ heading }}
     </ListboxGroupLabel>
 

@@ -14,7 +14,9 @@ const forwarded = reactiveOmit(props, 'class')
 </script>
 
 <template>
-  <TabsIndicator v-bind="{ ...forwarded, ...$attrs }" as-child>
+  <TabsIndicator
+    v-bind="{ ...forwarded, ...$attrs }"
+    as-child>
     <motion.div
 
       :animate="{

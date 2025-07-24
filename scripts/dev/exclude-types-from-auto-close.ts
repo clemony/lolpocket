@@ -1,35 +1,35 @@
 /* eslint-disable no-cond-assign */
-import fs from "node:fs"
-import path from "node:path"
+import fs from 'node:fs'
+import path from 'node:path'
 
-const projectDir = "./types" // or wherever your types are
-const settingsPath = path.resolve(".vscode/settings.json")
+const projectDir = './types' // or wherever your types are
+const settingsPath = path.resolve('.vscode/settings.json')
 
 const typeRegex = /\b(?:interface|type|enum|class)\s+(\w+)/g
 
 const excludedTags = new Set([
-  "number",
-  "boolean",
-  "Array",
-  "object",
-  "string",
-  "any",
-  "area",
-  "base",
-  "br",
-  "col",
-  "command",
-  "embed",
-  "hr",
-  "img",
-  "input",
-  "keygen",
-  "link",
-  "meta",
-  "param",
-  "source",
-  "track",
-  "wbr",
+  'number',
+  'boolean',
+  'Array',
+  'object',
+  'string',
+  'any',
+  'area',
+  'base',
+  'br',
+  'col',
+  'command',
+  'embed',
+  'hr',
+  'img',
+  'input',
+  'keygen',
+  'link',
+  'meta',
+  'param',
+  'source',
+  'track',
+  'wbr',
 ])
 
 // Recursively walk through directories
@@ -40,7 +40,8 @@ function walk(dir, fileList = []) {
     const stat = fs.statSync(filepath)
     if (stat.isDirectory()) {
       walk(filepath, fileList)
-    } else if (file.endsWith(".ts") || file.endsWith(".tsx")) {
+    }
+    else if (file.endsWith('.ts') || file.endsWith('.tsx')) {
       fileList.push(filepath)
     }
   }
@@ -51,7 +52,7 @@ function walk(dir, fileList = []) {
 function extractTypeNames(filePaths) {
   const types = new Set()
   for (const file of filePaths) {
-    const content = fs.readFileSync(file, "utf8")
+    const content = fs.readFileSync(file, 'utf8')
     let match
     while ((match = typeRegex.exec(content))) {
       types.add(match[1])
@@ -66,8 +67,8 @@ function extractTypeNames(filePaths) {
   const types = extractTypeNames(tsFiles)
 
   // Read settings.json
-  const settings = JSON.parse(fs.readFileSync(settingsPath, "utf8"))
-  const current = new Set(settings["auto-close-tag.excludedTags"] || [])
+  const settings = JSON.parse(fs.readFileSync(settingsPath, 'utf8'))
+  const current = new Set(settings['auto-close-tag.excludedTags'] || [])
 
   // Add found types
   for (const t of types) {
@@ -75,7 +76,7 @@ function extractTypeNames(filePaths) {
   }
 
   // Sort and write back
-  settings["auto-close-tag.excludedTags"] = Array.from(current).sort()
+  settings['auto-close-tag.excludedTags'] = Array.from(current).sort()
   fs.writeFileSync(settingsPath, JSON.stringify(settings, null, 2))
-  console.log("✅ VSCode settings updated with TypeScript types.")
+  console.log('✅ VSCode settings updated with TypeScript types.')
 })()

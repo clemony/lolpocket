@@ -37,8 +37,13 @@ const tabs = ref('App')
             </IndicatorTabsList>
           </DrawerHeader>
 
-          <TransitionSlide group :offset="[-16, 0]">
-            <TabsContent v-if="tabs == 'App'" value="App" class="flex flex-col w-130 h-screen max-h-screen gap-6 px-6  overflow-hidden ">
+          <TransitionSlide
+            group
+            :offset="[-16, 0]">
+            <TabsContent
+              v-if="tabs == 'App'"
+              value="App"
+              class="flex flex-col w-130 h-screen max-h-screen gap-6 px-6  overflow-hidden ">
               <SettingsGeneral />
 
               <p class="w-full border-b font-semibold    text-5 w-full h-7  border-b-b3">
@@ -48,7 +53,10 @@ const tabs = ref('App')
               <SettingsTheme />
             </TabsContent>
 
-            <TabsContent v-if="tabs == 'Account'" value="Account" class="flex flex-col w-130 h-screen max-h-screen gap-8 px-6 overflow-hidden ">
+            <TabsContent
+              v-if="tabs == 'Account'"
+              value="Account"
+              class="flex flex-col w-130 h-screen max-h-screen gap-8 px-6 overflow-hidden ">
               <p class="w-full border-b mt-6 font-semibold text-5 w-full h-7  border-b-b3">
                 Connected Accounts
               </p>

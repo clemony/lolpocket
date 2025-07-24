@@ -4,11 +4,21 @@ const search = ref('')
 
 <template>
   <label class="input">
-    <icon name="search" class="size-5" />
+    <icon
+      name="search"
+      class="size-5" />
 
-    <input v-model="search" type="search" class="grow" placeholder="Search" @click.stop.prevent />
+    <input
+      v-model="search"
+      type="search"
+      class="grow"
+      placeholder="Search"
+      @click.stop.prevent />
 
-    <CloseButton v-if="search != ''" class="btn-ghost" @click="search = ''" />
+    <CloseButton
+      v-if="search != ''"
+      class="btn-ghost"
+      @click="search = ''" />
 
   </label>
 </template>

@@ -13,9 +13,16 @@ function navigate() {
 </script>
 
 <template>
-  <Collapsible v-model:is-open="isOpen" :disabled="!us.sidebarExpanded">
-    <div v-tippy="!us.sidebarExpanded ? 'Info' : null" class="disabled:text-bc" @click="navigate()">
-      <IconWrapper name="ph:question-mark" class="size-4.5 dst" />
+  <Collapsible
+    v-model:is-open="isOpen"
+    :disabled="!us.sidebarExpanded">
+    <div
+      v-tippy="!us.sidebarExpanded ? 'Info' : null"
+      class="disabled:text-bc"
+      @click="navigate()">
+      <IconWrapper
+        name="ph:question-mark"
+        class="size-4.5 dst" />
       Info
     </div>
 
@@ -23,7 +30,9 @@ function navigate() {
       <NuxtLink
         to="/docs">
         <Btn>
-          <IconWrapper name="icon-park-outline:notebook" class="size-3.75 dst" />
+          <IconWrapper
+            name="icon-park-outline:notebook"
+            class="size-3.75 dst" />
           Guide
         </Btn>
       </NuxtLink>
@@ -31,7 +40,9 @@ function navigate() {
       <NuxtLink
         to="/about">
         <Btn>
-          <IconWrapper name="ph:cat" class="size-4.25 dst" />
+          <IconWrapper
+            name="ph:cat"
+            class="size-4.25 dst" />
           About
           <SidebarBadge>
             + CATS
@@ -42,7 +53,9 @@ function navigate() {
 
       <Collapsible>
         <SidebarCollapsibleTrigger>
-          <IconWrapper name="ph:envelope" class="size-4.5 dst" />
+          <IconWrapper
+            name="ph:envelope"
+            class="size-4.5 dst" />
           Contact
         </SidebarCollapsibleTrigger>
 
@@ -71,13 +84,22 @@ function navigate() {
           </a>
 
           <Btn>
-            <icon name="mail" class="size-4.5 dst stroke-[1.2]" />
+            <icon
+              name="mail"
+              class="size-4.5 dst stroke-[1.2]" />
 
-            <UseClipboard v-slot="{ copy, copied }" source="contact@lolpocket.win">
-              <button v-tippy="{ content: !copied ? 'Copy' : 'Copied!', placement: 'top', offset: [0, 5], hideOnClick: false }" class="flex items-center cursor-pointer w-full gap-3 pr-3 " @click="copy()">
+            <UseClipboard
+              v-slot="{ copy, copied }"
+              source="contact@lolpocket.win">
+              <button
+                v-tippy="{ content: !copied ? 'Copy' : 'Copied!', placement: 'top', offset: [0, 5], hideOnClick: false }"
+                class="flex items-center cursor-pointer w-full gap-3 pr-3 "
+                @click="copy()">
                 <span class="grow text-start">contact@lolpocket.win</span>
 
-                <icon name="copy" class=" !size-3.5 shrink-0" />
+                <icon
+                  name="copy"
+                  class=" !size-3.5 shrink-0" />
               </button>
             </UseClipboard>
           </Btn>

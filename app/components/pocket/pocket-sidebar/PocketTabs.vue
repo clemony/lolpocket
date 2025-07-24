@@ -45,16 +45,27 @@ const plinks = [
 </script>
 
 <template>
-  <Tabs v-model:model-value="pocketNav" orientation="vertical" class="" @update:model-value="e => navigateTo(e.toString())">
-    <IndicatorTabsList orientation="vertical" class="w-full gap-1  justify-start grid grid-cols-1  p-2 field-box ">
+  <Tabs
+    v-model:model-value="pocketNav"
+    orientation="vertical"
+    class=""
+    @update:model-value="e => navigateTo(e.toString())">
+    <IndicatorTabsList
+      orientation="vertical"
+      class="w-full gap-1  justify-start grid grid-cols-1  p-2 field-box ">
       <IndicatorTabsTrigger
-        v-for="link in plinks" :key="link.name"
-        orientation="vertical" class="!px-4 !flex h-9.5 group justify-between [&_button]:!w-full max-w-full text-3" :value="link.value">
+        v-for="link in plinks"
+        :key="link.name"
+        orientation="vertical"
+        class="!px-4 !flex h-9.5 group justify-between [&_button]:!w-full max-w-full text-3"
+        :value="link.value">
         <span class="grow text-start">
           {{ link.name }}
         </span>
 
-        <AnimatePresence as="div" class="h-fit rounded-lg-2  badge  drop-shadow-sm  drop-shadow-black/5  relative border-b3/60 border ">
+        <AnimatePresence
+          as="div"
+          class="h-fit rounded-lg-2  badge  drop-shadow-sm  drop-shadow-black/5  relative border-b3/60 border ">
           <motion.span
             v-if="link.value == pocketNav"
             class="  badge-neutral  h-full inset-shadow-xs inset-shadow-b3/30 rounded-lg-2 px-3.5  absolute z-1 badge"
@@ -73,7 +84,11 @@ const plinks = [
               bounce: 0.25,
             }" />
 
-          <component :is="link.component" v-if="pocket" :pocket="pocket" class=" w-auto transition duration-400  group-data-[state=active]:**:!text-nc z-2" />
+          <component
+            :is="link.component"
+            v-if="pocket"
+            :pocket="pocket"
+            class=" w-auto transition duration-400  group-data-[state=active]:**:!text-nc z-2" />
         </AnimatePresence>
       </IndicatorTabsTrigger>
 

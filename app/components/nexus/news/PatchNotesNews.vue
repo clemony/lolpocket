@@ -18,7 +18,9 @@ const backgroundStyles = computed(() => {
 </script>
 
 <template>
-  <div class="w-100 h-60 bg-cover rounded-box bg-center flex overflow-hidden  flex-col  relative py-4 px-4 drop-shadow-sm inset-shadow-sm  inset-shadow-black/50   justify-end   before:to-black/100 before:from-20% before:z-1 before:from-transparent before:absolute before:-bg-linear-155 shadow-sm    before:size-full before:top-0 before:left-0" :style="backgroundStyles">
+  <div
+    class="w-100 h-60 bg-cover rounded-box bg-center flex overflow-hidden  flex-col  relative py-4 px-4 drop-shadow-sm inset-shadow-sm  inset-shadow-black/50   justify-end   before:to-black/100 before:from-20% before:z-1 before:from-transparent before:absolute before:-bg-linear-155 shadow-sm    before:size-full before:top-0 before:left-0"
+    :style="backgroundStyles">
     <div class="w-full  z-2 text-shadow-md  text-white ">
       <h3 class="font-serif font-black text-9">
         {{ ogData.title }}

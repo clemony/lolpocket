@@ -11,7 +11,9 @@ const pocket = computed (() => {
 </script>
 
 <template>
-  <Field title="Runes" class="p-0 h-26">
+  <Field
+    title="Runes"
+    class="p-0 h-26">
     <!-- <Select v-model:model-value="pocket.complete.runes">
       <SelectTrigger class="h-auto shadow-none py-4 hover:border-b2 !bg-b2/40 hover:inset-shadow-xs hover:shadow-warm-2 cursor-pointer !rounded-box" :disabled="pocket.runes.sets.length == 0">
         <SelectValue as-child class="!bg-transparent rounded-box px-2">

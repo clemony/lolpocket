@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "../theme.css";
+@import 'tailwindcss';
+@import '../theme.css';
 
 @utility col-span-all {
   column-span: all;

@@ -17,7 +17,7 @@ const is = useItemStore()
 <template>
   <div
     v-draggable="[
-       set,
+      set,
       {
         'group': {
           name: 'items',
@@ -40,7 +40,12 @@ const is = useItemStore()
     filter=".no-drag"
     :class="cn('grid items-center size-full justify-center place-self-center gap-4 group relative field-box p-4 w-150 grid-cols-6', { '': props.split, '': !props.split }, props.class)">
     <ItemCommand
-      v-for="(itemId, i) in set" :key="itemId" :set-number="props.num"
-      :set-index="i" :item-id="itemId" type="image" @update:set="e => emit('update:set', e)" />
+      v-for="(itemId, i) in set"
+      :key="itemId"
+      :set-number="props.num"
+      :set-index="i"
+      :item-id="itemId"
+      type="image"
+      @update:set="e => emit('update:set', e)" />
   </div>
 </template>

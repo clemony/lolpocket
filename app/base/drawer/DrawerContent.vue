@@ -15,7 +15,8 @@ const forwarded = useForwardPropsEmits(props, emits)
     <DrawerOverlay />
 
     <DrawerContent
-      v-bind="forwarded" :class="cn(
+      v-bind="forwarded"
+      :class="cn(
         'fixed z-50  border border-b3 bg-b1 overflow-hidden',
 
         {
@@ -27,10 +28,16 @@ const forwarded = useForwardPropsEmits(props, emits)
         },
         props.class,
       )">
-      <div v-if="side == 'top' || side == 'bottom'" class="mx-auto mt-4 h-2 w-[100px] rounded-full bg-b2" />
+      <div
+        v-if="side == 'top' || side == 'bottom'"
+        class="mx-auto mt-4 h-2 w-[100px] rounded-full bg-b2" />
 
-      <div v-else class="h-full grid  items-center">
-        <div class="my-auto   w-2 h-[100px]  rounded-full bg-b3/60" :class="{ 'ml-4': side == 'right' }" />
+      <div
+        v-else
+        class="h-full grid  items-center">
+        <div
+          class="my-auto   w-2 h-[100px]  rounded-full bg-b3/60"
+          :class="{ 'ml-4': side == 'right' }" />
       </div>
 
       <slot />

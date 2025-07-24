@@ -16,7 +16,9 @@ onMounted (() => {
 
 <template>
   <aside class="h-full gap-6 pl-7 pt-22 pb-16 flex flex-col   relative min-w-105  max-w-105">
-    <PocketHeader :pocket="pocket" @update:model-value="e => pocket.name = e" />
+    <PocketHeader
+      :pocket="pocket"
+      @update:model-value="e => pocket.name = e" />
 
     <PocketTabs
       :pocket="pocket" />
@@ -30,7 +32,9 @@ onMounted (() => {
 
       <PocketSidebarRunes :pocket="pocket" />
 
-      <PocketSpellsCollapsible v-if="pocket" :pocket="pocket" />
+      <PocketSpellsCollapsible
+        v-if="pocket"
+        :pocket="pocket" />
 
       <!--       <PocketCardButton :pocket="pocket" @click="pocketNav = null" />
  -->

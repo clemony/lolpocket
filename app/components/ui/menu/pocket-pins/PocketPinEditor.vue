@@ -13,14 +13,21 @@ const pocketKeys = computed(() =>
       <slot />
     </ResponsiveDialogTrigger>
 
-    <LazyResponsiveDialogContent side="bottom" class="w-180 min-w-180 h-138 focus:outline-none flex flex-col gap-10 px-7 ">
+    <LazyResponsiveDialogContent
+      side="bottom"
+      class="w-180 min-w-180 h-138 focus:outline-none flex flex-col gap-10 px-7 ">
       <div class="flex justify-between items-start">
-        <ResponsiveDialogHeader title="Edit Pocket Pins" description="Select and organize your favorite pockets for easy access." class="[&_h1]:text-6 [&_p]:opacity-90" />
+        <ResponsiveDialogHeader
+          title="Edit Pocket Pins"
+          description="Select and organize your favorite pockets for easy access."
+          class="[&_h1]:text-6 [&_p]:opacity-90" />
 
         <tippy
 
           class="size-10 grid place-items-center -mt-4">
-          <icon name="info-circle" class="" />
+          <icon
+            name="info-circle"
+            class="" />
 
           <template #content>
             <div class="max-w-64 flex flex-col gap-3 *:leading-5 *:text-pretty  p-2">

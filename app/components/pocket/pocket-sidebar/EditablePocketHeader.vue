@@ -53,9 +53,12 @@ onMounted (async () => {
       'flex items-center justify-between px-2.5 py-0.75 rounded-box border border-transparent hover:border-b3/40 focus-within:border-b3/40 hover:bg-b2/70 focus-within:bg-b2 cursor-text',
       wrapperClass,
     )"
-    as-child @update:model-value="modelValue = $event">
+    as-child
+    @update:model-value="modelValue = $event">
     <!-- Name Input/Preview -->
-    <div class="w-full flex items-center justify-between gap-2" @click="e => activateEdit(e, edit)">
+    <div
+      class="w-full flex items-center justify-between gap-2"
+      @click="e => activateEdit(e, edit)">
       <EditableArea class="flex-grow min-w-0">
         <div class="w-full min-w-0">
           <EditablePreview
@@ -78,7 +81,9 @@ onMounted (async () => {
           v-show="!isEditing"
           as="button"
           class="opacity-0 group-hover/edit:opacity-100 transition-opacity pointer-events-auto">
-          <icon name="edit" class="text-bc/50 mr-2 size-4" />
+          <icon
+            name="edit"
+            class="text-bc/50 mr-2 size-4" />
         </EditableEditTrigger>
 
         <!-- Show action icons when editing -->
@@ -88,13 +93,17 @@ onMounted (async () => {
           <button
             class="btn btn-ghost btn-xs btn-square hover:!bg-b3/40 hover:border-b3/80 hover:inset-shadow-xxs"
             @click="pocket.name = generateName()">
-            <icon name="shuffle" class="size-3 dst" />
+            <icon
+              name="shuffle"
+              class="size-3 dst" />
           </button>
 
           <button
             class="btn btn-ghost btn-xs btn-square hover:!bg-b3/40 hover:border-b3/80 hover:inset-shadow-xxs"
             @click="modelValue = ''">
-            <icon name="x-sm" class="dst" />
+            <icon
+              name="x-sm"
+              class="dst" />
           </button>
         </div>
       </div>

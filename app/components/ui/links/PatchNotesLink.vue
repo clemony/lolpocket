@@ -8,7 +8,11 @@ const ds = useDataStore()
 
 <template>
   <MenubarItem as-child>
-    <NuxtLink :to="ds.patchNotesLink" target="_blank" external class="flex  items-center grow text-bc gap-2.5 pl-4 pr-4 mt-2 w-full ">
+    <NuxtLink
+      :to="ds.patchNotesLink"
+      target="_blank"
+      external
+      class="flex  items-center grow text-bc gap-2.5 pl-4 pr-4 mt-2 w-full ">
       <span class="size-5 relative grid place-items-center ">
         <i-logo-league-filled class="size-4.5 top-1 text-bc/70 dst" />
       </span>
@@ -21,7 +25,9 @@ const ds = useDataStore()
 
       <Grow />
 
-      <icon name="radix-icons:external-link" class="size-4 dst shrink-0 " />
+      <icon
+        name="radix-icons:external-link"
+        class="size-4 dst shrink-0 " />
     </NuxtLink>
   </MenubarItem>
 </template>

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { AnalyzeResults, CraftABuild, CreateAPocket, PlayGames } from '#components'
+import type { MotionValue } from 'motion-v'
 import { motion } from 'motion-v'
 import { useBreakpoint } from '~/utils/ui/useBreakpoints'
 
@@ -72,9 +73,14 @@ const steps = [
     <ul
       class="timeline timeline-snap-icon  timeline-vertical    ">
       <li
-        v-for="(step, i) in steps" :key="i" class="group relative  " :class="cn('',
-                                                                                { '!grid-cols-1 !justify-start !-left-20': lessThan })">
-        <div class="timeline-middle drop-shadow-sm rounded-full scale-110 z-2" :class="{ 'bg-b2 ': isShown[i] && !isShown?.[i].value }">
+        v-for="(step, i) in steps"
+        :key="i"
+        class="group relative  "
+        :class="cn('',
+                   { '!grid-cols-1 !justify-start !-left-20': lessThan })">
+        <div
+          class="timeline-middle drop-shadow-sm rounded-full scale-110 z-2"
+          :class="{ 'bg-b2 ': isShown[i] && !isShown?.[i].value }">
           <Motion
             as-child
             :animate="{ scale: isShown[i] && !isShown?.[i].value ? 0 : 1.1 }"
@@ -124,12 +130,15 @@ const steps = [
           </p>
 
           <div class="bg-b2/40 shadow-warm-2 shadow-black/4 drop-shadow-sm relative mt-10 h-90 w-full overflow-hidden rounded-xl">
-            <component :is="step.component" :scroll-prog="scrollProg" />
+            <component
+              :is="step.component"
+              :scroll-prog="scrollProg" />
           </div>
         </motion.div>
 
         <motion.hr
-          v-if="scrollProg" class="group-last:hidden !bg/b2 !mt-2 !w-0.75  relative grid items-start !rounded-full overflow-hidden">
+          v-if="scrollProg"
+          class="group-last:hidden !bg/b2 !mt-2 !w-0.75  relative grid items-start !rounded-full overflow-hidden">
           <motion.hr
             v-if="isShown[i] && isShown?.[i].value"
             :style="{

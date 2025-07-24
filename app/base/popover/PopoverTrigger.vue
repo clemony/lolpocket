@@ -6,7 +6,9 @@ const props = defineProps<PopoverTriggerProps>()
 </script>
 
 <template>
-  <PopoverTrigger v-bind="props" class="cursor-pointer">
+  <PopoverTrigger
+    v-bind="props"
+    class="cursor-pointer">
     <slot />
   </PopoverTrigger>
 </template>

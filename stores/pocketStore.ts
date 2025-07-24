@@ -1,8 +1,8 @@
-import type { GridApi } from "ag-grid-community"
-import { defineStore } from "pinia"
+import type { GridApi } from 'ag-grid-community'
+import { defineStore } from 'pinia'
 
 export const usePocketStore = defineStore(
-  "pocketStore",
+  'pocketStore',
   () => {
     const pockets = ref<Pocket[]>([])
     // In your usePocketStore
@@ -54,7 +54,7 @@ export const usePocketStore = defineStore(
   {
     persist: {
       storage: piniaPluginPersistedstate.localStorage(),
-      key: "pocketStore",
+      key: 'pocketStore',
     },
-  }
+  },
 )

@@ -27,7 +27,9 @@ const forwarded = useForwardProps(delegatedProps)
     ">
     <span class="absolute right-3 flex h-3.5 w-3.5 items-center justify-center">
       <SelectItemIndicator v-if="!props.noTick">
-        <icon name="tick-sm" class="size-6 dst" />
+        <icon
+          name="tick-sm"
+          class="size-6 dst" />
       </SelectItemIndicator>
     </span>
 

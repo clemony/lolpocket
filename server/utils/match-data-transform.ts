@@ -1,18 +1,18 @@
 export function transformMatchData(raw: any): MatchData {
   const participants: Player[] = raw.info.participants.map(
     (p: any): Player => ({
-      riotIdGameName: p.riotIdGameName ?? "",
+      riotIdGameName: p.riotIdGameName ?? '',
       puuid: p.puuid,
       profileIcon: p.profileIcon,
-      riotIdTagline: p.riotIdTagline ?? "",
-      role: p.role ?? "",
+      riotIdTagline: p.riotIdTagline ?? '',
+      role: p.role ?? '',
       teamId: p.teamId,
-      teamPosition: p.teamPosition ?? "",
+      teamPosition: p.teamPosition ?? '',
       kills: p.kills,
       deaths: p.deaths,
       assists: p.assists,
-      lane: p.lane ?? "",
-      win: p.win ?? "",
+      lane: p.lane ?? '',
+      win: p.win ?? '',
       championId: p.championId,
       championName: p.championName,
       item0: p.item0,
@@ -81,12 +81,12 @@ export function transformMatchData(raw: any): MatchData {
         primary: p.perks?.styles?.[0]?.style ?? 0,
         secondary: p.perks?.styles?.[1]?.style ?? 0,
       },
-    })
+    }),
   )
 
   const teams: MatchTeam[] = raw.info.teams.map((team: any): MatchTeam => {
     const teamParticipants = participants.filter(
-      (p) => p.teamId === team.teamId
+      p => p.teamId === team.teamId,
     )
 
     return {
@@ -143,7 +143,7 @@ export function transformMatchData(raw: any): MatchData {
       mapId: raw.info.mapId,
       participants,
     },
-    platformId: raw.info.platformId ?? "NA1", // default fallback if missing
+    platformId: raw.info.platformId ?? 'NA1', // default fallback if missing
     queueId: raw.info.queueId ?? 420, // solo/duo as default?
     teams,
   }

@@ -3,7 +3,9 @@ const cs = useChampStore()
 </script>
 
 <template>
-  <ToggleGroup v-model:model-value="cs.championGridType" type="single">
+  <ToggleGroup
+    v-model:model-value="cs.championGridType"
+    type="single">
     <ToggleGroupItem value="calculated">
       Level
     </ToggleGroupItem>

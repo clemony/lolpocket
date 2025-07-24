@@ -7,7 +7,9 @@ const props = defineProps<{
 </script>
 
 <template>
-  <button class=" " :class="cn('btn btn-ghost btn-square grid place-items-center group', props.class)">
+  <button
+    class=" "
+    :class="cn('btn btn-ghost btn-square grid place-items-center group', props.class)">
     <slot />
 
     <icon

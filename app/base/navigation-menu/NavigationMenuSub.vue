@@ -2,13 +2,12 @@
 import { NavigationMenuSub } from 'reka-ui'
 
 const { defaultValue } = defineProps<{
-defaultValue?: string
+  defaultValue?: string
 }>()
 </script>
 
 <template>
-
-          <NavigationMenuSub :default-value="defaultValue">
-<slot />
-          </NavigationMenuSub>
+  <NavigationMenuSub :default-value="defaultValue">
+    <slot />
+  </NavigationMenuSub>
 </template>

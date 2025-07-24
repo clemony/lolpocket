@@ -1,4 +1,4 @@
-import { useIndexStore } from "../../stores/indexStore"
+import { useIndexStore } from '../../stores/indexStore'
 
 /* import { useSidebarStore } from 'stores/sidebarStore'
  */

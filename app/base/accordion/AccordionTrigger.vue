@@ -1,12 +1,11 @@
 <script setup lang="ts">
+import type { AccordionTriggerProps } from 'reka-ui'
 import {
   AccordionHeader,
   AccordionTrigger,
-
 } from 'reka-ui'
-import type { AccordionTriggerProps } from 'reka-ui'
-import { computed } from 'vue'
 import type { HTMLAttributes } from 'vue'
+import { computed } from 'vue'
 
 const props = defineProps<AccordionTriggerProps & { class?: HTMLAttributes['class'] }>()
 
@@ -24,14 +23,16 @@ const delegatedProps = computed(() => {
       v-bind="delegatedProps"
       :class="
         cn(
-          'focus-visible:border-ring focus-visible:ring-ring/50 flex flex-1 items-start justify-between font-medium gap-4 rounded-md py-4 text-left text-3 transition-all outline-none hover:underline focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 [&[data-state=open]>svg]:rotate-180',
+          'flex flex-1 items-start justify-between group/acc-trigger gap-4 text-left text-3 transition-all outline-none  disabled:pointer-events-none disabled:opacity-50 [&[data-state=open]>svg]:-rotate-180 [&_svg]:transition-rotate [&_svg]:duration-250',
           props.class,
         )
       ">
       <slot />
 
       <slot name="icon">
-        <icon name="down-sm" class="text-muted-foreground pointer-events-none size-5 shrink-0 translate-y-0.5 transition-transform duration-200" />
+        <icon
+          name="up-sm"
+          class="dst  size-5  mx-4" />
       </slot>
     </AccordionTrigger>
   </AccordionHeader>

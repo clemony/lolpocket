@@ -4,7 +4,7 @@ const { team, enemy, class: className } = defineProps<{
   enemy: any
   class?: HTMLAttributes['class']
 }>()
-  console.log("💠 - team:", team)
+console.log('💠 - team:', team)
 
 /*
 const math = computed (() => {
@@ -13,10 +13,15 @@ const math = computed (() => {
 </script>
 
 <template>
-  <tippy class="" :offset="[2, -2]" :class="cn('flex gap-2 justify-end ', className)">
+  <tippy
+    class=""
+    :offset="[2, -2]"
+    :class="cn('flex gap-2 justify-end ', className)">
     <i-ui-gold-icon class="size-4 text-[#C2A76E]  " />
 
-    <p v-if="team.gold" class="flex font-semibold  items-center tracking-wide">
+    <p
+      v-if="team.gold"
+      class="flex font-semibold  items-center tracking-wide">
       {{ team.gold.toLocaleString() }}
     </p>
 

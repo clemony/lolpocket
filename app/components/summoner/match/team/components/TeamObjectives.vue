@@ -11,11 +11,15 @@ const elder = computed (() => {
 </script>
 
 <template>
-  <div class="" :class="cn('flex grow justify-center *:hover:underline tldr-20 **:font-semibold', className)">
+  <div
+    class=""
+    :class="cn('flex grow justify-center *:hover:underline tldr-20 **:font-semibold', className)">
     <div
-      v-tippy="'Dragon Kills'" class="flex items-center gap-1">
+      v-tippy="'Dragon Kills'"
+      class="flex items-center gap-1">
       <img
-        :src="`/img/ui/dragon-${team.teamId}.png`" class="size-4 drop-shadow-sm opacity-85" />
+        :src="`/img/ui/dragon-${team.teamId}.png`"
+        class="size-4 drop-shadow-sm opacity-85" />
 
       <span class="w-7 max-w-7">
         {{ team.objectives.dragon.kills }}
@@ -23,9 +27,11 @@ const elder = computed (() => {
     </div>
 
     <div
-      v-tippy="'Baron Kills'" class="flex items-center gap-1">
+      v-tippy="'Baron Kills'"
+      class="flex items-center gap-1">
       <img
-        :src="`/img/ui/baron-${team.teamId}.png`" class="size-4 drop-shadow-sm opacity-85" />
+        :src="`/img/ui/baron-${team.teamId}.png`"
+        class="size-4 drop-shadow-sm opacity-85" />
 
       <span class="w-7 max-w-7">
         {{ team.objectives.baron.kills }}
@@ -33,9 +39,11 @@ const elder = computed (() => {
     </div>
 
     <div
-      v-tippy="'Elder Dragon Kills'" class="flex items-center gap-1">
+      v-tippy="'Elder Dragon Kills'"
+      class="flex items-center gap-1">
       <img
-        :src="`/img/ui/elder-${team.teamId}.png`" class="size-4 drop-shadow-sm opacity-85" />
+        :src="`/img/ui/elder-${team.teamId}.png`"
+        class="size-4 drop-shadow-sm opacity-85" />
 
       <span class="w-7 max-w-7">
         {{ team.objectives.baron.kills }}
@@ -43,9 +51,11 @@ const elder = computed (() => {
     </div>
 
     <div
-      v-tippy="'Towers Taken'" class="flex items-center gap-1">
+      v-tippy="'Towers Taken'"
+      class="flex items-center gap-1">
       <img
-        :src="`/img/ui/tower-${team.teamId}.png`" class="size-5 drop-shadow-sm opacity-85" />
+        :src="`/img/ui/tower-${team.teamId}.png`"
+        class="size-5 drop-shadow-sm opacity-85" />
 
       <span class="w-7 max-w-7">
         {{ team.objectives.tower.kills }}
@@ -53,9 +63,11 @@ const elder = computed (() => {
     </div>
 
     <div
-      v-tippy="'Inhibitors Taken'" class="flex items-center gap-1">
+      v-tippy="'Inhibitors Taken'"
+      class="flex items-center gap-1">
       <img
-        :src="`/img/ui/inhibitor-${team.teamId}.png`" class="size-4 drop-shadow-sm opacity-85" />
+        :src="`/img/ui/inhibitor-${team.teamId}.png`"
+        class="size-4 drop-shadow-sm opacity-85" />
 
       <span class="w-7 max-w-7">
         {{ team.objectives.inhibitor.kills }}

@@ -8,6 +8,12 @@ const match = /i-/
 </script>
 
 <template>
-<component v-if="name.match(match)" :is="name" :class="cn('', className)"  />
-<icon v-else :name="name" :class="cn('', className)" />
+  <component
+    :is="name"
+    v-if="name.match(match)"
+    :class="cn('', className)" />
+  <icon
+    v-else
+    :name="name"
+    :class="cn('', className)" />
 </template>

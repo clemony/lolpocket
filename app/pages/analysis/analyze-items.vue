@@ -42,13 +42,25 @@ const ms = useMatchStore()
 
     <div class="size-full overflow-hidden ">
       <div class="grid-cols-4 grid gap-10 overflow-hidden pb-2 place-items-center w-full">
-        <PocketPickItem :patch-games="ms.patchGames" :item-num="0" title="Pocket Pick" />
+        <PocketPickItem
+          :patch-games="ms.patchGames"
+          :item-num="0"
+          title="Pocket Pick" />
 
-        <PocketPickItem :patch-games="ms.patchGames" :item-num="1" title="Pocket Pick" />
+        <PocketPickItem
+          :patch-games="ms.patchGames"
+          :item-num="1"
+          title="Pocket Pick" />
 
-        <PocketPickItem :patch-games="ms.patchGames" :item-num="2" title="Pocket Pick" />
+        <PocketPickItem
+          :patch-games="ms.patchGames"
+          :item-num="2"
+          title="Pocket Pick" />
 
-        <PocketPickItem :patch-games="ms.patchGames" :item-num="2" title="☆ Rising Star" />
+        <PocketPickItem
+          :patch-games="ms.patchGames"
+          :item-num="2"
+          title="☆ Rising Star" />
       </div>
 
       <div class="w-full  pt-26 pb-10 mb-10 border-b border-b-b3">

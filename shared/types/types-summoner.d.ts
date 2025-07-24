@@ -1,6 +1,6 @@
 declare global {
-  export interface ChampionMastery {
-    id: ChampionId
+  interface ChampionMastery {
+    id: number
     level: number
     points: number
     lastPlayed: number
@@ -11,6 +11,7 @@ declare global {
     tag: string
     puuid: string
     profileIcon: string
+    profileSplash: string
     level: number
     region: string
     ranked?: {
@@ -62,6 +63,11 @@ declare global {
     region?: string
     name?: string
     tag?: string
+  }
+
+  interface TopChampion {
+    name: string
+    splash: string
   }
 }
 export {}

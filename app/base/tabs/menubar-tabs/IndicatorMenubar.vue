@@ -38,8 +38,12 @@ onMounted (() => {
 
 <template>
   <TabsRoot
-    v-bind="forwarded" v-model:model-value="tabs">
-    <MenubarRoot v-model:model-value="menu" as-child @update:model-value="console.log(menu)">
+    v-bind="forwarded"
+    v-model:model-value="tabs">
+    <MenubarRoot
+      v-model:model-value="menu"
+      as-child
+      @update:model-value="console.log(menu)">
       <slot />
     </MenubarRoot>
   </TabsRoot>

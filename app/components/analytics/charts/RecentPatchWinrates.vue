@@ -96,7 +96,9 @@ const range = computed (() => {
       </div>
     </div>
 
-    <LineChart :data="data" :options="options" />
+    <LineChart
+      :data="data"
+      :options="options" />
 
     <NoDataOverlay v-if="!userMatchData.length" />
   </div>

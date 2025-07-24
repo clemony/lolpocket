@@ -317,7 +317,10 @@ const pocketContextTarget = ref()
 </script>
 
 <template>
-  <PocketContextMenu class="size-full" :pocket-data="pocketData" @update:grid="refreshGrid()">
+  <PocketContextMenu
+    class="size-full"
+    :pocket-data="pocketData"
+    @update:grid="refreshGrid()">
     <AgGridVue
       :grid-options="gridOptions"
       :theme="theme"

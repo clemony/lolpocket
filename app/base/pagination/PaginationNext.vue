@@ -1,26 +1,29 @@
 <script setup lang="ts">
-import { PaginationNext } from 'reka-ui'
+import { PaginationNext, useForwardProps } from 'reka-ui'
 import type { PaginationNextProps } from 'reka-ui'
-import { computed } from 'vue'
-import type { HTMLAttributes } from 'vue'
+import { buttonVariants } from '../button/button-variants'
+import type { ButtonVariants } from '../button/button-variants'
 
-const props = withDefaults(defineProps<PaginationNextProps & { class?: HTMLAttributes['class'] }>(), {
-  asChild: true,
+const props = withDefaults(defineProps<PaginationNextProps & {
+  size?: ButtonVariants['size']
+  class?: HTMLAttributes['class']
+}>(), {
+  size: 'default',
 })
 
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
-
-  return delegated
-})
+const delegatedProps = reactiveOmit(props, 'class', 'size')
+const forwarded = useForwardProps(delegatedProps)
 </script>
 
 <template>
-  <PaginationNext v-bind="delegatedProps">
-    <button :class="cn('btn btn-ghost btn-square btn-sm', props.class)">
-      <slot>
-        <icon name="right-sm" class="size-4 stroke-[1.7]  " />
-      </slot>
-    </button>
+  <PaginationNext
+    data-slot="pagination-next"
+    :class="cn(buttonVariants({ variant: 'ghost', size }), 'gap-1 px-2.5 sm:pr-2.5', props.class)"
+    v-bind="forwarded">
+    <slot>
+      <icon
+        name="right-sm"
+        class="size-4 stroke-[1.7]  " />
+    </slot>
   </PaginationNext>
 </template>

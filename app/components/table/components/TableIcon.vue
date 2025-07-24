@@ -6,8 +6,12 @@ const props = defineProps<{
 
 <template>
   <Popover>
-    <div class="items-center size-full flex" :class="{ '**:pointer-events-none ': props.params.location == 'trash' }">
-      <PopoverTrigger :disabled="props.params.location == 'trash'" class="ti-container pointer-events-auto group cursor-pointer bg-gradient-to-br from-n1/60 to-n1 grid place-items-center relative">
+    <div
+      class="items-center size-full flex"
+      :class="{ '**:pointer-events-none ': props.params.location == 'trash' }">
+      <PopoverTrigger
+        :disabled="props.params.location == 'trash'"
+        class="ti-container pointer-events-auto group cursor-pointer bg-gradient-to-br from-n1/60 to-n1 grid place-items-center relative">
         <div
           class="ti-wrapper group-hover:opacity-0 transition-all  duration-400 "
           :style="{
@@ -16,7 +20,9 @@ const props = defineProps<{
             backgroundPosition: 'center 20%' }">
         </div>
 
-        <icon name="ph:gear-six-fill" class="size-7 text-nc absolute opacity-0  group-hover:opacity-85  transition-all  duration-400" />
+        <icon
+          name="ph:gear-six-fill"
+          class="size-7 text-nc absolute opacity-0  group-hover:opacity-85  transition-all  duration-400" />
       </PopoverTrigger>
 
       <LazyIconPopover :pocket-key="props.params.data.key" />

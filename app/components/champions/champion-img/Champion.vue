@@ -1,10 +1,10 @@
 <script setup lang="ts">
-const { img, class: className, champKey} = defineProps<{
-    champKey?: string
-    img: string
-    type?: SplashType
-    class?: HTMLAttributes['class']
-  }>()
+const { img, class: className, champKey } = defineProps<{
+  champKey?: string
+  img: string
+  type?: SplashType
+  class?: HTMLAttributes['class']
+}>()
 
 const lower = ['Seraphine', 'Sett', 'Illaoi', 'Irelia', 'Yuumi', 'Senna', 'Taric', 'Mordekaiser', 'Darius', 'Ryze']
 const mid = ['Fiora', 'Fizz', 'Lilia', 'Nami', 'DrMundo']
@@ -19,13 +19,15 @@ const bgSize = computed (() => out.includes(champKey) ? '160%' : '180%')
 </script>
 
 <template>
-  <div class="size-full" :class="cn('grid place-items-center  overflow-hidden  relative cursor-pointer shadow-sm drop-shadow-sm bg-no-repeat rounded-lg  size-full **:select-none  group relative', className)">
+  <div
+    class="size-full"
+    :class="cn('grid place-items-center  overflow-hidden  relative cursor-pointer shadow-sm drop-shadow-sm bg-no-repeat rounded-lg  size-full **:select-none  group relative', className)">
     <Img
       :img="img"
       class="object-center"
       :style="{
         scale: bgSize,
-      objectPosition: `${x} ${y}`,
+        objectPosition: `${x} ${y}`,
       }"
       :alt="`${champKey}-Splash`">
       <slot />

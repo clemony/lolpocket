@@ -6,7 +6,9 @@ const { value, class: className } = defineProps<{
 </script>
 
 <template>
-  <DropdownMenuRadioItem :value="value" :class="cn('[&_svg]:text-nc hover:!bg-b3/15 pl-10 !text-nc/90 text-2', className)">
+  <DropdownMenuRadioItem
+    :value="value"
+    :class="cn('[&_svg]:text-nc hover:!bg-b3/15 pl-10 !text-nc/90 text-2', className)">
     <slot />
   </DropdownMenuRadioItem>
 </template>

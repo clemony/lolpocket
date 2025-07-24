@@ -64,7 +64,11 @@ const wrapperVariants = {
     <AnimatePresence>
       <PopoverContent as-child>
         <motion.div
-          :variants="variants" initial="hidden" animate="visible" exit="hidden" :transition="{
+          :variants="variants"
+          initial="hidden"
+          animate="visible"
+          exit="hidden"
+          :transition="{
             type: 'spring',
             duration: 0.3,
             bounce: 0.2,
@@ -79,7 +83,12 @@ const wrapperVariants = {
           <CustomPopoverArrow class="" />
 
           <motion.div
-            :variants="wrapperVariants" initial="hidden" animate="visible" exit="hidden" class="size-full" :transition="{
+            :variants="wrapperVariants"
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            class="size-full"
+            :transition="{
               type: 'spring',
               bounce: 0.25,
               duration: 0.4,

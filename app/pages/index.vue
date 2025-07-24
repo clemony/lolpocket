@@ -59,12 +59,18 @@ const { stop } = useIntersectionObserver(
   <div
     ref="homeWrapper"
     class="relative w-screen overflow-x-hidden home-wrapper size-full overflow-y-scroll">
-    <Hero :progress="stepProgress" :visible="heroVisible" />
+    <Hero
+      :progress="stepProgress"
+      :visible="heroVisible" />
 
-    <div ref="hero" class="absolute pointer-events-none  left-0  size-px  overflow-hidden bg-transparent" />
+    <div
+      ref="hero"
+      class="absolute pointer-events-none  left-0  size-px  overflow-hidden bg-transparent" />
 
     <div ref="steps">
-      <LazyHomeSteps :scroll-ref="homeWrapper" :scroll-prog="stepProgress" />
+      <LazyHomeSteps
+        :scroll-ref="homeWrapper"
+        :scroll-prog="stepProgress" />
     </div>
 
     <div ref="home">

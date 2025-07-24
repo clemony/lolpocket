@@ -39,8 +39,17 @@ const showClem = ref('/img/cat/clem1.webp')
         </AnimatePresence>
       </div>
 
-      <RadioGroupRoot v-model:model-value="showClem" orientation="horizontal" class="flex w-full justify-center gap-2 py-2">
-        <RadioGroupItem v-for="(img, i) in clem" :id="`clem${i}`" :key="`clem${i}`" class="btn btn-sm focus:outline-0 focus:btn-neutral data-[state=checked]:btn-neutral" name="clemRadio" :value="img">
+      <RadioGroupRoot
+        v-model:model-value="showClem"
+        orientation="horizontal"
+        class="flex w-full justify-center gap-2 py-2">
+        <RadioGroupItem
+          v-for="(img, i) in clem"
+          :id="`clem${i}`"
+          :key="`clem${i}`"
+          class="btn btn-sm focus:outline-0 focus:btn-neutral data-[state=checked]:btn-neutral"
+          name="clemRadio"
+          :value="img">
           {{ i }}
         </RadioGroupItem>
       </RadioGroupRoot>

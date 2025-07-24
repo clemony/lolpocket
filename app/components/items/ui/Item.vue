@@ -1,31 +1,36 @@
 <script setup lang="ts">
-const { id, class: className } = defineProps<{
-  id: number
+import type { PrimitiveProps } from 'reka-ui'
+import { Primitive } from 'reka-ui'
+
+const { id, class: className, as = 'div' } = defineProps<PrimitiveProps & {
+  id: number | null
   class?: HTMLAttributes['class']
+  as?: string
 }>()
 const emit = defineEmits(['loaded'])
 
 const loaded = ref(false)
 function handleLoad() {
-  emit('loaded')
   loaded.value = true
 }
 </script>
 
 <template>
-  <label
-    class="" :class="cn('rounded-lg  shadow-sm shadow-black/50  drop-shadow-sm  aspect-square', className)">
-
+  <Primitive
+    :as="as"
+    :class="cn('rounded-lg relative bg-b3/60 overflow-hidden grid place-items-center aspect-square  ', { ' shadow-sm shadow-black/50  drop-shadow-sm': loaded == true && id != null && id != 0, ' shadow-warm-soft ': !loaded || id == null || id == 0 }, className)">
     <Img
-      v-if="id"
+      v-show="id != null"
       :img="`/img/item/${id}.webp`"
-      quality="100"
-      alt="Item Image"
-      class="aspect-square opacity-96 size-full rounded-lg" @loaded="handleLoad()" />
+      alt=" "
+      class="aspect-square opacity-96 size-full  absolute rounded-lg"
+      @load="handleLoad()" />
 
+    <Skeleton
+      v-show="!loaded && id != null && id != 0"
+      class="absolute opacity-99 size-full" />
     <slot />
-
-  </label>
+  </Primitive>
 </template>
 
 <style scoped></style>

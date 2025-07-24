@@ -53,13 +53,19 @@ const hovered = ref(false)
 </script>
 
 <template>
-  <Popover v-model:open="hovered" @click="navigateTo(`/pocket/${pocket.key}/items`)">
+  <Popover
+    v-model:open="hovered"
+    @click="navigateTo(`/pocket/${pocket.key}/items`)">
     <PopoverTrigger
       class=" p-1.5 bg-b2/80 backdrop-blur-md flex flex-wrap cursor-pointer !z-1 hover:!z-2 size-20 items-between rounded-lg pointer-events-auto justify-between !gap-0.75 !border-b3/50 border">
       <template v-if="set.items && set.items?.length">
-        <template v-for="(item, i) in set.items" :key="item">
+        <template
+          v-for="(item, i) in set.items"
+          :key="item">
           <Item
-            v-if="i < 4" :id="item" class="pointer-events-none rounded-lg size-7.5">
+            v-if="i < 4"
+            :id="item"
+            class="pointer-events-none rounded-lg size-7.5">
           </Item>
         </template>
       </template>
@@ -68,7 +74,9 @@ const hovered = ref(false)
     <PopoverPortal>
       <AnimatePresence>
         <PopoverContent
-          :side-offset="-60" align="start" as-child>
+          :side-offset="-60"
+          align="start"
+          as-child>
           <motion.div
             initial="closed"
             animate="open"
@@ -88,7 +96,9 @@ const hovered = ref(false)
                 {{ set.name }}
               </span>
 
-              <button class="btn btn-sm btn-square btn-ghost" @click="deleteItemSet(pocket, set)">
+              <button
+                class="btn btn-sm btn-square btn-ghost"
+                @click="deleteItemSet(pocket, set)">
                 <icon name="trash" />
               </button>
             </div>
@@ -99,15 +109,19 @@ const hovered = ref(false)
               initial="closed"
               animate="open"
               exit="closed"
-              :variants="setWrapperVariants" :transition="{ delay: 0.3, ease: 'easeOut' }">
+              :variants="setWrapperVariants"
+              :transition="{ delay: 0.3, ease: 'easeOut' }">
               <motion.div
-                v-for="item in set.items" :key="item"
+                v-for="item in set.items"
+                :key="item"
                 :variants="itemVariants"
                 initial="closed"
-                animate="open" exit="closed"
+                animate="open"
+                exit="closed"
                 :transition="{ delay: 0.2, type: 'spring', bounce: 0.25 }">
                 <Item
-                  :id="item" class="pointer-events-none shadow-sm drop-shadow-sm rounded-lg size-full">
+                  :id="item"
+                  class="pointer-events-none shadow-sm drop-shadow-sm rounded-lg size-full">
                 </Item>
               </motion.div>
             </motion.div>

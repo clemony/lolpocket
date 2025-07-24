@@ -7,7 +7,6 @@ const { region, slug } = defineProps<{
 
 const router = useRouter()
 const route = useRoute()
-console.log('💠 - route:', route)
 
 function navigateToChildRoute(childPath: string) {
   if (!region || !slug)
@@ -33,27 +32,38 @@ const directory = [
   },
 ]
 
-const pathName = computed (() => route.fullPath.split('/')[4] || '')
+const pathName = computed (() => {
+  const a = route.fullPath.split('/')[4]
+  if (!a)
+    return ''
+
+  return a.split('#')[0] || ''
+})
 console.log('💠 - pathName:', pathName.value)
 </script>
 
 <template>
-  <nav role="tablist" class="tabs  justify-start self-end  tabs-lift border-b-0 z-4 flex">
+  <nav
+    role="tablist"
+    class="tabs tab-menu  justify-start self-end  tabs-lift border-b-0 z-4 flex">
     <FakeTab />
 
     <li
       v-for="item in directory"
-      :key="item.name" role="tab"
+      :key="item.name"
+      role="tab"
       :value="item.name"
-    :class="cn('group/tab  tab-menu tab ', { '!pb-[4px] ': pathName != item.name, 'tab-active hi-this-one': pathName == item.name || pathName == item.path })"
+      :class="cn('group/tab   tab ', { 'tab-active hi-this-one': pathName == item.name || pathName == item.path })"
       @click="navigateToChildRoute(item.path)">
       {{ item.name }}
     </li>
 
     <li
-     v-if="summoner.puuid == user.summoner.puuid"
-      :class="cn('group/tab  tab-menu tab ', { '!pb-[4px] ': pathName != 'settings', 'tab-active hi-this-one': pathName == 'settings'  })"
-      @click="navigateToChildRoute('/settings')">Settings</li>
+      v-if="summoner.puuid == user.summoner.puuid"
+      :class="cn('group/tab  tab-menu tab ', { '!pb-[4px] ': pathName != 'settings', 'tab-active hi-this-one': pathName == 'settings' })"
+      @click="navigateToChildRoute('/settings')">
+      Settings
+    </li>
     <FakeTab />
 
     <div class="tab-content" />

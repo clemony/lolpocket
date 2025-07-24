@@ -19,5 +19,5 @@
     "esModuleInterop": true,
     "skipLibCheck": true
   },
-  "exclude": [".nuxt", "node_modules"]
+  "exclude": ["node_modules", ".nuxt", "eslint.config.js"]
 }

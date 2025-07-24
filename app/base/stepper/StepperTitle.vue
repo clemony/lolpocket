@@ -13,7 +13,9 @@ const forwarded = useForwardProps(delegatedProps)
 </script>
 
 <template>
-  <StepperTitle v-bind="forwarded" :class="cn('text-md font-semibold whitespace-nowrap', props.class)">
+  <StepperTitle
+    v-bind="forwarded"
+    :class="cn('text-md font-semibold whitespace-nowrap', props.class)">
     <slot />
   </StepperTitle>
 </template>

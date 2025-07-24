@@ -7,7 +7,8 @@
     <label
       v-for="provider in providers"
       :key="provider.name"
-      class="" :class="cn('!border-b3 rounded-xl flex !gap-5 items-center justify-start !bg-linear-to-br !px-5 !py-2  btn !bg-b1 w-full h-26', provider.class)">
+      class=""
+      :class="cn('!border-b3 rounded-xl flex !gap-5 items-center justify-start !bg-linear-to-br !px-5 !py-2  btn !bg-b1 w-full h-26', provider.class)">
 
       <div class="grid h-full justify-start items-center ">
         <icon

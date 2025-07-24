@@ -6,7 +6,11 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="" :class="cn('radial-progress text-b3 size-22 after:hidden', props.class)" style="--value:100;" role="progressbar">
+  <div
+    class=""
+    :class="cn('radial-progress text-b3 size-22 after:hidden', props.class)"
+    style="--value:100;"
+    role="progressbar">
     <span class="text-bc/60 font-medium">
       {{ props.label }}
     </span>

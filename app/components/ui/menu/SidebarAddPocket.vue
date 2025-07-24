@@ -18,8 +18,13 @@ whenever(keys.shift_p, () => {
 </script>
 
 <template>
-  <Btn v-tippy="'New Pocket'" :class="cn('justify-start text-3 px-3.5 ', props.class)" @click="addPocket()">
-    <icon name="add-sm" class="size-5.5 opacity-70 stroke-[1.6]" />
+  <Btn
+    v-tippy="'New Pocket'"
+    :class="cn('justify-start text-3 px-3.5 ', props.class)"
+    @click="addPocket()">
+    <icon
+      name="add-sm"
+      class="size-5.5 opacity-70 stroke-[1.6]" />
 
     Create New Pocket
 

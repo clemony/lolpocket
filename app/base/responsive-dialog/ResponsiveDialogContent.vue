@@ -13,11 +13,16 @@ const isDesktop = useMediaQuery('(min-width: 768px)')
 </script>
 
 <template>
-  <FadeDialogContent v-if="isDesktop" v-bind="$attrs">
+  <DialogContentPop
+    v-if="isDesktop"
+    v-bind="$attrs">
     <slot />
-  </FadeDialogContent>
+  </DialogContentPop>
 
-  <DrawerContent v-else :side="side" v-bind="$attrs">
+  <DrawerContent
+    v-else
+    :side="side"
+    v-bind="$attrs">
     <slot />
   </DrawerContent>
 </template>

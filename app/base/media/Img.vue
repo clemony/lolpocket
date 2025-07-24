@@ -3,7 +3,11 @@ defineOptions({
   inheritAttrs: false,
 })
 
-const { alt, img, class: className } = defineProps<{
+const {
+  alt,
+  img,
+  class: className,
+} = defineProps<{
   alt: string
   img: string | null
   class?: HTMLAttributes['class']
@@ -27,17 +31,20 @@ function load() {
     v-bind="$attrs"
     :alt="alt"
     preload
-    :class="cn('size-full',
-               {
-                 '': loaded,
-                 '': !loaded,
-                 'loadedClass': loaded,
-               },
-               className)"
+    :class="
+      cn(
+        'size-full !shrink-0',
+        {
+          '': loaded,
+          '': !loaded,
+          'loadedClass': loaded,
+        },
+        className,
+      )
+    "
     @load="load()">
     <slot />
   </NuxtImg>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

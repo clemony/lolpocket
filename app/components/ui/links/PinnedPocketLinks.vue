@@ -6,9 +6,14 @@ const pinned = computed (() => {
 </script>
 
 <template>
-  <NuxtLink v-for="pocket in pinned" :key="pocket.key" :to="`/pocket/${pocket.key}`">
+  <NuxtLink
+    v-for="pocket in pinned"
+    :key="pocket.key"
+    :to="`/pocket/${pocket.key}`">
     <Btn v-if="pocket">
-      <PocketIcon :url="pocket.icon" class="size-5" />
+      <PocketIcon
+        :url="pocket.icon"
+        class="size-5" />
 
       {{ pocket.name }}
     </Btn>

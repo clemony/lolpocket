@@ -18,15 +18,25 @@ const displayChampions = computedAsync (() => {
 </script>
 
 <template>
-  <FieldTransition v-if="summoner.matches " expand class="p-0 w-full gap-0">
-    <ListboxRoot v-model:model-value="ms.mf.champion" class="w-full  p-0 " :multiple="false" @entry-focus.prevent>
+  <FieldTransition
+    v-if="summoner.matches "
+    expand
+    class="p-0 w-full gap-0">
+    <ListboxRoot
+      v-model:model-value="ms.mf.champion"
+      class="w-full  p-0 "
+      :multiple="false"
+      @entry-focus.prevent>
       <ListboxContent class="w-full ">
-        <transition-slide group class="grid overflow-hidden h-fit gap-1   px-1 py-2.5">
+        <transition-slide
+          group
+          class="grid overflow-hidden h-fit gap-1   px-1 py-2.5">
           <ListboxItem
             v-for="champion in displayChampions"
             :key="champion.champion"
             :value="champion.champion"
-            class="rounded-box cursor-pointer  focus:outline-0 hover:border-b3 px-4 hover:bg-b3/30  py-2  grid shrink-0 w-full grid-cols-[0.5fr_1.5fr_1.15fr_0.5fr] items-center gap-5 list-champs" :class="{ 'bg-b3/40 border-b3 shadow-xs  inset-shadow-sides bg-noise inset-shadow-b3/10': champion.champion == ms.mf.champion }">
+            class="rounded-box cursor-pointer  focus:outline-0 hover:border-b3 px-4 hover:bg-b3/30  py-2  grid shrink-0 w-full grid-cols-[0.5fr_1.5fr_1.15fr_0.5fr] items-center gap-5 list-champs"
+            :class="{ 'bg-b3/40 border-b3 shadow-xs  inset-shadow-sides bg-noise inset-shadow-b3/10': champion.champion == ms.mf.champion }">
             <div
               class=" size-fit rounded-full shadow-sm drop-shadow-sm  ">
               <div class="size-15 overflow-hidden items-center rounded-full">

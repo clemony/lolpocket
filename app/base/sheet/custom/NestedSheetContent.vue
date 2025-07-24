@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import type { DialogContentEmits, DialogContentProps } from 'reka-ui'
 import {
-    DialogClose,
-    DialogContent,
+  DialogClose,
+  DialogContent,
 
-    DialogOverlay,
-    DialogPortal,
-    useForwardPropsEmits,
+  DialogOverlay,
+  DialogPortal,
+  useForwardPropsEmits,
 } from 'reka-ui'
 
 import type { HTMLAttributes } from 'vue'

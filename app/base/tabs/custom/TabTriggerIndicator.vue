@@ -46,7 +46,8 @@ onMounted(() => {
 
 <template>
   <Motion
-    class="absolute bottom-1 left-0 border   btn   px-4 py-1 z-0 rounded-lg w-fit  ease-in font-medium border-b3 ring-1 tldr-30 ring-b3/40  bg-b1  text-bc" :class="cn('', { 'tldr-30': isOutside, '': !isOutside, 'opacity-0': store.returnValue.width == 0 }, props.class)"
+    class="absolute bottom-1 left-0 border   btn   px-4 py-1 z-0 rounded-lg w-fit  ease-in font-medium border-b3 ring-1 tldr-30 ring-b3/40  bg-b1  text-bc"
+    :class="cn('', { 'tldr-30': isOutside, '': !isOutside, 'opacity-0': store.returnValue.width == 0 }, props.class)"
     :style="{
       width,
       transform,

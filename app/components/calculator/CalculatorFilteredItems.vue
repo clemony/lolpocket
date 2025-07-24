@@ -19,7 +19,8 @@ const { filtered } = useItemFilter(is.itemFilter)
     <Item
       :id="item"
       class="size-full"
-      basic @click="emit('update:item', item)">
+      basic
+      @click="emit('update:item', item)">
     </Item>
   </PopoverClose>
 </template>

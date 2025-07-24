@@ -2,7 +2,7 @@ import {
   fetchLeagueEntriesByPuuid,
   fetchPuuidByRiotId,
   fetchSummonerByPuuid,
-} from "./riot-client"
+} from './riot-client'
 
 interface SummonerResponse {
   name: string
@@ -21,13 +21,13 @@ export default defineEventHandler(async (event) => {
   const { region, name, tag } = getQuery(event)
 
   if (
-    typeof region !== "string" ||
-    typeof name !== "string" ||
-    typeof tag !== "string"
+    typeof region !== 'string'
+    || typeof name !== 'string'
+    || typeof tag !== 'string'
   ) {
     throw createError({
       statusCode: 400,
-      statusMessage: "Missing name, tag, or region",
+      statusMessage: 'Missing name, tag, or region',
     })
   }
 
@@ -38,9 +38,9 @@ export default defineEventHandler(async (event) => {
       fetchLeagueEntriesByPuuid(puuid),
     ])
 
-    const ranked: SummonerResponse["ranked"] = {}
+    const ranked: SummonerResponse['ranked'] = {}
     for (const entry of league) {
-      if (entry.queueType === "RANKED_SOLO_5x5") {
+      if (entry.queueType === 'RANKED_SOLO_5x5') {
         ranked.solo = {
           tier: entry.tier,
           division: entry.rank,
@@ -49,7 +49,8 @@ export default defineEventHandler(async (event) => {
           losses: entry.losses,
           queueType: entry.queueType,
         }
-      } else if (entry.queueType === "RANKED_FLEX_SR") {
+      }
+      else if (entry.queueType === 'RANKED_FLEX_SR') {
         ranked.flex = {
           tier: entry.tier,
           division: entry.rank,
@@ -70,11 +71,12 @@ export default defineEventHandler(async (event) => {
       region,
       ranked,
     }
-  } catch (err) {
-    console.error("❌ Failed to resolve summoner:", err)
+  }
+  catch (err) {
+    console.error('❌ Failed to resolve summoner:', err)
     throw createError({
       statusCode: 502,
-      statusMessage: "Failed to fetch summoner from Riot",
+      statusMessage: 'Failed to fetch summoner from Riot',
     })
   }
 })

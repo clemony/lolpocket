@@ -12,14 +12,21 @@ const tabs = ref('grid')
 </script>
 
 <template>
-  <Tabs v-model:model-value="tabs" class="flex flex-col px-8 size-full relative overflow-hidden" as="div">
+  <Tabs
+    v-model:model-value="tabs"
+    class="flex flex-col px-8 size-full relative overflow-hidden"
+    as="div">
     <ChampionFilters>
       <IndicatorTabsList class="w-80 shrink-0  **:pointer-events-auto grid grid-cols-2 h-10 border !border-b3/70 bg-b2">
-        <IndicatorTabsTrigger value="grid" :class="{ '!text-nc': tabs == 'grid' }">
+        <IndicatorTabsTrigger
+          value="grid"
+          :class="{ '!text-nc': tabs == 'grid' }">
           Grid
         </IndicatorTabsTrigger>
 
-        <IndicatorTabsTrigger value="list" :class="{ '!text-nc': tabs == 'list' }">
+        <IndicatorTabsTrigger
+          value="list"
+          :class="{ '!text-nc': tabs == 'list' }">
           List
         </IndicatorTabsTrigger>
 
@@ -27,11 +34,18 @@ const tabs = ref('grid')
       </IndicatorTabsList>
     </ChampionFilters>
 
-    <TabsContent value="grid" as-child>
-      <LibraryChampions v-if="championKeys" :champion-keys="championKeys" :filtered-keys="filteredKeys" />
+    <TabsContent
+      value="grid"
+      as-child>
+      <LibraryChampions
+        v-if="championKeys"
+        :champion-keys="championKeys"
+        :filtered-keys="filteredKeys" />
     </TabsContent>
 
-    <TabsContent value="list" as-child>
+    <TabsContent
+      value="list"
+      as-child>
       <LibraryChampionGrid :filtered />
     </TabsContent>
   </Tabs>

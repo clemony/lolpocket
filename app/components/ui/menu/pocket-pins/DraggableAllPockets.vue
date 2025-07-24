@@ -33,10 +33,17 @@ const isDragging = ref(false)
       class="w-full z-0  h-full *:w-full inset-shadow-sm inset-shadow-black/3 field-box rounded-field border-b3 "
       @start="isDragging = true">
       <transition-slide
-        as="div" group
+        as="div"
+        group
         :class="cn('flex flex-col scrollbar-hidden  max-h-100 gap-1 w-full h-100 px-2 pb-2 pt-9.5 items-start justify-start  target overflow-y-auto')">
-        <template v-for="pocketKey in pocketKeys" :key="pocketKey">
-          <PocketPeek :pocket-key="pocketKey" side="bottom" align="end" class="btn btn-ghost data-[state=open]:btn-active flex justify-start h-12 cursor-context-menu w-full min-w-full gap-4 z-1   ">
+        <template
+          v-for="pocketKey in pocketKeys"
+          :key="pocketKey">
+          <PocketPeek
+            :pocket-key="pocketKey"
+            side="bottom"
+            align="end"
+            class="btn btn-ghost data-[state=open]:btn-active flex justify-start h-12 cursor-context-menu w-full min-w-full gap-4 z-1   ">
             <PocketLabel :pocket-key="pocketKey" />
           </PocketPeek>
         </template>

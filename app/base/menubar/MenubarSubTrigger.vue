@@ -19,6 +19,8 @@ const forwarded = useForwardProps(delegatedProps)
     )">
     <slot />
 
-    <icon name="right-sm" class="ml-auto size-4.5 group-data-disabled:hidden" />
+    <icon
+      name="right-sm"
+      class="ml-auto size-4.5 group-data-disabled:hidden" />
   </MenubarSubTrigger>
 </template>

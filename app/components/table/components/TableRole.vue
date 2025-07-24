@@ -10,7 +10,9 @@ const props = defineProps<{
 
 <template>
   <div
-    v-if="props.params && props.params.value" v-tippy="props.params.value.name" class=" pointer-events-auto shadow-warm">
+    v-if="props.params && props.params.value"
+    v-tippy="props.params.value.name"
+    class=" pointer-events-auto shadow-warm">
     <!--     <div
       class="overflow-hidden grid place-items-center bg-b2/20 rounded-lg border border-b3/60">
       <component

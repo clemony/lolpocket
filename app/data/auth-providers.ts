@@ -1,45 +1,45 @@
-import { Discord, EmailTrigger, Google, Riot } from "#components"
+import { Discord, EmailTrigger, Google, Riot } from '#components'
 
 const user = useSupabaseUser()
 const providerMap = computed(() => user.value?.app_metadata?.providers ?? null)
 
 export const providers = [
   {
-    name: "Riot",
+    name: 'Riot',
     icon: {
-      name: "riot",
+      name: 'riot',
     },
     // model: providerMap.value.includes(),
     component: Riot,
-    class: "",
+    class: '',
   },
   {
-    name: "Discord",
+    name: 'Discord',
     icon: {
-      name: "logos:discord-icon",
-      class: "size-8",
+      name: 'logos:discord-icon',
+      class: 'size-8',
     },
-    model: providerMap.value?.includes("discord"),
+    model: providerMap.value?.includes('discord'),
     component: Discord,
-    class: "",
+    class: '',
   },
   {
-    name: "Google",
+    name: 'Google',
     icon: {
-      name: "devicon:google",
+      name: 'devicon:google',
     },
-    model: providerMap.value?.includes("google"),
+    model: providerMap.value?.includes('google'),
     component: Google,
-    class: "",
+    class: '',
   },
   {
-    name: "Email",
+    name: 'Email',
     icon: {
-      name: "at",
+      name: 'at',
     },
     model: user.value?.email != null,
     id: user.value?.email,
     component: EmailTrigger,
-    class: "",
+    class: '',
   },
 ]

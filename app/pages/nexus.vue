@@ -20,7 +20,9 @@ const as = useAccountStore()
     </header>
 
     <div class="w-full">
-      <SummonerCard v-if="as.userAccount.riot" :summoner="as.userAccount.riot" />
+      <SummonerCard
+        v-if="as.userAccount.riot"
+        :summoner="as.userAccount.riot" />
     </div>
 
     <Separator class="bg-b3/60 w-full" />

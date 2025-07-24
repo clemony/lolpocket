@@ -76,6 +76,8 @@ const icon = [
 
 <template>
   <span :class="cn('', className)">
-    <component :is="`i-stats-${icon.find(p => p.name == name).icon}`" :class="cn('', className)" />
+    <component
+      :is="`i-stats-${icon.find(p => p.name == name).icon}`"
+      :class="cn('', className)" />
   </span>
 </template>

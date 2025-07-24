@@ -1,6 +1,6 @@
-import fs from "node:fs"
-import path from "node:path"
-import { markUpdate } from "../utils/mark-update"
+import fs from 'node:fs'
+import path from 'node:path'
+import { markUpdate } from '../utils/mark-update'
 
 interface Item {
   id: number
@@ -8,8 +8,8 @@ interface Item {
   stats: Record<string, number>
 }
 
-const itemsPath = path.resolve("./data/items-lite.json")
-const itemsRaw = fs.readFileSync(itemsPath, "utf-8")
+const itemsPath = path.resolve('./data/items-lite.json')
+const itemsRaw = fs.readFileSync(itemsPath, 'utf-8')
 const items: Item[] = JSON.parse(itemsRaw)
 
 const statIndex: Record<number, Record<string, number>> = {}
@@ -29,7 +29,7 @@ for (const item of items) {
 // Generate StatRecord interface based on collected keys
 const sortedStatKeys = [...statKeys].sort()
 const statRecordInterface = `export interface StatRecord {
-${sortedStatKeys.map((k) => `  ${JSON.stringify(k)}?: number;`).join("\n")}
+${sortedStatKeys.map(k => `  ${JSON.stringify(k)}?: number;`).join('\n')}
 }`
 
 const output = `// ${markUpdate()}
@@ -39,8 +39,8 @@ ${statRecordInterface}
 export const itemStatRecord: Record<number, StatRecord> = ${JSON.stringify(statIndex, null, 2)};
 `
 
-fs.writeFileSync("./app/data/index/item-stat-index.ts", output)
+fs.writeFileSync('./app/data/index/item-stat-index.ts', output)
 
 console.log(
-  "✅ item stat record and StatRecord interface written successfully."
+  '✅ item stat record and StatRecord interface written successfully.',
 )

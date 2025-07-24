@@ -50,7 +50,12 @@ const filteredIds = computed (() => {
         },
       ]"
       class="flex flex-wrap select-none  justify-self-center justify-start gap-4 px-10  pb-10 pt-30">
-      <LazyPopoverItem v-for="item in filtered" :id="item" :key="item" hydrate-on-visible class="size-20 aspect-square shadow-sm drop-shadow-sm rounded-lg" />
+      <LazyPopoverItem
+        v-for="item in filtered"
+        :id="item"
+        :key="item"
+        hydrate-on-visible
+        class="size-20 aspect-square shadow-sm drop-shadow-sm rounded-lg" />
     </div>
   </div>
 </template>

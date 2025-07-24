@@ -28,7 +28,8 @@ const variants = {
     exit="hidden">
     <label
       class=" btn-ghost-dark group "
-      :class="cn('', className)" @click="console.log('click')">
+      :class="cn('', className)"
+      @click="console.log('click')">
       <slot />
     </label>
   </motion.li>

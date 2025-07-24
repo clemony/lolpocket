@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { champKey, type = 'centered', class: className,  loaded: watchLoad
+const { champKey, type = 'centered', class: className, loaded: watchLoad,
 }
   = defineProps<{
     loaded: boolean
@@ -31,7 +31,9 @@ onMounted (async () => {
 </script>
 
 <template>
-  <div class="size-full" :class="cn('grid place-items-center  overflow-hidden  relative cursor-pointer shadow-sm drop-shadow-sm bg-no-repeat rounded-lg  size-full **:select-none  group relative', { 'inset-shadow-[0px_0px_10px_4px_#00000040] fade-in animate-in duration-400': loaded }, className)">
+  <div
+    class="size-full"
+    :class="cn('grid place-items-center  overflow-hidden  relative cursor-pointer shadow-sm drop-shadow-sm bg-no-repeat rounded-lg  size-full **:select-none  group relative', { 'inset-shadow-[0px_0px_10px_4px_#00000040] fade-in animate-in duration-400': loaded }, className)">
     <Img
       :img="img"
       class="object-center"

@@ -29,7 +29,9 @@ const group = ref(props.group)
       </CollapsibleTrigger>
 
       <CollapsibleContent class="w-full">
-        <li v-for="link in group.links" :key="link">
+        <li
+          v-for="link in group.links"
+          :key="link">
           <Button
             variant="ghost"
             size="lg"

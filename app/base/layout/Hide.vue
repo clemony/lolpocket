@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { VisuallyHidden } from "reka-ui"
+import { VisuallyHidden } from 'reka-ui'
 </script>
 
 <template>
-<VisuallyHidden >
-    <slot  />
-</VisuallyHidden>
+  <VisuallyHidden>
+    <slot />
+  </VisuallyHidden>
 </template>

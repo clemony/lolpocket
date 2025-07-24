@@ -27,16 +27,19 @@ const signIn = Symbol('signIn') as InjectionKey<{
   signInOpen: Ref<boolean>
   toggleSignIn: () => void
 }>
-watch(() => signInOpen.value, (newVal) => {
-  console.log('💠 - watch - newVal:', newVal)
-})
+watch(
+  () => signInOpen.value,
+  (newVal) => {
+    console.log('💠 - watch - newVal:', newVal)
+  },
+)
 provide(signIn, {
   signInOpen,
   toggleSignIn,
 } as const)
 
-const user = computed (() => {
-  if (!as.currentSession.session || !as.userAccount.riot.puuid)
+const user = computed(() => {
+  if (!as?.userAccount?.id || !as.userAccount.riot.puuid)
     return null
 
   const ss = useSummonerStore()
@@ -48,10 +51,13 @@ const user = computed (() => {
 })
 
 provide<User>('user', user.value)
-console.log("💠 - user:", user)
+console.log('💠 - user:', user)
 
 onMounted(async () => {
-  document.documentElement.setAttribute('data-theme', as.dataTheme ? as.dataTheme : 'midnight')
+  document.documentElement.setAttribute(
+    'data-theme',
+    as.dataTheme ? as.dataTheme : 'midnight',
+  )
   /*   useAuth() */
   const us = useUiStore()
   const ix = useIndexStore()
@@ -84,7 +90,9 @@ client.auth.onAuthStateChange(async (event, session) => {
       await hydrateUser(data.session)
 
       if (as.userAccount.riot.puuid) {
-        const { fetchSummoner, summoner } = useSummoner(as.userAccount.riot.puuid)
+        const { fetchSummoner, summoner } = useSummoner(
+          as.userAccount.riot.puuid,
+        )
         fetchSummoner()
         console.log('💠 - client.auth.onAuthStateChange - summoner:', summoner)
       }
@@ -96,17 +104,24 @@ client.auth.onAuthStateChange(async (event, session) => {
 </script>
 
 <template>
-  <div id="app" vaul-drawer-wrapper class="flex flex-nowrap h-screen w-screen overflow-hidden bg-b1" :class="{ '!bg-b2/10': route.name == 'card' }">
-<!--     <button class="btn mt-36" @click="toggleSignIn()">
+  <div
+    id="app"
+    vaul-drawer-wrapper
+    class="flex flex-nowrap h-screen w-screen overflow-hidden bg-b1"
+    :class="{ '!bg-b2/10': route.name == 'card' }">
+    <!--     <button class="btn mt-36" @click="toggleSignIn()">
       hihihihi
     </button> -->
 
     <AppNavbar />
 
-    <LazyAppCommand />
+    <!--     <LazyAppCommand /> -->
 
-    <div class="flex h-screen min-h-screen w-full overflow-hidden relative grow">
-      <div class="inset-0 left-0 top-0 z-0 absolute" :class="{ 'overflow-y-auto ': route.path != '/' }">
+    <div
+      class="flex h-screen min-h-screen w-full overflow-hidden relative grow">
+      <div
+        class="inset-0 left-0 top-0 z-0 absolute"
+        :class="{ 'overflow-y-auto ': route.path != '/' }">
         <Toast
           position="top-right"
           :expand="true"
@@ -120,7 +135,12 @@ client.auth.onAuthStateChange(async (event, session) => {
       </div>
     </div>
 
-    <NuxtLoadingIndicator color="var(--color-n1) bottom-0" />
+    <NuxtLoadingIndicator
+      color="var(--color-n1) !top-auto !bottom-0"
+      :style="{
+        top: 'auto',
+        bottom: 0,
+      }" />
   </div>
 </template>
 

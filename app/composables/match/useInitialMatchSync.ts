@@ -7,23 +7,27 @@ export function useInitialMatchSync(puuid: string) {
   const { getAllMatches, getAllSimplifiedMatches } = useMatchDexie()
 
   const fetchInitialMatches = async () => {
-    if (!puuid) return
+    if (!puuid)
+      return
     loading.value = true
     try {
       const matches = await getAllMatches()
-      if (matches.length === 0) return
+      if (matches.length === 0)
+        return
 
       fullMatchData.value = matches.sort(
-        (a, b) => b.info.gameCreation - a.info.gameCreation
+        (a, b) => b.info.gameCreation - a.info.gameCreation,
       )
 
       const simplifiedMatches = await getAllSimplifiedMatches()
-      if (simplifiedMatches.length === 0) return
+      if (simplifiedMatches.length === 0)
+        return
 
       simplifiedMatchData.value = simplifiedMatches.sort(
-        (a, b) => b.gameCreation - a.gameCreation
+        (a, b) => b.gameCreation - a.gameCreation,
       )
-    } finally {
+    }
+    finally {
       loading.value = false
       ready.value = true
     }

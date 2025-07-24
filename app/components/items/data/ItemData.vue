@@ -22,7 +22,10 @@ watchEffect(async () => {
 </script>
 
 <template>
-  <div v-if="item" class="px-3 py-2 bg-blend-darken max-h-[404px] overflow-hidden flex flex-col **:select-text" :class="{ '**:text-bc': base, '**:text-nc': !base }">
+  <div
+    v-if="item"
+    class="px-3 py-2 bg-blend-darken max-h-[404px] overflow-hidden flex flex-col **:select-text"
+    :class="{ '**:text-bc': base, '**:text-nc': !base }">
     <div class="flex gap-4 pb-3 ">
       <div class="!size-14 rounded-lg aspect-square shrink-0 shadow-sm drop-shadow-sm ">
         <Img
@@ -43,7 +46,9 @@ watchEffect(async () => {
             alt="link to league wiki"
             class=" flex items-center  w-full gap-1.5">
             {{ item.name || '' }}
-            <icon name="link-lg" class="size-3.75 dst" />
+            <icon
+              name="link-lg"
+              class="size-3.75 dst" />
 
             <Grow />
           </a>
@@ -56,39 +61,60 @@ watchEffect(async () => {
 
           <Grow />
 
-          <div v-if="item && item.shop?.prices?.total" class="flex items-end gap-1 text-2 !text-nc">
-            <Img img="/img/icons/gold-coin.webp" alt="coin" class="size-4 ml-1 self-center opacity-80" />
+          <div
+            v-if="item && item.shop?.prices?.total"
+            class="flex items-end gap-1 text-2 !text-nc">
+            <Img
+              img="/img/icons/gold-coin.webp"
+              alt="coin"
+              class="size-4 ml-1 self-center opacity-80" />
             {{ item.shop.prices.total }}
           </div>
         </div>
       </div>
 
-      <div v-if="item.requiredChampion" class="my-2 -mt-2">
+      <div
+        v-if="item.requiredChampion"
+        class="my-2 -mt-2">
         <i>Unique to <b>{{ item.requiredChampion }}.</b></i>
       </div>
     </div>
 
     <div class="  py-2    relative overflow-y-auto    flex flex-col ">
-      <div v-if="item.stats && Object.entries(item.stats).length" class="pb-1">
-        <ItemStats :stats="item.stats" :base="base" />
+      <div
+        v-if="item.stats && Object.entries(item.stats).length"
+        class="pb-1">
+        <ItemStats
+          :stats="item.stats"
+          :base="base" />
       </div>
 
-      <Separator v-if="!item.noEffects" class=" mt-2 mb-2 bg-nc/10" />
+      <Separator
+        v-if="!item.noEffects"
+        class=" mt-2 mb-2 bg-nc/10" />
 
       <div v-if="item.passives?.length && item.noEffects != true">
         <ItemEffect
-          v-for="(passive, i) in item.passives" :key="i"
-          :data="passive" type="Passive" />
+          v-for="(passive, i) in item.passives"
+          :key="i"
+          :data="passive"
+          type="Passive" />
       </div>
 
       <div v-if="item.active?.[0] && item.noEffects != true">
         <ItemEffect
-          :data="item.active[0]" type="Active" />
+          :data="item.active[0]"
+          type="Active" />
       </div>
 
-      <LazyItemFrom v-if="item.buildsFrom?.length" :from="item.buildsFrom" :gold=" item.shop?.prices?.combined" />
+      <LazyItemFrom
+        v-if="item.buildsFrom?.length"
+        :from="item.buildsFrom"
+        :gold=" item.shop?.prices?.combined" />
 
-      <LazyItemTo v-if="item.buildsInto?.length" :to="item.buildsInto" />
+      <LazyItemTo
+        v-if="item.buildsInto?.length"
+        :to="item.buildsInto" />
 
       <!-- <Separator v-if="item.passives.length || item.active.name" class=" mt-3 mb-2 bg-nc/10" />
 

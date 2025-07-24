@@ -24,7 +24,9 @@ onMounted (async () => {
     </menu>
 
     <main class="overflow-y-auto grow relative px-10 w-full overflow-x-hidden">
-      <NuxtPage v-if="summoner" :matches="summoner.simplifiedMatches" />
+      <NuxtPage
+        v-if="summoner"
+        :matches="summoner.simplifiedMatches" />
     </main>
   </div>
 </template>

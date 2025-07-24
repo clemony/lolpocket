@@ -157,11 +157,16 @@ onMounted(() => {
 
 <template>
   <div class="relative  border-shadow-sm  pt-4 grid place-items-center h-150 min-h-150 w-210 ">
-    <Bar id="championAnalysis" ref="chartRef" :options="options" :data="data" />
+    <Bar
+      id="championAnalysis"
+      ref="chartRef"
+      :options="options"
+      :data="data" />
 
     <!-- Overlay images using absolute positioning -->
     <div
-      v-for="(pos, idx) in imagePositions" :key="idx"
+      v-for="(pos, idx) in imagePositions"
+      :key="idx"
       class="absolute shadow-sm drop-shadow-sm bottom-9"
       :style="{
         left: `${pos.x - 16}px`,

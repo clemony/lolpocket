@@ -15,12 +15,18 @@ const tag = computed (() => {
 </script>
 
 <template>
-  <span v-if="tag" :class="cn('flex items-center', props.class)">
-    <icon name="lucide:hash" class="size-3.75" />
+  <span
+    v-if="tag"
+    :class="cn('flex items-center', props.class)">
+    <icon
+      name="lucide:hash"
+      class="size-3.75" />
     {{ tag }}
   </span>
 
-  <span v-else :class="cn('', props.class)">
+  <span
+    v-else
+    :class="cn('', props.class)">
     Disconnected
   </span>
 </template>

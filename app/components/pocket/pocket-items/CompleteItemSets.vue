@@ -8,7 +8,9 @@ const props = defineProps<{
 <template>
   <div class="rounded-box p-i-c **:select-none h-auto pb-5 pt-4 shadow-smooth shadow-black/10 drop-shadow-md px-6 backdrop-blur-md w-fit  ">
     <div class="w-full justify-start">
-      <span class="text-5 dst font-medium" :style="{ fontFamily: pocket.card.font[1] || 'Geist Mono' }"> {{ set.name }}</span>
+      <span
+        class="text-5 dst font-medium"
+        :style="{ fontFamily: pocket.card.font[1] || 'Geist Mono' }"> {{ set.name }}</span>
     </div>
 
     <div class="flex gap-2 mt-2">
@@ -20,7 +22,9 @@ const props = defineProps<{
               class="size-20 rounded-xl *:rounded-xl">
               <div
                 class="size-full overflow-hidden rounded-lg">
-                <div v-if="item == 0" class="size-full bg-b3  aspect-square" />
+                <div
+                  v-if="item == 0"
+                  class="size-full bg-b3  aspect-square" />
 
                 <img
                   :src="`/img/item/${item}.webp`"

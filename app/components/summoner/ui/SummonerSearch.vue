@@ -22,6 +22,8 @@ watch(
       placeholder="Search game name + tag"
       class="text-3 text-bc  outline-0 ring-0 border-0 flex !h-full grow text-start  hover:outline-0 hover:ring-0 hover:border-0" />
 
-    <RemoveButton v-if="ms.summonerSearch != null" @click="ms.summonerSearch = null" />
+    <RemoveButton
+      v-if="ms.summonerSearch != null"
+      @click="ms.summonerSearch = null" />
   </div>
 </template>

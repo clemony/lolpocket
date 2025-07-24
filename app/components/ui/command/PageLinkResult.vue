@@ -33,7 +33,8 @@ function navigate() {
     animate="visible"
     exit="hidden">
     <a
-      class="btn-ghost-dark group " :class="cn('', className)"
+      class="btn-ghost-dark group "
+      :class="cn('', className)"
       @click="navigate()">
       <slot />
 
@@ -45,7 +46,9 @@ function navigate() {
         {{ page.meta?.section ?? '' }}
       </Badge>
 
-      <icon name="link" class="size-3.5 justify-self-end opacity-0 group-hover:opacity-100 tldr-20 -ml-1" />
+      <icon
+        name="link"
+        class="size-3.5 justify-self-end opacity-0 group-hover:opacity-100 tldr-20 -ml-1" />
     </a>
   </motion.li>
 </template>

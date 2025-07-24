@@ -1,5 +1,6 @@
 export async function fetchSummonerMastery(puuid: string, full = false) {
-  if (!puuid) throw new Error("Missing puuid for mastery fetch")
+  if (!puuid)
+    throw new Error('Missing puuid for mastery fetch')
 
   const ss = useSummonerStore()
   const summoner = ss.getSummoner(puuid)
@@ -8,22 +9,23 @@ export async function fetchSummonerMastery(puuid: string, full = false) {
   const isStale = (timestamp?: Date) =>
     !timestamp || Date.now() - new Date(timestamp).getTime() > SIX_HOURS
 
-  const needsTop =
-    !summoner?.mastery?.top?.length || isStale(summoner.mastery.lastUpdate)
+  const needsTop
+    = !summoner?.mastery?.top?.length || isStale(summoner.mastery.lastUpdate)
 
-  const needsFull =
-    full &&
-    (!summoner?.mastery?.full?.length || isStale(summoner.mastery.lastUpdate))
+  const needsFull
+    = full
+      && (!summoner?.mastery?.full?.length || isStale(summoner.mastery.lastUpdate))
 
   // If nothing is stale or missing, return existing data
-  if (!needsTop && !needsFull) return summoner.mastery
+  if (!needsTop && !needsFull)
+    return summoner.mastery
 
   try {
     const result = await $fetch<ChampionMasteryResponse>(
-      "/api/riot/get-summoner-mastery",
+      '/api/riot/get-summoner-mastery',
       {
         query: { puuid, full },
-      }
+      },
     )
 
     const updated = {
@@ -33,7 +35,8 @@ export async function fetchSummonerMastery(puuid: string, full = false) {
 
     if (full) {
       updated.full = result.mastery as ChampionMastery[]
-    } else {
+    }
+    else {
       updated.top = result.mastery as ChampionMastery[]
     }
 
@@ -42,11 +45,12 @@ export async function fetchSummonerMastery(puuid: string, full = false) {
         top: updated.top,
         full: updated.full,
         lastUpdate: new Date(),
-      } as Summoner["mastery"],
+      } as Summoner['mastery'],
     })
     return updated
-  } catch (e) {
-    console.error("❌ fetchSummonerMastery failed:", e)
+  }
+  catch (e) {
+    console.error('❌ fetchSummonerMastery failed:', e)
     throw e
   }
 }

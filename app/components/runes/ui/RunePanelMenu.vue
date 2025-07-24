@@ -34,8 +34,13 @@ function handleNewSet() {
         class=" size-6 shrink-0 dst" />
     </button> -->
 
-    <button v-tippy="'Delete Current Set'" class="btn rounded-lg btn-sm btn-ghost hover:bg-b3/5 hover:border b3/4 *:dst  " @click="handleDelete()">
-      <icon name="trash" class="opacity-70 shrink-0  size-5 text-nc" />
+    <button
+      v-tippy="'Delete Current Set'"
+      class="btn rounded-lg btn-sm btn-ghost hover:bg-b3/5 hover:border b3/4 *:dst  "
+      @click="handleDelete()">
+      <icon
+        name="trash"
+        class="opacity-70 shrink-0  size-5 text-nc" />
     </button>
   </div>
 </template>

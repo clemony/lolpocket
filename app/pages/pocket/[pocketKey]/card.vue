@@ -88,7 +88,11 @@ console.log('💠 - pocket.card.splash:', pocket.card.splash)
       :max-zoom="2"
       :wheel-zoom-step="0.01"
       class="h-screen w-screen grid place-items-center relative overflow-hidden ">
-      <div id="pocket-card" ref="pocketCardRef" class="inset-shadow-sm border-b3/70 border h-300 shadow-smooth w-300 relative rounded-box object-contain  aspect-square " :style="{ backgroundImage: `linear-gradient(130deg, ${pocket.card.color} 0%, #FFFFFF 60%)` }">
+      <div
+        id="pocket-card"
+        ref="pocketCardRef"
+        class="inset-shadow-sm border-b3/70 border h-300 shadow-smooth w-300 relative rounded-box object-contain  aspect-square "
+        :style="{ backgroundImage: `linear-gradient(130deg, ${pocket.card.color} 0%, #FFFFFF 60%)` }">
         <div
           class="size-full overflow-hidden  rounded-2xl transition-all duration-500  mask-right-100"
           :class="{ grayscale: pocket.card.filter == 'grayscale' }">
@@ -120,9 +124,13 @@ console.log('💠 - pocket.card.splash:', pocket.card.splash)
             </div>
 
             <div class="h-auto space-y-12 mt-20">
-              <template v-for="(set, i) in pocket.complete.items" :key="i">
+              <template
+                v-for="(set, i) in pocket.complete.items"
+                :key="i">
                 <template v-if="set && set != undefined && set.items.length && set != null && set.items[0] != undefined && set.items[0] != 0">
-                  <CompleteItemSets :set="pocket.complete.items[i]" :pocket="pocket" />
+                  <CompleteItemSets
+                    :set="pocket.complete.items[i]"
+                    :pocket="pocket" />
                 </template>
               </template>
             </div>

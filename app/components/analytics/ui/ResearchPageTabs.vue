@@ -3,7 +3,9 @@
 </script>
 
 <template>
-  <Tabs default-value="account" class="w-[400px]">
+  <Tabs
+    default-value="account"
+    class="w-[400px]">
     <TabsList>
       <TabsTrigger value="account">
         Champions

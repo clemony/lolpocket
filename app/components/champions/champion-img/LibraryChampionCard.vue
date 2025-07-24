@@ -32,7 +32,8 @@ watchEffect(() => {
 
 <template>
   <div
-    as="div" :class="cn('grid place-items-center parallax relative cursor-pointer  rounded-xl size-full **:select-none  group relative', { '': loaded }, className)">
+    as="div"
+    :class="cn('grid place-items-center parallax relative cursor-pointer  rounded-xl size-full **:select-none  group relative', { '': loaded }, className)">
     <ChampionLoadScreen
       :quality="60"
       :champ-key="champKey"
@@ -49,7 +50,9 @@ watchEffect(() => {
     <!--
     <Skeleton v-else class=" z-0 top-0 left-0 rounded-xl absolute inset-0 opacity-90" :class="{ 'animate-out fade-out duration-600 ': loaded }" /> -->
 
-    <div v-show="loaded" class="size-full absolute top-0 left-0 !shadow-sm drop-shadow-sm  border-b4 border animate-in fade-in duration-500 rounded-xl" />
+    <div
+      v-show="loaded"
+      class="size-full absolute top-0 left-0 !shadow-sm drop-shadow-sm  border-b4 border animate-in fade-in duration-500 rounded-xl" />
   </div>
 </template>
 

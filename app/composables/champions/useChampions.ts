@@ -1,11 +1,11 @@
 export function useChampions(
   matches: SimplifiedMatchData[],
   options: {
-    mode?: "lite" | "basic" | "bayesian"
+    mode?: 'lite' | 'basic' | 'bayesian'
     limit?: number
-  }
+  },
 ) {
-  const mode = options?.mode || "basic"
+  const mode = options?.mode || 'basic'
   const limit = options?.limit
 
   const liteChampionStats = computed(() => {
@@ -23,25 +23,25 @@ export function useChampions(
     return Object.fromEntries(sorted)
   })
 
-  if (mode === "lite") {
+  if (mode === 'lite') {
     return {
       championStats: liteChampionStats,
     }
   }
 
   const filteredMatches = computed(() =>
-    limit ?
-      matches.filter((match) =>
-        Object.keys(liteChampionStats.value).includes(match.championName)
-      )
-    : matches
+    limit
+      ? matches.filter(match =>
+          Object.keys(liteChampionStats.value).includes(match.championName),
+        )
+      : matches,
   )
 
   const championStats = computed(() => {
-    if (mode === "basic") {
+    if (mode === 'basic') {
       return useBasicChampionStats(filteredMatches.value)
     }
-    if (mode === "bayesian") {
+    if (mode === 'bayesian') {
       return useBayesianChampionStats(filteredMatches.value)
     }
     return {}
@@ -54,13 +54,14 @@ export function useChampions(
 }
 
 function getChampionStatsMap(
-  matches: SimplifiedMatchData[]
+  matches: SimplifiedMatchData[],
 ): Map<string, ChampionStats> {
   const map = new Map<string, ChampionStats>()
 
   matches.forEach((match, index) => {
     const champ = match.championName
-    if (!champ) return
+    if (!champ)
+      return
 
     if (!map.has(champ)) {
       map.set(champ, {
@@ -87,7 +88,7 @@ function getChampionStatsMap(
     stats.assists += match.assists
     stats.killParticipation += match.killParticipation
     stats.matchIndexes.push(index)
-    stats.gameVersions.push(match.gameVersion)
+    stats.gameVersions.push(match.gameVersion.toString())
     stats.winrate = (stats.wins / stats.games) * 100
   })
 
@@ -107,31 +108,31 @@ export function useBayesianChampionStats(matches: SimplifiedMatchData[]) {
   return computed<BayesianChampionStats[]>(() => {
     const statsList = Array.from(baseStats.value.values())
     const totalGames = statsList.reduce((sum, s) => sum + s.games, 0)
-    const globalWinrate =
-      statsList.reduce((sum, s) => sum + s.wins, 0) / totalGames || 0
+    const globalWinrate
+      = statsList.reduce((sum, s) => sum + s.wins, 0) / totalGames || 0
 
     return statsList
       .map((stats) => {
         const adjustedWeight = stats.games ** 0.7
         const confidence = adjustedWeight / (adjustedWeight + 15)
-        const bayesianWinrate =
-          ((1 - confidence) * globalWinrate +
-            confidence * (stats.wins / stats.games)) *
-          100
+        const bayesianWinrate
+          = ((1 - confidence) * globalWinrate
+            + confidence * (stats.wins / stats.games))
+          * 100
 
         return {
           ...stats,
           bayesianWinrate,
           kda: Number(
             ((stats.kills + stats.assists) / Math.max(1, stats.deaths)).toFixed(
-              2
-            )
+              2,
+            ),
           ),
           avgKills: Number((stats.kills / stats.games).toFixed(2)),
           avgDeaths: Number((stats.deaths / stats.games).toFixed(2)),
           avgAssists: Number((stats.assists / stats.games).toFixed(2)),
           avgKp: Number(
-            ((stats.killParticipation / stats.games) * 100).toFixed(2)
+            ((stats.killParticipation / stats.games) * 100).toFixed(2),
           ),
         }
       })

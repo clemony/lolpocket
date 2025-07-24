@@ -15,7 +15,10 @@ definePageMeta({
     <div
       class="w-full h-fit pb-2 pt-22  pr-18 grid-flow-row grid place-items-stretch place-content-stretch pl-10 gap-x-8 gap-y-10  items-center overflow-y-auto"
       :style="{ gridTemplateColumns: 'repeat(auto-fit, minmax(22rem, 30rem))' }">
-      <BackpackCard v-for="pocket in ps.pockets" :key="pocket.key" :pocket="pocket" />
+      <BackpackCard
+        v-for="pocket in ps.pockets"
+        :key="pocket.key"
+        :pocket="pocket" />
     </div>
   </div>
 </template>

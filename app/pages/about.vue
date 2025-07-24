@@ -75,7 +75,10 @@ const faq = [
     <div class="flex w-210  flex-col gap-6 items-center mx-auto">
       <div class="grid grid-cols-[20px_1fr] w-full gap-x-14 **:font-mono  mockup-code text-nc text-3  ">
         <div class="col-start-1 grid pl-6 gap-y-1 items-center">
-          <div v-for="index in 13" :key="index" class="grid items-center">
+          <div
+            v-for="index in 13"
+            :key="index"
+            class="grid items-center">
             {{ index }}
           </div>
         </div>
@@ -130,14 +133,18 @@ const faq = [
           </div>
 
           <div>
-            <span v-tippy="'! (logical NOT) operator'" class="hover:bg-b3 hover:text-bc">!</span>
+            <span
+              v-tippy="'! (logical NOT) operator'"
+              class="hover:bg-b3 hover:text-bc">!</span>
 
             <span>frequently asked questions</span>
           </div>
 
           <span class="pl-6">[Q] Where going? </span>
 
-          <span class="text-4 gap-3 flex pl-6"> [LP]<icon name="hugeicons:moon-01" class="size-7 text-nc stroke-0.8 mb-1" /></span>
+          <span class="text-4 gap-3 flex pl-6"> [LP]<icon
+            name="hugeicons:moon-01"
+            class="size-7 text-nc stroke-0.8 mb-1" /></span>
         </div>
       </div>
 
@@ -148,7 +155,9 @@ const faq = [
         </p>
 
         <p class="inline-flex items-center gap-1">
-          <Icon name="typcn:heart-outline" class="size-3" />
+          <Icon
+            name="typcn:heart-outline"
+            class="size-3" />
           from
           <Icon
             name="teenyicons:arrow-right-outline"
@@ -172,19 +181,27 @@ const faq = [
       <Field class="mt-26 ">
         <div class="items-center justify-evenly flex gap-5 *:dst **:size-6 pointer-events-auto">
           <tippy
-            v-for="icon in icons" :key="icon.name"
+            v-for="icon in icons"
+            :key="icon.name"
             tag="button"
             content-tag="div">
             <template #default>
-              <a :href="icon.link" :target="icon.link ? '_blank' : ''">
-                <icon :name="icon.icon" class="size-6 dst shrink-0" />
+              <a
+                :href="icon.link"
+                :target="icon.link ? '_blank' : ''">
+                <icon
+                  :name="icon.icon"
+                  class="size-6 dst shrink-0" />
               </a>
             </template>
 
             <template #content>
               <div class="flex gap-2 items-center">
                 {{ icon.name }}
-                <icon v-if="icon.link" name="link" class="size-3.5 text-nc" />
+                <icon
+                  v-if="icon.link"
+                  name="link"
+                  class="size-3.5 text-nc" />
               </div>
             </template>
           </tippy>
@@ -219,9 +236,14 @@ const faq = [
         </p>
 
         <p class="mt-1 ">
-          <a href="https://www.leagueoflegends.com/en-us/?utm_medium=card1%2Bwww.riotgames.com&utm_source=riotbar" target="_blank" class="hover:underline flex items-center gap-1"><b>Riot Games, Inc</b>
+          <a
+            href="https://www.leagueoflegends.com/en-us/?utm_medium=card1%2Bwww.riotgames.com&utm_source=riotbar"
+            target="_blank"
+            class="hover:underline flex items-center gap-1"><b>Riot Games, Inc</b>
 
-            <icon name="link" class="size-4 mb-0.5" /></a>.
+            <icon
+              name="link"
+              class="size-4 mb-0.5" /></a>.
         </p>
       </div>
     </div>

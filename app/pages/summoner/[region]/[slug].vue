@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 definePageMeta({
   name: 'summoner',
   title: 'Summoner Profile',
@@ -7,7 +6,6 @@ definePageMeta({
   path: '/summoner/:region/:slug',
   search: false,
 })
-
 
 const route = useRoute()
 const region = computed(() => route.params.region?.toString())
@@ -19,20 +17,15 @@ const puuid = ref<string | null>(null)
 const summoner = ref<Summoner | null>(null)
 const loading = ref(true)
 
-/* watch(() => summoner.value, (newVal) => {
-if(summoner.value)
-summoner.value.mastery =
-   {
-      champions: [],
-      lastUpdate: null
-    }
-}
-) */
 async function resolveAndFetch() {
   loading.value = true
   try {
     if (!region.value || !name.value || !tag.value) {
-      console.warn('Missing params:', { region: region.value, name: name.value, tag: tag.value })
+      console.warn('Missing params:', {
+        region: region.value,
+        name: name.value,
+        tag: tag.value,
+      })
       return
     }
 
@@ -55,33 +48,43 @@ async function resolveAndFetch() {
 
 watch([region, name, tag], resolveAndFetch, { immediate: true })
 
-
-
+const topChampion = ref<TopChampion>(null)
 </script>
 
 <template>
   <div v-if="summoner">
     <NuxtLayout name="splash-tabs-layout">
-
       <template #backdrop>
-    <SummonerBackdrop :summoner />
-</template>
+        <SummonerBackdrop
+          :summoner
+          @set:top-champion="(e) => (topChampion = e)" />
+      </template>
 
+      <template #header>
+        <PlayerHeader
+          v-if="summoner"
+          :summoner />
+      </template>
 
-<template #header>
-  <PlayerHeader v-if="summoner" :summoner />
-</template>
+      <template #tabs>
+        <SummonerProfileTabs
+          :region
+          :slug
+          :summoner />
+      </template>
 
-<template #tabs>
-        <SummonerProfileTabs :region :slug :summoner />
-</template>
-
-
-
-
-<template #page>
-      <NuxtPage v-if="summoner" :summoner :transition="{name: 'global-page-transition'}" class="size-full flex relative mx-auto  justify-center bg-b1 overflow-y-auto" />
-</template>
+      <template #page>
+        <div
+          :key="route.name"
+          class="size-full flex mx-auto justify-center bg-b1 overflow-auto">
+          <NuxtPage
+            v-if="summoner"
+            :region
+            :slug
+            :summoner
+            :top-champion />
+        </div>
+      </template>
     </NuxtLayout>
   </div>
 </template>

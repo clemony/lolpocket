@@ -1,14 +1,14 @@
 // server/api/champion-mastery.ts
 
-import { getChampionMastery } from "../riot-client"
+import { getChampionMastery } from '../riot-client'
 
 export default defineEventHandler(async (event) => {
   const query = getQuery(event)
   const puuid = query.puuid?.toString()
-  const full = query.full === "true"
+  const full = query.full === 'true'
 
   if (!puuid)
-    throw createError({ statusCode: 400, statusMessage: "Missing puuid" })
+    throw createError({ statusCode: 400, statusMessage: 'Missing puuid' })
 
   const masteryData = await getChampionMastery(puuid, full)
 

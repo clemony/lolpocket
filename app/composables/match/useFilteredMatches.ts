@@ -1,10 +1,6 @@
-import { matchFilters } from "~/utils/filter/matchFilters"
+import { matchFilters } from '~/utils/filter/matchFilters'
 
-export function useFilteredMatches(
-  puuid: string,
-  filters: MatchFilter,
-  matches?: Ref<MatchData[]>
-) {
+export function useFilteredMatches(puuid: string, filters: MatchFilter) {
   const ss = useSummonerStore()
   const summoner = ss.getSummoner(puuid)
   const simplifiedMatches = ref<SimplifiedMatchData[]>([])
@@ -15,30 +11,30 @@ export function useFilteredMatches(
 
   const matchMap = computed(() => {
     return new Map(
-      summoner.matches.full.map((match) => [match.info.gameEndTimestamp, match])
+      summoner.matches.full.map(match => [match.info.gameEndTimestamp, match]),
     )
   })
 
   const filteredSimplified = computed(() => {
-    return simplifiedMatches.value.filter((match) =>
+    return simplifiedMatches.value.filter(match =>
       matchFilters(match, {
         patch: filters.patch ?? null,
         queue: filters.queue ?? null,
         champion: filters.champion ?? null,
         ally: filters.ally ?? null,
         role: filters.role ?? null,
-      })
+      }),
     )
   })
   const filteredSimplifiedNoRole = computed(() => {
-    return simplifiedMatches.value.filter((match) =>
+    return simplifiedMatches.value.filter(match =>
       matchFilters(match, {
         patch: filters.patch ?? null,
         queue: filters.queue ?? null,
         champion: filters.champion ?? null,
         ally: filters.ally ?? null,
         ignoreRole: true,
-      })
+      }),
     )
   })
 
@@ -51,17 +47,18 @@ export function useFilteredMatches(
 
   // Only compute filtered matches if data is available
   const filteredMatches = computed(() => {
-    if (loading.value) return []
+    if (loading.value)
+      return []
 
     // Ensure we only filter when simplifiedMatches and fullMatches are available
     return filteredSimplified.value
-      .map((simplified) => matchMap.value.get(simplified.gameEndTimestamp))
+      .map(simplified => matchMap.value.get(simplified.gameEndTimestamp))
       .filter(Boolean) // Ensure no undefined matches
       .sort((a, b) => b.info.gameEndTimestamp - a.info.gameEndTimestamp)
   })
   const championsPlayed = computed(() => {
     return Array.from(
-      new Set(simplifiedMatches.value.map((m) => m.championName))
+      new Set(simplifiedMatches.value.map(m => m.championName)),
     )
   })
 

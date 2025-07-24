@@ -1,10 +1,10 @@
-import { fetchLeagueEntriesByPuuid, fetchSummonerByPuuid } from "../riot-client"
+import { fetchLeagueEntriesByPuuid, fetchSummonerByPuuid } from '../riot-client'
 
 export default defineEventHandler(async (event) => {
   const { puuid } = getQuery(event)
 
-  if (!puuid || typeof puuid !== "string") {
-    throw createError({ statusCode: 400, statusMessage: "Missing puuid" })
+  if (!puuid || typeof puuid !== 'string') {
+    throw createError({ statusCode: 400, statusMessage: 'Missing puuid' })
   }
 
   let summoner, league
@@ -13,22 +13,23 @@ export default defineEventHandler(async (event) => {
       fetchSummonerByPuuid(puuid),
       fetchLeagueEntriesByPuuid(puuid),
     ])
-  } catch (err) {
-    console.error("❌ Riot API error:", err)
+  }
+  catch (err) {
+    console.error('❌ Riot API error:', err)
     throw createError({
       statusCode: 502,
-      statusMessage: "Failed to fetch from Riot API",
+      statusMessage: 'Failed to fetch from Riot API',
     })
   }
 
   if (!summoner) {
-    throw createError({ statusCode: 404, statusMessage: "Summoner not found" })
+    throw createError({ statusCode: 404, statusMessage: 'Summoner not found' })
   }
 
-  const ranked: SummonerResponse["ranked"] = {}
+  const ranked: SummonerResponse['ranked'] = {}
 
   for (const entry of league) {
-    if (entry.queueType === "RANKED_SOLO_5x5") {
+    if (entry.queueType === 'RANKED_SOLO_5x5') {
       ranked.solo = {
         tier: entry.tier,
         division: entry.rank,
@@ -37,7 +38,8 @@ export default defineEventHandler(async (event) => {
         losses: entry.losses,
         queueType: entry.queueType,
       }
-    } else if (entry.queueType === "RANKED_FLEX_SR") {
+    }
+    else if (entry.queueType === 'RANKED_FLEX_SR') {
       ranked.flex = {
         tier: entry.tier,
         division: entry.rank,
@@ -55,7 +57,7 @@ export default defineEventHandler(async (event) => {
     puuid: summoner.puuid,
     profileIcon: summoner.profileIconId,
     level: summoner.summonerLevel,
-    region: "na",
+    region: 'na',
     ranked,
   }
 })

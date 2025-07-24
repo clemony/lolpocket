@@ -25,8 +25,12 @@ const { bayesianItems } = useMatchItems()
             </BayesianTooltip>
           </div>
 
-          <template v-for="entry in bayesianItems" :key="entry.item?.id">
-            <div v-if="entry" class="grid  grid-cols-[20px_repeat(2,40px)_1fr_repeat(2,60px)_20px] w-full py-3 border-b border-b-b2 items-center overflow-y-auto">
+          <template
+            v-for="entry in bayesianItems"
+            :key="entry.item?.id">
+            <div
+              v-if="entry"
+              class="grid  grid-cols-[20px_repeat(2,40px)_1fr_repeat(2,60px)_20px] w-full py-3 border-b border-b-b2 items-center overflow-y-auto">
               <div />
 
               <div
@@ -41,7 +45,9 @@ const { bayesianItems } = useMatchItems()
               </div>
 
               <div>
-                <img class="size-10 rounded-xl" :src="`/img/item/${entry.item?.id}.webp`" />
+                <img
+                  class="size-10 rounded-xl"
+                  :src="`/img/item/${entry.item?.id}.webp`" />
               </div>
 
               <div class="list-col-grow -space-y-1">

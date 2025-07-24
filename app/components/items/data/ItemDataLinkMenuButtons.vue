@@ -26,7 +26,9 @@ const { name, id } = defineProps<{
       :href="getWikiLink(name)"
       target="_blank"
       alt="link to league wiki">
-      <icon name="link-lg" class="size-4 dst" />
+      <icon
+        name="link-lg"
+        class="size-4 dst" />
     </a>
   </div>
 </template>

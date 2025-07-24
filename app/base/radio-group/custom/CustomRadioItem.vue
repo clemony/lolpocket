@@ -15,7 +15,9 @@ const props = defineProps<{
         props.class,
       )
     ">
-    <RadioGroupIndicator as-child class="flex items-center justify-center relative">
+    <RadioGroupIndicator
+      as-child
+      class="flex items-center justify-center relative">
       <Motion
         layout
         :initial="{
@@ -36,7 +38,9 @@ const props = defineProps<{
           damping: 20,
           duration: 1,
         }">
-        <icon name="codicon:circle-filled" class="size-5.25 -mt-px text-n1  opacity-100 group-disabled:opacity-0 absolute" />
+        <icon
+          name="codicon:circle-filled"
+          class="size-5.25 -mt-px text-n1  opacity-100 group-disabled:opacity-0 absolute" />
       </Motion>
     </RadioGroupIndicator>
   </RadioGroupItem>

@@ -1,6 +1,6 @@
 export function saveNotificationData(
   vars: Record<string, string>,
-  template?: string
+  template?: string,
 ) {
   const as = useAccountStore()
 
@@ -24,10 +24,10 @@ export function saveNotificationData(
 
   as.userAccount.inbox.newNotifications++
   console.log(
-    "💠 - as.userAccount.inbox.newNotifications:",
-    as.userAccount.inbox.newNotifications
+    '💠 - as.userAccount.inbox.newNotifications:',
+    as.userAccount.inbox.newNotifications,
   )
-  console.log("💠 - constructNotification - n:", n)
+  console.log('💠 - constructNotification - n:', n)
 }
 
 /* delete */

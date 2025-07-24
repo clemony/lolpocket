@@ -1,4 +1,4 @@
-import { getMatchById } from "../api/riot-client"
+import { getMatchById } from '../api/riot-client'
 
 /**
  * Fetches match details in batches with limited concurrency.
@@ -29,14 +29,13 @@ export async function fetchInBatches(ids: string[]) {
   await Promise.all(
     Array.from({ length: Math.ceil(ids.length / concurrency) }, (_, i) =>
       Promise.all(
-        ids.slice(i * concurrency, (i + 1) * concurrency).map((id) =>
+        ids.slice(i * concurrency, (i + 1) * concurrency).map(id =>
           getMatchById(id).catch((error) => {
             console.error(`Error fetching match ${id}:`, error)
             return null
-          })
-        )
-      ).then((batch) => results.push(...batch.filter(Boolean)))
-    )
+          }),
+        ),
+      ).then(batch => results.push(...batch.filter(Boolean)))),
   )
 
   return results

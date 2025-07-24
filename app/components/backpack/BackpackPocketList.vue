@@ -33,7 +33,10 @@ onMounted (() => {
 
       <LazyCollapsiblePinned />
 
-      <LazyCollapsible v-model:open="all" :disabled="!ps.pockets || ps.pockets.length == null || ps.pockets.length == 0" class="group/all">
+      <LazyCollapsible
+        v-model:open="all"
+        :disabled="!ps.pockets || ps.pockets.length == null || ps.pockets.length == 0"
+        class="group/all">
         <SidebarCollapsibleTrigger class="gap-3">
           <i-ui-pocket class="size-5 -mt-px -left-0.25 group-not-disabled/pin:text-bc group-disabled/all:text-bc/35" />
 
@@ -49,9 +52,17 @@ onMounted (() => {
         </SidebarCollapsibleTrigger>
 
         <SidebarCollapsibleContent class="pb-6">
-          <NuxtLink v-for="pocket in ps.pockets" :key="pocket.key" :to="`/pocket/${pocket.key}`">
-            <Btn v-if="pocket" class="w-full btn-md gap-3 flex-nowrap text-nowrap">
-              <PocketIcon :url="pocket.icon" class="size-5 rounded-full" size="sm" />
+          <NuxtLink
+            v-for="pocket in ps.pockets"
+            :key="pocket.key"
+            :to="`/pocket/${pocket.key}`">
+            <Btn
+              v-if="pocket"
+              class="w-full btn-md gap-3 flex-nowrap text-nowrap">
+              <PocketIcon
+                :url="pocket.icon"
+                class="size-5 rounded-full"
+                size="sm" />
 
               <span class="truncate">
                 {{ pocket.name }}
@@ -61,8 +72,12 @@ onMounted (() => {
         </SidebarCollapsibleContent>
       </LazyCollapsible>
 
-      <Btn class="w-full btn-md gap-3" @click="navigateTo('/pockets/archive')">
-        <icon name="archive" class="size-4 ml-0.25" />
+      <Btn
+        class="w-full btn-md gap-3"
+        @click="navigateTo('/pockets/archive')">
+        <icon
+          name="archive"
+          class="size-4 ml-0.25" />
         Archive
         <SidebarBadge class="font-mono !text-1 pr-4">
           <span v-if="!ps.archiveFolder || ps.archiveFolder == null || ps.archiveFolder.length == 0">0</span>
@@ -73,7 +88,9 @@ onMounted (() => {
         </SidebarBadge>
       </Btn>
 
-      <Btn class="w-full btn-md gap-3" @click="navigateTo('/pockets/trash')">
+      <Btn
+        class="w-full btn-md gap-3"
+        @click="navigateTo('/pockets/trash')">
         <icon name="trash" />
         Trash
         <SidebarBadge class="font-mono !text-1 pr-4">

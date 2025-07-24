@@ -23,8 +23,12 @@ const selectedSpell = computed (() => {
 
 <template>
   <Popover>
-    <PopoverTrigger :class="cn('p-0 group/trig w-full  btn  hover:ring  hover:ring-n1/40 ', props.class)" @click.stop.prevent>
-      <div class="overflow-hidden size-full rounded-lg" :class="{ ' shadow-sm drop-shadow-sm': selectedSpell != null }">
+    <PopoverTrigger
+      :class="cn('p-0 group/trig w-full  btn  hover:ring  hover:ring-n1/40 ', props.class)"
+      @click.stop.prevent>
+      <div
+        class="overflow-hidden size-full rounded-lg"
+        :class="{ ' shadow-sm drop-shadow-sm': selectedSpell != null }">
         <Placeholder
           v-if="selectedSpell == null"
           alt="no summoner spell chosen"

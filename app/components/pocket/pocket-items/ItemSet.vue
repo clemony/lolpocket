@@ -19,17 +19,27 @@ function onEnd() {
 
 <template>
   <Field
-    :key="setName" class="py-3 px-2  group/set">
+    :key="setName"
+    class="py-3 px-2  group/set">
     <!-- <input v-model="is.selectedItemSet" type="radio" name="selected-set" class="!hidden z-0" /> -->
-    <EditableInputBox :model-value="setName" class="*:font-semibold *:tracking-tight focus-within:btn focus-within:btn-sm z-0focus-within:rounded-md focus-within:justify-start focus-within:px-2 focus-within:ring focus-within:ring-neutral/60 max-w-90 h-10 cursor-pointer focus-within:-top-4 focus-within:left-3 transition-colors duration-300 focus-within:text-start focus-within:bg-b1 focus-within:hover:bg-b1 field-legend  [&_.edit-trigger]:opacity-0 " />
+    <EditableInputBox
+      :model-value="setName"
+      class="*:font-semibold *:tracking-tight focus-within:btn focus-within:btn-sm z-0focus-within:rounded-md focus-within:justify-start focus-within:px-2 focus-within:ring focus-within:ring-neutral/60 max-w-90 h-10 cursor-pointer focus-within:-top-4 focus-within:left-3 transition-colors duration-300 focus-within:text-start focus-within:bg-b1 focus-within:hover:bg-b1 field-legend  [&_.edit-trigger]:opacity-0 " />
 
     <DropdownMenu>
       <DropdownMenuTrigger class="group/trig z-2 top-2.5 absolute right-4  data-[state=open]:!bg-neutral/85 hover:border-b2 btn btn-sm btn-ghost !pointer-events-auto dst hover:!bg-b1/90  rounded-lg btn-square">
-        <icon name="more" class="size-5 shrink-0 group-data-[state=open]/trig:!text-nc" />
+        <icon
+          name="more"
+          class="size-5 shrink-0 group-data-[state=open]/trig:!text-nc" />
       </DropdownMenuTrigger>
 
-      <LazyContrastDropdownContent align="end" :side-offset="1" class="w-64">
-        <LazyItemSetMenu :pocket="pocket" :set="itemSet" />
+      <LazyContrastDropdownContent
+        align="end"
+        :side-offset="1"
+        class="w-64">
+        <LazyItemSetMenu
+          :pocket="pocket"
+          :set="itemSet" />
       </LazyContrastDropdownContent>
     </DropdownMenu>
 
@@ -66,7 +76,9 @@ function onEnd() {
       <Popover
         v-for="item in set"
         :key="item.toString()">
-        <PopoverTrigger as-child class="shrink-0 item !size-19 ">
+        <PopoverTrigger
+          as-child
+          class="shrink-0 item !size-19 ">
           <Item
             :id="item"
             :pocket="pocket"
@@ -84,7 +96,9 @@ function onEnd() {
       </Popover>
 
       <transition-slide>
-        <div v-show="!set.length" class="rounded-lg border-0 size-19 shadow-sm shadow-black/7  bg-b3/40 animate-in zoom-in  no-drag " />
+        <div
+          v-show="!set.length"
+          class="rounded-lg border-0 size-19 shadow-sm shadow-black/7  bg-b3/40 animate-in zoom-in  no-drag " />
       </transition-slide>
     </div>
   </Field>

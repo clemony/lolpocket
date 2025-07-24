@@ -24,7 +24,9 @@ const variants = {
 </script>
 
 <template>
-  <AnimatePresence as="div" class="absolute grid place-items-center right-4 top-4 z-3">
+  <AnimatePresence
+    as="div"
+    class="absolute grid place-items-center right-4 top-4 z-3">
     <Motion
       :animate="menuOpen ? 'open' : 'closed'"
       :variants="variants"
@@ -47,7 +49,9 @@ const variants = {
             type: 'spring',
             duration: 0.5,
           }">
-          <icon name="more" class="rotate-90 !text-[rgba(255,255,255,0.7)]  size-6 dst " />
+          <icon
+            name="more"
+            class="rotate-90 !text-[rgba(255,255,255,0.7)]  size-6 dst " />
         </motion.button>
 
         <Motion
@@ -66,7 +70,9 @@ const variants = {
             type: 'spring',
             duration: 0.5,
           }">
-          <icon name="add-sm" class=" size-8  dst z-3 !text-[rgba(255,255,255,0.7)]" />
+          <icon
+            name="add-sm"
+            class=" size-8  dst z-3 !text-[rgba(255,255,255,0.7)]" />
         </Motion>
       </AnimatePresence>
     </Motion>

@@ -14,13 +14,19 @@ const region = computed(() => {
 </script>
 
 <template>
-  <span v-if="region" :class="cn('flex items-center lowercase', className)">
+  <span
+    v-if="region"
+    :class="cn('flex items-center lowercase', className)">
 
-    <icon name="at" class="size-3.25 dst" />
+    <icon
+      name="at"
+      class="size-3.25 dst" />
     {{ region }}
   </span>
 
-  <span v-else :class="cn('', className)">
+  <span
+    v-else
+    :class="cn('', className)">
     Runeterra
   </span>
 </template>

@@ -9,7 +9,9 @@ const delegatedProps = reactiveOmit(props, 'class')
 </script>
 
 <template>
-  <DrawerDescription v-bind="delegatedProps" :class="cn('text-2 text-bc/70', props.class)">
+  <DrawerDescription
+    v-bind="delegatedProps"
+    :class="cn('text-2 text-bc/70', props.class)">
     <slot />
   </DrawerDescription>
 </template>

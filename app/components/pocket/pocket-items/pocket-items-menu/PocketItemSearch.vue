@@ -118,14 +118,27 @@ watchEffect(() => {
     :animate="searchQuery != null ? 'expanded' : 'collapsed'">
     <motion.div :variants="inputVariants">
       <slot>
-        <Input v-model="searchQuery" type="text" class="size-full pl-5 border-0 shadow-none py-0 m-0" :placeholder="props.placeholder" />
+        <Input
+          v-model="searchQuery"
+          type="text"
+          class="size-full pl-5 border-0 shadow-none py-0 m-0"
+          :placeholder="props.placeholder" />
       </slot>
     </motion.div>
 
-    <button :disabled="searchQuery == null" class="btn btn-ghost btn-circle btn-xs  hover:bg-b3/40 absolute  z-2 left-1.5 top-1.5 pointer-events-auto" @click="handleReset">
-      <icon v-if="searchQuery" name="x-sm" class="size-5.5 shrink-0 text-bc/70 absolute dst" />
+    <button
+      :disabled="searchQuery == null"
+      class="btn btn-ghost btn-circle btn-xs  hover:bg-b3/40 absolute  z-2 left-1.5 top-1.5 pointer-events-auto"
+      @click="handleReset">
+      <icon
+        v-if="searchQuery"
+        name="x-sm"
+        class="size-5.5 shrink-0 text-bc/70 absolute dst" />
 
-      <icon v-else name="search" class="size-4.75 shrink-0 text-bc/70 absolute   dst" />
+      <icon
+        v-else
+        name="search"
+        class="size-4.75 shrink-0 text-bc/70 absolute   dst" />
     </button>
   </motion.div>
 </template>

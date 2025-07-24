@@ -1,6 +1,6 @@
-import type { Session } from "@supabase/supabase-js"
-import { jwtDecode } from "jwt-decode"
-import { toast } from "vue-sonner"
+import type { Session } from '@supabase/supabase-js'
+import { jwtDecode } from 'jwt-decode'
+import { toast } from 'vue-sonner'
 
 export function useAuth() {}
 
@@ -9,17 +9,17 @@ export async function hydrateUser(session: Session) {
   const decoded = jwtDecode<AuthRoleJwtPayload>(session.access_token)
 
   if (!session.user) {
-    throw new Error("hydrateUser: session.user is null or undefined")
+    throw new Error('hydrateUser: session.user is null or undefined')
   }
 
   if (!decoded.app_metadata?.user_role) {
-    throw new Error("hydrateUser: user_role is null or undefined")
+    throw new Error('hydrateUser: user_role is null or undefined')
   }
 
-  const name =
-    session.user.user_metadata?.custom_claims?.global_name ??
-    session.user.user_metadata?.name ??
-    "Summoner"
+  const name
+    = session.user.user_metadata?.custom_claims?.global_name
+      ?? session.user.user_metadata?.name
+      ?? 'Summoner'
 
   as.userAccount = {
     ...as.userAccount,
@@ -37,27 +37,21 @@ export async function hydrateUser(session: Session) {
     }
   }
 
-  as.currentSession = {
-    session,
-    accessToken: session.access_token,
-    refreshToken: session.refresh_token,
-  }
-
   as.$persist
 }
 
 async function fetchSummonerData(
-  userId: string
+  userId: string,
 ): Promise<Partial<Summoner> | null> {
   const client = useSupabaseClient()
   const { data, error } = await client
-    .from("user_data")
+    .from('user_data')
     .select('"name", "tag",  "puuid", "region"')
-    .eq("user_id", userId)
+    .eq('user_id', userId)
     .single()
 
   if (error) {
-    console.error("Summoner fetch failed:", error)
+    console.error('Summoner fetch failed:', error)
     return null
   }
 
@@ -65,17 +59,10 @@ async function fetchSummonerData(
 }
 
 export async function useSignOut() {
-  const accountStore = useAccountStore()
   const supabaseClient = useSupabaseClient()
   const router = useRouter()
 
-  accountStore.currentSession = {
-    session: null,
-    accessToken: null,
-    refreshToken: null,
-  }
-
   await supabaseClient.auth.signOut()
-  router.push("/")
-  toast.success("Successfully logged out")
+  router.push('/')
+  toast.success('Successfully logged out')
 }

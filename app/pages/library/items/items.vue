@@ -27,7 +27,9 @@ const ix = useIndexStore()
         class="group relative overflow-visible   data-[state=hidden]:scale-0 data-[state=hidden]:size-0
 data-[state=visible]:scale-100 data-[state=visible]:size-28 grid place-items-center">
         <LazyPopoverItem
-          v-show="filtered.includes(item.id)" :id="item.id" class="  aspect-square  rounded-lg  max-w-22 size-22 **:size-22'" />
+          v-show="filtered.includes(item.id)"
+          :id="item.id"
+          class="  aspect-square  rounded-lg  max-w-22 size-22 **:size-22'" />
       </div>
     </transition-slide>
   </div>

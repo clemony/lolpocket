@@ -11,10 +11,25 @@ const is = useItemStore()
     </CollapsibleTrigger>
 
     <CollapsibleContent class="CollapsibleContent">
-      <AnimatePresence multiple as="div" unwrap-element class="flex flex-col z-0 mb-2 px-1.5" :appear="false">
-        <Motion v-for="stat in itemStats" :key="stat.id" as="div">
-          <label v-if="!is.pItemFilter.stats.includes(stat.id)" class="w-full rounded-md flex hover:bg-accent capitalize py-1.5 pl-8 pr-2.5">
-            <input v-model="is.pItemFilter.stats" type="checkbox" name="item-types" class="peer hidden" :value="stat" />
+      <AnimatePresence
+        multiple
+        as="div"
+        unwrap-element
+        class="flex flex-col z-0 mb-2 px-1.5"
+        :appear="false">
+        <Motion
+          v-for="stat in itemStats"
+          :key="stat.id"
+          as="div">
+          <label
+            v-if="!is.pItemFilter.stats.includes(stat.id)"
+            class="w-full rounded-md flex hover:bg-accent capitalize py-1.5 pl-8 pr-2.5">
+            <input
+              v-model="is.pItemFilter.stats"
+              type="checkbox"
+              name="item-types"
+              class="peer hidden"
+              :value="stat" />
 
             <span class="grow">{{ stat.displayName }}</span>
 

@@ -21,11 +21,16 @@ const pocket = ref(props.pocket)
           v-tippy="pocket.roles"
           class="size-6.5 drop-shadow-text focus:outline-0 shrink-0 !text-3 text-white/70" />
 
-        <i-roles-all-lanes v-else class="size-6 shrink-0 dst text-white/80" />
+        <i-roles-all-lanes
+          v-else
+          class="size-6 shrink-0 dst text-white/80" />
       </Button>
     </DropdownMenuTrigger>
 
-    <DropdownMenuContent key="role" class="w-48" side="bottom">
+    <DropdownMenuContent
+      key="role"
+      class="w-48"
+      side="bottom">
       <DropdownMenuItem>
         <label
           for="all"

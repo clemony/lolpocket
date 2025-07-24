@@ -37,7 +37,9 @@ const colorChip = 'aspect-square inset-shadow-sm drop-shadow-xs size-9 flex item
       </div>
 
       <ListboxItemIndicator class="absolute bg-n1 size-7 grid place-items-center -left-1.5 -top-1.5  rounded-full shadow-sm drop-shadow-sm">
-        <icon name="tick-sm" class="size-6 text-nc stroke-[1.5]" />
+        <icon
+          name="tick-sm"
+          class="size-6 text-nc stroke-[1.5]" />
       </ListboxItemIndicator>
     </div>
   </ListboxItem>

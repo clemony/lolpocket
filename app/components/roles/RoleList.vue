@@ -42,10 +42,16 @@ function handleReset() {
     Is your pocket for a specific role? Roles can be specified in addition to champions, or in place of them.
   </p>
 
-  <transition-slide tag="form" group class="filter gap-2">
+  <transition-slide
+    tag="form"
+    group
+    class="filter gap-2">
     <input
-      class="btn filter-reset bg-b1 text-7 !font-normal text-bc peer" type="checkbox"
-      name="roles" aria-label="x" @click="pocket.roles = [null]" />
+      class="btn filter-reset bg-b1 text-7 !font-normal text-bc peer"
+      type="checkbox"
+      name="roles"
+      aria-label="x"
+      @click="pocket.roles = [null]" />
 
     <label
       v-for="role in sortedRoles"

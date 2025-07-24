@@ -38,7 +38,9 @@ const contentVariants = {
 </script>
 
 <template>
-  <Collapsible :default-open="true" :disabled="results.length <= 0">
+  <Collapsible
+    :default-open="true"
+    :disabled="results.length <= 0">
     <CollapsibleTrigger as-child>
       <motion.button
         :variants="variants"
@@ -59,7 +61,9 @@ const contentVariants = {
           {{ results.length ?? 'no results' }}
         </Badge>
 
-        <PlusMinusExpand v-if="results.length" class="!text-bc " />
+        <PlusMinusExpand
+          v-if="results.length"
+          class="!text-bc " />
       </motion.button>
     </CollapsibleTrigger>
 
@@ -69,8 +73,11 @@ const contentVariants = {
       :variants="contentVariants"
       initial="hidden"
       animate="visible"
-      exit="exit" class="overflow-hidden">
-      <CollapsibleContent class=" CollapsibleContent mb-1 mx-7 before:w-px before:absolute before:bg-black-30/64 before:left-0 before:top-2.5" :class="{ 'before:h-[calc(100%-36px)]': results.length > 3, 'before:h-[calc(100%-4px)]': results.length <= 3 }">
+      exit="exit"
+      class="overflow-hidden">
+      <CollapsibleContent
+        class=" CollapsibleContent mb-1 mx-7 before:w-px before:absolute before:bg-black-30/64 before:left-0 before:top-2.5"
+        :class="{ 'before:h-[calc(100%-36px)]': results.length > 3, 'before:h-[calc(100%-4px)]': results.length <= 3 }">
         <motion.ul
           class="flex relative flex-col   ml-2 pl-2 pr-7 "
           :transition="{

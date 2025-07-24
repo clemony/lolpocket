@@ -4,32 +4,42 @@ import {
   isMobile,
   isTablet,
   isWindows,
-} from "@basitcodeenv/vue3-device-detect"
+} from '@basitcodeenv/vue3-device-detect'
 
 export function getDevice() {
   return (
-    isMacOS ? "MacOS"
-    : isWindows ? "Windows"
-    : isMobile ? "Mobile"
-    : null
+    isMacOS
+      ? 'MacOS'
+      : isWindows
+        ? 'Windows'
+        : isMobile
+          ? 'Mobile'
+          : null
   )
 }
 
 export function getDeviceKey() {
   return (
-    getDevice() == "MacOS" ? "⌘"
-    : getDevice() == "Windows" ? "ctrl"
-    : getDevice() == "Mobile" ? ""
-    : "meta"
+    getDevice() == 'MacOS'
+      ? '⌘'
+      : getDevice() == 'Windows'
+        ? 'ctrl'
+        : getDevice() == 'Mobile'
+          ? ''
+          : 'meta'
   )
 }
 
 export function isDesktop() {
   return (
-    isMacOS ? true
-    : isWindows ? true
-    : isLinux ? true
-    : !isMobile ? false
-    : !isTablet
+    isMacOS
+      ? true
+      : isWindows
+        ? true
+        : isLinux
+          ? true
+          : !isMobile
+              ? false
+              : !isTablet
   )
 }

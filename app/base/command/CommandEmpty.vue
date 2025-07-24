@@ -20,7 +20,10 @@ const isRender = computed(() => !!filterState.search && filterState.filtered.cou
 </script>
 
 <template>
-  <Primitive v-if="isRender" v-bind="delegatedProps" :class="cn('py-6 text-center text-2', props.class)">
+  <Primitive
+    v-if="isRender"
+    v-bind="delegatedProps"
+    :class="cn('py-6 text-center text-2', props.class)">
     <slot />
   </Primitive>
 </template>

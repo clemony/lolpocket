@@ -1,4 +1,4 @@
-import { fetchSummonerMastery } from "./helpers/fetchSummonerMastery"
+import { fetchSummonerMastery } from './helpers/fetchSummonerMastery'
 
 export function useSummoner(identifier: string | SummonerIdentifier = {}) {
   const ss = useSummonerStore()
@@ -6,12 +6,13 @@ export function useSummoner(identifier: string | SummonerIdentifier = {}) {
   const ready = ref(false)
 
   const loadingMessage = computed(() => {
-    if (!loading.value) return ""
-    return "Loading Summoner..."
+    if (!loading.value)
+      return ''
+    return 'Loading Summoner...'
   })
 
   const currentPuuid = ref<string | null>(
-    typeof identifier === "string" ? identifier : identifier.puuid || null
+    typeof identifier === 'string' ? identifier : identifier.puuid || null,
   )
   const summoner = ref<Summoner | null>(null)
 
@@ -30,23 +31,40 @@ export function useSummoner(identifier: string | SummonerIdentifier = {}) {
       }
 
       const resolved = await ss.resolveSummoner(
-        typeof identifier === "string" ? { puuid: identifier } : identifier
+        typeof identifier === 'string' ? { puuid: identifier } : identifier,
       )
 
-      summoner.value = resolved
       currentPuuid.value = resolved.puuid
+
+      // 🔥 Fetch public profile splash (non-blocking, but stored if found)
+      const splash = await fetchProfileSplash(resolved.puuid)
+      if (splash) {
+        resolved.profileSplash = splash.splash_url
+      }
+
+      summoner.value = resolved
+      ss.setSummoner(resolved)
       ss.limitCache(10)
-    } catch (e) {
-      console.error("❌ fetchSummoner failed:", e)
-    } finally {
+    }
+    catch (e) {
+      console.error('❌ fetchSummoner failed:', e)
+    }
+    finally {
       loading.value = false
       ready.value = true
     }
   }
 
+  async function fetchMastery(full = false) {
+    if (!currentPuuid.value)
+      return null
+    return await fetchSummonerMastery(currentPuuid.value, full)
+  }
+
   const refreshMatches = async () => {
-    if (!summoner.value) return
-    console.log("refreshMatches:", summoner.value)
+    if (!summoner.value)
+      return
+    console.log('refreshMatches:', summoner.value)
 
     const updated = await normalizeSummonerForStore(summoner.value)
 
@@ -58,13 +76,8 @@ export function useSummoner(identifier: string | SummonerIdentifier = {}) {
     () => {
       fetchSummoner()
     },
-    { immediate: true }
+    { immediate: true },
   )
-
-  async function fetchMastery(full = false) {
-    if (!currentPuuid.value) return null
-    return await fetchSummonerMastery(currentPuuid.value, full)
-  }
 
   return {
     summoner,

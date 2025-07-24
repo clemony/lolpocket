@@ -10,7 +10,10 @@ const pocket = computed (() => ps.pockets.find(p => p.key == pocketKey) || null)
 
 <template>
   <span class="size-9">
-    <LazyPocketIcon :image="pocket.icon" class="size-9 rounded-full shrink-0" hydrate-on-visible />
+    <LazyPocketIcon
+      :image="pocket.icon"
+      class="size-9 rounded-full shrink-0"
+      hydrate-on-visible />
   </span>
 
   <span class="truncate text-nowrap">

@@ -8,7 +8,7 @@ const props = defineProps<{
 
 <template>
   <div class="bg-b2/30 drop-shadow-xs border-b3/40 p-0  h-44 w-220 field grid justify-center **:select-none text-2 shadow-warm-soft overflow-visible">
-    <div class="flex gap-7 opacity-60 py-6 size-full items-start overflow-hidden  cursor-pointer group/collapse pl-6 pr-6 ">
+    <div class="flex gap-7 opacity-60 py-6 size-full items-start overflow-hidden  cursor-pointer  pl-6 pr-6 ">
       <div class="flex w-38 h-34 **:select-none flex-col justify-start gap-1.5">
         <Skeleton class="w-20 h-1/2 mb-2" />
 

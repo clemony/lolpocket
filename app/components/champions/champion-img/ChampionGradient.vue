@@ -7,7 +7,8 @@ const props = defineProps<{
 
 <template>
   <div
-    :class="cn(' place-self-center size-full absolute z-0 overflow-hidden', props.class)" :style="{
+    :class="cn(' place-self-center size-full absolute z-0 overflow-hidden', props.class)"
+    :style="{
       backgroundImage:
         `url(/img/champion-centered/${props.champion.id}_0.webp)`,
       backgroundSize: '250%',

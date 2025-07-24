@@ -33,7 +33,9 @@ const data = [
 </script>
 
 <template>
-  <div ref="wrapper" class="bg-b1 relative z-2  h-[80vh] w-full  items-center justify-center ">
+  <div
+    ref="wrapper"
+    class="bg-b1 relative z-2  h-[80vh] w-full  items-center justify-center ">
     <div class="bg-n1 items-center text-nc flex overflow-hidden px-10  z-20 m-auto h-[98%] w-[95%] rounded-3xl grid grid-cols-2 gap-10">
       <div class="size-full grid wp-77% justify-items-center relative py-20 overflow-hidden">
         <motion.h2
@@ -73,7 +75,8 @@ const data = [
           </div>
 
           <p
-            class="text-pretty leading-loose text-nc font-light text-4 " v-html="item.text" />
+            class="text-pretty leading-loose text-nc font-light text-4 "
+            v-html="item.text" />
         </motion.div>
       </div>
     </div>

@@ -13,9 +13,19 @@ onMounted (() => {
 
 <template>
   <CommandResult>
-    <input v-model="modelValue" type="radio" class="peer hidden" name="item-popover" :value="item.id" @change="emit('update:modelValue', modelValue)" />
+    <input
+      v-model="modelValue"
+      type="radio"
+      class="peer hidden"
+      name="item-popover"
+      :value="item.id"
+      @change="emit('update:modelValue', modelValue)" />
 
-    <Item :id="item.id" :item="item" :alt="item.id" class="size-7 rounded-full" />
+    <Item
+      :id="item.id"
+      :item="item"
+      :alt="item.id"
+      class="size-7 rounded-full" />
     {{ item.name }}
   </CommandResult>
 </template>

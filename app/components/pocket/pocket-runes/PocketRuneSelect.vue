@@ -24,7 +24,7 @@ const currentSet = computed(() => [
   currentRunes.value[3],
 ])
 
-function handleChange(slotIndex: number, selectedKey: string) {
+function handleChange(slotIndex: number, selectedKey: number) {
   const runeSlot = (slotIndex + 1) as keyof PathRunes
 
   currentRunes.value[runeSlot] = selectedKey
@@ -44,7 +44,8 @@ onMounted(() => {
   <Field class="ease !px-0 !m-0 items-center justify-center gap-y-16 flex flex-col relative  w-full rounded-xl transition-all duration-500 **:select-none pb-16 pt-12">
     <template v-if="runes && runes.length">
       <div
-        v-for="(slot, i) in runes" :key="i"
+        v-for="(slot, i) in runes"
+        :key="i"
         class="cursor-pointer flex h-16 justify-evenly w-full gap-3 ">
         <AnimatePresence
           v-for="rune in slot"
@@ -90,8 +91,13 @@ onMounted(() => {
       </div>
     </template>
 
-    <div v-else class="size-full grid grid-cols-3 gap-y-14">
-      <Placeholder v-for="i in 9" :key="i" class="size-18 rounded-full place-self-center" />
+    <div
+      v-else
+      class="size-full grid grid-cols-3 gap-y-14">
+      <Placeholder
+        v-for="i in 9"
+        :key="i"
+        class="size-18 rounded-full place-self-center" />
     </div>
   </Field>
 </template>

@@ -13,7 +13,7 @@ const runeSetsLength = computed (() => {
       const a = Object.values(set.value[0].runes)
       const b = () => {
         if (a) {
-          const b1 = a.filter(r => r.name != 'empty')
+          const b1 = a.filter(r => r != null)
           return b1
         }
       }
@@ -36,7 +36,9 @@ const runeSetsLength = computed (() => {
 </script>
 
 <template>
-  <span v-tippy="`${runeSetsLength ? runeSetsLength : 'no'} rune`" :class="cn('flex gap-1.5 items-center', props.class)">
+  <span
+    v-tippy="`${runeSetsLength ? runeSetsLength : 'no'} rune`"
+    :class="cn('flex gap-1.5 items-center', props.class)">
     <span class="dst font-mono text-1 ">{{ runeSetsLength }}</span>
   </span>
 </template>

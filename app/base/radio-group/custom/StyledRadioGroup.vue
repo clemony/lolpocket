@@ -14,7 +14,9 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
-  <div v-bind="forwarded" :class="cn('flex flex-col', props.class)">
+  <div
+    v-bind="forwarded"
+    :class="cn('flex flex-col', props.class)">
     <slot />
   </div>
 </template>

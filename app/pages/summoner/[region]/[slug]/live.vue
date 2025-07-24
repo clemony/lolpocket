@@ -4,6 +4,6 @@
 
 <template>
   <div>
-    <PagePlaceholder  />
+    <PagePlaceholder />
   </div>
 </template>

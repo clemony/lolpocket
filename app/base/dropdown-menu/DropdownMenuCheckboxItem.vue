@@ -24,7 +24,9 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
     )">
     <span class="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
       <DropdownMenuItemIndicator>
-        <icon name="tick-sm" class="w-4 h-4" />
+        <icon
+          name="tick-sm"
+          class="w-4 h-4" />
       </DropdownMenuItemIndicator>
     </span>
 

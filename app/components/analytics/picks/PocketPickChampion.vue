@@ -41,7 +41,9 @@ const winrateDiff = computed (() => {
     <div class="stat">
       <div class="stat-figure text-secondary">
         <div class="size-8 leading-none tracking-wider  !font-black relative grid place-items-center">
-          <icon name="teenyicons:heart-circle-solid" class="size-8 text-bc  -mt-0.5 dst" />
+          <icon
+            name="teenyicons:heart-circle-solid"
+            class="size-8 text-bc  -mt-0.5 dst" />
         </div>
       </div>
 
@@ -62,7 +64,10 @@ const winrateDiff = computed (() => {
       <div class="stat-figure text-secondary">
         <div class="avatar online shadow-md drop-shadow-sm rounded-full size-16 relative grid place-items-center">
           <div class="size-20 absolute rounded-full overflow-hidden">
-            <ChampionIcon :id="champion.championId" :alt="champion.champion" class="size-full scale-109 object-center" />
+            <ChampionIcon
+              :id="champion.championId"
+              :alt="champion.champion"
+              class="size-full scale-109 object-center" />
           </div>
         </div>
       </div>

@@ -20,7 +20,8 @@ function onLoad() {
 
 <template>
   <div
-    class="size-full" :class="cn('grid justify-center  overflow-hidden  relative cursor-pointer bg-no-repeat rounded-lg  size-full **:select-none  group ', className)"
+    class="size-full"
+    :class="cn('grid justify-center  overflow-hidden  relative cursor-pointer bg-no-repeat rounded-lg  size-full **:select-none  group ', className)"
 
     :style="{
       objectPosition: bgPosition,
@@ -32,7 +33,8 @@ function onLoad() {
         width: bgSize,
         height: bgSize,
       }"
-      class="object-cover absolute -top-8" :class="{ 'inset-shadow-[0px_0px_10px_4px_#00000040] animate-in fade-in zoom-in duration-500 ': loaded }"
+      class="object-cover absolute -top-8"
+      :class="{ 'inset-shadow-[0px_0px_10px_4px_#00000040] animate-in fade-in zoom-in duration-500 ': loaded }"
       :alt="`${champKey}-Splash`"
       @load="onLoad()">
       <slot />

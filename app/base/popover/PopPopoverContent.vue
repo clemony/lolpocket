@@ -15,11 +15,11 @@ defineOptions({
 const props = withDefaults(
   defineProps<PopoverContentProps & {
     class?: HTMLAttributes['class']
-    to?: string,
+    to?: string
     sideOffset?: number
     align?: string
     scaleStart?: number
-   }>(),
+  }>(),
   {
     align: 'center',
     sideOffset: 4,
@@ -67,9 +67,16 @@ const wrapperVariants = {
 <template>
   <PopoverPortal :to="props.to">
     <AnimatePresence>
-      <PopoverContent as-child :align="align" v-bind="forwarded">
+      <PopoverContent
+        as-child
+        :align="align"
+        v-bind="forwarded">
         <motion.div
-          :variants="variants" initial="hidden" animate="visible" exit="hidden" :transition="{
+          :variants="variants"
+          initial="hidden"
+          animate="visible"
+          exit="hidden"
+          :transition="{
             type: 'spring',
             duration: 0.3,
             bounce: 0.2,
@@ -82,7 +89,12 @@ const wrapperVariants = {
             )
           ">
           <motion.div
-            :variants="wrapperVariants" initial="hidden" animate="visible" exit="hidden" class="size-full" :transition="{
+            :variants="wrapperVariants"
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            class="size-full"
+            :transition="{
               type: 'spring',
               bounce: 0.25,
               duration: 0.4,

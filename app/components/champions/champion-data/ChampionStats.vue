@@ -51,15 +51,22 @@ const filteredResolvedStats = computed(() => {
         BASE STATS
       </span>
 
-      <Select v-model:model-value="level" class="w-fit">
+      <Select
+        v-model:model-value="level"
+        class="w-fit">
         <ContrastSelectTrigger class="!h-7 w-fit flex gap-1 opacity-90 text-nc items-center">
           lvl
-          <SelectValue class="!text-nc" :placeholder="level.toString()" />
+          <SelectValue
+            class="!text-nc"
+            :placeholder="level.toString()" />
         </ContrastSelectTrigger>
 
         <ContrastSelectContent class="!z-9999  backdrop-blur-md">
           <SelectGroup>
-            <ContrastSelectItem v-for="i in 18" :key="i" :value="i">
+            <ContrastSelectItem
+              v-for="i in 18"
+              :key="i"
+              :value="i">
               {{ i }}
             </ContrastSelectItem>
           </SelectGroup>
@@ -67,13 +74,19 @@ const filteredResolvedStats = computed(() => {
       </Select>
     </div>
 
-    <div v-for="(value, key) in filteredResolvedStats" :key="key" class="col-start-1 grid h-fit ">
+    <div
+      v-for="(value, key) in filteredResolvedStats"
+      :key="key"
+      class="col-start-1 grid h-fit ">
       <div class="justify-between grid grid-cols-[46px_1fr_46px] items-center mb-1.5">
         <span class="font-semibold text-2 tracking-tight text-bc/70 dst">
           {{ (championStats.find(s => s.id === key)?.short || key) }}
         </span>
 
-        <progress class="progress w-full opacity-80" :value="value" :max="maxStats[key] ?? 100"></progress>
+        <progress
+          class="progress w-full opacity-80"
+          :value="value"
+          :max="maxStats[key] ?? 100"></progress>
 
         <span class="font-semibold text-bc/70 text-2 justify-self-end text-end ">
           {{ value }}

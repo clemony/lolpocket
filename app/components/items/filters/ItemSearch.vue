@@ -29,8 +29,12 @@ const searchQuery = ref('')
 
     <slot />
 
-    <button class="btn btn-ghost btn-square btn-sm absolute  right-2" @click="searchQuery = null">
-      <icon name="x-sm" class="shrink-0" />
+    <button
+      class="btn btn-ghost btn-square btn-sm absolute  right-2"
+      @click="searchQuery = null">
+      <icon
+        name="x-sm"
+        class="shrink-0" />
     </button>
   </div>
 </template>

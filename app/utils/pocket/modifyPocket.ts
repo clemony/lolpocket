@@ -1,5 +1,5 @@
-import { hexoid } from "hexoid"
-import { toast } from "vue-sonner"
+import { hexoid } from 'hexoid'
+import { toast } from 'vue-sonner'
 
 // delete
 
@@ -8,32 +8,32 @@ export function deletePocket(pocket) {
   const as = useAccountStore()
   const route = useRoute()
   const inPocket = route.path == `/pocket/${pocket.key}`
-  const index = ps.pockets.findIndex((p) => p === pocket)
-  console.log("💠 - deletePocket - inPocket:", inPocket)
+  const index = ps.pockets.findIndex(p => p === pocket)
+  console.log('💠 - deletePocket - inPocket:', inPocket)
 
   ps.trashFolder.push(pocket)
-  pocket.location.folder = "trash"
+  pocket.location.folder = 'trash'
   ps.pockets.splice(index, 1)
 
   if (inPocket) {
-    navigateTo("/pockets")
+    navigateTo('/pockets')
   }
 
-  if (as.userAccount.settings.notifications.newPocket) {
+  if (as.settings.alertNewPocket) {
     const newPocketToast = toast.success(
       `Pocket ${pocket.name} sent to trash.`,
       {
-        description: "You can restore it for up to 30 days.",
+        description: 'You can restore it for up to 30 days.',
         duration: 7000,
         action: {
-          label: "Restore?",
-          //onClick: () => navigateTo({ path: `/pocket/${newPocket.key}` }),
+          label: 'Restore?',
+          // onClick: () => navigateTo({ path: `/pocket/${newPocket.key}` }),
         },
         cancel: {
-          label: "×",
+          label: '×',
           onClick: () => toast.dismiss(newPocketToast),
         },
-      }
+      },
     )
 
     const vars = {
@@ -41,7 +41,7 @@ export function deletePocket(pocket) {
       pocketName: pocket.name,
     }
 
-    saveNotificationData(vars, "deletePocket")
+    saveNotificationData(vars, 'deletePocket')
   }
 }
 
@@ -81,9 +81,9 @@ export function getPocket(key) {
 // CHAMPS
 
 export function removeChamp(champ, pocket) {
-  console.log("💠 - removeChamp - pocket:", pocket)
-  const find = pocket.champions.children.findIndex((c) => c == champ)
-  console.log("💠 - removeChamp - find:", find)
+  console.log('💠 - removeChamp - pocket:', pocket)
+  const find = pocket.champions.children.findIndex(c => c == champ)
+  console.log('💠 - removeChamp - find:', find)
 
   if (find != -1) {
     pocket.champions.children.splice(find, 1)
@@ -99,15 +99,16 @@ export function resetRunes(set) {
 }
 
 export function deleteRuneSet(pocket, set) {
-  const a = pocket.runes.findIndex((s) => s == set)
-  console.log("💠 - deleteRuneSet - a:", a)
+  const a = pocket.runes.findIndex(s => s == set)
+  console.log('💠 - deleteRuneSet - a:', a)
   if (a != -1) {
     pocket.runes.splice(a, 1)
   }
 }
 
 export function removeSpellSet(pocket, set) {
-  const a = pocket.spells.sets.findIndex((s) => s == set)
-  if (!a) return
+  const a = pocket.spells.sets.findIndex(s => s == set)
+  if (!a)
+    return
   pocket.spells.sets.splice(a, 1)
 }

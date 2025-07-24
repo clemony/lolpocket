@@ -35,22 +35,39 @@ const copyMsg = computed (() => {
         :href="link.link"
         target="_blank"
         class="size-12 grid place-items-center *:text-nc">
-        <icon :name="link.icon.name" :class="link.icon.class" />
+        <icon
+          :name="link.icon.name"
+          :class="link.icon.class" />
       </NuxtLink>
 
       <a
         class="size-12">
-        <tippy tag="button" content-tag="div" :follow-cursor="false" content-class="content-wrapper" interactive :offset="[0, 13]" placement="top" :hide-on-click="false">
+        <tippy
+          tag="button"
+          content-tag="div"
+          :follow-cursor="false"
+          content-class="content-wrapper"
+          interactive
+          :offset="[0, 13]"
+          placement="top"
+          :hide-on-click="false">
           <template #default>
-            <icon name="teenyicons:at-outline" class="size-7 stroke-1/2 shrink-0 text-nc" />
+            <icon
+              name="teenyicons:at-outline"
+              class="size-7 stroke-1/2 shrink-0 text-nc" />
           </template>
 
           <template #content>
             <UseClipboard>
-              <button v-tippy="{ content: !copied ? 'Copy' : 'Copied!', placement: 'top', offset: [0, 5], hideOnClick: false }" class="flex items-center  py-2 gap-2" @click="copy()">
+              <button
+                v-tippy="{ content: !copied ? 'Copy' : 'Copied!', placement: 'top', offset: [0, 5], hideOnClick: false }"
+                class="flex items-center  py-2 gap-2"
+                @click="copy()">
                 <span>contact@lolpocket.win</span>
 
-                <icon name="copy" class="*:text-nc !size-4" />
+                <icon
+                  name="copy"
+                  class="*:text-nc !size-4" />
 
               </button>
             </UseClipboard>

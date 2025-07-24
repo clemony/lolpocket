@@ -16,7 +16,9 @@ whenever(keys.shift_a, () => {
 </script>
 
 <template>
-  <Sheet v-if="as && as.userAccount?.role == 'admin'" v-model:open="isOpen">
+  <Sheet
+    v-if="as && as.userAccount?.role == 'admin'"
+    v-model:open="isOpen">
     <LazyNestedSheetContent class="h-screen max-h-screen overflow-hidden ">
       <SheetHeader>
         <NestedSheetTitle>
@@ -29,7 +31,9 @@ whenever(keys.shift_a, () => {
       </SheetHeader>
 
       <div class="w-full *:w-full pt-10 grid grid-cols-1 h-fit">
-        <button class="btn w-full" @click="ss.clearAll()">
+        <button
+          class="btn w-full"
+          @click="ss.clearAll()">
           clear summoner store
         </button>
 
@@ -38,7 +42,8 @@ whenever(keys.shift_a, () => {
         <LogMatchesButton />
 
         <Btn
-          class="" @click="forceReload()">
+          class=""
+          @click="forceReload()">
           <icon
             name="refresh" />
           Force Reload User Summoner

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { itemStatRecord } from "@/data/index/item-stat-index"
+import { itemStatRecord } from '@/data/index/item-stat-index'
 
 import { motion } from 'motion-v'
 
@@ -15,7 +15,8 @@ function mergeItemStats(set: number[]) {
 
   for (const itemId of set) {
     const stats = itemStatRecord[itemId]
-    if (!stats) continue
+    if (!stats)
+      continue
 
     for (const [stat, value] of Object.entries(stats)) {
       mergedStats[stat] = (mergedStats[stat] || 0) + value
@@ -62,27 +63,53 @@ const set2 = computed (() => is.calculatorSet2)
         {{ is.isComparing ? '1' : 'TOTAL' }}
       </div>
 
-      <div v-if="is.isComparing" class="dst  justify-center font-medium">
+      <div
+        v-if="is.isComparing"
+        class="dst  justify-center font-medium">
         2
       </div>
     </div>
 
     <div class="overflow-y-auto w-full">
       <LayoutGroup>
-        <motion.label v-for="stat in checkedStats" :key="stat.id" :layout="true" class="sticky top-0 left-0 bg-b1 border-b first:border-t last:!border-b-b3 border-b-b3/55 border-t-b3/60  cursor-pointer *:justify-start  z-1  grid grid-cols-[40px_1fr_30px_30px]  py-3 hover:border-y hover:border-y-b3/80 items-center hover:bg-b1/50  ">
+        <motion.label
+          v-for="stat in checkedStats"
+          :key="stat.id"
+          :layout="true"
+          class="sticky top-0 left-0 bg-b1 border-b first:border-t last:!border-b-b3 border-b-b3/55 border-t-b3/60  cursor-pointer *:justify-start  z-1  grid grid-cols-[40px_1fr_30px_30px]  py-3 hover:border-y hover:border-y-b3/80 items-center hover:bg-b1/50  ">
           <!-- row 1 -->
 
-          <input v-model="checkedStats" type="checkbox" class="peer hidden absolute" :value="stat" />
+          <input
+            v-model="checkedStats"
+            type="checkbox"
+            class="peer hidden absolute"
+            :value="stat" />
 
-          <StatRowContents v-if="checkedStats.includes(stat)" :stat="stat" :item-stats="stats" :item-stats2="stats2">
+          <StatRowContents
+            v-if="checkedStats.includes(stat)"
+            :stat="stat"
+            :item-stats="stats"
+            :item-stats2="stats2">
           </StatRowContents>
         </motion.label>
 
-        <template v-for="stat in itemStats" :key="stat.id">
-          <motion.label v-if="!checkedStats.includes(stat)" :layout="true" class="hover:bg-b2/60 first:border-t first:border-t-b3  cursor-pointer  py-3.5 has-checked:hidden w-full grid grid-cols-[40px_1fr_30px_30px] border-b-b3/40 border-b  items-center">
-            <input v-model="checkedStats" type="checkbox" class="peer hidden absolute " :value="stat" />
+        <template
+          v-for="stat in itemStats"
+          :key="stat.id">
+          <motion.label
+            v-if="!checkedStats.includes(stat)"
+            :layout="true"
+            class="hover:bg-b2/60 first:border-t first:border-t-b3  cursor-pointer  py-3.5 has-checked:hidden w-full grid grid-cols-[40px_1fr_30px_30px] border-b-b3/40 border-b  items-center">
+            <input
+              v-model="checkedStats"
+              type="checkbox"
+              class="peer hidden absolute "
+              :value="stat" />
 
-            <StatRowContents :stat="stat" :item-stats="stats" :item-stats2="stats2">
+            <StatRowContents
+              :stat="stat"
+              :item-stats="stats"
+              :item-stats2="stats2">
             </StatRowContents>
           </motion.label>
         </template>
@@ -102,7 +129,9 @@ const set2 = computed (() => is.calculatorSet2)
         {{ totalCost }}
       </div>
 
-      <div v-if="is.isComparing" class="dst  font-medium justify-center">
+      <div
+        v-if="is.isComparing"
+        class="dst  font-medium justify-center">
         {{ totalCost2 }}
       </div>
     </div>

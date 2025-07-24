@@ -95,6 +95,9 @@ const options = {
       Champion Attributes
     </div>
 
-    <Radar :data="data" :options="options" class="drop-shadow-sm" />
+    <Radar
+      :data="data"
+      :options="options"
+      class="drop-shadow-sm" />
   </Field>
 </template>

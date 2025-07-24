@@ -24,7 +24,10 @@ watchEffect(async () => {
 </script>
 
 <template>
-  <div v-if="rune" :key="rune.id" class="relative  animate-in fade-in  flex w-full max-w-114 justify-center flex-col tldr-30">
+  <div
+    v-if="rune"
+    :key="rune.id"
+    class="relative  animate-in fade-in  flex w-full max-w-114 justify-center flex-col tldr-30">
     <div
       class=" **:select-none mb-4 grid w-full items-center grid-cols-[50px_1fr]    tldr-20  ">
       <div
@@ -46,7 +49,9 @@ watchEffect(async () => {
         </div>
 
         <div class="flex gap-3 pl-3 items-center w-full">
-          <img :src="`/img/runes/${rune.path}.webp`" class="h-5 w-auto dst" />
+          <img
+            :src="`/img/runes/${rune.path}.webp`"
+            class="h-5 w-auto dst" />
 
           <span class="text-4 font-medium grow">{{ rune.path }}</span>
         </div>
@@ -62,10 +67,13 @@ watchEffect(async () => {
         v-tippy="{ content: 'View on Official Wiki  🡵', placement: 'right-end', offset: [40, 3] }"
         :href="getWikiLink(rune.name)"
         target="_blank"
-        alt="link to league wiki" class="flex items-center gap-3 hover:underline underline-offset-2 text-2 self-end">
+        alt="link to league wiki"
+        class="flex items-center gap-3 hover:underline underline-offset-2 text-2 self-end">
         Official Wiki
 
-        <icon name="link" class="size-3.5 opacity-60 group-hover:opacity-100 " />
+        <icon
+          name="link"
+          class="size-3.5 opacity-60 group-hover:opacity-100 " />
       </a>
     </div>
   </div>

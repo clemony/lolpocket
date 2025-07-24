@@ -1,5 +1,4 @@
 declare global {
-
   interface Pocket {
     key: string
     name: string
@@ -32,6 +31,5 @@ declare global {
       runes: RuneSet | null
     }
   }
-
 }
-export { }
+export {}

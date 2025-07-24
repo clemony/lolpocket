@@ -5,9 +5,14 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div v-if="props.params.value" v-tippy="props.params.value.name" class="ti-container">
+  <div
+    v-if="props.params.value"
+    v-tippy="props.params.value.name"
+    class="ti-container">
     <div class="ti-wrapper">
-      <img :src="`/img/spells/${props.params.value.name.toLowerCase()}.webp`" class="size-full " />
+      <img
+        :src="`/img/spells/${props.params.value.name.toLowerCase()}.webp`"
+        class="size-full " />
     </div>
   </div>
 </template>

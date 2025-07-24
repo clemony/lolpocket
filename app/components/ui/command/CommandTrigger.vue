@@ -13,10 +13,13 @@ watchEffect(() => {
 </script>
 
 <template>
-  <SheetClose as-child class="">
+  <SheetClose
+    as-child
+    class="">
     <div
       :class="cn('rounded-lg-2 px-3 input gap-2  !bg-transparent !flex   hover:ring-b4 flex-nowrap text-nowrap cursor-text items-center   w-full h-12   hover:ring-1 group ', props.class)"
-      class="" @click.stop="us.commandOpen = true">
+      class=""
+      @click.stop="us.commandOpen = true">
       <icon
         name="search"
         class="size-4 shrink-0 opacity-70 group-hover:opacity-100 dst" />
