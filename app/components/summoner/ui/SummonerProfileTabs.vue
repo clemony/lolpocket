@@ -15,7 +15,7 @@ function navigateToChildRoute(childPath: string) {
   router.push(`/summoner/${region}/${slug}${childPath}`)
 }
 
-const user = inject<User>('user')
+const as = useAccountStore()
 
 const directory = [
   {
@@ -59,7 +59,7 @@ console.log('💠 - pathName:', pathName.value)
     </li>
 
     <li
-      v-if="summoner.puuid == user.summoner.puuid"
+      v-if="summoner.puuid == as.userAccount?.riot?.puuid"
       :class="cn('group/tab  tab-menu tab ', { '!pb-[4px] ': pathName != 'settings', 'tab-active hi-this-one': pathName == 'settings' })"
       @click="navigateToChildRoute('/settings')">
       Settings

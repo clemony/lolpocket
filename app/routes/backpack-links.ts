@@ -4,19 +4,19 @@ export const backpackLinks: LinkObject[] = [
     link: '/backpack',
 
     icon: {
-      name: 'i-lol-backpack-outline-bold',
+      name: 'backpack',
+      class: 'size-4.75',
     },
     blurb:
       '<p class="leading-5 text-pretty">Your main <i><b>pocket</b></i> storage tool. Magically keeps pockets safe and warm in list and grid form.</p>',
   },
   {
-    name: 'Trash',
-    link: '/backpack/trash',
-
+    name: 'Calculator',
+    link: '/calculator',
     icon: {
-      name: 'trash',
+      name: 'streamline:calculator-1',
+      class: 'size-4.5',
     },
-    blurb: 'Self deletes after 30 days.',
   },
   {
     name: 'Archive',
@@ -24,8 +24,19 @@ export const backpackLinks: LinkObject[] = [
 
     icon: {
       name: 'archive',
+      class: 'size-4.5',
     },
     blurb: 'Outdated or unfinished.',
+  },
+  {
+    name: 'Trash',
+    link: '/backpack/trash',
+
+    icon: {
+      name: 'trash',
+      class: '',
+    },
+    blurb: 'Self deletes after 30 days.',
   },
 ]
 

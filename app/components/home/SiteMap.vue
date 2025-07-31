@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { contactLinks, siteInfoLinks } from '~/routes'
+
 const listClass = 'flex flex-col gap-3  min-w-44'
 
 const itemClass = 'flex items-center gap-2 hover:underline-offset-2 hover:underline'

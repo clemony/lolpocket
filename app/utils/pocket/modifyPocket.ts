@@ -36,12 +36,12 @@ export function deletePocket(pocket) {
       },
     )
 
-    const vars = {
+    const vars: Record<string, string> = {
       pocketKey: pocket.key,
       pocketName: pocket.name,
     }
 
-    saveNotificationData(vars, 'deletePocket')
+    saveNotification( 'deletePocket', vars)
   }
 }
 

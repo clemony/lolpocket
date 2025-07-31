@@ -8,11 +8,10 @@ definePageMeta({
 
 const as = useAccountStore()
 const router = useRouter()
-const user = inject<User>('user')
 
-if (as.userAccount.riot.puuid) {
+if (as.userAccount?.riot?.puuid) {
   router.replace(
-    `/summoner/${user.summoner.region}/${user.summoner.name}_${user.summoner.tag}`,
+    `/summoner/${as.userAccount.riot.region}/${as.userAccount.riot.name}_${as.userAccount.riot.tag}`,
   )
 }
 </script>

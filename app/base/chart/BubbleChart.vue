@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { Bubble } from 'vue-chartjs'
 import {
   CategoryScale,
   Chart as ChartJS,
@@ -8,6 +7,7 @@ import {
   Title,
   Tooltip,
 } from 'chart.js'
+import { Bubble } from 'vue-chartjs'
 
 // Define props for the chart
 const props = defineProps<{

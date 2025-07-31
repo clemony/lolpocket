@@ -1,5 +1,5 @@
-@import 'tailwindcss';
-@import './index.css';
+@import "tailwindcss";
+@import "./index.css";
 @source not "../icons";
 @source not "../img";
 
@@ -14,11 +14,11 @@
   body,
   #app {
     font-family: var(--font-sans);
-    @apply text-3 subpixel-antialiased text-bc selection:bg-n1/80 selection:text-nc overflow-hidden h-screen w-screen;
+    @apply text-3 antialiased text-bc selection:bg-n1/80 selection:text-nc overflow-hidden h-screen w-screen;
   }
 
   input,
-  input:where(:not([type='button'], [type='reset'], [type='submit'])),
+  input:where(:not([type="button"], [type="reset"], [type="submit"])),
   select,
   textarea,
   .reset-input {
@@ -30,7 +30,7 @@
   }
 
   body {
-    @apply bg-b1 @container/app relative;
+    @apply bg-b1;
   }
 }
 

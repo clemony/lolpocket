@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { reactiveOmit } from '@vueuse/core'
+import type { SelectContentEmits, SelectContentProps } from 'reka-ui'
 import {
   SelectContent,
 
@@ -7,7 +8,6 @@ import {
   SelectViewport,
   useForwardPropsEmits,
 } from 'reka-ui'
-import type { SelectContentEmits, SelectContentProps } from 'reka-ui'
 import SelectScrollDownButton from './SelectScrollDownButton.vue'
 import SelectScrollUpButton from './SelectScrollUpButton.vue'
 

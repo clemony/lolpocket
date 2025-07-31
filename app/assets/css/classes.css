@@ -1,5 +1,5 @@
-@import 'tailwindcss';
-@import './theme.css';
+@import "tailwindcss";
+@import "./theme.css";
 
 @layer components {
   .dst {
@@ -21,7 +21,16 @@
     @apply shadow-md drop-shadow-sm shadow-[#000]/4 border border-b3/60 rounded-box;
   }
   .hover-ring {
-    @apply hover:!ring hover:!ring-n1 hover:!ring-offset-2 hover:!ring-offset-b2 transition-all duration-200 cursor-pointer;
+    @apply transition-all duration-200 cursor-pointer;
+
+    &:where(:not(.base-ring-0)) {
+      @apply ring ring-offset-2 ring-transparent ring-offset-transparent;
+    }
+
+    &:hover,
+    &[data-state="open"].data-open-ring {
+      @apply !ring-n1 !ring-offset-b2/80 ring ring-offset-2;
+    }
   }
 
   .hover-ring-sm {
@@ -104,11 +113,17 @@
     --r: 4px; /* the radius */
     --s: 40px; /* the size of the cut */
 
-    --_m: /calc(2 * var(--r)) calc(2 * var(--r)) radial-gradient(#000 70%, #0000 72%) no-repeat;
+    --_m: /calc(2 * var(--r)) calc(2 * var(--r))
+      radial-gradient(#000 70%, #0000 72%) no-repeat;
     mask:
       calc(var(--s) + var(--r)) 0 var(--_m),
       0 calc(var(--s) + var(--r)) var(--_m),
-      radial-gradient(var(--s) at 0 0, #0000 99%, #000 101%) var(--r) var(--r) no-repeat,
-      conic-gradient(at calc(var(--s) + 2 * var(--r)) calc(var(--s) + 2 * var(--r)), #000 75%, #0000 0);
+      radial-gradient(var(--s) at 0 0, #0000 99%, #000 101%) var(--r) var(--r)
+        no-repeat,
+      conic-gradient(
+        at calc(var(--s) + 2 * var(--r)) calc(var(--s) + 2 * var(--r)),
+        #000 75%,
+        #0000 0
+      );
   }
 }

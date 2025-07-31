@@ -33,9 +33,7 @@ export const useAccountStore = defineStore(
       },
       inbox: {
         messages: [],
-        notifications: [],
-        newMessages: 0,
-        newNotifications: 0,
+        notifications: []
       },
     })
 

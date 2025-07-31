@@ -9,6 +9,9 @@ const region = computed(() => {
     return summoner.region
 
   const user = inject<User>('user')
+  if (!user?.account?.riot?.puuid)
+    return null
+
   return user.summoner.region
 })
 </script>

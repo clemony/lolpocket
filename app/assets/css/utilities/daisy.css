@@ -1,6 +1,6 @@
-@import 'tailwindcss';
-@import '../colors.css';
-@import '../theme.css';
+@import "tailwindcss";
+@import "../colors.css";
+@import "../theme.css";
 
 /* button */
 
@@ -87,9 +87,9 @@
 /* input */
 
 @utility input {
-  @apply focus-within:!outline-0 focus-within:!outline-offset-0    focus-within:ring-n1/60 focus-within:ring-1  h-12;
+  @apply focus-within:outline-0 focus-within:outline-offset-0    focus-within:ring-n1/50 focus-within:ring-1 w-full ring-offset-b1  inset-shadow-black/4  inset-shadow-xs  **:text-2 h-10;
   border-image-width: 0 !important;
-  --input-color: var(--b3) !important;
+  --input-color: var(--b3);
 }
 
 /* tabs */
@@ -142,5 +142,21 @@
         @apply !border-t-2 !border-x-2;
       }
     }
+  }
+}
+
+/* chat */
+
+@utility chat-header {
+  @apply text-1 px-2 !leading-0 translate-y-0.75;
+}
+@utility chat-footer {
+  @apply !text-1 px-2 !leading-0 -translate-y-2.75;
+}
+
+@utility chat-bubble {
+  @apply bg-b2;
+  &::before {
+    @apply scale-y-250 scale-x-200  -translate-y-[6.5px] translate-x-1;
   }
 }

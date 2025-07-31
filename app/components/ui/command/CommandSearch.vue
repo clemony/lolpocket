@@ -15,10 +15,10 @@ watchEffect(() => {
 <template>
   <button
     v-tippy="'Search'"
-    :class="cn('flex group bg-b1/50 flex-nowrap text-nowrap !cursor-text items-center flex self-center items-center h-8 border border-b4/60 pl-2.75 pr-2 rounded-xl  transition-colors text-2  mx-1 duration-150 hover:ring-n1/50  hover:ring-1  inset-shadow-xs border', props.class)"
+    :class="cn('flex group bg-b1/50 w-20 flex-nowrap text-nowrap !cursor-text items-center flex self-center items-center h-8 border border-b4/60 pl-2.75 pr-2 rounded-xl  transition-colors text-2  mx-1 duration-150 hover:ring-n1/50  hover:ring-1 z-1 inset-shadow-xs border', props.class)"
     class=""
     @click.stop="us.commandOpen = true">
-    <span class="relative size-5 grid place-items-center -left-1.25">
+    <span class="relative size-5 grid place-items-center -left-0.25">
       <icon
         name="weui:search-filled"
         class="size-4.75 shrink-0 opacity-60 dst" />
@@ -29,7 +29,7 @@ watchEffect(() => {
     </span>
 
     <span
-      class="font-medium px-1 text-bc/80">
+      class="font-medium px-1 !text-bc/80">
       {{ getDeviceKey() }} K
     </span>
   </button>

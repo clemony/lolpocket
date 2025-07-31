@@ -1,33 +1,25 @@
-export function saveNotificationData(
-  vars: Record<string, string>,
-  template?: string,
-) {
+import { hexoid } from 'hexoid'
+
+const toId = hexoid()
+export function saveNotification(template: string, vars: Record<string, string>) {
   const as = useAccountStore()
 
-  let item: InboxItem = {
-    time: new Date(),
+  const item: InboxItem = {
+    id: toId(),
+    date: new Date(),
+    template,
     vars,
-  }
-  if (template) {
-    item = {
-      ...item,
-      template,
-    }
-  }
-  const n = ref(as.userAccount.inbox.notifications)
-
-  n.value.unshift(item)
-
-  if (n.value.length > 10) {
-    n.value.pop()
+    read: false,
   }
 
-  as.userAccount.inbox.newNotifications++
-  console.log(
-    '💠 - as.userAccount.inbox.newNotifications:',
-    as.userAccount.inbox.newNotifications,
-  )
-  console.log('💠 - constructNotification - n:', n)
+  const list = as.userAccount.inbox.notifications
+
+  list.unshift(item)
+
+  if (list.length > 20)
+    list.pop()
+
+  return item
 }
 
 /* delete */

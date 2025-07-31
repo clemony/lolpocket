@@ -8,6 +8,7 @@ export function useChampions(
   const mode = options?.mode || 'basic'
   const limit = options?.limit
 
+  console.log("💠 - useChampions - SimplifiedMatchData:", matches)
   const liteChampionStats = computed(() => {
     const counts: Record<string, number> = {}
 

@@ -7,9 +7,9 @@ const { progress: p, visible } = defineProps<{
   visible: boolean
 }>()
 
+const us = useUiStore()
 const video = heroDisplays[0]
 const videoRef = ref()
-console.log('💠 - videoRef:', videoRef)
 const prog = ref(0)
 const as = useAccountStore()
 useMotionValueEvent(p, 'change', (latest) => {
@@ -33,13 +33,6 @@ watch([x, y], () => {
   isVisible.value = true
   start() // restart
 })
-
-const { toggleSignIn, signInOpen } = inject('signIn', {
-  signInOpen: ref(false),
-  toggleSignIn: () => {},
-})
-console.log('💠 - toggleSignIn:', toggleSignIn)
-console.log('💠 - signInOpen:', signInOpen)
 
 onMounted(() => {
   videoRef.value.player.play()
@@ -76,26 +69,27 @@ onMounted(() => {
         <div class="grid items-center size-full relative max-w-140 w-140 pl-22">
           <LolpocketDefinition>
             <button
-              v-show="!as.userAccount?.id"
-              class=""
+
               :class="
                 cn(
                   'pointer-events-auto w-28 justify-self-end relative hover:bg-n1 btn-lg mt-3 btn btn-outline border-b3 hover:text-nc text-2  self-end justify-self-end overflow-hidden shadow-xs transition-all duration-200',
-                  { '!bg-n1': signInOpen },
+                  { '!bg-n1': us.userNav },
                 )
               "
-              @click="toggleSignIn()">
+              @click="us.userNav = 'account'">
               <i-ui-loading-bars
-                v-if="signInOpen"
+                v-show="us.userNav == 'account'"
                 class="**:!text-nc *:!stroke-nc !stroke-nc !fill-nc !text-nc absolute shrink-0 h-5 w-auto" />
 
               <span
-                v-show="!signInOpen"
+                v-show="us.userNav == '' || us.userNav == null"
                 class="absolute">Sign in</span>
             </button>
           </LolpocketDefinition>
         </div>
 
+        <!-- v-if="!as.userAccount?.id"
+               -->
         <div class="absolute bottom-5 w-full self-end justify-center grid">
           <div class="place-items-center grid">
             <icon

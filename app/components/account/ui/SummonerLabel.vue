@@ -1,60 +1,37 @@
-<script setup lang="ts">
-const { account: acc } = defineProps<{
-  account?: UserAccount
-}>()
-
+<script lang="ts" setup>
 const as = useAccountStore()
-
-const account = computed (() => {
-  if (acc)
-    return acc
-
-  else if (!acc)
-    return as.userAccount
-
-  else
-    return as.defaultUser
-})
+const ss = useSummonerStore()
+const summoner = computed (() => ss.getSummoner(as.userAccount?.riot?.puuid))
 </script>
 
 <template>
-  <div class="flex  w-full h-fit items-center gap-5 ">
-    <div class=" size-fit grid place-items-center rounded-full drop-shadow-sm  shadow-sm shrink-0 relative">
-      <SummonerIcon
-        v-if="account"
-        class="size-15 rounded-full" />
-    </div>
+  <SidebarMenuButton
+    v-if="summoner"
+    as-child
+    class="h-16 w-full">
+    <NuxtLink
+      :to="`/summoner/${as.userAccount.riot.region}/${as.userAccount.riot.name}_${as.userAccount.riot.tag}`"
+      class="flex gap-3 justify-start w-full items-center  size-full">
+      <SummonerIcon class="rounded-full size-11.5 shrink-0" />
 
-    <div class="flex flex-col grow justify-center gap-1.5 drop-shadow-sm">
-      <div class="flex w-fit items-end gap-4 h-6">
-        <h1 class="!text-8 font-serif leading-none grow font-bold">
-          {{ account.riot.name || account.name || 'Summoner' }}
-        </h1>
+      <div class="flex justify-end flex-col w-full gap-px">
+        <div class="flex items-end gap-3  *:leading-none  ">
+          <SummonerName
+            class="!text-6 drop-shadow-sm font-serif text-bc/94  font-bold" />
+          <SummonerTag
+            :summoner
+            class="mb-px" />
+        </div>
+        <div class="flex items-center lowercase gap-4 justify-between  opacity-70 align-middle  w-full font-normal">
+          <SummonerRegion
+            :region-id="summoner.region"
+            class="[&_svg]:size-3" />
 
-        <div class=" flex items-center h-full relative">
-          <span class="absolute flex items-center -bottom-0.75 font-medium">
-            <icon
-              name="lucide:hash"
-              class="size-3.75" />
-            {{ account.riot.tag }}
-          </span>
+          <SummonerLevel :summoner />
         </div>
       </div>
 
-      <div class="flex items-center lowercase gap-4 font-normal">
-        <span class="">
-          lv. <SummonerLevel />
-        </span>
-
-        <span class="lowercase flex items-center">
-          <icon
-            name="lucide:at-sign"
-            class="size-3.25 dst" />
-
-          <SummonerRegion :account="account" /></span>
-      </div>
-    </div>
-  </div>
+      <slot />
+    </NuxtLink>
+  </SidebarMenuButton>
 </template>
-
-<style scoped></style>

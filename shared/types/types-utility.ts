@@ -14,7 +14,9 @@ export interface PatchNotesData extends OgResponse {
 
 export interface IconObject {
   name: string
-  class?: string
+  alt?: IconObject
+  modifier?: IconObject
+  class?: string | string[]
 }
 
 export interface BadgeObject {
@@ -43,7 +45,7 @@ export interface LinkObject {
 }
 export interface DataObject extends LinkObject {
   data?: object
-  new?: number
+  value?: number
 }
 
 export interface Category {

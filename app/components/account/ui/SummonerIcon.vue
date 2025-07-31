@@ -9,11 +9,12 @@ const icon = computed (() => {
   if (props.iconId)
     return props.iconId
 
-  const user = inject<User>('user')
-  return user?.summoner?.profileIcon
+    const as = useAccountStore()
+    const {summoner} = useSummoner(as.userAccount?.riot.puuid)
+  return getSummonerIcon(summoner?.value.profileIcon)
 })
 
-/* `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/profile-icons/${icon}.jpg` */
+/*  */
 </script>
 
 <template>
@@ -27,7 +28,7 @@ const icon = computed (() => {
     <div
       v-else
       class="rounded-none avatar bg-n1 grid place-items-center text-nc text-2 size-full font-semibold">
-      LP
+     <icon name="plug" />
     </div>
 
     <slot />

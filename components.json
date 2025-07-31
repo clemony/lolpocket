@@ -3,17 +3,16 @@
   "style": "new-york",
   "typescript": true,
   "tailwind": {
-    "config": "assets/css/plugins/tailwind.config.js",
-    "css": "assets/css/plugins/shadcn.css",
+    "config": "app/assets/css/plugins/tailwind.config.js",
+    "css": "app/assets/css/plugins/shad-cn.css",
     "baseColor": "neutral",
     "cssVariables": true
   },
   "aliases": {
-    "components": "base",
-    "composables": "composables",
+    "components": "base/ui",
+    "composables": "composables/utils",
     "utils": "utils",
-    "ui": "base",
+    "ui": "base/ui",
     "lib": "utils/lib"
-  },
-  "iconLibrary": "radix"
+  }
 }

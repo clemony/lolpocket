@@ -1,7 +1,7 @@
 export const heroDisplays = [
   {
     champ: 'Morgana',
-    class: 'contrast-120 scale-140 translate-y-[20%] translate-x-[10%]',
+    class: 'contrast-130 brightness-95 scale-140 translate-y-[20%] translate-x-[10%]',
     url: 'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/morgana/skins/skin80/animatedsplash/morgana_skin80_uncentered.webm',
   },
   {

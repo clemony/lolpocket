@@ -50,7 +50,7 @@ const variants = {
           }"
           :class="
             cn(
-              '  bg-blend-screen items-center bg-b1/92 backdrop-blur-md overflow-hidden  border border-b3 rounded-xl  text-bc shadow-lg shadow-black/10 relative justify-center grid ',
+              '  bg-blend-screen items-center bg-b1/92 backdrop-blur-md overflow-hidden  border border-b4/70 rounded-xl  text-bc shadow-lg shadow-black/10 relative justify-center grid ',
               props.class,
             )
           ">

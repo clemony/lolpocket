@@ -4,15 +4,19 @@ export const analyticsLinks: LinkObject[] = [
     link: '/analysis/champions',
     icon: {
       name: 'i-lol-champ',
-      class: 'size-4.75 dst  ',
+      modifier: {
+        name: 'tabler:square-root',
+        class: '!-top-1 !-left-1 **:stroke-[1.5] !size-6',
+      },
+      class: ['size-5.5 ', 'size-3.5 left-2'],
     },
   },
   {
     name: 'Items',
     link: '/analysis/items',
     icon: {
-      name: 'mdi:sword',
-      class: '-scale-x-100 size-5.5 -ml-[1px]',
+      name: 'i-lol-sword-graph',
+      class: ['size-5.5 -ml-[1px]', 'ml-0'],
     },
   },
   {
@@ -20,7 +24,7 @@ export const analyticsLinks: LinkObject[] = [
     link: '/analysis/allies',
     icon: {
       name: 'tabler:heart-handshake',
-      class: 'size-5.25',
+      class: ['size-5.25', 'size-6 **:stroke-[1.4]'],
     },
   },
 ]

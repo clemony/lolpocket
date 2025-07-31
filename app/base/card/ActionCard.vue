@@ -43,11 +43,12 @@ const {
       </slot>
     </p>
     <p
-      v-if="button"class="w-full flex items-center justify-end px-6.75">
-    <button
-      class="btn btn-neutral hover-ring ">
-      {{ button }}
-    </button>
+      v-if="button"
+      class="w-full flex items-center justify-end px-6.75">
+      <button
+        class="btn btn-neutral hover-ring ">
+        {{ button }}
+      </button>
     </p>
     <p
       v-else

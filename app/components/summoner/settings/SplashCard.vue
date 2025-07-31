@@ -37,7 +37,7 @@ const {
           class="absolute size-6 -right-4 -bottom-2" />
       </div>
       <LazyPrismaticShine
-        class="scale-x-112 scale-y-104 !opacity-0 group-hover/photo:!opacity-100 transition duration-450" />
+        class="scale-x-112  z-1 scale-y-104 !opacity-0 group-hover/photo:!opacity-100 transition duration-450" />
     </transition-scale>
 
     <slot>

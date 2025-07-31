@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { fonts } from 'components/pocket/menu/fonts'
-import VueZoomable from 'vue-zoomable'
 import type { ZoomableEvent } from 'vue-zoomable'
+import VueZoomable from 'vue-zoomable'
 import 'vue-zoomable/dist/style.css'
 
 const { pocket } = defineProps<{
@@ -87,7 +87,7 @@ console.log('💠 - pocket.card.splash:', pocket.card.splash)
       :min-zoom="0.5"
       :max-zoom="2"
       :wheel-zoom-step="0.01"
-      class="h-screen w-screen grid place-items-center relative overflow-hidden ">
+      class="h-screen w-full grid place-items-center relative overflow-hidden ">
       <div
         id="pocket-card"
         ref="pocketCardRef"

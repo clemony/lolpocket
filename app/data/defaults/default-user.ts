@@ -16,7 +16,5 @@ export const defaultUser: UserAccount = {
   inbox: {
     messages: [],
     notifications: [],
-    newMessages: 0,
-    newNotifications: 0,
   },
 }

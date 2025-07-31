@@ -8,7 +8,7 @@ const summoner = ref(as.userAccount)
 function handleClick(mode) {
   emit('update:modelValue', false)
   if (mode == 'in') {
-    us.loginOpen = true
+    us.userNav = true
   }
   else if (mode == 'out') {
     useSignOut()

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { TabsList } from 'reka-ui'
 import type { TabsListProps } from 'reka-ui'
+import { TabsList } from 'reka-ui'
 
 const props = defineProps<
   TabsListProps & {

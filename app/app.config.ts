@@ -2,7 +2,7 @@ export default defineAppConfig({
   theme: {},
   icon: {
     mode: 'svg',
-    class: 'text-[var(--color-bc)]',
+    class: 'text-[var(--color-bc)] shrink-0 pointer-events-none',
     size: '15px',
     aliases: {
       // math
@@ -47,8 +47,8 @@ export default defineAppConfig({
       'popover-caret-up': 'fa:caret-up',
 
       // menu
-      'search': 'lucide:search',
-      'search-bold': 'ph:magnifying-glass-bold',
+      'search': 'weui:search-outlined',
+      'search-bold': 'weui:search-filled',
       'search-sm': 'teenyicons:search-small-outline',
       'more': 'radix-icons:dots-horizontal',
       'more-v': 'radix-icons:dots-vertical',
@@ -115,6 +115,7 @@ export default defineAppConfig({
 
       // pic
       'bow': 'mdi:bow-arrow',
+      'plug': 'tabler:plug',
       'pocket': 'iconamoon:briefcase-light',
       'up-face': 'iconoir:emoji-look-up',
       'images': 'entypo:images',

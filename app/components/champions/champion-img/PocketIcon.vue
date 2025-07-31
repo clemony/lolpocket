@@ -20,9 +20,13 @@ const loaded = ref(false)
       :class="cn(' pointer-events-none  size-full  scale-160 mt-1.5 shrink-0 size-full absolute object-center opacity-0 transition-opacity duration-300', { 'opacity-100': loaded }, imgClass)"
       @load="loaded = true" />
 
+    <NuxtImg
+      v-else-if="!loaded && (!url || !img)"
+      class="size-full object-cover object-center place-self-center"
+      src="img/lp/192.webp" />
     <icon
-      v-if="!loaded"
-      name="svg-spinners:3-dots-fade"
+      v-if="!loaded && (url || img)"
+      name="svg-spinners:bars-scale-middle"
       class="absolute opacity-80" />
 
     <NuxtImg
@@ -36,10 +40,6 @@ const loaded = ref(false)
       LP
     </div>
 
-    <NuxtImg
-      v-else
-      class="size-full object-cover object-center place-self-center"
-      src="img/lp/192.webp" />
     <slot>   </slot>
 
   </label>

@@ -16,7 +16,7 @@ useMotionValueEvent(headerHeight, 'change', (latest) => {
 
 <template>
   <div
-    class="items-center w-screen h-screen pt-(--navbar-height) flex flex-col relative n">
+    class="items-center w-full h-screen pt-(--navbar-height) flex flex-col relative n">
     <slot name="backdrop" />
 
     <motion.div

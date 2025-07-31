@@ -1,8 +1,16 @@
-@import 'tailwindcss';
-@import './theme';
+@import "tailwindcss";
+@import "assets/css/theme.css";
 
 @layer base {
   :root {
+    --sidebar-background: var(--color-b2);
+    --sidebar-foreground: var(--color-bc);
+    --sidebar-primary: var(--color-nc);
+    --sidebar-primary-foreground: var(--color-n1);
+    --sidebar-accent: var(--color-b3);
+    --sidebar-accent-foreground: var(--color-bc);
+    --sidebar-border: var(--color-b3);
+    --sidebar-ring: var(--color-nc);
   }
 }
 @theme inline {
@@ -18,7 +26,7 @@
   --card: var(--color-b1);
   --card-foreground: var(--color-bc);
 
-  --border: var(--color-b2);
+  --border-color: var(--color-b2);
   --input: var(--color-b2);
 
   --primary: var(--color-n1) !important;
@@ -35,30 +43,14 @@
 
   --ring: var(--color-b2);
 
-  --sidebar-background: 0 0% 98%;
-
-  --sidebar-foreground: 240 5.3% 26.1%;
-
-  --sidebar-primary: 240 5.9% 10%;
-
-  --sidebar-primary-foreground: 0 0% 98%;
-
-  --sidebar-accent: 240 4.8% 95.9%;
-
-  --sidebar-accent-foreground: 240 5.9% 10%;
-
-  --sidebar-border: 220 13% 91%;
-
-  --sidebar-ring: 217.2 91.2% 59.8% --animate-accordion-down: accordion-down 0.2s ease-out;
+  --sidebar-background: var(--color-b2);
+  --sidebar-foreground: var(--color-bc);
+  --sidebar-primary: var(--color-nc);
+  --sidebar-primary-foreground: var(--color-n1);
+  --sidebar-accent: var(--color-b3);
+  --sidebar-accent-foreground: var(--color-bc);
+  --sidebar-border: var(--color-b3);
+  --sidebar-ring: var(--color-nc);
 
   --animate-accordion-up: accordion-up 0.2s ease-out;
-}
-
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
 }

@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { summonerLinks } from '~/routes'
+
 const isOpen = ref(true)
 const us = useUiStore()
 

@@ -3,8 +3,8 @@ export const libraryLinks: LinkObject[] = [
     name: 'Items',
     link: '/library/items',
     icon: {
-      name: 'lol-hitter',
-      class: 'size-4.75 opacity-70 -ml-px',
+      name: 'lucide:sword',
+      class: ['size-5.25 -scale-x-100', 'size-5.75 **:stroke-[1.5]'],
     },
     img: {
       src: '/img/art/item-moonstone.png',
@@ -16,8 +16,8 @@ export const libraryLinks: LinkObject[] = [
     name: 'Champions',
     link: '/library/champions',
     icon: {
-      name: 'lol-champ',
-      class: '!size-4.5 opacity-65',
+      name: 'i-lol-champ-circle',
+      class: '!size-5.25 ',
     },
 
     img: {
@@ -31,8 +31,8 @@ export const libraryLinks: LinkObject[] = [
     name: 'Runes',
     link: '/library/runes',
     icon: {
-      name: 'lol-rune-symbol',
-      class: 'size-5 -ml-px"',
+      name: 'i-lol-rune-circle',
+      class: 'size-5.25  contrast-150',
     },
     img: {
       src: '/img/art/inspiration.png',
@@ -44,8 +44,8 @@ export const libraryLinks: LinkObject[] = [
     name: 'Spellbook',
     link: '/library/spellbook',
     icon: {
-      name: 'ui-book',
-      class: '!size-4 mx-px dst',
+      name: 'book',
+      class: '!size-5',
     },
     img: {
       src: '/img/art/book.png',

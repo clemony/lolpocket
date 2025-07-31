@@ -17,8 +17,19 @@ export default defineNuxtConfig({
     'nuxt-svgo',
     'motion-v/nuxt' /*     "nuxt-og-image", */,
     '@nuxtjs/tailwindcss',
+    'shadcn-nuxt',
   ],
-
+  shadcn: {
+    /**
+     * Prefix for all the imported component
+     */
+    prefix: '',
+    /**
+     * Directory that the component lives in.
+     * @default "./app/base/ui"
+     */
+    componentDir: './app/base/ui',
+  },
   future: {
     typescriptBundlerResolution: true,
   },
@@ -130,11 +141,11 @@ export default defineNuxtConfig({
   imports: {
     dirs: [
       '@vueuse/components',
-      'routes',
       'data',
       'types',
       '~~/shared/types/**',
       'keys/**',
+      'routes',
     ],
   },
   pinia: {
@@ -159,6 +170,7 @@ export default defineNuxtConfig({
     data: fileURLToPath(new URL('./app/data', import.meta.url)),
     keys: fileURLToPath(new URL('./app/keys', import.meta.url)),
     db: fileURLToPath(new URL('types/database.types', import.meta.url)),
+    routes: fileURLToPath(new URL('./app/routes/index', import.meta.url)),
   },
 
   app: {

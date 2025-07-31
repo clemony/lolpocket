@@ -14,10 +14,14 @@ const as = useAccountStore()
 </script>
 
 <template>
-  <div class="pt-24 w-full flex flex-col h-full max-h-screen px-14 pb-6">
+  <div class="pt-24 w-full flex flex-col h-full w-full items-center  max-h-screen px-14 pb-6">
     <header class="w-full">
       <h1>Nexus</h1>
     </header>
+
+    <div class="size-fit border border-b4/60 rounded-xl">
+      <!-- HERHEHRHEHRHEHREHHRHERHER -->
+    </div>
 
     <div class="w-full">
       <SummonerCard
@@ -30,6 +34,7 @@ const as = useAccountStore()
     <div class="w-100 h-60">
       <!-- <RecentPatchWinrates /> -->
     </div>
+
     <!--
     <div class="w-full h-80 self-end ">
       <News />

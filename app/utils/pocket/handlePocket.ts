@@ -57,9 +57,9 @@ export async function addPocket(
   console.log('💠 - addPocket - ps.pocket:', ps.pockets)
 
   if (as.settings.alertNewPocket) {
-    const newPocketToast = toast.success(`Pocket ${newPocket.name} created.`, {
-      description: 'Head to your new pocket and start editing?',
-      duration: 7000,
+    const newPocketToast = toast.success('Pocket Added!', {
+      description: `Pocket "${newPocket.name}" created. Head to your new pocket and start editing?`,
+      duration: 8000,
       action: {
         label: 'Open Pocket',
         onClick: () => navigateTo({ path: `/pocket/${newPocket.key}` }),
@@ -75,6 +75,6 @@ export async function addPocket(
       pocketName: newPocket.name,
     }
 
-    saveNotificationData(vars, 'newPocket')
+    saveNotification( 'newPocket', vars)
   }
 }

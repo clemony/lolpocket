@@ -1,0 +1,65 @@
+<script setup lang="ts">
+defineOptions({
+  inheritAttrs: false,
+})
+
+const { message } = defineProps<{
+  message: InboxMessage
+}>()
+</script>
+
+<template>
+  <div>
+    <LazyDialogContentPop
+      class=" grid grid-rows-[32px_90px_1fr] p-0 h-160 w-240 gap-1"
+      :auto-focus="false"
+      @open-auto-focus.stop.prevent
+      @close-auto-focus.stop.prevent>
+      <DialogHeader class="gap-4 object-contain size-full tracking-normal flex-row flex items-center px-3 justify-between">
+        <DialogTitle class="!text-2 text-bc/50 items-center  font-semibold">
+          Message Received!
+        </DialogTitle>
+        <DialogDescription class="">
+        </DialogDescription>
+
+        <DialogClose
+          as="button"
+          class="btn btn-ghost btn-sm btn-square">
+          <icon name="x-sm" />
+        </DialogClose>
+      </DialogHeader>
+      <form class=" p-4 flex flex-col  gap-4 w-full">
+        <label class="**:text-3 items-center  **:font-normal  grid grid-cols-[60px_1fr]  gap-2 ">
+          <span>Subject:</span>
+          <span class="input h-11 w-full">
+            <input
+              type="text"
+              :value="message.title"
+              readonly />
+          </span>
+        </label>
+        <label class="**:text-3 items-center  grid grid-cols-[60px_1fr] gap-2 ">
+          <span>From:</span>
+          <span class="input h-11 w-full">
+            <span class="rounded-full size-7.5 shadow-sm drop-shadow-xs shrink-0 bg-neutral ">
+              <hicon
+                :name="message.from.icon"
+                class="text-nc "
+                :icon-scale="0.65" />
+            </span>
+            <input
+              type="text"
+              :value="`${message.from.name} (${message.from.id})`"
+              readonly />
+          </span>
+        </label>
+      </form>
+      <article class="size-full p-4 pt-6">
+        <textarea
+          :value="message.content"
+          readonly
+          class="textarea size-full text-3" />
+      </article>
+    </LazyDialogContentPop>
+  </div>
+</template>

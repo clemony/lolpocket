@@ -14,7 +14,7 @@ const level = computed (() => champion?.level >= 10 ? 10 : champion?.level ? cha
   <SplashCard
     :alt="name"
     :skin-url="getSplash(ix.champKeyById(id), 'tile')"
-    class="  group/photo">
+    class="pb-0.5  group/photo">
     <template #banner>
       <Img
         :img="`/img/mastery/banner/crest-and-banner-mastery-${level}.webp`"
@@ -22,7 +22,7 @@ const level = computed (() => champion?.level >= 10 ? 10 : champion?.level ? cha
         :class="cn('size-17 absolute z-4 drop-shadow-sm drop-shadow-black/20  -top-1.5 right-0')" />
     </template>
 
-    <div class="size-full relative flex flex-col justify-center gap-1.25 *:leading-none px-0.75 pt-2 ">
+    <div class="size-full relative flex flex-col h-12 justify-center overflow-hidden pb-1  *:leading-none px-0.75 pt-1.5 ">
       <div class="flex items-end gap-1.5 ">
         <h2 class=" font-semibold dst   text-5">
           {{ name }}
@@ -31,6 +31,23 @@ const level = computed (() => champion?.level >= 10 ? 10 : champion?.level ? cha
         <span class="text-2 pb-px tracking-tight font-medium flex items-end">
           lv.&thinsp;{{ champion?.level ?? 0 }}
         </span>
+      </div>
+
+      <div class="text-nowrap h-3 items-center  *:transition-all *:duration-200">
+        <p class="text-1 flex gap-1 items-center group-hover/photo:-translate-y-full absolute group-hover/photo:opacity-0 font-medium">
+          <span class="size-4 relative overflow-hidden rounded-full dst shadow-sm">
+            <i-lol-cm-mastery-token class="size-full scale-105 grid place-items-center absolute object-center" />
+          </span>
+          {{ champion?.points?.toLocaleString() ?? 0 }}
+        </p>
+        <p class="text-1 italic translate-y-full opacity-0 absolute group-hover/photo:opacity-100 group-hover/photo:translate-y-0">
+          <template v-if="champion?.lastPlayed">
+            Last Played {{ useDateFormat(champion.lastPlayed, 'MMM D, YYYY') }}
+          </template>
+          <template v-else>
+            Never played
+          </template>
+        </p>
       </div>
     </div>
   </SplashCard>

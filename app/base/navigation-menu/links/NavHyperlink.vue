@@ -1,14 +1,20 @@
 <script setup lang="ts">
-const { class: className, hash, to, at } = defineProps<{
+import { NavigationMenuLink, NuxtLink } from '#components'
+
+const { class: className, hash, to, at, nuxt } = defineProps<{
   class?: HTMLAttributes['class']
   to?: string
   hash?: boolean
   at?: boolean
+  nuxt?: boolean
 }>()
+
+const component = computed (() => nuxt ? NuxtLink : NavigationMenuLink)
 </script>
 
 <template>
-  <NavigationMenuLink
+  <component
+    :is="component"
     :class="cn('font-medium text-2 text-bc/70 underline-offset-2 hover:underline hover:text-bc flex  items-center', className)"
     @click="navigateTo(to)">
     <icon
@@ -20,5 +26,5 @@ const { class: className, hash, to, at } = defineProps<{
       name="hash"
       class="size-3.75" />
     <slot />
-  </NavigationMenuLink>
+  </component>
 </template>

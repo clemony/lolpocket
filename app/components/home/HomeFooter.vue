@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { contactLinks, siteInfoLinks } from '~/routes'
+
 import { UseClipboard } from '@vueuse/components'
 
 const source = 'contact@lolpocket.win'

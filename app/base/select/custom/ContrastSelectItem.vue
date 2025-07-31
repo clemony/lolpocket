@@ -1,8 +1,8 @@
 <script lang="ts" setup>
+import type { AcceptableValue } from 'reka-ui'
 import {
   SelectItemIndicator,
 } from 'reka-ui'
-import type { AcceptableValue } from 'reka-ui'
 
 const props = defineProps<{
   class?: HTMLAttributes['class']

@@ -40,7 +40,7 @@ console.log('💠 - topChampionData:', topChampionData.value)
 <template>
   <motion.div
     layout
-    class="z-0 h-[290px] w-screen absolute overflow-hidden top-0 left-0 translate-x-[10%]">
+    class="z-0 h-[290px] w-full absolute overflow-hidden top-0 left-0 translate-x-[10%]">
     <Img
       v-if="summoner"
       layout-id="backdrop-image"

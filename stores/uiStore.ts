@@ -1,25 +1,19 @@
 import { defineStore } from 'pinia'
 
 export const useUiStore = defineStore('UiStore', () => {
-/*   sidebar stuff logic in middleware */
   const sidebarExpanded = ref(true)
+  const activeSidebarContent = ref<string>(null)
   const triggerSidebar = refAutoReset(false, 1000)
   const settingsOpen = ref(false)
   const sidebarMenuOpen = ref(false)
   const toggleSidebar = useToggle(sidebarExpanded)
   const toggleSettings = useToggle(settingsOpen)
-  const enterY = ref<string | number>('-50%')
-  const previousEnterY = usePrevious(enterY)
-  const enterX = ref<string | number>(0) // for settings
-  const leaveY = ref(<string | number>'50%')
-  const previousLeaveY = usePrevious(enterY)
-  const leaveX = ref<string | number>(0) // for settings
 
   const pinnedOpen = ref(false)
 
   // dialog
 
-  const loginOpen = ref(false)
+  const userNav = ref(null)
   const commandOpen = ref(false)
   const contextMenuOpen = ref(false)
   const newFolderOpen = ref(false)
@@ -53,17 +47,11 @@ export const useUiStore = defineStore('UiStore', () => {
     settingsOpen,
     sidebarMenuOpen,
     toggleSettings,
-    enterY,
-    previousEnterY,
-    leaveY,
-    previousLeaveY,
-    enterX,
-    leaveX,
 
     pinnedOpen,
 
     // dialog
-    loginOpen,
+    userNav,
     commandOpen,
     contextMenuOpen,
     newFolderOpen,
@@ -72,6 +60,8 @@ export const useUiStore = defineStore('UiStore', () => {
     champTabs,
     matchTabs,
 
+    // sidebar
+    activeSidebarContent,
   }
 }, {
   persist: {

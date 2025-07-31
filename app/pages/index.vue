@@ -58,7 +58,7 @@ const { stop } = useIntersectionObserver(
 <template>
   <div
     ref="homeWrapper"
-    class="relative w-screen overflow-x-hidden home-wrapper size-full overflow-y-scroll">
+    class="relative w-full overflow-x-hidden home-wrapper size-full overflow-y-scroll">
     <Hero
       :progress="stepProgress"
       :visible="heroVisible" />

@@ -55,7 +55,7 @@ const overlayInitialState = {
       <DialogOverlay
         class="fixed inset-0 z-50 isolate bg-black/70"
         :class="{ 'opacity-0 invisible': props.noOverlay }">
-        <AnimatePresence>
+
           <Motion
             class="overlay"
             :initial="overlayInitialState"
@@ -65,7 +65,7 @@ const overlayInitialState = {
               duration: 0.3,
             }"
             :exit="overlayInitialState" />
-        </AnimatePresence>
+
       </DialogOverlay>
 
       <DialogContent
@@ -73,7 +73,7 @@ const overlayInitialState = {
         v-bind="forwarded"
         :class="
           cn(
-            'fixed  left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] z-50 isolate  max-w-160  gap-4 border bg-b1 px-10 py-8 shadow-lg data-[state=closed]:duration-200  data-[state=closed]:animate-out data-[state=closed]:fade-out-0  data-[state=closed]:zoom-out-95  data-[state=closed]:slide-out-to-bottom-[48%]  sm:rounded-xl',
+            'fixed  left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] z-50 isolate   gap-4 border bg-b1 px-10 py-8 shadow-lg data-[state=closed]:duration-200  data-[state=closed]:animate-out data-[state=closed]:fade-out-0  data-[state=closed]:zoom-out-95  data-[state=closed]:slide-out-to-bottom-[48%]  sm:rounded-xl',
             props.class,
           )
         ">
