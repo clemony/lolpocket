@@ -1,4 +1,4 @@
-declare interface MatchFilter {
+export interface MatchFilter {
   patch?: number | null
   queue?: number | null
   champion?: string | null
@@ -7,14 +7,14 @@ declare interface MatchFilter {
   ignoreRole?: boolean
 }
 
-declare interface ChampionFilter {
-  position?: string | null
+export interface ChampionFilter {
+  position?: string
   role?: string | null
   query: string | null
   result: any[] | null
 }
 
-declare interface ItemFilter {
+export interface ItemFilter {
   purchasable: boolean
   rank: string | null
   stats: string[] | null

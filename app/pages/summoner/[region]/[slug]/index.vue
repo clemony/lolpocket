@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-import { vScroll } from '@vueuse/components'
-import type { UseScrollReturn } from '@vueuse/core'
+import { motion, useDomRef } from 'motion-v'
 
 const { summoner } = defineProps<{
   summoner: Summoner
@@ -10,21 +9,25 @@ const emit = defineEmits<{
   (e: 'update:scroll-y-position', value: number): void
 }>()
 
-function onScroll(state: UseScrollReturn) {
-  console.log(state.y.value) // {x, y, isScrolling, arrivedState, directions}
-  emit('update:scroll-y-position', state.y.value)
-}
+const container = useDomRef()
+const { scrollY } = useScroll({
+  container,
+})
+useMotionValueEvent(scrollY, 'change', (latest) => {
+  if (latest <= 400)
+    emit('update:scroll-y-position', latest)
+})
 </script>
 
 <template>
-  <main
-    v-scroll="onScroll"
-    class="flex size-full overflow-y-auto !justify-start !items-start">
+  <motion.main
+    ref="container"
+    class="flex size-full overflow-y-auto overscroll-none !justify-start !items-start">
     <aside
       class="h-full w-[43.5%] px-10 grid justify-end relative sticky top-0 left-0">
       <transition-expand
         group
-        class="overflow-y-scroll scrollbar-hidden gap-8 grid auto-rows-max items-start py-14">
+        class="overflow-y-scroll overscroll-none scrollbar-hidden gap-8 grid auto-rows-max items-start py-14">
         <RankCard
           v-if="summoner.ranked?.solo"
           title="Solo/Duo"
@@ -73,5 +76,5 @@ function onScroll(state: UseScrollReturn) {
           (e) => emit('update:scroll-y-position', e)
         " />
     </div>
-  </main>
+  </motion.main>
 </template>

@@ -5,14 +5,14 @@ export const useChampStore = defineStore('ChampStore', () => {
   const championSplashDropdown = ref(null)
 
   const championFilter = ref<ChampionFilter>({
-    position: null,
+    position: 'All',
     role: null,
     query: null,
     result: null,
   })
 
   const pChampionFilter = ref<ChampionFilter>({
-    position: null,
+    position: 'All',
     role: null,
     query: null,
     result: null,

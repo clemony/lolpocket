@@ -1,11 +1,11 @@
-declare type AccountRole = 'admin' | 'summoner' | 'default'
+export type AccountRole = 'admin' | 'summoner' | 'default'
 
-declare interface User {
+export interface User {
   account: UserAccount
   summoner: Summoner
 }
 
-declare interface UserAccount {
+export interface UserAccount {
   name: string
   role: AccountRole
   id: string
@@ -17,12 +17,12 @@ declare interface UserAccount {
   }
   pockets: UserPockets
   inbox: {
-  messages: InboxMessage[]
-  notifications: InboxItem[]
-}
+    messages: InboxMessage[]
+    notifications: InboxItem[]
+  }
 }
 
-declare interface UserSettings {
+export interface UserSettings {
   alertNewPocket: boolean
   alertDeletePocket: boolean
   motion: boolean
@@ -33,11 +33,11 @@ declare interface UserSettings {
   theme: string
 }
 
-declare interface PublicData {
+export interface PublicData {
   splash: string
 }
 
-interface InboxItem {
+export interface InboxItem {
   id: string
   date: Date
   template: string
@@ -45,8 +45,7 @@ interface InboxItem {
   read?: boolean
 }
 
-
-declare interface InboxMessage extends InboxItem {
+export interface InboxMessage extends InboxItem {
   title: string
   content: string
   from: {
@@ -59,13 +58,13 @@ declare interface InboxMessage extends InboxItem {
   dateTrashed?: Date | null
 }
 
-declare interface UserPockets {
+export interface UserPockets {
   all: Pocket[]
   pinned: string[]
   archived: string[]
 }
 
-declare interface Note {
+export interface Note {
   title: string
   content: string
   icon: string

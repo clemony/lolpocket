@@ -25,9 +25,11 @@ export function useChampionFilter(filters: ChampionFilter) {
           ? championFilters.roles?.[filters.role]?.includes(id)
           : true
       const positionMatch
-        = filters.position
-          ? championFilters.positions?.[filters.position]?.includes(id)
-          : true
+        = filters.position == 'All'
+          ? true
+          : filters.position
+            ? championFilters.positions?.[filters.position]?.includes(id)
+            : true
       const queryMatch
         = debouncedQuery.value
           ? name.includes(debouncedQuery.value.toLowerCase())

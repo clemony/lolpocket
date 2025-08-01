@@ -143,6 +143,7 @@ export default defineNuxtConfig({
       '@vueuse/components',
       'data',
       'types',
+      './types',
       '~~/shared/types/**',
       'keys/**',
       'routes',
@@ -157,7 +158,7 @@ export default defineNuxtConfig({
   },
   alias: {
     css: fileURLToPath(new URL('./app/assets/css', import.meta.url)),
-    types: fileURLToPath(new URL('types', import.meta.url)),
+    types: fileURLToPath(new URL('./types', import.meta.url)),
     stores: fileURLToPath(new URL('./stores', import.meta.url)),
     composables: fileURLToPath(new URL('./app/composables', import.meta.url)),
     shared: fileURLToPath(new URL('./shared', import.meta.url)),
@@ -169,7 +170,7 @@ export default defineNuxtConfig({
     modules: fileURLToPath(new URL('./modules', import.meta.url)),
     data: fileURLToPath(new URL('./app/data', import.meta.url)),
     keys: fileURLToPath(new URL('./app/keys', import.meta.url)),
-    db: fileURLToPath(new URL('types/database.types', import.meta.url)),
+    db: fileURLToPath(new URL('./types/db', import.meta.url)),
     routes: fileURLToPath(new URL('./app/routes/index', import.meta.url)),
   },
 

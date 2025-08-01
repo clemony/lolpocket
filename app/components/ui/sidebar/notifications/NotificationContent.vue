@@ -18,6 +18,12 @@ function testNotificaition() {
   console.log('💠 - testNotificaition - as.userAccount.inbox.notifications:', as.userAccount.inbox.notifications)
   saveNotification('newPocket', vars)
 }
+
+onBeforeUnmount(() => {
+  notifications.value.filter(n => !n.read).forEach((n) => {
+    n.read = true
+  })
+})
 </script>
 
 <template>

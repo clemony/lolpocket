@@ -40,7 +40,7 @@ export const navLinks: LinkGroup = [
   },
   {
     name: 'Summoner',
-    /*     link: '/summoner', */
+    link: '/summoner',
     component: SummonerMenu,
     links: [
       getSummonerLink(),

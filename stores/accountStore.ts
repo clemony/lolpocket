@@ -1,10 +1,8 @@
 import { useSupabaseClient } from '#imports'
-import type { RealtimePostgresUpdatePayload as RealtimePayload } from '@supabase/supabase-js'
-import type { WatchSource } from '@vue/runtime-core'
+import type { SupabaseClient } from '@supabase/supabase-js'
 import { defaultUser } from 'data/defaults/default-user'
-import type { Database } from 'db'
+import type { Database } from 'db/database.types'
 import { defineStore } from 'pinia'
-import type { UserData, UserPublic } from 'types/table.types'
 
 export const useAccountStore = defineStore(
   'as',
@@ -14,7 +12,6 @@ export const useAccountStore = defineStore(
     const userNotes = ref<Note[]>([])
     const favoriteChamps = ref<Champion[]>([])
     const favoriteItems = ref<number[]>([])
-    const ps = usePocketStore()
 
     const userAccount = ref<UserAccount>({
       name: 'Summoner',
@@ -33,7 +30,7 @@ export const useAccountStore = defineStore(
       },
       inbox: {
         messages: [],
-        notifications: []
+        notifications: [],
       },
     })
 
@@ -53,52 +50,42 @@ export const useAccountStore = defineStore(
       alertDeletePocket: true,
     })
 
-    const publicData = ref<PublicData>({
-      splash: null,
-    })
-
     function resetUserAccount() {
       Object.assign(userAccount.value, defaultUser)
     }
 
-    /*     const syncedUserSettings = computed<Partial<UserData> | null>(() =>
-      userAccount.value?.settings ?
-        { settings: userAccount.value.settings }
-      : null
-    ) */
-
-    /*     useSupabaseSync("user_data", syncedUserSettings, {
-      onBatchUpdate(payloads: RealtimePayload<UserData>[]) {
-        for (const payload of payloads) {
-          if (payload.new?.settings) {
-            userAccount.value.settings = payload.new.settings
-          }
-        }
-      },
-    }) */
-
-    /*     console.log(
-      "💠 - userAccount.value?.settings.public?.splash:",
-      publicData.value?.splash
-    )
-    const syncedUserPublic = computed<Partial<UserPublic> | null>(() => {
-      const splash = publicData.value?.splash
-      return splash != null ? { profile_splash: splash } : null
+    type PublicUser = Database['public']['Tables']['user_public']['Row']
+    const publicData = shallowRef<Partial<PublicUser | null>>({
+      splash: '',
+      updated: '',
     })
-    console.log("💠 - syncedUserPublic:", syncedUserPublic)
 
-    useSupabaseSync(syncedUserPublic, "user_public", {
-      onBatchUpdate(payloads) {
-        for (const payload of payloads) {
-          const splash = payload.new?.profile_splash
-          if (typeof splash === "string") {
-            publicData.value.splash = splash
-          }
-        }
-      },
-      batchMs: 30_000,
-    })
- */
+    const client = useSupabaseClient<SupabaseClient>()
+    async function fetchPublicData(userId: string) {
+      const { data, error } = await client
+        .from('user_public')
+        .select('splash')
+        .eq('user_id', userId)
+        .single<PublicUser>()
+
+      if (error) {
+        console.error('Error fetching public data:', error)
+      }
+
+      return data
+    }
+    async function updatePublicData() {
+      const { error } = await client
+        .from('user_public')
+        .update({ splash: publicData.value.splash })
+        .eq('uuid', userAccount.value.id)
+        .select()
+
+      if (error) {
+        console.error('Error updating public data:', error)
+      }
+    }
+
     return {
       // account
       userAccount,
@@ -107,6 +94,8 @@ export const useAccountStore = defineStore(
       resetUserAccount,
       defaultUser,
       userNotes,
+      fetchPublicData,
+      updatePublicData,
 
       // settings
       themeClass,

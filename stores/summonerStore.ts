@@ -45,11 +45,19 @@ export const useSummonerStore = defineStore(
       // 1. Try to resolve by puuid
       if (identifier.puuid) {
         const existing = getSummoner(identifier.puuid)
-        if (existing)
+
+        const shouldRefresh = !existing || isStale(existing.lastUpdate)
+
+        if (!shouldRefresh)
           return existing
 
         const fetched = await useFetchSummonerData(identifier.puuid)
-        await setSummoner(fetched)
+        await setSummoner({
+          ...fetched,
+          lastUpdate: new Date(),
+          matches: existing?.matches, // preserve match data
+          mastery: existing?.mastery, // preserve mastery data
+        })
         return fetched
       }
 
@@ -78,6 +86,7 @@ export const useSummonerStore = defineStore(
           ...resolved,
           name: identifier.name,
           tag: identifier.tag,
+          lastUpdate: new Date(),
         }
         await setSummoner(summonerId)
         return resolved

@@ -14,13 +14,16 @@ const hasAction = computed(() => !!template.value.action)
   <div
     v-if="template"
     class="w-full first:pt-5 border border-transparent items-center shrink-0 min-h-14  pr-8 py-0.5  items-start **:items-start gap-4 overflow-hidden  group/item  chat chat-end">
-    <span class="chat-header w-full items-center text-start pl-11 flex gap-2 font-medium text-nowrap opacity-50 ">
-
-      <b>{{ template.badge?.text }}</b>
-      <span class="h-px w-2 grid place-items-center relative">
-        <icon
-          :name="template.badge?.icon?.name"
-          :class="cn('absolute', template.badge?.icon?.class)" />
+    <span class="chat-header w-full items-center text-start pl-11 flex gap-2 font-medium text-nowrap opacity-50  justify-between">
+      <span class="flex items-center gap-2">
+        <b v-if="template.badge?.text">{{ template.badge?.text }}</b>
+        <span
+          v-if="template.badge?.icon"
+          class="h-px w-2 grid place-items-center relative">
+          <icon
+            :name="template.badge?.icon?.name"
+            :class="cn('absolute', template.badge?.icon?.class)" />
+        </span>
       </span>
       {{ formatTimeAgo(item.date, 'letter') }}
     </span>

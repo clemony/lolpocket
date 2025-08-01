@@ -19,8 +19,8 @@ const delegatedProps = computed(() => {
     <button :class="cn('btn btn-ghost btn-square btn-sm', props.class)">
       <slot>
         <icon
-          name="left-sm"
-          class="size-4 shrink-0 stroke-[1.7]  " />
+          name="material-symbols:chevron-left"
+          class="size-4.5" />
       </slot>
     </button>
   </PaginationPrev>

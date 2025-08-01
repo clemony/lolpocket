@@ -1,13 +1,13 @@
-// Updated Patch 25.12 - 06/16/2025 01:46:56 PM CDT
+// Updated Patch 25.15 - 07/31/2025 04:44:32 PM CDT
 
-const rune: Rune
-        = {
-          id: 9923,
-          key: 'HailOfBlades',
-          name: 'Hail of Blades',
-          description: 'Gain a large amount of Attack Speed for the first 3 attacks made against enemy champions.',
-          details: 'Gain 140% (80% for ranged champions) Attack Speed when you attack an enemy champion for up to 3 attacks.\n\nNo more than 3s can elapse between attacks or this effect will end.\n\nCooldown: 10s.\n\nAttack resets increase the attack limit by 1.\nAllows you to temporarily exceed the attack speed limit.',
-          path: 'Domination',
-          runeIndex: 2,
-        }
-export default rune
+const rune: Rune =
+        {
+  "id": 9923,
+  "key": "HailOfBlades",
+  "name": "Hail of Blades",
+  "description": "Gain a large amount of Attack Speed for the first 3 attacks made against enemy champions.",
+  "details": "Gain 140% (80% for ranged champions) Attack Speed when you attack an enemy champion for up to 3 attacks.\n\nNo more than 3s can elapse between attacks or this effect will end.\n\nCooldown: 10s.\n\nAttack resets increase the attack limit by 1.\nAllows you to temporarily exceed the attack speed limit.",
+  "path": "Domination",
+  "runeIndex": 2
+}
+        export default rune

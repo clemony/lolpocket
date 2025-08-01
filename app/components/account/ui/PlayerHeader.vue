@@ -2,8 +2,6 @@
 const { summoner } = defineProps<{
   summoner: Summoner
 }>()
-
-const user = inject<User>('user')
 </script>
 
 <template>
@@ -16,7 +14,7 @@ const user = inject<User>('user')
 
       <UpdateSummoner
         :summoner
-        button-class="btn-circle btn-neutral btn-sm"
+        button-class="btn-circle btn-neutral btn-sm [&_.radial-progress]:text-b1"
         class="-left-1 -bottom-1 absolute" />
 
       <!--       <tippy class="has-disabled:!cursor-help">

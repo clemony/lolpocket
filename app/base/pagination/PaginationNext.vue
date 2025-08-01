@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { PaginationNext, useForwardProps } from 'reka-ui'
 import type { PaginationNextProps } from 'reka-ui'
-import { buttonVariants } from '../button/button-variants'
+import { PaginationNext, useForwardProps } from 'reka-ui'
 import type { ButtonVariants } from '../button/button-variants'
+import { buttonVariants } from '../button/button-variants'
 
 const props = withDefaults(defineProps<PaginationNextProps & {
   size?: ButtonVariants['size']
@@ -22,8 +22,8 @@ const forwarded = useForwardProps(delegatedProps)
     v-bind="forwarded">
     <slot>
       <icon
-        name="right-sm"
-        class="size-4 stroke-[1.7]  " />
+        name="material-symbols:chevron-right"
+        class="size-4.5" />
     </slot>
   </PaginationNext>
 </template>

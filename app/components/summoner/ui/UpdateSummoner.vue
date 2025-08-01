@@ -56,7 +56,7 @@ watch(
     @click="throttledRefresh()">
     <button
       v-if="!timeRemaining"
-      :class="cn('  btn   btn-ghost ', buttonClass)">
+      :class="cn(' btn btn-neutral btn-circle', buttonClass)">
       <icon
         name="mingcute:refresh-2-line"
         :class="
@@ -68,7 +68,7 @@ watch(
 
     <div
       v-else-if="timeRemaining && timeRemaining?.percent"
-      class="radial-progress opacity-90 !bg-b1 mt-1 mr-1"
+      class="radial-progress  btn btn-neutral btn-circle opacity-90 text-b1  "
       :style="{
         '--value': timeRemaining?.seconds,
         '--size': '1.25rem',

@@ -26,7 +26,7 @@ const topChampionData = computed<TopChampion>(() => {
   const champ = Object.keys(topChampion.value)[0]
   const championData = {
     name: ix.champNameByKey(champ),
-    splash: getSkinSplash(champ, getRandom(ix.skins[champ]), 'uncentered'),
+    splash: getSplash(champ, 'centered'),
   }
   if (champ)
     emit('set:top-champion', championData ?? null)

@@ -1,5 +1,5 @@
 // table.types.ts
-import type { Database } from 'db'
+import type { Database } from './database.types'
 
 // Base utility type for extracting full table definition
 export type TableDefinition<T extends keyof Database['public']['Tables']>

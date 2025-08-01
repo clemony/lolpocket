@@ -29,24 +29,23 @@ function verifySignIn() {
 
 <template>
   <nav
-    class="w-full justify-between !py-0 flex absolute flex-nowrap top-0 inset-x-0 w-full h-(--navbar-height) border-b border-b-b3/60  items-center px-3  z-10">
+    class="w-full  !py-0 flex absolute flex-nowrap top-0 inset-x-0 w-full h-(--navbar-height) border-b border-b-b3/60  items-center px-3  z-10">
     <div
       class="size-full absolute top-0 left-0 inset-0 bg-b1/88 backdrop-blur-md"
       :class="{ '!bg-b1/50': route?.path == '/' }" />
 
+    <NuxtLink
+      class="btn !btn-square btn-ghost size-12 mr-4"
+      to="/">
+      <h3 class="dst select-none !tracking-normal bg-transparent">
+        LP
+      </h3>
+    </NuxtLink>
+
     <NavigationMenu
-      disable-pointer-leave-close
       :skip-delay-duration="500"
       :disable-click-trigger="isDesktop()">
       <NavigationMenuList class="gap-x-2">
-        <NavigationMenuLink
-          class="btn !btn-square btn-ghost size-12 mr-4"
-          @click="navigateTo('/')">
-          <h3 class="dst select-none !tracking-normal bg-transparent">
-            LP
-          </h3>
-        </NavigationMenuLink>
-
         <template
           v-for="item in navLinks"
           :key="item.name">
@@ -66,8 +65,7 @@ function verifySignIn() {
             <component
               :is="item.component"
 
-              @open:sign-in="verifySignIn()"
-              @open:pins="pinsOpen = true" />
+              @open:sign-in="verifySignIn()" />
           </NavigationMenuItem>
         </template>
 
@@ -77,7 +75,7 @@ function verifySignIn() {
       <NavigationMenuViewport
         class="translate-y-3 w-(--reka-navigation-menu-viewport-width) h-(--reka-navigation-menu-viewport-height)  " />
     </NavigationMenu>
-
+    <Grow />
     <SidebarTriggerPanel />
   </nav>
 

@@ -1,65 +1,65 @@
-const item: Item = {
-  name: 'Oblivion Orb',
-  id: 3916,
-  rank: 'Epic',
-  buildsFrom: [
+const item: Item =  {
+  "name": "Oblivion Orb",
+  "id": 3916,
+  "rank": "Epic",
+  "buildsFrom": [
     {
-      id: 1052,
-      name: 'Amplifying Tome',
-      gold: 400,
-    },
+      "id": 1052,
+      "name": "Amplifying Tome",
+      "gold": 400
+    }
   ],
-  buildsInto: [
+  "buildsInto": [
     {
-      id: 223011,
-      name: 'Chemtech Putrifier',
-      gold: 1900,
+      "id": 223011,
+      "name": "Chemtech Putrifier",
+      "gold": 1900
     },
     {
-      id: 3011,
-      name: 'Chemtech Putrifier',
-      gold: 1900,
+      "id": 3011,
+      "name": "Chemtech Putrifier",
+      "gold": 1900
     },
     {
-      id: 3165,
-      name: 'Morellonomicon',
-      gold: 2850,
-    },
+      "id": 3165,
+      "name": "Morellonomicon",
+      "gold": 2850
+    }
   ],
-  specialRecipe: 0,
-  noEffects: false,
-  removed: false,
-  icon: 'https://raw.communitydragon.org/15.11/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3916_mage_t2_oblivionorb.png',
-  simpleDescription: 'Increases magic damage',
-  nicknames: [
-    'grievous',
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3916_mage_t2_oblivionorb.png",
+  "simpleDescription": "Increases magic damage",
+  "nicknames": [
+    "grievous"
   ],
-  passives: [
+  "passives": [
     {
-      name: 'Grievous Wounds',
-      unique: true,
-      effects: 'Dealing magic damage to enemy champions inflicts them with <img src="/img/icons/grievous-wounds.webp" class="tip-icon" />Grievous Wounds for 3 seconds.',
-    },
+      "name": "Grievous Wounds",
+      "unique": true,
+      "effects": "Dealing magic damage to enemy champions inflicts them with <img src=\"/img/icons/grievous-wounds.webp\" class=\"tip-icon\" />Grievous Wounds for 3 seconds."
+    }
   ],
-  stats: {
-    abilityPower: 25,
+  "stats": {
+    "abilityPower": 25
   },
-  shop: {
-    prices: {
-      total: 800,
-      combined: 400,
-      sell: 320,
+  "shop": {
+    "prices": {
+      "total": 800,
+      "combined": 400,
+      "sell": 320
     },
-    tags: [
-      'MAGE',
-      'SUPPORT',
-    ],
+    "tags": [
+      "MAGE",
+      "SUPPORT"
+    ]
   },
-  maps: [
+  "maps": [
     11,
     12,
     21,
-    35,
-  ],
+    35
+  ]
 }
 export default item

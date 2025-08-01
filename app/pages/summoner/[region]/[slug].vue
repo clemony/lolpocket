@@ -49,6 +49,12 @@ async function resolveAndFetch() {
 watch([region, name, tag], resolveAndFetch, { immediate: true })
 
 const topChampion = ref<TopChampion>(null)
+
+const scrollYPosition = ref<MotionValue>()
+
+watch(() => scrollYPosition.value, (newVal) => {
+  console.log('💠 - watch - newVal:', newVal)
+})
 </script>
 
 <template>
@@ -82,7 +88,8 @@ const topChampion = ref<TopChampion>(null)
             :region
             :slug
             :summoner
-            :top-champion />
+            :top-champion
+            @update:scroll-y-position="e => scrollYPosition = e" />
         </div>
       </template>
     </NuxtLayout>

@@ -1,6 +1,6 @@
-@import 'tailwindcss';
-@import '../theme.css';
-@import 'tippy.js/dist/svg-arrow.css';
+@import "tailwindcss";
+@import "../theme.css";
+@import "tippy.js/dist/svg-arrow.css";
 
 .tippy-content {
   @apply text-3;
@@ -12,7 +12,7 @@
   & > .tippy-svg-arrow {
     @apply drop-shadow-sm;
   }
-  &[data-placement='bottom'] {
+  &[data-placement="bottom"] {
     @apply inset-shadow-sm-x;
     & > .tippy-svg-arrow > svg:first-child,
     & > .tippy-svg-arrow > svg:last-child {
@@ -20,15 +20,15 @@
     }
   }
 
-  &[data-placement='top'] {
+  &[data-placement="top"] {
     @apply inset-shadow-sm;
     & > .tippy-svg-arrow > svg:first-child,
     & > .tippy-svg-arrow > svg:last-child {
-      @apply -translate-y-4 -translate-x-1.5;
+      @apply -translate-y-4 -translate-x-1.5 mx-auto;
     }
   }
 
-  &[data-placement='left'] {
+  &[data-placement="left"] {
     @apply -translate-x-0.25;
     > .tippy-svg-arrow > svg:first-child,
     > .tippy-svg-arrow > svg:last-child {
@@ -36,8 +36,8 @@
     }
   }
 
-  &[data-placement='right'] > .tippy-svg-arrow > svg:first-child,
-  &[data-placement='right'] > .tippy-svg-arrow > svg:last-child {
+  &[data-placement="right"] > .tippy-svg-arrow > svg:first-child,
+  &[data-placement="right"] > .tippy-svg-arrow > svg:last-child {
     @apply -translate-y-4 translate-x-2.5;
   }
   & > .tippy-svg-arrow {
@@ -52,11 +52,11 @@
   }
 }
 
-.tippy-box[data-inertia][data-state='visible'] {
+.tippy-box[data-inertia][data-state="visible"] {
   transition-timing-function: cubic-bezier(0.28, 0.93, 0.75, 1.38);
 }
 
-.tippy-box[data-theme~='basic'] {
+.tippy-box[data-theme~="basic"] {
   @apply border border-b3 bg-b1/85 rounded-field backdrop-blur-md text-bc/90 **:text-2 drop-shadow-[1px_3px_2px_#00000020] shadow-none py-2;
   & > .tippy-svg-arrow {
     @apply drop-shadow-[0px_1px_0_#00000016];
@@ -69,6 +69,6 @@
   }
 }
 
-.tippy-box[data-theme~='field'] {
+.tippy-box[data-theme~="field"] {
   @apply fieldset mt-1 !shadow-warm-soft !drop-shadow-sm drop-shadow-black/5 relative w-full h-fit bg-b2 border border-b3 p-4 rounded-box;
 }

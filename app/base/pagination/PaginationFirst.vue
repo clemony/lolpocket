@@ -21,8 +21,8 @@ const delegatedProps = computed(() => {
       v>
       <slot>
         <icon
-          name="teenyicons:double-caret-left-small-outline"
-          class="size-6.25 shrink-0 opacity-80 " />
+          name="material-symbols:first-page"
+          class="size-4.5 shrink-0 opacity-80 " />
       </slot>
     </button>
   </PaginationFirst>

@@ -32,14 +32,14 @@ export function getInboxTemplate(item: InboxItem): InboxTemplate {
 
 function createInboxTemplateNewPocket(vars): InboxTemplate {
   return {
-    title: `<span class="text-white">Pocket <i>"${vars.pocketName}"</i> created!</span>`,
+    title: `Pocket <i class="font-semibold text-shade-inspiration/8">${vars.pocketName}</i> created!`,
     badge: {
       text: 'Add Pocket',
       icon: {
         name: 'add-sm',
         class: ' size-4 **:stroke-[1.6] -top-2 -left-2',
       },
-      class: 'bg-inspiration',
+      class: '',
     },
     action: {
       type: 'navigate',
@@ -55,14 +55,14 @@ function createInboxTemplateNewPocket(vars): InboxTemplate {
 
 function createInboxTemplateDeletePocket(vars): InboxTemplate {
   return {
-    title: `Pocket <b class="text-domination">${vars.pocketName}</b> sent to trash.`,
+    title: `Pocket <i class="font-semibold text-shade-domination/6">${vars.pocketName}</i> sent to trash.`,
     badge: {
-      text: 'Add Pocket',
-      /*       class: 'from-domination/76 to-domination',
+      text: 'Delete Pocket',
+      class: '',
       icon: {
         name: 'minus-sm',
-        class: ' size-4.5 **:stroke-[2] -mr-0.75 -ml-1.5 mt-px',
-      }, */
+        class: ' size-4 **:stroke-[1.6] -top-2 -left-2',
+      },
     },
     action: {
       type: 'navigate',

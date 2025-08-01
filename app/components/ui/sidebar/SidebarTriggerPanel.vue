@@ -24,7 +24,12 @@ const unreadMessages = computed (() => {
   return as.userAccount.inbox.messages.filter(m => !m.read).length
 })
 
-watch(() => as.userAccount?.inbox?.notifications.length, (newVal) => {
+watch(() => as.userAccount?.inbox?.notifications, (newVal) => {
+  if (newVal)
+    userMenu.notifications.value = newNotifications.value
+}, { deep: true })
+
+watch(() => newNotifications.value, (newVal) => {
   if (newVal)
     userMenu.notifications.value = newNotifications.value
 })

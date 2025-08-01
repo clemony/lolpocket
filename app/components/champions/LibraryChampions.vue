@@ -12,11 +12,11 @@ const loaded = ref(false)
   <transition-slide
     v-if="championKeys"
     group
-    class="overflow-hidden size-full gap-6 pt-46 scrollbar-hidden grid"
+    class="overflow-hidden size-full justify-start gap-6 pt-46 scrollbar-hidden grid"
     :class="{ 'grid-cols-[1fr_420px] animate-in slide-out-to-right': selectedChampion, ' grid-cols-[1fr_0px] animate-out slide-out-to-right': !selectedChampion }">
     <transition-slide
       group
-      class="size-full pb-8  scroll-smooth  flex flex-wrap  overflow-y-auto overflow-x-hidden  justify-start rounded-lg"
+      class="size-full scrollbar-hidden pb-8  scroll-smooth  flex flex-wrap  overflow-y-auto overflow-x-hidden  justify-start rounded-lg"
       :class="{ ' after:size-full after:pointer-events-none after:fixed after:top-36 after:rounded-t-[4rem] after:border-x-40 after:border-t-40 after:border-b1 after:z-0 after:scale-x-[101.5%] after:-left-0': loaded }">
       <label
         v-for="key in championKeys"

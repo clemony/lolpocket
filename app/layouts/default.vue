@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const router = useRouter()
 const route = useRoute()
-
+const ds = useDataStore()
 const as = useAccountStore()
 const us = useUiStore()
 const client = useSupabaseClient()
@@ -28,7 +28,7 @@ onMounted(async () => {
     as.dataTheme ? as.dataTheme : 'midnight',
   )
   /*   useAuth() */
-  ix.loadDefaults()
+  await ix.loadPatch()
 })
 
 client.auth.onAuthStateChange(async (event, session) => {

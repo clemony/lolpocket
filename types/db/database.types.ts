@@ -1,10 +1,4 @@
-export type Json
-  = | string
-    | number
-    | boolean
-    | null
-    | { [key: string]: Json | undefined }
-    | Json[]
+export type Json = Record<string, any>
 
 export interface Database {
   // Allows to automatically instanciate createClient with right options
@@ -61,7 +55,7 @@ export interface Database {
       }
       user_public: {
         Row: {
-          profile_splash: string | null
+          splash: string | null
           puuid: string
           updated: string
           uuid: string

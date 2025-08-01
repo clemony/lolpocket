@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --sidebar: var(--color-b1); /* oklch(97% 0% 68deg); */
+  --sidebar: oklch(99% 0% 68deg); /* var(--color-b1);*/
   --sidebar-foreground: var(--color-bc);
   --sidebar-primary: var(--color-nc);
   --sidebar-primary-foreground: var(--color-n1);
@@ -31,7 +31,7 @@
 }
 
 @theme inline {
-  --color-sidebar: var(--color-b1);
+  --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
   --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);

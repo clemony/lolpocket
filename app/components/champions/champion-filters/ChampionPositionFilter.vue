@@ -14,7 +14,7 @@ const cs = useChampStore()
           :value="position"
           class="group place-items-center !text-nc">
           <component
-            :is="`i-roles-${position == null ? 'all' : position.toLowerCase()}`"
+            :is="`i-roles-${position.toLowerCase()}`"
             class="h-4.5 w-auto dst shrink-0 z-10 text-bc/60"
             :class="{ '**:!text-nc ': position == cs.championFilter.position }" />
         </IndicatorTabsTrigger>

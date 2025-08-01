@@ -12,10 +12,10 @@ watch(() => us.activeSidebarContent, (oldVal, newVal) => {
 
 <template>
   <Sidebar
-    class="w-[var(--sidebar-width)] top-16 border-l-b3 overflow-hidden ">
+    class="w-[var(--sidebar-width)] top-16 border-l-b3 overflow-hidden !shadow-warm-soft bg-sidebar">
     <TransitionSlideLeft
       group
-      class="flex  border-l-b3/80 border-l overflow-hidden size-full">
+      class="flex  overflow-hidden size-full">
       <component
         :is="component"
         v-if="us.sidebarExpanded && component"

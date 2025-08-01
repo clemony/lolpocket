@@ -54,25 +54,33 @@ const openMatch = ref(null)
       v-model:page="currentPage"
       :total="filteredMatches?.length"
       :default-page="1"
+      :sibling-count="1"
+      :show-edges="false"
       :items-per-page="itemsPerPage"
-      class="pt-4">
+      class="pt-8 max-w-220 justify-center justify-self-start mx-0">
       <PaginationContent v-slot="{ items }">
         {{ console.log("💠 - items:", items) }}
-        <PaginationFirst />
-        <PaginationPrev />
+        <PaginationFirst class="disabled:opacity-0" />
+        <PaginationPrev
+          size="sm"
+          class="disabled:opacity-0 btn-square" />
         <template v-for="(page, index) in items">
           <PaginationItem
             v-if="page.type === 'page'"
             :key="index"
+            variant="outline"
             :value="index + 1"
+            size="sm"
             :is-active="index + 1 === currentPage"></PaginationItem>
           <PaginationEllipsis
             v-else
             :key="page.type"
             :index="index" />
         </template>
-        <PaginationNext />
-        <PaginationLast />
+        <PaginationNext
+          size="sm"
+          class="disabled:opacity-0 btn-square" />
+        <PaginationLast class="disabled:opacity-0" />
       </PaginationContent>
     </Pagination>
   </div>

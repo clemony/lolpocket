@@ -37,11 +37,11 @@
     @apply hover:ring hover:ring-n1/60 hover:drop-shadow-sm inset-shadow-sm  cursor-pointer  hover:shadow-black/40;
   }
 
-  .scrollbar-hidden::-webkit-scrollbar {
+  .scrollbar-hidden,
+  .scrollbar-hide,
+  .scrollbar-hidden::-webkit-scrollbar,
+  .scrollbar-hide::-webkit-scrollbar {
     display: none;
-  }
-
-  .scrollbar-hidden {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }

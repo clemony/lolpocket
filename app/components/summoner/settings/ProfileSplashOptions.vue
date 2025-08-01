@@ -12,11 +12,12 @@ const inactiveClass = 'btn-ghost  *:grayscale   hover:*:grayscale-0'
 
 const as = useAccountStore()
 
-const currentSplash = computed(() => as.publicData?.splash)
+const currentSplash = ref(as.publicData?.splash)
 
 function update(e) {
   console.log('💠 - update - e:', e)
-  /* as.userAccount.settings.public.splash = e */
+  as.publicData.splash = e
+  as.updatePublicData()
 }
 
 const isOpen = ref(false)

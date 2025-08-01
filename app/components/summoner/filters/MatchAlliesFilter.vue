@@ -30,7 +30,7 @@ const winrateFormula = ref('absolute')
             :class="{ 'bg-b3/40 border-b3 shadow-xs inset-shadow-sides bg-noise inset-shadow-b3/10': ally.riotIdGameName == ms.mf.ally }">
             <div class="grow items-center justify-self-start text-start flex gap-3 text-2">
               <SummonerIcon
-                class="size-8 shadow-sm drop-shadow-sm "
+                class="size-8 shadow-sm drop-shadow-sm rounded-full"
                 :icon-id="ally.profileIcon"
                 :alt="`${ally.riotIdGameName}'s Icon`" />
               {{ ally.riotIdGameName }}

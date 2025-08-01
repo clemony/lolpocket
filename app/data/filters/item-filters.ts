@@ -1,8 +1,8 @@
-// Updated Patch 25.12 - 06/16/2025 01:45:58 PM CDT
+// Updated Patch 25.15 - 07/31/2025 04:43:36 PM CDT
 
 export const itemFilters = {
-  rank: {
-    Boots: [
+  "rank": {
+    "Boots": [
       1001,
       3006,
       3009,
@@ -18,9 +18,9 @@ export const itemFilters = {
       3174,
       3175,
       3176,
-      223005,
+      223005
     ],
-    Basic: [
+    "Basic": [
       1004,
       1006,
       1018,
@@ -35,9 +35,9 @@ export const itemFilters = {
       1042,
       1052,
       1058,
-      2022,
+      2022
     ],
-    Epic: [
+    "Epic": [
       1011,
       1031,
       1043,
@@ -78,15 +78,16 @@ export const itemFilters = {
       3803,
       3866,
       3916,
+      4003,
       4630,
       4632,
       4638,
       4642,
       6660,
       6670,
-      6690,
+      6690
     ],
-    Starter: [
+    "Starter": [
       1054,
       1055,
       1056,
@@ -104,9 +105,9 @@ export const itemFilters = {
       3184,
       3599,
       3865,
-      223185,
+      223185
     ],
-    Special: [
+    "Special": [
       1500,
       1501,
       1502,
@@ -173,9 +174,9 @@ export const itemFilters = {
       447120,
       447121,
       447122,
-      447123,
+      447123
     ],
-    Consumable: [
+    "Consumable": [
       2003,
       2031,
       2055,
@@ -202,9 +203,9 @@ export const itemFilters = {
       220004,
       220005,
       220006,
-      220007,
+      220007
     ],
-    Legendary: [
+    "Legendary": [
       2065,
       2501,
       2502,
@@ -323,11 +324,11 @@ export const itemFilters = {
       223095,
       223146,
       224004,
-      228001,
-    ],
+      228001
+    ]
   },
-  tags: {
-    'Mage': [
+  "tags": {
+    "Mage": [
       1004,
       1011,
       1026,
@@ -403,9 +404,9 @@ export const itemFilters = {
       447116,
       447118,
       447120,
-      447121,
+      447121
     ],
-    'Support': [
+    "Support": [
       1004,
       1026,
       1028,
@@ -454,9 +455,9 @@ export const itemFilters = {
       8020,
       228001,
       443063,
-      447123,
+      447123
     ],
-    'Tank': [
+    "Tank": [
       1006,
       1011,
       1027,
@@ -519,9 +520,9 @@ export const itemFilters = {
       446667,
       447114,
       447119,
-      447122,
+      447122
     ],
-    'Fighter': [
+    "Fighter": [
       1011,
       1028,
       1029,
@@ -589,9 +590,9 @@ export const itemFilters = {
       446632,
       447103,
       447116,
-      447118,
+      447118
     ],
-    'Marksman': [
+    "Marksman": [
       1018,
       1028,
       1029,
@@ -656,9 +657,9 @@ export const itemFilters = {
       446671,
       447118,
       447120,
-      447121,
+      447121
     ],
-    'Assassin': [
+    "Assassin": [
       1028,
       1029,
       1031,
@@ -692,6 +693,7 @@ export const itemFilters = {
       3179,
       3184,
       3814,
+      4003,
       4017,
       6609,
       6676,
@@ -709,9 +711,9 @@ export const itemFilters = {
       446691,
       446693,
       447115,
-      447116,
+      447116
     ],
-    'Onhit effects': [
+    "Onhit effects": [
       1043,
       1054,
       1056,
@@ -736,31 +738,31 @@ export const itemFilters = {
       3748,
       6662,
       6670,
-      223095,
+      223095
     ],
-    'Lifesteal vamp': [
+    "Lifesteal vamp": [
       1055,
       1083,
       1101,
       1102,
       1103,
       2140,
-      4633,
+      4633
     ],
-    'Mana and reg': [
+    "Mana and reg": [
       1056,
       2139,
       3112,
-      3508,
+      3508
     ],
-    'Health and reg': [
+    "Health and reg": [
       2003,
       2031,
       2138,
       2143,
-      6673,
+      6673
     ],
-    'Movement': [
+    "Movement": [
       2065,
       2138,
       3041,
@@ -779,37 +781,36 @@ export const itemFilters = {
       3152,
       4629,
       6631,
-      6701,
+      6701
     ],
-    'Ability power': [
+    "Ability power": [
       2139,
-      2142,
+      2142
     ],
-    'Attack damage': [
+    "Attack damage": [
       2140,
       2142,
-      3053,
+      3053
     ],
-    'Armor pen': [
-      3032,
+    "Armor pen": [
       3071,
       3134,
-      3302,
+      3302
     ],
-    'Ability haste': [
+    "Ability haste": [
       3073,
       3118,
-      3161,
+      3161
     ],
-    'Magic pen': [
-      3302,
+    "Magic pen": [
+      3302
     ],
-    'Attack speed': [
-      3504,
-    ],
+    "Attack speed": [
+      3504
+    ]
   },
-  maps: {
-    11: [
+  "maps": {
+    "11": [
       1001,
       1004,
       1006,
@@ -1039,9 +1040,9 @@ export const itemFilters = {
       6699,
       6701,
       8010,
-      8020,
+      8020
     ],
-    12: [
+    "12": [
       1001,
       1004,
       1006,
@@ -1206,6 +1207,7 @@ export const itemFilters = {
       3902,
       3903,
       3916,
+      4003,
       4005,
       4401,
       4628,
@@ -1245,9 +1247,9 @@ export const itemFilters = {
       6699,
       6701,
       8010,
-      8020,
+      8020
     ],
-    21: [
+    "21": [
       1001,
       1004,
       1006,
@@ -1415,6 +1417,7 @@ export const itemFilters = {
       3902,
       3903,
       3916,
+      4003,
       4005,
       4401,
       4628,
@@ -1455,9 +1458,9 @@ export const itemFilters = {
       6699,
       6701,
       8010,
-      8020,
+      8020
     ],
-    30: [
+    "30": [
       1500,
       1501,
       1502,
@@ -1553,9 +1556,9 @@ export const itemFilters = {
       447120,
       447121,
       447122,
-      447123,
+      447123
     ],
-    35: [
+    "35": [
       1001,
       1004,
       1006,
@@ -1596,7 +1599,6 @@ export const itemFilters = {
       2051,
       2052,
       2065,
-      2141,
       2150,
       2151,
       2152,
@@ -1711,6 +1713,7 @@ export const itemFilters = {
       3902,
       3903,
       3916,
+      4003,
       4005,
       4401,
       4628,
@@ -1750,11 +1753,11 @@ export const itemFilters = {
       6699,
       6701,
       8010,
-      8020,
-    ],
+      8020
+    ]
   },
-  stats: {
-    flatMovespeed: [
+  "stats": {
+    "flatMovespeed": [
       1001,
       2422,
       3006,
@@ -1771,9 +1774,9 @@ export const itemFilters = {
       3174,
       3175,
       3176,
-      223005,
+      223005
     ],
-    manaRegen: [
+    "manaRegen": [
       1004,
       2065,
       3107,
@@ -1796,9 +1799,9 @@ export const itemFilters = {
       6621,
       224403,
       447105,
-      447123,
+      447123
     ],
-    healthRegen: [
+    "healthRegen": [
       1006,
       1054,
       2051,
@@ -1818,9 +1821,9 @@ export const itemFilters = {
       3876,
       3877,
       6664,
-      224403,
+      224403
     ],
-    health: [
+    "health": [
       1011,
       1028,
       1054,
@@ -1919,9 +1922,9 @@ export const itemFilters = {
       447116,
       447118,
       447119,
-      447122,
+      447122
     ],
-    criticalStrikeChance: [
+    "criticalStrikeChance": [
       1018,
       3031,
       3033,
@@ -1942,9 +1945,9 @@ export const itemFilters = {
       443060,
       443061,
       443069,
-      446671,
+      446671
     ],
-    abilityPower: [
+    "abilityPower": [
       1026,
       1052,
       1056,
@@ -2016,9 +2019,9 @@ export const itemFilters = {
       447109,
       447110,
       447113,
-      447121,
+      447121
     ],
-    mana: [
+    "mana": [
       1027,
       2503,
       3003,
@@ -2038,9 +2041,9 @@ export const itemFilters = {
       224403,
       444644,
       446656,
-      447113,
+      447113
     ],
-    armor: [
+    "armor": [
       1029,
       1031,
       2019,
@@ -2078,9 +2081,9 @@ export const itemFilters = {
       446667,
       447109,
       447114,
-      447119,
+      447119
     ],
-    magicResistance: [
+    "magicResistance": [
       1033,
       1057,
       2502,
@@ -2112,9 +2115,9 @@ export const itemFilters = {
       446667,
       447109,
       447114,
-      447119,
+      447119
     ],
-    attackDamage: [
+    "attackDamage": [
       1036,
       1037,
       1038,
@@ -2160,6 +2163,7 @@ export const itemFilters = {
       3508,
       3748,
       3814,
+      4003,
       4017,
       6333,
       6609,
@@ -2192,9 +2196,9 @@ export const itemFilters = {
       446693,
       447103,
       447115,
-      447121,
+      447121
     ],
-    attackSpeed: [
+    "attackSpeed": [
       1042,
       1043,
       3006,
@@ -2232,9 +2236,9 @@ export const itemFilters = {
       447114,
       447119,
       447120,
-      447123,
+      447123
     ],
-    lifesteal: [
+    "lifesteal": [
       1053,
       1055,
       3072,
@@ -2242,22 +2246,23 @@ export const itemFilters = {
       3139,
       3153,
       3184,
-      224403,
+      224403
     ],
-    armorPenetration: [
+    "armorPenetration": [
       1500,
       3033,
       3035,
       3036,
       4015,
-      6694,
+      6694
     ],
-    lethality: [
+    "lethality": [
       2020,
       3134,
       3142,
       3179,
       3814,
+      4003,
       4017,
       6676,
       6695,
@@ -2270,9 +2275,9 @@ export const itemFilters = {
       224004,
       446691,
       446693,
-      447115,
+      447115
     ],
-    abilityHaste: [
+    "abilityHaste": [
       2020,
       2022,
       2049,
@@ -2369,9 +2374,9 @@ export const itemFilters = {
       447116,
       447118,
       447122,
-      447123,
+      447123
     ],
-    healAndShieldPower: [
+    "healAndShieldPower": [
       2049,
       3107,
       3114,
@@ -2384,9 +2389,9 @@ export const itemFilters = {
       443062,
       446667,
       447105,
-      447123,
+      447123
     ],
-    percentMovespeed: [
+    "percentMovespeed": [
       2065,
       3002,
       3046,
@@ -2402,6 +2407,7 @@ export const itemFilters = {
       3181,
       3504,
       3742,
+      4003,
       4015,
       4401,
       4629,
@@ -2409,6 +2415,7 @@ export const itemFilters = {
       6672,
       6675,
       6690,
+      224004,
       224403,
       443054,
       443055,
@@ -2420,33 +2427,33 @@ export const itemFilters = {
       447107,
       447108,
       447115,
-      447119,
+      447119
     ],
-    flatMagicPenetration: [
+    "flatMagicPenetration": [
       3020,
       3175,
       4645,
       4646,
-      447113,
+      447113
     ],
-    criticalStrikeDamage: [
-      3031,
+    "criticalStrikeDamage": [
+      3031
     ],
-    tenacity: [
+    "tenacity": [
       3053,
       3091,
       3111,
       3172,
       3173,
-      447110,
+      447110
     ],
-    percentMagicPenetration: [
+    "percentMagicPenetration": [
       3135,
       3137,
       4015,
-      4630,
+      4630
     ],
-    goldPer10: [
+    "goldPer10": [
       3865,
       3866,
       3867,
@@ -2454,14 +2461,14 @@ export const itemFilters = {
       3870,
       3871,
       3876,
-      3877,
+      3877
     ],
-    omnivamp: [
+    "omnivamp": [
       223146,
-      447103,
-    ],
+      447103
+    ]
   },
-  unpurchasable: [
+  "unpurchasable": [
     1500,
     1501,
     1502,
@@ -2492,6 +2499,6 @@ export const itemFilters = {
     3867,
     3901,
     3902,
-    3903,
-  ],
+    3903
+  ]
 }

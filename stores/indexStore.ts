@@ -3,79 +3,95 @@ import { defineStore } from 'pinia'
 export const useIndexStore = defineStore(
   'indexStore',
   () => {
-    const champions = ref<ChampionIndex[]>()
+    const patchList = ref<number[]>([])
+    const patch = ref<number>()
+    const lastFullRefresh = ref()
+    const champions = ref<ChampionIndex[]>([])
     const runes = ref<RuneIndex[]>([])
     const paths = ref<PathIndex[]>([])
     const items = ref<ItemIndex[]>([])
     const maps = ref<MapIndex[]>([])
     const shards = ref<Shard[]>([])
-    const skin = ref<SkinRecord>()
+    const skin = ref<SkinRecord>({})
     const spells = ref<Record<string, string | number>[]>([])
     const skins = ref<FullSkinRecord>({})
 
+    async function loadPatch() {
+      const { patchIndex } = await import('data/index/patch-index')
+      console.log('💠 - loadPatch - patchList.value:', patchList.value)
+      if (patch.value != patchIndex[0]) {
+        patchList.value = patchIndex
+        patch.value = patchIndex[0]
+        console.log('💠 - loadPatch - patch.value :', patch.value)
+        loadAll()
+      }
+    }
+
     async function loadSkins() {
-      if (Object.keys(skins.value).length)
-        return
       const { skins: skinIndex } = await import('data/index/skins-full')
       skins.value = skinIndex
     }
 
     async function loadChamps() {
-      if (champions.value)
-        return
       const { championIndex } = await import('data/index/champion-index')
       champions.value = championIndex
     }
 
     async function loadItems() {
-      if (items.value.length)
-        return
       const { itemIndex } = await import('data/index/item-index')
       items.value = itemIndex
     }
 
     async function loadSpells() {
-      if (spells.value.length)
-        return
       const { spellIndex } = await import('data/index/spell-index')
       spells.value = spellIndex
     }
 
     async function loadBaseSkins() {
-      if (skin?.value?.centeredPath)
-        return
       const { baseSkin } = await import('data/index/skins-base')
       skin.value = baseSkin
     }
 
     async function loadRunes() {
-      if (runes.value.length)
-        return
       const { runeIndex } = await import('data/index/rune-index')
       runes.value = runeIndex
     }
 
     async function loadPaths() {
-      if (paths.value.length)
-        return
       const { pathIndex } = await import('data/index/path-index')
       paths.value = pathIndex
     }
 
     async function loadMaps() {
-      if (maps.value.length)
-        return
       const { mapIndex } = await import('data/index/map-index')
       maps.value = mapIndex
     }
 
-    async function loadDefaults() {
-      loadChamps()
-      loadItems()
-      loadSpells()
-      loadBaseSkins()
-      loadRunes()
-      loadMaps()
+    function resetIndexStore() {
+      champions.value = []
+      runes.value = []
+      paths.value = []
+      items.value = []
+      maps.value = []
+      shards.value = []
+      skin.value = {}
+      spells.value = []
+      skins.value = {}
+    }
+
+    async function loadAll() {
+      console.log('💠 - loadAll - else hihihi')
+      /* await resetIndexStore() */
+      await Promise.all([
+        loadChamps(),
+        loadItems(),
+        loadSpells(),
+        loadBaseSkins(),
+        loadSkins(),
+        loadRunes(),
+        loadPaths(),
+        loadMaps(),
+      ])
     }
 
     function findInIndex<T extends Record<string, any>>(
@@ -96,6 +112,9 @@ export const useIndexStore = defineStore(
     }
 
     return {
+      lastFullRefresh,
+      patch,
+      patchList,
       champions,
       items,
       runes,
@@ -106,9 +125,10 @@ export const useIndexStore = defineStore(
       skins,
 
       // load
+      loadPatch,
       loadSkins,
       loadPaths,
-      loadDefaults,
+      loadAll,
 
       // helpers
       findInIndex,
@@ -168,16 +188,7 @@ export const useIndexStore = defineStore(
   {
     persist: {
       storage: piniaPluginPersistedstate.localStorage(),
-      // key: "indexStore",
-      pick: [
-        'champions',
-        'items',
-        'runes',
-        'skin',
-        'spells',
-        'shards',
-        'skins',
-      ],
+      key: 'indexStore',
     },
   },
 )

@@ -7,9 +7,9 @@ const { title, class: className } = defineProps<{
 </script>
 
 <template>
-  <div class="size-full">
+  <div class="size-full ">
     <SidebarHeader
-      :class="cn('gap-0 border-y border-y-b3 px-3 w-full', className)">
+      :class="cn('gap-0 border-b  border-b-b3/80 px-3 w-full', className)">
       <DropdownMenu>
         <DropdownMenuTrigger
           :disabled="!dropdown"

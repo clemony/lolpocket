@@ -1,4 +1,4 @@
-declare interface MatchData {
+export interface MatchData {
   metadata: {
     dataVersion: string
     matchId: string
@@ -23,7 +23,7 @@ declare interface MatchData {
   teams: MatchTeam[]
 }
 
-declare interface Player {
+export interface Player {
   riotIdGameName: string
   riotIdTagline: string
   puuid: string
@@ -105,7 +105,7 @@ declare interface Player {
   }
 }
 
-declare interface MatchTeam {
+export interface MatchTeam {
   teamId: number
   win: boolean
   gold?: number
@@ -130,16 +130,16 @@ declare interface MatchTeam {
   }
 }
 
-declare interface Feat {
+export interface Feat {
   featState: number
 }
 
-declare interface ObjectiveTakedowns {
+export interface ObjectiveTakedowns {
   first: boolean
   kills: number
 }
 
-declare interface SimplifiedMatchData {
+export interface SimplifiedMatchData {
   matchId: string
   puuid: string
   gameCreation: number

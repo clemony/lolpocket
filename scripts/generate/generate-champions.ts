@@ -1,5 +1,6 @@
 import fs from 'node:fs'
 import path from 'node:path'
+import type { Champion } from '../../shared/types/types-champion.ts'
 import { markUpdate } from '../utils/mark-update.js'
 import { normalizeAbility } from '../utils/normalize-ability.js'
 import { normalize, normalizeArray } from '../utils/normalize-strings.js'

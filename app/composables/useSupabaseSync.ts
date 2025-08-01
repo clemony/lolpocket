@@ -3,7 +3,7 @@ import type {
   RealtimeChannel,
   RealtimePostgresUpdatePayload as RealtimePayload,
 } from '@supabase/supabase-js'
-import type { Database } from 'db'
+import type { Database } from 'db/database.types'
 import type { WatchSource } from 'vue'
 
 export function useSupabaseSync<T extends keyof Database['public']['Tables']>(
