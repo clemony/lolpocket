@@ -39,9 +39,11 @@ const variants = {
   <TabsIndicator
     v-bind="{ ...forwarded, ...$attrs }"
     as-child
+    class="z-0"
     :class="{ 'h-[81%]': props.orientation != 'vertical', 'w-[98%]': props.orientation == 'vertical' }">
     <motion.div
       :variants="variants"
+      :initial="props.orientation == 'vertical' ? 'vertical' : 'horizontal'"
       :animate="props.orientation == 'vertical' ? 'vertical' : 'horizontal'"
       :style="{
         transform: props.orientation === 'vertical'

@@ -27,7 +27,7 @@ const {
     class=""
     :class="
       cn(
-        'py-8 *:px-7 gap-4 grid shadow-black/4 shadow-sm rounded-xl  inset-shadow-sm-reverse inset-shadow-black/3 btn !bg-b2/15 justify-start **:text-start justify-items-start !border-b3 h-50 max-w-110 w-110 w-110 ',
+        'pt-8 pb-6 *:px-7 gap-4 grid shadow-black/4 shadow-sm rounded-xl  inset-shadow-sm-reverse inset-shadow-black/3 btn !bg-b2/15 justify-start **:text-start justify-items-start !border-b3 h-50 max-w-110 w-110 w-110 ',
         { 'hover:!bg-b2/60 hover-ring': hover },
         className,
       )

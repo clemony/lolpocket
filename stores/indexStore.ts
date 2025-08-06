@@ -111,6 +111,22 @@ export const useIndexStore = defineStore(
       return dataset?.find(item => item[inputKey] === value)
     }
 
+    function getSkinName(key: string, id: number | string): string | undefined {
+      return skins[key]?.find(skin => skin.id === id.toString())?.name
+    }
+
+    function skinNameFromUrl(url: string): string | undefined {
+      const s = url.replace('https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/', '').split('/')
+
+      const name = capitalize(s[0])
+      let id = [...s].pop()
+      id = id.replace(/[a-z]+_splash_[a-z]+_/, '')
+      id = id.replace('.jpg', '')
+
+      console.log('💠 - skinNameFromUrl - skins[name]:', skins.value[name])
+      return `${skins.value[name]?.find(skin => skin.id === id.toString())?.name} ${name}`
+    }
+
     return {
       lastFullRefresh,
       patch,
@@ -178,6 +194,8 @@ export const useIndexStore = defineStore(
       splashByKey: (key: string) => skin.value?.[key]?.splashPath,
       centeredByKey: (key: string) => skin.value?.[key]?.centeredPath,
       loadScreenByKey: (key: string) => skin.value?.[key]?.loadPath,
+      getSkinName,
+      skinNameFromUrl,
 
       // maps
       mapNameById: (id: number) => maps.value.find(m => m.id === id)?.name,

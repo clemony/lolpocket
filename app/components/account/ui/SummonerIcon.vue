@@ -12,9 +12,7 @@ const icon = computed (() => {
   }
   else {
     const as = useAccountStore()
-    const { summoner } = useSummoner(as.userAccount?.riot.puuid)
-    console.log('💠 - summoner:', summoner)
-    i.value = summoner?.value.profileIcon
+    i.value = as.userSummoner?.profileIcon
   }
   return getSummonerIcon(i.value)
 })
@@ -23,7 +21,7 @@ const icon = computed (() => {
 </script>
 
 <template>
-  <div :class="cn('size-12  aspect-square overflow-hidden  shadow-sm drop-shadow-sm', props.class) ">
+  <div :class="cn('size-12 shrink-0  aspect-square overflow-hidden relative  shadow-sm drop-shadow-sm shadow-black/15 drop-shadow-black/15', props.class) ">
     <NuxtImg
       v-if="icon"
       :src="icon as string"

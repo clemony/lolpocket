@@ -20,7 +20,9 @@ const { class: className } = defineProps<{
             {{ linkObject.name }}
           </AccordionTrigger>
 
-          <NuxtLink v-else>
+          <NuxtLink
+            v-else
+            class="capitalize">
             {{ linkObject.name }}
           </NuxtLink>
         </SidebarMenuButton>
@@ -43,7 +45,7 @@ const { class: className } = defineProps<{
                       :class="cn('dst absolute  overflow-visible size-5 ', link.icon?.alt ? link.icon?.alt.class : link.icon?.class)" />
 
                     <hicon
-                    v-if="link.icon?.modifier"
+                      v-if="link.icon?.modifier"
                       :name="link.icon?.modifier?.name"
                       :class="cn('dst absolute  size-5 ', link.icon?.modifier.class)" />
                   </span>

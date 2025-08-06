@@ -1,28 +1,6 @@
 import { AccountContent, AnalyticsMenu, BackpackMenu, InboxContent, LibraryMenu, NavContent, NotificationContent, SearchContent, SettingsContent, SummonerMenu } from '#components'
 import { analyticsLinks, backpackLinks, libraryLinks } from '~/routes'
 
-function getSummonerLink(): LinkObject | null {
-  const as = useAccountStore()
-  if (!as?.userAccount?.riot?.name) {
-    return {
-      name: 'Connect Riot ID',
-      icon: {
-        name: 'plug',
-      },
-    }
-  }
-  const { summoner } = useSummoner(as.userAccount.riot.puuid)
-
-  return {
-    name: `${as.userAccount.riot.name}'s Profile`,
-    icon: {
-      name: getSummonerIcon(summoner.value.profileIcon),
-      class: 'size-6 rounded-full drop-shadow-sm shadow-sm',
-    },
-    link: `/summoner/${as.userAccount.riot.region}/${as.userAccount.riot.name}_${as.userAccount.riot.tag}`,
-  }
-}
-
 export const navLinks: LinkGroup = [
   {
     name: 'Nexus',
@@ -43,7 +21,6 @@ export const navLinks: LinkGroup = [
     link: '/summoner',
     component: SummonerMenu,
     links: [
-      getSummonerLink(),
     ],
   },
   {
@@ -78,7 +55,8 @@ export const userMenu: Record<string, DataObject> = {
   search: {
     name: 'Search',
     icon: {
-      name: 'lucide:search',
+      name: 'mage:search',
+      class: 'size-5.5 **:stroke-[1.8]',
     },
     component: SearchContent,
   },
@@ -86,15 +64,15 @@ export const userMenu: Record<string, DataObject> = {
     name: 'Navigation',
     icon: {
       name: 'lucide:compass',
-      class: '**:stroke-[1.6]',
+      class: '**:stroke-[1.6] size-5.5',
     },
     component: NavContent,
   },
   pinned: {
-    name: 'Pinned',
+    name: 'Pinned Pockets',
     icon: {
-      name: 'pin',
-      class: '**:stroke-[1.6] !size-5.25',
+      name: 'i-lp-pocket',
+      class: ' !size-4.75',
     },
     component: NavContent,
   },
@@ -102,7 +80,7 @@ export const userMenu: Record<string, DataObject> = {
     name: 'News',
     icon: {
       name: 'lucide:newspaper',
-      class: '**:stroke-[1.6] ',
+      class: '**:stroke-[1.5] ',
     },
   },
   empty: null,
@@ -119,7 +97,7 @@ export const userMenu: Record<string, DataObject> = {
     name: 'Notifications',
     icon: {
       name: 'lucide:message-square',
-      class: '**:stroke-[1.7]  ',
+      class: '**:stroke-[1.7]  size-4.75 ',
     },
     value: 0,
     component: NotificationContent,

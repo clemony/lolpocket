@@ -9,8 +9,10 @@
 @utility btn {
   --btn-depth: 1;
   --btn-noise: 1;
+
+  @apply font-normal px-3 text-3 gap-3 items-center;
   &:not(.btn-ghost):not(.btn-outline):not(.btn-neutral) {
-    @apply items-center   bg-b2/60 border-b2 font-normal px-3 text-3 gap-3;
+    @apply bg-tint-b2/6 border-b2;
   }
 }
 
@@ -47,6 +49,37 @@
     --btn-depth: 1;
     --btn-noise: 1;
     @apply bg-b2/60 border-b3/60;
+  }
+}
+
+@utility btn-ghost-outline {
+  --btn-depth: 1;
+  --btn-noise: 1;
+  background-image: url(--btn-depth), url(--btn-noise);
+  @apply cursor-pointer !bg-transparent  hover:inset-shadow-xxs has-checked:not-hover:shadow-xs has-not-checked:not-hover:shadow-black/8 has-checked:not-hover:drop-shadow-xs   btn-ghost !border !border-b3/60 shadow-sm;
+
+  &:hover {
+    @apply !border !border-b4/50;
+  }
+}
+
+@utility btn-shadow {
+  &:where(:not(.btn-shadow-ghost)) {
+    @apply shadow-sm shadow-black/5 drop-shadow-black/8 drop-shadow-xs !border-b4/50;
+  }
+}
+
+@utility btn-shadow-ghost {
+  &:hover,
+  &[data-state="open"],
+  &[data-state="active"] {
+    @apply bg-b2/60 shadow-sm shadow-black/5 drop-shadow-black/8 drop-shadow-xs !border-b4/50;
+  }
+}
+
+@layer components {
+  .btn-b2 {
+    @apply bg-tint-b3/10;
   }
 }
 
@@ -105,8 +138,16 @@
 @utility tab {
   --radius-field: 1rem;
   --tab-bg: var(--b1);
-  --tab-border-color: var(--b3);
-  --tab-border-colors: var(--b3);
+  --tab-border-color: color-mix(
+    in lch,
+    var(--color-b3) 80%,
+    white 60%
+  ) !important;
+  --tab-border-colors: color-mix(
+    in lch,
+    var(--color-b3) 70%,
+    white 60%
+  ) !important;
 }
 
 /* divider */
@@ -130,7 +171,6 @@
 
     & .tab {
       --tab-radius-min: 0.65rem !important;
-      --tab-border-colors: --alpha(var(--color-b3) / 80%) !important;
       --tab-paddings: 4px 26px !important;
 
       @apply gap-2 z-1 text-3  !font-medium flex items-center !border-b-0 !text-start capitalize has-checked:!border-t-2 has-checked:!border-x-2;

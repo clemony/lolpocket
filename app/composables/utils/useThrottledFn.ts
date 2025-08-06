@@ -1,14 +1,33 @@
 export function throttleFunction<T extends (...args: any[]) => any>(
   fn: T,
   wait = 60_000,
+  puuid: string,
+  action = 'default',
 ) {
-  const lastCalled = ref<number | null>(null)
+  const store = useCooldownStore()
   const isLoading = ref(false)
+  const now = ref(Date.now())
+
+  useIntervalFn(() => {
+    now.value = Date.now()
+  }, 1000)
+
+  const entry = computed(() => store.get(puuid, action))
 
   const timeRemaining = computed(() => {
-    if (!lastCalled.value)
+    if (!entry.value)
       return 0
-    return Math.max(0, wait - (Date.now() - lastCalled.value))
+    return Math.max(0, entry.value.wait - (now.value - entry.value.timestamp))
+  })
+
+  const cooldown = computed(() => {
+    const seconds = Math.floor(timeRemaining.value / 1000)
+    return seconds > 0
+      ? {
+          seconds,
+          percent: (seconds / (wait / 1000)) * 100,
+        }
+      : null
   })
 
   const throttled = useThrottleFn(
@@ -19,7 +38,7 @@ export function throttleFunction<T extends (...args: any[]) => any>(
       isLoading.value = true
       try {
         await fn(...args)
-        lastCalled.value = Date.now()
+        store.set(puuid, action, wait) // set cooldown
       }
       catch (err) {
         console.error('🛑 Throttled function error:', err)
@@ -35,8 +54,9 @@ export function throttleFunction<T extends (...args: any[]) => any>(
 
   return {
     throttled,
+    cooldown,
     isLoading,
     timeRemaining,
-    lastCalled,
+    entry,
   }
 }

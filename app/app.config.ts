@@ -4,6 +4,10 @@ export default defineAppConfig({
     mode: 'svg',
     class: 'text-[var(--color-bc)] shrink-0 pointer-events-none',
     size: '15px',
+    /*     customize: (content: string, name: string, prefix: string, provider: string) => {
+      if (prefix !== 'lucide')
+        return content.replace(/stroke-width="[^"]*"/g, `stroke-width="1.6"`)
+    }, */
     aliases: {
       // math
       'add': 'teenyicons:add-outline',
@@ -54,7 +58,7 @@ export default defineAppConfig({
       'more-v': 'radix-icons:dots-vertical',
       'reset': 'mynaui:refresh',
       'gear': 'ph:gear-six',
-      'gear-solid': 'mingcute:settings-3-fill',
+      'gear-solid': 'ri:settings-4-fill',
       'nut': 'ph:nut',
       'nut-fill': 'ph:nut-fill',
       'update': 'radix-icons:update',
@@ -115,7 +119,9 @@ export default defineAppConfig({
 
       // pic
       'bow': 'mdi:bow-arrow',
+      'cat': 'streamline-cyber:cat-2',
       'plug': 'tabler:plug',
+      'tag': 'lucide:tag',
       'pocket': 'iconamoon:briefcase-light',
       'up-face': 'iconoir:emoji-look-up',
       'images': 'entypo:images',

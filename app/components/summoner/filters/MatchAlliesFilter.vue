@@ -14,7 +14,7 @@ const winrateFormula = ref('absolute')
 </script>
 
 <template>
-  <Field :class="cn('p-0 w-120 ', className)">
+  <Field :class="cn('p-0 w-120 max-w-120 ', className)">
     <ListboxRoot
       v-model:model-value="ms.mf.ally"
       class="w-full overflow-y-scroll overscroll-auto px-1.5  h-max max-h-120 "

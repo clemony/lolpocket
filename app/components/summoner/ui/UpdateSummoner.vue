@@ -4,97 +4,82 @@ import { throttleFunction } from 'composables'
 const { summoner, class: className } = defineProps<{
   summoner: Summoner
   class?: HTMLAttributes['class']
-  buttonClass?: HTMLAttributes['class']
+  text?: boolean | null
 }>()
 
-const cooldown = Number(120000)
-
+function fakeFunction() {}
 const { refreshMatches } = useSummoner(summoner.puuid)
-const { throttled: throttledRefresh, isLoading } = throttleFunction(
-  refreshMatches,
-  cooldown,
+
+const { throttled: refresh, cooldown, isLoading } = throttleFunction(
+  () => fakeFunction(),
+  120_000,
+  summoner.puuid,
+  'match-refresh',
 )
 
-const lastUpdate = computed(() => parseDate(summoner?.matches?.lastUpdate))
-
-const diff = ref(0)
-
-useIntervalFn(() => {
-  if (!lastUpdate.value)
-    return
-  const now = Date.now()
-  diff.value = Math.max(0, cooldown - (now - lastUpdate.value.getTime()))
-}, 1000)
-
-const timeRemaining = computed(() => {
-  const secs = Math.floor(diff.value / 1000)
-  return secs > 0
-    ? {
-        seconds: secs,
-        percent: (secs / (cooldown / 1000)) * 100,
-      }
-    : null
-})
-
-watch(
-  () => timeRemaining.value,
-  (newVal) => {
-    console.log('💠 - watch - newVal:', newVal)
-  },
+const tip = computed (() =>
+  `Updated:
+        ${formatTimeAgo(summoner.matches?.lastUpdate, 'short')}
+        ${cooldown.value?.seconds ? `${cooldown.value?.seconds} cd` : ''}`,
 )
 </script>
 
 <template>
-  <tippy
-    v-if="summoner.matches"
-    tag="div"
-    placement="bottom-start"
-    :offset="[-6, 10]"
-    :class="
-      cn('group/load size-fit **:[.tippy_arrow]:!translate-y-2.5', className)
-    "
-    @click="throttledRefresh()">
-    <button
-      v-if="!timeRemaining"
-      :class="cn(' btn btn-neutral btn-circle', buttonClass)">
+  <TransitionScalePop
+    v-tippy="{ content: tip, placement: text ? 'top' : 'bottom' }"
+    as="button"
+    :class="cn('btn relative btn-shadow overflow-hidden grid place-items-center ', { 'btn-disabled': cooldown }, className)"
+    @click="refresh()">
+    <template v-if="text">
+      <span
+        v-if="!cooldown"
+        class="flex items-center text-1 tracking-[0.24px]  antialiased font-semibold opacity-68 group-hover/load:opacity-100">update</span>
+      <div
+        v-if="cooldown"
+        layout-id="update"
+        :class="cn('size-full absolute grid place-items-center p-0  w-18 overflow-hidden z-0 pointer-events-none btn btn-shadow overflow-hidden ', className)"
+        class="">
+        <progress
+          class=""
+          :class="cn('progress rounded-none -scale-x-104 scale-y-104 inset-shadow-sm text-b3 btn btn-shadow p-0 size-full')"
+          :value="cooldown?.seconds"
+          max="120">
+        </progress>
+
+        <span class="absolute text-1  dst font-semibold opacity-80">
+
+          {{ cooldown?.seconds }}s cd
+        </span>
+      </div>
+      <slot />
+    </template>
+
+    <template
+      v-else>
       <icon
+        v-if="!cooldown"
         name="mingcute:refresh-2-line"
         :class="
-          cn(' size-5  mt-px shrink-0   group-hover/load:!text-bc tldr-20', {
+          cn(' size-5   shrink-0 in-[.btn-neutral]:opacity-80 not-in-[.btn-neutral]:opacity-60 group-hover/load:opacity-100 dst transition-all duration-200', {
             'animate-rotate': isLoading,
           })
         " />
-    </button>
 
-    <div
-      v-else-if="timeRemaining && timeRemaining?.percent"
-      class="radial-progress  btn btn-neutral btn-circle opacity-90 text-b1  "
-      :style="{
-        '--value': timeRemaining?.seconds,
-        '--size': '1.25rem',
-        '--thickness': '2px',
-      }"
-      :aria-valuenow="timeRemaining?.percent"
-      role="progressbar" />
-
-    <slot />
-
-    <template #content>
-      <div class="grid py-1.5 gap-1">
-        <p
-          v-if="timeRemaining"
-          class="flex italic !text-2">
-          {{ timeRemaining.seconds }}s cd
-        </p>
-
-        <p class="italic !text-2">
-          last updated
-        </p>
-
-        <p class="italic !text-2">
-          {{ useTimeAgo(summoner.matches.lastUpdate).value }}
-        </p>
+      <div
+        v-if="cooldown"
+        class="text-0 shadow-sm  border-neutral border-2 absolute bg-neutral text-nc **:text-nc radial-progress place-self-center font-semibold opacity-90  "
+        :style="{
+          '--value': cooldown?.seconds,
+          '--size': '2rem',
+          '--thickness': '2px',
+        }"
+        :aria-valuenow="cooldown?.percent"
+        role="progressbar">
+        <span class="bg-neutral size-full grid place-items-center rounded-full">
+          {{ cooldown?.seconds }}
+        </span>
       </div>
+      <slot />
     </template>
-  </tippy>
+  </TransitionScalePop>
 </template>

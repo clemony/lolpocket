@@ -24,6 +24,11 @@ const unreadMessages = computed (() => {
   return as.userAccount.inbox.messages.filter(m => !m.read).length
 })
 
+watch(() => us.activeSidebarContent, (newVal) => {
+  if (newVal == null)
+    tabs.value = null
+})
+
 watch(() => as.userAccount?.inbox?.notifications, (newVal) => {
   if (newVal)
     userMenu.notifications.value = newNotifications.value
@@ -67,9 +72,9 @@ onMounted (() => {
               class="indicator-item top-2 h-4.25 rounded-full grid place-items-center right-1.5 text-1 font-bold   px-1.25 leading-0 w-auto   group-data-[state=active]/tab:bg-n1  group-data-[state=active]/tab:drop-shadow-sm  group-data-[state=active]/tab:bg-n1/86 group-data-[state=active]/tab:!text-nc  group-data-[state=active]/tab:font-black">
               {{ item.value }}
             </span>
-            <icon
+            <hicon
               :name="item.icon.name"
-              :class="cn('dst opacity-90', item.icon.class)" />
+              :class="cn('opacity-80 mix-blend-screen drop-shadow-[var(--drop-shadow-xs,--dst)]', item.icon.class)" />
           </IndicatorTabsTrigger>
 
           <span
@@ -79,7 +84,7 @@ onMounted (() => {
       </span>
 
       <IndicatorTabsTrigger
-        v-tippy="{ content: as.userAccount?.riot.puuid ? `${capitalize(as.userAccount?.riot?.name)}'s Account` : 'Connect Riot ID', offset: ['0px', '10px'] }"
+        v-tippy="{ content: as.userAccount?.riot.puuid ? `${capitalize(as.userAccount?.riot?.name)}'s Account` : 'Connect Riot ID' }"
         value="Account"
         class="btn p-0 shadow-sm grid place-items-center justify-self-end border-0 rounded-full size-9 border grayscale -mt-1 !border-b4 ml-6 drop-shadow-sm relative overflow-hidden inset-shadow-xs inset-shadow-black/50 data-[state=active]:grayscale-0 transition duration-200 "
         @click="us.activeSidebarContent = 'Account'">

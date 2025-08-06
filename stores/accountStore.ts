@@ -34,6 +34,11 @@ export const useAccountStore = defineStore(
       },
     })
 
+    const userSummoner = computed (() => {
+      const ss = useSummonerStore()
+      return ss.getSummoner(userAccount.value.riot?.puuid)
+    })
+
     const pockets = <Record<string, Pocket[]>>{
       all: [],
       pinned: [],
@@ -54,24 +59,28 @@ export const useAccountStore = defineStore(
       Object.assign(userAccount.value, defaultUser)
     }
 
+    interface PublicTest extends PublicUser {
+      title: string
+    }
     type PublicUser = Database['public']['Tables']['user_public']['Row']
-    const publicData = shallowRef<Partial<PublicUser | null>>({
+    const publicData = ref<Partial<PublicTest | null>>({
       splash: '',
+      title: 'Pocket Pet',
       updated: '',
     })
 
     const client = useSupabaseClient<SupabaseClient>()
-    async function fetchPublicData(userId: string) {
+    async function fetchPublicData(userPuuid: string) {
       const { data, error } = await client
         .from('user_public')
-        .select('splash')
-        .eq('user_id', userId)
+        .select('*')
+        .eq('puuid', userPuuid)
         .single<PublicUser>()
 
       if (error) {
         console.error('Error fetching public data:', error)
       }
-
+      publicData.value.splash = data.splash
       return data
     }
     async function updatePublicData() {
@@ -89,6 +98,7 @@ export const useAccountStore = defineStore(
     return {
       // account
       userAccount,
+      userSummoner,
       settings,
       publicData,
       resetUserAccount,

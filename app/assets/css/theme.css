@@ -78,9 +78,6 @@
     0px 2px 3px -1px rgba(0, 0, 0, 0.1), 0px 1px 0px 0px rgba(25, 28, 33, 0.02),
     0px 0px 0px 1px rgba(25, 28, 33, 0.08);
   --shadow-smooth: 0px 1px 10px rgba(17, 17, 26, 0.075);
-  --shadow-outline: rgba(0, 0, 0, 0.15) 0px 3px 3px 1px;
-  --shadow-outline-4:
-    rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
   --shadow-flat:
     rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
@@ -90,6 +87,9 @@
   --inset-shadow-sm-reverse: inset -1px -1px 25px 0px rgba(0, 0, 0, 0.04);
   --inset-shadow-shade-sm: inset 0 0px 3px 1px rgba(0, 0, 0, 0.04);
   --inset-shadow-sm-x: inset 0 -2px 4px rgb(0 0 0 / 0.05);
+  --inset-shadow-xxs:
+    inset 0.5px 0.5px 0px rgb(0 0 0 / 0.05),
+    inset -0.5px -0.5px 0px rgb(0 0 0 / 0.1);
   --drop-shadow-text: 1px 0px 0px #00000020;
 
   --dst: 1px 0px 0px #00000020;

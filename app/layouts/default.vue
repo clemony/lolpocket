@@ -1,26 +1,10 @@
 <script lang="ts" setup>
 const router = useRouter()
 const route = useRoute()
-const ds = useDataStore()
 const as = useAccountStore()
 const us = useUiStore()
 const client = useSupabaseClient()
 const ix = useIndexStore()
-
-const user = computed(() => {
-  if (!as?.userAccount?.id || !as.userAccount.riot.puuid)
-    return null
-
-  const ss = useSummonerStore()
-
-  return {
-    account: as.userAccount,
-    summoner: ss.getSummoner(as.userAccount.riot.puuid),
-  }
-})
-
-provide<User>('user', user.value)
-console.log('💠 - user:', user)
 
 onMounted(async () => {
   document.documentElement.setAttribute(
@@ -76,25 +60,27 @@ client.auth.onAuthStateChange(async (event, session) => {
     :open="us.sidebarExpanded"
     style="--sidebar-width: 26rem; --sidebar-width-mobile: 26rem;">
     <AppNavbar />
-    <!--     <LazyAppCommand /> -->
-    <SidebarInset class="relative ">
-      <div class="relative size-full  overflow-x-hidden overflow-y-auto ">
-        <slot />
-      </div>
-      <NuxtLoadingIndicator
-        color="var(--color-n1) !top-auto !bottom-0"
-        :style="{
-          top: 'auto',
-          bottom: 0,
-        }" />
+
+    <!--     <LazyAppCommand /> after:absolute after:bottom-0 after:w-full after:h-1/4 after:bg-neutral after:z-0 -->
+    <!-- [ inset id is for Teleports] -->
+    <SidebarInset
+      :class="cn('inset-wrapper relative size-full   *:z-1  overflow-y-auto')">
+      <slot />
     </SidebarInset>
-    <UserSidebar
-      side="right"
-      variant="sidebar"
-      collapsible="offcanvas" />
+    <NuxtLoadingIndicator
+      color="var(--color-n1) !top-auto !bottom-0"
+      :style="{
+        top: 'auto',
+        bottom: 0,
+      }" />
     <Toast
       position="bottom-right"
       :expand="true"
       :duration="8000" />
+
+    <UserSidebar
+      side="right"
+      variant="sidebar"
+      collapsible="offcanvas" />
   </SidebarProvider>
 </template>

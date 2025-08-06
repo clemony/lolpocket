@@ -17,6 +17,9 @@ const puuid = ref<string | null>(null)
 const summoner = ref<Summoner | null>(null)
 const loading = ref(true)
 
+watch(() => route.name, (newVal) => {
+  console.log('💠 - watch - newVal:', newVal)
+})
 async function resolveAndFetch() {
   loading.value = true
   try {
@@ -48,50 +51,81 @@ async function resolveAndFetch() {
 
 watch([region, name, tag], resolveAndFetch, { immediate: true })
 
-const topChampion = ref<TopChampion>(null)
+const as = useAccountStore()
 
-const scrollYPosition = ref<MotionValue>()
+const { topChampion } = useSummonerChampions(
+  summoner.value?.matches?.simplified || [],
+  {
+    mode: 'top',
+    limit: 1,
+  },
+)
 
-watch(() => scrollYPosition.value, (newVal) => {
+// as.fetchPublicData(as.userAccount.riot.puuid)
+watch(() => as.publicData.splash, (newVal) => {
   console.log('💠 - watch - newVal:', newVal)
 })
 </script>
 
 <template>
-  <div v-if="summoner">
-    <NuxtLayout name="splash-tabs-layout">
-      <template #backdrop>
-        <SummonerBackdrop
+  <TabsPageWrapper
+    v-if="summoner"
+    :background="(as.publicData?.splash ?? topChampion?.splash).replace('centered', 'uncentered')">
+    <template #icon>
+      <LazySummonerIcon
+        v-if="summoner"
+        :summoner
+        class="rounded-full relative">
+      </LazySummonerIcon>
+    </template>
+    <template #header>
+      <SummonerName
+        class="drop-shadow-sm font-serif text-bc/94 leading-none " />
+
+      <span class="flex gap-3  mt-0.75">
+        <UpdateSummoner
           :summoner
-          @set:top-champion="(e) => (topChampion = e)" />
-      </template>
+          text
+          class="!max-h-7 h-7 w-18" />
+        <FollowButton
+          :summoner
+          class="size-7 btn  btn-shadow btn-square " />
+      </span>
+    </template>
 
-      <template #header>
-        <PlayerHeader
-          v-if="summoner"
-          :summoner />
-      </template>
+    <template #text>
+      <SummonerTag :summoner />
+      <SummonerRegion
+        :region-id="summoner.region" />
 
-      <template #tabs>
-        <SummonerProfileTabs
-          :region
-          :slug
-          :summoner />
-      </template>
+      <SummonerLevel
+        :summoner />
+    </template>
 
-      <template #page>
-        <div
-          :key="route.name"
-          class="size-full flex mx-auto justify-center bg-b1 overflow-auto">
-          <NuxtPage
-            v-if="summoner"
-            :region
-            :slug
-            :summoner
-            :top-champion
-            @update:scroll-y-position="e => scrollYPosition = e" />
-        </div>
-      </template>
-    </NuxtLayout>
-  </div>
+    <template #collapsed-header>
+      <SummonerDropdown :summoner />
+      <UpdateSummoner
+        :summoner
+        class="shrink-0 size-14  btn-ghost btn-shadow-ghost"
+        wrapper-class="" />
+    </template>
+
+    <template #tabs>
+      <SummonerProfileTabs
+        :region
+        :slug
+        :summoner />
+    </template>
+
+    <template
+      #page="{ stuck }">
+      <NuxtPage
+        v-if="summoner"
+        :key="route.name"
+        :stuck
+        :region
+        :slug
+        :summoner />
+    </template>
+  </TabsPageWrapper>
 </template>

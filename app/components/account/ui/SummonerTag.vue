@@ -3,24 +3,23 @@ const props = defineProps<{
   class?: HTMLAttributes['class']
   summoner?: Summoner
 }>()
-const as = useAccountStore()
 
 const tag = computed (() => {
-  if (props.summoner?.tag)
+  if (props.summoner?.tag) {
     return props.summoner.tag
+  }
 
-  const user = inject<User>('user')
-  if (!user?.account?.riot?.puuid)
-    return null
-
-  return user.account.riot.tag
+  else {
+    const as = useAccountStore()
+    return as.userAccount?.riot.tag ?? null
+  }
 })
 </script>
 
 <template>
   <span
     v-if="tag"
-    :class="cn('flex items-center', props.class)">
+    :class="cn('flex items-center leading-0 antialiased', props.class)">
     <icon
       name="lucide:hash"
       class="size-3.75" />

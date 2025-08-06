@@ -51,7 +51,7 @@ onMounted(() => {
 <template>
   <main
     v-if="catFact"
-    class="grid size-full -ml-10 justify-center pt-[7vh]"
+    class="grid size-full justify-center pt-[7vh]"
     :class="cn('', props.class)">
     <article class="container mx-auto p-6 max-w-250 min-w-190 dst">
       <header class="text-start text-4xl  font-bold mb-6 dst tracking-tight font-serif leading-14">

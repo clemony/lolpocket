@@ -5,19 +5,18 @@ const { summoner } = defineProps<{
 </script>
 
 <template>
-  <div class="flex w-120 h-22 items-center gap-6">
-    <div class="relative grid place-items-center">
+  <SplashTabsHeader>
+    <template #icon>
       <LazySummonerIcon
         v-if="summoner"
         :summoner
-        class="size-22 rounded-full relative" />
-
+        class="rounded-full relative" />
       <UpdateSummoner
         :summoner
         button-class="btn-circle btn-neutral btn-sm [&_.radial-progress]:text-b1"
         class="-left-1 -bottom-1 absolute" />
 
-      <!--       <tippy class="has-disabled:!cursor-help">
+    <!--       <tippy class="has-disabled:!cursor-help">
             <p v-else>
 
           <template #content>
@@ -31,23 +30,20 @@ const { summoner } = defineProps<{
             </p>
           </template>
         </tippy> -->
-    </div>
+    </template>
+    <template #header>
+      <SummonerName
+        class="drop-shadow-sm font-serif text-bc/94 leading-none font-bold" />
+    </template>
 
-    <div class="flex flex-col grow justify-center gap-1.5">
-      <div class="flex items-center gap-4">
-        <SummonerName
-          class="!text-12 drop-shadow-sm font-serif text-bc/94 leading-none font-bold" />
-      </div>
+    <template #text>
+      <SummonerTag :summoner />
 
-      <div class="flex items-center lowercase gap-4 pl-0.5 font-normal">
-        <SummonerTag :summoner />
+      <SummonerRegion :region-id="summoner.region" />
 
-        <SummonerRegion :region-id="summoner.region" />
-
-        <SummonerLevel :summoner />
-      </div>
-    </div>
-  </div>
+      <SummonerLevel :summoner />
+    </template>
+  </SplashTabsHeader>
 </template>
 
 <style scoped></style>

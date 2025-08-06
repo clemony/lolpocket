@@ -5,7 +5,7 @@ export const contactLinks: LinkGroup = [
     external: true,
     icon: {
       name: 'prime:github',
-      class: 'size-11 ',
+      class: 'size-9',
     },
   },
   {
@@ -14,7 +14,7 @@ export const contactLinks: LinkGroup = [
     external: true,
     icon: {
       name: 'prime:discord',
-      class: 'size-10 ',
+      class: 'size-8',
     },
   },
 ]

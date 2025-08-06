@@ -1,30 +1,17 @@
 <script lang="ts" setup>
-import { vScroll } from '@vueuse/components'
-import type { UseScrollReturn } from '@vueuse/core'
 import { profileSettingsData } from 'components/summoner/settings/profile-settings-data'
 import { profileSettingsLinks } from 'components/summoner/settings/profile-settings-links'
 
-const { topChampion } = defineProps<{
+const { region, slug } = defineProps<{
   summoner: Summoner
   region: string
   slug: string
-  topChampion: TopChampion
 }>()
-
-const emit = defineEmits<{
-  (e: 'update:scroll-y-position', value: number): void
-}>()
-
 definePageMeta({
   middleware: 'check-if-user',
 })
 
 const as = useAccountStore()
-
-function onScroll(state: UseScrollReturn) {
-  console.log(state.y.value) // {x, y, isScrolling, arrivedState, directions}
-  emit('update:scroll-y-position', state.y.value)
-}
 
 watch(
   () => as.settings.showSolo,
@@ -36,10 +23,9 @@ watch(
 
 <template>
   <main
-    v-scroll="onScroll"
-    class="flex size-full !justify-start !items-start">
+    class="flex   w-full h-fit bg-b1 relative z-1">
     <aside
-      class="w-[37.4%] shrink-0 z-1 sticky top-0 px-1 py-18 grid justify-end left-0">
+      class="w-[37.4%] shrink-0 z-1 sticky top-24 px-1 py-24 grid justify-end left-0">
       <menu class="w-90">
         <h2 class="dst font-bold mb-8">
           Profile Settings
@@ -63,51 +49,48 @@ watch(
       </menu>
     </aside>
 
-    <article class="size-full">
-      <div
-        class="max-w-250 w-full flex flex-col pt-18 pb-62 gap-20 overflow-hidden px-1">
-        <h1
-          id="splash"
-          class="dst font-bold">
-          Profile Splash
-        </h1>
-        <ProfileSplashOptions :top-champion />
-        <Separator class="my-4" />
-        <h1
-          id="display"
-          class="dst font-bold">
-          Display Options
-        </h1>
-        <div class="grid gap-10 grid-cols-2 mr-6">
-          <ActionCard
-            v-model:model-value="as.settings.showSolo"
-            :title="profileSettingsData.solo.title"
-            :text="profileSettingsData.solo.text">
-            {{ as.settings.showSolo ? "Visible" : "Hidden" }}
-          </ActionCard>
-          <ActionCard
-            v-model:model-value="as.settings.showFlex"
-            :title="profileSettingsData.flex.title"
-            :text="profileSettingsData.flex.text">
-            {{ as.settings.showFlex ? "Visible" : "Hidden" }}
-          </ActionCard>
-          <ActionCard
-            v-model:model-value="as.settings.showAllies"
-            :title="profileSettingsData.allies.title"
-            :text="profileSettingsData.allies.text">
-            {{ as.settings.showAllies ? "Visible" : "Hidden" }}
-          </ActionCard>
-        </div>
+    <article class="h-fit max-w-250 w-full flex flex-col pt-24 pb-62 gap-20  px-1">
+      <h1
+        id="splash"
+        class="dst font-bold">
+        Profile Splash
+      </h1>
+      <ProfileSplashOptions />
+      <Separator class="my-4" />
+      <h1
+        id="display"
+        class="dst font-bold">
+        Display Options
+      </h1>
+      <div class="grid gap-10 grid-cols-2 mr-6">
+        <ActionCard
+          v-model:model-value="as.settings.showSolo"
+          :title="profileSettingsData.solo.title"
+          :text="profileSettingsData.solo.text">
+          {{ as.settings.showSolo ? "Visible" : "Hidden" }}
+        </ActionCard>
+        <ActionCard
+          v-model:model-value="as.settings.showFlex"
+          :title="profileSettingsData.flex.title"
+          :text="profileSettingsData.flex.text">
+          {{ as.settings.showFlex ? "Visible" : "Hidden" }}
+        </ActionCard>
+        <ActionCard
+          v-model:model-value="as.settings.showAllies"
+          :title="profileSettingsData.allies.title"
+          :text="profileSettingsData.allies.text">
+          {{ as.settings.showAllies ? "Visible" : "Hidden" }}
+        </ActionCard>
+      </div>
 
-        <Separator class="my-4" />
-        <h1
-          id="display"
-          class="dst font-bold">
-          Display Options
-        </h1>
-        <div class="grid gap-10 grid-cols-2 mr-6">
-          <ClearAllMatchData />
-        </div>
+      <Separator class="my-4" />
+      <h1
+        id="display"
+        class="dst font-bold">
+        Stored Data
+      </h1>
+      <div class="grid gap-10 grid-cols-2 mr-6">
+        <ClearAllMatchData />
       </div>
     </article>
   </main>

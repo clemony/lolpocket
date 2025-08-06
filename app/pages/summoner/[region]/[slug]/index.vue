@@ -1,80 +1,70 @@
 <script lang="ts" setup>
-import { motion, useDomRef } from 'motion-v'
-
 const { summoner } = defineProps<{
   summoner: Summoner
 }>()
 
-const emit = defineEmits<{
-  (e: 'update:scroll-y-position', value: number): void
-}>()
+definePageMeta({
+  name: 'summoner-history',
+})
 
-const container = useDomRef()
-const { scrollY } = useScroll({
-  container,
-})
-useMotionValueEvent(scrollY, 'change', (latest) => {
-  if (latest <= 400)
-    emit('update:scroll-y-position', latest)
-})
+const as = useAccountStore()
 </script>
 
 <template>
-  <motion.main
-    ref="container"
-    class="flex size-full overflow-y-auto overscroll-none !justify-start !items-start">
-    <aside
-      class="h-full w-[43.5%] px-10 grid justify-end relative sticky top-0 left-0">
-      <transition-expand
-        group
-        class="overflow-y-scroll overscroll-none scrollbar-hidden gap-8 grid auto-rows-max items-start py-14">
-        <RankCard
-          v-if="summoner.ranked?.solo"
-          title="Solo/Duo"
-          :entry="summoner.ranked.solo"
-          class="order-first" />
+  <main
+    :class="cn('flex w-full overflow-auto relative gap-6  bg-b1  justify-start items-start')">
+    <aside class="h-full max-h-[calc(100vh-72px)] grid  w-[43.5%] px-6  justify-end">
+      <Teleport
+        defer
+        to="#asideRef">
+        <div class="w-full top-0 bottom-0 gap-10 auto-rows-max items-start pb-40 pt-20 grid">
+          <RankCard
+            v-if="summoner.ranked?.solo && as.settings?.showSolo"
+            title="Solo/Duo"
+            :entry="summoner.ranked.solo"
+            class="order-first" />
 
-        <Unranked
-          v-else
-          title="Solo/Duo"
-          class="order-first" />
+          <Unranked
+            v-else-if="as.settings?.showSolo"
+            title="Solo/Duo"
+            class="order-first" />
 
-        <RankCard
-          v-if="summoner.ranked?.flex"
-          title="Flex"
-          :entry="summoner.ranked.flex"
-          class="order-2" />
+          <RankCard
+            v-if="summoner.ranked?.flex && as.settings?.showFlex"
+            title="Flex"
+            :entry="summoner.ranked.flex"
+            class="order-2" />
 
-        <Unranked
-          v-else
-          title="Flex"
-          class="order-2" />
+          <Unranked
+            v-else-if=" as.settings?.showFlex"
+            title="Flex"
+            class="order-2" />
 
-        <QueueFilters
-          :summoner
-          class="order-3" />
+          <QueueFilters
+            :summoner
+            class="order-3" />
 
-        <MatchChampionFilters
-          :summoner
-          class="order-4" />
+          <MatchChampionFilters
+            :summoner
+            class="order-4" />
 
-        <div class="order-5">
-          <MatchPositionFilter :summoner />
+          <div class="order-5">
+            <MatchPositionFilter :summoner />
+          </div>
+
+          <MatchAlliesFilter
+            v-if="as.settings.showAllies"
+            :summoner
+            class="order-last" />
         </div>
-
-        <MatchAlliesFilter
-          :summoner
-          class="order-last" />
-      </transition-expand>
+      </Teleport>
     </aside>
-
-    <div class="grid items-center relative w-[56.5%] px-2 pb-px">
+    <div
+      :class="cn('flex flex-col py-20 gap-10  justify-center relative w-[56.5%] px-2 pb-px')">
+      <SummonerChampionModule />
       <MatchList
         v-if="summoner.puuid"
-        :puuid="summoner.puuid"
-        @update:scroll-y-position="
-          (e) => emit('update:scroll-y-position', e)
-        " />
+        :puuid="summoner.puuid" />
     </div>
-  </motion.main>
+  </main>
 </template>

@@ -4,8 +4,8 @@ const { class: className } = defineProps<{
 }>()
 const ss = useSummonerStore()
 const as = useAccountStore()
-const user = inject<User | null>('user')
-const { forceReload, loading } = useSummoner(user?.account?.riot?.puuid)
+
+const { forceReload, loading } = useSummoner(as.userAccount.riot?.puuid)
 
 const keys = useMagicKeys()
 

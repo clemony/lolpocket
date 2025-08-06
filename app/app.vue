@@ -16,13 +16,12 @@ const appConfig = useAppConfig()
 </script>
 
 <template>
-<NuxtLayout>
-        <LazyNuxtPage
-          :transition="{
-            name: 'global-page-transition',
-            mode: 'out-in',
-          }" />
-</NuxtLayout>
+  <NuxtLayout>
+    <LazyNuxtPage
+      class="z-1"
+      :transition="{
+        name: 'global-page-transition',
+        mode: 'out-in',
+      }" />
+  </NuxtLayout>
 </template>
-
-

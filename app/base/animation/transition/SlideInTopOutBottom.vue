@@ -1,8 +1,9 @@
 <script lang="ts" setup>
-const { class: className, as = 'div', mode = 'out-in' } = defineProps<{
+const { class: className, as = 'div', mode = 'out-in', invert = false } = defineProps<{
   class?: HTMLAttributes['class']
   as?: string
   mode?: 'out-in' | 'in-out'
+  invert?: boolean
 }>()
 </script>
 
@@ -12,9 +13,12 @@ const { class: className, as = 'div', mode = 'out-in' } = defineProps<{
     :as="as"
     :class="cn(className)"
     :mode="mode"
-    :offset="{
+    :offset="!invert ? {
       enter: [0, '-100%'],
       leave: [0, '100%'],
+    } : {
+      enter: [0, '100%'],
+      leave: [0, '-100%'],
     }">
     <slot />
   </transition-slide>

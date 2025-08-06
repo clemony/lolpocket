@@ -33,13 +33,15 @@ export function getSplash(key: string, type: SplashType) {
     return
   const ix = useIndexStore()
   const img
-    = type == 'centered'
-      ? ix.centeredByKey(key)
-      : type == 'tile'
-        ? ix.tileByKey(key)
-        : type == 'load'
-          ? ix.loadScreenByKey(key)
-          : null
+    = type == 'uncentered'
+      ? ix.splashByKey(key)
+      : type == 'centered'
+        ? ix.centeredByKey(key)
+        : type == 'tile'
+          ? ix.tileByKey(key)
+          : type == 'load'
+            ? ix.loadScreenByKey(key)
+            : null
 
   return `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/${key.toLowerCase()}/skins/${key == 'Hwei' ? 'skin0/' : 'base/'}${type != 'load' ? 'images/' : ''}${img}.jpg`
 }

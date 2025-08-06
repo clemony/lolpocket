@@ -16,7 +16,7 @@
     @apply inset-shadow-sm-x;
     & > .tippy-svg-arrow > svg:first-child,
     & > .tippy-svg-arrow > svg:last-child {
-      @apply translate-y-4 -translate-x-1.5;
+      @apply translate-y-4 -translate-x-1.25;
     }
   }
 

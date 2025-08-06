@@ -1,0 +1,14 @@
+{
+  "name": "match-api",
+  "compatibility_date": "2025-04-03",
+  "assets": {
+    "directory": "assets"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "match",
+      "database_id": "10d111a3-8561-4b3c-93ba-686f452729f7"
+    }
+  ]
+}

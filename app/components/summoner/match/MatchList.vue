@@ -18,19 +18,19 @@ const openMatch = ref(null)
 </script>
 
 <template>
-  <div class="w-full h-full overflow-y-auto pb-22">
+  <div class="flex-col flex scroll-smooth">
     <div
       v-if="loading"
-      class="flex flex-col gap-6 pt-27">
+      class="flex flex-col gap-8">
       <LazyMatchCardSkeleton
         v-for="i in itemsPerPage"
         :key="i" />
     </div>
 
-    <transition-slide
+    <TransitionScalePop
       v-else-if="pagedMatches.length > 0"
       group
-      class="pt-14 flex flex-col gap-6 pb-px">
+      class="flex flex-col gap-8 pb-px">
       <LazyMatchCard
         v-for="match in pagedMatches"
         :key="match.info.gameId"
@@ -42,11 +42,11 @@ const openMatch = ref(null)
           class="peer hidden"
           :value="match?.metadata?.matchId" />
       </LazyMatchCard>
-    </transition-slide>
+    </TransitionScalePop>
 
     <div
       v-else
-      class="grid place-items-center pt-57 h-54 font-medium">
+      class="grid place-items-center w-220 justify-center   h-54 font-medium">
       No matches found with these filters.
     </div>
 

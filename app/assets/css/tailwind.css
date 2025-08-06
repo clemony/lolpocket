@@ -8,13 +8,15 @@
     scrollbar-color: oklch(0 0.02476 255.702 / 0.075) rgba(0, 0, 0, 0) !important;
     font-size: 12px;
     user-select: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   html,
   body,
   #app {
     font-family: var(--font-sans);
-    @apply text-3 antialiased text-bc selection:bg-n1/80 selection:text-nc overflow-hidden h-screen w-screen;
+    @apply text-3 text-bc selection:bg-n1/80 selection:text-nc h-screen w-screen;
   }
 
   input,

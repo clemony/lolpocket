@@ -1,4 +1,4 @@
-// import { cloudflare } from "@cloudflare/vite-plugin"
+import { cloudflare } from '@cloudflare/vite-plugin'
 import tailwindcss from '@tailwindcss/vite'
 import process from 'node:process'
 import { fileURLToPath } from 'node:url'
@@ -20,14 +20,7 @@ export default defineNuxtConfig({
     'shadcn-nuxt',
   ],
   shadcn: {
-    /**
-     * Prefix for all the imported component
-     */
     prefix: '',
-    /**
-     * Directory that the component lives in.
-     * @default "./app/base/ui"
-     */
     componentDir: './app/base/ui',
   },
   future: {
@@ -41,6 +34,7 @@ export default defineNuxtConfig({
   router: {
     options: {
       scrollBehaviorType: 'smooth',
+
     },
   },
   /*   ogImage: { enabled: false }, */
@@ -172,15 +166,9 @@ export default defineNuxtConfig({
     keys: fileURLToPath(new URL('./app/keys', import.meta.url)),
     db: fileURLToPath(new URL('./types/db', import.meta.url)),
     routes: fileURLToPath(new URL('./app/routes/index', import.meta.url)),
+    d1: fileURLToPath(new URL('./d1', import.meta.url)),
   },
 
-  app: {
-    head: {
-      meta: [
-        { name: 'lolpocket', content: 'width=device-width, initial-scale=1' },
-      ],
-    },
-  },
   devServer: {
     port: 8080,
   },

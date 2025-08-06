@@ -1,17 +1,22 @@
 <script setup lang="ts">
-const { class: className, fallbackText = 'Summoner' } = defineProps<{
+const { class: className, summoner } = defineProps<{
   class?: HTMLAttributes['class']
-  fallbackText?: string
+  summoner?: Summoner
 }>()
-const as = useAccountStore()
-const summoner = computed(() => {
-  return as.userAccount ? as.userAccount : as.defaultUser
+const name = computed(() => {
+  if (summoner)
+    return summoner.name
+
+  const as = useAccountStore()
+  return as.userAccount?.riot?.name ?? 'Summoner'
 })
 </script>
 
 <template>
-  <span :class="cn('', className)">
-    {{ summoner.name || summoner.name || fallbackText || 'Summoner' || '' }}
+  <span
+    v-if="name"
+    :class="cn('antialiased flex items-center lowercase leading-0 ', className)">
+    {{ name ?? null }}
   </span>
 </template>
 

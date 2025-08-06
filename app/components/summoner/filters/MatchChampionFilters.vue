@@ -21,7 +21,7 @@ const displayChampions = computedAsync (() => {
   <FieldTransition
     v-if="summoner.matches "
     expand
-    class="p-0 w-full gap-0">
+    class="p-0 w-120 max-w-120  gap-0">
     <ListboxRoot
       v-model:model-value="ms.mf.champion"
       class="w-full  p-0 "

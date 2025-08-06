@@ -16,7 +16,7 @@ const isOpen = ref(false)
     v-model:open="isOpen"
     :class="
       cn(
-        'Collapsible field-box shadow-warm drop-shadow-xs group w-220 border-b3/70 rounded-xl justify-start max-w-220 group/collapse overflow-hidden bg-clip-padding justify-center relative **:select-none text-2  p-0  min-w-134  cursor-pointer group/collapse',
+        'Collapsible field-box  drop-shadow-xs group w-220 border-b3/70 rounded-xl justify-start max-w-220 group/collapse overflow-hidden bg-clip-padding justify-center relative **:select-none text-2  p-0  min-w-134  cursor-pointer group/collapse',
         'before:absolute before:z-3  before:z-0 before:h-full before:w-1/2 before:pointer-events-none before:brightness-94 before:opacity-40 before:mask-r-from-0 before:border before:rounded-box before:shadow-sm before:shadow-black',
 
         player.win ? 'before:border-inspiration ' : 'before:border-domination',
@@ -27,7 +27,7 @@ const isOpen = ref(false)
       :for="match.metadata.matchId"
       :class="
         cn(
-          ' h-36 flex gap-7 z-2 w-220 max-w-220 text-2 py-3 w-full relative bg-linear-to-r pointer-events-auto to-transparent to-40% rounded-box overflow-hidden bg-clip-padding relative items-center justify-items-start bg-transparent   cursor-pointer  px-5 justify-start rounded-box cursor-pointer data-[state=open]:rounded-b-none ',
+          ' h-40 flex gap-7 z-2 w-220 max-w-220 text-2 pt-3 pb-7 w-full relative bg-linear-to-r pointer-events-auto to-transparent to-40% rounded-box overflow-hidden bg-clip-padding relative items-center justify-items-start bg-transparent   cursor-pointer  px-5 justify-start rounded-box cursor-pointer data-[state=open]:rounded-b-none ',
           player.win ? 'from-inspiration/80 ' : 'from-domination/80',
         )
       ">

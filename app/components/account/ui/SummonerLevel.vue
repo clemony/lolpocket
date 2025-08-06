@@ -1,23 +1,26 @@
 <script setup lang="ts">
-const props = defineProps<{
+const { class: className, noTag, summoner } = defineProps<{
   class?: HTMLAttributes['class']
   noTag?: boolean
+  summoner?: Summoner
 }>()
 
-const as = useAccountStore()
 const summonerLevel = computed(() => {
-  const user = inject<User>('user')
-  if (!user?.account?.riot?.puuid)
-    return null
+  if (summoner) {
+    return summoner.level
+  }
 
-  return user.summoner.level
+  else {
+    const as = useAccountStore()
+    return as.userSummoner?.level
+  }
 })
 </script>
 
 <template>
-  <span :class="cn('', props.class)">
+  <span :class="cn('flex items-center lowercase leading-0 antialiased', className)">
 
-    {{ !props.noTag ? 'lv. ' : null }}{{ summonerLevel || '0' || '' }}
+    {{ !noTag ? 'lv. ' : null }}{{ summonerLevel || '0' || '' }}
   </span>
 </template>
 

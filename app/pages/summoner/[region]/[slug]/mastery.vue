@@ -15,6 +15,10 @@ const { summoner, class: className } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 
+definePageMeta({
+  name: 'summoner-mastery',
+})
+
 interface GridboxVirtualizerProps extends ListboxVirtualizerProps {
   lanes: number
 }
@@ -62,7 +66,7 @@ onMounted (() => {
 </script>
 
 <template>
-  <main class="py-14 px-1 flex-col relative  w-full items-center overflow-y-scroll">
+  <main class="py-14 px-1 bg-b1 flex-col relative overflow-hidden  size-full items-center">
     <article
       v-if="summoner?.mastery?.top"
       class="grid grid-cols-6 max-w-[1040px]  mx-auto  h-fit  gap-8 ">

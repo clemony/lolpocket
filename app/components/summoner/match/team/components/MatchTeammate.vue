@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { pathIndex } from "data/index/path-index"
+import { pathIndex } from 'data/index/path-index'
 
 const { player } = defineProps<{
   player: Player
@@ -9,28 +9,29 @@ const ix = useIndexStore()
 
 const dmgArray = [
   {
-    icon: "el:fire",
-    class: "text-purple-600/90 size-3",
+    icon: 'el:fire',
+    class: 'text-purple-600/90 size-3',
     value: player.magicDamageDealtToChampions,
   },
   {
-    icon: "bow",
-    class: " text-yellow-600  bottom-px",
+    icon: 'bow',
+    class: ' text-yellow-600  bottom-px',
     value: player.physicalDamageDealtToChampions,
   },
   {
-    icon: "mdi:sword",
-    class: "text-grandmaster",
+    icon: 'mdi:sword',
+    class: 'text-grandmaster',
     value: player.trueDamageDealtToChampions,
   },
 ]
 
 const stats = computed(() => {
-  if (!player) return null
+  if (!player)
+    return null
 
   const id = player?.perks?.keystone
   const dmg = dmgArray.reduce((max, current) =>
-    current.value > max.value ? current : max
+    current.value > max.value ? current : max,
   )
   const list = [
     player.item0,
@@ -42,35 +43,37 @@ const stats = computed(() => {
   ]
   return {
     kda: Math.round(((player.kills + player.assists) / player.deaths) * 100),
-    keystone: ix.runes.find((r) => r.id == id),
-    secondaryPath: pathIndex.find((p) => p.id == player?.perks?.secondary)
+    keystone: ix.runes.find(r => r.id == id),
+    secondaryPath: pathIndex.find(p => p.id == player?.perks?.secondary)
       ?.name,
     cs:
-      player.totalMinionsKilled +
-      player.neutralMinionsKilled +
-      player.totalEnemyJungleMinionsKilled +
-      player.totalAllyJungleMinionsKilled,
+      player.totalMinionsKilled
+      + player.neutralMinionsKilled
+      + player.totalEnemyJungleMinionsKilled
+      + player.totalAllyJungleMinionsKilled,
     dmgIcon: dmg.icon,
     dmgIconClass: dmg.class,
     items: Object.values(list),
   }
 })
 
-const divClass =
-  "**:not-[h4]:tracking-tight **:not-[h4]:font-semibold **:text-2 grid items-center grid-rows-2 justify-start justify-items-start h-full py-2  max-h-16.5"
+const divClass
+  = '**:not-[h4]:tracking-tight **:not-[h4]:font-semibold **:text-2 grid items-center grid-rows-2 justify-start justify-items-start h-full py-2  max-h-16.5'
 
-const pClass =
-  "leading-0 rounded-tiny flex gap-2 py-px  text-end items-center justify-end font-semibold tracking-tight text-nowrap truncate hover:underline"
+const pClass
+  = 'leading-0 rounded-tiny flex gap-2 py-px  text-end items-center justify-end font-semibold tracking-tight text-nowrap truncate hover:underline'
 
-const runeClass =
-  "btn btn-neutral size-5 p-0 grid place-items-center shadow-sm drop-shadow-sm !bg-black/90 btn-square rounded-[4px]"
+const runeClass
+  = 'btn btn-neutral size-5 p-0 grid place-items-center shadow-sm drop-shadow-sm !bg-black/90 btn-square rounded-[4px]'
 </script>
 
 <template>
   <div
     v-if="player"
     class="grid z-1 grid-flow-col gap-3 grid-cols-[28px_22px_1.5fr_22px_1.1fr_repeat(2,1fr)_1.1fr_1.5fr_1fr] items-center overflow-hidden justify-between grow size-full max-h-16.5 h-16.5 pl-3 pr-4">
-    <div class="!grid-rows-1" :class="divClass">
+    <div
+      class="!grid-rows-1"
+      :class="divClass">
       <ChampionIcon
         :id="player?.championId"
         v-tippy="{
@@ -81,14 +84,18 @@ const runeClass =
         class="rounded-lg size-11 self-center hover-ring mb-px" />
     </div>
 
-    <div class="!grid-rows-1" :class="divClass">
+    <div
+      class="!grid-rows-1"
+      :class="divClass">
       <PlayerSpells
         :player="player"
         class="[&_img]:size-5 [&_img]:rounded-[3px] h-11 gap-0.5" />
     </div>
     <!-- name and tag -->
 
-    <div class="!-ml-3" :class="divClass">
+    <div
+      class="!-ml-3 !py-3"
+      :class="divClass">
       <h4
         v-tippy="{
           content: player.riotIdGameName,
@@ -108,7 +115,7 @@ const runeClass =
     <div
       :class="
         cn(
-          '!flex flex-col h-16 -ml-2 self-center py-2 justify-center items-center gap-0.5'
+          '!flex flex-col h-16 -ml-2 self-center py-2 justify-center items-center gap-0.5',
         )
       ">
       <p
@@ -140,12 +147,18 @@ const runeClass =
 
     <!-- kda -->
 
-    <div class="-ml-3" :class="divClass">
+    <div
+      class="-ml-3"
+      :class="divClass">
       <h4 class="font-bold leading-0 items-center text-nowrap flex flex-nowrap">
         {{ player.kills }}
-        <icon name="slash" class="-mx-px dst size-3" />
+        <icon
+          name="slash"
+          class="-mx-px dst size-3" />
         {{ player.deaths }}
-        <icon name="slash" class="-mx-px dst size-3" />
+        <icon
+          name="slash"
+          class="-mx-px dst size-3" />
         {{ player.assists }}
       </h4>
 
@@ -153,7 +166,9 @@ const runeClass =
         v-if="stats.kda / 100 == Infinity"
         size="xs"
         class="border-master/40 saturate-180 bg-master/20 text-0 **:leading-0">
-        <icon name="fa6-solid:infinity" class="size-3.5 dst mt-[0.04em]" />
+        <icon
+          name="fa6-solid:infinity"
+          class="size-3.5 dst mt-[0.04em]" />
         KDA
       </Badge>
 
@@ -180,7 +195,9 @@ const runeClass =
 
     <!-- healing & vision score -->
 
-    <div class="!justify-items-end !justify-end text-nowrap" :class="divClass">
+    <div
+      class="!justify-items-end !justify-end text-nowrap"
+      :class="divClass">
       <p
         v-tippy="{
           content: 'Effective Healing & Shielding',
@@ -189,11 +206,13 @@ const runeClass =
         class="leading-0 flex gap-1 text-end items-center font-medium text-nowrap truncate hover:underline">
         {{
           Math.round(
-            player.challenges.effectiveHealAndShielding ?? 0
+            player.challenges.effectiveHealAndShielding ?? 0,
           ).toLocaleString()
         }}
         <span class="size-3 relative grid justify-end">
-          <icon name="oi:plus" class="text-cyan-600/50 dst size-3 left-0.25" />
+          <icon
+            name="oi:plus"
+            class="text-cyan-600/50 dst size-3 left-0.25" />
         </span>
       </p>
 
@@ -208,7 +227,9 @@ const runeClass =
       </p>
     </div>
 
-    <div class="!justify-items-end !justify-end text-nowrap" :class="divClass">
+    <div
+      class="!justify-items-end !justify-end text-nowrap"
+      :class="divClass">
       <p
         v-tippy="{
           content: `[Total Champion Dmg Dealt]
@@ -252,7 +273,9 @@ const runeClass =
 
     <!-- gold -->
 
-    <div class="!justify-items-end !justify-end text-nowrap" :class="divClass">
+    <div
+      class="!justify-items-end !justify-end text-nowrap"
+      :class="divClass">
       <p
         v-tippy="{
           content: `${player.totalMinionsKilled.toLocaleString()} minions`,

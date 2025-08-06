@@ -1,21 +1,20 @@
 <script lang="ts" setup>
 import {
+  DialogClose,
   ListboxFilter,
   ListboxItem,
   ListboxItemIndicator,
   ListboxRoot,
   ListboxVirtualizer,
-  PopoverClose,
 } from 'reka-ui'
 
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 
-const emit = defineEmits(['update:splash'])
+const emit = defineEmits(['dialog:close'])
 const ix = useIndexStore()
 const as = useAccountStore()
-
 const champQuery = ref<string | null>('')
 const selectedChampion = ref<string | null>(null)
 
@@ -39,8 +38,10 @@ function reset() {
 }
 
 function update(skin) {
-  console.log('💠 - update - skin:', skin)
   as.publicData.splash = skin
+  console.log('💠 - update - as.publicData.splash:', as.publicData.splash)
+  as.updatePublicData()
+  emit('dialog:close')
 }
 </script>
 
@@ -83,7 +84,7 @@ function update(skin) {
               name="search"
               class="absolute left-2 pointer-events-none transition-opacity duration-200 opacity-40 group-focus-within/input:opacity-80 size-4.25" />
             <div
-              class="search-wrapper group-not-focus-within/input:italic h-full group-not-focus-within/input:text-bc/70" />
+              class="search-wrapper w-full group-not-focus-within/input:italic h-full group-not-focus-within/input:text-bc/70" />
             <button
               v-if="champQuery != ''"
               class="btn btn-ghost btn-xs btn-square absolute right-2"
@@ -118,7 +119,7 @@ function update(skin) {
               <ListboxFilter
                 v-model:model-value="champQuery"
                 type="text"
-                class="size-full px-5 text-2" />
+                class="size-full px-5 text-2 grow" />
             </Teleport>
 
             <ListboxVirtualizer
@@ -174,7 +175,7 @@ function update(skin) {
               :text="skin.name"
               :alt="skin.name"
               :skin-url="getSkinSplash(selectedChampion, skin, 'tile')"
-              @click="update(getSkinSplash(selectedChampion, skin, 'uncentered'))" />
+              @click="update(getSkinSplash(selectedChampion, skin, 'centered'))" />
           </transition-slide>
 
           <div

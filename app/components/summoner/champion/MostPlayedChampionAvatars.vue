@@ -4,8 +4,8 @@ const { class: className, summoner } = defineProps<{
   summoner: Summoner
 }>()
 
-const { championStats } = useChampions(summoner.matches.simplified, { mode: 'lite', limit: 5 })
-watch(() => championStats.value, (newVal) => {
+const { data } = useSummonerChampions(summoner.matches.simplified, { mode: 'lite', limit: 5 })
+watch(() => data.value, (newVal) => {
   console.log('💠 - watch - newVal:', newVal)
 })
 /* const champions = computed (() => {

@@ -1,51 +1,32 @@
 <script lang="ts" setup>
 import { motion } from 'motion-v'
 
-const { summoner } = defineProps<{
+const { summoner, open } = defineProps<{
   summoner: Summoner | null
+  open?: boolean
 }>()
 
-const emit = defineEmits<{
-  (e: 'set:top-champion', topChampion: TopChampion): void
-}>()
-const ix = useIndexStore()
 const as = useAccountStore()
 
-const { championStats: topChampion } = useChampions(
-  summoner.matches?.simplified,
+const { topChampion } = useSummonerChampions(
+  summoner.matches?.simplified || [],
   {
-    mode: 'lite',
+    mode: 'top',
     limit: 1,
   },
 )
 
-const topChampionData = computed<TopChampion>(() => {
-  if (!summoner || !summoner?.matches || !topChampion.value)
-    return
-
-  const champ = Object.keys(topChampion.value)[0]
-  const championData = {
-    name: ix.champNameByKey(champ),
-    splash: getSplash(champ, 'centered'),
-  }
-  if (champ)
-    emit('set:top-champion', championData ?? null)
-
-  return championData ?? null
+// as.fetchPublicData(as.userAccount.riot.puuid)
+watch(() => as.publicData.splash, (newVal) => {
+  console.log('💠 - watch - newVal:', newVal)
 })
-
-console.log('💠 - topChampionData:', topChampionData.value)
 </script>
 
 <template>
-  <motion.div
-    layout
-    class="z-0 h-[290px] w-full absolute overflow-hidden top-0 left-0 translate-x-[10%]">
-    <Img
-      v-if="summoner"
-      layout-id="backdrop-image"
-      :img="summoner.profileSplash ?? topChampionData.splash"
-      alt="profile-image"
-      class="object-cover object-[50%_7%] mask-linear-[to_right,transparent_36%,black_60%]" />
-  </motion.div>
+  <Img
+    v-if="summoner"
+    layout-id="backdrop-image"
+    :img="(as.publicData?.splash ?? topChampion?.splash).replace('centered', 'uncentered')"
+    alt="profile-image"
+    class="  " />
 </template>

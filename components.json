@@ -12,7 +12,7 @@
     "components": "base/ui",
     "composables": "composables/utils",
     "utils": "utils",
-    "ui": "base/ui",
+    "ui": "ui",
     "lib": "utils/lib"
   }
 }

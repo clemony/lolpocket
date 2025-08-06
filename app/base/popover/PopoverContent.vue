@@ -12,6 +12,7 @@ const props = withDefaults(defineProps<PopoverContentProps & {
   sideOffset?: number
   alignOffset?: number
   align?: Align
+  id?: string
   side?: Side
   to?: string
 }>(), {
@@ -29,6 +30,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 <template>
   <PopoverPortal :to="props.to">
     <PopoverContent
+      :id="props.id"
       v-bind="{ forwarded }"
       :class="
         cn(

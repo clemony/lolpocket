@@ -52,7 +52,7 @@ watchEffect(() => {
 
     <div
       v-show="loaded"
-      class="size-full absolute top-0 left-0 !shadow-sm drop-shadow-sm  border-b4 border animate-in fade-in duration-500 rounded-xl" />
+      class="size-full absolute top-0 left-0 !shadow-sm drop-shadow-sm  border-b4 border   rounded-xl" />
   </div>
 </template>
 

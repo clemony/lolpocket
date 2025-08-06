@@ -8,16 +8,17 @@ const selectedChampion = ref(null)
 const loaded = ref(false)
 </script>
 
+ <!-- after:size-full after:pointer-events-none after:fixed after:top-36 after:rounded-t-[4rem] after:border-x-40 after:border-t-40 after:border-b1 after:z-0 after:scale-x-[101.5%] after:-left-0 -->
 <template>
-  <transition-slide
+  <TransitionSlideLeft
     v-if="championKeys"
     group
-    class="overflow-hidden size-full justify-start gap-6 pt-46 scrollbar-hidden grid"
-    :class="{ 'grid-cols-[1fr_420px] animate-in slide-out-to-right': selectedChampion, ' grid-cols-[1fr_0px] animate-out slide-out-to-right': !selectedChampion }">
-    <transition-slide
+    class="size-full overflow-y-auto justify-start gap-6 scrollbar-hidden grid"
+    :class="{ 'grid-cols-[1fr_420px] ': selectedChampion, ' grid-cols-[1fr_0px] ': !selectedChampion }">
+    <TransitionSlideLeft
       group
-      class="size-full scrollbar-hidden pb-8  scroll-smooth  flex flex-wrap  overflow-y-auto overflow-x-hidden  justify-start rounded-lg"
-      :class="{ ' after:size-full after:pointer-events-none after:fixed after:top-36 after:rounded-t-[4rem] after:border-x-40 after:border-t-40 after:border-b1 after:z-0 after:scale-x-[101.5%] after:-left-0': loaded }">
+      class="size-full scrollbar-hidden pb-8  scroll-smooth  flex flex-wrap  overflow-y-auto overflow-x-hidden   justify-start rounded-lg"
+      :class="{ '': loaded }">
       <label
         v-for="key in championKeys"
         :key="key"
@@ -29,13 +30,12 @@ const loaded = ref(false)
           v-show="key"
           :champ-key="key"
           class="min-w-56 max-w-62 h-78"
-          hydrate-on-visible
           @loaded="loaded = true" />
 
       </label>
 
       <div class="w-58 h-78 grow" />
-    </transition-slide>
+    </TransitionSlideLeft>
 
     <div
       v-if="selectedChampion"
@@ -54,5 +54,5 @@ const loaded = ref(false)
         <ChampionData :champion-key="selectedChampion" />
       </div>
     </div>
-  </transition-slide>
+  </TransitionSlideLeft>
 </template>

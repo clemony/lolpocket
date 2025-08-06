@@ -2,6 +2,7 @@ import { defineStore } from 'pinia'
 
 export const useUiStore = defineStore('UiStore', () => {
   const sidebarExpanded = ref(true)
+
   const activeSidebarContent = ref<string>(null)
   const triggerSidebar = refAutoReset(false, 1000)
   const settingsOpen = ref(false)

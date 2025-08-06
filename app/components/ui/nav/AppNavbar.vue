@@ -29,10 +29,10 @@ function verifySignIn() {
 
 <template>
   <nav
-    class="w-full  !py-0 flex absolute flex-nowrap top-0 inset-x-0 w-full h-(--navbar-height) border-b border-b-b3/60  items-center px-3  z-10">
+    class="w-full absolute !py-0 flex flex-nowrap top-0 inset-x-0 w-full h-(--navbar-height)   items-center px-3  z-10">
     <div
-      class="size-full absolute top-0 left-0 inset-0 bg-b1/88 backdrop-blur-md"
-      :class="{ '!bg-b1/50': route?.path == '/' }" />
+      class="size-full absolute top-0 left-0 inset-0 bg-b1/88 backdrop-blur-lg"
+      :class="{ '!bg-b1/50': route?.path == '/', 'bg-transparent': route?.path.match(/\/summoner\/.*/) }" />
 
     <NuxtLink
       class="btn !btn-square btn-ghost size-12 mr-4"

@@ -13,7 +13,8 @@ export default defineNuxtPlugin((nuxtApp) => {
       component: 'tippy', // => <tippy/>
       componentSingleton: 'tippies', // => <tippy-singleton/>,
       defaultProps: {
-        placement: 'bottom',
+        placement: 'top',
+        flip: true,
         allowHTML: true,
         arrow: sharpArrow + sharpArrow,
         hideOnClick: false,
@@ -30,6 +31,7 @@ export default defineNuxtPlugin((nuxtApp) => {
           expanded: 'auto',
         },
       },
+
     },
   )
 })
