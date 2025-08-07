@@ -11,7 +11,7 @@ const champions = JSON.parse(
   fs.readFileSync('./data/raw/champions-raw-meraki.json', 'utf-8'),
 )
 const ddData = JSON.parse(
-  fs.readFileSync('./data/raw/champions-raw.json', 'utf-8'),
+  fs.readFileSync('./data/raw/champions-raw-data-dragon.json', 'utf-8'),
 )
 
 // Create output dirs

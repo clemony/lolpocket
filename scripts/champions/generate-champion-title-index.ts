@@ -11,10 +11,10 @@ const champs = JSON.parse(
 
 const index: Record<number, string> = {}
 
-for (const key in champs) {
-  const champ = champs[key]
-  if (champ.key && champ.title)
-    index[Number(champ.key)] = champ.title
+for (const id in champs) {
+  const champ = champs[id]
+  if (champ.id && champ.title)
+    index[Number(champ.id)] = champ.title
 }
 
 // Create the TypeScript content

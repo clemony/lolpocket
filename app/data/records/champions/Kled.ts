@@ -1,4 +1,4 @@
-// Updated Patch 25.15 - 07/31/2025 07:16:02 AM CDT
+// Updated Patch 25.15 - 08/06/2025 11:23:41 PM CDT
 
 const champion: Champion =  {
   "id": 240,
@@ -125,7 +125,7 @@ const champion: Champion =  {
             "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Courage:</span> Kled gains 15 Courage after completing a basic attack against a champion and 5 Courage for minion kills and when basic attacking structures or epic monsters. He can also restore Courage from hitting enemies with Pocket Pistol. Upon reaching 100 Courage, Skaarl instantly restores 40% / 50% / 60% / 70% (based on level) of her maximum health and reunites with Kled over 0.25 seconds, after which he becomes Mounted and the duo become unable to declare basic attacks or cast their abilities for 0.25 seconds. Mounting up resets the cooldowns of Bear Trap on a Rope and Jousting.</p>"
           },
           {
-            "description": "While at the allied fountain, 25 Courage is generated every 0.25 seconds. If reuniting outside of base, Skaarl gets Frayed Nerves, which prevents Kled from gaining Courage for 30 seconds."
+            "description": "While at the allied fountain, 25 Courage is generated every 0.25 seconds. If reuniting outside of base, Skaarl gets Frayed Nerves, which prevents Kled from gaining Courage from outside of base for 30 seconds. Dismounting inside of base removes Frayed Nerves."
           },
           {
             "description": "The current status of Kled's own health is preserved between subsequent dismounts."

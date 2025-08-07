@@ -24,8 +24,8 @@ logs
 # data folders
 /data/
 /z/
-data/
-/d1/
+data
+d1
 
 #wrangler
 .wrangler

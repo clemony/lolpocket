@@ -1,4 +1,4 @@
-// Updated Patch 25.15 - 07/31/2025 07:16:02 AM CDT
+// Updated Patch 25.15 - 08/06/2025 11:23:41 PM CDT
 
 const champion: Champion =  {
   "id": 27,
@@ -188,7 +188,7 @@ const champion: Champion =  {
         ],
         "targeting": "Auto",
         "affects": "Enemies",
-        "resource": "Mana / s",
+        "resource": "Mana per second",
         "damageType": "Magic damage",
         "spellEffects": "AoEDoT",
         "notes": "Toggle abilities do not count as ability activations for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nThe clouds check for enemy targets in the area immediately upon being spawned. After a 0.25-0.5 second delay, they check every 0.25 seconds again until they fade.\nTargets already with the DoT can have the debuff refreshed only every 0.5 seconds.\nDue to the inconsistent offset between the first and future ticks is it possible for a static target to miss out on one refresh of the debuff, equal to 3 ticks of damage.\nIf Singed has moved less than 90 units since spawning the last poison cloud, it will spawn 35 units in front of him. They also only spawn every 1 second in this case.\nWhen Singed is moving faster than that, the poison clouds spawn more frequently and on top of himself.",

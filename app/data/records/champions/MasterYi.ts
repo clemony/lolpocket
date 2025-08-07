@@ -1,4 +1,4 @@
-// Updated Patch 25.15 - 07/31/2025 07:16:02 AM CDT
+// Updated Patch 25.15 - 08/06/2025 11:23:41 PM CDT
 
 const champion: Champion =  {
   "id": 11,
@@ -471,7 +471,7 @@ const champion: Champion =  {
         ],
         "targeting": "Auto",
         "affects": "Self",
-        "resource": "Mana / s",
+        "resource": "Mana per second",
         "notes": "Meditate's healing amount updates dynamically as he heals himself, making Master Yi heal for less as his current health increases.\nThe first tick of healing may occur at any moment on the first 0.5 seconds of the channel. This means immediately canceling the channel for the attack reset does not guarantee one tick of healing, though it may occur with some chance.\nThe following table refers for interactions while Master Yi is  channeling:\n\n\nType\n\nChannel\n\n\nAttacking\n\nInterrupts\n\n\nAbilities\n\nInterrupts\n\n\nMovement\n\nInterrupts\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\nAll item-actives not specified above interrupt\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\nN/A\n\n\nInterrupted by\n\n Flash  Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nDeath Cast-inhibiting effects",
         "castTime": "none",
         "maxCharges": -1

@@ -1,4 +1,4 @@
-// Updated Patch 25.15 - 07/31/2025 07:16:02 AM CDT
+// Updated Patch 25.15 - 08/06/2025 11:23:40 PM CDT
 
 const champion: Champion =  {
   "id": 32,
@@ -230,7 +230,7 @@ const champion: Champion =  {
         "targeting": "Auto",
         "affects": "Enemies",
         "spellshieldable": "False",
-        "resource": "Mana / s",
+        "resource": "Mana per second",
         "damageType": "Magic damage",
         "spellEffects": "aoedot",
         "notes": "Toggle abilities do not count as ability activations for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nDespite the rounding in Despair's tooltip, it will deal increased damage for every point of ability power.",

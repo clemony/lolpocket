@@ -1,4 +1,4 @@
-// Updated Patch 25.15 - 07/31/2025 07:16:02 AM CDT
+// Updated Patch 25.15 - 08/06/2025 11:23:41 PM CDT
 
 const champion: Champion =  {
   "id": 421,
@@ -482,7 +482,7 @@ const champion: Champion =  {
             ]
           },
           {
-            "description": "If cast while in Burrowed form, Rek'Sai will automatically Unburrow at the end of Void Rush's cast time, placing Burrow on a 1-second cooldown without triggering Unburrow's effects."
+            "description": "If cast while in Burrowed form, Rek'Sai will automatically Unburrow at the end of Void Rush's cast time, placing Burrow on a 1-second cooldown without triggering Unburrow's effects. If Burrow is already on cooldown, its remaining cooldown is set to 1 second."
           }
         ],
         "cost": [

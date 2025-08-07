@@ -19,7 +19,7 @@ fs.writeFileSync(
   JSON.stringify(maChampions, null, 2),
 )
 fs.writeFileSync(
-  './data/raw/champions-raw.json',
+  './data/raw/champions-raw-data-dragon.json',
   JSON.stringify(ddData.data, null, 2),
 )
-console.log('✅ file written to ./data/raw/champions-raw.json')
+console.log('✅ file written to ./data/raw/champions-raw-data-dragon.json')
