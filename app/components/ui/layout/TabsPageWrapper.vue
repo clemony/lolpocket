@@ -28,11 +28,13 @@ import { PopoverAnchor, PopoverContent } from 'reka-ui'
 defineOptions({
   inheritAttrs: false,
 })
-
 const { class: className, background } = defineProps<{
   class?: HTMLAttributes['class']
   background: string
 }>()
+
+const injectedSlots = useSlots()
+provide('tabsWrapperSlots', injectedSlots)
 
 const scrollRef = ref(null)
 const route = useRoute()
@@ -71,7 +73,7 @@ const bgClass = computed (() => `before:bg-url('${img(background)}')`)
 
 <template>
   <div
-    class="size-full">
+    class="size-full ">
     <!-- scroll container -->
 
     <main
@@ -83,12 +85,16 @@ const bgClass = computed (() => `before:bg-url('${img(background)}')`)
       <!-- splash -->
 
       <header
-        :style="{
-          backgroundImage: `url('${img(background)}')`,
-        }"
-        :class="cn('sticky col-start-1 row-start-1 bg-fixed bg-no-repeat w-screen  bg-position-[160%_-3%] bg-size-[80%] z-2 -top-[199px] grid grid-rows-[190px_1px_54px] pt-16',
-                   'before:size-full before:absolute before:z-1 before:bg-linear-to-r  before:from-[color-mix(in_oklab,var(--color-b2)_60%,white_40%)]  before:from-45%   before:to-75% before:to-transparent',
+        :class="cn('sticky col-start-1 row-start-1 w-screen z-2 -top-[199px] grid grid-rows-[190px_1px_54px] pt-16 bg-tint-b2/40',
+
         )">
+        <div
+          :style="{
+            backgroundImage: `url('${img(background)}')`,
+          }"
+          :class="cn('inset-0 right-0 top-0 absolute  bg-fixed bg-no-repeat  bg-position-[160%_-3%]  bg-size-[80%] mask-l-from-30% mask-l-to-60%',
+                     'before:size-full before:absolute before:z-1 before:bg-linear-to-r  before:from-[color-mix(in_oklab,var(--color-b2)_60%,white_40%)]  before:from-45%   before:to-75% before:to-transparent',
+          )" />
         <div
           :class="cn('grid  z-3 grow items-center self-center gap-0.5 items-end grid-cols-[1fr_repeat(2,551px)_1fr] size-full justify-start px-2')">
           <!-- large header welcome wrapper -->
@@ -178,7 +184,9 @@ const bgClass = computed (() => `before:bg-url('${img(background)}')`)
               <PopoverAnchor
                 class="sepRef my-0  mx-auto z-3 bg-transparent  pointer-events-none self-start h-px -translate-x-120   w-120" />
             </div>
-            <PopoverContent
+
+            <slot name="aside" />
+            <!--  <PopoverContent
               :hide-when-detached="false"
               position-strategy="absolute"
               class="w-124 h-full overflow-hidden justify-center relative grid items-start"
@@ -193,13 +201,13 @@ const bgClass = computed (() => `before:bg-url('${img(background)}')`)
                   id="asideRef"
                   class="w-full h-[90vh] grid items-start justify-center overflow-y-auto min-h-[90vh] scrollbar-hidden" />
               </motion.div>
-            </PopoverContent>
+            </PopoverContent> -->
           </Popover>
         </div>
       </header>
 
       <!-- page -->
-      <article :class="cn('flex col-start-2 row-start-2 flex-col justify-center items-start  h-fit w-full z-1 ', className)">
+      <article :class="cn('flex col-start-2 pb-64 row-start-2 flex-col justify-center items-start *:bg-b1 h-fit w-full z-1 ', className)">
         <slot
           name="page"
           :stuck />

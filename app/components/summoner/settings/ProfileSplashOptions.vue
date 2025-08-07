@@ -30,7 +30,7 @@ const currentSplash = computed (() => as.publicData?.splash ?? null)
       @click="currentSplash = null">
       <SplashCard
         hover
-        class="max-h-42"
+        class="w-40"
         :skin-url="topChampion?.splash?.replace('uncentered', 'tile')"
         :text="topChampion?.name"
         :alt="`${as.userAccount?.riot?.name ?? null}'s Most Played`" />
@@ -52,7 +52,7 @@ const currentSplash = computed (() => as.publicData?.splash ?? null)
       <button
         :class="cn(!currentSplash ? inactiveClass : activeClass, cardClass)">
         <SplashCard
-          class="max-h-42 "
+          class="w-40 "
           :text="ix.skinNameFromUrl(as.publicData?.splash) ?? ''"
           :skin-url="as.publicData?.splash"
           :alt="`${as.userAccount?.riot?.name ?? null}'s splash`" />

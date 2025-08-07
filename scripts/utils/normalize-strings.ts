@@ -1,12 +1,21 @@
 import { toValidIdentifier } from './validate-identifier'
 
-export function normalize(str: unknown): string | null {
-  if (typeof str !== 'string')
-    return null
-  let string = str.replace('_', ' ')
-  string = string.charAt(0).toUpperCase() + string.slice(1).toLowerCase()
-  string = string.replace('per_second', '/ s')
-  return string
+export function normalize(value: unknown): string {
+  if (typeof value !== 'string' || !value.trim())
+    return ''
+
+  let str = value.replace(/_/g, ' ')
+  str = str.replace(/per_second/gi, '/ s')
+  str = str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()
+
+  return str
+}
+
+export function normalizeArray(input: unknown): string[] {
+  const arr = Array.isArray(input) ? input : [input]
+  return arr
+    .map(normalize)
+    .filter((str): str is string => !!str && str.trim().length > 0)
 }
 
 export function normalizeName(input: string): string {
@@ -31,12 +40,4 @@ export function normalizeName(input: string): string {
 
 export function capitalize(str: string): string {
   return str.charAt(0).toUpperCase() + str.slice(1)
-}
-
-export function normalizeArray(arr: unknown): string[] {
-  if (!arr)
-    return []
-  if (!Array.isArray(arr))
-    arr = [arr]
-  return (arr as unknown[]).map(normalize).filter(Boolean) as string[]
 }

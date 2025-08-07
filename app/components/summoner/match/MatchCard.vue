@@ -17,7 +17,7 @@ const isOpen = ref(false)
     :class="
       cn(
         'Collapsible field-box  drop-shadow-xs group w-220 border-b3/70 rounded-xl justify-start max-w-220 group/collapse overflow-hidden bg-clip-padding justify-center relative **:select-none text-2  p-0  min-w-134  cursor-pointer group/collapse',
-        'before:absolute before:z-3  before:z-0 before:h-full before:w-1/2 before:pointer-events-none before:brightness-94 before:opacity-40 before:mask-r-from-0 before:border before:rounded-box before:shadow-sm before:shadow-black',
+        'before:absolute before:z-3  before:z-0 before:h-full before:w-1/2 before:pointer-events-none before:brightness-94 before:opacity-40 before:mask-r-from-0 before:border before:rounded-xl before:shadow-sm before:shadow-black',
 
         player.win ? 'before:border-inspiration ' : 'before:border-domination',
         isOpen == true ? 'h-240 min-h-240' : 'h-36',
@@ -27,7 +27,7 @@ const isOpen = ref(false)
       :for="match.metadata.matchId"
       :class="
         cn(
-          ' h-40 flex gap-7 z-2 w-220 max-w-220 text-2 pt-3 pb-7 w-full relative bg-linear-to-r pointer-events-auto to-transparent to-40% rounded-box overflow-hidden bg-clip-padding relative items-center justify-items-start bg-transparent   cursor-pointer  px-5 justify-start rounded-box cursor-pointer data-[state=open]:rounded-b-none ',
+          ' h-40 flex gap-7 z-2 w-220 max-w-220 text-2 pt-3 pb-7 w-full relative bg-linear-to-r pointer-events-auto to-transparent to-40% rounded-xl overflow-hidden bg-clip-padding relative items-center justify-items-start bg-transparent   cursor-pointer  px-5 justify-start rounded-box cursor-pointer data-[state=open]:rounded-b-none ',
           player.win ? 'from-inspiration/80 ' : 'from-domination/80',
         )
       ">
@@ -70,7 +70,7 @@ const isOpen = ref(false)
             :id="player?.championId"
             v-tippy="{ content: player?.championName, placement: 'top' }"
             :alt="player?.championName"
-            class="rounded-lg size-17" />
+            class="rounded-xl size-17" />
 
           <!--  spells -->
           <PlayerSpells

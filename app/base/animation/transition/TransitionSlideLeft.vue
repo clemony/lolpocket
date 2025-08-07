@@ -10,6 +10,8 @@ const { class: className, as = 'div', mode = 'out-in', invert = false } = define
 <template>
   <transition-slide
     group
+
+    :appear="false"
     :as="as"
     :class="cn(className)"
     :mode="mode"

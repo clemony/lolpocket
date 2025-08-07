@@ -1,10 +1,11 @@
 import fs from 'node:fs'
 import path from 'node:path'
+import type { Champion } from '../../shared/types/types-champion'
 import { markUpdate } from '../utils/mark-update'
 
 const outputFile = path.resolve('./app/data/index/champion-index.ts')
 
-const champs: Champion[] = JSON.parse(
+const champs = JSON.parse(
   fs.readFileSync('./data/raw/champions-raw.json', 'utf-8'),
 )
 
@@ -15,8 +16,8 @@ for (const champ in champs) {
   const champion = champs[champ]
 
   index.push({
-    id: champion.id,
-    key: champion.key,
+    id: Number(champion.key),
+    key: champion.id,
     name: champion.name,
   })
 }

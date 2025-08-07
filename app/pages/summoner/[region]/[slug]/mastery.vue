@@ -57,7 +57,7 @@ const virtualizer = ref()
 console.log('💠 - virtualizer:', virtualizer.value)
 
 const list = computed (() => {
-  return summoner?.mastery?.full?.slice(10).concat(noMastery.value)
+  return summoner?.mastery?.full?.concat(noMastery.value)
 })
 
 onMounted (() => {
@@ -66,76 +66,23 @@ onMounted (() => {
 </script>
 
 <template>
-  <main class="py-14 px-1 bg-b1 flex-col relative overflow-hidden  size-full items-center">
+  <main class="py-22 px-1 w-2/3 flex-col relative flex  gap-14  mx-auto size-full items-center">
+    <h1 class="self-start dst font-bold">
+      Champion Mastery
+    </h1>
     <article
       v-if="summoner?.mastery?.top"
-      class="grid grid-cols-6 max-w-[1040px]  mx-auto  h-fit  gap-8 ">
-      <h1 class="col-span-full dst font-bold">
-        Highest Mastery
-      </h1>
+      class="grid grid-cols-6 grid-flow-col place-items-center py-2 overflow-hidden mx-auto gap-8 w-full "
+      style="
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  ">
       <MasteryPhoto
-        v-for="champion in summoner.mastery.top.slice(0, 10)"
+        v-for="champion in summoner.mastery.top.slice(0, 6)"
         :key="champion.id"
         :champion />
     </article>
-
-    <Collapsible
-      v-model:open="isOpen"
-      as="div"
-      class="mt-14 Collapsible h-full mx-auto max-w-[1040px]  justify-center">
-      <CollapsibleTrigger class="flex-nowrap group/more text-nowrap overflow-hidden pr-2 cursor-pointer w-full items-center mb-12 justify-start flex gap-4 text-2 text-bc/80 hover:text-bc">
-        <icon
-          name="down-sm"
-          :class="cn('transition-transform duration-200 text-bc/80 group-hover/more:text-bc   shrink-0 size-5', { '-rotate-90': !isOpen })" />
-
-        {{ isOpen ? 'View less...' : 'View all...' }}
-        <Separator :class="cn(' transition-transform duration-1000  group-hover/more:bg-b3', { 'scale-x-100 opacity-100 origin-left  transition-transform duration-1000  ': isOpen, 'scale-x-0 origin-right opacity-0  transition-transform duration-1000 ': !isOpen })" />
-      </CollapsibleTrigger>
-      <LazyCollapsibleContent class="w-full  CollapsibleContent pb-14 ">
-        <ListboxRoot
-          :multiple="false"
-          selection-behavior="replace"
-          class="overflow-y-auto transition-all duration-200 h-inherit w-full max-h-imherit">
-          <!--           <Teleport
-            defer
-            to=".search-wrapper">
-            <ListboxFilter
-              v-model:model-value="champQuery"
-              type="text"
-              class="size-full px-5 text-2" />
-          </Teleport> -->
-
-          <ListboxVirtualizer
-            v-if="summoner?.mastery?.full?.length"
-            ref="virtualizer"
-            v-slot="{ option }"
-            as-child
-            :options="list"
-            :text-content="(o) => ix.champNameById(o.id)"
-            :estimate-size="40"
-            class="h-inherit max-h-imherit w-full grid grid-cols-6 w-full h-fit grid-flow-col  gap-8">
-            <ListboxItem
-              :key="option.id"
-              :value="option.id">
-              <MasteryPhoto
-                v-if="option.id"
-                :champion="option" />
-            </ListBoxItem>
-          </ListboxVirtualizer>
-          <div
-            v-else
-            class="w-full p-14 grid place-items-center">
-            <icon
-              name="svg-spinners:bars-scale-middle"
-              class="shrink-0" />
-          </div>
-        </ListboxRoot>
-      </LazyCollapsibleContent>
-      <CollapsibleTrigger
-        class="btn mt-10 mx-auto text-2 text-bc/76 hover:text-bc btn-ghost font-medium"
-        @click="getFullMastery()">
-        {{ isOpen ? 'View less...' : 'View all...' }}
-      </CollapsibleTrigger>
-    </Collapsible>
+    <div class="w-full">
+      <MasteryGrid :mastery="list" />
+    </div>
   </main>
 </template>

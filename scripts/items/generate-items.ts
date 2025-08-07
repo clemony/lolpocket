@@ -1,10 +1,10 @@
 import fs from 'node:fs'
 import path from 'node:path'
-import { formatStats, normalizeItemData } from '../utils/format-items'
-import { handleWikiText } from '../utils/format-wiki-text'
-import { markUpdate } from '../utils/mark-update'
-import { stripEmpty } from '../utils/strip-empty.ts'
-import { ludensPreProcess } from '../utils/wikitext/processing'
+import { formatStats, normalizeItemData } from '../utils/format-items.ts'
+import { handleWikiText } from '../utils/format-wiki-text.ts'
+import { markUpdate } from '../utils/mark-update.ts'
+import { stripEmpty } from '../utils/strip-empty.ts.ts'
+import { ludensPreProcess } from '../utils/wikitext/processing.ts'
 
 const inputPath = path.resolve('./data/raw/items-raw.json')
 

@@ -1,7 +1,7 @@
 import { getISOWeek } from '~/utils'
 
-interface TimeSeriesStat {
-  period: string // e.g., '2025-W32'
+export interface TimeSeriesStat {
+  span: string // e.g., '2025-W32'
   games: number
   wins: number
   winrate: number
@@ -12,6 +12,7 @@ export function useChampionWinrateTimeline(
   championName: string,
 ): TimeSeriesStat[] {
   const grouped: Record<string, TimeSeriesStat> = {}
+  console.log('💠 - useChampionWinrateTimeline - grouped:', grouped)
 
   for (const match of matches) {
     if (match.championName !== championName)
@@ -20,11 +21,12 @@ export function useChampionWinrateTimeline(
     const date = new Date(match.gameEndTimestamp)
     const year = date.getUTCFullYear()
     const week = getISOWeek(date)
-    const key = `${year}-W${week.toString().padStart(2, '0')}`
+    const span = week.toString().padStart(2, '0')
+    const key = `${year}-W${span}`
 
     if (!grouped[key]) {
       grouped[key] = {
-        period: key,
+        span,
         games: 0,
         wins: 0,
         winrate: 0,
@@ -34,14 +36,16 @@ export function useChampionWinrateTimeline(
     grouped[key].games++
     if (match.win)
       grouped[key].wins++
+    console.log('💠 - useChampionWinrateTimeline - grouped[key].wins:', grouped[key].wins)
   }
 
   for (const key in grouped) {
     const stat = grouped[key]
     stat.winrate = (stat.wins / stat.games) * 100
   }
+  console.log('💠 - useChampionWinrateTimeline - grouped:', grouped)
 
   return Object.values(grouped).sort((a, b) =>
-    a.period.localeCompare(b.period),
+    a.span.localeCompare(b.span),
   )
 }

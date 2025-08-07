@@ -33,7 +33,7 @@ function load() {
     preload
     :class="
       cn(
-        'size-full !shrink-0',
+        'size-full relative !shrink-0',
         {
           '': loaded,
           '': !loaded,

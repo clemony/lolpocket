@@ -15,7 +15,7 @@ const {
   <Card
     :class="
       cn(
-        'rounded-lg shrink-0 h-full aspect-7/8 w-auto  !bg-b1  bg-noise cursor-pointer parallax photo inset-shadow-xxs p-2 border-b3 group/photo grid grid-rows-[1.5fr_0.3fr]',
+        'rounded-lg  min-w-32 max-w-64 w-full aspect-7/8  shrink-0 h-auto  shrink-0 !bg-b1  bg-noise cursor-pointer parallax photo inset-shadow-xxs p-2 border-b3 group/photo grid grid-rows-[1fr_0.25fr]',
         className,
       )
     ">
@@ -38,15 +38,20 @@ const {
       </div>
       <LazyPrismaticShine
         class="scale-x-112  z-1 scale-y-104 !opacity-0 group-hover/photo:!opacity-100 transition duration-450" />
+
+      <slot name="img-container" />
     </transition-scale>
 
-    <slot>
-      <div
-        class="w-full h-5 max-h-5 w-34 max-w-34 mt-1.5 px-0.5 grid items-center">
-        <span class=" italic  items-center  text-1 flex-wrap flex absolute  leading-none size-fit">
-          {{ text }}
-        </span>
-      </div>
-    </slot>
+    <div class="relative size-full grid items-center">
+      <slot name="crest" />
+      <slot>
+        <div
+          class="w-full h-5 max-h-5 w-34 max-w-34 mt-1.5 px-0.5 grid items-center relative ">
+          <span class=" italic  items-center  text-1 flex-wrap flex absolute  leading-none size-fit">
+            {{ text }}
+          </span>
+        </div>
+      </slot>
+    </div>
   </Card>
 </template>

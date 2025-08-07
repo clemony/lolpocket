@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { MatchHistoryPageAside, ProfileSettingsAside } from '#components'
+
 definePageMeta({
   name: 'summoner',
   title: 'Summoner Profile',
@@ -65,12 +67,28 @@ const { topChampion } = useSummonerChampions(
 watch(() => as.publicData.splash, (newVal) => {
   console.log('💠 - watch - newVal:', newVal)
 })
+
+const asideMap = {
+  '': MatchHistoryPageAside,
+  'settings': ProfileSettingsAside,
+}
+
+const aside = computed (() => {
+  const path = route.path.split('/').pop()
+  return asideMap[path]
+})
 </script>
 
 <template>
   <TabsPageWrapper
     v-if="summoner"
     :background="(as.publicData?.splash ?? topChampion?.splash).replace('centered', 'uncentered')">
+    <template #aside>
+      <component
+        :is="aside"
+        :slug
+        :summoner />
+    </template>
     <template #icon>
       <LazySummonerIcon
         v-if="summoner"
@@ -125,7 +143,8 @@ watch(() => as.publicData.splash, (newVal) => {
         :stuck
         :region
         :slug
-        :summoner />
+        :summoner>
+      </NuxtPage>
     </template>
   </TabsPageWrapper>
 </template>

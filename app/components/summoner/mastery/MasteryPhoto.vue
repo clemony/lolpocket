@@ -14,13 +14,20 @@ const level = computed (() => champion?.level >= 10 ? 10 : champion?.level ? cha
   <SplashCard
     :alt="name"
     :skin-url="getSplash(ix.champKeyById(id), 'tile')"
-    class="pb-0.5  group/photo">
+    class="pb-0.5 group/photo">
     <template #banner>
       <Img
         :img="`/img/mastery/banner/crest-and-banner-mastery-${level}.webp`"
         :alt="level.toString()"
         :class="cn('size-17 absolute z-4 drop-shadow-sm drop-shadow-black/20  -top-1.5 right-0')" />
     </template>
+
+    <!--     <template #crest>
+      <Img
+        :img="`/img/mastery/mastery-${level}.webp`"
+        :alt="level.toString()"
+        :class="cn('h-full scale-130 object-cover w-auto absolute z-4 drop-shadow-sm drop-shadow-black/20  -top-0 -right-0')" />
+    </template> -->
 
     <div class="size-full relative flex flex-col h-12 justify-center overflow-hidden pb-1  *:leading-none px-0.75 pt-1.5 ">
       <div class="flex items-end gap-1.5 ">

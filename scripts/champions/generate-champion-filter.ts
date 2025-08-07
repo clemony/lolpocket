@@ -1,11 +1,19 @@
 import fs from 'node:fs'
+import type { Champion } from '../../shared/types/types-champion'
 import { markUpdate } from '../utils/mark-update'
 import { normalize, normalizeArray } from '../utils/normalize-strings'
 
 const champions = JSON.parse(
   fs.readFileSync('./data/raw/champions-raw.json', 'utf-8'),
 ) as Record<string, Champion>
-const filter = {
+type FilterMap = Record<string, number[]>
+
+const filter: {
+  roles: FilterMap
+  positions: FilterMap
+  attackType: FilterMap
+  resource: FilterMap
+} = {
   roles: {},
   positions: {},
   attackType: {},

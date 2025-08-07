@@ -15,8 +15,8 @@ export interface ChampionIndex {
 }
 
 export interface ChampionLite extends ChampionIndex {
-  resource?: string
-  attackType?: string
+  resource?: string | null
+  attackType?: string | null
   stats?: Record<string, ChampionStat>
   positions?: string[]
   roles?: string[]

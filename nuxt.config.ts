@@ -141,6 +141,7 @@ export default defineNuxtConfig({
       '~~/shared/types/**',
       'keys/**',
       'routes',
+      'composables/alias/*/**',
     ],
   },
   pinia: {

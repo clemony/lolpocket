@@ -1,12 +1,6 @@
 <script lang="ts" setup>
 import { profileSettingsData } from 'components/summoner/settings/profile-settings-data'
-import { profileSettingsLinks } from 'components/summoner/settings/profile-settings-links'
 
-const { region, slug } = defineProps<{
-  summoner: Summoner
-  region: string
-  slug: string
-}>()
 definePageMeta({
   middleware: 'check-if-user',
 })
@@ -25,31 +19,9 @@ watch(
   <main
     class="flex   w-full h-fit bg-b1 relative z-1">
     <aside
-      class="w-[37.4%] shrink-0 z-1 sticky top-24 px-1 py-24 grid justify-end left-0">
-      <menu class="w-90">
-        <h2 class="dst font-bold mb-8">
-          Profile Settings
-        </h2>
+      class="w- shrink-0  " />
 
-        <nav class="grid w-full h-fit pl-1 gap-1">
-          <li
-            v-for="link in profileSettingsLinks"
-            :key="link.hash">
-            <NuxtLink
-              class="hover:underline underline-offset-2 h-11 grid items-center font-medium cursor-pointer text-bc/60"
-              exact-active-class="text-bc"
-              :to="{
-                path: `/summoner/${region}/${slug}/settings`,
-                hash: `#${link.hash}`,
-              }">
-              {{ link.name }}
-            </NuxtLink>
-          </li>
-        </nav>
-      </menu>
-    </aside>
-
-    <article class="h-fit max-w-250 w-full flex flex-col pt-24 pb-62 gap-20  px-1">
+    <article class="ml-[38%]  h-fit max-w-250 w-full flex flex-col pt-24 pb-62 gap-20  px-1">
       <h1
         id="splash"
         class="dst font-bold">

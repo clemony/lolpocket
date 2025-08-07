@@ -6,21 +6,7 @@ const { class: className, champKey,
     champKey?: string
   }>()
 const emit = defineEmits(['loaded'])
-const nameHyphenMap: Record<string, string> = {
-  'Aurelion Sol': 'Aurelion\nSol',
-  // 'Blitzcrank': 'Blitz-\ncrank',
-  'Fiddlesticks': 'Fiddle-\nsticks',
-  'Heimerdinger': 'Heimer-\ndinger',
-  'Mordekaiser': 'Morde-\nkaiser',
-  'Miss Fortune': 'Miss\nFortune',
-  // 'Master Yi': 'Master\nYi',
-  'Renata Glasc': 'Renata\nGlasc',
-  'Tahm Kench': 'Tahm\nkench',
-  'Tryndamere': 'Tryn-\ndamere',
-
-}
 const ix = useIndexStore()
-const formatName = (n: string) => nameHyphenMap[n] ?? n
 
 const loaded = ref(false)
 
@@ -44,7 +30,7 @@ watchEffect(() => {
     <label
       v-show="champKey"
       class="absolute inset-0 rounded-xl hover:ring-offset-2  text-left hover:ring-offset-b1/95 hover:ring-n1/60 overflow-hidden  opacity-0 pointer-events-none group-hover:opacity-100 bg-n1/50 text-nc transition-all duration-300 py-4 px-3.5 grid justify-start text-12 break-all hyphens-manual tracking-tighter font-bold leading-none text-wrap items-end whitespace-break-spaces">
-      {{ formatName(ix.champNameByKey(champKey)) }}
+      {{ hyphenateChampionName(ix.champNameByKey(champKey)) }}
 
     </label>
     <!--

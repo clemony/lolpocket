@@ -42,15 +42,36 @@ const data = computed(() => ({
 }))
 
 const options = {
-  elements: {
-    line: {
-      tension: 0.4,
-      cubicInterpolationMode: 'default',
-    },
-  },
   layout: {
     padding: {
       bottom: 30,
+    },
+  },
+  scales: {
+    y: {
+      grid: {
+        display: false,
+      },
+      min: 0,
+      max: 100,
+      ticks: {
+        display: false,
+      },
+      border: {
+        display: false,
+      },
+    },
+    x: {
+
+      ticks: {
+        display: false,
+      },
+      grid: {
+        display: false,
+      },
+      border: {
+        display: false,
+      },
     },
   },
   plugins: {

@@ -59,7 +59,6 @@ const openMatch = ref(null)
       :items-per-page="itemsPerPage"
       class="pt-8 max-w-220 justify-center justify-self-start mx-0">
       <PaginationContent v-slot="{ items }">
-        {{ console.log("💠 - items:", items) }}
         <PaginationFirst class="disabled:opacity-0" />
         <PaginationPrev
           size="sm"

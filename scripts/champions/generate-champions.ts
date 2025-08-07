@@ -4,14 +4,14 @@ import type { Champion } from '../../shared/types/types-champion.ts'
 import { markUpdate } from '../utils/mark-update.js'
 import { normalizeAbility } from '../utils/normalize-ability.js'
 import { normalize, normalizeArray } from '../utils/normalize-strings.js'
-import { stripEmpty } from '../utils/strip-empty.ts'
+import { stripEmpty } from '../utils/strip-empty.ts.ts'
 
 // Load saved raw data
 const champions = JSON.parse(
-  fs.readFileSync('./data/raw/champions-raw-ma.json', 'utf-8'),
+  fs.readFileSync('./data/raw/champions-raw-meraki.json', 'utf-8'),
 )
 const ddData = JSON.parse(
-  fs.readFileSync('./data/raw/champions-raw-dd.json', 'utf-8'),
+  fs.readFileSync('./data/raw/champions-raw.json', 'utf-8'),
 )
 
 // Create output dirs

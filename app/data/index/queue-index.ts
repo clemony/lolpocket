@@ -25,14 +25,19 @@ export const queueIndex = [
     description: 'ARAM',
   },
   {
+    queueId: 480,
+    map: 'Summoner\'s Rift',
+    description: 'Swiftplay',
+  },
+  {
     queueId: 490,
     map: 'Summoner\'s Rift',
-    description: 'Normal (Quickplay)',
+    description: 'Quickplay',
   },
   {
     queueId: 700,
     map: 'Summoner\'s Rift',
-    description: 'Summoner\'s Rift Clash',
+    description: 'SR Clash',
   },
   {
     queueId: 720,

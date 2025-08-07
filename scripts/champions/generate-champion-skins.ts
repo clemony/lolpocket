@@ -1,9 +1,10 @@
 import fs from 'node:fs'
 import path from 'node:path'
+import type { FullSkinRecord, SkinRecord } from '../../shared/types/types-champion'
 import { cleanImageLink, cleanImageNum } from '../utils/cleanImageLink'
 import { markUpdate } from '../utils/mark-update'
 
-const championsPath = path.resolve('./data/raw/champions-raw-ma.json')
+const championsPath = path.resolve('./data/raw/champions-raw-meraki.json')
 
 const championsRaw = fs.readFileSync(championsPath, 'utf-8')
 const champions = JSON.parse(championsRaw)

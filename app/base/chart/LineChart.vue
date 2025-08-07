@@ -35,7 +35,8 @@ const options = {
   elements: {
     point: {
       hitRadius: 6,
-      backgroundColor: `${styles.getPropertyValue('--color-nc')}`,
+      radius: 2,
+      backgroundColor: `${styles.getPropertyValue('--color-n1')}`,
       borderColor: `${styles.getPropertyValue('--color-n1')}`,
       borderWidth: 1.5,
       hoverRadius: 4,
@@ -43,38 +44,11 @@ const options = {
     line: {
       borderColor: `${styles.getPropertyValue('--color-n1')}`,
       borderWidth: 1.5,
-      tension: props.options.elements.line.tension,
-      cubicInterpolationMode: props.options.elements.line.cubicInterpolationMode,
+      tension: 0.35,
+      cubicInterpolationMode: 'default' as const,
     },
   },
 
-  scales: {
-    y: {
-      grid: {
-        display: false,
-      },
-      min: 0,
-      max: 100,
-      ticks: {
-        display: false,
-      },
-      border: {
-        display: false,
-      },
-    },
-    x: {
-
-      ticks: {
-        display: false,
-      },
-      grid: {
-        display: false,
-      },
-      border: {
-        display: false,
-      },
-    },
-  },
   plugins: {
     tooltip: {
       titleMarginBottom: 0,

@@ -1,6 +1,7 @@
 import fs from 'node:fs'
-import { markUpdate } from '../utils/mark-update'
-import { normalize, normalizeArray } from '../utils/normalize-strings'
+import type { ChampionLite, ChampionLiteRecord } from '../../../shared/types/types-champion'
+import { markUpdate } from '../../utils/mark-update'
+import { normalize, normalizeArray } from '../../utils/normalize-strings'
 
 const champions = JSON.parse(
   fs.readFileSync('./data/raw/champions-raw.json', 'utf-8'),
@@ -36,7 +37,7 @@ const championsLite = Object.values(champions).reduce((acc, champ) => {
     id,
     key,
     name,
-    resource: normalize(resource.replace('_', ' ')),
+    resource: resource ? normalize(resource.replace('_', ' ')) : null,
     attackType: normalize(attackType),
     stats: Object.fromEntries(
       Object.entries(stats)

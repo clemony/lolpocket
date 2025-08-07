@@ -15,11 +15,11 @@ const [maChampions, ddData] = await Promise.all([
 ])
 
 fs.writeFileSync(
-  './data/raw/champions-raw-ma.json',
+  './data/raw/champions-raw-meraki.json',
   JSON.stringify(maChampions, null, 2),
 )
 fs.writeFileSync(
-  './data/raw/champions-raw-dd.json',
+  './data/raw/champions-raw.json',
   JSON.stringify(ddData.data, null, 2),
 )
-console.log('✅ file written to ./data/raw/champions-raw-dd.json')
+console.log('✅ file written to ./data/raw/champions-raw.json')
