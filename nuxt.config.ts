@@ -161,6 +161,7 @@ export default defineNuxtConfig({
     api: fileURLToPath(new URL('./public/api', import.meta.url)),
     components: fileURLToPath(new URL('./app/components', import.meta.url)),
     base: fileURLToPath(new URL('./app/base', import.meta.url)),
+    assets: fileURLToPath(new URL('./app/assets', import.meta.url)),
     plugins: fileURLToPath(new URL('./app/plugins', import.meta.url)),
     modules: fileURLToPath(new URL('./modules', import.meta.url)),
     data: fileURLToPath(new URL('./app/data', import.meta.url)),

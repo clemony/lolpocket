@@ -1,10 +1,9 @@
-import { iconSetQuartzLight, provideGlobalGridOptions, themeQuartz } from 'ag-grid-community'
+import { iconSetQuartzLight, themeQuartz } from 'ag-grid-community'
 
 export const pocketTheme = themeQuartz.withPart(iconSetQuartzLight).withParams({
   backgroundColor: 'transparent',
   fontFamily: 'var(--font-sans), system ui',
   fontSize: '12px',
-  // foregroundColor: 'transparent',
   cellTextColor: 'var(--bc)',
   headerBackgroundColor: 'transparent',
   headerTextColor: 'var(--bc)/0.8',
@@ -39,14 +38,4 @@ export const pocketTheme = themeQuartz.withPart(iconSetQuartzLight).withParams({
   widgetContainerHorizontalPadding: 9,
   widgetContainerVerticalPadding: 5,
   tooltipBorder: false,
-})
-
-// provide localeText to all grids via global options
-provideGlobalGridOptions({
-  icons: {
-    filter: '<div class="size-full align-text-top leading-tight items-start -mt-1.5 opacity-60 hover:opacity-100">. . .</div>',
-    sortAscending: '<div class="text-4 text-bc -mb-0.5">⌃</div>',
-
-    sortDescending: '<div class="text-6 text-bc -mt-3">⌵</div>',
-  },
 })

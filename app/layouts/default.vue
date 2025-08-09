@@ -52,6 +52,18 @@ client.auth.onAuthStateChange(async (event, session) => {
     location.reload()
   }
 })
+
+const floatingSidebar = ref(false)
+watch(() => route.path, (newVal) => {
+  const route1 = /\/summoner\/.*/
+  console.log('💠 - watch - newVal:', newVal)
+
+  if (route.path.match(route1))
+    floatingSidebar.value = true
+
+  else floatingSidebar.value = false
+  console.log('💠 - floatingSidebar.value :', floatingSidebar.value)
+}, { immediate: true })
 </script>
 
 <template>
@@ -64,7 +76,7 @@ client.auth.onAuthStateChange(async (event, session) => {
     <!--     <LazyAppCommand /> after:absolute after:bottom-0 after:w-full after:h-1/4 after:bg-neutral after:z-0 -->
     <!-- [ inset id is for Teleports] -->
     <SidebarInset
-      :class="cn('inset-wrapper relative size-full   *:z-1  overflow-y-auto')">
+      :class="cn('inset-wrapper relative size-full   *:z-1  ', { 'min-w-screen w-screen': floatingSidebar })">
       <slot />
     </SidebarInset>
     <NuxtLoadingIndicator
@@ -80,7 +92,8 @@ client.auth.onAuthStateChange(async (event, session) => {
 
     <UserSidebar
       side="right"
-      variant="sidebar"
+      :floating="floatingSidebar"
+      :variant="floatingSidebar ? 'sidebar' : 'sidebar'"
       collapsible="offcanvas" />
   </SidebarProvider>
 </template>

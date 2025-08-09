@@ -9,18 +9,18 @@ const champs = JSON.parse(
   fs.readFileSync('./data/raw/champions-raw.json', 'utf-8'),
 ) as Record<string, Champion>
 
-const index: Record<number, string> = {}
+const index: Record<string, string> = {}
 
-for (const id in champs) {
-  const champ = champs[id]
-  if (champ.id && champ.title)
-    index[Number(champ.id)] = champ.title
+for (const key in champs) {
+  const champ = champs[key]
+  if (champ.key && champ.title)
+    index[champ.key] = champ.title
 }
 
 // Create the TypeScript content
 const output = `// ${markUpdate()}
 
-export const championTitleIndex: Record<number, string> = ${JSON.stringify(index, null, 2)}
+export const championTitleIndex: Record<string, string> = ${JSON.stringify(index, null, 2)}
 `
 
 fs.writeFileSync(outputFile, output)

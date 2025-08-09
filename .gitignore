@@ -11,9 +11,13 @@ dist
 
 # Node dependencies
 node_modules
+
 # Logs
 logs
 *.log
+
+#notes
+**/📌*
 
 # Misc
 .DS_Store
@@ -36,3 +40,6 @@ d1
 .env.*
 !.env.example
 
+
+# Scraps local notes
+.scraps/

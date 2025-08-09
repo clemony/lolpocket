@@ -29,6 +29,7 @@ const openMatch = ref(null)
 
     <TransitionScalePop
       v-else-if="pagedMatches.length > 0"
+      :appear="false"
       group
       class="flex flex-col gap-8 pb-px">
       <LazyMatchCard

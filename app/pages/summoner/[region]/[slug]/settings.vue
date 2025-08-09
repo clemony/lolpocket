@@ -3,6 +3,7 @@ import { profileSettingsData } from 'components/summoner/settings/profile-settin
 
 definePageMeta({
   middleware: 'check-if-user',
+  name: 'summoner-settings',
 })
 
 const as = useAccountStore()

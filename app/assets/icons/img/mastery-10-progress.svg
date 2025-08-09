@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" width="700" height="700" opacity="0.71">
+  <defs>
+    <linearGradient id="ffflux-gradient" x1="50%" y1="0%" x2="50%" y2="100%" gradientTransform="rotate(0)">
+
+      <stop stop-color="hsl(262, 50%, 50%)" offset="100%">
+              <animate attributeName="stop-color"
+         dur="10s"
+         repeatCount="indefinite"
+         values="
+          hsl(262, 50%, 50%);
+          hsl(269, 38%, 61%);
+          hsl(262, 50%, 50%)"
+         keyTimes="0; 0.5; 1"
+         calcMode="spline"
+         keySplines="0.42 0 0.58 1; 0.42 0 0.58 1"
+/>
+      </stop>
+
+    </linearGradient>
+
+      <filter id="hue-rotate">
+  <feColorMatrix type="hueRotate">
+    <animate attributeName="values"
+             from="0" to="360"
+             dur="30s"
+             repeatCount="indefinite" />
+  </feColorMatrix>
+</filter>
+    <filter id="ffflux-filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feTurbulence
+  type="fractalNoise"
+  baseFrequency="0.003 0.004"
+  numOctaves="2"
+  stitchTiles="stitch"
+  result="turbulence">
+  <animate attributeName="baseFrequency"
+           values="0.003 0.004; 0.004 0.003; 0.003 0.004"
+           dur="30s"
+           repeatCount="indefinite"
+           keyTimes="0; 0.5; 1"
+           calcMode="spline"
+           keySplines="0.42 0 0.58 1; 0.42 0 0.58 1"
+/>
+</feTurbulence>
+
+      <feGaussianBlur stdDeviation="49 32" in="turbulence" edgeMode="duplicate" result="blur" />
+      <feBlend mode="screen" in="SourceGraphic" in2="blur" result="blend" />
+    </filter>
+  </defs>
+
+  <rect width="700" height="700" fill="url(#ffflux-gradient)" filter="url(#ffflux-filter)" />
+</svg>

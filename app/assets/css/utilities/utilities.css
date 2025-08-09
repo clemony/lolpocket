@@ -1,6 +1,9 @@
-@import 'tailwindcss';
-@import '../theme.css';
+@import "tailwindcss";
+@import "../theme.css";
 
+@utility animate-gradient-* {
+  animation: gradient --value(integer) s ease infinite;
+}
 @utility col-span-all {
   column-span: all;
 }

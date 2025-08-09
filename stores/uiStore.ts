@@ -4,7 +4,6 @@ export const useUiStore = defineStore('UiStore', () => {
   const sidebarExpanded = ref(true)
 
   const activeSidebarContent = ref<string>(null)
-  const triggerSidebar = refAutoReset(false, 1000)
   const settingsOpen = ref(false)
   const sidebarMenuOpen = ref(false)
   const toggleSidebar = useToggle(sidebarExpanded)
@@ -12,6 +11,10 @@ export const useUiStore = defineStore('UiStore', () => {
 
   const pinnedOpen = ref(false)
 
+  watch(() => sidebarExpanded.value, (newVal) => {
+    if (newVal == false)
+      activeSidebarContent.value = null
+  })
   // dialog
 
   const userNav = ref(null)
@@ -43,7 +46,6 @@ export const useUiStore = defineStore('UiStore', () => {
 
   return {
     sidebarExpanded,
-    triggerSidebar,
     toggleSidebar,
     settingsOpen,
     sidebarMenuOpen,

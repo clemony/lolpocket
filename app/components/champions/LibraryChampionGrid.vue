@@ -3,6 +3,7 @@ import type { ColDef, ColGroupDef, GridApi, GridOptions, GridPreDestroyedEvent, 
 import { CellStyleModule, ClientSideRowModelModule, ColumnApiModule, ColumnAutoSizeModule, ColumnHoverModule, GridStateModule, ModuleRegistry, RenderApiModule, RowSelectionModule, ValidationModule } from 'ag-grid-community'
 import { AgGridVue } from 'ag-grid-vue3'
 import ChampionGridIcon from 'components/analytics/charts/chart-comps/ChampionGridIcon.vue'
+import { championsLite } from '~/data/records/champions-lite'
 
 definePageMeta({
   name: 'Champion Stats',

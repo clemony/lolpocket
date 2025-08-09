@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 /* header */
 
@@ -13,7 +13,7 @@
 /* header sort */
 
 .ag-sort-indicator-container {
-  @apply absolute size-[16px] right-1 flex items-center;
+  @apply absolute size-[16px] right-1.5 flex items-center;
 }
 
 .ag-sort-indicator-container .ag-header-cell-label {

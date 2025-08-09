@@ -20,22 +20,6 @@
   .border-shadow-sm {
     @apply shadow-md drop-shadow-sm shadow-[#000]/4 border border-b3/60 rounded-box;
   }
-  .hover-ring {
-    @apply transition-all duration-200 cursor-pointer;
-
-    &:where(:not(.base-ring-0)) {
-      @apply ring ring-offset-2 ring-transparent ring-offset-transparent;
-    }
-
-    &:hover,
-    &[data-state="open"].data-open-ring {
-      @apply !ring-n1 !ring-offset-b2/80 ring ring-offset-2;
-    }
-  }
-
-  .hover-ring-sm {
-    @apply hover:ring hover:ring-n1/60 hover:drop-shadow-sm inset-shadow-sm  cursor-pointer  hover:shadow-black/40;
-  }
 
   .scrollbar-hidden,
   .scrollbar-hide,

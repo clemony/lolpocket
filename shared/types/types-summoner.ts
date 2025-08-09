@@ -24,8 +24,9 @@ export interface Summoner {
     lastUpdate: Date
   }
   mastery?: {
-    top: ChampionMastery[] // Top 10 list
-    full?: ChampionMastery[] // Optional full, lazy loaded
+    totalPoints: number
+    totalLevels: number
+    champions: ChampionMastery[]
     lastUpdate: Date
   }
 }
@@ -55,7 +56,9 @@ export interface SummonerResponse {
 export interface ChampionMasteryResponse {
   puuid: string
   mastery: ChampionMastery[]
-  full: boolean
+  totalPoints: number
+  totalLevels: number
+
 }
 
 export interface SummonerIdentifier {

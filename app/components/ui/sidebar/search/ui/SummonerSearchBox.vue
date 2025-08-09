@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { regionIndex } from 'data'
+import { regionIndex } from 'data/index/region-index'
 import { SelectArrow } from 'reka-ui'
 
 const as = useAccountStore()

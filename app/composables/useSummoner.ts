@@ -55,10 +55,10 @@ export function useSummoner(identifier: string | SummonerIdentifier = {}) {
     }
   }
 
-  async function fetchMastery(full = false) {
+  async function fetchMastery() {
     if (!currentPuuid.value)
       return null
-    return await fetchSummonerMastery(currentPuuid.value, full)
+    return await fetchSummonerMastery(currentPuuid.value)
   }
 
   const refreshMatches = async () => {

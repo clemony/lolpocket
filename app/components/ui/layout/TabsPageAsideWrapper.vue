@@ -5,6 +5,7 @@ import { PopoverContent } from 'reka-ui'
 
 <template>
   <PopoverContent
+
     :hide-when-detached="false"
     position-strategy="absolute"
     class="w-124 h-full overflow-hidden justify-center relative grid items-start"

@@ -1,5 +1,5 @@
-@import 'tailwindcss';
-@import './theme';
+@import "tailwindcss";
+@import "./theme";
 
 @theme {
   --color-discord: oklch(58% 52% 274deg);
@@ -28,8 +28,16 @@
   --color-grandmaster: oklch(68.06% 0.1352 26.61);
 
   --color-challenger: oklch(83.25% 0.0787 213.4);
-  --color-challenger-w600: color-mix(in srgb, var(--color-challenger) 100%, white 60%);
-  --color-challenger-b100: color-mix(in srgb, var(--color-challenger) 100%, black 10%);
+  --color-challenger-w600: color-mix(
+    in srgb,
+    var(--color-challenger) 100%,
+    white 60%
+  );
+  --color-challenger-b100: color-mix(
+    in srgb,
+    var(--color-challenger) 100%,
+    black 10%
+  );
 
   --color-transparent: #00000000;
   --color-black: oklch(0% 0 0);
@@ -99,17 +107,57 @@
 @theme inline {
   /* paths */
 
-  --color-precision-w600: color-mix(in srgb, var(--color-precision) 100%, white 60%);
-  --color-precision-b100: color-mix(in srgb, var(--color-precision) 100%, black 10%);
-  --color-domination-w600: color-mix(in srgb, var(--color-domination) 100%, white 60%);
-  --color-domination-b100: color-mix(in srgb, var(--color-domination) 100%, black 10%);
-  --color-sorcery-w600: color-mix(in srgb, var(--color-sorcery) 100%, white 60%);
-  --color-sorcery-b100: color-mix(in srgb, var(--color-sorcery) 100%, black 10%);
-  --color-resolve-w600: color-mix(in srgb, var(--color-resolve) 100%, white 60%);
-  --color-resolve-b100: color-mix(in srgb, var(--color-resolve) 100%, black 10%);
+  --color-precision-w600: color-mix(
+    in srgb,
+    var(--color-precision) 100%,
+    white 60%
+  );
+  --color-precision-b100: color-mix(
+    in srgb,
+    var(--color-precision) 100%,
+    black 10%
+  );
+  --color-domination-w600: color-mix(
+    in srgb,
+    var(--color-domination) 100%,
+    white 60%
+  );
+  --color-domination-b100: color-mix(
+    in srgb,
+    var(--color-domination) 100%,
+    black 10%
+  );
+  --color-sorcery-w600: color-mix(
+    in srgb,
+    var(--color-sorcery) 100%,
+    white 60%
+  );
+  --color-sorcery-b100: color-mix(
+    in srgb,
+    var(--color-sorcery) 100%,
+    black 10%
+  );
+  --color-resolve-w600: color-mix(
+    in srgb,
+    var(--color-resolve) 100%,
+    white 60%
+  );
+  --color-resolve-b100: color-mix(
+    in srgb,
+    var(--color-resolve) 100%,
+    black 10%
+  );
 
-  --color-inspiration-w600: color-mix(in srgb, var(--color-inspiration) 100%, white 60%);
-  --color-inspiration-b100: color-mix(in srgb, var(--color-inspiration) 100%, black 10%);
+  --color-inspiration-w600: color-mix(
+    in srgb,
+    var(--color-inspiration) 100%,
+    white 60%
+  );
+  --color-inspiration-b100: color-mix(
+    in srgb,
+    var(--color-inspiration) 100%,
+    black 10%
+  );
 
   --color-middle: var(--color-sorcery);
 
@@ -187,29 +235,29 @@
   color: var(--color-challenger);
 }
 
-[data-role='support'] {
+[data-role="support"] {
   &.role-bg {
     @apply bg-inspiration;
   }
 }
 
-[data-role='middle'] {
+[data-role="middle"] {
   &.role-bg {
     @apply bg-sorcery;
   }
 }
 
-[data-role='bottom'] {
+[data-role="bottom"] {
   &.role-bg {
     @apply bg-precision;
   }
 }
-[data-role='top'] {
+[data-role="top"] {
   &.role-bg {
     @apply bg-domination;
   }
 }
-[data-role='jungle'] {
+[data-role="jungle"] {
   &.role-bg {
     @apply bg-resolve;
   }
@@ -244,10 +292,11 @@
   );
 }
 
-.animated-progress {
+.animated-gradient {
   animation: animateBg 5s linear infinite;
-  background-image: linear-gradient(35deg, var(--color-nc), transparent, var(--color-nc), transparent);
-  background-size: 100% 300%;
+  background-size: 200% 500%;
+  animation-direction: alternate-reverse;
+  background-repeat: repeat;
 }
 @keyframes animateBg {
   0% {
@@ -259,38 +308,36 @@
 }
 
 .gradient {
-  background:
-    linear-gradient(
-      137deg,
-      rgba(231, 207, 120, 0.7) 0%,
-      rgba(220, 124, 124, 0.7) 20%,
-      rgba(178, 164, 221, 0.7) 36%,
-      rgba(100, 158, 236, 0.6) 46%,
-      rgba(175, 212, 150, 0.7) 62%,
-      rgba(165, 226, 229, 0.7) 80%,
-      rgba(174, 220, 242, 0.7) 100%
-    ),
-    var(--background-image-noise);
+  background: linear-gradient(
+    137deg,
+    rgba(231, 207, 120, 0.7) 0%,
+    rgba(220, 124, 124, 0.7) 20%,
+    rgba(178, 164, 221, 0.7) 36%,
+    rgba(100, 158, 236, 0.6) 46%,
+    rgba(175, 212, 150, 0.7) 62%,
+    rgba(165, 226, 229, 0.7) 80%,
+    rgba(174, 220, 242, 0.7) 100%
+  );
   background-size: 580%;
   transition: all 0.5s ease-in-out;
 }
 
-.gradient[data-path='Precision'] {
+.gradient[data-path="Precision"] {
   background-position: 0%;
 }
 
-.gradient[data-path='Domination'] {
+.gradient[data-path="Domination"] {
   background-position: 20%;
 }
 
-.gradient[data-path='Sorcery'] {
+.gradient[data-path="Sorcery"] {
   background-position: 44%;
 }
 
-.gradient[data-path='Resolve'] {
+.gradient[data-path="Resolve"] {
   background-position: 80%;
 }
 
-.gradient[data-path='Inspiration'] {
+.gradient[data-path="Inspiration"] {
   background-position: 100%;
 }

@@ -11,12 +11,18 @@ const img = useImage()
     v-if="params.img"
     class="size-full relative">
     <div
-      class="rounded-none rounded-r-s drop-shadow-sm size-full after:absolute after:size-full after:bg-linear-to-r  after:from-b1  after:to-transparent  after:from-2%  after:to-66%  after:z-1  after:left-0 after:mtop-0 shadow-none bg-no-repeat bg-[40%_24%]  absolute  bg-size-[240%]  drop-shadow-none"
+      class="rounded-none rounded-r-xl border-r border-y border-y-b4 shadow-sm border-r-b4 drop-shadow-sm size-full mask-l-from-60% bg-no-repeat bg-[40%_24%] inset-0 absolute  bg-size-[220%]  "
       :style="{
         backgroundImage: `url('${img(getSplash(ix().champKeyById(params.data.id), 'centered'))}')`,
       }">
     </div>
+
+    <Img
+      :img="`/img/mastery/banner/crest-and-banner-mastery-${params.data.level > 10 ? 10 : params.data.level}.webp`"
+      alt="banner"
+      class="absolute h-full w-auto z-2 -top-1.5  drop-shadow-sm drop-shadow-black/15" />
   </div>
+
   <div
     v-else
     class=" overflow-hidden size-12 rounded-lg shadow-sm drop-shadow-sm">

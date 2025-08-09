@@ -19,9 +19,6 @@ const puuid = ref<string | null>(null)
 const summoner = ref<Summoner | null>(null)
 const loading = ref(true)
 
-watch(() => route.name, (newVal) => {
-  console.log('💠 - watch - newVal:', newVal)
-})
 async function resolveAndFetch() {
   loading.value = true
   try {
@@ -63,20 +60,7 @@ const { topChampion } = useSummonerChampions(
   },
 )
 
-// as.fetchPublicData(as.userAccount.riot.puuid)
-watch(() => as.publicData.splash, (newVal) => {
-  console.log('💠 - watch - newVal:', newVal)
-})
-
-const asideMap = {
-  '': MatchHistoryPageAside,
-  'settings': ProfileSettingsAside,
-}
-
-const aside = computed (() => {
-  const path = route.path.split('/').pop()
-  return asideMap[path]
-})
+const aside = useAsideComponent()
 </script>
 
 <template>

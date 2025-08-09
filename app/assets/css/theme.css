@@ -12,6 +12,7 @@
     --color-n3: var(--n3);
     --color-n2: var(--n2);
     --color-n1: var(--n1);
+    --color-neutral: var(--n1);
     --color-nc: var(--nc);
     --color-a1: var(--a1);
   }
@@ -42,7 +43,7 @@
     "Noto Serif KR Variable", Charter, "Bitstream Charter", "Sitka Text",
     Cambria, serif;
   --font-mono:
-    ui-monospace, Menlo, Consolas, Monaco, Liberation Mono, Lucida Console,
+    Lucida Console, Consolas, Liberation Mono, Menlo, Monaco, ui-monospace,
     monospace;
 
   --bg-noise: url("/assets/img/nnnoise.svg");
@@ -94,15 +95,14 @@
 
   --dst: 1px 0px 0px #00000020;
 
-  @keyframes GradientBackground {
+  --animate-gradient: gradient ease infinite;
+  @keyframes gradient {
     0% {
       background-position: 0% 50%;
     }
-
     50% {
       background-position: 100% 50%;
     }
-
     100% {
       background-position: 0% 50%;
     }

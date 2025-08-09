@@ -1,89 +1,100 @@
 <script lang="ts" setup>
+import { ChampionGridIcon, GridLastPlayed, GridMasteryPoints } from '#components'
 import type { ColDef, ColGroupDef, GridApi, GridOptions, GridReadyEvent } from 'ag-grid-community'
 import { CellStyleModule, ClientSideRowModelModule, ColumnApiModule, ColumnAutoSizeModule, ColumnHoverModule, GridStateModule, ModuleRegistry, RenderApiModule, RowSelectionModule, ValidationModule } from 'ag-grid-community'
 import { AgGridVue } from 'ag-grid-vue3'
-import ChampionGridIcon from 'components/analytics/charts/chart-comps/ChampionGridIcon.vue'
-import { championTitleIndex } from 'data/index/champion-title-index'
+import { masteryGridTheme } from '../../table/theme/masteryTheme'
 
-const { mastery } = defineProps<{
+const { mastery, summoner } = defineProps<{
   mastery: ChampionMastery[]
+  summoner: Summoner
 }>()
 
 defineExpose({
   ChampionGridIcon,
+  GridLastPlayed,
+  GridMasteryPoints,
 })
 
-const theme = ref(pocketTheme)
+const theme = ref(masteryGridTheme)
 
 const gridApi = shallowRef<GridApi | null>(null)
 
 const gridOptions: GridOptions<ChampionMastery> = {
   rowData: mastery,
   columnHoverHighlight: false,
-  rowHeight: 66,
+  rowHeight: 68,
+
   defaultColDef: {
     flex: 1,
     minWidth: 66,
 
     autoHeaderHeight: true,
-    wrapHeaderText: true,
-    headerClass: ['champion-grid-header', 'h-full', 'items-end'],
-    cellClass: ['!text-right', '!justify-end', '!px-4'],
+    wrapHeaderText: false,
+    headerClass: ['sticky top-0'],
+    cellClass: [''],
     sortingOrder: ['desc', 'asc', null],
     initialHide: false,
   },
 }
 
 const colDefs: (ColDef<ChampionMastery> | ColGroupDef<ChampionMastery>)[] = [
+
   {
-    headerName: '　 ',
-    cellClass: '!py-1 px-0 mx-0 items-center grid',
-    cellRenderer: params => `<span class=" relative h-auto w-[64px] grid place-items-center"><img src="/img/mastery/banner/crest-and-banner-mastery-${params.data.level > 10 ? 10 : params.data.level}.webp"  class="shrink-0 translate-y-6 absolute object-cover drop-shadow-sm drop-shadow-black/15"/></span>`,
-    width: 64,
-    maxWidth: 84,
-    minWidth: 64,
-    resizable: false,
-  },
-  {
-    headerName: 'id',
-    cellClass: '!pr-1 py-0 !ml-0',
+    field: 'level',
+    headerName: 'Rank',
+    cellClass: 'py-2 !px-0',
     cellRenderer: ChampionGridIcon,
+    valueGetter: params => params.data.level,
     cellRendererParams: {
       img: true,
     },
-
-    cellDataType: 'text',
-    valueFormatter: params => ix().champNameById(params.data.id),
-    width: 280,
-    maxWidth: 280,
-    minWidth: 110,
+    cellDataType: 'number',
+    width: 360,
+    maxWidth: 360,
+    minWidth: 180,
   },
 
   {
     field: 'id',
     colId: 'champion',
+    cellRenderer: params => `<h3 class="dst mb-1 font-bold ">${ix().champNameById(params.data.id)}</h3><p class="italic text-2 font-medium text-bc/90">${ix().getChampionTitle(ix().champKeyById(params.data.id))}</p>`,
+    valueFormatter: params => ix().champNameById(params.data.id),
     headerName: 'Champion',
+    headerClass: 'items-center !flex [&_.ag-header-cell-comp-wrapper]:!h-5 [&_.ag-header-cell-text]:!mt-px ',
     cellDataType: 'text',
-    cellClass: 'font-bold text-bc/90 text-8 text-left',
+    cellClass: 'text-bc !flex !flex-col justify-center size-full text-start',
+  },
+  {
+    field: 'lastPlayed',
+    colId: 'lastPlayed',
+    cellRenderer: GridLastPlayed,
+    headerName: 'Last Played',
+    cellDataType: 'text',
+    cellClass: 'font-medium  ',
     headerClass: '',
   },
   {
     field: 'points',
     colId: 'points',
-    valueFormatter: params => params.data.points.toLocaleString(),
+    cellRenderer: GridMasteryPoints,
+    cellRendererParams: {
+      totalPoints: summoner.mastery.totalPoints,
+    },
     headerName: 'Points',
     cellDataType: 'number',
     cellClass: 'font-medium  text-left',
     headerClass: '',
   },
   {
-    field: 'lastPlayed',
-    colId: 'lastPlayed',
-    valueFormatter: params => params.data.lastPlayed ? useDateFormat(params.data.lastPlayed, '🗓️  MMM DD, YYYY  -  h:mm a').value : '',
-    headerName: 'Last Played',
-    cellDataType: 'text',
-    cellClass: 'font-medium  ',
-    headerClass: '',
+    field: 'level',
+    colId: 'level',
+    headerName: 'Level',
+    cellRenderer: params => `<div class="size-10 text-4 font-semibold leading-none  grid place-items-center tracking-wide text-nc inset-shadow-sm inset-shadow-b4/20 shadow-sm drop-shadow-sm bg-linear-to-br from-neutral/80 to-neutral/90  rounded-full">${params.data.level}</div>`,
+    cellDataType: 'number',
+    cellClass: '!grid place-items-center',
+    width: 80,
+    maxWidth: 80,
   },
 ]
 
@@ -100,11 +111,18 @@ watch(
   },
 )
 
+/* onMounted (async () => {
+  if (params.img) {
+    ix().loadTitles()
+    champKey.value = await ix().champKeyById(params.data.id)
+  }
+})
+ */
 ModuleRegistry.registerModules([ClientSideRowModelModule, ValidationModule, RowSelectionModule, ColumnAutoSizeModule, ColumnHoverModule, ColumnHoverModule, ColumnApiModule, CellStyleModule, GridStateModule, RenderApiModule])
 </script>
 
 <template>
-  <article class="overflow-y-auto grow relative h-full relative">
+  <article class="overflow-y-auto grow relative h-full relative mastery-grid">
     <AgGridVue
       v-if="mastery"
       dom-layout="autoHeight"

@@ -1,27 +1,29 @@
-<!-- "[----------------------]"
-
- 'Slot Index'
-
-#backdrop
-
-[@ - Title Section]
-
-#icon
-#icon-badge
-#text
-#header
-#header-badge
-
-[@ - Sticky Section]
-#collapsed-header
-#tab-bar-buttons
-#tabs
-
-#page
-
-"[-----------------------]" -->
-
+<!-- eslint-disable jsdoc/check-alignment -->
 <script lang="ts" setup>
+/**
+ * ========================================================================
+ * SLOT INDEX
+
+ * backdrop
+
+ * Title Section
+
+ * icon
+ * icon-badge
+ * text
+ * header
+ * header-badge
+
+ * Sticky Section
+
+ * collapsed-header
+ * tab-bar-buttons
+ * tabs
+
+ * page
+ *========================================================================*
+ */
+
 import { motion } from 'motion-v'
 import { PopoverAnchor, PopoverContent } from 'reka-ui'
 
@@ -33,17 +35,11 @@ const { class: className, background } = defineProps<{
   background: string
 }>()
 
-const injectedSlots = useSlots()
-provide('tabsWrapperSlots', injectedSlots)
-
 const scrollRef = ref(null)
 const route = useRoute()
 const sentinel = ref<HTMLElement | null>(null)
 const stuck = ref(false)
 
-watch(() => stuck.value, (newVal) => {
-  console.log('💠 - watch - newVal:', newVal)
-})
 watch(() => route.fullPath, (newPath, oldPath) => {
   if (newPath !== oldPath) {
     scrollRef.value?.scrollTo({ top: 0, behavior: 'smooth' })
@@ -61,10 +57,6 @@ useIntersectionObserver(
     threshold: 0,
   },
 )
-
-watch(() => stuck.value, (newVal) => {
-  console.log('💠 - watch - newVal:', newVal)
-})
 
 const img = useImage()
 
@@ -85,7 +77,7 @@ const bgClass = computed (() => `before:bg-url('${img(background)}')`)
       <!-- splash -->
 
       <header
-        :class="cn('sticky col-start-1 row-start-1 w-screen z-2 -top-[199px] grid grid-rows-[190px_1px_54px] pt-16 bg-tint-b2/40',
+        :class="cn('sticky col-start-1 row-start-1 w-screen z-2 -top-[199px] grid grid-rows-[190px_1px_54px] pt-16 bg-tint-b2/40   backdrop-filter-[url(assets/icons/img/noice-lg.svg)] bg-repeat ',
 
         )">
         <div
@@ -186,22 +178,6 @@ const bgClass = computed (() => `before:bg-url('${img(background)}')`)
             </div>
 
             <slot name="aside" />
-            <!--  <PopoverContent
-              :hide-when-detached="false"
-              position-strategy="absolute"
-              class="w-124 h-full overflow-hidden justify-center relative grid items-start"
-              as-child
-              @escape-key-down.prevent
-              @open-auto-focus.prevent
-              @pointer-down-outside.prevent
-              @interact-outside.prevent>
-              <motion.div
-                class="w-124 h-full overflow-hidden justify-center relative grid items-start">
-                <aside
-                  id="asideRef"
-                  class="w-full h-[90vh] grid items-start justify-center overflow-y-auto min-h-[90vh] scrollbar-hidden" />
-              </motion.div>
-            </PopoverContent> -->
           </Popover>
         </div>
       </header>

@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { throttleFunction } from 'composables'
-
 const { summoner, class: className } = defineProps<{
   summoner: Summoner
   class?: HTMLAttributes['class']

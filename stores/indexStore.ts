@@ -13,6 +13,7 @@ export const useIndexStore = defineStore(
     const maps = ref<MapIndex[]>([])
     const shards = ref<Shard[]>([])
     const skin = ref<SkinRecord>({})
+    const titles = ref<Record<string, string>>({})
     const spells = ref<Record<string, string | number>[]>([])
     const skins = ref<FullSkinRecord>({})
 
@@ -65,6 +66,11 @@ export const useIndexStore = defineStore(
     async function loadMaps() {
       const { mapIndex } = await import('data/index/map-index')
       maps.value = mapIndex
+    }
+
+    async function loadTitles() {
+      const { championTitleIndex } = await import('data/index/champion-title-index')
+      titles.value = championTitleIndex
     }
 
     function resetIndexStore() {
@@ -127,12 +133,19 @@ export const useIndexStore = defineStore(
       return `${skins.value[name]?.find(skin => skin.id === id.toString())?.name} ${name}`
     }
 
+    function getChampionTitle(key) {
+      if (!titles.value)
+        loadTitles()
+      return titles.value[key]
+    }
+
     return {
       lastFullRefresh,
       patch,
       patchList,
       champions,
       items,
+      titles,
       runes,
       maps,
       shards,
@@ -143,6 +156,7 @@ export const useIndexStore = defineStore(
       // load
       loadPatch,
       loadSkins,
+      loadTitles,
       loadPaths,
       loadAll,
 
@@ -152,7 +166,7 @@ export const useIndexStore = defineStore(
       spellById: (id: number) => getByIndex(spells.value, 'id', id),
 
       // champion helpers
-
+      getChampionTitle,
       championByKey: (key: string) => getByIndex(champions.value, 'key', key),
       champKeyById: (id: number) =>
         findInIndex(champions.value, 'id', id, 'key') as string,

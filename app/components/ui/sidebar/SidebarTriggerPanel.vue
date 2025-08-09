@@ -62,7 +62,7 @@ onMounted (() => {
           <IndicatorTabsTrigger
             v-if="item"
             v-tippy="{ content: item.name }"
-            class="not-data-[state=active]:**:text-bc/90 size-11 grid place-items-center rounded-field hover:bg-b2/60 relative indicator hover:border-b3/80  group/tab"
+            :class="cn('not-data-[state=active]:**:text-bc/90  size-11 grid place-items-center rounded-field hover:bg-b2/60 relative indicator hover:border-b3/80  group/tab', { 'pointer-events-none': us.activeSidebarContent == item.name })"
             :value="item.name"
             :data-active="us.activeSidebarContent == item.name"
             @click="handleClick(item.name)">
@@ -90,10 +90,10 @@ onMounted (() => {
         @click="us.activeSidebarContent = 'Account'">
         <SummonerIcon class="size-full  shrink-0 absolute" />
       </IndicatorTabsTrigger>
-
+      <!--  *:after:-bottom-2.5 *:after:rounded-full  *:after:absolute *:after:h-1 *:after:bg-n1 *:after:w-full -->
       <TabIndicator
         v-show="us.activeSidebarContent"
-        :class="cn('*:!bg-b3/53 self-center !py-0 overflow-visible *:size-11 *:mt-2 *:btn *:after:-bottom-2.5 *:after:rounded-full  *:after:absolute *:after:h-1 *:after:bg-n1 *:after:w-full', { '*:rounded-full *:scale-100 *:after:-bottom-[11px]   *:-ml-0.75 *:ring  *:size-10 *:ring-b3 *:relative ': tabs == 'Account' })" />
+        :class="cn('*:!bg-b3/53 self-center !py-0 overflow-visible *:size-11 *:mt-2 *:btn', { '*:rounded-full *:scale-100 *:after:-bottom-[11px]   *:-ml-0.75 *:ring  *:size-10 *:ring-b3 *:relative ': tabs == 'Account' })" />
     </IndicatorTabsList>
   </Tabs>
 </template>
