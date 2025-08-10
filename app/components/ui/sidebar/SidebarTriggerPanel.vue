@@ -15,21 +15,21 @@ function handleClick(item) {
     us.activeSidebarContent = item
   }
 }
-
+/*
 const newNotifications = computed (() => {
   return as.userAccount.inbox.notifications.filter(n => !n.read).length
 })
 
 const unreadMessages = computed (() => {
   return as.userAccount.inbox.messages.filter(m => !m.read).length
-})
+}) */
 
 watch(() => us.activeSidebarContent, (newVal) => {
   if (newVal == null)
     tabs.value = null
 })
 
-watch(() => as.userAccount?.inbox?.notifications, (newVal) => {
+/* watch(() => as.userAccount?.inbox?.notifications, (newVal) => {
   if (newVal)
     userMenu.notifications.value = newNotifications.value
 }, { deep: true })
@@ -48,7 +48,7 @@ onMounted (() => {
   us.activeSidebarContent ? tabs.value = us.activeSidebarContent : null
   userMenu.inbox.value = unreadMessages.value
   userMenu.notifications.value = newNotifications.value
-})
+}) */
 </script>
 
 <template>

@@ -4,8 +4,11 @@ import { ListboxContent, ListboxFilter, ListboxGroup, ListboxGroupLabel, Listbox
 import { motion } from 'motion-v'
 
 definePageMeta({
-  section: 'calculator',
-  icon: 'calc',
+
+  meta: {
+    section: 'calculator',
+    icon: 'calc',
+  },
 })
 
 const is = useItemStore()

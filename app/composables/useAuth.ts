@@ -37,6 +37,8 @@ export async function hydrateUser(session: Session) {
     }
   }
 
+  as.fetchPublicData(as.userAccount.riot.puuid)
+
   as.$persist
 }
 

@@ -5,8 +5,11 @@ const { pocket } = defineProps<{
 
 definePageMeta({
   name: 'pocket runes',
-  section: 'pocket',
-  search: false,
+
+  meta: {
+    section: 'pocket',
+    search: false,
+  },
 })
 
 const rs = useRuneStore()

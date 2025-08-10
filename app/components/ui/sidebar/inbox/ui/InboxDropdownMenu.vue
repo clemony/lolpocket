@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { inboxBox, inboxUnreadFilter, markRead, openBox, toggleRead, trashAllRead } from '../inbox-management'
-import { testMessage } from '../test-message'
+import { testMessage } from '../messages/test-message'
 
 const as = useAccountStore()
 </script>

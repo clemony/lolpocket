@@ -3,54 +3,18 @@ import { MatchHistoryPageAside, ProfileSettingsAside } from '#components'
 
 definePageMeta({
   name: 'summoner',
-  title: 'Summoner Profile',
-  section: 'summoner',
   path: '/summoner/:region/:slug',
-  search: false,
+
+  meta: {
+    title: 'Summoner Profile',
+    section: 'summoner',
+    search: false,
+  },
 })
 
 const route = useRoute()
-const region = computed(() => route.params.region?.toString())
-const slug = computed(() => route.params.slug?.toString())
-const name = computed(() => slug.value?.split('_')?.[0] ?? '')
-const tag = computed(() => slug.value?.split('_')?.[1] ?? '')
-const ss = useSummonerStore()
-const puuid = ref<string | null>(null)
-const summoner = ref<Summoner | null>(null)
-const loading = ref(true)
 
-async function resolveAndFetch() {
-  loading.value = true
-  try {
-    if (!region.value || !name.value || !tag.value) {
-      console.warn('Missing params:', {
-        region: region.value,
-        name: name.value,
-        tag: tag.value,
-      })
-      return
-    }
-
-    const result = await ss.resolveSummoner({
-      region: region.value,
-      name: name.value,
-      tag: tag.value,
-    })
-
-    summoner.value = result
-    puuid.value = result.puuid
-  }
-  catch (e) {
-    console.error('Failed to resolve summoner:', e)
-  }
-  finally {
-    loading.value = false
-  }
-}
-
-watch([region, name, tag], resolveAndFetch, { immediate: true })
-
-const as = useAccountStore()
+const { summoner, props, loading, error } = useHandleSummoner()
 
 const { topChampion } = useSummonerChampions(
   summoner.value?.matches?.simplified || [],
@@ -66,69 +30,51 @@ const aside = useAsideComponent()
 <template>
   <TabsPageWrapper
     v-if="summoner"
-    :background="(as.publicData?.splash ?? topChampion?.splash).replace('centered', 'uncentered')">
+    class="pb-64"
+    :background="(as().publicData?.splash ?? topChampion?.splash).replace('centered', 'uncentered')">
     <template #aside>
       <component
         :is="aside"
-        :slug
-        :summoner />
+        :summoner>
+      </component>
     </template>
-    <template #icon>
-      <LazySummonerIcon
-        v-if="summoner"
-        :summoner
-        class="rounded-full relative">
-      </LazySummonerIcon>
-    </template>
+
     <template #header>
-      <SummonerName
-        class="drop-shadow-sm font-serif text-bc/94 leading-none " />
-
-      <span class="flex gap-3  mt-0.75">
-        <UpdateSummoner
-          :summoner
-          text
-          class="!max-h-7 h-7 w-18" />
-        <FollowButton
-          :summoner
-          class="size-7 btn  btn-shadow btn-square " />
-      </span>
+      <SummonerHeader
+        :summoner
+        class="pt-5  col-start-2"
+        size="lg" />
     </template>
 
-    <template #text>
-      <SummonerTag :summoner />
-      <SummonerRegion
-        :region-id="summoner.region" />
-
-      <SummonerLevel
-        :summoner />
-    </template>
-
-    <template #collapsed-header>
+    <!--     <template #collapsed-header>
       <SummonerDropdown :summoner />
       <UpdateSummoner
         :summoner
         class="shrink-0 size-14  btn-ghost btn-shadow-ghost"
         wrapper-class="" />
-    </template>
+    </template> -->
 
     <template #tabs>
       <SummonerProfileTabs
-        :region
-        :slug
         :summoner />
     </template>
 
     <template
-      #page="{ stuck }">
-      <NuxtPage
+      #page="{ show }">
+      <LazyNuxtPage
         v-if="summoner"
         :key="route.name"
-        :stuck
-        :region
-        :slug
+        :show
+        :transition="{
+          name: 'global-page-transition',
+        }"
         :summoner>
-      </NuxtPage>
+      </LazyNuxtPage>
     </template>
+
+    <SummonerSidebar
+      variant="sidebar"
+      side="left"
+      collapsible="icon" />
   </TabsPageWrapper>
 </template>

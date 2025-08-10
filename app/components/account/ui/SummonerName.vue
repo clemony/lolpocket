@@ -1,5 +1,9 @@
 <script setup lang="ts">
-const { class: className, summoner } = defineProps<{
+import type { PrimitiveProps } from 'reka-ui'
+import { Primitive } from 'reka-ui'
+
+const { class: className, summoner, as = 'span' } = defineProps<PrimitiveProps & {
+  as?: string
   class?: HTMLAttributes['class']
   summoner?: Summoner
 }>()
@@ -13,11 +17,12 @@ const name = computed(() => {
 </script>
 
 <template>
-  <span
+  <Primitive
     v-if="name"
+    :as="as"
     :class="cn('antialiased flex items-center lowercase leading-0 ', className)">
     {{ name ?? null }}
-  </span>
+  </Primitive>
 </template>
 
 <style scoped>

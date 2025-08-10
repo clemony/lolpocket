@@ -1,8 +1,12 @@
 <script setup lang="ts">
-const { class: className, noTag, summoner } = defineProps<{
+import type { PrimitiveProps } from 'reka-ui'
+import { Primitive } from 'reka-ui'
+
+const { class: className, summoner, as = 'span', noTag } = defineProps<PrimitiveProps & {
   class?: HTMLAttributes['class']
   noTag?: boolean
   summoner?: Summoner
+  as?: string
 }>()
 
 const summonerLevel = computed(() => {
@@ -18,10 +22,11 @@ const summonerLevel = computed(() => {
 </script>
 
 <template>
-  <span :class="cn('flex items-center lowercase leading-0 antialiased', className)">
-
+  <Primitive
+    :as="as"
+    :class="cn('flex items-center lowercase leading-0 antialiased', className)">
     {{ !noTag ? 'lv. ' : null }}{{ summonerLevel || '0' || '' }}
-  </span>
+  </Primitive>
 </template>
 
 <style scoped>

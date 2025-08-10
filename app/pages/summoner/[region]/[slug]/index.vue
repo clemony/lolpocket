@@ -4,7 +4,7 @@ const { summoner } = defineProps<{
 }>()
 
 definePageMeta({
-  name: 'summoner-history',
+  name: 'history',
   meta: {
     aside: import('components/ui/layout/TabsPageAsideWrapper.vue'),
   },
@@ -13,7 +13,8 @@ definePageMeta({
 
 <template>
   <main
-    :class="cn('flex w-full overflow-auto relative gap-6 ml-[43.5%] bg-b1  justify-start items-start')">
+    :class="cn('flex mx-auto  gap-6  bg-b1  justify-start items-start')">
+    <MatchHistoryPageAside :summoner />
     <SlideInTopOutBottom
       group
       :class="cn('flex flex-col py-20 gap-10  justify-center relative w-[56.5%] px-2 pb-px')">

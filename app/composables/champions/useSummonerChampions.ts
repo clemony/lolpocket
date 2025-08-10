@@ -10,7 +10,6 @@ export function useSummonerChampions(
   const mode = options?.mode || 'basic'
   const limit = options?.limit
 
-  console.log('💠 - useSummonerChampions- SimplifiedMatchData:', matches)
   const liteChampionStats = computed(() => {
     const counts: Record<string, number> = {}
 

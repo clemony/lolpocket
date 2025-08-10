@@ -3,9 +3,12 @@ const rs = useRuneStore()
 
 definePageMeta({
   name: 'runes',
-  title: 'Runes',
-  section: 'library',
-  icon1: 'lol-rune',
+
+  meta: {
+    title: 'Runes',
+    section: 'library',
+    icon1: 'lol-rune',
+  },
 })
 const ix = useIndexStore()
 

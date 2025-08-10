@@ -55,10 +55,10 @@ const variants = {
           :variants="variants"
           layout
           class="max-w-full min-w-[31%] flex grow">
-          <ChampionIcon
-            :id="ix.champIdByKey(champion) as number"
+          <Champion
+            :img="getSplash(champion, 'centered')"
             :alt="champion"
-            class="aspect-auto h-24  rounded-xl border-b3 border  hover:ring hover:ring-neutral/40 " />
+            class="aspect-auto h-24 *:!scale-260 *:translate-y-10 rounded-lg   hover:ring hover:ring-neutral/80 " />
         </motion.div>
       </template>
     </AnimatePresence>

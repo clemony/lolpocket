@@ -1,5 +1,5 @@
 export * from './champions'
-export * from './helpers'
 export * from './items'
 export * from './match'
+export * from './summoner'
 export * from './utils'

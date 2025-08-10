@@ -1,6 +1,8 @@
 <script lang="ts" setup>
+import type { RouteRecordRaw } from 'vue-router'
+
 const { page, class: className } = defineProps<{
-  page: PageRecord
+  page: RouteRecordRaw
   class?: HTMLAttributes['class']
 }>()
 </script>
@@ -16,7 +18,7 @@ const { page, class: className } = defineProps<{
 
     <icon
       v-if="page.meta.icon"
-      :name="page.meta.icon"
+      :name="page.meta.icon as string"
       :alt="page.name"
       class="size-4 absolute"
       :class="{

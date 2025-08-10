@@ -8,7 +8,7 @@ const as = useAccountStore()
   <!--   <LazyAdminSheet
     v-if="as && as.userAccount?.role === 'admin'"
     v-model:open="adminOpen"
-    :account="as.userAccount" /> -->
+    :account="as.userAccount" /> -->     <Login v-if="!as.userAccount?.id" />
   <SidebarContentWrapper title="Settings">
     <SidebarGroupContent class="gap-6 py-4 w-full !flex flex-col items-start">
       <Login v-if="!as.userAccount?.id" />

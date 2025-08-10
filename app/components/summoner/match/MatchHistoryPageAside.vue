@@ -5,46 +5,49 @@ const { summoner } = defineProps<{
 </script>
 
 <template>
-  <TabsPageAsideWrapper>
-    <div class="w-full gap-10 auto-rows-max items-start grid">
-      <RankCard
-        v-if="summoner.ranked?.solo && as().settings?.showSolo"
-        title="Solo/Duo"
-        :entry="summoner.ranked.solo"
-        class="order-first" />
+  <div class="w-124 sticky top-24 scrollbar-none overflow-y-auto pb-44 max-h-screen justify-center gap-10 auto-rows-max items-start grid">
+    <SummonerHeader
+      :show="us().tabsSticky == true"
+      :summoner
+      class="order-first mb-8 w-full px-2" />
 
-      <Unranked
-        v-else-if="as().settings?.showSolo"
-        title="Solo/Duo"
-        class="order-first" />
+    <RankCard
+      v-if="summoner.ranked?.solo && as().settings?.showSolo"
+      title="Solo/Duo"
+      :entry="summoner.ranked.solo"
+      class="order-2" />
 
-      <RankCard
-        v-if="summoner.ranked?.flex && as().settings?.showFlex"
-        title="Flex"
-        :entry="summoner.ranked.flex"
-        class="order-2" />
+    <Unranked
+      v-else-if="as().settings?.showSolo"
+      title="Solo/Duo"
+      class="order-2" />
 
-      <Unranked
-        v-else-if=" as().settings?.showFlex"
-        title="Flex"
-        class="order-2" />
+    <RankCard
+      v-if="summoner.ranked?.flex && as().settings?.showFlex"
+      title="Flex"
+      :entry="summoner.ranked.flex"
+      class="order-3" />
 
-      <QueueFilters
-        :summoner
-        class="order-3" />
+    <Unranked
+      v-else-if=" as().settings?.showFlex"
+      title="Flex"
+      class="order-4" />
 
-      <MatchChampionFilters
-        :summoner
-        class="order-4" />
+    <QueueFilters
+      :summoner
+      class="order-5" />
 
-      <div class="order-5">
-        <MatchPositionFilter :summoner />
-      </div>
+    <MatchChampionFilters
+      :summoner
+      class="order-6" />
 
-      <MatchAlliesFilter
-        v-if="as().settings.showAllies"
-        :summoner
-        class="order-last" />
+    <div class="order-7">
+      <MatchPositionFilter :summoner />
     </div>
-  </TabsPageAsideWrapper>
+
+    <MatchAlliesFilter
+      v-if="as().settings.showAllies"
+      :summoner
+      class="order-last" />
+  </div>
 </template>

@@ -10,8 +10,11 @@ const { pocket } = defineProps<{
 
 definePageMeta({
   name: 'card',
-  section: 'pocket',
-  search: false,
+
+  meta: {
+    section: 'pocket',
+    search: false,
+  },
 
 })
 

@@ -4,8 +4,11 @@ const props = defineProps<{
 }>()
 definePageMeta({
   name: 'complete',
-  section: 'pocket',
-  search: false,
+
+  meta: {
+    section: 'pocket',
+    search: false,
+  },
 })
 </script>
 

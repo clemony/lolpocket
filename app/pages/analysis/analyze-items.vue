@@ -5,10 +5,14 @@ const { summoner } = defineProps<{
 
 definePageMeta({
   name: 'item analysis',
-  altName: 'items',
+
   path: '/analysis/items',
-  section: 'analysis',
-  icon: 'fa:shield',
+
+  meta: {
+    altName: 'items',
+    section: 'analysis',
+    icon: 'fa:shield',
+  },
 })
 const ms = useMatchStore()
 </script>

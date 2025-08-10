@@ -4,6 +4,7 @@ export default defineAppConfig({
     mode: 'svg',
     class: 'text-[var(--color-bc)] shrink-0 pointer-events-none',
     size: '15px',
+    strokeWidth: 1.7,
     /*     customize: (content: string, name: string, prefix: string, provider: string) => {
       if (prefix !== 'lucide')
         return content.replace(/stroke-width="[^"]*"/g, `stroke-width="1.6"`)
@@ -67,7 +68,8 @@ export default defineAppConfig({
       'refresh': 'radix-icons:reload',
       'copy': 'radix-icons:copy',
       'export': 'radix-icons:share-2',
-      'menu': 'radix-icons:hamburger-menu',
+      'menu': 'lucide:menu',
+      'gallery': 'lucide:gallery-vertical-end',
 
       // editing
       'backspace': 'iconamoon:backspace-light',

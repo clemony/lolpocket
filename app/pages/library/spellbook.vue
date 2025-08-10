@@ -1,9 +1,11 @@
 <script setup lang="ts">
 definePageMeta({
   name: 'Spellbook',
-  section: 'library',
-  searchKeys: ['summoner', 'spell', 'heal', 'barrier', 'flash', 'ignite', 'ghost', 'smite', 'teleport', 'cleanse', 'exhaust'],
-  icon: 'teenyicons:book-outline',
+  meta: {
+    section: 'library',
+    searchKeys: ['summoner', 'spell', 'heal', 'barrier', 'flash', 'ignite', 'ghost', 'smite', 'teleport', 'cleanse', 'exhaust'],
+    icon: 'teenyicons:book-outline',
+  },
 })
 
 const ix = useIndexStore()

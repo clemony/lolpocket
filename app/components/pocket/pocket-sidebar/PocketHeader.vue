@@ -16,11 +16,11 @@ const emit = defineEmits(['update:model-value'])
       popover-class="ml-6.5 mt-2 w-98" />
 
     <div class="w-full max-w-90 relative pr-1 ">
-      <a
+      <NuxtLink
         class="hover:underline flex ml-2.75 -mb-px cursor-pointer tldr-20 underline-offset-2 items-center gap-1 text-1 font-medium tracking-tight ` "
-        @click="navigateTo('/backpack')">
-        <!--             <icon name="left-sm" class="size-3.5 stroke-[1.4] mb-0.5" /> -->
-        Backpack</a>
+        to="/backpack">
+        Backpack
+      </NuxtLink>
 
       <EditablePocketHeader
         icons

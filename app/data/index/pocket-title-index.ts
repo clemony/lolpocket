@@ -215,6 +215,25 @@ const pocketTitleIndex = [
     },
     class: '',
   },
+
+  {
+    title: 'princess',
+    feat: 'feelin a lil frilly', // lux fiora qiyana irelia battle queen skins
+    icon: {
+      name: '',
+      class: '',
+    },
+    class: '',
+  },
+  {
+    title: 'pretender',
+    feat: 'Seeing Double?', // leblanc
+    icon: {
+      name: '',
+      class: '',
+    },
+    class: '',
+  },
   {
     title: 'proposer',
     feat: 'sent an idea',

@@ -1,74 +1,89 @@
 <script lang="ts" setup>
-import { formatTimeAgo } from 'utils/normalize/formatTimeAgo'
-import { markRead, sortedMessages, toggleRead, trashMsg } from './inbox-management'
+import { MessageView, NewsView, NotificationView } from '#components'
 
-const as = useAccountStore()
+const { title, class: className } = defineProps<{
+  title: string
+  class?: HTMLAttributes['class']
+  dropdown?: boolean
+}>()
 
+const inboxes: Record<string, DataObject> = {
 
-
-
+  messages: {
+    name: 'Inbox',
+    icon: {
+      name: 'lucide:mail',
+      class: ' **:stroke-[1.6] ',
+    },
+    value: 0,
+    component: MessageView,
+  },
+  news: {
+    name: 'News',
+    icon: {
+      name: 'lucide:newspaper',
+      class: '**:stroke-[1.5] ',
+    },
+    value: 0,
+    component: NewsView,
+  },
+  notifications: {
+    name: 'Notifications',
+    icon: {
+      name: 'lucide:message-square',
+      class: '**:stroke-[1.7]  size-4.75 ',
+    },
+    value: 0,
+    component: NotificationView,
+  },
+}
 </script>
 
 <template>
-  <SidebarContentWrapper
-    title="Inbox"
-    dropdown>
-    <template #dropdown-menu>
-      <InboxDropdownMenu />
-    </template>
-    <template #subheader>
-      <SidebarInput
-        placeholder="Search messages..."
-        class="input h-12 !bg-b1 my-2" />
-    </template>
+  <div class="size-full ">
+    <SidebarHeader
+      :class="cn('gap-0 border-b  border-b-b3/80 px-3 w-full', className)">
+      <div class="w-full flex justify-between items-center">
+        <DropdownMenu class="z-0">
+          <DropdownMenuTrigger
+            :disabled="!dropdown"
+            class="flex w-fit items-center justify-between  disabled:**:text-bc disabled:hover:drop-shadow-none disabled:opacity-100 disabled:hover:border-transparent disabled:hover:shadow-none disabled:hover:bg-transparent px-2  h-[35.5px]  data-[state=open]:inset-shadow-xxs data-[state=open]:shadow-xs data-[state=open]:!bg-b3/50 data-[state=open]:border-b3"
+            as-child>
+            <SidebarMenuButton
+              class="flex gap-2 ">
+              <icon name="gallery" />
+              <h2 class="dst font-bold">
+                {{ title }}
+              </h2>
+            </SidebarMenuButton>
+          </DropdownMenuTrigger>
+          <DropdownMenuPopContent>
+            <slot name="dropdown-menu" />
+          </DropdownMenuPopContent>
+        </DropdownMenu>
 
-    <SidebarGroupContent class="gap-0  -mt-2 overflow-hidden  w-full !flex flex-col items-start">
-      <template
-        v-if="as.userAccount?.inbox?.messages.length">
-        <div
-          v-for="message, i in sortedMessages"
-          :key="`${message.date}-${i}`"
-          :class="cn('flex w-full flex-col items-start gap-2 whitespace-nowrap border-b border-b-b3 p-4 leading-tight last:border-b-0 group/msg', { ' bg-b1 ': !message.read, 'bg-b2/60 hover:bg-sidebar-accent opacity-60': message.read })">
-          <Dialog>
-            <DialogTrigger
-              class="grid size-full justify-items-start"
-              @click="markRead(message.id)">
-              <div class="flex w-full justify-between items-center gap-2">
-                <span class="text-2 font-medium text-bc/60">{{ message.from.name }}</span>
-
-                <span class="text-1 flex h-5 items-center justify-self-end text-bc/80 relative *:absolute *:right-0 *:first:opacity-0 group-hover/msg:*:first:opacity-100 group-hover/msg:*:last:opacity-0 *:transition-opacity group-hover/msg:*:last:pointer-events-none *:duration-200">
-                  <span class="flex gap-1 size-fit">
-
-                    <button
-                      class=""
-                      :class="cn('btn btn-xs text-1 hover:underline rounded-md  overflow-hidden', { 'btn-neutral': !message.read, 'btn-ghost': message.read })"
-                      @click.stop="toggleRead(message.id)">
-                      {{ message.read ? 'Mark Unread' : 'Mark Read' }}
-                    </button>
-
-<TrashMessageButton :message  />
-                  </span>
-                  <span>{{ formatTimeAgo(message.date) }}</span>
-                </span>
-              </div>
-              <span :class="cn('font-bold tracking-tight py-1 text-4', {'opacity-70': message.read})">{{ message.title }}</span>
-              <span class="line-clamp-2 text-start w-[260px] whitespace-break-spaces text-2">
-                {{ message.content }}
-              </span>
-            </DialogTrigger>
-
-            <Message :message />
-          </Dialog>
-        </div>
-      </template>
-
-      <div
-        v-else
-        class="w-full h-44 grid place-items-center">
-        <span class="text-2 dst">
-          {{ `No mail right now!` }}
-        </span>
+        <Tabs class="z-1">
+          <IndicatorTabsList class="grid-cols-3 h-9">
+            <IndicatorTabsTrigger
+              v-for="item in inboxes"
+              :key="item.name"
+              class="h-full px-3"
+              :value="item.name">
+              <icon :name="item.icon.name" />
+            </IndicatorTabsTrigger>
+            <TabIndicator class="bg-b1" />
+          </IndicatorTabsList>
+        </Tabs>
       </div>
-    </SidebarGroupContent>
-  </SidebarContentWrapper>
+      <div class="flex relative items-center gap-1 w-full ">
+        <slot name="subheader" />
+      </div>
+    </SidebarHeader>
+
+    <SidebarContent class="size-full">
+      <SidebarGroup class="px-0 size-full">
+        <slot />
+      </SidebarGroup>
+    </SidebarContent>
+  </div>
 </template>

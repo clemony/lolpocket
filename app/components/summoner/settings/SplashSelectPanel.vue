@@ -13,7 +13,7 @@ const { class: className } = defineProps<{
 }>()
 
 const emit = defineEmits(['dialog:close'])
-const ix = useIndexStore()
+
 const as = useAccountStore()
 const champQuery = ref<string | null>('')
 const selectedChampion = ref<string | null>(null)
@@ -24,11 +24,16 @@ watch(
     console.log('💠 - watch - newVal:', newVal)
   },
 )
-const { championResult } = await useSearch(champQuery)
+const searchQuery = ref<string>('')
+const { results: championResult } = useSimpleSearch(
+  ix().champions, // array or ref
+  searchQuery,
+  { keys: ['name'], threshold: 0.3 },
+)
 
 const result = computed(() => {
   const values
-    = championResult?.value?.length ? championResult.value : ix.champions
+    = championResult?.value?.length ? championResult.value : ix().champions
   return [...values].sort((a, b) => a.name.localeCompare(b.name))
 })
 
@@ -170,7 +175,7 @@ function update(skin) {
             group
             class="overflow-y-auto size-full max-h-150 w-full h-inherit h-min gap-8 grid grid-cols-4 p-8">
             <LazySplashCard
-              v-for="skin in ix.skins[selectedChampion]"
+              v-for="skin in ix().skins[selectedChampion]"
               :key="skin.name"
               :text="skin.name"
               :alt="skin.name"

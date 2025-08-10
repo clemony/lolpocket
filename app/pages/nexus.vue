@@ -6,8 +6,11 @@ const container = useDomRef()
 definePageMeta({
   path: '/nexus',
   name: 'nexus',
-  section: 'nexus',
-  icon: 'nexus',
+
+  meta: {
+    section: 'nexus',
+    icon: 'nexus',
+  },
 })
 
 const as = useAccountStore()
@@ -34,7 +37,7 @@ const as = useAccountStore()
     <div class="w-100 h-60">
       <!-- <RecentPatchWinrates /> -->
     </div>
-
+    <Login v-if="!as.userAccount?.id" />
     <!--
     <div class="w-full h-80 self-end ">
       <News />

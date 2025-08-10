@@ -1,6 +1,12 @@
 @import "tailwindcss";
 @import "../theme.css";
 
+@utility scrollbar-none {
+  display: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 @utility animate-gradient-* {
   animation: gradient --value(integer) s ease infinite;
 }

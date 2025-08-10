@@ -1,32 +1,22 @@
 <script lang="ts" setup>
 const router = useRouter()
 const route = useRoute()
-const as = useAccountStore()
-const us = useUiStore()
 const client = useSupabaseClient()
-const ix = useIndexStore()
 
-onMounted(async () => {
+onMounted(() => {
   document.documentElement.setAttribute(
     'data-theme',
-    as.dataTheme ? as.dataTheme : 'midnight',
+    as()?.dataTheme ?? 'daylight',
   )
-  /*   useAuth() */
-  await ix.loadPatch()
+  ix().loadPatch()
 })
 
 client.auth.onAuthStateChange(async (event, session) => {
-  console.log('💠 Auth change:', event)
-
   if (event === 'INITIAL_SESSION' && session) {
-    console.log(
-      `💠 - client.auth.onAuthStateChange - "INITIAL_SESSION":`,
-      'INITIAL_SESSION',
-    )
     await hydrateUser(session)
   }
   else if (event === 'SIGNED_OUT') {
-    as.resetUserAccount()
+    as().resetUserAccount()
     if (route.path !== '/')
       router.push('/')
     else location.reload()
@@ -36,19 +26,17 @@ client.auth.onAuthStateChange(async (event, session) => {
       access_token: session.access_token,
       refresh_token: session.refresh_token,
     })
-
     if (data.session) {
       await hydrateUser(data.session)
 
-      if (as.userAccount.riot.puuid) {
+      if (as().userAccount.riot.puuid) {
         const { fetchSummoner, summoner } = useSummoner(
-          as.userAccount.riot.puuid,
+          as().userAccount.riot.puuid,
         )
         fetchSummoner()
-        console.log('💠 - client.auth.onAuthStateChange - summoner:', summoner)
       }
     }
-    router.push('/')
+    router.push('/nexus')
     location.reload()
   }
 })
@@ -64,36 +52,38 @@ watch(() => route.path, (newVal) => {
   else floatingSidebar.value = false
   console.log('💠 - floatingSidebar.value :', floatingSidebar.value)
 }, { immediate: true })
+console.log('💠 - (as().userAccount:', (as().userAccount))
 </script>
 
 <template>
   <SidebarProvider
     id="app"
-    :open="us.sidebarExpanded"
-    style="--sidebar-width: 26rem; --sidebar-width-mobile: 26rem;">
+    class="bg-tint-b2/40 overflow-hidden "
+    :open="us().sidebarExpanded"
+    style="--sidebar-width: 26rem; --sidebar-width-mobile: 26rem; --sidebar-icon-width:4rem;">
     <AppNavbar />
 
     <!--     <LazyAppCommand /> after:absolute after:bottom-0 after:w-full after:h-1/4 after:bg-neutral after:z-0 -->
     <!-- [ inset id is for Teleports] -->
     <SidebarInset
-      :class="cn('inset-wrapper relative size-full   *:z-1  ', { 'min-w-screen w-screen': floatingSidebar })">
+      :class="cn('inset-wrapper relative size-full overflow-hidden min-h-screen overflow-y-auto max-w-screen *:z-1  ', { 'min-w-screen w-screen': floatingSidebar })">
       <slot />
     </SidebarInset>
     <NuxtLoadingIndicator
-      color="var(--color-n1) !top-auto !bottom-0"
-      :style="{
-        top: 'auto',
-        bottom: 0,
-      }" />
+      style="
+      top: auto;
+      bottom: 0;
+    background: repeating-linear-gradient(to right, var(--color-b1) 0%, rgb(52, 205, 254) 50%, var(--color-neutral) 100%);
+    " />
     <Toast
       position="bottom-right"
       :expand="true"
       :duration="8000" />
-
     <UserSidebar
       side="right"
       :floating="floatingSidebar"
       :variant="floatingSidebar ? 'sidebar' : 'sidebar'"
       collapsible="offcanvas" />
+    <!--  -->
   </SidebarProvider>
 </template>

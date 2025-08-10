@@ -1,8 +1,12 @@
 <script setup lang="ts">
-const { summoner, class: className, noIcon } = defineProps<{
+import type { PrimitiveProps } from 'reka-ui'
+import { Primitive } from 'reka-ui'
+
+const { class: className, summoner, as = 'span', noIcon } = defineProps<PrimitiveProps & {
   class?: HTMLAttributes['class']
   summoner?: Summoner
   noIcon?: boolean
+  as?: string
 }>()
 
 const region = computed(() => {
@@ -18,16 +22,16 @@ const region = computed(() => {
 </script>
 
 <template>
-  <span
+  <Primitive
     v-if="region"
+    :as="as"
     :class="cn('flex items-center lowercase leading-0 antialiased gap-[2px]', className)">
-
     <icon
       v-show="!noIcon"
       name="at"
       class="size-3.25 dst" />
     {{ region }}
-  </span>
+  </Primitive>
 
   <span
     v-else

@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --sidebar: oklch(99% 0% 68deg); /* var(--color-b1);*/
+  --sidebar: var(--color-b1); /* oklch(99% 0% 68deg);*/
   --sidebar-foreground: var(--color-bc);
   --sidebar-primary: var(--color-nc);
   --sidebar-primary-foreground: var(--color-n1);

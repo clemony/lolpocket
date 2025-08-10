@@ -42,6 +42,7 @@ const colDefs: (ColDef<ChampionMastery> | ColGroupDef<ChampionMastery>)[] = [
 
   {
     field: 'level',
+    colId: 'rank',
     headerName: 'Rank',
     cellClass: 'py-2 !px-0',
     cellRenderer: ChampionGridIcon,

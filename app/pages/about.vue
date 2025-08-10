@@ -1,7 +1,10 @@
 <script setup lang="ts">
 definePageMeta({
-  section: 'docs',
-  icon: 'info',
+
+  meta: {
+    section: 'docs',
+    icon: 'info',
+  },
 })
 
 const icons = [

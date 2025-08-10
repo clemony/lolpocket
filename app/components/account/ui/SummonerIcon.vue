@@ -8,13 +8,13 @@ const props = defineProps<{
 const icon = computed (() => {
   const i = ref(null)
   if (props.iconId) {
-    i.value = props.iconId
+    i.value = props.iconId ?? null
   }
   else {
     const as = useAccountStore()
     i.value = as.userSummoner?.profileIcon
   }
-  return getSummonerIcon(i.value)
+  return getSummonerIcon(i.value) ?? null
 })
 
 /*  */

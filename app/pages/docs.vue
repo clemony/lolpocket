@@ -2,7 +2,10 @@
 definePageMeta({
   name: 'docs',
   path: '/docs',
-  section: 'docs',
+
+  meta: {
+    section: 'docs',
+  },
 })
 </script>
 

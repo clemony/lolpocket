@@ -6,7 +6,7 @@ const { summoner, class: className } = defineProps<{
 console.log('💠 - summoner:', summoner.mastery)
 
 definePageMeta({
-  name: 'summoner-mastery',
+  name: 'mastery',
 })
 
 const { fetchMastery } = useSummoner(summoner?.puuid)
@@ -50,12 +50,8 @@ const masteryStats = [
     data: summoner?.mastery?.totalPoints.toLocaleString() ?? 0,
   },
   {
-    title: `of ${ix().champions?.length} Champions Played`,
-    data: `${summoner?.mastery?.champions?.length ?? 0}`,
-  },
-  {
-    title: '',
-    data: 0,
+    title: 'Champions Played',
+    data: `${summoner?.mastery?.champions?.length ?? 0} / ${ix().champions?.length}`,
   },
 ]
 </script>
@@ -68,70 +64,33 @@ const masteryStats = [
       </h1>
     </div>
 
-    <article class="flex flex-col gap-5 py-3">
-      <h3 class="px-2">
-        Totals
-      </h3>
-      <section class="p-5  flex gap-3 w-full  h-fit items-center py-4">
+    <article class="flex flex-col w-full gap-5 py-3">
+      <section class="gap-8 flex gap-3 w-full  h-fit items-center py-4">
         <Card
           v-for="data in masteryStats"
           :key="data.title"
-          class="px-7 min-w-64 w-80 pb-5 pt-7 grid gap-4">
-          <div class="w-full gap-0.25 flex items-center">
-            <template
-              v-for="number in data.data.toString().split('')"
-              :key="number">
-              <h1
-                v-if="number != ','"
-                class="font-black bg-neutral rounded-md text-nc py-1 px-1.25 justify-self-center tracking-wide text-nowrap text-10">
-                {{ number }}
-              </h1>
-              <h1
-                v-else
-                class="font-black w-3.5 h-full relative items-end justify-self-center tracking-wide text-nowrap text-9">
-                <icon
-                  name="simple-icons:comma"
-                  class="size-3.5 absolute bottom-0" />
-              </h1>
-            </template>
-          </div>
-          <h6 class="lowercase  text-end  justify-self-end opacity-50 self-end">
+          class="px-7 min-w-64 w-80 h-32 pb-5 pt-7 grid gap-4">
+          <h1
+            class="font-black tracking-wide text-nowrap text-10">
+            {{ data.data }}
+          </h1>
+          <h6 class="lowercase   opacity-50 self-end">
             {{ data.title }}
           </h6>
+        </Card>
 
-          <Separator class="last-of-type:hidden w-full col-span-full mb-1" />
+        <Card
+          class="px-7 min-w-64 w-80 h-32 pb-5 pt-5 grid gap-4">
+          <input
+            type="text"
+            class="input w-full font-black tracking-wide h-full text-nowrap text-10" />
+
+          <h6 class="lowercase   opacity-50 self-end">
+            fun
+          </h6>
         </Card>
       </section>
-
-      <h3 class="px-2">
-        Quick Stats
-      </h3>
-      <section class="p-5 field-box grid grid-cols-[2fr_1fr] gap-3 w-full  h-fit items-center py-4">
-        <template
-          v-for="data in masteryStats"
-          :key="data.title">
-          <h5 class="col-start-1 opacity-60">
-            {{ data.title }}
-          </h5>
-          <p class="col-start-2 text-end font-medium">
-            {{ data.data }}
-          </p>
-
-          <Separator class="last-of-type:hidden w-full col-span-full mb-1" />
-        </template>
-      </section>
     </article>
-    <section
-      v-if="summoner?.mastery?.champions"
-      class="grid grid-cols-6 px-2  grid-flow-col place-items-center py-2 overflow-hidden mx-auto gap-8 w-full"
-      style="
-    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
-  ">
-      <MasteryPhoto
-        v-for="champion in summoner.mastery.champions.slice(0, 6)"
-        :key="champion.id"
-        :champion />
-    </section>
 
     <article class="w-full">
       <MasteryGrid

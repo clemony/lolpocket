@@ -6,7 +6,11 @@ import { PopoverContent } from 'reka-ui'
 <template>
   <PopoverContent
 
+    :align-flip="false"
+    :avoid-collisions="false"
+    :prioritize-position="false"
     :hide-when-detached="false"
+    :side-flip="false"
     position-strategy="absolute"
     class="w-124 h-full overflow-hidden justify-center relative grid items-start"
     as-child

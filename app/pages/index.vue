@@ -15,10 +15,13 @@ useSeoMeta({
 definePageMeta({
   name: 'home',
   path: '/',
-  title: 'lolpocket',
-  searchKeys: ['home', 'landing', 'testimonials'],
-  icon: 'teenyicons:home-alt-outline',
-  section: 'home',
+
+  meta: {
+    title: 'lolpocket',
+    searchKeys: ['home', 'landing', 'testimonials'],
+    icon: 'teenyicons:home-alt-outline',
+    section: 'home',
+  },
 })
 
 const homeWrapper = ref<HTMLElement | null>()

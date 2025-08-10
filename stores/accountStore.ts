@@ -10,8 +10,6 @@ export const useAccountStore = defineStore(
     const themeClass = ref('daylight')
     const dataTheme = ref('daylight')
     const userNotes = ref<Note[]>([])
-    const favoriteChamps = ref<Champion[]>([])
-    const favoriteItems = ref<number[]>([])
 
     const userAccount = ref<UserAccount>({
       name: 'Summoner',
@@ -111,19 +109,11 @@ export const useAccountStore = defineStore(
       themeClass,
       dataTheme,
 
-      // champs
-      favoriteChamps,
-
-      // items
-      favoriteItems,
-
-      // toggles
-      toggleSolo: () => useToggle(settings.value.showSolo),
     }
   },
   {
     persist: {
-      storage: piniaPluginPersistedstate.sessionStorage(),
+      storage: piniaPluginPersistedstate.localStorage(),
       key: 'accountStore',
     },
   },

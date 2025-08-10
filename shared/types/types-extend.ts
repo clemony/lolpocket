@@ -24,6 +24,10 @@ export interface PageRecord extends RouteRecord {
   altName: string
 }
 
+export interface RouteRecordExtended extends RouteRecord {
+  meta: PageMeta
+}
+
 export interface PageMeta extends RouteMeta {
   icon: string
   section: string

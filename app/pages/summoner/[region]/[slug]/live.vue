@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 definePageMeta({
-  name: 'summoner-live',
+  name: 'live',
 })
 </script>
 

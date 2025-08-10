@@ -6,10 +6,13 @@ console.log('💠 - matches:', matches)
 
 definePageMeta({
   name: 'champion analysis',
-  altName: 'champions',
+
   path: '/analysis/champions',
-  section: 'analysis',
-  icon: 'typcn:user',
+  meta: {
+    altName: 'champions',
+    section: 'analysis',
+    icon: 'typcn:user',
+  },
 })
 
 const { bayesianChampions } = await useMatchChampions(matches)

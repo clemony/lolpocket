@@ -5,10 +5,13 @@ const { filtered } = defineProps<{
 
 definePageMeta({
   name: 'items',
-  title: 'Items',
-  section: 'library',
-  icon: 'bow',
   alias: '/library/items',
+
+  meta: {
+    title: 'Items',
+    section: 'library',
+    icon: 'bow',
+  },
 })
 
 const ix = useIndexStore()

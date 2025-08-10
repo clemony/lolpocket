@@ -19,6 +19,23 @@ logs
 #notes
 **/📌*
 
+#old
+**/📜*
+**/⌦*
+
+#todo
+**/🔜*
+
+#idea
+**/💭*
+
+#refactor
+**/🧼*
+#delete
+**/❌*
+**/🗑️*
+
+
 # Misc
 .DS_Store
 .fleet

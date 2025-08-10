@@ -1,85 +1,29 @@
 <script lang="ts" setup>
-const { region, slug } = defineProps<{
-  region: string
-  slug: string
-  summoner: Summoner
-}>()
+const { navigateChildren, childRoutes } = useHandleSummoner()
+console.log('childRoutes: ', childRoutes)
 
-const router = useRouter()
 const route = useRoute()
-
-function navigateToChildRoute(childPath: string) {
-  if (!region || !slug)
-    return
-
-  router.push(`/summoner/${region}/${slug}/${childPath}`)
-}
-
-const as = useAccountStore()
-
-const directory = [
-  {
-    name: 'history',
-    path: '',
-  },
-  {
-    name: 'mastery',
-    path: 'mastery',
-  },
-  {
-    name: 'live',
-    path: 'live',
-  },
-  {
-    name: 'settings',
-    path: 'settings',
-  },
-]
-
-const pathName = computed (() => {
-  const a = route.fullPath.split('/')[4]
-  if (!a)
-    return ''
-
-  return a.split('#')[0] || ''
-})
-const tabs = ref(null)
-
-onMounted (() => {
-  tabs.value = pathName.value
-  console.log('💠 - pathName.value:', pathName.value)
-})
 </script>
 
 <template>
   <nav
+    v-if="childRoutes"
     role="tablist"
-    class="tabs tab-menu w-full relative h-10 justify-start self-end tabs-lg tabs-lift border-b-0 z-4 flex">
+    class="tabs tab-menu relative h-10 justify-start col-start-2 w-full  mb-2  before:size-px tabs-lg tabs-lift border-b-0 z-4 flex">
     <FakeTab />
 
     <!-- ALL tabs -->
 
     <li
-      v-for="item in directory.filter(p => p.path != 'settings')"
+      v-for="item in childRoutes"
       :key="item.name"
       role="tab"
-      :value="item.name"
-      :class="cn('group/tab min-w-22 max-w-44 grow   tab ', { 'tab-active ': pathName == item.name || pathName == item.path })"
-      @click="navigateToChildRoute(item.path)">
-      {{ item.name }}
-    </li>
-
-    <!-- settings!!! -->
-
-    <li
-      v-if="summoner.puuid == as.userAccount?.riot?.puuid"
-      :class="cn('group/tab min-w-22 max-w-44 grow   tab ', { 'tab-active ': pathName == 'settings' })"
-      @click="navigateToChildRoute('settings')">
-      Settings
+      :value="item.name.toString()"
+      :class="cn('group/tab min-w-22 max-w-44 grow   tab ', { 'tab-active ': route.name == item.name, 'order-3': item.name == 'live', 'order-4': item.name == 'profile settings' })"
+      @click="navigateChildren(item.path)">
+      {{ item.name?.toString().replace('profile ', '') }}
     </li>
 
     <FakeTab />
-
-    <div class="tab-content" />
   </nav>
 </template>

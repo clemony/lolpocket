@@ -64,7 +64,7 @@
       screen, screen, lighten, overlay, lighten, difference, normal;
     background-size: 500% 500%;
 
-    @apply saturate-280 brightness-101 contrast-102;
+    @apply saturate-280 brightness-103 contrast-102;
 
     & > .sparkles {
       @apply absolute;

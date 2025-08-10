@@ -18,7 +18,7 @@ const openMatch = ref(null)
 </script>
 
 <template>
-  <div class="flex-col flex scroll-smooth">
+  <div class="flex-col flex">
     <div
       v-if="loading"
       class="flex flex-col gap-8">

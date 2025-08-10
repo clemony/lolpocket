@@ -2,26 +2,29 @@
 import type { ColDef, ColGroupDef, GetRowIdFunc, GetRowIdParams, GridApi, GridOptions, GridReadyEvent, MouseEnterEvent } from 'ag-grid-community'
 import { AllCommunityModule, ModuleRegistry } from 'ag-grid-community'
 import { AgGridVue } from 'ag-grid-vue3'
+import GridNoRows from 'components/table/components/NoPocketsOverlay.vue'
+import TableChampion from 'components/table/components/TableChampion.vue'
+import TableDate from 'components/table/components/TableDate.vue'
 import TableIcon from 'components/table/components/TableIcon.vue'
+import TableItem from 'components/table/components/TableItem.vue'
+import TableKey from 'components/table/components/TableKey.vue'
+import TableLink from 'components/table/components/TableLink.vue'
+import TablePin from 'components/table/components/TablePin.vue'
+import TableRole from 'components/table/components/TableRole.vue'
+import TableRune from 'components/table/components/TableRune.vue'
 import TableSpell from 'components/table/components/TableSpell.vue'
 import TableTags from 'components/table/components/TableTags.vue'
-import TableItem from 'components/table/components/TableItem.vue'
-import TableRune from 'components/table/components/TableRune.vue'
-import TableRole from 'components/table/components/TableRole.vue'
-import TableDate from 'components/table/components/TableDate.vue'
-import TableChampion from 'components/table/components/TableChampion.vue'
-import TableLink from 'components/table/components/TableLink.vue'
-import TableKey from 'components/table/components/TableKey.vue'
-import TablePin from 'components/table/components/TablePin.vue'
-import GridNoRows from 'components/table/components/NoPocketsOverlay.vue'
 
 const emit = defineEmits(['update:gridApi'])
 
 definePageMeta({
   path: '/pockets',
-  title: 'All',
-  section: 'backpack',
-  icon: 'backpack',
+
+  meta: {
+    title: 'All',
+    section: 'backpack',
+    icon: 'backpack',
+  },
 })
 
 defineExpose({

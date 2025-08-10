@@ -1,11 +1,11 @@
 import { defineStore } from 'pinia'
 
 export const useUiStore = defineStore('UiStore', () => {
-  const sidebarExpanded = ref(true)
-
+  const sidebarExpanded = ref<boolean>(true)
+  const tabsSticky = ref<boolean>(false)
   const activeSidebarContent = ref<string>(null)
-  const settingsOpen = ref(false)
-  const sidebarMenuOpen = ref(false)
+  const settingsOpen = ref<boolean>(false)
+  const sidebarMenuOpen = ref<boolean>(false)
   const toggleSidebar = useToggle(sidebarExpanded)
   const toggleSettings = useToggle(settingsOpen)
 
@@ -46,6 +46,7 @@ export const useUiStore = defineStore('UiStore', () => {
 
   return {
     sidebarExpanded,
+    tabsSticky,
     toggleSidebar,
     settingsOpen,
     sidebarMenuOpen,

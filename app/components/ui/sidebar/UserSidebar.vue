@@ -40,7 +40,7 @@ onClickOutside(target, (event) => {
 
     <TransitionSlideLeft
       group
-      :class="cn('before:absolute  before before:w-full before:z-0 z-1 before:bg-gradient-to-t before:from-sidebar/94 before:to-transparent before:h-16 flex rounded-lg border before:-top-16 border-b3 shadow-warm-soft  **:!bg-transparent  size-full')">
+      :class="cn('before:absolute  before before:w-full before:z-0 z-1 before:bg-gradient-to-t before:from-sidebar/94 before:to-transparent before:h-16 flex rounded-lg border before:-top-16 border-b3 shadow-warm-soft   size-full')">
       <component
         :is="component"
         v-if="us().sidebarExpanded && component"

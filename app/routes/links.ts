@@ -1,4 +1,4 @@
-import { AccountContent, AnalyticsMenu, BackpackMenu, InboxContent, LibraryMenu, NavContent, NotificationContent, SearchContent, SettingsContent, SummonerMenu } from '#components'
+import { AccountContent, AnalyticsMenu, BackpackMenu, InboxContent, LibraryMenu, NavContent, SearchContent, SettingsContent, SummonerMenu } from '#components'
 import { analyticsLinks, backpackLinks, libraryLinks } from '~/routes'
 
 export const navLinks: LinkGroup = [
@@ -9,6 +9,7 @@ export const navLinks: LinkGroup = [
   {
     // icon: "cil:briefcase",
     name: 'Backpack',
+    link: '/backpack',
     icon: {
       name: 'i-lol-backpack',
       class: 'size-6 opacity-70',
@@ -76,13 +77,6 @@ export const userMenu: Record<string, DataObject> = {
     },
     component: NavContent,
   },
-  news: {
-    name: 'News',
-    icon: {
-      name: 'lucide:newspaper',
-      class: '**:stroke-[1.5] ',
-    },
-  },
   empty: null,
   inbox: {
     name: 'Inbox',
@@ -92,15 +86,6 @@ export const userMenu: Record<string, DataObject> = {
     },
     value: 0,
     component: InboxContent,
-  },
-  notifications: {
-    name: 'Notifications',
-    icon: {
-      name: 'lucide:message-square',
-      class: '**:stroke-[1.7]  size-4.75 ',
-    },
-    value: 0,
-    component: NotificationContent,
   }, /*
   {
     name: '',

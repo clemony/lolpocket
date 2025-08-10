@@ -1,12 +1,16 @@
 <script setup lang="ts">
-const props = defineProps<{
+import type { PrimitiveProps } from 'reka-ui'
+import { Primitive } from 'reka-ui'
+
+const { class: className, summoner, as = 'span' } = defineProps<PrimitiveProps & {
+  as?: string
   class?: HTMLAttributes['class']
   summoner?: Summoner
 }>()
 
 const tag = computed (() => {
-  if (props.summoner?.tag) {
-    return props.summoner.tag
+  if (summoner?.tag) {
+    return summoner.tag
   }
 
   else {
@@ -17,18 +21,19 @@ const tag = computed (() => {
 </script>
 
 <template>
-  <span
+  <Primitive
     v-if="tag"
-    :class="cn('flex items-center leading-0 antialiased', props.class)">
+    :as="as"
+    :class="cn('flex items-center leading-0 antialiased', className)">
     <icon
       name="lucide:hash"
       class="size-3.75" />
     {{ tag }}
-  </span>
+  </Primitive>
 
   <span
     v-else
-    :class="cn('', props.class)">
+    :class="cn('', className)">
     Disconnected
   </span>
 </template>

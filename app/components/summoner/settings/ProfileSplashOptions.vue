@@ -19,7 +19,6 @@ const { topChampion } = useSummonerChampions(
   },
 )
 
-console.log('💠 - ix.skinNameFromUrl(as.publicData?.splash):', ix.skinNameFromUrl(as.publicData?.splash))
 const currentSplash = computed (() => as.publicData?.splash ?? null)
 </script>
 
