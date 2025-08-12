@@ -42,38 +42,30 @@ client.auth.onAuthStateChange(async (event, session) => {
 })
 
 const floatingSidebar = ref(false)
-watch(() => route.path, (newVal) => {
-  const route1 = /\/summoner\/.*/
-  console.log('💠 - watch - newVal:', newVal)
-
-  if (route.path.match(route1))
-    floatingSidebar.value = true
-
-  else floatingSidebar.value = false
-  console.log('💠 - floatingSidebar.value :', floatingSidebar.value)
-}, { immediate: true })
+/*  */
 console.log('💠 - (as().userAccount:', (as().userAccount))
 </script>
 
 <template>
   <SidebarProvider
     id="app"
-    class="bg-tint-b2/40 overflow-hidden "
+    class="bg-tint-b2/40 "
     :open="us().sidebarExpanded"
     style="--sidebar-width: 26rem; --sidebar-width-mobile: 26rem; --sidebar-icon-width:4rem;">
     <AppNavbar />
 
     <!--     <LazyAppCommand /> after:absolute after:bottom-0 after:w-full after:h-1/4 after:bg-neutral after:z-0 -->
     <!-- [ inset id is for Teleports] -->
-    <SidebarInset
-      :class="cn('inset-wrapper relative size-full overflow-hidden min-h-screen overflow-y-auto max-w-screen *:z-1  ', { 'min-w-screen w-screen': floatingSidebar })">
+    <main
+      :class="cn('inset-wrapper relative w-screen overflow-x-hidden *:z-1  ', { 'min-w-screen w-screen': floatingSidebar })">
       <slot />
-    </SidebarInset>
+    </main>
     <NuxtLoadingIndicator
       style="
       top: auto;
       bottom: 0;
-    background: repeating-linear-gradient(to right, var(--color-b1) 0%, rgb(52, 205, 254) 50%, var(--color-neutral) 100%);
+      height: 5px;
+    background: repeating-linear-gradient(to right, var(--color-b2) 0%, var(--color-b2), var(--color-neutral) 100%);
     " />
     <Toast
       position="bottom-right"
@@ -82,7 +74,7 @@ console.log('💠 - (as().userAccount:', (as().userAccount))
     <UserSidebar
       side="right"
       :floating="floatingSidebar"
-      :variant="floatingSidebar ? 'sidebar' : 'sidebar'"
+      variant="sidebar"
       collapsible="offcanvas" />
     <!--  -->
   </SidebarProvider>

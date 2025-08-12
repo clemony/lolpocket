@@ -23,7 +23,6 @@ export const useIndexStore = defineStore(
       if (patch.value != patchIndex[0]) {
         patchList.value = patchIndex
         patch.value = patchIndex[0]
-        console.log('💠 - loadPatch - patch.value :', patch.value)
         loadAll()
       }
     }

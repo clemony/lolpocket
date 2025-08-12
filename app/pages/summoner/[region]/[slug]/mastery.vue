@@ -7,6 +7,9 @@ console.log('💠 - summoner:', summoner.mastery)
 
 definePageMeta({
   name: 'mastery',
+  icon: 'i-lol-mastery',
+  iconStyle: 'scale-90 -mb-0.25',
+  order: 1,
 })
 
 const { fetchMastery } = useSummoner(summoner?.puuid)

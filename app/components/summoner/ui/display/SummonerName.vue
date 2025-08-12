@@ -1,0 +1,30 @@
+<script setup lang="ts">
+import type { PrimitiveProps } from 'reka-ui'
+import { Primitive } from 'reka-ui'
+
+const { class: className, summoner, as = 'span' } = defineProps<PrimitiveProps & {
+  as?: string
+  class?: HTMLAttributes['class']
+  summoner?: Summoner
+}>()
+const name = computed(() => {
+  if (summoner)
+    return summoner.name
+
+  const as = useAccountStore()
+  return as.userAccount?.riot?.name ?? 'Summoner'
+})
+</script>
+
+<template>
+  <Primitive
+    v-if="name"
+    :as="as"
+    :class="cn('align-baseline truncate', className)">
+    {{ name ?? null }}
+  </Primitive>
+</template>
+
+<style scoped>
+
+</style>

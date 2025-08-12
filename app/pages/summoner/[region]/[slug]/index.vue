@@ -5,19 +5,22 @@ const { summoner } = defineProps<{
 
 definePageMeta({
   name: 'history',
-  meta: {
-    aside: import('components/ui/layout/TabsPageAsideWrapper.vue'),
-  },
+  order: 0,
+  title: 'match history',
+  icon: 'history',
+  iconStyle: '',
 })
 </script>
 
 <template>
-  <main
-    :class="cn('flex mx-auto  gap-6  bg-b1  justify-start items-start')">
-    <MatchHistoryPageAside :summoner />
+  <div
+    :class="cn('flex mx-auto  gap-6  bg-b1 w-full z-auto justify-start items-start')">
+    <div class="w-[43%] grid z-auto justify-end px-6">
+      <MatchHistoryPageAside :summoner />
+    </div>
     <SlideInTopOutBottom
       group
-      :class="cn('flex flex-col py-20 gap-10  justify-center relative w-[56.5%] px-2 pb-px')">
+      :class="cn('flex flex-col gap-10  justify-center w-[57%] px-4 pb-px')">
       <SummonerChampionModule
         v-if="ms().mf?.champion"
         :summoner
@@ -26,5 +29,5 @@ definePageMeta({
         v-if="summoner.puuid"
         :puuid="summoner.puuid" />
     </SlideInTopOutBottom>
-  </main>
+  </div>
 </template>

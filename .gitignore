@@ -41,6 +41,7 @@ logs
 .fleet
 .idea
 .code-workspace
+tailwind.config.js
 
 # data folders
 /data/

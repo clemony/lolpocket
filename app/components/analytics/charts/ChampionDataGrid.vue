@@ -1,9 +1,10 @@
 <script lang="ts" setup>
-import { CellStyleModule, ClientSideRowModelModule, ColumnApiModule, ColumnAutoSizeModule, ColumnHoverModule, GridStateModule, ModuleRegistry, RenderApiModule, RowSelectionModule, ValidationModule } from 'ag-grid-community'
 import type { ColDef, ColGroupDef, GridApi, GridOptions, GridPreDestroyedEvent, GridReadyEvent } from 'ag-grid-community'
+import { CellStyleModule, ClientSideRowModelModule, ColumnApiModule, ColumnAutoSizeModule, ColumnHoverModule, GridStateModule, ModuleRegistry, RenderApiModule, RowSelectionModule, ValidationModule } from 'ag-grid-community'
 import { AgGridVue } from 'ag-grid-vue3'
-import PatchCellRenderer from './chart-comps/PatchCellRenderer.vue'
+import { pocketTheme } from 'components/table/theme/tableTheme'
 import ChampionGridIcon from './chart-comps/ChampionGridIcon.vue'
+import PatchCellRenderer from './chart-comps/PatchCellRenderer.vue'
 
 const { champions } = defineProps<{
   champions: any[]

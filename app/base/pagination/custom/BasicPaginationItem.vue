@@ -2,13 +2,13 @@
 import type { PaginationListItemProps } from 'reka-ui'
 import { PaginationListItem } from 'reka-ui'
 
-import type { ButtonVariants } from '../../button/button-variants'
-import { buttonVariants } from '../../button/button-variants'
+import type { VariantStyleProps } from 'assets/ts/variant-index'
+import { buttonVariants } from 'assets/ts/variant-index'
 
 const props = withDefaults(defineProps<PaginationListItemProps & {
-  size?: ButtonVariants['size']
+  size?: VariantStyleProps['size']
   class?: HTMLAttributes['class']
-  shape?: ButtonVariants['shape']
+  shape?: VariantStyleProps['shape']
   isActive?: boolean
 }>(), {
   size: 'sm',

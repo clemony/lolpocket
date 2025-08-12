@@ -1,6 +1,10 @@
 <script lang="ts" setup>
 definePageMeta({
   name: 'live',
+  title: 'live match',
+  icon: 'fluent:live-24-filled',
+  iconStyle: 'scale-104',
+  order: 2,
 })
 </script>
 

@@ -38,34 +38,27 @@
 
 @layer components {
   h1 {
-    font-size: var(--text-9);
-    line-height: none;
-    @apply font-bold;
+    @apply text-9;
   }
 
   h2 {
-    font-size: var(--text-7);
-    font-weight: 600;
+    @apply text-7;
   }
 
   h3 {
-    font-size: var(--text-6);
-    font-weight: 600;
+    @apply text-6;
   }
 
   h4 {
-    font-size: var(--text-5);
-    font-weight: 600;
+    @apply text-5;
   }
 
   h5 {
-    font-size: var(--text-4);
-    font-weight: 500;
+    @apply text-4;
   }
 
   h6 {
-    font-size: var(--text-3);
-    font-weight: 500;
+    @apply text-3;
   }
 
   h1,
@@ -74,13 +67,13 @@
   h4,
   h5,
   h6 {
-    @apply leading-none antialiased;
+    @apply leading-snug  antialiased;
   }
 
   h1,
   h2,
   h3 {
-    @apply font-bold;
+    @apply font-bold drop-shadow-text;
   }
 
   p {

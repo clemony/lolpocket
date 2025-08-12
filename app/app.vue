@@ -18,6 +18,9 @@ const appConfig = useAppConfig()
 <template>
   <NuxtLayout>
     <LazyNuxtPage
+      :transition="{
+        name: 'global-page-transition',
+      }"
       class="z-1" />
   </NuxtLayout>
 </template>

@@ -22,12 +22,20 @@ export function throttleFunction<T extends (...args: any[]) => any>(
 
   const cooldown = computed(() => {
     const seconds = Math.floor(timeRemaining.value / 1000)
-    return seconds > 0
-      ? {
-          seconds,
-          percent: (seconds / (wait / 1000)) * 100,
-        }
-      : null
+    if (seconds <= 0)
+      return null
+
+    const minutes = Math.floor(seconds / 60)
+    const secs = seconds % 60
+    const formatted = `${minutes.toString().padStart(2, '0')}:${secs
+      .toString()
+      .padStart(2, '0')}`
+
+    return {
+      seconds,
+      percent: (seconds / (wait / 1000)) * 100,
+      formatted,
+    }
   })
 
   const throttled = useThrottleFn(

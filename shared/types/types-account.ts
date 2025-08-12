@@ -35,6 +35,7 @@ export interface UserSettings {
 
 export interface PublicData {
   splash: string
+  peerMessages: boolean
 }
 
 export interface InboxItem {

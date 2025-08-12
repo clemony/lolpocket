@@ -18,11 +18,13 @@ export default defineNuxtConfig({
     'motion-v/nuxt' /*     "nuxt-og-image", */,
     '@nuxtjs/tailwindcss',
     'shadcn-nuxt',
+    '@nuxthub/core',
   ],
-  shadcn: {
-    prefix: '',
-    componentDir: './app/base/ui',
+
+  hub: {
+    database: true,
   },
+
   future: {
     typescriptBundlerResolution: true,
   },
@@ -60,6 +62,14 @@ export default defineNuxtConfig({
     },
     optimizeDeps: {
       force: true,
+      exclude: [
+        // large deps you don't need to prebundle
+        'fuse.js',
+        'lodash-es',
+      ],
+    },
+    build: {
+      sourcemap: false,
     },
   },
 
@@ -72,11 +82,6 @@ export default defineNuxtConfig({
     key: process.env.SUPABASE_KEY,
     redirect: false,
   },
-  tailwindcss: {
-    exposeConfig: true,
-    includeWorkspace: true,
-  },
-
   runtimeConfig: {
     supabaseUrl: process.env.SUPABASE_URL,
     supabaseAnonKey: process.env.SUPABASE_KEY,
@@ -95,25 +100,11 @@ export default defineNuxtConfig({
         headers: { 'Access-Control-Allow-Origin': '*' },
       },
     },
+    experimental: {
+      openAPI: true,
+    },
   },
 
-  vueTransitions: {
-    defaultProps: {
-      duration: 400,
-      easing: 'cubic-bezier(.25, .8, .5, 1)',
-      mode: 'out-in',
-      appear: false,
-      tag: 'div',
-    },
-    componentDefaultProps: {
-      TransitionSlide: {
-        duration: 300,
-        easing: 'cubic-bezier(.25, .8, .5, 1)',
-        offset: [0, 8],
-        mode: 'out-in',
-      },
-    },
-  },
   components: [
     {
       path: 'components',
@@ -147,10 +138,6 @@ export default defineNuxtConfig({
   pinia: {
     storesDirs: ['./stores/**'],
   },
-  css: ['~/assets/css/tailwind.css'],
-  postcss: {
-    plugins: {},
-  },
   alias: {
     css: fileURLToPath(new URL('./app/assets/css', import.meta.url)),
     types: fileURLToPath(new URL('./types', import.meta.url)),
@@ -171,6 +158,39 @@ export default defineNuxtConfig({
     d1: fileURLToPath(new URL('./d1', import.meta.url)),
   },
 
+  /* *** css and styling  */
+
+  css: ['./app/assets/css/tailwind.css'],
+  postcss: {
+    plugins: {},
+  },
+  tailwindcss: {
+    exposeConfig: true,
+    includeWorkspace: true,
+  },
+
+  shadcn: {
+    prefix: '',
+    componentDir: './app/base/ui',
+  },
+  vueTransitions: {
+    defaultProps: {
+      duration: 400,
+      easing: 'cubic-bezier(.25, .8, .5, 1)',
+      mode: 'out-in',
+      appear: false,
+      tag: 'div',
+    },
+    componentDefaultProps: {
+      TransitionSlide: {
+        duration: 300,
+        easing: 'cubic-bezier(.25, .8, .5, 1)',
+        offset: [0, 8],
+        mode: 'out-in',
+      },
+    },
+  },
+
   devServer: {
     port: 8080,
   },
@@ -180,25 +200,6 @@ export default defineNuxtConfig({
     vueDevTools: true,
     viteInspect: true,
   },
-
-  /*     Content-Security-Policy: The page’s settings blocked the loading of a resource (connect-src) at /auth/v1/token?grant_type=refresh_token because it violates the following directive: “connect-src 'self' https://api.iconify.design”       */
-  /*   security: {
-    headers: {
-      contentSecurityPolicy: {
-
-        'default-src': ['\'self\''],
-        'script-src': [
-          '\'self\'',
-        ],
-        'connect-src': [
-          '\'self\'',
-          'https://api.iconify.design',
-          `${process.env.SUPABASE_URL}`,
-        ],
-        'img-src': ['\'self\'', 'data:', 'https://api.iconify.design', 'https://raw.communitydragon.org'],
-      },
-    },
-  }, */
   webpack: {
     loaders: {
       vue: {

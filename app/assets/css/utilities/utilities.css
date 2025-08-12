@@ -7,6 +7,10 @@
   scrollbar-width: none;
 }
 
+@utility trim {
+  @apply text-ellipsis whitespace-nowrap   text-clip;
+}
+
 @utility animate-gradient-* {
   animation: gradient --value(integer) s ease infinite;
 }

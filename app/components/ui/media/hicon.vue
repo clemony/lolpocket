@@ -7,7 +7,6 @@ const { class: className, name, iconScale } = defineProps<{
 
 const svg = /i-/
 const img = /https:/
-
 const classes = 'shrink-0 size-full'
 </script>
 
