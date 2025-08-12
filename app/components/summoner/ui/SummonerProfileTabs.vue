@@ -11,7 +11,8 @@ const route = useRoute()
     class="tabs tab-menu relative h-10 justify-start col-start-2 w-full  mb-2  before:size-px tabs-lg tabs-lift border-b-0 z-4 flex">
     <FakeTab />
 
-    <!-- ALL tabs -->
+    <!-- ALL tabs $
+-->
 
     <li
       v-for="item in childRoutes"
