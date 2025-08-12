@@ -4,11 +4,14 @@ export default defineAppConfig({
     mode: 'svg',
     class: 'text-[var(--color-bc)] shrink-0 pointer-events-none',
     size: '15px',
-    strokeWidth: 1.7,
-    /*     customize: (content: string, name: string, prefix: string, provider: string) => {
-      if (prefix !== 'lucide')
-        return content.replace(/stroke-width="[^"]*"/g, `stroke-width="1.6"`)
-    }, */
+
+    customize: (content: string, name: string, prefix: string, provider: string) => {
+      if (prefix !== 'lucide') {
+        return content // No changes for non-Lucide icons
+      }
+      // Apply stroke-width only for Lucide icons
+      return content.replace(/stroke-width="[^"]*"/g, `stroke-width="1.8"`)
+    },
     aliases: {
       // math
       'add': 'teenyicons:add-outline',
@@ -55,10 +58,10 @@ export default defineAppConfig({
       'search': 'weui:search-outlined',
       'search-bold': 'weui:search-filled',
       'search-sm': 'teenyicons:search-small-outline',
-      'more': 'radix-icons:dots-horizontal',
+      'more': 'lucide:ellipsis',
       'more-v': 'radix-icons:dots-vertical',
       'reset': 'mynaui:refresh',
-      'gear': 'ph:gear-six',
+      'gear': 'lucide:settings',
       'gear-solid': 'ri:settings-4-fill',
       'nut': 'ph:nut',
       'nut-fill': 'ph:nut-fill',
@@ -105,7 +108,7 @@ export default defineAppConfig({
       'mail': 'fluent:mail-32-regular',
       'mail-fill': 'fluent:mail-32-filled',
       'mail-open': 'fluent:mail-read-32-regular',
-      'link': 'mingcute:external-link-line',
+      'link': 'mingcute:external-link-line', // lucide:external-link
       'link-lg': 'radix-icons:external-link',
       'chain': 'ph:link-simple',
       'share': 'iconoir:send-diagonal',
@@ -134,7 +137,7 @@ export default defineAppConfig({
       'backpack': 'radix-icons:backpack',
       'lol-backpack': 'lp-lol:backpack',
       'book': 'teenyicons:book-outline',
-      'history': 'radix-icons:counter-clockwise-clock',
+      'history': 'lucide:history',
     },
   },
 })

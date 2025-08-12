@@ -20,7 +20,7 @@ export default defineNuxtPlugin((nuxtApp) => {
         hideOnClick: false,
         followCursor: false,
         inertia: true,
-        delay: [1000, 0],
+        delay: [800, 0],
         duration: [150],
         animation: 'scale',
         interactiveBorder: 2,

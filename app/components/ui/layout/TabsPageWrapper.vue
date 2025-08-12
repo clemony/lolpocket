@@ -15,15 +15,16 @@
  * header-badge
 
  * Sticky Section
-
+⁡⁣⁣⁢⁡⁣⁢⁣
  * collapsed-header
  * tab-bar-buttons
- * tabs
-
+ * tabs⁡
+⁡
  * page
+
  *========================================================================*
  */
-
+/* ------------------------------------ b ----------------------------------- */
 import { motion } from 'motion-v'
 import { PopoverAnchor, PopoverContent } from 'reka-ui'
 
@@ -75,70 +76,72 @@ watch(() => us().tabsSticky, (newVal) => {
 </script>
 
 <template>
-  <section
-    :class="cn(' w-full max-w-inherit z-2 -top-[199px] grid grid-rows-[190px_1px_54px] pt-16 bg-tint-b2/40   backdrop-filter-[url(assets/icons/img/noice-lg.svg)] bg-repeat ',
+  <article class=" w-screen max-w-inherit  overflow-x-hidden">
+    <section
+      :class="cn('w-screen z-2 grid grid-rows-[190px_1px_54px] pt-16 bg-tint-b2/40   backdrop-filter-[url(assets/icons/img/noice-lg.svg)] bg-repeat ',
 
-    )">
-    <motion.div
-      :style="{
-        backgroundImage: `url('${img(background)}')`,
-      }"
-      :class="cn('inset-0 right-0 top-0 absolute  bg-fixed bg-no-repeat  bg-position-[160%_-3%]  bg-size-[80%] mask-l-from-30% mask-l-to-60%',
-                 'before:size-full before:absolute before:z-1 before:bg-linear-to-r  before:from-[color-mix(in_oklab,var(--color-b2)_60%,white_40%)]  before:from-45%   before:to-75% before:to-transparent',
-      )" />
-    <div
-      :class="cn('grid   z-3 grow items-center self-center gap-0.5 items-end grid-cols-[1fr_repeat(2,551px)_1fr] size-full justify-start px-2')">
-      <!-- large header welcome wrapper -->
-
-      <slot
-        name="pre-header" />
-
-      <slot
-        name="header" />
-    </div>
-
-    <!-- sentintel -->
-    <motion.div
-      ref="sentinel"
-      class="h-px w-full col-span-full -translate-y-14 " />
-
-    <!-- sticky section  -->
-
-    <div class="grid-cols-[1fr_1102px_1fr]  grid z-3  max-h-18 h-18 min-h-18 items-end  overflow-hidden grid-flow-col size-full **:not-[.sepRef]:z-4  items-end">
-      <!-- tabs -->
-
-      <slot name="tabs" />
-
-      <!-- separators / bottom header border -->
-      <Separator
-        class="sepRef my-0 bottom-0  bg-linear-to-r self-start from-b2/20 from-60% to-b4  absolute  w-full" />
-
-      <Separator
-        class="sepRef my-0  -bottom-1 bg-transparent  !bg-linear-to-b from-b1/90 to-b1/0 pointer-events-none self-start h-1 absolute   w-full  " />
-      <!-- aside sticky section -->
-      <Popover
-        :open="true"
-        :default-open="true">
-        <div class="w-full z-5  absolute h-px">
-          <PopoverAnchor
-            class="sepRef my-0  mx-auto z-3 bg-transparent  pointer-events-none self-start h-px -translate-x-120   w-120" />
-        </div>
+      )">
+      <motion.div
+        :style="{
+          backgroundImage: `url('${img(background)}')`,
+        }"
+        :class="cn('inset-0 right-0 top-0 fixed  bg-fixed bg-no-repeat  bg-position-[160%_-3%]  bg-size-[80%] mask-l-from-30% mask-l-to-60%',
+                   'before:size-full before:absolute before:z-1 before:bg-linear-to-r  before:from-[color-mix(in_oklab,var(--color-b2)_60%,white_40%)]  before:from-45%   before:to-75% before:to-transparent',
+        )" />
+      <div
+        :class="cn('grid   z-3 grow items-center self-center gap-0.5 items-end grid-cols-[1fr_repeat(2,551px)_1fr] size-full justify-start px-2')">
+        <!-- large header welcome wrapper -->
 
         <slot
-          name="aside"
-          :sticky="show" />
-      </Popover>
-    </div>
-  </section>
+          name="pre-header" />
 
-  <!-- page -->
+        <slot
+          name="header" />
+      </div>
 
-  <slot
-    name="page"
-    :show />
+      <!-- sentintel -->
+      <motion.div
+        ref="sentinel"
+        class="h-px w-full col-span-full -translate-y-14 " />
 
-    <!-- footer -->
+      <!-- sticky section  -->
 
-    <!--       <HomeFooter class="z-10 h-26 min-h-26 py-5 border-t border-t-2 border-t-neutral" />
+      <div class="grid-cols-[1fr_1102px_1fr]  grid z-3  max-h-18 h-18 min-h-18 items-end  overflow-hidden grid-flow-col size-full **:not-[.sepRef]:z-4  items-end">
+        <!-- tabs -->
+
+        <slot name="tabs" />
+
+        <!-- separators / bottom header border -->
+        <Separator
+          class="sepRef my-0 bottom-0  bg-linear-to-r self-start from-b2/20 from-60% to-b4  absolute  w-full" />
+
+        <Separator
+          class="sepRef my-0  -bottom-1 bg-transparent  !bg-linear-to-b from-b1/90 to-b1/0 pointer-events-none self-start h-1 absolute   w-full  " />
+        <!-- aside sticky section -->
+        <Popover
+          :open="true"
+          :default-open="true">
+          <div class="w-full z-5  absolute h-px">
+            <PopoverAnchor
+              class="sepRef my-0  mx-auto z-3 bg-transparent  pointer-events-none self-start h-px -translate-x-120   w-120" />
+          </div>
+
+          <slot
+            name="aside"
+            :sticky="show" />
+        </Popover>
+      </div>
+    </section>
+
+    <!-- page -->
+
+    <slot
+      name="page"
+      :show />
+
+  <!-- footer -->
+
+  <!--       <HomeFooter class="z-10 h-26 min-h-26 py-5 border-t border-t-2 border-t-neutral" />
  -->
+  </article>
 </template>

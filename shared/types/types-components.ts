@@ -6,6 +6,8 @@ export interface CustomRadioGroupProps extends PrimitiveProps {
 
 export type Side = 'top' | 'right' | 'bottom' | 'left'
 export type Align = 'start' | 'center' | 'end'
+export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+export type Shape = 'square' | 'circle'
 
 export interface Tabs {
   currentValue: {

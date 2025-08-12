@@ -2,11 +2,11 @@
 import type { PaginationPrevProps } from 'reka-ui'
 import { PaginationPrev, useForwardProps } from 'reka-ui'
 
-import { buttonVariants } from '../button/button-variants'
-import type { ButtonVariants } from '../button/button-variants'
+import type { VariantStyleProps } from 'assets/ts/variant-index'
+import { buttonVariants } from 'assets/ts/variant-index'
 
 const props = withDefaults(defineProps<PaginationPrevProps & {
-  size?: ButtonVariants['size']
+  size?: VariantStyleProps['size']
   class?: HTMLAttributes['class']
 }>(), {
   size: 'default',

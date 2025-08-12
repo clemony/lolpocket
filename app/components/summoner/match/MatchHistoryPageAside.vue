@@ -6,11 +6,6 @@ const { summoner } = defineProps<{
 
 <template>
   <div class="w-124 sticky top-24 scrollbar-none overflow-y-auto pb-44 max-h-screen justify-center gap-10 auto-rows-max items-start grid">
-    <SummonerHeader
-      :show="us().tabsSticky == true"
-      :summoner
-      class="order-first mb-8 w-full px-2" />
-
     <RankCard
       v-if="summoner.ranked?.solo && as().settings?.showSolo"
       title="Solo/Duo"

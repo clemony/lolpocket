@@ -31,6 +31,9 @@ export interface RouteRecordExtended extends RouteRecord {
 export interface PageMeta extends RouteMeta {
   icon: string
   section: string
+  title: string
+  order: number
+  requiresAuth: boolean
   search: boolean
   searchKeys: string[]
 }

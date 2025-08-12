@@ -42,9 +42,13 @@
   --font-serif:
     "Noto Serif KR Variable", Charter, "Bitstream Charter", "Sitka Text",
     Cambria, serif;
-  --font-mono:
-    Lucida Console, Consolas, Liberation Mono, Menlo, Monaco, ui-monospace,
-    monospace;
+  --font-mono:   Consolas, "Liberation Mono",
+  "Courier New",
+ui-monospace,
+  SFMono-Regular,
+  Menlo,
+  Monaco,
+  monospace;
 
   --bg-noise: url("/assets/img/nnnoise.svg");
 

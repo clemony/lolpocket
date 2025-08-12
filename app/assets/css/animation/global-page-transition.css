@@ -1,9 +1,14 @@
-.global-page-transition-enter-active,
-.global-page-transition-leave-active {
+.global-page-transition-enter-active {
   transition: all 0.15s ease;
+  position: absolute;
 }
 .global-page-transition-enter-from {
   scale: 0.96;
   opacity: 0;
   transform-origin: center;
+}
+
+.global-page-transition-enter-to {
+  scale: 1;
+  opacity: 1;
 }

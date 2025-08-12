@@ -7,18 +7,20 @@
 /*  btn */
 
 @utility btn {
-  --btn-depth: 1;
-  --btn-noise: 1;
+  --noise: 1;
+  @apply font-normal px-3 text-3 gap-3 items-center bg-transparent;
+}
 
-  @apply font-normal px-3 text-3 gap-3 items-center;
-  &:not(.btn-ghost):not(.btn-outline):not(.btn-neutral) {
-    @apply bg-tint-b2/6 border-b2;
-  }
+@utility fx-0 {
+  --noise: 0;
+  --depth: 0;
+}
+
+@utility noise-sm {
+  --fx-noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.34' numOctaves='4' stitchTiles='stitch'%3E%3C/feTurbulence%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)' opacity='0.1'%3E%3C/rect%3E%3C/svg%3E");
 }
 
 @utility btn-neutral {
-  --btn-depth: 1;
-  --btn-noise: 1;
   @apply text-nc bg-n1   *:text-nc  hover:text-nc shadow-sm drop-shadow-sm border-n1 hover:bg-n1/85 items-center [&_svg]:inline-flex align-middle px-3 font-normal text-3 **:text-nc/90 hover:**:text-nc;
   &:hover {
     @apply !bg-n1/80 text-nc **:text-nc;
@@ -37,24 +39,16 @@
 }
 
 @utility btn-ghost {
-  --btn-depth: 1;
-  --btn-noise: 1;
   @apply text-3 font-normal gap-3 px-3;
   &:hover {
-    --btn-depth: 1;
-    --btn-noise: 1;
     @apply border-b3/60 bg-b2/80;
   }
   &.btn-active {
-    --btn-depth: 1;
-    --btn-noise: 1;
     @apply bg-b2/60 border-b3/60;
   }
 }
 
 @utility btn-ghost-outline {
-  --btn-depth: 1;
-  --btn-noise: 1;
   background-image: url(--btn-depth), url(--btn-noise);
   @apply cursor-pointer !bg-transparent  hover:inset-shadow-xxs has-checked:not-hover:shadow-xs has-not-checked:not-hover:shadow-black/8 has-checked:not-hover:drop-shadow-xs   btn-ghost !border !border-b3/60 shadow-sm;
 

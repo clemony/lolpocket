@@ -62,18 +62,18 @@ function verifySignIn() {
               {{ item.name }}
             </NavigationMenuTrigger>
 
-            <component
-              :is="item.component"
+            <NavigationMenuViewport
+              class="translate-y-3 w-(--reka-navigation-menu-viewport-width) h-(--reka-navigation-menu-viewport-height)  ">
+              <component
+                :is="item.component"
 
-              @open:sign-in="verifySignIn()" />
+                @open:sign-in="verifySignIn()" />
+            </NavigationMenuViewport>
           </NavigationMenuItem>
         </template>
 
         <NavigationMenuIndicator class="-translate-y-1 drop-shadow-xs scale-150" />
       </NavigationMenuList>
-
-      <NavigationMenuViewport
-        class="translate-y-3 w-(--reka-navigation-menu-viewport-width) h-(--reka-navigation-menu-viewport-height)  " />
     </NavigationMenu>
     <Grow />
     <SidebarTriggerPanel />

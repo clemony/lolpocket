@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-const { navigateChildren, childRoutes } = useHandleSummoner()
-console.log('childRoutes: ', childRoutes)
+const { childRoutes } = useHandleSummoner()
 
 const route = useRoute()
 </script>
@@ -19,8 +18,8 @@ const route = useRoute()
       :key="item.name"
       role="tab"
       :value="item.name.toString()"
-      :class="cn('group/tab min-w-22 max-w-44 grow   tab ', { 'tab-active ': route.name == item.name, 'order-3': item.name == 'live', 'order-4': item.name == 'profile settings' })"
-      @click="navigateChildren(item.path)">
+      :class="cn('group/tab min-w-22 max-w-44 grow   tab ', { 'tab-active ': route.name == item.name })"
+      @click="navigateTo(item.path)">
       {{ item.name?.toString().replace('profile ', '') }}
     </li>
 

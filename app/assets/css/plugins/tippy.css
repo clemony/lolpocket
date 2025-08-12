@@ -59,16 +59,24 @@
   }
 
   .tippy-box[data-theme~="basic"] {
-    @apply border border-b3 bg-b1/85 rounded-field backdrop-blur-md text-bc/90 **:text-2 drop-shadow-[1px_3px_2px_#00000020] shadow-none py-2;
+    @apply border border-b3 bg-b1/90 rounded-field backdrop-blur-md text-bc/90 font-medium capitalize **:text-2 drop-shadow-[1px_3px_2px_#00000020] shadow-none py-1.5 z-1;
     & > .tippy-svg-arrow {
-      @apply drop-shadow-[0px_1px_0_#00000016];
+      @apply drop-shadow-[0px_-1px_0_#00000016] !z-0;
     }
     & > .tippy-svg-arrow > svg:first-child {
       @apply fill-b4 scale-90;
     }
     & > .tippy-svg-arrow > svg:last-child {
-      @apply fill-b1 scale-90;
+      @apply !fill-b1 text-b1 scale-90;
     }
+    &[data-placement="bottom"] {
+      @apply inset-shadow-sm-x;
+      & > .tippy-svg-arrow > svg:first-child,
+      & > .tippy-svg-arrow > svg:last-child {
+        @apply !translate-y-4.5 -translate-x-1.25;
+      }
+    }
+
   }
 
   .tippy-box[data-theme~="field"] {

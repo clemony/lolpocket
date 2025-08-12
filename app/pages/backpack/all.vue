@@ -14,6 +14,7 @@ import TableRole from 'components/table/components/TableRole.vue'
 import TableRune from 'components/table/components/TableRune.vue'
 import TableSpell from 'components/table/components/TableSpell.vue'
 import TableTags from 'components/table/components/TableTags.vue'
+import { pocketTheme } from 'components/table/theme/tableTheme'
 
 const emit = defineEmits(['update:gridApi'])
 
