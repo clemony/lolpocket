@@ -1,5 +1,5 @@
 export async function useFetchSummonerData(queryPuuid: string) {
-  const summoner = await $fetch<Summoner>('/api/riot/get-summoner-data', {
+  const summoner = await $fetch<Summoner>('/api/riot/fetchSummonerData', {
     query: { puuid: queryPuuid },
   })
   console.log('💠 - useFetchSummonerData - summoner:', summoner)

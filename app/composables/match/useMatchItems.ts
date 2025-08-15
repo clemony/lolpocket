@@ -1,11 +1,10 @@
 export function useMatchItems() {
-  const ix = useIndexStore()
-  const as = useAccountStore()
-  const ss = useSummonerStore()
+  const { matches } = useSummoner(as().userAccount?.riot?.puuid)
 
-  const matches = computed(
-    () => ss.getSummoner(as.userAccount.riot.puuid).matches.simplified,
-  )
+  const player = matches.value.map(m => ({
+    patch: m.gamePatch,
+    data: m.participants.find(p => p.puuid == as().userAccount.riot.puuid),
+  }))
 
   const itemStats = new Map<
     number,
@@ -15,7 +14,7 @@ export function useMatchItems() {
       losses: number
       winrate: number
       matchIndexes: number[]
-      gameVersions: number[]
+      gamePatches: number[]
     }
   >()
 
@@ -29,17 +28,17 @@ export function useMatchItems() {
 
     itemStats.clear()
 
-    matches.value.forEach((match, index) => {
-      const { win, gameVersion } = match
+    player.forEach((match, index) => {
+      const { data, patch } = match
 
       const items = [
-        match.item0,
-        match.item1,
-        match.item2,
-        match.item3,
-        match.item4,
-        match.item5,
-        match.item6,
+        data.item0,
+        data.item1,
+        data.item2,
+        data.item3,
+        data.item4,
+        data.item5,
+        data.item6,
       ]
 
       items.forEach((itemId) => {
@@ -53,15 +52,15 @@ export function useMatchItems() {
             losses: 0,
             winrate: 0,
             matchIndexes: [],
-            gameVersions: [],
+            gamePatches: [],
           })
         }
 
         const stat = itemStats.get(itemId)!
         stat.games++
-        win ? stat.wins++ : stat.losses++
+        data.win ? stat.wins++ : stat.losses++
         stat.matchIndexes.push(index)
-        stat.gameVersions.push(gameVersion)
+        stat.gamePatches.push(patch)
         stat.winrate = (stat.wins / stat.games) * 100
       })
     })
@@ -84,14 +83,14 @@ export function useMatchItems() {
           * 100
 
         return {
-          item: ix.itemNameById(itemId),
+          item: ix().itemNameById(itemId),
           games: stats.games,
           win: stats.wins,
           loss: stats.losses,
           winrate: stats.winrate,
           bayesianWinrate,
           matchIndexes: stats.matchIndexes,
-          gameVersions: stats.gameVersions,
+          gamePatches: stats.gamePatches,
         }
       })
       .sort((a, b) => b.bayesianWinrate - a.bayesianWinrate)

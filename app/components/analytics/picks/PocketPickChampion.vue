@@ -4,8 +4,6 @@ const { champion } = defineProps<{
 }>()
 
 const ms = useMatchStore()
-const as = useAccountStore()
-const ss = useSummonerStore()
 
 const winrateDiff = computed (() => {
   return -1

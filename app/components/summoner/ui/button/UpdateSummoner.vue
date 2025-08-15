@@ -1,13 +1,14 @@
 <script lang="ts" setup>
+import type { VariantProps } from 'class-variance-authority'
 import { motion } from 'motion-v'
 import { ProgressIndicator } from 'reka-ui'
 
 const { summoner, class: className, variant = 'shadow', size = 'md', showIcon, circle, tipSide = 'top' } = defineProps<{
   summoner: Summoner
   class?: HTMLAttributes['class']
-  text?: boolean | null
-  variant?: any
-  size?: any
+  text?: boolean | string | null
+  variant?: VariantStyleProps['variant']
+  size?: VariantStyleProps['size']
   showIcon?: boolean
   circle?: boolean
   tipSide?: Side
@@ -25,7 +26,7 @@ const { throttled: refresh, cooldown, isLoading } = throttleFunction(
 
 const tip = computed (() =>
   `Updated:
-        ${formatTimeAgo(summoner.matches?.lastUpdate, 'short')}
+        ${formatTimeAgo(summoner.lastMatchUpdate, 'short')}
         ${cooldown.value?.seconds ? `${cooldown.value?.seconds} cd` : ''}`,
 )
 </script>
@@ -75,7 +76,7 @@ const tip = computed (() =>
           v-if="showIcon"
           name="mingcute:refresh-2-line"
           class="mr-3 -ml-2 size-5" />
-        update
+        {{ typeof text == 'string' ? text : typeof text == 'boolean' ? 'update' : '' }}
       </span>
       <div
         v-if="cooldown"

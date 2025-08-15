@@ -121,6 +121,8 @@ export default defineAppConfig({
       'star': 'ph:star',
       'star-fill': 'ph:star-fill',
       'heart': 'ph:heart-straight',
+      'heart-sm-fill': 'teenyicons:heart-small-solid',
+      'heart-sm': 'teenyicons:heart-small-outline',
 
       // pic
       'bow': 'mdi:bow-arrow',

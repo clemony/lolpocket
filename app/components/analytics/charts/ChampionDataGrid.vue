@@ -151,7 +151,7 @@ const colDefs: ColDef<any>[] = [
     cellClass: 'font-medium',
   },
   {
-    field: 'gameVersions',
+    field: 'gamePatches',
     headerName: 'Patch',
     cellDataType: 'text',
     minWidth: 180,

@@ -96,7 +96,35 @@ export const useIndexStore = defineStore(
         loadRunes(),
         loadPaths(),
         loadMaps(),
+        loadTitles(),
       ])
+    }
+
+    async function loadBasic() {
+      console.log('💠 - loadBasic - loading basic data...')
+      if (!champions.value.length)
+        await loadChamps()
+
+      if (!items.value.length)
+        await loadItems()
+
+      if (!spells.value.length)
+        await loadSpells()
+
+      if (!runes.value.length)
+        await loadRunes()
+
+      if (!paths.value.length)
+        await loadPaths()
+
+      if (!maps.value.length)
+        await loadMaps()
+
+      if (!skin.value.length)
+        await loadBaseSkins()
+
+      if (!skins.value.length)
+        await loadSkins()
     }
 
     function findInIndex<T extends Record<string, any>>(
@@ -156,6 +184,7 @@ export const useIndexStore = defineStore(
       loadPatch,
       loadSkins,
       loadTitles,
+      loadBasic,
       loadPaths,
       loadAll,
 

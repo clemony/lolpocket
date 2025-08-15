@@ -15,12 +15,12 @@ function getSummonerLink(obj: LinkObject) {
     }
   }
 
-  const { summoner } = useSummoner(as.userAccount.riot.puuid)
+  /* const { summoner } = useSummoner(as.userAccount.riot.puuid) */
 
   return {
     name: `${as.userAccount.riot.name}'s Profile`,
     icon: {
-      name: getSummonerIcon(summoner.value.profileIcon),
+      name: getSummonerIcon(as.userAccount.riot.profileIcon),
       class: 'size-6 rounded-full drop-shadow-sm shadow-sm',
     },
     link: `/summoner/${as.userAccount.riot.region}/${as.userAccount.riot.name}_${as.userAccount.riot.tag}`,

@@ -7,13 +7,15 @@ interface RoleStats {
 }
 
 export function useChampionRoleStats(
-  matches: SimplifiedMatchData[],
+  matches: MatchData[],
   championName: string,
 ): RoleStats[] {
   const grouped: Record<string, RoleStats> = {}
 
-  for (const match of matches) {
-    if (match.championName !== championName)
+  const player = matches.map(m => m.participants.find(p => p.puuid == as().userAccount.riot.puuid))
+
+  for (const match of player) {
+    if (ix().champNameById(match.championId) !== championName)
       continue
 
     const role = match.teamPosition || 'UNKNOWN'

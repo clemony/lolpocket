@@ -17,18 +17,17 @@ export interface Summoner {
     solo?: RankedEntry
     flex?: RankedEntry
   }
-  lastUpdate?: Date
-  matches?: {
-    full: MatchData[]
-    simplified: SimplifiedMatchData[]
-    lastUpdate: Date
-  }
+  matchIds: string[]
+  processedMatchIds: string[]
+  repeatedTeammates?: Record<string, StoredTeammate>
   mastery?: {
     totalPoints: number
     totalLevels: number
     champions: ChampionMastery[]
     lastUpdate: Date
   }
+  lastMatchUpdate: Date
+  lastUpdate?: Date
 }
 
 export interface RankedEntry {

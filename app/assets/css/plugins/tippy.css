@@ -59,7 +59,7 @@
   }
 
   .tippy-box[data-theme~="basic"] {
-    @apply border border-b3 bg-b1/90 rounded-field backdrop-blur-md text-bc/90 font-medium capitalize **:text-2 drop-shadow-[1px_3px_2px_#00000020] shadow-none py-1.5 z-1;
+    @apply border border-b3 bg-b1/90 rounded-field backdrop-blur-md text-bc/90 font-medium capitalize **:text-2 drop-shadow-[1px_2px_2px_#00000020] shadow-none py-1.5 z-1;
     & > .tippy-svg-arrow {
       @apply drop-shadow-[0px_-1px_0_#00000016] !z-0;
     }

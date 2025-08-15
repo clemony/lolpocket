@@ -1,123 +1,109 @@
 import { defineStore } from 'pinia'
 
+export interface StoredTeammate {
+  riotIdGameName: string
+  profileIcon: number
+  games: number
+  wins: number
+}
+
 export const useSummonerStore = defineStore(
   'SummonerStore',
   () => {
     const summoners = ref<Record<string, Summoner>>({})
 
-    // 🔄 Centralized setter: always normalizes
+    const { addMatches, sortMatchIdsByCreation, getAllMatchIds } = useIndexedDB()
+
+    // --- SETTER ---
     async function setSummoner(rawSummoner: Summoner) {
       const normalized = await normalizeSummonerForStore(rawSummoner)
       summoners.value[normalized.puuid] = normalized
     }
 
-    async function mergeSummonerData(
-      puuid: string,
-      partial: Partial<Summoner>,
-    ) {
+    async function mergeSummonerData(puuid: string, partial: Partial<Summoner>) {
       const existing = summoners.value[puuid]
       if (!existing)
         return
-
-      summoners.value[puuid] = {
-        ...existing,
-        ...partial,
-      }
+      summoners.value[puuid] = { ...existing, ...partial }
     }
 
     const getSummoner = (puuid: string) => summoners.value[puuid] || null
 
+    // --- RESOLVE SUMMONER ---
     async function resolveSummoner(identifier: {
       puuid?: string
       region?: string
       name?: string
       tag?: string
     }): Promise<Summoner> {
-      if (
-        !identifier.puuid
-        && (!identifier.region || !identifier.name || !identifier.tag)
-      ) {
-        throw new Error(
-          'resolveSummoner: Must provide either puuid or region + name + tag',
-        )
+      if (!identifier.puuid && (!identifier.region || !identifier.name || !identifier.tag))
+        throw new Error('Must provide puuid or region+name+tag')
+
+      // Lookup cached summoner
+      let cached: Summoner | null = null
+      if (identifier.puuid)
+        cached = getSummoner(identifier.puuid)
+      if (cached && !isStale(cached.lastUpdate))
+        return cached
+
+      console.log('identifier.puuid: ', identifier.puuid)
+      // Fetch summoner via API
+
+      let params: Record<string, string>
+
+      if (typeof identifier === 'string') {
+        params = { puuid: identifier }
       }
-
-      // 1. Try to resolve by puuid
-      if (identifier.puuid) {
-        const existing = getSummoner(identifier.puuid)
-
-        const shouldRefresh = !existing || isStale(existing.lastUpdate)
-
-        if (!shouldRefresh)
-          return existing
-
-        const fetched = await useFetchSummonerData(identifier.puuid)
-        await setSummoner({
-          ...fetched,
-          lastUpdate: new Date(),
-          matches: existing?.matches, // preserve match data
-          mastery: existing?.mastery, // preserve mastery data
-        })
-        return fetched
+      else if ('puuid' in identifier && typeof identifier.puuid === 'string') {
+        params = { puuid: identifier.puuid }
       }
-
-      // 2. Try to match cached summoner by region + name + tag
-      const match = Object.values(summoners.value).find(
-        s =>
-          s.region === identifier.region
-          && s.name?.toLowerCase() === identifier.name?.toLowerCase()
-          && s.tag?.toLowerCase() === identifier.tag?.toLowerCase(),
-      )
-
-      if (match)
-        return match
-
-      // 3. Fallback to API-based resolution if still not found
-      try {
-        const resolved = await $fetch<Summoner>('/api/resolve-summoner', {
-          params: {
-            region: identifier.region,
-            name: identifier.name,
-            tag: identifier.tag,
-          },
-        })
-
-        const summonerId = {
-          ...resolved,
+      else {
+        params = {
+          region: identifier.region,
           name: identifier.name,
           tag: identifier.tag,
-          lastUpdate: new Date(),
         }
-        await setSummoner(summonerId)
-        return resolved
       }
-      catch (error) {
-        console.error(
-          'resolveSummoner: Failed to resolve summoner via API',
-          error,
-        )
-        throw error
-      }
+
+      const resolved = await $fetch<Summoner>('/api/riot/resolveSummoner', { params })
+      console.log('resolved: ', resolved)
+
+      // Normalize: fetch any missing matches via our central API
+
+      await setSummoner(resolved)
+
+      return getSummoner(resolved.puuid)!
     }
 
+    // --- CLEAR METHODS ---
     const clearSummoner = (puuid: string) => {
       delete summoners.value[puuid]
     }
 
-    // 🔂 Optionally keep cache small
-    const limitCache = (max: number) => {
-      const keys = Object.keys(summoners.value)
-      if (keys.length > max) {
-        const oldest = keys[0]
-        clearSummoner(oldest)
-      }
-    }
-
-    // 🧼 If you ever want a true clear-all method
     const clearAll = () => {
       summoners.value = {}
-      console.log(summoners.value)
-      console.log('💠 - clearAll - summoners.value:', summoners.value)
+    }
+
+    /** ***********  ✨ Windsurf Command ⭐  */
+    /**
+     * Clears the oldest summoner from the cache if the size exceeds the maximum limit.
+     *
+     * @param {number} max - The maximum number of summoners to keep in the cache.
+     */
+    /** *****  2cdd15c3-021a-4bdc-a74d-48cdcca40977  */
+    const limitCache = (max: number) => {
+      const keys = Object.keys(summoners.value)
+      if (keys.length > max)
+        clearSummoner(keys[0])
+    }
+
+    // --- GET MATCHES FOR SUMMONER ---
+    async function getMatchesForSummoner(puuid: string): Promise<MatchData[]> {
+      const summoner = getSummoner(puuid)
+      if (!summoner?.matchIds?.length)
+        return []
+      const matches = await matchDB.matchData.bulkGet(summoner.matchIds)
+      return matches.filter(Boolean) as MatchData[]
     }
 
     return {
@@ -129,6 +115,7 @@ export const useSummonerStore = defineStore(
       clearSummoner,
       clearAll,
       limitCache,
+      getMatchesForSummoner,
     }
   },
   {

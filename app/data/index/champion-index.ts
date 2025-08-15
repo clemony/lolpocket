@@ -1,4 +1,4 @@
-// Updated Patch 25.15 - 08/06/2025 11:04:41 PM CDT
+// Updated Patch 25.16 - 08/14/2025 08:03:16 PM CDT
 
 export const championIndex: ChampionIndex[] = [
   {
@@ -137,14 +137,14 @@ export const championIndex: ChampionIndex[] = [
     "name": "Diana"
   },
   {
-    "id": 119,
-    "key": "Draven",
-    "name": "Draven"
-  },
-  {
     "id": 36,
     "key": "DrMundo",
     "name": "Dr. Mundo"
+  },
+  {
+    "id": 119,
+    "key": "Draven",
+    "name": "Draven"
   },
   {
     "id": 245,
@@ -277,6 +277,11 @@ export const championIndex: ChampionIndex[] = [
     "name": "Jinx"
   },
   {
+    "id": 897,
+    "key": "KSante",
+    "name": "K'Sante"
+  },
+  {
     "id": 145,
     "key": "Kaisa",
     "name": "Kai'Sa"
@@ -340,11 +345,6 @@ export const championIndex: ChampionIndex[] = [
     "id": 96,
     "key": "KogMaw",
     "name": "Kog'Maw"
-  },
-  {
-    "id": 897,
-    "key": "KSante",
-    "name": "K'Sante"
   },
   {
     "id": 7,
@@ -420,11 +420,6 @@ export const championIndex: ChampionIndex[] = [
     "id": 21,
     "key": "MissFortune",
     "name": "Miss Fortune"
-  },
-  {
-    "id": 62,
-    "key": "MonkeyKing",
-    "name": "Wukong"
   },
   {
     "id": 82,
@@ -780,6 +775,11 @@ export const championIndex: ChampionIndex[] = [
     "id": 19,
     "key": "Warwick",
     "name": "Warwick"
+  },
+  {
+    "id": 62,
+    "key": "MonkeyKing",
+    "name": "Wukong"
   },
   {
     "id": 498,

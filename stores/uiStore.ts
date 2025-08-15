@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 
 export const useUiStore = defineStore('UiStore', () => {
   const sidebarExpanded = ref<boolean>(true)
-  const tabsSticky = ref<boolean>(false)
+  const showMiniNav = ref<boolean>(false)
   const activeSidebarContent = ref<string>(null)
   const settingsOpen = ref<boolean>(false)
   const sidebarMenuOpen = ref<boolean>(false)
@@ -46,7 +46,7 @@ export const useUiStore = defineStore('UiStore', () => {
 
   return {
     sidebarExpanded,
-    tabsSticky,
+    showMiniNav,
     toggleSidebar,
     settingsOpen,
     sidebarMenuOpen,

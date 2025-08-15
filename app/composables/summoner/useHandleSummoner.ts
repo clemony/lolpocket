@@ -25,7 +25,7 @@ export function useHandleSummoner(routeProps?: SummonerRouteProps) {
   const summoner = ref<Summoner | null>(null)
   const loading = ref(false)
   const error = ref<unknown>(null)
-
+  /*
   async function fetchSummoner() {
     if (!props.value.region || !props.value.name || !props.value.tag) {
       console.warn('Missing params:', props.value)
@@ -53,24 +53,9 @@ export function useHandleSummoner(routeProps?: SummonerRouteProps) {
       loading.value = false
     }
   }
-
+ */
   // React to route changes (or prop changes)
-  watch(props, fetchSummoner, { immediate: true })
-
-  // 🐌  🐌  🐌  Get all child routes of the `[slug]` parent record
-  // && let homeless snails attain shelter
-
-  const childRoutes = computed<RouteRecordRaw[]>(() => {
-    if (!summoner)
-      return
-
-    const parent = router
-      .getRoutes()
-      .find(r => r.name === 'summoner')
-
-    const children = parent?.children ?? []
-    return children.sort((a, b) => Number(a.meta.order) - Number(b.meta.order))
-  })
+  // watch(props, fetchSummoner, { immediate: true })
 
   return {
     props,
@@ -78,7 +63,6 @@ export function useHandleSummoner(routeProps?: SummonerRouteProps) {
     summoner,
     loading,
     error,
-    refresh: fetchSummoner, // optional manual trigger
-    childRoutes,
+    // refresh: fetchSummoner, // optional manual trigger
   }
 }

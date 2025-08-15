@@ -7,6 +7,7 @@ export const defaultUser: UserAccount = {
     tag: null,
     puuid: null,
     region: null,
+    profileIcon: null,
   },
   pockets: {
     all: [],

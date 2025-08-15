@@ -41,7 +41,7 @@ const wrapperVariants = {
     visibility: 'visible',
     transition: {
 
-      delay: 0.2,
+      delay: 0,
     },
   },
   hidden: {
@@ -65,8 +65,8 @@ const wrapperVariants = {
           exit="hidden"
           :transition="{
             type: 'spring',
-            duration: 0.3,
-            bounce: 0.2,
+            duration: 0.2,
+            bounce: 0.3,
           }"
           v-bind="{ forwarded }"
           :class="

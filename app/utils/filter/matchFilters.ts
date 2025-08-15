@@ -1,5 +1,6 @@
 export function matchFilters(
-  match: SimplifiedMatchData,
+  puuid: string,
+  match: MatchData,
   options: MatchFilter,
 ) {
   const {
@@ -13,10 +14,12 @@ export function matchFilters(
 
   const ds = useDataStore()
 
+  const player = match.participants.find(p => p.puuid == puuid)
+
   const matchesPatch
     = !patch
       || patch === ds.currentPatch
-      || match.gameVersion === patch
+      || match.gamePatch === patch
 
   const matchesQueue
     = !queue
@@ -26,7 +29,7 @@ export function matchFilters(
   const matchesChampion
     = !champion
       || champion === null
-      || match.championName === champion
+      || ix().champNameById(player.championId) === champion
 
   const matchesPlayer
     = !ally
@@ -36,7 +39,7 @@ export function matchFilters(
     = ignoreRole
       || !role
       || role === 'ALL'
-      || match.teamPosition === role
+      || player.teamPosition === role
 
   return matchesPatch && matchesQueue && matchesChampion && matchesPlayer && matchesRole
 }

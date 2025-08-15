@@ -1,13 +1,10 @@
 <script setup lang="ts">
 definePageMeta({
-  name: 'champions',
-
-  meta: {
-    title: 'Champions',
-    section: 'library',
-    icon1: 'lol-champ',
-  },
+  title: 'Champions',
+  section: 'library',
+  icon1: 'lol-champ',
 })
+
 const cs = useChampStore()
 const { championKeys, filteredKeys, filtered } = useChampionFilter(cs.championFilter)
 

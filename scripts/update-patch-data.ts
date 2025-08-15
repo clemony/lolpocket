@@ -24,12 +24,7 @@ async function main() {
     run('generate:item-stats', 'tsx scripts/generate/generate-item-stats.ts')
 
     // --- Champions ---
-    run('fetch:champions', 'tsx scripts/fetch/fetch-champions.ts')
-    run('generate:champion-index', 'tsx scripts/generate/generate-champion-index.ts')
-    run('generate:champions', 'tsx scripts/generate/generate-champions.ts')
-    run('generate:champion-skins', 'tsx scripts/generate/generate-champion-skins.ts')
-    run('generate:champions-lite', 'tsx scripts/generate/generate-champions-lite.ts')
-    run('generate:max-stats', 'tsx scripts/generate/generate-max-stats.ts')
+    run('fetch:champions', 'tsx scripts/champions/entry.ts')
 
     // --- Runes ---
     run('fetch:runes', 'tsx scripts/fetch/fetch-runes.ts')

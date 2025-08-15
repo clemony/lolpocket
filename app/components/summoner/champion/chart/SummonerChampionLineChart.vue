@@ -1,15 +1,17 @@
 <script lang="ts" setup>
-const { class: className, summoner, championName } = defineProps<{
+const { class: className, summoner, championName, matches } = defineProps<{
   class?: HTMLAttributes['class']
   summoner?: Summoner
   championName: string
+  matches: MatchData[]
 }>()
+/* const { matches } = useSummoner(as().userAccount?.riot?.puuid) */
 
 const timeline = computed(() => {
   if (!summoner)
     return null
 
-  return useChampionWinrateTimeline(summoner?.matches?.simplified, championName)
+  return useChampionWinrateTimeline(summoner.puuid, matches, championName)
 })
 watch(() => timeline.value, (newVal) => {
   console.log('💠 - watch - newVal:', newVal)

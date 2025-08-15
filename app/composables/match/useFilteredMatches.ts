@@ -2,22 +2,22 @@ import { matchFilters } from '~/utils/filter/matchFilters'
 
 export function useFilteredMatches(puuid: string, filters: MatchFilter) {
   const ss = useSummonerStore()
-  const summoner = ss.getSummoner(puuid)
-  const simplifiedMatches = ref<SimplifiedMatchData[]>([])
+  const { matches: data } = useSummoner(puuid)
+  const matches = ref<MatchData[]>([])
 
-  if (summoner) {
-    simplifiedMatches.value = summoner.matches.simplified
+  if (data) {
+    matches.value = data.value
   }
 
   const matchMap = computed(() => {
     return new Map(
-      summoner.matches.full.map(match => [match.info.gameEndTimestamp, match]),
+      data.value.map(match => [match.gameEndTimestamp, match]),
     )
   })
 
-  const filteredSimplified = computed(() => {
-    return simplifiedMatches.value.filter(match =>
-      matchFilters(match, {
+  const filtered = computed(() => {
+    return matches.value.filter(match =>
+      matchFilters(puuid, match, {
         patch: filters.patch ?? null,
         queue: filters.queue ?? null,
         champion: filters.champion ?? null,
@@ -26,9 +26,9 @@ export function useFilteredMatches(puuid: string, filters: MatchFilter) {
       }),
     )
   })
-  const filteredSimplifiedNoRole = computed(() => {
-    return simplifiedMatches.value.filter(match =>
-      matchFilters(match, {
+  const filteredNoRole = computed(() => {
+    return matches.value.filter(match =>
+      matchFilters(puuid, match, {
         patch: filters.patch ?? null,
         queue: filters.queue ?? null,
         champion: filters.champion ?? null,
@@ -41,7 +41,7 @@ export function useFilteredMatches(puuid: string, filters: MatchFilter) {
   // Check if matches are still loading
   const loading = computed(() => {
     return (
-      simplifiedMatches.value.length === 0 || summoner.matches.full.length === 0
+      data.value.length === 0
     )
   })
 
@@ -50,23 +50,23 @@ export function useFilteredMatches(puuid: string, filters: MatchFilter) {
     if (loading.value)
       return []
 
-    // Ensure we only filter when simplifiedMatches and fullMatches are available
-    return filteredSimplified.value
+    // Ensure we only filter when matches  are available
+    return filtered.value
       .map(simplified => matchMap.value.get(simplified.gameEndTimestamp))
       .filter(Boolean) // Ensure no undefined matches
-      .sort((a, b) => b.info.gameEndTimestamp - a.info.gameEndTimestamp)
+      .sort((a, b) => b.gameEndTimestamp - a.gameEndTimestamp)
   })
   const championsPlayed = computed(() => {
     return Array.from(
-      new Set(simplifiedMatches.value.map(m => m.championName)),
+      new Set(matches.value.map(p => ix().champNameById(p.participants.find(p => p.puuid == puuid).championId))),
     )
   })
 
   return {
     filteredMatches,
     loading,
-    filteredSimplified,
-    filteredSimplifiedNoRole,
+    filtered,
+    filteredNoRole,
     championsPlayed,
   }
 }

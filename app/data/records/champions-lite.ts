@@ -1,4 +1,4 @@
-// Updated Patch 25.15 - 08/06/2025 11:24:10 PM CDT
+// Updated Patch 25.16 - 08/14/2025 07:56:28 PM CDT
 
 export const championsLite: ChampionLite[] = [
   {

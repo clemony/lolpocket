@@ -1,7 +1,6 @@
-export async function useMatchChampions(matches: SimplifiedMatchData[]) {
-  const ix = useIndexStore()
+export async function useMatchChampions(puuid: string, matches: MatchData[]) {
   const championStats = new Map<
-    string,
+    number,
     {
       name: string
       id: number
@@ -14,7 +13,7 @@ export async function useMatchChampions(matches: SimplifiedMatchData[]) {
       assists: number
       killParticipation: number
       matchIndexes: number[]
-      gameVersions: number[]
+      gamePatches: number[]
     }
   >()
 
@@ -29,14 +28,15 @@ export async function useMatchChampions(matches: SimplifiedMatchData[]) {
     championStats.clear()
 
     matches.forEach((match, index) => {
-      const champ = match.championName
+      const player = match.participants.find(p => p.puuid == puuid)
+      const champ = player?.championId
       if (!champ)
         return
 
       if (!championStats.has(champ)) {
         championStats.set(champ, {
-          name: champ,
-          id: match.championId,
+          name: ix().champNameById(champ),
+          id: champ,
           games: 0,
           wins: 0,
           losses: 0,
@@ -46,19 +46,19 @@ export async function useMatchChampions(matches: SimplifiedMatchData[]) {
           assists: 0,
           killParticipation: 0,
           matchIndexes: [],
-          gameVersions: [],
+          gamePatches: [],
         })
       }
 
       const stats = championStats.get(champ)!
       stats.games++
-      match.win ? stats.wins++ : stats.losses++
-      stats.kills += match.kills
-      stats.deaths += match.deaths
-      stats.assists += match.assists
-      stats.killParticipation += match.killParticipation
+      player.win ? stats.wins++ : stats.losses++
+      stats.kills += player.kills
+      stats.deaths += player.deaths
+      stats.assists += player.assists
+      stats.killParticipation += player.challenges.killParticipation
       stats.matchIndexes.push(index)
-      stats.gameVersions.push(match.gameVersion)
+      stats.gamePatches.push(match.gamePatch)
       stats.winrate = (stats.wins / stats.games) * 100
     })
 
@@ -71,7 +71,7 @@ export async function useMatchChampions(matches: SimplifiedMatchData[]) {
         / totalGames || 0
 
     bayesianChampions.value = [...championStats.entries()]
-      .map(([championName, stats]) => {
+      .map(([championId, stats]) => {
         const adjustedWeight = stats.games ** 0.7
         const confidence = adjustedWeight / (adjustedWeight + 15)
         const bayesianWinrate
@@ -84,7 +84,7 @@ export async function useMatchChampions(matches: SimplifiedMatchData[]) {
         const avgDeaths = stats.deaths / stats.games
         const avgAssists = stats.assists / stats.games
         const champion = computed(() => {
-          return ix.championByKey(championName)
+          return ix().championByKey(ix().champKeyById(championId))
         })
 
         return {
@@ -101,7 +101,7 @@ export async function useMatchChampions(matches: SimplifiedMatchData[]) {
           avgAssists: Number(avgAssists.toFixed(2)),
           avgKp: Number((avgKP * 100).toFixed(2)),
           matchIndexes: stats.matchIndexes,
-          gameVersions: stats.gameVersions,
+          gamePatches: stats.gamePatches,
         }
       })
       .sort((a, b) => b.bayesianWinrate - a.bayesianWinrate)

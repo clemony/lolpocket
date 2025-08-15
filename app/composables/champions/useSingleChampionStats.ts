@@ -1,5 +1,5 @@
 export function useSingleChampionStats(
-  matches: SimplifiedMatchData[],
+  matches: MatchData[],
   championName: string,
 ) {
   const allStats = getChampionStatsMap(matches)

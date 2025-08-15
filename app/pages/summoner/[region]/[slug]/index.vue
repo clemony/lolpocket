@@ -13,21 +13,24 @@ definePageMeta({
 </script>
 
 <template>
-  <div
-    :class="cn('flex mx-auto  gap-6  bg-b1 w-full z-auto justify-start items-start')">
-    <div class="w-[43%] grid z-auto justify-end px-6">
-      <MatchHistoryPageAside :summoner />
+  <main class="size-full">
+    <div
+      :class="cn('flex mx-auto  gap-6 sticky  bg-b1  z-1    w-full justify-start items-start')">
+      <div class="w-[43%] grid z-auto sticky top-0 mb-42 justify-end pl-6 pr-8">
+        <MatchHistoryAside :summoner />
+      </div>
+      <SlideInTopOutBottom
+        group
+        :class="cn('flex flex-col gap-10  justify-center w-[57%] pl-8 mpr-4 pb-px')">
+        <SummonerChampionModule
+          v-if="ms().mf?.champion"
+          :summoner
+          :champion-name="ms().mf?.champion" />
+        <MatchList
+          v-if="summoner.puuid"
+          :summoner />
+      </SlideInTopOutBottom>
     </div>
-    <SlideInTopOutBottom
-      group
-      :class="cn('flex flex-col gap-10  justify-center w-[57%] px-4 pb-px')">
-      <SummonerChampionModule
-        v-if="ms().mf?.champion"
-        :summoner
-        :champion-name="ms().mf?.champion" />
-      <MatchList
-        v-if="summoner.puuid"
-        :puuid="summoner.puuid" />
-    </SlideInTopOutBottom>
-  </div>
+    <SiteFooter />
+  </main>
 </template>

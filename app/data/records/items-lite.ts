@@ -1,4 +1,4 @@
-// Updated Patch 25.15 - 07/31/2025 04:43:09 PM CDT
+// Updated Patch 25.16 - 08/14/2025 07:54:23 PM CDT
 
 export const itemsLite: ItemLite[] = [
   {
@@ -437,7 +437,7 @@ export const itemsLite: ItemLite[] = [
     "cost": 400,
     "tags": [
       "Mage",
-      "Mana and_reg",
+      "Mana and reg",
       "Onhit effects"
     ],
     "maps": [
@@ -786,7 +786,7 @@ export const itemsLite: ItemLite[] = [
     "stats": {},
     "cost": 50,
     "tags": [
-      "Health and_reg"
+      "Health and reg"
     ],
     "maps": [
       11,
@@ -903,7 +903,7 @@ export const itemsLite: ItemLite[] = [
     "stats": {},
     "cost": 150,
     "tags": [
-      "Health and_reg"
+      "Health and reg"
     ],
     "maps": [
       11,
@@ -1040,7 +1040,7 @@ export const itemsLite: ItemLite[] = [
     "stats": {},
     "cost": 500,
     "tags": [
-      "Health and_reg",
+      "Health and reg",
       "Movement"
     ],
     "maps": [
@@ -1062,7 +1062,7 @@ export const itemsLite: ItemLite[] = [
     "cost": 500,
     "tags": [
       "Ability power",
-      "Mana and_reg",
+      "Mana and reg",
       "Onhit effects"
     ],
     "maps": [
@@ -1124,7 +1124,7 @@ export const itemsLite: ItemLite[] = [
     "stats": {},
     "cost": 500,
     "tags": [
-      "Health and_reg"
+      "Health and reg"
     ],
     "maps": [
       30
@@ -2584,7 +2584,7 @@ export const itemsLite: ItemLite[] = [
       "Mage",
       "Tank",
       "Support",
-      "Mana and_reg"
+      "Mana and reg"
     ],
     "maps": [
       12,
@@ -3629,7 +3629,7 @@ export const itemsLite: ItemLite[] = [
     "cost": 2900,
     "tags": [
       "Marksman",
-      "Mana and_reg",
+      "Mana and reg",
       "Onhit effects"
     ],
     "maps": [
@@ -4757,7 +4757,7 @@ export const itemsLite: ItemLite[] = [
     "cost": 3000,
     "tags": [
       "Marksman",
-      "Health and_reg"
+      "Health and reg"
     ],
     "maps": [
       11,
@@ -5894,7 +5894,8 @@ export const itemsLite: ItemLite[] = [
     "name": "Flesheater",
     "rank": "Special",
     "stats": {
-      "health": 500
+      "health": 500,
+      "abilityHaste": 20
     },
     "cost": 0,
     "maps": [

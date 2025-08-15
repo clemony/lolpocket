@@ -20,6 +20,7 @@ export const useAccountStore = defineStore(
         tag: null,
         puuid: null,
         region: null,
+        profileIcon: null,
       },
       pockets: {
         all: [],

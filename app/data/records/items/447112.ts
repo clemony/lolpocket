@@ -19,7 +19,8 @@ const item: Item =  {
     }
   ],
   "stats": {
-    "health": 500
+    "health": 500,
+    "abilityHaste": 20
   },
   "shop": {
     "prices": {

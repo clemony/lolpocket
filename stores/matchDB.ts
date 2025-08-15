@@ -4,7 +4,6 @@ import Dexie from 'dexie'
 
 export class MatchDexie extends Dexie {
   matchData!: Table<MatchData, string> // full match
-  simplifiedMatchData!: Table<SimplifiedMatchData, string> // simplified
 
   constructor() {
     super('MatchDB')

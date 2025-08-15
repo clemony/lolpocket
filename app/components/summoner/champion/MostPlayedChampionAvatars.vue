@@ -4,10 +4,6 @@ const { class: className, summoner } = defineProps<{
   summoner: Summoner
 }>()
 
-const { data } = useSummonerChampions(summoner.matches.simplified, { mode: 'lite', limit: 5 })
-watch(() => data.value, (newVal) => {
-  console.log('💠 - watch - newVal:', newVal)
-})
 /* const champions = computed (() => {
 if (!summoner || !championStats.value)
 return

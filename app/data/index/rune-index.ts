@@ -1,4 +1,4 @@
-// Updated Patch 25.15 - 07/31/2025 04:44:35 PM CDT
+// Updated Patch 25.16 - 08/14/2025 07:56:31 PM CDT
 
 export const runeIndex: RuneIndex[] = [
   {

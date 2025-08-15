@@ -2,7 +2,8 @@ import type { VariantProps } from 'class-variance-authority'
 import { cva } from 'class-variance-authority'
 
 // One master style definition
-export const inputVariants = cva('data-[state=active]:btn-active text-start data-[state=open]:btn-active has-[span:empty]:gap-0 ', {
+// export
+const inputVariants = cva('data-[state=active]:btn-active text-start data-[state=open]:btn-active has-[span:empty]:gap-0 ', {
   variants: {
     variant: {
       'default': '',
@@ -33,5 +34,5 @@ export const inputVariants = cva('data-[state=active]:btn-active text-start data
     size: 'default',
   },
 })
-
-export type InputVariants = VariantProps<typeof inputVariants>
+/*
+export type InputVariants = VariantProps<typeof inputVariants> */

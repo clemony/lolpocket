@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 async function clear() {
-  const { clearMatches } = useMatchDexie()
+  const { clearMatches } = useIndexedDB()
   await clearMatches()
 }
 </script>

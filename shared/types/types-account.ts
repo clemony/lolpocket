@@ -14,6 +14,7 @@ export interface UserAccount {
     name: string
     tag: string
     region: string
+    profileIcon: string
   }
   pockets: UserPockets
   inbox: {

@@ -33,7 +33,7 @@ client.auth.onAuthStateChange(async (event, session) => {
         const { fetchSummoner, summoner } = useSummoner(
           as().userAccount.riot.puuid,
         )
-        fetchSummoner()
+      /*   fetchSummoner() */
       }
     }
     router.push('/nexus')
@@ -57,7 +57,7 @@ console.log('💠 - (as().userAccount:', (as().userAccount))
     <!--     <LazyAppCommand /> after:absolute after:bottom-0 after:w-full after:h-1/4 after:bg-neutral after:z-0 -->
     <!-- [ inset id is for Teleports] -->
     <main
-      :class="cn('inset-wrapper relative w-screen overflow-x-hidden *:z-1  ', { 'min-w-screen w-screen': floatingSidebar })">
+      :class="cn('inset-wrapper relative w-screen     overflow-x-hidden *:z-1  ', { 'min-w-screen w-screen': floatingSidebar })">
       <slot />
     </main>
     <NuxtLoadingIndicator
@@ -65,7 +65,7 @@ console.log('💠 - (as().userAccount:', (as().userAccount))
       top: auto;
       bottom: 0;
       height: 5px;
-    background: repeating-linear-gradient(to right, var(--color-b2) 0%, var(--color-b2), var(--color-neutral) 100%);
+    background: repeating-linear-gradient(to right, var(--color-n3) 0%, var(--color-n2), var(--color-neutral) 100%);
     " />
     <Toast
       position="bottom-right"

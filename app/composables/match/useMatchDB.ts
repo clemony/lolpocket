@@ -1,19 +1,13 @@
 import { matchDB } from 'stores/matchDB'
 
-export function useMatchDexie() {
+export function useIndexedDB() {
   const addMatches = async ({
-    full = [],
-    simplified = [],
+    matchData = [],
   }: {
-    full?: MatchData[]
-    simplified?: SimplifiedMatchData[]
+    matchData?: MatchData[]
   }) => {
-    if (full.length) {
-      await matchDB.matchData.bulkPut(full)
-    }
-
-    if (simplified.length) {
-      await matchDB.simplifiedMatchData.bulkPut(simplified)
+    if (matchData.length) {
+      await matchDB.matchData.bulkPut(matchData)
     }
   }
 
@@ -21,22 +15,28 @@ export function useMatchDexie() {
     return await matchDB.matchData.toArray()
   }
 
-  const getAllSimplifiedMatches = async () => {
-    return await matchDB.simplifiedMatchData.toArray()
-  }
-
   const getAllMatchIds = async () => {
     return await matchDB.matchData.orderBy('metadata.matchId').keys()
   }
 
-  const getAllSimplifiedMatchIds = async () => {
-    return await matchDB.simplifiedMatchData.orderBy('matchId').keys()
+  async function getMatchesForSummoner(puuid: string) {
+    const summoner = ss().getSummoner(puuid)
+    if (!summoner)
+      return []
+    return (await matchDB.matchData.bulkGet(summoner.matchIds)).filter(Boolean) as MatchData[]
+  }
+
+  async function sortMatchIdsByCreation(ids: string[]): Promise<string[]> {
+    const matches = await matchDB.matchData.bulkGet(ids)
+    return matches
+      .filter((m): m is MatchData => !!m)
+      .sort((a, b) => b.gameCreation - a.gameCreation)
+      .map(m => m.matchId)
   }
 
   const clearMatches = async () => {
     await Promise.all([
       matchDB.matchData.clear(),
-      matchDB.simplifiedMatchData.clear(),
     ])
   }
 
@@ -45,23 +45,16 @@ export function useMatchDexie() {
       '💠 - refreshMatches (full):',
       await matchDB.matchData.toArray(),
     )
-    console.log(
-      '💠 - refreshMatches (simplified):',
-      await matchDB.simplifiedMatchData.toArray(),
-    )
-    return {
-      full: await matchDB.matchData.toArray(),
-      simplified: await matchDB.simplifiedMatchData.toArray(),
-    }
+    return await matchDB.matchData.toArray()
   }
 
   return {
     addMatches,
     getAllMatches,
-    getAllSimplifiedMatches,
     getAllMatchIds,
-    getAllSimplifiedMatchIds,
+    getMatchesForSummoner,
     clearMatches,
     refreshMatches,
+    sortMatchIdsByCreation,
   }
 }

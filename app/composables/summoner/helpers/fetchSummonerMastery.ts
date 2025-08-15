@@ -18,7 +18,7 @@ export async function fetchSummonerMastery(puuid: string) {
 
   try {
     const result = await $fetch<ChampionMasteryResponse>(
-      '/api/riot/get-summoner-mastery',
+      '/api/riot/fetchSummonerMastery',
       {
         query: { puuid },
       },
