@@ -1,4 +1,4 @@
-// Updated Patch 25.15 - 08/06/2025 11:23:41 PM CDT
+// Updated Patch 25.16 - 08/14/2025 07:55:49 PM CDT
 
 const champion: Champion =  {
   "id": 48,
@@ -252,11 +252,11 @@ const champion: Champion =  {
           40
         ],
         "cooldown": [
+          18,
+          17,
           16,
           15,
-          14,
-          13,
-          12
+          14
         ],
         "targeting": "Location",
         "affects": "Self",

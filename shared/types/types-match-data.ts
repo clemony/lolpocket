@@ -1,24 +1,15 @@
 export interface MatchData {
-  metadata: {
-    dataVersion: string
-    matchId: string
-    participants: string[]
-  }
-  info: {
-    endOfGameResult: string
-    gameCreation: number
-    gameDuration: number
-    gameEndTimestamp: number
-    gameId: number
-    gameMode: string
-    gameName: string
-    gameStartTimestamp: number
-    gameType: string
-    gameVersion: string
-    mapId: number
-    participants: Player[]
-  }
-  platformId: string
+
+  matchId: string
+  endOfGameResult: string
+  gameCreation: number
+  gameDuration: number
+  gameEndTimestamp: number
+  gameMode: string
+  gameStartTimestamp: number
+  gamePatch: number
+  mapId: number
+  participants: Player[]
   queueId: number
   teams: MatchTeam[]
 }
@@ -28,16 +19,6 @@ export interface Player {
   riotIdTagline: string
   puuid: string
   profileIcon: number
-  teamId: number
-  teamPosition: string
-  role: string
-  lane: string
-  win: boolean
-  kills: number
-  deaths: number
-  assists: number
-  championId: number
-  championName: string
   item0: number
   item1: number
   item2: number
@@ -47,57 +28,45 @@ export interface Player {
   item6: number
   summoner1Id: number
   summoner2Id: number
+  teamId: number
+  teamPosition: string
+  championId: number
+  win: boolean
+  kills: number
+  deaths: number
+  assists: number
+  mvpScore: number
   goldEarned: number
-  goldSpent: number
   totalMinionsKilled: number
   neutralMinionsKilled: number
-  totalEnemyJungleMinionsKilled: number
-  totalAllyJungleMinionsKilled: number
   totalDamageDealtToChampions: number
-  physicalDamageDealtToChampions: number
-  magicDamageDealtToChampions: number
-  trueDamageDealtToChampions: number
-  largestCriticalStrike: number
   totalHealsOnTeammates: number
   totalDamageShieldedOnTeammates: number
+  damageSelfMitigated: number
   totalDamageTaken: number
-  physicalDamageTaken: number
-  magicDamageTaken: number
-  trueDamageTaken: number
   timeCCingOthers: number
   visionScore: number
   wardsPlaced: number
   wardsKilled: number
-  wardsGuarded: number
-  damageDealtToObjectives: number
   turretKills: number
-  inhibitorTakedowns: number
   objectivesStolen: number
   dragonKills: number
-  firstBloodKill: boolean
   soloKills: number
   doubleKills: number
   tripleKills: number
   quadraKills: number
   pentaKills: number
-
   challenges: {
-    bountyGold: number
-    buffsStolen: number
     controlWardsPlaced: number
     damageTakenOnTeamPercentage: number
     effectiveHealAndShielding: number
-    goldPerMinute: number
     kda: number
     killingSprees: number
-    scuttleCrabKills: number
     saveAllyFromDeath: number
-    teamBaronKills: number
-    voidMonsterKill: number
-    wardsGuarded: number
     killParticipation: number
+    teamDamagePercentage: number
+    epicMonsterSteals: number
   }
-
   perks: {
     keystone: number
     primary: number
@@ -114,60 +83,18 @@ export interface MatchTeam {
   deaths?: number
   assists?: number
   feats: {
-    EPIC_MONSTER_KILL: Feat
-    FIRST_BLOOD: Feat
-    FIRST_TURRET: Feat
+    EPIC_MONSTER_KILL: number
+    FIRST_BLOOD: number
+    FIRST_TURRET: number
   }
   objectives: {
-    atakhan: ObjectiveTakedowns
-    baron: ObjectiveTakedowns
-    champion: ObjectiveTakedowns
-    dragon: ObjectiveTakedowns
-    horde: ObjectiveTakedowns
-    inhibitor: ObjectiveTakedowns
-    riftHerald: ObjectiveTakedowns
-    tower: ObjectiveTakedowns
+    atakhan: number
+    baron: number
+    champion: number
+    dragon: number
+    horde: number
+    inhibitor: number
+    riftHerald: number
+    tower: number
   }
-}
-
-export interface Feat {
-  featState: number
-}
-
-export interface ObjectiveTakedowns {
-  first: boolean
-  kills: number
-}
-
-export interface SimplifiedMatchData {
-  matchId: string
-  puuid: string
-  gameCreation: number
-  gameEndTimestamp: number
-  gameVersion: number
-  win: boolean
-  kills: number
-  deaths: number
-  assists: number
-  killParticipation: number
-  queueId: number
-  championName: string
-  championId: number
-  teamPosition: string
-  item0: number
-  item1: number
-  item2: number
-  item3: number
-  item4: number
-  item5: number
-  item6: number
-  perks: {
-    keystone: number
-    primary: number
-    secondary: number
-  }
-  participants: {
-    riotIdGameName: string
-    profileIcon: number
-  }[]
 }

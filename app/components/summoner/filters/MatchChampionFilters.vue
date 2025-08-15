@@ -1,13 +1,15 @@
 <script lang="ts" setup>
 import { ListboxContent, ListboxItem, ListboxRoot } from 'reka-ui'
 
-const { summoner } = defineProps<{
+const { summoner, matches } = defineProps<{
   summoner: Summoner
+  matches: MatchData[]
 }>()
 
 const ms = useMatchStore()
 
-const { bayesianChampions } = await useMatchChampions(summoner.matches?.simplified)
+/* const { matches } = useSummoner(as().userAccount?.riot?.puuid) */
+const { bayesianChampions } = await useMatchChampions(summoner.puuid, matches)
 
 const displayChampions = computedAsync (() => {
   if (!bayesianChampions)
@@ -19,7 +21,7 @@ const displayChampions = computedAsync (() => {
 
 <template>
   <FieldTransition
-    v-if="summoner.matches "
+    v-if="matches"
     expand
     class="p-0 w-120 max-w-120  gap-0">
     <ListboxRoot

@@ -16,8 +16,8 @@ for (const champ in champs) {
   const champion = champs[champ]
 
   index.push({
-    id: Number(champion.key),
-    key: champion.id,
+    id: champion.id,
+    key: champion.key,
     name: champion.name,
   })
 }

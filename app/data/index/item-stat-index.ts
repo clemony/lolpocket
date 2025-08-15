@@ -1,4 +1,4 @@
-// Updated Patch 25.15 - 07/31/2025 04:43:40 PM CDT
+// Updated Patch 25.16 - 08/14/2025 07:54:55 PM CDT
 
 export interface StatRecord {
   "abilityHaste"?: number;
@@ -1161,7 +1161,8 @@ export const itemStatRecord: Record<number, StatRecord> = {
     "tenacity": 30
   },
   "447112": {
-    "health": 500
+    "health": 500,
+    "abilityHaste": 20
   },
   "447113": {
     "abilityPower": 90,

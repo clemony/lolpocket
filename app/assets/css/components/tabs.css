@@ -1,0 +1,46 @@
+
+/* tabs */
+
+@utility tabs-box {
+  border-radius: var(--radius-lg);
+}
+
+@utility tabs-box {
+  @apply rounded-lg;
+}
+
+@utility tab {
+  --radius-field: 1rem;
+  --tab-bg: var(--b1);
+  --tab-border-color: color-mix(
+    in lch,
+    var(--color-b3) 80%,
+    white 60%
+  ) !important;
+  --tab-border-colors: color-mix(
+    in lch,
+    var(--color-b3) 70%,
+    white 60%
+  ) !important;
+}
+
+@layer utilities {
+  .tab-menu.tabs {
+    --tabs-height: 30px !important;
+    @apply !border-b-transparent **:!border-b-transparent  **:!border-b-0  !border-b-0;
+
+    & .tab {
+      --tab-radius-min: 0.65rem !important;
+      --tab-paddings: 4px 26px !important;
+
+      @apply gap-2 z-1 text-3  !font-medium flex items-center !border-b-0 !text-start capitalize has-checked:!border-t-2 has-checked:!border-x-2;
+
+      &:not(.tab-active) {
+        @apply border-transparent border-2;
+      }
+      &.tab-active {
+        @apply !border-t-2 !border-x-2 border-b-0 border-b-transparent;
+      }
+    }
+  }
+}

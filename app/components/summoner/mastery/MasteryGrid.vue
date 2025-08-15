@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { useScroll } from '@vueuse/core'
+
 import { ChampionGridIcon, GridLastPlayed, GridMasteryPoints } from '#components'
 import type { ColDef, ColGroupDef, GridApi, GridOptions, GridReadyEvent } from 'ag-grid-community'
 import { CellStyleModule, ClientSideRowModelModule, ColumnApiModule, ColumnAutoSizeModule, ColumnHoverModule, GridStateModule, ModuleRegistry, RenderApiModule, RowSelectionModule, ValidationModule } from 'ag-grid-community'
@@ -120,18 +122,24 @@ watch(
 })
  */
 ModuleRegistry.registerModules([ClientSideRowModelModule, ValidationModule, RowSelectionModule, ColumnAutoSizeModule, ColumnHoverModule, ColumnHoverModule, ColumnApiModule, CellStyleModule, GridStateModule, RenderApiModule])
+
+const masteryGrid = useTemplateRef<HTMLElement>('masteryGrid')
+const { arrivedState } = useScroll(masteryGrid)
+
+watch(() => arrivedState.top, (newVal) => {
+  console.log('💠 - watch - newVal:', newVal)
+})
 </script>
 
 <template>
-  <article class="overflow-y-auto grow relative h-full relative mastery-grid">
-    <AgGridVue
-      v-if="mastery"
-      dom-layout="autoHeight"
-      class=""
-      :tooltip-show-delay="400"
-      :grid-options="gridOptions"
-      :theme="theme"
-      :column-defs="colDefs"
-      @grid-ready="onGridReady" />
-  </article>
+  <AgGridVue
+    v-if="mastery"
+    ref="masteryGrid"
+    class="mastery-grid w-full h-[100vh] sticky min-h-[100vh]  w-screen pt-20 top-20 [&_.ag-center-cols-viewport]:mx-auto [&_.ag-center-cols-viewport]:max-w-[1100px]   [&_.ag-header-container]:mx-auto "
+    :class="cn('', { '**:!overflow-auto': arrivedState.top, ' **:!overflow-hidden': !arrivedState.top })"
+    :tooltip-show-delay="400"
+    :grid-options="gridOptions"
+    :theme="theme"
+    :column-defs="colDefs"
+    @grid-ready="onGridReady" />
 </template>

@@ -1,4 +1,9 @@
 <script lang="ts" setup>
+definePageMeta({
+  title: 'Items',
+  section: 'library',
+})
+
 const is = useItemStore()
 const { filtered } = useItemFilter(is.itemFilter)
 

@@ -1,15 +1,10 @@
 <script setup lang="ts">
-const rs = useRuneStore()
-
 definePageMeta({
-  name: 'runes',
-
-  meta: {
-    title: 'Runes',
-    section: 'library',
-    icon1: 'lol-rune',
-  },
+  title: 'Runes',
+  section: 'library',
+  icon1: 'lol-rune',
 })
+
 const ix = useIndexStore()
 
 const { pathList } = useRunes()

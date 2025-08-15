@@ -1,5 +1,5 @@
 export function useSingleBayesianChampionStats(
-  matches: SimplifiedMatchData[],
+  matches: MatchData[],
   championName: string,
 ): BayesianChampionStats | null {
   const allStats = useBayesianChampionStats(matches).value

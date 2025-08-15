@@ -1,62 +1,45 @@
 import { storeToRefs } from 'pinia'
+import type { StoredTeammate } from '~~/stores/summonerStore'
 
-interface Teammate {
-  riotIdGameName: string
-  games: number
-  wins: number
-  profileIcon: number
+export interface Teammate extends StoredTeammate {
   winrate: number
   bayesianWinrate: number
 }
 
-export function useRepeatedTeammates(
-  currentName: string,
-  puuid: string,
-  options?: { delayUntilReady?: Ref<boolean> },
-) {
-  const ss = useSummonerStore()
-
-  const matches = computed(() => ss.getSummoner(puuid).matches.simplified)
+export function useRepeatedTeammates(puuid: string, currentName: string) {
   const loading = ref(false)
+  const { getMatchesForSummoner } = useIndexedDB()
 
   const repeatedTeammates = computedAsync(async () => {
     loading.value = true
-
     try {
-      if (options?.delayUntilReady)
-        await until(options.delayUntilReady).toBe(true)
-
+      const matches = await getMatchesForSummoner(puuid)
       const teammateStats = new Map<
         string,
         { games: number, wins: number, profileIcon: number }
       >()
 
-      for (const match of matches.value) {
-        const { participants, win } = match
-        if (!participants)
+      for (const match of matches) {
+        const player = match.participants.find(p => p.puuid === puuid)
+        if (!player)
           continue
 
-        const hasPlayer = participants.some(
-          p => p.riotIdGameName === currentName,
+        const allies = match.participants.filter(
+          p => p.teamId === player.teamId && p.puuid !== puuid,
         )
-        if (!hasPlayer)
-          continue
 
-        for (const teammate of participants) {
-          if (teammate.riotIdGameName === currentName)
-            continue
-
-          const existing = teammateStats.get(teammate.riotIdGameName) || {
+        for (const ally of allies) {
+          const existing = teammateStats.get(ally.riotIdGameName) || {
             games: 0,
             wins: 0,
-            profileIcon: teammate.profileIcon,
+            profileIcon: ally.profileIcon,
           }
 
           existing.games++
-          if (win)
+          if (player.win)
             existing.wins++
 
-          teammateStats.set(teammate.riotIdGameName, existing)
+          teammateStats.set(ally.riotIdGameName, existing)
         }
       }
 
@@ -67,8 +50,7 @@ export function useRepeatedTeammates(
         .map(([riotIdGameName, stats]) => {
           const rawWinrate = stats.wins / stats.games
           const confidence = Math.min(1, stats.games / 10)
-          const bayesianWinrate
-            = (confidence * rawWinrate + (1 - confidence) * priorWinrate) * 100
+          const bayesianWinrate = (confidence * rawWinrate + (1 - confidence) * priorWinrate) * 100
 
           return {
             riotIdGameName,

@@ -5,9 +5,7 @@ const route = useRoute()
 const userNav = shallowRef(null)
 const as = useAccountStore()
 
-const settingsOpen = shallowRef(false)
 const pinsOpen = shallowRef(false)
-const adminOpen = shallowRef(false)
 
 /* function resetInbox(e) {
   if (!as.userAccount)
@@ -61,16 +59,16 @@ function verifySignIn() {
               @click="isDesktop() ? navigateTo(item.link) : abortNavigation">
               {{ item.name }}
             </NavigationMenuTrigger>
+            <component
+              :is="item.component"
 
-            <NavigationMenuViewport
-              class="translate-y-3 w-(--reka-navigation-menu-viewport-width) h-(--reka-navigation-menu-viewport-height)  ">
-              <component
-                :is="item.component"
-
-                @open:sign-in="verifySignIn()" />
-            </NavigationMenuViewport>
+              @open:sign-in="verifySignIn()" />
           </NavigationMenuItem>
         </template>
+
+        <NavigationMenuViewport
+          class="translate-y-3 w-(--reka-navigation-menu-viewport-width) h-(--reka-navigation-menu-viewport-height)  ">
+        </NavigationMenuViewport>
 
         <NavigationMenuIndicator class="-translate-y-1 drop-shadow-xs scale-150" />
       </NavigationMenuList>

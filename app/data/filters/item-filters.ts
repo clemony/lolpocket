@@ -1,4 +1,4 @@
-// Updated Patch 25.15 - 07/31/2025 04:43:36 PM CDT
+// Updated Patch 25.16 - 08/14/2025 07:54:25 PM CDT
 
 export const itemFilters = {
   "rank": {
@@ -2370,6 +2370,7 @@ export const itemFilters = {
       447104,
       447105,
       447108,
+      447112,
       447113,
       447116,
       447118,

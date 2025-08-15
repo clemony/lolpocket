@@ -11,16 +11,12 @@ definePageMeta({
 
 const as = useAccountStore()
 const router = useRouter()
-
-if (as.userAccount?.riot?.puuid) {
-  router.replace(
-    `/summoner/${as.userAccount.riot.region}/${as.userAccount.riot.name}_${as.userAccount.riot.tag}`,
-  )
-}
 </script>
 
 <template>
-  <div>
-  <!-- loading skeleton here blah blah -->
+  <div class="size-full grid place-items-center">
+    <NuxtLink :to="`/summoner/${as.userAccount.riot.region}/${as.userAccount.riot.name}_${as.userAccount.riot.tag}`">
+      Your Profile
+    </NuxtLink>
   </div>
 </template>

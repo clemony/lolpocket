@@ -24,7 +24,7 @@ onMounted (() => {
 <template>
   <nav
     role="tablist"
-    class="tabs tab-menu w-full relative h-10 justify-start self-end tabs-lg tabs-lift border-b-0 z-4 flex">
+    class="tabs tab-menu relative h-10 justify-start col-start-2 w-full  mb-2     tabs-lg tabs-lift  z-5 flex">
     <FakeTab />
 
     <!-- ALL tabs -->

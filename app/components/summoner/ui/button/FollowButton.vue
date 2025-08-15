@@ -1,13 +1,13 @@
 <script lang="ts" setup>
-const { summoner, class: className, text, variant = 'shadow', size = 'md' } = defineProps<{
+const { summoner, class: className, text, variant = 'shadow', size = 'md', placement, theme } = defineProps<{
   summoner: Summoner
   class?: HTMLAttributes['class']
-  badge?: boolean
-  bubble?: boolean
   text?: boolean
   bold?: boolean
   variant?: any
   size?: any
+  theme?: string
+  placement?: Side
 }>()
 const as = useAccountStore()
 
@@ -18,7 +18,6 @@ const isFollowed = ref(false)
 <template>
   <Label
     v-if="isYou"
-    v-tippy="{ content: isFollowed && !text ? `Unfollow ${capitalize(summoner?.name)}?` : text ? null : `Follow ${capitalize(summoner?.name)}?`, placement: 'top' }"
     :variant="variant"
     :size="size"
     :followed="isFollowed"
@@ -42,8 +41,6 @@ const isFollowed = ref(false)
             ' drop-shadow-b2 drop-shadow-sm size-3.5 text-b4 opacity-90 ': !text,
 
             'text-domination group-hover/follow:**:text-domination opacity-60 group-hover/follow:opacity-100': isFollowed,
-
-            ' opacity-90 **:fill-white  !text-white': isFollowed && badge,
 
             'size-5 opacity-0 text-domination  -left-0.5': text })" />
     </span>

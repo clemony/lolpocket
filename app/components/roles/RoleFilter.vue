@@ -4,10 +4,10 @@ const { summoner, class: className } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 const ms = useMatchStore()
-const { filteredSimplifiedNoRole } = useFilteredMatches(summoner.puuid, ms.mf)
+const { filteredNoRole } = useFilteredMatches(summoner.puuid, ms.mf)
 
 // Use the composable with the filtered matches
-const roleStats = useMatchRoles(filteredSimplifiedNoRole)
+const roleStats = useMatchRoles(summoner.puuid, filteredNoRole)
 </script>
 
 <template>

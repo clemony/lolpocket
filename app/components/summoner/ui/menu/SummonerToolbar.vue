@@ -5,7 +5,7 @@ const { class: className, summoner, sidebar } = defineProps<{
   sidebar?: boolean
 }>()
 
-const tippy = { placement: 'bottom', offset: [0, 14], theme: 'basic', contentClass: 'font-medium capitalize' }
+const tippy = { placement: 'bottom', theme: 'basic', contentClass: 'font-medium capitalize', delay: [0, 0], offset: [0, 16] }
 </script>
 
 <template>
@@ -15,6 +15,7 @@ const tippy = { placement: 'bottom', offset: [0, 14], theme: 'basic', contentCla
     <UpdateSummoner
       class="col-span-full"
       text
+      variant="neutral"
       :show-icon="true"
       size="md"
       :summoner />
@@ -28,8 +29,9 @@ const tippy = { placement: 'bottom', offset: [0, 14], theme: 'basic', contentCla
       :summoner />
 
     <FollowButton
+
+      v-tippy="{ ...tippy, content: 'Message' }"
       size="md"
-      :class="cn('[&_svg]:size-5.5')"
       :summoner />
   </div>
 </template>

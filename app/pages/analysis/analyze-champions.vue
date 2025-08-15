@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const { matches } = defineProps<{
-  matches: SimplifiedMatchData[]
+  matches: MatchData[]
 }>()
 console.log('💠 - matches:', matches)
 
@@ -15,7 +15,7 @@ definePageMeta({
   },
 })
 
-const { bayesianChampions } = await useMatchChampions(matches)
+const { bayesianChampions } = await useMatchChampions(as().userAccount.riot.puuid, matches)
 </script>
 
 <template>

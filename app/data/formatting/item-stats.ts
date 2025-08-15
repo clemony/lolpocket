@@ -218,3 +218,104 @@ export const itemStats = [
     badge: 'bg-platinum/60 **:!text-white  text-white',
   },
 ]
+
+
+export const itemStatsMin = [
+  {
+    ids: 'abilityHaste',
+    name: 'Ability Haste',
+        icon: 'i-stats-ah',
+    class: '',
+      },
+  {
+    ids: 'abilityPower',
+    name: 'Ability Power',
+        icon: 'i-stats-ap',
+    class: '',
+      },
+  {
+    ids: 'armor',
+    name: 'Armor',
+        icon: 'i-stats-armor',
+    class: '',
+      },
+  {
+    ids: ['armorPenetration', 'lethality'],
+    name: 'Armor Pen + Lethality',
+        icon: 'i-stats-armor-pen',
+    class: '',
+      },
+  {
+    ids: 'attackDamage',
+    name: 'Attack Damage',
+        icon: 'i-stats-ad',
+    class: '',
+      },
+  {
+    ids: 'attackSpeed',
+    name: 'Attack Speed',
+        icon: 'i-stats-as',
+    class: '',
+      },
+  {
+    ids: ['flatMovespeed', 'percentMovespeed'],
+    name: 'Movespeed',
+        icon: 'i-stats-ms',
+    class: '',
+      },
+  {
+    ids: ['criticalStrikeChance', 'criticalStrikeDamage'],
+    name: 'Crit Chance + Dmg',
+        icon: 'i-stats-cs',
+    class: '',
+      },
+  {
+    ids: ['flatMagicPenetration', 'percentMagicPenetration'],
+    name: 'Magic Penetration',
+        icon: 'i-stats-mpen',
+    iconClass: '',
+    class: '',
+      },
+  {
+    ids: 'healAndShieldPower',
+    name: 'Heal & Shield Power',
+        icon: 'i-stats-hsp',
+    class: '',
+      },
+  {
+    ids: 'health',
+    name: 'Health',
+        icon: 'i-stats-health',
+    class: '',
+      },
+  {
+    ids: 'healthRegen',
+    name: 'Health Regen',
+        icon: 'i-stats-hp',
+    class: '!size-5.25',
+      },
+  {
+    ids: 'lifesteal',
+    name: 'Lifesteal',
+        icon: 'i-stats-ls',
+    class: '!size-5',
+      },
+  {
+    ids: 'magicResistance',
+    name: 'Magic Resist',
+        icon: 'i-stats-mr',
+    class: '',
+      },
+  {
+    ids: 'mana',
+    name: 'Mana',
+        icon: 'i-stats-mana',
+    class: '',
+      },
+  {
+    ids: 'manaRegen',
+    name: 'Mana Regen',
+        icon: 'i-stats-mana-regen',
+    class: '!size-5.25',
+      }
+]

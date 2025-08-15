@@ -1,20 +1,55 @@
 <script setup lang="ts">
 import { contactLinks, siteInfoLinks } from '~/routes'
 
-const listClass = 'flex flex-col gap-3  min-w-44'
+const { class: className } = defineProps<{
+  class?: HTMLAttributes['class']
+
+}>()
+const listClass = 'flex flex-col gap-3 py-20 min-w-44'
 
 const itemClass = 'flex items-center gap-2 hover:underline-offset-2 hover:underline'
+
+const { childRoutes: library } = useChildRoutes('library')
+watch(() => library.value, (newVal) => {
+  console.log('💠 - watch - newVal:', newVal)
+})
 </script>
 
 <template>
-  <div class="bg-b2 text-bc flex w-full items-center justify-center border-t border-t-b3/60 h-140 min-h-140 max-h-140">
-    <div class="flex w-full flex-wrap justify-evenly gap-x-10 gap-y-16 px-12 pt-36 pb-40 [&_h3]:drop-shadow-sm [&_li]:drop-shadow-sm">
+  <div :class="cn('bg-b2 relative before:size-full before:bg-b2 z-1 before:absolute before:z-0 text-bc flex w-full items-center justify-center border-t border-t-b3/60 h-146 min-h-146 max-h-146 z-1', className)">
+    <div class="flex size-full flex-wrap justify-evenly z-1 gap-x-10 gap-y-16 px-12 pt-36 pb-40 [&_h3]:drop-shadow-sm [&_li]:drop-shadow-sm">
+      <div class=" min-w-110 w-110 size-full  flex flex-col gap-6 ">
+        <h1 class="drop-shadow-sm">
+          Looking for something?
+        </h1>
+        <SummonerSearchBox class="btn btn-shadow !h-13 -mx-1" />
+
+        <p class="flex text-bc flex-col gap-2 mt-2 pl-px">
+          <span>  Browse your favorite players...</span>
+
+          <span>
+            <b>lol <i>pocket</i></b>&nbsp;their builds.
+          </span>
+        </p>
+      </div>
       <ul :class="listClass">
         <h3>Tools</h3>
 
         <li
           :class="itemClass">
           Create a Pocket
+        </li>
+      </ul>
+
+      <ul
+        v-if="library"
+        :class="listClass">
+        <h3>Library</h3>
+        <li
+          v-for="item in library"
+          :key="item.name"
+          :class="itemClass">
+          {{ item.meta.title }}
         </li>
       </ul>
 

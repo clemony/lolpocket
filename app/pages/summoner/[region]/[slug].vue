@@ -12,47 +12,77 @@ definePageMeta({
 
 const route = useRoute()
 
-const { summoner, props, loading, error } = useHandleSummoner()
+/* const { summoner, props, loading, error } = useHandleSummoner() */
+const puuid = unref(as().userAccount?.riot?.puuid)
+
+/* const { matches, fetchSummoner, summoner } = useSummoner(as().userAccount?.riot?.puuid)
 
 const { topChampion } = useSummonerChampions(
-  summoner.value?.matches?.simplified || [],
+  as().userAccount?.riot?.puuid,
+  matches.value || [],
   {
     mode: 'top',
     limit: 1,
   },
 )
 
-const aside = useAsideComponent()
+const { childRoutes } = useChildRoutes('summoner')
+const links = computed (() => generateSummonerLinks(summoner.value))
+
+provide('playerData', {
+  summoner: summoner.value,
+  matches: matches.value,
+}) */
+
+const summoner = ref<any>([])
+const childRoutes = []
+const links = []
+const topChampion = { splash: '' }
 </script>
 
 <template>
-  <div class="size-full ">
-    <MiniSummonerPageNav :summoner />
-    <TabsPageWrapper
-      v-if="summoner"
-      class=""
-      :background="(as().publicData?.splash ?? topChampion?.splash).replace('centered', 'uncentered')">
-      <template #header>
-        <SummonerHeader
-          :summoner
-          class="pt-5  col-start-2"
-          size="lg" />
-      </template>
+  <TabLayoutWrapper
+    v-if="summoner">
+    <!-- splash -->
 
-      <template #tabs>
-        <SummonerProfileTabs
-          :summoner />
-      </template>
+    <template #background>
+      <BackgroundSplashFixed :background="(as().publicData?.splash ?? topChampion?.splash).replace('centered', 'uncentered')" />
+    </template>
 
-      <template
-        #page="{ show }">
-        <LazyNuxtPage
-          v-if="summoner"
-          :key="route.name"
-          :show
-          :summoner>
-        </LazyNuxtPage>
-      </template>
-    </TabsPageWrapper>
-  </div>
+    <!-- nav -->
+
+    <template #mini-nav>
+      <MiniSummonerNav
+        v-if="childRoutes && links"
+        :child-routes
+        :links
+        :summoner />
+    </template>
+
+    <!-- header -->
+    <template #header>
+      <SummonerHeader
+        :summoner
+        class="pt-5  col-start-2"
+        size="lg" />
+    </template>
+
+    <template #tabs>
+      <SummonerProfileTabs
+        v-if="childRoutes && links"
+        :child-routes
+        :links
+        :summoner />
+    </template>
+
+    <template #page>
+      <LazyNuxtPage
+        v-if="summoner"
+        :key="route.name"
+        :summoner>
+      </LazyNuxtPage>
+    </template>
+    <template #footer>
+    </template>
+  </TabLayoutWrapper>
 </template>

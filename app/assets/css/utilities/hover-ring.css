@@ -3,7 +3,7 @@
 @import "../theme.css";
 
 @utility hover-ring {
-  @apply transition-all duration-200 cursor-pointer ring  ring-offset-2 ring-transparent ring-offset-transparent;
+  @apply transition-all duration-200 cursor-pointer ring  ring-transparent ring-offset-transparent;
 
   &:hover,
   &[data-state="open"].data-open-ring {

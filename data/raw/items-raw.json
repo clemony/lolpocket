@@ -122993,7 +122993,7 @@
         "percentBonus": 0
       },
       "abilityHaste": {
-        "flat": 0,
+        "flat": 20,
         "percent": 0,
         "perLevel": 0,
         "percentPerLevel": 0,

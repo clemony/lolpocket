@@ -1,7 +1,8 @@
 import { getChampionStatsMap, useBasicChampionStats, useBayesianChampionStats } from './index'
 
 export function useSummonerChampions(
-  matches: SimplifiedMatchData[],
+  puuid: string,
+  matches: MatchData[],
   options: {
     mode?: 'top' | 'lite' | 'basic' | 'bayesian'
     limit?: number
@@ -10,11 +11,13 @@ export function useSummonerChampions(
   const mode = options?.mode || 'basic'
   const limit = options?.limit
 
+  const player = matches.map(p => p.participants.find(p => p.puuid == puuid))
+
   const liteChampionStats = computed(() => {
     const counts: Record<string, number> = {}
 
-    for (const p of matches) {
-      const champ = p.championName
+    for (const p of player) {
+      const champ = ix().champNameById(p.championId)
       counts[champ] = (counts[champ] || 0) + 1
     }
 
@@ -45,7 +48,7 @@ export function useSummonerChampions(
   const filteredMatches = computed(() =>
     limit
       ? matches.filter(match =>
-          Object.keys(liteChampionStats.value).includes(match.championName),
+          Object.keys(liteChampionStats.value).includes(ix().champNameById(match.participants[as().userAccount.riot.puuid])),
         )
       : matches,
   )

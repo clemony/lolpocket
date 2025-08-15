@@ -1,10 +1,27 @@
+export interface ChampionStats {
+  name: string
+  id: number
+  games: number
+  wins: number
+  losses: number
+  winrate: number
+  kills: number
+  deaths: number
+  assists: number
+  killParticipation: number
+  matchIndexes: number[]
+  gamePatches: string[]
+}
+
 export function getChampionStatsMap(
-  matches: SimplifiedMatchData[],
+  matches: MatchData[],
 ): Map<string, ChampionStats> {
   const map = new Map<string, ChampionStats>()
 
-  matches.forEach((match, index) => {
-    const champ = match.championName
+  const player = matches.map(m => m.participants.find(p => p.puuid == as().userAccount.riot.puuid))
+
+  player.forEach((match, index) => {
+    const champ = ix().champNameById(match.championId)
     if (!champ)
       return
 
@@ -21,7 +38,7 @@ export function getChampionStatsMap(
         assists: 0,
         killParticipation: 0,
         matchIndexes: [],
-        gameVersions: [],
+        gamePatches: [],
       })
     }
 
@@ -31,21 +48,21 @@ export function getChampionStatsMap(
     stats.kills += match.kills
     stats.deaths += match.deaths
     stats.assists += match.assists
-    stats.killParticipation += match.killParticipation
+    stats.killParticipation += match.challenges.killParticipation
     stats.matchIndexes.push(index)
-    stats.gameVersions.push(match.gameVersion.toString())
+    stats.gamePatches.push(matches[index].gamePatch.toString())
     stats.winrate = (stats.wins / stats.games) * 100
   })
 
   return map
 }
 
-export function useBasicChampionStats(matches: SimplifiedMatchData[]) {
+export function useBasicChampionStats(matches: MatchData[]) {
   const stats = computed(() => getChampionStatsMap(matches))
   return computed(() => Array.from(stats.value.values()))
 }
 
-export function useBayesianChampionStats(matches: SimplifiedMatchData[]) {
+export function useBayesianChampionStats(matches: MatchData[]) {
   const ix = useIndexStore()
 
   const baseStats = computed(() => getChampionStatsMap(matches))

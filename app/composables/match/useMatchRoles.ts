@@ -11,7 +11,8 @@ interface RoleStats {
 }
 
 export function useMatchRoles(
-  matches: Ref<SimplifiedMatchData[]>,
+  puuid: string,
+  matches: Ref<MatchData[]>,
 ): ComputedRef<RoleStats[]> {
   return computed(() => {
     const roles = ['TOP', 'JUNGLE', 'MIDDLE', 'BOTTOM', 'UTILITY']
@@ -21,12 +22,13 @@ export function useMatchRoles(
     let allWins = 0
 
     for (const match of matches.value) {
-      const role = match.teamPosition.toUpperCase()
+      const player = match.participants.find(p => p.puuid == puuid)
+      const role = player.teamPosition.toUpperCase()
       if (!roles.includes(role))
         continue
 
       allGames++
-      if (match.win)
+      if (player.win)
         allWins++
 
       if (!roleStatsMap.has(role)) {
@@ -35,7 +37,7 @@ export function useMatchRoles(
 
       const stats = roleStatsMap.get(role)!
       stats.games++
-      if (match.win)
+      if (player.win)
         stats.wins++
     }
 

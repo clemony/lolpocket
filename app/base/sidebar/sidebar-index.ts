@@ -28,7 +28,7 @@ export const sidebarMenuButtonVariants = cva(
         default: 'h-8 text-3',
         sm: 'h-7 text-2',
         lg: 'h-12 text-3 group-data-[collapsible=icon]:p-0!  [&_svg]:!size-5.5 ',
-        icon: 'size-12 !p-0 !grid !place-items-center [&_svg]:absolute [&_svg]:!size-5.5 [&_span]:hidden  [&_span]:absolute  [&_span]:pointer-events-none !gap-0',
+        icon: 'size-12 !p-0 !grid !place-items-center [&_svg]:absolute [&_svg]:size-5.5 [&_span]:hidden  [&_span]:absolute  [&_span]:pointer-events-none !gap-0',
       },
     },
     defaultVariants: {
