@@ -17,7 +17,7 @@ const copyMsg = computed (() => {
 <template>
   <footer
     class=""
-    :class="cn('h-32  bg-neutral max-h-32 flex min-h-32 w-full footer sm:footer-horizontal bg-n1 text-nc gap-12 items-center p-6 z-2 ', className)">
+    :class="cn('h-26 bg-neutral max-h-26 flex min-h-26 w-full footer sm:footer-horizontal bg-n1 text-nc gap-12 items-center p-6 z-0 ', className)">
     <aside class="flex grow items-center gap-5">
       <button
         title="home"

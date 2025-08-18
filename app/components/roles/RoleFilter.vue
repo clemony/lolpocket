@@ -4,29 +4,33 @@ const { summoner, class: className } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 const ms = useMatchStore()
-const { filteredNoRole } = useFilteredMatches(summoner.puuid, ms.mf)
 
-// Use the composable with the filtered matches
-const roleStats = useMatchRoles(summoner.puuid, filteredNoRole)
+const state = inject<PlayerData>(SummonerKey)!
+const roleStats = await useMatchRoles(state.summoner.puuid, computed (() => state.matches))
+
+const roleModel = computed({
+  get: () => state.filter.role,
+  set: val => state.setFilter('role', val),
+})
 </script>
 
 <template>
   <div class="w-full ">
     <div class="flex items-center mb-2  -ml-1">
       <label
-        :class="{ 'pointer-events-none': ms.mf.role == 'ALL' }"
+        :class="{ 'pointer-events-none': ms.filter.role == 'ALL' }"
         class="btn btn-sm gap-2 font-medium rounded-lg px-2.5 place-self-center text-3  btn-ghost"
-        @click="ms.mf.role = 'ALL'">
+        @click="state.clearFilters()">
         <input
-          v-model="ms.mf.role"
+          v-model="roleModel"
           class="peer hidden"
           aria-label="All"
           name="match-champion-filter"
           value="All" />
-        {{ ms.mf.role != 'ALL' ? roleStats.find(r => r.role == ms.mf.role).displayName : 'Position' }}
+        {{ ms.filter.role != 'ALL' ? roleStats.find(r => r.role == ms.filter.role).displayName : 'Position' }}
 
         <icon
-          v-if="ms.mf.role != 'ALL'"
+          v-if="ms.filter.role != 'ALL'"
           name="x-sm"
           class=" shrink-0 -mt-px" />
 
@@ -42,14 +46,14 @@ const roleStats = useMatchRoles(summoner.puuid, filteredNoRole)
           v-for="role in roleStats"
           :key="role.role">
           <label
-            v-if="ms.mf.role == 'ALL' || ms.mf.role == role.role"
+            v-if="ms.filter.role == 'ALL' || ms.filter.role == role.role"
 
             v-tippy="{ content: `${role.displayName} - ${role.games} game${role.games > 1 ? 's' : ''}` }"
             class="size-14 grid place-items-center "
-            :class="cn({ 'bg-n1 border-n1 shadow-n1/20 shadow-sm order-2  ': role.role == ms.mf.role, 'border-b3/80 btn  size-14  mr-0 btn-square': role.games })">
+            :class="cn({ 'bg-n1 border-n1 shadow-n1/20 shadow-sm order-2  ': role.role == ms.filter.role, 'border-b3/80 btn  size-14  mr-0 btn-square': role.games })">
 
             <input
-              v-model="ms.mf.role"
+              v-model="ms.filter.role"
               class="peer hidden absolute"
               type="radio"
               :disabled="!role.games"

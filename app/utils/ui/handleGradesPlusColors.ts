@@ -47,11 +47,5 @@ export function getAbsoluteColor(value) {
             ? 'emerald'
             : value < 51 && value >= 50
               ? 'platinum'
-              : value < 50 && value >= 49
-                ? 'silver'
-                : value < 49 && value >= 48
-                  ? 'bronze'
-                  : value < 48
-                    ? 'iron'
-                    : 'b2'
+              : 'silver'
 }

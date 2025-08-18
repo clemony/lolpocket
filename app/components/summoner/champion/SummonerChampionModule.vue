@@ -5,7 +5,7 @@ const { class: className, summoner, championName } = defineProps<{
   championName: string
 }>()
 console.log('💠 - summoner?:', summoner)
-
+const playerData = inject<PlayerData>('playerData')
 const champKey = computed (() => String(ix().champKeyByName(championName)))
 </script>
 
@@ -27,6 +27,7 @@ const champKey = computed (() => String(ix().champKeyByName(championName)))
       <div class="w-100">
         <SummonerChampionLineChart
           :summoner
+          :matches="playerData.matches"
           :champion-name />
       </div>
     </CollapsibleTrigger>

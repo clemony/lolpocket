@@ -6,14 +6,12 @@ export interface Teammate extends StoredTeammate {
   bayesianWinrate: number
 }
 
-export function useRepeatedTeammates(puuid: string, currentName: string) {
+export function useRepeatedTeammates(puuid: string, matches: MatchData[]) {
   const loading = ref(false)
-  const { getMatchesForSummoner } = useIndexedDB()
 
   const repeatedTeammates = computedAsync(async () => {
     loading.value = true
     try {
-      const matches = await getMatchesForSummoner(puuid)
       const teammateStats = new Map<
         string,
         { games: number, wins: number, profileIcon: number }

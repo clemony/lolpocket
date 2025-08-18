@@ -9,17 +9,8 @@ export const useMatchStore = defineStore('matchStore', () => {
 
   const championTabsQueue = ref<number>(0)
 
-  // analysis filters
-  const af = ref<MatchFilter>({
-    patch: ds.currentPatch,
-    queue: 0,
-    champion: null,
-    ally: null,
-    role: 'ALL',
-  })
-
   // match filters
-  const mf = ref<MatchFilter>({
+  const filter = ref<MatchFilter>({
     patch: null,
     queue: 0,
     champion: null,
@@ -27,14 +18,24 @@ export const useMatchStore = defineStore('matchStore', () => {
     role: 'ALL',
   })
 
+  function clearFilter() {
+    filter.value = Object.assign(filter, {
+      patch: null,
+      queue: 0,
+      champion: null,
+      ally: null,
+      role: 'ALL',
+    })
+  }
+
   const seasonTotals = ref()
 
   const analysisPatchSelect = computedAsync (() => ds.currentPatch)
   const analysisQueueSelect = ref<number>(0)
 
   return {
-    mf,
-    af,
+    filter,
+    clearFilter,
     summonerSearch,
     championTabsQueue,
     patchGames,
@@ -44,10 +45,4 @@ export const useMatchStore = defineStore('matchStore', () => {
     analysisQueueSelect,
 
   }
-}, {
-  persist: {
-    storage: piniaPluginPersistedstate.localStorage(),
-    key: 'analysisStore',
-    pick: ['matches'],
-  },
 })

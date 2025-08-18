@@ -1,18 +1,20 @@
 import type { JwtPayload } from 'jwt-decode'
 import type {
-  AcceptableValue,
   TabsRootProps as OriginalTabsRootProps,
   PrimitiveProps,
-  TabsTriggerProps,
 } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import type { RouteMeta, RouteRecord } from 'vue-router'
 
 export interface HTMLAttr extends HTMLAttributes {}
-
 export type { MotionValue } from 'motion-v'
 export type { AcceptableValue, PrimitiveProps } from 'reka-ui'
 export type { CSSProperties, HTMLAttributes } from 'vue'
+
+export type Side = 'top' | 'right' | 'bottom' | 'left'
+export type Align = 'start' | 'center' | 'end'
+export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+export type Shape = 'square' | 'circle'
 
 export interface AuthRoleJwtPayload extends JwtPayload {
   app_metadata: {
@@ -45,4 +47,19 @@ export interface TabsRootPropsWithNullableModel extends OriginalTabsRootProps {
 export interface TabsTriggerPropsWithNullableValue {
   value: any
   disabled?: boolean
+}
+
+export interface Tabs {
+  currentValue: {
+    pos: number
+    width: number
+  }
+  returnValue: {
+    pos: number
+    width: number
+  }
+}
+
+export interface CustomRadioGroupProps extends PrimitiveProps {
+  contrast?: boolean
 }

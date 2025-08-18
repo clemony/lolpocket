@@ -1,102 +1,97 @@
-export function useSummoner(identifier: string) {
+export const SummonerKey = Symbol('SummonerProvider')
+
+// Example: Update filters directly
+/* function selectRole(role: string) {
+  state.setFilter('role', role)
+}
+
+function selectAlly(ally: string) {
+  state.setFilter('ally', ally)
+}
+
+ */
+export function useSummonerProvider(identifier: string) {
   console.log('identifier: ', identifier)
-  const ss = useSummonerStore()
-  const { getMatchesForSummoner } = useIndexedDB()
 
   const loading = ref(false)
   const ready = ref(false)
   const summoner = ref<Summoner | null>(null)
-  const currentPuuid = ref<string | null>(
-    typeof identifier === 'string' ? identifier : null,
-  )
-
+  const currentPuuid = ref<string | null>(typeof identifier === 'string' ? identifier : null)
   console.log('currentPuuid: ', currentPuuid)
-  const loadingMessage = ref('')
 
-  // --- REF FOR MATCHES ---
-  const matches = ref<MatchData[]>([])
+  const { getMatchesForSummoner } = useIndexedDB()
+  const allMatches = ref<MatchData[]>([])
 
-  // --- UPDATE MATCHES + TEAMS (optimized) ---
-  const updateMatches = async () => {
-    if (!summoner.value)
-      return
+  // --- FILTER STATE ---
+  const filter = ref<MatchFilter>({
+    patch: null,
+    queue: 0,
+    champion: null,
+    ally: null,
+    role: 'ALL',
+  })
 
-    const newMatches = await getMatchesForSummoner(summoner.value.puuid)
-
-    // Only process matches we haven't counted yet
-    const existingMatchIds = new Set(summoner.value.processedMatchIds || [])
-    const unprocessedMatches = newMatches.filter(m => !existingMatchIds.has(m.matchId))
-
-    // Merge processed matchIds
-    summoner.value.processedMatchIds = [
-      ...(summoner.value.processedMatchIds || []),
-      ...unprocessedMatches.map(m => m.matchId),
-    ]
-
-    matches.value = newMatches
-
-    // --- Update repeatedTeammates only for new matches ---
-    const teammates = { ...summoner.value.repeatedTeammates ?? {} }
-
-    for (const match of unprocessedMatches) {
-      for (const ally of match.participants) {
-        if (ally.puuid === summoner.value.puuid)
-          continue
-        const key = ally.riotIdGameName
-        if (!teammates[key])
-          teammates[key] = { games: 0, wins: 0, profileIcon: 0, riotIdGameName: '' }
-        teammates[key].games++
-        if (ally.win)
-          teammates[key].wins++
-      }
-    }
-
-    summoner.value.repeatedTeammates = teammates
-    ss.mergeSummonerData(summoner.value.puuid, {
-      repeatedTeammates: teammates,
-      processedMatchIds: summoner.value.processedMatchIds,
-    })
+  // --- FILTER HELPERS ---
+  function setFilter<K extends keyof MatchFilter>(key: K, value: MatchFilter[K]) {
+    filter.value[key] = value
   }
 
-  // --- FETCH SUMMONER ---
-  const fetchSummoner = async (options?: { force?: boolean }) => {
-    console.log('currentPuuid.vakhkhkhkhkhklue: ', currentPuuid.value)
+  function clearFilters() {
+    filter.value = {
+      patch: null,
+      queue: 0,
+      champion: null,
+      ally: null,
+      role: 'ALL',
+    }
+  }
+
+  // --- FILTERED MATCHES ---
+  const matches = computed(() => {
+    if (!filter.value || Object.values(filter.value).every(v => !v || v === 0 || v === 'ALL')) {
+      return allMatches.value
+    }
+    return allMatches.value.filter(match =>
+      matchFilters(currentPuuid.value!, match, filter.value),
+    )
+  })
+
+  const loadMatchesFromDB = async () => {
+    if (!summoner.value)
+      return
+    allMatches.value = await getMatchesForSummoner(summoner.value.puuid)
+  }
+
+  const findSummoner = async (options?: { force?: boolean }) => {
+    console.log('currentPuuid.value: ', currentPuuid.value)
     if (!currentPuuid.value)
       return
     loading.value = true
-    loadingMessage.value = 'Loading Summoner...'
     ready.value = false
 
     try {
       if (!options?.force) {
-        const cached = ss.getSummoner(currentPuuid.value)
+        const cached = ss().getSummoner(currentPuuid.value)
         if (cached) {
           summoner.value = cached
-          await updateMatches()
+          await loadMatchesFromDB()
           ready.value = true
-          loading.value = false
           return
         }
       }
 
-      const resolved = await ss.resolveSummoner(
-        typeof identifier === 'string'
-          ? { puuid: identifier }
-          : identifier,
+      const resolved = await ss().resolveSummoner(
+        typeof identifier === 'string' ? { puuid: identifier } : identifier,
       )
+      console.log('resolved: ', resolved)
+
       currentPuuid.value = resolved.puuid
-
-      /*       const splash = await fetchProfileSplash(resolved.puuid)
-      if (splash)
-        resolved.profileSplash = splash.splash_url */
-
       summoner.value = resolved
-      ss.setSummoner(resolved)
-      ss.limitCache(30)
-    /*   await updateMatches() */
-    }
-    catch (e) {
-      console.error('❌ fetchSummoner failed:', e)
+      console.log('summoner.value: ', summoner.value)
+      ss().setSummoner(resolved)
+      ss().limitCache(30)
+
+      await loadMatchesFromDB()
     }
     finally {
       loading.value = false
@@ -111,27 +106,75 @@ export function useSummoner(identifier: string) {
     return await fetchSummonerMastery(currentPuuid.value)
   }
 
-  // --- WATCH PUUID ---
-  /*   watch(
-    currentPuuid,
-    () => {
-      fetchSummoner()
-    },
-    { immediate: true },
-  )
+  /*      KEEP - adding later
+  const splash = await fetchProfileSplash(resolved.puuid)
+      if (splash)
+        resolved.profileSplash = splash.splash_url */
+  /*
+
  */
-  return {
+  // --- WATCH PUUID ---
+  watch(currentPuuid, () => findSummoner(), { immediate: true })
+
+  const { getTop } = useSummonerChampions(summoner.value.puuid, matches.value)
+
+  const state = {
     summoner,
-    currentPuuid,
+    matches,
+    allMatches,
+    filter,
+    setFilter,
+    clearFilters,
+    fetchMastery,
+    findSummoner,
+    topChampion: getTop().topChampion,
+    useChampions: () => useMatchChampions(summoner.value.puuid, allMatches.value),
+    useAllies: () => useRepeatedTeammates(summoner.value.puuid, allMatches.value),
+    useRoles: () => useMatchRoles(summoner.value.puuid, allMatches),
+    links: generateSummonerLinks(summoner.value),
+    loadMatches: loadMatchesFromDB,
+
+    fetchNewMatches: async () => {
+      if (!summoner.value)
+        return
+      console.log('fetchNewMatches:')
+      allMatches.value = await useFetchMatches(currentPuuid.value)
+      summoner.value.lastMatchUpdate = new Date()
+    },
+
+    forceReload: () => findSummoner({ force: true }),
     loading,
     ready,
-    loadingMessage,
-    matches,
-    fetchSummoner,
-    updateMatches,
-    refreshMatches: updateMatches,
-    forceReload: () => fetchSummoner({ force: true }),
-    fetchMastery,
-    setPuuid: (newPuuid: string) => (currentPuuid.value = newPuuid),
   }
+
+  provide(SummonerKey, state)
+  return state
+}
+
+export function useSummonerInject() {
+  const state = inject<{
+    summoner: Ref<Summoner | null>
+    currentPuuid: Ref<string | null>
+    allMatches: Ref<MatchData[]>
+    matches: Ref<MatchData[]>
+    links: Record<string, string>
+    topChampion: TopChampion
+    champions: any
+    useRoles: any
+    filter: MatchFilter
+    loading: Ref<boolean>
+    ready: Ref<boolean>
+    findSummoner: () => Promise<void>
+    fetchNewMatches: () => Promise<void>
+    setFilter: (string, key) => void
+    forceReload: () => void
+    fetchMastery: () => Promise<any>
+    clearFilter: () => void
+  }>(SummonerKey)
+
+  if (!state) {
+    throw new Error('No Summoner provider found. Make sure provideSummoner is called in a parent component.')
+  }
+
+  return state
 }

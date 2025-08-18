@@ -3,7 +3,7 @@ import process from 'node:process'
 import { $fetch } from 'ofetch'
 import pLimit from 'p-limit'
 
-const limit = pLimit(10)
+const limit = pLimit(5)
 const NUXT_RIOT_API = process.env.NUXT_RIOT_API!
 export const REGION = 'na1'
 const BASE = `https://${REGION}.api.riotgames.com`

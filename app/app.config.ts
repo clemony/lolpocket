@@ -1,3 +1,5 @@
+// CONFIG
+
 export default defineAppConfig({
   theme: {},
   icon: {

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { formatTimeAgo } from 'utils/normalize/formatTimeAgo'
+import { formatTimeAgo } from '~/utils/format/formatTimeAgo'
 import { markRead, sortedMessages, toggleRead, trashMsg } from '../inbox-management'
 
 const as = useAccountStore()

@@ -49,7 +49,7 @@ const filteredIds = computed (() => {
         }),*/
         },
       ]"
-      class="flex flex-wrap select-none overscroll-auto justify-self-center justify-start gap-4 px-10  pb-10 pt-30">
+      class="flex flex-wrap select-none overscroll-auto justify-self-center justify-start gap-4 px-10  pb-10 pt-14">
       <LazyPopoverItem
         v-for="item in filtered"
         :id="item"

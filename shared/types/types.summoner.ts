@@ -17,9 +17,6 @@ export interface Summoner {
     solo?: RankedEntry
     flex?: RankedEntry
   }
-  matchIds: string[]
-  processedMatchIds: string[]
-  repeatedTeammates?: Record<string, StoredTeammate>
   mastery?: {
     totalPoints: number
     totalLevels: number

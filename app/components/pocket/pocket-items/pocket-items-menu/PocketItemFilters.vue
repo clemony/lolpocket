@@ -19,7 +19,7 @@ const {
     variant="sidebar"
     :default-open="false"
     collapsible="icon"
-    class="overflow-hidden [&>[data-sidebar=sidebar]]:flex-row absolute border-b3"
+    class="overflow-hidden max-h-[95vh] [&>[data-sidebar=sidebar]]:flex-row absolute border-b3"
     side="right">
     <SidebarRail />
     <Sidebar
@@ -27,9 +27,9 @@ const {
       class="hidden flex-1 md:flex pr-17">
       <SidebarHeader class="gap-3.5 border-b p-4  border-b3">
         <div class="flex w-full items-center justify-between">
-          <div class="text-3 font-medium  border-b3/80">
-            hi
-          </div>
+          <h3>
+            Filter
+          </h3>
           <Label class="flex items-center  text-2 font-medium">
             <span>{{ is.itemFilter.purchasable ? 'Purchasable' : 'All' }}</span>
             <Switch
@@ -50,6 +50,13 @@ const {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
+      <SidebarFooter>
+        <Button
+          variant="neutral"
+          size="lg">
+          Reset Filters
+        </Button>
+      </SidebarFooter>
     </Sidebar>
 
     <Sidebar
@@ -59,8 +66,9 @@ const {
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton
-              :class="cn('', { 'btn-active': open })"
+              :class="cn('*:!bg-brightness-136', { 'btn-active': open })"
               size="icon"
+              variant="shadow"
               @click="toggleSidebar()">
               <icon
                 name="teenyicons:filter-outline"
@@ -88,14 +96,11 @@ const {
           <SidebarGroupContent class="px-1.5 md:px-0">
             <SidebarMenu>
               <SidebarMenuButton
-                v-for="stat in itemStatsMin"
-                :key="stat.ids[0]"
-                size="icon"
-                :value="stat.ids[0]">
-                <hicon
-                  :name="stat.icon"
-                  :class="cn('size-4.5 opacity-80 dst', stat.class)" />
-              </SidebarMenuButton>
+                size="icon">
+                <icon
+                  name="calc"
+                  class="!size-6" />
+              </sidebarmenubutton>
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>

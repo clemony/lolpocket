@@ -10,6 +10,7 @@ export interface PlayerStats {
   deaths: number
   assists: number
   goldEarned: number
+  totalMinionsKilled: number
   totalDamageDealtToChampions: number
   effectiveHealAndShielding: number
   totalDamageShieldedOnTeammates: number
@@ -18,7 +19,6 @@ export interface PlayerStats {
   totalDamageTaken: number
   timeCCingOthers: number
   visionScore: number
-  controlWardsPlaced: number
   turretKills: number
   dragonKills: number
   objectivesStolen: number
@@ -27,7 +27,6 @@ export interface PlayerStats {
     teamDamagePercentage: number
     damageTakenOnTeamPercentage: number
     saveAllyFromDeath: number
-    epicMonsterSteals: number
   }
 }
 
@@ -37,13 +36,13 @@ const roleWeights: Record<string, Record<string, number>> = {
     deathsInverse: 10,
     assists: 10,
     goldEarned: 8,
+    totalMinionsKilled: 10,
     totalDamageDealtToChampions: 15,
     effectiveHealAndShielding: 5,
     damageSelfMitigated: 10,
     totalDamageTaken: 8,
     timeCCingOthers: 5,
     visionScore: 5,
-    controlWardsPlaced: 2,
     turretKills: 5,
     dragonKills: 2,
     objectivesStolen: 0,
@@ -51,20 +50,19 @@ const roleWeights: Record<string, Record<string, number>> = {
     teamDamagePercentage: 5,
     damageTakenOnTeamPercentage: 5,
     saveAllyFromDeath: 0,
-    epicMonsterSteals: 0,
   },
   JUNGLE: {
     kills: 10,
     deathsInverse: 10,
     assists: 15,
     goldEarned: 8,
+    totalMinionsKilled: 6,
     totalDamageDealtToChampions: 10,
     effectiveHealAndShielding: 5,
     damageSelfMitigated: 5,
     totalDamageTaken: 5,
     timeCCingOthers: 5,
     visionScore: 5,
-    controlWardsPlaced: 3,
     turretKills: 4,
     dragonKills: 8,
     objectivesStolen: 5,
@@ -72,20 +70,19 @@ const roleWeights: Record<string, Record<string, number>> = {
     teamDamagePercentage: 4,
     damageTakenOnTeamPercentage: 3,
     saveAllyFromDeath: 0,
-    epicMonsterSteals: 3,
   },
   MIDDLE: {
     kills: 15,
     deathsInverse: 10,
     assists: 10,
     goldEarned: 10,
+    totalMinionsKilled: 12,
     totalDamageDealtToChampions: 20,
     effectiveHealAndShielding: 0,
     damageSelfMitigated: 5,
     totalDamageTaken: 5,
     timeCCingOthers: 5,
     visionScore: 5,
-    controlWardsPlaced: 2,
     turretKills: 5,
     dragonKills: 2,
     objectivesStolen: 0,
@@ -93,20 +90,19 @@ const roleWeights: Record<string, Record<string, number>> = {
     teamDamagePercentage: 5,
     damageTakenOnTeamPercentage: 0,
     saveAllyFromDeath: 0,
-    epicMonsterSteals: 0,
   },
   BOTTOM: {
     kills: 20,
     deathsInverse: 10,
     assists: 5,
     goldEarned: 15,
+    totalMinionsKilled: 15,
     totalDamageDealtToChampions: 20,
     effectiveHealAndShielding: 0,
     damageSelfMitigated: 0,
     totalDamageTaken: 0,
     timeCCingOthers: 5,
     visionScore: 3,
-    controlWardsPlaced: 2,
     turretKills: 5,
     dragonKills: 2,
     objectivesStolen: 0,
@@ -114,20 +110,19 @@ const roleWeights: Record<string, Record<string, number>> = {
     teamDamagePercentage: 7,
     damageTakenOnTeamPercentage: 0,
     saveAllyFromDeath: 0,
-    epicMonsterSteals: 0,
   },
   UTILITY: {
     kills: 5,
     deathsInverse: 10,
     assists: 20,
     goldEarned: 5,
+    totalMinionsKilled: 0,
     totalDamageDealtToChampions: 10,
     effectiveHealAndShielding: 20,
     damageSelfMitigated: 10,
     totalDamageTaken: 10,
     timeCCingOthers: 10,
     visionScore: 10,
-    controlWardsPlaced: 5,
     turretKills: 2,
     dragonKills: 2,
     objectivesStolen: 0,
@@ -135,11 +130,10 @@ const roleWeights: Record<string, Record<string, number>> = {
     teamDamagePercentage: 2,
     damageTakenOnTeamPercentage: 3,
     saveAllyFromDeath: 5,
-    epicMonsterSteals: 0,
   },
 }
 
-function normalizeStat(players: PlayerStats[], role: string, key: string) {
+export function normalizeStat(players: PlayerStats[], role: string, key: string) {
   const values = players
     .filter(p => p.teamPosition?.toUpperCase() === role)
     .map((p) => {
@@ -211,7 +205,7 @@ export function calculateMvpScores(players: PlayerStats[]) {
       scaledScores[puuid] = 5
     }
     else {
-      scaledScores[puuid] = Math.round(((raw - min) / (max - min)) * 9 + 1)
+      scaledScores[puuid] = Math.round((((raw - min) / (max - min)) * 9 + 1) * 10) / 10
     }
   }
 

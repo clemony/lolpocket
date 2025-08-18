@@ -3,8 +3,6 @@ const { team, class: className } = defineProps<{
   team: any
   class?: HTMLAttributes['class']
 }>()
-
-/* const kda = computeKDA(team.kills, team.assists, team.deaths) */
 </script>
 
 <template>
@@ -21,9 +19,6 @@ const { team, class: className } = defineProps<{
         name="slash"
         class="-mx-px dst size-4" />
       {{ team.assists }}
-    </p><!--
-    <p class="text-3 text-bc/80  pb-0.25 text-nowrap font-medium items-center">
-      {{ math / 100 }}:1 <span class="font-mono ">TEAM KDA</span>
-    </p> -->
+    </p>
   </div>
 </template>

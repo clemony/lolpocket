@@ -8,18 +8,7 @@ const { summoner, open, matches } = defineProps<{
   matches: MatchData[]
 }>()
 
-/* const { matches } = useSummoner(as().userAccount?.riot?.puuid) */
-
-const { topChampion } = useSummonerChampions(
-  summoner.puuid,
-  matches || [],
-  {
-    mode: 'top',
-    limit: 1,
-  },
-)
-
-// as.fetchPublicData(as.userAccount.riot.puuid)
+const state = inject<PlayerData>(SummonerKey)
 watch(() => as().publicData.splash, (newVal) => {
   console.log('💠 - watch - newVal:', newVal)
 })
@@ -29,7 +18,7 @@ watch(() => as().publicData.splash, (newVal) => {
   <Img
     v-if="summoner"
     layout-id="backdrop-image"
-    :img="(as().publicData?.splash ?? topChampion?.splash).replace('centered', 'uncentered')"
+    :img="(as().publicData?.splash ?? state.topChampion?.splash).replace('centered', 'uncentered')"
     alt="profile-image"
     class="  " />
 </template>

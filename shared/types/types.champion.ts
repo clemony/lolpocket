@@ -63,8 +63,8 @@ export interface Ability {
   targeting?: string
   affects?: string
   spellshieldable?: string
-  resource?: string
-  damageType?: string
+  resource?: string | null
+  damageType?: string | null
   spellEffects?: string
   projectile?: string
   onHitEffects?: string
@@ -88,8 +88,8 @@ export interface Ability {
 }
 
 export interface Modifier {
-  values?: number[]
-  units?: string[]
+  values?: number[] | null
+  units?: string[] | null
 }
 
 export interface Attribute {

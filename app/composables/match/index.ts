@@ -1,3 +1,4 @@
+export * from './useFetchMatches'
 export * from './useFilteredMatches'
 export * from './useInitialMatchSync'
 export * from './useMatchChampions'

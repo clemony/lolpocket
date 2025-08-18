@@ -1,15 +1,15 @@
 <script lang="ts" setup>
-const { summoner } = defineProps<{
-  summoner: Summoner
+const { state } = defineProps<{
+  state: PlayerData
 }>()
 </script>
 
 <template>
   <div class="w-124 sticky py-24 top-24 scrollbar-none overflow-y-auto max-h-screen justify-center gap-10 auto-rows-max items-start grid">
     <RankCard
-      v-if="summoner.ranked?.solo && as().settings?.showSolo"
+      v-if="state.summoner.ranked?.solo && as().settings?.showSolo && !state.loading"
       title="Solo/Duo"
-      :entry="summoner.ranked.solo"
+      :entry="state.summoner.ranked.solo"
       class="order-2" />
 
     <Unranked
@@ -18,9 +18,9 @@ const { summoner } = defineProps<{
       class="order-2" />
 
     <RankCard
-      v-if="summoner.ranked?.flex && as().settings?.showFlex"
+      v-if="state.summoner.ranked?.flex && as().settings?.showFlex"
       title="Flex"
-      :entry="summoner.ranked.flex"
+      :entry="state.summoner.ranked.flex"
       class="order-3" />
 
     <Unranked
@@ -29,20 +29,20 @@ const { summoner } = defineProps<{
       class="order-4" />
 
     <QueueFilters
-      :summoner
+      :state
       class="order-5" />
 
     <MatchChampionFilters
-      :summoner
+      :state
       class="order-6" />
 
     <div class="order-7">
-      <MatchPositionFilter :summoner />
+      <LazyMatchPositionFilter />
     </div>
 
-    <MatchAlliesFilter
+    <LazyMatchAlliesFilter
       v-if="as().settings.showAllies"
-      :summoner
+      :state
       class="order-last" />
   </div>
 </template>

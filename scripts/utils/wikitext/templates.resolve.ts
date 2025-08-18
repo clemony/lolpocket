@@ -1,5 +1,6 @@
-import { evaluateTemplates } from './evaluate-templates'
-import { parseTemplates } from './parse-templates'
+import type { TemplateResult } from './templates.evaluate'
+import { evaluateTemplates } from './templates.evaluate'
+import { parseTemplates } from './templates.parse'
 
 export function resolveTemplates(str: string, depth: number = 0, vars: Map<string, string>): TemplateResult {
   const MAX_DEPTH = 20

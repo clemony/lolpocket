@@ -15,13 +15,13 @@ definePageMeta({
   },
 })
 
-const { bayesianChampions } = await useMatchChampions(as().userAccount.riot.puuid, matches)
+/* const { bayesianChampions } = await useMatchChampions(as().userAccount.riot.puuid) */
 </script>
 
 <template>
   <div class="size-full pt-16 ">
     <div class="grid grid-cols-[0.9fr_1fr]  gap-6 size-full justify-center ">
-      <div class="flex flex-col items-center gap-8 size-full">
+      <!--       <div class="flex flex-col items-center gap-8 size-full">
         <PocketPickChampion
           v-if="bayesianChampions.length && bayesianChampions[0]"
           :champion="bayesianChampions[0]" />
@@ -33,7 +33,7 @@ const { bayesianChampions } = await useMatchChampions(as().userAccount.riot.puui
 
       <div class="grid h-190  ">
         <ChampionDataGrid :champions="bayesianChampions" />
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

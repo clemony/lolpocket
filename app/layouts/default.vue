@@ -30,10 +30,10 @@ client.auth.onAuthStateChange(async (event, session) => {
       await hydrateUser(data.session)
 
       if (as().userAccount.riot.puuid) {
-        const { fetchSummoner, summoner } = useSummoner(
+        /* const { fetchSummoner, summoner } = useSummoner(
           as().userAccount.riot.puuid,
         )
-      /*   fetchSummoner() */
+        fetchSummoner() */
       }
     }
     router.push('/nexus')
@@ -42,8 +42,6 @@ client.auth.onAuthStateChange(async (event, session) => {
 })
 
 const floatingSidebar = ref(false)
-/*  */
-console.log('💠 - (as().userAccount:', (as().userAccount))
 </script>
 
 <template>
@@ -57,7 +55,7 @@ console.log('💠 - (as().userAccount:', (as().userAccount))
     <!--     <LazyAppCommand /> after:absolute after:bottom-0 after:w-full after:h-1/4 after:bg-neutral after:z-0 -->
     <!-- [ inset id is for Teleports] -->
     <main
-      :class="cn('inset-wrapper relative w-screen     overflow-x-hidden *:z-1  ', { 'min-w-screen w-screen': floatingSidebar })">
+      :class="cn('inset-wrapper relative w-screen  before:bg-neutral before:-z-1 before:fixed before:h-[30vh] before:w-full before:bottom-0 before:left-0   overflow-x-hidden *:z-1  ', { 'min-w-screen w-screen': floatingSidebar })">
       <slot />
     </main>
     <NuxtLoadingIndicator

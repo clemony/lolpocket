@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const props = defineProps<{
-  match: any
+  match: MatchData
 }>()
 const match = computed(() => {
   return props.match
@@ -13,6 +13,8 @@ const blue = computed(() => {
 const red = computed<Player[]>(() => {
   return match.value.participants.filter(p => p.teamId == 200)
 })
+
+function navigate() {}
 </script>
 
 <template>
@@ -21,16 +23,16 @@ const red = computed<Player[]>(() => {
     <div class="size-full">
       <div
         v-for="player in blue"
-        :key="player.participantId"
+        :key="player.puuid"
         class="flex grow gap-2 overflow-hidden">
         <div
           class="flex gap-2 overflow-hidden"
-          @click.stop="useSummoner(player.puuid)">
+          @click.stop="navigate()">
           <ChampionIcon
             v-if="player"
             :id="player?.championId"
-            v-tippy="{ content: player?.championName, placement: 'right' }"
-            :alt="player?.championName"
+            v-tippy="{ content: ix().champNameById(player?.championId), placement: 'right' }"
+            alt="champion-icon"
             class="rounded-tiny size-5.5" />
 
           <a

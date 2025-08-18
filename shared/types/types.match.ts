@@ -1,16 +1,34 @@
+import type { RouteRecordRaw } from 'vue-router'
+
+export interface PlayerData {
+  summoner: Summoner
+  matches: MatchData[]
+  allMatches: MatchData[]
+  topChampion: TopChampion
+  useChampions: any
+  useRoles: any
+  useAllies: any
+  useItems: any
+  links: Record<string, string>
+  loading: boolean
+  filter: MatchFilter
+  fetchMastery: () => void
+  findSummoner: () => void
+  setFilter: (string, key) => void
+  clearFilters: () => void
+
+}
+
 export interface MatchData {
 
   matchId: string
   endOfGameResult: string
-  gameCreation: number
   gameDuration: number
   gameEndTimestamp: number
-  gameMode: string
-  gameStartTimestamp: number
   gamePatch: number
-  mapId: number
-  participants: Player[]
   queueId: number
+  participants: Player[]
+  participantIds: string[]
   teams: MatchTeam[]
 }
 
@@ -65,7 +83,6 @@ export interface Player {
     saveAllyFromDeath: number
     killParticipation: number
     teamDamagePercentage: number
-    epicMonsterSteals: number
   }
   perks: {
     keystone: number

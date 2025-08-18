@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { motion } from 'motion-v'
+
 defineOptions({
   inheritAttrs: false,
 })
@@ -8,7 +10,7 @@ const { class: className } = defineProps<{
 </script>
 
 <template>
-  <MotionMin
+  <motion.div
     v-bind="$attrs"
     :initial="{ opacity: 0 }"
     :animate="{ opacity: 1 }"
@@ -16,5 +18,5 @@ const { class: className } = defineProps<{
     :class="cn('', className)"
     :transition="{ duration: 0.4, type: 'spring', bounce: 0.35 }">
     <slot />
-  </MotionMin>
+  </motion.div>
 </template>

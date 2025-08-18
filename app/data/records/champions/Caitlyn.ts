@@ -221,7 +221,7 @@ const champion: Champion =  {
         "icon": "https://cdn.communitydragon.org/latest/champion/Caitlyn/ability-icon/w",
         "effects": [
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Caitlyn sets a visible trap at the target location that is untargetable and arms after 1 second, lasting for a duration. The trap grants sight of the area for 1 second after being placed.</p>",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Caitlyn sets a visible trap at the target location that is untargetable and arms.filterter 1 second, lasting for a duration. The trap grants sight of the area for 1 second after being placed.</p>",
             "leveling": [
               {
                 "attribute": "Trap Duration",

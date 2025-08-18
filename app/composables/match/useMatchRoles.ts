@@ -1,7 +1,7 @@
 /* const filteredMatches = useFilteredMatches()
 const roleStats = useRoles(filteredMatches)
  */
-interface RoleStats {
+export interface RoleStats {
   role: string
   displayName: string
   games: number

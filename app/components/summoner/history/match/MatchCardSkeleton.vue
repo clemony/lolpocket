@@ -21,11 +21,7 @@ const props = defineProps<{
 
           <Skeleton class=" h-1/2 w-64  " />
 
-          <div class="flex h-1/2 gap-8 w-full">
-            <Skeleton class="w-1/2 h-full " />
-
-            <Skeleton class="w-1/2 h-full " />
-          </div>
+          <Skeleton class="flex h-1/2 gap-8 w-full" />
         </div>
 
         <Skeleton class=" w-1/2 h-34  !rounded-lg " />

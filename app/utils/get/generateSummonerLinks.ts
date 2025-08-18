@@ -1,4 +1,4 @@
-export function generateSummonerLinks(summoner: Summoner) {
+export function generateSummonerLinks(summoner: Summoner | Partial<Summoner>) {
   return {
     history: `/summoner/${summoner.region}/${summoner.name}_${summoner.tag}`,
     mastery: `/summoner/${summoner.region}/${summoner.name}_${summoner.tag}/mastery`,

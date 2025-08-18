@@ -29,11 +29,12 @@ const { class: className, summoner } = defineProps<{
           text
           size="xs"
           variant="shadow-outline"
-          class="!max-h-7 h-7 w-18" />
+          class="w-18" />
         <FollowButton
           :summoner
+          size="xs"
           variant="shadow-outline"
-          class="size-7 btn btn-shadow btn-square " />
+          class="size-8" />
       </div>
     </template>
 

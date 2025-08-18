@@ -4,7 +4,7 @@ import { calculateMvpScores } from './mvpScoring'
 
 export function transformMatchData(raw: any): MatchData {
   // 1️⃣ Map raw participants into Player
-  const participants: Player[] = raw.participants.map(
+  const participants: Player[] = raw.info.participants.map(
     (p: any): Player => ({
       riotIdGameName: p.riotIdGameName ?? '',
       puuid: p.puuid,
@@ -57,7 +57,6 @@ export function transformMatchData(raw: any): MatchData {
         saveAllyFromDeath: p.challenges?.saveAllyFromDeath ?? 0,
         killParticipation: p.challenges?.killParticipation ?? 0,
         teamDamagePercentage: p.challenges?.teamDamagePercentage ?? 0,
-        epicMonsterSteals: p.challenges.epicMonsterSteals ?? 0,
       },
 
       perks: {
@@ -83,6 +82,7 @@ export function transformMatchData(raw: any): MatchData {
     deaths: p.deaths,
     assists: p.assists,
     goldEarned: p.goldEarned,
+    totalMinionsKilled: p.totalMinionsKilled,
     totalDamageDealtToChampions: p.totalDamageDealtToChampions,
     effectiveHealAndShielding:
       (p.totalHealsOnTeammates || 0) + (p.totalDamageShieldedOnTeammates || 0),
@@ -92,7 +92,6 @@ export function transformMatchData(raw: any): MatchData {
     totalDamageTaken: p.totalDamageTaken,
     timeCCingOthers: p.timeCCingOthers,
     visionScore: p.visionScore,
-    controlWardsPlaced: p.challenges.controlWardsPlaced,
     turretKills: p.turretKills,
     dragonKills: p.dragonKills,
     objectivesStolen: p.objectivesStolen,
@@ -101,7 +100,6 @@ export function transformMatchData(raw: any): MatchData {
       teamDamagePercentage: p.challenges.teamDamagePercentage,
       damageTakenOnTeamPercentage: p.challenges.damageTakenOnTeamPercentage,
       saveAllyFromDeath: p.challenges.saveAllyFromDeath,
-      epicMonsterSteals: p.challenges.epicMonsterSteals ?? 0,
     },
   }))
 
@@ -114,7 +112,7 @@ export function transformMatchData(raw: any): MatchData {
   }
 
   // … continue mapping teams and matchData as before
-  const teams: MatchTeam[] = raw.teams.map((team: any): MatchTeam => {
+  const teams: MatchTeam[] = raw.info.teams.map((team: any): MatchTeam => {
     const teamParticipants = participants.filter(p => p.teamId === team.teamId)
 
     return {
@@ -144,16 +142,13 @@ export function transformMatchData(raw: any): MatchData {
 
   return {
     matchId: raw.metadata.matchId,
-    endOfGameResult: raw.endOfGameResult,
-    gameCreation: raw.gameCreation,
-    gameDuration: raw.gameDuration,
-    gameEndTimestamp: raw.gameEndTimestamp,
-    gameMode: raw.gameMode,
-    gameStartTimestamp: raw.gameStartTimestamp,
-    gamePatch: normalizePatchNumber(raw.gameVersion),
-    mapId: raw.mapId,
+    endOfGameResult: raw.info.endOfGameResult,
+    gameDuration: raw.info.gameDuration,
+    gameEndTimestamp: raw.info.gameEndTimestamp,
+    gamePatch: normalizePatchNumber(raw.info.gameVersion),
+    queueId: raw.info.queueId ?? 420,
     participants,
-    queueId: raw.queueId ?? 420,
+    participantIds: raw.metadata.participants,
     teams,
   }
 }

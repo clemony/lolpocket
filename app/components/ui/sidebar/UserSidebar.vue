@@ -21,11 +21,11 @@ watch(() => us().activeSidebarContent, (oldVal, newVal) => {
  */
 const target = useTemplateRef<HTMLElement>('target')
 
-onClickOutside(target, (event) => {
+/* onClickOutside(target, (event) => {
   if (us().sidebarExpanded == true)
     us().toggleSidebar()
   console.log('💠 - us:', us().sidebarExpanded)
-})
+}) */
 </script>
 
 <template>

@@ -1,13 +1,19 @@
 <script setup lang="ts">
-const ms = useMatchStore()
+const state = useSummonerInject()
+
+const queueModel = computed({
+  get: () => state.filter.queue,
+  set: val => state.setFilter('queue', val),
+})
 </script>
 
 <template>
   <Tabs
-    v-model:model-value="ms.mf.queue"
+    v-model:model-value="queueModel"
+    :default-value="0"
     class="  w-120 max-w-120 ">
     <Field class="!p-0  gap-0">
-      <IndicatorTabsList class="bg-transparent h-10   w-full grid grid-cols-[repeat(4,1fr)_0.5fr] ">
+      <IndicatorTabsList class="bg-transparent h-10   w-full grid grid-cols-4">
         <TabIndicator />
         <IndicatorTabsTrigger :value="0">
           All
@@ -24,12 +30,12 @@ const ms = useMatchStore()
         <IndicatorTabsTrigger :value="400">
           Normal
         </IndicatorTabsTrigger>
-
+        <!--
         <IndicatorTabsTrigger :value="-1">
           <icon
             name="ri:more-line"
             class="shrink-0 size-5.5 opacity-60 dst" />
-        </IndicatorTabsTrigger>
+        </IndicatorTabsTrigger> -->
       </IndicatorTabsList>
     </Field>
 

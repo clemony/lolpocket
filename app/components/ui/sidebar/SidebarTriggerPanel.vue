@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { capitalize } from 'utils/normalize/capitalize'
+import { capitalize } from '~/utils/format/capitalize'
 
 const as = useAccountStore()
 const us = useUiStore()

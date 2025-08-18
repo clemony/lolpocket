@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import { TabsTrigger, useForwardProps } from "reka-ui"
-import type { TabsTriggerPropsWithNullableValue } from "~~/shared/types/types-extend"
+import { TabsTrigger, useForwardProps } from 'reka-ui'
+import type { TabsTriggerPropsWithNullableValue } from '~~/shared/types/types.extend'
 
 const props = defineProps<
   TabsTriggerPropsWithNullableValue & {
-    class?: HTMLAttributes["class"]
+    class?: HTMLAttributes['class']
     radius?: string
     color?: string
   }
 >()
 
-const delegatedProps = reactiveOmit(props, "class")
+const delegatedProps = reactiveOmit(props, 'class')
 
 const forwarded = useForwardProps(delegatedProps)
 </script>
@@ -25,7 +25,7 @@ const forwarded = useForwardProps(delegatedProps)
     :class="
       cn(
         'tab data-[state=active]:tab-active text-2 font-medium  *:text-nowrap *:flex-nowrap gap-2 !border-b-transparent',
-        props.class
+        props.class,
       )
     ">
     <slot />

@@ -7,48 +7,39 @@ const { player, class: className } = defineProps<{
 const math = computed (() => {
   return Math.round((player.kills + player.assists) / player.deaths * 100)
 })
-/* aspect-square btn !bg-b1/84  inset-shadow-xs size-10 bg-linear-to-t shadow-sm drop-shadow-sm inset-shadow-xs */
-const statBadgeStyle = 'flex  leading-4 items-end  tracking-tight  font-medium text-1 rounded-md relative '
-const badgeLabelStyle = ' text-2 tracking-wide flex mb-px   text-nowrap !text-00  text-shadow-xs  text-end lowercase   font-normal '
 </script>
 
 <template>
   <div
-    class="flex w-25  gap-1 grid auto-rows-max *:w-full justify-start *:justify-start py-1 ml-2 items-center *:items-center *:justify-items-start">
-    <p class="text-5 grid items-center font-bold grid   justify-start tracking-tight text-nowrap inline-flex flex-nowrap">
-      {{ player.kills }}
-      <icon
-        name="slash"
-        class="-mx-px dst" />
-      {{ player.deaths }}
-      <icon
-        name="slash"
-        class="-mx-px dst" />
-      {{ player.assists }}
+    class="flex w-25  gap-1 grid auto-rows-max *:w-full justify-end justify-items-end py-1 ml-2 items-center *:items-center  text-2">
+    <p class="text-5 grid items-center font-bold grid   justify-end tracking-wide text-nowrap inline-flex flex-nowrap leading-4">
+      {{ player.kills }}&thinsp;/&thinsp;<span class="text-shade-domination/10 inline ">
+        {{ player.deaths }}
+      </span>
+      &thinsp;/&thinsp;{{ player.assists }}
     </p>
 
-    <div class="grid *:flex *:items-center size-full gap-0 items-center">
-      <div :class="cn(statBadgeStyle)">
+    <div class="grid *:flex *:items-center size-full justify-end gap-0 items-center font-medium text-1 **:leading-none **:text-end">
+      <p>
         {{ Math.round(player.challenges.killParticipation * 100) }}
-        <span :class="badgeLabelStyle">
-          % KP
+        <span>
+          %&nbsp;KP
         </span>
-      </div>
+      </p>
 
-      <div
+      <p
         v-if="!player.deaths"
-        class=" text-nowrap tracking-tight  truncate font-bold ">
+        class=" text-nowrap tracking-tight  truncate ">
         PERFECT KDA
-      </div>
+      </p>
 
-      <div
-        v-else
-        :class="cn(statBadgeStyle)">
+      <p
+        v-else>
         {{ (math / 100).toFixed(1) }}
-        <span :class="badgeLabelStyle">
+        <span class="text-[0.89rem]">
           &nbsp;KDA
         </span>
-      </div>
+      </p>
     </div>
   </div>
 </template>
