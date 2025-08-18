@@ -1,38 +1,33 @@
 import { matchFilters } from '~/utils/filter/matchFilters'
 
-export function useFilteredMatches(puuid: string, filters: MatchFilter) {
-  const ss = useSummonerStore()
-  const { matches: data } = useSummoner(puuid)
-  const matches = ref<MatchData[]>([])
-
-  if (data) {
-    matches.value = data.value
-  }
-
+export function useFilteredMatches(puuid: string, matches: MatchData[]) {
+  console.log('puuid: ', puuid)
+  console.log('matches: ', matches)
   const matchMap = computed(() => {
     return new Map(
-      data.value.map(match => [match.gameEndTimestamp, match]),
+      matches.map(match => [match.gameEndTimestamp, match]),
     )
   })
 
+  console.log('matchMap: ', matchMap)
   const filtered = computed(() => {
-    return matches.value.filter(match =>
+    return matches.filter(match =>
       matchFilters(puuid, match, {
-        patch: filters.patch ?? null,
-        queue: filters.queue ?? null,
-        champion: filters.champion ?? null,
-        ally: filters.ally ?? null,
-        role: filters.role ?? null,
+        patch: ms().filter.patch ?? null,
+        queue: ms().filter.queue ?? null,
+        champion: ms().filter.champion ?? null,
+        ally: ms().filter.ally ?? null,
+        role: ms().filter.role ?? null,
       }),
     )
   })
   const filteredNoRole = computed(() => {
-    return matches.value.filter(match =>
+    return matches.filter(match =>
       matchFilters(puuid, match, {
-        patch: filters.patch ?? null,
-        queue: filters.queue ?? null,
-        champion: filters.champion ?? null,
-        ally: filters.ally ?? null,
+        patch: ms().filter.patch ?? null,
+        queue: ms().filter.queue ?? null,
+        champion: ms().filter.champion ?? null,
+        ally: ms().filter.ally ?? null,
         ignoreRole: true,
       }),
     )
@@ -41,7 +36,7 @@ export function useFilteredMatches(puuid: string, filters: MatchFilter) {
   // Check if matches are still loading
   const loading = computed(() => {
     return (
-      data.value.length === 0
+      matches.length === 0
     )
   })
 
@@ -58,7 +53,7 @@ export function useFilteredMatches(puuid: string, filters: MatchFilter) {
   })
   const championsPlayed = computed(() => {
     return Array.from(
-      new Set(matches.value.map(p => ix().champNameById(p.participants.find(p => p.puuid == puuid).championId))),
+      new Set(matches.map(p => ix().champNameById(p.participants.find(p => p.puuid == puuid).championId))),
     )
   })
 

@@ -32,7 +32,7 @@ const winrateDiff = computed (() => {
       </div>
 
       <div class="stat-desc">
-        games in {{ ms.af.patch }}
+        games in {{ ms.filter.patch }}
       </div>
     </div>
 

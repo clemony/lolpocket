@@ -1,17 +1,19 @@
 import { escapeHtml } from '../escape-html'
-import { formatMap } from './format-map'
-import { resolveTemplates } from './resolve-templates'
+import { formatMap } from './formatMap'
+import { resolveTemplates } from './templates.resolve'
 import {
   evalAp,
   evalRange,
   evaluateExpressions,
   evaluateMathExpression,
   tryEval,
-} from './try-eval'
+} from './tryEval'
 
 export interface TemplateResult {
   html: string
-  isLevelScaling: boolean
+  exportType?: string
+  isPp?: boolean
+  isLevelScaling?: boolean
 }
 
 export function evaluateTemplates(

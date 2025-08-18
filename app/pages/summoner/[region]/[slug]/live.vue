@@ -2,8 +2,8 @@
 definePageMeta({
   name: 'live',
   title: 'live match',
-  icon: 'fluent:live-24-filled',
-  iconStyle: 'scale-104',
+  icon: 'lucide:activity',
+  iconStyle: '',
   order: 2,
 })
 </script>

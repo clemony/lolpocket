@@ -1,7 +1,7 @@
-export function useMatchItems() {
-  const { matches } = useSummoner(as().userAccount?.riot?.puuid)
+export function useMatchItems(puuid: string, matches: MatchData[]) {
+  // TODO probably fix
 
-  const player = matches.value.map(m => ({
+  const player = matches.map(m => ({
     patch: m.gamePatch,
     data: m.participants.find(p => p.puuid == as().userAccount.riot.puuid),
   }))
@@ -21,7 +21,7 @@ export function useMatchItems() {
   const bayesianItems = ref<any[]>([])
 
   watchEffect(() => {
-    if (!matches.value.length) {
+    if (!matches.length) {
       bayesianItems.value = []
       return
     }

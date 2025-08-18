@@ -8,8 +8,11 @@ export class MatchDexie extends Dexie {
   constructor() {
     super('MatchDB')
     this.version(1).stores({
-      matchData: 'metadata.matchId',
-      simplifiedMatchData: 'matchId',
+      matchData: `
+    matchId,
+    *participantIds,
+    creation
+  `,
     })
   }
 }

@@ -1,13 +1,13 @@
 <script lang="ts" setup>
 const ms = useMatchStore()
-console.log('💠 - ms:', ms.af.patch)
+console.log('💠 - ms:', ms.filter.patch)
 const ds = useDataStore()
 </script>
 
 <template>
   <div class="w-full overflow-hidden">
     <NumberField
-      v-model:model-value="ms.af.patch"
+      v-model:model-value="ms.filter.patch"
       class="flex  h-28 w-full rounded-lg"
       :min="25.01"
       :max="ds.currentPatch"

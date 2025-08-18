@@ -1,1 +1,1 @@
-export * from './match-types'
+export * from './types.match'

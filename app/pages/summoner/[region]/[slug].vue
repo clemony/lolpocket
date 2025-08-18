@@ -13,76 +13,69 @@ definePageMeta({
 const route = useRoute()
 
 /* const { summoner, props, loading, error } = useHandleSummoner() */
-const puuid = unref(as().userAccount?.riot?.puuid)
-
-/* const { matches, fetchSummoner, summoner } = useSummoner(as().userAccount?.riot?.puuid)
-
-const { topChampion } = useSummonerChampions(
-  as().userAccount?.riot?.puuid,
-  matches.value || [],
-  {
-    mode: 'top',
-    limit: 1,
-  },
-)
 
 const { childRoutes } = useChildRoutes('summoner')
-const links = computed (() => generateSummonerLinks(summoner.value))
 
-provide('playerData', {
-  summoner: summoner.value,
-  matches: matches.value,
-}) */
+const puuid = computed (() => as().userAccount?.riot?.puuid)
 
-const summoner = ref<any>([])
-const childRoutes = []
-const links = []
-const topChampion = { splash: '' }
+const state = ref<ReturnType<typeof useSummonerProvider> | null>(null)
+
+provide(SummonerKey, state)
+
+watch(puuid, async (newPuuid) => {
+  if (!newPuuid)
+    return
+  const summoner = useSummonerProvider(newPuuid)
+  await summoner.findSummoner()
+  state.value = summoner
+  console.log('state.value????: ', state.value.matches)
+}, { immediate: true })
 </script>
 
 <template>
-  <TabLayoutWrapper
-    v-if="summoner">
+  <MaskLayout
+    v-if="state?.summoner">
     <!-- splash -->
 
     <template #background>
-      <BackgroundSplashFixed :background="(as().publicData?.splash ?? topChampion?.splash).replace('centered', 'uncentered')" />
+      <LazyBackgroundSplashFixed :background="(as().publicData?.splash ?? state.topChampion?.splash).replace('centered', 'uncentered')" />
     </template>
 
     <!-- nav -->
 
     <template #mini-nav>
-      <MiniSummonerNav
-        v-if="childRoutes && links"
+      <LazyMiniSummonerNav
+        v-if="childRoutes && state?.links"
         :child-routes
-        :links
-        :summoner />
+        :links="state?.links"
+        :summoner="unref(state?.summoner)" />
     </template>
 
     <!-- header -->
     <template #header>
       <SummonerHeader
-        :summoner
+        :summoner="unref(state?.summoner)"
         class="pt-5  col-start-2"
         size="lg" />
     </template>
 
     <template #tabs>
       <SummonerProfileTabs
-        v-if="childRoutes && links"
+        v-if="childRoutes && state.links"
         :child-routes
-        :links
-        :summoner />
+        :links="state?.links"
+        :summoner="state?.summoner" />
     </template>
 
     <template #page>
       <LazyNuxtPage
-        v-if="summoner"
+        v-if="state"
         :key="route.name"
-        :summoner>
+        :state>
       </LazyNuxtPage>
     </template>
     <template #footer>
+      <SiteFooter />
     </template>
-  </TabLayoutWrapper>
+  </MaskLayout>
 </template>

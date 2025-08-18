@@ -1,4 +1,5 @@
-import { normalize } from './normalize-strings'
+import type { Ability, Modifier } from '../../shared/types/types.champion'
+import { normalize } from './normalizeStrings'
 
 function cleanModifiers(modifiers: Modifier[] | null | undefined): Modifier[] {
   if (!Array.isArray(modifiers))

@@ -36,7 +36,7 @@ watch(items, (newItemSets) => {
 </script>
 
 <template>
-  <div class="absolute top-0 left-0 inset-0 pt-20 pl-16 pr-30">
+  <div class="absolute top-0 left-0 inset-0 pt-20 px-16 ">
     <ItemsHeader :pocket="pocket" />
 
     <div

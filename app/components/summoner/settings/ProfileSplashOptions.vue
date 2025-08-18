@@ -1,7 +1,6 @@
 <script lang="ts" setup>
-const { matches } = defineProps<{
-  matches: MatchData[]
-}>()
+const playerData = inject<PlayerData>('playerData')
+
 const cardClass
   = 'flex !px-4 items-center group/photo-button rounded-xl group/photo !gap-6 photo btn  h-50 max-w-110 w-110 w-110 hover-ring  justify-start **:text-start '
 
@@ -11,15 +10,7 @@ const inactiveClass = 'btn-ghost  *:grayscale   hover:*:grayscale-0'
 
 const isOpen = ref(false)
 
-/* const { matches } = useSummoner(as().userAccount?.riot?.puuid) */
-const { topChampion } = useSummonerChampions(
-  as().userAccount?.riot?.puuid,
-  matches || [],
-  {
-    mode: 'top',
-    limit: 1,
-  },
-)
+const state = inject<PlayerData>(SummonerKey)
 
 const currentSplash = computed (() => as().publicData?.splash ?? null)
 </script>
@@ -32,8 +23,8 @@ const currentSplash = computed (() => as().publicData?.splash ?? null)
       <SplashCard
         hover
         class="w-40"
-        :skin-url="topChampion?.splash?.replace('uncentered', 'tile')"
-        :text="topChampion?.name"
+        :skin-url="state.topChampion?.splash?.replace('uncentered', 'tile')"
+        :text="state.topChampion?.name"
         :alt="`${as().userAccount?.riot?.name ?? null}'s Most Played`" />
       <div class="flex flex-col h-full pt-6 gap-4">
         <h4 class="dst">

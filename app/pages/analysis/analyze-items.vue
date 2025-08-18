@@ -40,7 +40,7 @@ const ms = useMatchStore()
       </h1>
 
       <p class="font-medium text-bc/70">
-        Your best items during patch {{ ms.af.patch }}
+        Your best items during patch {{ ms.filter.patch }}
       </p>
     </div>
 

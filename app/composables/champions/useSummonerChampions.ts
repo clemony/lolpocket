@@ -3,7 +3,7 @@ import { getChampionStatsMap, useBasicChampionStats, useBayesianChampionStats } 
 export function useSummonerChampions(
   puuid: string,
   matches: MatchData[],
-  options: {
+  options?: {
     mode?: 'top' | 'lite' | 'basic' | 'bayesian'
     limit?: number
   },
@@ -28,7 +28,7 @@ export function useSummonerChampions(
     return Object.fromEntries(sorted)
   })
 
-  if (mode === 'top') {
+  function getTop() {
     const ix = useIndexStore()
     const champ = Object.keys(liteChampionStats.value)[0] // fix here too
     return {
@@ -65,7 +65,7 @@ export function useSummonerChampions(
 
   return {
     data,
-    top,
+    getTop,
     liteChampionStats, // always available in case something else needs it
   }
 }

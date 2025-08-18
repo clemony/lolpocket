@@ -2,8 +2,11 @@
 const ms = useMatchStore()
 // TODO fix usermatchdata
 const userMatchData = []
-const patchGames = computed(() => userMatchData.filter(g => g.patch === ms.af.patch))
-const { bayesianItems } = useMatchItems()
+const patchGames = computed(() => userMatchData.filter(g => g.patch === ms.filter.patch))
+
+const state = inject<PlayerData>(SummonerKey)
+
+const { bayesianItems } = useMatchItems(state.summoner.puuid, state.matches)
 </script>
 
 <template>
@@ -13,7 +16,7 @@ const { bayesianItems } = useMatchItems()
         <div class="oveflow-y-auto size-full">
           <div class=" pt-3 pb-1 px-2 opacity-60 tracking-wide items-center flex  gap-4 text-2 capitalize w-full">
             <span class="grow pl-2">
-              {{ ms.af.patch }} Items
+              {{ ms.filter.patch }} Items
             </span>
 
             <APDtooltip>

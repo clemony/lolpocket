@@ -1,4 +1,5 @@
 // eslint.config.mjs
+// CONFIG
 import antfu from '@antfu/eslint-config'
 import pluginVue from 'eslint-plugin-vue'
 // @ts-check

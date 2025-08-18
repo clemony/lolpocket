@@ -1,23 +1,20 @@
 <script lang="ts" setup>
-const { summoner, class: className } = defineProps<{
-  summoner: Summoner
+const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 
 const ms = useMatchStore()
-const { filteredNoRole } = await useFilteredMatches(summoner.puuid, ms.mf)
-
-// Use the composable with the filtered matches
-const roleStats = await useMatchRoles(summoner.puuid, filteredNoRole)
+const state = useSummonerInject()
+const roleStats = await useMatchRoles(state.summoner.value.puuid, state.matches)
 </script>
 
 <template>
-  <Tabs v-model:model-value="ms.mf.role">
+  <Tabs v-model:model-value="ms.filter.role">
     <FilterLabel
-      v-model="ms.mf.role"
-      :active="ms.mf.role != 'ALL'"
-      @click="ms.mf.role = 'ALL'">
-      {{ ms.mf.role != 'ALL' ? roleStats.find(r => r.role == ms.mf.role).displayName : 'Position' }}
+      v-model="ms.filter.role"
+      :active="ms.filter.role != 'ALL'"
+      @click="ms.filter.role = 'ALL'">
+      {{ ms.filter.role != 'ALL' ? roleStats.find(r => r.role == ms.filter.role).displayName : 'Position' }}
     </FilterLabel>
 
     <IndicatorTabsList class=" w-full grid grid-cols-6 h-14">

@@ -11,7 +11,7 @@ definePageMeta({
   order: 1,
 })
 
-const { fetchMastery } = useSummoner(summoner?.puuid)
+const state = useSummonerInject()
 
 const champQuery = ref<string | null>('')
 
@@ -39,7 +39,7 @@ const list = computed (() => {
 })
 
 onMounted (() => {
-  fetchMastery()
+  state.fetchMastery()
 })
 
 const masteryStats = [

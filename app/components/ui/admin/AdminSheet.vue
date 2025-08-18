@@ -5,7 +5,7 @@ const { class: className } = defineProps<{
 const ss = useSummonerStore()
 const as = useAccountStore()
 
-const { forceReload, loading } = useSummoner(as.userAccount.riot?.puuid)
+const { clearMatches } = useIndexedDB()
 
 const keys = useMagicKeys()
 
@@ -43,7 +43,7 @@ whenever(keys.shift_a, () => {
 
         <Btn
           class=""
-          @click="forceReload()">
+          @click="clearMatches()">
           <icon
             name="refresh" />
           Force Reload User Summoner

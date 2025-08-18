@@ -5,8 +5,7 @@ function getSummonerLink(obj: LinkObject) {
   if (obj.name != 'Summoner')
     return obj
 
-  const as = useAccountStore()
-  if (!as?.userAccount?.riot?.name) {
+  if (!as().userAccount?.riot?.name) {
     return {
       name: 'Connect Riot ID',
       icon: {
@@ -14,18 +13,17 @@ function getSummonerLink(obj: LinkObject) {
       },
     }
   }
-
-  /* const { summoner } = useSummoner(as.userAccount.riot.puuid) */
-
   return {
-    name: `${as.userAccount.riot.name}'s Profile`,
+    name: `${as().userAccount.riot.name}'s Profile`,
     icon: {
-      name: getSummonerIcon(as.userAccount.riot.profileIcon),
+      name: getSummonerIcon(as().userAccount.riot.profileIcon),
       class: 'size-6 rounded-full drop-shadow-sm shadow-sm',
     },
-    link: `/summoner/${as.userAccount.riot.region}/${as.userAccount.riot.name}_${as.userAccount.riot.tag}`,
+    link: `/summoner/${as().userAccount.riot.region}/${as().userAccount.riot.name}_${as().userAccount.riot.tag}`,
   }
 }
+
+const sublinks = generateSummonerLinks(as().userAccount.riot as Partial<Summoner>)
 </script>
 
 <template>

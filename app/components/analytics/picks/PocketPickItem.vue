@@ -6,9 +6,9 @@ const { itemNum, title } = defineProps<{
 const ms = useMatchStore()
 const ds = useDataStore()
 
-const { bayesianItems } = useMatchItems()
+const state = inject<PlayerData>(SummonerKey)
 
-// console.log('💠 - mvi - mvi:', mvi)
+const { bayesianItems } = useMatchItems(state.summoner.puuid, state.matches)
 
 const itemColor = computedAsync (() => {
   if (!bayesianItems[itemNum] && !itemColor.value)
@@ -63,7 +63,7 @@ console.log('💠 - itemColor - itemColor:', itemColor)
         <Grow />
 
         <p>
-          {{ ms.af.patch }}
+          {{ ms.filter.patch }}
         </p>
 
         <p class="-mb-px">

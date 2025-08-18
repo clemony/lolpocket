@@ -38,11 +38,11 @@ const tabValues = [
   <SidebarProvider
 
     style="--sidebar-width: 26rem; --sidebar-width-mobile: 26rem; --sidebar-icon-width:3.8rem;"
-    class="w-full h-[90vh] relative overflow-hidden ">
+    class="w-full h-full max-h-[95vh] relative overflow-hidden ">
     <ResizablePanelGroup
       as-child
       direction="horizontal"
-      class="inset-0 ">
+      class="inset-0  max-h-[95vh] ">
       <SidebarInset as-child>
         <ResizablePanel
           :default-size="50"

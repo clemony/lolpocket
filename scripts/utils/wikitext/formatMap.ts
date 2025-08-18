@@ -1,4 +1,47 @@
+import type { TemplateResult } from './templates.evaluate'
+
 /* eslint-disable no-eval */
+export interface PpInput {
+  values: string // from raw param[0], possibly cleaned
+  type: string
+  levels: string
+  key?: string
+  key1?: string
+  color?: string
+}
+
+export interface RdInput {
+  melee: string
+  ranged: string
+  isPp: boolean
+}
+
+export type TipInput = string[]
+export type AsInput = any
+
+export type FormatMapArgs
+  = | { type: 'pp', input: PpInput, depth: number }
+    | { type: 'rd', input: RdInput, depth: number }
+    | { type: 'tip', input: TipInput, depth: number }
+    | { type: 'as', input: AsInput, depth: number }
+
+export type FormatFn<T> = (args: T) => string | TemplateResult
+
+export type SimpleFormatFn = (
+  result: string,
+  params?: string[]
+) => string | TemplateResult
+
+export type FormatMap = Partial<ComplexFormatMap> & {
+  [key: string]: SimpleFormatFn | FormatFn<any>
+}
+
+export type ComplexFormatMap = {
+  [K in FormatMapArgs['type']]: FormatFn<
+    Extract<FormatMapArgs, { type: K }>
+  >
+}
+
 export const templateUnits: Record<string, string> = {
   ap: '',
   ad: '',
@@ -63,7 +106,8 @@ export const formatMap: FormatMap = {
   g: (result) => {
     return `<img src="/img/icons/gold-coin.webp" class="inline-icon" />${result}`
   },
-  pp: ({ input, depth }) => {
+
+  pp: ({ input, depth }: { input: PpInput, depth: number }): string => {
     const { values, type, levels, key, key1 } = input
 
     const basedOn = type || key1 || key || 'level'
@@ -75,21 +119,20 @@ export const formatMap: FormatMap = {
       cleanRange = levels.trim()
     }
 
-    const suffix = key === '%' ? '%' : ''
-    const valueRange = values ? values.split(';') : []
+    const suffix: string = key === '%' ? '%' : ''
+    const valueRange: string[] = values ? values.split(';') : []
 
     const match = cleanRange.match(/^(\d+)\s?to\s?(\d+)$/)
 
-    const min = valueRange.length ? valueRange[0] : match?.[1]
-    const max
-      = valueRange.length ? valueRange[valueRange.length - 1] : match?.[2]
+    const min: string = valueRange.length ? valueRange[0] : match?.[1] || ''
+    const max: string = valueRange.length ? valueRange[valueRange.length - 1] : match?.[2] || ''
 
-    const html
-      = min && max
-        ? `${min}${suffix} – ${max}${suffix}`
-        : `${cleanRange}${suffix}`
+    const html: string = min && max
+      ? `${min}${suffix} – ${max}${suffix}`
+      : `${cleanRange}${suffix}`
     if (html)
       return `${html} (based on ${basedOn})`
+    return ''
   },
   rd: ({ input, depth }) => {
     const formatValue = (v: string) => v.replace('to', '–')

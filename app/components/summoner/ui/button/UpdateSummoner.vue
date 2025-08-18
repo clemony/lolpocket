@@ -3,8 +3,7 @@ import type { VariantProps } from 'class-variance-authority'
 import { motion } from 'motion-v'
 import { ProgressIndicator } from 'reka-ui'
 
-const { summoner, class: className, variant = 'shadow', size = 'md', showIcon, circle, tipSide = 'top' } = defineProps<{
-  summoner: Summoner
+const { class: className, variant = 'shadow', size = 'md', showIcon, circle, tipSide = 'top' } = defineProps<{
   class?: HTMLAttributes['class']
   text?: boolean | string | null
   variant?: VariantStyleProps['variant']
@@ -14,19 +13,18 @@ const { summoner, class: className, variant = 'shadow', size = 'md', showIcon, c
   tipSide?: Side
 }>()
 
-function fakeFunction() {}
-const { refreshMatches } = useSummoner(summoner.puuid)
+const state = useSummonerInject()
 
-const { throttled: refresh, cooldown, isLoading } = throttleFunction(
-  () => fakeFunction(),
+const { throttled: update, cooldown, isLoading } = throttleFunction(
+  () => state.fetchNewMatches(),
   120_000,
-  summoner.puuid,
+  state.summoner.value.puuid,
   'match-refresh',
 )
 
 const tip = computed (() =>
   `Updated:
-        ${formatTimeAgo(summoner.lastMatchUpdate, 'short')}
+        ${formatTimeAgo(state.summoner.value.lastMatchUpdate, 'short')}
         ${cooldown.value?.seconds ? `${cooldown.value?.seconds} cd` : ''}`,
 )
 </script>
@@ -37,7 +35,7 @@ const tip = computed (() =>
     :variant="variant"
     :class="cn('p-0', { 'pointer-events-none bg-b2/80 btn-active cursor-not-allowed': cooldown }, className)"
     :size="size"
-    @click="refresh()">
+    @click="update()">
     <TransitionScalePop
       v-if="circle"
       class="relative grid overflow-hidden size-full place-items-center ">
@@ -85,12 +83,12 @@ const tip = computed (() =>
         <div
           v-if="size != 'xs'"
           :class="cn('flex items-center justify-between w-full font-semibold text-1 dst text-end')">
-          <span
+          <!--           <span
             class="flex items-center gap-2">
             <icon
               name="svg-spinners:bars-scale-middle"
               class="size-3.5 scale-x-130 ml-1" />
-          </span>
+          </span> -->
           <span class="flex flex-nowrap text-nowrap justify-self-end text-end pr-0.25  items-center inline align-bottom">
             <span :class="cn('font-mono font-bold text-2')">
               {{ cooldown?.formatted }}
@@ -99,10 +97,10 @@ const tip = computed (() =>
         </div>
 
         <div class="flex gap-0.75 items-center w-full">
-          <icon
+          <!--           <icon
             v-if="size != 'xs'"
             name="material-symbols:play-arrow-rounded"
-            class="size-6 -ml-0.5 " />
+            class="size-6 -ml-0.5 " /> -->
 
           <Progress
             :model-value="cooldown?.percent"

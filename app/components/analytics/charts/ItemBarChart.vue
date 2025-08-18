@@ -3,9 +3,10 @@ const ds = useDataStore()
 const ms = useMatchStore()
 
 // TODO fix usermatchdata
-const userMatchData = []
-const patchGames = computed(() => userMatchData.filter(g => g.patch === ms.af.patch))
-const { bayesianItems } = useMatchItems()
+
+const state = inject<PlayerData>(SummonerKey)
+
+const { bayesianItems } = useMatchItems(state.summoner.puuid, state.matches)
 
 const data = ref({
   datasets: [

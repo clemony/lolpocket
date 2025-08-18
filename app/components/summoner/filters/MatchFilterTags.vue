@@ -7,25 +7,23 @@ const { summoner, class: className } = defineProps<{
 const ms = useMatchStore()
 const ss = useSummonerStore()
 
-const { filteredNoRole } = useFilteredMatches(summoner.puuid, ms.mf)
-
-// Use the composable with the filtered matches
-const roleStats = useMatchRoles(summoner.puuid, filteredNoRole)
+const state = useSummonerInject()
+const roleStats = await useMatchRoles(state.summoner.value.puuid, state.matches)
 </script>
 
 <template>
   <div>
     <!--     <ListboxGroupLabel>
-      <FilterLabel v-model="ms.mf.ally" :active="ms.mf.ally != null" @click="ms.mf.ally = null">
-        {{ ms.mf.ally != null ? ms.mf.ally : 'Teammates' }}
+      <FilterLabel v-model="ms.filter.ally" :active="ms.filter.ally != null" @click="ms.filter.ally = null">
+        {{ ms.filter.ally != null ? ms.filter.ally : 'Teammates' }}
       </FilterLabel>
     </ListboxGroupLabel> -->
 
     <FilterLabel
-      v-model="ms.mf.role"
-      :active="ms.mf.role != 'ALL'"
-      @click="ms.mf.role = 'ALL'">
-      {{ ms.mf.role != 'ALL' ? roleStats.find(r => r.role == ms.mf.role).displayName : 'Position' }}
+      v-model="ms.filter.role"
+      :active="ms.filter.role != 'ALL'"
+      @click="ms.filter.role = 'ALL'">
+      {{ ms.filter.role != 'ALL' ? roleStats.find(r => r.role == ms.filter.role).displayName : 'Position' }}
     </FilterLabel>
   </div>
 </template>

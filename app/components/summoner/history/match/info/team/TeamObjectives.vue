@@ -5,6 +5,7 @@ const { team, teamObject, class: className } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 
+console.log('team: ', team)
 const elder = computed (() => {
   return teamObject[0].challenges.teamElderDragonKills
 })
@@ -13,7 +14,7 @@ const elder = computed (() => {
 <template>
   <div
     class=""
-    :class="cn('flex grow justify-center *:hover:underline tldr-20 **:font-semibold', className)">
+    :class="cn('grid grid-cols-5 justify-center 0 **:font-semibold **:text-bc', className)">
     <div
       v-tippy="'Dragon Kills'"
       class="flex items-center gap-1">
@@ -21,8 +22,8 @@ const elder = computed (() => {
         :src="`/img/ui/dragon-${team.teamId}.png`"
         class="size-4 drop-shadow-sm opacity-85" />
 
-      <span class="w-7 max-w-7">
-        {{ team.objectives.dragon.kills }}
+      <span>
+        {{ team.objectives.dragon.kills ?? 0 }}
       </span>
     </div>
 
@@ -34,7 +35,7 @@ const elder = computed (() => {
         class="size-4 drop-shadow-sm opacity-85" />
 
       <span class="w-7 max-w-7">
-        {{ team.objectives.baron.kills }}
+        {{ team.objectives.baron.kills ?? 0 }}
       </span>
     </div>
 
@@ -46,7 +47,7 @@ const elder = computed (() => {
         class="size-4 drop-shadow-sm opacity-85" />
 
       <span class="w-7 max-w-7">
-        {{ team.objectives.baron.kills }}
+        {{ team.objectives.baron.kills ?? 0 }}
       </span>
     </div>
 

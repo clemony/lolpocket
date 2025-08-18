@@ -19,18 +19,27 @@ export function useIndexedDB() {
     return await matchDB.matchData.orderBy('metadata.matchId').keys()
   }
 
-  async function getMatchesForSummoner(puuid: string) {
-    const summoner = ss().getSummoner(puuid)
-    if (!summoner)
-      return []
-    return (await matchDB.matchData.bulkGet(summoner.matchIds)).filter(Boolean) as MatchData[]
+  const getMatchesForSummoner = async (puuid: string): Promise<MatchData[]> => {
+    return await matchDB.matchData
+      .where('participantIds')
+      .equals(puuid)
+      .reverse() // newest first
+      .sortBy('creation')
+  }
+
+  const getAllMatchIdsForPuuid = async (puuid: string): Promise<string[]> => {
+    const matches = await matchDB.matchData
+      .where('participantIds')
+      .equals(puuid)
+      .primaryKeys()
+    return matches
   }
 
   async function sortMatchIdsByCreation(ids: string[]): Promise<string[]> {
     const matches = await matchDB.matchData.bulkGet(ids)
     return matches
       .filter((m): m is MatchData => !!m)
-      .sort((a, b) => b.gameCreation - a.gameCreation)
+      .sort((a, b) => b.gameEndTimestamp - a.gameEndTimestamp)
       .map(m => m.matchId)
   }
 
@@ -53,6 +62,7 @@ export function useIndexedDB() {
     getAllMatches,
     getAllMatchIds,
     getMatchesForSummoner,
+    getAllMatchIdsForPuuid,
     clearMatches,
     refreshMatches,
     sortMatchIdsByCreation,

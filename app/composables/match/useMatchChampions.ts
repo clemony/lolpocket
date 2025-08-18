@@ -1,4 +1,9 @@
-export async function useMatchChampions(puuid: string, matches: MatchData[]) {
+export function useMatchChampions(puuid: string, matches: MatchData[]) {
+  console.log('matches: ', matches)
+  console.log('puuid: ', puuid)
+  if (!puuid)
+    return
+
   const championStats = new Map<
     number,
     {

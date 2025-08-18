@@ -1,42 +1,36 @@
 <script lang="ts" setup>
-import { useInfiniteScroll } from '@vueuse/core'
+import { DynamicScroller, DynamicScrollerItem } from 'vue-virtual-scroller'
 
-const { summoner } = defineProps<{
-  summoner: Summoner
+const { state } = defineProps<{
+  state: PlayerData
 }>()
 
-const ms = useMatchStore()
-const { filteredMatches } = useFilteredMatches(summoner.puuid, ms.mf)
-const loading = ref(false)
-
-const itemsPerPage = 10
+const emit = defineEmits(['scroll-to-top'])
+const itemsPerPage = 12
 const currentPage = ref(1)
 
 const pagedMatches = computed(() => {
-  return filteredMatches.value.slice(0, currentPage.value * itemsPerPage)
+  const start = (currentPage.value - 1) * itemsPerPage
+  return state.matches.slice(start, start + itemsPerPage)
 })
 
-// Track when to load more
-const container = ref<HTMLElement | null>(null)
+watch(() => state.matches.length, (newVal) => {
+  if (newVal)
+    currentPage.value = 1
+})
 
-useInfiniteScroll(
-  window,
-  () => {
-    if (pagedMatches.value.length < filteredMatches.value.length) {
-      currentPage.value++
-    }
-  },
-  { distance: 200 },
-)
-const openMatch = ref(null)
+const scroll = inject<Scroll>('scroll-top')
+watch(() => currentPage.value, (newVal) => {
+  if (newVal)
+    scroll.top()
+})
 </script>
 
 <template>
   <div
-    ref="container"
     class="flex-col py-24 flex  w-full">
     <div
-      v-if="loading"
+      v-if="state.loading"
       class="flex flex-col gap-8">
       <LazyMatchCardSkeleton
         v-for="i in itemsPerPage"
@@ -51,13 +45,8 @@ const openMatch = ref(null)
       <LazyMatchCard
         v-for="match in pagedMatches"
         :key="match.matchId"
-        :puuid="summoner.puuid"
+        :puuid="state.summoner?.puuid"
         :match="match">
-        <input
-          v-model="openMatch"
-          type="radio"
-          class="peer hidden"
-          :value="match?.matchId" />
       </LazyMatchCard>
     </TransitionScalePop>
 
@@ -67,22 +56,37 @@ const openMatch = ref(null)
       No matches found with these filters.
     </div>
 
-    <!-- Optional loading spinner when more data is loading -->
-    <div class="w-220 grid place-items-center h-64">
-      <div
-        v-if="pagedMatches.length < filteredMatches.length"
-        class="py-4 text-center text-gray-500">
-        Loading more...
-      </div>
-
-      <UpdateSummoner
-        v-else
-        variant="link"
-        size="lg"
-        show-icon
-        class="w-44"
-        text="Load more..."
-        :summoner />
-    </div>
+    <Pagination
+      v-model:page="currentPage"
+      :total="state.matches?.length"
+      :default-page="1"
+      :sibling-count="1"
+      :show-edges="false"
+      :items-per-page="itemsPerPage"
+      class="pt-8 max-w-220 justify-center justify-self-start mx-0">
+      <PaginationContent v-slot="{ items }">
+        <PaginationFirst class="disabled:hidden" />
+        <PaginationPrev
+          size="sm"
+          class="disabled:hidden btn-square" />
+        <template v-for="(page, index) in items">
+          <PaginationItem
+            v-if="page.type === 'page'"
+            :key="index"
+            variant="outline"
+            :value="index + 1"
+            size="sm"
+            :is-active="index + 1 === currentPage"></PaginationItem>
+          <PaginationEllipsis
+            v-else
+            :key="page.type"
+            :index="index" />
+        </template>
+        <PaginationNext
+          size="sm"
+          class="disabled:hidden btn-square" />
+        <PaginationLast class="disabled:hidden" />
+      </PaginationContent>
+    </Pagination>
   </div>
 </template>

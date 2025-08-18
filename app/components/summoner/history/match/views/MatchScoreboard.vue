@@ -9,6 +9,21 @@ const teams = computed(() => {
     red: match.participants.filter(p => p.teamId == 200),
   }
 })
+
+const playerRank = computed (() => {
+  const sort = [...match.participants].map(p => ({
+    puuid: p.puuid,
+    mvpScore: p.mvpScore,
+    win: p.win,
+    team: p.teamId,
+  })).sort((a, b) => b.mvpScore - a.mvpScore)
+
+  return {
+    list: sort,
+    mvp: sort[0].puuid,
+    ace: computed(() => sort.filter(p => p.team != sort[0].team)[0]).value.puuid,
+  }
+})
 </script>
 
 <template>
@@ -25,7 +40,9 @@ const teams = computed(() => {
       <template
         v-for="(player, i) in teams.blue"
         :key="i">
-        <MatchTeammate :player="player" />
+        <MatchTeammate
+          :player="player"
+          :player-rank="playerRank" />
 
         <Separator
           v-show="i != 4"
@@ -45,7 +62,9 @@ const teams = computed(() => {
       <template
         v-for="(player, i) in teams.red"
         :key="i">
-        <MatchTeammate :player="player" />
+        <MatchTeammate
+          :player="player"
+          :player-rank="playerRank" />
         <Separator
           v-show="i != 4"
           class="bg-b3/60 !my-0" />

@@ -73,7 +73,7 @@ const filteredCols = computedAsync (() => cols.value.filter(c => c.getColDef().h
             <icon
               v-if="col.isVisible() == false"
               name="tick-sm"
-              class="size-6 tldr-30 opacity-70 peer-checked:opacity-70 absolute" />
+              class="size-6  transition-opacity duration-300 opacity-70 peer-checked:opacity-70 absolute" />
           </span>
         </label>
 

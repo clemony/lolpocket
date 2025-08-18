@@ -24,10 +24,10 @@ const tag = computed (() => {
   <Primitive
     v-if="tag"
     :as="as"
-    :class="cn('flex items-center leading-0 antialiased', className)">
+    :class="cn('inline-flex items-center leading-0 antialiased', className)">
     <icon
       name="lucide:hash"
-      class="size-3.75" />
+      class="size-3.75 inline align-bottom" />
     {{ tag }}
   </Primitive>
 

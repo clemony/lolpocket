@@ -1,4 +1,4 @@
-import { toValidIdentifier } from './validate-identifier'
+import { toValidIdentifier } from './validateIdentifier'
 
 export function normalize(value: unknown): string {
   if (typeof value !== 'string' || !value.trim())

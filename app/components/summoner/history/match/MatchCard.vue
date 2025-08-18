@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { queueIndex } from 'data/index/queue-index'
+
 const { match, puuid } = defineProps<{
   match: MatchData
   puuid: string
@@ -9,6 +11,13 @@ const player = computed(() => {
 })
 
 const isOpen = ref(false)
+
+const queue = computed(() => {
+  const foundQueue = queueIndex.find(q => q.queueId == match.queueId)
+  if (!foundQueue)
+    return null
+  return foundQueue
+})
 </script>
 
 <template>
@@ -16,50 +25,50 @@ const isOpen = ref(false)
     v-model:open="isOpen"
     :class="
       cn(
-        'Collapsible field-box shadow-sm shadow-black/5 drop-shadow-xs group w-220 border-b3 rounded-xl justify-start max-w-220 group/collapse overflow-hidden bg-clip-padding justify-center relative **:select-none text-2  p-0  min-w-134  cursor-pointer group/collapse',
-        'before:absolute before:z-3  before:z-0 before:h-full before:w-1/2 before:pointer-events-none before:brightness-94 before:opacity-40 before:mask-r-from-0 before:border before:rounded-xl before:shadow-sm before:shadow-black',
-
-        player.win ? 'before:border-inspiration ' : 'before:border-domination',
-        isOpen == true ? 'h-240 min-h-240' : 'h-36',
+        ' shadow-sm shadow-black/5 drop-shadow-xs group size-full border-b3/70 rounded-xl justify-start max-w-220 group/collapse gap-0 overflow-hidden bg-clip-padding items-center relative **:select-none text-2 flex-col !p-0  btn  min-w-134 !bg-tint-b2/70  cursor-pointer group/collapse',
       )
     ">
     <CollapsibleTrigger
       :for="match.matchId"
       :class="
         cn(
-          ' h-40 flex gap-7 z-2 w-220 max-w-220 text-2 pt-3 pb-7 w-full relative bg-linear-to-r pointer-events-auto to-transparent to-40% rounded-xl overflow-hidden bg-clip-padding relative items-center justify-items-start bg-transparent   cursor-pointer  px-5 justify-start rounded-box cursor-pointer data-[state=open]:rounded-b-none ',
+          ' h-36 flex gap-7 z-2 w-full text-2  relative bg-linear-to-r pointer-events-auto to-transparent to-40% rounded-xl overflow-hidden bg-clip-padding relative items-center justify-items-start bg-transparent   cursor-pointer  px-5 justify-start rounded-box cursor-pointer  data-[state=open]:rounded-b-none ',
           player.win ? 'from-inspiration/80 ' : 'from-domination/80',
+          'before:absolute before:left-0 before:z-3  before:h-full before:w-1/2 before:pointer-events-none before:brightness-94 before:opacity-40 before:mask-r-from-0 before:border before:rounded-xl before:shadow-sm before:shadow-black',
+
+          player.win ? 'before:border-inspiration ' : 'before:border-domination',
+          isOpen == true ? 'max-h-240' : 'h-36',
         )
       ">
       <div
-        class="flex w-30 **:antialiased h-full **:select-none flex-col justify-start gap-1 py-1">
-        <MatchOutcome :win="player?.win" />
+        class="flex w-30 **:antialiased h-full max-h-30 overflow-hidden **:select-none flex-col justify-start gap-1 py-1">
+        <h3
+          class="text-5  dst text-start text-nowrap text-white/86   font-bold uppercase  ">
+          {{ player.win ? 'Win' : 'Loss' }}
+        </h3>
 
         <div
-          class="font-semibold *:text-left opacity-76 *:w-full w-full *:space-y-1 h-full justify-between flex flex-col">
-          <span>
-            <MatchQueue
-              as="p"
-              class="text-4 text-left text-nowrap font-bold"
-              :queue-id="match.queueId" />
+          class="font-semibold *:text-left opacity-76 w-full flex flex-col">
+          <p
+            class="text-4 text-left text-nowrap font-bold">
+            {{ queue.description }}
+          </p>
 
-            <MatchMap
-              :id="match.mapId"
-              as="p"
-              class="text-2 leading-5" />
-          </span>
+          <p
+            class="!text-[0.92rem] leading-4 flex flex-col mt-1 py-1 justify-center text-start">
+            <span>
+              {{ queue.map.name }}
 
-          <span>
-            <GameDuration
-              as="p"
-              :duration="match.gameDuration"
-              class="tracking-wide" />
-
-            <GameEndTime
-              as="p"
-              class="text-2 italic capitalize"
-              :end-time="match.gameEndTimestamp" />
-          </span>
+            </span>
+            <span
+              class=" capitalize ">
+              {{ formatTimeAgo(new Date(match.gameEndTimestamp)) }}
+            </span>
+          </p>
+          <p
+            class="tracking-wide font-bold">
+            {{ (match.gameDuration / 60).toFixed(2).toString().replace('.', ':') }}
+          </p>
         </div>
       </div>
 
@@ -108,7 +117,8 @@ const isOpen = ref(false)
       </div>
     </CollapsibleTrigger>
 
-    <MatchContent
+    <LazyMatchContent
+      :is-open
       :match
       :player />
   </Collapsible>

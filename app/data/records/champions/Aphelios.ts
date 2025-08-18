@@ -411,7 +411,7 @@ const champion: Champion =  {
         "icon": "https://cdn.communitydragon.org/latest/champion/Aphelios/ability-icon/q",
         "effects": [
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Aphelios deploys a lunar sentry at the target location that arms after 0.35 seconds, lasting for up to 20 seconds, during which it is inactive and untargetable. The sentry activates if an enemy is within range of it, reducing its duration to 4 seconds and becoming targetable. Sentries have 6 health and take 3 damage per ranged basic attack and 4 damage per hit by abilities. Turret attacks destroy sentries instantly.</p>"
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Aphelios deploys a lunar sentry at the target location that arms.filterter 0.35 seconds, lasting for up to 20 seconds, during which it is inactive and untargetable. The sentry activates if an enemy is within range of it, reducing its duration to 4 seconds and becoming targetable. Sentries have 6 health and take 3 damage per ranged basic attack and 4 damage per hit by abilities. Turret attacks destroy sentries instantly.</p>"
           },
           {
             "description": "The sentry grants sight of its surroundings and autonomously attacks the nearest visible enemy in range with a replica of Aphelios' current off-hand weapon, dealing 35 - 125 (based on level) (+ 42% - 60% (based on level) bonus AD) (+ 50% AP) physical damage per hit. The sentry can critically strike for (175% + 40%) damage and benefits from both Aphelios' attack speed and critical strike chance at 100% effectiveness."

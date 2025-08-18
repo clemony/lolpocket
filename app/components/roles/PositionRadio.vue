@@ -16,7 +16,7 @@ const ms = useMatchStore()
       :key="position"
       class="btn btn-ghost  rounded-[0.85rem] hover:bg-b3/40 btn-square has-checked:!btn-neutral has-checked:bg-n1">
       <input
-        v-model="ms.mf.role"
+        v-model="ms.filter.role"
         name="research-positions"
         type="radio"
         class="peer hidden"

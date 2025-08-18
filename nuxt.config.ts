@@ -3,6 +3,8 @@ import tailwindcss from '@tailwindcss/vite'
 import process from 'node:process'
 import { fileURLToPath } from 'node:url'
 
+// CONFIG
+
 export default defineNuxtConfig({
   modules: [
     '@pinia/nuxt',
