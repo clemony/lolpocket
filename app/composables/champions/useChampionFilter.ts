@@ -1,4 +1,4 @@
-import { championFilters } from 'data/filters/champion-filters'
+import { championFilters } from '~/appdata/filters/champion-filters'
 
 export function useChampionFilter(filters: ChampionFilter) {
   const ix = useIndexStore()

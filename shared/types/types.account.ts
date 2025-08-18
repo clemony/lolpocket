@@ -1,4 +1,7 @@
+import type { JwtPayload } from 'jwt-decode'
+
 export type AccountRole = 'admin' | 'summoner' | 'default'
+export type DockSide = 'top' | 'right' | 'bottom' | 'left' | 'floating'
 
 export interface User {
   account: UserAccount
@@ -8,7 +11,7 @@ export interface User {
 export interface UserAccount {
   name: string
   role: AccountRole
-  id: string
+  uuid: string
   riot: {
     puuid: string
     name: string
@@ -32,11 +35,16 @@ export interface UserSettings {
   showFlex: boolean
   showAllies: boolean
   theme: string
+  dockX: number
+  dockY: number
+  dockSide: DockSide
 }
 
 export interface PublicData {
   splash: string
+  title: string
   peerMessages: boolean
+  updated: Date
 }
 
 export interface InboxItem {
@@ -72,4 +80,10 @@ export interface Note {
   icon: string
   date: string
   heart?: boolean
+}
+
+export interface AuthRoleJwtPayload extends JwtPayload {
+  app_metadata: {
+    user_role: string
+  }
 }

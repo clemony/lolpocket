@@ -1,7 +1,7 @@
 export const defaultUser: UserAccount = {
   name: 'Summoner',
   role: 'default',
-  id: null,
+  uuid: null,
   riot: {
     name: null,
     tag: null,

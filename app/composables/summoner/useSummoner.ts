@@ -61,35 +61,19 @@ export function useSummonerProvider(identifier: string) {
       return
     allMatches.value = await getMatchesForSummoner(summoner.value.puuid)
   }
-
   const findSummoner = async (options?: { force?: boolean }) => {
-    console.log('currentPuuid.value: ', currentPuuid.value)
     if (!currentPuuid.value)
       return
     loading.value = true
     ready.value = false
 
     try {
-      if (!options?.force) {
-        const cached = ss().getSummoner(currentPuuid.value)
-        if (cached) {
-          summoner.value = cached
-          await loadMatchesFromDB()
-          ready.value = true
-          return
-        }
-      }
-
       const resolved = await ss().resolveSummoner(
-        typeof identifier === 'string' ? { puuid: identifier } : identifier,
+        { puuid: currentPuuid.value },
       )
-      console.log('resolved: ', resolved)
 
       currentPuuid.value = resolved.puuid
       summoner.value = resolved
-      console.log('summoner.value: ', summoner.value)
-      ss().setSummoner(resolved)
-      ss().limitCache(30)
 
       await loadMatchesFromDB()
     }
@@ -116,8 +100,6 @@ export function useSummonerProvider(identifier: string) {
   // --- WATCH PUUID ---
   watch(currentPuuid, () => findSummoner(), { immediate: true })
 
-  const { getTop } = useSummonerChampions(summoner.value.puuid, matches.value)
-
   const state = {
     summoner,
     matches,
@@ -127,12 +109,12 @@ export function useSummonerProvider(identifier: string) {
     clearFilters,
     fetchMastery,
     findSummoner,
-    topChampion: getTop().topChampion,
-    useChampions: () => useMatchChampions(summoner.value.puuid, allMatches.value),
+    topChampion: () => useChampions(summoner.value.puuid, matches.value),
+    useChampions: (championName?: string) => useChampions(summoner.value.puuid, allMatches.value, championName),
     useAllies: () => useRepeatedTeammates(summoner.value.puuid, allMatches.value),
     useRoles: () => useMatchRoles(summoner.value.puuid, allMatches),
-    links: generateSummonerLinks(summoner.value),
-    loadMatches: loadMatchesFromDB,
+    links: () => generateSummonerLinks(summoner.value),
+    loadMatches: () => loadMatchesFromDB,
 
     fetchNewMatches: async () => {
       if (!summoner.value)
@@ -158,8 +140,7 @@ export function useSummonerInject() {
     allMatches: Ref<MatchData[]>
     matches: Ref<MatchData[]>
     links: Record<string, string>
-    topChampion: TopChampion
-    champions: any
+    useChampions: any
     useRoles: any
     filter: MatchFilter
     loading: Ref<boolean>

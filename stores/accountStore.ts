@@ -1,8 +1,8 @@
 import { useSupabaseClient } from '#imports'
 import type { SupabaseClient } from '@supabase/supabase-js'
-import { defaultUser } from 'data/defaults/default-user'
-import type { Database } from 'db/database.types'
+import { motionValue } from 'motion-v'
 import { defineStore } from 'pinia'
+import { defaultUser } from '~/appdata/defaults/default-user'
 
 export const useAccountStore = defineStore(
   'as',
@@ -14,7 +14,7 @@ export const useAccountStore = defineStore(
     const userAccount = ref<UserAccount>({
       name: 'Summoner',
       role: 'default',
-      id: null,
+      uuid: null,
       riot: {
         name: 'Summoner',
         tag: null,
@@ -52,47 +52,21 @@ export const useAccountStore = defineStore(
       showAllies: true,
       alertNewPocket: true,
       alertDeletePocket: true,
+      dockX: 50,
+      dockY: 200,
+      dockSide: <DockSide>('left'),
     })
 
     function resetUserAccount() {
       Object.assign(userAccount.value, defaultUser)
     }
 
-    interface PublicTest extends PublicUser {
-      title: string
-    }
-    type PublicUser = Database['public']['Tables']['user_public']['Row']
-    const publicData = ref<Partial<PublicTest | null>>({
-      splash: '',
-      title: 'Pocket Pet',
-      updated: '',
+    const publicData = ref<PublicData>({
+      splash: null,
+      title: null,
+      peerMessages: true,
+      updated: null,
     })
-
-    const client = useSupabaseClient<SupabaseClient>()
-    async function fetchPublicData(userPuuid: string) {
-      const { data, error } = await client
-        .from('user_public')
-        .select('*')
-        .eq('puuid', userPuuid)
-        .single<PublicUser>()
-
-      if (error) {
-        console.error('Error fetching public data:', error)
-      }
-      publicData.value.splash = data.splash
-      return data
-    }
-    async function updatePublicData() {
-      const { error } = await client
-        .from('user_public')
-        .update({ splash: publicData.value.splash })
-        .eq('uuid', userAccount.value.id)
-        .select()
-
-      if (error) {
-        console.error('Error updating public data:', error)
-      }
-    }
 
     return {
       // account
@@ -103,8 +77,6 @@ export const useAccountStore = defineStore(
       resetUserAccount,
       defaultUser,
       userNotes,
-      fetchPublicData,
-      updatePublicData,
 
       // settings
       themeClass,

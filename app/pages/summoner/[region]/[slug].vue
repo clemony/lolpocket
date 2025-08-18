@@ -30,6 +30,10 @@ watch(puuid, async (newPuuid) => {
   state.value = summoner
   console.log('state.value????: ', state.value.matches)
 }, { immediate: true })
+
+onBeforeRouteLeave(async () => {
+  await useUpdateUserSettings(as().settings, as().userAccount.uuid)
+})
 </script>
 
 <template>
@@ -38,7 +42,7 @@ watch(puuid, async (newPuuid) => {
     <!-- splash -->
 
     <template #background>
-      <LazyBackgroundSplashFixed :background="(as().publicData?.splash ?? state.topChampion?.splash).replace('centered', 'uncentered')" />
+      <LazyBackgroundSplashFixed :background="(as().publicData?.splash ?? state.useChampions().top().splash).replace('centered', 'uncentered')" />
     </template>
 
     <!-- nav -->

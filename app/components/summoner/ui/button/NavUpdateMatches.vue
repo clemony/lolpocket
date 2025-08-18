@@ -43,9 +43,9 @@ const variants = {
     as-child>
     <MButton
 
-      :variant="variant"
+      :variant="cooldown ? 'secondary' : variant"
       :variants="buttVariants"
-      :class="cn('max-w-full h-11 flex flex-row flex-nowrap items-center w-full gap-3  justify-start p-0  relative', { 'pointer-events-none w-full bg-b2/80 btn-active cursor-not-allowed': cooldown })"
+      :class="cn('max-w-full h-11 flex flex-row flex-nowrap items-center w-full gap-3  justify-start p-0  relative', { 'pointer-events-none w-full !bg-b2/80 btn-active cursor-not-allowed': cooldown })"
       @click="update()">
       <TransitionScalePop
         class=" aspect-square h-full place-self-center grid place-items-center shrink-0 relative overflow-hidden ">
@@ -78,13 +78,13 @@ const variants = {
         :variants="variants"
         class="inline-flex text-nowrap gap-3 w-full justify-between  flex-nowrap overflow-hidden  items-center self-center ">
         {{ cooldown ? `${cooldown?.formatted} cd` : 'Update' }}
-        <motion.span
-          :variants="variants"
-          :transition="{ delay: 200 }"
-          class="text-0 absolute italic align-baseline grow right-5 translate-y-0.5 text-right inline justify-self-end">
-          {{ `${formatTimeAgo(state.summoner.value.lastMatchUpdate, 'short').replace('ago', 'old')}` }}
-        </motion.span>
       </motion.div>
-    </MButton>
+    </MButton><!--
+    <motion.span
+      :variants="variants"
+      :transition="{ delay: 200 }"
+      class="text-0 absolute italic align-baseline grow right-5 translate-y-0.5 text-right inline justify-self-end">
+      {{ `${formatTimeAgo(state.summoner.value.lastMatchUpdate, 'short').replace('ago', 'old')}` }}
+    </motion.span> -->
   </NavigationMenuItem>
 </template>

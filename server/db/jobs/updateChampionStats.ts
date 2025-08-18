@@ -1,10 +1,10 @@
 // server/jobs/updateChampionStats.ts
 import { sql } from 'drizzle-orm'
-import { db, tables } from '../client'
-import { championItems } from '../schemas/championItems'
-import { championRunes } from '../schemas/championRunes'
-import { championSummoners } from '../schemas/championSummoners'
-import { champions } from '../schemas/champions'
+import { db, tables } from '../d1Client'
+import { championItems } from '../schema/championItems'
+import { championRunes } from '../schema/championRunes'
+import { championSummoners } from '../schema/championSummoners'
+import { champions } from '../schema/champions'
 
 // server/db/jobs/updateChampionStats.ts
 

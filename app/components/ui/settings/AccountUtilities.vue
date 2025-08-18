@@ -32,7 +32,7 @@ const classObject
     </LazySettingsSheet>
 
     <SheetClose
-      v-if="as?.userAccount?.id"
+      v-if="as?.userAccount?.uuid"
       :class="classObject"
       @click="useSignOut()">
       <IconWrapper>

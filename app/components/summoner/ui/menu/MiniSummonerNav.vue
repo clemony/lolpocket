@@ -13,20 +13,23 @@ const { summoner, links, childRoutes } = defineProps<{
     <template #header>
       <NavMenuHeader>
         <template #icon>
-          <SummonerIcon
-            :summoner
-            class="rounded-field size-full size-11 cursor-pointer" />
+          <div class="relative">
+            <SummonerIcon
+              :summoner
+              class="rounded-field size-full size-11">
+            </SummonerIcon>
+            <SummonerLevel class="pt-px absolute z-1 -bottom-1.5 bg-neutral rounded-full text-nc text-2" />
+          </div>
         </template>
         <template #content>
           <div class="w-full py-1 flex flex-col gap-1">
-            <p class="items-center gap-3 text-nowrap flex-nowrap inline-flex">
+            <p class="items-center  justify-between gap-2 text-nowrap flex-nowrap inline-flex">
               <SummonerName
                 as="h4"
                 class="leading-none font-serif font-bold truncate" />
-              <SummonerTag class="[&_svg]:size-3 text-2 !align-text-bottom" />
             </p>
-            <p class="flex w-full text-2 gap-3 items-center **:leading-none  inline-flex align-bottom">
-              <SummonerLevel />
+            <p class="flex w-full text-2  gap-2 justify-between items-center [&_svg]:size-3  **:leading-none  inline-flex align-bottom">
+              <SummonerTag />
 
               <SummonerRegion />
             </p>

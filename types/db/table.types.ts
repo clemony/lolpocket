@@ -20,5 +20,5 @@ export type TableUpdate<T extends keyof Database['public']['Tables']>
 export type UserPublicInsert = TableInsert<'user_public'>
 export type UserPublicUpdate = TableUpdate<'user_public'>
 export type UserPublic = TableRow<'user_public'>
-export type UserData = TableRow<'user_data'>
+export type UserData = TableRow<'user_account'>
 export type UserRoles = TableRow<'user_roles'>

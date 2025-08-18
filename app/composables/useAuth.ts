@@ -1,8 +1,33 @@
 import type { Session } from '@supabase/supabase-js'
+import { appTaglines } from 'appdata/content/taglines'
 import { jwtDecode } from 'jwt-decode'
 import { toast } from 'vue-sonner'
 
-export function useAuth() {}
+export async function useAuth(event, session: Session) {
+  const client = useSupabaseClient()
+
+  if (event === 'INITIAL_SESSION' && session) {
+    await hydrateUser(session)
+  }
+  else if (event === 'SIGNED_OUT') {
+    as().resetUserAccount()
+    reloadNuxtApp({ path: '/' })
+  }
+  else if (event === 'SIGNED_IN' && session) {
+    const { data } = await client.auth.setSession({
+      access_token: session.access_token,
+      refresh_token: session.refresh_token,
+    })
+    if (data.session) {
+      await hydrateUser(data.session)
+    }
+    await reloadNuxtApp({ path: '/nexus' })
+
+    toast.success('Welcome back!', {
+      description: `Great to see you, ${as().account}`,
+    })
+  }
+}
 
 export async function hydrateUser(session: Session) {
   const as = useAccountStore()
@@ -25,19 +50,10 @@ export async function hydrateUser(session: Session) {
     ...as.userAccount,
     name,
     role: decoded.app_metadata.user_role as AccountRole,
-    id: session.user.id,
+    uuid: session.user.id,
   }
 
-  const needsRiotData = !as.userAccount.riot.puuid
-
-  if (needsRiotData) {
-    const summoner = await fetchSummonerData(session.user.id)
-    if (summoner) {
-      Object.assign(as.userAccount.riot, summoner)
-    }
-  }
-
-  as.fetchPublicData(as.userAccount.riot.puuid)
+  /*   as.fetchPublicData(as.userAccount.riot.puuid) */
 
   as.$persist
 }
@@ -47,7 +63,7 @@ async function fetchSummonerData(
 ): Promise<Partial<Summoner> | null> {
   const client = useSupabaseClient()
   const { data, error } = await client
-    .from('user_data')
+    .from('user_account')
     .select('"name", "tag",  "puuid", "region"')
     .eq('user_id', userId)
     .single()
@@ -62,9 +78,8 @@ async function fetchSummonerData(
 
 export async function useSignOut() {
   const supabaseClient = useSupabaseClient()
-  const router = useRouter()
 
   await supabaseClient.auth.signOut()
-  router.push('/')
+  await reloadNuxtApp({ path: '/nexus' })
   toast.success('Successfully logged out')
 }
