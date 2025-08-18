@@ -41,13 +41,6 @@ function reset() {
   champQuery.value = ''
   selectedChampion.value = null
 }
-
-function update(skin) {
-  as.publicData.splash = skin
-  console.log('💠 - update - as.publicData.splash:', as.publicData.splash)
-  as.updatePublicData()
-  emit('dialog:close')
-}
 </script>
 
 <template>
@@ -180,7 +173,7 @@ function update(skin) {
               :text="skin.name"
               :alt="skin.name"
               :skin-url="getSkinSplash(selectedChampion, skin, 'tile')"
-              @click="update(getSkinSplash(selectedChampion, skin, 'centered'))" />
+              @click="as.publicData.splash = getSkinSplash(selectedChampion, skin, 'centered')" />
           </transition-slide>
 
           <div

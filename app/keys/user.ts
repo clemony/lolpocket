@@ -10,13 +10,13 @@ export const user = Symbol("user") as InjectionKey<{
 
 export const getUserAccount = computed(() => {
   const as = useAccountStore()
-  if (!as?.userAccount?.id || !as.userAccount.riot.puuid) return null
+  if (!as?.userAccount?.uuid || !as.userAccount.riot.puuid) return null
   return as.userAccount
 })
 
 export const getAccountSummoner = computed(() => {
   const as = useAccountStore()
-  if (!as?.userAccount?.id || !as.userAccount.riot.puuid) return null
+  if (!as?.userAccount?.uuid || !as.userAccount.riot.puuid) return null
 
   const ss = useSummonerStore()
 

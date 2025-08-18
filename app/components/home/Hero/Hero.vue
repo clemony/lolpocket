@@ -88,7 +88,7 @@ onMounted(() => {
           </LolpocketDefinition>
         </div>
 
-        <!-- v-if="!as.userAccount?.id"
+        <!-- v-if="!as.userAccount?.uuid"
                -->
         <div class="absolute bottom-5 w-full self-end justify-center grid">
           <div class="place-items-center grid">

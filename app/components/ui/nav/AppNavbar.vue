@@ -20,7 +20,7 @@ const pinsOpen = shallowRef(false)
 }
  */
 function verifySignIn() {
-  if (!as?.userAccount?.id)
+  if (!as?.userAccount?.uuid)
     userNav.value = 'signIn'
 }
 </script>

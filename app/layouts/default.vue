@@ -1,44 +1,16 @@
 <script lang="ts" setup>
-const router = useRouter()
-const route = useRoute()
 const client = useSupabaseClient()
 
 onMounted(() => {
   document.documentElement.setAttribute(
     'data-theme',
-    as()?.dataTheme ?? 'daylight',
+    as()?.settings.theme ?? 'daylight',
   )
   ix().loadPatch()
 })
 
 client.auth.onAuthStateChange(async (event, session) => {
-  if (event === 'INITIAL_SESSION' && session) {
-    await hydrateUser(session)
-  }
-  else if (event === 'SIGNED_OUT') {
-    as().resetUserAccount()
-    if (route.path !== '/')
-      router.push('/')
-    else location.reload()
-  }
-  else if (event === 'SIGNED_IN' && session) {
-    const { data } = await client.auth.setSession({
-      access_token: session.access_token,
-      refresh_token: session.refresh_token,
-    })
-    if (data.session) {
-      await hydrateUser(data.session)
-
-      if (as().userAccount.riot.puuid) {
-        /* const { fetchSummoner, summoner } = useSummoner(
-          as().userAccount.riot.puuid,
-        )
-        fetchSummoner() */
-      }
-    }
-    router.push('/nexus')
-    location.reload()
-  }
+  useAuth(event, session)
 })
 
 const floatingSidebar = ref(false)

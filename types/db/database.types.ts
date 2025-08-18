@@ -26,7 +26,7 @@ export interface Database {
         }
         Relationships: []
       }
-      user_data: {
+      user_account: {
         Row: {
           name: string | null
           puuid: string | null
@@ -77,14 +77,14 @@ export interface Database {
             foreignKeyName: 'user_public_puuid_fkey'
             columns: ['puuid']
             isOneToOne: true
-            referencedRelation: 'user_data'
+            referencedRelation: 'user_account'
             referencedColumns: ['puuid']
           },
           {
             foreignKeyName: 'user_public_uuid_fkey'
             columns: ['uuid']
             isOneToOne: true
-            referencedRelation: 'user_data'
+            referencedRelation: 'user_account'
             referencedColumns: ['user_id']
           },
         ]
@@ -113,7 +113,7 @@ export interface Database {
             foreignKeyName: 'user_roles_puuid_fkey'
             columns: ['puuid']
             isOneToOne: true
-            referencedRelation: 'user_data'
+            referencedRelation: 'user_account'
             referencedColumns: ['puuid']
           },
         ]

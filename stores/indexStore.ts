@@ -18,7 +18,7 @@ export const useIndexStore = defineStore(
     const skins = ref<FullSkinRecord>({})
 
     async function loadPatch() {
-      const { patchIndex } = await import('data/index/patch-index')
+      const { patchIndex } = await import('~/appdata/index/patch-index')
       console.log('💠 - loadPatch - patchList.value:', patchList.value)
       if (patch.value != patchIndex[0]) {
         patchList.value = patchIndex
@@ -28,47 +28,47 @@ export const useIndexStore = defineStore(
     }
 
     async function loadSkins() {
-      const { skins: skinIndex } = await import('data/index/skins-full')
+      const { skins: skinIndex } = await import('~/appdata/index/skins-full')
       skins.value = skinIndex
     }
 
     async function loadChamps() {
-      const { championIndex } = await import('data/index/champion-index')
+      const { championIndex } = await import('~/appdata/index/champion-index')
       champions.value = championIndex
     }
 
     async function loadItems() {
-      const { itemIndex } = await import('data/index/item-index')
+      const { itemIndex } = await import('~/appdata/index/item-index')
       items.value = itemIndex
     }
 
     async function loadSpells() {
-      const { spellIndex } = await import('data/index/spell-index')
+      const { spellIndex } = await import('~/appdata/index/spell-index')
       spells.value = spellIndex
     }
 
     async function loadBaseSkins() {
-      const { baseSkin } = await import('data/index/skins-base')
+      const { baseSkin } = await import('~/appdata/index/skins-base')
       skin.value = baseSkin
     }
 
     async function loadRunes() {
-      const { runeIndex } = await import('data/index/rune-index')
+      const { runeIndex } = await import('~/appdata/index/rune-index')
       runes.value = runeIndex
     }
 
     async function loadPaths() {
-      const { pathIndex } = await import('data/index/path-index')
+      const { pathIndex } = await import('~/appdata/index/path-index')
       paths.value = pathIndex
     }
 
     async function loadMaps() {
-      const { mapIndex } = await import('data/index/map-index')
+      const { mapIndex } = await import('~/appdata/index/map-index')
       maps.value = mapIndex
     }
 
     async function loadTitles() {
-      const { championTitleIndex } = await import('data/index/champion-title-index')
+      const { championTitleIndex } = await import('~/appdata/index/champion-title-index')
       titles.value = championTitleIndex
     }
 

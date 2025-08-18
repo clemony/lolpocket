@@ -1,7 +1,7 @@
 // server/db/client.ts
 import type { D1Database } from '@nuxthub/core'
 import { drizzle } from 'drizzle-orm/d1'
-import { championItems, championRunes, champions, championSummoners } from './schemas'
+import { championItems, championRunes, champions, championSummoners } from './schema'
 
 // Tell TypeScript the D1 binding exists at runtime
 declare const D1: D1Database

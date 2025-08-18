@@ -34,7 +34,7 @@ const as = useAccountStore()
     <div class="w-100 h-60">
       <!-- <RecentPatchWinrates /> -->
     </div>
-    <Login v-if="!as.userAccount?.id" />
+    <Login v-if="!as.userAccount?.uuid" />
     <!--
     <div class="w-full h-80 self-end ">
       <News />

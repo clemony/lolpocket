@@ -1,6 +1,6 @@
 import { eq, sql } from 'drizzle-orm'
-import { db } from './client'
-import { championItems, championRunes, champions, championSummoners } from './schemas'
+import { db } from './d1Client'
+import { championItems, championRunes, champions, championSummoners } from './schema'
 
 type RoleFilter = string | undefined
 

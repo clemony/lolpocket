@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { queueIndex } from 'data/index/queue-index'
+import { queueIndex } from '~/appdata/index/queue-index'
 
 const { match, puuid } = defineProps<{
   match: MatchData

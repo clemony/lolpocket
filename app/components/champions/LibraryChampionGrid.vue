@@ -4,7 +4,7 @@ import { CellStyleModule, ClientSideRowModelModule, ColumnApiModule, ColumnAutoS
 import { AgGridVue } from 'ag-grid-vue3'
 import ChampionGridIcon from 'components/analytics/charts/chart-comps/ChampionGridIcon.vue'
 import { pocketTheme } from 'components/table/theme/tableTheme'
-import { championsLite } from '~/data/records/champions-lite'
+import { championsLite } from '~/appdata/records/champions-lite'
 
 definePageMeta({
   name: 'Champion Stats',

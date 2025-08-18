@@ -1,4 +1,3 @@
-import type { JwtPayload } from 'jwt-decode'
 import type {
   TabsRootProps as OriginalTabsRootProps,
   PrimitiveProps,
@@ -6,21 +5,19 @@ import type {
 import type { HTMLAttributes } from 'vue'
 import type { RouteMeta, RouteRecord } from 'vue-router'
 
+export type Extension<T, E> = T & E
+
 export interface HTMLAttr extends HTMLAttributes {}
 export type { MotionValue } from 'motion-v'
 export type { AcceptableValue, PrimitiveProps } from 'reka-ui'
 export type { CSSProperties, HTMLAttributes } from 'vue'
 
 export type Side = 'top' | 'right' | 'bottom' | 'left'
+
 export type Align = 'start' | 'center' | 'end'
 export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 export type Shape = 'square' | 'circle'
 
-export interface AuthRoleJwtPayload extends JwtPayload {
-  app_metadata: {
-    user_role: string
-  }
-}
 export interface PageRecord extends RouteRecord {
   meta: PageMeta
   altName: string

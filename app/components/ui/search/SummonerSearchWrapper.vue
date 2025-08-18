@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { regionIndex } from 'data/index/region-index'
 import { SelectArrow } from 'reka-ui'
+import { regionIndex } from '~/appdata/index/region-index'
 
 defineOptions({
   inheritAttrs: false,
