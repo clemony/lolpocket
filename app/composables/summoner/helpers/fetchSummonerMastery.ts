@@ -1,3 +1,10 @@
+export interface ChampionMasteryResponse {
+  puuid: string
+  mastery: ChampionMastery[]
+  totalPoints: number
+  totalLevels: number
+
+}
 export async function fetchSummonerMastery(puuid: string) {
   if (!puuid)
     throw new Error('Missing puuid for mastery fetch')

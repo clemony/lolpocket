@@ -2,17 +2,16 @@
 const { floating } = defineProps<{
   floating: boolean
 }>()
-
+/*
 const component = computed (() => us().activeSidebarContent ? userMenu[us().activeSidebarContent?.toLowerCase()]?.component : null)
 
 watch(() => us().activeSidebarContent, (oldVal, newVal) => {
   if (newVal != oldVal) {
     us().sidebarExpanded = !!us().activeSidebarContent
-  }
+  } */
 /*   if (newVal == null && us().sidebarExpanded) {
     us().toggleSidebar()
   } */
-})
 
 /* onMounted (() => {
   if (component.value == null && us().sidebarExpanded == true)
@@ -41,10 +40,10 @@ const target = useTemplateRef<HTMLElement>('target')
     <TransitionSlideLeft
       group
       :class="cn('before:absolute  before before:w-full before:z-0 z-1 before:bg-gradient-to-t before:from-sidebar/94 before:to-transparent before:h-16 flex rounded-lg border before:-top-16 border-b3 shadow-warm-soft   size-full')">
-      <component
+      <!-- <component
         :is="component"
         v-if="us().sidebarExpanded && component"
-        :open="us().sidebarExpanded" />
+        :open="us().sidebarExpanded" /> -->
     </TransitionSlideLeft>
   </Sidebar>
 </template>

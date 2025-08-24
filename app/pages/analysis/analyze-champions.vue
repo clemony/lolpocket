@@ -8,14 +8,12 @@ definePageMeta({
   name: 'champion analysis',
 
   path: '/analysis/champions',
-  meta: {
-    altName: 'champions',
-    section: 'analysis',
-    icon: 'typcn:user',
-  },
+  title: 'champions',
+  parent: '/analysis',
+  icon: 'typcn:user',
 })
 
-/* const { bayesianChampions } = await useMatchChampions(as().userAccount.riot.puuid) */
+/* const { bayesianChampions } = await useMatchChampions(as().account.puuid) */
 </script>
 
 <template>

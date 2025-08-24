@@ -14,21 +14,21 @@ function addPin(e: SortableEvent) {
   const movingKey = pocketKeys[e.oldDraggableIndex]
 
   // Add to pinned
-  const newPinned = [...as.userAccount.pockets.pinned]
-  newPinned.splice(e.newDraggableIndex, 0, movingKey)
+  const newPinned = [...as.pockets.pinned]
+  newPinned.map(p => p.key).splice(e.newDraggableIndex, 0, movingKey)
 
   // Enforce max 5 rule
   if (newPinned.length > 6)
     newPinned.pop()
 
-  as.userAccount.pockets.pinned = newPinned
+  as.pockets.pinned = newPinned
 }
 
 function removePin(e: SortableEvent) {
   // Remove from pinned
-  const newPinned = [...as.userAccount.pockets.pinned]
+  const newPinned = [...as.pockets.pinned]
   newPinned.splice(e.oldDraggableIndex, 1)
-  as.userAccount.pockets.pinned = newPinned
+  as.pockets.pinned = newPinned
 }
 </script>
 
@@ -36,7 +36,7 @@ function removePin(e: SortableEvent) {
   <div
     class="w-full size-full relative grid grid-rows-[1fr_20px] max-h-100 col-start-2 pr-2 gap-1">
     <VueDraggable
-      :model-value="as.userAccount.pockets.pinned"
+      :model-value="as.pockets.pinned"
       ghost-class=".peek-btn-ghost"
       drag-class=".peek-btn-drag"
       draggable=".draggable"
@@ -53,16 +53,16 @@ function removePin(e: SortableEvent) {
         group
         class=" grid-rows-3 grid-cols-2 grid scrollbar-hidden  max-h-92 gap-1 size-full  px-1  items-start justify-start  target">
         <PocketPeek
-          v-for="pocketKey in as.userAccount.pockets.pinned"
-          :key="pocketKey"
-          :pocket-key="pocketKey"
+          v-for="pocket in as.pockets.pinned"
+          :key="pocket.key"
+          :pocket-key="pocket.key"
           side="right"
           align="start"
           class="group/link size-full grid items-end rounded-field shadow-sm drop-shadow-sm overflow-hidden relative **:select-none select-none **:pointer-events-none"
           wrapper-class="group/link size-full grid items-end rounded-field shadow-sm drop-shadow-sm overflow-hidden relative **:select-none select-none **:pointer-events-none"
-          @click="navigateTo(`/pocket/${pocketKey}`)">
+          @click="navigateTo(`/pocket/${pocket.key}`)">
           <LazyPocketPinButton
-            :pocket-key="pocketKey"
+            :pocket-key="pocket.key"
             hydrate-on-visible />
         </PocketPeek>
       </transition-slide>
@@ -78,7 +78,7 @@ function removePin(e: SortableEvent) {
         <icon
           name="pin-solid"
           class="size-4  mr-1.5 dst text-bc/70" />
-        {{ computed (() => as.userAccount.pockets.pinned.length) }}
+        {{ computed (() => as.pockets.pinned.length) }}
         /
         6
       </Badge>

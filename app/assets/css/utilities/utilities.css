@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "../theme.css";
 
+
 @utility scrollbar-none {
   display: none;
   -ms-overflow-style: none;

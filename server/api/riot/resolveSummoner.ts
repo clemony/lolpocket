@@ -4,7 +4,7 @@ import {
   fetchSummonerByPuuid,
 } from '../riotClient'
 
-interface SummonerResponse {
+export interface SummonerResponse {
   name: string
   tag: string
   puuid: string
@@ -42,8 +42,8 @@ export default defineEventHandler(async (event) => {
 
   try {
     const [summoner, league] = await Promise.all([
-      fetchSummonerByPuuid(puuid),
-      fetchLeagueEntriesByPuuid(puuid),
+      fetchSummonerByPuuid(puuid, summonerRegion),
+      fetchLeagueEntriesByPuuid(puuid, summonerRegion),
     ])
 
     const ranked: SummonerResponse['ranked'] = {}

@@ -1,42 +1,77 @@
 <script lang="ts" setup>
-const option = ref(['Backpack', 'Analytics', 'Library', 'Summoner'])
+import { useSidebar } from 'base/sidebar/utils'
 
-function getSummonerLink(obj: LinkObject) {
-  if (obj.name != 'Summoner')
-    return obj
+const { basicLayout } = defineProps<{
+  basicLayout?: boolean
+}>()
 
-  if (!as().userAccount?.riot?.name) {
-    return {
-      name: 'Connect Riot ID',
-      icon: {
-        name: 'plug',
-      },
-    }
-  }
-  return {
-    name: `${as().userAccount.riot.name}'s Profile`,
-    icon: {
-      name: getSummonerIcon(as().userAccount.riot.profileIcon),
-      class: 'size-6 rounded-full drop-shadow-sm shadow-sm',
-    },
-    link: `/summoner/${as().userAccount.riot.region}/${as().userAccount.riot.name}_${as().userAccount.riot.tag}`,
-  }
+const links = computed (() => {
+  if (!as().account.name)
+    return null
+
+  else return generateSummonerLinks(as().account)
+})
+
+const summonerLinks = computed(() => {
+  if (!links.value)
+    return navLinks
+
+  else
+    return navLinks.reverse().concat(links.value).reverse()
+})
+const option = computed (() => {
+  const arr = ['Backpack', 'Analytics', 'Library']
+  if (links.value.name)
+    arr.push(links.value.name)
+
+  return arr
+})
+
+const { open } = useSidebar()
+function closeAndNavigate(link: string) {
+  open.value = false
+  navigateTo(link)
 }
-
-const sublinks = generateSummonerLinks(as().userAccount.riot as Partial<Summoner>)
 </script>
 
 <template>
-  <SidebarContentWrapper title="Navigation">
-    <Accordion
-      v-model:model-value="option"
-      type="multiple"
-      collapsible
-      class="w-full justify-start px-4">
-      <SidebarAccordionItem
-        v-for="linkObject in navLinks"
-        :key="linkObject.name"
-        :link-object="getSummonerLink(linkObject)" />
-    </Accordion>
+  <SidebarContentWrapper
+    :basic-layout="basicLayout"
+    title="Navigation">
+    <SidebarMenuButton
+      size="lg"
+      variant="default"
+      class="capitalize order-first mx-3 mt-3 mb-1 font-medium [&_svg]:!size-5.25"
+      @click="navigateTo('/nexus')">
+      <icon
+        name="nexus" />
+      Nexus
+    </SidebarMenuButton>
+    <SidebarAccordionItem
+      v-for="linkObject in summonerLinks"
+      :key="linkObject.name"
+      :link-object="linkObject" />
+
+    <!-- <Separator class="self-end mx-4 " /> -->
+    <!--     <SidebarGroup>
+      <SidebarGroupContent>
+        <SidebarMenuButton
+          size="lg"
+          variant="default"
+          class="capitalize order-first mx-3 mt-3 font-medium [&_svg]:!size-5.25"
+          @click="navigateTo('/nexus')">
+          <icon name="lucide:file-question" />
+          Docs
+        </SidebarMenuButton>
+        <SidebarMenuButton
+          size="lg"
+          variant="default"
+          class="capitalize order-first mx-3   font-medium [&_svg]:!size-5.25"
+          @click="navigateTo('/nexus')">
+          <icon name="lucide:square-terminal" />
+          About
+        </SidebarMenuButton>
+      </SidebarGroupContent>
+    </SidebarGroup> -->
   </SidebarContentWrapper>
 </template>

@@ -11,11 +11,8 @@ pocket: pocket
 const route = useRoute()
 definePageMeta({
   props: true,
-
-  meta: {
-    section: 'pocket',
-    search: false,
-  },
+  parent: '/pocket',
+  search: false,
 })
 
 const pocket = ref(getPocket(route.params.pocketKey))

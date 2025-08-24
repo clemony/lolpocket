@@ -24,7 +24,7 @@ const as = useAccountStore()
       <div
         class="size-full grid auto-rows-min gap-1 pl-4 border-l border-l-b3/80">
         <Badge
-          v-if="as?.userAccount?.uuid && as.userAccount.riot.puuid"
+          v-if="as?.loggedIn && as.account.puuid"
           v-tippy="'Riot ID Connected!'"
           size="xl"
           variant="n1"
@@ -51,7 +51,7 @@ const as = useAccountStore()
           class="btn w-full justify-start"
           @click="emit('open:sign-in')">
           {{
-            as.userAccount.riot.puuid
+            as.account.puuid
               ? "No Riot ID Connected."
               : "Sign in for personalized data."
           }}

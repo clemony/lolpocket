@@ -3,7 +3,7 @@ const ps = usePocketStore()
 const as = useAccountStore()
 
 const pocketKeys = computed(() =>
-  ps.pockets.map(p => p.key).filter(k => !as.userAccount.pockets.pinned.includes(k)),
+  ps.pockets.map(p => p.key).filter(k => !as.pockets.pinned.map(p => p.key).includes(k)),
 )
 </script>
 

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 definePageMeta({
   name: 'Spellbook',
-  section: 'library',
+  parent: '/library',
   searchKeys: ['summoner', 'spell', 'heal', 'barrier', 'flash', 'ignite', 'ghost', 'smite', 'teleport', 'cleanse', 'exhaust'],
   icon: 'teenyicons:book-outline',
   title: 'Spellbook',

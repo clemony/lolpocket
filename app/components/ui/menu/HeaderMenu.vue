@@ -3,7 +3,7 @@ const emit = defineEmits(['update:modelValue'])
 const as = useAccountStore()
 const us = useUiStore()
 
-const summoner = ref(as.userAccount)
+const summoner = ref(as.account)
 
 function handleClick(mode) {
   emit('update:modelValue', false)
@@ -29,7 +29,7 @@ const messages = ref(false)
     class="rounded-t-3xl rounded-b-box w-13 h-13 bg-neutral/0 z-41 fixed top-2 right-3 group justify-self-end backdrop-blur-md"
     :class="{
       'ease-in-out  hover:h-54  hover:bg-neutral/85 transition-[height_colors] dr-40 ':
-        as?.userAccount?.uuid,
+        as?.loggedIn,
     }">
     <SummonerIcon
       class="size-11 border border-black absolute top-1 right-1 drop-shadow-sm grayscale brightness-120 inset-shadow-rounded ring-1 ease-in-out rounded-full ring-neutral/40 contrast-90 group-hover:grayscale-0 transition-all dr-40 group-hover:brightness-100 group-hover:contrast-100 shadow-sm cursor-pointer z-1" />

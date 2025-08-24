@@ -1,7 +1,7 @@
 <script setup lang="ts">
 definePageMeta({
   title: 'Champions',
-  section: 'library',
+  parent: '/library',
   icon1: 'lol-champ',
 })
 

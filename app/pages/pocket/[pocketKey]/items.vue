@@ -7,11 +7,8 @@ const props = defineProps<{
 
 definePageMeta({
   name: 'pocket items',
-
-  meta: {
-    section: 'pocket',
-    search: false,
-  },
+  parent: '/pocket',
+  search: false,
 })
 
 const pocket = ref(props.pocket)
@@ -62,6 +59,6 @@ const tabValues = [
         </ResizablePanel>
       </SidebarInset>
     </ResizablePanelGroup>
-    <PocketItemFilters />
+    <!-- <PocketItemFilters /> -->
   </SidebarProvider>
 </template>

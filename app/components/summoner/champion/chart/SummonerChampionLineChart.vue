@@ -5,7 +5,7 @@ const { class: className, summoner, championName, matches } = defineProps<{
   championName: string
   matches: MatchData[]
 }>()
-/* const { matches } = useSummoner(as().userAccount?.riot?.puuid) */
+/* const { matches } = useSummoner(as().account?.puuid) */
 
 const timeline = computed(() => {
   if (!summoner)

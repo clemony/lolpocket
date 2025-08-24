@@ -13,12 +13,34 @@ export interface ChampionStats {
   gamePatches: string[]
 }
 
+export interface BayesianChampion {
+  games: number
+  wins: number
+  losses: number
+  winrate: number
+  kills: number
+  deaths: number
+  assists: number
+  killParticipation: number
+  matchIndexes: number[]
+  gameVersions: string[]
+}
+
+export interface BayesianChampionStats extends ChampionStats {
+  bayesianWinrate: number
+  kda: number
+  avgKills: number
+  avgDeaths: number
+  avgAssists: number
+  avgKp: number
+}
+
 export function getChampionStatsMap(
   matches: MatchData[],
 ): Map<string, ChampionStats> {
   const map = new Map<string, ChampionStats>()
 
-  const player = matches.map(m => m.participants.find(p => p.puuid == as().userAccount.riot.puuid))
+  const player = matches.map(m => m.participants.find(p => p.puuid == as().account.puuid))
 
   player.forEach((match, index) => {
     const champ = ix().champNameById(match.championId)
@@ -58,46 +80,42 @@ export function getChampionStatsMap(
 }
 
 export function useBasicChampionStats(matches: MatchData[]) {
-  const stats = computed(() => getChampionStatsMap(matches))
-  return computed(() => Array.from(stats.value.values()))
+  const stats = getChampionStatsMap(matches)
+  return Array.from(stats.values())
 }
 
 export function useBayesianChampionStats(matches: MatchData[]) {
   const ix = useIndexStore()
 
-  const baseStats = computed(() => getChampionStatsMap(matches))
+  const statsList = useBasicChampionStats(matches)
+  const totalGames = statsList.reduce((sum, s) => sum + s.games, 0)
+  const globalWinrate
+    = statsList.reduce((sum, s) => sum + s.wins, 0) / totalGames || 0
 
-  return computed<BayesianChampionStats[]>(() => {
-    const statsList = Array.from(baseStats.value.values())
-    const totalGames = statsList.reduce((sum, s) => sum + s.games, 0)
-    const globalWinrate
-      = statsList.reduce((sum, s) => sum + s.wins, 0) / totalGames || 0
+  return statsList
+    .map((stats) => {
+      const adjustedWeight = stats.games ** 0.7
+      const confidence = adjustedWeight / (adjustedWeight + 15)
+      const bayesianWinrate
+        = ((1 - confidence) * globalWinrate
+          + confidence * (stats.wins / stats.games))
+        * 100
 
-    return statsList
-      .map((stats) => {
-        const adjustedWeight = stats.games ** 0.7
-        const confidence = adjustedWeight / (adjustedWeight + 15)
-        const bayesianWinrate
-          = ((1 - confidence) * globalWinrate
-            + confidence * (stats.wins / stats.games))
-          * 100
-
-        return {
-          ...stats,
-          bayesianWinrate,
-          kda: Number(
-            ((stats.kills + stats.assists) / Math.max(1, stats.deaths)).toFixed(
-              2,
-            ),
+      return {
+        ...stats,
+        bayesianWinrate,
+        kda: Number(
+          ((stats.kills + stats.assists) / Math.max(1, stats.deaths)).toFixed(
+            2,
           ),
-          avgKills: Number((stats.kills / stats.games).toFixed(2)),
-          avgDeaths: Number((stats.deaths / stats.games).toFixed(2)),
-          avgAssists: Number((stats.assists / stats.games).toFixed(2)),
-          avgKp: Number(
-            ((stats.killParticipation / stats.games) * 100).toFixed(2),
-          ),
-        }
-      })
-      .sort((a, b) => b.bayesianWinrate - a.bayesianWinrate)
-  })
+        ),
+        avgKills: Number((stats.kills / stats.games).toFixed(2)),
+        avgDeaths: Number((stats.deaths / stats.games).toFixed(2)),
+        avgAssists: Number((stats.assists / stats.games).toFixed(2)),
+        avgKp: Number(
+          ((stats.killParticipation / stats.games) * 100).toFixed(2),
+        ),
+      }
+    })
+    .sort((a, b) => b.bayesianWinrate - a.bayesianWinrate)
 }

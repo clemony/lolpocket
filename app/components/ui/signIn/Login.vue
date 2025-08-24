@@ -49,16 +49,6 @@ const emailChecked = ref(false)
 
       <div
         class="grid grid-cols-4 mb-5 mt-6 gap-2">
-        <component
-          :is="provider.component"
-          v-for="provider in providers"
-          :key="provider.name">
-          <input
-            v-if="provider.name = 'Email'"
-            v-model="emailChecked"
-            type="checkbox"
-            class="peer hidden" />
-        </component>
       </div>
     </div>
   </transition-slide>

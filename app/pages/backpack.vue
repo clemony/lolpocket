@@ -5,7 +5,7 @@ definePageMeta({
   name: 'backpack',
 
   meta: {
-    section: 'backpack',
+    parent: '/backpack',
     icon: 'backpack',
   },
 })

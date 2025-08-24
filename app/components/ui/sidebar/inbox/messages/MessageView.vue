@@ -18,13 +18,13 @@ const as = useAccountStore()
         class="input h-12 !bg-b1 my-2" />
     </template>
 
-    <SidebarGroupContent class="gap-0  -mt-2 overflow-hidden  w-full !flex flex-col items-start">
+    <SidebarGroupContent class="gap-0  -mt-4 overflow-hidden  w-full !flex flex-col items-start">
       <template
-        v-if="as.userAccount?.inbox?.messages.length">
+        v-if="as.account?.inbox?.messages.length">
         <div
           v-for="message, i in sortedMessages"
           :key="`${message.date}-${i}`"
-          :class="cn('flex w-full flex-col items-start gap-2 whitespace-nowrap border-b border-b-b3 p-4 leading-tight last:border-b-0 group/msg', { ' bg-b1 ': !message.read, 'bg-b2/60 hover:bg-sidebar-accent opacity-60': message.read })">
+          :class="cn('flex w-full flex-col items-start gap-2 whitespace-nowrap border-b border-b-b3 p-4 leading-tight last:border-b-0 group/msg', { ' bg-b1/80 ': !message.read, 'bg-transparent hover:bg-sidebar-accent opacity-70': message.read })">
           <Dialog>
             <DialogTrigger
               class="grid size-full justify-items-start"
@@ -32,15 +32,15 @@ const as = useAccountStore()
               <div class="flex w-full justify-between items-center gap-2">
                 <span class="text-2 font-medium text-bc/60">{{ message.from.name }}</span>
 
-                <span class="text-1 flex h-5 items-center justify-self-end text-bc/80 relative *:absolute *:right-0 *:first:opacity-0 group-hover/msg:*:first:opacity-100 group-hover/msg:*:last:opacity-0 *:transition-opacity group-hover/msg:*:last:pointer-events-none *:duration-200">
+                <span class="text-1 flex h-5 items-center justify-self-end text-bc/80 relative *:absolute *:right-4 *:first:opacity-0 group-hover/msg:*:first:opacity-100 group-hover/msg:*:last:opacity-0 *:transition-opacity group-hover/msg:*:last:pointer-events-none *:duration-200">
                   <span class="flex gap-1 size-fit">
 
-                    <button
-                      class=""
-                      :class="cn('btn btn-xs text-1 hover:underline rounded-md  overflow-hidden', { 'btn-neutral': !message.read, 'btn-ghost': message.read })"
+                    <Button
+                      :variant="!message.read ? 'neutral' : 'ghost'"
+                      size="xxs"
                       @click.stop="toggleRead(message.id)">
                       {{ message.read ? 'Mark Unread' : 'Mark Read' }}
-                    </button>
+                    </Button>
 
                     <TrashMessageButton :message />
                   </span>
@@ -61,7 +61,7 @@ const as = useAccountStore()
       <div
         v-else
         class="w-full h-44 grid place-items-center">
-        <span class="text-2 dst">
+        <span class="text-2 dst text-nowrap overflow-hidden">
           {{ `No mail right now!` }}
         </span>
       </div>

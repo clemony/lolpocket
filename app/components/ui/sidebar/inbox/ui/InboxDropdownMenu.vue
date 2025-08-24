@@ -38,7 +38,7 @@ const as = useAccountStore()
   </DropdownMenuLabel>
   <DropdownMenuSeparator />
 
-  <DropdownMenuItem @click="as.userAccount.inbox.messages.push(testMessage)">
+  <DropdownMenuItem @click="as.account.inbox.messages.push(testMessage)">
     <icon
       name="hugeicons:test-tube-01"
       class="size-4.5" />

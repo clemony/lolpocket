@@ -19,8 +19,8 @@ export const openBox = shallowRef<string>('Messages')
 export const inboxUnreadFilter = shallowRef<boolean>(false)
 
 export const sortedMessages = computed(() => {
-    const as = useAccountStore()
-let box = [...(as.userAccount?.inbox?.messages || [])]
+  const as = useAccountStore()
+  let box = [...(as.account?.inbox?.messages || [])]
   box = openBox.value == 'Messages' ? box.filter(m => !m.trash) : openBox.value == 'Trash' ? box.filter(m => m.trash == true) : []
   box = inboxUnreadFilter.value ? box.filter(m => !m.read) : box
 
@@ -29,10 +29,9 @@ let box = [...(as.userAccount?.inbox?.messages || [])]
   )
 })
 
-
 export function matchMsg(msgId: string, index?: boolean): InboxMessage {
-    const as = useAccountStore()
-  return as.userAccount.inbox.messages.find(m => m.id == msgId)
+  const as = useAccountStore()
+  return as.account.inbox.messages.find(m => m.id == msgId)
 }
 
 export function markRead(msgId) {
@@ -50,15 +49,15 @@ export function toggleRead(msgId) {
 
 export function trashMsg(msgId) {
   const msg = matchMsg(msgId)
-  if (msg){
+  if (msg) {
     msg.trash = true
     msg.dateTrashed = new Date()
   }
 }
 
-export function trashAllRead(){
-    const as = useAccountStore()
-  const a = as.userAccount.inbox.messages.filter(m => m.read == true)
+export function trashAllRead() {
+  const as = useAccountStore()
+  const a = as.account.inbox.messages.filter(m => m.read == true)
   a.forEach((m) => {
     trashMsg(m.id)
   })

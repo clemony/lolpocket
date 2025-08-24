@@ -4,7 +4,7 @@ import { motion } from 'motion-v'
 const { class: className, variant = 'shadow' } = defineProps<{
   class?: HTMLAttributes['class']
   text?: boolean | string | null
-  variant?: VariantStyleProps['variant']
+  variant?: any
 }>()
 
 const state = useSummonerInject()

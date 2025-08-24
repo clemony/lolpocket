@@ -1,30 +1,35 @@
 <script setup lang="ts">
-const props = defineProps<{
+const { entry, title, class: className } = defineProps<{
   entry: RankedEntry
   title?: string
   class?: HTMLAttributes['class']
 
 }>()
 
-const entry = computed (() => props.entry)
-
 const color1 = computed(() => {
-  return getComputedStyle(document.documentElement).getPropertyValue(`--color-${entry.value.tier}`)
+  return getComputedStyle(document.documentElement).getPropertyValue(`--color-${entry?.tier ?? 'b3'}`)
 })
 const colors = [getColorFromVariable('--color-b3'), color1.value]
 
-const winrate = computed (() => entry.value.wins / (entry.value.wins + entry.value.losses) * 100)
+const winrate = computed (() => entry ? entry.wins / (entry.wins + entry.losses) * 100 : 0)
 </script>
 
 <template>
   <Field
-    :class="cn('w-120 max-w-120 h-42 max-h-42  bg-b2/30 shadow-warm-soft  drop-shadow-xs border-b3/40 py-0 ', props.class)"
-    :title="`Ranked ${props.title}`">
+    :class="cn('w-120 max-w-120 h-42 max-h-42  bg-b2/30 shadow-warm-soft  drop-shadow-xs border-b3/40 py-0 ', className)"
+    :title="`Ranked ${title}`">
     <div class="overflow-hidden size-full grid grid-cols-[1.1fr_1fr_1fr] place-items-center h-42 content-center">
       <div class="grid mt-0.5 overflow-hidden place-items-center">
         <!-- crest -->
         <img
-          :src="`/img/crests/${entry.tier.toLowerCase()}.webp`"
+
+          v-if="!entry"
+          src="/img/crests/unranked.webp"
+          class="drop-shadow-sm  object-contain   opacity-40  size-25 saturate-0" />
+
+        <img
+          v-else
+          :src="`/img/crests/${entry?.tier?.toLowerCase()}.webp`"
           class="drop-shadow-md object-contain size-28 drop-shadow-black/30 " />
       </div>
 
@@ -34,30 +39,32 @@ const winrate = computed (() => entry.value.wins / (entry.value.wins + entry.val
 
           <div
             class="radial-progress dst absolute "
-            :style="{ '--value': winrate, '--size': '5.25rem', 'color': getColorFromVariable(`--color-${entry.tier.toLowerCase()}`) }"
+            :style="{ '--value': winrate, '--size': '5.25rem', 'color': getColorFromVariable(`--color-${entry?.tier ? entry.tier?.toLowerCase() : 'b3'}`) }"
             role="progressbar">
-            <span class="text-bc font-medium dst">
+            <span
+              v-if="entry"
+              class="text-bc font-medium dst">
               {{ winrate.toFixed(1).replace('.0', '') }}%
             </span>
           </div>
         </div>
       </div>
 
-      <div class=" pt-3  overflow-hidden font-medium flex flex-col items-end justify-center pb-3 text-end gap-2.75 ">
+      <div :class="cn('pt-3  overflow-hidden font-medium flex flex-col items-end justify-center pb-3 text-end gap-2.75', { 'opacity-40': !entry })">
         <p class="capitalize">
-          {{ entry.tier.toLowerCase() }} {{ entry.division }}
+          {{ entry ? `${entry?.tier?.toLowerCase()} ${entry?.division}` : 'Unranked' }}
         </p>
 
         <p class="capitalize font-semibold text-4">
-          {{ entry.lp }} LP
+          {{ entry?.lp ?? 0 }} LP
         </p>
 
         <p
-          v-tippy="`${entry.wins + entry.losses} total`"
-          class="hover:border-b-bc border-b-transparent border-b  flex text-1 items-center gap-1 text-end justify-end text-nowrap">
-          <span>{{ entry.wins }}W </span>
+          v-tippy="`${entry ? entry?.wins + entry?.losses : 0} total`"
+          class="hover:underline decoration-dotted underline-offset-2  flex text-1 items-center gap-1 text-end justify-end text-nowrap">
+          <span>{{ entry ? entry.wins : 0 }}W </span>
 
-          <span>{{ entry.losses }}L</span>
+          <span>{{ entry ? entry.losses : 0 }}L</span>
         </p>
       </div>
     </div>

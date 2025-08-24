@@ -1,9 +1,10 @@
-import { cloudflare } from '@cloudflare/vite-plugin'
+/* import { cloudflare } from '@cloudflare/vite-plugin' */
 import tailwindcss from '@tailwindcss/vite'
 import process from 'node:process'
 import { fileURLToPath } from 'node:url'
 
 // CONFIG
+/*   ogImage: { enabled: false }, */
 
 export default defineNuxtConfig({
   modules: [
@@ -11,7 +12,6 @@ export default defineNuxtConfig({
     'pinia-plugin-persistedstate/nuxt',
     '@nuxt/image',
     '@vueuse/nuxt',
-    '@nuxtjs/supabase',
     '@morev/vue-transitions/nuxt',
     '@nuxt/eslint',
     'vue-sonner/nuxt',
@@ -21,19 +21,96 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     'shadcn-nuxt',
     '@nuxthub/core',
+    '@nuxtjs/supabase',
   ],
+
+  imports: {
+    dirs: [
+      '@vueuse/components',
+      'appdata',
+      '#types/**',
+      'routes',
+      'assets/ts/**',
+      'composables/alias/*/**',
+      '#shared/schemas',
+    ],
+  },
+
+  alias: {
+    'css': fileURLToPath(new URL('./app/assets/css', import.meta.url)),
+    '#types': fileURLToPath(new URL('./shared/types', import.meta.url)),
+    'stores': fileURLToPath(new URL('./stores', import.meta.url)),
+    'composables': fileURLToPath(new URL('./app/composables', import.meta.url)),
+    'server': fileURLToPath(new URL('./server', import.meta.url)),
+    'utils': fileURLToPath(new URL('./app/utils', import.meta.url)),
+    'api': fileURLToPath(new URL('./public/api', import.meta.url)),
+    'components': fileURLToPath(new URL('./app/components', import.meta.url)),
+    'base': fileURLToPath(new URL('./app/base', import.meta.url)),
+    'assets': fileURLToPath(new URL('./app/assets', import.meta.url)),
+    'plugins': fileURLToPath(new URL('./app/plugins', import.meta.url)),
+    'modules': fileURLToPath(new URL('./modules', import.meta.url)),
+    'appdata': fileURLToPath(new URL('./app/appdata', import.meta.url)),
+    'db': fileURLToPath(new URL('./server/db', import.meta.url)),
+    'db-schema': fileURLToPath(new URL('./server/db/schema', import.meta.url)),
+    'routes': fileURLToPath(new URL('./app/routes/index', import.meta.url)),
+    'd1': fileURLToPath(new URL('./d1', import.meta.url)),
+  },
+
+  runtimeConfig: {
+    supabaseUrl: process.env.SUPABASE_URL,
+    supabaseAnonKey: process.env.SUPABASE_KEY,
+    supabasePooler: process.env.SUPABASE_POOLER,
+    riotApiKey: process.env.NUXT_RIOT_API,
+
+    public: {
+      baseUrl: process.env.BASE_URL || 'http://localhost:8080',
+    },
+  },
+
+  nitro: {
+    routeRules: {
+      '/api/**': {
+        cors: true,
+        headers: { 'Access-Control-Allow-Origin': '*' },
+      },
+    },
+    experimental: {
+      openAPI: true,
+    },
+    imports: {
+      dirs: [
+        '#shared/schema',
+      ],
+    },
+  },
+
+  /* ------------------------------ data ------------------------------ */
+
+  pinia: {
+    storesDirs: ['./stores/**'],
+  },
+
+  supabase: {
+    url: process.env.NUXT_PUBLIC_SUPABASE_URL,
+    key: process.env.NUXT_PUBLIC_SUPABASE_KEY,
+    redirect: true,
+    redirectOptions: {
+      callback: '/redirect',
+      exclude: ['*'],
+      login: '/login',
+      saveRedirectToCookie: true,
+    },
+    clientOptions: {
+      global: { fetch: fetch.bind(globalThis) },
+    },
+    useSsrCookies: false,
+  },
 
   hub: {
     database: true,
   },
 
-  future: {
-    typescriptBundlerResolution: true,
-  },
-
-  experimental: {
-    payloadExtraction: true,
-  },
+  /* ------------------------------ utils ------------------------------ */
 
   router: {
     options: {
@@ -41,12 +118,37 @@ export default defineNuxtConfig({
 
     },
   },
-  /*   ogImage: { enabled: false }, */
 
+  /* ------------------------------ components ------------------------------ */
+
+  components: [
+    {
+      path: 'components',
+      pathPrefix: false,
+    },
+    {
+      path: 'base',
+      pathPrefix: false,
+    },
+    '~/components',
+  ],
+  svgo: {
+    componentPrefix: 'i',
+  },
+  icon: {
+    provider: 'iconify',
+    serverBundle: 'local',
+  },
   image: {
     domains: ['ddragon.leagueoflegends.com', 'cdn.communitydragon.org'],
     provider: 'ipx',
     format: ['webp'],
+  },
+
+  /* ------------------------------ framework ------------------------------ */
+
+  typescript: {
+    typeCheck: true,
   },
 
   vue: {
@@ -75,99 +177,14 @@ export default defineNuxtConfig({
     },
   },
 
-  typescript: {
-    typeCheck: true,
-  },
-
-  supabase: {
-    url: process.env.SUPABASE_URL,
-    key: process.env.SUPABASE_KEY,
-    redirect: false,
-  },
-  runtimeConfig: {
-    supabaseUrl: process.env.SUPABASE_URL,
-    supabaseAnonKey: process.env.SUPABASE_KEY,
-    riotApiKey: process.env.NUXT_RIOT_API,
-
-    public: {
-      baseUrl: process.env.BASE_URL || 'http://localhost:8080',
-      redirectUrl: 'http://localhost:8080/summoner',
-    },
-  },
-
-  nitro: {
-    routeRules: {
-      '/api/**': {
-        cors: true,
-        headers: { 'Access-Control-Allow-Origin': '*' },
-      },
-    },
-    experimental: {
-      openAPI: true,
-    },
-  },
-
-  components: [
-    {
-      path: 'components',
-      pathPrefix: false,
-    },
-    {
-      path: 'base',
-      pathPrefix: false,
-    },
-    '~/components',
-  ],
-  svgo: {
-    componentPrefix: 'i',
-  },
-  icon: {
-    provider: 'iconify',
-    serverBundle: 'local',
-  },
-  imports: {
-    dirs: [
-      '@vueuse/components',
-      'data',
-      'types',
-      './types',
-      '~~/shared/types/**',
-      'keys/**',
-      'routes',
-      'assets/ts/**',
-      'composables/alias/*/**',
-    ],
-  },
-  pinia: {
-    storesDirs: ['./stores/**'],
-  },
-  alias: {
-    'css': fileURLToPath(new URL('./app/assets/css', import.meta.url)),
-    'types': fileURLToPath(new URL('./types', import.meta.url)),
-    'stores': fileURLToPath(new URL('./stores', import.meta.url)),
-    'composables': fileURLToPath(new URL('./app/composables', import.meta.url)),
-    'shared': fileURLToPath(new URL('./shared', import.meta.url)),
-    'server': fileURLToPath(new URL('./server', import.meta.url)),
-    'utils': fileURLToPath(new URL('./app/utils', import.meta.url)),
-    'api': fileURLToPath(new URL('./public/api', import.meta.url)),
-    'components': fileURLToPath(new URL('./app/components', import.meta.url)),
-    'base': fileURLToPath(new URL('./app/base', import.meta.url)),
-    'assets': fileURLToPath(new URL('./app/assets', import.meta.url)),
-    'plugins': fileURLToPath(new URL('./app/plugins', import.meta.url)),
-    'modules': fileURLToPath(new URL('./modules', import.meta.url)),
-    'appdata': fileURLToPath(new URL('./app/appdata', import.meta.url)),
-    'keys': fileURLToPath(new URL('./app/keys', import.meta.url)),
-    'db-schema': fileURLToPath(new URL('./server/db/schema', import.meta.url)),
-    'routes': fileURLToPath(new URL('./app/routes/index', import.meta.url)),
-    'd1': fileURLToPath(new URL('./d1', import.meta.url)),
-  },
-
-  /* *** css and styling  */
+  /* ------------------------------ styling ------------------------------ */
 
   css: ['./app/assets/css/tailwind.css'],
+
   postcss: {
     plugins: {},
   },
+
   tailwindcss: {
     exposeConfig: true,
     includeWorkspace: true,
@@ -177,6 +194,7 @@ export default defineNuxtConfig({
     prefix: '',
     componentDir: './app/base/ui',
   },
+
   vueTransitions: {
     defaultProps: {
       duration: 400,
@@ -195,15 +213,19 @@ export default defineNuxtConfig({
     },
   },
 
+  /* --------------------------- dev & bundler ----------------------------- */
+
   devServer: {
     port: 8080,
   },
+
   devtools: {
     enabled: true,
     componentInspector: true,
     vueDevTools: true,
     viteInspect: true,
   },
+
   webpack: {
     loaders: {
       vue: {
@@ -211,6 +233,15 @@ export default defineNuxtConfig({
       },
     },
   },
+
+  future: {
+    typescriptBundlerResolution: true,
+  },
+
+  experimental: {
+    payloadExtraction: true,
+  },
+
   compatibilityDate: '2025-07-18',
   ssr: false,
 })

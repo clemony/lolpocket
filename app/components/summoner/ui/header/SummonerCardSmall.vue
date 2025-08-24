@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const as = useAccountStore()
 const ss = useSummonerStore()
-const summoner = computed (() => ss.getSummoner(as.userAccount?.riot?.puuid))
+const summoner = computed (() => ss.getSummoner(as.account?.puuid))
 </script>
 
 <template>

@@ -15,12 +15,12 @@ useSeoMeta({
 definePageMeta({
   name: 'home',
   path: '/',
-
+  layout: 'basic',
   meta: {
     title: 'lolpocket',
     searchKeys: ['home', 'landing', 'testimonials'],
     icon: 'teenyicons:home-alt-outline',
-    section: 'home',
+    parent: '/home',
   },
 })
 

@@ -1,74 +1,57 @@
 <script lang="ts" setup>
-import { profileSettingsData } from 'components/summoner/settings/profile-settings-data'
-
-definePageMeta({
-  middleware: 'check-if-user',
-  name: 'profile settings',
-  title: 'settings',
-  requiresAuth: true,
-  icon: 'gear',
-  order: 4,
-})
-
-const as = useAccountStore()
-
-watch(
-  () => as.settings.showSolo,
-  (newVal) => {
-    console.log('💠 - watch - newVal:', newVal)
+const items = [
+  {
+    name: 'General',
+    description: 'Update your account settings. Set your preferred language and timezone.',
   },
+
+  {
+    name: 'Profile',
+    description: 'Update your account settings. Set your preferred language and timezone.',
+  },
+  {
+    name: 'Account',
+    description: 'Update and view your account settings. Set your region.',
+  },
+]
+
+// Account tracking
+const { syncIfDirty: syncAccount } = useSupabaseSync(
+  () => as().account,
+  '/api/supabase/updateUserAccount',
+  (uuid, account) => ({ uuid, account }),
+  AccountSchema,
+)
+
+// Settings tracking
+const { syncIfDirty: syncSettings } = useSupabaseSync(
+  () => as().settings,
+  '/api/supabase/updateUserSettings',
+  (uuid, settings) => ({ uuid, settings }),
+  SettingsSchema,
 )
 </script>
 
 <template>
-  <main
-    class="flex   w-full h-fit bg-b1 relative z-1">
-    <aside
-      class="w- shrink-0  " />
-
-    <article class="ml-[38%]  h-fit max-w-250 w-full flex flex-col pt-24 pb-62 gap-20  px-1">
-      <h1
-        id="splash"
-        class="dst font-bold">
-        Profile Splash
-      </h1>
-      <ProfileSplashOptions />
-      <Separator class="my-4" />
-      <h1
-        id="display"
-        class="dst font-bold">
-        Display Options
-      </h1>
-      <div class="grid gap-10 grid-cols-2 mr-6">
-        <ActionCard
-          v-model:model-value="as.settings.showSolo"
-          :title="profileSettingsData.solo.title"
-          :text="profileSettingsData.solo.text">
-          {{ as.settings.showSolo ? "Visible" : "Hidden" }}
-        </ActionCard>
-        <ActionCard
-          v-model:model-value="as.settings.showFlex"
-          :title="profileSettingsData.flex.title"
-          :text="profileSettingsData.flex.text">
-          {{ as.settings.showFlex ? "Visible" : "Hidden" }}
-        </ActionCard>
-        <ActionCard
-          v-model:model-value="as.settings.showAllies"
-          :title="profileSettingsData.allies.title"
-          :text="profileSettingsData.allies.text">
-          {{ as.settings.showAllies ? "Visible" : "Hidden" }}
-        </ActionCard>
+  <div class="hidden space-y-6 px-22 py-12 pb-16 md:block">
+    <div class="space-y-0.5">
+      <h2 class="text-9 font-bold dst">
+        Settings
+      </h2>
+      <p class="text-bc/60 leading-8">
+        Manage your account settings and set display preferences.
+      </p>
+    </div>
+    <Separator class="mt-6 mb-12" />
+    <div class="flex flex-col space-y-8 lg:flex-row lg:space-x-12 lg:space-y-0">
+      <aside class="-ml-2 w-full max-w-1/5 overflow-hidden">
+        <SettingsNav :items />
+      </aside>
+      <div class="flex-1 lg:max-w-4xl px-0.25">
+        <div class="space-y-12">
+          <NuxtPage />
+        </div>
       </div>
-
-      <Separator class="my-4" />
-      <h1
-        id="display"
-        class="dst font-bold">
-        Stored Data
-      </h1>
-      <div class="grid gap-10 grid-cols-2 mr-6">
-        <ClearAllMatchData />
-      </div>
-    </article>
-  </main>
+    </div>
+  </div>
 </template>

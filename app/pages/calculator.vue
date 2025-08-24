@@ -6,7 +6,7 @@ import { motion } from 'motion-v'
 definePageMeta({
 
   meta: {
-    section: 'calculator',
+    parent: '/calculator',
     icon: 'calc',
   },
 })

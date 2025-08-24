@@ -16,11 +16,12 @@ export const sidebarMenuButtonVariants = cva(
   {
     variants: {
       variant: {
-        default: 'btn  btn-ghost  rounded-lg hover:bg-b2 *:text-bc/80 hover:*:text-bc',
+        default: 'btn flex btn-ghost  rounded-lg hover:bg-b2 *:text-bc/80 hover:*:text-bc',
         outline:
           'bg-background shadow-[0_0_0_1px_hsl(var(--b3))] hover:bg-sidebar-accent hover:text-sidebar-accent-foreground hover:shadow-[0_0_0_1px_hsl(var(--sidebar-accent))]',
-        neutral: 'btn-neutral text-nc',
+        neutral: 'btn-neutral text-nc hover:next-nc',
 
+        link: 'btn btn-link no-underline hover:!bg-transparent underline-offset-2',
         shadow: 'btn btn-shadow  btn not-hover:!bg-b1',
       },
 
@@ -28,7 +29,7 @@ export const sidebarMenuButtonVariants = cva(
         default: 'h-8 text-3',
         sm: 'h-7 text-2',
         lg: 'h-12 text-3 group-data-[collapsible=icon]:p-0!  [&_svg]:!size-5.5 ',
-        icon: 'size-12 !p-0 !grid !place-items-center [&_svg]:absolute [&_svg]:size-5.5 [&_span]:hidden  [&_span]:absolute  [&_span]:pointer-events-none !gap-0',
+        icon: 'size-11 !p-0 !grid !place-items-center [&_svg]:shrink-0 [&_svg]:absolute [&_svg]:size-6 [&_span]:hidden  [&_span]:absolute  [&_span]:pointer-events-none !gap-0',
       },
     },
     defaultVariants: {

@@ -1,26 +1,11 @@
 <script setup lang="ts">
-import { formatDataText } from './format'
+
 
 const { runeIndex } = defineProps<{
   runeIndex: RuneIndex
 }>()
 
 const rune = ref<Rune>()
-
-watchEffect(async () => {
-  if (!runeIndex)
-    return
-
-  console.log('💠 - watchEffect - runeIndex:', runeIndex)
-  try {
-    const module = await import(`data/records/runes/${runeIndex.path}/${runeIndex.key}.ts`)
-    rune.value = module.default || null
-  }
-  catch (err) {
-    console.error(`Failed to load champion for ${runeIndex.key}`, err)
-    rune.value = null
-  }
-})
 </script>
 
 <template>

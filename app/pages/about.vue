@@ -1,10 +1,7 @@
 <script setup lang="ts">
 definePageMeta({
-
-  meta: {
-    section: 'docs',
-    icon: 'info',
-  },
+  parent: '/docs',
+  icon: 'lucide:square-terminal',
 })
 
 const icons = [

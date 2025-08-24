@@ -24,7 +24,8 @@ const searchType = shallowRef('summoner')
 
     <template #subheader>
       <SummonerSearchBox
-        v-if="searchType == 'summoner'" />
+        v-if="searchType == 'summoner'"
+        class="h-12 my-2" />
       <SidebarInputWrapper
         v-else
         class="pr-2">
@@ -36,7 +37,7 @@ const searchType = shallowRef('summoner')
     </template>
 
     <SidebarGroupContent class="w-full !flex flex-col items-start">
-      <SummonerSearch v-if="searchType == 'summoner'" />
+      <SummonerSearchUserContent v-if="searchType == 'summoner'" />
     </SidebarGroupContent>
   </SidebarContentWrapper>
 </template>

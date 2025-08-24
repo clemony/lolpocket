@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import type { VariantStyleProps } from 'assets/ts/variant-index'
 import { buttonVariants } from 'assets/ts/variant-index'
 import type { PaginationNextProps } from 'reka-ui'
 import { PaginationNext, useForwardProps } from 'reka-ui'
 
 const props = withDefaults(defineProps<PaginationNextProps & {
-  size?: VariantStyleProps['size']
+  size?: any
   class?: HTMLAttributes['class']
 }>(), {
   size: 'default',

@@ -106,25 +106,3 @@ export interface ChampionStat {
   flat?: number
   perLevel?: number
 }
-
-export interface BayesianChampion {
-  games: number
-  wins: number
-  losses: number
-  winrate: number
-  kills: number
-  deaths: number
-  assists: number
-  killParticipation: number
-  matchIndexes: number[]
-  gameVersions: string[]
-}
-
-export interface BayesianChampionStats extends ChampionStats {
-  bayesianWinrate: number
-  kda: number
-  avgKills: number
-  avgDeaths: number
-  avgAssists: number
-  avgKp: number
-}

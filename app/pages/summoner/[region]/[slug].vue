@@ -5,7 +5,7 @@ definePageMeta({
 
   meta: {
     title: 'Summoner Profile',
-    section: 'summoner',
+    parent: '/summoner',
     search: false,
   },
 })
@@ -16,9 +16,10 @@ const route = useRoute()
 
 const { childRoutes } = useChildRoutes('summoner')
 
-const puuid = computed (() => as().userAccount?.riot?.puuid)
+const puuid = computed (() => as().account?.puuid)
 
 const state = ref<ReturnType<typeof useSummonerProvider> | null>(null)
+/* console.log('state: ', state.value.summoner) */
 
 provide(SummonerKey, state)
 
@@ -30,15 +31,16 @@ watch(puuid, async (newPuuid) => {
   state.value = summoner
   console.log('state.value????: ', state.value.matches)
 }, { immediate: true })
-
-onBeforeRouteLeave(async () => {
-  await useUpdateUserSettings(as().settings, as().userAccount.uuid)
-})
 </script>
 
 <template>
   <MaskLayout
     v-if="state?.summoner">
+    <!--     <Teleport
+      to="#layout-header"
+      defer>
+      <SummonerDropdown :summoner="state.summoner" />
+    </Teleport> -->
     <!-- splash -->
 
     <template #background>
@@ -46,14 +48,6 @@ onBeforeRouteLeave(async () => {
     </template>
 
     <!-- nav -->
-
-    <template #mini-nav>
-      <LazyMiniSummonerNav
-        v-if="childRoutes && state?.links"
-        :child-routes
-        :links="state?.links"
-        :summoner="unref(state?.summoner)" />
-    </template>
 
     <!-- header -->
     <template #header>

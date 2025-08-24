@@ -36,7 +36,7 @@ export default defineAppConfig({
       'slash': 'radix-icons:slash',
 
       // check
-      'tick': 'teenyicons:tick-outline',
+      'tick': 'lucide:check',
       'tick-sm': 'teenyicons:tick-small-outline',
       'check-fill': 'bi:check-circle-fill',
 
@@ -55,23 +55,30 @@ export default defineAppConfig({
       'arrow-right': 'mynaui:arrow-right',
       'popover-caret': 'fa:caret-down',
       'popover-caret-up': 'fa:caret-up',
+      'expand': 'lucide:panel-left-close',
+      'collapse': 'lucide:panel-right-close',
 
-      // menu
+      // actions
+      'log-in': 'lucide:log-in',
+      'log-out': 'lucide:log-out',
       'search': 'weui:search-outlined',
       'search-bold': 'weui:search-filled',
       'search-sm': 'teenyicons:search-small-outline',
+
+      // menu
       'more': 'lucide:ellipsis',
-      'more-v': 'radix-icons:dots-vertical',
+      'more-vertical': 'radix-icons:dots-vertical',
       'reset': 'mynaui:refresh',
+      'settings': 'lucide:settings-2',
       'gear': 'lucide:settings',
       'gear-solid': 'ri:settings-4-fill',
       'nut': 'ph:nut',
       'nut-fill': 'ph:nut-fill',
       'update': 'radix-icons:update',
       'lines': 'teenyicons:align-text-justify-outline',
-      'filter': 'teenyicons:filter-outline',
+      'filter': 'lucide:list-filter',
       'refresh': 'radix-icons:reload',
-      'copy': 'radix-icons:copy',
+      'copy': 'lucide:copy',
       'export': 'radix-icons:share-2',
       'menu': 'lucide:menu',
       'gallery': 'lucide:gallery-vertical-end',
@@ -80,17 +87,17 @@ export default defineAppConfig({
       'backspace': 'iconamoon:backspace-light',
       'edit': 'material-symbols-light:edit-square-outline',
       'erase': 'radix-icons:eraser',
-      'pin': 'iconoir:pin',
-      'pin-solid': 'iconoir:pin-solid',
       'clip': 'teenyicons:attach-outline',
       'trash': 'streamline:recycle-bin-2',
       'archive': 'teenyicons:archive-outline',
 
       // folder
-      'x-folder': 'teenyicons:folder-x-outline',
-      'add-folder': 'teenyicons:folder-plus-outline',
-      'folder': 'formkit:folder',
-      'folders': 'teenyicons:folders-outline',
+      'folder-delete': 'lucide:folder-x',
+      'folder-add': 'lucide:folder-plus',
+      'folder-open': 'lucide:folder-closed',
+      'folder': 'lucide:folder',
+      'folder-documents': 'formkit:folder',
+      'folders': 'lucide:folders',
 
       // media
       'fast-forward': 'material-symbols-light:fast-forward-outline-rounded',
@@ -99,25 +106,37 @@ export default defineAppConfig({
       'next': 'teenyicons:next-solid',
       'pause': 'teenyicons:pause-solid',
 
+      // keys
+      'shift': 'lucide:arrow-big-up-dash',
+      'command': 'lucide:command',
+
+      // symbol
+      'alert': 'lucide:circle-alert',
+
       // external / social
       'at': 'lucide:at-sign',
       'hash': 'lucide:hash',
+      'chat': 'lucide:message-square',
+      'mail': 'lucide:mail',
+      'mail-all': 'lucide:mails',
+      'mail-fill': 'fluent:mail-32-filled',
+      'mail-open': 'lucide:mail-open',
+      'link': 'mingcute:external-link-line', // lucide:external-link
+      'link-lg': 'radix-icons:external-link',
+      'chain': 'ph:link-simple',
+      'share': 'lucide:share',
+      'send': 'lucide:send',
+      'open': 'radix-icons:open-in-new-window',
+
+      // logo
       'riot': 'simple-icons:riotgames',
       'discord': 'simple-icons:discord',
       'github': 'ph:github-logo',
       'google': 'lineicons:google',
-      'id-card': 'icon-park-twotone:id-card-v',
-      'mail': 'fluent:mail-32-regular',
-      'mail-fill': 'fluent:mail-32-filled',
-      'mail-open': 'fluent:mail-read-32-regular',
-      'link': 'mingcute:external-link-line', // lucide:external-link
-      'link-lg': 'radix-icons:external-link',
-      'chain': 'ph:link-simple',
-      'share': 'iconoir:send-diagonal',
-      'open': 'radix-icons:open-in-new-window',
 
       // simple
-      'dot': 'radix-icons:dot-filled',
+      'dot': 'lucide:dot',
+      'circle-dot': 'lucide:circle-dot',
       'infinity': 'solar:infinity-outline',
       'shield': 'teenyicons:shield-tick-outline',
       'star': 'ph:star',
@@ -127,19 +146,21 @@ export default defineAppConfig({
       'heart-sm': 'teenyicons:heart-small-outline',
 
       // pic
+      'pin': 'iconoir:pin',
+      'pin-solid': 'iconoir:pin-solid',
+      'key': 'lucide:key-round',
       'bow': 'mdi:bow-arrow',
+      'swatch': 'lucide:swatch-book',
       'cat': 'streamline-cyber:cat-2',
       'plug': 'tabler:plug',
       'tag': 'lucide:tag',
-      'pocket': 'iconamoon:briefcase-light',
       'up-face': 'iconoir:emoji-look-up',
+      'image': 'lucide:image',
       'images': 'entypo:images',
-      'picture': 'radix-icons:image',
-      'nexus': 'clarity:atom-solid',
-      'clock': 'radix-icons:clock',
-      'chart': 'uis:analytics',
+      'nexus': 'lucide:atom',
+      'clock': 'lucide:clock',
+      'chart': 'lucide:bar-chart-3',
       'backpack': 'radix-icons:backpack',
-      'lol-backpack': 'lp-lol:backpack',
       'book': 'teenyicons:book-outline',
       'history': 'lucide:history',
     },

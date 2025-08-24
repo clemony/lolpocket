@@ -1,32 +1,22 @@
 <script setup lang="ts">
-const supabase = useSupabaseClient()
-
-async function signInWithDiscord() {
-  const { data, error } = await supabase.auth.signInWithOAuth({
-    provider: 'discord',
-  })
-  if (error) {
-    console.error('Error logging in with Discord:', error)
-  }
-  else if (data) {
-    console.log('💠 - withGoogle - data:', data)
-  }
-}
+const { class: className, variant, size } = defineProps<{
+  class?: HTMLAttributes['class']
+  variant?: any
+  size?: any
+}>()
 </script>
 
 <template>
-  <button
-    v-tippy="'Discord'"
-    class="btn  w-full group h-18 relative overflow-hidden   hover:!btn-neutral hover:bg-n1/90 "
-    alt="Sign in with
-    Discord"
-    @click="signInWithDiscord">
+  <Button
+    :variant="variant"
+    :size="size"
+    :class="cn('', className)"
+    @click="useSignIn('discord')">
     <div class="size-full relative grid place-items-center">
       <icon
         name="discord"
-        :class="cn('absolute dst  transition-colors duration-200  size-8  group-hover:!text-nc text-bc/80  ')" />
+        :class="cn('size-5.5 ')" />
     </div>
-  </button>
+    <span><slot /></span>
+  </Button>
 </template>
-
-<style scoped></style>

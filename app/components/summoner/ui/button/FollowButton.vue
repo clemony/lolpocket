@@ -11,7 +11,7 @@ const { summoner, class: className, text, variant = 'shadow', size = 'md', place
 }>()
 const as = useAccountStore()
 
-const isYou = computed (() => as.userAccount?.riot?.puuid == summoner?.puuid)
+const isYou = computed (() => as.account?.puuid == summoner?.puuid)
 const isFollowed = ref(false)
 </script>
 

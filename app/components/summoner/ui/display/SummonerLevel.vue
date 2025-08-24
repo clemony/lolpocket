@@ -16,7 +16,7 @@ const summonerLevel = computed(() => {
 
   else {
     const as = useAccountStore()
-    return as.userSummoner?.level
+    return as.account.level
   }
 })
 </script>
