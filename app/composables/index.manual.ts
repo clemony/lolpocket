@@ -1,3 +1,4 @@
+export * from './account'
 export * from './champions'
 export * from './items'
 export * from './match'

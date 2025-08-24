@@ -3,10 +3,15 @@ import type { HTMLAttributes } from 'vue'
 
 import { useVModel } from '@vueuse/core'
 
+defineOptions({
+  inheritAttrs: false,
+})
+
 const props = defineProps<{
   defaultValue?: string | number
   modelValue?: string | number
   class?: HTMLAttributes['class']
+  id?: string
 }>()
 
 const emits = defineEmits<{
@@ -20,7 +25,13 @@ const modelValue = useVModel(props, 'modelValue', emits, {
 </script>
 
 <template>
-  <input
-    v-model="modelValue"
-    :class="cn('flex h-9 w-full rounded-md border border-b2  border border-b2 -input bg-transparent px-3 py-1 text-2 shadow-sm transition-colors file:border border-b2  file:bg-transparent file:text-2 file:font-medium placeholder:text-b2-bc focus-visible:outline-none  disabled:cursor-not-allowed disabled:opacity-50', props.class)">
+  <label
+    :id="props.id"
+    :class="cn('input text-2 h-12 items-center [&>svg]:text-tint-bc/76 [&>svg]:**:stroke-[2.2]  [&>svg]:mt-0.25 [&>svg]:size-5', props.class)">
+    <slot />
+    <input
+      v-bind="$attrs"
+      v-model="modelValue" />
+    <slot name="badge" />
+  </label>
 </template>

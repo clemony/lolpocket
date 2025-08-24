@@ -2,8 +2,8 @@
 import { motion } from 'motion-v'
 
 const { size, variant } = defineProps<{
-  variant?: VariantStyleProps['variant']
-  size?: VariantStyleProps['size']
+  variant?: any
+  size?: any
 }>()
 const variants = {
   hidden: {

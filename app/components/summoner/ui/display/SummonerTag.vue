@@ -15,7 +15,7 @@ const tag = computed (() => {
 
   else {
     const as = useAccountStore()
-    return as.userAccount?.riot.tag ?? null
+    return as.account?.tag ?? null
   }
 })
 </script>

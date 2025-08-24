@@ -1,35 +1,72 @@
 <script lang="ts" setup>
-const client = useSupabaseClient()
-
-onMounted(() => {
-  document.documentElement.setAttribute(
-    'data-theme',
-    as()?.settings.theme ?? 'daylight',
-  )
-  ix().loadPatch()
-})
-
-client.auth.onAuthStateChange(async (event, session) => {
-  useAuth(event, session)
-})
-
-const floatingSidebar = ref(false)
+const route = useRoute()
 </script>
 
 <template>
   <SidebarProvider
-    id="app"
-    class="bg-tint-b2/40 "
-    :open="us().sidebarExpanded"
-    style="--sidebar-width: 26rem; --sidebar-width-mobile: 26rem; --sidebar-icon-width:4rem;">
-    <AppNavbar />
+    :default-open="as().settings.lockSidebar"
+    class="w-full  h-screen flex"
+    :style="{
+      '--sidebar-width': '320px',
+    }">
+    <!-- sidebar -->
 
+    <AppSidebar />
+
+    <SidebarInset
+      :class="cn('overflow-y-auto ', { 'pl-14': !as().settings.lockSidebar })">
+      <!-- header -->
+      <header class="sticky top-0 flex shrink-0 items-center gap-2 border-b z-2  border-b3 bg-b1/80 backdrop-blur-lg p-4">
+        <SidebarTrigger
+          class="-ml-1"
+          :class="cn('', { 'btn-active': as().settings.lockSidebar })"
+          @dblclick="as().toggleSidebarLock" />
+        <Separator
+          orientation="vertical"
+          class="mr-2 h-4" />
+        <Breadcrumb>
+          <BreadcrumbList>
+            <template v-if="route?.meta?.parent">
+              <BreadcrumbItem class="hidden md:block">
+                <BreadcrumbLink
+                  class="capitalize hover:underline underline-offset-2"
+                  @click="navigateTo(route?.meta?.parent)">
+                  {{ route?.meta?.parent?.toString().replace('/', '') }}
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+
+              <BreadcrumbSeparator
+                class="hidden md:block" />
+            </template>
+
+            <BreadcrumbItem>
+              <BreadcrumbPage class="capitalize">
+                {{ route?.meta?.title ?? route?.name ?? '' }}
+              </BreadcrumbPage>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
+
+        <div
+          id="layout-header"
+          class="justify-self-end">
+        </div>
+      </header>
+      <div class="flex flex-1 flex-col gap-4 relative ">
+        <slot />
+      </div>
+    </SidebarInset>
+
+    <!-- command -->
     <!--     <LazyAppCommand /> after:absolute after:bottom-0 after:w-full after:h-1/4 after:bg-neutral after:z-0 -->
-    <!-- [ inset id is for Teleports] -->
-    <main
-      :class="cn('inset-wrapper relative w-screen  before:bg-neutral before:-z-1 before:fixed before:h-[30vh] before:w-full before:bottom-0 before:left-0   overflow-x-hidden *:z-1  ', { 'min-w-screen w-screen': floatingSidebar })">
-      <slot />
-    </main>
+
+    <!-- toaster -->
+    <Toast
+      position="top-right"
+      :expand="true"
+      :duration="10000" />
+
+    <!-- loading -->
     <NuxtLoadingIndicator
       style="
       top: auto;
@@ -37,15 +74,5 @@ const floatingSidebar = ref(false)
       height: 5px;
     background: repeating-linear-gradient(to right, var(--color-n3) 0%, var(--color-n2), var(--color-neutral) 100%);
     " />
-    <Toast
-      position="bottom-right"
-      :expand="true"
-      :duration="8000" />
-    <UserSidebar
-      side="right"
-      :floating="floatingSidebar"
-      variant="sidebar"
-      collapsible="offcanvas" />
-    <!--  -->
   </SidebarProvider>
 </template>

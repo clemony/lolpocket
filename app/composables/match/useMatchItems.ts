@@ -3,7 +3,7 @@ export function useMatchItems(puuid: string, matches: MatchData[]) {
 
   const player = matches.map(m => ({
     patch: m.gamePatch,
-    data: m.participants.find(p => p.puuid == as().userAccount.riot.puuid),
+    data: m.participants.find(p => p.puuid == as().account.puuid),
   }))
 
   const itemStats = new Map<

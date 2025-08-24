@@ -12,7 +12,7 @@ export function useChampionRoleStats(
 ): RoleStats[] {
   const grouped: Record<string, RoleStats> = {}
 
-  const player = matches.map(m => m.participants.find(p => p.puuid == as().userAccount.riot.puuid))
+  const player = matches.map(m => m.participants.find(p => p.puuid == as().account.puuid))
 
   for (const match of player) {
     if (ix().champNameById(match.championId) !== championName)

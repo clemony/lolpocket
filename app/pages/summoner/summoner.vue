@@ -4,7 +4,7 @@ definePageMeta({
 
   meta: {
     title: 'Summoner',
-    section: 'search',
+    parent: '/search',
     icon: 'search',
   },
 })
@@ -15,7 +15,7 @@ const router = useRouter()
 
 <template>
   <div class="size-full grid place-items-center">
-    <NuxtLink :to="`/summoner/${as.userAccount.riot.region}/${as.userAccount.riot.name}_${as.userAccount.riot.tag}`">
+    <NuxtLink :to="`/summoner/${as.account.region}/${as.account.name}_${as.account.tag}`">
       Your Profile
     </NuxtLink>
   </div>

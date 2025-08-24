@@ -8,19 +8,19 @@ const as = useAccountStore()
 const pinsOpen = shallowRef(false)
 
 /* function resetInbox(e) {
-  if (!as.userAccount)
+  if (!as.account)
     return
 
   if (e == 'Messages') {
-    as.userAccount.inbox.newNotifications = 0
+    as.account.inbox.newNotifications = 0
   }
   if (e == 'Notifications') {
-    as.userAccount.inbox.newMessages = 0
+    as.account.inbox.newMessages = 0
   }
 }
  */
 function verifySignIn() {
-  if (!as?.userAccount?.uuid)
+  if (!as?.loggedIn)
     userNav.value = 'signIn'
 }
 </script>

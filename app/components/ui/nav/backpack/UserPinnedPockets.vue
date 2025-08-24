@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const { account } = defineProps<{
-  account: UserAccount
+  account: Account
 }>()
 const ps = usePocketStore()
 

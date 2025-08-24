@@ -25,7 +25,7 @@ watch(() => route.path, (newVal) => {
     <!--     <LazyAppCommand /> after:absolute after:bottom-0 after:w-full after:h-1/4 after:bg-neutral after:z-0 -->
     <!-- [ inset id is for Teleports] -->
     <SidebarInset
-      :class="cn('inset-wrapper relative size-full overflow-hidden  *:z-1  ', { 'min-w-screen w-screen': floatingSidebar })">
+      :class="cn('inset-wrapper relative size-full overflow-hidden  *:z-1  ', { 'min-w-full w-full': floatingSidebar })">
       <LazyNuxtPage>
       </LazyNuxtPage>
     </SidebarInset>

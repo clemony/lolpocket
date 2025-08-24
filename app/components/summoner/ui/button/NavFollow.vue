@@ -4,12 +4,12 @@ import { motion } from 'motion-v'
 const { class: className, variant = 'shadow' } = defineProps<{
   class?: HTMLAttributes['class']
   text?: boolean | string | null
-  variant?: VariantStyleProps['variant']
+  variant?: any
 }>()
 
 const state = useSummonerInject()
 
-const isYou = computed (() => as().userAccount?.riot?.puuid == state.summoner?.value.puuid)
+const isYou = computed (() => as().account?.puuid == state.summoner?.value.puuid)
 const isFollowed = ref(false)
 
 const buttVariants = {

@@ -1,11 +1,8 @@
 <script lang="ts" setup>
 definePageMeta({
-
-  meta: {
-    title: 'Trash',
-    section: 'backpack',
-    icon: 'trash',
-  },
+  title: 'Trash',
+  parent: '/backpack',
+  icon: 'trash',
 })
 
 /*

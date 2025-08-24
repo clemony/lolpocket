@@ -8,11 +8,9 @@ definePageMeta({
 
   path: '/analysis/items',
 
-  meta: {
-    altName: 'items',
-    section: 'analysis',
-    icon: 'fa:shield',
-  },
+  title: 'items',
+  parent: '/analysis',
+  icon: 'fa:shield',
 })
 const ms = useMatchStore()
 </script>

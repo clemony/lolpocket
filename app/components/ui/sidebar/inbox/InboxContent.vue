@@ -7,17 +7,9 @@ const { title, class: className } = defineProps<{
   dropdown?: boolean
 }>()
 
+const tabs = ref(MessageView)
 const inboxes: Record<string, DataObject> = {
 
-  messages: {
-    name: 'Inbox',
-    icon: {
-      name: 'lucide:mail',
-      class: ' **:stroke-[1.6] ',
-    },
-    value: 0,
-    component: MessageView,
-  },
   news: {
     name: 'News',
     icon: {
@@ -26,15 +18,6 @@ const inboxes: Record<string, DataObject> = {
     },
     value: 0,
     component: NewsView,
-  },
-  notifications: {
-    name: 'Notifications',
-    icon: {
-      name: 'lucide:message-square',
-      class: '**:stroke-[1.7]  size-4.75 ',
-    },
-    value: 0,
-    component: NotificationView,
   },
 }
 </script>
@@ -62,13 +45,15 @@ const inboxes: Record<string, DataObject> = {
           </DropdownMenuPopContent>
         </DropdownMenu>
 
-        <Tabs class="z-1">
+        <Tabs
+          v-model:model-value="tabs"
+          class="z-1">
           <IndicatorTabsList class="grid-cols-3 h-9">
             <IndicatorTabsTrigger
               v-for="item in inboxes"
               :key="item.name"
               class="h-full px-3"
-              :value="item.name">
+              :value="item.component">
               <icon :name="item.icon.name" />
             </IndicatorTabsTrigger>
             <TabIndicator class="bg-b1" />
@@ -82,7 +67,8 @@ const inboxes: Record<string, DataObject> = {
 
     <SidebarContent class="size-full">
       <SidebarGroup class="px-0 size-full">
-        <slot />
+        <component :is="tabs">
+        </component>
       </SidebarGroup>
     </SidebarContent>
   </div>

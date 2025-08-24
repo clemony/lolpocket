@@ -14,10 +14,9 @@ const props = defineProps<{
       <div class="grid mt-0.5 overflow-hidden place-items-center">
         <!-- crest -->
         <img
-          src="/img/crests/unranked.webp"
-          class="drop-shadow-sm  object-contain   opacity-40  size-25
 
-  saturate-0" />
+          src="/img/crests/unranked.webp"
+          class="drop-shadow-sm  object-contain   opacity-40  size-25 saturate-0" />
       </div>
 
       <div class="relative grid place-items-center size-full">

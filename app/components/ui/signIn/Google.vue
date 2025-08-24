@@ -1,4 +1,9 @@
 <script setup lang="ts">
+const { class: className, variant, size } = defineProps<{
+  class?: HTMLAttributes['class']
+  variant?: string
+  size?: string
+}>()
 const config = useRuntimeConfig()
 
 const supabase = useSupabaseClient()
@@ -7,7 +12,6 @@ async function signInWithGoogle() {
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: 'google',
     options: {
-      redirectTo: config.public.redirectUrl,
     },
   })
   if (data) {
@@ -21,16 +25,16 @@ async function signInWithGoogle() {
 </script>
 
 <template>
-  <button
-    v-tippy="'Google'"
-    alt="Sign in with
-    Google"
-    class="btn  w-full group h-18 relative overflow-hidden   hover:!btn-neutral hover:bg-n1/90 "
+  <Button
+    :variant="variant"
+    :size="size"
+    :class="cn('', className)"
     @click="signInWithGoogle()">
-    <div class="size-full relative grid place-items-center">
+    <div class="size-5  relative grid place-items-center pointer-events-none">
       <hicon
         name="devicon-plain:google"
-        :class="cn('absolute transition-opacity duration-200  dst size-7  group-hover:!text-nc text-bc/80  ')" />
+        :class="cn('size-5.5 ')" />
     </div>
-  </button>
+    <span><slot /></span>
+  </Button>
 </template>

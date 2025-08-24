@@ -10,12 +10,8 @@ const { pocket } = defineProps<{
 
 definePageMeta({
   name: 'card',
-
-  meta: {
-    section: 'pocket',
-    search: false,
-  },
-
+  parent: '/pocket',
+  search: false,
 })
 
 const ps = usePocketStore()
@@ -142,7 +138,7 @@ console.log('💠 - pocket.card.splash:', pocket.card.splash)
       </div>
     </VueZoomable>
 
-    <CardSettings :pocket="pocket" />
+    <BasicCardSettings :pocket="pocket" />
   </div>
 </template>
 

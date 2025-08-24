@@ -22,8 +22,8 @@ watch(() => library.value, (newVal) => {
         <h1 class="drop-shadow-sm">
           Looking for something?
         </h1>
-        <SummonerSearchWrapper class=" !h-13 -mx-1">
-        </SummonerSearchWrapper>
+        <SummonerSearchBox class=" !h-13 -mx-1">
+        </SummonerSearchBox>
 
         <p class="flex text-bc flex-col gap-2 mt-2 pl-px">
           <span>  Browse your favorite players...</span>

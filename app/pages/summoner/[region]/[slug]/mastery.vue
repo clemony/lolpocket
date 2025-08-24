@@ -70,7 +70,7 @@ const masteryStats = [
 
         <div class="flex flex-col w-full gap-5 py-3">
           <section class="gap-8 flex gap-3 w-full  h-fit items-center py-4">
-            <Card
+            <BasicCard
               v-for="data in masteryStats"
               :key="data.title"
               class="px-7 min-w-64 w-80 h-32 pb-5 pt-7 grid gap-4">
@@ -81,9 +81,9 @@ const masteryStats = [
               <h6 class="lowercase   opacity-50 self-end">
                 {{ data.title }}
               </h6>
-            </Card>
+            </BasicCard>
 
-            <Card
+            <BasicCard
               class="px-7 min-w-64 w-80 h-32 pb-5 pt-5 grid gap-4">
               <input
                 type="text"
@@ -92,7 +92,7 @@ const masteryStats = [
               <h6 class="lowercase   opacity-50 self-end">
                 fun
               </h6>
-            </Card>
+            </BasicCard>
           </section>
         </div>
       </article>

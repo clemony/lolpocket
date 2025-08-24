@@ -6,15 +6,15 @@ const as = useAccountStore()
 
 <template>
   <!--   <LazyAdminSheet
-    v-if="as && as.userAccount?.role === 'admin'"
+    v-if="as && as.account?.role === 'admin'"
     v-model:open="adminOpen"
-    :account="as.userAccount" /> -->     <Login v-if="!as.userAccount?.uuid" />
+    :account="as.account" /> -->
   <SidebarContentWrapper title="Settings">
     <SidebarGroupContent class="gap-6 py-4 w-full !flex flex-col items-start">
-      <Login v-if="!as.userAccount?.uuid" />
+      <Login v-if="!as.loggedIn" />
       <div v-else>
         <button
-          v-if="as && as.userAccount?.role == 'admin'"
+          v-if="useSupabaseUser().value.role == 'admin'"
           v-tippy="'Admin'"
           class="size-10 btn btn-ghost grid place-items-center -mr-2 opacity-60 hover:opacity-100 cursor-pointer"
           @click="emit('open:admin')">

@@ -16,7 +16,7 @@ const region = computed(() => {
 
   else {
     const as = useAccountStore()
-    return as.userAccount?.riot.region ?? null
+    return as.account?.region ?? null
   }
 })
 </script>

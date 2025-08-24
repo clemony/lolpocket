@@ -4,16 +4,12 @@ import CollapsiblePinned from './CollapsiblePinned.vue'
 import PopoverPinned from './PopoverPinned.vue'
 
 const props = defineProps<{
-  summoner: UserAccount
+  account: Account
 }>()
 
 const us = useUiStore()
 const as = useAccountStore()
 const ps = usePocketStore()
-
-const summoner = computed (() => {
-  return props.summoner
-})
 
 const isOpen = ref(true)
 

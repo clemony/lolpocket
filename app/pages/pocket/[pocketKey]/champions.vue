@@ -7,11 +7,8 @@ definePageMeta({
   name: 'pocket champions',
   path: '/pocket/:pocketKey',
   alias: '/pocket/:pocketKey/champions',
-
-  meta: {
-    section: 'pocket',
-    search: false,
-  },
+  parent: '/pocket',
+  search: false,
 })
 
 const route = useRoute()

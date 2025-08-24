@@ -55,7 +55,7 @@ onMounted(() => {
     :class="cn('', props.class)">
     <article class="container mx-auto p-6 max-w-250 min-w-190 dst">
       <header class="text-start text-4xl  font-bold mb-6 dst tracking-tight font-serif leading-14">
-        This page seems.filterk.<br />
+        This page seems afk.<br />
 
         <span class="pl-8">I offer you a cat fact. Refresh in peace.</span>
       </header>

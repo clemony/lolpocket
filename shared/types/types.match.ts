@@ -1,24 +1,3 @@
-import type { RouteRecordRaw } from 'vue-router'
-
-export interface PlayerData {
-  summoner: Summoner
-  matches: MatchData[]
-  allMatches: MatchData[]
-  topChampion: TopChampion
-  useChampions: any
-  useRoles: any
-  useAllies: any
-  useItems: any
-  links: Record<string, string>
-  loading: boolean
-  filter: MatchFilter
-  fetchMastery: () => void
-  findSummoner: () => void
-  setFilter: (string, key) => void
-  clearFilters: () => void
-
-}
-
 export interface MatchData {
 
   matchId: string

@@ -78,12 +78,12 @@ provide<Scroll>('scroll-top', { top: scroll })
   <div class="size-full bg-b1">
     <article
       ref="container"
-      class=" w-screen max-w-inherit overflow-x-hidden absolute inset-0 overflow-y-auto top-0 bg-tint-b2/40 grid auto-rows-max">
+      class=" overflow-x-hidden absolute inset-0 overflow-y-auto top-0 bg-tint-b2/40 grid auto-rows-max">
       <!-- background after:w-full after:h-50 after:top-56 after:absolute after:mask-t-from-20% after:mask-t-to-80%    after:bg-b1 -->
       <slot name="background" />
 
       <header
-        class="w-screen z-2 grid min-h-100 h-100 pt-16 max-w-[1040px] items-center size-full justify-self-center ')">
+        class="w-full z-2 grid min-h-84 h-84 max-w-[1040px] items-center size-full justify-self-center ')">
         <!-- large header welcome wrapper -->
         <slot
           name="header" />

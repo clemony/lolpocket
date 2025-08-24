@@ -1,15 +1,23 @@
 export const SummonerKey = Symbol('SummonerProvider')
 
-// Example: Update filters directly
-/* function selectRole(role: string) {
-  state.setFilter('role', role)
-}
+export interface PlayerData {
+  summoner: Summoner
+  matches: MatchData[]
+  allMatches: MatchData[]
+  filteredChampions: any
+  useChampions: any
+  useRoles: any
+  useAllies: any
+  useItems: any
+  links: Record<string, string>
+  loading: boolean
+  filter: MatchFilter
+  fetchMastery: () => void
+  findSummoner: () => void
+  setFilter: (string, key) => void
+  clearFilters: () => void
 
-function selectAlly(ally: string) {
-  state.setFilter('ally', ally)
 }
-
- */
 export function useSummonerProvider(identifier: string) {
   console.log('identifier: ', identifier)
 
@@ -31,6 +39,18 @@ export function useSummonerProvider(identifier: string) {
     role: 'ALL',
   })
 
+  // Example: Update filters directly
+  /**
+   * @example
+   * const { setFilter } = useSummonerProvider(summoner.puuid)
+   * function selectRole(role: string) {
+   *   setFilter('role', role)
+   * }
+   *
+   * function selectAlly(ally: string) {
+   *   setFilter('ally', ally)
+   * }
+   */
   // --- FILTER HELPERS ---
   function setFilter<K extends keyof MatchFilter>(key: K, value: MatchFilter[K]) {
     filter.value[key] = value
@@ -90,10 +110,7 @@ export function useSummonerProvider(identifier: string) {
     return await fetchSummonerMastery(currentPuuid.value)
   }
 
-  /*      KEEP - adding later
-  const splash = await fetchProfileSplash(resolved.puuid)
-      if (splash)
-        resolved.profileSplash = splash.splash_url */
+  /*      FETCH from supabase user_public! table
   /*
 
  */
@@ -109,8 +126,8 @@ export function useSummonerProvider(identifier: string) {
     clearFilters,
     fetchMastery,
     findSummoner,
-    topChampion: () => useChampions(summoner.value.puuid, matches.value),
     useChampions: (championName?: string) => useChampions(summoner.value.puuid, allMatches.value, championName),
+    filteredChampions: (championName?: string) => useChampions(summoner.value.puuid, matches.value, championName),
     useAllies: () => useRepeatedTeammates(summoner.value.puuid, allMatches.value),
     useRoles: () => useMatchRoles(summoner.value.puuid, allMatches),
     links: () => generateSummonerLinks(summoner.value),
@@ -140,6 +157,7 @@ export function useSummonerInject() {
     allMatches: Ref<MatchData[]>
     matches: Ref<MatchData[]>
     links: Record<string, string>
+    filteredChampions: any
     useChampions: any
     useRoles: any
     filter: MatchFilter

@@ -82,7 +82,7 @@ const bgClass = computed (() => `before:bg-url('${img(background)}')`)
       <!-- splash -->
 
       <header
-        :class="cn('sticky col-start-1 row-start-1 w-screen z-2 -top-[199px] grid grid-rows-[190px_1px_54px] pt-16 bg-tint-b2/40',
+        :class="cn('sticky col-start-1 row-start-1 w-full z-2 -top-[199px] grid grid-rows-[190px_1px_54px] pt-16 bg-tint-b2/40',
 
         )">
         <div

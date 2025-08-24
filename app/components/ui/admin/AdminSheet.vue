@@ -13,11 +13,13 @@ const isOpen = ref(false)
 whenever(keys.shift_a, () => {
   isOpen.value = true
 })
+
+const user = useSupabaseUser()
 </script>
 
 <template>
   <Sheet
-    v-if="as && as.userAccount?.role == 'admin'"
+    v-if="user.role == 'admin'"
     v-model:open="isOpen">
     <LazyNestedSheetContent class="h-screen max-h-screen overflow-hidden ">
       <SheetHeader>

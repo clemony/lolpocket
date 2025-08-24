@@ -7,11 +7,8 @@ import { itemsLite } from '~/appdata/items-lite'
 
 definePageMeta({
   name: 'Item Stats',
-
-  meta: {
-    section: 'library',
-    icon: 'bi:list-ul',
-  },
+  parent: '/library',
+  icon: 'bi:list-ul',
 })
 
 const is = useItemStore()

@@ -36,34 +36,6 @@ export interface RankedEntry {
   queueType: string
 }
 
-export interface SummonerResponse {
-  name: string
-  tag: string
-  puuid: string
-  profileIcon: string
-  level: number
-  region: string
-  ranked: {
-    solo?: RankedEntry
-    flex?: RankedEntry
-  }
-}
-
-export interface ChampionMasteryResponse {
-  puuid: string
-  mastery: ChampionMastery[]
-  totalPoints: number
-  totalLevels: number
-
-}
-
-export interface SummonerIdentifier {
-  puuid?: string
-  region?: string
-  name?: string
-  tag?: string
-}
-
 export interface TopChampion {
   name: string
   splash: string

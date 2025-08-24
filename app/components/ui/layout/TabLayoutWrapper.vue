@@ -68,12 +68,12 @@ watch(() => us().showMiniNav, (newVal) => {
 
 <template>
   <div class="size-full overflow-hidden  bg-b1">
-    <article class=" w-screen max-w-inherit overflow-x-hidden absolute inset-0 overflow-y-auto top-0 bg-tint-b2/40 flex flex-col">
+    <article class=" w-full max-w-inherit overflow-x-hidden absolute inset-0 overflow-y-auto top-0 bg-tint-b2/40 flex flex-col">
       <!-- background -->
       <slot name="background" />
 
       <section
-        class="w-screen z-2 grid grid-rows-[190px_1px_54px] pt-16">
+        class="w-full z-2 grid grid-rows-[190px_1px_54px] pt-16">
         <div
           :class="cn('relative  z-3 flex max-w-[1100px] items-center size-full justify-self-center ')">
           <!-- large header welcome wrapper -->

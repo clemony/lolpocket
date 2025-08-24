@@ -1,23 +1,24 @@
 <script lang="ts" setup>
-const { title, class: className } = defineProps<{
+const { title, class: className, basicLayout } = defineProps<{
   title: string
   class?: HTMLAttributes['class']
   dropdown?: boolean
+  basicLayout?: boolean
 }>()
 </script>
 
 <template>
-  <div class="size-full ">
+  <SidebarContent class="overflow-hidden h-screen w-full flex flex-col">
     <SidebarHeader
-      :class="cn('gap-0 border-b  border-b-b3/80 px-3 w-full', className)">
+      :class="cn('gap-0 border-b sidebar-content-header border-b-b3/80 px-3 w-full', { '!h-18.5 !bg-b1 ': basicLayout }, className)">
       <DropdownMenu>
         <DropdownMenuTrigger
           :disabled="!dropdown"
-          class="flex w-full items-center justify-between  disabled:**:text-bc disabled:hover:drop-shadow-none disabled:opacity-100 disabled:hover:border-transparent disabled:hover:shadow-none disabled:hover:bg-transparent px-2  h-[35.5px] h-14 data-[state=open]:inset-shadow-xxs data-[state=open]:shadow-xs data-[state=open]:!bg-b3/50 data-[state=open]:border-b3"
+          class="flex w-full items-center justify-between bg-transparent disabled:bg-transparent disabled:!border-transparent disabled:**:text-bc disabled:hover:drop-shadow-none disabled:opacity-100  disabled:hover:shadow-none disabled:hover:bg-transparent px-2 h-11 data-[state=open]:inset-shadow-xxs data-[state=open]:shadow-xs data-[state=open]:!bg-b3/50 data-[state=open]:border-b3"
           as-child>
           <SidebarMenuButton
             class=" ">
-            <h2 class="dst font-bold">
+            <h2 class="dst font-bold pt-1">
               {{ title }}
             </h2>
             <slot name="header"></slot>
@@ -39,10 +40,10 @@ const { title, class: className } = defineProps<{
       </div>
     </SidebarHeader>
 
-    <SidebarContent class="size-full">
-      <SidebarGroup class="px-0 size-full">
+    <SidebarGroup class="px-0  h-full">
+      <SidebarGroupContent class="h-full">
         <slot />
-      </SidebarGroup>
-    </SidebarContent>
-  </div>
+      </SidebarGroupContent>
+    </SidebarGroup>
+  </SidebarContent>
 </template>

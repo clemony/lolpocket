@@ -5,22 +5,6 @@ const { championKey } = defineProps<{
 const champion = ref<Champion>(null)
 const loaded = ref(false)
 
-watchEffect(async () => {
-  if (!championKey)
-    return
-
-  loaded.value = false
-
-  try {
-    const module = await import(`data/records/champions/${championKey}.ts`)
-    champion.value = module.default || null
-  }
-  catch (err) {
-    console.error(`Failed to load champion for ${championKey}`, err)
-    champion.value = null
-  }
-})
-
 const tabs = ref('abilities')
 </script>
 

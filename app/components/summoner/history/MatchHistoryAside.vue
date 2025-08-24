@@ -7,14 +7,9 @@ const { state } = defineProps<{
 <template>
   <div class="w-124 sticky py-24 top-24 scrollbar-none overflow-y-auto max-h-screen justify-center gap-10 auto-rows-max items-start grid">
     <RankCard
-      v-if="state.summoner.ranked?.solo && as().settings?.showSolo && !state.loading"
+      v-if=" as().settings?.showSolo && !state.loading"
       title="Solo/Duo"
-      :entry="state.summoner.ranked.solo"
-      class="order-2" />
-
-    <Unranked
-      v-else-if="as().settings?.showSolo"
-      title="Solo/Duo"
+      :entry="state?.summoner?.ranked?.solo"
       class="order-2" />
 
     <RankCard
@@ -22,11 +17,6 @@ const { state } = defineProps<{
       title="Flex"
       :entry="state.summoner.ranked.flex"
       class="order-3" />
-
-    <Unranked
-      v-else-if=" as().settings?.showFlex"
-      title="Flex"
-      class="order-4" />
 
     <QueueFilters
       :state

@@ -6,10 +6,8 @@ export async function useFetchSummonerData(queryPuuid: string) {
 
   const as = useAccountStore()
 
-  if (summoner.puuid === as.userAccount.riot.puuid) {
-    Object.assign(as.userAccount.riot, summoner)
-  }
-  console.log('💠 - useFetchSummonerData - summoner:', summoner)
-
+  /*   if (summoner.puuid === as.account.puuid) {
+    Object.assign(as.account.riot, summoner)
+  } */
   return summoner
 }

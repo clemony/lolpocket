@@ -17,11 +17,11 @@ function handleClick(item) {
 }
 /*
 const newNotifications = computed (() => {
-  return as.userAccount.inbox.notifications.filter(n => !n.read).length
+  return as.account.inbox.notifications.filter(n => !n.read).length
 })
 
 const unreadMessages = computed (() => {
-  return as.userAccount.inbox.messages.filter(m => !m.read).length
+  return as.account.inbox.messages.filter(m => !m.read).length
 }) */
 
 watch(() => us.activeSidebarContent, (newVal) => {
@@ -29,7 +29,7 @@ watch(() => us.activeSidebarContent, (newVal) => {
     tabs.value = null
 })
 
-/* watch(() => as.userAccount?.inbox?.notifications, (newVal) => {
+/* watch(() => as.account?.inbox?.notifications, (newVal) => {
   if (newVal)
     userMenu.notifications.value = newNotifications.value
 }, { deep: true })
@@ -39,7 +39,7 @@ watch(() => newNotifications.value, (newVal) => {
     userMenu.notifications.value = newNotifications.value
 })
 
-watch(() => as.userAccount?.inbox?.messages.length, (newVal) => {
+watch(() => as.account?.inbox?.messages.length, (newVal) => {
   if (newVal)
     userMenu.inbox.value = unreadMessages.value
 })
@@ -52,7 +52,7 @@ onMounted (() => {
 </script>
 
 <template>
-  <Tabs v-model:model-value="tabs">
+  <!-- <Tabs v-model:model-value="tabs">
     <IndicatorTabsList
       :class="cn('h-16  z-1 items-center pr-1.5 pt-1 pb-0 bg-transparent justify-end  inset-shadow-none shadow-none  auto-cols-min grid-flow-col w-100 border-0 ')">
       <span class=" gap-1 justify-start place-items-center auto-cols-min grid-flow-col grid">
@@ -84,16 +84,16 @@ onMounted (() => {
       </span>
 
       <IndicatorTabsTrigger
-        v-tippy="{ content: as.userAccount?.riot.puuid ? `${capitalize(as.userAccount?.riot?.name)}'s Account` : 'Connect Riot ID' }"
+        v-tippy="{ content: as.account?.name ? `${capitalize(as.account?.name)}'s Account` : 'Connect Riot ID' }"
         value="Account"
         class="btn p-0 shadow-sm grid place-items-center justify-self-end border-0 rounded-full size-9 border grayscale -mt-1 !border-b4 ml-6 drop-shadow-sm relative overflow-hidden inset-shadow-xs inset-shadow-black/50 data-[state=active]:grayscale-0 transition duration-200 "
         @click="us.activeSidebarContent = 'Account'">
         <SummonerIcon class="size-full  shrink-0 absolute" />
       </IndicatorTabsTrigger>
-      <!--  *:after:-bottom-2.5 *:after:rounded-full  *:after:absolute *:after:h-1 *:after:bg-n1 *:after:w-full -->
-      <TabIndicator
+   *:after:-bottom-2.5 *:after:rounded-full  *:after:absolute *:after:h-1 *:after:bg-n1 *:after:w-full -->
+<!--       <TabIndicator
         v-show="us.activeSidebarContent"
         :class="cn('*:!bg-b3/53 self-center !py-0 overflow-visible *:size-11 *:mt-2 *:btn', { '*:rounded-full *:scale-100 *:after:-bottom-[11px]   *:-ml-0.75 *:ring  *:size-10 *:ring-b3 *:relative ': tabs == 'Account' })" />
     </IndicatorTabsList>
-  </Tabs>
+  </Tabs>  -->d
 </template>

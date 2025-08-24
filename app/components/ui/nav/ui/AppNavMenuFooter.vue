@@ -27,7 +27,7 @@ const as = useAccountStore()
       </NavHyperlink>
 
       <NavHyperlink
-        v-if="as?.userAccount?.uuid"
+        v-if="as?.loggedIn"
         @click="useSignOut()">
         <icon
           name="mdi:sign-out"

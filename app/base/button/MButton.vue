@@ -2,7 +2,7 @@
 const { class: className, variant, variants, label } = defineProps<{
   class?: HTMLAttributes['class']
   variants?: any
-  variant?: VariantStyleProps['variant']
+  variant?: any
   label?: boolean
 }>()
 </script>

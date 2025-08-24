@@ -12,7 +12,7 @@ const name = computed(() => {
     return summoner.name
 
   const as = useAccountStore()
-  return as.userAccount?.riot?.name ?? 'Summoner'
+  return as.account?.name ?? 'Summoner'
 })
 </script>
 

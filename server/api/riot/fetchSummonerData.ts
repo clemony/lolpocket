@@ -1,63 +1,55 @@
-import { fetchLeagueEntriesByPuuid, fetchSummonerByPuuid } from '../riotClient'
+import {
+  fetchAccountByPuuid,
+  fetchRegionByPuuid,
+  /*   fetchRegionByPuuid, */
+  fetchSummonerByPuuid,
+} from '../riotClient'
 
+interface AcccountResponse {
+  name: string
+  tag: string
+  puuid: string
+  profileIcon: string
+  level: number
+  region: string
+}
 export default defineEventHandler(async (event) => {
-  const { puuid } = getQuery(event)
+  const query = getQuery(event)
+  const puuid = query.puuid.toString()
+  console.log('puuid: ', puuid)
+  const queryRegion = query.region?.toString() ?? null
+  console.log('queryRegion: ', queryRegion)
 
-  if (!puuid || typeof puuid !== 'string') {
-    throw createError({ statusCode: 400, statusMessage: 'Missing puuid' })
+  if (!puuid) {
+    console.error('❌ Failed to resolve summoner: missing puuid!')
+    return
   }
 
-  let summoner, league
   try {
-    ;[summoner, league] = await Promise.all([
-      fetchSummonerByPuuid(puuid),
-      fetchLeagueEntriesByPuuid(puuid),
-    ])
+    const region = await fetchRegionByPuuid(puuid, queryRegion)
+    console.log('region: ', region)
+    const account = await fetchAccountByPuuid(puuid, queryRegion)
+    console.log('account: ', account)
+    const summoner = await fetchSummonerByPuuid(puuid, region.region)
+    console.log('summoner: ', summoner)
+
+    /*     return {
+      summonerObject: summoner,
+      accountObject: account,
+      name: account.gameName,
+      tag: account.tagLine,
+      puuid: summoner.puuid,
+      profileIcon: summoner.profileIconId,
+      level: summoner.summonerLevel,
+      region: region || 'unknown',
+
+    } */
   }
   catch (err) {
-    console.error('❌ Riot API error:', err)
+    console.error('❌ Failed to resolve summoner:', err)
     throw createError({
       statusCode: 502,
-      statusMessage: 'Failed to fetch from Riot API',
+      statusMessage: 'Failed to fetch summoner from Riot',
     })
-  }
-
-  if (!summoner) {
-    throw createError({ statusCode: 404, statusMessage: 'Summoner not found' })
-  }
-
-  const ranked: SummonerResponse['ranked'] = {}
-
-  for (const entry of league) {
-    if (entry.queueType === 'RANKED_SOLO_5x5') {
-      ranked.solo = {
-        tier: entry.tier,
-        division: entry.rank,
-        lp: entry.leaguePoints,
-        wins: entry.wins,
-        losses: entry.losses,
-        queueType: entry.queueType,
-      }
-    }
-    else if (entry.queueType === 'RANKED_FLEX_SR') {
-      ranked.flex = {
-        tier: entry.tier,
-        division: entry.rank,
-        lp: entry.leaguePoints,
-        wins: entry.wins,
-        losses: entry.losses,
-        queueType: entry.queueType,
-      }
-    }
-  }
-
-  return {
-    name: summoner.name,
-    tag: summoner.tagLine,
-    puuid: summoner.puuid,
-    profileIcon: summoner.profileIconId,
-    level: summoner.summonerLevel,
-    region: 'na',
-    ranked,
   }
 })

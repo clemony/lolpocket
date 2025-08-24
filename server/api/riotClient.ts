@@ -5,9 +5,13 @@ import pLimit from 'p-limit'
 
 const limit = pLimit(5)
 const NUXT_RIOT_API = process.env.NUXT_RIOT_API!
-export const REGION = 'na1'
+export const REGION = 'americas'
+const REGION_CODE = 'na1'
 const BASE = `https://${REGION}.api.riotgames.com`
-const REGIONAL = 'americas'
+const CODE_BASE = `https://${REGION_CODE}.api.riotgames.com`
+function path(region: string): string {
+  return `https://${region}.api.riotgames.com`
+}
 
 async function safeFetch<T>(
   url: string,
@@ -34,7 +38,7 @@ async function safeFetch<T>(
 }
 
 export function riotSummonerGet<T = any>(path: string) {
-  return limit(() => safeFetch<T>(`${BASE}${path}`))
+  return limit(() => safeFetch<T>(`${CODE_BASE}${path}`))
 }
 
 export function riotGet<T = any>(
@@ -45,12 +49,30 @@ export function riotGet<T = any>(
   return limit(() => safeFetch<T>(`${base}${path}`, params))
 }
 
-export async function fetchSummonerByPuuid(puuid: string) {
-  return riotSummonerGet(`/lol/summoner/v4/summoners/by-puuid/${puuid}`)
+// path uses REGION_CODE
+
+export async function getChampionMastery(puuid: string) {
+  return riotSummonerGet(`/lol/champion-mastery/v4/champion-masteries/by-puuid/${puuid}`)
 }
 
-export async function fetchLeagueEntriesByPuuid(puuid: string) {
-  return riotSummonerGet(`/lol/league/v4/entries/by-puuid/${puuid}`)
+export async function getChampionMasteryTotal(puuid: string) {
+  return riotSummonerGet(`/lol/champion-mastery/v4/scores/by-puuid/${puuid}`)
+}
+
+// region var
+
+export async function fetchSummonerByPuuid(puuid: string, region: string) {
+  return riotGet(path(region ?? REGION_CODE), `/lol/summoner/v4/summoners/by-puuid/${puuid}`)
+}
+
+export async function fetchLeagueEntriesByPuuid(puuid: string, region: string) {
+  return riotGet(path(region ?? REGION_CODE), `/lol/league/v4/entries/by-puuid/${puuid}`)
+}
+export async function fetchAccountByPuuid(puuid: string, region: string) {
+  return riotGet(path(region ?? REGION), `/riot/account/v1/accounts/by-puuid/${puuid}`)
+}
+export async function fetchRegionByPuuid(puuid: string, region: string) {
+  return riotGet(path(region ?? REGION), `/riot/account/v1/region/by-game/lol/by-puuid/${puuid}`)
 }
 
 export async function getMatchesByPuuid({
@@ -63,7 +85,7 @@ export async function getMatchesByPuuid({
   count?: number
 }) {
   return riotGet(
-    `https://${REGIONAL}.api.riotgames.com`,
+    `https://${REGION}.api.riotgames.com`,
     `/lol/match/v5/matches/by-puuid/${puuid}/ids`,
     { start, count },
   )
@@ -71,17 +93,9 @@ export async function getMatchesByPuuid({
 
 export async function getMatchDetails(matchId: string) {
   return riotGet(
-    `https://${REGIONAL}.api.riotgames.com`,
+    `https://${REGION}.api.riotgames.com`,
     `/lol/match/v5/matches/${matchId}`,
   )
-}
-
-export async function getChampionMastery(puuid: string) {
-  return riotSummonerGet(`/lol/champion-mastery/v4/champion-masteries/by-puuid/${puuid}`)
-}
-
-export async function getChampionMasteryTotal(puuid: string) {
-  return riotSummonerGet(`/lol/champion-mastery/v4/scores/by-puuid/${puuid}`)
 }
 
 export async function getMatchIdsByPuuid({

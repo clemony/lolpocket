@@ -1,7 +1,7 @@
 <script setup lang="ts">
 definePageMeta({
   title: 'Runes',
-  section: 'library',
+  parent: '/library',
   icon1: 'lol-rune',
 })
 

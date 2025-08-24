@@ -1,17 +1,17 @@
-<script lang="ts" setup>
-import type { PrimitiveProps } from 'reka-ui'
-import { Primitive } from 'reka-ui'
-
-const { class: className, as = 'div' } = defineProps<PrimitiveProps & {
+<script setup lang="ts">
+const props = defineProps<{
   class?: HTMLAttributes['class']
-  as?: string
 }>()
 </script>
 
 <template>
-  <Primitive
-    :as="as"
-    :class="cn('bg-b1 rounded-box px-4 py-4 text-bc shadow-sm shadow-black/8 drop-shadow-black/4 drop-shadow-sm border border-b3/60', className)">
+  <div
+    :class="
+      cn(
+        'rounded-lg border bg-b1 text-bc shadow-warm-soft',
+        props.class,
+      )
+    ">
     <slot />
-  </Primitive>
+  </div>
 </template>

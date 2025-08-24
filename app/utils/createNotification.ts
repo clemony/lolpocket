@@ -12,7 +12,7 @@ export function saveNotification(template: string, vars: Record<string, string>)
     read: false,
   }
 
-  const list = as.userAccount.inbox.notifications
+  const list = as.account.inbox.notifications
 
   list.unshift(item)
 

@@ -1,17 +1,15 @@
 <script lang="ts" setup>
 const as = useAccountStore()
 const ss = useSummonerStore()
-const summoner = computed (() => ss.getSummoner(as.userAccount?.riot?.puuid))
+const summoner = computed (() => ss.getSummoner(as.account?.puuid))
+
+// "`/summoner/${as.account.region}/${as.account.name}_${as.account.tag}`"
 </script>
 
 <template>
-  <!--   <SidebarMenuButton
+  <SidebarMenuButton
     v-if="summoner"
-    as-child
-    class="h-16 w-full"> -->
-  <NuxtLink
-    :to="`/summoner/${as.userAccount.riot.region}/${as.userAccount.riot.name}_${as.userAccount.riot.tag}`"
-    class="justify-start grid items-center chat chat-start size-full group/friend">
+    class="h-16 w-full group/friend chat chat-start">
     <SummonerIcon class="rounded-full chat-image size-11.5 shrink-0" />
 
     <div class="flex chat-header justify-between w-full gap-px -translate-y-1 pl-1 pr-10">
@@ -36,6 +34,5 @@ const summoner = computed (() => ss.getSummoner(as.userAccount?.riot?.puuid))
     </div>
 
     <slot />
-  </NuxtLink>
-<!--   </SidebarMenuButton> -->
+  </SidebarMenuButton>
 </template>

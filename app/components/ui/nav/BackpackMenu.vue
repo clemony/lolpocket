@@ -3,9 +3,6 @@ import { backpackLinks } from '~/routes'
 
 const emit = defineEmits(['open:pins'])
 const as = useAccountStore()
-const ps = usePocketStore()
-
-console.log('💠 - as.userAccount.pockets.pinned.length:', as.userAccount.pockets.pinned.length)
 </script>
 
 <template>

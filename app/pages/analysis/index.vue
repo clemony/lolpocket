@@ -6,12 +6,10 @@ const { summoner } = defineProps<{
 definePageMeta({
   name: 'analysis',
 
-  meta: {
-    title: 'analysis',
-    path: '/analysis',
-    section: 'analysis',
-    icon: 'chart',
-  },
+  title: 'analysis',
+  path: '/analysis',
+  parent: '/analysis',
+  icon: 'chart',
 })
 </script>
 

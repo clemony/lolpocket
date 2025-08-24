@@ -6,8 +6,8 @@ import { ProgressIndicator } from 'reka-ui'
 const { class: className, variant = 'shadow', size = 'md', showIcon, circle, tipSide = 'top' } = defineProps<{
   class?: HTMLAttributes['class']
   text?: boolean | string | null
-  variant?: VariantStyleProps['variant']
-  size?: VariantStyleProps['size']
+  variant?: any
+  size?: any
   showIcon?: boolean
   circle?: boolean
   tipSide?: Side

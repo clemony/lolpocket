@@ -156,7 +156,6 @@ export const useIndexStore = defineStore(
       id = id.replace(/[a-z]+_splash_[a-z]+_/, '')
       id = id.replace('.jpg', '')
 
-      console.log('💠 - skinNameFromUrl - skins[name]:', skins.value[name])
       return `${skins.value[name]?.find(skin => skin.id === id.toString())?.name} ${name}`
     }
 

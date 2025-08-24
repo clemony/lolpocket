@@ -19,7 +19,7 @@ const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
   <div
     v-if="collapsible === 'none'"
     data-slot="sidebar"
-    :class="cn('bg-tint-sidebar/60 text-sidebar-foreground flex h-full w-(--sidebar-width) flex-col', props.class)"
+    :class="cn('bg-tint-b2/40 text-sidebar-foreground flex h-full w-(--sidebar-width) flex-col', props.class)"
     v-bind="$attrs">
     <slot />
   </div>
@@ -75,13 +75,13 @@ const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
         // Adjust the padding for floating and inset variants.
         variant === 'floating' || variant === 'inset'
           ? 'p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+(--spacing(4))+2px)]'
-          : 'group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=left]:border-r group-data-[side=right]:border-l',
+          : 'group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=left]:border border-b3 group-data-[side=right]:border border-b3',
         props.class,
       )"
       v-bind="$attrs">
       <div
         data-sidebar="sidebar"
-        class="bg-sidebar/90 backdrop-blur-lg group-data-[variant=floating]:border-b3 flex h-full w-full flex-col group-data-[variant=floating]:rounded-xl group-data-[variant=floating]:border group-data-[variant=floating]:shadow-sm">
+        class="bg-sidebar/90 backdrop-blur-lg group-data-[variant=floating]:border border-b3 flex h-full w-full flex-col group-data-[variant=floating]:rounded-xl group-data-[variant=floating]:border border-b3 group-data-[variant=floating]:shadow-sm">
         <slot />
       </div>
     </div>
