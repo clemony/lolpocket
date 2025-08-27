@@ -1,5 +1,6 @@
 import fs from 'node:fs'
-import { markUpdate } from '../utils/mark-update'
+import { markUpdate } from '..'
+import type { Path } from './../../shared/types/types.rune'
 
 // Load the raw rune data
 const paths: Path[] = JSON.parse(
@@ -19,5 +20,5 @@ for (const path of paths) {
 const tsOutput = `// ${markUpdate()}
 
 export const pathIndex: PathIndex[] = ${JSON.stringify(index, null, 2)}`
-fs.writeFileSync('./app/data/index/path-index.ts', tsOutput)
+fs.writeFileSync('./shared/appdata/index/path-index.ts', tsOutput)
 console.log(`✅ path-index.ts created with ${index.length} paths`)

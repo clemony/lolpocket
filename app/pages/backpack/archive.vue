@@ -1,9 +1,13 @@
 <script setup lang="ts">
 definePageMeta({
-  name: 'archived pockets',
-  title: 'Archive',
+  name: 'archive',
   parent: '/backpack',
+  order: 2,
   icon: 'archive',
+  components: {
+    label: '',
+  },
+  variant: 'ghost',
 })
 </script>
 

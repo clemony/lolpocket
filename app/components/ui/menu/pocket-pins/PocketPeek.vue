@@ -49,7 +49,7 @@ const wrapper = 'rounded-full  !grid !place-items-center   !p-0 shadow-sm drop-s
           <!-- role -->
 
           <div class="avatar !border-shade-6 size-12">
-            <div :class="cn(' p-0.5 size-10 bg-n1', wrapper)">
+            <div :class="cn(' p-0.5 size-10 bgneutral', wrapper)">
               <component
                 :is="`i-roles-${pocket.roles[0].toLowerCase() ?? 'all'}`"
                 :class="cn('!size-4 text-nc shrink-0')" />
@@ -57,8 +57,8 @@ const wrapper = 'rounded-full  !grid !place-items-center   !p-0 shadow-sm drop-s
           </div>
           <!-- rune -->
 
-          <div class="avatar !border-shade-6 size-12">
-            <div :class="cn(' p-0.5 size-10 bg-n1', wrapper)">
+        <!--   <div class="avatar !border-shade-6 size-12">
+            <div :class="cn(' p-0.5 size-10 bgneutral', wrapper)">
               <Img
                 v-if="pocket.runes[0].keystone"
                 :img="`/img/runes/${ix.runeKeyById(pocket.runes[0].keystone)}.webp`"
@@ -68,14 +68,14 @@ const wrapper = 'rounded-full  !grid !place-items-center   !p-0 shadow-sm drop-s
           </div>
 
           <div class="avatar !border-shade-6 size-12">
-            <div :class="cn(' p-0.5 size-10 bg-n1', wrapper)">
+            <div :class="cn(' p-0.5 size-10 bgneutral', wrapper)">
               <Img
                 v-if="pocket.runes[0][1].path"
                 :img="`/img/runes/${pocket.runes[0][1].path}.webp`"
                 :alt="pocket.runes[0][1].path"
                 class="!h-4.5 !w-auto z-1" />
             </div>
-          </div>
+          </div> -->
         </div>
 
         <!-- items -->

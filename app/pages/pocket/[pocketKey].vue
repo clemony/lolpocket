@@ -15,11 +15,11 @@ definePageMeta({
   search: false,
 })
 
-const pocket = ref(getPocket(route.params.pocketKey))
+const pocket = refps().getPocket(route.params.pocketKey))
 </script>
 
 <template>
-  <TabLayoutWrapper
+  <SplashLayout
     v-if="pocket">
     <!-- splash -->
 
@@ -69,5 +69,5 @@ const pocket = ref(getPocket(route.params.pocketKey))
           :pocket="pocket" />
       </div>
     </template>
-  </TabLayoutWrapper>
+  </SplashLayout>
 </template>

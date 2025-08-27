@@ -9,7 +9,7 @@ const { from, gold } = defineProps<{
   <div
     v-if="from"
     class=" mt-1">
-    <div class="divider divider-start after:h-px after:bg-nc/10 !text-0">
+    <div class="divider divider-start after:h-px  !text-0">
       RECIPE
     </div>
 
@@ -21,7 +21,7 @@ const { from, gold } = defineProps<{
         class="flex gap-3 items-center">
         <LazyPopoverItem
           :id="item.id"
-          class="ring-accent  size-10 overflow-hidden rounded-lg shadow-sm hover:ring-2  hover:ring-offset-2 hover:ring-offset-b1/30 tldr-20" />
+          class="ring-neutral/60  size-10 overflow-hidden rounded-lg shadow-sm hover-ring" />
 
         <icon
           v-if="i != from.length - 1"
@@ -31,7 +31,7 @@ const { from, gold } = defineProps<{
 
       <div
         v-if="gold"
-        class="flex items-center  !text-nc">
+        class="flex items-center  ">
         <icon
           name="dashicons:plus"
           class=" opacity-80 size-3.5" />

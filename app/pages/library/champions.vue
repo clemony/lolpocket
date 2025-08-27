@@ -4,9 +4,8 @@ definePageMeta({
   parent: '/library',
   icon1: 'lol-champ',
 })
-
+const { filters, setFilter, filtered } = useItemFilter()
 const cs = useChampStore()
-const { championKeys, filteredKeys, filtered } = useChampionFilter(cs.championFilter)
 
 const tabs = ref('grid')
 </script>
@@ -38,10 +37,10 @@ const tabs = ref('grid')
       <TabsContent
         value="grid"
         as-child>
-        <LibraryChampions
+        <!--         <LibraryChampions
           v-if="championKeys"
           :champion-keys="championKeys"
-          :filtered-keys="filteredKeys" />
+          :filtered-keys="filteredKeys" /> -->
       </TabsContent>
 
       <TabsContent

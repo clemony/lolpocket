@@ -5,49 +5,26 @@ export const usePocketStore = defineStore(
   'pocketStore',
   () => {
     const pockets = ref<Pocket[]>([])
+    const tags = ref<string[]>([])
     // In your usePocketStore
 
     const downloadCard = refAutoReset(false, 1000)
     const pocketCardRef = ref<HTMLElement>(null)
 
-    const trashFolder = ref<Pocket[]>([])
-    const archiveFolder = ref<Pocket[]>([])
-    const selectedRows = ref([])
-    const tableSelectAll = ref()
-    const pocketGridApi = shallowRef<GridApi | null>(null)
-    const trashGridApi = shallowRef<GridApi | null>(null)
-
-    const pocketGrid = shallowRef()
-    const newPocketOpen = ref(false)
-
-    function updateSelectedRows(rows: any) {
-      selectedRows.value = rows // Update the selected rows in the store
-    }
-
-    const allPockets = computed(() => {
-      return pockets.value
-    })
-
-    const userPockets = {
-      pinned: {},
-      archive: {},
-    }
+    const trash = ref<Pocket[]>([])
+    const archive = ref<Pocket[]>([])
 
     return {
       pockets,
+      tags,
       downloadCard,
       pocketCardRef,
 
-      archiveFolder,
-      trashFolder,
-      selectedRows,
-      tableSelectAll,
-      updateSelectedRows,
-      pocketGridApi,
-      trashGridApi,
-      pocketGrid,
-      allPockets,
-      newPocketOpen,
+      archive,
+      trash,
+
+      // helpers
+      getPocket: (key: string) => pockets.value.find((pocket: Pocket) => pocket.key === key),
     }
   },
 

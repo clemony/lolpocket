@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { title, class: className, basicLayout } = defineProps<{
+const { title, class: className } = defineProps<{
   title: string
   class?: HTMLAttributes['class']
   dropdown?: boolean
@@ -8,9 +8,10 @@ const { title, class: className, basicLayout } = defineProps<{
 </script>
 
 <template>
-  <SidebarContent class="overflow-hidden h-screen w-full flex flex-col">
+  <SidebarContent
+    :class="cn('overflow-hidden h-screen w-full flex flex-col max-w-full')">
     <SidebarHeader
-      :class="cn('gap-0 border-b sidebar-content-header border-b-b3/80 px-3 w-full', { '!h-18.5 !bg-b1 ': basicLayout }, className)">
+      :class="cn('gap-0 !h-[44.5px] border-b  px-3 w-full', className)">
       <DropdownMenu>
         <DropdownMenuTrigger
           :disabled="!dropdown"
@@ -35,9 +36,6 @@ const { title, class: className, basicLayout } = defineProps<{
           <slot name="dropdown-menu" />
         </DropdownMenuPopContent>
       </DropdownMenu>
-      <div class="flex relative items-center gap-1 w-full ">
-        <slot name="subheader" />
-      </div>
     </SidebarHeader>
 
     <SidebarGroup class="px-0  h-full">

@@ -14,7 +14,7 @@ const route = useRoute()
   })
   cs.championGridApi.setGridOption('columnDefs', updatedCols)
 } */
-
+const { filters, setFilter, filtered } = useItemFilter()
 const query = ref(null)
 </script>
 
@@ -24,9 +24,9 @@ const query = ref(null)
       <div class="flex relative items-center grow gap-6 ">
         <ExpandSearch
           class="absolute **:[&_svg]:!opacity-96  left-0 btn-neutral max-w-60 "
-          @update:reset="cs.championFilter.query = null">
+          @update:reset="filters.query = null">
           <input
-            v-model="cs.championFilter.query"
+            v-model="filters.query"
             type="text"
             class="size-full" />
         </ExpandSearch>
@@ -45,7 +45,7 @@ const query = ref(null)
 
       <NumberPickerContent class="w-32">
         <NumberFieldDecrement />
-        <NumberFieldInput class=" border-n1" />
+        <NumberFieldInput class=" borderneutral" />
         <NumberFieldIncrement />
       </NumberPickerContent>
     </NumberField> -->

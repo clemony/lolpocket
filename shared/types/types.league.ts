@@ -23,4 +23,4 @@ export interface Spell {
   text?: string
 }
 
-export type SpellSet = [string, string]
+/* export type SpellSet = [string, string] */

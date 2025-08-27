@@ -17,12 +17,13 @@ defineExpose({
 })
 
 const cs = useChampStore()
-const { filteredKeys, filtered } = useChampionFilter(cs.championFilter)
+/* const { filteredKeys, filtered } = useChampionFilter(filters) */
 
 const theme = ref(pocketTheme)
-
+const filteredChamps = ref([])
+// TODO
 const gridApi = shallowRef<GridApi | null>(null)
-const filteredChamps = computed<ChampionLite[]>(() => championsLite.filter(c => filteredKeys.value.includes(c.key)))
+/* const filteredChamps = computed<ChampionLite[]>(() => championsLite.filter(c => filteredKeys.value.includes(c.key))) */
 
 const gridOptions: GridOptions<ChampionLite> = {
   rowData: filteredChamps.value,
@@ -259,7 +260,7 @@ ModuleRegistry.registerModules([ClientSideRowModelModule, ValidationModule, RowS
 
 <template>
   <article class="overflow-y-auto grow relative h-full relative">
-    <AgGridVue
+    <!--  <AgGridVue
       v-if="filtered"
       class="!size-full stat-grid champion-grid mt-38 border-t border-t-b3/40 "
       :tooltip-show-delay="400"
@@ -268,6 +269,6 @@ ModuleRegistry.registerModules([ClientSideRowModelModule, ValidationModule, RowS
       :theme="theme"
       :column-defs="colDefs"
       @grid-pre-destroyed="onGridPreDestroyed"
-      @grid-ready="onGridReady" />
+      @grid-ready="onGridReady" /> -->
   </article>
 </template>

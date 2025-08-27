@@ -4,18 +4,57 @@ definePageMeta({
   parent: '/library',
 })
 
+const route = useRoute()
 const is = useItemStore()
-const { filtered } = useItemFilter(is.itemFilter)
+const quote = computed (() => getRandom(itemQuotes))
+const tabs = ref('/library/items')
+
+const s = useItemFilterProvider()
+console.log('🌱 - s:', s)
+const state = ref(null)
+watch(() => s, (newVal) => {
+  console.log('💠 - watch - newVal:', newVal)
+  if (newVal)
+    state.value = s
+})
+onMounted (() => {
+  state.value = s
+  tabs.value = route.path
+})
 </script>
 
 <template>
-  <div class="size-full relative">
-    <!--     <ItemFilterSidebar /> -->
+  <SeparatorLayout
+    v-if="state"
+    :description="quote">
+    <LayoutAsideSplit class="*:last:lg:max-w-full">
+      <template #aside>
+        <ItemFilterSidebar />
+      </template>
 
-    <LazyNuxtPage :filtered="filtered ?? ix().items.map(i => i.id)" />
-  </div>
+      <ItemRankFilter
+        class="sticky top-0"
+        :state />
+      <LazyNuxtPage />
+    </LayoutAsideSplit>
 
-  <!--      <div
-          class="text-1  items-center pl-3 pr-7  text-nowrap flex mt-1 "
-          v-html="captions" /> -->
+    <template #right>
+      <Tabs
+        v-model:model-value="tabs"
+        class="**:pointer-events-auto "
+        @update:model-value="navigateTo(tabs)">
+        <IndicatorTabsList class="grid grid-cols-2 h-10 max-w-120 w-80">
+          <IndicatorTabsTrigger value="/library/items">
+            Grid
+          </IndicatorTabsTrigger>
+
+          <IndicatorTabsTrigger value="/library/items/list">
+            List
+          </IndicatorTabsTrigger>
+
+          <TabIndicator />
+        </IndicatorTabsList>
+      </Tabs>
+    </template>
+  </SeparatorLayout>
 </template>

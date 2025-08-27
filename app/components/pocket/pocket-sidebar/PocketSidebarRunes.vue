@@ -4,14 +4,6 @@ const { pocket } = defineProps<{
 }>()
 const rs = useRuneStore()
 
-function handleNewSet() {
-  const a = newRuneSet(pocket.key)
-  console.log('💠 - handleNewSet - a:', a)
-  nextTick(() => {
-    rs.selectedRuneSet = pocket.runes.length - 1
-  })
-}
-
 function handleClick(i) {
   rs.selectedRuneSet = i
   navigateTo(`/pocket/${pocket.key}/runes`)
@@ -23,19 +15,18 @@ function handleClick(i) {
     <div
       v-if="pocket?.runes && pocket?.runes?.length"
       class="w-full  py-3 flex  gap-6.5 flex-wrap">
-      <RuneSetButton
+      <!--    <RuneSetButton
         v-for="(set, i) in pocket.runes"
         :key="i"
         :set-key="i"
         :pocket="pocket"
         :set="set"
-        @click="handleClick(i)" />
+        @click="handleClick(i)" /> -->
     </div>
 
     <button
       v-tippy="'Add Rune Set'"
-      class="h-full  grid cursor-pointer place-items-center   group  w-14 rounded-l-none rounded-r-xl p-0 "
-      @click="handleNewSet()">
+      class="h-full  grid cursor-pointer place-items-center   group  w-14 rounded-l-none rounded-r-xl p-0 ">
       <div class="group-hover:bg-b2/80 size-6 rounded-lg grid place-items-center border border-transparent group-hover:border-b3/60">
         <icon
           name="add-sm"

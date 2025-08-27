@@ -1,6 +1,6 @@
 import fs from 'node:fs'
+import { markUpdate } from '..'
 import type { Champion } from '../../shared/types/types-champion'
-import { markUpdate } from '../utils/mark-update'
 import { normalize, normalizeArray } from '../utils/normalize-strings'
 
 const champions = JSON.parse(
@@ -52,7 +52,7 @@ for (const champ of Object.values(champions)) {
 }
 
 fs.writeFileSync(
-  './app/data/filters/champion-filters.ts',
+  './shared/appdata/filters/champion-filters.ts',
   `// ${markUpdate()}
 
 export const championFilters = ${JSON.stringify(filter, null, 2)}`,

@@ -1,4 +1,3 @@
-export * from '../account/useSupabaseSync'
 export * from './useChildRoutes'
 export * from './useCooldown'
 export * from './useParentMeta'

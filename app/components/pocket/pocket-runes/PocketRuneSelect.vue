@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { AnimatePresence, motion } from 'motion-v'
-
+/*
 const { pathRunes, path, runes, limit } = defineProps<{
   pathRunes: PathRunes
   runes: any
@@ -37,12 +37,12 @@ watch(() => pathRunes, (newVal) => {
 
 onMounted(() => {
   currentRunes.value = pathRunes
-})
+}) */
 </script>
 
 <template>
   <Field class="ease !px-0 !m-0 items-center justify-center gap-y-16 flex flex-col relative  w-full rounded-xl transition-all duration-500 **:select-none pb-16 pt-12">
-    <template v-if="runes && runes.length">
+    <!-- <template v-if="runes && runes.length">
       <div
         v-for="(slot, i) in runes"
         :key="i"
@@ -89,15 +89,15 @@ onMounted(() => {
           </motion.div>
         </AnimatePresence>
       </div>
-    </template>
+    </template> -->
 
-    <div
+  <!--   <div
       v-else
       class="size-full grid grid-cols-3 gap-y-14">
       <Placeholder
         v-for="i in 9"
         :key="i"
         class="size-18 rounded-full place-self-center" />
-    </div>
+    </div> -->
   </Field>
 </template>

@@ -1,111 +1,69 @@
 <script lang="ts" setup>
-const is = useItemStore()
-const sortItemsAZ = ref(0)
-const sortPrice = ref(0)
-const route = useRoute()
-
-function resetItems() {
-/*   sortItemsAZ.value = 0
-  // sortPrice.value = 0 */
-
-  // TODO disable no filter avail
-  Object.assign(is.itemFilter, is.defaultItemFilter)
-  console.log('💠 - resetItems - is.defaultItemFilter:', is.defaultItemFilter)
-  console.log('💠 - resetItems - itemFilter:', is.itemFilter)
-  // is.listKey = is.listKey + 1
-  // is.itemGridApi.resetColumnState()
-}
-const tabs = ref('/library/items')
-
-onMounted (() => {
-  tabs.value = route.path
-})
 </script>
 
 <template>
   <transition-expand
     group
-    class="flex pl-4 pr-2   items-center top-19 bg-b1 z-1 justify-start  absolute inset-x-0">
-    <div class=" flex items-center pb-12">
-      <h1 class="grow">
-        Items
-      </h1>
-    </div>
+    class="flex flex-col h-full gap-8">
+    <Input
+      v-model:model-value="fi().filters.query"
+      placeholder="Search Items...">
+      <icon name="bow" />
+    </Input>
 
-    <Tabs
-      v-model:model-value="tabs"
-      class="  **:pointer-events-auto "
-      @update:model-value="navigateTo(tabs)">
-      <IndicatorTabsList class="grid grid-cols-2 h-10">
-        <IndicatorTabsTrigger value="/library/items">
-          Grid
-        </IndicatorTabsTrigger>
+    <!-- stats -->
+    <Collapsible
+      v-slot="{ open }"
+      :default-open="true">
+      <CollapsibleTrigger class="flex w-full cursor-pointer underline-offset-2 hover:underline items-center justify-between h-9">
+        <Label>Statistics
+        </Label>
+        <PlusMinusExpand :open />
+      </CollapsibleTrigger>
+      <CollapsibleContent class="CollapsibleContent w-full overflow-y-scroll overscroll-auto px-1.5  h-90 max-h-90">
+        <ItemStatsChecklist />
+      </CollapsibleContent>
+    </Collapsible>
 
-        <IndicatorTabsTrigger value="/library/items/list">
-          List
-        </IndicatorTabsTrigger>
+    <!-- categories -->
+    <Collapsible
+      v-slot="{ open }"
+      :default-open="true">
+      <CollapsibleTrigger class="flex w-full cursor-pointer underline-offset-2 hover:underline  items-center justify-between h-9">
+        <Label>
+          Categories
+        </Label>
+        <PlusMinusExpand :open />
+      </CollapsibleTrigger>
+      <CollapsibleContent class="CollapsibleContent w-full overflow-y-scroll overscroll-auto px-1.5  h-90 max-h-90">
+        <ItemCategoriesList />
+      </CollapsibleContent>
+    </Collapsible>
 
-        <TabIndicator />
-      </IndicatorTabsList>
-    </Tabs>
-
-    <ItemSearch class="input w-54  shadow-sm drop-shadow-sm !bg-n1/85 inset-shadow-sm border-accent text-nc **:text-nc" />
-
-    <ItemRankFilter />
-
-    <!--     <ItemStatsChecklist /> -->
-
-    <ItemMapFilter v-model:model-value="is.itemFilter.map" />
-
-    <div class="gap-4  text-2  tracking-tight  flex items-center justify-end ">
-      <MotionFade
-        v-if="is.itemFilter.purchasable"
-        layout-id="text">
-        Purchasable
-      </MotionFade>
-
-      <MotionFade
-        v-else
-        layout-id="text">
-        All
-      </MotionFade>
+    <!-- shop -->
+    <Label class="flex items-center justify-between gap-3">
+      <span>{{ fi().filters.purchasable ? 'Purchasable' : 'Purchasable & Unsold' }}</span>
 
       <Switch
-        v-model:model-value="is.itemFilter.purchasable"
+        v-model:model-value="fi().filters.purchasable"
         class="dst">
       </Switch>
-    </div>
+    </Label>
 
-    <ItemTagsFilter />
+    <!-- map -->
+    <Label class="flex flex-col gap-3">
+      <span>Map</span>
+      <ItemMapFilter
+        v-model:model-value="fi().filters.map"
+        class="w-full" />
+    </Label>
 
-    <div class=" absolute bottom-6  px-4 flex gap-2">
-      <div class="w-full">
-        <ItemColumnDisplay v-if="route.path == '/items/stats'" />
-      </div>
-
-      <button
-        class="btn btn-neutral bg-n1/85 hover:opacity-85 font-normal "
-        @click="resetItems()">
-        Reset Filters
-      </button>
-      <!-- TODO
-         REDO with vueuse
-
-         <ToggleStateButton
-            v-model:model="sortItemsAZ"
-            class="join-item rounded-r-none"
-            icon1="qlementine-icons:sort-alpha-asc-16"
-            icon2="qlementine-icons:sort-alpha-desc-16"
-            @click.stop
-            @update:model="(v) => (is.sortItemsAZ = v)" />
-          <ToggleStateButton
-            class="join-item rounded-l-none"
-            :model="sortPrice"
-            icon1="bi:sort-numeric-down"
-            icon2="bi:sort-numeric-up"
-            :icon-size="7"
-            @click.stop
-            @update:model="(v) => (is.sortPrice = v)" /> -->
-    </div>
+    <Button
+      size="lg"
+      variant="neutral"
+      class=""
+      @click="fi().clearFilters()">
+      Reset Filters
+    </Button>
   </transition-expand>
 </template>

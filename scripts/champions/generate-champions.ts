@@ -1,10 +1,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
-import type { Champion } from '../../shared/types/types-champion.ts'
-import { markUpdate } from '../utils/mark-update.js'
-import { normalizeAbility } from '../utils/normalize-ability.js'
-import { normalize, normalizeArray } from '../utils/normalize-strings.js'
-import { stripEmpty } from '../utils/strip-empty.ts.ts'
+import { markUpdate, normalize, normalizeAbility, normalizeArray, stripEmpty } from '..'
+import type { Champion } from '../../shared/types/types.champion'
 
 // Load saved raw data
 const champions = JSON.parse(
@@ -15,7 +12,7 @@ const ddData = JSON.parse(
 )
 
 // Create output dirs
-const outputDir = './app/data/records/champions/'
+const outputDir = './shared/appdata/records/champions/'
 const outputMergedRaw = './data/raw/champions-raw.json'
 fs.mkdirSync(outputDir, { recursive: true })
 

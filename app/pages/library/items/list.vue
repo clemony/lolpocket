@@ -12,11 +12,10 @@ definePageMeta({
 })
 
 const is = useItemStore()
-const { filtered } = useItemFilter(is.itemFilter)
 const theme = ref(pocketTheme)
 
 const gridOptions: GridOptions<ItemLite> = {
-  rowData: itemsLite.filter(i => filtered.value.includes(i.id)),
+  rowData: itemsLite.filter(i => fi().filtered.includes(i.id)),
   columnHoverHighlight: true,
 
   rowSelection: {
@@ -183,17 +182,8 @@ async function onGridReady(params: GridReadyEvent) {
   })
 }
 
-function onGridPreDestroyed(params: GridPreDestroyedEvent) {
-  is.dbItemGridState = gridApi.value.getState()
-
-  const columns = gridApi.value.getColumns()
-  columns.forEach((col) => {
-    // col.removeEventListener('visibleChanged', listener)
-  })
-}
-
 watch(
-  () => filtered.value,
+  () => fi().filtered,
   (newVal) => {
     if (newVal && gridApi.value)
       gridApi.value.setGridOption('rowData', [])
@@ -206,13 +196,11 @@ ModuleRegistry.registerModules([ClientSideRowModelModule, ValidationModule, RowS
 <template>
   <div>
     <AgGridVue
-      :initial-state="is.dbItemGridState"
       :grid-options="gridOptions"
       :theme="theme"
       :column-defs="colDefs"
       class="h-full grow stat-grid pt-16"
       :tooltip-show-delay="400"
-      @grid-pre-destroyed="onGridPreDestroyed"
       @grid-ready="onGridReady">
     </AgGridVue>
   </div>

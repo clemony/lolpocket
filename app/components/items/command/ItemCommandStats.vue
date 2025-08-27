@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 const is = useItemStore()
+const { filters, setFilter, filtered } = useItemFilter()
 </script>
 
 <template>
@@ -22,10 +23,10 @@ const is = useItemStore()
           :key="stat.id"
           as="div">
           <label
-            v-if="!is.pItemFilter.stats.includes(stat.id)"
+            v-if="!filters.stats.includes(stat.id)"
             class="w-full rounded-md flex hover:bg-accent capitalize py-1.5 pl-8 pr-2.5">
             <input
-              v-model="is.pItemFilter.stats"
+              v-model="filters.stats"
               type="checkbox"
               name="item-types"
               class="peer hidden"

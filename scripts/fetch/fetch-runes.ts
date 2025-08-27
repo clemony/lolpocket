@@ -5,6 +5,7 @@ import { Client } from 'shieldbow'
 
 dotenv.config()
 
+// FIXME
 const client = new Client(process.env.RIOT_API_KEY)
 
 await client.initialize({ region: 'na', fetch: false, storage: {

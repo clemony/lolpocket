@@ -73,7 +73,7 @@ onMounted(() => {
               variant="shadow"
               size="lg"
               :class=" cn(
-                'pointer-events-auto w-28 justify-self-end relative hover:bg-n1  mt-3  border-b3 hover:text-nc text-2  self-end justify-self-end overflow-hidden shadow-xs transition-all duration-200',
+                'pointer-events-auto w-28 justify-self-end relative hover:bgneutral  mt-3  border-b3 hover:text-nc text-2  self-end justify-self-end overflow-hidden shadow-xs transition-all duration-200',
               )
               "
               @click="navigateTo('/login')">

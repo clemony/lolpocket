@@ -1,6 +1,6 @@
 import { writeFile } from 'node:fs/promises'
 import { ofetch } from 'ofetch'
-import { getFormattedDateTime } from '../utils/mark-update'
+import { getFormattedDateTime } from '..'
 
 const MIN_PATCH_MAJOR = 15
 
@@ -35,7 +35,7 @@ async function main() {
       JSON.stringify(filtered, null, 2),
     )
     await writeFile(
-      './app/data/index/patch-index.ts',
+      './shared/appdata/index/patch-index.ts',
       `// ${getFormattedDateTime()}
 
 export const patchIndex = ${JSON.stringify(normalized, null, 2)}`,

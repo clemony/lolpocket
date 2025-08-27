@@ -18,7 +18,7 @@ function handleLoad() {
 <template>
   <Primitive
     :as="as"
-    :class="cn('rounded-lg relative bg-b3/60 overflow-hidden grid place-items-center aspect-square  ', { ' shadow-sm shadow-black/50  drop-shadow-sm': loaded == true && id != null && id != 0, ' shadow-warm-soft ': !loaded || id == null || id == 0 }, className)">
+    :class="cn('rounded-lg relative bg-b2/0 overflow-hidden grid place-items-center aspect-square  ', { ' shadow-sm shadow-black/50  drop-shadow-sm': loaded == true && id != null && id != 0, ' shadow-warm-soft ': !loaded || id == null || id == 0 }, className)">
     <Img
       v-show="id != null"
       :img="`/img/item/${id}.webp`"

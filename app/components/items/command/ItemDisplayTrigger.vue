@@ -10,7 +10,7 @@ const ix = useIndexStore()
     class="size-20"
     @click.stop>
     <button
-      class="size-full  group/b hover:ring hover:ring-n1/40 rounded-lg  !pointer-events-none   hover:inset-shadow-sm data-[state=open]:ring-n1/40  data-[state=open]:ring  data-[state=open]:inset-shadow-sm  "
+      class="size-full  group/b hover:ring hover:ringneutral/40 rounded-lg  !pointer-events-none   hover:inset-shadow-sm data-[state=open]:ringneutral/40  data-[state=open]:ring  data-[state=open]:inset-shadow-sm  "
       :class="{ 'shadow-sm shadow-black/20 inset-shadow-sm border border-black/60': itemId }">
       <LazyItem
         v-if="itemId ?? ''"

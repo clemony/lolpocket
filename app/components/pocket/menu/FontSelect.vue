@@ -3,7 +3,7 @@ import { fonts } from './fonts'
 
 const props = defineProps<{
   model: number
-  pocket: Pocket
+  card: Card
   tip?: string
 }>()
 </script>
@@ -16,7 +16,7 @@ const props = defineProps<{
         as-child
         class="p-0">
         <div
-          :style="{ fontFamily: props.pocket.card.font[props.model] }"
+          :style="{ fontFamily: props.card.font[props.model] }"
           class="text-4 items-center align-text-bottom dst font-medium">
           {{ props.model == 0 ? 'Title Font' : 'Accent Font' }}
         </div>

@@ -6,8 +6,10 @@ const props = defineProps<{
 
 const pocket = ref(props.pocket)
 
+/*
 const runeSetsLength = computed (() => {
-  if (pocket.value.runes.length == 1) {
+
+if (pocket.value.runes.length == 1) {
     const set = ref(pocket.value.runes[0])
     const primaryRunes = computed (() => {
       const a = Object.values(set.value[0].runes)
@@ -31,14 +33,14 @@ const runeSetsLength = computed (() => {
   }
   else {
     return pocket.value.runes.length
-  }
 })
+  } */
 </script>
 
 <template>
-  <span
+  <!-- <span
     v-tippy="`${runeSetsLength ? runeSetsLength : 'no'} rune`"
     :class="cn('flex gap-1.5 items-center', props.class)">
     <span class="dst font-mono text-1 ">{{ runeSetsLength }}</span>
-  </span>
+  </span> -->h
 </template>

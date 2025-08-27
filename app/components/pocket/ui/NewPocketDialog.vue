@@ -28,9 +28,8 @@ function clearForm() {
 function submitForm() {
   console.log('hi')
   const key = toID()
-  addPocket(name.value, tags.value, selectedIcon.value, key)
   clearForm()
-  ps.newPocketOpen = false
+
   console.log('pocket added!', ps.pockets)
 }
 
@@ -41,10 +40,9 @@ defineExpose({
 </script>
 
 <template>
-  <Dialog :open="ps.newPocketOpen">
+  <Dialog>
     <MotionDialogContent
-      class="!rounded-xl w-110 pt-8 pb-6 px-7"
-      @interact-outside="ps.newPocketOpen = false">
+      class="!rounded-xl w-110 pt-8 pb-6 px-7">
       <DialogHeader>
         <DialogTitle class="text-6 dst">
           New Pocket

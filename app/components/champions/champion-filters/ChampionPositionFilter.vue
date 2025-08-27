@@ -1,10 +1,11 @@
 <script setup lang="ts">
 const cs = useChampStore()
+const { filters, setFilter, filtered } = useItemFilter()
 </script>
 
 <template>
   <Tabs
-    v-model:model-value="cs.championFilter.position"
+    v-model:model-value="filters.position"
     class="w-64 ">
     <Field class="!px-0 py-0 gap-0 w-64 bg-b2/80 border-b3 h-10 m-0 rounded-xl">
       <IndicatorTabsList class="bg-transparent grid-cols-[1fr_1fr_1.2fr_1fr_1fr_1.2fr] h-10 w-64">
@@ -16,7 +17,7 @@ const cs = useChampStore()
           <component
             :is="`i-roles-${position.toLowerCase()}`"
             class="h-4.5 w-auto dst shrink-0 z-10 text-bc/60"
-            :class="{ '**:!text-nc ': position == cs.championFilter.position }" />
+            :class="{ '**:!text-nc ': position == filters.position }" />
         </IndicatorTabsTrigger>
 
         <TabIndicator

@@ -1,16 +1,14 @@
 import fs from 'node:fs'
 import path from 'node:path'
+import { handleWikiText, markUpdate, stripEmpty } from '..'
 import { formatStats, normalizeItemData } from '../utils/format-items.ts'
-import { handleWikiText } from '../utils/format-wiki-text.ts'
-import { markUpdate } from '../utils/mark-update.ts'
-import { stripEmpty } from '../utils/strip-empty.ts.ts'
 import { ludensPreProcess } from '../utils/wikitext/processing.ts'
 
 const inputPath = path.resolve('./data/raw/items-raw.json')
 
-const outputIndex = path.resolve('./app/data/index/item-index.ts')
-const outputLitePath = path.resolve('./app/data/records/items-lite.ts')
-const itemOutputDir = path.resolve('./app/data/records/items/')
+const outputIndex = path.resolve('./shared/appdata/index/item-index.ts')
+const outputLitePath = path.resolve('./shared/appdata/records/items-lite.ts')
+const itemOutputDir = path.resolve('./shared/appdata/records/items/')
 const fullData = JSON.parse(fs.readFileSync(inputPath, 'utf-8'))
 
 const index = {}

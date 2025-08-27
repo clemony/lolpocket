@@ -65,11 +65,11 @@ export interface Item {
   maps?: number[]
 }
 
-export interface ItemSet {
+/* export interface ItemSet {
   name: string
   items: number[]
 }
-
+ */
 export interface Effect {
   name?: string
   unique?: boolean

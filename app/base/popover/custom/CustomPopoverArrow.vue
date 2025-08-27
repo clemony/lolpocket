@@ -9,12 +9,17 @@ const props = defineProps<{
 <template>
   <PopoverArrow
     as-child
+    class="icon"
     :height="8"
     :width="8">
-    <div class="relative size-7 relative -mb-6">
+    <div class="relative size-8 relative  scale-x-110 ">
       <icon
-        name="popover-caret"
-        :class="cn('!size-6  absolute bottom-3 text-n1/77 stroke-[0.5] stroke-b4 drop-shadow-xs mask-clip-bottom', props.class)" />
+        name="formkit:caretdown"
+        :class="cn('!size-full z-0 icon absolute bottom-[8px] text-neutral/77 invert opacity-20  stroke-[0.5]  drop-shadow-xs', props.class)" />
+
+      <icon
+        name="formkit:caretdown"
+        :class="cn('!size-full z-1 icon absolute bottom-[9px] text-neutral/77  stroke-[0.5]  drop-shadow-xs mask-t-from-66% mask-t-to-70%', props.class)" />
     </div>
   </PopoverArrow>
 </template>

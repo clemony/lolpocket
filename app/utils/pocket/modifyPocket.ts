@@ -11,15 +11,13 @@ export function deletePocket(pocket) {
   const index = ps.pockets.findIndex(p => p === pocket)
   console.log('💠 - deletePocket - inPocket:', inPocket)
 
-  ps.trashFolder.push(pocket)
   pocket.location.folder = 'trash'
-  ps.pockets.splice(index, 1)
 
   if (inPocket) {
     navigateTo('/pockets')
   }
 
-  if (as.settings.alertNewPocket) {
+  if (as.settings.alertDeletePocket) {
     const newPocketToast = toast.success(
       `Pocket ${pocket.name} sent to trash.`,
       {
@@ -41,7 +39,7 @@ export function deletePocket(pocket) {
       pocketName: pocket.name,
     }
 
-    saveNotification( 'deletePocket', vars)
+    saveNotification('deletePocket', vars)
   }
 }
 
@@ -58,8 +56,6 @@ export function duplicatePocket(original: Pocket): Pocket {
 
   newPocket.key = toID()
   newPocket.name = `${original.name} (copy)`
-  newPocket.dateCreated = createDateObject()
-  newPocket.dateUpdated = createDateObject()
 
   usePocketStore().pockets.push(newPocket)
   return newPocket
@@ -69,13 +65,6 @@ export function duplicatePocket(original: Pocket): Pocket {
 
 export function editPocket(pocket: Pocket) {
   // ts.selectedPocket = pocket
-}
-
-// get
-
-export function getPocket(key) {
-  const ps = usePocketStore()
-  return ps.pockets.find((pocket: Pocket) => pocket.key === key)
 }
 
 // CHAMPS

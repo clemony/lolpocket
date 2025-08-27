@@ -1,9 +1,9 @@
 import fs from 'node:fs'
 import path from 'node:path'
-import type { Champion } from '../../shared/types/types-champion'
-import { markUpdate } from '../utils/mark-update'
+import { markUpdate } from '..'
+import type { Champion } from '../../shared/types/types.champion'
 
-const outputFile = path.resolve('./app/data/index/champion-title-index.ts')
+const outputFile = path.resolve('./shared/appdata/index/champion-title-index.ts')
 
 const champs = JSON.parse(
   fs.readFileSync('./data/raw/champions-raw.json', 'utf-8'),

@@ -1,8 +1,9 @@
 <script setup lang="ts">
 const cs = useChampStore()
+const { filters, setFilter, filtered } = useItemFilter()
 function reset() {
-  cs.championFilter.role = null
-  console.log('💠 - reset -  cs.championFilter.role:', cs.championFilter.role)
+  filters.role = null
+  console.log('💠 - reset -  filters.role:', filters.role)
 }
 </script>
 
@@ -17,7 +18,7 @@ function reset() {
         class="grow flex mask-left-sm flex-nowrap overflow-x-auto max-w-160 gap-3 mt-3 px-10 pb-4 pt-2">
         <button
           class="btn btn-square btn-sm !text-5 rounded-md font-normal"
-          :class="{ hidden: !cs.championFilter.role }">
+          :class="{ hidden: !filters.role }">
           <icon
             name="x-sm"
             class="stroke-[1.3]"
@@ -27,12 +28,12 @@ function reset() {
         <label
           v-for="(role, i) in championRoles"
           :key="role + i"
-          class="btn has-checked:!bg-n1 has-checked:!text-nc has-checked:!border-n1 !rounded-lg-2 !bg-b2/20 shadow-sm shadow-black/7 border-b2 hover:!border-b3 hover:scale-110  transition-all duration-300
+          class="btn has-checked:!bgneutral has-checked:!text-nc has-checked:!borderneutral !rounded-lg-2 !bg-b2/20 shadow-sm shadow-black/7 border-b2 hover:!border-b3 hover:scale-110  transition-all duration-300
         hover:drop-shadow-sm
-        hover:!bg-b3/40 has-checked:!shadow-n1/20 btn-sm !text-3 mr-0 rounded-md font-medium tracking-normal capitalize checked:!shadow-sm"
-          :class="{ hidden: cs.championFilter.role && role != cs.championFilter.role }">
+        hover:!bg-b3/40 has-checked:!shadowneutral/20 btn-sm !text-3 mr-0 rounded-md font-medium tracking-normal capitalize checked:!shadow-sm"
+          :class="{ hidden: filters.role && role != filters.role }">
           <input
-            v-model="cs.championFilter.role"
+            v-model="filters.role"
             class="hidden peer"
             :value="role"
             type="radio"
@@ -45,7 +46,7 @@ function reset() {
     <ScrollBar />
 
     <div
-      v-if="!cs.championFilter.role"
+      v-if="!filters.role"
       class="absolute h-13 bg-b1 w-6 -left-4 top-2 grid place-items-center">
       <icon
         name="left-sm"
@@ -53,7 +54,7 @@ function reset() {
     </div>
 
     <div
-      v-if="!cs.championFilter.role"
+      v-if="!filters.role"
       class="absolute h-13 bg-b1 w-6 -right-4 top-2 grid place-items-center">
       <icon
         name="right-sm"

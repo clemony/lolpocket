@@ -1,12 +1,6 @@
 <script lang="ts" setup>
 const route = useRoute()
-
-const pocket = computedAsync (() => {
-  const a = getPocket(route.params.pocketKey)
-  console.log('💠 - pocket - a:', a)
-  return a
-})
-
+const pocket = computed(() => ps().getPocket(String(route.params.pocketKey)))
 const pocketNav = ref()
 
 onMounted (() => {

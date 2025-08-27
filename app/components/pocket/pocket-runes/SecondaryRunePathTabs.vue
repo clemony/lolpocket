@@ -11,7 +11,7 @@ const set = computed(() => pocket.runes[rs.selectedRuneSet])
 
 <template>
   <!-- secondary trigger start  -->
-  <Tabs v-model:model-value="set[1].path">
+  <!--   <Tabs v-model:model-value="set[1].path">
     <IndicatorTabsList class=" h-18 justify-evenly grid-cols-5 w-full field-box relative">
       <PathTabTrigger
         v-for="path in paths"
@@ -20,10 +20,10 @@ const set = computed(() => pocket.runes[rs.selectedRuneSet])
         :class="{ 'pointer-events-none [&_img]:opacity-30': set[0].path == path }"
         :disabled="set[0].path == path"
         :value="path">
-      </PathTabTrigger>
+      </PathTabTrigger> -->
 
-      <!-- primary indicator  -->
-      <Tabs v-model:model-value="set[0].path">
+  <!-- primary indicator  -->
+  <!-- <Tabs v-model:model-value="set[0].path">
         <IndicatorTabsList class="absolute top-0 left-0 pointer-events-none h-19 justify-evenly grid-cols-5 w-full  bg-transparent shadow-none inset-shadow-none border-none">
           <TabsTrigger
             v-for="path in paths"
@@ -34,11 +34,11 @@ const set = computed(() => pocket.runes[rs.selectedRuneSet])
 
           <TabIndicator round-disabled />
         </IndicatorTabsList>
-      </Tabs>
+      </Tabs> -->
 
-      <TabIndicator round />
+  <!--       <TabIndicator round />
     </IndicatorTabsList>
-  </Tabs>
-
+  </Tabs> -->
+  d
   <!-- primary end -->
 </template>

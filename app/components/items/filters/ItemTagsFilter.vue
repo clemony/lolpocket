@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { itemTags } from '~/utils/filter/itemFilters'
 
+const { state } = defineProps<{
+  state: any
+}>()
 const is = useItemStore()
-
+const tags = ref()
 function handleReset() {
-  is.itemFilter.tags = null
   is.itemGridApi?.refreshCells()
 }
 // TODO FIx this for ag grid rfresh
@@ -32,10 +34,10 @@ function handleChange() {
       v-tippy="{ content: tag.displayName }"
       :aria-label="tag.id"
       class="size-fit grid place-items-center   btn !size-14  btn-xl  mr-0 btn-square  "
-      :class="{ '!bg-n1 !border-n1 !shadow-n1/20 !shadow-sm order-first  ml-20.5': is.itemFilter.tags && is.itemFilter.tags.includes(tag.id), 'first-of-type:ml-20.5': !is.itemFilter.tags }">
+      :class="{ '!bgneutral !borderneutral !shadowneutral/20 !shadow-sm order-first  ml-20.5': state.filters.tags && state.filters.tags.includes(tag.id), 'first-of-type:ml-20.5': !state.filters.tags }">
 
       <input
-        v-model="is.itemFilter.tags"
+        v-model="tags"
         class="peer hidden absolute"
         type="radio"
         :value="tag.id"
@@ -45,7 +47,7 @@ function handleChange() {
       <component
         :is="`i-${tag.icon}`"
         class="size-6.5 drop-shadow-sm"
-        :class="{ '!text-nc ': is.itemFilter.tags && is.itemFilter.tags.includes(tag.id), '!size-5 opacity-80': tag.id == 'Movement' }" />
+        :class="{ '!text-nc ': state.filters.tags && state.filters.tags.includes(tag.id), '!size-5 opacity-80': tag.id == 'Movement' }" />
 
     </label>
   </transition-slide>

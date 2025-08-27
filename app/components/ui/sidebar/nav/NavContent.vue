@@ -41,7 +41,7 @@ function closeAndNavigate(link: string) {
     <SidebarMenuButton
       size="lg"
       variant="default"
-      class="capitalize order-first mx-3 mt-3 mb-1 font-medium [&_svg]:!size-5.25"
+      class="capitalize w-4/5 order-first mx-3 mt-3 mb-1 font-medium [&_svg]:!size-5.25"
       @click="navigateTo('/nexus')">
       <icon
         name="nexus" />
@@ -53,7 +53,7 @@ function closeAndNavigate(link: string) {
       :link-object="linkObject" />
 
     <!-- <Separator class="self-end mx-4 " /> -->
-    <!--     <SidebarGroup>
+    <!--  <SidebarGroup>
       <SidebarGroupContent>
         <SidebarMenuButton
           size="lg"

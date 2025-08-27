@@ -58,7 +58,7 @@ export const itemTags = [
   },
   {
     id: 'Lifesteal_vamp',
-    displayName: 'Steal & Vamp',
+    displayName: 'Lifesteal & Omnivamp',
     icon: 'stats-vamp',
     color: '--color-domination',
   },

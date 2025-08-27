@@ -48,7 +48,7 @@ const dialogInitialState = {
     v-bind="$attrs"
     :align="props.align"
     :align-offset="props.alignOffset"
-    :class="cn('bg-n1/73 backdrop-blur-lg **:text-nc border-b3/50 border rounded-xl min-w-44 px-1.5 py-1.5', props.class)">
+    :class="cn('bgneutral/73 backdrop-blur-lg **:text-nc border-b3/50 border rounded-xl min-w-44 px-1.5 py-1.5', props.class)">
     <div>
       <slot />
     </div>

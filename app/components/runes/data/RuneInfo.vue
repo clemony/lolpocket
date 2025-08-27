@@ -94,10 +94,10 @@ const rune = computed(() => {
     }
 
     .img-wrapper .link-icon {
-      @apply bg-n1 top-[4rem] right-[-0.01rem] z-20 size-[1.5rem] shadow-md transition-all duration-500;
+      @apply bgneutral top-[4rem] right-[-0.01rem] z-20 size-[1.5rem] shadow-md transition-all duration-500;
     }
     .link-set:hover .link-icon {
-      @apply ring-n1 ring-offset-n1 rotate-180 ring-2;
+      @apply ringneutral ring-offsetneutral rotate-180 ring-2;
     }
   }
 
@@ -111,7 +111,7 @@ const rune = computed(() => {
     }
 
     .img-wrapper .link-icon {
-      @apply bg-n1 top-[2.17rem] right-[-0.01rem] z-20 size-[1.5rem] shadow-md transition-all duration-500;
+      @apply bgneutral top-[2.17rem] right-[-0.01rem] z-20 size-[1.5rem] shadow-md transition-all duration-500;
     }
 
     #runeImg {
@@ -119,7 +119,7 @@ const rune = computed(() => {
     }
 
     .link-set:hover .link-icon {
-      @apply ring-n1 ring-offset-n1 rotate-180 ring-2;
+      @apply ringneutral ring-offsetneutral rotate-180 ring-2;
     }
   } */
 </style>

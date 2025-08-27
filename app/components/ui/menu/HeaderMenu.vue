@@ -17,7 +17,6 @@ function handleClick(mode) {
 
 function handleAddClick() {
   const ps = usePocketStore()
-  ps.newPocketOpen = true
   emit('update:modelValue')
 }
 

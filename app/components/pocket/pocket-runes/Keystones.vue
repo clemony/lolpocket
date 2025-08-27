@@ -12,7 +12,7 @@ const set = computed(() => pocket.runes[rs.selectedRuneSet])
   <Field
     title="Keystone"
     class="  h-28   w-114 max-w-114 relative">
-    <RadioGroup
+    <!-- <RadioGroup
       v-model="set.keystone"
       class="w-114">
       <transition-slide
@@ -50,11 +50,11 @@ const set = computed(() => pocket.runes[rs.selectedRuneSet])
 
         </label>
       </transition-slide>
-      <!--
+
       <div  class="size-full grid grid-cols-3 py-4">
         <Placeholder v-for="i in 3" :key="i" class="size-18 rounded-full place-self-center" />
-      </div> -->
-    </RadioGroup>
+      </div>
+    </RadioGroup> -->
   </Field>
 </template>
 

@@ -34,7 +34,7 @@ const selectedSpell = computed (() => ix.spellById(selectedSpellId.value))
 
               <img
                 :src="`/img/spells/${spell.name}.webp`"
-                class="size-22 rounded-lg shadow-sm inset-shadow-sm shadow-black/20 border border-b3 peer-checked:border-n1/90" />
+                class="size-22 rounded-lg shadow-sm inset-shadow-sm shadow-black/20 border border-b3 peer-checked:borderneutral/90" />
 
               <input
                 v-model="selectedSpellId"

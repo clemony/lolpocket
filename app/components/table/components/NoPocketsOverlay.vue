@@ -14,7 +14,7 @@
 
       <button
         v-tippy="{ content: 'Create Pocket', side: 'bottom' }"
-        class="btn !pointer-events-auto btn-neutral rounded-md  flex btn-md  hover:text-nc hover:!bg-n1/80 focus:text-nc active:text-nc !text-4 hover:text-nc">
+        class="btn !pointer-events-auto btn-neutral rounded-md  flex btn-md  hover:text-nc hover:!bgneutral/80 focus:text-nc active:text-nc !text-4 hover:text-nc">
         Here's a button.
       </button>
     </div>

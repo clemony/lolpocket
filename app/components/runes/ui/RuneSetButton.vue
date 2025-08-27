@@ -18,7 +18,7 @@ onMounted (async () => {
   await rs.selectedRuneSet
 })/*
     v-tippy="{content: h(menu, {pocket: pocket, set: set}),   interactive: true, followCursor: false,}" */
-
+/*
 const bgStyle = computed (() => {
   if (set != pocket.runes[rs.selectedRuneSet] || route.name != 'pocket runes')
     return
@@ -26,14 +26,14 @@ const bgStyle = computed (() => {
   return {
     backgroundImage: `linear-gradient(-130deg, var(--color-${set[0].path.toLowerCase()}), var(--color-${set[1].path.toLowerCase()}) )`,
   }
-})
+}) */
 </script>
 
 <template>
-  <div
+  <!-- <div
     v-if="set"
     :key="setKey"
-    :class="cn('relative !pointer-events-auto size-20 cursor-pointer transition-all overflow-hidden duration-500 grid  hover:ring hover:ring-n1/40  aspect-square rounded-xl  place-items-center overflow-visible hover:!bg-b2/60 ease-out hover:!border-b3/30 z-0 *:z-2 ', className, { 'tldr-50  ring ring-b3/60  inset-shadow-sm after:size-full after:absolute after:rounded-xl after:z-1 after:bg-b1/65  ': set == pocket.runes[rs.selectedRuneSet] && route.name == 'pocket runes' })"
+    :class="cn('relative !pointer-events-auto size-20 cursor-pointer transition-all overflow-hidden duration-500 grid  hover:ring hover:ringneutral/40  aspect-square rounded-xl  place-items-center overflow-visible hover:!bg-b2/60 ease-out hover:!border-b3/30 z-0 *:z-2 ', className, { 'tldr-50  ring ring-b3/60  inset-shadow-sm after:size-full after:absolute after:rounded-xl after:z-1 after:bg-b1/65  ': set == pocket.runes[rs.selectedRuneSet] && route.name == 'pocket runes' })"
     :style="bgStyle">
     <input
       v-model="rs.selectedRuneSet"
@@ -66,7 +66,7 @@ const bgStyle = computed (() => {
           class=" shrink-0 h-6 w-auto object-contain drop-shadow-sm  transition-all duration-200 dst" />
       </div>
     </div>
-  </div>
+  </div> -->c
 </template>
 
 <style scoped>

@@ -27,7 +27,7 @@ const as = useAccountStore()
           v-if="as?.loggedIn && as.account.puuid"
           v-tippy="'Riot ID Connected!'"
           size="xl"
-          variant="n1"
+          variant="neutral"
           class="items-center w-full h-11 gap-3 -ml-0.25">
           <div class="flex items-center grow gap-4 drop-shadow-sm">
             <h1

@@ -20,7 +20,7 @@ export interface RuneIndex {
   path: string
 }
 
-export interface PathRunes {
+/* export interface PathRunes {
   1: number | null
   2: number | null
   3: number | null
@@ -40,7 +40,7 @@ export interface RuneSet {
 export interface PathSet {
   path: string | null
   runes: PathRunes
-}
+} */
 
 export interface ShardIndex {
   slot: number
