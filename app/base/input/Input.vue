@@ -31,7 +31,8 @@ const modelValue = useVModel(props, 'modelValue', emits, {
     <slot />
     <input
       v-bind="$attrs"
-      v-model="modelValue" />
+      v-model="modelValue"
+      :autofocus="false" />
     <slot name="badge" />
   </label>
 </template>

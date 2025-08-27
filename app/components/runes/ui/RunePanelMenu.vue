@@ -12,13 +12,13 @@ function handleDelete() {
   deleteRuneSet(props.pocket, props.set)
 }
 
-function handleNewSet() {
+/* function handleNewSet() {
   const a = newRuneSet(pocket.value.key)
   nextTick(() => {
     const b = pocket.value.runes.findIndex(s => s == a)
     rs.selectedRuneSet = b
   })
-}
+} */
 
 // TODO MOVE
 </script>

@@ -15,7 +15,7 @@ watchEffect(() => {
 <template>
   <button
     v-tippy="'Search'"
-    :class="cn('flex group bg-b1/50 w-20 flex-nowrap text-nowrap !cursor-text items-center flex self-center items-center h-8 border border-b4/60 pl-2.75 pr-2 rounded-xl  transition-colors text-2  mx-1 duration-150 hover:ring-n1/50  hover:ring-1 z-1 inset-shadow-xs border', props.class)"
+    :class="cn('flex group bg-b1/50 w-20 flex-nowrap text-nowrap !cursor-text items-center flex self-center items-center h-8 border border-b4/60 pl-2.75 pr-2 rounded-xl  transition-colors text-2  mx-1 duration-150 hover:ringneutral/50  hover:ring-1 z-1 inset-shadow-xs border', props.class)"
     class=""
     @click.stop="us.commandOpen = true">
     <span class="relative size-5 grid place-items-center -left-0.25">

@@ -7,13 +7,12 @@ export default defineAppConfig({
     class: 'text-[var(--color-bc)] shrink-0 pointer-events-none',
     size: '15px',
 
-    customize: (content: string, name: string, prefix: string, provider: string) => {
+    /*     customize: (content: string, name: string, prefix: string, provider: string) => {
       if (prefix !== 'lucide') {
-        return content // No changes for non-Lucide icons
+        return content
       }
-      // Apply stroke-width only for Lucide icons
       return content.replace(/stroke-width="[^"]*"/g, `stroke-width="1.8"`)
-    },
+    }, */
     aliases: {
       // math
       'add': 'teenyicons:add-outline',
@@ -53,10 +52,8 @@ export default defineAppConfig({
       'arrow-up': 'teenyicons:arrow-up-small-outline',
       'arrow-left': 'mynaui:arrow-left',
       'arrow-right': 'mynaui:arrow-right',
-      'popover-caret': 'fa:caret-down',
-      'popover-caret-up': 'fa:caret-up',
-      'expand': 'lucide:panel-left-close',
-      'collapse': 'lucide:panel-right-close',
+      'expand': 'lucide:arrow-right-from-line',
+      'collapse': 'lucide:arrow-left-from-line',
 
       // actions
       'log-in': 'lucide:log-in',
@@ -67,7 +64,7 @@ export default defineAppConfig({
 
       // menu
       'more': 'lucide:ellipsis',
-      'more-vertical': 'radix-icons:dots-vertical',
+      'more-vertical': 'lucide:ellipsis-vertical',
       'reset': 'mynaui:refresh',
       'settings': 'lucide:settings-2',
       'gear': 'lucide:settings',
@@ -79,17 +76,18 @@ export default defineAppConfig({
       'filter': 'lucide:list-filter',
       'refresh': 'radix-icons:reload',
       'copy': 'lucide:copy',
-      'export': 'radix-icons:share-2',
+      'export': 'lucide:share',
       'menu': 'lucide:menu',
       'gallery': 'lucide:gallery-vertical-end',
 
       // editing
       'backspace': 'iconamoon:backspace-light',
       'edit': 'material-symbols-light:edit-square-outline',
+      'edit-line': 'lucide:pen-line',
       'erase': 'radix-icons:eraser',
       'clip': 'teenyicons:attach-outline',
-      'trash': 'streamline:recycle-bin-2',
-      'archive': 'teenyicons:archive-outline',
+      'trash': 'lucide:trash-2',
+      'archive': 'lucide:archive',
 
       // folder
       'folder-delete': 'lucide:folder-x',

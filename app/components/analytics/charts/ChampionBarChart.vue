@@ -8,7 +8,7 @@ const { champions } = defineProps<{
 }>()
 
 const styles = getComputedStyle(document.documentElement)
-ChartJS.defaults.color = styles.getPropertyValue('--color-n1')
+ChartJS.defaults.color = styles.getPropertyValue('--colorneutral')
 ChartJS.defaults.font.weight = 400
 ChartJS.defaults.scale.grid.color = getColorFromVariable('--color-b3')
 
@@ -33,8 +33,8 @@ const options = {
       bottom: 60,
     },
   },
-  backgroundColor: getColorFromVariable('--color-n1'),
-  color: getColorFromVariable('--color-n1'),
+  backgroundColor: getColorFromVariable('--colorneutral'),
+  color: getColorFromVariable('--colorneutral'),
   maxBarThickness: 32,
   barThickness: 32,
   responsive: true,

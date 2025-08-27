@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { vElementHover } from '@vueuse/components'
 import { useSidebar } from 'base/sidebar/sidebar-index'
 
 const { isMobile, open } = useSidebar()
@@ -8,14 +9,28 @@ function closeAndNavigate(link: string) {
 }
 
 const user = useSupabaseUser()
+const ddOpen = shallowRef(false)
+
+function onHover() {
+  () => ddOpen.value = true
+}
+
+const router = useRouter()
+
+const routes = computed (() => {
+  return router.getRoutes().filter(r => r.path.match(/\/settings.*/g))
+})
+console.log('routes: ', routes)
 </script>
 
 <template>
   <SidebarMenu>
     <SidebarMenuItem>
-      <DropdownMenu>
-        <DropdownMenuTrigger as-child>
+      <DropdownMenu v-model:open="ddOpen">
+        <DropdownMenuTrigger
+          as-child>
           <SidebarMenuButton
+            v-element-hover="[() => ddOpen = true, { delayEnter: 200 }]"
             size="icon"
             class="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground md:size-11 shrink-0 md:p-0 group/menu">
             <SummonerIcon class="size-full *:size-full text-nc rounded-lg grayscale transition-all duration-200 group-hover/menu:grayscale-0 group-data-[state=open]/menu:grayscale-0" />

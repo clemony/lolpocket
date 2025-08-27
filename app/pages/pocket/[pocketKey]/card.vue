@@ -4,8 +4,8 @@ import type { ZoomableEvent } from 'vue-zoomable'
 import VueZoomable from 'vue-zoomable'
 import 'vue-zoomable/dist/style.css'
 
-const { pocket } = defineProps<{
-  pocket: Pocket
+const { card } = defineProps<{
+  card: Card
 }>()
 
 definePageMeta({
@@ -19,12 +19,12 @@ const ps = usePocketStore()
 // TODO nuxt bg here
 
 const fontClass1 = computed (() => {
-  const a = fonts.find(f => f.id == pocket.card.font[0])
+  const a = fonts.find(f => f.id == card.font[0])
   return ''
   a.cardClass ? a.cardClass : ''
 })
 const fontClass2 = computed (() => {
-  const a = fonts.find(f => f.id == pocket.card.font[1])
+  const a = fonts.find(f => f.id == card.font[1])
   return ''
   a.cardClass ? a.cardClass : ''
 })
@@ -40,10 +40,10 @@ const pocketCardRef = ref(null)
 onMounted (() => {
   ps.pocketCardRef = pocketCardRef.value
 })
-// getSplash(pocket.card.splash) ||
+// getSplash(card.splash) ||
 const img = useImage()
 const splash = computed (() => 'https://universe.communitydragon.org/events/2024/anima-squad-embed-2024/images/bg-index-index.2630f6.jpg')
-console.log('💠 - pocket.card.splash:', pocket.card.splash)
+console.log('💠 - card.splash:', card.splash)
 </script>
 
 <template>
@@ -51,15 +51,15 @@ console.log('💠 - pocket.card.splash:', pocket.card.splash)
     <!--
 
       <div class="px-1 dst">
-        A simple, customizable build card for your pocket. Easily download, share, and reference a basic overview of your loadout.
+        A simple, customizable build card for your  Easily download, share, and reference a basic overview of your loadout.
       </div>
-      <Field :title="props.pocket.champions.children.length != 1 ? 'Champions' : 'Champion'">
+      <Field :title="props.champions.children.length != 1 ? 'Champions' : 'Champion'">
         <p class=" dst">
-          Select a main champion and splash art to display for this pocket.
+          Select a main champion and splash art to display for this
         </p>
         <div group class="grid grid-flow-row auto-cols-auto select-none h-fit pt-1  grid-cols-[repeat(auto-fill,minmax(60px,1fr))] justify-center place-items-center  gap-4 mx-auto w-full">
-          <template v-if="pocket.champions.children.length">
-            <template v-for="champion in pocket.champions.children" :key="champion.id">
+          <template v-if="champions.children.length">
+            <template v-for="champion in champions.children" :key="champion.id">
               <ChampionSplashDropdown :champion="champion" :pocket="pocket" />
             </template>
           </template>
@@ -75,8 +75,8 @@ console.log('💠 - pocket.card.splash:', pocket.card.splash)
         <LazySpellField :pocket="pocket" />
       </div>
       <ItemSetSelect
-        v-for="(set, i) in pocket.complete.items" :key="i"
-        :title="pocket.complete.items[i] && pocket.complete.items[i].name ? pocket.complete.items[i].name : 'Item Set'" class="p-0" :pocket="pocket" :index="useToNumber(i).value" />
+        v-for="(set, i) in card.items" :key="i"
+        :title="card.items[i] && card.items[i].name ? card.items[i].name : 'Item Set'" class="p-0" :pocket="pocket" :index="useToNumber(i).value" />
     </div> -->
 
     <VueZoomable
@@ -91,15 +91,15 @@ console.log('💠 - pocket.card.splash:', pocket.card.splash)
         id="pocket-card"
         ref="pocketCardRef"
         class="inset-shadow-sm border-b3/70 border h-300 shadow-smooth w-300 relative rounded-box object-contain  aspect-square "
-        :style="{ backgroundImage: `linear-gradient(130deg, ${pocket.card.color} 0%, #FFFFFF 60%)` }">
+        :style="{ backgroundImage: `linear-gradient(130deg, ${card.color} 0%, #FFFFFF 60%)` }">
         <div
           class="size-full overflow-hidden  rounded-2xl transition-all duration-500  mask-right-100"
-          :class="{ grayscale: pocket.card.filter == 'grayscale' }">
+          :class="{ grayscale: card.filter == 'grayscale' }">
           <div
             alt="pocket-card-bg"
             :style="{
               backgroundImage: `url(${img(splash, { quality: 100 })})`,
-              backgroundPositionX: `${pocket.card.align}%`,
+              backgroundPositionX: `${card.align}%`,
             }"
             class="size-full bg-cover  mask-top" />
         </div>
@@ -109,27 +109,27 @@ console.log('💠 - pocket.card.splash:', pocket.card.splash)
             <div class="">
               <h3
                 class="text-9 dst tracking-tight pl-3"
-                :style="{ fontFamily: pocket.card.font[1] }"
+                :style="{ fontFamily: card.font[1] }"
                 :class="fontClass2">
-                {{ pocket.champions[0] && pocket.champions[0] ? `${pocket.champions[0]}\'s` : '' }} Pocket
+                {{ card.champion ? `${card.champion}\'s` : '' }} Pocket
               </h3>
 
               <h1
                 class="text-12 tracking-tight drop-shadow-sm"
-                :style="{ fontFamily: pocket.card.font[0] }"
+                :style="{ fontFamily: card.font[0] }"
                 :class="fontClass1">
-                {{ pocket.name ?? '' }}
+                {{ ix().champNameByKey(card.champion) ?? '' }}
               </h1>
             </div>
 
             <div class="h-auto space-y-12 mt-20">
               <template
-                v-for="(set, i) in pocket.complete.items"
+                v-for="(set, i) in card.items"
                 :key="i">
-                <template v-if="set && set != undefined && set.items.length && set != null && set.items[0] != undefined && set.items[0] != 0">
-                  <CompleteItemSets
-                    :set="pocket.complete.items[i]"
-                    :pocket="pocket" />
+                <template v-if="set && set != undefined && card.items.length && set != null && card.items[0] != undefined && card.items[0] != null">
+                  <!-- CompleteItemSets
+                    :set="card.items[i]"
+                    :pocket="pocket" /> -->
                 </template>
               </template>
             </div>
@@ -137,8 +137,8 @@ console.log('💠 - pocket.card.splash:', pocket.card.splash)
         </div>
       </div>
     </VueZoomable>
-
-    <BasicCardSettings :pocket="pocket" />
+    <!--
+    <BasicCardSettings :pocket="pocket" /> -->
   </div>
 </template>
 

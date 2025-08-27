@@ -13,7 +13,7 @@ const viewLogin = ref(false)
       :button="true"
       variant="outline"
       size="lg"
-      class="hover:bg-n1 hover:text-nc !font-sans">
+      class="hover:bgneutral hover:text-nc !font-sans">
       <input
         v-model="viewLogin"
         type="checkbox"

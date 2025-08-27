@@ -6,23 +6,18 @@ const searchType = shallowRef('summoner')
   <SidebarContentWrapper
     title="Search"
     class="border-b-transparent">
-    <template #header>
-      <Tabs
-        v-model:model-value="searchType"
-        class="relative grid items-center">
-        <IndicatorTabsList class="auto-cols-max grid-flow-col h-9 !bg-b2  absolute -right-2 text-2 pointer-events-auto ">
-          <IndicatorTabsTrigger value="summoner">
-            Summoner
-          </IndicatorTabsTrigger>
-          <IndicatorTabsTrigger value="site">
-            Site
-          </IndicatorTabsTrigger>
-          <TabIndicator />
-        </IndicatorTabsList>
-      </Tabs>
-    </template>
-
-    <template #subheader>
+    <Tabs
+      v-model:model-value="searchType"
+      class="relative grid px-2 space-y-2 w-full items-center auto-rows-min">
+      <IndicatorTabsList class="auto-cols-fr self-start grid-flow-col h-10 !bg-b2  text-2 ">
+        <IndicatorTabsTrigger value="summoner">
+          Summoner
+        </IndicatorTabsTrigger>
+        <IndicatorTabsTrigger value="site">
+          Site
+        </IndicatorTabsTrigger>
+        <TabIndicator />
+      </IndicatorTabsList>
       <SummonerSearchBox
         v-if="searchType == 'summoner'"
         class="h-12 my-2" />
@@ -34,10 +29,11 @@ const searchType = shallowRef('summoner')
           class="size-full"
           placeholder="Search lolpocket..." />
       </SidebarInputWrapper>
-    </template>
-
-    <SidebarGroupContent class="w-full !flex flex-col items-start">
-      <SummonerSearchUserContent v-if="searchType == 'summoner'" />
-    </SidebarGroupContent>
+      <TabsContent
+        value="summoner"
+        class="w-full !flex flex-col items-start">
+        <SummonerSearchUserContent v-if="searchType == 'summoner'" />
+      </TabsContent>
+    </Tabs>
   </SidebarContentWrapper>
 </template>

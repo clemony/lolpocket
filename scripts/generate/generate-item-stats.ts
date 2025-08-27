@@ -1,6 +1,6 @@
 import fs from 'node:fs'
 import path from 'node:path'
-import { markUpdate } from '../utils/mark-update'
+import { markUpdate } from '..'
 
 interface Item {
   id: number
@@ -39,7 +39,7 @@ ${statRecordInterface}
 export const itemStatRecord: Record<number, StatRecord> = ${JSON.stringify(statIndex, null, 2)};
 `
 
-fs.writeFileSync('./app/data/index/item-stat-index.ts', output)
+fs.writeFileSync('./shared/appdata/index/item-stat-index.ts', output)
 
 console.log(
   '✅ item stat record and StatRecord interface written successfully.',

@@ -1,11 +1,11 @@
 import fs from 'node:fs'
 import path from 'node:path'
-import { markUpdate } from '../utils/mark-update'
+import { markUpdate } from '..'
 
 const raw = JSON.parse(fs.readFileSync('./data/raw/runes-raw.json', 'utf-8'))
 const outputIndex: Record<string, any> = {}
 
-const runeOutputDir = path.resolve('./app/data/records/runes')
+const runeOutputDir = path.resolve('./shared/appdata/records/runes')
 fs.rmSync(runeOutputDir, { recursive: true, force: true }) // clean old runes
 fs.mkdirSync(runeOutputDir, { recursive: true })
 
@@ -46,7 +46,7 @@ fs.writeFileSync('./data/runes.json', JSON.stringify(outputIndex, null, 2))
 
 // Optional: Write TypeScript file for static import support
 fs.writeFileSync(
-  './app/data/runes.ts',
+  './shared/appdata/runes.ts',
   `// ${markUpdate()}
 
 export const runePaths: PathRecord = ${JSON.stringify(outputIndex, null, 2)}`,

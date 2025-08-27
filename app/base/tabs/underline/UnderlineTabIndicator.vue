@@ -27,7 +27,7 @@ const forwarded = reactiveOmit(props, 'class')
         duration: 0.3,
       }"
       :class="cn('absolute -bottom-1 left-0 h-[2px] transition-all  px-2', props.class)">
-      <motion.div class="h-full w-full rounded-md bg-n1/50 h-2px " />
+      <motion.div class="h-full w-full rounded-md bgneutral/50 h-2px " />
     </motion.div>
   </TabsIndicator>
 </template>

@@ -11,15 +11,13 @@ export interface ChampionFilter {
   position?: string
   role?: string | null
   query: string | null
-  result: any[] | null
 }
 
 export interface ItemFilter {
   purchasable: boolean
-  rank: string | null
+  rank: string
   stats: string[] | null
-  tags: string | null
-  map: number | null
-  query: string | null
-  result: any[] | null
+  tags: string[] | null
+  map: number
+  query: string
 }

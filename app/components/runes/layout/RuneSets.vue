@@ -66,7 +66,7 @@ const primaryColor = computedAsync (() => {
             <icon name="tick-sm" class="size-5.5 peer-checked:opacity-100 opacity-0" />
 
             <div
-              class="[&_#blank]:peer-checked:ring-n1/15  grid grid-cols-2 w-22 gap-3 place-items-center justify-self-center   transition-all duration-300 peer-checked:opacity-100  [&_#blank]:peer-checked:opacity-80 ">
+              class="[&_#blank]:peer-checked:ringneutral/15  grid grid-cols-2 w-22 gap-3 place-items-center justify-self-center   transition-all duration-300 peer-checked:opacity-100  [&_#blank]:peer-checked:opacity-80 ">
               <img :src="set.primary.runes[0].name == 'empty' ? '/img/runes/blankRune.webp' : `/img/runes/${set.primary.path}/${set.primary.runes[0].name.replace(/\s/g, '')}.webp`" class="drop-shadow-soft h-10 w-auto aspect-square" :class="{ '!h-8.5': set.primary.runes[0].name == 'empty' }" />
 
               <img

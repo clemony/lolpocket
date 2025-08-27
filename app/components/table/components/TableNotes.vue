@@ -10,7 +10,7 @@ const props = defineProps<{
 }>()
 const ps = usePocketStore()
 // Get the pocket by its key
-const pocket = getPocket(props.params.data.key)
+const pocket = ps().getPocket(props.params.data.key)
 
 // Create a local ref for the text input
 const notesInput = ref<string>('')

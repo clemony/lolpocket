@@ -29,7 +29,7 @@ watchEffect(() => {
 
     <label
       v-show="champKey"
-      class="absolute inset-0 rounded-xl hover:ring-offset-2  text-left hover:ring-offset-b1/95 hover:ring-n1/60 overflow-hidden  opacity-0 pointer-events-none group-hover:opacity-100 bg-n1/50 text-nc transition-all duration-300 py-4 px-3.5 grid justify-start text-12 break-all hyphens-manual tracking-tighter font-bold leading-none text-wrap items-end whitespace-break-spaces">
+      class="absolute inset-0 rounded-xl hover:ring-offset-2  text-left hover:ring-offset-b1/95 hover:ringneutral/60 overflow-hidden  opacity-0 pointer-events-none group-hover:opacity-100 bgneutral/50 text-nc transition-all duration-300 py-4 px-3.5 grid justify-start text-12 break-all hyphens-manual tracking-tighter font-bold leading-none text-wrap items-end whitespace-break-spaces">
       {{ hyphenateChampionName(ix.champNameByKey(champKey)) }}
 
     </label>

@@ -49,7 +49,7 @@ export default defineNuxtConfig({
     'assets': fileURLToPath(new URL('./app/assets', import.meta.url)),
     'plugins': fileURLToPath(new URL('./app/plugins', import.meta.url)),
     'modules': fileURLToPath(new URL('./modules', import.meta.url)),
-    'appdata': fileURLToPath(new URL('./app/appdata', import.meta.url)),
+    'appdata': fileURLToPath(new URL('./shared/appdata', import.meta.url)),
     'db': fileURLToPath(new URL('./server/db', import.meta.url)),
     'db-schema': fileURLToPath(new URL('./server/db/schema', import.meta.url)),
     'routes': fileURLToPath(new URL('./app/routes/index', import.meta.url)),

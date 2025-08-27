@@ -5,13 +5,14 @@ const { id, base } = defineProps<{
 }>()
 
 const item = ref<Item>()
+console.log("🌱 - item:", item)
 
 watchEffect(async () => {
   if (!id)
     return
 
   try {
-    const module = await import(`data/records/items/${id}.ts`)
+    const module = await import(`../../../appdata/records/items/${id}.ts`)
     item.value = module.default || null
   }
   catch (err) {
@@ -24,8 +25,7 @@ watchEffect(async () => {
 <template>
   <div
     v-if="item"
-    class="px-3 py-2 bg-blend-darken max-h-[404px] overflow-hidden flex flex-col **:select-text"
-    :class="{ '**:text-bc': base, '**:text-nc': !base }">
+    class="px-3 py-2 max-h-[404px] overflow-hidden flex flex-col **:select-text">
     <div class="flex gap-4 pb-3 ">
       <div class="!size-14 rounded-lg aspect-square shrink-0 shadow-sm drop-shadow-sm ">
         <Img
@@ -38,20 +38,18 @@ watchEffect(async () => {
 
       <div class="flex flex-col  text-4 w-full">
         <div class=" flex items-center justify-between  gap-1">
-          <a
+          <Blink external
+variant="link"
             v-if="item.name"
-            v-tippy="'Official Wiki'"
-            :href="getWikiLink(item.name)"
+            :to="getWikiLink(item.name)"
             target="_blank"
-            alt="link to league wiki"
-            class=" flex items-center  w-full gap-1.5">
-            {{ item.name || '' }}
+            class="font-bold text-4 "
+            :title="`Official LoL Wiki - ${item.name}`">
+            {{ item.name }}
             <icon
               name="link-lg"
               class="size-3.75 dst" />
-
-            <Grow />
-          </a>
+          </Blink>
         </div>
 
         <div class="flex gap-1 ">
@@ -63,7 +61,7 @@ watchEffect(async () => {
 
           <div
             v-if="item && item.shop?.prices?.total"
-            class="flex items-end gap-1 text-2 !text-nc">
+            class="flex items-end gap-1 text-3 font-medium ">
             <Img
               img="/img/icons/gold-coin.webp"
               alt="coin"
@@ -91,7 +89,7 @@ watchEffect(async () => {
 
       <Separator
         v-if="!item.noEffects"
-        class=" mt-2 mb-2 bg-nc/10" />
+        class=" mt-2 mb-2 bg-white/60 " />
 
       <div v-if="item.passives?.length && item.noEffects != true">
         <ItemEffect

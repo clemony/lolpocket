@@ -69,7 +69,7 @@ onMounted (() => {
 
             <span
               v-if="item.value && item.value > 0"
-              class="indicator-item top-2 h-4.25 rounded-full grid place-items-center right-1.5 text-1 font-bold   px-1.25 leading-0 w-auto   group-data-[state=active]/tab:bg-n1  group-data-[state=active]/tab:drop-shadow-sm  group-data-[state=active]/tab:bg-n1/86 group-data-[state=active]/tab:!text-nc  group-data-[state=active]/tab:font-black">
+              class="indicator-item top-2 h-4.25 rounded-full grid place-items-center right-1.5 text-1 font-bold   px-1.25 leading-0 w-auto   group-data-[state=active]/tab:bgneutral  group-data-[state=active]/tab:drop-shadow-sm  group-data-[state=active]/tab:bgneutral/86 group-data-[state=active]/tab:!text-nc  group-data-[state=active]/tab:font-black">
               {{ item.value }}
             </span>
             <hicon
@@ -90,7 +90,7 @@ onMounted (() => {
         @click="us.activeSidebarContent = 'Account'">
         <SummonerIcon class="size-full  shrink-0 absolute" />
       </IndicatorTabsTrigger>
-   *:after:-bottom-2.5 *:after:rounded-full  *:after:absolute *:after:h-1 *:after:bg-n1 *:after:w-full -->
+   *:after:-bottom-2.5 *:after:rounded-full  *:after:absolute *:after:h-1 *:after:bgneutral *:after:w-full -->
 <!--       <TabIndicator
         v-show="us.activeSidebarContent"
         :class="cn('*:!bg-b3/53 self-center !py-0 overflow-visible *:size-11 *:mt-2 *:btn', { '*:rounded-full *:scale-100 *:after:-bottom-[11px]   *:-ml-0.75 *:ring  *:size-10 *:ring-b3 *:relative ': tabs == 'Account' })" />

@@ -34,7 +34,7 @@ watch(puuid, async (newPuuid) => {
 </script>
 
 <template>
-  <MaskLayout
+  <SplashLayout
     v-if="state?.summoner">
     <!--     <Teleport
       to="#layout-header"
@@ -75,5 +75,5 @@ watch(puuid, async (newPuuid) => {
     <template #footer>
       <SiteFooter />
     </template>
-  </MaskLayout>
+  </SplashLayout>
 </template>

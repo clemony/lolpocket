@@ -1,6 +1,6 @@
 /* import fs from 'node:fs'
 import type { ChampionLite, ChampionLiteRecord } from '../../shared/types/types-champion'
-import { markUpdate } from '../utils/mark-update'
+import { markUpdate } from  '..'
 import { normalize, normalizeArray } from '../utils/normalize-strings'
 
 const champions = JSON.parse(
@@ -57,7 +57,7 @@ const championsLite = Object.values(champions).reduce((acc, champ) => {
 }, {} as ChampionLiteRecord)
 
 fs.writeFileSync(
-  './app/data/records/champions-lite.ts',
+  './shared/appdata/records/champions-lite.ts',
   `// ${markUpdate()}
 
 export const championsLite: ChampionLite[] = ${JSON.stringify(Object.values(championsLite), null, 2)}`,
@@ -77,9 +77,8 @@ fs.writeFileSync(
  */
 
 import fs from 'node:fs'
-import type { ChampionLite, ChampionLiteRecord } from '../../shared/types/types-champion'
-import { markUpdate } from '../utils/mark-update'
-import { normalize, normalizeArray } from '../utils/normalize-strings'
+import { markUpdate, normalize, normalizeArray } from '..'
+import type { ChampionLite, ChampionLiteRecord } from '../../shared/types/types.champion'
 
 const champions = JSON.parse(
   fs.readFileSync('./data/raw/champions-raw.json', 'utf-8'),
@@ -135,7 +134,7 @@ const championsLite = Object.values(champions).reduce((acc, champ) => {
 }, {} as ChampionLiteRecord)
 
 fs.writeFileSync(
-  './app/data/records/champions-lite.ts',
+  './shared/appdata/records/champions-lite.ts',
   `// ${markUpdate()}
 
 export const championsLite: ChampionLite[] = ${JSON.stringify(Object.values(championsLite), null, 2)}`,

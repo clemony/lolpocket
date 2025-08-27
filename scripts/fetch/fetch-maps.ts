@@ -1,6 +1,7 @@
 import fs from 'node:fs'
 import { $fetch } from 'ofetch'
-import { markUpdate } from '../utils/mark-update'
+import { markUpdate } from '..'
+import type { MapIndex } from './../../shared/types/types.league'
 
 const url
   = 'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/maps.json'
@@ -12,7 +13,7 @@ const cleanedMapData: MapIndex[] = rawMapData
   .map(({ id, name, mapStringId }) => ({ id, name, mapStringId }))
 
 fs.writeFileSync(
-  './app/data/index/map-index.ts',
+  './shared/appdata/index/map-index.ts',
   `// ${markUpdate()}
 
 export const mapIndex: MapIndex[] = ${JSON.stringify(cleanedMapData, null, 2)}`,

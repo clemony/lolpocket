@@ -1,0 +1,370 @@
+// Updated Patch 25.16 - 08/14/2025 07:56:31 PM CDT
+
+export const runeIndex: RuneIndex[] = [
+  {
+    "id": 8112,
+    "key": "Electrocute",
+    "name": "Electrocute",
+    "path": "Domination"
+  },
+  {
+    "id": 8128,
+    "key": "DarkHarvest",
+    "name": "Dark Harvest",
+    "path": "Domination"
+  },
+  {
+    "id": 9923,
+    "key": "HailOfBlades",
+    "name": "Hail of Blades",
+    "path": "Domination"
+  },
+  {
+    "id": 8126,
+    "key": "CheapShot",
+    "name": "Cheap Shot",
+    "path": "Domination"
+  },
+  {
+    "id": 8139,
+    "key": "TasteOfBlood",
+    "name": "Taste of Blood",
+    "path": "Domination"
+  },
+  {
+    "id": 8143,
+    "key": "SuddenImpact",
+    "name": "Sudden Impact",
+    "path": "Domination"
+  },
+  {
+    "id": 8137,
+    "key": "SixthSense",
+    "name": "Sixth Sense",
+    "path": "Domination"
+  },
+  {
+    "id": 8140,
+    "key": "GrislyMementos",
+    "name": "Grisly Mementos",
+    "path": "Domination"
+  },
+  {
+    "id": 8141,
+    "key": "DeepWard",
+    "name": "Deep Ward",
+    "path": "Domination"
+  },
+  {
+    "id": 8135,
+    "key": "TreasureHunter",
+    "name": "Treasure Hunter",
+    "path": "Domination"
+  },
+  {
+    "id": 8105,
+    "key": "RelentlessHunter",
+    "name": "Relentless Hunter",
+    "path": "Domination"
+  },
+  {
+    "id": 8106,
+    "key": "UltimateHunter",
+    "name": "Ultimate Hunter",
+    "path": "Domination"
+  },
+  {
+    "id": 8351,
+    "key": "GlacialAugment",
+    "name": "Glacial Augment",
+    "path": "Inspiration"
+  },
+  {
+    "id": 8360,
+    "key": "UnsealedSpellbook",
+    "name": "Unsealed Spellbook",
+    "path": "Inspiration"
+  },
+  {
+    "id": 8369,
+    "key": "FirstStrike",
+    "name": "First Strike",
+    "path": "Inspiration"
+  },
+  {
+    "id": 8306,
+    "key": "HextechFlashtraption",
+    "name": "Hextech Flashtraption",
+    "path": "Inspiration"
+  },
+  {
+    "id": 8304,
+    "key": "MagicalFootwear",
+    "name": "Magical Footwear",
+    "path": "Inspiration"
+  },
+  {
+    "id": 8321,
+    "key": "CashBack",
+    "name": "Cash Back",
+    "path": "Inspiration"
+  },
+  {
+    "id": 8313,
+    "key": "PerfectTiming",
+    "name": "Triple Tonic",
+    "path": "Inspiration"
+  },
+  {
+    "id": 8352,
+    "key": "TimeWarpTonic",
+    "name": "Time Warp Tonic",
+    "path": "Inspiration"
+  },
+  {
+    "id": 8345,
+    "key": "BiscuitDelivery",
+    "name": "Biscuit Delivery",
+    "path": "Inspiration"
+  },
+  {
+    "id": 8347,
+    "key": "CosmicInsight",
+    "name": "Cosmic Insight",
+    "path": "Inspiration"
+  },
+  {
+    "id": 8410,
+    "key": "ApproachVelocity",
+    "name": "Approach Velocity",
+    "path": "Inspiration"
+  },
+  {
+    "id": 8316,
+    "key": "JackOfAllTrades",
+    "name": "Jack Of All Trades",
+    "path": "Inspiration"
+  },
+  {
+    "id": 8005,
+    "key": "PressTheAttack",
+    "name": "Press the Attack",
+    "path": "Precision"
+  },
+  {
+    "id": 8008,
+    "key": "LethalTempo",
+    "name": "Lethal Tempo",
+    "path": "Precision"
+  },
+  {
+    "id": 8021,
+    "key": "FleetFootwork",
+    "name": "Fleet Footwork",
+    "path": "Precision"
+  },
+  {
+    "id": 8010,
+    "key": "Conqueror",
+    "name": "Conqueror",
+    "path": "Precision"
+  },
+  {
+    "id": 9101,
+    "key": "AbsorbLife",
+    "name": "Absorb Life",
+    "path": "Precision"
+  },
+  {
+    "id": 9111,
+    "key": "Triumph",
+    "name": "Triumph",
+    "path": "Precision"
+  },
+  {
+    "id": 8009,
+    "key": "PresenceOfMind",
+    "name": "Presence of Mind",
+    "path": "Precision"
+  },
+  {
+    "id": 9104,
+    "key": "LegendAlacrity",
+    "name": "Legend: Alacrity",
+    "path": "Precision"
+  },
+  {
+    "id": 9105,
+    "key": "LegendHaste",
+    "name": "Legend: Haste",
+    "path": "Precision"
+  },
+  {
+    "id": 9103,
+    "key": "LegendBloodline",
+    "name": "Legend: Bloodline",
+    "path": "Precision"
+  },
+  {
+    "id": 8014,
+    "key": "CoupDeGrace",
+    "name": "Coup de Grace",
+    "path": "Precision"
+  },
+  {
+    "id": 8017,
+    "key": "CutDown",
+    "name": "Cut Down",
+    "path": "Precision"
+  },
+  {
+    "id": 8299,
+    "key": "LastStand",
+    "name": "Last Stand",
+    "path": "Precision"
+  },
+  {
+    "id": 8437,
+    "key": "GraspOfTheUndying",
+    "name": "Grasp of the Undying",
+    "path": "Resolve"
+  },
+  {
+    "id": 8439,
+    "key": "Aftershock",
+    "name": "Aftershock",
+    "path": "Resolve"
+  },
+  {
+    "id": 8465,
+    "key": "Guardian",
+    "name": "Guardian",
+    "path": "Resolve"
+  },
+  {
+    "id": 8446,
+    "key": "Demolish",
+    "name": "Demolish",
+    "path": "Resolve"
+  },
+  {
+    "id": 8463,
+    "key": "FontOfLife",
+    "name": "Font of Life",
+    "path": "Resolve"
+  },
+  {
+    "id": 8401,
+    "key": "ShieldBash",
+    "name": "Shield Bash",
+    "path": "Resolve"
+  },
+  {
+    "id": 8429,
+    "key": "Conditioning",
+    "name": "Conditioning",
+    "path": "Resolve"
+  },
+  {
+    "id": 8444,
+    "key": "SecondWind",
+    "name": "Second Wind",
+    "path": "Resolve"
+  },
+  {
+    "id": 8473,
+    "key": "BonePlating",
+    "name": "Bone Plating",
+    "path": "Resolve"
+  },
+  {
+    "id": 8451,
+    "key": "Overgrowth",
+    "name": "Overgrowth",
+    "path": "Resolve"
+  },
+  {
+    "id": 8453,
+    "key": "Revitalize",
+    "name": "Revitalize",
+    "path": "Resolve"
+  },
+  {
+    "id": 8242,
+    "key": "Unflinching",
+    "name": "Unflinching",
+    "path": "Resolve"
+  },
+  {
+    "id": 8214,
+    "key": "SummonAery",
+    "name": "Summon Aery",
+    "path": "Sorcery"
+  },
+  {
+    "id": 8229,
+    "key": "ArcaneComet",
+    "name": "Arcane Comet",
+    "path": "Sorcery"
+  },
+  {
+    "id": 8230,
+    "key": "PhaseRush",
+    "name": "Phase Rush",
+    "path": "Sorcery"
+  },
+  {
+    "id": 8224,
+    "key": "NullifyingOrb",
+    "name": "Axiom Arcanist",
+    "path": "Sorcery"
+  },
+  {
+    "id": 8226,
+    "key": "ManaflowBand",
+    "name": "Manaflow Band",
+    "path": "Sorcery"
+  },
+  {
+    "id": 8275,
+    "key": "NimbusCloak",
+    "name": "Nimbus Cloak",
+    "path": "Sorcery"
+  },
+  {
+    "id": 8210,
+    "key": "Transcendence",
+    "name": "Transcendence",
+    "path": "Sorcery"
+  },
+  {
+    "id": 8234,
+    "key": "Celerity",
+    "name": "Celerity",
+    "path": "Sorcery"
+  },
+  {
+    "id": 8233,
+    "key": "AbsoluteFocus",
+    "name": "Absolute Focus",
+    "path": "Sorcery"
+  },
+  {
+    "id": 8237,
+    "key": "Scorch",
+    "name": "Scorch",
+    "path": "Sorcery"
+  },
+  {
+    "id": 8232,
+    "key": "Waterwalking",
+    "name": "Waterwalking",
+    "path": "Sorcery"
+  },
+  {
+    "id": 8236,
+    "key": "GatheringStorm",
+    "name": "Gathering Storm",
+    "path": "Sorcery"
+  }
+]

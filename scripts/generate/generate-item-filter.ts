@@ -1,6 +1,5 @@
 import fs from 'node:fs'
-import { markUpdate } from '../utils/mark-update'
-import { normalizeArray } from '../utils/normalize-strings'
+import { markUpdate, normalizeArray } from '..'
 
 interface ItemLite {
   id: number
@@ -69,7 +68,7 @@ for (const item of Object.values(raw)) {
 
 // Output filters
 fs.writeFileSync(
-  './app/data/filters/item-filters.ts',
+  './shared/appdata/filters/item-filters.ts',
   `// ${markUpdate()}
 
 export const itemFilters = ${JSON.stringify(itemFilters, null, 2)}`,
@@ -77,7 +76,7 @@ export const itemFilters = ${JSON.stringify(itemFilters, null, 2)}`,
 
 // Optional: output aka map
 fs.writeFileSync(
-  './app/data/filters/item-aka.ts',
+  './shared/appdata/filters/item-aka.ts',
   `// ${markUpdate()}
 
 export const akaLookup = ${JSON.stringify(akaLookup, null, 2)}`,

@@ -1,8 +1,8 @@
 import fs from 'node:fs'
 import path from 'node:path'
-import type { FullSkinRecord, SkinRecord } from '../../shared/types/types-champion'
+import { markUpdate } from '..'
+import type { FullSkinRecord, SkinRecord } from '../../shared/types/types.champion'
 import { cleanImageLink, cleanImageNum } from '../utils/cleanImageLink'
-import { markUpdate } from '../utils/mark-update'
 
 const championsPath = path.resolve('./data/raw/champions-raw-meraki.json')
 
@@ -62,7 +62,7 @@ const primarySkinsTs = `// ${markUpdate()}
 
 export const baseSkin: SkinRecord = ${JSON.stringify(primarySkins, null, 2)}`
 
-fs.writeFileSync('./app/data/index/skins-full.ts', fullSkinsTs)
-fs.writeFileSync('./app/data/index/skins-base.ts', primarySkinsTs)
+fs.writeFileSync('./shared/appdata/index/skins-full.ts', fullSkinsTs)
+fs.writeFileSync('./shared/appdata/index/skins-base.ts', primarySkinsTs)
 
 console.log(`✅ skins-full.ts and skins-base.ts written as modules`)

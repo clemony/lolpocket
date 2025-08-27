@@ -1,6 +1,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
-import { normalize } from '../utils/normalize-strings'
+import { normalize } from '..'
+import type { Champion } from '../../shared/types/types.champion'
 
 const inputPath = path.resolve('./data/raw/champions-raw.json')
 const outputPath = path.resolve('./data/dev/unique-ability-resources.json')

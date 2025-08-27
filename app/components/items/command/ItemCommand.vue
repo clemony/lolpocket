@@ -22,6 +22,7 @@ function handleItem(e) {
   set.value[props.setIndex] = e
   emit('update:set', set.value)
 }
+const { filters, setFilter, filtered } = useItemFilter()
 </script>
 
 <template>
@@ -41,7 +42,7 @@ function handleItem(e) {
       <ItemSearch
         placeholder="Type or click a suggestion"
         input-class=" text-nc"
-        class="w-full rounded-t-lg z-2 sticky top-0 left-0   shadow-none h-13 [&_svg]:size-4 **:!text-nc !bg-accent border-n1/30 border-4"
+        class="w-full rounded-t-lg z-2 sticky top-0 left-0   shadow-none h-13 [&_svg]:size-4 **:!text-nc !bg-accent borderneutral/30 border-4"
         set-focus
         @update:query="e => e" />
 
@@ -49,7 +50,7 @@ function handleItem(e) {
         <LazyItemCommandTags />
 
         <TransitionExpand>
-          <div v-if="is.pItemFilter.rank == '' && !is.pItemFilter.stats.length && !is.pItemFilter.query">
+          <div v-if="filters.rank == '' && !filters.stats.length && !filters.query">
             <LazyItemCommandTypes />
 
             <Separator class="bg-accent mt-3 mb-1.5 " />
@@ -62,7 +63,7 @@ function handleItem(e) {
           tag="div"
           class="w-full justify-center flex">
           <div
-            v-if="is.pItemFilter.rank != '' || is.pItemFilter.stats.length || is.pItemFilter.query"
+            v-if="filters.rank != '' || filters.stats.length || filters.query"
             class="!flex flex-wrap justify-center gap-1.5 px-4 py-4 z-0">
             <LazyCalculatorFilteredItems
               class=" !size-15  z-0"

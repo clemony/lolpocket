@@ -5,7 +5,7 @@ const props = defineProps<{
 
 const ps = usePocketStore()
 // Get the pocket by its key
-const pocket = getPocket(props.params.data.key)
+const pocket = ps().getPocket(props.params.data.key)
 
 function select(e) {
   props.params.node.setSelected(e.target.checked)
@@ -32,7 +32,7 @@ function handlePin(pocket) {
       <input
         type="checkbox"
         :value="pocket"
-        class="checkbox checkbox-sm border-n1/60 rounded-sm border" />
+        class="checkbox checkbox-sm borderneutral/60 rounded-sm border" />
     </label>
   </div>
 </template>

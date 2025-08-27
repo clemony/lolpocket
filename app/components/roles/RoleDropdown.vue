@@ -13,7 +13,7 @@ const pocket = ref(props.pocket)
     <DropdownMenuTrigger as-child>
       <Button
         variant="ghost"
-        class="flex   aspect-square rounded-lg px-1 top-1.5 right-2 hover:bg-n1/50 size-10">
+        class="flex   aspect-square rounded-lg px-1 top-1.5 right-2 hover:bgneutral/50 size-10">
         <component
           :is="`i-roles-${pocket.roles}`"
           v-if="pocket.roles"

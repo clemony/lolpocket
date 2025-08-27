@@ -36,13 +36,13 @@ const options = {
     point: {
       hitRadius: 6,
       radius: 2,
-      backgroundColor: `${styles.getPropertyValue('--color-n1')}`,
-      borderColor: `${styles.getPropertyValue('--color-n1')}`,
+      backgroundColor: `${styles.getPropertyValue('--colorneutral')}`,
+      borderColor: `${styles.getPropertyValue('--colorneutral')}`,
       borderWidth: 1.5,
       hoverRadius: 4,
     },
     line: {
-      borderColor: `${styles.getPropertyValue('--color-n1')}`,
+      borderColor: `${styles.getPropertyValue('--colorneutral')}`,
       borderWidth: 1.5,
       tension: 0.35,
       cubicInterpolationMode: 'default' as const,

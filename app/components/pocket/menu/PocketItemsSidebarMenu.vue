@@ -12,7 +12,7 @@ const { pocket } = defineProps<{
       <Placeholder
         v-for="set in pocket.items"
         :key="set.name"
-        class="size-20 p-1.5 flex flex-wrap hover:ring-2 hover:ring-n1/40 cursor-pointer items-between pointer-events-auto justify-between !gap-0.75 !border-b3/50 border"
+        class="size-20 p-1.5 flex flex-wrap hover:ring-2 hover:ringneutral/40 cursor-pointer items-between pointer-events-auto justify-between !gap-0.75 !border-b3/50 border"
         @click="navigateTo(`/pocket/${pocket.key}/items`)">
         <template v-if="set.items && set.items?.length">
           <template

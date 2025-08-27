@@ -24,7 +24,7 @@ const selectedSpell = computed (() => {
 <template>
   <Popover>
     <PopoverTrigger
-      :class="cn('p-0 group/trig w-full  btn  hover:ring  hover:ring-n1/40 ', props.class)"
+      :class="cn('p-0 group/trig w-full  btn  hover:ring  hover:ringneutral/40 ', props.class)"
       @click.stop.prevent>
       <div
         class="overflow-hidden size-full rounded-lg"
@@ -56,7 +56,7 @@ const selectedSpell = computed (() => {
           v-for="ss in ix.spells"
           :key="ss.name"
           :disabled="selectedSpell.name == ss.name"
-          class="disabled:grayscale transition-all duration-400 disabled:inset-shadow-sm disabled:opacity-70 disabled:scale-80 shadow-sm size-16 rounded-lg border border-b3/30 hover:border-n1 hover:ring-2 hover:ring-b3/60 !cursor-pointer ring-offset-1 ring-offset-n1">
+          class="disabled:grayscale transition-all duration-400 disabled:inset-shadow-sm disabled:opacity-70 disabled:scale-80 shadow-sm size-16 rounded-lg border border-b3/30 hover:borderneutral hover:ring-2 hover:ring-b3/60 !cursor-pointer ring-offset-1 ring-offsetneutral">
           <label class=" !cursor-pointer ">
             <input
               id="spells"

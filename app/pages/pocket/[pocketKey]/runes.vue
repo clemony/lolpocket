@@ -20,7 +20,7 @@ const {
 
 const set = computed(() => pocket.runes[rs.selectedRuneSet])
 
-function handlePath1() {
+/* function handlePath1() {
   set.value[0].runes = { 1: null, 2: null, 3: null }
   set.value.keystone = null
 
@@ -28,11 +28,11 @@ function handlePath1() {
   if (set.value[0].path === set.value[1].path)
     set.value[1].path = pathList[index === 4 ? 0 : index + 1]
 }
-
-function handlePath2() {
+ */
+/* function handlePath2() {
   set.value[1].runes = { 1: null, 2: null, 3: null }
 }
-
+ */
 function handleDelete() {
   deleteRuneSet(pocket, set.value)
   rs.selectedRuneSet = 0
@@ -64,7 +64,7 @@ function handleDelete() {
     <div class="size-full relative @container justify-center">
       <div class="flex gap-10 absolute overflow-hidden inset-0 top-0 left-0  w-full justify-center  max-h-[95vh] flex-wrap flex gap-18 px-12 pt-12 ">
         <div class="flex flex-col gap-7 w-1/2 min-w-90 flex   max-w-114 ">
-          <RunesBlurb
+          <!--  <RunesBlurb
             layout-id="path1"
             :current-path=" set[0].path " />
 
@@ -81,13 +81,13 @@ function handleDelete() {
               <TabIndicator round />
             </IndicatorTabsList>
           </Tabs>
-
+ -->
           <Keystones
             :set="set"
             :pocket="pocket"
             :runes="getKeystones(computed (() => set)).value" />
 
-          <LazyPocketRuneSelect
+          <!--          <LazyPocketRuneSelect
             :path-runes="set[0].runes"
             :runes="getPrimarySlots(computed (() => set)).value"
             :path="set[0].path"
@@ -107,7 +107,7 @@ function handleDelete() {
             :path-runes="set[1].runes"
             limit
             :runes="getSecondarySlots(computed (() => set)).value"
-            :path="set[1].path" />
+            :path="set[1].path" /> -->
 
           <RuneShards :pocket="pocket" />
         </div>

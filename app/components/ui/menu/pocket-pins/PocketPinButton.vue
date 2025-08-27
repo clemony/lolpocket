@@ -17,7 +17,7 @@ const pocket = computed (() => ps.pockets.find(p => p.key == pocketKey) ?? null)
 
   <div
     v-else
-    class="bg-linear-to-br from-n1/80 to-n1 py-1.5 px-2 size-full ">
+    class="bg-linear-to-br fromneutral/80 toneutral py-1.5 px-2 size-full ">
     <p class="justify-end flex gap-2 text-nc font-semibold items-center font-mono text-2 w-full">
       <span> LP</span>
     </p>

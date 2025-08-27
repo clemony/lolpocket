@@ -10,7 +10,7 @@ const props = defineProps<{
 const styles = getComputedStyle(document.documentElement)
 
 Chart.register(Title, Tooltip, BarElement, CategoryScale, LinearScale)
-Chart.defaults.color = styles.getPropertyValue('--color-n1')
+Chart.defaults.color = styles.getPropertyValue('--colorneutral')
 Chart.defaults.font.family = styles.getPropertyValue('--font-sans')
 Chart.defaults.font.weight = 400
 Chart.defaults.font.size = 16
@@ -19,8 +19,8 @@ const data = computed (() => {
   return props.data
 })
 const options = {
-  backgroundColor: styles.getPropertyValue('--color-n1'),
-  color: styles.getPropertyValue('--color-n1'),
+  backgroundColor: styles.getPropertyValue('--colorneutral'),
+  color: styles.getPropertyValue('--colorneutral'),
   maxBarThickness: 32,
   barThickness: 32,
   responsive: true,

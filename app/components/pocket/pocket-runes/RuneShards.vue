@@ -28,7 +28,7 @@ const ix = useIndexStore()
             /* struct  */
             'grid size-14 shrink-0 place-items-center cursor-pointer  rounded-full transition-all ring ring-b2 inset-shadow-xs duration-300 hover:bg-b3/40 group has-checked:shadow-outline    has-checked:bg-linear-to-br from-70% has-checked:from-b1 has-checked:to-b2/10 shadow-black/6  has-checked:hover:bg-b1/30 hover:inset-shadow-xs hover:inset-shadow-b3/70',
           ) ">
-        <input
+        <!--  <input
           v-if="shard.slot == 1"
           v-model="set.shards[1]"
           type="radio"
@@ -51,7 +51,7 @@ const ix = useIndexStore()
           :name="shard.name + shard.slot"
           :value="shard"
           class="peer hidden" />
-
+ -->
         <component
           :is="`i-stats-${shard.icon}`"
           :alt="`shard-${shard.name}`"

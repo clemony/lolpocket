@@ -21,7 +21,6 @@ const searchQuery = ref<string>('')
 const { results } = useSimpleSearch(
   ix().champions, // array or ref
   searchQuery,
-  { keys: ['name'], threshold: 0.3 },
 )
 </script>
 
@@ -46,7 +45,7 @@ const { results } = useSimpleSearch(
       <label
         v-for="champion in results"
         :key="champion.id"
-        :class="cn('hover-ring cursor-pointer relative rounded-lg size-26 overflow-hidden shadow-sm drop-shadow-sm', { 'scale-90  border  border-n1/60 ': pocket.champions.includes(champion.key) })">
+        :class="cn('hover-ring cursor-pointer relative rounded-lg size-26 overflow-hidden shadow-sm drop-shadow-sm', { 'scale-90  border  borderneutral/60 ': pocket.champions.includes(champion.key) })">
         <ChampionIcon
           :id="champion.id"
           :class="cn('size-full pointer-events-none', { 'contrast-110 opacity-65 grayscale': pocket.champions.includes(champion.key) })" />

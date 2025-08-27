@@ -13,15 +13,14 @@ function handleAddClick() {
 const keys = useMagicKeys()
 
 whenever(keys.shift_p, () => {
-  ps.newPocketOpen = true
+
 })
 </script>
 
 <template>
   <Btn
     v-tippy="'New Pocket'"
-    :class="cn('justify-start text-3 px-3.5 ', props.class)"
-    @click="addPocket()">
+    :class="cn('justify-start text-3 px-3.5 ', props.class)">
     <icon
       name="add-sm"
       class="size-5.5 opacity-70 stroke-[1.6]" />

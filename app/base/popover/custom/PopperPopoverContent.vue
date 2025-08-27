@@ -24,7 +24,6 @@ const emits = defineEmits<PopoverContentEmits>()
 const delegatedProps = reactiveOmit(props, 'class')
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
-console.log('💠 - forwarded:', forwarded)
 
 const variants = {
   visible: {
@@ -62,7 +61,9 @@ const wrapperVariants = {
 <template>
   <PopoverPortal :to="props.to">
     <AnimatePresence>
-      <PopoverContent as-child>
+      <PopoverContent
+        :side-offset="-12"
+        as-child>
         <motion.div
           :variants="variants"
           initial="hidden"
@@ -76,18 +77,19 @@ const wrapperVariants = {
           v-bind="{ forwarded }"
           :class="
             cn(
-              'z-50 w-72 rounded-xl border  backdrop-blur-lg drop-shadow-md !border-black-30  bg-black-22/94 text-nc/80 p-4 text-bc shadow-md outline-none group-data-[state=visible]:**:opacity-100 group-data-[state=hidden]:**:opacity-0',
-              props.class,
+              'z-50 w-max h-max rounded-xl border  backdrop-blur-lg drop-shadow-md !border-black-30  bg-black-22/94 not-[.icon]:text-white/80 **:[not-[.icon]]:text-white/80 text-bc shadow-md outline-none group-data-[state=visible]:**:opacity-100 group-data-[state=hidden]:**:opacity-0',
             )
           ">
-          <CustomPopoverArrow class="" />
+          <CustomPopoverArrow class="!text-black/80 translate-y-0.25 " />
 
           <motion.div
             :variants="wrapperVariants"
             initial="hidden"
             animate="visible"
             exit="hidden"
-            class="size-full"
+            :class="cn('size-full p-4  overflow-y-auto',
+                       props.class)"
+            class=""
             :transition="{
               type: 'spring',
               bounce: 0.25,

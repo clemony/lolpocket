@@ -25,7 +25,7 @@ const props = withDefaults(
 const emit = defineEmits(['update:selectedIcon'])
 
 const pocket = computed(() => {
-  return props.pocketKey ? getPocket(props.pocketKey) : props.pocket
+  return props.pocketKey ? ps().getPocket(props.pocketKey) : props.pocket
 })
 
 console.log('💠 - pocket - pocket:', pocket)
@@ -83,7 +83,7 @@ const isOpen = ref(false)
       <PocketIcon
         :url=" pocket ? pocket?.icon : selectIcon"
         alt="pocket icon"
-        class="group-hover/picon:brightness-50 pointer-events-none z-1 group-data-[state=open]/picon:brightness-50  tldr-30 shadow-sm drop-shadow-sm group-data-[state=open]/picon:ring group-data-[state=open]/picon:ring-offset-2 ring-n1/40 ring-offset-b1 rounded-full" />
+        class="group-hover/picon:brightness-50 pointer-events-none z-1 group-data-[state=open]/picon:brightness-50  tldr-30 shadow-sm drop-shadow-sm group-data-[state=open]/picon:ring group-data-[state=open]/picon:ring-offset-2 ringneutral/40 ring-offset-b1 rounded-full" />
 
       <icon
         name="images"

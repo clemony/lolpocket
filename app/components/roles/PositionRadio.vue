@@ -14,7 +14,7 @@ const ms = useMatchStore()
     <label
       v-for="position in positions"
       :key="position"
-      class="btn btn-ghost  rounded-[0.85rem] hover:bg-b3/40 btn-square has-checked:!btn-neutral has-checked:bg-n1">
+      class="btn btn-ghost  rounded-[0.85rem] hover:bg-b3/40 btn-square has-checked:!btn-neutral has-checked:bgneutral">
       <input
         v-model="ms.filter.role"
         name="research-positions"

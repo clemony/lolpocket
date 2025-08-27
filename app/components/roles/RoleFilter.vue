@@ -50,7 +50,7 @@ const roleModel = computed({
 
             v-tippy="{ content: `${role.displayName} - ${role.games} game${role.games > 1 ? 's' : ''}` }"
             class="size-14 grid place-items-center "
-            :class="cn({ 'bg-n1 border-n1 shadow-n1/20 shadow-sm order-2  ': role.role == ms.filter.role, 'border-b3/80 btn  size-14  mr-0 btn-square': role.games })">
+            :class="cn({ 'bgneutral borderneutral shadowneutral/20 shadow-sm order-2  ': role.role == ms.filter.role, 'border-b3/80 btn  size-14  mr-0 btn-square': role.games })">
 
             <input
               v-model="ms.filter.role"

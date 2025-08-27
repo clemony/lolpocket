@@ -1,49 +1,54 @@
 <script setup lang="ts">
 import { itemRanks } from '~/utils/filter/itemFilters'
 
-const emit = defineEmits(['update:model'])
+const { class: className } = defineProps<{
+  class?: HTMLAttributes['class']
 
-const is = useItemStore()
-
+}>()
+// TODO fixthis
+function handleReset() {
+  // fi().filters.rank = null
+  // is.itemGridApi.refreshCells()
+}
 const route = useRoute()
 function handleUpdate() {
   if (route.path == '/items/stats') {
     // is.itemGridApi.refreshCells()
   }
 }
-// TODO fixthis
-function handleReset() {
-  is.itemFilter.rank = null
-  // is.itemGridApi.refreshCells()
-}
 </script>
 
 <template>
   <transition-slide
     group
-    class="flex w-full flex-wrap gap-3 relative ">
-    <input
-      class="btn    before:size-14 absolute  left-0 !text-5 font-normal "
-      aria-label="All"
-      type="reset"
-      value="×"
-      @click="handleReset()" />
+    :class="cn('flex items-center w-full flex-wrap gap-3 relative', className)">
+    <Button
+      v-show="fi().filters.rank"
+      variant="btn"
+      size="lg"
+      class="*:opacity-50 hover:*:opacity-100"
+      shape="square"
+      @click="fi().filters.rank = null">
+      <icon name="x-sm" />
+    </Button>
 
-    <label
+    <Label
       v-for="rank in itemRanks"
       :key="rank"
-      class="!font-medium  !text-2 btn   !text-0 group/filter  mr-0  "
-      :class="{ '!bg-n1 !border-n1 text-nc !shadow-n1/20 shadow-sm order-first  ml-12': is.itemFilter.rank && is.itemFilter.rank.includes(rank), 'first-of-type:ml-12': !is.itemFilter.rank || is.itemFilter.rank == null }">
+      size="lg"
+      :variant="fi().filters.rank == rank ? 'neutral' : fi().filters.rank && fi().filters.rank != rank ? 'hidden' : 'btn'"
+      class="!font-medium px-5  text-2 "
+      @click="fi().filters.rank == rank ? fi().filters.rank = null : null">
 
       <input
-        v-model="is.itemFilter.rank"
+        v-model="fi().filters.rank"
+        :disabled="fi().filters.rank == rank"
         class="peer hidden absolute"
         type="radio"
         :value="rank"
-        name="item-types"
-        @change="handleUpdate()" />
+        name="item-types" />
       {{ rank }}
-    </label>
+    </Label>
   </transition-slide>
 </template>
 

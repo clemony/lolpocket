@@ -1,18 +1,11 @@
 <script setup lang="ts">
-const { pocket: p, champion } = defineProps<{
-  pocket: Pocket
+const { card: c, champion } = defineProps<{
+  card: Card
   champion: ChampionKey
 }>()
 const ix = useIndexStore()
 
-const pocket = computed (() => p)
-
-watch(
-  () => pocket.value.card.splash,
-  (newVal) => {
-    console.log('💠 - newVal:', newVal)
-  },
-)
+const card = computed (() => c)
 
 // TODO FIX
 </script>

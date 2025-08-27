@@ -12,7 +12,7 @@ const champion = computed (() => props.champion)
   <LazyLabel
     v-if="ms.filter.champion == 'All' || ms.filter.champion != 'All' && ms.filter.champion == champion.name"
     v-tippy="champion.name"
-    class="size-14 hover-ring-sm border border-n1/60 relative grid place-items-center group/filter rounded-full shadow-sm drop-shadow-sm overflow-auto"
+    class="size-14 hover-ring-sm border borderneutral/60 relative grid place-items-center group/filter rounded-full shadow-sm drop-shadow-sm overflow-auto"
     :class="{ 'opacity-30 ': ms.filter.champion != 'All' && ms.filter.champion != champion.name }">
     <input
       v-model="ms.filter.champion"

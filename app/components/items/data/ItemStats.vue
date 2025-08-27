@@ -10,17 +10,18 @@ const statEntries = computed(() =>
 
 <template>
   <div class="">
-    <Separator class="bg-nc/10  mt-0" />
+    <Separator class=" mt-0" />
 
-    <div class="w-full mt-4 items-center  grid grid-cols-[auto_1fr_auto] gap-x-3 gap-y-0.75 *:flex *:text-3">
-      <template
+    <div class="w-full mt-4 items-center grid gap-y-1.5">
+      <div
+      class="text-3 flex gap-1 w-full items-center"
         v-for="stat in statEntries"
         :key="stat.key">
         <p class="font-medium  flex flex-nowrap ">
           {{ stat.value }}
         </p>
 
-        <p class="  tracking-tight ">
+        <p class="grow  font-medium tracking-tight ">
           {{ itemStats.find(k => k.id == stat.key).displayName }}
         </p>
 
@@ -32,7 +33,7 @@ const statEntries = computed(() =>
             class="!size-3.25 self-center" />
           {{ itemStats.find(k => k.id == stat.key).shortName }}
         </p>
-      </template>
+      </div>
     </div>
   </div>
 </template>
