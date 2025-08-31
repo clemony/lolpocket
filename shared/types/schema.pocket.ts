@@ -8,6 +8,7 @@ const toID = hexoid()
 export const PocketLocationSchema = v.object({
   pinned: v.fallback(v.boolean(), false),
   folder: v.fallback(v.string(), ''), // normalized instead of nullable
+  trashed: v.pipe(v.string(), v.transform(s => new Date(s))),
 })
 
 // Items

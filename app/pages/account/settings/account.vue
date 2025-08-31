@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { providers } from 'appdata/authProviders'
 import { toast } from 'vue-sonner'
 
 definePageMeta({
@@ -150,7 +151,7 @@ console.log('userProviders: ', userProviders)
         placeholder="example@example.com">
         <icon name="mail" />
 
-        <template #badge>
+        <template #2>
           <Button
             v-if="!user.email_confirmed_at"
             v-tippy="'verified!'"

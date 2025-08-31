@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { championRoles } from 'appdata'
+
 const cs = useChampStore()
 const { filters, setFilter, filtered } = useItemFilter()
 function reset() {
@@ -49,7 +51,7 @@ function reset() {
       v-if="!filters.role"
       class="absolute h-13 bg-b1 w-6 -left-4 top-2 grid place-items-center">
       <icon
-        name="left-sm"
+        name="left"
         class="size-6 z-1 shrink-0" />
     </div>
 
@@ -57,7 +59,7 @@ function reset() {
       v-if="!filters.role"
       class="absolute h-13 bg-b1 w-6 -right-4 top-2 grid place-items-center">
       <icon
-        name="right-sm"
+        name="right"
         class="size-6" />
     </div>
   </ScrollArea>

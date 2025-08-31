@@ -22,7 +22,7 @@ const { orientation, canScrollPrev, scrollPrev } = useCarousel()
     @click="scrollPrev">
     <slot>
       <icon
-        name="left-sm"
+        name="left"
         class="h-4 w-4 text-current" />
 
       <span class="sr-only">Previous Slide</span>

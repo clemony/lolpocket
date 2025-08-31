@@ -98,7 +98,7 @@ function handleClick(i) {
 
       <Btn
         class="rounded-t-none w-full !text-2 !font-medium justify-end opacity-70 hover:opacity-100 !gap-2">
-        <icon name="add-sm" />New Spell Set
+        <icon name="add" />New Spell Set
       </Btn>
     </LazyCollapsibleContent>
   </Collapsible>

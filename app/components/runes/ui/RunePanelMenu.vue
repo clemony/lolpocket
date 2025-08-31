@@ -30,7 +30,7 @@ function handleDelete() {
       class="btn btn-md btn-square"
       @click="handleNewSet()">
       <icon
-        name="add-sm"
+        name="add"
         class=" size-6 shrink-0 dst" />
     </button> -->
 

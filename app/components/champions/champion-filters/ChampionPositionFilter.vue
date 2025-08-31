@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { championPositions } from 'appdata'
+
 const cs = useChampStore()
 const { filters, setFilter, filtered } = useItemFilter()
 </script>
@@ -11,11 +13,11 @@ const { filters, setFilter, filtered } = useItemFilter()
       <IndicatorTabsList class="bg-transparent grid-cols-[1fr_1fr_1.2fr_1fr_1fr_1.2fr] h-10 w-64">
         <IndicatorTabsTrigger
           v-for="position in championPositions"
-          :key="position"
-          :value="position"
+          :key="position.name"
+          :value="position.name"
           class="group place-items-center !text-nc">
           <component
-            :is="`i-roles-${position.toLowerCase()}`"
+            :is="`i-roles-${position.name.toLowerCase()}`"
             class="h-4.5 w-auto dst shrink-0 z-10 text-bc/60"
             :class="{ '**:!text-nc ': position == filters.position }" />
         </IndicatorTabsTrigger>

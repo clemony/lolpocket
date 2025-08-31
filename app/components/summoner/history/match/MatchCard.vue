@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { queueIndex } from '~/appdata/index/queue-index'
+import { queueIndex } from 'appdata/index/queue-index'
 
 const { match, puuid } = defineProps<{
   match: MatchData
@@ -108,7 +108,7 @@ const queue = computed(() => {
 
       <div class="w-8 grid place-items-center">
         <icon
-          name="up-sm"
+          name="up"
           :class="
             cn('dst transition-rotate duration-200 size-5 mx-4', {
               '-rotate-180': isOpen,

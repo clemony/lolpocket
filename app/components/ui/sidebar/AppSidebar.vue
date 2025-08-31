@@ -1,9 +1,6 @@
 <script lang="ts" setup>
 import { MessageView, NavContent, NotificationView, PocketContent, SearchContent } from '#components'
-import { vElementHover } from '@vueuse/components'
 import { useSidebar } from 'base/sidebar/sidebar-index'
-import { motion } from 'motion-v'
-import type { DefineComponent } from 'vue'
 
 const userMenu: DataObject[] = [
   {
@@ -164,9 +161,10 @@ function handleClick(component) {
         :duration="200">
         <component
           :is="activeItem"
+          loading="lazy"
           :open="open" />
       </TransitionFade>
     </Sidebar>
-    <SidebarRail class="!-right-2 " />
+    <SidebarRail class="!-right-2 focus:after:!bg-transparent focus:ring-0 focus-within:ring-0  focus:after:ring-0 focus-within:after:ring-0  focus:outline-0 focus-within:outline-0  focus:after:outline-0 focus-within:after:outline-0 border-0" />
   </Sidebar>
 </template>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { reactiveOmit } from '@vueuse/core'
-import { SelectScrollUpButton, useForwardProps } from 'reka-ui'
 import type { SelectScrollUpButtonProps } from 'reka-ui'
+import { SelectScrollUpButton, useForwardProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 
 const props = defineProps<SelectScrollUpButtonProps & { class?: HTMLAttributes['class'] }>()
@@ -17,7 +17,7 @@ const forwarded = useForwardProps(delegatedProps)
     :class="cn('flex cursor-default items-center justify-center py-1', props.class)">
     <slot>
       <icon
-        name="up-sm"
+        name="up"
         class="size-6" />
     </slot>
   </SelectScrollUpButton>

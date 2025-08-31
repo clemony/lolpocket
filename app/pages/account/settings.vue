@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 definePageMeta({
-  path: '',
+  level: 1,
+  order: 10,
+  title: 'settings',
 })
 
 // Account tracking

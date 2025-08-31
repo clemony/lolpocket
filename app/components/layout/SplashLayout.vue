@@ -83,7 +83,7 @@ provide<Scroll>('scroll-top', { top: scroll })
       <slot name="background" />
 
       <header
-        class="w-full z-2 grid min-h-84 h-84 max-w-[1040px] items-center size-full justify-self-center ')">
+        class="w-full z-2 grid min-h-84 h-84 max-w-[1280px] items-center size-full justify-self-center ')">
         <!-- large header welcome wrapper -->
         <slot
           name="header" />

@@ -33,6 +33,6 @@ const modelValue = useVModel(props, 'modelValue', emits, {
       v-bind="$attrs"
       v-model="modelValue"
       :autofocus="false" />
-    <slot name="badge" />
+    <slot name="2" />
   </label>
 </template>

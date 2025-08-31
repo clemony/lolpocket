@@ -9,10 +9,9 @@ definePageMeta({
   path: '/nexus',
   name: 'nexus',
 
-  meta: {
-    parent: '/nexus',
-    icon: 'nexus',
-  },
+  level: 1,
+  order: 1,
+  icon: 'nexus',
 })
 
 async function hydrateUser1() {
@@ -86,7 +85,6 @@ async function hydrateUser1() {
     <div class="w-100 h-60">
       <!-- <RecentPatchWinrates /> -->
     </div>
-    <Login v-if="!as().loggedIn" />
     <!--
     <div class="w-full h-80 self-end ">
       <News />

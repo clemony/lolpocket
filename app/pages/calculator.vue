@@ -5,10 +5,10 @@ import { motion } from 'motion-v'
 
 definePageMeta({
 
-  meta: {
-    parent: '/calculator',
-    icon: 'calc',
-  },
+  level: 1,
+  order: 6,
+  icon: 'calc',
+
 })
 
 const is = useItemStore()

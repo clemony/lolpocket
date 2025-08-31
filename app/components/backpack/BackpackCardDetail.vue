@@ -2,33 +2,34 @@
 const { pocket } = defineProps<{
   pocket: Pocket
 }>()
+const img = useImage()
+const bg = computed(() => {
+  const imgUrl = img(pocket.icon.replace('tile', 'uncentered'))
+
+  return { backgroundImage: `url('${imgUrl}')` }
+})
 </script>
 
 <template>
   <div
     v-if="pocket"
     class="flex flex-1 flex-col">
+    <!-- header -->
     <div class="flex items-start p-4">
       <div class="flex items-start gap-4 text-2">
-        <PocketIcon class="size-16 rounded-full aspect-square" />
+        <PocketIcon
+          :img="pocket.icon"
+          class="size-16 rounded-full aspect-square" />
         <div class="grid gap-px *:leading-5">
           <div class="font-semibold text-3">
             {{ pocket.name }}
           </div>
-          <div class="line-clamp-1 text-2">
-            <template v-if="pocket.champions.length">
-              <span
-                v-for="champion in pocket.champions"
-                :key="champion">
-                {{ ix().champNameByKey(champion) }}
-              </span>
-            </template>
-            <span
-              v-else
-              class="italic opacity-50">
-              No Champion
-            </span>
-          </div>
+
+          <PocketChampions
+            v-if="pocket.champions.length"
+            :champions="pocket.champions"
+            list />
+
           <div class="line-clamp-1 text-2 capitalize">
             <span class="font-medium">Role: </span>
             <template
@@ -56,6 +57,11 @@ const { pocket } = defineProps<{
       </div>
     </div>
     <Separator />
+
+    <!-- content -->
+    <div
+      class="w-full h-80 bg-cover bg-no-repeat bg-fixed"
+      :style="bg"></div>
     <div class="flex-1 whitespace-pre-wrap p-4 text-2">
       {{ pocket.notes[0] }}
     </div>
@@ -64,16 +70,15 @@ const { pocket } = defineProps<{
       <form>
         <div class="grid gap-4">
           <Textarea
-            class="p-4"
-            :placeholder="`Reply ${pocket.name}...`" />
+            class="p-4 border-b3/60 inset-shadow-xs"
+            :placeholder="`Comment on ${pocket.name}...`" />
           <div class="flex items-center">
             <Label
               html-for="mute"
               class="flex items-center gap-2 text-2 font-normal">
               <Switch
                 id="mute"
-                aria-label="Mute thread" /> Mute this
-              thread
+                aria-label="Mute thread" /> Mute comment notifications
             </Label>
             <Button
               type="button"
@@ -88,7 +93,9 @@ const { pocket } = defineProps<{
   </div>
   <div
     v-else
-    class="p-8 text-center text-bc/60">
-    No message selected
+    class="size-full grid justify-center  text-center text-bc/60">
+    <span class="translate-y-1/4">
+      No pocket selected
+    </span>
   </div>
 </template>

@@ -154,7 +154,7 @@ const pocketTitleIndex = [
   },
   {
     title: 'prey',
-    feat: 'rengar/kha',
+    feat: 'Lost a game as Kha\'zix or Rengar against your nemsis.',
     icon: {
       name: '',
       class: '',
@@ -163,7 +163,7 @@ const pocketTitleIndex = [
   },
   {
     title: 'predator',
-    feat: 'rengar/kha',
+    feat: 'Won a game as Kha\'zix or Rengar against your nemsis.',
     icon: {
       name: '',
       class: '',
@@ -190,7 +190,7 @@ const pocketTitleIndex = [
   },
   {
     title: 'producer',
-    feat: 'lots of pocket likes',
+    feat: 'You\'ve create a very popular pocket!',
     icon: {
       name: '',
       class: '',
@@ -199,7 +199,7 @@ const pocketTitleIndex = [
   },
   {
     title: 'polisher',
-    feat: 'edited a pocket',
+    feat: 'Just fine-tuning!',
     icon: {
       name: '',
       class: '',
@@ -218,7 +218,7 @@ const pocketTitleIndex = [
 
   {
     title: 'princess',
-    feat: 'feelin a lil frilly', // lux fiora qiyana irelia battle queen skins
+    feat: 'feelin\' a lil frilly', // lux fiora qiyana irelia any champ w battle queen skins?
     icon: {
       name: '',
       class: '',

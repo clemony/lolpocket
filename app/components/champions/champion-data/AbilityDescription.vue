@@ -38,7 +38,7 @@ watch(() => effect, (newVal) => {
           v-if="attribute.modifiers?.[1]?.units?.length && attribute.modifiers?.[0]?.values?.length"
           class="chat-footer mt-0.5 !text-1 **:!text-1 text-nowrap items-center justify-start opacity-50">
           <icon
-            name="add-sm"
+            name="add"
             class="size-4 shrink-0 -mr-1" />
 
           <ValueFormatter

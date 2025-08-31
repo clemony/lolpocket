@@ -137,7 +137,9 @@ export default defineNuxtConfig({
   },
   icon: {
     provider: 'iconify',
-    serverBundle: 'local',
+    serverBundle: {
+      collections: ['lucide'],
+    },
   },
   image: {
     domains: ['ddragon.leagueoflegends.com', 'cdn.communitydragon.org'],

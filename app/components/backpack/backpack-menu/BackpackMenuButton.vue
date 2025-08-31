@@ -71,7 +71,7 @@ const variants = {
             duration: 0.5,
           }">
           <icon
-            name="add-sm"
+            name="add"
             class=" size-8  dst z-3 !text-[rgba(255,255,255,0.7)]" />
         </Motion>
       </AnimatePresence>

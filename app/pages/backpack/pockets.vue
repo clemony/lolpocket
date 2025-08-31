@@ -1,14 +1,11 @@
 <script lang="ts" setup>
 definePageMeta({
-  path: '/backpack',
+  path: '/backpack/pockets',
   name: 'pockets',
   parent: '/backpack',
   icon: 'folder',
   order: 1,
-  components: {
-    label: '',
-  },
-  variant: 'ghost',
+  level: 2,
 })
 
 const selected = ref<Pocket>(null)
@@ -22,26 +19,34 @@ const selected = ref<Pocket>(null)
           <template #tabs>
             <Button
               variant="neutral"
-              class="ml-auto font-normal join-item"
+              class="ml-auto font-normal pr-4 pl-2.5"
               @click="generatePocket()">
-              <icon name="add-sm" />
+              <icon name="add" />
               Add Pocket
             </Button>
           </template>
 
-          <div class="size-full flex flex-col gap-4 px-4">
+          <div class="size-full flex flex-col gap-6 px-4">
             <BackpackBoxCard
               v-for="pocket in ps().pockets"
               :key="pocket.key"
               :pocket
               :selected
               @click="selected = pocket" />
+            <Button
+              v-tippy="'Add Pocket'"
+              class="w-full h-38"
+              variant="ghost">
+              <icon
+                name="add"
+                class="size-7 **:stroke-[1.5]" />
+            </Button>
           </div>
         </BoxPanelCenter>
       </template>
       <template #right>
         <div class="flex h-full flex-col">
-          <PocketDetailMenu :pocket-key="selected?.key" />
+          <PocketDetailMenu :pocket-key="selected?.key ?? null" />
           <BackpackCardDetail :pocket="selected" />
         </div>
       </template>

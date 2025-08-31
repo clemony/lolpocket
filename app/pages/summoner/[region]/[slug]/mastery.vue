@@ -26,7 +26,7 @@ const noMastery = computed (() => {
   return array.value.map((a) => {
     return {
       id: a,
-      level: 0,
+      level: 1,
       points: 0,
       lastPlayed: null,
     }

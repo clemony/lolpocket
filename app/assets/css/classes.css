@@ -5,7 +5,9 @@
   .dst {
     @apply drop-shadow-text;
   }
-
+.role-text {
+  @apply saturate-250  brightness-70;
+}
   .set-absolute {
     @apply absolute top-0 left-0 inset-0;
   }

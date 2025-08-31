@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { getRoleColor } from '~/appdata/formatting/getRoleColor'
+import { getRoleColor } from 'appdata/formatting/getRoleColor'
 
 const { pocketKey, side, align, class: className, wrapperClass } = defineProps<{
   pocketKey?: string

@@ -1,18 +1,14 @@
 <script setup lang="ts">
 definePageMeta({
   name: 'archive',
+  path: '/backpack/archive',
   parent: '/backpack',
+  level: 2,
   order: 2,
   icon: 'archive',
-  components: {
-    label: '',
-  },
-  variant: 'ghost',
 })
 </script>
 
 <template>
   <PagePlaceholder />
 </template>
-
-<style scoped></style>

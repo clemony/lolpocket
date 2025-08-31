@@ -13,16 +13,15 @@ const forwarded = useForwardProps(props)
 </script>
 
 <template>
-  <Button
-    :variant="variant"
-    :size="size"
-    as-child
-    :shape="shape"
-    :class="cn('', props.class)">
-    <DropdownMenuTrigger
-      class="outline-none cursor-pointer"
-      v-bind="forwarded">
+  <DropdownMenuTrigger
+    v-bind="forwarded">
+    <Button
+      :variant="variant"
+      :size="size"
+      :shape="shape"
+      :class="cn('', props.class)"
+      class="outline-none cursor-pointer">
       <slot />
-    </DropdownMenuTrigger>
-  </Button>
+    </Button>
+  </DropdownMenuTrigger>
 </template>

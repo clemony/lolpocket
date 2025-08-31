@@ -21,7 +21,7 @@ const as = useAccountStore()
           </span>
 
           <icon
-            name="left-sm"
+            name="left"
             class="group-data-[state=open]/collapse:-rotate-90 ml-1  transition-rotate duration-200" />
         </SidebarGroupLabel>
       </CollapsibleTrigger>
@@ -57,7 +57,7 @@ const as = useAccountStore()
       </span>
 
       <icon
-        name="left-sm"
+        name="left"
         class="group-data-[state=open]/collapse:-rotate-90 ml-1  transition-rotate duration-200" />
     </CollapsibleTrigger>
 

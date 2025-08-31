@@ -1,14 +1,14 @@
 <script setup lang="ts">
+import type { ScrollAreaRootProps } from 'reka-ui'
 import {
   ScrollAreaCorner,
   ScrollAreaRoot,
 
   ScrollAreaViewport,
 } from 'reka-ui'
-import type { ScrollAreaRootProps } from 'reka-ui'
 import ScrollBar from './ScrollBar.vue'
 
-const props = defineProps<ScrollAreaRootProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<ScrollAreaRootProps & { class?: HTMLAttributes['class'], scrollbarClass?: HTMLAttributes['class'] }>()
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props
@@ -28,7 +28,7 @@ const delegatedProps = computed(() => {
       <slot />
     </ScrollAreaViewport>
 
-    <ScrollBar />
+    <ScrollBar :class="cn('bg-black z-10', props.scrollbarClass)" />
 
     <ScrollAreaCorner />
   </ScrollAreaRoot>

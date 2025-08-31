@@ -40,7 +40,7 @@ export function newPocket(): Pocket {
     created: new Date(),
     updated: patchIndex[0],
     tags: [],
-    location: { pinned: false, folder: '' },
+    location: { pinned: false, folder: '', trashed: null },
     notes: [],
   }
 }

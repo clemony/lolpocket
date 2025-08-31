@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { pathIndex } from 'appdata/index/path-index'
+
 definePageMeta({
   title: 'Runes',
   path: '/library/runes',
@@ -12,7 +14,7 @@ const { pathList } = useRunes()
 
 const selectedPath = ref<PathName>('Inspiration')
 const selectedRune = ref(null)
-const test = ref(runePaths[selectedPath.value])
+const test = ref(pathIndex[selectedPath.value])
 console.log('💠 - test:', test)
 </script>
 
@@ -62,12 +64,12 @@ console.log('💠 - test:', test)
 
       <KeystoneSelect
         v-model:selected="selectedRune"
-        :runes="runePaths[selectedPath][0]"
+        :runes="pathIndex[selectedPath][0]"
         @update:rune="e => selectedRune = e" />
 
       <RuneSelect
         v-model:selected="selectedRune"
-        :runes="runePaths[selectedPath].slice(0)"
+        :runes="pathIndex[selectedPath].slice(0)"
         @update:rune="e => selectedRune = e" />
     </transition-fade>
   </transition-slide>

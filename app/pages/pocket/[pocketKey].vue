@@ -1,21 +1,18 @@
 <script setup lang="ts">
-const { puuid } = defineProps<{
-  puuid?: string
+const { pocketKey } = defineProps<{
+  pocketKey: string
 }>()
 const emit = defineEmits(['update:hovered'])
-const isShow = ref(false)
-
-/* const props = defineProps<{
-pocket: pocket
-}>() */
 const route = useRoute()
+
 definePageMeta({
   props: true,
+  path: '/pocket/:pocketKey',
   parent: '/pocket',
-  search: false,
+  level: 0,
 })
 
-const pocket = refps().getPocket(route.params.pocketKey))
+const pocket = ref<Pocket>(ps().getPocket(String(route.params.pocketKey)))
 </script>
 
 <template>

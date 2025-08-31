@@ -1,6 +1,6 @@
 // useItemFilterProvider.ts
-import { akaLookup } from '~/appdata/filters/item-aka'
-import { itemFilters } from '~/appdata/filters/item-filters'
+import { akaLookup } from 'appdata/filters/item-aka'
+import { itemFilters } from 'appdata/filters/item-filters'
 
 export const ItemFilterKey = Symbol('ItemFilter')
 

@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { itemQuotes } from '~~/shared/appdata'
+
 definePageMeta({
   title: 'Items',
   parent: '/library',

@@ -13,7 +13,7 @@
 
     <div class="">
       <button class="btn btn-xl btn-square">
-        <icon name="add-sm" />
+        <icon name="add" />
       </button>
     </div>
   </div>

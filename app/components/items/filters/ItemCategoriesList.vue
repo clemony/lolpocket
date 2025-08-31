@@ -1,6 +1,6 @@
 <script setup lang="ts">
+import { itemTags } from 'appdata'
 import { ListboxContent, ListboxItem, ListboxItemIndicator, ListboxRoot } from 'reka-ui'
-import { itemTags } from '~/utils/filter/itemFilters'
 
 const is = useItemStore()
 function handleReset() {

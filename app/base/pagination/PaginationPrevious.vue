@@ -21,7 +21,7 @@ const forwarded = useForwardProps(delegatedProps)
     :class="cn(buttonVariants({ variant: 'ghost', size }), 'gap-1 px-2.5 sm:pr-2.5', props.class)"
     v-bind="forwarded">
     <slot>
-      <icon name="left-sm" />
+      <icon name="left" />
       <span class="hidden sm:block">Previous</span>
     </slot>
   </PaginationPrev>

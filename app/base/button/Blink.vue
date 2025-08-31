@@ -28,7 +28,7 @@ defineNuxtLink({
 <template>
   <Button
     as-child
-    :class="cn('', className)"
+    :class="cn('duration-50', className)"
     v-bind="{ variant, size, shape, hover }">
     <NuxtLink
       v-bind="$attrs"

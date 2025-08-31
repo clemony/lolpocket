@@ -20,7 +20,7 @@ const variants = {
     as-child
     :variants="variants">
     <icon
-      name="right-sm"
+      name="right"
       :class="cn('stroke-[1.2] shrink-0', className)" />
   </Motion>
 </template>

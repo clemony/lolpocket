@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { championPositions } from 'appdata'
 import { VueDraggable } from 'vue-draggable-plus'
 
 const { pocket: p, class: className } = defineProps<{
@@ -50,7 +51,7 @@ const pocket = computed (() => p)
           <label
             v-if="role"
             class="border-b3/80 btn btn-sm order-3 font-medium   mr-0 "
-            :class="cn({ 'hidden ': pocket.roles.includes(role) })">
+            :class="cn({ 'hidden ': pocket.roles.includes(role.name) })">
 
             <input
               v-model="pocket.roles"
@@ -62,9 +63,9 @@ const pocket = computed (() => p)
               @change="handleRoles(pocket)" />
 
             <component
-              :is="`i-roles-${role.toLowerCase().replace(' ', '-').replace('utility', 'support')}`"
+              :is="`i-roles-${role.name.toLowerCase().replace(' ', '-').replace('utility', 'support')}`"
               class="h-3.75 text-bc/70 w-auto dst shrink-0 peer-checked:text-nc"
-              :class="{ '!text-bc/80': role.toLowerCase() == 'all' }" />
+              :class="{ '!text-bc/80': role.name.toLowerCase() == 'all' }" />
             {{ role }}
           </label>
         </template>

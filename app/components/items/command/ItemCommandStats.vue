@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { itemStats } from 'appdata'
+
 const is = useItemStore()
 const { filters, setFilter, filtered } = useItemFilter()
 </script>

@@ -11,36 +11,25 @@ const loaded = ref(false)
 </script>
 
 <template>
-  <label :class="cn(' size-full overflow-hidden  shrink-0 grid place-items-center', { 'shadow-sm drop-shadow-sm': !transparent || (transparent && !url) }, className)">
+  <label :class="cn(' size-full relative text-nc overflow-hidden bg-neutral shrink-0 grid place-items-center', { 'shadow-sm shadow-black/22 drop-shadow-sm drop-shadow-black/12': !transparent || (transparent && !url) }, className)">
 
     <Img
       v-if="url || img"
       :img="url || img"
       alt="pocket icon"
-      :class="cn(' pointer-events-none  size-full  scale-160 mt-1.5 shrink-0 size-full absolute object-center opacity-0 transition-opacity duration-300', { 'opacity-100': loaded }, imgClass)"
+      :class="cn(' pointer-events-none  size-full z-2 scale-160 mt-1.5 shrink-0 size-full absolute object-center opacity-0 transition-opacity duration-300', { 'opacity-100': loaded }, imgClass)"
       @load="loaded = true" />
 
-    <NuxtImg
-      v-else-if="!loaded && (!url || !img)"
-      class="size-full object-cover object-center place-self-center"
-      src="img/lp/192.webp" />
     <icon
       v-if="!loaded && (url || img)"
       name="svg-spinners:bars-scale-middle"
       class="absolute opacity-80" />
 
-    <NuxtImg
-      v-else-if="size && size == 'sm'"
-      src="/img/lp/29-2x-solid.png"
-      class="size-full aspect-square scale-110" />
-
-    <div
-      v-else-if="transparent"
-      class="grid place-items-center size-full font-semibold text-4 dst">
+    <span
+      v-else
+      :class="cn('uppercase subpixel-antialiased text-nc z-0 absolute grid place-items-center size-full font-semibold text-4 ', { 'text-[0.7rem] font-bold': size && size == 'sm' })">
       LP
-    </div>
-
-    <slot>   </slot>
+    </span>
 
   </label>
 </template>

@@ -107,58 +107,6 @@
 @theme inline {
   /* paths */
 
-  --color-precision-w600: color-mix(
-    in srgb,
-    var(--color-precision) 100%,
-    white 60%
-  );
-  --color-precision-b100: color-mix(
-    in srgb,
-    var(--color-precision) 100%,
-    black 10%
-  );
-  --color-domination-w600: color-mix(
-    in srgb,
-    var(--color-domination) 100%,
-    white 60%
-  );
-  --color-domination-b100: color-mix(
-    in srgb,
-    var(--color-domination) 100%,
-    black 10%
-  );
-  --color-sorcery-w600: color-mix(
-    in srgb,
-    var(--color-sorcery) 100%,
-    white 60%
-  );
-  --color-sorcery-b100: color-mix(
-    in srgb,
-    var(--color-sorcery) 100%,
-    black 10%
-  );
-  --color-resolve-w600: color-mix(
-    in srgb,
-    var(--color-resolve) 100%,
-    white 60%
-  );
-  --color-resolve-b100: color-mix(
-    in srgb,
-    var(--color-resolve) 100%,
-    black 10%
-  );
-
-  --color-inspiration-w600: color-mix(
-    in srgb,
-    var(--color-inspiration) 100%,
-    white 60%
-  );
-  --color-inspiration-b100: color-mix(
-    in srgb,
-    var(--color-inspiration) 100%,
-    black 10%
-  );
-
   --color-middle: var(--color-sorcery);
 
   --color-jungle: #a3be8c;
@@ -170,7 +118,7 @@
   --color-damage: var(--color-domination);
 
   --color-support: var(--color-inspiration);
-  --color-marksman: var(--color-precision);
+  --color-bottom: var(--color-precision);
   --color-mage: var(--color-sorcery);
   --color-tank: var(--color-resolve);
   --color-assassin: var(--color-domination);
@@ -248,9 +196,7 @@
 }
 
 [data-role="bottom"] {
-  &.role-bg {
-    @apply bg-precision;
-  }
+    @apply !bg-precision;
 }
 [data-role="top"] {
   &.role-bg {

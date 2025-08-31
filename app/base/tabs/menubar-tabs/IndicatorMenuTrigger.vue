@@ -21,7 +21,7 @@ const forwarded = useForwardProps(delegatedProps)
     <slot />
 
     <icon
-      name="up-sm"
+      name="up"
       class="group-data-[state=open]/menu:-rotate-180  transition-transform duration-200 size-4 mt-0.75 shrink-0 stroke-[1.5]" />
   </MenubarTrigger>
 </template>
