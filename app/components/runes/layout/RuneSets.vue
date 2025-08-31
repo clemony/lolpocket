@@ -97,7 +97,7 @@ const primaryColor = computedAsync (() => {
           class=""
           @click="newRuneSet(pocket.key)">
           <icon
-            name="add-sm"
+            name="add"
             class="-mt-[2px] size-5.5 self-center" />
           Add Rune Set
         </DropdownMenuItem>

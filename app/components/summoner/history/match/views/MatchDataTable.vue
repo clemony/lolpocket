@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { matchDataStats } from '~/appdata/content/match-data-stats'
+import { matchDataStats } from 'appdata/content/match-data-stats'
 
 const { match } = defineProps<{
   match: any

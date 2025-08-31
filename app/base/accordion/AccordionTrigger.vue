@@ -31,7 +31,7 @@ const delegatedProps = computed(() => {
 
       <slot name="icon">
         <icon
-          name="left-sm"
+          name="left"
           class="dst  size-5  mx-4" />
       </slot>
     </AccordionTrigger>

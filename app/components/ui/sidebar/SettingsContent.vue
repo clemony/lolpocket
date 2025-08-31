@@ -25,7 +25,7 @@ const option = ref('General')
                   General
 
                   <icon
-                    name="left-sm"
+                    name="left"
                     class="size-5.5 group-data-[state=open]/option:-rotate-90 transition-rotate duration-200" />
                 </SidebarMenuButton>
               </AccordionTrigger>
@@ -47,7 +47,7 @@ const option = ref('General')
                   class="justify-between text-3 font-semibold text-bc/60">
                   Account
                   <icon
-                    name="left-sm"
+                    name="left"
                     class="size-5.5 group-data-[state=open]/option:-rotate-90 transition-rotate duration-200" />
                 </SidebarMenuButton>
               </AccordionTrigger>

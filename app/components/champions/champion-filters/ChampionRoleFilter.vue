@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { championRoles } from 'appdata'
+
 const cs = useChampStore()
 const { filters, setFilter, filtered } = useItemFilter()
 function reset() {

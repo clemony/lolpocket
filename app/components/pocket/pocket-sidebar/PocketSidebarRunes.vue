@@ -29,7 +29,7 @@ function handleClick(i) {
       class="h-full  grid cursor-pointer place-items-center   group  w-14 rounded-l-none rounded-r-xl p-0 ">
       <div class="group-hover:bg-b2/80 size-6 rounded-lg grid place-items-center border border-transparent group-hover:border-b3/60">
         <icon
-          name="add-sm"
+          name="add"
           class="text-bc/60 group-hover:text-bc" />
       </div>
     </button>

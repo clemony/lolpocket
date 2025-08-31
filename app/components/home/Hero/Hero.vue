@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { MotionValue } from 'motion-v'
 import { motion } from 'motion-v'
+import { heroDisplays } from '~~/shared/appdata/content/video'
 
 const { progress: p, visible } = defineProps<{
   progress: MotionValue
@@ -85,7 +86,7 @@ onMounted(() => {
         <div class="absolute bottom-5 w-full self-end justify-center grid">
           <div class="place-items-center grid">
             <icon
-              name="down-sm"
+              name="down"
               class="opacity-30 size-9" />
           </div>
         </div>

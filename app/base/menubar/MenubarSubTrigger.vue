@@ -20,7 +20,7 @@ const forwarded = useForwardProps(delegatedProps)
     <slot />
 
     <icon
-      name="right-sm"
+      name="right"
       class="ml-auto size-4.5 group-data-disabled:hidden" />
   </MenubarSubTrigger>
 </template>

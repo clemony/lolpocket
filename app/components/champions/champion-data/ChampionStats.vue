@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { championStats } from 'appdata'
+
 const { stats } = defineProps<{
   stats: Record<string, ChampionStat>
 }>()

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { itemStats } from 'appdata'
+
 const emit = defineEmits(['update:model'])
 
 const to = ref([])

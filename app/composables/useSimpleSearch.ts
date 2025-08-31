@@ -12,7 +12,7 @@ export function useSimpleSearch<T>(
   watch(
     () => unref(source),
     (val) => {
-      fuse.value = new Fuse(val, { keys: [...keys, 'name'], threshold: 0.3 })
+      fuse.value = new Fuse(val, { keys: [keys || '', 'name'], threshold: 0.3 })
     },
     { immediate: true, deep: true },
   )

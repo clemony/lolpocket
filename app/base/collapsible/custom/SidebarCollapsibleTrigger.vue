@@ -11,7 +11,7 @@
       <Grow />
 
       <icon
-        name="up-sm"
+        name="up"
         class="size-5 group-data-[state=open]/trigger:-rotate-180 transition-rotate duration-300 sidebar-child  justify-self-end  expand-hide" />
     </Btn>
   </CollapsibleTrigger>

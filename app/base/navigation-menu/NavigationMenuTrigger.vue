@@ -22,7 +22,7 @@ const forwarded = useForwardProps(delegatedProps)
       v-if="props.arrow"
       class="size-5 max-w-5 min-w-5 relative ">
       <icon
-        name="up-sm"
+        name="up"
         class="absolute top-px ml-1 transition duration-300 shrink-0 group-data-[state=open]:rotate-180 size-4.5"
         aria-hidden="true" />
     </span>

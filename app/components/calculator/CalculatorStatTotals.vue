@@ -1,7 +1,7 @@
 <script lang="ts" setup>
+import { itemStats } from 'appdata/formatting/item-stats'
+import { itemStatRecord } from 'appdata/index/item-stat-index'
 import { motion } from 'motion-v'
-import { itemStats } from '~/appdata/formatting/item-stats'
-import { itemStatRecord } from '~/appdata/index/item-stat-index'
 
 const checkedStats = ref([])
 

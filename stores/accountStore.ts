@@ -7,7 +7,13 @@ export const useAccountStore = defineStore(
     const userNotes = ref<Note[]>([])
 
     const loggedIn = ref(false)
-
+    const toggles = ref({
+      backpack: {
+        tags: true,
+        positions: true,
+        pinned: true,
+      },
+    })
     const account = ref<Account>()
     const settings = ref<Settings>()
     const publicData = ref<PublicData>()
@@ -35,6 +41,7 @@ export const useAccountStore = defineStore(
       // account
 
       loggedIn,
+      toggles,
       account,
       settings,
       pockets,

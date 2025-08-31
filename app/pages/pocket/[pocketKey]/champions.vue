@@ -1,21 +1,19 @@
 <script setup lang="ts">
-const { pocket } = defineProps<{
+const { pocket: p } = defineProps<{
   pocket: Pocket
 }>()
-
+const pocket = computed (() => p)
 definePageMeta({
-  name: 'pocket champions',
+  name: 'champions',
   path: '/pocket/:pocketKey',
   alias: '/pocket/:pocketKey/champions',
-  parent: '/pocket',
+  level: 3,
   search: false,
 })
 
 const route = useRoute()
 console.log('💠 - route:', route.meta)
 /* const {loading, ready, forceReload} = useSummonerMastery(puuid) */
-
-const activePocket = computed (() => pocket)
 
 const searchQuery = ref<string>('')
 const { results } = useSimpleSearch(
@@ -54,11 +52,18 @@ const { results } = useSimpleSearch(
           class="scale-114 pointer-events-none" />
         <slot />
         <input
-          v-model="activePocket.champions"
+          v-model="pocket.champions"
           type="checkbox"
           :value="champion.key"
-          class="absolute  pointer-events-none transition-all duration-300 opacity-0 scale-0 checkbox checkbox-neutral rounded-full drop-shadow-sm top-0 right-0 z-4"
-          :class="{ 'scale-100 opacity-100': pocket.champions.includes(champion.key) }" />
+          class="peer hidden" />
+        <Label
+          v-if="pocket.champions.includes(champion.key)"
+          variant="neutral"
+          class="absolute  grid place-items-center  p-0 pointer-events-none checkbox checkbox-neutral size-8 rounded-full top-0 right-0 z-4">
+          <icon
+            name="tick"
+            class="text-nc **:stroke-[2.5] absolute" />
+        </Label>
       </label>
     </div>
   </div>

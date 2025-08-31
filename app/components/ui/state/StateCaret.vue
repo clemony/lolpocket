@@ -6,7 +6,7 @@ const props = defineProps<{
 
 <template>
   <icon
-    name="up-sm"
+    name="up"
     class=""
     :class="cn('group-data-[state=open]/state:-rotate-180 size-4.5 tldr-30', props.class)" />
 </template>

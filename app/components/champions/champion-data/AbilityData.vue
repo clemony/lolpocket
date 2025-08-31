@@ -124,7 +124,7 @@ watch(() => ability.value, (newVal) => {
           <CollapsibleContent class="CollapsibleContent px-3 leading-5 text-balanced">
             {{ ability.notes }}
             <CollapsibleTrigger class="ability-header flex px-3 flex-nowrap justify-between w-full">
-              <icon name="add-sm" />
+              <icon name="add" />
             </CollapsibleTrigger>
           </CollapsibleContent>
         </Collapsible>

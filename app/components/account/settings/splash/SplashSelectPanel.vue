@@ -143,7 +143,7 @@ function reset() {
                       {{ option.name }}
                     </span>
                     <ListboxItemIndicator>
-                      <icon name="right-sm" />
+                      <icon name="right" />
                     </ListboxItemIndicator>
                   </div>
                 </ListboxItem>

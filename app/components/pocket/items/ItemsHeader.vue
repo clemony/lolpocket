@@ -18,7 +18,7 @@ const as = useAccountStore()
         </h2>
 
         <icon
-          name="up-sm"
+          name="up"
           class=" dst group-data-[state=open]/c:rotate-180" />
       </CollapsibleTrigger>
 

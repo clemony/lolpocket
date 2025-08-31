@@ -33,7 +33,7 @@ const as = useAccountStore()
       <NavigationMenuLink
         class=" btn btn-neutral  w-full gap-2 font-medium text-2 justify-start pr-6 self-start">
         <icon
-          name="add-sm"
+          name="add"
           class="text-nc  stroke-[1.5] mb-px shrink-0" />
 
         Create New Pocket

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
+import { regionIndex } from 'appdata/index/region-index'
 import { SelectArrow } from 'reka-ui'
-import { regionIndex } from '~/appdata/index/region-index'
 
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']

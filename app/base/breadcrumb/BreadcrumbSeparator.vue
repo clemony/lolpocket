@@ -10,7 +10,7 @@ const props = defineProps<{
     aria-hidden="true"
     :class="cn('[&>svg]:w-3.5 [&>svg]:h-3.5', props.class)">
     <slot>
-      <icon name="right-sm" />
+      <icon name="right" />
     </slot>
   </li>
 </template>

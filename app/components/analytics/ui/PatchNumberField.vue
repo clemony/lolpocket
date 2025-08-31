@@ -14,7 +14,7 @@ const ds = useDataStore()
       :step="0.01">
       <NumberFieldDecrement class="*:size-6 max-w-10  shrink-0 relative h-full place-items-center grid">
         <icon
-          name="left-sm"
+          name="left"
           class="size-6 dst" />
       </NumberFieldDecrement>
 
@@ -24,7 +24,7 @@ const ds = useDataStore()
 
       <NumberFieldIncrement class=" max-w-10 shrink-0 relative  size-full place-items-center grid">
         <icon
-          name="right-sm"
+          name="right"
           class="size-6 dst" />
       </NumberFieldIncrement>
     </NumberField>

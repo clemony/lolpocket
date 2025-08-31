@@ -1,12 +1,10 @@
 <script setup lang="ts">
 definePageMeta({
   path: '/summoner',
+  level: 1,
+  order: 3,
 
-  meta: {
-    title: 'Summoner',
-    parent: '/search',
-    icon: 'search',
-  },
+  name: 'Summoner Search',
 })
 
 const as = useAccountStore()

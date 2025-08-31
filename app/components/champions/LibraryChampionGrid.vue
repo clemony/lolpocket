@@ -2,9 +2,9 @@
 import type { ColDef, ColGroupDef, GridApi, GridOptions, GridPreDestroyedEvent, GridReadyEvent } from 'ag-grid-community'
 import { CellStyleModule, ClientSideRowModelModule, ColumnApiModule, ColumnAutoSizeModule, ColumnHoverModule, GridStateModule, ModuleRegistry, RenderApiModule, RowSelectionModule, ValidationModule } from 'ag-grid-community'
 import { AgGridVue } from 'ag-grid-vue3'
+import { championsLite } from 'appdata/records/champions-lite'
 import ChampionGridIcon from 'components/analytics/charts/chart-comps/ChampionGridIcon.vue'
 import { pocketTheme } from 'components/table/theme/tableTheme'
-import { championsLite } from '~/appdata/records/champions-lite'
 
 definePageMeta({
   name: 'Champion Stats',

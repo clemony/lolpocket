@@ -1,6 +1,0 @@
-export * from './current-art'
-export * from './item-quotes'
-export * from './match-data-stats'
-export * from './reviews'
-export * from './riot-disclaimer'
-export * from './taglines'

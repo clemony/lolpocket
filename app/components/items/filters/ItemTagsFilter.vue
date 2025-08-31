@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { itemTags } from '~/utils/filter/itemFilters'
+import { itemTags } from 'appdata'
 
 const { state } = defineProps<{
   state: any

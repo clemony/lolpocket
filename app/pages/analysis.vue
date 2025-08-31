@@ -1,5 +1,8 @@
 <script setup lang="ts">
 definePageMeta({
+  title: 'analysis',
+  level: 1,
+  order: 5,
 })
 
 const as = useAccountStore()

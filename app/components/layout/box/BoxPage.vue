@@ -6,7 +6,7 @@ import { SplitterPanel as ResizablePanel } from 'reka-ui'
   <ResizablePanelGroup
     id="resize-panel-group-2"
     direction="horizontal"
-    class="h-full  items-stretch">
+    class="h-full   max-h-[calc(100vh-45px)]  items-stretch">
     <ResizablePanel
       id="resize-panel-2"
       :default-size="48"

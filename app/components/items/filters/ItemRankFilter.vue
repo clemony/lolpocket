@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { itemRanks } from '~/utils/filter/itemFilters'
+import { itemRanks } from '~~/shared/appdata/filters/item-ranks'
 
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']

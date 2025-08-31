@@ -22,7 +22,7 @@ whenever(keys.shift_p, () => {
     v-tippy="'New Pocket'"
     :class="cn('justify-start text-3 px-3.5 ', props.class)">
     <icon
-      name="add-sm"
+      name="add"
       class="size-5.5 opacity-70 stroke-[1.6]" />
 
     Create New Pocket

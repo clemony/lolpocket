@@ -1,3 +1,5 @@
+import { matchFilters } from '~~/shared/appdata'
+
 export const SummonerKey = Symbol('SummonerProvider')
 
 export interface PlayerData {

@@ -23,7 +23,7 @@ const forwarded = useForwardProps(delegatedProps)
     <slot />
 
     <icon
-      name="right-sm"
+      name="right"
       class="ml-auto h-4 w-4" />
   </DropdownMenuSubTrigger>
 </template>

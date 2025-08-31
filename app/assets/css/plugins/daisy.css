@@ -45,5 +45,5 @@
   --radius-box: 1rem;
   --radius-field: 0.55rem;
   --depth: 1;
-  --noise: 1;
+  --noise: 0.8;
 }

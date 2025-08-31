@@ -7,7 +7,7 @@
 
   &:hover,
   &[data-state="open"].data-open-ring {
-    @apply ring-n1 ring-offset-b2/80 ring ring-offset-2;
+    @apply ring-n1 ring-offset-b1/98 ring ring-offset-2;
   }
 }
 

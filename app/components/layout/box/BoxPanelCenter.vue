@@ -66,29 +66,35 @@ const selectedMailData = computed(() => mails.find(item => item.id === selected.
 </script>
 
 <template>
-  <Tabs default-value="all">
-    <div class="flex items-center px-4 h-16 gap-3">
-      <h1 class="dst text-8">
-        {{ title }}
-      </h1>
-      <slot name="tabs" />
-    </div>
-    <Separator />
-    <div class="bg-background/95 p-4 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <form>
-        <div class="relative">
-          <icon
-            name="search"
-            class="absolute left-2 top-2.5 size-4 text-bc/60" />
+  <Tabs
+    default-value="all"
+    as-child>
+    <ScrollArea
+      scrollbar-class="bg-transparent border-0"
+      class="h-[calc(100vh-45px)] ">
+      <div class="flex items-center flex-col  w-full bg-background/95 sticky top-0 backdrop-blur supports-[backdrop-filter]:bg-background/6 z-1">
+        <div class="w-full grid place-items-center h-[45px] border-b ">
+          <div class="flex items-center border-box max-w-220 size-full px-4  gap-3">
+            <h1 class="dst text-7">
+              {{ title }}
+            </h1>
+            <slot name="tabs" />
+          </div>
+        </div>
+        <form class="w-full h-24 flex items-center p-4 self-center  max-w-220 ">
           <Input
             v-model="searchValue"
             placeholder="Search"
-            class="pl-8" />
-        </div>
-      </form>
-    </div>
-    <ScrollArea class="h-screen flex">
-      <slot />
+            class="w-full">
+            <icon
+              name="lucide:search"
+              class=" size-4 text-bc/60 " />
+          </Input>
+        </form>
+      </div>
+      <div class="z-0 flex pb-6 pt-1  max-w-220 w-full mx-auto ">
+        <slot />
+      </div>
     </ScrollArea>
   </Tabs>
 </template>

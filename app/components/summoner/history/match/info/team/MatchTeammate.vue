@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { pathIndex } from '~/appdata/index/path-index'
+import { pathIndex } from 'appdata/index/path-index'
 
 const { player, playerRank } = defineProps<{
   player: Player
