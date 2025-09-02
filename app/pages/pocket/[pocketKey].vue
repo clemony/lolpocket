@@ -1,70 +1,50 @@
-<script setup lang="ts">
-const { pocketKey } = defineProps<{
-  pocketKey: string
-}>()
-const emit = defineEmits(['update:hovered'])
-const route = useRoute()
-
+<script lang="ts" setup>
 definePageMeta({
-  props: true,
-  path: '/pocket/:pocketKey',
-  parent: '/pocket',
+  name: 'pocket',
   level: 0,
+  props: true,
 })
 
+const route = useRoute()
 const pocket = ref<Pocket>(ps().getPocket(String(route.params.pocketKey)))
+console.log('🌱 - pocket:', pocket)
 </script>
 
 <template>
-  <SplashLayout
+  <TabLayout
     v-if="pocket">
     <!-- splash -->
 
     <template #background>
-      <BackgroundSplashFixed :background="pocket.icon.replace('tile', 'centered') ?? null" />
+      <BackgroundSplashFixed
+        v-memo="pocket.icon"
+        :background="pocket.icon.replace('tile', 'centered') ?? null" />
     </template>
-
+    <template #icon>
+      <LazyIconPopover
+        v-memo="pocket.icon"
+        class="size-24 shadow-md  border-0"
+        :pocket="pocket"
+        align="start"
+        :align-offset="-42"
+        :side-offset="-16"
+        popover-class="ml-6.5 mt-2 w-98" />
+    </template>
     <template #header>
-      <IconHeader>
-        <template #icon>
-          <LazyIconPopover
-            :pocket="pocket"
-            align="start"
-            :align-offset="22"
-            :side-offset="8"
-            popover-class="ml-6.5 mt-2 w-98" />
-        </template>
-
-        <template #pre-header>
-          <NuxtLink
-            class="hover:underline flex ml-3 -mb-px cursor-pointer tldr-20 underline-offset-2 items-center gap-2 normal-case"
-            to="/backpack">
-            <i-lol-backpack class="size-4.5 opacity-60" />
-            Backpack
-          </NuxtLink>
-        </template>
-        <template #title>
-          <EditablePocketHeader
-            icons
-            :pocket="pocket"
-            class="text-12 dst" />
-
-          <span class="flex gap-3  mt-0.75">
-
-          </span>
-        </template>
-      </IconHeader>
+      <EditablePocketHeader
+        icons
+        :pocket="pocket"
+        class="text-9 dst" />
     </template>
     <template #tabs>
       <PocketPageTabs :pocket />
     </template>
-    <PocketSidebar />
 
-    <template #page>
-      <div class="size-full bg-b1">
-        <LazyNuxtPage
-          :pocket="pocket" />
-      </div>
-    </template>
-  </SplashLayout>
+    <div class="size-full pl-44 pr-34 gap-6 overflow-hidden flex bg-b1">
+      <PocketSidebar />
+      <LazyNuxtPage
+        v-if="pocket"
+        :pocket="pocket" />
+    </div>
+  </TabLayout>
 </template>

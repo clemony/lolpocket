@@ -32,7 +32,7 @@ const set = computed (() => {
                 class="size-full bg-b3  aspect-square" />
 
               <img
-                :src="`/img/item/${item}.webp`"
+                :src="`/img/items/${item}.webp`"
                 class="size-full bg-b3  aspect-square inset-shadow-rounded shadow-rounded inset-shadow-black shadow-black" />
             </div>
           </div>

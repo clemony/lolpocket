@@ -30,9 +30,9 @@ const pinned = computed (() => ps().pockets.filter(p => p.location.pinned))
               variant="ghost"
               hover="shadow"
               size="md"
-              class="justify-start w-full group pl-2 pr-2.5 !gap-3 data-[state=open]:fx-noise data-[state=open]:shadow-sm data-[state=open]:border-b3/80 data-[state=open]:shadow-black/8 data-[state=open]:inset-shadow-xs hover:bg-transparent">
-              <SummonerIcon class="rounded-full size-9" />
-              <span class="w-full truncate text-5 dst  font-semibold *:first:capitalize items-center ">
+              class="justify-start w-full group pl-4.5 pr-5 !gap-3 data-[state=open]:fx-noise data-[state=open]:shadow-sm data-[state=open]:border-b3/80 data-[state=open]:shadow-black/8 data-[state=open]:inset-shadow-xs hover:bg-transparent">
+              <SummonerIcon class="rounded-full size-7" />
+              <span class="w-full truncate text-4 dst  font-semibold *:first:capitalize items-center ">
                 <SummonerName class="inline" />'s Backpack
               </span>
               <icon
@@ -80,6 +80,28 @@ const pinned = computed (() => ps().pockets.filter(p => p.location.pinned))
             </Popover>
           </template>
           <PocketTagsInput
+            v-else />
+        </div>
+
+        <Separator />
+
+        <!-- roles -->
+        <div class="px-0 pb-1 flex flex-col gap-4">
+          <template v-if="isCollapsed">
+            <Popover>
+              <PopoverTrigger as-child>
+                <Button
+                  variant="ghost"
+                  size="icon">
+                  <hicon name="i-roles-all" />
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent>
+                <BackpackRoleFilter />
+              </PopoverContent>
+            </Popover>
+          </template>
+          <BackpackRoleFilter
             v-else />
         </div>
       </template>

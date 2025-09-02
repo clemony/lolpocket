@@ -1,4 +1,4 @@
-import { escapeHtml } from '../escape-html'
+import { escapeHtml } from '../escapeHtml'
 import { formatMap } from './formatMap'
 import { resolveTemplates } from './templates.resolve'
 import {

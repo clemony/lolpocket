@@ -1,0 +1,596 @@
+[
+  {
+    "id": "SummonerBarrier",
+    "name": "Barrier",
+    "key": 21,
+    "cooldown": 180,
+    "range": 1200,
+    "maxAmmo": -1,
+    "summonerLevel": 4,
+    "description": "Gain a brief Shield.",
+    "tooltip": "Gain a {{ shieldstrength }} damage Shield for {{ shieldduration }} seconds.",
+    "modes": [
+      {
+        "gameMode": "CLASSIC",
+        "description": "Classic Summoner's Rift and Twisted Treeline games"
+      },
+      {
+        "gameMode": "ARAM",
+        "description": "ARAM games"
+      },
+      {
+        "gameMode": "TUTORIAL",
+        "description": "Tutorial games"
+      },
+      {
+        "gameMode": "URF",
+        "description": "URF games"
+      },
+      {
+        "gameMode": "DOOMBOTSTEEMO",
+        "description": "Doom Bot games"
+      },
+      {
+        "gameMode": "ONEFORALL",
+        "description": "One for All games"
+      },
+      {
+        "gameMode": "FIRSTBLOOD",
+        "description": "Snowdown Showdown games"
+      },
+      {
+        "gameMode": "ASSASSINATE",
+        "description": "Blood Hunt Assassin games"
+      },
+      {
+        "gameMode": "ARSR",
+        "description": "All Random Summoner's Rift games"
+      },
+      {
+        "gameMode": "NEXUSBLITZ",
+        "description": "Nexus Blitz games"
+      },
+      {
+        "gameMode": "ULTBOOK",
+        "description": "Ultimate Spellbook games"
+      }
+    ]
+  },
+  {
+    "id": "SummonerBoost",
+    "name": "Cleanse",
+    "key": 1,
+    "cooldown": 240,
+    "range": 200,
+    "maxAmmo": -1,
+    "summonerLevel": 9,
+    "description": "Removes all disables (excluding suppression and airborne) and summoner spell debuffs affecting your champion and gives Tenacity.",
+    "tooltip": "Removes all crowd control debuffs (excluding Suppression and Airborne) and summoner spell debuffs from you and grants {{ tenacityvalue*100 }}% Tenacity for {{ tenacityduration }} seconds.",
+    "modes": [
+      {
+        "gameMode": "CLASSIC",
+        "description": "Classic Summoner's Rift and Twisted Treeline games"
+      },
+      {
+        "gameMode": "ARAM",
+        "description": "ARAM games"
+      },
+      {
+        "gameMode": "TUTORIAL",
+        "description": "Tutorial games"
+      },
+      {
+        "gameMode": "URF",
+        "description": "URF games"
+      },
+      {
+        "gameMode": "DOOMBOTSTEEMO",
+        "description": "Doom Bot games"
+      },
+      {
+        "gameMode": "ONEFORALL",
+        "description": "One for All games"
+      },
+      {
+        "gameMode": "FIRSTBLOOD",
+        "description": "Snowdown Showdown games"
+      },
+      {
+        "gameMode": "ARSR",
+        "description": "All Random Summoner's Rift games"
+      },
+      {
+        "gameMode": "NEXUSBLITZ",
+        "description": "Nexus Blitz games"
+      },
+      {
+        "gameMode": "ULTBOOK",
+        "description": "Ultimate Spellbook games"
+      }
+    ]
+  },
+  {
+    "id": "SummonerCherryFlash",
+    "name": "Flash",
+    "key": 2202,
+    "cooldown": 0,
+    "range": 425,
+    "maxAmmo": -1,
+    "summonerLevel": 1,
+    "description": "Teleports your champion a short distance toward your cursor's location.",
+    "tooltip": "Teleports your champion a short distance toward your cursor's location.\n\nCannot be cast again for one full round (a round consists of both a buy phase and a combat phase).",
+    "modes": []
+  },
+  {
+    "id": "SummonerCherryHold",
+    "name": "Flee",
+    "key": 2201,
+    "cooldown": 45,
+    "range": 25000,
+    "maxAmmo": -1,
+    "summonerLevel": 1,
+    "description": "Gain a short burst of Move Speed, increased while running away from enemy champions.",
+    "tooltip": "Active Spell Slot: Augments that grant a Summoner Spell will replace this slot.\n\nGain {{ basems*100 }}% Move Speed for {{ duration }} seconds, increased by {{ bonusmsperenemybehind*100 }}% for each enemy behind you.",
+    "modes": []
+  },
+  {
+    "id": "SummonerDot",
+    "name": "Ignite",
+    "key": 14,
+    "cooldown": 180,
+    "range": 600,
+    "maxAmmo": -1,
+    "summonerLevel": 9,
+    "description": "Deals true damage over time to target enemy champion and reduces healing effects on them for the duration.",
+    "tooltip": "Deals {{ tooltiptruedamagecalculation }} true damage to target enemy champion over 5 seconds and applies {{ grievousamount*100 }}% Grievous Wounds for the duration.\n\nWounds: Reduces the effectiveness of Healing and Regeneration effects.",
+    "modes": [
+      {
+        "gameMode": "CLASSIC",
+        "description": "Classic Summoner's Rift and Twisted Treeline games"
+      },
+      {
+        "gameMode": "ARAM",
+        "description": "ARAM games"
+      },
+      {
+        "gameMode": "TUTORIAL",
+        "description": "Tutorial games"
+      },
+      {
+        "gameMode": "URF",
+        "description": "URF games"
+      },
+      {
+        "gameMode": "DOOMBOTSTEEMO",
+        "description": "Doom Bot games"
+      },
+      {
+        "gameMode": "ONEFORALL",
+        "description": "One for All games"
+      },
+      {
+        "gameMode": "FIRSTBLOOD",
+        "description": "Snowdown Showdown games"
+      },
+      {
+        "gameMode": "ASSASSINATE",
+        "description": "Blood Hunt Assassin games"
+      },
+      {
+        "gameMode": "ARSR",
+        "description": "All Random Summoner's Rift games"
+      },
+      {
+        "gameMode": "NEXUSBLITZ",
+        "description": "Nexus Blitz games"
+      },
+      {
+        "gameMode": "ULTBOOK",
+        "description": "Ultimate Spellbook games"
+      }
+    ]
+  },
+  {
+    "id": "SummonerExhaust",
+    "name": "Exhaust",
+    "key": 3,
+    "cooldown": 240,
+    "range": 650,
+    "maxAmmo": -1,
+    "summonerLevel": 4,
+    "description": "Slows target enemy champion and reduces their damage dealt.",
+    "tooltip": "Slows target enemy champion by {{ slow }}% and reduces their damage dealt by {{ damagereduction }}% for {{ debuffduration }} seconds.",
+    "modes": [
+      {
+        "gameMode": "CLASSIC",
+        "description": "Classic Summoner's Rift and Twisted Treeline games"
+      },
+      {
+        "gameMode": "ARAM",
+        "description": "ARAM games"
+      },
+      {
+        "gameMode": "TUTORIAL",
+        "description": "Tutorial games"
+      },
+      {
+        "gameMode": "URF",
+        "description": "URF games"
+      },
+      {
+        "gameMode": "DOOMBOTSTEEMO",
+        "description": "Doom Bot games"
+      },
+      {
+        "gameMode": "ONEFORALL",
+        "description": "One for All games"
+      },
+      {
+        "gameMode": "ARSR",
+        "description": "All Random Summoner's Rift games"
+      },
+      {
+        "gameMode": "NEXUSBLITZ",
+        "description": "Nexus Blitz games"
+      },
+      {
+        "gameMode": "ULTBOOK",
+        "description": "Ultimate Spellbook games"
+      }
+    ]
+  },
+  {
+    "id": "SummonerFlash",
+    "name": "Flash",
+    "key": 4,
+    "cooldown": 300,
+    "range": 425,
+    "maxAmmo": -1,
+    "summonerLevel": 7,
+    "description": "Teleports you a short distance toward your cursor.",
+    "tooltip": "Teleports you a short distance toward your cursor.",
+    "modes": [
+      {
+        "gameMode": "CLASSIC",
+        "description": "Classic Summoner's Rift and Twisted Treeline games"
+      },
+      {
+        "gameMode": "ARAM",
+        "description": "ARAM games"
+      },
+      {
+        "gameMode": "TUTORIAL",
+        "description": "Tutorial games"
+      },
+      {
+        "gameMode": "URF",
+        "description": "URF games"
+      },
+      {
+        "gameMode": "DOOMBOTSTEEMO",
+        "description": "Doom Bot games"
+      },
+      {
+        "gameMode": "ONEFORALL",
+        "description": "One for All games"
+      },
+      {
+        "gameMode": "FIRSTBLOOD",
+        "description": "Snowdown Showdown games"
+      },
+      {
+        "gameMode": "ASSASSINATE",
+        "description": "Blood Hunt Assassin games"
+      },
+      {
+        "gameMode": "ARSR",
+        "description": "All Random Summoner's Rift games"
+      },
+      {
+        "gameMode": "NEXUSBLITZ",
+        "description": "Nexus Blitz games"
+      },
+      {
+        "gameMode": "ULTBOOK",
+        "description": "Ultimate Spellbook games"
+      }
+    ]
+  },
+  {
+    "id": "SummonerHaste",
+    "name": "Ghost",
+    "key": 6,
+    "cooldown": 240,
+    "range": 200,
+    "maxAmmo": -1,
+    "summonerLevel": 1,
+    "description": "Gain Move Speed and ignore unit collision for the duration.",
+    "tooltip": "Gain {{ movespeedmod }} Move Speed and become Ghosted for {{ duration }} seconds.\n\nGhost: Ignore collision with other units.",
+    "modes": [
+      {
+        "gameMode": "CLASSIC",
+        "description": "Classic Summoner's Rift and Twisted Treeline games"
+      },
+      {
+        "gameMode": "ARAM",
+        "description": "ARAM games"
+      },
+      {
+        "gameMode": "TUTORIAL",
+        "description": "Tutorial games"
+      },
+      {
+        "gameMode": "URF",
+        "description": "URF games"
+      },
+      {
+        "gameMode": "DOOMBOTSTEEMO",
+        "description": "Doom Bot games"
+      },
+      {
+        "gameMode": "ONEFORALL",
+        "description": "One for All games"
+      },
+      {
+        "gameMode": "FIRSTBLOOD",
+        "description": "Snowdown Showdown games"
+      },
+      {
+        "gameMode": "ASSASSINATE",
+        "description": "Blood Hunt Assassin games"
+      },
+      {
+        "gameMode": "ARSR",
+        "description": "All Random Summoner's Rift games"
+      },
+      {
+        "gameMode": "NEXUSBLITZ",
+        "description": "Nexus Blitz games"
+      },
+      {
+        "gameMode": "ULTBOOK",
+        "description": "Ultimate Spellbook games"
+      }
+    ]
+  },
+  {
+    "id": "SummonerHeal",
+    "name": "Heal",
+    "key": 7,
+    "cooldown": 240,
+    "range": 875,
+    "maxAmmo": -1,
+    "summonerLevel": 1,
+    "description": "Restores Health and grants Move Speed to you and target allied champion.",
+    "tooltip": "Restores {{ totalheal }} Health and grants {{ movespeed*100 }}% Move Speed for {{ movespeedduration }} second to you and target allied champion.\n\nIf cast without a target, it will cast on the most wounded allied champion in range.\nHealing is halved on units recently affected by Summoner Heal.",
+    "modes": [
+      {
+        "gameMode": "CLASSIC",
+        "description": "Classic Summoner's Rift and Twisted Treeline games"
+      },
+      {
+        "gameMode": "ARAM",
+        "description": "ARAM games"
+      },
+      {
+        "gameMode": "TUTORIAL",
+        "description": "Tutorial games"
+      },
+      {
+        "gameMode": "URF",
+        "description": "URF games"
+      },
+      {
+        "gameMode": "DOOMBOTSTEEMO",
+        "description": "Doom Bot games"
+      },
+      {
+        "gameMode": "ONEFORALL",
+        "description": "One for All games"
+      },
+      {
+        "gameMode": "ASSASSINATE",
+        "description": "Blood Hunt Assassin games"
+      },
+      {
+        "gameMode": "ARSR",
+        "description": "All Random Summoner's Rift games"
+      },
+      {
+        "gameMode": "NEXUSBLITZ",
+        "description": "Nexus Blitz games"
+      },
+      {
+        "gameMode": "ULTBOOK",
+        "description": "Ultimate Spellbook games"
+      }
+    ]
+  },
+  {
+    "id": "SummonerMana",
+    "name": "Clarity",
+    "key": 13,
+    "cooldown": 240,
+    "range": 600,
+    "maxAmmo": -1,
+    "summonerLevel": 6,
+    "description": "Restores your and ally champion's Mana.",
+    "tooltip": "Restores {{ e1 }}% maximum Mana to your Champion and {{ e2 }}% to nearby allies.",
+    "modes": [
+      {
+        "gameMode": "ARAM",
+        "description": "ARAM games"
+      },
+      {
+        "gameMode": "FIRSTBLOOD",
+        "description": "Snowdown Showdown games"
+      }
+    ]
+  },
+  {
+    "id": "SummonerPoroRecall",
+    "name": "To the King!",
+    "key": 30,
+    "cooldown": 10,
+    "range": 200,
+    "maxAmmo": -1,
+    "summonerLevel": 1,
+    "description": "Quickly travel to the Poro King's side.",
+    "tooltip": "Passive: Hitting an enemy champion with a Poro gives your team a Poro Mark. Upon reaching 10 Poro Marks, your team summons the Poro King to fight alongside them. While the Poro King is active, no Poro Marks can be scored by either team.\n\nActive: Quickly dash to King Poro's side. Can only be cast while the Poro King is summoned for your team. \n\n''Poros tug the heartstrings. The rest of you just comes along for the ride.''",
+    "modes": [
+      {
+        "gameMode": "KINGPORO",
+        "description": "Legend of the Poro King games"
+      }
+    ]
+  },
+  {
+    "id": "SummonerPoroThrow",
+    "name": "Poro Toss",
+    "key": 31,
+    "cooldown": 20,
+    "range": 2500,
+    "maxAmmo": -1,
+    "summonerLevel": 1,
+    "description": "Toss a Poro at your enemies. If it hits, you can quickly travel to your target as a follow up.",
+    "tooltip": "Toss a Poro a long distance, dealing {{ f2 }} true damage to the first enemy unit hit, granting True Sight of the target.\n\nThis ability can be recast for 3 seconds if it hits an enemy to dash to the target hit, dealing {{ f2 }} more true damage and reducing the cooldown of the next Poro Toss by {{ e4 }} seconds.\n\nPoros are not blocked by spell shields or wind walls because they are animals, not spells!\n\n''Poros are a model for Runeterran aerodynamics.''",
+    "modes": [
+      {
+        "gameMode": "KINGPORO",
+        "description": "Legend of the Poro King games"
+      }
+    ]
+  },
+  {
+    "id": "SummonerSmite",
+    "name": "Smite",
+    "key": 11,
+    "cooldown": 15,
+    "range": 500,
+    "maxAmmo": 2,
+    "summonerLevel": 3,
+    "description": "Deals true damage to a monster or minion.",
+    "tooltip": "Deals {{ smitebasedamage }} true damage to target large monster or lane minion.\n\nDeals {{ firstpvpdamage }} true damage to champion pets.",
+    "modes": [
+      {
+        "gameMode": "CLASSIC",
+        "description": "Classic Summoner's Rift and Twisted Treeline games"
+      },
+      {
+        "gameMode": "TUTORIAL",
+        "description": "Tutorial games"
+      },
+      {
+        "gameMode": "URF",
+        "description": "URF games"
+      },
+      {
+        "gameMode": "DOOMBOTSTEEMO",
+        "description": "Doom Bot games"
+      },
+      {
+        "gameMode": "ONEFORALL",
+        "description": "One for All games"
+      },
+      {
+        "gameMode": "ARSR",
+        "description": "All Random Summoner's Rift games"
+      },
+      {
+        "gameMode": "NEXUSBLITZ",
+        "description": "Nexus Blitz games"
+      }
+    ]
+  },
+  {
+    "id": "SummonerSnowURFSnowball_Mark",
+    "name": "Mark",
+    "key": 39,
+    "cooldown": 80,
+    "range": 8000,
+    "maxAmmo": -1,
+    "summonerLevel": 6,
+    "description": "Throw a snowball in a straight line at your enemies. If it hits an enemy, they become marked, granting True Sight, and your champion can quickly travel to the marked target as a follow up.",
+    "tooltip": "Throw a snowball a long distance, dealing {{ tooltipdamagetotal }} true damage to the first enemy unit hit and granting True Sight of the target. If it hits an enemy, this ability can be recast for {{ e3 }} seconds to Dash to the tagged unit, dealing an additional {{ tooltipdamagetotal }} true damage. Dashing to the target will reduce the cooldown of Mark by {{ e4 }}%.\n\nMark projectiles are not stopped by spell shields or projectile mitigation.",
+    "modes": []
+  },
+  {
+    "id": "SummonerSnowball",
+    "name": "Mark",
+    "key": 32,
+    "cooldown": 80,
+    "range": 1600,
+    "maxAmmo": -1,
+    "summonerLevel": 6,
+    "description": "Throw a snowball in a straight line at your enemies. If it hits an enemy, they become marked, granting True Sight, and your champion can quickly travel to the marked target as a follow up.",
+    "tooltip": "Throw a snowball a long distance, dealing {{ tooltipdamagetotal }} true damage to the first enemy unit hit and granting True Sight of the target. If it hits an enemy, this ability can be recast for {{ e3 }} seconds to Dash to the tagged unit, dealing an additional {{ tooltipdamagetotal }} true damage. Dashing to the target will reduce the cooldown of Mark by {{ e4 }}%.\n\nMark projectiles are not stopped by spell shields or projectile mitigation.",
+    "modes": [
+      {
+        "gameMode": "ARAM",
+        "description": "ARAM games"
+      },
+      {
+        "gameMode": "FIRSTBLOOD",
+        "description": "Snowdown Showdown games"
+      }
+    ]
+  },
+  {
+    "id": "SummonerTeleport",
+    "name": "Teleport",
+    "key": 12,
+    "cooldown": 300,
+    "range": 25000,
+    "maxAmmo": -1,
+    "summonerLevel": 7,
+    "description": "After a brief channel, become untargetable and travel to an allied unit. Upgrades into Unleashed Teleport, which significantly increases travel speed. ",
+    "tooltip": "After channeling for {{ channelduration }} seconds, become Untargetable and travel to target allied structure, minion, or ward. \n\nUpgrades into Unleashed Teleport at {{ upgrademinute }} minutes, which significantly increases travel speed.",
+    "modes": [
+      {
+        "gameMode": "CLASSIC",
+        "description": "Classic Summoner's Rift and Twisted Treeline games"
+      },
+      {
+        "gameMode": "TUTORIAL",
+        "description": "Tutorial games"
+      },
+      {
+        "gameMode": "DOOMBOTSTEEMO",
+        "description": "Doom Bot games"
+      },
+      {
+        "gameMode": "ONEFORALL",
+        "description": "One for All games"
+      },
+      {
+        "gameMode": "ASSASSINATE",
+        "description": "Blood Hunt Assassin games"
+      },
+      {
+        "gameMode": "ARSR",
+        "description": "All Random Summoner's Rift games"
+      },
+      {
+        "gameMode": "ULTBOOK",
+        "description": "Ultimate Spellbook games"
+      }
+    ]
+  },
+  {
+    "id": "Summoner_UltBookSmitePlaceholder",
+    "name": "Placeholder and Attack-Smite",
+    "key": 55,
+    "cooldown": 0,
+    "range": 400,
+    "maxAmmo": -1,
+    "summonerLevel": 1,
+    "description": "This slot will be replaced by another champion's ultimate and you will gain Attack-Smite. There will be 30 seconds to select an ultimate. Be prepared!",
+    "tooltip": "Will be replaced by your Ultimate Summoner Spell.\n\nGain Attack-Smite. Attack-Smite will execute allied Buff Monsters, Epic Monsters, and Scuttle Crabs when you attack them.\n\nAttack-Smite does not have a cooldown.{{ spellmodifierdescriptionappend }}",
+    "modes": [
+      {
+        "gameMode": "ULTBOOK",
+        "description": "Ultimate Spellbook games"
+      }
+    ]
+  }
+]

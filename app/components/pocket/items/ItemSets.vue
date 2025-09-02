@@ -66,12 +66,13 @@ watch(items, (newItemSets) => {
       <!-- <div class="absolute bottom-2 right-3 opacity-0 group-hover/set:opacity-40 tldr-30 hover:opacity-100  handle">
           <icon name="ph:arrows-out-line-vertical" class="rotate-180 size-5 shrink-0" />
         </div> -->
-
-      <ItemSet
-        v-for="set, in pocket.items"
-        :key="set.name"
-        :pocket="pocket"
-        :set="set" />
+      <template v-if="pocket.items">
+        <ItemSet
+          v-for="set in pocket.items"
+          :key="set.name"
+          :pocket="pocket"
+          :set="set" />
+      </template>
     </div>
   </div>
 </template>

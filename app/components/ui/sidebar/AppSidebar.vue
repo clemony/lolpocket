@@ -83,7 +83,7 @@ function handleClick(component) {
     ref="sidebar"
     collapsible="icon"
     side="left"
-    :class="cn('items-start    [&>[data-sidebar=sidebar]]:flex-row !flex-row md:flex-row w-full !bg-transparent  h-screen ',
+    :class="cn('items-start   [&>[data-sidebar=sidebar]]:flex-row !flex-row md:flex-row w-full !bg-transparent  h-screen ',
                {
                  'max-w-[var(--sidebar-width)] w-[var(--sidebar-width)]': open,
                  'absolute top-0 left-0 z-30': !as().settings.lockSidebar,
@@ -100,8 +100,8 @@ function handleClick(component) {
       )"
       @click="toggleSidebar()"
       @dblclick="as().toggleSidebarLock">
-      <SidebarHeader>
-        <SidebarMenu>
+      <SidebarHeader class=" after:size-10 after:pointer-events-none after:absolute after:top-7.75 after:left-7.75 after:bg-b1 after:mask-radial-at-bottom-right after:z-0 after:mask-radial-from-20% after:mask-radial-from-transparent after:mask-radial-to-b1 after:mask-radial-to-21% before:size-9.5 before:pointer-events-none  before:absolute before:bg-transparent before:z-1 before:top-14.5 before:left-14.5 before:rounded-full before:border-b3 before:mask-linear-136 before:mask-linear-from-20% before:mask-linear-to-21% before:border before:mask-linear-to-transparent shadow-none drop-shadow-none">
+        <SidebarMenu class="z-1">
           <SidebarMenuItem>
             <SidebarMenuButton
               size="icon"
@@ -153,18 +153,18 @@ function handleClick(component) {
     </Sidebar>
 
     <!--  This is the second sidebar -->
-    <Sidebar
+    <LazySidebar
       class="overflow-hidden col-start-2 z-0 flex-1  h-screen w-full top-0 !bg-b1 "
       collapsible="none">
-      <TransitionFade
+      <LazyTransitionFade
         class=""
         :duration="200">
         <component
           :is="activeItem"
           loading="lazy"
           :open="open" />
-      </TransitionFade>
-    </Sidebar>
+      </LazyTransitionFade>
+    </LazySidebar>
     <SidebarRail class="!-right-2 focus:after:!bg-transparent focus:ring-0 focus-within:ring-0  focus:after:ring-0 focus-within:after:ring-0  focus:outline-0 focus-within:outline-0  focus:after:outline-0 focus-within:after:outline-0 border-0" />
   </Sidebar>
 </template>

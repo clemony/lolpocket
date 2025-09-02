@@ -2,7 +2,7 @@
 const { champKey, type = 'centered', class: className, loaded: watchLoad,
 }
   = defineProps<{
-    loaded: boolean
+    loaded?: boolean
     champKey: string
     type?: SplashType
     class?: HTMLAttributes['class']

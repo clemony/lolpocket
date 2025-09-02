@@ -11,11 +11,10 @@ definePageMeta({
   icon: 'bi:list-ul',
 })
 
-const is = useItemStore()
 const theme = ref(pocketTheme)
 
 const gridOptions: GridOptions<ItemLite> = {
-  rowData: itemsLite.filter(i => fi().filtered.includes(i.id)),
+  rowData: itemsLite.filter(i => is().filtered.includes(i.id)),
   columnHoverHighlight: true,
 
   rowSelection: {
@@ -38,7 +37,7 @@ const gridOptions: GridOptions<ItemLite> = {
 }
 
 const colDefs = [
-  { field: 'id', headerName: '', cellRenderer: params => `<img src="/img/item/${params.value}.webp" class="size-12 aspect-square rounded-full drop-shadow-sm shadow-sm" />`, cellClass: '!py-1 !pr-1 !ml-0', sortable: false, width: 61, maxWidth: 61, minWidth: 61 },
+  { field: 'id', headerName: '', cellRenderer: params => `<img src="/img/items/${params.value}.webp" class="size-12 aspect-square rounded-full drop-shadow-sm shadow-sm" />`, cellClass: '!py-1 !pr-1 !ml-0', sortable: false, width: 61, maxWidth: 61, minWidth: 61 },
   { field: 'name', headerName: 'Item', cellDataType: 'text', minWidth: 100, flex: 3, sortable: false, cellClass: 'font-medium  ', headerComponentParams: {
     innerHeaderComponentParams: {
       displayName: 'Item',
@@ -174,7 +173,7 @@ const gridApi = shallowRef<GridApi | null>(null)
 async function onGridReady(params: GridReadyEvent) {
   await params.api
   gridApi.value = params.api
-  is.itemGridApi = gridApi.value
+  is().itemGridApi = gridApi.value
 
   const columns = gridApi.value.getColumns()
   columns.forEach((col) => {
@@ -183,7 +182,7 @@ async function onGridReady(params: GridReadyEvent) {
 }
 
 watch(
-  () => fi().filtered,
+  () => is().filtered,
   (newVal) => {
     if (newVal && gridApi.value)
       gridApi.value.setGridOption('rowData', [])

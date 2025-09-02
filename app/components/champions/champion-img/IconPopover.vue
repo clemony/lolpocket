@@ -32,7 +32,7 @@ console.log('💠 - pocket - pocket:', pocket)
 
 const ix = useIndexStore()
 
-const selectIcon = ref('/img/lp/192.webp')
+const selectIcon = ref('')
 const champSearch = ref(null)
 const selectedChampion = ref(null)
 const championSkins = ref<Skin[]>([])
@@ -62,10 +62,9 @@ const champSearchResults = computed(() => {
   return champFuse.value.search(champSearch.value)
 })
 
-function handleInput(e: string) {
+function handleInput() {
   if (selectedChampion.value)
     selectedChampion.value = null
-  champSearch.value = e
 }
 
 onMounted(() => {
@@ -79,41 +78,59 @@ const isOpen = ref(false)
 
 <template>
   <Popover v-model:open="isOpen">
-    <PopoverTrigger :class="cn('group/picon z-0 shrink-0 cursor-pointer self-center  size-14   rounded-full pointer-events-auto  aspect-square  grid place-items-center relative', props.class) ">
+    <PopoverTrigger :class="cn('group/icon z-0 shrink-0 cursor-pointer self-center  size-14   rounded-full pointer-events-auto  aspect-square  grid place-items-center relative', props.class) ">
       <PocketIcon
         :url=" pocket ? pocket?.icon : selectIcon"
         alt="pocket icon"
-        class="group-hover/picon:brightness-50 pointer-events-none z-1 group-data-[state=open]/picon:brightness-50  tldr-30 shadow-sm drop-shadow-sm group-data-[state=open]/picon:ring group-data-[state=open]/picon:ring-offset-2 ringneutral/40 ring-offset-b1 rounded-full" />
+        class="group-hover/icon:brightness-50 pointer-events-none z-1 group-data-[state=open]/icon:brightness-50  transition-all duration-200  group-data-[state=open]/icon:ring group-data-[state=open]/icon:ring-offset-2 ring-neutral/40 ring-offset-b1 size-full rounded-full" />
 
       <icon
         name="images"
-        class="size-6 !text-nc absolute opacity-0  group-hover/picon:opacity-80 z-2 transition-all pointer-events-none  duration-300 group-data-[state=open]/picon:opacity-100" />
+        class="size-6 !text-nc absolute opacity-0  group-hover/icon:opacity-80 z-2 transition-all pointer-events-none  duration-300 group-data-[state=open]/icon:opacity-100" />
     </PopoverTrigger>
 
-    <LazyCustomPopoverContent
+    <LazyPopPopoverContent
       hydrate-on-interaction
       :side-offset="props.sideOffset"
       :align-offset="props.alignOffset"
       :align="props.align"
       :side="props.side"
-      :class="cn('w-96 py-2 overflow-hidden px-2', popoverClass)"
+      :class="cn('w-96 p-0 overflow-hidden', popoverClass)"
       as-child>
       <motion.div
-        class=" flex flex-col  overflow-y-scroll"
+        class=" flex flex-col  p-px overflow-y-scroll"
         :style="{ maxHeight: !champSearch ? '60px' : '250px' }">
-        <ContrastSearchInput
-          v-model:model-value="champSearch"
-          placeholder="Search Splash Icons..."
-          @update:input="handleInput($event)" />
+        <div class=" relative   w-full px-3 h-12 shrink-0 group/txt gap-3 flex items-center w-full ">
+          <icon name="search" />
+          <input
+            v-model="champSearch"
+            class="h-full placeholder:italic   w-full pr-4 text-2 focus:placeholder:opacity-0 transition-all duration-200"
+            placeholder="Search Splash Icons..."
+            @input="handleInput()"
+            @keydown.stop
+            @keydown.enter.prevent />
 
+          <Button
+            variant="ghost"
+            size="xs"
+            class="btn-square absolute top-3 right-2 shrink-0 group-has-[:placeholder-shown]/txt:opacity-0 opacity-100 size-6">
+            <icon
+              name="x-sm"
+              class="size-4 **:stroke-[1.5]" />
+          </Button>
+        </div>
+
+        <Separator />
         <transition-slide
           v-if="!selectedChampion"
           group
-          class="pt-2 overflow-y-scroll w-full flex flex-col">
-          <label
+          class="py-3 px-1 overflow-y-scroll w-full flex flex-col">
+          <Label
             v-for="result in champSearchResults"
             :key="result.item.id"
-            class="justify-start btn btn-ghost btn-ghost-dark  gap-3 text-3">
+            variant="ghost"
+            size="sm"
+            class="justify-start  duration-0">
             <input
               v-model="selectedChampion"
               type="radio"
@@ -128,7 +145,7 @@ const isOpen = ref(false)
                 hydrate-on-visible />
             </span>
             {{ result.item.name }}
-          </label>
+          </Label>
         </transition-slide>
 
         <div
@@ -153,9 +170,9 @@ const isOpen = ref(false)
         <div
           v-else
           class="w-full  px-2  pt-3 pb-4">
-          <p>Search for a champion to select a splash art.</p>
+          <p>Search for a champion to select a skin.</p>
         </div>
       </motion.div>
-    </LazyCustomPopoverContent>
+    </LazyPopPopoverContent>
   </Popover>
 </template>

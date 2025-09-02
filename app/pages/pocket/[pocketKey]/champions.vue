@@ -4,10 +4,12 @@ const { pocket: p } = defineProps<{
 }>()
 const pocket = computed (() => p)
 definePageMeta({
-  name: 'champions',
+  name: 'pocket-champions',
   path: '/pocket/:pocketKey',
   alias: '/pocket/:pocketKey/champions',
   level: 3,
+  title: 'champions',
+  order: 1,
   search: false,
 })
 
@@ -23,26 +25,27 @@ const { results } = useSimpleSearch(
 </script>
 
 <template>
-  <div class="size-full  lg:max-w-[1400px] mx-auto pt-26 ">
-    <header class="flex gap-8 pb-9 pl-13 pr-16 items-start justify-between  w-full">
-      <h1 class="text-10 font-bold dst ">
-        Champions
-      </h1>
-      <div class="flex flex-col gap-2 justify-center items-end">
-        <SearchWrapper class=" h-12 w-100">
-          <input
-            v-model="searchQuery"
-            type="text" />
-        </SearchWrapper>
-        <ChampionQuote class="font-serif" />
-      </div>
+  <div class="size-full z-auto overflow-y-auto  -mr-34 pr-34">
+    <header class="flex pt-16 gap-8 sticky z-1 bg-linear-to-b from-b1 to-b1/70 backdrop-blur-lg top-0 pb-9 pl-13 pr-16 items-center justify-end  w-full">
+      <!--       <ChampionQuote
+        v-once
+        class="italic text-2 font-normal absolute top-6 right-16" /> -->
+      <Input
+        v-model="searchQuery"
+        placeholder="Search champions..."
+        class="max-w-100 border-b4/60 w-100"
+        type="text">
+        <icon name="search" />
+      </Input>
     </header>
 
     <div
-      class="h-max min-h-max grid grid-flow-row auto-cols-auto pb-90  grid-cols-[repeat(auto-fill,minmax(80px,1fr))]  px-14 w-full pb-3 inset-0   gap-3 ">
+      class="h-fit  pb-64 grid grid-flow-row auto-cols-auto pt-1  grid-cols-[repeat(auto-fill,minmax(80px,1fr))]  px-14 w-full pb-3 inset-0   gap-3 ">
       <label
-        v-for="champion in results"
+        v-for="champion in results.filter(r => !pocket.champions.includes(r.key))"
         :key="champion.id"
+        v-memo="results"
+        :title="champion.name"
         :class="cn('hover-ring cursor-pointer relative rounded-lg size-26 overflow-hidden shadow-sm drop-shadow-sm', { 'scale-90  border  borderneutral/60 ': pocket.champions.includes(champion.key) })">
         <ChampionIcon
           :id="champion.id"
@@ -56,14 +59,6 @@ const { results } = useSimpleSearch(
           type="checkbox"
           :value="champion.key"
           class="peer hidden" />
-        <Label
-          v-if="pocket.champions.includes(champion.key)"
-          variant="neutral"
-          class="absolute  grid place-items-center  p-0 pointer-events-none checkbox checkbox-neutral size-8 rounded-full top-0 right-0 z-4">
-          <icon
-            name="tick"
-            class="text-nc **:stroke-[2.5] absolute" />
-        </Label>
       </label>
     </div>
   </div>

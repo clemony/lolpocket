@@ -6,12 +6,17 @@ const props = defineProps<{
 }>()
 
 definePageMeta({
-  name: 'pocket items',
+  name: 'pocket-items',
+  title: 'items',
+  path: '/pocket/:pocketKey/items',
+  level: 3,
+  order: 2,
   parent: '/pocket',
   search: false,
 })
 
-const pocket = ref(props.pocket)
+const route = useRoute()
+const pocket = ref<Pocket>(ps().getPocket(String(route.params.pocketKey)))
 
 const tabs = ref('items')
 
@@ -47,14 +52,13 @@ const tabValues = [
           class="bg-b1   flex size-full relative overflow-y-auto">
           <ItemSets :pocket="pocket" />
         </ResizablePanel>
-        <ResizableHandle />
+        <ResizableHandle with-handle />
         <ResizablePanel
           :min-size="35"
           class=" relative  overflow-hidden flex flex-col z-0 justify-end">
           <section
             class="size-full  relative overscroll-auto justify-center overflow-y-auto ">
-            <LazyDraggableItemList
-              :pocket="pocket" />
+            <LazyDraggableItemList />
           </section>
         </ResizablePanel>
       </SidebarInset>

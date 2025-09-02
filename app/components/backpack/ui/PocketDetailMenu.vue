@@ -60,11 +60,6 @@ const pocket = computed (() => {
       <!-- tags -->
 
       <PocketTagsDropdown :pocket>
-        <DropdownMenuTrigger
-          variant="ghost"
-          class="size-11">
-          <icon name="tag" />
-        </DropdownMenuTrigger>
       </PocketTagsDropdown>
       <!-- edit -->
       <Blink

@@ -12,6 +12,9 @@
   @apply rounded-[3.5px];
 }
 
+
+
+
 /*  btn */
 
 @utility btn {
@@ -110,11 +113,11 @@
 /* badge */
 
 @utility badge {
-  @apply rounded-lg shadow-standard shadow-black/2 **:text-3 flex gap-2 drop-shadow-text items-center  box-border;
+  @apply rounded-lg shadow-sm shadow-black/2 text-2 px-2 flex gap-2 drop-shadow-text items-center  box-border;
 }
 
-@utility badge-n1 {
-  @apply text-nc bg-n1;
+@utility badge-neutral {
+  @apply text-nc bg-neutral;
 }
 
 /* collapse */

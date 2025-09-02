@@ -13,6 +13,7 @@ export const PocketLocationSchema = v.object({
 
 // Items
 export const ItemSetSchema = v.object({
+  id: v.fallback(v.string(), ''),
   name: v.fallback(v.string(), ''),
   items: v.fallback(MinMaxArray(v.nullable(v.number()), 0, 20), []),
 })
@@ -56,6 +57,7 @@ export type ShardSet = v.InferOutput<typeof ShardSchema>
 // Rune Set
 
 export const RuneSetSchema = v.object({
+  id: v.fallback(v.string(), ''),
   keystone: v.nullable(v.number()),
   primary: RunesPrimarySchema,
   secondary: RunesSecondarySchema,
@@ -63,6 +65,16 @@ export const RuneSetSchema = v.object({
 })
 
 export type RuneSet = v.InferOutput<typeof RuneSetSchema>
+
+// Main Set
+
+const MainSchema = v.object({
+  champion: v.fallback(v.string(), ''),
+  items: v.fallback(v.string(), ''),
+  runes: v.fallback(v.string(), ''),
+  role: v.fallback(v.string(), 'All'),
+  spells: v.fallback(FixedArray(v.nullable(v.number()), 2), []),
+})
 
 // --- Pocket Schema ---
 export const PocketSchema = v.object({
@@ -74,6 +86,7 @@ export const PocketSchema = v.object({
   items: v.array(ItemSetSchema),
   runes: v.array(RuneSetSchema),
   spells: v.array(SpellSetSchema),
+  main: MainSchema,
   created: v.pipe(v.string(), v.transform(s => new Date(s))),
   updated: v.number(),
   tags: v.array(v.string()),

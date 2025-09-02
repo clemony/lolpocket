@@ -1,8 +1,6 @@
 <script lang="ts" setup>
 import { ListboxContent, ListboxGroup, ListboxRoot } from 'reka-ui'
 
-import { championPositions } from 'appdata/filters/positions'
-
 const { paddingClass } = defineProps<{
   paddingClass?: HTMLAttributes['class']
 
@@ -50,7 +48,7 @@ function deleteTag(tag: string) {
             variant="ghost"
             class=" w-full "
             size="md">
-            <span class="font-semibold duration-0 grow tracking-normal opacity-70  text-3 capitalize">
+            <span class="font-semibold duration-0 grow tracking-normal opacity-40  text-4 capitalize">
               Tags
             </span>
             <CaretRotate />
@@ -75,11 +73,11 @@ function deleteTag(tag: string) {
                 <Button
                   size="md"
                   variant="ghost"
-                  :class="cn('size-full px-3 duration-0 hover:bg-b2/60 !gap-1 items-center justify-start hover:inset-shadow-none rounded-lg text-bc/80 hover:text-bc', { 'btn-active !bg-b2/20': tags.includes(item) })">
+                  :class="cn('size-full px-3 duration-0 hover:bg-b2/60 !gap-px items-center justify-start hover:inset-shadow-none rounded-lg text-bc/80 hover:text-bc', { 'btn-active !bg-b2/20': tags.includes(item) })">
                   <icon
                     name="hash"
                     class="!size-3.5" />
-                  <span class="w-full truncate">
+                  <span class="w-full font-medium truncate">
                     {{ item }}
                   </span>
                 </Button>
@@ -127,52 +125,4 @@ function deleteTag(tag: string) {
       </Collapsible>
     </ListboxContent>
   </ListboxRoot>
-
-  <Separator />
-  <!-- position tags -->
-
-  <Collapsible
-    v-model:open="as().toggles.backpack.positions"
-    :class="cn('px-3', paddingClass)">
-    <CollapsibleTrigger as-child>
-      <Button
-        as="button"
-        variant="ghost"
-        class=" w-full "
-        size="md">
-        <span class="font-semibold grow tracking-normal opacity-70 duration-0  text-3 capitalize">
-          Position
-        </span>
-        <CaretRotate />
-      </Button>
-    </CollapsibleTrigger>
-
-    <CollapsibleContent
-      menu
-      class=" CollapsibleContent relative justify-center flex gap-y-1 flex-col py-px  pr-18">
-      <label
-        v-for="position in championPositions"
-        :key="position.name"
-        class="group/bt px-3 h-9 flex  hover:*:ring hover:*:ring-offset-1 duration-0  *:ring-offset-b1 *:ring-bc items-center w-full cursor-pointer">
-        <input
-          v-model="tags"
-          type="checkbox"
-          :value="position.name"
-          class="peer hidden" />
-        <div
-          class="items-center badge badge-lg !h-6 rounded-lg px-2.5 **:text-white flex gap-1.5 "
-          :style=" {
-            backgroundColor: position.color,
-            borderColor: position.color }">
-          <component
-            :is="`i-roles-${position.name}`"
-            :class="cn('size-3.5 dst ')" />
-
-          <span>
-            {{ position.name }}
-          </span>
-        </div>
-      </label>
-    </CollapsibleContent>
-  </Collapsible>
 </template>

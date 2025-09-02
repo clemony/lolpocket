@@ -5,7 +5,7 @@ import { ListboxContent, ListboxItem, ListboxItemIndicator, ListboxRoot } from '
 
 <template>
   <ListboxRoot
-    v-model:model-value="fi().filters.stats"
+    v-model:model-value="is().filters.stats"
     class="w-full overflow-y-scroll overscroll-auto px-1.5  h-120 max-h-90 "
     :multiple="true"
     @entry-focus.prevent>
@@ -18,7 +18,7 @@ import { ListboxContent, ListboxItem, ListboxItemIndicator, ListboxRoot } from '
         <Button
           variant="ghost"
           size="sm"
-          :class="cn('justify-start capitalize', { 'btn-active': fi().filters.stats.includes(stat.id) })">
+          :class="cn('justify-start capitalize', { 'btn-active': is().filters.stats.includes(stat.id) })">
           {{ stat.displayName }}
           <ListboxItemIndicator
             class="w-fit justify-self-end justify-end bg-neutral">

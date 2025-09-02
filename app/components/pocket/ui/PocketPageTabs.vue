@@ -5,42 +5,40 @@ const { pocket } = defineProps<{
 }>()
 
 const route = useRoute()
+console.log('🌱 - route:', route.path)
 
-const routeName = computed (() => {
-  const a = route.fullPath.split('/')[4]
-  if (!a)
-    return ''
-
-  return a.split('#')[0] || ''
-})
 const tabs = ref(null)
+console.log('🌱 - tabs:', tabs)
 
 onMounted (() => {
-  tabs.value = routeName.value
-  console.log('💠 - routeName.value:', routeName.value)
+  tabs.value = route.name
 })
 </script>
 
 <template>
   <nav
     role="tablist"
-    class="tabs tab-menu relative h-10 justify-start col-start-2 w-full  mb-2     tabs-lg tabs-lift  z-5 flex">
+    class="tabs tab-menu border-b relative h-10 justify-start col-start-2 w-full  mb-2    pl-44 tabs-lg tabs-lift  z-1 flex">
     <FakeTab />
 
     <!-- ALL tabs -->
 
-    <li
-      v-for="item in getPocketLinks(pocket)"
+    <label
+      v-for="item in route.matched[1].children.sort((a, b) => (Number(a.meta?.order) - Number(b.meta?.order)))"
       :key="item.name"
       role="tab"
-      :value="item.name"
-      :class="cn('group/tab min-w-22 max-w-44 grow   tab ', { 'tab-active ': route.path == item.link || routeName == item.link })"
-      @click="navigateTo(item.link)">
-      {{ item.name }}
-    </li>
+      :class="cn('group/tab min-w-22 max-w-40 grow has-checked:tab-active  tab ', { 'tab-active ': tabs == item.name })"
+      @click="navigateTo(`/pocket/${pocket.key}/${item.meta?.title}`)">
+      <input
+        v-model="tabs"
+        type="radio"
+        :value="item.name"
+        class="peer hidden" />
+      {{ item.meta?.title }}
+    </label>
 
     <FakeTab />
-
-    <div class="tab-content" />
+    <Separator class="z-0 absolute -bottom-2 bg-b3/60 left-0" />
+    <div class="tab-content size-0 hidden" />
   </nav>
 </template>

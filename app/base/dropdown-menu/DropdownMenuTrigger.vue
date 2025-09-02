@@ -8,19 +8,19 @@ const props = defineProps<DropdownMenuTriggerProps & {
   variant?: any
   shape?: any
 }>()
-
 const forwarded = useForwardProps(props)
 </script>
 
 <template>
   <DropdownMenuTrigger
-    v-bind="forwarded">
+    v-bind="forwarded"
+    as-child>
     <Button
       :variant="variant"
+      as="button"
       :size="size"
       :shape="shape"
-      :class="cn('', props.class)"
-      class="outline-none cursor-pointer">
+      :class="cn('outline-none  data-[state=open]:btn-active cursor-pointer', props.class)">
       <slot />
     </Button>
   </DropdownMenuTrigger>

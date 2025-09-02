@@ -1,6 +1,6 @@
-// Updated Patch 25.16 - 08/14/2025 07:55:49 PM CDT
+// Updated Patch 25.17 - 09/01/2025 05:26:11 PM CDT
 
-const champion: Champion =  {
+const champion: Champion = {
   "id": 799,
   "key": "Ambessa",
   "name": "Ambessa",
@@ -8,6 +8,7 @@ const champion: Champion =  {
   "fullName": "Ambessa Medarda",
   "resource": "Energy",
   "attackType": "Melee",
+  "adaptiveType": "Physical damage",
   "stats": {
     "health": {
       "flat": 630,
@@ -648,6 +649,13 @@ const champion: Champion =  {
       }
     ]
   },
-  "lore": "All who know the name Medarda respect and fear the family's leader, Ambessa. As a Noxian general, she embodies a deadly combination of ruthless strength and fearless resolve in battle. Her role as matriarch is no different, requiring great cunning to empower the Medardas while leaving no room for failure or compassion. Embracing the merciless ways of the Wolf, Ambessa will do whatever it takes to protect her family's legacy, even at the cost of her own children's love."
+  "lore": "All who know the name Medarda respect and fear the family's leader, Ambessa. As a Noxian general, she embodies a deadly combination of ruthless strength and fearless resolve in battle. Her role as matriarch is no different, requiring great cunning to empower the Medardas while leaving no room for failure or compassion. Embracing the merciless ways of the Wolf, Ambessa will do whatever it takes to protect her family's legacy, even at the cost of her own children's love.",
+  "faction": "noxus",
+  "releaseDate": "2024-11-06",
+  "patchLastChanged": "25.11",
+  "price": {
+    "blueEssence": 3150,
+    "rp": 975
+  }
 }
-    export default champion
+export default champion

@@ -25,11 +25,6 @@ export function addItemToSet(pocket: Pocket, itemSet: ItemSet, item: ItemId) {
   }
 }
 
-export function duplicateItemSet(pocket: Pocket, set: ItemSet) {
-  const newSet = deepCopy(set)
-  pocket.items.push(newSet)
-}
-
 export function resetItems(set: ItemSet) {
   if (set && Array.isArray(set.items)) {
     set.items.splice(0, set.items.length)
@@ -54,20 +49,3 @@ export function deleteItemSet(pocket: Pocket, set: ItemSet) {
     pocket.items.splice(i, 1)
   }
 }
-
-// export const removingItems = ref<Record<string, boolean>>({})
-
-// export function onRemove<T>(evt: any, array: T[]) {
-//   const itemKey = evt.item.dataset.key
-//   const index = evt.oldIndex
-
-//   if (index === undefined || index < 0 || index >= array.length)
-//     return
-
-//   removingItems.value[itemKey] = true
-
-//   setTimeout(() => {
-//     array.splice(index, 1)
-//     delete removingItems.value[itemKey]
-//   }, 600)
-// }

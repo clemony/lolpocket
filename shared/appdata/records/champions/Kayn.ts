@@ -1,6 +1,6 @@
-// Updated Patch 25.16 - 08/14/2025 07:55:49 PM CDT
+// Updated Patch 25.17 - 09/01/2025 05:26:13 PM CDT
 
-const champion: Champion =  {
+const champion: Champion = {
   "id": 141,
   "key": "Kayn",
   "name": "Kayn",
@@ -8,6 +8,7 @@ const champion: Champion =  {
   "fullName": "Shieda Kayn",
   "resource": "Mana",
   "attackType": "Melee",
+  "adaptiveType": "Physical damage",
   "stats": {
     "health": {
       "flat": 655,
@@ -261,7 +262,7 @@ const champion: Champion =  {
           }
         ],
         "cost": [
-          50
+          40
         ],
         "cooldown": [
           7,
@@ -323,11 +324,11 @@ const champion: Champion =  {
           }
         ],
         "cost": [
-          60,
-          65,
-          70,
-          75,
-          80
+          40,
+          45,
+          50,
+          55,
+          60
         ],
         "cooldown": [
           13,
@@ -495,6 +496,13 @@ const champion: Champion =  {
       }
     ]
   },
-  "lore": "A peerless practitioner of lethal shadow magic, Shieda Kayn battles to achieve his true destiny—to one day lead the Order of Shadow into a new era of Ionian supremacy. He wields the sentient darkin weapon Rhaast, undeterred by its creeping corruption of his body and mind. There are only two possible outcomes: either Kayn bends the weapon to his will... or the malevolent blade consumes him completely, paving the way for the destruction of all Runeterra."
+  "lore": "A peerless practitioner of lethal shadow magic, Shieda Kayn battles to achieve his true destiny—to one day lead the Order of Shadow into a new era of Ionian supremacy. He wields the sentient darkin weapon Rhaast, undeterred by its creeping corruption of his body and mind. There are only two possible outcomes: either Kayn bends the weapon to his will... or the malevolent blade consumes him completely, paving the way for the destruction of all Runeterra.",
+  "faction": "ionia",
+  "releaseDate": "2017-07-12",
+  "patchLastChanged": "25.10",
+  "price": {
+    "blueEssence": 1575,
+    "rp": 790
+  }
 }
-    export default champion
+export default champion

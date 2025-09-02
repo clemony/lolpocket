@@ -14,7 +14,7 @@ const forwarded = useForwardProps(delegatedProps)
   <SelectTrigger
     v-bind="forwarded"
     :class="cn(
-      'flex h-11   w-full items-center justify-between whitespace-nowrap rounded-lg  border border-b4/80 bg-transparent pl-4 pr-3 py-1 text-2  ring-offset-b1 data-[placeholder]:text-b2-bc focus:outline-none focus:ring-1 focus:ring-b2 disabled:cursor-not-allowed  cursor-pointer disabled:opacity-50 [&>span]:truncate text-start  hover:inset-shadow-sm  transition-all duration-200 ',
+      'flex h-11   w-full items-center justify-between whitespace-nowrap rounded-lg  bg-transparent  pr-3  text-2  ring-offset-b1 data-[placeholder]:text-b2-bc focus:outline-none focus:ring-1 focus:ring-b2 disabled:cursor-not-allowed  cursor-pointer disabled:opacity-50 [&>span]:truncate text-start  transition-all duration-200 ',
       props.class,
     )">
     <slot />
@@ -26,7 +26,7 @@ const forwarded = useForwardProps(delegatedProps)
       class="relative">
       <icon
         name="select"
-        class="size-5.25 opacity-50 shrink-0  absolute  right-0" />
+        class="size-4 opacity-50 shrink-0  absolute  right-0" />
     </SelectIcon>
   </SelectTrigger>
 </template>

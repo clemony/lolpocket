@@ -2,6 +2,7 @@
 definePageMeta({
   level: 1,
   order: 8,
+  icon: 'book',
 })
 </script>
 

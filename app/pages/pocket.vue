@@ -1,15 +1,17 @@
 <script lang="ts" setup>
 definePageMeta({
-  level: 1,
+  name: 'pocket-entry',
+  path: '/pocket',
+  level: 0,
   order: 0,
-  name: 'pocket',
 })
 
 const route = useRoute()
+const pocket = ref<Pocket>(ps().getPocket(String(route.params.pocketKey)))
 </script>
 
 <template>
-  <div>
-    <LazyNuxtPage />
-  </div>
+  <LazyNuxtPage
+    v-if="pocket"
+    :pocket="pocket" />
 </template>

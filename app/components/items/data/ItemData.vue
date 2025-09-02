@@ -31,7 +31,7 @@ watchEffect(async () => {
         <Img
           v-if="item"
           :key="item.name"
-          :img="`/img/item/${id}.webp`"
+          :img="`/img/items/${id}.webp`"
           :alt="`${item.name} Image`"
           class="!size-full rounded-lg" />
       </div>

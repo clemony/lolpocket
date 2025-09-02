@@ -16,6 +16,7 @@ definePageMeta({
   name: 'home',
   path: '/',
   layout: 'basic',
+  level: 0,
   meta: {
     title: 'lolpocket',
     searchKeys: ['home', 'landing', 'testimonials'],

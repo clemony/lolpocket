@@ -1,6 +1,6 @@
-// Updated Patch 25.16 - 08/14/2025 07:55:49 PM CDT
+// Updated Patch 25.17 - 09/01/2025 05:26:10 PM CDT
 
-const champion: Champion =  {
+const champion: Champion = {
   "id": 84,
   "key": "Akali",
   "name": "Akali",
@@ -8,6 +8,7 @@ const champion: Champion =  {
   "fullName": "Akali Jhomen Tethi",
   "resource": "Energy",
   "attackType": "Melee",
+  "adaptiveType": "Physical damage",
   "stats": {
     "health": {
       "flat": 600,
@@ -511,6 +512,13 @@ const champion: Champion =  {
       }
     ]
   },
-  "lore": "Abandoning the Kinkou Order and her title of the Fist of Shadow, Akali now strikes alone, ready to be the deadly weapon her people need. Though she holds onto all she learned from her master Shen, she has pledged to defend Ionia from its enemies, one kill at a time. Akali may strike in silence, but her message will be heard loud and clear: fear the assassin with no master."
+  "lore": "Abandoning the Kinkou Order and her title of the Fist of Shadow, Akali now strikes alone, ready to be the deadly weapon her people need. Though she holds onto all she learned from her master Shen, she has pledged to defend Ionia from its enemies, one kill at a time. Akali may strike in silence, but her message will be heard loud and clear: fear the assassin with no master.",
+  "faction": "ionia",
+  "releaseDate": "2010-05-11",
+  "patchLastChanged": "25.12",
+  "price": {
+    "blueEssence": 1575,
+    "rp": 790
+  }
 }
-    export default champion
+export default champion

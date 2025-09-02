@@ -36,7 +36,7 @@ const customPlugin = {
       const radius = point.r || 20 // Adjust the size of the image
 
       const img = new Image()
-      img.src = `/img/item/circle/${point.itemId}.webp` // Ensure image path is correct
+      img.src = `/img/items/circle/${point.itemId}.webp` // Ensure image path is correct
 
       img.onload = () => {
         ctx.save()

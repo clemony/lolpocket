@@ -15,6 +15,7 @@ defineOptions({
 const props = withDefaults(
   defineProps<PopoverContentProps & {
     class?: HTMLAttributes['class']
+    arrowClass?: HTMLAttributes['class']
     to?: string
     sideOffset?: number
     align?: string
@@ -43,6 +44,15 @@ const variants = {
     opacity: 0,
     scale: props.scaleStart,
     transitionEnd: { visibility: 'hidden' },
+  },
+  arrowHidden: {
+    opacity: 0,
+    scale: props.scaleStart,
+    transitionEnd: { visibility: 'hidden' },
+    transition: {
+      duration: 0,
+      delay: 0,
+    },
   },
 }
 
@@ -84,7 +94,7 @@ const wrapperVariants = {
           v-bind="{ forwarded }"
           :class="
             cn(
-              'z-50 w-72 rounded-xl border backdrop-blur-md drop-shadow-md !border-b3  bg-b1/94  p-4 text-bc shadow-md outline-none group-data-[state=visible]:**:opacity-100 group-data-[state=hidden]:**:opacity-0',
+              'z-50 w-72 rounded-lg border backdrop-blur-md drop-shadow-md !border-b3  bg-b1/94  p-4 text-bc shadow-md outline-none group-data-[state=visible]:**:opacity-100 group-data-[state=hidden]:**:opacity-0',
               props.class,
             )
           ">
@@ -101,6 +111,12 @@ const wrapperVariants = {
             }">
             <slot />
           </motion.div>
+          <CustomPopoverArrow
+            initial="hidden"
+            animate="visible"
+            :variants="variants"
+            exit="arrowHidden"
+            :class="cn('text-b1/99 absolute  scale-y-90 -translate-y-2.25 !z-53', props.arrowClass)" />
         </motion.div>
       </PopoverContent>
     </AnimatePresence>

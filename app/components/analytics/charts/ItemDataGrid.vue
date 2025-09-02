@@ -50,7 +50,7 @@ const { bayesianItems } = useMatchItems(state.summoner.puuid, state.matches)
               <div>
                 <img
                   class="size-10 rounded-xl"
-                  :src="`/img/item/${entry.item?.id}.webp`" />
+                  :src="`/img/items/${entry.item?.id}.webp`" />
               </div>
 
               <div class="list-col-grow -space-y-1">

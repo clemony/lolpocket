@@ -19,8 +19,8 @@ const delegatedProps = computed(() => {
     <button :class="cn('btn btn-ghost btn-square btn-sm', props.class)">
       <slot>
         <icon
-          name="material-symbols:last-page"
-          class="size-4.5" />
+          name="right-pipe"
+          class="size-4" />
       </slot>
     </button>
   </PaginationLast>

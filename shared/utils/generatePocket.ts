@@ -10,6 +10,7 @@ const toID = hexoid()
 
 export function newRuneSet(): RuneSet {
   return {
+    id: toID(),
     keystone: null,
     primary: {
       path: '',
@@ -27,6 +28,12 @@ export function newRuneSet(): RuneSet {
   }
 }
 
+export function newItemSet(): ItemSet {
+  const a = getDeepDefaults(ItemSetSchema)
+  a.id = toID()
+  return a
+}
+
 export function newPocket(): Pocket {
   return {
     key: toID(),
@@ -34,9 +41,10 @@ export function newPocket(): Pocket {
     icon: '',
     roles: ['all'],
     champions: [],
-    items: [getDeepDefaults(ItemSetSchema)],
+    items: [newItemSet()],
     runes: [newRuneSet()],
     spells: [[null, null]],
+    main: { champion: '', items: '', runes: '', role: 'All', spells: [] },
     created: new Date(),
     updated: patchIndex[0],
     tags: [],

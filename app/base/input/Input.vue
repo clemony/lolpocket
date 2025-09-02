@@ -27,12 +27,14 @@ const modelValue = useVModel(props, 'modelValue', emits, {
 <template>
   <label
     :id="props.id"
-    :class="cn('input text-2 h-12 items-center [&>svg]:text-tint-bc/76 [&>svg]:**:stroke-[2.2]  [&>svg]:mt-0.25 [&>svg]:size-5', props.class)">
+    :class="cn('input text-2 h-12 items-center [&>svg]:text-tint-bc/70 [&>svg]:**:stroke-[2.2]  [&>svg]:mt-0.25 [&>svg]:size-5', props.class)">
     <slot />
     <input
       v-bind="$attrs"
       v-model="modelValue"
-      :autofocus="false" />
+      class="focus:placeholder:opacity-0  placeholder:text-2 placeholder:italic "
+      :autofocus="false"
+      @autofocus.prevent />
     <slot name="2" />
   </label>
 </template>

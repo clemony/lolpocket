@@ -153,7 +153,7 @@ onMounted (async () => {
 
             <div class="overflow-hidden size-16 rounded-lg">
               <img
-                :src="`/img/item/${item.id}.webp`"
+                :src="`/img/items/${item.id}.webp`"
                 class="size-full s" />
             </div>
           </label>

@@ -11,7 +11,7 @@ const loaded = ref(false)
 </script>
 
 <template>
-  <label :class="cn(' size-full relative text-nc overflow-hidden bg-neutral shrink-0 grid place-items-center', { 'shadow-sm shadow-black/22 drop-shadow-sm drop-shadow-black/12': !transparent || (transparent && !url) }, className)">
+  <label :class="cn(' size-full relative text-nc overflow-hidden bg-neutral shrink-0 grid place-items-center', { 'shadow-sm shadow-black/6 drop-shadow-sm drop-shadow-black/6': !transparent || (transparent && !url) }, className)">
 
     <Img
       v-if="url || img"
@@ -23,14 +23,14 @@ const loaded = ref(false)
     <icon
       v-if="!loaded && (url || img)"
       name="svg-spinners:bars-scale-middle"
-      class="absolute opacity-80" />
+      class="absolute opacity-80 text-nc" />
 
     <span
       v-else
       :class="cn('uppercase subpixel-antialiased text-nc z-0 absolute grid place-items-center size-full font-semibold text-4 ', { 'text-[0.7rem] font-bold': size && size == 'sm' })">
       LP
     </span>
-
+    <slot />
   </label>
 </template>
 

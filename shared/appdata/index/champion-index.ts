@@ -1,4 +1,4 @@
-// Updated Patch 25.16 - 08/14/2025 08:03:16 PM CDT
+// Updated Patch 25.17 - 09/01/2025 05:27:25 PM CDT
 
 export const championIndex: ChampionIndex[] = [
   {

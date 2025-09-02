@@ -38,10 +38,14 @@ export default defineAppConfig({
       'check-fill': 'bi:check-circle-fill',
 
       // arrow
-      'down': 'lucide:chevron-down',
-      'up': 'lucide:chevron-up',
-      'right': 'lucide:chevron-right',
-      'left': 'lucide:chevron-left',
+      'down': 'tabler:chevron-down',
+      'up': 'tabler:chevron-up',
+      'right': 'tabler:chevron-right',
+      'left': 'tabler:chevron-left',
+      'down-fill': 'tabler:caret-down-filled',
+      'up-fill': 'tabler:caret-up-filled',
+      'right-pipe': 'tabler:chevron-right-pipe',
+      'left-pipe': 'tabler:chevron-left-pipe',
       'select': 'lucide:chevrons-up-down',
       'arrow-up': 'lucide:arrow-up',
       'arrow-left': 'lucide:arrow-left',
@@ -50,11 +54,9 @@ export default defineAppConfig({
       'collapse': 'lucide:arrow-left-from-line',
 
       // actions
-      'log-in': 'lucide:log-in',
-      'log-out': 'lucide:log-out',
-      'search': 'weui:search-outlined',
-      'search-bold': 'weui:search-filled',
-      'search-sm': 'teenyicons:search-small-outline',
+      'log-in': 'lucide:log-in', // tabler:transfer-in in house
+      'log-out': 'lucide:log-out', // tabler:transfer-out
+      'search': 'tabler:search',
       'open': 'iconoir:open-in-window',
       'update': 'radix-icons:update',
       'filter': 'lucide:list-filter',
@@ -80,10 +82,11 @@ export default defineAppConfig({
       'gallery': 'lucide:gallery-vertical-end',
 
       // editing
-      'backspace': 'iconamoon:backspace-light',
+      'backspace': 'tabler:backspace',
       'edit': 'material-symbols-light:edit-square-outline',
       'edit-line': 'lucide:pen-line',
       'erase': 'lucide:eraser',
+      'clear': 'tabler:circle-half-vertical',
       'paperclip': 'lucide:paperclip',
       'trash': 'lucide:trash-2',
       'archive': 'lucide:archive',
@@ -118,9 +121,9 @@ export default defineAppConfig({
       'mail-all': 'lucide:mails',
       'mail-fill': 'fluent:mail-32-filled',
       'mail-open': 'lucide:mail-open',
-      'link': 'mingcute:external-link-line', // lucide:external-link
+      'link': 'mingcute:external-link-line', // lucide:external-link tabler:external-link
       'link-lg': 'radix-icons:external-link',
-      'chain': 'ph:link-simple',
+      'chain': 'ph:link-simple', // 'tabler:link' uil:link-alt
       'share': 'lucide:share',
       'send': 'lucide:send',
 
@@ -155,10 +158,12 @@ export default defineAppConfig({
       'nexus': 'lucide:atom',
       'clock': 'lucide:clock',
       'chart': 'lucide:bar-chart-3',
-      'backpack': 'radix-icons:backpack',
-      'book': 'teenyicons:book-outline',
+      'backpack': 'tabler:briefcase', // 'radix-icons:backpack',
+      'book': 'tabler:notebook', // 'lucide:book-marked',
       'history': 'lucide:history',
-      'boot': 'hugeicons:armored-boot',
+
+      // 'boot': 'hugeicons:armored-boot',
+      // tabler:brand-juejin upside down league xp icon?
     },
   },
 })

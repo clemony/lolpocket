@@ -21,8 +21,8 @@ const delegatedProps = computed(() => {
       v>
       <slot>
         <icon
-          name="material-symbols:first-page"
-          class="size-4.5 shrink-0 opacity-80 " />
+          name="left-pipe"
+          class="size-4 shrink-0 opacity-80 " />
       </slot>
     </button>
   </PaginationFirst>

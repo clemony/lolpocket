@@ -4,7 +4,11 @@ const { pocket } = defineProps<{
 }>()
 
 definePageMeta({
-  name: 'pocket runes',
+  name: 'pocket-runes',
+  title: 'runes',
+  path: '/pocket/:pocketKey/runes',
+  level: 3,
+  order: 3,
   parent: '/pocket',
   search: false,
 })

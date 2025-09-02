@@ -1,33 +1,55 @@
 <script lang="ts" setup>
-import { positions } from './handleRoles'
+import { championPositions } from 'appdata'
 
-const props = defineProps<{
+const { class: className, pocket: p } = defineProps<{
   class?: HTMLAttributes['class']
+  pocket: Pocket
 }>()
-const ms = useMatchStore()
+
+const emit = defineEmits(['update:select'])
+const pocket = computed (() => p)
+const select = ref('All')
+
+const color = computed (() => championPositions.find(p => p.name == pocket.value.main.role).color)
 </script>
 
 <template>
-  <!--  <Select v-model:model-value="ms.positionSelect" class="p-0" @update:model-value="(e) => ms.positionSelect = e">
-    <SelectTrigger class="text-left shadow-none border-b3/80 bg-b1/60 inset-shadow-xs rounded-lg align-bottom h-12 pl-13 relative flex items-center text-4 tracking-tight font-medium" :class="cn('', props.class)">
-      <component
-        :is="`i-roles-${ms.positionSelect.toString().replace(' ', '-')}`"
-        class="h-5 w-auto absolute left-4 dst shrink-0" />
-      <SelectValue :placeholder="ms.positionSelect.toString()" class="text-left w-20 capitalize" />
-    </SelectTrigger>
-    <SelectContent position="popper" class="!w-[var(--reka-select-trigger-width)]">
+  <Select
+    v-model:model-value="pocket.main.role"
+    class="p-0">
+    <BaseSelectTrigger class="w-full hover:ring flex-nowrap pl-2 !flex items-center relative ring-offset-b1 ring-bc/60 ">
+      <label
+        class="group/btn h-9 flex rounded-lg badge badge-lg !h-6.5 px-2.5  gap-3   font-medium items-center w-min cursor-pointer"
+        :style=" {
+          backgroundColor: color,
+          borderColor: color }">
+        <component
+          :is="`i-roles-${pocket.main.role}`"
+          :class="cn('size-3.5  dst text-white shrink-0')" />
+
+        <SelectValue
+          placeholder="Select position"
+          class="text-left text-white  capitalize" />
+
+      </label>
+    </BaseSelectTrigger>
+    <LazySelectContent
+      position="popper"
+      class="!w-[var(--reka-select-trigger-width)]">
       <SelectGroup>
-        <SelectLabel>Position</SelectLabel>
-        <SelectItem v-for="position in positions" :key="position" :value="position">
-          <slot :value="position.toString()" />
+        <SelectLabel>Select main position</SelectLabel>
+        <SelectItem
+          v-for="position in championPositions"
+          :key="position.name"
+          :value="position.name">
           <span class="flex gap-3 items-center">
             <component
-              :is="`i-roles-${position.replace(' ', '-')}`"
+              :is="`i-roles-${position.name}`"
               class="h-4 w-auto dst shrink-0" />
-            {{ position }}
+            {{ position.name }}
           </span>
         </SelectItem>
       </SelectGroup>
-    </SelectContent> -->
-  <!-- </Select> -->h
+    </LazySelectContent>
+  </Select>
 </template>

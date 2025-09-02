@@ -26,13 +26,13 @@ function preloadItemImage(itemId: number) {
   return new Promise((resolve) => {
     if (!itemImages.has(itemId)) {
       const img = new Image()
-      img.src = `/img/item/circle/${itemId}.webp`
+      img.src = `/img/items/circle/${itemId}.webp`
       img.onload = () => {
         itemImages.set(itemId, img)
         resolve(img)
       }
       img.onerror = () => {
-        console.error(`Failed to load image: /img/item/${itemId}.webp`)
+        console.error(`Failed to load image: /img/items/${itemId}.webp`)
         resolve(null)
       }
     }

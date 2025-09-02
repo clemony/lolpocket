@@ -20,17 +20,18 @@ const bg = computed(() => {
         <PocketIcon
           :img="pocket.icon"
           class="size-16 rounded-full aspect-square" />
-        <div class="grid gap-px *:leading-5">
-          <div class="font-semibold text-3">
+        <div class="grid gap-px ">
+          <div class="font-semibold text-3 leading-4">
             {{ pocket.name }}
           </div>
 
           <PocketChampions
             v-if="pocket.champions.length"
+            class="leading-5"
             :champions="pocket.champions"
             list />
 
-          <div class="line-clamp-1 text-2 capitalize">
+          <div class="line-clamp-1 leading-4 text-2 capitalize">
             <span class="font-medium">Role: </span>
             <template
               v-for="role in pocket.roles"
@@ -59,9 +60,11 @@ const bg = computed(() => {
     <Separator />
 
     <!-- content -->
-    <div
-      class="w-full h-80 bg-cover bg-no-repeat bg-fixed"
-      :style="bg"></div>
+    <div class="bg-black border-y border-y-b4">
+      <div
+        class="w-full h-70 bg-no-repeat relative z-1 before:z-0 bg-fixed bg-[170%_55%] inset-shadow-sm inset-shadow-black/20  bg-size-[88%]"
+        :style="bg" />
+    </div>
     <div class="flex-1 whitespace-pre-wrap p-4 text-2">
       {{ pocket.notes[0] }}
     </div>

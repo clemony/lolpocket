@@ -26,7 +26,7 @@ const forwarded = useForwardProps(delegatedProps)
       class="relative">
       <icon
         name="select"
-        class="size-5.25 opacity-50 shrink-0  absolute  right-0" />
+        class="size-4.5 text-bc/40 shrink-0  absolute  right-0" />
     </SelectIcon>
   </SelectTrigger>
 </template>

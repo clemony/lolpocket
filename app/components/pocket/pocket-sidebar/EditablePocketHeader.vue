@@ -61,7 +61,7 @@ onMounted (async () => {
       class="w-full relative flex w-160  pr-20  items-center truncate justify-between gap-2"
       @click="e => activateEdit(e, edit)">
       <EditableArea class="w-160 overflow-hidden ">
-        <div class="w-160 pr-18 overflow-hidden *:tracking-tight *:font-serif *: *:font-black **:truncate *:text-nowrap  *:dst ">
+        <div class="w-160 pr-18 overflow-hidden **:tracking-tight  *:font-bold **:truncate *:text-nowrap  *:dst ">
           <EditablePreview
             :class="cn('', className)">
             {{ pocket.name || 'Pocket' }}

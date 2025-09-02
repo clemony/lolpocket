@@ -5,21 +5,32 @@ const { class: className, champions: c, list } = defineProps<{
   list?: boolean
 }>()
 
+const championsTxt = computed (() => {
+  const a = [...c].sort()
+  return a.length > 5 ? a.slice(0, 4) : a
+})
 const champions = computed (() => [...c].slice(0, 3).reverse())
 </script>
 
 <template>
   <div
     v-if="list"
-    :class="cn('text-2 opacity-80  line-clamp-1', className)">
+    :class="cn('text-2 opacity-80 line-clamp-1 gap-1 grow items-center flex', className)">
     <template
       v-if="c?.length">
       <span
-        v-for="champion, i in c"
-        :key="champion">
+        v-for="champion in championsTxt"
+        :key="champion"
+        class="group/champion ">
         {{
-          `${ix().champNameByKey(champion)}${i == champions.length - 1 ? '' : ', '}`
-        }}
+          ix().champNameByKey(champion)
+        }}<span class="group-last/champion:hidden">,&thinsp;
+        </span>
+      </span>
+      <span
+        v-if="c.length > 5"
+        class="tracking-wider">
+        +{{ c.length - 4 }}...
       </span>
     </template>
     <span
