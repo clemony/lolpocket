@@ -1,12 +1,13 @@
-// Updated Patch 25.16 - 08/14/2025 07:55:49 PM CDT
+// Updated Patch 25.17 - 09/01/2025 05:26:10 PM CDT
 
-const champion: Champion =  {
+const champion: Champion = {
   "id": 266,
   "key": "Aatrox",
   "name": "Aatrox",
   "title": "the Darkin Blade",
   "resource": "Blood well",
   "attackType": "Melee",
+  "adaptiveType": "Physical damage",
   "stats": {
     "health": {
       "flat": 650,
@@ -608,6 +609,13 @@ const champion: Champion =  {
       }
     ]
   },
-  "lore": "Once honored defenders of Shurima against the Void, Aatrox and his brethren would eventually become an even greater threat to Runeterra, and were defeated only by cunning mortal sorcery. But after centuries of imprisonment, Aatrox was the first to find freedom once more, corrupting and transforming those foolish enough to try and wield the magical weapon that contained his essence. Now, with stolen flesh, he walks Runeterra in a brutal approximation of his previous form, seeking an apocalyptic and long overdue vengeance."
+  "lore": "Once honored defenders of Shurima against the Void, Aatrox and his brethren would eventually become an even greater threat to Runeterra, and were defeated only by cunning mortal sorcery. But after centuries of imprisonment, Aatrox was the first to find freedom once more, corrupting and transforming those foolish enough to try and wield the magical weapon that contained his essence. Now, with stolen flesh, he walks Runeterra in a brutal approximation of his previous form, seeking an apocalyptic and long overdue vengeance.",
+  "faction": "unaffiliated",
+  "releaseDate": "2013-06-13",
+  "patchLastChanged": "25.12",
+  "price": {
+    "blueEssence": 2400,
+    "rp": 880
+  }
 }
-    export default champion
+export default champion

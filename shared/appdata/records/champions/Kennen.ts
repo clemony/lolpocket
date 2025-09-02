@@ -1,12 +1,13 @@
-// Updated Patch 25.16 - 08/14/2025 07:55:49 PM CDT
+// Updated Patch 25.17 - 09/01/2025 05:26:13 PM CDT
 
-const champion: Champion =  {
+const champion: Champion = {
   "id": 85,
   "key": "Kennen",
   "name": "Kennen",
   "title": "the Heart of the Tempest",
   "resource": "Energy",
   "attackType": "Ranged",
+  "adaptiveType": "Magic damage",
   "stats": {
     "health": {
       "flat": 580,
@@ -478,6 +479,13 @@ const champion: Champion =  {
       }
     ]
   },
-  "lore": "More than just the lightning-quick enforcer of Ionian balance, Kennen is the only yordle member of the Kinkou. Despite his small, furry stature, he is eager to take on any threat with a whirling storm of shuriken and boundless enthusiasm. Alongside his master Shen, Kennen patrols the spirit realm, employing devastating electrical energy to strike down his enemies."
+  "lore": "More than just the lightning-quick enforcer of Ionian balance, Kennen is the only yordle member of the Kinkou. Despite his small, furry stature, he is eager to take on any threat with a whirling storm of shuriken and boundless enthusiasm. Alongside his master Shen, Kennen patrols the spirit realm, employing devastating electrical energy to strike down his enemies.",
+  "faction": "ionia",
+  "releaseDate": "2010-04-08",
+  "patchLastChanged": "25.14",
+  "price": {
+    "blueEssence": 2400,
+    "rp": 880
+  }
 }
-    export default champion
+export default champion

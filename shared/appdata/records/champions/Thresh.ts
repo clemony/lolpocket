@@ -1,6 +1,6 @@
-// Updated Patch 25.16 - 08/14/2025 07:55:49 PM CDT
+// Updated Patch 25.17 - 09/01/2025 05:26:16 PM CDT
 
-const champion: Champion =  {
+const champion: Champion = {
   "id": 412,
   "key": "Thresh",
   "name": "Thresh",
@@ -8,6 +8,7 @@ const champion: Champion =  {
   "fullName": "Erlok Grael",
   "resource": "Mana",
   "attackType": "Ranged",
+  "adaptiveType": "Physical damage",
   "stats": {
     "health": {
       "flat": 620,
@@ -439,6 +440,13 @@ const champion: Champion =  {
       }
     ]
   },
-  "lore": "Sadistic and cunning, Thresh is an ambitious and restless specter of the Shadow Isles. Once the custodian of countless arcane secrets, he was undone by a power greater than life or death, and now sustains himself by tormenting and breaking others with slow, excruciating inventiveness. His victims suffer far beyond their brief mortal coil as Thresh wreaks agony upon their souls, imprisoning them in his unholy lantern to torture for all eternity."
+  "lore": "Sadistic and cunning, Thresh is an ambitious and restless specter of the Shadow Isles. Once the custodian of countless arcane secrets, he was undone by a power greater than life or death, and now sustains himself by tormenting and breaking others with slow, excruciating inventiveness. His victims suffer far beyond their brief mortal coil as Thresh wreaks agony upon their souls, imprisoning them in his unholy lantern to torture for all eternity.",
+  "faction": "shadow-isles",
+  "releaseDate": "2013-01-23",
+  "patchLastChanged": "25.03",
+  "price": {
+    "blueEssence": 1575,
+    "rp": 790
+  }
 }
-    export default champion
+export default champion

@@ -1,12 +1,13 @@
-// Updated Patch 25.16 - 08/14/2025 07:55:49 PM CDT
+// Updated Patch 25.17 - 09/01/2025 05:26:14 PM CDT
 
-const champion: Champion =  {
+const champion: Champion = {
   "id": 90,
   "key": "Malzahar",
   "name": "Malzahar",
   "title": "the Prophet of the Void",
   "resource": "Mana",
   "attackType": "Ranged",
+  "adaptiveType": "Magic damage",
   "stats": {
     "health": {
       "flat": 580,
@@ -569,6 +570,13 @@ const champion: Champion =  {
       }
     ]
   },
-  "lore": "A zealous seer dedicated to the unification of all life, Malzahar truly believes the newly emergent Void to be the path to Runeterra's salvation. In the desert wastes of Shurima, he followed the voices that whispered in his mind, all the way to ancient Icathia. Amidst the ruins of that land, he gazed into the dark heart of the Void itself, and was gifted new power and purpose. Malzahar now sees himself as a shepherd, empowered to bring others into the fold… or to release the voidling creatures that dwell beneath."
+  "lore": "A zealous seer dedicated to the unification of all life, Malzahar truly believes the newly emergent Void to be the path to Runeterra's salvation. In the desert wastes of Shurima, he followed the voices that whispered in his mind, all the way to ancient Icathia. Amidst the ruins of that land, he gazed into the dark heart of the Void itself, and was gifted new power and purpose. Malzahar now sees himself as a shepherd, empowered to bring others into the fold… or to release the voidling creatures that dwell beneath.",
+  "faction": "void",
+  "releaseDate": "2010-06-01",
+  "patchLastChanged": "25.04",
+  "price": {
+    "blueEssence": 2400,
+    "rp": 880
+  }
 }
-    export default champion
+export default champion

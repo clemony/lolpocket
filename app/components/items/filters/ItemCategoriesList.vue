@@ -14,7 +14,7 @@ function handleChange() {
 
 <template>
   <ListboxRoot
-    v-model:model-value="fi().filters.tags"
+    v-model:model-value="is().filters.tags"
     :multiple="true"
     @entry-focus.prevent>
     <ListboxContent

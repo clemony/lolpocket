@@ -1,12 +1,13 @@
-// Updated Patch 25.16 - 08/14/2025 07:55:49 PM CDT
+// Updated Patch 25.17 - 09/01/2025 05:26:14 PM CDT
 
-const champion: Champion =  {
+const champion: Champion = {
   "id": 78,
   "key": "Poppy",
   "name": "Poppy",
   "title": "Keeper of the Hammer",
   "resource": "Mana",
   "attackType": "Melee",
+  "adaptiveType": "Physical damage",
   "stats": {
     "health": {
       "flat": 610,
@@ -544,6 +545,13 @@ const champion: Champion =  {
       }
     ]
   },
-  "lore": "Runeterra has no shortage of valiant champions, but few are as tenacious as Poppy. Bearing the legendary hammer of Orlon, a weapon twice her size, this determined yordle has spent untold years searching in secret for the fabled “Hero of Demacia,” said to be its rightful wielder. Until then, she dutifully charges into battle, pushing back the kingdom's enemies with every whirling strike."
+  "lore": "Runeterra has no shortage of valiant champions, but few are as tenacious as Poppy. Bearing the legendary hammer of Orlon, a weapon twice her size, this determined yordle has spent untold years searching in secret for the fabled “Hero of Demacia,” said to be its rightful wielder. Until then, she dutifully charges into battle, pushing back the kingdom's enemies with every whirling strike.",
+  "faction": "demacia",
+  "releaseDate": "2010-01-13",
+  "patchLastChanged": "25.09",
+  "price": {
+    "blueEssence": 225,
+    "rp": 260
+  }
 }
-    export default champion
+export default champion

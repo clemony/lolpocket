@@ -10,7 +10,7 @@ const ds = useDataStore()
 <template>
   <Image
     v-if="name != ''"
-    :image="`https://ddragon.leagueoflegends.com/cdn/${ds.currentPatch}/img/item/${id}.png`"
+    :image="`https://ddragon.leagueoflegends.com/cdn/${ds.currentPatch}/img/items/${id}.png`"
     :alt="`${name} Image`"
     class="aspect-square size-full rounded-lg" />
 </template>

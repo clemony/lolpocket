@@ -1,12 +1,13 @@
-// Updated Patch 25.16 - 08/14/2025 07:55:49 PM CDT
+// Updated Patch 25.17 - 09/01/2025 05:26:16 PM CDT
 
-const champion: Champion =  {
+const champion: Champion = {
   "id": 498,
   "key": "Xayah",
   "name": "Xayah",
   "title": "the Rebel",
   "resource": "Mana",
   "attackType": "Ranged",
+  "adaptiveType": "Physical damage",
   "stats": {
     "health": {
       "flat": 630,
@@ -455,6 +456,13 @@ const champion: Champion =  {
       }
     ]
   },
-  "lore": "Deadly and precise, Xayah is a vastayan revolutionary waging a personal war to save her people. She uses her speed, guile, and razor-sharp feather blades to cut down anyone who stands in her way. Xayah fights alongside her partner and lover, Rakan, to protect their dwindling tribe, and restore their race to her vision of its former glory."
+  "lore": "Deadly and precise, Xayah is a vastayan revolutionary waging a personal war to save her people. She uses her speed, guile, and razor-sharp feather blades to cut down anyone who stands in her way. Xayah fights alongside her partner and lover, Rakan, to protect their dwindling tribe, and restore their race to her vision of its former glory.",
+  "faction": "ionia",
+  "releaseDate": "2017-04-19",
+  "patchLastChanged": "14.21",
+  "price": {
+    "blueEssence": 2400,
+    "rp": 880
+  }
 }
-    export default champion
+export default champion

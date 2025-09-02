@@ -1,12 +1,13 @@
-// Updated Patch 25.16 - 08/14/2025 07:55:49 PM CDT
+// Updated Patch 25.17 - 09/01/2025 05:26:12 PM CDT
 
-const champion: Champion =  {
+const champion: Champion = {
   "id": 131,
   "key": "Diana",
   "name": "Diana",
   "title": "Scorn of the Moon",
   "resource": "Mana",
   "attackType": "Melee",
+  "adaptiveType": "Magic damage",
   "stats": {
     "health": {
       "flat": 640,
@@ -506,6 +507,13 @@ const champion: Champion =  {
       }
     ]
   },
-  "lore": "Bearing her crescent moonblade, Diana fights as a warrior of the Lunari—a faith all but quashed in the lands around Mount Targon. Clad in shimmering armor the color of winter snow at night, she is a living embodiment of the silver moon's power. Imbued with the essence of an Aspect from beyond Targon's towering summit, Diana is no longer wholly human, and struggles to understand her power and purpose in this world."
+  "lore": "Bearing her crescent moonblade, Diana fights as a warrior of the Lunari—a faith all but quashed in the lands around Mount Targon. Clad in shimmering armor the color of winter snow at night, she is a living embodiment of the silver moon's power. Imbued with the essence of an Aspect from beyond Targon's towering summit, Diana is no longer wholly human, and struggles to understand her power and purpose in this world.",
+  "faction": "mount-targon",
+  "releaseDate": "2012-08-07",
+  "patchLastChanged": "25.11",
+  "price": {
+    "blueEssence": 225,
+    "rp": 260
+  }
 }
-    export default champion
+export default champion

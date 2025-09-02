@@ -1,12 +1,13 @@
-// Updated Patch 25.16 - 08/14/2025 07:55:49 PM CDT
+// Updated Patch 25.17 - 09/01/2025 05:26:12 PM CDT
 
-const champion: Champion =  {
+const champion: Champion = {
   "id": 9,
   "key": "Fiddlesticks",
   "name": "Fiddlesticks",
   "title": "the Ancient Fear",
   "resource": "Mana",
   "attackType": "Ranged",
+  "adaptiveType": "Magic damage",
   "stats": {
     "health": {
       "flat": 650,
@@ -708,6 +709,13 @@ const champion: Champion =  {
       }
     ]
   },
-  "lore": "Something has awoken in Runeterra. Something ancient. Something terrible. The ageless horror known as Fiddlesticks stalks the edges of mortal society, drawn to areas thick with paranoia where it feeds upon terrorized victims. Wielding a jagged scythe, the haggard, makeshift creature reaps fear itself, shattering the minds of those unlucky enough to survive in its wake. Beware the sounding of the crow, or the whispering of the shape that appears <i>almost</i> human… Fiddlesticks has returned."
+  "lore": "Something has awoken in Runeterra. Something ancient. Something terrible. The ageless horror known as Fiddlesticks stalks the edges of mortal society, drawn to areas thick with paranoia where it feeds upon terrorized victims. Wielding a jagged scythe, the haggard, makeshift creature reaps fear itself, shattering the minds of those unlucky enough to survive in its wake. Beware the sounding of the crow, or the whispering of the shape that appears <i>almost</i> human… Fiddlesticks has returned.",
+  "faction": "unaffiliated",
+  "releaseDate": "2009-02-21",
+  "patchLastChanged": "25.13",
+  "price": {
+    "blueEssence": 675,
+    "rp": 585
+  }
 }
-    export default champion
+export default champion

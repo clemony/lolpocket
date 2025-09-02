@@ -13,7 +13,7 @@ const mid = ['Fiora', 'Fizz', 'Lilia', 'Nami', 'DrMundo']
 const left = ['Ivern', 'Riven', 'Ryze', 'Hwei', '', '']
 const out = ['Yuumi', 'KogMaw', 'Mordekaiser', 'TahmKench', 'Zac', 'Kindred', 'Yorick', 'Zed', 'Alistar', 'Xayah', 'Malzahar', 'Anivia', 'Aatrox', 'Evelynn', 'Fiddlesticks', 'Ivern', 'Yone']
 
-const y = computed (() => lower.includes(champKey) ? `40%` : mid.includes(champKey) ? '20%' : '40%')
+const y = computed (() => lower.includes(champKey) ? `50%` : mid.includes(champKey) ? '20%' : '40%')
 
 const x = computed (() => left.includes(champKey) ? '70%' : '50%')
 
@@ -32,8 +32,7 @@ const bgSize = computed (() => scale || out.includes(champKey) ? '160%' : '180%'
         transform: `translate(${translate})`,
         objectPosition: `${x} ${y}`,
       }"
-      :alt="`${champKey}-Splash`">
-    </Img>
+      :alt="`${champKey}-Splash`" />
     <slot />
   </div>
 </template>

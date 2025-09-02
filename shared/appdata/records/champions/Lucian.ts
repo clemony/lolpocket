@@ -1,12 +1,13 @@
-// Updated Patch 25.16 - 08/14/2025 07:55:49 PM CDT
+// Updated Patch 25.17 - 09/01/2025 05:26:14 PM CDT
 
-const champion: Champion =  {
+const champion: Champion = {
   "id": 236,
   "key": "Lucian",
   "name": "Lucian",
   "title": "the Purifier",
   "resource": "Mana",
   "attackType": "Ranged",
+  "adaptiveType": "Physical damage",
   "stats": {
     "health": {
       "flat": 641,
@@ -569,6 +570,13 @@ const champion: Champion =  {
       }
     ]
   },
-  "lore": "Lucian, a Sentinel of Light, is a grim hunter of wraiths and specters, pursuing them relentlessly and annihilating them with his twin relic pistols. After the specter Thresh slew his wife, Lucian embarked on the path of vengeance—but even with her return to life, his rage is undiminished. Merciless and single-minded, Lucian will stop at nothing to protect the living from the long-dead horrors of the Black Mist."
+  "lore": "Lucian, a Sentinel of Light, is a grim hunter of wraiths and specters, pursuing them relentlessly and annihilating them with his twin relic pistols. After the specter Thresh slew his wife, Lucian embarked on the path of vengeance—but even with her return to life, his rage is undiminished. Merciless and single-minded, Lucian will stop at nothing to protect the living from the long-dead horrors of the Black Mist.",
+  "faction": "unaffiliated",
+  "releaseDate": "2013-08-22",
+  "patchLastChanged": "25.11",
+  "price": {
+    "blueEssence": 675,
+    "rp": 585
+  }
 }
-    export default champion
+export default champion

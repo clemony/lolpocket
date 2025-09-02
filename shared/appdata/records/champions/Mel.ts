@@ -1,6 +1,6 @@
-// Updated Patch 25.16 - 08/14/2025 07:55:49 PM CDT
+// Updated Patch 25.17 - 09/01/2025 05:26:14 PM CDT
 
-const champion: Champion =  {
+const champion: Champion = {
   "id": 800,
   "key": "Mel",
   "name": "Mel",
@@ -8,6 +8,7 @@ const champion: Champion =  {
   "fullName": "Mel Medarda",
   "resource": "Mana",
   "attackType": "Ranged",
+  "adaptiveType": "Magic damage",
   "stats": {
     "health": {
       "flat": 630,
@@ -636,6 +637,13 @@ const champion: Champion =  {
       }
     ]
   },
-  "lore": "Mel Medarda is the presumed heir of the Medarda family, once one of the most powerful in Noxus. In appearance she is a graceful aristocrat, but beneath the surface lies a skilled politician who makes it her business to know everything about everyone she meets. After an encounter with the mysterious Black Rose, Mel discovered the depths of her mother's deception and, for once, faced a situation potentially beyond her control. With newly awakened magical abilities, she sailed home in search of answers—and though many still seek to temper the light within her, Mel's soul remains forever defiant."
+  "lore": "Mel Medarda is the presumed heir of the Medarda family, once one of the most powerful in Noxus. In appearance she is a graceful aristocrat, but beneath the surface lies a skilled politician who makes it her business to know everything about everyone she meets. After an encounter with the mysterious Black Rose, Mel discovered the depths of her mother's deception and, for once, faced a situation potentially beyond her control. With newly awakened magical abilities, she sailed home in search of answers—and though many still seek to temper the light within her, Mel's soul remains forever defiant.",
+  "faction": "noxus",
+  "releaseDate": "2025-01-23",
+  "patchLastChanged": "25.14",
+  "price": {
+    "blueEssence": 3150,
+    "rp": 975
+  }
 }
-    export default champion
+export default champion

@@ -1,12 +1,13 @@
-// Updated Patch 25.16 - 08/14/2025 07:55:49 PM CDT
+// Updated Patch 25.17 - 09/01/2025 05:26:14 PM CDT
 
-const champion: Champion =  {
+const champion: Champion = {
   "id": 2,
   "key": "Olaf",
   "name": "Olaf",
   "title": "the Berserker",
   "resource": "Mana",
   "attackType": "Melee",
+  "adaptiveType": "Physical damage",
   "stats": {
     "health": {
       "flat": 645,
@@ -457,6 +458,13 @@ const champion: Champion =  {
       }
     ]
   },
-  "lore": "An unstoppable force of destruction, the axe-wielding Olaf wants nothing but to die in glorious combat. Hailing from the brutal Freljordian peninsula of Lokfar, he once received a prophecy foretelling his peaceful passing—a coward's fate, and a great insult among his people. Seeking death, and fueled by rage, he rampaged across the land, slaughtering scores of great warriors and legendary beasts in search of any opponent who could stop him. Now a brutal enforcer for the Winter's Claw, he seeks his end in the great wars to come."
+  "lore": "An unstoppable force of destruction, the axe-wielding Olaf wants nothing but to die in glorious combat. Hailing from the brutal Freljordian peninsula of Lokfar, he once received a prophecy foretelling his peaceful passing—a coward's fate, and a great insult among his people. Seeking death, and fueled by rage, he rampaged across the land, slaughtering scores of great warriors and legendary beasts in search of any opponent who could stop him. Now a brutal enforcer for the Winter's Claw, he seeks his end in the great wars to come.",
+  "faction": "freljord",
+  "releaseDate": "2010-06-09",
+  "patchLastChanged": "25.07",
+  "price": {
+    "blueEssence": 1575,
+    "rp": 790
+  }
 }
-    export default champion
+export default champion

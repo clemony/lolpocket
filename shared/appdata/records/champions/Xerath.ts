@@ -1,12 +1,13 @@
-// Updated Patch 25.16 - 08/14/2025 07:55:49 PM CDT
+// Updated Patch 25.17 - 09/01/2025 05:26:16 PM CDT
 
-const champion: Champion =  {
+const champion: Champion = {
   "id": 101,
   "key": "Xerath",
   "name": "Xerath",
   "title": "the Magus Ascendant",
   "resource": "Mana",
   "attackType": "Ranged",
+  "adaptiveType": "Magic damage",
   "stats": {
     "health": {
       "flat": 596,
@@ -510,6 +511,13 @@ const champion: Champion =  {
       }
     ]
   },
-  "lore": "Xerath is an Ascended Magus of ancient Shurima, a being of arcane energy writhing in the broken shards of a magical sarcophagus. For millennia, he was trapped beneath the desert sands, but the rise of Shurima freed him from his ancient prison. Driven insane with power, he now seeks to take what he believes is rightfully his and replace the upstart civilizations of the world with one fashioned in his image."
+  "lore": "Xerath is an Ascended Magus of ancient Shurima, a being of arcane energy writhing in the broken shards of a magical sarcophagus. For millennia, he was trapped beneath the desert sands, but the rise of Shurima freed him from his ancient prison. Driven insane with power, he now seeks to take what he believes is rightfully his and replace the upstart civilizations of the world with one fashioned in his image.",
+  "faction": "shurima",
+  "releaseDate": "2011-10-05",
+  "patchLastChanged": "25.08",
+  "price": {
+    "blueEssence": 675,
+    "rp": 585
+  }
 }
-    export default champion
+export default champion

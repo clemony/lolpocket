@@ -26,6 +26,7 @@ export interface ChampionLite extends ChampionIndex {
 export interface Champion extends ChampionIndex {
   resource: string
   attackType: string
+  adaptiveType: string
   stats: Record<string, ChampionStat>
   positions: string[]
   roles: string[]
@@ -34,6 +35,13 @@ export interface Champion extends ChampionIndex {
   title: string
   lore?: string
   abilities: AbilityRecord
+  faction: string
+  releaseDate: string
+  patchLastChanged: string
+  price: {
+    blueEssence: number
+    rp: number
+  }
 }
 
 export interface StatEntry {

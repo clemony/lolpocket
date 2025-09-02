@@ -19,12 +19,10 @@ const { isCollapsed, pinned } = defineProps<{
         variant="ghost"
         class=" w-full "
         size="md">
-        <span class="font-semibold grow tracking-normal opacity-70  text-3 capitalize">
+        <span class="font-semibold grow tracking-normal opacity-40  text-4 capitalize">
           Pinned Pockets
         </span>
-        <icon
-          name="left"
-          class="opacity-80 group-data-[state=open]/collapse:-rotate-90 transition-rotate duration-200" />
+        <CaretRotate />
       </Button>
     </CollapsibleTrigger>
 
@@ -35,12 +33,12 @@ const { isCollapsed, pinned } = defineProps<{
         <div
           v-for="link of pinned"
           :key="link.name"
-          class="flex group/tag w-full max-h-9 pr-2 items-center flex-nowrap">
+          class="flex group/tag w-full max-h-9 py-1 pr-2 items-center flex-nowrap">
           <Blink
             variant="ghost"
             :size="isCollapsed ? 'icon' : 'md'"
             :to="`/pocket/${link.key}`"
-            class=" px-2 !duration-0 text-2 justify-start grow font-normal !gap-3 flex items-center">
+            class=" px-2 !duration-0 text-3 justify-start grow !gap-3 flex items-center">
             <PocketIcon
               size="sm"
               :img="link.icon"
@@ -48,7 +46,7 @@ const { isCollapsed, pinned } = defineProps<{
 
             <span
               v-show="!isCollapsed"
-              class="capitalize ">
+              class="capitalize font-medium">
               {{ link.name }}
             </span>
           </Blink>

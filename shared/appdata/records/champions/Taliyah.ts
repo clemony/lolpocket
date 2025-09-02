@@ -1,12 +1,13 @@
-// Updated Patch 25.16 - 08/14/2025 07:55:49 PM CDT
+// Updated Patch 25.17 - 09/01/2025 05:26:16 PM CDT
 
-const champion: Champion =  {
+const champion: Champion = {
   "id": 163,
   "key": "Taliyah",
   "name": "Taliyah",
   "title": "the Stoneweaver",
   "resource": "Mana",
   "attackType": "Ranged",
+  "adaptiveType": "Magic damage",
   "stats": {
     "health": {
       "flat": 550,
@@ -466,6 +467,13 @@ const champion: Champion =  {
       }
     ]
   },
-  "lore": "Taliyah is a nomadic mage from Shurima, torn between teenage wonder and adult responsibility. She has crossed nearly all of Valoran on a journey to learn the true nature of her growing powers, though more recently she has returned to protect her tribe. Some have mistaken her compassion for weakness and paid the ultimate price—for beneath Taliyah's youthful demeanor is a will strong enough to move mountains, and a spirit fierce enough to make the earth itself tremble."
+  "lore": "Taliyah is a nomadic mage from Shurima, torn between teenage wonder and adult responsibility. She has crossed nearly all of Valoran on a journey to learn the true nature of her growing powers, though more recently she has returned to protect her tribe. Some have mistaken her compassion for weakness and paid the ultimate price—for beneath Taliyah's youthful demeanor is a will strong enough to move mountains, and a spirit fierce enough to make the earth itself tremble.",
+  "faction": "shurima",
+  "releaseDate": "2016-05-18",
+  "patchLastChanged": "25.12",
+  "price": {
+    "blueEssence": 2400,
+    "rp": 880
+  }
 }
-    export default champion
+export default champion

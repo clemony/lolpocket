@@ -1,6 +1,6 @@
-// Updated Patch 25.16 - 08/14/2025 07:55:49 PM CDT
+// Updated Patch 25.17 - 09/01/2025 05:26:12 PM CDT
 
-const champion: Champion =  {
+const champion: Champion = {
   "id": 104,
   "key": "Graves",
   "name": "Graves",
@@ -8,6 +8,7 @@ const champion: Champion =  {
   "fullName": "Malcolm Graves",
   "resource": "Mana",
   "attackType": "Ranged",
+  "adaptiveType": "Physical damage",
   "stats": {
     "health": {
       "flat": 625,
@@ -460,6 +461,13 @@ const champion: Champion =  {
       }
     ]
   },
-  "lore": "Malcolm Graves is a renowned mercenary, gambler, and thief—a wanted man in every city and empire he has visited. Even though he has an explosive temper, he possesses a strict sense of criminal honor, often enforced at the business end of his double-barreled shotgun Destiny. In recent years, he has reconciled a troubled partnership with Twisted Fate, and together they have prospered once more in the turmoil of Bilgewater's criminal underbelly."
+  "lore": "Malcolm Graves is a renowned mercenary, gambler, and thief—a wanted man in every city and empire he has visited. Even though he has an explosive temper, he possesses a strict sense of criminal honor, often enforced at the business end of his double-barreled shotgun Destiny. In recent years, he has reconciled a troubled partnership with Twisted Fate, and together they have prospered once more in the turmoil of Bilgewater's criminal underbelly.",
+  "faction": "bilgewater",
+  "releaseDate": "2011-10-19",
+  "patchLastChanged": "25.14",
+  "price": {
+    "blueEssence": 2400,
+    "rp": 880
+  }
 }
-    export default champion
+export default champion

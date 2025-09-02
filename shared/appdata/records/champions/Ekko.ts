@@ -1,12 +1,13 @@
-// Updated Patch 25.16 - 08/14/2025 07:55:49 PM CDT
+// Updated Patch 25.17 - 09/01/2025 05:26:12 PM CDT
 
-const champion: Champion =  {
+const champion: Champion = {
   "id": 245,
   "key": "Ekko",
   "name": "Ekko",
   "title": "the Boy Who Shattered Time",
   "resource": "Mana",
   "attackType": "Melee",
+  "adaptiveType": "Magic damage",
   "stats": {
     "health": {
       "flat": 655,
@@ -473,6 +474,13 @@ const champion: Champion =  {
       }
     ]
   },
-  "lore": "A prodigy from the rough streets of Zaun, Ekko is able to manipulate time to twist any situation to his advantage. He uses his own invention, the Z-Drive, to explore the branching possibilities of reality, crafting the perfect moment to seemingly achieve the impossible the first time, every time. Though Ekko revels in this freedom, when there's a threat to those he cares about, he and the Firelights will do anything to defend them."
+  "lore": "A prodigy from the rough streets of Zaun, Ekko is able to manipulate time to twist any situation to his advantage. He uses his own invention, the Z-Drive, to explore the branching possibilities of reality, crafting the perfect moment to seemingly achieve the impossible the first time, every time. Though Ekko revels in this freedom, when there's a threat to those he cares about, he and the Firelights will do anything to defend them.",
+  "faction": "zaun",
+  "releaseDate": "2015-05-29",
+  "patchLastChanged": "25.04",
+  "price": {
+    "blueEssence": 1575,
+    "rp": 790
+  }
 }
-    export default champion
+export default champion

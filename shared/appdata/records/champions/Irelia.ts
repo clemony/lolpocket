@@ -1,6 +1,6 @@
-// Updated Patch 25.16 - 08/14/2025 07:55:49 PM CDT
+// Updated Patch 25.17 - 09/01/2025 05:26:12 PM CDT
 
-const champion: Champion =  {
+const champion: Champion = {
   "id": 39,
   "key": "Irelia",
   "name": "Irelia",
@@ -8,6 +8,7 @@ const champion: Champion =  {
   "fullName": "Xan Irelia",
   "resource": "Mana",
   "attackType": "Melee",
+  "adaptiveType": "Physical damage",
   "stats": {
     "health": {
       "flat": 630,
@@ -352,10 +353,10 @@ const champion: Champion =  {
         ],
         "cooldown": [
           16,
-          15,
-          14,
+          14.5,
           13,
-          12
+          11.5,
+          10
         ],
         "targeting": "Location",
         "affects": "Enemies",
@@ -436,6 +437,13 @@ const champion: Champion =  {
       }
     ]
   },
-  "lore": "The Noxian occupation of Ionia produced many heroes, none more unlikely than young Irelia of Navori. Trained in the ancient dances of her province, she adapted her art for war, using the graceful and carefully practised movements to levitate a host of deadly blades. After proving herself as a fighter, she was thrust into the role of resistance leader and figurehead, and to this day remains dedicated to the preservation of her homeland."
+  "lore": "The Noxian occupation of Ionia produced many heroes, none more unlikely than young Irelia of Navori. Trained in the ancient dances of her province, she adapted her art for war, using the graceful and carefully practised movements to levitate a host of deadly blades. After proving herself as a fighter, she was thrust into the role of resistance leader and figurehead, and to this day remains dedicated to the preservation of her homeland.",
+  "faction": "ionia",
+  "releaseDate": "2010-11-16",
+  "patchLastChanged": "25.15",
+  "price": {
+    "blueEssence": 1575,
+    "rp": 790
+  }
 }
-    export default champion
+export default champion

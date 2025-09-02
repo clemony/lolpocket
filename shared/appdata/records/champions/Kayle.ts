@@ -1,12 +1,13 @@
-// Updated Patch 25.16 - 08/14/2025 07:55:49 PM CDT
+// Updated Patch 25.17 - 09/01/2025 05:26:13 PM CDT
 
-const champion: Champion =  {
+const champion: Champion = {
   "id": 10,
   "key": "Kayle",
   "name": "Kayle",
   "title": "the Righteous",
   "resource": "Mana",
   "attackType": "Melee",
+  "adaptiveType": "Physical damage",
   "stats": {
     "health": {
       "flat": 670,
@@ -460,6 +461,13 @@ const champion: Champion =  {
       }
     ]
   },
-  "lore": "Born to a Targonian Aspect at the height of the Rune Wars, Kayle honored her mother's legacy by fighting for justice on wings of divine flame. She and her twin sister Morgana were the protectors of Demacia for many years—until Kayle became disillusioned with the repeated failings of mortals, and abandoned this realm altogether. Still, legends are told of her punishing the unjust with her fiery swords, and many hope that she will one day return…"
+  "lore": "Born to a Targonian Aspect at the height of the Rune Wars, Kayle honored her mother's legacy by fighting for justice on wings of divine flame. She and her twin sister Morgana were the protectors of Demacia for many years—until Kayle became disillusioned with the repeated failings of mortals, and abandoned this realm altogether. Still, legends are told of her punishing the unjust with her fiery swords, and many hope that she will one day return…",
+  "faction": "demacia",
+  "releaseDate": "2009-02-21",
+  "patchLastChanged": "25.14",
+  "price": {
+    "blueEssence": 2400,
+    "rp": 260
+  }
 }
-    export default champion
+export default champion

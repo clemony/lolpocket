@@ -1,12 +1,13 @@
-// Updated Patch 25.16 - 08/14/2025 07:55:49 PM CDT
+// Updated Patch 25.17 - 09/01/2025 05:26:16 PM CDT
 
-const champion: Champion =  {
+const champion: Champion = {
   "id": 777,
   "key": "Yone",
   "name": "Yone",
   "title": "the Unforgotten",
   "resource": "Flow",
   "attackType": "Melee",
+  "adaptiveType": "Physical damage",
   "stats": {
     "health": {
       "flat": 620,
@@ -448,6 +449,13 @@ const champion: Champion =  {
       }
     ]
   },
-  "lore": "In life, he was Yone—half-brother of Yasuo, and renowned student of his village's sword school. But upon his death at the hands of his brother, he found himself hunted by a malevolent entity of the spirit realm, and was forced to slay it with its own sword. Now, cursed to wear its demonic mask upon his face, Yone tirelessly hunts all such creatures in order to understand what he has become."
+  "lore": "In life, he was Yone—half-brother of Yasuo, and renowned student of his village's sword school. But upon his death at the hands of his brother, he found himself hunted by a malevolent entity of the spirit realm, and was forced to slay it with its own sword. Now, cursed to wear its demonic mask upon his face, Yone tirelessly hunts all such creatures in order to understand what he has become.",
+  "faction": "ionia",
+  "releaseDate": "2020-08-06",
+  "patchLastChanged": "25.09",
+  "price": {
+    "blueEssence": 1575,
+    "rp": 790
+  }
 }
-    export default champion
+export default champion

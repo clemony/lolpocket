@@ -8,7 +8,7 @@ export const navLinks: LinkGroup = [
     link: '/backpack',
     icon: {
       name: 'backpack',
-      class: 'size-4.75',
+      class: '**:stroke-[1.6] size-5.5',
     },
     links: backpackLinks,
     component: BackpackMenu,
@@ -27,7 +27,7 @@ export const navLinks: LinkGroup = [
     links: libraryLinks,
     icon: {
       name: 'book',
-      class: '!size-4.5',
+      class: '**:stroke-[1.6] size-5.5',
     },
     component: LibraryMenu,
   },

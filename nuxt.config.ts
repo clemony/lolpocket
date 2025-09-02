@@ -155,7 +155,9 @@ export default defineNuxtConfig({
 
   vue: {
     compilerOptions: {
-      isCustomElement: tag => ['widgetbot', 'discord-widget'].includes(tag),
+      isCustomElement: tag =>
+        ['widgetbot', 'discord-widget'].includes(tag),
+
     },
   },
 

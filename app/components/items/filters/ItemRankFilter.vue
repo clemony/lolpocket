@@ -7,7 +7,7 @@ const { class: className } = defineProps<{
 }>()
 // TODO fixthis
 function handleReset() {
-  // fi().filters.rank = null
+  // is().filters.rank = null
   // is.itemGridApi.refreshCells()
 }
 const route = useRoute()
@@ -23,12 +23,12 @@ function handleUpdate() {
     group
     :class="cn('flex items-center w-full flex-wrap gap-3 relative', className)">
     <Button
-      v-show="fi().filters.rank"
+      v-show="is().filters.rank"
       variant="btn"
       size="lg"
       class="*:opacity-50 hover:*:opacity-100"
       shape="square"
-      @click="fi().filters.rank = null">
+      @click="is().filters.rank = null">
       <icon name="x-sm" />
     </Button>
 
@@ -36,13 +36,13 @@ function handleUpdate() {
       v-for="rank in itemRanks"
       :key="rank"
       size="lg"
-      :variant="fi().filters.rank == rank ? 'neutral' : fi().filters.rank && fi().filters.rank != rank ? 'hidden' : 'btn'"
+      :variant="is().filters.rank == rank ? 'neutral' : is().filters.rank && is().filters.rank != rank ? 'hidden' : 'btn'"
       class="!font-medium px-5  text-2 "
-      @click="fi().filters.rank == rank ? fi().filters.rank = null : null">
+      @click="is().filters.rank == rank ? is().filters.rank = null : null">
 
       <input
-        v-model="fi().filters.rank"
-        :disabled="fi().filters.rank == rank"
+        v-model="is().filters.rank"
+        :disabled="is().filters.rank == rank"
         class="peer hidden absolute"
         type="radio"
         :value="rank"

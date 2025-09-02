@@ -1,12 +1,13 @@
-// Updated Patch 25.16 - 08/14/2025 07:55:49 PM CDT
+// Updated Patch 25.17 - 09/01/2025 05:26:13 PM CDT
 
-const champion: Champion =  {
+const champion: Champion = {
   "id": 89,
   "key": "Leona",
   "name": "Leona",
   "title": "the Radiant Dawn",
   "resource": "Mana",
   "attackType": "Melee",
+  "adaptiveType": "Physical damage",
   "stats": {
     "health": {
       "flat": 646,
@@ -417,6 +418,13 @@ const champion: Champion =  {
       }
     ]
   },
-  "lore": "Imbued with the fire of the sun, Leona is a holy warrior of the Solari who defends Mount Targon with her Zenith Blade and the Shield of Daybreak. Her skin shimmers with starfire while her eyes burn with the power of the celestial Aspect within her. Armored in gold and bearing a terrible burden of ancient knowledge, Leona brings enlightenment to some, death to others."
+  "lore": "Imbued with the fire of the sun, Leona is a holy warrior of the Solari who defends Mount Targon with her Zenith Blade and the Shield of Daybreak. Her skin shimmers with starfire while her eyes burn with the power of the celestial Aspect within her. Armored in gold and bearing a terrible burden of ancient knowledge, Leona brings enlightenment to some, death to others.",
+  "faction": "mount-targon",
+  "releaseDate": "2011-07-13",
+  "patchLastChanged": "25.09",
+  "price": {
+    "blueEssence": 225,
+    "rp": 260
+  }
 }
-    export default champion
+export default champion

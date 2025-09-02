@@ -1,12 +1,13 @@
-// Updated Patch 25.16 - 08/14/2025 07:55:49 PM CDT
+// Updated Patch 25.17 - 09/01/2025 05:26:11 PM CDT
 
-const champion: Champion =  {
+const champion: Champion = {
   "id": 22,
   "key": "Ashe",
   "name": "Ashe",
   "title": "the Frost Archer",
   "resource": "Mana",
   "attackType": "Ranged",
+  "adaptiveType": "Physical damage",
   "stats": {
     "health": {
       "flat": 610,
@@ -384,6 +385,13 @@ const champion: Champion =  {
       }
     ]
   },
-  "lore": "Iceborn warmother of the Avarosan tribe, Ashe commands the most populous horde in the north. Stoic, intelligent, and idealistic, yet uncomfortable with her role as leader, she taps into the ancestral magics of her lineage to wield a bow of True Ice. With her people's belief that she is the mythological hero Avarosa reincarnated, Ashe hopes to unify the Freljord once more by retaking their ancient, tribal lands."
+  "lore": "Iceborn warmother of the Avarosan tribe, Ashe commands the most populous horde in the north. Stoic, intelligent, and idealistic, yet uncomfortable with her role as leader, she taps into the ancestral magics of her lineage to wield a bow of True Ice. With her people's belief that she is the mythological hero Avarosa reincarnated, Ashe hopes to unify the Freljord once more by retaking their ancient, tribal lands.",
+  "faction": "freljord",
+  "releaseDate": "2009-02-21",
+  "patchLastChanged": "25.11",
+  "price": {
+    "blueEssence": 225,
+    "rp": 260
+  }
 }
-    export default champion
+export default champion

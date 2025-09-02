@@ -1,12 +1,13 @@
-// Updated Patch 25.16 - 08/14/2025 07:55:49 PM CDT
+// Updated Patch 25.17 - 09/01/2025 05:26:11 PM CDT
 
-const champion: Champion =  {
+const champion: Champion = {
   "id": 893,
   "key": "Aurora",
   "name": "Aurora",
   "title": "the Witch Between Worlds",
   "resource": "Mana",
   "attackType": "Ranged",
+  "adaptiveType": "Magic damage",
   "stats": {
     "health": {
       "flat": 607,
@@ -502,6 +503,13 @@ const champion: Champion =  {
       }
     ]
   },
-  "lore": "From the moment she was born, Aurora navigated life with a unique ability to move between the spirit and material realms. Determined to learn more about the spirit realm's inhabitants, she left her home to further her research and happened upon a wayward demigod who'd become twisted and lost to time. Witnessing his desperation, Aurora resolved to find a way to help her feral friend regain his forgotten identity—a journey that would take her to the farthest reaches of the Freljord."
+  "lore": "From the moment she was born, Aurora navigated life with a unique ability to move between the spirit and material realms. Determined to learn more about the spirit realm's inhabitants, she left her home to further her research and happened upon a wayward demigod who'd become twisted and lost to time. Witnessing his desperation, Aurora resolved to find a way to help her feral friend regain his forgotten identity—a journey that would take her to the farthest reaches of the Freljord.",
+  "faction": "freljord",
+  "releaseDate": "2024-07-17",
+  "patchLastChanged": "25.14",
+  "price": {
+    "blueEssence": 3150,
+    "rp": 975
+  }
 }
-    export default champion
+export default champion

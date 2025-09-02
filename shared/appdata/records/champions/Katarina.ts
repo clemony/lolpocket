@@ -1,6 +1,6 @@
-// Updated Patch 25.16 - 08/14/2025 07:55:49 PM CDT
+// Updated Patch 25.17 - 09/01/2025 05:26:13 PM CDT
 
-const champion: Champion =  {
+const champion: Champion = {
   "id": 55,
   "key": "Katarina",
   "name": "Katarina",
@@ -8,6 +8,7 @@ const champion: Champion =  {
   "fullName": "Katarina Du Couteau",
   "resource": "None",
   "attackType": "Melee",
+  "adaptiveType": "Magic damage",
   "stats": {
     "health": {
       "flat": 672,
@@ -420,6 +421,13 @@ const champion: Champion =  {
       }
     ]
   },
-  "lore": "Decisive in judgment and lethal in combat, Katarina is a Noxian assassin of the highest caliber. Eldest daughter to the legendary General Du Couteau, she made her talents known with swift kills against unsuspecting enemies. Her fiery ambition has driven her to pursue heavily-guarded targets, even at the risk of endangering her allies—but no matter the mission, Katarina will not hesitate to execute her duty amid a whirlwind of serrated daggers."
+  "lore": "Decisive in judgment and lethal in combat, Katarina is a Noxian assassin of the highest caliber. Eldest daughter to the legendary General Du Couteau, she made her talents known with swift kills against unsuspecting enemies. Her fiery ambition has driven her to pursue heavily-guarded targets, even at the risk of endangering her allies—but no matter the mission, Katarina will not hesitate to execute her duty amid a whirlwind of serrated daggers.",
+  "faction": "noxus",
+  "releaseDate": "2009-09-19",
+  "patchLastChanged": "25.13",
+  "price": {
+    "blueEssence": 1575,
+    "rp": 790
+  }
 }
-    export default champion
+export default champion

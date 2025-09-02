@@ -6,7 +6,7 @@
     group
     class="flex flex-col h-full gap-8">
     <Input
-      v-model:model-value="fi().filters.query"
+      v-model:model-value="is().filters.query"
       placeholder="Search Items...">
       <icon name="bow" />
     </Input>
@@ -42,10 +42,10 @@
 
     <!-- shop -->
     <Label class="flex items-center justify-between gap-3">
-      <span>{{ fi().filters.purchasable ? 'Purchasable' : 'Purchasable & Unsold' }}</span>
+      <span>{{ is().filters.purchasable ? 'Purchasable' : 'Purchasable & Unsold' }}</span>
 
       <Switch
-        v-model:model-value="fi().filters.purchasable"
+        v-model:model-value="is().filters.purchasable"
         class="dst">
       </Switch>
     </Label>
@@ -54,7 +54,7 @@
     <Label class="flex flex-col gap-3">
       <span>Map</span>
       <ItemMapFilter
-        v-model:model-value="fi().filters.map"
+        v-model:model-value="is().filters.map"
         class="w-full" />
     </Label>
 
@@ -62,7 +62,7 @@
       size="lg"
       variant="neutral"
       class=""
-      @click="fi().clearFilters()">
+      @click="is().clearFilters()">
       Reset Filters
     </Button>
   </transition-expand>

@@ -1,6 +1,6 @@
-// Updated Patch 25.16 - 08/14/2025 07:55:49 PM CDT
+// Updated Patch 25.17 - 09/01/2025 05:26:13 PM CDT
 
-const champion: Champion =  {
+const champion: Champion = {
   "id": 202,
   "key": "Jhin",
   "name": "Jhin",
@@ -8,6 +8,7 @@ const champion: Champion =  {
   "fullName": "Khada Jhin",
   "resource": "Mana",
   "attackType": "Ranged",
+  "adaptiveType": "Physical damage",
   "stats": {
     "health": {
       "flat": 655,
@@ -603,6 +604,13 @@ const champion: Champion =  {
       }
     ]
   },
-  "lore": "Jhin is a meticulous criminal psychopath who believes murder is art. Once an Ionian prisoner, but freed by shadowy elements within Ionia's ruling council, the serial killer now works as their cabal's assassin. Using his gun as his paintbrush, Jhin creates works of artistic brutality, horrifying victims and onlookers. He gains a cruel pleasure from putting on his gruesome theater, making him the ideal choice to send the most powerful of messages: terror."
+  "lore": "Jhin is a meticulous criminal psychopath who believes murder is art. Once an Ionian prisoner, but freed by shadowy elements within Ionia's ruling council, the serial killer now works as their cabal's assassin. Using his gun as his paintbrush, Jhin creates works of artistic brutality, horrifying victims and onlookers. He gains a cruel pleasure from putting on his gruesome theater, making him the ideal choice to send the most powerful of messages: terror.",
+  "faction": "ionia",
+  "releaseDate": "2016-02-01",
+  "patchLastChanged": "25.14",
+  "price": {
+    "blueEssence": 1234,
+    "rp": 880
+  }
 }
-    export default champion
+export default champion

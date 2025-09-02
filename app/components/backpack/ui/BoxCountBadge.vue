@@ -20,6 +20,6 @@ console.log('🌱 - box:', box)
     :class="cn(
       'ml-auto text-bc/70',
     )">
-    {{ box }}
+    {{ box || 0 }}
   </span>
 </template>

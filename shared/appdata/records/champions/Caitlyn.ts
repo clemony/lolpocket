@@ -1,6 +1,6 @@
-// Updated Patch 25.16 - 08/14/2025 07:55:49 PM CDT
+// Updated Patch 25.17 - 09/01/2025 05:26:11 PM CDT
 
-const champion: Champion =  {
+const champion: Champion = {
   "id": 51,
   "key": "Caitlyn",
   "name": "Caitlyn",
@@ -8,6 +8,7 @@ const champion: Champion =  {
   "fullName": "Caitlyn Kiramman",
   "resource": "Mana",
   "attackType": "Ranged",
+  "adaptiveType": "Physical damage",
   "stats": {
     "health": {
       "flat": 580,
@@ -221,7 +222,7 @@ const champion: Champion =  {
         "icon": "https://cdn.communitydragon.org/latest/champion/Caitlyn/ability-icon/w",
         "effects": [
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Caitlyn sets a visible trap at the target location that is untargetable and arms.filterter 1 second, lasting for a duration. The trap grants sight of the area for 1 second after being placed.</p>",
+            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Caitlyn sets a visible trap at the target location that is untargetable and arms after 1 second, lasting for a duration. The trap grants sight of the area for 1 second after being placed.</p>",
             "leveling": [
               {
                 "attribute": "Trap Duration",
@@ -434,6 +435,13 @@ const champion: Champion =  {
       }
     ]
   },
-  "lore": "Renowned as its finest peacekeeper, Caitlyn Kiramman is also Piltover's best shot at ridding the city of its elusive criminal elements. She is often paired with Vi, acting as a cool counterpoint to her partner's more impetuous nature. Even though she carries a one-of-a-kind hextech rifle, Caitlyn's most powerful weapon is her superior intellect, allowing her to lay elaborate traps for any lawbreakers foolish enough to operate in the City of Progress."
+  "lore": "Renowned as its finest peacekeeper, Caitlyn Kiramman is also Piltover's best shot at ridding the city of its elusive criminal elements. She is often paired with Vi, acting as a cool counterpoint to her partner's more impetuous nature. Even though she carries a one-of-a-kind hextech rifle, Caitlyn's most powerful weapon is her superior intellect, allowing her to lay elaborate traps for any lawbreakers foolish enough to operate in the City of Progress.",
+  "faction": "piltover",
+  "releaseDate": "2011-01-04",
+  "patchLastChanged": "25.06",
+  "price": {
+    "blueEssence": 225,
+    "rp": 260
+  }
 }
-    export default champion
+export default champion

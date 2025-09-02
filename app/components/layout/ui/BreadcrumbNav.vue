@@ -1,21 +1,36 @@
 <script lang="ts" setup>
+import type { HoverCardRootProps } from 'reka-ui'
 import { HoverCardArrow } from 'reka-ui'
+
+const open = ref(false)
 
 const route = useRoute()
 const router = useRouter()
 const mainRoutes = computed (() => router.getRoutes().filter(r => r.meta.level == 1).sort((a, b) => (Number(a.meta?.order) - Number(b.meta?.order))))
 
 const parentRoutes = computed (() => {
-  if (!route.meta?.parent)
+  const links = ref()
+  if (!route.meta?.parent) {
     return
-  return router.getRoutes().filter(r => r.meta.parent == route.meta.parent).sort((a, b) => (Number(a.meta?.order) - Number(b.meta?.order)))
+  }
+
+  links.value = router.getRoutes().filter(r => r.meta.parent == route.meta.parent).filter(r => r.meta?.level != 0).sort((a, b) => (Number(a.meta?.order) - Number(b.meta?.order)))
+
+  return links.value
 })
 console.log('🌱 - parentRoutes:', parentRoutes)
+
+function navigatePocket(link: string) {
+  open.value = false
+  navigateTo(`/pocket/${route.params.pocketKey}/${link}`)
+}
 </script>
 
 <template>
   <Breadcrumb>
-    <HoverCard>
+    <HoverCard
+      v-model:open="open"
+      :open-delay="0">
       <HoverCardTrigger as-child>
         <Button
           variant="ghost"
@@ -60,20 +75,21 @@ console.log('🌱 - parentRoutes:', parentRoutes)
 
       <LazyHoverPopContent
         align="start"
-        :align-offset="0"
+        :align-offset="-6"
         class="w-fit px-1 space-y-1"
-        :side-offset="-2">
+        :side-offset="-1">
         <HoverCardArrow
-          class="fill-black/10 dst translate-y-px"
+          class="fill-black/10 dst translate-y-[1px]"
           :height="10"
           :width="16"
           rounded />
         <HoverCardArrow
           :height="10"
           :width="16"
-          class="fill-b1"
+          class="fill-b1 "
           rounded />
 
+        <!-- tier 1 -->
         <ul class="menu xl:menu-horizontal *:min-w-54 rounded-box lg:min-w-max">
           <li>
             <Label class="capitalize">Home</Label>
@@ -85,12 +101,15 @@ console.log('🌱 - parentRoutes:', parentRoutes)
                 :to="link.path"
                 variant="link"
                 size="xs"
-                class="capitalize text-2 font-normal px-3">
+                class="capitalize text-2 font-normal px-3"
+                @click="open = false">
                 {{ link.meta?.title || link.name }}
               </Blink>
             </ul>
           </li>
-          <li v-if="parentRoutes?.length">
+
+          <!-- tier 2 -->
+          <li v-if="parentRoutes?.length && route.meta?.parent != '/pocket'">
             <Label class="capitalize">{{ String(route.meta?.parent).replace('/', '') }}</Label>
             <ul>
               <Blink
@@ -100,9 +119,30 @@ console.log('🌱 - parentRoutes:', parentRoutes)
                 :to="link.path"
                 variant="link"
                 size="xs"
-                class="capitalize text-2 font-normal px-3">
+                class="capitalize text-2 font-normal px-3"
+                @click="open = false">
                 {{ link.meta?.title || link.name }}
               </Blink>
+            </ul>
+          </li>
+
+          <li
+            v-if="route.meta?.parent == '/pocket'"
+            class="justify-start">
+            <Label class="capitalize">Pocket</Label>
+            <ul class="justify-start">
+              <li
+                v-for="link in parentRoutes.sort((a, b) => (Number(a.meta?.order) - Number(b.meta?.order)))"
+                :key="link.name">
+                <Button
+                  :to="link.path"
+                  variant="link"
+                  size="xs"
+                  class="capitalize text-left flex w-full !justify-start text-2 font-normal px-3"
+                  @click="navigatePocket(link.meta?.title)">
+                  {{ link.meta?.title || link.name }}
+                </Button>
+              </li>
             </ul>
           </li>
         </ul>

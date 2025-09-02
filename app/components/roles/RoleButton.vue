@@ -8,17 +8,18 @@ const pocket = computed (() => props.pocket)
 </script>
 
 <template>
-  <label
-
-    class="btn btn-sm justify-start btn-neutral !text-2   gap-2 text-nc  group/role   capitalize relative overflow-hidden"
+  <Label
+    variant="neutral"
+    size="xs"
+    class="justify-start !text-2 rounded-lg  gap-2   group/role   capitalize relative overflow-hidden"
     @click.stop>
-
     <input
       v-model="pocket.roles"
       class="peer hidden absolute"
       type="checkbox"
       :value="role"
       name="item-types"
+      @click.stop
       @change="handleRoles(pocket)" />
 
     <component
@@ -29,9 +30,9 @@ const pocket = computed (() => props.pocket)
 
     <span class=" right-0 size-full px-2 group-hover/role:opacity-100 transition-opacity absolute items-center  opacity-0 flex justify-end duration-200">
       <icon
-        name="x-sm"
-        class="size-6 text-nc/90" />
+        name="x"
+        class="size-4 text-nc/90" />
     </span>
 
-  </label>
+  </Label>
 </template>

@@ -12,9 +12,10 @@ console.log('🌱 - pocket:', pocket)
 <template>
   <button
     :class="cn(
-      'flex flex-col items-start gap-2 rounded-lg border pb-5 px-6 pb-5 pt-3 text-left  transition-colors ring ring-transparent hover:ring-neutral/60',
+      'flex flex-col items-start gap-2 rounded-lg border pb-5 px-6 pb-5 pt-3 text-left cursor-pointer transition-colors ring ring-transparent hover:ring-neutral/60',
       selected?.key === pocket?.key && 'bg-b2/30',
-    )">
+    )"
+    @dblclick="navigateTo(`/pocket/${pocket.key}`)">
     <div class="flex w-full h-14 gap-2 items-center justify-between">
       <div
         class="flex  cursor-pointer  text-start items-center gap-3 ">
@@ -33,18 +34,10 @@ console.log('🌱 - pocket:', pocket)
             :champions="pocket.champions" />
         </div>
       </div>
-      <div class="relative max-h-14 -mr-3  h-full w-max flex flex-nowrap  items-center justify-items-end">
+      <div class="relative max-h-14  gap-1  h-full w-max flex flex-nowrap  items-center justify-items-end">
         <PocketChampions
           class="ml-auto"
           :champions="pocket.champions" />
-        <Button
-          variant="ghost"
-          hover="neutral"
-          class="size-11 *:opacity-60 hover:*:opacity-100">
-          <icon
-            name="open"
-            class="**:stroke-[1.5]" />
-        </Button>
       </div>
     </div>
     <div class="w-full ">
@@ -56,31 +49,31 @@ console.log('🌱 - pocket:', pocket)
     </div>
 
     <!-- tags -->
-    <div
-      v-if="pocket.tags?.length"
-      class="flex items-center gap-2 mt-2">
-      <Badge
-        v-for="tag in pocket.tags"
-        :key="tag"
-        :style="championPositions.map(p => p.name).includes(tag) ? {
-          backgroundColor: championPositions.find(p => p.name == tag).color,
-          borderColor: championPositions.find(p => p.name == tag).color } : ''"
-        class="gap-0">
-        <template v-if="championPositions.map(p => p.name).includes(tag)">
-          <component
-            :is="`i-roles-${tag}`"
-            :class="cn('size-3.5 dst text-white mr-1.25')" />
-          <span class="text-white">
+    <div class="flex items-center gap-2 mt-2">
+      <template v-if="pocket.tags?.length">
+        <Badge
+          v-for="tag in pocket.tags"
+          :key="tag"
+          :style="championPositions.map(p => p.name).includes(tag) ? {
+            backgroundColor: championPositions.find(p => p.name == tag).color,
+            borderColor: championPositions.find(p => p.name == tag).color } : ''"
+          class="gap-0">
+          <template v-if="championPositions.map(p => p.name).includes(tag)">
+            <component
+              :is="`i-roles-${tag}`"
+              :class="cn('size-3.5 dst text-white mr-1.25')" />
+            <span class="text-white font-medium lowercase">
+              {{ tag }}
+            </span>
+          </template>
+          <template v-else>
+            <icon
+              name="hash"
+              class="size-3" />
             {{ tag }}
-          </span>
-        </template>
-        <template v-else>
-          <icon
-            name="hash"
-            class="size-3" />
-          {{ tag }}
-        </template>
-      </Badge>
+          </template>
+        </Badge>
+      </template>
     </div>
   </button>
 </template>

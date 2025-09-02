@@ -1,6 +1,6 @@
-// Updated Patch 25.16 - 08/14/2025 07:55:49 PM CDT
+// Updated Patch 25.17 - 09/01/2025 05:26:15 PM CDT
 
-const champion: Champion =  {
+const champion: Champion = {
   "id": 901,
   "key": "Smolder",
   "name": "Smolder",
@@ -8,6 +8,7 @@ const champion: Champion =  {
   "fullName": "Ignacarious Gigantareno Rex Le Spes Offerentis",
   "resource": "Mana",
   "attackType": "Ranged",
+  "adaptiveType": "Physical damage",
   "stats": {
     "health": {
       "flat": 575,
@@ -625,6 +626,13 @@ const champion: Champion =  {
       }
     ]
   },
-  "lore": "Hidden amongst the craggy cliffs of the Noxian frontier, under the watchful eyes of his mother, a young dragon is learning what it means to be heir to the Camavoran imperial dragon lineage. Playful and eager to grow up, Smolder looks for any excuse to practice his burgeoning abilities. Though he's still a fledgling, his skills are nothing to sneeze at, easily setting fire to anything that burns."
+  "lore": "Hidden amongst the craggy cliffs of the Noxian frontier, under the watchful eyes of his mother, a young dragon is learning what it means to be heir to the Camavoran imperial dragon lineage. Playful and eager to grow up, Smolder looks for any excuse to practice his burgeoning abilities. Though he's still a fledgling, his skills are nothing to sneeze at, easily setting fire to anything that burns.",
+  "faction": "unaffiliated",
+  "releaseDate": "2024-01-31",
+  "patchLastChanged": "25.11",
+  "price": {
+    "blueEssence": 3150,
+    "rp": 975
+  }
 }
-    export default champion
+export default champion

@@ -18,7 +18,7 @@ function onEnd() {
 </script>
 
 <template>
-  <Field
+  <div
     :key="setName"
     class="py-3 px-2  group/set">
     <!-- <input v-model="is.selectedItemSet" type="radio" name="selected-set" class="!hidden z-0" /> -->
@@ -101,7 +101,7 @@ function onEnd() {
           class="rounded-lg border-0 size-19 shadow-sm shadow-black/7  bg-b3/40 animate-in zoom-in  no-drag " />
       </transition-slide>
     </div>
-  </Field>
+  </div>
 </template>
 
 <style scoped>

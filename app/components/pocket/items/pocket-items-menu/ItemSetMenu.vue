@@ -16,7 +16,7 @@ console.log('💠 - notThisPocket - notThisPocket:', notThisPocket)
 <template>
   <ContrastDropdownItem
     class=""
-    @click="duplicateItemSet(props.pocket, props.set)">
+    @click="duplicateItemSet(props.set, props.pocket.key)">
     <icon name="copy" />
     Duplicate
   </ContrastDropdownItem>

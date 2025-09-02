@@ -17,7 +17,7 @@ const loaded = ref(false)
     :as="as"
     :class="cn('overflow-hidden shrink-0 bg-b2/40 size-16 grid place-items-center  relative  drop-shadow-sm', { 'shadow-sm': loaded }, className)">
     <Img
-      :img="`https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/${id}.png`"
+      :img="`/img/champions/${id}.png`"
       :alt="alt || `Champion ${id} icon`"
       :class="cn('scale-118 size-full absolute object-center opacity-0 transition-opacity duration-300', { 'opacity-100': loaded })"
       @load="loaded = true" />

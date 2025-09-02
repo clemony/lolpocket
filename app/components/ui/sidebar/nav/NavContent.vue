@@ -42,7 +42,7 @@ function closeAndNavigate(link: string) {
       <SidebarMenuButton
         size="lg"
         variant="default"
-        class="capitalize w-4/5 order-first mx-3 mt-3 mb-1 font-medium [&_svg]:!size-5.25"
+        class="capitalize pl-4 pr-3 order-first   font-medium [&_svg]:!size-5.25"
         @click="navigateTo('/nexus')">
         <icon
           name="nexus" />
@@ -54,9 +54,9 @@ function closeAndNavigate(link: string) {
       :key="linkObject.name"
       default-open
       as-child>
-      <SidebarGroup class="border-0 px-3">
+      <SidebarGroup class="pl-4 pr-3">
         <CollapsibleTrigger as-child>
-          <SidebarGroupLabel class="my-1 gap-2 items-center">
+          <SidebarGroupLabel class="my-1 gap-3 items-center">
             <span
               class="grid place-items-center [&_svg]:!shadow-none rounded-full relative  size-5.5 py-px"
               :class="cn('', { 'size-6 rounded-full drop-shadow-sm shadow-sm overflow-hidden': linkObject.icon?.class == 'summoner-icon' })">
@@ -65,7 +65,7 @@ function closeAndNavigate(link: string) {
                 :class="cn('dst absolute overflow-visible size-5 ', linkObject.icon?.class, { 'size-full': linkObject.icon?.class == 'summoner-icon' })" />
 
             </span>
-            <span class="grow">
+            <span class="grow text-4 font-bold">
               {{ linkObject.name }}
             </span>
             <CaretRotate />
@@ -73,15 +73,16 @@ function closeAndNavigate(link: string) {
         </CollapsibleTrigger>
 
         <CollapsibleContent
+          class="after:!bg-b3"
           menu
           as-child>
-          <SidebarGroupContent class="pt-1 gap-1  relative flex flex-col justify-items-center">
+          <SidebarGroupContent class="pt-1 gap-1 pl-5 relative flex flex-col justify-items-center">
             <Button
               v-for="link in linkObject.links"
               :key="link.name"
               variant="ghost"
               size="lg"
-              class="gap-2.75 text-bc h-10 text-2 font-normal capitalize text-nowrap flex-nowrap overflow-hidden  justify-start"
+              class="gap-2.75 !duration-0 !text-bc/60 h-10 text-3 capitalize text-nowrap flex-nowrap overflow-hidden hover:!text-bc justify-start"
               @click="navigateTo(link.link)">
               {{ link.name }}
             </Button>
