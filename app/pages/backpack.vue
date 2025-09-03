@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { accounts, mails } from 'components/layout/box/mails'
+import { accounts, mails } from '~/components/shared/layout/box/mails'
 
 definePageMeta({
   name: 'backpack',

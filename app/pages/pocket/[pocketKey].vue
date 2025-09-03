@@ -1,13 +1,23 @@
 <script lang="ts" setup>
 definePageMeta({
-  name: 'pocket',
   level: 0,
   props: true,
 })
 
-const route = useRoute()
-const pocket = ref<Pocket>(ps().getPocket(String(route.params.pocketKey)))
+const route = useRoute('pocket-pocketKey-champions')
+const pocket = computed(() => ps().getPocket(route.params.pocketKey)).value
 console.log('🌱 - pocket:', pocket)
+
+const { syncIfDirty } = useSupabaseSync(
+  () => pocket,
+  '/api/pockets',
+  value => ({ pocket: value }),
+  PocketSchema,
+)
+
+watch(() => route.path, (newVal) => {
+  console.log('💠 - watch - newVal:', newVal)
+})
 </script>
 
 <template>
@@ -21,27 +31,33 @@ console.log('🌱 - pocket:', pocket)
         :background="pocket.icon.replace('tile', 'centered') ?? null" />
     </template>
     <template #icon>
-      <LazyIconPopover
-        v-memo="pocket.icon"
-        class="size-24 shadow-md  border-0"
-        :pocket="pocket"
-        align="start"
-        :align-offset="-42"
-        :side-offset="-16"
-        popover-class="ml-6.5 mt-2 w-98" />
     </template>
     <template #header>
       <EditablePocketHeader
         icons
         :pocket="pocket"
-        class="text-9 dst" />
+        class="text-10 dst" />
     </template>
+
     <template #tabs>
       <PocketPageTabs :pocket />
     </template>
 
-    <div class="size-full pl-44 pr-34 gap-6 overflow-hidden flex bg-b1">
-      <PocketSidebar />
+    <template #header-right>
+      <PocketHeaderRight />
+    </template>
+    <template #after-tabs>
+      <PocketSidebarMenu :pocket />
+    </template>
+
+    <div class="size-full px-32 gap-6 overflow-hidden flex bg-b1">
+      <PocketSidebar>
+        <Button
+          variant="btn"
+          @click="syncIfDirty()">
+          sync
+        </Button>
+      </PocketSidebar>
       <LazyNuxtPage
         v-if="pocket"
         :pocket="pocket" />

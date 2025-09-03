@@ -116,7 +116,7 @@ const wrapperVariants = {
             animate="visible"
             :variants="variants"
             exit="arrowHidden"
-            :class="cn('text-b1/99 absolute  scale-y-90 -translate-y-2.25 !z-53', props.arrowClass)" />
+            :class="cn('text-b1/99 absolute  scale-y-90  !z-53', props.arrowClass)" />
         </motion.div>
       </PopoverContent>
     </AnimatePresence>

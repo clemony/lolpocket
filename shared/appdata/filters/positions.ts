@@ -1,7 +1,7 @@
 export const championPositions = [
   {
     name: 'All',
-    color: 'var(--color-all-roles)',
+    color: 'var(--color-black-25)',
   },
   {
     name: 'Bottom',

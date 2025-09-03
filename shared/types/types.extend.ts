@@ -5,12 +5,13 @@ import type {
 import type { HTMLAttributes } from 'vue'
 import type { RouteMeta, RouteRecord } from 'vue-router'
 
-export type Extension<T, E> = T & E
-
-export interface HTMLAttr extends HTMLAttributes {}
 export type { MotionValue } from 'motion-v'
 export type { AcceptableValue, PrimitiveProps } from 'reka-ui'
 export type { CSSProperties, HTMLAttributes } from 'vue'
+
+export type Extension<T, E> = T & E
+
+export interface HTMLAttr extends HTMLAttributes {}
 
 export type Side = 'top' | 'right' | 'bottom' | 'left'
 

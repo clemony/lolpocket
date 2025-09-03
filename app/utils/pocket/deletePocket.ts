@@ -11,7 +11,7 @@ export function deletePocket(pocket) {
   pocket.location.folder = 'trash'
 
   if (inPocket) {
-    navigateTo('/pockets')
+    navigateTo('/backpack')
   }
 
   if (as.settings.alertDeletePocket) {

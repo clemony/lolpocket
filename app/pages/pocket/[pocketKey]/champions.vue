@@ -25,11 +25,8 @@ const { results } = useSimpleSearch(
 </script>
 
 <template>
-  <div class="size-full z-auto overflow-y-auto  -mr-34 pr-34">
-    <header class="flex pt-16 gap-8 sticky z-1 bg-linear-to-b from-b1 to-b1/70 backdrop-blur-lg top-0 pb-9 pl-13 pr-16 items-center justify-end  w-full">
-      <!--       <ChampionQuote
-        v-once
-        class="italic text-2 font-normal absolute top-6 right-16" /> -->
+  <div class="size-full z-auto overflow-y-auto  pt-12  -mr-34 pr-30">
+    <div class="flex gap-8 sticky z-1 bg-linear-to-b from-b1 to-b1/70 backdrop-blur-lg -top-12 py-4 pl-13 pr-16 items-center justify-end  w-full">
       <Input
         v-model="searchQuery"
         placeholder="Search champions..."
@@ -37,31 +34,29 @@ const { results } = useSimpleSearch(
         type="text">
         <icon name="search" />
       </Input>
-    </header>
+    </div>
 
     <div
-      class="h-fit  pb-64 grid grid-flow-row auto-cols-auto pt-1  grid-cols-[repeat(auto-fill,minmax(80px,1fr))]  px-14 w-full pb-3 inset-0   gap-3 ">
-      <label
+      class="h-fit  pb-64 grid grid-flow-row auto-cols-auto pt-7  grid-cols-[repeat(auto-fill,minmax(80px,1fr))]  px-14 w-full inset-0   gap-3">
+      <ChampionIcon
         v-for="champion in results.filter(r => !pocket.champions.includes(r.key))"
+        :id="champion.id"
         :key="champion.id"
-        v-memo="results"
         :title="champion.name"
-        :class="cn('hover-ring cursor-pointer relative rounded-lg size-26 overflow-hidden shadow-sm drop-shadow-sm', { 'scale-90  border  borderneutral/60 ': pocket.champions.includes(champion.key) })">
-        <ChampionIcon
-          :id="champion.id"
-          :class="cn('size-full pointer-events-none', { 'contrast-110 opacity-65 grayscale': pocket.champions.includes(champion.key) })" />
+        :class="cn('hover-ring cursor-pointer rounded-lg size-26')">
         <PrismaticShine
-          v-show=" pocket.champions.includes(champion.key) "
+          v-if=" pocket.champions.includes(champion.key) "
           class="scale-114 pointer-events-none" />
-        <slot />
         <input
           v-model="pocket.champions"
           type="checkbox"
           :value="champion.key"
           class="peer hidden" />
-      </label>
+      </ChampionIcon>
     </div>
   </div>
 </template>
 
-<style scoped></style>
+      <!--       <ChampionQuote
+        v-once
+        class="italic text-2 font-normal absolute top-6 right-16" /> -->

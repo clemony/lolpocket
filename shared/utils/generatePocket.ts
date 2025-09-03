@@ -34,6 +34,25 @@ export function newItemSet(): ItemSet {
   return a
 }
 
+export function newSpellSet(): SpellSet {
+  const a = getDeepDefaults(SpellSetSchema)
+  a.id = toID()
+  return a
+}
+
+export function addSpellSet(pocket: Pocket | string) {
+  const set = ref<SpellSet[]>([])
+  if (typeof pocket == 'string') {
+    set.value = ps().getPocket(pocket).spells
+  }
+  else {
+    set.value = (pocket as unknown as Pocket).spells
+  }
+  const a = getDeepDefaults(SpellSetSchema)
+  a.id = toID()
+  set.value.push(a)
+}
+
 export function newPocket(): Pocket {
   return {
     key: toID(),
@@ -43,8 +62,8 @@ export function newPocket(): Pocket {
     champions: [],
     items: [newItemSet()],
     runes: [newRuneSet()],
-    spells: [[null, null]],
-    main: { champion: '', items: '', runes: '', role: 'All', spells: [] },
+    spells: [newSpellSet()],
+    main: { champion: '', items: '', runes: '', role: 'All', spells: '' },
     created: new Date(),
     updated: patchIndex[0],
     tags: [],

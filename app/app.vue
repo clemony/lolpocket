@@ -46,9 +46,9 @@ client.auth.onAuthStateChange(async (event, session) => {
 
 <template>
   <NuxtLayout>
-    <LazyNuxtPage
-      :transition="{
-        name: 'global-page-transition',
-      }" />
+    <LazyNuxtPage />
+    <!--     :transition="{
+    name: 'global-page-transition',
+    }" -->
   </NuxtLayout>
 </template>

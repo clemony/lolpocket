@@ -26,7 +26,8 @@ onMounted(async () => {
     navigateTo('/nexus')
   }
   else {
-    navigateTo('/login')
+    // FIXME
+    // navigateTo({ name: 'login' })
   }
 })
 </script>

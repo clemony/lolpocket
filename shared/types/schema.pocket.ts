@@ -41,10 +41,11 @@ export const ShardSchema = v.fallback(
 )
 
 // Spells (always 2 slots)
-export const SpellSetSchema = v.fallback(
-  v.strictTuple([v.nullable(v.string()), v.nullable(v.string())]),
-  [null, null],
-)
+export const SpellSetSchema = v.object({
+  id: v.fallback(v.string(), ''),
+  d: v.fallback(v.string(), ''),
+  f: v.fallback(v.string(), ''),
+})
 
 // --- Types ---
 export type PocketLocation = v.InferOutput<typeof PocketLocationSchema>
@@ -73,7 +74,7 @@ const MainSchema = v.object({
   items: v.fallback(v.string(), ''),
   runes: v.fallback(v.string(), ''),
   role: v.fallback(v.string(), 'All'),
-  spells: v.fallback(FixedArray(v.nullable(v.number()), 2), []),
+  spells: v.fallback(v.string(), ''),
 })
 
 // --- Pocket Schema ---

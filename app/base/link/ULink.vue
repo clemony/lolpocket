@@ -1,11 +1,14 @@
 <script lang="ts" setup>
-const { class: className } = defineProps<{
+const { class: className, to } = defineProps<{
   class?: HTMLAttributes['class']
+  to: string
 }>()
 </script>
 
 <template>
-  <NuxtLink :class="cn('hover:underline underline-offset-2 cursor-pointer', className)">
+  <NuxtLink
+    :to="to"
+    :class="cn('hover:underline underline-offset-2 cursor-pointer', className)">
     <slot />
   </NuxtLink>
 </template>

@@ -24,7 +24,8 @@ export const usePocketStore = defineStore(
       trash,
 
       // helpers
-      getPocket: (key: string) => pockets.value.find((pocket: Pocket) => pocket.key === key),
+      getPocket: (key: string) =>
+        pockets.value.find(pocket => pocket.key === key),
     }
   },
 

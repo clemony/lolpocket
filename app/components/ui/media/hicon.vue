@@ -13,7 +13,9 @@ const classes = 'shrink-0 size-full'
 <template>
   <component
     :is="name"
+
     v-if="name.match(svg)"
+    role="img"
     :style="{
       objectFit: 'cover',
       scale: iconScale,
@@ -26,6 +28,7 @@ const classes = 'shrink-0 size-full'
     :class="cn('shrink-0', classes, className)" />
   <icon
     v-else
+    role="img"
     :name="name"
     :class="cn('', classes, className)"
     :style="{

@@ -79,14 +79,16 @@ const isOpen = ref(false)
 <template>
   <Popover v-model:open="isOpen">
     <PopoverTrigger :class="cn('group/icon z-0 shrink-0 cursor-pointer self-center  size-14   rounded-full pointer-events-auto  aspect-square  grid place-items-center relative', props.class) ">
-      <PocketIcon
-        :url=" pocket ? pocket?.icon : selectIcon"
-        alt="pocket icon"
-        class="group-hover/icon:brightness-50 pointer-events-none z-1 group-data-[state=open]/icon:brightness-50  transition-all duration-200  group-data-[state=open]/icon:ring group-data-[state=open]/icon:ring-offset-2 ring-neutral/40 ring-offset-b1 size-full rounded-full" />
+      <slot>
+        <PocketIcon
+          :url=" pocket ? pocket?.icon : selectIcon"
+          alt="pocket icon"
+          class="group-hover/icon:brightness-50 pointer-events-none z-1 group-data-[state=open]/icon:brightness-50  transition-all duration-200  group-data-[state=open]/icon:ring group-data-[state=open]/icon:ring-offset-2 ring-neutral/40 ring-offset-b1 size-full rounded-full" />
 
-      <icon
-        name="images"
-        class="size-6 !text-nc absolute opacity-0  group-hover/icon:opacity-80 z-2 transition-all pointer-events-none  duration-300 group-data-[state=open]/icon:opacity-100" />
+        <icon
+          name="images"
+          class="size-6 !text-nc absolute opacity-0  group-hover/icon:opacity-80 z-2 transition-all pointer-events-none  duration-300 group-data-[state=open]/icon:opacity-100" />
+      </slot>
     </PopoverTrigger>
 
     <LazyPopPopoverContent
@@ -105,7 +107,7 @@ const isOpen = ref(false)
           <input
             v-model="champSearch"
             class="h-full placeholder:italic   w-full pr-4 text-2 focus:placeholder:opacity-0 transition-all duration-200"
-            placeholder="Search Splash Icons..."
+            placeholder="Search Splash Library..."
             @input="handleInput()"
             @keydown.stop
             @keydown.enter.prevent />
@@ -122,7 +124,7 @@ const isOpen = ref(false)
 
         <Separator />
         <transition-slide
-          v-if="!selectedChampion"
+          v-if="!selectedChampion && champSearchResults"
           group
           class="py-3 px-1 overflow-y-scroll w-full flex flex-col">
           <Label

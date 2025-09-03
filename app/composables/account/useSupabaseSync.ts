@@ -15,9 +15,11 @@ export function useSupabaseSync<
   schema: S, // S is a BaseSchema that outputs T
 ) {
   const user = useSupabaseUser()
+  console.log('🌱 - useSupabaseSync - user:', user)
   const session = useSupabaseSession()
 
   let snapshotHash: string | null = null
+  console.log('🌱 - useSupabaseSync - snapshotHash:', snapshotHash)
 
   onMounted(() => {
     const parsed = v.safeParse(schema, source())

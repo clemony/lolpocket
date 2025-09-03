@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { DialogDescription, DialogHeader, DialogTitle, DrawerDescription, DrawerHeader, DrawerTitle } from '#components'
+/* import { DialogDescription, DialogHeader, DialogTitle, DrawerDescription, DrawerHeader, DrawerTitle } from 'reka-ui' */
 
 const { title, description } = defineProps<{
   title?: string
@@ -10,7 +10,7 @@ const isDesktop = useMediaQuery('(min-width: 768px)')
 </script>
 
 <template>
-  <component :is="isDesktop ? DialogHeader : DrawerHeader">
+<!--   <component :is="isDesktop ? DialogHeader : DrawerHeader">
     <component :is="isDesktop ? DialogTitle : DrawerTitle">
       <slot name="title">
         <h1>{{ title }}</h1>
@@ -24,5 +24,5 @@ const isDesktop = useMediaQuery('(min-width: 768px)')
         </p>
       </slot>
     </component>
-  </component>
+  </component> -->ggg
 </template>
