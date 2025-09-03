@@ -1,29 +1,20 @@
 <script setup lang="ts">
-import type { PrimitiveProps } from 'reka-ui'
-import { Primitive } from 'reka-ui'
-
-const { id, alt, class: className, as = 'div' } = defineProps<PrimitiveProps & {
+const { id, alt, class: className, sizes, title } = defineProps<{
   id: number
   alt?: string
   class?: HTMLAttributes['class']
-  as?: string
+  sizes: string[]
+  title?: string
 }>()
-
-const loaded = ref(false)
+console.log('🌱 - id:', `/img/champions/${id}.webp`)
 </script>
 
 <template>
-  <Primitive
-    :as="as"
-    :class="cn('overflow-hidden shrink-0 bg-b2/40 size-16 grid place-items-center  relative  drop-shadow-sm', { 'shadow-sm': loaded }, className)">
-    <Img
-      :img="`/img/champions/${id}.png`"
-      :alt="alt || `Champion ${id} icon`"
-      :class="cn('scale-118 size-full absolute object-center opacity-0 transition-opacity duration-300', { 'opacity-100': loaded })"
-      @load="loaded = true" />
-    <Skeleton
-      v-show="!loaded"
-      class="absolute opacity-80" />
+  <StaticImg
+    :sizes="sizes"
+    :img="`/img/champions/${id}.webp`"
+    :alt="title || alt || `Champion ${id} icon`"
+    :class="cn('object-center overflow-hidden shadow-sm size-full  bg-b2/40 drop-shadow-sm grid place-items-center ', className)">
     <slot />
-  </Primitive>
+  </StaticImg>
 </template>

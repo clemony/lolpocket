@@ -9,10 +9,10 @@
     "cssVariables": true
   },
   "aliases": {
-    "components": "base/ui",
+    "components": "base",
     "composables": "composables/utils",
     "utils": "utils",
-    "ui": "base/ui",
+    "ui": "base",
     "lib": "utils/lib"
   }
 }

@@ -12,14 +12,14 @@ export function useHandleSummoner(routeProps?: SummonerRouteProps) {
   const route = useRoute()
 
   // This stays reactive to either passed props or route
-  const props = computed<SummonerRouteProps>(() => {
+  /*   const props = computed<SummonerRouteProps>(() => {
     if (routeProps)
       return routeProps
     const region = route.params.region?.toString() ?? ''
     const slug = route.params.slug?.toString() ?? ''
     const [name = '', tag = ''] = slug.split('_')
     return { name, tag, region, slug }
-  })
+  }) */
 
   const puuid = ref<string | null>(null)
   const summoner = ref<Summoner | null>(null)
@@ -58,7 +58,7 @@ export function useHandleSummoner(routeProps?: SummonerRouteProps) {
   // watch(props, fetchSummoner, { immediate: true })
 
   return {
-    props,
+    // props,
     puuid,
     summoner,
     loading,

@@ -1,4 +1,4 @@
-// CONFIG
+// CONFIG app
 
 export default defineAppConfig({
   theme: {},

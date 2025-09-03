@@ -15,8 +15,8 @@ definePageMeta({
   search: false,
 })
 
-const route = useRoute()
-const pocket = ref<Pocket>(ps().getPocket(String(route.params.pocketKey)))
+const route = useRoute('pocket-pocketKey-champions')
+const pocket = computed(() => ps().getPocket(route.params.pocketKey)).value
 
 const tabs = ref('items')
 

@@ -18,7 +18,7 @@ onMounted (() => {
 <template>
   <nav
     role="tablist"
-    class="tabs tab-menu border-b relative h-10 justify-start col-start-2 w-full  mb-2    pl-44 tabs-lg tabs-lift  z-1 flex">
+    class="tabs tab-menu border-b relative h-10 justify-start pl-32 col-start-2 w-max  mb-2  tabs-lg tabs-lift  z-1 flex">
     <FakeTab />
 
     <!-- ALL tabs -->
@@ -27,7 +27,7 @@ onMounted (() => {
       v-for="item in route.matched[1].children.sort((a, b) => (Number(a.meta?.order) - Number(b.meta?.order)))"
       :key="item.name"
       role="tab"
-      :class="cn('group/tab min-w-22 max-w-40 grow has-checked:tab-active  tab ', { 'tab-active ': tabs == item.name })"
+      :class="cn('group/tab min-w-22  max-w-40 grow has-checked:tab-active  tab ', { 'tab-active ': tabs == item.name })"
       @click="navigateTo(`/pocket/${pocket.key}/${item.meta?.title}`)">
       <input
         v-model="tabs"

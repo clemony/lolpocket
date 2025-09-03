@@ -3,7 +3,7 @@ import tailwindcss from '@tailwindcss/vite'
 import process from 'node:process'
 import { fileURLToPath } from 'node:url'
 
-// CONFIG
+// CONFIG nuxt
 /*   ogImage: { enabled: false }, */
 
 export default defineNuxtConfig({
@@ -22,17 +22,19 @@ export default defineNuxtConfig({
     'shadcn-nuxt',
     '@nuxthub/core',
     '@nuxtjs/supabase',
+    'nuxt-typed-router',
   ],
 
   imports: {
     dirs: [
       '@vueuse/components',
       'appdata',
-      '#types/**',
+      '~/types',
       'routes',
       'assets/ts/**',
       'composables/alias/*/**',
-      '#shared/schemas',
+      '~/shared/types',
+      '~/shared/utils',
     ],
   },
 
@@ -123,11 +125,11 @@ export default defineNuxtConfig({
 
   components: [
     {
-      path: 'components',
+      path: '~/components',
       pathPrefix: false,
     },
     {
-      path: 'base',
+      path: '~/base',
       pathPrefix: false,
     },
     '~/components',
@@ -153,14 +155,6 @@ export default defineNuxtConfig({
     typeCheck: true,
   },
 
-  vue: {
-    compilerOptions: {
-      isCustomElement: tag =>
-        ['widgetbot', 'discord-widget'].includes(tag),
-
-    },
-  },
-
   vite: {
     clearScreen: false,
     logLevel: 'info',
@@ -168,22 +162,21 @@ export default defineNuxtConfig({
     vue: {
       customElement: true,
     },
-    optimizeDeps: {
-      force: true,
-      exclude: [
-        // large deps you don't need to prebundle
-        'fuse.js',
-        'lodash-es',
-      ],
-    },
     build: {
       sourcemap: false,
+      cssCodeSplit: false,
     },
+  },
+
+  devServer: {
+    port: 8080,
+    host: 'localhost',
+    https: false,
   },
 
   /* ------------------------------ styling ------------------------------ */
 
-  css: ['./app/assets/css/tailwind.css'],
+  css: ['~/assets/css/tailwind.css'],
 
   postcss: {
     plugins: {},
@@ -219,23 +212,11 @@ export default defineNuxtConfig({
 
   /* --------------------------- dev & bundler ----------------------------- */
 
-  devServer: {
-    port: 8080,
-  },
-
   devtools: {
     enabled: true,
     componentInspector: true,
     vueDevTools: true,
     viteInspect: true,
-  },
-
-  webpack: {
-    loaders: {
-      vue: {
-        hotReload: true,
-      },
-    },
   },
 
   future: {

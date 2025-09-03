@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { NavigationMenuLink, NuxtLink } from '#components'
+import { NuxtLink } from '#components'
+import { NavigationMenuLink } from 'reka-ui'
 
 const { class: className, hash, to, at, nuxt } = defineProps<{
   class?: HTMLAttributes['class']

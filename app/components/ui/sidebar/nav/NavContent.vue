@@ -6,7 +6,7 @@ const { basicLayout } = defineProps<{
 }>()
 
 const links = computed (() => {
-  if (!as().account.name)
+  if (!as().account?.name)
     return null
 
   else return generateSummonerLinks(as().account)
@@ -79,7 +79,7 @@ function closeAndNavigate(link: string) {
           <SidebarGroupContent class="pt-1 gap-1 pl-5 relative flex flex-col justify-items-center">
             <Button
               v-for="link in linkObject.links"
-              :key="link.name"
+              :key="link?.name"
               variant="ghost"
               size="lg"
               class="gap-2.75 !duration-0 !text-bc/60 h-10 text-3 capitalize text-nowrap flex-nowrap overflow-hidden hover:!text-bc justify-start"

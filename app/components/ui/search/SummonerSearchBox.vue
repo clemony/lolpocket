@@ -10,7 +10,7 @@ const { class: className } = defineProps<{
 
 const as = useAccountStore()
 const select = shallowRef(null)
-const selectedRegion = shallowRef(as.account.region)
+const selectedRegion = shallowRef(as.account?.region || 'na1')
 
 const name = ref('')
 const tag = ref('')
@@ -50,7 +50,7 @@ const tagText = computed (() => !!name.value.length && focused.value ? 'tab to t
         class="grow transition-all duration-200"
         @keydown.delete="!tag.length ? focused = true : null" />
 
-      <Popover
+   <!--    <Popover
         class=" "
         @close-auto-focus.prevent
         @click.stop>
@@ -66,11 +66,11 @@ const tagText = computed (() => !!name.value.length && focused.value ? 'tab to t
             <icon
               name="at"
               class="!size-3.25" />
-            {{ selectedRegion.replace(/\d+/g, '') }}
+            {{ selectedRegion?.replace(/\d+/g, '') || '' }}
           </Button>
         </PopoverTrigger>
         <RegionPopoverContent @update:model-value="e => selectedRegion = e" />
-      </Popover></TransitionSlideLeft>
+      </Popover> --></TransitionSlideLeft>
     <!--     <button
       v-bind="$attrs"
       class="btn btn-ghost btn-square btn-sm absolute  transition-all duration-200  right-2">

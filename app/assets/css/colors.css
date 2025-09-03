@@ -4,7 +4,7 @@
 @theme {
   --color-discord: oklch(58% 52% 274deg);
 
-  --color-all-roles: oklch(37% 0% 68deg);
+  --color-all-roles: oklch(37% 0% 0);
 --color-precision: oklch(85.49% 0.0892 84.09);
   --color-domination: oklch(60.61% 0.1206 15.34);
   --color-sorcery: oklch(69.02% 0.0644 332.52);

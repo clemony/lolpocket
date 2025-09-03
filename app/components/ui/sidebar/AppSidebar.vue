@@ -63,7 +63,7 @@ const variants = {
 }
 
 onMounted(() => {
-  if (!as().settings.lockSidebar)
+  if (!as().settings?.lockSidebar)
     open.value = false
 })
 
@@ -86,8 +86,8 @@ function handleClick(component) {
     :class="cn('items-start   [&>[data-sidebar=sidebar]]:flex-row !flex-row md:flex-row w-full !bg-transparent  h-screen ',
                {
                  'max-w-[var(--sidebar-width)] w-[var(--sidebar-width)]': open,
-                 'absolute top-0 left-0 z-30': !as().settings.lockSidebar,
-                 ' relative': !as().settings.lockSidebar,
+                 'absolute top-0 left-0 z-30': !as().settings?.lockSidebar,
+                 ' relative': !as().settings?.lockSidebar,
                })"
     variant="sidebar">
     <!-- This is the first sidebar -->
@@ -148,7 +148,7 @@ function handleClick(component) {
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter>
-        <SidebarUser />
+        <!--    <SidebarUser /> -->
       </SidebarFooter>
     </Sidebar>
 

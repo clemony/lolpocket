@@ -49,7 +49,7 @@ const hasAction = computed(() => !!template.value.action)
     <NuxtLink
       v-if="template.action.type == 'navigate'"
       class="chat-footer group-hover/item:opacity-50 hover:opacity-100 opacity-0 items-center  p-0 flex gap-1 flex-nowrap !font-medium leading-none  cursor-pointer hover:underline transition-opacity duration-200 "
-      @click="navigateTo(template.action.function)">
+      :to="template.action.function">
       <icon
         :name="template.action.icon.name"
         :class="cn('shrink-0 dst', template.action.icon.class)" />

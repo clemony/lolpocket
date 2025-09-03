@@ -7,8 +7,8 @@ const route = useRoute()
 </script>
 
 <template>
-  <Field v-if="pocket">
-    <NuxtLink :to="`/pocket/${pocket.key}/card`">
+  <div v-if="pocket">
+    <!--     <NuxtLink :to="`/pocket/${pocket.key}/card`">
       <Btn :class="{ 'btn-active [&_span]:border-b1 [&_span]:inset-shadow-black/16 [&_span]:bg-b1/60  border-r-b2': route.name == 'card' }">
         <slot />
 
@@ -21,6 +21,6 @@ const route = useRoute()
         <icon name="vaadin:health-card" />
         Card
       </Btn>
-    </NuxtLink>
-  </Field>
+    </NuxtLink> -->
+  </div>
 </template>

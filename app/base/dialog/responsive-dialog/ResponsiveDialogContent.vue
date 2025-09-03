@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { DrawerContent, FadeDialogContent } from '#components'
+/* import { DrawerContent, FadeDialogContent } from '#components' */
 
 defineOptions({
   inheritAttrs: false,
