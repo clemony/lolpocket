@@ -48,10 +48,13 @@ onBeforeRouteLeave(() => {
               html-for="email">Email</Label>
             <Input
               id="email"
+              v-model:email="email"
+
               type="email"
               class="h-12"
-              placeholder="m@example.com"
-              required />
+              placeholder="mail@example.com"
+              required
+              @clear:input="email = ''" />
           </div>
           <div class="grid gap-2">
             <div class="flex items-center">
@@ -59,9 +62,11 @@ onBeforeRouteLeave(() => {
             </div>
             <Input
               id="password"
+              v-model:password="password"
               class="h-12"
               type="password"
-              required />
+              required
+              @clear:input="password = ''" />
           </div>
           <div class="w-full gap-y-2 grid ">
             <Button

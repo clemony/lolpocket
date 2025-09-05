@@ -10,7 +10,7 @@ const variantStyles = {
 
   btn: 'px-3  btn  bg-tint-b2/60 border-b2 [&_.btn-active]:!bg-tint-b2/10  [&_.btn-active]:!border-b3/80 font-medium',
 
-  label: 'font-medium opacity-60',
+  label: 'font-medium opacity-50 items-center flex gap-3',
 
   neutral: ' px-3 btn-neutral btn bg-neutral text-nc bg-neutral  font-medium  *:text-nc  hover:text-nc shadow-sm drop-shadow-sm border-neutral hover:bg-neutral/85 hover:**:text-nc',
 
@@ -18,7 +18,7 @@ const variantStyles = {
 
   secondary: 'btn bg-tint-b3/40 text-bc px-3 !border-b3  font-medium shadow-sm hover:inset-shadow-xs',
 
-  ghost: 'btn btn-ghost hover:!bg-tint-b2/40 font-medium px-3 ',
+  ghost: 'btn btn-ghost hover:bg-tint-b2/20 font-medium px-3 ',
 
   link: 'text-bc underline-offset-2 data-[state=active]:underline group-data-[state=visible]:underline hover:underline cursor-pointer font-medium px-0',
 
@@ -32,7 +32,7 @@ const variantStyles = {
 
 const hoverStyles = {
   base: 'hover:bg-transparent',
-
+  b1: 'hover:!bg-b1',
   btn: 'hover:!bg-b2  hover:!border-b3/80',
 
   neutral: ' hover:!text-nc hover:!bg-neutral/85 hover:**:!text-nc hover:!border-n3 hover:shadow-sm hover:drop-shadow-sm ',
@@ -72,12 +72,24 @@ export const buttonVariants = cva(buttonBase, {
       default: 'btn',
     },
     size: {
-      ...sizes,
+      base: '',
+      xxs: 'h-6 text-2 rounded-md',
+      xs: 'btn-xs text-2 rounded-md',
+      sm: 'btn-sm text-2 rounded-lg',
+      md: 'rounded-lg btn-md',
+      lg: 'rounded-lg btn-lg',
+      xl: 'rounded-lg btn-xl',
+      icon: 'aspect-square rounded-lg',
       default: 'md',
     },
     shape: {
       square: 'grid place-items-center aspect-square ',
       circle: '!btn-circle !rounded-full  grid place-items-center ',
+    },
+    defaultVariants: {
+      variant: 'btn',
+      hover: 'btn',
+      size: 'md',
     },
   },
 })

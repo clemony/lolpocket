@@ -3,8 +3,8 @@ import path from 'node:path'
 import { normalize } from '../..'
 import type { Champion } from '../../../shared/types/types.champion'
 
-const inputPath = path.resolve('./scripts/update/champions/raw/champions-raw.json')
-const outputPath = path.resolve('./scripts/update/champions/raw/unique-ability-resources.json')
+const inputPath = path.resolve('./champions/raw/champions-raw.json')
+const outputPath = path.resolve('./champions/raw/unique-ability-resources.json')
 
 const championsRaw = fs.readFileSync(inputPath, 'utf-8')
 const champions = JSON.parse(championsRaw) as Champion[]

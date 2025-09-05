@@ -18,9 +18,6 @@ const {
 }>()
 
 const loaded = ref(false)
-watch(() => loaded.value, (newVal) => {
-  console.log('💠 - watch - newVal:', newVal)
-})
 </script>
 
 <template>

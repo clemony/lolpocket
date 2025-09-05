@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { fonts } from 'components/pocket/menu/fonts'
 import type { ZoomableEvent } from 'vue-zoomable'
 import VueZoomable from 'vue-zoomable'
 import 'vue-zoomable/dist/style.css'
@@ -19,7 +18,7 @@ const ps = usePocketStore()
 
 // TODO nuxt bg here
 
-const fontClass1 = computed (() => {
+/* const fontClass1 = computed (() => {
   const a = fonts.find(f => f.id == card.font[0])
   return ''
   a.cardClass ? a.cardClass : ''
@@ -29,7 +28,7 @@ const fontClass2 = computed (() => {
   return ''
   a.cardClass ? a.cardClass : ''
 })
-
+ */
 const zoom = ref(1)
 const pan = ref({ x: 0, y: 0 })
 
@@ -107,7 +106,7 @@ console.log('💠 - card.splash:', card.splash)
 
         <div class="absolute grid grid-cols-[1.5fr_1fr] h-full top-0 inset-0 left-0 pt-28 px-16">
           <div class="flex flex-col **:select-none">
-            <div class="">
+            <!--         <div class="">
               <h3
                 class="text-9 dst tracking-tight pl-3"
                 :style="{ fontFamily: card.font[1] }"
@@ -121,7 +120,7 @@ console.log('💠 - card.splash:', card.splash)
                 :class="fontClass1">
                 {{ ix().champNameByKey(card.champion) ?? '' }}
               </h1>
-            </div>
+            </div> -->
 
             <div class="h-auto space-y-12 mt-20">
               <template

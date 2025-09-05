@@ -24,7 +24,7 @@ export function useRunes(player?: ComputedRef<any>, set?: ComputedRef<any>) {
   ]
 
   const getKeystones = (set: ComputedRef<any>) =>
-    computed(() => runes.value?.[set.value[0]?.path]?.[0] ?? [])
+    computed(() => runes.value?.filter(r => r.path == set.value?.primary?.path) || [])
 
   const getPrimarySlots = (set: ComputedRef<any>) =>
     computed(() => {

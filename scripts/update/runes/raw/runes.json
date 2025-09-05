@@ -5,6 +5,7 @@
     "tooltip": "Durability and crowd control",
     "slots": [
       {
+        "tier": 0,
         "label": "Keystone",
         "runes": [
           {
@@ -20,11 +21,12 @@
           {
             "id": 8465,
             "name": "Guardian",
-            "description": "<i>Guard</i> allies within 350 units of you, and allies you target with spells for 2.5s. While <i>Guarding</i>, if you or the ally take more than a small amount of damage over the duration of the <i>Guard</i>, both of you gain a shield for 1.5s.<br><br>Cooldown: <scaleLevel>90 - 40</scaleLevel> seconds<br>Shield: <scaleLevel>45 - 150</scaleLevel> + <scaleAP>15%</scaleAP> of your ability power + <scalehealth>5%</scalehealth> of your bonus health<br>Proc Threshold: <scaleLevel>50 - 165</scaleLevel> postmitigation damage"
+            "description": "<i>Guard</i> allies within 350 units of you, and allies you target with spells for 2.5s. While <i>Guarding</i>, if you or the ally take more than a small amount of damage over the duration of the <i>Guard</i>, both of you gain a shield for 1.5s.<br><br>Cooldown: <span class=\"scale-level\">90 - 40</span> seconds<br>Shield: <span class=\"scale-level\">45 - 150</span> + <scaleAP>15%</scaleAP> of your ability power + <scalehealth>5%</scalehealth> of your bonus health<br>Proc Threshold: <span class=\"scale-level\">50 - 165</span> postmitigation damage"
           }
         ]
       },
       {
+        "tier": 1,
         "label": "Strength",
         "runes": [
           {
@@ -40,11 +42,12 @@
           {
             "id": 8401,
             "name": "Shield Bash",
-            "description": "Whenever you gain a new shield,  your next basic attack against a champion deals <scaleLevel>5 - 30</scaleLevel> <scaleHealth>(+2.5% Bonus Health)</scaleHealth> <scaleMana>(+15.0% New Shield Amount)</scaleMana> bonus <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>adaptive</font></lol-uikit-tooltipped-keyword> damage.<br><br>You have up to 2s after the shield expires to use this effect."
+            "description": "Whenever you gain a new shield,  your next basic attack against a champion deals <span class=\"scale-level\">5 - 30</span> <scaleHealth>(+2.5% Bonus Health)</scaleHealth> <scaleMana>(+15.0% New Shield Amount)</scaleMana> bonus <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>adaptive</font></lol-uikit-tooltipped-keyword> damage.<br><br>You have up to 2s after the shield expires to use this effect."
           }
         ]
       },
       {
+        "tier": 2,
         "label": "Resistance",
         "runes": [
           {
@@ -65,6 +68,7 @@
         ]
       },
       {
+        "tier": 3,
         "label": "Vitality",
         "runes": [
           {
@@ -83,66 +87,6 @@
             "description": "Gain 10 Armor and Magic Resist when crowd controlled and for 2 seconds after."
           }
         ]
-      },
-      {
-        "label": "Offense",
-        "runes": [
-          {
-            "id": 5008,
-            "name": "Adaptive Force",
-            "description": "+9 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>Adaptive Force</font></lol-uikit-tooltipped-keyword>"
-          },
-          {
-            "id": 5005,
-            "name": "Attack Speed",
-            "description": "+10% Attack Speed"
-          },
-          {
-            "id": 5007,
-            "name": "Ability Haste",
-            "description": "+8 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_CDR'>Ability Haste</lol-uikit-tooltipped-keyword> "
-          }
-        ]
-      },
-      {
-        "label": "Flex",
-        "runes": [
-          {
-            "id": 5008,
-            "name": "Adaptive Force",
-            "description": "+9 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>Adaptive Force</font></lol-uikit-tooltipped-keyword>"
-          },
-          {
-            "id": 5010,
-            "name": "Move Speed",
-            "description": "+2% <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>Move Speed</lol-uikit-tooltipped-keyword>"
-          },
-          {
-            "id": 5001,
-            "name": "Health Scaling",
-            "description": "+10-180 Health (based on level)"
-          }
-        ]
-      },
-      {
-        "label": "Defense",
-        "runes": [
-          {
-            "id": 5011,
-            "name": "Health",
-            "description": "+65 Health"
-          },
-          {
-            "id": 5013,
-            "name": "Tenacity and Slow Resist",
-            "description": "+10% Tenacity and Slow Resist"
-          },
-          {
-            "id": 5001,
-            "name": "Health Scaling",
-            "description": "+10-180 Health (based on level)"
-          }
-        ]
       }
     ]
   },
@@ -152,6 +96,7 @@
     "tooltip": "Burst damage and target access ",
     "slots": [
       {
+        "tier": 0,
         "label": "Keystone",
         "runes": [
           {
@@ -172,6 +117,7 @@
         ]
       },
       {
+        "tier": 1,
         "label": "Malice",
         "runes": [
           {
@@ -192,6 +138,7 @@
         ]
       },
       {
+        "tier": 2,
         "label": "Tracking",
         "runes": [
           {
@@ -212,12 +159,13 @@
         ]
       },
       {
+        "tier": 3,
         "label": "Hunter",
         "runes": [
           {
             "id": 8135,
             "name": "Treasure Hunter",
-            "description": "Gain an additional <gold>50 gold</gold> the next time you collect a <i>Bounty Hunter</i> stack. Increase the gold gained by <gold>20 gold</gold> for each <i>Bounty Hunter</i> stack, up to <gold>130 gold</gold>.<br><br><i>Bounty Hunter</i> stacks are earned the first time you get a takedown on each enemy champion."
+            "description": "Gain an additional <span class=\"gold\">50 gold</span> the next time you collect a <i>Bounty Hunter</i> stack. Increase the gold gained by <span class=\"gold\">20 gold</span> for each <i>Bounty Hunter</i> stack, up to <span class=\"gold\">130 gold</span>.<br><br><i>Bounty Hunter</i> stacks are earned the first time you get a takedown on each enemy champion."
           },
           {
             "id": 8105,
@@ -230,66 +178,6 @@
             "description": "Your ultimate gains <attention>6</attention> Ability Haste, plus an additional <attention>5</attention> Ability Haste per <i>Bounty Hunter</i> stack. <i>Bounty Hunter</i> stacks are earned the first time you get a takedown on each enemy champion."
           }
         ]
-      },
-      {
-        "label": "Offense",
-        "runes": [
-          {
-            "id": 5008,
-            "name": "Adaptive Force",
-            "description": "+9 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>Adaptive Force</font></lol-uikit-tooltipped-keyword>"
-          },
-          {
-            "id": 5005,
-            "name": "Attack Speed",
-            "description": "+10% Attack Speed"
-          },
-          {
-            "id": 5007,
-            "name": "Ability Haste",
-            "description": "+8 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_CDR'>Ability Haste</lol-uikit-tooltipped-keyword> "
-          }
-        ]
-      },
-      {
-        "label": "Flex",
-        "runes": [
-          {
-            "id": 5008,
-            "name": "Adaptive Force",
-            "description": "+9 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>Adaptive Force</font></lol-uikit-tooltipped-keyword>"
-          },
-          {
-            "id": 5010,
-            "name": "Move Speed",
-            "description": "+2% <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>Move Speed</lol-uikit-tooltipped-keyword>"
-          },
-          {
-            "id": 5001,
-            "name": "Health Scaling",
-            "description": "+10-180 Health (based on level)"
-          }
-        ]
-      },
-      {
-        "label": "Defense",
-        "runes": [
-          {
-            "id": 5011,
-            "name": "Health",
-            "description": "+65 Health"
-          },
-          {
-            "id": 5013,
-            "name": "Tenacity and Slow Resist",
-            "description": "+10% Tenacity and Slow Resist"
-          },
-          {
-            "id": 5001,
-            "name": "Health Scaling",
-            "description": "+10-180 Health (based on level)"
-          }
-        ]
       }
     ]
   },
@@ -299,6 +187,7 @@
     "tooltip": "Improved attacks and sustained damage",
     "slots": [
       {
+        "tier": 0,
         "label": "Keystone",
         "runes": [
           {
@@ -324,6 +213,7 @@
         ]
       },
       {
+        "tier": 1,
         "label": "Heroism",
         "runes": [
           {
@@ -344,6 +234,7 @@
         ]
       },
       {
+        "tier": 2,
         "label": "Legend",
         "runes": [
           {
@@ -364,6 +255,7 @@
         ]
       },
       {
+        "tier": 3,
         "label": "Combat",
         "runes": [
           {
@@ -382,66 +274,6 @@
             "description": "Deal 5% - 11% increased damage to champions while you are below 60% health. Max damage gained at 30% health."
           }
         ]
-      },
-      {
-        "label": "Offense",
-        "runes": [
-          {
-            "id": 5008,
-            "name": "Adaptive Force",
-            "description": "+9 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>Adaptive Force</font></lol-uikit-tooltipped-keyword>"
-          },
-          {
-            "id": 5005,
-            "name": "Attack Speed",
-            "description": "+10% Attack Speed"
-          },
-          {
-            "id": 5007,
-            "name": "Ability Haste",
-            "description": "+8 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_CDR'>Ability Haste</lol-uikit-tooltipped-keyword> "
-          }
-        ]
-      },
-      {
-        "label": "Flex",
-        "runes": [
-          {
-            "id": 5008,
-            "name": "Adaptive Force",
-            "description": "+9 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>Adaptive Force</font></lol-uikit-tooltipped-keyword>"
-          },
-          {
-            "id": 5010,
-            "name": "Move Speed",
-            "description": "+2% <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>Move Speed</lol-uikit-tooltipped-keyword>"
-          },
-          {
-            "id": 5001,
-            "name": "Health Scaling",
-            "description": "+10-180 Health (based on level)"
-          }
-        ]
-      },
-      {
-        "label": "Defense",
-        "runes": [
-          {
-            "id": 5011,
-            "name": "Health",
-            "description": "+65 Health"
-          },
-          {
-            "id": 5013,
-            "name": "Tenacity and Slow Resist",
-            "description": "+10% Tenacity and Slow Resist"
-          },
-          {
-            "id": 5001,
-            "name": "Health Scaling",
-            "description": "+10-180 Health (based on level)"
-          }
-        ]
       }
     ]
   },
@@ -451,6 +283,7 @@
     "tooltip": "Empowered abilities and resource manipulation",
     "slots": [
       {
+        "tier": 0,
         "label": "Keystone",
         "runes": [
           {
@@ -471,6 +304,7 @@
         ]
       },
       {
+        "tier": 1,
         "label": "Artifact",
         "runes": [
           {
@@ -491,6 +325,7 @@
         ]
       },
       {
+        "tier": 2,
         "label": "Excellence",
         "runes": [
           {
@@ -511,6 +346,7 @@
         ]
       },
       {
+        "tier": 3,
         "label": "Power",
         "runes": [
           {
@@ -529,66 +365,6 @@
             "description": "Every 10 min gain AP or AD, <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>adaptive</font></lol-uikit-tooltipped-keyword>.<br><br><i>10 min</i>: + 8 AP or 5 AD <br><i>20 min</i>: + 24 AP or 14 AD<br><i>30 min</i>: + 48 AP or 29 AD<br><i>40 min</i>: + 80 AP or 48 AD<br><i>50 min</i>: + 120 AP or 72 AD<br><i>60 min</i>: + 168 AP or 101 AD<br>etc..."
           }
         ]
-      },
-      {
-        "label": "Offense",
-        "runes": [
-          {
-            "id": 5008,
-            "name": "Adaptive Force",
-            "description": "+9 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>Adaptive Force</font></lol-uikit-tooltipped-keyword>"
-          },
-          {
-            "id": 5005,
-            "name": "Attack Speed",
-            "description": "+10% Attack Speed"
-          },
-          {
-            "id": 5007,
-            "name": "Ability Haste",
-            "description": "+8 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_CDR'>Ability Haste</lol-uikit-tooltipped-keyword> "
-          }
-        ]
-      },
-      {
-        "label": "Flex",
-        "runes": [
-          {
-            "id": 5008,
-            "name": "Adaptive Force",
-            "description": "+9 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>Adaptive Force</font></lol-uikit-tooltipped-keyword>"
-          },
-          {
-            "id": 5010,
-            "name": "Move Speed",
-            "description": "+2% <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>Move Speed</lol-uikit-tooltipped-keyword>"
-          },
-          {
-            "id": 5001,
-            "name": "Health Scaling",
-            "description": "+10-180 Health (based on level)"
-          }
-        ]
-      },
-      {
-        "label": "Defense",
-        "runes": [
-          {
-            "id": 5011,
-            "name": "Health",
-            "description": "+65 Health"
-          },
-          {
-            "id": 5013,
-            "name": "Tenacity and Slow Resist",
-            "description": "+10% Tenacity and Slow Resist"
-          },
-          {
-            "id": 5001,
-            "name": "Health Scaling",
-            "description": "+10-180 Health (based on level)"
-          }
-        ]
       }
     ]
   },
@@ -598,6 +374,7 @@
     "tooltip": "Creative tools and rule bending ",
     "slots": [
       {
+        "tier": 0,
         "label": "Keystone",
         "runes": [
           {
@@ -613,11 +390,12 @@
           {
             "id": 8369,
             "name": "First Strike",
-            "description": "Attacks or abilities against an enemy champion within 0.25s of entering champion combat grant 10 gold and <b>First Strike</b> for 3 seconds, causing you to deal <truedamage>7%</truedamage> extra <truedamage> damage</truedamage> against champions, and granting <gold>50% (35% for ranged champions)</gold> of bonus damage dealt as <gold>gold</gold>.<br><br>Cooldown: <scaleLevel>25 - 15</scaleLevel>s"
+            "description": "Attacks or abilities against an enemy champion within 0.25s of entering champion combat grant 10 gold and <b>First Strike</b> for 3 seconds, causing you to deal <span class=\"truedamage\">7%</span> extra <span class=\"truedamage\"> damage</span> against champions, and granting <span class=\"gold\">50% (35% for ranged champions)</span> of bonus damage dealt as <span class=\"gold\">gold</span>.<br><br>Cooldown: <span class=\"scale-level\">25 - 15</span>s"
           }
         ]
       },
       {
+        "tier": 1,
         "label": "Contraptions",
         "runes": [
           {
@@ -638,6 +416,7 @@
         ]
       },
       {
+        "tier": 2,
         "label": "Tomorrow",
         "runes": [
           {
@@ -658,6 +437,7 @@
         ]
       },
       {
+        "tier": 3,
         "label": "Beyond",
         "runes": [
           {
@@ -674,66 +454,6 @@
             "id": 8316,
             "name": "Jack Of All Trades",
             "description": "For each different stat gained from items, gain one Jack stack. Each stack grants you <speed>1 Ability Haste</speed>.<br><br>Gain 10 or 25 bonus <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'>Adaptive Force</lol-uikit-tooltipped-keyword> at 5 and 10 stacks, respectively."
-          }
-        ]
-      },
-      {
-        "label": "Offense",
-        "runes": [
-          {
-            "id": 5008,
-            "name": "Adaptive Force",
-            "description": "+9 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>Adaptive Force</font></lol-uikit-tooltipped-keyword>"
-          },
-          {
-            "id": 5005,
-            "name": "Attack Speed",
-            "description": "+10% Attack Speed"
-          },
-          {
-            "id": 5007,
-            "name": "Ability Haste",
-            "description": "+8 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_CDR'>Ability Haste</lol-uikit-tooltipped-keyword> "
-          }
-        ]
-      },
-      {
-        "label": "Flex",
-        "runes": [
-          {
-            "id": 5008,
-            "name": "Adaptive Force",
-            "description": "+9 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>Adaptive Force</font></lol-uikit-tooltipped-keyword>"
-          },
-          {
-            "id": 5010,
-            "name": "Move Speed",
-            "description": "+2% <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>Move Speed</lol-uikit-tooltipped-keyword>"
-          },
-          {
-            "id": 5001,
-            "name": "Health Scaling",
-            "description": "+10-180 Health (based on level)"
-          }
-        ]
-      },
-      {
-        "label": "Defense",
-        "runes": [
-          {
-            "id": 5011,
-            "name": "Health",
-            "description": "+65 Health"
-          },
-          {
-            "id": 5013,
-            "name": "Tenacity and Slow Resist",
-            "description": "+10% Tenacity and Slow Resist"
-          },
-          {
-            "id": 5001,
-            "name": "Health Scaling",
-            "description": "+10-180 Health (based on level)"
           }
         ]
       }

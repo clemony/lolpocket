@@ -62,7 +62,7 @@ export default defineAppConfig({
       'filter': 'lucide:list-filter',
       'refresh': 'radix-icons:reload',
       'copy': 'lucide:copy',
-      'export': 'lucide:share',
+      'export': 'lucide:upload',
       'tag': 'lucide:tag',
       'tags': 'lucide:tags',
       'pin': 'iconoir:pin',
@@ -82,7 +82,7 @@ export default defineAppConfig({
       'gallery': 'lucide:gallery-vertical-end',
 
       // editing
-      'backspace': 'tabler:backspace',
+      'backspace': 'cil:backspace',
       'edit': 'material-symbols-light:edit-square-outline',
       'edit-line': 'lucide:pen-line',
       'erase': 'lucide:eraser',

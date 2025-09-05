@@ -28,9 +28,11 @@ function handleReset() {
             </div>
             <Input
               id="password"
+              v-model:password="password"
               class="h-12"
               type="password"
-              required />
+              required
+              @clear:input="password = ''" />
           </div>
           <div class="w-full gap-y-2 grid ">
             <Button

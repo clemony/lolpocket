@@ -6,13 +6,13 @@ const { title } = defineProps<{
   title: string
 }>()
 const selected = ref<string | undefined>(mails[0].id)
-const searchValue = ref('')
-const debouncedSearch = refDebounced(searchValue, 250)
+const searchQuery = ref('')
+const debouncedSearch = refDebounced(searchQuery, 250)
 
 const filteredMailList = computed(() => {
   let output: Mail[] = []
-  const searchValue = debouncedSearch.value?.trim()
-  if (!searchValue) {
+  const searchQuery = debouncedSearch.value?.trim()
+  if (!searchQuery) {
     output = mails
   }
 
@@ -83,9 +83,10 @@ const selectedMailData = computed(() => mails.find(item => item.id === selected.
         </div>
         <form class="w-full h-24 flex items-center p-4 self-center  max-w-220 ">
           <Input
-            v-model="searchValue"
+            v-model="searchQuery"
             placeholder="Search"
-            class="w-full">
+            class="w-full"
+            @clear:input="searchQuery = ''">
             <icon
               name="lucide:search"
               class=" size-4 text-bc/60 " />

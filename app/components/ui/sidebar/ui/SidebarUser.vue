@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { vElementHover } from '@vueuse/components'
-import { useSidebar } from 'base/sidebar/sidebar-index'
+import { useSidebar } from '/base/sidebar/sidebar-index'
 
 const { isMobile, open } = useSidebar()
 function closeAndNavigate(link: string) {

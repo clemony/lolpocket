@@ -5,7 +5,7 @@ import { ChampionGridIcon, GridLastPlayed, GridMasteryPoints } from '#components
 import type { ColDef, ColGroupDef, GridApi, GridOptions, GridReadyEvent } from 'ag-grid-community'
 import { CellStyleModule, ClientSideRowModelModule, ColumnApiModule, ColumnAutoSizeModule, ColumnHoverModule, GridStateModule, ModuleRegistry, RenderApiModule, RowSelectionModule, ValidationModule } from 'ag-grid-community'
 import { AgGridVue } from 'ag-grid-vue3'
-import { masteryGridTheme } from '../../table/theme/masteryTheme'
+import { masteryGridTheme } from '../../../utils/config/masteryTheme'
 
 const { mastery, summoner } = defineProps<{
   mastery: ChampionMastery[]

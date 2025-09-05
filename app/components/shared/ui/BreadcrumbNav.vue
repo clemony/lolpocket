@@ -1,7 +1,4 @@
 <script lang="ts" setup>
-import type { HoverCardRootProps } from 'reka-ui'
-import { HoverCardArrow } from 'reka-ui'
-
 const open = ref(false)
 
 const route = useRoute()
@@ -21,7 +18,7 @@ const parentRoutes = computed (() => {
 console.log('🌱 - parentRoutes:', parentRoutes)
 
 function navigatePocket(target: 'champions' | 'items' | 'runes') {
-  const route = useRoute('pocket-pocketKey-champions')
+  const route = useRoute()
   open.value = false
 
   navigateTo({
@@ -35,7 +32,7 @@ const pocketName = computed (() => {
     return null
 
   const pocketRoute = useRoute('pocket-pocketKey-champions')
-  return computed(() => ps().getPocket(pocketRoute.params.pocketKey)).value.name
+  return computed(() => ps().getPocket(String(pocketRoute.params.pocketKey))).value.name
 })
 </script>
 
@@ -91,17 +88,7 @@ const pocketName = computed (() => {
         :align-offset="-6"
         class="w-fit px-1 space-y-1"
         :side-offset="-1">
-        <HoverCardArrow
-          class="fill-black/10 dst translate-y-[1px]"
-          :height="10"
-          :width="16"
-          rounded />
-        <HoverCardArrow
-          :height="10"
-          :width="16"
-          class="fill-b1 "
-          rounded />
-
+        <HoverCardArrow />
         <!-- tier 1 -->
         <ul class="menu xl:menu-horizontal *:min-w-54 rounded-box lg:min-w-max">
           <li>

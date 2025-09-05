@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { MessageView, NavContent, NotificationView, PocketContent, SearchContent } from '#components'
-import { useSidebar } from 'base/sidebar/sidebar-index'
+import { useSidebar } from '/base/sidebar/sidebar-index'
 
 const userMenu: DataObject[] = [
   {

@@ -18,7 +18,7 @@ const { playerKeystone, playerPaths } = await useRunes(computed(() => player))
     <img
       v-if="playerKeystone"
       v-tippy="{ content: playerKeystone.name, placement: 'right' }"
-      :src="`/img/runes/${playerKeystone.path}/${playerKeystone.key}.webp`"
+      :src="`/img/runes/${playerKeystone.path}/${playerKeystone.id}.webp`"
       class="h-8 w-auto drop-shadow-xs !shrink-0" />
 
     <img

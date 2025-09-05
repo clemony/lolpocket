@@ -10,9 +10,9 @@ const ix = useIndexStore()
 </script>
 
 <template>
-  <Field
+  <div
     title="Shards"
-    class="flex justify-center  rounded-xl w-full py-10">
+    class="flex justify-center field-box rounded-xl w-full py-10">
     <div class="grid  grid-cols-3 place-items-center gap-x-16 gap-y-7">
       <label
         v-for="shard in ix.shards"
@@ -59,7 +59,7 @@ const ix = useIndexStore()
           :class="cn(shard.iconClass, `${shard.color}`)" />
       </label>
     </div>
-  </Field>
+  </div>
 </template>
 
 <style scoped></style>

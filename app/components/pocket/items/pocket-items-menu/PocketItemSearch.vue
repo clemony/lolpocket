@@ -124,7 +124,8 @@ watchEffect(() => {
           v-model="searchQuery"
           type="text"
           class="size-full pl-5 border-0 shadow-none py-0 m-0"
-          :placeholder="props.placeholder" />
+          :placeholder="props.placeholder"
+          @clear:input="searchQuery = ''" />
       </slot>
     </motion.div>
 

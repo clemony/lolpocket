@@ -2,7 +2,7 @@
 import tailwindcss from '@tailwindcss/vite'
 import process from 'node:process'
 import { fileURLToPath } from 'node:url'
-
+/*     "nuxt-og-image", */
 // CONFIG nuxt
 /*   ogImage: { enabled: false }, */
 
@@ -17,37 +17,34 @@ export default defineNuxtConfig({
     'vue-sonner/nuxt',
     '@nuxt/icon',
     'nuxt-svgo',
-    'motion-v/nuxt' /*     "nuxt-og-image", */,
+    'motion-v/nuxt',
     '@nuxtjs/tailwindcss',
-    'shadcn-nuxt',
-    '@nuxthub/core',
+    // 'shadcn-nuxt',
+    // '@nuxthub/core',
     '@nuxtjs/supabase',
-    'nuxt-typed-router',
   ],
 
   imports: {
     dirs: [
       '@vueuse/components',
       'appdata',
-      '~/types',
+      './types',
       'routes',
       'assets/ts/**',
       'composables/alias/*/**',
-      '~/shared/types',
-      '~/shared/utils',
+      './shared/types',
+      './shared/utils',
     ],
   },
 
   alias: {
-    'css': fileURLToPath(new URL('./app/assets/css', import.meta.url)),
-    '#types': fileURLToPath(new URL('./shared/types', import.meta.url)),
     'stores': fileURLToPath(new URL('./stores', import.meta.url)),
     'composables': fileURLToPath(new URL('./app/composables', import.meta.url)),
     'server': fileURLToPath(new URL('./server', import.meta.url)),
     'utils': fileURLToPath(new URL('./app/utils', import.meta.url)),
     'api': fileURLToPath(new URL('./public/api', import.meta.url)),
-    'components': fileURLToPath(new URL('./app/components', import.meta.url)),
-    'base': fileURLToPath(new URL('./app/base', import.meta.url)),
+    '/components': fileURLToPath(new URL('./app/components', import.meta.url)),
+    '/base': fileURLToPath(new URL('./app/base', import.meta.url)),
     'assets': fileURLToPath(new URL('./app/assets', import.meta.url)),
     'plugins': fileURLToPath(new URL('./app/plugins', import.meta.url)),
     'modules': fileURLToPath(new URL('./modules', import.meta.url)),
@@ -102,15 +99,15 @@ export default defineNuxtConfig({
       login: '/login',
       saveRedirectToCookie: true,
     },
-    clientOptions: {
+    /*     clientOptions: {
       global: { fetch: fetch.bind(globalThis) },
-    },
+    }, */
     useSsrCookies: false,
   },
-
+  /*
   hub: {
-    database: true,
-  },
+    database: false,
+  }, */
 
   /* ------------------------------ utils ------------------------------ */
 
@@ -125,14 +122,13 @@ export default defineNuxtConfig({
 
   components: [
     {
-      path: '~/components',
+      path: '/components',
       pathPrefix: false,
     },
     {
-      path: '~/base',
+      path: '/base',
       pathPrefix: false,
     },
-    '~/components',
   ],
   svgo: {
     componentPrefix: 'i',
@@ -157,10 +153,8 @@ export default defineNuxtConfig({
 
   vite: {
     clearScreen: false,
-    logLevel: 'info',
     plugins: [tailwindcss()],
     vue: {
-      customElement: true,
     },
     build: {
       sourcemap: false,
@@ -182,15 +176,10 @@ export default defineNuxtConfig({
     plugins: {},
   },
 
-  tailwindcss: {
+  /*   tailwindcss: {
     exposeConfig: true,
     includeWorkspace: true,
-  },
-
-  shadcn: {
-    prefix: '',
-    componentDir: './app/base/ui',
-  },
+  }, */
 
   vueTransitions: {
     defaultProps: {

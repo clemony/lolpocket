@@ -3,8 +3,8 @@ import { markUpdate } from '../..'
 import type { Champion } from '../../../shared/types'
 import { resolvePath } from '../resolvePath'
 
-const outputFile = resolvePath('./shared/appdata/index/champion-title-index.ts')
-const dataPath = resolvePath('./scripts/update/champions/raw/champions-raw.json')
+const outputFile = resolvePath('../../shared/appdata/index/champion-title-index.ts')
+const dataPath = resolvePath('./champions/raw/champions-raw.json')
 const champs = JSON.parse(fs.readFileSync(dataPath, 'utf-8')) as Record<string, Champion>
 
 const index: Record<string, string> = {}

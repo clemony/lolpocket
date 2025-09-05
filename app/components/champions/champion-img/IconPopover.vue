@@ -1,13 +1,8 @@
 <script lang="ts" setup>
-import Fuse from 'fuse.js'
-import { motion } from 'motion-v'
-import { PopoverClose } from 'reka-ui'
-
 const props = withDefaults(
   defineProps<{
     pocketKey?: string
     pocket?: Pocket
-    selectedIcon?: string
     alignOffset?: number
     align?: Align
     sideOffset?: number
@@ -18,48 +13,37 @@ const props = withDefaults(
   {
     align: 'start',
     side: 'bottom',
-    sideOffset: 8,
+    sideOffset: 0,
     alignOffset: 0,
   },
 )
-const emit = defineEmits(['update:selectedIcon'])
+
+const emit = defineEmits(['update:open'])
 
 const pocket = computed(() => {
   return props.pocketKey ? ps().getPocket(props.pocketKey) : props.pocket
 })
 
-console.log('💠 - pocket - pocket:', pocket)
-
-const ix = useIndexStore()
-
-const selectIcon = ref('')
-const champSearch = ref(null)
 const selectedChampion = ref(null)
-const championSkins = ref<Skin[]>([])
+const searchQuery = ref<string>('')
+const { results } = useSimpleSearch(
+  ix().champions,
+  searchQuery,
+)
 
-watchEffect(() => {
-  if (!selectedChampion.value)
-    return
-  championSkins.value = ix.skins[selectedChampion.value]
+const itemsPerPage = 8
+const currentPage = ref(1)
+
+const pagedSearchItems = computed (() => {
+  if (!results.value)
+    return null
+  const start = (currentPage.value - 1) * itemsPerPage
+  return results.value.slice(start, start + itemsPerPage)
 })
-watch(() => selectIcon.value, (newVal) => {
-  if (!pocket?.value)
-    emit('update:selectedIcon', selectIcon.value)
 
-  pocket.value.icon = newVal
-})
-
-const champFuse = computed(() => new Fuse(ix.champions, {
-
-  keys: ['name'],
-  findAllMatches: true,
-  threshold: 0.3,
-}))
-
-const champSearchResults = computed(() => {
-  if (!champSearch.value)
-    return []
-  return champFuse.value.search(champSearch.value)
+watch(() => results.value.length, (newVal) => {
+  if (newVal)
+    currentPage.value = 1
 })
 
 function handleInput() {
@@ -68,20 +52,28 @@ function handleInput() {
 }
 
 onMounted(() => {
-  selectIcon.value = props?.pocket?.icon ?? props?.selectedIcon ?? '/img/lp/192.webp'
-
-  ix.loadSkins()
+  ix().loadSkins()
 })
 
 const isOpen = ref(false)
+
+function handleImg(img: string) {
+  pocket.value.icon = img
+  searchQuery.value = ''
+  selectedChampion.value = null
+  isOpen.value = false
+}
 </script>
 
 <template>
-  <Popover v-model:open="isOpen">
+  <Popover
+    v-model:open="isOpen"
+    @update:open=" e => emit('update:open', e)">
     <PopoverTrigger :class="cn('group/icon z-0 shrink-0 cursor-pointer self-center  size-14   rounded-full pointer-events-auto  aspect-square  grid place-items-center relative', props.class) ">
       <slot>
+        <!-- TODO default splash -->
         <PocketIcon
-          :url=" pocket ? pocket?.icon : selectIcon"
+          :url=" pocket ? pocket?.icon : ''"
           alt="pocket icon"
           class="group-hover/icon:brightness-50 pointer-events-none z-1 group-data-[state=open]/icon:brightness-50  transition-all duration-200  group-data-[state=open]/icon:ring group-data-[state=open]/icon:ring-offset-2 ring-neutral/40 ring-offset-b1 size-full rounded-full" />
 
@@ -92,89 +84,83 @@ const isOpen = ref(false)
     </PopoverTrigger>
 
     <LazyPopPopoverContent
-      hydrate-on-interaction
       :side-offset="props.sideOffset"
       :align-offset="props.alignOffset"
       :align="props.align"
       :side="props.side"
-      :class="cn('w-96 p-0 overflow-hidden', popoverClass)"
-      as-child>
-      <motion.div
-        class=" flex flex-col  p-px overflow-y-scroll"
-        :style="{ maxHeight: !champSearch ? '60px' : '250px' }">
-        <div class=" relative   w-full px-3 h-12 shrink-0 group/txt gap-3 flex items-center w-full ">
-          <icon name="search" />
+      :class="cn('w-96 p-0 h-max overflow-hidden flex flex-col h-max  *:shrink-0  p-px overflow-y-scroll', popoverClass)">
+      <Input
+        v-model="searchQuery"
+        class="w-full !h-12 !border-x-0 !border-y-0 border-b border-b-b3 rounded-none !ring-0"
+        placeholder="Search Splash Library..."
+        @clear:input="searchQuery = ''"
+        @input="handleInput()">
+        <icon name="search" />
+      </Input>
+      <Separator />
+      <SlideInTopOutBottom
+        v-if="!selectedChampion && searchQuery"
+        group
+        class="pt-3 px-1 overflow-y-scroll w-full flex flex-col">
+        <Label
+          v-for=" item in pagedSearchItems"
+          :key="item.id"
+          variant="ghost"
+          size="sm"
+          class="justify-start  hover:border-b4/80 duration-0">
           <input
-            v-model="champSearch"
-            class="h-full placeholder:italic   w-full pr-4 text-2 focus:placeholder:opacity-0 transition-all duration-200"
-            placeholder="Search Splash Library..."
-            @input="handleInput()"
-            @keydown.stop
-            @keydown.enter.prevent />
+            v-model="selectedChampion"
+            type="radio"
+            class="peer hidden"
+            :value="item.key" />
 
-          <Button
-            variant="ghost"
-            size="xs"
-            class="btn-square absolute top-3 right-2 shrink-0 group-has-[:placeholder-shown]/txt:opacity-0 opacity-100 size-6">
-            <icon
-              name="x-sm"
-              class="size-4 **:stroke-[1.5]" />
-          </Button>
-        </div>
+          <span class="size-8 ">
+            <LazyChampionIcon
+              :id="item.id"
+              :alt="item.name"
+              class="size-8 pointer-events-none rounded-lg" />
+          </span>
+          {{ item.name }}
+        </Label>
 
-        <Separator />
-        <transition-slide
-          v-if="!selectedChampion && champSearchResults"
-          group
-          class="py-3 px-1 overflow-y-scroll w-full flex flex-col">
-          <Label
-            v-for="result in champSearchResults"
-            :key="result.item.id"
-            variant="ghost"
-            size="sm"
-            class="justify-start  duration-0">
-            <input
-              v-model="selectedChampion"
-              type="radio"
-              class="peer hidden"
-              :value="result.item.key" />
+        <Pagination
+          v-model:page="currentPage"
+          :total="ix().champions.length"
+          :default-page="1"
+          :sibling-count="1"
+          :show-edges="false"
+          :items-per-page="itemsPerPage"
+          class=" max-w-220 justify-center justify-self-start mx-0">
+          <PaginationContent>
+            <PaginationPrev
+              size="xs"
+              class="disabled:opacity-40 btn-square  size-8" />
+            <PaginationNext
+              size="xs"
+              class="disabled:opacity-40 btn-square  size-8" />
+          </PaginationContent>
+        </Pagination>
+      </SlideInTopOutBottom>
 
-            <span class="size-8 ">
-              <LazyChampionIcon
-                :id="result.item.id"
-                :alt="result.item.name"
-                class="size-8 pointer-events-none rounded-lg"
-                hydrate-on-visible />
-            </span>
-            {{ result.item.name }}
-          </Label>
-        </transition-slide>
+      <div
+        v-else-if="selectedChampion"
+        class="mt-3  overflow-y-scroll px-1 self-center pb-3 max-h-90 grid  grid-cols-4 pt-1 gap-2">
+        <PocketIcon
+          v-for="skin in ix().skins[selectedChampion]"
+          :key="skin.name"
+          v-tippy="skin.name"
+          :alt="skin.name"
+          :url="getSkinSplash(selectedChampion, skin, 'tile')"
+          class="size-20.5  cursor-pointer rounded-md shrink-0 hover:ring-b3/80"
+          @click="handleImg(getSkinSplash(selectedChampion, skin, 'tile'))">
+        </PocketIcon>
+      </div>
 
-        <div
-          v-else-if="selectedChampion"
-          class="mt-3  overflow-y-scroll px-1 self-center pb-3 max-h-90 grid  grid-cols-4 pt-1 gap-2">
-          <PocketIcon
-            v-for="skin in ix.skins[selectedChampion]"
-            :key="skin.name"
-            v-tippy="skin.name"
-            :alt="skin.name"
-            :url="getSkinSplash(selectedChampion, skin, 'tile')"
-            class="size-20.5  cursor-pointer rounded-md shrink-0 hover:ring-b3/80">
-            <input
-              v-model="selectIcon"
-              type="radio"
-              :value="getSkinSplash(selectedChampion, skin, 'tile')"
-              class="peer hidden"
-              @change="isOpen = false" />
-          </PocketIcon>
-        </div>
-
-        <div
-          v-else
-          class="w-full  px-2  pt-3 pb-4">
-          <p>Search for a champion to select a skin.</p>
-        </div>
-      </motion.div>
+      <div
+        v-else
+        class="w-full min-h-24 h-24 grid place-items-center  px-2  pt-3 pb-4">
+        <p>Search for a champion to select a skin.</p>
+      </div>
     </LazyPopPopoverContent>
   </Popover>
 </template>

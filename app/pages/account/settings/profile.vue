@@ -49,11 +49,6 @@ async function onSubmit(values: any) {
           Display a title from an earned Badge.
         </p>
       </div>
-      <Input
-        v-model="as().account.username"
-        class="validator"
-        type="text"
-        placeholder="Username" />
     </fieldset>
 
     <fieldset

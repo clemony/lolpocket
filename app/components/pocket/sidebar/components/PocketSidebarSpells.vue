@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import { addSpellSet } from '#shared/utils'
 
-const route = useRoute('pocket-pocketKey-champions')
-const pocket = computed(() => ps().getPocket(route.params.pocketKey)).value
+const route = useRoute()
+const pocket = computed(() => ps().getPocket(String(route.params.pocketKey))).value
 </script>
 
 <template>
