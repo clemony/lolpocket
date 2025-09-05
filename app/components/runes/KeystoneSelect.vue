@@ -37,24 +37,24 @@ watch(() => selected, (newVal) => {
         v-for="rune in runes"
         :key="rune.id"
         v-tippy="rune.name"
-        :for="rune.key"
+        :for="rune.id"
         class=" rounded-full opacity-75 hover:opacity-100 hover:grayscale-0  group/r border-transparent relative cursor-pointer tldr-30  grid place-items-center shrink-0 size-22 aspect-square"
         :class="cn(
           { 'to-b1/40 rounded-full  opacity-100 scale-115  grayscale-0': selectedRune == rune.id }, ``,
         )">
         <RadioGroupItem
-          :id="rune.key"
+          :id="rune.id"
           :value="rune.id"
           class="hidden peer" />
 
         <Img
-          :img="`/img/runes/${rune.path}/${rune.key}.webp`"
+          :img="`/img/runes/${rune.path}/${rune.id}.webp`"
           :alt="rune.name"
           class="absolute drop-shadow-sm pointer-events-none drop-shadow-black/40   opacity-0 group-hover/r:opacity-90 duration-400  transition-all shrink-0   h-19 w-auto "
           :class="{ 'opacity-100': selectedRune == rune.id }" />
 
         <Img
-          :img="`/img/runes/${rune.path}/${rune.key}_grayscale.webp`"
+          :img="`/img/runes/${rune.path}/${rune.id}_grayscale.webp`"
           :alt="rune.name"
           class="h-19 w-auto  drop-shadow-sm  pointer-events-none  shrink-0 absolute contrast-150 brightness-90 opacity-100  group-hover/r:opacity-0 duration-400 transition-all "
           :class="{ 'opacity-0': selectedRune == rune.id }" />

@@ -3,10 +3,10 @@ import { markUpdate, normalize, normalizeArray } from '../..'
 import type { ChampionLite, ChampionLiteRecord } from '../../../shared/types'
 import { resolvePath } from '../resolvePath'
 
-const dataPath = resolvePath('./scripts/update/champions/raw/champions-raw.json')
-const outputLite = resolvePath('./shared/appdata/records/champions-lite.ts')
-const outputRoles = resolvePath('./scripts/update/champions/raw/unique-roles.json')
-const outputPositions = resolvePath('./scripts/update/champions/raw/unique-positions.json')
+const dataPath = resolvePath('./champions/raw/champions-raw.json')
+const outputLite = resolvePath('../../shared/appdata/records/champions-lite.ts')
+const outputRoles = resolvePath('./champions/raw/unique-roles.json')
+const outputPositions = resolvePath('./champions/raw/unique-positions.json')
 
 const champions = JSON.parse(fs.readFileSync(dataPath, 'utf-8')) as Record<string, ChampionLite>
 

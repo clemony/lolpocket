@@ -24,11 +24,6 @@ definePageMeta({
           This is the name that will be used throughout the site. Defers to in game name if a Riot account is connected.
         </p>
       </div>
-      <Input
-        v-model="as().account.username"
-        class="validator"
-        type="text"
-        placeholder="Username" />
     </fieldset>
 
     <div class="flex justify-start">

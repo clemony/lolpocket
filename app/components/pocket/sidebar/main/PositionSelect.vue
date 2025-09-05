@@ -23,11 +23,13 @@ const color = computed (() => championPositions.find(p => p.name == pocket.value
     class="p-0">
     <BaseSelectTrigger
       icon-class="opacity-10 group-hover/select:opacity-50"
-      :class="cn('w-full hover:ring hover:ring-b3 flex-nowrap pl-2 !flex items-center relative ', className)">
-      <PositionBadge :position="pocket.main?.role">
+      :class="cn('w-full hover:ring hover:ring-b3/50 flex-nowrap pl-2 h-8 !flex items-center relative ', className)">
+      <PositionBadge
+        :position="pocket.main?.role"
+        class="badge-sm text-2">
         <SelectValue
           placeholder="Select position"
-          class="text-left text-white  capitalize" />
+          class="text-left  text-white  capitalize" />
       </PositionBadge>
     </BaseSelectTrigger>
     <LazySelectContent

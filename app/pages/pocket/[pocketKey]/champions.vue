@@ -1,8 +1,4 @@
 <script setup lang="ts">
-const { pocket: p } = defineProps<{
-  pocket: Pocket
-}>()
-const pocket = computed (() => p)
 definePageMeta({
   name: 'pocket-champions',
   path: '/pocket/:pocketKey',
@@ -14,8 +10,7 @@ definePageMeta({
 })
 
 const route = useRoute()
-console.log('💠 - route:', route.meta)
-/* const {loading, ready, forceReload} = useSummonerMastery(puuid) */
+const pocket = computed(() => ps().getPocket(String(route.params.pocketKey))).value
 
 const searchQuery = ref<string>('')
 const { results } = useSimpleSearch(
@@ -26,17 +21,19 @@ const { results } = useSimpleSearch(
 
 <template>
   <div class="size-full z-auto overflow-y-auto  pt-12  -mr-34 pr-30">
-    <div class="flex gap-8 sticky z-1 bg-linear-to-b from-b1 to-b1/70 backdrop-blur-lg -top-12 py-4 pl-13 pr-16 items-center justify-end  w-full">
+    <div class="flex gap-8 sticky z-1 bg-linear-to-b from-b1 to-b1/70 backdrop-blur-lg -top-12 py-4 pl-13 pr-16 items-center justify-end w-full">
+      <SelectedChampions :pocket="pocket" />
       <Input
         v-model="searchQuery"
         placeholder="Search champions..."
         class="max-w-100 border-b4/60 w-100"
-        type="text">
+        type="text"
+        @clear:input="searchQuery = ''">
         <icon name="search" />
       </Input>
     </div>
 
-    <div
+    <!--     <div
       class="h-fit  pb-64 grid grid-flow-row auto-cols-auto pt-7  grid-cols-[repeat(auto-fill,minmax(80px,1fr))]  px-14 w-full inset-0   gap-3">
       <ChampionIcon
         v-for="champion in results.filter(r => !pocket.champions.includes(r.key))"
@@ -53,7 +50,7 @@ const { results } = useSimpleSearch(
           :value="champion.key"
           class="peer hidden" />
       </ChampionIcon>
-    </div>
+    </div> -->
   </div>
 </template>
 

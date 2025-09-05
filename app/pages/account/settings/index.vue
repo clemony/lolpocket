@@ -45,7 +45,8 @@ const settingsData = [
         v-model="as().account.username"
         class="validator"
         type="text"
-        placeholder="Username" />
+        placeholder="Username"
+        @clear:input="as().account.username = ''" />
     </fieldset>
 
     <div class="flex justify-start">

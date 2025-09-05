@@ -3,8 +3,8 @@ import { markUpdate, normalize, normalizeArray } from '../..'
 import type { Champion } from '../../../shared/types'
 import { resolvePath } from '../resolvePath'
 
-const dataPath = resolvePath('./scripts/update/champions/raw/champions-raw.json')
-const outputPath = resolvePath('./shared/appdata/filters/champion-filters.ts')
+const dataPath = resolvePath('./champions/raw/champions-raw.json')
+const outputPath = resolvePath('../../shared/appdata/filters/champion-filters.ts')
 const champions = JSON.parse(fs.readFileSync(dataPath, 'utf-8')) as Record<string, Champion>
 
 type FilterMap = Record<string, number[]>

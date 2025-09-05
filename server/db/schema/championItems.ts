@@ -1,5 +1,5 @@
 // server/db/schemas/championItems.ts
-import { integer, primaryKey, sqliteTable, text } from 'drizzle-orm/sqlite-core'
+/* import { integer, primaryKey, sqliteTable, text } from 'drizzle-orm/sqlite-core'
 
 export const championItems = sqliteTable(
   'champion_items',
@@ -13,4 +13,4 @@ export const championItems = sqliteTable(
   table => [
     primaryKey({ columns: [table.championId, table.itemId, table.teamPosition] }),
   ],
-)
+) */

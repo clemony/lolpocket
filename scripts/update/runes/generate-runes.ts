@@ -3,9 +3,8 @@ import path from 'node:path'
 import { markUpdate } from '../..'
 import { resolvePath } from '../resolvePath'
 
-const dataPath = resolvePath('./runes/raw/runes-raw.json')
-const runesOutput = resolvePath('../../../shared/appdata/records/runes.ts')
-const runeOutputDir = resolvePath('../../../shared/appdata/records/runes')
+const dataPath = resolvePath('./runes/raw/runes.json')
+const runeOutputDir = resolvePath('../../shared/appdata/records/runes')
 const raw = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
 
 const outputIndex: Record<string, any> = {}
@@ -13,29 +12,30 @@ const outputIndex: Record<string, any> = {}
 fs.rmSync(runeOutputDir, { recursive: true, force: true }) // clean old runes
 fs.mkdirSync(runeOutputDir, { recursive: true })
 
-for (const path of raw) {
-  const pathName = path.key
-  const pathDir = path.join(runeOutputDir, pathName)
-  fs.mkdirSync(pathDir, { recursive: true })
+for (const runePath of raw) {
+  const pathName = runePath.name
+  fs.mkdirSync(runeOutputDir, { recursive: true })
 
-  const slots = path.slots.map((slot, slotIndex) =>
-    slot.map((rune, runeIndex) => {
+  const slots = runePath.slots.map((slot: any) =>
+    slot.runes.map((rune: any, tierSlot: number) => {
       const enriched = {
         ...rune,
-        path: pathName,
-        runeIndex,
+        description: rune.description,
+        path: runePath.name,
+        pathId: runePath.id,
+        tier: slot.tier,
+        tierLabel: slot.label,
+        tierSlot,
       }
 
-      // Write individual rune file
-      const filePath = path.join(pathDir, `${rune.key}.ts`)
-
+      const filePath = path.join(runeOutputDir, `${rune.name.replace(/\s+/g, '_')}.ts`)
       fs.writeFileSync(
         filePath,
         `// ${markUpdate()}
 
-const rune: Rune =
-        ${JSON.stringify(enriched, null, 2)}
-        export default rune`,
+const rune: Rune = ${JSON.stringify(enriched, null, 2)}
+
+export default rune`,
       )
 
       return enriched
@@ -44,13 +44,5 @@ const rune: Rune =
 
   outputIndex[pathName] = slots
 }
-
-// Optional: Write TypeScript file for static import support
-fs.writeFileSync(
-  runesOutput,
-  `// ${markUpdate()}
-
-export const runePaths: PathRecord = ${JSON.stringify(outputIndex, null, 2)}`,
-)
 
 console.log('✅ Split rune files generated per rune')

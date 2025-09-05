@@ -1,5 +1,5 @@
 // server/db/client.ts
-import type { D1Database } from '@nuxthub/core'
+/* import type { D1Database } from '@nuxthub/core'
 import { championItems, championRunes, champions, championSummoners } from 'db'
 import { drizzle } from 'drizzle-orm/d1'
 
@@ -19,3 +19,4 @@ export const db = []// drizzle(D1, { schema })
 
 // Optionally, export table names for autocomplete in queries
 export const tables = schema
+ */

@@ -3,7 +3,6 @@ import type { ColDef, GridApi, GridOptions, GridPreDestroyedEvent, GridReadyEven
 import { CellStyleModule, ClientSideRowModelModule, ColumnApiModule, ColumnAutoSizeModule, ColumnHoverModule, GridStateModule, ModuleRegistry, RenderApiModule, RowSelectionModule, ValidationModule } from 'ag-grid-community'
 import { AgGridVue } from 'ag-grid-vue3'
 import { itemsLite } from 'appdata/items-lite'
-import { pocketTheme } from 'components/table/theme/tableTheme'
 
 definePageMeta({
   name: 'Item Stats',

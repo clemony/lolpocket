@@ -11,7 +11,7 @@ const position = computed (() => championPositions.find(p => p.name == pos))
 
 <template>
   <label
-    :class="cn('group/btn h-9 flex rounded-lg badge badge-lg !h-6.5 px-2.5  gap-3  **: text-white  font-medium items-center w-min cursor-pointer', className)"
+    :class="cn('group/btn h-9 inset-shadow-sm inset-shadow-white/20 flex rounded-lg shadow-xs drop-shadow-xs badge badge-lg !h-6.5 px-2.5  gap-3  **:text-white *:dst  !font-medium items-center w-min cursor-pointer', className)"
     :style=" {
       backgroundColor: position.color,
       borderColor: position.color }">

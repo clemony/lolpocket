@@ -20,7 +20,7 @@ const rune = ref<Rune>()
         <Img
           v-if="rune"
           :key="rune.name"
-          :img="`/img/runes/${rune.path}/${rune.key}.webp`"
+          :img="`/img/runes/${rune.path}/${rune.id}.webp`"
           :alt="`${rune.name} Image`"
           class="'pointer-events-none size-16 drop-shadow-sm rounded-full  bg-black ring-1 shadow-sm ring-b3 inset-shadow-sm " />
       </div>
@@ -46,7 +46,7 @@ const rune = ref<Rune>()
     <div
       :key="rune.id"
       class="max-w-105 px-1 !text-3 text-pretty whitespace-pre-line flex flex-col h-full w-full justify-between gap-8">
-      {{ rune.details }}
+      {{ rune.description }}
       <a
         :key="rune.id"
         v-tippy="{ content: 'View on Official Wiki  🡵', placement: 'right-end', offset: [40, 3] }"

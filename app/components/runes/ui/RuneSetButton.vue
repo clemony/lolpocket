@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import RunePanelMenu from 'components/runes/ui/RunePanelMenu.vue'
+import RunePanelMenu from '#components'
 
 const { set, pocket, class: className, class: pathClass, setKey } = defineProps<{
   set?: RuneSet

@@ -11,7 +11,7 @@ useHead({
     },
   ],
 })
-console.log(as().account)
+console.info('🌱 - as().account:', as().account)
 const appConfig = useAppConfig()
 
 const client = useSupabaseClient()

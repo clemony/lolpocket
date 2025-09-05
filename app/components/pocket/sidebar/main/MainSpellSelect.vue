@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { championPositions } from 'appdata'
-
 const { class: className, pocket: p, side, sideOffset, align, alignOffset } = defineProps<{
   class?: HTMLAttributes['class']
   pocket: Pocket
@@ -10,11 +8,12 @@ const { class: className, pocket: p, side, sideOffset, align, alignOffset } = de
   alignOffset?: number
 }>()
 
-const emit = defineEmits(['update:select'])
 const pocket = computed (() => p)
-const selected = ref('')
-pocket.value.main.spells = ''
 const selectedSet = computed (() => pocket.value.spells?.find(s => s.id == pocket.value.main?.spells))
+
+onMounted(() => {
+
+})
 </script>
 
 <template>
@@ -23,15 +22,13 @@ const selectedSet = computed (() => pocket.value.spells?.find(s => s.id == pocke
     class="p-0">
     <BaseSelectTrigger
       icon-class="opacity-10 group-hover/select:opacity-50"
-      :class="cn('w-full hover:ring hover:ring-b3 flex-nowrap pl-2 !flex items-center relative gap-2 ', className)">
-      <span class="flex items-center gap-2">
-        <Spell
-          :name="selectedSet?.d"
-          class="size-12" />
-        <Spell
-          :name="selectedSet?.f"
-          class="size-12" />
-      </span>
+      :class="cn('w-full hover:ring hover:ring-b3/50  group/select flex-nowrap h-fit py-1 pl-6 justify-start flex gap-4 items-center relative  ', className)">
+      <Spell
+        :name="selectedSet?.d"
+        class="size-12" />
+      <Spell
+        :name="selectedSet?.f"
+        class="size-12" />
     </BaseSelectTrigger>
     <LazySelectContent
       :side="side"
@@ -41,24 +38,24 @@ const selectedSet = computed (() => pocket.value.spells?.find(s => s.id == pocke
       position="popper"
       class="!w-[var(--reka-select-trigger-width)]">
       <SelectGroup>
-        <SelectLabel>Select main spell set</SelectLabel>
-        <!--  <SelectItem
-          value="''"
-          class="flex items-center gap-3">
+        <SelectLabel class="justify-between flex items-center">
+          Select spells
+
           <Button
-            variant="secondary"
-            class="overflow-hidden relative size-16 p-0 hover:ring grid place-items-center  hover:ring-b4"
-            :class="{ ' shadow-sm drop-shadow-sm': selected != '' }">
+            variant="ghost"
+            size="xs"
+            title="Clear main spells"
+            class="aspect-square *:opacity-50 hover:*:opacity-100 btn-square"
+            @click="pocket.main?.spells == ''">
             <icon
-              name="tabler:flame"
-              alt="no summoner spell chosen"
-              class="size-6.5 opacity-20" />
+              name="backspace"
+              class="size-5 **:stroke-2" />
           </Button>
-        </SelectItem> -->
+        </SelectLabel>
         <SelectItem
           v-for="set in pocket.spells"
           :key="set.id"
-          class="!flex items-center flex-nowrap"
+          class="!flex items-center group/select flex-nowrap"
           :value="set.id">
           <Spell
             :name="set.d"

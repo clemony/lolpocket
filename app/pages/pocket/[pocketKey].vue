@@ -4,8 +4,8 @@ definePageMeta({
   props: true,
 })
 
-const route = useRoute('pocket-pocketKey-champions')
-const pocket = computed(() => ps().getPocket(route.params.pocketKey)).value
+const route = useRoute()
+const pocket = computed(() => ps().getPocket(String(route.params.pocketKey))).value
 console.log('🌱 - pocket:', pocket)
 
 const { syncIfDirty } = useSupabaseSync(
@@ -33,21 +33,23 @@ watch(() => route.path, (newVal) => {
     <template #icon>
     </template>
     <template #header>
-      <EditablePocketHeader
-        icons
-        :pocket="pocket"
-        class="text-10 dst" />
+      <div class="flex items-center">
+        <PocketHeader
+          :pocket="pocket" />
+        <PocketPinButton :pocket />
+      </div>
     </template>
 
     <template #tabs>
-      <PocketPageTabs :pocket />
+      <PocketTabs :pocket />
+    </template>
+
+    <template #after-tabs>
+      <PocketUtilitiesMenu :pocket />
     </template>
 
     <template #header-right>
-      <PocketHeaderRight />
-    </template>
-    <template #after-tabs>
-      <PocketSidebarMenu :pocket />
+    <!--   <PocketHeaderRight /> -->
     </template>
 
     <div class="size-full px-32 gap-6 overflow-hidden flex bg-b1">

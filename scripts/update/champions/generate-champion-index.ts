@@ -2,8 +2,8 @@ import fs from 'node:fs'
 import { markUpdate } from '../..'
 import { resolvePath } from '../resolvePath'
 
-const outputFile = resolvePath('./shared/appdata/index/champion-index.ts')
-const dataPath = resolvePath('./scripts/update/champions/raw/champions-raw.json')
+const outputFile = resolvePath('../../shared/appdata/index/champion-index.ts')
+const dataPath = resolvePath('./champions/raw/champions-raw.json')
 
 const champs = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
 

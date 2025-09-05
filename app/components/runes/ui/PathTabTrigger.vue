@@ -22,8 +22,8 @@ const emit = defineEmits(['update:path'])
     class=" rounded-full relative group aspect-square size-15 place-self-center disabled:pointer-events-none shrink-0"
     :class="cn('', className)">
     <div class="size-full relative grid place-items-center">
-      <Img
-        :img="`/img/runes/${value}.webp`"
+      <img
+        :src="`/img/paths/${value}.webp`"
         :alt="`${value} icon`"
         class="z-10 h-9 w-auto absolute brightness-90 grayscale transition-all duration-300 dst shrink-0 group-data-[state=active]:grayscale-0 group-data-[state=active]:brightness-100" />
     </div>

@@ -12,11 +12,11 @@ const FRESH = args.includes('--fresh')
 const SCRIPT_KEY = 'generate-champions'
 
 // ---------- File paths ----------
-const dataPathM = resolvePath('./scripts/update/champions/raw/champions-raw-meraki.json')
-const dataPathD = resolvePath('./scripts/update/champions/raw/champions-raw-data-dragon.json')
-const outputDir = resolvePath('./shared/appdata/records/champions/')
-const outputMergedRaw = resolvePath('./scripts/update/champions/raw/champions-raw.json')
-const savepointPath = resolvePath('./scripts/update/champions/raw/.generate-champions-save.json')
+const dataPathM = resolvePath('./champions/raw/champions-raw-meraki.json')
+const dataPathD = resolvePath('./champions/raw/champions-raw-data-dragon.json')
+const outputDir = resolvePath('../../shared/appdata/records/champions/')
+const outputMergedRaw = resolvePath('./champions/raw/champions-raw.json')
+const savepointPath = resolvePath('./champions/raw/.generate-champions-save.json')
 
 // ---------- Ensure output dirs ----------
 fs.mkdirSync(outputDir, { recursive: true })

@@ -14,17 +14,10 @@
  */
 
 import fs from 'node:fs'
-import path from 'node:path'
 import process from 'node:process'
-import { fileURLToPath } from 'node:url'
+import { resolvePath } from '../resolvePath'
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-function resolvePath(filePath: string) {
-  return path.resolve(filePath)
-}
-
-const SAVE_FILE = resolvePath('./.savepoint.json')
+const SAVE_FILE = resolvePath('./champions/.savepoint.json')
 const args = process.argv.slice(2)
 const RESET = args.includes('--reset')
 const LIST = args.includes('--list')

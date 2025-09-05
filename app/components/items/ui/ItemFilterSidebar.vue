@@ -7,7 +7,8 @@
     class="flex flex-col h-full gap-8">
     <Input
       v-model:model-value="is().filters.query"
-      placeholder="Search Items...">
+      placeholder="Search Items..."
+      @clear:input="is().filters.query = ''">
       <icon name="bow" />
     </Input>
 

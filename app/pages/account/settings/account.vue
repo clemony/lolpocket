@@ -145,10 +145,16 @@ console.log('userProviders: ', userProviders)
           Used for password reset and update.
         </p>
       </div>
+
       <Input
+        id="email"
+        v-model:email="user.email"
+        class="h-12"
+        required
         :default-value="user.email"
         type="email"
-        placeholder="example@example.com">
+        placeholder="example@example.com"
+        @clear:input="user.email = ''">
         <icon name="mail" />
 
         <template #2>

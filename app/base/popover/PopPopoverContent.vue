@@ -23,7 +23,7 @@ const props = withDefaults(
   }>(),
   {
     align: 'center',
-    sideOffset: 4,
+    sideOffset: 0,
     scaleStart: 0.6,
   },
 )
@@ -32,7 +32,6 @@ const emits = defineEmits<PopoverContentEmits>()
 const delegatedProps = reactiveOmit(props, 'class')
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
-console.log('💠 - forwarded:', forwarded)
 
 const variants = {
   visible: {
@@ -94,11 +93,12 @@ const wrapperVariants = {
           v-bind="{ forwarded }"
           :class="
             cn(
-              'z-50 w-72 rounded-lg border backdrop-blur-md drop-shadow-md !border-b3  bg-b1/94  p-4 text-bc shadow-md outline-none group-data-[state=visible]:**:opacity-100 group-data-[state=hidden]:**:opacity-0',
+              'z-50 w-72 rounded-lg border backdrop-blur-md drop-shadow-md !border-b3  bg-b1/90  p-4 text-bc shadow-md outline-none group-data-[state=visible]:**:opacity-100 group-data-[state=hidden]:**:opacity-0',
               props.class,
             )
           ">
           <motion.div
+            v-bind="$attrs"
             :variants="wrapperVariants"
             initial="hidden"
             animate="visible"

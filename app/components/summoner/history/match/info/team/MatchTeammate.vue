@@ -103,8 +103,8 @@ const runeClass
         }"
         :class="runeClass">
         <Img
-          :img="`/img/runes/${stats.keystone?.path}/${stats.keystone?.key}.webp`"
-          :alt="stats.keystone.key"
+          :img="`/img/runes/${stats.keystone?.path}/${stats.keystone?.id}.webp`"
+          :alt="stats.keystone.id"
           class="!h-5.5 w-auto object-center absolute tippy-target hover-ring rounded-tiny" />
       </p>
       <p

@@ -21,7 +21,7 @@ const route = useRoute()
       :class="cn('overflow-y-auto')">
       <!-- header -->
       <header
-        :class="cn('w-full top-0 h-[45px] flex shrink-0 items-center gap-3 border-b z-2  bg-linear-to-r from-b1 to-b1/20 backdrop-blur  px-2', { 'sticky ': route.meta?.parent != '/pocket', '[border-image:linear-gradient(to_right,var(--color-b3),transparent)_50] !absolute': route.matched?.[1]?.name == 'pocket' })">
+        :class="cn('w-full top-0 h-[45px] flex shrink-0 items-center gap-3 border-b z-2  bg-linear-to-r from-b1 to-b1/20 backdrop-blur  px-2', { 'sticky ': route.meta?.parent != '/pocket', '[border-image:linear-gradient(to_right,var(--color-b3),transparent)_50] !absolute': route.matched?.[0]?.name == 'pocket' })">
         <!--         <SidebarTrigger
           variant="ghost"
           size="lg"

@@ -5,6 +5,7 @@ export const useIndexStore = defineStore(
   () => {
     const patchList = ref<number[]>([])
     const patch = ref<number>()
+    const lastPatchCheck = ref<Date>()
     const lastFullRefresh = ref()
     const champions = ref<ChampionIndex[]>([])
     const runes = ref<RuneIndex[]>([])
@@ -18,12 +19,17 @@ export const useIndexStore = defineStore(
     const skins = ref<FullSkinRecord>({})
 
     async function loadPatch() {
-      const { patchIndex } = await import('appdata/index/patch-index')
-      console.log('💠 - loadPatch - patchList.value:', patchList.value)
-      if (patch.value != patchIndex[0]) {
-        patchList.value = patchIndex
-        patch.value = patchIndex[0]
-        loadAll()
+      if (isStale(lastPatchCheck.value) == true) {
+        console.log('🌱 - loadPatch - isStale(lastPatchCheck.value) == true:', isStale(lastPatchCheck.value) == true)
+        const { patchIndex } = await import('appdata/index/patch-index')
+        /*         console.table(console.table(patchList.value.map(n => ({ value: n }))) as any) */
+        lastPatchCheck.value = new Date()
+        /*         console.log('🌱 - lastPatchCheck:', lastPatchCheck) */
+        if (patch.value != patchIndex[0]) {
+          patchList.value = patchIndex
+          patch.value = patchIndex[0]
+          loadAll()
+        }
       }
     }
 
@@ -73,15 +79,15 @@ export const useIndexStore = defineStore(
     }
 
     function resetIndexStore() {
-      champions.value = []
+      /*       champions.value = [] */
       runes.value = []
-      paths.value = []
+      /*       paths.value = []
       items.value = []
       maps.value = []
       shards.value = []
       skin.value = {}
       spells.value = []
-      skins.value = {}
+      skins.value = {} */
     }
 
     async function loadAll() {
@@ -218,7 +224,6 @@ export const useIndexStore = defineStore(
       // runes
 
       runeById: (id: number) => getByIndex(runes.value, 'id', id),
-      runeKeyById: (id: number) => findInIndex(runes.value, 'id', id, 'key'),
       runeNameById: (id: number) => findInIndex(runes.value, 'id', id, 'name'),
 
       // paths

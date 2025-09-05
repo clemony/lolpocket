@@ -32,7 +32,7 @@ const pathDescriptions = [
   },
 
   {
-    name: null,
+    name: '',
     tag: 'Select a Path',
     description: 'Precision, Domination, Sorcery, Resolve, Inspiration',
   },
@@ -49,7 +49,7 @@ const a = computed(() => {
     group>
     <div class="flex items-center gap-6 leading-none">
       <h1 class="dst transition-all duration-300 text-8">
-        {{ currentPath ?? (title || 'Runes') }}
+        {{ currentPath == '' ? 'Runes' : currentPath ?? title }}
       </h1>
 
       <span class="pt-1 text-2 lowercase">{{ a.tag ?? 'select a path' }}</span>
