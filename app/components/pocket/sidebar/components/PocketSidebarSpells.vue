@@ -29,14 +29,14 @@ const pocket = computed(() => ps().getPocket(String(route.params.pocketKey))).va
           <Button
             class="inline"
             variant="link">
-            <h3>{{ set.d }}</h3>
+            <h5>{{ set.d }}</h5>
           </Button>
           <h3 v-show="set.d && set.f">+</h3>
 
           <Button
             class="inline"
             variant="link">
-            <h3>{{ set.f }}</h3>
+            <h5>{{ set.f }}</h5>
           </Button>
         </span>
       </div>

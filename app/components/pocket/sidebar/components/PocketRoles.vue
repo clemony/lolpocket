@@ -16,7 +16,15 @@ const pocket = computed (() => p)
     class="w-full field-box">
     <CollapsibleTrigger
       v-if="pocket.roles && pocket.roles?.[0]"
-      class="w-full items-center gap-1 font-medium py-3 px-4  text-3 capitalize flex group">
+      class="w-full items-center text-start justify-start gap-1 py-3 px-4  text-3 capitalize flex group">
+      <h2 class="grow dst">
+        Roles
+      </h2>
+
+      <CaretRotate />
+    </CollapsibleTrigger>
+
+    <CollapsibleContent class="CollapsibleContent flex flex-col gap-4 justify-start overflow-hidden  w-full px-4  pt-1 pb-4">
       <VueDraggable
         :model-value="pocket.roles"
         ghost-class="role-ghost"
@@ -34,11 +42,6 @@ const pocket = computed (() => p)
 
         <Grow />
       </VueDraggable>
-
-      <CaretRotate />
-    </CollapsibleTrigger>
-
-    <CollapsibleContent class="CollapsibleContent flex flex-col gap-4 justify-start overflow-hidden  w-full px-4  pt-1 pb-4">
       <transition-slide
         :offset="{ enter: [10, 0], leave: [-10, 0] }"
         group

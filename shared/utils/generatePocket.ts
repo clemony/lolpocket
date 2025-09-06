@@ -3,6 +3,7 @@ import { hexoid } from 'hexoid'
 import * as v from 'valibot'
 import { toast } from 'vue-sonner'
 import { getDeepDefaults } from '../types/schema.helpers'
+import { pType } from './pType'
 
 const toID = hexoid()
 
@@ -34,6 +35,13 @@ export function newItemSet(): ItemSet {
   return a
 }
 
+export function resetRuneSet(set: RuneSet): RuneSet {
+  const id = set.id
+  const a = getDeepDefaults(RuneSetSchema)
+  a.id = id
+  return a
+}
+
 export function newSpellSet(): SpellSet {
   const a = getDeepDefaults(SpellSetSchema)
   a.id = toID()
@@ -42,13 +50,16 @@ export function newSpellSet(): SpellSet {
 
 export function addSpellSet(pocket: Pocket | string) {
   const set = ref<SpellSet[]>([])
-  if (typeof pocket == 'string') {
-    set.value = ps().getPocket(pocket).spells
-  }
-  else {
-    set.value = (pocket as unknown as Pocket).spells
-  }
+  set.value = pType(pocket).spells
   const a = getDeepDefaults(SpellSetSchema)
+  a.id = toID()
+  set.value.push(a)
+}
+
+export function addRuneSet(pocket: Pocket | string) {
+  const set = ref<RuneSet[]>([])
+  set.value = pType(pocket).runes
+  const a = newRuneSet()
   a.id = toID()
   set.value.push(a)
 }

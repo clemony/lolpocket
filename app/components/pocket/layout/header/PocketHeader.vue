@@ -29,8 +29,10 @@ const pocket = computed(() => ps().getPocket(String(route.params.pocketKey))).va
           @clear:input="pocket.name = ''">
           <template #2>
             <Button
+              title="No brain? Meet button."
               variant="ghost"
-              class="size-7 btn-square">
+              class="size-7 btn-square"
+              @click="pocket.name = generateName()">
               <icon
                 name="shuffle"
                 class="size-3.5" />

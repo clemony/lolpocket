@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const { runes, pocket, set: s } = defineProps<{
-  runes: Rune[]
+  runes: RuneMin[]
   set: RuneSet
   pocket: Pocket
 }>()
