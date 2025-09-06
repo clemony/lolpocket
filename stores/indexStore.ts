@@ -81,14 +81,16 @@ export const useIndexStore = defineStore(
     function resetIndexStore() {
       /*       champions.value = [] */
       runes.value = []
-      /*       paths.value = []
-      items.value = []
+      paths.value = []
+      /*    items.value = []
       maps.value = []
       shards.value = []
       skin.value = {}
       spells.value = []
       skins.value = {} */
     }
+
+    // resetIndexStore()
 
     async function loadAll() {
       console.log('💠 - loadAll - else hihihi')
@@ -219,7 +221,7 @@ export const useIndexStore = defineStore(
       itemById: (id: number) => getByIndex(items.value, 'id', id),
       itemIdByName: (name: string) =>
         findInIndex(items.value, 'name', name, 'id'),
-      itemNameById: (id: number) => findInIndex(items.value, 'id', id, 'name'),
+      itemNameById: (id: number) => findInIndex(items.value, 'id', id, 'name') as string,
 
       // runes
 
@@ -228,11 +230,14 @@ export const useIndexStore = defineStore(
 
       // paths
 
+      pathColorByName: (name: string) =>
+        findInIndex(paths.value, 'name', name, 'color') as string,
       pathNameById: (id: number) =>
         findInIndex(paths.value, 'id', id, 'name') as string,
 
+      // spells
       spellNameById: (id: number) =>
-        findInIndex(spells.value, 'id', id, 'name'),
+        findInIndex(spells.value, 'id', id, 'name') as string,
 
       // images
 

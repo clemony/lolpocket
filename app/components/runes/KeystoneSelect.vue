@@ -33,7 +33,7 @@ watch(() => selected, (newVal) => {
         ' items-center justify-around  flex  relative rounded-xl size-full rounded-xl  **:select-none', `grid-cols-${runes.length ?? 3}`,
       )"
       @update:model-value="emit('update:rune', selectedRune)">
-      <Label
+    <!--   <Label
         v-for="rune in runes"
         :key="rune.id"
         v-tippy="rune.name"
@@ -58,7 +58,7 @@ watch(() => selected, (newVal) => {
           :alt="rune.name"
           class="h-19 w-auto  drop-shadow-sm  pointer-events-none  shrink-0 absolute contrast-150 brightness-90 opacity-100  group-hover/r:opacity-0 duration-400 transition-all "
           :class="{ 'opacity-0': selectedRune == rune.id }" />
-      </Label>
+      </Label> -->
     </RadioGroup>
     <!--
       <div  class="size-full grid grid-cols-3 py-4">

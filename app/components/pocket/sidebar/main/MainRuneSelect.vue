@@ -18,22 +18,28 @@ console.log('🌱 - mainSet:', mainSet)
 <template>
   <Select
     v-model:model-value="pocket.main.runes"
-    class="p-0">
+    class="p-0 w-full">
     <BaseSelectTrigger
       icon-class="opacity-10 group-hover/select:opacity-50"
-      :class="cn('w-full hover:ring hover:ring-b3/50 py-1 group/select flex-nowrap h-fit pl-2 flex justify-start  gap-2 items-center relative ', className)">
+      :class="cn('w-full hover:ring hover:ring-b3/50 pb-1 group/select flex-nowrap h-22 pl-2 flex justify-start relative  gap-2 items-center relative *:last:right-2', className)">
       <img
         v-if="mainSet?.keystone"
         :title="String(ix().runeNameById(mainSet?.keystone))"
         :alt="mainSet?.keystone.toString()"
         :src="`/img/runes/${mainSet?.primary?.path}/${mainSet?.keystone}.webp`"
-        class="!w-20 shrink-0 place-self-center drop-shadow-sm !h-auto" />
-      <img
-        v-if="mainSet?.secondary?.path"
-        :title="mainSet?.secondary?.path"
-        :alt="mainSet?.secondary?.path"
-        :src="`/img/paths/${mainSet?.secondary?.path}.webp`"
-        class="w-8 drop-shadow-sm justify-self-start !h-auto" />
+        class="!w-20 shrink-0 place-self-center drop-shadow-md !h-auto" />
+      <Placeholder
+        v-else
+        class="size-18  rounded-full" />
+
+      <span class="size-9 shadow-sm drop-shadow-sm rounded-full bg-b1 grid place-items-center border-b3/60 absolute bottom-2.5 right-6.5">
+        <img
+          v-if="mainSet?.secondary?.path"
+          :title="mainSet?.secondary?.path"
+          :alt="mainSet?.secondary?.path"
+          :src="`/img/paths/${mainSet?.secondary?.path}.webp`"
+          class="w-6.5 drop-shadow-sm !h-auto" />
+      </span>
     </BaseSelectTrigger>
 
     <LazySelectContent

@@ -104,7 +104,7 @@ const runeClass
         :class="runeClass">
         <Img
           :img="`/img/runes/${stats.keystone?.path}/${stats.keystone?.id}.webp`"
-          :alt="stats.keystone.id"
+          :alt="stats.keystone.id.toString()"
           class="!h-5.5 w-auto object-center absolute tippy-target hover-ring rounded-tiny" />
       </p>
       <p

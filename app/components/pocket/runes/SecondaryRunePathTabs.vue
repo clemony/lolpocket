@@ -28,7 +28,7 @@ const rs = useRuneStore()
           <TabsTrigger
             v-for="item in paths"
             :key="`${item}-tabs`"
-            v-tippy="item"
+            :title="item"
             class=" rounded-full relative group aspect-square size-15 place-self-center invisible opacity-0"
             :value="item" />
 

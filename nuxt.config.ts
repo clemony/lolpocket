@@ -23,17 +23,15 @@ export default defineNuxtConfig({
     // '@nuxthub/core',
     '@nuxtjs/supabase',
   ],
-
+  plugins: ['./plugins/video-bg.client.ts'],
   imports: {
     dirs: [
       '@vueuse/components',
       'appdata',
-      './types',
       'routes',
       'assets/ts/**',
       'composables/alias/*/**',
-      './shared/types',
-      './shared/utils',
+      '#shared/utils',
     ],
   },
 
@@ -158,7 +156,6 @@ export default defineNuxtConfig({
     },
     build: {
       sourcemap: false,
-      cssCodeSplit: false,
     },
   },
 

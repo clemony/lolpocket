@@ -17,7 +17,6 @@ const emit = defineEmits(['update:path'])
 
 <template>
   <IndicatorTabsTrigger
-    v-tippy="value"
     :value="value"
     class=" rounded-full relative group aspect-square size-15 place-self-center disabled:pointer-events-none shrink-0"
     :class="cn('', className)">

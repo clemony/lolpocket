@@ -5,12 +5,9 @@ export type PathName
     | 'Resolve'
     | 'Inspiration'
 
-export interface RuneMin {
+export interface RuneIndex {
   id: number
   name: string
-}
-
-export interface RuneIndex extends RuneMin {
   path: PathName
 }
 
@@ -29,6 +26,11 @@ export interface RunePath {
   slots: PathSlot[]
 }
 
+export interface RuneMin {
+  id: number
+  name: string
+}
+
 export interface PathSlot {
   tier: number
   label: string
@@ -38,18 +40,18 @@ export interface PathSlot {
 export interface PathIndex {
   name: PathName
   id: number
-}
-
-export interface ShardIndex {
-  slot: number
-  name: string
-}
-
-export interface Shard extends ShardIndex {
-  slotName: string
-  stats: string
-  exportType: string
-  icon: string
   color: string
-  iconClass: string
+}
+
+export interface Shard {
+  name: string
+  id: number
+  description: string
+}
+
+export interface ShardObject {
+  tier: number
+  label: string
+  shards: Shard[]
+
 }

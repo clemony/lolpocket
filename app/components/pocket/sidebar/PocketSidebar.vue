@@ -16,7 +16,7 @@ const hoverClass = 'hover:bg-b2/60 inset-shadow-black/2 hover:inset-shadow-xs'
 </script>
 
 <template>
-  <aside class="h-full max-h-[86vh] gap-8 sticky top-0 pt-15 pb-20 px-1 flex flex-col  overflow-y-auto  scrollbar-none  relative min-w-105  max-w-105">
+  <aside class="h-full max-h-[86vh] gap-8 sticky top-0 pt-15 pb-20 px-1 flex flex-col  overflow-y-auto  scrollbar-none  relative min-w-85  max-w-85">
     <div class="w-full px-1 flex flex-col">
       <div class="flex items-center gap-4">
         <h1 class="dst ">
@@ -31,12 +31,13 @@ const hoverClass = 'hover:bg-b2/60 inset-shadow-black/2 hover:inset-shadow-xs'
         {{ ix().getChampionTitle(pocket.main?.champion) }}
       </p>
     </div>
-    <div class="w-full grid grid-cols-2 gap-4">
+    <div class="w-full grid grid-cols-[2fr_84px] gap-4">
       <MainChampionPopover />
       <div class="flex flex-col gap-2 h-fit py-px">
         <LazyMainRuneSelect
           :class="hoverClass"
           :pocket />
+
         <LazyMainSpellSelect
           :class="hoverClass"
           :pocket />
