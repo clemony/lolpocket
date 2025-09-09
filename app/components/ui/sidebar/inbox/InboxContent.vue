@@ -22,7 +22,7 @@ const inboxes: Record<string, DataObject> = {
 
 <template>
   <div class="size-full ">
-    <SidebarHeader
+    <div
       :class="cn('gap-0 border-b  border-b-b3/80 px-3 w-full', className)">
       <div class="w-full flex justify-between items-center">
         <DropdownMenu class="z-0">
@@ -61,13 +61,11 @@ const inboxes: Record<string, DataObject> = {
       <div class="flex relative items-center gap-1 w-full ">
         <slot name="subheader" />
       </div>
-    </SidebarHeader>
+    </div>
 
-    <SidebarContent class="size-full">
-      <SidebarGroup class="px-0 size-full">
-        <component :is="tabs">
-        </component>
-      </SidebarGroup>
-    </SidebarContent>
+    <div class="px-0 size-full">
+      <component :is="tabs">
+      </component>
+    </div>
   </div>
 </template>

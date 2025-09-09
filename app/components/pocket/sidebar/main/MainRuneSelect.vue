@@ -31,7 +31,9 @@ console.log('🌱 - mainSet:', mainSet)
       <Placeholder
         v-else
         class="size-18  group-hover/select:!bg-b1 transition-all duration-250  rounded-full">
-        <i-lol-runes class="!size-9 text-bc/50 opacity-0 group-hover/select:opacity-100 transition-all duration-250 shrink-0" />
+        <icon
+          name="lp:runes"
+          class="!size-9 text-bc/50 opacity-0 group-hover/select:opacity-100 transition-all duration-250 shrink-0" />
       </Placeholder>
 
       <span :class="cn('size-9  rounded-full   group-hover/select:!bg-b1 transition-all duration-250  border grid place-items-center border-b3/60 absolute bottom-2.25 right-6.5', !mainSet?.secondary?.path ? 'bg-tint-b2/60' : 'bg-b1 drop-shadow-sm shadow-sm')">
@@ -42,8 +44,9 @@ console.log('🌱 - mainSet:', mainSet)
           :src="`/img/paths/${mainSet?.secondary?.path}.webp`"
           class="w-6.5  !h-auto" />
 
-        <i-lol-runes
+        <icon
           v-else
+          name="lp:runes"
           class="!size-5.5 text-bc/60 opacity-0 group-hover/select:opacity-100 transition-all duration-250  shrink-0" />
       </span>
     </BaseSelectTrigger>

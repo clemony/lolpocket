@@ -2,24 +2,26 @@
 import type { PrimitiveProps } from 'reka-ui'
 import { Primitive } from 'reka-ui'
 
-const { class: className, summoner, as = 'span' } = defineProps<PrimitiveProps & {
+const { class: className, summoner, as: el = 'span' } = defineProps<PrimitiveProps & {
   as?: string
   class?: HTMLAttributes['class']
   summoner?: Summoner
 }>()
 const name = computed(() => {
+  if (!summoner && !as()?.account)
+    return null
+
   if (summoner)
     return summoner.name
 
-  const as = useAccountStore()
-  return (as.account?.name || as.account.username) ?? 'Summoner'
+  return (as()?.account?.name || as()?.account?.username) ?? 'Summoner'
 })
 </script>
 
 <template>
   <Primitive
     v-if="name"
-    :as="as"
+    :as="el"
     :class="cn('align-baseline truncate', className)">
     {{ name ?? null }}
   </Primitive>

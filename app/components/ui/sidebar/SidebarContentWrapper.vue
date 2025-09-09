@@ -10,7 +10,7 @@ const { title, class: className } = defineProps<{
   <Paper
     side="left"
     class="z-9 left-16 border-l-0 flex flex-col ">
-    <SheetHeader
+    <SheetTitle
       :class="cn('gap-0 !h-16 border-b  px-3 w-full', className)">
       <DropdownMenu>
         <DropdownMenuTrigger
@@ -36,7 +36,7 @@ const { title, class: className } = defineProps<{
           <slot name="dropdown-menu" />
         </DropdownMenuPopContent>
       </DropdownMenu>
-    </SheetHeader>
+    </SheetTitle>
 
     <div class="px-0  h-full">
       <slot />

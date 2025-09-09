@@ -42,6 +42,7 @@ export async function hydrateUser() {
       const accountParse = v.safeParse(AccountSchema, data.account ?? getEmptyAccount())
       const settingsParse = v.safeParse(SettingsSchema, data.settings ?? getEmptySettings())
       const publicParse = v.safeParse(PublicDataSchema, data.public ?? getEmptyPublicData())
+      // const pocketParse = v.safeParse(PocketSchema, data.pockets ?? generatePocket())
 
       if (!accountParse.success) {
         console.warn('Account parse failed, using defaults:', accountParse.issues)
@@ -64,7 +65,7 @@ export async function hydrateUser() {
   }
 
   if (as.account?.puuid) {
-    useAccountUpdate(as.account.puuid, as.account.regionGroup)
+    // useAccountUpdate(as.account.puuid, as.account.regionGroup)
   }
 
   as.loggedIn = true
