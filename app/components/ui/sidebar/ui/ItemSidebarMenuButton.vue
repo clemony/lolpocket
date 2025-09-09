@@ -11,7 +11,7 @@ const { class: className, size, item, text, full } = defineProps<{
 </script>
 
 <template>
-  <SidebarMenuButton
+  <Button
     :size="size"
     :class="cn('', className)">
     <hicon
@@ -19,5 +19,5 @@ const { class: className, size, item, text, full } = defineProps<{
       :name="String(item.meta?.icon)"
       :class="cn('p-0', { '**:!stroke-[2.1] !size-4.5': item.name == 'live', '!text-bc/60': item.name == 'mastery' })" />
     <span class="capitalize">{{ item.meta.title ?? item.name }}</span>
-  </SidebarMenuButton>
+  </Button>
 </template>

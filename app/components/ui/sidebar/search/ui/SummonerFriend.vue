@@ -7,7 +7,7 @@ const summoner = computed (() => ss.getSummoner(as.account?.puuid))
 </script>
 
 <template>
-  <SidebarMenuButton
+  <Button
     v-if="summoner"
     class="h-16 w-full group/friend chat chat-start">
     <SummonerIcon class="rounded-full chat-image size-11.5 shrink-0" />
@@ -34,5 +34,5 @@ const summoner = computed (() => ss.getSummoner(as.account?.puuid))
     </div>
 
     <slot />
-  </SidebarMenuButton>
+  </Button>
 </template>

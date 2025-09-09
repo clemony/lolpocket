@@ -21,14 +21,6 @@ const searchType = shallowRef('summoner')
       <SummonerSearchBox
         v-if="searchType == 'summoner'"
         class="h-12 my-2" />
-      <SidebarInputWrapper
-        v-else
-        class="pr-2">
-        <input
-          type="text"
-          class="size-full"
-          placeholder="Search lolpocket..." />
-      </SidebarInputWrapper>
       <TabsContent
         value="summoner"
         class="w-full !flex flex-col items-start">

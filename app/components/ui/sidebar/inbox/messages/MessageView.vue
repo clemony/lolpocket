@@ -12,12 +12,12 @@ const as = useAccountStore()
       <InboxDropdownMenu />
     </template>
     <template #subheader>
-      <SidebarInput
+      <Input
         placeholder="Search messages..."
         class="input h-12 !bg-b1 my-2" />
     </template>
 
-    <SidebarGroupContent class="gap-0  -mt-4 overflow-hidden  w-full !flex flex-col items-start">
+    <div class="gap-0  -mt-4 overflow-hidden  w-full !flex flex-col items-start">
       <template
         v-if="as.account?.inbox?.messages.length">
         <div
@@ -64,6 +64,6 @@ const as = useAccountStore()
           {{ `No mail right now!` }}
         </span>
       </div>
-    </SidebarGroupContent>
+    </div>
   </SidebarContentWrapper>
 </template>

@@ -3,7 +3,7 @@ export function generateSummonerLinks(summoner?: Summoner | Partial<Summoner> | 
     return null
 
   return {
-    name: `${capitalize(as().account.name)}'s Profile`,
+    name: `${capitalize(as().account.name)}`,
     icon: {
       name: getSummonerIcon(as().account.icon),
       class: 'summoner-icon',

@@ -8,41 +8,35 @@ const as = useAccountStore()
   </menu>
   <Collapsible
     :default-open="true"
-    as-child
-    class="w-full">
-    <SidebarGroup class=" px-3  w-full ">
-      <CollapsibleTrigger as-child>
-        <SidebarGroupLabel class=" group/collapse grow   hover:underline ">
-          <icon
-            name="ci:heart-02"
-            class="dst size-3.75 opacity-80 " />
-          <span class="grow text-left">
-            following
-          </span>
+    class=" px-3  w-full ">
+    <CollapsibleTrigger as-child>
+      <Label class=" group/collapse grow   hover:underline ">
+        <icon
+          name="ci:heart-02"
+          class="dst size-3.75 opacity-80 " />
+        <span class="grow text-left">
+          following
+        </span>
 
-          <icon
-            name="left"
-            class="group-data-[state=open]/collapse:-rotate-90 ml-1  transition-rotate duration-200" />
-        </SidebarGroupLabel>
-      </CollapsibleTrigger>
+        <icon
+          name="left"
+          class="group-data-[state=open]/collapse:-rotate-90 ml-1  transition-rotate duration-200" />
+      </Label>
+    </CollapsibleTrigger>
 
-      <CollapsibleContent
-        class="CollapsibleContent"
-        as-child>
-        <SidebarGroupContent class="  pl-5.25  py-6 w-full flex flex-col gap-6 data-[state=closed]:gap-0">
-          <SummonerFriend
-            v-for="i in 4"
-            :key="i" />
+    <CollapsibleContent
+      class="CollapsibleContent  pl-5.25  py-6 w-full flex flex-col gap-6 data-[state=closed]:gap-0">
+      <SummonerFriend
+        v-for="i in 4"
+        :key="i" />
 
-          <Button
-            v-for="i in 4"
-            :key="i"
-            class="w-full">
-            h
-          </Button>
-        </SidebarGroupContent>
-      </CollapsibleContent>
-    </SidebarGroup>
+      <Button
+        v-for="i in 4"
+        :key="i"
+        class="w-full">
+        h
+      </Button>
+    </CollapsibleContent>
   </Collapsible>
 
 <!--   <Collapsible

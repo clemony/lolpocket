@@ -36,7 +36,7 @@ onBeforeUnmount(() => {
         cool
       </button>
     </template>
-    <SidebarGroupContent class="gap-0  h-full  -space-y-2 overflow-hidden  w-full !flex flex-col items-start">
+    <div class="gap-0  h-full  -space-y-2 overflow-hidden  w-full !flex flex-col items-start">
       <template
         v-if="sortedNotifications">
         <Notification
@@ -44,6 +44,6 @@ onBeforeUnmount(() => {
           :key="`${item.id}`"
           :item="item" />
       </template>
-    </SidebarGroupContent>
+    </div>
   </SidebarContentWrapper>
 </template>

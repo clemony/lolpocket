@@ -8,7 +8,7 @@ const option = ref('General')
     v-model:open="settingsOpen"
     hydrate-on-interact /> -->
   <SidebarContentWrapper title="Settings">
-    <SidebarGroupContent class="gap-6 py-4 w-full !flex flex-col items-start">
+    <div class="gap-6 py-4 w-full !flex flex-col items-start">
       <Accordion
         v-model:model-value="option"
         type="single"
@@ -60,6 +60,6 @@ const option = ref('General')
           </AccordionItem>
         </SidebarMenu>
       </Accordion>
-    </SidebarGroupContent>
+    </div>
   </SidebarContentWrapper>
 </template>

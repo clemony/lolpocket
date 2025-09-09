@@ -45,14 +45,7 @@ const option = computed (() => {
         default-open>
         <CollapsibleTrigger as-child>
           <Label class="my-1 gap-3 items-center">
-            <!--         <span
-            class="grid place-items-center [&_svg]:!shadow-none rounded-full relative  size-5.5 py-px"
-            :class="cn('', { 'size-6 rounded-full drop-shadow-sm shadow-sm overflow-hidden': linkObject.icon?.class == 'summoner-icon' })">
-            <hicon
-              :name="linkObject.icon?.name"
-              :class="cn('dst absolute overflow-visible size-5 ', linkObject.icon?.class, { 'size-full': linkObject.icon?.class == 'summoner-icon' })" />
 
-          </span> -->
             <span class="grow text-6 font-bold dst">
               {{ linkObject.name }}
             </span>
@@ -74,28 +67,6 @@ const option = computed (() => {
           </Button>
         </CollapsibleContent>
       </Collapsible>
-
-    <!-- <Separator class="self-end mx-4 " /> -->
-    <!--  <SidebarGroup>
-      <SidebarGroupContent>
-        <SidebarMenuButton
-          size="lg"
-          variant="default"
-          class="capitalize order-first mx-3 mt-3 font-medium [&_svg]:!size-5.25"
-          @click="navigateTo('/nexus')">
-          <icon name="lucide:file-question" />
-          Docs
-        </SidebarMenuButton>
-        <SidebarMenuButton
-          size="lg"
-          variant="default"
-          class="capitalize order-first mx-3   font-medium [&_svg]:!size-5.25"
-          @click="navigateTo('/nexus')">
-          <icon name="lucide:square-terminal" />
-          About
-        </SidebarMenuButton>
-      </SidebarGroupContent>
-    </SidebarGroup> -->
     </div>
   </SidebarContentWrapper>
 </template>

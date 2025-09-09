@@ -33,8 +33,8 @@ const { results } = useSimpleSearch(
       </Input>
     </div>
 
-    <!--     <div
-      class="h-fit  pb-64 grid grid-flow-row auto-cols-auto pt-7  grid-cols-[repeat(auto-fill,minmax(80px,1fr))]  px-14 w-full inset-0   gap-3">
+    <div
+      class="h-fit  pb-34 grid grid-flow-row auto-cols-auto pt-14  grid-cols-[repeat(auto-fill,minmax(80px,1fr))]  px-14 w-full inset-0   gap-3">
       <ChampionIcon
         v-for="champion in results.filter(r => !pocket.champions.includes(r.key))"
         :id="champion.id"
@@ -50,7 +50,7 @@ const { results } = useSimpleSearch(
           :value="champion.key"
           class="peer hidden" />
       </ChampionIcon>
-    </div> -->
+    </div>
   </div>
 </template>
 

@@ -47,8 +47,9 @@ watch(() => results.value.length, (newVal) => {
         variant="btn"
         hover="btn"
         :class="cn('aspect-square  relative transition-[colors, opacity] p-0 duration-250 relative w-full h-auto hover:text-bc/60 hover:inset-shadow-xs data-[state=open]:ring-2 hover:ring overflow-hidden ring-bc/60 data-[state=open]:btn-active', { 'shadow-sm drop-shadow-sm ': pocket.main?.champion })">
-        <i-lol-champ
+        <icon
           v-if="!pocket.main.champion"
+          name="lp:champ"
           class="text-bc/20 size-10" />
         <Champion
           v-else
@@ -128,7 +129,8 @@ watch(() => results.value.length, (newVal) => {
               title="Clear main champion"
               class="w-full border-b3 bg-b2 hover-ring hover:!bg-b3/80 h-auto aspect-square"
               @click="pocket.main.champion = ''">
-              <i-lol-champ
+              <icon
+                name="lp:champ"
                 class="text-bc/20 size-7" />
             </Button>
           </PopoverClose>
