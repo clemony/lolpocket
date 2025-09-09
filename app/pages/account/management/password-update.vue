@@ -39,7 +39,7 @@ function handleReset() {
               variant="neutral"
               size="lg"
               type="submit"
-              class="w-full font-medium"
+              class="w-full  h-14 font-medium"
               @click="handleReset()">
               Reset Password
             </Button>
@@ -49,7 +49,7 @@ function handleReset() {
               variant="link"
               size="lg"
               hover="link"
-              class="underline-offset-1.5 justify-center gap-3  justify-self-start w-full "
+              class="underline-offset-1.5 justify-center gap-3   h-14 justify-self-start w-full "
               @click="navigateTo('/login')">
               Remembered it?
               Log in

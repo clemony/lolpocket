@@ -1,7 +1,7 @@
 import { execSync } from 'node:child_process'
 
-import { championUpdate } from './champions/entry.ts'
-import { runesUpdate } from './runes/runes-update.ts'
+import { championUpdate } from './champions/entry.js'
+import { runesUpdate } from './runes/runes-update.js'
 
 async function main() {
   try {

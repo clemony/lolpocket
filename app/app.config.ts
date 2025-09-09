@@ -29,8 +29,8 @@ export default defineAppConfig({
       'and': 'lucide:ampersand',
       'x-solid': 'teenyicons:x-circle-solid',
       'info': 'lucide:info',
-      'info-circle': 'lucide:info',
       'slash': 'lucide:slash',
+      'i': 'ion:information-sharp',
 
       // check
       'tick': 'lucide:check',
@@ -61,6 +61,7 @@ export default defineAppConfig({
       'update': 'radix-icons:update',
       'filter': 'lucide:list-filter',
       'refresh': 'radix-icons:reload',
+      'reset': 'lucide:refresh-ccw',
       'copy': 'lucide:copy',
       'export': 'lucide:upload',
       'tag': 'lucide:tag',
@@ -71,7 +72,6 @@ export default defineAppConfig({
       // menu
       'more': 'ri:more-line',
       'more-vertical': 'ri:more-2-line',
-      'reset': 'mynaui:refresh',
       'settings': 'lucide:settings-2',
       'gear': 'lucide:settings',
       'gear-solid': 'ri:settings-4-fill',

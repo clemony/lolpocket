@@ -1,5 +1,5 @@
 export default defineNuxtRouteMiddleware((to, from) => {
-  ix().loadBasic()
+/*   ix().loadBasic()
   if (to.name == 'mastery')
-    ix().loadTitles()
+    ix().loadTitles() */
 })

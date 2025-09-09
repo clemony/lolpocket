@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { useRouteParams } from '@vueuse/router'
 import { DropdownMenuTrigger } from 'reka-ui'
 
 const { class: className, summoner, align, side, disableLink } = defineProps<{

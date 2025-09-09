@@ -1,6 +1,6 @@
 // plugins/loading.client.ts
 export default defineNuxtPlugin(() => {
-  const indicator = useLoadingIndicator()
+/*   const indicator = useLoadingIndicator()
   const router = useRouter()
 
   let pendingRequests = 0
@@ -74,5 +74,5 @@ export default defineNuxtPlugin(() => {
       { immediate: true },
     )
     return result
-  }
+  } */
 })

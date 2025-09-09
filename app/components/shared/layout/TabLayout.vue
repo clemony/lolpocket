@@ -9,7 +9,7 @@ const route = useRoute()
 </script>
 
 <template>
-  <div class="overflow-hidden  size-full absolute inset-0 top-0">
+  <div class="overflow-hidden flex flex-col size-full absolute inset-0 top-0">
     <div class="w-full grid grid-cols-2 z-0 pt-26   max-h-58 h-58 sticky top-0 bg-b1 z-1 ">
       <slot name="background" />
       <Separator class="absolute z-0 bottom-0" />
@@ -29,6 +29,8 @@ const route = useRoute()
         <slot name="header-right" />
       </div>
     </div>
-    <slot />
+    <div class="size-full overflow-hidden relative">
+      <slot />
+    </div>
   </div>
 </template>

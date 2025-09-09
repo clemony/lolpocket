@@ -44,9 +44,12 @@ onMounted(async () => {
       </NuxtLink>
       <div class="flex flex-col gap-6">
         <div class="!max-w-180 !w-full flex flex-col gap-2">
-          <p class="text-2 font-medium">
-            {{ loadingText[0] }}
-          </p>
+          <div class="w-full overflow-hidden text-2 font-medium">
+            <span class="">
+              {{ loadingText[0] }}
+              h-14
+            </span>
+          </div>
           <Progress />
         </div>
       </div>

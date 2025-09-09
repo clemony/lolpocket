@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { DynamicScroller, DynamicScrollerItem } from 'vue-virtual-scroller'
-
 const { state } = defineProps<{
   state: PlayerData
 }>()

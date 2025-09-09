@@ -5,5 +5,9 @@ definePageMeta({
 </script>
 
 <template>
-  <LazyNuxtPage />
+  <div class="grid place-items-center">
+    <!--   <NuxtPage /> -->
+
+    <Hihi />
+  </div>
 </template>

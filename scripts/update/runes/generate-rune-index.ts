@@ -1,5 +1,5 @@
 import fs from 'node:fs'
-import { markUpdate } from '../..'
+import { markUpdate } from '../../../scripts'
 import type { RunePath } from '../../../shared/types/types.rune'
 import { resolvePath } from '../resolvePath'
 

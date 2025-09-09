@@ -1,7 +1,7 @@
+import type { Champion } from '#shared/types/types.champion'
 import fs from 'node:fs'
 import path from 'node:path'
-import { normalize } from '../..'
-import type { Champion } from '../../../shared/types/types.champion'
+import { normalize } from '~~/server/utils'
 
 const inputPath = path.resolve('./champions/raw/champions-raw.json')
 const outputPath = path.resolve('./champions/raw/unique-ability-resources.json')

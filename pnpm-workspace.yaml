@@ -1,0 +1,11 @@
+onlyBuiltDependencies:
+  - '@morev/vue-transitions'
+  - '@parcel/watcher'
+  - '@tailwindcss/oxide'
+  - esbuild
+  - re2
+  - sharp
+  - supabase
+  - unrs-resolver
+  - vue-demi
+  - workerd

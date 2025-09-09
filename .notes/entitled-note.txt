@@ -1,0 +1,24 @@
+loading indicator
+
+login toggle
+
+provide/inject sign in
+
+openrouter:
+
+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
+
+    "moduleResolution": "Bundler",
+
+    "module": "ESNext",
+
+    "target": "ES2022",
+
+gemini:
+
+AIzaSyChlGgdbk_RLHpTJ36q7lEqjz1unnLA5Cs
+
+hookup to supabase
+
+pat peep pump pep pearl pant pluck perch pile pulse prompt planner
+

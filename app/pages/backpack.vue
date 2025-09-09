@@ -106,7 +106,7 @@ const pinned = computed (() => ps().pockets.filter(p => p.location.pinned))
         </div>
       </template>
 
-      <LazyNuxtPage />
+      <NuxtPage />
     </BoxLayout>
   </div>
 </template>

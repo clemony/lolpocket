@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { AnalyzeResults, CraftABuild, CreateAPocket, PlayGames } from '#components'
 import type { MotionValue } from 'motion-v'
 import { motion } from 'motion-v'
 import { useBreakpoint } from '~/utils/ui/useBreakpoints'
@@ -44,22 +43,22 @@ const steps = [
   {
     title: 'Create a Pocket',
     description: 'Pockets are little spaces designed to hold your builds and ideas -- similar to a pocket folder. Theorycraft within them, or use them to remember that ONE build you saw your favorite pro use. Pockets can be linked to champions or a general role.',
-    component: CreateAPocket,
+    component: 'CreateAPocket',
   },
   {
     title: 'Craft a Build',
     description: 'Choose a champion, group of champions—or even just a position. Organize items into full builds or pool them by situation. Theorycraft some new things to try, or pull out your old favorites. Create rune sets, and grab some summoner spells.', // jan 11 2025
-    component: CraftABuild,
+    component: 'CraftABuild',
   },
   {
     title: 'Play Games',
     description: 'Send your fully cooked pockets to the rift. Export directly to the league client so your builds show up in game. Then, do what you\'re best at: Queue up and grind some LP.',
-    component: PlayGames,
+    component: 'PlayGames',
   },
   {
     title: 'Analyze Results',
     description: 'With a connected Riot Account, advanced statistics give you insight into the best items and champions for your specific playstyle. The meta may tell you Triforce Yuumi is 82% winrate—but according to your data, you seem to do better with a Moonstone. Easily see where meta slaving away helps or harms.',
-    component: AnalyzeResults,
+    component: 'AnalyzeResults',
   },
 ]
 </script>

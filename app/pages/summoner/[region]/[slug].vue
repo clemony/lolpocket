@@ -66,11 +66,10 @@ watch(puuid, async (newPuuid) => {
     </template>
 
     <template #page>
-      <LazyNuxtPage
+      <NuxtPage
         v-if="state"
         :key="route.name"
-        :state>
-      </LazyNuxtPage>
+        :state />
     </template>
     <template #footer>
       <SiteFooter />

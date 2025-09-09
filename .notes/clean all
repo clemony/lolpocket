@@ -1,0 +1,14 @@
+# Remove node_modules
+# Remove pnpm lock file
+# Clear pnpm store/cache
+
+rm -rf node_modules
+rm -f pnpm-lock.yaml
+pnpm store prune
+pnpm cache delete all
+pnpm install
+
+# Optional: remove global pnpm store (more aggressive)
+rm -rf ~/.pnpm-store
+
+# Reinstall everything fresh

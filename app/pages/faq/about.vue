@@ -215,7 +215,7 @@ const faq = [
 
       <div class="flex items-center flex-col tracking-tight dst px-4 mt-6">
         <p class="text-center">
-          <i>Lolpockets</i>
+          <i>Lolpockets </i>
 
           <u>isn't</u>
           endorsed by Riot Games

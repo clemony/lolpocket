@@ -1,13 +1,11 @@
 <script lang="ts" setup>
-import { MessageView, NewsView, NotificationView } from '#components'
-
 const { title, class: className } = defineProps<{
   title: string
   class?: HTMLAttributes['class']
   dropdown?: boolean
 }>()
 
-const tabs = ref(MessageView)
+const tabs = ref('MessageView')
 const inboxes: Record<string, DataObject> = {
 
   news: {
@@ -17,7 +15,7 @@ const inboxes: Record<string, DataObject> = {
       class: '**:stroke-[1.5] ',
     },
     value: 0,
-    component: NewsView,
+    component: 'NewsView',
   },
 }
 </script>

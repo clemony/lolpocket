@@ -1,0 +1,32 @@
+lolpocket/                   # Root Nuxt app
+│
+├─ nuxt.config.ts            # Root config (loads layers + global config)
+├─ package.json              # Core deps only (nuxt, vue, pinia, vueuse, etc.)
+│
+├─ layers/                   # All custom layers live here
+│  ├─ reka-layer/            # shadcn/reka-ui components
+│  │   ├─ components/        # UI components (Button, Dialog, etc.)
+│  │   ├─ nuxt.config.ts     # shadcn + reka-ui setup
+│  │   └─ package.json
+│  │
+│  ├─ auth-layer/            # Supabase auth integration
+│  │   ├─ composables/       # useAuth(), useSession()
+│  │   ├─ plugins/           # supabase client injection
+│  │   ├─ nuxt.config.ts     # supabase config
+│  │   └─ package.json
+│  │
+│  └─ api-layer/             # Riot API + metascraper utils
+│      ├─ server/api/        # Nitro API routes
+│      │   ├─ riot.ts        # Example Riot API proxy
+│      │   └─ og.ts          # Example metascraper endpoint
+│      ├─ utils/             # Reusable fetch wrappers
+│      ├─ nuxt.config.ts     # API runtime config
+│      └─ package.json
+│
+├─ app/                      # Your actual app logic
+│  ├─ components/            # App-specific components
+│  ├─ pages/                 # Page routes
+│  ├─ layouts/               # App layouts
+│  └─ stores/                # Pinia stores
+│
+└─ assets/                   # Global styles, images, etc.

@@ -1,6 +1,6 @@
 import { writeFile } from 'node:fs/promises'
 import { ofetch } from 'ofetch'
-import { getFormattedDateTime } from '../..'
+import { getFormattedDateTime } from '../../../scripts'
 
 const MIN_PATCH_MAJOR = 15
 

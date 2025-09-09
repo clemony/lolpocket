@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { navigationMenuTriggerStyle } from '/base/navigation-menu/navmenuvariantindex'
+import { navigationMenuTriggerStyle } from 'base/navigation-menu/navmenuvariantindex'
 
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']

@@ -8,6 +8,6 @@ definePageMeta({
 
 <template>
   <div>
-    <LazyNuxtPage />
+    <NuxtPage />
   </div>
 </template>

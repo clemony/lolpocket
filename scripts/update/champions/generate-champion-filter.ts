@@ -1,10 +1,12 @@
+import type { Champion } from '#shared/types'
 import fs from 'node:fs'
-import { markUpdate, normalize, normalizeArray } from '../..'
-import type { Champion } from '../../../shared/types'
-import { resolvePath } from '../resolvePath'
+import { join } from 'node:path'
+import process from 'node:process'
+import { normalizeArray } from '~/utils'
 
-const dataPath = resolvePath('./champions/raw/champions-raw.json')
-const outputPath = resolvePath('../../shared/appdata/filters/champion-filters.ts')
+const rootDir = process.cwd()
+const dataPath = join(rootDir, 'server/update/champions/raw/champions-raw.json')
+const outputPath = join(rootDir, 'shared/appdata/filters/champion-filters.ts')
 const champions = JSON.parse(fs.readFileSync(dataPath, 'utf-8')) as Record<string, Champion>
 
 type FilterMap = Record<string, number[]>

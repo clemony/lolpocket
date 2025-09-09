@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { motion } from 'motion-v'
-
 const { results, name } = defineProps<{
   name: string
   results?: any
@@ -42,7 +40,7 @@ const contentVariants = {
     :default-open="true"
     :disabled="results.length <= 0">
     <CollapsibleTrigger as-child>
-      <motion.button
+      <button
         :variants="variants"
         initial="hidden"
         animate="visible"
@@ -64,10 +62,10 @@ const contentVariants = {
         <PlusMinusExpand
           v-if="results.length"
           class="!text-bc " />
-      </motion.button>
+      </button>
     </CollapsibleTrigger>
 
-    <Motion
+    <div
       v-if="results.length"
       as-child
       :variants="contentVariants"
@@ -78,7 +76,7 @@ const contentVariants = {
       <CollapsibleContent
         class=" CollapsibleContent mb-1 mx-7 before:w-px before:absolute before:bg-black-30/64 before:left-0 before:top-2.5"
         :class="{ 'before:h-[calc(100%-36px)]': results.length > 3, 'before:h-[calc(100%-4px)]': results.length <= 3 }">
-        <motion.ul
+        <ul
           class="flex relative flex-col   ml-2 pl-2 pr-7 "
           :transition="{
             staggerChildren: 0.5,
@@ -86,8 +84,8 @@ const contentVariants = {
             bounce: 0.2,
           }">
           <slot />
-        </motion.ul>
+        </ul>
       </CollapsibleContent>
-    </Motion>
+    </div>
   </Collapsible>
 </template>

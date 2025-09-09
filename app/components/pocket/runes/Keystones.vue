@@ -4,10 +4,6 @@ const { runes, pocket, set: s } = defineProps<{
   set: RuneSet
   pocket: Pocket
 }>()
-console.log('🌱 - runes:', runes)
-
-const rs = useRuneStore()
-
 const set = computed (() => s)
 
 const gridCols = computed (() => `grid-cols-${runes.length ?? 3}`)

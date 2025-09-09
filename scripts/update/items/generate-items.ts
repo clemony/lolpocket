@@ -1,11 +1,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
-import { handleWikiText, markUpdate, stripEmpty } from '../../index.ts'
-import { formatStats, normalizeItemData } from '../../utils/formatItems.ts'
-import { ludensPreProcess } from '../../utils/wikitext/processing.ts'
 
-const inputPath = path.resolve('/scripts/update/items/raw/items-raw.json')
-
+const inputPath = path.resolve('/server/update/items/raw/items-raw.json')
 const outputIndex = path.resolve('shared/appdata/index/item-index.ts')
 const outputLitePath = path.resolve('shared/appdata/records/items-lite.ts')
 const itemOutputDir = path.resolve('shared/appdata/records/items/')

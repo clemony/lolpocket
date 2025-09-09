@@ -1,0 +1,11 @@
+<article
+
+      v-if="summoner?.mastery?.top"
+
+      class="grid auto-rows-auto place-items-center overflow-hidden mx-auto gap-8 w-full max-w-2/3"
+
+      style="
+
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+
+  ">

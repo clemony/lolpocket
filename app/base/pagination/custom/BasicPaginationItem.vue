@@ -2,7 +2,7 @@
 import type { PaginationListItemProps } from 'reka-ui'
 import { PaginationListItem } from 'reka-ui'
 
-import { buttonVariants } from 'assets/ts/variant-index'
+import { buttonVariants } from '~/assets/ts/variant-index'
 
 const props = withDefaults(defineProps<PaginationListItemProps & {
   size?: any

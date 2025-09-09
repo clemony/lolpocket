@@ -1,23 +1,22 @@
 <script lang="ts" setup>
 import { useScroll } from '@vueuse/core'
 
-import { ChampionGridIcon, GridLastPlayed, GridMasteryPoints } from '#components'
+/* import { ChampionGridIcon, GridLastPlayed, GridMasteryPoints } from 'components' */
 import type { ColDef, ColGroupDef, GridApi, GridOptions, GridReadyEvent } from 'ag-grid-community'
 import { CellStyleModule, ClientSideRowModelModule, ColumnApiModule, ColumnAutoSizeModule, ColumnHoverModule, GridStateModule, ModuleRegistry, RenderApiModule, RowSelectionModule, ValidationModule } from 'ag-grid-community'
 import { AgGridVue } from 'ag-grid-vue3'
-import { masteryGridTheme } from '../../../utils/config/masteryTheme'
 
 const { mastery, summoner } = defineProps<{
   mastery: ChampionMastery[]
   summoner: Summoner
 }>()
-
-defineExpose({
+// FIXME
+/* defineExpose({
   ChampionGridIcon,
   GridLastPlayed,
   GridMasteryPoints,
 })
-
+ */
 const theme = ref(masteryGridTheme)
 
 const gridApi = shallowRef<GridApi | null>(null)
@@ -47,7 +46,7 @@ const colDefs: (ColDef<ChampionMastery> | ColGroupDef<ChampionMastery>)[] = [
     colId: 'rank',
     headerName: 'Rank',
     cellClass: 'py-2 !px-0',
-    cellRenderer: ChampionGridIcon,
+    /*    cellRenderer: ChampionGridIcon, */
     valueGetter: params => params.data.level,
     cellRendererParams: {
       img: true,
@@ -67,7 +66,7 @@ const colDefs: (ColDef<ChampionMastery> | ColGroupDef<ChampionMastery>)[] = [
     headerClass: 'items-center !flex [&_.ag-header-cell-comp-wrapper]:!h-5 [&_.ag-header-cell-text]:!mt-px ',
     cellDataType: 'text',
     cellClass: 'text-bc !flex !flex-col justify-center size-full text-start',
-  },
+  }, /*
   {
     field: 'lastPlayed',
     colId: 'lastPlayed',
@@ -88,7 +87,7 @@ const colDefs: (ColDef<ChampionMastery> | ColGroupDef<ChampionMastery>)[] = [
     cellDataType: 'number',
     cellClass: 'font-medium  text-left',
     headerClass: '',
-  },
+  }, */
   {
     field: 'level',
     colId: 'level',

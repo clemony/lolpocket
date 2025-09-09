@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { motion } from 'motion-v'
-
 const { page, class: className, link } = defineProps<{
   page: PageRecord
   class?: HTMLAttributes['class']
@@ -26,7 +24,7 @@ function navigate() {
 </script>
 
 <template>
-  <motion.li
+  <li
 
     :variants="variants"
     initial="hidden"
@@ -50,5 +48,5 @@ function navigate() {
         name="link"
         class="size-3.5 justify-self-end opacity-0 group-hover:opacity-100 tldr-20 -ml-1" />
     </a>
-  </motion.li>
+  </li>
 </template>

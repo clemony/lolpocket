@@ -1,5 +1,5 @@
 import fs from 'node:fs'
-import { markUpdate } from '../..'
+import { markUpdate } from '../../../scripts'
 import type { Champion } from '../../../shared/types'
 import { resolvePath } from '../resolvePath'
 

@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import type { labelVariants } from 'assets/ts/variant-index'
 import type { LabelProps } from 'reka-ui'
 import { Label } from 'reka-ui'
-
-import type { HTMLAttributes } from 'vue'
+import { labelVariants } from '~/assets/ts/variant-index'
 
 interface Props extends LabelProps {
   variant?: any

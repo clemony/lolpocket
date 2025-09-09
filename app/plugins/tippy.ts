@@ -1,5 +1,5 @@
 import 'tippy.js/animations/scale.css'
-import VueTippy, { roundArrow } from 'vue-tippy'
+import VueTippy from 'vue-tippy'
 
 export default defineNuxtPlugin((nuxtApp) => {
   const sharpArrow

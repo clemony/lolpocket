@@ -63,6 +63,7 @@ async function hydrateUser1() {
     </div>
 
     <div class="w-1/5 mx-auto space-y-2">
+      <Hihi />
       <Button @click="useFetchSummonerData(as().account.puuid)">
         try update
       </Button>

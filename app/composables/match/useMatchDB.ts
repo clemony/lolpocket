@@ -1,5 +1,3 @@
-import { matchDB } from 'stores/matchDB'
-
 export function useIndexedDB() {
   const addMatches = async ({
     matchData = [],

@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @import "../theme.css";
-@import "tippy.js/dist/svg-arrow.css";
+/* @import "tippy.js/dist/svg-arrow.css"; */
 
 @layer base {
   .tippy-content {

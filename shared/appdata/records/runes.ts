@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/05/2025 06:04:39 PM CDT
+// Updated Patch 25.17 - 09/07/2025 08:03:39 AM CDT
 
 export const runePaths: RunePath[] = [
   {

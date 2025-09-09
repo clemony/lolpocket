@@ -9,6 +9,8 @@ const ss = useSummonerStore()
 
 const state = useSummonerInject()
 const roleStats = await useMatchRoles(state.summoner.value.puuid, state.matches)
+
+/* //FIXME what */
 </script>
 
 <template>
@@ -19,11 +21,11 @@ const roleStats = await useMatchRoles(state.summoner.value.puuid, state.matches)
       </FilterLabel>
     </ListboxGroupLabel> -->
 
-    <FilterLabel
+    <!--     <FilterLabel
       v-model="ms.filter.role"
       :active="ms.filter.role != 'ALL'"
       @click="ms.filter.role = 'ALL'">
       {{ ms.filter.role != 'ALL' ? roleStats.find(r => r.role == ms.filter.role).displayName : 'Position' }}
-    </FilterLabel>
+    </FilterLabel> -->
   </div>
 </template>
