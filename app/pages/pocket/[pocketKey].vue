@@ -5,19 +5,20 @@ definePageMeta({
 })
 
 const route = useRoute()
-const pocket = computed(() => ps().getPocket(String(route.params.pocketKey))).value
-console.log('🌱 - pocket:', pocket)
+const pocket = computed(() => ps().getPocket(String(route.params.pocketKey)))
 
 const { syncIfDirty } = useSupabaseSync(
-  () => pocket,
+  () => pocket.value, // <- keep it reactive
   '/api/pockets',
-  value => ({ pocket: value }),
+  (userId, value) => ({ pocket: value }),
   PocketSchema,
 )
 
-watch(() => route.path, (newVal) => {
-  console.log('💠 - watch - newVal:', newVal)
-})
+async function testSync() {
+  console.log('🌱 - testSync fired')
+  await syncIfDirty()
+  console.log('🌱 - sync forced!')
+}
 </script>
 
 <template>
@@ -52,7 +53,7 @@ watch(() => route.path, (newVal) => {
     <!--   <PocketHeaderRight /> -->
     </template>
 
-    <div class="size-full px-32 gap-6 overflow-hidden flex bg-b1">
+    <div class="size-full pl-32 relative gap-6 overflow-hidden flex bg-b1">
       <PocketSidebar>
         <Button
           variant="btn"
@@ -60,7 +61,7 @@ watch(() => route.path, (newVal) => {
           sync
         </Button>
       </PocketSidebar>
-      <LazyNuxtPage
+      <NuxtPage
         v-if="pocket"
         :pocket="pocket" />
     </div>

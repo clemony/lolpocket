@@ -25,7 +25,7 @@ const password = ref('')
             size="lg"
             variant="link"
             hover="outline"
-            class="w-full grid place-items-center border border-b4/60 shadow-xs [&_svg]:opacity-80"
+            class="w-full h-14 grid place-items-center border border-b4/60 shadow-xs [&_svg]:opacity-80"
             @click="useSignIn(provider)">
             <icon
               :name="provider"

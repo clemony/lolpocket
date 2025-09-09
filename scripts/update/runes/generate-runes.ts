@@ -1,6 +1,6 @@
 import fs from 'node:fs'
 import path from 'node:path'
-import { markUpdate } from '../..'
+import { markUpdate } from '../../../scripts'
 import { resolvePath } from '../resolvePath'
 
 const dataPath = resolvePath('./runes/raw/runes.json')

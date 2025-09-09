@@ -22,9 +22,7 @@ export const useIndexStore = defineStore(
       if (isStale(lastPatchCheck.value) == true) {
         console.log('🌱 - loadPatch - isStale(lastPatchCheck.value) == true:', isStale(lastPatchCheck.value) == true)
         const { patchIndex } = await import('appdata/index/patch-index')
-        /*         console.table(console.table(patchList.value.map(n => ({ value: n }))) as any) */
         lastPatchCheck.value = new Date()
-        /*         console.log('🌱 - lastPatchCheck:', lastPatchCheck) */
         if (patch.value != patchIndex[0]) {
           patchList.value = patchIndex
           patch.value = patchIndex[0]
@@ -226,7 +224,7 @@ export const useIndexStore = defineStore(
       // runes
 
       runeById: (id: number) => getByIndex(runes.value, 'id', id),
-      runeNameById: (id: number) => findInIndex(runes.value, 'id', id, 'name'),
+      runeNameById: (id: number) => findInIndex(runes.value, 'id', id, 'name') as string,
 
       // paths
 

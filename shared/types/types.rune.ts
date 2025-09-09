@@ -47,6 +47,7 @@ export interface Shard {
   name: string
   id: number
   description: string
+  color: string
 }
 
 export interface ShardObject {

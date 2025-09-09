@@ -1,14 +1,12 @@
 <script setup lang="ts">
 import { shardObject } from 'appdata/records/shards'
 
-const { pocket } = defineProps<{
+const { pocket, set: s } = defineProps<{
   pocket: Pocket
+  set: RuneSet
 }>()
 
-const rs = useRuneStore()
-const set = computed(() => pocket.runes[rs.selectedRuneSet])
-
-const ix = useIndexStore()
+const set = computed (() => s)
 </script>
 
 <template>
@@ -17,51 +15,29 @@ const ix = useIndexStore()
     class="flex justify-center field-box rounded-xl w-full py-10">
     <div class="grid  grid-cols-3 place-items-center gap-x-16 gap-y-7">
       <template
-        v-for="item in shardObject"
-        :key="item.tier">
-        <label
-          v-for="shard in item.shards"
+        v-for="tier in shardObject"
+        :key="tier.tier">
+        <Label
+          v-for="shard in tier.shards"
           :key="shard.id"
+          variant="b1"
+          hover="ghost"
+          :style="{ '--shard-color': shard.color }"
           :title="shard.description"
-          class="group"
-          :class="
-            cn(
-              /* b4 */
-              'backdrop-blur-xs ',
+          class="grid rounded-full relative size-14 shrink-0 place-items-center cursor-pointer bg-b1 hover:ring hover:ring-neutral/60 shadow-sm shadow-black/5 drop-shadow-black/5 drop-shadow-sm hover:has-checked:ring-[var(--shard-color)]  ring-[var(--shard-color)]/80 has-checked:ring">
+          <input
+            v-model="set.shards[tier.tier]"
+            type="radio"
+            :value="shard.id"
+            :name="tier.label"
+            class="peer hidden"
+            @change="console.log(set)" />
 
-              /* struct  */
-              'grid size-14 shrink-0 place-items-center cursor-pointer  rounded-full transition-all ring ring-b2 inset-shadow-xs duration-300 hover:bg-b3/40 group has-checked:shadow-outline    has-checked:bg-linear-to-br from-70% has-checked:from-b1 has-checked:to-b2/10 shadow-black/6  has-checked:hover:bg-b1/30 hover:inset-shadow-xs hover:inset-shadow-b3/70',
-            ) ">
-          <!--  <input
-          v-if="shard.slot == 1"
-          v-model="set.shards[1]"
-          type="radio"
-          :name="shard.slotName"
-          class="peer hidden"
-          @change="console.log(set)" />
-
-        <input
-          v-if="shard.slot == 2"
-          v-model="set.shards[2]"
-          type="radio"
-          :name="shard.slotName"
-          :value="shard"
-          class="peer hidden" />
-
-        <input
-          v-if="shard.slot == 3"
-          v-model="set.shards[3]"
-          type="radio"
-          :name="shard.name + shard.slot"
-          :value="shard"
-          class="peer hidden" />
- -->
           <component
             :is="`i-shards-${shard.id}`"
             :alt="`shard-${shard.name}`"
-            class="size-7 brightness-0 opacity-40 group-hover:opacity-100 group-hover:brightness-100 peer-checked:brightness-100  drop-shadow-md grayscale peer-checked:opacity-100 peer-checked:grayscale-0 group-hover:grayscale-0" /><!--
-            :class="cn(shard.iconClass, `${shard.color}`)" -->
-        </label>
+            :class="cn('shrink-0 absolute peer-checked:text-[var(--shard-color)] peer-not-checked:opacity-70 dst', { '!size-5': ![5011, 5010, 5007].includes(shard.id), '!size-4.5': [5011, 5010, 5007].includes(shard.id) })" />
+        </Label>
       </template>
     </div>
   </div>

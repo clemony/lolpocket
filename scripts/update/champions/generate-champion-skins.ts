@@ -4,7 +4,7 @@ import sharp from 'sharp'
 import { Buffer } from 'node:buffer'
 import fs from 'node:fs'
 import path from 'node:path'
-import { cleanImageLink, cleanImageNum, markUpdate } from '../..'
+import { cleanImageLink, cleanImageNum, markUpdate } from '../../../scripts'
 import type { FullSkinRecord, SkinRecord } from '../../../shared/types/types.champion'
 import { resolvePath } from '../resolvePath'
 

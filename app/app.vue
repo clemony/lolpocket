@@ -11,10 +11,6 @@ useHead({
     },
   ],
 })
-console.info('🌱 - as().account:', as().account)
-const appConfig = useAppConfig()
-
-const client = useSupabaseClient()
 
 onMounted(() => {
   document.documentElement.setAttribute(
@@ -23,6 +19,8 @@ onMounted(() => {
   )
   ix().loadPatch()
 })
+/*
+const client = useSupabaseClient()
 
 const router = useRouter()
 client.auth.onAuthStateChange(async (event, session) => {
@@ -41,14 +39,11 @@ client.auth.onAuthStateChange(async (event, session) => {
       console.error('Error setting session:', error.message)
     }
   }
-})
+}) */
 </script>
 
 <template>
   <NuxtLayout>
-    <LazyNuxtPage />
-    <!--     :transition="{
-    name: 'global-page-transition',
-    }" -->
+    <NuxtPage />
   </NuxtLayout>
 </template>

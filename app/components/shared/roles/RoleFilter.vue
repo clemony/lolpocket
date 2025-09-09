@@ -21,12 +21,6 @@ const roleModel = computed({
         :class="{ 'pointer-events-none': ms.filter.role == 'ALL' }"
         class="btn btn-sm gap-2 font-medium rounded-lg px-2.5 place-self-center text-3  btn-ghost"
         @click="state.clearFilters()">
-        <input
-          v-model="roleModel"
-          class="peer hidden"
-          aria-label="All"
-          name="match-champion-filter"
-          value="All" />
         {{ ms.filter.role != 'ALL' ? roleStats.find(r => r.role == ms.filter.role).displayName : 'Position' }}
 
         <icon

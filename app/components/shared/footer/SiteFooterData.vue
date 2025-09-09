@@ -1,7 +1,6 @@
 <script lang="ts" setup>
-import { UseClipboard } from '@vueuse/components'
+import { contactLinks, siteInfoLinks } from '#shared/appdata'
 import { riotDisclaimer } from 'appdata'
-import { contactLinks, siteInfoLinks } from '~/routes'
 
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { contactLinks, siteInfoLinks } from '~/routes'
+import { contactLinks, siteInfoLinks } from '#shared/appdata'
 
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']

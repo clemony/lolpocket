@@ -1,5 +1,5 @@
 import fs from 'node:fs'
-import { markUpdate, normalize, normalizeArray } from '../..'
+import { markUpdate, normalize, normalizeArray } from '../../../scripts'
 import type { ChampionLite, ChampionLiteRecord } from '../../../shared/types'
 import { resolvePath } from '../resolvePath'
 

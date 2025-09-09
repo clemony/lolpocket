@@ -1,8 +1,8 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import process from 'node:process'
+import { markUpdate, normalize, normalizeAbility, normalizeArray, stripEmpty } from '../../../scripts/index'
 import type { Champion } from '../../../shared/types/types.champion'
-import { markUpdate, normalize, normalizeAbility, normalizeArray, stripEmpty } from '../../index'
 import { resolvePath } from '../resolvePath'
 
 // ---------- Args & flags ----------

@@ -4,6 +4,6 @@
 
 <template>
   <div>
-    hihi vite
+    hihihihihi
   </div>
 </template>

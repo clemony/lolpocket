@@ -15,7 +15,7 @@ onMounted(() => {
 
 })
 
-const keyClass = 'col-start-1 opacity-0 group-hover/select:opacity-50 font-mono transition-all duration-200 font-bold place-self-center'
+const keyClass = 'col-start-1 opacity-0 group-hover/select:opacity-50  transition-all duration-200 font-bold place-self-center'
 </script>
 
 <template>
@@ -24,7 +24,7 @@ const keyClass = 'col-start-1 opacity-0 group-hover/select:opacity-50 font-mono 
     class="p-0 z-auto">
     <BaseSelectTrigger
       icon-class="opacity-10 group-hover/select:opacity-50"
-      :class="cn('w-full hover:ring hover:ring-b3/50  group/select justify-start h-fit py-1 pl-2  gap-1.75 items-center *:last:left-auto  *:last:!right-1 grid grid-cols-[10px_auto] grid-rows-2 *:last:top-[calc(50%-6px)] ', className)">
+      :class="cn('w-full hover:ring hover:ring-b3/50  group/select justify-start h-fit py-1 pl-2  gap-1.75 items-center *:last:left-auto  *:last:!right-2 grid grid-cols-[10px_auto] grid-rows-2 *:last:top-[calc(50%-6px)] ', className)">
       <span :class="cn('row-start-1', keyClass)">D</span>
       <span :class="keyClass">F</span>
       <Spell
@@ -43,7 +43,7 @@ const keyClass = 'col-start-1 opacity-0 group-hover/select:opacity-50 font-mono 
       class="!w-full">
       <SelectGroup>
         <SelectLabel class="justify-between flex items-center">
-          Select spells
+          Main Spells
 
           <Button
             variant="ghost"

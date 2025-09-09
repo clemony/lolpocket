@@ -1,12 +1,10 @@
 <script lang="ts" setup>
-import { motion } from 'motion-v'
-
 const us = useUiStore()
 </script>
 
 <template>
   <animate-presence>
-    <motion.button
+    <button
       v-if="!us.sidebarExpanded"
       v-tippy="!us.sidebarExpanded ? `Search ${getDeviceKey()} K` : null"
       class=" btn absolute !h-10 !w-9  border-b3 hover:ring-neutral/50 flex  pointer-events-none  cursor-pointer items-center  btn-square opacity-0 h-0 !py-0  btn-neutral !bg-neutral/85 hover:ring-1 group inset-shadow-xs "
@@ -19,6 +17,6 @@ const us = useUiStore()
       <icon
         name="search"
         class="-mt-px !text-nc   size-3.75 opacity-94 group-hover:opacity-100" />
-    </motion.button>
+    </button>
   </animate-presence>
 </template>

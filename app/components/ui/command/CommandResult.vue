@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { motion } from 'motion-v'
-
 defineOptions({
   inheritAttrs: false,
 })
@@ -20,7 +18,7 @@ const variants = {
 </script>
 
 <template>
-  <motion.li
+  <li
 
     :variants="variants"
     initial="hidden"
@@ -32,5 +30,5 @@ const variants = {
       @click="console.log('click')">
       <slot />
     </label>
-  </motion.li>
+  </li>
 </template>

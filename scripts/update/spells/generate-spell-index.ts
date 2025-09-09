@@ -1,6 +1,6 @@
 import fs from 'node:fs'
 import path from 'node:path'
-import { markUpdate } from '../..'
+import { markUpdate } from '../../../scripts'
 import type { Spell } from '../../../shared/types'
 
 const dataPath = path.resolve('scripts/data/spells.json')

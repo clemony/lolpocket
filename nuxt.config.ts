@@ -1,10 +1,5 @@
-/* import { cloudflare } from '@cloudflare/vite-plugin' */
-import tailwindcss from '@tailwindcss/vite'
 import process from 'node:process'
 import { fileURLToPath } from 'node:url'
-/*     "nuxt-og-image", */
-// CONFIG nuxt
-/*   ogImage: { enabled: false }, */
 
 export default defineNuxtConfig({
   modules: [
@@ -16,43 +11,31 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     'vue-sonner/nuxt',
     '@nuxt/icon',
-    'nuxt-svgo',
     'motion-v/nuxt',
     '@nuxtjs/tailwindcss',
-    // 'shadcn-nuxt',
-    // '@nuxthub/core',
     '@nuxtjs/supabase',
   ],
-  plugins: ['./plugins/video-bg.client.ts'],
   imports: {
     dirs: [
-      '@vueuse/components',
       'appdata',
-      'routes',
-      'assets/ts/**',
-      'composables/alias/*/**',
-      '#shared/utils',
     ],
   },
 
   alias: {
-    'stores': fileURLToPath(new URL('./stores', import.meta.url)),
-    'composables': fileURLToPath(new URL('./app/composables', import.meta.url)),
-    'server': fileURLToPath(new URL('./server', import.meta.url)),
-    'utils': fileURLToPath(new URL('./app/utils', import.meta.url)),
-    'api': fileURLToPath(new URL('./public/api', import.meta.url)),
-    '/components': fileURLToPath(new URL('./app/components', import.meta.url)),
-    '/base': fileURLToPath(new URL('./app/base', import.meta.url)),
-    'assets': fileURLToPath(new URL('./app/assets', import.meta.url)),
-    'plugins': fileURLToPath(new URL('./app/plugins', import.meta.url)),
-    'modules': fileURLToPath(new URL('./modules', import.meta.url)),
-    'appdata': fileURLToPath(new URL('./shared/appdata', import.meta.url)),
-    'db': fileURLToPath(new URL('./server/db', import.meta.url)),
-    'db-schema': fileURLToPath(new URL('./server/db/schema', import.meta.url)),
-    'routes': fileURLToPath(new URL('./app/routes/index', import.meta.url)),
-    'd1': fileURLToPath(new URL('./d1', import.meta.url)),
+    base: fileURLToPath(new URL('./app/base', import.meta.url)),
+    appdata: fileURLToPath(new URL('./shared/appdata', import.meta.url)),
   },
 
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+    },
+    {
+      path: 'base',
+      pathPrefix: false,
+    },
+  ],
   runtimeConfig: {
     supabaseUrl: process.env.SUPABASE_URL,
     supabaseAnonKey: process.env.SUPABASE_KEY,
@@ -71,17 +54,7 @@ export default defineNuxtConfig({
         headers: { 'Access-Control-Allow-Origin': '*' },
       },
     },
-    experimental: {
-      openAPI: true,
-    },
-    imports: {
-      dirs: [
-        '#shared/schema',
-      ],
-    },
   },
-
-  /* ------------------------------ data ------------------------------ */
 
   pinia: {
     storesDirs: ['./stores/**'],
@@ -102,12 +75,6 @@ export default defineNuxtConfig({
     }, */
     useSsrCookies: false,
   },
-  /*
-  hub: {
-    database: false,
-  }, */
-
-  /* ------------------------------ utils ------------------------------ */
 
   router: {
     options: {
@@ -118,24 +85,22 @@ export default defineNuxtConfig({
 
   /* ------------------------------ components ------------------------------ */
 
-  components: [
-    {
-      path: '/components',
-      pathPrefix: false,
-    },
-    {
-      path: '/base',
-      pathPrefix: false,
-    },
-  ],
-  svgo: {
-    componentPrefix: 'i',
-  },
   icon: {
     provider: 'iconify',
     serverBundle: {
       collections: ['lucide'],
     },
+    customCollections: [
+      {
+        prefix: 'lp:',
+        dir: './app/assets/icons/lol',
+      },
+      {
+        prefix: 'lp:',
+        dir: './app/assets/icons/ui',
+      },
+    ],
+    componentName: 'icon',
   },
   image: {
     domains: ['ddragon.leagueoflegends.com', 'cdn.communitydragon.org'],
@@ -147,13 +112,16 @@ export default defineNuxtConfig({
 
   typescript: {
     typeCheck: true,
+    strict: false,
+    tsConfig: {
+      compilerOptions: {
+        resolveJsonModule: true,
+      },
+    },
   },
 
   vite: {
     clearScreen: false,
-    plugins: [tailwindcss()],
-    vue: {
-    },
     build: {
       sourcemap: false,
     },
@@ -165,13 +133,7 @@ export default defineNuxtConfig({
     https: false,
   },
 
-  /* ------------------------------ styling ------------------------------ */
-
   css: ['~/assets/css/tailwind.css'],
-
-  postcss: {
-    plugins: {},
-  },
 
   /*   tailwindcss: {
     exposeConfig: true,
@@ -196,21 +158,10 @@ export default defineNuxtConfig({
     },
   },
 
-  /* --------------------------- dev & bundler ----------------------------- */
-
-  devtools: {
-    enabled: true,
-    componentInspector: true,
-    vueDevTools: true,
-    viteInspect: true,
-  },
+  devtools: { enabled: true },
 
   future: {
     typescriptBundlerResolution: true,
-  },
-
-  experimental: {
-    payloadExtraction: true,
   },
 
   compatibilityDate: '2025-07-18',

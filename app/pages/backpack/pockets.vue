@@ -26,9 +26,9 @@ const selected = ref<Pocket>(null)
             </Button>
           </template>
 
-          <div class="size-full flex flex-col gap-6 px-4">
-            <BackpackBoxCard
-              v-for="pocket in ps().pockets"
+          <TransitionScalePop class="size-full flex flex-col gap-6 px-4">
+            <LazyBackpackBoxCard
+              v-for="pocket in ps().pockets.filter(p => p.location.folder == '')"
               :key="pocket.key"
               :pocket
               :selected
@@ -41,7 +41,7 @@ const selected = ref<Pocket>(null)
                 name="add"
                 class="size-7 **:stroke-[1.5]" />
             </Button>
-          </div>
+          </TransitionScalePop>
         </BoxPanelCenter>
       </template>
       <template #right>

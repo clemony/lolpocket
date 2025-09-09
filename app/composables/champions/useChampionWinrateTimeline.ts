@@ -1,5 +1,3 @@
-import { getISOWeek } from '~/utils'
-
 export interface TimeSeriesStat {
   span: string // e.g., '2025-W32'
   games: number

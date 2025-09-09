@@ -7,6 +7,7 @@ export async function runesUpdate() {
     ['generate:runes', './generate-runes.ts'],
     ['generate:path-index', './generate-path-index.ts'],
     ['generate:rune-index', './generate-rune-index.ts'],
+    ['generate:rune-index', './generate-rune-lookup.ts'],
   ]
 
   for (const [label, modulePath] of pipeline) {

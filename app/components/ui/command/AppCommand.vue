@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { motion } from 'motion-v'
-
 const us = useUiStore()
 
 const searchQuery = ref('')
@@ -52,7 +50,7 @@ watch(
           hydrate-on-visible />
       </LazyCommandPopover>
 
-      <motion.div
+      <div
         class="bg-black-20/80    **:text-white/60 overflow-hidden w-140 drop-shadow-lg inset-shadow-sm  relative rounded-box !p-0  border drop-shadow-black/30 shadow-black/20 shadow-md ring-black-15/60 ring-1 border-black-25 "
 
         :variants="searchVariants"
@@ -81,7 +79,7 @@ watch(
           </button>
         </div>
 
-        <motion.div class="  backdrop-blur-3xl  inset-shadow-sm size-full relative overflow-auto max-h-200 pb-2">
+        <div class="  backdrop-blur-3xl  inset-shadow-sm size-full relative overflow-auto max-h-200 pb-2">
           <CommandCategory
             name="Pages"
             :results="pageResult">
@@ -195,8 +193,8 @@ watch(
                 @update:model-value="e => activeItem = e" />
             </CommandMoreResults>
           </CommandCategory>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </LazyFadeDialogContent>
   </Dialog>
 </template>

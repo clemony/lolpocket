@@ -17,6 +17,7 @@ defineNuxtLink({
   externalRelAttribute: 'noreferrer',
   trailingSlash: 'remove',
   prefetch: true,
+  exactActiveClass: 'btn-active',
   prefetchedClass: '',
   prefetchOn: {
     visibility: false,
@@ -29,6 +30,7 @@ defineNuxtLink({
   <Button
     as-child
     :class="cn('duration-50', className)"
+
     v-bind="{ variant, size, shape, hover }">
     <NuxtLink
       v-bind="$attrs"
