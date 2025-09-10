@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { championPositions } from 'appdata'
+import { championPositions } from '#shared/appdata'
 import { VueDraggable } from 'vue-draggable-plus'
 
 const { pocket: p, class: className } = defineProps<{

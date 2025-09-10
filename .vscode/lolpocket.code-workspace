@@ -23,6 +23,10 @@
       "source.fixAll.eslint": "always",
       "source.organizeImports": "always"
     },
+    "files.exclude": {
+      "**/*.js": {"when": "$(basename).ts"}
+
+    },
     // Silent the stylistic rules in you IDE, but still auto fix them
     "eslint.rules.customizations": [
       {

@@ -1,11 +1,11 @@
-@import "tw-animate-css";
-@import "assets/css/theme.css";
-@import "tailwindcss";
+@import 'tw-animate-css';
+@import 'assets/css/theme.css';
+@import 'tailwindcss';
 
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --sidebar:  oklch(95.5% 0% 68deg); /*;var(--color-b1)*/
+  --sidebar: oklch(95.5% 0% 68deg); /*;var(--color-b1)*/
   --sidebar-foreground: var(--color-bc);
   --sidebar-primary: var(--color-nc);
   --sidebar-primary-foreground: var(--color-n1);

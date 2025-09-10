@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { shardObject } from 'appdata/records/shards'
+import { shardObject } from '#shared/appdata/records/shards'
 
 const { pocket, set: s } = defineProps<{
   pocket: Pocket
@@ -34,7 +34,7 @@ const set = computed (() => s)
             @change="console.log(set)" />
 
           <component
-            :is="`i-shards-${shard.id}`"
+            :is="`i-lol-${shard.id}`"
             :alt="`shard-${shard.name}`"
             :class="cn('shrink-0 absolute peer-checked:text-[var(--shard-color)] peer-not-checked:opacity-70 dst', { '!size-5': ![5011, 5010, 5007].includes(shard.id), '!size-4.5': [5011, 5010, 5007].includes(shard.id) })" />
         </Label>

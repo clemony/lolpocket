@@ -1,13 +1,13 @@
-@import "tailwindcss";
-@import "./theme.css";
+@import 'tailwindcss';
+@import './theme.css';
 
 @layer components {
   .dst {
     @apply drop-shadow-text;
   }
-.role-text {
-  @apply saturate-250  brightness-70;
-}
+  .role-text {
+    @apply saturate-250  brightness-70;
+  }
   .set-absolute {
     @apply absolute top-0 left-0 inset-0;
   }
@@ -31,8 +31,6 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
-
-
 
   .tip-icon {
     @apply inline-flex align-middle mr-2 ml-0.5 mb-0.25 size-4.25;
@@ -62,17 +60,11 @@
     --r: 4px; /* the radius */
     --s: 40px; /* the size of the cut */
 
-    --_m: /calc(2 * var(--r)) calc(2 * var(--r))
-      radial-gradient(#000 70%, #0000 72%) no-repeat;
+    --_m: /calc(2 * var(--r)) calc(2 * var(--r)) radial-gradient(#000 70%, #0000 72%) no-repeat;
     mask:
       calc(var(--s) + var(--r)) 0 var(--_m),
       0 calc(var(--s) + var(--r)) var(--_m),
-      radial-gradient(var(--s) at 0 0, #0000 99%, #000 101%) var(--r) var(--r)
-        no-repeat,
-      conic-gradient(
-        at calc(var(--s) + 2 * var(--r)) calc(var(--s) + 2 * var(--r)),
-        #000 75%,
-        #0000 0
-      );
+      radial-gradient(var(--s) at 0 0, #0000 99%, #000 101%) var(--r) var(--r) no-repeat,
+      conic-gradient(at calc(var(--s) + 2 * var(--r)) calc(var(--s) + 2 * var(--r)), #000 75%, #0000 0);
   }
 }

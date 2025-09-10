@@ -1,4 +1,3 @@
-
 /* tabs */
 
 @utility tabs-box {
@@ -12,16 +11,8 @@
 @utility tab {
   --radius-field: 1rem;
   --tab-bg: var(--b1);
-  --tab-border-color: color-mix(
-    in lch,
-    var(--color-b3) 80%,
-    white 60%
-  ) !important;
-  --tab-border-colors: color-mix(
-    in lch,
-    var(--color-b3) 70%,
-    white 60%
-  ) !important;
+  --tab-border-color: color-mix(in lch, var(--color-b3) 80%, white 60%) !important;
+  --tab-border-colors: color-mix(in lch, var(--color-b3) 70%, white 60%) !important;
 }
 
 @layer utilities {

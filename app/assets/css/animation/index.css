@@ -1,8 +1,7 @@
-
-@import "./collapse.css";
-@import "./blink.css";
-@import "./glow.css";
-@import "./grow-underline.css";
-@import "./parallax.css";
-@import "./global-page-transition.css";
-@import "./gradient.css";
+@import './collapse.css';
+@import './blink.css';
+@import './glow.css';
+@import './grow-underline.css';
+@import './parallax.css';
+@import './global-page-transition.css';
+@import './gradient.css';

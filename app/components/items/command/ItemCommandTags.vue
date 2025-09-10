@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { itemStats } from 'appdata'
+import { itemStats } from '#shared/appdata'
 
 const is = useItemStore()
 const { filters, setFilter, filtered } = useItemFilter()

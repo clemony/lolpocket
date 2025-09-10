@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "assets/css/theme.css";
+@import 'tailwindcss';
+@import 'assets/css/theme.css';
 
 @layer base {
   :root {

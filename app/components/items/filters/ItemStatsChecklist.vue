@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { itemStats } from 'appdata'
+import { itemStats } from '#shared/appdata'
 import { ListboxContent, ListboxItem, ListboxItemIndicator, ListboxRoot } from 'reka-ui'
 </script>
 

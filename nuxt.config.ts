@@ -5,37 +5,43 @@ export default defineNuxtConfig({
   modules: [
     '@pinia/nuxt',
     'pinia-plugin-persistedstate/nuxt',
+    '@nuxtjs/supabase',
     '@nuxt/image',
     '@vueuse/nuxt',
-    '@morev/vue-transitions/nuxt',
     '@nuxt/eslint',
+    '@nuxtjs/tailwindcss',
+    '@morev/vue-transitions/nuxt',
     'vue-sonner/nuxt',
     '@nuxt/icon',
+    'nuxt-svgo',
     'motion-v/nuxt',
-    '@nuxtjs/tailwindcss',
-    '@nuxtjs/supabase',
   ],
   imports: {
     dirs: [
       'appdata',
+      '#shared/types'
     ],
+    autoImport: true,
+    global: true,
   },
-
   alias: {
-    base: fileURLToPath(new URL('./app/base', import.meta.url)),
-    appdata: fileURLToPath(new URL('./shared/appdata', import.meta.url)),
-  },
+    api: fileURLToPath(new URL('./server/api', import.meta.url)),
+    types: fileURLToPath(new URL('./shared/types', import.meta.url)),
 
+  },
   components: [
+    {
+      path: './base',
+      pathPrefix: false,
+    },
     {
       path: '~/components',
       pathPrefix: false,
     },
-    {
-      path: 'base',
-      pathPrefix: false,
-    },
   ],
+  svgo: {
+    componentPrefix: 'i',
+  },
   runtimeConfig: {
     supabaseUrl: process.env.SUPABASE_URL,
     supabaseAnonKey: process.env.SUPABASE_KEY,
@@ -86,20 +92,10 @@ export default defineNuxtConfig({
   /* ------------------------------ components ------------------------------ */
 
   icon: {
-    provider: 'iconify',
+    provider: 'server',
     serverBundle: {
       collections: ['lucide'],
     },
-    customCollections: [
-      {
-        prefix: 'lp:',
-        dir: './app/assets/icons/lol',
-      },
-      {
-        prefix: 'lp:',
-        dir: './app/assets/icons/ui',
-      },
-    ],
     componentName: 'icon',
   },
   image: {
@@ -112,12 +108,6 @@ export default defineNuxtConfig({
 
   typescript: {
     typeCheck: true,
-    strict: false,
-    tsConfig: {
-      compilerOptions: {
-        resolveJsonModule: true,
-      },
-    },
   },
 
   vite: {

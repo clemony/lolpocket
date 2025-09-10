@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { getInboxTemplate } from 'appdata/messaging/inbox-templates'
+import { getInboxTemplate } from '#shared/appdata/messaging/inbox-templates'
 
 const { item } = defineProps<{ item: InboxItem }>()
 

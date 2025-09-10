@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { itemTags } from 'appdata'
+import { itemTags } from '#shared/appdata'
 
 const { state } = defineProps<{
   state: any

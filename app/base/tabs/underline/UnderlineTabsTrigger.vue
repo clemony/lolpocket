@@ -6,7 +6,7 @@ const props = defineProps<
   TabsTriggerProps & {
     class?: HTMLAttributes['class']
   }
-    >()
+>()
 const forwarded = reactiveOmit(props, 'class')
 </script>
 

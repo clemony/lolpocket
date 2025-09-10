@@ -1,1 +1,1 @@
-export * from './inbox-templates';
+export * from './inbox-templates'

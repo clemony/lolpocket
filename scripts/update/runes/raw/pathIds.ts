@@ -1,7 +1,7 @@
 // Updated Patch 25.17 - 09/07/2025 08:03:39 AM CDT
 
 export const pathIds: Record<string, number[]> = {
-  "Resolve": [
+  Resolve: [
     8437,
     8439,
     8465,
@@ -15,7 +15,7 @@ export const pathIds: Record<string, number[]> = {
     8453,
     8242
   ],
-  "Domination": [
+  Domination: [
     8112,
     8128,
     9923,
@@ -29,7 +29,7 @@ export const pathIds: Record<string, number[]> = {
     8105,
     8106
   ],
-  "Precision": [
+  Precision: [
     8005,
     8008,
     8021,
@@ -44,7 +44,7 @@ export const pathIds: Record<string, number[]> = {
     8017,
     8299
   ],
-  "Sorcery": [
+  Sorcery: [
     8214,
     8229,
     8230,
@@ -58,7 +58,7 @@ export const pathIds: Record<string, number[]> = {
     8232,
     8236
   ],
-  "Inspiration": [
+  Inspiration: [
     8351,
     8360,
     8369,

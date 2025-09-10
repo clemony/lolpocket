@@ -1,11 +1,11 @@
-@import "tailwindcss";
-@import "../colors.css";
-@import "../theme.css";
+@import 'tailwindcss';
+@import '../colors.css';
+@import '../theme.css';
 
 #mastery-gradient-progress {
   animation: gradient-wave-custom 20s linear infinite;
 
-  &[data-level="0"] {
+  &[data-level='0'] {
     background-size: 300% 300%;
     @apply bg-linear-to-br from-b1 via-b3 to-b2;
 
@@ -14,7 +14,7 @@
     }
   }
 
-  &[data-level="6"] {
+  &[data-level='6'] {
     background-size: 300% 300%;
     @apply bg-linear-to-br from-emerald via-hp to-resolve;
 
@@ -23,7 +23,7 @@
     }
   }
 
-  &[data-level="7"] {
+  &[data-level='7'] {
     background-size: 300% 300%;
     @apply bg-linear-to-br from-inspiration via-mana to-challenger;
 
@@ -32,7 +32,7 @@
     }
   }
 
-  &[data-level="8"] {
+  &[data-level='8'] {
     background-size: 300% 300%;
     @apply bg-linear-to-br from-onhit via-master to-domination;
 
@@ -41,7 +41,7 @@
     }
   }
 
-  &[data-level="9"] {
+  &[data-level='9'] {
     background-size: 300% 300%;
     @apply bg-linear-to-br from-precision via-fighter to-as;
 
@@ -50,18 +50,15 @@
     }
   }
 
-  &[data-level="10"] {
+  &[data-level='10'] {
     background:
       radial-gradient(80.99% 100% at 50% 0%, #00ff0a 0%, #36008e 100%),
       radial-gradient(50% 123.47% at 50% 50%, #ffb6ac 0%, #36008e 100%),
-      linear-gradient(301.28deg, #ff006b 0%, #48dd9e 100%),
-      linear-gradient(294.84deg, #5a60e4 0%, #d30000 100%),
+      linear-gradient(301.28deg, #ff006b 0%, #48dd9e 100%), linear-gradient(294.84deg, #5a60e4 0%, #d30000 100%),
       linear-gradient(52.29deg, #000000 0%, #00ff85 100%),
       radial-gradient(100% 138.69% at 100% 0%, #0007a5 0%, #ff7a00 100%),
-      radial-gradient(70.41% 100% at 50% 0%, #d5b300 0%, #2200aa 100%),
-      url(assets/icons/img/noise.svg);
-    background-blend-mode:
-      screen, screen, lighten, overlay, lighten, difference, normal;
+      radial-gradient(70.41% 100% at 50% 0%, #d5b300 0%, #2200aa 100%), url(assets/icons/img/noise.svg);
+    background-blend-mode: screen, screen, lighten, overlay, lighten, difference, normal;
     background-size: 500% 500%;
 
     @apply saturate-280 brightness-103 contrast-102;

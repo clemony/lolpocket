@@ -31,8 +31,7 @@ console.log('🌱 - mainSet:', mainSet)
       <Placeholder
         v-else
         class="size-18  group-hover/select:!bg-b1 transition-all duration-250  rounded-full">
-        <icon
-          name="lp:runes"
+        <i-lol-runes
           class="!size-9 text-bc/50 opacity-0 group-hover/select:opacity-100 transition-all duration-250 shrink-0" />
       </Placeholder>
 
@@ -44,9 +43,8 @@ console.log('🌱 - mainSet:', mainSet)
           :src="`/img/paths/${mainSet?.secondary?.path}.webp`"
           class="w-6.5  !h-auto" />
 
-        <icon
+        <i-lol-runes
           v-else
-          name="lp:runes"
           class="!size-5.5 text-bc/60 opacity-0 group-hover/select:opacity-100 transition-all duration-250  shrink-0" />
       </span>
     </BaseSelectTrigger>

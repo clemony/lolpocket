@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import type { DropdownMenuRadioItemEmits, DropdownMenuRadioItemProps } from 'reka-ui'
 import {
-    DropdownMenuItemIndicator,
-    DropdownMenuRadioItem,
+  DropdownMenuItemIndicator,
+  DropdownMenuRadioItem,
 
-    useForwardPropsEmits,
+  useForwardPropsEmits,
 } from 'reka-ui'
 
 const props = defineProps<DropdownMenuRadioItemProps & { class?: HTMLAttributes['class'] }>()

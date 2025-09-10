@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "../theme.css";
+@import 'tailwindcss';
+@import '../theme.css';
 /* @import "tippy.js/dist/svg-arrow.css"; */
 
 @layer base {
@@ -13,7 +13,7 @@
     & > .tippy-svg-arrow {
       @apply drop-shadow-sm;
     }
-    &[data-placement="bottom"] {
+    &[data-placement='bottom'] {
       @apply inset-shadow-sm-x;
       & > .tippy-svg-arrow > svg:first-child,
       & > .tippy-svg-arrow > svg:last-child {
@@ -21,7 +21,7 @@
       }
     }
 
-    &[data-placement="top"] {
+    &[data-placement='top'] {
       @apply inset-shadow-sm;
 
       & > .tippy-svg-arrow > svg:first-child,
@@ -30,7 +30,7 @@
       }
     }
 
-    &[data-placement="left"] {
+    &[data-placement='left'] {
       @apply -translate-x-0.25;
       > .tippy-svg-arrow > svg:first-child,
       > .tippy-svg-arrow > svg:last-child {
@@ -38,8 +38,8 @@
       }
     }
 
-    &[data-placement="right"] > .tippy-svg-arrow > svg:first-child,
-    &[data-placement="right"] > .tippy-svg-arrow > svg:last-child {
+    &[data-placement='right'] > .tippy-svg-arrow > svg:first-child,
+    &[data-placement='right'] > .tippy-svg-arrow > svg:last-child {
       @apply -translate-y-4 translate-x-2.5;
     }
     & > .tippy-svg-arrow {
@@ -54,11 +54,11 @@
     }
   }
 
-  .tippy-box[data-inertia][data-state="visible"] {
+  .tippy-box[data-inertia][data-state='visible'] {
     transition-timing-function: cubic-bezier(0.28, 0.93, 0.75, 1.38);
   }
 
-  .tippy-box[data-theme~="basic"] {
+  .tippy-box[data-theme~='basic'] {
     @apply border border-b3 bg-b1/90 rounded-field backdrop-blur-md text-bc/90 font-medium capitalize **:text-2 drop-shadow-[1px_2px_2px_#00000020] shadow-none py-1.5 z-1;
     & > .tippy-svg-arrow {
       @apply drop-shadow-[0px_-1px_0_#00000016] !z-0;
@@ -69,22 +69,21 @@
     & > .tippy-svg-arrow > svg:last-child {
       @apply !fill-b1 text-b1 scale-90;
     }
-    &[data-placement="bottom"] {
+    &[data-placement='bottom'] {
       @apply inset-shadow-sm-x;
       & > .tippy-svg-arrow > svg:first-child,
       & > .tippy-svg-arrow > svg:last-child {
         @apply !translate-y-4.5 -translate-x-1.25;
       }
     }
-
   }
 
-  .tippy-box[data-theme~="field"] {
+  .tippy-box[data-theme~='field'] {
     @apply fieldset mt-1 !shadow-warm-soft !drop-shadow-sm drop-shadow-black/5 relative w-full h-fit bg-b2 border border-b3 p-4 rounded-box;
   }
 }
 
-.tippy-box[data-theme~="mastery"] {
+.tippy-box[data-theme~='mastery'] {
   @apply shadow-md bg-n1/76 !max-w-62 text-nc/80 drop-shadow-lg rounded-lg px-4 py-1 backdrop-blur-md inset-shadow-white/20 border border-b4/50;
 
   & > .tippy-svg-arrow {

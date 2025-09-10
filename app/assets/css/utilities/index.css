@@ -1,6 +1,5 @@
+@import './utilities.css';
+@import './daisy.css';
 
-@import "./utilities.css";
-@import "./daisy.css";
-
-@import "./hover-ring";
-@import "./color-utilities";
+@import './hover-ring';
+@import './color-utilities';

@@ -42,18 +42,6 @@ watch(() => route.fullPath, (newPath, oldPath) => {
   }
 })
 
-useIntersectionObserver(
-  sentinel,
-  ([entry]) => {
-    // When the sentinel leaves the viewport, we are show
-    us().showMiniNav = !entry.isIntersecting
-  },
-  {
-    root: scrollRef, // your scroll container
-    threshold: 0,
-  },
-)
-
 const { scrollY } = useScroll({
   container: scrollRef,
 })

@@ -6,7 +6,7 @@ definePageMeta({
   path: '/settings/profile',
   icon: 'at',
   description: 'Set your public profile display settings and hide your annoyances.',
-  middleware: 'confirm-auth',
+  /* middleware: 'confirm-auth', */
 })
 
 const labelClass = 'w-full h-16 border-b flex justify-between items-center pr-1 !border-b-b2 [&_h5]:font-semibold [&_h5]:text-bc/70'

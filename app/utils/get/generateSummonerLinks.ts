@@ -1,3 +1,5 @@
+import { getSummonerIcon } from '../splash'
+
 export function generateSummonerLinks(summoner?: Summoner | Partial<Summoner> | Account, puuid?: string): LinkObject {
   if (!summoner)
     return null

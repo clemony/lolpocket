@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-import { contactLinks, siteInfoLinks } from '#shared/appdata'
-import { riotDisclaimer } from 'appdata'
+import { contactLinks, riotDisclaimer, siteInfoLinks } from '#shared/appdata'
 
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']

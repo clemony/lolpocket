@@ -1,19 +1,16 @@
-@import "tailwindcss";
-@import "../colors.css";
-@import "../theme.css";
-@import "../plugins/daisy.css";
+@import 'tailwindcss';
+@import '../colors.css';
+@import '../theme.css';
+@import '../plugins/daisy.css';
 
 /* chkbx */
 
 @utility checkbox-neutral {
-@apply border-b4 inset-shadow-none;
+  @apply border-b4 inset-shadow-none;
 }
 @utility checkbox-sm {
   @apply rounded-[3.5px];
 }
-
-
-
 
 /*  btn */
 
@@ -27,12 +24,11 @@
   --depth: 0;
 }
 
-
 @utility fx-1 {
   --noise: 0.8;
   --depth: 1;
---btn-shadow: initial;
---btn-border: initial;
+  --btn-shadow: initial;
+  --btn-border: initial;
 }
 
 @utility noise-sm {
@@ -84,8 +80,8 @@
 
 @utility btn-shadow-ghost {
   &:hover,
-  &[data-state="open"],
-  &[data-state="active"] {
+  &[data-state='open'],
+  &[data-state='active'] {
     @apply bg-b2/60 shadow-sm shadow-black/5 drop-shadow-black/8 drop-shadow-xs !border-b4/50;
   }
 }
@@ -152,7 +148,6 @@
 @utility collapse-title {
   @apply p-0 w-auto h-auto;
 }
-
 
 /* chat */
 

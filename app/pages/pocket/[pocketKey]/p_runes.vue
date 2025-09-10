@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { CarouselApi } from 'base/carousel/carousel-index'
+import type { CarouselApi } from '~/base/carousel/carousel-index'
 
 definePageMeta({
   name: 'pocket-runes',

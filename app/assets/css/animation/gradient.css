@@ -32,8 +32,6 @@
     radial-gradient(100% 148.07% at 0% 0%, #fcbdfb 0%, #4bdffb 100%);
   background-blend-mode: screen, color-dodge, overlay, difference, normal;
 
-
-
 background: linear-gradient(
     135deg,
     var(--color-diamond) 0%,

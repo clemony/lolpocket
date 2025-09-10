@@ -1,5 +1,5 @@
 export * from './account'
-export * from './alias/stores'
+export * from './alias'
 export * from './champions'
 export * from './items'
 export * from './match'

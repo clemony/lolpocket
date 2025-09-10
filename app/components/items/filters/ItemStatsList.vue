@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { itemStats } from 'appdata'
+import { itemStats } from '#shared/appdata'
 
 const emit = defineEmits(['update:model'])
 

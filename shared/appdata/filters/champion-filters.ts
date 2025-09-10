@@ -1,8 +1,8 @@
 // Updated Patch 25.17 - 09/01/2025 04:45:08 PM CDT
 
 export const championFilters = {
-  "roles": {
-    "Fighter": [
+  roles: {
+    Fighter: [
       266,
       799,
       200,
@@ -68,7 +68,7 @@ export const championFilters = {
       83,
       154
     ],
-    "Juggernaut": [
+    Juggernaut: [
       266,
       122,
       36,
@@ -85,7 +85,7 @@ export const championFilters = {
       106,
       83
     ],
-    "Tank": [
+    Tank: [
       266,
       12,
       32,
@@ -134,7 +134,7 @@ export const championFilters = {
       83,
       154
     ],
-    "Assassin": [
+    Assassin: [
       103,
       84,
       166,
@@ -184,7 +184,7 @@ export const championFilters = {
       777,
       238
     ],
-    "Burst": [
+    Burst: [
       103,
       1,
       893,
@@ -203,7 +203,7 @@ export const championFilters = {
       711,
       142
     ],
-    "Mage": [
+    Mage: [
       103,
       34,
       1,
@@ -280,7 +280,7 @@ export const championFilters = {
       142,
       143
     ],
-    "Marksman": [
+    Marksman: [
       166,
       523,
       22,
@@ -316,7 +316,7 @@ export const championFilters = {
       804,
       221
     ],
-    "Support": [
+    Support: [
       12,
       32,
       34,
@@ -363,7 +363,7 @@ export const championFilters = {
       142,
       143
     ],
-    "Vanguard": [
+    Vanguard: [
       12,
       32,
       79,
@@ -380,7 +380,7 @@ export const championFilters = {
       72,
       154
     ],
-    "Diver": [
+    Diver: [
       799,
       233,
       164,
@@ -400,7 +400,7 @@ export const championFilters = {
       62,
       5
     ],
-    "Skirmisher": [
+    Skirmisher: [
       799,
       200,
       114,
@@ -419,7 +419,7 @@ export const championFilters = {
       157,
       777
     ],
-    "Battlemage": [
+    Battlemage: [
       34,
       136,
       69,
@@ -432,7 +432,7 @@ export const championFilters = {
       112,
       8
     ],
-    "Specialist": [
+    Specialist: [
       268,
       31,
       9,
@@ -448,7 +448,7 @@ export const championFilters = {
       17,
       26
     ],
-    "Catcher": [
+    Catcher: [
       432,
       53,
       427,
@@ -460,7 +460,7 @@ export const championFilters = {
       412,
       143
     ],
-    "Warden": [
+    Warden: [
       201,
       3,
       897,
@@ -469,7 +469,7 @@ export const championFilters = {
       223,
       44
     ],
-    "Artillery": [
+    Artillery: [
       910,
       126,
       99,
@@ -479,7 +479,7 @@ export const championFilters = {
       101,
       115
     ],
-    "Enchanter": [
+    Enchanter: [
       40,
       43,
       117,
@@ -494,8 +494,8 @@ export const championFilters = {
       350
     ]
   },
-  "positions": {
-    "Top": [
+  positions: {
+    Top: [
       266,
       84,
       799,
@@ -556,7 +556,7 @@ export const championFilters = {
       83,
       154
     ],
-    "Middle": [
+    Middle: [
       103,
       84,
       166,
@@ -613,7 +613,7 @@ export const championFilters = {
       115,
       142
     ],
-    "Support": [
+    Support: [
       12,
       32,
       22,
@@ -663,7 +663,7 @@ export const championFilters = {
       26,
       143
     ],
-    "Jungle": [
+    Jungle: [
       32,
       200,
       63,
@@ -714,7 +714,7 @@ export const championFilters = {
       154,
       238
     ],
-    "Bottom": [
+    Bottom: [
       523,
       22,
       51,
@@ -746,8 +746,8 @@ export const championFilters = {
       115
     ]
   },
-  "attackType": {
-    "Melee": [
+  attackType: {
+    Melee: [
       266,
       84,
       12,
@@ -837,7 +837,7 @@ export const championFilters = {
       154,
       238
     ],
-    "Ranged": [
+    Ranged: [
       103,
       166,
       34,
@@ -923,11 +923,11 @@ export const championFilters = {
       143
     ]
   },
-  "resource": {
-    "Blood well": [
+  resource: {
+    'Blood well': [
       266
     ],
-    "Mana": [
+    'Mana': [
       103,
       166,
       12,
@@ -1072,7 +1072,7 @@ export const championFilters = {
       142,
       143
     ],
-    "Energy": [
+    'Energy': [
       84,
       799,
       85,
@@ -1080,48 +1080,48 @@ export const championFilters = {
       98,
       238
     ],
-    "None": [
+    'None': [
       200,
       86,
       55,
       92,
       234
     ],
-    "Frenzy": [
+    'Frenzy': [
       233
     ],
-    "Health": [
+    'Health': [
       36,
       154
     ],
-    "Rage": [
+    'Rage': [
       150,
       421
     ],
-    "Courage": [
+    'Courage': [
       240
     ],
-    "Shield": [
+    'Shield': [
       82
     ],
-    "Fury": [
+    'Fury': [
       58,
       102,
       23
     ],
-    "Ferocity": [
+    'Ferocity': [
       107
     ],
-    "Heat": [
+    'Heat': [
       68
     ],
-    "Grit": [
+    'Grit': [
       875
     ],
-    "Crimson rush": [
+    'Crimson rush': [
       8
     ],
-    "Flow": [
+    'Flow': [
       157,
       777
     ]
