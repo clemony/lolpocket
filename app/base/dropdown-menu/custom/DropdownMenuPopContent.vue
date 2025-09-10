@@ -44,27 +44,27 @@ const wrapperVariants = {
 </script>
 
 <template>
-    <DropdownMenuContent
-      as-child
-      :align="align"
-      v-bind="$attrs">
-      <motion.div
-        :variants="variants"
-        initial="hidden"
-        animate="visible"
-        exit="hidden"
-        :transition="{
-          type: 'spring',
-          duration: 0.3,
-          bounce: 0.2,
-        }"
-        :class="
-          cn(
-            'z-50 w-(--reka-dropdown-menu-trigger-width) !rounded-lg border backdrop-blur-lg drop-shadow-md !border-b3  bg-b1/94  p-1 text-bc shadow-md outline-none group-data-[state=visible]:**:opacity-100 group-data-[state=hidden]:**:opacity-0',
-            className,
-          )
-        ">
-        <slot />
-      </motion.div>
-    </DropdownMenuContent>
+  <DropdownMenuContent
+    as-child
+    :align="align"
+    v-bind="$attrs">
+    <motion.div
+      :variants="variants"
+      initial="hidden"
+      animate="visible"
+      exit="hidden"
+      :transition="{
+        type: 'spring',
+        duration: 0.3,
+        bounce: 0.2,
+      }"
+      :class="
+        cn(
+          'z-50 w-(--reka-dropdown-menu-trigger-width) !rounded-lg border backdrop-blur-lg drop-shadow-md !border-b3  bg-b1/94  p-1 text-bc shadow-md outline-none group-data-[state=visible]:**:opacity-100 group-data-[state=hidden]:**:opacity-0',
+          className,
+        )
+      ">
+      <slot />
+    </motion.div>
+  </DropdownMenuContent>
 </template>

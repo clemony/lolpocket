@@ -1,4 +1,4 @@
-import { defineEventHandler, getQuery } from 'h3'
+/* import { defineEventHandler, getQuery } from 'h3'
 import { JSDOM } from 'jsdom'
 import metascraper from 'metascraper'
 import metascraperAuthor from 'metascraper-author'
@@ -41,4 +41,4 @@ export default defineEventHandler(async (event) => {
       statusMessage: 'Failed to fetch or parse Open Graph data.',
     })
   }
-})
+}) */

@@ -6,7 +6,7 @@ const props = defineProps<
   TabsListProps & {
     class?: HTMLAttributes['class']
   }
-    >()
+>()
 const forwarded = reactiveOmit(props, 'class')
 </script>
 

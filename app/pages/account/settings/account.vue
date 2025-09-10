@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { providers } from 'appdata/authProviders'
+import { providers } from '#shared/appdata/authProviders'
 import { toast } from 'vue-sonner'
 
 definePageMeta({
@@ -7,7 +7,7 @@ definePageMeta({
   path: '/settings/account',
   icon: 'at',
   description: 'Manage your account settings and login settings.',
-  middleware: 'confirm-auth',
+/*   middleware: 'confirm-auth', */
 })
 
 const select = shallowRef(null)

@@ -1,7 +1,7 @@
-import * as htmlToImage from 'html-to-image'
 import download from 'downloadjs'
+import * as htmlToImage from 'html-to-image'
 
-export async function downloadPocketPng(pocket) {
+/* export async function downloadPocketPng(pocket) {
   const ps = usePocketStore()
   await ps.pocketCardRef
 
@@ -15,3 +15,4 @@ export async function downloadPocketPng(pocket) {
   htmlToImage.toPng(ps.pocketCardRef, { quality: 0.95, backgroundColor: '#FFFFFF' })
     .then(dataUrl => download(dataUrl, `${cardName}.png`))
 }
+ */

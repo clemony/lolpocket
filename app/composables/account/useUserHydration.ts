@@ -1,6 +1,7 @@
-import { appTaglines } from 'appdata/content/taglines'
+import { appTaglines } from '#shared/appdata/content/taglines'
 import * as v from 'valibot'
 import { toast } from 'vue-sonner'
+import { getRandom } from '~/utils/get/getRandom'
 
 interface UserProfileResponse {
   account: Account | null

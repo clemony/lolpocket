@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { runeToPath } from 'appdata/index/'
+import { runeToPath } from '#shared/appdata/index/'
 
 const { class: className, id } = defineProps<{
   class?: HTMLAttributes['class']

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { championPositions } from 'appdata'
+import { championPositions } from '#shared/appdata'
 
 const { class: className, pocket: p, side, sideOffset, align, alignOffset } = defineProps<{
   class?: HTMLAttributes['class']

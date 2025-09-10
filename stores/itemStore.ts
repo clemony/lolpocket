@@ -1,6 +1,6 @@
+import { akaLookup } from '#shared/appdata/filters/item-aka'
+import { itemFilters } from '#shared/appdata/filters/item-filters'
 import type { GridApi } from 'ag-grid-community'
-import { akaLookup } from 'appdata/filters/item-aka'
-import { itemFilters } from 'appdata/filters/item-filters'
 import { defineStore } from 'pinia'
 
 export const useItemStore = defineStore(

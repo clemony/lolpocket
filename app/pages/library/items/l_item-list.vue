@@ -1,8 +1,9 @@
 <script lang="ts" setup>
+import { itemsLite } from '#shared/appdata/items-lite'
 import type { ColDef, GridApi, GridOptions, GridPreDestroyedEvent, GridReadyEvent } from 'ag-grid-community'
 import { CellStyleModule, ClientSideRowModelModule, ColumnApiModule, ColumnAutoSizeModule, ColumnHoverModule, GridStateModule, ModuleRegistry, RenderApiModule, RowSelectionModule, ValidationModule } from 'ag-grid-community'
 import { AgGridVue } from 'ag-grid-vue3'
-import { itemsLite } from 'appdata/items-lite'
+import { pocketTheme } from '~/utils/config/tableTheme'
 
 definePageMeta({
   name: 'Item Stats',

@@ -1,11 +1,11 @@
-@import "tailwindcss";
-@import "./theme";
+@import 'tailwindcss';
+@import './theme';
 
 @theme {
   --color-discord: oklch(58% 52% 274deg);
 
   --color-all-roles: oklch(37% 0% 0);
---color-precision: oklch(85.49% 0.0892 84.09);
+  --color-precision: oklch(85.49% 0.0892 84.09);
   --color-domination: oklch(60.61% 0.1206 15.34);
   --color-sorcery: oklch(69.02% 0.0644 332.52);
   --color-resolve: oklch(76.83% 0.0749 131.06);
@@ -23,16 +23,8 @@
   --color-grandmaster: oklch(68.06% 0.1352 26.61);
 
   --color-challenger: oklch(83.25% 0.0787 213.4);
-  --color-challenger-w600: color-mix(
-    in srgb,
-    var(--color-challenger) 100%,
-    white 60%
-  );
-  --color-challenger-b100: color-mix(
-    in srgb,
-    var(--color-challenger) 100%,
-    black 10%
-  );
+  --color-challenger-w600: color-mix(in srgb, var(--color-challenger) 100%, white 60%);
+  --color-challenger-b100: color-mix(in srgb, var(--color-challenger) 100%, black 10%);
 
   --color-transparent: #00000000;
   --color-black: oklch(0% 0 0);
@@ -178,27 +170,27 @@
   color: var(--color-challenger);
 }
 
-[data-role="support"] {
+[data-role='support'] {
   &.role-bg {
     @apply bg-inspiration;
   }
 }
 
-[data-role="middle"] {
+[data-role='middle'] {
   &.role-bg {
     @apply bg-sorcery;
   }
 }
 
-[data-role="bottom"] {
-    @apply !bg-precision;
+[data-role='bottom'] {
+  @apply !bg-precision;
 }
-[data-role="top"] {
+[data-role='top'] {
   &.role-bg {
     @apply bg-domination;
   }
 }
-[data-role="jungle"] {
+[data-role='jungle'] {
   &.role-bg {
     @apply bg-resolve;
   }
@@ -263,22 +255,22 @@
   transition: all 0.5s ease-in-out;
 }
 
-.gradient[data-path="Precision"] {
+.gradient[data-path='Precision'] {
   background-position: 0%;
 }
 
-.gradient[data-path="Domination"] {
+.gradient[data-path='Domination'] {
   background-position: 20%;
 }
 
-.gradient[data-path="Sorcery"] {
+.gradient[data-path='Sorcery'] {
   background-position: 44%;
 }
 
-.gradient[data-path="Resolve"] {
+.gradient[data-path='Resolve'] {
   background-position: 80%;
 }
 
-.gradient[data-path="Inspiration"] {
+.gradient[data-path='Inspiration'] {
   background-position: 100%;
 }

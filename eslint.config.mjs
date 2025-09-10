@@ -8,16 +8,22 @@ export default antfu({
   ...pluginVue.configs['flat/essential'],
 
   ignores: [
-    './storage/*',
-    './utils/data/get/updateItemData.ts',
     './dist',
     './node_modules',
     './schema',
+    './.vscode',
+    './.nuxt',
+    './.notes',
+    './supabase',
+    './public',
+    '**/raw/**',
+    '.save.json'
   ],
   vue: true,
   rules: {
     'no-undef': 'off',
     'eqeqeq': 'off',
+    'style/comma-dangle': 'off',
     'vue/html-self-closing': 'off',
     'no-unused-vars"': 'off',
     'no-console': 'off',

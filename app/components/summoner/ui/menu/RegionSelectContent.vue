@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { regionIndex } from 'appdata/index/region-index'
+import { regionIndex } from '#shared/appdata/index/region-index'
 import { SelectArrow } from 'reka-ui'
 
 const { class: className } = defineProps<{

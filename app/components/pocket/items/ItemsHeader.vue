@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { getDeviceKey } from '~/utils/config/handleDevice'
+
 const props = defineProps<{
   pocket: Pocket
 }>()

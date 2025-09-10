@@ -59,5 +59,6 @@ d1
 !.env.example
 
 
-# Scraps local notes
-.scraps/
+# js and js maps
+*.js
+*.js.map

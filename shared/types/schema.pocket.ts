@@ -2,6 +2,11 @@ import { hexoid } from 'hexoid'
 import * as v from 'valibot'
 import { FixedArray, getDeepDefaults, MinMaxArray } from './schema.helpers'
 
+import { patchIndex } from '#shared/appdata/index/index'
+
+import { generateName } from '../utils/generateStrings'
+import { pType } from '../utils/pType'
+
 const toID = hexoid()
 
 // Location
@@ -119,3 +124,87 @@ export const CardSchema = v.nullable(v.object({
 
 // --- Type ---
 export type Card = v.InferOutput<typeof CardSchema>
+
+// --- Pocket Factory ---
+
+export function newRuneSet(): RuneSet {
+  return {
+    id: toID(),
+    keystone: null,
+    primary: {
+      path: '',
+      runes: [null, null, null],
+    },
+    secondary: {
+      path: '',
+      runes: [null, null],
+    },
+    shards: [
+      { name: '', slot: 0 },
+      { name: '', slot: 0 },
+      { name: '', slot: 0 },
+    ],
+  }
+}
+
+export function newItemSet(): ItemSet {
+  const a = getDeepDefaults(ItemSetSchema)
+  a.id = toID()
+  return a
+}
+
+export function resetRuneSet(set: RuneSet): RuneSet {
+  const id = set.id
+  const a = getDeepDefaults(RuneSetSchema)
+  a.id = id
+  return a
+}
+
+export function newSpellSet(): SpellSet {
+  const a = getDeepDefaults(SpellSetSchema)
+  a.id = toID()
+  return a
+}
+
+export function addSpellSet(pocket: Pocket | string) {
+  let set = <SpellSet[]>([])
+  set = pType(pocket).spells
+  const a = getDeepDefaults(SpellSetSchema)
+  a.id = toID()
+  set.push(a)
+}
+
+export function addRuneSet(pocket: Pocket | string) {
+  const p = pType(pocket)
+  if (p.runes.length >= 10)
+    return 'Max amount of rune sets reached!'
+
+  let set = <RuneSet[]>([])
+  set = p.runes
+  const a = newRuneSet()
+  a.id = toID()
+  set.push(a)
+}
+
+export function newPocket(): Pocket {
+  return {
+    key: toID(),
+    name: generateName(),
+    icon: '',
+    roles: ['all'],
+    champions: [],
+    items: [newItemSet()],
+    runes: [newRuneSet()],
+    spells: [newSpellSet()],
+    main: { champion: '', items: '', runes: '', role: 'All', spells: '' },
+    created: new Date(),
+    updated: patchIndex[0],
+    tags: [],
+    location: { pinned: false, folder: '', trashed: null },
+    notes: [],
+  }
+}
+
+export async function generatePocket() {
+  ps().pockets.push(newPocket())
+}

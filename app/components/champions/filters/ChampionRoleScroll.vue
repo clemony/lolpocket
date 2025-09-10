@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { championRoles } from 'appdata'
+import { championRoles } from '#shared/appdata'
 
 const cs = useChampStore()
 const { filters, setFilter, filtered } = useItemFilter()

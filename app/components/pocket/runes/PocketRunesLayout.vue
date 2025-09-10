@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { pathIndex } from 'appdata/index/path-index'
-import { runePaths } from 'appdata/records/runes'
+import { pathIndex } from '#shared/appdata/index/path-index'
+import { runePaths } from '#shared/appdata/records/runes'
 
 const { set: s } = defineProps<{
   set: RuneSet
@@ -130,12 +130,12 @@ function handleDelete() {
       <div class="w-32 h-full flex flex-col items-center *:rounded-full gap-6">
         <Keystone
           :id="set.keystone"
-          class="size-14" />
+          class="size-16" />
         <Rune
           v-for="rune in set.primary.runes.concat(set.secondary.runes)"
           :id="rune"
           :key="rune"
-          class="size-20" />
+          class="size-13" />
 
         <Placeholder
           v-for="i in 3"

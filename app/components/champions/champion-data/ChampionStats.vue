@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { championStats } from 'appdata'
+import { championStats } from '#shared/appdata'
 
 const { stats } = defineProps<{
   stats: Record<string, ChampionStat>

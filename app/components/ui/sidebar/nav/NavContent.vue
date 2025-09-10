@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { navLinks } from '#shared/appdata'
+import { generateSummonerLinks } from '~/utils/get/generateSummonerLinks'
 
 const links = computed (() => {
   if (!as().account?.name)

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { runePaths } from 'appdata/records/runes'
+import { runePaths } from '#shared/appdata/records/runes'
 import type { Easing } from 'motion-v'
 import { motion, stagger } from 'motion-v'
 

@@ -1,6 +1,6 @@
+import { normalizePatchNumber } from '#shared/utils/normalizePatch'
 import type { PlayerStats } from './mvpScoring'
 import { calculateMvpScores } from './mvpScoring'
-import { normalizePatchNumber } from './normalizePatch'
 
 export function transformMatchData(raw: any): MatchData {
   // 1️⃣ Map raw participants into Player

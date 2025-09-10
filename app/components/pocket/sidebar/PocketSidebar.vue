@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { newSpellSet } from '#shared/utils'
-
 const route = useRoute()
 const pocket = computed(() => ps().getPocket(String(route.params.pocketKey))).value
 const pocketNav = ref()

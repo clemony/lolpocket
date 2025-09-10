@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { championPositions } from 'appdata/filters/positions'
+import { championPositions } from '#shared/appdata/filters/positions'
 
 const tags = ref([])
 </script>

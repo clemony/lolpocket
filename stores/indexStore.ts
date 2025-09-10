@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import { getSplash } from '~/utils/splash'
 
 export const useIndexStore = defineStore(
   'indexStore',
@@ -21,7 +22,7 @@ export const useIndexStore = defineStore(
     async function loadPatch() {
       if (isStale(lastPatchCheck.value) == true) {
         console.log('🌱 - loadPatch - isStale(lastPatchCheck.value) == true:', isStale(lastPatchCheck.value) == true)
-        const { patchIndex } = await import('appdata/index/patch-index')
+        const { patchIndex } = await import('#shared/appdata/index/patch-index')
         lastPatchCheck.value = new Date()
         if (patch.value != patchIndex[0]) {
           patchList.value = patchIndex
@@ -32,47 +33,47 @@ export const useIndexStore = defineStore(
     }
 
     async function loadSkins() {
-      const { skins: skinIndex } = await import('appdata/index/skins-full')
+      const { skins: skinIndex } = await import('#shared/appdata/index/skins-full')
       skins.value = skinIndex
     }
 
     async function loadChamps() {
-      const { championIndex } = await import('appdata/index/champion-index')
+      const { championIndex } = await import('#shared/appdata/index/champion-index')
       champions.value = championIndex
     }
 
     async function loadItems() {
-      const { itemIndex } = await import('appdata/index/item-index')
+      const { itemIndex } = await import('#shared/appdata/index/item-index')
       items.value = itemIndex
     }
 
     async function loadSpells() {
-      const { spellIndex } = await import('appdata/index/spell-index')
+      const { spellIndex } = await import('#shared/appdata/index/spell-index')
       spells.value = spellIndex
     }
 
     async function loadBaseSkins() {
-      const { baseSkin } = await import('appdata/index/skins-base')
+      const { baseSkin } = await import('#shared/appdata/index/skins-base')
       skin.value = baseSkin
     }
 
     async function loadRunes() {
-      const { runeIndex } = await import('appdata/index/rune-index')
+      const { runeIndex } = await import('#shared/appdata/index/rune-index')
       runes.value = runeIndex
     }
 
     async function loadPaths() {
-      const { pathIndex } = await import('appdata/index/path-index')
+      const { pathIndex } = await import('#shared/appdata/index/path-index')
       paths.value = pathIndex
     }
 
     async function loadMaps() {
-      const { mapIndex } = await import('appdata/index/map-index')
+      const { mapIndex } = await import('#shared/appdata/index/map-index')
       maps.value = mapIndex
     }
 
     async function loadTitles() {
-      const { championTitleIndex } = await import('appdata/index/champion-title-index')
+      const { championTitleIndex } = await import('#shared/appdata/index/champion-title-index')
       titles.value = championTitleIndex
     }
 
@@ -214,6 +215,17 @@ export const useIndexStore = defineStore(
       champKeyByName: (name: string) =>
         findInIndex(champions.value, 'name', name, 'key'),
 
+      // images
+
+      tileByKey: (key: string) => skin.value?.[key]?.tilePath,
+      splashByKey: (key: string) => skin.value?.[key]?.splashPath,
+      centeredByKey: (key: string) => skin.value?.[key]?.centeredPath,
+      loadScreenByKey: (key: string) => skin.value?.[key]?.loadPath,
+
+      getSplash: (keyOrId: string | number, type: SplashType) => getSplash(keyOrId, type),
+      getSkinName,
+      skinNameFromUrl,
+
       // item helpers
 
       itemById: (id: number) => getByIndex(items.value, 'id', id),
@@ -236,15 +248,6 @@ export const useIndexStore = defineStore(
       // spells
       spellNameById: (id: number) =>
         findInIndex(spells.value, 'id', id, 'name') as string,
-
-      // images
-
-      tileByKey: (key: string) => skin.value?.[key]?.tilePath,
-      splashByKey: (key: string) => skin.value?.[key]?.splashPath,
-      centeredByKey: (key: string) => skin.value?.[key]?.centeredPath,
-      loadScreenByKey: (key: string) => skin.value?.[key]?.loadPath,
-      getSkinName,
-      skinNameFromUrl,
 
       // maps
       mapNameById: (id: number) => maps.value.find(m => m.id === id)?.name,

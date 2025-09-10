@@ -9,7 +9,7 @@ const props = defineProps<
   TabsIndicatorProps & {
     class?: HTMLAttributes['class']
   }
-  >()
+>()
 const forwarded = reactiveOmit(props, 'class')
 </script>
 

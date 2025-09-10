@@ -48,13 +48,13 @@ watch(() => results.value.length, (newVal) => {
         hover="btn"
         :class="cn('aspect-square  relative transition-[colors, opacity] p-0 duration-250 relative w-full h-auto hover:text-bc/60 hover:inset-shadow-xs data-[state=open]:ring-2 hover:ring overflow-hidden ring-bc/60 data-[state=open]:btn-active', { 'shadow-sm drop-shadow-sm ': pocket.main?.champion })">
         <icon
-          v-if="!pocket.main.champion"
+          v-if="!pocket?.main?.champion"
           name="lp:champ"
           class="text-bc/20 size-10" />
         <Champion
           v-else
           class=""
-          :img="getSplash(pocket.main?.champion, 'tile')" />
+          :img="ix().getSplash(pocket.main?.champion, 'tile')" />
         <div class="size-full opacity-0 group-hover/collapse:opacity-100 group-data-[state=open]/collapse:opacity-100 inset-0 transition-opacity duration-200 bg-neutral/70 absolute grid place-items-center">
           <CaretFlip
             class="!text-nc size-8 drop-shadow-sm opacity-80 translate-y-18"

@@ -1,0 +1,45 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" width="28" height="28">
+	<title>lucide--sword</title>
+	<style>
+		.s0 { fill: none;stroke: currentColor;stroke-linecap: round;stroke-linejoin: round;stroke-width: 1.5 }
+		.s1 { opacity: .5;fill: currentColor }
+		.s2 { fill: currentColor; opacity: 0.5;}
+		.s3 { opacity: .4;fill: currentColor }
+	.s4 { opacity: .43;fill: currentColor }
+		.s5 { opacity: .46;fill: currentColor }
+		.s6 { opacity: .96;fill: currentColor }
+		.s7 { opacity: .37;fill: currentColor }
+		.s8 { opacity: .93;fill: currentColor }
+		.s9 { opacity: .98;fill: currentColor }
+		.s10 { opacity: .45;fill: currentColor }
+		.s11 { opacity: .88;fill: currentColor }
+		.s12 { opacity: .53;fill: currentColor }
+		.s13 { opacity: .95;fill: currentColor }
+		.s14 { opacity: .09;fill: currentColor }
+		.s15 { opacity: .29;fill: currentColor }
+		.s16 { opacity: .17;fill: currentColor }
+	</style>
+	<path class="s0" d="m10.5 15.5l11.5-11.5v-3h-3l-11.5 11.5m4.5 4.5l-6-6m3 3l-4 4m1 1l-2-2"/>
+	<path id="Path 0" class="s1" d="m21 28v-17h2v17z"/>
+	<path id="Path 0" class="s1" d="m7 28v-6h2v6z"/>
+	<path id="Path 0" class="s1" d="m14 28v-11h2v11z"/>
+	<path id="Shape 1" fill-rule="evenodd" class="s2" d="m9 23v4h-2v-4z"/>
+	<path id="Shape 2" fill-rule="evenodd" class="s2" d="m16 18.4v8.6h-2v-8.6z"/>
+	<path id="Shape 3" fill-rule="evenodd" class="s2" d="m23 12v15h-2v-15z"/>
+	<path id="Shape 4" fill-rule="evenodd" class="s3" d="m7 22v6h-1.4v-6z"/>
+	<g id="Layer 1">
+		<path id="Path 0" class="s4" d="m13 23v-3h1v2 1z"/>
+		<path id="Path 1" class="s5" d="m13 27v-2h1v2z"/>
+		<path id="Path 2" class="s6" d="m14 23v-1h1v2h-1z"/>
+		<path id="Path 3" class="s7" d="m13 20v-2h1v1 1z"/>
+		<path id="Path 4" class="s8" d="m14 27v-2h1v2z"/>
+		<path id="Path 5" class="s9" d="m14 22v-2h1v2z"/>
+		<path id="Path 6" class="s10" d="m13 25v-2h1v1 1z"/>
+		<path id="Path 7" class="s11" d="m14 19h1v1h-1z"/>
+		<path id="Path 8" class="s12" d="m13 27h1v1h-1z"/>
+		<path id="Path 9" class="s13" d="m14 24h1v1h-1z"/>
+		<path id="Path 10" class="s14" d="m15 27h1v1h-1z"/>
+		<path id="Path 11" class="s15" d="m13 17h1v1h-1z"/>
+		<path id="Path 12" class="s16" d="m14 18h1v1h-1z"/>
+	</g>
+</svg>

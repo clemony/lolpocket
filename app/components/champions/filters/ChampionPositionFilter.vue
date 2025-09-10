@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { championPositions } from 'appdata'
+import { championPositions } from '#shared/appdata'
 
 const cs = useChampStore()
 const { filters, setFilter, filtered } = useItemFilter()

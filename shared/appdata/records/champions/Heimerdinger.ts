@@ -1,206 +1,206 @@
 // Updated Patch 25.17 - 09/01/2025 05:26:12 PM CDT
 
 const champion: Champion = {
-  "id": 74,
-  "key": "Heimerdinger",
-  "name": "Heimerdinger",
-  "title": "the Revered Inventor",
-  "fullName": "Cecil B. Heimerdinger",
-  "resource": "Mana",
-  "attackType": "Ranged",
-  "adaptiveType": "Magic damage",
-  "stats": {
-    "health": {
-      "flat": 558,
-      "perLevel": 101
+  id: 74,
+  key: 'Heimerdinger',
+  name: 'Heimerdinger',
+  title: 'the Revered Inventor',
+  fullName: 'Cecil B. Heimerdinger',
+  resource: 'Mana',
+  attackType: 'Ranged',
+  adaptiveType: 'Magic damage',
+  stats: {
+    health: {
+      flat: 558,
+      perLevel: 101
     },
-    "healthRegen": {
-      "flat": 7,
-      "perLevel": 0.55
+    healthRegen: {
+      flat: 7,
+      perLevel: 0.55
     },
-    "mana": {
-      "flat": 385,
-      "perLevel": 20
+    mana: {
+      flat: 385,
+      perLevel: 20
     },
-    "manaRegen": {
-      "flat": 8,
-      "perLevel": 0.8
+    manaRegen: {
+      flat: 8,
+      perLevel: 0.8
     },
-    "armor": {
-      "flat": 19,
-      "perLevel": 4.2
+    armor: {
+      flat: 19,
+      perLevel: 4.2
     },
-    "magicResistance": {
-      "flat": 30,
-      "perLevel": 1.3
+    magicResistance: {
+      flat: 30,
+      perLevel: 1.3
     },
-    "attackDamage": {
-      "flat": 56,
-      "perLevel": 2.7
+    attackDamage: {
+      flat: 56,
+      perLevel: 2.7
     },
-    "movespeed": {
-      "flat": 340
+    movespeed: {
+      flat: 340
     },
-    "acquisitionRadius": {
-      "flat": 550
+    acquisitionRadius: {
+      flat: 550
     },
-    "selectionRadius": {
-      "flat": 100
+    selectionRadius: {
+      flat: 100
     },
-    "pathingRadius": {
-      "flat": 30.544
+    pathingRadius: {
+      flat: 30.544
     },
-    "gameplayRadius": {
-      "flat": 55
+    gameplayRadius: {
+      flat: 55
     },
-    "criticalStrikeDamage": {
-      "flat": 175
+    criticalStrikeDamage: {
+      flat: 175
     },
-    "criticalStrikeDamageModifier": {
-      "flat": 1
+    criticalStrikeDamageModifier: {
+      flat: 1
     },
-    "attackSpeed": {
-      "flat": 0.658,
-      "perLevel": 1.36
+    attackSpeed: {
+      flat: 0.658,
+      perLevel: 1.36
     },
-    "attackSpeedRatio": {
-      "flat": 0.625
+    attackSpeedRatio: {
+      flat: 0.625
     },
-    "attackCastTime": {
-      "flat": 0.3
+    attackCastTime: {
+      flat: 0.3
     },
-    "attackTotalTime": {
-      "flat": 1.6
+    attackTotalTime: {
+      flat: 1.6
     },
-    "attackDelayOffset": {
-      "flat": -0.1
+    attackDelayOffset: {
+      flat: -0.1
     },
-    "attackRange": {
-      "flat": 550
+    attackRange: {
+      flat: 550
     }
   },
-  "positions": [
-    "Middle",
-    "Support",
-    "Top"
+  positions: [
+    'Middle',
+    'Support',
+    'Top'
   ],
-  "roles": [
-    "Mage",
-    "Specialist",
-    "Support"
+  roles: [
+    'Mage',
+    'Specialist',
+    'Support'
   ],
-  "attributeRatings": {
-    "damage": 3,
-    "toughness": 1,
-    "control": 2,
-    "mobility": 1,
-    "utility": 2,
-    "abilityReliance": 100,
-    "difficulty": 2
+  attributeRatings: {
+    damage: 3,
+    toughness: 1,
+    control: 2,
+    mobility: 1,
+    utility: 2,
+    abilityReliance: 100,
+    difficulty: 2
   },
-  "abilities": {
-    "P": [
+  abilities: {
+    P: [
       {
-        "name": "Hextech Affinity",
-        "icon": "https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/p",
-        "effects": [
+        name: 'Hextech Affinity',
+        icon: 'https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/p',
+        effects: [
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Heimerdinger gains 20% bonus movement speed while near an allied turret or a H-28G Evolution Turret or H-28Q Apex Turret deployed by him.</p>"
+            description: '<p class="ability-effect"><span class="ability-header">Innate:</span> Heimerdinger gains 20% bonus movement speed while near an allied turret or a H-28G Evolution Turret or H-28Q Apex Turret deployed by him.</p>'
           }
         ],
-        "targeting": "Passive",
-        "affects": "Self",
-        "notes": "No additional details.",
-        "blurb": "Innate:  Heimerdinger gains  bonus movement speed while near allied  towers and  turrets he deploys.",
-        "effectRadius": "300"
+        targeting: 'Passive',
+        affects: 'Self',
+        notes: 'No additional details.',
+        blurb: 'Innate:  Heimerdinger gains  bonus movement speed while near allied  towers and  turrets he deploys.',
+        effectRadius: '300'
       }
     ],
-    "Q": [
+    Q: [
       {
-        "name": "H-28G Evolution Turret",
-        "icon": "https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/q",
-        "effects": [
+        name: 'H-28G Evolution Turret',
+        icon: 'https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/q',
+        effects: [
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Heimerdinger deploys a H-28G Evolution Turret at the target location, which lasts until destroyed.</p>"
+            description: '<p class="ability-effect"><span class="ability-header">Active:</span> Heimerdinger deploys a H-28G Evolution Turret at the target location, which lasts until destroyed.</p>'
           },
           {
-            "description": "Heimerdinger periodically stocks a Turret Kit charge, up to a maximum of 3."
+            description: 'Heimerdinger periodically stocks a Turret Kit charge, up to a maximum of 3.'
           },
           {
-            "description": "Up to 3 H-28G Evolution Turrets can be deployed at a time, with those deployed beyond the maximum destroying the oldest one."
+            description: 'Up to 3 H-28G Evolution Turrets can be deployed at a time, with those deployed beyond the maximum destroying the oldest one.'
           },
           {
-            "description": "See Pets for more details about H-28G Evolution Turrets."
+            description: 'See Pets for more details about H-28G Evolution Turrets.'
           }
         ],
-        "cost": [
+        cost: [
           20
         ],
-        "cooldown": [
+        cooldown: [
           1
         ],
-        "targeting": "Location",
-        "affects": "Enemies",
-        "spellshieldable": "False",
-        "resource": "Mana",
-        "damageType": "Magic damage",
-        "spellEffects": "special",
-        "projectile": "TRUE",
-        "notes": "Deals  spell damage on basic attacks and  area damage on the beam.\nThe H-28G Evolution Turret's stats update every second to reflect rank ups, level ups, and changes in Heimerdinger's ability power.\nThe Turret Kit buff will visually represent the recharge rate cooldown, and how many H-28G Evolution Turret's that Heimerdinger has stored. This is visible to both allies and enemies.\nThe recharge rate of H-28G Evolution Turret is affected by ability haste.\nThe H-28G Evolution Turret has a  sight radius of 585 while active and 227.5 while dormant.\nThe amount of Turret Kit charges Heimerdinger has is indicated by small nuts orbiting him.",
-        "blurb": "Active:  Heimerdinger deploys a rapid-fire turret that deals magic damage to his target, or a nearby enemy. The turret will become dormant while he leaves it alone.",
-        "rechargeRate": [
+        targeting: 'Location',
+        affects: 'Enemies',
+        spellshieldable: 'False',
+        resource: 'Mana',
+        damageType: 'Magic damage',
+        spellEffects: 'special',
+        projectile: 'TRUE',
+        notes: 'Deals  spell damage on basic attacks and  area damage on the beam.\nThe H-28G Evolution Turret\'s stats update every second to reflect rank ups, level ups, and changes in Heimerdinger\'s ability power.\nThe Turret Kit buff will visually represent the recharge rate cooldown, and how many H-28G Evolution Turret\'s that Heimerdinger has stored. This is visible to both allies and enemies.\nThe recharge rate of H-28G Evolution Turret is affected by ability haste.\nThe H-28G Evolution Turret has a  sight radius of 585 while active and 227.5 while dormant.\nThe amount of Turret Kit charges Heimerdinger has is indicated by small nuts orbiting him.',
+        blurb: 'Active:  Heimerdinger deploys a rapid-fire turret that deals magic damage to his target, or a nearby enemy. The turret will become dormant while he leaves it alone.',
+        rechargeRate: [
           20
         ],
-        "castTime": "0.25",
-        "targetRange": "350",
-        "maxCharges": 3
+        castTime: '0.25',
+        targetRange: '350',
+        maxCharges: 3
       },
       {
-        "name": "H-28Q Apex Turret",
-        "icon": "https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/q",
-        "effects": [
+        name: 'H-28Q Apex Turret',
+        icon: 'https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/q',
+        effects: [
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">UPGRADE!!! - Active:</span> Heimerdinger deploys a H-28Q Apex Turret at the target location, which lasts for 8 seconds.</p>"
+            description: '<p class="ability-effect"><span class="ability-header">UPGRADE!!! - Active:</span> Heimerdinger deploys a H-28Q Apex Turret at the target location, which lasts for 8 seconds.</p>'
           },
           {
-            "description": "H-28Q Apex Turret scales with UPGRADE!!!'s rank."
+            description: 'H-28Q Apex Turret scales with UPGRADE!!!\'s rank.'
           },
           {
-            "description": "See Pets for more details about the H-28Q Apex Turret."
+            description: 'See Pets for more details about the H-28Q Apex Turret.'
           }
         ],
-        "cost": [
+        cost: [
           20
         ],
-        "cooldown": [
+        cooldown: [
           1
         ],
-        "targeting": "Location",
-        "affects": "Enemies",
-        "spellshieldable": "False",
-        "damageType": "Magic damage",
-        "spellEffects": "spellaoe",
-        "projectile": "TRUE",
-        "notes": "The H-28Q Apex Turret has a  sight radius of 900.\nThe H-28Q Apex Turret's stats update every second to reflect rank ups, level ups, and changes in Heimerdinger's ability power.",
-        "blurb": "UPGRADE:  Heimerdinger instead deploys a slow-fire turret that attacks a nearby enemy champion, dealing magic damage and  slowing nearby enemies.",
-        "castTime": "0.25",
-        "targetRange": "450",
-        "maxCharges": 3
+        targeting: 'Location',
+        affects: 'Enemies',
+        spellshieldable: 'False',
+        damageType: 'Magic damage',
+        spellEffects: 'spellaoe',
+        projectile: 'TRUE',
+        notes: 'The H-28Q Apex Turret has a  sight radius of 900.\nThe H-28Q Apex Turret\'s stats update every second to reflect rank ups, level ups, and changes in Heimerdinger\'s ability power.',
+        blurb: 'UPGRADE:  Heimerdinger instead deploys a slow-fire turret that attacks a nearby enemy champion, dealing magic damage and  slowing nearby enemies.',
+        castTime: '0.25',
+        targetRange: '450',
+        maxCharges: 3
       }
     ],
-    "W": [
+    W: [
       {
-        "name": "Hextech Micro-Rockets",
-        "icon": "https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/w",
-        "effects": [
+        name: 'Hextech Micro-Rockets',
+        icon: 'https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/w',
+        effects: [
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Heimerdinger launches a wave of 5 rockets that converge upon the target location and fan beyond it up to a maximum range, with each one dealing magic damage to the first enemy it hits. Every rocket hitting an enemy champion grants 20% beam charge to all turrets within 1000 range, up to a maximum of 100% beam charge when hitting 5 rockets on an enemy champion.</p>",
-            "leveling": [
+            description: '<p class="ability-effect"><span class="ability-header">Active:</span> Heimerdinger launches a wave of 5 rockets that converge upon the target location and fan beyond it up to a maximum range, with each one dealing magic damage to the first enemy it hits. Every rocket hitting an enemy champion grants 20% beam charge to all turrets within 1000 range, up to a maximum of 100% beam charge when hitting 5 rockets on an enemy champion.</p>',
+            leveling: [
               {
-                "attribute": "Initial Rocket Magic Damage",
-                "modifiers": [
+                attribute: 'Initial Rocket Magic Damage',
+                modifiers: [
                   {
-                    "values": [
+                    values: [
                       40,
                       65,
                       90,
@@ -209,11 +209,11 @@ const champion: Champion = {
                     ]
                   },
                   {
-                    "values": [
+                    values: [
                       55
                     ],
-                    "units": [
-                      "% AP"
+                    units: [
+                      '% AP'
                     ]
                   }
                 ]
@@ -221,13 +221,13 @@ const champion: Champion = {
             ]
           },
           {
-            "description": "Enemies can be hit by multiple rockets, but receive less damage from ones beyond the first. Against minions, this lesser damage is increased by 200%.",
-            "leveling": [
+            description: 'Enemies can be hit by multiple rockets, but receive less damage from ones beyond the first. Against minions, this lesser damage is increased by 200%.',
+            leveling: [
               {
-                "attribute": "Subsequent Rocket Magic Damage",
-                "modifiers": [
+                attribute: 'Subsequent Rocket Magic Damage',
+                modifiers: [
                   {
-                    "values": [
+                    values: [
                       10,
                       15,
                       20,
@@ -236,20 +236,20 @@ const champion: Champion = {
                     ]
                   },
                   {
-                    "values": [
+                    values: [
                       12
                     ],
-                    "units": [
-                      "% AP"
+                    units: [
+                      '% AP'
                     ]
                   }
                 ]
               },
               {
-                "attribute": "Total Subsequent Non-Minion Damage",
-                "modifiers": [
+                attribute: 'Total Subsequent Non-Minion Damage',
+                modifiers: [
                   {
-                    "values": [
+                    values: [
                       40,
                       60,
                       80,
@@ -258,20 +258,20 @@ const champion: Champion = {
                     ]
                   },
                   {
-                    "values": [
+                    values: [
                       48
                     ],
-                    "units": [
-                      "% AP"
+                    units: [
+                      '% AP'
                     ]
                   }
                 ]
               },
               {
-                "attribute": "Combined Total Non-Minion Damage",
-                "modifiers": [
+                attribute: 'Combined Total Non-Minion Damage',
+                modifiers: [
                   {
-                    "values": [
+                    values: [
                       80,
                       125,
                       170,
@@ -280,20 +280,20 @@ const champion: Champion = {
                     ]
                   },
                   {
-                    "values": [
+                    values: [
                       103
                     ],
-                    "units": [
-                      "% AP"
+                    units: [
+                      '% AP'
                     ]
                   }
                 ]
               },
               {
-                "attribute": "Subsequent Rocket Minion Damage",
-                "modifiers": [
+                attribute: 'Subsequent Rocket Minion Damage',
+                modifiers: [
                   {
-                    "values": [
+                    values: [
                       30,
                       45,
                       60,
@@ -302,20 +302,20 @@ const champion: Champion = {
                     ]
                   },
                   {
-                    "values": [
+                    values: [
                       36
                     ],
-                    "units": [
-                      "% AP"
+                    units: [
+                      '% AP'
                     ]
                   }
                 ]
               },
               {
-                "attribute": "Total Subsequent Minion Damage",
-                "modifiers": [
+                attribute: 'Total Subsequent Minion Damage',
+                modifiers: [
                   {
-                    "values": [
+                    values: [
                       120,
                       180,
                       240,
@@ -324,20 +324,20 @@ const champion: Champion = {
                     ]
                   },
                   {
-                    "values": [
+                    values: [
                       144
                     ],
-                    "units": [
-                      "% AP"
+                    units: [
+                      '% AP'
                     ]
                   }
                 ]
               },
               {
-                "attribute": "Combined Total Minion Damage",
-                "modifiers": [
+                attribute: 'Combined Total Minion Damage',
+                modifiers: [
                   {
-                    "values": [
+                    values: [
                       160,
                       245,
                       330,
@@ -346,11 +346,11 @@ const champion: Champion = {
                     ]
                   },
                   {
-                    "values": [
+                    values: [
                       199
                     ],
-                    "units": [
-                      "% AP"
+                    units: [
+                      '% AP'
                     ]
                   }
                 ]
@@ -358,56 +358,56 @@ const champion: Champion = {
             ]
           }
         ],
-        "cost": [
+        cost: [
           50,
           60,
           70,
           80,
           90
         ],
-        "cooldown": [
+        cooldown: [
           11,
           10,
           9,
           8,
           7
         ],
-        "targeting": "Location",
-        "affects": "Enemies",
-        "spellshieldable": "True",
-        "resource": "Mana",
-        "damageType": "Magic damage",
-        "spellEffects": "spellaoe",
-        "projectile": "TRUE",
-        "notes": "If casting beyond 1000 units based off current Heimerdinger's position, every rockets aim towards Heimerdinger's position extended towards cast position by 1100 units\nHextech Micro-Rockets'  direction-targeting allows for custom spread.\nThis ability will cast from wherever the caster is at the end of the cast time.",
-        "blurb": "Active:  Heimerdinger fires a wave of rockets that converge to the target location and fan beyond it to max range, each dealing magic damage to the first enemy hit. Enemies take less damage from subsequent rockets that hit them.",
-        "castTime": "0.25",
-        "targetRange": "1150",
-        "maxCharges": -1
+        targeting: 'Location',
+        affects: 'Enemies',
+        spellshieldable: 'True',
+        resource: 'Mana',
+        damageType: 'Magic damage',
+        spellEffects: 'spellaoe',
+        projectile: 'TRUE',
+        notes: 'If casting beyond 1000 units based off current Heimerdinger\'s position, every rockets aim towards Heimerdinger\'s position extended towards cast position by 1100 units\nHextech Micro-Rockets\'  direction-targeting allows for custom spread.\nThis ability will cast from wherever the caster is at the end of the cast time.',
+        blurb: 'Active:  Heimerdinger fires a wave of rockets that converge to the target location and fan beyond it to max range, each dealing magic damage to the first enemy hit. Enemies take less damage from subsequent rockets that hit them.',
+        castTime: '0.25',
+        targetRange: '1150',
+        maxCharges: -1
       },
       {
-        "name": "Hextech Rocket Swarm",
-        "icon": "https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/w",
-        "effects": [
+        name: 'Hextech Rocket Swarm',
+        icon: 'https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/w',
+        effects: [
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">UPGRADE!!! - Active:</span> Heimerdinger unleashes 4 waves of 5 rockets in quick succession that converge upon the target location. Each rocket deals magic damage to the first enemy hit.</p>",
-            "leveling": [
+            description: '<p class="ability-effect"><span class="ability-header">UPGRADE!!! - Active:</span> Heimerdinger unleashes 4 waves of 5 rockets in quick succession that converge upon the target location. Each rocket deals magic damage to the first enemy hit.</p>',
+            leveling: [
               {
-                "attribute": "Initial Rocket Damage",
-                "modifiers": [
+                attribute: 'Initial Rocket Damage',
+                modifiers: [
                   {
-                    "values": [
+                    values: [
                       135,
                       180,
                       225
                     ]
                   },
                   {
-                    "values": [
+                    values: [
                       45
                     ],
-                    "units": [
-                      "% AP"
+                    units: [
+                      '% AP'
                     ]
                   }
                 ]
@@ -415,73 +415,73 @@ const champion: Champion = {
             ]
           },
           {
-            "description": "Enemies can be hit by multiple rockets. Champions and monsters receive less damage from the second to fifth rockets that hit them, which is reduced by 50% for rockets beyond the fifth. Minions instead always receive 100% of the initial damage from every single rocket.",
-            "leveling": [
+            description: 'Enemies can be hit by multiple rockets. Champions and monsters receive less damage from the second to fifth rockets that hit them, which is reduced by 50% for rockets beyond the fifth. Minions instead always receive 100% of the initial damage from every single rocket.',
+            leveling: [
               {
-                "attribute": "Rockets 2:5 Magic Damage",
-                "modifiers": [
+                attribute: 'Rockets 2:5 Magic Damage',
+                modifiers: [
                   {
-                    "values": [
+                    values: [
                       32,
                       45,
                       58
                     ]
                   },
                   {
-                    "values": [
+                    values: [
                       12
                     ],
-                    "units": [
-                      "% AP"
+                    units: [
+                      '% AP'
                     ]
                   }
                 ]
               },
               {
-                "attribute": "Rockets 6:20 Magic Damage",
-                "modifiers": [
+                attribute: 'Rockets 6:20 Magic Damage',
+                modifiers: [
                   {
-                    "values": [
+                    values: [
                       16,
                       22.5,
                       29
                     ]
                   },
                   {
-                    "values": [
+                    values: [
                       6
                     ],
-                    "units": [
-                      "% AP"
+                    units: [
+                      '% AP'
                     ]
                   }
                 ]
               },
               {
-                "attribute": "Combined Total Non-Minion Damage",
-                "modifiers": [
+                attribute: 'Combined Total Non-Minion Damage',
+                modifiers: [
                   {
-                    "values": [
+                    values: [
                       503,
                       697.5,
                       892
                     ]
                   },
                   {
-                    "values": [
+                    values: [
                       183
                     ],
-                    "units": [
-                      "% AP"
+                    units: [
+                      '% AP'
                     ]
                   }
                 ]
               },
               {
-                "attribute": "Minion Damage per Rocket",
-                "modifiers": [
+                attribute: 'Minion Damage per Rocket',
+                modifiers: [
                   {
-                    "values": [
+                    values: [
                       135,
                       180,
                       225
@@ -490,21 +490,21 @@ const champion: Champion = {
                 ]
               },
               {
-                "attribute": "Combined Total Minion Damage",
-                "modifiers": [
+                attribute: 'Combined Total Minion Damage',
+                modifiers: [
                   {
-                    "values": [
+                    values: [
                       2700,
                       3600,
                       4500
                     ]
                   },
                   {
-                    "values": [
+                    values: [
                       900
                     ],
-                    "units": [
-                      "% AP"
+                    units: [
+                      '% AP'
                     ]
                   }
                 ]
@@ -512,49 +512,49 @@ const champion: Champion = {
             ]
           },
           {
-            "description": "Hextech Rocket Swarm scales with UPGRADE!!!'s rank."
+            description: 'Hextech Rocket Swarm scales with UPGRADE!!!\'s rank.'
           }
         ],
-        "cost": [
+        cost: [
           50,
           60,
           70,
           80,
           90
         ],
-        "cooldown": [
+        cooldown: [
           11,
           10,
           9,
           8,
           7
         ],
-        "targeting": "Location",
-        "affects": "Enemies",
-        "spellshieldable": "True",
-        "damageType": "Magic damage",
-        "spellEffects": "spellaoe",
-        "projectile": "TRUE",
-        "notes": "If casting beyond 1000 units based off current Heimerdinger's position, every rockets aim towards Heimerdinger's position extended towards cast position by 1100 units\nHextech Rocket Swarm's direction-targeting allows for custom spread.\nHeimerdinger can move once Hextech Rocket Swarm has been cast, even if the projectiles are still spawning or haven't even started to move yet.\nHextech Rocket Swarm's will cast from wherever Heimerdinger is at the end of the cast time.",
-        "blurb": "UPGRADE:  Heimerdinger now fires 4 waves of rockets, each rocket dealing magic damage to the first enemy hit. Enemies take less damage from subsequent rockets that hit them.",
-        "castTime": "0.25",
-        "targetRange": "1150",
-        "maxCharges": -1
+        targeting: 'Location',
+        affects: 'Enemies',
+        spellshieldable: 'True',
+        damageType: 'Magic damage',
+        spellEffects: 'spellaoe',
+        projectile: 'TRUE',
+        notes: 'If casting beyond 1000 units based off current Heimerdinger\'s position, every rockets aim towards Heimerdinger\'s position extended towards cast position by 1100 units\nHextech Rocket Swarm\'s direction-targeting allows for custom spread.\nHeimerdinger can move once Hextech Rocket Swarm has been cast, even if the projectiles are still spawning or haven\'t even started to move yet.\nHextech Rocket Swarm\'s will cast from wherever Heimerdinger is at the end of the cast time.',
+        blurb: 'UPGRADE:  Heimerdinger now fires 4 waves of rockets, each rocket dealing magic damage to the first enemy hit. Enemies take less damage from subsequent rockets that hit them.',
+        castTime: '0.25',
+        targetRange: '1150',
+        maxCharges: -1
       }
     ],
-    "E": [
+    E: [
       {
-        "name": "CH-2 Electron Storm Grenade",
-        "icon": "https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/e",
-        "effects": [
+        name: 'CH-2 Electron Storm Grenade',
+        icon: 'https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/e',
+        effects: [
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Heimerdinger hurls a grenade at the target location that detonates upon impact, dealing magic damage to nearby enemies and slowing them by 35% for 2 seconds. If the grenade hits an enemy champion, all turrets within 1000 range of the impact gain 100% beam charge.</p>",
-            "leveling": [
+            description: '<p class="ability-effect"><span class="ability-header">Active:</span> Heimerdinger hurls a grenade at the target location that detonates upon impact, dealing magic damage to nearby enemies and slowing them by 35% for 2 seconds. If the grenade hits an enemy champion, all turrets within 1000 range of the impact gain 100% beam charge.</p>',
+            leveling: [
               {
-                "attribute": "Magic Damage",
-                "modifiers": [
+                attribute: 'Magic Damage',
+                modifiers: [
                   {
-                    "values": [
+                    values: [
                       60,
                       100,
                       140,
@@ -563,11 +563,11 @@ const champion: Champion = {
                     ]
                   },
                   {
-                    "values": [
+                    values: [
                       60
                     ],
-                    "units": [
-                      "% AP"
+                    units: [
+                      '% AP'
                     ]
                   }
                 ]
@@ -575,54 +575,54 @@ const champion: Champion = {
             ]
           },
           {
-            "description": "Enemies hit at the center of the grenade's impact are also stunned for 1.5 seconds."
+            description: 'Enemies hit at the center of the grenade\'s impact are also stunned for 1.5 seconds.'
           }
         ],
-        "cost": [
+        cost: [
           85
         ],
-        "cooldown": [
+        cooldown: [
           11
         ],
-        "targeting": "Location",
-        "affects": "Enemies",
-        "spellshieldable": "True",
-        "resource": "Mana",
-        "damageType": "Magic damage",
-        "spellEffects": "Area of effect",
-        "projectile": "TRUE",
-        "notes": "This ability will cast from wherever the caster is at the end of the cast time.",
-        "blurb": "Active:  Heimerdinger lobs a grenade to the target location that deals magic damage and  slows nearby enemies. Enemies hit at the epicenter are also  stunned.",
-        "innerRadius": "100",
-        "speed": "1200",
-        "castTime": "0.25",
-        "effectRadius": "250",
-        "targetRange": "925",
-        "maxCharges": -1
+        targeting: 'Location',
+        affects: 'Enemies',
+        spellshieldable: 'True',
+        resource: 'Mana',
+        damageType: 'Magic damage',
+        spellEffects: 'Area of effect',
+        projectile: 'TRUE',
+        notes: 'This ability will cast from wherever the caster is at the end of the cast time.',
+        blurb: 'Active:  Heimerdinger lobs a grenade to the target location that deals magic damage and  slows nearby enemies. Enemies hit at the epicenter are also  stunned.',
+        innerRadius: '100',
+        speed: '1200',
+        castTime: '0.25',
+        effectRadius: '250',
+        targetRange: '925',
+        maxCharges: -1
       },
       {
-        "name": "CH-3X Lightning Grenade",
-        "icon": "https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/e",
-        "effects": [
+        name: 'CH-3X Lightning Grenade',
+        icon: 'https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/e',
+        effects: [
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">UPGRADE!!! - Active:</span> Heimerdinger hurls a massive grenade at the target location that bounces a fixed distance 3 times in the cast direction. The grenade explodes upon landing each time to deal magic damage to nearby enemies and slow them by 35% for 2 seconds. Enemies hit at the center of the grenade's impact are additionally stunned for 1.5 seconds.</p>",
-            "leveling": [
+            description: '<p class="ability-effect"><span class="ability-header">UPGRADE!!! - Active:</span> Heimerdinger hurls a massive grenade at the target location that bounces a fixed distance 3 times in the cast direction. The grenade explodes upon landing each time to deal magic damage to nearby enemies and slow them by 35% for 2 seconds. Enemies hit at the center of the grenade\'s impact are additionally stunned for 1.5 seconds.</p>',
+            leveling: [
               {
-                "attribute": "Magic Damage",
-                "modifiers": [
+                attribute: 'Magic Damage',
+                modifiers: [
                   {
-                    "values": [
+                    values: [
                       100,
                       200,
                       300
                     ]
                   },
                   {
-                    "values": [
+                    values: [
                       60
                     ],
-                    "units": [
-                      "% AP"
+                    units: [
+                      '% AP'
                     ]
                   }
                 ]
@@ -630,74 +630,74 @@ const champion: Champion = {
             ]
           },
           {
-            "description": "Enemy champions can only be damaged once per cast, but can be slowed and stunned multiple times if circumstances permit."
+            description: 'Enemy champions can only be damaged once per cast, but can be slowed and stunned multiple times if circumstances permit.'
           },
           {
-            "description": "CH-3X Lightning Grenade scales with UPGRADE!!!'s rank."
+            description: 'CH-3X Lightning Grenade scales with UPGRADE!!!\'s rank.'
           }
         ],
-        "cost": [
+        cost: [
           85
         ],
-        "cooldown": [
+        cooldown: [
           11
         ],
-        "targeting": "Location",
-        "affects": "Enemies",
-        "spellshieldable": "True",
-        "damageType": "Magic damage",
-        "spellEffects": "Area of effect",
-        "projectile": "TRUE",
-        "notes": "No additional details.",
-        "blurb": "UPGRADE:  Heimerdinger's grenade now bounces 3 times, each dealing magic damage in a larger area.",
-        "innerRadius": "150",
-        "speed": "1200",
-        "castTime": "0.25",
-        "effectRadius": "300",
-        "targetRange": "925",
-        "maxCharges": -1
+        targeting: 'Location',
+        affects: 'Enemies',
+        spellshieldable: 'True',
+        damageType: 'Magic damage',
+        spellEffects: 'Area of effect',
+        projectile: 'TRUE',
+        notes: 'No additional details.',
+        blurb: 'UPGRADE:  Heimerdinger\'s grenade now bounces 3 times, each dealing magic damage in a larger area.',
+        innerRadius: '150',
+        speed: '1200',
+        castTime: '0.25',
+        effectRadius: '300',
+        targetRange: '925',
+        maxCharges: -1
       }
     ],
-    "R": [
+    R: [
       {
-        "name": "UPGRADE!!!",
-        "icon": "https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/r",
-        "effects": [
+        name: 'UPGRADE!!!',
+        icon: 'https://cdn.communitydragon.org/latest/champion/Heimerdinger/ability-icon/r',
+        effects: [
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Heimerdinger empowers his next basic ability for an additional effect, consuming the empowerment upon cast and placing UPGRADE!!! on full cooldown. These empowered abilities have the same cooldowns as their basic forms, deal modified damage, and do not have a mana cost. UPGRADE!!! can be recast after 3 seconds while the empowerment is available.</p>"
+            description: '<p class="ability-effect"><span class="ability-header">Active:</span> Heimerdinger empowers his next basic ability for an additional effect, consuming the empowerment upon cast and placing UPGRADE!!! on full cooldown. These empowered abilities have the same cooldowns as their basic forms, deal modified damage, and do not have a mana cost. UPGRADE!!! can be recast after 3 seconds while the empowerment is available.</p>'
           },
           {
-            "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Heimerdinger ends UPGRADE!!! and puts it on a 3-second cooldown.</p>"
+            description: '<p class="ability-effect"><span class="ability-header">Recast:</span> Heimerdinger ends UPGRADE!!! and puts it on a 3-second cooldown.</p>'
           },
           {
-            "description": "UPGRADE!!! can be used while affected by cast-inhibiting crowd control."
+            description: 'UPGRADE!!! can be used while affected by cast-inhibiting crowd control.'
           }
         ],
-        "cost": [
+        cost: [
           100
         ],
-        "cooldown": [
+        cooldown: [
           100,
           85,
           70
         ],
-        "targeting": "Auto",
-        "affects": "Self",
-        "resource": "Mana",
-        "notes": "Toggle abilities do not count as ability activations for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nConsuming the buff for an empowered basic ability does.\nNo compensations for  mana are made if UPGRADE!!! is recast.",
-        "blurb": "Active:  Heimerdinger can empower his next ability to apply an additional effect. These empowered abilities have the same  cooldowns as their basic forms, deal modified damage, and do not cost mana.",
-        "castTime": "none",
-        "maxCharges": -1
+        targeting: 'Auto',
+        affects: 'Self',
+        resource: 'Mana',
+        notes: 'Toggle abilities do not count as ability activations for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse\'s passive.\nConsuming the buff for an empowered basic ability does.\nNo compensations for  mana are made if UPGRADE!!! is recast.',
+        blurb: 'Active:  Heimerdinger can empower his next ability to apply an additional effect. These empowered abilities have the same  cooldowns as their basic forms, deal modified damage, and do not cost mana.',
+        castTime: 'none',
+        maxCharges: -1
       }
     ]
   },
-  "lore": "The eccentric Professor Cecil B. Heimerdinger is one of the most innovative and esteemed inventors the world has ever known. As the longest serving member of the Council of Piltover, he saw the best and the worst of the city's unending desire for progress. Nonetheless, this brilliant scientist and teacher will always remain dedicated to using his unconventional devices to improve the lives of others.",
-  "faction": "piltover",
-  "releaseDate": "2009-10-10",
-  "patchLastChanged": "25.14",
-  "price": {
-    "blueEssence": 1575,
-    "rp": 790
+  lore: 'The eccentric Professor Cecil B. Heimerdinger is one of the most innovative and esteemed inventors the world has ever known. As the longest serving member of the Council of Piltover, he saw the best and the worst of the city\'s unending desire for progress. Nonetheless, this brilliant scientist and teacher will always remain dedicated to using his unconventional devices to improve the lives of others.',
+  faction: 'piltover',
+  releaseDate: '2009-10-10',
+  patchLastChanged: '25.14',
+  price: {
+    blueEssence: 1575,
+    rp: 790
   }
 }
 export default champion
