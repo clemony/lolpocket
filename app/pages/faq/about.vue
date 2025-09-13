@@ -2,6 +2,7 @@
 definePageMeta({
   path: '/about',
   parent: '/faq',
+  name: 'about',
   icon: 'lucide:square-terminal',
 })
 

@@ -31,7 +31,7 @@ function handleChange() {
           variant="ghost"
           size="sm"
           :class="cn('justify-start capitalize')">
-          {{ tag.displayName }}
+          {{ tag.name }}
           <ListboxItemIndicator class="h-fit w-auto aspect-square justify-self-end justify-end">
             <input
               type="checkbox"

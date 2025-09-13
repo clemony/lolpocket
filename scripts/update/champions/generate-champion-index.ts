@@ -1,5 +1,5 @@
 import fs from 'node:fs'
-import { markUpdate } from '../../../scripts'
+import { markUpdate } from '../../../shared/utils/markUpdate'
 import { resolvePath } from '../resolvePath'
 
 const outputFile = resolvePath('../../shared/appdata/index/champion-index.ts')

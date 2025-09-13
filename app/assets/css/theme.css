@@ -2,7 +2,6 @@
 
 :root {
   @theme inline {
-    --navbar-height: 4rem;
     --color-b1: var(--b1);
     --color-b2: var(--b2);
     --color-b3: var(--b3);
@@ -14,7 +13,6 @@
     --color-n1: var(--n1);
     --color-neutral: var(--n1);
     --color-nc: var(--nc);
-    --color-a1: var(--a1);
   }
 }
 
@@ -98,4 +96,6 @@
       background-position: 0% 50%;
     }
   }
+
+
 }

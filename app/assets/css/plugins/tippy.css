@@ -4,11 +4,11 @@
 
 @layer base {
   .tippy-content {
-    @apply text-3;
+    @apply text-3 text-balance;
   }
 
   .tippy-box {
-    @apply shadow-md bg-n1/76 !max-w-62 text-nc/80 drop-shadow-lg rounded-lg px-4 py-1 backdrop-blur-md inset-shadow-white/20 border border-b4/50;
+    @apply shadow-md bg-n1/76  w-auto inline-block text-nc/80 drop-shadow-lg rounded-lg px-4 py-1 backdrop-blur-md inset-shadow-white/20 border border-b4/50;
 
     & > .tippy-svg-arrow {
       @apply drop-shadow-sm;

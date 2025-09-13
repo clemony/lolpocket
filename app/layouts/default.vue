@@ -3,7 +3,7 @@ const route = useRoute()
 </script>
 
 <template>
-  <div class="w-screen grid grid-cols-[45px_1fr] grid-rows-1 h-screen relative">
+  <div class="w-screen grid grid-cols-[45px_1fr] grid-rows-1 h-screen relative overflow-x-hidden">
     <AppSidebar />
     <div class="flex size-full flex-col">
       <!-- header -->
@@ -12,12 +12,6 @@ const route = useRoute()
         <BreadcrumbNav />
       </header>
       <slot />
-      <Button variant="btn">
-        hihi
-      </Button>
-      <Card>
-        hi
-      </Card>
     </div>
 
     <!--     <LazyAppCommand />  -->

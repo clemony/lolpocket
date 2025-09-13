@@ -1,5 +1,6 @@
 export * from './champion-index'
 export * from './champion-title-index'
+
 export * from './item-index'
 export * from './item-stat-index'
 export * from './map-index'
@@ -14,3 +15,4 @@ export * from './rune-to-path'
 export * from './skins-base'
 export * from './skins-full'
 export * from './spell-index'
+export * from './stat-index'

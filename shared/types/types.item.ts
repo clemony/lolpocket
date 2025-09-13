@@ -86,7 +86,7 @@ export interface ItemClone {
 }
 export interface ItemStat {
   id: string
-  displayName?: string
-  shortName?: string
+  name?: string
+  abbr?: string
   icon?: string
 }

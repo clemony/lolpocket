@@ -28,7 +28,7 @@ const imgArr = ['/img/spells/heal.webp', '/img/spells/ignite.webp', '/img/spells
 
       <img
         v-else-if="pocket.spells[0]"
-        :src="`/img/spells/${pocket.spells[0].name}.webp`"
+        :src="`/img/spells/pocket/${pocket.spells[0].name}.webp`"
  -->
         class=" rounded-full overflow-hidden grayscale-0 transition-all duration-500"
         />
@@ -51,7 +51,7 @@ const imgArr = ['/img/spells/heal.webp', '/img/spells/ignite.webp', '/img/spells
 
       <img
         v-else-if="pocket.spells[1]"
-        :src="`/img/spells/${pocket.spells[1].name}.webp`"
+        :src="`/img/spells/pocket/${pocket.spells[1].name}.webp`"
 
         class=" rounded-full overflow-hidden grayscale-0 transition-all duration-500"
       /> -->

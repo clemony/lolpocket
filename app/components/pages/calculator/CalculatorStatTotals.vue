@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { itemStats } from '#shared/appdata/formatting/item-stats'
-import { itemStatRecord } from '#shared/appdata/index/item-stat-index'
+import { itemStatRecord } from '#shared/appdata'
+import { statIndex } from '#shared/appdata/index'
 import { motion } from 'motion-v'
 
 const checkedStats = ref([])
@@ -94,7 +94,7 @@ const set2 = computed (() => is.calculatorSet2)
         </motion.label>
 
         <template
-          v-for="stat in itemStats"
+          v-for="stat in statIndex"
           :key="stat.id">
           <motion.label
             v-if="!checkedStats.includes(stat)"

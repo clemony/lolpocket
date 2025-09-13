@@ -31,7 +31,7 @@ function handleChange() {
     <label
       v-for="tag in itemTags"
       :key="tag.id"
-      v-tippy="{ content: tag.displayName }"
+      v-tippy="{ content: tag.name }"
       :aria-label="tag.id"
       class="size-fit grid place-items-center   btn !size-14  btn-xl  mr-0 btn-square  "
       :class="{ '!bgneutral !borderneutral !shadowneutral/20 !shadow-sm order-first  ml-20.5': state.filters.tags && state.filters.tags.includes(tag.id), 'first-of-type:ml-20.5': !state.filters.tags }">

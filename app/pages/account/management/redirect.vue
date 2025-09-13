@@ -2,9 +2,9 @@
 definePageMeta({
   path: '/redirect',
   layout: 'basic',
-  description: '',
 })
 
+const progress = ref(0)
 const loadingText = [
   'Polishing data...',
   'Calculating gains...',
@@ -13,44 +13,35 @@ const loadingText = [
 ]
 
 onMounted(async () => {
-  if (!process.client)
-    return // prevent SSR execution
-
-  const session = await useSupabaseSessionWait()
+  await useSupabaseSessionWait()
   const user = useSupabaseUser().value
 
-  console.log('Session ready in redirect:', session)
-
   if (user) {
-    await hydrateUser()
-    navigateTo('/nexus')
+    await hydrateUser(progress)
   }
   else {
-    // FIXME
-    // navigateTo({ name: 'login' })
+    navigateTo('/login')
   }
 })
 </script>
 
 <template>
   <div class="flex min-h-svh flex-col items-center justify-center gap-6 bg-tint-b2/40 p-6 md:p-10">
-    <div class="flex w-full max-w-md flex-col gap-6">
+    <div class="flex w-full max-w-md flex-col gap-16 -mt-16">
       <NuxtLink
         to="/"
         class="flex items-center gap-3 self-center justify-center w-full px-2">
-        <h2>
-          lolpocket
-        </h2>
+        <h2>lolpocket</h2>
       </NuxtLink>
-      <div class="flex flex-col gap-6">
+
+      <div class="flex flex-col gap-2 ">
         <div class="!max-w-180 !w-full flex flex-col gap-2">
-          <div class="w-full overflow-hidden text-2 font-medium">
-            <span class="">
-              {{ loadingText[0] }}
-              h-14
-            </span>
+          <div class="w-full overflow-hidden text-2 font-medium h-6 px-px">
+            {{ loadingText[Math.floor(progress / 25)] || loadingText.at(-1) }}
           </div>
-          <Progress />
+          <Progress
+            :value="progress"
+            :max="100" />
         </div>
       </div>
     </div>

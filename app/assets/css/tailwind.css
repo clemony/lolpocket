@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 @import './index.css';
+@source "./colors.css";
+@source "./theme.css";
 @source not "../icons";
 @source not "../img";
 

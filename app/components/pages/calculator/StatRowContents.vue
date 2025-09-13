@@ -43,7 +43,7 @@ const amount = computed (() => {
   </div>
 
   <div class=" col-start-2  font-medium dst select-none">
-    {{ stat.displayName }}
+    {{ stat.name }}
   </div>
 
   <div class="dst select-none col-start-3 text-2">

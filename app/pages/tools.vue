@@ -6,7 +6,7 @@ definePageMeta({
 
 <template>
   <div class="grid place-items-center">
-    <!--   <NuxtPage /> -->
+    <NuxtPage />
 
     <Hihi />
   </div>

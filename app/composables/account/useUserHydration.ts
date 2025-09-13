@@ -7,31 +7,31 @@ interface UserProfileResponse {
   account: Account | null
   settings: Settings | null
   public: PublicData | null
+  pockets: Pocket[] | null
 }
 
-export async function hydrateUser() {
+interface UserProfileResponse {
+  account: Account | null
+  settings: Settings | null
+  public: PublicData | null
+  user_pockets: Pocket[] | null // <- updated key to match RPC
+}
+export async function hydrateUser(progress?: Ref<number>) {
   const client = useSupabaseClient()
   const user = useSupabaseUser().value
-
   const as = useAccountStore()
-
-  console.log('Authenticated user: ', user)
 
   if (!user)
     throw new Error('hydrateUser: no logged-in user')
 
-  // eslint-disable-next-line node/prefer-global/process
-  if (!process.client) {
-    console.warn('hydrateUser should only run client-side')
-    return
-  }
-
   try {
+    progress && (progress.value = 10)
+
     const { data, error } = await client
       .rpc('get_user_profile')
       .single<UserProfileResponse>()
 
-    console.log('RPC Result:', { data, error })
+    progress && (progress.value = 40)
 
     if (error) {
       console.error('hydrateUser RPC error:', error)
@@ -39,27 +39,36 @@ export async function hydrateUser() {
     }
 
     if (data) {
-      // Safe parse & fallback to defaults
+      console.log('🌱 - hydrateUser - data:', data)
       const accountParse = v.safeParse(AccountSchema, data.account ?? getEmptyAccount())
       const settingsParse = v.safeParse(SettingsSchema, data.settings ?? getEmptySettings())
       const publicParse = v.safeParse(PublicDataSchema, data.public ?? getEmptyPublicData())
-      // const pocketParse = v.safeParse(PocketSchema, data.pockets ?? generatePocket())
 
-      if (!accountParse.success) {
-        console.warn('Account parse failed, using defaults:', accountParse.issues)
-      }
-      if (!settingsParse.success) {
-        console.warn('Settings parse failed, using defaults:', settingsParse.issues)
-      }
-      if (!publicParse.success) {
-        console.warn('PublicData parse failed, using defaults:', publicParse.issues)
-      }
+      progress && (progress.value = 70)
 
-      // Commit validated & defaulted data to store
       as.account = accountParse.success ? accountParse.output : getEmptyAccount()
       as.settings = settingsParse.success ? settingsParse.output : getEmptySettings()
       as.publicData = publicParse.success ? publicParse.output : getEmptyPublicData()
+
+      const results = data.user_pockets.map(p => v.safeParse(PocketSchema, p))
+      results.forEach((r, i) => {
+        if (!r.success) {
+          console.warn(`Pocket ${i} failed validation:`, r.issues)
+        }
+      })
+
+      let validatedPockets: Pocket[] = []
+      if (Array.isArray(data.user_pockets)) {
+        validatedPockets = data.user_pockets
+          .map(p => v.safeParse(PocketSchema, p))
+          .filter(p => p.success)
+          .map(p => (p as { success: true, output: Pocket }).output)
+      }
+      ps().pockets = validatedPockets
+      console.log('🌱 - hydrateUser - ps().pockets:', ps().pockets)
     }
+
+    progress && (progress.value = 100)
   }
   catch (err) {
     console.error('Unexpected error in hydrateUser:', err)
@@ -70,6 +79,7 @@ export async function hydrateUser() {
   }
 
   as.loggedIn = true
+  navigateTo('/nexus')
 
   toast.success('Welcome back!', {
     description: `Great to see you, ${

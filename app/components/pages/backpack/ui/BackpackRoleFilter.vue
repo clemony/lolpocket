@@ -23,11 +23,11 @@ const tags = ref([])
       </Button>
     </CollapsibleTrigger>
     <CollapsibleContent
-      class=" CollapsibleContent relative justify-center flex gap-y-2.75 flex-col !py-2  pl-4 pr-18">
+      class=" CollapsibleContent relative justify-center flex gap-y-3.75 flex-col !py-2  pl-4 pr-18">
       <label
         v-for="position in championPositions"
         :key="position.name"
-        class="group/bth-9 flex rounded-lg badge badge-lg !h-6.5 pl-1.5 pr-2.5 gap-1.5  hover:ring hover:ring-offset-2 duration-0 font-medium ring-offset-b1 ring-bc/60 items-center w-fit  cursor-pointer"
+        class="group/btn h-9 flex rounded-lg badge badge-lg !h-6.5 pl-1.5 pr-2.5 gap-1.5  hover:ring hover:ring-offset-2 duration-0 font-medium ring-offset-b1 ring-bc/60 items-center w-fit  cursor-pointer"
         :style=" {
           backgroundColor: position.color,
           borderColor: position.color }">
@@ -41,7 +41,7 @@ const tags = ref([])
           class="checkbox checkbox-xs checked:bg-b1 text-white rounded-full bg-b1 border-0 fx-0" />
 
         <component
-          :is="`i-roles-${position.name}`"
+          :is="`i-lol-${position.name}`"
           :class="cn('size-3.5 ml-1 dst text-white ')" />
 
         <span

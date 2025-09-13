@@ -19,7 +19,8 @@ export default defineNuxtConfig({
   imports: {
     dirs: [
       'appdata',
-      '#shared/types'
+      './shared/types/**',
+      './shared/schema/**'
     ],
     autoImport: true,
     global: true,
@@ -27,6 +28,7 @@ export default defineNuxtConfig({
   alias: {
     api: fileURLToPath(new URL('./server/api', import.meta.url)),
     types: fileURLToPath(new URL('./shared/types', import.meta.url)),
+    schema: fileURLToPath(new URL('./shared/schema', import.meta.url)),
 
   },
   components: [
@@ -108,6 +110,15 @@ export default defineNuxtConfig({
 
   typescript: {
     typeCheck: true,
+    tsConfig: {
+      compilerOptions: {
+        resolveJsonModule: true,
+        types: ['node'],
+        strict: false,
+        noEmit: true,
+        pretty: true
+      },
+    },
   },
 
   vite: {

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { itemStats } from '#shared/appdata'
+import { statIndex } from '#shared/appdata'
 
 const is = useItemStore()
 const { filters, setFilter, filtered } = useItemFilter()
@@ -21,7 +21,7 @@ const { filters, setFilter, filtered } = useItemFilter()
         class="flex flex-col z-0 mb-2 px-1.5"
         :appear="false">
         <Motion
-          v-for="stat in itemStats"
+          v-for="stat in statIndex"
           :key="stat.id"
           as="div">
           <label
@@ -34,10 +34,10 @@ const { filters, setFilter, filtered } = useItemFilter()
               class="peer hidden"
               :value="stat" />
 
-            <span class="grow">{{ stat.displayName }}</span>
+            <span class="grow">{{ stat.name }}</span>
 
             <div class="!text-1 badge bg-b1/90 border-accent rounded-field tracking-wide">
-              <span class="dst text-bc">{{ stat.shortName }}</span>
+              <span class="dst text-bc">{{ stat.abbr }}</span>
             </div>
           </label>
         </Motion>

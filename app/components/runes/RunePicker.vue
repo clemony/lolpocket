@@ -64,13 +64,13 @@ function openInfo(rune: number) {}
             <Button
               variant="link"
               size="xs"
-              class=""
+              class="flex items-center"
               @click="openInfo(rune.id)">
               {{ rune.name }}
               <span class="size-4 grid place-items-center relative">
                 <icon
-                  name="i"
-                  class="size-5 absolute  shrink-0" />
+                  name="streamline:information-circle"
+                  class="size-4.5 absolute mb-0.75 shrink-0" />
               </span>
             </Button>
           </template>

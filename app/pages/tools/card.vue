@@ -9,6 +9,7 @@ const { card } = defineProps<{
 
 definePageMeta({
   name: 'card',
+  path: '/tools/card',
   title: 'Card Editor',
   level: 2,
   search: false,
@@ -60,7 +61,7 @@ console.log('💠 - card.splash:', card.splash)
         <div group class="grid grid-flow-row auto-cols-auto select-none h-fit pt-1  grid-cols-[repeat(auto-fill,minmax(60px,1fr))] justify-center place-items-center  gap-4 mx-auto w-full">
           <template v-if="champions.children.length">
             <template v-for="champion in champions.children" :key="champion.id">
-              <ChampionSplashDropdown :champion="champion" :pocket="pocket" />
+              <ChampionDropdown :champion="champion" :pocket="pocket" />
             </template>
           </template>
 

@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import { getEmptyAccount } from '~~/shared/types/schema.account'
 
 export const useAccountStore = defineStore(
   'as',

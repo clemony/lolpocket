@@ -22,7 +22,7 @@ export function deletePocket(pocket) {
         duration: 7000,
         action: {
           label: 'Restore?',
-          // onClick: () => navigateTo({ path: `/pocket/${newPocket.key}` }),
+          // onClick: () => navigateTo({ path: `/${newPocket.key}` }),
         },
         cancel: {
           label: '×',
