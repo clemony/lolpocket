@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { itemStats } from '#shared/appdata'
+import { statIndex } from '#shared/appdata'
 
 const { stats } = defineProps<{
   stats: Record<string, number>
@@ -24,16 +24,20 @@ const statEntries = computed(() =>
         </p>
 
         <p class="grow  font-medium tracking-tight ">
-          {{ itemStats.find(k => k.id == stat.key).displayName }}
+          {{ statIndex.find(k => k.id == stat.key).name }}
         </p>
 
         <p
-          class="badge badge-sm justify-self-end  gap-0.5 h-5.5 px-1.25  !text-white  font-semibold border-none dst !drop-shadow-black/20 !text-0"
-          :class="itemStats.find(k => k.id == stat.key).badge">
+          class="badge badge-sm justify-self-end  gap-0.5 h-5.5 px-1.25   border-none dst !drop-shadow-black/20 !text-0"
+          :style="{
+            backgroundColor: statIndex.find(k => k.id == stat.key).color
+          }">
           <component
-            :is="`i-stats-${itemStats.find(k => k.id == stat.key).icon}`"
-            class="!size-3.25 self-center" />
-          {{ itemStats.find(k => k.id == stat.key).shortName }}
+            :is="statIndex.find(k => k.id == stat.key).icon"
+            class="!size-3.25 self-center text-white" />
+            <span class="text-white  font-semibold">
+          {{ statIndex.find(k => k.id == stat.key).abbr }}
+          </span>
         </p>
       </div>
     </div>

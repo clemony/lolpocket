@@ -83,9 +83,7 @@ const { stop } = useIntersectionObserver(
 
     <LazyUserReviews />
 
-    <LazySiteMap />
-
-    <HomeFooter />
+    <SiteFooter />
   </div>
 </template>
 

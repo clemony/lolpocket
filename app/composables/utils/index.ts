@@ -1,5 +1,6 @@
 export * from './useChildRoutes'
 export * from './useCooldown'
 export * from './useParentMeta'
+export * from './useScrollToHash'
 export * from './useSupabaseSessionWait'
 export * from './useThrottledFn'

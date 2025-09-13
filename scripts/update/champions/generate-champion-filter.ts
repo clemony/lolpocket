@@ -1,8 +1,10 @@
-import type { Champion } from '#shared/types'
+import type { Champion } from '../../../shared/types/types.champion'
+import { markUpdate } from '../../../shared/utils/markUpdate'
+
 import fs from 'node:fs'
 import { join } from 'node:path'
 import process from 'node:process'
-import { normalizeArray } from '~/utils'
+import { normalize, normalizeArray } from '../utils'
 
 const rootDir = process.cwd()
 const dataPath = join(rootDir, 'server/update/champions/raw/champions-raw.json')

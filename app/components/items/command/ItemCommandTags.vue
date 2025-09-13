@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { itemStats } from '#shared/appdata'
+import { statIndex } from '#shared/appdata'
 
 const is = useItemStore()
 const { filters, setFilter, filtered } = useItemFilter()
@@ -42,7 +42,7 @@ const searchInput = ref([])
         type="checkbox"
         class="peer hidden"
         :value="stat" />
-      {{ itemStats.find(s => s.id == stat).shortName }}
+      {{ statIndex.find(s => s.id == stat).abbr }}
 
       <icon name="x-sm" />
     </label>

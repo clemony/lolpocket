@@ -18,7 +18,7 @@ watch(
 
 <template>
   <div class="absolute before:z-0 before:absolute before:size-full before:bg-b1/60 before:top-0 before:left-0 z-1  bg-b2/40 backdrop-blur-md flex items-center py-1 top-16 left-0 w-full rounded-none  shadow-none border-b border-b-b3/80 border-x-2 border-x-b3/30  h-14 px-5.25 gap-2">
-    <LazyChampionSplashDropdown
+    <LazyChampionDropdown
       :disabled="!card.champion"
       :champion=" card.champion"
       :card />

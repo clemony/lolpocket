@@ -6,7 +6,7 @@ export const buttonBase = 'data-[state=active]:btn-active  data-[state=open]:btn
 export const toggleBase = 'inline-flex items-center justify-center btn btn-ghost font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-b2 data-[state=on]:border-b3/60 [&_svg]:pointer-events-none [&_svg]:size-5 [&_svg]:shrink-0 gap-2 '
 
 const variantStyles = {
-  base: 'btn bg-transparent hover:bg-transparent shadow-none border-transparent inset-shadow-none fx-0  drop-shadow-none  border-0',
+  base: 'btn bg-transparent hover:bg-transparent shadow-none border-transparent inset-shadow-none fx-0  drop-shadow-transparent shadow-none drop-shadow-none [--btn-depth:unset] [--btn-shadow:unset]  border-0',
 
   btn: 'px-3  btn  bg-tint-b2/60 border-b2 [&_.btn-active]:!bg-tint-b2/10  [&_.btn-active]:!border-b3/80 font-medium',
 
@@ -34,7 +34,7 @@ const hoverStyles = {
   base: 'hover:bg-transparent',
   b1: 'hover:!bg-b1',
   btn: 'hover:!bg-b2  hover:!border-b3/80',
-
+  none: '',
   neutral: ' hover:!text-nc hover:!bg-neutral/85 hover:**:!text-nc hover:!border-n3 hover:shadow-sm hover:drop-shadow-sm ',
 
   outline: 'hover:inset-shadow-xxs hover:!border-bc/60 border ',

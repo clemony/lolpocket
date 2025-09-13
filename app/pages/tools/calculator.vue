@@ -4,7 +4,8 @@ import { ListboxContent, ListboxFilter, ListboxGroup, ListboxGroupLabel, Listbox
 import { motion } from 'motion-v'
 
 definePageMeta({
-
+  name: 'calculator',
+  path: '/tools/calculator',
   level: 2,
   order: 6,
   icon: 'calc',

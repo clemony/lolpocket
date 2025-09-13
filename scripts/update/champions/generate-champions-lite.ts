@@ -1,7 +1,8 @@
 import fs from 'node:fs'
-import { markUpdate, normalize, normalizeArray } from '../../../scripts'
-import type { ChampionLite, ChampionLiteRecord } from '../../../shared/types'
+import type { ChampionLite, ChampionLiteRecord } from '../../../shared/types/types.champion'
+import { markUpdate } from '../../../shared/utils/markUpdate'
 import { resolvePath } from '../resolvePath'
+import { normalize, normalizeArray } from '../utils'
 
 const dataPath = resolvePath('./champions/raw/champions-raw.json')
 const outputLite = resolvePath('../../shared/appdata/records/champions-lite.ts')

@@ -1,0 +1,19 @@
+{
+  "autoStart": {
+    "enabled": false,
+    "scripts": [
+      "dev"
+    ]
+  },
+  "customCommands": [
+    {
+      "name": "Full Build",
+      "command": "build && test && lint",
+      "description": "Complete build process with tests and linting"
+    }
+  ],
+  "settings": {
+    "showNotifications": true,
+    "autoInstallOnOpen": false
+  }
+}

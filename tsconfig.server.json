@@ -1,0 +1,12 @@
+// tsconfig.server.json at project root
+{
+  "extends": "./tsconfig.json",
+
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "types": ["node"],
+    "strict": false,
+    "noEmit": true,
+    "pretty": true
+  }
+}

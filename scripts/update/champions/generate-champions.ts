@@ -1,9 +1,10 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import process from 'node:process'
-import { markUpdate, normalize, normalizeAbility, normalizeArray, stripEmpty } from '../../../scripts/index'
-import type { Champion } from '../../../shared/types/types.champion'
+import type { Ability, Champion } from '../../../shared/types/types.champion'
+import { markUpdate } from '../../../shared/utils/markUpdate'
 import { resolvePath } from '../resolvePath'
+import { normalize, normalizeAbility, normalizeArray, stripEmpty } from '../utils'
 
 // ---------- Args & flags ----------
 const args = process.argv.slice(2)
@@ -22,8 +23,13 @@ const savepointPath = resolvePath('./champions/raw/.generate-champions-save.json
 fs.mkdirSync(outputDir, { recursive: true })
 fs.mkdirSync(path.dirname(savepointPath), { recursive: true })
 
+// type
+interface BuildChampion extends Omit<Champion, 'abilities'> {
+  abilities: Record<'P' | 'Q' | 'W' | 'E' | 'R', Ability[]>
+}
+
 // ---------- Load raw data ----------
-const merakiData: Record<string, Champion> = JSON.parse(fs.readFileSync(dataPathM, 'utf-8'))
+const merakiData: Record<string, BuildChampion> = JSON.parse(fs.readFileSync(dataPathM, 'utf-8'))
 const dragonData: Record<string, any> = JSON.parse(fs.readFileSync(dataPathD, 'utf-8'))
 
 // ---------- Load savepoints ----------
@@ -62,9 +68,13 @@ for (const champ of Object.values(merakiData)) {
     }
 
     // ---------- Merge abilities ----------
-    const mergedAbilities: Record<string, any[]> = {}
-    for (const [slot, abilityGroup] of Object.entries(champ.abilities)) {
-      mergedAbilities[slot] = abilityGroup.map((ability) => {
+    const abilityOrder: Array<'P' | 'Q' | 'W' | 'E' | 'R'> = ['P', 'Q', 'W', 'E', 'R']
+
+    const mergedAbilities: any[] = []
+
+    for (const slot of abilityOrder) {
+      const abilityGroup = champ.abilities[slot] || []
+      for (const ability of abilityGroup) {
         let riotAbility
         if (slot === 'P') {
           riotAbility = riotChamp.passive
@@ -73,27 +83,29 @@ for (const champ of Object.values(merakiData)) {
           const spellIndex = ['Q', 'W', 'E', 'R'].indexOf(slot)
           riotAbility = riotChamp.spells?.[spellIndex]
         }
+
         const maxAmmoRaw = riotAbility?.maxammo
         const maxAmmo = maxAmmoRaw != null ? Number(maxAmmoRaw) : null
         const safeMaxAmmo = Number.isNaN(maxAmmo) ? null : maxAmmo
+
         const maxRankRaw = riotAbility?.maxrank
         const safeMaxRank = typeof maxRankRaw === 'number' ? maxRankRaw : null
+
         const riotCooldown = Array.isArray(riotAbility?.cooldown) ? riotAbility.cooldown : []
         const riotCost = Array.isArray(riotAbility?.cost) ? riotAbility.cost : []
 
-        return {
+        mergedAbilities.push({
           ...ability,
+          key: slot, // now guaranteed to stick
           maxCharges: safeMaxAmmo,
           maxRank: safeMaxRank,
           riotCooldown,
           riotCost,
-        }
-      })
+        })
+      }
     }
 
-    const cleanedAbilities = Object.fromEntries(
-      Object.entries(mergedAbilities).map(([slot, entries]) => [slot, entries.map(normalizeAbility)]),
-    )
+    const cleanedAbilities = mergedAbilities.map(normalizeAbility)
 
     // ---------- Filter stats ----------
     const filteredStats = Object.fromEntries(

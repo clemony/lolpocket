@@ -2,6 +2,14 @@
 @import './theme.css';
 
 @layer components {
+
+    .rune-hover:hover label,
+  .rune-hover[aria-expanded="true"] label {
+    @apply opacity-100 !grayscale-0 ring ring-neutral;
+  }
+
+
+
   .dst {
     @apply drop-shadow-text;
   }

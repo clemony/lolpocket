@@ -12,7 +12,7 @@ console.log('🌱 - pocket:', ps().pockets.filter(p => p.location.folder == ''))
 <template>
   <button
     :class="cn(
-      'flex flex-col items-start gap-2 rounded-lg border pb-5 px-6 pb-5 pt-3 text-left cursor-pointer transition-colors ring ring-transparent hover:ring-neutral/60',
+      'flex flex-col items-start gap-2 rounded-xl shadow-black/8 shadow-sm border border-b4/70 pb-5 px-6 pb-5 pt-3 text-left cursor-pointer transition-colors ring ring-transparent hover:ring-neutral/50',
       selected?.key === pocket?.key && 'bg-b2/30',
     )"
     @dblclick="navigateTo(`/pocket/${pocket.key}`)">

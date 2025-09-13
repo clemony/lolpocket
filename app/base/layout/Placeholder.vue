@@ -1,38 +1,22 @@
 <script setup lang="ts">
-import type { HTMLAttributes } from 'vue'
+import type { AsTag, PrimitiveProps } from 'reka-ui'
+import { Primitive } from 'reka-ui'
+import { labelVariants } from '~/assets/ts/variant-index'
 
-const props = defineProps<{
-  size?: number
-  width?: number
-  height?: number
-  icon?: string
-  img?: string
+const { as = 'label', class: className, } = defineProps<PrimitiveProps & {
   class?: HTMLAttributes['class']
-  iClass?: HTMLAttributes['class']
+  variant?: any
+  size?: any
+  hover?: any
+  as?: AsTag | string
 }>()
-
-const size = `${props.size}px`
 </script>
 
 <template>
-  <label
-    :class="cn('group pointer-events-none size-full items-center justify-center gap-2 self-center aspect-square btn btn-square !p-0 ', props.class)"
-    :style="{
-      height: size || `${width}px`,
-      width: size || `${height}px`,
-    }">
-    <icon
-      v-if="props.icon == 'plus'"
-      name="teenyicons:add-outline"
-      class="group-hover:stroke-[1.5]" />
-
-    <img
-      v-if="props.img"
-      :src="props.img"
-      :class="cn('', props.iClass)" />
-
+  <Primitive
+    :as="as"
+    v-bind="$attrs"
+    :class="cn('group/placeholder pointer-events-none size-full items-center justify-center gap-2 self-center aspect-square btn btn-square !p-0 ', labelVariants({ variant, size, hover }), className)">
     <slot />
-  </label>
+  </Primitive>
 </template>
-
-<style scoped></style>

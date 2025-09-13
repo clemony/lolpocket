@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import { itemStats } from '#shared/appdata'
+import { statIndex } from '#shared/appdata'
 
 const emit = defineEmits(['update:model'])
 
 const to = ref([])
-const categories = ref(itemStats)
+const categories = ref(statIndex)
 const originalOrder = ref([
   ...categories.value.sort((a, b) => {
-    if (a.displayName < b.displayName) {
+    if (a.name < b.name) {
       return -1
     }
-    if (a.displayName > b.displayName) {
+    if (a.name > b.name) {
       return 1
     }
     return 0
@@ -53,7 +53,7 @@ function handleReset() {
         :value="stat.id"
         type="checkbox"
         name="categories"
-        :aria-label="(stat.shortName as string) || stat.displayName"
+        :aria-label="(stat.abbr as string) || stat.name"
         @change="moveToTop(stat)"
       />
     </TransitionGroup> -->

@@ -3,7 +3,7 @@ const roleStats = useRoles(filteredMatches)
  */
 export interface RoleStats {
   role: string
-  displayName: string
+  name: string
   games: number
   wins: number
   winrate: number
@@ -63,11 +63,11 @@ export function useMatchRoles(
 
     return ['ALL', ...roles].map((role) => {
       const { games = 0, wins = 0 } = roleStatsMap.get(role) ?? {}
-      const displayName = formatDisplay(role)
+      const name = formatDisplay(role)
 
       return {
         role,
-        displayName,
+        name,
         games,
         wins,
         winrate: games === 0 ? 0 : (wins / games) * 100,

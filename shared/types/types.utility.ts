@@ -55,7 +55,7 @@ export interface DataObject extends LinkObject {
 
 export interface Category {
   id: string
-  displayName?: string
+  name?: string
   checked: boolean
   icon?: string
   color?: string

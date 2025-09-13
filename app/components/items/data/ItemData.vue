@@ -12,7 +12,7 @@ watchEffect(async () => {
     return
 
   try {
-    const module = await import(`../../../appdata/records/items/${id}.ts`)
+    const module = await import(`#shared/appdata/records/items/${id}.ts`)
     item.value = module.default || null
   }
   catch (err) {

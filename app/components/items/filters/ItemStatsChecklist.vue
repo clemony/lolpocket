@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { itemStats } from '#shared/appdata'
+import { statIndex } from '#shared/appdata'
 import { ListboxContent, ListboxItem, ListboxItemIndicator, ListboxRoot } from 'reka-ui'
 </script>
 
@@ -11,7 +11,7 @@ import { ListboxContent, ListboxItem, ListboxItemIndicator, ListboxRoot } from '
     @entry-focus.prevent>
     <ListboxContent class="w-full pt-px pb-6 ">
       <ListboxItem
-        v-for="stat in itemStats.filter(s => s.id != 'msflat' && s.id != 'mpenflat')"
+        v-for="stat in statIndex.filter(s => s.id != 'msflat' && s.id != 'mpenflat')"
         :key="stat.id"
         as-child
         :value="stat.id">
@@ -19,7 +19,7 @@ import { ListboxContent, ListboxItem, ListboxItemIndicator, ListboxRoot } from '
           variant="ghost"
           size="sm"
           :class="cn('justify-start capitalize', { 'btn-active': is().filters.stats.includes(stat.id) })">
-          {{ stat.displayName }}
+          {{ stat.name }}
           <ListboxItemIndicator
             class="w-fit justify-self-end justify-end bg-neutral">
             <input

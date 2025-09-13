@@ -21,7 +21,6 @@ export const useIndexStore = defineStore(
 
     async function loadPatch() {
       if (isStale(lastPatchCheck.value) == true) {
-        console.log('🌱 - loadPatch - isStale(lastPatchCheck.value) == true:', isStale(lastPatchCheck.value) == true)
         const { patchIndex } = await import('#shared/appdata/index/patch-index')
         lastPatchCheck.value = new Date()
         if (patch.value != patchIndex[0]) {

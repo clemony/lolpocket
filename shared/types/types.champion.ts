@@ -3,7 +3,6 @@ export type ChampionName = string
 export type ChampionKey = string
 export type ChampionRecord = Record<ChampionKey, Champion>
 export type ChampionLiteRecord = Record<ChampionKey, ChampionLite>
-export type AbilityRecord = Record<'P' | 'Q' | 'W' | 'E' | 'R', Ability[]>
 export type SplashType = 'tile' | 'centered' | 'load' | 'uncentered'
 export type SkinRecord = Record<ChampionKey, Skin>
 export type FullSkinRecord = Record<ChampionKey, Skin[]>
@@ -34,7 +33,7 @@ export interface Champion extends ChampionIndex {
   fullName?: string
   title: string
   lore?: string
-  abilities: AbilityRecord
+  abilities: Ability[]
   faction: string
   releaseDate: string
   patchLastChanged: string
@@ -64,10 +63,11 @@ export interface Skin {
 
 export interface Ability {
   name?: string
+  key: string
   icon?: string
   effects?: AbilityEffect[]
-  cost?: number[]
-  cooldown?: number[]
+  cost?: string
+  cooldown?: string
   targeting?: string
   affects?: string
   spellshieldable?: string
@@ -80,7 +80,7 @@ export interface Ability {
   notes?: string
   blurb?: string
   missileSpeed?: string
-  rechargeRate?: number[]
+  rechargeRate?: string
   collisionRadius?: string
   tetherRadius?: string
   onTargetCdStatic?: string
@@ -95,14 +95,9 @@ export interface Ability {
   maxRank?: number
 }
 
-export interface Modifier {
-  values?: number[] | null
-  units?: string[] | null
-}
-
 export interface Attribute {
   attribute?: string
-  modifiers?: Modifier[]
+  modifiers?: string[]
 }
 
 export interface AbilityEffect {

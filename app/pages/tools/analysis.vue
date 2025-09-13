@@ -1,6 +1,7 @@
 <script setup lang="ts">
 definePageMeta({
   title: 'analysis',
+  path: '/tools/analysis',
   level: 1,
   order: 5,
 })

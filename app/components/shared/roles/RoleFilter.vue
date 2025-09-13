@@ -21,7 +21,7 @@ const roleModel = computed({
         :class="{ 'pointer-events-none': ms.filter.role == 'ALL' }"
         class="btn btn-sm gap-2 font-medium rounded-lg px-2.5 place-self-center text-3  btn-ghost"
         @click="state.clearFilters()">
-        {{ ms.filter.role != 'ALL' ? roleStats.find(r => r.role == ms.filter.role).displayName : 'Position' }}
+        {{ ms.filter.role != 'ALL' ? roleStats.find(r => r.role == ms.filter.role).name : 'Position' }}
 
         <icon
           v-if="ms.filter.role != 'ALL'"
@@ -42,7 +42,7 @@ const roleModel = computed({
           <label
             v-if="ms.filter.role == 'ALL' || ms.filter.role == role.role"
 
-            v-tippy="{ content: `${role.displayName} - ${role.games} game${role.games > 1 ? 's' : ''}` }"
+            v-tippy="{ content: `${role.name} - ${role.games} game${role.games > 1 ? 's' : ''}` }"
             class="size-14 grid place-items-center "
             :class="cn({ 'bgneutral borderneutral shadowneutral/20 shadow-sm order-2  ': role.role == ms.filter.role, 'border-b3/80 btn  size-14  mr-0 btn-square': role.games })">
 
@@ -57,7 +57,7 @@ const roleModel = computed({
             <component
               :is="`i-roles-${role.role.toLowerCase().replace(' ', '-').replace('utility', 'support')}`"
               class="h-5 w-auto dst shrink-0 peer-checked:text-nc"
-              :class="{ '!text-bc/80': role.displayName == 'ALL' }" />
+              :class="{ '!text-bc/80': role.name == 'ALL' }" />
 
           </label>
         </template>

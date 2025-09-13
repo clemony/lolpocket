@@ -37,7 +37,7 @@ const { isCollapsed, pinned } = defineProps<{
           <Blink
             variant="ghost"
             :size="isCollapsed ? 'icon' : 'md'"
-            :to="`/pocket/${link.key}`"
+            :to="`/${link.key}`"
             class=" px-2 !duration-0 text-3 justify-start grow !gap-3 flex items-center">
             <PocketIcon
               size="sm"
@@ -80,7 +80,7 @@ const { isCollapsed, pinned } = defineProps<{
       v-for="link of pinned"
       :key="link.name"
       class="size-12"
-      :to="`/pocket/${link.key}`"
+      :to="`/${link.key}`"
       variant="ghost">
       <PocketIcon
         size="sm"

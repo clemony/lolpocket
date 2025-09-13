@@ -1,12 +1,12 @@
-import fetch from 'node-fetch'
-import sharp from 'sharp'
+import { $fetch } from 'ofetch'
 
 import { Buffer } from 'node:buffer'
 import fs from 'node:fs'
 import path from 'node:path'
-import { cleanImageLink, cleanImageNum, markUpdate } from '../../../scripts'
 import type { FullSkinRecord, SkinRecord } from '../../../shared/types/types.champion'
+import { markUpdate } from '../../../shared/utils/markUpdate'
 import { resolvePath } from '../resolvePath'
+import { cleanImageLink, cleanImageNum } from '../utils'
 
 const championsPath = resolvePath('./champions/raw/champions-raw-meraki.json')
 const baseSkinPath = resolvePath('../../shared/appdata/index/skins-base.ts')
