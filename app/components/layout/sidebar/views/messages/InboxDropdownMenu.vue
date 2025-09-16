@@ -1,6 +1,13 @@
 <script lang="ts" setup>
 import { testMessage } from '../messages/test-message'
-import { inboxBox, inboxUnreadFilter, markRead, openBox, toggleRead, trashAllRead } from './inbox-management'
+import {
+  inboxBox,
+  inboxUnreadFilter,
+  markRead,
+  openBox,
+  toggleRead,
+  trashAllRead,
+} from './inbox-management'
 
 const as = useAccountStore()
 </script>
@@ -8,7 +15,7 @@ const as = useAccountStore()
 <template>
   <DropdownMenuLabel class="justify-between w-full flex">
     Inbox
-    <label class="flex gap-2 text-2">
+    <label class="flex gap-2 text-xs">
       Unread
       <Switch
         v-model:model-value="inboxUnreadFilter"
@@ -33,9 +40,7 @@ const as = useAccountStore()
     </HighlightDropdownRadioItem>
   </DropdownMenuRadioGroup>
 
-  <DropdownMenuLabel>
-    Tools
-  </DropdownMenuLabel>
+  <DropdownMenuLabel>Tools</DropdownMenuLabel>
   <DropdownMenuSeparator />
 
   <DropdownMenuItem @click="as.account.inbox.messages.push(testMessage)">
@@ -67,9 +72,7 @@ const as = useAccountStore()
       <icon
         name="trash"
         class="size-4 !-ml-1 -mt-1" />
-      <span class="absolute -bottom-1.5 opacity-70  text-4 -right-1">
-        🡭
-      </span>
+      <span class="absolute -bottom-1.5 opacity-70 text-md -right-1">🡭</span>
     </IconWrapper>
     Trash all Read Messages
   </DropdownMenuItem>

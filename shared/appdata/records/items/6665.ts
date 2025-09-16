@@ -6,18 +6,18 @@ const item: Item = {
     {
       id: 1011,
       name: 'Giant\'s Belt',
-      gold: 900
+      gold: 900,
     },
     {
       id: 1031,
       name: 'Chain Vest',
-      gold: 800
+      gold: 800,
     },
     {
       id: 1057,
       name: 'Negatron Cloak',
-      gold: 850
-    }
+      gold: 850,
+    },
   ],
   specialRecipe: 0,
   noEffects: false,
@@ -27,29 +27,23 @@ const item: Item = {
     {
       name: 'Voidborn Resilience',
       unique: true,
-      effects: 'Gain a stack for each second in combat with enemy champions, stacking up to 5 times. At <b>maximum</b> stacks, increase your <b>bonus</b> armor and <b>bonus</b> magic resistance by 30% until the end of combat.'
-    }
+      effects:
+        'Gain a stack for each second in combat with enemy champions, stacking up to 5 times. At <b>maximum</b> stacks, increase your <b>bonus</b> armor and <b>bonus</b> magic resistance by 30% until the end of combat.',
+    },
   ],
   stats: {
     armor: 45,
     health: 350,
-    magicResistance: 45
+    magicResistance: 45,
   },
   shop: {
     prices: {
       total: 3200,
       combined: 650,
-      sell: 1280
+      sell: 1280,
     },
-    tags: [
-      'TANK'
-    ]
+    tags: ['TANK'],
   },
-  maps: [
-    11,
-    12,
-    21,
-    35
-  ]
+  maps: [11, 12, 21, 35],
 }
 export default item

@@ -32,12 +32,16 @@ export const useIndexStore = defineStore(
     }
 
     async function loadSkins() {
-      const { skins: skinIndex } = await import('#shared/appdata/index/skins-full')
+      const { skins: skinIndex } = await import(
+        '#shared/appdata/index/skins-full'
+      )
       skins.value = skinIndex
     }
 
     async function loadChamps() {
-      const { championIndex } = await import('#shared/appdata/index/champion-index')
+      const { championIndex } = await import(
+        '#shared/appdata/index/champion-index'
+      )
       champions.value = championIndex
     }
 
@@ -72,7 +76,9 @@ export const useIndexStore = defineStore(
     }
 
     async function loadTitles() {
-      const { championTitleIndex } = await import('#shared/appdata/index/champion-title-index')
+      const { championTitleIndex } = await import(
+        '#shared/appdata/index/champion-title-index'
+      )
       titles.value = championTitleIndex
     }
 
@@ -137,7 +143,7 @@ export const useIndexStore = defineStore(
       dataset: T[] | undefined,
       inputKey: keyof T,
       value: T[keyof T],
-      outputKey: keyof T,
+      outputKey: keyof T
     ): T[keyof T] | undefined {
       return dataset?.find(item => item[inputKey] === value)?.[outputKey]
     }
@@ -145,7 +151,7 @@ export const useIndexStore = defineStore(
     function getByIndex<T extends Record<string, any>>(
       dataset: T[] | undefined,
       inputKey: keyof T,
-      value: T[keyof T],
+      value: T[keyof T]
     ): T | undefined {
       return dataset?.find(item => item[inputKey] === value)
     }
@@ -155,7 +161,12 @@ export const useIndexStore = defineStore(
     }
 
     function skinNameFromUrl(url: string): string | undefined {
-      const s = url.replace('https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/', '').split('/')
+      const s = url
+        .replace(
+          'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/',
+          ''
+        )
+        .split('/')
 
       const name = capitalize(s[0])
       let id = [...s].pop()
@@ -221,7 +232,8 @@ export const useIndexStore = defineStore(
       centeredByKey: (key: string) => skin.value?.[key]?.centeredPath,
       loadScreenByKey: (key: string) => skin.value?.[key]?.loadPath,
 
-      getSplash: (keyOrId: string | number, type: SplashType) => getSplash(keyOrId, type),
+      getSplash: (keyOrId: string | number, type: SplashType) =>
+        getSplash(keyOrId, type),
       getSkinName,
       skinNameFromUrl,
 
@@ -230,12 +242,14 @@ export const useIndexStore = defineStore(
       itemById: (id: number) => getByIndex(items.value, 'id', id),
       itemIdByName: (name: string) =>
         findInIndex(items.value, 'name', name, 'id'),
-      itemNameById: (id: number) => findInIndex(items.value, 'id', id, 'name') as string,
+      itemNameById: (id: number) =>
+        findInIndex(items.value, 'id', id, 'name') as string,
 
       // runes
 
       runeById: (id: number) => getByIndex(runes.value, 'id', id),
-      runeNameById: (id: number) => findInIndex(runes.value, 'id', id, 'name') as string,
+      runeNameById: (id: number) =>
+        findInIndex(runes.value, 'id', id, 'name') as string,
 
       // paths
 
@@ -259,5 +273,5 @@ export const useIndexStore = defineStore(
       storage: piniaPluginPersistedstate.localStorage(),
       key: 'indexStore',
     },
-  },
+  }
 )

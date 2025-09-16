@@ -51,12 +51,9 @@ useMotionValueEvent(scrollYProgress, 'change', (latest) => {
 
 const heroVisible = shallowRef(false)
 
-const { stop } = useIntersectionObserver(
-  hero,
-  ([entry], observerElement) => {
-    heroVisible.value = entry?.isIntersecting || false
-  },
-)
+const { stop } = useIntersectionObserver(hero, ([entry], observerElement) => {
+  heroVisible.value = entry?.isIntersecting || false
+})
 </script>
 
 <template>
@@ -69,7 +66,7 @@ const { stop } = useIntersectionObserver(
 
     <div
       ref="hero"
-      class="absolute pointer-events-none  left-0  size-px  overflow-hidden bg-transparent" />
+      class="absolute pointer-events-none left-0 size-px overflow-hidden bg-transparent" />
 
     <div ref="steps">
       <LazyHomeSteps

@@ -46,7 +46,7 @@ const tabs = ref('grid')
       <TabsContent
         value="list"
         as-child>
-      <!--   <LibraryChampionGrid :filtered /> -->
+        <!--   <LibraryChampionGrid :filtered /> -->
       </TabsContent>
     </Tabs>
   </div>

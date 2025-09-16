@@ -1,7 +1,5 @@
 <script lang="ts" setup>
-import {
-  SelectItemIndicator,
-} from 'reka-ui'
+import { SelectItemIndicator } from 'reka-ui'
 import type { AcceptableValue } from 'reka-ui'
 
 const props = defineProps<{
@@ -13,7 +11,12 @@ const props = defineProps<{
 <template>
   <SelectItem
     :value="props.value"
-    :class="cn(' data-[state=highlighted]:bg-accent rounded-lg  btn-depth ', props.class)">
+    :class="
+      cn(
+        ' data-[state=highlighted]:bg-accent rounded-lg  btn-depth ',
+        props.class,
+      )
+    ">
     <slot />
   </SelectItem>
 </template>

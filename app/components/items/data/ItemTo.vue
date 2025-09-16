@@ -11,7 +11,7 @@ const filtered = computed (() => to.filter(to => to.id < 9999))
   <div
     v-if="to && filtered"
     class=" mt-1.5">
-    <div class="divider divider-start after:h-px my-2  !text-0">
+    <div class="divider divider-start after:h-px my-2  !text-3xs">
       BUILDS INTO
     </div>
 

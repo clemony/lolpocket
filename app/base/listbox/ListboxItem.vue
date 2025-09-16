@@ -2,9 +2,11 @@
 import type { ListboxItemEmits, ListboxItemProps } from 'reka-ui'
 import { ListboxItem, useForwardPropsEmits } from 'reka-ui'
 
-const props = defineProps<ListboxItemProps & {
-  class?: HTMLAttributes['class']
-}>()
+const props = defineProps<
+  ListboxItemProps & {
+    class?: HTMLAttributes['class']
+  }
+>()
 
 const emits = defineEmits<ListboxItemEmits>()
 const forwarded = useForwardPropsEmits(props, emits)

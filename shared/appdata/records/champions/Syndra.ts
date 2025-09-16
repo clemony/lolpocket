@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:14 PM CDT
 
 const champion: Champion = {
   "id": 134,
@@ -129,8 +129,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "75 / 110 / 145 / 180 / 215",
-                "60% AP"
+                {
+                  "values": "75 / 110 / 145 / 180 / 215"
+                },
+                {
+                  "values": "60",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -172,8 +177,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "70 / 105 / 140 / 175 / 210",
-                "65% AP"
+                {
+                  "values": "70 / 105 / 140 / 175 / 210"
+                },
+                {
+                  "values": "65",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -184,15 +194,27 @@ const champion: Champion = {
             {
               "attribute": "Bonus Damage",
               "modifiers": [
-                "8.4 / 12.6 / 16.8 / 21 / 25.2",
-                "9.2 / 9.9 / 10.6 / 11.3 / 12% AP"
+                {
+                  "values": "8.4 / 12.6 / 16.8 / 21 / 25.2"
+                },
+                {
+                  "values": "9.2 - 12",
+                  "unit": "% AP",
+                  "tooltip": "Scaling per rank:\n9.2 / 9.9 / 10.6 / 11.3 / 12% AP"
+                }
               ]
             },
             {
               "attribute": "Total Mixed Damage",
               "modifiers": [
-                "78.4 / 117.6 / 156.8 / 196 / 235.2",
-                "74.2 / 74.9 / 75.6 / 76.3 / 77% AP"
+                {
+                  "values": "78.4 / 117.6 / 156.8 / 196 / 235.2"
+                },
+                {
+                  "values": "74.2 - 77",
+                  "unit": "% AP",
+                  "tooltip": "Scaling per rank:\n74.2 / 74.9 / 75.6 / 76.3 / 77% AP"
+                }
               ]
             }
           ]
@@ -225,8 +247,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "60 / 95 / 130 / 165 / 200",
-                "60% AP"
+                {
+                  "values": "60 / 95 / 130 / 165 / 200"
+                },
+                {
+                  "values": "60",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -267,7 +294,9 @@ const champion: Champion = {
             {
               "attribute": "Ability Haste",
               "modifiers": [
-                "10 / 20 / 30"
+                {
+                  "values": "10 / 20 / 30"
+                }
               ]
             }
           ]
@@ -278,22 +307,37 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage per Sphere",
               "modifiers": [
-                "90 / 130 / 170",
-                "20% AP"
+                {
+                  "values": "90 / 130 / 170"
+                },
+                {
+                  "values": "20",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Minimum Magic Damage",
               "modifiers": [
-                "270 / 390 / 510",
-                "60% AP"
+                {
+                  "values": "270 / 390 / 510"
+                },
+                {
+                  "values": "60",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Maximum Magic Damage",
               "modifiers": [
-                "630 / 910 / 1190",
-                "140% AP"
+                {
+                  "values": "630 / 910 / 1190"
+                },
+                {
+                  "values": "140",
+                  "unit": "% AP"
+                }
               ]
             }
           ]

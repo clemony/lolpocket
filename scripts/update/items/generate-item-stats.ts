@@ -42,5 +42,5 @@ export const itemStatRecord: Record<number, StatRecord> = ${JSON.stringify(statI
 fs.writeFileSync('./shared/appdata/index/item-stat-index.ts', output)
 
 console.log(
-  '✅ item stat record and StatRecord interface written successfully.',
+  '✅ item stat record and StatRecord interface written successfully.'
 )

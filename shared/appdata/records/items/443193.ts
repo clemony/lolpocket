@@ -10,27 +10,24 @@ const item: Item = {
     {
       name: 'Unbreakable',
       unique: true,
-      effects: 'Gain a <img src="/img/icons/shield.webp" class="tip-icon" />shield for 300 (+100% <b>bonus</b> health) that decays over 5 seconds, and 25% increased size for the same duration.'
-    }
+      effects:
+        'Gain a <img src="/img/icons/shield.webp" class="tip-icon" />shield for 300 (+100% <b>bonus</b> health) that decays over 5 seconds, and 25% increased size for the same duration.',
+    },
   ],
   stats: {
     armor: 65,
     magicResistance: 65,
     percentMovespeed: 10,
-    abilityHaste: 15
+    abilityHaste: 15,
   },
   shop: {
     prices: {
       total: 0,
       combined: 1000,
-      sell: 0
+      sell: 0,
     },
-    tags: [
-      'TANK'
-    ]
+    tags: ['TANK'],
   },
-  maps: [
-    30
-  ]
+  maps: [30],
 }
 export default item

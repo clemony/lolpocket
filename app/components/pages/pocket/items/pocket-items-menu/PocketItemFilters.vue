@@ -26,13 +26,11 @@ const { filters, setFilter, filtered } = useItemFilter()
     <Sidebar
       collapsible="none"
       class="hidden flex-1 md:flex pr-17">
-      <SidebarHeader class="gap-3.5 border-b p-4  border-b3">
+      <SidebarHeader class="gap-3.5 border-b p-4 border-b3">
         <div class="flex w-full items-center justify-between">
-          <h3>
-            Filter
-          </h3>
-          <Label class="flex items-center  text-2 font-medium">
-            <span>{{ filters.purchasable ? 'Purchasable' : 'All' }}</span>
+          <h3>Filter</h3>
+          <Label class="flex items-center text-xs font-medium">
+            <span>{{ filters.purchasable ? "Purchasable" : "All" }}</span>
             <Switch
               v-model:model-value="filters.purchasable"
               class="dst ml-2" />
@@ -62,7 +60,7 @@ const { filters, setFilter, filtered } = useItemFilter()
 
     <Sidebar
       collapsible="none"
-      class="!w-[calc(var(--sidebar-width-icon)_+_1px)] border-l  border-b3 absolute right-0 top-0">
+      class="!w-[calc(var(--sidebar-width-icon)_+_1px)] border-l border-b3 absolute right-0 top-0">
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
@@ -73,7 +71,7 @@ const { filters, setFilter, filtered } = useItemFilter()
               @click="toggleSidebar()">
               <icon
                 name="teenyicons:filter-outline"
-                class="dst  size-3.75 " />
+                class="dst size-3.75" />
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
@@ -87,7 +85,7 @@ const { filters, setFilter, filtered } = useItemFilter()
                 size="icon">
                 <icon
                   name="search"
-                  class="dst  !size-5.5" />
+                  class="dst !size-5.5" />
               </SidebarMenuButton>
             </SidebarMenu>
           </SidebarGroupContent>
@@ -96,12 +94,11 @@ const { filters, setFilter, filtered } = useItemFilter()
         <SidebarGroup>
           <SidebarGroupContent class="px-1.5 md:px-0">
             <SidebarMenu>
-              <SidebarMenuButton
-                size="icon">
+              <SidebarMenuButton size="icon">
                 <icon
                   name="calc"
                   class="!size-6" />
-              </sidebarmenubutton>
+              </SidebarMenuButton>
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>

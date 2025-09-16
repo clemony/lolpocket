@@ -4,7 +4,6 @@ import { SelectArrow } from 'reka-ui'
 
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
-
 }>()
 </script>
 
@@ -24,14 +23,12 @@ const { class: className } = defineProps<{
         v-for="region in Object.keys(regionIndex)"
         :key="region"
         :value="region"
-        class="flex items-center gap-3 py-1.5 text-nowrap ">
-        <SelectItemText class="truncate text-3 ">
+        class="flex items-center gap-3 py-1.5 text-nowrap">
+        <SelectItemText class="truncate text-sm">
           <span class="italic">
             {{ regionIndex[region] }}
           </span>
-          <span class="uppercase  opacity-50">
-            ({{ capitalize(region) }})
-          </span>
+          <span class="uppercase opacity-50">({{ capitalize(region) }})</span>
         </SelectItemText>
       </SelectItem>
     </SelectGroup>

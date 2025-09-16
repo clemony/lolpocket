@@ -4,13 +4,19 @@ import type { DialogContentEmits, DialogContentProps } from 'reka-ui'
 import {
   DialogClose,
   DialogContent,
-
   DialogOverlay,
   DialogPortal,
   useForwardPropsEmits,
 } from 'reka-ui'
 
-const props = defineProps<DialogContentProps & { class?: HTMLAttributes['class'], noOverlay?: boolean, noButton?: boolean, delay?: number }>()
+const props = defineProps<
+  DialogContentProps & {
+    class?: HTMLAttributes['class']
+    noOverlay?: boolean
+    noButton?: boolean
+    delay?: number
+  }
+>()
 
 const emits = defineEmits<DialogContentEmits>()
 
@@ -39,7 +45,7 @@ const variants = {
 <template>
   <DialogPortal>
     <DialogOverlay
-      class="fixed inset-0 z-50 isolate bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0"
+      class="fixed inset-0 z-50 isolate bg-black/80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0"
       :class="{ 'opacity-0 invisible': props.noOverlay }">
       <Motion
         class="overlay"
@@ -50,13 +56,13 @@ const variants = {
 
     <DialogContent
       as-child
-
       v-bind="forwarded"
       :class="
         cn(
           'fixed  left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] z-50 isolate  max-w-160  gap-4 border bg-b1 px-10 py-8 shadow-lg data-[state=closed]:duration-200  data-[state=closed]:animate-out data-[state=closed]:fade-out-0  data-[state=closed]:zoom-out-95  data-[state=closed]:slide-out-to-bottom-[48%]  sm:rounded-xl',
           props.class,
-        )">
+        )
+      ">
       <Motion
         class="modal-container"
         :variants="variants"
@@ -72,7 +78,7 @@ const variants = {
 
         <DialogClose
           v-if="props.noButton"
-          class="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring focus:ringneutral disabled:pointer-events-none ">
+          class="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring focus:ringneutral disabled:pointer-events-none">
           <icon
             name="x-sm"
             class="size-6" />

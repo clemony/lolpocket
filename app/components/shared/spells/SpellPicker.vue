@@ -8,9 +8,7 @@ const emit = defineEmits(['update:spell'])
 const ix = useIndexStore()
 const selected = ref('')
 
-onMounted(() =>
-  selected.value = props.currentValue,
-)
+onMounted(() => (selected.value = props.currentValue))
 </script>
 
 <template>
@@ -20,7 +18,7 @@ onMounted(() =>
       @click.stop.prevent>
       <Button
         variant="secondary"
-        class="overflow-hidden relative size-16 p-0 hover:ring grid place-items-center  hover:ring-b4"
+        class="overflow-hidden relative size-16 p-0 hover:ring grid place-items-center hover:ring-b4"
         :class="{ ' shadow-sm drop-shadow-sm': selected != '' }">
         <icon
           v-if="selected == ''"
@@ -32,32 +30,31 @@ onMounted(() =>
           v-else
           :alt="selected"
           :img="`/img/spells/${selected}.webp`"
-
           class="size-16" />
       </Button>
     </PopoverTrigger>
 
     <PopPopoverContent
-      class="size-fit "
+      class="size-fit"
       side="bottom"
       arrow-class=""
       :side-offset="5"
       align="center">
-      <div class="gap-3 place-content-evenly grid grid-cols-3  ">
+      <div class="gap-3 place-content-evenly grid grid-cols-3">
         <label
           v-for="ss in ix.spells"
           :key="ss.name"
           as="label"
           :title="ss.name.toString()"
-          :disabled=" selected == ss.name"
-          class="disabled:grayscale transition-[colors,opacity] duration-400 disabled:inset-shadow-sm disabled:opacity-70  shadow-sm size-16 rounded-lg  hover:ring-2 hover:ring-bc/60 !cursor-pointer ">
+          :disabled="selected == ss.name"
+          class="disabled:grayscale transition-[colors,opacity] duration-400 disabled:inset-shadow-sm disabled:opacity-70 shadow-sm size-16 rounded-lg hover:ring-2 hover:ring-bc/60 !cursor-pointer">
           <input
             id="spells"
             v-model="selected"
             type="radio"
             :value="ss.name"
             class="hidden"
-            :disabled=" selected == ss.name"
+            :disabled="selected == ss.name"
             @change="emit('update:spell', ss.name)" />
 
           <Img

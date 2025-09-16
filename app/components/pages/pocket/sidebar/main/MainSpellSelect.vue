@@ -1,5 +1,12 @@
 <script lang="ts" setup>
-const { class: className, pocket: p, side, sideOffset, align, alignOffset } = defineProps<{
+const {
+  class: className,
+  pocket: p,
+  side,
+  sideOffset,
+  align,
+  alignOffset,
+} = defineProps<{
   class?: HTMLAttributes['class']
   pocket: Pocket
   side?: Side
@@ -8,14 +15,15 @@ const { class: className, pocket: p, side, sideOffset, align, alignOffset } = de
   alignOffset?: number
 }>()
 
-const pocket = computed (() => p)
-const selectedSet = computed (() => pocket.value.spells?.find(s => s.id == pocket.value.main?.spells))
+const pocket = computed(() => p)
+const selectedSet = computed(() =>
+  pocket.value.spells?.find(s => s.id == pocket.value.main?.spells)
+)
 
-onMounted(() => {
+onMounted(() => {})
 
-})
-
-const keyClass = 'col-start-1 opacity-0 group-hover/select:opacity-50  transition-all duration-200 font-bold place-self-center'
+const keyClass
+  = 'col-start-1 opacity-0 group-hover/select:opacity-50  transition-all duration-200 font-bold place-self-center'
 </script>
 
 <template>
@@ -24,7 +32,12 @@ const keyClass = 'col-start-1 opacity-0 group-hover/select:opacity-50  transitio
     class="p-0 z-auto">
     <BaseSelectTrigger
       icon-class="opacity-10 group-hover/select:opacity-50"
-      :class="cn('w-full hover:ring hover:ring-b3/50  group/select justify-start h-fit py-1 pl-2  gap-1.75 items-center *:last:left-auto  *:last:!right-2 grid grid-cols-[10px_auto] grid-rows-2 *:last:top-[calc(50%-6px)] ', className)">
+      :class="
+        cn(
+          'w-full hover:ring hover:ring-b3/50  group/select justify-start h-fit py-1 pl-2  gap-1.75 items-center *:last:left-auto  *:last:!right-2 grid grid-cols-[10px_auto] grid-rows-2 *:last:top-[calc(50%-6px)] ',
+          className,
+        )
+      ">
       <span :class="cn('row-start-1', keyClass)">D</span>
       <span :class="keyClass">F</span>
       <Spell

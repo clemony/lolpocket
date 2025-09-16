@@ -14,7 +14,10 @@ function setTweenFactor(emblaApi: EmblaCarouselType): void {
   tweenFactor = TWEEN_FACTOR_BASE * emblaApi.scrollSnapList().length
 }
 
-function tweenParallax(emblaApi: EmblaCarouselType, eventName?: EmblaEventType): void {
+function tweenParallax(
+  emblaApi: EmblaCarouselType,
+  eventName?: EmblaEventType
+): void {
   const engine = emblaApi.internalEngine()
   const scrollProgress = emblaApi.scrollProgress()
   const slidesInView = emblaApi.slidesInView()
@@ -52,7 +55,7 @@ function tweenParallax(emblaApi: EmblaCarouselType, eventName?: EmblaEventType):
   })
 }
 
-export function setupTweenParallax(emblaApi: EmblaCarouselType): (() => void) {
+export function setupTweenParallax(emblaApi: EmblaCarouselType): () => void {
   setTweenNodes(emblaApi)
   setTweenFactor(emblaApi)
   tweenParallax(emblaApi)

@@ -105,7 +105,7 @@ const today = new Date()
             </PopoverTrigger>
             <PopoverContent class="flex w-[535px] p-0">
               <div class="flex flex-col gap-2 border-r px-2 py-4">
-                <div class="px-4 text-2 font-medium">
+                <div class="px-4 text-xs font-medium">
                   Snooze until
                 </div>
                 <div class="grid min-w-[250px] gap-1">
@@ -113,33 +113,25 @@ const today = new Date()
                     variant="ghost"
                     class="justify-start font-normal">
                     Later today
-                    <span class="ml-auto text-bc/60">
-                      3:00pm
-                    </span>
+                    <span class="ml-auto text-bc/60">3:00pm</span>
                   </Button>
                   <Button
                     variant="ghost"
                     class="justify-start font-normal">
                     Tomorrow
-                    <span class="ml-auto text-bc/60">
-                      1 day
-                    </span>
+                    <span class="ml-auto text-bc/60">1 day</span>
                   </Button>
                   <Button
                     variant="ghost"
                     class="justify-start font-normal">
                     This weekend
-                    <span class="ml-auto text-bc/60">
-                      2 days
-                    </span>
+                    <span class="ml-auto text-bc/60">2 days</span>
                   </Button>
                   <Button
                     variant="ghost"
                     class="justify-start font-normal">
                     Next week
-                    <span class="ml-auto text-bc/60">
-                      5 days
-                    </span>
+                    <span class="ml-auto text-bc/60">5 days</span>
                   </Button>
                 </div>
               </div>
@@ -211,7 +203,7 @@ const today = new Date()
       v-if="mail"
       class="flex flex-1 flex-col">
       <div class="flex items-start p-4">
-        <div class="flex items-start gap-4 text-2">
+        <div class="flex items-start gap-4 text-xs">
           <PocketIcon class="size-17 rounded-full aspect-square" />
           <div class="grid gap-1">
             <div class="font-semibold">
@@ -221,7 +213,8 @@ const today = new Date()
               {{ mail.subject }}
             </div>
             <div class="line-clamp-1 text-xs">
-              <span class="font-medium">Reply-To:</span> {{ mail.email }}
+              <span class="font-medium">Reply-To:</span>
+              {{ mail.email }}
             </div>
           </div>
         </div>
@@ -232,7 +225,7 @@ const today = new Date()
         </div>
       </div>
       <Separator />
-      <div class="flex-1 whitespace-pre-wrap p-4 text-2">
+      <div class="flex-1 whitespace-pre-wrap p-4 text-xs">
         {{ mail.text }}
       </div>
       <Separator class="mt-auto" />
@@ -248,8 +241,8 @@ const today = new Date()
                 class="flex items-center gap-2 text-xs font-normal">
                 <Switch
                   id="mute"
-                  aria-label="Mute thread" /> Mute this
-                thread
+                  aria-label="Mute thread" />
+                Mute this thread
               </Label>
               <Button
                 type="button"

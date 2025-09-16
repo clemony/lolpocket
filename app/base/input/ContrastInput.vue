@@ -12,7 +12,13 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div :class="cn(' text-3 items-center gap-4  flex h-12 border py-3.5 px-3 input w-full  shadow-sm drop-shadow-sm !bgneutral/85 inset-shadow-sm border-accent text-nc **:text-nc', props.class)">
+  <div
+    :class="
+      cn(
+        ' text-sm items-center gap-4  flex h-12 border py-3.5 px-3 input w-full  shadow-sm drop-shadow-sm !bgneutral/85 inset-shadow-sm border-accent text-nc **:text-nc',
+        props.class,
+      )
+    ">
     <icon
       v-if="props.search"
       name="search"
@@ -21,7 +27,12 @@ const props = defineProps<{
     <input
       v-bind="$attrs"
       :placeholder="props.placeholder"
-      :class="cn('text-3  outline-0 ring-0 border-0 flex h-full grow text-start  hover:outline-0 hover:ring-0 hover:border-0', props.inputClass)" />
+      :class="
+        cn(
+          'text-sm  outline-0 ring-0 border-0 flex h-full grow text-start  hover:outline-0 hover:ring-0 hover:border-0',
+          props.inputClass,
+        )
+      " />
 
     <slot />
   </div>

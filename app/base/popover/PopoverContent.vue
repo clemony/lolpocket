@@ -1,24 +1,24 @@
 <script setup lang="ts">
 import type { PopoverContentEmits, PopoverContentProps } from 'reka-ui'
-import {
-  PopoverContent,
+import { PopoverContent, PopoverPortal, useForwardPropsEmits } from 'reka-ui'
 
-  PopoverPortal,
-  useForwardPropsEmits,
-} from 'reka-ui'
-
-const props = withDefaults(defineProps<PopoverContentProps & {
-  class?: HTMLAttributes['class']
-  sideOffset?: number
-  alignOffset?: number
-  align?: Align
-  id?: string
-  side?: Side
-  to?: string
-}>(), {
-  align: 'center',
-  sideOffset: 8,
-})
+const props = withDefaults(
+  defineProps<
+    PopoverContentProps & {
+      class?: HTMLAttributes['class']
+      sideOffset?: number
+      alignOffset?: number
+      align?: Align
+      id?: string
+      side?: Side
+      to?: string
+    }
+  >(),
+  {
+    align: 'center',
+    sideOffset: 8,
+  }
+)
 
 const emits = defineEmits<PopoverContentEmits>()
 
@@ -30,7 +30,6 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 <template>
   <PopoverPortal :to="props.to">
     <PopoverContent
-
       :id="props.id"
       v-bind="{ forwarded }"
       :class="

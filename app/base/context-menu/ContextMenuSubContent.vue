@@ -1,12 +1,13 @@
 <script setup lang="ts">
-import type { DropdownMenuSubContentEmits, DropdownMenuSubContentProps } from 'reka-ui'
-import {
-  ContextMenuSubContent,
-
-  useForwardPropsEmits,
+import type {
+  DropdownMenuSubContentEmits,
+  DropdownMenuSubContentProps,
 } from 'reka-ui'
+import { ContextMenuSubContent, useForwardPropsEmits } from 'reka-ui'
 
-const props = defineProps<DropdownMenuSubContentProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<
+  DropdownMenuSubContentProps & { class?: HTMLAttributes['class'] }
+>()
 const emits = defineEmits<DropdownMenuSubContentEmits>()
 
 const delegatedProps = reactiveOmit(props, 'class')

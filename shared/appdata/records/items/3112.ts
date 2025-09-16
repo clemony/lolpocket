@@ -11,29 +11,22 @@ const item: Item = {
     {
       name: 'Recovery',
       unique: true,
-      effects: 'Gain 10 <b>bonus</b> mana regeneration. Manaless champions gain 15 <b>bonus</b> health regeneration instead.'
-    }
+      effects:
+        'Gain 10 <b>bonus</b> mana regeneration. Manaless champions gain 15 <b>bonus</b> health regeneration instead.',
+    },
   ],
   stats: {
     abilityPower: 50,
-    health: 150
+    health: 150,
   },
   shop: {
     prices: {
       total: 950,
       combined: 950,
-      sell: 380
+      sell: 380,
     },
-    tags: [
-      'MAGE',
-      'TANK',
-      'SUPPORT',
-      'MANA_AND_REG'
-    ]
+    tags: ['MAGE', 'TANK', 'SUPPORT', 'MANA_AND_REG'],
   },
-  maps: [
-    12,
-    35
-  ]
+  maps: [12, 35],
 }
 export default item

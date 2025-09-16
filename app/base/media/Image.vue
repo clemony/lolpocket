@@ -43,7 +43,6 @@ const emit = defineEmits(['loaded'])
             ease: 'easeIn',
           }"
           v-bind="imgAttrs"
-
           :img-attrs="{ ...imgAttrs, loading: 'lazy' }"
           :class="cn('size-full', props.imgClass)"
           :src="src" />
@@ -66,6 +65,4 @@ const emit = defineEmits(['loaded'])
   </LayoutGroup>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

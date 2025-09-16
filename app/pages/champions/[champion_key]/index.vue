@@ -4,9 +4,8 @@ const { champion } = defineProps<{
 }>()
 
 definePageMeta({
-  name: 'champion_abilities',
-  title: 'abilities',
-  level: 4,
+  name: 'champion_overview',
+  title: 'Overview',
   order: 1,
 })
 
@@ -18,17 +17,20 @@ onMounted(() => {
     scrollToHash({ instant: true })
 })
 
-watch(() => route.hash, () => {
-  scrollToHash()
-})
+watch(
+  () => route.hash,
+  () => {
+    scrollToHash()
+  }
+)
 </script>
 
 <template>
   <main
     id="container"
-    class="overflow-y-auto size-full flex gap-42">
+    class="overflow-y-auto size-full flex gap-32">
     <ChampionIndexAside :champion />
-    <article class="grow  w-full py-22 h-max pb-16 gap-10  flex flex-col ">
+    <article class="grow w-full py-22 h-max pb-16 gap-10 flex flex-col">
       <ChampionAbility
         v-for="ability in champion.abilities"
         :key="ability.key"

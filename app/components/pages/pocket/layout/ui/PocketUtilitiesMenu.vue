@@ -27,9 +27,10 @@ async function testSaveAllPockets() {
       <Button
         variant="ghost"
         size="md"
-
         hover="ghost"
-        :class="cn('btn-square self-end mb-1 hover:!bg-b3', { 'btn-active': isOpen })">
+        :class="
+          cn('btn-square self-end mb-1 hover:!bg-b3', { 'btn-active': isOpen })
+        ">
         <icon
           name="more"
           class="group-data-[state=open]/drop:opacity-80 group-hover/drop:opacity-80 opacity-60" />
@@ -45,8 +46,7 @@ async function testSaveAllPockets() {
       <Button
         variant="ghost"
         size="sm"
-
-        class=" !h-9 rounded-md"
+        class="!h-9 rounded-md"
         @click="testSaveAllPockets()">
         sync
       </Button>
@@ -54,7 +54,6 @@ async function testSaveAllPockets() {
       <Button
         variant="ghost"
         size="sm"
-
         class="!h-9 rounded-md">
         <icon
           name="send"
@@ -65,11 +64,10 @@ async function testSaveAllPockets() {
       <Button
         variant="ghost"
         size="sm"
-
-        class=" !h-9 rounded-md">
+        class="!h-9 rounded-md">
         <icon
           name="hugeicons:image-download"
-          class=" dst " />
+          class="dst" />
         Download Pocket Card
       </Button>
 
@@ -79,31 +77,28 @@ async function testSaveAllPockets() {
         class="px-3 py-2 mb-1">
         <icon
           name="export"
-          class="size-4.5 dst " />
+          class="size-4.5 dst" />
         Export to League Client
       </Label>
       <Button
         variant="ghost"
         size="sm"
-
-        class=" !h-9 rounded-md !pl-10.75">
+        class="!h-9 rounded-md !pl-10.75">
         Items & Champions
       </Button>
 
       <Button
         variant="ghost"
         size="sm"
-
-        class=" !h-9 rounded-md !pl-10.75">
+        class="!h-9 rounded-md !pl-10.75">
         Runes
       </Button>
 
-      <Separator class="-mx-2 my-2  justify-self-center bg-b3" />
+      <Separator class="-mx-2 my-2 justify-self-center bg-b3" />
       <Button
         variant="ghost"
         size="sm"
-
-        class=" !h-9 rounded-md"
+        class="!h-9 rounded-md"
         as-child>
         <DeletePocketDialog :pocket="pocket">
           <icon

@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:55 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:11 PM CDT
 
 const champion: Champion = {
   "id": 268,
@@ -140,8 +140,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "60 / 80 / 100 / 120 / 140",
-                "35% AP"
+                {
+                  "values": "60 / 80 / 100 / 120 / 140"
+                },
+                {
+                  "values": "35",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -183,9 +188,17 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "0 / 2.65 / 5.29 / 7.94 / 10.59 / 13.24 / 15.88 / 18.53 / 21.18 / 23.82 / 26.47 / 29.12 / 31.76 / 34.41 / 37.06 / 39.71 / 42.35 / 45",
-                "50 / 65 / 80 / 95 / 110",
-                "45 / 50 / 55 / 60 / 65% AP"
+                {
+                  "values": "0 / 2.65 / 5.29 / 7.94 / 10.59 / 13.24 / 15.88 / 18.53 / 21.18 / 23.82 / 26.47 / 29.12 / 31.76 / 34.41 / 37.06 / 39.71 / 42.35 / 45"
+                },
+                {
+                  "values": "50 / 65 / 80 / 95 / 110"
+                },
+                {
+                  "values": "45 - 65",
+                  "unit": "% AP",
+                  "tooltip": "Scaling per rank:\n45 / 50 / 55 / 60 / 65% AP"
+                }
               ]
             }
           ]
@@ -225,15 +238,25 @@ const champion: Champion = {
             {
               "attribute": "Shield Strength",
               "modifiers": [
-                "70 / 110 / 150 / 190 / 230",
-                "60% AP"
+                {
+                  "values": "70 / 110 / 150 / 190 / 230"
+                },
+                {
+                  "values": "60",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "60 / 100 / 140 / 180 / 220",
-                "40% AP"
+                {
+                  "values": "60 / 100 / 140 / 180 / 220"
+                },
+                {
+                  "values": "40",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -270,19 +293,26 @@ const champion: Champion = {
             {
               "attribute": "Width",
               "modifiers": [
-                "6 / 7 / 8 soldiers"
+                {
+                  "values": "6 / 7 / 8",
+                  "unit": " soldiers"
+                }
               ]
             },
             {
               "attribute": "Width (charge)",
               "modifiers": [
-                "620 / 720 / 820"
+                {
+                  "values": "620 / 720 / 820"
+                }
               ]
             },
             {
               "attribute": "Width (impassable wall)",
               "modifiers": [
-                "750 / 850 / 950"
+                {
+                  "values": "750 / 850 / 950"
+                }
               ]
             }
           ]
@@ -293,8 +323,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "200 / 400 / 600",
-                "75% AP"
+                {
+                  "values": "200 / 400 / 600"
+                },
+                {
+                  "values": "75",
+                  "unit": "% AP"
+                }
               ]
             }
           ]

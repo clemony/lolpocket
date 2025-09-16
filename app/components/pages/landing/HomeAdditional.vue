@@ -35,18 +35,22 @@ const data = [
 <template>
   <div
     ref="wrapper"
-    class="bg-b1 relative z-2  h-[80vh] w-full  items-center justify-center ">
-    <div class="bgneutral items-center text-nc flex overflow-hidden px-10  z-20 m-auto h-[98%] w-[95%] rounded-3xl grid grid-cols-2 gap-10">
-      <div class="size-full grid wp-77% justify-items-center relative py-20 overflow-hidden">
+    class="bg-b1 relative z-2 h-[80vh] w-full items-center justify-center">
+    <div
+      class="bgneutral items-center text-nc flex overflow-hidden px-10 z-20 m-auto h-[98%] w-[95%] rounded-3xl grid grid-cols-2 gap-10">
+      <div
+        class="size-full grid wp-77% justify-items-center relative py-20 overflow-hidden">
         <motion.h2
-          :style="{ transform: `translateY(${Math.round(progressY * 100) / 100}%)` }"
-          class="text-14 absolute pr-14 h-full"
+          :style="{
+            transform: `translateY(${Math.round(progressY * 100) / 100}%)`,
+          }"
+          class="text-xxs4 absolute pr-14 h-full"
           :transition="{ type: 'inertia' }">
           Additional Tools.
         </motion.h2>
       </div>
 
-      <div class="grid h-full items-center  grow justify-start  wp-82%  py-22">
+      <div class="grid h-full items-center grow justify-start wp-82% py-22">
         <motion.div
           v-for="(item, i) in data"
           :key="item.title"
@@ -63,7 +67,7 @@ const data = [
             amount: 0.8,
           }"
           class="">
-          <div class="mb-5  gap-5 flex w-full items-center ">
+          <div class="mb-5 gap-5 flex w-full items-center">
             <icon
               v-if="item.icon"
               :name="item.icon"
@@ -75,7 +79,7 @@ const data = [
           </div>
 
           <p
-            class="text-pretty leading-loose text-nc font-light text-4 "
+            class="text-pretty leading-loose text-nc font-light text-md"
             v-html="item.text" />
         </motion.div>
       </div>
@@ -85,6 +89,4 @@ const data = [
   </div>
 </template>
 
-<style>
-
-</style>
+<style></style>

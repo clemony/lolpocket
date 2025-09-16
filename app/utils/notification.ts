@@ -1,7 +1,10 @@
 import { hexoid } from 'hexoid'
 
 const toId = hexoid()
-export function saveNotification(template: string, vars: Record<string, string>) {
+export function saveNotification(
+  template: string,
+  vars: Record<string, string>
+) {
   const as = useAccountStore()
 
   const item: InboxItem = {

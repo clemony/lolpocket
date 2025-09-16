@@ -10,70 +10,64 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 650,
-        perLevel: 114
+        perLevel: 114,
       },
       healthRegen: {
         flat: 3,
-        perLevel: 0.5
+        perLevel: 0.5,
       },
       armor: {
         flat: 38,
-        perLevel: 4.8
+        perLevel: 4.8,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 60,
-        perLevel: 5
+        perLevel: 5,
       },
       movespeed: {
-        flat: 345
+        flat: 345,
       },
       acquisitionRadius: {
-        flat: 475
+        flat: 475,
       },
       selectionRadius: {
-        flat: 135
+        flat: 135,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.651,
-        perLevel: 2.5
+        perLevel: 2.5,
       },
       attackSpeedRatio: {
-        flat: 0.651
+        flat: 0.651,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.52
+        flat: 1.52,
       },
       attackRange: {
-        flat: 175
-      }
+        flat: 175,
+      },
     },
-    positions: [
-      'Top'
-    ],
-    roles: [
-      'Fighter',
-      'Juggernaut',
-      'Tank'
-    ],
+    positions: ['Top'],
+    roles: ['Fighter', 'Juggernaut', 'Tank'],
     attributeRatings: {
       damage: 3,
       toughness: 3,
@@ -81,8 +75,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 2,
       abilityReliance: 20,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 103,
@@ -93,81 +87,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 590,
-        perLevel: 104
+        perLevel: 104,
       },
       healthRegen: {
         flat: 2.5,
-        perLevel: 0.6
+        perLevel: 0.6,
       },
       mana: {
         flat: 418,
-        perLevel: 25
+        perLevel: 25,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 21,
-        perLevel: 4.2
+        perLevel: 4.2,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 53,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 525
+        flat: 525,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.668,
-        perLevel: 2.2
+        perLevel: 2.2,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.1
+        flat: -0.1,
       },
       attackRange: {
-        flat: 550
-      }
+        flat: 550,
+      },
     },
-    positions: [
-      'Middle'
-    ],
-    roles: [
-      'Assassin',
-      'Burst',
-      'Mage'
-    ],
+    positions: ['Middle'],
+    roles: ['Assassin', 'Burst', 'Mage'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -175,8 +163,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 1,
       abilityReliance: 100,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 84,
@@ -187,78 +175,73 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 600,
-        perLevel: 119
+        perLevel: 119,
       },
       healthRegen: {
         flat: 9,
-        perLevel: 0.9
+        perLevel: 0.9,
       },
       mana: {
-        flat: 200
+        flat: 200,
       },
       manaRegen: {
-        flat: 50
+        flat: 50,
       },
       armor: {
         flat: 23,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 37,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 62,
-        perLevel: 3.3
+        perLevel: 3.3,
       },
       movespeed: {
-        flat: 345
+        flat: 345,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 30
+        flat: 30,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 3.2
+        perLevel: 3.2,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.161
+        flat: -0.161,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Middle',
-      'Top'
-    ],
-    roles: [
-      'Assassin'
-    ],
+    positions: ['Middle', 'Top'],
+    roles: ['Assassin'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -266,8 +249,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 1,
       abilityReliance: 65,
-      difficulty: 3
-    }
+      difficulty: 3,
+    },
   },
   {
     id: 166,
@@ -278,80 +261,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 630,
-        perLevel: 107
+        perLevel: 107,
       },
       healthRegen: {
         flat: 3.75,
-        perLevel: 0.65
+        perLevel: 0.65,
       },
       mana: {
         flat: 350,
-        perLevel: 40
+        perLevel: 40,
       },
       manaRegen: {
         flat: 8.2,
-        perLevel: 0.7
+        perLevel: 0.7,
       },
       armor: {
         flat: 26,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 52,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 750
+        flat: 750,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.638,
-        perLevel: 4
+        perLevel: 4,
       },
       attackSpeedRatio: {
-        flat: 0.4
+        flat: 0.4,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.167
+        flat: -0.167,
       },
       attackRange: {
-        flat: 500
-      }
+        flat: 500,
+      },
     },
-    positions: [
-      'Middle'
-    ],
-    roles: [
-      'Assassin',
-      'Marksman'
-    ],
+    positions: ['Middle'],
+    roles: ['Assassin', 'Marksman'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -359,8 +337,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 2,
       abilityReliance: 1,
-      difficulty: 3
-    }
+      difficulty: 3,
+    },
   },
   {
     id: 12,
@@ -371,78 +349,72 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 685,
-        perLevel: 120
+        perLevel: 120,
       },
       healthRegen: {
         flat: 8.5,
-        perLevel: 0.85
+        perLevel: 0.85,
       },
       mana: {
         flat: 350,
-        perLevel: 40
+        perLevel: 40,
       },
       manaRegen: {
         flat: 8.5,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 40,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 62,
-        perLevel: 3.75
+        perLevel: 3.75,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 140
+        flat: 140,
       },
       pathingRadius: {
-        flat: 50
+        flat: 50,
       },
       gameplayRadius: {
-        flat: 80
+        flat: 80,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 2.125
+        perLevel: 2.125,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Support'
-    ],
-    roles: [
-      'Support',
-      'Tank',
-      'Vanguard'
-    ],
+    positions: ['Support'],
+    roles: ['Support', 'Tank', 'Vanguard'],
     attributeRatings: {
       damage: 1,
       toughness: 3,
@@ -450,8 +422,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 2,
       abilityReliance: 65,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 799,
@@ -462,77 +434,70 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 630,
-        perLevel: 110
+        perLevel: 110,
       },
       healthRegen: {
         flat: 8.5,
-        perLevel: 0.75
+        perLevel: 0.75,
       },
       mana: {
-        flat: 200
+        flat: 200,
       },
       manaRegen: {
-        flat: 50
+        flat: 50,
       },
       armor: {
         flat: 35,
-        perLevel: 4.9
+        perLevel: 4.9,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 63,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 2.5
+        perLevel: 2.5,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.25
+        flat: 0.25,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Top'
-    ],
-    roles: [
-      'Assassin',
-      'Diver',
-      'Fighter',
-      'Skirmisher'
-    ],
+    positions: ['Top'],
+    roles: ['Assassin', 'Diver', 'Fighter', 'Skirmisher'],
     attributeRatings: {
       damage: 3,
       toughness: 2,
@@ -540,8 +505,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 1,
       abilityReliance: 55,
-      difficulty: 3
-    }
+      difficulty: 3,
+    },
   },
   {
     id: 32,
@@ -552,82 +517,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 685,
-        perLevel: 94
+        perLevel: 94,
       },
       healthRegen: {
         flat: 9,
-        perLevel: 0.85
+        perLevel: 0.85,
       },
       mana: {
         flat: 285,
-        perLevel: 40
+        perLevel: 40,
       },
       manaRegen: {
         flat: 7.4,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       armor: {
         flat: 33,
-        perLevel: 4
+        perLevel: 4,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 57,
-        perLevel: 3.8
+        perLevel: 3.8,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 30
+        flat: 30,
       },
       gameplayRadius: {
-        flat: 55
+        flat: 55,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.736,
-        perLevel: 2.18
+        perLevel: 2.18,
       },
       attackSpeedRatio: {
-        flat: 0.638
+        flat: 0.638,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.066
+        flat: -0.066,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Jungle',
-      'Support'
-    ],
-    roles: [
-      'Support',
-      'Tank',
-      'Vanguard'
-    ],
+    positions: ['Jungle', 'Support'],
+    roles: ['Support', 'Tank', 'Vanguard'],
     attributeRatings: {
       damage: 2,
       toughness: 3,
@@ -635,8 +593,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 90,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 34,
@@ -647,81 +605,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 550,
-        perLevel: 92
+        perLevel: 92,
       },
       healthRegen: {
         flat: 5.5,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 495,
-        perLevel: 45
+        perLevel: 45,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 21,
-        perLevel: 4.5
+        perLevel: 4.5,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 51,
-        perLevel: 3.2
+        perLevel: 3.2,
       },
       movespeed: {
-        flat: 325
+        flat: 325,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 140
+        flat: 140,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.658,
-        perLevel: 1.68
+        perLevel: 1.68,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.1
+        flat: -0.1,
       },
       attackRange: {
-        flat: 600
-      }
+        flat: 600,
+      },
     },
-    positions: [
-      'Middle'
-    ],
-    roles: [
-      'Battlemage',
-      'Mage',
-      'Support'
-    ],
+    positions: ['Middle'],
+    roles: ['Battlemage', 'Mage', 'Support'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -729,8 +681,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 2,
       abilityReliance: 100,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 1,
@@ -741,81 +693,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 560,
-        perLevel: 96
+        perLevel: 96,
       },
       healthRegen: {
         flat: 5.5,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 418,
-        perLevel: 25
+        perLevel: 25,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 23,
-        perLevel: 4
+        perLevel: 4,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 50,
-        perLevel: 2.65
+        perLevel: 2.65,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 625
+        flat: 625,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 30
+        flat: 30,
       },
       gameplayRadius: {
-        flat: 55
+        flat: 55,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.61,
-        perLevel: 1.36
+        perLevel: 1.36,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.104
+        flat: -0.104,
       },
       attackRange: {
-        flat: 625
-      }
+        flat: 625,
+      },
     },
-    positions: [
-      'Middle'
-    ],
-    roles: [
-      'Burst',
-      'Mage',
-      'Support'
-    ],
+    positions: ['Middle'],
+    roles: ['Burst', 'Mage', 'Support'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -823,8 +769,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 2,
       abilityReliance: 100,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 523,
@@ -835,76 +781,72 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 600,
-        perLevel: 102
+        perLevel: 102,
       },
       healthRegen: {
         flat: 3.25,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 348,
-        perLevel: 42
+        perLevel: 42,
       },
       manaRegen: {
         flat: 6.5,
-        perLevel: 0.4
+        perLevel: 0.4,
       },
       armor: {
         flat: 26,
-        perLevel: 4.2
+        perLevel: 4.2,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 55,
-        perLevel: 2.3
+        perLevel: 2.3,
       },
       movespeed: {
-        flat: 325
+        flat: 325,
       },
       acquisitionRadius: {
-        flat: 800
+        flat: 800,
       },
       selectionRadius: {
-        flat: 110
+        flat: 110,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.665,
-        perLevel: 2.1
+        perLevel: 2.1,
       },
       attackSpeedRatio: {
-        flat: 0.658
+        flat: 0.658,
       },
       attackCastTime: {
-        flat: 0.23
+        flat: 0.23,
       },
       attackTotalTime: {
-        flat: 1.5
+        flat: 1.5,
       },
       attackRange: {
-        flat: 550
-      }
+        flat: 550,
+      },
     },
-    positions: [
-      'Bottom'
-    ],
-    roles: [
-      'Marksman'
-    ],
+    positions: ['Bottom'],
+    roles: ['Marksman'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -912,8 +854,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 20,
-      difficulty: 3
-    }
+      difficulty: 3,
+    },
   },
   {
     id: 22,
@@ -924,81 +866,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 610,
-        perLevel: 101
+        perLevel: 101,
       },
       healthRegen: {
         flat: 3.5,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 280,
-        perLevel: 35
+        perLevel: 35,
       },
       manaRegen: {
         flat: 7,
-        perLevel: 0.65
+        perLevel: 0.65,
       },
       armor: {
         flat: 26,
-        perLevel: 4.6
+        perLevel: 4.6,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 59,
-        perLevel: 2.95
+        perLevel: 2.95,
       },
       movespeed: {
-        flat: 325
+        flat: 325,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 100
+        flat: 100,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.658,
-        perLevel: 3.33
+        perLevel: 3.33,
       },
       attackSpeedRatio: {
-        flat: 0.658
+        flat: 0.658,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.081
+        flat: -0.081,
       },
       attackRange: {
-        flat: 600
-      }
+        flat: 600,
+      },
     },
-    positions: [
-      'Bottom',
-      'Support'
-    ],
-    roles: [
-      'Marksman',
-      'Support'
-    ],
+    positions: ['Bottom', 'Support'],
+    roles: ['Marksman', 'Support'],
     attributeRatings: {
       damage: 2,
       toughness: 1,
@@ -1006,8 +942,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 2,
       abilityReliance: 20,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 136,
@@ -1018,80 +954,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 600,
-        perLevel: 90
+        perLevel: 90,
       },
       healthRegen: {
         flat: 5.5,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 530,
-        perLevel: 40
+        perLevel: 40,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 0.75
+        perLevel: 0.75,
       },
       armor: {
         flat: 22,
-        perLevel: 4
+        perLevel: 4,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 58,
-        perLevel: 3.2
+        perLevel: 3.2,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 150
+        flat: 150,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 80
+        flat: 80,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 1.5
+        perLevel: 1.5,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.1
+        flat: -0.1,
       },
       attackRange: {
-        flat: 550
-      }
+        flat: 550,
+      },
     },
-    positions: [
-      'Middle'
-    ],
-    roles: [
-      'Battlemage',
-      'Mage'
-    ],
+    positions: ['Middle'],
+    roles: ['Battlemage', 'Mage'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -1099,8 +1030,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 100,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 893,
@@ -1111,82 +1042,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 607,
-        perLevel: 110
+        perLevel: 110,
       },
       healthRegen: {
         flat: 6,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 475,
-        perLevel: 30
+        perLevel: 30,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 23,
-        perLevel: 4.5
+        perLevel: 4.5,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 53,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 525
+        flat: 525,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.668,
-        perLevel: 2
+        perLevel: 2,
       },
       attackSpeedRatio: {
-        flat: 0.668
+        flat: 0.668,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.099
+        flat: -0.099,
       },
       attackRange: {
-        flat: 550
-      }
+        flat: 550,
+      },
     },
-    positions: [
-      'Middle',
-      'Top'
-    ],
-    roles: [
-      'Assassin',
-      'Burst',
-      'Mage'
-    ],
+    positions: ['Middle', 'Top'],
+    roles: ['Assassin', 'Burst', 'Mage'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -1194,8 +1118,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 1,
       abilityReliance: 100,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 268,
@@ -1206,81 +1130,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 575,
-        perLevel: 119
+        perLevel: 119,
       },
       healthRegen: {
         flat: 7,
-        perLevel: 0.75
+        perLevel: 0.75,
       },
       mana: {
         flat: 320,
-        perLevel: 40
+        perLevel: 40,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 25,
-        perLevel: 5
+        perLevel: 5,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 56,
-        perLevel: 3.5
+        perLevel: 3.5,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 700
+        flat: 700,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 5.5
+        perLevel: 5.5,
       },
       attackSpeedRatio: {
-        flat: 0.694
+        flat: 0.694,
       },
       attackCastTime: {
-        flat: 0.25
+        flat: 0.25,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.15
+        flat: -0.15,
       },
       attackRange: {
-        flat: 525
-      }
+        flat: 525,
+      },
     },
-    positions: [
-      'Middle'
-    ],
-    roles: [
-      'Mage',
-      'Marksman',
-      'Specialist'
-    ],
+    positions: ['Middle'],
+    roles: ['Mage', 'Marksman', 'Specialist'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -1288,8 +1206,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 45,
-      difficulty: 3
-    }
+      difficulty: 3,
+    },
   },
   {
     id: 432,
@@ -1300,81 +1218,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 630,
-        perLevel: 103
+        perLevel: 103,
       },
       healthRegen: {
         flat: 5.5,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 350,
-        perLevel: 50
+        perLevel: 50,
       },
       manaRegen: {
         flat: 6,
-        perLevel: 0.45
+        perLevel: 0.45,
       },
       armor: {
         flat: 34,
-        perLevel: 5
+        perLevel: 5,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 52,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 130
+        flat: 130,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 80
+        flat: 80,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.658,
-        perLevel: 2
+        perLevel: 2,
       },
       attackSpeedRatio: {
-        flat: 0.658
+        flat: 0.658,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.1
+        flat: -0.1,
       },
       attackRange: {
-        flat: 500
-      }
+        flat: 500,
+      },
     },
-    positions: [
-      'Support'
-    ],
-    roles: [
-      'Catcher',
-      'Mage',
-      'Support'
-    ],
+    positions: ['Support'],
+    roles: ['Catcher', 'Mage', 'Support'],
     attributeRatings: {
       damage: 1,
       toughness: 1,
@@ -1382,8 +1294,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 3,
       abilityReliance: 65,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 200,
@@ -1394,71 +1306,66 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 610,
-        perLevel: 99
+        perLevel: 99,
       },
       healthRegen: {
         flat: 6,
-        perLevel: 0.6
+        perLevel: 0.6,
       },
       armor: {
         flat: 32,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 60,
-        perLevel: 1.5
+        perLevel: 1.5,
       },
       movespeed: {
-        flat: 340
+        flat: 340,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
-        flat: 0.85
+        flat: 0.85,
       },
       attackSpeedRatio: {
-        flat: 0.85
+        flat: 0.85,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.052
+        flat: -0.052,
       },
       attackRange: {
-        flat: 150
-      }
+        flat: 150,
+      },
     },
-    positions: [
-      'Jungle'
-    ],
-    roles: [
-      'Fighter',
-      'Skirmisher'
-    ],
+    positions: ['Jungle'],
+    roles: ['Fighter', 'Skirmisher'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -1466,8 +1373,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 1,
       abilityReliance: 0,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 53,
@@ -1478,81 +1385,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 600,
-        perLevel: 109
+        perLevel: 109,
       },
       healthRegen: {
         flat: 7.5,
-        perLevel: 0.75
+        perLevel: 0.75,
       },
       mana: {
         flat: 267,
-        perLevel: 40
+        perLevel: 40,
       },
       manaRegen: {
         flat: 8.5,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 37,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 62,
-        perLevel: 3.5
+        perLevel: 3.5,
       },
       movespeed: {
-        flat: 325
+        flat: 325,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 140
+        flat: 140,
       },
       pathingRadius: {
-        flat: 50
+        flat: 50,
       },
       gameplayRadius: {
-        flat: 80
+        flat: 80,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 1.13
+        perLevel: 1.13,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.03
+        flat: -0.03,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Support'
-    ],
-    roles: [
-      'Catcher',
-      'Support',
-      'Tank'
-    ],
+    positions: ['Support'],
+    roles: ['Catcher', 'Support', 'Tank'],
     attributeRatings: {
       damage: 1,
       toughness: 2,
@@ -1560,8 +1461,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 90,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 63,
@@ -1572,83 +1473,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 570,
-        perLevel: 105
+        perLevel: 105,
       },
       healthRegen: {
         flat: 5.5,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 469,
-        perLevel: 21
+        perLevel: 21,
       },
       manaRegen: {
         flat: 9,
-        perLevel: 0.6
+        perLevel: 0.6,
       },
       armor: {
         flat: 27,
-        perLevel: 4.2
+        perLevel: 4.2,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 57,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 340
+        flat: 340,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.681,
-        perLevel: 2
+        perLevel: 2,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.112
+        flat: -0.112,
       },
       attackRange: {
-        flat: 550
-      }
+        flat: 550,
+      },
     },
-    positions: [
-      'Jungle',
-      'Middle',
-      'Support'
-    ],
-    roles: [
-      'Burst',
-      'Mage',
-      'Support'
-    ],
+    positions: ['Jungle', 'Middle', 'Support'],
+    roles: ['Burst', 'Mage', 'Support'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -1656,8 +1549,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 100,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 201,
@@ -1668,81 +1561,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 610,
-        perLevel: 112
+        perLevel: 112,
       },
       healthRegen: {
         flat: 8.5,
-        perLevel: 1
+        perLevel: 1,
       },
       mana: {
         flat: 311,
-        perLevel: 45
+        perLevel: 45,
       },
       manaRegen: {
         flat: 7,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 35,
-        perLevel: 5
+        perLevel: 5,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 55,
-        perLevel: 3.2
+        perLevel: 3.2,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 800
+        flat: 800,
       },
       selectionRadius: {
-        flat: 130
+        flat: 130,
       },
       pathingRadius: {
-        flat: 50
+        flat: 50,
       },
       gameplayRadius: {
-        flat: 80
+        flat: 80,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.644,
-        perLevel: 3.5
+        perLevel: 3.5,
       },
       attackSpeedRatio: {
-        flat: 0.644
+        flat: 0.644,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.07
+        flat: -0.07,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Support'
-    ],
-    roles: [
-      'Support',
-      'Tank',
-      'Warden'
-    ],
+    positions: ['Support'],
+    roles: ['Support', 'Tank', 'Warden'],
     attributeRatings: {
       damage: 1,
       toughness: 2,
@@ -1750,8 +1637,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 2,
       abilityReliance: 90,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 233,
@@ -1762,66 +1649,60 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 625,
-        perLevel: 95
+        perLevel: 95,
       },
       armor: {
         flat: 30,
-        perLevel: 4.2
+        perLevel: 4.2,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 60,
-        perLevel: 2.5
+        perLevel: 2.5,
       },
       movespeed: {
-        flat: 340
+        flat: 340,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.644,
-        perLevel: 2
+        perLevel: 2,
       },
       attackSpeedRatio: {
-        flat: 0.669
+        flat: 0.669,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.553
+        flat: 1.553,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Jungle'
-    ],
-    roles: [
-      'Assassin',
-      'Diver',
-      'Fighter'
-    ],
+    positions: ['Jungle'],
+    roles: ['Assassin', 'Diver', 'Fighter'],
     attributeRatings: {
       damage: 2,
       toughness: 2,
@@ -1829,8 +1710,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 1,
       abilityReliance: 10,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 51,
@@ -1841,79 +1722,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 580,
-        perLevel: 107
+        perLevel: 107,
       },
       healthRegen: {
         flat: 3.5,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 315,
-        perLevel: 40
+        perLevel: 40,
       },
       manaRegen: {
         flat: 7.4,
-        perLevel: 0.7
+        perLevel: 0.7,
       },
       armor: {
         flat: 27,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 60,
-        perLevel: 3.8
+        perLevel: 3.8,
       },
       movespeed: {
-        flat: 325
+        flat: 325,
       },
       acquisitionRadius: {
-        flat: 800
+        flat: 800,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.681,
-        perLevel: 4
+        perLevel: 4,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.123
+        flat: -0.123,
       },
       attackRange: {
-        flat: 650
-      }
+        flat: 650,
+      },
     },
-    positions: [
-      'Bottom'
-    ],
-    roles: [
-      'Marksman'
-    ],
+    positions: ['Bottom'],
+    roles: ['Marksman'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -1921,8 +1798,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 10,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 164,
@@ -1933,79 +1810,72 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 650,
-        perLevel: 99
+        perLevel: 99,
       },
       healthRegen: {
         flat: 8.5,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       mana: {
         flat: 339,
-        perLevel: 52
+        perLevel: 52,
       },
       manaRegen: {
         flat: 8.15,
-        perLevel: 0.75
+        perLevel: 0.75,
       },
       armor: {
         flat: 35,
-        perLevel: 5
+        perLevel: 5,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 68,
-        perLevel: 3.8
+        perLevel: 3.8,
       },
       movespeed: {
-        flat: 340
+        flat: 340,
       },
       acquisitionRadius: {
-        flat: 550
+        flat: 550,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.644,
-        perLevel: 2.5
+        perLevel: 2.5,
       },
       attackSpeedRatio: {
-        flat: 0.644
+        flat: 0.644,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.552
+        flat: 1.552,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Support',
-      'Top'
-    ],
-    roles: [
-      'Assassin',
-      'Diver',
-      'Fighter'
-    ],
+    positions: ['Support', 'Top'],
+    roles: ['Assassin', 'Diver', 'Fighter'],
     attributeRatings: {
       damage: 3,
       toughness: 2,
@@ -2013,8 +1883,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 1,
       abilityReliance: 40,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 69,
@@ -2025,80 +1895,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 630,
-        perLevel: 104
+        perLevel: 104,
       },
       healthRegen: {
         flat: 5.5,
-        perLevel: 0.5
+        perLevel: 0.5,
       },
       mana: {
         flat: 400,
-        perLevel: 40
+        perLevel: 40,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 18,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 53,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 328
+        flat: 328,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.647,
-        perLevel: 1.5
+        perLevel: 1.5,
       },
       attackSpeedRatio: {
-        flat: 0.647
+        flat: 0.647,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.108
+        flat: -0.108,
       },
       attackRange: {
-        flat: 550
-      }
+        flat: 550,
+      },
     },
-    positions: [
-      'Middle'
-    ],
-    roles: [
-      'Battlemage',
-      'Mage'
-    ],
+    positions: ['Middle'],
+    roles: ['Battlemage', 'Mage'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -2106,8 +1971,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 100,
-      difficulty: 3
-    }
+      difficulty: 3,
+    },
   },
   {
     id: 31,
@@ -2118,81 +1983,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 644,
-        perLevel: 94
+        perLevel: 94,
       },
       healthRegen: {
         flat: 9,
-        perLevel: 0.85
+        perLevel: 0.85,
       },
       mana: {
         flat: 270,
-        perLevel: 60
+        perLevel: 60,
       },
       manaRegen: {
         flat: 7.2,
-        perLevel: 0.45
+        perLevel: 0.45,
       },
       armor: {
         flat: 38,
-        perLevel: 4.5
+        perLevel: 4.5,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 69,
-        perLevel: 4.2
+        perLevel: 4.2,
       },
       movespeed: {
-        flat: 345
+        flat: 345,
       },
       acquisitionRadius: {
-        flat: 500
+        flat: 500,
       },
       selectionRadius: {
-        flat: 130
+        flat: 130,
       },
       pathingRadius: {
-        flat: 50
+        flat: 50,
       },
       gameplayRadius: {
-        flat: 80
+        flat: 80,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.658,
-        perLevel: 1.44
+        perLevel: 1.44,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.081
+        flat: -0.081,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Top'
-    ],
-    roles: [
-      'Mage',
-      'Specialist',
-      'Tank'
-    ],
+    positions: ['Top'],
+    roles: ['Mage', 'Specialist', 'Tank'],
     attributeRatings: {
       damage: 2,
       toughness: 3,
@@ -2200,8 +2059,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 65,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 42,
@@ -2212,80 +2071,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 610,
-        perLevel: 100
+        perLevel: 100,
       },
       healthRegen: {
         flat: 5.5,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 350,
-        perLevel: 40
+        perLevel: 40,
       },
       manaRegen: {
         flat: 7.4,
-        perLevel: 0.7
+        perLevel: 0.7,
       },
       armor: {
         flat: 27,
-        perLevel: 4.5
+        perLevel: 4.5,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 52,
-        perLevel: 2
+        perLevel: 2,
       },
       movespeed: {
-        flat: 325
+        flat: 325,
       },
       acquisitionRadius: {
-        flat: 550
+        flat: 550,
       },
       selectionRadius: {
-        flat: 135
+        flat: 135,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.644,
-        perLevel: 2.8
+        perLevel: 2.8,
       },
       attackSpeedRatio: {
-        flat: 0.644
+        flat: 0.644,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.03
+        flat: -0.03,
       },
       attackRange: {
-        flat: 550
-      }
+        flat: 550,
+      },
     },
-    positions: [
-      'Middle'
-    ],
-    roles: [
-      'Mage',
-      'Marksman'
-    ],
+    positions: ['Middle'],
+    roles: ['Mage', 'Marksman'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -2293,8 +2147,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 45,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 122,
@@ -2305,81 +2159,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 652,
-        perLevel: 114
+        perLevel: 114,
       },
       healthRegen: {
         flat: 10,
-        perLevel: 0.95
+        perLevel: 0.95,
       },
       mana: {
         flat: 263,
-        perLevel: 58
+        perLevel: 58,
       },
       manaRegen: {
         flat: 6.6,
-        perLevel: 0.35
+        perLevel: 0.35,
       },
       armor: {
         flat: 37,
-        perLevel: 5.2
+        perLevel: 5.2,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 64,
-        perLevel: 5
+        perLevel: 5,
       },
       movespeed: {
-        flat: 340
+        flat: 340,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 25.767
+        flat: 25.767,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 1
+        perLevel: 1,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.1
+        flat: -0.1,
       },
       attackRange: {
-        flat: 175
-      }
+        flat: 175,
+      },
     },
-    positions: [
-      'Top'
-    ],
-    roles: [
-      'Fighter',
-      'Juggernaut',
-      'Tank'
-    ],
+    positions: ['Top'],
+    roles: ['Fighter', 'Juggernaut', 'Tank'],
     attributeRatings: {
       damage: 3,
       toughness: 2,
@@ -2387,8 +2235,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 55,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 131,
@@ -2399,82 +2247,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 640,
-        perLevel: 109
+        perLevel: 109,
       },
       healthRegen: {
         flat: 6.5,
-        perLevel: 0.85
+        perLevel: 0.85,
       },
       mana: {
         flat: 375,
-        perLevel: 25
+        perLevel: 25,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 31,
-        perLevel: 4.3
+        perLevel: 4.3,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 57,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 345
+        flat: 345,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 2
+        perLevel: 2,
       },
       attackSpeedRatio: {
-        flat: 0.694
+        flat: 0.694,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.092
+        flat: -0.092,
       },
       attackRange: {
-        flat: 150
-      }
+        flat: 150,
+      },
     },
-    positions: [
-      'Jungle',
-      'Middle'
-    ],
-    roles: [
-      'Assassin',
-      'Diver',
-      'Fighter'
-    ],
+    positions: ['Jungle', 'Middle'],
+    roles: ['Assassin', 'Diver', 'Fighter'],
     attributeRatings: {
       damage: 3,
       toughness: 2,
@@ -2482,8 +2323,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 65,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 36,
@@ -2494,73 +2335,67 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 640,
-        perLevel: 103
+        perLevel: 103,
       },
       healthRegen: {
         flat: 7,
-        perLevel: 0.5
+        perLevel: 0.5,
       },
       armor: {
         flat: 32,
-        perLevel: 3.7
+        perLevel: 3.7,
       },
       magicResistance: {
         flat: 29,
-        perLevel: 2.3
+        perLevel: 2.3,
       },
       attackDamage: {
         flat: 61,
-        perLevel: 2.5
+        perLevel: 2.5,
       },
       movespeed: {
-        flat: 345
+        flat: 345,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 135
+        flat: 135,
       },
       pathingRadius: {
-        flat: 50
+        flat: 50,
       },
       gameplayRadius: {
-        flat: 80
+        flat: 80,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.67,
-        perLevel: 3.3
+        perLevel: 3.3,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.14
+        flat: -0.14,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Top'
-    ],
-    roles: [
-      'Fighter',
-      'Juggernaut',
-      'Tank'
-    ],
+    positions: ['Top'],
+    roles: ['Fighter', 'Juggernaut', 'Tank'],
     attributeRatings: {
       damage: 2,
       toughness: 3,
@@ -2568,8 +2403,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 55,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 119,
@@ -2580,79 +2415,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 675,
-        perLevel: 104
+        perLevel: 104,
       },
       healthRegen: {
         flat: 3.75,
-        perLevel: 0.7
+        perLevel: 0.7,
       },
       mana: {
         flat: 361,
-        perLevel: 39
+        perLevel: 39,
       },
       manaRegen: {
         flat: 8.05,
-        perLevel: 0.65
+        perLevel: 0.65,
       },
       armor: {
         flat: 29,
-        perLevel: 4.5
+        perLevel: 4.5,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 62,
-        perLevel: 3.6
+        perLevel: 3.6,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 111.111
+        flat: 111.111,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.679,
-        perLevel: 2.7
+        perLevel: 2.7,
       },
       attackSpeedRatio: {
-        flat: 0.679
+        flat: 0.679,
       },
       attackCastTime: {
-        flat: 0.23
+        flat: 0.23,
       },
       attackTotalTime: {
-        flat: 1.473
+        flat: 1.473,
       },
       attackDelayOffset: {
-        flat: -0.119
+        flat: -0.119,
       },
       attackRange: {
-        flat: 550
-      }
+        flat: 550,
+      },
     },
-    positions: [
-      'Bottom'
-    ],
-    roles: [
-      'Marksman'
-    ],
+    positions: ['Bottom'],
+    roles: ['Marksman'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -2660,8 +2491,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 10,
-      difficulty: 3
-    }
+      difficulty: 3,
+    },
   },
   {
     id: 245,
@@ -2672,78 +2503,72 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 655,
-        perLevel: 99
+        perLevel: 99,
       },
       healthRegen: {
         flat: 9,
-        perLevel: 0.9
+        perLevel: 0.9,
       },
       mana: {
         flat: 280,
-        perLevel: 70
+        perLevel: 70,
       },
       manaRegen: {
         flat: 7,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 32,
-        perLevel: 4.2
+        perLevel: 4.2,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 58,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 340
+        flat: 340,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.688,
-        perLevel: 3.3
+        perLevel: 3.3,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.26
+        flat: 0.26,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Jungle',
-      'Middle'
-    ],
-    roles: [
-      'Assassin',
-      'Mage'
-    ],
+    positions: ['Jungle', 'Middle'],
+    roles: ['Assassin', 'Mage'],
     attributeRatings: {
       damage: 3,
       toughness: 2,
@@ -2751,8 +2576,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 1,
       abilityReliance: 75,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 60,
@@ -2763,81 +2588,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 620,
-        perLevel: 109
+        perLevel: 109,
       },
       healthRegen: {
         flat: 5.5,
-        perLevel: 0.6
+        perLevel: 0.6,
       },
       mana: {
         flat: 324,
-        perLevel: 50
+        perLevel: 50,
       },
       manaRegen: {
         flat: 6,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 30,
-        perLevel: 4.5
+        perLevel: 4.5,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 55,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 550
+        flat: 550,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 1.75
+        perLevel: 1.75,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.112
+        flat: -0.112,
       },
       attackRange: {
-        flat: 550
-      }
+        flat: 550,
+      },
     },
-    positions: [
-      'Jungle'
-    ],
-    roles: [
-      'Assassin',
-      'Diver',
-      'Mage'
-    ],
+    positions: ['Jungle'],
+    roles: ['Assassin', 'Diver', 'Mage'],
     attributeRatings: {
       damage: 2,
       toughness: 2,
@@ -2845,8 +2664,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 65,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 28,
@@ -2857,77 +2676,72 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 642,
-        perLevel: 98
+        perLevel: 98,
       },
       healthRegen: {
         flat: 8.5,
-        perLevel: 0.75
+        perLevel: 0.75,
       },
       mana: {
         flat: 315,
-        perLevel: 42
+        perLevel: 42,
       },
       manaRegen: {
         flat: 8.11,
-        perLevel: 0.6
+        perLevel: 0.6,
       },
       armor: {
         flat: 37,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 61,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.667,
-        perLevel: 2.1
+        perLevel: 2.1,
       },
       attackSpeedRatio: {
-        flat: 0.667
+        flat: 0.667,
       },
       attackCastTime: {
-        flat: 0.23
+        flat: 0.23,
       },
       attackTotalTime: {
-        flat: 1.5
+        flat: 1.5,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Jungle'
-    ],
-    roles: [
-      'Assassin',
-      'Mage'
-    ],
+    positions: ['Jungle'],
+    roles: ['Assassin', 'Mage'],
     attributeRatings: {
       damage: 2,
       toughness: 2,
@@ -2935,8 +2749,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 2,
       abilityReliance: 75,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 81,
@@ -2947,80 +2761,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 600,
-        perLevel: 102
+        perLevel: 102,
       },
       healthRegen: {
         flat: 4,
-        perLevel: 0.65
+        perLevel: 0.65,
       },
       mana: {
         flat: 375,
-        perLevel: 70
+        perLevel: 70,
       },
       manaRegen: {
         flat: 8.5,
-        perLevel: 1
+        perLevel: 1,
       },
       armor: {
         flat: 24,
-        perLevel: 4.2
+        perLevel: 4.2,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 60,
-        perLevel: 2.75
+        perLevel: 2.75,
       },
       movespeed: {
-        flat: 325
+        flat: 325,
       },
       acquisitionRadius: {
-        flat: 550
+        flat: 550,
       },
       selectionRadius: {
-        flat: 115
+        flat: 115,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 2.5
+        perLevel: 2.5,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.112
+        flat: -0.112,
       },
       attackRange: {
-        flat: 550
-      }
+        flat: 550,
+      },
     },
-    positions: [
-      'Bottom'
-    ],
-    roles: [
-      'Mage',
-      'Marksman'
-    ],
+    positions: ['Bottom'],
+    roles: ['Mage', 'Marksman'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -3028,8 +2837,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 1,
       abilityReliance: 45,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 9,
@@ -3040,78 +2849,72 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 650,
-        perLevel: 106
+        perLevel: 106,
       },
       healthRegen: {
         flat: 5.5,
-        perLevel: 0.6
+        perLevel: 0.6,
       },
       mana: {
         flat: 500,
-        perLevel: 28
+        perLevel: 28,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 34,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 55,
-        perLevel: 2.65
+        perLevel: 2.65,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 520
+        flat: 520,
       },
       selectionRadius: {
-        flat: 135
+        flat: 135,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 2.11
+        perLevel: 2.11,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackRange: {
-        flat: 480
-      }
+        flat: 480,
+      },
     },
-    positions: [
-      'Jungle'
-    ],
-    roles: [
-      'Mage',
-      'Specialist',
-      'Support'
-    ],
+    positions: ['Jungle'],
+    roles: ['Mage', 'Specialist', 'Support'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -3119,8 +2922,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 100,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 114,
@@ -3131,78 +2934,72 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 620,
-        perLevel: 99
+        perLevel: 99,
       },
       healthRegen: {
         flat: 8.5,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 300,
-        perLevel: 60
+        perLevel: 60,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 0.7
+        perLevel: 0.7,
       },
       armor: {
         flat: 33,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 66,
-        perLevel: 3.3
+        perLevel: 3.3,
       },
       movespeed: {
-        flat: 345
+        flat: 345,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.69,
-        perLevel: 3.2
+        perLevel: 3.2,
       },
       attackSpeedRatio: {
-        flat: 0.69
+        flat: 0.69,
       },
       attackCastTime: {
-        flat: 0.2
+        flat: 0.2,
       },
       attackTotalTime: {
-        flat: 1.45
+        flat: 1.45,
       },
       attackRange: {
-        flat: 150
-      }
+        flat: 150,
+      },
     },
-    positions: [
-      'Top'
-    ],
-    roles: [
-      'Assassin',
-      'Fighter',
-      'Skirmisher'
-    ],
+    positions: ['Top'],
+    roles: ['Assassin', 'Fighter', 'Skirmisher'],
     attributeRatings: {
       damage: 3,
       toughness: 2,
@@ -3210,8 +3007,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 2,
       abilityReliance: 20,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 105,
@@ -3222,80 +3019,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 640,
-        perLevel: 106
+        perLevel: 106,
       },
       healthRegen: {
         flat: 8,
-        perLevel: 0.7
+        perLevel: 0.7,
       },
       mana: {
         flat: 317,
-        perLevel: 52
+        perLevel: 52,
       },
       manaRegen: {
         flat: 6,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 22,
-        perLevel: 4.6
+        perLevel: 4.6,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 58,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 108.333
+        flat: 108.333,
       },
       pathingRadius: {
-        flat: 30
+        flat: 30,
       },
       gameplayRadius: {
-        flat: 55
+        flat: 55,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.658,
-        perLevel: 3.1
+        perLevel: 3.1,
       },
       attackSpeedRatio: {
-        flat: 0.658
+        flat: 0.658,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.097
+        flat: -0.097,
       },
       attackRange: {
-        flat: 175
-      }
+        flat: 175,
+      },
     },
-    positions: [
-      'Middle'
-    ],
-    roles: [
-      'Assassin',
-      'Fighter'
-    ],
+    positions: ['Middle'],
+    roles: ['Assassin', 'Fighter'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -3303,8 +3095,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 1,
       abilityReliance: 90,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 3,
@@ -3315,79 +3107,72 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 600,
-        perLevel: 126
+        perLevel: 126,
       },
       healthRegen: {
         flat: 8,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       mana: {
         flat: 410,
-        perLevel: 40
+        perLevel: 40,
       },
       manaRegen: {
         flat: 9.5,
-        perLevel: 0.7
+        perLevel: 0.7,
       },
       armor: {
         flat: 24,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 59,
-        perLevel: 3.5
+        perLevel: 3.5,
       },
       movespeed: {
-        flat: 340
+        flat: 340,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 125
+        flat: 125,
       },
       pathingRadius: {
-        flat: 50
+        flat: 50,
       },
       gameplayRadius: {
-        flat: 80
+        flat: 80,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 1.5
+        perLevel: 1.5,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.33
+        flat: 0.33,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackRange: {
-        flat: 150
-      }
+        flat: 150,
+      },
     },
-    positions: [
-      'Middle',
-      'Support'
-    ],
-    roles: [
-      'Mage',
-      'Tank',
-      'Warden'
-    ],
+    positions: ['Middle', 'Support'],
+    roles: ['Mage', 'Tank', 'Warden'],
     attributeRatings: {
       damage: 2,
       toughness: 3,
@@ -3395,8 +3180,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 100,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 41,
@@ -3407,77 +3192,72 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 630,
-        perLevel: 114
+        perLevel: 114,
       },
       healthRegen: {
         flat: 6,
-        perLevel: 0.6
+        perLevel: 0.6,
       },
       mana: {
         flat: 280,
-        perLevel: 60
+        perLevel: 60,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 0.7
+        perLevel: 0.7,
       },
       armor: {
         flat: 31,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 64,
-        perLevel: 4.2
+        perLevel: 4.2,
       },
       movespeed: {
-        flat: 345
+        flat: 345,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.658,
-        perLevel: 3.2
+        perLevel: 3.2,
       },
       attackSpeedRatio: {
-        flat: 0.69
+        flat: 0.69,
       },
       attackCastTime: {
-        flat: 0.25
+        flat: 0.25,
       },
       attackTotalTime: {
-        flat: 1.52
+        flat: 1.52,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Top'
-    ],
-    roles: [
-      'Fighter',
-      'Specialist'
-    ],
+    positions: ['Top'],
+    roles: ['Fighter', 'Specialist'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -3485,8 +3265,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 2,
       abilityReliance: 75,
-      difficulty: 3
-    }
+      difficulty: 3,
+    },
   },
   {
     id: 86,
@@ -3497,73 +3277,67 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 690,
-        perLevel: 98
+        perLevel: 98,
       },
       healthRegen: {
         flat: 8,
-        perLevel: 0.5
+        perLevel: 0.5,
       },
       armor: {
         flat: 38,
-        perLevel: 4.2
+        perLevel: 4.2,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 1.55
+        perLevel: 1.55,
       },
       attackDamage: {
         flat: 69,
-        perLevel: 4.5
+        perLevel: 4.5,
       },
       movespeed: {
-        flat: 340
+        flat: 340,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 3.65
+        perLevel: 3.65,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.12
+        flat: -0.12,
       },
       attackRange: {
-        flat: 175
-      }
+        flat: 175,
+      },
     },
-    positions: [
-      'Top'
-    ],
-    roles: [
-      'Fighter',
-      'Juggernaut',
-      'Tank'
-    ],
+    positions: ['Top'],
+    roles: ['Fighter', 'Juggernaut', 'Tank'],
     attributeRatings: {
       damage: 2,
       toughness: 3,
@@ -3571,8 +3345,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 75,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 150,
@@ -3583,77 +3357,71 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 540,
-        perLevel: 79
+        perLevel: 79,
       },
       healthRegen: {
         flat: 4.5,
-        perLevel: 1.25
+        perLevel: 1.25,
       },
       mana: {
-        flat: 100
+        flat: 100,
       },
       armor: {
         flat: 32,
-        perLevel: 3.7
+        perLevel: 3.7,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 60,
-        perLevel: 3.2
+        perLevel: 3.2,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 30
+        flat: 30,
       },
       gameplayRadius: {
-        flat: 55
+        flat: 55,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 6
+        perLevel: 6,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.154
+        flat: -0.154,
       },
       attackRange: {
         flat: 175,
-        perLevel: 5.882
-      }
+        perLevel: 5.882,
+      },
     },
-    positions: [
-      'Top'
-    ],
-    roles: [
-      'Fighter',
-      'Specialist',
-      'Tank'
-    ],
+    positions: ['Top'],
+    roles: ['Fighter', 'Specialist', 'Tank'],
     attributeRatings: {
       damage: 2,
       toughness: 1,
@@ -3661,8 +3429,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 45,
-      difficulty: 3
-    }
+      difficulty: 3,
+    },
   },
   {
     id: 79,
@@ -3673,83 +3441,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 640,
-        perLevel: 115
+        perLevel: 115,
       },
       healthRegen: {
         flat: 5.5,
-        perLevel: 0.5
+        perLevel: 0.5,
       },
       mana: {
         flat: 400,
-        perLevel: 47
+        perLevel: 47,
       },
       manaRegen: {
         flat: 6,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 38,
-        perLevel: 5
+        perLevel: 5,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 64,
-        perLevel: 3.5
+        perLevel: 3.5,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 140
+        flat: 140,
       },
       pathingRadius: {
-        flat: 50
+        flat: 50,
       },
       gameplayRadius: {
-        flat: 80
+        flat: 80,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.675,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.05
+        flat: -0.05,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Jungle',
-      'Middle',
-      'Top'
-    ],
-    roles: [
-      'Fighter',
-      'Mage',
-      'Vanguard'
-    ],
+    positions: ['Jungle', 'Middle', 'Top'],
+    roles: ['Fighter', 'Mage', 'Vanguard'],
     attributeRatings: {
       damage: 2,
       toughness: 3,
@@ -3757,8 +3517,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 90,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 104,
@@ -3769,80 +3529,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 625,
-        perLevel: 106
+        perLevel: 106,
       },
       healthRegen: {
         flat: 8,
-        perLevel: 0.7
+        perLevel: 0.7,
       },
       mana: {
         flat: 325,
-        perLevel: 40
+        perLevel: 40,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 0.7
+        perLevel: 0.7,
       },
       armor: {
         flat: 33,
-        perLevel: 4.6
+        perLevel: 4.6,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 68,
-        perLevel: 4
+        perLevel: 4,
       },
       movespeed: {
-        flat: 340
+        flat: 340,
       },
       acquisitionRadius: {
-        flat: 800
+        flat: 800,
       },
       selectionRadius: {
-        flat: 110
+        flat: 110,
       },
       pathingRadius: {
-        flat: 10
+        flat: 10,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.475,
-        perLevel: 3
+        perLevel: 3,
       },
       attackSpeedRatio: {
-        flat: 0.49
+        flat: 0.49,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.295
+        flat: -0.295,
       },
       attackRange: {
-        flat: 425
-      }
+        flat: 425,
+      },
     },
-    positions: [
-      'Jungle'
-    ],
-    roles: [
-      'Marksman',
-      'Specialist'
-    ],
+    positions: ['Jungle'],
+    roles: ['Marksman', 'Specialist'],
     attributeRatings: {
       damage: 3,
       toughness: 2,
@@ -3850,8 +3605,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 2,
       abilityReliance: 20,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 887,
@@ -3862,79 +3617,72 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 600,
-        perLevel: 110
+        perLevel: 110,
       },
       healthRegen: {
         flat: 9,
-        perLevel: 0.9
+        perLevel: 0.9,
       },
       mana: {
         flat: 330,
-        perLevel: 40
+        perLevel: 40,
       },
       manaRegen: {
         flat: 7.5,
-        perLevel: 0.7
+        perLevel: 0.7,
       },
       armor: {
         flat: 36,
-        perLevel: 4.9
+        perLevel: 4.9,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 63,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 340
+        flat: 340,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.69,
-        perLevel: 2.25
+        perLevel: 2.25,
       },
       attackSpeedRatio: {
-        flat: 0.69
+        flat: 0.69,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.525
+        flat: 1.525,
       },
       attackRange: {
-        flat: 150
-      }
+        flat: 150,
+      },
     },
-    positions: [
-      'Jungle',
-      'Top'
-    ],
-    roles: [
-      'Assassin',
-      'Fighter',
-      'Skirmisher'
-    ],
+    positions: ['Jungle', 'Top'],
+    roles: ['Assassin', 'Fighter', 'Skirmisher'],
     attributeRatings: {
       damage: 3,
       toughness: 2,
@@ -3942,8 +3690,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 1,
       abilityReliance: 50,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 120,
@@ -3954,81 +3702,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 625,
-        perLevel: 106
+        perLevel: 106,
       },
       healthRegen: {
         flat: 7,
-        perLevel: 0.75
+        perLevel: 0.75,
       },
       mana: {
         flat: 280,
-        perLevel: 40
+        perLevel: 40,
       },
       manaRegen: {
         flat: 7,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 32,
-        perLevel: 5.45
+        perLevel: 5.45,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 66,
-        perLevel: 3.7
+        perLevel: 3.7,
       },
       movespeed: {
-        flat: 345
+        flat: 345,
       },
       acquisitionRadius: {
-        flat: 800
+        flat: 800,
       },
       selectionRadius: {
-        flat: 140
+        flat: 140,
       },
       pathingRadius: {
-        flat: 50
+        flat: 50,
       },
       gameplayRadius: {
-        flat: 80
+        flat: 80,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.67,
-        perLevel: 2.5
+        perLevel: 2.5,
       },
       attackSpeedRatio: {
-        flat: 0.67
+        flat: 0.67,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.05
+        flat: -0.05,
       },
       attackRange: {
-        flat: 175
-      }
+        flat: 175,
+      },
     },
-    positions: [
-      'Jungle'
-    ],
-    roles: [
-      'Diver',
-      'Fighter',
-      'Tank'
-    ],
+    positions: ['Jungle'],
+    roles: ['Diver', 'Fighter', 'Tank'],
     attributeRatings: {
       damage: 2,
       toughness: 2,
@@ -4036,8 +3778,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 65,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 74,
@@ -4048,83 +3790,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 558,
-        perLevel: 101
+        perLevel: 101,
       },
       healthRegen: {
         flat: 7,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 385,
-        perLevel: 20
+        perLevel: 20,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 19,
-        perLevel: 4.2
+        perLevel: 4.2,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 56,
-        perLevel: 2.7
+        perLevel: 2.7,
       },
       movespeed: {
-        flat: 340
+        flat: 340,
       },
       acquisitionRadius: {
-        flat: 550
+        flat: 550,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 30.544
+        flat: 30.544,
       },
       gameplayRadius: {
-        flat: 55
+        flat: 55,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.658,
-        perLevel: 1.36
+        perLevel: 1.36,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.1
+        flat: -0.1,
       },
       attackRange: {
-        flat: 550
-      }
+        flat: 550,
+      },
     },
-    positions: [
-      'Middle',
-      'Support',
-      'Top'
-    ],
-    roles: [
-      'Mage',
-      'Specialist',
-      'Support'
-    ],
+    positions: ['Middle', 'Support', 'Top'],
+    roles: ['Mage', 'Specialist', 'Support'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -4132,8 +3866,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 2,
       abilityReliance: 100,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 910,
@@ -4144,79 +3878,72 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 580,
-        perLevel: 109
+        perLevel: 109,
       },
       healthRegen: {
         flat: 5.5,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 480,
-        perLevel: 30
+        perLevel: 30,
       },
       manaRegen: {
         flat: 7.5,
-        perLevel: 0.75
+        perLevel: 0.75,
       },
       armor: {
         flat: 21,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 54,
-        perLevel: 3.3
+        perLevel: 3.3,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 135
+        flat: 135,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.69,
-        perLevel: 2.5
+        perLevel: 2.5,
       },
       attackSpeedRatio: {
-        flat: 0.658
+        flat: 0.658,
       },
       attackCastTime: {
-        flat: 0.28
+        flat: 0.28,
       },
       attackTotalTime: {
-        flat: 1.495
+        flat: 1.495,
       },
       attackRange: {
-        flat: 550
-      }
+        flat: 550,
+      },
     },
-    positions: [
-      'Middle',
-      'Support'
-    ],
-    roles: [
-      'Artillery',
-      'Mage',
-      'Support'
-    ],
+    positions: ['Middle', 'Support'],
+    roles: ['Artillery', 'Mage', 'Support'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -4224,8 +3951,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 2,
       abilityReliance: 90,
-      difficulty: 3
-    }
+      difficulty: 3,
+    },
   },
   {
     id: 420,
@@ -4236,78 +3963,72 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 656,
-        perLevel: 115
+        perLevel: 115,
       },
       healthRegen: {
         flat: 9.5,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       mana: {
         flat: 350,
-        perLevel: 50
+        perLevel: 50,
       },
       manaRegen: {
         flat: 7.5,
-        perLevel: 0.75
+        perLevel: 0.75,
       },
       armor: {
         flat: 35,
-        perLevel: 5
+        perLevel: 5,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 65,
-        perLevel: 5
+        perLevel: 5,
       },
       movespeed: {
-        flat: 350
+        flat: 350,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 2.5
+        perLevel: 2.5,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.375
+        flat: 0.375,
       },
       attackTotalTime: {
-        flat: 1.75
+        flat: 1.75,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Top'
-    ],
-    roles: [
-      'Fighter',
-      'Juggernaut',
-      'Tank'
-    ],
+    positions: ['Top'],
+    roles: ['Fighter', 'Juggernaut', 'Tank'],
     attributeRatings: {
       damage: 3,
       toughness: 2,
@@ -4315,8 +4036,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 65,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 39,
@@ -4327,79 +4048,72 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 630,
-        perLevel: 115
+        perLevel: 115,
       },
       healthRegen: {
         flat: 3.5,
-        perLevel: 0.85
+        perLevel: 0.85,
       },
       mana: {
         flat: 350,
-        perLevel: 50
+        perLevel: 50,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 36,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 65,
-        perLevel: 3.5
+        perLevel: 3.5,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.656,
-        perLevel: 2.5
+        perLevel: 2.5,
       },
       attackSpeedRatio: {
-        flat: 0.656
+        flat: 0.656,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.525
+        flat: 1.525,
       },
       attackRange: {
-        flat: 200
-      }
+        flat: 200,
+      },
     },
-    positions: [
-      'Middle',
-      'Top'
-    ],
-    roles: [
-      'Assassin',
-      'Diver',
-      'Fighter'
-    ],
+    positions: ['Middle', 'Top'],
+    roles: ['Assassin', 'Diver', 'Fighter'],
     attributeRatings: {
       damage: 2,
       toughness: 2,
@@ -4407,8 +4121,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 2,
       abilityReliance: 30,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 427,
@@ -4419,81 +4133,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 630,
-        perLevel: 99
+        perLevel: 99,
       },
       healthRegen: {
         flat: 7,
-        perLevel: 0.85
+        perLevel: 0.85,
       },
       mana: {
         flat: 450,
-        perLevel: 60
+        perLevel: 60,
       },
       manaRegen: {
         flat: 6,
-        perLevel: 0.75
+        perLevel: 0.75,
       },
       armor: {
         flat: 27,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 50,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 800
+        flat: 800,
       },
       selectionRadius: {
-        flat: 140
+        flat: 140,
       },
       pathingRadius: {
-        flat: 40
+        flat: 40,
       },
       gameplayRadius: {
-        flat: 70
+        flat: 70,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.644,
-        perLevel: 3.4
+        perLevel: 3.4,
       },
       attackSpeedRatio: {
-        flat: 0.644
+        flat: 0.644,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.1
+        flat: -0.1,
       },
       attackRange: {
-        flat: 475
-      }
+        flat: 475,
+      },
     },
-    positions: [
-      'Jungle'
-    ],
-    roles: [
-      'Catcher',
-      'Mage',
-      'Support'
-    ],
+    positions: ['Jungle'],
+    roles: ['Catcher', 'Mage', 'Support'],
     attributeRatings: {
       damage: 1,
       toughness: 1,
@@ -4501,8 +4209,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 3,
       abilityReliance: 10,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 40,
@@ -4513,81 +4221,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 570,
-        perLevel: 90
+        perLevel: 90,
       },
       healthRegen: {
         flat: 5.5,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 360,
-        perLevel: 50
+        perLevel: 50,
       },
       manaRegen: {
         flat: 11.5,
-        perLevel: 0.4
+        perLevel: 0.4,
       },
       armor: {
         flat: 28,
-        perLevel: 4.5
+        perLevel: 4.5,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 47,
-        perLevel: 2.5
+        perLevel: 2.5,
       },
       movespeed: {
-        flat: 325
+        flat: 325,
       },
       acquisitionRadius: {
-        flat: 550
+        flat: 550,
       },
       selectionRadius: {
-        flat: 125
+        flat: 125,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 3
+        perLevel: 3,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.1
+        flat: -0.1,
       },
       attackRange: {
-        flat: 550
-      }
+        flat: 550,
+      },
     },
-    positions: [
-      'Support'
-    ],
-    roles: [
-      'Enchanter',
-      'Mage',
-      'Support'
-    ],
+    positions: ['Support'],
+    roles: ['Enchanter', 'Mage', 'Support'],
     attributeRatings: {
       damage: 1,
       toughness: 1,
@@ -4595,8 +4297,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 3,
       abilityReliance: 100,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 59,
@@ -4607,81 +4309,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 640,
-        perLevel: 104
+        perLevel: 104,
       },
       healthRegen: {
         flat: 8,
-        perLevel: 0.7
+        perLevel: 0.7,
       },
       mana: {
         flat: 300,
-        perLevel: 55
+        perLevel: 55,
       },
       manaRegen: {
         flat: 6.5,
-        perLevel: 0.45
+        perLevel: 0.45,
       },
       armor: {
         flat: 36,
-        perLevel: 5.2
+        perLevel: 5.2,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 64,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 340
+        flat: 340,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 125
+        flat: 125,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.658,
-        perLevel: 2.5
+        perLevel: 2.5,
       },
       attackSpeedRatio: {
-        flat: 0.658
+        flat: 0.658,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.125
+        flat: -0.125,
       },
       attackRange: {
-        flat: 175
-      }
+        flat: 175,
+      },
     },
-    positions: [
-      'Jungle'
-    ],
-    roles: [
-      'Diver',
-      'Fighter',
-      'Tank'
-    ],
+    positions: ['Jungle'],
+    roles: ['Diver', 'Fighter', 'Tank'],
     attributeRatings: {
       damage: 2,
       toughness: 2,
@@ -4689,8 +4385,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 2,
       abilityReliance: 55,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 24,
@@ -4701,82 +4397,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 665,
-        perLevel: 103
+        perLevel: 103,
       },
       healthRegen: {
         flat: 8.5,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 339,
-        perLevel: 52
+        perLevel: 52,
       },
       manaRegen: {
         flat: 8.2,
-        perLevel: 0.7
+        perLevel: 0.7,
       },
       armor: {
         flat: 36,
-        perLevel: 4.2
+        perLevel: 4.2,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 68,
-        perLevel: 4.25
+        perLevel: 4.25,
       },
       movespeed: {
-        flat: 350
+        flat: 350,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.638,
-        perLevel: 3.4
+        perLevel: 3.4,
       },
       attackSpeedRatio: {
-        flat: 0.638
+        flat: 0.638,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.092
+        flat: -0.092,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Jungle',
-      'Top'
-    ],
-    roles: [
-      'Assassin',
-      'Fighter',
-      'Skirmisher'
-    ],
+    positions: ['Jungle', 'Top'],
+    roles: ['Assassin', 'Fighter', 'Skirmisher'],
     attributeRatings: {
       damage: 3,
       toughness: 2,
@@ -4784,8 +4473,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 10,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 126,
@@ -4796,82 +4485,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 590,
-        perLevel: 109
+        perLevel: 109,
       },
       healthRegen: {
         flat: 6,
-        perLevel: 0.6
+        perLevel: 0.6,
       },
       mana: {
         flat: 375,
-        perLevel: 45
+        perLevel: 45,
       },
       manaRegen: {
         flat: 6,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 22,
-        perLevel: 5
+        perLevel: 5,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 59,
-        perLevel: 4.25
+        perLevel: 4.25,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 200
+        flat: 200,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.658,
-        perLevel: 3
+        perLevel: 3,
       },
       attackSpeedRatio: {
-        flat: 0.658
+        flat: 0.658,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.205
+        flat: -0.205,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Middle',
-      'Top'
-    ],
-    roles: [
-      'Artillery',
-      'Fighter',
-      'Marksman'
-    ],
+    positions: ['Middle', 'Top'],
+    roles: ['Artillery', 'Fighter', 'Marksman'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -4879,8 +4561,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 2,
       abilityReliance: 45,
-      difficulty: 3
-    }
+      difficulty: 3,
+    },
   },
   {
     id: 202,
@@ -4891,75 +4573,69 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 655,
-        perLevel: 107
+        perLevel: 107,
       },
       healthRegen: {
         flat: 3.75,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 300,
-        perLevel: 50
+        perLevel: 50,
       },
       manaRegen: {
         flat: 6,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 24,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 59,
-        perLevel: 4.4
+        perLevel: 4.4,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 800
+        flat: 800,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 0.86
+        flat: 0.86,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 3
+        perLevel: 3,
       },
       attackCastTime: {
-        flat: 0.25
+        flat: 0.25,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackRange: {
-        flat: 550
-      }
+        flat: 550,
+      },
     },
-    positions: [
-      'Bottom'
-    ],
-    roles: [
-      'Catcher',
-      'Mage',
-      'Marksman'
-    ],
+    positions: ['Bottom'],
+    roles: ['Catcher', 'Mage', 'Marksman'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -4967,8 +4643,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 20,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 222,
@@ -4979,76 +4655,72 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 630,
-        perLevel: 105
+        perLevel: 105,
       },
       healthRegen: {
         flat: 3.75,
-        perLevel: 0.5
+        perLevel: 0.5,
       },
       mana: {
         flat: 260,
-        perLevel: 50
+        perLevel: 50,
       },
       manaRegen: {
         flat: 6.7,
-        perLevel: 1
+        perLevel: 1,
       },
       armor: {
         flat: 26,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 59,
-        perLevel: 3.25
+        perLevel: 3.25,
       },
       movespeed: {
-        flat: 325
+        flat: 325,
       },
       acquisitionRadius: {
-        flat: 550
+        flat: 550,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 1.4
+        perLevel: 1.4,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.27
+        flat: 0.27,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackRange: {
-        flat: 525
-      }
+        flat: 525,
+      },
     },
-    positions: [
-      'Bottom'
-    ],
-    roles: [
-      'Marksman'
-    ],
+    positions: ['Bottom'],
+    roles: ['Marksman'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -5056,8 +4728,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 10,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 897,
@@ -5068,82 +4740,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 625,
-        perLevel: 120
+        perLevel: 120,
       },
       healthRegen: {
         flat: 9.5,
-        perLevel: 1
+        perLevel: 1,
       },
       mana: {
         flat: 320,
-        perLevel: 60
+        perLevel: 60,
       },
       manaRegen: {
         flat: 7,
-        perLevel: 1
+        perLevel: 1,
       },
       armor: {
         flat: 36,
-        perLevel: 5.2
+        perLevel: 5.2,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 2.1
+        perLevel: 2.1,
       },
       attackDamage: {
         flat: 64,
-        perLevel: 3.5
+        perLevel: 3.5,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 140
+        flat: 140,
       },
       pathingRadius: {
-        flat: 50
+        flat: 50,
       },
       gameplayRadius: {
-        flat: 80
+        flat: 80,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.688,
-        perLevel: 2.5
+        perLevel: 2.5,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.105
+        flat: -0.105,
       },
       attackRange: {
-        flat: 150
-      }
+        flat: 150,
+      },
     },
-    positions: [
-      'Top'
-    ],
-    roles: [
-      'Fighter',
-      'Skirmisher',
-      'Tank',
-      'Warden'
-    ],
+    positions: ['Top'],
+    roles: ['Fighter', 'Skirmisher', 'Tank', 'Warden'],
     attributeRatings: {
       damage: 2,
       toughness: 3,
@@ -5151,8 +4816,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 2,
       abilityReliance: 30,
-      difficulty: 3
-    }
+      difficulty: 3,
+    },
   },
   {
     id: 145,
@@ -5163,77 +4828,72 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 640,
-        perLevel: 102
+        perLevel: 102,
       },
       healthRegen: {
         flat: 4,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 345,
-        perLevel: 40
+        perLevel: 40,
       },
       manaRegen: {
         flat: 8.2,
-        perLevel: 0.7
+        perLevel: 0.7,
       },
       armor: {
         flat: 27,
-        perLevel: 4.2
+        perLevel: 4.2,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 59,
-        perLevel: 2.6
+        perLevel: 2.6,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 800
+        flat: 800,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 40.68
+        flat: 40.68,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.644,
-        perLevel: 1.8
+        perLevel: 1.8,
       },
       attackSpeedRatio: {
-        flat: 0.644
+        flat: 0.644,
       },
       attackCastTime: {
-        flat: 0.25
+        flat: 0.25,
       },
       attackTotalTime: {
-        flat: 1.552
+        flat: 1.552,
       },
       attackRange: {
-        flat: 525
-      }
+        flat: 525,
+      },
     },
-    positions: [
-      'Bottom'
-    ],
-    roles: [
-      'Mage',
-      'Marksman'
-    ],
+    positions: ['Bottom'],
+    roles: ['Mage', 'Marksman'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -5241,8 +4901,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 1,
       abilityReliance: 10,
-      difficulty: 3
-    }
+      difficulty: 3,
+    },
   },
   {
     id: 429,
@@ -5253,79 +4913,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 560,
-        perLevel: 114
+        perLevel: 114,
       },
       healthRegen: {
         flat: 4,
-        perLevel: 0.75
+        perLevel: 0.75,
       },
       mana: {
         flat: 300,
-        perLevel: 45
+        perLevel: 45,
       },
       manaRegen: {
         flat: 6.3,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 24,
-        perLevel: 5.2
+        perLevel: 5.2,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 57,
-        perLevel: 4
+        perLevel: 4,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 900
+        flat: 900,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.694,
-        perLevel: 4.5
+        perLevel: 4.5,
       },
       attackSpeedRatio: {
-        flat: 0.694
+        flat: 0.694,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: 0.06
+        flat: 0.06,
       },
       attackRange: {
-        flat: 525
-      }
+        flat: 525,
+      },
     },
-    positions: [
-      'Bottom'
-    ],
-    roles: [
-      'Marksman'
-    ],
+    positions: ['Bottom'],
+    roles: ['Marksman'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -5333,8 +4989,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 2,
       abilityReliance: 10,
-      difficulty: 3
-    }
+      difficulty: 3,
+    },
   },
   {
     id: 43,
@@ -5345,84 +5001,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 630,
-        perLevel: 109
+        perLevel: 109,
       },
       healthRegen: {
         flat: 5.5,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 374,
-        perLevel: 40
+        perLevel: 40,
       },
       manaRegen: {
         flat: 13,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 28,
-        perLevel: 5
+        perLevel: 5,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 51,
-        perLevel: 3.3
+        perLevel: 3.3,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 525
+        flat: 525,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 2.3
+        perLevel: 2.3,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.139
+        flat: -0.139,
       },
       attackRange: {
-        flat: 525
-      }
+        flat: 525,
+      },
     },
-    positions: [
-      'Middle',
-      'Support',
-      'Top'
-    ],
-    roles: [
-      'Burst',
-      'Enchanter',
-      'Mage',
-      'Support'
-    ],
+    positions: ['Middle', 'Support', 'Top'],
+    roles: ['Burst', 'Enchanter', 'Mage', 'Support'],
     attributeRatings: {
       damage: 2,
       toughness: 1,
@@ -5430,8 +5077,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 2,
       abilityReliance: 100,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 30,
@@ -5442,80 +5089,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 620,
-        perLevel: 110
+        perLevel: 110,
       },
       healthRegen: {
         flat: 6.5,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 467,
-        perLevel: 31
+        perLevel: 31,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 21,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 46,
-        perLevel: 3.25
+        perLevel: 3.25,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 450
+        flat: 450,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 2.11
+        perLevel: 2.11,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: 0.044
+        flat: 0.044,
       },
       attackRange: {
-        flat: 450
-      }
+        flat: 450,
+      },
     },
-    positions: [
-      'Jungle'
-    ],
-    roles: [
-      'Battlemage',
-      'Mage'
-    ],
+    positions: ['Jungle'],
+    roles: ['Battlemage', 'Mage'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -5523,8 +5165,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 2,
       abilityReliance: 100,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 38,
@@ -5535,80 +5177,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 646,
-        perLevel: 119
+        perLevel: 119,
       },
       healthRegen: {
         flat: 6,
-        perLevel: 0.5
+        perLevel: 0.5,
       },
       mana: {
         flat: 400,
-        perLevel: 87
+        perLevel: 87,
       },
       manaRegen: {
         flat: 6,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 21,
-        perLevel: 4
+        perLevel: 4,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 59,
-        perLevel: 3.9
+        perLevel: 3.9,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.64,
-        perLevel: 3.7
+        perLevel: 3.7,
       },
       attackSpeedRatio: {
-        flat: 0.64
+        flat: 0.64,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.15
+        flat: -0.15,
       },
       attackRange: {
-        flat: 150
-      }
+        flat: 150,
+      },
     },
-    positions: [
-      'Middle'
-    ],
-    roles: [
-      'Assassin',
-      'Mage'
-    ],
+    positions: ['Middle'],
+    roles: ['Assassin', 'Mage'],
     attributeRatings: {
       damage: 3,
       toughness: 2,
@@ -5616,8 +5253,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 1,
       abilityReliance: 90,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 55,
@@ -5628,72 +5265,67 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 672,
-        perLevel: 108
+        perLevel: 108,
       },
       healthRegen: {
         flat: 7.5,
-        perLevel: 0.7
+        perLevel: 0.7,
       },
       armor: {
         flat: 28,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 58,
-        perLevel: 3.2
+        perLevel: 3.2,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.658,
-        perLevel: 2.74
+        perLevel: 2.74,
       },
       attackSpeedRatio: {
-        flat: 0.658
+        flat: 0.658,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.15
+        flat: -0.15,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Middle'
-    ],
-    roles: [
-      'Assassin',
-      'Mage'
-    ],
+    positions: ['Middle'],
+    roles: ['Assassin', 'Mage'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -5701,8 +5333,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 1,
       abilityReliance: 100,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 10,
@@ -5713,78 +5345,72 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 670,
-        perLevel: 92
+        perLevel: 92,
       },
       healthRegen: {
         flat: 5,
-        perLevel: 0.5
+        perLevel: 0.5,
       },
       mana: {
         flat: 330,
-        perLevel: 50
+        perLevel: 50,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 26,
-        perLevel: 4.2
+        perLevel: 4.2,
       },
       magicResistance: {
         flat: 22,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 50,
-        perLevel: 2.5
+        perLevel: 2.5,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 140
+        flat: 140,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 1.5
+        perLevel: 1.5,
       },
       attackSpeedRatio: {
-        flat: 0.667
+        flat: 0.667,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.55
+        flat: 1.55,
       },
       attackRange: {
-        flat: 175
-      }
+        flat: 175,
+      },
     },
-    positions: [
-      'Top'
-    ],
-    roles: [
-      'Mage',
-      'Marksman',
-      'Specialist'
-    ],
+    positions: ['Top'],
+    roles: ['Mage', 'Marksman', 'Specialist'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -5792,8 +5418,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 3,
       abilityReliance: 20,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 141,
@@ -5804,81 +5430,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 655,
-        perLevel: 103
+        perLevel: 103,
       },
       healthRegen: {
         flat: 8,
-        perLevel: 0.75
+        perLevel: 0.75,
       },
       mana: {
         flat: 410,
-        perLevel: 50
+        perLevel: 50,
       },
       manaRegen: {
         flat: 11.5,
-        perLevel: 0.95
+        perLevel: 0.95,
       },
       armor: {
         flat: 38,
-        perLevel: 4.5
+        perLevel: 4.5,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 68,
-        perLevel: 3.3
+        perLevel: 3.3,
       },
       movespeed: {
-        flat: 340
+        flat: 340,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 135
+        flat: 135,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.669,
-        perLevel: 2.7
+        perLevel: 2.7,
       },
       attackSpeedRatio: {
-        flat: 0.669
+        flat: 0.669,
       },
       attackCastTime: {
-        flat: 0.28
+        flat: 0.28,
       },
       attackTotalTime: {
-        flat: 1.495
+        flat: 1.495,
       },
       attackDelayOffset: {
-        flat: -0.1
+        flat: -0.1,
       },
       attackRange: {
-        flat: 175
-      }
+        flat: 175,
+      },
     },
-    positions: [
-      'Jungle'
-    ],
-    roles: [
-      'Assassin',
-      'Fighter',
-      'Skirmisher'
-    ],
+    positions: ['Jungle'],
+    roles: ['Assassin', 'Fighter', 'Skirmisher'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -5886,8 +5506,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 1,
       abilityReliance: 0,
-      difficulty: 3
-    }
+      difficulty: 3,
+    },
   },
   {
     id: 85,
@@ -5898,79 +5518,73 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 580,
-        perLevel: 98
+        perLevel: 98,
       },
       healthRegen: {
         flat: 5.5,
-        perLevel: 0.65
+        perLevel: 0.65,
       },
       mana: {
-        flat: 200
+        flat: 200,
       },
       manaRegen: {
-        flat: 50
+        flat: 50,
       },
       armor: {
         flat: 29,
-        perLevel: 4.95
+        perLevel: 4.95,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 48,
-        perLevel: 3.75
+        perLevel: 3.75,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 550
+        flat: 550,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 30
+        flat: 30,
       },
       gameplayRadius: {
-        flat: 55
+        flat: 55,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 3.4
+        perLevel: 3.4,
       },
       attackSpeedRatio: {
-        flat: 0.69
+        flat: 0.69,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.1
+        flat: -0.1,
       },
       attackRange: {
-        flat: 550
-      }
+        flat: 550,
+      },
     },
-    positions: [
-      'Top'
-    ],
-    roles: [
-      'Mage',
-      'Marksman',
-      'Specialist'
-    ],
+    positions: ['Top'],
+    roles: ['Mage', 'Marksman', 'Specialist'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -5978,8 +5592,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 65,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 121,
@@ -5990,79 +5604,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 643,
-        perLevel: 99
+        perLevel: 99,
       },
       healthRegen: {
         flat: 7.5,
-        perLevel: 0.75
+        perLevel: 0.75,
       },
       mana: {
         flat: 327,
-        perLevel: 40
+        perLevel: 40,
       },
       manaRegen: {
         flat: 7.59,
-        perLevel: 0.5
+        perLevel: 0.5,
       },
       armor: {
         flat: 32,
-        perLevel: 4.2
+        perLevel: 4.2,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 60,
-        perLevel: 3.1
+        perLevel: 3.1,
       },
       movespeed: {
-        flat: 350
+        flat: 350,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 130
+        flat: 130,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.668,
-        perLevel: 2.7
+        perLevel: 2.7,
       },
       attackSpeedRatio: {
-        flat: 0.668
+        flat: 0.668,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.099
+        flat: -0.099,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Jungle'
-    ],
-    roles: [
-      'Assassin'
-    ],
+    positions: ['Jungle'],
+    roles: ['Assassin'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -6070,8 +5680,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 55,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 203,
@@ -6082,79 +5692,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 595,
-        perLevel: 104
+        perLevel: 104,
       },
       healthRegen: {
         flat: 7,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 300,
-        perLevel: 35
+        perLevel: 35,
       },
       manaRegen: {
         flat: 7,
-        perLevel: 0.4
+        perLevel: 0.4,
       },
       armor: {
         flat: 29,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 65,
-        perLevel: 3.25
+        perLevel: 3.25,
       },
       movespeed: {
-        flat: 325
+        flat: 325,
       },
       acquisitionRadius: {
-        flat: 525
+        flat: 525,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 3.5
+        perLevel: 3.5,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.125
+        flat: -0.125,
       },
       attackRange: {
-        flat: 500
-      }
+        flat: 500,
+      },
     },
-    positions: [
-      'Jungle'
-    ],
-    roles: [
-      'Marksman'
-    ],
+    positions: ['Jungle'],
+    roles: ['Marksman'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -6162,8 +5768,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 2,
       abilityReliance: 20,
-      difficulty: 3
-    }
+      difficulty: 3,
+    },
   },
   {
     id: 240,
@@ -6174,73 +5780,67 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 410,
-        perLevel: 84
+        perLevel: 84,
       },
       healthRegen: {
         flat: 6,
-        perLevel: 0.75
+        perLevel: 0.75,
       },
       mana: {
-        flat: 100
+        flat: 100,
       },
       armor: {
         flat: 35,
-        perLevel: 5.2
+        perLevel: 5.2,
       },
       magicResistance: {
         flat: 28,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 65,
-        perLevel: 3.5
+        perLevel: 3.5,
       },
       movespeed: {
-        flat: 305
+        flat: 305,
       },
       acquisitionRadius: {
-        flat: 800
+        flat: 800,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 3.5
+        perLevel: 3.5,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.28
+        flat: 0.28,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackRange: {
-        flat: 250
-      }
+        flat: 250,
+      },
     },
-    positions: [
-      'Top'
-    ],
-    roles: [
-      'Fighter',
-      'Skirmisher',
-      'Tank'
-    ],
+    positions: ['Top'],
+    roles: ['Fighter', 'Skirmisher', 'Tank'],
     attributeRatings: {
       damage: 3,
       toughness: 2,
@@ -6248,8 +5848,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 30,
-      difficulty: 3
-    }
+      difficulty: 3,
+    },
   },
   {
     id: 96,
@@ -6260,80 +5860,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 635,
-        perLevel: 99
+        perLevel: 99,
       },
       healthRegen: {
         flat: 3.75,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 325,
-        perLevel: 40
+        perLevel: 40,
       },
       manaRegen: {
         flat: 8.75,
-        perLevel: 0.7
+        perLevel: 0.7,
       },
       armor: {
         flat: 24,
-        perLevel: 4.45
+        perLevel: 4.45,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 61,
-        perLevel: 3.1
+        perLevel: 3.1,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 900
+        flat: 900,
       },
       selectionRadius: {
-        flat: 130
+        flat: 130,
       },
       pathingRadius: {
-        flat: 30
+        flat: 30,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.665,
-        perLevel: 2.65
+        perLevel: 2.65,
       },
       attackSpeedRatio: {
-        flat: 0.665
+        flat: 0.665,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.134
+        flat: -0.134,
       },
       attackRange: {
-        flat: 500
-      }
+        flat: 500,
+      },
     },
-    positions: [
-      'Bottom'
-    ],
-    roles: [
-      'Mage',
-      'Marksman'
-    ],
+    positions: ['Bottom'],
+    roles: ['Mage', 'Marksman'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -6341,8 +5936,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 10,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 7,
@@ -6353,81 +5948,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 598,
-        perLevel: 111
+        perLevel: 111,
       },
       healthRegen: {
         flat: 7.5,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 400,
-        perLevel: 25
+        perLevel: 25,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 22,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 55,
-        perLevel: 2.2
+        perLevel: 2.2,
       },
       movespeed: {
-        flat: 340
+        flat: 340,
       },
       acquisitionRadius: {
-        flat: 525
+        flat: 525,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.658,
-        perLevel: 2.35
+        perLevel: 2.35,
       },
       attackSpeedRatio: {
-        flat: 0.4
+        flat: 0.4,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.133
+        flat: -0.133,
       },
       attackRange: {
-        flat: 525
-      }
+        flat: 525,
+      },
     },
-    positions: [
-      'Middle'
-    ],
-    roles: [
-      'Assassin',
-      'Burst',
-      'Mage'
-    ],
+    positions: ['Middle'],
+    roles: ['Assassin', 'Burst', 'Mage'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -6435,8 +6024,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 1,
       abilityReliance: 100,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 64,
@@ -6447,79 +6036,73 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 645,
-        perLevel: 108
+        perLevel: 108,
       },
       healthRegen: {
         flat: 7.5,
-        perLevel: 0.7
+        perLevel: 0.7,
       },
       mana: {
-        flat: 200
+        flat: 200,
       },
       manaRegen: {
-        flat: 50
+        flat: 50,
       },
       armor: {
         flat: 36,
-        perLevel: 4.9
+        perLevel: 4.9,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 66,
-        perLevel: 3.7
+        perLevel: 3.7,
       },
       movespeed: {
-        flat: 345
+        flat: 345,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 102.778
+        flat: 102.778,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.651,
-        perLevel: 3
+        perLevel: 3,
       },
       attackSpeedRatio: {
-        flat: 0.651
+        flat: 0.651,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.105
+        flat: -0.105,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Jungle'
-    ],
-    roles: [
-      'Assassin',
-      'Diver',
-      'Fighter'
-    ],
+    positions: ['Jungle'],
+    roles: ['Assassin', 'Diver', 'Fighter'],
     attributeRatings: {
       damage: 3,
       toughness: 2,
@@ -6527,8 +6110,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 1,
       abilityReliance: 55,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 89,
@@ -6539,81 +6122,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 646,
-        perLevel: 101
+        perLevel: 101,
       },
       healthRegen: {
         flat: 8.5,
-        perLevel: 0.85
+        perLevel: 0.85,
       },
       mana: {
         flat: 302,
-        perLevel: 40
+        perLevel: 40,
       },
       manaRegen: {
         flat: 6,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 43,
-        perLevel: 4.8
+        perLevel: 4.8,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 60,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 2.9
+        perLevel: 2.9,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.071
+        flat: -0.071,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Support'
-    ],
-    roles: [
-      'Support',
-      'Tank',
-      'Vanguard'
-    ],
+    positions: ['Support'],
+    roles: ['Support', 'Tank', 'Vanguard'],
     attributeRatings: {
       damage: 1,
       toughness: 3,
@@ -6621,8 +6198,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 90,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 876,
@@ -6633,81 +6210,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 605,
-        perLevel: 105
+        perLevel: 105,
       },
       healthRegen: {
         flat: 2.5,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 410,
-        perLevel: 50
+        perLevel: 50,
       },
       manaRegen: {
         flat: 11.5,
-        perLevel: 0.95
+        perLevel: 0.95,
       },
       armor: {
         flat: 22,
-        perLevel: 4.5
+        perLevel: 4.5,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 1.55
+        perLevel: 1.55,
       },
       attackDamage: {
         flat: 61,
-        perLevel: 3.1
+        perLevel: 3.1,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 135
+        flat: 135,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 2.7
+        perLevel: 2.7,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.153
+        flat: -0.153,
       },
       attackRange: {
-        flat: 325
-      }
+        flat: 325,
+      },
     },
-    positions: [
-      'Jungle'
-    ],
-    roles: [
-      'Fighter',
-      'Mage',
-      'Skirmisher'
-    ],
+    positions: ['Jungle'],
+    roles: ['Fighter', 'Mage', 'Skirmisher'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -6715,8 +6286,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 2,
       abilityReliance: 80,
-      difficulty: 3
-    }
+      difficulty: 3,
+    },
   },
   {
     id: 127,
@@ -6727,80 +6298,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 620,
-        perLevel: 110
+        perLevel: 110,
       },
       healthRegen: {
         flat: 7,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 475,
-        perLevel: 30
+        perLevel: 30,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 0.4
+        perLevel: 0.4,
       },
       armor: {
         flat: 22,
-        perLevel: 4.9
+        perLevel: 4.9,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 55,
-        perLevel: 2.7
+        perLevel: 2.7,
       },
       movespeed: {
-        flat: 325
+        flat: 325,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.656,
-        perLevel: 1.5
+        perLevel: 1.5,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.112
+        flat: -0.112,
       },
       attackRange: {
-        flat: 550
-      }
+        flat: 550,
+      },
     },
-    positions: [
-      'Middle'
-    ],
-    roles: [
-      'Burst',
-      'Mage'
-    ],
+    positions: ['Middle'],
+    roles: ['Burst', 'Mage'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -6808,8 +6374,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 100,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 236,
@@ -6820,80 +6386,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 641,
-        perLevel: 100
+        perLevel: 100,
       },
       healthRegen: {
         flat: 3.75,
-        perLevel: 0.65
+        perLevel: 0.65,
       },
       mana: {
         flat: 320,
-        perLevel: 43
+        perLevel: 43,
       },
       manaRegen: {
         flat: 7,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 28,
-        perLevel: 4.2
+        perLevel: 4.2,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 60,
-        perLevel: 2.9
+        perLevel: 2.9,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 800
+        flat: 800,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 40.68
+        flat: 40.68,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.638,
-        perLevel: 3.3
+        perLevel: 3.3,
       },
       attackSpeedRatio: {
-        flat: 0.638
+        flat: 0.638,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.15
+        flat: -0.15,
       },
       attackRange: {
-        flat: 500
-      }
+        flat: 500,
+      },
     },
-    positions: [
-      'Bottom'
-    ],
-    roles: [
-      'Assassin',
-      'Marksman'
-    ],
+    positions: ['Bottom'],
+    roles: ['Assassin', 'Marksman'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -6901,8 +6462,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 1,
       abilityReliance: 30,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 117,
@@ -6913,81 +6474,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 565,
-        perLevel: 92
+        perLevel: 92,
       },
       healthRegen: {
         flat: 6,
-        perLevel: 0.6
+        perLevel: 0.6,
       },
       mana: {
         flat: 350,
-        perLevel: 55
+        perLevel: 55,
       },
       manaRegen: {
         flat: 11,
-        perLevel: 0.6
+        perLevel: 0.6,
       },
       armor: {
         flat: 26,
-        perLevel: 4.6
+        perLevel: 4.6,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 47,
-        perLevel: 2.6
+        perLevel: 2.6,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 625
+        flat: 625,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 30
+        flat: 30,
       },
       gameplayRadius: {
-        flat: 55
+        flat: 55,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 2.25
+        perLevel: 2.25,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.112
+        flat: -0.112,
       },
       attackRange: {
-        flat: 550
-      }
+        flat: 550,
+      },
     },
-    positions: [
-      'Support'
-    ],
-    roles: [
-      'Enchanter',
-      'Mage',
-      'Support'
-    ],
+    positions: ['Support'],
+    roles: ['Enchanter', 'Mage', 'Support'],
     attributeRatings: {
       damage: 2,
       toughness: 1,
@@ -6995,8 +6550,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 3,
       abilityReliance: 80,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 99,
@@ -7007,83 +6562,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 580,
-        perLevel: 99
+        perLevel: 99,
       },
       healthRegen: {
         flat: 5.5,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 480,
-        perLevel: 23.5
+        perLevel: 23.5,
       },
       manaRegen: {
         flat: 7,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 21,
-        perLevel: 5.2
+        perLevel: 5.2,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 54,
-        perLevel: 3.3
+        perLevel: 3.3,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 625
+        flat: 625,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.669,
-        perLevel: 3
+        perLevel: 3,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.144
+        flat: -0.144,
       },
       attackRange: {
-        flat: 550
-      }
+        flat: 550,
+      },
     },
-    positions: [
-      'Middle',
-      'Support'
-    ],
-    roles: [
-      'Artillery',
-      'Burst',
-      'Mage',
-      'Support'
-    ],
+    positions: ['Middle', 'Support'],
+    roles: ['Artillery', 'Burst', 'Mage', 'Support'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -7091,8 +6638,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 2,
       abilityReliance: 90,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 54,
@@ -7103,83 +6650,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 665,
-        perLevel: 104
+        perLevel: 104,
       },
       healthRegen: {
         flat: 7,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 280,
-        perLevel: 60
+        perLevel: 60,
       },
       manaRegen: {
         flat: 7.3,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       armor: {
         flat: 37,
-        perLevel: 4.95
+        perLevel: 4.95,
       },
       magicResistance: {
         flat: 28,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 62,
-        perLevel: 4
+        perLevel: 4,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 125
+        flat: 125,
       },
       pathingRadius: {
-        flat: 50
+        flat: 50,
       },
       gameplayRadius: {
-        flat: 80
+        flat: 80,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.736,
-        perLevel: 3.4
+        perLevel: 3.4,
       },
       attackSpeedRatio: {
-        flat: 0.638
+        flat: 0.638,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.05
+        flat: -0.05,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Middle',
-      'Support',
-      'Top'
-    ],
-    roles: [
-      'Mage',
-      'Tank',
-      'Vanguard'
-    ],
+    positions: ['Middle', 'Support', 'Top'],
+    roles: ['Mage', 'Tank', 'Vanguard'],
     attributeRatings: {
       damage: 1,
       toughness: 3,
@@ -7187,8 +6726,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 75,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 90,
@@ -7199,81 +6738,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 580,
-        perLevel: 101
+        perLevel: 101,
       },
       healthRegen: {
         flat: 6,
-        perLevel: 0.6
+        perLevel: 0.6,
       },
       mana: {
         flat: 375,
-        perLevel: 28
+        perLevel: 28,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 18,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 55,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 1.5
+        perLevel: 1.5,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.11
+        flat: -0.11,
       },
       attackRange: {
-        flat: 500
-      }
+        flat: 500,
+      },
     },
-    positions: [
-      'Middle'
-    ],
-    roles: [
-      'Assassin',
-      'Battlemage',
-      'Mage'
-    ],
+    positions: ['Middle'],
+    roles: ['Assassin', 'Battlemage', 'Mage'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -7281,8 +6814,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 2,
       abilityReliance: 100,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 57,
@@ -7293,79 +6826,72 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 665,
-        perLevel: 109
+        perLevel: 109,
       },
       healthRegen: {
         flat: 5,
-        perLevel: 0.75
+        perLevel: 0.75,
       },
       mana: {
         flat: 375,
-        perLevel: 43
+        perLevel: 43,
       },
       manaRegen: {
         flat: 6,
-        perLevel: 0.6
+        perLevel: 0.6,
       },
       armor: {
         flat: 35,
-        perLevel: 5.2
+        perLevel: 5.2,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 64,
-        perLevel: 3.3
+        perLevel: 3.3,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 125
+        flat: 125,
       },
       pathingRadius: {
-        flat: 50
+        flat: 50,
       },
       gameplayRadius: {
-        flat: 80
+        flat: 80,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.8,
-        perLevel: 2.125
+        perLevel: 2.125,
       },
       attackSpeedRatio: {
-        flat: 0.695
+        flat: 0.695,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Jungle',
-      'Support'
-    ],
-    roles: [
-      'Support',
-      'Tank',
-      'Vanguard'
-    ],
+    positions: ['Jungle', 'Support'],
+    roles: ['Support', 'Tank', 'Vanguard'],
     attributeRatings: {
       damage: 1,
       toughness: 3,
@@ -7373,8 +6899,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 2,
       abilityReliance: 75,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 11,
@@ -7385,81 +6911,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 669,
-        perLevel: 105
+        perLevel: 105,
       },
       healthRegen: {
         flat: 7.5,
-        perLevel: 0.65
+        perLevel: 0.65,
       },
       mana: {
         flat: 251,
-        perLevel: 42
+        perLevel: 42,
       },
       manaRegen: {
         flat: 7.25,
-        perLevel: 0.45
+        perLevel: 0.45,
       },
       armor: {
         flat: 33,
-        perLevel: 4.2
+        perLevel: 4.2,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 65,
-        perLevel: 2.8
+        perLevel: 2.8,
       },
       movespeed: {
-        flat: 355
+        flat: 355,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 125
+        flat: 125,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.679,
-        perLevel: 2.5
+        perLevel: 2.5,
       },
       attackSpeedRatio: {
-        flat: 0.679
+        flat: 0.679,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.056
+        flat: -0.056,
       },
       attackRange: {
-        flat: 175
-      }
+        flat: 175,
+      },
     },
-    positions: [
-      'Jungle'
-    ],
-    roles: [
-      'Assassin',
-      'Fighter',
-      'Skirmisher'
-    ],
+    positions: ['Jungle'],
+    roles: ['Assassin', 'Fighter', 'Skirmisher'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -7467,8 +6987,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 10,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 800,
@@ -7479,82 +6999,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 630,
-        perLevel: 93
+        perLevel: 93,
       },
       healthRegen: {
         flat: 6,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 480,
-        perLevel: 28
+        perLevel: 28,
       },
       manaRegen: {
         flat: 9,
-        perLevel: 0.9
+        perLevel: 0.9,
       },
       armor: {
         flat: 21,
-        perLevel: 5.2
+        perLevel: 5.2,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 54,
-        perLevel: 3.3
+        perLevel: 3.3,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 625
+        flat: 625,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 2.5
+        perLevel: 2.5,
       },
       attackSpeedRatio: {
-        flat: 0.4
+        flat: 0.4,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.144
+        flat: -0.144,
       },
       attackRange: {
-        flat: 550
-      }
+        flat: 550,
+      },
     },
-    positions: [
-      'Middle',
-      'Support'
-    ],
-    roles: [
-      'Artillery',
-      'Mage',
-      'Support'
-    ],
+    positions: ['Middle', 'Support'],
+    roles: ['Artillery', 'Mage', 'Support'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -7562,8 +7075,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 100,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 902,
@@ -7574,78 +7087,72 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 560,
-        perLevel: 88
+        perLevel: 88,
       },
       healthRegen: {
         flat: 5,
-        perLevel: 0.5
+        perLevel: 0.5,
       },
       mana: {
         flat: 365,
-        perLevel: 43
+        perLevel: 43,
       },
       manaRegen: {
         flat: 11.5,
-        perLevel: 0.4
+        perLevel: 0.4,
       },
       armor: {
         flat: 26,
-        perLevel: 4.6
+        perLevel: 4.6,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 48,
-        perLevel: 3.2
+        perLevel: 3.2,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 550
+        flat: 550,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 30
+        flat: 30,
       },
       gameplayRadius: {
-        flat: 55
+        flat: 55,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 3
+        perLevel: 3,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.27
+        flat: 0.27,
       },
       attackTotalTime: {
-        flat: 1.575
+        flat: 1.575,
       },
       attackRange: {
-        flat: 525
-      }
+        flat: 525,
+      },
     },
-    positions: [
-      'Support'
-    ],
-    roles: [
-      'Enchanter',
-      'Mage',
-      'Support'
-    ],
+    positions: ['Support'],
+    roles: ['Enchanter', 'Mage', 'Support'],
     attributeRatings: {
       damage: 1,
       toughness: 1,
@@ -7653,8 +7160,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 3,
       abilityReliance: 80,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 21,
@@ -7665,80 +7172,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 640,
-        perLevel: 103
+        perLevel: 103,
       },
       healthRegen: {
         flat: 3.75,
-        perLevel: 0.65
+        perLevel: 0.65,
       },
       mana: {
         flat: 300,
-        perLevel: 40
+        perLevel: 40,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 25,
-        perLevel: 4
+        perLevel: 4,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 53,
-        perLevel: 2.4
+        perLevel: 2.4,
       },
       movespeed: {
-        flat: 325
+        flat: 325,
       },
       acquisitionRadius: {
-        flat: 800
+        flat: 800,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.656,
-        perLevel: 3
+        perLevel: 3,
       },
       attackSpeedRatio: {
-        flat: 0.656
+        flat: 0.656,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.152
+        flat: -0.152,
       },
       attackRange: {
-        flat: 550
-      }
+        flat: 550,
+      },
     },
-    positions: [
-      'Bottom'
-    ],
-    roles: [
-      'Mage',
-      'Marksman'
-    ],
+    positions: ['Bottom'],
+    roles: ['Mage', 'Marksman'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -7746,8 +7248,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 30,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 82,
@@ -7758,73 +7260,67 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 645,
-        perLevel: 104
+        perLevel: 104,
       },
       healthRegen: {
         flat: 5,
-        perLevel: 0.75
+        perLevel: 0.75,
       },
       armor: {
         flat: 37,
-        perLevel: 4.2
+        perLevel: 4.2,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 61,
-        perLevel: 4
+        perLevel: 4,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 125
+        flat: 125,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 80
+        flat: 80,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 1
+        perLevel: 1,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.5
+        flat: 0.5,
       },
       attackTotalTime: {
-        flat: 2.366
+        flat: 2.366,
       },
       attackDelayOffset: {
-        flat: -0.1
+        flat: -0.1,
       },
       attackRange: {
-        flat: 175
-      }
+        flat: 175,
+      },
     },
-    positions: [
-      'Top'
-    ],
-    roles: [
-      'Fighter',
-      'Juggernaut',
-      'Mage'
-    ],
+    positions: ['Top'],
+    roles: ['Fighter', 'Juggernaut', 'Mage'],
     attributeRatings: {
       damage: 3,
       toughness: 2,
@@ -7832,8 +7328,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 2,
       abilityReliance: 80,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 25,
@@ -7844,81 +7340,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 630,
-        perLevel: 104
+        perLevel: 104,
       },
       healthRegen: {
         flat: 5.5,
-        perLevel: 0.4
+        perLevel: 0.4,
       },
       mana: {
         flat: 340,
-        perLevel: 60
+        perLevel: 60,
       },
       manaRegen: {
         flat: 11,
-        perLevel: 0.4
+        perLevel: 0.4,
       },
       armor: {
         flat: 25,
-        perLevel: 5
+        perLevel: 5,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 56,
-        perLevel: 3.5
+        perLevel: 3.5,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 1.53
+        perLevel: 1.53,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.16
+        flat: -0.16,
       },
       attackRange: {
-        flat: 450
-      }
+        flat: 450,
+      },
     },
-    positions: [
-      'Support'
-    ],
-    roles: [
-      'Catcher',
-      'Mage',
-      'Support'
-    ],
+    positions: ['Support'],
+    roles: ['Catcher', 'Mage', 'Support'],
     attributeRatings: {
       damage: 2,
       toughness: 1,
@@ -7926,8 +7416,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 2,
       abilityReliance: 100,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 950,
@@ -7938,80 +7428,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 610,
-        perLevel: 105
+        perLevel: 105,
       },
       healthRegen: {
         flat: 7.5,
-        perLevel: 0.7
+        perLevel: 0.7,
       },
       mana: {
         flat: 400,
-        perLevel: 55
+        perLevel: 55,
       },
       manaRegen: {
         flat: 7.5,
-        perLevel: 1
+        perLevel: 1,
       },
       armor: {
         flat: 28,
-        perLevel: 4.2
+        perLevel: 4.2,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 55,
-        perLevel: 2
+        perLevel: 2,
       },
       movespeed: {
-        flat: 340
+        flat: 340,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.663,
-        perLevel: 2.1
+        perLevel: 2.1,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.125
+        flat: -0.125,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Middle'
-    ],
-    roles: [
-      'Assassin',
-      'Fighter'
-    ],
+    positions: ['Middle'],
+    roles: ['Assassin', 'Fighter'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -8019,8 +7504,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 1,
       abilityReliance: 70,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 267,
@@ -8031,81 +7516,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 560,
-        perLevel: 88
+        perLevel: 88,
       },
       healthRegen: {
         flat: 5.5,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 365,
-        perLevel: 43
+        perLevel: 43,
       },
       manaRegen: {
         flat: 11.5,
-        perLevel: 0.4
+        perLevel: 0.4,
       },
       armor: {
         flat: 29,
-        perLevel: 5.2
+        perLevel: 5.2,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 54,
-        perLevel: 3.1
+        perLevel: 3.1,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 125
+        flat: 125,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.644,
-        perLevel: 2.61
+        perLevel: 2.61,
       },
       attackSpeedRatio: {
-        flat: 0.644
+        flat: 0.644,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.12
+        flat: -0.12,
       },
       attackRange: {
-        flat: 550
-      }
+        flat: 550,
+      },
     },
-    positions: [
-      'Support'
-    ],
-    roles: [
-      'Enchanter',
-      'Mage',
-      'Support'
-    ],
+    positions: ['Support'],
+    roles: ['Enchanter', 'Mage', 'Support'],
     attributeRatings: {
       damage: 1,
       toughness: 1,
@@ -8113,8 +7592,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 2,
       abilityReliance: 90,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 75,
@@ -8125,81 +7604,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 631,
-        perLevel: 104
+        perLevel: 104,
       },
       healthRegen: {
         flat: 9,
-        perLevel: 0.9
+        perLevel: 0.9,
       },
       mana: {
         flat: 326,
-        perLevel: 62
+        perLevel: 62,
       },
       manaRegen: {
         flat: 7.45,
-        perLevel: 0.5
+        perLevel: 0.5,
       },
       armor: {
         flat: 34,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 67,
-        perLevel: 4
+        perLevel: 4,
       },
       movespeed: {
-        flat: 350
+        flat: 350,
       },
       acquisitionRadius: {
-        flat: 350
+        flat: 350,
       },
       selectionRadius: {
-        flat: 135
+        flat: 135,
       },
       pathingRadius: {
-        flat: 50
+        flat: 50,
       },
       gameplayRadius: {
-        flat: 80
+        flat: 80,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.638,
-        perLevel: 3.48
+        perLevel: 3.48,
       },
       attackSpeedRatio: {
-        flat: 0.638
+        flat: 0.638,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.099
+        flat: -0.099,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Top'
-    ],
-    roles: [
-      'Fighter',
-      'Juggernaut',
-      'Tank'
-    ],
+    positions: ['Top'],
+    roles: ['Fighter', 'Juggernaut', 'Tank'],
     attributeRatings: {
       damage: 2,
       toughness: 3,
@@ -8207,8 +7680,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 20,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 111,
@@ -8219,81 +7692,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 646,
-        perLevel: 100
+        perLevel: 100,
       },
       healthRegen: {
         flat: 8.5,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 400,
-        perLevel: 47
+        perLevel: 47,
       },
       manaRegen: {
         flat: 8.65,
-        perLevel: 0.5
+        perLevel: 0.5,
       },
       armor: {
         flat: 39,
-        perLevel: 4.95
+        perLevel: 4.95,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 61,
-        perLevel: 3.3
+        perLevel: 3.3,
       },
       movespeed: {
-        flat: 325
+        flat: 325,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 125
+        flat: 125,
       },
       pathingRadius: {
-        flat: 50
+        flat: 50,
       },
       gameplayRadius: {
-        flat: 80
+        flat: 80,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.706,
-        perLevel: 1
+        perLevel: 1,
       },
       attackSpeedRatio: {
-        flat: 0.612
+        flat: 0.612,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: 0.006
+        flat: 0.006,
       },
       attackRange: {
-        flat: 175
-      }
+        flat: 175,
+      },
     },
-    positions: [
-      'Support'
-    ],
-    roles: [
-      'Support',
-      'Tank',
-      'Vanguard'
-    ],
+    positions: ['Support'],
+    roles: ['Support', 'Tank', 'Vanguard'],
     attributeRatings: {
       damage: 1,
       toughness: 3,
@@ -8301,8 +7768,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 80,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 518,
@@ -8313,80 +7780,72 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 610,
-        perLevel: 104
+        perLevel: 104,
       },
       healthRegen: {
         flat: 7.5,
-        perLevel: 0.75
+        perLevel: 0.75,
       },
       mana: {
         flat: 450,
-        perLevel: 30
+        perLevel: 30,
       },
       manaRegen: {
         flat: 7,
-        perLevel: 0.7
+        perLevel: 0.7,
       },
       armor: {
         flat: 21,
-        perLevel: 5.2
+        perLevel: 5.2,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 48,
-        perLevel: 2.5
+        perLevel: 2.5,
       },
       movespeed: {
-        flat: 340
+        flat: 340,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 3.5
+        perLevel: 3.5,
       },
       attackSpeedRatio: {
-        flat: 0.67
+        flat: 0.67,
       },
       attackCastTime: {
-        flat: 0.31
+        flat: 0.31,
       },
       attackTotalTime: {
-        flat: 1.55
+        flat: 1.55,
       },
       attackRange: {
-        flat: 550
-      }
+        flat: 550,
+      },
     },
-    positions: [
-      'Middle',
-      'Support'
-    ],
-    roles: [
-      'Burst',
-      'Catcher',
-      'Mage',
-      'Support'
-    ],
+    positions: ['Middle', 'Support'],
+    roles: ['Burst', 'Catcher', 'Mage', 'Support'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -8394,8 +7853,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 80,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 76,
@@ -8406,81 +7865,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 610,
-        perLevel: 109
+        perLevel: 109,
       },
       healthRegen: {
         flat: 6,
-        perLevel: 0.6
+        perLevel: 0.6,
       },
       mana: {
         flat: 295,
-        perLevel: 45
+        perLevel: 45,
       },
       manaRegen: {
         flat: 6,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 32,
-        perLevel: 5
+        perLevel: 5,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.45
+        perLevel: 1.45,
       },
       attackDamage: {
         flat: 58,
-        perLevel: 3.5
+        perLevel: 3.5,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 800
+        flat: 800,
       },
       selectionRadius: {
-        flat: 110
+        flat: 110,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.638,
-        perLevel: 3.22
+        perLevel: 3.22,
       },
       attackSpeedRatio: {
-        flat: 0.638
+        flat: 0.638,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.15
+        flat: -0.15,
       },
       attackRange: {
-        flat: 525
-      }
+        flat: 525,
+      },
     },
-    positions: [
-      'Jungle'
-    ],
-    roles: [
-      'Assassin',
-      'Mage',
-      'Specialist'
-    ],
+    positions: ['Jungle'],
+    roles: ['Assassin', 'Mage', 'Specialist'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -8488,8 +7941,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 2,
       abilityReliance: 75,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 895,
@@ -8500,81 +7953,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 570,
-        perLevel: 101
+        perLevel: 101,
       },
       healthRegen: {
         flat: 6,
-        perLevel: 0.9
+        perLevel: 0.9,
       },
       mana: {
         flat: 350,
-        perLevel: 35
+        perLevel: 35,
       },
       manaRegen: {
         flat: 8.2,
-        perLevel: 0.7
+        perLevel: 0.7,
       },
       armor: {
         flat: 27,
-        perLevel: 4.5
+        perLevel: 4.5,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 60,
-        perLevel: 2
+        perLevel: 2,
       },
       movespeed: {
-        flat: 340
+        flat: 340,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 32
+        flat: 32,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.697,
-        perLevel: 2.25
+        perLevel: 2.25,
       },
       attackSpeedRatio: {
-        flat: 0.67
+        flat: 0.67,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.08
+        flat: -0.08,
       },
       attackRange: {
-        flat: 225
-      }
+        flat: 225,
+      },
     },
-    positions: [
-      'Bottom'
-    ],
-    roles: [
-      'Assassin',
-      'Fighter',
-      'Skirmisher'
-    ],
+    positions: ['Bottom'],
+    roles: ['Assassin', 'Fighter', 'Skirmisher'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -8582,8 +8029,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 2,
       abilityReliance: 25,
-      difficulty: 3
-    }
+      difficulty: 3,
+    },
   },
   {
     id: 56,
@@ -8594,80 +8041,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 655,
-        perLevel: 109
+        perLevel: 109,
       },
       healthRegen: {
         flat: 7,
-        perLevel: 0.75
+        perLevel: 0.75,
       },
       mana: {
         flat: 275,
-        perLevel: 35
+        perLevel: 35,
       },
       manaRegen: {
         flat: 7,
-        perLevel: 0.45
+        perLevel: 0.45,
       },
       armor: {
         flat: 38,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 1.55
+        perLevel: 1.55,
       },
       attackDamage: {
         flat: 62,
-        perLevel: 2.6
+        perLevel: 2.6,
       },
       movespeed: {
-        flat: 345
+        flat: 345,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.721,
-        perLevel: 2.7
+        perLevel: 2.7,
       },
       attackSpeedRatio: {
-        flat: 0.721
+        flat: 0.721,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.099
+        flat: -0.099,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Jungle'
-    ],
-    roles: [
-      'Assassin',
-      'Fighter'
-    ],
+    positions: ['Jungle'],
+    roles: ['Assassin', 'Fighter'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -8675,8 +8117,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 2,
       abilityReliance: 30,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 20,
@@ -8687,81 +8129,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 610,
-        perLevel: 90
+        perLevel: 90,
       },
       healthRegen: {
         flat: 5,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       mana: {
         flat: 280,
-        perLevel: 42
+        perLevel: 42,
       },
       manaRegen: {
         flat: 7,
-        perLevel: 0.5
+        perLevel: 0.5,
       },
       armor: {
         flat: 29,
-        perLevel: 4.2
+        perLevel: 4.2,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 61,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 345
+        flat: 345,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 140
+        flat: 140,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 2.25
+        perLevel: 2.25,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.106
+        flat: -0.106,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Jungle'
-    ],
-    roles: [
-      'Mage',
-      'Tank',
-      'Vanguard'
-    ],
+    positions: ['Jungle'],
+    roles: ['Mage', 'Tank', 'Vanguard'],
     attributeRatings: {
       damage: 1,
       toughness: 3,
@@ -8769,8 +8205,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 2,
       abilityReliance: 80,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 2,
@@ -8781,81 +8217,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 645,
-        perLevel: 119
+        perLevel: 119,
       },
       healthRegen: {
         flat: 6.5,
-        perLevel: 0.6
+        perLevel: 0.6,
       },
       mana: {
         flat: 316,
-        perLevel: 50
+        perLevel: 50,
       },
       manaRegen: {
         flat: 7.5,
-        perLevel: 0.6
+        perLevel: 0.6,
       },
       armor: {
         flat: 35,
-        perLevel: 4.2
+        perLevel: 4.2,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 68,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       movespeed: {
-        flat: 350
+        flat: 350,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 111.111
+        flat: 111.111,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.694,
-        perLevel: 2.7
+        perLevel: 2.7,
       },
       attackSpeedRatio: {
-        flat: 0.694
+        flat: 0.694,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.066
+        flat: -0.066,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Top'
-    ],
-    roles: [
-      'Diver',
-      'Fighter',
-      'Tank'
-    ],
+    positions: ['Top'],
+    roles: ['Diver', 'Fighter', 'Tank'],
     attributeRatings: {
       damage: 2,
       toughness: 2,
@@ -8863,8 +8293,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 30,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 61,
@@ -8875,81 +8305,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 585,
-        perLevel: 110
+        perLevel: 110,
       },
       healthRegen: {
         flat: 7,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 418,
-        perLevel: 25
+        perLevel: 25,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 20,
-        perLevel: 4.2
+        perLevel: 4.2,
       },
       magicResistance: {
         flat: 26,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 44,
-        perLevel: 2.6
+        perLevel: 2.6,
       },
       movespeed: {
-        flat: 325
+        flat: 325,
       },
       acquisitionRadius: {
-        flat: 525
+        flat: 525,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.658,
-        perLevel: 3.5
+        perLevel: 3.5,
       },
       attackSpeedRatio: {
-        flat: 0.658
+        flat: 0.658,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.125
+        flat: -0.125,
       },
       attackRange: {
-        flat: 525
-      }
+        flat: 525,
+      },
     },
-    positions: [
-      'Middle'
-    ],
-    roles: [
-      'Burst',
-      'Mage',
-      'Support'
-    ],
+    positions: ['Middle'],
+    roles: ['Burst', 'Mage', 'Support'],
     attributeRatings: {
       damage: 2,
       toughness: 1,
@@ -8957,8 +8381,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 2,
       abilityReliance: 90,
-      difficulty: 3
-    }
+      difficulty: 3,
+    },
   },
   {
     id: 516,
@@ -8969,78 +8393,72 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 660,
-        perLevel: 109
+        perLevel: 109,
       },
       healthRegen: {
         flat: 9,
-        perLevel: 0.9
+        perLevel: 0.9,
       },
       mana: {
         flat: 341,
-        perLevel: 65
+        perLevel: 65,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 0.6
+        perLevel: 0.6,
       },
       armor: {
         flat: 33,
-        perLevel: 5.2
+        perLevel: 5.2,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 69,
-        perLevel: 3.5
+        perLevel: 3.5,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 125
+        flat: 125,
       },
       pathingRadius: {
-        flat: 25.767
+        flat: 25.767,
       },
       gameplayRadius: {
-        flat: 80
+        flat: 80,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 2
+        perLevel: 2,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.35
+        flat: 0.35,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackRange: {
-        flat: 175
-      }
+        flat: 175,
+      },
     },
-    positions: [
-      'Top'
-    ],
-    roles: [
-      'Fighter',
-      'Tank',
-      'Vanguard'
-    ],
+    positions: ['Top'],
+    roles: ['Fighter', 'Tank', 'Vanguard'],
     attributeRatings: {
       damage: 1,
       toughness: 3,
@@ -9048,8 +8466,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 2,
       abilityReliance: 60,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 80,
@@ -9060,84 +8478,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 650,
-        perLevel: 109
+        perLevel: 109,
       },
       healthRegen: {
         flat: 6,
-        perLevel: 0.65
+        perLevel: 0.65,
       },
       mana: {
         flat: 317,
-        perLevel: 31
+        perLevel: 31,
       },
       manaRegen: {
         flat: 7.35,
-        perLevel: 0.45
+        perLevel: 0.45,
       },
       armor: {
         flat: 40,
-        perLevel: 4.95
+        perLevel: 4.95,
       },
       magicResistance: {
         flat: 28,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 64,
-        perLevel: 3.3
+        perLevel: 3.3,
       },
       movespeed: {
-        flat: 345
+        flat: 345,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 125
+        flat: 125,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.658,
-        perLevel: 2.95
+        perLevel: 2.95,
       },
       attackSpeedRatio: {
-        flat: 0.658
+        flat: 0.658,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.11
+        flat: -0.11,
       },
       attackRange: {
-        flat: 175
-      }
+        flat: 175,
+      },
     },
-    positions: [
-      'Jungle',
-      'Middle',
-      'Support',
-      'Top'
-    ],
-    roles: [
-      'Assassin',
-      'Diver',
-      'Fighter'
-    ],
+    positions: ['Jungle', 'Middle', 'Support', 'Top'],
+    roles: ['Assassin', 'Diver', 'Fighter'],
     attributeRatings: {
       damage: 3,
       toughness: 2,
@@ -9145,8 +8554,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 75,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 78,
@@ -9157,79 +8566,72 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 610,
-        perLevel: 110
+        perLevel: 110,
       },
       healthRegen: {
         flat: 8,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       mana: {
         flat: 280,
-        perLevel: 40
+        perLevel: 40,
       },
       manaRegen: {
         flat: 7,
-        perLevel: 0.7
+        perLevel: 0.7,
       },
       armor: {
         flat: 35,
-        perLevel: 5
+        perLevel: 5,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 60,
-        perLevel: 4
+        perLevel: 4,
       },
       movespeed: {
-        flat: 345
+        flat: 345,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 55
+        flat: 55,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.658,
-        perLevel: 2.5
+        perLevel: 2.5,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.375
+        flat: 0.375,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Jungle',
-      'Top'
-    ],
-    roles: [
-      'Fighter',
-      'Tank',
-      'Warden'
-    ],
+    positions: ['Jungle', 'Top'],
+    roles: ['Fighter', 'Tank', 'Warden'],
     attributeRatings: {
       damage: 2,
       toughness: 3,
@@ -9237,8 +8639,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 75,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 555,
@@ -9249,78 +8651,72 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 670,
-        perLevel: 110
+        perLevel: 110,
       },
       healthRegen: {
         flat: 7,
-        perLevel: 0.5
+        perLevel: 0.5,
       },
       mana: {
         flat: 415,
-        perLevel: 50
+        perLevel: 50,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 1
+        perLevel: 1,
       },
       armor: {
         flat: 43,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 62,
-        perLevel: 2
+        perLevel: 2,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.667,
-        perLevel: 2.5
+        perLevel: 2.5,
       },
       attackSpeedRatio: {
-        flat: 0.667
+        flat: 0.667,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.5
+        flat: 1.5,
       },
       attackRange: {
-        flat: 150
-      }
+        flat: 150,
+      },
     },
-    positions: [
-      'Support'
-    ],
-    roles: [
-      'Assassin',
-      'Catcher',
-      'Support'
-    ],
+    positions: ['Support'],
+    roles: ['Assassin', 'Catcher', 'Support'],
     attributeRatings: {
       damage: 2,
       toughness: 1,
@@ -9328,8 +8724,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 1,
       abilityReliance: 50,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 246,
@@ -9340,77 +8736,72 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 590,
-        perLevel: 124
+        perLevel: 124,
       },
       healthRegen: {
         flat: 8,
-        perLevel: 0.9
+        perLevel: 0.9,
       },
       mana: {
         flat: 375,
-        perLevel: 60
+        perLevel: 60,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 0.7
+        perLevel: 0.7,
       },
       armor: {
         flat: 31,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 66,
-        perLevel: 3.1
+        perLevel: 3.1,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 800
+        flat: 800,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.688,
-        perLevel: 2.1
+        perLevel: 2.1,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.23
+        flat: 0.23,
       },
       attackTotalTime: {
-        flat: 1.5
+        flat: 1.5,
       },
       attackRange: {
-        flat: 150
-      }
+        flat: 150,
+      },
     },
-    positions: [
-      'Middle'
-    ],
-    roles: [
-      'Assassin',
-      'Fighter'
-    ],
+    positions: ['Middle'],
+    roles: ['Assassin', 'Fighter'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -9418,8 +8809,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 70,
-      difficulty: 3
-    }
+      difficulty: 3,
+    },
   },
   {
     id: 133,
@@ -9430,81 +8821,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 565,
-        perLevel: 107
+        perLevel: 107,
       },
       healthRegen: {
         flat: 5.5,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 269,
-        perLevel: 35
+        perLevel: 35,
       },
       manaRegen: {
         flat: 7,
-        perLevel: 0.4
+        perLevel: 0.4,
       },
       armor: {
         flat: 28,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 59,
-        perLevel: 2.7
+        perLevel: 2.7,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 800
+        flat: 800,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.668,
-        perLevel: 3.1
+        perLevel: 3.1,
       },
       attackSpeedRatio: {
-        flat: 0.668
+        flat: 0.668,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.125
+        flat: -0.125,
       },
       attackRange: {
-        flat: 525
-      }
+        flat: 525,
+      },
     },
-    positions: [
-      'Top'
-    ],
-    roles: [
-      'Assassin',
-      'Marksman',
-      'Specialist'
-    ],
+    positions: ['Top'],
+    roles: ['Assassin', 'Marksman', 'Specialist'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -9512,8 +8897,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 1,
       abilityReliance: 20,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 497,
@@ -9524,77 +8909,72 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 610,
-        perLevel: 99
+        perLevel: 99,
       },
       healthRegen: {
         flat: 5,
-        perLevel: 0.5
+        perLevel: 0.5,
       },
       mana: {
         flat: 315,
-        perLevel: 50
+        perLevel: 50,
       },
       manaRegen: {
         flat: 8.75,
-        perLevel: 0.5
+        perLevel: 0.5,
       },
       armor: {
         flat: 30,
-        perLevel: 4.9
+        perLevel: 4.9,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 62,
-        perLevel: 3.5
+        perLevel: 3.5,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 475
+        flat: 475,
       },
       selectionRadius: {
-        flat: 125
+        flat: 125,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.635,
-        perLevel: 3
+        perLevel: 3,
       },
       attackSpeedRatio: {
-        flat: 0.635
+        flat: 0.635,
       },
       attackCastTime: {
-        flat: 0.27
+        flat: 0.27,
       },
       attackTotalTime: {
-        flat: 1.575
+        flat: 1.575,
       },
       attackRange: {
-        flat: 300
-      }
+        flat: 300,
+      },
     },
-    positions: [
-      'Support'
-    ],
-    roles: [
-      'Catcher',
-      'Support'
-    ],
+    positions: ['Support'],
+    roles: ['Catcher', 'Support'],
     attributeRatings: {
       damage: 1,
       toughness: 2,
@@ -9602,8 +8982,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 3,
       abilityReliance: 90,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 33,
@@ -9614,81 +8994,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 675,
-        perLevel: 100
+        perLevel: 100,
       },
       healthRegen: {
         flat: 8,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 310,
-        perLevel: 33
+        perLevel: 33,
       },
       manaRegen: {
         flat: 7.85,
-        perLevel: 0.5
+        perLevel: 0.5,
       },
       armor: {
         flat: 35,
-        perLevel: 4.5
+        perLevel: 4.5,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 65,
-        perLevel: 2.75
+        perLevel: 2.75,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.7,
-        perLevel: 2.215
+        perLevel: 2.215,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.071
+        flat: -0.071,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Jungle'
-    ],
-    roles: [
-      'Fighter',
-      'Tank',
-      'Vanguard'
-    ],
+    positions: ['Jungle'],
+    roles: ['Fighter', 'Tank', 'Vanguard'],
     attributeRatings: {
       damage: 2,
       toughness: 3,
@@ -9696,8 +9070,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 65,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 421,
@@ -9708,76 +9082,70 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 600,
-        perLevel: 99
+        perLevel: 99,
       },
       healthRegen: {
         flat: 2.5,
-        perLevel: 0.5
+        perLevel: 0.5,
       },
       mana: {
-        flat: 100
+        flat: 100,
       },
       armor: {
         flat: 35,
-        perLevel: 4.5
+        perLevel: 4.5,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 58,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 340
+        flat: 340,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 30
+        flat: 30,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.667,
-        perLevel: 2
+        perLevel: 2,
       },
       attackSpeedRatio: {
-        flat: 0.667
+        flat: 0.667,
       },
       attackCastTime: {
-        flat: 0.4
+        flat: 0.4,
       },
       attackTotalTime: {
-        flat: 1.5
+        flat: 1.5,
       },
       attackDelayOffset: {
-        flat: -0.092
+        flat: -0.092,
       },
       attackRange: {
-        flat: 175
-      }
+        flat: 175,
+      },
     },
-    positions: [
-      'Jungle'
-    ],
-    roles: [
-      'Diver',
-      'Fighter',
-      'Tank'
-    ],
+    positions: ['Jungle'],
+    roles: ['Diver', 'Fighter', 'Tank'],
     attributeRatings: {
       damage: 2,
       toughness: 2,
@@ -9785,8 +9153,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 2,
       abilityReliance: 30,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 526,
@@ -9797,78 +9165,72 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 620,
-        perLevel: 104
+        perLevel: 104,
       },
       healthRegen: {
         flat: 7.5,
-        perLevel: 0.85
+        perLevel: 0.85,
       },
       mana: {
         flat: 320,
-        perLevel: 40
+        perLevel: 40,
       },
       manaRegen: {
         flat: 7,
-        perLevel: 0.7
+        perLevel: 0.7,
       },
       armor: {
         flat: 30,
-        perLevel: 4
+        perLevel: 4,
       },
       magicResistance: {
         flat: 28,
-        perLevel: 1.8
+        perLevel: 1.8,
       },
       attackDamage: {
         flat: 55,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 315
+        flat: 315,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 2
+        perLevel: 2,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.42
+        flat: 0.42,
       },
       attackTotalTime: {
-        flat: 2
+        flat: 2,
       },
       attackRange: {
-        flat: 175
-      }
+        flat: 175,
+      },
     },
-    positions: [
-      'Support'
-    ],
-    roles: [
-      'Support',
-      'Tank',
-      'Vanguard'
-    ],
+    positions: ['Support'],
+    roles: ['Support', 'Tank', 'Vanguard'],
     attributeRatings: {
       damage: 1,
       toughness: 3,
@@ -9876,8 +9238,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 2,
       abilityReliance: 85,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 888,
@@ -9888,81 +9250,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 545,
-        perLevel: 94
+        perLevel: 94,
       },
       healthRegen: {
         flat: 5.5,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 350,
-        perLevel: 50
+        perLevel: 50,
       },
       manaRegen: {
         flat: 11.5,
-        perLevel: 0.5
+        perLevel: 0.5,
       },
       armor: {
         flat: 27,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 49,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 550
+        flat: 550,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 2.11
+        perLevel: 2.11,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.112
+        flat: -0.112,
       },
       attackRange: {
-        flat: 550
-      }
+        flat: 550,
+      },
     },
-    positions: [
-      'Support'
-    ],
-    roles: [
-      'Enchanter',
-      'Mage',
-      'Support'
-    ],
+    positions: ['Support'],
+    roles: ['Enchanter', 'Mage', 'Support'],
     attributeRatings: {
       damage: 2,
       toughness: 1,
@@ -9970,8 +9326,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 2,
       abilityReliance: 80,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 58,
@@ -9982,76 +9338,70 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 660,
-        perLevel: 111
+        perLevel: 111,
       },
       healthRegen: {
         flat: 8,
-        perLevel: 0.75
+        perLevel: 0.75,
       },
       mana: {
-        flat: 100
+        flat: 100,
       },
       armor: {
         flat: 35,
-        perLevel: 5.2
+        perLevel: 5.2,
       },
       magicResistance: {
         flat: 28,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 69,
-        perLevel: 4.15
+        perLevel: 4.15,
       },
       movespeed: {
-        flat: 345
+        flat: 345,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 125
+        flat: 125,
       },
       pathingRadius: {
-        flat: 50
+        flat: 50,
       },
       gameplayRadius: {
-        flat: 80
+        flat: 80,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.665,
-        perLevel: 2.75
+        perLevel: 2.75,
       },
       attackSpeedRatio: {
-        flat: 0.665
+        flat: 0.665,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.123
+        flat: -0.123,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Top'
-    ],
-    roles: [
-      'Diver',
-      'Fighter',
-      'Tank'
-    ],
+    positions: ['Top'],
+    roles: ['Diver', 'Fighter', 'Tank'],
     attributeRatings: {
       damage: 2,
       toughness: 2,
@@ -10059,8 +9409,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 45,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 107,
@@ -10071,74 +9421,67 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 590,
-        perLevel: 104
+        perLevel: 104,
       },
       healthRegen: {
         flat: 6,
-        perLevel: 0.5
+        perLevel: 0.5,
       },
       mana: {
-        flat: 4
+        flat: 4,
       },
       armor: {
         flat: 34,
-        perLevel: 4.2
+        perLevel: 4.2,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 68,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 345
+        flat: 345,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.667,
-        perLevel: 3
+        perLevel: 3,
       },
       attackSpeedRatio: {
-        flat: 0.667
+        flat: 0.667,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.5
+        flat: 1.5,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Jungle',
-      'Top'
-    ],
-    roles: [
-      'Assassin',
-      'Diver',
-      'Fighter'
-    ],
+    positions: ['Jungle', 'Top'],
+    roles: ['Assassin', 'Diver', 'Fighter'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -10146,8 +9489,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 30,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 92,
@@ -10158,73 +9501,67 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 630,
-        perLevel: 100
+        perLevel: 100,
       },
       healthRegen: {
         flat: 8.5,
-        perLevel: 0.5
+        perLevel: 0.5,
       },
       armor: {
         flat: 33,
-        perLevel: 4.4
+        perLevel: 4.4,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 64,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 340
+        flat: 340,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 130
+        flat: 130,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 3.5
+        perLevel: 3.5,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.133
+        flat: -0.133,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Top'
-    ],
-    roles: [
-      'Assassin',
-      'Fighter',
-      'Skirmisher'
-    ],
+    positions: ['Top'],
+    roles: ['Assassin', 'Fighter', 'Skirmisher'],
     attributeRatings: {
       damage: 3,
       toughness: 2,
@@ -10232,8 +9569,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 1,
       abilityReliance: 75,
-      difficulty: 3
-    }
+      difficulty: 3,
+    },
   },
   {
     id: 68,
@@ -10244,77 +9581,70 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 655,
-        perLevel: 105
+        perLevel: 105,
       },
       healthRegen: {
         flat: 7,
-        perLevel: 0.6
+        perLevel: 0.6,
       },
       mana: {
-        flat: 150
+        flat: 150,
       },
       armor: {
         flat: 36,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 28,
-        perLevel: 1.55
+        perLevel: 1.55,
       },
       attackDamage: {
         flat: 64,
-        perLevel: 3.2
+        perLevel: 3.2,
       },
       movespeed: {
-        flat: 345
+        flat: 345,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 140
+        flat: 140,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 80
+        flat: 80,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.644,
-        perLevel: 1.85
+        perLevel: 1.85,
       },
       attackSpeedRatio: {
-        flat: 0.644
+        flat: 0.644,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.1
+        flat: -0.1,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Middle',
-      'Top'
-    ],
-    roles: [
-      'Battlemage',
-      'Fighter',
-      'Mage'
-    ],
+    positions: ['Middle', 'Top'],
+    roles: ['Battlemage', 'Fighter', 'Mage'],
     attributeRatings: {
       damage: 3,
       toughness: 2,
@@ -10322,8 +9652,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 90,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 13,
@@ -10334,81 +9664,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 645,
-        perLevel: 124
+        perLevel: 124,
       },
       healthRegen: {
         flat: 8,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       mana: {
         flat: 300,
-        perLevel: 70
+        perLevel: 70,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 1
+        perLevel: 1,
       },
       armor: {
         flat: 22,
-        perLevel: 4.2
+        perLevel: 4.2,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 58,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 340
+        flat: 340,
       },
       acquisitionRadius: {
-        flat: 575
+        flat: 575,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.658,
-        perLevel: 2.11
+        perLevel: 2.11,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.1
+        flat: -0.1,
       },
       attackRange: {
-        flat: 550
-      }
+        flat: 550,
+      },
     },
-    positions: [
-      'Middle'
-    ],
-    roles: [
-      'Battlemage',
-      'Fighter',
-      'Mage'
-    ],
+    positions: ['Middle'],
+    roles: ['Battlemage', 'Fighter', 'Mage'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -10416,8 +9740,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 2,
       abilityReliance: 100,
-      difficulty: 3
-    }
+      difficulty: 3,
+    },
   },
   {
     id: 360,
@@ -10428,80 +9752,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 630,
-        perLevel: 108
+        perLevel: 108,
       },
       healthRegen: {
         flat: 3.25,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 349,
-        perLevel: 38
+        perLevel: 38,
       },
       manaRegen: {
         flat: 8.2,
-        perLevel: 0.7
+        perLevel: 0.7,
       },
       armor: {
         flat: 26,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 57,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 800
+        flat: 800,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 40.68
+        flat: 40.68,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.658,
-        perLevel: 3.3
+        perLevel: 3.3,
       },
       attackSpeedRatio: {
-        flat: 0.658
+        flat: 0.658,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.15
+        flat: -0.15,
       },
       attackRange: {
-        flat: 500
-      }
+        flat: 500,
+      },
     },
-    positions: [
-      'Bottom'
-    ],
-    roles: [
-      'Assassin',
-      'Marksman'
-    ],
+    positions: ['Bottom'],
+    roles: ['Assassin', 'Marksman'],
     attributeRatings: {
       damage: 3,
       toughness: 2,
@@ -10509,8 +9828,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 1,
       abilityReliance: 0,
-      difficulty: 3
-    }
+      difficulty: 3,
+    },
   },
   {
     id: 113,
@@ -10521,78 +9840,72 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 630,
-        perLevel: 114
+        perLevel: 114,
       },
       healthRegen: {
         flat: 8.5,
-        perLevel: 1
+        perLevel: 1,
       },
       mana: {
         flat: 400,
-        perLevel: 40
+        perLevel: 40,
       },
       manaRegen: {
         flat: 7,
-        perLevel: 0.7
+        perLevel: 0.7,
       },
       armor: {
         flat: 34,
-        perLevel: 5.45
+        perLevel: 5.45,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 66,
-        perLevel: 4
+        perLevel: 4,
       },
       movespeed: {
-        flat: 340
+        flat: 340,
       },
       acquisitionRadius: {
-        flat: 800
+        flat: 800,
       },
       selectionRadius: {
-        flat: 140
+        flat: 140,
       },
       pathingRadius: {
-        flat: 50
+        flat: 50,
       },
       gameplayRadius: {
-        flat: 80
+        flat: 80,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.688,
-        perLevel: 3.5
+        perLevel: 3.5,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackRange: {
-        flat: 150
-      }
+        flat: 150,
+      },
     },
-    positions: [
-      'Jungle'
-    ],
-    roles: [
-      'Fighter',
-      'Tank',
-      'Vanguard'
-    ],
+    positions: ['Jungle'],
+    roles: ['Fighter', 'Tank', 'Vanguard'],
     attributeRatings: {
       damage: 2,
       toughness: 2,
@@ -10600,8 +9913,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 75,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 235,
@@ -10612,78 +9925,71 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 530,
-        perLevel: 89
+        perLevel: 89,
       },
       healthRegen: {
         flat: 3.5,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 350,
-        perLevel: 45
+        perLevel: 45,
       },
       manaRegen: {
         flat: 11.5,
-        perLevel: 0.7
+        perLevel: 0.7,
       },
       armor: {
         flat: 25,
-        perLevel: 4
+        perLevel: 4,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
-        flat: 50
+        flat: 50,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 800
+        flat: 800,
       },
       selectionRadius: {
-        flat: 115
+        flat: 115,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 2
+        perLevel: 2,
       },
       attackSpeedRatio: {
-        flat: 0.4
+        flat: 0.4,
       },
       attackCastTime: {
-        flat: 0.5
+        flat: 0.5,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackRange: {
-        flat: 600
-      }
+        flat: 600,
+      },
     },
-    positions: [
-      'Bottom',
-      'Support'
-    ],
-    roles: [
-      'Enchanter',
-      'Marksman',
-      'Support'
-    ],
+    positions: ['Bottom', 'Support'],
+    roles: ['Enchanter', 'Marksman', 'Support'],
     attributeRatings: {
       damage: 2,
       toughness: 1,
@@ -10691,8 +9997,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 3,
       abilityReliance: 30,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 147,
@@ -10703,83 +10009,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 570,
-        perLevel: 90
+        perLevel: 90,
       },
       healthRegen: {
         flat: 6.5,
-        perLevel: 0.6
+        perLevel: 0.6,
       },
       mana: {
         flat: 360,
-        perLevel: 25
+        perLevel: 25,
       },
       manaRegen: {
         flat: 11.5,
-        perLevel: 0.95
+        perLevel: 0.95,
       },
       armor: {
         flat: 26,
-        perLevel: 4.2
+        perLevel: 4.2,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 50,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 525
+        flat: 525,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.669,
-        perLevel: 2
+        perLevel: 2,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.113
+        flat: -0.113,
       },
       attackRange: {
-        flat: 525
-      }
+        flat: 525,
+      },
     },
-    positions: [
-      'Bottom',
-      'Support'
-    ],
-    roles: [
-      'Burst',
-      'Enchanter',
-      'Mage',
-      'Support'
-    ],
+    positions: ['Bottom', 'Support'],
+    roles: ['Burst', 'Enchanter', 'Mage', 'Support'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -10787,8 +10085,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 2,
       abilityReliance: 100,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 875,
@@ -10799,73 +10097,67 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 670,
-        perLevel: 114
+        perLevel: 114,
       },
       healthRegen: {
         flat: 7,
-        perLevel: 0.5
+        perLevel: 0.5,
       },
       armor: {
         flat: 33,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 28,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 60,
-        perLevel: 4
+        perLevel: 4,
       },
       movespeed: {
-        flat: 340
+        flat: 340,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 1.75
+        perLevel: 1.75,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.086
+        flat: -0.086,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Top'
-    ],
-    roles: [
-      'Fighter',
-      'Juggernaut',
-      'Tank'
-    ],
+    positions: ['Top'],
+    roles: ['Fighter', 'Juggernaut', 'Tank'],
     attributeRatings: {
       damage: 2,
       toughness: 2,
@@ -10873,8 +10165,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 40,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 35,
@@ -10885,80 +10177,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 630,
-        perLevel: 99
+        perLevel: 99,
       },
       healthRegen: {
         flat: 8.5,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 297,
-        perLevel: 40
+        perLevel: 40,
       },
       manaRegen: {
         flat: 6,
-        perLevel: 0.35
+        perLevel: 0.35,
       },
       armor: {
         flat: 30,
-        perLevel: 4
+        perLevel: 4,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 63,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 345
+        flat: 345,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 135
+        flat: 135,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.694,
-        perLevel: 3
+        perLevel: 3,
       },
       attackSpeedRatio: {
-        flat: 0.694
+        flat: 0.694,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.078
+        flat: -0.078,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Jungle',
-      'Support'
-    ],
-    roles: [
-      'Assassin'
-    ],
+    positions: ['Jungle', 'Support'],
+    roles: ['Assassin'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -10966,8 +10253,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 2,
       abilityReliance: 45,
-      difficulty: 3
-    }
+      difficulty: 3,
+    },
   },
   {
     id: 98,
@@ -10978,76 +10265,70 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 610,
-        perLevel: 99
+        perLevel: 99,
       },
       healthRegen: {
         flat: 8.5,
-        perLevel: 0.75
+        perLevel: 0.75,
       },
       mana: {
-        flat: 400
+        flat: 400,
       },
       manaRegen: {
-        flat: 50
+        flat: 50,
       },
       armor: {
         flat: 34,
-        perLevel: 4.2
+        perLevel: 4.2,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 64,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 340
+        flat: 340,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.751,
-        perLevel: 3
+        perLevel: 3,
       },
       attackSpeedRatio: {
-        flat: 0.651
+        flat: 0.651,
       },
       attackCastTime: {
-        flat: 0.267
+        flat: 0.267,
       },
       attackTotalTime: {
-        flat: 1.536
+        flat: 1.536,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Support',
-      'Top'
-    ],
-    roles: [
-      'Tank',
-      'Warden'
-    ],
+    positions: ['Support', 'Top'],
+    roles: ['Tank', 'Warden'],
     attributeRatings: {
       damage: 2,
       toughness: 3,
@@ -11055,8 +10336,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 3,
       abilityReliance: 45,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 102,
@@ -11067,76 +10348,70 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 665,
-        perLevel: 104
+        perLevel: 104,
       },
       healthRegen: {
         flat: 8.5,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       mana: {
-        flat: 100
+        flat: 100,
       },
       armor: {
         flat: 38,
-        perLevel: 4.55
+        perLevel: 4.55,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 1.5
+        perLevel: 1.5,
       },
       attackDamage: {
         flat: 66,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 350
+        flat: 350,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.658,
-        perLevel: 2.5
+        perLevel: 2.5,
       },
       attackSpeedRatio: {
-        flat: 0.658
+        flat: 0.658,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.103
+        flat: -0.103,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Jungle'
-    ],
-    roles: [
-      'Fighter',
-      'Juggernaut',
-      'Mage'
-    ],
+    positions: ['Jungle'],
+    roles: ['Fighter', 'Juggernaut', 'Mage'],
     attributeRatings: {
       damage: 2,
       toughness: 2,
@@ -11144,8 +10419,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 55,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 27,
@@ -11156,81 +10431,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 650,
-        perLevel: 96
+        perLevel: 96,
       },
       healthRegen: {
         flat: 9.5,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 330,
-        perLevel: 45
+        perLevel: 45,
       },
       manaRegen: {
         flat: 7.5,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       armor: {
         flat: 34,
-        perLevel: 4.2
+        perLevel: 4.2,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 63,
-        perLevel: 3.4
+        perLevel: 3.4,
       },
       movespeed: {
-        flat: 345
+        flat: 345,
       },
       acquisitionRadius: {
-        flat: 300
+        flat: 300,
       },
       selectionRadius: {
-        flat: 135
+        flat: 135,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.7,
-        perLevel: 1.9
+        perLevel: 1.9,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.1
+        flat: -0.1,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Top'
-    ],
-    roles: [
-      'Mage',
-      'Specialist',
-      'Tank'
-    ],
+    positions: ['Top'],
+    roles: ['Mage', 'Specialist', 'Tank'],
     attributeRatings: {
       damage: 2,
       toughness: 3,
@@ -11238,8 +10507,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 100,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 14,
@@ -11250,81 +10519,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 655,
-        perLevel: 87
+        perLevel: 87,
       },
       healthRegen: {
         flat: 9,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       mana: {
         flat: 400,
-        perLevel: 52
+        perLevel: 52,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 0.6
+        perLevel: 0.6,
       },
       armor: {
         flat: 36,
-        perLevel: 4.2
+        perLevel: 4.2,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 68,
-        perLevel: 4
+        perLevel: 4,
       },
       movespeed: {
-        flat: 345
+        flat: 345,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 125
+        flat: 125,
       },
       pathingRadius: {
-        flat: 25.767
+        flat: 25.767,
       },
       gameplayRadius: {
-        flat: 80
+        flat: 80,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.679,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackSpeedRatio: {
-        flat: 0.679
+        flat: 0.679,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.051
+        flat: -0.051,
       },
       attackRange: {
-        flat: 175
-      }
+        flat: 175,
+      },
     },
-    positions: [
-      'Top'
-    ],
-    roles: [
-      'Fighter',
-      'Tank',
-      'Vanguard'
-    ],
+    positions: ['Top'],
+    roles: ['Fighter', 'Tank', 'Vanguard'],
     attributeRatings: {
       damage: 2,
       toughness: 3,
@@ -11332,8 +10595,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 65,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 15,
@@ -11344,79 +10607,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 600,
-        perLevel: 104
+        perLevel: 104,
       },
       healthRegen: {
         flat: 3.25,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 340,
-        perLevel: 45
+        perLevel: 45,
       },
       manaRegen: {
         flat: 6,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 30,
-        perLevel: 4.45
+        perLevel: 4.45,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 60,
-        perLevel: 2.5
+        perLevel: 2.5,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 500
+        flat: 500,
       },
       selectionRadius: {
-        flat: 115
+        flat: 115,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 2
+        perLevel: 2,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.18
+        flat: -0.18,
       },
       attackRange: {
-        flat: 500
-      }
+        flat: 500,
+      },
     },
-    positions: [
-      'Bottom'
-    ],
-    roles: [
-      'Marksman'
-    ],
+    positions: ['Bottom'],
+    roles: ['Marksman'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -11424,8 +10683,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 2,
       abilityReliance: 10,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 72,
@@ -11436,80 +10695,72 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 630,
-        perLevel: 110
+        perLevel: 110,
       },
       healthRegen: {
         flat: 7.5,
-        perLevel: 0.75
+        perLevel: 0.75,
       },
       mana: {
         flat: 320,
-        perLevel: 40
+        perLevel: 40,
       },
       manaRegen: {
         flat: 7.2,
-        perLevel: 0.75
+        perLevel: 0.75,
       },
       armor: {
         flat: 33,
-        perLevel: 4.5
+        perLevel: 4.5,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 63,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 130
+        flat: 130,
       },
       pathingRadius: {
-        flat: 50
+        flat: 50,
       },
       gameplayRadius: {
-        flat: 80
+        flat: 80,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 2
+        perLevel: 2,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackRange: {
-        flat: 150
-      }
+        flat: 150,
+      },
     },
-    positions: [
-      'Jungle',
-      'Top'
-    ],
-    roles: [
-      'Fighter',
-      'Juggernaut',
-      'Tank',
-      'Vanguard'
-    ],
+    positions: ['Jungle', 'Top'],
+    roles: ['Fighter', 'Juggernaut', 'Tank', 'Vanguard'],
     attributeRatings: {
       damage: 2,
       toughness: 3,
@@ -11517,8 +10768,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 45,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 901,
@@ -11529,82 +10780,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 575,
-        perLevel: 100
+        perLevel: 100,
       },
       healthRegen: {
         flat: 3.75,
-        perLevel: 0.6
+        perLevel: 0.6,
       },
       mana: {
         flat: 300,
-        perLevel: 40
+        perLevel: 40,
       },
       manaRegen: {
         flat: 8.5,
-        perLevel: 0.7
+        perLevel: 0.7,
       },
       armor: {
         flat: 24,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 60,
-        perLevel: 2.3
+        perLevel: 2.3,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 900
+        flat: 900,
       },
       selectionRadius: {
-        flat: 130
+        flat: 130,
       },
       pathingRadius: {
-        flat: 30
+        flat: 30,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.638,
-        perLevel: 4
+        perLevel: 4,
       },
       attackSpeedRatio: {
-        flat: 0.638
+        flat: 0.638,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.134
+        flat: -0.134,
       },
       attackRange: {
-        flat: 550
-      }
+        flat: 550,
+      },
     },
-    positions: [
-      'Bottom',
-      'Middle',
-      'Top'
-    ],
-    roles: [
-      'Mage',
-      'Marksman'
-    ],
+    positions: ['Bottom', 'Middle', 'Top'],
+    roles: ['Mage', 'Marksman'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -11612,8 +10856,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 10,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 37,
@@ -11624,81 +10868,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 550,
-        perLevel: 91
+        perLevel: 91,
       },
       healthRegen: {
         flat: 5.5,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 340,
-        perLevel: 45
+        perLevel: 45,
       },
       manaRegen: {
         flat: 11.5,
-        perLevel: 0.4
+        perLevel: 0.4,
       },
       armor: {
         flat: 26,
-        perLevel: 4.2
+        perLevel: 4.2,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 49,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 325
+        flat: 325,
       },
       acquisitionRadius: {
-        flat: 800
+        flat: 800,
       },
       selectionRadius: {
-        flat: 110
+        flat: 110,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.644,
-        perLevel: 2.3
+        perLevel: 2.3,
       },
       attackSpeedRatio: {
-        flat: 0.644
+        flat: 0.644,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.128
+        flat: -0.128,
       },
       attackRange: {
-        flat: 550
-      }
+        flat: 550,
+      },
     },
-    positions: [
-      'Support'
-    ],
-    roles: [
-      'Enchanter',
-      'Mage',
-      'Support'
-    ],
+    positions: ['Support'],
+    roles: ['Enchanter', 'Mage', 'Support'],
     attributeRatings: {
       damage: 2,
       toughness: 1,
@@ -11706,8 +10944,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 2,
       abilityReliance: 90,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 16,
@@ -11718,81 +10956,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 605,
-        perLevel: 88
+        perLevel: 88,
       },
       healthRegen: {
         flat: 2.5,
-        perLevel: 0.5
+        perLevel: 0.5,
       },
       mana: {
         flat: 425,
-        perLevel: 40
+        perLevel: 40,
       },
       manaRegen: {
         flat: 11.5,
-        perLevel: 0.4
+        perLevel: 0.4,
       },
       armor: {
         flat: 32,
-        perLevel: 5
+        perLevel: 5,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 50,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 325
+        flat: 325,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 110
+        flat: 110,
       },
       pathingRadius: {
-        flat: 44.2
+        flat: 44.2,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 2.14
+        perLevel: 2.14,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.113
+        flat: -0.113,
       },
       attackRange: {
-        flat: 550
-      }
+        flat: 550,
+      },
     },
-    positions: [
-      'Support'
-    ],
-    roles: [
-      'Enchanter',
-      'Mage',
-      'Support'
-    ],
+    positions: ['Support'],
+    roles: ['Enchanter', 'Mage', 'Support'],
     attributeRatings: {
       damage: 1,
       toughness: 1,
@@ -11800,8 +11032,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 3,
       abilityReliance: 100,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 50,
@@ -11812,83 +11044,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 595,
-        perLevel: 99
+        perLevel: 99,
       },
       healthRegen: {
         flat: 3,
-        perLevel: 0.5
+        perLevel: 0.5,
       },
       mana: {
         flat: 400,
-        perLevel: 29
+        perLevel: 29,
       },
       manaRegen: {
         flat: 10,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 25,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 31,
-        perLevel: 1.55
+        perLevel: 1.55,
       },
       attackDamage: {
         flat: 58,
-        perLevel: 2.7
+        perLevel: 2.7,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 525
+        flat: 525,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 2.11
+        perLevel: 2.11,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.16
+        flat: -0.16,
       },
       attackRange: {
-        flat: 525
-      }
+        flat: 525,
+      },
     },
-    positions: [
-      'Bottom',
-      'Middle',
-      'Support'
-    ],
-    roles: [
-      'Battlemage',
-      'Mage',
-      'Support'
-    ],
+    positions: ['Bottom', 'Middle', 'Support'],
+    roles: ['Battlemage', 'Mage', 'Support'],
     attributeRatings: {
       damage: 2,
       toughness: 2,
@@ -11896,8 +11120,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 100,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 517,
@@ -11908,83 +11132,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 600,
-        perLevel: 122
+        perLevel: 122,
       },
       healthRegen: {
         flat: 9,
-        perLevel: 0.9
+        perLevel: 0.9,
       },
       mana: {
         flat: 400,
-        perLevel: 70
+        perLevel: 70,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 29,
-        perLevel: 5.2
+        perLevel: 5.2,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.55
+        perLevel: 2.55,
       },
       attackDamage: {
         flat: 61,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 340
+        flat: 340,
       },
       acquisitionRadius: {
-        flat: 525
+        flat: 525,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.645,
-        perLevel: 3.5
+        perLevel: 3.5,
       },
       attackSpeedRatio: {
-        flat: 0.645
+        flat: 0.645,
       },
       attackCastTime: {
-        flat: 0.26
+        flat: 0.26,
       },
       attackTotalTime: {
-        flat: 1.55
+        flat: 1.55,
       },
       attackDelayOffset: {
-        flat: -0.099
+        flat: -0.099,
       },
       attackRange: {
-        flat: 175
-      }
+        flat: 175,
+      },
     },
-    positions: [
-      'Middle',
-      'Top'
-    ],
-    roles: [
-      'Assassin',
-      'Burst',
-      'Mage',
-      'Skirmisher'
-    ],
+    positions: ['Middle', 'Top'],
+    roles: ['Assassin', 'Burst', 'Mage', 'Skirmisher'],
     attributeRatings: {
       damage: 2,
       toughness: 2,
@@ -11992,8 +11208,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 1,
       abilityReliance: 70,
-      difficulty: 3
-    }
+      difficulty: 3,
+    },
   },
   {
     id: 134,
@@ -12004,80 +11220,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 563,
-        perLevel: 104
+        perLevel: 104,
       },
       healthRegen: {
         flat: 6.5,
-        perLevel: 0.6
+        perLevel: 0.6,
       },
       mana: {
         flat: 480,
-        perLevel: 40
+        perLevel: 40,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 25,
-        perLevel: 4.6
+        perLevel: 4.6,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 54,
-        perLevel: 2.9
+        perLevel: 2.9,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 575
+        flat: 575,
       },
       selectionRadius: {
-        flat: 125
+        flat: 125,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.658,
-        perLevel: 2
+        perLevel: 2,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.112
+        flat: -0.112,
       },
       attackRange: {
-        flat: 550
-      }
+        flat: 550,
+      },
     },
-    positions: [
-      'Middle'
-    ],
-    roles: [
-      'Burst',
-      'Mage'
-    ],
+    positions: ['Middle'],
+    roles: ['Burst', 'Mage'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -12085,8 +11296,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 100,
-      difficulty: 3
-    }
+      difficulty: 3,
+    },
   },
   {
     id: 223,
@@ -12097,79 +11308,72 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 640,
-        perLevel: 103
+        perLevel: 103,
       },
       healthRegen: {
         flat: 6.5,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 325,
-        perLevel: 50
+        perLevel: 50,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 1
+        perLevel: 1,
       },
       armor: {
         flat: 39,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 56,
-        perLevel: 3.2
+        perLevel: 3.2,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 125
+        flat: 125,
       },
       pathingRadius: {
-        flat: 50
+        flat: 50,
       },
       gameplayRadius: {
-        flat: 80
+        flat: 80,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.658,
-        perLevel: 2.5
+        perLevel: 2.5,
       },
       attackSpeedRatio: {
-        flat: 0.658
+        flat: 0.658,
       },
       attackCastTime: {
-        flat: 0.38
+        flat: 0.38,
       },
       attackTotalTime: {
-        flat: 1.519
+        flat: 1.519,
       },
       attackRange: {
-        flat: 175
-      }
+        flat: 175,
+      },
     },
-    positions: [
-      'Support',
-      'Top'
-    ],
-    roles: [
-      'Support',
-      'Tank',
-      'Warden'
-    ],
+    positions: ['Support', 'Top'],
+    roles: ['Support', 'Tank', 'Warden'],
     attributeRatings: {
       damage: 2,
       toughness: 3,
@@ -12177,8 +11381,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 3,
       abilityReliance: 65,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 163,
@@ -12189,82 +11393,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 550,
-        perLevel: 104
+        perLevel: 104,
       },
       healthRegen: {
         flat: 6.5,
-        perLevel: 0.65
+        perLevel: 0.65,
       },
       mana: {
         flat: 470,
-        perLevel: 30
+        perLevel: 30,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 18,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 28,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 58,
-        perLevel: 3.3
+        perLevel: 3.3,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 550
+        flat: 550,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.658,
-        perLevel: 1.36
+        perLevel: 1.36,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.139
+        flat: -0.139,
       },
       attackRange: {
-        flat: 525
-      }
+        flat: 525,
+      },
     },
-    positions: [
-      'Jungle',
-      'Middle'
-    ],
-    roles: [
-      'Battlemage',
-      'Mage',
-      'Support'
-    ],
+    positions: ['Jungle', 'Middle'],
+    roles: ['Battlemage', 'Mage', 'Support'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -12272,8 +11469,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 3,
       abilityReliance: 100,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 91,
@@ -12284,76 +11481,72 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 658,
-        perLevel: 109
+        perLevel: 109,
       },
       healthRegen: {
         flat: 8.5,
-        perLevel: 0.75
+        perLevel: 0.75,
       },
       mana: {
         flat: 400,
-        perLevel: 37
+        perLevel: 37,
       },
       manaRegen: {
         flat: 7.6,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 30,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 36,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 68,
-        perLevel: 3.1
+        perLevel: 3.1,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 2.9
+        perLevel: 2.9,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.198
+        flat: 0.198,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Jungle'
-    ],
-    roles: [
-      'Assassin'
-    ],
+    positions: ['Jungle'],
+    roles: ['Assassin'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -12361,8 +11554,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 65,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 44,
@@ -12373,83 +11566,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 645,
-        perLevel: 99
+        perLevel: 99,
       },
       healthRegen: {
         flat: 6,
-        perLevel: 0.5
+        perLevel: 0.5,
       },
       mana: {
         flat: 300,
-        perLevel: 60
+        perLevel: 60,
       },
       manaRegen: {
         flat: 8.5,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 40,
-        perLevel: 4.3
+        perLevel: 4.3,
       },
       magicResistance: {
         flat: 28,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 55,
-        perLevel: 3.5
+        perLevel: 3.5,
       },
       movespeed: {
-        flat: 340
+        flat: 340,
       },
       acquisitionRadius: {
-        flat: 350
+        flat: 350,
       },
       selectionRadius: {
-        flat: 135
+        flat: 135,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 2
+        perLevel: 2,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.12
+        flat: -0.12,
       },
       attackRange: {
-        flat: 150
-      }
+        flat: 150,
+      },
     },
-    positions: [
-      'Middle',
-      'Support'
-    ],
-    roles: [
-      'Enchanter',
-      'Support',
-      'Tank',
-      'Warden'
-    ],
+    positions: ['Middle', 'Support'],
+    roles: ['Enchanter', 'Support', 'Tank', 'Warden'],
     attributeRatings: {
       damage: 1,
       toughness: 2,
@@ -12457,8 +11642,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 3,
       abilityReliance: 75,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 17,
@@ -12469,83 +11654,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 615,
-        perLevel: 104
+        perLevel: 104,
       },
       healthRegen: {
         flat: 5.5,
-        perLevel: 0.65
+        perLevel: 0.65,
       },
       mana: {
         flat: 334,
-        perLevel: 25
+        perLevel: 25,
       },
       manaRegen: {
         flat: 9.6,
-        perLevel: 0.45
+        perLevel: 0.45,
       },
       armor: {
         flat: 24,
-        perLevel: 4.95
+        perLevel: 4.95,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 54,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 500
+        flat: 500,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 30
+        flat: 30,
       },
       gameplayRadius: {
-        flat: 55
+        flat: 55,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.69,
-        perLevel: 3.38
+        perLevel: 3.38,
       },
       attackSpeedRatio: {
-        flat: 0.69
+        flat: 0.69,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.1
+        flat: -0.1,
       },
       attackRange: {
-        flat: 500
-      }
+        flat: 500,
+      },
     },
-    positions: [
-      'Jungle',
-      'Support',
-      'Top'
-    ],
-    roles: [
-      'Mage',
-      'Marksman',
-      'Specialist'
-    ],
+    positions: ['Jungle', 'Support', 'Top'],
+    roles: ['Mage', 'Marksman', 'Specialist'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -12553,8 +11730,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 2,
       abilityReliance: 30,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 412,
@@ -12565,80 +11742,74 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 620,
-        perLevel: 120
+        perLevel: 120,
       },
       healthRegen: {
         flat: 7,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 274,
-        perLevel: 44
+        perLevel: 44,
       },
       manaRegen: {
         flat: 6,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
-        flat: 33
+        flat: 33,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.55
+        perLevel: 1.55,
       },
       attackDamage: {
         flat: 56,
-        perLevel: 2.2
+        perLevel: 2.2,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 475
+        flat: 475,
       },
       selectionRadius: {
-        flat: 125
+        flat: 125,
       },
       pathingRadius: {
-        flat: 36
+        flat: 36,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 3.5
+        perLevel: 3.5,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.06
+        flat: -0.06,
       },
       attackRange: {
-        flat: 450
-      }
+        flat: 450,
+      },
     },
-    positions: [
-      'Support'
-    ],
-    roles: [
-      'Catcher',
-      'Support',
-      'Tank'
-    ],
+    positions: ['Support'],
+    roles: ['Catcher', 'Support', 'Tank'],
     attributeRatings: {
       damage: 1,
       toughness: 2,
@@ -12646,8 +11817,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 3,
       abilityReliance: 75,
-      difficulty: 3
-    }
+      difficulty: 3,
+    },
   },
   {
     id: 18,
@@ -12658,81 +11829,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 640,
-        perLevel: 102
+        perLevel: 102,
       },
       healthRegen: {
         flat: 4,
-        perLevel: 0.5
+        perLevel: 0.5,
       },
       mana: {
         flat: 300,
-        perLevel: 32
+        perLevel: 32,
       },
       manaRegen: {
         flat: 7.2,
-        perLevel: 0.45
+        perLevel: 0.45,
       },
       armor: {
         flat: 30,
-        perLevel: 4
+        perLevel: 4,
       },
       magicResistance: {
         flat: 28,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 60,
-        perLevel: 2.5
+        perLevel: 2.5,
       },
       movespeed: {
-        flat: 325
+        flat: 325,
       },
       acquisitionRadius: {
-        flat: 800
+        flat: 800,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 30
+        flat: 30,
       },
       gameplayRadius: {
-        flat: 55
+        flat: 55,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.656,
-        perLevel: 1.5
+        perLevel: 1.5,
       },
       attackSpeedRatio: {
-        flat: 0.694
+        flat: 0.694,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.152
+        flat: -0.152,
       },
       attackRange: {
-        flat: 550
-      }
+        flat: 550,
+      },
     },
-    positions: [
-      'Bottom',
-      'Middle'
-    ],
-    roles: [
-      'Assassin',
-      'Marksman'
-    ],
+    positions: ['Bottom', 'Middle'],
+    roles: ['Assassin', 'Marksman'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -12740,8 +11905,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 20,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 48,
@@ -12752,82 +11917,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 650,
-        perLevel: 110
+        perLevel: 110,
       },
       healthRegen: {
         flat: 6,
-        perLevel: 0.75
+        perLevel: 0.75,
       },
       mana: {
         flat: 340,
-        perLevel: 45
+        perLevel: 45,
       },
       manaRegen: {
         flat: 7.5,
-        perLevel: 0.6
+        perLevel: 0.6,
       },
       armor: {
         flat: 37,
-        perLevel: 3.9
+        perLevel: 3.9,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 68,
-        perLevel: 4
+        perLevel: 4,
       },
       movespeed: {
-        flat: 350
+        flat: 350,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 135
+        flat: 135,
       },
       pathingRadius: {
-        flat: 25.767
+        flat: 25.767,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.67,
-        perLevel: 2.9
+        perLevel: 2.9,
       },
       attackSpeedRatio: {
-        flat: 0.67
+        flat: 0.67,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.092
+        flat: -0.092,
       },
       attackRange: {
-        flat: 175
-      }
+        flat: 175,
+      },
     },
-    positions: [
-      'Jungle',
-      'Top'
-    ],
-    roles: [
-      'Fighter',
-      'Juggernaut',
-      'Tank'
-    ],
+    positions: ['Jungle', 'Top'],
+    roles: ['Fighter', 'Juggernaut', 'Tank'],
     attributeRatings: {
       damage: 2,
       toughness: 3,
@@ -12835,8 +11993,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 2,
       abilityReliance: 20,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 23,
@@ -12847,76 +12005,70 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 696,
-        perLevel: 108
+        perLevel: 108,
       },
       healthRegen: {
         flat: 8.5,
-        perLevel: 0.9
+        perLevel: 0.9,
       },
       mana: {
-        flat: 100
+        flat: 100,
       },
       armor: {
         flat: 33,
-        perLevel: 4.8
+        perLevel: 4.8,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 66,
-        perLevel: 4
+        perLevel: 4,
       },
       movespeed: {
-        flat: 345
+        flat: 345,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 135
+        flat: 135,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.67,
-        perLevel: 3.4
+        perLevel: 3.4,
       },
       attackSpeedRatio: {
-        flat: 0.694
+        flat: 0.694,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.11
+        flat: -0.11,
       },
       attackRange: {
-        flat: 175
-      }
+        flat: 175,
+      },
     },
-    positions: [
-      'Top'
-    ],
-    roles: [
-      'Assassin',
-      'Fighter',
-      'Skirmisher'
-    ],
+    positions: ['Top'],
+    roles: ['Assassin', 'Fighter', 'Skirmisher'],
     attributeRatings: {
       damage: 3,
       toughness: 2,
@@ -12924,8 +12076,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 10,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 4,
@@ -12936,83 +12088,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 604,
-        perLevel: 108
+        perLevel: 108,
       },
       healthRegen: {
         flat: 5.5,
-        perLevel: 0.6
+        perLevel: 0.6,
       },
       mana: {
         flat: 333,
-        perLevel: 39
+        perLevel: 39,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 24,
-        perLevel: 4.35
+        perLevel: 4.35,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 52,
-        perLevel: 2.5
+        perLevel: 2.5,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 800
+        flat: 800,
       },
       selectionRadius: {
-        flat: 110
+        flat: 110,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 2.5
+        perLevel: 2.5,
       },
       attackSpeedRatio: {
-        flat: 0.651
+        flat: 0.651,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.1
+        flat: -0.1,
       },
       attackRange: {
-        flat: 525
-      }
+        flat: 525,
+      },
     },
-    positions: [
-      'Bottom',
-      'Middle',
-      'Top'
-    ],
-    roles: [
-      'Burst',
-      'Mage',
-      'Marksman'
-    ],
+    positions: ['Bottom', 'Middle', 'Top'],
+    roles: ['Burst', 'Mage', 'Marksman'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -13020,8 +12164,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 2,
       abilityReliance: 65,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 29,
@@ -13032,81 +12176,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 630,
-        perLevel: 104
+        perLevel: 104,
       },
       healthRegen: {
         flat: 3.75,
-        perLevel: 0.6
+        perLevel: 0.6,
       },
       mana: {
         flat: 300,
-        perLevel: 40
+        perLevel: 40,
       },
       manaRegen: {
         flat: 7.25,
-        perLevel: 0.7
+        perLevel: 0.7,
       },
       armor: {
         flat: 27,
-        perLevel: 4.2
+        perLevel: 4.2,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 59,
-        perLevel: 3.1
+        perLevel: 3.1,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 575
+        flat: 575,
       },
       selectionRadius: {
-        flat: 135
+        flat: 135,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.679,
-        perLevel: 3.38
+        perLevel: 3.38,
       },
       attackSpeedRatio: {
-        flat: 0.679
+        flat: 0.679,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.098
+        flat: -0.098,
       },
       attackRange: {
-        flat: 550
-      }
+        flat: 550,
+      },
     },
-    positions: [
-      'Bottom',
-      'Support'
-    ],
-    roles: [
-      'Assassin',
-      'Marksman'
-    ],
+    positions: ['Bottom', 'Support'],
+    roles: ['Assassin', 'Marksman'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -13114,8 +12252,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 0,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 77,
@@ -13126,82 +12264,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 664,
-        perLevel: 92
+        perLevel: 92,
       },
       healthRegen: {
         flat: 6,
-        perLevel: 0.75
+        perLevel: 0.75,
       },
       mana: {
         flat: 271,
-        perLevel: 50
+        perLevel: 50,
       },
       manaRegen: {
         flat: 7.5,
-        perLevel: 0.45
+        perLevel: 0.45,
       },
       armor: {
         flat: 31,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 62,
-        perLevel: 4
+        perLevel: 4,
       },
       movespeed: {
-        flat: 350
+        flat: 350,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 125
+        flat: 125,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.65,
-        perLevel: 3
+        perLevel: 3,
       },
       attackSpeedRatio: {
-        flat: 0.65
+        flat: 0.65,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.102
+        flat: -0.102,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Jungle',
-      'Top'
-    ],
-    roles: [
-      'Fighter',
-      'Juggernaut',
-      'Tank'
-    ],
+    positions: ['Jungle', 'Top'],
+    roles: ['Fighter', 'Juggernaut', 'Tank'],
     attributeRatings: {
       damage: 2,
       toughness: 3,
@@ -13209,8 +12340,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 35,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 6,
@@ -13221,81 +12352,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 655,
-        perLevel: 102
+        perLevel: 102,
       },
       healthRegen: {
         flat: 7.5,
-        perLevel: 0.7
+        perLevel: 0.7,
       },
       mana: {
         flat: 340,
-        perLevel: 45
+        perLevel: 45,
       },
       manaRegen: {
         flat: 7.25,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 36,
-        perLevel: 5
+        perLevel: 5,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 63,
-        perLevel: 4
+        perLevel: 4,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 550
+        flat: 550,
       },
       selectionRadius: {
-        flat: 136.111
+        flat: 136.111,
       },
       pathingRadius: {
-        flat: 50
+        flat: 50,
       },
       gameplayRadius: {
-        flat: 80
+        flat: 80,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 3.75
+        perLevel: 3.75,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.15
+        flat: -0.15,
       },
       attackRange: {
-        flat: 350
-      }
+        flat: 350,
+      },
     },
-    positions: [
-      'Top'
-    ],
-    roles: [
-      'Fighter',
-      'Juggernaut',
-      'Tank'
-    ],
+    positions: ['Top'],
+    roles: ['Fighter', 'Juggernaut', 'Tank'],
     attributeRatings: {
       damage: 2,
       toughness: 2,
@@ -13303,8 +12428,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 55,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 110,
@@ -13315,81 +12440,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 600,
-        perLevel: 105
+        perLevel: 105,
       },
       healthRegen: {
         flat: 3.5,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 320,
-        perLevel: 40
+        perLevel: 40,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 24,
-        perLevel: 4.6
+        perLevel: 4.6,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 59,
-        perLevel: 3.4
+        perLevel: 3.4,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.658,
-        perLevel: 3.5
+        perLevel: 3.5,
       },
       attackSpeedRatio: {
-        flat: 0.658
+        flat: 0.658,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.125
+        flat: -0.125,
       },
       attackRange: {
-        flat: 575
-      }
+        flat: 575,
+      },
     },
-    positions: [
-      'Bottom'
-    ],
-    roles: [
-      'Artillery',
-      'Mage',
-      'Marksman'
-    ],
+    positions: ['Bottom'],
+    roles: ['Artillery', 'Mage', 'Marksman'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -13397,8 +12516,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 20,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 67,
@@ -13409,81 +12528,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 550,
-        perLevel: 103
+        perLevel: 103,
       },
       healthRegen: {
         flat: 3.5,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 232,
-        perLevel: 35
+        perLevel: 35,
       },
       manaRegen: {
         flat: 7,
-        perLevel: 0.4
+        perLevel: 0.4,
       },
       armor: {
         flat: 23,
-        perLevel: 4.6
+        perLevel: 4.6,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 60,
-        perLevel: 2.35
+        perLevel: 2.35,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 575
+        flat: 575,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.658,
-        perLevel: 3.3
+        perLevel: 3.3,
       },
       attackSpeedRatio: {
-        flat: 0.658
+        flat: 0.658,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.125
+        flat: -0.125,
       },
       attackRange: {
-        flat: 550
-      }
+        flat: 550,
+      },
     },
-    positions: [
-      'Bottom',
-      'Top'
-    ],
-    roles: [
-      'Assassin',
-      'Marksman'
-    ],
+    positions: ['Bottom', 'Top'],
+    roles: ['Assassin', 'Marksman'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -13491,8 +12604,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 0,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 45,
@@ -13503,81 +12616,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 580,
-        perLevel: 108
+        perLevel: 108,
       },
       healthRegen: {
         flat: 6.5,
-        perLevel: 0.6
+        perLevel: 0.6,
       },
       mana: {
         flat: 490,
-        perLevel: 26
+        perLevel: 26,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 18,
-        perLevel: 5.2
+        perLevel: 5.2,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 52,
-        perLevel: 2.7
+        perLevel: 2.7,
       },
       movespeed: {
-        flat: 340
+        flat: 340,
       },
       acquisitionRadius: {
-        flat: 525
+        flat: 525,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 30
+        flat: 30,
       },
       gameplayRadius: {
-        flat: 55
+        flat: 55,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 2.24
+        perLevel: 2.24,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.109
+        flat: -0.109,
       },
       attackRange: {
-        flat: 550
-      }
+        flat: 550,
+      },
     },
-    positions: [
-      'Middle',
-      'Support'
-    ],
-    roles: [
-      'Burst',
-      'Mage'
-    ],
+    positions: ['Middle', 'Support'],
+    roles: ['Burst', 'Mage'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -13585,8 +12692,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 100,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 161,
@@ -13597,82 +12704,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 590,
-        perLevel: 102
+        perLevel: 102,
       },
       healthRegen: {
         flat: 5.5,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 469,
-        perLevel: 21
+        perLevel: 21,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 22,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 55,
-        perLevel: 3.142
+        perLevel: 3.142,
       },
       movespeed: {
-        flat: 340
+        flat: 340,
       },
       acquisitionRadius: {
-        flat: 575
+        flat: 575,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.643,
-        perLevel: 1.59
+        perLevel: 1.59,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.1
+        flat: -0.1,
       },
       attackRange: {
-        flat: 525
-      }
+        flat: 525,
+      },
     },
-    positions: [
-      'Middle',
-      'Support'
-    ],
-    roles: [
-      'Artillery',
-      'Mage',
-      'Support'
-    ],
+    positions: ['Middle', 'Support'],
+    roles: ['Artillery', 'Mage', 'Support'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -13680,8 +12780,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 100,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 711,
@@ -13692,80 +12792,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 590,
-        perLevel: 104
+        perLevel: 104,
       },
       healthRegen: {
         flat: 6.5,
-        perLevel: 0.6
+        perLevel: 0.6,
       },
       mana: {
         flat: 490,
-        perLevel: 32
+        perLevel: 32,
       },
       manaRegen: {
         flat: 6,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 23,
-        perLevel: 4.45
+        perLevel: 4.45,
       },
       magicResistance: {
         flat: 28,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 54,
-        perLevel: 2.75
+        perLevel: 2.75,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 750
+        flat: 750,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 30
+        flat: 30,
       },
       gameplayRadius: {
-        flat: 55
+        flat: 55,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.669,
-        perLevel: 1
+        perLevel: 1,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.144
+        flat: -0.144,
       },
       attackRange: {
-        flat: 550
-      }
+        flat: 550,
+      },
     },
-    positions: [
-      'Middle'
-    ],
-    roles: [
-      'Burst',
-      'Mage'
-    ],
+    positions: ['Middle'],
+    roles: ['Burst', 'Mage'],
     attributeRatings: {
       damage: 3,
       toughness: 2,
@@ -13773,8 +12868,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 90,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 254,
@@ -13785,78 +12880,72 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 655,
-        perLevel: 99
+        perLevel: 99,
       },
       healthRegen: {
         flat: 10,
-        perLevel: 1
+        perLevel: 1,
       },
       mana: {
         flat: 295,
-        perLevel: 65
+        perLevel: 65,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 0.65
+        perLevel: 0.65,
       },
       armor: {
         flat: 30,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 63,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 340
+        flat: 340,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.644,
-        perLevel: 2
+        perLevel: 2,
       },
       attackSpeedRatio: {
-        flat: 0.644
+        flat: 0.644,
       },
       attackCastTime: {
-        flat: 0.36
+        flat: 0.36,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Jungle'
-    ],
-    roles: [
-      'Assassin',
-      'Diver',
-      'Fighter'
-    ],
+    positions: ['Jungle'],
+    roles: ['Assassin', 'Diver', 'Fighter'],
     attributeRatings: {
       damage: 2,
       toughness: 2,
@@ -13864,8 +12953,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 55,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 234,
@@ -13876,73 +12965,67 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 630,
-        perLevel: 109
+        perLevel: 109,
       },
       healthRegen: {
         flat: 7,
-        perLevel: 0.7
+        perLevel: 0.7,
       },
       armor: {
         flat: 34,
-        perLevel: 4.6
+        perLevel: 4.6,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 57,
-        perLevel: 3.5
+        perLevel: 3.5,
       },
       movespeed: {
-        flat: 345
+        flat: 345,
       },
       acquisitionRadius: {
-        flat: 775
+        flat: 775,
       },
       selectionRadius: {
-        flat: 125
+        flat: 125,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.658,
-        perLevel: 2.5
+        perLevel: 2.5,
       },
       attackSpeedRatio: {
-        flat: 0.658
+        flat: 0.658,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.136
+        flat: -0.136,
       },
       attackRange: {
-        flat: 200
-      }
+        flat: 200,
+      },
     },
-    positions: [
-      'Jungle'
-    ],
-    roles: [
-      'Assassin',
-      'Fighter',
-      'Skirmisher'
-    ],
+    positions: ['Jungle'],
+    roles: ['Assassin', 'Fighter', 'Skirmisher'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -13950,8 +13033,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 20,
-      difficulty: 3
-    }
+      difficulty: 3,
+    },
   },
   {
     id: 112,
@@ -13962,80 +13045,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 600,
-        perLevel: 100
+        perLevel: 100,
       },
       healthRegen: {
         flat: 8,
-        perLevel: 0.65
+        perLevel: 0.65,
       },
       mana: {
         flat: 405,
-        perLevel: 45
+        perLevel: 45,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 23,
-        perLevel: 4.4
+        perLevel: 4.4,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 53,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 525
+        flat: 525,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.658,
-        perLevel: 2.11
+        perLevel: 2.11,
       },
       attackSpeedRatio: {
-        flat: 0.658
+        flat: 0.658,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.12
+        flat: -0.12,
       },
       attackRange: {
-        flat: 525
-      }
+        flat: 525,
+      },
     },
-    positions: [
-      'Middle'
-    ],
-    roles: [
-      'Battlemage',
-      'Mage'
-    ],
+    positions: ['Middle'],
+    roles: ['Battlemage', 'Mage'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -14043,8 +13121,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 90,
-      difficulty: 3
-    }
+      difficulty: 3,
+    },
   },
   {
     id: 8,
@@ -14055,77 +13133,70 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 607,
-        perLevel: 110
+        perLevel: 110,
       },
       healthRegen: {
         flat: 7,
-        perLevel: 0.6
+        perLevel: 0.6,
       },
       mana: {
-        flat: 2
+        flat: 2,
       },
       armor: {
         flat: 27,
-        perLevel: 4.5
+        perLevel: 4.5,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 55,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.658,
-        perLevel: 2
+        perLevel: 2,
       },
       attackSpeedRatio: {
-        flat: 0.658
+        flat: 0.658,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.52
+        flat: 1.52,
       },
       attackDelayOffset: {
-        flat: -0.072
+        flat: -0.072,
       },
       attackRange: {
-        flat: 450
-      }
+        flat: 450,
+      },
     },
-    positions: [
-      'Middle',
-      'Top'
-    ],
-    roles: [
-      'Battlemage',
-      'Fighter',
-      'Mage'
-    ],
+    positions: ['Middle', 'Top'],
+    roles: ['Battlemage', 'Fighter', 'Mage'],
     attributeRatings: {
       damage: 3,
       toughness: 2,
@@ -14133,8 +13204,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 100,
-      difficulty: 3
-    }
+      difficulty: 3,
+    },
   },
   {
     id: 106,
@@ -14145,79 +13216,72 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 650,
-        perLevel: 104
+        perLevel: 104,
       },
       healthRegen: {
         flat: 9,
-        perLevel: 0.75
+        perLevel: 0.75,
       },
       mana: {
         flat: 350,
-        perLevel: 70
+        perLevel: 70,
       },
       manaRegen: {
         flat: 6.25,
-        perLevel: 0.5
+        perLevel: 0.5,
       },
       armor: {
         flat: 31,
-        perLevel: 5.2
+        perLevel: 5.2,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 60,
-        perLevel: 3.5
+        perLevel: 3.5,
       },
       movespeed: {
-        flat: 340
+        flat: 340,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 125
+        flat: 125,
       },
       pathingRadius: {
-        flat: 50
+        flat: 50,
       },
       gameplayRadius: {
-        flat: 80
+        flat: 80,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 2
+        perLevel: 2,
       },
       attackSpeedRatio: {
-        flat: 0.7
+        flat: 0.7,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackRange: {
-        flat: 150
-      }
+        flat: 150,
+      },
     },
-    positions: [
-      'Jungle',
-      'Top'
-    ],
-    roles: [
-      'Fighter',
-      'Juggernaut',
-      'Tank'
-    ],
+    positions: ['Jungle', 'Top'],
+    roles: ['Fighter', 'Juggernaut', 'Tank'],
     attributeRatings: {
       damage: 2,
       toughness: 3,
@@ -14225,8 +13289,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 30,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 19,
@@ -14237,82 +13301,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 620,
-        perLevel: 99
+        perLevel: 99,
       },
       healthRegen: {
         flat: 4,
-        perLevel: 0.75
+        perLevel: 0.75,
       },
       mana: {
         flat: 280,
-        perLevel: 35
+        perLevel: 35,
       },
       manaRegen: {
         flat: 7.45,
-        perLevel: 0.6
+        perLevel: 0.6,
       },
       armor: {
         flat: 33,
-        perLevel: 4.4
+        perLevel: 4.4,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 60,
-        perLevel: 2.75
+        perLevel: 2.75,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 74.75
+        flat: 74.75,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.638,
-        perLevel: 2.3
+        perLevel: 2.3,
       },
       attackSpeedRatio: {
-        flat: 0.638
+        flat: 0.638,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.125
+        flat: -0.125,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Jungle',
-      'Top'
-    ],
-    roles: [
-      'Diver',
-      'Fighter',
-      'Tank'
-    ],
+    positions: ['Jungle', 'Top'],
+    roles: ['Diver', 'Fighter', 'Tank'],
     attributeRatings: {
       damage: 2,
       toughness: 2,
@@ -14320,8 +13377,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 30,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 62,
@@ -14332,82 +13389,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 610,
-        perLevel: 99
+        perLevel: 99,
       },
       healthRegen: {
         flat: 3.5,
-        perLevel: 0.65
+        perLevel: 0.65,
       },
       mana: {
         flat: 330,
-        perLevel: 65
+        perLevel: 65,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 31,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 28,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 66,
-        perLevel: 3.5
+        perLevel: 3.5,
       },
       movespeed: {
-        flat: 340
+        flat: 340,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.69,
-        perLevel: 3
+        perLevel: 3,
       },
       attackSpeedRatio: {
-        flat: 0.658
+        flat: 0.658,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.092
+        flat: -0.092,
       },
       attackRange: {
-        flat: 175
-      }
+        flat: 175,
+      },
     },
-    positions: [
-      'Jungle',
-      'Top'
-    ],
-    roles: [
-      'Diver',
-      'Fighter',
-      'Tank'
-    ],
+    positions: ['Jungle', 'Top'],
+    roles: ['Diver', 'Fighter', 'Tank'],
     attributeRatings: {
       damage: 2,
       toughness: 2,
@@ -14415,8 +13465,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 55,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 498,
@@ -14427,76 +13477,72 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 630,
-        perLevel: 107
+        perLevel: 107,
       },
       healthRegen: {
         flat: 3.25,
-        perLevel: 0.75
+        perLevel: 0.75,
       },
       mana: {
         flat: 340,
-        perLevel: 40
+        perLevel: 40,
       },
       manaRegen: {
         flat: 8.25,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 25,
-        perLevel: 4.2
+        perLevel: 4.2,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 60,
-        perLevel: 3.5
+        perLevel: 3.5,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 800
+        flat: 800,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.658,
-        perLevel: 3.9
+        perLevel: 3.9,
       },
       attackSpeedRatio: {
-        flat: 0.658
+        flat: 0.658,
       },
       attackCastTime: {
-        flat: 0.283
+        flat: 0.283,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackRange: {
-        flat: 525
-      }
+        flat: 525,
+      },
     },
-    positions: [
-      'Bottom'
-    ],
-    roles: [
-      'Marksman'
-    ],
+    positions: ['Bottom'],
+    roles: ['Marksman'],
     attributeRatings: {
       damage: 3,
       toughness: 2,
@@ -14504,8 +13550,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 30,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 101,
@@ -14516,82 +13562,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 596,
-        perLevel: 106
+        perLevel: 106,
       },
       healthRegen: {
         flat: 5.5,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 400,
-        perLevel: 22
+        perLevel: 22,
       },
       manaRegen: {
         flat: 6.85,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 22,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 55,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 340
+        flat: 340,
       },
       acquisitionRadius: {
-        flat: 600
+        flat: 600,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.658,
-        perLevel: 1.36
+        perLevel: 1.36,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.1
+        flat: -0.1,
       },
       attackRange: {
-        flat: 525
-      }
+        flat: 525,
+      },
     },
-    positions: [
-      'Middle',
-      'Support'
-    ],
-    roles: [
-      'Artillery',
-      'Mage',
-      'Support'
-    ],
+    positions: ['Middle', 'Support'],
+    roles: ['Artillery', 'Mage', 'Support'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -14599,8 +13638,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 90,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 5,
@@ -14611,78 +13650,72 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 640,
-        perLevel: 106
+        perLevel: 106,
       },
       healthRegen: {
         flat: 8,
-        perLevel: 0.7
+        perLevel: 0.7,
       },
       mana: {
         flat: 274,
-        perLevel: 55
+        perLevel: 55,
       },
       manaRegen: {
         flat: 7.25,
-        perLevel: 0.45
+        perLevel: 0.45,
       },
       armor: {
         flat: 35,
-        perLevel: 4.4
+        perLevel: 4.4,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 63,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 345
+        flat: 345,
       },
       acquisitionRadius: {
-        flat: 800
+        flat: 800,
       },
       selectionRadius: {
-        flat: 108.333
+        flat: 108.333,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.645,
-        perLevel: 3.5
+        perLevel: 3.5,
       },
       attackSpeedRatio: {
-        flat: 0.645
+        flat: 0.645,
       },
       attackCastTime: {
-        flat: 0.29
+        flat: 0.29,
       },
       attackTotalTime: {
-        flat: 1.55
+        flat: 1.55,
       },
       attackRange: {
-        flat: 175
-      }
+        flat: 175,
+      },
     },
-    positions: [
-      'Jungle'
-    ],
-    roles: [
-      'Diver',
-      'Fighter',
-      'Tank'
-    ],
+    positions: ['Jungle'],
+    roles: ['Diver', 'Fighter', 'Tank'],
     attributeRatings: {
       damage: 2,
       toughness: 2,
@@ -14690,8 +13723,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 35,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 157,
@@ -14702,78 +13735,70 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 590,
-        perLevel: 110
+        perLevel: 110,
       },
       healthRegen: {
         flat: 6.5,
-        perLevel: 0.9
+        perLevel: 0.9,
       },
       mana: {
-        flat: 100
+        flat: 100,
       },
       armor: {
         flat: 32,
-        perLevel: 4.6
+        perLevel: 4.6,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 60,
-        perLevel: 2.5
+        perLevel: 2.5,
       },
       movespeed: {
-        flat: 345
+        flat: 345,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 32
+        flat: 32,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.697,
-        perLevel: 3.5
+        perLevel: 3.5,
       },
       attackSpeedRatio: {
-        flat: 0.67
+        flat: 0.67,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.08
+        flat: -0.08,
       },
       attackRange: {
-        flat: 175
-      }
+        flat: 175,
+      },
     },
-    positions: [
-      'Bottom',
-      'Middle',
-      'Top'
-    ],
-    roles: [
-      'Assassin',
-      'Fighter',
-      'Skirmisher'
-    ],
+    positions: ['Bottom', 'Middle', 'Top'],
+    roles: ['Assassin', 'Fighter', 'Skirmisher'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -14781,8 +13806,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 2,
       abilityReliance: 20,
-      difficulty: 3
-    }
+      difficulty: 3,
+    },
   },
   {
     id: 777,
@@ -14793,77 +13818,70 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 620,
-        perLevel: 105
+        perLevel: 105,
       },
       healthRegen: {
         flat: 7.5,
-        perLevel: 0.75
+        perLevel: 0.75,
       },
       mana: {
-        flat: 500
+        flat: 500,
       },
       armor: {
         flat: 33,
-        perLevel: 4.6
+        perLevel: 4.6,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 60,
-        perLevel: 2
+        perLevel: 2,
       },
       movespeed: {
-        flat: 345
+        flat: 345,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 32
+        flat: 32,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 3.5
+        perLevel: 3.5,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.08
+        flat: -0.08,
       },
       attackRange: {
-        flat: 175
-      }
+        flat: 175,
+      },
     },
-    positions: [
-      'Middle',
-      'Top'
-    ],
-    roles: [
-      'Assassin',
-      'Fighter',
-      'Skirmisher'
-    ],
+    positions: ['Middle', 'Top'],
+    roles: ['Assassin', 'Fighter', 'Skirmisher'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -14871,8 +13889,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 1,
       abilityReliance: 45,
-      difficulty: 3
-    }
+      difficulty: 3,
+    },
   },
   {
     id: 83,
@@ -14883,78 +13901,72 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 650,
-        perLevel: 114
+        perLevel: 114,
       },
       healthRegen: {
         flat: 8,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       mana: {
         flat: 300,
-        perLevel: 60
+        perLevel: 60,
       },
       manaRegen: {
         flat: 7.5,
-        perLevel: 0.75
+        perLevel: 0.75,
       },
       armor: {
         flat: 36,
-        perLevel: 4.5
+        perLevel: 4.5,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 62,
-        perLevel: 5
+        perLevel: 5,
       },
       movespeed: {
-        flat: 340
+        flat: 340,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 125
+        flat: 125,
       },
       pathingRadius: {
-        flat: 50
+        flat: 50,
       },
       gameplayRadius: {
-        flat: 80
+        flat: 80,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 2
+        perLevel: 2,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.33
+        flat: 0.33,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackRange: {
-        flat: 175
-      }
+        flat: 175,
+      },
     },
-    positions: [
-      'Top'
-    ],
-    roles: [
-      'Fighter',
-      'Juggernaut',
-      'Tank'
-    ],
+    positions: ['Top'],
+    roles: ['Fighter', 'Juggernaut', 'Tank'],
     attributeRatings: {
       damage: 2,
       toughness: 2,
@@ -14962,8 +13974,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 2,
       abilityReliance: 55,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 804,
@@ -14974,76 +13986,72 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 600,
-        perLevel: 110
+        perLevel: 110,
       },
       healthRegen: {
         flat: 4,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 275,
-        perLevel: 45
+        perLevel: 45,
       },
       manaRegen: {
         flat: 7.5,
-        perLevel: 0.75
+        perLevel: 0.75,
       },
       armor: {
         flat: 25,
-        perLevel: 4.4
+        perLevel: 4.4,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 56,
-        perLevel: 2.5
+        perLevel: 2.5,
       },
       movespeed: {
-        flat: 325
+        flat: 325,
       },
       acquisitionRadius: {
-        flat: 800
+        flat: 800,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 30
+        flat: 30,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.65,
-        perLevel: 2
+        perLevel: 2,
       },
       attackSpeedRatio: {
-        flat: 0.65
+        flat: 0.65,
       },
       attackCastTime: {
-        flat: 0.25
+        flat: 0.25,
       },
       attackTotalTime: {
-        flat: 1.538
+        flat: 1.538,
       },
       attackRange: {
-        flat: 575
-      }
+        flat: 575,
+      },
     },
-    positions: [
-      'Bottom'
-    ],
-    roles: [
-      'Marksman'
-    ],
+    positions: ['Bottom'],
+    roles: ['Marksman'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -15051,8 +14059,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 0,
       abilityReliance: 35,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 350,
@@ -15063,78 +14071,72 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 500,
-        perLevel: 69
+        perLevel: 69,
       },
       healthRegen: {
         flat: 5,
-        perLevel: 0.55
+        perLevel: 0.55,
       },
       mana: {
         flat: 440,
-        perLevel: 45
+        perLevel: 45,
       },
       manaRegen: {
         flat: 10,
-        perLevel: 0.4
+        perLevel: 0.4,
       },
       armor: {
         flat: 25,
-        perLevel: 4.2
+        perLevel: 4.2,
       },
       magicResistance: {
         flat: 25,
-        perLevel: 1.1
+        perLevel: 1.1,
       },
       attackDamage: {
         flat: 49,
-        perLevel: 3.1
+        perLevel: 3.1,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 475
+        flat: 475,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 30
+        flat: 30,
       },
       gameplayRadius: {
-        flat: 55
+        flat: 55,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.625,
-        perLevel: 1
+        perLevel: 1,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.25
+        flat: 0.25,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackRange: {
-        flat: 425
-      }
+        flat: 425,
+      },
     },
-    positions: [
-      'Support'
-    ],
-    roles: [
-      'Enchanter',
-      'Mage',
-      'Support'
-    ],
+    positions: ['Support'],
+    roles: ['Enchanter', 'Mage', 'Support'],
     attributeRatings: {
       damage: 1,
       toughness: 1,
@@ -15142,8 +14144,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 3,
       abilityReliance: 100,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 154,
@@ -15154,72 +14156,64 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 685,
-        perLevel: 109
+        perLevel: 109,
       },
       healthRegen: {
         flat: 5,
-        perLevel: 0.5
+        perLevel: 0.5,
       },
       armor: {
         flat: 33,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 32,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 60,
-        perLevel: 3.4
+        perLevel: 3.4,
       },
       movespeed: {
-        flat: 340
+        flat: 340,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 140
+        flat: 140,
       },
       pathingRadius: {
-        flat: 43.075
+        flat: 43.075,
       },
       gameplayRadius: {
-        flat: 80
+        flat: 80,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.736,
-        perLevel: 1.6
+        perLevel: 1.6,
       },
       attackSpeedRatio: {
-        flat: 0.638
+        flat: 0.638,
       },
       attackCastTime: {
-        flat: 0.363
+        flat: 0.363,
       },
       attackTotalTime: {
-        flat: 1.568
+        flat: 1.568,
       },
       attackRange: {
-        flat: 175
-      }
+        flat: 175,
+      },
     },
-    positions: [
-      'Jungle',
-      'Support',
-      'Top'
-    ],
-    roles: [
-      'Fighter',
-      'Tank',
-      'Vanguard'
-    ],
+    positions: ['Jungle', 'Support', 'Top'],
+    roles: ['Fighter', 'Tank', 'Vanguard'],
     attributeRatings: {
       damage: 2,
       toughness: 3,
@@ -15227,8 +14221,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 100,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 238,
@@ -15239,78 +14233,73 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 654,
-        perLevel: 99
+        perLevel: 99,
       },
       healthRegen: {
         flat: 7,
-        perLevel: 0.65
+        perLevel: 0.65,
       },
       mana: {
-        flat: 200
+        flat: 200,
       },
       manaRegen: {
-        flat: 50
+        flat: 50,
       },
       armor: {
         flat: 32,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 29,
-        perLevel: 2.05
+        perLevel: 2.05,
       },
       attackDamage: {
         flat: 63,
-        perLevel: 3.4
+        perLevel: 3.4,
       },
       movespeed: {
-        flat: 345
+        flat: 345,
       },
       acquisitionRadius: {
-        flat: 400
+        flat: 400,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.651,
-        perLevel: 3.3
+        perLevel: 3.3,
       },
       attackSpeedRatio: {
-        flat: 0.651
+        flat: 0.651,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.102
+        flat: -0.102,
       },
       attackRange: {
-        flat: 125
-      }
+        flat: 125,
+      },
     },
-    positions: [
-      'Jungle',
-      'Middle'
-    ],
-    roles: [
-      'Assassin'
-    ],
+    positions: ['Jungle', 'Middle'],
+    roles: ['Assassin'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -15318,8 +14307,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 1,
       abilityReliance: 55,
-      difficulty: 3
-    }
+      difficulty: 3,
+    },
   },
   {
     id: 221,
@@ -15330,79 +14319,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 600,
-        perLevel: 110
+        perLevel: 110,
       },
       healthRegen: {
         flat: 3.25,
-        perLevel: 0.7
+        perLevel: 0.7,
       },
       mana: {
         flat: 250,
-        perLevel: 45
+        perLevel: 45,
       },
       manaRegen: {
         flat: 6,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 24,
-        perLevel: 4.2
+        perLevel: 4.2,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 56,
-        perLevel: 2
+        perLevel: 2,
       },
       movespeed: {
-        flat: 330
+        flat: 330,
       },
       acquisitionRadius: {
-        flat: 800
+        flat: 800,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 40
+        flat: 40,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.658,
-        perLevel: 2
+        perLevel: 2,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.144
+        flat: -0.144,
       },
       attackRange: {
-        flat: 500
-      }
+        flat: 500,
+      },
     },
-    positions: [
-      'Bottom'
-    ],
-    roles: [
-      'Marksman'
-    ],
+    positions: ['Bottom'],
+    roles: ['Marksman'],
     attributeRatings: {
       damage: 2,
       toughness: 1,
@@ -15410,8 +14395,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 3,
       utility: 0,
       abilityReliance: 35,
-      difficulty: 3
-    }
+      difficulty: 3,
+    },
   },
   {
     id: 115,
@@ -15422,81 +14407,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 606,
-        perLevel: 106
+        perLevel: 106,
       },
       healthRegen: {
         flat: 6.5,
-        perLevel: 0.6
+        perLevel: 0.6,
       },
       mana: {
         flat: 480,
-        perLevel: 23.5
+        perLevel: 23.5,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 21,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 55,
-        perLevel: 3.1
+        perLevel: 3.1,
       },
       movespeed: {
-        flat: 325
+        flat: 325,
       },
       acquisitionRadius: {
-        flat: 800
+        flat: 800,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 30
+        flat: 30,
       },
       gameplayRadius: {
-        flat: 55
+        flat: 55,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.656,
-        perLevel: 2
+        perLevel: 2,
       },
       attackSpeedRatio: {
-        flat: 0.656
+        flat: 0.656,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.1
+        flat: -0.1,
       },
       attackRange: {
-        flat: 550
-      }
+        flat: 550,
+      },
     },
-    positions: [
-      'Bottom',
-      'Middle'
-    ],
-    roles: [
-      'Artillery',
-      'Mage'
-    ],
+    positions: ['Bottom', 'Middle'],
+    roles: ['Artillery', 'Mage'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -15504,8 +14483,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 90,
-      difficulty: 1
-    }
+      difficulty: 1,
+    },
   },
   {
     id: 26,
@@ -15516,81 +14495,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 574,
-        perLevel: 96
+        perLevel: 96,
       },
       healthRegen: {
         flat: 5.5,
-        perLevel: 0.5
+        perLevel: 0.5,
       },
       mana: {
         flat: 452,
-        perLevel: 50
+        perLevel: 50,
       },
       manaRegen: {
         flat: 11.35,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 24,
-        perLevel: 5
+        perLevel: 5,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 52,
-        perLevel: 3
+        perLevel: 3,
       },
       movespeed: {
-        flat: 335
+        flat: 335,
       },
       acquisitionRadius: {
-        flat: 550
+        flat: 550,
       },
       selectionRadius: {
-        flat: 135
+        flat: 135,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.658,
-        perLevel: 2.13
+        perLevel: 2.13,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.12
+        flat: -0.12,
       },
       attackRange: {
-        flat: 550
-      }
+        flat: 550,
+      },
     },
-    positions: [
-      'Support'
-    ],
-    roles: [
-      'Mage',
-      'Specialist',
-      'Support'
-    ],
+    positions: ['Support'],
+    roles: ['Mage', 'Specialist', 'Support'],
     attributeRatings: {
       damage: 2,
       toughness: 1,
@@ -15598,8 +14571,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 3,
       abilityReliance: 100,
-      difficulty: 2
-    }
+      difficulty: 2,
+    },
   },
   {
     id: 142,
@@ -15610,81 +14583,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 630,
-        perLevel: 106
+        perLevel: 106,
       },
       healthRegen: {
         flat: 7.5,
-        perLevel: 0.6
+        perLevel: 0.6,
       },
       mana: {
         flat: 425,
-        perLevel: 25
+        perLevel: 25,
       },
       manaRegen: {
         flat: 8,
-        perLevel: 0.65
+        perLevel: 0.65,
       },
       armor: {
         flat: 21,
-        perLevel: 4.7
+        perLevel: 4.7,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 58,
-        perLevel: 3.3
+        perLevel: 3.3,
       },
       movespeed: {
-        flat: 340
+        flat: 340,
       },
       acquisitionRadius: {
-        flat: 550
+        flat: 550,
       },
       selectionRadius: {
-        flat: 100
+        flat: 100,
       },
       pathingRadius: {
-        flat: 30
+        flat: 30,
       },
       gameplayRadius: {
-        flat: 55
+        flat: 55,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.658,
-        perLevel: 2.5
+        perLevel: 2.5,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.139
+        flat: -0.139,
       },
       attackRange: {
-        flat: 550
-      }
+        flat: 550,
+      },
     },
-    positions: [
-      'Middle'
-    ],
-    roles: [
-      'Burst',
-      'Mage',
-      'Support'
-    ],
+    positions: ['Middle'],
+    roles: ['Burst', 'Mage', 'Support'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -15692,8 +14659,8 @@ export const championsLite: ChampionLite[] = [
       mobility: 2,
       utility: 1,
       abilityReliance: 100,
-      difficulty: 3
-    }
+      difficulty: 3,
+    },
   },
   {
     id: 143,
@@ -15704,81 +14671,75 @@ export const championsLite: ChampionLite[] = [
     stats: {
       health: {
         flat: 574,
-        perLevel: 93
+        perLevel: 93,
       },
       healthRegen: {
         flat: 5.5,
-        perLevel: 0.5
+        perLevel: 0.5,
       },
       mana: {
         flat: 418,
-        perLevel: 25
+        perLevel: 25,
       },
       manaRegen: {
         flat: 7,
-        perLevel: 0.8
+        perLevel: 0.8,
       },
       armor: {
         flat: 29,
-        perLevel: 4.2
+        perLevel: 4.2,
       },
       magicResistance: {
         flat: 30,
-        perLevel: 1.3
+        perLevel: 1.3,
       },
       attackDamage: {
         flat: 53,
-        perLevel: 3.2
+        perLevel: 3.2,
       },
       movespeed: {
-        flat: 340
+        flat: 340,
       },
       acquisitionRadius: {
-        flat: 575
+        flat: 575,
       },
       selectionRadius: {
-        flat: 120
+        flat: 120,
       },
       pathingRadius: {
-        flat: 35
+        flat: 35,
       },
       gameplayRadius: {
-        flat: 65
+        flat: 65,
       },
       criticalStrikeDamage: {
-        flat: 175
+        flat: 175,
       },
       criticalStrikeDamageModifier: {
-        flat: 1
+        flat: 1,
       },
       attackSpeed: {
         flat: 0.681,
-        perLevel: 2.11
+        perLevel: 2.11,
       },
       attackSpeedRatio: {
-        flat: 0.625
+        flat: 0.625,
       },
       attackCastTime: {
-        flat: 0.3
+        flat: 0.3,
       },
       attackTotalTime: {
-        flat: 1.6
+        flat: 1.6,
       },
       attackDelayOffset: {
-        flat: -0.154
+        flat: -0.154,
       },
       attackRange: {
-        flat: 575
-      }
+        flat: 575,
+      },
     },
-    positions: [
-      'Support'
-    ],
-    roles: [
-      'Catcher',
-      'Mage',
-      'Support'
-    ],
+    positions: ['Support'],
+    roles: ['Catcher', 'Mage', 'Support'],
     attributeRatings: {
       damage: 3,
       toughness: 1,
@@ -15786,7 +14747,7 @@ export const championsLite: ChampionLite[] = [
       mobility: 1,
       utility: 1,
       abilityReliance: 100,
-      difficulty: 1
-    }
-  }
+      difficulty: 1,
+    },
+  },
 ]

@@ -1,10 +1,8 @@
-<script lang="ts" setup>
-
-</script>
+<script lang="ts" setup></script>
 
 <template>
-  <div class="  grid grid-rows-4 h-fit gap-6 w-70 ">
-    <div class="w-full  h-14 rounded-xl   border-b3 px-5">
+  <div class="grid grid-rows-4 h-fit gap-6 w-70">
+    <div class="w-full h-14 rounded-xl border-b3 px-5">
       <input
         type="text"
         placeholder="Save set as..."

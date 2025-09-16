@@ -24,7 +24,7 @@ function getRouteChain(path: string) {
 }
 
 // Example:
-const chain = computed (() => getRouteChain(route.fullPath))
+const chain = computed(() => getRouteChain(route.fullPath))
 </script>
 
 <template>
@@ -33,33 +33,41 @@ const chain = computed (() => getRouteChain(route.fullPath))
       :key="route.fullPath"
       class="px-3">
       <template
-        v-for="link, i in chain"
+        v-for="(link, i) in chain"
         :key="link.name">
-        <BreadcrumbItem class="hidden md:block not-last:opacity-60 hover:*:first:opacity-90">
-          <BreadcrumbLink as-child>
-            <ULink
-              v-if="link.name == 'pocket'"
-              to="/backpack"
-              class="capitalize  font-medium transition-all   text-4 ">
-              Backpack
-            </ULink>
-            <ULink
-              v-else-if="link.meta.level != 0 && link.path != route.path"
-              :to="String(link.path)"
-              class="capitalize  font-medium transition-all   text-4 ">
-              {{ link.meta?.title || link.name }}
-            </ULink>
-            <span
-              v-else
-              class=" font-medium capitalize text-4">
-              {{ link.name == 'champion_key' ? ix().champNameByKey(String(route.params.champion_key)) : link.name == 'pocket_key' ? ps().getPocket(String(route.params.pocket_key)).name : link.meta?.title || link.name }}
-            </span>
-          </BreadcrumbLink>
-        </BreadcrumbItem>
-
-        <BreadcrumbSeparator
-          v-if="i != chain.length - 1"
-          class="hidden md:block" />
+        <template v-if="link.meta?.title != 'Overview'">
+          <BreadcrumbSeparator
+            v-if="i != 0"
+            class="hidden md:block" />
+          <BreadcrumbItem
+            class="hidden md:block not-last:opacity-60 hover:*:first:opacity-90">
+            <BreadcrumbLink as-child>
+              <ULink
+                v-if="link.name == 'pocket'"
+                to="/backpack"
+                class="capitalize font-medium transition-all text-md">
+                Backpack
+              </ULink>
+              <ULink
+                v-else-if="link.meta.level != 0 && link.path != route.path"
+                :to="String(link.path)"
+                class="capitalize font-medium transition-all text-md">
+                {{ link.meta?.title || link.name }}
+              </ULink>
+              <span
+                v-else
+                class="font-medium capitalize text-md">
+                {{
+                  link.name == "champion_key"
+                    ? ix().champNameByKey(String(route.params.champion_key))
+                    : link.name == "pocket_key"
+                      ? ps().getPocket(String(route.params.pocket_key)).name
+                      : link.meta?.title || link.name
+                }}
+              </span>
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+        </template>
       </template>
     </BreadcrumbList>
   </Breadcrumb>

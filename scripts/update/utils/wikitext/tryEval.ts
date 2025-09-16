@@ -15,10 +15,13 @@ export function tryEval(expr: string): string | null {
 }
 
 export function evaluateExpressions(str: string): string {
-  return str.replace(/(-?\d+(\.\d+)?(?:\s*[*/+-]\s*-?\d+(\.\d+)?)+)/g, (expr) => {
-    const result = tryEval(expr.trim())
-    return result !== null ? result : expr
-  })
+  return str.replace(
+    /(-?\d+(\.\d+)?(?:\s*[*/+-]\s*-?\d+(\.\d+)?)+)/g,
+    (expr) => {
+      const result = tryEval(expr.trim())
+      return result !== null ? result : expr
+    }
+  )
 }
 
 export function evaluateMathExpression(expression: string): string {
@@ -36,15 +39,17 @@ export function evalRange(expr: string): string {
 
 export function evalAp(expr: string) {
   const parsed = Parser.parse(expr)
-  return [1, 2, 3, 4, 5].map((x) => {
-    try {
-      const result = parsed.evaluate({ x })
-      return typeof result === 'number' && !Number.isNaN(result)
-        ? Number.parseFloat(result.toFixed(2)).toString()
-        : expr
-    }
-    catch {
-      return expr
-    }
-  }).join(' / ')
+  return [1, 2, 3, 4, 5]
+    .map((x) => {
+      try {
+        const result = parsed.evaluate({ x })
+        return typeof result === 'number' && !Number.isNaN(result)
+          ? Number.parseFloat(result.toFixed(2)).toString()
+          : expr
+      }
+      catch {
+        return expr
+      }
+    })
+    .join(' / ')
 }

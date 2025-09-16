@@ -12,7 +12,7 @@ export function useSupabaseSync<
   source: () => T,
   endpoint: string,
   getBody: (userId: string, value: T) => any,
-  schema: S, // S is a BaseSchema that outputs T
+  schema: S // S is a BaseSchema that outputs T
 ) {
   const user = useSupabaseUser()
   console.log('🌱 - useSupabaseSync - user:', user)
@@ -44,7 +44,8 @@ export function useSupabaseSync<
       console.warn('Validation failed, using schema defaults')
     }
 
-    const validated = parsed.success ? parsed.output : v.getDefaults(schema) as T
+    const validated
+      = parsed.success ? parsed.output : (v.getDefaults(schema) as T)
 
     await $fetch(endpoint, {
       method: 'POST',

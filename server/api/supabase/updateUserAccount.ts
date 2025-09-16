@@ -15,10 +15,7 @@ export default defineEventHandler(async (event) => {
 
   const { error } = await client
     .from('user_account')
-    .upsert(
-      { uuid: data.user.id, ...validatedAccount },
-      { onConflict: 'uuid' },
-    )
+    .upsert({ uuid: data.user.id, ...validatedAccount }, { onConflict: 'uuid' })
 
   if (error) {
     throw createError({ statusCode: 500, statusMessage: error.message })

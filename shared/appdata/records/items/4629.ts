@@ -6,56 +6,47 @@ const item: Item = {
     {
       id: 3067,
       name: 'Kindlegem',
-      gold: 800
+      gold: 800,
     },
     {
       id: 3113,
       name: 'Aether Wisp',
-      gold: 900
+      gold: 900,
     },
     {
       id: 3108,
       name: 'Fiendish Codex',
-      gold: 850
-    }
+      gold: 850,
+    },
   ],
   specialRecipe: 0,
   noEffects: false,
   removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4629_mage_t3_cosmicdrive.png',
   simpleDescription: 'Massive amounts of Cooldown Reduction',
-  nicknames: [
-    'hat'
-  ],
+  nicknames: ['hat'],
   passives: [
     {
       name: 'Spelldance',
       unique: true,
-      effects: 'Dealing magic damage or true damage damage to an enemy champion grants you 20 <b>bonus</b> movement speed ms for 4 seconds.'
-    }
+      effects:
+        'Dealing magic damage or true damage damage to an enemy champion grants you 20 <b>bonus</b> movement speed ms for 4 seconds.',
+    },
   ],
   stats: {
     abilityPower: 70,
     health: 350,
     percentMovespeed: 4,
-    abilityHaste: 25
+    abilityHaste: 25,
   },
   shop: {
     prices: {
       total: 3000,
       combined: 450,
-      sell: 1200
+      sell: 1200,
     },
-    tags: [
-      'MAGE',
-      'MOVEMENT'
-    ]
+    tags: ['MAGE', 'MOVEMENT'],
   },
-  maps: [
-    11,
-    12,
-    21,
-    35
-  ]
+  maps: [11, 12, 21, 35],
 }
 export default item

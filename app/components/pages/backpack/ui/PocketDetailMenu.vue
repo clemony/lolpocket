@@ -3,9 +3,9 @@ const { pocketKey } = defineProps<{
   pocketKey: string | null
 }>()
 
-const isDisabled = computed (() => pocketKey == null)
+const isDisabled = computed(() => pocketKey == null)
 
-const pocket = computed (() => {
+const pocket = computed(() => {
   if (!pocketKey)
     return
 
@@ -15,14 +15,18 @@ const pocket = computed (() => {
 
 <template>
   <div
-    class="flex items-center px-2  h-[45px] border-box"
+    class="flex items-center px-2 h-[45px] border-box"
     :class="cn('', { 'pointer-events-none opacity-50': isDisabled })">
     <div class="flex items-center gap-2">
       <!-- pin -->
       <Button
         v-tippy="'Pin to sidebar'"
         :variant="pocket?.location?.pinned ? 'shadow' : 'ghost'"
-        :class="cn('size-11 relative grid place-items-center *:absolute', { 'bg-b2/30': pocket?.location?.pinned })"
+        :class="
+          cn('size-11 relative grid place-items-center *:absolute', {
+            'bg-b2/30': pocket?.location?.pinned,
+          })
+        "
         @click="pocket.location.pinned = true">
         <icon
           v-if="!pocket?.location?.pinned"
@@ -59,12 +63,11 @@ const pocket = computed (() => {
 
       <!-- tags -->
 
-      <PocketTagsDropdown :pocket>
-      </PocketTagsDropdown>
+      <PocketTagsDropdown :pocket></PocketTagsDropdown>
       <!-- edit -->
       <Blink
         v-if="pocket && pocket?.key"
-        :to=" `/pocket/${pocket.key}`"
+        :to="`/pocket/${pocket.key}`"
         variant="ghost"
         class="size-11">
         <icon name="edit-line" />

@@ -6,18 +6,18 @@ const item: Item = {
     {
       id: 1042,
       name: 'Dagger',
-      gold: 250
+      gold: 250,
     },
     {
       id: 3086,
       name: 'Zeal',
-      gold: 1200
+      gold: 1200,
     },
     {
       id: 1042,
       name: 'Dagger',
-      gold: 250
-    }
+      gold: 250,
+    },
   ],
   specialRecipe: 0,
   noEffects: false,
@@ -27,29 +27,23 @@ const item: Item = {
     {
       name: 'Transcendence',
       unique: true,
-      effects: 'Basic attacks on-attack reduce the <b>remaining</b> cooldowns of your basic abilities by 15%.'
-    }
+      effects:
+        'Basic attacks on-attack reduce the <b>remaining</b> cooldowns of your basic abilities by 15%.',
+    },
   ],
   stats: {
     attackSpeed: 40,
     criticalStrikeChance: 25,
-    percentMovespeed: 4
+    percentMovespeed: 4,
   },
   shop: {
     prices: {
       total: 2650,
       combined: 950,
-      sell: 1060
+      sell: 1060,
     },
-    tags: [
-      'MARKSMAN'
-    ]
+    tags: ['MARKSMAN'],
   },
-  maps: [
-    11,
-    12,
-    21,
-    35
-  ]
+  maps: [11, 12, 21, 35],
 }
 export default item

@@ -10,26 +10,23 @@ const item: Item = {
     {
       name: 'Enduring Vitality',
       unique: true,
-      effects: 'Gain <img src="/img/icons/hsp.webp" class="tip-icon" />hsp per 100 <b>current</b> health you are missing, up to 60% at 2400 <b>current</b> health missing.'
-    }
+      effects:
+        'Gain <img src="/img/icons/hsp.webp" class="tip-icon" />hsp per 100 <b>current</b> health you are missing, up to 60% at 2400 <b>current</b> health missing.',
+    },
   ],
   stats: {
     armor: 50,
     magicResistance: 50,
-    abilityHaste: 25
+    abilityHaste: 25,
   },
   shop: {
     prices: {
       total: 0,
       combined: 1000,
-      sell: 0
+      sell: 0,
     },
-    tags: [
-      'SUPPORT'
-    ]
+    tags: ['SUPPORT'],
   },
-  maps: [
-    30
-  ]
+  maps: [30],
 }
 export default item

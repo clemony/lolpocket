@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:56 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:11 PM CDT
 
 const champion: Champion = {
   "id": 60,
@@ -129,14 +129,21 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "40 / 70 / 100 / 130 / 160",
-                "4% (+ 3% per 100 AP) of target's current health"
+                {
+                  "values": "40 / 70 / 100 / 130 / 160"
+                },
+                {
+                  "values": "4",
+                  "unit": "% (+ 3% per 100 AP) of target's current health"
+                }
               ]
             },
             {
               "attribute": "Capped Monster Damage",
               "modifiers": [
-                "75 / 100 / 125 / 150 / 175"
+                {
+                  "values": "75 / 100 / 125 / 150 / 175"
+                }
               ]
             }
           ]
@@ -169,14 +176,21 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "50 / 80 / 110 / 140 / 170",
-                "8% (+ 3% per 100 AP) of target's missing health"
+                {
+                  "values": "50 / 80 / 110 / 140 / 170"
+                },
+                {
+                  "values": "8",
+                  "unit": "% (+ 3% per 100 AP) of target's missing health"
+                }
               ]
             },
             {
               "attribute": "Capped Monster Damage",
               "modifiers": [
-                "75 / 100 / 125 / 150 / 175"
+                {
+                  "values": "75 / 100 / 125 / 150 / 175"
+                }
               ]
             }
           ]
@@ -213,8 +227,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "60 / 100 / 140 / 180 / 220",
-                "75% AP"
+                {
+                  "values": "60 / 100 / 140 / 180 / 220"
+                },
+                {
+                  "values": "75",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -250,7 +269,10 @@ const champion: Champion = {
             {
               "attribute": "Spiderling Bonus Attack Speed",
               "modifiers": [
-                "5 / 10 / 15 / 20 / 25%"
+                {
+                  "values": "5 / 10 / 15 / 20 / 25",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -261,7 +283,10 @@ const champion: Champion = {
             {
               "attribute": "Bonus Attack Speed",
               "modifiers": [
-                "60 / 75 / 90 / 105 / 120%"
+                {
+                  "values": "60 / 75 / 90 / 105 / 120",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -290,7 +315,10 @@ const champion: Champion = {
             {
               "attribute": "Stun Duration",
               "modifiers": [
-                "1.6 / 1.8 / 2 / 2.2 / 2.4 seconds"
+                {
+                  "values": "1.6 / 1.8 / 2 / 2.2 / 2.4",
+                  "unit": " seconds"
+                }
               ]
             }
           ]
@@ -328,7 +356,10 @@ const champion: Champion = {
             {
               "attribute": "Spider Effects Increase",
               "modifiers": [
-                "40 / 55 / 70 / 85 / 100%"
+                {
+                  "values": "40 / 55 / 70 / 85 / 100",
+                  "unit": "%"
+                }
               ]
             }
           ]

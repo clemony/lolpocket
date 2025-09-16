@@ -30,7 +30,7 @@ export const useMatchStore = defineStore('matchStore', () => {
 
   const seasonTotals = ref()
 
-  const analysisPatchSelect = computedAsync (() => ds.currentPatch)
+  const analysisPatchSelect = computedAsync(() => ds.currentPatch)
   const analysisQueueSelect = ref<number>(0)
 
   return {
@@ -43,6 +43,5 @@ export const useMatchStore = defineStore('matchStore', () => {
 
     analysisPatchSelect,
     analysisQueueSelect,
-
   }
 })

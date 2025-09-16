@@ -10,21 +10,20 @@ const item: Item = {
   active: [
     {
       unique: false,
-      effects: 'Summons a mist over the target location for 5 seconds, granting <img src="/img/icons/sight.webp" class="tip-icon" />sight of the area in a 375 radius and <img src="/img/icons/true-sight.webp" class="tip-icon" />revealing enemy <img src="/img/icons/stealthed-trap.webp" class="tip-icon" />traps within for 3 seconds.',
-      range: 800
-    }
+      effects:
+        'Summons a mist over the target location for 5 seconds, granting <img src="/img/icons/sight.webp" class="tip-icon" />sight of the area in a 375 radius and <img src="/img/icons/true-sight.webp" class="tip-icon" />revealing enemy <img src="/img/icons/stealthed-trap.webp" class="tip-icon" />traps within for 3 seconds.',
+      range: 800,
+    },
   ],
   stats: {},
   shop: {
     prices: {
       total: 0,
       combined: 0,
-      sell: 0
+      sell: 0,
     },
-    purchasable: false
+    purchasable: false,
   },
-  maps: [
-    30
-  ]
+  maps: [30],
 }
 export default item

@@ -15,7 +15,7 @@ useHead({
 onMounted(() => {
   document.documentElement.setAttribute(
     'data-theme',
-    as()?.settings?.theme ?? 'daylight',
+    as()?.settings?.theme ?? 'daylight'
   )
   ix().loadPatch()
 })

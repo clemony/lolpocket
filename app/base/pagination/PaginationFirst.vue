@@ -3,9 +3,12 @@ import type { PaginationFirstProps } from 'reka-ui'
 import { PaginationFirst } from 'reka-ui'
 import { computed } from 'vue'
 
-const props = withDefaults(defineProps<PaginationFirstProps & { class?: HTMLAttributes['class'] }>(), {
-  asChild: true,
-})
+const props = withDefaults(
+  defineProps<PaginationFirstProps & { class?: HTMLAttributes['class'] }>(),
+  {
+    asChild: true,
+  }
+)
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props
@@ -22,7 +25,7 @@ const delegatedProps = computed(() => {
       <slot>
         <icon
           name="left-pipe"
-          class="size-4 shrink-0 opacity-80 " />
+          class="size-4 shrink-0 opacity-80" />
       </slot>
     </button>
   </PaginationFirst>

@@ -24,7 +24,7 @@ watch(
       })
     }
   },
-  { immediate: true },
+  { immediate: true }
 )
 const searchResult = computed(() => {
   if (!searchQuery.value) {
@@ -44,7 +44,9 @@ watch(searchResult, (newSearchResults) => {
   <Input
     v-model="searchQuery"
     placeholder="Search Champions..."
-    :class="cn('size-full border-0 shadow-none py-0 m-0 size-full pl-8', props.class)"
+    :class="
+      cn('size-full border-0 shadow-none py-0 m-0 size-full pl-8', props.class)
+    "
     @update:model-value="emit('update:input', searchQuery)" />
 </template>
 

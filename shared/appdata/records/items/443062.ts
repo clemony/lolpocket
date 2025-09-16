@@ -10,26 +10,23 @@ const item: Item = {
     {
       name: 'Patronage',
       unique: true,
-      effects: 'Store 15% of post-mitigation damage dealt. Whenever the stored amount exceeds a value of 333, consume it to <img src="/img/icons/heal.webp" class="tip-icon" />heal yourself and the nearest allied champion for that same amount. Stored damage is reset every round and between each phase in a round.'
-    }
+      effects:
+        'Store 15% of post-mitigation damage dealt. Whenever the stored amount exceeds a value of 333, consume it to <img src="/img/icons/heal.webp" class="tip-icon" />heal yourself and the nearest allied champion for that same amount. Stored damage is reset every round and between each phase in a round.',
+    },
   ],
   stats: {
     abilityPower: 80,
     healAndShieldPower: 15,
-    abilityHaste: 20
+    abilityHaste: 20,
   },
   shop: {
     prices: {
       total: 0,
       combined: 1000,
-      sell: 0
+      sell: 0,
     },
-    tags: [
-      'MAGE'
-    ]
+    tags: ['MAGE'],
   },
-  maps: [
-    30
-  ]
+  maps: [30],
 }
 export default item

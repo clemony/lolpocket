@@ -6,18 +6,18 @@ const item: Item = {
     {
       id: 3057,
       name: 'Sheen',
-      gold: 900
+      gold: 900,
     },
     {
       id: 3113,
       name: 'Aether Wisp',
-      gold: 900
+      gold: 900,
     },
     {
       id: 1026,
       name: 'Blasting Wand',
-      gold: 850
-    }
+      gold: 850,
+    },
   ],
   specialRecipe: 0,
   noEffects: false,
@@ -28,30 +28,23 @@ const item: Item = {
     {
       name: 'Spellblade',
       unique: true,
-      effects: 'After using an ability, your next basic attack within 10 seconds gains 50% <b>bonus</b> attack speed and deals 75% <b>base</b> AD (+40% AP) <b>bonus</b> magic damage on-hit (1.5 second cooldown, starts after using the empowered attack).'
-    }
+      effects:
+        'After using an ability, your next basic attack within 10 seconds gains 50% <b>bonus</b> attack speed and deals 75% <b>base</b> AD (+40% AP) <b>bonus</b> magic damage on-hit (1.5 second cooldown, starts after using the empowered attack).',
+    },
   ],
   stats: {
     abilityPower: 100,
     percentMovespeed: 4,
-    abilityHaste: 10
+    abilityHaste: 10,
   },
   shop: {
     prices: {
       total: 2900,
       combined: 250,
-      sell: 1160
+      sell: 1160,
     },
-    tags: [
-      'MAGE',
-      'ONHIT_EFFECTS'
-    ]
+    tags: ['MAGE', 'ONHIT_EFFECTS'],
   },
-  maps: [
-    11,
-    12,
-    21,
-    35
-  ]
+  maps: [11, 12, 21, 35],
 }
 export default item

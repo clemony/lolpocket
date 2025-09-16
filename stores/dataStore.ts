@@ -16,7 +16,7 @@ export const useDataStore = defineStore(
       if (!patchList.value.length || now - lastFetched.value > oneDay) {
         try {
           const { data, error } = await useFetch(
-            '/api/index/patch-index.json',
+            '/api/index/patch-index.json'
           ).json<number[]>()
           if (!error.value && data.value) {
             patchList.value = data.value
@@ -54,5 +54,5 @@ export const useDataStore = defineStore(
       storage: piniaPluginPersistedstate.localStorage(),
       key: 'dataStore',
     },
-  },
+  }
 )

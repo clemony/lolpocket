@@ -8,7 +8,7 @@ const { pocket } = defineProps<{
   <Field class="px-3 w-full flex">
     <div
       v-if="pocket?.items && pocket?.items?.length"
-      class="w-full flex-wrap  py-3  flex gap-3.5">
+      class="w-full flex-wrap py-3 flex gap-3.5">
       <Placeholder
         v-for="set in pocket.items"
         :key="set.name"
@@ -21,8 +21,7 @@ const { pocket } = defineProps<{
             <Item
               v-if="i < 4"
               :id="item"
-              class="pointer-events-none rounded-lg size-7.5">
-            </Item>
+              class="pointer-events-none rounded-lg size-7.5"></Item>
           </template>
         </template>
       </Placeholder>

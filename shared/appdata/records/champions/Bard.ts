@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:55 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:11 PM CDT
 
 const champion: Champion = {
   "id": 432,
@@ -131,14 +131,22 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "80 / 120 / 160 / 200 / 240",
-                "80% AP"
+                {
+                  "values": "80 / 120 / 160 / 200 / 240"
+                },
+                {
+                  "values": "80",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Disable Duration",
               "modifiers": [
-                "1 / 1.2 / 1.4 / 1.6 / 1.8 seconds"
+                {
+                  "values": "1 / 1.2 / 1.4 / 1.6 / 1.8",
+                  "unit": " seconds"
+                }
               ]
             }
           ]
@@ -178,22 +186,38 @@ const champion: Champion = {
             {
               "attribute": "Minimum Heal",
               "modifiers": [
-                "25 / 50 / 75 / 100 / 125",
-                "30% AP"
+                {
+                  "values": "25 / 50 / 75 / 100 / 125"
+                },
+                {
+                  "values": "30",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Maximum Heal",
               "modifiers": [
-                "50 / 87.5 / 125 / 162.5 / 200",
-                "60% AP"
+                {
+                  "values": "50 / 87.5 / 125 / 162.5 / 200"
+                },
+                {
+                  "values": "60",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Bonus Movement Speed",
               "modifiers": [
-                "20 / 22.5 / 25 / 27.5 / 30%",
-                "5% per 100 AP"
+                {
+                  "values": "20 / 22.5 / 25 / 27.5 / 30",
+                  "unit": "%"
+                },
+                {
+                  "values": "5",
+                  "unit": "% per 100 AP"
+                }
               ]
             }
           ]

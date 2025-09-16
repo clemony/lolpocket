@@ -4,7 +4,9 @@ import { AccordionItem, useForwardProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { computed } from 'vue'
 
-const props = defineProps<AccordionItemProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<
+  AccordionItemProps & { class?: HTMLAttributes['class'] }
+>()
 
 const delegatedProps = reactiveOmit(props, 'class')
 

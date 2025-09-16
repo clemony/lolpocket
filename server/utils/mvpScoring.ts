@@ -133,15 +133,24 @@ const roleWeights: Record<string, Record<string, number>> = {
   },
 }
 
-export function normalizeStat(players: PlayerStats[], role: string, key: string) {
+export function normalizeStat(
+  players: PlayerStats[],
+  role: string,
+  key: string
+) {
   const values = players
     .filter(p => p.teamPosition?.toUpperCase() === role)
     .map((p) => {
       if (key === 'effectiveHealAndShielding') {
-        return (p.totalHealsOnTeammates || 0) + (p.totalDamageShieldedOnTeammates || 0)
+        return (
+          (p.totalHealsOnTeammates || 0)
+          + (p.totalDamageShieldedOnTeammates || 0)
+        )
       }
       if (key === 'deathsInverse') {
-        return p.deaths === 0 ? Math.max(...players.map(pp => pp.deaths || 1)) : 1 / p.deaths
+        return p.deaths === 0
+          ? Math.max(...players.map(pp => pp.deaths || 1))
+          : 1 / p.deaths
       }
       return (p[key as keyof PlayerStats] as number) || 0
     })
@@ -152,7 +161,9 @@ export function normalizeStat(players: PlayerStats[], role: string, key: string)
   return (player: PlayerStats) => {
     let val = 0
     if (key === 'effectiveHealAndShielding') {
-      val = (player.totalHealsOnTeammates || 0) + (player.totalDamageShieldedOnTeammates || 0)
+      val
+        = (player.totalHealsOnTeammates || 0)
+          + (player.totalDamageShieldedOnTeammates || 0)
     }
     else if (key === 'deathsInverse') {
       val = player.deaths === 0 ? max : 1 / player.deaths
@@ -171,7 +182,9 @@ export function calculateMvpScores(players: PlayerStats[]) {
 
   const roles = Object.keys(roleWeights)
   for (const role of roles) {
-    const rolePlayers = players.filter(p => p.teamPosition?.toUpperCase() === role)
+    const rolePlayers = players.filter(
+      p => p.teamPosition?.toUpperCase() === role
+    )
     if (!rolePlayers.length)
       continue
 
@@ -205,7 +218,8 @@ export function calculateMvpScores(players: PlayerStats[]) {
       scaledScores[puuid] = 5
     }
     else {
-      scaledScores[puuid] = Math.round((((raw - min) / (max - min)) * 9 + 1) * 10) / 10
+      scaledScores[puuid]
+        = Math.round((((raw - min) / (max - min)) * 9 + 1) * 10) / 10
     }
   }
 

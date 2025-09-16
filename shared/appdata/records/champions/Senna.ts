@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:14 PM CDT
 
 const champion: Champion = {
   "id": 235,
@@ -131,22 +131,38 @@ const champion: Champion = {
             {
               "attribute": "Healing",
               "modifiers": [
-                "40 / 55 / 70 / 85 / 100",
-                "40% bonus AD",
-                "50% AP"
+                {
+                  "values": "40 / 55 / 70 / 85 / 100"
+                },
+                {
+                  "values": "40",
+                  "unit": "% bonus AD"
+                },
+                {
+                  "values": "50",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "30 / 60 / 90 / 120 / 150",
-                "40% bonus AD"
+                {
+                  "values": "30 / 60 / 90 / 120 / 150"
+                },
+                {
+                  "values": "40",
+                  "unit": "% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Slow Duration",
               "modifiers": [
-                "1 / 1.25 / 1.5 / 1.75 / 2 seconds"
+                {
+                  "values": "1 / 1.25 / 1.5 / 1.75 / 2",
+                  "unit": " seconds"
+                }
               ]
             }
           ]
@@ -185,8 +201,13 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "70 / 115 / 160 / 205 / 250",
-                "70% bonus AD"
+                {
+                  "values": "70 / 115 / 160 / 205 / 250"
+                },
+                {
+                  "values": "70",
+                  "unit": "% bonus AD"
+                }
               ]
             }
           ]
@@ -197,7 +218,10 @@ const champion: Champion = {
             {
               "attribute": "Root Duration",
               "modifiers": [
-                "1.25 / 1.5 / 1.75 / 2 / 2.25 seconds"
+                {
+                  "values": "1.25 / 1.5 / 1.75 / 2 / 2.25",
+                  "unit": " seconds"
+                }
               ]
             }
           ]
@@ -232,7 +256,10 @@ const champion: Champion = {
             {
               "attribute": "Effect Duration",
               "modifiers": [
-                "6 / 6.5 / 7 / 7.5 / 8 seconds"
+                {
+                  "values": "6 / 6.5 / 7 / 7.5 / 8",
+                  "unit": " seconds"
+                }
               ]
             }
           ]
@@ -269,9 +296,17 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "250 / 400 / 550",
-                "115% bonus AD",
-                "70% AP"
+                {
+                  "values": "250 / 400 / 550"
+                },
+                {
+                  "values": "115",
+                  "unit": "% bonus AD"
+                },
+                {
+                  "values": "70",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -282,9 +317,17 @@ const champion: Champion = {
             {
               "attribute": "Shield Strength",
               "modifiers": [
-                "120 / 160 / 200",
-                "50% AP",
-                "1.5 per Mist collected"
+                {
+                  "values": "120 / 160 / 200"
+                },
+                {
+                  "values": "50",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "1.5",
+                  "unit": " per Mist collected"
+                }
               ]
             }
           ]

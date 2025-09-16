@@ -14,7 +14,9 @@ const props = defineProps<{
 
     <MotionDialogContent
       class=""
-      :class="cn('!rounded-xl top-[10%] translate-y-1/4 !max-w-171', props.class)">
+      :class="
+        cn('!rounded-xl top-[10%] translate-y-1/4 !max-w-171', props.class)
+      ">
       <DialogHeader>
         <DialogTitle>
           {{ props.title }}
@@ -30,6 +32,4 @@ const props = defineProps<{
   </Dialog>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

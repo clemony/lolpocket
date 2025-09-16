@@ -65,7 +65,7 @@ async function buildItems() {
           charges: a.charges,
           range: a.range,
         }
-      }),
+      })
     )
 
     const passives = item.passives || []
@@ -87,7 +87,7 @@ async function buildItems() {
           charges: p.charges,
           range: p.range,
         }
-      }),
+      })
     )
     const { tier, iconOverlay, ...rest } = item
     const fullItem = {
@@ -104,7 +104,7 @@ async function buildItems() {
     fs.writeFileSync(
       path.resolve(itemOutputDir, `${item.id}.ts`),
       `const item: Item =  ${JSON.stringify(cleanedItem, null, 2)}
-export default item`,
+export default item`
     )
   }
 
@@ -113,25 +113,25 @@ export default item`,
     outputIndex,
     `// ${markUpdate()}
 
-export const itemIndex: ItemIndex[] = ${JSON.stringify(Object.values(index), null, 2)}`,
+export const itemIndex: ItemIndex[] = ${JSON.stringify(Object.values(index), null, 2)}`
   )
   fs.writeFileSync(
     outputLitePath,
     `// ${markUpdate()}
 
-export const itemsLite: ItemLite[] = ${JSON.stringify(Object.values(simplified), null, 2)}`,
+export const itemsLite: ItemLite[] = ${JSON.stringify(Object.values(simplified), null, 2)}`
   )
   fs.writeFileSync(
     './scripts/data/items-lite.json',
-    JSON.stringify(Object.values(simplified), null, 2),
+    JSON.stringify(Object.values(simplified), null, 2)
   )
   fs.writeFileSync(
     './raw/unique-tags.json',
-    JSON.stringify([...uniqueTags].sort(), null, 2),
+    JSON.stringify([...uniqueTags].sort(), null, 2)
   )
   fs.writeFileSync(
     './raw/unique-ranks.json',
-    JSON.stringify([...uniqueRanks].sort(), null, 2),
+    JSON.stringify([...uniqueRanks].sort(), null, 2)
   )
 }
 

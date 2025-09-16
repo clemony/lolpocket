@@ -23,7 +23,12 @@ defineNuxtLink({
 
 <template>
   <NuxtLink
-    :class="cn(' transition-all hover:opacity-30 duration-250 inline-block underline text-nowrap', className)"
+    :class="
+      cn(
+        ' transition-all hover:opacity-30 duration-250 inline-block underline text-nowrap',
+        className,
+      )
+    "
     v-bind="$attrs"
     :to="to">
     <span>

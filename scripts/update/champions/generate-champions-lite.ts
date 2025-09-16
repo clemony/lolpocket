@@ -1,5 +1,8 @@
 import fs from 'node:fs'
-import type { ChampionLite, ChampionLiteRecord } from '../../../shared/types/types.champion'
+import type {
+  ChampionLite,
+  ChampionLiteRecord,
+} from '../../../shared/types/types.champion'
 import { markUpdate } from '../../../shared/utils/markUpdate'
 import { resolvePath } from '../resolvePath'
 import { normalize, normalizeArray } from '../utils'
@@ -9,7 +12,10 @@ const outputLite = resolvePath('../../shared/appdata/records/champions-lite.ts')
 const outputRoles = resolvePath('./champions/raw/unique-roles.json')
 const outputPositions = resolvePath('./champions/raw/unique-positions.json')
 
-const champions = JSON.parse(fs.readFileSync(dataPath, 'utf-8')) as Record<string, ChampionLite>
+const champions = JSON.parse(fs.readFileSync(dataPath, 'utf-8')) as Record<
+  string,
+  ChampionLite
+>
 
 const uniqueRoles = new Set()
 const uniquePositions = new Set()
@@ -50,7 +56,7 @@ const championsLite = Object.values(champions).reduce((acc, champ) => {
           key,
           Object.fromEntries(Object.entries(val).filter(([, v]) => v !== 0)),
         ])
-        .filter(([, val]) => Object.keys(val).length > 0),
+        .filter(([, val]) => Object.keys(val).length > 0)
     ),
     positions: normalizedPositions,
     roles: normalizedRoles,
@@ -64,17 +70,14 @@ fs.writeFileSync(
   outputLite,
   `// ${markUpdate()}
 
-export const championsLite: ChampionLite[] = ${JSON.stringify(Object.values(championsLite), null, 2)}`,
+export const championsLite: ChampionLite[] = ${JSON.stringify(Object.values(championsLite), null, 2)}`
 )
 
 console.log('Writing roles:', [...uniqueRoles])
 
 // Write unique lists for dev use
-fs.writeFileSync(
-  outputRoles,
-  JSON.stringify([...uniqueRoles].sort(), null, 2),
-)
+fs.writeFileSync(outputRoles, JSON.stringify([...uniqueRoles].sort(), null, 2))
 fs.writeFileSync(
   outputPositions,
-  JSON.stringify([...uniquePositions].sort(), null, 2),
+  JSON.stringify([...uniquePositions].sort(), null, 2)
 )

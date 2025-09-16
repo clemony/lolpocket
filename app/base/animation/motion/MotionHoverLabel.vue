@@ -2,10 +2,8 @@
 import { motion } from 'motion-v'
 
 const wrapperVariants = {
-  hidden: {
-  },
-  visible: {
-  },
+  hidden: {},
+  visible: {},
 }
 </script>
 

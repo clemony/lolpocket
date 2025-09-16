@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:55 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:11 PM CDT
 
 const champion: Champion = {
   "id": 12,
@@ -126,8 +126,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "60 / 100 / 140 / 180 / 220",
-                "80% AP"
+                {
+                  "values": "60 / 100 / 140 / 180 / 220"
+                },
+                {
+                  "values": "80",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -158,8 +163,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "55 / 110 / 165 / 220 / 275",
-                "100% AP"
+                {
+                  "values": "55 / 110 / 165 / 220 / 275"
+                },
+                {
+                  "values": "100",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -191,15 +201,25 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage Per Tick",
               "modifiers": [
-                "8 / 11 / 14 / 17 / 20",
-                "7% AP"
+                {
+                  "values": "8 / 11 / 14 / 17 / 20"
+                },
+                {
+                  "values": "7",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Total Magic Damage",
               "modifiers": [
-                "80 / 110 / 140 / 170 / 200",
-                "70% AP"
+                {
+                  "values": "80 / 110 / 140 / 170 / 200"
+                },
+                {
+                  "values": "70",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -233,7 +253,10 @@ const champion: Champion = {
             {
               "attribute": "Damage Reduction",
               "modifiers": [
-                "55 / 65 / 75%"
+                {
+                  "values": "55 / 65 / 75",
+                  "unit": "%"
+                }
               ]
             }
           ]

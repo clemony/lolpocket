@@ -18,7 +18,6 @@ export interface PlayerData {
   findSummoner: () => void
   setFilter: (string, key) => void
   clearFilters: () => void
-
 }
 export function useSummonerProvider(identifier: string) {
   console.log('identifier: ', identifier)
@@ -26,7 +25,9 @@ export function useSummonerProvider(identifier: string) {
   const loading = ref(false)
   const ready = ref(false)
   const summoner = ref<Summoner | null>(null)
-  const currentPuuid = ref<string | null>(typeof identifier === 'string' ? identifier : null)
+  const currentPuuid = ref<string | null>(
+    typeof identifier === 'string' ? identifier : null
+  )
   console.log('currentPuuid: ', currentPuuid)
 
   const { getMatchesForSummoner } = useIndexedDB()
@@ -54,7 +55,10 @@ export function useSummonerProvider(identifier: string) {
    * }
    */
   // --- FILTER HELPERS ---
-  function setFilter<K extends keyof MatchFilter>(key: K, value: MatchFilter[K]) {
+  function setFilter<K extends keyof MatchFilter>(
+    key: K,
+    value: MatchFilter[K]
+  ) {
     filter.value[key] = value
   }
 
@@ -70,11 +74,14 @@ export function useSummonerProvider(identifier: string) {
 
   // --- FILTERED MATCHES ---
   const matches = computed(() => {
-    if (!filter.value || Object.values(filter.value).every(v => !v || v === 0 || v === 'ALL')) {
+    if (
+      !filter.value
+      || Object.values(filter.value).every(v => !v || v === 0 || v === 'ALL')
+    ) {
       return allMatches.value
     }
     return allMatches.value.filter(match =>
-      matchFilters(currentPuuid.value!, match, filter.value),
+      matchFilters(currentPuuid.value!, match, filter.value)
     )
   })
 
@@ -90,9 +97,7 @@ export function useSummonerProvider(identifier: string) {
     ready.value = false
 
     try {
-      const resolved = await ss().resolveSummoner(
-        { puuid: currentPuuid.value },
-      )
+      const resolved = await ss().resolveSummoner({ puuid: currentPuuid.value })
 
       currentPuuid.value = resolved.puuid
       summoner.value = resolved
@@ -128,9 +133,12 @@ export function useSummonerProvider(identifier: string) {
     clearFilters,
     fetchMastery,
     findSummoner,
-    useChampions: (championName?: string) => useChampions(summoner.value.puuid, allMatches.value, championName),
-    filteredChampions: (championName?: string) => useChampions(summoner.value.puuid, matches.value, championName),
-    useAllies: () => useRepeatedTeammates(summoner.value.puuid, allMatches.value),
+    useChampions: (championName?: string) =>
+      useChampions(summoner.value.puuid, allMatches.value, championName),
+    filteredChampions: (championName?: string) =>
+      useChampions(summoner.value.puuid, matches.value, championName),
+    useAllies: () =>
+      useRepeatedTeammates(summoner.value.puuid, allMatches.value),
     useRoles: () => useMatchRoles(summoner.value.puuid, allMatches),
     links: () => generateSummonerLinks(summoner.value),
     loadMatches: () => loadMatchesFromDB,
@@ -174,7 +182,9 @@ export function useSummonerInject() {
   }>(SummonerKey)
 
   if (!state) {
-    throw new Error('No Summoner provider found. Make sure provideSummoner is called in a parent component.')
+    throw new Error(
+      'No Summoner provider found. Make sure provideSummoner is called in a parent component.'
+    )
   }
 
   return state

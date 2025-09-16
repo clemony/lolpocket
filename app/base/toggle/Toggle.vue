@@ -6,15 +6,20 @@ import type { HTMLAttributes } from 'vue'
 import type { ToggleVariants } from './toggleVariants'
 import { toggleVariants } from './toggleVariants'
 
-const props = withDefaults(defineProps<ToggleProps & {
-  class?: HTMLAttributes['class']
-  variant?: ToggleVariants['variant']
-  size?: ToggleVariants['size']
-}>(), {
-  variant: 'default',
-  size: 'default',
-  disabled: false,
-})
+const props = withDefaults(
+  defineProps<
+    ToggleProps & {
+      class?: HTMLAttributes['class']
+      variant?: ToggleVariants['variant']
+      size?: ToggleVariants['size']
+    }
+  >(),
+  {
+    variant: 'default',
+    size: 'default',
+    disabled: false,
+  }
+)
 
 const emits = defineEmits<ToggleEmits>()
 

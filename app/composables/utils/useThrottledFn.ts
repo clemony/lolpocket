@@ -2,7 +2,7 @@ export function throttleFunction<T extends (...args: any[]) => any>(
   fn: T,
   wait = 60_000,
   puuid: string,
-  action = 'default',
+  action = 'default'
 ) {
   const store = useCooldownStore()
   const isLoading = ref(false)
@@ -57,7 +57,7 @@ export function throttleFunction<T extends (...args: any[]) => any>(
     },
     wait,
     false,
-    true,
+    true
   )
 
   return {

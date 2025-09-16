@@ -1,7 +1,7 @@
 export function getStatAtLevel(
   base?: number,
   growth?: number,
-  level = 18,
+  level = 18
 ): number | null {
   if (base == null)
     return null
@@ -19,7 +19,7 @@ export function getAttackSpeedAtLevel(
   base?: number,
   growth?: number,
   ratio?: number,
-  level = 18,
+  level = 18
 ): number | null {
   if (base == null || ratio == null)
     return null

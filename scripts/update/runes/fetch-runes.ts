@@ -3,9 +3,13 @@ import { $fetch } from 'ofetch'
 import { colorDict, markUpdate } from '../../../scripts'
 import { resolvePath } from '../resolvePath'
 
-const rawRunes = await $fetch('https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/perks.json')
+const rawRunes = await $fetch(
+  'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/perks.json'
+)
 
-const rawPaths = await $fetch('https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/perkstyles.json')
+const rawPaths = await $fetch(
+  'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/perkstyles.json'
+)
 
 const outputRawRunes = resolvePath('./runes/raw/runes-raw.json')
 const outputRawPaths = resolvePath('./runes/raw/paths-raw.json')
@@ -16,20 +20,37 @@ const shardOutput = resolvePath('../../shared/appdata/records/shards.ts')
 
 function transformDescription(desc: string) {
   return desc
-    .replaceAll(/<truedamage>(.*?)<\/truedamage>/g, '<span class="truedamage">$1</span>')
+    .replaceAll(
+      /<truedamage>(.*?)<\/truedamage>/g,
+      '<span class="truedamage">$1</span>'
+    )
     .replaceAll(/<gold>(.*?)<\/gold>/g, '<span class="gold">$1</span>')
-    .replaceAll(/<scaleLevel>(.*?)<\/scaleLevel>/g, '<span class="scale-level">$1</span>')
+    .replaceAll(
+      /<scaleLevel>(.*?)<\/scaleLevel>/g,
+      '<span class="scale-level">$1</span>'
+    )
 }
 
 function transformShardDescription(desc: string) {
   return desc
-    .replaceAll(/<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'>(.*?)<\/lol-uikit-tooltipped-keyword>/g, '$1')
-    .replaceAll(/<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_CDR'>(.*?)<\/lol-uikit-tooltipped-keyword>/g, '$1')
-    .replaceAll(/<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>(.*?)<\/lol-uikit-tooltipped-keyword>/g, '$1')
+    .replaceAll(
+      /<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'>(.*?)<\/lol-uikit-tooltipped-keyword>/g,
+      '$1'
+    )
+    .replaceAll(
+      /<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_CDR'>(.*?)<\/lol-uikit-tooltipped-keyword>/g,
+      '$1'
+    )
+    .replaceAll(
+      /<lol-uikit-tooltipped-keyword key='LinkTooltip_Description_MS'>(.*?)<\/lol-uikit-tooltipped-keyword>/g,
+      '$1'
+    )
     .replaceAll(/<font color='#48C4B7'>(.*?)<\/font>/g, '$1')
 }
 // Create a lookup map for runes by ID for quick access
-const runesById = Object.fromEntries(rawRunes.map((rune: any) => [rune.id, rune]))
+const runesById = Object.fromEntries(
+  rawRunes.map((rune: any) => [rune.id, rune])
+)
 
 // container for slots >= 4
 const extraSlots: any[] = []
@@ -113,7 +134,7 @@ fs.writeFileSync(
   runesTSOutput,
   `// ${markUpdate()}
 
-export const runePaths: RunePath[] = ${JSON.stringify(strippedPaths, null, 2)}`,
+export const runePaths: RunePath[] = ${JSON.stringify(strippedPaths, null, 2)}`
 )
 
 // write it as a TS file
@@ -122,7 +143,7 @@ fs.writeFileSync(
   pathIdsTSOutput,
   `// ${markUpdate()}
 
-export const pathIds: Record<string, number[]> = ${JSON.stringify(pathIdMap, null, 2)}`,
+export const pathIds: Record<string, number[]> = ${JSON.stringify(pathIdMap, null, 2)}`
 )
 
 // Write extra slots separately
@@ -135,17 +156,8 @@ fs.writeFileSync(shardOutput, shardTSOutput)
 
 console.log(`✅ shard-index.ts created with ${extraSlots.length} shards`)
 
-fs.writeFileSync(
-  outputRunes,
-  JSON.stringify(transformedPaths, null, 2),
-)
-fs.writeFileSync(
-  outputRawRunes,
-  JSON.stringify(rawRunes, null, 2),
-)
-fs.writeFileSync(
-  outputRawPaths,
-  JSON.stringify(rawPaths, null, 2),
-)
+fs.writeFileSync(outputRunes, JSON.stringify(transformedPaths, null, 2))
+fs.writeFileSync(outputRawRunes, JSON.stringify(rawRunes, null, 2))
+fs.writeFileSync(outputRawPaths, JSON.stringify(rawPaths, null, 2))
 
 console.log('✅ runes.json written!')

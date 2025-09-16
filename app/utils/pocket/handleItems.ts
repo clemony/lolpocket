@@ -3,7 +3,7 @@ import { toast } from 'vue-sonner'
 export function removeItemFromSet(
   pocket: Pocket,
   itemSet: ItemSet,
-  itemx: ItemId,
+  itemx: ItemId
 ) {
   const set = pocket?.items.find(set => set === itemSet)
 

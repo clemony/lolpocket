@@ -6,11 +6,11 @@ const props = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 
-const pocket = computed (() => {
+const pocket = computed(() => {
   return props.pocket
 })
 
-const set = computed (() => {
+const set = computed(() => {
   return props.set
 })
 function handleSpells(e, i) {
@@ -19,7 +19,7 @@ function handleSpells(e, i) {
 </script>
 
 <template>
-  <div class="flex  items-center gap-4  w-full ">
+  <div class="flex items-center gap-4 w-full">
     <LazySpellPicker
       v-for="(spell, i) in props.set"
       :key="i"
@@ -31,7 +31,7 @@ function handleSpells(e, i) {
 
     <button
       v-tippy="'Remove Set'"
-      class="btn trash-button group/btn btn-ghost btn-xs btn-square  "
+      class="btn trash-button group/btn btn-ghost btn-xs btn-square"
       @click="removeSpellSet(pocket, props.set)">
       <icon
         name="trash"

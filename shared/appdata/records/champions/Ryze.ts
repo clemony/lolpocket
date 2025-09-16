@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:13 PM CDT
 
 const champion: Champion = {
   "id": 13,
@@ -124,9 +124,17 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "75 / 95 / 115 / 135 / 155",
-                "55% AP",
-                "2% bonus mana"
+                {
+                  "values": "75 / 95 / 115 / 135 / 155"
+                },
+                {
+                  "values": "55",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "2",
+                  "unit": "% bonus mana"
+                }
               ]
             }
           ]
@@ -137,7 +145,10 @@ const champion: Champion = {
             {
               "attribute": "Bonus Movement Speed",
               "modifiers": [
-                "28 / 32 / 36 / 40 / 44%"
+                {
+                  "values": "28 / 32 / 36 / 40 / 44",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -174,9 +185,17 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "60 / 90 / 120 / 150 / 180",
-                "70% AP",
-                "4% bonus mana"
+                {
+                  "values": "60 / 90 / 120 / 150 / 180"
+                },
+                {
+                  "values": "70",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "4",
+                  "unit": "% bonus mana"
+                }
               ]
             }
           ]
@@ -210,9 +229,17 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "60 / 90 / 120 / 150 / 180",
-                "50% AP",
-                "2% bonus mana"
+                {
+                  "values": "60 / 90 / 120 / 150 / 180"
+                },
+                {
+                  "values": "50",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "2",
+                  "unit": "% bonus mana"
+                }
               ]
             }
           ]
@@ -249,7 +276,10 @@ const champion: Champion = {
             {
               "attribute": "Bonus Overload Damage",
               "modifiers": [
-                "50 / 75 / 100%"
+                {
+                  "values": "50 / 75 / 100",
+                  "unit": "%"
+                }
               ]
             }
           ]

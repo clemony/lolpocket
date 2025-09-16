@@ -24,7 +24,12 @@ const isOpen = ref(false)
     <PopoverTrigger
       ref="trigger"
       v-bind="$attrs"
-      :class="cn('relative  hover:ring-neutral hover:ring hover:ring-offset-2 hover:ring-offset-b1 data-[state=open]:ring-1 aspect-square  data-[state=open]:ring-offset-2 data-[state=open]:ring-neutral data-[state=open]:ring-offset-b1  group/item', className)">
+      :class="
+        cn(
+          'relative  hover:ring-neutral hover:ring hover:ring-offset-2 hover:ring-offset-b1 data-[state=open]:ring-1 aspect-square  data-[state=open]:ring-offset-2 data-[state=open]:ring-neutral data-[state=open]:ring-offset-b1  group/item',
+          className,
+        )
+      ">
       <div class="size-full relative">
         <Item
           :id="id"
@@ -40,7 +45,7 @@ const isOpen = ref(false)
 
     <LazyPopperPopoverContent
       :side-offset="8"
-      class="!w-110  max-h-[420px] inset-shadow-xs  min-w-110 ">
+      class="!w-110 max-h-[420px] inset-shadow-xs min-w-110">
       <LazyItemData
         v-if="open"
         :id="id" />

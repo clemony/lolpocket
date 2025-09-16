@@ -28,7 +28,7 @@ export function deletePocket(pocket) {
           label: '×',
           onClick: () => toast.dismiss(newPocketToast),
         },
-      },
+      }
     )
 
     const vars: Record<string, string> = {

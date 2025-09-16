@@ -2,7 +2,7 @@
 const { words } = defineProps<{
   words: string
 }>()
-const items = computed (() => words.split(' '))
+const items = computed(() => words.split(' '))
 </script>
 
 <template>
@@ -17,6 +17,7 @@ const items = computed (() => words.split(' '))
       ease: 'backOut',
     }"
     class="inline-block">
-    {{ item }}<span v-if="index != items.length + 1">&nbsp;</span>
+    {{ item }}
+    <span v-if="index != items.length + 1">&nbsp;</span>
   </Motion>
 </template>

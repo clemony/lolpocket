@@ -1,5 +1,4 @@
 export interface MatchData {
-
   matchId: string
   endOfGameResult: string
   gameDuration: number

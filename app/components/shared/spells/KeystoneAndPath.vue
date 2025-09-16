@@ -16,11 +16,18 @@ const { set } = defineProps<{
         :title="String(ix().runeNameById(set?.keystone))"
         :alt="set?.keystone.toString()"
         :src="`/img/runes/${set?.primary?.path}/${set?.keystone}.webp`"
-        :class="cn('!w-14 shrink-0 absolute !justify-self-end drop-shadow-sm -right-2', kClass)" />
+        :class="
+          cn(
+            '!w-14 shrink-0 absolute !justify-self-end drop-shadow-sm -right-2',
+            kClass,
+          )
+        " />
 
       <Placeholder
         v-else
-        :class="cn('rounded-full size-11 bg-b2/80 justify-end  shrink-0', xClass)"
+        :class="
+          cn('rounded-full size-11 bg-b2/80 justify-end  shrink-0', xClass)
+        "
         class="" />
     </span>
     <img
@@ -31,6 +38,8 @@ const { set } = defineProps<{
       :class="cn('w-7 drop-shadow-sm  justify-self-start ml-2', pClass)" />
     <Placeholder
       v-else
-      :class="cn('rounded-full size-11 bg-b2/80 shrink-0 justify-start', xClass)" />
+      :class="
+        cn('rounded-full size-11 bg-b2/80 shrink-0 justify-start', xClass)
+      " />
   </div>
 </template>

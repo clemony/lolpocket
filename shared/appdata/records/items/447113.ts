@@ -10,27 +10,24 @@ const item: Item = {
     {
       name: 'The Bomb',
       unique: true,
-      effects: 'Dealing ability damage against enemy champions marks them for 3 seconds, storing 20% of the post-mitigation damage you deal to them, increased to 25% if they are <img src="/img/icons/immobilize.webp" class="tip-icon" />immobilized. Each instance of your ability damage dealt to a marked target refreshes their mark. Once the mark expires, it detonates to deal true damage equal to the amount stored against the target. If a mark would deal lethal damage to the target, it is detonated immediately.'
-    }
+      effects:
+        'Dealing ability damage against enemy champions marks them for 3 seconds, storing 20% of the post-mitigation damage you deal to them, increased to 25% if they are <img src="/img/icons/immobilize.webp" class="tip-icon" />immobilized. Each instance of your ability damage dealt to a marked target refreshes their mark. Once the mark expires, it detonates to deal true damage equal to the amount stored against the target. If a mark would deal lethal damage to the target, it is detonated immediately.',
+    },
   ],
   stats: {
     abilityPower: 90,
     flatMagicPenetration: 12,
     mana: 600,
-    abilityHaste: 20
+    abilityHaste: 20,
   },
   shop: {
     prices: {
       total: 0,
       combined: 1000,
-      sell: 0
+      sell: 0,
     },
-    tags: [
-      'MAGE'
-    ]
+    tags: ['MAGE'],
   },
-  maps: [
-    30
-  ]
+  maps: [30],
 }
 export default item

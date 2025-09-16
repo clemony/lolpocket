@@ -15,7 +15,7 @@ const state = useSummonerInject()
 
 const champQuery = ref<string | null>('')
 
-const noMastery = computed (() => {
+const noMastery = computed(() => {
   if (!summoner?.mastery?.champions?.length)
     return
 
@@ -30,15 +30,14 @@ const noMastery = computed (() => {
       points: 0,
       lastPlayed: null,
     }
-  },
-  )
+  })
 })
 
-const list = computed (() => {
+const list = computed(() => {
   return summoner?.mastery?.champions?.concat(noMastery.value)
 })
 
-onMounted (() => {
+onMounted(() => {
   state.fetchMastery()
 })
 
@@ -60,8 +59,9 @@ const masteryStats = [
 
 <template>
   <div class="size-full relative">
-    <div class="absolute inset-0 min-h-[130vh] size-full   grid auto-rows-[max-content_100vh]   bg-b1  items-center">
-      <article class="w-3/5 mx-auto ">
+    <div
+      class="absolute inset-0 min-h-[130vh] size-full grid auto-rows-[max-content_100vh] bg-b1 items-center">
+      <article class="w-3/5 mx-auto">
         <header class="w-full flex pt-24 items-center justify-between pb-2">
           <h1 class="self-start dst font-bold">
             Champion Mastery
@@ -69,27 +69,25 @@ const masteryStats = [
         </header>
 
         <div class="flex flex-col w-full gap-5 py-3">
-          <section class="gap-8 flex gap-3 w-full  h-fit items-center py-4">
+          <section class="gap-8 flex gap-3 w-full h-fit items-center py-4">
             <BasicCard
               v-for="data in masteryStats"
               :key="data.title"
               class="px-7 min-w-64 w-80 h-32 pb-5 pt-7 grid gap-4">
-              <h1
-                class="font-black tracking-wide text-nowrap text-10">
+              <h1 class="font-black tracking-wide text-nowrap text-xxs0">
                 {{ data.data }}
               </h1>
-              <h6 class="lowercase   opacity-50 self-end">
+              <h6 class="lowercase opacity-50 self-end">
                 {{ data.title }}
               </h6>
             </BasicCard>
 
-            <BasicCard
-              class="px-7 min-w-64 w-80 h-32 pb-5 pt-5 grid gap-4">
+            <BasicCard class="px-7 min-w-64 w-80 h-32 pb-5 pt-5 grid gap-4">
               <input
                 type="text"
-                class="input w-full font-black tracking-wide h-full text-nowrap text-10" />
+                class="input w-full font-black tracking-wide h-full text-nowrap text-xxs0" />
 
-              <h6 class="lowercase   opacity-50 self-end">
+              <h6 class="lowercase opacity-50 self-end">
                 fun
               </h6>
             </BasicCard>

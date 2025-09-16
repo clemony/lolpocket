@@ -4,7 +4,6 @@ import { PopoverArrow } from 'reka-ui'
 
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
-
 }>()
 
 const emit = defineEmits(['update:model-value'])
@@ -14,13 +13,17 @@ const modelValue = ref(as().account.region)
 <template>
   <LazyPopoverContent
     align="end"
-    :class="cn('w-86 rounded-lg -translate-x-34 -translate-y-10.25 p-0  h-100', className)">
+    :class="
+      cn(
+        'w-86 rounded-lg -translate-x-34 -translate-y-10.25 p-0  h-100',
+        className,
+      )
+    ">
     <!--  <PopoverArrow /> -->
     <div class="size-full overflow-y-auto grid gap-px pb-2 px-1">
-      <div class="w-full flex items-center mb-2 h-11 sticky top-0 bg-b1 z-1 border-b">
-        <Label class="px-4  text-bc/50">
-          Select Region...
-        </Label>
+      <div
+        class="w-full flex items-center mb-2 h-11 sticky top-0 bg-b1 z-1 border-b">
+        <Label class="px-4 text-bc/50">Select Region...</Label>
       </div>
 
       <Button
@@ -29,7 +32,12 @@ const modelValue = ref(as().account.region)
         size="sm"
         variant="ghost"
         :value="region"
-        :class="cn('flex rounded-md items-center gap-3 text-2 justify-start py-1.5 text-nowrap', { 'btn-active !bg-b2/30': region == modelValue })">
+        :class="
+          cn(
+            'flex rounded-md items-center gap-3 text-xs justify-start py-1.5 text-nowrap',
+            { 'btn-active !bg-b2/30': region == modelValue },
+          )
+        ">
         <span class="">
           {{ regionIndex[region] }}
         </span>

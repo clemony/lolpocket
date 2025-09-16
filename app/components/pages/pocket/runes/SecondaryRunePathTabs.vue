@@ -5,31 +5,34 @@ const { pocket, set: s } = defineProps<{
   set: RuneSet
 }>()
 const paths = ['Precision', 'Domination', 'Sorcery', 'Resolve', 'Inspiration']
-const set = computed (() => s)
+const set = computed(() => s)
 const rs = useRuneStore()
 </script>
 
 <template>
   <!-- secondary trigger start  -->
   <Tabs>
-    <IndicatorTabsList class="items-center h-19 justify-evenly pt-2 grid-cols-5 w-full field-box ">
+    <IndicatorTabsList
+      class="items-center h-19 justify-evenly pt-2 grid-cols-5 w-full field-box">
       <PathTabTrigger
         v-for="item in paths"
         :key="`${item}2`"
         :item="item"
-        :class="{ 'pointer-events-none [&_img]:opacity-20': set.primary.path == item }"
+        :class="{
+          'pointer-events-none [&_img]:opacity-20': set.primary.path == item,
+        }"
         :disabled="set.primary.path == path"
-        :value="item">
-      </PathTabTrigger>
+        :value="item"></PathTabTrigger>
 
       <!-- primary indicator  -->
       <Tabs v-model:model-value="set.primary.path">
-        <IndicatorTabsList class="absolute top-0 left-0 pointer-events-none h-19 justify-evenly grid-cols-5 w-full  bg-transparent shadow-none inset-shadow-none border-none">
+        <IndicatorTabsList
+          class="absolute top-0 left-0 pointer-events-none h-19 justify-evenly grid-cols-5 w-full bg-transparent shadow-none inset-shadow-none border-none">
           <TabsTrigger
             v-for="item in paths"
             :key="`${item}-tabs`"
             :title="item"
-            class=" rounded-full relative group aspect-square size-15 place-self-center invisible opacity-0"
+            class="rounded-full relative group aspect-square size-15 place-self-center invisible opacity-0"
             :value="item" />
 
           <TabIndicator
@@ -40,7 +43,7 @@ const rs = useRuneStore()
 
       <TabIndicator
         v-if="path"
-        class=" -ml-[2px] !size-16"
+        class="-ml-[2px] !size-16"
         round />
     </IndicatorTabsList>
   </Tabs>

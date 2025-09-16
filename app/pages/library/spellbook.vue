@@ -2,16 +2,27 @@
 definePageMeta({
   name: 'Spellbook',
   path: '/library/spellbook',
-  searchKeys: ['summoner', 'spell', 'heal', 'barrier', 'flash', 'ignite', 'ghost', 'smite', 'teleport', 'cleanse', 'exhaust'],
+  searchKeys: [
+    'summoner',
+    'spell',
+    'heal',
+    'barrier',
+    'flash',
+    'ignite',
+    'ghost',
+    'smite',
+    'teleport',
+    'cleanse',
+    'exhaust',
+  ],
   icon: 'teenyicons:book-outline',
   title: 'Spellbook',
-
 })
 
 const ix = useIndexStore()
 
 const selectedSpellId = ref(1)
-const selectedSpell = computed (() => ix.spellById(selectedSpellId.value))
+const selectedSpell = computed(() => ix.spellById(selectedSpellId.value))
 </script>
 
 <template>
@@ -22,16 +33,17 @@ const selectedSpell = computed (() => ix.spellById(selectedSpellId.value))
 
     <div
       v-if="ix.spells.length"
-      class="w-full  flex gap-[8%] px-3 py-24">
+      class="w-full flex gap-[8%] px-3 py-24">
       <div class="flex flex-col gap-14 w-114">
-        <div class="grid grid-cols-3 grid-rows-3 gap-4 py-8 border-b3/80 rounded-box shadow-smooth  px-9 h-fit  ">
+        <div
+          class="grid grid-cols-3 grid-rows-3 gap-4 py-8 border-b3/80 rounded-box shadow-smooth px-9 h-fit">
           <div
             v-for="spell in ix.spells"
             :key="spell.name"
             v-tippy="spell.name"
             class="size-fit">
-            <label class="btn    py-2 !cursor-pointer btn-ghost px-2.5  size-27  has-checked:bg-b3/70 has-checked:border-b3 has-checked:shadow-sm hover:bg-b2 hover:border-b3   ">
-
+            <label
+              class="btn py-2 !cursor-pointer btn-ghost px-2.5 size-27 has-checked:bg-b3/70 has-checked:border-b3 has-checked:shadow-sm hover:bg-b2 hover:border-b3">
               <img
                 :src="`/img/spells/${spell.name}.webp`"
                 class="size-22 rounded-lg shadow-sm inset-shadow-sm shadow-black/20 border border-b3 peer-checked:borderneutral/90" />
@@ -58,18 +70,21 @@ const selectedSpell = computed (() => ix.spellById(selectedSpellId.value))
             v-if="selectedSpell.text"
             :key="selectedSpell.name"
             class="pl-4.5 pr-3">
-            <p class="font-serif text-4 leading-9 dst">
+            <p class="font-serif text-md leading-9 dst">
               {{ selectedSpell.text }}
             </p>
 
-            <p class="italic w-full flex justify-end mt-6 pr-3 font-thin ">
-              —<a
+            <p class="italic w-full flex justify-end mt-6 pr-3 font-thin">
+              —
+              <a
                 :href="`https://wiki.leagueoflegends.com/en-us/${selectedSpell.name}`"
                 target="_blank"
-                class="!font-sans underline-offset-2 hover:underline items-center gap-2 flex flex-nowrap">summary from LolWiki
+                class="!font-sans underline-offset-2 hover:underline items-center gap-2 flex flex-nowrap">
+                summary from LolWiki
                 <icon
                   name="link"
-                  class="mb-1 size-4" /></a>
+                  class="mb-1 size-4" />
+              </a>
             </p>
           </div>
         </Transition>
@@ -86,11 +101,12 @@ const selectedSpell = computed (() => ix.spellById(selectedSpellId.value))
         <div
           :key="selectedSpell.name"
           class="flex flex-col gap-14 w-160 transition-all duration-300">
-          <div class="border-b3/80 rounded-xl shadow-smooth pt-7 pb-8 px-9  w-full border flex max-h-min flex-col gap-6 transition-all duration-300">
+          <div
+            class="border-b3/80 rounded-xl shadow-smooth pt-7 pb-8 px-9 w-full border flex max-h-min flex-col gap-6 transition-all duration-300">
             <div class="w-full flex gap-6 i-c">
               <img
                 :src="`/img/spells/${selectedSpell.name}.webp`"
-                class="rounded-lg shadow-sm  shadow-black/20 size-24" />
+                class="rounded-lg shadow-sm shadow-black/20 size-24" />
 
               <div class="h-full grid items-between py-2">
                 <p class="font-medium">
@@ -107,8 +123,8 @@ const selectedSpell = computed (() => ix.spellById(selectedSpellId.value))
 
             <ul class="w-74 space-y-3">
               <li
-                v-if=" selectedSpell.cd"
-                class="grid-cols-2 grid gap-3  items-end ">
+                v-if="selectedSpell.cd"
+                class="grid-cols-2 grid gap-3 items-end">
                 <p class="font-semibold tracking-tight">
                   Cooldown:
                 </p>
@@ -119,8 +135,8 @@ const selectedSpell = computed (() => ix.spellById(selectedSpellId.value))
               </li>
 
               <li
-                v-if=" selectedSpell.charges"
-                class="grid-cols-2 grid gap-3  items-end ">
+                v-if="selectedSpell.charges"
+                class="grid-cols-2 grid gap-3 items-end">
                 <p class="font-semibold tracking-tight">
                   Charges:
                 </p>
@@ -131,8 +147,8 @@ const selectedSpell = computed (() => ix.spellById(selectedSpellId.value))
               </li>
 
               <li
-                v-if=" selectedSpell.recharge"
-                class="grid-cols-2 grid gap-3  items-end ">
+                v-if="selectedSpell.recharge"
+                class="grid-cols-2 grid gap-3 items-end">
                 <p class="font-semibold tracking-tight">
                   Recharge Time:
                 </p>
@@ -144,11 +160,10 @@ const selectedSpell = computed (() => ix.spellById(selectedSpellId.value))
             </ul>
           </div>
 
-          <div class="bg-black/90 w-full  rounded-xl shadow-pretty ">
+          <div class="bg-black/90 w-full rounded-xl shadow-pretty">
             <video-background
               :src="`https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-collections/global/default/video/spells/spells_${selectedSpell.id}.webm`"
-              class="w-90 h-auto aspect-video rounded-xl">
-            </video-background>
+              class="w-90 h-auto aspect-video rounded-xl"></video-background>
           </div>
         </div>
       </Transition>

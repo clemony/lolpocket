@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import type { DialogContentEmits, DialogContentProps } from 'reka-ui'
-import { DialogClose, DialogContent, DialogPortal, useForwardPropsEmits } from 'reka-ui'
+import {
+  DialogClose,
+  DialogContent,
+  DialogPortal,
+  useForwardPropsEmits,
+} from 'reka-ui'
 import type { SheetVariants } from '~/base/sheet/sheet-variants'
 
 import { sheetVariants } from '../sheet-variants'
@@ -27,7 +32,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
   <DialogContent
     :class="cn('', sheetVariants({ side }), props.class)"
     v-bind="{ ...forwarded, ...$attrs }"
-    class="isolate  max-h-screen  bg-b1/92 backdrop-blur-md !p-0 focus:ring-0 focus:ring-offset-0 focus:outline-0 outline-0 border border-x-b3 shadow-warm-soft "
+    class="isolate max-h-screen bg-b1/92 backdrop-blur-md !p-0 focus:ring-0 focus:ring-offset-0 focus:outline-0 outline-0 border border-x-b3 shadow-warm-soft"
     @open-auto-focus.prevent>
     <slot />
   </DialogContent>

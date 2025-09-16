@@ -5,7 +5,7 @@ export function useSimpleSearch<T>(
   source: T[] | Ref<T[]>,
   query: Ref<string>,
   options?: IFuseOptions<T>,
-  keys?: string[],
+  keys?: string[]
 ) {
   const fuse = ref<Fuse<T> | null>(null)
 
@@ -14,7 +14,7 @@ export function useSimpleSearch<T>(
     (val) => {
       fuse.value = new Fuse(val, { keys: [keys || '', 'name'], threshold: 0.3 })
     },
-    { immediate: true, deep: true },
+    { immediate: true, deep: true }
   )
 
   const results = computed<T[]>(() => {

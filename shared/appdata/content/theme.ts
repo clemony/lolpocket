@@ -5,7 +5,6 @@ export const themes = [
     icon: 'iconoir:sun-light',
     quote: 'If you can smile, you can be the light.',
     champion: 'Lux',
-
   },
   // {
   //   name: "dawn",
@@ -21,7 +20,6 @@ export const themes = [
     icon: 'si:sun-set-line',
     quote: 'Dusk approaches. Embrace the night.',
     champion: 'Diana',
-
   },
   {
     name: 'midnight',
@@ -29,7 +27,6 @@ export const themes = [
     icon: 'ph:moon',
     quote: 'The truth lies in darkness.',
     champion: 'Zed',
-
   },
 
   // {
@@ -74,6 +71,5 @@ export const themes = [
     icon: 'clarity:snowflake-line',
     quote: 'Sometimes icy heart just needs warm smile.',
     champion: 'Braum',
-
   },
 ]

@@ -54,5 +54,4 @@ export interface ShardObject {
   tier: number
   label: string
   shards: Shard[]
-
 }

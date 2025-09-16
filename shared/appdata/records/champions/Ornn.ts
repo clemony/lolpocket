@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:13 PM CDT
 
 const champion: Champion = {
   "id": 516,
@@ -129,8 +129,13 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "20 / 45 / 70 / 95 / 120",
-                "110% AD"
+                {
+                  "values": "20 / 45 / 70 / 95 / 120"
+                },
+                {
+                  "values": "110",
+                  "unit": "% AD"
+                }
               ]
             }
           ]
@@ -173,13 +178,19 @@ const champion: Champion = {
             {
               "attribute": "Total Magic Damage",
               "modifiers": [
-                "12 / 13 / 14 / 15 / 16% of target's maximum health"
+                {
+                  "values": "12 / 13 / 14 / 15 / 16",
+                  "unit": "% of target's maximum health"
+                }
               ]
             },
             {
               "attribute": "Magic Damage Per Tick",
               "modifiers": [
-                "2.4 / 2.6 / 2.8 / 3 / 3.2% of target's maximum health"
+                {
+                  "values": "2.4 / 2.6 / 2.8 / 3 / 3.2",
+                  "unit": "% of target's maximum health"
+                }
               ]
             }
           ]
@@ -190,25 +201,33 @@ const champion: Champion = {
             {
               "attribute": "Total Minimum/Minion Damage",
               "modifiers": [
-                "80 / 130 / 180 / 230 / 280"
+                {
+                  "values": "80 / 130 / 180 / 230 / 280"
+                }
               ]
             },
             {
               "attribute": "Minimum/Minion Damage Per Tick",
               "modifiers": [
-                "16 / 26 / 36 / 46 / 56"
+                {
+                  "values": "16 / 26 / 36 / 46 / 56"
+                }
               ]
             },
             {
               "attribute": "Total Monster Damage Cap",
               "modifiers": [
-                "155 / 180 / 205 / 230 / 255"
+                {
+                  "values": "155 / 180 / 205 / 230 / 255"
+                }
               ]
             },
             {
               "attribute": "Monster Damage Cap Per Tick",
               "modifiers": [
-                "31 / 36 / 41 / 46 / 51"
+                {
+                  "values": "31 / 36 / 41 / 46 / 51"
+                }
               ]
             }
           ]
@@ -241,9 +260,17 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "80 / 125 / 170 / 215 / 260",
-                "40% bonus armor",
-                "40% bonus magic resistance"
+                {
+                  "values": "80 / 125 / 170 / 215 / 260"
+                },
+                {
+                  "values": "40",
+                  "unit": "% bonus armor"
+                },
+                {
+                  "values": "40",
+                  "unit": "% bonus magic resistance"
+                }
               ]
             }
           ]
@@ -284,14 +311,22 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "125 / 175 / 225",
-                "20% AP"
+                {
+                  "values": "125 / 175 / 225"
+                },
+                {
+                  "values": "20",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Slow",
               "modifiers": [
-                "40 / 50 / 60%"
+                {
+                  "values": "40 / 50 / 60",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -305,8 +340,13 @@ const champion: Champion = {
             {
               "attribute": "Total Magic Damage",
               "modifiers": [
-                "250 / 350 / 450",
-                "40% AP"
+                {
+                  "values": "250 / 350 / 450"
+                },
+                {
+                  "values": "40",
+                  "unit": "% AP"
+                }
               ]
             }
           ]

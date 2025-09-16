@@ -35,7 +35,7 @@ function onButtonUp(event: PointerEvent, button: string) {
   <div>
     <button
       class="btn"
-      @pointerdown="ev => onButtonDown(ev, 'home')">
+      @pointerdown="(ev) => onButtonDown(ev, 'home')">
       hi
     </button>
   </div>

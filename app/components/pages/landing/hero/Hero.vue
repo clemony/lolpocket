@@ -66,16 +66,17 @@ onMounted(() => {
 
     <div
       ref="welcome"
-      class="absolute  left-0 top-0 inset-0 grid grid-cols-2 z-1 place-items-center from-b1 from-25% to-90% to-transparent bg-linear-to-r">
-      <div class="justify-self-start ">
-        <div class="grid items-center size-full relative max-w-140 w-140 ">
+      class="absolute left-0 top-0 inset-0 grid grid-cols-2 z-1 place-items-center from-b1 from-25% to-90% to-transparent bg-linear-to-r">
+      <div class="justify-self-start">
+        <div class="grid items-center size-full relative max-w-140 w-140">
           <LolpocketDefinition>
             <Button
               variant="shadow"
               size="lg"
-              :class=" cn(
-                'pointer-events-auto w-28 justify-self-end relative hover:bgneutral  mt-3  border-b3 hover:text-nc text-2  self-end justify-self-end overflow-hidden shadow-xs transition-all duration-200',
-              )
+              :class="
+                cn(
+                  'pointer-events-auto w-28 justify-self-end relative hover:bgneutral  mt-3  border-b3 hover:text-nc text-xs  self-end justify-self-end overflow-hidden shadow-xs transition-all duration-200',
+                )
               "
               @click="navigateTo('/login')">
               Sign in

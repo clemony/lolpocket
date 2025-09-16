@@ -12,7 +12,7 @@ export interface RoleStats {
 
 export function useMatchRoles(
   puuid: string,
-  matches: Ref<MatchData[]>,
+  matches: Ref<MatchData[]>
 ): ComputedRef<RoleStats[]> {
   return computed(() => {
     const roles = ['TOP', 'JUNGLE', 'MIDDLE', 'BOTTOM', 'UTILITY']

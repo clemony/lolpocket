@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:13 PM CDT
 
 const champion: Champion = {
   "id": 58,
@@ -122,41 +122,65 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "60 / 90 / 120 / 150 / 180",
-                "100% bonus AD"
+                {
+                  "values": "60 / 90 / 120 / 150 / 180"
+                },
+                {
+                  "values": "100",
+                  "unit": "% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Enhanced Damage",
               "modifiers": [
-                "90 / 135 / 180 / 225 / 270",
-                "140% bonus AD"
+                {
+                  "values": "90 / 135 / 180 / 225 / 270"
+                },
+                {
+                  "values": "140",
+                  "unit": "% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Healing Cap",
               "modifiers": [
-                "50 / 75 / 100 / 125 / 150"
+                {
+                  "values": "50 / 75 / 100 / 125 / 150"
+                }
               ]
             },
             {
               "attribute": "Enhanced Healing Cap",
               "modifiers": [
-                "200 / 300 / 400 / 500 / 600"
+                {
+                  "values": "200 / 300 / 400 / 500 / 600"
+                }
               ]
             },
             {
               "attribute": "Non-Champion Healing",
               "modifiers": [
-                "2 / 3 / 4 / 5 / 6",
-                "2% bonus AD"
+                {
+                  "values": "2 / 3 / 4 / 5 / 6"
+                },
+                {
+                  "values": "2",
+                  "unit": "% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Enhanced Non-Champion Healing",
               "modifiers": [
-                "6 / 9 / 12 / 15 / 18",
-                "6% bonus AD"
+                {
+                  "values": "6 / 9 / 12 / 15 / 18"
+                },
+                {
+                  "values": "6",
+                  "unit": "% bonus AD"
+                }
               ]
             }
           ]
@@ -167,15 +191,25 @@ const champion: Champion = {
             {
               "attribute": "Champion Healing",
               "modifiers": [
-                "12 / 20 / 28 / 36 / 44",
-                "17% bonus AD"
+                {
+                  "values": "12 / 20 / 28 / 36 / 44"
+                },
+                {
+                  "values": "17",
+                  "unit": "% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Enhanced Champion Healing",
               "modifiers": [
-                "36 / 60 / 84 / 108 / 132",
-                "51% bonus AD"
+                {
+                  "values": "36 / 60 / 84 / 108 / 132"
+                },
+                {
+                  "values": "51",
+                  "unit": "% bonus AD"
+                }
               ]
             }
           ]
@@ -214,15 +248,25 @@ const champion: Champion = {
             {
               "attribute": "Total Physical Damage",
               "modifiers": [
-                "10 / 40 / 70 / 100 / 130",
-                "150% AD"
+                {
+                  "values": "10 / 40 / 70 / 100 / 130"
+                },
+                {
+                  "values": "150",
+                  "unit": "% AD"
+                }
               ]
             },
             {
               "attribute": "Physical Damage Per Hit",
               "modifiers": [
-                "5 / 20 / 35 / 50 / 65",
-                "75% AD"
+                {
+                  "values": "5 / 20 / 35 / 50 / 65"
+                },
+                {
+                  "values": "75",
+                  "unit": "% AD"
+                }
               ]
             }
           ]
@@ -236,8 +280,13 @@ const champion: Champion = {
             {
               "attribute": "Total Physical Damage",
               "modifiers": [
-                "15 / 60 / 105 / 150 / 195",
-                "225% AD"
+                {
+                  "values": "15 / 60 / 105 / 150 / 195"
+                },
+                {
+                  "values": "225",
+                  "unit": "% AD"
+                }
               ]
             }
           ]
@@ -269,8 +318,13 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "40 / 70 / 100 / 130 / 160",
-                "90% bonus AD"
+                {
+                  "values": "40 / 70 / 100 / 130 / 160"
+                },
+                {
+                  "values": "90",
+                  "unit": "% bonus AD"
+                }
               ]
             }
           ]
@@ -303,8 +357,13 @@ const champion: Champion = {
             {
               "attribute": "Total Physical Damage",
               "modifiers": [
-                "80 / 140 / 200 / 260 / 320",
-                "180% bonus AD"
+                {
+                  "values": "80 / 140 / 200 / 260 / 320"
+                },
+                {
+                  "values": "180",
+                  "unit": "% bonus AD"
+                }
               ]
             }
           ]
@@ -318,28 +377,46 @@ const champion: Champion = {
             {
               "attribute": "Bonus Physical Damage",
               "modifiers": [
-                "30 / 45 / 60 / 75 / 90",
-                "45% bonus AD"
+                {
+                  "values": "30 / 45 / 60 / 75 / 90"
+                },
+                {
+                  "values": "45",
+                  "unit": "% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Total Bonus Damage",
               "modifiers": [
-                "70 / 115 / 160 / 205 / 250",
-                "135% bonus AD"
+                {
+                  "values": "70 / 115 / 160 / 205 / 250"
+                },
+                {
+                  "values": "135",
+                  "unit": "% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Total Physical Damage",
               "modifiers": [
-                "110 / 185 / 260 / 335 / 410",
-                "225% bonus AD"
+                {
+                  "values": "110 / 185 / 260 / 335 / 410"
+                },
+                {
+                  "values": "225",
+                  "unit": "% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Armor Reduction",
               "modifiers": [
-                "25 / 27.5 / 30 / 32.5 / 35% of target's armor"
+                {
+                  "values": "25 / 27.5 / 30 / 32.5 / 35",
+                  "unit": "% of target's armor"
+                }
               ]
             }
           ]
@@ -367,7 +444,9 @@ const champion: Champion = {
             {
               "attribute": "Bonus Health",
               "modifiers": [
-                "300 / 500 / 700"
+                {
+                  "values": "300 / 500 / 700"
+                }
               ]
             }
           ]
@@ -378,17 +457,33 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage Per Tick",
               "modifiers": [
-                "30 / 75 / 120",
-                "5% bonus AD",
-                "5% AP"
+                {
+                  "values": "30 / 75 / 120"
+                },
+                {
+                  "values": "5",
+                  "unit": "% bonus AD"
+                },
+                {
+                  "values": "5",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Total Magic Damage",
               "modifiers": [
-                "900 / 2250 / 3600",
-                "150% bonus AD",
-                "150% AP"
+                {
+                  "values": "900 / 2250 / 3600"
+                },
+                {
+                  "values": "150",
+                  "unit": "% bonus AD"
+                },
+                {
+                  "values": "150",
+                  "unit": "% AP"
+                }
               ]
             }
           ]

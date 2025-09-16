@@ -6,13 +6,13 @@ const item: Item = {
     {
       id: 3134,
       name: 'Serrated Dirk',
-      gold: 1000
+      gold: 1000,
     },
     {
       id: 3133,
       name: 'Caulfield\'s Warhammer',
-      gold: 1050
-    }
+      gold: 1050,
+    },
   ],
   specialRecipe: 0,
   noEffects: false,
@@ -22,27 +22,23 @@ const item: Item = {
     {
       name: 'Eminence',
       unique: true,
-      effects: 'Scoring a <img src="/img/icons/takedown.webp" class="tip-icon" />takedown against an enemy champion within 3 seconds of damaging them generates a permanent stack and grants you 15 ad (+2 per stack) <b>bonus</b> attack damage for 90 seconds.'
-    }
+      effects:
+        'Scoring a <img src="/img/icons/takedown.webp" class="tip-icon" />takedown against an enemy champion within 3 seconds of damaging them generates a permanent stack and grants you 15 ad (+2 per stack) <b>bonus</b> attack damage for 90 seconds.',
+    },
   ],
   stats: {
     attackDamage: 60,
     lethality: 18,
-    abilityHaste: 10
+    abilityHaste: 10,
   },
   shop: {
     prices: {
       total: 3000,
       combined: 950,
-      sell: 1200
+      sell: 1200,
     },
-    tags: [
-      'ASSASSIN'
-    ]
+    tags: ['ASSASSIN'],
   },
-  maps: [
-    11,
-    21
-  ]
+  maps: [11, 21],
 }
 export default item

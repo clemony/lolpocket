@@ -16,7 +16,7 @@ watch(
   () => tags.value,
   (newVal) => {
     console.log(newVal)
-  },
+  }
 )
 
 function clearForm() {
@@ -41,19 +41,21 @@ defineExpose({
 
 <template>
   <Dialog>
-    <MotionDialogContent
-      class="!rounded-xl w-110 pt-8 pb-6 px-7">
+    <MotionDialogContent class="!rounded-xl w-110 pt-8 pb-6 px-7">
       <DialogHeader>
         <DialogTitle class="text-6 dst">
           New Pocket
         </DialogTitle>
 
         <DialogDescription class="leading-6 mt-1 dst mb-5">
-          Choose a pocket name, tag your pocket (for easier searching), and create your pocket icon. <span class="font-semibold">All items can be left blank</span> and edited later.
+          Choose a pocket name, tag your pocket (for easier searching), and
+          create your pocket icon.
+          <span class="font-semibold">All items can be left blank</span>
+          and edited later.
         </DialogDescription>
       </DialogHeader>
 
-      <div class=" grid field-box  gap-4 size-full">
+      <div class="grid field-box gap-4 size-full">
         <IconPopover
           v-model:selected-icon="selectedIcon"
           side="right"
@@ -61,10 +63,11 @@ defineExpose({
           align="start"
           :align-offset="-136"
           class="size-30 place-self-center cursor-pointer"
-          @update:selected-icon="(e) => selectedIcon = e" />
+          @update:selected-icon="(e) => (selectedIcon = e)" />
 
-        <div class="[&_label]:text-3  w-full flex flex-col justify-start gap-6  pt-4 px-0.5 h-full">
-          <div class="flex flex-col  gap-1">
+        <div
+          class="[&_label]:text-sm w-full flex flex-col justify-start gap-6 pt-4 px-0.5 h-full">
+          <div class="flex flex-col gap-1">
             <div class="input w-full shrink-0">
               <div class="grow">
                 <input
@@ -72,7 +75,7 @@ defineExpose({
                   type="text"
                   name="pocket-name"
                   placeholder="Pocket Name"
-                  class="size-full text-3" />
+                  class="size-full text-sm" />
               </div>
 
               <span class="flex gap-2">
@@ -86,8 +89,9 @@ defineExpose({
 
             <TagsInput
               v-model="tags"
-              class="flex-col p-2 mt-6  ">
-              <div class="*:text-3 flex w-full    flex-row flex-wrap justify-start gap-2">
+              class="flex-col p-2 mt-6">
+              <div
+                class="*:text-sm flex w-full flex-row flex-wrap justify-start gap-2">
                 <template v-if="tags.length">
                   <TransitionGroup name="pop">
                     <TagsInputItem
@@ -118,7 +122,7 @@ defineExpose({
 
               <TagsInputInput
                 placeholder="optional"
-                class="text-3 min-h-10 w-full rounded-md border-0 focus:border-0"
+                class="text-sm min-h-10 w-full rounded-md border-0 focus:border-0"
                 name="pocket-tags " />
             </TagsInput>
           </div>
@@ -132,7 +136,7 @@ defineExpose({
       <DialogFooter class="mt-1 justify-start">
         <button
           type="submit"
-          class="btn btn-neutral px-6 btn-md !text-3 !font-medium"
+          class="btn btn-neutral px-6 btn-md !text-sm !font-medium"
           @click="submitForm">
           Create
         </button>
@@ -141,6 +145,4 @@ defineExpose({
   </Dialog>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

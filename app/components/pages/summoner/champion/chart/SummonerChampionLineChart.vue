@@ -1,5 +1,10 @@
 <script lang="ts" setup>
-const { class: className, summoner, championName, matches } = defineProps<{
+const {
+  class: className,
+  summoner,
+  championName,
+  matches,
+} = defineProps<{
   class?: HTMLAttributes['class']
   summoner?: Summoner
   championName: string
@@ -13,9 +18,12 @@ const timeline = computed(() => {
 
   return useChampionWinrateTimeline(summoner.puuid, matches, championName)
 })
-watch(() => timeline.value, (newVal) => {
-  console.log('💠 - watch - newVal:', newVal)
-})
+watch(
+  () => timeline.value,
+  (newVal) => {
+    console.log('💠 - watch - newVal:', newVal)
+  }
+)
 
 const data = computed(() => {
   if (!timeline.value)
@@ -23,11 +31,14 @@ const data = computed(() => {
 
   return {
     labels: timeline?.value?.map(p => p.span),
-    datasets: [{
-      data: timeline?.value?.map(p => p.winrate),
-    }, {
-      data: timeline?.value?.map(p => p.games),
-    }],
+    datasets: [
+      {
+        data: timeline?.value?.map(p => p.winrate),
+      },
+      {
+        data: timeline?.value?.map(p => p.games),
+      },
+    ],
   }
 })
 
@@ -92,17 +103,16 @@ const range = computed(() => {
 </script>
 
 <template>
-  <div class="stats bg-b1 rounded-box border border-b3 shadow-warm-soft h-54 w-full  px-5 relative">
+  <div
+    class="stats bg-b1 rounded-box border border-b3 shadow-warm-soft h-54 w-full px-5 relative">
     <div class="absolute top-6 left-6 text-bc z-0 pointer-events-none">
-      <div class="text-1 stat-desc font-medium mb-1">
+      <div class="text-xxs stat-desc font-medium mb-1">
         {{ range }}
       </div>
 
-      <div class=" text-5  font-semibold dst">
-      </div>
+      <div class="text-lgfont-semibold dst"></div>
 
-      <div class="text-3 stat-desc ">
-      </div>
+      <div class="text-sm stat-desc"></div>
     </div>
 
     <LineChart

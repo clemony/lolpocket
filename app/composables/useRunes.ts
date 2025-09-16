@@ -4,7 +4,7 @@ export function useRunes(player?: ComputedRef<any>, set?: ComputedRef<any>) {
   const runes = computed(() => ix.runes)
 
   const playerKeystone = computed(() =>
-    ix.runeById(player.value.perks.keystone),
+    ix.runeById(player.value.perks.keystone)
   )
 
   const playerPaths = computed(() => {
@@ -24,7 +24,9 @@ export function useRunes(player?: ComputedRef<any>, set?: ComputedRef<any>) {
   ]
 
   const getKeystones = (set: ComputedRef<any>) =>
-    computed(() => runes.value?.filter(r => r.path == set.value?.primary?.path) || [])
+    computed(
+      () => runes.value?.filter(r => r.path == set.value?.primary?.path) || []
+    )
 
   const getPrimarySlots = (set: ComputedRef<any>) =>
     computed(() => {

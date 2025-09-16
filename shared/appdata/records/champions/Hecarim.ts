@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:56 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:12 PM CDT
 
 const champion: Champion = {
   "id": 120,
@@ -121,15 +121,25 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "60 / 85 / 110 / 135 / 160",
-                "90% bonus AD"
+                {
+                  "values": "60 / 85 / 110 / 135 / 160"
+                },
+                {
+                  "values": "90",
+                  "unit": "% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Minion damage",
               "modifiers": [
-                "36 / 51 / 66 / 81 / 96",
-                "54% bonus AD"
+                {
+                  "values": "36 / 51 / 66 / 81 / 96"
+                },
+                {
+                  "values": "54",
+                  "unit": "% bonus AD"
+                }
               ]
             }
           ]
@@ -163,15 +173,25 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage Per Tick",
               "modifiers": [
-                "20 / 30 / 40 / 50 / 60",
-                "20% AP"
+                {
+                  "values": "20 / 30 / 40 / 50 / 60"
+                },
+                {
+                  "values": "20",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Total Magic Damage",
               "modifiers": [
-                "100 / 150 / 200 / 250 / 300",
-                "100% AP"
+                {
+                  "values": "100 / 150 / 200 / 250 / 300"
+                },
+                {
+                  "values": "100",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -182,13 +202,17 @@ const champion: Champion = {
             {
               "attribute": "Bonus Resistances",
               "modifiers": [
-                "5 / 10 / 15 / 20 / 25"
+                {
+                  "values": "5 / 10 / 15 / 20 / 25"
+                }
               ]
             },
             {
               "attribute": "Capped Healing",
               "modifiers": [
-                "120 / 150 / 180 / 210 / 240"
+                {
+                  "values": "120 / 150 / 180 / 210 / 240"
+                }
               ]
             }
           ]
@@ -222,15 +246,25 @@ const champion: Champion = {
             {
               "attribute": "Minimum Physical Damage",
               "modifiers": [
-                "30 / 45 / 60 / 75 / 90",
-                "50% bonus AD"
+                {
+                  "values": "30 / 45 / 60 / 75 / 90"
+                },
+                {
+                  "values": "50",
+                  "unit": "% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Maximum Physical Damage",
               "modifiers": [
-                "60 / 90 / 120 / 150 / 180",
-                "100% bonus AD"
+                {
+                  "values": "60 / 90 / 120 / 150 / 180"
+                },
+                {
+                  "values": "100",
+                  "unit": "% bonus AD"
+                }
               ]
             }
           ]
@@ -266,8 +300,13 @@ const champion: Champion = {
             {
               "attribute": "Magic damage",
               "modifiers": [
-                "150 / 250 / 350",
-                "100% AP"
+                {
+                  "values": "150 / 250 / 350"
+                },
+                {
+                  "values": "100",
+                  "unit": "% AP"
+                }
               ]
             }
           ]

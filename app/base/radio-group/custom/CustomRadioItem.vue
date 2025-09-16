@@ -40,7 +40,7 @@ const props = defineProps<{
         }">
         <icon
           name="codicon:circle-filled"
-          class="size-5.25 -mt-px textneutral  opacity-100 group-disabled:opacity-0 absolute" />
+          class="size-5.25 -mt-px textneutral opacity-100 group-disabled:opacity-0 absolute" />
       </Motion>
     </RadioGroupIndicator>
   </RadioGroupItem>

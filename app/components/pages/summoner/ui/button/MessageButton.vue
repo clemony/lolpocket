@@ -1,5 +1,10 @@
 <script setup lang="ts">
-const { class: className, summoner, variant = 'shadow', size = 'md' } = defineProps<{
+const {
+  class: className,
+  summoner,
+  variant = 'shadow',
+  size = 'md',
+} = defineProps<{
   class?: HTMLAttributes['class']
   summoner: Summoner
   variant?: any
@@ -15,8 +20,7 @@ const { class: className, summoner, variant = 'shadow', size = 'md' } = definePr
     <icon
       name="lucide:send"
       class="" />
-    <span
-      class="**:capitalize">
+    <span class="**:capitalize">
       <slot />
     </span>
   </Button>

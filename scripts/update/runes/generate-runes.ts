@@ -28,18 +28,21 @@ for (const runePath of raw) {
         tierSlot,
       }
 
-      const filePath = path.join(runeOutputDir, `${rune.name.replace(/\s+/g, '_')}.ts`)
+      const filePath = path.join(
+        runeOutputDir,
+        `${rune.name.replace(/\s+/g, '_')}.ts`
+      )
       fs.writeFileSync(
         filePath,
         `// ${markUpdate()}
 
 const rune: Rune = ${JSON.stringify(enriched, null, 2)}
 
-export default rune`,
+export default rune`
       )
 
       return enriched
-    }),
+    })
   )
 
   outputIndex[pathName] = slots

@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:14 PM CDT
 
 const champion: Champion = {
   "id": 113,
@@ -127,8 +127,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "90 / 140 / 190 / 240 / 290",
-                "60% AP"
+                {
+                  "values": "90 / 140 / 190 / 240 / 290"
+                },
+                {
+                  "values": "60",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -164,9 +169,17 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "5 / 15 / 25 / 35 / 45",
-                "20% AP",
-                "4% of her maximum health"
+                {
+                  "values": "5 / 15 / 25 / 35 / 45"
+                },
+                {
+                  "values": "20",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "4",
+                  "unit": "% of her maximum health"
+                }
               ]
             }
           ]
@@ -177,17 +190,33 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "5 / 25 / 45 / 65 / 85",
-                "60% AP",
-                "8% of her maximum health"
+                {
+                  "values": "5 / 25 / 45 / 65 / 85"
+                },
+                {
+                  "values": "60",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "8",
+                  "unit": "% of her maximum health"
+                }
               ]
             },
             {
               "attribute": "Total Physical Damage",
               "modifiers": [
-                "10 / 40 / 70 / 100 / 130",
-                "80% AP",
-                "12% of her maximum health"
+                {
+                  "values": "10 / 40 / 70 / 100 / 130"
+                },
+                {
+                  "values": "80",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "12",
+                  "unit": "% of her maximum health"
+                }
               ]
             }
           ]
@@ -227,8 +256,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "55 / 105 / 155 / 205 / 255",
-                "60% AP"
+                {
+                  "values": "55 / 105 / 155 / 205 / 255"
+                },
+                {
+                  "values": "60",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -264,8 +298,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "125 / 150 / 175",
-                "40% AP"
+                {
+                  "values": "125 / 150 / 175"
+                },
+                {
+                  "values": "40",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -276,8 +315,13 @@ const champion: Champion = {
             {
               "attribute": "Increased Damage",
               "modifiers": [
-                "200 / 300 / 400",
-                "80% AP"
+                {
+                  "values": "200 / 300 / 400"
+                },
+                {
+                  "values": "80",
+                  "unit": "% AP"
+                }
               ]
             }
           ]

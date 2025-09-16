@@ -21,7 +21,7 @@ const props = defineProps<{
       <SelectGroup>
         <SelectItem
           v-for="font in fonts.sort()" :key="font.id" :value="font.id"
-          :style="{ fontFamily: font.id }" class="text-4 dst">
+          :style="{ fontFamily: font.id }" class="text-md dst">
           {{ font.display }}
         </SelectItem>
       </SelectGroup>
@@ -30,6 +30,4 @@ const props = defineProps<{
   h
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -6,7 +6,13 @@ export function formatStats(stats = {}): Record<string, number> {
   for (const statName in stats) {
     const stat = stats[statName]
     const value
-      = stat.flat || stat.percent || stat.perLevel || stat.percentPerLevel || stat.percentBase || stat.percentBonus || 0
+      = stat.flat
+        || stat.percent
+        || stat.perLevel
+        || stat.percentPerLevel
+        || stat.percentBase
+        || stat.percentBonus
+        || 0
 
     if (statName === 'magicPenetration') {
       if (stat.flat)
@@ -31,11 +37,19 @@ export function formatStats(stats = {}): Record<string, number> {
   return flatStats
 }
 
-export function normalizeItemData(item: { rank: string[], shop: { tags: any }, maps: any }): { rank: string[], tags: string[], maps: number[] } {
+export function normalizeItemData(item: {
+  rank: string[]
+  shop: { tags: any }
+  maps: any
+}): { rank: string[], tags: string[], maps: number[] } {
   if (item.rank[0] == 'TRINKET' || item.rank[0] == 'POTION') {
     item.rank[0] = 'Consumable'
   }
-  if (item.rank[0] == 'MINION' || item.rank[0] == 'TURRET' || item.rank[0] == 'DISTRIBUTED') {
+  if (
+    item.rank[0] == 'MINION'
+    || item.rank[0] == 'TURRET'
+    || item.rank[0] == 'DISTRIBUTED'
+  ) {
     item.rank[0] = 'Special'
   }
   const normalizedTags = (item.shop?.tags ?? []).map(normalize)

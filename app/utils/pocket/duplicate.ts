@@ -20,7 +20,7 @@ export function duplicatePocket(original: Pocket): Pocket {
 export function duplicateRuneSet(original: RuneSet, target: string): RuneSet {
   const toID = hexoid()
   const newSet = deepCopy(original)
-  const pocket = <Pocket>(ps().getPocket(target))
+  const pocket = <Pocket>ps().getPocket(target)
 
   newSet.id = toID()
   pocket.runes.push(newSet)
@@ -30,7 +30,7 @@ export function duplicateRuneSet(original: RuneSet, target: string): RuneSet {
 export function duplicateItemSet(original: ItemSet, target: string): ItemSet {
   const toID = hexoid()
   const newSet = deepCopy(original)
-  const pocket = <Pocket>(ps().getPocket(target))
+  const pocket = <Pocket>ps().getPocket(target)
 
   newSet.name = `${original.name} (copy)`
   newSet.id = toID()

@@ -42,7 +42,7 @@ async function hydrateUser1() {
       throw error
 
     if (data) {
-    // Use the entire row
+      // Use the entire row
       console.log(data)
     }
   }
@@ -53,7 +53,8 @@ async function hydrateUser1() {
 </script>
 
 <template>
-  <div class="pt-8 w-full flex flex-col h-full w-full items-center  max-h-screen px-8 pb-6">
+  <div
+    class="pt-8 w-full flex flex-col h-full w-full items-center max-h-screen px-8 pb-6">
     <header class="w-full">
       <h1>Nexus</h1>
     </header>
@@ -72,11 +73,17 @@ async function hydrateUser1() {
         fetch user datasss
       </Button>
 
-      <Button @click="useSignOut() ">
+      <Button @click="useSignOut()">
         sign out
       </Button>
 
-      <Button @click="toast('Hello toast!', { description: 'Canadian neurosurgeon Dr. Wilder Penfield, while operating on epilepsy patients, discovered the “toast centre” of the human brain, which is wholly dedicated to detecting when toast is burning.' }) ">
+      <Button
+        @click="
+          toast('Hello toast!', {
+            description:
+              'Canadian neurosurgeon Dr. Wilder Penfield, while operating on epilepsy patients, discovered the “toast centre” of the human brain, which is wholly dedicated to detecting when toast is burning.',
+          })
+        ">
         toast
       </Button>
     </div>

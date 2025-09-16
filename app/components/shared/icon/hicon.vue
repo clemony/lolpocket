@@ -1,5 +1,9 @@
 <script setup lang="ts">
-const { class: className, name, iconScale } = defineProps<{
+const {
+  class: className,
+  name,
+  iconScale,
+} = defineProps<{
   class?: HTMLAttributes['class']
   name?: string
   iconScale?: number
@@ -7,13 +11,13 @@ const { class: className, name, iconScale } = defineProps<{
 
 const svg = /i-/
 const img = /https:/
+const img1 = /\/img\//
 const classes = 'shrink-0 size-full'
 </script>
 
 <template>
   <component
     :is="name"
-
     v-if="name.match(svg)"
     role="img"
     :style="{
@@ -22,7 +26,7 @@ const classes = 'shrink-0 size-full'
     }"
     :class="cn('', classes, className)" />
   <Img
-    v-else-if="name.match(img)"
+    v-else-if="name.match(img) || name.match(img1)"
     :img="name"
     alt="icon"
     :class="cn('shrink-0', classes, className)" />

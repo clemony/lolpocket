@@ -3,7 +3,7 @@ const props = defineProps<{
   pocket: Pocket
 }>()
 
-const pocket = computed (() => {
+const pocket = computed(() => {
   return props.pocket
 })
 /* const spellsLength = computed (() => {
@@ -17,6 +17,8 @@ const pocket = computed (() => {
   <div
     v-tippy="`${pocket.spells.length ?? 'no'} spells`"
     class="flex gap-2 items-center">
-    <span class="dst font-mono text-1 opacity-60">{{ pocket.spells.length }}</span>
+    <span class="dst font-mono text-xxs opacity-60">
+      {{ pocket.spells.length }}
+    </span>
   </div>
 </template>

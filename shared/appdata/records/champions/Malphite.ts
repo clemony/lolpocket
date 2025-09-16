@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:56 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:13 PM CDT
 
 const champion: Champion = {
   "id": 54,
@@ -126,14 +126,22 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "70 / 120 / 170 / 220 / 270",
-                "60% AP"
+                {
+                  "values": "70 / 120 / 170 / 220 / 270"
+                },
+                {
+                  "values": "60",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Slow",
               "modifiers": [
-                "20 / 25 / 30 / 35 / 40%"
+                {
+                  "values": "20 / 25 / 30 / 35 / 40",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -169,13 +177,19 @@ const champion: Champion = {
             {
               "attribute": "Bonus Armor",
               "modifiers": [
-                "10 / 15 / 20 / 25 / 30% armor"
+                {
+                  "values": "10 / 15 / 20 / 25 / 30",
+                  "unit": "% armor"
+                }
               ]
             },
             {
               "attribute": "Increased Bonus Armor",
               "modifiers": [
-                "30 / 45 / 60 / 75 / 90% armor"
+                {
+                  "values": "30 / 45 / 60 / 75 / 90",
+                  "unit": "% armor"
+                }
               ]
             }
           ]
@@ -186,9 +200,17 @@ const champion: Champion = {
             {
               "attribute": "Bonus Physical Damage",
               "modifiers": [
-                "30 / 40 / 50 / 60 / 70",
-                "20% AP",
-                "15% armor"
+                {
+                  "values": "30 / 40 / 50 / 60 / 70"
+                },
+                {
+                  "values": "20",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "15",
+                  "unit": "% armor"
+                }
               ]
             }
           ]
@@ -199,9 +221,17 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "15 / 25 / 35 / 45 / 55",
-                "30% AP",
-                "15% armor"
+                {
+                  "values": "15 / 25 / 35 / 45 / 55"
+                },
+                {
+                  "values": "30",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "15",
+                  "unit": "% armor"
+                }
               ]
             }
           ]
@@ -234,15 +264,26 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "70 / 110 / 150 / 190 / 230",
-                "60% AP",
-                "40% armor"
+                {
+                  "values": "70 / 110 / 150 / 190 / 230"
+                },
+                {
+                  "values": "60",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "40",
+                  "unit": "% armor"
+                }
               ]
             },
             {
               "attribute": "Cripple Strength",
               "modifiers": [
-                "30 / 35 / 40 / 45 / 50%"
+                {
+                  "values": "30 / 35 / 40 / 45 / 50",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -273,8 +314,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "200 / 300 / 400",
-                "90% AP"
+                {
+                  "values": "200 / 300 / 400"
+                },
+                {
+                  "values": "90",
+                  "unit": "% AP"
+                }
               ]
             }
           ]

@@ -7,21 +7,28 @@ const { runes, selected } = defineProps<{
 const emit = defineEmits(['update:rune'])
 const selectedRune = ref(null)
 
-watch(() => selectedRune.value, (newVal) => {
-  console.log('💠 - watch - newVal:', newVal)
-})
+watch(
+  () => selectedRune.value,
+  (newVal) => {
+    console.log('💠 - watch - newVal:', newVal)
+  }
+)
 
-watch(() => selected, (newVal) => {
-  if (newVal && newVal != selectedRune.value)
-    selectedRune.value = selected
-})
+watch(
+  () => selected,
+  (newVal) => {
+    if (newVal && newVal != selectedRune.value)
+      selectedRune.value = selected
+  }
+)
 </script>
 
 <template>
   <Field
     title="Keystone"
-    class="  pb-4 pt-6 shadow-warm   h-29 px-3 flex items-center  w-114 max-w-114 relative">
-    <div class="absolute size-full top-0 left-0 rounded-box overflow-hidden opacity-26">
+    class="pb-4 pt-6 shadow-warm h-29 px-3 flex items-center w-114 max-w-114 relative">
+    <div
+      class="absolute size-full top-0 left-0 rounded-box overflow-hidden opacity-26">
       <div
         class="absolute size-full top-0 left-0 gradient mask-bottom-right"
         :data-path="runes[0].path" />
@@ -29,11 +36,14 @@ watch(() => selected, (newVal) => {
 
     <RadioGroup
       v-model:model-value="selectedRune"
-      :class="cn(
-        ' items-center justify-around  flex  relative rounded-xl size-full rounded-xl  **:select-none', `grid-cols-${runes.length ?? 3}`,
-      )"
+      :class="
+        cn(
+          ' items-center justify-around  flex  relative rounded-xl size-full rounded-xl  **:select-none',
+          `grid-cols-${runes.length ?? 3}`,
+        )
+      "
       @update:model-value="emit('update:rune', selectedRune)">
-    <!--   <Label
+      <!--   <Label
         v-for="rune in runes"
         :key="rune.id"
         v-tippy="rune.name"
@@ -67,6 +77,4 @@ watch(() => selected, (newVal) => {
   </Field>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

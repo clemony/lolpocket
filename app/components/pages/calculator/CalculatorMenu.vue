@@ -1,6 +1,4 @@
-<script lang="ts" setup>
-
-</script>
+<script lang="ts" setup></script>
 
 <template>
   <Menubar class="shadow-none bg-transparent border-none">
@@ -26,22 +24,20 @@
       <MenubarTrigger>
         <icon
           name="ph:upload-simple"
-          class="size-6 text-bc/60 group-hover:text-bc " />
+          class="size-6 text-bc/60 group-hover:text-bc" />
       </MenubarTrigger>
 
-      <MenubarContent>
-      </MenubarContent>
+      <MenubarContent></MenubarContent>
     </MenubarMenu>
 
     <MenubarMenu>
       <MenubarTrigger>
         <icon
           name="reset"
-          class="size-5.25 text-bc/60 group-hover:text-bc " />
+          class="size-5.25 text-bc/60 group-hover:text-bc" />
       </MenubarTrigger>
 
-      <MenubarContent>
-      </MenubarContent>
+      <MenubarContent></MenubarContent>
     </MenubarMenu>
   </Menubar>
 </template>

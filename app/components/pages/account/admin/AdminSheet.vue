@@ -21,15 +21,11 @@ const user = useSupabaseUser()
   <Sheet
     v-if="user.role == 'admin'"
     v-model:open="isOpen">
-    <LazyNestedSheetContent class="h-screen max-h-screen overflow-hidden ">
+    <LazyNestedSheetContent class="h-screen max-h-screen overflow-hidden">
       <SheetHeader>
-        <NestedSheetTitle>
-          Admin
-        </NestedSheetTitle>
+        <NestedSheetTitle>Admin</NestedSheetTitle>
 
-        <SheetDescription>
-          Take care of business okay.
-        </SheetDescription>
+        <SheetDescription>Take care of business okay.</SheetDescription>
       </SheetHeader>
 
       <div class="w-full *:w-full pt-10 grid grid-cols-1 h-fit">
@@ -46,8 +42,7 @@ const user = useSupabaseUser()
         <Btn
           class=""
           @click="clearMatches()">
-          <icon
-            name="refresh" />
+          <icon name="refresh" />
           Force Reload User Summoner
         </Btn>
       </div>

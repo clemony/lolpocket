@@ -6,9 +6,12 @@ import type { HTMLAttributes } from 'vue'
 import { computed, reactive, ref, watch } from 'vue'
 import { provideCommandContext } from './cindex'
 
-const props = withDefaults(defineProps<ListboxRootProps & { class?: HTMLAttributes['class'] }>(), {
-  modelValue: '',
-})
+const props = withDefaults(
+  defineProps<ListboxRootProps & { class?: HTMLAttributes['class'] }>(),
+  {
+    modelValue: '',
+  }
+)
 
 const emits = defineEmits<ListboxRootEmits>()
 
@@ -68,9 +71,12 @@ function handleSelect() {
   filterState.search = ''
 }
 
-watch(() => filterState.search, () => {
-  filterItems()
-})
+watch(
+  () => filterState.search,
+  () => {
+    filterItems()
+  }
+)
 
 provideCommandContext({
   allItems,
@@ -82,7 +88,12 @@ provideCommandContext({
 <template>
   <ListboxRoot
     v-bind="forwarded"
-    :class="cn('flex h-full w-full flex-col overflow-hidden rounded-lg bg-b1/94 backdrop-blur-md text-bc', props.class)">
+    :class="
+      cn(
+        'flex h-full w-full flex-col overflow-hidden rounded-lg bg-b1/94 backdrop-blur-md text-bc',
+        props.class,
+      )
+    ">
     <slot />
   </ListboxRoot>
 </template>

@@ -1,5 +1,10 @@
 <script setup lang="ts">
-const { class: className, summoner, variant = 'shadow', size = 'md' } = defineProps<{
+const {
+  class: className,
+  summoner,
+  variant = 'shadow',
+  size = 'md',
+} = defineProps<{
   class?: HTMLAttributes['class']
   summoner: Summoner
   variant?: any

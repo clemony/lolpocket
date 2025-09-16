@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const as = useAccountStore()
 const ss = useSummonerStore()
-const summoner = computed (() => ss.getSummoner(as.account?.puuid))
+const summoner = computed(() => ss.getSummoner(as.account?.puuid))
 </script>
 
 <template>
@@ -17,7 +17,7 @@ const summoner = computed (() => ss.getSummoner(as.account?.puuid))
             class="!text-6 drop-shadow-sm font-serif text-bc/94 leading-none font-bold" />
           <!--           <LazyMostPlayedChampionAvatars  :summoner /> -->
         </div>
-        <div class="flex items-center lowercase gap-4   font-normal">
+        <div class="flex items-center lowercase gap-4 font-normal">
           <SummonerTag :summoner />
 
           <SummonerRegion :region-id="summoner.region" />

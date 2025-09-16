@@ -10,7 +10,7 @@ const isDesktop = useMediaQuery('(min-width: 768px)')
 </script>
 
 <template>
-<!--   <component :is="isDesktop ? DialogHeader : DrawerHeader">
+  <!--   <component :is="isDesktop ? DialogHeader : DrawerHeader">
     <component :is="isDesktop ? DialogTitle : DrawerTitle">
       <slot name="title">
         <h1>{{ title }}</h1>
@@ -24,5 +24,6 @@ const isDesktop = useMediaQuery('(min-width: 768px)')
         </p>
       </slot>
     </component>
-  </component> -->ggg
+  </component> -->
+  ggg
 </template>

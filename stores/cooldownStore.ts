@@ -6,57 +6,63 @@ interface CooldownEntry {
   wait: number
 }
 
-export const useCooldownStore = defineStore('cooldown', () => {
-  const cooldowns = ref<Record<string, CooldownEntry>>({})
+export const useCooldownStore = defineStore(
+  'cooldown',
+  () => {
+    const cooldowns = ref<Record<string, CooldownEntry>>({})
 
-  const getKey = (puuid: string, action: string) => `${puuid}:${action}`
+    const getKey = (puuid: string, action: string) => `${puuid}:${action}`
 
-  function set(puuid: string, action: string, wait: number) {
-    cooldowns.value[getKey(puuid, action)] = {
-      timestamp: Date.now(),
-      wait,
-    }
-  }
-
-  function get(puuid: string, action: string): CooldownEntry | null {
-    const key = getKey(puuid, action)
-    const entry = cooldowns.value[key]
-
-    if (!entry)
-      return null
-
-    const now = Date.now()
-    const expired = now - entry.timestamp >= entry.wait
-
-    if (expired) {
-      delete cooldowns.value[key] // 🔥 Clean up immediately
-      return null
+    function set(puuid: string, action: string, wait: number) {
+      cooldowns.value[getKey(puuid, action)] = {
+        timestamp: Date.now(),
+        wait,
+      }
     }
 
-    return entry
-  }
-  function clear(puuid: string, action: string) {
-    delete cooldowns.value[getKey(puuid, action)]
-  }
+    function get(puuid: string, action: string): CooldownEntry | null {
+      const key = getKey(puuid, action)
+      const entry = cooldowns.value[key]
 
-  function purgeExpired() {
-    const now = Date.now()
-    for (const [key, { timestamp, wait }] of Object.entries(cooldowns.value)) {
-      if (now - timestamp >= wait)
-        delete cooldowns.value[key]
+      if (!entry)
+        return null
+
+      const now = Date.now()
+      const expired = now - entry.timestamp >= entry.wait
+
+      if (expired) {
+        delete cooldowns.value[key] // 🔥 Clean up immediately
+        return null
+      }
+
+      return entry
     }
-  }
+    function clear(puuid: string, action: string) {
+      delete cooldowns.value[getKey(puuid, action)]
+    }
 
-  // Auto purge every 30s
-  setInterval(purgeExpired, 30_000)
+    function purgeExpired() {
+      const now = Date.now()
+      for (const [key, { timestamp, wait }] of Object.entries(
+        cooldowns.value
+      )) {
+        if (now - timestamp >= wait)
+          delete cooldowns.value[key]
+      }
+    }
 
-  return {
-    set,
-    get,
-    clear,
-    purgeExpired,
-    _raw: cooldowns,
+    // Auto purge every 30s
+    setInterval(purgeExpired, 30_000)
+
+    return {
+      set,
+      get,
+      clear,
+      purgeExpired,
+      _raw: cooldowns,
+    }
+  },
+  {
+    persist: true,
   }
-}, {
-  persist: true,
-})
+)

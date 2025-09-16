@@ -3,12 +3,13 @@
 const rune: Rune = {
   id: 8446,
   name: 'Demolish',
-  description: 'Charge up a powerful attack against a tower over 3s, while within 600 range of it. The charged attack deals 100 (+35% of your max health) bonus physical damage. <br><br>Cooldown: 45s',
+  description:
+    'Charge up a powerful attack against a tower over 3s, while within 600 range of it. The charged attack deals 100 (+35% of your max health) bonus physical damage. <br><br>Cooldown: 45s',
   path: 'Resolve',
   pathId: 8400,
   tier: 1,
   tierLabel: 'Strength',
-  tierSlot: 0
+  tierSlot: 0,
 }
 
 export default rune

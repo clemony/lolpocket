@@ -13,7 +13,7 @@ const { syncIfDirty } = useSupabaseSync(
   () => pocket.value, // <- keep it reactive
   '/api/pockets',
   (userId, value) => ({ pocket: value }),
-  PocketSchema,
+  PocketSchema
 )
 
 async function testSync() {
@@ -24,8 +24,7 @@ async function testSync() {
 </script>
 
 <template>
-  <TabLayout
-    v-if="pocket">
+  <TabLayout v-if="pocket">
     <!-- splash -->
 
     <template #background>
@@ -33,12 +32,10 @@ async function testSync() {
         v-memo="pocket.icon"
         :background="pocket.icon.replace('tile', 'centered') ?? null" />
     </template>
-    <template #icon>
-    </template>
+    <template #icon></template>
     <template #header>
       <div class="flex items-center">
-        <PocketHeader
-          :pocket="pocket" />
+        <PocketHeader :pocket="pocket" />
         <PocketPinButton :pocket />
       </div>
     </template>
@@ -52,7 +49,7 @@ async function testSync() {
     </template>
 
     <template #header-right>
-    <!--   <PocketHeaderRight /> -->
+      <!--   <PocketHeaderRight /> -->
     </template>
 
     <div class="size-full pl-32 relative gap-6 overflow-hidden flex bg-b1">

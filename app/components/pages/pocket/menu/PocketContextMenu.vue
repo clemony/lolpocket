@@ -13,7 +13,7 @@ const pocket = computedAsync(() => props.pocketData)
 
 const sort = ref('id')
 
-onMounted (async () => {
+onMounted(async () => {
   const a = ref(props.pocketData)
   await a
   console.log('💠 - onMounted - a:', a)
@@ -28,12 +28,12 @@ onMounted (async () => {
 
     <ContextMenuPortal>
       <ContextMenuContent
-        class="context-menu w-74 h-max z-999 pointer-events-auto text-2  **:text-2"
+        class="context-menu w-74 h-max z-999 pointer-events-auto text-xs **:text-xs"
         @interact-outside="emit('update:grid')">
         <ContextMenuItem
           icon="basil:add-outline"
           icon-class="!size-5.5 opacity-60 -mt-0.5 shrink-0"
-          class=" [&_svg]:stroke-2">
+          class="[&_svg]:stroke-2">
           New Pocket
           <ContextMenuShortcut>{{ getDeviceKey() }}P</ContextMenuShortcut>
         </ContextMenuItem>
@@ -41,9 +41,7 @@ onMounted (async () => {
         <ContextMenuSeparator />
 
         <ContextMenuSub>
-          <ContextMenuSubTrigger>
-            Sort Table
-          </ContextMenuSubTrigger>
+          <ContextMenuSubTrigger>Sort Table</ContextMenuSubTrigger>
 
           <ContextMenuPortal>
             <ContextMenuSubContent>
@@ -129,6 +127,4 @@ onMounted (async () => {
   </ContextMenu>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

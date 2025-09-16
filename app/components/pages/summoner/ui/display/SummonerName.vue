@@ -2,11 +2,17 @@
 import type { PrimitiveProps } from 'reka-ui'
 import { Primitive } from 'reka-ui'
 
-const { class: className, summoner, as: el = 'span' } = defineProps<PrimitiveProps & {
-  as?: string
-  class?: HTMLAttributes['class']
-  summoner?: Summoner
-}>()
+const {
+  class: className,
+  summoner,
+  as: el = 'span',
+} = defineProps<
+  PrimitiveProps & {
+    as?: string
+    class?: HTMLAttributes['class']
+    summoner?: Summoner
+  }
+>()
 const name = computed(() => {
   if (!summoner && !as()?.account)
     return null
@@ -27,6 +33,4 @@ const name = computed(() => {
   </Primitive>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

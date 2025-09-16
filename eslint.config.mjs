@@ -2,7 +2,16 @@
 // CONFIG eslint
 import antfu from '@antfu/eslint-config'
 import pluginVue from 'eslint-plugin-vue'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 // @ts-check
+
+
+export function resolvePath(filePath) {
+  const __filename = fileURLToPath(import.meta.url)
+  const __dirname = path.dirname(__filename)
+  return path.resolve(__dirname, filePath)
+}
 
 export default antfu({
   ...pluginVue.configs['flat/essential'],
@@ -17,7 +26,7 @@ export default antfu({
     './supabase',
     './public',
     '**/raw/**',
-    '.save.json'
+    '.save.json',
   ],
   vue: true,
   rules: {
@@ -53,14 +62,17 @@ export default antfu({
     'vue/padding-line-between-tags': 'off',
     'vue/padding-line-between-blocks': ['error', 'always'],
     'vue/multiline-html-element-content-newline': ['error'],
-    'vue/max-attributes-per-line': ['error', {
-      singleline: {
-        max: 1,
+    'vue/max-attributes-per-line': [
+      'error',
+      {
+        singleline: {
+          max: 1,
+        },
+        multiline: {
+          max: 1,
+        },
       },
-      multiline: {
-        max: 1,
-      },
-    }],
+    ],
   },
   formatters: {
     /**
@@ -80,5 +92,18 @@ export default antfu({
      */
     markdown: 'prettier',
   },
-},
-)
+settings: {
+  tailwindcss: {
+    // Attributes/props that could contain Tailwind CSS classes...
+    // Optional, default values: ["class", "className", "ngClass", "@apply"]
+    attributes: ['class'],
+    // The absolute path pointing to you main Tailwind CSS v4 config file.
+    // It must be a `.css` file (v4), not a `.js` file (v3)
+    // REQUIRED, default value will not help
+    cssConfigPath:  resolvePath('./app/assets/css/tailwind.css'),
+    // Functions/tagFunctions that will be parsed by the plugin.
+    // Optional, default values: ["classnames", "clsx", "ctl", "cva", "tv", "tw"]
+    functions: ['classnames', 'clsx', 'ctl', 'cva', 'tv', 'tw', 'cn']
+  },
+}
+})

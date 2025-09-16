@@ -6,18 +6,18 @@ const item: Item = {
     {
       id: 1043,
       name: 'Recurve Bow',
-      gold: 700
+      gold: 700,
     },
     {
       id: 1057,
       name: 'Negatron Cloak',
-      gold: 850
+      gold: 850,
     },
     {
       id: 1043,
       name: 'Recurve Bow',
-      gold: 700
-    }
+      gold: 700,
+    },
   ],
   specialRecipe: 0,
   noEffects: false,
@@ -28,31 +28,22 @@ const item: Item = {
     {
       name: 'Fray',
       unique: true,
-      effects: 'Basic attacks deal 45 <b>bonus</b> magic damage on-hit.'
-    }
+      effects: 'Basic attacks deal 45 <b>bonus</b> magic damage on-hit.',
+    },
   ],
   stats: {
     attackSpeed: 50,
     magicResistance: 45,
-    tenacity: 20
+    tenacity: 20,
   },
   shop: {
     prices: {
       total: 2800,
       combined: 550,
-      sell: 1120
+      sell: 1120,
     },
-    tags: [
-      'FIGHTER',
-      'MARKSMAN',
-      'ONHIT_EFFECTS'
-    ]
+    tags: ['FIGHTER', 'MARKSMAN', 'ONHIT_EFFECTS'],
   },
-  maps: [
-    11,
-    12,
-    21,
-    35
-  ]
+  maps: [11, 12, 21, 35],
 }
 export default item

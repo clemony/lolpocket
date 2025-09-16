@@ -6,18 +6,18 @@ const item: Item = {
     {
       id: 1011,
       name: 'Giant\'s Belt',
-      gold: 900
+      gold: 900,
     },
     {
       id: 3801,
       name: 'Crystalline Bracer',
-      gold: 800
+      gold: 800,
     },
     {
       id: 1011,
       name: 'Giant\'s Belt',
-      gold: 900
-    }
+      gold: 900,
+    },
   ],
   specialRecipe: 0,
   noEffects: false,
@@ -28,33 +28,27 @@ const item: Item = {
     {
       name: 'Colossal Consumption',
       unique: true,
-      effects: 'While within 700 units of an enemy champion, generate a stack on them each second, stacking up to 3 times. Your next basic attack against a target with 3 stacks is empowered to consume them all to deal 70 physical damage (+6% <b>maximum</b> health) <b>bonus</b> physical damage on-hit and grant you permanent <b>bonus</b> health equal to 8% of that amount (30 second cooldown per target).'
+      effects:
+        'While within 700 units of an enemy champion, generate a stack on them each second, stacking up to 3 times. Your next basic attack against a target with 3 stacks is empowered to consume them all to deal 70 physical damage (+6% <b>maximum</b> health) <b>bonus</b> physical damage on-hit and grant you permanent <b>bonus</b> health equal to 8% of that amount (30 second cooldown per target).',
     },
     {
       name: 'Goliath',
       unique: true,
-      effects: 'Gain 0% – 30% (based on maximum health) hp increased size.'
-    }
+      effects: 'Gain 0% – 30% (based on maximum health) hp increased size.',
+    },
   ],
   stats: {
     health: 900,
-    healthRegen: 100
+    healthRegen: 100,
   },
   shop: {
     prices: {
       total: 3000,
       combined: 400,
-      sell: 1200
+      sell: 1200,
     },
-    tags: [
-      'TANK'
-    ]
+    tags: ['TANK'],
   },
-  maps: [
-    11,
-    12,
-    21,
-    35
-  ]
+  maps: [11, 12, 21, 35],
 }
 export default item

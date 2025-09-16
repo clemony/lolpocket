@@ -1,9 +1,5 @@
-<script lang="ts" setup>
-
-</script>
+<script lang="ts" setup></script>
 
 <template>
-  <div>
-    This is great news!
-  </div>
+  <div>This is great news!</div>
 </template>

@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:56 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:12 PM CDT
 
 const champion: Champion = {
   "id": 222,
@@ -126,19 +126,28 @@ const champion: Champion = {
             {
               "attribute": "Bonus Attack Speed",
               "modifiers": [
-                "15 / 27.5 / 40 / 52.5 / 65%"
+                {
+                  "values": "15 / 27.5 / 40 / 52.5 / 65",
+                  "unit": "%"
+                }
               ]
             },
             {
               "attribute": "Attack Speed per Subsequent Stack",
               "modifiers": [
-                "7.5 / 13.75 / 20 / 26.25 / 32.5%"
+                {
+                  "values": "7.5 / 13.75 / 20 / 26.25 / 32.5",
+                  "unit": "%"
+                }
               ]
             },
             {
               "attribute": "Maximum Attack Speed",
               "modifiers": [
-                "30 / 55 / 80 / 105 / 130%"
+                {
+                  "values": "30 / 55 / 80 / 105 / 130",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -149,7 +158,9 @@ const champion: Champion = {
             {
               "attribute": "Bonus Range",
               "modifiers": [
-                "80 / 110 / 140 / 170 / 200"
+                {
+                  "values": "80 / 110 / 140 / 170 / 200"
+                }
               ]
             }
           ]
@@ -183,14 +194,22 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "10 / 60 / 110 / 160 / 210",
-                "140% AD"
+                {
+                  "values": "10 / 60 / 110 / 160 / 210"
+                },
+                {
+                  "values": "140",
+                  "unit": "% AD"
+                }
               ]
             },
             {
               "attribute": "Slow",
               "modifiers": [
-                "40 / 50 / 60 / 70 / 80%"
+                {
+                  "values": "40 / 50 / 60 / 70 / 80",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -223,8 +242,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "70 / 120 / 170 / 220 / 270",
-                "100% AP"
+                {
+                  "values": "70 / 120 / 170 / 220 / 270"
+                },
+                {
+                  "values": "100",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -264,17 +288,35 @@ const champion: Champion = {
             {
               "attribute": "Maximum Physical Damage",
               "modifiers": [
-                "300 / 450 / 600",
-                "155% bonus AD",
-                "25 / 30 / 35% of target's missing health"
+                {
+                  "values": "300 / 450 / 600"
+                },
+                {
+                  "values": "155",
+                  "unit": "% bonus AD"
+                },
+                {
+                  "values": "25 - 35",
+                  "unit": "% of target's missing health",
+                  "tooltip": "Scaling per rank:\n25 / 30 / 35% of target's missing health"
+                }
               ]
             },
             {
               "attribute": "Minimum Physical Damage",
               "modifiers": [
-                "30 / 45 / 60",
-                "15.5% bonus AD",
-                "25 / 30 / 35% of target's missing health"
+                {
+                  "values": "30 / 45 / 60"
+                },
+                {
+                  "values": "15.5",
+                  "unit": "% bonus AD"
+                },
+                {
+                  "values": "25 - 35",
+                  "unit": "% of target's missing health",
+                  "tooltip": "Scaling per rank:\n25 / 30 / 35% of target's missing health"
+                }
               ]
             }
           ]
@@ -285,17 +327,35 @@ const champion: Champion = {
             {
               "attribute": "Maximum Secondary Damage",
               "modifiers": [
-                "240 / 360 / 480",
-                "124% bonus AD",
-                "20 / 24 / 28% of target's missing health"
+                {
+                  "values": "240 / 360 / 480"
+                },
+                {
+                  "values": "124",
+                  "unit": "% bonus AD"
+                },
+                {
+                  "values": "20 - 28",
+                  "unit": "% of target's missing health",
+                  "tooltip": "Scaling per rank:\n20 / 24 / 28% of target's missing health"
+                }
               ]
             },
             {
               "attribute": "Minimum Secondary Damage",
               "modifiers": [
-                "24 / 36 / 48",
-                "12.4% bonus AD",
-                "20 / 24 / 28% of target's missing health"
+                {
+                  "values": "24 / 36 / 48"
+                },
+                {
+                  "values": "12.4",
+                  "unit": "% bonus AD"
+                },
+                {
+                  "values": "20 - 28",
+                  "unit": "% of target's missing health",
+                  "tooltip": "Scaling per rank:\n20 / 24 / 28% of target's missing health"
+                }
               ]
             }
           ]

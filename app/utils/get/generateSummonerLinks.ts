@@ -19,6 +19,5 @@ export function generateSummonerLinks(summoner: Account | Summoner) {
         path: `/summoner/${slug}/live`,
       },
     ] as any,
-
   }
 }

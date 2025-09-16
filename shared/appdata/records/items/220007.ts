@@ -11,11 +11,9 @@ const item: Item = {
     prices: {
       total: 4000,
       combined: 4000,
-      sell: 1600
-    }
+      sell: 1600,
+    },
   },
-  maps: [
-    30
-  ]
+  maps: [30],
 }
 export default item

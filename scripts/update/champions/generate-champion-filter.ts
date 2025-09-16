@@ -9,7 +9,10 @@ import { normalize, normalizeArray } from '../utils'
 const rootDir = process.cwd()
 const dataPath = join(rootDir, 'server/update/champions/raw/champions-raw.json')
 const outputPath = join(rootDir, 'shared/appdata/filters/champion-filters.ts')
-const champions = JSON.parse(fs.readFileSync(dataPath, 'utf-8')) as Record<string, Champion>
+const champions = JSON.parse(fs.readFileSync(dataPath, 'utf-8')) as Record<
+  string,
+  Champion
+>
 
 type FilterMap = Record<string, number[]>
 
@@ -60,5 +63,5 @@ fs.writeFileSync(
   outputPath,
   `// ${markUpdate()}
 
-export const championFilters = ${JSON.stringify(filter, null, 2)}`,
+export const championFilters = ${JSON.stringify(filter, null, 2)}`
 )

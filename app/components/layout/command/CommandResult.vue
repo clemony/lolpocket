@@ -19,13 +19,12 @@ const variants = {
 
 <template>
   <li
-
     :variants="variants"
     initial="hidden"
     animate="visible"
     exit="hidden">
     <label
-      class=" btn-ghost-dark group "
+      class="btn-ghost-dark group"
       :class="cn('', className)"
       @click="console.log('click')">
       <slot />

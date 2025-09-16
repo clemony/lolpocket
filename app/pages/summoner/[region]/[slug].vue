@@ -16,26 +16,29 @@ const route = useRoute()
 
 const { childRoutes } = useChildRoutes('summoner')
 
-const puuid = computed (() => as().account?.puuid)
+const puuid = computed(() => as().account?.puuid)
 
 const state = ref<ReturnType<typeof useSummonerProvider> | null>(null)
 /* console.log('state: ', state.value.summoner) */
 
 provide(SummonerKey, state)
 
-watch(puuid, async (newPuuid) => {
-  if (!newPuuid)
-    return
-  const summoner = useSummonerProvider(newPuuid)
-  await summoner.findSummoner()
-  state.value = summoner
-  console.log('state.value????: ', state.value.matches)
-}, { immediate: true })
+watch(
+  puuid,
+  async (newPuuid) => {
+    if (!newPuuid)
+      return
+    const summoner = useSummonerProvider(newPuuid)
+    await summoner.findSummoner()
+    state.value = summoner
+    console.log('state.value????: ', state.value.matches)
+  },
+  { immediate: true }
+)
 </script>
 
 <template>
-  <SplashLayout
-    v-if="state?.summoner">
+  <SplashLayout v-if="state?.summoner">
     <!--     <Teleport
       to="#layout-header"
       defer>
@@ -44,7 +47,12 @@ watch(puuid, async (newPuuid) => {
     <!-- splash -->
 
     <template #background>
-      <LazyBackgroundSplashFixed :background="(as().publicData?.splash ?? state.useChampions().top().splash).replace('centered', 'uncentered')" />
+      <LazyBackgroundSplashFixed
+        :background="
+          (
+            as().publicData?.splash ?? state.useChampions().top().splash
+          ).replace('centered', 'uncentered')
+        " />
     </template>
 
     <!-- nav -->
@@ -53,7 +61,7 @@ watch(puuid, async (newPuuid) => {
     <template #header>
       <SummonerHeader
         :summoner="unref(state?.summoner)"
-        class="pt-5  col-start-2"
+        class="pt-5 col-start-2"
         size="lg" />
     </template>
 

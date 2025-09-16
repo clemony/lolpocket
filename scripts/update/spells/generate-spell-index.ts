@@ -15,7 +15,7 @@ fs.writeFileSync(
   './shared/appdata/index/spell-index.ts',
   `// ${markUpdate()}
 
-export const spellIndex: Record<string, string | number>[] = ${JSON.stringify(index, null, 2)}`,
+export const spellIndex: Record<string, string | number>[] = ${JSON.stringify(index, null, 2)}`
 )
 
 console.log('✅ spell-index.json written with id and name only')

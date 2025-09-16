@@ -1,8 +1,13 @@
 @import 'tailwindcss';
+
 @import './index.css';
+
 @source "./colors.css";
+
 @source "./theme.css";
+
 @source not "../icons";
+
 @source not "../img";
 
 @layer base {
@@ -13,23 +18,25 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
   * {
-    @apply border-b3;
+    @apply border-b3 decoration-from-font;
   }
 
   html,
   body,
   #app {
     font-family: var(--font-sans);
-    @apply text-3  text-bc selection:bg-n1/80 selection:text-nc h-screen w-screen;
+    @apply text-bc h-screen w-screen text-sm selection:bg-n1/80 selection:text-nc;
   }
 
   input,
   input:where(:not([type='button'], [type='reset'], [type='submit'])),
-  select,
-  textarea,
-  .reset-input {
-    @apply outline-0 ring-0 ring-offset-0 focus:outline-0 focus:ring-0 border-transparent;
+    select,
+    textarea,
+    .reset-input {
+    @apply border-transparent outline-0 ring-0 ring-offset-0 focus:outline-0
+    focus:ring-0;
   }
 
   html {
@@ -43,27 +50,27 @@
 
 @layer components {
   h1 {
-    @apply text-9;
+    @apply text-4xl;
   }
 
   h2 {
-    @apply text-7;
+    @apply text-3xl;
   }
 
   h3 {
-    @apply text-6;
+    @apply text-xl;
   }
 
   h4 {
-    @apply text-5;
+    @apply text-lg;
   }
 
   h5 {
-    @apply text-4;
+    @apply text-md;
   }
 
   h6 {
-    @apply text-3;
+    @apply text-sm;
   }
 
   h1,
@@ -72,13 +79,13 @@
   h4,
   h5,
   h6 {
-    @apply leading-snug  antialiased;
+    @apply leading-snug antialiased;
   }
 
   h1,
   h2,
   h3 {
-    @apply font-bold drop-shadow-text;
+    @apply drop-shadow-text font-bold;
   }
 
   p {

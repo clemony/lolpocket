@@ -11,7 +11,8 @@ const searchType = shallowRef('summoner')
       title="Search"
       class="border-b-transparent">
       <template #subheader>
-        <IndicatorTabsList class="auto-cols-fr self-start grid-flow-col h-10 !bg-b2  text-2 ">
+        <IndicatorTabsList
+          class="auto-cols-fr self-start grid-flow-col h-10 !bg-b2 text-xs">
           <IndicatorTabsTrigger value="summoner">
             Summoner
           </IndicatorTabsTrigger>

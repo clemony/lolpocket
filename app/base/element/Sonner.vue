@@ -11,12 +11,11 @@ const props = defineProps<ToasterProps>()
     v-bind="props"
     :toast-options="{
       classes: {
-        toast: 'group toast group-[.toaster]:bg-b1 group-[.toaster]:text-bc group-[.toaster]:border border-b2 -border border-b2  group-[.toaster]:shadow-lg',
+        toast:
+          'group toast group-[.toaster]:bg-b1 group-[.toaster]:text-bc group-[.toaster]:border border-b2 -border border-b2  group-[.toaster]:shadow-lg',
         description: 'group-[.toast]:text-b2-bc',
-        actionButton:
-          'group-[.toast]:bgneutral group-[.toast]:textneutral-bc',
-        cancelButton:
-          'group-[.toast]:bg-b2 group-[.toast]:text-b2-bc',
+        actionButton: 'group-[.toast]:bgneutral group-[.toast]:textneutral-bc',
+        cancelButton: 'group-[.toast]:bg-b2 group-[.toast]:text-b2-bc',
       },
     }" />
 </template>

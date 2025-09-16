@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:15 PM CDT
 
 const champion: Champion = {
   "id": 234,
@@ -122,13 +122,18 @@ const champion: Champion = {
             {
               "attribute": "Bonus Physical Damage",
               "modifiers": [
-                "2 / 3 / 4 / 5 / 6% of target's current health"
+                {
+                  "values": "2 / 3 / 4 / 5 / 6",
+                  "unit": "% of target's current health"
+                }
               ]
             },
             {
               "attribute": "Minimum Bonus Damage",
               "modifiers": [
-                "10 / 15 / 20 / 25 / 30"
+                {
+                  "values": "10 / 15 / 20 / 25 / 30"
+                }
               ]
             }
           ]
@@ -145,29 +150,49 @@ const champion: Champion = {
             {
               "attribute": "Minimum Physical Damage",
               "modifiers": [
-                "15 / 30 / 45 / 60 / 75",
-                "70% AD"
+                {
+                  "values": "15 / 30 / 45 / 60 / 75"
+                },
+                {
+                  "values": "70",
+                  "unit": "% AD"
+                }
               ]
             },
             {
               "attribute": "Maximum Physical Damage",
               "modifiers": [
-                "30 / 60 / 90 / 120 / 150",
-                "140% AD"
+                {
+                  "values": "30 / 60 / 90 / 120 / 150"
+                },
+                {
+                  "values": "140",
+                  "unit": "% AD"
+                }
               ]
             },
             {
               "attribute": "Minimum Monster Damage",
               "modifiers": [
-                "30 / 45 / 60 / 75 / 90",
-                "70% AD"
+                {
+                  "values": "30 / 45 / 60 / 75 / 90"
+                },
+                {
+                  "values": "70",
+                  "unit": "% AD"
+                }
               ]
             },
             {
               "attribute": "Maximum Monster Damage",
               "modifiers": [
-                "60 / 90 / 120 / 150 / 180",
-                "140% AD"
+                {
+                  "values": "60 / 90 / 120 / 150 / 180"
+                },
+                {
+                  "values": "140",
+                  "unit": "% AD"
+                }
               ]
             }
           ]
@@ -207,8 +232,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "80 / 135 / 190 / 245 / 300",
-                "100% AP"
+                {
+                  "values": "80 / 135 / 190 / 245 / 300"
+                },
+                {
+                  "values": "100",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -246,14 +276,23 @@ const champion: Champion = {
             {
               "attribute": "Bonus Attack Speed",
               "modifiers": [
-                "30 / 35 / 40 / 45 / 50%"
+                {
+                  "values": "30 / 35 / 40 / 45 / 50",
+                  "unit": "%"
+                }
               ]
             },
             {
               "attribute": "Bonus Movement Speed",
               "modifiers": [
-                "25 / 27.5 / 30 / 32.5 / 35%",
-                "4% per 100 AP"
+                {
+                  "values": "25 / 27.5 / 30 / 32.5 / 35",
+                  "unit": "%"
+                },
+                {
+                  "values": "4",
+                  "unit": "% per 100 AP"
+                }
               ]
             }
           ]
@@ -288,8 +327,14 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "12 / 16 / 20%  of target's missing health",
-                "5% per 100 bonus AD"
+                {
+                  "values": "12 / 16 / 20",
+                  "unit": "%  of target's missing health"
+                },
+                {
+                  "values": "5",
+                  "unit": "% per 100 bonus AD"
+                }
               ]
             }
           ]

@@ -6,35 +6,35 @@ const item: Item = {
     {
       id: 1036,
       name: 'Long Sword',
-      gold: 350
-    }
+      gold: 350,
+    },
   ],
   buildsInto: [
     {
       id: 3139,
       name: 'Mercurial Scimitar',
-      gold: 3200
+      gold: 3200,
     },
     {
       id: 3072,
       name: 'Bloodthirster',
-      gold: 3400
+      gold: 3400,
     },
     {
       id: 3074,
       name: 'Ravenous Hydra',
-      gold: 3300
+      gold: 3300,
     },
     {
       id: 3153,
       name: 'Blade of The Ruined King',
-      gold: 3200
+      gold: 3200,
     },
     {
       id: 4403,
       name: 'The Golden Spatula',
-      gold: 7187
-    }
+      gold: 7187,
+    },
   ],
   specialRecipe: 0,
   noEffects: true,
@@ -43,25 +43,16 @@ const item: Item = {
   simpleDescription: 'Basic attacks restore Health',
   stats: {
     attackDamage: 15,
-    lifesteal: 7
+    lifesteal: 7,
   },
   shop: {
     prices: {
       total: 900,
       combined: 550,
-      sell: 360
+      sell: 360,
     },
-    tags: [
-      'FIGHTER',
-      'MARKSMAN',
-      'ASSASSIN'
-    ]
+    tags: ['FIGHTER', 'MARKSMAN', 'ASSASSIN'],
   },
-  maps: [
-    11,
-    12,
-    21,
-    35
-  ]
+  maps: [11, 12, 21, 35],
 }
 export default item

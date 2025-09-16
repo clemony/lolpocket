@@ -6,8 +6,8 @@ const item: Item = {
     {
       id: 3111,
       name: 'Mercury\'s Treads',
-      gold: 1250
-    }
+      gold: 1250,
+    },
   ],
   specialRecipe: 0,
   noEffects: false,
@@ -18,24 +18,23 @@ const item: Item = {
     {
       name: 'Noxian Persistence',
       unique: true,
-      effects: 'Taking magic damage from champions grants you a <img src="/img/icons/shield.webp" class="tip-icon" />shield that absorbs 10 – 120 (based on level) (+4% <b>maximum</b> health) magic damage for 4 seconds.',
-      cooldown: '15'
-    }
+      effects:
+        'Taking magic damage from champions grants you a <img src="/img/icons/shield.webp" class="tip-icon" />shield that absorbs 10 – 120 (based on level) (+4% <b>maximum</b> health) magic damage for 4 seconds.',
+      cooldown: '15',
+    },
   ],
   stats: {
     magicResistance: 35,
     flatMovespeed: 50,
-    tenacity: 30
+    tenacity: 30,
   },
   shop: {
     prices: {
       total: 1750,
       combined: 500,
-      sell: 700
-    }
+      sell: 700,
+    },
   },
-  maps: [
-    11
-  ]
+  maps: [11],
 }
 export default item

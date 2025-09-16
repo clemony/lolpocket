@@ -115,15 +115,7 @@ const colors = [
     text: '*:[&.ability-header]:text-',
 
     color: '--color-hp',
-    champs: [
-      'Akali',
-      'Singed',
-      'Twitch',
-      'Urgot',
-      'Warwick',
-      'Zac',
-      'Zeri',
-    ],
+    champs: ['Akali', 'Singed', 'Twitch', 'Urgot', 'Warwick', 'Zac', 'Zeri'],
   },
   {
     text: '*:[&.ability-header]:text-',
@@ -174,21 +166,12 @@ const colors = [
   {
     text: '*:[&.ability-header]:text-',
     color: '--color-ad',
-    champs: [
-      'Brand',
-      'Milio',
-      'Nautilus',
-    ],
+    champs: ['Brand', 'Milio', 'Nautilus'],
   },
   {
     text: '*:[&.ability-header]:text-',
     color: '---color-onhit',
-    champs: [
-      'Irelia',
-      'Neeko',
-      'Seraphine',
-      'Vi',
-    ],
+    champs: ['Irelia', 'Neeko', 'Seraphine', 'Vi'],
   },
 ]
 

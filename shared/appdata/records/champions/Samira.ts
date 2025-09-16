@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:14 PM CDT
 
 const champion: Champion = {
   "id": 360,
@@ -138,8 +138,14 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "5 / 10 / 15 / 20 / 25",
-                "95 / 102.5 / 110 / 117.5 / 125% AD"
+                {
+                  "values": "5 / 10 / 15 / 20 / 25"
+                },
+                {
+                  "values": "95 - 125",
+                  "unit": "% AD",
+                  "tooltip": "Scaling per rank:\n95 / 102.5 / 110 / 117.5 / 125% AD"
+                }
               ]
             }
           ]
@@ -186,15 +192,25 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage per Hit",
               "modifiers": [
-                "20 / 35 / 50 / 65 / 80",
-                "50% bonus AD"
+                {
+                  "values": "20 / 35 / 50 / 65 / 80"
+                },
+                {
+                  "values": "50",
+                  "unit": "% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Total Physical Damage",
               "modifiers": [
-                "40 / 70 / 100 / 130 / 160",
-                "100% bonus AD"
+                {
+                  "values": "40 / 70 / 100 / 130 / 160"
+                },
+                {
+                  "values": "100",
+                  "unit": "% bonus AD"
+                }
               ]
             }
           ]
@@ -228,14 +244,22 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "50 / 60 / 70 / 80 / 90",
-                "20% bonus AD"
+                {
+                  "values": "50 / 60 / 70 / 80 / 90"
+                },
+                {
+                  "values": "20",
+                  "unit": "% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Bonus Attack Speed",
               "modifiers": [
-                "20 / 25 / 30 / 35 / 40%"
+                {
+                  "values": "20 / 25 / 30 / 35 / 40",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -274,29 +298,49 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage Per Shot",
               "modifiers": [
-                "5 / 15 / 25",
-                "45% AD"
+                {
+                  "values": "5 / 15 / 25"
+                },
+                {
+                  "values": "45",
+                  "unit": "% AD"
+                }
               ]
             },
             {
               "attribute": "Total Physical Damage",
               "modifiers": [
-                "50 / 150 / 250",
-                "450% AD"
+                {
+                  "values": "50 / 150 / 250"
+                },
+                {
+                  "values": "450",
+                  "unit": "% AD"
+                }
               ]
             },
             {
               "attribute": "Minion Damage Per Shot",
               "modifiers": [
-                "1.25 / 3.75 / 6.25",
-                "11.25% AD"
+                {
+                  "values": "1.25 / 3.75 / 6.25"
+                },
+                {
+                  "values": "11.25",
+                  "unit": "% AD"
+                }
               ]
             },
             {
               "attribute": "Total Minion Damage",
               "modifiers": [
-                "12.5 / 37.5 / 62.5",
-                "112.5% AD"
+                {
+                  "values": "12.5 / 37.5 / 62.5"
+                },
+                {
+                  "values": "112.5",
+                  "unit": "% AD"
+                }
               ]
             }
           ]

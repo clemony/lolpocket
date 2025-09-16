@@ -1,16 +1,13 @@
 <script setup lang="ts">
 import type { ProgressRootProps } from 'reka-ui'
-import {
-  ProgressIndicator,
-  ProgressRoot,
-} from 'reka-ui'
+import { ProgressIndicator, ProgressRoot } from 'reka-ui'
 
 const props = withDefaults(
   defineProps<ProgressRootProps & { class?: HTMLAttributes['class'] }>(),
   {
     modelValue: 0,
     max: 100,
-  },
+  }
 )
 
 const delegatedProps = reactiveOmit(props, 'class')

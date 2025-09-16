@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:56 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:11 PM CDT
 
 const champion: Champion = {
   "id": 122,
@@ -133,15 +133,27 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage (Blade)",
               "modifiers": [
-                "50 / 80 / 110 / 140 / 170",
-                "100 / 110 / 120 / 130 / 140% AD"
+                {
+                  "values": "50 / 80 / 110 / 140 / 170"
+                },
+                {
+                  "values": "100 - 140",
+                  "unit": "% AD",
+                  "tooltip": "Scaling per rank:\n100 / 110 / 120 / 130 / 140% AD"
+                }
               ]
             },
             {
               "attribute": "Reduced Damage (Handle)",
               "modifiers": [
-                "17.5 / 28 / 38.5 / 49 / 59.5",
-                "35 / 38.5 / 42 / 45.5 / 49% AD"
+                {
+                  "values": "17.5 / 28 / 38.5 / 49 / 59.5"
+                },
+                {
+                  "values": "35 - 49",
+                  "unit": "% AD",
+                  "tooltip": "Scaling per rank:\n35 / 38.5 / 42 / 45.5 / 49% AD"
+                }
               ]
             }
           ]
@@ -178,7 +190,10 @@ const champion: Champion = {
             {
               "attribute": "Bonus Physical Damage",
               "modifiers": [
-                "40 / 45 / 50 / 55 / 60% AD"
+                {
+                  "values": "40 / 45 / 50 / 55 / 60",
+                  "unit": "% AD"
+                }
               ]
             }
           ]
@@ -214,7 +229,10 @@ const champion: Champion = {
             {
               "attribute": "Armor Penetration",
               "modifiers": [
-                "20 / 25 / 30 / 35 / 40%"
+                {
+                  "values": "20 / 25 / 30 / 35 / 40",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -250,22 +268,37 @@ const champion: Champion = {
             {
               "attribute": "True Damage",
               "modifiers": [
-                "125 / 250 / 375",
-                "75% bonus AD"
+                {
+                  "values": "125 / 250 / 375"
+                },
+                {
+                  "values": "75",
+                  "unit": "% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Bonus Damage Per Stack",
               "modifiers": [
-                "25 / 50 / 75",
-                "15% bonus AD"
+                {
+                  "values": "25 / 50 / 75"
+                },
+                {
+                  "values": "15",
+                  "unit": "% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Maximum True Damage",
               "modifiers": [
-                "250 / 500 / 750",
-                "150% bonus AD"
+                {
+                  "values": "250 / 500 / 750"
+                },
+                {
+                  "values": "150",
+                  "unit": "% bonus AD"
+                }
               ]
             }
           ]

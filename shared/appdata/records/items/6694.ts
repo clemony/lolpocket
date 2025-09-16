@@ -6,13 +6,13 @@ const item: Item = {
     {
       id: 3133,
       name: 'Caulfield\'s Warhammer',
-      gold: 1050
+      gold: 1050,
     },
     {
       id: 3035,
       name: 'Last Whisper',
-      gold: 1450
-    }
+      gold: 1450,
+    },
   ],
   specialRecipe: 0,
   noEffects: false,
@@ -22,29 +22,23 @@ const item: Item = {
     {
       name: 'Bitter Cold',
       unique: true,
-      effects: 'Dealing ability damage to an enemy that is at or below 50% of their <b>maximum</b> health <img src="/img/icons/slow.webp" class="tip-icon" />slows them by 30% for 1 second.'
-    }
+      effects:
+        'Dealing ability damage to an enemy that is at or below 50% of their <b>maximum</b> health <img src="/img/icons/slow.webp" class="tip-icon" />slows them by 30% for 1 second.',
+    },
   ],
   stats: {
     armorPenetration: 35,
     attackDamage: 45,
-    abilityHaste: 15
+    abilityHaste: 15,
   },
   shop: {
     prices: {
       total: 3000,
       combined: 500,
-      sell: 1200
+      sell: 1200,
     },
-    tags: [
-      'ASSASSIN'
-    ]
+    tags: ['ASSASSIN'],
   },
-  maps: [
-    11,
-    12,
-    21,
-    35
-  ]
+  maps: [11, 12, 21, 35],
 }
 export default item

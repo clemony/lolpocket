@@ -1,9 +1,7 @@
 {
   "autoStart": {
     "enabled": false,
-    "scripts": [
-      "dev"
-    ]
+    "scripts": ["dev"]
   },
   "customCommands": [
     {

@@ -10,16 +10,17 @@ const { isCollapsed, pinned } = defineProps<{
     v-if="!isCollapsed"
     v-model:open="as().toggles.backpack.pinned"
     :data-collapsed="isCollapsed"
-    class="px-3  pb-2 data-[collapsed=true]:py-2">
+    class="px-3 pb-2 data-[collapsed=true]:py-2">
     <CollapsibleTrigger
       as-child
       class="group/collapse">
       <Button
         as="button"
         variant="ghost"
-        class=" w-full "
+        class="w-full"
         size="md">
-        <span class="font-semibold grow tracking-normal opacity-40  text-4 capitalize">
+        <span
+          class="font-semibold grow tracking-normal opacity-40 text-md capitalize">
           Pinned Pockets
         </span>
         <CaretRotate />
@@ -28,8 +29,9 @@ const { isCollapsed, pinned } = defineProps<{
 
     <CollapsibleContent
       menu
-      class=" CollapsibleContent **:duration-0 group w-full flex flex-col gap-4 relative ">
-      <nav class="grid gap-1  group-[[data-collapsed=true]]:justify-center group-[[data-collapsed=true]]:px-2 ">
+      class="CollapsibleContent **:duration-0 group w-full flex flex-col gap-4 relative">
+      <nav
+        class="grid gap-1 group-[[data-collapsed=true]]:justify-center group-[[data-collapsed=true]]:px-2">
         <div
           v-for="link of pinned"
           :key="link.name"
@@ -38,7 +40,7 @@ const { isCollapsed, pinned } = defineProps<{
             variant="ghost"
             :size="isCollapsed ? 'icon' : 'md'"
             :to="`/${link.key}`"
-            class=" px-2 !duration-0 text-3 justify-start grow !gap-3 flex items-center">
+            class="px-2 !duration-0 text-sm justify-start grow !gap-3 flex items-center">
             <PocketIcon
               size="sm"
               :img="link.icon"
@@ -58,14 +60,14 @@ const { isCollapsed, pinned } = defineProps<{
             @click.stop>
             <icon
               name="pin"
-              class="**:stroke-[1.84] absolute size-4 " />
+              class="**:stroke-[1.84] absolute size-4" />
             <input
               v-model="link.location.pinned"
               type="checkbox"
               class="peer hidden" />
             <icon
               name="unpin"
-              class="**:stroke-[1.84] opacity-0 absolute size-4 " />
+              class="**:stroke-[1.84] opacity-0 absolute size-4" />
           </Label>
         </div>
       </nav>
@@ -76,7 +78,6 @@ const { isCollapsed, pinned } = defineProps<{
     v-else
     class="flex flex-col gap-1 items-center justify-center">
     <Blink
-
       v-for="link of pinned"
       :key="link.name"
       class="size-12"

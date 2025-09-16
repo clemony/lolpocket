@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:56 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:12 PM CDT
 
 const champion: Champion = {
   "id": 74,
@@ -188,8 +188,13 @@ const champion: Champion = {
             {
               "attribute": "Initial Rocket Magic Damage",
               "modifiers": [
-                "40 / 65 / 90 / 115 / 140",
-                "55% AP"
+                {
+                  "values": "40 / 65 / 90 / 115 / 140"
+                },
+                {
+                  "values": "55",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -200,43 +205,73 @@ const champion: Champion = {
             {
               "attribute": "Subsequent Rocket Magic Damage",
               "modifiers": [
-                "10 / 15 / 20 / 25 / 30",
-                "12% AP"
+                {
+                  "values": "10 / 15 / 20 / 25 / 30"
+                },
+                {
+                  "values": "12",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Total Subsequent Non-Minion Damage",
               "modifiers": [
-                "40 / 60 / 80 / 100 / 120",
-                "48% AP"
+                {
+                  "values": "40 / 60 / 80 / 100 / 120"
+                },
+                {
+                  "values": "48",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Combined Total Non-Minion Damage",
               "modifiers": [
-                "80 / 125 / 170 / 215 / 260",
-                "103% AP"
+                {
+                  "values": "80 / 125 / 170 / 215 / 260"
+                },
+                {
+                  "values": "103",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Subsequent Rocket Minion Damage",
               "modifiers": [
-                "30 / 45 / 60 / 75 / 90",
-                "36% AP"
+                {
+                  "values": "30 / 45 / 60 / 75 / 90"
+                },
+                {
+                  "values": "36",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Total Subsequent Minion Damage",
               "modifiers": [
-                "120 / 180 / 240 / 300 / 360",
-                "144% AP"
+                {
+                  "values": "120 / 180 / 240 / 300 / 360"
+                },
+                {
+                  "values": "144",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Combined Total Minion Damage",
               "modifiers": [
-                "160 / 245 / 330 / 415 / 500",
-                "199% AP"
+                {
+                  "values": "160 / 245 / 330 / 415 / 500"
+                },
+                {
+                  "values": "199",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -268,8 +303,13 @@ const champion: Champion = {
             {
               "attribute": "Initial Rocket Damage",
               "modifiers": [
-                "135 / 180 / 225",
-                "45% AP"
+                {
+                  "values": "135 / 180 / 225"
+                },
+                {
+                  "values": "45",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -280,35 +320,57 @@ const champion: Champion = {
             {
               "attribute": "Rockets 2:5 Magic Damage",
               "modifiers": [
-                "32 / 45 / 58",
-                "12% AP"
+                {
+                  "values": "32 / 45 / 58"
+                },
+                {
+                  "values": "12",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Rockets 6:20 Magic Damage",
               "modifiers": [
-                "16 / 22.5 / 29",
-                "6% AP"
+                {
+                  "values": "16 / 22.5 / 29"
+                },
+                {
+                  "values": "6",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Combined Total Non-Minion Damage",
               "modifiers": [
-                "503 / 697.5 / 892",
-                "183% AP"
+                {
+                  "values": "503 / 697.5 / 892"
+                },
+                {
+                  "values": "183",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Minion Damage per Rocket",
               "modifiers": [
-                "135 / 180 / 225"
+                {
+                  "values": "135 / 180 / 225"
+                }
               ]
             },
             {
               "attribute": "Combined Total Minion Damage",
               "modifiers": [
-                "2700 / 3600 / 4500",
-                "900% AP"
+                {
+                  "values": "2700 / 3600 / 4500"
+                },
+                {
+                  "values": "900",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -342,8 +404,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "60 / 100 / 140 / 180 / 220",
-                "60% AP"
+                {
+                  "values": "60 / 100 / 140 / 180 / 220"
+                },
+                {
+                  "values": "60",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -381,8 +448,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "100 / 200 / 300",
-                "60% AP"
+                {
+                  "values": "100 / 200 / 300"
+                },
+                {
+                  "values": "60",
+                  "unit": "% AP"
+                }
               ]
             }
           ]

@@ -9,24 +9,19 @@ const item: Item = {
   passives: [
     {
       unique: true,
-      effects: '<img src="/img/icons/turret.webp" class="tip-icon" />Turret basic attacks are modified to deal 70% of this minion\'s <b>maximum</b> health as pre-mitigation damage.'
-    }
+      effects:
+        '<img src="/img/icons/turret.webp" class="tip-icon" />Turret basic attacks are modified to deal 70% of this minion\'s <b>maximum</b> health as pre-mitigation damage.',
+    },
   ],
   stats: {},
   shop: {
     prices: {
       total: 0,
       combined: 0,
-      sell: 0
+      sell: 0,
     },
-    purchasable: false
+    purchasable: false,
   },
-  maps: [
-    11,
-    12,
-    21,
-    30,
-    35
-  ]
+  maps: [11, 12, 21, 30, 35],
 }
 export default item

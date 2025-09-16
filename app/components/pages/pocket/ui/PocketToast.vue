@@ -20,11 +20,11 @@ onMounted(() => {
       class="rounded-md **:rounded-md" />
 
     <div class="flex flex-col gap-3">
-      <h5 class="!text-4 pt-0.5 leading-none tracking-tight">
+      <h5 class="!text-md pt-0.5 leading-none tracking-tight">
         New Pocket Created!
       </h5>
 
-      <p class="text-3 font-normal text-wrap">
+      <p class="text-sm font-normal text-wrap">
         Pocket
         <span class="font-medium underline underline-offset-2">
           {{ pocket.name }}
@@ -50,7 +50,7 @@ onMounted(() => {
 </template>
 
 <style>
-  :root {
+:root {
   [data-sonner-toaster] {
     --offset: 6px !important;
 

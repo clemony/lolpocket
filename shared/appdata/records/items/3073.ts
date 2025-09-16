@@ -6,18 +6,18 @@ const item: Item = {
     {
       id: 2021,
       name: 'Tunneler',
-      gold: 1150
+      gold: 1150,
     },
     {
       id: 3044,
       name: 'Phage',
-      gold: 1100
+      gold: 1100,
     },
     {
       id: 1042,
       name: 'Dagger',
-      gold: 250
-    }
+      gold: 250,
+    },
   ],
   specialRecipe: 0,
   noEffects: false,
@@ -28,36 +28,28 @@ const item: Item = {
     {
       name: 'Hexcharged',
       unique: true,
-      effects: 'Gain 30 ultimate haste.'
+      effects: 'Gain 30 ultimate haste.',
     },
     {
       name: 'Overdrive',
       unique: true,
-      effects: 'Upon casting your ultimate ability, enter <i>Overdrive</i> to gain 30% <b>bonus</b> attack speed and 15% <b>bonus</b> movement speed for 8 seconds (30 second cooldown, starts on ultimate cast).'
-    }
+      effects:
+        'Upon casting your ultimate ability, enter <i>Overdrive</i> to gain 30% <b>bonus</b> attack speed and 15% <b>bonus</b> movement speed for 8 seconds (30 second cooldown, starts on ultimate cast).',
+    },
   ],
   stats: {
     attackDamage: 40,
     attackSpeed: 20,
-    health: 450
+    health: 450,
   },
   shop: {
     prices: {
       total: 3000,
       combined: 500,
-      sell: 1200
+      sell: 1200,
     },
-    tags: [
-      'FIGHTER',
-      'ABILITY_HASTE',
-      'MOVEMENT'
-    ]
+    tags: ['FIGHTER', 'ABILITY_HASTE', 'MOVEMENT'],
   },
-  maps: [
-    11,
-    12,
-    21,
-    35
-  ]
+  maps: [11, 12, 21, 35],
 }
 export default item

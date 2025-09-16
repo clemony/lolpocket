@@ -20,7 +20,7 @@ const selected = ref<Pocket>(null)
             <Button
               variant="neutral"
               class="ml-auto font-normal pr-4 pl-2.5"
-              @click="generatePocket()">
+              @click="generatePocket(ps().pockets)">
               <icon name="add" />
               Add Pocket
             </Button>
@@ -28,7 +28,9 @@ const selected = ref<Pocket>(null)
 
           <TransitionScalePop class="size-full flex flex-col gap-6 px-4">
             <LazyBackpackBoxCard
-              v-for="pocket in ps().pockets.filter(p => p.location.folder == '')"
+              v-for="pocket in ps().pockets.filter(
+                (p) => p.location.folder == '',
+              )"
               :key="pocket.key"
               :pocket
               :selected

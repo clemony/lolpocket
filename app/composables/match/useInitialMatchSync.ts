@@ -15,7 +15,7 @@ export function useInitialMatchSync(puuid: string) {
         return
 
       matchData.value = matches.sort(
-        (a, b) => b.gameEndTimestamp - a.gameEndTimestamp,
+        (a, b) => b.gameEndTimestamp - a.gameEndTimestamp
       )
     }
     finally {

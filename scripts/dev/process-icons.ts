@@ -29,7 +29,9 @@ async function processIcons() {
         .toFile(outputPath)
 
       fs.unlinkSync(inputPath) // remove PNG after conversion
-      console.log(`✅ Cropped & converted ${file} → ${path.basename(outputPath)}`)
+      console.log(
+        `✅ Cropped & converted ${file} → ${path.basename(outputPath)}`
+      )
     }
     catch (err) {
       console.error(`❌ Error processing ${file}:`, err)

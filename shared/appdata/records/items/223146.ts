@@ -10,27 +10,24 @@ const item: Item = {
     {
       name: 'Lightning Bolt',
       unique: true,
-      effects: 'Shocks the target enemy champion with a bolt of lightning, dealing 175 – 253 (based on level) magic damage (+30% <b>bonus</b> AD) (+30% AP) magic damage and <img src="/img/icons/slow.webp" class="tip-icon" />slowing them by 40% for 2 seconds.',
-      range: 0
-    }
+      effects:
+        'Shocks the target enemy champion with a bolt of lightning, dealing 175 – 253 (based on level) magic damage (+30% <b>bonus</b> AD) (+30% AP) magic damage and <img src="/img/icons/slow.webp" class="tip-icon" />slowing them by 40% for 2 seconds.',
+      range: 0,
+    },
   ],
   stats: {
     abilityPower: 90,
     attackDamage: 45,
-    omnivamp: 15
+    omnivamp: 15,
   },
   shop: {
     prices: {
       total: 2500,
       combined: 2500,
-      sell: 1000
+      sell: 1000,
     },
-    tags: [
-      'MAGE'
-    ]
+    tags: ['MAGE'],
   },
-  maps: [
-    30
-  ]
+  maps: [30],
 }
 export default item

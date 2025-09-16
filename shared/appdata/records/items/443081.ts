@@ -10,25 +10,22 @@ const item: Item = {
     {
       name: 'Covering Fire',
       unique: true,
-      effects: 'While your ally is within 1200 units, your basic attacks on-hit generate a stack of <i>Covering Fire</i>. At 1 stack, your next basic attack consumes them all to cause your ally to fire a bolt at the target, dealing 20 – 60 (based on level) physical damage and applying your ally\'s on-hit effects at 100% effectiveness.'
-    }
+      effects:
+        'While your ally is within 1200 units, your basic attacks on-hit generate a stack of <i>Covering Fire</i>. At 1 stack, your next basic attack consumes them all to cause your ally to fire a bolt at the target, dealing 20 – 60 (based on level) physical damage and applying your ally\'s on-hit effects at 100% effectiveness.',
+    },
   ],
   stats: {
     attackSpeed: 75,
-    health: 500
+    health: 500,
   },
   shop: {
     prices: {
       total: 0,
       combined: 1000,
-      sell: 0
+      sell: 0,
     },
-    tags: [
-      'TANK'
-    ]
+    tags: ['TANK'],
   },
-  maps: [
-    30
-  ]
+  maps: [30],
 }
 export default item

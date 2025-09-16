@@ -6,35 +6,35 @@ const item: Item = {
     {
       id: 1042,
       name: 'Dagger',
-      gold: 250
+      gold: 250,
     },
     {
       id: 1042,
       name: 'Dagger',
-      gold: 250
-    }
+      gold: 250,
+    },
   ],
   buildsInto: [
     {
       id: 3032,
       name: 'Yun Tal Wildarrows',
-      gold: 3000
+      gold: 3000,
     },
     {
       id: 3087,
       name: 'Statikk Shiv',
-      gold: 2700
+      gold: 2700,
     },
     {
       id: 3085,
       name: 'Runaan\'s Hurricane',
-      gold: 2650
+      gold: 2650,
     },
     {
       id: 3094,
       name: 'Rapid Firecannon',
-      gold: 2650
-    }
+      gold: 2650,
+    },
   ],
   specialRecipe: 0,
   noEffects: false,
@@ -45,28 +45,21 @@ const item: Item = {
     {
       name: 'Bullseye',
       unique: true,
-      effects: 'Damaging an enemy champion deals 40 <b>bonus</b> magic damage (40 second cooldown, reduced by 1 second ).'
-    }
+      effects:
+        'Damaging an enemy champion deals 40 <b>bonus</b> magic damage (40 second cooldown, reduced by 1 second ).',
+    },
   ],
   stats: {
-    attackSpeed: 20
+    attackSpeed: 20,
   },
   shop: {
     prices: {
       total: 600,
       combined: 100,
-      sell: 240
+      sell: 240,
     },
-    tags: [
-      'MARKSMAN',
-      'ONHIT_EFFECTS'
-    ]
+    tags: ['MARKSMAN', 'ONHIT_EFFECTS'],
   },
-  maps: [
-    11,
-    12,
-    21,
-    35
-  ]
+  maps: [11, 12, 21, 35],
 }
 export default item

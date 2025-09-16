@@ -1,13 +1,10 @@
 <script setup lang="ts">
 import type { MenubarSubContentEmits, MenubarSubContentProps } from 'reka-ui'
-import {
-  MenubarPortal,
-  MenubarSubContent,
+import { MenubarPortal, MenubarSubContent, useForwardPropsEmits } from 'reka-ui'
 
-  useForwardPropsEmits,
-} from 'reka-ui'
-
-const props = defineProps<MenubarSubContentProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<
+  MenubarSubContentProps & { class?: HTMLAttributes['class'] }
+>()
 
 const emits = defineEmits<MenubarSubContentEmits>()
 

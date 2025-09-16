@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 const route = useRoute()
-const pocket = computed(() => ps().getPocket(String(route.params.pocket_key))).value
+const pocket = computed(() =>
+  ps().getPocket(String(route.params.pocket_key))
+).value
 
 const itemsPerPage = 9
 const currentPage = ref(1)
@@ -15,15 +17,14 @@ const pagedItems = computed(() => {
   <HoverCard>
     <HoverCardTrigger>
       <TransitionScalePop
-        class="avatar-group mt-1 overflow-hidden object-center hover:bg-b3/80 data-[state=open]:bg-b3/80  data-[state=open]:ring-b4/80    data-[state=open]:ring-1  data-[state=open]:inset-shadow-sm items-center shrink-0 w-max px-0.25 h-12 hover:ring-1 group/avatar hover:ring-b4/80 hover:inset-shadow-sm rounded-full -space-x-5">
-        <template
-          v-if="pocket.champions?.length">
+        class="avatar-group mt-1 overflow-hidden object-center hover:bg-b3/80 data-[state=open]:bg-b3/80 data-[state=open]:ring-b4/80 data-[state=open]:ring-1 data-[state=open]:inset-shadow-sm items-center shrink-0 w-max px-0.25 h-12 hover:ring-1 group/avatar hover:ring-b4/80 hover:inset-shadow-sm rounded-full -space-x-5">
+        <template v-if="pocket.champions?.length">
           <template
-            v-for="champion, i in pocket.champions.toReversed()"
+            v-for="(champion, i) in pocket.champions.toReversed()"
             :key="champion">
             <div
               v-if="i < 5"
-              class="avatar bg-b1  group-data-[state=open]/avatar:border-b3/80  group-hover/avatar:border-b3/80 size-fit">
+              class="avatar bg-b1 group-data-[state=open]/avatar:border-b3/80 group-hover/avatar:border-b3/80 size-fit">
               <ChampionIcon
                 :id="ix().champIdByKey(champion)"
                 class="size-11 border-bc shadow-sm shadow-black rounded-full" />
@@ -32,13 +33,13 @@ const pagedItems = computed(() => {
         </template>
         <Placeholder
           v-else
-          class="size-11  group-hover/avatar:border-b3/80  group-data-[state=open]/avatar:border-b3/80  shrink-0   rounded-full mr-1">
+          class="size-11 group-hover/avatar:border-b3/80 group-data-[state=open]/avatar:border-b3/80 shrink-0 rounded-full mr-1">
           0
         </Placeholder>
         <div
           v-if="pocket.champions?.length > 5"
-          class="avatar  shrink-0   group-data-[state=open]/avatar:border-b3/80  group-hover/avatar:border-b3/80  avatar-placeholder">
-          <div class="bg-neutral text-neutral-content w-11 text-2">
+          class="avatar shrink-0 group-data-[state=open]/avatar:border-b3/80 group-hover/avatar:border-b3/80 avatar-placeholder">
+          <div class="bg-neutral text-neutral-content w-11 text-xs">
             <span>+{{ pocket.champions.length - 5 }}</span>
           </div>
         </div>
@@ -53,7 +54,7 @@ const pagedItems = computed(() => {
           :id="ix().champIdByKey(champion)"
           :key="champion"
           as="label"
-          class="rounded-lg hover:after:opacity-100 after:scale-150 **:!text-white after:absolute after:bg-black/70 after:size-full after:grid after:place-items-center after:!text-white after:text-3  after:content-['🞤'] after:z-1 after:rotate-45 size-16 cursor-pointer hover-ring w-full h-auto aspect-square">
+          class="rounded-lg hover:after:opacity-100 after:scale-150 **:!text-white after:absolute after:bg-black/70 after:size-full after:grid after:place-items-center after:!text-white after:text-sm after:content-['🞤'] after:z-1 after:rotate-45 size-16 cursor-pointer hover-ring w-full h-auto aspect-square">
           <input
             v-model="pocket.champions"
             type="checkbox"
@@ -73,10 +74,10 @@ const pagedItems = computed(() => {
         <PaginationContent>
           <PaginationPrev
             size="xs"
-            class="disabled:opacity-40 btn-square  size-8" />
+            class="disabled:opacity-40 btn-square size-8" />
           <PaginationNext
             size="xs"
-            class="disabled:opacity-40 btn-square  size-8" />
+            class="disabled:opacity-40 btn-square size-8" />
         </PaginationContent>
       </Pagination>
     </HoverPopContent>

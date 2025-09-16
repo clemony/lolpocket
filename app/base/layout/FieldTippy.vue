@@ -1,6 +1,4 @@
-<script lang="ts" setup>
-
-</script>
+<script lang="ts" setup></script>
 
 <template>
   <tippy
@@ -18,9 +16,8 @@
 
     <template #content="{ hide }">
       <div class="min-w-110 min-h-100">
-        hihi
-        hi
-        Hi! <button @click="hide()">
+        hihi hi Hi!
+        <button @click="hide()">
           X
         </button>
       </div>

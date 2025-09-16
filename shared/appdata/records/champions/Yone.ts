@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:15 PM CDT
 
 const champion: Champion = {
   "id": 777,
@@ -122,8 +122,13 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "20 / 45 / 70 / 95 / 120",
-                "105% AD"
+                {
+                  "values": "20 / 45 / 70 / 95 / 120"
+                },
+                {
+                  "values": "105",
+                  "unit": "% AD"
+                }
               ]
             }
           ]
@@ -165,22 +170,40 @@ const champion: Champion = {
             {
               "attribute": "Total Mixed Damage",
               "modifiers": [
-                "10 / 20 / 30 / 40 / 50",
-                "8 / 9 / 10 / 11 / 12% of target's maximum health"
+                {
+                  "values": "10 / 20 / 30 / 40 / 50"
+                },
+                {
+                  "values": "8 - 12",
+                  "unit": "% of target's maximum health",
+                  "tooltip": "Scaling per rank:\n8 / 9 / 10 / 11 / 12% of target's maximum health"
+                }
               ]
             },
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "5 / 10 / 15 / 20 / 25",
-                "4 / 4.5 / 5 / 5.5 / 6% of target's maximum health"
+                {
+                  "values": "5 / 10 / 15 / 20 / 25"
+                },
+                {
+                  "values": "4 - 6",
+                  "unit": "% of target's maximum health",
+                  "tooltip": "Scaling per rank:\n4 / 4.5 / 5 / 5.5 / 6% of target's maximum health"
+                }
               ]
             },
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "5 / 10 / 15 / 20 / 25",
-                "4 / 4.5 / 5 / 5.5 / 6% of target's maximum health"
+                {
+                  "values": "5 / 10 / 15 / 20 / 25"
+                },
+                {
+                  "values": "4 - 6",
+                  "unit": "% of target's maximum health",
+                  "tooltip": "Scaling per rank:\n4 / 4.5 / 5 / 5.5 / 6% of target's maximum health"
+                }
               ]
             }
           ]
@@ -218,7 +241,10 @@ const champion: Champion = {
             {
               "attribute": "Damage Stored",
               "modifiers": [
-                "25 / 27.5 / 30 / 32.5 / 35% of damage dealt"
+                {
+                  "values": "25 / 27.5 / 30 / 32.5 / 35",
+                  "unit": "% of damage dealt"
+                }
               ]
             }
           ]
@@ -261,22 +287,37 @@ const champion: Champion = {
             {
               "attribute": "Total Mixed Damage",
               "modifiers": [
-                "200 / 400 / 600",
-                "80% bonus AD"
+                {
+                  "values": "200 / 400 / 600"
+                },
+                {
+                  "values": "80",
+                  "unit": "% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "100 / 200 / 300",
-                "40% bonus AD"
+                {
+                  "values": "100 / 200 / 300"
+                },
+                {
+                  "values": "40",
+                  "unit": "% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "100 / 200 / 300",
-                "40% bonus AD"
+                {
+                  "values": "100 / 200 / 300"
+                },
+                {
+                  "values": "40",
+                  "unit": "% bonus AD"
+                }
               ]
             }
           ]

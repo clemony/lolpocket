@@ -37,9 +37,7 @@ export type FormatMap = Partial<ComplexFormatMap> & {
 }
 
 export type ComplexFormatMap = {
-  [K in FormatMapArgs['type']]: FormatFn<
-    Extract<FormatMapArgs, { type: K }>
-  >
+  [K in FormatMapArgs['type']]: FormatFn<Extract<FormatMapArgs, { type: K }>>
 }
 
 export const templateUnits: Record<string, string> = {
@@ -125,11 +123,13 @@ export const formatMap: FormatMap = {
     const match = cleanRange.match(/^(\d+)\s?to\s?(\d+)$/)
 
     const min: string = valueRange.length ? valueRange[0] : match?.[1] || ''
-    const max: string = valueRange.length ? valueRange[valueRange.length - 1] : match?.[2] || ''
+    const max: string
+      = valueRange.length ? valueRange[valueRange.length - 1] : match?.[2] || ''
 
-    const html: string = min && max
-      ? `${min}${suffix} – ${max}${suffix}`
-      : `${cleanRange}${suffix}`
+    const html: string
+      = min && max
+        ? `${min}${suffix} – ${max}${suffix}`
+        : `${cleanRange}${suffix}`
     if (html)
       return `${html} (based on ${basedOn})`
     return ''

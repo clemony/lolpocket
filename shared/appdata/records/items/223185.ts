@@ -10,27 +10,23 @@ const item: Item = {
     {
       name: 'Agricultural Reaper',
       unique: true,
-      effects: 'Increases the effects of 20px|link= <i>Power Flowers</i> by 20%. Additionally, dealing damage to a <i>Power Flower</i> grants you 100 <b>bonus</b> movement speed for 3 seconds.'
-    }
+      effects:
+        'Increases the effects of 20px|link= <i>Power Flowers</i> by 20%. Additionally, dealing damage to a <i>Power Flower</i> grants you 100 <b>bonus</b> movement speed for 3 seconds.',
+    },
   ],
   stats: {
     attackDamage: 25,
     lethality: 11,
-    abilityHaste: 10
+    abilityHaste: 10,
   },
   shop: {
     prices: {
       total: 500,
       combined: 500,
-      sell: 200
+      sell: 200,
     },
-    tags: [
-      'FIGHTER',
-      'ASSASSIN'
-    ]
+    tags: ['FIGHTER', 'ASSASSIN'],
   },
-  maps: [
-    30
-  ]
+  maps: [30],
 }
 export default item

@@ -6,9 +6,12 @@ export async function useResolveSummoner(
     name?: string
     tag?: string
   },
-  options?: { force?: boolean },
+  options?: { force?: boolean }
 ): Promise<Summoner> {
-  if (!identifier.puuid && (!identifier.region || !identifier.name || !identifier.tag)) {
+  if (
+    !identifier.puuid
+    && (!identifier.region || !identifier.name || !identifier.tag)
+  ) {
     throw new Error('Must provide puuid or region+name+tag')
   }
 
@@ -22,16 +25,19 @@ export async function useResolveSummoner(
   }
 
   // --- Build API params ---
-  const params: Record<string, string> = identifier.puuid
-    ? { puuid: identifier.puuid }
-    : {
-        region: identifier.region!,
-        name: identifier.name!,
-        tag: identifier.tag!,
-      }
+  const params: Record<string, string>
+    = identifier.puuid
+      ? { puuid: identifier.puuid }
+      : {
+          region: identifier.region!,
+          name: identifier.name!,
+          tag: identifier.tag!,
+        }
 
   // --- Fetch only summoner profile ---
-  const resolved = await $fetch<Summoner>('/api/riot/resolveSummoner', { params })
+  const resolved = await $fetch<Summoner>('/api/riot/resolveSummoner', {
+    params,
+  })
 
   ss().setSummoner(resolved)
 

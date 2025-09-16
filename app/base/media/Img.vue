@@ -21,8 +21,7 @@ const loaded = ref(false)
 </script>
 
 <template>
-  <label
-    :class="cn('size-full relative shrink-0 transform-3d', className)">
+  <label :class="cn('size-full relative shrink-0 transform-3d', className)">
     <NuxtImg
       :key="img"
       format="webp"
@@ -34,12 +33,12 @@ const loaded = ref(false)
       placeholder-class="skeleton size-full bg-blend-screen rounded-lg bg-b3 border-b3 inset-shadow-5 inset-shadow-xs border !opacity-40"
       v-bind="$attrs"
       :alt="alt"
-      :class="cn(
-        'size-full opacity-0 transition-[opacity,transform]',
-        { 'translate-z-0 opacity-100': loaded },
-      )"
-      @load="loaded = true">
-    </NuxtImg>
+      :class="
+        cn('size-full opacity-0 transition-[opacity,transform]', {
+          'translate-z-0 opacity-100': loaded,
+        })
+      "
+      @load="loaded = true"></NuxtImg>
     <slot />
   </label>
 </template>

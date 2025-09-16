@@ -32,8 +32,8 @@ const totalCost2 = ref()
 function getTotalCost(set) {
   return set.reduce((sum, item) => sum + (item.buy || 0), 0)
 }
-const set1 = computed (() => is.calculatorSet)
-const set2 = computed (() => is.calculatorSet2)
+const set1 = computed(() => is.calculatorSet)
+const set2 = computed(() => is.calculatorSet2)
 /* watchEffect(() => {
   if (set1.value && !is.isComparing) {
     stats.value = mergeItemStats(set1.value)
@@ -52,20 +52,21 @@ const set2 = computed (() => is.calculatorSet2)
 </script>
 
 <template>
-  <div class="w-full overflow-hidden ">
+  <div class="w-full overflow-hidden">
     <!-- head -->
-    <div class="w-full grid grid-cols-[40px_1fr_30px_30px]  z-1 py-2 *:text-2 items-center btn-depth h-13">
+    <div
+      class="w-full grid grid-cols-[40px_1fr_30px_30px] z-1 py-2 *:text-xs items-center btn-depth h-13">
       <div class="dst col-start-2 font-medium">
         STAT
       </div>
 
-      <div class="dst  font-medium justify-center">
-        {{ is.isComparing ? '1' : 'TOTAL' }}
+      <div class="dst font-medium justify-center">
+        {{ is.isComparing ? "1" : "TOTAL" }}
       </div>
 
       <div
         v-if="is.isComparing"
-        class="dst  justify-center font-medium">
+        class="dst justify-center font-medium">
         2
       </div>
     </div>
@@ -76,7 +77,7 @@ const set2 = computed (() => is.calculatorSet2)
           v-for="stat in checkedStats"
           :key="stat.id"
           :layout="true"
-          class="sticky top-0 left-0 bg-b1 border-b first:border-t last:!border-b-b3 border-b-b3/55 border-t-b3/60  cursor-pointer *:justify-start  z-1  grid grid-cols-[40px_1fr_30px_30px]  py-3 hover:border-y hover:border-y-b3/80 items-center hover:bg-b1/50  ">
+          class="sticky top-0 left-0 bg-b1 border-b first:border-t last:!border-b-b3 border-b-b3/55 border-t-b3/60 cursor-pointer *:justify-start z-1 grid grid-cols-[40px_1fr_30px_30px] py-3 hover:border-y hover:border-y-b3/80 items-center hover:bg-b1/50">
           <!-- row 1 -->
 
           <input
@@ -89,8 +90,7 @@ const set2 = computed (() => is.calculatorSet2)
             v-if="checkedStats.includes(stat)"
             :stat="stat"
             :item-stats="stats"
-            :item-stats2="stats2">
-          </StatRowContents>
+            :item-stats2="stats2"></StatRowContents>
         </motion.label>
 
         <template
@@ -99,24 +99,24 @@ const set2 = computed (() => is.calculatorSet2)
           <motion.label
             v-if="!checkedStats.includes(stat)"
             :layout="true"
-            class="hover:bg-b2/60 first:border-t first:border-t-b3  cursor-pointer  py-3.5 has-checked:hidden w-full grid grid-cols-[40px_1fr_30px_30px] border-b-b3/40 border-b  items-center">
+            class="hover:bg-b2/60 first:border-t first:border-t-b3 cursor-pointer py-3.5 has-checked:hidden w-full grid grid-cols-[40px_1fr_30px_30px] border-b-b3/40 border-b items-center">
             <input
               v-model="checkedStats"
               type="checkbox"
-              class="peer hidden absolute "
+              class="peer hidden absolute"
               :value="stat" />
 
             <StatRowContents
               :stat="stat"
               :item-stats="stats"
-              :item-stats2="stats2">
-            </StatRowContents>
+              :item-stats2="stats2"></StatRowContents>
           </motion.label>
         </template>
       </LayoutGroup>
     </div>
 
-    <div class="w-full grid grid-cols-[40px_1fr_30px_30px] h-13  border-y border-y-b3/50  z-1 py-2 *:text-2 items-center">
+    <div
+      class="w-full grid grid-cols-[40px_1fr_30px_30px] h-13 border-y border-y-b3/50 z-1 py-2 *:text-xs items-center">
       <div class="justify-center ml-4">
         <i-ui-gold class="text-bc/80 size-6" />
       </div>
@@ -125,13 +125,13 @@ const set2 = computed (() => is.calculatorSet2)
         TOTAL GOLD
       </div>
 
-      <div class="dst  font-medium justify-center">
+      <div class="dst font-medium justify-center">
         {{ totalCost }}
       </div>
 
       <div
         v-if="is.isComparing"
-        class="dst  font-medium justify-center">
+        class="dst font-medium justify-center">
         {{ totalCost2 }}
       </div>
     </div>

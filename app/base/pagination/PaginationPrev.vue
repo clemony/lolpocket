@@ -3,9 +3,12 @@ import type { PaginationPrevProps } from 'reka-ui'
 import { PaginationPrev } from 'reka-ui'
 import { computed } from 'vue'
 
-const props = withDefaults(defineProps<PaginationPrevProps & { class?: HTMLAttributes['class'] }>(), {
-  asChild: true,
-})
+const props = withDefaults(
+  defineProps<PaginationPrevProps & { class?: HTMLAttributes['class'] }>(),
+  {
+    asChild: true,
+  }
+)
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props

@@ -3,7 +3,10 @@ import { $fetch } from 'ofetch'
 import { Buffer } from 'node:buffer'
 import fs from 'node:fs'
 import path from 'node:path'
-import type { FullSkinRecord, SkinRecord } from '../../../shared/types/types.champion'
+import type {
+  FullSkinRecord,
+  SkinRecord,
+} from '../../../shared/types/types.champion'
 import { markUpdate } from '../../../shared/utils/markUpdate'
 import { resolvePath } from '../resolvePath'
 import { cleanImageLink, cleanImageNum } from '../utils'
@@ -27,7 +30,9 @@ const primarySkins: SkinRecord = {}
 let oldBaseSkin: SkinRecord = {}
 if (fs.existsSync(baseSkinPath)) {
   const oldContent = fs.readFileSync(baseSkinPath, 'utf-8')
-  const match = oldContent.match(/export const baseSkin: SkinRecord = (\{[\s\S]*\})/)
+  const match = oldContent.match(
+    /export const baseSkin: SkinRecord = (\{[\s\S]*\})/
+  )
   if (match) {
     oldBaseSkin = JSON.parse(match[1])
   }
@@ -40,11 +45,12 @@ for (const key in champions) {
   const skins = champ.skins || []
 
   const baseSkins = skins
-    .filter(skin =>
-      skin.tilePath
-      && skin.uncenteredSplashPath
-      && skin.splashPath
-      && skin.loadScreenPath,
+    .filter(
+      skin =>
+        skin.tilePath
+        && skin.uncenteredSplashPath
+        && skin.splashPath
+        && skin.loadScreenPath
     )
     .map(skin => ({
       tilePath: cleanImageLink(skin.tilePath),
@@ -68,11 +74,12 @@ for (const key in champions) {
   }
 
   const allSkins = skins
-    .filter(skin =>
-      skin.tilePath
-      && skin.uncenteredSplashPath
-      && skin.splashPath
-      && skin.loadScreenPath,
+    .filter(
+      skin =>
+        skin.tilePath
+        && skin.uncenteredSplashPath
+        && skin.splashPath
+        && skin.loadScreenPath
     )
     .map(skin => ({
       name: skin.name,
@@ -131,12 +138,17 @@ for (const champ of changedChamps) {
       .webp({ quality: 90 })
       .toFile(webpPath)
 
-    console.log(`✨ Cropped & converted to WebP for ${champ.name} (${champ.id})`)
+    console.log(
+      `✨ Cropped & converted to WebP for ${champ.name} (${champ.id})`
+    )
 
     // 🧼 remove PNG
     fs.unlinkSync(pngPath)
   }
   catch (err) {
-    console.error(`❌ Error updating icon for ${champ.name} (${champ.id}):`, err)
+    console.error(
+      `❌ Error updating icon for ${champ.name} (${champ.id}):`,
+      err
+    )
   }
 }

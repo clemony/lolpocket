@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:15 PM CDT
 
 const champion: Champion = {
   "id": 45,
@@ -124,8 +124,14 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "80 / 120 / 160 / 200 / 240",
-                "50 / 55 / 60 / 65 / 70% AP"
+                {
+                  "values": "80 / 120 / 160 / 200 / 240"
+                },
+                {
+                  "values": "50 - 70",
+                  "unit": "% AP",
+                  "tooltip": "Scaling per rank:\n50 / 55 / 60 / 65 / 70% AP"
+                }
               ]
             }
           ]
@@ -162,8 +168,14 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "85 / 140 / 195 / 250 / 305",
-                "60 / 70 / 80 / 90 / 100% AP"
+                {
+                  "values": "85 / 140 / 195 / 250 / 305"
+                },
+                {
+                  "values": "60 - 100",
+                  "unit": "% AP",
+                  "tooltip": "Scaling per rank:\n60 / 70 / 80 / 90 / 100% AP"
+                }
               ]
             }
           ]
@@ -198,7 +210,10 @@ const champion: Champion = {
             {
               "attribute": "Stun Duration",
               "modifiers": [
-                "1.5 / 1.75 / 2 / 2.25 / 2.5 seconds"
+                {
+                  "values": "1.5 / 1.75 / 2 / 2.25 / 2.5",
+                  "unit": " seconds"
+                }
               ]
             }
           ]
@@ -231,15 +246,27 @@ const champion: Champion = {
             {
               "attribute": "Minimum Magic Damage",
               "modifiers": [
-                "175 / 250 / 325",
-                "65 / 70 / 75% AP"
+                {
+                  "values": "175 / 250 / 325"
+                },
+                {
+                  "values": "65 - 75",
+                  "unit": "% AP",
+                  "tooltip": "Scaling per rank:\n65 / 70 / 75% AP"
+                }
               ]
             },
             {
               "attribute": "Maximum Magic Damage",
               "modifiers": [
-                "350 / 500 / 650",
-                "130 / 140 / 150% AP"
+                {
+                  "values": "350 / 500 / 650"
+                },
+                {
+                  "values": "130 - 150",
+                  "unit": "% AP",
+                  "tooltip": "Scaling per rank:\n130 / 140 / 150% AP"
+                }
               ]
             }
           ]

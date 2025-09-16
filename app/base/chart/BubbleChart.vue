@@ -19,7 +19,7 @@ ChartJS.register(Title, Tooltip, PointElement, LinearScale, CategoryScale)
 
 const styles = getComputedStyle(document.documentElement)
 
-const data = computed (() => {
+const data = computed(() => {
   return props.data
 })
 
@@ -63,7 +63,6 @@ const options = {
   elements: {
     point: {
       hitRadius: 15,
-
     },
   },
   scales: {
@@ -107,7 +106,6 @@ const options = {
         stepSize: 1, // Force whole number increments
         callback: value => Math.round(value),
         padding: 14,
-
       },
       grid: {
         display: false,
@@ -134,14 +132,11 @@ const options = {
       boxPadding: 14,
       enabled: true,
       callbacks: {
-
         label: (context) => {
           const dataPoint = context.raw
           return `${dataPoint.label} - ${dataPoint.x} games, ${dataPoint.y.toFixed()}% wr`
         },
-        beforeLabel: (context) => {
-
-        },
+        beforeLabel: (context) => {},
       },
     },
   },

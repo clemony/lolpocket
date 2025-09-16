@@ -15,7 +15,10 @@ interface ItemLite {
 }
 
 const dataPath = path.resolve('scripts/data/items-lite.json')
-const raw = JSON.parse(fs.readFileSync(dataPath, 'utf-8')) as Record<string, ItemLite>
+const raw = JSON.parse(fs.readFileSync(dataPath, 'utf-8')) as Record<
+  string,
+  ItemLite
+>
 
 const itemsById: Record<number, ItemLite> = {}
 const itemFilters = {
@@ -71,7 +74,7 @@ fs.writeFileSync(
   './shared/appdata/filters/item-filters.ts',
   `// ${markUpdate()}
 
-export const itemFilters = ${JSON.stringify(itemFilters, null, 2)}`,
+export const itemFilters = ${JSON.stringify(itemFilters, null, 2)}`
 )
 
 // Optional: output aka map
@@ -79,5 +82,5 @@ fs.writeFileSync(
   './shared/appdata/filters/item-aka.ts',
   `// ${markUpdate()}
 
-export const akaLookup = ${JSON.stringify(akaLookup, null, 2)}`,
+export const akaLookup = ${JSON.stringify(akaLookup, null, 2)}`
 )

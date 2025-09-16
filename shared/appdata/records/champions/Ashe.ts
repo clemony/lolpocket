@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:55 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:11 PM CDT
 
 const champion: Champion = {
   "id": 22,
@@ -132,19 +132,28 @@ const champion: Champion = {
             {
               "attribute": "Bonus Attack Speed",
               "modifiers": [
-                "25 / 37.5 / 50 / 62.5 / 75%"
+                {
+                  "values": "25 / 37.5 / 50 / 62.5 / 75",
+                  "unit": "%"
+                }
               ]
             },
             {
               "attribute": "Physical Damage Per Arrow",
               "modifiers": [
-                "22 / 23.5 / 25 / 26.5 / 28% AD"
+                {
+                  "values": "22 / 23.5 / 25 / 26.5 / 28",
+                  "unit": "% AD"
+                }
               ]
             },
             {
               "attribute": "Total Damage Per Flurry",
               "modifiers": [
-                "110 / 117.5 / 125 / 132.5 / 140% AD"
+                {
+                  "values": "110 / 117.5 / 125 / 132.5 / 140",
+                  "unit": "% AD"
+                }
               ]
             }
           ]
@@ -178,14 +187,21 @@ const champion: Champion = {
             {
               "attribute": "Arrows",
               "modifiers": [
-                "7 / 8 / 9 / 10 / 11"
+                {
+                  "values": "7 / 8 / 9 / 10 / 11"
+                }
               ]
             },
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "60 / 95 / 130 / 165 / 200",
-                "110% bonus AD"
+                {
+                  "values": "60 / 95 / 130 / 165 / 200"
+                },
+                {
+                  "values": "110",
+                  "unit": "% bonus AD"
+                }
               ]
             }
           ]
@@ -251,8 +267,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "200 / 400 / 600",
-                "120% AP"
+                {
+                  "values": "200 / 400 / 600"
+                },
+                {
+                  "values": "120",
+                  "unit": "% AP"
+                }
               ]
             }
           ]

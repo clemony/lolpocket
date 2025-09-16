@@ -18,16 +18,20 @@ const forwarded = reactiveOmit(props, 'class')
     v-bind="{ ...forwarded, ...$attrs }"
     as-child>
     <motion.div
-
       :animate="{
         transform: 'translateX(var(--reka-tabs-indicator-position)',
-        width: 'var(--reka-tabs-indicator-size)' }"
-
+        width: 'var(--reka-tabs-indicator-size)',
+      }"
       :transition="{
         duration: 0.3,
       }"
-      :class="cn('absolute -bottom-1 left-0 h-[2px] transition-all  px-2', props.class)">
-      <motion.div class="h-full w-full rounded-md bgneutral/50 h-2px " />
+      :class="
+        cn(
+          'absolute -bottom-1 left-0 h-[2px] transition-all  px-2',
+          props.class,
+        )
+      ">
+      <motion.div class="h-full w-full rounded-md bgneutral/50 h-2px" />
     </motion.div>
   </TabsIndicator>
 </template>

@@ -1,5 +1,10 @@
 <script setup lang="ts">
-const { class: className, variant, variants, label } = defineProps<{
+const {
+  class: className,
+  variant,
+  variants,
+  label,
+} = defineProps<{
   class?: HTMLAttributes['class']
   variants?: any
   variant?: any

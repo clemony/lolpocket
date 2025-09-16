@@ -2,7 +2,9 @@
 import { PaginationList } from 'reka-ui'
 import type { PaginationListProps } from 'reka-ui'
 
-const props = defineProps<PaginationListProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<
+  PaginationListProps & { class?: HTMLAttributes['class'] }
+>()
 
 const delegatedProps = reactiveOmit(props, 'class')
 </script>

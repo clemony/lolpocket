@@ -3,9 +3,14 @@ import type { Champion } from '../../../shared/types/types.champion'
 import { markUpdate } from '../../../shared/utils/markUpdate'
 import { resolvePath } from '../resolvePath'
 
-const outputFile = resolvePath('../../shared/appdata/index/champion-title-index.ts')
+const outputFile = resolvePath(
+  '../../shared/appdata/index/champion-title-index.ts'
+)
 const dataPath = resolvePath('./champions/raw/champions-raw.json')
-const champs = JSON.parse(fs.readFileSync(dataPath, 'utf-8')) as Record<string, Champion>
+const champs = JSON.parse(fs.readFileSync(dataPath, 'utf-8')) as Record<
+  string,
+  Champion
+>
 
 const index: Record<string, string> = {}
 
@@ -22,4 +27,6 @@ export const championTitleIndex: Record<string, string> = ${JSON.stringify(index
 `
 
 fs.writeFileSync(outputFile, output)
-console.log(`✅ champion-title-index.ts created with ${Object.keys(index).length} champions.`)
+console.log(
+  `✅ champion-title-index.ts created with ${Object.keys(index).length} champions.`
+)

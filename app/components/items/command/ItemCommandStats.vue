@@ -36,7 +36,8 @@ const { filters, setFilter, filtered } = useItemFilter()
 
             <span class="grow">{{ stat.name }}</span>
 
-            <div class="!text-1 badge bg-b1/90 border-accent rounded-field tracking-wide">
+            <div
+              class="!text-xxs badge bg-b1/90 border-accent rounded-field tracking-wide">
               <span class="dst text-bc">{{ stat.abbr }}</span>
             </div>
           </label>

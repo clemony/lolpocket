@@ -4,7 +4,6 @@ import { motion } from 'motion-v'
 import type { ContextMenuContentEmits, ContextMenuContentProps } from 'reka-ui'
 import {
   ContextMenuContent,
-
   ContextMenuPortal,
   useForwardPropsEmits,
 } from 'reka-ui'
@@ -12,7 +11,13 @@ import {
 defineOptions({
   inheritAttrs: false,
 })
-const props = defineProps<ContextMenuContentProps & { class?: HTMLAttributes['class'], align?: Align, side?: Side }>()
+const props = defineProps<
+  ContextMenuContentProps & {
+    class?: HTMLAttributes['class']
+    align?: Align
+    side?: Side
+  }
+>()
 const emits = defineEmits<ContextMenuContentEmits>()
 
 const delegatedProps = reactiveOmit(props, 'class')
@@ -47,10 +52,12 @@ const variants = {
             duration: 0.35,
           }"
           exit="hidden"
-          :class="cn(
-            'z-50 min-w-32 overflow-hidden rounded-lg border border-b4/60  bg-b1/90 backdrop-blur-md p-1 text-popover-bc shadow-md ',
-            props.class,
-          )">
+          :class="
+            cn(
+              'z-50 min-w-32 overflow-hidden rounded-lg border border-b4/60  bg-b1/90 backdrop-blur-md p-1 text-popover-bc shadow-md ',
+              props.class,
+            )
+          ">
           <slot />
         </motion.div>
       </ContextMenuContent>

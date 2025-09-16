@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:15 PM CDT
 
 const champion: Champion = {
   "id": 238,
@@ -128,15 +128,25 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "80 / 120 / 160 / 200 / 240",
-                "100% bonus AD"
+                {
+                  "values": "80 / 120 / 160 / 200 / 240"
+                },
+                {
+                  "values": "100",
+                  "unit": "% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Reduced Damage",
               "modifiers": [
-                "48 / 72 / 96 / 120 / 144",
-                "60% bonus AD"
+                {
+                  "values": "48 / 72 / 96 / 120 / 144"
+                },
+                {
+                  "values": "60",
+                  "unit": "% bonus AD"
+                }
               ]
             }
           ]
@@ -170,7 +180,9 @@ const champion: Champion = {
             {
               "attribute": "Energy Restored",
               "modifiers": [
-                "30 / 35 / 40 / 45 / 50"
+                {
+                  "values": "30 / 35 / 40 / 45 / 50"
+                }
               ]
             }
           ]
@@ -209,8 +221,13 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "70 / 95 / 120 / 145 / 170",
-                "80% bonus AD"
+                {
+                  "values": "70 / 95 / 120 / 145 / 170"
+                },
+                {
+                  "values": "80",
+                  "unit": "% bonus AD"
+                }
               ]
             }
           ]
@@ -221,13 +238,19 @@ const champion: Champion = {
             {
               "attribute": "Slow",
               "modifiers": [
-                "20 / 25 / 30 / 35 / 40%"
+                {
+                  "values": "20 / 25 / 30 / 35 / 40",
+                  "unit": "%"
+                }
               ]
             },
             {
               "attribute": "Enhanced Slow",
               "modifiers": [
-                "30 / 37.5 / 45 / 52.5 / 60%"
+                {
+                  "values": "30 / 37.5 / 45 / 52.5 / 60",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -267,8 +290,15 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "100% AD",
-                "25 / 40 / 55% of damage stored"
+                {
+                  "values": "100",
+                  "unit": "% AD"
+                },
+                {
+                  "values": "25 - 55",
+                  "unit": "% of damage stored",
+                  "tooltip": "Scaling per rank:\n25 / 40 / 55% of damage stored"
+                }
               ]
             }
           ]

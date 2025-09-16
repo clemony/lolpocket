@@ -51,7 +51,12 @@ function clearSavepoint() {
     fs.unlinkSync(SAVE_FILE)
 }
 
-async function run(label: string, modulePath: string, completed: string[], results: Results) {
+async function run(
+  label: string,
+  modulePath: string,
+  completed: string[],
+  results: Results
+) {
   if (completed.includes(label)) {
     console.log(`⏭️  Skipping: ${label} (already completed)`)
     results.skipped.push(label)
@@ -91,7 +96,11 @@ export async function championUpdate() {
     console.log('📋 Pipeline order:')
     pipeline.forEach(([label]) => console.log(` - ${label}`))
     const completed = getSavepoint()
-    console.log(completed.length ? `\n💾 Current savepoint: ${completed.join(', ')}` : '\n💾 No savepoint found.')
+    console.log(
+      completed.length
+        ? `\n💾 Current savepoint: ${completed.join(', ')}`
+        : '\n💾 No savepoint found.'
+    )
     return
   }
 

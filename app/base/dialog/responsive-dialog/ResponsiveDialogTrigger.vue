@@ -6,7 +6,8 @@ const isDesktop = useMediaQuery('(min-width: 768px)')
 </script>
 
 <template>
-<!--   <component :is="isDesktop ? DialogTrigger : DrawerTrigger">
+  <!--   <component :is="isDesktop ? DialogTrigger : DrawerTrigger">
     <slot />
-  </component> -->dfd
+  </component> -->
+  dfd
 </template>

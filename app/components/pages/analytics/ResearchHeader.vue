@@ -16,7 +16,7 @@ async function fetchData() {
   // handleUserMatchData(matchArray)
   start()
 }
-const timeLeft = computed (() => {
+const timeLeft = computed(() => {
   let minutes = Math.floor(remaining.value / 60)
   let extraSeconds = remaining.value % 60
   minutes = minutes < 10 ? 0 + minutes : minutes
@@ -26,10 +26,12 @@ const timeLeft = computed (() => {
 </script>
 
 <template>
-  <div class=" relative w-full flex flex-col items-center gap-6">
-    <SummonerIcon class="size-22  relative">
+  <div class="relative w-full flex flex-col items-center gap-6">
+    <SummonerIcon class="size-22 relative">
       <Motion
-        v-tippy="timeLeft != '1:40' ? `Update available in ${timeLeft}` : 'Update Data'"
+        v-tippy="
+          timeLeft != '1:40' ? `Update available in ${timeLeft}` : 'Update Data'
+        "
         as="button"
         :while-press="{
           rotate: '180deg',
@@ -39,15 +41,16 @@ const timeLeft = computed (() => {
         @click="fetchData()">
         <icon
           name="ion:sync-sharp"
-          class="size-4.5  text-nc" />
+          class="size-4.5 text-nc" />
       </Motion>
     </SummonerIcon>
 
     <div class="flex flex-col justify-center items-center">
-      <SummonerName class=" text-6 font-semibold dst truncate leading-none" />
+      <SummonerName class="text-6 font-semibold dst truncate leading-none" />
 
-      <p class=" mt-2.5 left-2">
-        #<SummonerTag class="font-medium leading-none" />
+      <p class="mt-2.5 left-2">
+        #
+        <SummonerTag class="font-medium leading-none" />
       </p>
     </div>
   </div>

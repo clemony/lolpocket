@@ -8,7 +8,10 @@ import { useRoute } from 'vue-router'
  * @example const parentTitle = useParentMeta<string>('title') // pulls meta.title from direct parent
  * @example const grandparentTitle = useParentMeta<string>('title', 2)
  */
-export function useParentMeta<T = unknown>(key: string, levelsUp = 1): T | undefined {
+export function useParentMeta<T = unknown>(
+  key: string,
+  levelsUp = 1
+): T | undefined {
   const route = useRoute()
   const index = route.matched.length - 1 - levelsUp
   return route.matched[index]?.meta?.[key] as T | undefined

@@ -3,11 +3,11 @@ const props = defineProps<{
   pocket: Pocket
 }>()
 
-const pocket = computed (() => {
+const pocket = computed(() => {
   return props.pocket
 })
 
-const roles = computed (() => {
+const roles = computed(() => {
   const a = props.pocket.roles.filter(r => r != '' && r != null)
   const b = a.join(', ')
   return b.replace(/,/, ' &')

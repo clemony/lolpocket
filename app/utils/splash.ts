@@ -16,7 +16,11 @@ function cKey(keyOrId: string | number): string {
 
   return key.value
 }
-export function getSkinSplash(keyOrId: string | number, skin: Skin, type: SplashType) {
+export function getSkinSplash(
+  keyOrId: string | number,
+  skin: Skin,
+  type: SplashType
+) {
   const key = cKey(keyOrId)
   const champ = key.toLowerCase().replace('\'', '').replace('. ', '')
 

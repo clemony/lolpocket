@@ -6,38 +6,38 @@ const item: Item = {
     {
       id: 3006,
       name: 'Berserker\'s Greaves',
-      gold: 1100
+      gold: 1100,
     },
     {
       id: 3047,
       name: 'Plated Steelcaps',
-      gold: 1200
+      gold: 1200,
     },
     {
       id: 3020,
       name: 'Sorcerer\'s Shoes',
-      gold: 1100
+      gold: 1100,
     },
     {
       id: 3158,
       name: 'Ionian Boots of Lucidity',
-      gold: 900
+      gold: 900,
     },
     {
       id: 3111,
       name: 'Mercury\'s Treads',
-      gold: 1250
+      gold: 1250,
     },
     {
       id: 3117,
       name: 'Mobility Boots',
-      gold: 1000
+      gold: 1000,
     },
     {
       id: 3009,
       name: 'Boots of Swiftness',
-      gold: 1000
-    }
+      gold: 1000,
+    },
   ],
   specialRecipe: 0,
   noEffects: false,
@@ -47,25 +47,20 @@ const item: Item = {
     {
       name: 'Slightly Quicker',
       unique: true,
-      effects: 'Gain 10 <b>bonus</b> movement speed.'
-    }
+      effects: 'Gain 10 <b>bonus</b> movement speed.',
+    },
   ],
   stats: {
-    flatMovespeed: 25
+    flatMovespeed: 25,
   },
   shop: {
     prices: {
       total: 0,
       combined: 300,
-      sell: 0
+      sell: 0,
     },
-    purchasable: false
+    purchasable: false,
   },
-  maps: [
-    11,
-    12,
-    21,
-    35
-  ]
+  maps: [11, 12, 21, 35],
 }
 export default item

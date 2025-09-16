@@ -6,8 +6,8 @@ const item: Item = {
     {
       id: 3013,
       name: 'Synchronized Souls',
-      gold: 900
-    }
+      gold: 900,
+    },
   ],
   specialRecipe: 0,
   noEffects: false,
@@ -17,26 +17,26 @@ const item: Item = {
     {
       name: 'Voidborn',
       unique: true,
-      effects: 'Gain <img src="/img/icons/empowered-recall.webp" class="tip-icon" />Empowered Recall.'
+      effects:
+        'Gain <img src="/img/icons/empowered-recall.webp" class="tip-icon" />Empowered Recall.',
     },
     {
       name: 'Noxian Synchrony',
       unique: true,
-      effects: 'Gain 45 (+8% <b>total</b> movement speed) <b>bonus</b> movement speed while out-of-combat.'
-    }
+      effects:
+        'Gain 45 (+8% <b>total</b> movement speed) <b>bonus</b> movement speed while out-of-combat.',
+    },
   ],
   stats: {
-    flatMovespeed: 55
+    flatMovespeed: 55,
   },
   shop: {
     prices: {
       total: 1400,
       combined: 500,
-      sell: 560
-    }
+      sell: 560,
+    },
   },
-  maps: [
-    11
-  ]
+  maps: [11],
 }
 export default item

@@ -160,5 +160,5 @@ export const akaLookup = {
   'Glp': 446656,
   'Hose': 446656,
   'Supersoaker': 446656,
-  'Squallrider': 446671
+  'Squallrider': 446671,
 }

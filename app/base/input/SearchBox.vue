@@ -19,10 +19,7 @@ const search = ref('')
       v-if="search != ''"
       class="btn-ghost"
       @click="search = ''" />
-
   </label>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

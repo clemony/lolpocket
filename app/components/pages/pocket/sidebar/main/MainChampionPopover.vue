@@ -1,12 +1,11 @@
 <script lang="ts" setup>
 const route = useRoute()
-const pocket = computed(() => ps().getPocket(String(route.params.pocket_key))).value
+const pocket = computed(() =>
+  ps().getPocket(String(route.params.pocket_key))
+).value
 
 const searchQuery = ref<string>('')
-const { results } = useSimpleSearch(
-  ix().champions,
-  searchQuery,
-)
+const { results } = useSimpleSearch(ix().champions, searchQuery)
 
 function handleChampions(champion: string) {
   if (pocket.champions.includes(champion))
@@ -18,7 +17,7 @@ function handleChampions(champion: string) {
 const itemsPerPage = 8
 const currentPage = ref(1)
 
-const pagedSearchItems = computed (() => {
+const pagedSearchItems = computed(() => {
   if (!results.value)
     return null
   const start = (currentPage.value - 1) * itemsPerPage
@@ -32,10 +31,13 @@ const pagedItems = computed(() => {
 
 const open = ref(false)
 
-watch(() => results.value.length, (newVal) => {
-  if (newVal)
-    currentPage.value = 1
-})
+watch(
+  () => results.value.length,
+  (newVal) => {
+    if (newVal)
+      currentPage.value = 1
+  }
+)
 </script>
 
 <template>
@@ -46,7 +48,12 @@ watch(() => results.value.length, (newVal) => {
       <Button
         variant="btn"
         hover="btn"
-        :class="cn('aspect-square  relative transition-[colors, opacity] p-0 duration-250 relative w-full h-auto hover:text-bc/60 hover:inset-shadow-xs data-[state=open]:ring-2 hover:ring overflow-hidden ring-bc/60 data-[state=open]:btn-active', { 'shadow-sm drop-shadow-sm ': pocket.main?.champion })">
+        :class="
+          cn(
+            'aspect-square  relative transition-[colors, opacity] p-0 duration-250 relative w-full h-auto hover:text-bc/60 hover:inset-shadow-xs data-[state=open]:ring-2 hover:ring overflow-hidden ring-bc/60 data-[state=open]:btn-active',
+            { 'shadow-sm drop-shadow-sm ': pocket.main?.champion },
+          )
+        ">
         <icon
           v-if="!pocket?.main?.champion"
           name="lp:champ"
@@ -55,7 +62,8 @@ watch(() => results.value.length, (newVal) => {
           v-else
           class=""
           :img="ix().getSplash(pocket.main?.champion, 'tile')" />
-        <div class="size-full opacity-0 group-hover/collapse:opacity-100 group-data-[state=open]/collapse:opacity-100 inset-0 transition-opacity duration-200 bg-neutral/70 absolute grid place-items-center">
+        <div
+          class="size-full opacity-0 group-hover/collapse:opacity-100 group-data-[state=open]/collapse:opacity-100 inset-0 transition-opacity duration-200 bg-neutral/70 absolute grid place-items-center">
           <CaretFlip
             class="!text-nc size-8 drop-shadow-sm opacity-80 translate-y-18"
             solid />
@@ -68,11 +76,12 @@ watch(() => results.value.length, (newVal) => {
       :align-offset="-2"
       arrow-class="translate-y-0"
       class="p-0">
-      <div class=" relative   w-full px-3 h-12 shrink-0 group/txt gap-3 flex items-center w-full ">
+      <div
+        class="relative w-full px-3 h-12 shrink-0 group/txt gap-3 flex items-center w-full">
         <icon name="search" />
         <input
           v-model="searchQuery"
-          class="h-full placeholder:italic   w-full pr-4 text-2  transition-all duration-200"
+          class="h-full placeholder:italic w-full pr-4 text-xs transition-all duration-200"
           placeholder="Search All Champions..."
           @keydown.stop
           @keydown.enter.prevent />
@@ -90,15 +99,14 @@ watch(() => results.value.length, (newVal) => {
 
       <Separator />
 
-      <div
-        class="pt-3 pb-2 px-1 overflow-y-scroll w-full flex flex-col">
+      <div class="pt-3 pb-2 px-1 overflow-y-scroll w-full flex flex-col">
         <template v-if="results && searchQuery">
           <LazyLabel
             v-for="result in pagedSearchItems"
             :key="result.key"
             variant="ghost"
             size="sm"
-            class="justify-start  duration-0">
+            class="justify-start duration-0">
             <input
               v-model="pocket.main.champion"
               type="radio"
@@ -106,7 +114,7 @@ watch(() => results.value.length, (newVal) => {
               :value="result.key"
               @change="handleChampions(result.key)" />
 
-            <span class="size-8 ">
+            <span class="size-8">
               <LazyChampionIcon
                 :id="result.id"
                 :alt="result.name"
@@ -159,10 +167,10 @@ watch(() => results.value.length, (newVal) => {
           <PaginationContent>
             <PaginationPrev
               size="xs"
-              class="disabled:opacity-40 btn-square  size-8" />
+              class="disabled:opacity-40 btn-square size-8" />
             <PaginationNext
               size="xs"
-              class="disabled:opacity-40 btn-square  size-8" />
+              class="disabled:opacity-40 btn-square size-8" />
           </PaginationContent>
         </Pagination>
       </div>

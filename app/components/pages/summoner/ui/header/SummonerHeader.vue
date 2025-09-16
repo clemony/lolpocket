@@ -21,9 +21,9 @@ const { class: className, summoner } = defineProps<{
     <template #title>
       <SummonerName
         as="h1"
-        class="drop-shadow-sm font-serif text-bc/94 leading-none text-12" />
+        class="drop-shadow-sm font-serif text-bc/94 leading-none text-xxs2" />
 
-      <div class="flex gap-3  mt-0.75">
+      <div class="flex gap-3 mt-0.75">
         <UpdateSummoner
           :summoner
           text
@@ -42,11 +42,9 @@ const { class: className, summoner } = defineProps<{
 
     <template #subheader>
       <SummonerTag :summoner />
-      <SummonerRegion
-        :region-id="summoner?.region" />
+      <SummonerRegion :region-id="summoner?.region" />
 
-      <SummonerLevel
-        :summoner />
+      <SummonerLevel :summoner />
     </template>
   </IconHeader>
 </template>

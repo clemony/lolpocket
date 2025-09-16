@@ -22,9 +22,12 @@ const { page, class: className } = defineProps<{
       :alt="page.name"
       class="size-4 absolute"
       :class="{
-        '!size-3.5 left-[1.25px] top-[1px] text-bc/60': page.name == 'champion analysis',
+        '!size-3.5 left-[1.25px] top-[1px] text-bc/60':
+          page.name == 'champion analysis',
         '!size-3 left-[2px] top-0.5 text-bc/70': page.name == 'ally analysis',
-        '!size-2.5 left-[2.5px] top-[2.75px]  dst text-bc/64': page.name == 'item analysis' }" />
+        '!size-2.5 left-[2.5px] top-[2.75px]  dst text-bc/64':
+          page.name == 'item analysis',
+      }" />
 
     <component
       :is="`i-${page.meta.icon1}`"

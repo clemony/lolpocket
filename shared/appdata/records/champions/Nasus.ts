@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:13 PM CDT
 
 const champion: Champion = {
   "id": 75,
@@ -121,8 +121,13 @@ const champion: Champion = {
             {
               "attribute": "Bonus Physical Damage",
               "modifiers": [
-                "35 / 55 / 75 / 95 / 115",
-                "100% of Siphoning Strike stacks"
+                {
+                  "values": "35 / 55 / 75 / 95 / 115"
+                },
+                {
+                  "values": "100",
+                  "unit": "% of Siphoning Strike stacks"
+                }
               ]
             }
           ]
@@ -158,25 +163,37 @@ const champion: Champion = {
             {
               "attribute": "Maximum Slow",
               "modifiers": [
-                "47 / 59 / 71 / 83 / 95%"
+                {
+                  "values": "47 / 59 / 71 / 83 / 95",
+                  "unit": "%"
+                }
               ]
             },
             {
               "attribute": "Additional Slow Per Second",
               "modifiers": [
-                "3 / 6 / 9 / 12 / 15%"
+                {
+                  "values": "3 / 6 / 9 / 12 / 15",
+                  "unit": "%"
+                }
               ]
             },
             {
               "attribute": "Maximum Cripple",
               "modifiers": [
-                "35.25 / 44.25 / 53.25 / 62.25 / 71.25%"
+                {
+                  "values": "35.25 / 44.25 / 53.25 / 62.25 / 71.25",
+                  "unit": "%"
+                }
               ]
             },
             {
               "attribute": "Additional Cripple Per Second",
               "modifiers": [
-                "2.25 / 4.5 / 6.75 / 9 / 11.25%"
+                {
+                  "values": "2.25 / 4.5 / 6.75 / 9 / 11.25",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -205,8 +222,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "50 / 80 / 110 / 140 / 170",
-                "60% AP"
+                {
+                  "values": "50 / 80 / 110 / 140 / 170"
+                },
+                {
+                  "values": "60",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -217,21 +239,34 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage Per Tick",
               "modifiers": [
-                "10 / 16 / 22 / 28 / 34",
-                "12% AP"
+                {
+                  "values": "10 / 16 / 22 / 28 / 34"
+                },
+                {
+                  "values": "12",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Total Magic Damage",
               "modifiers": [
-                "100 / 160 / 220 / 280 / 340",
-                "120% AP"
+                {
+                  "values": "100 / 160 / 220 / 280 / 340"
+                },
+                {
+                  "values": "120",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Armor Reduction",
               "modifiers": [
-                "30 / 35 / 40 / 45 / 50% of target's armor"
+                {
+                  "values": "30 / 35 / 40 / 45 / 50",
+                  "unit": "% of target's armor"
+                }
               ]
             }
           ]
@@ -263,19 +298,26 @@ const champion: Champion = {
             {
               "attribute": "Bonus Health",
               "modifiers": [
-                "300 / 450 / 600"
+                {
+                  "values": "300 / 450 / 600"
+                }
               ]
             },
             {
               "attribute": "Bonus Resistances",
               "modifiers": [
-                "40 / 55 / 70"
+                {
+                  "values": "40 / 55 / 70"
+                }
               ]
             },
             {
               "attribute": "Increased Size",
               "modifiers": [
-                "30 / 35 / 40%"
+                {
+                  "values": "30 / 35 / 40",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -286,15 +328,27 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage Per Tick",
               "modifiers": [
-                "1.5 / 2 / 2.5%  of target's maximum health",
-                "0.5% per 100 AP"
+                {
+                  "values": "1.5 / 2 / 2.5",
+                  "unit": "%  of target's maximum health"
+                },
+                {
+                  "values": "0.5",
+                  "unit": "% per 100 AP"
+                }
               ]
             },
             {
               "attribute": "Total Magic Damage",
               "modifiers": [
-                "45 / 60 / 75%  of target's maximum health",
-                "15% per 100 AP"
+                {
+                  "values": "45 / 60 / 75",
+                  "unit": "%  of target's maximum health"
+                },
+                {
+                  "values": "15",
+                  "unit": "% per 100 AP"
+                }
               ]
             }
           ]

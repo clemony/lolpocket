@@ -13,7 +13,7 @@ function normalizePatch(patch: string): number {
 async function main() {
   try {
     const versions = await ofetch<string[]>(
-      'https://ddragon.leagueoflegends.com/api/versions.json',
+      'https://ddragon.leagueoflegends.com/api/versions.json'
     )
 
     const filtered = versions
@@ -27,22 +27,22 @@ async function main() {
 
     await writeFile(
       './scripts/update/misc/raw/patch-index.json',
-      JSON.stringify(normalized, null, 2),
+      JSON.stringify(normalized, null, 2)
     )
 
     await writeFile(
       './scripts/update/misc/raw/patch-index-raw.json',
-      JSON.stringify(filtered, null, 2),
+      JSON.stringify(filtered, null, 2)
     )
     await writeFile(
       './shared/appdata/index/patch-index.ts',
       `// ${getFormattedDateTime()}
 
-export const patchIndex = ${JSON.stringify(normalized, null, 2)}`,
+export const patchIndex = ${JSON.stringify(normalized, null, 2)}`
     )
 
     console.log(
-      '✅ Patches written to rawPatches.json and normalizedPatches.json',
+      '✅ Patches written to rawPatches.json and normalizedPatches.json'
     )
   }
   catch (e) {

@@ -16,7 +16,7 @@ function path(region: string): string {
 async function safeFetch<T>(
   url: string,
   params?: Record<string, any>,
-  retries = 1,
+  retries = 1
 ): Promise<T> {
   try {
     return await $fetch<T>(url, {
@@ -44,7 +44,7 @@ export function riotSummonerGet<T = any>(path: string) {
 export function riotGet<T = any>(
   base: string,
   path: string,
-  params: Record<string, any> = {},
+  params: Record<string, any> = {}
 ) {
   return limit(() => safeFetch<T>(`${base}${path}`, params))
 }
@@ -52,7 +52,9 @@ export function riotGet<T = any>(
 // path uses REGION_CODE
 
 export async function getChampionMastery(puuid: string) {
-  return riotSummonerGet(`/lol/champion-mastery/v4/champion-masteries/by-puuid/${puuid}`)
+  return riotSummonerGet(
+    `/lol/champion-mastery/v4/champion-masteries/by-puuid/${puuid}`
+  )
 }
 
 export async function getChampionMasteryTotal(puuid: string) {
@@ -62,17 +64,29 @@ export async function getChampionMasteryTotal(puuid: string) {
 // region var
 
 export async function fetchSummonerByPuuid(puuid: string, region: string) {
-  return riotGet(path(region ?? REGION_CODE), `/lol/summoner/v4/summoners/by-puuid/${puuid}`)
+  return riotGet(
+    path(region ?? REGION_CODE),
+    `/lol/summoner/v4/summoners/by-puuid/${puuid}`
+  )
 }
 
 export async function fetchLeagueEntriesByPuuid(puuid: string, region: string) {
-  return riotGet(path(region ?? REGION_CODE), `/lol/league/v4/entries/by-puuid/${puuid}`)
+  return riotGet(
+    path(region ?? REGION_CODE),
+    `/lol/league/v4/entries/by-puuid/${puuid}`
+  )
 }
 export async function fetchAccountByPuuid(puuid: string, region: string) {
-  return riotGet(path(region ?? REGION), `/riot/account/v1/accounts/by-puuid/${puuid}`)
+  return riotGet(
+    path(region ?? REGION),
+    `/riot/account/v1/accounts/by-puuid/${puuid}`
+  )
 }
 export async function fetchRegionByPuuid(puuid: string, region: string) {
-  return riotGet(path(region ?? REGION), `/riot/account/v1/region/by-game/lol/by-puuid/${puuid}`)
+  return riotGet(
+    path(region ?? REGION),
+    `/riot/account/v1/region/by-game/lol/by-puuid/${puuid}`
+  )
 }
 
 export async function getMatchesByPuuid({
@@ -87,14 +101,14 @@ export async function getMatchesByPuuid({
   return riotGet(
     `https://${REGION}.api.riotgames.com`,
     `/lol/match/v5/matches/by-puuid/${puuid}/ids`,
-    { start, count },
+    { start, count }
   )
 }
 
 export async function getMatchDetails(matchId: string) {
   return riotGet(
     `https://${REGION}.api.riotgames.com`,
-    `/lol/match/v5/matches/${matchId}`,
+    `/lol/match/v5/matches/${matchId}`
   )
 }
 
@@ -112,21 +126,21 @@ export async function getMatchIdsByPuuid({
   return riotGet(
     `https://${region}.api.riotgames.com`,
     `/lol/match/v5/matches/by-puuid/${puuid}/ids`,
-    { start, count },
+    { start, count }
   )
 }
 
 export async function getMatchById(matchId: string, region = 'americas') {
   return riotGet(
     `https://${region}.api.riotgames.com`,
-    `/lol/match/v5/matches/${matchId}`,
+    `/lol/match/v5/matches/${matchId}`
   )
 }
 
 export async function fetchPuuidByRiotId(
   region: string,
   name: string,
-  tag: string,
+  tag: string
 ) {
   const response = await $fetch(
     `https://americas.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${encodeURIComponent(name)}/${encodeURIComponent(tag)}`,
@@ -134,7 +148,7 @@ export async function fetchPuuidByRiotId(
       headers: {
         'X-Riot-Token': process.env.NUXT_RIOT_API!,
       },
-    },
+    }
   )
   return response.puuid
 }

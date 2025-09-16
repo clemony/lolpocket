@@ -30,14 +30,14 @@ const {
         class="size-full z-0"></PocketIcon>
       <div
         v-else
-        class="opacity-40  z-0 size-8">
+        class="opacity-40 z-0 size-8">
         <i-lol-champ class="size-8 absolute" />
         <icon
           name="material-symbols:edit"
           class="absolute size-6 -right-4 -bottom-2" />
       </div>
       <LazyPrismaticShine
-        class="scale-x-112  z-1 scale-y-104 !opacity-0 group-hover/photo:!opacity-100 transition duration-450" />
+        class="scale-x-112 z-1 scale-y-104 !opacity-0 group-hover/photo:!opacity-100 transition duration-450" />
 
       <slot name="img-container" />
     </transition-scale>
@@ -46,8 +46,9 @@ const {
       <slot name="crest" />
       <slot>
         <div
-          class="w-full h-5 max-h-5 w-34 max-w-34 mt-1.5 px-0.5 grid items-center relative ">
-          <span class=" italic  items-center  text-1 flex-wrap flex absolute  leading-none size-fit">
+          class="w-full h-5 max-h-5 w-34 max-w-34 mt-1.5 px-0.5 grid items-center relative">
+          <span
+            class="italic items-center text-xxs flex-wrap flex absolute leading-none size-fit">
             {{ text }}
           </span>
         </div>

@@ -6,7 +6,10 @@ const userMatchData = []
 // TODO usermatchdata
 
 const patchStats = computed(() => {
-  const patchMap = new Map<number, { games: number, wins: number, losses: number, winrate: number }>()
+  const patchMap = new Map<
+    number,
+    { games: number, wins: number, losses: number, winrate: number }
+  >()
 
   // Step 1: Group matches by patch
   userMatchData.forEach(({ patch, win }) => {
@@ -34,11 +37,14 @@ const patchStats = computed(() => {
 
 const data = computed(() => ({
   labels: patchStats.value.map(p => p.patch),
-  datasets: [{
-    data: patchStats.value.map(p => p.winrate ?? 0),
-  }, {
-    data: patchStats.value.map(p => p.games ?? 0),
-  }],
+  datasets: [
+    {
+      data: patchStats.value.map(p => p.winrate ?? 0),
+    },
+    {
+      data: patchStats.value.map(p => p.games ?? 0),
+    },
+  ],
 }))
 
 const options = {
@@ -62,7 +68,6 @@ const options = {
       },
     },
     x: {
-
       ticks: {
         display: false,
       },
@@ -94,7 +99,7 @@ const options = {
   },
 }
 
-const range = computed (() => {
+const range = computed(() => {
   const a = [...patchStats.value]
   const b = a.pop()
   return `${a.shift().patch} - ${b.patch}`
@@ -102,17 +107,18 @@ const range = computed (() => {
 </script>
 
 <template>
-  <div class="stats bg-b1 rounded-box border border-b3 shadow-warm-soft h-62 w-full  px-5 relative">
+  <div
+    class="stats bg-b1 rounded-box border border-b3 shadow-warm-soft h-62 w-full px-5 relative">
     <div class="absolute top-6 left-6 text-bc z-0 pointer-events-none">
-      <div class="text-1 stat-desc font-medium mb-1">
+      <div class="text-xxs stat-desc font-medium mb-1">
         {{ range }}
       </div>
 
-      <div class=" text-5  font-semibold dst">
+      <div class="text-lgfont-semibold dst">
         Recent Patch
       </div>
 
-      <div class="text-3 stat-desc ">
+      <div class="text-sm stat-desc">
         Winrate vs. Games
       </div>
     </div>

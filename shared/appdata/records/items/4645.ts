@@ -6,13 +6,13 @@ const item: Item = {
     {
       id: 3145,
       name: 'Hextech Alternator',
-      gold: 1100
+      gold: 1100,
     },
     {
       id: 1058,
       name: 'Needlessly Large Rod',
-      gold: 1200
-    }
+      gold: 1200,
+    },
   ],
   specialRecipe: 0,
   noEffects: false,
@@ -22,28 +22,22 @@ const item: Item = {
     {
       name: 'Cinderbloom',
       unique: true,
-      effects: 'Your magic damage and true damage damage will <img src="/img/icons/critical-strike.webp" class="tip-icon" />critically strike for 120% damage against enemies below 40% <b>maximum</b> health.'
-    }
+      effects:
+        'Your magic damage and true damage damage will <img src="/img/icons/critical-strike.webp" class="tip-icon" />critically strike for 120% damage against enemies below 40% <b>maximum</b> health.',
+    },
   ],
   stats: {
     abilityPower: 110,
-    flatMagicPenetration: 15
+    flatMagicPenetration: 15,
   },
   shop: {
     prices: {
       total: 3200,
       combined: 900,
-      sell: 1280
+      sell: 1280,
     },
-    tags: [
-      'MAGE'
-    ]
+    tags: ['MAGE'],
   },
-  maps: [
-    11,
-    12,
-    21,
-    35
-  ]
+  maps: [11, 12, 21, 35],
 }
 export default item

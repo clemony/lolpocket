@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:14 PM CDT
 
 const champion: Champion = {
   "id": 27,
@@ -133,15 +133,25 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage per Tick",
               "modifiers": [
-                "5 / 7.5 / 10 / 12.5 / 15",
-                "10.63% AP"
+                {
+                  "values": "5 / 7.5 / 10 / 12.5 / 15"
+                },
+                {
+                  "values": "10.63",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Total Magic Damage",
               "modifiers": [
-                "40 / 60 / 80 / 100 / 120",
-                "85% AP"
+                {
+                  "values": "40 / 60 / 80 / 100 / 120"
+                },
+                {
+                  "values": "85",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -174,7 +184,10 @@ const champion: Champion = {
             {
               "attribute": "Slow",
               "modifiers": [
-                "50 / 55 / 60 / 65 / 70%"
+                {
+                  "values": "50 / 55 / 60 / 65 / 70",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -205,9 +218,17 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "50 / 60 / 70 / 80 / 90",
-                "6 / 6.5 / 7 / 7.5 / 8% of target's maximum health",
-                "55% AP"
+                {
+                  "values": "50 / 60 / 70 / 80 / 90"
+                },
+                {
+                  "values": "6 / 6.5 / 7 / 7.5 / 8",
+                  "unit": "% of target's maximum health"
+                },
+                {
+                  "values": "55",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -218,7 +239,10 @@ const champion: Champion = {
             {
               "attribute": "Root Duration",
               "modifiers": [
-                "1 / 1.25 / 1.5 / 1.75 / 2 seconds"
+                {
+                  "values": "1 / 1.25 / 1.5 / 1.75 / 2",
+                  "unit": " seconds"
+                }
               ]
             }
           ]
@@ -249,19 +273,25 @@ const champion: Champion = {
             {
               "attribute": "Bonus Stats",
               "modifiers": [
-                "25 / 60 / 95"
+                {
+                  "values": "25 / 60 / 95"
+                }
               ]
             },
             {
               "attribute": "HP/Mana Regenerated per 0.5 Seconds",
               "modifiers": [
-                "2.5 / 6 / 9.5"
+                {
+                  "values": "2.5 / 6 / 9.5"
+                }
               ]
             },
             {
               "attribute": "Total HP/Mana Regeneration (per 5 Seconds)",
               "modifiers": [
-                "125 / 300 / 475"
+                {
+                  "values": "125 / 300 / 475"
+                }
               ]
             }
           ]

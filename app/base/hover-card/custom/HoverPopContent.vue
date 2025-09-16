@@ -1,12 +1,7 @@
 <script setup lang="ts">
 import { motion } from 'motion-v'
 import type { HoverCardContentProps } from 'reka-ui'
-import {
-  HoverCardContent,
-
-  HoverCardPortal,
-  useForwardProps,
-} from 'reka-ui'
+import { HoverCardContent, HoverCardPortal, useForwardProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { computed } from 'vue'
 
@@ -14,7 +9,7 @@ const props = withDefaults(
   defineProps<HoverCardContentProps & { class?: HTMLAttributes['class'] }>(),
   {
     sideOffset: 4,
-  },
+  }
 )
 
 const delegatedProps = reactiveOmit(props, 'class')
@@ -40,7 +35,6 @@ const wrapperVariants = {
     scale: 1,
     visibility: 'visible',
     transition: {
-
       delay: 0,
     },
   },

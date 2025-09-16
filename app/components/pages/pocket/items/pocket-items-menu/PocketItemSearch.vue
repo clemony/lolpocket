@@ -13,7 +13,7 @@ const props = withDefaults(
   }>(),
   {
     placeholder: 'Search Items...',
-  },
+  }
 )
 
 const emit = defineEmits(['update:query'])
@@ -110,12 +110,18 @@ watchEffect(() => {
 
 <template>
   <motion.div
-    :class="cn('border bgneutral/84 text-nc btn-neutral  btn-circle relative flex btn   rounded-full items-center', props.class)"
+    :class="
+      cn(
+        'border bgneutral/84 text-nc btn-neutral  btn-circle relative flex btn   rounded-full items-center',
+        props.class,
+      )
+    "
     :variants="variants"
     initial="collapsed"
     :transition="{
       duration: 0.3,
-      ease: 'easeOut' }"
+      ease: 'easeOut',
+    }"
     while-hover="expanded"
     :animate="searchQuery != null ? 'expanded' : 'collapsed'">
     <motion.div :variants="inputVariants">
@@ -131,7 +137,7 @@ watchEffect(() => {
 
     <button
       :disabled="searchQuery == null"
-      class="btn btn-ghost btn-circle btn-xs  hover:bg-b3/40 absolute  z-2 left-1.5 top-1.5 pointer-events-auto"
+      class="btn btn-ghost btn-circle btn-xs hover:bg-b3/40 absolute z-2 left-1.5 top-1.5 pointer-events-auto"
       @click="clearFilters">
       <icon
         v-if="searchQuery"
@@ -141,7 +147,7 @@ watchEffect(() => {
       <icon
         v-else
         name="search"
-        class="size-4.75 shrink-0 text-bc/70 absolute   dst" />
+        class="size-4.75 shrink-0 text-bc/70 absolute dst" />
     </button>
   </motion.div>
 </template>

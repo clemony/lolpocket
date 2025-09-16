@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:56 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:12 PM CDT
 
 const champion: Champion = {
   "id": 887,
@@ -127,31 +127,57 @@ const champion: Champion = {
             {
               "attribute": "Damage per Snip",
               "modifiers": [
-                "10 / 15 / 20 / 25 / 30",
-                "2% AP"
+                {
+                  "values": "10 / 15 / 20 / 25 / 30"
+                },
+                {
+                  "values": "2",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Center Damage per Snip",
               "modifiers": [
-                "10 / 15 / 20 / 25 / 30",
-                "2% AP",
-                "1% (+ 0.55% per 100 AP) of the target's maximum health"
+                {
+                  "values": "10 / 15 / 20 / 25 / 30"
+                },
+                {
+                  "values": "2",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "1",
+                  "unit": "% (+ 0.55% per 100 AP) of the target's maximum health"
+                }
               ]
             },
             {
               "attribute": "Final Snip Damage",
               "modifiers": [
-                "60 / 85 / 110 / 135 / 160",
-                "35% AP"
+                {
+                  "values": "60 / 85 / 110 / 135 / 160"
+                },
+                {
+                  "values": "35",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Final Snip Center Damage",
               "modifiers": [
-                "60 / 85 / 110 / 135 / 160",
-                "35% AP",
-                "1% (+ 0.55% per 100 AP) of the target's maximum health"
+                {
+                  "values": "60 / 85 / 110 / 135 / 160"
+                },
+                {
+                  "values": "35",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "1",
+                  "unit": "% (+ 0.55% per 100 AP) of the target's maximum health"
+                }
               ]
             }
           ]
@@ -162,31 +188,57 @@ const champion: Champion = {
             {
               "attribute": "Minimum Damage",
               "modifiers": [
-                "70 / 100 / 130 / 160 / 190",
-                "37% AP"
+                {
+                  "values": "70 / 100 / 130 / 160 / 190"
+                },
+                {
+                  "values": "37",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Minimum Center Damage",
               "modifiers": [
-                "70 / 100 / 130 / 160 / 190",
-                "37% AP",
-                "2% (+ 1.1% per 100 AP) of the target's maximum health"
+                {
+                  "values": "70 / 100 / 130 / 160 / 190"
+                },
+                {
+                  "values": "37",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "2",
+                  "unit": "% (+ 1.1% per 100 AP) of the target's maximum health"
+                }
               ]
             },
             {
               "attribute": "Maximum Damage",
               "modifiers": [
-                "110 / 160 / 210 / 260 / 310",
-                "45% AP"
+                {
+                  "values": "110 / 160 / 210 / 260 / 310"
+                },
+                {
+                  "values": "45",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Maximum Center Damage",
               "modifiers": [
-                "110 / 160 / 210 / 260 / 310",
-                "45% AP",
-                "6% (+ 3.3% per 100 AP) of the target's maximum health"
+                {
+                  "values": "110 / 160 / 210 / 260 / 310"
+                },
+                {
+                  "values": "45",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "6",
+                  "unit": "% (+ 3.3% per 100 AP) of the target's maximum health"
+                }
               ]
             }
           ]
@@ -246,14 +298,22 @@ const champion: Champion = {
             {
               "attribute": "Bonus Magic Damage On-Hit",
               "modifiers": [
-                "8 / 11 / 14 / 17 / 20",
-                "25% AP"
+                {
+                  "values": "8 / 11 / 14 / 17 / 20"
+                },
+                {
+                  "values": "25",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Bonus Attack Speed",
               "modifiers": [
-                "20 / 35 / 50 / 65 / 80%"
+                {
+                  "values": "20 / 35 / 50 / 65 / 80",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -289,16 +349,29 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage per Needle",
               "modifiers": [
-                "30 / 60 / 90",
-                "8% AP"
+                {
+                  "values": "30 / 60 / 90"
+                },
+                {
+                  "values": "8",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Damage with A Thousand Cuts",
               "modifiers": [
-                "30 / 60 / 90",
-                "8% AP",
-                "1% (+ 0.55% per 100 AP) of the target's maximum health"
+                {
+                  "values": "30 / 60 / 90"
+                },
+                {
+                  "values": "8",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "1",
+                  "unit": "% (+ 0.55% per 100 AP) of the target's maximum health"
+                }
               ]
             }
           ]
@@ -312,25 +385,49 @@ const champion: Champion = {
             {
               "attribute": "Second Cast Total Damage",
               "modifiers": [
-                "90 / 180 / 270",
-                "24% AP",
-                "3% (+ 1.65% per 100 AP) of the target's maximum health"
+                {
+                  "values": "90 / 180 / 270"
+                },
+                {
+                  "values": "24",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "3",
+                  "unit": "% (+ 1.65% per 100 AP) of the target's maximum health"
+                }
               ]
             },
             {
               "attribute": "Third Cast Total Damage",
               "modifiers": [
-                "150 / 300 / 450",
-                "40% AP",
-                "5% (+ 2.75% per 100 AP) of the target's maximum health"
+                {
+                  "values": "150 / 300 / 450"
+                },
+                {
+                  "values": "40",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "5",
+                  "unit": "% (+ 2.75% per 100 AP) of the target's maximum health"
+                }
               ]
             },
             {
               "attribute": "Maximum Total Damage",
               "modifiers": [
-                "270 / 540 / 810",
-                "72% AP",
-                "9% (+ 4.95% per 100 AP) of the target's maximum health"
+                {
+                  "values": "270 / 540 / 810"
+                },
+                {
+                  "values": "72",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "9",
+                  "unit": "% (+ 4.95% per 100 AP) of the target's maximum health"
+                }
               ]
             }
           ]

@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:55 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:11 PM CDT
 
 const champion: Champion = {
   "id": 523,
@@ -111,19 +111,26 @@ const champion: Champion = {
             {
               "attribute": "Bonus Attack Damage",
               "modifiers": [
-                "5 / 10 / 15 / 20 / 25 / 30"
+                {
+                  "values": "5 / 10 / 15 / 20 / 25 / 30"
+                }
               ]
             },
             {
               "attribute": "Bonus Attack Speed",
               "modifiers": [
-                "9 / 18 / 27 / 36 / 45 / 54%"
+                {
+                  "values": "9 / 18 / 27 / 36 / 45 / 54",
+                  "unit": "%"
+                }
               ]
             },
             {
               "attribute": "Lethality",
               "modifiers": [
-                "5.5 / 11 / 16.5 / 22 / 27.5 / 33"
+                {
+                  "values": "5.5 / 11 / 16.5 / 22 / 27.5 / 33"
+                }
               ]
             }
           ]

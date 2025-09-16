@@ -18,19 +18,20 @@ function toggleContinuous() {
 </script>
 
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 flex items-center justify-center p-8">
+  <div
+    class="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 flex items-center justify-center p-8">
     <div class="max-w-4xl mx-auto text-center space-y-8 mt-22">
       <!-- Main animated text -->
       <Motion
         :initial="{ opacity: 0, scale: 0.5, x: -100 }"
         :animate="{ opacity: 1, scale: 1, x: 0 }"
         :transition="{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }"
-        class="text-6xl font-bold  mb-8">
+        class="text-6xl font-bold mb-8">
         Welcome
       </Motion>
 
       <!-- Staggered word animation -->
-      <div class="flex flex-wrap justify-center gap-4 text-2xl text-gray-300">
+      <div class="flex flex-wrap justify-center gap-4 text-xsxl text-gray-300">
         <Motion
           v-for="(word, index) in words"
           :key="word"
@@ -60,7 +61,7 @@ function toggleContinuous() {
             stiffness: 200,
           }"
           class="inline-block">
-          {{ char === ' ' ? '\u00A0' : char }}
+          {{ char === " " ? "\u00A0" : char }}
         </Motion>
       </div>
 
@@ -88,7 +89,7 @@ function toggleContinuous() {
           <button
             class="px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-semibold transition-colors"
             @click="toggleContinuous">
-            {{ isContinuous ? 'Stop' : 'Continuous' }}
+            {{ isContinuous ? "Stop" : "Continuous" }}
           </button>
         </Motion>
       </div>

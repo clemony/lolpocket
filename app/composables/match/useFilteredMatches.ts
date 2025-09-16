@@ -4,9 +4,7 @@ export function useFilteredMatches(puuid: string, matches: MatchData[]) {
   console.log('puuid: ', puuid)
   console.log('matches: ', matches)
   const matchMap = computed(() => {
-    return new Map(
-      matches.map(match => [match.gameEndTimestamp, match]),
-    )
+    return new Map(matches.map(match => [match.gameEndTimestamp, match]))
   })
 
   console.log('matchMap: ', matchMap)
@@ -18,7 +16,7 @@ export function useFilteredMatches(puuid: string, matches: MatchData[]) {
         champion: ms().filter.champion ?? null,
         ally: ms().filter.ally ?? null,
         role: ms().filter.role ?? null,
-      }),
+      })
     )
   })
   const filteredNoRole = computed(() => {
@@ -29,15 +27,13 @@ export function useFilteredMatches(puuid: string, matches: MatchData[]) {
         champion: ms().filter.champion ?? null,
         ally: ms().filter.ally ?? null,
         ignoreRole: true,
-      }),
+      })
     )
   })
 
   // Check if matches are still loading
   const loading = computed(() => {
-    return (
-      matches.length === 0
-    )
+    return matches.length === 0
   })
 
   // Only compute filtered matches if data is available
@@ -53,7 +49,13 @@ export function useFilteredMatches(puuid: string, matches: MatchData[]) {
   })
   const championsPlayed = computed(() => {
     return Array.from(
-      new Set(matches.map(p => ix().champNameById(p.participants.find(p => p.puuid == puuid).championId))),
+      new Set(
+        matches.map(p =>
+          ix().champNameById(
+            p.participants.find(p => p.puuid == puuid).championId
+          )
+        )
+      )
     )
   })
 

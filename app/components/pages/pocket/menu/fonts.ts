@@ -28,7 +28,7 @@ export const fonts = [
   {
     display: 'La Belle Aurore',
     id: 'La Belle Aurore',
-    cardClass: 'text-13 mt-4',
+    cardClass: 'text-xxs3 mt-4',
   },
 
   {

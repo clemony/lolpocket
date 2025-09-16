@@ -33,9 +33,9 @@ export async function fetchInBatches(ids: string[]) {
           getMatchById(id).catch((error) => {
             console.error(`Error fetching match ${id}:`, error)
             return null
-          }),
-        ),
-      ).then(batch => results.push(...batch.filter(Boolean)))),
+          })
+        )
+      ).then(batch => results.push(...batch.filter(Boolean))))
   )
 
   return results

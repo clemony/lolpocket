@@ -6,350 +6,190 @@ export const itemsLite: ItemLite[] = [
     name: 'Boots',
     rank: 'Boots',
     stats: {
-      flatMovespeed: 25
+      flatMovespeed: 25,
     },
     cost: 300,
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    maps: [11, 12, 21, 35],
   },
   {
     id: 1004,
     name: 'Faerie Charm',
     rank: 'Basic',
     stats: {
-      manaRegen: 50
+      manaRegen: 50,
     },
     cost: 200,
-    tags: [
-      'Mage',
-      'Support'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage', 'Support'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 1006,
     name: 'Rejuvenation Bead',
     rank: 'Basic',
     stats: {
-      healthRegen: 100
+      healthRegen: 100,
     },
     cost: 300,
-    tags: [
-      'Tank'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Tank'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 1011,
     name: 'Giant\'s Belt',
     rank: 'Epic',
     stats: {
-      health: 350
+      health: 350,
     },
     cost: 900,
-    tags: [
-      'Fighter',
-      'Mage',
-      'Tank'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Mage', 'Tank'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 1018,
     name: 'Cloak of Agility',
     rank: 'Basic',
     stats: {
-      criticalStrikeChance: 15
+      criticalStrikeChance: 15,
     },
     cost: 600,
-    tags: [
-      'Marksman'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Marksman'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 1026,
     name: 'Blasting Wand',
     rank: 'Basic',
     stats: {
-      abilityPower: 45
+      abilityPower: 45,
     },
     cost: 850,
-    tags: [
-      'Mage',
-      'Support'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage', 'Support'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 1027,
     name: 'Sapphire Crystal',
-    aka: [
-      'blue'
-    ],
+    aka: ['blue'],
     rank: 'Basic',
     stats: {
-      mana: 300
+      mana: 300,
     },
     cost: 300,
-    tags: [
-      'Mage',
-      'Tank'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage', 'Tank'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 1028,
     name: 'Ruby Crystal',
-    aka: [
-      'red'
-    ],
+    aka: ['red'],
     rank: 'Basic',
     stats: {
-      health: 150
+      health: 150,
     },
     cost: 400,
-    tags: [
-      'Fighter',
-      'Marksman',
-      'Assassin',
-      'Mage',
-      'Tank',
-      'Support'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Marksman', 'Assassin', 'Mage', 'Tank', 'Support'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 1029,
     name: 'Cloth Armor',
     rank: 'Basic',
     stats: {
-      armor: 15
+      armor: 15,
     },
     cost: 300,
-    tags: [
-      'Fighter',
-      'Marksman',
-      'Assassin',
-      'Mage',
-      'Tank',
-      'Support'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Marksman', 'Assassin', 'Mage', 'Tank', 'Support'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 1031,
     name: 'Chain Vest',
     rank: 'Epic',
     stats: {
-      armor: 40
+      armor: 40,
     },
     cost: 800,
-    tags: [
-      'Fighter',
-      'Marksman',
-      'Assassin',
-      'Tank'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Marksman', 'Assassin', 'Tank'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 1033,
     name: 'Null-Magic Mantle',
     rank: 'Basic',
     stats: {
-      magicResistance: 20
+      magicResistance: 20,
     },
     cost: 400,
-    tags: [
-      'Fighter',
-      'Marksman',
-      'Assassin',
-      'Mage',
-      'Tank',
-      'Support'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Marksman', 'Assassin', 'Mage', 'Tank', 'Support'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 1036,
     name: 'Long Sword',
     rank: 'Basic',
     stats: {
-      attackDamage: 10
+      attackDamage: 10,
     },
     cost: 350,
-    tags: [
-      'Fighter',
-      'Marksman',
-      'Assassin'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Marksman', 'Assassin'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 1037,
     name: 'Pickaxe',
     rank: 'Basic',
     stats: {
-      attackDamage: 25
+      attackDamage: 25,
     },
     cost: 875,
-    tags: [
-      'Fighter',
-      'Marksman',
-      'Assassin'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Marksman', 'Assassin'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 1038,
     name: 'B. F. Sword',
-    aka: [
-      'bf'
-    ],
+    aka: ['bf'],
     rank: 'Basic',
     stats: {
-      attackDamage: 40
+      attackDamage: 40,
     },
     cost: 1300,
-    tags: [
-      'Fighter',
-      'Marksman',
-      'Assassin'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Marksman', 'Assassin'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 1042,
     name: 'Dagger',
     rank: 'Basic',
     stats: {
-      attackSpeed: 10
+      attackSpeed: 10,
     },
     cost: 250,
-    tags: [
-      'Fighter',
-      'Marksman',
-      'Assassin'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Marksman', 'Assassin'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 1043,
     name: 'Recurve Bow',
     rank: 'Epic',
     stats: {
-      attackSpeed: 15
+      attackSpeed: 15,
     },
     cost: 700,
-    tags: [
-      'Fighter',
-      'Marksman',
-      'Onhit effects'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Marksman', 'Onhit effects'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 1052,
     name: 'Amplifying Tome',
-    aka: [
-      'amptome',
-      'book'
-    ],
+    aka: ['amptome', 'book'],
     rank: 'Basic',
     stats: {
-      abilityPower: 20
+      abilityPower: 20,
     },
     cost: 400,
-    tags: [
-      'Mage',
-      'Support'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage', 'Support'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 1053,
@@ -357,164 +197,95 @@ export const itemsLite: ItemLite[] = [
     rank: 'Epic',
     stats: {
       attackDamage: 15,
-      lifesteal: 7
+      lifesteal: 7,
     },
     cost: 900,
-    tags: [
-      'Fighter',
-      'Marksman',
-      'Assassin'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Marksman', 'Assassin'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 1054,
     name: 'Doran\'s Shield',
-    aka: [
-      'dshield'
-    ],
+    aka: ['dshield'],
     rank: 'Starter',
     stats: {
       health: 110,
-      healthRegen: 4
+      healthRegen: 4,
     },
     cost: 450,
-    tags: [
-      'Fighter',
-      'Marksman',
-      'Assassin',
-      'Mage',
-      'Tank',
-      'Onhit effects'
-    ],
-    maps: [
-      11,
-      12,
-      21
-    ]
+    tags: ['Fighter', 'Marksman', 'Assassin', 'Mage', 'Tank', 'Onhit effects'],
+    maps: [11, 12, 21],
   },
   {
     id: 1055,
     name: 'Doran\'s Blade',
-    aka: [
-      'dblade'
-    ],
+    aka: ['dblade'],
     rank: 'Starter',
     stats: {
       attackDamage: 10,
       health: 80,
-      lifesteal: 3
+      lifesteal: 3,
     },
     cost: 450,
-    tags: [
-      'Fighter',
-      'Marksman',
-      'Assassin',
-      'Lifesteal vamp'
-    ],
-    maps: [
-      11,
-      12,
-      21
-    ]
+    tags: ['Fighter', 'Marksman', 'Assassin', 'Lifesteal vamp'],
+    maps: [11, 12, 21],
   },
   {
     id: 1056,
     name: 'Doran\'s Ring',
-    aka: [
-      'dring'
-    ],
+    aka: ['dring'],
     rank: 'Starter',
     stats: {
       abilityPower: 18,
-      health: 90
+      health: 90,
     },
     cost: 400,
-    tags: [
-      'Mage',
-      'Mana and reg',
-      'Onhit effects'
-    ],
-    maps: [
-      11,
-      12,
-      21
-    ]
+    tags: ['Mage', 'Mana and reg', 'Onhit effects'],
+    maps: [11, 12, 21],
   },
   {
     id: 1057,
     name: 'Negatron Cloak',
     rank: 'Epic',
     stats: {
-      magicResistance: 45
+      magicResistance: 45,
     },
     cost: 850,
-    tags: [
-      'Fighter',
-      'Tank',
-      'Support'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Tank', 'Support'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 1058,
     name: 'Needlessly Large Rod',
-    aka: [
-      'nlr'
-    ],
+    aka: ['nlr'],
     rank: 'Basic',
     stats: {
-      abilityPower: 65
+      abilityPower: 65,
     },
     cost: 1200,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 1082,
     name: 'Dark Seal',
-    aka: [
-      'Noxian'
-    ],
+    aka: ['Noxian'],
     rank: 'Starter',
     stats: {
       abilityPower: 15,
-      health: 50
+      health: 50,
     },
     cost: 350,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      11
-    ]
+    tags: ['Mage'],
+    maps: [11],
   },
   {
     id: 1083,
     name: 'Cull',
-    aka: [
-      'dblade'
-    ],
+    aka: ['dblade'],
     rank: 'Starter',
     stats: {
-      attackDamage: 7
+      attackDamage: 7,
     },
     cost: 450,
     tags: [
@@ -522,94 +293,50 @@ export const itemsLite: ItemLite[] = [
       'Marksman',
       'Assassin',
       'Lifesteal vamp',
-      'Onhit effects'
+      'Onhit effects',
     ],
-    maps: [
-      11
-    ]
+    maps: [11],
   },
   {
     id: 1101,
     name: 'Scorchclaw Pup',
-    aka: [
-      'jungle'
-    ],
+    aka: ['jungle'],
     rank: 'Starter',
     stats: {},
     cost: 450,
-    tags: [
-      'Fighter',
-      'Marksman',
-      'Assassin',
-      'Mage',
-      'Tank',
-      'Lifesteal vamp'
-    ],
-    maps: [
-      11,
-      21
-    ]
+    tags: ['Fighter', 'Marksman', 'Assassin', 'Mage', 'Tank', 'Lifesteal vamp'],
+    maps: [11, 21],
   },
   {
     id: 1102,
     name: 'Gustwalker Hatchling',
-    aka: [
-      'jungle'
-    ],
+    aka: ['jungle'],
     rank: 'Starter',
     stats: {},
     cost: 450,
-    tags: [
-      'Fighter',
-      'Marksman',
-      'Assassin',
-      'Mage',
-      'Tank',
-      'Lifesteal vamp'
-    ],
-    maps: [
-      11,
-      21
-    ]
+    tags: ['Fighter', 'Marksman', 'Assassin', 'Mage', 'Tank', 'Lifesteal vamp'],
+    maps: [11, 21],
   },
   {
     id: 1103,
     name: 'Mosstomper Seedling',
-    aka: [
-      'jungle'
-    ],
+    aka: ['jungle'],
     rank: 'Starter',
     stats: {},
     cost: 450,
-    tags: [
-      'Fighter',
-      'Marksman',
-      'Assassin',
-      'Mage',
-      'Tank',
-      'Lifesteal vamp'
-    ],
-    maps: [
-      11,
-      21
-    ]
+    tags: ['Fighter', 'Marksman', 'Assassin', 'Mage', 'Tank', 'Lifesteal vamp'],
+    maps: [11, 21],
   },
   {
     id: 1500,
     name: 'Ohmwrecker (Turret Item)',
     rank: 'Special',
     stats: {
-      armorPenetration: 30
+      armorPenetration: 30,
     },
     purchasable: false,
     cost: 0,
-    maps: [
-      11,
-      12,
-      21,
-      30,
-      35
-    ]
+    maps: [11, 12, 21, 30, 35],
   },
   {
     id: 1501,
@@ -618,13 +345,7 @@ export const itemsLite: ItemLite[] = [
     stats: {},
     purchasable: false,
     cost: 0,
-    maps: [
-      11,
-      12,
-      21,
-      30,
-      35
-    ]
+    maps: [11, 12, 21, 30, 35],
   },
   {
     id: 1502,
@@ -633,13 +354,7 @@ export const itemsLite: ItemLite[] = [
     stats: {},
     purchasable: false,
     cost: 0,
-    maps: [
-      11,
-      12,
-      21,
-      30,
-      35
-    ]
+    maps: [11, 12, 21, 30, 35],
   },
   {
     id: 1503,
@@ -648,13 +363,7 @@ export const itemsLite: ItemLite[] = [
     stats: {},
     purchasable: false,
     cost: 0,
-    maps: [
-      11,
-      12,
-      21,
-      30,
-      35
-    ]
+    maps: [11, 12, 21, 30, 35],
   },
   {
     id: 1506,
@@ -663,13 +372,7 @@ export const itemsLite: ItemLite[] = [
     stats: {},
     purchasable: false,
     cost: 0,
-    maps: [
-      11,
-      12,
-      21,
-      30,
-      35
-    ]
+    maps: [11, 12, 21, 30, 35],
   },
   {
     id: 1507,
@@ -678,13 +381,7 @@ export const itemsLite: ItemLite[] = [
     stats: {},
     purchasable: false,
     cost: 0,
-    maps: [
-      11,
-      12,
-      21,
-      30,
-      35
-    ]
+    maps: [11, 12, 21, 30, 35],
   },
   {
     id: 1508,
@@ -693,13 +390,7 @@ export const itemsLite: ItemLite[] = [
     stats: {},
     purchasable: false,
     cost: 0,
-    maps: [
-      11,
-      12,
-      21,
-      30,
-      35
-    ]
+    maps: [11, 12, 21, 30, 35],
   },
   {
     id: 1509,
@@ -708,13 +399,7 @@ export const itemsLite: ItemLite[] = [
     stats: {},
     purchasable: false,
     cost: 0,
-    maps: [
-      11,
-      12,
-      21,
-      30,
-      35
-    ]
+    maps: [11, 12, 21, 30, 35],
   },
   {
     id: 1510,
@@ -723,13 +408,7 @@ export const itemsLite: ItemLite[] = [
     stats: {},
     purchasable: false,
     cost: 0,
-    maps: [
-      11,
-      12,
-      21,
-      30,
-      35
-    ]
+    maps: [11, 12, 21, 30, 35],
   },
   {
     id: 1511,
@@ -738,13 +417,7 @@ export const itemsLite: ItemLite[] = [
     stats: {},
     purchasable: false,
     cost: 0,
-    maps: [
-      11,
-      12,
-      21,
-      30,
-      35
-    ]
+    maps: [11, 12, 21, 30, 35],
   },
   {
     id: 1512,
@@ -753,13 +426,7 @@ export const itemsLite: ItemLite[] = [
     stats: {},
     purchasable: false,
     cost: 0,
-    maps: [
-      11,
-      12,
-      21,
-      30,
-      35
-    ]
+    maps: [11, 12, 21, 30, 35],
   },
   {
     id: 1515,
@@ -768,49 +435,27 @@ export const itemsLite: ItemLite[] = [
     stats: {},
     purchasable: false,
     cost: 0,
-    maps: [
-      11,
-      12,
-      21,
-      30,
-      35
-    ]
+    maps: [11, 12, 21, 30, 35],
   },
   {
     id: 2003,
     name: 'Health Potion',
-    aka: [
-      'red'
-    ],
+    aka: ['red'],
     rank: 'Consumable',
     stats: {},
     cost: 50,
-    tags: [
-      'Health and reg'
-    ],
-    maps: [
-      11,
-      12,
-      21
-    ]
+    tags: ['Health and reg'],
+    maps: [11, 12, 21],
   },
   {
     id: 2010,
     name: 'Total Biscuit of Everlasting Will',
-    aka: [
-      'kleptomancy'
-    ],
+    aka: ['kleptomancy'],
     rank: 'Special',
     stats: {},
     purchasable: false,
     cost: 0,
-    maps: [
-      11,
-      12,
-      21,
-      30,
-      35
-    ]
+    maps: [11, 12, 21, 30, 35],
   },
   {
     id: 2019,
@@ -818,18 +463,11 @@ export const itemsLite: ItemLite[] = [
     rank: 'Epic',
     stats: {
       armor: 30,
-      attackDamage: 15
+      attackDamage: 15,
     },
     cost: 1100,
-    tags: [
-      'Fighter'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 2020,
@@ -838,18 +476,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       attackDamage: 25,
       lethality: 5,
-      abilityHaste: 10
+      abilityHaste: 10,
     },
     cost: 1337,
-    tags: [
-      'Assassin'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Assassin'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 2021,
@@ -857,59 +488,32 @@ export const itemsLite: ItemLite[] = [
     rank: 'Epic',
     stats: {
       attackDamage: 15,
-      health: 250
+      health: 250,
     },
     cost: 1150,
-    tags: [
-      'Fighter'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 2022,
     name: 'Glowing Mote',
     rank: 'Basic',
     stats: {
-      abilityHaste: 5
+      abilityHaste: 5,
     },
     cost: 250,
-    tags: [
-      'Fighter',
-      'Marksman',
-      'Assassin',
-      'Mage',
-      'Tank',
-      'Support'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Marksman', 'Assassin', 'Mage', 'Tank', 'Support'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 2031,
     name: 'Refillable Potion',
-    aka: [
-      'Green Potion'
-    ],
+    aka: ['Green Potion'],
     rank: 'Consumable',
     stats: {},
     cost: 150,
-    tags: [
-      'Health and reg'
-    ],
-    maps: [
-      11,
-      12,
-      21
-    ]
+    tags: ['Health and reg'],
+    maps: [11, 12, 21],
   },
   {
     id: 2049,
@@ -918,15 +522,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       abilityPower: 20,
       healAndShieldPower: 15,
-      abilityHaste: 20
+      abilityHaste: 20,
     },
     cost: 500,
-    tags: [
-      'Support'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Support'],
+    maps: [30],
   },
   {
     id: 2050,
@@ -935,16 +535,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       abilityPower: 35,
       health: 300,
-      abilityHaste: 15
+      abilityHaste: 15,
     },
     cost: 500,
-    tags: [
-      'Mage',
-      'Tank'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Mage', 'Tank'],
+    maps: [30],
   },
   {
     id: 2051,
@@ -954,23 +549,16 @@ export const itemsLite: ItemLite[] = [
       'Golden Bicep of Kobe',
       'Horn',
       'Horn of the ManWolf',
-      'ManWolf'
+      'ManWolf',
     ],
     rank: 'Starter',
     stats: {
       health: 150,
-      healthRegen: 20
+      healthRegen: 20,
     },
     cost: 950,
-    tags: [
-      'Fighter',
-      'Tank',
-      'Support'
-    ],
-    maps: [
-      12,
-      35
-    ]
+    tags: ['Fighter', 'Tank', 'Support'],
+    maps: [12, 35],
   },
   {
     id: 2052,
@@ -979,118 +567,61 @@ export const itemsLite: ItemLite[] = [
     stats: {},
     purchasable: false,
     cost: 0,
-    maps: [
-      11,
-      12,
-      21,
-      30,
-      35
-    ]
+    maps: [11, 12, 21, 30, 35],
   },
   {
     id: 2055,
     name: 'Control Ward',
-    aka: [
-      'kleptomancy',
-      'orange',
-      'red',
-      'pink'
-    ],
+    aka: ['kleptomancy', 'orange', 'red', 'pink'],
     rank: 'Consumable',
     stats: {},
     cost: 75,
-    maps: [
-      11
-    ]
+    maps: [11],
   },
   {
     id: 2065,
     name: 'Shurelya\'s Battlesong',
-    aka: [
-      'shurelya',
-      'reverie'
-    ],
+    aka: ['shurelya', 'reverie'],
     rank: 'Legendary',
     stats: {
       abilityPower: 50,
       manaRegen: 125,
       percentMovespeed: 4,
-      abilityHaste: 15
+      abilityHaste: 15,
     },
     cost: 2200,
-    tags: [
-      'Support',
-      'Movement'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Support', 'Movement'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 2138,
     name: 'Elixir of Iron',
-    aka: [
-      'orange',
-      'white'
-    ],
+    aka: ['orange', 'white'],
     rank: 'Consumable',
     stats: {},
     cost: 500,
-    tags: [
-      'Health and reg',
-      'Movement'
-    ],
-    maps: [
-      11,
-      12,
-      21
-    ]
+    tags: ['Health and reg', 'Movement'],
+    maps: [11, 12, 21],
   },
   {
     id: 2139,
     name: 'Elixir of Sorcery',
-    aka: [
-      'blue',
-      'brilliance',
-      'illumination'
-    ],
+    aka: ['blue', 'brilliance', 'illumination'],
     rank: 'Consumable',
     stats: {},
     cost: 500,
-    tags: [
-      'Ability power',
-      'Mana and reg',
-      'Onhit effects'
-    ],
-    maps: [
-      11,
-      12,
-      21
-    ]
+    tags: ['Ability power', 'Mana and reg', 'Onhit effects'],
+    maps: [11, 12, 21],
   },
   {
     id: 2140,
     name: 'Elixir of Wrath',
-    aka: [
-      'red potion',
-      'fortitude',
-      'rage'
-    ],
+    aka: ['red potion', 'fortitude', 'rage'],
     rank: 'Consumable',
     stats: {},
     cost: 500,
-    tags: [
-      'Attack damage',
-      'Lifesteal vamp'
-    ],
-    maps: [
-      11,
-      12,
-      21
-    ]
+    tags: ['Attack damage', 'Lifesteal vamp'],
+    maps: [11, 12, 21],
   },
   {
     id: 2141,
@@ -1098,10 +629,7 @@ export const itemsLite: ItemLite[] = [
     rank: 'Consumable',
     stats: {},
     cost: 300,
-    maps: [
-      11,
-      12
-    ]
+    maps: [11, 12],
   },
   {
     id: 2142,
@@ -1109,13 +637,8 @@ export const itemsLite: ItemLite[] = [
     rank: 'Consumable',
     stats: {},
     cost: 500,
-    tags: [
-      'Attack damage',
-      'Ability power'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Attack damage', 'Ability power'],
+    maps: [30],
   },
   {
     id: 2143,
@@ -1123,12 +646,8 @@ export const itemsLite: ItemLite[] = [
     rank: 'Consumable',
     stats: {},
     cost: 500,
-    tags: [
-      'Health and reg'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Health and reg'],
+    maps: [30],
   },
   {
     id: 2144,
@@ -1136,9 +655,7 @@ export const itemsLite: ItemLite[] = [
     rank: 'Consumable',
     stats: {},
     cost: 500,
-    maps: [
-      30
-    ]
+    maps: [30],
   },
   {
     id: 2145,
@@ -1147,9 +664,7 @@ export const itemsLite: ItemLite[] = [
     stats: {},
     purchasable: false,
     cost: 0,
-    maps: [
-      30
-    ]
+    maps: [30],
   },
   {
     id: 2150,
@@ -1158,12 +673,7 @@ export const itemsLite: ItemLite[] = [
     stats: {},
     purchasable: false,
     cost: 0,
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    maps: [11, 12, 21, 35],
   },
   {
     id: 2151,
@@ -1172,12 +682,7 @@ export const itemsLite: ItemLite[] = [
     stats: {},
     purchasable: false,
     cost: 0,
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    maps: [11, 12, 21, 35],
   },
   {
     id: 2152,
@@ -1186,36 +691,20 @@ export const itemsLite: ItemLite[] = [
     stats: {},
     purchasable: false,
     cost: 0,
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    maps: [11, 12, 21, 35],
   },
   {
     id: 2420,
     name: 'Seeker\'s Armguard',
-    aka: [
-      'zhg',
-      'zonyas',
-      'zhonyas'
-    ],
+    aka: ['zhg', 'zonyas', 'zhonyas'],
     rank: 'Epic',
     stats: {
       abilityPower: 40,
-      armor: 25
+      armor: 25,
     },
     cost: 1600,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 2421,
@@ -1223,31 +712,21 @@ export const itemsLite: ItemLite[] = [
     rank: 'Epic',
     stats: {
       abilityPower: 40,
-      armor: 25
+      armor: 25,
     },
     cost: 1600,
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    maps: [11, 12, 21, 35],
   },
   {
     id: 2422,
     name: 'Slightly Magical Boots',
     rank: 'Special',
     stats: {
-      flatMovespeed: 25
+      flatMovespeed: 25,
     },
     purchasable: false,
     cost: 0,
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    maps: [11, 12, 21, 35],
   },
   {
     id: 2501,
@@ -1255,19 +734,11 @@ export const itemsLite: ItemLite[] = [
     rank: 'Legendary',
     stats: {
       attackDamage: 30,
-      health: 550
+      health: 550,
     },
     cost: 3300,
-    tags: [
-      'Fighter',
-      'Tank'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Tank'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 2502,
@@ -1277,41 +748,25 @@ export const itemsLite: ItemLite[] = [
       armor: 25,
       health: 400,
       magicResistance: 25,
-      abilityHaste: 10
+      abilityHaste: 10,
     },
     cost: 2800,
-    tags: [
-      'Tank'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Tank'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 2503,
     name: 'Blackfire Torch',
-    aka: [
-      'bft'
-    ],
+    aka: ['bft'],
     rank: 'Legendary',
     stats: {
       abilityPower: 80,
       mana: 600,
-      abilityHaste: 20
+      abilityHaste: 20,
     },
     cost: 2800,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 2504,
@@ -1320,36 +775,22 @@ export const itemsLite: ItemLite[] = [
     stats: {
       health: 400,
       healthRegen: 100,
-      magicResistance: 80
+      magicResistance: 80,
     },
     cost: 2900,
-    tags: [
-      'Tank'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Tank'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 2508,
     name: 'Fated Ashes',
     rank: 'Epic',
     stats: {
-      abilityPower: 30
+      abilityPower: 30,
     },
     cost: 900,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3002,
@@ -1358,42 +799,25 @@ export const itemsLite: ItemLite[] = [
     stats: {
       armor: 40,
       health: 250,
-      percentMovespeed: 4
+      percentMovespeed: 4,
     },
     cost: 2400,
-    tags: [
-      'Support',
-      'Tank'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Support', 'Tank'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3003,
     name: 'Archangel\'s Staff',
-    aka: [
-      'aa'
-    ],
+    aka: ['aa'],
     rank: 'Legendary',
     stats: {
       abilityPower: 70,
       mana: 600,
-      abilityHaste: 25
+      abilityHaste: 25,
     },
     cost: 2900,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3004,
@@ -1402,112 +826,69 @@ export const itemsLite: ItemLite[] = [
     stats: {
       attackDamage: 35,
       mana: 500,
-      abilityHaste: 15
+      abilityHaste: 15,
     },
     cost: 2900,
-    tags: [
-      'Fighter',
-      'Marksman',
-      'Assassin',
-      'Onhit effects'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Marksman', 'Assassin', 'Onhit effects'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3006,
     name: 'Berserker\'s Greaves',
-    aka: [
-      'boots',
-      'zerker'
-    ],
+    aka: ['boots', 'zerker'],
     rank: 'Boots',
     stats: {
       attackSpeed: 25,
-      flatMovespeed: 45
+      flatMovespeed: 45,
     },
     cost: 1100,
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3009,
     name: 'Boots of Swiftness',
-    aka: [
-      'swifties'
-    ],
+    aka: ['swifties'],
     rank: 'Boots',
     stats: {
-      flatMovespeed: 55
+      flatMovespeed: 55,
     },
     cost: 1000,
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3010,
     name: 'Symbiotic Soles',
-    aka: [
-      'boots'
-    ],
+    aka: ['boots'],
     rank: 'Boots',
     stats: {
-      flatMovespeed: 40
+      flatMovespeed: 40,
     },
     cost: 900,
-    maps: [
-      11,
-      21
-    ]
+    maps: [11, 21],
   },
   {
     id: 3013,
     name: 'Synchronized Souls',
-    aka: [
-      'boots'
-    ],
+    aka: ['boots'],
     rank: 'Boots',
     stats: {
-      flatMovespeed: 45
+      flatMovespeed: 45,
     },
     purchasable: false,
     cost: 900,
-    maps: [
-      11,
-      21
-    ]
+    maps: [11, 21],
   },
   {
     id: 3020,
     name: 'Sorcerer\'s Shoes',
-    aka: [
-      'boots',
-      'sorcs'
-    ],
+    aka: ['boots', 'sorcs'],
     rank: 'Boots',
     stats: {
       flatMagicPenetration: 12,
-      flatMovespeed: 45
+      flatMovespeed: 45,
     },
     cost: 1100,
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3024,
@@ -1516,159 +897,92 @@ export const itemsLite: ItemLite[] = [
     stats: {
       armor: 25,
       mana: 300,
-      abilityHaste: 10
+      abilityHaste: 10,
     },
     cost: 900,
-    tags: [
-      'Tank',
-      'Support'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Tank', 'Support'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3026,
     name: 'Guardian Angel',
-    aka: [
-      'ga'
-    ],
+    aka: ['ga'],
     rank: 'Legendary',
     stats: {
       armor: 45,
-      attackDamage: 55
+      attackDamage: 55,
     },
     cost: 3200,
-    tags: [
-      'Fighter',
-      'Marksman',
-      'Assassin'
-    ],
-    maps: [
-      11
-    ]
+    tags: ['Fighter', 'Marksman', 'Assassin'],
+    maps: [11],
   },
   {
     id: 3031,
     name: 'Infinity Edge',
-    aka: [
-      'ie'
-    ],
+    aka: ['ie'],
     rank: 'Legendary',
     stats: {
       attackDamage: 65,
       criticalStrikeChance: 25,
-      criticalStrikeDamage: 40
+      criticalStrikeDamage: 40,
     },
     cost: 3450,
-    tags: [
-      'Marksman'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Marksman'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3032,
     name: 'Yun Tal Wildarrows',
-    aka: [
-      'arrow',
-      'yuntal'
-    ],
+    aka: ['arrow', 'yuntal'],
     rank: 'Legendary',
     stats: {
       attackDamage: 55,
-      attackSpeed: 35
+      attackSpeed: 35,
     },
     cost: 3000,
-    tags: [
-      'Marksman'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Marksman'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3033,
     name: 'Mortal Reminder',
-    aka: [
-      'lw',
-      'grievous'
-    ],
+    aka: ['lw', 'grievous'],
     rank: 'Legendary',
     stats: {
       armorPenetration: 35,
       attackDamage: 35,
-      criticalStrikeChance: 25
+      criticalStrikeChance: 25,
     },
     cost: 3300,
-    tags: [
-      'Marksman'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Marksman'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3035,
     name: 'Last Whisper',
-    aka: [
-      'lw'
-    ],
+    aka: ['lw'],
     rank: 'Epic',
     stats: {
       armorPenetration: 18,
-      attackDamage: 20
+      attackDamage: 20,
     },
     cost: 1450,
-    tags: [
-      'Fighter',
-      'Marksman',
-      'Assassin'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Marksman', 'Assassin'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3036,
     name: 'Lord Dominik\'s Regards',
-    aka: [
-      'lw',
-      'ldr',
-      'doms'
-    ],
+    aka: ['lw', 'ldr', 'doms'],
     rank: 'Legendary',
     stats: {
       armorPenetration: 40,
       attackDamage: 35,
-      criticalStrikeChance: 25
+      criticalStrikeChance: 25,
     },
     cost: 3100,
-    tags: [
-      'Marksman'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Marksman'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3040,
@@ -1677,36 +991,24 @@ export const itemsLite: ItemLite[] = [
     stats: {
       abilityPower: 70,
       mana: 1000,
-      abilityHaste: 25
+      abilityHaste: 25,
     },
     purchasable: false,
     cost: 2900,
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3041,
     name: 'Mejai\'s Soulstealer',
-    aka: [
-      'book'
-    ],
+    aka: ['book'],
     rank: 'Legendary',
     stats: {
       abilityPower: 20,
-      health: 100
+      health: 100,
     },
     cost: 1500,
-    tags: [
-      'Mage',
-      'Movement'
-    ],
-    maps: [
-      11
-    ]
+    tags: ['Mage', 'Movement'],
+    maps: [11],
   },
   {
     id: 3042,
@@ -1715,238 +1017,132 @@ export const itemsLite: ItemLite[] = [
     stats: {
       attackDamage: 35,
       mana: 860,
-      abilityHaste: 15
+      abilityHaste: 15,
     },
     purchasable: false,
     cost: 2900,
-    tags: [
-      'Fighter',
-      'Marksman',
-      'Assassin',
-      'Onhit effects'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Marksman', 'Assassin', 'Onhit effects'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3044,
     name: 'Phage',
-    aka: [
-      'mallet'
-    ],
+    aka: ['mallet'],
     rank: 'Epic',
     stats: {
       attackDamage: 15,
-      health: 200
+      health: 200,
     },
     cost: 1100,
-    tags: [
-      'Fighter',
-      'Tank'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Tank'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3046,
     name: 'Phantom Dancer',
-    aka: [
-      'pd'
-    ],
+    aka: ['pd'],
     rank: 'Legendary',
     stats: {
       attackSpeed: 65,
       criticalStrikeChance: 25,
-      percentMovespeed: 10
+      percentMovespeed: 10,
     },
     cost: 2650,
-    tags: [
-      'Marksman',
-      'Movement'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Marksman', 'Movement'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3047,
     name: 'Plated Steelcaps',
-    aka: [
-      'boots',
-      'ninja tabi'
-    ],
+    aka: ['boots', 'ninja tabi'],
     rank: 'Boots',
     stats: {
       armor: 25,
-      flatMovespeed: 45
+      flatMovespeed: 45,
     },
     cost: 1200,
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3050,
     name: 'Zeke\'s Convergence',
-    aka: [
-      'haroldandkumar'
-    ],
+    aka: ['haroldandkumar'],
     rank: 'Legendary',
     stats: {
       armor: 25,
       health: 300,
       magicResistance: 25,
-      abilityHaste: 10
+      abilityHaste: 10,
     },
     cost: 2200,
-    tags: [
-      'Tank',
-      'Support'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Tank', 'Support'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3051,
     name: 'Hearthbound Axe',
-    aka: [
-      'blue arrow'
-    ],
+    aka: ['blue arrow'],
     rank: 'Epic',
     stats: {
       attackDamage: 20,
-      attackSpeed: 20
+      attackSpeed: 20,
     },
     cost: 1200,
-    tags: [
-      'Fighter',
-      'Movement',
-      'Onhit effects'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Movement', 'Onhit effects'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3053,
     name: 'Sterak\'s Gage',
-    aka: [
-      'juggernaut',
-      'primal',
-      'shield',
-      'sterak\'s cage'
-    ],
+    aka: ['juggernaut', 'primal', 'shield', 'sterak\'s cage'],
     rank: 'Legendary',
     stats: {
       health: 400,
-      tenacity: 20
+      tenacity: 20,
     },
     cost: 3200,
-    tags: [
-      'Fighter',
-      'Attack damage'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Attack damage'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3057,
     name: 'Sheen',
-    aka: [
-      'jimmy neutron'
-    ],
+    aka: ['jimmy neutron'],
     rank: 'Epic',
     stats: {
-      abilityHaste: 10
+      abilityHaste: 10,
     },
     cost: 900,
-    tags: [
-      'Fighter',
-      'Marksman',
-      'Mage',
-      'Onhit effects'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Marksman', 'Mage', 'Onhit effects'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3065,
     name: 'Spirit Visage',
-    aka: [
-      'sv'
-    ],
+    aka: ['sv'],
     rank: 'Legendary',
     stats: {
       health: 400,
       healthRegen: 100,
       magicResistance: 50,
-      abilityHaste: 10
+      abilityHaste: 10,
     },
     cost: 2700,
-    tags: [
-      'Tank'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Tank'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3066,
     name: 'Winged Moonplate',
-    aka: [
-      'chaps',
-      'pants',
-      'leggings',
-      'zoomin'
-    ],
+    aka: ['chaps', 'pants', 'leggings', 'zoomin'],
     rank: 'Epic',
     stats: {
       health: 200,
-      percentMovespeed: 4
+      percentMovespeed: 4,
     },
     cost: 800,
-    tags: [
-      'Tank',
-      'Movement'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Tank', 'Movement'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3067,
@@ -1954,115 +1150,63 @@ export const itemsLite: ItemLite[] = [
     rank: 'Epic',
     stats: {
       health: 200,
-      abilityHaste: 10
+      abilityHaste: 10,
     },
     cost: 800,
-    tags: [
-      'Fighter',
-      'Marksman',
-      'Assassin',
-      'Mage',
-      'Tank',
-      'Support'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Marksman', 'Assassin', 'Mage', 'Tank', 'Support'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3068,
     name: 'Sunfire Aegis',
-    aka: [
-      'funfire',
-      'sunborn'
-    ],
+    aka: ['funfire', 'sunborn'],
     rank: 'Legendary',
     stats: {
       armor: 50,
       health: 350,
-      abilityHaste: 10
+      abilityHaste: 10,
     },
     cost: 2700,
-    tags: [
-      'Tank'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Tank'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3070,
     name: 'Tear of the Goddess',
     rank: 'Starter',
     stats: {
-      mana: 240
+      mana: 240,
     },
     cost: 400,
-    tags: [
-      'Marksman',
-      'Mage'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Marksman', 'Mage'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3071,
     name: 'Black Cleaver',
-    aka: [
-      'bc'
-    ],
+    aka: ['bc'],
     rank: 'Legendary',
     stats: {
       attackDamage: 40,
       health: 400,
-      abilityHaste: 20
+      abilityHaste: 20,
     },
     cost: 3000,
-    tags: [
-      'Fighter',
-      'Onhit effects',
-      'Armor pen',
-      'Movement'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Onhit effects', 'Armor pen', 'Movement'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3072,
     name: 'Bloodthirster',
-    aka: [
-      'bt',
-      'healsword'
-    ],
+    aka: ['bt', 'healsword'],
     rank: 'Legendary',
     stats: {
       attackDamage: 80,
-      lifesteal: 15
+      lifesteal: 15,
     },
     cost: 3400,
-    tags: [
-      'Marksman'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Marksman'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3073,
@@ -2071,152 +1215,87 @@ export const itemsLite: ItemLite[] = [
     stats: {
       attackDamage: 40,
       attackSpeed: 20,
-      health: 450
+      health: 450,
     },
     cost: 3000,
-    tags: [
-      'Fighter',
-      'Ability haste',
-      'Movement'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Ability haste', 'Movement'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3074,
     name: 'Ravenous Hydra',
-    aka: [
-      'rav hydra'
-    ],
+    aka: ['rav hydra'],
     rank: 'Legendary',
     stats: {
       attackDamage: 65,
       lifesteal: 12,
-      abilityHaste: 15
+      abilityHaste: 15,
     },
     cost: 3300,
-    tags: [
-      'Fighter'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3075,
     name: 'Thornmail',
-    aka: [
-      'grievous wounds'
-    ],
+    aka: ['grievous wounds'],
     rank: 'Legendary',
     stats: {
       armor: 75,
-      health: 150
+      health: 150,
     },
     cost: 2450,
-    tags: [
-      'Tank'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Tank'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3076,
     name: 'Bramble Vest',
-    aka: [
-      'grievous wounds'
-    ],
+    aka: ['grievous wounds'],
     rank: 'Epic',
     stats: {
-      armor: 30
+      armor: 30,
     },
     cost: 800,
-    tags: [
-      'Tank'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Tank'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3077,
     name: 'Tiamat',
     rank: 'Epic',
     stats: {
-      attackDamage: 20
+      attackDamage: 20,
     },
     cost: 1200,
-    tags: [
-      'Fighter',
-      'Tank',
-      'Onhit effects'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Tank', 'Onhit effects'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3078,
     name: 'Trinity Force',
-    aka: [
-      'triforce',
-      'tons of damage',
-      '3333'
-    ],
+    aka: ['triforce', 'tons of damage', '3333'],
     rank: 'Legendary',
     stats: {
       attackDamage: 36,
       attackSpeed: 30,
       health: 333,
-      abilityHaste: 15
+      abilityHaste: 15,
     },
     cost: 3333,
-    tags: [
-      'Fighter',
-      'Marksman',
-      'Movement'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Marksman', 'Movement'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3082,
     name: 'Warden\'s Mail',
     rank: 'Epic',
     stats: {
-      armor: 40
+      armor: 40,
     },
     cost: 1000,
-    tags: [
-      'Tank'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Tank'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3083,
@@ -2224,18 +1303,11 @@ export const itemsLite: ItemLite[] = [
     rank: 'Legendary',
     stats: {
       health: 1000,
-      healthRegen: 100
+      healthRegen: 100,
     },
     cost: 3100,
-    tags: [
-      'Tank'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Tank'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3084,
@@ -2243,18 +1315,11 @@ export const itemsLite: ItemLite[] = [
     rank: 'Legendary',
     stats: {
       health: 900,
-      healthRegen: 100
+      healthRegen: 100,
     },
     cost: 3000,
-    tags: [
-      'Tank'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Tank'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3085,
@@ -2263,20 +1328,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       attackSpeed: 40,
       criticalStrikeChance: 25,
-      percentMovespeed: 4
+      percentMovespeed: 4,
     },
     cost: 2650,
-    tags: [
-      'Marksman',
-      'Onhit effects',
-      'Movement'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Marksman', 'Onhit effects', 'Movement'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3086,
@@ -2285,19 +1341,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       attackSpeed: 15,
       criticalStrikeChance: 15,
-      percentMovespeed: 4
+      percentMovespeed: 4,
     },
     cost: 1200,
-    tags: [
-      'Marksman',
-      'Movement'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Marksman', 'Movement'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3087,
@@ -2306,43 +1354,23 @@ export const itemsLite: ItemLite[] = [
     stats: {
       attackDamage: 45,
       attackSpeed: 30,
-      percentMovespeed: 4
+      percentMovespeed: 4,
     },
     cost: 2700,
-    tags: [
-      'Marksman',
-      'Onhit effects'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Marksman', 'Onhit effects'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3089,
     name: 'Rabadon\'s Deathcap',
-    aka: [
-      'banksys',
-      'dc',
-      'dcap',
-      'hat'
-    ],
+    aka: ['banksys', 'dc', 'dcap', 'hat'],
     rank: 'Legendary',
     stats: {
-      abilityPower: 130
+      abilityPower: 130,
     },
     cost: 3500,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3091,
@@ -2351,47 +1379,25 @@ export const itemsLite: ItemLite[] = [
     stats: {
       attackSpeed: 50,
       magicResistance: 45,
-      tenacity: 20
+      tenacity: 20,
     },
     cost: 2800,
-    tags: [
-      'Fighter',
-      'Marksman',
-      'Onhit effects'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Marksman', 'Onhit effects'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3094,
     name: 'Rapid Firecannon',
-    aka: [
-      'canon',
-      'gun',
-      'rapidfire',
-      'rfc'
-    ],
+    aka: ['canon', 'gun', 'rapidfire', 'rfc'],
     rank: 'Legendary',
     stats: {
       attackSpeed: 35,
       criticalStrikeChance: 25,
-      percentMovespeed: 4
+      percentMovespeed: 4,
     },
     cost: 2650,
-    tags: [
-      'Marksman',
-      'Movement'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Marksman', 'Movement'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3100,
@@ -2400,42 +1406,24 @@ export const itemsLite: ItemLite[] = [
     stats: {
       abilityPower: 100,
       percentMovespeed: 4,
-      abilityHaste: 10
+      abilityHaste: 10,
     },
     cost: 2900,
-    tags: [
-      'Mage',
-      'Onhit effects'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage', 'Onhit effects'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3102,
     name: 'Banshee\'s Veil',
-    aka: [
-      'bv',
-      'spellshield'
-    ],
+    aka: ['bv', 'spellshield'],
     rank: 'Legendary',
     stats: {
       abilityPower: 105,
-      magicResistance: 40
+      magicResistance: 40,
     },
     cost: 3000,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3105,
@@ -2444,19 +1432,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       armor: 25,
       magicResistance: 25,
-      abilityHaste: 10
+      abilityHaste: 10,
     },
     cost: 1100,
-    tags: [
-      'Tank',
-      'Support'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Tank', 'Support'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3107,
@@ -2466,110 +1446,66 @@ export const itemsLite: ItemLite[] = [
       healAndShieldPower: 10,
       health: 200,
       manaRegen: 100,
-      abilityHaste: 15
+      abilityHaste: 15,
     },
     cost: 2300,
-    tags: [
-      'Support'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Support'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3108,
     name: 'Fiendish Codex',
-    aka: [
-      'book'
-    ],
+    aka: ['book'],
     rank: 'Epic',
     stats: {
       abilityPower: 25,
-      abilityHaste: 10
+      abilityHaste: 10,
     },
     cost: 850,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3109,
     name: 'Knight\'s Vow',
-    aka: [
-      'kv'
-    ],
+    aka: ['kv'],
     rank: 'Legendary',
     stats: {
       armor: 40,
       health: 200,
       healthRegen: 100,
-      abilityHaste: 10
+      abilityHaste: 10,
     },
     cost: 2300,
-    tags: [
-      'Tank',
-      'Support'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Tank', 'Support'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3110,
     name: 'Frozen Heart',
-    aka: [
-      'fh'
-    ],
+    aka: ['fh'],
     rank: 'Legendary',
     stats: {
       armor: 75,
       mana: 400,
-      abilityHaste: 20
+      abilityHaste: 20,
     },
     cost: 2500,
-    tags: [
-      'Tank',
-      'Support'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Tank', 'Support'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3111,
     name: 'Mercury\'s Treads',
-    aka: [
-      'boots',
-      'mercs'
-    ],
+    aka: ['boots', 'mercs'],
     rank: 'Boots',
     stats: {
       magicResistance: 20,
       flatMovespeed: 45,
-      tenacity: 30
+      tenacity: 30,
     },
     cost: 1250,
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3112,
@@ -2577,42 +1513,24 @@ export const itemsLite: ItemLite[] = [
     rank: 'Starter',
     stats: {
       abilityPower: 50,
-      health: 150
+      health: 150,
     },
     cost: 950,
-    tags: [
-      'Mage',
-      'Tank',
-      'Support',
-      'Mana and reg'
-    ],
-    maps: [
-      12,
-      35
-    ]
+    tags: ['Mage', 'Tank', 'Support', 'Mana and reg'],
+    maps: [12, 35],
   },
   {
     id: 3113,
     name: 'Aether Wisp',
-    aka: [
-      'spooky ghost'
-    ],
+    aka: ['spooky ghost'],
     rank: 'Epic',
     stats: {
       abilityPower: 30,
-      percentMovespeed: 4
+      percentMovespeed: 4,
     },
     cost: 900,
-    tags: [
-      'Mage',
-      'Movement'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage', 'Movement'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3114,
@@ -2620,65 +1538,38 @@ export const itemsLite: ItemLite[] = [
     rank: 'Epic',
     stats: {
       healAndShieldPower: 8,
-      manaRegen: 50
+      manaRegen: 50,
     },
     cost: 600,
-    tags: [
-      'Support'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Support'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3115,
     name: 'Nashor\'s Tooth',
-    aka: [
-      'nashors'
-    ],
+    aka: ['nashors'],
     rank: 'Legendary',
     stats: {
       abilityPower: 80,
       attackSpeed: 50,
-      abilityHaste: 15
+      abilityHaste: 15,
     },
     cost: 2900,
-    tags: [
-      'Marksman',
-      'Mage',
-      'Onhit effects'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Marksman', 'Mage', 'Onhit effects'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3116,
     name: 'Rylai\'s Crystal Scepter',
-    aka: [
-      'rylais'
-    ],
+    aka: ['rylais'],
     rank: 'Legendary',
     stats: {
       abilityPower: 65,
-      health: 400
+      health: 400,
     },
     cost: 2600,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3118,
@@ -2687,19 +1578,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       abilityPower: 90,
       mana: 600,
-      abilityHaste: 15
+      abilityHaste: 15,
     },
     cost: 2700,
-    tags: [
-      'Mage',
-      'Ability haste'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage', 'Ability haste'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3119,
@@ -2708,18 +1591,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       health: 550,
       mana: 500,
-      abilityHaste: 15
+      abilityHaste: 15,
     },
     cost: 2400,
-    tags: [
-      'Tank'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Tank'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3121,
@@ -2728,42 +1604,24 @@ export const itemsLite: ItemLite[] = [
     stats: {
       health: 550,
       mana: 860,
-      abilityHaste: 15
+      abilityHaste: 15,
     },
     purchasable: false,
     cost: 2400,
-    tags: [
-      'Tank'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Tank'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3123,
     name: 'Executioner\'s Calling',
-    aka: [
-      'grievous'
-    ],
+    aka: ['grievous'],
     rank: 'Epic',
     stats: {
-      attackDamage: 15
+      attackDamage: 15,
     },
     cost: 800,
-    tags: [
-      'Fighter',
-      'Marksman',
-      'Assassin'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Marksman', 'Assassin'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3124,
@@ -2772,20 +1630,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       abilityPower: 30,
       attackDamage: 30,
-      attackSpeed: 25
+      attackSpeed: 25,
     },
     cost: 3000,
-    tags: [
-      'Fighter',
-      'Marksman',
-      'Onhit effects'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Marksman', 'Onhit effects'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3133,
@@ -2793,20 +1642,11 @@ export const itemsLite: ItemLite[] = [
     rank: 'Epic',
     stats: {
       attackDamage: 20,
-      abilityHaste: 10
+      abilityHaste: 10,
     },
     cost: 1050,
-    tags: [
-      'Fighter',
-      'Marksman',
-      'Assassin'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Marksman', 'Assassin'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3134,
@@ -2814,19 +1654,11 @@ export const itemsLite: ItemLite[] = [
     rank: 'Epic',
     stats: {
       attackDamage: 20,
-      lethality: 10
+      lethality: 10,
     },
     cost: 1000,
-    tags: [
-      'Assassin',
-      'Armor pen'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Assassin', 'Armor pen'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3135,
@@ -2834,18 +1666,11 @@ export const itemsLite: ItemLite[] = [
     rank: 'Legendary',
     stats: {
       abilityPower: 95,
-      percentMagicPenetration: 40
+      percentMagicPenetration: 40,
     },
     cost: 3000,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3137,
@@ -2854,66 +1679,37 @@ export const itemsLite: ItemLite[] = [
     stats: {
       abilityPower: 75,
       percentMagicPenetration: 30,
-      abilityHaste: 20
+      abilityHaste: 20,
     },
     cost: 3000,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3139,
     name: 'Mercurial Scimitar',
-    aka: [
-      'merc scim'
-    ],
+    aka: ['merc scim'],
     rank: 'Legendary',
     stats: {
       attackDamage: 40,
       lifesteal: 10,
-      magicResistance: 40
+      magicResistance: 40,
     },
     cost: 3200,
-    tags: [
-      'Fighter',
-      'Marksman',
-      'Movement'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Marksman', 'Movement'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3140,
     name: 'Quicksilver Sash',
-    aka: [
-      'qss'
-    ],
+    aka: ['qss'],
     rank: 'Epic',
     stats: {
-      magicResistance: 30
+      magicResistance: 30,
     },
     cost: 1300,
-    tags: [
-      'Fighter',
-      'Marksman',
-      'Assassin'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Marksman', 'Assassin'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3142,
@@ -2922,19 +1718,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       attackDamage: 55,
       lethality: 18,
-      percentMovespeed: 4
+      percentMovespeed: 4,
     },
     cost: 2800,
-    tags: [
-      'Assassin',
-      'Movement'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Assassin', 'Movement'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3143,
@@ -2942,134 +1730,75 @@ export const itemsLite: ItemLite[] = [
     rank: 'Legendary',
     stats: {
       armor: 75,
-      health: 350
+      health: 350,
     },
     cost: 2700,
-    tags: [
-      'Tank'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Tank'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3144,
     name: 'Scout\'s Slingshot',
     rank: 'Epic',
     stats: {
-      attackSpeed: 20
+      attackSpeed: 20,
     },
     cost: 600,
-    tags: [
-      'Marksman',
-      'Onhit effects'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Marksman', 'Onhit effects'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3145,
     name: 'Hextech Alternator',
-    aka: [
-      'revolver',
-      'pewpew'
-    ],
+    aka: ['revolver', 'pewpew'],
     rank: 'Epic',
     stats: {
-      abilityPower: 45
+      abilityPower: 45,
     },
     cost: 1100,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3147,
     name: 'Haunting Guise',
-    aka: [
-      'mask'
-    ],
+    aka: ['mask'],
     rank: 'Epic',
     stats: {
       abilityPower: 30,
-      health: 200
+      health: 200,
     },
     cost: 1300,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3152,
     name: 'Hextech Rocketbelt',
-    aka: [
-      'protobelt',
-      'rocket belt'
-    ],
+    aka: ['protobelt', 'rocket belt'],
     rank: 'Legendary',
     stats: {
       abilityPower: 70,
       health: 300,
-      abilityHaste: 20
+      abilityHaste: 20,
     },
     cost: 2650,
-    tags: [
-      'Mage',
-      'Movement'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage', 'Movement'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3153,
     name: 'Blade of the Ruined King',
-    aka: [
-      'brk',
-      'bork',
-      'botrk',
-      'mist'
-    ],
+    aka: ['brk', 'bork', 'botrk', 'mist'],
     rank: 'Legendary',
     stats: {
       attackDamage: 40,
       attackSpeed: 25,
-      lifesteal: 10
+      lifesteal: 10,
     },
     cost: 3200,
-    tags: [
-      'Fighter',
-      'Marksman',
-      'Onhit effects'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Marksman', 'Onhit effects'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3155,
@@ -3077,20 +1806,11 @@ export const itemsLite: ItemLite[] = [
     rank: 'Epic',
     stats: {
       attackDamage: 25,
-      magicResistance: 25
+      magicResistance: 25,
     },
     cost: 1300,
-    tags: [
-      'Fighter',
-      'Marksman',
-      'Assassin'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Marksman', 'Assassin'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3156,
@@ -3099,44 +1819,24 @@ export const itemsLite: ItemLite[] = [
     stats: {
       attackDamage: 60,
       magicResistance: 40,
-      abilityHaste: 15
+      abilityHaste: 15,
     },
     cost: 3100,
-    tags: [
-      'Fighter',
-      'Marksman',
-      'Assassin'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Marksman', 'Assassin'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3157,
     name: 'Zhonya\'s Hourglass',
-    aka: [
-      'zhg',
-      'zonyas',
-      'zhonyas'
-    ],
+    aka: ['zhg', 'zonyas', 'zhonyas'],
     rank: 'Legendary',
     stats: {
       abilityPower: 105,
-      armor: 50
+      armor: 50,
     },
     cost: 3250,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3158,
@@ -3144,15 +1844,10 @@ export const itemsLite: ItemLite[] = [
     rank: 'Boots',
     stats: {
       flatMovespeed: 45,
-      abilityHaste: 10
+      abilityHaste: 10,
     },
     cost: 900,
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3161,
@@ -3160,59 +1855,35 @@ export const itemsLite: ItemLite[] = [
     rank: 'Legendary',
     stats: {
       attackDamage: 45,
-      health: 450
+      health: 450,
     },
     cost: 3100,
-    tags: [
-      'Fighter',
-      'Ability haste'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Ability haste'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3165,
     name: 'Morellonomicon',
-    aka: [
-      'nmst',
-      'grievous',
-      'last shadow',
-      'book',
-      'forbidden book'
-    ],
+    aka: ['nmst', 'grievous', 'last shadow', 'book', 'forbidden book'],
     rank: 'Legendary',
     stats: {
       abilityPower: 75,
       health: 350,
-      abilityHaste: 15
+      abilityHaste: 15,
     },
     cost: 2850,
-    tags: [
-      'Mage',
-      'Support'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage', 'Support'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3170,
     name: 'Swiftmarch',
     rank: 'Boots',
     stats: {
-      flatMovespeed: 65
+      flatMovespeed: 65,
     },
     cost: 1500,
-    maps: [
-      11
-    ]
+    maps: [11],
   },
   {
     id: 3171,
@@ -3220,12 +1891,10 @@ export const itemsLite: ItemLite[] = [
     rank: 'Boots',
     stats: {
       flatMovespeed: 50,
-      abilityHaste: 25
+      abilityHaste: 25,
     },
     cost: 1400,
-    maps: [
-      11
-    ]
+    maps: [11],
   },
   {
     id: 3172,
@@ -3235,18 +1904,11 @@ export const itemsLite: ItemLite[] = [
       attackSpeed: 50,
       percentMovespeed: 10,
       abilityHaste: 30,
-      tenacity: 20
+      tenacity: 20,
     },
     cost: 2500,
-    tags: [
-      'Marksman',
-      'Fighter'
-    ],
-    maps: [
-      11,
-      21,
-      35
-    ]
+    tags: ['Marksman', 'Fighter'],
+    maps: [11, 21, 35],
   },
   {
     id: 3173,
@@ -3255,12 +1917,10 @@ export const itemsLite: ItemLite[] = [
     stats: {
       magicResistance: 35,
       flatMovespeed: 50,
-      tenacity: 30
+      tenacity: 30,
     },
     cost: 1750,
-    maps: [
-      11
-    ]
+    maps: [11],
   },
   {
     id: 3174,
@@ -3268,12 +1928,10 @@ export const itemsLite: ItemLite[] = [
     rank: 'Boots',
     stats: {
       armor: 40,
-      flatMovespeed: 50
+      flatMovespeed: 50,
     },
     cost: 1700,
-    maps: [
-      11
-    ]
+    maps: [11],
   },
   {
     id: 3175,
@@ -3281,24 +1939,20 @@ export const itemsLite: ItemLite[] = [
     rank: 'Boots',
     stats: {
       flatMagicPenetration: 18,
-      flatMovespeed: 50
+      flatMovespeed: 50,
     },
     cost: 1600,
-    maps: [
-      11
-    ]
+    maps: [11],
   },
   {
     id: 3176,
     name: 'Forever Forward',
     rank: 'Boots',
     stats: {
-      flatMovespeed: 55
+      flatMovespeed: 55,
     },
     cost: 1400,
-    maps: [
-      11
-    ]
+    maps: [11],
   },
   {
     id: 3177,
@@ -3307,19 +1961,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       attackDamage: 30,
       health: 150,
-      abilityHaste: 15
+      abilityHaste: 15,
     },
     cost: 950,
-    tags: [
-      'Fighter',
-      'Marksman',
-      'Assassin',
-      'Tank'
-    ],
-    maps: [
-      12,
-      35
-    ]
+    tags: ['Fighter', 'Marksman', 'Assassin', 'Tank'],
+    maps: [12, 35],
   },
   {
     id: 3179,
@@ -3328,42 +1974,25 @@ export const itemsLite: ItemLite[] = [
     stats: {
       attackDamage: 55,
       lethality: 15,
-      abilityHaste: 10
+      abilityHaste: 10,
     },
     cost: 2500,
-    tags: [
-      'Assassin'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Assassin'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3181,
     name: 'Hullbreaker',
-    aka: [
-      'ahoy',
-      'pirate',
-      'yarrr'
-    ],
+    aka: ['ahoy', 'pirate', 'yarrr'],
     rank: 'Legendary',
     stats: {
       attackDamage: 40,
       health: 500,
-      percentMovespeed: 4
+      percentMovespeed: 4,
     },
     cost: 3000,
-    tags: [
-      'Fighter'
-    ],
-    maps: [
-      11,
-      12,
-      21
-    ]
+    tags: ['Fighter'],
+    maps: [11, 12, 21],
   },
   {
     id: 3184,
@@ -3372,18 +2001,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       attackDamage: 25,
       health: 150,
-      lifesteal: 5
+      lifesteal: 5,
     },
     cost: 950,
-    tags: [
-      'Fighter',
-      'Marksman',
-      'Assassin'
-    ],
-    maps: [
-      12,
-      35
-    ]
+    tags: ['Fighter', 'Marksman', 'Assassin'],
+    maps: [12, 35],
   },
   {
     id: 3190,
@@ -3393,95 +2015,53 @@ export const itemsLite: ItemLite[] = [
       armor: 25,
       health: 200,
       magicResistance: 25,
-      abilityHaste: 10
+      abilityHaste: 10,
     },
     cost: 2200,
-    tags: [
-      'Tank',
-      'Support'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Tank', 'Support'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3211,
     name: 'Spectre\'s Cowl',
-    aka: [
-      'hat',
-      'ghost'
-    ],
+    aka: ['hat', 'ghost'],
     rank: 'Epic',
     stats: {
       health: 200,
       healthRegen: 100,
-      magicResistance: 35
+      magicResistance: 35,
     },
     cost: 1250,
-    tags: [
-      'Tank'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Tank'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3222,
     name: 'Mikael\'s Blessing',
-    aka: [
-      'crucible',
-      'michael'
-    ],
+    aka: ['crucible', 'michael'],
     rank: 'Legendary',
     stats: {
       healAndShieldPower: 12,
       health: 250,
       manaRegen: 100,
-      abilityHaste: 15
+      abilityHaste: 15,
     },
     cost: 2300,
-    tags: [
-      'Support'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Support'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3302,
     name: 'Terminus',
-    aka: [
-      'bow',
-      'sentinel'
-    ],
+    aka: ['bow', 'sentinel'],
     rank: 'Legendary',
     stats: {
       attackDamage: 30,
-      attackSpeed: 35
+      attackSpeed: 35,
     },
     cost: 3000,
-    tags: [
-      'Fighter',
-      'Marksman',
-      'Onhit effects',
-      'Armor pen',
-      'Magic pen'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Marksman', 'Onhit effects', 'Armor pen', 'Magic pen'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3330,
@@ -3489,29 +2069,16 @@ export const itemsLite: ItemLite[] = [
     rank: 'Consumable',
     stats: {},
     cost: 0,
-    maps: [
-      11,
-      12,
-      21,
-      30,
-      35
-    ]
+    maps: [11, 12, 21, 30, 35],
   },
   {
     id: 3340,
     name: 'Stealth Ward',
-    aka: [
-      'yellow',
-      'totem',
-      'trinket'
-    ],
+    aka: ['yellow', 'totem', 'trinket'],
     rank: 'Consumable',
     stats: {},
     cost: 0,
-    maps: [
-      11,
-      21
-    ]
+    maps: [11, 21],
   },
   {
     id: 3348,
@@ -3520,44 +2087,25 @@ export const itemsLite: ItemLite[] = [
     stats: {},
     purchasable: false,
     cost: 0,
-    maps: [
-      30
-    ]
+    maps: [30],
   },
   {
     id: 3363,
     name: 'Farsight Alteration',
-    aka: [
-      'blue',
-      'totem',
-      'trinket'
-    ],
+    aka: ['blue', 'totem', 'trinket'],
     rank: 'Consumable',
     stats: {},
     cost: 0,
-    maps: [
-      11,
-      12,
-      21
-    ]
+    maps: [11, 12, 21],
   },
   {
     id: 3364,
     name: 'Oracle Lens',
-    aka: [
-      'red',
-      'totem',
-      'trinket',
-      'sweeper',
-      'spinny'
-    ],
+    aka: ['red', 'totem', 'trinket', 'sweeper', 'spinny'],
     rank: 'Consumable',
     stats: {},
     cost: 0,
-    maps: [
-      11,
-      21
-    ]
+    maps: [11, 21],
   },
   {
     id: 3400,
@@ -3566,13 +2114,7 @@ export const itemsLite: ItemLite[] = [
     stats: {},
     purchasable: false,
     cost: 0,
-    maps: [
-      11,
-      12,
-      21,
-      30,
-      35
-    ]
+    maps: [11, 12, 21, 30, 35],
   },
   {
     id: 3430,
@@ -3581,15 +2123,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       abilityPower: 50,
       criticalStrikeChance: 25,
-      abilityHaste: 15
+      abilityHaste: 15,
     },
     cost: 2500,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Mage'],
+    maps: [30],
   },
   {
     id: 3504,
@@ -3599,45 +2137,25 @@ export const itemsLite: ItemLite[] = [
       abilityPower: 45,
       healAndShieldPower: 10,
       manaRegen: 125,
-      percentMovespeed: 4
+      percentMovespeed: 4,
     },
     cost: 2200,
-    tags: [
-      'Support',
-      'Attack speed'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Support', 'Attack speed'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3508,
     name: 'Essence Reaver',
-    aka: [
-      'er',
-      '<s>bloothirster</s>'
-    ],
+    aka: ['er', '<s>bloothirster</s>'],
     rank: 'Legendary',
     stats: {
       attackDamage: 60,
       criticalStrikeChance: 25,
-      abilityHaste: 15
+      abilityHaste: 15,
     },
     cost: 2900,
-    tags: [
-      'Marksman',
-      'Mana and reg',
-      'Onhit effects'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Marksman', 'Mana and reg', 'Onhit effects'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3513,
@@ -3645,7 +2163,7 @@ export const itemsLite: ItemLite[] = [
     rank: 'Consumable',
     stats: {},
     purchasable: false,
-    cost: 0
+    cost: 0,
   },
   {
     id: 3599,
@@ -3653,65 +2171,34 @@ export const itemsLite: ItemLite[] = [
     rank: 'Starter',
     stats: {},
     cost: 0,
-    maps: [
-      11,
-      12,
-      21,
-      30,
-      35
-    ]
+    maps: [11, 12, 21, 30, 35],
   },
   {
     id: 3742,
     name: 'Dead Man\'s Plate',
-    aka: [
-      'dmp',
-      'gangplank',
-      'juggernaut',
-      'dreadnought'
-    ],
+    aka: ['dmp', 'gangplank', 'juggernaut', 'dreadnought'],
     rank: 'Legendary',
     stats: {
       armor: 55,
       health: 350,
-      percentMovespeed: 4
+      percentMovespeed: 4,
     },
     cost: 2900,
-    tags: [
-      'Fighter',
-      'Tank'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Tank'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3748,
     name: 'Titanic Hydra',
-    aka: [
-      'beefer',
-      'juggernaut'
-    ],
+    aka: ['beefer', 'juggernaut'],
     rank: 'Legendary',
     stats: {
       attackDamage: 40,
-      health: 600
+      health: 600,
     },
     cost: 3300,
-    tags: [
-      'Fighter',
-      'Tank',
-      'Onhit effects'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Tank', 'Onhit effects'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3801,
@@ -3719,42 +2206,25 @@ export const itemsLite: ItemLite[] = [
     rank: 'Epic',
     stats: {
       health: 200,
-      healthRegen: 100
+      healthRegen: 100,
     },
     cost: 800,
-    tags: [
-      'Tank',
-      'Support'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Tank', 'Support'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3802,
     name: 'Lost Chapter',
-    aka: [
-      'book'
-    ],
+    aka: ['book'],
     rank: 'Epic',
     stats: {
       abilityPower: 40,
       mana: 300,
-      abilityHaste: 10
+      abilityHaste: 10,
     },
     cost: 1200,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3803,
@@ -3762,43 +2232,25 @@ export const itemsLite: ItemLite[] = [
     rank: 'Epic',
     stats: {
       health: 350,
-      mana: 375
+      mana: 375,
     },
     cost: 1300,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3814,
     name: 'Edge of Night',
-    aka: [
-      'eon',
-      'spellshield',
-      'spell shield'
-    ],
+    aka: ['eon', 'spellshield', 'spell shield'],
     rank: 'Legendary',
     stats: {
       attackDamage: 50,
       health: 250,
-      lethality: 15
+      lethality: 15,
     },
     cost: 3000,
-    tags: [
-      'Assassin'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Assassin'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 3865,
@@ -3808,16 +2260,11 @@ export const itemsLite: ItemLite[] = [
       goldPer10: 3,
       health: 30,
       healthRegen: 25,
-      manaRegen: 25
+      manaRegen: 25,
     },
     cost: 400,
-    tags: [
-      'Support',
-      'Mage'
-    ],
-    maps: [
-      11
-    ]
+    tags: ['Support', 'Mage'],
+    maps: [11],
   },
   {
     id: 3866,
@@ -3827,16 +2274,12 @@ export const itemsLite: ItemLite[] = [
       goldPer10: 5,
       health: 100,
       healthRegen: 50,
-      manaRegen: 50
+      manaRegen: 50,
     },
     purchasable: false,
     cost: 400,
-    tags: [
-      'Support'
-    ],
-    maps: [
-      11
-    ]
+    tags: ['Support'],
+    maps: [11],
   },
   {
     id: 3867,
@@ -3846,16 +2289,12 @@ export const itemsLite: ItemLite[] = [
       goldPer10: 5,
       health: 200,
       healthRegen: 75,
-      manaRegen: 75
+      manaRegen: 75,
     },
     purchasable: false,
     cost: 400,
-    tags: [
-      'Support'
-    ],
-    maps: [
-      11
-    ]
+    tags: ['Support'],
+    maps: [11],
   },
   {
     id: 3869,
@@ -3865,15 +2304,11 @@ export const itemsLite: ItemLite[] = [
       goldPer10: 5,
       health: 200,
       healthRegen: 75,
-      manaRegen: 75
+      manaRegen: 75,
     },
     cost: 400,
-    tags: [
-      'Support'
-    ],
-    maps: [
-      11
-    ]
+    tags: ['Support'],
+    maps: [11],
   },
   {
     id: 3870,
@@ -3883,15 +2318,11 @@ export const itemsLite: ItemLite[] = [
       goldPer10: 5,
       health: 200,
       healthRegen: 75,
-      manaRegen: 75
+      manaRegen: 75,
     },
     cost: 400,
-    tags: [
-      'Support'
-    ],
-    maps: [
-      11
-    ]
+    tags: ['Support'],
+    maps: [11],
   },
   {
     id: 3871,
@@ -3901,15 +2332,11 @@ export const itemsLite: ItemLite[] = [
       goldPer10: 5,
       health: 200,
       healthRegen: 75,
-      manaRegen: 75
+      manaRegen: 75,
     },
     cost: 400,
-    tags: [
-      'Support'
-    ],
-    maps: [
-      11
-    ]
+    tags: ['Support'],
+    maps: [11],
   },
   {
     id: 3876,
@@ -3919,15 +2346,11 @@ export const itemsLite: ItemLite[] = [
       goldPer10: 5,
       health: 200,
       healthRegen: 75,
-      manaRegen: 75
+      manaRegen: 75,
     },
     cost: 400,
-    tags: [
-      'Support'
-    ],
-    maps: [
-      11
-    ]
+    tags: ['Support'],
+    maps: [11],
   },
   {
     id: 3877,
@@ -3937,15 +2360,11 @@ export const itemsLite: ItemLite[] = [
       goldPer10: 5,
       health: 200,
       healthRegen: 75,
-      manaRegen: 75
+      manaRegen: 75,
     },
     cost: 400,
-    tags: [
-      'Support'
-    ],
-    maps: [
-      11
-    ]
+    tags: ['Support'],
+    maps: [11],
   },
   {
     id: 3901,
@@ -3953,13 +2372,7 @@ export const itemsLite: ItemLite[] = [
     stats: {},
     purchasable: false,
     cost: 0,
-    maps: [
-      11,
-      12,
-      21,
-      30,
-      35
-    ]
+    maps: [11, 12, 21, 30, 35],
   },
   {
     id: 3902,
@@ -3967,13 +2380,7 @@ export const itemsLite: ItemLite[] = [
     stats: {},
     purchasable: false,
     cost: 0,
-    maps: [
-      11,
-      12,
-      21,
-      30,
-      35
-    ]
+    maps: [11, 12, 21, 30, 35],
   },
   {
     id: 3903,
@@ -3981,35 +2388,19 @@ export const itemsLite: ItemLite[] = [
     stats: {},
     purchasable: false,
     cost: 0,
-    maps: [
-      11,
-      12,
-      21,
-      30,
-      35
-    ]
+    maps: [11, 12, 21, 30, 35],
   },
   {
     id: 3916,
     name: 'Oblivion Orb',
-    aka: [
-      'grievous'
-    ],
+    aka: ['grievous'],
     rank: 'Epic',
     stats: {
-      abilityPower: 25
+      abilityPower: 25,
     },
     cost: 800,
-    tags: [
-      'Mage',
-      'Support'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage', 'Support'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 4003,
@@ -4018,41 +2409,25 @@ export const itemsLite: ItemLite[] = [
     stats: {
       attackDamage: 25,
       lethality: 5,
-      percentMovespeed: 4
+      percentMovespeed: 4,
     },
     cost: 1600,
-    tags: [
-      'Assassin'
-    ],
-    maps: [
-      12,
-      21,
-      35
-    ]
+    tags: ['Assassin'],
+    maps: [12, 21, 35],
   },
   {
     id: 4005,
     name: 'Imperial Mandate',
-    aka: [
-      'banner of command',
-      'flag'
-    ],
+    aka: ['banner of command', 'flag'],
     rank: 'Legendary',
     stats: {
       abilityPower: 60,
       manaRegen: 125,
-      abilityHaste: 20
+      abilityHaste: 20,
     },
     cost: 2250,
-    tags: [
-      'Support'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Support'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 4011,
@@ -4062,15 +2437,11 @@ export const itemsLite: ItemLite[] = [
       abilityPower: 45,
       healAndShieldPower: 12,
       health: 200,
-      abilityHaste: 15
+      abilityHaste: 15,
     },
     cost: 2500,
-    tags: [
-      'Support'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Support'],
+    maps: [30],
   },
   {
     id: 4015,
@@ -4080,15 +2451,11 @@ export const itemsLite: ItemLite[] = [
       abilityPower: 60,
       armorPenetration: 22,
       percentMagicPenetration: 30,
-      percentMovespeed: 5
+      percentMovespeed: 5,
     },
     cost: 2500,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Mage'],
+    maps: [30],
   },
   {
     id: 4016,
@@ -4097,15 +2464,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       abilityPower: 50,
       healAndShieldPower: 25,
-      abilityHaste: 25
+      abilityHaste: 25,
     },
     cost: 2500,
-    tags: [
-      'Support'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Support'],
+    maps: [30],
   },
   {
     id: 4017,
@@ -4113,222 +2476,137 @@ export const itemsLite: ItemLite[] = [
     rank: 'Legendary',
     stats: {
       attackDamage: 35,
-      lethality: 12
+      lethality: 12,
     },
     cost: 2500,
-    tags: [
-      'Assassin'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Assassin'],
+    maps: [30],
   },
   {
     id: 4401,
     name: 'Force of Nature',
-    aka: [
-      'fon'
-    ],
+    aka: ['fon'],
     rank: 'Legendary',
     stats: {
       health: 400,
       magicResistance: 55,
-      percentMovespeed: 4
+      percentMovespeed: 4,
     },
     cost: 2800,
-    tags: [
-      'Tank'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Tank'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 4628,
     name: 'Horizon Focus',
-    aka: [
-      'snipe',
-      'lock on'
-    ],
+    aka: ['snipe', 'lock on'],
     rank: 'Legendary',
     stats: {
       abilityPower: 115,
-      abilityHaste: 25
+      abilityHaste: 25,
     },
     cost: 2800,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 4629,
     name: 'Cosmic Drive',
-    aka: [
-      'hat'
-    ],
+    aka: ['hat'],
     rank: 'Legendary',
     stats: {
       abilityPower: 70,
       health: 350,
       percentMovespeed: 4,
-      abilityHaste: 25
+      abilityHaste: 25,
     },
     cost: 3000,
-    tags: [
-      'Mage',
-      'Movement'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage', 'Movement'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 4630,
     name: 'Blighting Jewel',
-    aka: [
-      'purple'
-    ],
+    aka: ['purple'],
     rank: 'Epic',
     stats: {
       abilityPower: 25,
-      percentMagicPenetration: 13
+      percentMagicPenetration: 13,
     },
     cost: 1100,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 4632,
     name: 'Verdant Barrier',
-    aka: [
-      'necklace'
-    ],
+    aka: ['necklace'],
     rank: 'Epic',
     stats: {
       abilityPower: 40,
-      magicResistance: 25
+      magicResistance: 25,
     },
     cost: 1600,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 4633,
     name: 'Riftmaker',
-    aka: [
-      'velkoz'
-    ],
+    aka: ['velkoz'],
     rank: 'Legendary',
     stats: {
       abilityPower: 70,
       health: 350,
-      abilityHaste: 15
+      abilityHaste: 15,
     },
     cost: 3100,
-    tags: [
-      'Mage',
-      'Lifesteal vamp'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage', 'Lifesteal vamp'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 4638,
     name: 'Watchful Wardstone',
-    aka: [
-      'Support',
-      'Ward'
-    ],
+    aka: ['Support', 'Ward'],
     rank: 'Epic',
     stats: {
       armor: 10,
       health: 150,
       magicResistance: 15,
-      abilityHaste: 10
+      abilityHaste: 10,
     },
     cost: 1100,
-    tags: [
-      'Support'
-    ],
-    maps: [
-      11
-    ]
+    tags: ['Support'],
+    maps: [11],
   },
   {
     id: 4642,
     name: 'Bandleglass Mirror',
-    aka: [
-      'yordle'
-    ],
+    aka: ['yordle'],
     rank: 'Epic',
     stats: {
       abilityPower: 20,
       manaRegen: 100,
-      abilityHaste: 10
+      abilityHaste: 10,
     },
     cost: 900,
-    tags: [
-      'Support'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Support'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 4643,
     name: 'Vigilant Wardstone',
-    aka: [
-      'Support',
-      'Ward',
-      'sightstone'
-    ],
+    aka: ['Support', 'Ward', 'sightstone'],
     rank: 'Legendary',
     stats: {
       armor: 25,
       health: 250,
       magicResistance: 30,
-      abilityHaste: 20
+      abilityHaste: 20,
     },
     cost: 2300,
-    tags: [
-      'Support'
-    ],
-    maps: [
-      11
-    ]
+    tags: ['Support'],
+    maps: [11],
   },
   {
     id: 4645,
@@ -4336,18 +2614,11 @@ export const itemsLite: ItemLite[] = [
     rank: 'Legendary',
     stats: {
       abilityPower: 110,
-      flatMagicPenetration: 15
+      flatMagicPenetration: 15,
     },
     cost: 3200,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 4646,
@@ -4356,66 +2627,39 @@ export const itemsLite: ItemLite[] = [
     stats: {
       abilityPower: 90,
       flatMagicPenetration: 15,
-      percentMovespeed: 6
+      percentMovespeed: 6,
     },
     cost: 2800,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 6333,
     name: 'Death\'s Dance',
-    aka: [
-      'dd',
-      '<s>Bloodbag</s>'
-    ],
+    aka: ['dd', '<s>Bloodbag</s>'],
     rank: 'Legendary',
     stats: {
       armor: 50,
       attackDamage: 60,
-      abilityHaste: 15
+      abilityHaste: 15,
     },
     cost: 3300,
-    tags: [
-      'Fighter'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 6609,
     name: 'Chempunk Chainsword',
-    aka: [
-      'grievous'
-    ],
+    aka: ['grievous'],
     rank: 'Legendary',
     stats: {
       attackDamage: 45,
       health: 450,
-      abilityHaste: 15
+      abilityHaste: 15,
     },
     cost: 3100,
-    tags: [
-      'Fighter',
-      'Assassin'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Assassin'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 6610,
@@ -4424,90 +2668,56 @@ export const itemsLite: ItemLite[] = [
     stats: {
       attackDamage: 40,
       health: 400,
-      abilityHaste: 10
+      abilityHaste: 10,
     },
     cost: 3100,
-    tags: [
-      'Fighter'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 6616,
     name: 'Staff of Flowing Water',
-    aka: [
-      'nami'
-    ],
+    aka: ['nami'],
     rank: 'Legendary',
     stats: {
       abilityPower: 35,
       healAndShieldPower: 10,
       manaRegen: 125,
-      abilityHaste: 15
+      abilityHaste: 15,
     },
     cost: 2250,
-    tags: [
-      'Support'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Support'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 6617,
     name: 'Moonstone Renewer',
-    aka: [
-      'yuumi'
-    ],
+    aka: ['yuumi'],
     rank: 'Legendary',
     stats: {
       abilityPower: 25,
       health: 200,
       manaRegen: 125,
-      abilityHaste: 20
+      abilityHaste: 20,
     },
     cost: 2200,
-    tags: [
-      'Support'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Support'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 6620,
     name: 'Echoes of Helia',
-    aka: [
-      'spooky cup'
-    ],
+    aka: ['spooky cup'],
     rank: 'Legendary',
     stats: {
       abilityPower: 35,
       health: 200,
       manaRegen: 125,
-      abilityHaste: 20
+      abilityHaste: 20,
     },
     cost: 2200,
-    tags: [
-      'Support'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Support'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 6621,
@@ -4516,90 +2726,52 @@ export const itemsLite: ItemLite[] = [
     stats: {
       abilityPower: 45,
       healAndShieldPower: 16,
-      manaRegen: 100
+      manaRegen: 100,
     },
     cost: 2500,
-    tags: [
-      'Support'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Support'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 6631,
     name: 'Stridebreaker',
-    aka: [
-      'kneecapper',
-      'whipchain'
-    ],
+    aka: ['kneecapper', 'whipchain'],
     rank: 'Legendary',
     stats: {
       attackDamage: 40,
       attackSpeed: 25,
-      health: 450
+      health: 450,
     },
     cost: 3300,
-    tags: [
-      'Fighter',
-      'Movement'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Movement'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 6653,
     name: 'Liandry\'s Torment',
-    aka: [
-      'last shadow',
-      'ls'
-    ],
+    aka: ['last shadow', 'ls'],
     rank: 'Legendary',
     stats: {
       abilityPower: 60,
-      health: 300
+      health: 300,
     },
     cost: 3000,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 6655,
     name: 'Luden\'s Companion',
-    aka: [
-      'boomstick',
-      'gun'
-    ],
+    aka: ['boomstick', 'gun'],
     rank: 'Legendary',
     stats: {
       abilityPower: 100,
       mana: 600,
-      abilityHaste: 10
+      abilityHaste: 10,
     },
     cost: 2750,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 6657,
@@ -4608,40 +2780,24 @@ export const itemsLite: ItemLite[] = [
     stats: {
       abilityPower: 45,
       health: 350,
-      mana: 500
+      mana: 500,
     },
     cost: 2600,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 6660,
     name: 'Bami\'s Cinder',
-    aka: [
-      'fire'
-    ],
+    aka: ['fire'],
     rank: 'Epic',
     stats: {
       health: 150,
-      abilityHaste: 5
+      abilityHaste: 5,
     },
     cost: 900,
-    tags: [
-      'Tank'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Tank'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 6662,
@@ -4650,20 +2806,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       armor: 50,
       health: 300,
-      abilityHaste: 15
+      abilityHaste: 15,
     },
     cost: 2900,
-    tags: [
-      'Fighter',
-      'Tank',
-      'Onhit effects'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter', 'Tank', 'Onhit effects'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 6664,
@@ -4673,18 +2820,11 @@ export const itemsLite: ItemLite[] = [
       health: 400,
       healthRegen: 100,
       magicResistance: 40,
-      abilityHaste: 10
+      abilityHaste: 10,
     },
     cost: 2800,
-    tags: [
-      'Tank'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Tank'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 6665,
@@ -4693,18 +2833,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       armor: 45,
       health: 350,
-      magicResistance: 45
+      magicResistance: 45,
     },
     cost: 3200,
-    tags: [
-      'Tank'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Tank'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 6670,
@@ -4712,19 +2845,11 @@ export const itemsLite: ItemLite[] = [
     rank: 'Epic',
     stats: {
       attackDamage: 15,
-      criticalStrikeChance: 20
+      criticalStrikeChance: 20,
     },
     cost: 1300,
-    tags: [
-      'Marksman',
-      'Onhit effects'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Marksman', 'Onhit effects'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 6672,
@@ -4733,18 +2858,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       attackDamage: 45,
       attackSpeed: 40,
-      percentMovespeed: 4
+      percentMovespeed: 4,
     },
     cost: 3000,
-    tags: [
-      'Marksman'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Marksman'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 6673,
@@ -4752,19 +2870,11 @@ export const itemsLite: ItemLite[] = [
     rank: 'Legendary',
     stats: {
       attackDamage: 55,
-      criticalStrikeChance: 25
+      criticalStrikeChance: 25,
     },
     cost: 3000,
-    tags: [
-      'Marksman',
-      'Health and reg'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Marksman', 'Health and reg'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 6675,
@@ -4773,43 +2883,25 @@ export const itemsLite: ItemLite[] = [
     stats: {
       attackSpeed: 40,
       criticalStrikeChance: 25,
-      percentMovespeed: 4
+      percentMovespeed: 4,
     },
     cost: 2650,
-    tags: [
-      'Marksman'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Marksman'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 6676,
     name: 'The Collector',
-    aka: [
-      'deathblade',
-      'gun'
-    ],
+    aka: ['deathblade', 'gun'],
     rank: 'Legendary',
     stats: {
       attackDamage: 50,
       criticalStrikeChance: 25,
-      lethality: 10
+      lethality: 10,
     },
     cost: 3000,
-    tags: [
-      'Marksman',
-      'Assassin'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Marksman', 'Assassin'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 6690,
@@ -4817,19 +2909,11 @@ export const itemsLite: ItemLite[] = [
     rank: 'Epic',
     stats: {
       attackDamage: 15,
-      percentMovespeed: 4
+      percentMovespeed: 4,
     },
     cost: 775,
-    tags: [
-      'Assassin',
-      'Fighter'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Assassin', 'Fighter'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 6692,
@@ -4837,18 +2921,11 @@ export const itemsLite: ItemLite[] = [
     rank: 'Legendary',
     stats: {
       attackDamage: 60,
-      abilityHaste: 15
+      abilityHaste: 15,
     },
     cost: 2900,
-    tags: [
-      'Fighter'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Fighter'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 6694,
@@ -4857,18 +2934,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       armorPenetration: 35,
       attackDamage: 45,
-      abilityHaste: 15
+      abilityHaste: 15,
     },
     cost: 3000,
-    tags: [
-      'Assassin'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Assassin'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 6695,
@@ -4876,18 +2946,11 @@ export const itemsLite: ItemLite[] = [
     rank: 'Legendary',
     stats: {
       attackDamage: 55,
-      lethality: 15
+      lethality: 15,
     },
     cost: 2500,
-    tags: [
-      'Assassin'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Assassin'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 6696,
@@ -4896,18 +2959,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       attackDamage: 55,
       lethality: 18,
-      abilityHaste: 20
+      abilityHaste: 20,
     },
     cost: 3000,
-    tags: [
-      'Assassin'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Assassin'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 6697,
@@ -4916,16 +2972,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       attackDamage: 60,
       lethality: 18,
-      abilityHaste: 10
+      abilityHaste: 10,
     },
     cost: 3000,
-    tags: [
-      'Assassin'
-    ],
-    maps: [
-      11,
-      21
-    ]
+    tags: ['Assassin'],
+    maps: [11, 21],
   },
   {
     id: 6698,
@@ -4934,18 +2985,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       attackDamage: 60,
       lethality: 18,
-      abilityHaste: 10
+      abilityHaste: 10,
     },
     cost: 3200,
-    tags: [
-      'Assassin'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Assassin'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 6699,
@@ -4954,18 +2998,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       attackDamage: 55,
       lethality: 18,
-      abilityHaste: 10
+      abilityHaste: 10,
     },
     cost: 3000,
-    tags: [
-      'Assassin'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Assassin'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 6701,
@@ -4973,19 +3010,11 @@ export const itemsLite: ItemLite[] = [
     rank: 'Legendary',
     stats: {
       attackDamage: 55,
-      lethality: 18
+      lethality: 18,
     },
     cost: 2700,
-    tags: [
-      'Assassin',
-      'Movement'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Assassin', 'Movement'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 8010,
@@ -4994,18 +3023,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       abilityPower: 65,
       health: 400,
-      abilityHaste: 15
+      abilityHaste: 15,
     },
     cost: 2900,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Mage'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 8020,
@@ -5014,19 +3036,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       health: 350,
       magicResistance: 45,
-      abilityHaste: 15
+      abilityHaste: 15,
     },
     cost: 2650,
-    tags: [
-      'Tank',
-      'Support'
-    ],
-    maps: [
-      11,
-      12,
-      21,
-      35
-    ]
+    tags: ['Tank', 'Support'],
+    maps: [11, 12, 21, 35],
   },
   {
     id: 220000,
@@ -5034,9 +3048,7 @@ export const itemsLite: ItemLite[] = [
     rank: 'Consumable',
     stats: {},
     cost: 750,
-    maps: [
-      30
-    ]
+    maps: [30],
   },
   {
     id: 220001,
@@ -5044,9 +3056,7 @@ export const itemsLite: ItemLite[] = [
     rank: 'Consumable',
     stats: {},
     cost: 2000,
-    maps: [
-      30
-    ]
+    maps: [30],
   },
   {
     id: 220002,
@@ -5054,9 +3064,7 @@ export const itemsLite: ItemLite[] = [
     rank: 'Consumable',
     stats: {},
     cost: 2000,
-    maps: [
-      30
-    ]
+    maps: [30],
   },
   {
     id: 220003,
@@ -5064,9 +3072,7 @@ export const itemsLite: ItemLite[] = [
     rank: 'Consumable',
     stats: {},
     cost: 2000,
-    maps: [
-      30
-    ]
+    maps: [30],
   },
   {
     id: 220004,
@@ -5074,9 +3080,7 @@ export const itemsLite: ItemLite[] = [
     rank: 'Consumable',
     stats: {},
     cost: 2000,
-    maps: [
-      30
-    ]
+    maps: [30],
   },
   {
     id: 220005,
@@ -5084,9 +3088,7 @@ export const itemsLite: ItemLite[] = [
     rank: 'Consumable',
     stats: {},
     cost: 2000,
-    maps: [
-      30
-    ]
+    maps: [30],
   },
   {
     id: 220006,
@@ -5094,9 +3096,7 @@ export const itemsLite: ItemLite[] = [
     rank: 'Consumable',
     stats: {},
     cost: 2000,
-    maps: [
-      30
-    ]
+    maps: [30],
   },
   {
     id: 220007,
@@ -5104,61 +3104,44 @@ export const itemsLite: ItemLite[] = [
     rank: 'Consumable',
     stats: {},
     cost: 4000,
-    maps: [
-      30
-    ]
+    maps: [30],
   },
   {
     id: 223005,
     name: 'Ghostcrawlers',
     rank: 'Boots',
     stats: {
-      flatMovespeed: 70
+      flatMovespeed: 70,
     },
     cost: 500,
-    maps: [
-      30
-    ]
+    maps: [30],
   },
   {
     id: 223039,
     name: 'Atma\'s Reckoning',
-    aka: [
-      'wreckoning'
-    ],
+    aka: ['wreckoning'],
     rank: 'Legendary',
     stats: {
       criticalStrikeChance: 20,
-      health: 700
+      health: 700,
     },
     cost: 2500,
-    tags: [
-      'Fighter'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Fighter'],
+    maps: [30],
   },
   {
     id: 223095,
     name: 'Stormrazor',
-    aka: [
-      'Windblade'
-    ],
+    aka: ['Windblade'],
     rank: 'Legendary',
     stats: {
       attackDamage: 45,
       attackSpeed: 25,
-      criticalStrikeChance: 25
+      criticalStrikeChance: 25,
     },
     cost: 2500,
-    tags: [
-      'Marksman',
-      'Onhit effects'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Marksman', 'Onhit effects'],
+    maps: [30],
   },
   {
     id: 223146,
@@ -5167,15 +3150,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       abilityPower: 90,
       attackDamage: 45,
-      omnivamp: 15
+      omnivamp: 15,
     },
     cost: 2500,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Mage'],
+    maps: [30],
   },
   {
     id: 223185,
@@ -5184,16 +3163,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       attackDamage: 25,
       lethality: 11,
-      abilityHaste: 10
+      abilityHaste: 10,
     },
     cost: 500,
-    tags: [
-      'Fighter',
-      'Assassin'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Fighter', 'Assassin'],
+    maps: [30],
   },
   {
     id: 224004,
@@ -5202,22 +3176,16 @@ export const itemsLite: ItemLite[] = [
     stats: {
       attackDamage: 50,
       lethality: 15,
-      percentMovespeed: 4
+      percentMovespeed: 4,
     },
     cost: 2800,
-    tags: [
-      'Assassin'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Assassin'],
+    maps: [30],
   },
   {
     id: 224403,
     name: 'The Golden Spatula',
-    aka: [
-      'debug'
-    ],
+    aka: ['debug'],
     rank: 'Special',
     stats: {
       abilityPower: 125,
@@ -5232,32 +3200,24 @@ export const itemsLite: ItemLite[] = [
       mana: 350,
       manaRegen: 200,
       percentMovespeed: 10,
-      abilityHaste: 20
+      abilityHaste: 20,
     },
     cost: 0,
-    maps: [
-      30
-    ]
+    maps: [30],
   },
   {
     id: 226630,
     name: 'Goredrinker',
-    aka: [
-      'slurp'
-    ],
+    aka: ['slurp'],
     rank: 'Special',
     stats: {
       attackDamage: 55,
       health: 400,
-      abilityHaste: 20
+      abilityHaste: 20,
     },
     cost: 0,
-    tags: [
-      'Fighter'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Fighter'],
+    maps: [30],
   },
   {
     id: 228001,
@@ -5265,16 +3225,11 @@ export const itemsLite: ItemLite[] = [
     rank: 'Legendary',
     stats: {
       health: 650,
-      abilityHaste: 20
+      abilityHaste: 20,
     },
     cost: 2500,
-    tags: [
-      'Tank',
-      'Support'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Tank', 'Support'],
+    maps: [30],
   },
   {
     id: 228002,
@@ -5283,15 +3238,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       abilityPower: 300,
       armor: 50,
-      abilityHaste: 20
+      abilityHaste: 20,
     },
     cost: 0,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Mage'],
+    maps: [30],
   },
   {
     id: 443054,
@@ -5300,15 +3251,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       armor: 55,
       attackSpeed: 50,
-      percentMovespeed: 10
+      percentMovespeed: 10,
     },
     cost: 0,
-    tags: [
-      'Tank'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Tank'],
+    maps: [30],
   },
   {
     id: 443055,
@@ -5317,15 +3264,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       attackDamage: 55,
       attackSpeed: 45,
-      percentMovespeed: 15
+      percentMovespeed: 15,
     },
     cost: 0,
-    tags: [
-      'Marksman'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Marksman'],
+    maps: [30],
   },
   {
     id: 443056,
@@ -5333,9 +3276,7 @@ export const itemsLite: ItemLite[] = [
     rank: 'Special',
     stats: {},
     cost: 0,
-    maps: [
-      30
-    ]
+    maps: [30],
   },
   {
     id: 443058,
@@ -5343,15 +3284,11 @@ export const itemsLite: ItemLite[] = [
     rank: 'Special',
     stats: {
       armor: 100,
-      health: 300
+      health: 300,
     },
     cost: 0,
-    tags: [
-      'Tank'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Tank'],
+    maps: [30],
   },
   {
     id: 443059,
@@ -5359,33 +3296,23 @@ export const itemsLite: ItemLite[] = [
     rank: 'Special',
     stats: {
       health: 300,
-      magicResistance: 100
+      magicResistance: 100,
     },
     cost: 0,
-    tags: [
-      'Tank'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Tank'],
+    maps: [30],
   },
   {
     id: 443060,
     name: 'Sword of the Divine',
-    aka: [
-      'sotd'
-    ],
+    aka: ['sotd'],
     rank: 'Special',
     stats: {
-      criticalStrikeChance: 50
+      criticalStrikeChance: 50,
     },
     cost: 0,
-    tags: [
-      'Assassin'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Assassin'],
+    maps: [30],
   },
   {
     id: 443061,
@@ -5394,15 +3321,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       criticalStrikeChance: 25,
       health: 900,
-      abilityHaste: 30
+      abilityHaste: 30,
     },
     cost: 0,
-    tags: [
-      'Tank'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Tank'],
+    maps: [30],
   },
   {
     id: 443062,
@@ -5411,15 +3334,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       abilityPower: 80,
       healAndShieldPower: 15,
-      abilityHaste: 20
+      abilityHaste: 20,
     },
     cost: 0,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Mage'],
+    maps: [30],
   },
   {
     id: 443063,
@@ -5428,30 +3347,20 @@ export const itemsLite: ItemLite[] = [
     stats: {
       armor: 50,
       magicResistance: 50,
-      abilityHaste: 25
+      abilityHaste: 25,
     },
     cost: 0,
-    tags: [
-      'Support'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Support'],
+    maps: [30],
   },
   {
     id: 443064,
     name: 'Talisman of Ascension',
-    aka: [
-      'Support',
-      'Economy',
-      'Gold'
-    ],
+    aka: ['Support', 'Economy', 'Gold'],
     rank: 'Special',
     stats: {},
     cost: 0,
-    maps: [
-      30
-    ]
+    maps: [30],
   },
   {
     id: 443069,
@@ -5460,33 +3369,23 @@ export const itemsLite: ItemLite[] = [
     stats: {
       attackDamage: 45,
       attackSpeed: 40,
-      criticalStrikeChance: 25
+      criticalStrikeChance: 25,
     },
     cost: 0,
-    tags: [
-      'Marksman'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Marksman'],
+    maps: [30],
   },
   {
     id: 443079,
     name: 'Turbo Chemtank',
-    aka: [
-      'catastrophe'
-    ],
+    aka: ['catastrophe'],
     rank: 'Special',
     stats: {
-      health: 600
+      health: 600,
     },
     cost: 0,
-    tags: [
-      'Tank'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Tank'],
+    maps: [30],
   },
   {
     id: 443080,
@@ -5494,9 +3393,7 @@ export const itemsLite: ItemLite[] = [
     rank: 'Special',
     stats: {},
     cost: 0,
-    maps: [
-      30
-    ]
+    maps: [30],
   },
   {
     id: 443081,
@@ -5504,15 +3401,11 @@ export const itemsLite: ItemLite[] = [
     rank: 'Special',
     stats: {
       attackSpeed: 75,
-      health: 500
+      health: 500,
     },
     cost: 0,
-    tags: [
-      'Tank'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Tank'],
+    maps: [30],
   },
   {
     id: 443090,
@@ -5520,15 +3413,11 @@ export const itemsLite: ItemLite[] = [
     rank: 'Special',
     stats: {
       attackSpeed: 50,
-      percentMovespeed: 10
+      percentMovespeed: 10,
     },
     cost: 0,
-    tags: [
-      'Marksman'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Marksman'],
+    maps: [30],
   },
   {
     id: 443193,
@@ -5538,55 +3427,38 @@ export const itemsLite: ItemLite[] = [
       armor: 65,
       magicResistance: 65,
       percentMovespeed: 10,
-      abilityHaste: 15
+      abilityHaste: 15,
     },
     cost: 0,
-    tags: [
-      'Tank'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Tank'],
+    maps: [30],
   },
   {
     id: 444636,
     name: 'Night Harvester',
-    aka: [
-      'dark',
-      'scythe'
-    ],
+    aka: ['dark', 'scythe'],
     rank: 'Special',
     stats: {
       abilityPower: 90,
       health: 300,
-      abilityHaste: 25
+      abilityHaste: 25,
     },
     cost: 0,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Mage'],
+    maps: [30],
   },
   {
     id: 444637,
     name: 'Demonic Embrace',
-    aka: [
-      'helmet'
-    ],
+    aka: ['helmet'],
     rank: 'Special',
     stats: {
       abilityPower: 80,
-      health: 700
+      health: 700,
     },
     cost: 0,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Mage'],
+    maps: [30],
   },
   {
     id: 444644,
@@ -5596,58 +3468,40 @@ export const itemsLite: ItemLite[] = [
       abilityPower: 85,
       health: 300,
       mana: 600,
-      abilityHaste: 25
+      abilityHaste: 25,
     },
     cost: 0,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Mage'],
+    maps: [30],
   },
   {
     id: 446632,
     name: 'Divine Sunderer',
-    aka: [
-      'devourer'
-    ],
+    aka: ['devourer'],
     rank: 'Special',
     stats: {
       attackDamage: 55,
       health: 350,
-      abilityHaste: 20
+      abilityHaste: 20,
     },
     cost: 0,
-    tags: [
-      'Fighter'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Fighter'],
+    maps: [30],
   },
   {
     id: 446656,
     name: 'Everfrost',
-    aka: [
-      'GLP',
-      'hose',
-      'supersoaker'
-    ],
+    aka: ['GLP', 'hose', 'supersoaker'],
     rank: 'Special',
     stats: {
       abilityPower: 100,
       health: 250,
       mana: 600,
-      abilityHaste: 25
+      abilityHaste: 25,
     },
     cost: 0,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Mage'],
+    maps: [30],
   },
   {
     id: 446667,
@@ -5657,36 +3511,26 @@ export const itemsLite: ItemLite[] = [
       armor: 35,
       healAndShieldPower: 12,
       health: 400,
-      magicResistance: 35
+      magicResistance: 35,
     },
     cost: 0,
-    tags: [
-      'Tank'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Tank'],
+    maps: [30],
   },
   {
     id: 446671,
     name: 'Galeforce',
-    aka: [
-      'squallrider'
-    ],
+    aka: ['squallrider'],
     rank: 'Special',
     stats: {
       attackDamage: 65,
       attackSpeed: 30,
       criticalStrikeChance: 25,
-      percentMovespeed: 12
+      percentMovespeed: 12,
     },
     cost: 0,
-    tags: [
-      'Marksman'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Marksman'],
+    maps: [30],
   },
   {
     id: 446691,
@@ -5695,15 +3539,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       attackDamage: 50,
       lethality: 20,
-      abilityHaste: 20
+      abilityHaste: 20,
     },
     cost: 0,
-    tags: [
-      'Assassin'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Assassin'],
+    maps: [30],
   },
   {
     id: 446693,
@@ -5712,12 +3552,10 @@ export const itemsLite: ItemLite[] = [
     stats: {
       attackDamage: 55,
       lethality: 22,
-      abilityHaste: 20
+      abilityHaste: 20,
     },
     cost: 0,
-    tags: [
-      'Assassin'
-    ]
+    tags: ['Assassin'],
   },
   {
     id: 447100,
@@ -5725,12 +3563,10 @@ export const itemsLite: ItemLite[] = [
     rank: 'Special',
     stats: {
       attackSpeed: 60,
-      percentMovespeed: 12
+      percentMovespeed: 12,
     },
     cost: 0,
-    maps: [
-      30
-    ]
+    maps: [30],
   },
   {
     id: 447101,
@@ -5739,12 +3575,10 @@ export const itemsLite: ItemLite[] = [
     stats: {
       attackSpeed: 70,
       percentMovespeed: 8,
-      abilityHaste: 40
+      abilityHaste: 40,
     },
     cost: 0,
-    maps: [
-      30
-    ]
+    maps: [30],
   },
   {
     id: 447102,
@@ -5753,15 +3587,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       abilityPower: 80,
       attackSpeed: 40,
-      health: 300
+      health: 300,
     },
     cost: 0,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Mage'],
+    maps: [30],
   },
   {
     id: 447103,
@@ -5770,15 +3600,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       attackDamage: 60,
       abilityHaste: 30,
-      omnivamp: 15
+      omnivamp: 15,
     },
     cost: 0,
-    tags: [
-      'Fighter'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Fighter'],
+    maps: [30],
   },
   {
     id: 447104,
@@ -5787,15 +3613,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       abilityPower: 70,
       health: 200,
-      abilityHaste: 20
+      abilityHaste: 20,
     },
     cost: 0,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Mage'],
+    maps: [30],
   },
   {
     id: 447105,
@@ -5805,15 +3627,11 @@ export const itemsLite: ItemLite[] = [
       abilityPower: 70,
       healAndShieldPower: 18,
       manaRegen: 125,
-      abilityHaste: 30
+      abilityHaste: 30,
     },
     cost: 0,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Mage'],
+    maps: [30],
   },
   {
     id: 447106,
@@ -5821,9 +3639,7 @@ export const itemsLite: ItemLite[] = [
     rank: 'Special',
     stats: {},
     cost: 0,
-    maps: [
-      30
-    ]
+    maps: [30],
   },
   {
     id: 447107,
@@ -5831,12 +3647,10 @@ export const itemsLite: ItemLite[] = [
     rank: 'Special',
     stats: {
       attackSpeed: 50,
-      percentMovespeed: 12
+      percentMovespeed: 12,
     },
     cost: 0,
-    maps: [
-      30
-    ]
+    maps: [30],
   },
   {
     id: 447108,
@@ -5845,15 +3659,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       abilityPower: 80,
       percentMovespeed: 8,
-      abilityHaste: 20
+      abilityHaste: 20,
     },
     cost: 0,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Mage'],
+    maps: [30],
   },
   {
     id: 447109,
@@ -5862,15 +3672,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       abilityPower: 80,
       armor: 30,
-      magicResistance: 30
+      magicResistance: 30,
     },
     cost: 0,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Mage'],
+    maps: [30],
   },
   {
     id: 447110,
@@ -5879,15 +3685,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       abilityPower: 85,
       health: 400,
-      tenacity: 30
+      tenacity: 30,
     },
     cost: 0,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Mage'],
+    maps: [30],
   },
   {
     id: 447112,
@@ -5895,12 +3697,10 @@ export const itemsLite: ItemLite[] = [
     rank: 'Special',
     stats: {
       health: 500,
-      abilityHaste: 20
+      abilityHaste: 20,
     },
     cost: 0,
-    maps: [
-      30
-    ]
+    maps: [30],
   },
   {
     id: 447113,
@@ -5910,15 +3710,11 @@ export const itemsLite: ItemLite[] = [
       abilityPower: 90,
       flatMagicPenetration: 12,
       mana: 600,
-      abilityHaste: 20
+      abilityHaste: 20,
     },
     cost: 0,
-    tags: [
-      'Mage'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Mage'],
+    maps: [30],
   },
   {
     id: 447114,
@@ -5927,15 +3723,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       armor: 35,
       attackSpeed: 40,
-      magicResistance: 35
+      magicResistance: 35,
     },
     cost: 0,
-    tags: [
-      'Tank'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Tank'],
+    maps: [30],
   },
   {
     id: 447115,
@@ -5944,15 +3736,11 @@ export const itemsLite: ItemLite[] = [
     stats: {
       attackDamage: 60,
       lethality: 15,
-      percentMovespeed: 8
+      percentMovespeed: 8,
     },
     cost: 0,
-    tags: [
-      'Assassin'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Assassin'],
+    maps: [30],
   },
   {
     id: 447116,
@@ -5960,17 +3748,11 @@ export const itemsLite: ItemLite[] = [
     rank: 'Special',
     stats: {
       health: 400,
-      abilityHaste: 30
+      abilityHaste: 30,
     },
     cost: 0,
-    tags: [
-      'Assassin',
-      'Fighter',
-      'Mage'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Assassin', 'Fighter', 'Mage'],
+    maps: [30],
   },
   {
     id: 447118,
@@ -5978,17 +3760,11 @@ export const itemsLite: ItemLite[] = [
     rank: 'Special',
     stats: {
       health: 400,
-      abilityHaste: 15
+      abilityHaste: 15,
     },
     cost: 0,
-    tags: [
-      'Fighter',
-      'Marksman',
-      'Mage'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Fighter', 'Marksman', 'Mage'],
+    maps: [30],
   },
   {
     id: 447119,
@@ -5999,31 +3775,22 @@ export const itemsLite: ItemLite[] = [
       attackSpeed: 30,
       health: 500,
       magicResistance: 30,
-      percentMovespeed: 8
+      percentMovespeed: 8,
     },
     cost: 0,
-    tags: [
-      'Tank'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Tank'],
+    maps: [30],
   },
   {
     id: 447120,
     name: 'Diamond-Tipped Spear',
     rank: 'Special',
     stats: {
-      attackSpeed: 30
+      attackSpeed: 30,
     },
     cost: 0,
-    tags: [
-      'Marksman',
-      'Mage'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Marksman', 'Mage'],
+    maps: [30],
   },
   {
     id: 447121,
@@ -6031,16 +3798,11 @@ export const itemsLite: ItemLite[] = [
     rank: 'Special',
     stats: {
       abilityPower: 100,
-      attackDamage: 70
+      attackDamage: 70,
     },
     cost: 0,
-    tags: [
-      'Marksman',
-      'Mage'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Marksman', 'Mage'],
+    maps: [30],
   },
   {
     id: 447122,
@@ -6048,15 +3810,11 @@ export const itemsLite: ItemLite[] = [
     rank: 'Special',
     stats: {
       health: 900,
-      abilityHaste: 25
+      abilityHaste: 25,
     },
     cost: 0,
-    tags: [
-      'Tank'
-    ],
-    maps: [
-      30
-    ]
+    tags: ['Tank'],
+    maps: [30],
   },
   {
     id: 447123,
@@ -6066,14 +3824,10 @@ export const itemsLite: ItemLite[] = [
       attackSpeed: 30,
       healAndShieldPower: 15,
       manaRegen: 150,
-      abilityHaste: 40
+      abilityHaste: 40,
     },
     cost: 0,
-    tags: [
-      'Support'
-    ],
-    maps: [
-      30
-    ]
-  }
+    tags: ['Support'],
+    maps: [30],
+  },
 ]

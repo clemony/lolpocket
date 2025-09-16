@@ -8,7 +8,7 @@ const rune: Rune = {
   pathId: 8000,
   tier: 1,
   tierLabel: 'Heroism',
-  tierSlot: 0
+  tierSlot: 0,
 }
 
 export default rune

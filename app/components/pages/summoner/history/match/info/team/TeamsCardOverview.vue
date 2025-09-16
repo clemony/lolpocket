@@ -31,13 +31,16 @@ function navigate() {}
           <ChampionIcon
             v-if="player"
             :id="player?.championId"
-            v-tippy="{ content: ix().champNameById(player?.championId), placement: 'right' }"
+            v-tippy="{
+              content: ix().champNameById(player?.championId),
+              placement: 'right',
+            }"
             alt="champion-icon"
             class="rounded-tiny size-5.5" />
 
           <a
             v-tippy="{ content: player.riotIdGameName, placement: 'left' }"
-            class="text-1 tracking-tight h-full align-middle w-full text-nowrap hover:underline decoration-1 font-medium truncate">
+            class="text-xxs tracking-tight h-full align-middle w-full text-nowrap hover:underline decoration-1 font-medium truncate">
             {{ player.riotIdGameName }}
           </a>
         </div>
@@ -58,12 +61,15 @@ function navigate() {}
           <ChampionIcon
             v-if="player"
             :id="player?.championId"
-            v-tippy="{ content: ix().champNameById(player?.championId), placement: 'left' }"
+            v-tippy="{
+              content: ix().champNameById(player?.championId),
+              placement: 'left',
+            }"
             alt="champion-icon"
             class="rounded-tiny size-5.5" />
 
           <span
-            class="@max-lg/match:hidden @max-lg/match:opacity-0 text-1 tracking-tight h-full align-middle w-full text-nowrap hover:underline decoration-1 font-medium truncate">
+            class="@max-lg/match:hidden @max-lg/match:opacity-0 text-xxs tracking-tight h-full align-middle w-full text-nowrap hover:underline decoration-1 font-medium truncate">
             {{ player.riotIdGameName }}
           </span>
         </a>

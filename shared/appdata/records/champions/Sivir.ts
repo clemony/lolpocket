@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:14 PM CDT
 
 const champion: Champion = {
   "id": 15,
@@ -119,9 +119,17 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "60 / 85 / 110 / 135 / 160",
-                "100% bonus AD",
-                "60% AP"
+                {
+                  "values": "60 / 85 / 110 / 135 / 160"
+                },
+                {
+                  "values": "100",
+                  "unit": "% bonus AD"
+                },
+                {
+                  "values": "60",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -132,17 +140,33 @@ const champion: Champion = {
             {
               "attribute": "Minimum Damage",
               "modifiers": [
-                "24 / 34 / 44 / 54 / 64",
-                "40% bonus AD",
-                "24% AP"
+                {
+                  "values": "24 / 34 / 44 / 54 / 64"
+                },
+                {
+                  "values": "40",
+                  "unit": "% bonus AD"
+                },
+                {
+                  "values": "24",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Total Maximum Champion Damage",
               "modifiers": [
-                "120 / 170 / 220 / 270 / 320",
-                "200% bonus AD",
-                "120% AP"
+                {
+                  "values": "120 / 170 / 220 / 270 / 320"
+                },
+                {
+                  "values": "200",
+                  "unit": "% bonus AD"
+                },
+                {
+                  "values": "120",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -179,31 +203,46 @@ const champion: Champion = {
             {
               "attribute": "Bonus Attack Speed",
               "modifiers": [
-                "20 / 25 / 30 / 35 / 40%"
+                {
+                  "values": "20 / 25 / 30 / 35 / 40",
+                  "unit": "%"
+                }
               ]
             },
             {
               "attribute": "Bounce Damage",
               "modifiers": [
-                "40 / 42.5 / 45 / 47.5 / 50% AD"
+                {
+                  "values": "40 / 42.5 / 45 / 47.5 / 50",
+                  "unit": "% AD"
+                }
               ]
             },
             {
               "attribute": "Bounce Critical Damage",
               "modifiers": [
-                "70 / 74.38 / 78.75 / 83.13 / 87.5% AD"
+                {
+                  "values": "70 / 74.38 / 78.75 / 83.13 / 87.5",
+                  "unit": "% AD"
+                }
               ]
             },
             {
               "attribute": "Minion Bounce Damage",
               "modifiers": [
-                "26 / 27.63 / 29.25 / 30.88 / 32.5% AD"
+                {
+                  "values": "26 / 27.63 / 29.25 / 30.88 / 32.5",
+                  "unit": "% AD"
+                }
               ]
             },
             {
               "attribute": "Minion Bounce Critical Damage",
               "modifiers": [
-                "45.5 / 48.34 / 51.19 / 54.03 / 56.88% AD"
+                {
+                  "values": "45.5 / 48.34 / 51.19 / 54.03 / 56.88",
+                  "unit": "% AD"
+                }
               ]
             }
           ]
@@ -242,8 +281,14 @@ const champion: Champion = {
             {
               "attribute": "Heal",
               "modifiers": [
-                "60 / 65 / 70 / 75 / 80% AD",
-                "50% AP"
+                {
+                  "values": "60 / 65 / 70 / 75 / 80",
+                  "unit": "% AD"
+                },
+                {
+                  "values": "50",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -269,7 +314,10 @@ const champion: Champion = {
             {
               "attribute": "Buff Duration",
               "modifiers": [
-                "8 / 10 / 12 seconds"
+                {
+                  "values": "8 / 10 / 12",
+                  "unit": " seconds"
+                }
               ]
             }
           ]
@@ -280,7 +328,10 @@ const champion: Champion = {
             {
               "attribute": "Bonus Movement Speed",
               "modifiers": [
-                "20 / 25 / 30%"
+                {
+                  "values": "20 / 25 / 30",
+                  "unit": "%"
+                }
               ]
             }
           ]

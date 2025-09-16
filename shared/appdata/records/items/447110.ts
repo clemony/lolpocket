@@ -10,26 +10,23 @@ const item: Item = {
     {
       name: 'Relentless',
       unique: true,
-      effects: 'Casting an ability <img src="/img/icons/basic-attack-reset.webp" class="tip-icon" />resets your basic attack timer and empowers your next two basic attacks with 90% <b>bonus</b> attack speed. Additionally, each basic attack on-attack reduces the cooldowns of all your abilities by 0.5 seconds.'
-    }
+      effects:
+        'Casting an ability <img src="/img/icons/basic-attack-reset.webp" class="tip-icon" />resets your basic attack timer and empowers your next two basic attacks with 90% <b>bonus</b> attack speed. Additionally, each basic attack on-attack reduces the cooldowns of all your abilities by 0.5 seconds.',
+    },
   ],
   stats: {
     abilityPower: 85,
     health: 400,
-    tenacity: 30
+    tenacity: 30,
   },
   shop: {
     prices: {
       total: 0,
       combined: 1000,
-      sell: 0
+      sell: 0,
     },
-    tags: [
-      'MAGE'
-    ]
+    tags: ['MAGE'],
   },
-  maps: [
-    30
-  ]
+  maps: [30],
 }
 export default item

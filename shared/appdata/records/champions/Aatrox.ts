@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:55 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:11 PM CDT
 
 const champion: Champion = {
   "id": 266,
@@ -122,15 +122,27 @@ const champion: Champion = {
             {
               "attribute": "First Cast Damage",
               "modifiers": [
-                "10 / 25 / 40 / 55 / 70",
-                "60 / 67.5 / 75 / 82.5 / 90% AD"
+                {
+                  "values": "10 / 25 / 40 / 55 / 70"
+                },
+                {
+                  "values": "60 - 90",
+                  "unit": "% AD",
+                  "tooltip": "Scaling per rank:\n60 / 67.5 / 75 / 82.5 / 90% AD"
+                }
               ]
             },
             {
               "attribute": "First Sweetspot Damage",
               "modifiers": [
-                "17 / 42.5 / 68 / 93.5 / 119",
-                "102 / 114.75 / 127.5 / 140.25 / 153% AD"
+                {
+                  "values": "17 / 42.5 / 68 / 93.5 / 119"
+                },
+                {
+                  "values": "102 - 153",
+                  "unit": "% AD",
+                  "tooltip": "Scaling per rank:\n102 / 114.75 / 127.5 / 140.25 / 153% AD"
+                }
               ]
             }
           ]
@@ -141,15 +153,27 @@ const champion: Champion = {
             {
               "attribute": "Second Cast Damage",
               "modifiers": [
-                "12.5 / 31.25 / 50 / 68.75 / 87.5",
-                "75 / 84.38 / 93.75 / 103.13 / 112.5% AD"
+                {
+                  "values": "12.5 / 31.25 / 50 / 68.75 / 87.5"
+                },
+                {
+                  "values": "75 - 112.5",
+                  "unit": "% AD",
+                  "tooltip": "Scaling per rank:\n75 / 84.38 / 93.75 / 103.13 / 112.5% AD"
+                }
               ]
             },
             {
               "attribute": "Second Sweetspot Damage",
               "modifiers": [
-                "21.25 / 53.13 / 85 / 116.88 / 148.75",
-                "127.5 / 143.44 / 159.38 / 175.31 / 191.25% AD"
+                {
+                  "values": "21.25 / 53.13 / 85 / 116.88 / 148.75"
+                },
+                {
+                  "values": "127.5 - 191.25",
+                  "unit": "% AD",
+                  "tooltip": "Scaling per rank:\n127.5 / 143.44 / 159.38 / 175.31 / 191.25% AD"
+                }
               ]
             }
           ]
@@ -160,15 +184,27 @@ const champion: Champion = {
             {
               "attribute": "Third Cast Damage",
               "modifiers": [
-                "15 / 37.5 / 60 / 82.5 / 105",
-                "90 / 101.25 / 112.5 / 123.75 / 135% AD"
+                {
+                  "values": "15 / 37.5 / 60 / 82.5 / 105"
+                },
+                {
+                  "values": "90 - 135",
+                  "unit": "% AD",
+                  "tooltip": "Scaling per rank:\n90 / 101.25 / 112.5 / 123.75 / 135% AD"
+                }
               ]
             },
             {
               "attribute": "Third Sweetspot Damage",
               "modifiers": [
-                "25.5 / 63.75 / 102 / 140.25 / 178.5",
-                "153 / 172.13 / 191.25 / 210.38 / 229.5% AD"
+                {
+                  "values": "25.5 / 63.75 / 102 / 140.25 / 178.5"
+                },
+                {
+                  "values": "153 - 229.5",
+                  "unit": "% AD",
+                  "tooltip": "Scaling per rank:\n153 / 172.13 / 191.25 / 210.38 / 229.5% AD"
+                }
               ]
             }
           ]
@@ -179,15 +215,27 @@ const champion: Champion = {
             {
               "attribute": "Maximum Non-Minion Non-Sweetspot Damage",
               "modifiers": [
-                "37.5 / 93.75 / 150 / 206.25 / 262.5",
-                "225 / 253.13 / 281.25 / 309.38 / 337.5% AD"
+                {
+                  "values": "37.5 / 93.75 / 150 / 206.25 / 262.5"
+                },
+                {
+                  "values": "225 - 337.5",
+                  "unit": "% AD",
+                  "tooltip": "Scaling per rank:\n225 / 253.13 / 281.25 / 309.38 / 337.5% AD"
+                }
               ]
             },
             {
               "attribute": "Maximum Non-Minion Sweetspot Damage",
               "modifiers": [
-                "63.75 / 159.38 / 255 / 350.63 / 446.25",
-                "382.5 / 430.31 / 478.13 / 525.94 / 573.75% AD"
+                {
+                  "values": "63.75 / 159.38 / 255 / 350.63 / 446.25"
+                },
+                {
+                  "values": "382.5 - 573.75",
+                  "unit": "% AD",
+                  "tooltip": "Scaling per rank:\n382.5 / 430.31 / 478.13 / 525.94 / 573.75% AD"
+                }
               ]
             }
           ]
@@ -215,21 +263,34 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "30 / 40 / 50 / 60 / 70",
-                "40% AD"
+                {
+                  "values": "30 / 40 / 50 / 60 / 70"
+                },
+                {
+                  "values": "40",
+                  "unit": "% AD"
+                }
               ]
             },
             {
               "attribute": "Minion Damage",
               "modifiers": [
-                "60 / 80 / 100 / 120 / 140",
-                "80% AD"
+                {
+                  "values": "60 / 80 / 100 / 120 / 140"
+                },
+                {
+                  "values": "80",
+                  "unit": "% AD"
+                }
               ]
             },
             {
               "attribute": "Slow",
               "modifiers": [
-                "25 / 27.5 / 30 / 32.5 / 35%"
+                {
+                  "values": "25 / 27.5 / 30 / 32.5 / 35",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -243,8 +304,13 @@ const champion: Champion = {
             {
               "attribute": "Total Damage",
               "modifiers": [
-                "60 / 80 / 100 / 120 / 140",
-                "80% AD"
+                {
+                  "values": "60 / 80 / 100 / 120 / 140"
+                },
+                {
+                  "values": "80",
+                  "unit": "% AD"
+                }
               ]
             }
           ]
@@ -302,7 +368,10 @@ const champion: Champion = {
             {
               "attribute": "Bonus Movement Speed",
               "modifiers": [
-                "60 / 80 / 100%"
+                {
+                  "values": "60 / 80 / 100",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -316,13 +385,19 @@ const champion: Champion = {
             {
               "attribute": "Bonus Attack Damage",
               "modifiers": [
-                "20 / 30 / 40% AD"
+                {
+                  "values": "20 / 30 / 40",
+                  "unit": "% AD"
+                }
               ]
             },
             {
               "attribute": "Increased Healing",
               "modifiers": [
-                "50 / 75 / 100%"
+                {
+                  "values": "50 / 75 / 100",
+                  "unit": "%"
+                }
               ]
             }
           ]

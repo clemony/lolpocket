@@ -6,30 +6,30 @@ const item: Item = {
     {
       id: 1029,
       name: 'Cloth Armor',
-      gold: 300
+      gold: 300,
     },
     {
       id: 1027,
       name: 'Sapphire Crystal',
-      gold: 300
+      gold: 300,
     },
     {
       id: 2022,
       name: 'Glowing Mote',
-      gold: 250
-    }
+      gold: 250,
+    },
   ],
   buildsInto: [
     {
       id: 3110,
       name: 'Frozen Heart',
-      gold: 2500
+      gold: 2500,
     },
     {
       id: 323110,
       name: 'Frozen Heart',
-      gold: 2700
-    }
+      gold: 2700,
+    },
   ],
   specialRecipe: 0,
   noEffects: true,
@@ -39,24 +39,16 @@ const item: Item = {
   stats: {
     armor: 25,
     mana: 300,
-    abilityHaste: 10
+    abilityHaste: 10,
   },
   shop: {
     prices: {
       total: 900,
       combined: 50,
-      sell: 360
+      sell: 360,
     },
-    tags: [
-      'TANK',
-      'SUPPORT'
-    ]
+    tags: ['TANK', 'SUPPORT'],
   },
-  maps: [
-    11,
-    12,
-    21,
-    35
-  ]
+  maps: [11, 12, 21, 35],
 }
 export default item

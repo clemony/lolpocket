@@ -1,7 +1,13 @@
 <script lang="ts" setup>
 import RunePanelMenu from '#components'
 
-const { set, pocket, class: className, class: pathClass, setKey } = defineProps<{
+const {
+  set,
+  pocket,
+  class: className,
+  class: pathClass,
+  setKey,
+} = defineProps<{
   set?: RuneSet
   pocket?: Pocket
   class?: HTMLAttributes['class']
@@ -14,9 +20,9 @@ const rs = useRuneStore()
 
 const route = useRoute()
 
-onMounted (async () => {
+onMounted(async () => {
   await rs.selectedRuneSet
-})/*
+}) /*
     v-tippy="{content: h(menu, {pocket: pocket, set: set}),   interactive: true, followCursor: false,}" */
 /*
 const bgStyle = computed (() => {
@@ -66,9 +72,8 @@ const bgStyle = computed (() => {
           class=" shrink-0 h-6 w-auto object-contain drop-shadow-sm  transition-all duration-200 dst" />
       </div>
     </div>
-  </div> -->c
+  </div> -->
+  c
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

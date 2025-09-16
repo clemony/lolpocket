@@ -12,23 +12,18 @@ const item: Item = {
     {
       name: 'Oathsworn Bond',
       unique: true,
-      effects: 'Consumes this item to initiate a 3.5-second cast time and a 3-second <img src="/img/icons/channel.webp" class="tip-icon" />channel afterwards from the user and the target allied champion, both becoming bound allies. The target is unable to act for 6 seconds after the channel\'s duration. Afterwards, the target becomes an <i>Oathsworn</i>.'
-    }
+      effects:
+        'Consumes this item to initiate a 3.5-second cast time and a 3-second <img src="/img/icons/channel.webp" class="tip-icon" />channel afterwards from the user and the target allied champion, both becoming bound allies. The target is unable to act for 6 seconds after the channel\'s duration. Afterwards, the target becomes an <i>Oathsworn</i>.',
+    },
   ],
   stats: {},
   shop: {
     prices: {
       total: 0,
       combined: 0,
-      sell: 0
-    }
+      sell: 0,
+    },
   },
-  maps: [
-    11,
-    12,
-    21,
-    30,
-    35
-  ]
+  maps: [11, 12, 21, 30, 35],
 }
 export default item

@@ -6,45 +6,45 @@ const item: Item = {
     {
       id: 1033,
       name: 'Null-Magic Mantle',
-      gold: 400
+      gold: 400,
     },
     {
       id: 1029,
       name: 'Cloth Armor',
-      gold: 300
-    }
+      gold: 300,
+    },
   ],
   buildsInto: [
     {
       id: 323050,
       name: 'Zeke\'s Convergence',
-      gold: 2300
+      gold: 2300,
     },
     {
       id: 3039,
       name: 'Atma\'s Reckoning',
-      gold: 2900
+      gold: 2900,
     },
     {
       id: 2502,
       name: 'Unending Despair',
-      gold: 2800
+      gold: 2800,
     },
     {
       id: 3193,
       name: 'Gargoyle Stoneplate',
-      gold: 3150
+      gold: 3150,
     },
     {
       id: 4403,
       name: 'The Golden Spatula',
-      gold: 7187
+      gold: 7187,
     },
     {
       id: 6667,
       name: 'Radiant Virtue',
-      gold: 2600
-    }
+      gold: 2600,
+    },
   ],
   specialRecipe: 0,
   noEffects: true,
@@ -54,24 +54,16 @@ const item: Item = {
   stats: {
     armor: 25,
     magicResistance: 25,
-    abilityHaste: 10
+    abilityHaste: 10,
   },
   shop: {
     prices: {
       total: 1100,
       combined: 400,
-      sell: 440
+      sell: 440,
     },
-    tags: [
-      'TANK',
-      'SUPPORT'
-    ]
+    tags: ['TANK', 'SUPPORT'],
   },
-  maps: [
-    11,
-    12,
-    21,
-    35
-  ]
+  maps: [11, 12, 21, 35],
 }
 export default item

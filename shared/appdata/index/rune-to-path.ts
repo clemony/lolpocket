@@ -61,5 +61,5 @@ export const runeToPath: Record<number, string> = {
   9104: 'Precision',
   9105: 'Precision',
   9111: 'Precision',
-  9923: 'Domination'
+  9923: 'Domination',
 }

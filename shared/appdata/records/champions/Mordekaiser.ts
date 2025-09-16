@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:13 PM CDT
 
 const champion: Champion = {
   "id": 82,
@@ -123,15 +123,25 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "0 / 2.65 / 5.29 / 7.94 / 10.59 / 13.24 / 15.88 / 18.53 / 21.18 / 23.82 / 26.47 / 29.12 / 31.76 / 34.41 / 37.06 / 39.71 / 42.35 / 45",
-                "80 / 115 / 150 / 185 / 220",
-                "70% AP"
+                {
+                  "values": "0 / 2.65 / 5.29 / 7.94 / 10.59 / 13.24 / 15.88 / 18.53 / 21.18 / 23.82 / 26.47 / 29.12 / 31.76 / 34.41 / 37.06 / 39.71 / 42.35 / 45"
+                },
+                {
+                  "values": "80 / 115 / 150 / 185 / 220"
+                },
+                {
+                  "values": "70",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Damage Increase",
               "modifiers": [
-                "30 / 35 / 40 / 45 / 50%"
+                {
+                  "values": "30 / 35 / 40 / 45 / 50",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -168,7 +178,10 @@ const champion: Champion = {
             {
               "attribute": "Shield to Healing",
               "modifiers": [
-                "35 / 37.5 / 40 / 42.5 / 45%"
+                {
+                  "values": "35 / 37.5 / 40 / 42.5 / 45",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -194,7 +207,10 @@ const champion: Champion = {
             {
               "attribute": "Magic Penetration",
               "modifiers": [
-                "5 / 7.5 / 10 / 12.5 / 15%"
+                {
+                  "values": "5 / 7.5 / 10 / 12.5 / 15",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -205,8 +221,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "60 / 75 / 90 / 105 / 120",
-                "40% AP"
+                {
+                  "values": "60 / 75 / 90 / 105 / 120"
+                },
+                {
+                  "values": "40",
+                  "unit": "% AP"
+                }
               ]
             }
           ]

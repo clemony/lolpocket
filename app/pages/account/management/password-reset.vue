@@ -13,7 +13,10 @@ definePageMeta({
 const password = ref('')
 
 function handleReset() {
-  toast.success('Password reset link sent!', { description: 'Check your email for a message from the customer support lolpocat.' })
+  toast.success('Password reset link sent!', {
+    description:
+      'Check your email for a message from the customer support lolpocat.',
+  })
 }
 </script>
 
@@ -23,8 +26,7 @@ function handleReset() {
       <div class="grid gap-6">
         <div class="grid gap-6">
           <div class="grid gap-2">
-            <Label
-              html-for="email">Email</Label>
+            <Label html-for="email">Email</Label>
             <Input
               id="email"
               type="email"
@@ -32,7 +34,7 @@ function handleReset() {
               placeholder="m@example.com"
               required />
           </div>
-          <div class="w-full gap-y-2 grid ">
+          <div class="w-full gap-y-2 grid">
             <Button
               variant="neutral"
               size="lg"
@@ -47,10 +49,9 @@ function handleReset() {
               variant="link"
               size="lg"
               hover="link"
-              class="underline-offset-1.5 justify-center gap-3 h-14   justify-self-start w-full "
+              class="underline-offset-1.5 justify-center gap-3 h-14 justify-self-start w-full"
               @click="navigateTo('/login')">
-              Remembered it?
-              Log in
+              Remembered it? Log in
             </Button>
           </div>
         </div>

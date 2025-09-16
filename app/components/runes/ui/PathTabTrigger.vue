@@ -18,7 +18,7 @@ const emit = defineEmits(['update:path'])
 <template>
   <IndicatorTabsTrigger
     :value="value"
-    class=" rounded-full relative group aspect-square size-15 place-self-center disabled:pointer-events-none shrink-0"
+    class="rounded-full relative group aspect-square size-15 place-self-center disabled:pointer-events-none shrink-0"
     :class="cn('', className)">
     <div class="size-full relative grid place-items-center">
       <img
@@ -31,6 +31,4 @@ const emit = defineEmits(['update:path'])
   </IndicatorTabsTrigger>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -16,21 +16,11 @@ export default defineNuxtConfig({
     'nuxt-svgo',
     'motion-v/nuxt',
   ],
-  imports: {
-    dirs: [
-      'appdata',
-      './shared/types/**',
-      './shared/schema/**'
-    ],
-    autoImport: true,
-    global: true,
-  },
-  alias: {
-    api: fileURLToPath(new URL('./server/api', import.meta.url)),
-    types: fileURLToPath(new URL('./shared/types', import.meta.url)),
-    schema: fileURLToPath(new URL('./shared/schema', import.meta.url)),
 
+  imports: {
+    dirs: ['#shared/appdata', './shared/types'],
   },
+
   components: [
     {
       path: './base',
@@ -41,83 +31,12 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
-  svgo: {
-    componentPrefix: 'i',
-  },
-  runtimeConfig: {
-    supabaseUrl: process.env.SUPABASE_URL,
-    supabaseAnonKey: process.env.SUPABASE_KEY,
-    supabasePooler: process.env.SUPABASE_POOLER,
-    riotApiKey: process.env.NUXT_RIOT_API,
-
-    public: {
-      baseUrl: process.env.BASE_URL || 'http://localhost:8080',
-    },
-  },
-
-  nitro: {
-    routeRules: {
-      '/api/**': {
-        cors: true,
-        headers: { 'Access-Control-Allow-Origin': '*' },
-      },
-    },
-  },
-
-  pinia: {
-    storesDirs: ['./stores/**'],
-  },
-
-  supabase: {
-    url: process.env.NUXT_PUBLIC_SUPABASE_URL,
-    key: process.env.NUXT_PUBLIC_SUPABASE_KEY,
-    redirect: true,
-    redirectOptions: {
-      callback: '/redirect',
-      exclude: ['*'],
-      login: '/login',
-      saveRedirectToCookie: true,
-    },
-    /*     clientOptions: {
-      global: { fetch: fetch.bind(globalThis) },
-    }, */
-    useSsrCookies: false,
-  },
-
-  router: {
-    options: {
-      scrollBehaviorType: 'smooth',
-
-    },
-  },
-
-  /* ------------------------------ components ------------------------------ */
-
-  icon: {
-    provider: 'server',
-    serverBundle: {
-      collections: ['lucide'],
-    },
-    componentName: 'icon',
-  },
-  image: {
-    domains: ['ddragon.leagueoflegends.com', 'cdn.communitydragon.org'],
-    provider: 'ipx',
-    format: ['webp'],
-  },
-
-  /* ------------------------------ framework ------------------------------ */
 
   typescript: {
     typeCheck: true,
-    tsConfig: {
-      compilerOptions: {
-        resolveJsonModule: true,
-        types: ['node'],
-        strict: false,
-        noEmit: true,
-        pretty: true
-      },
+    strict: false,
+    sharedTsConfig: {
+      include: ['./appdata', './utils', './types'],
     },
   },
 
@@ -134,12 +53,44 @@ export default defineNuxtConfig({
     https: false,
   },
 
+  nitro: {
+    routeRules: {
+      '/api/**': {
+        cors: true,
+        headers: { 'Access-Control-Allow-Origin': '*' },
+      },
+    },
+  },
+
+  router: {
+    options: {
+      scrollBehaviorType: 'smooth',
+    },
+  },
+
+  pinia: {
+    storesDirs: ['./stores/**'],
+  },
+
   css: ['~/assets/css/tailwind.css'],
 
-  /*   tailwindcss: {
-    exposeConfig: true,
-    includeWorkspace: true,
-  }, */
+  svgo: {
+    componentPrefix: 'i',
+  },
+
+  icon: {
+    provider: 'server',
+    serverBundle: {
+      collections: ['lucide'],
+    },
+    componentName: 'icon',
+  },
+
+  image: {
+    domains: ['ddragon.leagueoflegends.com', 'cdn.communitydragon.org'],
+    provider: 'ipx',
+    format: ['webp'],
+  },
 
   vueTransitions: {
     defaultProps: {
@@ -158,12 +109,35 @@ export default defineNuxtConfig({
       },
     },
   },
+  runtimeConfig: {
+    supabaseUrl: process.env.SUPABASE_URL,
+    supabaseAnonKey: process.env.SUPABASE_KEY,
+    supabasePooler: process.env.SUPABASE_POOLER,
+    riotApiKey: process.env.NUXT_RIOT_API,
+
+    public: {
+      baseUrl: process.env.BASE_URL || 'http://localhost:8080',
+    },
+  },
+
+  supabase: {
+    url: process.env.NUXT_PUBLIC_SUPABASE_URL,
+    key: process.env.NUXT_PUBLIC_SUPABASE_KEY,
+    redirect: true,
+    redirectOptions: {
+      callback: '/redirect',
+      exclude: ['*'],
+      login: '/login',
+      saveRedirectToCookie: true,
+    },
+    useSsrCookies: false,
+  },
 
   devtools: { enabled: true },
 
-  future: {
+  /*   future: {
     typescriptBundlerResolution: true,
-  },
+  }, */
 
   compatibilityDate: '2025-07-18',
   ssr: false,

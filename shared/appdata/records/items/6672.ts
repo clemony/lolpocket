@@ -6,18 +6,18 @@ const item: Item = {
     {
       id: 6690,
       name: 'Rectrix',
-      gold: 775
+      gold: 775,
     },
     {
       id: 3051,
       name: 'Hearthbound Axe',
-      gold: 1200
+      gold: 1200,
     },
     {
       id: 1043,
       name: 'Recurve Bow',
-      gold: 700
-    }
+      gold: 700,
+    },
   ],
   specialRecipe: 0,
   noEffects: false,
@@ -27,29 +27,23 @@ const item: Item = {
     {
       name: 'Bring It Down',
       unique: true,
-      effects: 'Basic attacks on-hit grant a stack for 3 seconds, up to 2 stacks. At 2 stacks, the next basic attack consumes all stacks to deal (<img src="/img/icons/melee.webp" class="inline-icon" />150 – 200 /<img src="/img/icons/ranged.webp" class="inline-icon" />120 – 160) <b>bonus</b> physical damage on-hit, increased by 0% – 100% (based on target\'s missing health), for up to (<img src="/img/icons/melee.webp" class="inline-icon" />262.5 – 350 /<img src="/img/icons/ranged.webp" class="inline-icon" />210 – 280) <b>bonus</b> physical damage.'
-    }
+      effects:
+        'Basic attacks on-hit grant a stack for 3 seconds, up to 2 stacks. At 2 stacks, the next basic attack consumes all stacks to deal (<img src="/img/icons/melee.webp" class="inline-icon" />150 – 200 /<img src="/img/icons/ranged.webp" class="inline-icon" />120 – 160) <b>bonus</b> physical damage on-hit, increased by 0% – 100% (based on target\'s missing health), for up to (<img src="/img/icons/melee.webp" class="inline-icon" />262.5 – 350 /<img src="/img/icons/ranged.webp" class="inline-icon" />210 – 280) <b>bonus</b> physical damage.',
+    },
   ],
   stats: {
     attackDamage: 45,
     attackSpeed: 40,
-    percentMovespeed: 4
+    percentMovespeed: 4,
   },
   shop: {
     prices: {
       total: 3000,
       combined: 325,
-      sell: 1200
+      sell: 1200,
     },
-    tags: [
-      'MARKSMAN'
-    ]
+    tags: ['MARKSMAN'],
   },
-  maps: [
-    11,
-    12,
-    21,
-    35
-  ]
+  maps: [11, 12, 21, 35],
 }
 export default item

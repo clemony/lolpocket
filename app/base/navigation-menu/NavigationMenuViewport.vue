@@ -1,16 +1,15 @@
 <script setup lang="ts">
 import { AnimatePresence, motion } from 'motion-v'
 import type { NavigationMenuViewportProps } from 'reka-ui'
-import {
-  NavigationMenuViewport,
-  useForwardProps,
-} from 'reka-ui'
+import { NavigationMenuViewport, useForwardProps } from 'reka-ui'
 
-const props = defineProps<NavigationMenuViewportProps & {
-  class?: HTMLAttributes['class']
-  align?: Align
-  wrapperClass?: HTMLAttributes['class']
-}>()
+const props = defineProps<
+  NavigationMenuViewportProps & {
+    class?: HTMLAttributes['class']
+    align?: Align
+    wrapperClass?: HTMLAttributes['class']
+  }
+>()
 
 const delegatedProps = reactiveOmit(props, 'class')
 
@@ -22,7 +21,6 @@ const variants = {
   visible: {
     opacity: 1,
     scale: 1,
-
   },
   hidden: {
     opacity: 0,

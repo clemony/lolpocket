@@ -1,5 +1,9 @@
 <script lang="ts" setup>
-const { championKey, splash, class: className } = defineProps<{
+const {
+  championKey,
+  splash,
+  class: className,
+} = defineProps<{
   championKey: string
   splash?: string
   class?: HTMLAttributes['class']

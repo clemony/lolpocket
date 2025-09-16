@@ -1,26 +1,29 @@
 <script lang="ts" setup>
 import { RadioGroupItem, RadioGroupRoot } from 'reka-ui'
 
-const clem = ['/img/cat/clem1.webp', '/img/cat/clem0.webp', '/img/cat/clem2.webp', '/img/cat/clem3.webp']
+const clem = [
+  '/img/cat/clem1.webp',
+  '/img/cat/clem0.webp',
+  '/img/cat/clem2.webp',
+  '/img/cat/clem3.webp',
+]
 
 const showClem = ref('/img/cat/clem1.webp')
 </script>
 
 <template>
   <Dialog>
-    <DialogTrigger class="hover:underline underline-offset-2  flex  hover:bg-b2/35  cursor-pointer">
+    <DialogTrigger
+      class="hover:underline underline-offset-2 flex hover:bg-b2/35 cursor-pointer">
       <slot />
     </DialogTrigger>
 
-    <MotionDialogContent class="!rounded-xl top-[10%] translate-y-1/4 !max-w-171">
+    <MotionDialogContent
+      class="!rounded-xl top-[10%] translate-y-1/4 !max-w-171">
       <DialogHeader>
-        <DialogTitle>
-          Clem
-        </DialogTitle>
+        <DialogTitle>Clem</DialogTitle>
 
-        <DialogDescription>
-          Clementine Breakfast Cat
-        </DialogDescription>
+        <DialogDescription>Clementine Breakfast Cat</DialogDescription>
       </DialogHeader>
 
       <div class="">
@@ -30,8 +33,7 @@ const showClem = ref('/img/cat/clem1.webp')
             :initial="{ x: 10, opacity: 0 }"
             :animate="{ x: 0, opacity: 1 }"
             :exit="{ x: -10, opacity: 0 }"
-            :transition="{ duration: 0.2 }">
-          </Motion>
+            :transition="{ duration: 0.2 }"></Motion>
         </AnimatePresence>
       </div>
 
@@ -41,9 +43,9 @@ const showClem = ref('/img/cat/clem1.webp')
             v-for="(img, i) in clem"
             :key="i">
             <div class="p-1">
-              <Card
-                :key="showClem">
-                <CardContent class=" w-full max-h-150 overflow-hidden bg-black flex aspect-square items-center justify-center rounded-lg">
+              <Card :key="showClem">
+                <CardContent
+                  class="w-full max-h-150 overflow-hidden bg-black flex aspect-square items-center justify-center rounded-lg">
                   <img
                     :src="img"
                     class="size-full rounded-lg" />
@@ -59,6 +61,4 @@ const showClem = ref('/img/cat/clem1.webp')
   </Dialog>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

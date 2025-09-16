@@ -18,7 +18,7 @@ export function getFormattedDateTime(): string {
   const parts = formatter.formatToParts(now)
 
   const partMap = Object.fromEntries(
-    parts.map(({ type, value }) => [type, value]),
+    parts.map(({ type, value }) => [type, value])
   ) as Record<string, string> // 👈 optional: avoid TS warning
 
   return (
@@ -30,7 +30,7 @@ export function getFormattedDateTime(): string {
 
 export function markUpdate() {
   const loadPatch = JSON.parse(
-    fs.readFileSync('./scripts/update/misc/raw/patch-index.json', 'utf-8'),
+    fs.readFileSync('./scripts/update/misc/raw/patch-index.json', 'utf-8')
   )
 
   return `Updated Patch ${loadPatch[0]} - ${getFormattedDateTime()}`

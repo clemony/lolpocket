@@ -13,7 +13,8 @@ const router = useRouter()
 
 <template>
   <div class="size-full grid place-items-center">
-    <NuxtLink :to="`/summoner/${as.account.region}/${as.account.name}_${as.account.tag}`">
+    <NuxtLink
+      :to="`/summoner/${as.account.region}/${as.account.name}_${as.account.tag}`">
       Your Profile
     </NuxtLink>
   </div>

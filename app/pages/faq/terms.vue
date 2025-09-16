@@ -20,15 +20,18 @@ definePageMeta({
       <SettingsLayout
         title="Data"
         description="Where the raw data on lolpockets comes from. Raw data is processed and calculated by lolpocket's own algorithms and functions.">
-        <ol class="space-y-6 list-[upper-roman] list-outside text-pretty marker:w-12 marker:text-start marker:justify-start marker:pr-6 leading-7  pl-6">
+        <ol
+          class="space-y-6 list-[upper-roman] list-outside text-pretty marker:w-12 marker:text-start marker:justify-start marker:pr-6 leading-7 pl-6">
           <li>
-            <b>Riot's</b> public
+            <b>Riot's</b>
+            public
             <InlineLink
               to="https://wiki.leagueoflegends.com/en-us/"
               title="https://wiki.leagueoflegends.com/en-us/"
               external>
               API
-            </InlineLink>.
+            </InlineLink>
+            .
           </li>
           <li>
             The Official
@@ -54,19 +57,24 @@ definePageMeta({
               title="https://www.communitydragon.org"
               external>
               Community Dragon
-            </InlineLink>, an open source, community driven, public CDN.
+            </InlineLink>
+            , an open source, community driven, public CDN.
           </li>
         </ol>
       </SettingsLayout>
       <SettingsLayout
         title="Riot Policies"
         description="About Riot data and asset usage.">
-        <ol class="space-y-6 list-[upper-roman] list-outside text-pretty marker:w-12 marker:text-start marker:justify-start marker:pr-6 leading-7  pl-6">
+        <ol
+          class="space-y-6 list-[upper-roman] list-outside text-pretty marker:w-12 marker:text-start marker:justify-start marker:pr-6 leading-7 pl-6">
           <li>
             {{ riotDisclaimer }}
           </li>
           <li>
-            For more information, <b>Riot's</b> policies on use of their assets and game data is expanded upon in their
+            For more information,
+            <b>Riot's</b>
+            policies on use of their assets and game data is expanded upon in
+            their
             <InlineLink
               class="italic"
               to="https://www.riotgames.com/en/legal"

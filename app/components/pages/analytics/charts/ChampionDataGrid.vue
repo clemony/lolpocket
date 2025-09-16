@@ -1,6 +1,24 @@
 <script lang="ts" setup>
-import type { ColDef, ColGroupDef, GridApi, GridOptions, GridPreDestroyedEvent, GridReadyEvent } from 'ag-grid-community'
-import { CellStyleModule, ClientSideRowModelModule, ColumnApiModule, ColumnAutoSizeModule, ColumnHoverModule, GridStateModule, ModuleRegistry, RenderApiModule, RowSelectionModule, ValidationModule } from 'ag-grid-community'
+import type {
+  ColDef,
+  ColGroupDef,
+  GridApi,
+  GridOptions,
+  GridPreDestroyedEvent,
+  GridReadyEvent,
+} from 'ag-grid-community'
+import {
+  CellStyleModule,
+  ClientSideRowModelModule,
+  ColumnApiModule,
+  ColumnAutoSizeModule,
+  ColumnHoverModule,
+  GridStateModule,
+  ModuleRegistry,
+  RenderApiModule,
+  RowSelectionModule,
+  ValidationModule,
+} from 'ag-grid-community'
 import { AgGridVue } from 'ag-grid-vue3'
 import { pocketTheme } from '~/utils/config/tableTheme'
 import ChampionGridIcon from './chart-comps/ChampionGridIcon.vue'
@@ -17,7 +35,7 @@ defineExpose({
 
 const cs = useChampStore()
 const theme = ref(pocketTheme)
-const championList = computed (() => champions)
+const championList = computed(() => champions)
 console.log('💠 - championList:', championList.value)
 
 const gridApi = shallowRef<GridApi | null>(null)
@@ -35,7 +53,6 @@ const gridOptions: GridOptions<any[]> = {
 
   defaultColGroupDef: {
     suppressStickyLabel: true,
-
   },
   defaultColDef: {
     flex: 1,
@@ -159,7 +176,6 @@ const colDefs: ColDef<any>[] = [
     cellClass: 'font-medium',
     cellRenderer: PatchCellRenderer,
   },
-
 ]
 
 async function onGridReady(params: GridReadyEvent) {
@@ -173,20 +189,30 @@ watch(
   (newVal) => {
     if (newVal && gridApi.value)
       gridApi.value.setGridOption('rowData', [...championList.value])
-  },
+  }
 )
 
-ModuleRegistry.registerModules([ClientSideRowModelModule, ValidationModule, RowSelectionModule, ColumnAutoSizeModule, ColumnHoverModule, ColumnHoverModule, ColumnApiModule, CellStyleModule, GridStateModule, RenderApiModule])
+ModuleRegistry.registerModules([
+  ClientSideRowModelModule,
+  ValidationModule,
+  RowSelectionModule,
+  ColumnAutoSizeModule,
+  ColumnHoverModule,
+  ColumnHoverModule,
+  ColumnApiModule,
+  CellStyleModule,
+  GridStateModule,
+  RenderApiModule,
+])
 </script>
 
 <template>
   <AgGridVue
     :initial-state="cs.dbChampionGridState"
-    class="!size-full stat-grid champion-grid bg-b1 !shadow-black/3 !drop-shadow-black/3 border-shadow-sm     min-w-full "
+    class="!size-full stat-grid champion-grid bg-b1 !shadow-black/3 !drop-shadow-black/3 border-shadow-sm min-w-full"
     :grid-options="gridOptions"
     :theme="theme"
     :column-defs="colDefs"
     :tooltip-show-delay="400"
-    @grid-ready="onGridReady">
-  </AgGridVue>
+    @grid-ready="onGridReady"></AgGridVue>
 </template>

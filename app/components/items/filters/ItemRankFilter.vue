@@ -3,7 +3,6 @@ import { itemRanks } from '~~/shared/appdata/filters/item-ranks'
 
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
-
 }>()
 // TODO fixthis
 function handleReset() {
@@ -36,10 +35,13 @@ function handleUpdate() {
       v-for="rank in itemRanks"
       :key="rank"
       size="lg"
-      :variant="is().filters.rank == rank ? 'neutral' : is().filters.rank && is().filters.rank != rank ? 'hidden' : 'btn'"
-      class="!font-medium px-5  text-2 "
-      @click="is().filters.rank == rank ? is().filters.rank = null : null">
-
+      :variant="
+        is().filters.rank == rank ? 'neutral'
+        : is().filters.rank && is().filters.rank != rank ? 'hidden'
+          : 'btn'
+      "
+      class="!font-medium px-5 text-xs"
+      @click="is().filters.rank == rank ? (is().filters.rank = null) : null">
       <input
         v-model="is().filters.rank"
         :disabled="is().filters.rank == rank"

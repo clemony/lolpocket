@@ -1,12 +1,25 @@
 <script lang="ts" setup>
-import { Chart, Filler, LineElement, PointElement, RadarController, RadialLinearScale } from 'chart.js'
+import {
+  Chart,
+  Filler,
+  LineElement,
+  PointElement,
+  RadarController,
+  RadialLinearScale,
+} from 'chart.js'
 import { Radar } from 'vue-chartjs'
 
 const { champion } = defineProps<{
   champion: Champion
 }>()
 
-Chart.register(RadarController, LineElement, PointElement, RadialLinearScale, Filler)
+Chart.register(
+  RadarController,
+  LineElement,
+  PointElement,
+  RadialLinearScale,
+  Filler
+)
 
 const rawKeys = Object.keys(champion.attributeRatings)
 const normalizedKeys = rawKeys.map((val, index) => {
@@ -27,14 +40,18 @@ const normalizedValues = rawValues.map((val, index) => {
     return 2
   return 3
 })
-console.log('💠 - Object.values(champion.attributeRatings):', Object.values(champion.attributeRatings))
+console.log(
+  '💠 - Object.values(champion.attributeRatings):',
+  Object.values(champion.attributeRatings)
+)
 const data = {
   labels: normalizedKeys,
-  datasets: [{
-    label: 'My First Dataset',
-    data: normalizedValues,
-
-  }],
+  datasets: [
+    {
+      label: 'My First Dataset',
+      data: normalizedValues,
+    },
+  ],
 }
 
 const options = {
@@ -91,7 +108,8 @@ const options = {
 
 <template>
   <Field class="w-full bg-b3/30 m-0 relative !pb-0 pt-6 justify-self-center">
-    <div class="absolute top-5 text-3 tracking-tight left-6 text-bc/50 font-bold drop-shadow-sm">
+    <div
+      class="absolute top-5 text-sm tracking-tight left-6 text-bc/50 font-bold drop-shadow-sm">
       Champion Attributes
     </div>
 

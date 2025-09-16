@@ -1,31 +1,37 @@
 <script lang="ts" setup>
-const { class: className, champions: c, list } = defineProps<{
+const {
+  class: className,
+  champions: c,
+  list,
+} = defineProps<{
   class?: HTMLAttributes['class']
   champions: string[]
   list?: boolean
 }>()
 
-const championsTxt = computed (() => {
+const championsTxt = computed(() => {
   const a = [...c].sort()
   return a.length > 5 ? a.slice(0, 4) : a
 })
-const champions = computed (() => [...c].slice(0, 3).reverse())
+const champions = computed(() => [...c].slice(0, 3).reverse())
 </script>
 
 <template>
   <div
     v-if="list"
-    :class="cn('text-2 opacity-80 line-clamp-1 gap-1 grow items-center flex', className)">
-    <template
-      v-if="c?.length">
+    :class="
+      cn(
+        'text-xs opacity-80 line-clamp-1 gap-1 grow items-center flex',
+        className,
+      )
+    ">
+    <template v-if="c?.length">
       <span
         v-for="champion in championsTxt"
         :key="champion"
-        class="group/champion ">
-        {{
-          ix().champNameByKey(champion)
-        }}<span class="group-last/champion:hidden">,&thinsp;
-        </span>
+        class="group/champion">
+        {{ ix().champNameByKey(champion) }}
+        <span class="group-last/champion:hidden">,&thinsp;</span>
       </span>
       <span
         v-if="c.length > 5"
@@ -35,18 +41,15 @@ const champions = computed (() => [...c].slice(0, 3).reverse())
     </template>
     <span
       v-else
-      class="text-bc/60 italic">
-      No champions
-    </span>
+      class="text-bc/60 italic">No champions</span>
   </div>
 
   <div
     v-else
     :class="cn('avatar-group  -space-x-5', className)">
-    <template
-      v-if="champions?.length">
+    <template v-if="champions?.length">
       <template
-        v-for="champion, i in champions"
+        v-for="(champion, i) in champions"
         :key="champion">
         <div
           v-if="i < 3"
@@ -59,12 +62,11 @@ const champions = computed (() => [...c].slice(0, 3).reverse())
     </template>
     <Placeholder
       v-else
-      class="size-11 rounded-full mr-1">
-    </Placeholder>
+      class="size-11 rounded-full mr-1"></Placeholder>
     <div
       v-if="champions?.length > 3"
       class="avatar avatar-placeholder">
-      <div class="bg-neutral text-neutral-content w-11 text-2">
+      <div class="bg-neutral text-neutral-content w-11 text-xs">
         <span>+99</span>
       </div>
     </div>

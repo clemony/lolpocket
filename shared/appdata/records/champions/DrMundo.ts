@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:56 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:11 PM CDT
 
 const champion: Champion = {
   "id": 36,
@@ -124,7 +124,10 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "20 / 22.5 / 25 / 27.5 / 30% of target's current health"
+                {
+                  "values": "20 / 22.5 / 25 / 27.5 / 30",
+                  "unit": "% of target's current health"
+                }
               ]
             }
           ]
@@ -135,13 +138,17 @@ const champion: Champion = {
             {
               "attribute": "Minimum Damage",
               "modifiers": [
-                "80 / 130 / 180 / 230 / 280"
+                {
+                  "values": "80 / 130 / 180 / 230 / 280"
+                }
               ]
             },
             {
               "attribute": "Capped Monster Damage",
               "modifiers": [
-                "350 / 425 / 500 / 575 / 650"
+                {
+                  "values": "350 / 425 / 500 / 575 / 650"
+                }
               ]
             }
           ]
@@ -178,13 +185,17 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage per Tick",
               "modifiers": [
-                "5 / 8.75 / 12.5 / 16.25 / 20"
+                {
+                  "values": "5 / 8.75 / 12.5 / 16.25 / 20"
+                }
               ]
             },
             {
               "attribute": "Total Magic Damage",
               "modifiers": [
-                "80 / 140 / 200 / 260 / 320"
+                {
+                  "values": "80 / 140 / 200 / 260 / 320"
+                }
               ]
             }
           ]
@@ -198,8 +209,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "20 / 35 / 50 / 65 / 80",
-                "7% bonus health"
+                {
+                  "values": "20 / 35 / 50 / 65 / 80"
+                },
+                {
+                  "values": "7",
+                  "unit": "% bonus health"
+                }
               ]
             }
           ]
@@ -230,7 +246,10 @@ const champion: Champion = {
             {
               "attribute": "Bonus Attack Damage",
               "modifiers": [
-                "2 / 2.2 / 2.4 / 2.6 / 2.8% maximum health"
+                {
+                  "values": "2 / 2.2 / 2.4 / 2.6 / 2.8",
+                  "unit": "% maximum health"
+                }
               ]
             }
           ]
@@ -241,15 +260,25 @@ const champion: Champion = {
             {
               "attribute": "Minimum Bonus Physical Damage",
               "modifiers": [
-                "5 / 15 / 25 / 35 / 45",
-                "7% bonus health"
+                {
+                  "values": "5 / 15 / 25 / 35 / 45"
+                },
+                {
+                  "values": "7",
+                  "unit": "% bonus health"
+                }
               ]
             },
             {
               "attribute": "Maximum Bonus Physical Damage",
               "modifiers": [
-                "7 / 21 / 35 / 49 / 63",
-                "9.8% bonus health"
+                {
+                  "values": "7 / 21 / 35 / 49 / 63"
+                },
+                {
+                  "values": "9.8",
+                  "unit": "% bonus health"
+                }
               ]
             }
           ]
@@ -285,31 +314,46 @@ const champion: Champion = {
             {
               "attribute": "Increased Base Health",
               "modifiers": [
-                "15 / 20 / 25% missing health"
+                {
+                  "values": "15 / 20 / 25",
+                  "unit": "% missing health"
+                }
               ]
             },
             {
               "attribute": "Bonus Movement Speed",
               "modifiers": [
-                "15 / 25 / 35%"
+                {
+                  "values": "15 / 25 / 35",
+                  "unit": "%"
+                }
               ]
             },
             {
               "attribute": "Bonus Health Regeneration",
               "modifiers": [
-                "10 / 20 / 30% maximum health"
+                {
+                  "values": "10 / 20 / 30",
+                  "unit": "% maximum health"
+                }
               ]
             },
             {
               "attribute": "Health Regenerated per 0.5 Seconds",
               "modifiers": [
-                "1 / 2 / 3% maximum health"
+                {
+                  "values": "1 / 2 / 3",
+                  "unit": "% maximum health"
+                }
               ]
             },
             {
               "attribute": "Total Health Regenerated",
               "modifiers": [
-                "20 / 40 / 60% maximum health"
+                {
+                  "values": "20 / 40 / 60",
+                  "unit": "% maximum health"
+                }
               ]
             }
           ]

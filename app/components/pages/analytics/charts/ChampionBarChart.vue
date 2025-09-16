@@ -1,5 +1,12 @@
 <script setup lang="ts">
-import { BarElement, CategoryScale, Chart as ChartJS, LinearScale, Title, Tooltip } from 'chart.js'
+import {
+  BarElement,
+  CategoryScale,
+  Chart as ChartJS,
+  LinearScale,
+  Title,
+  Tooltip,
+} from 'chart.js'
 import { nextTick, onMounted, ref, watch } from 'vue'
 import { Bar } from 'vue-chartjs'
 
@@ -16,9 +23,11 @@ ChartJS.register(Title, Tooltip, BarElement, CategoryScale, LinearScale)
 
 const data = computed(() => ({
   labels: champions.map(c => c.champion ?? ''),
-  datasets: [{
-    data: champions.map(c => c.winrate ?? 0),
-  }],
+  datasets: [
+    {
+      data: champions.map(c => c.winrate ?? 0),
+    },
+  ],
 }))
 
 const chartRef = ref<any>(null)
@@ -89,7 +98,6 @@ const options = {
   },
   plugins: {
     tooltip: {
-
       displayColors: false,
       caretPadding: 20,
       bodySpacing: -5,
@@ -156,7 +164,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="relative  border-shadow-sm  pt-4 grid place-items-center h-150 min-h-150 w-210 ">
+  <div
+    class="relative border-shadow-sm pt-4 grid place-items-center h-150 min-h-150 w-210">
     <Bar
       id="championAnalysis"
       ref="chartRef"

@@ -38,7 +38,10 @@ export function useItemFilterProvider() {
 
   const debouncedQuery = refDebounced(queryRef, 200)
 
-  function intersect(matched: Set<number>, ids: number[] | undefined): Set<number> {
+  function intersect(
+    matched: Set<number>,
+    ids: number[] | undefined
+  ): Set<number> {
     if (!ids || ids.length === 0)
       return matched
     return new Set(ids.filter(id => matched.has(id)))
@@ -72,7 +75,9 @@ export function useItemFilterProvider() {
 
     if (filters.value.purchasable) {
       const unpurchasableSet = new Set(itemFilters.unpurchasable)
-      matchedIds = new Set([...matchedIds].filter(id => !unpurchasableSet.has(id)))
+      matchedIds = new Set(
+        [...matchedIds].filter(id => !unpurchasableSet.has(id))
+      )
     }
 
     if (query) {
@@ -88,7 +93,7 @@ export function useItemFilterProvider() {
             name.includes(query)
             || akas.some(aka => aka.toLowerCase().includes(query))
           )
-        }),
+        })
       )
     }
 

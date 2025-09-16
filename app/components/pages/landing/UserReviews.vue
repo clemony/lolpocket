@@ -10,7 +10,7 @@ function setApi(val: CarouselApi) {
   api.value = val
 }
 
-computed (() => {
+computed(() => {
   if (!api.value)
     return null
 
@@ -28,7 +28,8 @@ watchOnce(api, (api) => {
 </script>
 
 <template>
-  <div class="w-full bg-b1 items-center pt-40 pb-40 px-30 grid items-center relative  overflow-hidden">
+  <div
+    class="w-full bg-b1 items-center pt-40 pb-40 px-30 grid items-center relative overflow-hidden">
     <Carousel
       :opts="{
         loop: true,
@@ -36,7 +37,7 @@ watchOnce(api, (api) => {
       @init-api="setApi">
       <CarouselContent class="size-full">
         <CarouselItem
-          v-for="page, i in reviews"
+          v-for="(page, i) in reviews"
           :key="i"
           class="**:[&_p]:leading-7 w-full place-items-center justify-self-center grid grid-cols-2 grid-rows-2 p-30 gap-x-40 gap-y-60 h-full items-center">
           <motion.div
@@ -52,7 +53,7 @@ watchOnce(api, (api) => {
               delay: 0.3,
               duration: 0.4,
             }">
-            <h1 class=" dst  font-black font-serif leading-9">
+            <h1 class="dst font-black font-serif leading-9">
               “{{ r.title }}”
             </h1>
 
@@ -60,14 +61,15 @@ watchOnce(api, (api) => {
               <ChampionIcon
                 :id="r.id"
                 :alt="r.name"
-                class=" size-22 overflow-hidden rounded-full shrink-0 mt-4" />
+                class="size-22 overflow-hidden rounded-full shrink-0 mt-4" />
 
               <div>
                 <p
-                  class="text-bc text-4 w-full [&_u]:decoration-dotted   dst mt-5"
+                  class="text-bc text-md w-full [&_u]:decoration-dotted dst mt-5"
                   v-html="r.text" />
 
-                <p class="text-right mt-2 italic  justify-self-end flex gap-2 items-center">
+                <p
+                  class="text-right mt-2 italic justify-self-end flex gap-2 items-center">
                   - {{ r.location }}
                   <icon
                     v-tippy="`${r.tip}`"
@@ -89,14 +91,14 @@ watchOnce(api, (api) => {
       <label
         v-for="i in 2"
         :key="i"
-        class="size-5   cursor-pointer rounded-full grid place-items-center overflow-hidden group ">
+        class="size-5 cursor-pointer rounded-full grid place-items-center overflow-hidden group">
         <input
           type="radio"
           :value="i"
           class="peer hidden" />
 
         <div
-          class="group-hover:bg-b4 group-hover:ring-1 ring-neutral  bg-b3 size-2 btn btn-circle pointer-events-none tldr-20 ring-offset-2"
+          class="group-hover:bg-b4 group-hover:ring-1 ring-neutral bg-b3 size-2 btn btn-circle pointer-events-none tldr-20 ring-offset-2"
           :class="{ 'bg-neutral group-hover:bg-neutral': i == i }" />
       </label>
     </div>

@@ -1,11 +1,11 @@
 import { hexoid } from 'hexoid'
 import * as v from 'valibot'
-import { FixedArray, getDeepDefaults, MinMaxArray } from './schema.helpers'
+import { FixedArray, getDeepDefaults, MinMaxArray } from './helpers/helpers'
 
-import { patchIndex } from '#shared/appdata/index/index'
+import { patchIndex } from '../appdata/index/index'
 
 import { generateName } from '../utils/generateStrings'
-import { pType } from '../utils/pType'
+import { pType } from './helpers/pType'
 
 const toID = hexoid()
 
@@ -92,7 +92,12 @@ export const PocketSchema = v.object({
   runes: v.optional(v.array(RuneSetSchema)),
   spells: v.optional(v.array(SpellSetSchema)),
   main: v.optional(MainSchema), // keep required if always present
-  created: v.optional(v.pipe(v.string(), v.transform(s => new Date(s)))),
+  created: v.optional(
+    v.pipe(
+      v.string(),
+      v.transform(s => new Date(s))
+    )
+  ),
   updated: v.optional(v.number()),
   tags: v.optional(v.array(v.string())),
   location: PocketLocationSchema,
@@ -103,23 +108,27 @@ export const PocketSchema = v.object({
 export type Pocket = v.InferOutput<typeof PocketSchema>
 
 // Card
-export const CardSchema = v.nullable(v.object({
-  key: v.string(),
-  champion: v.string(),
-  items: MinMaxArray(v.fallback(v.array(ItemSetSchema), []), 0, 4),
-  runes: RuneSetSchema,
+export const CardSchema = v.nullable(
+  v.object({
+    key: v.string(),
+    champion: v.string(),
+    items: MinMaxArray(v.fallback(v.array(ItemSetSchema), []), 0, 4),
+    runes: RuneSetSchema,
 
-  // Style
-  splash: v.nullable(v.string()),
-  align: v.nullable(v.string()),
-  color: v.fallback(v.string(), '#FFFFFF'),
-  filter: v.fallback(v.union([v.literal('color'), v.literal('grayscale')]), 'grayscale'),
-  font: v.strictTuple([
-    v.fallback(v.string(), 'var(--font-serif)'),
-    v.fallback(v.string(), 'var(--font-sans)'),
-  ]),
-
-}))
+    // Style
+    splash: v.nullable(v.string()),
+    align: v.nullable(v.string()),
+    color: v.fallback(v.string(), '#FFFFFF'),
+    filter: v.fallback(
+      v.union([v.literal('color'), v.literal('grayscale')]),
+      'grayscale'
+    ),
+    font: v.strictTuple([
+      v.fallback(v.string(), 'var(--font-serif)'),
+      v.fallback(v.string(), 'var(--font-sans)'),
+    ]),
+  })
+)
 
 // --- Type ---
 export type Card = v.InferOutput<typeof CardSchema>
@@ -142,6 +151,10 @@ export function newRuneSet(): RuneSet {
   }
 }
 
+export async function generatePocket(pockets: Pocket[]) {
+  pockets.push(newPocket())
+}
+
 export function newItemSet(): ItemSet {
   const a = getDeepDefaults(ItemSetSchema)
   a.id = toID()
@@ -162,7 +175,7 @@ export function newSpellSet(): SpellSet {
 }
 
 export function addSpellSet(pocket: Pocket | string) {
-  let set = <SpellSet[]>([])
+  let set = <SpellSet[]>[]
   set = pType(pocket).spells
   const a = getDeepDefaults(SpellSetSchema)
   a.id = toID()
@@ -174,7 +187,7 @@ export function addRuneSet(pocket: Pocket | string) {
   if (p.runes.length >= 10)
     return 'Max amount of rune sets reached!'
 
-  let set = <RuneSet[]>([])
+  let set = <RuneSet[]>[]
   set = p.runes
   const a = newRuneSet()
   a.id = toID()
@@ -198,8 +211,4 @@ export function newPocket(): Pocket {
     location: { pinned: false, folder: '' },
     notes: [],
   }
-}
-
-export async function generatePocket() {
-  ps().pockets.push(newPocket())
 }

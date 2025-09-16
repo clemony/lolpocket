@@ -8,7 +8,7 @@ const props = defineProps<{
   <Motion
     as-child
     :layout="true">
-    <CollapsibleContent class="CollapsibleContent  w-full px-0">
+    <CollapsibleContent class="CollapsibleContent w-full px-0">
       <Field
         class=""
         :class="cn('px-5 py-6 rounded-t-none border-t-0 -mt-2', props.class)">

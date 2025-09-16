@@ -1,5 +1,11 @@
 <script setup lang="ts">
-const { class: className, url, size, transparent, img } = defineProps<{
+const {
+  class: className,
+  url,
+  size,
+  transparent,
+  img,
+} = defineProps<{
   url?: string
   img?: string
   class?: HTMLAttributes['class']
@@ -11,13 +17,28 @@ const loaded = ref(false)
 </script>
 
 <template>
-  <label :class="cn(' size-full relative text-nc overflow-hidden bg-neutral shrink-0 grid place-items-center', { 'shadow-sm shadow-black/6 drop-shadow-sm drop-shadow-black/6': !transparent || (transparent && !url) }, className)">
-
+  <label
+    :class="
+      cn(
+        ' size-full relative text-nc overflow-hidden bg-neutral shrink-0 grid place-items-center',
+        {
+          'shadow-sm shadow-black/6 drop-shadow-sm drop-shadow-black/6':
+            !transparent || (transparent && !url),
+        },
+        className,
+      )
+    ">
     <Img
       v-if="url || img"
       :img="url || img"
       alt="pocket icon"
-      :class="cn(' pointer-events-none  size-full z-2 scale-160 mt-1.5 shrink-0 size-full absolute object-center opacity-0 transition-opacity duration-300', { 'opacity-100': loaded }, imgClass)"
+      :class="
+        cn(
+          ' pointer-events-none  size-full z-2 scale-160 mt-1.5 shrink-0 size-full absolute object-center opacity-0 transition-opacity duration-300',
+          { 'opacity-100': loaded },
+          imgClass,
+        )
+      "
       @load="loaded = true" />
 
     <icon
@@ -27,7 +48,12 @@ const loaded = ref(false)
 
     <span
       v-else
-      :class="cn('uppercase subpixel-antialiased text-nc z-0 absolute grid place-items-center size-full font-semibold text-4 ', { 'text-[0.7rem] font-bold': size && size == 'sm' })">
+      :class="
+        cn(
+          'uppercase subpixel-antialiased text-nc z-0 absolute grid place-items-center size-full font-semibold text-md ',
+          { 'text-[0.7rem] font-bold': size && size == 'sm' },
+        )
+      ">
       LP
     </span>
     <slot />

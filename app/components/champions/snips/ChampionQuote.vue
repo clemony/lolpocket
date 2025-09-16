@@ -2,17 +2,19 @@
 import type { PrimitiveProps } from 'reka-ui'
 import { Primitive } from 'reka-ui'
 
-const { as = 'span', class: className } = defineProps<PrimitiveProps & {
-  as?: string
-  class?: HTMLAttributes['class']
-}>()
+const { as = 'span', class: className } = defineProps<
+  PrimitiveProps & {
+    as?: string
+    class?: HTMLAttributes['class']
+  }
+>()
 
 const quotes = [
   '"Braum! What are you doing over there?! Are you drunk?" -Ashe',
   '"So, Braum. No shirt, huh? And I don\'t have pants. Yay, Freljord." -Ashe',
   '"A Crownguard and a mage? Wouldn\'t want to be her." -Sona',
   '"Sylas? He hasn\'t changed. And my answer is still no." -Sona',
-  '\"It\'s good to see Taric hasn\'t changed. And bad. It\'s both." -Sona',
+  '"It\'s good to see Taric hasn\'t changed. And bad. It\'s both." -Sona',
   '"Stay positive." -Lux',
   '"Kat and Garen sitting in a tree~ And you better just be holding hands or I\'m telling!" -Lux',
   '"I\'m sure your wife forgives you for getting her soul taken by a remorseless creature of darkness!" -Lux',
@@ -77,7 +79,7 @@ const quotes = [
 ]
 
 const quote = ref(null)
-onMounted (async () => {
+onMounted(async () => {
   quote.value = getRandom(quotes)
 })
 </script>

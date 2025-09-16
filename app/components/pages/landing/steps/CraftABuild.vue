@@ -67,18 +67,19 @@ function setTimer(timer, i?, item?) {
   }, 2000)
 }
 
-onMounted (async () => {
+onMounted(async () => {
   currentItems.value = getRandom(ix.items)
 })
 </script>
 
 <template>
-  <div class=" size-full  relative flex flex-col gap-6 items-center justify-center">
+  <div
+    class="size-full relative flex flex-col gap-6 items-center justify-center">
     <div class="flex gap-4 absolute top-5 h-16">
       <div
         v-if="champModel && champComplete"
         v-tippy="champModel.name"
-        class="size-16   hover:scale-110 hover:ring-1 hover:ring-neutral rounded-lg shadow-sm drop-shadow-sm transition-all duration-400 animate-in slide-in-from-bottom-10 hover:ring-offset-2 hover:ring-offset-b2">
+        class="size-16 hover:scale-110 hover:ring-1 hover:ring-neutral rounded-lg shadow-sm drop-shadow-sm transition-all duration-400 animate-in slide-in-from-bottom-10 hover:ring-offset-2 hover:ring-offset-b2">
         <ChampionIcon
           :id="champModel"
           class="overflow-hidden size-16 rounded-lg" />
@@ -97,7 +98,7 @@ onMounted (async () => {
       <Transition name="puff">
         <p
           v-if="!champModel"
-          class="f-sb text-4 f-tt">
+          class="f-sb text-md f-tt">
           Select a Champion...
         </p>
       </Transition>
@@ -125,7 +126,7 @@ onMounted (async () => {
       <Transition name="puff">
         <p
           v-if="!itemModel[itemIndex].item"
-          class="f-sb text-4 f-tt">
+          class="f-sb text-md f-tt">
           Select your first item...
         </p>
       </Transition>
@@ -139,10 +140,18 @@ onMounted (async () => {
           v-for="item in currentItems"
           :key="item.name">
           <label
-            v-if="itemModel[itemIndex].item ? item == itemModel[itemIndex] : currentItems.includes(item)"
+            v-if="
+              itemModel[itemIndex].item
+                ? item == itemModel[itemIndex]
+                : currentItems.includes(item)
+            "
             v-tippy="item.name"
             class="size-16 cursor-pointer hover:scale-110 hover:ring-1 hover:ring-neutral rounded-lg shadow-sm drop-shadow-sm transition-all duration-300 hover:ring-offset-2 hover:ring-offset-b2"
-            :class="{ hidden: itemModel[itemIndex].item != null && item != itemModel[itemIndex].item }">
+            :class="{
+              hidden:
+                itemModel[itemIndex].item != null
+                && item != itemModel[itemIndex].item,
+            }">
             <input
               v-model="itemModel[itemIndex].item"
               name="item"
@@ -160,7 +169,7 @@ onMounted (async () => {
 
           <h1
             v-if="item == itemModel[itemIndex].item"
-            class="flex gap-3 items-center ">
+            class="flex gap-3 items-center">
             {{ item.name }}
             <icon
               name="line-md:confirm-circle"
@@ -172,6 +181,4 @@ onMounted (async () => {
   </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

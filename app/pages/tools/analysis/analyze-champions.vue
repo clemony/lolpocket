@@ -17,8 +17,8 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="size-full pt-16 ">
-    <div class="grid grid-cols-[0.9fr_1fr]  gap-6 size-full justify-center ">
+  <div class="size-full pt-16">
+    <div class="grid grid-cols-[0.9fr_1fr] gap-6 size-full justify-center">
       <!--       <div class="flex flex-col items-center gap-8 size-full">
         <PocketPickChampion
           v-if="bayesianChampions.length && bayesianChampions[0]"

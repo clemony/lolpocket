@@ -171,5 +171,5 @@ export const championTitleIndex: Record<string, string> = {
   Ziggs: 'the Hexplosives Expert',
   Zilean: 'the Chronokeeper',
   Zoe: 'the Aspect of Twilight',
-  Zyra: 'Rise of the Thorns'
+  Zyra: 'Rise of the Thorns',
 }

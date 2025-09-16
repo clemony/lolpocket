@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:56 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:12 PM CDT
 
 const champion: Champion = {
   "id": 429,
@@ -130,8 +130,13 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "10 / 75 / 140 / 205 / 270",
-                "105% AD"
+                {
+                  "values": "10 / 75 / 140 / 205 / 270"
+                },
+                {
+                  "values": "105",
+                  "unit": "% AD"
+                }
               ]
             }
           ]
@@ -171,13 +176,18 @@ const champion: Champion = {
             {
               "attribute": "Bonus Magic Damage",
               "modifiers": [
-                "10 / 12 / 14 / 16 / 18% of target's maximum health"
+                {
+                  "values": "10 / 12 / 14 / 16 / 18",
+                  "unit": "% of target's maximum health"
+                }
               ]
             },
             {
               "attribute": "Maximum Non-Champion Damage",
               "modifiers": [
-                "100 / 125 / 150 / 175 / 200"
+                {
+                  "values": "100 / 125 / 150 / 175 / 200"
+                }
               ]
             }
           ]
@@ -221,24 +231,46 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "5 / 15 / 25 / 35 / 45",
-                "70% AD",
-                "20% AP"
+                {
+                  "values": "5 / 15 / 25 / 35 / 45"
+                },
+                {
+                  "values": "70",
+                  "unit": "% AD"
+                },
+                {
+                  "values": "20",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Damage per Additional Stack",
               "modifiers": [
-                "7 / 14 / 21 / 28 / 35",
-                "20 / 25 / 30 / 35 / 40% AD",
-                "20% AP"
+                {
+                  "values": "7 / 14 / 21 / 28 / 35"
+                },
+                {
+                  "values": "20 / 25 / 30 / 35 / 40",
+                  "unit": "% AD"
+                },
+                {
+                  "values": "20",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Slow",
               "modifiers": [
-                "10 / 18 / 26 / 34 / 42%",
-                "5% per 100 AP"
+                {
+                  "values": "10 / 18 / 26 / 34 / 42",
+                  "unit": "%"
+                },
+                {
+                  "values": "5",
+                  "unit": "% per 100 AP"
+                }
               ]
             }
           ]
@@ -249,7 +281,9 @@ const champion: Champion = {
             {
               "attribute": "Mana Restored",
               "modifiers": [
-                "10 / 15 / 20 / 25 / 30"
+                {
+                  "values": "10 / 15 / 20 / 25 / 30"
+                }
               ]
             }
           ]
@@ -289,7 +323,10 @@ const champion: Champion = {
             {
               "attribute": "Airborne Duration",
               "modifiers": [
-                "1 / 1.5 / 2 seconds"
+                {
+                  "values": "1 / 1.5 / 2",
+                  "unit": " seconds"
+                }
               ]
             }
           ]

@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:15 PM CDT
 
 const champion: Champion = {
   "id": 17,
@@ -126,14 +126,22 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "80 / 125 / 170 / 215 / 260",
-                "70% AP"
+                {
+                  "values": "80 / 125 / 170 / 215 / 260"
+                },
+                {
+                  "values": "70",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Blind Duration",
               "modifiers": [
-                "2 / 2.25 / 2.5 / 2.75 / 3 seconds"
+                {
+                  "values": "2 / 2.25 / 2.5 / 2.75 / 3",
+                  "unit": " seconds"
+                }
               ]
             }
           ]
@@ -144,7 +152,10 @@ const champion: Champion = {
             {
               "attribute": "Increased Blind Duration",
               "modifiers": [
-                "4 / 4.5 / 5 / 5.5 / 6 seconds"
+                {
+                  "values": "4 / 4.5 / 5 / 5.5 / 6",
+                  "unit": " seconds"
+                }
               ]
             }
           ]
@@ -177,7 +188,10 @@ const champion: Champion = {
             {
               "attribute": "Bonus Movement Speed",
               "modifiers": [
-                "12 / 16 / 20 / 24 / 28%"
+                {
+                  "values": "12 / 16 / 20 / 24 / 28",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -188,7 +202,10 @@ const champion: Champion = {
             {
               "attribute": "Enhanced Bonus Movement Speed",
               "modifiers": [
-                "24 / 32 / 40 / 48 / 56%"
+                {
+                  "values": "24 / 32 / 40 / 48 / 56",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -218,22 +235,37 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage On-Hit",
               "modifiers": [
-                "9 / 23 / 37 / 51 / 65",
-                "30% AP"
+                {
+                  "values": "9 / 23 / 37 / 51 / 65"
+                },
+                {
+                  "values": "30",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Magic Damage per Tick",
               "modifiers": [
-                "6 / 12 / 18 / 24 / 30",
-                "10% AP"
+                {
+                  "values": "6 / 12 / 18 / 24 / 30"
+                },
+                {
+                  "values": "10",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Total Poison Damage",
               "modifiers": [
-                "24 / 48 / 72 / 96 / 120",
-                "40% AP"
+                {
+                  "values": "24 / 48 / 72 / 96 / 120"
+                },
+                {
+                  "values": "40",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -244,22 +276,37 @@ const champion: Champion = {
             {
               "attribute": "Monster Damage On-Hit",
               "modifiers": [
-                "13.05 / 33.35 / 53.65 / 73.95 / 94.25",
-                "43.5% AP"
+                {
+                  "values": "13.05 / 33.35 / 53.65 / 73.95 / 94.25"
+                },
+                {
+                  "values": "43.5",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Monster Damage per Tick",
               "modifiers": [
-                "8.7 / 17.4 / 26.1 / 34.8 / 43.5",
-                "14.5% AP"
+                {
+                  "values": "8.7 / 17.4 / 26.1 / 34.8 / 43.5"
+                },
+                {
+                  "values": "14.5",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Total Monster Poison Damage",
               "modifiers": [
-                "34.8 / 69.6 / 104.4 / 139.2 / 174",
-                "58% AP"
+                {
+                  "values": "34.8 / 69.6 / 104.4 / 139.2 / 174"
+                },
+                {
+                  "values": "58",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -287,7 +334,9 @@ const champion: Champion = {
             {
               "attribute": "Bounce Distance Cap",
               "modifiers": [
-                "350 / 450 / 550"
+                {
+                  "values": "350 / 450 / 550"
+                }
               ]
             }
           ]
@@ -298,7 +347,9 @@ const champion: Champion = {
             {
               "attribute": "Maximum Charges",
               "modifiers": [
-                "3 / 4 / 5"
+                {
+                  "values": "3 / 4 / 5"
+                }
               ]
             }
           ]
@@ -309,7 +360,10 @@ const champion: Champion = {
             {
               "attribute": "Slow",
               "modifiers": [
-                "30 / 40 / 50%"
+                {
+                  "values": "30 / 40 / 50",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -320,15 +374,25 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage per Tick",
               "modifiers": [
-                "50 / 81.25 / 112.5",
-                "12.5% AP"
+                {
+                  "values": "50 / 81.25 / 112.5"
+                },
+                {
+                  "values": "12.5",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Total Magic Damage",
               "modifiers": [
-                "200 / 325 / 450",
-                "50% AP"
+                {
+                  "values": "200 / 325 / 450"
+                },
+                {
+                  "values": "50",
+                  "unit": "% AP"
+                }
               ]
             }
           ]

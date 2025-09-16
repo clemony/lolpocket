@@ -21,11 +21,16 @@ export const inboxUnreadFilter = shallowRef<boolean>(false)
 export const sortedMessages = computed(() => {
   const as = useAccountStore()
   let box = [...(as.account?.inbox?.messages || [])]
-  box = openBox.value == 'Messages' ? box.filter(m => !m.trash) : openBox.value == 'Trash' ? box.filter(m => m.trash == true) : []
+  box
+    = openBox.value == 'Messages'
+      ? box.filter(m => !m.trash)
+      : openBox.value == 'Trash'
+        ? box.filter(m => m.trash == true)
+        : []
   box = inboxUnreadFilter.value ? box.filter(m => !m.read) : box
 
   return box.sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   )
 })
 

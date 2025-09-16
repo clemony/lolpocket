@@ -1,32 +1,40 @@
 import { Parser } from 'expr-eval'
 
 export function preProcess(input: string): string {
-  return input.replace(/([a-z0-9])\{\{/gi, '$1 {{')
+  return input
+    .replace(/([a-z0-9])\{\{/gi, '$1 {{')
     .replace(/\}\}([a-z0-9])/gi, '}} $1')
     .replace(/for \d+\|/gi, '|')
 }
 export function postProcess(text: string): string {
-  return text
-    .replace(/\[\[([^[\]|]+)(?:\|([^[\]]+))?\]\]/g, (_, target, display) => display?.trim() || target.trim())
-    .replace(/'''''(.*?)'''''/g, '<b><i>$1</i></b>')
-    .replace(/'''(.*?)'''/g, '<b>$1</b>')
-    .replace(/''(.*?)''/g, '<i>$1</i>')
-    .replace('+color=pd ', '')
-    .replace('+color=md ', '')
-    .replace('+ +', '+')
-    .replace('icononly=true', '')
-  // .replace(/\(\+ \((.*\).*)\)/g, '(+$1')
-    .replace(/([a-z])(\d)/gi, '$1 $2')
-    .replace(/\(\+\s/g, '(+')
-    .replace(/\s+/g, ' ')
-    .replace(/AD\sad/g, 'AD ')
-    .replace(/\(\d+% of <i>Immolate's<\/i> damage\)/g, '')
-    .trim()
+  return (
+    text
+      .replace(
+        /\[\[([^[\]|]+)(?:\|([^[\]]+))?\]\]/g,
+        (_, target, display) => display?.trim() || target.trim()
+      )
+      .replace(/'''''(.*?)'''''/g, '<b><i>$1</i></b>')
+      .replace(/'''(.*?)'''/g, '<b>$1</b>')
+      .replace(/''(.*?)''/g, '<i>$1</i>')
+      .replace('+color=pd ', '')
+      .replace('+color=md ', '')
+      .replace('+ +', '+')
+      .replace('icononly=true', '')
+      // .replace(/\(\+ \((.*\).*)\)/g, '(+$1')
+      .replace(/([a-z])(\d)/gi, '$1 $2')
+      .replace(/\(\+\s/g, '(+')
+      .replace(/\(\+\s\(/g, '+ (')
+      .replace(/\s+/g, ' ')
+      .replace(/AD\sad/g, 'AD ')
+      .replace(/\(\d+% of <i>Immolate's<\/i> damage\)/g, '')
+      .trim()
+  )
 }
 export function ludensPreProcess(input: string) {
   // Regex to match both pp blocks and capture their contents
-  // eslint-disable-next-line regexp/no-super-linear-backtracking
-  const ppRegex = /\{\{pp\|(?:key=%\|)?([^|]+?)\s+to\s+([^|]+?)\s+for\s+\d+\|(\d+\s+to\s+\d+)/g
+
+  const ppRegex
+    = /\{\{pp\|(?:key=%\|)?([^|]+?)\s+to\s+([^|]+?)\s+for\s+\d+\|(\d+\s+to\s+\d+)/g
   const ludenStart = input.replace(/\{\{ft\|deal an additional.*/, '')
   const results = []
 
@@ -48,7 +56,7 @@ export function ludensPreProcess(input: string) {
         value2,
       })
     }
-    catch (error) {
+    catch (error: any) {
       console.log('❌ Error evaluating expressions:', error.message)
     }
   }
