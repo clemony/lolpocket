@@ -10,26 +10,22 @@ const item: Item = {
     {
       name: 'The Path Between',
       unique: true,
-      effects: 'If you have at least 130 <b>bonus</b> attack damage and 180 ability power, enter either the <i>Material World</i> or the <i>Spirit World</i>, determined randomly, at the start of the combat phase in each round:<br><br>• <b>Material World</b>: Increase your attack damage by 20% and gain 50% – 150% (based on %) <b>bonus</b> attack speed.<br>• <b>Spirit World</b>: Increase your ability power by 20% and gain 30 – 120 (based on level) ability haste.'
-    }
+      effects:
+        'If you have at least 130 <b>bonus</b> attack damage and 180 ability power, enter either the <i>Material World</i> or the <i>Spirit World</i>, determined randomly, at the start of the combat phase in each round:<br><br>• <b>Material World</b>: Increase your attack damage by 20% and gain 50% – 150% (based on %) <b>bonus</b> attack speed.<br>• <b>Spirit World</b>: Increase your ability power by 20% and gain 30 – 120 (based on level) ability haste.',
+    },
   ],
   stats: {
     abilityPower: 100,
-    attackDamage: 70
+    attackDamage: 70,
   },
   shop: {
     prices: {
       total: 0,
       combined: 1000,
-      sell: 0
+      sell: 0,
     },
-    tags: [
-      'MARKSMAN',
-      'MAGE'
-    ]
+    tags: ['MARKSMAN', 'MAGE'],
   },
-  maps: [
-    30
-  ]
+  maps: [30],
 }
 export default item

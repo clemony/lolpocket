@@ -6,23 +6,27 @@ const route = useRoute()
 const groups = [
   {
     name: 'pinned',
-    pockets: computed (() => ps().pockets.filter(p => p.location.pinned)).value
+    pockets: computed(() => ps().pockets.filter(p => p.location.pinned))
+      .value,
   },
 
   {
     name: 'unsorted',
-    pockets: computed (() => ps().pockets.filter(p => !p.location.pinned && p.location.folder == 'all')).value
-  }
+    pockets: computed(() =>
+      ps().pockets.filter(
+        p => !p.location.pinned && p.location.folder == 'all'
+      )
+    ).value,
+  },
 ]
 </script>
 
 <template>
   <aside>
-    <SidebarHeaderWrapper
-      title="Pockets" />
+    <SidebarHeaderWrapper title="Pockets" />
     <div class="px-6 py-4 flex flex-col gap-4">
       <Collapsible
-        v-for="group, i in groups"
+        v-for="(group, i) in groups"
         :key="group.name"
         v-model:open="us().collapseStates.panel.pocket[i]"
         class="pr-2">
@@ -37,15 +41,20 @@ const groups = [
         </CollapsibleTrigger>
 
         <CollapsibleContent
-          class=" after:top-3 mt-2 pt-1 gap-1  relative flex flex-col justify-items-center">
+          class="after:top-3 mt-2 pt-1 gap-1 relative flex flex-col justify-items-center">
           <Blink
             v-for="pocket in group.pockets"
             :key="pocket.key"
             :to="`/pocket/${pocket.key}`"
             variant="ghost"
             size="lg"
-            :class="cn('gap-2.75 pl-4 w-full !duration-0 !text-bc/60 h-10 text-3 capitalize text-nowrap flex-nowrap overflow-hidden hover:!text-bc justify-start', { 'btn-active': route.params?.pocket_key == pocket.key })"
-            @click=" emit('close-sidebar')">
+            :class="
+              cn(
+                'gap-2.75 pl-4 w-full !duration-0 !text-bc/60 h-10 text-sm capitalize text-nowrap flex-nowrap overflow-hidden hover:!text-bc justify-start',
+                { 'btn-active': route.params?.pocket_key == pocket.key },
+              )
+            "
+            @click="emit('close-sidebar')">
             {{ pocket.name || pocket.key }}
           </Blink>
         </CollapsibleContent>

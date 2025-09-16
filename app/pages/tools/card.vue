@@ -38,17 +38,21 @@ const isSettingsOpen = ref(true)
 
 const pocketCardRef = ref(null)
 
-onMounted (() => {
+onMounted(() => {
   ps.pocketCardRef = pocketCardRef.value
 })
 // getSplash(card.splash) ||
 const img = useImage()
-const splash = computed (() => 'https://universe.communitydragon.org/events/2024/anima-squad-embed-2024/images/bg-index-index.2630f6.jpg')
+const splash = computed(
+  () =>
+    'https://universe.communitydragon.org/events/2024/anima-squad-embed-2024/images/bg-index-index.2630f6.jpg'
+)
 console.log('💠 - card.splash:', card.splash)
 </script>
 
 <template>
-  <div class="h-full w-full grid items-center relative justify-center overflow-hidden ">
+  <div
+    class="h-full w-full grid items-center relative justify-center overflow-hidden">
     <!--
 
       <div class="px-1 dst">
@@ -87,14 +91,16 @@ console.log('💠 - card.splash:', card.splash)
       :min-zoom="0.5"
       :max-zoom="2"
       :wheel-zoom-step="0.01"
-      class="h-screen w-full grid place-items-center relative overflow-hidden ">
+      class="h-screen w-full grid place-items-center relative overflow-hidden">
       <div
         id="pocket-card"
         ref="pocketCardRef"
-        class="inset-shadow-sm border-b3/70 border h-300 shadow-smooth w-300 relative rounded-box object-contain  aspect-square "
-        :style="{ backgroundImage: `linear-gradient(130deg, ${card.color} 0%, #FFFFFF 60%)` }">
+        class="inset-shadow-sm border-b3/70 border h-300 shadow-smooth w-300 relative rounded-box object-contain aspect-square"
+        :style="{
+          backgroundImage: `linear-gradient(130deg, ${card.color} 0%, #FFFFFF 60%)`,
+        }">
         <div
-          class="size-full overflow-hidden  rounded-2xl transition-all duration-500  mask-right-100"
+          class="size-full overflow-hidden rounded-2xl transition-all duration-500 mask-right-100"
           :class="{ grayscale: card.filter == 'grayscale' }">
           <div
             alt="pocket-card-bg"
@@ -102,10 +108,11 @@ console.log('💠 - card.splash:', card.splash)
               backgroundImage: `url(${img(splash, { quality: 100 })})`,
               backgroundPositionX: `${card.align}%`,
             }"
-            class="size-full bg-cover  mask-top" />
+            class="size-full bg-cover mask-top" />
         </div>
 
-        <div class="absolute grid grid-cols-[1.5fr_1fr] h-full top-0 inset-0 left-0 pt-28 px-16">
+        <div
+          class="absolute grid grid-cols-[1.5fr_1fr] h-full top-0 inset-0 left-0 pt-28 px-16">
           <div class="flex flex-col **:select-none">
             <!--         <div class="">
               <h3
@@ -116,7 +123,7 @@ console.log('💠 - card.splash:', card.splash)
               </h3>
 
               <h1
-                class="text-12 tracking-tight drop-shadow-sm"
+                class="text-xxs2 tracking-tight drop-shadow-sm"
                 :style="{ fontFamily: card.font[0] }"
                 :class="fontClass1">
                 {{ ix().champNameByKey(card.champion) ?? '' }}
@@ -127,7 +134,15 @@ console.log('💠 - card.splash:', card.splash)
               <template
                 v-for="(set, i) in card.items"
                 :key="i">
-                <template v-if="set && set != undefined && card.items.length && set != null && card.items[0] != undefined && card.items[0] != null">
+                <template
+                  v-if="
+                    set
+                      && set != undefined
+                      && card.items.length
+                      && set != null
+                      && card.items[0] != undefined
+                      && card.items[0] != null
+                  ">
                   <!-- CompleteItemSets
                     :set="card.items[i]"
                     :pocket="pocket" /> -->
@@ -143,5 +158,4 @@ console.log('💠 - card.splash:', card.splash)
   </div>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

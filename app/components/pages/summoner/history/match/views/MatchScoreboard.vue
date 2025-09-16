@@ -10,13 +10,15 @@ const teams = computed(() => {
   }
 })
 
-const playerRank = computed (() => {
-  const sort = [...match.participants].map(p => ({
-    puuid: p.puuid,
-    mvpScore: p.mvpScore,
-    win: p.win,
-    team: p.teamId,
-  })).sort((a, b) => b.mvpScore - a.mvpScore)
+const playerRank = computed(() => {
+  const sort = [...match.participants]
+    .map(p => ({
+      puuid: p.puuid,
+      mvpScore: p.mvpScore,
+      win: p.win,
+      team: p.teamId,
+    }))
+    .sort((a, b) => b.mvpScore - a.mvpScore)
 
   return {
     list: sort,

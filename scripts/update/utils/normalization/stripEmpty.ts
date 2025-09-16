@@ -7,7 +7,7 @@ export function stripEmpty(obj: any): any {
           v !== undefined
           && v !== null
           && v !== ''
-          && !(Array.isArray(v) && v.length === 0),
+          && !(Array.isArray(v) && v.length === 0)
       )
   }
 
@@ -21,8 +21,8 @@ export function stripEmpty(obj: any): any {
             && v !== null
             && v !== ''
             && !(Array.isArray(v) && v.length === 0)
-            && !(k === 'purchasable' && v === true),
-        ),
+            && !(k === 'purchasable' && v === true)
+        )
     )
   }
 

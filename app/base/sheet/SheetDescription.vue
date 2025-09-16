@@ -4,7 +4,9 @@ import { DialogDescription } from 'reka-ui'
 
 import type { HTMLAttributes } from 'vue'
 
-const props = defineProps<DialogDescriptionProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<
+  DialogDescriptionProps & { class?: HTMLAttributes['class'] }
+>()
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props
@@ -15,7 +17,7 @@ const delegatedProps = computed(() => {
 
 <template>
   <DialogDescription
-    :class="cn('text-2 text-bc ', props.class)"
+    :class="cn('text-xs text-bc ', props.class)"
     v-bind="delegatedProps">
     <slot />
   </DialogDescription>

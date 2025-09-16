@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:56 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:12 PM CDT
 
 const champion: Champion = {
   "id": 126,
@@ -123,14 +123,22 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "60 / 105 / 150 / 195 / 240 / 285",
-                "135% bonus AD"
+                {
+                  "values": "60 / 105 / 150 / 195 / 240 / 285"
+                },
+                {
+                  "values": "135",
+                  "unit": "% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Slow",
               "modifiers": [
-                "35 / 40 / 45 / 50 / 55 / 60%"
+                {
+                  "values": "35 / 40 / 45 / 50 / 55 / 60",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -165,8 +173,13 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "60 / 110 / 160 / 210 / 260 / 310",
-                "140% bonus AD"
+                {
+                  "values": "60 / 110 / 160 / 210 / 260 / 310"
+                },
+                {
+                  "values": "140",
+                  "unit": "% bonus AD"
+                }
               ]
             }
           ]
@@ -177,8 +190,13 @@ const champion: Champion = {
             {
               "attribute": "Increased Damage",
               "modifiers": [
-                "84 / 154 / 224 / 294 / 364 / 434",
-                "196% bonus AD"
+                {
+                  "values": "84 / 154 / 224 / 294 / 364 / 434"
+                },
+                {
+                  "values": "196",
+                  "unit": "% bonus AD"
+                }
               ]
             }
           ]
@@ -212,7 +230,9 @@ const champion: Champion = {
             {
               "attribute": "Mana Restored",
               "modifiers": [
-                "15 / 17 / 19 / 21 / 23 / 25"
+                {
+                  "values": "15 / 17 / 19 / 21 / 23 / 25"
+                }
               ]
             }
           ]
@@ -223,15 +243,25 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage Per Tick",
               "modifiers": [
-                "35 / 50 / 65 / 80 / 95 / 110",
-                "25% AP"
+                {
+                  "values": "35 / 50 / 65 / 80 / 95 / 110"
+                },
+                {
+                  "values": "25",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Total Magic Damage",
               "modifiers": [
-                "140 / 200 / 260 / 320 / 380 / 440",
-                "100% AP"
+                {
+                  "values": "140 / 200 / 260 / 320 / 380 / 440"
+                },
+                {
+                  "values": "100",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -261,7 +291,10 @@ const champion: Champion = {
             {
               "attribute": "Damage Modifier",
               "modifiers": [
-                "70 / 78 / 86 / 94 / 102 / 110% AD"
+                {
+                  "values": "70 / 78 / 86 / 94 / 102 / 110",
+                  "unit": "% AD"
+                }
               ]
             }
           ]
@@ -293,14 +326,22 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "8 / 10.8 / 13.6 / 16.4 / 19.2 / 22% of target's maximum health",
-                "100% bonus AD"
+                {
+                  "values": "8 / 10.8 / 13.6 / 16.4 / 19.2 / 22",
+                  "unit": "% of target's maximum health"
+                },
+                {
+                  "values": "100",
+                  "unit": "% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Maximum Monster Damage",
               "modifiers": [
-                "200 / 300 / 400 / 500 / 600 / 700"
+                {
+                  "values": "200 / 300 / 400 / 500 / 600 / 700"
+                }
               ]
             }
           ]
@@ -334,7 +375,10 @@ const champion: Champion = {
             {
               "attribute": "Bonus Movement Speed",
               "modifiers": [
-                "35 / 40 / 45 / 50 / 55 / 60%"
+                {
+                  "values": "35 / 40 / 45 / 50 / 55 / 60",
+                  "unit": "%"
+                }
               ]
             }
           ]

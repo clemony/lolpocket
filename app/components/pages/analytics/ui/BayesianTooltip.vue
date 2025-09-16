@@ -6,7 +6,9 @@ const props = defineProps<{
 
 <template>
   <tippy :class="cn('flex gap-1 transition dr-20 !cursor-info', props.class)">
-    <span class="hover:underline underline-offset-2 !cursor-info"><slot /></span>
+    <span class="hover:underline underline-offset-2 !cursor-info">
+      <slot />
+    </span>
 
     <icon
       name="ph:info"
@@ -15,13 +17,16 @@ const props = defineProps<{
     <template #content>
       <b>WP</b>
 
-      : Weighted Probability<br />
+      : Weighted Probability
+      <br />
 
       <Separator class="opacity-10 my-0.5" />
 
-      Calculated using Bayesian inference--A<br />
+      Calculated using Bayesian inference--A
+      <br />
 
-      method in statistics to calculate probability<br />
+      method in statistics to calculate probability
+      <br />
       based on previous evidence.
     </template>
   </tippy>

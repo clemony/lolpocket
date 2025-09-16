@@ -21,7 +21,10 @@ const model = ref(props.model)
       name="favorite"
       :aria-label="`favorite ${props.name}`"
       class="mask mask-heart bg-[#dd5f61]"
-      :class="{ 'group-hover:opacity-40 transition-all duration-300': !props.model.includes(value) }"
+      :class="{
+        'group-hover:opacity-40 transition-all duration-300':
+          !props.model.includes(value),
+      }"
       @change="emit('update:model', model)" />
   </label>
 </template>

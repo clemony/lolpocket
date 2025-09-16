@@ -5,23 +5,24 @@ const { card: c, champion } = defineProps<{
 }>()
 const ix = useIndexStore()
 
-const card = computed (() => c)
+const card = computed(() => c)
 
 // TODO FIX
 </script>
 
 <template>
   <Popover>
-    <PopoverTrigger class="btn btn-ghost btn-circle btn size-11 hover:bg-b2 hover:border-b3">
+    <PopoverTrigger
+      class="btn btn-ghost btn-circle btn size-11 hover:bg-b2 hover:border-b3">
       <div
         v-if="champion"
         :key="champion"
-        class="size-8   rounded-full  overflow-hidden"
-        :class="{ }">
+        class="size-8 rounded-full overflow-hidden"
+        :class="{}">
         <Image
           :image="`/img/champion/${champion}.webp`"
           :alt="champion"
-          class=" !size-8 scale-114" />
+          class="!size-8 scale-114" />
       </div>
     </PopoverTrigger>
 

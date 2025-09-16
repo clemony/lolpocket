@@ -7,7 +7,9 @@ import type { HTMLAttributes } from 'vue'
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { useCommand, useCommandGroup } from './cindex'
 
-const props = defineProps<ListboxItemProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<
+  ListboxItemProps & { class?: HTMLAttributes['class'] }
+>()
 const emits = defineEmits<ListboxItemEmits>()
 
 const delegatedProps = reactiveOmit(props, 'class')
@@ -42,7 +44,10 @@ onMounted(() => {
     return
 
   // textValue to perform filter
-  allItems.value.set(id, currentElement.value.textContent ?? props.value.toString())
+  allItems.value.set(
+    id,
+    currentElement.value.textContent ?? props.value.toString()
+  )
 
   const groupId = groupContext?.id
   if (groupId) {
@@ -65,10 +70,17 @@ onUnmounted(() => {
     v-bind="forwarded"
     :id="id"
     ref="itemRef"
-    :class="cn('relative flex cursor-default gap-2 select-none items-center rounded-md px-2 py-1.5 text-2 outline-none data-[highlighted]:bg-b2/60  = data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg]:size-6 [&_svg]:shrink-0 [&_svg]:-mx-1', props.class)"
-    @select="() => {
-      filterState.search = ''
-    }">
+    :class="
+      cn(
+        'relative flex cursor-default gap-2 select-none items-center rounded-md px-2 py-1.5 text-xs outline-none data-[highlighted]:bg-b2/60  = data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg]:size-6 [&_svg]:shrink-0 [&_svg]:-mx-1',
+        props.class,
+      )
+    "
+    @select="
+      () => {
+        filterState.search = ''
+      }
+    ">
     <slot />
   </ListboxItem>
 </template>

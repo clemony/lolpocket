@@ -3,9 +3,12 @@ import type { PaginationLastProps } from 'reka-ui'
 import { PaginationLast } from 'reka-ui'
 import { computed } from 'vue'
 
-const props = withDefaults(defineProps<PaginationLastProps & { class?: HTMLAttributes['class'] }>(), {
-  asChild: true,
-})
+const props = withDefaults(
+  defineProps<PaginationLastProps & { class?: HTMLAttributes['class'] }>(),
+  {
+    asChild: true,
+  }
+)
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props

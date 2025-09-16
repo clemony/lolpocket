@@ -4,22 +4,22 @@ const { name } = defineProps<{
 }>()
 console.log('🌱 - name:', name)
 
-const box = computed (() => name == 'pockets'
-  ? ps().pockets.filter(p => p.location.folder == '').length
-  : name == 'archive'
-    ? ps().pockets.filter(p => p.location.folder == 'archive').length
+const box = computed(() =>
+  name == 'pockets'
+    ? ps().pockets.filter(p => p.location.folder == '').length
     : name == 'archive'
-      ? ps().pockets.filter(p => p.location.folder == 'trash').length
-      : null)
+      ? ps().pockets.filter(p => p.location.folder == 'archive').length
+      : name == 'archive'
+        ? ps().pockets.filter(p => p.location.folder == 'trash').length
+        : null
+)
 console.log('🌱 - box:', box)
 </script>
 
 <template>
   <span
     v-if="box"
-    :class="cn(
-      'ml-auto text-bc/70',
-    )">
+    :class="cn('ml-auto text-bc/70')">
     {{ box || 0 }}
   </span>
 </template>

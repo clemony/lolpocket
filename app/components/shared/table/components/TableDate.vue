@@ -5,7 +5,8 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="flex flex-col justify-center w-full  **:h-fit **:leading-none h-full gap-y-1 font-medium">
+  <div
+    class="flex flex-col justify-center w-full **:h-fit **:leading-none h-full gap-y-1 font-medium">
     <p>{{ props.params.value.patch }}</p>
 
     <p>{{ props.params.value.date }}</p>

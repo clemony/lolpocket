@@ -1,5 +1,9 @@
 <script lang="ts" setup>
-const { page, class: className, link } = defineProps<{
+const {
+  page,
+  class: className,
+  link,
+} = defineProps<{
   page: PageRecord
   class?: HTMLAttributes['class']
   link?: string
@@ -25,13 +29,12 @@ function navigate() {
 
 <template>
   <li
-
     :variants="variants"
     initial="hidden"
     animate="visible"
     exit="hidden">
     <a
-      class="btn-ghost-dark group "
+      class="btn-ghost-dark group"
       :class="cn('', className)"
       @click="navigate()">
       <slot />
@@ -40,8 +43,9 @@ function navigate() {
         {{ page.altName ?? page.name }}
       </span>
 
-      <Badge class="capitalize justify-self-end opacity-40 text-1 group-hover:opacity-80 mr-1">
-        {{ page.meta?.section ?? '' }}
+      <Badge
+        class="capitalize justify-self-end opacity-40 text-xxs group-hover:opacity-80 mr-1">
+        {{ page.meta?.section ?? "" }}
       </Badge>
 
       <icon

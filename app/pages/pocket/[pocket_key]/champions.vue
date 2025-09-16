@@ -10,18 +10,21 @@ definePageMeta({
 })
 
 const route = useRoute()
-const pocket = computed(() => ps().getPocket(String(route.params.pocket_key))).value
+const pocket = computed(() =>
+  ps().getPocket(String(route.params.pocket_key))
+).value
 
 const searchQuery = ref<string>('')
 const { results } = useSimpleSearch(
   ix().champions, // array or ref
-  searchQuery,
+  searchQuery
 )
 </script>
 
 <template>
-  <div class="size-full z-auto overflow-y-auto  pt-12  -mr-34 pr-30">
-    <div class="flex gap-8 sticky z-1 bg-linear-to-b from-b1 to-b1/70 backdrop-blur-lg -top-12 py-4 pl-13 pr-16 items-center justify-end w-full">
+  <div class="size-full z-auto overflow-y-auto pt-12 -mr-34 pr-30">
+    <div
+      class="flex gap-8 sticky z-1 bg-linear-to-b from-b1 to-b1/70 backdrop-blur-lg -top-12 py-4 pl-13 pr-16 items-center justify-end w-full">
       <SelectedChampions :pocket="pocket" />
       <Input
         v-model="searchQuery"
@@ -34,9 +37,11 @@ const { results } = useSimpleSearch(
     </div>
 
     <div
-      class="h-fit  pb-34 grid grid-flow-row auto-cols-auto pt-14  grid-cols-[repeat(auto-fill,minmax(80px,1fr))]  pl-16 pr-24 w-full inset-0   gap-3">
+      class="h-fit pb-34 grid grid-flow-row auto-cols-auto pt-14 grid-cols-[repeat(auto-fill,minmax(80px,1fr))] pl-16 pr-24 w-full inset-0 gap-3">
       <tippy
-        v-for="champion in results.filter(r => !pocket.champions.includes(r.key))"
+        v-for="champion in results.filter(
+          (r) => !pocket.champions.includes(r.key),
+        )"
         :key="champion.id"
         :arrow="false"
         :tag="null"
@@ -48,7 +53,7 @@ const { results } = useSimpleSearch(
           :title="champion.name"
           :class="cn('hover-ring cursor-pointer rounded-lg size-26')">
           <PrismaticShine
-            v-if=" pocket.champions.includes(champion.key) "
+            v-if="pocket.champions.includes(champion.key)"
             class="scale-114 pointer-events-none" />
           <input
             v-model="pocket.champions"
@@ -58,7 +63,7 @@ const { results } = useSimpleSearch(
         </ChampionIcon>
         <template #content>
           <ULink
-            :to="`/library/champions/${champion.key}`"
+            :to="`/champions/${champion.key}`"
             class="flex gap-1 items-center">
             {{ champion.name }}
             <icon
@@ -71,6 +76,6 @@ const { results } = useSimpleSearch(
   </div>
 </template>
 
-      <!--       <ChampionQuote
+<!--       <ChampionQuote
         v-once
-        class="italic text-2 font-normal absolute top-6 right-16" /> -->
+        class="italic text-xs font-normal absolute top-6 right-16" /> -->

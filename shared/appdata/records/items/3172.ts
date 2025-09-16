@@ -6,8 +6,8 @@ const item: Item = {
     {
       id: 3006,
       name: 'Berserker\'s Greaves',
-      gold: 1100
-    }
+      gold: 1100,
+    },
   ],
   specialRecipe: 0,
   noEffects: false,
@@ -18,30 +18,24 @@ const item: Item = {
     {
       name: 'Like the Wind',
       unique: true,
-      effects: 'Basic attacks on-hit grant a stack of <i>Like The Wind</i> for 6 seconds, refreshing on subsequent attacks. For each stack, gain 5% <b>bonus</b> movement speed ms, stacking up to 5 times for a total of 25% ms.'
-    }
+      effects:
+        'Basic attacks on-hit grant a stack of <i>Like The Wind</i> for 6 seconds, refreshing on subsequent attacks. For each stack, gain 5% <b>bonus</b> movement speed ms, stacking up to 5 times for a total of 25% ms.',
+    },
   ],
   stats: {
     attackSpeed: 50,
     percentMovespeed: 10,
     abilityHaste: 30,
-    tenacity: 20
+    tenacity: 20,
   },
   shop: {
     prices: {
       total: 2500,
       combined: 500,
-      sell: 1000
+      sell: 1000,
     },
-    tags: [
-      'MARKSMAN',
-      'FIGHTER'
-    ]
+    tags: ['MARKSMAN', 'FIGHTER'],
   },
-  maps: [
-    11,
-    21,
-    35
-  ]
+  maps: [11, 21, 35],
 }
 export default item

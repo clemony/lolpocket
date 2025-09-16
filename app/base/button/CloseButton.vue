@@ -5,7 +5,7 @@ const props = withDefaults(
   }>(),
   {
     tip: 'Clear',
-  },
+  }
 )
 </script>
 
@@ -19,6 +19,4 @@ const props = withDefaults(
   </button>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

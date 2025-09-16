@@ -2,11 +2,16 @@
 import type { PrimitiveProps } from 'reka-ui'
 import { Primitive } from 'reka-ui'
 
-const props = withDefaults(defineProps<PrimitiveProps & {
-  class?: HTMLAttributes['class']
-}>(), {
-  as: 'span',
-})
+const props = withDefaults(
+  defineProps<
+    PrimitiveProps & {
+      class?: HTMLAttributes['class']
+    }
+  >(),
+  {
+    as: 'span',
+  }
+)
 </script>
 
 <template>

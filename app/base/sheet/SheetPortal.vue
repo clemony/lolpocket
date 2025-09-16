@@ -8,6 +8,4 @@ import { DialogPortal } from 'reka-ui'
   </DialogPortal>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

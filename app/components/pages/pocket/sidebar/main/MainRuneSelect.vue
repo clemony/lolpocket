@@ -1,5 +1,12 @@
 <script lang="ts" setup>
-const { class: className, pocket: p, side, sideOffset, align, alignOffset } = defineProps<{
+const {
+  class: className,
+  pocket: p,
+  side,
+  sideOffset,
+  align,
+  alignOffset,
+} = defineProps<{
   class?: HTMLAttributes['class']
   pocket: Pocket
   side?: Side
@@ -10,8 +17,10 @@ const { class: className, pocket: p, side, sideOffset, align, alignOffset } = de
 
 const route = useRoute()
 
-const pocket = computed (() => p)
-const mainSet = computed (() => pocket.value.runes.find(s => s.id == pocket.value.main?.runes))
+const pocket = computed(() => p)
+const mainSet = computed(() =>
+  pocket.value.runes.find(s => s.id == pocket.value.main?.runes)
+)
 </script>
 
 <template>
@@ -20,7 +29,12 @@ const mainSet = computed (() => pocket.value.runes.find(s => s.id == pocket.valu
     class="p-0 w-full">
     <BaseSelectTrigger
       icon-class="opacity-10 group-hover/select:opacity-50"
-      :class="cn('w-full hover:ring hover:ring-b3/50 pb-1 group/select flex-nowrap h-22 pl-2 flex justify-start relative  gap-2 items-center relative *:last:!right-2', className)">
+      :class="
+        cn(
+          'w-full hover:ring hover:ring-b3/50 pb-1 group/select flex-nowrap h-22 pl-2 flex justify-start relative  gap-2 items-center relative *:last:!right-2',
+          className,
+        )
+      ">
       <img
         v-if="mainSet?.keystone"
         :title="String(ix().runeNameById(mainSet?.keystone))"
@@ -29,22 +43,30 @@ const mainSet = computed (() => pocket.value.runes.find(s => s.id == pocket.valu
         class="!w-20 shrink-0 place-self-center drop-shadow-md !h-auto" />
       <Placeholder
         v-else
-        class="size-18  group-hover/select:!bg-b1 transition-all duration-250  rounded-full">
+        class="size-18 group-hover/select:!bg-b1 transition-all duration-250 rounded-full">
         <i-lol-runes
           class="!size-9 text-bc/50 opacity-0 group-hover/select:opacity-100 transition-all duration-250 shrink-0" />
       </Placeholder>
 
-      <span :class="cn('size-9  rounded-full   group-hover/select:!bg-b1 transition-all duration-250  border grid place-items-center border-b3/60 absolute bottom-2.25 right-6.5', !mainSet?.secondary?.path ? 'bg-tint-b2/60' : 'bg-b1 drop-shadow-sm shadow-sm')">
+      <span
+        :class="
+          cn(
+            'size-9  rounded-full   group-hover/select:!bg-b1 transition-all duration-250  border grid place-items-center border-b3/60 absolute bottom-2.25 right-6.5',
+            !mainSet?.secondary?.path
+              ? 'bg-tint-b2/60'
+              : 'bg-b1 drop-shadow-sm shadow-sm',
+          )
+        ">
         <img
           v-if="mainSet?.secondary?.path"
           :title="mainSet?.secondary?.path"
           :alt="mainSet?.secondary?.path"
           :src="`/img/paths/${mainSet?.secondary?.path}.webp`"
-          class="w-6.5  !h-auto" />
+          class="w-6.5 !h-auto" />
 
         <i-lol-runes
           v-else
-          class="!size-5.5 text-bc/60 opacity-0 group-hover/select:opacity-100 transition-all duration-250  shrink-0" />
+          class="!size-5.5 text-bc/60 opacity-0 group-hover/select:opacity-100 transition-all duration-250 shrink-0" />
       </span>
     </BaseSelectTrigger>
 

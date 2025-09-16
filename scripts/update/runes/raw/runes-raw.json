@@ -8,10 +8,7 @@
     "longDesc": "Attacks or abilities against an enemy champion within 0.25s of entering champion combat grant 10 gold and <b>First Strike</b> for 3 seconds, causing you to deal <truedamage>7%</truedamage> extra <truedamage> damage</truedamage> against champions, and granting <gold>50% (35% for ranged champions)</gold> of bonus damage dealt as <gold>gold</gold>.<br><br>Cooldown: <scaleLevel>25 - 15</scaleLevel>s",
     "recommendationDescriptor": "True Damage, Income",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
-    "endOfGameStatDescs": [
-      "Damage Dealt: @eogvar1@",
-      "Gold Gained: @eogvar2@"
-    ],
+    "endOfGameStatDescs": ["Damage Dealt: @eogvar1@", "Gold Gained: @eogvar2@"],
     "recommendationDescriptorAttributes": {}
   },
   {
@@ -23,9 +20,7 @@
     "longDesc": "Charge up a powerful attack against a tower over 3s, while within 600 range of it. The charged attack deals 100 (+35% of your max health) bonus physical damage. <br><br>Cooldown: 45s",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Resolve/Demolish/Demolish.png",
-    "endOfGameStatDescs": [
-      "Total Bonus Damage: @eogvar1@"
-    ],
+    "endOfGameStatDescs": ["Total Bonus Damage: @eogvar1@"],
     "recommendationDescriptorAttributes": {
       "kUtility": 10
     }
@@ -39,9 +34,7 @@
     "longDesc": "Damaging champions with <b>impaired movement or actions</b> deals 10 - 45 bonus true damage (based on level).<br><br>Cooldown: 4s<br><rules>Activates on damage occurring after the impairment.</rules>",
     "recommendationDescriptor": "Earned by winning ranked games in Season 2020 - Split 1.",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/CheapShot/CheapShot.png",
-    "endOfGameStatDescs": [
-      "Total damage: @eogvar1@"
-    ],
+    "endOfGameStatDescs": ["Total damage: @eogvar1@"],
     "recommendationDescriptorAttributes": {
       "kBurstDamage": 5,
       "kDamagePerSecond": 5
@@ -68,9 +61,7 @@
     "longDesc": "Gain <speed>7.5% Move Speed</speed> towards nearby enemy champions that are movement impaired. This bonus is increased to <speed>15% Move Speed</speed> for any enemy champion that you impair. <br><br>Activation Range for CC from allies: 1000",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Resolve/ApproachVelocity/ApproachVelocity.png",
-    "endOfGameStatDescs": [
-      "Time Spent Hasted: @eogvar1@"
-    ],
+    "endOfGameStatDescs": ["Time Spent Hasted: @eogvar1@"],
     "recommendationDescriptorAttributes": {
       "kMoveSpeed": 10
     }
@@ -84,9 +75,7 @@
     "longDesc": "Gain <speed>10 Move Speed</speed> and <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>13 - 30 Adaptive Force</font></lol-uikit-tooltipped-keyword> (based on level) when in the river.<br><br><i>May you be as swift as the rushing river and agile as a startled Rift Scuttler.</i>",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/Waterwalking/Waterwalking.png",
-    "endOfGameStatDescs": [
-      "Total time active: @eogvar1@:@eogvar2@"
-    ],
+    "endOfGameStatDescs": ["Total time active: @eogvar1@:@eogvar2@"],
     "recommendationDescriptorAttributes": {
       "kBurstDamage": 2,
       "kDamagePerSecond": 2,
@@ -102,9 +91,7 @@
     "longDesc": "Deal 5% - 11% increased damage to champions while you are below 60% health. Max damage gained at 30% health.",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/LastStand/LastStand.png",
-    "endOfGameStatDescs": [
-      "Total Bonus Damage: @eogvar1@"
-    ],
+    "endOfGameStatDescs": ["Total Bonus Damage: @eogvar1@"],
     "recommendationDescriptorAttributes": {
       "kBurstDamage": 1,
       "kDamagePerSecond": 9
@@ -119,9 +106,7 @@
     "longDesc": "Hitting a champion with 3 <b>separate</b> attacks or abilities within 3s deals bonus <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>adaptive damage</font></lol-uikit-tooltipped-keyword>.<br><br>Damage: 70 - 240 (+0.1 bonus AD, +0.05 AP) damage.<br>Cooldown: 20s<br><br><i>'We called them the Thunderlords, for to speak of their lightning was to invite disaster.'</i>",
     "recommendationDescriptor": "Combo Damage",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/Electrocute/Electrocute.png",
-    "endOfGameStatDescs": [
-      "Total Damage Dealt: @eogvar1@"
-    ],
+    "endOfGameStatDescs": ["Total Damage Dealt: @eogvar1@"],
     "recommendationDescriptorAttributes": {}
   },
   {
@@ -133,9 +118,7 @@
     "longDesc": "All movement bonuses are 7% more effective on you and gain <speed>1% Move Speed</speed>.",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/Celerity/CelerityTemp.png",
-    "endOfGameStatDescs": [
-      "Extra Distance Travelled: @eogvar1@"
-    ],
+    "endOfGameStatDescs": ["Extra Distance Travelled: @eogvar1@"],
     "recommendationDescriptorAttributes": {
       "kMoveSpeed": 10
     }
@@ -166,9 +149,7 @@
     "longDesc": "Swap one of your equipped Summoner Spells to a new, single use Summoner Spell. Each unique Summoner Spell you swap to permanently decreases your swap cooldown by 25s (initial swap cooldown is at 4 mins). <br><br>Your first swap becomes available at 6 mins. <br><rules><br>Summoner Spells can only be swapped while out of combat. <br>After using a swapped Summoner Spell you must swap 3 more times before the first can be selected again.<br>Smite damage increases after two Summoner Spell swaps. </rules>",
     "recommendationDescriptor": "Cast more Summoners",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Inspiration/UnsealedSpellbook/UnsealedSpellbook.png",
-    "endOfGameStatDescs": [
-      "Summoner Spells swapped: @eogvar1@"
-    ],
+    "endOfGameStatDescs": ["Summoner Spells swapped: @eogvar1@"],
     "recommendationDescriptorAttributes": {}
   },
   {
@@ -231,9 +212,7 @@
     "longDesc": "After taking damage from an enemy champion, the next 3 spells or attacks you receive from them deal 30-60 (based on level) less damage.<br><br>Duration: 1.5s<br>Cooldown: 55s",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Resolve/BonePlating/BonePlating.png",
-    "endOfGameStatDescs": [
-      "Total Damage Blocked: @eogvar1@"
-    ],
+    "endOfGameStatDescs": ["Total Damage Blocked: @eogvar1@"],
     "recommendationDescriptorAttributes": {
       "kDurability": 10
     }
@@ -247,9 +226,7 @@
     "longDesc": "+100 Health permanently<br>-10% damage to champions and monsters until 10 min<br><br><hr><br><i>'The greatest legends live on in the stars.' <br>—Daphna the Dreamer</i>",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Inspiration/CelestialBody/CelestialBody.png",
-    "endOfGameStatDescs": [
-      "--"
-    ],
+    "endOfGameStatDescs": ["--"],
     "recommendationDescriptorAttributes": {}
   },
   {
@@ -276,9 +253,7 @@
     "longDesc": "Your wards in the enemy jungle are <keywordMajor>Deep</keywordMajor>. <keywordMajor>Deep</keywordMajor> wards gain +1 extra Health and +[30 - 45]s increased duration (+[45 - 150]s for Trinket stealth wards).<br><br>Level 9: Wards in the river are also <keywordMajor>Deep</keywordMajor>.",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/DeepWard/DeepWard.png",
-    "endOfGameStatDescs": [
-      "Deep Wards: @eogvar1@"
-    ],
+    "endOfGameStatDescs": ["Deep Wards: @eogvar1@"],
     "recommendationDescriptorAttributes": {
       "kGold": 2,
       "kUtility": 8
@@ -293,9 +268,7 @@
     "longDesc": "Your next damaging ability hit sets champions on fire dealing 20 - 40 bonus magic damage based on level after 1s.<br><br>Cooldown: 10s",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/Scorch/Scorch.png",
-    "endOfGameStatDescs": [
-      "Total Bonus Damage: @eogvar1@"
-    ],
+    "endOfGameStatDescs": ["Total Bonus Damage: @eogvar1@"],
     "recommendationDescriptorAttributes": {
       "kBurstDamage": 7,
       "kDamagePerSecond": 3
@@ -310,9 +283,7 @@
     "longDesc": "Heal when you damage an enemy champion.<br><br>Healing: 16-40 (+0.1 bonus AD, +0.05 AP) health (based on level)<br><br>Cooldown: 20s",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/TasteOfBlood/GreenTerror_TasteOfBlood.png",
-    "endOfGameStatDescs": [
-      "Total Healing: @eogvar1@"
-    ],
+    "endOfGameStatDescs": ["Total Healing: @eogvar1@"],
     "recommendationDescriptorAttributes": {
       "kHealing": 10
     }
@@ -326,9 +297,7 @@
     "longDesc": "Killing a target restores 1 - 23 Health based on level.",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Precision/AbsorbLife/AbsorbLife.png",
-    "endOfGameStatDescs": [
-      "Total Healing: @eogvar1@"
-    ],
+    "endOfGameStatDescs": ["Total Healing: @eogvar1@"],
     "recommendationDescriptorAttributes": {
       "kDurability": 7,
       "kHealing": 3
@@ -357,9 +326,7 @@
     "longDesc": "Basic attacks or spells that deal damage to an enemy champion grant 2 stacks of Conqueror for 5s, gaining 1.8-4 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>Adaptive Force</font></lol-uikit-tooltipped-keyword> per stack. Stacks up to 12 times. Ranged champions gain only 1 stack per basic attack.<br><br>When fully stacked, heal for 8% of the damage you deal to champions (5% for ranged champions).",
     "recommendationDescriptor": "Bonus Damage, Sustain",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Precision/Conqueror/Conqueror.png",
-    "endOfGameStatDescs": [
-      "Total healing: @eogvar1@"
-    ],
+    "endOfGameStatDescs": ["Total healing: @eogvar1@"],
     "recommendationDescriptorAttributes": {}
   },
   {
@@ -371,9 +338,7 @@
     "longDesc": "Gain 1.5 basic ability haste for every <i>Legend</i> stack (<statGood>max 10 stacks</statGood>).<br><br>Earn progress toward <i>Legend</i> stacks for every champion takedown, epic monster takedown, large monster kill, and minion kill.",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Precision/LegendHaste/LegendHaste.png",
-    "endOfGameStatDescs": [
-      "Time Completed: @eogvar1@:@eogvar2@"
-    ],
+    "endOfGameStatDescs": ["Time Completed: @eogvar1@:@eogvar2@"],
     "recommendationDescriptorAttributes": {
       "kDurability": 4,
       "kUtility": 6
@@ -405,9 +370,7 @@
     "longDesc": "Deal 8% more damage to champions who have more than 60% health.",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Precision/CutDown/CutDown.png",
-    "endOfGameStatDescs": [
-      "Total Bonus Damage: @eogvar1@"
-    ],
+    "endOfGameStatDescs": ["Total Bonus Damage: @eogvar1@"],
     "recommendationDescriptorAttributes": {
       "kBurstDamage": 1,
       "kDamagePerSecond": 9
@@ -439,9 +402,7 @@
     "longDesc": "Gain bonuses upon reaching the following levels:<br>Level 5: +5 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_CDR'>Ability Haste</lol-uikit-tooltipped-keyword> <br>Level 8: +5 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_CDR'>Ability Haste</lol-uikit-tooltipped-keyword> <br>Level 11: On Champion takedown, reduce the remaining cooldown of basic abilities by 20%.",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/Transcendence/Transcendence.png",
-    "endOfGameStatDescs": [
-      "Seconds refunded: @eogvar1@"
-    ],
+    "endOfGameStatDescs": ["Seconds refunded: @eogvar1@"],
     "recommendationDescriptorAttributes": {
       "kCooldown": 10
     }
@@ -470,9 +431,7 @@
     "longDesc": "Gain +6 Magic Resist. <br><br>Heal effects from consumables, heals for at least 20 health and shields increase your Magic Resist by 5% for 3s.",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Resolve/MirrorShell/MirrorShell.png",
-    "endOfGameStatDescs": [
-      "Bonus Magic Resist: @eogvar1@"
-    ],
+    "endOfGameStatDescs": ["Bonus Magic Resist: @eogvar1@"],
     "recommendationDescriptorAttributes": {}
   },
   {
@@ -496,9 +455,7 @@
     "longDesc": "Automatically sense a nearby untracked and unseen ward, tracking it for the team. <br><br>Level 11: Also reveal the ward for 10s.<br><br>This effect has a 250 second Cooldown.",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/SixthSense/SixthSense.png",
-    "endOfGameStatDescs": [
-      "Wards sensed: @eogvar1@"
-    ],
+    "endOfGameStatDescs": ["Wards sensed: @eogvar1@"],
     "recommendationDescriptorAttributes": {
       "kUtility": 10
     }
@@ -527,9 +484,7 @@
     "longDesc": "Consuming a potion grants 40% of its health restoration immediately.",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Inspiration/TimeWarpTonic/TimeWarpTonic.png",
-    "endOfGameStatDescs": [
-      "Instant health restored: @eogvar2@"
-    ],
+    "endOfGameStatDescs": ["Instant health restored: @eogvar2@"],
     "recommendationDescriptorAttributes": {
       "kHealing": 5,
       "kMoveSpeed": 5
@@ -640,9 +595,7 @@
     "longDesc": "Whenever you gain a new shield,  your next basic attack against a champion deals <scaleLevel>5 - 30</scaleLevel> <scaleHealth>(+2.5% Bonus Health)</scaleHealth> <scaleMana>(+15.0% New Shield Amount)</scaleMana> bonus <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>adaptive</font></lol-uikit-tooltipped-keyword> damage.<br><br>You have up to 2s after the shield expires to use this effect.",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Resolve/MirrorShell/MirrorShell.png",
-    "endOfGameStatDescs": [
-      "Total Damage: @eogvar1@"
-    ],
+    "endOfGameStatDescs": ["Total Damage: @eogvar1@"],
     "recommendationDescriptorAttributes": {
       "kBurstDamage": 5,
       "kDurability": 5
@@ -704,9 +657,7 @@
     "longDesc": "After casting a Summoner Spell, gain a <speed>Move Speed</speed> increase that lasts for 2s and allows you to pass through units.<br><br>Increase: <speed>14% - 40% Move Speed</speed> based on the Summoner Spell's cooldown. (Higher cooldown Summoner Spells grant more <speed>Move Speed</speed>). ",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/NimbusCloak/6361.png",
-    "endOfGameStatDescs": [
-      "Times activated: @eogvar1@"
-    ],
+    "endOfGameStatDescs": ["Times activated: @eogvar1@"],
     "recommendationDescriptorAttributes": {
       "kMoveSpeed": 10
     }
@@ -867,9 +818,7 @@
     "longDesc": "Gain +5 Armor. <br><br>Heal effects from consumables, heals for at least 20 health and shields increase your Armor by 5% for 3s.",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Resolve/IronSkin/IronSkin.png",
-    "endOfGameStatDescs": [
-      "Percent of game active: @eogvar1@%"
-    ],
+    "endOfGameStatDescs": ["Percent of game active: @eogvar1@%"],
     "recommendationDescriptorAttributes": {}
   },
   {
@@ -881,9 +830,7 @@
     "longDesc": "Deal 8% more damage to champions who have less than 40% health.",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Precision/CoupDeGrace/CoupDeGrace.png",
-    "endOfGameStatDescs": [
-      "Total Bonus Damage: @eogvar1@"
-    ],
+    "endOfGameStatDescs": ["Total Bonus Damage: @eogvar1@"],
     "recommendationDescriptorAttributes": {
       "kBurstDamage": 8,
       "kDamagePerSecond": 2
@@ -910,9 +857,7 @@
     "longDesc": "Attacking and moving builds Energy stacks. At 100 stacks, your next attack is Energized<br><br>Energized attacks heal you for 10 - 130 (+0.1 Bonus AD, +0.05 AP) and grant <speed>20% Move Speed</speed> for 1s.<br><br>For Ranged Champions, Healing is 60% effective and Move Speed is 75% effective. All healing is 15% effective against Minions.",
     "recommendationDescriptor": "Movement, Health Recovery",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Precision/FleetFootwork/FleetFootwork.png",
-    "endOfGameStatDescs": [
-      "Total Healing: @eogvar1@"
-    ],
+    "endOfGameStatDescs": ["Total Healing: @eogvar1@"],
     "recommendationDescriptorAttributes": {}
   },
   {
@@ -941,9 +886,7 @@
     "longDesc": "Absorb life essence from monsters or enemy minions that die near you, permanently gaining 3 maximum health for every 8.<br><br>When you've absorbed 120 monsters or enemy minions, gain an additional 3.5% maximum health.",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Resolve/Overgrowth/Overgrowth.png",
-    "endOfGameStatDescs": [
-      "Total Bonus Max Health: @eogvar1@"
-    ],
+    "endOfGameStatDescs": ["Total Bonus Max Health: @eogvar1@"],
     "recommendationDescriptorAttributes": {
       "kDurability": 10
     }
@@ -957,9 +900,7 @@
     "longDesc": "Upon reaching level 3, gain an Elixir of Avarice.<br>Upon reaching level 6, gain an Elixir of Force.<br>Upon reaching level 9, gain an Elixir of Skill. ",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Inspiration/PerfectTiming/AlchemistCabinet.png",
-    "endOfGameStatDescs": [
-      "Items Gained: @eogvar1@"
-    ],
+    "endOfGameStatDescs": ["Items Gained: @eogvar1@"],
     "recommendationDescriptorAttributes": {
       "kUtility": 10
     }
@@ -973,9 +914,7 @@
     "longDesc": "Gain <scaleAD>0.35% Life Steal</scaleAD> for every <i>Legend</i> stack (<statGood>max 15 stacks</statGood>). At maximum <i>Legend</i> stacks, gain <scaleHealth>85 max health</scaleHealth>.<br><br>Earn progress toward <i>Legend</i> stacks for every champion takedown, epic monster takedown, large monster kill, and minion kill.",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Precision/LegendBloodline/LegendBloodline.png",
-    "endOfGameStatDescs": [
-      "Time Completed: @eogvar1@:@eogvar2@"
-    ],
+    "endOfGameStatDescs": ["Time Completed: @eogvar1@:@eogvar2@"],
     "recommendationDescriptorAttributes": {
       "kHealing": 10
     }
@@ -1001,9 +940,7 @@
     "longDesc": "Hitting an enemy champion with 3 attacks or <b>separate</b> abilities within 4s grants <speed>25 - 50% Move Speed</speed> based on level and <status>75% Slow Resistance</status> for 3s. Move Speed is 75% effective for ranged champions.<br>Cooldown: 30s - 10s",
     "recommendationDescriptor": "Rush of Movement",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/PhaseRush/PhaseRush.png",
-    "endOfGameStatDescs": [
-      "Total activations: @eogvar1@"
-    ],
+    "endOfGameStatDescs": ["Total activations: @eogvar1@"],
     "recommendationDescriptorAttributes": {}
   },
   {
@@ -1027,9 +964,7 @@
     "longDesc": "Impairing the movement of an enemy champion restores Health to you and the lowest health nearby allied champion.<br><br>70% effect for Ranged Users.<br><br>Cooldown: 20s",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Resolve/FontOfLife/FontOfLife.png",
-    "endOfGameStatDescs": [
-      "Total Ally Healing: @eogvar1@"
-    ],
+    "endOfGameStatDescs": ["Total Ally Healing: @eogvar1@"],
     "recommendationDescriptorAttributes": {
       "kHealing": 5,
       "kUtility": 5
@@ -1056,9 +991,7 @@
     "longDesc": "You get free Slightly Magical Footwear at 12 min, but you cannot buy boots before then. For each takedown you acquire the boots 45s sooner.<br><br>Slightly Magical Footwear grants you an additional <speed>10 Move Speed</speed>.",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png",
-    "endOfGameStatDescs": [
-      "Boots Arrival Time: @eogvar1@:@eogvar2@@eogvar3@"
-    ],
+    "endOfGameStatDescs": ["Boots Arrival Time: @eogvar1@:@eogvar2@@eogvar3@"],
     "recommendationDescriptorAttributes": {
       "kGold": 10,
       "kMoveSpeed": 3
@@ -1073,9 +1006,7 @@
     "longDesc": "Every 10 min gain AP or AD, <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>adaptive</font></lol-uikit-tooltipped-keyword>.<br><br><i>10 min</i>: + 8 AP or 5 AD <br><i>20 min</i>: + 24 AP or 14 AD<br><i>30 min</i>: + 48 AP or 29 AD<br><i>40 min</i>: + 80 AP or 48 AD<br><i>50 min</i>: + 120 AP or 72 AD<br><i>60 min</i>: + 168 AP or 101 AD<br>etc...",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/GatheringStorm/GatheringStorm.png",
-    "endOfGameStatDescs": [
-      "Total Bonus AD/AP: @eogvar1@"
-    ],
+    "endOfGameStatDescs": ["Total Bonus AD/AP: @eogvar1@"],
     "recommendationDescriptorAttributes": {
       "kBurstDamage": 5,
       "kDamagePerSecond": 5
@@ -1090,9 +1021,7 @@
     "longDesc": "Damaging an enemy champion restores 6-50 (80% for ranged) mana or 6 energy.<br><br>Takedowns restore 15% of your maximum mana or energy. <br><br>Cooldown for damage restoration: 8s",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png",
-    "endOfGameStatDescs": [
-      "Resource Restored: @eogvar1@"
-    ],
+    "endOfGameStatDescs": ["Resource Restored: @eogvar1@"],
     "recommendationDescriptorAttributes": {
       "kMana": 15
     }
@@ -1118,9 +1047,7 @@
     "longDesc": "Gain 3% attack speed plus an additional 1.5% for every <i>Legend</i> stack (<statGood>max 10 stacks</statGood>).<br><br>Earn progress toward <i>Legend</i> stacks for every champion takedown, epic monster takedown, large monster kill, and minion kill.",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Precision/LegendAlacrity/LegendAlacrity.png",
-    "endOfGameStatDescs": [
-      "Time Completed: @eogvar1@:@eogvar2@"
-    ],
+    "endOfGameStatDescs": ["Time Completed: @eogvar1@:@eogvar2@"],
     "recommendationDescriptorAttributes": {
       "kDamagePerSecond": 10
     }
@@ -1158,9 +1085,7 @@
     "longDesc": "While Flash is on cooldown it is replaced by <i>Hexflash</i>.<br><br><i>Hexflash</i>: Channel for 2s to blink to a new location.<br><br>Cooldown: 20s. Goes on a 10s cooldown when you enter champion combat.",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Inspiration/HextechFlashtraption/HextechFlashtraption.png",
-    "endOfGameStatDescs": [
-      "Times Hexflashed: @eogvar1@"
-    ],
+    "endOfGameStatDescs": ["Times Hexflashed: @eogvar1@"],
     "recommendationDescriptorAttributes": {
       "kUtility": 10
     }
@@ -1174,9 +1099,7 @@
     "longDesc": "<i>Guard</i> allies within 350 units of you, and allies you target with spells for 2.5s. While <i>Guarding</i>, if you or the ally take more than a small amount of damage over the duration of the <i>Guard</i>, both of you gain a shield for 1.5s.<br><br>Cooldown: <scaleLevel>90 - 40</scaleLevel> seconds<br>Shield: <scaleLevel>45 - 150</scaleLevel> + <scaleAP>15%</scaleAP> of your ability power + <scalehealth>5%</scalehealth> of your bonus health<br>Proc Threshold: <scaleLevel>50 - 165</scaleLevel> postmitigation damage",
     "recommendationDescriptor": "Shield Allies",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Resolve/Guardian/Guardian.png",
-    "endOfGameStatDescs": [
-      "Total Shield Strength: @eogvar1@"
-    ],
+    "endOfGameStatDescs": ["Total Shield Strength: @eogvar1@"],
     "recommendationDescriptorAttributes": {}
   },
   {
@@ -1188,9 +1111,7 @@
     "longDesc": "Collect eyeballs for champion takedowns. Gain an <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>adaptive</font></lol-uikit-tooltipped-keyword> bonus of 1.2 Attack Damage or 2 Ability Power, per eyeball collected. <br><br>Upon completing your collection at 10 eyeballs, additionally gain an <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>adaptive</font></lol-uikit-tooltipped-keyword> bonus of 6 Attack Damage, or 10 Ability Power.<br><br>Collect 1 eyeball per champion takedown.",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/EyeballCollection/EyeballCollection.png",
-    "endOfGameStatDescs": [
-      "Total Bonus AD/AP: @eogvar1@"
-    ],
+    "endOfGameStatDescs": ["Total Bonus AD/AP: @eogvar1@"],
     "recommendationDescriptorAttributes": {
       "kBurstDamage": 5,
       "kDamagePerSecond": 5
@@ -1229,9 +1150,7 @@
     "longDesc": "Collect 1 memento on champion <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Takedown'>takedowns</lol-uikit-tooltipped-keyword>, up to 18 total.<br><br>Gain 6 Trinket Haste for each collected. In game modes where vision Trinkets do not exist, instead gain 3 Summoner Spell Haste.",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/GrislyMementos/GrislyMementos.png",
-    "endOfGameStatDescs": [
-      "Mementos Collected: @eogvar1@"
-    ],
+    "endOfGameStatDescs": ["Mementos Collected: @eogvar1@"],
     "recommendationDescriptorAttributes": {
       "kCooldown": 5,
       "kUtility": 5
@@ -1246,9 +1165,7 @@
     "longDesc": "Damaging basic attacks and abilities deal a bonus <trueDamage>20 - 80 True Damage</trueDamage> based on level to enemy champions after using a dash, leap, blink, teleport, or when leaving stealth for 4s.<br><br>Cooldown: 10s",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/SuddenImpact/SuddenImpact.png",
-    "endOfGameStatDescs": [
-      "Bonus Damage: @eogvar1@"
-    ],
+    "endOfGameStatDescs": ["Bonus Damage: @eogvar1@"],
     "recommendationDescriptorAttributes": {
       "kBurstDamage": 8,
       "kDamagePerSecond": 2
@@ -1281,9 +1198,7 @@
     "longDesc": "After taking damage from an enemy champion, heal for 4% of your missing health +3 over 10s.",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Resolve/SecondWind/SecondWind.png",
-    "endOfGameStatDescs": [
-      "Total Healing: @eogvar1@"
-    ],
+    "endOfGameStatDescs": ["Total Healing: @eogvar1@"],
     "recommendationDescriptorAttributes": {
       "kHealing": 10
     }
@@ -1357,9 +1272,7 @@
     "longDesc": "Enchants your boots with the active effect '<font color='#c60300'>Predator</font>.'<br><br>Gain increased Move Speed, ramping up to 25-50% Move Speed over 1 second, while chasing enemy champions. After ramping up, damaging attacks or abilities to champions end this effect, dealing 20-180 (+<scaleAD>0.25</scaleAD> bonus AD)(+<scaleAP>0.15</scaleAP> AP) bonus <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>adaptive damage</font></lol-uikit-tooltipped-keyword>.<br><br>Cooldown: 120s-60s.",
     "recommendationDescriptor": "Out of Combat Movement",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Domination/Predator/Predator.png",
-    "endOfGameStatDescs": [
-      "Total Damage to Champions: @eogvar1@"
-    ],
+    "endOfGameStatDescs": ["Total Damage to Champions: @eogvar1@"],
     "recommendationDescriptorAttributes": {}
   },
   {
@@ -1371,9 +1284,7 @@
     "longDesc": "While above 70% health, gain an <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>adaptive</font></lol-uikit-tooltipped-keyword> bonus of up to 18 Attack Damage or 30 Ability Power (based on level). <br><br>Grants 1.8 Attack Damage or 3 Ability Power at level 1. ",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/AbsoluteFocus/AbsoluteFocus.png",
-    "endOfGameStatDescs": [
-      "Total time active: @eogvar1@:@eogvar2@"
-    ],
+    "endOfGameStatDescs": ["Total time active: @eogvar1@:@eogvar2@"],
     "recommendationDescriptorAttributes": {
       "kBurstDamage": 5,
       "kDamagePerSecond": 5
@@ -1429,9 +1340,7 @@
     "longDesc": "+<attention>18</attention> Summoner Spell Haste<br>+<attention>10</attention> Item Haste",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png",
-    "endOfGameStatDescs": [
-      "--"
-    ],
+    "endOfGameStatDescs": ["--"],
     "recommendationDescriptorAttributes": {
       "kCooldown": 10
     }
@@ -1457,9 +1366,7 @@
     "longDesc": "For each different stat gained from items, gain one Jack stack. Each stack grants you <speed>1 Ability Haste</speed>.<br><br>Gain 10 or 25 bonus <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'>Adaptive Force</lol-uikit-tooltipped-keyword> at 5 and 10 stacks, respectively.",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Inspiration/JackOfAllTrades/JackofAllTrades2.png",
-    "endOfGameStatDescs": [
-      "Bonus stats gained: @eogvar1@ - @eogvar2@"
-    ],
+    "endOfGameStatDescs": ["Bonus stats gained: @eogvar1@ - @eogvar2@"],
     "recommendationDescriptorAttributes": {
       "kUtility": 10
     }
@@ -1473,9 +1380,7 @@
     "longDesc": "Damaging a champion with an ability hurls a comet at their location, or, if Arcane Comet is on cooldown, reduces its remaining cooldown.<br><br><lol-uikit-tooltipped-keyword key='LinkTooltip_Description_AdaptiveDmg'><font color='#48C4B7'>Adaptive Damage</font></lol-uikit-tooltipped-keyword>: 30 - 130 based on level (<scaleAP>+0.05 AP</scaleAP> and <scaleAD>+0.1 bonus AD</scaleAD>)<br>Cooldown: 20 - 8s<br><rules><br>Cooldown Reduction:<br>Single Target: 20%.<br>Area of Effect: 10%.<br>Damage over Time: 5%.<br></rules>",
     "recommendationDescriptor": "Ability Damage",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
-    "endOfGameStatDescs": [
-      "Total Damage Dealt: @eogvar1@"
-    ],
+    "endOfGameStatDescs": ["Total Damage Dealt: @eogvar1@"],
     "recommendationDescriptorAttributes": {}
   },
   {
@@ -1499,9 +1404,7 @@
     "longDesc": "Get 6% Gold back when you purchase Legendary Items.",
     "recommendationDescriptor": "",
     "iconPath": "/lol-game-data/assets/v1/perk-images/Styles/Inspiration/CashBack/CashBack2.png",
-    "endOfGameStatDescs": [
-      "Gold Gained: @eogvar1@"
-    ],
+    "endOfGameStatDescs": ["Gold Gained: @eogvar1@"],
     "recommendationDescriptorAttributes": {
       "kGold": 15
     }

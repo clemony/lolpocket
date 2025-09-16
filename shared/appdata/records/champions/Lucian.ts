@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:56 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:13 PM CDT
 
 const champion: Champion = {
   "id": 236,
@@ -128,8 +128,14 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "85 / 115 / 145 / 175 / 205",
-                "60 / 75 / 90 / 105 / 120% bonus AD"
+                {
+                  "values": "85 / 115 / 145 / 175 / 205"
+                },
+                {
+                  "values": "60 - 120",
+                  "unit": "% bonus AD",
+                  "tooltip": "Scaling per rank:\n60 / 75 / 90 / 105 / 120% bonus AD"
+                }
               ]
             }
           ]
@@ -162,8 +168,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "75 / 110 / 145 / 180 / 215",
-                "90% AP"
+                {
+                  "values": "75 / 110 / 145 / 180 / 215"
+                },
+                {
+                  "values": "90",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -177,7 +188,9 @@ const champion: Champion = {
             {
               "attribute": "Bonus Movement Speed",
               "modifiers": [
-                "60 / 65 / 70 / 75 / 80"
+                {
+                  "values": "60 / 65 / 70 / 75 / 80"
+                }
               ]
             }
           ]
@@ -237,55 +250,123 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage Per Shot",
               "modifiers": [
-                "15 / 30 / 45",
-                "25% AD",
-                "15% AP"
+                {
+                  "values": "15 / 30 / 45"
+                },
+                {
+                  "values": "25",
+                  "unit": "% AD"
+                },
+                {
+                  "values": "15",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Additional Damage per 20% Crit Chance",
               "modifiers": [
-                "75 / 150 / 225",
-                "125% AD",
-                "75% AP"
+                {
+                  "values": "75 / 150 / 225"
+                },
+                {
+                  "values": "125",
+                  "unit": "% AD"
+                },
+                {
+                  "values": "75",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Total Physical Damage",
               "modifiers": [
-                "330 / 660 / 990  ",
-                "15 / 30 / 45   per 4% critical strike chance",
-                "550% AD",
-                "330% AP",
-                "25% AD",
-                "15% AP"
+                {
+                  "values": "330 / 660 / 990",
+                  "unit": "  "
+                },
+                {
+                  "values": "15 / 30 / 45",
+                  "unit": "   per 4% critical strike chance"
+                },
+                {
+                  "values": "550",
+                  "unit": "% AD"
+                },
+                {
+                  "values": "330",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "25",
+                  "unit": "% AD"
+                },
+                {
+                  "values": "15",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Minion Damage Per Shot",
               "modifiers": [
-                "30 / 60 / 90",
-                "50% AD",
-                "30% AP"
+                {
+                  "values": "30 / 60 / 90"
+                },
+                {
+                  "values": "50",
+                  "unit": "% AD"
+                },
+                {
+                  "values": "30",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Additional Minion Damage per 20% Crit Chance",
               "modifiers": [
-                "150 / 300 / 450",
-                "250% AD",
-                "150% AP"
+                {
+                  "values": "150 / 300 / 450"
+                },
+                {
+                  "values": "250",
+                  "unit": "% AD"
+                },
+                {
+                  "values": "150",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Total Minion Damage",
               "modifiers": [
-                "660 / 1320 / 1980  ",
-                "30 / 60 / 90   per 4% critical strike chance",
-                "1100% AD",
-                "660% AP",
-                "50% AD",
-                "30% AP"
+                {
+                  "values": "660 / 1320 / 1980",
+                  "unit": "  "
+                },
+                {
+                  "values": "30 / 60 / 90",
+                  "unit": "   per 4% critical strike chance"
+                },
+                {
+                  "values": "1100",
+                  "unit": "% AD"
+                },
+                {
+                  "values": "660",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "50",
+                  "unit": "% AD"
+                },
+                {
+                  "values": "30",
+                  "unit": "% AP"
+                }
               ]
             }
           ]

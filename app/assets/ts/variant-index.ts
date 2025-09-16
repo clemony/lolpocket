@@ -1,9 +1,11 @@
 import type { VariantProps } from 'class-variance-authority'
 import { cva } from 'class-variance-authority'
 
-export const buttonBase = 'data-[state=active]:btn-active  data-[state=open]:btn-active has-[first:[&_svg]]:gap-3 has-not-[span:empty]:gap-2 text-start data-[state=open]:btn-active has-[span:empty]:gap-0  [&_svg]:inline-flex align-middle text-3 font-normal items-center disabled:opacity-80 flex'
+export const buttonBase
+  = 'data-[state=active]:btn-active  data-[state=open]:btn-active has-[first:[&_svg]]:gap-3 has-not-[span:empty]:gap-2 text-start data-[state=open]:btn-active has-[span:empty]:gap-0  [&_svg]:inline-flex align-middle text-sm font-normal items-center disabled:opacity-80 flex'
 
-export const toggleBase = 'inline-flex items-center justify-center btn btn-ghost font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-b2 data-[state=on]:border-b3/60 [&_svg]:pointer-events-none [&_svg]:size-5 [&_svg]:shrink-0 gap-2 '
+export const toggleBase
+  = 'inline-flex items-center justify-center btn btn-ghost font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-b2 data-[state=on]:border-b3/60 [&_svg]:pointer-events-none [&_svg]:size-5 [&_svg]:shrink-0 gap-2 '
 
 const variantStyles = {
   base: 'btn bg-transparent hover:bg-transparent shadow-none border-transparent inset-shadow-none fx-0  drop-shadow-transparent shadow-none drop-shadow-none [--btn-depth:unset] [--btn-shadow:unset]  border-0',
@@ -12,11 +14,13 @@ const variantStyles = {
 
   label: 'font-medium opacity-50 items-center flex gap-3',
 
-  neutral: ' px-3 btn-neutral btn bg-neutral text-nc bg-neutral  font-medium  *:text-nc  hover:text-nc shadow-sm drop-shadow-sm border-neutral hover:bg-neutral/85 hover:**:text-nc',
+  neutral:
+    ' px-3 btn-neutral btn bg-neutral text-nc bg-neutral  font-medium  *:text-nc  hover:text-nc shadow-sm drop-shadow-sm border-neutral hover:bg-neutral/85 hover:**:text-nc',
 
   outline: 'btn btn-outline px-3  font-medium border-b3',
 
-  secondary: 'btn bg-tint-b3/40 text-bc px-3 !border-b3  font-medium shadow-sm hover:inset-shadow-xs',
+  secondary:
+    'btn bg-tint-b3/40 text-bc px-3 !border-b3  font-medium shadow-sm hover:inset-shadow-xs',
 
   ghost: 'btn btn-ghost hover:bg-tint-b2/20 font-medium px-3 ',
 
@@ -24,7 +28,10 @@ const variantStyles = {
 
   tick: 'btn border-transparent hover:border-b3/60 bg-transparent hover:bg-tint-b2/60 fx-0 hover:fx-1 text-bc  font-medium ',
 
-  shadow: 'btn px-3  font-medium shadow-xs shadow-black/6 hover:shadow-black-2 drop-shadow-black/2 drop-shadow-xs hover:inset-shadow-xs hover:drop-shadow-none hover:inset-shadow-black/6 border-b3/80  bg-transparent  hover:bg-tint-b3/30 noise-sm [&.btn-active]:bg-tint-b2/20 ',
+  field: 'btn field-box',
+
+  shadow:
+    'btn px-3  font-medium shadow-xs shadow-black/6 hover:shadow-black-2 drop-shadow-black/2 drop-shadow-xs hover:inset-shadow-xs hover:drop-shadow-none hover:inset-shadow-black/6 border-b3/80  bg-transparent  hover:bg-tint-b3/30 noise-sm [&.btn-active]:bg-tint-b2/20 ',
 
   disabled: '',
   hidden: 'hidden',
@@ -35,7 +42,8 @@ const hoverStyles = {
   b1: 'hover:!bg-b1',
   btn: 'hover:!bg-b2  hover:!border-b3/80',
   none: '',
-  neutral: ' hover:!text-nc hover:!bg-neutral/85 hover:**:!text-nc hover:!border-n3 hover:shadow-sm hover:drop-shadow-sm ',
+  neutral:
+    ' hover:!text-nc hover:!bg-neutral/85 hover:**:!text-nc hover:!border-n3 hover:shadow-sm hover:drop-shadow-sm ',
 
   outline: 'hover:inset-shadow-xxs hover:!border-bc/60 border ',
 
@@ -45,20 +53,19 @@ const hoverStyles = {
 
   link: 'underline-offset-2 hover:underline',
 
-  shadow: 'hover:shadow-black-2  hover:inset-shadow-xs hover:drop-shadow-none hover:inset-shadow-black/6  hover:bg-tint-b2/20 ',
-
+  shadow:
+    'hover:shadow-black-2  hover:inset-shadow-xs hover:drop-shadow-none hover:inset-shadow-black/6  hover:bg-tint-b2/20 ',
 }
 
 const sizes = {
   base: '',
-  xxs: 'h-6 text-2 rounded-md',
-  xs: 'h-8 text-2 rounded-md',
-  sm: 'h-9 text-2 rounded-lg',
+  xxs: 'h-6 text-xs rounded-md',
+  xs: 'h-8 text-xs rounded-md',
+  sm: 'h-9 text-xs rounded-lg',
   md: 'rounded-lg h-10',
   lg: 'rounded-lg h-12',
   xl: 'rounded-lg h-14',
   icon: 'aspect-square rounded-lg',
-
 }
 
 export const buttonVariants = cva(buttonBase, {
@@ -73,9 +80,9 @@ export const buttonVariants = cva(buttonBase, {
     },
     size: {
       base: '',
-      xxs: 'h-6 text-2 rounded-md',
-      xs: 'btn-xs text-2 rounded-md',
-      sm: 'btn-sm text-2 rounded-lg',
+      xxs: 'h-6 text-xs rounded-md',
+      xs: 'btn-xs text-xs rounded-md',
+      sm: 'btn-sm text-xs rounded-lg',
       md: 'rounded-lg btn-md',
       lg: 'rounded-lg btn-lg',
       xl: 'rounded-lg btn-xl',
@@ -95,7 +102,6 @@ export const buttonVariants = cva(buttonBase, {
 })
 
 export const labelVariants = cva('', {
-
   variants: {
     type: {},
     variant: {
@@ -121,7 +127,7 @@ export const toggleVariants = cva('', {
     variant: {
       default: 'bg-transparent',
       outline:
-          'border border-input bg-transparent hover:bg-accent hover:text-accent-foreground',
+        'border border-input bg-transparent hover:bg-accent hover:text-accent-foreground',
     },
     size: {
       ...sizes,

@@ -4,7 +4,7 @@ const selectedMail = ref<string | undefined>(props.mails[0].id)
 const searchValue = ref('')
 const debouncedSearch = refDebounced(searchValue, 250)
 
- *//* const filteredMailList = computed(() => {
+ */ /* const filteredMailList = computed(() => {
   let output: Mail[] = []
   const searchValue = debouncedSearch.value?.trim()
   if (!searchValue) {
@@ -31,6 +31,5 @@ const selectedMailData = computed(() => props.mails.find(item => item.id === sel
 </script>
 
 <template>
-  <div>
-  </div>
+  <div></div>
 </template>

@@ -30,12 +30,11 @@ function reload() {
     disableremoteplayback
     controlslist=" nodownload "
     playsinline
-    class="size-full  overflow-hidden   object-cover"
+    class="size-full overflow-hidden object-cover"
     @canplay="canPlay()"
     @error="reload()">
     <source
       :src="src"
       type="video/webm" />
-
   </video>
 </template>

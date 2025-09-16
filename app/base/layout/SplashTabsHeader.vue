@@ -9,23 +9,21 @@ const iconVariants = {
   closed: {
     height: 'calc(var(--spacing) * 16)',
     width: 'calc(var(--spacing) * 16)',
-
   },
 }
 
 const headerVariants = {
   open: {
-    fontSize: 'var(--text-12)',
+    fontSize: 'var(--text-xxs2)',
   },
   closed: {
-    fontSize: 'var(--text-6)',
-
+    fontSize: 'var(--text-xl',
   },
 }
 </script>
 
 <template>
-  <div class="relative flex items-center  w-120 h-22 items-center gap-6">
+  <div class="relative flex items-center w-120 h-22 items-center gap-6">
     <motion.div
       as-child
       :variants="iconVariants">
@@ -34,7 +32,7 @@ const headerVariants = {
 
     <div class="flex flex-col grow justify-center gap-1.5">
       <motion.div
-        class="flex  items-center gap-4"
+        class="flex items-center gap-4"
         :variants="headerVariants">
         <slot name="header" />
       </motion.div>

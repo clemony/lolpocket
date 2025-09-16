@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:56 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:11 PM CDT
 
 const champion: Champion = {
   "id": 31,
@@ -121,8 +121,13 @@ const champion: Champion = {
             {
               "attribute": "Magic damage",
               "modifiers": [
-                "80 / 135 / 190 / 245 / 300",
-                "100% AP"
+                {
+                  "values": "80 / 135 / 190 / 245 / 300"
+                },
+                {
+                  "values": "100",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -154,8 +159,13 @@ const champion: Champion = {
             {
               "attribute": "Magic damage",
               "modifiers": [
-                "80 / 130 / 180 / 230 / 280",
-                "70% AP"
+                {
+                  "values": "80 / 130 / 180 / 230 / 280"
+                },
+                {
+                  "values": "70",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -166,7 +176,10 @@ const champion: Champion = {
             {
               "attribute": "Silence Duration",
               "modifiers": [
-                "1.6 / 1.7 / 1.8 / 1.9 / 2 seconds"
+                {
+                  "values": "1.6 / 1.7 / 1.8 / 1.9 / 2",
+                  "unit": " seconds"
+                }
               ]
             }
           ]
@@ -199,23 +212,44 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "20 / 40 / 60 / 80 / 100",
-                "30% AP",
-                "2.5 / 2.85 / 3.2 / 3.55 / 3.9% (+ 0.5% per Feast stack) of target's maximum health"
+                {
+                  "values": "20 / 40 / 60 / 80 / 100"
+                },
+                {
+                  "values": "30",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "2.5 - 3.9",
+                  "unit": "% (+ 0.5% per Feast stack) of target's maximum health",
+                  "tooltip": "Scaling per rank:\n2.5 / 2.85 / 3.2 / 3.55 / 3.9% (+ 0.5% per Feast stack) of target's maximum health"
+                }
               ]
             },
             {
               "attribute": "Total Magic Damage",
               "modifiers": [
-                "60 / 120 / 180 / 240 / 300",
-                "90% AP",
-                "7.5 / 8.55 / 9.6 / 10.65 / 11.7% (+ 1.5% per Feast stack) of target's maximum health"
+                {
+                  "values": "60 / 120 / 180 / 240 / 300"
+                },
+                {
+                  "values": "90",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "7.5 - 11.7",
+                  "unit": "% (+ 1.5% per Feast stack) of target's maximum health",
+                  "tooltip": "Scaling per rank:\n7.5 / 8.55 / 9.6 / 10.65 / 11.7% (+ 1.5% per Feast stack) of target's maximum health"
+                }
               ]
             },
             {
               "attribute": "Slow",
               "modifiers": [
-                "30 / 35 / 40 / 45 / 50%"
+                {
+                  "values": "30 / 35 / 40 / 45 / 50",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -254,17 +288,33 @@ const champion: Champion = {
             {
               "attribute": "Champion True Damage",
               "modifiers": [
-                "300 / 475 / 650",
-                "50% AP",
-                "10% bonus health"
+                {
+                  "values": "300 / 475 / 650"
+                },
+                {
+                  "values": "50",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "10",
+                  "unit": "% bonus health"
+                }
               ]
             },
             {
               "attribute": "Non-Champion True Damage",
               "modifiers": [
-                "1200",
-                "50% AP",
-                "10% bonus health"
+                {
+                  "values": "1200"
+                },
+                {
+                  "values": "50",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "10",
+                  "unit": "% bonus health"
+                }
               ]
             }
           ]
@@ -278,19 +328,26 @@ const champion: Champion = {
             {
               "attribute": "Bonus Health Per Stack",
               "modifiers": [
-                "80 / 120 / 160"
+                {
+                  "values": "80 / 120 / 160"
+                }
               ]
             },
             {
               "attribute": "Bonus Attack Range Per Stack",
               "modifiers": [
-                "4.7 / 6.2 / 7.7"
+                {
+                  "values": "4.7 / 6.2 / 7.7"
+                }
               ]
             },
             {
               "attribute": "Bonus Size Per Stack",
               "modifiers": [
-                "6 / 8 / 10%"
+                {
+                  "values": "6 / 8 / 10",
+                  "unit": "%"
+                }
               ]
             }
           ]

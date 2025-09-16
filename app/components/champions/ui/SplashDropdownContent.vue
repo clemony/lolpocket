@@ -23,9 +23,11 @@ watchEffect(() => {
   splashResults.value = splashFilter.value
 })
 
-onMounted (async () => {
+onMounted(async () => {
   const champImages = import.meta.glob('/public/img/champion-centered/*')
-  images.value = Object.keys(champImages).map(path => path.replace('/public', ''))
+  images.value = Object.keys(champImages).map(path =>
+    path.replace('/public', '')
+  )
   await images.value
 })
 
@@ -46,6 +48,4 @@ onMounted (async () => {
   </PopoverContent>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

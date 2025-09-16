@@ -3,7 +3,9 @@ import { LayoutGroup } from 'motion-v'
 import type { RadioGroupRootEmits, RadioGroupRootProps } from 'reka-ui'
 import { RadioGroupRoot, useForwardPropsEmits } from 'reka-ui'
 
-const props = defineProps<RadioGroupRootProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<
+  RadioGroupRootProps & { class?: HTMLAttributes['class'] }
+>()
 const emits = defineEmits<RadioGroupRootEmits>()
 
 const delegatedProps = reactiveOmit(props, 'class')

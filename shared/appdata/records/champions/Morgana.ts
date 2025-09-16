@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:13 PM CDT
 
 const champion: Champion = {
   "id": 25,
@@ -121,14 +121,22 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "80 / 135 / 190 / 245 / 300",
-                "90% AP"
+                {
+                  "values": "80 / 135 / 190 / 245 / 300"
+                },
+                {
+                  "values": "90",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Root Duration",
               "modifiers": [
-                "2 / 2.25 / 2.5 / 2.75 / 3 seconds"
+                {
+                  "values": "2 / 2.25 / 2.5 / 2.75 / 3",
+                  "unit": " seconds"
+                }
               ]
             }
           ]
@@ -164,29 +172,49 @@ const champion: Champion = {
             {
               "attribute": "Minimum Damage Per Tick",
               "modifiers": [
-                "6 / 11.5 / 17 / 22.5 / 28",
-                "8.5% AP"
+                {
+                  "values": "6 / 11.5 / 17 / 22.5 / 28"
+                },
+                {
+                  "values": "8.5",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Maximum Damage Per Tick",
               "modifiers": [
-                "16.2 / 31.05 / 45.9 / 60.75 / 75.6",
-                "22.95% AP"
+                {
+                  "values": "16.2 / 31.05 / 45.9 / 60.75 / 75.6"
+                },
+                {
+                  "values": "22.95",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Minimum Total Damage",
               "modifiers": [
-                "60 / 115 / 170 / 225 / 280",
-                "85% AP"
+                {
+                  "values": "60 / 115 / 170 / 225 / 280"
+                },
+                {
+                  "values": "85",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Maximum Total Damage",
               "modifiers": [
-                "162 / 310.5 / 459 / 607.5 / 756",
-                "229.5% AP"
+                {
+                  "values": "162 / 310.5 / 459 / 607.5 / 756"
+                },
+                {
+                  "values": "229.5",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -218,8 +246,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Shield Strength",
               "modifiers": [
-                "100 / 155 / 210 / 265 / 320",
-                "70% AP"
+                {
+                  "values": "100 / 155 / 210 / 265 / 320"
+                },
+                {
+                  "values": "70",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -247,21 +280,34 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "200 / 275 / 350",
-                "80% AP"
+                {
+                  "values": "200 / 275 / 350"
+                },
+                {
+                  "values": "80",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Total Magic Damage",
               "modifiers": [
-                "400 / 550 / 700",
-                "160% AP"
+                {
+                  "values": "400 / 550 / 700"
+                },
+                {
+                  "values": "160",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Bonus Movement Speed",
               "modifiers": [
-                "20 / 40 / 60%"
+                {
+                  "values": "20 / 40 / 60",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -272,7 +318,10 @@ const champion: Champion = {
             {
               "attribute": "Stun Duration",
               "modifiers": [
-                "1.5 / 1.75 / 2 seconds"
+                {
+                  "values": "1.5 / 1.75 / 2",
+                  "unit": " seconds"
+                }
               ]
             }
           ]

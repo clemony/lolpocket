@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:56 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:13 PM CDT
 
 const champion: Champion = {
   "id": 127,
@@ -124,14 +124,22 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "80 / 115 / 150 / 185 / 220",
-                "75% AP"
+                {
+                  "values": "80 / 115 / 150 / 185 / 220"
+                },
+                {
+                  "values": "75",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Slow",
               "modifiers": [
-                "20 / 24 / 28 / 32 / 36%"
+                {
+                  "values": "20 / 24 / 28 / 32 / 36",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -167,14 +175,22 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "70 / 105 / 140 / 175 / 210",
-                "70% AP"
+                {
+                  "values": "70 / 105 / 140 / 175 / 210"
+                },
+                {
+                  "values": "70",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Root Duration",
               "modifiers": [
-                "1.25 / 1.35 / 1.45 / 1.55 / 1.65 seconds"
+                {
+                  "values": "1.25 / 1.35 / 1.45 / 1.55 / 1.65",
+                  "unit": " seconds"
+                }
               ]
             }
           ]
@@ -205,8 +221,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "70 / 105 / 140 / 175 / 210",
-                "60% AP"
+                {
+                  "values": "70 / 105 / 140 / 175 / 210"
+                },
+                {
+                  "values": "60",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -248,29 +269,49 @@ const champion: Champion = {
             {
               "attribute": "Minimum Heal per Tick",
               "modifiers": [
-                "10 / 15 / 20",
-                "5.5% AP"
+                {
+                  "values": "10 / 15 / 20"
+                },
+                {
+                  "values": "5.5",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Maximum Heal per Tick",
               "modifiers": [
-                "20 / 30 / 40",
-                "11% AP"
+                {
+                  "values": "20 / 30 / 40"
+                },
+                {
+                  "values": "11",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Minimum Total Heal",
               "modifiers": [
-                "100 / 150 / 200",
-                "55% AP"
+                {
+                  "values": "100 / 150 / 200"
+                },
+                {
+                  "values": "55",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Maximum Total Heal",
               "modifiers": [
-                "200 / 300 / 400",
-                "110% AP"
+                {
+                  "values": "200 / 300 / 400"
+                },
+                {
+                  "values": "110",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -281,14 +322,22 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "150 / 250 / 350",
-                "75% AP"
+                {
+                  "values": "150 / 250 / 350"
+                },
+                {
+                  "values": "75",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Slow",
               "modifiers": [
-                "45 / 60 / 75%"
+                {
+                  "values": "45 / 60 / 75",
+                  "unit": "%"
+                }
               ]
             }
           ]

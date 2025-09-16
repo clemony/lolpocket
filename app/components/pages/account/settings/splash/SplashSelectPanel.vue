@@ -21,7 +21,7 @@ const selectedChampion = ref<string | null>(null)
 const searchQuery = ref<string>('')
 const { results: championResult } = useSimpleSearch(
   ix().champions, // array or ref
-  searchQuery,
+  searchQuery
 )
 
 const result = computed(() => {
@@ -50,12 +50,13 @@ function reset() {
       <HiddenDialogHeader
         title="Select a custom profile splash."
         desc="Personalize your profile with your favorite champion!" />
-      <article class=" inset-shadow-shade-sm inset-shadow-black/40 grid grid-cols-[1fr_6fr]  rounded-xl overflow-hidden auto-rows-auto size-full">
+      <article
+        class="inset-shadow-shade-sm inset-shadow-black/40 grid grid-cols-[1fr_6fr] rounded-xl overflow-hidden auto-rows-auto size-full">
         <header
           class="h-14.5 flex items-center row-start-1 col-span-full bg-b4/40 border-b border-b-b3/60 gap-3 pt-1 pl-1 px-4">
           <button
             v-tippy="{ content: 'Reset to Automatic', placement: 'top' }"
-            class="btn   btn-square   grid  place-items-center  btn-ghost ">
+            class="btn btn-square grid place-items-center btn-ghost">
             <icon
               name="ix:undo"
               class="size-3.75 dst absolute" />
@@ -63,7 +64,7 @@ function reset() {
 
           <button
             v-tippy="{ content: 'Randomize', placement: 'top' }"
-            class="btn   btn-square   grid  place-items-center  btn-ghost ">
+            class="btn btn-square grid place-items-center btn-ghost">
             <icon
               name="shuffle"
               class="size-3 dst stroke-[1.5]" />
@@ -87,7 +88,7 @@ function reset() {
           </div>
           <button
             v-tippy="{ content: 'Close', placement: 'top' }"
-            class="btn   btn-square   grid  place-items-center  btn-ghost ">
+            class="btn btn-square grid place-items-center btn-ghost">
             <icon
               name="x-sm"
               class="!size-5 shrink-0 absolute dst" />
@@ -110,7 +111,7 @@ function reset() {
               <ListboxFilter
                 v-model:model-value="champQuery"
                 type="text"
-                class="size-full px-5 text-2 grow" />
+                class="size-full px-5 text-xs grow" />
             </Teleport>
 
             <ListboxVirtualizer
@@ -166,7 +167,13 @@ function reset() {
               :text="skin.name"
               :alt="skin.name"
               :skin-url="getSkinSplash(selectedChampion, skin, 'tile')"
-              @click="as.publicData.splash = getSkinSplash(selectedChampion, skin, 'centered')" />
+              @click="
+                as.publicData.splash = getSkinSplash(
+                  selectedChampion,
+                  skin,
+                  'centered',
+                )
+              " />
           </transition-slide>
 
           <div
@@ -174,7 +181,7 @@ function reset() {
             class="size-full grid place-items-end p-6">
             <Badge
               variant="neutral"
-              class="**:text-2 font-medium">
+              class="**:text-xs font-medium">
               Select or search a champion...
             </Badge>
           </div>

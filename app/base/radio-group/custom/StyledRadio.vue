@@ -7,7 +7,7 @@ const props = defineProps<{
 }>()
 
 const model = ref(null)
-onMounted (() => {
+onMounted(() => {
   model.value = props.model
 })
 </script>
@@ -19,8 +19,11 @@ onMounted (() => {
     <input
       v-model="model"
       type="radio"
-      class="radio radio-xs !bg-transparent outline "
-      :class="{ 'outline-nc checked:text-nc **:text-nc border-nc': props.contrast, 'outline-bc checked:text-bc **:text-bc border-bc': !props.contrast }"
+      class="radio radio-xs !bg-transparent outline"
+      :class="{
+        'outline-nc checked:text-nc **:text-nc border-nc': props.contrast,
+        'outline-bc checked:text-bc **:text-bc border-bc': !props.contrast,
+      }"
       :value="props.value"
       :checked="model == props.value" />
 

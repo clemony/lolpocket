@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:55 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:11 PM CDT
 
 const champion: Champion = {
   "id": 893,
@@ -128,8 +128,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "45 / 70 / 95 / 120 / 145",
-                "40% AP"
+                {
+                  "values": "45 / 70 / 95 / 120 / 145"
+                },
+                {
+                  "values": "40",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -143,29 +148,49 @@ const champion: Champion = {
             {
               "attribute": "Minimum Magic Damage",
               "modifiers": [
-                "45 / 70 / 95 / 120 / 145",
-                "40% AP"
+                {
+                  "values": "45 / 70 / 95 / 120 / 145"
+                },
+                {
+                  "values": "40",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Maximum Magic Damage",
               "modifiers": [
-                "67.5 / 105 / 142.5 / 180 / 217.5",
-                "60% AP"
+                {
+                  "values": "67.5 / 105 / 142.5 / 180 / 217.5"
+                },
+                {
+                  "values": "60",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Subsequent Bolt Minimum Magic Damage",
               "modifiers": [
-                "9 / 14 / 19 / 24 / 29",
-                "8% AP"
+                {
+                  "values": "9 / 14 / 19 / 24 / 29"
+                },
+                {
+                  "values": "8",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Subsequent Bolt Maximum Magic Damage",
               "modifiers": [
-                "13.5 / 21 / 28.5 / 36 / 43.5",
-                "12% AP"
+                {
+                  "values": "13.5 / 21 / 28.5 / 36 / 43.5"
+                },
+                {
+                  "values": "12",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -199,7 +224,10 @@ const champion: Champion = {
             {
               "attribute": "Invisibility Duration",
               "modifiers": [
-                "1 / 1.15 / 1.3 / 1.45 / 1.6 seconds"
+                {
+                  "values": "1 / 1.15 / 1.3 / 1.45 / 1.6",
+                  "unit": " seconds"
+                }
               ]
             }
           ]
@@ -210,7 +238,10 @@ const champion: Champion = {
             {
               "attribute": "Bonus Movement Speed",
               "modifiers": [
-                "20 / 25 / 30 / 35 / 40%"
+                {
+                  "values": "20 / 25 / 30 / 35 / 40",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -241,8 +272,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "70 / 110 / 150 / 190 / 230",
-                "70% AP"
+                {
+                  "values": "70 / 110 / 150 / 190 / 230"
+                },
+                {
+                  "values": "70",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -275,8 +311,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "175 / 275 / 375",
-                "70% AP"
+                {
+                  "values": "175 / 275 / 375"
+                },
+                {
+                  "values": "70",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -287,13 +328,19 @@ const champion: Champion = {
             {
               "attribute": "Rift Duration",
               "modifiers": [
-                "1.75 / 2.5 / 3.25 seconds"
+                {
+                  "values": "1.75 / 2.5 / 3.25",
+                  "unit": " seconds"
+                }
               ]
             },
             {
               "attribute": "Slow Duration",
               "modifiers": [
-                "1.5 / 1.75 / 2 seconds"
+                {
+                  "values": "1.5 / 1.75 / 2",
+                  "unit": " seconds"
+                }
               ]
             }
           ]

@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:55 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:11 PM CDT
 
 const champion: Champion = {
   "id": 166,
@@ -131,8 +131,13 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "5 / 25 / 45 / 65 / 85",
-                "80% AD"
+                {
+                  "values": "5 / 25 / 45 / 65 / 85"
+                },
+                {
+                  "values": "80",
+                  "unit": "% AD"
+                }
               ]
             }
           ]
@@ -143,8 +148,13 @@ const champion: Champion = {
             {
               "attribute": "Total Physical Damage",
               "modifiers": [
-                "10 / 50 / 90 / 130 / 170",
-                "160% AD"
+                {
+                  "values": "10 / 50 / 90 / 130 / 170"
+                },
+                {
+                  "values": "160",
+                  "unit": "% AD"
+                }
               ]
             }
           ]
@@ -155,7 +165,10 @@ const champion: Champion = {
             {
               "attribute": "Non-Champion Damage",
               "modifiers": [
-                "40 / 50 / 60 / 70 / 80%"
+                {
+                  "values": "40 / 50 / 60 / 70 / 80",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -198,7 +211,9 @@ const champion: Champion = {
             {
               "attribute": "Bonus Movement Speed",
               "modifiers": [
-                "80 / 90 / 100 / 110 / 120"
+                {
+                  "values": "80 / 90 / 100 / 110 / 120"
+                }
               ]
             }
           ]
@@ -240,9 +255,18 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage per Shot",
               "modifiers": [
-                "15 / 30 / 45 / 60 / 75  ×",
-                "15% AD",
-                "1 + 0.3 per 100% bonus attack speed"
+                {
+                  "values": "15 / 30 / 45 / 60 / 75",
+                  "unit": "  ×"
+                },
+                {
+                  "values": "15",
+                  "unit": "% AD"
+                },
+                {
+                  "values": "1",
+                  "unit": " + 0.3 per 100% bonus attack speed"
+                }
               ]
             }
           ]
@@ -285,13 +309,18 @@ const champion: Champion = {
             {
               "attribute": "Maximum Bullets Stored",
               "modifiers": [
-                "5 / 6 / 7"
+                {
+                  "values": "5 / 6 / 7"
+                }
               ]
             },
             {
               "attribute": "Bullet Storing Interval Time",
               "modifiers": [
-                "0.63 / 0.52 / 0.42 seconds"
+                {
+                  "values": "0.63 / 0.52 / 0.42",
+                  "unit": " seconds"
+                }
               ]
             }
           ]
@@ -305,41 +334,101 @@ const champion: Champion = {
             {
               "attribute": "Minimum Physical Damage per Bullet",
               "modifiers": [
-                "0[25 / 30 / 35 / 40 / 45 ] × [1",
-                "00 : 0.5 ",
-                "0.2]",
-                "15% AD",
-                "0based on critical strike chance"
+                {
+                  "values": "0",
+                  "unit": "[25 / 30 / 35 / 40 / 45 ] × [1"
+                },
+                {
+                  "values": "0",
+                  "unit": "0 : 0.5 "
+                },
+                {
+                  "values": "0.2",
+                  "unit": "]"
+                },
+                {
+                  "values": "15",
+                  "unit": "% AD"
+                },
+                {
+                  "values": "0",
+                  "unit": "based on critical strike chance"
+                }
               ]
             },
             {
               "attribute": "Maximum Physical Damage per Bullet",
               "modifiers": [
-                "0[75 / 90 / 105 / 120 / 135 ] × [1",
-                "00 : 0.5 ",
-                "0.2]",
-                "45% AD",
-                "0based on critical strike chance"
+                {
+                  "values": "0",
+                  "unit": "[75 / 90 / 105 / 120 / 135 ] × [1"
+                },
+                {
+                  "values": "0",
+                  "unit": "0 : 0.5 "
+                },
+                {
+                  "values": "0.2",
+                  "unit": "]"
+                },
+                {
+                  "values": "45",
+                  "unit": "% AD"
+                },
+                {
+                  "values": "0",
+                  "unit": "based on critical strike chance"
+                }
               ]
             },
             {
               "attribute": "Minimum Charged Physical Damage",
               "modifiers": [
-                "0[125 / 210 / 315 ] × [1",
-                "00 : 0.5 ",
-                "0.2]",
-                "75 / 90 / 105% AD",
-                "0based on critical strike chance"
+                {
+                  "values": "0",
+                  "unit": "[125 / 210 / 315 ] × [1"
+                },
+                {
+                  "values": "0",
+                  "unit": "0 : 0.5 "
+                },
+                {
+                  "values": "0.2",
+                  "unit": "]"
+                },
+                {
+                  "values": "75 / 90 / 105",
+                  "unit": "% AD"
+                },
+                {
+                  "values": "0",
+                  "unit": "based on critical strike chance"
+                }
               ]
             },
             {
               "attribute": "Damage to target on 67% missing hp",
               "modifiers": [
-                "0[375 / 630 / 945 ] × [1",
-                "00 : 0.5 ",
-                "0.2]",
-                "225 / 270 / 315% AD",
-                "0based on critical strike chance"
+                {
+                  "values": "0",
+                  "unit": "[375 / 630 / 945 ] × [1"
+                },
+                {
+                  "values": "0",
+                  "unit": "0 : 0.5 "
+                },
+                {
+                  "values": "0.2",
+                  "unit": "]"
+                },
+                {
+                  "values": "225 / 270 / 315",
+                  "unit": "% AD"
+                },
+                {
+                  "values": "0",
+                  "unit": "based on critical strike chance"
+                }
               ]
             }
           ]

@@ -6,30 +6,30 @@ const item: Item = {
     {
       id: 1029,
       name: 'Cloth Armor',
-      gold: 300
+      gold: 300,
     },
     {
       id: 1029,
       name: 'Cloth Armor',
-      gold: 300
-    }
+      gold: 300,
+    },
   ],
   buildsInto: [
     {
       id: 3110,
       name: 'Frozen Heart',
-      gold: 2500
+      gold: 2500,
     },
     {
       id: 323110,
       name: 'Frozen Heart',
-      gold: 2700
+      gold: 2700,
     },
     {
       id: 3143,
       name: 'Randuin\'s Omen',
-      gold: 2700
-    }
+      gold: 2700,
+    },
   ],
   specialRecipe: 0,
   noEffects: false,
@@ -39,27 +39,21 @@ const item: Item = {
     {
       name: 'Rock Solid',
       unique: true,
-      effects: 'Every first incoming instance of post-mitigation <img src="/img/icons/basic-damage.webp" class="tip-icon" />basic damage per cast instance is reduced by 15, with a <b>maximum</b> of 20% reduction each.'
-    }
+      effects:
+        'Every first incoming instance of post-mitigation <img src="/img/icons/basic-damage.webp" class="tip-icon" />basic damage per cast instance is reduced by 15, with a <b>maximum</b> of 20% reduction each.',
+    },
   ],
   stats: {
-    armor: 40
+    armor: 40,
   },
   shop: {
     prices: {
       total: 1000,
       combined: 400,
-      sell: 400
+      sell: 400,
     },
-    tags: [
-      'TANK'
-    ]
+    tags: ['TANK'],
   },
-  maps: [
-    11,
-    12,
-    21,
-    35
-  ]
+  maps: [11, 12, 21, 35],
 }
 export default item

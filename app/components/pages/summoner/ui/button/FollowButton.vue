@@ -1,5 +1,13 @@
 <script lang="ts" setup>
-const { summoner, class: className, text, variant = 'shadow', size = 'md', placement, theme } = defineProps<{
+const {
+  summoner,
+  class: className,
+  text,
+  variant = 'shadow',
+  size = 'md',
+  placement,
+  theme,
+} = defineProps<{
   summoner: Summoner
   class?: HTMLAttributes['class']
   text?: boolean
@@ -11,7 +19,7 @@ const { summoner, class: className, text, variant = 'shadow', size = 'md', place
 }>()
 const as = useAccountStore()
 
-const isYou = computed (() => as.account?.puuid == summoner?.puuid)
+const isYou = computed(() => as.account?.puuid == summoner?.puuid)
 const isFollowed = ref(false)
 </script>
 
@@ -27,28 +35,38 @@ const isFollowed = ref(false)
       type="checkbox"
       class="peer hidden" />
     <span
-      :class="cn('size-3 relative', { ' grid place-items-center': !text, 'size-4.5': text })">
+      :class="
+        cn('size-3 relative', {
+          ' grid place-items-center': !text,
+          'size-4.5': text,
+        })
+      ">
       <icon
         v-if="text"
         :name="bold ? 'ph:heart-straight-bold' : 'ph:heart-straight'"
-        class="size-5 dst -ml-0.5 absolute  transition-all duration-300 group-hover/follow:opacity-0" />
+        class="size-5 dst -ml-0.5 absolute transition-all duration-300 group-hover/follow:opacity-0" />
       <icon
         name="ph:heart-straight-fill"
-        :class="cn(
+        :class="
+          cn(
+            ' group-hover/follow:text-tint-domination/40 dst   group-hover/follow:opacity-90 group-hover/follow:scale-120 absolute transition-all duration-300',
+            {
+              ' drop-shadow-b2 drop-shadow-sm size-3.5 text-b4 opacity-90 ':
+                !text,
 
-          ' group-hover/follow:text-tint-domination/40 dst   group-hover/follow:opacity-90 group-hover/follow:scale-120 absolute transition-all duration-300',
-          {
-            ' drop-shadow-b2 drop-shadow-sm size-3.5 text-b4 opacity-90 ': !text,
+              'text-domination group-hover/follow:**:text-domination opacity-60 group-hover/follow:opacity-100':
+                isFollowed,
 
-            'text-domination group-hover/follow:**:text-domination opacity-60 group-hover/follow:opacity-100': isFollowed,
-
-            'size-5 opacity-0 text-domination  -left-0.5': text })" />
+              'size-5 opacity-0 text-domination  -left-0.5': text,
+            },
+          )
+        " />
     </span>
     <slot>
       <span
         v-if="text"
         class="flex items-center">
-        {{ isFollowed ? 'Unfollow' : 'Follow' }}
+        {{ isFollowed ? "Unfollow" : "Follow" }}
       </span>
     </slot>
   </Label>

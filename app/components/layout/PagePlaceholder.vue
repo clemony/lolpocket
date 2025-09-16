@@ -54,19 +54,23 @@ onMounted(() => {
     class="grid size-full min-h-[70vh] justify-center py-24"
     :class="cn('', props.class)">
     <article class="container mx-auto p-6 max-w-250 min-w-190 dst">
-      <header class="text-start text-4xl  font-bold mb-6 dst tracking-tight font-serif leading-14">
-        This page seems afk.<br />
+      <header
+        class="text-start text-mdxl font-bold mb-6 dst tracking-tight font-serif leading-14">
+        This page seems afk.
+        <br />
 
         <span class="pl-8">I offer you a cat fact. Refresh in peace.</span>
       </header>
 
-      <section class="pb-28  items-start flex  gap-4 pt-20  gap-3  max-w-180 w-full  **:text-pretty relative">
+      <section
+        class="pb-28 items-start flex gap-4 pt-20 gap-3 max-w-180 w-full **:text-pretty relative">
         <h2 class="text-8xl float-left dst font-semibold -mt-3 font-serif">
           {{ catFact.num }}
         </h2>
         <div class="flex flex-col gap-3">
           <h3 class="font-serif mt-1 font-black">
-            <!-- #{{catFact.num}}  -->{{ catFact.title }}
+            <!-- #{{catFact.num}}  -->
+            {{ catFact.title }}
           </h3>
           <p class="leading-6">
             {{ catFact.text }}
@@ -74,18 +78,19 @@ onMounted(() => {
         </div>
       </section>
 
-      <footer class="text-end italic  text-2 items-end flex flex-col *:flex *:items-end justify-center *:gap-2 ">
-        <p class="text-1 text-bc/70 ">
+      <footer
+        class="text-end italic text-xs items-end flex flex-col *:flex *:items-end justify-center *:gap-2">
+        <p class="text-xxs text-bc/70">
           Brought to you by
         </p>
         <p class="font-semibold italic opacity-80 antialiased">
           <icon
             name="la:flag-usa"
-            class="size-5 " />
+            class="size-5" />
           Paws for Progress
           <span class="">2028</span>
         </p>
-        <p class="text-1 text-bc/70 ">
+        <p class="text-xxs text-bc/70">
           Collect them all!
         </p>
       </footer>

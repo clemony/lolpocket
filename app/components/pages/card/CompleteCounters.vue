@@ -5,19 +5,19 @@ const props = defineProps<{
 
 const pocket = ref(props.pocket)
 
-const championsLength = computed (() => {
+const championsLength = computed(() => {
   return pocket.value.champions.length
 })
 
-const rolesLength = computed (() => {
+const rolesLength = computed(() => {
   return pocket.value.roles.length ?? 0
 })
 
-const spellsLength = computed (() => {
+const spellsLength = computed(() => {
   return pocket.value.spells.length
 })
 
-const itemsLength = computed (() => {
+const itemsLength = computed(() => {
   if (pocket.value.items.length == 1 && !pocket.value.items[0].items.length) {
     return 0
   }
@@ -60,13 +60,16 @@ const itemsLength = computed (() => {
 </script>
 
 <template>
-  <div class="flex gap-7 w-full items-center justify-evenly -ml-1.5 **:select-none">
+  <div
+    class="flex gap-7 w-full items-center justify-evenly -ml-1.5 **:select-none">
     <slot />
 
     <div
-      v-tippy="`${championsLength ? championsLength : 'no'} pocket pick${pocket.champions.length == 1 ? '' : 's'}`"
+      v-tippy="
+        `${championsLength ? championsLength : 'no'} pocket pick${pocket.champions.length == 1 ? '' : 's'}`
+      "
       class="flex gap-1.5 items-center">
-      <i-no-champ class=" size-8.5 dst opacity-80" />
+      <i-no-champ class="size-8.5 dst opacity-80" />
 
       <span class="dst font-medium">{{ championsLength }}</span>
     </div>
@@ -106,6 +109,4 @@ const itemsLength = computed (() => {
   </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

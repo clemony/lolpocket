@@ -9,6 +9,6 @@ const { class: className, note } = defineProps<{
   <div
     v-if="note"
     :class="cn('line-clamp-2 text-xs text-bc/60', className)">
-    {{ note.substring(0, 200) || '' }}
+    {{ note.substring(0, 200) || "" }}
   </div>
 </template>

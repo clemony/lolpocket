@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:14 PM CDT
 
 const champion: Champion = {
   "id": 875,
@@ -122,15 +122,25 @@ const champion: Champion = {
             {
               "attribute": "Bonus Physical Damage",
               "modifiers": [
-                "10 / 20 / 30 / 40 / 50",
-                "1% (+ 1 / 1.5 / 2 / 2.5 / 3% per 100 AD) of target's maximum health"
+                {
+                  "values": "10 / 20 / 30 / 40 / 50"
+                },
+                {
+                  "values": "1",
+                  "unit": "% (+ 1 / 1.5 / 2 / 2.5 / 3% per 100 AD) of target's maximum health"
+                }
               ]
             },
             {
               "attribute": "Total Bonus Physical Damage",
               "modifiers": [
-                "20 / 40 / 60 / 80 / 100",
-                "2% (+ 2 / 3 / 4 / 5 / 6% per 100 AD) of target's maximum health"
+                {
+                  "values": "20 / 40 / 60 / 80 / 100"
+                },
+                {
+                  "values": "2",
+                  "unit": "% (+ 2 / 3 / 4 / 5 / 6% per 100 AD) of target's maximum health"
+                }
               ]
             }
           ]
@@ -171,8 +181,13 @@ const champion: Champion = {
             {
               "attribute": "Damage",
               "modifiers": [
-                "80 / 100 / 120 / 140 / 160",
-                "25% (+ 25% per 100 bonus AD) of expended Grit"
+                {
+                  "values": "80 / 100 / 120 / 140 / 160"
+                },
+                {
+                  "values": "25",
+                  "unit": "% (+ 25% per 100 bonus AD) of expended Grit"
+                }
               ]
             }
           ]
@@ -204,15 +219,25 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "50 / 70 / 90 / 110 / 130",
-                "60% AD"
+                {
+                  "values": "50 / 70 / 90 / 110 / 130"
+                },
+                {
+                  "values": "60",
+                  "unit": "% AD"
+                }
               ]
             },
             {
               "attribute": "Monster Physical Damage",
               "modifiers": [
-                "150 / 170 / 190 / 210 / 230",
-                "60% AD"
+                {
+                  "values": "150 / 170 / 190 / 210 / 230"
+                },
+                {
+                  "values": "60",
+                  "unit": "% AD"
+                }
               ]
             }
           ]
@@ -251,17 +276,35 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "200 / 300 / 400",
-                "120% bonus AD",
-                "40 / 50 / 60% of primary target's bonus health"
+                {
+                  "values": "200 / 300 / 400"
+                },
+                {
+                  "values": "120",
+                  "unit": "% bonus AD"
+                },
+                {
+                  "values": "40 - 60",
+                  "unit": "% of primary target's bonus health",
+                  "tooltip": "Scaling per rank:\n40 / 50 / 60% of primary target's bonus health"
+                }
               ]
             },
             {
               "attribute": "Reduced Damage",
               "modifiers": [
-                "50 / 75 / 100",
-                "30% bonus AD",
-                "10 / 12.5 / 15% of primary target's bonus health"
+                {
+                  "values": "50 / 75 / 100"
+                },
+                {
+                  "values": "30",
+                  "unit": "% bonus AD"
+                },
+                {
+                  "values": "10 - 15",
+                  "unit": "% of primary target's bonus health",
+                  "tooltip": "Scaling per rank:\n10 / 12.5 / 15% of primary target's bonus health"
+                }
               ]
             }
           ]

@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:15 PM CDT
 
 const champion: Champion = {
   "id": 110,
@@ -133,29 +133,53 @@ const champion: Champion = {
             {
               "attribute": "Minimum Physical Damage",
               "modifiers": [
-                "60 / 106.67 / 153.33 / 200 / 246.67",
-                "86.67 / 93.33 / 100 / 106.67 / 113.33% bonus AD"
+                {
+                  "values": "60 / 106.67 / 153.33 / 200 / 246.67"
+                },
+                {
+                  "values": "86.67 - 113.33",
+                  "unit": "% bonus AD",
+                  "tooltip": "Scaling per rank:\n86.67 / 93.33 / 100 / 106.67 / 113.33% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Maximum Physical Damage",
               "modifiers": [
-                "90 / 160 / 230 / 300 / 370",
-                "130 / 140 / 150 / 160 / 170% bonus AD"
+                {
+                  "values": "90 / 160 / 230 / 300 / 370"
+                },
+                {
+                  "values": "130 - 170",
+                  "unit": "% bonus AD",
+                  "tooltip": "Scaling per rank:\n130 / 140 / 150 / 160 / 170% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Minimum Reduced Damage",
               "modifiers": [
-                "19.8 / 35.2 / 50.6 / 66 / 81.4",
-                "28.6 / 30.8 / 33 / 35.2 / 37.4% bonus AD"
+                {
+                  "values": "19.8 / 35.2 / 50.6 / 66 / 81.4"
+                },
+                {
+                  "values": "28.6 - 37.4",
+                  "unit": "% bonus AD",
+                  "tooltip": "Scaling per rank:\n28.6 / 30.8 / 33 / 35.2 / 37.4% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Maximum Reduced Damage",
               "modifiers": [
-                "29.7 / 52.8 / 75.9 / 99 / 122.1",
-                "42.9 / 46.2 / 49.5 / 52.8 / 56.1% bonus AD"
+                {
+                  "values": "29.7 / 52.8 / 75.9 / 99 / 122.1"
+                },
+                {
+                  "values": "42.9 - 56.1",
+                  "unit": "% bonus AD",
+                  "tooltip": "Scaling per rank:\n42.9 / 46.2 / 49.5 / 52.8 / 56.1% bonus AD"
+                }
               ]
             }
           ]
@@ -187,8 +211,13 @@ const champion: Champion = {
             {
               "attribute": "Bonus Magic Damage",
               "modifiers": [
-                "6 / 12 / 18 / 24 / 30",
-                "35% AP"
+                {
+                  "values": "6 / 12 / 18 / 24 / 30"
+                },
+                {
+                  "values": "35",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -199,29 +228,53 @@ const champion: Champion = {
             {
               "attribute": "Bonus Magic Damage per Stack",
               "modifiers": [
-                "3 / 3.5 / 4 / 4.5 / 5%  of the target's maximum health",
-                "1.5% per 100 AP"
+                {
+                  "values": "3 / 3.5 / 4 / 4.5 / 5",
+                  "unit": "%  of the target's maximum health"
+                },
+                {
+                  "values": "1.5",
+                  "unit": "% per 100 AP"
+                }
               ]
             },
             {
               "attribute": "Bonus Magic Damage at Max Stacks",
               "modifiers": [
-                "9 / 10.5 / 12 / 13.5 / 15%  of the target's maximum health",
-                "4.5% per 100 AP"
+                {
+                  "values": "9 / 10.5 / 12 / 13.5 / 15",
+                  "unit": "%  of the target's maximum health"
+                },
+                {
+                  "values": "4.5",
+                  "unit": "% per 100 AP"
+                }
               ]
             },
             {
               "attribute": "Maximum Bonus Magic Damage per Stack",
               "modifiers": [
-                "4.5 / 5.25 / 6 / 6.75 / 7.5%  of the target's maximum health",
-                "2.25% per 100 AP"
+                {
+                  "values": "4.5 / 5.25 / 6 / 6.75 / 7.5",
+                  "unit": "%  of the target's maximum health"
+                },
+                {
+                  "values": "2.25",
+                  "unit": "% per 100 AP"
+                }
               ]
             },
             {
               "attribute": "Maximum Bonus Magic Damage at Max Stacks",
               "modifiers": [
-                "13.5 / 15.75 / 18 / 20.25 / 22.5%  of the target's maximum health",
-                "6.75% per 100 AP"
+                {
+                  "values": "13.5 / 15.75 / 18 / 20.25 / 22.5",
+                  "unit": "%  of the target's maximum health"
+                },
+                {
+                  "values": "6.75",
+                  "unit": "% per 100 AP"
+                }
               ]
             }
           ]
@@ -232,13 +285,19 @@ const champion: Champion = {
             {
               "attribute": "Active Minimum Magic Damage",
               "modifiers": [
-                "6 / 8 / 10 / 12 / 14% of target's missing health"
+                {
+                  "values": "6 / 8 / 10 / 12 / 14",
+                  "unit": "% of target's missing health"
+                }
               ]
             },
             {
               "attribute": "Active Maximum Magic Damage",
               "modifiers": [
-                "9 / 12 / 15 / 18 / 21% of target's missing health"
+                {
+                  "values": "9 / 12 / 15 / 18 / 21",
+                  "unit": "% of target's missing health"
+                }
               ]
             }
           ]
@@ -276,8 +335,13 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "60 / 100 / 140 / 180 / 220",
-                "100% bonus AD"
+                {
+                  "values": "60 / 100 / 140 / 180 / 220"
+                },
+                {
+                  "values": "100",
+                  "unit": "% bonus AD"
+                }
               ]
             }
           ]
@@ -288,7 +352,10 @@ const champion: Champion = {
             {
               "attribute": "Slow",
               "modifiers": [
-                "30 / 35 / 40 / 45 / 50%"
+                {
+                  "values": "30 / 35 / 40 / 45 / 50",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -321,8 +388,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "150 / 250 / 350",
-                "100% AP"
+                {
+                  "values": "150 / 250 / 350"
+                },
+                {
+                  "values": "100",
+                  "unit": "% AP"
+                }
               ]
             }
           ]

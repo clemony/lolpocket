@@ -4,7 +4,9 @@ import { SelectSeparator } from 'reka-ui'
 
 import type { HTMLAttributes } from 'vue'
 
-const props = defineProps<SelectSeparatorProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<
+  SelectSeparatorProps & { class?: HTMLAttributes['class'] }
+>()
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props

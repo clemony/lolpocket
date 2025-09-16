@@ -15,9 +15,7 @@ const secondary = computed(() => {
   return a.filter(r => r.name != 'empty')
 })
  */
-const primaryColor = computedAsync (() => {
-
-})
+const primaryColor = computedAsync(() => {})
 </script>
 
 <template>
@@ -106,6 +104,4 @@ const primaryColor = computedAsync (() => {
   </div>
 </template>
 
-<style>
-
-</style>
+<style></style>

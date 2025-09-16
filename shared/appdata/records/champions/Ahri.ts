@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:55 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:11 PM CDT
 
 const champion: Champion = {
   "id": 103,
@@ -124,15 +124,25 @@ const champion: Champion = {
             {
               "attribute": "Damage Per Pass",
               "modifiers": [
-                "40 / 65 / 90 / 115 / 140",
-                "50% AP"
+                {
+                  "values": "40 / 65 / 90 / 115 / 140"
+                },
+                {
+                  "values": "50",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Total Mixed Damage",
               "modifiers": [
-                "80 / 130 / 180 / 230 / 280",
-                "100% AP"
+                {
+                  "values": "80 / 130 / 180 / 230 / 280"
+                },
+                {
+                  "values": "100",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -172,22 +182,37 @@ const champion: Champion = {
             {
               "attribute": "Initial Flame Magic Damage",
               "modifiers": [
-                "40 / 60 / 80 / 100 / 120",
-                "40% AP"
+                {
+                  "values": "40 / 60 / 80 / 100 / 120"
+                },
+                {
+                  "values": "40",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Subsequent Flame Magic Damage",
               "modifiers": [
-                "12 / 18 / 24 / 30 / 36",
-                "12% AP"
+                {
+                  "values": "12 / 18 / 24 / 30 / 36"
+                },
+                {
+                  "values": "12",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Total Single-Target Damage",
               "modifiers": [
-                "64 / 96 / 128 / 160 / 192",
-                "64% AP"
+                {
+                  "values": "64 / 96 / 128 / 160 / 192"
+                },
+                {
+                  "values": "64",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -201,15 +226,25 @@ const champion: Champion = {
             {
               "attribute": "Increased Initial Flame Minion Damage",
               "modifiers": [
-                "80 / 120 / 160 / 200 / 240",
-                "80% AP"
+                {
+                  "values": "80 / 120 / 160 / 200 / 240"
+                },
+                {
+                  "values": "80",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Increased Subsequent Flame Minion Damage",
               "modifiers": [
-                "24 / 36 / 48 / 60 / 72",
-                "24% AP"
+                {
+                  "values": "24 / 36 / 48 / 60 / 72"
+                },
+                {
+                  "values": "24",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -242,14 +277,22 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "80 / 120 / 160 / 200 / 240",
-                "85% AP"
+                {
+                  "values": "80 / 120 / 160 / 200 / 240"
+                },
+                {
+                  "values": "85",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Disable Duration",
               "modifiers": [
-                "1.2 / 1.35 / 1.5 / 1.65 / 1.8 seconds"
+                {
+                  "values": "1.2 / 1.35 / 1.5 / 1.65 / 1.8",
+                  "unit": " seconds"
+                }
               ]
             }
           ]
@@ -282,8 +325,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "60 / 90 / 120",
-                "35% AP"
+                {
+                  "values": "60 / 90 / 120"
+                },
+                {
+                  "values": "35",
+                  "unit": "% AP"
+                }
               ]
             }
           ]

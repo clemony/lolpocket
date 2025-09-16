@@ -20,7 +20,7 @@ export function evaluateTemplates(
   template: string,
   params: string[],
   depth: number,
-  vars: Map<string, string>,
+  vars: Map<string, string>
 ): TemplateResult {
   const fullyResolvedParams = params.map((p) => {
     const result = resolveTemplates(p, depth + 1, vars)
@@ -29,7 +29,10 @@ export function evaluateTemplates(
 
   const evaluatedParams = fullyResolvedParams.map(p => evaluateExpressions(p))
 
-  const wrap = (html: string, isLevelScaling = false): TemplateResult => ({ html, isLevelScaling })
+  const wrap = (html: string, isLevelScaling = false): TemplateResult => ({
+    html,
+    isLevelScaling,
+  })
 
   switch (template) {
     case '#vardefineecho': {
@@ -56,24 +59,29 @@ export function evaluateTemplates(
           .map((p) => {
             const [k, ...v] = p.split('=')
             return [k.trim(), v.join('=').replace(/'''/g, '').trim()]
-          }),
+          })
       )
 
-      const values = evaluatedParams.find(p => /^\d+(?:\.\d+)?(?:;[\d.]+)+$/.test(p)) ?? ''
-      const levels = evaluatedParams.find(p => /^\d+(?:\s?to\s?\d+)?(?:\s?for\s?\d+)?$/.test(p)) ?? ''
+      const values
+        = evaluatedParams.find(p => /^\d+(?:\.\d+)?(?:;[\d.]+)+$/.test(p)) ?? ''
+      const levels
+        = evaluatedParams.find(p =>
+          /^\d+(?:\s?to\s?\d+)?(?:\s?for\s?\d+)?$/.test(p)
+        ) ?? ''
 
       const type = named.type || ''
       const key = named.key || ''
       const key1 = named.key1 || ''
       const color = named.color || ''
 
-      const html = formatMap.pp?.({
-        type: 'pp',
-        input: { values, type, levels, key, key1, color },
-        depth,
-      }) ?? ''
+      const html
+        = formatMap.pp?.({
+          type: 'pp',
+          input: { values, type, levels, key, key1, color },
+          depth,
+        }) ?? ''
 
-      return wrap(typeof html === 'string' ? html : html?.html ?? '', true)
+      return wrap(typeof html === 'string' ? html : (html?.html ?? ''), true)
     }
 
     case 'ap': {
@@ -96,15 +104,22 @@ export function evaluateTemplates(
 
     case 'ft': {
       const [text = '', tooltip = ''] = evaluatedParams
-      const flatText = text.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim()
-      const flatTooltip = tooltip.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim()
+      const flatText = text
+        .replace(/<[^>]+>/g, '')
+        .replace(/\s+/g, ' ')
+        .trim()
+      const flatTooltip = tooltip
+        .replace(/<[^>]+>/g, '')
+        .replace(/\s+/g, ' ')
+        .trim()
       return wrap(flatText)
     }
 
     case 'as': {
       const units = ['ad']
       const last = evaluatedParams[evaluatedParams.length - 1]?.toLowerCase()
-      const body = units.includes(last) ? evaluatedParams.slice(0, -1) : evaluatedParams
+      const body
+        = units.includes(last) ? evaluatedParams.slice(0, -1) : evaluatedParams
 
       const pieces = body.map((param) => {
         const resolved = resolveTemplates(param, depth + 1, vars)
@@ -114,11 +129,12 @@ export function evaluateTemplates(
 
       const html = formatMap.as?.({ type: 'as', input: pieces, depth }) ?? ''
 
-      return wrap(typeof html === 'string' ? html : html?.html ?? '', true)
+      return wrap(typeof html === 'string' ? html : (html?.html ?? ''), true)
     }
 
     case 'rd': {
-      const [meleeRaw = '', rangedRaw = '', , , , , , , , , , maybePp = ''] = evaluatedParams
+      const [meleeRaw = '', rangedRaw = '', , , , , , , , , , maybePp = '']
+        = evaluatedParams
       const isPp = maybePp.toLowerCase() === 'pp=true'
 
       const html = formatMap.rd?.({
@@ -130,7 +146,7 @@ export function evaluateTemplates(
         },
         depth,
       })
-      return wrap(typeof html === 'string' ? html : html?.html ?? '')
+      return wrap(typeof html === 'string' ? html : (html?.html ?? ''))
     }
 
     case 'tip': {
@@ -139,7 +155,7 @@ export function evaluateTemplates(
         input: evaluatedParams,
         depth,
       })
-      return wrap(typeof html === 'string' ? html : html?.html ?? '')
+      return wrap(typeof html === 'string' ? html : (html?.html ?? ''))
     }
 
     case 'tt':
@@ -153,19 +169,19 @@ export function evaluateTemplates(
     case 'ii': {
       const iconName = evaluatedParams[0] ?? ''
       const icon = formatMap.icon?.(iconName)
-      return wrap(typeof icon === 'string' ? icon : icon?.html ?? '')
+      return wrap(typeof icon === 'string' ? icon : (icon?.html ?? ''))
     }
 
     case 'ui': {
       const iconName = evaluatedParams[evaluatedParams.length - 1] ?? ''
       const icon = formatMap.icon?.(iconName)
-      return wrap(typeof icon === 'string' ? icon : icon?.html ?? '')
+      return wrap(typeof icon === 'string' ? icon : (icon?.html ?? ''))
     }
 
     case 'g': {
       const [value = ''] = evaluatedParams
       const g = formatMap.g?.(value)
-      return wrap(typeof g === 'string' ? g : g?.html ?? '')
+      return wrap(typeof g === 'string' ? g : (g?.html ?? ''))
     }
 
     case 'fd': {
@@ -185,7 +201,9 @@ export function evaluateTemplates(
     }
 
     default: {
-      return wrap(`{{${escapeHtml(template)}|${params.map(escapeHtml).join('|')}}}`)
+      return wrap(
+        `{{${escapeHtml(template)}|${params.map(escapeHtml).join('|')}}}`
+      )
     }
   }
 }

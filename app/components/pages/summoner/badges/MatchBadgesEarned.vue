@@ -22,7 +22,8 @@ const props = defineProps<{
     <icon name="emojione-monotone:smiling-face-with-halo" />
     save ally from death
 
-    <icon name="iconoir:coins" /><!--
+    <icon name="iconoir:coins" />
+    <!--
 <icon name="ph:hand-coins-light" /> -->
     gold earned
 

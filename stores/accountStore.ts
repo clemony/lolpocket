@@ -49,7 +49,11 @@ export const useAccountStore = defineStore(
       clearAccount,
       userNotes,
       topChampion,
-      toggleSidebarLock: () => settings.value.lockSidebar = true ? !settings.value.lockSidebar : settings.value.lockSidebar = true,
+      toggleSidebarLock: () =>
+        (settings.value.lockSidebar
+          = true
+            ? !settings.value.lockSidebar
+            : (settings.value.lockSidebar = true)),
     }
   },
   {
@@ -57,5 +61,5 @@ export const useAccountStore = defineStore(
       storage: piniaPluginPersistedstate.localStorage(),
       key: 'accountStore',
     },
-  },
+  }
 )

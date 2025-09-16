@@ -27,7 +27,6 @@ const hexColors = {
       <component
         :is="`i-roles-${props.mostRoled}`"
         v-if="roles && props.mostRoled"
-
         class="size-8 dst"
         :style="{ color: hexColors[props.mostRoled] }" />
     </div>

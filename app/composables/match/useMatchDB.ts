@@ -42,15 +42,13 @@ export function useIndexedDB() {
   }
 
   const clearMatches = async () => {
-    await Promise.all([
-      matchDB.matchData.clear(),
-    ])
+    await Promise.all([matchDB.matchData.clear()])
   }
 
   const refreshMatches = async () => {
     console.log(
       '💠 - refreshMatches (full):',
-      await matchDB.matchData.toArray(),
+      await matchDB.matchData.toArray()
     )
     return await matchDB.matchData.toArray()
   }

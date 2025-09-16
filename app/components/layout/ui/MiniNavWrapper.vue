@@ -14,16 +14,14 @@ const variants = {
 </script>
 
 <template>
-  <NavigationMenu
-    class="fixed top-22 left-18.75 z-10">
+  <NavigationMenu class="fixed top-22 left-18.75 z-10">
     <NavigationMenuList as-child>
       <motion.div
         :variants="variants"
         initial="hidden"
         exit="hidden"
         class="opacity-0 border border-b3 py-3.5 px-2 rounded-full bg-b1/80 backdrop-blur-lg gap-2.5 place-items-center flex-col shadow-warm-soft">
-        <NavigationMenuItem
-          as-child>
+        <NavigationMenuItem as-child>
           <HoverCard>
             <!-- ------------------------------ trigger ------------------------------ -->
 
@@ -40,14 +38,13 @@ const variants = {
               :align-offset="-6"
               align="start"
               side="right"
-              class="w-50 shadow-warm-soft shadow-black/6 border-b3/70 drop-shadow-none bg-b1/80 backdrop-blur-lg  rounded-xl max-w-50 ">
+              class="w-50 shadow-warm-soft shadow-black/6 border-b3/70 drop-shadow-none bg-b1/80 backdrop-blur-lg rounded-xl max-w-50">
               <slot name="menu-content" />
             </HoverPopContent>
           </HoverCard>
         </NavigationMenuItem>
 
-        <slot
-          name="nav-links" />
+        <slot name="nav-links" />
       </motion.div>
     </NavigationMenuList>
   </NavigationMenu>

@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:56 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:13 PM CDT
 
 const champion: Champion = {
   "id": 11,
@@ -139,49 +139,81 @@ const champion: Champion = {
             {
               "attribute": "Primary Physical Damage",
               "modifiers": [
-                "20 / 40 / 60 / 80 / 100",
-                "70% AD"
+                {
+                  "values": "20 / 40 / 60 / 80 / 100"
+                },
+                {
+                  "values": "70",
+                  "unit": "% AD"
+                }
               ]
             },
             {
               "attribute": "Reduced Damage per hit",
               "modifiers": [
-                "5 / 10 / 15 / 20 / 25",
-                "17.5% AD"
+                {
+                  "values": "5 / 10 / 15 / 20 / 25"
+                },
+                {
+                  "values": "17.5",
+                  "unit": "% AD"
+                }
               ]
             },
             {
               "attribute": "Maximum Single-Target Damage",
               "modifiers": [
-                "35 / 70 / 105 / 140 / 175",
-                "122.5% AD"
+                {
+                  "values": "35 / 70 / 105 / 140 / 175"
+                },
+                {
+                  "values": "122.5",
+                  "unit": "% AD"
+                }
               ]
             },
             {
               "attribute": "Primary Bonus Monster Damage",
               "modifiers": [
-                "60 / 85 / 110 / 135 / 160"
+                {
+                  "values": "60 / 85 / 110 / 135 / 160"
+                }
               ]
             },
             {
               "attribute": "Combined Primary Monster Damage",
               "modifiers": [
-                "80 / 125 / 170 / 215 / 260",
-                "70% AD"
+                {
+                  "values": "80 / 125 / 170 / 215 / 260"
+                },
+                {
+                  "values": "70",
+                  "unit": "% AD"
+                }
               ]
             },
             {
               "attribute": "Reduced Monster Damage per hit",
               "modifiers": [
-                "20 / 31.25 / 42.5 / 53.75 / 65",
-                "17.5% AD"
+                {
+                  "values": "20 / 31.25 / 42.5 / 53.75 / 65"
+                },
+                {
+                  "values": "17.5",
+                  "unit": "% AD"
+                }
               ]
             },
             {
               "attribute": "Max Single-Target Monster Damage",
               "modifiers": [
-                "140 / 218.75 / 297.5 / 376.25 / 455",
-                "122.5% AD"
+                {
+                  "values": "140 / 218.75 / 297.5 / 376.25 / 455"
+                },
+                {
+                  "values": "122.5",
+                  "unit": "% AD"
+                }
               ]
             }
           ]
@@ -222,29 +254,49 @@ const champion: Champion = {
             {
               "attribute": "Minimum Heal Per Tick",
               "modifiers": [
-                "15 / 25 / 35 / 45 / 55",
-                "12.5% AP"
+                {
+                  "values": "15 / 25 / 35 / 45 / 55"
+                },
+                {
+                  "values": "12.5",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Maximum Heal Per Tick",
               "modifiers": [
-                "30 / 50 / 70 / 90 / 110",
-                "25% AP"
+                {
+                  "values": "30 / 50 / 70 / 90 / 110"
+                },
+                {
+                  "values": "25",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Minimum Total Heal",
               "modifiers": [
-                "120 / 200 / 280 / 360 / 440",
-                "100% AP"
+                {
+                  "values": "120 / 200 / 280 / 360 / 440"
+                },
+                {
+                  "values": "100",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Maximum Total Heal",
               "modifiers": [
-                "240 / 400 / 560 / 720 / 880",
-                "200% AP"
+                {
+                  "values": "240 / 400 / 560 / 720 / 880"
+                },
+                {
+                  "values": "200",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -255,13 +307,19 @@ const champion: Champion = {
             {
               "attribute": "Modified Damage Reduction",
               "modifiers": [
-                "45 / 47.5 / 50 / 52.5 / 55%"
+                {
+                  "values": "45 / 47.5 / 50 / 52.5 / 55",
+                  "unit": "%"
+                }
               ]
             },
             {
               "attribute": "Turret Modified Damage Reduction",
               "modifiers": [
-                "22.5 / 23.75 / 25 / 26.25 / 27.5%"
+                {
+                  "values": "22.5 / 23.75 / 25 / 26.25 / 27.5",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -290,8 +348,13 @@ const champion: Champion = {
             {
               "attribute": "Bonus True Damage",
               "modifiers": [
-                "20 / 25 / 30 / 35 / 40",
-                "35% bonus AD"
+                {
+                  "values": "20 / 25 / 30 / 35 / 40"
+                },
+                {
+                  "values": "35",
+                  "unit": "% bonus AD"
+                }
               ]
             }
           ]
@@ -322,13 +385,19 @@ const champion: Champion = {
             {
               "attribute": "Bonus Attack Speed",
               "modifiers": [
-                "25 / 45 / 65%"
+                {
+                  "values": "25 / 45 / 65",
+                  "unit": "%"
+                }
               ]
             },
             {
               "attribute": "Bonus Movement Speed",
               "modifiers": [
-                "35 / 45 / 55%"
+                {
+                  "values": "35 / 45 / 55",
+                  "unit": "%"
+                }
               ]
             }
           ]

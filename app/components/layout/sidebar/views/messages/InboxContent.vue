@@ -7,7 +7,6 @@ const { title, class: className } = defineProps<{
 
 const tabs = ref('MessageView')
 const inboxes: Record<string, DataObject> = {
-
   news: {
     name: 'News',
     icon: {
@@ -21,17 +20,15 @@ const inboxes: Record<string, DataObject> = {
 </script>
 
 <template>
-  <div class="size-full ">
-    <div
-      :class="cn('gap-0 border-b  border-b-b3/80 px-3 w-full', className)">
+  <div class="size-full">
+    <div :class="cn('gap-0 border-b  border-b-b3/80 px-3 w-full', className)">
       <div class="w-full flex justify-between items-center">
         <DropdownMenu class="z-0">
           <DropdownMenuTrigger
             :disabled="!dropdown"
-            class="flex w-fit items-center justify-between  disabled:**:text-bc disabled:hover:drop-shadow-none disabled:opacity-100 disabled:hover:border-transparent disabled:hover:shadow-none disabled:hover:bg-transparent px-2  h-[35.5px]  data-[state=open]:inset-shadow-xxs data-[state=open]:shadow-xs data-[state=open]:!bg-b3/50 data-[state=open]:border-b3"
+            class="flex w-fit items-center justify-between disabled:**:text-bc disabled:hover:drop-shadow-none disabled:opacity-100 disabled:hover:border-transparent disabled:hover:shadow-none disabled:hover:bg-transparent px-2 h-[35.5px] data-[state=open]:inset-shadow-xxs data-[state=open]:shadow-xs data-[state=open]:!bg-b3/50 data-[state=open]:border-b3"
             as-child>
-            <SidebarMenuButton
-              class="flex gap-2 ">
+            <SidebarMenuButton class="flex gap-2">
               <icon name="gallery" />
               <h2 class="dst font-bold">
                 {{ title }}
@@ -58,14 +55,13 @@ const inboxes: Record<string, DataObject> = {
           </IndicatorTabsList>
         </Tabs>
       </div>
-      <div class="flex relative items-center gap-1 w-full ">
+      <div class="flex relative items-center gap-1 w-full">
         <slot name="subheader" />
       </div>
     </div>
 
     <div class="px-0 size-full">
-      <component :is="tabs">
-      </component>
+      <component :is="tabs"></component>
     </div>
   </div>
 </template>

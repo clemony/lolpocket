@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:56 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:12 PM CDT
 
 const champion: Champion = {
   "id": 202,
@@ -127,9 +127,17 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "44 / 69 / 94 / 119 / 144",
-                "44 / 51.5 / 59 / 66.5 / 74% AD",
-                "60% AP"
+                {
+                  "values": "44 / 69 / 94 / 119 / 144"
+                },
+                {
+                  "values": "44 / 51.5 / 59 / 66.5 / 74",
+                  "unit": "% AD"
+                },
+                {
+                  "values": "60",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -140,17 +148,33 @@ const champion: Champion = {
             {
               "attribute": "Bonus Damage per Target Death",
               "modifiers": [
-                "15.4 / 24.15 / 32.9 / 41.65 / 50.4",
-                "15.4 / 18.02 / 20.65 / 23.28 / 25.9% AD",
-                "21% AP"
+                {
+                  "values": "15.4 / 24.15 / 32.9 / 41.65 / 50.4"
+                },
+                {
+                  "values": "15.4 / 18.02 / 20.65 / 23.28 / 25.9",
+                  "unit": "% AD"
+                },
+                {
+                  "values": "21",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Maximum Final Bounce Physical Damage",
               "modifiers": [
-                "90.2 / 141.45 / 192.7 / 243.95 / 295.2",
-                "90.2 / 105.58 / 120.95 / 136.32 / 151.7% AD",
-                "123% AP"
+                {
+                  "values": "90.2 / 141.45 / 192.7 / 243.95 / 295.2"
+                },
+                {
+                  "values": "90.2 / 105.58 / 120.95 / 136.32 / 151.7",
+                  "unit": "% AD"
+                },
+                {
+                  "values": "123",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -187,15 +211,25 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "60 / 95 / 130 / 165 / 200",
-                "50% AD"
+                {
+                  "values": "60 / 95 / 130 / 165 / 200"
+                },
+                {
+                  "values": "50",
+                  "unit": "% AD"
+                }
               ]
             },
             {
               "attribute": "Minion Damage",
               "modifiers": [
-                "45 / 71.25 / 97.5 / 123.75 / 150",
-                "37.5% AD"
+                {
+                  "values": "45 / 71.25 / 97.5 / 123.75 / 150"
+                },
+                {
+                  "values": "37.5",
+                  "unit": "% AD"
+                }
               ]
             }
           ]
@@ -206,7 +240,10 @@ const champion: Champion = {
             {
               "attribute": "Root Duration",
               "modifiers": [
-                "1.25 / 1.5 / 1.75 / 2 / 2.25 seconds"
+                {
+                  "values": "1.25 / 1.5 / 1.75 / 2 / 2.25",
+                  "unit": " seconds"
+                }
               ]
             }
           ]
@@ -247,17 +284,33 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "20 / 80 / 140 / 200 / 260",
-                "120% AD",
-                "100% AP"
+                {
+                  "values": "20 / 80 / 140 / 200 / 260"
+                },
+                {
+                  "values": "120",
+                  "unit": "% AD"
+                },
+                {
+                  "values": "100",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Reduced Damage",
               "modifiers": [
-                "13 / 52 / 91 / 130 / 169",
-                "78% AD",
-                "65% AP"
+                {
+                  "values": "13 / 52 / 91 / 130 / 169"
+                },
+                {
+                  "values": "78",
+                  "unit": "% AD"
+                },
+                {
+                  "values": "65",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -298,15 +351,25 @@ const champion: Champion = {
             {
               "attribute": "Minimum Physical Damage per Bullet",
               "modifiers": [
-                "64 / 128 / 192",
-                "25% AD"
+                {
+                  "values": "64 / 128 / 192"
+                },
+                {
+                  "values": "25",
+                  "unit": "% AD"
+                }
               ]
             },
             {
               "attribute": "Maximum Physical Damage per Bullet",
               "modifiers": [
-                "256 / 512 / 768",
-                "100% AD"
+                {
+                  "values": "256 / 512 / 768"
+                },
+                {
+                  "values": "100",
+                  "unit": "% AD"
+                }
               ]
             }
           ]
@@ -317,15 +380,25 @@ const champion: Champion = {
             {
               "attribute": "Minimum Fourth Shot Damage",
               "modifiers": [
-                "128 / 256 / 384",
-                "50% AD"
+                {
+                  "values": "128 / 256 / 384"
+                },
+                {
+                  "values": "50",
+                  "unit": "% AD"
+                }
               ]
             },
             {
               "attribute": "Maximum Fourth Shot Damage",
               "modifiers": [
-                "512 / 1024 / 1536",
-                "200% AD"
+                {
+                  "values": "512 / 1024 / 1536"
+                },
+                {
+                  "values": "200",
+                  "unit": "% AD"
+                }
               ]
             }
           ]

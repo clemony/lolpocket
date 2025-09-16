@@ -8,7 +8,7 @@ export interface TimeSeriesStat {
 export function useChampionWinrateTimeline(
   puuid: string,
   matches: MatchData[],
-  championName: string,
+  championName: string
 ): TimeSeriesStat[] {
   const grouped: Record<string, TimeSeriesStat> = {}
   console.log('💠 - useChampionWinrateTimeline - grouped:', grouped)
@@ -36,7 +36,10 @@ export function useChampionWinrateTimeline(
     grouped[key].games++
     if (player.win)
       grouped[key].wins++
-    console.log('💠 - useChampionWinrateTimeline - grouped[key].wins:', grouped[key].wins)
+    console.log(
+      '💠 - useChampionWinrateTimeline - grouped[key].wins:',
+      grouped[key].wins
+    )
   }
 
   for (const key in grouped) {
@@ -45,7 +48,5 @@ export function useChampionWinrateTimeline(
   }
   console.log('💠 - useChampionWinrateTimeline - grouped:', grouped)
 
-  return Object.values(grouped).sort((a, b) =>
-    a.span.localeCompare(b.span),
-  )
+  return Object.values(grouped).sort((a, b) => a.span.localeCompare(b.span))
 }

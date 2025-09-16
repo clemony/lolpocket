@@ -19,7 +19,7 @@ const viewLogin = ref(false)
         type="checkbox"
         class="peer hidden"
         @change="emit('update:login', viewLogin)" />
-      {{ viewLogin ? 'Log In' : 'Back' }}
+      {{ viewLogin ? "Log In" : "Back" }}
     </Label>
   </div>
 </template>

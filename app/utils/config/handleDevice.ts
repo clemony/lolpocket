@@ -15,13 +15,15 @@ export function getDevice() {
 
 export function getDeviceKey() {
   const device = getDevice()
-  return device === 'MacOS'
-    ? '⌘'
-    : device === 'Windows'
-      ? 'ctrl'
-      : device === 'Mobile'
-        ? ''
-        : 'meta'
+  return (
+    device === 'MacOS'
+      ? '⌘'
+      : device === 'Windows'
+        ? 'ctrl'
+        : device === 'Mobile'
+          ? ''
+          : 'meta'
+  )
 }
 
 export function isDesktop() {

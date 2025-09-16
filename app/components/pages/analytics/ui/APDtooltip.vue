@@ -15,15 +15,19 @@ const props = defineProps<{
     <template #content>
       <b>APD</b>
 
-      : Absolute Percentage Diff<br />
+      : Absolute Percentage Diff
+      <br />
 
       <Separator class="opacity-10 my-0.5" />
 
-      A simple calculation of the number<br />
+      A simple calculation of the number
+      <br />
 
-      difference on a physical line.<br />
+      difference on a physical line.
+      <br />
 
-      Used to easily see winrate percentage<br />
+      Used to easily see winrate percentage
+      <br />
       change over time.
     </template>
   </tippy>

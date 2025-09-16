@@ -21,7 +21,10 @@ let content = fs.readFileSync(typesFilePath, 'utf8')
   | (D extends DA['length'] ? any : { [key: string]: Json<D, [0, ...DA]> | undefined })
   | (D extends DA['length'] ? any : Json<D, [0, ...DA]>[])' */
 // Find the Json type on the generated file and replace it
-content = content.replace(/export type Json\n\s+= \| string\n\s+\| number\n\s+\| boolean\n\s+\| null\n\s+\| \{ \[key: string\]: Json \| undefined \}\n\s+\| Json\[\]/g, 'export type Json = Record<string, any>') // You can change the type to any other type you want ''
+content = content.replace(
+  /export type Json\n\s+= \| string\n\s+\| number\n\s+\| boolean\n\s+\| null\n\s+\| \{ \[key: string\]: Json \| undefined \}\n\s+\| Json\[\]/g,
+  'export type Json = Record<string, any>'
+) // You can change the type to any other type you want ''
 
 fs.writeFileSync(typesFilePath, content)
 

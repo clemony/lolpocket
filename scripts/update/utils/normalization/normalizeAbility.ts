@@ -1,33 +1,79 @@
 import type { Ability } from '../../../../shared/types/types.champion'
 import { normalize } from './normalizeStrings'
 
-export interface Modifier {
+interface DirtyModifier {
   values?: number[] | null
   units?: string[] | null
 }
 
-function cleanModifiers(modifiers: Modifier[] | null | undefined): string[] {
+interface CleanedModifier {
+  values: string
+  unit: string
+  tooltip?: string
+}
+
+function cleanModifiers(modifiers: DirtyModifier[] | null | undefined): CleanedModifier[] {
   if (!Array.isArray(modifiers))
     return []
 
-  return modifiers
+  const normalized = modifiers
     .map((m) => {
-      const values
-        = m.values?.filter(v => v !== null && v !== undefined) ?? []
+      const values = m.values?.filter(v => v !== null && v !== undefined) ?? []
       const units = m.units ?? []
 
-      const allValuesSame
-        = values.length > 0 && values.every(v => v === values[0])
-      const allUnitsSame
-        = units.length > 0 && units.every(u => u === units[0])
+      if (!values.length)
+        return null
+
+      const allValuesSame = values.every(v => v === values[0])
+      const allUnitsSame = units.every(u => u === units[0])
 
       const cleanedValues = allValuesSame ? [values[0]] : values
-      const cleanedUnits = allUnitsSame ? [units[0]] : units
-      const roundedValues = cleanedValues.map(v => Math.round(v * 100) / 100)
-      return `${roundedValues.join(' / ')}${cleanedUnits}`
-    })
+      const cleanedUnit = allUnitsSame ? (units[0] ?? '') : (units[0] ?? '')
 
-    .filter(m => m.length)
+      const rounded = cleanedValues.map(v => Math.round(v * 100) / 100)
+
+      return { values: rounded, unit: cleanedUnit }
+    })
+    .filter(Boolean) as { values: number[], unit: string }[]
+
+  if (!normalized.length)
+    return []
+
+  // handle special case: multiple modifiers
+  if (normalized.length > 1) {
+    const last = normalized.pop()!
+
+    if (last.values.length > 2) {
+      return [
+        ...normalized.map(c => ({
+          values: c.values.join(' / '),
+          unit: c.unit,
+        })),
+        {
+          values: `${last.values[0]} - ${last.values[last.values.length - 1]}`,
+          unit: last.unit,
+          tooltip: `Scaling per rank:\n${last.values.join(' / ')}${last.unit}`,
+        },
+      ]
+    }
+
+    return [
+      ...normalized.map(c => ({
+        values: c.values.join(' / '),
+        unit: c.unit,
+      })),
+      {
+        values: last.values.join(' / '),
+        unit: last.unit,
+      },
+    ]
+  }
+
+  // only one modifier
+  return normalized.map(c => ({
+    values: c.values.join(' / '),
+    unit: c.unit,
+  }))
 }
 
 function cleanAbilityEffects(effects: any[]): any[] {
@@ -49,12 +95,12 @@ function cleanAbilityEffects(effects: any[]): any[] {
             .replace(/(.*?:)(.*)/g, '<span class="ability-header">$1</span>$2') // Wrap headers
             .replace(
               /(<span class="ability-header">.*?<\/span>.*?)(?=\n|$)/gs,
-              '<p class="ability-effect">$1</p>',
+              '<p class="ability-effect">$1</p>'
             )
         : effect.description,
     leveling:
       Array.isArray(effect.leveling)
-        ? effect.leveling.map(level => ({
+        ? effect.leveling.map((level, i: number) => ({
             ...level,
             modifiers: cleanModifiers(level.modifiers),
           }))

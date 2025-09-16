@@ -6,20 +6,20 @@ const item: Item = {
     {
       id: 1001,
       name: 'Boots',
-      gold: 300
+      gold: 300,
     },
     {
       id: 2022,
       name: 'Glowing Mote',
-      gold: 250
-    }
+      gold: 250,
+    },
   ],
   buildsInto: [
     {
       id: 3171,
       name: 'Crimson Lucidity',
-      gold: 1400
-    }
+      gold: 1400,
+    },
   ],
   specialRecipe: 0,
   noEffects: false,
@@ -30,25 +30,20 @@ const item: Item = {
     {
       name: 'Ionian Insight',
       unique: true,
-      effects: 'Gain 10 summoner spell haste.'
-    }
+      effects: 'Gain 10 summoner spell haste.',
+    },
   ],
   stats: {
     flatMovespeed: 45,
-    abilityHaste: 10
+    abilityHaste: 10,
   },
   shop: {
     prices: {
       total: 900,
       combined: 350,
-      sell: 360
-    }
+      sell: 360,
+    },
   },
-  maps: [
-    11,
-    12,
-    21,
-    35
-  ]
+  maps: [11, 12, 21, 35],
 }
 export default item

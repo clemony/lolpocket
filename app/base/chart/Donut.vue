@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from 'vue'
-import { ArcElement, CategoryScale, Chart, DoughnutController, Tooltip } from 'chart.js'
+import {
+  ArcElement,
+  CategoryScale,
+  Chart,
+  DoughnutController,
+  Tooltip,
+} from 'chart.js'
 import { Doughnut } from 'vue-chartjs'
 
 const props = defineProps<{

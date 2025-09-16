@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:13 PM CDT
 
 const champion: Champion = {
   "id": 950,
@@ -126,29 +126,49 @@ const champion: Champion = {
             {
               "attribute": "Initial Physical Damage",
               "modifiers": [
-                "35 / 40 / 45 / 50 / 55",
-                "20% bonus AD"
+                {
+                  "values": "35 / 40 / 45 / 50 / 55"
+                },
+                {
+                  "values": "20",
+                  "unit": "% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Bleed Physical Damage per Tick",
               "modifiers": [
-                "3.5 / 6 / 8.5 / 11 / 13.5",
-                "8% bonus AD"
+                {
+                  "values": "3.5 / 6 / 8.5 / 11 / 13.5"
+                },
+                {
+                  "values": "8",
+                  "unit": "% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Total Bleed Physical Damage",
               "modifiers": [
-                "35 / 60 / 85 / 110 / 135",
-                "80% bonus AD"
+                {
+                  "values": "35 / 60 / 85 / 110 / 135"
+                },
+                {
+                  "values": "80",
+                  "unit": "% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Total Physical Damage",
               "modifiers": [
-                "70 / 100 / 130 / 160 / 190",
-                "100% bonus AD"
+                {
+                  "values": "70 / 100 / 130 / 160 / 190"
+                },
+                {
+                  "values": "100",
+                  "unit": "% bonus AD"
+                }
               ]
             }
           ]
@@ -159,36 +179,61 @@ const champion: Champion = {
             {
               "attribute": "Minimum Bonus Physical Damage",
               "modifiers": [
-                "30 / 45 / 60 / 75 / 90",
-                "40% bonus AD"
+                {
+                  "values": "30 / 45 / 60 / 75 / 90"
+                },
+                {
+                  "values": "40",
+                  "unit": "% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Maximum Bonus Physical Damage",
               "modifiers": [
-                "60 / 90 / 120 / 150 / 180",
-                "140% bonus AD"
+                {
+                  "values": "60 / 90 / 120 / 150 / 180"
+                },
+                {
+                  "values": "140",
+                  "unit": "% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Minimum Total Physical Damage",
               "modifiers": [
-                "100 / 145 / 190 / 235 / 280",
-                "140% bonus AD"
+                {
+                  "values": "100 / 145 / 190 / 235 / 280"
+                },
+                {
+                  "values": "140",
+                  "unit": "% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Maximum Total Physical Damage",
               "modifiers": [
-                "130 / 190 / 250 / 310 / 370",
-                "240% bonus AD"
+                {
+                  "values": "130 / 190 / 250 / 310 / 370"
+                },
+                {
+                  "values": "240",
+                  "unit": "% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Heal",
               "modifiers": [
-                "45 / 60 / 75 / 90 / 105",
-                "40% bonus AD"
+                {
+                  "values": "45 / 60 / 75 / 90 / 105"
+                },
+                {
+                  "values": "40",
+                  "unit": "% bonus AD"
+                }
               ]
             }
           ]
@@ -231,7 +276,10 @@ const champion: Champion = {
             {
               "attribute": "Bonus Movement Speed",
               "modifiers": [
-                "20 / 22.5 / 25 / 27.5 / 30%"
+                {
+                  "values": "20 / 22.5 / 25 / 27.5 / 30",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -264,22 +312,37 @@ const champion: Champion = {
             {
               "attribute": "Dash Physical Damage",
               "modifiers": [
-                "15 / 25 / 35 / 45 / 55",
-                "40% bonus AD"
+                {
+                  "values": "15 / 25 / 35 / 45 / 55"
+                },
+                {
+                  "values": "40",
+                  "unit": "% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Flurry Physical Damage",
               "modifiers": [
-                "60 / 85 / 110 / 135 / 160",
-                "80% bonus AD"
+                {
+                  "values": "60 / 85 / 110 / 135 / 160"
+                },
+                {
+                  "values": "80",
+                  "unit": "% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Total Physical Damage",
               "modifiers": [
-                "75 / 110 / 145 / 180 / 215",
-                "120% bonus AD"
+                {
+                  "values": "75 / 110 / 145 / 180 / 215"
+                },
+                {
+                  "values": "120",
+                  "unit": "% bonus AD"
+                }
               ]
             }
           ]
@@ -316,15 +379,25 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "150 / 250 / 350",
-                "120% bonus AD"
+                {
+                  "values": "150 / 250 / 350"
+                },
+                {
+                  "values": "120",
+                  "unit": "% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Physical Damage per Packmate",
               "modifiers": [
-                "15 / 25 / 35",
-                "12% bonus AD"
+                {
+                  "values": "15 / 25 / 35"
+                },
+                {
+                  "values": "12",
+                  "unit": "% bonus AD"
+                }
               ]
             }
           ]
@@ -338,8 +411,13 @@ const champion: Champion = {
             {
               "attribute": "Shield",
               "modifiers": [
-                "100 / 150 / 200",
-                "150% bonus AD"
+                {
+                  "values": "100 / 150 / 200"
+                },
+                {
+                  "values": "150",
+                  "unit": "% bonus AD"
+                }
               ]
             }
           ]

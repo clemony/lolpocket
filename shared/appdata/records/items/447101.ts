@@ -10,23 +10,22 @@ const item: Item = {
     {
       name: 'Money In The Bank',
       unique: true,
-      effects: 'Basic attacks on-hit and ability hits have a 12% chance to store between <img src="/img/icons/gold-coin.webp" class="inline-icon" />30 and 240 gold (2.5-second cooldown per attack/ability). If you win the round, gain <img src="/img/icons/gold-coin.webp" class="inline-icon" />gold equal to the stored amount, otherwise lose 25% of it.'
-    }
+      effects:
+        'Basic attacks on-hit and ability hits have a 12% chance to store between <img src="/img/icons/gold-coin.webp" class="inline-icon" />30 and 240 gold (2.5-second cooldown per attack/ability). If you win the round, gain <img src="/img/icons/gold-coin.webp" class="inline-icon" />gold equal to the stored amount, otherwise lose 25% of it.',
+    },
   ],
   stats: {
     attackSpeed: 70,
     percentMovespeed: 8,
-    abilityHaste: 40
+    abilityHaste: 40,
   },
   shop: {
     prices: {
       total: 0,
       combined: 1000,
-      sell: 0
-    }
+      sell: 0,
+    },
   },
-  maps: [
-    30
-  ]
+  maps: [30],
 }
 export default item

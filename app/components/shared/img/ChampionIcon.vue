@@ -1,5 +1,10 @@
 <script setup lang="ts">
-const { id, alt, class: className, title } = defineProps<{
+const {
+  id,
+  alt,
+  class: className,
+  title,
+} = defineProps<{
   id: number
   alt?: string
   class?: HTMLAttributes['class']
@@ -11,7 +16,12 @@ const { id, alt, class: className, title } = defineProps<{
   <StaticImg
     :img="`/img/champions/${id}.webp`"
     :alt="title || alt || `Champion ${id} icon`"
-    :class="cn('object-center overflow-hidden shadow-sm size-full  bg-b2/40 drop-shadow-sm grid place-items-center ', className)">
+    :class="
+      cn(
+        'object-center overflow-hidden shadow-sm size-full  bg-b2/40 drop-shadow-sm grid place-items-center ',
+        className,
+      )
+    ">
     <slot />
   </StaticImg>
 </template>

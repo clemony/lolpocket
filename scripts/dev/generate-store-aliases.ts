@@ -12,7 +12,8 @@ const files = fs.readdirSync(storesDir).filter(f => f.endsWith('.ts'))
 for (const file of files) {
   const storeName = path.basename(file, '.ts') // e.g. cooldownStore
   const composableName = storeName.replace(/Store$/, '') // cooldown
-  const aliasName = composableName === 'index' ? 'ix' : composableName[0] + composableName[1] // e.g. 'cd'
+  const aliasName
+    = composableName === 'index' ? 'ix' : composableName[0] + composableName[1] // e.g. 'cd'
 
   const storeImport = `use${capitalize(composableName)}Store`
 

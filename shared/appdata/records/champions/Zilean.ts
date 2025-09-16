@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:16 PM CDT
 
 const champion: Champion = {
   "id": 26,
@@ -130,8 +130,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "75 / 115 / 165 / 230 / 300",
-                "90% AP"
+                {
+                  "values": "75 / 115 / 165 / 230 / 300"
+                },
+                {
+                  "values": "90",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -142,7 +147,10 @@ const champion: Champion = {
             {
               "attribute": "Stun Duration",
               "modifiers": [
-                "1.1 / 1.2 / 1.3 / 1.4 / 1.5 seconds"
+                {
+                  "values": "1.1 / 1.2 / 1.3 / 1.4 / 1.5",
+                  "unit": " seconds"
+                }
               ]
             }
           ]
@@ -201,7 +209,10 @@ const champion: Champion = {
             {
               "attribute": "Movement Speed Modifier",
               "modifiers": [
-                "40 / 55 / 70 / 85 / 99%"
+                {
+                  "values": "40 / 55 / 70 / 85 / 99",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -234,8 +245,13 @@ const champion: Champion = {
             {
               "attribute": "Heal",
               "modifiers": [
-                "600 / 850 / 1100",
-                "200% AP"
+                {
+                  "values": "600 / 850 / 1100"
+                },
+                {
+                  "values": "200",
+                  "unit": "% AP"
+                }
               ]
             }
           ]

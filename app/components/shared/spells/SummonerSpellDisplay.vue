@@ -13,11 +13,21 @@ function update(event, i) {
   pocket.value.spells[i] = event
 }
 
-const imgArr = ['/img/spells/heal.webp', '/img/spells/ignite.webp', '/img/spells/barrier.webp', '/img/spells/ghost.webp', '/img/spells/exhaust.webp', '/img/spells/smite.webp', '/img/spells/flash.webp', '/img/spells/teleport.webp']
+const imgArr = [
+  '/img/spells/heal.webp',
+  '/img/spells/ignite.webp',
+  '/img/spells/barrier.webp',
+  '/img/spells/ghost.webp',
+  '/img/spells/exhaust.webp',
+  '/img/spells/smite.webp',
+  '/img/spells/flash.webp',
+  '/img/spells/teleport.webp',
+]
 </script>
 
 <template>
-  <div class=" gap-2 flex h-auto items-center l  py-2 px-2  bg-b2 border-b3 shadow-sm">
+  <div
+    class="gap-2 flex h-auto items-center l py-2 px-2 bg-b2 border-b3 shadow-sm">
     <Popover>
       <PopoverTrigger class="">
         <!--       <img
@@ -30,8 +40,8 @@ const imgArr = ['/img/spells/heal.webp', '/img/spells/ignite.webp', '/img/spells
         v-else-if="pocket.spells[0]"
         :src="`/img/spells/pocket/${pocket.spells[0].name}.webp`"
  -->
-        class=" rounded-full overflow-hidden grayscale-0 transition-all duration-500"
-        />
+        class=" rounded-full overflow-hidden grayscale-0 transition-all
+        duration-500" />
       </PopoverTrigger>
 
       <SpellPicker

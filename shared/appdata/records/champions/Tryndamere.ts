@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:15 PM CDT
 
 const champion: Champion = {
   "id": 23,
@@ -119,19 +119,26 @@ const champion: Champion = {
             {
               "attribute": "Bonus Attack Damage",
               "modifiers": [
-                "5 / 10 / 15 / 20 / 25"
+                {
+                  "values": "5 / 10 / 15 / 20 / 25"
+                }
               ]
             },
             {
               "attribute": "Additional Bonus AD",
               "modifiers": [
-                "0.15 / 0.25 / 0.35 / 0.45 / 0.55 per 1% missing health"
+                {
+                  "values": "0.15 / 0.25 / 0.35 / 0.45 / 0.55",
+                  "unit": " per 1% missing health"
+                }
               ]
             },
             {
               "attribute": "Maximum Total Bonus AD",
               "modifiers": [
-                "20 / 35 / 50 / 65 / 80"
+                {
+                  "values": "20 / 35 / 50 / 65 / 80"
+                }
               ]
             }
           ]
@@ -142,22 +149,37 @@ const champion: Champion = {
             {
               "attribute": "Minimum Heal",
               "modifiers": [
-                "30 / 40 / 50 / 60 / 70",
-                "30% AP"
+                {
+                  "values": "30 / 40 / 50 / 60 / 70"
+                },
+                {
+                  "values": "30",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Heal Per 1 Fury",
               "modifiers": [
-                "0.5 / 0.95 / 1.4 / 1.85 / 2.3",
-                "1.2% AP"
+                {
+                  "values": "0.5 / 0.95 / 1.4 / 1.85 / 2.3"
+                },
+                {
+                  "values": "1.2",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Maximum Heal",
               "modifiers": [
-                "80 / 135 / 190 / 245 / 300",
-                "150% AP"
+                {
+                  "values": "80 / 135 / 190 / 245 / 300"
+                },
+                {
+                  "values": "150",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -184,7 +206,9 @@ const champion: Champion = {
             {
               "attribute": "Attack Damage Reduction",
               "modifiers": [
-                "20 / 35 / 50 / 65 / 80"
+                {
+                  "values": "20 / 35 / 50 / 65 / 80"
+                }
               ]
             }
           ]
@@ -195,7 +219,10 @@ const champion: Champion = {
             {
               "attribute": "Slow",
               "modifiers": [
-                "30 / 37.5 / 45 / 52.5 / 60%"
+                {
+                  "values": "30 / 37.5 / 45 / 52.5 / 60",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -226,9 +253,17 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "75 / 105 / 135 / 165 / 195",
-                "130% bonus AD",
-                "80% AP"
+                {
+                  "values": "75 / 105 / 135 / 165 / 195"
+                },
+                {
+                  "values": "130",
+                  "unit": "% bonus AD"
+                },
+                {
+                  "values": "80",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -265,13 +300,17 @@ const champion: Champion = {
             {
               "attribute": "Fury Gained",
               "modifiers": [
-                "50 / 75 / 100"
+                {
+                  "values": "50 / 75 / 100"
+                }
               ]
             },
             {
               "attribute": "Minimum Health Threshold",
               "modifiers": [
-                "30 / 50 / 70"
+                {
+                  "values": "30 / 50 / 70"
+                }
               ]
             }
           ]

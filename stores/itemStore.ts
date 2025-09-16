@@ -69,7 +69,7 @@ export const useItemStore = defineStore(
       if (filters.value.purchasable === true) {
         const unpurchasableSet = new Set(itemFilters.unpurchasable)
         matchedIds = new Set(
-          [...matchedIds].filter(id => !unpurchasableSet.has(id)),
+          [...matchedIds].filter(id => !unpurchasableSet.has(id))
         )
       }
 
@@ -86,7 +86,7 @@ export const useItemStore = defineStore(
               name.includes(query)
               || akas.some(aka => aka.toLowerCase().includes(query))
             )
-          }),
+          })
         )
       }
 
@@ -129,5 +129,5 @@ export const useItemStore = defineStore(
       key: 'itemStore',
       pick: ['itemGridApi'],
     },
-  },
+  }
 )

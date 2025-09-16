@@ -32,19 +32,18 @@ const password = ref('')
               :class="cn('size-5.5 ')" />
           </Button>
         </div>
-        <div class="relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t after:border-b4">
+        <div
+          class="relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t after:border-b4">
           <span class="relative z-10 bg-b1 px-2 text-bc/60">
             Or continue with
           </span>
         </div>
         <div class="grid gap-6">
           <div class="grid gap-2">
-            <Label
-              html-for="email">Email</Label>
+            <Label html-for="email">Email</Label>
             <Input
               id="email"
               v-model:email="email"
-
               type="email"
               class="h-12"
               placeholder="mail@example.com"
@@ -56,7 +55,7 @@ const password = ref('')
               <Label html-for="password">Password</Label>
               <NuxtLink
                 to="/password-reset"
-                class="ml-auto text-2 underline-offset-1.5 hover:underline">
+                class="ml-auto text-xs underline-offset-1.5 hover:underline">
                 Forgot your password?
               </NuxtLink>
             </div>
@@ -81,7 +80,7 @@ const password = ref('')
               variant="link"
               size="lg"
               hover="link"
-              class="underline-offset-1.5 justify-center  w-full "
+              class="underline-offset-1.5 justify-center w-full"
               @click="navigateTo('/signup')">
               Signing up?
             </Button>

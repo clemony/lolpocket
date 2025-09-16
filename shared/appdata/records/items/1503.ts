@@ -10,24 +10,19 @@ const item: Item = {
     {
       name: 'True Sight',
       unique: true,
-      effects: 'Can see <img src="/img/icons/camouflage.webp" class="tip-icon" />camouflaged and <img src="/img/icons/invisible.webp" class="tip-icon" />invisible units within 1100 units.'
-    }
+      effects:
+        'Can see <img src="/img/icons/camouflage.webp" class="tip-icon" />camouflaged and <img src="/img/icons/invisible.webp" class="tip-icon" />invisible units within 1100 units.',
+    },
   ],
   stats: {},
   shop: {
     prices: {
       total: 0,
       combined: 0,
-      sell: 0
+      sell: 0,
     },
-    purchasable: false
+    purchasable: false,
   },
-  maps: [
-    11,
-    12,
-    21,
-    30,
-    35
-  ]
+  maps: [11, 12, 21, 30, 35],
 }
 export default item

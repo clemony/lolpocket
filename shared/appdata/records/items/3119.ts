@@ -6,18 +6,18 @@ const item: Item = {
     {
       id: 3070,
       name: 'Tear of the Goddess',
-      gold: 400
+      gold: 400,
     },
     {
       id: 1011,
       name: 'Giant\'s Belt',
-      gold: 900
+      gold: 900,
     },
     {
       id: 3067,
       name: 'Kindlegem',
-      gold: 800
-    }
+      gold: 800,
+    },
   ],
   specialRecipe: 0,
   noEffects: false,
@@ -27,38 +27,33 @@ const item: Item = {
     {
       name: 'Awe',
       unique: true,
-      effects: 'Grants <b>bonus</b> health equal to 15% <b>bonus</b> mana.'
+      effects: 'Grants <b>bonus</b> health equal to 15% <b>bonus</b> mana.',
     },
     {
       name: 'Manaflow',
       unique: true,
-      effects: 'Grants a charge every 8 seconds, up to 4 charges. Consumes a charge on-hit and whenever affecting an enemy or ally with an ability to grant 3 <b>bonus</b> mana, increased to 6 mana for champion targets, up to a <b>maximum</b> of 360 <b>bonus</b> mana.'
+      effects:
+        'Grants a charge every 8 seconds, up to 4 charges. Consumes a charge on-hit and whenever affecting an enemy or ally with an ability to grant 3 <b>bonus</b> mana, increased to 6 mana for champion targets, up to a <b>maximum</b> of 360 <b>bonus</b> mana.',
     },
     {
       unique: false,
-      effects: 'Transforms into <img src="/img/icons/fimbulwinter.webp" class="tip-icon" />Fimbulwinter at 360 <b>bonus</b> mana.'
-    }
+      effects:
+        'Transforms into <img src="/img/icons/fimbulwinter.webp" class="tip-icon" />Fimbulwinter at 360 <b>bonus</b> mana.',
+    },
   ],
   stats: {
     health: 550,
     mana: 500,
-    abilityHaste: 15
+    abilityHaste: 15,
   },
   shop: {
     prices: {
       total: 2400,
       combined: 300,
-      sell: 960
+      sell: 960,
     },
-    tags: [
-      'TANK'
-    ]
+    tags: ['TANK'],
   },
-  maps: [
-    11,
-    12,
-    21,
-    35
-  ]
+  maps: [11, 12, 21, 35],
 }
 export default item

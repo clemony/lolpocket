@@ -3,38 +3,38 @@
 export const spellIndex: Record<string, string | number>[] = [
   {
     id: 1,
-    name: 'Cleanse'
+    name: 'Cleanse',
   },
   {
     id: 3,
-    name: 'Exhaust'
+    name: 'Exhaust',
   },
   {
     id: 4,
-    name: 'Flash'
+    name: 'Flash',
   },
   {
     id: 6,
-    name: 'Ghost'
+    name: 'Ghost',
   },
   {
     id: 7,
-    name: 'Heal'
+    name: 'Heal',
   },
   {
     id: 11,
-    name: 'Smite'
+    name: 'Smite',
   },
   {
     id: 12,
-    name: 'Teleport'
+    name: 'Teleport',
   },
   {
     id: 14,
-    name: 'Ignite'
+    name: 'Ignite',
   },
   {
     id: 21,
-    name: 'Barrier'
-  }
+    name: 'Barrier',
+  },
 ]

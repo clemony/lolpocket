@@ -12,21 +12,26 @@ const pagedMatches = computed(() => {
   return state.matches.slice(start, start + itemsPerPage)
 })
 
-watch(() => state.matches.length, (newVal) => {
-  if (newVal)
-    currentPage.value = 1
-})
+watch(
+  () => state.matches.length,
+  (newVal) => {
+    if (newVal)
+      currentPage.value = 1
+  }
+)
 
 const scroll = inject<Scroll>('scroll-top')
-watch(() => currentPage.value, (newVal) => {
-  if (newVal)
-    scroll.top()
-})
+watch(
+  () => currentPage.value,
+  (newVal) => {
+    if (newVal)
+      scroll.top()
+  }
+)
 </script>
 
 <template>
-  <div
-    class="flex-col py-24 flex  w-full">
+  <div class="flex-col py-24 flex w-full">
     <div
       v-if="state.loading"
       class="flex flex-col gap-8">
@@ -44,8 +49,7 @@ watch(() => currentPage.value, (newVal) => {
         v-for="match in pagedMatches"
         :key="match.matchId"
         :puuid="state.summoner?.puuid"
-        :match="match">
-      </LazyMatchCard>
+        :match="match"></LazyMatchCard>
     </TransitionScalePop>
 
     <div

@@ -5,7 +5,12 @@ defineOptions({
   inheritAttrs: false,
 })
 
-const { align = 'center', sideOffset = 4, scaleStart = 0.6, class: className } = defineProps<{
+const {
+  align = 'center',
+  sideOffset = 4,
+  scaleStart = 0.6,
+  class: className,
+} = defineProps<{
   class?: HTMLAttributes['class']
   sideOffset?: number
   align?: Align
@@ -31,7 +36,6 @@ const wrapperVariants = {
     scale: 1,
     visibility: 'visible',
     transition: {
-
       delay: 0.2,
     },
   },

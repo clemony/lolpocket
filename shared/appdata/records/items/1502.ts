@@ -9,24 +9,19 @@ const item: Item = {
   passives: [
     {
       unique: true,
-      effects: 'While no enemy <img src="/img/icons/minions.webp" class="tip-icon" />minions or <img src="/img/icons/rift-herald-mercenary.webp" class="tip-icon" />Rift Herald Mercenary are within range, gain 80% damage reduction, including against true damage.'
-    }
+      effects:
+        'While no enemy <img src="/img/icons/minions.webp" class="tip-icon" />minions or <img src="/img/icons/rift-herald-mercenary.webp" class="tip-icon" />Rift Herald Mercenary are within range, gain 80% damage reduction, including against true damage.',
+    },
   ],
   stats: {},
   shop: {
     prices: {
       total: 0,
       combined: 0,
-      sell: 0
+      sell: 0,
     },
-    purchasable: false
+    purchasable: false,
   },
-  maps: [
-    11,
-    12,
-    21,
-    30,
-    35
-  ]
+  maps: [11, 12, 21, 30, 35],
 }
 export default item

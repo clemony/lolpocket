@@ -11,8 +11,8 @@ export function useChampionFilter(filters: ChampionFilter) {
     const ids = new Set<number>()
     Object.values(championFilters).forEach(group =>
       Object.values(group).forEach((idList: number[]) =>
-        idList.forEach(id => ids.add(id)),
-      ),
+        idList.forEach(id => ids.add(id))
+      )
     )
     return [...ids]
   })
@@ -44,7 +44,7 @@ export function useChampionFilter(filters: ChampionFilter) {
       id,
       name: ix.champNameById(id),
       key: ix.champKeyById(id),
-    })),
+    }))
   )
 
   const championKeys = computed(() => champions.map(c => c.key))

@@ -18,7 +18,6 @@ const emit = defineEmits(['interact-outside'])
   <!-- eslint-disable vue/custom-event-name-casing -->
 
   <PopoverContent
-
     :side-offset="props.sideOffset"
     :align-offset="props.alignOffset"
     :align="props.align"

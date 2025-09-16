@@ -10,27 +10,24 @@ const item: Item = {
     {
       name: 'Safeguard',
       unique: true,
-      effects: 'Become <i>Safeguarded</i> to reduce incoming champion damage by 40%, lingering for 3 seconds after taking damage from a champion (30 second cooldown, timer restarts upon taking damage from champions).'
-    }
+      effects:
+        'Become <i>Safeguarded</i> to reduce incoming champion damage by 40%, lingering for 3 seconds after taking damage from a champion (30 second cooldown, timer restarts upon taking damage from champions).',
+    },
   ],
   stats: {
     abilityPower: 85,
     health: 300,
     mana: 600,
-    abilityHaste: 25
+    abilityHaste: 25,
   },
   shop: {
     prices: {
       total: 0,
       combined: 1000,
-      sell: 0
+      sell: 0,
     },
-    tags: [
-      'MAGE'
-    ]
+    tags: ['MAGE'],
   },
-  maps: [
-    30
-  ]
+  maps: [30],
 }
 export default item

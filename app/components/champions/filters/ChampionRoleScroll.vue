@@ -13,13 +13,13 @@ function reset() {
   <ScrollArea
     as="div"
     class="relative">
-    <div class="size-fit  mask-right-sm ">
+    <div class="size-fit mask-right-sm">
       <TransitionSlide
         :offset="['100%', 0]"
         group
         class="grow flex mask-left-sm flex-nowrap overflow-x-auto max-w-160 gap-3 mt-3 px-10 pb-4 pt-2">
         <button
-          class="btn btn-square btn-sm !text-5 rounded-md font-normal"
+          class="btn btn-square btn-sm !text-lgrounded-md font-normal"
           :class="{ hidden: !filters.role }">
           <icon
             name="x-sm"
@@ -29,18 +29,16 @@ function reset() {
 
         <label
           v-for="(role, i) in championRoles"
-          :key="role + i"
-          class="btn has-checked:!bgneutral has-checked:!text-nc has-checked:!borderneutral !rounded-lg-2 !bg-b2/20 shadow-sm shadow-black/7 border-b2 hover:!border-b3 hover:scale-110  transition-all duration-300
-        hover:drop-shadow-sm
-        hover:!bg-b3/40 has-checked:!shadowneutral/20 btn-sm !text-3 mr-0 rounded-md font-medium tracking-normal capitalize checked:!shadow-sm"
-          :class="{ hidden: filters.role && role != filters.role }">
+          :key="`${role.name}${i}`"
+          class="btn has-checked:!bgneutral has-checked:!text-nc has-checked:!borderneutral !rounded-lg-2 !bg-b2/20 shadow-sm shadow-black/7 border-b2 hover:!border-b3 hover:scale-110 transition-all duration-300 hover:drop-shadow-sm hover:!bg-b3/40 has-checked:!shadowneutral/20 btn-sm !text-sm mr-0 rounded-md font-medium tracking-normal capitalize checked:!shadow-sm"
+          :class="{ hidden: filters.role && role.name != filters.role }">
           <input
             v-model="filters.role"
             class="hidden peer"
-            :value="role"
+            :value="role.name"
             type="radio"
             name="championClass" />
-          {{ role }}
+          {{ role.name }}
         </label>
       </TransitionSlide>
     </div>

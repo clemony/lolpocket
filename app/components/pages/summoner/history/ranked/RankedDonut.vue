@@ -4,11 +4,11 @@ const props = defineProps<{
   rank: string
 }>()
 
-const winrate = computed (() => {
+const winrate = computed(() => {
   return props.winrate
 })
 
-const rank = computed (() => {
+const rank = computed(() => {
   return props.rank
 })
 
@@ -19,7 +19,9 @@ const datasets = [
   },
 ]
 const color1 = computed(() => {
-  return getComputedStyle(document.documentElement).getPropertyValue(`--color-${rank.value}`)
+  return getComputedStyle(document.documentElement).getPropertyValue(
+    `--color-${rank.value}`
+  )
 })
 const colors = [getColorFromVariable('--color-b3'), color1.value]
 </script>

@@ -11,26 +11,23 @@ const item: Item = {
     {
       name: 'Recovery',
       unique: true,
-      effects: 'Restore 10 mana every 5 seconds. Manaless champions restore 3 health instead.'
-    }
+      effects:
+        'Restore 10 mana every 5 seconds. Manaless champions restore 3 health instead.',
+    },
   ],
   stats: {
     abilityPower: 20,
     healAndShieldPower: 15,
-    abilityHaste: 20
+    abilityHaste: 20,
   },
   shop: {
     prices: {
       total: 500,
       combined: 500,
-      sell: 200
+      sell: 200,
     },
-    tags: [
-      'SUPPORT'
-    ]
+    tags: ['SUPPORT'],
   },
-  maps: [
-    30
-  ]
+  maps: [30],
 }
 export default item

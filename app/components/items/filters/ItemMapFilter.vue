@@ -8,13 +8,16 @@ const ix = useIndexStore()
 
 <template>
   <Select v-bind="$attrs">
-    <SelectTrigger class="items-center justify-start flex gap-3  h-12 ">
+    <SelectTrigger class="items-center justify-start flex gap-3 h-12">
       <slot>
         <span class="size-5 relative grid place-items-center">
           <component
             :is="`i-maps-${selectedMap}`"
             class="absolute dst opacity-80 shrink-0"
-            :class="{ 'size-5': selectedMap == 12 || selectedMap == 11, 'size-6': selectedMap == 30 }" />
+            :class="{
+              'size-5': selectedMap == 12 || selectedMap == 11,
+              'size-6': selectedMap == 30,
+            }" />
         </span>
         <span class="grow">
           {{ ix.mapNameById(selectedMap) }}
@@ -26,10 +29,8 @@ const ix = useIndexStore()
       v-once
       class="w-[calc(var(--reka-select-trigger-width)+2px)] px-0">
       <SelectGroup class="px-0">
-        <SelectLabel class="w-full border-b border-b-b3/60 ">
-          <span class="opacity-50 ">
-            Select a Map...
-          </span>
+        <SelectLabel class="w-full border-b border-b-b3/60">
+          <span class="opacity-50">Select a Map...</span>
         </SelectLabel>
         <SelectGroup class="size-full p-0.5 space-y-1">
           <SelectItem
@@ -54,7 +55,10 @@ const ix = useIndexStore()
                 <component
                   :is="`i-maps${map}`"
                   class="absolute opacity-80 dst shrink-0"
-                  :class="{ 'size-5': map == 12 || map == 11, 'size-6': map == 30 }" />
+                  :class="{
+                    'size-5': map == 12 || map == 11,
+                    'size-6': map == 30,
+                  }" />
               </span>
               {{ ix.mapNameById(map) }}
             </div>

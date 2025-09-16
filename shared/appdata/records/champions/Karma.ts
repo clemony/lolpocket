@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:56 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:12 PM CDT
 
 const champion: Champion = {
   "id": 43,
@@ -125,8 +125,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "60 / 110 / 160 / 210 / 260",
-                "70% AP"
+                {
+                  "values": "60 / 110 / 160 / 210 / 260"
+                },
+                {
+                  "values": "70",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -161,16 +166,28 @@ const champion: Champion = {
             {
               "attribute": "Bonus Magic Damage",
               "modifiers": [
-                "40 / 100 / 160 / 220",
-                "30% AP"
+                {
+                  "values": "40 / 100 / 160 / 220"
+                },
+                {
+                  "values": "30",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Total Magic Damage",
               "modifiers": [
-                "60 / 110 / 160 / 210 / 260",
-                "40 / 100 / 160 / 220",
-                "100% AP"
+                {
+                  "values": "60 / 110 / 160 / 210 / 260"
+                },
+                {
+                  "values": "40 / 100 / 160 / 220"
+                },
+                {
+                  "values": "100",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -181,23 +198,40 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "40 / 130 / 220 / 310",
-                "50% AP"
+                {
+                  "values": "40 / 130 / 220 / 310"
+                },
+                {
+                  "values": "50",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Total Bonus Damage",
               "modifiers": [
-                "80 / 230 / 380 / 530",
-                "80% AP"
+                {
+                  "values": "80 / 230 / 380 / 530"
+                },
+                {
+                  "values": "80",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Total Damage",
               "modifiers": [
-                "60 / 110 / 160 / 210 / 260",
-                "80 / 230 / 380 / 530",
-                "150% AP"
+                {
+                  "values": "60 / 110 / 160 / 210 / 260"
+                },
+                {
+                  "values": "80 / 230 / 380 / 530"
+                },
+                {
+                  "values": "150",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -231,8 +265,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "40 / 65 / 90 / 115 / 140",
-                "45% AP"
+                {
+                  "values": "40 / 65 / 90 / 115 / 140"
+                },
+                {
+                  "values": "45",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -243,14 +282,22 @@ const champion: Champion = {
             {
               "attribute": "Total Magic Damage",
               "modifiers": [
-                "80 / 130 / 180 / 230 / 280",
-                "90% AP"
+                {
+                  "values": "80 / 130 / 180 / 230 / 280"
+                },
+                {
+                  "values": "90",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Root Duration",
               "modifiers": [
-                "1.6 / 1.7 / 1.8 / 1.9 / 2 seconds"
+                {
+                  "values": "1.6 / 1.7 / 1.8 / 1.9 / 2",
+                  "unit": " seconds"
+                }
               ]
             }
           ]
@@ -283,14 +330,23 @@ const champion: Champion = {
             {
               "attribute": "Root Duration Increase",
               "modifiers": [
-                "0.5 / 0.75 / 1 / 1.25 seconds"
+                {
+                  "values": "0.5 / 0.75 / 1 / 1.25",
+                  "unit": " seconds"
+                }
               ]
             },
             {
               "attribute": "Total Root Duration",
               "modifiers": [
-                "1.6 / 1.7 / 1.8 / 1.9 / 2  seconds",
-                "0.5 / 0.75 / 1 / 1.25"
+                {
+                  "values": "1.6 / 1.7 / 1.8 / 1.9 / 2",
+                  "unit": "  seconds"
+                },
+                {
+                  "values": "0.5 - 1.25",
+                  "tooltip": "Scaling per rank:\n0.5 / 0.75 / 1 / 1.25"
+                }
               ]
             }
           ]
@@ -322,8 +378,13 @@ const champion: Champion = {
             {
               "attribute": "Shield Strength",
               "modifiers": [
-                "80 / 130 / 180 / 230 / 280",
-                "60% AP"
+                {
+                  "values": "80 / 130 / 180 / 230 / 280"
+                },
+                {
+                  "values": "60",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -351,23 +412,40 @@ const champion: Champion = {
             {
               "attribute": "Bonus Primary Target Shield",
               "modifiers": [
-                "50 / 100 / 150 / 200",
-                "45% AP"
+                {
+                  "values": "50 / 100 / 150 / 200"
+                },
+                {
+                  "values": "45",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Total Primary Target Shield",
               "modifiers": [
-                "80 / 130 / 180 / 230 / 280",
-                "50 / 100 / 150 / 200",
-                "105% AP"
+                {
+                  "values": "80 / 130 / 180 / 230 / 280"
+                },
+                {
+                  "values": "50 / 100 / 150 / 200"
+                },
+                {
+                  "values": "105",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Secondary Target Shield",
               "modifiers": [
-                "50 / 100 / 150 / 200",
-                "45% AP"
+                {
+                  "values": "50 / 100 / 150 / 200"
+                },
+                {
+                  "values": "45",
+                  "unit": "% AP"
+                }
               ]
             }
           ]

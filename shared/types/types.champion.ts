@@ -97,7 +97,13 @@ export interface Ability {
 
 export interface Attribute {
   attribute?: string
-  modifiers?: string[]
+  modifiers?: Modifier[]
+}
+
+interface Modifier {
+  values: string
+  unit?: string
+  tooltip?: string
 }
 
 export interface AbilityEffect {

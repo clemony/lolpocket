@@ -73,4 +73,6 @@ export type PublicData = v.InferOutput<typeof PublicDataSchema>
 // --- Helpers ---
 export const getEmptyAccount = () => <Account>v.getDefaults(AccountSchema)
 export const getEmptySettings = () => <Settings>v.getDefaults(SettingsSchema)
-export const getEmptyPublicData = () => <PublicData>v.getDefaults(PublicDataSchema)
+export function getEmptyPublicData() {
+  return <PublicData>v.getDefaults(PublicDataSchema)
+}

@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:56 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:12 PM CDT
 
 const champion: Champion = {
   "id": 40,
@@ -127,22 +127,37 @@ const champion: Champion = {
             {
               "attribute": "Minimum Magic Damage",
               "modifiers": [
-                "55 / 90 / 125 / 160 / 195",
-                "50% AP"
+                {
+                  "values": "55 / 90 / 125 / 160 / 195"
+                },
+                {
+                  "values": "50",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Bonus Damage Per Second",
               "modifiers": [
-                "10 / 15 / 20 / 25 / 30",
-                "10% AP"
+                {
+                  "values": "10 / 15 / 20 / 25 / 30"
+                },
+                {
+                  "values": "10",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Maximum Magic Damage",
               "modifiers": [
-                "85 / 135 / 185 / 235 / 285",
-                "80% AP"
+                {
+                  "values": "85 / 135 / 185 / 235 / 285"
+                },
+                {
+                  "values": "80",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -181,8 +196,14 @@ const champion: Champion = {
             {
               "attribute": "Bonus Movement Speed",
               "modifiers": [
-                "6 / 7 / 8 / 9 / 10%",
-                "2% per 100 AP"
+                {
+                  "values": "6 / 7 / 8 / 9 / 10",
+                  "unit": "%"
+                },
+                {
+                  "values": "2",
+                  "unit": "% per 100 AP"
+                }
               ]
             }
           ]
@@ -193,16 +214,30 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "55 / 85 / 115 / 145 / 175",
-                "50% AP",
-                "30% bonus movement speed"
+                {
+                  "values": "55 / 85 / 115 / 145 / 175"
+                },
+                {
+                  "values": "50",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "30",
+                  "unit": "% bonus movement speed"
+                }
               ]
             },
             {
               "attribute": "Slow",
               "modifiers": [
-                "20 / 24 / 28 / 32 / 36%",
-                "6% per 100 AP"
+                {
+                  "values": "20 / 24 / 28 / 32 / 36",
+                  "unit": "%"
+                },
+                {
+                  "values": "6",
+                  "unit": "% per 100 AP"
+                }
               ]
             }
           ]
@@ -238,8 +273,13 @@ const champion: Champion = {
             {
               "attribute": "Shield Strength",
               "modifiers": [
-                "80 / 120 / 160 / 200 / 240",
-                "55% AP"
+                {
+                  "values": "80 / 120 / 160 / 200 / 240"
+                },
+                {
+                  "values": "55",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -250,8 +290,13 @@ const champion: Champion = {
             {
               "attribute": "Bonus Attack Damage",
               "modifiers": [
-                "10 / 15 / 20 / 25 / 30",
-                "10% AP"
+                {
+                  "values": "10 / 15 / 20 / 25 / 30"
+                },
+                {
+                  "values": "10",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -282,15 +327,25 @@ const champion: Champion = {
             {
               "attribute": "Heal Per Tick",
               "modifiers": [
-                "25 / 37.5 / 50",
-                "12.5% AP"
+                {
+                  "values": "25 / 37.5 / 50"
+                },
+                {
+                  "values": "12.5",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Total Heal",
               "modifiers": [
-                "300 / 450 / 600",
-                "150% AP"
+                {
+                  "values": "300 / 450 / 600"
+                },
+                {
+                  "values": "150",
+                  "unit": "% AP"
+                }
               ]
             }
           ]

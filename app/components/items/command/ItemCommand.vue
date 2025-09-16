@@ -17,7 +17,7 @@ watchEffect(() => {
   emit('update:open', isOpen.value)
 })
 
-const set = computed (() => set)
+const set = computed(() => set)
 function handleItem(e) {
   set.value[props.setIndex] = e
   emit('update:set', set.value)
@@ -35,25 +35,33 @@ const { filters, setFilter, filtered } = useItemFilter()
 
     <CustomPopoverContent
       class=""
-      :class="cn('w-110 rounded-lg max-h-130 overflow-auto p-0 border-b-6', props.class)"
+      :class="
+        cn(
+          'w-110 rounded-lg max-h-130 overflow-auto p-0 border-b-6',
+          props.class,
+        )
+      "
       align="start"
       :side-offset="props.sideOffset"
       @open-auto-focus.prevent>
       <ItemSearch
         placeholder="Type or click a suggestion"
         input-class=" text-nc"
-        class="w-full rounded-t-lg z-2 sticky top-0 left-0   shadow-none h-13 [&_svg]:size-4 **:!text-nc !bg-accent borderneutral/30 border-4"
+        class="w-full rounded-t-lg z-2 sticky top-0 left-0 shadow-none h-13 [&_svg]:size-4 **:!text-nc !bg-accent borderneutral/30 border-4"
         set-focus
-        @update:query="e => e" />
+        @update:query="(e) => e" />
 
-      <div class="z-0 size-full ">
+      <div class="z-0 size-full">
         <LazyItemCommandTags />
 
         <TransitionExpand>
-          <div v-if="filters.rank == '' && !filters.stats.length && !filters.query">
+          <div
+            v-if="
+              filters.rank == '' && !filters.stats.length && !filters.query
+            ">
             <LazyItemCommandTypes />
 
-            <Separator class="bg-accent mt-3 mb-1.5 " />
+            <Separator class="bg-accent mt-3 mb-1.5" />
 
             <LazyItemCommandStats />
           </div>
@@ -66,7 +74,7 @@ const { filters, setFilter, filtered } = useItemFilter()
             v-if="filters.rank != '' || filters.stats.length || filters.query"
             class="!flex flex-wrap justify-center gap-1.5 px-4 py-4 z-0">
             <LazyCalculatorFilteredItems
-              class=" !size-15  z-0"
+              class="!size-15 z-0"
               @update:item="handleItem($event)" />
           </div>
         </TransitionExpand>

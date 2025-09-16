@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { statIndex } from '#shared/appdata'
+import { statIndex } from '#shared/appdata';
 
 const { stats } = defineProps<{
   stats: Record<string, number>
@@ -16,7 +16,7 @@ const statEntries = computed(() =>
 
     <div class="w-full mt-4 items-center grid gap-y-1.5">
       <div
-      class="text-3 flex gap-1 w-full items-center"
+      class="text-sm flex gap-1 w-full items-center"
         v-for="stat in statEntries"
         :key="stat.key">
         <p class="font-medium  flex flex-nowrap ">
@@ -28,7 +28,7 @@ const statEntries = computed(() =>
         </p>
 
         <p
-          class="badge badge-sm justify-self-end  gap-0.5 h-5.5 px-1.25   border-none dst !drop-shadow-black/20 !text-0"
+          class="badge badge-sm justify-self-end  gap-0.5 h-5.5 px-1.25   border-none dst !drop-shadow-black/20 !text-3xs"
           :style="{
             backgroundColor: statIndex.find(k => k.id == stat.key).color
           }">

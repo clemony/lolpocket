@@ -41,7 +41,9 @@ const modelValue = ref(ms.filter.patch ?? ds.currentPatch)
               <icon
                 v-if="ms.filter.patch == patch"
                 name="tick-sm"
-                class="size-4.5 dst" /></span> {{ patch }}
+                class="size-4.5 dst" />
+            </span>
+            {{ patch }}
           </span>
         </SelectItem>
       </SelectGroup>

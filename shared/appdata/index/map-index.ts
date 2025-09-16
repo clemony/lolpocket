@@ -4,36 +4,36 @@ export const mapIndex: MapIndex[] = [
   {
     id: 11,
     name: 'Summoner\'s Rift',
-    mapStringId: 'SR'
+    mapStringId: 'SR',
   },
   {
     id: 12,
     name: 'Random Map',
-    mapStringId: 'HA'
+    mapStringId: 'HA',
   },
   {
     id: 21,
     name: 'Nexus Blitz',
-    mapStringId: 'NB'
+    mapStringId: 'NB',
   },
   {
     id: 22,
     name: 'Teamfight Tactics',
-    mapStringId: 'TFT'
+    mapStringId: 'TFT',
   },
   {
     id: 30,
     name: 'Arena',
-    mapStringId: 'TGR'
+    mapStringId: 'TGR',
   },
   {
     id: 33,
     name: 'Swarm',
-    mapStringId: 'Strawberry'
+    mapStringId: 'Strawberry',
   },
   {
     id: 35,
     name: 'The Bandlewood',
-    mapStringId: 'BDW'
-  }
+    mapStringId: 'BDW',
+  },
 ]

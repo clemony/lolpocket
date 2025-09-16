@@ -1,13 +1,10 @@
 <script setup lang="ts">
 import type { RadioGroupItemProps } from 'reka-ui'
-import {
-  RadioGroupIndicator,
-  RadioGroupItem,
+import { RadioGroupIndicator, RadioGroupItem, useForwardProps } from 'reka-ui'
 
-  useForwardProps,
-} from 'reka-ui'
-
-const props = defineProps<RadioGroupItemProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<
+  RadioGroupItemProps & { class?: HTMLAttributes['class'] }
+>()
 
 const delegatedProps = reactiveOmit(props, 'class')
 

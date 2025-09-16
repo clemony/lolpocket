@@ -6,13 +6,13 @@ const item: Item = {
     {
       id: 4630,
       name: 'Blighting Jewel',
-      gold: 1100
+      gold: 1100,
     },
     {
       id: 1026,
       name: 'Blasting Wand',
-      gold: 850
-    }
+      gold: 850,
+    },
   ],
   specialRecipe: 0,
   noEffects: true,
@@ -21,23 +21,16 @@ const item: Item = {
   simpleDescription: 'Increases magic damage',
   stats: {
     abilityPower: 95,
-    percentMagicPenetration: 40
+    percentMagicPenetration: 40,
   },
   shop: {
     prices: {
       total: 3000,
       combined: 1050,
-      sell: 1200
+      sell: 1200,
     },
-    tags: [
-      'MAGE'
-    ]
+    tags: ['MAGE'],
   },
-  maps: [
-    11,
-    12,
-    21,
-    35
-  ]
+  maps: [11, 12, 21, 35],
 }
 export default item

@@ -4,856 +4,856 @@ export const baseSkin: SkinRecord = {
   Aatrox: {
     tilePath: 'aatrox_splash_tile_0',
     centeredPath: 'aatrox_splash_centered_0',
-    loadPath: 'aatroxloadscreen'
+    loadPath: 'aatroxloadscreen',
   },
   Ahri: {
     tilePath: 'ahri_splash_tile_0',
     centeredPath: 'ahri_splash_centered_0',
-    loadPath: 'ahriloadscreen_0'
+    loadPath: 'ahriloadscreen_0',
   },
   Akali: {
     tilePath: 'akali_splash_tile_0',
     centeredPath: 'akali_splash_centered_0',
-    loadPath: 'akaliloadscreen'
+    loadPath: 'akaliloadscreen',
   },
   Akshan: {
     tilePath: 'akshan_splash_tile_0',
     centeredPath: 'akshan_splash_centered_0',
-    loadPath: 'akshanloadscreen'
+    loadPath: 'akshanloadscreen',
   },
   Alistar: {
     tilePath: 'alistar_splash_tile_0',
     centeredPath: 'alistar_splash_centered_0',
-    loadPath: 'alistarloadscreen'
+    loadPath: 'alistarloadscreen',
   },
   Ambessa: {
     tilePath: 'ambessa_splash_tile_0.domina',
     centeredPath: 'ambessa_splash_centered_0.domina',
-    loadPath: 'ambessaloadscreen_0.domina'
+    loadPath: 'ambessaloadscreen_0.domina',
   },
   Amumu: {
     tilePath: 'amumu_splash_tile_0',
     centeredPath: 'amumu_splash_centered_0',
-    loadPath: 'amumuloadscreen'
+    loadPath: 'amumuloadscreen',
   },
   Anivia: {
     tilePath: 'anivia_splash_tile_0',
     centeredPath: 'anivia_splash_centered_0',
-    loadPath: 'anivialoadscreen'
+    loadPath: 'anivialoadscreen',
   },
   Annie: {
     tilePath: 'annie_splash_tile_0',
     centeredPath: 'annie_splash_centered_0',
-    loadPath: 'annieloadscreen'
+    loadPath: 'annieloadscreen',
   },
   Aphelios: {
     tilePath: 'aphelios_splash_tile_0',
     centeredPath: 'aphelios_splash_centered_0',
-    loadPath: 'apheliosloadscreen'
+    loadPath: 'apheliosloadscreen',
   },
   Ashe: {
     tilePath: 'ashe_splash_tile_0',
     centeredPath: 'ashe_splash_centered_0',
-    loadPath: 'asheloadscreen'
+    loadPath: 'asheloadscreen',
   },
   AurelionSol: {
     tilePath: 'aurelionsol_splash_tile_0',
     centeredPath: 'aurelionsol_splash_centered_0',
-    loadPath: 'aurelionsolloadscreen'
+    loadPath: 'aurelionsolloadscreen',
   },
   Aurora: {
     tilePath: 'aurora_splash_tile_0.aurora',
     centeredPath: 'aurora_splash_centered_0.aurora',
-    loadPath: 'auroraloadscreen_0.aurora'
+    loadPath: 'auroraloadscreen_0.aurora',
   },
   Azir: {
     tilePath: 'azir_splash_tile_0',
     centeredPath: 'azir_splash_centered_0',
-    loadPath: 'azirloadscreen'
+    loadPath: 'azirloadscreen',
   },
   Bard: {
     tilePath: 'bard_splash_tile_0',
     centeredPath: 'bard_splash_centered_0',
-    loadPath: 'bardloadscreen'
+    loadPath: 'bardloadscreen',
   },
   Belveth: {
     tilePath: 'belveth_splash_tile_0',
     centeredPath: 'belveth_splash_centered_0',
-    loadPath: 'belvethloadscreen_0'
+    loadPath: 'belvethloadscreen_0',
   },
   Blitzcrank: {
     tilePath: 'blitzcrank_splash_tile_0',
     centeredPath: 'blitzcrank_splash_centered_0',
-    loadPath: 'blitzcrankloadscreen'
+    loadPath: 'blitzcrankloadscreen',
   },
   Brand: {
     tilePath: 'brand_splash_tile_0',
     centeredPath: 'brand_splash_centered_0',
-    loadPath: 'brandloadscreen'
+    loadPath: 'brandloadscreen',
   },
   Braum: {
     tilePath: 'braum_splash_tile_0',
     centeredPath: 'braum_splash_centered_0',
-    loadPath: 'braumloadscreen'
+    loadPath: 'braumloadscreen',
   },
   Briar: {
     tilePath: 'briar_splash_tile_0',
     centeredPath: 'briar_splash_centered_0',
-    loadPath: 'briarloadscreen_0'
+    loadPath: 'briarloadscreen_0',
   },
   Caitlyn: {
     tilePath: 'caitlyn_splash_tile_0',
     centeredPath: 'caitlyn_splash_centered_0',
-    loadPath: 'caitlynloadscreen_0'
+    loadPath: 'caitlynloadscreen_0',
   },
   Camille: {
     tilePath: 'camille_splash_tile_0',
     centeredPath: 'camille_splash_centered_0',
-    loadPath: 'camilleloadscreen'
+    loadPath: 'camilleloadscreen',
   },
   Cassiopeia: {
     tilePath: 'cassiopeia_splash_tile_0',
     centeredPath: 'cassiopeia_splash_centered_0',
-    loadPath: 'cassiopeialoadscreen'
+    loadPath: 'cassiopeialoadscreen',
   },
   Chogath: {
     tilePath: 'chogath_splash_tile_0',
     centeredPath: 'chogath_splash_centered_0',
-    loadPath: 'chogathloadscreen'
+    loadPath: 'chogathloadscreen',
   },
   Corki: {
     tilePath: 'corki_splash_tile_0',
     centeredPath: 'corki_splash_centered_0',
-    loadPath: 'corkiloadscreen'
+    loadPath: 'corkiloadscreen',
   },
   Darius: {
     tilePath: 'darius_splash_tile_0',
     centeredPath: 'darius_splash_centered_0',
-    loadPath: 'dariusloadscreen'
+    loadPath: 'dariusloadscreen',
   },
   Diana: {
     tilePath: 'diana_splash_tile_0',
     centeredPath: 'diana_splash_centered_0',
-    loadPath: 'dianaloadscreen'
+    loadPath: 'dianaloadscreen',
   },
   DrMundo: {
     tilePath: 'drmundo_splash_tile_0',
     centeredPath: 'drmundo_splash_centered_0',
-    loadPath: 'drmundoloadscreen_0'
+    loadPath: 'drmundoloadscreen_0',
   },
   Draven: {
     tilePath: 'draven_splash_tile_0',
     centeredPath: 'draven_splash_centered_0',
-    loadPath: 'dravenloadscreen'
+    loadPath: 'dravenloadscreen',
   },
   Ekko: {
     tilePath: 'ekko_splash_tile_0',
     centeredPath: 'ekko_splash_centered_0',
-    loadPath: 'ekkoloadscreen'
+    loadPath: 'ekkoloadscreen',
   },
   Elise: {
     tilePath: 'elise_splash_tile_0',
     centeredPath: 'elise_splash_centered_0',
-    loadPath: 'eliseloadscreen'
+    loadPath: 'eliseloadscreen',
   },
   Evelynn: {
     tilePath: 'evelynn_splash_tile_0',
     centeredPath: 'evelynn_splash_centered_0',
-    loadPath: 'evelynnloadscreen'
+    loadPath: 'evelynnloadscreen',
   },
   Ezreal: {
     tilePath: 'ezreal_splash_tile_0',
     centeredPath: 'ezreal_splash_centered_0',
-    loadPath: 'ezrealloadscreen'
+    loadPath: 'ezrealloadscreen',
   },
   Fiddlesticks: {
     tilePath: 'fiddlesticks_splash_tile_0',
     centeredPath: 'fiddlesticks_splash_centered_0',
-    loadPath: 'fiddlesticksloadscreen'
+    loadPath: 'fiddlesticksloadscreen',
   },
   Fiora: {
     tilePath: 'fiora_splash_tile_0',
     centeredPath: 'fiora_splash_centered_0',
-    loadPath: 'fioraloadscreen'
+    loadPath: 'fioraloadscreen',
   },
   Fizz: {
     tilePath: 'fizz_splash_tile_0',
     centeredPath: 'fizz_splash_centered_0',
-    loadPath: 'fizzloadscreen'
+    loadPath: 'fizzloadscreen',
   },
   Galio: {
     tilePath: 'galio_splash_tile_0',
     centeredPath: 'galio_splash_centered_0',
-    loadPath: 'galioloadscreen'
+    loadPath: 'galioloadscreen',
   },
   Gangplank: {
     tilePath: 'gangplank_splash_tile_0',
     centeredPath: 'gangplank_splash_centered_0',
-    loadPath: 'gangplankloadscreen'
+    loadPath: 'gangplankloadscreen',
   },
   Garen: {
     tilePath: 'garen_splash_tile_0',
     centeredPath: 'garen_splash_centered_0',
-    loadPath: 'garenloadscreen'
+    loadPath: 'garenloadscreen',
   },
   Gnar: {
     tilePath: 'gnar_splash_tile_0',
     centeredPath: 'gnar_splash_centered_0',
-    loadPath: 'gnarloadscreen'
+    loadPath: 'gnarloadscreen',
   },
   Gragas: {
     tilePath: 'gragas_splash_tile_0',
     centeredPath: 'gragas_splash_centered_0',
-    loadPath: 'gragasloadscreen'
+    loadPath: 'gragasloadscreen',
   },
   Graves: {
     tilePath: 'graves_splash_tile_0',
     centeredPath: 'graves_splash_centered_0',
-    loadPath: 'gravesloadscreen'
+    loadPath: 'gravesloadscreen',
   },
   Gwen: {
     tilePath: 'gwen_splash_tile_0',
     centeredPath: 'gwen_splash_centered_0',
-    loadPath: 'gwenloadscreen_0'
+    loadPath: 'gwenloadscreen_0',
   },
   Hecarim: {
     tilePath: 'hecarim_splash_tile_0',
     centeredPath: 'hecarim_splash_centered_0',
-    loadPath: 'hecarimloadscreen_0'
+    loadPath: 'hecarimloadscreen_0',
   },
   Heimerdinger: {
     tilePath: 'heimerdinger_splash_tile_0',
     centeredPath: 'heimerdinger_splash_centered_0',
-    loadPath: 'heimerdingerloadscreen'
+    loadPath: 'heimerdingerloadscreen',
   },
   Hwei: {
     tilePath: 'hwei_splash_tile_0',
     centeredPath: 'hwei_splash_centered_0',
-    loadPath: 'hweiloadscreen_0'
+    loadPath: 'hweiloadscreen_0',
   },
   Illaoi: {
     tilePath: 'illaoi_splash_tile_0',
     centeredPath: 'illaoi_splash_centered_0',
-    loadPath: 'illaoiloadscreen'
+    loadPath: 'illaoiloadscreen',
   },
   Irelia: {
     tilePath: 'irelia_splash_tile_0',
     centeredPath: 'irelia_splash_centered_0',
-    loadPath: 'irelialoadscreen'
+    loadPath: 'irelialoadscreen',
   },
   Ivern: {
     tilePath: 'ivern_splash_tile_0',
     centeredPath: 'ivern_splash_centered_0',
-    loadPath: 'ivernloadscreen'
+    loadPath: 'ivernloadscreen',
   },
   Janna: {
     tilePath: 'janna_splash_tile_0',
     centeredPath: 'janna_splash_centered_0',
-    loadPath: 'jannaloadscreen'
+    loadPath: 'jannaloadscreen',
   },
   JarvanIV: {
     tilePath: 'jarvaniv_splash_tile_0',
     centeredPath: 'jarvaniv_splash_centered_0',
-    loadPath: 'jarvanivloadscreen'
+    loadPath: 'jarvanivloadscreen',
   },
   Jax: {
     tilePath: 'jax_splash_tile_0',
     centeredPath: 'jax_splash_centered_0',
-    loadPath: 'jaxloadscreen_0'
+    loadPath: 'jaxloadscreen_0',
   },
   Jayce: {
     tilePath: 'jayce_splash_tile_0',
     centeredPath: 'jayce_splash_centered_0',
-    loadPath: 'jayceloadscreen'
+    loadPath: 'jayceloadscreen',
   },
   Jhin: {
     tilePath: 'jhin_splash_tile_0',
     centeredPath: 'jhin_splash_centered_0',
-    loadPath: 'jhinloadscreen'
+    loadPath: 'jhinloadscreen',
   },
   Jinx: {
     tilePath: 'jinx_splash_tile_0',
     centeredPath: 'jinx_splash_centered_0',
-    loadPath: 'jinxloadscreen'
+    loadPath: 'jinxloadscreen',
   },
   KSante: {
     tilePath: 'ksante_splash_tile_0',
     centeredPath: 'ksante_splash_centered_0',
-    loadPath: 'ksanteloadscreen_0'
+    loadPath: 'ksanteloadscreen_0',
   },
   Kaisa: {
     tilePath: 'kaisa_splash_tile_0',
     centeredPath: 'kaisa_splash_centered_0',
-    loadPath: 'kaisaloadscreen'
+    loadPath: 'kaisaloadscreen',
   },
   Kalista: {
     tilePath: 'kalista_splash_tile_0',
     centeredPath: 'kalista_splash_centered_0',
-    loadPath: 'kalistaloadscreen'
+    loadPath: 'kalistaloadscreen',
   },
   Karma: {
     tilePath: 'karma_splash_tile_0',
     centeredPath: 'karma_splash_centered_0',
-    loadPath: 'karmaloadscreen'
+    loadPath: 'karmaloadscreen',
   },
   Karthus: {
     tilePath: 'karthus_splash_tile_0',
     centeredPath: 'karthus_splash_centered_0',
-    loadPath: 'karthusloadscreen'
+    loadPath: 'karthusloadscreen',
   },
   Kassadin: {
     tilePath: 'kassadin_splash_tile_0',
     centeredPath: 'kassadin_splash_centered_0',
-    loadPath: 'kassadinloadscreen_0'
+    loadPath: 'kassadinloadscreen_0',
   },
   Katarina: {
     tilePath: 'katarina_splash_tile_0',
     centeredPath: 'katarina_splash_centered_0',
-    loadPath: 'katarinaloadscreen'
+    loadPath: 'katarinaloadscreen',
   },
   Kayle: {
     tilePath: 'kayle_splash_tile_0',
     centeredPath: 'kayle_splash_centered_0',
-    loadPath: 'kayleloadscreen'
+    loadPath: 'kayleloadscreen',
   },
   Kayn: {
     tilePath: 'kayn_splash_tile_0',
     centeredPath: 'kayn_splash_centered_0',
-    loadPath: 'kaynloadscreen'
+    loadPath: 'kaynloadscreen',
   },
   Kennen: {
     tilePath: 'kennen_splash_tile_0',
     centeredPath: 'kennen_splash_centered_0',
-    loadPath: 'kennenloadscreen'
+    loadPath: 'kennenloadscreen',
   },
   Khazix: {
     tilePath: 'khazix_splash_tile_0',
     centeredPath: 'khazix_splash_centered_0',
-    loadPath: 'khazixloadscreen'
+    loadPath: 'khazixloadscreen',
   },
   Kindred: {
     tilePath: 'kindred_splash_tile_0',
     centeredPath: 'kindred_splash_centered_0',
-    loadPath: 'kindredloadscreen'
+    loadPath: 'kindredloadscreen',
   },
   Kled: {
     tilePath: 'kled_splash_tile_0',
     centeredPath: 'kled_splash_centered_0',
-    loadPath: 'kledloadscreen'
+    loadPath: 'kledloadscreen',
   },
   KogMaw: {
     tilePath: 'kogmaw_splash_tile_0',
     centeredPath: 'kogmaw_splash_centered_0',
-    loadPath: 'kogmawloadscreen'
+    loadPath: 'kogmawloadscreen',
   },
   Leblanc: {
     tilePath: 'leblanc_splash_tile_0.leblanc_rework',
     centeredPath: 'leblanc_splash_centered_0.leblanc_rework',
-    loadPath: 'leblancloadscreen_0.leblanc_rework'
+    loadPath: 'leblancloadscreen_0.leblanc_rework',
   },
   LeeSin: {
     tilePath: 'leesin_splash_tile_0',
     centeredPath: 'leesin_splash_centered_0',
-    loadPath: 'leesinloadscreen_0'
+    loadPath: 'leesinloadscreen_0',
   },
   Leona: {
     tilePath: 'leona_splash_tile_0',
     centeredPath: 'leona_splash_centered_0',
-    loadPath: 'leonaloadscreen'
+    loadPath: 'leonaloadscreen',
   },
   Lillia: {
     tilePath: 'lillia_splash_tile_0',
     centeredPath: 'lillia_splash_centered_0',
-    loadPath: 'lillialoadscreen'
+    loadPath: 'lillialoadscreen',
   },
   Lissandra: {
     tilePath: 'lissandra_splash_tile_0',
     centeredPath: 'lissandra_splash_centered_0',
-    loadPath: 'lissandraloadscreen'
+    loadPath: 'lissandraloadscreen',
   },
   Lucian: {
     tilePath: 'lucian_splash_tile_0',
     centeredPath: 'lucian_splash_centered_0',
-    loadPath: 'lucianloadscreen'
+    loadPath: 'lucianloadscreen',
   },
   Lulu: {
     tilePath: 'lulu_splash_tile_0',
     centeredPath: 'lulu_splash_centered_0',
-    loadPath: 'lululoadscreen'
+    loadPath: 'lululoadscreen',
   },
   Lux: {
     tilePath: 'lux_splash_tile_0',
     centeredPath: 'lux_splash_centered_0',
-    loadPath: 'luxloadscreen'
+    loadPath: 'luxloadscreen',
   },
   Malphite: {
     tilePath: 'malphite_splash_tile_0',
     centeredPath: 'malphite_splash_centered_0',
-    loadPath: 'malphiteloadscreen'
+    loadPath: 'malphiteloadscreen',
   },
   Malzahar: {
     tilePath: 'malzahar_splash_tile_0',
     centeredPath: 'malzahar_splash_centered_0',
-    loadPath: 'malzaharloadscreen'
+    loadPath: 'malzaharloadscreen',
   },
   Maokai: {
     tilePath: 'maokai_splash_tile_0',
     centeredPath: 'maokai_splash_centered_0',
-    loadPath: 'maokailoadscreen'
+    loadPath: 'maokailoadscreen',
   },
   MasterYi: {
     tilePath: 'masteryi_splash_tile_0',
     centeredPath: 'masteryi_splash_centered_0',
-    loadPath: 'masteryiloadscreen'
+    loadPath: 'masteryiloadscreen',
   },
   Mel: {
     tilePath: 'mel_splash_tile_0.mel',
     centeredPath: 'mel_splash_centered_0.mel',
-    loadPath: 'melloadscreen_0.mel'
+    loadPath: 'melloadscreen_0.mel',
   },
   Milio: {
     tilePath: 'milio_splash_tile_0',
     centeredPath: 'milio_splash_centered_0',
-    loadPath: 'milioloadscreen_0'
+    loadPath: 'milioloadscreen_0',
   },
   MissFortune: {
     tilePath: 'missfortune_splash_tile_0',
     centeredPath: 'missfortune_splash_centered_0',
-    loadPath: 'missfortuneloadscreen'
+    loadPath: 'missfortuneloadscreen',
   },
   Mordekaiser: {
     tilePath: 'mordekaiser_splash_tile_0',
     centeredPath: 'mordekaiser_splash_centered_0',
-    loadPath: 'mordekaiserloadscreen'
+    loadPath: 'mordekaiserloadscreen',
   },
   Morgana: {
     tilePath: 'morgana_splash_tile_0',
     centeredPath: 'morgana_splash_centered_0',
-    loadPath: 'morganaloadscreen'
+    loadPath: 'morganaloadscreen',
   },
   Naafiri: {
     tilePath: 'naafiri_splash_tile_0',
     centeredPath: 'naafiri_splash_centered_0',
-    loadPath: 'naafiriloadscreen_0'
+    loadPath: 'naafiriloadscreen_0',
   },
   Nami: {
     tilePath: 'nami_splash_tile_0',
     centeredPath: 'nami_splash_centered_0',
-    loadPath: 'namiloadscreen'
+    loadPath: 'namiloadscreen',
   },
   Nasus: {
     tilePath: 'nasus_splash_tile_0',
     centeredPath: 'nasus_splash_centered_0',
-    loadPath: 'nasusloadscreen'
+    loadPath: 'nasusloadscreen',
   },
   Nautilus: {
     tilePath: 'nautilus_splash_tile_0',
     centeredPath: 'nautilus_splash_centered_0',
-    loadPath: 'nautilusloadscreen'
+    loadPath: 'nautilusloadscreen',
   },
   Neeko: {
     tilePath: 'neeko_splash_tile_0',
     centeredPath: 'neeko_splash_centered_0',
-    loadPath: 'neekoloadscreen'
+    loadPath: 'neekoloadscreen',
   },
   Nidalee: {
     tilePath: 'nidalee_splash_tile_0',
     centeredPath: 'nidalee_splash_centered_0',
-    loadPath: 'nidaleeloadscreen'
+    loadPath: 'nidaleeloadscreen',
   },
   Nilah: {
     tilePath: 'nilah_splash_tile_0',
     centeredPath: 'nilah_splash_centered_0',
-    loadPath: 'nilahloadscreen_0'
+    loadPath: 'nilahloadscreen_0',
   },
   Nocturne: {
     tilePath: 'nocturne_splash_tile_0',
     centeredPath: 'nocturne_splash_centered_0',
-    loadPath: 'nocturneloadscreen'
+    loadPath: 'nocturneloadscreen',
   },
   Nunu: {
     tilePath: 'nunu_splash_tile_0',
     centeredPath: 'nunu_splash_centered_0',
-    loadPath: 'nunuloadscreen'
+    loadPath: 'nunuloadscreen',
   },
   Olaf: {
     tilePath: 'olaf_splash_tile_0',
     centeredPath: 'olaf_splash_centered_0',
-    loadPath: 'olafloadscreen'
+    loadPath: 'olafloadscreen',
   },
   Orianna: {
     tilePath: 'orianna_splash_tile_0',
     centeredPath: 'orianna_splash_centered_0',
-    loadPath: 'oriannaloadscreen'
+    loadPath: 'oriannaloadscreen',
   },
   Ornn: {
     tilePath: 'ornn_splash_tile_0',
     centeredPath: 'ornn_splash_centered_0',
-    loadPath: 'ornnloadscreen'
+    loadPath: 'ornnloadscreen',
   },
   Pantheon: {
     tilePath: 'pantheon_splash_tile_0',
     centeredPath: 'pantheon_splash_centered_0',
-    loadPath: 'pantheonloadscreen'
+    loadPath: 'pantheonloadscreen',
   },
   Poppy: {
     tilePath: 'poppy_splash_tile_0',
     centeredPath: 'poppy_splash_centered_0',
-    loadPath: 'poppyloadscreen'
+    loadPath: 'poppyloadscreen',
   },
   Pyke: {
     tilePath: 'pyke_splash_tile_0',
     centeredPath: 'pyke_splash_centered_0',
-    loadPath: 'pykeloadscreen'
+    loadPath: 'pykeloadscreen',
   },
   Qiyana: {
     tilePath: 'qiyana_splash_tile_0',
     centeredPath: 'qiyana_splash_centered_0',
-    loadPath: 'qiyanaloadscreen'
+    loadPath: 'qiyanaloadscreen',
   },
   Quinn: {
     tilePath: 'quinn_splash_tile_0',
     centeredPath: 'quinn_splash_centered_0',
-    loadPath: 'quinnloadscreen'
+    loadPath: 'quinnloadscreen',
   },
   Rakan: {
     tilePath: 'rakan_splash_tile_0',
     centeredPath: 'rakan_splash_centered_0',
-    loadPath: 'rakanloadscreen'
+    loadPath: 'rakanloadscreen',
   },
   Rammus: {
     tilePath: 'rammus_splash_tile_0',
     centeredPath: 'rammus_splash_centered_0',
-    loadPath: 'rammusloadscreen'
+    loadPath: 'rammusloadscreen',
   },
   RekSai: {
     tilePath: 'reksai_splash_tile_0',
     centeredPath: 'reksai_splash_centered_0',
-    loadPath: 'reksailoadscreen'
+    loadPath: 'reksailoadscreen',
   },
   Rell: {
     tilePath: 'rell_splash_tile_0',
     centeredPath: 'rell_splash_centered_0',
-    loadPath: 'rellloadscreen'
+    loadPath: 'rellloadscreen',
   },
   Renata: {
     tilePath: 'renata_splash_tile_0',
     centeredPath: 'renata_splash_centered_0',
-    loadPath: 'renataloadscreen_0'
+    loadPath: 'renataloadscreen_0',
   },
   Renekton: {
     tilePath: 'renekton_splash_tile_0',
     centeredPath: 'renekton_splash_centered_0',
-    loadPath: 'renektonloadscreen'
+    loadPath: 'renektonloadscreen',
   },
   Rengar: {
     tilePath: 'rengar_splash_tile_0',
     centeredPath: 'rengar_splash_centered_0',
-    loadPath: 'rengarloadscreen'
+    loadPath: 'rengarloadscreen',
   },
   Riven: {
     tilePath: 'riven_splash_tile_0',
     centeredPath: 'riven_splash_centered_0',
-    loadPath: 'rivenloadscreen'
+    loadPath: 'rivenloadscreen',
   },
   Rumble: {
     tilePath: 'rumble_splash_tile_0',
     centeredPath: 'rumble_splash_centered_0',
-    loadPath: 'rumbleloadscreen'
+    loadPath: 'rumbleloadscreen',
   },
   Ryze: {
     tilePath: 'ryze_splash_tile_0',
     centeredPath: 'ryze_splash_centered_0',
-    loadPath: 'ryzeloadscreen'
+    loadPath: 'ryzeloadscreen',
   },
   Samira: {
     tilePath: 'samira_splash_tile_0',
     centeredPath: 'samira_splash_centered_0',
-    loadPath: 'samiraloadscreen'
+    loadPath: 'samiraloadscreen',
   },
   Sejuani: {
     tilePath: 'sejuani_splash_tile_0',
     centeredPath: 'sejuani_splash_centered_0',
-    loadPath: 'sejuaniloadscreen'
+    loadPath: 'sejuaniloadscreen',
   },
   Senna: {
     tilePath: 'senna_splash_tile_0',
     centeredPath: 'senna_splash_centered_0',
-    loadPath: 'sennaloadscreen'
+    loadPath: 'sennaloadscreen',
   },
   Seraphine: {
     tilePath: 'seraphine_splash_tile_0',
     centeredPath: 'seraphine_splash_centered_0',
-    loadPath: 'seraphineloadscreen'
+    loadPath: 'seraphineloadscreen',
   },
   Sett: {
     tilePath: 'sett_splash_tile_0',
     centeredPath: 'sett_splash_centered_0',
-    loadPath: 'settloadscreen'
+    loadPath: 'settloadscreen',
   },
   Shaco: {
     tilePath: 'shaco_splash_tile_0',
     centeredPath: 'shaco_splash_centered_0',
-    loadPath: 'shacoloadscreen'
+    loadPath: 'shacoloadscreen',
   },
   Shen: {
     tilePath: 'shen_splash_tile_0',
     centeredPath: 'shen_splash_centered_0',
-    loadPath: 'shenloadscreen'
+    loadPath: 'shenloadscreen',
   },
   Shyvana: {
     tilePath: 'shyvana_splash_tile_0',
     centeredPath: 'shyvana_splash_centered_0',
-    loadPath: 'shyvanaloadscreen'
+    loadPath: 'shyvanaloadscreen',
   },
   Singed: {
     tilePath: 'singed_splash_tile_0',
     centeredPath: 'singed_splash_centered_0',
-    loadPath: 'singedloadscreen'
+    loadPath: 'singedloadscreen',
   },
   Sion: {
     tilePath: 'sion_splash_tile_0',
     centeredPath: 'sion_splash_centered_0',
-    loadPath: 'sionloadscreen'
+    loadPath: 'sionloadscreen',
   },
   Sivir: {
     tilePath: 'sivir_splash_tile_0',
     centeredPath: 'sivir_splash_centered_0',
-    loadPath: 'sivirloadscreen_0'
+    loadPath: 'sivirloadscreen_0',
   },
   Skarner: {
     tilePath: 'skarner_splash_tile_0',
     centeredPath: 'skarner_splash_centered_0',
-    loadPath: 'skarnerloadscreen_0'
+    loadPath: 'skarnerloadscreen_0',
   },
   Smolder: {
     tilePath: 'smolder_splash_tile_0',
     centeredPath: 'smolder_splash_centered_0',
-    loadPath: 'smolderloadscreen_0'
+    loadPath: 'smolderloadscreen_0',
   },
   Sona: {
     tilePath: 'sona_splash_tile_0',
     centeredPath: 'sona_splash_centered_0',
-    loadPath: 'sonaloadscreen'
+    loadPath: 'sonaloadscreen',
   },
   Soraka: {
     tilePath: 'soraka_splash_tile_0',
     centeredPath: 'soraka_splash_centered_0',
-    loadPath: 'sorakaloadscreen'
+    loadPath: 'sorakaloadscreen',
   },
   Swain: {
     tilePath: 'swain_splash_tile_0',
     centeredPath: 'swain_splash_centered_0',
-    loadPath: 'swainloadscreen'
+    loadPath: 'swainloadscreen',
   },
   Sylas: {
     tilePath: 'sylas_splash_tile_0',
     centeredPath: 'sylas_splash_centered_0',
-    loadPath: 'sylasloadscreen'
+    loadPath: 'sylasloadscreen',
   },
   Syndra: {
     tilePath: 'syndra_splash_tile_0',
     centeredPath: 'syndra_splash_centered_0',
-    loadPath: 'syndraloadscreen_0'
+    loadPath: 'syndraloadscreen_0',
   },
   TahmKench: {
     tilePath: 'tahmkench_splash_tile_0',
     centeredPath: 'tahmkench_splash_centered_0',
-    loadPath: 'tahmkenchloadscreen'
+    loadPath: 'tahmkenchloadscreen',
   },
   Taliyah: {
     tilePath: 'taliyah_splash_tile_0',
     centeredPath: 'taliyah_splash_centered_0',
-    loadPath: 'taliyahloadscreen'
+    loadPath: 'taliyahloadscreen',
   },
   Talon: {
     tilePath: 'talon_splash_tile_0',
     centeredPath: 'talon_splash_centered_0',
-    loadPath: 'talonloadscreen'
+    loadPath: 'talonloadscreen',
   },
   Taric: {
     tilePath: 'taric_splash_tile_0',
     centeredPath: 'taric_splash_centered_0',
-    loadPath: 'taricloadscreen'
+    loadPath: 'taricloadscreen',
   },
   Teemo: {
     tilePath: 'teemo_splash_tile_0.asu_teemo',
     centeredPath: 'teemo_splash_centered_0.asu_teemo',
-    loadPath: 'teemoloadscreen_0.asu_teemo'
+    loadPath: 'teemoloadscreen_0.asu_teemo',
   },
   Thresh: {
     tilePath: 'thresh_splash_tile_0',
     centeredPath: 'thresh_splash_centered_0',
-    loadPath: 'threshloadscreen'
+    loadPath: 'threshloadscreen',
   },
   Tristana: {
     tilePath: 'tristana_splash_tile_0',
     centeredPath: 'tristana_splash_centered_0',
-    loadPath: 'tristanaloadscreen'
+    loadPath: 'tristanaloadscreen',
   },
   Trundle: {
     tilePath: 'trundle_splash_tile_0',
     centeredPath: 'trundle_splash_centered_0',
-    loadPath: 'trundleloadscreen'
+    loadPath: 'trundleloadscreen',
   },
   Tryndamere: {
     tilePath: 'tryndamere_splash_tile_0',
     centeredPath: 'tryndamere_splash_centered_0',
-    loadPath: 'tryndamereloadscreen'
+    loadPath: 'tryndamereloadscreen',
   },
   TwistedFate: {
     tilePath: 'twistedfate_splash_tile_0',
     centeredPath: 'twistedfate_splash_centered_0',
-    loadPath: 'twistedfateloadscreen'
+    loadPath: 'twistedfateloadscreen',
   },
   Twitch: {
     tilePath: 'twitch_splash_tile_0',
     centeredPath: 'twitch_splash_centered_0',
-    loadPath: 'twitchloadscreen'
+    loadPath: 'twitchloadscreen',
   },
   Udyr: {
     tilePath: 'udyr_splash_tile_0',
     centeredPath: 'udyr_splash_centered_0',
-    loadPath: 'udyrloadscreen_0'
+    loadPath: 'udyrloadscreen_0',
   },
   Urgot: {
     tilePath: 'urgot_splash_tile_0',
     centeredPath: 'urgot_splash_centered_0',
-    loadPath: 'urgotloadscreen'
+    loadPath: 'urgotloadscreen',
   },
   Varus: {
     tilePath: 'varus_splash_tile_0',
     centeredPath: 'varus_splash_centered_0',
-    loadPath: 'varusloadscreen'
+    loadPath: 'varusloadscreen',
   },
   Vayne: {
     tilePath: 'vayne_splash_tile_0',
     centeredPath: 'vayne_splash_centered_0',
-    loadPath: 'vayneloadscreen'
+    loadPath: 'vayneloadscreen',
   },
   Veigar: {
     tilePath: 'veigar_splash_tile_0',
     centeredPath: 'veigar_splash_centered_0',
-    loadPath: 'veigarloadscreen'
+    loadPath: 'veigarloadscreen',
   },
   Velkoz: {
     tilePath: 'velkoz_splash_tile_0',
     centeredPath: 'velkoz_splash_centered_0',
-    loadPath: 'velkozloadscreen'
+    loadPath: 'velkozloadscreen',
   },
   Vex: {
     tilePath: 'vex_splash_tile_0',
     centeredPath: 'vex_splash_centered_0',
-    loadPath: 'vexloadscreen_0'
+    loadPath: 'vexloadscreen_0',
   },
   Vi: {
     tilePath: 'vi_splash_tile_0',
     centeredPath: 'vi_splash_centered_0',
-    loadPath: 'viloadscreen'
+    loadPath: 'viloadscreen',
   },
   Viego: {
     tilePath: 'viego_splash_tile_0',
     centeredPath: 'viego_splash_centered_0',
-    loadPath: 'viegoloadscreen'
+    loadPath: 'viegoloadscreen',
   },
   Viktor: {
     tilePath: 'viktor_splash_tile_0.viktorvgu',
     centeredPath: 'viktor_splash_centered_0.viktorvgu',
-    loadPath: 'viktorloadscreen_0.viktorvgu'
+    loadPath: 'viktorloadscreen_0.viktorvgu',
   },
   Vladimir: {
     tilePath: 'vladimir_splash_tile_0',
     centeredPath: 'vladimir_splash_centered_0',
-    loadPath: 'vladimirloadscreen'
+    loadPath: 'vladimirloadscreen',
   },
   Volibear: {
     tilePath: 'volibear_splash_tile_0',
     centeredPath: 'volibear_splash_centered_0',
-    loadPath: 'volibearloadscreen'
+    loadPath: 'volibearloadscreen',
   },
   Warwick: {
     tilePath: 'warwick_splash_tile_0',
     centeredPath: 'warwick_splash_centered_0',
-    loadPath: 'warwickloadscreen'
+    loadPath: 'warwickloadscreen',
   },
   MonkeyKing: {
     tilePath: 'monkeyking_splash_tile_0',
     centeredPath: 'monkeyking_splash_centered_0',
-    loadPath: 'monkeykingloadscreen'
+    loadPath: 'monkeykingloadscreen',
   },
   Xayah: {
     tilePath: 'xayah_splash_tile_0',
     centeredPath: 'xayah_splash_centered_0',
-    loadPath: 'xayahloadscreen'
+    loadPath: 'xayahloadscreen',
   },
   Xerath: {
     tilePath: 'xerath_splash_tile_0',
     centeredPath: 'xerath_splash_centered_0',
-    loadPath: 'xerathloadscreen'
+    loadPath: 'xerathloadscreen',
   },
   XinZhao: {
     tilePath: 'xinzhao_splash_tile_0',
     centeredPath: 'xinzhao_splash_centered_0',
-    loadPath: 'xinzhaoloadscreen'
+    loadPath: 'xinzhaoloadscreen',
   },
   Yasuo: {
     tilePath: 'yasuo_splash_tile_0',
     centeredPath: 'yasuo_splash_centered_0',
-    loadPath: 'yasuoloadscreen'
+    loadPath: 'yasuoloadscreen',
   },
   Yone: {
     tilePath: 'yone_splash_tile_0',
     centeredPath: 'yone_splash_centered_0',
-    loadPath: 'yoneloadscreen'
+    loadPath: 'yoneloadscreen',
   },
   Yorick: {
     tilePath: 'yorick_splash_tile_0',
     centeredPath: 'yorick_splash_centered_0',
-    loadPath: 'yorickloadscreen'
+    loadPath: 'yorickloadscreen',
   },
   Yunara: {
     tilePath: 'yunara_splash_tile_0.yunara',
     centeredPath: 'yunara_splash_centered_0.yunara',
-    loadPath: 'yunaraloadscreen_0.yunara'
+    loadPath: 'yunaraloadscreen_0.yunara',
   },
   Yuumi: {
     tilePath: 'yuumi_splash_tile_0',
     centeredPath: 'yuumi_splash_centered_0',
-    loadPath: 'yuumiloadscreen'
+    loadPath: 'yuumiloadscreen',
   },
   Zac: {
     tilePath: 'zac_splash_tile_0',
     centeredPath: 'zac_splash_centered_0',
-    loadPath: 'zacloadscreen'
+    loadPath: 'zacloadscreen',
   },
   Zed: {
     tilePath: 'zed_splash_tile_0',
     centeredPath: 'zed_splash_centered_0',
-    loadPath: 'zedloadscreen'
+    loadPath: 'zedloadscreen',
   },
   Zeri: {
     tilePath: 'zeri_splash_tile_0',
     centeredPath: 'zeri_splash_centered_0',
-    loadPath: 'zeriloadscreen_0'
+    loadPath: 'zeriloadscreen_0',
   },
   Ziggs: {
     tilePath: 'ziggs_splash_tile_0',
     centeredPath: 'ziggs_splash_centered_0',
-    loadPath: 'ziggsloadscreen'
+    loadPath: 'ziggsloadscreen',
   },
   Zilean: {
     tilePath: 'zilean_splash_tile_0',
     centeredPath: 'zilean_splash_centered_0',
-    loadPath: 'zileanloadscreen'
+    loadPath: 'zileanloadscreen',
   },
   Zoe: {
     tilePath: 'zoe_splash_tile_0',
     centeredPath: 'zoe_splash_centered_0',
-    loadPath: 'zoeloadscreen'
+    loadPath: 'zoeloadscreen',
   },
   Zyra: {
     tilePath: 'zyra_splash_tile_0',
     centeredPath: 'zyra_splash_centered_0',
-    loadPath: 'zyraloadscreen'
-  }
+    loadPath: 'zyraloadscreen',
+  },
 }

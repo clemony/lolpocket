@@ -23,7 +23,7 @@ export function useRepeatedTeammates(puuid: string, matches: MatchData[]) {
           continue
 
         const allies = match.participants.filter(
-          p => p.teamId === player.teamId && p.puuid !== puuid,
+          p => p.teamId === player.teamId && p.puuid !== puuid
         )
 
         for (const ally of allies) {
@@ -48,7 +48,8 @@ export function useRepeatedTeammates(puuid: string, matches: MatchData[]) {
         .map(([riotIdGameName, stats]) => {
           const rawWinrate = stats.wins / stats.games
           const confidence = Math.min(1, stats.games / 10)
-          const bayesianWinrate = (confidence * rawWinrate + (1 - confidence) * priorWinrate) * 100
+          const bayesianWinrate
+            = (confidence * rawWinrate + (1 - confidence) * priorWinrate) * 100
 
           return {
             riotIdGameName,
@@ -67,7 +68,7 @@ export function useRepeatedTeammates(puuid: string, matches: MatchData[]) {
   const topBayesianTeammates = computed(() =>
     [...repeatedTeammates.value]
       .sort((a, b) => b.bayesianWinrate - a.bayesianWinrate)
-      .slice(0, 3),
+      .slice(0, 3)
   )
 
   return {

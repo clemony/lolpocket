@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:13 PM CDT
 
 const champion: Champion = {
   "id": 68,
@@ -125,33 +125,69 @@ const champion: Champion = {
             {
               "attribute": "Total Magic Damage",
               "modifiers": [
-                "60 / 90 / 120 / 150 / 180",
-                "110% AP",
-                "6 / 6.8 / 7.6 / 8.4 / 9.2% of target's maximum health"
+                {
+                  "values": "60 / 90 / 120 / 150 / 180"
+                },
+                {
+                  "values": "110",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "6 - 9.2",
+                  "unit": "% of target's maximum health",
+                  "tooltip": "Scaling per rank:\n6 / 6.8 / 7.6 / 8.4 / 9.2% of target's maximum health"
+                }
               ]
             },
             {
               "attribute": "Magic Damage Per Tick",
               "modifiers": [
-                "5 / 7.5 / 10 / 12.5 / 15",
-                "9.17% AP",
-                "0.5 / 0.57 / 0.63 / 0.7 / 0.77% of target's maximum health"
+                {
+                  "values": "5 / 7.5 / 10 / 12.5 / 15"
+                },
+                {
+                  "values": "9.17",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "0.5 - 0.77",
+                  "unit": "% of target's maximum health",
+                  "tooltip": "Scaling per rank:\n0.5 / 0.57 / 0.63 / 0.7 / 0.77% of target's maximum health"
+                }
               ]
             },
             {
               "attribute": "Total Minion Damage",
               "modifiers": [
-                "42 / 63 / 84 / 105 / 126",
-                "77% AP",
-                "4.2 / 4.76 / 5.32 / 5.88 / 6.44% of target's maximum health"
+                {
+                  "values": "42 / 63 / 84 / 105 / 126"
+                },
+                {
+                  "values": "77",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "4.2 - 6.44",
+                  "unit": "% of target's maximum health",
+                  "tooltip": "Scaling per rank:\n4.2 / 4.76 / 5.32 / 5.88 / 6.44% of target's maximum health"
+                }
               ]
             },
             {
               "attribute": "Minion Damage Per Tick",
               "modifiers": [
-                "3.5 / 5.25 / 7 / 8.75 / 10.5",
-                "6.42% AP",
-                "0.35 / 0.4 / 0.44 / 0.49 / 0.54% of target's maximum health"
+                {
+                  "values": "3.5 / 5.25 / 7 / 8.75 / 10.5"
+                },
+                {
+                  "values": "6.42",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "0.35 - 0.54",
+                  "unit": "% of target's maximum health",
+                  "tooltip": "Scaling per rank:\n0.35 / 0.4 / 0.44 / 0.49 / 0.54% of target's maximum health"
+                }
               ]
             }
           ]
@@ -162,33 +198,69 @@ const champion: Champion = {
             {
               "attribute": "Total Enhanced Damage",
               "modifiers": [
-                "90 / 135 / 180 / 225 / 270",
-                "165% AP",
-                "9 / 10.2 / 11.4 / 12.6 / 13.8% of target's maximum health"
+                {
+                  "values": "90 / 135 / 180 / 225 / 270"
+                },
+                {
+                  "values": "165",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "9 - 13.8",
+                  "unit": "% of target's maximum health",
+                  "tooltip": "Scaling per rank:\n9 / 10.2 / 11.4 / 12.6 / 13.8% of target's maximum health"
+                }
               ]
             },
             {
               "attribute": "Enhanced Damage Per Tick",
               "modifiers": [
-                "7.5 / 11.25 / 15 / 18.75 / 22.5",
-                "13.75% AP",
-                "0.75 / 0.85 / 0.95 / 1.05 / 1.15% of target's maximum health"
+                {
+                  "values": "7.5 / 11.25 / 15 / 18.75 / 22.5"
+                },
+                {
+                  "values": "13.75",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "0.75 - 1.15",
+                  "unit": "% of target's maximum health",
+                  "tooltip": "Scaling per rank:\n0.75 / 0.85 / 0.95 / 1.05 / 1.15% of target's maximum health"
+                }
               ]
             },
             {
               "attribute": "Total Enhanced Minion Damage",
               "modifiers": [
-                "63 / 94.5 / 126 / 157.5 / 189",
-                "115.5% AP",
-                "6.3 / 7.14 / 7.98 / 8.82 / 9.66% of target's maximum health"
+                {
+                  "values": "63 / 94.5 / 126 / 157.5 / 189"
+                },
+                {
+                  "values": "115.5",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "6.3 - 9.66",
+                  "unit": "% of target's maximum health",
+                  "tooltip": "Scaling per rank:\n6.3 / 7.14 / 7.98 / 8.82 / 9.66% of target's maximum health"
+                }
               ]
             },
             {
               "attribute": "Enhanced Minion Damage Per Tick",
               "modifiers": [
-                "5.25 / 7.88 / 10.5 / 13.13 / 15.75",
-                "9.63% AP",
-                "0.53 / 0.6 / 0.67 / 0.74 / 0.81% of target's maximum health"
+                {
+                  "values": "5.25 / 7.88 / 10.5 / 13.13 / 15.75"
+                },
+                {
+                  "values": "9.63",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "0.53 - 0.81",
+                  "unit": "% of target's maximum health",
+                  "tooltip": "Scaling per rank:\n0.53 / 0.6 / 0.67 / 0.74 / 0.81% of target's maximum health"
+                }
               ]
             }
           ]
@@ -222,9 +294,17 @@ const champion: Champion = {
             {
               "attribute": "Shield Strength",
               "modifiers": [
-                "25 / 55 / 85 / 115 / 145",
-                "30% AP",
-                "4% of maximum health"
+                {
+                  "values": "25 / 55 / 85 / 115 / 145"
+                },
+                {
+                  "values": "30",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "4",
+                  "unit": "% of maximum health"
+                }
               ]
             }
           ]
@@ -235,7 +315,10 @@ const champion: Champion = {
             {
               "attribute": "Bonus Movement Speed",
               "modifiers": [
-                "10 / 15 / 20 / 25 / 30%"
+                {
+                  "values": "10 / 15 / 20 / 25 / 30",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -246,15 +329,26 @@ const champion: Champion = {
             {
               "attribute": "Enhanced Shield Strength",
               "modifiers": [
-                "37.5 / 82.5 / 127.5 / 172.5 / 217.5",
-                "45% AP",
-                "6% of maximum health"
+                {
+                  "values": "37.5 / 82.5 / 127.5 / 172.5 / 217.5"
+                },
+                {
+                  "values": "45",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "6",
+                  "unit": "% of maximum health"
+                }
               ]
             },
             {
               "attribute": "Enhanced Bonus Movement Speed",
               "modifiers": [
-                "15 / 22.5 / 30 / 37.5 / 45%"
+                {
+                  "values": "15 / 22.5 / 30 / 37.5 / 45",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -280,39 +374,61 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "55 / 80 / 105 / 130 / 155",
-                "50% AP"
+                {
+                  "values": "55 / 80 / 105 / 130 / 155"
+                },
+                {
+                  "values": "50",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Total Magic Damage",
               "modifiers": [
-                "110 / 160 / 210 / 260 / 310",
-                "100% AP"
+                {
+                  "values": "110 / 160 / 210 / 260 / 310"
+                },
+                {
+                  "values": "100",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Magic Resistance Reduction",
               "modifiers": [
-                "10 / 12 / 14 / 16 / 18%"
+                {
+                  "values": "10 / 12 / 14 / 16 / 18",
+                  "unit": "%"
+                }
               ]
             },
             {
               "attribute": "Total MR Reduction",
               "modifiers": [
-                "20 / 24 / 28 / 32 / 36%"
+                {
+                  "values": "20 / 24 / 28 / 32 / 36",
+                  "unit": "%"
+                }
               ]
             },
             {
               "attribute": "Slow",
               "modifiers": [
-                "15 / 20 / 25 / 30 / 35%"
+                {
+                  "values": "15 / 20 / 25 / 30 / 35",
+                  "unit": "%"
+                }
               ]
             },
             {
               "attribute": "Total Slow",
               "modifiers": [
-                "30 / 40 / 50 / 60 / 70%"
+                {
+                  "values": "30 / 40 / 50 / 60 / 70",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -326,39 +442,61 @@ const champion: Champion = {
             {
               "attribute": "Enhanced Damage",
               "modifiers": [
-                "82.5 / 120 / 157.5 / 195 / 232.5",
-                "75% AP"
+                {
+                  "values": "82.5 / 120 / 157.5 / 195 / 232.5"
+                },
+                {
+                  "values": "75",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Total Enhanced Damage",
               "modifiers": [
-                "165 / 240 / 315 / 390 / 465",
-                "150% AP"
+                {
+                  "values": "165 / 240 / 315 / 390 / 465"
+                },
+                {
+                  "values": "150",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Enhanced Magic Resistance Reduction",
               "modifiers": [
-                "15 / 18 / 21 / 24 / 27%"
+                {
+                  "values": "15 / 18 / 21 / 24 / 27",
+                  "unit": "%"
+                }
               ]
             },
             {
               "attribute": "Total Enhanced MR Reduction",
               "modifiers": [
-                "30 / 36 / 42 / 48 / 54%"
+                {
+                  "values": "30 / 36 / 42 / 48 / 54",
+                  "unit": "%"
+                }
               ]
             },
             {
               "attribute": "Enhanced Slow",
               "modifiers": [
-                "22.5 / 30 / 37.5 / 45 / 52.5%"
+                {
+                  "values": "22.5 / 30 / 37.5 / 45 / 52.5",
+                  "unit": "%"
+                }
               ]
             },
             {
               "attribute": "Total Enhanced Slow",
               "modifiers": [
-                "45 / 60 / 75 / 90 / 105%"
+                {
+                  "values": "45 / 60 / 75 / 90 / 105",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -397,22 +535,37 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage Per Tick",
               "modifiers": [
-                "70 / 105 / 140",
-                "17.5% AP"
+                {
+                  "values": "70 / 105 / 140"
+                },
+                {
+                  "values": "17.5",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Minimum Magic Damage",
               "modifiers": [
-                "140 / 210 / 280",
-                "35% AP"
+                {
+                  "values": "140 / 210 / 280"
+                },
+                {
+                  "values": "35",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Maximum Magic Damage",
               "modifiers": [
-                "700 / 1050 / 1400",
-                "175% AP"
+                {
+                  "values": "700 / 1050 / 1400"
+                },
+                {
+                  "values": "175",
+                  "unit": "% AP"
+                }
               ]
             }
           ]

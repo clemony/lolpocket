@@ -1,5 +1,12 @@
 <script lang="ts" setup>
-import { BarElement, CategoryScale, Chart, LinearScale, Title, Tooltip } from 'chart.js'
+import {
+  BarElement,
+  CategoryScale,
+  Chart,
+  LinearScale,
+  Title,
+  Tooltip,
+} from 'chart.js'
 import { Bar } from 'vue-chartjs'
 
 const props = defineProps<{
@@ -15,7 +22,7 @@ Chart.defaults.font.family = styles.getPropertyValue('--font-sans')
 Chart.defaults.font.weight = 400
 Chart.defaults.font.size = 16
 
-const data = computed (() => {
+const data = computed(() => {
   return props.data
 })
 const options = {
@@ -77,7 +84,6 @@ const options = {
   },
   plugins: {
     tooltip: {
-
       titleMarginBottom: 0,
       displayColors: false,
       caretPadding: 20,

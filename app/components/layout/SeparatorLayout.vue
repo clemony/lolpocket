@@ -1,5 +1,9 @@
 <script lang="ts" setup>
-const { title, description, class: className } = defineProps<{
+const {
+  title,
+  description,
+  class: className,
+} = defineProps<{
   title?: string
   description?: string
   class?: HTMLAttributes['class']
@@ -9,8 +13,8 @@ const route = useRoute()
 </script>
 
 <template>
-  <div class="space-y-6 px-22  pb-16 overflow-y-auto absolute inset-0 top-0">
-    <div class="w-full h-fit space-y-0.5 sticky  top-0 bg-b1 z-1 pt-12">
+  <div class="space-y-6 px-22 pb-16 overflow-y-auto absolute inset-0 top-0">
+    <div class="w-full h-fit space-y-0.5 sticky top-0 bg-b1 z-1 pt-12">
       <slot name="header">
         <h1 class="text-9 font-bold dst">
           {{ title || route.meta?.title || route.name }}

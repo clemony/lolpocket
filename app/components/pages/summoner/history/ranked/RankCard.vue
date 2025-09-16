@@ -1,68 +1,97 @@
 <script setup lang="ts">
-const { entry, title, class: className } = defineProps<{
+const {
+  entry,
+  title,
+  class: className,
+} = defineProps<{
   entry: RankedEntry
   title?: string
   class?: HTMLAttributes['class']
-
 }>()
 
 const color1 = computed(() => {
-  return getComputedStyle(document.documentElement).getPropertyValue(`--color-${entry?.tier ?? 'b3'}`)
+  return getComputedStyle(document.documentElement).getPropertyValue(
+    `--color-${entry?.tier ?? 'b3'}`
+  )
 })
 const colors = [getColorFromVariable('--color-b3'), color1.value]
 
-const winrate = computed (() => entry ? entry.wins / (entry.wins + entry.losses) * 100 : 0)
+const winrate = computed(() =>
+  entry ? (entry.wins / (entry.wins + entry.losses)) * 100 : 0
+)
 </script>
 
 <template>
   <Field
-    :class="cn('w-120 max-w-120 h-42 max-h-42  bg-b2/30 shadow-warm-soft  drop-shadow-xs border-b3/40 py-0 ', className)"
+    :class="
+      cn(
+        'w-120 max-w-120 h-42 max-h-42  bg-b2/30 shadow-warm-soft  drop-shadow-xs border-b3/40 py-0 ',
+        className,
+      )
+    "
     :title="`Ranked ${title}`">
-    <div class="overflow-hidden size-full grid grid-cols-[1.1fr_1fr_1fr] place-items-center h-42 content-center">
+    <div
+      class="overflow-hidden size-full grid grid-cols-[1.1fr_1fr_1fr] place-items-center h-42 content-center">
       <div class="grid mt-0.5 overflow-hidden place-items-center">
         <!-- crest -->
         <img
-
           v-if="!entry"
           src="/img/crests/unranked.webp"
-          class="drop-shadow-sm  object-contain   opacity-40  size-25 saturate-0" />
+          class="drop-shadow-sm object-contain opacity-40 size-25 saturate-0" />
 
         <img
           v-else
           :src="`/img/crests/${entry?.tier?.toLowerCase()}.webp`"
-          class="drop-shadow-md object-contain size-28 drop-shadow-black/30 " />
+          class="drop-shadow-md object-contain size-28 drop-shadow-black/30" />
       </div>
 
       <div class="relative grid place-items-center size-full">
-        <div class="relative size-21 overflow-hidden mt-1 grid place-items-center rounded-lg">
+        <div
+          class="relative size-21 overflow-hidden mt-1 grid place-items-center rounded-lg">
           <DonutSkeleton class="absolute size-21" />
 
           <div
-            class="radial-progress dst absolute "
-            :style="{ '--value': winrate, '--size': '5.25rem', 'color': getColorFromVariable(`--color-${entry?.tier ? entry.tier?.toLowerCase() : 'b3'}`) }"
+            class="radial-progress dst absolute"
+            :style="{
+              '--value': winrate,
+              '--size': '5.25rem',
+              'color': getColorFromVariable(
+                `--color-${entry?.tier ? entry.tier?.toLowerCase() : 'b3'}`,
+              ),
+            }"
             role="progressbar">
             <span
               v-if="entry"
               class="text-bc font-medium dst">
-              {{ winrate.toFixed(1).replace('.0', '') }}%
+              {{ winrate.toFixed(1).replace(".0", "") }}%
             </span>
           </div>
         </div>
       </div>
 
-      <div :class="cn('pt-3  overflow-hidden font-medium flex flex-col items-end justify-center pb-3 text-end gap-2.75', { 'opacity-40': !entry })">
+      <div
+        :class="
+          cn(
+            'pt-3  overflow-hidden font-medium flex flex-col items-end justify-center pb-3 text-end gap-2.75',
+            { 'opacity-40': !entry },
+          )
+        ">
         <p class="capitalize">
-          {{ entry ? `${entry?.tier?.toLowerCase()} ${entry?.division}` : 'Unranked' }}
+          {{
+            entry
+              ? `${entry?.tier?.toLowerCase()} ${entry?.division}`
+              : "Unranked"
+          }}
         </p>
 
-        <p class="capitalize font-semibold text-4">
+        <p class="capitalize font-semibold text-md">
           {{ entry?.lp ?? 0 }} LP
         </p>
 
         <p
           v-tippy="`${entry ? entry?.wins + entry?.losses : 0} total`"
-          class="hover:underline decoration-dotted underline-offset-2  flex text-1 items-center gap-1 text-end justify-end text-nowrap">
-          <span>{{ entry ? entry.wins : 0 }}W </span>
+          class="hover:underline decoration-dotted underline-offset-2 flex text-xxs items-center gap-1 text-end justify-end text-nowrap">
+          <span>{{ entry ? entry.wins : 0 }}W</span>
 
           <span>{{ entry ? entry.losses : 0 }}L</span>
         </p>

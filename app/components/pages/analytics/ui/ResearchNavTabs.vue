@@ -2,7 +2,7 @@
 const route = useRoute()
 const researchNav = ref('/research/champions')
 
-onMounted (() => {
+onMounted(() => {
   researchNav.value = route.path
 })
 </script>
@@ -11,7 +11,7 @@ onMounted (() => {
   <Tabs
     v-model:model-value="researchNav"
     class="w-full"
-    @update:model-value="e => navigateTo(e.toString())">
+    @update:model-value="(e) => navigateTo(e.toString())">
     <TabsList class="w-full grid grid-cols-2">
       <TabsTrigger value="/research/champions">
         Champions

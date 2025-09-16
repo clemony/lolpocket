@@ -57,7 +57,7 @@ const hovered = ref(false)
     v-model:open="hovered"
     @click="navigateTo(`/pocket/${pocket.key}/items`)">
     <PopoverTrigger
-      class=" p-1.5 bg-b2/80 backdrop-blur-md flex flex-wrap cursor-pointer !z-1 hover:!z-2 size-20 items-between rounded-lg pointer-events-auto justify-between !gap-0.75 !border-b3/50 border">
+      class="p-1.5 bg-b2/80 backdrop-blur-md flex flex-wrap cursor-pointer !z-1 hover:!z-2 size-20 items-between rounded-lg pointer-events-auto justify-between !gap-0.75 !border-b3/50 border">
       <template v-if="set.items && set.items?.length">
         <template
           v-for="(item, i) in set.items"
@@ -65,8 +65,7 @@ const hovered = ref(false)
           <Item
             v-if="i < 4"
             :id="item"
-            class="pointer-events-none rounded-lg size-7.5">
-          </Item>
+            class="pointer-events-none rounded-lg size-7.5"></Item>
         </template>
       </template>
     </PopoverTrigger>
@@ -105,7 +104,7 @@ const hovered = ref(false)
 
             <motion.div
               v-if="set.items && set.items?.length"
-              class=" p-1.5 cursor-pointer  rounded-lg justify-start flex-wrap   "
+              class="p-1.5 cursor-pointer rounded-lg justify-start flex-wrap"
               initial="closed"
               animate="open"
               exit="closed"
@@ -121,8 +120,7 @@ const hovered = ref(false)
                 :transition="{ delay: 0.2, type: 'spring', bounce: 0.25 }">
                 <Item
                   :id="item"
-                  class="pointer-events-none shadow-sm drop-shadow-sm rounded-lg size-full">
-                </Item>
+                  class="pointer-events-none shadow-sm drop-shadow-sm rounded-lg size-full"></Item>
               </motion.div>
             </motion.div>
           </motion.div>

@@ -12,9 +12,9 @@ const item: Item = {
     prices: {
       total: 0,
       combined: 0,
-      sell: 0
+      sell: 0,
     },
-    purchasable: false
-  }
+    purchasable: false,
+  },
 }
 export default item

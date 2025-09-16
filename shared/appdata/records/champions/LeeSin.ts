@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:56 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:13 PM CDT
 
 const champion: Champion = {
   "id": 64,
@@ -122,8 +122,13 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "55 / 80 / 105 / 130 / 155",
-                "115% bonus AD"
+                {
+                  "values": "55 / 80 / 105 / 130 / 155"
+                },
+                {
+                  "values": "115",
+                  "unit": "% bonus AD"
+                }
               ]
             }
           ]
@@ -161,15 +166,25 @@ const champion: Champion = {
             {
               "attribute": "Minimum Physical Damage",
               "modifiers": [
-                "55 / 80 / 105 / 130 / 155",
-                "115% bonus AD"
+                {
+                  "values": "55 / 80 / 105 / 130 / 155"
+                },
+                {
+                  "values": "115",
+                  "unit": "% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Maximum Physical Damage",
               "modifiers": [
-                "110 / 160 / 210 / 260 / 310",
-                "230% bonus AD"
+                {
+                  "values": "110 / 160 / 210 / 260 / 310"
+                },
+                {
+                  "values": "230",
+                  "unit": "% bonus AD"
+                }
               ]
             }
           ]
@@ -203,8 +218,13 @@ const champion: Champion = {
             {
               "attribute": "Shield Strength",
               "modifiers": [
-                "70 / 115 / 160 / 205 / 250",
-                "80% AP"
+                {
+                  "values": "70 / 115 / 160 / 205 / 250"
+                },
+                {
+                  "values": "80",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -238,7 +258,10 @@ const champion: Champion = {
             {
               "attribute": "Life steal and spell vamp",
               "modifiers": [
-                "10 / 14 / 18 / 22 / 26%"
+                {
+                  "values": "10 / 14 / 18 / 22 / 26",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -265,8 +288,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "35 / 60 / 85 / 110 / 135",
-                "100% AD"
+                {
+                  "values": "35 / 60 / 85 / 110 / 135"
+                },
+                {
+                  "values": "100",
+                  "unit": "% AD"
+                }
               ]
             }
           ]
@@ -300,7 +328,10 @@ const champion: Champion = {
             {
               "attribute": "Slow",
               "modifiers": [
-                "35 / 45 / 55 / 65 / 75%"
+                {
+                  "values": "35 / 45 / 55 / 65 / 75",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -333,8 +364,13 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "175 / 400 / 625",
-                "200% bonus AD"
+                {
+                  "values": "175 / 400 / 625"
+                },
+                {
+                  "values": "200",
+                  "unit": "% bonus AD"
+                }
               ]
             }
           ]
@@ -345,9 +381,18 @@ const champion: Champion = {
             {
               "attribute": "Collision Physical Damage",
               "modifiers": [
-                "175 / 400 / 625",
-                "200% bonus AD",
-                "12 / 15 / 18% of primary target's bonus health"
+                {
+                  "values": "175 / 400 / 625"
+                },
+                {
+                  "values": "200",
+                  "unit": "% bonus AD"
+                },
+                {
+                  "values": "12 - 18",
+                  "unit": "% of primary target's bonus health",
+                  "tooltip": "Scaling per rank:\n12 / 15 / 18% of primary target's bonus health"
+                }
               ]
             }
           ]

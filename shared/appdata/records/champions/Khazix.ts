@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:56 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:12 PM CDT
 
 const champion: Champion = {
   "id": 121,
@@ -125,15 +125,25 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "80 / 105 / 130 / 155 / 180",
-                "110% bonus AD"
+                {
+                  "values": "80 / 105 / 130 / 155 / 180"
+                },
+                {
+                  "values": "110",
+                  "unit": "% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Increased Damage",
               "modifiers": [
-                "168 / 220.5 / 273 / 325.5 / 378",
-                "231% bonus AD"
+                {
+                  "values": "168 / 220.5 / 273 / 325.5 / 378"
+                },
+                {
+                  "values": "231",
+                  "unit": "% bonus AD"
+                }
               ]
             }
           ]
@@ -186,8 +196,13 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "85 / 115 / 145 / 175 / 205",
-                "100% bonus AD"
+                {
+                  "values": "85 / 115 / 145 / 175 / 205"
+                },
+                {
+                  "values": "100",
+                  "unit": "% bonus AD"
+                }
               ]
             }
           ]
@@ -198,8 +213,13 @@ const champion: Champion = {
             {
               "attribute": "Heal",
               "modifiers": [
-                "55 / 75 / 95 / 115 / 135",
-                "50% AP"
+                {
+                  "values": "55 / 75 / 95 / 115 / 135"
+                },
+                {
+                  "values": "50",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -258,8 +278,13 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "65 / 100 / 135 / 170 / 205",
-                "40% bonus AD"
+                {
+                  "values": "65 / 100 / 135 / 170 / 205"
+                },
+                {
+                  "values": "40",
+                  "unit": "% bonus AD"
+                }
               ]
             }
           ]

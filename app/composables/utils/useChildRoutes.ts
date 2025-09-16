@@ -11,7 +11,11 @@ export function useChildRoutes(routeName?: string) {
       .find(r => r.name === (routeName ?? route.name))
 
     const children = parent?.children ?? []
-    return children.sort((a, b) => Number(a.meta?.order ?? (a.meta?.title || a.name)) - Number(b.meta?.order ?? (b.meta?.title || b.name)))
+    return children.sort(
+      (a, b) =>
+        Number(a.meta?.order ?? (a.meta?.title || a.name))
+        - Number(b.meta?.order ?? (b.meta?.title || b.name))
+    )
   })
   return { childRoutes }
 }

@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:56 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:11 PM CDT
 
 const champion: Champion = {
   "id": 201,
@@ -131,8 +131,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "75 / 125 / 175 / 225 / 275",
-                "2.5% of Braum's maximum health"
+                {
+                  "values": "75 / 125 / 175 / 225 / 275"
+                },
+                {
+                  "values": "2.5",
+                  "unit": "% of Braum's maximum health"
+                }
               ]
             }
           ]
@@ -165,15 +170,25 @@ const champion: Champion = {
             {
               "attribute": "Ally Bonus Armor",
               "modifiers": [
-                "20 / 25 / 30 / 35 / 40",
-                "12% bonus armor"
+                {
+                  "values": "20 / 25 / 30 / 35 / 40"
+                },
+                {
+                  "values": "12",
+                  "unit": "% bonus armor"
+                }
               ]
             },
             {
               "attribute": "Ally Bonus Magic Resistance",
               "modifiers": [
-                "20 / 25 / 30 / 35 / 40",
-                "12% bonus magic resistance"
+                {
+                  "values": "20 / 25 / 30 / 35 / 40"
+                },
+                {
+                  "values": "12",
+                  "unit": "% bonus magic resistance"
+                }
               ]
             }
           ]
@@ -184,15 +199,25 @@ const champion: Champion = {
             {
               "attribute": "Self Bonus Armor",
               "modifiers": [
-                "20 / 25 / 30 / 35 / 40",
-                "36% bonus armor"
+                {
+                  "values": "20 / 25 / 30 / 35 / 40"
+                },
+                {
+                  "values": "36",
+                  "unit": "% bonus armor"
+                }
               ]
             },
             {
               "attribute": "Self Bonus Magic Resistance",
               "modifiers": [
-                "20 / 25 / 30 / 35 / 40",
-                "36% bonus magic resistance"
+                {
+                  "values": "20 / 25 / 30 / 35 / 40"
+                },
+                {
+                  "values": "36",
+                  "unit": "% bonus magic resistance"
+                }
               ]
             }
           ]
@@ -223,13 +248,19 @@ const champion: Champion = {
             {
               "attribute": "Damage reduction",
               "modifiers": [
-                "35 / 40 / 45 / 50 / 55%"
+                {
+                  "values": "35 / 40 / 45 / 50 / 55",
+                  "unit": "%"
+                }
               ]
             },
             {
               "attribute": "Barrier Duration",
               "modifiers": [
-                "3 / 3.25 / 3.5 / 3.75 / 4 seconds"
+                {
+                  "values": "3 / 3.25 / 3.5 / 3.75 / 4",
+                  "unit": " seconds"
+                }
               ]
             }
           ]
@@ -260,8 +291,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "150 / 300 / 450",
-                "60% AP"
+                {
+                  "values": "150 / 300 / 450"
+                },
+                {
+                  "values": "60",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -272,7 +308,10 @@ const champion: Champion = {
             {
               "attribute": "Maximum Knockup Duration",
               "modifiers": [
-                "1 / 1.5 / 2 seconds"
+                {
+                  "values": "1 / 1.5 / 2",
+                  "unit": " seconds"
+                }
               ]
             }
           ]
@@ -283,7 +322,10 @@ const champion: Champion = {
             {
               "attribute": "Slow",
               "modifiers": [
-                "40 / 50 / 60%"
+                {
+                  "values": "40 / 50 / 60",
+                  "unit": "%"
+                }
               ]
             }
           ]

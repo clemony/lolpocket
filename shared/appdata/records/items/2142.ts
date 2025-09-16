@@ -11,15 +11,10 @@ const item: Item = {
     prices: {
       total: 500,
       combined: 500,
-      sell: 200
+      sell: 200,
     },
-    tags: [
-      'ATTACK_DAMAGE',
-      'ABILITY_POWER'
-    ]
+    tags: ['ATTACK_DAMAGE', 'ABILITY_POWER'],
   },
-  maps: [
-    30
-  ]
+  maps: [30],
 }
 export default item

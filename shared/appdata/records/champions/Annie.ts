@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:55 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:11 PM CDT
 
 const champion: Champion = {
   "id": 1,
@@ -129,8 +129,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "80 / 120 / 160 / 200 / 240",
-                "80% AP"
+                {
+                  "values": "80 / 120 / 160 / 200 / 240"
+                },
+                {
+                  "values": "80",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -166,8 +171,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "70 / 115 / 160 / 205 / 250",
-                "80% AP"
+                {
+                  "values": "70 / 115 / 160 / 205 / 250"
+                },
+                {
+                  "values": "80",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -200,8 +210,13 @@ const champion: Champion = {
             {
               "attribute": "Shield Strength",
               "modifiers": [
-                "60 / 95 / 130 / 165 / 200",
-                "40% AP"
+                {
+                  "values": "60 / 95 / 130 / 165 / 200"
+                },
+                {
+                  "values": "40",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -212,8 +227,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "25 / 35 / 45 / 55 / 65",
-                "40% AP"
+                {
+                  "values": "25 / 35 / 45 / 55 / 65"
+                },
+                {
+                  "values": "40",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -243,7 +263,10 @@ const champion: Champion = {
             {
               "attribute": "Magic Penetration",
               "modifiers": [
-                "15 / 17.5 / 20%"
+                {
+                  "values": "15 / 17.5 / 20",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -254,8 +277,13 @@ const champion: Champion = {
             {
               "attribute": "Initial Magic Damage",
               "modifiers": [
-                "150 / 275 / 400",
-                "75% AP"
+                {
+                  "values": "150 / 275 / 400"
+                },
+                {
+                  "values": "75",
+                  "unit": "% AP"
+                }
               ]
             }
           ]

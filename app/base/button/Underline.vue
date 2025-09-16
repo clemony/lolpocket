@@ -11,12 +11,10 @@ const props = defineProps<{
     <slot />
 
     <span
-      class="absolute -bottom-1 left-0 w-0 transition-all duration-300 h-0.5  group-hover/ul:w-full group-focus/ul:w-full"
+      class="absolute -bottom-1 left-0 w-0 transition-all duration-300 h-0.5 group-hover/ul:w-full group-focus/ul:w-full"
       :class="{ 'w-full': props.active == true }"
       :style="{ backgroundColor: props.bg || 'var(--bc)' }"></span>
   </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

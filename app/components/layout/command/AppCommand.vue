@@ -3,7 +3,14 @@ const us = useUiStore()
 
 const searchQuery = ref('')
 
-const { pageResult, groupedPages, pocketResult, championResult, itemResult, resultsLength } = await useSearch(searchQuery)
+const {
+  pageResult,
+  groupedPages,
+  pocketResult,
+  championResult,
+  itemResult,
+  resultsLength,
+} = await useSearch(searchQuery)
 
 const searchVariants = {
   hidden: {
@@ -28,14 +35,17 @@ watch(
       activeItem.value = i
       itemOpen.value = true
     }
-    else { itemOpen.value = false }
-  },
+    else {
+      itemOpen.value = false
+    }
+  }
 )
 </script>
 
 <template>
   <Dialog :modal="true">
-    <LazyFadeDialogContent class="bg-transparent min-w-130  w-130 p-0 m-0 min-h-200 max-h-200 shadow-none border-none outline-none focus:outline-none focus:ring-none">
+    <LazyFadeDialogContent
+      class="bg-transparent min-w-130 w-130 p-0 m-0 min-h-200 max-h-200 shadow-none border-none outline-none focus:outline-none focus:ring-none">
       <HiddenDialogHeader
         title="search lolpocket"
         desc="search pages, pockets, items, champions, summoners, & more" />
@@ -51,35 +61,38 @@ watch(
       </LazyCommandPopover>
 
       <div
-        class="bg-black-20/80    **:text-white/60 overflow-hidden w-140 drop-shadow-lg inset-shadow-sm  relative rounded-box !p-0  border drop-shadow-black/30 shadow-black/20 shadow-md ring-black-15/60 ring-1 border-black-25 "
-
+        class="bg-black-20/80 **:text-white/60 overflow-hidden w-140 drop-shadow-lg inset-shadow-sm relative rounded-box !p-0 border drop-shadow-black/30 shadow-black/20 shadow-md ring-black-15/60 ring-1 border-black-25"
         :variants="searchVariants"
         initial="hidden"
         :animate="resultsLength ? 'visible' : 'hidden'"
         exit="hidden">
         <div
-          class="w-full h-15 flex   backdrop-blur-3xl  items-center relative"
+          class="w-full h-15 flex backdrop-blur-3xl items-center relative"
           :class="{ 'border-b border-b-black-25/80': searchQuery }">
           <icon
             name="search"
-            class="absolute left-4  top-4.25 opacity-30 dst size-6" />
+            class="absolute left-4 top-4.25 opacity-30 dst size-6" />
 
           <input
             v-model="searchQuery"
             :spellcheck="false"
-            class="w-full rounded-3xl text-bc/50 h-14 pl-14 !text-6" />
+            class="w-full rounded-3xl text-bc/50 h-14 pl-14 !text-xl />
 
           <button
-            v-if="searchQuery != ''"
-            class="btn-ghost-dark btn-square !size-9  mr-5.5"
+            v-if="
+            searchQuery
+            !=""
+            "
+            class="btn-ghost-dark btn-square !size-9 mr-5.5"
             @click="searchQuery = ''">
-            <icon
-              name="x-sm"
-              class="shrink-0" />
+          <icon
+            name="x-sm"
+            class="shrink-0" />
           </button>
         </div>
 
-        <div class="  backdrop-blur-3xl  inset-shadow-sm size-full relative overflow-auto max-h-200 pb-2">
+        <div
+          class="backdrop-blur-3xl inset-shadow-sm size-full relative overflow-auto max-h-200 pb-2">
           <CommandCategory
             name="Pages"
             :results="pageResult">
@@ -123,7 +136,7 @@ watch(
               <PocketIcon
                 :url="pocket.icon"
                 :alt="pocket.key"
-                class="size-7 rounded-lg **:text-1 -mr-2 "
+                class="size-7 rounded-lg **:text-xxs -mr-2"
                 transparent />
             </PageLinkResult>
 
@@ -138,7 +151,7 @@ watch(
                 <PocketIcon
                   :url="pocket.icon"
                   :alt="pocket.key"
-                  class="size-7 rounded-lg **:text-1"
+                  class="size-7 rounded-lg **:text-xxs"
                   transparent />
               </PageLinkResult>
             </CommandMoreResults>
@@ -180,7 +193,7 @@ watch(
               :key="item.id"
               v-model:active-item="activeItem"
               :item="item"
-              @update:model-value="e => activeItem = e" />
+              @update:model-value="(e) => (activeItem = e)" />
 
             <CommandMoreResults
               v-if="itemResult.length > 3"
@@ -190,7 +203,7 @@ watch(
                 :key="item.id"
                 v-model:active-item="activeItem"
                 :item="item"
-                @update:model-value="e => activeItem = e" />
+                @update:model-value="(e) => (activeItem = e)" />
             </CommandMoreResults>
           </CommandCategory>
         </div>

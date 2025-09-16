@@ -2,11 +2,13 @@
 import { addSpellSet } from '~~/shared/types/schema.pocket'
 
 const route = useRoute()
-const pocket = computed(() => ps().getPocket(String(route.params.pocket_key))).value
+const pocket = computed(() =>
+  ps().getPocket(String(route.params.pocket_key))
+).value
 </script>
 
 <template>
-  <Collapsible class="field-box grid  p-3 ">
+  <Collapsible class="field-box grid p-3">
     <CollapsibleTrigger class="flex justify-between items-center">
       <h2>Spells</h2>
 
@@ -20,11 +22,11 @@ const pocket = computed(() => ps().getPocket(String(route.params.pocket_key))).v
         <SpellPicker
           class="size-16"
           :current-value="set.d"
-          @update:spell="e => set.d = e" />
+          @update:spell="(e) => (set.d = e)" />
         <SpellPicker
           class="size-16"
           :current-value="set.f"
-          @update:spell="e => set.f = e" />
+          @update:spell="(e) => (set.f = e)" />
         <span class="items-center flex gap-1">
           <Button
             class="inline"

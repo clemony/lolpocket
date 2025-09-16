@@ -10,27 +10,24 @@ const item: Item = {
     {
       name: 'Giant Slayer',
       unique: true,
-      effects: 'Deal 0% – 15% (based on maximum health difference) increased damage against enemy champions with greater <b>maximum</b> health than you.'
-    }
+      effects:
+        'Deal 0% – 15% (based on maximum health difference) increased damage against enemy champions with greater <b>maximum</b> health than you.',
+    },
   ],
   stats: {
     abilityPower: 60,
     armorPenetration: 22,
     percentMagicPenetration: 30,
-    percentMovespeed: 5
+    percentMovespeed: 5,
   },
   shop: {
     prices: {
       total: 2500,
       combined: 2500,
-      sell: 1000
+      sell: 1000,
     },
-    tags: [
-      'MAGE'
-    ]
+    tags: ['MAGE'],
   },
-  maps: [
-    30
-  ]
+  maps: [30],
 }
 export default item

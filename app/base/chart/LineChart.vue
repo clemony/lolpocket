@@ -15,11 +15,18 @@ const props = defineProps<{
   options?: any
 }>()
 
-ChartJS.register(Title, Tooltip, LineElement, CategoryScale, PointElement, LinearScale)
+ChartJS.register(
+  Title,
+  Tooltip,
+  LineElement,
+  CategoryScale,
+  PointElement,
+  LinearScale
+)
 
 const styles = getComputedStyle(document.documentElement)
 
-const data = computed (() => {
+const data = computed(() => {
   return props.data
 })
 

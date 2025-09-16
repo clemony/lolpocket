@@ -11,6 +11,6 @@ import { HoverCardArrow } from 'reka-ui'
   <HoverCardArrow
     :height="10"
     :width="16"
-    class="fill-b1 "
+    class="fill-b1"
     rounded />
 </template>

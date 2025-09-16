@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const tabs = ref('/data/items')
 const route = useRoute()
-onMounted (() => {
+onMounted(() => {
   tabs.value = route.path
 })
 
@@ -22,7 +22,7 @@ const entries = [
 </script>
 
 <template>
-  <div class="px-6 pb-4 pt-16 bg-b2/40 flex items-center  w-full">
+  <div class="px-6 pb-4 pt-16 bg-b2/40 flex items-center w-full">
     <h1 class="dst">
       Champion Analysis
     </h1>
@@ -33,7 +33,7 @@ const entries = [
       <Tabs
         v-model:model-value="tabs"
         class="max-w-100">
-        <IndicatorTabsList class="grid-cols-3 *:!text-3">
+        <IndicatorTabsList class="grid-cols-3 *:!text-sm">
           <IndicatorTabsTrigger
             v-for="tab in entries"
             :key="tab.name"

@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:13 PM CDT
 
 const champion: Champion = {
   "id": 800,
@@ -133,35 +133,59 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage per Explosion",
               "modifiers": [
-                "13 / 15.5 / 18 / 20.5 / 23",
-                "8.5% AP"
+                {
+                  "values": "13 / 15.5 / 18 / 20.5 / 23"
+                },
+                {
+                  "values": "8.5",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Minion Damage per Explosion",
               "modifiers": [
-                "9.75 / 11.63 / 13.5 / 15.38 / 17.25",
-                "6.38% AP"
+                {
+                  "values": "9.75 / 11.63 / 13.5 / 15.38 / 17.25"
+                },
+                {
+                  "values": "6.38",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Number of Bolts",
               "modifiers": [
-                "6 / 7 / 8 / 9 / 10"
+                {
+                  "values": "6 / 7 / 8 / 9 / 10"
+                }
               ]
             },
             {
               "attribute": "Total Magic Damage",
               "modifiers": [
-                "78 / 108.5 / 144 / 184.5 / 230",
-                "51 / 59.5 / 68 / 76.5 / 85% AP"
+                {
+                  "values": "78 / 108.5 / 144 / 184.5 / 230"
+                },
+                {
+                  "values": "51 - 85",
+                  "unit": "% AP",
+                  "tooltip": "Scaling per rank:\n51 / 59.5 / 68 / 76.5 / 85% AP"
+                }
               ]
             },
             {
               "attribute": "Total Minion Damage",
               "modifiers": [
-                "58.5 / 81.38 / 108 / 138.38 / 172.5",
-                "38.25 / 44.63 / 51 / 57.38 / 63.75% AP"
+                {
+                  "values": "58.5 / 81.38 / 108 / 138.38 / 172.5"
+                },
+                {
+                  "values": "38.25 - 63.75",
+                  "unit": "% AP",
+                  "tooltip": "Scaling per rank:\n38.25 / 44.63 / 51 / 57.38 / 63.75% AP"
+                }
               ]
             }
           ]
@@ -201,8 +225,14 @@ const champion: Champion = {
             {
               "attribute": "Replicated Projectile Damage Modifier",
               "modifiers": [
-                "40 / 45 / 50 / 55 / 60%  of the original damage",
-                "5% per 100 AP"
+                {
+                  "values": "40 / 45 / 50 / 55 / 60",
+                  "unit": "%  of the original damage"
+                },
+                {
+                  "values": "5",
+                  "unit": "% per 100 AP"
+                }
               ]
             }
           ]
@@ -233,14 +263,22 @@ const champion: Champion = {
             {
               "attribute": "Orb Magic Damage",
               "modifiers": [
-                "60 / 105 / 150 / 195 / 240",
-                "60% AP"
+                {
+                  "values": "60 / 105 / 150 / 195 / 240"
+                },
+                {
+                  "values": "60",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Orb Root Duration",
               "modifiers": [
-                "1.25 / 1.5 / 1.75 / 2 / 2.25 seconds"
+                {
+                  "values": "1.25 / 1.5 / 1.75 / 2 / 2.25",
+                  "unit": " seconds"
+                }
               ]
             }
           ]
@@ -251,15 +289,25 @@ const champion: Champion = {
             {
               "attribute": "Field Magic Damage per Tick",
               "modifiers": [
-                "2 / 4 / 6 / 8 / 10",
-                "1% AP"
+                {
+                  "values": "2 / 4 / 6 / 8 / 10"
+                },
+                {
+                  "values": "1",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Field Magic Damage per Second",
               "modifiers": [
-                "16 / 32 / 48 / 64 / 80",
-                "8% AP"
+                {
+                  "values": "16 / 32 / 48 / 64 / 80"
+                },
+                {
+                  "values": "8",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -270,22 +318,37 @@ const champion: Champion = {
             {
               "attribute": "Orb Minion Magic Damage",
               "modifiers": [
-                "30 / 52.5 / 75 / 97.5 / 120",
-                "30% AP"
+                {
+                  "values": "30 / 52.5 / 75 / 97.5 / 120"
+                },
+                {
+                  "values": "30",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Field Minion Magic Damage per Tick",
               "modifiers": [
-                "1 / 2 / 3 / 4 / 5",
-                "0.5% AP"
+                {
+                  "values": "1 / 2 / 3 / 4 / 5"
+                },
+                {
+                  "values": "0.5",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Field Magic Damage per Second",
               "modifiers": [
-                "8 / 16 / 24 / 32 / 40",
-                "4% AP"
+                {
+                  "values": "8 / 16 / 24 / 32 / 40"
+                },
+                {
+                  "values": "4",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -318,13 +381,17 @@ const champion: Champion = {
             {
               "attribute": "Increased Stored Damage",
               "modifiers": [
-                "10 / 20 / 30"
+                {
+                  "values": "10 / 20 / 30"
+                }
               ]
             },
             {
               "attribute": "Stored Damage Increase per Stack",
               "modifiers": [
-                "1 / 2 / 3"
+                {
+                  "values": "1 / 2 / 3"
+                }
               ]
             }
           ]
@@ -335,9 +402,18 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "100 / 150 / 200",
-                "30% AP",
-                "4 / 7 / 10 (+ 3.5% AP) per Overwhelm stack on the target"
+                {
+                  "values": "100 / 150 / 200"
+                },
+                {
+                  "values": "30",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "4 - 10",
+                  "unit": " (+ 3.5% AP) per Overwhelm stack on the target",
+                  "tooltip": "Scaling per rank:\n4 / 7 / 10 (+ 3.5% AP) per Overwhelm stack on the target"
+                }
               ]
             }
           ]

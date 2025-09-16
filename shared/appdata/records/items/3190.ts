@@ -6,18 +6,18 @@ const item: Item = {
     {
       id: 3067,
       name: 'Kindlegem',
-      gold: 800
+      gold: 800,
     },
     {
       id: 1029,
       name: 'Cloth Armor',
-      gold: 300
+      gold: 300,
     },
     {
       id: 1033,
       name: 'Null-Magic Mantle',
-      gold: 400
-    }
+      gold: 400,
+    },
   ],
   specialRecipe: 0,
   noEffects: false,
@@ -28,31 +28,24 @@ const item: Item = {
     {
       name: 'Devotion',
       unique: true,
-      effects: 'Grants you and allied champions within 850 units a <img src="/img/icons/shield.webp" class="tip-icon" />shield for 200 – 360 (based on target\'s level) that decays over 2.5 seconds.'
-    }
+      effects:
+        'Grants you and allied champions within 850 units a <img src="/img/icons/shield.webp" class="tip-icon" />shield for 200 – 360 (based on target\'s level) that decays over 2.5 seconds.',
+    },
   ],
   stats: {
     armor: 25,
     health: 200,
     magicResistance: 25,
-    abilityHaste: 10
+    abilityHaste: 10,
   },
   shop: {
     prices: {
       total: 2200,
       combined: 700,
-      sell: 880
+      sell: 880,
     },
-    tags: [
-      'TANK',
-      'SUPPORT'
-    ]
+    tags: ['TANK', 'SUPPORT'],
   },
-  maps: [
-    11,
-    12,
-    21,
-    35
-  ]
+  maps: [11, 12, 21, 35],
 }
 export default item

@@ -33,7 +33,6 @@
   --color-fighter: oklch(78.32% 0.1173 37);
   --color-apen: oklch(0.6 0.1303 32.32);
   --color-ad: oklch(0.6903 0.121 65.62);
-  --color-armor: oklch(0.7 0.0922 75.66);
   --color-g: oklch(0.795 0.1468 90.49);
   --color-as: oklch(0.8049 0.1129 84.09);
   --color-hp: oklch(0.67 0.0922 132.84);
@@ -41,7 +40,8 @@
   --color-hsp: oklch(0.7329 0.0743 192.64);
   --color-ah: oklch(0.7329 0.1007 192.64);
   --color-mana: oklch(0.6173 0.096 231.0549);
-  --color-mr: oklch(65% 34% 319deg);
+  --color-mr: oklch(70% 33% 319deg);
+
   --color-ap: oklch(65% 25% 310deg);
   --color-transparent: #00000000;
   --color-black: oklch(0% 0 0);
@@ -64,62 +64,57 @@
 
   --color-white-hex: #ffffff;
 
-
-
   --color-tiny-carrot: oklch(78.32% 0.1173 37);
   --color-bottom: #ebcb8b;
   --color-mid: #be86b5;
+  --color-vanguard: oklch(0.7 0.0922 75.66);
+  --color-warden: oklch(44% 11% 246deg);
+--color-burst: oklch(82% 16% 14deg);
+--color-enchanter: oklch(76% 11% 193deg);
+  --color-olive: oklch(48% 10% 113deg);
+
 
 }
 
 @theme inline {
---onhit: var(--color-onhit);
---mana-hex: var(--color-mana-hex);
---energy: var(--color-energy);
---error: var(--color-error);
---top: var(--color-top);
---fighter: var(--color-fighter);
---apen: var(--color-apen);
---ad: var(--color-ad);
---armor: var(--color-armor);
---g: var(--color-g);
---as: var(--color-as);
---hp: var(--color-hp);
---hsp: var(--color-hsp);
+
+
+  --mana-hex: var(--color-mana-hex);
+  --mana: var(--color-mana);
+  --platinum: var(--color-platinum);
+  --mp5: var(--color-mp5);
+  --challenger: var(--color-challenger);
+  --hsp: var(--color-hsp);
+  --enchanter: var(--color-enchanter);
 --ah: var(--color-ah);
---mana: var(--color-mana);
---mp5: var(--color-mp5);
---mr: var(--color-mr);
---ap: var(--color-ap);
+  --emerald: var(--color-emerald);
+  --hp: var(--color-hp);
+  --resolve: var(--color-resolve);
 
+  --onhit: var(--color-onhit);
+  --burst: var(--color-burst);
 
---iron: var(--color-iron);
---bronze: var(--color-bronze);
---silver: var(--color-silver);
---gold: var(--color-gold);
---platinum: var(--color-platinum);
---emerald: var(--color-emerald);
---diamond: var(--color-diamond);
---master: var(--color-master);
---grandmaster: var(--color-grandmaster);
---challenger: var(--color-challenger);
+  --energy: var(--color-energy);
+  --error: var(--color-error);
+  --top: var(--color-top);
+  --fighter: var(--color-fighter);
+  --apen: var(--color-apen);
+  --ad: var(--color-ad);
+  --armor: var(--color-iron);
+  --g: var(--color-g);
+  --as: var(--color-as);
+  --mr: var(--color-mr);
+  --ap: var(--color-ap);
 
---black-22: var(--color-black-22);
---black-30: var(--color-black-30);
---black-35: var(--color-black-35);
---black-25: var(--color-black-25);
---black-50: var(--color-black-50);
-
---white: var(--color-white);
---white-95: var(--color-white-95);
---white-90: var(--color-white-90);
---white-85: var(--color-white-85);
---white-80: var(--color-white-80);
---white-70: var(--color-white-70);
-
-  --color-middle: var(--color-sorcery);
-
-  --color-jungle: #a3be8c;
+  --iron: var(--color-iron);
+  --bronze: var(--color-bronze);
+  --silver: var(--color-silver);
+  --gold: var(--color-gold);
+  --diamond: var(--color-diamond);
+  --master: var(--color-master);
+  --grandmaster: var(--color-grandmaster);
+--vanguard: var(--color-vanguard);
+--warden: var(--color-warden);
 
   --color-utility: var(--color-inspiration);
   --color-mobility: var(--color-precision);
@@ -127,17 +122,22 @@
   --color-control: var(--color-sorcery);
   --color-damage: var(--color-domination);
 
-  --color-support: var(--color-inspiration);
-  --color-bottom: var(--color-precision);
-  --color-mage: var(--color-sorcery);
-  --color-tank: var(--color-resolve);
-  --color-assassin: var(--color-domination);
-
   --color-s-plus: var(--color-challenger);
   --color-s-plus: var(--color-master);
   --color-s-minus: var(--color-diamond);
-}
 
+  --black-22: var(--color-black-22);
+  --black-30: var(--color-black-30);
+  --black-35: var(--color-black-35);
+  --black-25: var(--color-black-25);
+  --black-50: var(--color-black-50);
+  --white: var(--color-white);
+  --white-95: var(--color-white-95);
+  --white-90: var(--color-white-90);
+  --white-85: var(--color-white-85);
+  --white-80: var(--color-white-80);
+  --white-70: var(--color-white-70);
+}
 
 [data-role='support'] {
   &.role-bg {

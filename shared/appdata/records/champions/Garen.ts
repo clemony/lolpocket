@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:56 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:12 PM CDT
 
 const champion: Champion = {
   "id": 86,
@@ -118,7 +118,9 @@ const champion: Champion = {
             {
               "attribute": "Movement Speed Duration",
               "modifiers": [
-                "1 / 1.65 / 2.3 / 2.95 / 3.6"
+                {
+                  "values": "1 / 1.65 / 2.3 / 2.95 / 3.6"
+                }
               ]
             }
           ]
@@ -129,8 +131,13 @@ const champion: Champion = {
             {
               "attribute": "Bonus Physical Damage",
               "modifiers": [
-                "30 / 60 / 90 / 120 / 150",
-                "50% AD"
+                {
+                  "values": "30 / 60 / 90 / 120 / 150"
+                },
+                {
+                  "values": "50",
+                  "unit": "% AD"
+                }
               ]
             }
           ]
@@ -168,14 +175,22 @@ const champion: Champion = {
             {
               "attribute": "Damage Reduction",
               "modifiers": [
-                "25 / 29 / 33 / 37 / 41%"
+                {
+                  "values": "25 / 29 / 33 / 37 / 41",
+                  "unit": "%"
+                }
               ]
             },
             {
               "attribute": "Shield Strength",
               "modifiers": [
-                "65 / 85 / 105 / 125 / 145",
-                "18% bonus health"
+                {
+                  "values": "65 / 85 / 105 / 125 / 145"
+                },
+                {
+                  "values": "18",
+                  "unit": "% bonus health"
+                }
               ]
             }
           ]
@@ -201,8 +216,14 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage Per Spin",
               "modifiers": [
-                "4 / 7 / 10 / 13 / 16",
-                "36 / 39 / 42 / 45 / 48% AD"
+                {
+                  "values": "4 / 7 / 10 / 13 / 16"
+                },
+                {
+                  "values": "36 - 48",
+                  "unit": "% AD",
+                  "tooltip": "Scaling per rank:\n36 / 39 / 42 / 45 / 48% AD"
+                }
               ]
             }
           ]
@@ -216,8 +237,14 @@ const champion: Champion = {
             {
               "attribute": "Increased Damage Per Spin",
               "modifiers": [
-                "5 / 8.75 / 12.5 / 16.25 / 20",
-                "45 / 48.75 / 52.5 / 56.25 / 60% AD"
+                {
+                  "values": "5 / 8.75 / 12.5 / 16.25 / 20"
+                },
+                {
+                  "values": "45 - 60",
+                  "unit": "% AD",
+                  "tooltip": "Scaling per rank:\n45 / 48.75 / 52.5 / 56.25 / 60% AD"
+                }
               ]
             }
           ]
@@ -252,8 +279,14 @@ const champion: Champion = {
             {
               "attribute": "True Damage",
               "modifiers": [
-                "150 / 250 / 350",
-                "25 / 30 / 35% of target's missing health"
+                {
+                  "values": "150 / 250 / 350"
+                },
+                {
+                  "values": "25 - 35",
+                  "unit": "% of target's missing health",
+                  "tooltip": "Scaling per rank:\n25 / 30 / 35% of target's missing health"
+                }
               ]
             }
           ]

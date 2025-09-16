@@ -1,7 +1,14 @@
 <script lang="ts" setup>
 import { championPositions } from '#shared/appdata'
 
-const { class: className, pocket: p, side, sideOffset, align, alignOffset } = defineProps<{
+const {
+  class: className,
+  pocket: p,
+  side,
+  sideOffset,
+  align,
+  alignOffset,
+} = defineProps<{
   class?: HTMLAttributes['class']
   pocket: Pocket
   side?: Side
@@ -11,10 +18,12 @@ const { class: className, pocket: p, side, sideOffset, align, alignOffset } = de
 }>()
 
 const emit = defineEmits(['update:select'])
-const pocket = computed (() => p)
+const pocket = computed(() => p)
 const select = ref('All')
 
-const color = computed (() => championPositions.find(p => p.name == pocket.value.main.role).color)
+const color = computed(
+  () => championPositions.find(p => p.name == pocket.value.main.role).color
+)
 </script>
 
 <template>
@@ -23,13 +32,18 @@ const color = computed (() => championPositions.find(p => p.name == pocket.value
     class="p-0">
     <BaseSelectTrigger
       icon-class="opacity-10 group-hover/select:opacity-50"
-      :class="cn('w-full hover:ring hover:ring-b3/50 flex-nowrap pl-2 h-8 !flex items-center relative ', className)">
+      :class="
+        cn(
+          'w-full hover:ring hover:ring-b3/50 flex-nowrap pl-2 h-8 !flex items-center relative ',
+          className,
+        )
+      ">
       <PositionBadge
         :position="pocket.main?.role"
-        class="badge-sm text-2">
+        class="badge-sm text-xs">
         <SelectValue
           placeholder="Select position"
-          class="text-left  text-white  capitalize" />
+          class="text-left text-white capitalize" />
       </PositionBadge>
     </BaseSelectTrigger>
     <LazySelectContent

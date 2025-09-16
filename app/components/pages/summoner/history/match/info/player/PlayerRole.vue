@@ -9,7 +9,12 @@ const { player, class: className } = defineProps<{
   <div
     class=""
     :offset="[2, -2]"
-    :class="cn('flex flex-col gap-1 *:text-1 py-1 *:leading-none font-medium items-start tracking-tight justify-start size-full **:text-nowrap', className)">
+    :class="
+      cn(
+        'flex flex-col gap-1 *:text-xxs py-1 *:leading-none font-medium items-start tracking-tight justify-start size-full **:text-nowrap',
+        className,
+      )
+    ">
     <p>
       {{ player.teamPosition }}
     </p>

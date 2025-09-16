@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:13 PM CDT
 
 const champion: Champion = {
   "id": 497,
@@ -123,8 +123,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "70 / 115 / 160 / 205 / 250",
-                "70% AP"
+                {
+                  "values": "70 / 115 / 160 / 205 / 250"
+                },
+                {
+                  "values": "70",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -162,8 +167,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "70 / 120 / 170 / 220 / 270",
-                "80% AP"
+                {
+                  "values": "70 / 120 / 170 / 220 / 270"
+                },
+                {
+                  "values": "80",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -199,8 +209,13 @@ const champion: Champion = {
             {
               "attribute": "Shield Strength",
               "modifiers": [
-                "50 / 75 / 100 / 125 / 150",
-                "70% AP"
+                {
+                  "values": "50 / 75 / 100 / 125 / 150"
+                },
+                {
+                  "values": "70",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -238,14 +253,22 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "100 / 200 / 300",
-                "50% AP"
+                {
+                  "values": "100 / 200 / 300"
+                },
+                {
+                  "values": "50",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Disable Duration",
               "modifiers": [
-                "1 / 1.25 / 1.5 seconds"
+                {
+                  "values": "1 / 1.25 / 1.5",
+                  "unit": " seconds"
+                }
               ]
             }
           ]

@@ -40,15 +40,27 @@ export async function hydrateUser(progress?: Ref<number>) {
 
     if (data) {
       console.log('🌱 - hydrateUser - data:', data)
-      const accountParse = v.safeParse(AccountSchema, data.account ?? getEmptyAccount())
-      const settingsParse = v.safeParse(SettingsSchema, data.settings ?? getEmptySettings())
-      const publicParse = v.safeParse(PublicDataSchema, data.public ?? getEmptyPublicData())
+      const accountParse = v.safeParse(
+        AccountSchema,
+        data.account ?? getEmptyAccount()
+      )
+      const settingsParse = v.safeParse(
+        SettingsSchema,
+        data.settings ?? getEmptySettings()
+      )
+      const publicParse = v.safeParse(
+        PublicDataSchema,
+        data.public ?? getEmptyPublicData()
+      )
 
       progress && (progress.value = 70)
 
-      as.account = accountParse.success ? accountParse.output : getEmptyAccount()
-      as.settings = settingsParse.success ? settingsParse.output : getEmptySettings()
-      as.publicData = publicParse.success ? publicParse.output : getEmptyPublicData()
+      as.account
+        = accountParse.success ? accountParse.output : getEmptyAccount()
+      as.settings
+        = settingsParse.success ? settingsParse.output : getEmptySettings()
+      as.publicData
+        = publicParse.success ? publicParse.output : getEmptyPublicData()
 
       const results = data.user_pockets.map(p => v.safeParse(PocketSchema, p))
       results.forEach((r, i) => {

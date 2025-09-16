@@ -10,36 +10,35 @@ const item: Item = {
     {
       name: 'Energized',
       unique: true,
-      effects: 'Moving and basic attacking generates <i>Energize</i> stacks, up to 100.'
+      effects:
+        'Moving and basic attacking generates <i>Energize</i> stacks, up to 100.',
     },
     {
       name: 'Polarity',
       unique: true,
-      effects: 'Your <img src="/img/icons/energized.webp" class="tip-icon" />Energized attacks against targets not hit by your previous <i>Energized</i> attack do not consume any <i>Energize</i> stacks on-hit.'
+      effects:
+        'Your <img src="/img/icons/energized.webp" class="tip-icon" />Energized attacks against targets not hit by your previous <i>Energized</i> attack do not consume any <i>Energize</i> stacks on-hit.',
     },
     {
       name: 'Dynamo',
       unique: true,
-      effects: 'When fully <img src="/img/icons/energized.webp" class="tip-icon" />Energized, your next basic attack deals <b>bonus</b> magic damage on-hit equal to 10% of the target\'s <b>current</b> health.'
-    }
+      effects:
+        'When fully <img src="/img/icons/energized.webp" class="tip-icon" />Energized, your next basic attack deals <b>bonus</b> magic damage on-hit equal to 10% of the target\'s <b>current</b> health.',
+    },
   ],
   stats: {
     attackDamage: 55,
     attackSpeed: 45,
-    percentMovespeed: 15
+    percentMovespeed: 15,
   },
   shop: {
     prices: {
       total: 0,
       combined: 1000,
-      sell: 0
+      sell: 0,
     },
-    tags: [
-      'MARKSMAN'
-    ]
+    tags: ['MARKSMAN'],
   },
-  maps: [
-    30
-  ]
+  maps: [30],
 }
 export default item

@@ -3,17 +3,17 @@ const props = defineProps<{
   pocket: Pocket
 }>()
 
-const pocket = computed (() => {
+const pocket = computed(() => {
   return props.pocket
 })
 
-const spells = computed (() => {
+const spells = computed(() => {
   return pocket.value.spells[0]
 })
 </script>
 
 <template>
-  <div class="flex  gap-1.5 opacity-50 justify-end self-start ">
+  <div class="flex gap-1.5 opacity-50 justify-end self-start">
     <img
       v-for="spell in spells"
       :key="spell"

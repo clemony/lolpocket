@@ -9,7 +9,7 @@ const { filters, setFilter, filtered } = useItemFilter()
   <Select
     v-model="filters"
     multiple>
-    <SelectTrigger class="w-80  items-center flex gap-3   ">
+    <SelectTrigger class="w-80 items-center flex gap-3">
       <SelectValue placeholder="Filter Stat" />
     </SelectTrigger>
 

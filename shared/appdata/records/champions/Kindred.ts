@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:56 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:12 PM CDT
 
 const champion: Champion = {
   "id": 203,
@@ -127,8 +127,13 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "40 / 65 / 90 / 115 / 140",
-                "75% bonus AD"
+                {
+                  "values": "40 / 65 / 90 / 115 / 140"
+                },
+                {
+                  "values": "75",
+                  "unit": "% bonus AD"
+                }
               ]
             }
           ]
@@ -139,7 +144,10 @@ const champion: Champion = {
             {
               "attribute": "Static Cooldown",
               "modifiers": [
-                "4 / 3.5 / 3 / 2.5 / 2 seconds"
+                {
+                  "values": "4 / 3.5 / 3 / 2.5 / 2",
+                  "unit": " seconds"
+                }
               ]
             }
           ]
@@ -182,19 +190,41 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "25 / 30 / 35 / 40 / 45",
-                "20% bonus AD",
-                "20% AP",
-                "1.5% (+ 1% per mark) of target's current health"
+                {
+                  "values": "25 / 30 / 35 / 40 / 45"
+                },
+                {
+                  "values": "20",
+                  "unit": "% bonus AD"
+                },
+                {
+                  "values": "20",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "1.5",
+                  "unit": "% (+ 1% per mark) of target's current health"
+                }
               ]
             },
             {
               "attribute": "Monster Damage",
               "modifiers": [
-                "37.5 / 45 / 52.5 / 60 / 67.5",
-                "30% bonus AD",
-                "30% AP",
-                "2.25% (+ 1.5% per mark) of target's current health"
+                {
+                  "values": "37.5 / 45 / 52.5 / 60 / 67.5"
+                },
+                {
+                  "values": "30",
+                  "unit": "% bonus AD"
+                },
+                {
+                  "values": "30",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "2.25",
+                  "unit": "% (+ 1.5% per mark) of target's current health"
+                }
               ]
             }
           ]
@@ -234,17 +264,33 @@ const champion: Champion = {
             {
               "attribute": "Additional Physical Damage",
               "modifiers": [
-                "80 / 110 / 140 / 170 / 200",
-                "100% bonus AD",
-                "5% (+ 0.5% per Mark) of target's missing health"
+                {
+                  "values": "80 / 110 / 140 / 170 / 200"
+                },
+                {
+                  "values": "100",
+                  "unit": "% bonus AD"
+                },
+                {
+                  "values": "5",
+                  "unit": "% (+ 0.5% per Mark) of target's missing health"
+                }
               ]
             },
             {
               "attribute": "Enhanced damage below threshold",
               "modifiers": [
-                "80 / 110 / 140 / 170 / 200",
-                "100% bonus AD",
-                "7.5% (+ 2%) (+ 0.75% (+ 0.2%) per Mark) of target's missing health"
+                {
+                  "values": "80 / 110 / 140 / 170 / 200"
+                },
+                {
+                  "values": "100",
+                  "unit": "% bonus AD"
+                },
+                {
+                  "values": "7.5",
+                  "unit": "% (+ 2%) (+ 0.75% (+ 0.2%) per Mark) of target's missing health"
+                }
               ]
             }
           ]
@@ -282,7 +328,9 @@ const champion: Champion = {
             {
               "attribute": "Heal",
               "modifiers": [
-                "225 / 300 / 375"
+                {
+                  "values": "225 / 300 / 375"
+                }
               ]
             }
           ]

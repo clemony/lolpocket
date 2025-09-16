@@ -3,7 +3,9 @@ import type { PaginationEllipsisProps } from 'reka-ui'
 import { PaginationEllipsis } from 'reka-ui'
 import { computed } from 'vue'
 
-const props = defineProps<PaginationEllipsisProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<
+  PaginationEllipsisProps & { class?: HTMLAttributes['class'] }
+>()
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props
@@ -19,7 +21,7 @@ const delegatedProps = computed(() => {
     <slot>
       <icon
         name="more"
-        class=" dst" />
+        class="dst" />
     </slot>
   </PaginationEllipsis>
 </template>

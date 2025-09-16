@@ -3,7 +3,6 @@ import type { DialogContentEmits, DialogContentProps } from 'reka-ui'
 import {
   DialogClose,
   DialogContent,
-
   DialogOverlay,
   DialogPortal,
   useForwardPropsEmits,
@@ -34,10 +33,16 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 <template>
   <DialogPortal>
     <DialogOverlay
-      class="fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 " />
+      class="fixed inset-0 z-50 bg-black/80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0" />
 
     <DialogContent
-      :class="cn('overflow-hidden h-screen drop-shadow-sm drop-shadow-black  max-h-screen', sheetVariants({ side }), props.class)"
+      :class="
+        cn(
+          'overflow-hidden h-screen drop-shadow-sm drop-shadow-black  max-h-screen',
+          sheetVariants({ side }),
+          props.class,
+        )
+      "
       v-bind="{ ...forwarded, ...$attrs }">
       <slot />
 

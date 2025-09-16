@@ -5,16 +5,22 @@ definePageMeta({
   name: 'profile',
   path: '/settings/profile',
   icon: 'at',
-  description: 'Set your public profile display settings and hide your annoyances.',
+  description:
+    'Set your public profile display settings and hide your annoyances.',
   /* middleware: 'confirm-auth', */
 })
 
-const labelClass = 'w-full h-16 border-b flex justify-between items-center pr-1 !border-b-b2 [&_h5]:font-semibold [&_h5]:text-bc/70'
+const labelClass
+  = 'w-full h-16 border-b flex justify-between items-center pr-1 !border-b-b2 [&_h5]:font-semibold [&_h5]:text-bc/70'
 
 async function onSubmit(values: any) {
   toast.success({
     title: 'Account Updated!',
-    description: h('pre', { class: 'mt-2 w-[340px] rounded-md bg-slate-950 p-4' }, h('code', { class: 'text-white' }, JSON.stringify(values, null, 2))),
+    description: h(
+      'pre',
+      { class: 'mt-2 w-[340px] rounded-md bg-slate-950 p-4' },
+      h('code', { class: 'text-white' }, JSON.stringify(values, null, 2))
+    ),
   })
 }
 </script>
@@ -23,50 +29,51 @@ async function onSubmit(values: any) {
   <form
     class="space-y-12 w-full"
     @submit="onSubmit">
-    <fieldset
-      class="space-y-6 mb-10 w-full">
-      <div class="leading-4 ">
+    <fieldset class="space-y-6 mb-10 w-full">
+      <div class="leading-4">
         <Label
           as="legend"
-          class="text-5 font-semibold mb-2">Summoner Splash</Label>
+          class="text-lgfont-semibold mb-2">
+          Summoner Splash
+        </Label>
 
-        <p class="label text-wrap ">
-          Automatically display your top played champion in recent games, or choose a custom splash.
+        <p class="label text-wrap">
+          Automatically display your top played champion in recent games, or
+          choose a custom splash.
         </p>
       </div>
       <ProfileSplashOptions />
     </fieldset>
 
-    <fieldset
-      class="space-y-6">
-      <div class="leading-4 ">
+    <fieldset class="space-y-6">
+      <div class="leading-4">
         <Label
           as="legend"
-          class="text-5 font-semibold mb-2">
-          Title
-        </Label>
-        <p class="label text-wrap ">
+          class="text-lgfont-semibold mb-2">Title</Label>
+        <p class="label text-wrap">
           Display a title from an earned Badge.
         </p>
       </div>
     </fieldset>
 
-    <fieldset
-      class="space-y-6">
-      <div class="leading-4 ">
+    <fieldset class="space-y-6">
+      <div class="leading-4">
         <Label
           as="legend"
-          class="text-5 font-semibold mb-2">Hide Profile Elements</Label>
+          class="text-lgfont-semibold mb-2">
+          Hide Profile Elements
+        </Label>
 
         <p class="label text-wrap inline">
-          Hide what you don't want to see from <i>yourself</i>. This will not hide elements publically, but if you really think about it—what's not there isn't real.
+          Hide what you don't want to see from
+          <i>yourself</i>
+          . This will not hide elements publically, but if you really think
+          about it—what's not there isn't real.
         </p>
       </div>
       <div class="grid gap-2">
         <label :class="labelClass">
-          <h5>
-            Ranked Solo/Duo
-          </h5>
+          <h5>Ranked Solo/Duo</h5>
 
           <p class="flex gap-4 mt-2 items-center font-medium italic">
             {{ as().settings.showSolo ? "Visible" : "Hidden" }}
@@ -77,9 +84,7 @@ async function onSubmit(values: any) {
         </label>
 
         <label :class="labelClass">
-          <h5>
-            Ranked Flex
-          </h5>
+          <h5>Ranked Flex</h5>
 
           <p class="flex gap-4 mt-2 items-center font-medium italic">
             {{ as().settings.showFlex ? "Visible" : "Hidden" }}
@@ -90,9 +95,7 @@ async function onSubmit(values: any) {
         </label>
 
         <label :class="labelClass">
-          <h5>
-            Ally Filters
-          </h5>
+          <h5>Ally Filters</h5>
 
           <p class="flex gap-4 mt-2 items-center font-medium italic">
             {{ as().settings.showAllies ? "Visible" : "Hidden" }}
@@ -105,8 +108,7 @@ async function onSubmit(values: any) {
     </fieldset>
 
     <div class="flex justify-start">
-      <Button
-        variant="neutral">
+      <Button variant="neutral">
         Update account
       </Button>
     </div>

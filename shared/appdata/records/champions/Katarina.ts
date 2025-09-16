@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:56 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:12 PM CDT
 
 const champion: Champion = {
   "id": 55,
@@ -123,8 +123,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "80 / 115 / 150 / 185 / 220",
-                "40% AP"
+                {
+                  "values": "80 / 115 / 150 / 185 / 220"
+                },
+                {
+                  "values": "40",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -160,7 +165,10 @@ const champion: Champion = {
             {
               "attribute": "Bonus Movement speed",
               "modifiers": [
-                "50 / 60 / 70 / 80 / 90%"
+                {
+                  "values": "50 / 60 / 70 / 80 / 90",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -186,9 +194,17 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "20 / 30 / 40 / 50 / 60",
-                "40% AD",
-                "25% AP"
+                {
+                  "values": "20 / 30 / 40 / 50 / 60"
+                },
+                {
+                  "values": "40",
+                  "unit": "% AD"
+                },
+                {
+                  "values": "25",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -223,35 +239,60 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage Per Dagger",
               "modifiers": [
-                "16%  bonus AD",
-                "50% per 100% bonus attack speed"
+                {
+                  "values": "16",
+                  "unit": "%  bonus AD"
+                },
+                {
+                  "values": "50",
+                  "unit": "% per 100% bonus attack speed"
+                }
               ]
             },
             {
               "attribute": "Maximum Physical Damage",
               "modifiers": [
-                "240%  bonus AD",
-                "750% per 100% bonus attack speed"
+                {
+                  "values": "240",
+                  "unit": "%  bonus AD"
+                },
+                {
+                  "values": "750",
+                  "unit": "% per 100% bonus attack speed"
+                }
               ]
             },
             {
               "attribute": "Magic Damage Per Dagger",
               "modifiers": [
-                "25 / 37.5 / 50",
-                "19% AP"
+                {
+                  "values": "25 / 37.5 / 50"
+                },
+                {
+                  "values": "19",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Maximum Magic Damage",
               "modifiers": [
-                "375 / 562.5 / 750",
-                "285% AP"
+                {
+                  "values": "375 / 562.5 / 750"
+                },
+                {
+                  "values": "285",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "On-Hit Damage Effectiveness",
               "modifiers": [
-                "25 / 30 / 35%"
+                {
+                  "values": "25 / 30 / 35",
+                  "unit": "%"
+                }
               ]
             }
           ]

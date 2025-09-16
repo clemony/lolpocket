@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:15 PM CDT
 
 const champion: Champion = {
   "id": 44,
@@ -125,7 +125,9 @@ const champion: Champion = {
             {
               "attribute": "Maximum Charges",
               "modifiers": [
-                "1 / 2 / 3 / 4 / 5"
+                {
+                  "values": "1 / 2 / 3 / 4 / 5"
+                }
               ]
             }
           ]
@@ -157,7 +159,10 @@ const champion: Champion = {
             {
               "attribute": "Bonus Armor",
               "modifiers": [
-                "6 / 7 / 8 / 9 / 10% of Taric's armor"
+                {
+                  "values": "6 / 7 / 8 / 9 / 10",
+                  "unit": "% of Taric's armor"
+                }
               ]
             }
           ]
@@ -168,7 +173,10 @@ const champion: Champion = {
             {
               "attribute": "Shield Strength",
               "modifiers": [
-                "7 / 8 / 9 / 10 / 11% of target's maximum health"
+                {
+                  "values": "7 / 8 / 9 / 10 / 11",
+                  "unit": "% of target's maximum health"
+                }
               ]
             }
           ]
@@ -200,9 +208,17 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "90 / 130 / 170 / 210 / 250",
-                "50% AP",
-                "50% bonus armor"
+                {
+                  "values": "90 / 130 / 170 / 210 / 250"
+                },
+                {
+                  "values": "50",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "50",
+                  "unit": "% bonus armor"
+                }
               ]
             }
           ]

@@ -6,13 +6,13 @@ const item: Item = {
     {
       id: 2020,
       name: 'The Brutalizer',
-      gold: 1337
+      gold: 1337,
     },
     {
       id: 3133,
       name: 'Caulfield\'s Warhammer',
-      gold: 1050
-    }
+      gold: 1050,
+    },
   ],
   specialRecipe: 0,
   noEffects: false,
@@ -22,29 +22,23 @@ const item: Item = {
     {
       name: 'Flux',
       unique: true,
-      effects: 'Scoring a <img src="/img/icons/takedown.webp" class="tip-icon" />takedown against an enemy champion within 3 seconds of damaging them refunds 15% (+0.15% per 1 Lethality) of your ultimate ability\'s <b>total</b> cooldown.'
-    }
+      effects:
+        'Scoring a <img src="/img/icons/takedown.webp" class="tip-icon" />takedown against an enemy champion within 3 seconds of damaging them refunds 15% (+0.15% per 1 Lethality) of your ultimate ability\'s <b>total</b> cooldown.',
+    },
   ],
   stats: {
     attackDamage: 55,
     lethality: 18,
-    abilityHaste: 20
+    abilityHaste: 20,
   },
   shop: {
     prices: {
       total: 3000,
       combined: 613,
-      sell: 1200
+      sell: 1200,
     },
-    tags: [
-      'ASSASSIN'
-    ]
+    tags: ['ASSASSIN'],
   },
-  maps: [
-    11,
-    12,
-    21,
-    35
-  ]
+  maps: [11, 12, 21, 35],
 }
 export default item

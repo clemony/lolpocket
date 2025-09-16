@@ -17,8 +17,7 @@ const data = ref({
       pointStyle: [],
     },
   ],
-},
-)
+})
 const itemImages = new Map<number, HTMLImageElement>()
 
 // Preload images and store them when fully loaded
@@ -62,7 +61,7 @@ watchEffect(async () => {
       })
 
       newDataset.pointStyle.push(itemImages.get(item.item.id) || new Image())
-    }),
+    })
   )
 
   // Replace the entire `data` object to trigger reactivity
@@ -73,10 +72,11 @@ watchEffect(async () => {
 </script>
 
 <template>
-  <div class="size-full overflow-hidden  pb-9">
-    <div class="bg-b1  border-shadow size-full max-h-160 inset-shadow-xxs">
-      <div class="px-4 pb-5 pt-4 bg-b1 relative flex flex-col size-full  rounded-box overflow-hidden ">
-        <div class="justify-self-end w-full h-full pt-4  -ml-6">
+  <div class="size-full overflow-hidden pb-9">
+    <div class="bg-b1 border-shadow size-full max-h-160 inset-shadow-xxs">
+      <div
+        class="px-4 pb-5 pt-4 bg-b1 relative flex flex-col size-full rounded-box overflow-hidden">
+        <div class="justify-self-end w-full h-full pt-4 -ml-6">
           <BubbleChart :data="data" />
         </div>
 
@@ -84,7 +84,7 @@ watchEffect(async () => {
           <div
             v-if="!ms.patchGames.length"
             class="absolute top-0 left-0 size-full bg-black/40 rounded-box grid place-items-center">
-            <div class="badge badge-xl text-2 shadow-lg opacity-90">
+            <div class="badge badge-xl text-xs shadow-lg opacity-90">
               No data this patch.
             </div>
           </div>

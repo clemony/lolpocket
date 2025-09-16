@@ -6,13 +6,13 @@ const item: Item = {
     {
       id: 3067,
       name: 'Kindlegem',
-      gold: 800
+      gold: 800,
     },
     {
       id: 1057,
       name: 'Negatron Cloak',
-      gold: 850
-    }
+      gold: 850,
+    },
   ],
   specialRecipe: 0,
   noEffects: false,
@@ -22,30 +22,23 @@ const item: Item = {
     {
       name: 'Unmake',
       unique: true,
-      effects: 'Enemy champions within 700 units of you become cursed, causing them to receive 12% increased magic damage from all sources.'
-    }
+      effects:
+        'Enemy champions within 700 units of you become cursed, causing them to receive 12% increased magic damage from all sources.',
+    },
   ],
   stats: {
     health: 350,
     magicResistance: 45,
-    abilityHaste: 15
+    abilityHaste: 15,
   },
   shop: {
     prices: {
       total: 2650,
       combined: 1000,
-      sell: 1060
+      sell: 1060,
     },
-    tags: [
-      'TANK',
-      'SUPPORT'
-    ]
+    tags: ['TANK', 'SUPPORT'],
   },
-  maps: [
-    11,
-    12,
-    21,
-    35
-  ]
+  maps: [11, 12, 21, 35],
 }
 export default item

@@ -32,7 +32,7 @@ const ms = useMatchStore()
   </div> -->
 
   <div class="size-full px-14">
-    <div class="w-full  pt-10 pb-8 mb-8 border-b border-b-b3">
+    <div class="w-full pt-10 pb-8 mb-8 border-b border-b-b3">
       <h1 class="font-semibold dst text-8 pb-2">
         Item Data
       </h1>
@@ -42,8 +42,9 @@ const ms = useMatchStore()
       </p>
     </div>
 
-    <div class="size-full overflow-hidden ">
-      <div class="grid-cols-4 grid gap-10 overflow-hidden pb-2 place-items-center w-full">
+    <div class="size-full overflow-hidden">
+      <div
+        class="grid-cols-4 grid gap-10 overflow-hidden pb-2 place-items-center w-full">
         <PocketPickItem
           :patch-games="ms.patchGames"
           :item-num="0"
@@ -65,17 +66,19 @@ const ms = useMatchStore()
           title="☆ Rising Star" />
       </div>
 
-      <div class="w-full  pt-26 pb-10 mb-10 border-b border-b-b3">
-        <h1 class="font-semibold dst pb-2  text-8 ">
+      <div class="w-full pt-26 pb-10 mb-10 border-b border-b-b3">
+        <h1
+          class="font-semibold dst pb-2 text-3xl">
           Winrates & Playrates
         </h1>
 
-        <p class="font-medium  text-bc/70">
-          How are your most played be doing well  left right ->
+        <p class=" font-medium text-bc/70">
+          How are your most played be doing well left right ->
         </p>
       </div>
 
-      <div class="grid-cols-2 grid gap-x-10 w-full overflow-hidden place-items-center ">
+      <div
+        class="grid-cols-2 grid gap-x-10 w-full overflow-hidden place-items-center">
         <ResearchItemChart />
 
         <ResearchItemList />

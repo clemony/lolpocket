@@ -11,13 +11,10 @@ const item: Item = {
     prices: {
       total: 300,
       combined: 300,
-      sell: 120
+      sell: 120,
     },
-    purchasable: false
+    purchasable: false,
   },
-  maps: [
-    11,
-    12
-  ]
+  maps: [11, 12],
 }
 export default item

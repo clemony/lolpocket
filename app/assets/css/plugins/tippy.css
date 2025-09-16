@@ -4,29 +4,42 @@
 
 @layer base {
   .tippy-content {
-    @apply text-3 text-balance;
+    @apply text-sm whitespace-pre;
   }
 
   .tippy-box {
-    @apply shadow-md bg-n1/76  w-auto inline-block text-nc/80 drop-shadow-lg rounded-lg px-4 py-1 backdrop-blur-md inset-shadow-white/20 border border-b4/50;
+    @apply border border-b3 bg-b1/90 rounded-field backdrop-blur text-bc/90 font-medium capitalize **:text-xs drop-shadow-[1px_2px_2px_#00000020] shadow-none px-3 py-1.5 z-1;
 
-    & > .tippy-svg-arrow {
-      @apply drop-shadow-sm;
+          & > .tippy-svg-arrow {
+      @apply  absolute size-4 grid place-items-center !z-0 *:absolute ;
     }
-    &[data-placement='bottom'] {
-      @apply inset-shadow-sm-x;
-      & > .tippy-svg-arrow > svg:first-child,
-      & > .tippy-svg-arrow > svg:last-child {
-        @apply translate-y-4 -translate-x-1.25;
+    & > .tippy-svg-arrow > svg:first-child {
+      @apply text-b3 scale-70 translate-y-0 drop-shadow-[0px_1px_0_#00000016] mask-b-from-68% mask-b-to-69%;
+    }
+    & > .tippy-svg-arrow > svg:last-child {
+      @apply !fill-b1/90 text-b1 translate-y-px scale-70  mask-b-from-68% mask-b-to-69%;
+    }
+
+    &[data-placement='bottom'],
+    &[data-placement='bottom-start'],
+     &[data-placement='bottom-end'] {
+      & > .tippy-svg-arrow {
+        @apply -top-5.75 ;
+        & > svg:first-child,
+      &  > svg:last-child {
+@apply top-0 ;
       }
     }
+    }
 
-    &[data-placement='top'] {
-      @apply inset-shadow-sm;
+    &[data-placement='top'],
+    &[data-placement='top-start'],
+     &[data-placement='top-end'] {
+      @apply -bottom-5.75;
 
       & > .tippy-svg-arrow > svg:first-child,
       & > .tippy-svg-arrow > svg:last-child {
-        @apply -translate-y-4 -translate-x-1.5 mx-auto;
+      @apply bottom-0;
       }
     }
 
@@ -42,46 +55,28 @@
     &[data-placement='right'] > .tippy-svg-arrow > svg:last-child {
       @apply -translate-y-4 translate-x-2.5;
     }
-    & > .tippy-svg-arrow {
-      @apply scale-90;
-    }
 
-    & > .tippy-svg-arrow > svg:first-child {
-      @apply text-n1/76;
-    }
-    & > .tippy-svg-arrow > svg:last-child {
-      @apply text-n3;
-    }
+
+
   }
 
   .tippy-box[data-inertia][data-state='visible'] {
     transition-timing-function: cubic-bezier(0.28, 0.93, 0.75, 1.38);
   }
+    .tippy-box[data-theme~='contrast']  {
+    @apply shadow-md bg-n1/76  w-auto inline-block text-nc/80 drop-shadow-lg rounded-lg px-4 py-1 backdrop-blur-md inset-shadow-white/20 border border-b4/50;
 
-  .tippy-box[data-theme~='basic'] {
-    @apply border border-b3 bg-b1/90 rounded-field backdrop-blur-md text-bc/90 font-medium capitalize **:text-2 drop-shadow-[1px_2px_2px_#00000020] shadow-none py-1.5 z-1;
-    & > .tippy-svg-arrow {
-      @apply drop-shadow-[0px_-1px_0_#00000016] !z-0;
-    }
     & > .tippy-svg-arrow > svg:first-child {
-      @apply fill-b4 scale-90;
+      @apply text-neutral/76;
     }
     & > .tippy-svg-arrow > svg:last-child {
-      @apply !fill-b1 text-b1 scale-90;
+      @apply text-n3;
     }
-    &[data-placement='bottom'] {
-      @apply inset-shadow-sm-x;
-      & > .tippy-svg-arrow > svg:first-child,
-      & > .tippy-svg-arrow > svg:last-child {
-        @apply !translate-y-4.5 -translate-x-1.25;
-      }
     }
-  }
 
-  .tippy-box[data-theme~='field'] {
-    @apply fieldset mt-1 !shadow-warm-soft !drop-shadow-sm drop-shadow-black/5 relative w-full h-fit bg-b2 border border-b3 p-4 rounded-box;
-  }
 }
+
+
 
 .tippy-box[data-theme~='mastery'] {
   @apply shadow-md bg-n1/76 !max-w-62 text-nc/80 drop-shadow-lg rounded-lg px-4 py-1 backdrop-blur-md inset-shadow-white/20 border border-b4/50;

@@ -13,7 +13,12 @@ export function useChampionStatGrowth(level: Ref<number>) {
     return base + totalGrowth
   }
 
-  function calcAttackSpeed(base?: number, growth?: number, ratio?: number, lvl: number = level.value) {
+  function calcAttackSpeed(
+    base?: number,
+    growth?: number,
+    ratio?: number,
+    lvl: number = level.value
+  ) {
     if (base == null || ratio == null)
       return null
     const totalLevelUps = lvl - 1
@@ -31,7 +36,7 @@ export function useChampionStatGrowth(level: Ref<number>) {
       roundTo?: number
       type?: 'attackSpeed'
       ratio?: number
-    },
+    }
   ) {
     if (!stat)
       return null
@@ -61,9 +66,7 @@ export function useChampionStatGrowth(level: Ref<number>) {
 
     // fallback (base vs perLevel modes)
     const val
-      = cs.championGridType === 'base'
-        ? flat ?? null
-        : perLevel ?? null
+      = cs.championGridType === 'base' ? (flat ?? null) : (perLevel ?? null)
 
     return {
       min: round(val),

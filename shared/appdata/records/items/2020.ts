@@ -6,30 +6,30 @@ const item: Item = {
     {
       id: 2022,
       name: 'Glowing Mote',
-      gold: 250
+      gold: 250,
     },
     {
       id: 1037,
       name: 'Pickaxe',
-      gold: 875
-    }
+      gold: 875,
+    },
   ],
   buildsInto: [
     {
       id: 6698,
       name: 'Profane Hydra',
-      gold: 3200
+      gold: 3200,
     },
     {
       id: 6696,
       name: 'Axiom Arc',
-      gold: 3000
+      gold: 3000,
     },
     {
       id: 6699,
       name: 'Voltaic Cyclosword',
-      gold: 3000
-    }
+      gold: 3000,
+    },
   ],
   specialRecipe: 0,
   noEffects: true,
@@ -38,23 +38,16 @@ const item: Item = {
   stats: {
     attackDamage: 25,
     lethality: 5,
-    abilityHaste: 10
+    abilityHaste: 10,
   },
   shop: {
     prices: {
       total: 1337,
       combined: 212,
-      sell: 534
+      sell: 534,
     },
-    tags: [
-      'ASSASSIN'
-    ]
+    tags: ['ASSASSIN'],
   },
-  maps: [
-    11,
-    12,
-    21,
-    35
-  ]
+  maps: [11, 12, 21, 35],
 }
 export default item

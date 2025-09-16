@@ -17,7 +17,7 @@ fs.writeFileSync(
   './shared/appdata/index/map-index.ts',
   `// ${markUpdate()}
 
-export const mapIndex: MapIndex[] = ${JSON.stringify(cleanedMapData, null, 2)}`,
+export const mapIndex: MapIndex[] = ${JSON.stringify(cleanedMapData, null, 2)}`
 )
 
 console.log('✅ Cleaned map data written.')

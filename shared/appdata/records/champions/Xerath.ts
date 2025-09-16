@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:15 PM CDT
 
 const champion: Champion = {
   "id": 101,
@@ -131,7 +131,9 @@ const champion: Champion = {
             {
               "attribute": "Mana Refunded",
               "modifiers": [
-                "40 / 45 / 50 / 55 / 60"
+                {
+                  "values": "40 / 45 / 50 / 55 / 60"
+                }
               ]
             }
           ]
@@ -142,8 +144,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "75 / 115 / 155 / 195 / 235",
-                "90% AP"
+                {
+                  "values": "75 / 115 / 155 / 195 / 235"
+                },
+                {
+                  "values": "90",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -173,8 +180,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "50 / 85 / 120 / 155 / 190",
-                "65% AP"
+                {
+                  "values": "50 / 85 / 120 / 155 / 190"
+                },
+                {
+                  "values": "65",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -185,14 +197,22 @@ const champion: Champion = {
             {
               "attribute": "Increased Damage",
               "modifiers": [
-                "83.35 / 141.7 / 200.04 / 258.39 / 316.73",
-                "108.36% AP"
+                {
+                  "values": "83.35 / 141.7 / 200.04 / 258.39 / 316.73"
+                },
+                {
+                  "values": "108.36",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Increased Slow",
               "modifiers": [
-                "60 / 65 / 70 / 75 / 80%"
+                {
+                  "values": "60 / 65 / 70 / 75 / 80",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -223,8 +243,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "70 / 100 / 130 / 160 / 190",
-                "45% AP"
+                {
+                  "values": "70 / 100 / 130 / 160 / 190"
+                },
+                {
+                  "values": "45",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -256,7 +281,9 @@ const champion: Champion = {
             {
               "attribute": "Number of Recasts",
               "modifiers": [
-                "4 / 5 / 6"
+                {
+                  "values": "4 / 5 / 6"
+                }
               ]
             }
           ]
@@ -267,15 +294,26 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "170 / 220 / 270",
-                "45% AP"
+                {
+                  "values": "170 / 220 / 270"
+                },
+                {
+                  "values": "45",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Total Magic Damage",
               "modifiers": [
-                "680 / 1100 / 1620",
-                "180 / 225 / 270% AP"
+                {
+                  "values": "680 / 1100 / 1620"
+                },
+                {
+                  "values": "180 - 270",
+                  "unit": "% AP",
+                  "tooltip": "Scaling per rank:\n180 / 225 / 270% AP"
+                }
               ]
             }
           ]
@@ -286,14 +324,21 @@ const champion: Champion = {
             {
               "attribute": "Maximum Stacks",
               "modifiers": [
-                "3 / 4 / 5"
+                {
+                  "values": "3 / 4 / 5"
+                }
               ]
             },
             {
               "attribute": "Increased Damage per Stack",
               "modifiers": [
-                "20 / 25 / 30",
-                "5% AP"
+                {
+                  "values": "20 / 25 / 30"
+                },
+                {
+                  "values": "5",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -304,7 +349,9 @@ const champion: Champion = {
             {
               "attribute": "Impact Distance to Reveal",
               "modifiers": [
-                "175 / 200 / 225"
+                {
+                  "values": "175 / 200 / 225"
+                }
               ]
             }
           ]

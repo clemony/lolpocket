@@ -15,7 +15,12 @@ const { toggleSidebar, state } = useSidebar()
     data-slot="sidebar-trigger"
     variant="ghost"
     size="icon"
-    :class="cn(' relative grid place-items-center *:opacity-70 *:dst *:absolute *:**:stroke-[1.7] *:size-4.75 hover:*:opacity-100', props.class)"
+    :class="
+      cn(
+        ' relative grid place-items-center *:opacity-70 *:dst *:absolute *:**:stroke-[1.7] *:size-4.75 hover:*:opacity-100',
+        props.class,
+      )
+    "
     @click="toggleSidebar">
     <icon
       v-show="state == 'expanded'"

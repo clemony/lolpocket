@@ -5,7 +5,7 @@ const { champion } = defineProps<{
 
 const ms = useMatchStore()
 
-const winrateDiff = computed (() => {
+const winrateDiff = computed(() => {
   return -1
 })
 </script>
@@ -16,8 +16,9 @@ const winrateDiff = computed (() => {
   <div class="stats border-shadow-sm w-210 h-34">
     <div class="stat items-center">
       <div class="stat-figure">
-        <div class="size-8 leading-none tracking-wide font-mono font-bold relative grid place-items-center">
-          <span class="text-9 object-center absolute object-center  right-1.5">
+        <div
+          class="size-8 leading-none tracking-wide font-mono font-bold relative grid place-items-center">
+          <span class="text-9 object-center absolute object-center right-1.5">
             S+
           </span>
         </div>
@@ -38,10 +39,11 @@ const winrateDiff = computed (() => {
 
     <div class="stat">
       <div class="stat-figure text-secondary">
-        <div class="size-8 leading-none tracking-wider  !font-black relative grid place-items-center">
+        <div
+          class="size-8 leading-none tracking-wider !font-black relative grid place-items-center">
           <icon
             name="teenyicons:heart-circle-solid"
-            class="size-8 text-bc  -mt-0.5 dst" />
+            class="size-8 text-bc -mt-0.5 dst" />
         </div>
       </div>
 
@@ -54,13 +56,16 @@ const winrateDiff = computed (() => {
       </div>
 
       <div class="stat-desc !tracking-wide">
-        {{ champion.avgKills }}&hairsp;&#47;&hairsp;{{ champion.avgDeaths }}&hairsp;&#47;&hairsp;{{ champion.avgAssists }}
+        {{ champion.avgKills }}&hairsp;&#47;&hairsp;{{
+          champion.avgDeaths
+        }}&hairsp;&#47;&hairsp;{{ champion.avgAssists }}
       </div>
     </div>
 
     <div class="stat">
       <div class="stat-figure text-secondary">
-        <div class="avatar online shadow-md drop-shadow-sm rounded-full size-16 relative grid place-items-center">
+        <div
+          class="avatar online shadow-md drop-shadow-sm rounded-full size-16 relative grid place-items-center">
           <div class="size-20 absolute rounded-full overflow-hidden">
             <ChampionIcon
               :id="champion.championId"

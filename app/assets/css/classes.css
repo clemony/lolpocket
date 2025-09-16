@@ -1,76 +1,83 @@
 @import 'tailwindcss';
+
 @import './theme.css';
 
 @layer components {
-
-    .rune-hover:hover label,
-  .rune-hover[aria-expanded="true"] label {
-    @apply opacity-100 !grayscale-0 ring ring-neutral;
+  .rune-hover:hover label,
+    .rune-hover[aria-expanded='true'] label {
+    @apply !grayscale-0 ring-neutral opacity-100 ring;
   }
-
-
-
+  
   .dst {
     @apply drop-shadow-text;
   }
+  
   .role-text {
-    @apply saturate-250  brightness-70;
+    @apply saturate-250 brightness-70;
   }
+  
   .set-absolute {
-    @apply absolute top-0 left-0 inset-0;
+    @apply absolute inset-0 top-0 left-0;
   }
-
+  
   .frost {
     @apply bg-b1/94 backdrop-blur-md;
   }
-
+  
   .border-shadow {
-    @apply shadow-[#000]/5 border border-b3/60 rounded-box shadow-warm-2;
+    @apply shadow-[#000]/5 border-b3/60 rounded-box shadow-warm-2 border;
   }
+  
   .border-shadow-sm {
-    @apply shadow-md drop-shadow-sm shadow-[#000]/4 border border-b3/60 rounded-box;
+    @apply shadow-[#000]/4 border-b3/60 rounded-box border shadow-md drop-shadow-sm;
   }
-
+  
   .scrollbar-hidden,
   .scrollbar-hide,
   .scrollbar-hidden::-webkit-scrollbar,
-  .scrollbar-hide::-webkit-scrollbar {
+    .scrollbar-hide::-webkit-scrollbar {
     display: none;
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
-
+  
   .tip-icon {
-    @apply inline-flex align-middle mr-2 ml-0.5 mb-0.25 size-4.25;
+    @apply mb-0.25 size-4.25 mr-2 ml-0.5 inline-flex align-middle;
   }
-
+  
   .inline-icon {
-    @apply inline-flex align-middle mr-0.5 ml-0.5 mb-0.25 size-4.25;
+    @apply mb-0.25 size-4.25 mr-0.5 ml-0.5 inline-flex align-middle;
   }
-
+  
   .item-price-arrow::first-letter {
     writing-mode: sideways-lr;
     text-orientation: sideways;
   }
-
+  
   .ring-check {
-    @apply has-checked:ring has-checked:ring-n1/50 has-checked:ring-offset-2 has-checked:ring-offset-b2/90  hover:ring hover:ring-n1/50 hover:ring-offset-2 hover:ring-offset-b2/90 transition-all duration-150 drop-shadow-sm  shadow-sm has-checked:grayscale-0;
+    @apply shadow-sm drop-shadow-sm transition-all duration-150 has-checked:ring
+    has-checked:ring-n1/50 has-checked:ring-offset-2 has-checked:ring-offset-b2/90
+    has-checked:grayscale-0 hover:ring hover:ring-n1/50 hover:ring-offset-2
+    hover:ring-offset-b2/90;
   }
+  
   .ability-effect {
-    @apply inline-block justify-self-center align-middle not-first:ml-2 not-first:pl-4 not-first:border-l not-first:border-l-b4  drop-shadow-text not-first:not-nth-of-type-2:pt-3 nth-of-type-2:mt-3 leading-5;
+    @apply drop-shadow-text nth-of-type-2:mt-3 inline-block justify-self-center
+    align-middle leading-5 not-first:ml-2 not-first:pl-4 not-first:border-l
+    not-first:border-l-b4 not-first:not-nth-of-type-2:pt-3;
   }
-
+  
   .ability-header {
-    @apply font-semibold tracking-normal  drop-shadow-text !text-2 uppercase;
+    @apply drop-shadow-text !text-xs font-semibold uppercase tracking-normal;
   }
-
+  
   .corner-mask {
-    --r: 4px; /* the radius */
-    --s: 40px; /* the size of the cut */
-
+    --r: 4px;
+    /* the radius */
+    --s: 40px;
+    /* the size of the cut */
     --_m: /calc(2 * var(--r)) calc(2 * var(--r)) radial-gradient(#000 70%, #0000 72%) no-repeat;
-    mask:
-      calc(var(--s) + var(--r)) 0 var(--_m),
+    mask: calc(var(--s) + var(--r)) 0 var(--_m),
       0 calc(var(--s) + var(--r)) var(--_m),
       radial-gradient(var(--s) at 0 0, #0000 99%, #000 101%) var(--r) var(--r) no-repeat,
       conic-gradient(at calc(var(--s) + 2 * var(--r)) calc(var(--s) + 2 * var(--r)), #000 75%, #0000 0);

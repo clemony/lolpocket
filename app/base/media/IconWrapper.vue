@@ -11,7 +11,7 @@ const props = defineProps<{
     <hicon
       v-if="props.name"
       :name="props.name"
-      class="absolute shrink-0   "
+      class="absolute shrink-0"
       :class="cn('size-5 dst', props.class)" />
 
     <slot />

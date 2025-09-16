@@ -15,7 +15,7 @@ const ix = useIndexStore()
 
 <template>
   h
-<!-- <div v-if="championStats" class="avatar-group -space-x-5">
+  <!-- <div v-if="championStats" class="avatar-group -space-x-5">
   <div v-for="champion in champions" :key="champion." class="avatar">
     <div :class="cn('w-9', className)">
       <ChampionIcon :id="ix.champIdByKey(champion)" class="object-cover size-full"/>

@@ -10,9 +10,11 @@ interface Props extends LabelProps {
   class?: HTMLAttributes['class']
 }
 
-const props = defineProps<Props & {
-  class?: HTMLAttributes['class']
-}>()
+const props = defineProps<
+  Props & {
+    class?: HTMLAttributes['class']
+  }
+>()
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props
@@ -24,9 +26,13 @@ const delegatedProps = computed(() => {
 <template>
   <Label
     v-bind="delegatedProps"
-    :class="cn(
-      'text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70', labelVariants({ variant, size, hover }), props.class)">
-
+    :class="
+      cn(
+        'text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70',
+        labelVariants({ variant, size, hover }),
+        props.class,
+      )
+    ">
     <slot />
   </Label>
 </template>

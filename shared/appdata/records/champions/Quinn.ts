@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:13 PM CDT
 
 const champion: Champion = {
   "id": 133,
@@ -132,9 +132,17 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "65 / 100 / 135 / 170 / 205",
-                "80 / 90 / 100 / 110 / 120% bonus AD",
-                "50% AP"
+                {
+                  "values": "65 / 100 / 135 / 170 / 205"
+                },
+                {
+                  "values": "80 / 90 / 100 / 110 / 120",
+                  "unit": "% bonus AD"
+                },
+                {
+                  "values": "50",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -172,13 +180,19 @@ const champion: Champion = {
             {
               "attribute": "Bonus Attack Speed",
               "modifiers": [
-                "28 / 41 / 54 / 67 / 80%"
+                {
+                  "values": "28 / 41 / 54 / 67 / 80",
+                  "unit": "%"
+                }
               ]
             },
             {
               "attribute": "Bonus Movement Speed",
               "modifiers": [
-                "20 / 25 / 30 / 35 / 40%"
+                {
+                  "values": "20 / 25 / 30 / 35 / 40",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -209,8 +223,13 @@ const champion: Champion = {
             {
               "attribute": "Physical damage",
               "modifiers": [
-                "40 / 65 / 90 / 115 / 140",
-                "20% bonus AD"
+                {
+                  "values": "40 / 65 / 90 / 115 / 140"
+                },
+                {
+                  "values": "20",
+                  "unit": "% bonus AD"
+                }
               ]
             }
           ]
@@ -245,7 +264,10 @@ const champion: Champion = {
             {
               "attribute": "Total Movement Speed Increase",
               "modifiers": [
-                "70 / 100 / 130%"
+                {
+                  "values": "70 / 100 / 130",
+                  "unit": "%"
+                }
               ]
             }
           ]

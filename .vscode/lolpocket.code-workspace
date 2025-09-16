@@ -2,8 +2,8 @@
   "folders": [
     {
       "name": "lolpocket",
-      "path": "../.."
-    }
+      "path": "../..",
+    },
   ],
   "settings": {
     "editor.formatOnType": false,
@@ -13,7 +13,7 @@
     "vs-code-prettier-eslint.prettierLast": false,
     "eslint.enable": true,
     "vscode_custom_css.imports": [
-      "file://Users/caitlin/Documents/css/vscode/vscode.css"
+      "file://Users/caitlin/Documents/css/vscode/vscode.css",
     ],
     // Disable the default formatter, use eslint instead
     "prettier.enable": false,
@@ -21,64 +21,63 @@
     // Auto fix
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": "always",
-      "source.organizeImports": "always"
+      "source.organizeImports": "always",
     },
     "files.exclude": {
-      "**/*.js": {"when": "$(basename).ts"}
-
+      "**/*.js": { "when": "$(basename).ts" },
     },
     // Silent the stylistic rules in you IDE, but still auto fix them
     "eslint.rules.customizations": [
       {
         "rule": "style/*",
         "severity": "off",
-        "fixable": true
+        "fixable": true,
       },
       {
         "rule": "format/*",
         "severity": "off",
-        "fixable": true
+        "fixable": true,
       },
       {
         "rule": "*-indent",
         "severity": "off",
-        "fixable": true
+        "fixable": true,
       },
       {
         "rule": "*-spacing",
         "severity": "off",
-        "fixable": true
+        "fixable": true,
       },
       {
         "rule": "*-spaces",
         "severity": "off",
-        "fixable": true
+        "fixable": true,
       },
       {
         "rule": "*-order",
         "severity": "off",
-        "fixable": true
+        "fixable": true,
       },
       {
         "rule": "*-dangle",
         "severity": "off",
-        "fixable": true
+        "fixable": true,
       },
       {
         "rule": "*-newline",
         "severity": "off",
-        "fixable": true
+        "fixable": true,
       },
       {
         "rule": "*quotes",
         "severity": "off",
-        "fixable": true
+        "fixable": true,
       },
       {
         "rule": "*semi",
         "severity": "off",
-        "fixable": true
-      }
+        "fixable": true,
+      },
     ],
     // Enable eslint for all supported languages
     "eslint.validate": [
@@ -102,7 +101,7 @@
       "less",
       "scss",
       "pcss",
-      "postcss"
-    ]
-  }
+      "postcss",
+    ],
+  },
 }

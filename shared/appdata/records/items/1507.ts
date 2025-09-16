@@ -9,24 +9,19 @@ const item: Item = {
   passives: [
     {
       unique: true,
-      effects: 'At 55 minutes, this turret begins to malfunction, losing armor and magic resist. After 5 minutes, it will start breaking down, losing an increasing percentage of its <img src="/img/icons/health.webp" class="tip-icon" />health every 30 seconds.'
-    }
+      effects:
+        'At 55 minutes, this turret begins to malfunction, losing armor and magic resist. After 5 minutes, it will start breaking down, losing an increasing percentage of its <img src="/img/icons/health.webp" class="tip-icon" />health every 30 seconds.',
+    },
   ],
   stats: {},
   shop: {
     prices: {
       total: 0,
       combined: 0,
-      sell: 0
+      sell: 0,
     },
-    purchasable: false
+    purchasable: false,
   },
-  maps: [
-    11,
-    12,
-    21,
-    30,
-    35
-  ]
+  maps: [11, 12, 21, 30, 35],
 }
 export default item

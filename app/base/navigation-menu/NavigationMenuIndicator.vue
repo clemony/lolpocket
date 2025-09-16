@@ -3,13 +3,15 @@ import { motion } from 'motion-v'
 import type { NavigationMenuIndicatorProps } from 'reka-ui'
 import { NavigationMenuIndicator, useForwardProps } from 'reka-ui'
 
-const props = defineProps<NavigationMenuIndicatorProps & {
-  class?: HTMLAttributes['class']
-  sideOffset?: number
-  alignOffset?: number
-  iconClass?: HTMLAttributes['class']
-  orientation?: 'vertical' | 'horizontal'
-}>()
+const props = defineProps<
+  NavigationMenuIndicatorProps & {
+    class?: HTMLAttributes['class']
+    sideOffset?: number
+    alignOffset?: number
+    iconClass?: HTMLAttributes['class']
+    orientation?: 'vertical' | 'horizontal'
+  }
+>()
 
 const delegatedProps = reactiveOmit(props, 'class')
 
@@ -28,7 +30,12 @@ const forwarded = useForwardProps(delegatedProps)
   </NavigationMenuIndicator> -->
 
   <NavigationMenuIndicator
-    :class="cn('absolute data-[state=hidden]:opacity-0  top-full w-(--reka-navigation-menu-indicator-size) mask-b-from-97% to-98% translate-x-(--reka-navigation-menu-indicator-position) mt-[1px] z-[100] flex h-[10px] items-end justify-center overflow-hidden transition-[all,transform_250ms_ease]', props.class)"
+    :class="
+      cn(
+        'absolute data-[state=hidden]:opacity-0  top-full w-(--reka-navigation-menu-indicator-size) mask-b-from-97% to-98% translate-x-(--reka-navigation-menu-indicator-position) mt-[1px] z-[100] flex h-[10px] items-end justify-center overflow-hidden transition-[all,transform_250ms_ease]',
+        props.class,
+      )
+    "
     as-child>
     <motion.div
       :initial="{
@@ -47,7 +54,8 @@ const forwarded = useForwardProps(delegatedProps)
         type: 'spring',
         bounce: 0.25,
       }">
-      <div class="relative top-[70%] h-[12px] w-[12px] rotate-[45deg] bg-b1/94 border border-b4/70" />
+      <div
+        class="relative top-[70%] h-[12px] w-[12px] rotate-[45deg] bg-b1/94 border border-b4/70" />
     </motion.div>
   </NavigationMenuIndicator>
 </template>

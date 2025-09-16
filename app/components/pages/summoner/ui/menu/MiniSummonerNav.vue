@@ -16,19 +16,21 @@ const { summoner, links, childRoutes } = defineProps<{
           <div class="relative">
             <SummonerIcon
               :summoner
-              class="rounded-field size-full size-11">
-            </SummonerIcon>
-            <SummonerLevel class="pt-px absolute z-1 -bottom-1.5 bg-neutral rounded-full text-nc text-2" />
+              class="rounded-field size-full size-11"></SummonerIcon>
+            <SummonerLevel
+              class="pt-px absolute z-1 -bottom-1.5 bg-neutral rounded-full text-nc text-xs" />
           </div>
         </template>
         <template #content>
           <div class="w-full py-1 flex flex-col gap-1">
-            <p class="items-center  justify-between gap-2 text-nowrap flex-nowrap inline-flex">
+            <p
+              class="items-center justify-between gap-2 text-nowrap flex-nowrap inline-flex">
               <SummonerName
                 as="h4"
                 class="leading-none font-serif font-bold truncate" />
             </p>
-            <p class="flex w-full text-2  gap-2 justify-between items-center [&_svg]:size-3  **:leading-none  inline-flex align-bottom">
+            <p
+              class="flex w-full text-xs gap-2 justify-between items-center [&_svg]:size-3 **:leading-none inline-flex align-bottom">
               <SummonerTag />
 
               <SummonerRegion />
@@ -61,8 +63,7 @@ const { summoner, links, childRoutes } = defineProps<{
     </template>
 
     <template #footer>
-      <NavUpdateMatches
-        variant="neutral" />
+      <NavUpdateMatches variant="neutral" />
     </template>
   </DockTemplate>
 </template>

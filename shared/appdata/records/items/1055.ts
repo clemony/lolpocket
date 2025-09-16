@@ -7,31 +7,20 @@ const item: Item = {
   removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1055_marksman_t1_doransblade.png',
   simpleDescription: 'Good starting item for attackers',
-  nicknames: [
-    'dblade'
-  ],
+  nicknames: ['dblade'],
   stats: {
     attackDamage: 10,
     health: 80,
-    lifesteal: 3
+    lifesteal: 3,
   },
   shop: {
     prices: {
       total: 450,
       combined: 450,
-      sell: 180
+      sell: 180,
     },
-    tags: [
-      'FIGHTER',
-      'MARKSMAN',
-      'ASSASSIN',
-      'LIFESTEAL_VAMP'
-    ]
+    tags: ['FIGHTER', 'MARKSMAN', 'ASSASSIN', 'LIFESTEAL_VAMP'],
   },
-  maps: [
-    11,
-    12,
-    21
-  ]
+  maps: [11, 12, 21],
 }
 export default item

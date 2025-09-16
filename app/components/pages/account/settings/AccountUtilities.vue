@@ -8,7 +8,7 @@ const classObject
 </script>
 
 <template>
-  <Field class="grid px-2 h-fit py-3 *:w-full w-full **:text-2 relative">
+  <Field class="grid px-2 h-fit py-3 *:w-full w-full **:text-xs relative">
     <SheetClose
       :class="classObject"
       @click="navigateTo('/about')">

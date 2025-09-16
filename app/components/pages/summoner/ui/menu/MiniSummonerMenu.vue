@@ -1,7 +1,13 @@
 <script lang="ts" setup>
 import { DropdownMenuTrigger } from 'reka-ui'
 
-const { class: className, summoner, align, side, disableLink } = defineProps<{
+const {
+  class: className,
+  summoner,
+  align,
+  side,
+  disableLink,
+} = defineProps<{
   class?: HTMLAttributes['class']
   summoner: Summoner
   side?: Side
@@ -33,7 +39,7 @@ const open = ref(false)
           name="tag"
           class="**:stroke-[2.4] size-4.5   !opacity-30" />
         <Grow />
-       <UserTitle class="badge bg-tint-domination/50 border-tint-domination/20 !text-2 text-white/96 " /> -->
+       <UserTitle class="badge bg-tint-domination/50 border-tint-domination/20 !text-xs text-white/96 " /> -->
       </Label>
 
       <DropdownMenuItem
@@ -45,20 +51,18 @@ const open = ref(false)
         <SummonerName
           :summoner
           as="h3"
-          class="grow !text-5   truncate font-serif " />
+          class="grow !text-lgtruncate font-serif" />
 
         <SummonerTag :summoner />
       </DropdownMenuItem>
 
       <Separator class="mt-2" />
-      <DropdownMenuLabel
-        class="py-1">
+      <DropdownMenuLabel class="py-1">
         Social
       </DropdownMenuLabel>
       <Separator class="mb-1" />
 
-      <DropdownMenuItem
-        as-child>
+      <DropdownMenuItem as-child>
         <FollowButton
           text
           size="sm"
@@ -70,7 +74,8 @@ const open = ref(false)
           size="sm"
           variant="base"
           :summoner>
-          Message <span>{{ summoner.name }}</span>
+          Message
+          <span>{{ summoner.name }}</span>
         </MessageButton>
       </DropdownMenuItem>
 

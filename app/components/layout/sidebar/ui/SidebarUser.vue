@@ -7,7 +7,7 @@ const user = useSupabaseUser()
 
 const router = useRouter()
 
-const routes = computed (() => {
+const routes = computed(() => {
   return router.getRoutes().filter(r => r.path.match(/\/settings.*/g))
 })
 
@@ -15,10 +15,13 @@ const open = shallowRef(false)
 const target = shallowRef<HTMLButtonElement>(null)
 const isHovered = useElementHover(target, { delayEnter: 400, delayLeave: 400 })
 
-watch(() => isHovered.value, (newVal) => {
-  if (newVal == true)
-    open.value = true
-})
+watch(
+  () => isHovered.value,
+  (newVal) => {
+    if (newVal == true)
+      open.value = true
+  }
+)
 </script>
 
 <template>
@@ -28,11 +31,13 @@ watch(() => isHovered.value, (newVal) => {
       as-child
       size="icon"
       class="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground md:size-11 shrink-0 md:p-0 group/menu">
-      <SummonerIcon class="size-full *:size-full text-nc rounded-lg grayscale transition-all duration-200 group-hover/menu:grayscale-0 group-data-[state=open]/menu:grayscale-0" />
-      <div class="grid flex-1 text-left text-2 leading-tight">
+      <SummonerIcon
+        class="size-full *:size-full text-nc rounded-lg grayscale transition-all duration-200 group-hover/menu:grayscale-0 group-data-[state=open]/menu:grayscale-0" />
+      <div class="grid flex-1 text-left text-xs leading-tight">
         <SummonerName class="truncate font-semibold" />
-        <SummonerRegion class="truncate text-1" />
-      </div><!--
+        <SummonerRegion class="truncate text-xxs" />
+      </div>
+      <!--
       <icon
         name="select"
         class="ml-auto size-4" /> -->
@@ -43,12 +48,12 @@ watch(() => isHovered.value, (newVal) => {
       align="end"
       :side-offset="4">
       <DropdownMenuLabel class="p-0 font-normal">
-        <div class="flex items-center gap-2 px-1 py-1.5 text-left text-2">
+        <div class="flex items-center gap-2 px-1 py-1.5 text-left text-xs">
           <SummonerIcon class="h-8 w-8 rounded-lg text-nc" />
 
-          <div class="grid flex-1 text-left text-2 leading-tight">
+          <div class="grid flex-1 text-left text-xs leading-tight">
             <SummonerName class="truncate font-semibold" />
-            <SummonerTag class="truncate text-1" />
+            <SummonerTag class="truncate text-xxs" />
           </div>
         </div>
       </DropdownMenuLabel>
@@ -63,7 +68,7 @@ watch(() => isHovered.value, (newVal) => {
       <DropdownMenuGroup>
         <DropdownMenuItem
           v-if="as().loggedIn"
-          @click=" closeAndNavigate('/settings/account')">
+          @click="closeAndNavigate('/settings/account')">
           <icon name="at" />
           Account
         </DropdownMenuItem>

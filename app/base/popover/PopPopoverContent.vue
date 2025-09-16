@@ -2,30 +2,28 @@
 import { motion } from 'motion-v'
 
 import type { PopoverContentEmits, PopoverContentProps } from 'reka-ui'
-import {
-  PopoverContent,
-  PopoverPortal,
-  useForwardPropsEmits,
-} from 'reka-ui'
+import { PopoverContent, PopoverPortal, useForwardPropsEmits } from 'reka-ui'
 
 defineOptions({
   inheritAttrs: false,
 })
 
 const props = withDefaults(
-  defineProps<PopoverContentProps & {
-    class?: HTMLAttributes['class']
-    arrowClass?: HTMLAttributes['class']
-    to?: string
-    sideOffset?: number
-    align?: string
-    scaleStart?: number
-  }>(),
+  defineProps<
+    PopoverContentProps & {
+      class?: HTMLAttributes['class']
+      arrowClass?: HTMLAttributes['class']
+      to?: string
+      sideOffset?: number
+      align?: string
+      scaleStart?: number
+    }
+  >(),
   {
     align: 'center',
     sideOffset: 0,
     scaleStart: 0.6,
-  },
+  }
 )
 const emits = defineEmits<PopoverContentEmits>()
 
@@ -61,7 +59,6 @@ const wrapperVariants = {
     scale: 1,
     visibility: 'visible',
     transition: {
-
       delay: 0.2,
     },
   },
@@ -116,7 +113,9 @@ const wrapperVariants = {
             animate="visible"
             :variants="variants"
             exit="arrowHidden"
-            :class="cn('text-b1/99 absolute  scale-y-90  !z-53', props.arrowClass)" />
+            :class="
+              cn('text-b1/99 absolute  scale-y-90  !z-53', props.arrowClass)
+            " />
         </motion.div>
       </PopoverContent>
     </AnimatePresence>

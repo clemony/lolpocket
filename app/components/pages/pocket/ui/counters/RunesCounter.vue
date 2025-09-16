@@ -41,6 +41,7 @@ if (pocket.value.runes.length == 1) {
   <!-- <span
     v-tippy="`${runeSetsLength ? runeSetsLength : 'no'} rune`"
     :class="cn('flex gap-1.5 items-center', props.class)">
-    <span class="dst font-mono text-1 ">{{ runeSetsLength }}</span>
-  </span> -->h
+    <span class="dst font-mono text-xxs ">{{ runeSetsLength }}</span>
+  </span> -->
+  h
 </template>

@@ -121,11 +121,11 @@ export default defineAppConfig({
       'mail-all': 'lucide:mails',
       'mail-fill': 'fluent:mail-32-filled',
       'mail-open': 'lucide:mail-open',
-      'link': 'mingcute:external-link-line', // lucide:external-link tabler:external-link
-      'link-lg': 'radix-icons:external-link',
-      'chain': 'ph:link-simple', // 'tabler:link' uil:link-alt
+      'link': 'lucide:external-link',
+      'chain': 'hugeicons:link-02',
       'share': 'lucide:share',
       'send': 'lucide:send',
+      'attach': 'meteor-icons:paperclip',
 
       // logo
       'riot': 'simple-icons:riotgames',

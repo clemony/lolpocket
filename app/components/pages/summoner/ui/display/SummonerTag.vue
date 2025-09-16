@@ -2,17 +2,22 @@
 import type { PrimitiveProps } from 'reka-ui'
 import { Primitive } from 'reka-ui'
 
-const { class: className, summoner, as = 'span' } = defineProps<PrimitiveProps & {
-  as?: string
-  class?: HTMLAttributes['class']
-  summoner?: Summoner
-}>()
+const {
+  class: className,
+  summoner,
+  as = 'span',
+} = defineProps<
+  PrimitiveProps & {
+    as?: string
+    class?: HTMLAttributes['class']
+    summoner?: Summoner
+  }
+>()
 
-const tag = computed (() => {
+const tag = computed(() => {
   if (summoner?.tag) {
     return summoner.tag
   }
-
   else {
     const as = useAccountStore()
     return as.account?.tag ?? null
@@ -33,7 +38,5 @@ const tag = computed (() => {
 
   <span
     v-else
-    :class="cn('', className)">
-    Disconnected
-  </span>
+    :class="cn('', className)">Disconnected</span>
 </template>

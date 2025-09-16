@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:15 PM CDT
 
 const champion: Champion = {
   "id": 77,
@@ -128,15 +128,27 @@ const champion: Champion = {
             {
               "attribute": "Bonus Physical Damage",
               "modifiers": [
-                "3 / 4 / 5 / 6 / 7 / 8%  of target's maximum health",
-                "4% per 100 bonus AD"
+                {
+                  "values": "3 / 4 / 5 / 6 / 7 / 8",
+                  "unit": "%  of target's maximum health"
+                },
+                {
+                  "values": "4",
+                  "unit": "% per 100 bonus AD"
+                }
               ]
             },
             {
               "attribute": "Total Physical Damage",
               "modifiers": [
-                "6 / 8 / 10 / 12 / 14 / 16%  of target's maximum health",
-                "8% per 100 bonus AD"
+                {
+                  "values": "6 / 8 / 10 / 12 / 14 / 16",
+                  "unit": "%  of target's maximum health"
+                },
+                {
+                  "values": "8",
+                  "unit": "% per 100 bonus AD"
+                }
               ]
             }
           ]
@@ -147,14 +159,22 @@ const champion: Champion = {
             {
               "attribute": "Bonus Attack Speed",
               "modifiers": [
-                "20 / 32 / 44 / 56 / 68 / 80%"
+                {
+                  "values": "20 / 32 / 44 / 56 / 68 / 80",
+                  "unit": "%"
+                }
               ]
             },
             {
               "attribute": "Bonus Physical Damage On-Hit",
               "modifiers": [
-                "5 / 11 / 17 / 23 / 29 / 35",
-                "25% bonus AD"
+                {
+                  "values": "5 / 11 / 17 / 23 / 29 / 35"
+                },
+                {
+                  "values": "25",
+                  "unit": "% bonus AD"
+                }
               ]
             }
           ]
@@ -189,7 +209,10 @@ const champion: Champion = {
             {
               "attribute": "Life Steal",
               "modifiers": [
-                "15 / 16 / 17 / 18 / 19 / 20%"
+                {
+                  "values": "15 / 16 / 17 / 18 / 19 / 20",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -200,9 +223,18 @@ const champion: Champion = {
             {
               "attribute": "Shield Strength",
               "modifiers": [
-                "45 / 60 / 75 / 90 / 105 / 120",
-                "40% AP",
-                "2 / 2.3 / 2.6 / 2.9 / 3.2 / 3.5% maximum health"
+                {
+                  "values": "45 / 60 / 75 / 90 / 105 / 120"
+                },
+                {
+                  "values": "40",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "2 - 3.5",
+                  "unit": "% maximum health",
+                  "tooltip": "Scaling per rank:\n2 / 2.3 / 2.6 / 2.9 / 3.2 / 3.5% maximum health"
+                }
               ]
             }
           ]
@@ -213,34 +245,67 @@ const champion: Champion = {
             {
               "attribute": "Increased Shield Strength",
               "modifiers": [
-                "20 / 27.65 / 35.29 / 42.94 / 50.59 / 58.24 / 65.88 / 73.53 / 81.18 / 88.82 / 96.47 / 104.12 / 111.76 / 119.41 / 127.06 / 134.71 / 142.35 / 150",
-                "45 / 60 / 75 / 90 / 105 / 120",
-                "65% AP",
-                "8% maximum health"
+                {
+                  "values": "20 / 27.65 / 35.29 / 42.94 / 50.59 / 58.24 / 65.88 / 73.53 / 81.18 / 88.82 / 96.47 / 104.12 / 111.76 / 119.41 / 127.06 / 134.71 / 142.35 / 150"
+                },
+                {
+                  "values": "45 / 60 / 75 / 90 / 105 / 120"
+                },
+                {
+                  "values": "65",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "8",
+                  "unit": "% maximum health"
+                }
               ]
             },
             {
               "attribute": "Total Healing",
               "modifiers": [
-                "10 / 13.82 / 17.65 / 21.47 / 25.29 / 29.12 / 32.94 / 36.76 / 40.59 / 44.41 / 48.24 / 52.06 / 55.88 / 59.71 / 63.53 / 67.35 / 71.18 / 75",
-                "22.5 / 30 / 37.5 / 45 / 52.5 / 60",
-                "32.5% AP",
-                "4% maximum health"
+                {
+                  "values": "10 / 13.82 / 17.65 / 21.47 / 25.29 / 29.12 / 32.94 / 36.76 / 40.59 / 44.41 / 48.24 / 52.06 / 55.88 / 59.71 / 63.53 / 67.35 / 71.18 / 75"
+                },
+                {
+                  "values": "22.5 / 30 / 37.5 / 45 / 52.5 / 60"
+                },
+                {
+                  "values": "32.5",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "4",
+                  "unit": "% maximum health"
+                }
               ]
             },
             {
               "attribute": "Heal per Tick",
               "modifiers": [
-                "0.63 / 0.87 / 1.11 / 1.35 / 1.59 / 1.82 / 2.06 / 2.3 / 2.54 / 2.78 / 3.02 / 3.26 / 3.5 / 3.73 / 3.97 / 4.21 / 4.45 / 4.69",
-                "1.41 / 1.88 / 2.34 / 2.81 / 3.28 / 3.75",
-                "2.03% AP",
-                "0.25% maximum health"
+                {
+                  "values": "0.63 / 0.87 / 1.11 / 1.35 / 1.59 / 1.82 / 2.06 / 2.3 / 2.54 / 2.78 / 3.02 / 3.26 / 3.5 / 3.73 / 3.97 / 4.21 / 4.45 / 4.69"
+                },
+                {
+                  "values": "1.41 / 1.88 / 2.34 / 2.81 / 3.28 / 3.75"
+                },
+                {
+                  "values": "2.03",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "0.25",
+                  "unit": "% maximum health"
+                }
               ]
             },
             {
               "attribute": "Increased Life Steal",
               "modifiers": [
-                "30 / 32 / 34 / 36 / 38 / 40%"
+                {
+                  "values": "30 / 32 / 34 / 36 / 38 / 40",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -274,13 +339,19 @@ const champion: Champion = {
             {
               "attribute": "Bonus Movement Speed",
               "modifiers": [
-                "25 / 31 / 37 / 43 / 49 / 55%"
+                {
+                  "values": "25 / 31 / 37 / 43 / 49 / 55",
+                  "unit": "%"
+                }
               ]
             },
             {
               "attribute": "Decayed Bonus Movement Speed",
               "modifiers": [
-                "7.5 / 9.3 / 11.1 / 12.9 / 14.7 / 16.5%"
+                {
+                  "values": "7.5 / 9.3 / 11.1 / 12.9 / 14.7 / 16.5",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -315,21 +386,34 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage per Tick",
               "modifiers": [
-                "10 / 18 / 26 / 34 / 42 / 50",
-                "17.5% AP"
+                {
+                  "values": "10 / 18 / 26 / 34 / 42 / 50"
+                },
+                {
+                  "values": "17.5",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Total Magic Damage",
               "modifiers": [
-                "80 / 144 / 208 / 272 / 336 / 400",
-                "140% AP"
+                {
+                  "values": "80 / 144 / 208 / 272 / 336 / 400"
+                },
+                {
+                  "values": "140",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Slow",
               "modifiers": [
-                "15 / 18 / 21 / 24 / 27 / 30%"
+                {
+                  "values": "15 / 18 / 21 / 24 / 27 / 30",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -340,7 +424,10 @@ const champion: Champion = {
             {
               "attribute": "Increased Slow",
               "modifiers": [
-                "20 / 23 / 26 / 29 / 32 / 35%"
+                {
+                  "values": "20 / 23 / 26 / 29 / 32 / 35",
+                  "unit": "%"
+                }
               ]
             }
           ]

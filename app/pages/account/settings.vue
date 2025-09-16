@@ -10,7 +10,7 @@ const { syncIfDirty: syncAccount } = useSupabaseSync(
   () => as().account,
   '/api/supabase/updateUserAccount',
   (uuid, account) => ({ uuid, account }),
-  AccountSchema,
+  AccountSchema
 )
 
 // Settings tracking
@@ -18,7 +18,7 @@ const { syncIfDirty: syncSettings } = useSupabaseSync(
   () => as().settings,
   '/api/supabase/updateUserSettings',
   (uuid, settings) => ({ uuid, settings }),
-  SettingsSchema,
+  SettingsSchema
 )
 </script>
 

@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:56 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:12 PM CDT
 
 const champion: Champion = {
   "id": 420,
@@ -132,7 +132,10 @@ const champion: Champion = {
             {
               "attribute": "Damage Increase",
               "modifiers": [
-                "10 / 15 / 20 / 25 / 30%"
+                {
+                  "values": "10 / 15 / 20 / 25 / 30",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -169,14 +172,22 @@ const champion: Champion = {
             {
               "attribute": "Bonus Physical Damage",
               "modifiers": [
-                "3 / 3.5 / 4 / 4.5 / 5%  of target's maximum health",
-                "4% per 100 AD"
+                {
+                  "values": "3 / 3.5 / 4 / 4.5 / 5",
+                  "unit": "%  of target's maximum health"
+                },
+                {
+                  "values": "4",
+                  "unit": "% per 100 AD"
+                }
               ]
             },
             {
               "attribute": "Minimum Physical Damage",
               "modifiers": [
-                "20 / 30 / 40 / 50 / 60"
+                {
+                  "values": "20 / 30 / 40 / 50 / 60"
+                }
               ]
             }
           ]
@@ -215,8 +226,14 @@ const champion: Champion = {
             {
               "attribute": "Damage Transmission",
               "modifiers": [
-                "25 / 30 / 35 / 40 / 45%",
-                "8% per 100 AD"
+                {
+                  "values": "25 / 30 / 35 / 40 / 45",
+                  "unit": "%"
+                },
+                {
+                  "values": "8",
+                  "unit": "% per 100 AD"
+                }
               ]
             }
           ]
@@ -258,8 +275,13 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "150 / 250 / 350",
-                "50% bonus AD"
+                {
+                  "values": "150 / 250 / 350"
+                },
+                {
+                  "values": "50",
+                  "unit": "% bonus AD"
+                }
               ]
             }
           ]

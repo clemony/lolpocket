@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:56 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:11 PM CDT
 
 const champion: Champion = {
   "id": 119,
@@ -125,8 +125,14 @@ const champion: Champion = {
             {
               "attribute": "Bonus Physical Damage",
               "modifiers": [
-                "40 / 45 / 50 / 55 / 60",
-                "75 / 85 / 95 / 105 / 115% bonus AD"
+                {
+                  "values": "40 / 45 / 50 / 55 / 60"
+                },
+                {
+                  "values": "75 - 115",
+                  "unit": "% bonus AD",
+                  "tooltip": "Scaling per rank:\n75 / 85 / 95 / 105 / 115% bonus AD"
+                }
               ]
             }
           ]
@@ -162,13 +168,19 @@ const champion: Champion = {
             {
               "attribute": "Bonus Attack Speed",
               "modifiers": [
-                "20 / 25 / 30 / 35 / 40%"
+                {
+                  "values": "20 / 25 / 30 / 35 / 40",
+                  "unit": "%"
+                }
               ]
             },
             {
               "attribute": "Bonus Movement Speed",
               "modifiers": [
-                "50 / 55 / 60 / 65 / 70%"
+                {
+                  "values": "50 / 55 / 60 / 65 / 70",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -198,14 +210,22 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "75 / 110 / 145 / 180 / 215",
-                "50% bonus AD"
+                {
+                  "values": "75 / 110 / 145 / 180 / 215"
+                },
+                {
+                  "values": "50",
+                  "unit": "% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Slow",
               "modifiers": [
-                "20 / 25 / 30 / 35 / 40%"
+                {
+                  "values": "20 / 25 / 30 / 35 / 40",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -239,15 +259,27 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "175 / 275 / 375",
-                "110 / 130 / 150% bonus AD"
+                {
+                  "values": "175 / 275 / 375"
+                },
+                {
+                  "values": "110 - 150",
+                  "unit": "% bonus AD",
+                  "tooltip": "Scaling per rank:\n110 / 130 / 150% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Total Physical Damage",
               "modifiers": [
-                "350 / 550 / 750",
-                "220 / 260 / 300% bonus AD"
+                {
+                  "values": "350 / 550 / 750"
+                },
+                {
+                  "values": "220 - 300",
+                  "unit": "% bonus AD",
+                  "tooltip": "Scaling per rank:\n220 / 260 / 300% bonus AD"
+                }
               ]
             }
           ]
@@ -264,15 +296,27 @@ const champion: Champion = {
             {
               "attribute": "Minimum Physical Damage",
               "modifiers": [
-                "70 / 110 / 150",
-                "44 / 52 / 60% bonus AD"
+                {
+                  "values": "70 / 110 / 150"
+                },
+                {
+                  "values": "44 - 60",
+                  "unit": "% bonus AD",
+                  "tooltip": "Scaling per rank:\n44 / 52 / 60% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Minimum Total Damage",
               "modifiers": [
-                "140 / 220 / 300",
-                "88 / 104 / 120% bonus AD"
+                {
+                  "values": "140 / 220 / 300"
+                },
+                {
+                  "values": "88 - 120",
+                  "unit": "% bonus AD",
+                  "tooltip": "Scaling per rank:\n88 / 104 / 120% bonus AD"
+                }
               ]
             }
           ]

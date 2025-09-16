@@ -6,16 +6,17 @@ const { class: className, summoner } = defineProps<{
 </script>
 
 <template>
-  <div class=" w-full flex flex-col px-2 py-2 ">
-    <div class="w-full !bg-b1 border  flex items-center gap-4">
+  <div class="w-full flex flex-col px-2 py-2">
+    <div class="w-full !bg-b1 border flex items-center gap-4">
       <slot name="icon">
         <SummonerIcon class="rounded-lg ml-2 size-19" />
       </slot>
-      <div class=" size-full flex relative -mt-3 flex-col gap-0.5">
-        <div class="flex   justify-between text-nowrap flex-nowrap  items-center pr-3">
+      <div class="size-full flex relative -mt-3 flex-col gap-0.5">
+        <div
+          class="flex justify-between text-nowrap flex-nowrap items-center pr-3">
           <SummonerName
             as="h1"
-            class="font-serif font-black   center leading-snug truncate" />
+            class="font-serif font-black center leading-snug truncate" />
 
           <SummonerLevel class="mt-1" />
         </div>

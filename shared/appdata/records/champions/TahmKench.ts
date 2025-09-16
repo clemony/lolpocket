@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:14 PM CDT
 
 const champion: Champion = {
   "id": 223,
@@ -124,18 +124,38 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "75 / 120 / 165 / 210 / 255 ",
-                "6 / 8.47 / 10.94 / 13.41 / 15.88 / 18.35 / 20.82 / 23.29 / 25.76 / 28.24 / 30.71 / 33.18 / 35.65 / 38.12 / 40.59 / 43.06 / 45.53 / 48",
-                "100% AP",
-                "1.5% AP per 100 bonus health",
-                "4% bonus health"
+                {
+                  "values": "75 / 120 / 165 / 210 / 255",
+                  "unit": " "
+                },
+                {
+                  "values": "6 / 8.47 / 10.94 / 13.41 / 15.88 / 18.35 / 20.82 / 23.29 / 25.76 / 28.24 / 30.71 / 33.18 / 35.65 / 38.12 / 40.59 / 43.06 / 45.53 / 48"
+                },
+                {
+                  "values": "100",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "1.5",
+                  "unit": "% AP per 100 bonus health"
+                },
+                {
+                  "values": "4",
+                  "unit": "% bonus health"
+                }
               ]
             },
             {
               "attribute": "Heal",
               "modifiers": [
-                "10 / 15 / 20 / 25 / 30",
-                "5 / 5.5 / 6 / 6.5 / 7% of missing health"
+                {
+                  "values": "10 / 15 / 20 / 25 / 30"
+                },
+                {
+                  "values": "5 - 7",
+                  "unit": "% of missing health",
+                  "tooltip": "Scaling per rank:\n5 / 5.5 / 6 / 6.5 / 7% of missing health"
+                }
               ]
             }
           ]
@@ -176,14 +196,22 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "100 / 135 / 170 / 205 / 240",
-                "150% AP"
+                {
+                  "values": "100 / 135 / 170 / 205 / 240"
+                },
+                {
+                  "values": "150",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Cooldown Refund",
               "modifiers": [
-                "40 / 42.5 / 45 / 47.5 / 50%"
+                {
+                  "values": "40 / 42.5 / 45 / 47.5 / 50",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -216,13 +244,19 @@ const champion: Champion = {
             {
               "attribute": "Damage Stored into Grey Health",
               "modifiers": [
-                "15 / 23 / 31 / 39 / 47%"
+                {
+                  "values": "15 / 23 / 31 / 39 / 47",
+                  "unit": "%"
+                }
               ]
             },
             {
               "attribute": "Increased Damage Stored into Grey Health",
               "modifiers": [
-                "42 / 44 / 46 / 48 / 50%"
+                {
+                  "values": "42 / 44 / 46 / 48 / 50",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -257,8 +291,13 @@ const champion: Champion = {
             {
               "attribute": "Shield Strength",
               "modifiers": [
-                "650 / 800 / 950",
-                "100% AP"
+                {
+                  "values": "650 / 800 / 950"
+                },
+                {
+                  "values": "100",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -295,8 +334,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "100 / 250 / 400",
-                "15% (+ 7% per 100 AP) of the target's maximum health"
+                {
+                  "values": "100 / 250 / 400"
+                },
+                {
+                  "values": "15",
+                  "unit": "% (+ 7% per 100 AP) of the target's maximum health"
+                }
               ]
             }
           ]

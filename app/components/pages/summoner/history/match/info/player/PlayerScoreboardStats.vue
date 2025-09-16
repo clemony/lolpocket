@@ -4,16 +4,19 @@ const { player, class: className } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 
-const heal = computed (() => {
-  return player.challenges.effectiveHealAndShielding > 0 ? player.challenges.effectiveHealAndShielding : null
+const heal = computed(() => {
+  return player.challenges.effectiveHealAndShielding > 0
+    ? player.challenges.effectiveHealAndShielding
+    : null
 })
 </script>
 
 <template>
-  <div class=" p-1 h-full max-w-24 w-24  mx-1 **:leading-none  *:text-1 *:tracking-tight font-medium ">
+  <div
+    class="p-1 h-full max-w-24 w-24 mx-1 **:leading-none *:text-xxs *:tracking-tight font-medium">
     <tippy
       class="flex gap-2 items-center hover:underline text-nowrap truncate"
-      content-class="py-1 space-y-1 w-32 *:w-full *:flex *:tracking-tight *:text-2">
+      content-class="py-1 space-y-1 w-32 *:w-full *:flex *:tracking-tight *:text-xs">
       <span class="size-3 relative grid justify-center">
         <icon
           name="el:fire"
@@ -24,7 +27,7 @@ const heal = computed (() => {
 
     <tippy
       class="flex gap-2 mt-2.25 items-center hover:underline text-nowrap truncate"
-      content-class="py-1 space-y-1 w-32 *:w-full *:flex *:tracking-tight *:text-2">
+      content-class="py-1 space-y-1 w-32 *:w-full *:flex *:tracking-tight *:text-xs">
       <span class="size-3 relative grid justify-center">
         <icon
           name="oi:plus"
@@ -51,8 +54,8 @@ const heal = computed (() => {
     </tippy>
 
     <div
-      class="flex gap-2.25 mt-2 items-center hover:underline  text-nowrap truncate"
-      content-class="py-1 space-y-1 w-32 *:w-full *:flex *:tracking-tight *:text-2">
+      class="flex gap-2.25 mt-2 items-center hover:underline text-nowrap truncate"
+      content-class="py-1 space-y-1 w-32 *:w-full *:flex *:tracking-tight *:text-xs">
       <span class="size-3 relative grid justify-center">
         <icon
           name="ph:shield-fill"

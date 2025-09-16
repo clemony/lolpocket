@@ -1,11 +1,6 @@
 <script setup lang="ts">
 import type { MenubarContentProps } from 'reka-ui'
-import {
-  MenubarContent,
-
-  MenubarPortal,
-  useForwardProps,
-} from 'reka-ui'
+import { MenubarContent, MenubarPortal, useForwardProps } from 'reka-ui'
 
 const props = withDefaults(
   defineProps<MenubarContentProps & { class?: HTMLAttributes['class'] }>(),
@@ -13,7 +8,7 @@ const props = withDefaults(
     align: 'start',
     alignOffset: -4,
     sideOffset: 8,
-  },
+  }
 )
 
 const delegatedProps = reactiveOmit(props, 'class')

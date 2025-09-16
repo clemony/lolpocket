@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:56 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:11 PM CDT
 
 const champion: Champion = {
   "id": 51,
@@ -131,15 +131,27 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "50 / 90 / 130 / 170 / 210",
-                "125 / 145 / 165 / 185 / 205% AD"
+                {
+                  "values": "50 / 90 / 130 / 170 / 210"
+                },
+                {
+                  "values": "125 - 205",
+                  "unit": "% AD",
+                  "tooltip": "Scaling per rank:\n125 / 145 / 165 / 185 / 205% AD"
+                }
               ]
             },
             {
               "attribute": "Reduced Damage",
               "modifiers": [
-                "30 / 54 / 78 / 102 / 126",
-                "75 / 87 / 99 / 111 / 123% AD"
+                {
+                  "values": "30 / 54 / 78 / 102 / 126"
+                },
+                {
+                  "values": "75 - 123",
+                  "unit": "% AD",
+                  "tooltip": "Scaling per rank:\n75 / 87 / 99 / 111 / 123% AD"
+                }
               ]
             }
           ]
@@ -175,7 +187,10 @@ const champion: Champion = {
             {
               "attribute": "Trap Duration",
               "modifiers": [
-                "30 / 35 / 40 / 45 / 50 seconds"
+                {
+                  "values": "30 / 35 / 40 / 45 / 50",
+                  "unit": " seconds"
+                }
               ]
             }
           ]
@@ -186,7 +201,9 @@ const champion: Champion = {
             {
               "attribute": "Maximum Number of Traps",
               "modifiers": [
-                "3 / 3 / 4 / 4 / 5"
+                {
+                  "values": "3 / 3 / 4 / 4 / 5"
+                }
               ]
             }
           ]
@@ -197,8 +214,13 @@ const champion: Champion = {
             {
               "attribute": "Headshot Damage Increase",
               "modifiers": [
-                "35 / 80 / 125 / 170 / 215",
-                "30% bonus AD"
+                {
+                  "values": "35 / 80 / 125 / 170 / 215"
+                },
+                {
+                  "values": "30",
+                  "unit": "% bonus AD"
+                }
               ]
             }
           ]
@@ -229,8 +251,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "80 / 130 / 180 / 230 / 280",
-                "80% AP"
+                {
+                  "values": "80 / 130 / 180 / 230 / 280"
+                },
+                {
+                  "values": "80",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -272,8 +299,13 @@ const champion: Champion = {
             {
               "attribute": "Physical damage",
               "modifiers": [
-                "300 / 475 / 650",
-                "100% bonus AD"
+                {
+                  "values": "300 / 475 / 650"
+                },
+                {
+                  "values": "100",
+                  "unit": "% bonus AD"
+                }
               ]
             }
           ]

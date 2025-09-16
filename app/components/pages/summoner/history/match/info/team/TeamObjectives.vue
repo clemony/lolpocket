@@ -1,12 +1,16 @@
 <script lang="ts" setup>
-const { team, teamObject, class: className } = defineProps<{
+const {
+  team,
+  teamObject,
+  class: className,
+} = defineProps<{
   team: any
   teamObject: any
   class?: HTMLAttributes['class']
 }>()
 
 console.log('team: ', team)
-const elder = computed (() => {
+const elder = computed(() => {
   return teamObject[0].challenges.teamElderDragonKills
 })
 </script>
@@ -14,7 +18,12 @@ const elder = computed (() => {
 <template>
   <div
     class=""
-    :class="cn('grid grid-cols-5 justify-center 0 **:font-semibold **:text-bc', className)">
+    :class="
+      cn(
+        'grid grid-cols-5 justify-center 0 **:font-semibold **:text-bc',
+        className,
+      )
+    ">
     <div
       v-tippy="'Dragon Kills'"
       class="flex items-center gap-1">

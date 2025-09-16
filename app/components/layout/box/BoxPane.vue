@@ -23,10 +23,12 @@ function getBadgeVariantFromLabel(label: string) {
   <button
     v-for="item of items"
     :key="item.id"
-    :class="cn(
-      'flex flex-col items-start gap-2 rounded-lg border p-3 text-left text-2 transition-all hover:bg-b2/50',
-      selected === item.id && 'bg-b2/30',
-    )"
+    :class="
+      cn(
+        'flex flex-col items-start gap-2 rounded-lg border p-3 text-left text-xs transition-all hover:bg-b2/50',
+        selected === item.id && 'bg-b2/30',
+      )
+    "
     @click="selected = item.id">
     <div class="flex w-full flex-col gap-1">
       <div class="flex items-center">
@@ -39,12 +41,12 @@ function getBadgeVariantFromLabel(label: string) {
             class="flex h-2 w-2 rounded-full bg-blue-600" />
         </div>
         <div
-          :class="cn(
-            'ml-auto text-xs',
-            selected === item.id
-              ? 'text-bc'
-              : 'text-bc/60',
-          )">
+          :class="
+            cn(
+              'ml-auto text-xs',
+              selected === item.id ? 'text-bc' : 'text-bc/60',
+            )
+          ">
           12 minutes ago
         </div>
       </div>

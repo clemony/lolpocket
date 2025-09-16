@@ -5,7 +5,7 @@ const props = defineProps<{
 
 const pocket = computed(() => props.pocket)
 
-const set = computed (() => {
+const set = computed(() => {
   return pocket.value.items[0]
 })
 </script>

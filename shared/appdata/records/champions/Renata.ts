@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:13 PM CDT
 
 const champion: Champion = {
   "id": 888,
@@ -130,8 +130,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "80 / 125 / 170 / 215 / 260",
-                "80% AP"
+                {
+                  "values": "80 / 125 / 170 / 215 / 260"
+                },
+                {
+                  "values": "80",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -171,29 +176,53 @@ const champion: Champion = {
             {
               "attribute": "Bonus Attack Speed",
               "modifiers": [
-                "10 / 15 / 20 / 25 / 30%",
-                "1% per 100 AP"
+                {
+                  "values": "10 / 15 / 20 / 25 / 30",
+                  "unit": "%"
+                },
+                {
+                  "values": "1",
+                  "unit": "% per 100 AP"
+                }
               ]
             },
             {
               "attribute": "Maximum Bonus Attack Speed",
               "modifiers": [
-                "20 / 30 / 40 / 50 / 60%",
-                "2% per 100 AP"
+                {
+                  "values": "20 / 30 / 40 / 50 / 60",
+                  "unit": "%"
+                },
+                {
+                  "values": "2",
+                  "unit": "% per 100 AP"
+                }
               ]
             },
             {
               "attribute": "Bonus Movement Speed",
               "modifiers": [
-                "10 / 12.5 / 15 / 17.5 / 20%",
-                "1% per 100 AP"
+                {
+                  "values": "10 / 12.5 / 15 / 17.5 / 20",
+                  "unit": "%"
+                },
+                {
+                  "values": "1",
+                  "unit": "% per 100 AP"
+                }
               ]
             },
             {
               "attribute": "Maximum Bonus Movement Speed",
               "modifiers": [
-                "20 / 25 / 30 / 35 / 40%",
-                "2% per 100 AP"
+                {
+                  "values": "20 / 25 / 30 / 35 / 40",
+                  "unit": "%"
+                },
+                {
+                  "values": "2",
+                  "unit": "% per 100 AP"
+                }
               ]
             }
           ]
@@ -227,15 +256,25 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "65 / 95 / 125 / 155 / 185",
-                "55% AP"
+                {
+                  "values": "65 / 95 / 125 / 155 / 185"
+                },
+                {
+                  "values": "55",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Shield Strength",
               "modifiers": [
-                "50 / 65 / 80 / 95 / 110",
-                "50% AP"
+                {
+                  "values": "50 / 65 / 80 / 95 / 110"
+                },
+                {
+                  "values": "50",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -270,7 +309,10 @@ const champion: Champion = {
             {
               "attribute": "Berserk Duration",
               "modifiers": [
-                "1.25 / 1.75 / 2.25 seconds"
+                {
+                  "values": "1.25 / 1.75 / 2.25",
+                  "unit": " seconds"
+                }
               ]
             }
           ]

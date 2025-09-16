@@ -65,7 +65,7 @@ export function transformMatchData(raw: any): MatchData {
 
       // placeholder, will overwrite after MVP calculation
       mvpScore: 0,
-    }),
+    })
   )
 
   // 2️⃣ Prepare PlayerStats for MVP
@@ -111,7 +111,9 @@ export function transformMatchData(raw: any): MatchData {
 
   // … continue mapping teams and matchData as before
   const teams: MatchTeam[] = raw.info.teams.map((team: any): MatchTeam => {
-    const teamParticipants = participants.filter(p => p.teamId === team.teamId)
+    const teamParticipants = participants.filter(
+      p => p.teamId === team.teamId
+    )
 
     return {
       teamId: team.teamId,

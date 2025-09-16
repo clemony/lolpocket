@@ -36,14 +36,14 @@ watchEffect(async () => {
           class="!size-full rounded-lg" />
       </div>
 
-      <div class="flex flex-col  text-4 w-full">
+      <div class="flex flex-col  text-md w-full">
         <div class=" flex items-center justify-between  gap-1">
           <Blink external
 variant="link"
             v-if="item.name"
             :to="getWikiLink(item.name)"
             target="_blank"
-            class="font-bold text-4 "
+            class="font-bold text-md "
             :title="`Official LoL Wiki - ${item.name}`">
             {{ item.name }}
             <icon
@@ -61,7 +61,7 @@ variant="link"
 
           <div
             v-if="item && item.shop?.prices?.total"
-            class="flex items-end gap-1 text-3 font-medium ">
+            class="flex items-end gap-1 text-sm font-medium ">
             <Img
               img="/img/icons/gold-coin.webp"
               alt="coin"
@@ -118,7 +118,7 @@ variant="link"
 
       <p
         v-if="id"
-        class="flex flex-nowrap text-nowrap grow items-center  text-2">
+        class="flex flex-nowrap text-nowrap grow items-center  text-xs">
         <icon name="mage:hash" class="size-3.75 " />{{ id }}
       </p> -->
     </div>

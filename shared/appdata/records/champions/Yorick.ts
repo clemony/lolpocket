@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:15 PM CDT
 
 const champion: Champion = {
   "id": 83,
@@ -129,22 +129,39 @@ const champion: Champion = {
             {
               "attribute": "Bonus Physical Damage",
               "modifiers": [
-                "30 / 50 / 70 / 90 / 110",
-                "50% AD"
+                {
+                  "values": "30 / 50 / 70 / 90 / 110"
+                },
+                {
+                  "values": "50",
+                  "unit": "% AD"
+                }
               ]
             },
             {
               "attribute": "Heal",
               "modifiers": [
-                "10 / 13.41 / 16.82 / 20.24 / 23.65 / 27.06 / 30.47 / 33.88 / 37.29 / 40.71 / 44.12 / 47.53 / 50.94 / 54.35 / 57.76 / 61.18 / 64.59 / 68",
-                "6 / 7 / 8 / 9 / 10% of his missing health"
+                {
+                  "values": "10 / 13.41 / 16.82 / 20.24 / 23.65 / 27.06 / 30.47 / 33.88 / 37.29 / 40.71 / 44.12 / 47.53 / 50.94 / 54.35 / 57.76 / 61.18 / 64.59 / 68"
+                },
+                {
+                  "values": "6 - 10",
+                  "unit": "% of his missing health",
+                  "tooltip": "Scaling per rank:\n6 / 7 / 8 / 9 / 10% of his missing health"
+                }
               ]
             },
             {
               "attribute": "Non-Champion Heal",
               "modifiers": [
-                "5 / 6.71 / 8.41 / 10.12 / 11.82 / 13.53 / 15.24 / 16.94 / 18.65 / 20.35 / 22.06 / 23.76 / 25.47 / 27.18 / 28.88 / 30.59 / 32.29 / 34",
-                "3 / 3.5 / 4 / 4.5 / 5% of his missing health"
+                {
+                  "values": "5 / 6.71 / 8.41 / 10.12 / 11.82 / 13.53 / 15.24 / 16.94 / 18.65 / 20.35 / 22.06 / 23.76 / 25.47 / 27.18 / 28.88 / 30.59 / 32.29 / 34"
+                },
+                {
+                  "values": "3 - 5",
+                  "unit": "% of his missing health",
+                  "tooltip": "Scaling per rank:\n3 / 3.5 / 4 / 4.5 / 5% of his missing health"
+                }
               ]
             }
           ]
@@ -201,7 +218,9 @@ const champion: Champion = {
             {
               "attribute": "Wall Health",
               "modifiers": [
-                "2 / 2 / 3 / 3 / 4"
+                {
+                  "values": "2 / 2 / 3 / 3 / 4"
+                }
               ]
             }
           ]
@@ -231,22 +250,38 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "6 / 6.5 / 7 / 7.5 / 8%  of target's maximum health",
-                "3% per 100 AP"
+                {
+                  "values": "6 / 6.5 / 7 / 7.5 / 8",
+                  "unit": "%  of target's maximum health"
+                },
+                {
+                  "values": "3",
+                  "unit": "% per 100 AP"
+                }
               ]
             },
             {
               "attribute": "Minimum Minion Damage",
               "modifiers": [
-                "70 / 105 / 140 / 175 / 210",
-                "100% AP"
+                {
+                  "values": "70 / 105 / 140 / 175 / 210"
+                },
+                {
+                  "values": "100",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Capped Monster Damage",
               "modifiers": [
-                "50 / 75 / 100 / 125 / 150",
-                "100% AP"
+                {
+                  "values": "50 / 75 / 100 / 125 / 150"
+                },
+                {
+                  "values": "100",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -257,13 +292,19 @@ const champion: Champion = {
             {
               "attribute": "Armor Reduction",
               "modifiers": [
-                "13 / 16 / 19 / 22 / 25% of target's armor"
+                {
+                  "values": "13 / 16 / 19 / 22 / 25",
+                  "unit": "% of target's armor"
+                }
               ]
             },
             {
               "attribute": "Bonus Movement Speed",
               "modifiers": [
-                "18 / 21 / 24 / 27 / 30%"
+                {
+                  "values": "18 / 21 / 24 / 27 / 30",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -296,7 +337,9 @@ const champion: Champion = {
             {
               "attribute": "Mist Walkers",
               "modifiers": [
-                "2 / 3 / 4"
+                {
+                  "values": "2 / 3 / 4"
+                }
               ]
             }
           ]

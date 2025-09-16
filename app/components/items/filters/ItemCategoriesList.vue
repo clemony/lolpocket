@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import { itemTags } from '#shared/appdata'
-import { ListboxContent, ListboxItem, ListboxItemIndicator, ListboxRoot } from 'reka-ui'
+import {
+  ListboxContent,
+  ListboxItem,
+  ListboxItemIndicator,
+  ListboxRoot,
+} from 'reka-ui'
 
 const is = useItemStore()
 function handleReset() {
@@ -18,7 +23,7 @@ function handleChange() {
     :multiple="true"
     @entry-focus.prevent>
     <ListboxContent
-      class="w-full pt-0 pb-1 "
+      class="w-full pt-0 pb-1"
       @entry-focus.prevent
       @highlight.prevent>
       <ListboxItem
@@ -32,7 +37,8 @@ function handleChange() {
           size="sm"
           :class="cn('justify-start capitalize')">
           {{ tag.name }}
-          <ListboxItemIndicator class="h-fit w-auto aspect-square justify-self-end justify-end">
+          <ListboxItemIndicator
+            class="h-fit w-auto aspect-square justify-self-end justify-end">
             <input
               type="checkbox"
               class="checkbox checkbox-xs pointer-events-none checkbox-neutral"

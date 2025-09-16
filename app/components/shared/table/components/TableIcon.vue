@@ -13,16 +13,19 @@ const props = defineProps<{
         :disabled="props.params.location == 'trash'"
         class="ti-container pointer-events-auto group cursor-pointer bg-gradient-to-br fromneutral/60 toneutral grid place-items-center relative">
         <div
-          class="ti-wrapper group-hover:opacity-0 transition-all  duration-400 "
+          class="ti-wrapper group-hover:opacity-0 transition-all duration-400"
           :style="{
             backgroundImage: `url(${props.params.value})`,
-            backgroundSize: props.params.value == '/img/champion-centered/1.webp' ? '100%' : '450%',
-            backgroundPosition: 'center 20%' }">
-        </div>
+            backgroundSize:
+              props.params.value == '/img/champion-centered/1.webp'
+                ? '100%'
+                : '450%',
+            backgroundPosition: 'center 20%',
+          }"></div>
 
         <icon
           name="ph:gear-six-fill"
-          class="size-7 text-nc absolute opacity-0  group-hover:opacity-85  transition-all  duration-400" />
+          class="size-7 text-nc absolute opacity-0 group-hover:opacity-85 transition-all duration-400" />
       </PopoverTrigger>
 
       <LazyIconPopover :pocket-key="props.params.data.key" />
@@ -30,6 +33,4 @@ const props = defineProps<{
   </Popover>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

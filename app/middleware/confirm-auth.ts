@@ -1,5 +1,5 @@
 export default defineNuxtRouteMiddleware((to, from) => {
-/*   const session = useSupabaseSession()
+  /*   const session = useSupabaseSession()
 
   if (!session.value.access_token) */
   // FIXME

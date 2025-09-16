@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:56 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:12 PM CDT
 
 const champion: Champion = {
   "id": 38,
@@ -120,8 +120,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "65 / 95 / 125 / 155 / 185",
-                "60% AP"
+                {
+                  "values": "65 / 95 / 125 / 155 / 185"
+                },
+                {
+                  "values": "60",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -132,8 +137,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Shield Strength",
               "modifiers": [
-                "80 / 110 / 140 / 170 / 200",
-                "30% AP"
+                {
+                  "values": "80 / 110 / 140 / 170 / 200"
+                },
+                {
+                  "values": "30",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -169,20 +179,31 @@ const champion: Champion = {
             {
               "attribute": "Increased Bonus Magic Damage",
               "modifiers": [
-                "50 / 75 / 100 / 125 / 150",
-                "80% AP"
+                {
+                  "values": "50 / 75 / 100 / 125 / 150"
+                },
+                {
+                  "values": "80",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Mana Restored",
               "modifiers": [
-                "4 / 4.5 / 5 / 5.5 / 6% of missing mana"
+                {
+                  "values": "4 / 4.5 / 5 / 5.5 / 6",
+                  "unit": "% of missing mana"
+                }
               ]
             },
             {
               "attribute": "Mana Restored Against Champions",
               "modifiers": [
-                "20 / 22.5 / 25 / 27.5 / 30% of missing mana"
+                {
+                  "values": "20 / 22.5 / 25 / 27.5 / 30",
+                  "unit": "% of missing mana"
+                }
               ]
             }
           ]
@@ -218,14 +239,22 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "70 / 100 / 130 / 160 / 190",
-                "65% AP"
+                {
+                  "values": "70 / 100 / 130 / 160 / 190"
+                },
+                {
+                  "values": "65",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Slow",
               "modifiers": [
-                "50 / 60 / 70 / 80 / 90%"
+                {
+                  "values": "50 / 60 / 70 / 80 / 90",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -258,9 +287,17 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "70 / 90 / 110",
-                "50% AP",
-                "2% maximum mana"
+                {
+                  "values": "70 / 90 / 110"
+                },
+                {
+                  "values": "50",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "2",
+                  "unit": "% maximum mana"
+                }
               ]
             }
           ]
@@ -271,25 +308,49 @@ const champion: Champion = {
             {
               "attribute": "Bonus Damage Per Stack",
               "modifiers": [
-                "35 / 45 / 55",
-                "7% AP",
-                "1% maximum mana"
+                {
+                  "values": "35 / 45 / 55"
+                },
+                {
+                  "values": "7",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "1",
+                  "unit": "% maximum mana"
+                }
               ]
             },
             {
               "attribute": "Maximum Bonus Damage",
               "modifiers": [
-                "140 / 180 / 220",
-                "28% AP",
-                "4% maximum mana"
+                {
+                  "values": "140 / 180 / 220"
+                },
+                {
+                  "values": "28",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "4",
+                  "unit": "% maximum mana"
+                }
               ]
             },
             {
               "attribute": "Maximum Magic Damage",
               "modifiers": [
-                "210 / 270 / 330",
-                "78% AP",
-                "6% maximum mana"
+                {
+                  "values": "210 / 270 / 330"
+                },
+                {
+                  "values": "78",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "6",
+                  "unit": "% maximum mana"
+                }
               ]
             }
           ]

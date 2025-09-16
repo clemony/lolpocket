@@ -69,7 +69,7 @@ export function useMatchChampions(puuid: string, matches: MatchData[]) {
 
     const totalGames = [...championStats.values()].reduce(
       (sum, s) => sum + s.games,
-      0,
+      0
     )
     const globalWinrate
       = [...championStats.values()].reduce((sum, s) => sum + s.wins, 0)

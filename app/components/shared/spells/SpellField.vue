@@ -23,7 +23,7 @@ function handleClick() {
 </script>
 
 <template>
-  <div class="flex gap-3  **:select-none">
+  <div class="flex gap-3 **:select-none">
     <!-- <LazySpellPicker
       :model="0"
       :pocket="pocket"
@@ -42,6 +42,4 @@ function handleClick() {
   </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

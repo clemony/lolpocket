@@ -6,25 +6,25 @@ const item: Item = {
     {
       id: 1028,
       name: 'Ruby Crystal',
-      gold: 400
+      gold: 400,
     },
     {
       id: 1006,
       name: 'Rejuvenation Bead',
-      gold: 300
-    }
+      gold: 300,
+    },
   ],
   buildsInto: [
     {
       id: 3083,
       name: 'Warmog\'s Armor',
-      gold: 3100
+      gold: 3100,
     },
     {
       id: 3084,
       name: 'Heartsteel',
-      gold: 3000
-    }
+      gold: 3000,
+    },
   ],
   specialRecipe: 0,
   noEffects: true,
@@ -33,24 +33,16 @@ const item: Item = {
   simpleDescription: 'Grants Health and Health Regen',
   stats: {
     health: 200,
-    healthRegen: 100
+    healthRegen: 100,
   },
   shop: {
     prices: {
       total: 800,
       combined: 100,
-      sell: 320
+      sell: 320,
     },
-    tags: [
-      'TANK',
-      'SUPPORT'
-    ]
+    tags: ['TANK', 'SUPPORT'],
   },
-  maps: [
-    11,
-    12,
-    21,
-    35
-  ]
+  maps: [11, 12, 21, 35],
 }
 export default item

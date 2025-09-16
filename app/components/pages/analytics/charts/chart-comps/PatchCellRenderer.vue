@@ -2,7 +2,7 @@
 const { params } = defineProps<{
   params: any
 }>()
-const patch = computed (() => {
+const patch = computed(() => {
   return useArrayUnique(params.valueFormatted.split(', '))
 })
 console.log('💠 - patch - patch:', patch)
@@ -15,7 +15,7 @@ console.log('💠 - patch - patch:', patch)
       :key="i">
       <div
         v-if="i <= 2"
-        class="badge badge-sm border badge-ghost !border-b3/60 ">
+        class="badge badge-sm border badge-ghost !border-b3/60">
         {{ p }}
       </div>
     </template>
@@ -34,7 +34,7 @@ console.log('💠 - patch - patch:', patch)
           <li
             v-for="p in patch.value"
             :key="p as string"
-            class=" pl-3">
+            class="pl-3">
             {{ p }}
           </li>
         </ul>

@@ -2,9 +2,7 @@
 import type { PopoverArrowProps } from 'reka-ui'
 import { PopoverArrow, useForwardProps } from 'reka-ui'
 
-const props = defineProps<PopoverArrowProps & {
-
-}>()
+const props = defineProps<PopoverArrowProps & {}>()
 
 const forwarded = useForwardProps(props)
 </script>

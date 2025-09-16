@@ -5,9 +5,10 @@ const { state } = defineProps<{
 </script>
 
 <template>
-  <div class="w-124 sticky py-24 top-24 scrollbar-none overflow-y-auto max-h-screen justify-center gap-10 auto-rows-max items-start grid">
+  <div
+    class="w-124 sticky py-24 top-24 scrollbar-none overflow-y-auto max-h-screen justify-center gap-10 auto-rows-max items-start grid">
     <RankCard
-      v-if=" as().settings?.showSolo && !state.loading"
+      v-if="as().settings?.showSolo && !state.loading"
       title="Solo/Duo"
       :entry="state?.summoner?.ranked?.solo"
       class="order-2" />

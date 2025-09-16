@@ -8,25 +8,27 @@ const tabs = ref('abilities')
 </script>
 
 <template>
-  <div class="relative flex flex-col w-full max-h-full  field-box border-b3/80 bg-b2/40 drop-shadow-sm !rounded-xxl">
+  <div
+    class="relative flex flex-col w-full max-h-full field-box border-b3/80 bg-b2/40 drop-shadow-sm !rounded-xxl">
     <div
-      class="overflow-hidden rounded-t-xxl   h-50 w-full drop-shadow-sm relative inset-shadow-sm bg-b2/30 "
+      class="overflow-hidden rounded-t-xxl h-50 w-full drop-shadow-sm relative inset-shadow-sm bg-b2/30"
       :class="{ 'shadow-warm': !champion }">
       <Champion
         v-if="championKey"
         :key="championKey"
         :champ-key="championKey"
         :img="ix().getSplash(championKey, 'centered')"
-        class="z-1 size-full  scale-180  " />
+        class="z-1 size-full scale-180" />
 
-      <header class="absolute bottom-4 *:text-right right-5 *:text-white/86 drop-shadow-sm z-2 *:dst *:text-shadow-sm w-full">
+      <header
+        class="absolute bottom-4 *:text-right right-5 *:text-white/86 drop-shadow-sm z-2 *:dst *:text-shadow-sm w-full">
         <Grow />
 
-        <h1 class="text-11  font-bold tracking-tight">
+        <h1 class="text-xxs1 font-bold tracking-tight">
           {{ champion?.name }}
         </h1>
 
-        <p class="text-3 tracking-tight font-medium uppercase ">
+        <p class="text-sm tracking-tight font-medium uppercase">
           {{ champion?.title }}
         </p>
       </header>
@@ -36,7 +38,8 @@ const tabs = ref('abilities')
       v-model:model-value="tabs"
       if="champion"
       class="size-full max-h-full overflow-hidden">
-      <IndicatorTabsList class="grid-cols-3 w-full !bg-b3 h-10 relative rounded-none">
+      <IndicatorTabsList
+        class="grid-cols-3 w-full !bg-b3 h-10 relative rounded-none">
         <IndicatorTabsTrigger value="abilities">
           Abilities
         </IndicatorTabsTrigger>
@@ -54,7 +57,7 @@ const tabs = ref('abilities')
 
       <TabsContent
         value="abilities"
-        class="max-h-full  overflow-y-auto">
+        class="max-h-full overflow-y-auto">
         <AbilityData
           v-if="champion"
           :abilities="champion.abilities" />

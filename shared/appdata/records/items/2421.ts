@@ -6,25 +6,25 @@ const item: Item = {
     {
       id: 1052,
       name: 'Amplifying Tome',
-      gold: 400
+      gold: 400,
     },
     {
       id: 1029,
       name: 'Cloth Armor',
-      gold: 300
+      gold: 300,
     },
     {
       id: 1052,
       name: 'Amplifying Tome',
-      gold: 400
-    }
+      gold: 400,
+    },
   ],
   buildsInto: [
     {
       id: 3157,
       name: 'Zhonya\'s Hourglass',
-      gold: 3250
-    }
+      gold: 3250,
+    },
   ],
   specialRecipe: 0,
   noEffects: true,
@@ -33,20 +33,15 @@ const item: Item = {
   simpleDescription: 'Upgrades to stopwatch',
   stats: {
     abilityPower: 40,
-    armor: 25
+    armor: 25,
   },
   shop: {
     prices: {
       total: 1600,
       combined: 500,
-      sell: 640
-    }
+      sell: 640,
+    },
   },
-  maps: [
-    11,
-    12,
-    21,
-    35
-  ]
+  maps: [11, 12, 21, 35],
 }
 export default item

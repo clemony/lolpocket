@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:15 PM CDT
 
 const champion: Champion = {
   "id": 161,
@@ -128,14 +128,22 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "80 / 120 / 160 / 200 / 240",
-                "90% AP"
+                {
+                  "values": "80 / 120 / 160 / 200 / 240"
+                },
+                {
+                  "values": "90",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Slow Duration",
               "modifiers": [
-                "1 / 1.4 / 1.8 / 2.2 / 2.6 seconds"
+                {
+                  "values": "1 / 1.4 / 1.8 / 2.2 / 2.6",
+                  "unit": " seconds"
+                }
               ]
             }
           ]
@@ -149,13 +157,17 @@ const champion: Champion = {
             {
               "attribute": "Mana Restored per Kill",
               "modifiers": [
-                "20 / 22.5 / 25 / 27.5 / 30"
+                {
+                  "values": "20 / 22.5 / 25 / 27.5 / 30"
+                }
               ]
             },
             {
               "attribute": "Maximum Mana Restored",
               "modifiers": [
-                "60 / 67.5 / 75 / 82.5 / 90"
+                {
+                  "values": "60 / 67.5 / 75 / 82.5 / 90"
+                }
               ]
             }
           ]
@@ -188,8 +200,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "30 / 50 / 70 / 90 / 110",
-                "20% AP"
+                {
+                  "values": "30 / 50 / 70 / 90 / 110"
+                },
+                {
+                  "values": "20",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -200,15 +217,25 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "45 / 75 / 105 / 135 / 165",
-                "25% AP"
+                {
+                  "values": "45 / 75 / 105 / 135 / 165"
+                },
+                {
+                  "values": "25",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Total Magic Damage",
               "modifiers": [
-                "75 / 125 / 175 / 225 / 275",
-                "45% AP"
+                {
+                  "values": "75 / 125 / 175 / 225 / 275"
+                },
+                {
+                  "values": "45",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -245,8 +272,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "70 / 100 / 130 / 160 / 190",
-                "30% AP"
+                {
+                  "values": "70 / 100 / 130 / 160 / 190"
+                },
+                {
+                  "values": "30",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -288,15 +320,25 @@ const champion: Champion = {
             {
               "attribute": "Damage Per Tick",
               "modifiers": [
-                "34.62 / 48.08 / 61.54",
-                "9.62% AP"
+                {
+                  "values": "34.62 / 48.08 / 61.54"
+                },
+                {
+                  "values": "9.62",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Maximum Damage",
               "modifiers": [
-                "450 / 625 / 800",
-                "125% AP"
+                {
+                  "values": "450 / 625 / 800"
+                },
+                {
+                  "values": "125",
+                  "unit": "% AP"
+                }
               ]
             }
           ]

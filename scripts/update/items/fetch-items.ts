@@ -9,13 +9,9 @@ async function run() {
   try {
     const urlMA
       = 'https://cdn.merakianalytics.com/riot/lol/resources/latest/en-US/items.json'
-    const urlDD
-      = `https://ddragon.leagueoflegends.com/cdn/${loadPatch[0]}.1/data/en_US/item.json`
+    const urlDD = `https://ddragon.leagueoflegends.com/cdn/${loadPatch[0]}.1/data/en_US/item.json`
 
-    const [maItems, ddData] = await Promise.all([
-      $fetch(urlMA),
-      $fetch(urlDD),
-    ])
+    const [maItems, ddData] = await Promise.all([$fetch(urlMA), $fetch(urlDD)])
 
     const ddItems = ddData.data // keyed by item ID: "1001", "1004", etc
 
@@ -61,11 +57,10 @@ async function run() {
       }
     }
 
-    writeFileSync(
-      './raw/items-raw.json',
-      JSON.stringify(merged, null, 2),
+    writeFileSync('./raw/items-raw.json', JSON.stringify(merged, null, 2))
+    console.log(
+      `✅ Merged ${Object.keys(merged).length} items to ./scripts/data/items.json`
     )
-    console.log(`✅ Merged ${Object.keys(merged).length} items to ./scripts/data/items.json`)
   }
   catch (error) {
     console.error('❌ Fetch or merge failed:', error)

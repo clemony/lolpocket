@@ -10,7 +10,7 @@ const props = withDefaults(
   }>(),
   {
     delay: 0.8,
-  },
+  }
 )
 </script>
 
@@ -19,9 +19,8 @@ const props = withDefaults(
     <motion.span
       v-bind="$attrs"
       :animate="{ scale: [0, 1] }"
-      :transition="{ delay: props.delay,
-                     type: 'spring' }"
-      class="indicator-item badge  font-mono badge-sm  px-1.75  top-1 right-1  rounded-full text-1 ">
+      :transition="{ delay: props.delay, type: 'spring' }"
+      class="indicator-item badge font-mono badge-sm px-1.75 top-1 right-1 rounded-full text-xxs">
       <slot />
     </motion.span>
   </AnimatePresence>

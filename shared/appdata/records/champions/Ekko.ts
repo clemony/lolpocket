@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:56 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:11 PM CDT
 
 const champion: Champion = {
   "id": 245,
@@ -128,8 +128,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "80 / 95 / 110 / 125 / 140",
-                "30% AP"
+                {
+                  "values": "80 / 95 / 110 / 125 / 140"
+                },
+                {
+                  "values": "30",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -140,7 +145,10 @@ const champion: Champion = {
             {
               "attribute": "Slow",
               "modifiers": [
-                "40 / 45 / 50 / 55 / 60%"
+                {
+                  "values": "40 / 45 / 50 / 55 / 60",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -151,15 +159,25 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "40 / 65 / 90 / 115 / 140",
-                "60% AP"
+                {
+                  "values": "40 / 65 / 90 / 115 / 140"
+                },
+                {
+                  "values": "60",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Total Magic Damage",
               "modifiers": [
-                "120 / 160 / 200 / 240 / 280",
-                "90% AP"
+                {
+                  "values": "120 / 160 / 200 / 240 / 280"
+                },
+                {
+                  "values": "90",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -203,8 +221,13 @@ const champion: Champion = {
             {
               "attribute": "Shield Strength",
               "modifiers": [
-                "100 / 120 / 140 / 160 / 180",
-                "150% AP"
+                {
+                  "values": "100 / 120 / 140 / 160 / 180"
+                },
+                {
+                  "values": "150",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -237,8 +260,13 @@ const champion: Champion = {
             {
               "attribute": "Bonus Magic Damage",
               "modifiers": [
-                "50 / 75 / 100 / 125 / 150",
-                "40% AP"
+                {
+                  "values": "50 / 75 / 100 / 125 / 150"
+                },
+                {
+                  "values": "40",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -275,16 +303,29 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "200 / 350 / 500",
-                "175% AP"
+                {
+                  "values": "200 / 350 / 500"
+                },
+                {
+                  "values": "175",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Heal",
               "modifiers": [
-                "100 / 150 / 200",
-                "60% AP",
-                "3% per 1% of health lost in the past 4 seconds"
+                {
+                  "values": "100 / 150 / 200"
+                },
+                {
+                  "values": "60",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "3",
+                  "unit": "% per 1% of health lost in the past 4 seconds"
+                }
               ]
             }
           ]

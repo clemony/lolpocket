@@ -3,9 +3,7 @@
     "name": "Boots",
     "id": 1001,
     "tier": 1,
-    "rank": [
-      "BOOTS"
-    ],
+    "rank": ["BOOTS"],
     "buildsFrom": [],
     "buildsInto": [
       {
@@ -266,9 +264,7 @@
     "name": "Faerie Charm",
     "id": 1004,
     "tier": 1,
-    "rank": [
-      "BASIC"
-    ],
+    "rank": ["BASIC"],
     "buildsFrom": [],
     "buildsInto": [
       {
@@ -482,10 +478,7 @@
         "sell": 80
       },
       "purchasable": true,
-      "tags": [
-        "MAGE",
-        "SUPPORT"
-      ]
+      "tags": ["MAGE", "SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -502,9 +495,7 @@
     "name": "Rejuvenation Bead",
     "id": 1006,
     "tier": 1,
-    "rank": [
-      "BASIC"
-    ],
+    "rank": ["BASIC"],
     "buildsFrom": [],
     "buildsInto": [
       {
@@ -723,9 +714,7 @@
         "sell": 120
       },
       "purchasable": true,
-      "tags": [
-        "TANK"
-      ]
+      "tags": ["TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -742,9 +731,7 @@
     "name": "Giant's Belt",
     "id": 1011,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1028,
@@ -1014,11 +1001,7 @@
         "sell": 360
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "MAGE",
-        "TANK"
-      ]
+      "tags": ["FIGHTER", "MAGE", "TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -1035,9 +1018,7 @@
     "name": "Cloak of Agility",
     "id": 1018,
     "tier": 1,
-    "rank": [
-      "BASIC"
-    ],
+    "rank": ["BASIC"],
     "buildsFrom": [],
     "buildsInto": [
       {
@@ -1271,9 +1252,7 @@
         "sell": 240
       },
       "purchasable": true,
-      "tags": [
-        "MARKSMAN"
-      ]
+      "tags": ["MARKSMAN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -1290,9 +1269,7 @@
     "name": "Blasting Wand",
     "id": 1026,
     "tier": 1,
-    "rank": [
-      "BASIC"
-    ],
+    "rank": ["BASIC"],
     "buildsFrom": [],
     "buildsInto": [
       {
@@ -1551,10 +1528,7 @@
         "sell": 340
       },
       "purchasable": true,
-      "tags": [
-        "MAGE",
-        "SUPPORT"
-      ]
+      "tags": ["MAGE", "SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -1571,9 +1545,7 @@
     "name": "Sapphire Crystal",
     "id": 1027,
     "tier": 1,
-    "rank": [
-      "BASIC"
-    ],
+    "rank": ["BASIC"],
     "buildsFrom": [],
     "buildsInto": [
       {
@@ -1599,9 +1571,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1027_base_t1_saphirecrystal.png",
     "simpleDescription": "Increases Mana",
-    "nicknames": [
-      "blue"
-    ],
+    "nicknames": ["blue"],
     "passives": [],
     "active": [],
     "stats": {
@@ -1789,10 +1759,7 @@
         "sell": 120
       },
       "purchasable": true,
-      "tags": [
-        "MAGE",
-        "TANK"
-      ]
+      "tags": ["MAGE", "TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -1809,9 +1776,7 @@
     "name": "Ruby Crystal",
     "id": 1028,
     "tier": 1,
-    "rank": [
-      "BASIC"
-    ],
+    "rank": ["BASIC"],
     "buildsFrom": [],
     "buildsInto": [
       {
@@ -1957,9 +1922,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1028_base_t1_rubycrystal.png",
     "simpleDescription": "Increases Health",
-    "nicknames": [
-      "red"
-    ],
+    "nicknames": ["red"],
     "passives": [],
     "active": [],
     "stats": {
@@ -2147,14 +2110,7 @@
         "sell": 160
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "MARKSMAN",
-        "ASSASSIN",
-        "MAGE",
-        "TANK",
-        "SUPPORT"
-      ]
+      "tags": ["FIGHTER", "MARKSMAN", "ASSASSIN", "MAGE", "TANK", "SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -2171,9 +2127,7 @@
     "name": "Cloth Armor",
     "id": 1029,
     "tier": 1,
-    "rank": [
-      "BASIC"
-    ],
+    "rank": ["BASIC"],
     "buildsFrom": [],
     "buildsInto": [
       {
@@ -2442,14 +2396,7 @@
         "sell": 120
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "MARKSMAN",
-        "ASSASSIN",
-        "MAGE",
-        "TANK",
-        "SUPPORT"
-      ]
+      "tags": ["FIGHTER", "MARKSMAN", "ASSASSIN", "MAGE", "TANK", "SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -2466,9 +2413,7 @@
     "name": "Chain Vest",
     "id": 1031,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1029,
@@ -2723,12 +2668,7 @@
         "sell": 320
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "MARKSMAN",
-        "ASSASSIN",
-        "TANK"
-      ]
+      "tags": ["FIGHTER", "MARKSMAN", "ASSASSIN", "TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -2745,9 +2685,7 @@
     "name": "Null-Magic Mantle",
     "id": 1033,
     "tier": 1,
-    "rank": [
-      "BASIC"
-    ],
+    "rank": ["BASIC"],
     "buildsFrom": [],
     "buildsInto": [
       {
@@ -3006,14 +2944,7 @@
         "sell": 160
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "MARKSMAN",
-        "ASSASSIN",
-        "MAGE",
-        "TANK",
-        "SUPPORT"
-      ]
+      "tags": ["FIGHTER", "MARKSMAN", "ASSASSIN", "MAGE", "TANK", "SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -3030,9 +2961,7 @@
     "name": "Long Sword",
     "id": 1036,
     "tier": 1,
-    "rank": [
-      "BASIC"
-    ],
+    "rank": ["BASIC"],
     "buildsFrom": [],
     "buildsInto": [
       {
@@ -3346,11 +3275,7 @@
         "sell": 140
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "MARKSMAN",
-        "ASSASSIN"
-      ]
+      "tags": ["FIGHTER", "MARKSMAN", "ASSASSIN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -3367,9 +3292,7 @@
     "name": "Pickaxe",
     "id": 1037,
     "tier": 1,
-    "rank": [
-      "BASIC"
-    ],
+    "rank": ["BASIC"],
     "buildsFrom": [],
     "buildsInto": [
       {
@@ -3673,11 +3596,7 @@
         "sell": 350
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "MARKSMAN",
-        "ASSASSIN"
-      ]
+      "tags": ["FIGHTER", "MARKSMAN", "ASSASSIN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -3694,9 +3613,7 @@
     "name": "B. F. Sword",
     "id": 1038,
     "tier": 1,
-    "rank": [
-      "BASIC"
-    ],
+    "rank": ["BASIC"],
     "buildsFrom": [],
     "buildsInto": [
       {
@@ -3742,9 +3659,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1038_marksman_t1_bfsword.png",
     "simpleDescription": "Greatly increases Attack Damage",
-    "nicknames": [
-      "bf"
-    ],
+    "nicknames": ["bf"],
     "passives": [],
     "active": [],
     "stats": {
@@ -3932,11 +3847,7 @@
         "sell": 520
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "MARKSMAN",
-        "ASSASSIN"
-      ]
+      "tags": ["FIGHTER", "MARKSMAN", "ASSASSIN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -3953,9 +3864,7 @@
     "name": "Dagger",
     "id": 1042,
     "tier": 1,
-    "rank": [
-      "BASIC"
-    ],
+    "rank": ["BASIC"],
     "buildsFrom": [],
     "buildsInto": [
       {
@@ -4209,11 +4118,7 @@
         "sell": 100
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "MARKSMAN",
-        "ASSASSIN"
-      ]
+      "tags": ["FIGHTER", "MARKSMAN", "ASSASSIN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -4230,9 +4135,7 @@
     "name": "Recurve Bow",
     "id": 1043,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1042,
@@ -4654,11 +4557,7 @@
         "sell": 280
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "MARKSMAN",
-        "ONHIT_EFFECTS"
-      ]
+      "tags": ["FIGHTER", "MARKSMAN", "ONHIT_EFFECTS"]
     },
     "iconOverlay": false,
     "maps": {
@@ -4675,9 +4574,7 @@
     "name": "Amplifying Tome",
     "id": 1052,
     "tier": 1,
-    "rank": [
-      "BASIC"
-    ],
+    "rank": ["BASIC"],
     "buildsFrom": [],
     "buildsInto": [
       {
@@ -4793,10 +4690,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1052_mage_t2_amptome.png",
     "simpleDescription": "Slightly increases Ability Power",
-    "nicknames": [
-      "amptome",
-      "book"
-    ],
+    "nicknames": ["amptome", "book"],
     "passives": [],
     "active": [],
     "stats": {
@@ -4984,10 +4878,7 @@
         "sell": 160
       },
       "purchasable": true,
-      "tags": [
-        "MAGE",
-        "SUPPORT"
-      ]
+      "tags": ["MAGE", "SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -5004,9 +4895,7 @@
     "name": "Vampiric Scepter",
     "id": 1053,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1036,
@@ -5236,11 +5125,7 @@
         "sell": 360
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "MARKSMAN",
-        "ASSASSIN"
-      ]
+      "tags": ["FIGHTER", "MARKSMAN", "ASSASSIN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -5257,9 +5142,7 @@
     "name": "Doran's Shield",
     "id": 1054,
     "tier": 1,
-    "rank": [
-      "STARTER"
-    ],
+    "rank": ["STARTER"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -5269,9 +5152,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1054_tank_t1_doransshield.png",
     "simpleDescription": "Good defensive starting item",
-    "nicknames": [
-      "dshield"
-    ],
+    "nicknames": ["dshield"],
     "passives": [
       {
         "unique": true,
@@ -5856,9 +5737,7 @@
     "name": "Doran's Blade",
     "id": 1055,
     "tier": 1,
-    "rank": [
-      "STARTER"
-    ],
+    "rank": ["STARTER"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -5868,9 +5747,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1055_marksman_t1_doransblade.png",
     "simpleDescription": "Good starting item for attackers",
-    "nicknames": [
-      "dblade"
-    ],
+    "nicknames": ["dblade"],
     "passives": [],
     "active": [],
     "stats": {
@@ -6058,12 +5935,7 @@
         "sell": 180
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "MARKSMAN",
-        "ASSASSIN",
-        "LIFESTEAL_VAMP"
-      ]
+      "tags": ["FIGHTER", "MARKSMAN", "ASSASSIN", "LIFESTEAL_VAMP"]
     },
     "iconOverlay": false,
     "maps": {
@@ -6080,9 +5952,7 @@
     "name": "Doran's Ring",
     "id": 1056,
     "tier": 1,
-    "rank": [
-      "STARTER"
-    ],
+    "rank": ["STARTER"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -6092,9 +5962,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1056_mage_t1_doransring.png",
     "simpleDescription": "Good starting item for casters",
-    "nicknames": [
-      "dring"
-    ],
+    "nicknames": ["dring"],
     "passives": [
       {
         "unique": true,
@@ -6655,11 +6523,7 @@
         "sell": 160
       },
       "purchasable": true,
-      "tags": [
-        "MAGE",
-        "MANA_AND_REG",
-        "ONHIT_EFFECTS"
-      ]
+      "tags": ["MAGE", "MANA_AND_REG", "ONHIT_EFFECTS"]
     },
     "iconOverlay": false,
     "maps": {
@@ -6676,9 +6540,7 @@
     "name": "Negatron Cloak",
     "id": 1057,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1033,
@@ -6913,11 +6775,7 @@
         "sell": 340
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "TANK",
-        "SUPPORT"
-      ]
+      "tags": ["FIGHTER", "TANK", "SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -6934,9 +6792,7 @@
     "name": "Needlessly Large Rod",
     "id": 1058,
     "tier": 1,
-    "rank": [
-      "BASIC"
-    ],
+    "rank": ["BASIC"],
     "buildsFrom": [],
     "buildsInto": [
       {
@@ -6982,9 +6838,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1058_mage_t1_largerod.png",
     "simpleDescription": "Greatly increases Ability Power",
-    "nicknames": [
-      "nlr"
-    ],
+    "nicknames": ["nlr"],
     "passives": [],
     "active": [],
     "stats": {
@@ -7172,9 +7026,7 @@
         "sell": 480
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -7191,9 +7043,7 @@
     "name": "Dark Seal",
     "id": 1082,
     "tier": 1,
-    "rank": [
-      "STARTER"
-    ],
+    "rank": ["STARTER"],
     "buildsFrom": [],
     "buildsInto": [
       {
@@ -7209,9 +7059,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1082_mage_t1_darkseal.png",
     "simpleDescription": "Provides Ability Power and Mana.  Increases in power as you kill enemies.",
-    "nicknames": [
-      "Noxian"
-    ],
+    "nicknames": ["Noxian"],
     "passives": [
       {
         "unique": true,
@@ -7586,9 +7434,7 @@
         "sell": 140
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -7605,9 +7451,7 @@
     "name": "Cull",
     "id": 1083,
     "tier": 1,
-    "rank": [
-      "STARTER"
-    ],
+    "rank": ["STARTER"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -7617,9 +7461,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1083_marksman_t1_cull.png",
     "simpleDescription": "Provides damage and Life Steal on hit - Killing minions grant bonus Gold",
-    "nicknames": [
-      "dblade"
-    ],
+    "nicknames": ["dblade"],
     "passives": [
       {
         "unique": true,
@@ -8017,9 +7859,7 @@
     "name": "Scorchclaw Pup",
     "id": 1101,
     "tier": 1,
-    "rank": [
-      "STARTER"
-    ],
+    "rank": ["STARTER"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -8029,9 +7869,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1101_jungle_t1_scorchclawpup.png",
     "simpleDescription": null,
-    "nicknames": [
-      "jungle"
-    ],
+    "nicknames": ["jungle"],
     "passives": [
       {
         "unique": true,
@@ -8616,9 +8454,7 @@
     "name": "Gustwalker Hatchling",
     "id": 1102,
     "tier": 1,
-    "rank": [
-      "STARTER"
-    ],
+    "rank": ["STARTER"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -8628,9 +8464,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1102_jungle_t1_gustwalkerhatchling.png",
     "simpleDescription": null,
-    "nicknames": [
-      "jungle"
-    ],
+    "nicknames": ["jungle"],
     "passives": [
       {
         "unique": true,
@@ -9215,9 +9049,7 @@
     "name": "Mosstomper Seedling",
     "id": 1103,
     "tier": 1,
-    "rank": [
-      "STARTER"
-    ],
+    "rank": ["STARTER"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -9227,9 +9059,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1103_jungle_t1_mosstomperseedling.png",
     "simpleDescription": null,
-    "nicknames": [
-      "jungle"
-    ],
+    "nicknames": ["jungle"],
     "passives": [
       {
         "unique": true,
@@ -9814,9 +9644,7 @@
     "name": "Ohmwrecker (Turret Item)",
     "id": 1500,
     "tier": 1,
-    "rank": [
-      "TURRET"
-    ],
+    "rank": ["TURRET"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -10404,9 +10232,7 @@
     "name": "Lane Swap Detector",
     "id": 1501,
     "tier": 1,
-    "rank": [
-      "TURRET"
-    ],
+    "rank": ["TURRET"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -10808,9 +10634,7 @@
     "name": "Reinforced Armor (Turret Item)",
     "id": 1502,
     "tier": 1,
-    "rank": [
-      "TURRET"
-    ],
+    "rank": ["TURRET"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -11212,9 +11036,7 @@
     "name": "Warden's Eye",
     "id": 1503,
     "tier": 1,
-    "rank": [
-      "TURRET"
-    ],
+    "rank": ["TURRET"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -11616,9 +11438,7 @@
     "name": "Base Turret Reinforced Armor (Turret Item)",
     "id": 1506,
     "tier": 1,
-    "rank": [
-      "TURRET"
-    ],
+    "rank": ["TURRET"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -12206,9 +12026,7 @@
     "name": "Overcharged",
     "id": 1507,
     "tier": 1,
-    "rank": [
-      "TURRET"
-    ],
+    "rank": ["TURRET"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -12610,9 +12428,7 @@
     "name": "Anti-Tower Socks",
     "id": 1508,
     "tier": 1,
-    "rank": [
-      "MINION"
-    ],
+    "rank": ["MINION"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -13014,9 +12830,7 @@
     "name": "Gusto",
     "id": 1509,
     "tier": 1,
-    "rank": [
-      "MINION"
-    ],
+    "rank": ["MINION"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -13418,9 +13232,7 @@
     "name": "Phreakish Gusto",
     "id": 1510,
     "tier": 1,
-    "rank": [
-      "MINION"
-    ],
+    "rank": ["MINION"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -13822,9 +13634,7 @@
     "name": "Super Mech Armor",
     "id": 1511,
     "tier": 1,
-    "rank": [
-      "MINION"
-    ],
+    "rank": ["MINION"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -14226,9 +14036,7 @@
     "name": "Super Mech Power Field",
     "id": 1512,
     "tier": 1,
-    "rank": [
-      "MINION"
-    ],
+    "rank": ["MINION"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -14630,9 +14438,7 @@
     "name": "Turret Plating",
     "id": 1515,
     "tier": 1,
-    "rank": [
-      "TURRET"
-    ],
+    "rank": ["TURRET"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -15034,9 +14840,7 @@
     "name": "Health Potion",
     "id": 2003,
     "tier": 1,
-    "rank": [
-      "POTION"
-    ],
+    "rank": ["POTION"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -15046,9 +14850,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2003_class_t1_healthpotion.png",
     "simpleDescription": "Consume to restore Health over time",
-    "nicknames": [
-      "red"
-    ],
+    "nicknames": ["red"],
     "passives": [],
     "active": [],
     "stats": {
@@ -15236,9 +15038,7 @@
         "sell": 20
       },
       "purchasable": true,
-      "tags": [
-        "HEALTH_AND_REG"
-      ]
+      "tags": ["HEALTH_AND_REG"]
     },
     "iconOverlay": false,
     "maps": {
@@ -15255,9 +15055,7 @@
     "name": "Total Biscuit of Everlasting Will",
     "id": 2010,
     "tier": 1,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -15267,9 +15065,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2010_class_t1_totalbiscuitofeverlastingwill.png",
     "simpleDescription": null,
-    "nicknames": [
-      "kleptomancy"
-    ],
+    "nicknames": ["kleptomancy"],
     "passives": [],
     "active": [],
     "stats": {
@@ -15474,9 +15270,7 @@
     "name": "Steel Sigil",
     "id": 2019,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1029,
@@ -15706,9 +15500,7 @@
         "sell": 440
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER"
-      ]
+      "tags": ["FIGHTER"]
     },
     "iconOverlay": false,
     "maps": {
@@ -15725,9 +15517,7 @@
     "name": "The Brutalizer",
     "id": 2020,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 2022,
@@ -15952,9 +15742,7 @@
         "sell": 534
       },
       "purchasable": true,
-      "tags": [
-        "ASSASSIN"
-      ]
+      "tags": ["ASSASSIN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -15971,9 +15759,7 @@
     "name": "Tunneler",
     "id": 2021,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1036,
@@ -16223,9 +16009,7 @@
         "sell": 460
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER"
-      ]
+      "tags": ["FIGHTER"]
     },
     "iconOverlay": false,
     "maps": {
@@ -16242,9 +16026,7 @@
     "name": "Glowing Mote",
     "id": 2022,
     "tier": 1,
-    "rank": [
-      "BASIC"
-    ],
+    "rank": ["BASIC"],
     "buildsFrom": [],
     "buildsInto": [
       {
@@ -16493,14 +16275,7 @@
         "sell": 100
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "MARKSMAN",
-        "ASSASSIN",
-        "MAGE",
-        "TANK",
-        "SUPPORT"
-      ]
+      "tags": ["FIGHTER", "MARKSMAN", "ASSASSIN", "MAGE", "TANK", "SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -16517,9 +16292,7 @@
     "name": "Refillable Potion",
     "id": 2031,
     "tier": 1,
-    "rank": [
-      "POTION"
-    ],
+    "rank": ["POTION"],
     "buildsFrom": [],
     "buildsInto": [
       {
@@ -16535,9 +16308,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2031_class_t1_refillablepotion.png",
     "simpleDescription": "Restores Health over time. Refills at shop.",
-    "nicknames": [
-      "Green Potion"
-    ],
+    "nicknames": ["Green Potion"],
     "passives": [
       {
         "unique": true,
@@ -16912,9 +16683,7 @@
         "sell": 60
       },
       "purchasable": true,
-      "tags": [
-        "HEALTH_AND_REG"
-      ]
+      "tags": ["HEALTH_AND_REG"]
     },
     "iconOverlay": false,
     "maps": {
@@ -16931,9 +16700,7 @@
     "name": "Guardian's Amulet",
     "id": 2049,
     "tier": 1,
-    "rank": [
-      "STARTER"
-    ],
+    "rank": ["STARTER"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -17318,9 +17085,7 @@
         "sell": 200
       },
       "purchasable": true,
-      "tags": [
-        "SUPPORT"
-      ]
+      "tags": ["SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -17337,9 +17102,7 @@
     "name": "Guardian's Shroud",
     "id": 2050,
     "tier": 1,
-    "rank": [
-      "STARTER"
-    ],
+    "rank": ["STARTER"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -17537,10 +17300,7 @@
         "sell": 200
       },
       "purchasable": true,
-      "tags": [
-        "MAGE",
-        "TANK"
-      ]
+      "tags": ["MAGE", "TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -17557,9 +17317,7 @@
     "name": "Guardian's Horn",
     "id": 2051,
     "tier": 1,
-    "rank": [
-      "STARTER"
-    ],
+    "rank": ["STARTER"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -17950,11 +17708,7 @@
         "sell": 380
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "TANK",
-        "SUPPORT"
-      ]
+      "tags": ["FIGHTER", "TANK", "SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -17971,9 +17725,7 @@
     "name": "Poro-Snax",
     "id": 2052,
     "tier": 1,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -18188,9 +17940,7 @@
     "name": "Control Ward",
     "id": 2055,
     "tier": 1,
-    "rank": [
-      "CONSUMABLE"
-    ],
+    "rank": ["CONSUMABLE"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -18200,12 +17950,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2055_class_t1_controlward.png",
     "simpleDescription": "Used to disable wards and invisible traps in an area.",
-    "nicknames": [
-      "kleptomancy",
-      "orange",
-      "red",
-      "pink"
-    ],
+    "nicknames": ["kleptomancy", "orange", "red", "pink"],
     "passives": [],
     "active": [],
     "stats": {
@@ -18410,9 +18155,7 @@
     "name": "Shurelya's Battlesong",
     "id": 2065,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3113,
@@ -18433,10 +18176,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2065_tank_t4_shurelyasbattlesong.png",
     "simpleDescription": "Activate to speed up nearby allies.",
-    "nicknames": [
-      "shurelya",
-      "reverie"
-    ],
+    "nicknames": ["shurelya", "reverie"],
     "passives": [],
     "active": [
       {
@@ -18632,10 +18372,7 @@
         "sell": 880
       },
       "purchasable": true,
-      "tags": [
-        "SUPPORT",
-        "MOVEMENT"
-      ]
+      "tags": ["SUPPORT", "MOVEMENT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -18652,9 +18389,7 @@
     "name": "Elixir of Iron",
     "id": 2138,
     "tier": 1,
-    "rank": [
-      "CONSUMABLE"
-    ],
+    "rank": ["CONSUMABLE"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -18664,10 +18399,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2138_class_elixirofiron.png",
     "simpleDescription": "Temporarily increases defenses. Leaves a trail for allies to follow.",
-    "nicknames": [
-      "orange",
-      "white"
-    ],
+    "nicknames": ["orange", "white"],
     "passives": [],
     "active": [],
     "stats": {
@@ -18855,10 +18587,7 @@
         "sell": 200
       },
       "purchasable": true,
-      "tags": [
-        "HEALTH_AND_REG",
-        "MOVEMENT"
-      ]
+      "tags": ["HEALTH_AND_REG", "MOVEMENT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -18875,9 +18604,7 @@
     "name": "Elixir of Sorcery",
     "id": 2139,
     "tier": 1,
-    "rank": [
-      "CONSUMABLE"
-    ],
+    "rank": ["CONSUMABLE"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -18887,11 +18614,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2139_class_t1_elixirofsorcery.png",
     "simpleDescription": "Temporarily grants Ability Power and Bonus Damage to champions and turrets.",
-    "nicknames": [
-      "blue",
-      "brilliance",
-      "illumination"
-    ],
+    "nicknames": ["blue", "brilliance", "illumination"],
     "passives": [],
     "active": [],
     "stats": {
@@ -19079,11 +18802,7 @@
         "sell": 200
       },
       "purchasable": true,
-      "tags": [
-        "ABILITY_POWER",
-        "MANA_AND_REG",
-        "ONHIT_EFFECTS"
-      ]
+      "tags": ["ABILITY_POWER", "MANA_AND_REG", "ONHIT_EFFECTS"]
     },
     "iconOverlay": false,
     "maps": {
@@ -19100,9 +18819,7 @@
     "name": "Elixir of Wrath",
     "id": 2140,
     "tier": 1,
-    "rank": [
-      "CONSUMABLE"
-    ],
+    "rank": ["CONSUMABLE"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -19112,11 +18829,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2140_class_t0_elixirofwrath.png",
     "simpleDescription": "Temporarily grants Attack Damage and heals you when dealing physical damage to champions.",
-    "nicknames": [
-      "red potion",
-      "fortitude",
-      "rage"
-    ],
+    "nicknames": ["red potion", "fortitude", "rage"],
     "passives": [],
     "active": [],
     "stats": {
@@ -19304,10 +19017,7 @@
         "sell": 200
       },
       "purchasable": true,
-      "tags": [
-        "ATTACK_DAMAGE",
-        "LIFESTEAL_VAMP"
-      ]
+      "tags": ["ATTACK_DAMAGE", "LIFESTEAL_VAMP"]
     },
     "iconOverlay": false,
     "maps": {
@@ -19324,9 +19034,7 @@
     "name": "Cappa Juice",
     "id": 2141,
     "tier": 1,
-    "rank": [
-      "CONSUMABLE"
-    ],
+    "rank": ["CONSUMABLE"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -19541,9 +19249,7 @@
     "name": "Juice of Power",
     "id": 2142,
     "tier": 1,
-    "rank": [
-      "CONSUMABLE"
-    ],
+    "rank": ["CONSUMABLE"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -19741,10 +19447,7 @@
         "sell": 200
       },
       "purchasable": true,
-      "tags": [
-        "ATTACK_DAMAGE",
-        "ABILITY_POWER"
-      ]
+      "tags": ["ATTACK_DAMAGE", "ABILITY_POWER"]
     },
     "iconOverlay": false,
     "maps": {
@@ -19761,9 +19464,7 @@
     "name": "Juice of Vitality",
     "id": 2143,
     "tier": 1,
-    "rank": [
-      "CONSUMABLE"
-    ],
+    "rank": ["CONSUMABLE"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -19961,9 +19662,7 @@
         "sell": 200
       },
       "purchasable": true,
-      "tags": [
-        "HEALTH_AND_REG"
-      ]
+      "tags": ["HEALTH_AND_REG"]
     },
     "iconOverlay": false,
     "maps": {
@@ -19980,9 +19679,7 @@
     "name": "Juice of Haste",
     "id": 2144,
     "tier": 1,
-    "rank": [
-      "CONSUMABLE"
-    ],
+    "rank": ["CONSUMABLE"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -20197,9 +19894,7 @@
     "name": "Lucky Dice",
     "id": 2145,
     "tier": 1,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -20414,9 +20109,7 @@
     "name": "Enhanced Lucky Dice",
     "id": 2146,
     "tier": 1,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -20631,9 +20324,7 @@
     "name": "Elixir of Skill",
     "id": 2150,
     "tier": 1,
-    "rank": [
-      "CONSUMABLE"
-    ],
+    "rank": ["CONSUMABLE"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -20848,9 +20539,7 @@
     "name": "Elixir of Avarice",
     "id": 2151,
     "tier": 1,
-    "rank": [
-      "CONSUMABLE"
-    ],
+    "rank": ["CONSUMABLE"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -21065,9 +20754,7 @@
     "name": "Elixir of Force",
     "id": 2152,
     "tier": 1,
-    "rank": [
-      "CONSUMABLE"
-    ],
+    "rank": ["CONSUMABLE"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -21282,9 +20969,7 @@
     "name": "Seeker's Armguard",
     "id": 2420,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1052,
@@ -21316,11 +21001,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3191_battlemage_t2_seekersarmguard.png",
     "simpleDescription": "Activate to become invincible but unable to take actions",
-    "nicknames": [
-      "zhg",
-      "zonyas",
-      "zhonyas"
-    ],
+    "nicknames": ["zhg", "zonyas", "zhonyas"],
     "passives": [],
     "active": [
       {
@@ -21516,9 +21197,7 @@
         "sell": 640
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -21535,9 +21214,7 @@
     "name": "Shattered Armguard",
     "id": 2421,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1052,
@@ -21774,9 +21451,7 @@
     "name": "Slightly Magical Boots",
     "id": 2422,
     "tier": 1,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [
       {
@@ -22214,9 +21889,7 @@
     "name": "Overlord's Bloodmail",
     "id": 2501,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 2021,
@@ -22798,10 +22471,7 @@
         "sell": 1320
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "TANK"
-      ]
+      "tags": ["FIGHTER", "TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -22818,9 +22488,7 @@
     "name": "Unending Despair",
     "id": 2502,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3105,
@@ -23216,9 +22884,7 @@
         "sell": 1120
       },
       "purchasable": true,
-      "tags": [
-        "TANK"
-      ]
+      "tags": ["TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -23235,9 +22901,7 @@
     "name": "Blackfire Torch",
     "id": 2503,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3802,
@@ -23258,9 +22922,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2503_blackfiretorch64.png",
     "simpleDescription": null,
-    "nicknames": [
-      "bft"
-    ],
+    "nicknames": ["bft"],
     "passives": [
       {
         "unique": true,
@@ -23821,9 +23483,7 @@
         "sell": 1120
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -23840,9 +23500,7 @@
     "name": "Kaenic Rookern",
     "id": 2504,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3211,
@@ -24238,9 +23896,7 @@
         "sell": 1160
       },
       "purchasable": true,
-      "tags": [
-        "TANK"
-      ]
+      "tags": ["TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -24257,9 +23913,7 @@
     "name": "Fated Ashes",
     "id": 2508,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1052,
@@ -24661,9 +24315,7 @@
         "sell": 360
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -24680,9 +24332,7 @@
     "name": "Trailblazer",
     "id": 3002,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3066,
@@ -25078,10 +24728,7 @@
         "sell": 960
       },
       "purchasable": true,
-      "tags": [
-        "SUPPORT",
-        "TANK"
-      ]
+      "tags": ["SUPPORT", "TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -25098,9 +24745,7 @@
     "name": "Archangel's Staff",
     "id": 3003,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3070,
@@ -25126,9 +24771,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3003_mage_t3_archangelstaff.png",
     "simpleDescription": "Increases Ability Power based on maximum Mana",
-    "nicknames": [
-      "aa"
-    ],
+    "nicknames": ["aa"],
     "passives": [
       {
         "unique": true,
@@ -25875,9 +25518,7 @@
         "sell": 1160
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -25894,9 +25535,7 @@
     "name": "Manamune",
     "id": 3004,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3070,
@@ -26669,12 +26308,7 @@
         "sell": 1160
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "MARKSMAN",
-        "ASSASSIN",
-        "ONHIT_EFFECTS"
-      ]
+      "tags": ["FIGHTER", "MARKSMAN", "ASSASSIN", "ONHIT_EFFECTS"]
     },
     "iconOverlay": false,
     "maps": {
@@ -26691,9 +26325,7 @@
     "name": "Berserker's Greaves",
     "id": 3006,
     "tier": 2,
-    "rank": [
-      "BOOTS"
-    ],
+    "rank": ["BOOTS"],
     "buildsFrom": [
       {
         "id": 1001,
@@ -26725,10 +26357,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3006_class_t2_berserkersgreaves.png",
     "simpleDescription": "Enhances Move Speed and Attack Speed",
-    "nicknames": [
-      "boots",
-      "zerker"
-    ],
+    "nicknames": ["boots", "zerker"],
     "passives": [],
     "active": [],
     "stats": {
@@ -26933,9 +26562,7 @@
     "name": "Boots of Swiftness",
     "id": 3009,
     "tier": 2,
-    "rank": [
-      "BOOTS"
-    ],
+    "rank": ["BOOTS"],
     "buildsFrom": [
       {
         "id": 1001,
@@ -26957,9 +26584,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3009_class_t2_bootsofswiftness.png",
     "simpleDescription": "Enhances Move Speed and reduces the effect of slows",
-    "nicknames": [
-      "swifties"
-    ],
+    "nicknames": ["swifties"],
     "passives": [
       {
         "unique": true,
@@ -27351,9 +26976,7 @@
     "name": "Symbiotic Soles",
     "id": 3010,
     "tier": 2,
-    "rank": [
-      "BOOTS"
-    ],
+    "rank": ["BOOTS"],
     "buildsFrom": [
       {
         "id": 1001,
@@ -27375,9 +26998,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3010_voidboots.png",
     "simpleDescription": "Spend Mana to recover Health",
-    "nicknames": [
-      "boots"
-    ],
+    "nicknames": ["boots"],
     "passives": [
       {
         "unique": true,
@@ -27955,9 +27576,7 @@
     "name": "Synchronized Souls",
     "id": 3013,
     "tier": 3,
-    "rank": [
-      "BOOTS"
-    ],
+    "rank": ["BOOTS"],
     "buildsFrom": [
       {
         "id": 3010,
@@ -27979,9 +27598,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3010_voidwalkers.png",
     "simpleDescription": null,
-    "nicknames": [
-      "boots"
-    ],
+    "nicknames": ["boots"],
     "passives": [
       {
         "unique": true,
@@ -28559,9 +28176,7 @@
     "name": "Sorcerer's Shoes",
     "id": 3020,
     "tier": 2,
-    "rank": [
-      "BOOTS"
-    ],
+    "rank": ["BOOTS"],
     "buildsFrom": [
       {
         "id": 1001,
@@ -28583,10 +28198,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3020_class_t2_sorcerersshoes.png",
     "simpleDescription": "Enhances Move Speed and magic damage",
-    "nicknames": [
-      "boots",
-      "sorcs"
-    ],
+    "nicknames": ["boots", "sorcs"],
     "passives": [],
     "active": [],
     "stats": {
@@ -28791,9 +28403,7 @@
     "name": "Glacial Buckler",
     "id": 3024,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1029,
@@ -29018,10 +28628,7 @@
         "sell": 360
       },
       "purchasable": true,
-      "tags": [
-        "TANK",
-        "SUPPORT"
-      ]
+      "tags": ["TANK", "SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -29038,9 +28645,7 @@
     "name": "Guardian Angel",
     "id": 3026,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 2019,
@@ -29061,9 +28666,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3026_fighter_t3_guardianangel.png",
     "simpleDescription": "Periodically revives champion upon death",
-    "nicknames": [
-      "ga"
-    ],
+    "nicknames": ["ga"],
     "passives": [
       {
         "unique": true,
@@ -29438,11 +29041,7 @@
         "sell": 1280
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "MARKSMAN",
-        "ASSASSIN"
-      ]
+      "tags": ["FIGHTER", "MARKSMAN", "ASSASSIN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -29459,9 +29058,7 @@
     "name": "Infinity Edge",
     "id": 3031,
     "tier": 2,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 1038,
@@ -29487,9 +29084,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3031_marksman_t3_infinityedge.png",
     "simpleDescription": "Massively enhances critical strikes",
-    "nicknames": [
-      "ie"
-    ],
+    "nicknames": ["ie"],
     "passives": [],
     "active": [],
     "stats": {
@@ -29677,9 +29272,7 @@
         "sell": 1380
       },
       "purchasable": true,
-      "tags": [
-        "MARKSMAN"
-      ]
+      "tags": ["MARKSMAN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -29696,9 +29289,7 @@
     "name": "Yun Tal Wildarrows",
     "id": 3032,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 1038,
@@ -29724,10 +29315,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3032_yuntalwildarrows.png",
     "simpleDescription": null,
-    "nicknames": [
-      "arrow",
-      "yuntal"
-    ],
+    "nicknames": ["arrow", "yuntal"],
     "passives": [
       {
         "unique": true,
@@ -30288,9 +29876,7 @@
         "sell": 1200
       },
       "purchasable": true,
-      "tags": [
-        "MARKSMAN"
-      ]
+      "tags": ["MARKSMAN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -30307,9 +29893,7 @@
     "name": "Mortal Reminder",
     "id": 3033,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3123,
@@ -30335,10 +29919,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3033_marksman_t3_mortalreminder.png",
     "simpleDescription": "Overcomes enemies with high Health recovery and Armor",
-    "nicknames": [
-      "lw",
-      "grievous"
-    ],
+    "nicknames": ["lw", "grievous"],
     "passives": [
       {
         "unique": true,
@@ -30713,9 +30294,7 @@
         "sell": 1320
       },
       "purchasable": true,
-      "tags": [
-        "MARKSMAN"
-      ]
+      "tags": ["MARKSMAN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -30732,9 +30311,7 @@
     "name": "Last Whisper",
     "id": 3035,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1036,
@@ -30771,9 +30348,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3035_marksman_t2_lastwhisper.png",
     "simpleDescription": "Overcomes enemies with high Armor",
-    "nicknames": [
-      "lw"
-    ],
+    "nicknames": ["lw"],
     "passives": [],
     "active": [],
     "stats": {
@@ -30961,11 +30536,7 @@
         "sell": 580
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "MARKSMAN",
-        "ASSASSIN"
-      ]
+      "tags": ["FIGHTER", "MARKSMAN", "ASSASSIN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -30982,9 +30553,7 @@
     "name": "Lord Dominik's Regards",
     "id": 3036,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3035,
@@ -31005,11 +30574,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3036_marksman_t3_dominikregards.png",
     "simpleDescription": "Overcomes enemies with high health and armor",
-    "nicknames": [
-      "lw",
-      "ldr",
-      "doms"
-    ],
+    "nicknames": ["lw", "ldr", "doms"],
     "passives": [],
     "active": [],
     "stats": {
@@ -31197,9 +30762,7 @@
         "sell": 1240
       },
       "purchasable": true,
-      "tags": [
-        "MARKSMAN"
-      ]
+      "tags": ["MARKSMAN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -31216,9 +30779,7 @@
     "name": "Seraph's Embrace",
     "id": 3040,
     "tier": 4,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 3003,
@@ -31806,9 +31367,7 @@
     "name": "Mejai's Soulstealer",
     "id": 3041,
     "tier": 2,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 1082,
@@ -31824,9 +31383,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3041_mage_t2_mejaissoulstealer.png",
     "simpleDescription": "Grants Ability Power for kills and assists",
-    "nicknames": [
-      "book"
-    ],
+    "nicknames": ["book"],
     "passives": [
       {
         "unique": true,
@@ -32201,10 +31758,7 @@
         "sell": 600
       },
       "purchasable": true,
-      "tags": [
-        "MAGE",
-        "MOVEMENT"
-      ]
+      "tags": ["MAGE", "MOVEMENT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -32221,9 +31775,7 @@
     "name": "Muramana",
     "id": 3042,
     "tier": 4,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 3004,
@@ -32794,12 +32346,7 @@
         "sell": 1160
       },
       "purchasable": false,
-      "tags": [
-        "FIGHTER",
-        "MARKSMAN",
-        "ASSASSIN",
-        "ONHIT_EFFECTS"
-      ]
+      "tags": ["FIGHTER", "MARKSMAN", "ASSASSIN", "ONHIT_EFFECTS"]
     },
     "iconOverlay": false,
     "maps": {
@@ -32816,9 +32363,7 @@
     "name": "Phage",
     "id": 3044,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1028,
@@ -32865,9 +32410,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3044_fighter_t2_phage.png",
     "simpleDescription": "Attacks and kills give a small burst of speed",
-    "nicknames": [
-      "mallet"
-    ],
+    "nicknames": ["mallet"],
     "passives": [
       {
         "unique": true,
@@ -33242,10 +32785,7 @@
         "sell": 440
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "TANK"
-      ]
+      "tags": ["FIGHTER", "TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -33262,9 +32802,7 @@
     "name": "Phantom Dancer",
     "id": 3046,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 1042,
@@ -33290,9 +32828,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3046_marksman_t3_phantomdancer.png",
     "simpleDescription": "Move faster while attacking enemies and gain a shield when on low health.",
-    "nicknames": [
-      "pd"
-    ],
+    "nicknames": ["pd"],
     "passives": [
       {
         "unique": true,
@@ -33667,10 +33203,7 @@
         "sell": 1060
       },
       "purchasable": true,
-      "tags": [
-        "MARKSMAN",
-        "MOVEMENT"
-      ]
+      "tags": ["MARKSMAN", "MOVEMENT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -33687,9 +33220,7 @@
     "name": "Plated Steelcaps",
     "id": 3047,
     "tier": 2,
-    "rank": [
-      "BOOTS"
-    ],
+    "rank": ["BOOTS"],
     "buildsFrom": [
       {
         "id": 1001,
@@ -33716,10 +33247,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3047_class_t2_ninjatabi.png",
     "simpleDescription": "Enhances Move Speed and reduces incoming basic attack damage",
-    "nicknames": [
-      "boots",
-      "ninja tabi"
-    ],
+    "nicknames": ["boots", "ninja tabi"],
     "passives": [
       {
         "unique": true,
@@ -34111,9 +33639,7 @@
     "name": "Zeke's Convergence",
     "id": 3050,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3067,
@@ -34139,9 +33665,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3050_enchanter_t3_zekesconvergence.png",
     "simpleDescription": "Grants you and your ally bonuses when you cast your ultimate.",
-    "nicknames": [
-      "haroldandkumar"
-    ],
+    "nicknames": ["haroldandkumar"],
     "passives": [
       {
         "unique": true,
@@ -34516,10 +34040,7 @@
         "sell": 880
       },
       "purchasable": true,
-      "tags": [
-        "TANK",
-        "SUPPORT"
-      ]
+      "tags": ["TANK", "SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -34536,9 +34057,7 @@
     "name": "Hearthbound Axe",
     "id": 3051,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1036,
@@ -34580,9 +34099,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3051_fighter_t2_axeofavarosa.png",
     "simpleDescription": null,
-    "nicknames": [
-      "blue arrow"
-    ],
+    "nicknames": ["blue arrow"],
     "passives": [],
     "active": [],
     "stats": {
@@ -34770,11 +34287,7 @@
         "sell": 480
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "MOVEMENT",
-        "ONHIT_EFFECTS"
-      ]
+      "tags": ["FIGHTER", "MOVEMENT", "ONHIT_EFFECTS"]
     },
     "iconOverlay": false,
     "maps": {
@@ -34791,9 +34304,7 @@
     "name": "Sterak's Gage",
     "id": 3053,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 1037,
@@ -34819,12 +34330,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3053_steraks_gage.png",
     "simpleDescription": "Shields against large bursts of damage",
-    "nicknames": [
-      "juggernaut",
-      "primal",
-      "shield",
-      "sterak's cage"
-    ],
+    "nicknames": ["juggernaut", "primal", "shield", "sterak's cage"],
     "passives": [
       {
         "unique": true,
@@ -35385,10 +34891,7 @@
         "sell": 1280
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "ATTACK_DAMAGE"
-      ]
+      "tags": ["FIGHTER", "ATTACK_DAMAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -35405,9 +34908,7 @@
     "name": "Sheen",
     "id": 3057,
     "tier": 1,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 2022,
@@ -35444,9 +34945,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3057_fighter_t2_sheen.png",
     "simpleDescription": "Grants a bonus to next attack after spell cast",
-    "nicknames": [
-      "jimmy neutron"
-    ],
+    "nicknames": ["jimmy neutron"],
     "passives": [
       {
         "unique": true,
@@ -35821,12 +35320,7 @@
         "sell": 360
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "MARKSMAN",
-        "MAGE",
-        "ONHIT_EFFECTS"
-      ]
+      "tags": ["FIGHTER", "MARKSMAN", "MAGE", "ONHIT_EFFECTS"]
     },
     "iconOverlay": false,
     "maps": {
@@ -35843,9 +35337,7 @@
     "name": "Spirit Visage",
     "id": 3065,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3211,
@@ -35866,9 +35358,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3065_tank_t3_spiritvisage.png",
     "simpleDescription": "Increases Health and healing effects",
-    "nicknames": [
-      "sv"
-    ],
+    "nicknames": ["sv"],
     "passives": [
       {
         "unique": true,
@@ -36243,9 +35733,7 @@
         "sell": 1080
       },
       "purchasable": true,
-      "tags": [
-        "TANK"
-      ]
+      "tags": ["TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -36262,9 +35750,7 @@
     "name": "Winged Moonplate",
     "id": 3066,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1028,
@@ -36306,12 +35792,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3066_tank_t3_wingedmoonplate.png",
     "simpleDescription": null,
-    "nicknames": [
-      "chaps",
-      "pants",
-      "leggings",
-      "zoomin"
-    ],
+    "nicknames": ["chaps", "pants", "leggings", "zoomin"],
     "passives": [],
     "active": [],
     "stats": {
@@ -36499,10 +35980,7 @@
         "sell": 320
       },
       "purchasable": true,
-      "tags": [
-        "TANK",
-        "MOVEMENT"
-      ]
+      "tags": ["TANK", "MOVEMENT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -36519,9 +35997,7 @@
     "name": "Kindlegem",
     "id": 3067,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1028,
@@ -36866,14 +36342,7 @@
         "sell": 320
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "MARKSMAN",
-        "ASSASSIN",
-        "MAGE",
-        "TANK",
-        "SUPPORT"
-      ]
+      "tags": ["FIGHTER", "MARKSMAN", "ASSASSIN", "MAGE", "TANK", "SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -36890,9 +36359,7 @@
     "name": "Sunfire Aegis",
     "id": 3068,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 6660,
@@ -36913,10 +36380,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3068_tank_t4_sunfireaegis.png",
     "simpleDescription": "High armor. Constantly deals damage to nearby enemies. Immobilize enemies to release a wave of damaging flame",
-    "nicknames": [
-      "funfire",
-      "sunborn"
-    ],
+    "nicknames": ["funfire", "sunborn"],
     "passives": [
       {
         "unique": true,
@@ -37291,9 +36755,7 @@
         "sell": 1080
       },
       "purchasable": true,
-      "tags": [
-        "TANK"
-      ]
+      "tags": ["TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -37310,9 +36772,7 @@
     "name": "Tear of the Goddess",
     "id": 3070,
     "tier": 1,
-    "rank": [
-      "STARTER"
-    ],
+    "rank": ["STARTER"],
     "buildsFrom": [],
     "buildsInto": [
       {
@@ -37899,10 +37359,7 @@
         "sell": 160
       },
       "purchasable": true,
-      "tags": [
-        "MARKSMAN",
-        "MAGE"
-      ]
+      "tags": ["MARKSMAN", "MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -37919,9 +37376,7 @@
     "name": "Black Cleaver",
     "id": 3071,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3044,
@@ -37947,9 +37402,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3071_fighter_t3_blackcleaver.png",
     "simpleDescription": "Dealing physical damage to enemy champions reduces their Armor",
-    "nicknames": [
-      "bc"
-    ],
+    "nicknames": ["bc"],
     "passives": [
       {
         "unique": true,
@@ -38510,12 +37963,7 @@
         "sell": 1200
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "ONHIT_EFFECTS",
-        "ARMOR_PEN",
-        "MOVEMENT"
-      ]
+      "tags": ["FIGHTER", "ONHIT_EFFECTS", "ARMOR_PEN", "MOVEMENT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -38532,9 +37980,7 @@
     "name": "Bloodthirster",
     "id": 3072,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 1038,
@@ -38560,10 +38006,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3072_fighter_t3_bloodthirster.png",
     "simpleDescription": "Grants Attack Damage, Life Steal and Life Steal now overheals",
-    "nicknames": [
-      "bt",
-      "healsword"
-    ],
+    "nicknames": ["bt", "healsword"],
     "passives": [
       {
         "unique": true,
@@ -38938,9 +38381,7 @@
         "sell": 1360
       },
       "purchasable": true,
-      "tags": [
-        "MARKSMAN"
-      ]
+      "tags": ["MARKSMAN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -38957,9 +38398,7 @@
     "name": "Experimental Hexplate",
     "id": 3073,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 2021,
@@ -39546,11 +38985,7 @@
         "sell": 1200
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "ABILITY_HASTE",
-        "MOVEMENT"
-      ]
+      "tags": ["FIGHTER", "ABILITY_HASTE", "MOVEMENT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -39567,9 +39002,7 @@
     "name": "Ravenous Hydra",
     "id": 3074,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3077,
@@ -39595,9 +39028,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3074_fighter_t3_ravenoushydra.png",
     "simpleDescription": "Melee attacks hit nearby enemies, dealing damage and restoring Health",
-    "nicknames": [
-      "rav hydra"
-    ],
+    "nicknames": ["rav hydra"],
     "passives": [
       {
         "unique": true,
@@ -39980,9 +39411,7 @@
         "sell": 1320
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER"
-      ]
+      "tags": ["FIGHTER"]
     },
     "iconOverlay": false,
     "maps": {
@@ -39999,9 +39428,7 @@
     "name": "Thornmail",
     "id": 3075,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3076,
@@ -40027,9 +39454,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3075_tank_t3_thornmail.png",
     "simpleDescription": null,
-    "nicknames": [
-      "grievous wounds"
-    ],
+    "nicknames": ["grievous wounds"],
     "passives": [
       {
         "unique": true,
@@ -40404,9 +39829,7 @@
         "sell": 980
       },
       "purchasable": true,
-      "tags": [
-        "TANK"
-      ]
+      "tags": ["TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -40423,9 +39846,7 @@
     "name": "Bramble Vest",
     "id": 3076,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1029,
@@ -40457,9 +39878,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3076_tank_t2_bramblevest.png",
     "simpleDescription": null,
-    "nicknames": [
-      "grievous wounds"
-    ],
+    "nicknames": ["grievous wounds"],
     "passives": [
       {
         "unique": true,
@@ -40834,9 +40253,7 @@
         "sell": 320
       },
       "purchasable": true,
-      "tags": [
-        "TANK"
-      ]
+      "tags": ["TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -40853,9 +40270,7 @@
     "name": "Tiamat",
     "id": 3077,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1036,
@@ -41280,11 +40695,7 @@
         "sell": 480
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "TANK",
-        "ONHIT_EFFECTS"
-      ]
+      "tags": ["FIGHTER", "TANK", "ONHIT_EFFECTS"]
     },
     "iconOverlay": false,
     "maps": {
@@ -41301,9 +40712,7 @@
     "name": "Trinity Force",
     "id": 3078,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3057,
@@ -41329,11 +40738,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3078_fighter_t4_trinityforce.png",
     "simpleDescription": "Tons of Damage",
-    "nicknames": [
-      "triforce",
-      "tons of damage",
-      "3333"
-    ],
+    "nicknames": ["triforce", "tons of damage", "3333"],
     "passives": [
       {
         "unique": true,
@@ -41894,11 +41299,7 @@
         "sell": 1333
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "MARKSMAN",
-        "MOVEMENT"
-      ]
+      "tags": ["FIGHTER", "MARKSMAN", "MOVEMENT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -41915,9 +41316,7 @@
     "name": "Warden's Mail",
     "id": 3082,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1029,
@@ -42329,9 +41728,7 @@
         "sell": 400
       },
       "purchasable": true,
-      "tags": [
-        "TANK"
-      ]
+      "tags": ["TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -42348,9 +41745,7 @@
     "name": "Warmog's Armor",
     "id": 3083,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 1011,
@@ -43123,9 +42518,7 @@
         "sell": 1240
       },
       "purchasable": true,
-      "tags": [
-        "TANK"
-      ]
+      "tags": ["TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -43142,9 +42535,7 @@
     "name": "Heartsteel",
     "id": 3084,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 1011,
@@ -43731,9 +43122,7 @@
         "sell": 1200
       },
       "purchasable": true,
-      "tags": [
-        "TANK"
-      ]
+      "tags": ["TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -43750,9 +43139,7 @@
     "name": "Runaan's Hurricane",
     "id": 3085,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3086,
@@ -44148,11 +43535,7 @@
         "sell": 1060
       },
       "purchasable": true,
-      "tags": [
-        "MARKSMAN",
-        "ONHIT_EFFECTS",
-        "MOVEMENT"
-      ]
+      "tags": ["MARKSMAN", "ONHIT_EFFECTS", "MOVEMENT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -44169,9 +43552,7 @@
     "name": "Zeal",
     "id": 3086,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1018,
@@ -44411,10 +43792,7 @@
         "sell": 480
       },
       "purchasable": true,
-      "tags": [
-        "MARKSMAN",
-        "MOVEMENT"
-      ]
+      "tags": ["MARKSMAN", "MOVEMENT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -44431,9 +43809,7 @@
     "name": "Statikk Shiv",
     "id": 3087,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3144,
@@ -45020,10 +44396,7 @@
         "sell": 1080
       },
       "purchasable": true,
-      "tags": [
-        "MARKSMAN",
-        "ONHIT_EFFECTS"
-      ]
+      "tags": ["MARKSMAN", "ONHIT_EFFECTS"]
     },
     "iconOverlay": false,
     "maps": {
@@ -45040,9 +44413,7 @@
     "name": "Rabadon's Deathcap",
     "id": 3089,
     "tier": 2,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 1058,
@@ -45063,12 +44434,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3089_mage_t3_deathcap.png",
     "simpleDescription": "Massively increases Ability Power",
-    "nicknames": [
-      "banksys",
-      "dc",
-      "dcap",
-      "hat"
-    ],
+    "nicknames": ["banksys", "dc", "dcap", "hat"],
     "passives": [
       {
         "unique": true,
@@ -45443,9 +44809,7 @@
         "sell": 1400
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -45462,9 +44826,7 @@
     "name": "Wit's End",
     "id": 3091,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 1043,
@@ -45865,11 +45227,7 @@
         "sell": 1120
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "MARKSMAN",
-        "ONHIT_EFFECTS"
-      ]
+      "tags": ["FIGHTER", "MARKSMAN", "ONHIT_EFFECTS"]
     },
     "iconOverlay": false,
     "maps": {
@@ -45886,9 +45244,7 @@
     "name": "Rapid Firecannon",
     "id": 3094,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3086,
@@ -45909,12 +45265,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3094_marksman_t3_rapidfirehandcannon.png",
     "simpleDescription": "Movement builds charges that release a sieging fire attack on release",
-    "nicknames": [
-      "canon",
-      "gun",
-      "rapidfire",
-      "rfc"
-    ],
+    "nicknames": ["canon", "gun", "rapidfire", "rfc"],
     "passives": [
       {
         "unique": true,
@@ -46475,10 +45826,7 @@
         "sell": 1060
       },
       "purchasable": true,
-      "tags": [
-        "MARKSMAN",
-        "MOVEMENT"
-      ]
+      "tags": ["MARKSMAN", "MOVEMENT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -46495,9 +45843,7 @@
     "name": "Lich Bane",
     "id": 3100,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3057,
@@ -46898,10 +46244,7 @@
         "sell": 1160
       },
       "purchasable": true,
-      "tags": [
-        "MAGE",
-        "ONHIT_EFFECTS"
-      ]
+      "tags": ["MAGE", "ONHIT_EFFECTS"]
     },
     "iconOverlay": false,
     "maps": {
@@ -46918,9 +46261,7 @@
     "name": "Banshee's Veil",
     "id": 3102,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 1058,
@@ -46941,10 +46282,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3102_mage_t3_bansheesveil.png",
     "simpleDescription": "Periodically blocks enemy abilities",
-    "nicknames": [
-      "bv",
-      "spellshield"
-    ],
+    "nicknames": ["bv", "spellshield"],
     "passives": [
       {
         "unique": true,
@@ -47319,9 +46657,7 @@
         "sell": 1200
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -47338,9 +46674,7 @@
     "name": "Aegis of the Legion",
     "id": 3105,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1033,
@@ -47580,10 +46914,7 @@
         "sell": 440
       },
       "purchasable": true,
-      "tags": [
-        "TANK",
-        "SUPPORT"
-      ]
+      "tags": ["TANK", "SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -47600,9 +46931,7 @@
     "name": "Redemption",
     "id": 3107,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3067,
@@ -47819,9 +47148,7 @@
         "sell": 920
       },
       "purchasable": true,
-      "tags": [
-        "SUPPORT"
-      ]
+      "tags": ["SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -47838,9 +47165,7 @@
     "name": "Fiendish Codex",
     "id": 3108,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1052,
@@ -47937,9 +47262,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3108_mage_t2_fiendishcodex.png",
     "simpleDescription": "Increases Ability Power and Cooldown Reduction",
-    "nicknames": [
-      "book"
-    ],
+    "nicknames": ["book"],
     "passives": [],
     "active": [],
     "stats": {
@@ -48127,9 +47450,7 @@
         "sell": 340
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -48146,9 +47467,7 @@
     "name": "Knight's Vow",
     "id": 3109,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3067,
@@ -48174,9 +47493,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3109_tank_t3_knightsvow.png",
     "simpleDescription": "Partner with an ally to protect each other",
-    "nicknames": [
-      "kv"
-    ],
+    "nicknames": ["kv"],
     "passives": [
       {
         "unique": true,
@@ -48559,10 +47876,7 @@
         "sell": 920
       },
       "purchasable": true,
-      "tags": [
-        "TANK",
-        "SUPPORT"
-      ]
+      "tags": ["TANK", "SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -48579,9 +47893,7 @@
     "name": "Frozen Heart",
     "id": 3110,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3082,
@@ -48602,9 +47914,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3110_tank_t3_frozenheart.png",
     "simpleDescription": "Massively increases Armor and slows enemy basic attacks",
-    "nicknames": [
-      "fh"
-    ],
+    "nicknames": ["fh"],
     "passives": [
       {
         "unique": true,
@@ -48979,10 +48289,7 @@
         "sell": 1000
       },
       "purchasable": true,
-      "tags": [
-        "TANK",
-        "SUPPORT"
-      ]
+      "tags": ["TANK", "SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -48999,9 +48306,7 @@
     "name": "Mercury's Treads",
     "id": 3111,
     "tier": 2,
-    "rank": [
-      "BOOTS"
-    ],
+    "rank": ["BOOTS"],
     "buildsFrom": [
       {
         "id": 1001,
@@ -49028,10 +48333,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3111_class_t2_mercurystreads.png",
     "simpleDescription": "Increases Move Speed and reduces duration of disabling effects",
-    "nicknames": [
-      "boots",
-      "mercs"
-    ],
+    "nicknames": ["boots", "mercs"],
     "passives": [],
     "active": [],
     "stats": {
@@ -49236,9 +48538,7 @@
     "name": "Guardian's Orb",
     "id": 3112,
     "tier": 1,
-    "rank": [
-      "STARTER"
-    ],
+    "rank": ["STARTER"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -49623,12 +48923,7 @@
         "sell": 380
       },
       "purchasable": true,
-      "tags": [
-        "MAGE",
-        "TANK",
-        "SUPPORT",
-        "MANA_AND_REG"
-      ]
+      "tags": ["MAGE", "TANK", "SUPPORT", "MANA_AND_REG"]
     },
     "iconOverlay": false,
     "maps": {
@@ -49645,9 +48940,7 @@
     "name": "Aether Wisp",
     "id": 3113,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1052,
@@ -49699,9 +48992,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3113_mage_t2_aetherwisp.png",
     "simpleDescription": "Increases Ability Power and Move Speed",
-    "nicknames": [
-      "spooky ghost"
-    ],
+    "nicknames": ["spooky ghost"],
     "passives": [],
     "active": [],
     "stats": {
@@ -49889,10 +49180,7 @@
         "sell": 360
       },
       "purchasable": true,
-      "tags": [
-        "MAGE",
-        "MOVEMENT"
-      ]
+      "tags": ["MAGE", "MOVEMENT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -49909,9 +49197,7 @@
     "name": "Forbidden Idol",
     "id": 3114,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1004,
@@ -50176,9 +49462,7 @@
         "sell": 240
       },
       "purchasable": true,
-      "tags": [
-        "SUPPORT"
-      ]
+      "tags": ["SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -50195,9 +49479,7 @@
     "name": "Nashor's Tooth",
     "id": 3115,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 1043,
@@ -50223,9 +49505,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3115_mage_t3_nashorstooth.png",
     "simpleDescription": "Increases Attack Speed, Ability Power, and Cooldown Reduction",
-    "nicknames": [
-      "nashors"
-    ],
+    "nicknames": ["nashors"],
     "passives": [
       {
         "unique": true,
@@ -50600,11 +49880,7 @@
         "sell": 1160
       },
       "purchasable": true,
-      "tags": [
-        "MARKSMAN",
-        "MAGE",
-        "ONHIT_EFFECTS"
-      ]
+      "tags": ["MARKSMAN", "MAGE", "ONHIT_EFFECTS"]
     },
     "iconOverlay": false,
     "maps": {
@@ -50621,9 +49897,7 @@
     "name": "Rylai's Crystal Scepter",
     "id": 3116,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 1026,
@@ -50649,9 +49923,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3116_mage_t3_rylajscrystalscepter.png",
     "simpleDescription": "Abilities slow enemies",
-    "nicknames": [
-      "rylais"
-    ],
+    "nicknames": ["rylais"],
     "passives": [
       {
         "unique": true,
@@ -51026,9 +50298,7 @@
         "sell": 1040
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -51045,9 +50315,7 @@
     "name": "Malignance",
     "id": 3118,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3802,
@@ -51629,10 +50897,7 @@
         "sell": 1080
       },
       "purchasable": true,
-      "tags": [
-        "MAGE",
-        "ABILITY_HASTE"
-      ]
+      "tags": ["MAGE", "ABILITY_HASTE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -51649,9 +50914,7 @@
     "name": "Winter's Approach",
     "id": 3119,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3070,
@@ -52424,9 +51687,7 @@
         "sell": 960
       },
       "purchasable": true,
-      "tags": [
-        "TANK"
-      ]
+      "tags": ["TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -52443,9 +51704,7 @@
     "name": "Fimbulwinter",
     "id": 3121,
     "tier": 4,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 3119,
@@ -53016,9 +52275,7 @@
         "sell": 960
       },
       "purchasable": false,
-      "tags": [
-        "TANK"
-      ]
+      "tags": ["TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -53035,9 +52292,7 @@
     "name": "Executioner's Calling",
     "id": 3123,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1036,
@@ -53064,9 +52319,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3123_fighter_t2_executionerscalling.png",
     "simpleDescription": "Overcomes enemies with high health gain",
-    "nicknames": [
-      "grievous"
-    ],
+    "nicknames": ["grievous"],
     "passives": [
       {
         "unique": true,
@@ -53441,11 +52694,7 @@
         "sell": 320
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "MARKSMAN",
-        "ASSASSIN"
-      ]
+      "tags": ["FIGHTER", "MARKSMAN", "ASSASSIN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -53462,9 +52711,7 @@
     "name": "Guinsoo's Rageblade",
     "id": 3124,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 1052,
@@ -54051,11 +53298,7 @@
         "sell": 1200
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "MARKSMAN",
-        "ONHIT_EFFECTS"
-      ]
+      "tags": ["FIGHTER", "MARKSMAN", "ONHIT_EFFECTS"]
     },
     "iconOverlay": false,
     "maps": {
@@ -54072,9 +53315,7 @@
     "name": "Caulfield's Warhammer",
     "id": 3133,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1036,
@@ -54379,11 +53620,7 @@
         "sell": 420
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "MARKSMAN",
-        "ASSASSIN"
-      ]
+      "tags": ["FIGHTER", "MARKSMAN", "ASSASSIN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -54400,9 +53637,7 @@
     "name": "Serrated Dirk",
     "id": 3134,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1036,
@@ -54672,10 +53907,7 @@
         "sell": 400
       },
       "purchasable": true,
-      "tags": [
-        "ASSASSIN",
-        "ARMOR_PEN"
-      ]
+      "tags": ["ASSASSIN", "ARMOR_PEN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -54692,9 +53924,7 @@
     "name": "Void Staff",
     "id": 3135,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 4630,
@@ -54903,9 +54133,7 @@
         "sell": 1200
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -54922,9 +54150,7 @@
     "name": "Cryptbloom",
     "id": 3137,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 4630,
@@ -55325,9 +54551,7 @@
         "sell": 1200
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -55344,9 +54568,7 @@
     "name": "Mercurial Scimitar",
     "id": 3139,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3140,
@@ -55372,9 +54594,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3139_marksman_t3_mercurialscimitar.png",
     "simpleDescription": "Activate to remove all crowd control debuffs and grant massive Move Speed",
-    "nicknames": [
-      "merc scim"
-    ],
+    "nicknames": ["merc scim"],
     "passives": [],
     "active": [
       {
@@ -55570,11 +54790,7 @@
         "sell": 1280
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "MARKSMAN",
-        "MOVEMENT"
-      ]
+      "tags": ["FIGHTER", "MARKSMAN", "MOVEMENT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -55591,9 +54807,7 @@
     "name": "Quicksilver Sash",
     "id": 3140,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1033,
@@ -55620,9 +54834,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3140_marksman_t2_quicksilversash.png",
     "simpleDescription": "Activate to remove all crowd control debuffs",
-    "nicknames": [
-      "qss"
-    ],
+    "nicknames": ["qss"],
     "passives": [],
     "active": [
       {
@@ -55818,11 +55030,7 @@
         "sell": 520
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "MARKSMAN",
-        "ASSASSIN"
-      ]
+      "tags": ["FIGHTER", "MARKSMAN", "ASSASSIN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -55839,9 +55047,7 @@
     "name": "Youmuu's Ghostblade",
     "id": 3142,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3134,
@@ -56250,10 +55456,7 @@
         "sell": 1120
       },
       "purchasable": true,
-      "tags": [
-        "ASSASSIN",
-        "MOVEMENT"
-      ]
+      "tags": ["ASSASSIN", "MOVEMENT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -56270,9 +55473,7 @@
     "name": "Randuin's Omen",
     "id": 3143,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3082,
@@ -56676,9 +55877,7 @@
         "sell": 1080
       },
       "purchasable": true,
-      "tags": [
-        "TANK"
-      ]
+      "tags": ["TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -56695,9 +55894,7 @@
     "name": "Scout's Slingshot",
     "id": 3144,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1042,
@@ -57114,10 +56311,7 @@
         "sell": 240
       },
       "purchasable": true,
-      "tags": [
-        "MARKSMAN",
-        "ONHIT_EFFECTS"
-      ]
+      "tags": ["MARKSMAN", "ONHIT_EFFECTS"]
     },
     "iconOverlay": false,
     "maps": {
@@ -57134,9 +56328,7 @@
     "name": "Hextech Alternator",
     "id": 3145,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1052,
@@ -57183,10 +56375,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3145_mage_t2_hextechalternator.png",
     "simpleDescription": "Increases Ability Power. Deal bonus magic damage on attack periodically.",
-    "nicknames": [
-      "revolver",
-      "pewpew"
-    ],
+    "nicknames": ["revolver", "pewpew"],
     "passives": [
       {
         "unique": true,
@@ -57561,9 +56750,7 @@
         "sell": 440
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -57580,9 +56767,7 @@
     "name": "Haunting Guise",
     "id": 3147,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1052,
@@ -57619,9 +56804,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3147_hauntingguise.png",
     "simpleDescription": "Deals additional physical damage when ambushing enemies",
-    "nicknames": [
-      "mask"
-    ],
+    "nicknames": ["mask"],
     "passives": [
       {
         "unique": false,
@@ -57996,9 +57179,7 @@
         "sell": 520
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -58015,9 +57196,7 @@
     "name": "Hextech Rocketbelt",
     "id": 3152,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3145,
@@ -58043,10 +57222,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3152_mage_t4_hextechrocketbelt.png",
     "simpleDescription": "Activate to dash forward and unleash a fiery explosion",
-    "nicknames": [
-      "protobelt",
-      "rocket belt"
-    ],
+    "nicknames": ["protobelt", "rocket belt"],
     "passives": [],
     "active": [
       {
@@ -58242,10 +57418,7 @@
         "sell": 1060
       },
       "purchasable": true,
-      "tags": [
-        "MAGE",
-        "MOVEMENT"
-      ]
+      "tags": ["MAGE", "MOVEMENT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -58262,9 +57435,7 @@
     "name": "Blade of the Ruined King",
     "id": 3153,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 1053,
@@ -58290,12 +57461,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3153_fighter_t3_bladeoftheruinedking.png",
     "simpleDescription": "Deals damage based on target's Health, can steal Move Speed",
-    "nicknames": [
-      "brk",
-      "bork",
-      "botrk",
-      "mist"
-    ],
+    "nicknames": ["brk", "bork", "botrk", "mist"],
     "passives": [
       {
         "unique": true,
@@ -58856,11 +58022,7 @@
         "sell": 1280
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "MARKSMAN",
-        "ONHIT_EFFECTS"
-      ]
+      "tags": ["FIGHTER", "MARKSMAN", "ONHIT_EFFECTS"]
     },
     "iconOverlay": false,
     "maps": {
@@ -58877,9 +58039,7 @@
     "name": "Hexdrinker",
     "id": 3155,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1036,
@@ -59286,11 +58446,7 @@
         "sell": 520
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "MARKSMAN",
-        "ASSASSIN"
-      ]
+      "tags": ["FIGHTER", "MARKSMAN", "ASSASSIN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -59307,9 +58463,7 @@
     "name": "Maw of Malmortius",
     "id": 3156,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3155,
@@ -59705,11 +58859,7 @@
         "sell": 1240
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "MARKSMAN",
-        "ASSASSIN"
-      ]
+      "tags": ["FIGHTER", "MARKSMAN", "ASSASSIN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -59726,9 +58876,7 @@
     "name": "Zhonya's Hourglass",
     "id": 3157,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 1058,
@@ -59749,11 +58897,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3157_mage_t3_zhonyashourglass.png",
     "simpleDescription": "Activate to become invincible but unable to take actions",
-    "nicknames": [
-      "zhg",
-      "zonyas",
-      "zhonyas"
-    ],
+    "nicknames": ["zhg", "zonyas", "zhonyas"],
     "passives": [],
     "active": [
       {
@@ -59949,9 +59093,7 @@
         "sell": 1300
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -59968,9 +59110,7 @@
     "name": "Ionian Boots of Lucidity",
     "id": 3158,
     "tier": 2,
-    "rank": [
-      "BOOTS"
-    ],
+    "rank": ["BOOTS"],
     "buildsFrom": [
       {
         "id": 1001,
@@ -60389,9 +59529,7 @@
     "name": "Spear of Shojin",
     "id": 3161,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 1037,
@@ -60978,10 +60116,7 @@
         "sell": 1240
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "ABILITY_HASTE"
-      ]
+      "tags": ["FIGHTER", "ABILITY_HASTE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -60998,9 +60133,7 @@
     "name": "Morellonomicon",
     "id": 3165,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3916,
@@ -61026,13 +60159,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3165_mage_t3_morellonomicon.png",
     "simpleDescription": "Increases magic damage",
-    "nicknames": [
-      "nmst",
-      "grievous",
-      "last shadow",
-      "book",
-      "forbidden book"
-    ],
+    "nicknames": ["nmst", "grievous", "last shadow", "book", "forbidden book"],
     "passives": [
       {
         "unique": true,
@@ -61407,10 +60534,7 @@
         "sell": 1140
       },
       "purchasable": true,
-      "tags": [
-        "MAGE",
-        "SUPPORT"
-      ]
+      "tags": ["MAGE", "SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -61427,9 +60551,7 @@
     "name": "Swiftmarch",
     "id": 3170,
     "tier": 3,
-    "rank": [
-      "BOOTS"
-    ],
+    "rank": ["BOOTS"],
     "buildsFrom": [
       {
         "id": 3009,
@@ -62023,9 +61145,7 @@
     "name": "Crimson Lucidity",
     "id": 3171,
     "tier": 3,
-    "rank": [
-      "BOOTS"
-    ],
+    "rank": ["BOOTS"],
     "buildsFrom": [
       {
         "id": 3158,
@@ -62619,9 +61739,7 @@
     "name": "Zephyr",
     "id": 3172,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3006,
@@ -63012,10 +62130,7 @@
         "sell": 1000
       },
       "purchasable": true,
-      "tags": [
-        "MARKSMAN",
-        "FIGHTER"
-      ]
+      "tags": ["MARKSMAN", "FIGHTER"]
     },
     "iconOverlay": false,
     "maps": {
@@ -63032,9 +62147,7 @@
     "name": "Chainlaced Crushers",
     "id": 3173,
     "tier": 3,
-    "rank": [
-      "BOOTS"
-    ],
+    "rank": ["BOOTS"],
     "buildsFrom": [
       {
         "id": 3111,
@@ -63442,9 +62555,7 @@
     "name": "Armored Advance",
     "id": 3174,
     "tier": 3,
-    "rank": [
-      "BOOTS"
-    ],
+    "rank": ["BOOTS"],
     "buildsFrom": [
       {
         "id": 3047,
@@ -64038,9 +63149,7 @@
     "name": "Spellslinger's Shoes",
     "id": 3175,
     "tier": 3,
-    "rank": [
-      "BOOTS"
-    ],
+    "rank": ["BOOTS"],
     "buildsFrom": [
       {
         "id": 3020,
@@ -64261,9 +63370,7 @@
     "name": "Forever Forward",
     "id": 3176,
     "tier": 3,
-    "rank": [
-      "BOOTS"
-    ],
+    "rank": ["BOOTS"],
     "buildsFrom": [
       {
         "id": 3013,
@@ -64857,9 +63964,7 @@
     "name": "Guardian's Blade",
     "id": 3177,
     "tier": 1,
-    "rank": [
-      "STARTER"
-    ],
+    "rank": ["STARTER"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -65057,12 +64162,7 @@
         "sell": 380
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "MARKSMAN",
-        "ASSASSIN",
-        "TANK"
-      ]
+      "tags": ["FIGHTER", "MARKSMAN", "ASSASSIN", "TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -65079,9 +64179,7 @@
     "name": "Umbral Glaive",
     "id": 3179,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3134,
@@ -65849,9 +64947,7 @@
         "sell": 1000
       },
       "purchasable": true,
-      "tags": [
-        "ASSASSIN"
-      ]
+      "tags": ["ASSASSIN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -65868,9 +64964,7 @@
     "name": "Hullbreaker",
     "id": 3181,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 2021,
@@ -65896,11 +64990,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3181_hullbreaker.png",
     "simpleDescription": null,
-    "nicknames": [
-      "ahoy",
-      "pirate",
-      "yarrr"
-    ],
+    "nicknames": ["ahoy", "pirate", "yarrr"],
     "passives": [
       {
         "unique": true,
@@ -66461,9 +65551,7 @@
         "sell": 1200
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER"
-      ]
+      "tags": ["FIGHTER"]
     },
     "iconOverlay": false,
     "maps": {
@@ -66480,9 +65568,7 @@
     "name": "Guardian's Hammer",
     "id": 3184,
     "tier": 1,
-    "rank": [
-      "STARTER"
-    ],
+    "rank": ["STARTER"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -66680,11 +65766,7 @@
         "sell": 380
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "MARKSMAN",
-        "ASSASSIN"
-      ]
+      "tags": ["FIGHTER", "MARKSMAN", "ASSASSIN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -66701,9 +65783,7 @@
     "name": "Locket of the Iron Solari",
     "id": 3190,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3067,
@@ -66925,10 +66005,7 @@
         "sell": 880
       },
       "purchasable": true,
-      "tags": [
-        "TANK",
-        "SUPPORT"
-      ]
+      "tags": ["TANK", "SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -66945,9 +66022,7 @@
     "name": "Spectre's Cowl",
     "id": 3211,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1028,
@@ -66989,10 +66064,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3211_tank_t2_spectrescowl.png",
     "simpleDescription": "Improves defense and grants regeneration upon being damaged",
-    "nicknames": [
-      "hat",
-      "ghost"
-    ],
+    "nicknames": ["hat", "ghost"],
     "passives": [],
     "active": [],
     "stats": {
@@ -67180,9 +66252,7 @@
         "sell": 500
       },
       "purchasable": true,
-      "tags": [
-        "TANK"
-      ]
+      "tags": ["TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -67199,9 +66269,7 @@
     "name": "Mikael's Blessing",
     "id": 3222,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3067,
@@ -67222,10 +66290,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3222_enchanter_t3_mikaelsblessing.png",
     "simpleDescription": "Activate to remove all disabling effects from an allied champion",
-    "nicknames": [
-      "crucible",
-      "michael"
-    ],
+    "nicknames": ["crucible", "michael"],
     "passives": [],
     "active": [
       {
@@ -67421,9 +66486,7 @@
         "sell": 920
       },
       "purchasable": true,
-      "tags": [
-        "SUPPORT"
-      ]
+      "tags": ["SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -67440,9 +66503,7 @@
     "name": "Terminus",
     "id": 3302,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3051,
@@ -67463,10 +66524,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3302_terminus.png",
     "simpleDescription": "Kill minions periodically to heal and grant gold to a nearby ally",
-    "nicknames": [
-      "bow",
-      "sentinel"
-    ],
+    "nicknames": ["bow", "sentinel"],
     "passives": [
       {
         "unique": true,
@@ -68027,13 +67085,7 @@
         "sell": 1200
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "MARKSMAN",
-        "ONHIT_EFFECTS",
-        "ARMOR_PEN",
-        "MAGIC_PEN"
-      ]
+      "tags": ["FIGHTER", "MARKSMAN", "ONHIT_EFFECTS", "ARMOR_PEN", "MAGIC_PEN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -68050,9 +67102,7 @@
     "name": "Scarecrow Effigy",
     "id": 3330,
     "tier": 1,
-    "rank": [
-      "TRINKET"
-    ],
+    "rank": ["TRINKET"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -68275,9 +67325,7 @@
     "name": "Stealth Ward",
     "id": 3340,
     "tier": 1,
-    "rank": [
-      "TRINKET"
-    ],
+    "rank": ["TRINKET"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -68287,11 +67335,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3340_class_t1_wardingtotem.png",
     "simpleDescription": "Periodically place a Stealth Ward",
-    "nicknames": [
-      "yellow",
-      "totem",
-      "trinket"
-    ],
+    "nicknames": ["yellow", "totem", "trinket"],
     "passives": [],
     "active": [
       {
@@ -68504,9 +67548,7 @@
     "name": "Arcane Sweeper (Trinket)",
     "id": 3348,
     "tier": 1,
-    "rank": [
-      "TRINKET"
-    ],
+    "rank": ["TRINKET"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -68729,9 +67771,7 @@
     "name": "Farsight Alteration",
     "id": 3363,
     "tier": 1,
-    "rank": [
-      "TRINKET"
-    ],
+    "rank": ["TRINKET"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -68741,11 +67781,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3363_class_t1_farsightalteration.png",
     "simpleDescription": "Grants increased range and reveals the targetted area",
-    "nicknames": [
-      "blue",
-      "totem",
-      "trinket"
-    ],
+    "nicknames": ["blue", "totem", "trinket"],
     "passives": [],
     "active": [
       {
@@ -68958,9 +67994,7 @@
     "name": "Oracle Lens",
     "id": 3364,
     "tier": 1,
-    "rank": [
-      "TRINKET"
-    ],
+    "rank": ["TRINKET"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -68970,13 +68004,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3364_class_t1_oracleslens.png",
     "simpleDescription": "Disables nearby invisible wards and traps for a duration",
-    "nicknames": [
-      "red",
-      "totem",
-      "trinket",
-      "sweeper",
-      "spinny"
-    ],
+    "nicknames": ["red", "totem", "trinket", "sweeper", "spinny"],
     "passives": [],
     "active": [
       {
@@ -69189,9 +68217,7 @@
     "name": "Your Cut",
     "id": 3400,
     "tier": 1,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -69406,9 +68432,7 @@
     "name": "Rite of Ruin",
     "id": 3430,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -69979,9 +69003,7 @@
         "sell": 1000
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -69998,9 +69020,7 @@
     "name": "Ardent Censer",
     "id": 3504,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3113,
@@ -70396,10 +69416,7 @@
         "sell": 880
       },
       "purchasable": true,
-      "tags": [
-        "SUPPORT",
-        "ATTACK_SPEED"
-      ]
+      "tags": ["SUPPORT", "ATTACK_SPEED"]
     },
     "iconOverlay": false,
     "maps": {
@@ -70416,9 +69433,7 @@
     "name": "Essence Reaver",
     "id": 3508,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 1037,
@@ -70444,10 +69459,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3508_marksman_t3_essencereaver.png",
     "simpleDescription": null,
-    "nicknames": [
-      "er",
-      "<s>bloothirster</s>"
-    ],
+    "nicknames": ["er", "<s>bloothirster</s>"],
     "passives": [
       {
         "unique": true,
@@ -70822,11 +69834,7 @@
         "sell": 1160
       },
       "purchasable": true,
-      "tags": [
-        "MARKSMAN",
-        "MANA_AND_REG",
-        "ONHIT_EFFECTS"
-      ]
+      "tags": ["MARKSMAN", "MANA_AND_REG", "ONHIT_EFFECTS"]
     },
     "iconOverlay": false,
     "maps": {
@@ -70843,9 +69851,7 @@
     "name": "Eye of the Herald",
     "id": 3513,
     "tier": 1,
-    "rank": [
-      "TRINKET"
-    ],
+    "rank": ["TRINKET"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -71060,9 +70066,7 @@
     "name": "Black Spear",
     "id": 3599,
     "tier": 1,
-    "rank": [
-      "STARTER"
-    ],
+    "rank": ["STARTER"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -71285,9 +70289,7 @@
     "name": "Dead Man's Plate",
     "id": 3742,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3066,
@@ -71313,12 +70315,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3742_tank_t3_deadmansplate.png",
     "simpleDescription": "Build momentum as you move around then smash into enemies.",
-    "nicknames": [
-      "dmp",
-      "gangplank",
-      "juggernaut",
-      "dreadnought"
-    ],
+    "nicknames": ["dmp", "gangplank", "juggernaut", "dreadnought"],
     "passives": [
       {
         "unique": true,
@@ -71879,10 +70876,7 @@
         "sell": 1160
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "TANK"
-      ]
+      "tags": ["FIGHTER", "TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -71899,9 +70893,7 @@
     "name": "Titanic Hydra",
     "id": 3748,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3077,
@@ -71927,10 +70919,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3748_fighter_t3_titanichydra.png",
     "simpleDescription": "Deals area of effect damage based on owner's health",
-    "nicknames": [
-      "beefer",
-      "juggernaut"
-    ],
+    "nicknames": ["beefer", "juggernaut"],
     "passives": [
       {
         "unique": true,
@@ -72313,11 +71302,7 @@
         "sell": 1320
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "TANK",
-        "ONHIT_EFFECTS"
-      ]
+      "tags": ["FIGHTER", "TANK", "ONHIT_EFFECTS"]
     },
     "iconOverlay": false,
     "maps": {
@@ -72334,9 +71319,7 @@
     "name": "Crystalline Bracer",
     "id": 3801,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1028,
@@ -72556,10 +71539,7 @@
         "sell": 320
       },
       "purchasable": true,
-      "tags": [
-        "TANK",
-        "SUPPORT"
-      ]
+      "tags": ["TANK", "SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -72576,9 +71556,7 @@
     "name": "Lost Chapter",
     "id": 3802,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1052,
@@ -72640,9 +71618,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3802_mage_tier2_lostchapter.png",
     "simpleDescription": "Restores Mana upon levelling up.",
-    "nicknames": [
-      "book"
-    ],
+    "nicknames": ["book"],
     "passives": [
       {
         "unique": true,
@@ -73017,9 +71993,7 @@
         "sell": 480
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -73036,9 +72010,7 @@
     "name": "Catalyst of Aeons",
     "id": 3803,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1028,
@@ -73455,9 +72427,7 @@
         "sell": 520
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -73474,9 +72444,7 @@
     "name": "Edge of Night",
     "id": 3814,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3134,
@@ -73497,11 +72465,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3814_assassin_t3_edgeofnight.png",
     "simpleDescription": "Periodically blocks enemy abilities",
-    "nicknames": [
-      "eon",
-      "spellshield",
-      "spell shield"
-    ],
+    "nicknames": ["eon", "spellshield", "spell shield"],
     "passives": [
       {
         "unique": true,
@@ -73876,9 +72840,7 @@
         "sell": 1200
       },
       "purchasable": true,
-      "tags": [
-        "ASSASSIN"
-      ]
+      "tags": ["ASSASSIN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -73895,9 +72857,7 @@
     "name": "World Atlas",
     "id": 3865,
     "tier": 1,
-    "rank": [
-      "STARTER"
-    ],
+    "rank": ["STARTER"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -74840,10 +73800,7 @@
         "sell": 160
       },
       "purchasable": true,
-      "tags": [
-        "SUPPORT",
-        "MAGE"
-      ]
+      "tags": ["SUPPORT", "MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -74860,9 +73817,7 @@
     "name": "Runic Compass",
     "id": 3866,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 3865,
@@ -75627,9 +74582,7 @@
         "sell": 160
       },
       "purchasable": false,
-      "tags": [
-        "SUPPORT"
-      ]
+      "tags": ["SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -75646,9 +74599,7 @@
     "name": "Bounty of Worlds",
     "id": 3867,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [],
     "buildsInto": [
       {
@@ -76253,9 +75204,7 @@
         "sell": 160
       },
       "purchasable": false,
-      "tags": [
-        "SUPPORT"
-      ]
+      "tags": ["SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -76272,9 +75221,7 @@
     "name": "Celestial Opposition",
     "id": 3869,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3867,
@@ -76859,9 +75806,7 @@
         "sell": 160
       },
       "purchasable": true,
-      "tags": [
-        "SUPPORT"
-      ]
+      "tags": ["SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -76878,9 +75823,7 @@
     "name": "Dream Maker",
     "id": 3870,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3867,
@@ -77465,9 +76408,7 @@
         "sell": 160
       },
       "purchasable": true,
-      "tags": [
-        "SUPPORT"
-      ]
+      "tags": ["SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -77484,9 +76425,7 @@
     "name": "Zaz'Zak's Realmspike",
     "id": 3871,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3867,
@@ -78071,9 +77010,7 @@
         "sell": 160
       },
       "purchasable": true,
-      "tags": [
-        "SUPPORT"
-      ]
+      "tags": ["SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -78090,9 +77027,7 @@
     "name": "Solstice Sleigh",
     "id": 3876,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3867,
@@ -78677,9 +77612,7 @@
         "sell": 160
       },
       "purchasable": true,
-      "tags": [
-        "SUPPORT"
-      ]
+      "tags": ["SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -78696,9 +77629,7 @@
     "name": "Bloodsong",
     "id": 3877,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3867,
@@ -79283,9 +78214,7 @@
         "sell": 160
       },
       "purchasable": true,
-      "tags": [
-        "SUPPORT"
-      ]
+      "tags": ["SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -80508,9 +79437,7 @@
     "name": "Oblivion Orb",
     "id": 3916,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1052,
@@ -80542,9 +79469,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3916_mage_t2_oblivionorb.png",
     "simpleDescription": "Increases magic damage",
-    "nicknames": [
-      "grievous"
-    ],
+    "nicknames": ["grievous"],
     "passives": [
       {
         "unique": true,
@@ -80919,10 +79844,7 @@
         "sell": 320
       },
       "purchasable": true,
-      "tags": [
-        "MAGE",
-        "SUPPORT"
-      ]
+      "tags": ["MAGE", "SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -80939,9 +79861,7 @@
     "name": "Lifeline",
     "id": 4003,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 6690,
@@ -81164,9 +80084,7 @@
         "sell": 640
       },
       "purchasable": true,
-      "tags": [
-        "ASSASSIN"
-      ]
+      "tags": ["ASSASSIN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -81183,9 +80101,7 @@
     "name": "Imperial Mandate",
     "id": 4005,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3108,
@@ -81206,10 +80122,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4005_enchanter_t4_imperialmandate.png",
     "simpleDescription": "Defer damage until later.",
-    "nicknames": [
-      "banner of command",
-      "flag"
-    ],
+    "nicknames": ["banner of command", "flag"],
     "passives": [
       {
         "unique": true,
@@ -81584,9 +80497,7 @@
         "sell": 900
       },
       "purchasable": true,
-      "tags": [
-        "SUPPORT"
-      ]
+      "tags": ["SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -81603,9 +80514,7 @@
     "name": "Sword of Blossoming Dawn",
     "id": 4011,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -82176,9 +81085,7 @@
         "sell": 1000
       },
       "purchasable": true,
-      "tags": [
-        "SUPPORT"
-      ]
+      "tags": ["SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -82195,9 +81102,7 @@
     "name": "Perplexity",
     "id": 4015,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -82582,9 +81487,7 @@
         "sell": 1000
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -82601,9 +81504,7 @@
     "name": "Wordless Promise",
     "id": 4016,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -82996,9 +81897,7 @@
         "sell": 1000
       },
       "purchasable": true,
-      "tags": [
-        "SUPPORT"
-      ]
+      "tags": ["SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -83015,9 +81914,7 @@
     "name": "Hellfire Hatchet",
     "id": 4017,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -83402,9 +82299,7 @@
         "sell": 1000
       },
       "purchasable": true,
-      "tags": [
-        "ASSASSIN"
-      ]
+      "tags": ["ASSASSIN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -83421,9 +82316,7 @@
     "name": "Force of Nature",
     "id": 4401,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 1057,
@@ -83449,9 +82342,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4401_tank_t3_forceofnature.png",
     "simpleDescription": "Move Speed, Magic Resist, and max Health Regeneration",
-    "nicknames": [
-      "fon"
-    ],
+    "nicknames": ["fon"],
     "passives": [
       {
         "unique": true,
@@ -83826,9 +82717,7 @@
         "sell": 1120
       },
       "purchasable": true,
-      "tags": [
-        "TANK"
-      ]
+      "tags": ["TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -83845,9 +82734,7 @@
     "name": "Horizon Focus",
     "id": 4628,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3108,
@@ -83873,10 +82760,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4628_mage_t3_horizonfocus.png",
     "simpleDescription": "Immobilizing a champion causes lightning to strike them",
-    "nicknames": [
-      "snipe",
-      "lock on"
-    ],
+    "nicknames": ["snipe", "lock on"],
     "passives": [
       {
         "unique": true,
@@ -84437,9 +83321,7 @@
         "sell": 1120
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -84456,9 +83338,7 @@
     "name": "Cosmic Drive",
     "id": 4629,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3067,
@@ -84484,9 +83364,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4629_mage_t3_cosmicdrive.png",
     "simpleDescription": "Massive amounts of Cooldown Reduction",
-    "nicknames": [
-      "hat"
-    ],
+    "nicknames": ["hat"],
     "passives": [
       {
         "unique": true,
@@ -84861,10 +83739,7 @@
         "sell": 1200
       },
       "purchasable": true,
-      "tags": [
-        "MAGE",
-        "MOVEMENT"
-      ]
+      "tags": ["MAGE", "MOVEMENT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -84881,9 +83756,7 @@
     "name": "Blighting Jewel",
     "id": 4630,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1052,
@@ -84910,9 +83783,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4630_mage_t2_voidcrystal.png",
     "simpleDescription": null,
-    "nicknames": [
-      "purple"
-    ],
+    "nicknames": ["purple"],
     "passives": [],
     "active": [],
     "stats": {
@@ -85100,9 +83971,7 @@
         "sell": 440
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -85119,9 +83988,7 @@
     "name": "Verdant Barrier",
     "id": 4632,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1052,
@@ -85153,9 +84020,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4632_tank_t2_verdantbarrier.png",
     "simpleDescription": null,
-    "nicknames": [
-      "necklace"
-    ],
+    "nicknames": ["necklace"],
     "passives": [
       {
         "unique": true,
@@ -85530,9 +84395,7 @@
         "sell": 640
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -85549,9 +84412,7 @@
     "name": "Riftmaker",
     "id": 4633,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3147,
@@ -85572,9 +84433,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4633_mage_t4_riftmaker.png",
     "simpleDescription": null,
-    "nicknames": [
-      "velkoz"
-    ],
+    "nicknames": ["velkoz"],
     "passives": [
       {
         "unique": true,
@@ -86135,10 +84994,7 @@
         "sell": 1240
       },
       "purchasable": true,
-      "tags": [
-        "MAGE",
-        "LIFESTEAL_VAMP"
-      ]
+      "tags": ["MAGE", "LIFESTEAL_VAMP"]
     },
     "iconOverlay": false,
     "maps": {
@@ -86155,9 +85011,7 @@
     "name": "Watchful Wardstone",
     "id": 4638,
     "tier": 1,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [],
     "buildsInto": [
       {
@@ -86173,10 +85027,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4638_enchanter_t3_watchfulsightstone.png",
     "simpleDescription": null,
-    "nicknames": [
-      "Support",
-      "Ward"
-    ],
+    "nicknames": ["Support", "Ward"],
     "passives": [
       {
         "unique": true,
@@ -86559,9 +85410,7 @@
         "sell": 440
       },
       "purchasable": true,
-      "tags": [
-        "SUPPORT"
-      ]
+      "tags": ["SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -86578,9 +85427,7 @@
     "name": "Bandleglass Mirror",
     "id": 4642,
     "tier": 3,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1004,
@@ -86647,9 +85494,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4642_enchanter_t2_bandleglassmirror.png",
     "simpleDescription": null,
-    "nicknames": [
-      "yordle"
-    ],
+    "nicknames": ["yordle"],
     "passives": [],
     "active": [],
     "stats": {
@@ -86837,9 +85682,7 @@
         "sell": 360
       },
       "purchasable": true,
-      "tags": [
-        "SUPPORT"
-      ]
+      "tags": ["SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -86856,9 +85699,7 @@
     "name": "Vigilant Wardstone",
     "id": 4643,
     "tier": 2,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 4638,
@@ -86874,11 +85715,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4643_enchanter_t3_vigilantsightstone.png",
     "simpleDescription": null,
-    "nicknames": [
-      "Support",
-      "Ward",
-      "sightstone"
-    ],
+    "nicknames": ["Support", "Ward", "sightstone"],
     "passives": [
       {
         "unique": true,
@@ -87447,9 +86284,7 @@
         "sell": 920
       },
       "purchasable": true,
-      "tags": [
-        "SUPPORT"
-      ]
+      "tags": ["SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -87466,9 +86301,7 @@
     "name": "Shadowflame",
     "id": 4645,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3145,
@@ -87864,9 +86697,7 @@
         "sell": 1280
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -87883,9 +86714,7 @@
     "name": "Stormsurge",
     "id": 4646,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3145,
@@ -88467,9 +87296,7 @@
         "sell": 1120
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -88486,9 +87313,7 @@
     "name": "Death's Dance",
     "id": 6333,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 2019,
@@ -88514,10 +87339,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6333_fighter_t3_deathsdance.png",
     "simpleDescription": null,
-    "nicknames": [
-      "dd",
-      "<s>Bloodbag</s>"
-    ],
+    "nicknames": ["dd", "<s>Bloodbag</s>"],
     "passives": [
       {
         "unique": true,
@@ -89078,9 +87900,7 @@
         "sell": 1320
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER"
-      ]
+      "tags": ["FIGHTER"]
     },
     "iconOverlay": false,
     "maps": {
@@ -89097,9 +87917,7 @@
     "name": "Chempunk Chainsword",
     "id": 6609,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3123,
@@ -89125,9 +87943,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6609_fighter_t3_chempunkchainsword.png",
     "simpleDescription": null,
-    "nicknames": [
-      "grievous"
-    ],
+    "nicknames": ["grievous"],
     "passives": [
       {
         "unique": true,
@@ -89502,10 +88318,7 @@
         "sell": 1240
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "ASSASSIN"
-      ]
+      "tags": ["FIGHTER", "ASSASSIN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -89522,9 +88335,7 @@
     "name": "Sundered Sky",
     "id": 6610,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 2021,
@@ -89925,9 +88736,7 @@
         "sell": 1240
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER"
-      ]
+      "tags": ["FIGHTER"]
     },
     "iconOverlay": false,
     "maps": {
@@ -89944,9 +88753,7 @@
     "name": "Staff of Flowing Water",
     "id": 6616,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3108,
@@ -89967,9 +88774,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3744_enchanter_t3_staffofflowingwater.png",
     "simpleDescription": "Your heals and shields reduce crowd control and grant Move Speed",
-    "nicknames": [
-      "nami"
-    ],
+    "nicknames": ["nami"],
     "passives": [
       {
         "unique": true,
@@ -90344,9 +89149,7 @@
         "sell": 900
       },
       "purchasable": true,
-      "tags": [
-        "SUPPORT"
-      ]
+      "tags": ["SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -90363,9 +89166,7 @@
     "name": "Moonstone Renewer",
     "id": 6617,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3067,
@@ -90386,9 +89187,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6617_enchanter_t4_moonstonerenewer.png",
     "simpleDescription": "Your heals and shields cool down faster and have greater effect on low health allies",
-    "nicknames": [
-      "yuumi"
-    ],
+    "nicknames": ["yuumi"],
     "passives": [
       {
         "unique": true,
@@ -90763,9 +89562,7 @@
         "sell": 880
       },
       "purchasable": true,
-      "tags": [
-        "SUPPORT"
-      ]
+      "tags": ["SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -90782,9 +89579,7 @@
     "name": "Echoes of Helia",
     "id": 6620,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3067,
@@ -90805,9 +89600,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6620_echoes_of_helia.png",
     "simpleDescription": "Damage low-health enemies to trigger a cursed explosion, dealing damage and slowing nearby foes",
-    "nicknames": [
-      "spooky cup"
-    ],
+    "nicknames": ["spooky cup"],
     "passives": [
       {
         "unique": true,
@@ -91182,9 +89975,7 @@
         "sell": 880
       },
       "purchasable": true,
-      "tags": [
-        "SUPPORT"
-      ]
+      "tags": ["SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -91201,9 +89992,7 @@
     "name": "Dawncore",
     "id": 6621,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 1026,
@@ -91604,9 +90393,7 @@
         "sell": 1000
       },
       "purchasable": true,
-      "tags": [
-        "SUPPORT"
-      ]
+      "tags": ["SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -91623,9 +90410,7 @@
     "name": "Stridebreaker",
     "id": 6631,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3077,
@@ -91651,10 +90436,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6631_fighter_t4_stridebreaker.png",
     "simpleDescription": null,
-    "nicknames": [
-      "kneecapper",
-      "whipchain"
-    ],
+    "nicknames": ["kneecapper", "whipchain"],
     "passives": [
       {
         "unique": true,
@@ -92037,10 +90819,7 @@
         "sell": 1320
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "MOVEMENT"
-      ]
+      "tags": ["FIGHTER", "MOVEMENT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -92057,9 +90836,7 @@
     "name": "Liandry's Torment",
     "id": 6653,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3147,
@@ -92080,10 +90857,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6653_mage_t4_liandrysanguish.png",
     "simpleDescription": "Charge up in combat to deal high damage over time, especially against durable enemies",
-    "nicknames": [
-      "last shadow",
-      "ls"
-    ],
+    "nicknames": ["last shadow", "ls"],
     "passives": [
       {
         "unique": true,
@@ -92644,9 +91418,7 @@
         "sell": 1200
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -92663,9 +91435,7 @@
     "name": "Luden's Companion",
     "id": 6655,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3802,
@@ -92686,10 +91456,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6655_casterscompanion.png",
     "simpleDescription": "High burst damage, good against fragile foes",
-    "nicknames": [
-      "boomstick",
-      "gun"
-    ],
+    "nicknames": ["boomstick", "gun"],
     "passives": [
       {
         "unique": true,
@@ -93064,9 +91831,7 @@
         "sell": 1100
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -93083,9 +91848,7 @@
     "name": "Rod of Ages",
     "id": 6657,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 1026,
@@ -93667,9 +92430,7 @@
         "sell": 1040
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -93686,9 +92447,7 @@
     "name": "Bami's Cinder",
     "id": 6660,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1028,
@@ -93720,9 +92479,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6660_tank_t2_bamiscinder.png",
     "simpleDescription": null,
-    "nicknames": [
-      "fire"
-    ],
+    "nicknames": ["fire"],
     "passives": [
       {
         "unique": true,
@@ -94097,9 +92854,7 @@
         "sell": 360
       },
       "purchasable": true,
-      "tags": [
-        "TANK"
-      ]
+      "tags": ["TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -94116,9 +92871,7 @@
     "name": "Iceborn Gauntlet",
     "id": 6662,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3057,
@@ -94519,11 +93272,7 @@
         "sell": 1160
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "TANK",
-        "ONHIT_EFFECTS"
-      ]
+      "tags": ["FIGHTER", "TANK", "ONHIT_EFFECTS"]
     },
     "iconOverlay": false,
     "maps": {
@@ -94540,9 +93289,7 @@
     "name": "Hollow Radiance",
     "id": 6664,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 6660,
@@ -95124,9 +93871,7 @@
         "sell": 1120
       },
       "purchasable": true,
-      "tags": [
-        "TANK"
-      ]
+      "tags": ["TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -95143,9 +93888,7 @@
     "name": "Jak'Sho, The Protean",
     "id": 6665,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 1011,
@@ -95546,9 +94289,7 @@
         "sell": 1280
       },
       "purchasable": true,
-      "tags": [
-        "TANK"
-      ]
+      "tags": ["TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -95565,9 +94306,7 @@
     "name": "Noonquiver",
     "id": 6670,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1036,
@@ -95792,10 +94531,7 @@
         "sell": 520
       },
       "purchasable": true,
-      "tags": [
-        "MARKSMAN",
-        "ONHIT_EFFECTS"
-      ]
+      "tags": ["MARKSMAN", "ONHIT_EFFECTS"]
     },
     "iconOverlay": false,
     "maps": {
@@ -95812,9 +94548,7 @@
     "name": "Kraken Slayer",
     "id": 6672,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 6690,
@@ -96215,9 +94949,7 @@
         "sell": 1200
       },
       "purchasable": true,
-      "tags": [
-        "MARKSMAN"
-      ]
+      "tags": ["MARKSMAN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -96234,9 +94966,7 @@
     "name": "Immortal Shieldbow",
     "id": 6673,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 1037,
@@ -96632,10 +95362,7 @@
         "sell": 1200
       },
       "purchasable": true,
-      "tags": [
-        "MARKSMAN",
-        "HEALTH_AND_REG"
-      ]
+      "tags": ["MARKSMAN", "HEALTH_AND_REG"]
     },
     "iconOverlay": false,
     "maps": {
@@ -96652,9 +95379,7 @@
     "name": "Navori Flickerblade",
     "id": 6675,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 1042,
@@ -97055,9 +95780,7 @@
         "sell": 1060
       },
       "purchasable": true,
-      "tags": [
-        "MARKSMAN"
-      ]
+      "tags": ["MARKSMAN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -97074,9 +95797,7 @@
     "name": "The Collector",
     "id": 6676,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 1037,
@@ -97102,10 +95823,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6676_marksman_t3_thecollector.png",
     "simpleDescription": null,
-    "nicknames": [
-      "deathblade",
-      "gun"
-    ],
+    "nicknames": ["deathblade", "gun"],
     "passives": [
       {
         "unique": true,
@@ -97666,10 +96384,7 @@
         "sell": 1200
       },
       "purchasable": true,
-      "tags": [
-        "MARKSMAN",
-        "ASSASSIN"
-      ]
+      "tags": ["MARKSMAN", "ASSASSIN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -97686,9 +96401,7 @@
     "name": "Rectrix",
     "id": 6690,
     "tier": 2,
-    "rank": [
-      "EPIC"
-    ],
+    "rank": ["EPIC"],
     "buildsFrom": [
       {
         "id": 1036,
@@ -97918,10 +96631,7 @@
         "sell": 310
       },
       "purchasable": true,
-      "tags": [
-        "ASSASSIN",
-        "FIGHTER"
-      ]
+      "tags": ["ASSASSIN", "FIGHTER"]
     },
     "iconOverlay": false,
     "maps": {
@@ -97938,9 +96648,7 @@
     "name": "Eclipse",
     "id": 6692,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3133,
@@ -98341,9 +97049,7 @@
         "sell": 1160
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER"
-      ]
+      "tags": ["FIGHTER"]
     },
     "iconOverlay": false,
     "maps": {
@@ -98360,9 +97066,7 @@
     "name": "Serylda's Grudge",
     "id": 6694,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3133,
@@ -98758,9 +97462,7 @@
         "sell": 1200
       },
       "purchasable": true,
-      "tags": [
-        "ASSASSIN"
-      ]
+      "tags": ["ASSASSIN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -98777,9 +97479,7 @@
     "name": "Serpent's Fang",
     "id": 6695,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3134,
@@ -99175,9 +97875,7 @@
         "sell": 1000
       },
       "purchasable": true,
-      "tags": [
-        "ASSASSIN"
-      ]
+      "tags": ["ASSASSIN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -99194,9 +97892,7 @@
     "name": "Axiom Arc",
     "id": 6696,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 2020,
@@ -99592,9 +98288,7 @@
         "sell": 1200
       },
       "purchasable": true,
-      "tags": [
-        "ASSASSIN"
-      ]
+      "tags": ["ASSASSIN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -99611,9 +98305,7 @@
     "name": "Hubris",
     "id": 6697,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3134,
@@ -100009,9 +98701,7 @@
         "sell": 1200
       },
       "purchasable": true,
-      "tags": [
-        "ASSASSIN"
-      ]
+      "tags": ["ASSASSIN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -100028,9 +98718,7 @@
     "name": "Profane Hydra",
     "id": 6698,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3077,
@@ -100434,9 +99122,7 @@
         "sell": 1280
       },
       "purchasable": true,
-      "tags": [
-        "ASSASSIN"
-      ]
+      "tags": ["ASSASSIN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -100453,9 +99139,7 @@
     "name": "Voltaic Cyclosword",
     "id": 6699,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 2020,
@@ -101228,9 +99912,7 @@
         "sell": 1200
       },
       "purchasable": true,
-      "tags": [
-        "ASSASSIN"
-      ]
+      "tags": ["ASSASSIN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -101247,9 +99929,7 @@
     "name": "Opportunity",
     "id": 6701,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 1037,
@@ -101836,10 +100516,7 @@
         "sell": 1080
       },
       "purchasable": true,
-      "tags": [
-        "ASSASSIN",
-        "MOVEMENT"
-      ]
+      "tags": ["ASSASSIN", "MOVEMENT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -101856,9 +100533,7 @@
     "name": "Bloodletter's Curse",
     "id": 8010,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3147,
@@ -102254,9 +100929,7 @@
         "sell": 1160
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -102273,9 +100946,7 @@
     "name": "Abyssal Mask",
     "id": 8020,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [
       {
         "id": 3067,
@@ -102671,10 +101342,7 @@
         "sell": 1060
       },
       "purchasable": true,
-      "tags": [
-        "TANK",
-        "SUPPORT"
-      ]
+      "tags": ["TANK", "SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -102691,9 +101359,7 @@
     "name": "Stat Bonus",
     "id": 220000,
     "tier": 1,
-    "rank": [
-      "CONSUMABLE"
-    ],
+    "rank": ["CONSUMABLE"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -102908,9 +101574,7 @@
     "name": "Legendary Fighter Item",
     "id": 220001,
     "tier": 1,
-    "rank": [
-      "CONSUMABLE"
-    ],
+    "rank": ["CONSUMABLE"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -103125,9 +101789,7 @@
     "name": "Legendary Marksman Item",
     "id": 220002,
     "tier": 1,
-    "rank": [
-      "CONSUMABLE"
-    ],
+    "rank": ["CONSUMABLE"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -103342,9 +102004,7 @@
     "name": "Legendary Assassin Item",
     "id": 220003,
     "tier": 1,
-    "rank": [
-      "CONSUMABLE"
-    ],
+    "rank": ["CONSUMABLE"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -103559,9 +102219,7 @@
     "name": "Legendary Mage Item",
     "id": 220004,
     "tier": 1,
-    "rank": [
-      "CONSUMABLE"
-    ],
+    "rank": ["CONSUMABLE"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -103776,9 +102434,7 @@
     "name": "Legendary Tank Item",
     "id": 220005,
     "tier": 1,
-    "rank": [
-      "CONSUMABLE"
-    ],
+    "rank": ["CONSUMABLE"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -103993,9 +102649,7 @@
     "name": "Legendary Support Item",
     "id": 220006,
     "tier": 1,
-    "rank": [
-      "CONSUMABLE"
-    ],
+    "rank": ["CONSUMABLE"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -104210,9 +102864,7 @@
     "name": "Prismatic Item",
     "id": 220007,
     "tier": 1,
-    "rank": [
-      "CONSUMABLE"
-    ],
+    "rank": ["CONSUMABLE"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -104427,9 +103079,7 @@
     "name": "Ghostcrawlers",
     "id": 223005,
     "tier": 2,
-    "rank": [
-      "BOOTS"
-    ],
+    "rank": ["BOOTS"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -104652,9 +103302,7 @@
     "name": "Atma's Reckoning",
     "id": 223039,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -104664,9 +103312,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3005_fighter_t3_atmasreckoning.png",
     "simpleDescription": null,
-    "nicknames": [
-      "wreckoning"
-    ],
+    "nicknames": ["wreckoning"],
     "passives": [
       {
         "unique": true,
@@ -105041,9 +103687,7 @@
         "sell": 1000
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER"
-      ]
+      "tags": ["FIGHTER"]
     },
     "iconOverlay": false,
     "maps": {
@@ -105060,9 +103704,7 @@
     "name": "Stormrazor",
     "id": 223095,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -105072,9 +103714,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3095_windblade.png",
     "simpleDescription": null,
-    "nicknames": [
-      "Windblade"
-    ],
+    "nicknames": ["Windblade"],
     "passives": [
       {
         "unique": true,
@@ -105635,10 +104275,7 @@
         "sell": 1000
       },
       "purchasable": true,
-      "tags": [
-        "MARKSMAN",
-        "ONHIT_EFFECTS"
-      ]
+      "tags": ["MARKSMAN", "ONHIT_EFFECTS"]
     },
     "iconOverlay": false,
     "maps": {
@@ -105655,9 +104292,7 @@
     "name": "Hextech Gunblade",
     "id": 223146,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -105863,9 +104498,7 @@
         "sell": 1000
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -105882,9 +104515,7 @@
     "name": "Guardian's Dirk",
     "id": 223185,
     "tier": 1,
-    "rank": [
-      "STARTER"
-    ],
+    "rank": ["STARTER"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -106269,10 +104900,7 @@
         "sell": 200
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "ASSASSIN"
-      ]
+      "tags": ["FIGHTER", "ASSASSIN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -106289,9 +104917,7 @@
     "name": "Spectral Cutlass",
     "id": 224004,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -106497,9 +105123,7 @@
         "sell": 1120
       },
       "purchasable": true,
-      "tags": [
-        "ASSASSIN"
-      ]
+      "tags": ["ASSASSIN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -106516,9 +105140,7 @@
     "name": "The Golden Spatula",
     "id": 224403,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -106528,9 +105150,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4403_goldenspatula.png",
     "simpleDescription": null,
-    "nicknames": [
-      "debug"
-    ],
+    "nicknames": ["debug"],
     "passives": [
       {
         "unique": true,
@@ -106922,9 +105542,7 @@
     "name": "Goredrinker",
     "id": 226630,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -106934,9 +105552,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6630_fighter_t4_goredrinker.png",
     "simpleDescription": null,
-    "nicknames": [
-      "slurp"
-    ],
+    "nicknames": ["slurp"],
     "passives": [],
     "active": [
       {
@@ -107132,9 +105748,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER"
-      ]
+      "tags": ["FIGHTER"]
     },
     "iconOverlay": false,
     "maps": {
@@ -107151,9 +105765,7 @@
     "name": "Anathema's Chains",
     "id": 228001,
     "tier": 3,
-    "rank": [
-      "LEGENDARY"
-    ],
+    "rank": ["LEGENDARY"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -107546,10 +106158,7 @@
         "sell": 1000
       },
       "purchasable": true,
-      "tags": [
-        "TANK",
-        "SUPPORT"
-      ]
+      "tags": ["TANK", "SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -107566,9 +106175,7 @@
     "name": "Wooglet's Witchcap",
     "id": 228002,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 0,
@@ -107961,9 +106568,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -107980,9 +106585,7 @@
     "name": "Darksteel Talons",
     "id": 443054,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -108367,9 +106970,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "TANK"
-      ]
+      "tags": ["TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -108386,9 +106987,7 @@
     "name": "Fulmination",
     "id": 443055,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -109145,9 +107744,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "MARKSMAN"
-      ]
+      "tags": ["MARKSMAN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -109164,9 +107761,7 @@
     "name": "Demon King's Crown",
     "id": 443056,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -109568,9 +108163,7 @@
     "name": "Shield of Molten Stone",
     "id": 443058,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -109955,9 +108548,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "TANK"
-      ]
+      "tags": ["TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -109974,9 +108565,7 @@
     "name": "Cloak of Starry Night",
     "id": 443059,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -110361,9 +108950,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "TANK"
-      ]
+      "tags": ["TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -110380,9 +108967,7 @@
     "name": "Sword of the Divine",
     "id": 443060,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -110392,9 +108977,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3131_fighter_t3_swordofthedivine.png",
     "simpleDescription": null,
-    "nicknames": [
-      "sotd"
-    ],
+    "nicknames": ["sotd"],
     "passives": [
       {
         "unique": true,
@@ -110769,9 +109352,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "ASSASSIN"
-      ]
+      "tags": ["ASSASSIN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -110788,9 +109369,7 @@
     "name": "Force of Entropy",
     "id": 443061,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -111175,9 +109754,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "TANK"
-      ]
+      "tags": ["TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -111194,9 +109771,7 @@
     "name": "Sanguine Gift",
     "id": 443062,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -111581,9 +110156,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -111600,9 +110173,7 @@
     "name": "Eleisa's Miracle",
     "id": 443063,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -111987,9 +110558,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "SUPPORT"
-      ]
+      "tags": ["SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {
@@ -112006,9 +110575,7 @@
     "name": "Talisman of Ascension",
     "id": 443064,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -112018,11 +110585,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3064_talismanofascension.png",
     "simpleDescription": null,
-    "nicknames": [
-      "Support",
-      "Economy",
-      "Gold"
-    ],
+    "nicknames": ["Support", "Economy", "Gold"],
     "passives": [],
     "active": [
       {
@@ -112235,9 +110798,7 @@
     "name": "Hamstringer",
     "id": 443069,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -112622,9 +111183,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "MARKSMAN"
-      ]
+      "tags": ["MARKSMAN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -112641,9 +111200,7 @@
     "name": "Turbo Chemtank",
     "id": 443079,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -112653,9 +111210,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6664_tank_t4_acceleratedchemtank.png",
     "simpleDescription": null,
-    "nicknames": [
-      "catastrophe"
-    ],
+    "nicknames": ["catastrophe"],
     "passives": [],
     "active": [
       {
@@ -112851,9 +111406,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "TANK"
-      ]
+      "tags": ["TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -112870,9 +111423,7 @@
     "name": "Twin Mask",
     "id": 443080,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -113274,9 +111825,7 @@
     "name": "Hexbolt Companion",
     "id": 443081,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -113661,9 +112210,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "TANK"
-      ]
+      "tags": ["TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -113680,9 +112227,7 @@
     "name": "Reaper's Toll",
     "id": 443090,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -114253,9 +112798,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "MARKSMAN"
-      ]
+      "tags": ["MARKSMAN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -114272,9 +112815,7 @@
     "name": "Gargoyle Stoneplate",
     "id": 443193,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -114480,9 +113021,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "TANK"
-      ]
+      "tags": ["TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -114499,9 +113038,7 @@
     "name": "Night Harvester",
     "id": 444636,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -114511,10 +113048,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4636_mage_t4_nightharvester.png",
     "simpleDescription": null,
-    "nicknames": [
-      "dark",
-      "scythe"
-    ],
+    "nicknames": ["dark", "scythe"],
     "passives": [
       {
         "unique": true,
@@ -114889,9 +113423,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -114908,9 +113440,7 @@
     "name": "Demonic Embrace",
     "id": 444637,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -114920,9 +113450,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4637_mage_t3_demonicembrace.png",
     "simpleDescription": null,
-    "nicknames": [
-      "helmet"
-    ],
+    "nicknames": ["helmet"],
     "passives": [
       {
         "unique": true,
@@ -115297,9 +113825,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -115316,9 +113842,7 @@
     "name": "Crown of the Shattered Queen",
     "id": 444644,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -115703,9 +114227,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -115722,9 +114244,7 @@
     "name": "Divine Sunderer",
     "id": 446632,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -115734,9 +114254,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6632_fighter_t4_divinedevourer.png",
     "simpleDescription": null,
-    "nicknames": [
-      "devourer"
-    ],
+    "nicknames": ["devourer"],
     "passives": [
       {
         "unique": true,
@@ -116111,9 +114629,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER"
-      ]
+      "tags": ["FIGHTER"]
     },
     "iconOverlay": false,
     "maps": {
@@ -116130,9 +114646,7 @@
     "name": "Everfrost",
     "id": 446656,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -116142,11 +114656,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6656_mage_t4_everfrost.png",
     "simpleDescription": null,
-    "nicknames": [
-      "GLP",
-      "hose",
-      "supersoaker"
-    ],
+    "nicknames": ["GLP", "hose", "supersoaker"],
     "passives": [],
     "active": [
       {
@@ -116342,9 +114852,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -116361,9 +114869,7 @@
     "name": "Radiant Virtue",
     "id": 446667,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -116748,9 +115254,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "TANK"
-      ]
+      "tags": ["TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -116767,9 +115271,7 @@
     "name": "Galeforce",
     "id": 446671,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -116779,9 +115281,7 @@
     "requiredAlly": "",
     "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6671_marksman_t4_galeforce.png",
     "simpleDescription": null,
-    "nicknames": [
-      "squallrider"
-    ],
+    "nicknames": ["squallrider"],
     "passives": [],
     "active": [
       {
@@ -116977,9 +115477,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "MARKSMAN"
-      ]
+      "tags": ["MARKSMAN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -116996,9 +115494,7 @@
     "name": "Duskblade of Draktharr",
     "id": 446691,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -117383,9 +115879,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "ASSASSIN"
-      ]
+      "tags": ["ASSASSIN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -117402,9 +115896,7 @@
     "name": "Prowler's Claw",
     "id": 446693,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -117789,9 +116281,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "ASSASSIN"
-      ]
+      "tags": ["ASSASSIN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -117808,9 +116298,7 @@
     "name": "Mirage Blade",
     "id": 447100,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -118212,9 +116700,7 @@
     "name": "Gambler's Blade",
     "id": 447101,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -118616,9 +117102,7 @@
     "name": "Reality Fracture",
     "id": 447102,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -119003,9 +117487,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -119022,9 +117504,7 @@
     "name": "Hemomancer's Helm",
     "id": 447103,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -119409,9 +117889,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER"
-      ]
+      "tags": ["FIGHTER"]
     },
     "iconOverlay": false,
     "maps": {
@@ -119428,9 +117906,7 @@
     "name": "Innervating Locket",
     "id": 447104,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -119815,9 +118291,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -119834,9 +118308,7 @@
     "name": "Empyrean Promise",
     "id": 447105,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -120042,9 +118514,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -120061,9 +118531,7 @@
     "name": "Dragonheart",
     "id": 447106,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -120465,9 +118933,7 @@
     "name": "Decapitator",
     "id": 447107,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -120869,9 +119335,7 @@
     "name": "Runecarver",
     "id": 447108,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -121628,9 +120092,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -121647,9 +120109,7 @@
     "name": "Cruelty",
     "id": 447109,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -122034,9 +120494,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -122053,9 +120511,7 @@
     "name": "Moonflair Spellblade",
     "id": 447110,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -122440,9 +120896,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -122459,9 +120913,7 @@
     "name": "Flesheater",
     "id": 447112,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -123049,9 +121501,7 @@
     "name": "Detonation Orb",
     "id": 447113,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -123436,9 +121886,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "MAGE"
-      ]
+      "tags": ["MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -123455,9 +121903,7 @@
     "name": "Reverberation",
     "id": 447114,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -124214,9 +122660,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "TANK"
-      ]
+      "tags": ["TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -124233,9 +122677,7 @@
     "name": "Regicide",
     "id": 447115,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -124620,9 +123062,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "ASSASSIN"
-      ]
+      "tags": ["ASSASSIN"]
     },
     "iconOverlay": false,
     "maps": {
@@ -124639,9 +123079,7 @@
     "name": "Kinkou Jitte",
     "id": 447116,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -125026,11 +123464,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "ASSASSIN",
-        "FIGHTER",
-        "MAGE"
-      ]
+      "tags": ["ASSASSIN", "FIGHTER", "MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -125047,9 +123481,7 @@
     "name": "Pyromancer's Cloak",
     "id": 447118,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -125620,11 +124052,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "FIGHTER",
-        "MARKSMAN",
-        "MAGE"
-      ]
+      "tags": ["FIGHTER", "MARKSMAN", "MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -125641,9 +124069,7 @@
     "name": "Lightning Rod",
     "id": 447119,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -126214,9 +124640,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "TANK"
-      ]
+      "tags": ["TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -126233,9 +124657,7 @@
     "name": "Diamond-Tipped Spear",
     "id": 447120,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -126806,10 +125228,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "MARKSMAN",
-        "MAGE"
-      ]
+      "tags": ["MARKSMAN", "MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -126826,9 +125245,7 @@
     "name": "Twilight's Edge",
     "id": 447121,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -127213,10 +125630,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "MARKSMAN",
-        "MAGE"
-      ]
+      "tags": ["MARKSMAN", "MAGE"]
     },
     "iconOverlay": false,
     "maps": {
@@ -127233,9 +125647,7 @@
     "name": "Black Hole Gauntlet",
     "id": 447122,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -127628,9 +126040,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "TANK"
-      ]
+      "tags": ["TANK"]
     },
     "iconOverlay": false,
     "maps": {
@@ -127647,9 +126057,7 @@
     "name": "Puppeteer",
     "id": 447123,
     "tier": 3,
-    "rank": [
-      "DISTRIBUTED"
-    ],
+    "rank": ["DISTRIBUTED"],
     "buildsFrom": [],
     "buildsInto": [],
     "specialRecipe": 220007,
@@ -128220,9 +126628,7 @@
         "sell": 0
       },
       "purchasable": true,
-      "tags": [
-        "SUPPORT"
-      ]
+      "tags": ["SUPPORT"]
     },
     "iconOverlay": false,
     "maps": {

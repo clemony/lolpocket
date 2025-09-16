@@ -29,7 +29,7 @@ export const useSummonerStore = defineStore(
 
     // --- SNAPSHOT (for reactivity in templates) ---
     const summoners = computed<Record<string, Summoner>>(() =>
-      Object.fromEntries(cache.entries()),
+      Object.fromEntries(cache.entries())
     )
 
     // --- MERGE ---
@@ -58,9 +58,12 @@ export const useSummonerStore = defineStore(
         name?: string
         tag?: string
       },
-      options?: { force?: boolean },
+      options?: { force?: boolean }
     ): Promise<Summoner> {
-      if (!identifier.puuid && (!identifier.region || !identifier.name || !identifier.tag)) {
+      if (
+        !identifier.puuid
+        && (!identifier.region || !identifier.name || !identifier.tag)
+      ) {
         throw new Error('Must provide puuid or region+name+tag')
       }
 
@@ -74,16 +77,19 @@ export const useSummonerStore = defineStore(
       }
 
       // --- Build API params ---
-      const params: Record<string, string> = identifier.puuid
-        ? { puuid: identifier.puuid }
-        : {
-            region: identifier.region!,
-            name: identifier.name!,
-            tag: identifier.tag!,
-          }
+      const params: Record<string, string>
+        = identifier.puuid
+          ? { puuid: identifier.puuid }
+          : {
+              region: identifier.region!,
+              name: identifier.name!,
+              tag: identifier.tag!,
+            }
 
       // --- Fetch only summoner profile ---
-      const resolved = await $fetch<Summoner>('/api/riot/resolveSummoner', { params })
+      const resolved = await $fetch<Summoner>('/api/riot/resolveSummoner', {
+        params,
+      })
 
       setSummoner(resolved)
 
@@ -105,5 +111,5 @@ export const useSummonerStore = defineStore(
       storage: piniaPluginPersistedstate.localStorage(),
       key: 'summonerStore',
     },
-  },
+  }
 )

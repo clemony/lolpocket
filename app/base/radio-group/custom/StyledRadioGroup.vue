@@ -2,10 +2,12 @@
 import { useForwardPropsEmits } from 'reka-ui'
 import type { RadioGroupRootEmits, RadioGroupRootProps } from 'reka-ui'
 
-const props = defineProps<RadioGroupRootProps & {
-  class?: HTMLAttributes['class']
-  contrast?: boolean
-}>()
+const props = defineProps<
+  RadioGroupRootProps & {
+    class?: HTMLAttributes['class']
+    contrast?: boolean
+  }
+>()
 const emits = defineEmits<RadioGroupRootEmits>()
 
 const delegatedProps = reactiveOmit(props, 'class')

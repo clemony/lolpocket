@@ -3,7 +3,6 @@ export interface ChampionMasteryResponse {
   mastery: ChampionMastery[]
   totalPoints: number
   totalLevels: number
-
 }
 export async function fetchSummonerMastery(puuid: string) {
   if (!puuid)
@@ -17,7 +16,9 @@ export async function fetchSummonerMastery(puuid: string) {
     !timestamp || Date.now() - new Date(timestamp).getTime() > TWO_HOURS
 
   const needsUpdate
-    = !summoner?.mastery?.champions?.length || !summoner?.mastery?.totalPoints || isStale(summoner.mastery.lastUpdate)
+    = !summoner?.mastery?.champions?.length
+      || !summoner?.mastery?.totalPoints
+      || isStale(summoner.mastery.lastUpdate)
 
   // If nothing is stale or missing, return existing data
   if (!needsUpdate)
@@ -28,7 +29,7 @@ export async function fetchSummonerMastery(puuid: string) {
       '/api/riot/fetchSummonerMastery',
       {
         query: { puuid },
-      },
+      }
     )
 
     const updated = {
@@ -38,7 +39,10 @@ export async function fetchSummonerMastery(puuid: string) {
 
     updated.champions = result.mastery as ChampionMastery[]
     console.log('💠 - fetchSummonerMastery - updated:', updated)
-    console.log('💠 - fetchSummonerMastery - result.totalPoints:', result.totalPoints)
+    console.log(
+      '💠 - fetchSummonerMastery - result.totalPoints:',
+      result.totalPoints
+    )
 
     await ss.mergeSummonerData(puuid, {
       mastery: {

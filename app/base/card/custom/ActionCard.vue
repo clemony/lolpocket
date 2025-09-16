@@ -32,12 +32,13 @@ const {
         className,
       )
     ">
-    <CardTitle class="dst text-5 self-start">
+    <CardTitle class="dst text-lgself-start">
       <slot name="title">
         {{ title }}
       </slot>
     </CardTitle>
-    <CardDescription class="leading-6 opacity-70  text-pretty self-start inline align-baseline">
+    <CardDescription
+      class="leading-6 opacity-70 text-pretty self-start inline align-baseline">
       <slot name="text">
         {{ text }}
       </slot>
@@ -47,7 +48,7 @@ const {
       class="w-full flex items-center justify-end px-6.75">
       <Button
         variant="neutral"
-        class="hover-ring ">
+        class="hover-ring">
         {{ button }}
       </Button>
     </p>

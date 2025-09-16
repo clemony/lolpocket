@@ -9,7 +9,6 @@ const nameHyphenMap: Record<string, string> = {
   'Renata Glasc': 'Renata\nGlasc',
   'Tahm Kench': 'Tahm\nkench',
   'Tryndamere': 'Tryn-\ndamere',
-
 }
 
 export function hyphenateChampionName(n: string): string {

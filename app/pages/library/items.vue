@@ -8,18 +8,21 @@ definePageMeta({
 
 const route = useRoute()
 const is = useItemStore()
-const quote = computed (() => getRandom(itemQuotes))
+const quote = computed(() => getRandom(itemQuotes))
 const tabs = ref('/library/items')
 
 const s = useItemFilterProvider()
 console.log('🌱 - s:', s)
 const state = ref(null)
-watch(() => s, (newVal) => {
-  console.log('💠 - watch - newVal:', newVal)
-  if (newVal)
-    state.value = s
-})
-onMounted (() => {
+watch(
+  () => s,
+  (newVal) => {
+    console.log('💠 - watch - newVal:', newVal)
+    if (newVal)
+      state.value = s
+  }
+)
+onMounted(() => {
   state.value = s
   tabs.value = route.path
 })
@@ -43,7 +46,7 @@ onMounted (() => {
     <template #right>
       <Tabs
         v-model:model-value="tabs"
-        class="**:pointer-events-auto "
+        class="**:pointer-events-auto"
         @update:model-value="navigateTo(tabs)">
         <IndicatorTabsList class="grid grid-cols-2 h-10 max-w-120 w-80">
           <IndicatorTabsTrigger value="/library/items">

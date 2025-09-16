@@ -14,8 +14,12 @@ const rolesList = ref([...roles.sort((a, b) => a.localeCompare(b))])
 const originalOrder = ref([...rolesList.value])
 
 const sortedRoles = computed(() => {
-  const checked = rolesList.value.filter(role => useArrayIncludes(pocket.value.roles, role))
-  const unchecked = rolesList.value.filter(role => !useArrayIncludes(pocket.value.roles, role))
+  const checked = rolesList.value.filter(role =>
+    useArrayIncludes(pocket.value.roles, role)
+  )
+  const unchecked = rolesList.value.filter(
+    role => !useArrayIncludes(pocket.value.roles, role)
+  )
   return [...checked, ...unchecked]
 })
 
@@ -38,8 +42,9 @@ function handleReset() {
 </script>
 
 <template>
-  <p class="text-2 mb-3">
-    Is your pocket for a specific role? Roles can be specified in addition to champions, or in place of them.
+  <p class="text-xs mb-3">
+    Is your pocket for a specific role? Roles can be specified in addition to
+    champions, or in place of them.
   </p>
 
   <transition-slide
@@ -57,11 +62,10 @@ function handleReset() {
       v-for="role in sortedRoles"
       :key="role"
       :for="role"
-      class="flex gap-3 peer-not-checked:first-of-type:-ml-2  capitalize text-2 btn bg-b1 !rounded-lg has-checked:!bgneutral has-checked:!btn-neutral has-checked:text-nc">
+      class="flex gap-3 peer-not-checked:first-of-type:-ml-2 capitalize text-xs btn bg-b1 !rounded-lg has-checked:!bgneutral has-checked:!btn-neutral has-checked:text-nc">
       <input
         :id="role"
         v-model="pocket.roles"
-
         type="checkbox"
         name="roles"
         class="hidden peer"

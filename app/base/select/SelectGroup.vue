@@ -4,7 +4,9 @@ import { SelectGroup } from 'reka-ui'
 
 import type { HTMLAttributes } from 'vue'
 
-const props = defineProps<SelectGroupProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<
+  SelectGroupProps & { class?: HTMLAttributes['class'] }
+>()
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props

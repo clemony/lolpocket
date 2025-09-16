@@ -5,7 +5,13 @@ const props = defineProps<{
 </script>
 
 <template>
-  <button :class="cn('btn btn-ghost hover:bg-accent text-nc hover:text-nc justify-start text-normal **:text-nc **:hover:text-nc gap-3', props.class)">
+  <button
+    :class="
+      cn(
+        'btn btn-ghost hover:bg-accent text-nc hover:text-nc justify-start text-normal **:text-nc **:hover:text-nc gap-3',
+        props.class,
+      )
+    ">
     <slot />
   </button>
 </template>

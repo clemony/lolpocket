@@ -10,22 +10,21 @@ const item: Item = {
     {
       name: 'Blur',
       unique: true,
-      effects: 'Basic attacks on-hit reduce the remaining cooldowns of your abilities and spells with <img src="/img/icons/dash.webp" class="tip-icon" />dashes and/or <img src="/img/icons/blink.webp" class="tip-icon" />blinks by 12%, modified to 4% for your ultimate ability.'
-    }
+      effects:
+        'Basic attacks on-hit reduce the remaining cooldowns of your abilities and spells with <img src="/img/icons/dash.webp" class="tip-icon" />dashes and/or <img src="/img/icons/blink.webp" class="tip-icon" />blinks by 12%, modified to 4% for your ultimate ability.',
+    },
   ],
   stats: {
     attackSpeed: 60,
-    percentMovespeed: 12
+    percentMovespeed: 12,
   },
   shop: {
     prices: {
       total: 0,
       combined: 1000,
-      sell: 0
-    }
+      sell: 0,
+    },
   },
-  maps: [
-    30
-  ]
+  maps: [30],
 }
 export default item

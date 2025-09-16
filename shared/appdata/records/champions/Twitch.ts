@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:15 PM CDT
 
 const champion: Champion = {
   "id": 29,
@@ -127,7 +127,10 @@ const champion: Champion = {
             {
               "attribute": "Stealth Duration",
               "modifiers": [
-                "10 / 11 / 12 / 13 / 14 seconds"
+                {
+                  "values": "10 / 11 / 12 / 13 / 14",
+                  "unit": " seconds"
+                }
               ]
             }
           ]
@@ -141,7 +144,10 @@ const champion: Champion = {
             {
               "attribute": "Bonus Attack Speed",
               "modifiers": [
-                "45 / 50 / 55 / 60 / 65%"
+                {
+                  "values": "45 / 50 / 55 / 60 / 65",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -174,8 +180,14 @@ const champion: Champion = {
             {
               "attribute": "Slow",
               "modifiers": [
-                "30 / 35 / 40 / 45 / 50%",
-                "6% per 100 AP"
+                {
+                  "values": "30 / 35 / 40 / 45 / 50",
+                  "unit": "%"
+                },
+                {
+                  "values": "6",
+                  "unit": "% per 100 AP"
+                }
               ]
             }
           ]
@@ -207,7 +219,9 @@ const champion: Champion = {
             {
               "attribute": "Base Physical Damage",
               "modifiers": [
-                "20 / 30 / 40 / 50 / 60"
+                {
+                  "values": "20 / 30 / 40 / 50 / 60"
+                }
               ]
             }
           ]
@@ -218,24 +232,45 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage Per Stack",
               "modifiers": [
-                "15 / 20 / 25 / 30 / 35",
-                "35% bonus AD"
+                {
+                  "values": "15 / 20 / 25 / 30 / 35"
+                },
+                {
+                  "values": "35",
+                  "unit": "% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Minimum Mixed Damage",
               "modifiers": [
-                "35 / 50 / 65 / 80 / 95",
-                "35% bonus AD",
-                "35% AP"
+                {
+                  "values": "35 / 50 / 65 / 80 / 95"
+                },
+                {
+                  "values": "35",
+                  "unit": "% bonus AD"
+                },
+                {
+                  "values": "35",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Maximum Mixed Damage",
               "modifiers": [
-                "110 / 150 / 190 / 230 / 270",
-                "210% bonus AD",
-                "210% AP"
+                {
+                  "values": "110 / 150 / 190 / 230 / 270"
+                },
+                {
+                  "values": "210",
+                  "unit": "% bonus AD"
+                },
+                {
+                  "values": "210",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -270,7 +305,9 @@ const champion: Champion = {
             {
               "attribute": "Bonus Attack Damage",
               "modifiers": [
-                "30 / 45 / 60"
+                {
+                  "values": "30 / 45 / 60"
+                }
               ]
             }
           ]

@@ -1,11 +1,6 @@
 <script setup lang="ts">
 import type { HoverCardContentProps } from 'reka-ui'
-import {
-  HoverCardContent,
-
-  HoverCardPortal,
-  useForwardProps,
-} from 'reka-ui'
+import { HoverCardContent, HoverCardPortal, useForwardProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { computed } from 'vue'
 
@@ -13,7 +8,7 @@ const props = withDefaults(
   defineProps<HoverCardContentProps & { class?: HTMLAttributes['class'] }>(),
   {
     sideOffset: 4,
-  },
+  }
 )
 
 const delegatedProps = reactiveOmit(props, 'class')

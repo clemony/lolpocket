@@ -1,30 +1,19 @@
 export function matchFilters(
   puuid: string,
   match: MatchData,
-  options: MatchFilter,
+  options: MatchFilter
 ) {
-  const {
-    patch,
-    queue,
-    champion,
-    ally,
-    role,
-    ignoreRole = false,
-  } = options
+  const { patch, queue, champion, ally, role, ignoreRole = false } = options
 
   const ds = useDataStore()
 
   const player = match.participants.find(p => p.puuid == puuid)
 
   const matchesPatch
-    = !patch
-      || patch === ds.currentPatch
-      || match.gamePatch === patch
+    = !patch || patch === ds.currentPatch || match.gamePatch === patch
 
   const matchesQueue
-    = !queue
-      || Number(queue) === 0
-      || match.queueId === Number(queue)
+    = !queue || Number(queue) === 0 || match.queueId === Number(queue)
 
   const matchesChampion
     = !champion
@@ -32,16 +21,18 @@ export function matchFilters(
       || ix().champNameById(player.championId) === champion
 
   const matchesPlayer
-    = !ally
-      || match.participants.some(p => p.riotIdGameName === ally)
+    = !ally || match.participants.some(p => p.riotIdGameName === ally)
 
   const matchesRole
-    = ignoreRole
-      || !role
-      || role === 'ALL'
-      || player.teamPosition === role
+    = ignoreRole || !role || role === 'ALL' || player.teamPosition === role
 
-  return matchesPatch && matchesQueue && matchesChampion && matchesPlayer && matchesRole
+  return (
+    matchesPatch
+    && matchesQueue
+    && matchesChampion
+    && matchesPlayer
+    && matchesRole
+  )
 }
 
 //

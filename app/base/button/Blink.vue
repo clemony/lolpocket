@@ -3,7 +3,14 @@ defineOptions({
   inheritAttrs: false,
 })
 
-const { class: className, variant, size, shape, hover, to } = defineProps<{
+const {
+  class: className,
+  variant,
+  size,
+  shape,
+  hover,
+  to,
+} = defineProps<{
   to: any
   class?: HTMLAttributes['class']
   variant?: any
@@ -30,7 +37,6 @@ defineNuxtLink({
   <Button
     as-child
     :class="cn('duration-50', className)"
-
     v-bind="{ variant, size, shape, hover }">
     <NuxtLink
       v-bind="$attrs"

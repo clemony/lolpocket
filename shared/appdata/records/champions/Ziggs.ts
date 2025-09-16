@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:15 PM CDT
 
 const champion: Champion = {
   "id": 115,
@@ -132,8 +132,14 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "80 / 130 / 180 / 230 / 280",
-                "60 / 65 / 70 / 75 / 80% AP"
+                {
+                  "values": "80 / 130 / 180 / 230 / 280"
+                },
+                {
+                  "values": "60 - 80",
+                  "unit": "% AP",
+                  "tooltip": "Scaling per rank:\n60 / 65 / 70 / 75 / 80% AP"
+                }
               ]
             }
           ]
@@ -171,8 +177,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "70 / 105 / 140 / 175 / 210",
-                "50% AP"
+                {
+                  "values": "70 / 105 / 140 / 175 / 210"
+                },
+                {
+                  "values": "50",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -183,7 +194,10 @@ const champion: Champion = {
             {
               "attribute": "Demolition Threshold",
               "modifiers": [
-                "25 / 27.5 / 30 / 32.5 / 35% of turret's maximum health"
+                {
+                  "values": "25 / 27.5 / 30 / 32.5 / 35",
+                  "unit": "% of turret's maximum health"
+                }
               ]
             }
           ]
@@ -223,28 +237,49 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage per Mine",
               "modifiers": [
-                "30 / 70 / 110 / 150 / 190",
-                "25 / 30 / 35 / 40 / 45% AP"
+                {
+                  "values": "30 / 70 / 110 / 150 / 190"
+                },
+                {
+                  "values": "25 - 45",
+                  "unit": "% AP",
+                  "tooltip": "Scaling per rank:\n25 / 30 / 35 / 40 / 45% AP"
+                }
               ]
             },
             {
               "attribute": "Reduced Damage per Mine",
               "modifiers": [
-                "12 / 28 / 44 / 60 / 76",
-                "10 / 12 / 14 / 16 / 18% AP"
+                {
+                  "values": "12 / 28 / 44 / 60 / 76"
+                },
+                {
+                  "values": "10 - 18",
+                  "unit": "% AP",
+                  "tooltip": "Scaling per rank:\n10 / 12 / 14 / 16 / 18% AP"
+                }
               ]
             },
             {
               "attribute": "Maximum Total Magic Damage",
               "modifiers": [
-                "150 / 350 / 550 / 750 / 950",
-                "125 / 150 / 175 / 200 / 225% AP"
+                {
+                  "values": "150 / 350 / 550 / 750 / 950"
+                },
+                {
+                  "values": "125 - 225",
+                  "unit": "% AP",
+                  "tooltip": "Scaling per rank:\n125 / 150 / 175 / 200 / 225% AP"
+                }
               ]
             },
             {
               "attribute": "Slow",
               "modifiers": [
-                "10 / 20 / 30 / 40 / 50%"
+                {
+                  "values": "10 / 20 / 30 / 40 / 50",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -281,15 +316,25 @@ const champion: Champion = {
             {
               "attribute": "Epicenter Magic Damage",
               "modifiers": [
-                "300 / 500 / 700",
-                "100% AP"
+                {
+                  "values": "300 / 500 / 700"
+                },
+                {
+                  "values": "100",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Reduced Damage",
               "modifiers": [
-                "195 / 325 / 455",
-                "65% AP"
+                {
+                  "values": "195 / 325 / 455"
+                },
+                {
+                  "values": "65",
+                  "unit": "% AP"
+                }
               ]
             }
           ]

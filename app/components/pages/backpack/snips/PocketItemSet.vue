@@ -6,7 +6,7 @@ const { class: className, set } = defineProps<{
 </script>
 
 <template>
-  <div class="w-full flex items-center gap-2  py-1">
+  <div class="w-full flex items-center gap-2 py-1">
     <template
       v-for="i in 6"
       :key="i">

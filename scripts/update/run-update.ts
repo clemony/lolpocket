@@ -11,8 +11,12 @@ async function main() {
     // --- Items ---
     execSync('tsx scripts/fetch/fetch-items.ts', { stdio: 'inherit' })
     execSync('tsx scripts/generate/generate-items.ts', { stdio: 'inherit' })
-    execSync('tsx scripts/generate/generate-item-filter.ts', { stdio: 'inherit' })
-    execSync('tsx scripts/generate/generate-item-stats.ts', { stdio: 'inherit' })
+    execSync('tsx scripts/generate/generate-item-filter.ts', {
+      stdio: 'inherit',
+    })
+    execSync('tsx scripts/generate/generate-item-stats.ts', {
+      stdio: 'inherit',
+    })
 
     // --- Champions ---
     await championUpdate()

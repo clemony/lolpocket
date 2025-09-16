@@ -6,14 +6,14 @@ const props = defineProps<{
 }>()
 const emit = defineEmits(['update:model-value'])
 
-const pocket = computed (() => {
+const pocket = computed(() => {
   return props.pocket
 })
 </script>
 
 <template>
   <Field :title="props.title">
-  <!--   <Select v-model:model-value="pocket.complete.items[props.index]">
+    <!--   <Select v-model:model-value="pocket.complete.items[props.index]">
       <SelectTrigger
         class="h-auto shadow-none py-4 hover:border-b2 !bg-b2/40 hover:inset-shadow-xs hover:shadow-warm-2 cursor-pointer !rounded-box"
         :disabled="pocket.items.length == 0">
@@ -41,6 +41,4 @@ const pocket = computed (() => {
   </Field>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

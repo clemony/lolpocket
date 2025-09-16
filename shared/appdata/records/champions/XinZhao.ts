@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:15 PM CDT
 
 const champion: Champion = {
   "id": 5,
@@ -122,15 +122,25 @@ const champion: Champion = {
             {
               "attribute": "Bonus Physical Damage",
               "modifiers": [
-                "20 / 35 / 50 / 65 / 80",
-                "40% bonus AD"
+                {
+                  "values": "20 / 35 / 50 / 65 / 80"
+                },
+                {
+                  "values": "40",
+                  "unit": "% bonus AD"
+                }
               ]
             },
             {
               "attribute": "Total Bonus Physical Damage",
               "modifiers": [
-                "60 / 105 / 150 / 195 / 240",
-                "120% bonus AD"
+                {
+                  "values": "60 / 105 / 150 / 195 / 240"
+                },
+                {
+                  "values": "120",
+                  "unit": "% bonus AD"
+                }
               ]
             }
           ]
@@ -169,24 +179,45 @@ const champion: Champion = {
             {
               "attribute": "Slash Physical Damage",
               "modifiers": [
-                "30 / 40 / 50 / 60 / 70",
-                "30% AD"
+                {
+                  "values": "30 / 40 / 50 / 60 / 70"
+                },
+                {
+                  "values": "30",
+                  "unit": "% AD"
+                }
               ]
             },
             {
               "attribute": "Thrust Physical Damage",
               "modifiers": [
-                "50 / 85 / 120 / 155 / 190",
-                "90% AD",
-                "65% AP"
+                {
+                  "values": "50 / 85 / 120 / 155 / 190"
+                },
+                {
+                  "values": "90",
+                  "unit": "% AD"
+                },
+                {
+                  "values": "65",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Total Physical Damage",
               "modifiers": [
-                "80 / 125 / 170 / 215 / 260",
-                "120% AD",
-                "65% AP"
+                {
+                  "values": "80 / 125 / 170 / 215 / 260"
+                },
+                {
+                  "values": "120",
+                  "unit": "% AD"
+                },
+                {
+                  "values": "65",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -227,8 +258,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "50 / 75 / 100 / 125 / 150",
-                "60% AP"
+                {
+                  "values": "50 / 75 / 100 / 125 / 150"
+                },
+                {
+                  "values": "60",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -239,7 +275,10 @@ const champion: Champion = {
             {
               "attribute": "Bonus Attack Speed",
               "modifiers": [
-                "40 / 45 / 50 / 55 / 60%"
+                {
+                  "values": "40 / 45 / 50 / 55 / 60",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -278,10 +317,21 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "75 / 175 / 275",
-                "100% bonus AD",
-                "110% AP",
-                "15% of target's current health"
+                {
+                  "values": "75 / 175 / 275"
+                },
+                {
+                  "values": "100",
+                  "unit": "% bonus AD"
+                },
+                {
+                  "values": "110",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "15",
+                  "unit": "% of target's current health"
+                }
               ]
             }
           ]

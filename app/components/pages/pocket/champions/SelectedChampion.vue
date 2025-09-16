@@ -17,7 +17,9 @@ const variants = {
   },
 }
 
-const werid = computed (() => isOdd(pocket.champions?.length - (pocket.main?.champion ? 1 : 0)))
+const werid = computed(() =>
+  isOdd(pocket.champions?.length - (pocket.main?.champion ? 1 : 0))
+)
 console.log('🌱 - werid:', werid)
 </script>
 
@@ -36,14 +38,31 @@ console.log('🌱 - werid:', werid)
         }"
         :variants="variants"
         layout
-        :class="cn('size-full overflow-hidden shadow-sm drop-shadow-sm flex rounded-lg hover:ring-1.5 hover:ring-neutral/80 group/c')">
+        :class="
+          cn(
+            'size-full overflow-hidden shadow-sm drop-shadow-sm flex rounded-lg hover:ring-1.5 hover:ring-neutral/80 group/c',
+          )
+        ">
         <Champion
           :img="getSplash(champion, 'tile')"
           :alt="champion"
-          :class="cn('aspect-auto inset-shadow-sm inset-shadow-black/26 h-24  group-hover/c:*:-translate-y-12 relative *:!scale-120  rounded-lg *:transition-all *:duration-500 *:ease-out overflow-hidden', { 'group-last/c:*:-translate-y-26 group-last/c:group-hover/c:*:-translate-y-31': isOdd(pocket.champions?.length - (pocket.main?.champion ? 1 : 0)) })">
-        </Champion>
+          :class="
+            cn(
+              'aspect-auto inset-shadow-sm inset-shadow-black/26 h-24  group-hover/c:*:-translate-y-12 relative *:!scale-120  rounded-lg *:transition-all *:duration-500 *:ease-out overflow-hidden',
+              {
+                'group-last/c:*:-translate-y-26 group-last/c:group-hover/c:*:-translate-y-31':
+                  isOdd(
+                    pocket.champions?.length - (pocket.main?.champion ? 1 : 0),
+                  ),
+              },
+            )
+          "></Champion>
         <div
-          :class="cn('size-full  opacity-0 flex-nowrap text-nc transition-all duration-200  flex items-center justify-between  !cursor-pointer absolute bg-neutral/60 left-0 pl-3 pr-2 bottom-0 group-hover/c:opacity-100')"
+          :class="
+            cn(
+              'size-full  opacity-0 flex-nowrap text-nc transition-all duration-200  flex items-center justify-between  !cursor-pointer absolute bg-neutral/60 left-0 pl-3 pr-2 bottom-0 group-hover/c:opacity-100',
+            )
+          "
           @click="removeChampion(champion, pocket)">
           <h2 class="text-wrap text-pretty">
             {{ hyphenateChampionName(ix().champNameByKey(champion)) }}
@@ -51,7 +70,7 @@ console.log('🌱 - werid:', werid)
           <button
             :title="`Remove ${champion}`"
             :aria-label="`remove ${champion} from pocket`"
-            class="size-10 group/bbb grid place-items-center btn-square  cursor-pointer rounded-lg"
+            class="size-10 group/bbb grid place-items-center btn-square cursor-pointer rounded-lg"
             hover="btn">
             <icon
               name="x"

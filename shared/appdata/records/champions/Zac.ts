@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:15 PM CDT
 
 const champion: Champion = {
   "id": 154,
@@ -127,17 +127,33 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "40 / 55 / 70 / 85 / 100",
-                "30% AP",
-                "3% of Zac's maximum health"
+                {
+                  "values": "40 / 55 / 70 / 85 / 100"
+                },
+                {
+                  "values": "30",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "3",
+                  "unit": "% of Zac's maximum health"
+                }
               ]
             },
             {
               "attribute": "Total Magic Damage",
               "modifiers": [
-                "80 / 110 / 140 / 170 / 200",
-                "60% AP",
-                "6% of Zac's maximum health"
+                {
+                  "values": "80 / 110 / 140 / 170 / 200"
+                },
+                {
+                  "values": "60",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "6",
+                  "unit": "% of Zac's maximum health"
+                }
               ]
             }
           ]
@@ -183,14 +199,22 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "40 / 50 / 60 / 70 / 80",
-                "4 / 5 / 6 / 7 / 8% (+ 3% per 100 AP) of target's maximum health"
+                {
+                  "values": "40 / 50 / 60 / 70 / 80"
+                },
+                {
+                  "values": "4 - 8",
+                  "unit": "% (+ 3% per 100 AP) of target's maximum health",
+                  "tooltip": "Scaling per rank:\n4 / 5 / 6 / 7 / 8% (+ 3% per 100 AP) of target's maximum health"
+                }
               ]
             },
             {
               "attribute": "Capped Non-Champion Damage",
               "modifiers": [
-                "240 / 250 / 260 / 270 / 280"
+                {
+                  "values": "240 / 250 / 260 / 270 / 280"
+                }
               ]
             }
           ]
@@ -227,7 +251,10 @@ const champion: Champion = {
             {
               "attribute": "Maximum Range Channel Duration",
               "modifiers": [
-                "0.9 / 1 / 1.1 / 1.2 / 1.3 seconds"
+                {
+                  "values": "0.9 / 1 / 1.1 / 1.2 / 1.3",
+                  "unit": " seconds"
+                }
               ]
             }
           ]
@@ -241,8 +268,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "60 / 105 / 150 / 195 / 240",
-                "80% AP"
+                {
+                  "values": "60 / 105 / 150 / 195 / 240"
+                },
+                {
+                  "values": "80",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -277,8 +309,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "140 / 210 / 280",
-                "40% AP"
+                {
+                  "values": "140 / 210 / 280"
+                },
+                {
+                  "values": "40",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -289,15 +326,25 @@ const champion: Champion = {
             {
               "attribute": "Reduced Damage",
               "modifiers": [
-                "70 / 105 / 140",
-                "20% AP"
+                {
+                  "values": "70 / 105 / 140"
+                },
+                {
+                  "values": "20",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Total Magic Damage",
               "modifiers": [
-                "350 / 525 / 700",
-                "100% AP"
+                {
+                  "values": "350 / 525 / 700"
+                },
+                {
+                  "values": "100",
+                  "unit": "% AP"
+                }
               ]
             }
           ]

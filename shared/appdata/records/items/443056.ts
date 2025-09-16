@@ -10,19 +10,18 @@ const item: Item = {
     {
       name: 'Supremacy',
       unique: true,
-      effects: 'Increase your <b>total</b> attack damage, ability power, attack speed, <b>maximum</b> health, armor, magic resistance, and ability haste by 26%, further increased by 1% for each round you win and reduced by 3% for each round you lose.'
-    }
+      effects:
+        'Increase your <b>total</b> attack damage, ability power, attack speed, <b>maximum</b> health, armor, magic resistance, and ability haste by 26%, further increased by 1% for each round you win and reduced by 3% for each round you lose.',
+    },
   ],
   stats: {},
   shop: {
     prices: {
       total: 0,
       combined: 1000,
-      sell: 0
-    }
+      sell: 0,
+    },
   },
-  maps: [
-    30
-  ]
+  maps: [30],
 }
 export default item

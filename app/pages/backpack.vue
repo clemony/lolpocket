@@ -10,7 +10,7 @@ definePageMeta({
 })
 const isCollapsed = ref(false)
 const route = useRoute()
-const pinned = computed (() => ps().pockets.filter(p => p.location.pinned))
+const pinned = computed(() => ps().pockets.filter(p => p.location.pinned))
 </script>
 
 <template>
@@ -19,12 +19,12 @@ const pinned = computed (() => ps().pockets.filter(p => p.location.pinned))
       :is-collapsed
       :accounts
       :mails
-      class="space-y-2 "
-      @toggle:collapse="e => isCollapsed = !e"
+      class="space-y-2"
+      @toggle:collapse="(e) => (isCollapsed = !e)"
       @expand="isCollapsed = true"
       @collapse="isCollapsed = false">
       <template #nav>
-        <div class="size-full h-[45px] p-1 w-full flex items-center border-b ">
+        <div class="size-full h-[45px] p-1 w-full flex items-center border-b">
           <DropdownMenu>
             <DropdownMenuTrigger
               variant="ghost"
@@ -32,30 +32,31 @@ const pinned = computed (() => ps().pockets.filter(p => p.location.pinned))
               size="md"
               class="justify-start w-full group pl-4.5 pr-5 !gap-3 data-[state=open]:fx-noise data-[state=open]:shadow-sm data-[state=open]:border-b3/80 data-[state=open]:shadow-black/8 data-[state=open]:inset-shadow-xs hover:bg-transparent">
               <SummonerIcon class="rounded-full size-7" />
-              <span class="w-full truncate text-4 dst  font-semibold *:first:capitalize items-center ">
-                <SummonerName class="inline" />'s Backpack
+              <span
+                class="w-full truncate text-md dst font-semibold *:first:capitalize items-center">
+                <SummonerName class="inline" />
+                's Backpack
               </span>
               <icon
                 name="select"
                 :class="cn('size-4.5 text-bc/60')" />
             </DropdownMenuTrigger>
             <LazyDropdownMenuContent>
-              <DropdownMenuItem>
-                Edit pins
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                Edit tags
-              </DropdownMenuItem>
+              <DropdownMenuItem>Edit pins</DropdownMenuItem>
+              <DropdownMenuItem>Edit tags</DropdownMenuItem>
             </LazyDropdownMenuContent>
           </DropdownMenu>
         </div>
         <BoxNav
           :is-collapsed
-          :links="route.matched[0].children.sort((a, b) => (Number(a.meta?.order) - Number(b.meta?.order)))" />
+          :links="
+            route.matched[0].children.sort(
+              (a, b) => Number(a.meta?.order) - Number(b.meta?.order),
+            )
+          " />
 
         <!-- pinned -->
-        <TransitionExpand
-          v-if="pinned.length">
+        <TransitionExpand v-if="pinned.length">
           <PinnedPocketsNav
             :pinned
             :is-collapsed />
@@ -79,8 +80,7 @@ const pinned = computed (() => ps().pockets.filter(p => p.location.pinned))
               </PopoverContent>
             </Popover>
           </template>
-          <PocketTagsInput
-            v-else />
+          <PocketTagsInput v-else />
         </div>
 
         <Separator />
@@ -101,8 +101,7 @@ const pinned = computed (() => ps().pockets.filter(p => p.location.pinned))
               </PopoverContent>
             </Popover>
           </template>
-          <BackpackRoleFilter
-            v-else />
+          <BackpackRoleFilter v-else />
         </div>
       </template>
 

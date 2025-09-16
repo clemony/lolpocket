@@ -4,12 +4,13 @@ import type { SelectItemProps } from 'reka-ui'
 import {
   SelectItem,
   SelectItemIndicator,
-
   SelectItemText,
   useForwardProps,
 } from 'reka-ui'
 
-const props = defineProps<SelectItemProps & { class?: HTMLAttributes['class'], noTick?: boolean }>()
+const props = defineProps<
+  SelectItemProps & { class?: HTMLAttributes['class'], noTick?: boolean }
+>()
 
 const delegatedProps = reactiveOmit(props, 'class')
 
@@ -21,7 +22,7 @@ const forwarded = useForwardProps(delegatedProps)
     v-bind="forwarded"
     :class="
       cn(
-        'relative flex w-full cursor-default select-none items-center rounded-md py-1.5 pl-2 pr-8 text-2 outline-none focus:bg-b2 focus:textneutral-bc data-[disabled]:pointer-events-none data-[disabled]:opacity-50 data-[state=checked]:bg-b2/40',
+        'relative flex w-full cursor-default select-none items-center rounded-md py-1.5 pl-2 pr-8 text-xs outline-none focus:bg-b2 focus:textneutral-bc data-[disabled]:pointer-events-none data-[disabled]:opacity-50 data-[state=checked]:bg-b2/40',
         props.class,
       )
     ">

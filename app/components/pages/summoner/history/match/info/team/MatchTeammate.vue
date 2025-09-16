@@ -25,16 +25,14 @@ const stats = computed(() => {
     keystone: ix().runes.find(r => r.id == id),
     secondaryPath: pathIndex.find(p => p.id == player?.perks?.secondary)
       ?.name,
-    cs:
-      player.totalMinionsKilled
-      + player.neutralMinionsKilled,
+    cs: player.totalMinionsKilled + player.neutralMinionsKilled,
     items: Object.values(list),
     lpScore: playerRank.list.findIndex(p => p.puuid == player.puuid) + 1,
   }
 })
 
 const divClass
-  = '**:not-[h4]:tracking-tight **:not-[h4]:font-semibold **:text-2 grid items-center grid-rows-2 justify-start justify-items-start h-full py-2  max-h-16.5'
+  = '**:not-[h4]:tracking-tight **:not-[h4]:font-semibold **:text-xs grid items-center grid-rows-2 justify-start justify-items-start h-full py-2  max-h-16.5'
 
 const pClass
   = 'leading-0 rounded-tiny flex gap-2 py-px  text-end items-center justify-end font-semibold tracking-tight text-nowrap truncate hover:underline'
@@ -46,11 +44,14 @@ const runeClass
 <template>
   <div
     v-if="player"
-    :class="cn('grid z-1 grid-flow-col gap-1  items-center overflow-hidden justify-between grow size-full *:size-full max-h-16.5 h-16.5 pl-2 pr-2 ',
-               'grid-cols-[33px_18px_1.25fr_18px_1fr_0.9fr_1fr_1.1fr_3.4fr_0.9fr]',
-    )">
+    :class="
+      cn(
+        'grid z-1 grid-flow-col gap-1  items-center overflow-hidden justify-between grow size-full *:size-full max-h-16.5 h-16.5 pl-2 pr-2 ',
+        'grid-cols-[33px_18px_1.25fr_18px_1fr_0.9fr_1fr_1.1fr_3.4fr_0.9fr]',
+      )
+    ">
     <div
-      class="!grid-rows-1 "
+      class="!grid-rows-1"
       :class="divClass">
       <ChampionIcon
         :id="player?.championId"
@@ -63,7 +64,7 @@ const runeClass
     </div>
 
     <div
-      class="!grid-rows-1 "
+      class="!grid-rows-1"
       :class="divClass">
       <PlayerSpells
         :player="player"
@@ -72,19 +73,19 @@ const runeClass
     <!-- name and tag -->
 
     <div
-      class="!py-3 "
+      class="!py-3"
       :class="divClass">
       <h4
         v-tippy="{
           content: player.riotIdGameName,
           placement: 'top',
         }"
-        class="font-bold text-nowrap text-2 truncate flex-nowrap items-end size-full">
+        class="font-bold text-nowrap text-xs truncate flex-nowrap items-end size-full">
         {{ player.riotIdGameName }}
       </h4>
 
       <p
-        class="font-medium text-nowrap text-2 flex self-start items-center truncate opacity-60">
+        class="font-medium text-nowrap text-xs flex self-start items-center truncate opacity-60">
         <span>#{{ player.riotIdTagline }}</span>
       </p>
     </div>
@@ -143,7 +144,7 @@ const runeClass
       <Badge
         v-if="stats.kda / 100 == Infinity"
         size="xs"
-        class="border-master/40 saturate-180 bg-master/20 text-0 **:leading-0">
+        class="border-master/40 saturate-180 bg-master/20 text-3xs **:leading-0">
         <icon
           name="fa6-solid:infinity"
           class="size-3.5 dst mt-[0.04em]" />
@@ -161,27 +162,37 @@ const runeClass
 
     <div :class="cn('relative !size-full', divClass)">
       <div class="flex items-center w-full text-start justify-start relative">
-        <span class="font-bold  tracking-wide text-start">
+        <span class="font-bold tracking-wide text-start">
           {{ player.mvpScore }}
         </span>
         <!-- badge - rank / kp -->
-        <p class="absolute right-0  top-2.5 items-center grid  justify-end justify-items-end  ">
+        <p
+          class="absolute right-0 top-2.5 items-center grid justify-end justify-items-end">
           <span
-            v-if="player.puuid == playerRank.mvp || player.puuid == playerRank.ace"
+            v-if="
+              player.puuid == playerRank.mvp || player.puuid == playerRank.ace
+            "
             class="size-full relative grid items-center justify-end">
             <Badge
               size="xs"
-              :class="cn('!px-1 gap-1 my-0 right-0 absolute **:leading-0', { 'border-gold/40 bg-precision/90 ': player.puuid == playerRank.mvp, 'bg-fighter/70 border-fighter': player.puuid == playerRank.ace })"
+              :class="
+                cn('!px-1 gap-1 my-0 right-0 absolute **:leading-0', {
+                  'border-gold/40 bg-precision/90 ':
+                    player.puuid == playerRank.mvp,
+                  'bg-fighter/70 border-fighter':
+                    player.puuid == playerRank.ace,
+                })
+              "
               class="">
-              <span class="font-bold text-white tracking-wide !text-0">
-                {{ player.puuid == playerRank.mvp ? 'MVP' : 'ACE' }}
+              <span class="font-bold text-white tracking-wide !text-3xs">
+                {{ player.puuid == playerRank.mvp ? "MVP" : "ACE" }}
               </span>
             </Badge>
           </span>
 
           <span
             v-else
-            class="**:!text-1 font-normal -mt-0.5  opacity-60 leading-0 px-1 ">
+            class="**:!text-xxs font-normal -mt-0.5 opacity-60 leading-0 px-1">
             <span>{{ stats.lpScore }}</span>
             <span>
               {{ formatNumberPosition(stats.lpScore) }}
@@ -190,9 +201,9 @@ const runeClass
         </p>
       </div>
       <p
-        class="text-bc/80 w-full  leading-4 truncate font-medium tracking-tight !text-2">
+        class="text-bc/80 w-full leading-4 truncate font-medium tracking-tight !text-xs">
         {{ Math.round(player.challenges.killParticipation * 100) }}%
-        <span class="**:!text-1 font-normal  opacity-60  leading-0 px-1 ">kp</span>
+        <span class="**:!text-xxs font-normal opacity-60 leading-0 px-1">kp</span>
       </p>
     </div>
 
@@ -215,7 +226,7 @@ const runeClass
         <span class="size-3 relative grid justify-end">
           <i-stats-hsp
             name="oi:plus"
-            class="!text-shade-b4/50  dst size-3 left-0.25" />
+            class="!text-shade-b4/50 dst size-3 left-0.25" />
         </span>
       </p>
 
@@ -233,8 +244,7 @@ const runeClass
     <div
       class="!justify-items-end !justify-end text-nowrap"
       :class="divClass">
-      <p
-        :class="cn(pClass)">
+      <p :class="cn(pClass)">
         {{ player.totalDamageDealtToChampions.toLocaleString() }}
         <span class="size-3 relative grid justify-center">
           <icon
@@ -258,12 +268,18 @@ const runeClass
       </p>
     </div>
 
-    <div :class="cn('!grid-cols-6  pl-3 justify-self-end  !grid-rows-1', divClass)">
+    <div
+      :class="
+        cn('!grid-cols-6  pl-3 justify-self-end  !grid-rows-1', divClass)
+      ">
       <Item
         v-for="i in 6"
         :id="stats.items[i] ?? null"
         :key="i"
-        v-tippy="{ content: ix().itemNameById(stats.items[i]), placement: 'top' }"
+        v-tippy="{
+          content: ix().itemNameById(stats.items[i]),
+          placement: 'top',
+        }"
         class="size-9 rounded-md *:rounded-md hover-ring" />
     </div>
 
@@ -281,9 +297,7 @@ const runeClass
         {{ stats.cs }} CS
       </p>
 
-      <p
-
-        class="hover:underline">
+      <p class="hover:underline">
         {{ player.goldEarned.toLocaleString() }} G
       </p>
     </div>

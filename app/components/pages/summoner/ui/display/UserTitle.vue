@@ -17,12 +17,12 @@ console.log('💠 - text:', text)
 <template>
   <span
     v-if="text"
-    :class="cn('antialiased lowercase flex items-center leading-0 ', className)">
+    :class="
+      cn('antialiased lowercase flex items-center leading-0 ', className)
+    ">
     <slot />
     {{ text ?? null }}
   </span>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

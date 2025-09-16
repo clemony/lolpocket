@@ -3,26 +3,29 @@ const { champion } = defineProps<{
   champion: Champion
 }>()
 const route = useRoute()
+
+const wrapperClass = 'flex h-12  items-center justify-between border-b border-b-b3/60 capitalize *:first:opacity-50'
 </script>
 
 <template>
-  <aside class="flex flex-col shrink-0 gap-10 scrollbar-hidden  py-22 w-94 overflow-y-auto sticky top-0">
-    <!--     <div class="w-full">
-      <p class="">
-        {{ champion.fullName || champion.name }}
-      </p>
-    </div> -->
-    <menu class="space-y-3">
-      <h3 class="mb-4">
+  <aside
+    class="flex flex-col px-1 shrink-0 gap-8 scrollbar-hidden py-22 w-110 overflow-y-auto sticky top-0">
+    <div class="size-44 shadow-flat"></div>
+    <menu class="space-y-2">
+      <h3 class="mb-4 dst">
         Abilities
       </h3>
       <Blink
         v-for="ability in champion.abilities"
         :key="ability.name"
         as="li"
-        size="lg"
-        :class="cn('justify-start !gap-4', { 'btn-active': route.hash == `#${ability.key}` })"
-        :to=" { path: route.path, hash: `#${ability.key}` }"
+        size="xl"
+        :class="
+          cn('justify-start  !gap-4 rounded-xl', {
+            'btn-active !bg-tint-b2/70 drop-shadow-sm drop-shadow-black/6': route.hash == `#${ability.key}`,
+          })
+        "
+        :to="{ path: route.path, hash: `#${ability.key}` }"
         variant="ghost">
         <span
           class="size-10 rounded-lg shadow-sm drop-shadow-sm overflow-hidden">
@@ -36,9 +39,12 @@ const route = useRoute()
 
     <Collapsible
       v-model:open="us().collapseStates.championInfo[0]"
-      class="field-box ">
-      <CollapsibleTrigger class="flex z-0 h-14 w-full px-4 items-center justify-between">
-        <h3>Stats</h3>
+      class="px-0 data-[state=open]:!overflow-visible field-box  ">
+      <CollapsibleTrigger
+        class="flex z-0   min-h-16 h-16  w-full items-center justify-between  px-5  data-[state=open]:border-b  data-[state=open]:border-b-b3 ">
+        <h3 class="dst">
+          Stats
+        </h3>
         <CaretRotate />
       </CollapsibleTrigger>
       <ChampionStats
@@ -47,19 +53,50 @@ const route = useRoute()
 
     <Collapsible
       v-model:open="us().collapseStates.championInfo[1]"
+      class="data  field-box ">
+      <CollapsibleTrigger
+        class="flex  min-h-16 h-16 w-full px-5  data-[state=open]:border-b  data-[state=open]:border-b-b3 items-center justify-between">
+        <h3>Data</h3>
+
+        <CaretRotate />
+      </CollapsibleTrigger>
+      <CollapsibleContent>
+        <LazyChampionAsideData
+          :champion
+          :wrapper-class />
+      </CollapsibleContent>
+    </Collapsible>
+
+    <Collapsible
+      v-model:open="us().collapseStates.championInfo[2]"
       class="field-box">
-      <CollapsibleTrigger class="flex  h-14 w-full px-4  items-center justify-between">
+      <CollapsibleTrigger
+        class="flex min-h-16 h-16 w-full  px-5  data-[state=open]:border-b  data-[state=open]:border-b-b3  items-center justify-between">
         <h3>Bio</h3>
 
         <CaretRotate />
       </CollapsibleTrigger>
       <CollapsibleContent
-        class="py-4 px-2 after:left-4"
-        menu>
-        <p class="text-pretty indent-2 leading-7 pl-2  ">
+        class="px-5 py-4">
+        <div :class="wrapperClass">
+          <p>Full name</p>
+          {{ champion.fullName || champion.name }}
+        </div>
+        <div :class="wrapperClass">
+          <p>Faction</p>
+          {{ champion.faction }}
+        </div>
+        <p class="mt-4 text-pretty indent-2 leading-7 pl-2">
           {{ champion.lore }}
         </p>
       </CollapsibleContent>
     </Collapsible>
   </aside>
 </template>
+
+<style scoped>
+.data .label {
+  padding-top: 8px;
+  padding-bottom: 1px;
+}
+</style>

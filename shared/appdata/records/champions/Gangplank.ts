@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:56 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:12 PM CDT
 
 const champion: Champion = {
   "id": 41,
@@ -126,8 +126,13 @@ const champion: Champion = {
             {
               "attribute": "Physical Damage",
               "modifiers": [
-                "10 / 40 / 70 / 100 / 130",
-                "100% AD"
+                {
+                  "values": "10 / 40 / 70 / 100 / 130"
+                },
+                {
+                  "values": "100",
+                  "unit": "% AD"
+                }
               ]
             }
           ]
@@ -138,13 +143,17 @@ const champion: Champion = {
             {
               "attribute": "Gold Plunder",
               "modifiers": [
-                "3 / 4 / 5 / 6 / 7"
+                {
+                  "values": "3 / 4 / 5 / 6 / 7"
+                }
               ]
             },
             {
               "attribute": "Silver Serpent Plunder",
               "modifiers": [
-                "4 / 5 / 6 / 7 / 8"
+                {
+                  "values": "4 / 5 / 6 / 7 / 8"
+                }
               ]
             }
           ]
@@ -180,9 +189,17 @@ const champion: Champion = {
             {
               "attribute": "Heal",
               "modifiers": [
-                "45 / 70 / 95 / 120 / 145",
-                "90% AP",
-                "13% missing health"
+                {
+                  "values": "45 / 70 / 95 / 120 / 145"
+                },
+                {
+                  "values": "90",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "13",
+                  "unit": "% missing health"
+                }
               ]
             }
           ]
@@ -212,7 +229,9 @@ const champion: Champion = {
             {
               "attribute": "Maximum charges",
               "modifiers": [
-                "3 / 3 / 4 / 4 / 5"
+                {
+                  "values": "3 / 3 / 4 / 4 / 5"
+                }
               ]
             }
           ]
@@ -226,13 +245,18 @@ const champion: Champion = {
             {
               "attribute": "Slow",
               "modifiers": [
-                "40 / 50 / 60 / 70 / 80%"
+                {
+                  "values": "40 / 50 / 60 / 70 / 80",
+                  "unit": "%"
+                }
               ]
             },
             {
               "attribute": "Bonus Champion Damage",
               "modifiers": [
-                "75 / 105 / 135 / 165 / 195"
+                {
+                  "values": "75 / 105 / 135 / 165 / 195"
+                }
               ]
             }
           ]
@@ -269,22 +293,37 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage Per Wave",
               "modifiers": [
-                "40 / 70 / 100",
-                "10% AP"
+                {
+                  "values": "40 / 70 / 100"
+                },
+                {
+                  "values": "10",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Magic Damage Per Cluster",
               "modifiers": [
-                "120 / 210 / 300",
-                "30% AP"
+                {
+                  "values": "120 / 210 / 300"
+                },
+                {
+                  "values": "30",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Total Magic Damage",
               "modifiers": [
-                "480 / 840 / 1200",
-                "120% AP"
+                {
+                  "values": "480 / 840 / 1200"
+                },
+                {
+                  "values": "120",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -298,15 +337,25 @@ const champion: Champion = {
             {
               "attribute": "True Damage with Death's Daughter",
               "modifiers": [
-                "120 / 210 / 300",
-                "30% AP"
+                {
+                  "values": "120 / 210 / 300"
+                },
+                {
+                  "values": "30",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Total Mixed Damage with Death's Daughter",
               "modifiers": [
-                "600 / 1050 / 1500",
-                "150% AP"
+                {
+                  "values": "600 / 1050 / 1500"
+                },
+                {
+                  "values": "150",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -317,15 +366,25 @@ const champion: Champion = {
             {
               "attribute": "Total Magic Damage with Fire at Will",
               "modifiers": [
-                "720 / 1260 / 1800",
-                "180% AP"
+                {
+                  "values": "720 / 1260 / 1800"
+                },
+                {
+                  "values": "180",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Maximum Mixed Total Damage with Fire at Will and Death's Daughter",
               "modifiers": [
-                "840 / 1470 / 2100",
-                "210% AP"
+                {
+                  "values": "840 / 1470 / 2100"
+                },
+                {
+                  "values": "210",
+                  "unit": "% AP"
+                }
               ]
             }
           ]

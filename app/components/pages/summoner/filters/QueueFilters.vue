@@ -11,9 +11,9 @@ const queueModel = computed({
   <Tabs
     v-model:model-value="queueModel"
     :default-value="0"
-    class="  w-120 max-w-120 ">
-    <Field class="!p-0  gap-0">
-      <IndicatorTabsList class="bg-transparent h-10   w-full grid grid-cols-4">
+    class="w-120 max-w-120">
+    <Field class="!p-0 gap-0">
+      <IndicatorTabsList class="bg-transparent h-10 w-full grid grid-cols-4">
         <TabIndicator />
         <IndicatorTabsTrigger :value="0">
           All

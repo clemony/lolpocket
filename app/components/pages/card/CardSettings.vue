@@ -2,8 +2,13 @@
 const { card: c } = defineProps<{
   card: Card
 }>()
-const emit = defineEmits(['download', 'update:align', 'update:color', 'update:filter'])
-const card = computed (() => c)
+const emit = defineEmits([
+  'download',
+  'update:align',
+  'update:color',
+  'update:filter',
+])
+const card = computed(() => c)
 const align = ref('0')
 const color = ref()
 const filter = ref()
@@ -12,20 +17,21 @@ watch(
   (newVal) => {
     // card.align = newVal
     emit('update:align', newVal)
-  },
+  }
 )
 </script>
 
 <template>
-  <div class="absolute before:z-0 before:absolute before:size-full before:bg-b1/60 before:top-0 before:left-0 z-1  bg-b2/40 backdrop-blur-md flex items-center py-1 top-16 left-0 w-full rounded-none  shadow-none border-b border-b-b3/80 border-x-2 border-x-b3/30  h-14 px-5.25 gap-2">
+  <div
+    class="absolute before:z-0 before:absolute before:size-full before:bg-b1/60 before:top-0 before:left-0 z-1 bg-b2/40 backdrop-blur-md flex items-center py-1 top-16 left-0 w-full rounded-none shadow-none border-b border-b-b3/80 border-x-2 border-x-b3/30 h-14 px-5.25 gap-2">
     <LazyChampionDropdown
       :disabled="!card.champion"
-      :champion=" card.champion"
+      :champion="card.champion"
       :card />
 
     <label
       v-tippy="'Background Color'"
-      class="mx-2 aspect-square border border-neutral/60 drop-shadow-xs  relative rounded-full grid-place-items-center size-6.5 overflow-hidden hover:border-neutral hover:ring hover:ring-neutral tldr-30 cursor-pointer">
+      class="mx-2 aspect-square border border-neutral/60 drop-shadow-xs relative rounded-full grid-place-items-center size-6.5 overflow-hidden hover:border-neutral hover:ring hover:ring-neutral tldr-30 cursor-pointer">
       <input
         v-model="color"
         type="color"
@@ -35,7 +41,7 @@ watch(
 
     <label
       v-tippy="'Filter'"
-      class="swap swap-rotate btn  btn-square group btn-ghost ">
+      class="swap swap-rotate btn btn-square group btn-ghost">
       <input
         v-model="filter"
         type="checkbox"
@@ -49,18 +55,17 @@ watch(
 
       <icon
         name="streamline:rainbow"
-        class="swap-on dst size-6  peer-disabled:text-bc/20" />
-
+        class="swap-on dst size-6 peer-disabled:text-bc/20" />
     </label>
 
     <Popover>
       <PopoverTrigger>
         <button
           v-tippy="'Background Align'"
-          class="btn btn-square btn-ghost  ">
+          class="btn btn-square btn-ghost">
           <icon
             name="ph:arrows-out-line-horizontal"
-            class="size-5.5  dst shrink-0" />
+            class="size-5.5 dst shrink-0" />
         </button>
       </PopoverTrigger>
 
@@ -68,7 +73,7 @@ watch(
         align="start"
         :side-offset="10"
         side="bottom"
-        class=" w-44 PopoverContent   border border-b3">
+        class="w-44 PopoverContent border border-b3">
         <input
           v-model="align"
           type="range"
@@ -83,21 +88,21 @@ watch(
       tip="Title Font"
       :card
       :model="0"
-      @update:model-value="e => card.font[0] = e" />
+      @update:model-value="(e) => (card.font[0] = e)" />
 
     <FontSelect
       v-model:model-value="card.font[1]"
       tip="Text Font"
       :card
       :model="1"
-      @update:model-value="e => card.font[1] = e" />
+      @update:model-value="(e) => (card.font[1] = e)" />
 
     <button
       v-tippy="'Add Note'"
-      class="btn btn-square btn-ghost  ">
+      class="btn btn-square btn-ghost">
       <icon
         name="iconoir:text"
-        class="size-5.5 dst " />
+        class="size-5.5 dst" />
     </button>
 
     <Grow />
@@ -108,7 +113,7 @@ watch(
 
     <button
       v-tippy="'Share'"
-      class="btn btn-square  btn-ghost">
+      class="btn btn-square btn-ghost">
       <icon
         name="share"
         class="size-5.5 dst" />
@@ -120,7 +125,7 @@ watch(
       @click="emit('download')">
       <icon
         name="iconoir:download"
-        class="size-5.5  dst " />
+        class="size-5.5 dst" />
     </button>
 
     <Separator
@@ -147,6 +152,4 @@ watch(
   </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

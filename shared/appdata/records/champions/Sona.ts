@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:14 PM CDT
 
 const champion: Champion = {
   "id": 37,
@@ -134,8 +134,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "50 / 85 / 120 / 155 / 190",
-                "40% AP"
+                {
+                  "values": "50 / 85 / 120 / 155 / 190"
+                },
+                {
+                  "values": "40",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -146,8 +151,13 @@ const champion: Champion = {
             {
               "attribute": "Bonus Magic Damage",
               "modifiers": [
-                "10 / 15 / 20 / 25 / 30",
-                "10% of Sona's AP"
+                {
+                  "values": "10 / 15 / 20 / 25 / 30"
+                },
+                {
+                  "values": "10",
+                  "unit": "% of Sona's AP"
+                }
               ]
             }
           ]
@@ -180,8 +190,13 @@ const champion: Champion = {
             {
               "attribute": "Heal",
               "modifiers": [
-                "30 / 45 / 60 / 75 / 90",
-                "30% AP"
+                {
+                  "values": "30 / 45 / 60 / 75 / 90"
+                },
+                {
+                  "values": "30",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -192,8 +207,13 @@ const champion: Champion = {
             {
               "attribute": "Shield Strength",
               "modifiers": [
-                "25 / 45 / 65 / 85 / 105",
-                "25% of Sona's AP"
+                {
+                  "values": "25 / 45 / 65 / 85 / 105"
+                },
+                {
+                  "values": "25",
+                  "unit": "% of Sona's AP"
+                }
               ]
             }
           ]
@@ -204,7 +224,9 @@ const champion: Champion = {
             {
               "attribute": "Minimum Damage Mitigated",
               "modifiers": [
-                "25 / 45 / 65 / 85 / 105"
+                {
+                  "values": "25 / 45 / 65 / 85 / 105"
+                }
               ]
             }
           ]
@@ -237,8 +259,14 @@ const champion: Champion = {
             {
               "attribute": "Bonus Movement Speed",
               "modifiers": [
-                "10 / 12 / 14 / 16 / 18%",
-                "2% per 100 of Sona's AP"
+                {
+                  "values": "10 / 12 / 14 / 16 / 18",
+                  "unit": "%"
+                },
+                {
+                  "values": "2",
+                  "unit": "% per 100 of Sona's AP"
+                }
               ]
             }
           ]
@@ -266,8 +294,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "150 / 250 / 350",
-                "50% AP"
+                {
+                  "values": "150 / 250 / 350"
+                },
+                {
+                  "values": "50",
+                  "unit": "% AP"
+                }
               ]
             }
           ]

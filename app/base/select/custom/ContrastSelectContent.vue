@@ -7,7 +7,12 @@ const props = defineProps<{
 <template>
   <SelectContent
     position="popper"
-    :class="cn('!w-[var(--reka-select-trigger-width)] bgneutral/83 backdrop-blur-lg border-accent text-nc **:text-nc rounded-xl', props.class) ">
+    :class="
+      cn(
+        '!w-[var(--reka-select-trigger-width)] bgneutral/83 backdrop-blur-lg border-accent text-nc **:text-nc rounded-xl',
+        props.class,
+      )
+    ">
     <slot />
   </SelectContent>
 </template>

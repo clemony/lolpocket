@@ -43,9 +43,13 @@ function formatNumber(value: number) {
     maximumFractionDigits: 0,
   }
 
-  const formattedNumber = Intl.NumberFormat('en-US', options).format(Number(value.toFixed(0)))
+  const formattedNumber = Intl.NumberFormat('en-US', options).format(
+    Number(value.toFixed(0))
+  )
 
-  return props.separator ? formattedNumber.replace(/,/g, props.separator) : formattedNumber
+  return props.separator
+    ? formattedNumber.replace(/,/g, props.separator)
+    : formattedNumber
 }
 
 function updateDisplay() {
@@ -116,7 +120,7 @@ function setupIntersectionObserver() {
     {
       threshold: 0,
       rootMargin: '0px',
-    },
+    }
   )
 
   intersectionObserver.observe(elementRef.value)
@@ -141,7 +145,7 @@ watch(
     updateDisplay()
     hasStarted.value = false
   },
-  { immediate: true },
+  { immediate: true }
 )
 
 watch(
@@ -150,7 +154,7 @@ watch(
     if (props.startWhen && isInView.value && !hasStarted.value) {
       startAnimation()
     }
-  },
+  }
 )
 
 onMounted(() => {

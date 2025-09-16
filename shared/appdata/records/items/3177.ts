@@ -10,24 +10,16 @@ const item: Item = {
   stats: {
     attackDamage: 30,
     health: 150,
-    abilityHaste: 15
+    abilityHaste: 15,
   },
   shop: {
     prices: {
       total: 950,
       combined: 950,
-      sell: 380
+      sell: 380,
     },
-    tags: [
-      'FIGHTER',
-      'MARKSMAN',
-      'ASSASSIN',
-      'TANK'
-    ]
+    tags: ['FIGHTER', 'MARKSMAN', 'ASSASSIN', 'TANK'],
   },
-  maps: [
-    12,
-    35
-  ]
+  maps: [12, 35],
 }
 export default item

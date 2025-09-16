@@ -5,7 +5,10 @@ const { class: className } = defineProps<{
 </script>
 
 <template>
-  <p :class="cn('leading-tight text-2 normal-case text-balanced text-start', className)">
+  <p
+    :class="
+      cn('leading-tight text-xs normal-case text-balanced text-start', className)
+    ">
     <slot />
   </p>
 </template>

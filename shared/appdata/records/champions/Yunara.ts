@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:57 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:15 PM CDT
 
 const champion: Champion = {
   "id": 804,
@@ -117,8 +117,13 @@ const champion: Champion = {
             {
               "attribute": "Passive Bonus Magic Damage",
               "modifiers": [
-                "5 / 10 / 15 / 20 / 25",
-                "20% AP"
+                {
+                  "values": "5 / 10 / 15 / 20 / 25"
+                },
+                {
+                  "values": "20",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -129,35 +134,58 @@ const champion: Champion = {
             {
               "attribute": "Bonus Attack Speed",
               "modifiers": [
-                "25 / 35 / 45 / 55 / 65%"
+                {
+                  "values": "25 / 35 / 45 / 55 / 65",
+                  "unit": "%"
+                }
               ]
             },
             {
               "attribute": "Active Bonus Magic Damage",
               "modifiers": [
-                "5 / 10 / 15 / 20 / 25",
-                "20% AP"
+                {
+                  "values": "5 / 10 / 15 / 20 / 25"
+                },
+                {
+                  "values": "20",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Combined Bonus Magic Damage",
               "modifiers": [
-                "10 / 20 / 30 / 40 / 50",
-                "40% AP"
+                {
+                  "values": "10 / 20 / 30 / 40 / 50"
+                },
+                {
+                  "values": "40",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Active Increased Minion Damage",
               "modifiers": [
-                "12.5 / 25 / 37.5 / 50 / 62.5",
-                "50% AP"
+                {
+                  "values": "12.5 / 25 / 37.5 / 50 / 62.5"
+                },
+                {
+                  "values": "50",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Combined Increased Minion Damage",
               "modifiers": [
-                "25 / 50 / 75 / 100 / 125",
-                "100% AP"
+                {
+                  "values": "25 / 50 / 75 / 100 / 125"
+                },
+                {
+                  "values": "100",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -193,25 +221,49 @@ const champion: Champion = {
             {
               "attribute": "Initial Magic Damage",
               "modifiers": [
-                "5 / 30 / 55 / 80 / 105",
-                "85% AD",
-                "50% AP"
+                {
+                  "values": "5 / 30 / 55 / 80 / 105"
+                },
+                {
+                  "values": "85",
+                  "unit": "% AD"
+                },
+                {
+                  "values": "50",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Linger Magic Damage per Tick",
               "modifiers": [
-                "1.25 / 5 / 8.75 / 12.5 / 16.25",
-                "10% AD",
-                "6.25% AP"
+                {
+                  "values": "1.25 / 5 / 8.75 / 12.5 / 16.25"
+                },
+                {
+                  "values": "10",
+                  "unit": "% AD"
+                },
+                {
+                  "values": "6.25",
+                  "unit": "% AP"
+                }
               ]
             },
             {
               "attribute": "Total Expanded Damage",
               "modifiers": [
-                "5 / 20 / 35 / 50 / 65",
-                "40% AD",
-                "25% AP"
+                {
+                  "values": "5 / 20 / 35 / 50 / 65"
+                },
+                {
+                  "values": "40",
+                  "unit": "% AD"
+                },
+                {
+                  "values": "25",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -274,19 +326,28 @@ const champion: Champion = {
             {
               "attribute": "Bonus Move Speed",
               "modifiers": [
-                "50 / 55 / 60 / 65 / 70%"
+                {
+                  "values": "50 / 55 / 60 / 65 / 70",
+                  "unit": "%"
+                }
               ]
             },
             {
               "attribute": "Increased Bonus Move Speed",
               "modifiers": [
-                "75 / 82.5 / 90 / 97.5 / 105%"
+                {
+                  "values": "75 / 82.5 / 90 / 97.5 / 105",
+                  "unit": "%"
+                }
               ]
             },
             {
               "attribute": "Duration",
               "modifiers": [
-                "1.5 / 1.75 / 2 / 2.25 / 2.5 seconds"
+                {
+                  "values": "1.5 / 1.75 / 2 / 2.25 / 2.5",
+                  "unit": " seconds"
+                }
               ]
             }
           ]
@@ -333,13 +394,17 @@ const champion: Champion = {
             {
               "attribute": "Arc of Ruin Base Damage",
               "modifiers": [
-                "50 / 200 / 350"
+                {
+                  "values": "50 / 200 / 350"
+                }
               ]
             },
             {
               "attribute": "Untouchable Shadow Dash Speed",
               "modifiers": [
-                "1350 / 1500 / 1650"
+                {
+                  "values": "1350 / 1500 / 1650"
+                }
               ]
             }
           ]

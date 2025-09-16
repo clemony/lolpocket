@@ -6,8 +6,8 @@ const item: Item = {
     {
       id: 3047,
       name: 'Plated Steelcaps',
-      gold: 1200
-    }
+      gold: 1200,
+    },
   ],
   specialRecipe: 0,
   noEffects: false,
@@ -18,28 +18,28 @@ const item: Item = {
     {
       name: 'Plating',
       unique: true,
-      effects: 'Reduces incoming damage from all basic attacks by 10% (<i>excluding turret attacks</i>).'
+      effects:
+        'Reduces incoming damage from all basic attacks by 10% (<i>excluding turret attacks</i>).',
     },
     {
       name: 'Noxian Endurance',
       unique: true,
-      effects: 'Taking physical damage from champions grants you a <img src="/img/icons/shield.webp" class="tip-icon" />shield that absorbs 10 – 120 (based on level) (+4% <b>maximum</b> health) physical damage for 4 seconds.',
-      cooldown: '15'
-    }
+      effects:
+        'Taking physical damage from champions grants you a <img src="/img/icons/shield.webp" class="tip-icon" />shield that absorbs 10 – 120 (based on level) (+4% <b>maximum</b> health) physical damage for 4 seconds.',
+      cooldown: '15',
+    },
   ],
   stats: {
     armor: 40,
-    flatMovespeed: 50
+    flatMovespeed: 50,
   },
   shop: {
     prices: {
       total: 1700,
       combined: 500,
-      sell: 680
-    }
+      sell: 680,
+    },
   },
-  maps: [
-    11
-  ]
+  maps: [11],
 }
 export default item

@@ -3,7 +3,14 @@ import type { VariantProps } from 'class-variance-authority'
 import { motion } from 'motion-v'
 import { ProgressIndicator } from 'reka-ui'
 
-const { class: className, variant = 'shadow', size = 'md', showIcon, circle, tipSide = 'top' } = defineProps<{
+const {
+  class: className,
+  variant = 'shadow',
+  size = 'md',
+  showIcon,
+  circle,
+  tipSide = 'top',
+} = defineProps<{
   class?: HTMLAttributes['class']
   text?: boolean | string | null
   variant?: any
@@ -15,17 +22,22 @@ const { class: className, variant = 'shadow', size = 'md', showIcon, circle, tip
 
 const state = useSummonerInject()
 
-const { throttled: update, cooldown, isLoading } = throttleFunction(
+const {
+  throttled: update,
+  cooldown,
+  isLoading,
+} = throttleFunction(
   () => state.fetchNewMatches(),
   120_000,
   state.summoner.value.puuid,
-  'match-refresh',
+  'match-refresh'
 )
 
-const tip = computed (() =>
-  `Updated:
+const tip = computed(
+  () =>
+    `Updated:
         ${formatTimeAgo(state.summoner.value.lastMatchUpdate, 'short')}
-        ${cooldown.value?.seconds ? `${cooldown.value?.seconds} cd` : ''}`,
+        ${cooldown.value?.seconds ? `${cooldown.value?.seconds} cd` : ''}`
 )
 </script>
 
@@ -33,24 +45,36 @@ const tip = computed (() =>
   <Button
     v-tippy="{ content: tip, placement: tipSide }"
     :variant="variant"
-    :class="cn('p-0', { 'pointer-events-none bg-b2/80 btn-active cursor-not-allowed': cooldown }, className)"
+    :class="
+      cn(
+        'p-0',
+        {
+          'pointer-events-none bg-b2/80 btn-active cursor-not-allowed':
+            cooldown,
+        },
+        className,
+      )
+    "
     :size="size"
     @click="update()">
     <TransitionScalePop
       v-if="circle"
-      class="relative grid overflow-hidden size-full place-items-center ">
+      class="relative grid overflow-hidden size-full place-items-center">
       <icon
         v-if="!cooldown"
         name="mingcute:refresh-2-line"
         :class="
-          cn(' size-5   shrink-0 in-[.btn-neutral]:opacity-80 not-in-[.btn-neutral]:opacity-60 group-hover/load:opacity-100 dst transition-all duration-200', {
-            'animate-rotate': isLoading,
-          })
+          cn(
+            ' size-5   shrink-0 in-[.btn-neutral]:opacity-80 not-in-[.btn-neutral]:opacity-60 group-hover/load:opacity-100 dst transition-all duration-200',
+            {
+              'animate-rotate': isLoading,
+            },
+          )
         " />
 
       <div
         v-if="cooldown"
-        class="text-0 shadow-sm  border-neutral border-2 absolute bg-neutral text-nc **:text-nc radial-progress place-self-center font-semibold opacity-90  "
+        class="text-3xs shadow-sm border-neutral border-2 absolute bg-neutral text-nc **:text-nc radial-progress place-self-center font-semibold opacity-90"
         :style="{
           '--value': cooldown?.seconds,
           '--size': '2rem',
@@ -66,33 +90,53 @@ const tip = computed (() =>
 
     <TransitionScalePop
       v-else
-      class="relative grid overflow-hidden size-full ">
+      class="relative grid overflow-hidden size-full">
       <span
         v-if="!cooldown"
-        :class="cn('flex items-center place-self-center text-2 tracking-[0.24px]  antialiased font-semibold opacity-68 group-hover/load:opacity-100', { 'text-1': size == 'xs' })">
+        :class="
+          cn(
+            'flex items-center place-self-center text-xs tracking-[0.24px]  antialiased font-semibold opacity-68 group-hover/load:opacity-100',
+            { 'text-xxs': size == 'xs' },
+          )
+        ">
         <icon
           v-if="showIcon"
           name="mingcute:refresh-2-line"
           class="mr-3 -ml-2 size-5" />
-        {{ typeof text == 'string' ? text : typeof text == 'boolean' ? 'update' : '' }}
+        {{
+          typeof text == "string" ? text
+          : typeof text == "boolean" ? "update"
+            : ""
+        }}
       </span>
       <div
         v-if="cooldown"
-        :class="cn('size-full grid place-items-center gap-1.5 p-2 grid-rows-2 *:overflow-hidden overflow-hidden z-0 pointer-events-none', { 'gap-0': size == 'xs' })"
+        :class="
+          cn(
+            'size-full grid place-items-center gap-1.5 p-2 grid-rows-2 *:overflow-hidden overflow-hidden z-0 pointer-events-none',
+            { 'gap-0': size == 'xs' },
+          )
+        "
         class="">
         <div
           v-if="size != 'xs'"
-          :class="cn('flex items-center justify-between w-full font-semibold text-1 dst text-end')">
+          :class="
+            cn(
+              'flex items-center justify-between w-full font-semibold text-xxs dst text-end',
+            )
+          ">
           <!--           <span
             class="flex items-center gap-2">
             <icon
               name="svg-spinners:bars-scale-middle"
               class="size-3.5 scale-x-130 ml-1" />
           </span> -->
-          <span class="flex flex-nowrap text-nowrap justify-self-end text-end pr-0.25  items-center inline align-bottom">
-            <span :class="cn('font-mono font-bold text-2')">
+          <span
+            class="flex flex-nowrap text-nowrap justify-self-end text-end pr-0.25 items-center inline align-bottom">
+            <span :class="cn('font-mono font-bold text-xs')">
               {{ cooldown?.formatted }}
-            </span> cd
+            </span>
+            cd
           </span>
         </div>
 
@@ -105,8 +149,12 @@ const tip = computed (() =>
           <Progress
             :model-value="cooldown?.percent"
             class="bg-transparent"
-
-            :class="cn('relative border bg-b3 border-b4  w-full h-2.75 rounded-[3px]', { 'h-3.5 mt-1.5': size == 'xs' })"
+            :class="
+              cn(
+                'relative border bg-b3 border-b4  w-full h-2.75 rounded-[3px]',
+                { 'h-3.5 mt-1.5': size == 'xs' },
+              )
+            "
             :value="cooldown?.percent"
             :max="100">
             <ProgressIndicator
@@ -123,8 +171,7 @@ const tip = computed (() =>
                 }"
                 :transition="{
                   ease: 'linear',
-                }">
-              </motion.div>
+                }"></motion.div>
             </ProgressIndicator>
           </Progress>
         </div>

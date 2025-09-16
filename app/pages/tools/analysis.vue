@@ -12,18 +12,19 @@ const ms = useMatchStore()
 const summoner = ref(null)
 console.log('💠 - summoner:', summoner)
 
-onMounted (async () => {
-  const q = computedAsync (() => ms.analysisQueueSelect)
-  const p = computedAsync (() => ms.analysisPatchSelect)
-  const s = computedAsync (() => ss.getSummoner(as.account.puuid))
+onMounted(async () => {
+  const q = computedAsync(() => ms.analysisQueueSelect)
+  const p = computedAsync(() => ms.analysisPatchSelect)
+  const s = computedAsync(() => ss.getSummoner(as.account.puuid))
   await { q, p, s }
   summoner.value = s.value
 })
 </script>
 
 <template>
-  <div class=" size-full oveflow-hidden">
-    <menu class="overflow-hidden shadow-warm-2 shadow-black/7 border-r border-r-b3/40">
+  <div class="size-full oveflow-hidden">
+    <menu
+      class="overflow-hidden shadow-warm-2 shadow-black/7 border-r border-r-b3/40">
       <DataFilterPanel />
     </menu>
 
@@ -35,6 +36,4 @@ onMounted (async () => {
   </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

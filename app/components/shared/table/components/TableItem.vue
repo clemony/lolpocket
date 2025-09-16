@@ -12,11 +12,9 @@ const props = defineProps<{
     <div class="ti-wrapper">
       <img
         :src="`/img/items/${props.params.value.id}.webp`"
-        class="size-full " />
+        class="size-full" />
     </div>
   </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

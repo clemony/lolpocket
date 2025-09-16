@@ -5,5 +5,7 @@
   "bracketSameLine": true,
   "htmlWhitespaceSensitivity": "ignore",
   "singleAttributePerLine": false,
-  "experimentalTernaries": true
+  "experimentalTernaries": true,
+  "tailwindStylesheet": "./assets/css/tailwind.css",
+  "tailwindFunctions": ["clsx"]
 }

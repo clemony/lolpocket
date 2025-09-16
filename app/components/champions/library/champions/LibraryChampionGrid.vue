@@ -1,8 +1,26 @@
 <script lang="ts" setup>
 import ChampionGridIcon from '#components'
 import { championsLite } from '#shared/appdata/records/champions-lite'
-import type { ColDef, ColGroupDef, GridApi, GridOptions, GridPreDestroyedEvent, GridReadyEvent } from 'ag-grid-community'
-import { CellStyleModule, ClientSideRowModelModule, ColumnApiModule, ColumnAutoSizeModule, ColumnHoverModule, GridStateModule, ModuleRegistry, RenderApiModule, RowSelectionModule, ValidationModule } from 'ag-grid-community'
+import type {
+  ColDef,
+  ColGroupDef,
+  GridApi,
+  GridOptions,
+  GridPreDestroyedEvent,
+  GridReadyEvent,
+} from 'ag-grid-community'
+import {
+  CellStyleModule,
+  ClientSideRowModelModule,
+  ColumnApiModule,
+  ColumnAutoSizeModule,
+  ColumnHoverModule,
+  GridStateModule,
+  ModuleRegistry,
+  RenderApiModule,
+  RowSelectionModule,
+  ValidationModule,
+} from 'ag-grid-community'
 import { AgGridVue } from 'ag-grid-vue3'
 import { pocketTheme } from '~/utils/config/tableTheme'
 
@@ -37,7 +55,6 @@ const gridOptions: GridOptions<ChampionLite> = {
 
   defaultColGroupDef: {
     suppressStickyLabel: true,
-
   },
   defaultColDef: {
     flex: 1,
@@ -56,7 +73,7 @@ watch(
   (newVal) => {
     if (newVal)
       gridApi.value.refreshCells()
-  },
+  }
 )
 
 watch(
@@ -64,10 +81,12 @@ watch(
   (newVal) => {
     if (newVal)
       gridApi.value.refreshCells()
-  },
+  }
 )
 
-const { resolveStat } = useChampionStatGrowth(computed (() => cs.championGridLevel))
+const { resolveStat } = useChampionStatGrowth(
+  computed(() => cs.championGridLevel)
+)
 
 const colDefs: (ColDef<ChampionLite> | ColGroupDef<ChampionLite>)[] = [
   {
@@ -97,8 +116,7 @@ const colDefs: (ColDef<ChampionLite> | ColGroupDef<ChampionLite>)[] = [
 
   {
     headerName: 'Health',
-    valueGetter: params =>
-      resolveStat(params.data.stats?.health),
+    valueGetter: params => resolveStat(params.data.stats?.health),
   },
   {
     headerName: 'Health Regen',
@@ -107,8 +125,7 @@ const colDefs: (ColDef<ChampionLite> | ColGroupDef<ChampionLite>)[] = [
   },
   {
     headerName: 'Mana',
-    valueGetter: params =>
-      resolveStat(params.data.stats?.mana),
+    valueGetter: params => resolveStat(params.data.stats?.mana),
   },
   {
     headerName: 'Mana Regen',
@@ -117,18 +134,15 @@ const colDefs: (ColDef<ChampionLite> | ColGroupDef<ChampionLite>)[] = [
   },
   {
     headerName: 'Armor',
-    valueGetter: params =>
-      resolveStat(params.data.stats?.armor),
+    valueGetter: params => resolveStat(params.data.stats?.armor),
   },
   {
     headerName: 'Magic Resist',
-    valueGetter: params =>
-      resolveStat(params.data.stats?.magicResistance),
+    valueGetter: params => resolveStat(params.data.stats?.magicResistance),
   },
   {
     headerName: 'Attack Damage',
-    valueGetter: params =>
-      resolveStat(params.data.stats?.attackDamage),
+    valueGetter: params => resolveStat(params.data.stats?.attackDamage),
   },
   {
     headerName: 'Attack Speed',
@@ -182,14 +196,12 @@ hide: true },
     flex: 1.5,
     minWidth: 90,
     valueGetter: params => params.data.positions?.[0] ?? '',
-
   },
   {
     headerName: 'Role',
     flex: 1.5,
     minWidth: 90,
     valueGetter: params => params.data.roles?.[0] ?? '',
-
   },
   {
     headerName: 'Ability Reliance',
@@ -223,7 +235,6 @@ hide: true },
     headerName: 'Utility',
     valueGetter: params => params.data.attributeRatings.utility,
   },
-
 ]
 const listener = event => cs.dbChampionStatListKey++
 
@@ -252,10 +263,21 @@ watch(
   (newVal) => {
     if (newVal && gridApi.value)
       gridApi.value.setGridOption('rowData', [])
-  },
+  }
 )
 
-ModuleRegistry.registerModules([ClientSideRowModelModule, ValidationModule, RowSelectionModule, ColumnAutoSizeModule, ColumnHoverModule, ColumnHoverModule, ColumnApiModule, CellStyleModule, GridStateModule, RenderApiModule])
+ModuleRegistry.registerModules([
+  ClientSideRowModelModule,
+  ValidationModule,
+  RowSelectionModule,
+  ColumnAutoSizeModule,
+  ColumnHoverModule,
+  ColumnHoverModule,
+  ColumnApiModule,
+  CellStyleModule,
+  GridStateModule,
+  RenderApiModule,
+])
 </script>
 
 <template>

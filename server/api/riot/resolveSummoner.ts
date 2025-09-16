@@ -36,7 +36,8 @@ export default defineEventHandler(async (event) => {
   else {
     throw createError({
       statusCode: 400,
-      statusMessage: 'Missing summoner identifier: provide either puuid or region + name + tag',
+      statusMessage:
+        'Missing summoner identifier: provide either puuid or region + name + tag',
     })
   }
 

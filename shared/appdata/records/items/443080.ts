@@ -10,19 +10,18 @@ const item: Item = {
     {
       name: 'Unanimity',
       unique: true,
-      effects: 'Gain 15% of your teammate\'s attack damage, ability power, <b>total</b> attack speed, <b>maximum</b> health, armor, magic resistance, and ability haste, increased to 30% if they also have <b>Twin Mask</b> and are alive.'
-    }
+      effects:
+        'Gain 15% of your teammate\'s attack damage, ability power, <b>total</b> attack speed, <b>maximum</b> health, armor, magic resistance, and ability haste, increased to 30% if they also have <b>Twin Mask</b> and are alive.',
+    },
   ],
   stats: {},
   shop: {
     prices: {
       total: 0,
       combined: 1000,
-      sell: 0
-    }
+      sell: 0,
+    },
   },
-  maps: [
-    30
-  ]
+  maps: [30],
 }
 export default item

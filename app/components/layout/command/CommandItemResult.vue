@@ -6,7 +6,7 @@ const { item, activeItem: mv } = defineProps<{
 
 const emit = defineEmits(['update:modelValue'])
 const modelValue = ref(mv)
-onMounted (() => {
+onMounted(() => {
   modelValue.value = mv
 })
 </script>

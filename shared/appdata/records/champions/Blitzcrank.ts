@@ -1,4 +1,4 @@
-// Updated Patch 25.17 - 09/12/2025 02:39:55 PM CDT
+// Updated Patch 25.17 - 09/14/2025 05:55:11 PM CDT
 
 const champion: Champion = {
   "id": 53,
@@ -121,8 +121,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "110 / 160 / 210 / 260 / 310",
-                "120% AP"
+                {
+                  "values": "110 / 160 / 210 / 260 / 310"
+                },
+                {
+                  "values": "120",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
@@ -157,13 +162,19 @@ const champion: Champion = {
             {
               "attribute": "Bonus Attack Speed",
               "modifiers": [
-                "30 / 40 / 50 / 60 / 70%"
+                {
+                  "values": "30 / 40 / 50 / 60 / 70",
+                  "unit": "%"
+                }
               ]
             },
             {
               "attribute": "Initial Bonus Movement Speed",
               "modifiers": [
-                "60 / 65 / 70 / 75 / 80%"
+                {
+                  "values": "60 / 65 / 70 / 75 / 80",
+                  "unit": "%"
+                }
               ]
             }
           ]
@@ -220,9 +231,17 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "50 / 100 / 150",
-                "30 / 40 / 50% AP",
-                "2% maximum mana"
+                {
+                  "values": "50 / 100 / 150"
+                },
+                {
+                  "values": "30 / 40 / 50",
+                  "unit": "% AP"
+                },
+                {
+                  "values": "2",
+                  "unit": "% maximum mana"
+                }
               ]
             }
           ]
@@ -233,8 +252,13 @@ const champion: Champion = {
             {
               "attribute": "Magic Damage",
               "modifiers": [
-                "275 / 400 / 525",
-                "100% AP"
+                {
+                  "values": "275 / 400 / 525"
+                },
+                {
+                  "values": "100",
+                  "unit": "% AP"
+                }
               ]
             }
           ]
