@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { SliderRootEmits, SliderRootProps } from 'reka-ui'
-
 import {
   SliderRange,
   SliderRoot,
@@ -32,7 +31,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
     "
     v-bind="forwarded">
     <SliderTrack
-      class="relative h-1.5 w-full data-[orientation=vertical]:w-1.5 grow overflow-hidden rounded-full bg-b3/80">
+      class="relative h-1.5 w-full data-[orientation=vertical]:w-1.5 grow overflow-hidden rounded-full bg-tint-b3/20">
       <SliderRange
         class="absolute h-full data-[orientation=vertical]:w-full bg-neutral" />
     </SliderTrack>

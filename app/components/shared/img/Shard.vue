@@ -2,9 +2,9 @@
 import { shardObject } from '#shared/appdata/records/shards'
 
 const {
+  class: className,
   id,
   label,
-  class: className,
 } = defineProps<{
   id?: number | null
   label?: boolean

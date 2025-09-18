@@ -111,7 +111,7 @@ const { ability } = defineProps<{
 <Separator class="bg-b3"  /> -->
         </div>
       </div>
-      <CaretRotate />
+      <CaretFlip />
     </CollapsibleTrigger>
     <CollapsibleContent
       v-if="ability"

@@ -4,7 +4,7 @@ import type { MotionValue } from 'motion-v'
 const { scrollProg } = defineProps<{
   scrollProg: MotionValue
 }>()
-const target = ref(null)
+const target = useTemplateRef<HTMLElement>('target')
 
 const parallax = reactive(useParallax(target))
 

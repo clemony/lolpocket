@@ -12,8 +12,8 @@ function triggerAnimation() {
   animationKey.value++
 }
 
-function toggleContinuous() {
-  isContinuous.value = !isContinuous.value
+function toggleContinuoui() {
+  isContinuoui.value = !isContinuoui.value
 }
 </script>
 

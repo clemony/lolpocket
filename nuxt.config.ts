@@ -2,6 +2,38 @@ import process from 'node:process'
 import { fileURLToPath } from 'node:url'
 
 export default defineNuxtConfig({
+  components: [
+    {
+      path: './base',
+      pathPrefix: false,
+    },
+    {
+      path: '~/components',
+      pathPrefix: false,
+    },
+  ],
+  css: ['~/assets/css/tailwind.css'],
+  devServer: {
+    host: 'localhost',
+    https: false,
+    port: 8080,
+  },
+  devtools: { enabled: true },
+  icon: {
+    provider: 'server',
+    componentName: 'icon',
+    serverBundle: {
+      collections: ['lucide'],
+    },
+  },
+  image: {
+    provider: 'ipx',
+    domains: ['ddragon.leagueoflegends.com', 'cdn.communitydragon.org'],
+    format: ['webp'],
+  },
+  imports: {
+    dirs: ['#shared/appdata', './shared/types'],
+  },
   modules: [
     '@pinia/nuxt',
     'pinia-plugin-persistedstate/nuxt',
@@ -16,43 +48,6 @@ export default defineNuxtConfig({
     'nuxt-svgo',
     'motion-v/nuxt',
   ],
-
-  imports: {
-    dirs: ['#shared/appdata', './shared/types'],
-  },
-
-  components: [
-    {
-      path: './base',
-      pathPrefix: false,
-    },
-    {
-      path: '~/components',
-      pathPrefix: false,
-    },
-  ],
-
-  typescript: {
-    typeCheck: true,
-    strict: false,
-    sharedTsConfig: {
-      include: ['./appdata', './utils', './types'],
-    },
-  },
-
-  vite: {
-    clearScreen: false,
-    build: {
-      sourcemap: false,
-    },
-  },
-
-  devServer: {
-    port: 8080,
-    host: 'localhost',
-    https: false,
-  },
-
   nitro: {
     routeRules: {
       '/api/**': {
@@ -61,67 +56,24 @@ export default defineNuxtConfig({
       },
     },
   },
-
+  pinia: {
+    storesDirs: ['./stores/**'],
+  },
   router: {
     options: {
       scrollBehaviorType: 'smooth',
     },
   },
-
-  pinia: {
-    storesDirs: ['./stores/**'],
-  },
-
-  css: ['~/assets/css/tailwind.css'],
-
-  svgo: {
-    componentPrefix: 'i',
-  },
-
-  icon: {
-    provider: 'server',
-    serverBundle: {
-      collections: ['lucide'],
-    },
-    componentName: 'icon',
-  },
-
-  image: {
-    domains: ['ddragon.leagueoflegends.com', 'cdn.communitydragon.org'],
-    provider: 'ipx',
-    format: ['webp'],
-  },
-
-  vueTransitions: {
-    defaultProps: {
-      duration: 400,
-      easing: 'cubic-bezier(.25, .8, .5, 1)',
-      mode: 'out-in',
-      appear: false,
-      tag: 'div',
-    },
-    componentDefaultProps: {
-      TransitionSlide: {
-        duration: 300,
-        easing: 'cubic-bezier(.25, .8, .5, 1)',
-        offset: [0, 8],
-        mode: 'out-in',
-      },
-    },
-  },
   runtimeConfig: {
-    supabaseUrl: process.env.SUPABASE_URL,
-    supabaseAnonKey: process.env.SUPABASE_KEY,
-    supabasePooler: process.env.SUPABASE_POOLER,
-    riotApiKey: process.env.NUXT_RIOT_API,
-
     public: {
       baseUrl: process.env.BASE_URL || 'http://localhost:8080',
     },
+    riotApiKey: process.env.NUXT_RIOT_API,
+    supabaseAnonKey: process.env.SUPABASE_KEY,
+    supabasePooler: process.env.SUPABASE_POOLER,
+    supabaseUrl: process.env.SUPABASE_URL,
   },
-
   supabase: {
-    url: process.env.NUXT_PUBLIC_SUPABASE_URL,
     key: process.env.NUXT_PUBLIC_SUPABASE_KEY,
     redirect: true,
     redirectOptions: {
@@ -130,10 +82,45 @@ export default defineNuxtConfig({
       login: '/login',
       saveRedirectToCookie: true,
     },
+    url: process.env.NUXT_PUBLIC_SUPABASE_URL,
     useSsrCookies: false,
   },
-
-  devtools: { enabled: true },
+  svgo: {
+    componentPrefix: 'i',
+  },
+  typescript: {
+    nodeTsConfig: {
+      include: ['./shared/appdata', './shared/utils', './shared/types'],
+    },
+    sharedTsConfig: {
+      include: ['./appdata', './utils', './types'],
+    },
+    strict: false,
+    typeCheck: true,
+  },
+  vite: {
+    build: {
+      sourcemap: false,
+    },
+    clearScreen: false,
+  },
+  vueTransitions: {
+    componentDefaultProps: {
+      TransitionSlide: {
+        duration: 300,
+        easing: 'cubic-bezier(.25, .8, .5, 1)',
+        mode: 'out-in',
+        offset: [0, 8],
+      },
+    },
+    defaultProps: {
+      appear: false,
+      duration: 400,
+      easing: 'cubic-bezier(.25, .8, .5, 1)',
+      mode: 'out-in',
+      tag: 'div',
+    },
+  },
 
   /*   future: {
     typescriptBundlerResolution: true,

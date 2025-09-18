@@ -22,7 +22,7 @@ function handleItem(e) {
   set.value[props.setIndex] = e
   emit('update:set', set.value)
 }
-const { filters, setFilter, filtered } = useItemFilter()
+const { filtered, filters, setFilter } = useItemFilter()
 </script>
 
 <template>
@@ -43,7 +43,7 @@ const { filters, setFilter, filtered } = useItemFilter()
       "
       align="start"
       :side-offset="props.sideOffset"
-      @open-auto-focus.prevent>
+      @open-auto-focui.prevent>
       <ItemSearch
         placeholder="Type or click a suggestion"
         input-class=" text-nc"

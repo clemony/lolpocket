@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { set, path, runes, limit } = defineProps<{
+const { limit, path, runes, set } = defineProps<{
   set: number[]
   runes: RunePath
   path: string | undefined

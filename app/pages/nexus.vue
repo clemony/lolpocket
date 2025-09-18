@@ -1,17 +1,16 @@
 <script lang="ts" setup>
-import { motion, useDomRef } from 'motion-v'
 import type { description } from 'valibot'
+import { motion, useDomRef } from 'motion-v'
 import { toast } from 'vue-sonner'
 
 const container = useDomRef()
 
 definePageMeta({
-  path: '/nexus',
-  name: 'nexus',
-
-  level: 1,
-  order: 1,
   icon: 'nexus',
+  level: 1,
+  name: 'nexus',
+  order: 1,
+  path: '/nexus',
 })
 
 async function hydrateUser1() {

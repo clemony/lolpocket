@@ -33,6 +33,7 @@ function onSelect() {
 function onThumbClick(index: number) {
   if (!emblaMainApi.value || !emblaThumbnailApi.value)
     return
+  selectedIndex.value = index
   emblaMainApi.value.scrollTo(index)
 }
 
@@ -54,27 +55,27 @@ const skins = computed(() => ix().skins[champion.key])
 </script>
 
 <template>
-  <div class="size-full flex overflow-hidden gap-14 pr-22">
+  <div class="flex size-full gap-14 overflow-hidden pr-22">
     <Carousel
       orientation="vertical"
-      class="relative size-full max-h-full overflow-auto max-w-64 mask-y-from-0% mask-y-to-6% mask-y-from-transparent mask-y-to-black"
+      class="mask-y-from-0% mask-y-to-6% mask-y-from-transparent mask-y-to-black relative size-full max-h-full max-w-66 overflow-auto"
       @init-api="(val) => (emblaThumbnailApi = val)">
       <CarouselContent
-        class="overflow-y-auto scrollbar-hidden flex py-22 gap-1 ml-0">
+        class="scrollbar-hidden ml-0 flex gap-1 overflow-y-auto px-3 py-22">
         <CarouselItem
           v-for="(skin, index) in skins"
           :key="index"
           class="cursor-pointer"
           @click="onThumbClick(index)">
-          <div :class="index === selectedIndex ? '' : 'opacity-80'">
+          <div :class="cn('transition-all cursor-pointer duration-300 rounded-xl hover:opacity-100 hover:ring hover:ring-b4 **:pointer-events-none', index === selectedIndex ? 'opacity-100 ring ring-bc/40 pointer-events-none ring-offset-5 ring-offset-b1' : 'opacity-80')">
             <Card
-              class="overflow-hidden !p-0 !rounded-xl h-38 shadow-sm drop-shadow-sm shadow-black/20 drop-shadow-black/20">
+              class="drop-shadow-black/20 h-38  overflow-hidden !rounded-xl border-0 !p-0 shadow-sm shadow-black/20 drop-shadow-sm">
               <CardContent
-                class="flex p-0 items-center relative justify-center">
+                class="relative flex items-center justify-center p-0">
                 <Img
                   :alt="skin.name"
                   :img="getSkinSplash(champion.key, skin, 'tile')"
-                  class="object-cover -mt-10 inset-0 size-full" />
+                  class="inset-0 -mt-10 size-full object-cover" />
               </CardContent>
             </Card>
           </div>
@@ -94,16 +95,16 @@ const skins = computed(() => ix().skins[champion.key])
           class="!rounded-xl">
           <div class="embla__slide p-2">
             <Card
-              class="embla__parallax border-0 !rounded-xl shadow-sm drop-shadow-sm shadow-black/20 drop-shadow-black/20">
+              class="embla__parallax drop-shadow-black/20 !rounded-xl border-0 shadow-sm shadow-black/20 drop-shadow-sm">
               <CardContent
-                class="p-0 embla__parallax__layer after:inset-shadow-[1px_1px_5px_rgba(0,0,0,0.25)] after:size-full after:absolute">
+                class="embla__parallax__layer p-0 after:absolute after:size-full after:inset-shadow-[1px_1px_5px_rgba(0,0,0,0.25)]">
                 <Img
                   :alt="skin.name"
                   :img="getSkinSplash(champion.key, skin, 'uncentered')"
                   class="embla__slide__img embla__parallax__img" />
 
                 <div
-                  class="opacity-90 absolute bg-black/70 px-5 w-max py-1 backdrop-blur rounded-full grid place-items-center text-md font-medium italic text-white/80 left-6 bottom-4">
+                  class="text-md absolute bottom-4 left-6 grid w-max place-items-center rounded-full bg-black/70 px-5 py-1 font-medium text-white/80 italic opacity-90 backdrop-blur ">
                   {{ skin.name }}
                 </div>
               </CardContent>
@@ -114,11 +115,11 @@ const skins = computed(() => ix().skins[champion.key])
       <CarouselPrevious
         variant="base"
         hover="neutral"
-        class="**:text-white/70 rounded-xl fx-0 left-10 bg-transparent [&_svg]:size-6 border-0 size-16" />
+        class="fx-0 left-10 size-16 rounded-xl border-0 bg-transparent **:text-white/70 [&_svg]:size-6" />
       <CarouselNext
         variant="base"
         hover="neutral"
-        class="**:text-white/70 rounded-xl fx-0 right-6 bg-transparent [&_svg]:size-6 border-0 size-16" />
+        class="fx-0 right-6 size-16 rounded-xl border-0 bg-transparent **:text-white/70 [&_svg]:size-6" />
     </Carousel>
   </div>
 </template>

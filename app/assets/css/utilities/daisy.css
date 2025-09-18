@@ -180,3 +180,19 @@
       @apply hidden;
     }
   }
+
+
+  /* tabs */
+
+  @utility tabs-sm {
+    .tab {
+    @apply h-8.5 pt-0.75;
+--tab-radius-min: 0.64rem;
+
+    }
+.tab-content {
+--tabcontent-radius-se: var(--radius-xl);
+--tabcontent-radius-es: var(--radius-xl);
+--tabcontent-radius-ee: var(--radius-xl);
+}
+  }

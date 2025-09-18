@@ -1,10 +1,10 @@
 <script setup lang="ts">
 definePageMeta({
-  name: 'champion_key',
-  props: true,
-  path: '/champions/:champion_key',
   middleware: 'set-champion-title',
+  name: 'champion_key',
   level: 0,
+  path: '/champions/:champion_key',
+  props: true,
 })
 const route = useRoute()
 const championData = await import(
@@ -12,14 +12,14 @@ const championData = await import(
 )
 const champion = computed(() => championData.default)
 console.log('🌱 - champion:', champion)
-const tabs = ref(null)
+const tabs = shallowRef<string>(null)
 
 const router = useRouter()
 const links = computed(
   () => router.getRoutes().find(r => r.name == 'champion_key').children
 ).value
 onMounted(() => {
-  tabs.value = route.name
+  tabs.value = route.name.toString()
 })
 
 function navigate(path: string) {

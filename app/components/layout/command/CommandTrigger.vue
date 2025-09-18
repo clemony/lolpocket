@@ -4,9 +4,9 @@ import { getDeviceKey } from '~/utils/config/handleDevice'
 const props = defineProps<{
   class?: HTMLAttributes['class']
 }>()
-const us = useUiStore()
+const ui = useUiStore()
 
-const { ControlRight, ControlLeft, MetaRight, MetaLeft, K } = useMagicKeys()
+const { ControlLeft, ControlRight, K, MetaLeft, MetaRight } = useMagicKeys()
 
 watchEffect(() => {
   if (
@@ -33,7 +33,7 @@ watchEffect(() => {
         )
       "
       class=""
-      @click.stop="us.commandOpen = true">
+      @click.stop="ui.commandOpen = true">
       <icon
         name="search"
         class="size-4 shrink-0 opacity-70 group-hover:opacity-100 dst" />

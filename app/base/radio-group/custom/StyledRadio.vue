@@ -6,7 +6,7 @@ const props = defineProps<{
   value?: any
 }>()
 
-const model = ref(null)
+const model = ref<string>(null)
 onMounted(() => {
   model.value = props.model
 })

@@ -30,7 +30,7 @@ const damageType = computed (() => damageTypes.find(d => d.type == champion.adap
         <span
           v-for="role, i in champion.roles"
           :key="i"
-          :class="cn('italic')">
+          :class="cn('italic font-medium')">
           {{ role }}<template v-if="i != champion.roles.length - 1">,&nbsp;&thinsp;</template>
         </span>
       </p>
@@ -39,25 +39,24 @@ const damageType = computed (() => damageTypes.find(d => d.type == champion.adap
     <div :class="wrapperClass">
       <p>Damage Style</p>
       <div class="flex *:flex *:gap-1.5 *:items-center gap-3 items-center">
-        <span>
+        <span class="font-medium">
           <component
             :is="`i-lol-${champion.attackType.toLowerCase()}`"
             v-if="champion.attackType"
             class="!size-4.5 shrink-0  dst **:stroke-0 " />
           {{ champion.attackType }}
         </span>
-        <span
-          v-if="champion.attackType && champion.adaptiveType"
-          name="slash"
-          class="opacity-60 **:stroke-3">/</span>
-        <div>
+        <span v-if="champion.attackType && champion.adaptiveType">
+          +
+        </span>
+        <div class="font-medium">
           <span class="size-4 grid place-items-center relative">
             <component
               :is="damageType?.icon"
               v-if="damageType?.icon"
               :class="cn('!size-3.5 shrink-0 absolute  dst', { 'mt-0.5 mr-0.75': champion.adaptiveType == 'Magic damage' })"
               :style="{
-                color: damageType.color,
+                /*  color: damageType.color, */
               }" />
           </span>
           {{ champion.adaptiveType?.replace('damage', '') }}
@@ -67,7 +66,7 @@ const damageType = computed (() => damageTypes.find(d => d.type == champion.adap
 
     <div :class="wrapperClass">
       <p>Resource</p>
-      <p class="flex gap-2 items-center">
+      <p class="flex gap-2 font-medium items-center">
         <img
           v-if="resource?.img"
           :src="resource.img"
@@ -76,9 +75,9 @@ const damageType = computed (() => damageTypes.find(d => d.type == champion.adap
           :is="resource?.icon"
           v-else-if="resource?.icon"
           :style="{
-            color: resource.color,
+          /*   color: resource.color, */
           }"
-          class="!size-4 shrink-0  dst " />
+          class="!size-3.5 opacity-90 shrink-0  dst " />
         {{ champion.resource }}
       </p>
     </div>
@@ -87,7 +86,7 @@ const damageType = computed (() => damageTypes.find(d => d.type == champion.adap
       <p>Price</p>
       <div
         class="flex gap-4 items-center overflow-hidden *:gap-1 *:text-sm *:flex *:items-center">
-        <div>
+        <div class="font-medium">
           <i-lol-be class="!size-4.25 text-platinum !shrink-0 dst mr-0.5" />
           <p>
             {{ champion.price.blueEssence }}
@@ -96,7 +95,7 @@ const damageType = computed (() => damageTypes.find(d => d.type == champion.adap
         </div>
         <div>
           <i-lol-rp class="!size-4.5 mr-1  text-gold !shrink-0 dst" />
-          <p>
+          <p class="font-medium">
             {{ champion.price.rp }}
             <span class="text-xxs font-medium pr-0.5">RP</span>
           </p>
@@ -113,7 +112,7 @@ const damageType = computed (() => damageTypes.find(d => d.type == champion.adap
           external
           :to="`https://wiki.leagueoflegends.com/en-us/V${champion.patchLastChanged}`"
           variant="link"
-          :class="cn('!gap-1 underline underline-offset-3   group/l decoration-bc/40  hover:decoration-bc opacity-80 !text-nowrap hover:opacity-100')">
+          :class="cn('!gap-1 underline underline-offset-3 font-medium  group/l decoration-bc/40  hover:decoration-bc opacity-80 !text-nowrap hover:opacity-100')">
           Patch {{ champion.patchLastChanged }}
         </Blink>
         <template #content>
@@ -131,7 +130,7 @@ const damageType = computed (() => damageTypes.find(d => d.type == champion.adap
       <p class="opacity-50">
         Release Date
       </p>
-      <p>
+      <p class="font-medium">
         {{ useDateFormat(champion.releaseDate, 'MMMM D, YYYY') }}
       </p>
     </div>

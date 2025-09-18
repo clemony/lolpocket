@@ -15,12 +15,13 @@ const props = defineProps<
     v-bind="props"
     :class="
       cn(
-        'overflow-hidden transition-all data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down CollapsibleContent *:not-after:z-1',
+        'overflow-hidden w-full max-w-full transition-all data-[state=closed]:animate-collapsible-up data-[state=open]:animate-collapsible-down CollapsibleContent *:not-after:z-1',
         { ' ': props.menu },
         props.class,
       )
     ">
     <div
+      v-if="props.menu"
       :class="
         cn('size-full relative', {
           ' after:w-px after:z-0 after:h-[calc(100%-12px)]  after:absolute after:left-3  py-px after:top-[6px] after:bg-b3/60 px-6':
@@ -29,5 +30,7 @@ const props = defineProps<
       ">
       <slot />
     </div>
+
+    <slot v-else />
   </CollapsibleContent>
 </template>

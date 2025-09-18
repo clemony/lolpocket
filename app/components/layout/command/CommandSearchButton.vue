@@ -1,16 +1,16 @@
 <script lang="ts" setup>
 import { getDeviceKey } from '~/utils/config/handleDevice'
 
-const us = useUiStore()
+const ui = useUiStore()
 </script>
 
 <template>
   <animate-presence>
-    <button
-      v-if="!us.sidebarExpanded"
-      v-tippy="!us.sidebarExpanded ? `Search ${getDeviceKey()} K` : null"
+    <!--  <button
+      v-if="!ui.sidebarExpanded"
+      v-tippy="!ui.sidebarExpanded ? `Search ${getDeviceKey()} K` : null"
       class="btn absolute !h-10 !w-9 border-b3 hover:ring-neutral/50 flex pointer-events-none cursor-pointer items-center btn-square opacity-0 h-0 !py-0 btn-neutral !bg-neutral/85 hover:ring-1 group inset-shadow-xs"
-      :class="{ '!pointer-events-auto top-18 left-3.75': !us.sidebarExpanded }"
+      :class="{ '!pointer-events-auto top-18 left-3.75': !ui.sidebarExpanded }"
       :animate="{
         opacity: [0, 1],
         translate: ['0, -10px', '0, 0'],
@@ -23,10 +23,10 @@ const us = useUiStore()
         scale: [1, 0],
       }"
       :style="{ '--noise': 0.01 }"
-      @click.stop="us.commandOpen = true">
+      @click.stop="ui.commandOpen = true">
       <icon
         name="search"
         class="-mt-px !text-nc size-3.75 opacity-94 group-hover:opacity-100" />
-    </button>
+    </button> -->
   </animate-presence>
 </template>

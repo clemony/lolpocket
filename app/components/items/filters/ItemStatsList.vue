@@ -4,7 +4,7 @@ import { statIndex } from '#shared/appdata'
 const emit = defineEmits(['update:model'])
 
 const to = ref([])
-const categories = ref(statIndex)
+const categories = ref(Object.values(statIndex))
 const originalOrder = ref([
   ...categories.value.sort((a, b) => {
     if (a.name < b.name) {

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const us = useUiStore()
+const ui = useUiStore()
 </script>
 
 <template>

@@ -1,22 +1,23 @@
 <script setup lang="ts">
+import { getMatchesByPuuid } from '~~/server/api/riotClient'
+
 definePageMeta({
   title: 'analysis',
-  path: '/tools/analysis',
-  level: 1,
   order: 5,
+  path: '/tools/analysis',
 })
 
 const as = useAccountStore()
 const ss = useSummonerStore()
 const ms = useMatchStore()
-const summoner = ref(null)
+const summoner = ref<Summoner>(null)
 console.log('💠 - summoner:', summoner)
 
 onMounted(async () => {
   const q = computedAsync(() => ms.analysisQueueSelect)
   const p = computedAsync(() => ms.analysisPatchSelect)
   const s = computedAsync(() => ss.getSummoner(as.account.puuid))
-  await { q, p, s }
+  await { p, q, s }
   summoner.value = s.value
 })
 </script>
@@ -31,7 +32,7 @@ onMounted(async () => {
     <main class="overflow-y-auto grow relative px-10 w-full overflow-x-hidden">
       <NuxtPage
         v-if="summoner"
-        :matches="summoner.simplifiedMatches" />
+        :matches="getMatchesByPuuid(summoner)" />
     </main>
   </div>
 </template>

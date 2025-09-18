@@ -5,10 +5,10 @@ const { pocket } = defineProps<{
 
 const route = useRoute()
 
-const tabs = ref(null)
+const tabs = ref<string>(null)
 
 onMounted(() => {
-  tabs.value = route.name
+  tabs.value = route.name.toString()
 })
 </script>
 

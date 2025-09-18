@@ -78,7 +78,7 @@ const quotes = [
   '"Cute mask. Your, uh, mom sew that?" -Yasuo, to Shen',
 ]
 
-const quote = ref(null)
+const quote = ref<string>(null)
 onMounted(async () => {
   quote.value = getRandom(quotes)
 })

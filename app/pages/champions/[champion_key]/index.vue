@@ -28,7 +28,7 @@ watch(
 <template>
   <main
     id="container"
-    class="overflow-y-auto size-full flex gap-32">
+    class="overflow-y-auto size-full flex gap-28">
     <ChampionIndexAside :champion />
     <article class="grow w-full py-22 h-max pb-16 gap-10 flex flex-col">
       <ChampionAbility

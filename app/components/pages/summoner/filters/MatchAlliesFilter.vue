@@ -29,7 +29,7 @@ watch(
       v-model:model-value="allyModel"
       class="w-full overflow-y-scroll overscroll-auto px-1.5 h-max max-h-120"
       :multiple="false"
-      @entry-focus.prevent>
+      @entry-focui.prevent>
       <ListboxContent class="w-full py-4">
         <template v-if="!loading">
           <ListboxItem

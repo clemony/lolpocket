@@ -8,28 +8,29 @@ export default defineNuxtPlugin((nuxtApp) => {
     VueTippy,
     // optional
     {
-      directive: 'tippy', // => v-tippy
       component: 'tippy', // => <tippy/>
       componentSingleton: 'tippies', // => <tippy-singleton/>,
       defaultProps: {
-        placement: 'top',
-        flip: true,
-        allowHTML: true,
-        arrow: sharpArrow + sharpArrow,
         hideOnClick: false,
-        followCursor: false,
-        inertia: true,
-        delay: [800, 0],
-        duration: [150],
+        allowHTML: true,
         animation: 'scale',
-        interactiveBorder: 2,
-        offset: [0, 10],
-        role: 'tooltip',
         aria: {
           content: 'auto',
           expanded: 'auto',
         },
+        arrow: sharpArrow + sharpArrow,
+        delay: [800, 0],
+        duration: [150],
+        flip: true,
+        followCursor: false,
+        inertia: true,
+        interactiveBorder: 2,
+        offset: [0, 10],
+        placement: 'top',
+        role: 'tooltip',
+        theme: 'contrast',
       },
+      directive: 'tippy', // => v-tippy
     }
   )
 })

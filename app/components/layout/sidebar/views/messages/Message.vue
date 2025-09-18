@@ -13,8 +13,8 @@ const { message } = defineProps<{
     <LazyDialogContentPop
       class="grid grid-rows-[28px_80px_1fr] p-0 h-160 w-220 gap-1 bg-b1/86 backdrop-blur-lg"
       :auto-focus="false"
-      @open-auto-focus.stop.prevent
-      @close-auto-focus.stop.prevent>
+      @open-auto-focui.stop.prevent
+      @close-auto-focui.stop.prevent>
       <DialogHeader
         class="gap-4 object-contain size-full tracking-normal flex-row flex items-center px-3 justify-between">
         <DialogTitle class="!text-xs text-bc/50 items-center pl-2 font-semibold">

@@ -80,18 +80,18 @@ export const buttonVariants = cva(buttonBase, {
     },
     size: {
       base: '',
-      xxs: 'h-6 text-xs rounded-md',
-      xs: 'btn-xs text-xs rounded-md',
-      sm: 'btn-sm text-xs rounded-lg',
-      md: 'rounded-lg btn-md',
-      lg: 'rounded-lg btn-lg',
-      xl: 'rounded-lg btn-xl',
+      xxs: 'h-6 rounded-md text-xs',
+      xs: 'btn-xs rounded-md text-xs',
+      sm: 'btn-sm rounded-lg text-xs',
+      md: 'btn-md rounded-lg',
+      lg: 'btn-lg rounded-lg',
+      xl: 'btn-xl rounded-lg',
       icon: 'aspect-square rounded-lg',
       default: 'md',
     },
     shape: {
-      square: 'grid place-items-center aspect-square ',
-      circle: '!btn-circle !rounded-full  grid place-items-center ',
+      square: 'grid aspect-square place-items-center ',
+      circle: '!btn-circle grid  place-items-center !rounded-full ',
     },
     defaultVariants: {
       variant: 'btn',
@@ -127,7 +127,7 @@ export const toggleVariants = cva('', {
     variant: {
       default: 'bg-transparent',
       outline:
-        'border border-input bg-transparent hover:bg-accent hover:text-accent-foreground',
+        'border-input hover:bg-accent hover:text-accent-foreground border bg-transparent',
     },
     size: {
       ...sizes,

@@ -1,11 +1,11 @@
 <script setup lang="ts">
 definePageMeta({
   name: 'pocket-champions',
-  path: '/pocket/:pocket_key',
+  title: 'champions',
   alias: '/pocket/:pocket_key/champions',
   level: 3,
-  title: 'champions',
   order: 1,
+  path: '/pocket/:pocket_key',
   search: false,
 })
 

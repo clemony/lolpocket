@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { reactiveOmit } from '@vueuse/core'
 import type { SelectContentEmits, SelectContentProps } from 'reka-ui'
+import { reactiveOmit } from '@vueuse/core'
 import {
   SelectContent,
   SelectPortal,
@@ -39,7 +39,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
           props.class,
         )
       "
-      @close-auto-focus.prevent>
+      @close-auto-focui.prevent>
       <SelectScrollUpButton />
 
       <SelectViewport

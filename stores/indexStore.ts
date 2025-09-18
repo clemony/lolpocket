@@ -7,7 +7,7 @@ export const useIndexStore = defineStore(
     const patchList = ref<number[]>([])
     const patch = ref<number>()
     const lastPatchCheck = ref<Date>()
-    const lastFullRefresh = ref()
+    const lastFullRefresh = ref<Date>()
     const champions = ref<ChampionIndex[]>([])
     const runes = ref<RuneIndex[]>([])
     const paths = ref<PathIndex[]>([])
@@ -183,26 +183,26 @@ export const useIndexStore = defineStore(
     }
 
     return {
-      lastFullRefresh,
-      patch,
-      patchList,
+      titles,
       champions,
       items,
-      titles,
-      runes,
+      lastFullRefresh,
       maps,
+      patch,
+      patchList,
+      runes,
       shards,
-      spells,
       skin,
       skins,
+      spells,
 
       // load
+      loadAll,
+      loadBasic,
       loadPatch,
+      loadPaths,
       loadSkins,
       loadTitles,
-      loadBasic,
-      loadPaths,
-      loadAll,
 
       // helpers
       findInIndex,
@@ -210,32 +210,31 @@ export const useIndexStore = defineStore(
       spellById: (id: number) => getByIndex(spells.value, 'id', id),
 
       // champion helpers
-      getChampionTitle,
-      championByKey: (key: string) => getByIndex(champions.value, 'key', key),
-      champKeyById: (id: number) =>
-        findInIndex(champions.value, 'id', id, 'key') as string,
-      champNameById: (id: number) =>
-        findInIndex(champions.value, 'id', id, 'name') as string,
-      champNameByKey: (key: string) =>
-        findInIndex(champions.value, 'key', key, 'name') as string,
       champIdByKey: (key: string) =>
         findInIndex(champions.value, 'key', key, 'id') as number,
       champIdByName: (name: string) =>
         findInIndex(champions.value, 'name', name, 'id'),
+      championByKey: (key: string) => getByIndex(champions.value, 'key', key),
+      champKeyById: (id: number) =>
+        findInIndex(champions.value, 'id', id, 'key') as string,
       champKeyByName: (name: string) =>
         findInIndex(champions.value, 'name', name, 'key'),
+      champNameById: (id: number) =>
+        findInIndex(champions.value, 'id', id, 'name') as string,
+      champNameByKey: (key: string) =>
+        findInIndex(champions.value, 'key', key, 'name') as string,
+      getChampionTitle,
 
       // images
 
-      tileByKey: (key: string) => skin.value?.[key]?.tilePath,
-      splashByKey: (key: string) => skin.value?.[key]?.splashPath,
       centeredByKey: (key: string) => skin.value?.[key]?.centeredPath,
-      loadScreenByKey: (key: string) => skin.value?.[key]?.loadPath,
-
+      getSkinName,
       getSplash: (keyOrId: string | number, type: SplashType) =>
         getSplash(keyOrId, type),
-      getSkinName,
+      loadScreenByKey: (key: string) => skin.value?.[key]?.loadPath,
       skinNameFromUrl,
+      splashByKey: (key: string) => skin.value?.[key]?.splashPath,
+      tileByKey: (key: string) => skin.value?.[key]?.tilePath,
 
       // item helpers
 
@@ -263,15 +262,15 @@ export const useIndexStore = defineStore(
         findInIndex(spells.value, 'id', id, 'name') as string,
 
       // maps
-      mapNameById: (id: number) => maps.value.find(m => m.id === id)?.name,
       mapIdById: (id: number) =>
         maps.value.find(m => m.id === id)?.mapStringId,
+      mapNameById: (id: number) => maps.value.find(m => m.id === id)?.name,
     }
   },
   {
     persist: {
-      storage: piniaPluginPersistedstate.localStorage(),
       key: 'indexStore',
+      storage: piniaPluginPersistedstate.localStorage(),
     },
   }
 )

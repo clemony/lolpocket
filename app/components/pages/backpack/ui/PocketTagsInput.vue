@@ -38,7 +38,7 @@ function deleteTag(tag: string) {
     class="overflow-hidden"
     @entry-focus="null"
     @highlight="null"
-    @entry-focus.stop.prevent>
+    @entry-focui.stop.prevent>
     <ListboxContent class="space-y-3 w-full">
       <!-- custom tags -->
 

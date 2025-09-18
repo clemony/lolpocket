@@ -4,13 +4,13 @@ import { toast } from 'vue-sonner'
 
 definePageMeta({
   name: 'account',
-  path: '/settings/account',
-  icon: 'at',
   description: 'Manage your account settings and login settings.',
+  icon: 'at',
+  path: '/settings/account',
   /*   middleware: 'confirm-auth', */
 })
 
-const select = shallowRef(null)
+const select = shallowRef<string>(null)
 
 async function onSubmit(values: any) {
   toast.success({
@@ -75,7 +75,7 @@ console.log('userProviders: ', userProviders)
         v-model:model-value="as().account.region"
         position="popper"
         :default-value="as().account.region"
-        @close-auto-focus.prevent>
+        @close-auto-focui.prevent>
         <SelectTrigger class="h-12 w-full inset-shadow-none flex input">
           <!--       <span class="grow">
               {{ select }}

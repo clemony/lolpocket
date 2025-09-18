@@ -8,13 +8,13 @@ const { class: className } = defineProps<{
 }>()
 
 const as = useAccountStore()
-const select = shallowRef(null)
-const selectedRegion = shallowRef(as.account?.region || 'na1')
+const select = useTemplateRef<HTMLElement>('select')
+const selectedRegion = shallowRef<string>(as.account?.region || 'na1')
 
-const name = ref('')
-const tag = ref('')
-const hash = ref(null)
-const queryName = shallowRef(null)
+const name = ref<string>('')
+const tag = ref<string>('')
+const hash = ref<string | null>(null)
+const queryName = useTemplateRef<HTMLElement>('queryName')
 const { focused } = useFocus(queryName)
 watch(
   () => name.value.length,
@@ -59,7 +59,7 @@ const tagText = computed(() =>
 
       <!--    <Popover
         class=" "
-        @close-auto-focus.prevent
+        @close-auto-focui.prevent
         @click.stop>
         <PopoverTrigger
           no-arrow

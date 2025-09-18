@@ -9,8 +9,7 @@ const wrapperClass = 'flex h-12  items-center justify-between border-b border-b-
 
 <template>
   <aside
-    class="flex flex-col px-1 shrink-0 gap-8 scrollbar-hidden py-22 w-110 overflow-y-auto sticky top-0">
-    <div class="size-44 shadow-flat"></div>
+    class="flex flex-col px-1 shrink-0 gap-10 scrollbar-hidden py-22 w-120 overflow-y-auto sticky top-0">
     <menu class="space-y-2">
       <h3 class="mb-4 dst">
         Abilities
@@ -37,28 +36,18 @@ const wrapperClass = 'flex h-12  items-center justify-between border-b border-b-
       </Blink>
     </menu>
 
-    <Collapsible
-      v-model:open="us().collapseStates.championInfo[0]"
-      class="px-0 data-[state=open]:!overflow-visible field-box  ">
-      <CollapsibleTrigger
-        class="flex z-0   min-h-16 h-16  w-full items-center justify-between  px-5  data-[state=open]:border-b  data-[state=open]:border-b-b3 ">
-        <h3 class="dst">
-          Stats
-        </h3>
-        <CaretRotate />
-      </CollapsibleTrigger>
-      <ChampionStats
-        :stats="champion.stats" />
-    </Collapsible>
+    <ChampionStats
+      v-model:open="ui().collapseStates.championInfo[0]"
+      :champion />
 
     <Collapsible
-      v-model:open="us().collapseStates.championInfo[1]"
+      v-model:open="ui().collapseStates.championInfo[1]"
       class="data  field-box ">
       <CollapsibleTrigger
         class="flex  min-h-16 h-16 w-full px-5  data-[state=open]:border-b  data-[state=open]:border-b-b3 items-center justify-between">
         <h3>Data</h3>
 
-        <CaretRotate />
+        <CaretFlip />
       </CollapsibleTrigger>
       <CollapsibleContent>
         <LazyChampionAsideData
@@ -68,13 +57,13 @@ const wrapperClass = 'flex h-12  items-center justify-between border-b border-b-
     </Collapsible>
 
     <Collapsible
-      v-model:open="us().collapseStates.championInfo[2]"
+      v-model:open="ui().collapseStates.championInfo[2]"
       class="field-box">
       <CollapsibleTrigger
         class="flex min-h-16 h-16 w-full  px-5  data-[state=open]:border-b  data-[state=open]:border-b-b3  items-center justify-between">
         <h3>Bio</h3>
 
-        <CaretRotate />
+        <CaretFlip />
       </CollapsibleTrigger>
       <CollapsibleContent
         class="px-5 py-4">

@@ -4,9 +4,9 @@ import { getDeviceKey } from '~/utils/config/handleDevice'
 const props = defineProps<{
   class?: HTMLAttributes['class']
 }>()
-const us = useUiStore()
+const ui = useUiStore()
 
-const { ControlRight, ControlLeft, MetaRight, MetaLeft, K } = useMagicKeys()
+const { ControlLeft, ControlRight, K, MetaLeft, MetaRight } = useMagicKeys()
 
 watchEffect(() => {
   if (
@@ -31,7 +31,7 @@ watchEffect(() => {
       )
     "
     class=""
-    @click.stop="us.commandOpen = true">
+    @click.stop="ui.commandOpen = true">
     <span class="relative size-5 grid place-items-center -left-0.25">
       <icon
         name="weui:search-filled"

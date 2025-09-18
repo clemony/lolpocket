@@ -131,18 +131,19 @@ for (const champ of Object.values(merakiData)) {
     const filteredStats = Object.fromEntries(
       Object.entries(champ.stats)
         .filter(([k]) => !k.startsWith('aram') && !k.startsWith('urf'))
-        .map(([k, val]) => [
-          k,
-          Object.fromEntries(
+        .map(([k, val]) => {
+          const cleaned = Object.fromEntries(
             Object.entries(val)
               .filter(([, v]) => v !== 0 && v != null)
               .map(([kk, vv]) => [
                 kk,
                 typeof vv === 'number' ? Number(vv.toFixed(3)) : vv,
               ])
-          ),
-        ])
-        .filter(([, val]) => Object.keys(val).length > 0)
+          )
+
+          // if nothing left, preserve flat: 0
+          return [k, Object.keys(cleaned).length > 0 ? cleaned : { flat: 0 }]
+        })
     )
 
     // ---------- Build normalized champion ----------
@@ -151,23 +152,23 @@ for (const champ of Object.values(merakiData)) {
       key: champ.key,
       name: champ.name,
       title: champ.title,
-      fullName: champ.fullName,
-      resource: normalize(champ.resource),
-      attackType: normalize(champ.attackType),
-      adaptiveType: normalize(champ.adaptiveType),
-      stats: filteredStats,
-      positions: normalizeArray(champ.positions),
-      roles: normalizeArray(champ.roles),
-      attributeRatings: champ.attributeRatings,
       abilities: cleanedAbilities,
-      lore: champ.lore,
+      adaptiveType: normalize(champ.adaptiveType),
+      attackType: normalize(champ.attackType),
+      attributeRatings: champ.attributeRatings,
       faction: champ.faction,
-      releaseDate: champ.releaseDate,
+      fullName: champ.fullName,
+      lore: champ.lore,
       patchLastChanged: champ.patchLastChanged,
+      positions: normalizeArray(champ.positions),
       price: {
         blueEssence: champ.price?.blueEssence ?? null,
         rp: champ.price?.rp ?? null,
       },
+      releaseDate: champ.releaseDate,
+      resource: normalize(champ.resource),
+      roles: normalizeArray(champ.roles),
+      stats: filteredStats,
     }
 
     championsMergedRaw[key] = Object.fromEntries(

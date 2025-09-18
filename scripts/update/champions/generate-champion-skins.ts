@@ -1,8 +1,7 @@
-import { $fetch } from 'ofetch'
-
 import { Buffer } from 'node:buffer'
 import fs from 'node:fs'
 import path from 'node:path'
+import { $fetch } from 'ofetch'
 import type {
   FullSkinRecord,
   SkinRecord,
@@ -53,9 +52,9 @@ for (const key in champions) {
         && skin.loadScreenPath
     )
     .map(skin => ({
-      tilePath: cleanImageLink(skin.tilePath),
       centeredPath: cleanImageLink(skin.splashPath),
       loadPath: cleanImageLink(skin.loadScreenPath),
+      tilePath: cleanImageLink(skin.tilePath),
     }))
 
   if (baseSkins.length > 0) {
@@ -69,7 +68,7 @@ for (const key in champions) {
       || oldSkin.centeredPath !== baseSkins[0].centeredPath
       || oldSkin.loadPath !== baseSkins[0].loadPath
     ) {
-      changedChamps.push({ name: key, id: champ.id })
+      changedChamps.push({ id: champ.id, name: key })
     }
   }
 
@@ -82,8 +81,8 @@ for (const key in champions) {
         && skin.loadScreenPath
     )
     .map(skin => ({
-      name: skin.name,
       id: cleanImageNum(skin.tilePath),
+      name: skin.name,
     }))
 
   if (allSkins.length > 0) {
@@ -134,7 +133,7 @@ for (const champ of changedChamps) {
     const top = Math.floor((height - 100) / 2) // (128 - 100) / 2 = 14
 
     await image
-      .extract({ left, top, width: 100, height: 100 })
+      .extract({ width: 100, height: 100, left, top })
       .webp({ quality: 90 })
       .toFile(webpPath)
 

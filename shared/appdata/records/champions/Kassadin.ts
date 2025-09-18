@@ -1,13 +1,315 @@
-// Updated Patch 25.17 - 09/14/2025 05:55:12 PM CDT
+// Updated Patch 25.17 - 09/18/2025 02:20:03 AM CDT
 
 const champion: Champion = {
   "id": 38,
   "key": "Kassadin",
   "name": "Kassadin",
   "title": "the Void Walker",
-  "resource": "Mana",
-  "attackType": "Melee",
+  "abilities": [
+    {
+      "key": "P",
+      "name": "Void Stone",
+      "affects": "Self",
+      "blurb": "Innate:  Kassadin is permanently  ghosted and takes reduced  magic damage.",
+      "effects": [
+        {
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Kassadin is permanently ghosted and takes 10% reduced magic damage.</p>"
+        }
+      ],
+      "icon": "https://cdn.communitydragon.org/latest/champion/Kassadin/ability-icon/p",
+      "notes": "No additional details.",
+      "targeting": "Passive"
+    },
+    {
+      "key": "Q",
+      "name": "Null Sphere",
+      "affects": "Enemies, Self",
+      "blurb": "Active:  Kassadin fires an orb of void energy at the target enemy that deals magic damage and  disrupts their ongoing  channels.",
+      "castTime": "0.25",
+      "cooldown": "10 / 9.5 / 9 / 8.5 / 8",
+      "cost": "60 / 65 / 70 / 75 / 80",
+      "damageType": "Magic damage",
+      "effects": [
+        {
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kassadin fires an orb of void energy at the target enemy that deals magic damage and disrupts their ongoing channels.</p>",
+          "leveling": [
+            {
+              "attribute": "Magic Damage",
+              "modifiers": [
+                {
+                  "values": "65 / 95 / 125 / 155 / 185"
+                },
+                {
+                  "unit": "% AP",
+                  "values": "60"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "description": "He also gains a shield that absorbs magic damage for 1.5 seconds.",
+          "leveling": [
+            {
+              "attribute": "Magic Shield Strength",
+              "modifiers": [
+                {
+                  "values": "80 / 110 / 140 / 170 / 200"
+                },
+                {
+                  "unit": "% AP",
+                  "values": "30"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "icon": "https://cdn.communitydragon.org/latest/champion/Kassadin/ability-icon/q",
+      "maxCharges": -1,
+      "notes": "The  disrupt is 'wrapped' into a status effect that says the target is  Silenced for 0.25 seconds, but it does not actually silence. It however makes sure that the disrupt is prevented by  immunity to silences.\nThe shield is granted at the start of the cast time.",
+      "projectile": "TRUE",
+      "resource": "Mana",
+      "speed": "1400",
+      "spellEffects": "spell",
+      "spellshieldable": "True",
+      "targeting": "Unit",
+      "targetRange": "650"
+    },
+    {
+      "key": "W",
+      "name": "Nether Blade",
+      "affects": "Self",
+      "blurb": "Passive:  Kassadin's basic attacks deal bonus magic damage.",
+      "castTime": "none",
+      "cooldown": "7",
+      "cost": "1",
+      "damageType": "Magic damage",
+      "effects": [
+        {
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Kassadin's basic attacks deal 20 (+ 10% AP) bonus magic damage on-hit.</p>"
+        },
+        {
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kassadin empowers his next basic attack within 5 seconds to have an uncancellable windup, gain 50 bonus range, deal increased bonus magic damage, and restore mana, with the restoration amount quintupled against champions.</p>",
+          "leveling": [
+            {
+              "attribute": "Increased Bonus Magic Damage",
+              "modifiers": [
+                {
+                  "values": "50 / 75 / 100 / 125 / 150"
+                },
+                {
+                  "unit": "% AP",
+                  "values": "80"
+                }
+              ]
+            },
+            {
+              "attribute": "Mana Restored",
+              "modifiers": [
+                {
+                  "unit": "% of missing mana",
+                  "values": "4 / 4.5 / 5 / 5.5 / 6"
+                }
+              ]
+            },
+            {
+              "attribute": "Mana Restored Against Champions",
+              "modifiers": [
+                {
+                  "unit": "% of missing mana",
+                  "values": "20 / 22.5 / 25 / 27.5 / 30"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "description": "Nether Blade resets Kassadin's basic attack timer."
+        }
+      ],
+      "icon": "https://cdn.communitydragon.org/latest/champion/Kassadin/ability-icon/w",
+      "maxCharges": -1,
+      "notes": "The passive damage applies  proc damage and the active damage applies  spell damage.\nThe enhanced attack will apply other on-hit effects and can  critically strike as normal.\nNether Blade will not grant mana if the attack is  dodged or if it  misses, but will do so if the attack is  blocked. In all cases the damage is parried.\n Spell shield will block the active damage but not the passive one.\nThe passive bonus damage applies to structures.\nThe empowered attack will trigger but not be consumed nor apply its effects against structures.",
+      "resource": "Mana",
+      "spellEffects": "special",
+      "spellshieldable": "Special",
+      "targeting": "Auto"
+    },
+    {
+      "key": "E",
+      "name": "Force Pulse",
+      "affects": "Enemies",
+      "angle": "78°",
+      "blurb": "Passive: Ability casts reduce the cooldown of this ability.",
+      "castTime": "0.25",
+      "cooldown": "21 / 20 / 19 / 18 / 17",
+      "cost": "60 / 65 / 70 / 75 / 80",
+      "damageType": "Magic damage",
+      "effectRadius": "600 / 1800",
+      "effects": [
+        {
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Each time Kassadin or a nearby champion casts an ability, Force Pulse's current cooldown is reduced by 0.75 seconds.</p>"
+        },
+        {
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kassadin emits a pulse of void energy in a cone in the target direction that deals magic damage to enemies hit and slows them for 1 second.</p>",
+          "leveling": [
+            {
+              "attribute": "Magic Damage",
+              "modifiers": [
+                {
+                  "values": "70 / 100 / 130 / 160 / 190"
+                },
+                {
+                  "unit": "% AP",
+                  "values": "65"
+                }
+              ]
+            },
+            {
+              "attribute": "Slow",
+              "modifiers": [
+                {
+                  "unit": "%",
+                  "values": "50 / 60 / 70 / 80 / 90"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "icon": "https://cdn.communitydragon.org/latest/champion/Kassadin/ability-icon/e",
+      "maxCharges": -1,
+      "notes": "Untargetable champions do not reduce Force Pulse's cooldown upon ability activations.\nToggle abilities and transformation abilities do not count as ability activations and will not reduce Force Pulse's cooldown.\nThis ability will cast from wherever the caster is at the end of the cast time.",
+      "projectile": "FALSE",
+      "resource": "Mana",
+      "spellEffects": "Area of effect",
+      "spellshieldable": "True",
+      "targeting": "Direction"
+    },
+    {
+      "key": "R",
+      "name": "Riftwalk",
+      "affects": "Enemies",
+      "blurb": "Active:  Kassadin  blinks toward the target location, dealing magic damage to all nearby enemies upon arrival. He then gains a stack of Riftwalk, stacking up to a cap.",
+      "castTime": "0.25",
+      "cooldown": "5 / 3.5 / 2",
+      "cost": "40",
+      "damageType": "Magic damage",
+      "effectRadius": "270",
+      "effects": [
+        {
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kassadin blinks toward the target location, dealing magic damage to all nearby enemies upon arrival. He then gains a stack of Riftwalk for 15 seconds, refreshing on subsequent casts and stacking up to 4 times.</p>",
+          "leveling": [
+            {
+              "attribute": "Magic Damage",
+              "modifiers": [
+                {
+                  "values": "70 / 90 / 110"
+                },
+                {
+                  "unit": "% AP",
+                  "values": "50"
+                },
+                {
+                  "unit": "% maximum mana",
+                  "values": "2"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Riftwalk:</span> For each stack, Riftwalk deals bonus magic damage at an increased mana cost.</p>",
+          "leveling": [
+            {
+              "attribute": "Bonus Damage Per Stack",
+              "modifiers": [
+                {
+                  "values": "35 / 45 / 55"
+                },
+                {
+                  "unit": "% AP",
+                  "values": "7"
+                },
+                {
+                  "unit": "% maximum mana",
+                  "values": "1"
+                }
+              ]
+            },
+            {
+              "attribute": "Maximum Bonus Damage",
+              "modifiers": [
+                {
+                  "values": "140 / 180 / 220"
+                },
+                {
+                  "unit": "% AP",
+                  "values": "28"
+                },
+                {
+                  "unit": "% maximum mana",
+                  "values": "4"
+                }
+              ]
+            },
+            {
+              "attribute": "Maximum Magic Damage",
+              "modifiers": [
+                {
+                  "values": "210 / 270 / 330"
+                },
+                {
+                  "unit": "% AP",
+                  "values": "78"
+                },
+                {
+                  "unit": "% maximum mana",
+                  "values": "6"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "icon": "https://cdn.communitydragon.org/latest/champion/Kassadin/ability-icon/r",
+      "maxCharges": -1,
+      "notes": "Flash can be used during the cast time, allowing Kassadin to blink further away.",
+      "resource": "Mana",
+      "spellEffects": "Area of effect",
+      "spellshieldable": "True",
+      "targeting": "Location",
+      "targetRange": "500"
+    }
+  ],
   "adaptiveType": "Magic damage",
+  "attackType": "Melee",
+  "attributeRatings": {
+    "damage": 3,
+    "toughness": 2,
+    "control": 1,
+    "mobility": 3,
+    "utility": 1,
+    "abilityReliance": 90,
+    "difficulty": 2
+  },
+  "faction": "void",
+  "lore": "Cutting a burning swath through the darkest places of the world, Kassadin knows his days are numbered. A widely traveled Shuriman guide and adventurer, he had chosen to raise a family among the peaceful southern tribes—until the day his village was consumed by the Void. He vowed vengeance, combining a number of arcane artifacts and forbidden technologies for the struggle ahead. Finally, Kassadin set out for the wastelands of Icathia, ready to face any monstrous Void-construct in his search for their self-proclaimed prophet, Malzahar.",
+  "patchLastChanged": "25.11",
+  "positions": [
+    "Middle"
+  ],
+  "price": {
+    "blueEssence": 1575,
+    "rp": 790
+  },
+  "releaseDate": "2009-08-07",
+  "resource": "Mana",
+  "roles": [
+    "Assassin",
+    "Mage"
+  ],
   "stats": {
     "health": {
       "flat": 646,
@@ -77,308 +379,6 @@ const champion: Champion = {
     "attackRange": {
       "flat": 150
     }
-  },
-  "positions": [
-    "Middle"
-  ],
-  "roles": [
-    "Assassin",
-    "Mage"
-  ],
-  "attributeRatings": {
-    "damage": 3,
-    "toughness": 2,
-    "control": 1,
-    "mobility": 3,
-    "utility": 1,
-    "abilityReliance": 90,
-    "difficulty": 2
-  },
-  "abilities": [
-    {
-      "name": "Void Stone",
-      "key": "P",
-      "icon": "https://cdn.communitydragon.org/latest/champion/Kassadin/ability-icon/p",
-      "effects": [
-        {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Kassadin is permanently ghosted and takes 10% reduced magic damage.</p>"
-        }
-      ],
-      "targeting": "Passive",
-      "affects": "Self",
-      "notes": "No additional details.",
-      "blurb": "Innate:  Kassadin is permanently  ghosted and takes reduced  magic damage."
-    },
-    {
-      "name": "Null Sphere",
-      "key": "Q",
-      "icon": "https://cdn.communitydragon.org/latest/champion/Kassadin/ability-icon/q",
-      "effects": [
-        {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kassadin fires an orb of void energy at the target enemy that deals magic damage and disrupts their ongoing channels.</p>",
-          "leveling": [
-            {
-              "attribute": "Magic Damage",
-              "modifiers": [
-                {
-                  "values": "65 / 95 / 125 / 155 / 185"
-                },
-                {
-                  "values": "60",
-                  "unit": "% AP"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "description": "He also gains a shield that absorbs magic damage for 1.5 seconds.",
-          "leveling": [
-            {
-              "attribute": "Magic Shield Strength",
-              "modifiers": [
-                {
-                  "values": "80 / 110 / 140 / 170 / 200"
-                },
-                {
-                  "values": "30",
-                  "unit": "% AP"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "cost": "60 / 65 / 70 / 75 / 80",
-      "cooldown": "10 / 9.5 / 9 / 8.5 / 8",
-      "targeting": "Unit",
-      "affects": "Enemies, Self",
-      "spellshieldable": "True",
-      "resource": "Mana",
-      "damageType": "Magic damage",
-      "spellEffects": "spell",
-      "projectile": "TRUE",
-      "notes": "The  disrupt is 'wrapped' into a status effect that says the target is  Silenced for 0.25 seconds, but it does not actually silence. It however makes sure that the disrupt is prevented by  immunity to silences.\nThe shield is granted at the start of the cast time.",
-      "blurb": "Active:  Kassadin fires an orb of void energy at the target enemy that deals magic damage and  disrupts their ongoing  channels.",
-      "speed": "1400",
-      "castTime": "0.25",
-      "targetRange": "650",
-      "maxCharges": -1
-    },
-    {
-      "name": "Nether Blade",
-      "key": "W",
-      "icon": "https://cdn.communitydragon.org/latest/champion/Kassadin/ability-icon/w",
-      "effects": [
-        {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Kassadin's basic attacks deal 20 (+ 10% AP) bonus magic damage on-hit.</p>"
-        },
-        {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kassadin empowers his next basic attack within 5 seconds to have an uncancellable windup, gain 50 bonus range, deal increased bonus magic damage, and restore mana, with the restoration amount quintupled against champions.</p>",
-          "leveling": [
-            {
-              "attribute": "Increased Bonus Magic Damage",
-              "modifiers": [
-                {
-                  "values": "50 / 75 / 100 / 125 / 150"
-                },
-                {
-                  "values": "80",
-                  "unit": "% AP"
-                }
-              ]
-            },
-            {
-              "attribute": "Mana Restored",
-              "modifiers": [
-                {
-                  "values": "4 / 4.5 / 5 / 5.5 / 6",
-                  "unit": "% of missing mana"
-                }
-              ]
-            },
-            {
-              "attribute": "Mana Restored Against Champions",
-              "modifiers": [
-                {
-                  "values": "20 / 22.5 / 25 / 27.5 / 30",
-                  "unit": "% of missing mana"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "description": "Nether Blade resets Kassadin's basic attack timer."
-        }
-      ],
-      "cost": "1",
-      "cooldown": "7",
-      "targeting": "Auto",
-      "affects": "Self",
-      "spellshieldable": "Special",
-      "resource": "Mana",
-      "damageType": "Magic damage",
-      "spellEffects": "special",
-      "notes": "The passive damage applies  proc damage and the active damage applies  spell damage.\nThe enhanced attack will apply other on-hit effects and can  critically strike as normal.\nNether Blade will not grant mana if the attack is  dodged or if it  misses, but will do so if the attack is  blocked. In all cases the damage is parried.\n Spell shield will block the active damage but not the passive one.\nThe passive bonus damage applies to structures.\nThe empowered attack will trigger but not be consumed nor apply its effects against structures.",
-      "blurb": "Passive:  Kassadin's basic attacks deal bonus magic damage.",
-      "castTime": "none",
-      "maxCharges": -1
-    },
-    {
-      "name": "Force Pulse",
-      "key": "E",
-      "icon": "https://cdn.communitydragon.org/latest/champion/Kassadin/ability-icon/e",
-      "effects": [
-        {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Each time Kassadin or a nearby champion casts an ability, Force Pulse's current cooldown is reduced by 0.75 seconds.</p>"
-        },
-        {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kassadin emits a pulse of void energy in a cone in the target direction that deals magic damage to enemies hit and slows them for 1 second.</p>",
-          "leveling": [
-            {
-              "attribute": "Magic Damage",
-              "modifiers": [
-                {
-                  "values": "70 / 100 / 130 / 160 / 190"
-                },
-                {
-                  "values": "65",
-                  "unit": "% AP"
-                }
-              ]
-            },
-            {
-              "attribute": "Slow",
-              "modifiers": [
-                {
-                  "values": "50 / 60 / 70 / 80 / 90",
-                  "unit": "%"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "cost": "60 / 65 / 70 / 75 / 80",
-      "cooldown": "21 / 20 / 19 / 18 / 17",
-      "targeting": "Direction",
-      "affects": "Enemies",
-      "spellshieldable": "True",
-      "resource": "Mana",
-      "damageType": "Magic damage",
-      "spellEffects": "Area of effect",
-      "projectile": "FALSE",
-      "notes": "Untargetable champions do not reduce Force Pulse's cooldown upon ability activations.\nToggle abilities and transformation abilities do not count as ability activations and will not reduce Force Pulse's cooldown.\nThis ability will cast from wherever the caster is at the end of the cast time.",
-      "blurb": "Passive: Ability casts reduce the cooldown of this ability.",
-      "angle": "78°",
-      "castTime": "0.25",
-      "effectRadius": "600 / 1800",
-      "maxCharges": -1
-    },
-    {
-      "name": "Riftwalk",
-      "key": "R",
-      "icon": "https://cdn.communitydragon.org/latest/champion/Kassadin/ability-icon/r",
-      "effects": [
-        {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kassadin blinks toward the target location, dealing magic damage to all nearby enemies upon arrival. He then gains a stack of Riftwalk for 15 seconds, refreshing on subsequent casts and stacking up to 4 times.</p>",
-          "leveling": [
-            {
-              "attribute": "Magic Damage",
-              "modifiers": [
-                {
-                  "values": "70 / 90 / 110"
-                },
-                {
-                  "values": "50",
-                  "unit": "% AP"
-                },
-                {
-                  "values": "2",
-                  "unit": "% maximum mana"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Riftwalk:</span> For each stack, Riftwalk deals bonus magic damage at an increased mana cost.</p>",
-          "leveling": [
-            {
-              "attribute": "Bonus Damage Per Stack",
-              "modifiers": [
-                {
-                  "values": "35 / 45 / 55"
-                },
-                {
-                  "values": "7",
-                  "unit": "% AP"
-                },
-                {
-                  "values": "1",
-                  "unit": "% maximum mana"
-                }
-              ]
-            },
-            {
-              "attribute": "Maximum Bonus Damage",
-              "modifiers": [
-                {
-                  "values": "140 / 180 / 220"
-                },
-                {
-                  "values": "28",
-                  "unit": "% AP"
-                },
-                {
-                  "values": "4",
-                  "unit": "% maximum mana"
-                }
-              ]
-            },
-            {
-              "attribute": "Maximum Magic Damage",
-              "modifiers": [
-                {
-                  "values": "210 / 270 / 330"
-                },
-                {
-                  "values": "78",
-                  "unit": "% AP"
-                },
-                {
-                  "values": "6",
-                  "unit": "% maximum mana"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "cost": "40",
-      "cooldown": "5 / 3.5 / 2",
-      "targeting": "Location",
-      "affects": "Enemies",
-      "spellshieldable": "True",
-      "resource": "Mana",
-      "damageType": "Magic damage",
-      "spellEffects": "Area of effect",
-      "notes": "Flash can be used during the cast time, allowing Kassadin to blink further away.",
-      "blurb": "Active:  Kassadin  blinks toward the target location, dealing magic damage to all nearby enemies upon arrival. He then gains a stack of Riftwalk, stacking up to a cap.",
-      "castTime": "0.25",
-      "effectRadius": "270",
-      "targetRange": "500",
-      "maxCharges": -1
-    }
-  ],
-  "lore": "Cutting a burning swath through the darkest places of the world, Kassadin knows his days are numbered. A widely traveled Shuriman guide and adventurer, he had chosen to raise a family among the peaceful southern tribes—until the day his village was consumed by the Void. He vowed vengeance, combining a number of arcane artifacts and forbidden technologies for the struggle ahead. Finally, Kassadin set out for the wastelands of Icathia, ready to face any monstrous Void-construct in his search for their self-proclaimed prophet, Malzahar.",
-  "faction": "void",
-  "releaseDate": "2009-08-07",
-  "patchLastChanged": "25.11",
-  "price": {
-    "blueEssence": 1575,
-    "rp": 790
   }
 }
 export default champion

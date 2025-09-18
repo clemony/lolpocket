@@ -25,7 +25,7 @@ console.log('champions: ', champions)
     v-model:model-value="championModel"
     class="w-full w-120 max-w-120 gap-0 field-box p-0"
     :multiple="false"
-    @entry-focus.prevent>
+    @entry-focui.prevent>
     <ListboxContent class="w-full">
       <transition-slide
         group

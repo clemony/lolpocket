@@ -15,8 +15,8 @@ const props = withDefaults(
     }
   >(),
   {
-    align: 'center',
     sideOffset: 8,
+    align: 'center',
   }
 )
 
@@ -38,7 +38,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
           props.class,
         )
       "
-      @close-auto-focus.prevent>
+      @close-auto-focui.prevent>
       <slot />
     </PopoverContent>
   </PopoverPortal>

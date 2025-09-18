@@ -28,7 +28,7 @@ const groups = [
       <Collapsible
         v-for="(group, i) in groups"
         :key="group.name"
-        v-model:open="us().collapseStates.panel.pocket[i]"
+        v-model:open="ui().collapseStates.panel.pocket[i]"
         class="pr-2">
         <CollapsibleTrigger as-child>
           <Label class="my-1 gap-4 items-center">

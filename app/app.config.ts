@@ -1,10 +1,9 @@
 // CONFIG app
 
 export default defineAppConfig({
-  theme: {},
   icon: {
-    mode: 'svg',
     class: 'text-[var(--color-bc)] shrink-0 pointer-events-none',
+    mode: 'svg',
     size: '15px',
 
     /*     customize: (content: string, name: string, prefix: string, provider: string) => {
@@ -15,155 +14,156 @@ export default defineAppConfig({
     }, */
     aliases: {
       // math
+      'calc-solid': 'streamline:calculator-1-solid',
+      'absolute': 'hugeicons:absolute',
       'add': 'lucide:plus',
       'add-sq-outline': 'lucide:square-plus',
       'calc': 'teenyicons:calculator-outline',
-      'calc-solid': 'streamline:calculator-1-solid',
       'minus': 'lucide:minus',
-      'absolute': 'hugeicons:absolute',
       'weighted': 'tabler:math-integral-x',
 
       // letters
-      'x-sm': 'lucide:x',
-      'x': 'lucide:x',
-      'and': 'lucide:ampersand',
       'x-solid': 'teenyicons:x-circle-solid',
+      'and': 'lucide:ampersand',
+      'i': 'ion:information-sharp',
       'info': 'lucide:info',
       'slash': 'lucide:slash',
-      'i': 'ion:information-sharp',
+      'x': 'lucide:x',
+      'x-sm': 'lucide:x',
 
       // check
+      'check-fill': 'bi:check-circle-fill',
       'tick': 'lucide:check',
       'tick-sm': 'teenyicons:tick-small-outline',
-      'check-fill': 'bi:check-circle-fill',
 
       // arrow
-      'down': 'tabler:chevron-down',
-      'up': 'tabler:chevron-up',
-      'right': 'tabler:chevron-right',
-      'left': 'tabler:chevron-left',
-      'down-fill': 'tabler:caret-down-filled',
-      'up-fill': 'tabler:caret-up-filled',
-      'right-pipe': 'tabler:chevron-right-pipe',
-      'left-pipe': 'tabler:chevron-left-pipe',
-      'select': 'lucide:chevrons-up-down',
-      'arrow-up': 'lucide:arrow-up',
       'arrow-left': 'lucide:arrow-left',
       'arrow-right': 'lucide:arrow-right',
-      'expand': 'lucide:arrow-right-from-line',
+      'arrow-up': 'lucide:arrow-up',
       'collapse': 'lucide:arrow-left-from-line',
+      'down': 'tabler:chevron-down',
+      'down-fill': 'tabler:caret-down-filled',
+      'expand': 'lucide:arrow-right-from-line',
+      'left': 'tabler:chevron-left',
+      'left-pipe': 'tabler:chevron-left-pipe',
+      'right': 'tabler:chevron-right',
+      'right-pipe': 'tabler:chevron-right-pipe',
+      'select': 'lucide:chevrons-up-down',
+      'up': 'tabler:chevron-up',
+      'up-fill': 'tabler:caret-up-filled',
 
       // actions
-      'log-in': 'lucide:log-in', // tabler:transfer-in in house
-      'log-out': 'lucide:log-out', // tabler:transfer-out
-      'search': 'tabler:search',
-      'open': 'iconoir:open-in-window',
-      'update': 'radix-icons:update',
-      'filter': 'lucide:list-filter',
-      'refresh': 'radix-icons:reload',
-      'reset': 'lucide:refresh-ccw',
       'copy': 'lucide:copy',
       'export': 'lucide:upload',
+      'filter': 'lucide:list-filter',
+      'log-in': 'lucide:log-in', // tabler:transfer-in in house
+      'log-out': 'lucide:log-out', // tabler:transfer-out
+      'open': 'iconoir:open-in-window',
+      'pin': 'iconoir:pin',
+      'refresh': 'radix-icons:reload',
+      'reset': 'lucide:refresh-ccw',
+      'search': 'tabler:search',
       'tag': 'lucide:tag',
       'tags': 'lucide:tags',
-      'pin': 'iconoir:pin',
       'unpin': 'iconoir:pin-slash',
+      'update': 'radix-icons:update',
 
       // menu
-      'more': 'ri:more-line',
-      'more-vertical': 'ri:more-2-line',
-      'settings': 'lucide:settings-2',
-      'gear': 'lucide:settings',
       'gear-solid': 'ri:settings-4-fill',
-      'nut': 'ph:nut',
-      'nut-fill': 'ph:nut-fill',
+      'gallery': 'lucide:gallery-vertical-end',
+      'gear': 'lucide:settings',
       'lines': 'teenyicons:align-text-justify-outline',
       'menu': 'lucide:menu',
-      'gallery': 'lucide:gallery-vertical-end',
+      'more': 'ri:more-line',
+      'more-vertical': 'ri:more-2-line',
+      'nut': 'ph:nut',
+      'nut-fill': 'ph:nut-fill',
+      'settings': 'lucide:settings-2',
 
       // editing
+      'archive': 'lucide:archive',
       'backspace': 'cil:backspace',
+      'clear': 'tabler:circle-half-vertical',
       'edit': 'material-symbols-light:edit-square-outline',
       'edit-line': 'lucide:pen-line',
       'erase': 'lucide:eraser',
-      'clear': 'tabler:circle-half-vertical',
       'paperclip': 'lucide:paperclip',
       'trash': 'lucide:trash-2',
-      'archive': 'lucide:archive',
 
       // folder
-      'folder-delete': 'lucide:folder-x',
-      'folder-add': 'lucide:folder-plus',
-      'folder-open': 'lucide:folder-closed',
       'folder': 'lucide:folder',
+      'folder-add': 'lucide:folder-plus',
+      'folder-delete': 'lucide:folder-x',
       'folder-documents': 'formkit:folder',
+      'folder-open': 'lucide:folder-closed',
       'folders': 'lucide:folders',
 
       // media
       'fast-forward': 'material-symbols-light:fast-forward-outline-rounded',
-      'shuffle': 'qlementine-icons:shuffle-16',
-      'play': 'teenyicons:play-solid',
       'next': 'teenyicons:next-solid',
       'pause': 'teenyicons:pause-solid',
+      'play': 'teenyicons:play-solid',
+      'shuffle': 'qlementine-icons:shuffle-16',
 
       // keys
-      'shift': 'lucide:arrow-big-up-dash',
       'command': 'lucide:command',
+      'shift': 'lucide:arrow-big-up-dash',
 
       // symbol
       'alert': 'lucide:circle-alert',
 
       // external / social
       'at': 'lucide:at-sign',
-      'hash': 'lucide:hash',
+      'attach': 'meteor-icons:paperclip',
+      'chain': 'hugeicons:link-02',
       'chat': 'lucide:message-square',
+      'hash': 'lucide:hash',
+      'link': 'lucide:external-link',
       'mail': 'lucide:mail',
       'mail-all': 'lucide:mails',
       'mail-fill': 'fluent:mail-32-filled',
       'mail-open': 'lucide:mail-open',
-      'link': 'lucide:external-link',
-      'chain': 'hugeicons:link-02',
-      'share': 'lucide:share',
       'send': 'lucide:send',
-      'attach': 'meteor-icons:paperclip',
+      'share': 'lucide:share',
 
       // logo
-      'riot': 'simple-icons:riotgames',
       'discord': 'simple-icons:discord',
       'github': 'ph:github-logo',
       'google': 'lineicons:google',
+      'riot': 'simple-icons:riotgames',
 
       // simple
-      'dot': 'lucide:dot',
       'circle-dot': 'lucide:circle-dot',
+      'dot': 'lucide:dot',
+      'heart': 'ph:heart-straight',
+      'heart-sm': 'teenyicons:heart-small-outline',
+      'heart-sm-fill': 'teenyicons:heart-small-solid',
       'infinity': 'solar:infinity-outline',
       'shield': 'teenyicons:shield-tick-outline',
       'star': 'ph:star',
       'star-fill': 'ph:star-fill',
-      'heart': 'ph:heart-straight',
-      'heart-sm-fill': 'teenyicons:heart-small-solid',
-      'heart-sm': 'teenyicons:heart-small-outline',
 
       // pic
-      'pin-solid': 'iconoir:pin-solid',
       'key': 'lucide:key-round',
+      'pin-solid': 'iconoir:pin-solid',
+      'backpack': 'tabler:briefcase', // 'radix-icons:backpack',
+      'book': 'tabler:notebook', // 'lucide:book-marked',
       'bow': 'mdi:bow-arrow',
-      'swatch': 'lucide:swatch-book',
-      'cat-geo': 'streamline-cyber:cat-2',
       'cat': 'lucide:cat',
-      'plug': 'tabler:plug',
-      'up-face': 'iconoir:emoji-look-up',
+      'cat-geo': 'streamline-cyber:cat-2',
+      'chart': 'lucide:bar-chart-3',
+      'clock': 'lucide:clock',
+      'history': 'lucide:history',
       'image': 'lucide:image',
       'images': 'entypo:images',
       'nexus': 'lucide:atom',
-      'clock': 'lucide:clock',
-      'chart': 'lucide:bar-chart-3',
-      'backpack': 'tabler:briefcase', // 'radix-icons:backpack',
-      'book': 'tabler:notebook', // 'lucide:book-marked',
-      'history': 'lucide:history',
+      'plug': 'tabler:plug',
+      'swatch': 'lucide:swatch-book',
+      'up-face': 'iconoir:emoji-look-up',
 
       // 'boot': 'hugeicons:armored-boot',
       // tabler:brand-juejin upside down league xp icon?
     },
   },
+  theme: {},
 })

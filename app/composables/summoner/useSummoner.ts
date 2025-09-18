@@ -3,21 +3,21 @@ import { matchFilters } from '~~/shared/appdata'
 export const SummonerKey = Symbol('SummonerProvider')
 
 export interface PlayerData {
-  summoner: Summoner
-  matches: MatchData[]
   allMatches: MatchData[]
+  clearFilters: () => void
+  fetchMastery: () => void
+  filter: MatchFilter
   filteredChampions: any
-  useChampions: any
-  useRoles: any
-  useAllies: any
-  useItems: any
+  findSummoner: () => void
   links: Record<string, string>
   loading: boolean
-  filter: MatchFilter
-  fetchMastery: () => void
-  findSummoner: () => void
+  matches: MatchData[]
   setFilter: (string, key) => void
-  clearFilters: () => void
+  summoner: Summoner
+  useAllies: any
+  useChampions: any
+  useItems: any
+  useRoles: any
 }
 export function useSummonerProvider(identifier: string) {
   console.log('identifier: ', identifier)
@@ -35,10 +35,10 @@ export function useSummonerProvider(identifier: string) {
 
   // --- FILTER STATE ---
   const filter = ref<MatchFilter>({
+    ally: null,
+    champion: null,
     patch: null,
     queue: 0,
-    champion: null,
-    ally: null,
     role: 'ALL',
   })
 
@@ -64,10 +64,10 @@ export function useSummonerProvider(identifier: string) {
 
   function clearFilters() {
     filter.value = {
+      ally: null,
+      champion: null,
       patch: null,
       queue: 0,
-      champion: null,
-      ally: null,
       role: 'ALL',
     }
   }
@@ -125,24 +125,9 @@ export function useSummonerProvider(identifier: string) {
   watch(currentPuuid, () => findSummoner(), { immediate: true })
 
   const state = {
-    summoner,
-    matches,
     allMatches,
-    filter,
-    setFilter,
     clearFilters,
     fetchMastery,
-    findSummoner,
-    useChampions: (championName?: string) =>
-      useChampions(summoner.value.puuid, allMatches.value, championName),
-    filteredChampions: (championName?: string) =>
-      useChampions(summoner.value.puuid, matches.value, championName),
-    useAllies: () =>
-      useRepeatedTeammates(summoner.value.puuid, allMatches.value),
-    useRoles: () => useMatchRoles(summoner.value.puuid, allMatches),
-    links: () => generateSummonerLinks(summoner.value),
-    loadMatches: () => loadMatchesFromDB,
-
     fetchNewMatches: async () => {
       if (!summoner.value)
         return
@@ -150,10 +135,23 @@ export function useSummonerProvider(identifier: string) {
       allMatches.value = await useFetchMatches(currentPuuid.value)
       summoner.value.lastMatchUpdate = new Date()
     },
-
+    filter,
+    filteredChampions: (championName?: string) =>
+      useChampions(summoner.value.puuid, matches.value, championName),
+    findSummoner,
     forceReload: () => findSummoner({ force: true }),
+    links: () => generateSummonerLinks(summoner.value),
     loading,
+    loadMatches: () => loadMatchesFromDB,
+    matches,
     ready,
+    setFilter,
+    summoner,
+    useAllies: () =>
+      useRepeatedTeammates(summoner.value.puuid, allMatches.value),
+    useChampions: (championName?: string) =>
+      useChampions(summoner.value.puuid, allMatches.value, championName),
+    useRoles: () => useMatchRoles(summoner.value.puuid, allMatches),
   }
 
   provide(SummonerKey, state)

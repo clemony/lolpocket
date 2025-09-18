@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { effect, class: className } = defineProps<{
+const { class: className, effect } = defineProps<{
   effect: AbilityEffect
   damageType?: string
   class?: HTMLAttributes['class']

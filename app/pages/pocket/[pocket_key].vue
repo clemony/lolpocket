@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 definePageMeta({
   name: 'pocket_key',
-  redirect: '/pocket/:pocket_key/champions',
   level: 0,
   props: true,
+  redirect: '/pocket/:pocket_key/champions',
 })
 
 const route = useRoute()

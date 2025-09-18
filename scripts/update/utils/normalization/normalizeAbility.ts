@@ -2,14 +2,14 @@ import type { Ability } from '../../../../shared/types/types.champion'
 import { normalize } from './normalizeStrings'
 
 interface DirtyModifier {
-  values?: number[] | null
   units?: string[] | null
+  values?: number[] | null
 }
 
 interface CleanedModifier {
-  values: string
-  unit: string
   tooltip?: string
+  unit: string
+  values: string
 }
 
 function cleanModifiers(modifiers: DirtyModifier[] | null | undefined): CleanedModifier[] {
@@ -32,7 +32,7 @@ function cleanModifiers(modifiers: DirtyModifier[] | null | undefined): CleanedM
 
       const rounded = cleanedValues.map(v => Math.round(v * 100) / 100)
 
-      return { values: rounded, unit: cleanedUnit }
+      return { unit: cleanedUnit, values: rounded }
     })
     .filter(Boolean) as { values: number[], unit: string }[]
 
@@ -46,33 +46,33 @@ function cleanModifiers(modifiers: DirtyModifier[] | null | undefined): CleanedM
     if (last.values.length > 2) {
       return [
         ...normalized.map(c => ({
-          values: c.values.join(' / '),
           unit: c.unit,
+          values: c.values.join(' / '),
         })),
         {
-          values: `${last.values[0]} - ${last.values[last.values.length - 1]}`,
-          unit: last.unit,
           tooltip: `Scaling per rank:\n${last.values.join(' / ')}${last.unit}`,
+          unit: last.unit,
+          values: `${last.values[0]} - ${last.values[last.values.length - 1]}`,
         },
       ]
     }
 
     return [
       ...normalized.map(c => ({
-        values: c.values.join(' / '),
         unit: c.unit,
+        values: c.values.join(' / '),
       })),
       {
-        values: last.values.join(' / '),
         unit: last.unit,
+        values: last.values.join(' / '),
       },
     ]
   }
 
   // only one modifier
   return normalized.map(c => ({
-    values: c.values.join(' / '),
     unit: c.unit,
+    values: c.values.join(' / '),
   }))
 }
 
@@ -100,7 +100,7 @@ function cleanAbilityEffects(effects: any[]): any[] {
         : effect.description,
     leveling:
       Array.isArray(effect.leveling)
-        ? effect.leveling.map((level, i: number) => ({
+        ? effect.leveling.map((level: any, i: number) => ({
             ...level,
             modifiers: cleanModifiers(level.modifiers),
           }))
@@ -114,35 +114,35 @@ function simplifyArray<T>(arr: T[]): T[] {
 
 export function normalizeAbility(ability: any): Ability {
   return {
-    name: ability.name,
     key: ability.key,
-    icon: ability.icon,
-    effects: cleanAbilityEffects(ability.effects || []),
-    cost: simplifyArray(ability.riotCost).join(' / '),
-    cooldown: simplifyArray(ability.riotCooldown).join(' / '),
-    targeting: ability.targeting || null,
-    affects: ability.affects || null,
-    spellshieldable: ability.spellshieldable || null,
-    resource: normalize(ability.resource) || null,
-    damageType: normalize(ability.damageType) || null,
-    spellEffects: ability.spellEffects || null,
-    projectile: ability.projectile || null,
-    onHitEffects: ability.onHitEffects || null,
-    occurrence: ability.occurrence || null,
-    notes: ability.notes || null,
-    blurb: ability.blurb || null,
-    missileSpeed: ability.missileSpeed || null,
-    rechargeRate: ability.rechargeRate?.join(' / ') || null,
-    collisionRadius: ability.collisionRadius || null,
-    tetherRadius: ability.tetherRadius || null,
-    onTargetCdStatic: ability.onTargetCdStatic || null,
-    innerRadius: ability.innerRadius || null,
-    speed: ability.speed || null,
+    name: ability.name,
     width: ability.width || null,
+    affects: ability.affects || null,
     angle: ability.angle || null,
+    blurb: ability.blurb || null,
     castTime: ability.castTime || null,
+    collisionRadius: ability.collisionRadius || null,
+    cooldown: simplifyArray(ability.riotCooldown).join(' / '),
+    cost: simplifyArray(ability.riotCost).join(' / '),
+    damageType: normalize(ability.damageType) || null,
     effectRadius: ability.effectRadius || null,
-    targetRange: ability.targetRange || null,
+    effects: cleanAbilityEffects(ability.effects || []),
+    icon: ability.icon,
+    innerRadius: ability.innerRadius || null,
     maxCharges: ability.maxCharges || null,
+    missileSpeed: ability.missileSpeed || null,
+    notes: ability.notes || null,
+    occurrence: ability.occurrence || null,
+    onHitEffects: ability.onHitEffects || null,
+    onTargetCdStatic: ability.onTargetCdStatic || null,
+    projectile: ability.projectile || null,
+    rechargeRate: ability.rechargeRate?.join(' / ') || null,
+    resource: normalize(ability.resource) || null,
+    speed: ability.speed || null,
+    spellEffects: ability.spellEffects || null,
+    spellshieldable: ability.spellshieldable || null,
+    targeting: ability.targeting || null,
+    targetRange: ability.targetRange || null,
+    tetherRadius: ability.tetherRadius || null,
   }
 }

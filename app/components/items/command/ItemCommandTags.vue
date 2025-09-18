@@ -2,7 +2,7 @@
 import { statIndex } from '#shared/appdata'
 
 const is = useItemStore()
-const { filters, setFilter, filtered } = useItemFilter()
+const { filtered, filters, setFilter } = useItemFilter()
 const searchInput = ref([])
 </script>
 
@@ -42,7 +42,7 @@ const searchInput = ref([])
         type="checkbox"
         class="peer hidden"
         :value="stat" />
-      {{ statIndex.find((s) => s.id == stat).abbr }}
+      {{ statIndex[stat].abbr }}
 
       <icon name="x-sm" />
     </label>
