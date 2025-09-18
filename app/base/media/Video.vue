@@ -3,7 +3,7 @@ const { src } = defineProps<{
   src: string
 }>()
 
-const videoRef = ref<HTMLMediaElement>()
+const videoRef = useTemplateRef<HTMLMediaElement>('videoRef')
 
 function canPlay() {
   if (!videoRef.value)

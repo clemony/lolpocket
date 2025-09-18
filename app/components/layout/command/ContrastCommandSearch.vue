@@ -1,13 +1,13 @@
 <script lang="ts" setup>
 import { getDeviceKey } from '~/utils/config/handleDevice'
 
-const us = useUiStore()
+const ui = useUiStore()
 </script>
 
 <template>
   <button
     class="justify-self-end btn gap-2 mx-3 btn-neutral !bgneutral/88 border-b3 hover:ringneutral/50 flex h-8.5 !bg-b1 cursor-pointer items-center btn-xs px-3 rounded-xl btn-sm !py-0 inset-shadow-black hover:ring-1 group inset-shadow-xs group"
-    @click.stop="us.commandOpen = true">
+    @click.stop="ui.commandOpen = true">
     <icon
       name="search-bold"
       class="-mt-px size-4 group-hover:opacity-100 text-nc" />

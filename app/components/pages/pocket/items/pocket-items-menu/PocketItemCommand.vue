@@ -34,7 +34,7 @@ watchEffect(() => {
       align="end"
       :side-offset="2"
       side="bottom"
-      @open-auto-focus.prevent>
+      @open-auto-focui.prevent>
       <ItemSearch
         placeholder="Type or click a suggestion"
         class="w-full rounded-t-lg z-2 sticky top-0 left-0 shadow-none h-13 [&_svg]:size-4 **:!text-nc !bg-accent border-neutral/30 border-4"

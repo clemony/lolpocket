@@ -7,12 +7,11 @@ import {
   useForwardPropsEmits,
 } from 'reka-ui'
 import type { SheetVariants } from '~/base/sheet/sheet-variants'
-
 import { sheetVariants } from '../sheet-variants'
 
 interface SheetContentProps extends DialogContentProps {
-  class?: HTMLAttributes['class']
   side?: SheetVariants['side']
+  class?: HTMLAttributes['class']
 }
 
 defineOptions({
@@ -33,7 +32,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
     :class="cn('', sheetVariants({ side }), props.class)"
     v-bind="{ ...forwarded, ...$attrs }"
     class="isolate max-h-screen bg-b1/92 backdrop-blur-md !p-0 focus:ring-0 focus:ring-offset-0 focus:outline-0 outline-0 border border-x-b3 shadow-warm-soft"
-    @open-auto-focus.prevent>
+    @open-auto-focui.prevent>
     <slot />
   </DialogContent>
 </template>

@@ -33,7 +33,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
           props.class,
         )
       "
-      @close-auto-focus.prevent>
+      @close-auto-focui.prevent>
       <slot />
 
       <DialogClose

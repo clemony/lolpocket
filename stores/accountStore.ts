@@ -9,9 +9,9 @@ export const useAccountStore = defineStore(
     const loggedIn = ref(false)
     const toggles = ref({
       backpack: {
-        tags: true,
-        positions: true,
         pinned: true,
+        positions: true,
+        tags: true,
       },
     })
     const account = ref<Account>()
@@ -20,8 +20,8 @@ export const useAccountStore = defineStore(
 
     const pockets = <Record<string, Pocket[]>>{
       all: [],
-      pinned: [],
       archived: [],
+      pinned: [],
     }
 
     function clearAccount() {
@@ -40,26 +40,26 @@ export const useAccountStore = defineStore(
     return {
       // account
 
-      loggedIn,
-      toggles,
-      account,
-      settings,
-      pockets,
-      publicData,
-      clearAccount,
-      userNotes,
-      topChampion,
       toggleSidebarLock: () =>
         (settings.value.lockSidebar
           = true
             ? !settings.value.lockSidebar
             : (settings.value.lockSidebar = true)),
+      account,
+      clearAccount,
+      loggedIn,
+      pockets,
+      publicData,
+      settings,
+      toggles,
+      topChampion,
+      userNotes,
     }
   },
   {
     persist: {
-      storage: piniaPluginPersistedstate.localStorage(),
       key: 'accountStore',
+      storage: piniaPluginPersistedstate.localStorage(),
     },
   }
 )

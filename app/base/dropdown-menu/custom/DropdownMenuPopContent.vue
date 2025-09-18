@@ -6,10 +6,10 @@ defineOptions({
 })
 
 const {
-  align = 'center',
   sideOffset = 4,
-  scaleStart = 0.6,
+  align = 'center',
   class: className,
+  scaleStart = 0.6,
 } = defineProps<{
   class?: HTMLAttributes['class']
   sideOffset?: number
@@ -18,31 +18,31 @@ const {
 }>()
 
 const variants = {
-  visible: {
-    opacity: 1,
-    visibility: 'visible',
-    scale: 1,
-  },
   hidden: {
     opacity: 0,
     scale: scaleStart,
     transitionEnd: { visibility: 'hidden' },
   },
-}
-
-const wrapperVariants = {
   visible: {
     opacity: 1,
     scale: 1,
     visibility: 'visible',
-    transition: {
-      delay: 0.2,
-    },
   },
+}
+
+const wrapperVariants = {
   hidden: {
     opacity: 0,
     scale: 1,
     transitionEnd: { visibility: 'hidden' },
+  },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delay: 0.2,
+    },
+    visibility: 'visible',
   },
 }
 </script>

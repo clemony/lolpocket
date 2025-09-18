@@ -48,7 +48,7 @@ const a = computed(() => {
     v-if="currentPath == currentPath"
     group>
     <div class="flex items-center gap-6 leading-none">
-      <h1 class="dst transition-all duration-300 text-3xl>
+      <h1 class="dst transition-all duration-300 text-3xl">
         {{ currentPath == '' ? 'Runes' : currentPath ?? title }}
       </h1>
 

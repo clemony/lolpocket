@@ -9,18 +9,17 @@ export const usePocketStore = defineStore(
     // In your usePocketStore
 
     const downloadCard = refAutoReset(false, 1000)
-    const pocketCardRef = ref<HTMLElement>(null)
+    const pocketCardRef = ref<HTMLDivElement>(null)
 
     const trash = ref<Pocket[]>([])
     const archive = ref<Pocket[]>([])
 
     return {
-      pockets,
-      tags,
+      archive,
       downloadCard,
       pocketCardRef,
-
-      archive,
+      pockets,
+      tags,
       trash,
 
       // helpers
@@ -31,8 +30,8 @@ export const usePocketStore = defineStore(
 
   {
     persist: {
-      storage: piniaPluginPersistedstate.localStorage(),
       key: 'pocketStore',
+      storage: piniaPluginPersistedstate.localStorage(),
     },
   }
 )

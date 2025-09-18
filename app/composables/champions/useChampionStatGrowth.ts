@@ -34,8 +34,9 @@ export function useChampionStatGrowth(level: Ref<number>) {
     stat: { flat?: number, perLevel?: number } | undefined,
     options?: {
       roundTo?: number
-      type?: 'attackSpeed'
+      type?: 'attackSpeed' | 'criticalStrikeDamage'
       ratio?: number
+      modifier?: number
     }
   ) {
     if (!stat)
@@ -50,7 +51,25 @@ export function useChampionStatGrowth(level: Ref<number>) {
           ? Math.round(n * 10 ** options.roundTo) / 10 ** options.roundTo
           : Math.round(n)
 
-    // pick correct calculator
+    if (type === 'criticalStrikeDamage') {
+      const base = flat ?? null
+      const modifier = options?.modifier ?? 1
+      if (base == null)
+        return null
+
+      const basePct = `${round(base)}%`
+      const current
+        = modifier === 1
+          ? basePct
+          : `${basePct} × ${modifier}`
+
+      return {
+        current,
+        max: null,
+        min: null,
+      }
+    }
+
     const fn
       = type === 'attackSpeed'
         ? (lvl: number) => calcAttackSpeed(flat, perLevel, options?.ratio, lvl)
@@ -58,20 +77,17 @@ export function useChampionStatGrowth(level: Ref<number>) {
 
     if (cs.championGridType === 'calculated') {
       return {
-        min: round(fn(1)),
         current: round(fn(level.value)),
         max: round(fn(18)),
+        min: round(fn(1)),
       }
     }
 
-    // fallback (base vs perLevel modes)
-    const val
-      = cs.championGridType === 'base' ? (flat ?? null) : (perLevel ?? null)
-
+    const val = cs.championGridType === 'base' ? (flat ?? null) : (perLevel ?? null)
     return {
-      min: round(val),
       current: round(val),
       max: round(val),
+      min: round(val),
     }
   }
 

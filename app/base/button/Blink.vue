@@ -5,11 +5,11 @@ defineOptions({
 
 const {
   class: className,
-  variant,
-  size,
-  shape,
   hover,
+  shape,
+  size,
   to,
+  variant,
 } = defineProps<{
   to: any
   class?: HTMLAttributes['class']
@@ -20,16 +20,16 @@ const {
 }>()
 
 defineNuxtLink({
-  componentName: 'BLink',
-  externalRelAttribute: 'noreferrer',
-  trailingSlash: 'remove',
-  prefetch: true,
+  componentName: 'Blink',
   exactActiveClass: 'btn-active',
+  externalRelAttribute: 'noreferrer',
+  prefetch: false,
   prefetchedClass: '',
   prefetchOn: {
+    interaction: false,
     visibility: false,
-    interaction: true,
   },
+  trailingSlash: 'remove',
 })
 </script>
 

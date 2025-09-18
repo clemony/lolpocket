@@ -8,10 +8,10 @@ import {
 } from 'reka-ui'
 
 const {
-  pocket: p,
-  class: className,
-  wrapperClass,
   buttonClass,
+  class: className,
+  pocket: p,
+  wrapperClass,
 } = defineProps<{
   pocket?: Pocket
   class?: HTMLAttributes['class']
@@ -21,14 +21,14 @@ const {
 
 const emit = defineEmits(['submit', 'update:model-value'])
 const pocket = computed(() => p)
-const modelValue = ref(null)
+const modelValue = ref<string>(null)
 
 function update(e) {
   modelValue.value = e
   emit('update:model-value', modelValue.value)
 }
 
-const editableRef = ref()
+const editableRef = ref<string>()
 
 function activateEdit(e: MouseEvent, editFn: () => void) {
   if ((e.target as HTMLElement)?.closest('button'))

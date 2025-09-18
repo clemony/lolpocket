@@ -21,10 +21,10 @@ function handleChange() {
   <ListboxRoot
     v-model:model-value="is().filters.tags"
     :multiple="true"
-    @entry-focus.prevent>
+    @entry-focui.prevent>
     <ListboxContent
       class="w-full pt-0 pb-1"
-      @entry-focus.prevent
+      @entry-focui.prevent
       @highlight.prevent>
       <ListboxItem
         v-for="tag in itemTags"

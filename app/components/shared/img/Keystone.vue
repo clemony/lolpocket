@@ -2,8 +2,8 @@
 import { runeToPath } from '#shared/appdata/index/'
 
 const {
-  class: className,
   id,
+  class: className,
   loadedClass,
 } = defineProps<{
   class?: HTMLAttributes['class']
@@ -11,7 +11,7 @@ const {
   loadedClass?: HTMLAttributes['class']
 }>()
 const loaded = ref(false)
-const imgEl = ref<HTMLImageElement>()
+const imgEl = useTemplateRef<HTMLImageElement>('imgEl')
 
 watch(
   () => id,

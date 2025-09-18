@@ -5,9 +5,9 @@ useHead({
   },
   link: [
     {
+      href: 'img/favicon.png',
       rel: 'icon',
       type: 'image/png',
-      href: 'img/favicon.png',
     },
   ],
 })

@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 definePageMeta({
-  path: '/backpack/pockets',
   name: 'pockets',
-  parent: '/backpack',
   icon: 'folder',
-  order: 1,
   level: 2,
+  order: 1,
+  parent: '/backpack',
+  path: '/backpack/pockets',
 })
 
 const selected = ref<Pocket>(null)

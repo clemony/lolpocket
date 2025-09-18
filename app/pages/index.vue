@@ -2,44 +2,44 @@
 useSeoMeta({
   title: 'lolpocket',
   description: 'is that lp in your pocket?',
-  ogTitle: 'lolpocket',
   ogDescription: 'is that lp in your pocket?',
   ogImage: '[og:image]',
+  ogTitle: 'lolpocket',
   ogUrl: 'https://www.lolpocket.com',
-  twitterTitle: 'lolpocket',
+  twitterCard: 'summary',
   twitterDescription: 'is that lp in your pocket?',
   twitterImage: '[twitter:image]',
-  twitterCard: 'summary',
+  twitterTitle: 'lolpocket',
 })
 
 definePageMeta({
   name: 'home',
-  path: '/',
   layout: 'basic',
   level: 0,
   meta: {
     title: 'lolpocket',
-    searchKeys: ['home', 'landing', 'testimonials'],
     icon: 'teenyicons:home-alt-outline',
     parent: '/home',
+    searchKeys: ['home', 'landing', 'testimonials'],
   },
+  path: '/',
 })
 
-const homeWrapper = ref<HTMLElement | null>()
-const home = ref<HTMLElement | null>()
-const steps = ref<HTMLElement | null>()
-const hero = ref<HTMLElement | null>()
+const homeWrapper = useTemplateRef<HTMLElement | null>('homeWrapper')
+const home = useTemplateRef<HTMLElement | null>('home')
+const steps = useTemplateRef<HTMLElement | null>('steps')
+const hero = useTemplateRef<HTMLElement | null>('hero')
 
 const { scrollYProgress: stepProgress } = useScroll({
   container: homeWrapper,
-  target: steps,
   offset: ['start end', 'end start'],
+  target: steps,
 })
 
 const { scrollYProgress } = useScroll({
   container: homeWrapper,
-  target: home,
   offset: ['start end', 'end start'],
+  target: home,
 })
 
 const progressY = ref(0)

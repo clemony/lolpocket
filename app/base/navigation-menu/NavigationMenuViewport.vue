@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { AnimatePresence, motion } from 'motion-v'
 import type { NavigationMenuViewportProps } from 'reka-ui'
+import { AnimatePresence, motion } from 'motion-v'
 import { NavigationMenuViewport, useForwardProps } from 'reka-ui'
 
 const props = defineProps<
@@ -15,16 +15,16 @@ const delegatedProps = reactiveOmit(props, 'class')
 
 const forwarded = useForwardProps(delegatedProps)
 
-const target = ref<HTMLElement | null>(null)
+const target = useTemplateRef<HTMLElement | null>('target')
 
 const variants = {
-  visible: {
-    opacity: 1,
-    scale: 1,
-  },
   hidden: {
     opacity: 0,
     scale: 0.8,
+  },
+  visible: {
+    opacity: 1,
+    scale: 1,
   },
 }
 </script>

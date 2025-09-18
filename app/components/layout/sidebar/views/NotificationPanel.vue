@@ -32,22 +32,24 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <SidebarHeaderWrapper title="Notifications">
-    <template #header>
-      <button
-        class="btn btn-sm pointer-events-auto"
-        @click="testNotificaition()">
-        cool
-      </button>
-    </template>
-  </SidebarHeaderWrapper>
-  <div
-    class="gap-0 h-full -space-y-2 overflow-hidden w-full !flex flex-col items-start">
-    <template v-if="sortedNotifications">
-      <Notification
-        v-for="item in sortedNotifications"
-        :key="`${item.id}`"
-        :item="item" />
-    </template>
-  </div>
+  <aside class="size-full">
+    <SidebarHeaderWrapper title="Notifications">
+      <template #header>
+        <button
+          class="btn btn-sm pointer-events-auto"
+          @click="testNotificaition()">
+          cool
+        </button>
+      </template>
+    </SidebarHeaderWrapper>
+    <div
+      class="gap-0 h-full -space-y-2 overflow-hidden w-full !flex flex-col items-start">
+      <template v-if="sortedNotifications">
+        <Notification
+          v-for="item in sortedNotifications"
+          :key="`${item.id}`"
+          :item="item" />
+      </template>
+    </div>
+  </aside>
 </template>

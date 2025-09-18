@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 const {
-  page,
   class: className,
   link,
+  page,
 } = defineProps<{
   page: PageRecord
   class?: HTMLAttributes['class']
@@ -21,9 +21,9 @@ const variants = {
 }
 
 function navigate() {
-  const us = useUiStore()
+  const ui = useUiStore()
   navigateTo(link)
-  us.commandOpen = false
+  ui.commandOpen = false
 }
 </script>
 

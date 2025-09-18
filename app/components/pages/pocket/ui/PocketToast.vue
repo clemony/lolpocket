@@ -3,7 +3,7 @@ const props = defineProps<{
   pocket: Pocket
 }>()
 
-const viewButton = ref(null)
+const viewButton = useTemplateRef<HTMLElement>('viewButton')
 
 const { focused } = useFocus(viewButton, { initialValue: true })
 

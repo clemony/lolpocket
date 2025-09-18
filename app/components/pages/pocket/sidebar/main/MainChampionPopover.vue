@@ -66,7 +66,7 @@ watch(
           class="size-full opacity-0 group-hover/collapse:opacity-100 group-data-[state=open]/collapse:opacity-100 inset-0 transition-opacity duration-200 bg-neutral/70 absolute grid place-items-center">
           <CaretFlip
             class="!text-nc size-8 drop-shadow-sm opacity-80 translate-y-18"
-            solid />
+            fill />
         </div>
       </Button>
     </PopoverTrigger>

@@ -11,9 +11,9 @@ const props = withDefaults(
     popoverClass?: HTMLAttributes['class']
   }>(),
   {
-    align: 'start',
     side: 'bottom',
     sideOffset: 0,
+    align: 'start',
     alignOffset: 0,
   }
 )
@@ -24,12 +24,12 @@ const pocket = computed(() => {
   return props.pocketKey ? ps().getPocket(props.pocketKey) : props.pocket
 })
 
-const selectedChampion = ref(null)
+const selectedChampion = ref<string>(null)
 const searchQuery = ref<string>('')
 const { results } = useSimpleSearch(ix().champions, searchQuery)
 
 const itemsPerPage = 8
-const currentPage = ref(1)
+const currentPage = ref<number>(1)
 
 const pagedSearchItems = computed(() => {
   if (!results.value)
@@ -55,7 +55,7 @@ onMounted(() => {
   ix().loadSkins()
 })
 
-const isOpen = ref(false)
+const isOpen = ref<boolean>(false)
 
 function handleImg(img: string) {
   pocket.value.icon = img

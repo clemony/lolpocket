@@ -11,8 +11,8 @@ const { bayesianItems } = useMatchItems(state.summoner.puuid, state.matches)
 const data = ref({
   datasets: [
     {
-      label: 'Items',
       data: [],
+      label: 'Items',
       pointRadius: 20,
       pointStyle: [],
     },
@@ -44,8 +44,8 @@ function preloadItemImage(itemId: number) {
 // Watch for `itemObjects` changes and update the entire `data` object
 watchEffect(async () => {
   const newDataset = {
-    label: 'Items',
     data: [],
+    label: 'Items',
     pointRadius: 20,
     pointStyle: [],
   }
@@ -54,10 +54,10 @@ watchEffect(async () => {
       await preloadItemImage(item.item.id)
 
       newDataset.data.push({
+        label: item.item.name, // Add item name as the label
+        r: Math.sqrt(item.games) * 1, // Bubble size
         x: item.games, // Number of games
         y: item.winrate, // Winrate
-        r: Math.sqrt(item.games) * 1, // Bubble size
-        label: item.item.name, // Add item name as the label
       })
 
       newDataset.pointStyle.push(itemImages.get(item.item.id) || new Image())
@@ -81,13 +81,13 @@ watchEffect(async () => {
         </div>
 
         <transition-slide class="pointer-events-none">
-          <div
+          <!--  <div
             v-if="!ms.patchGames.length"
             class="absolute top-0 left-0 size-full bg-black/40 rounded-box grid place-items-center">
             <div class="badge badge-xl text-xs shadow-lg opacity-90">
               No data this patch.
             </div>
-          </div>
+          </div> -->
         </transition-slide>
       </div>
     </div>

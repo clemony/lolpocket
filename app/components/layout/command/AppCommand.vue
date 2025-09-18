@@ -1,14 +1,14 @@
 <script lang="ts" setup>
-const us = useUiStore()
+const ui = useUiStore()
 
-const searchQuery = ref('')
+const searchQuery = ref<string>('')
 
 const {
-  pageResult,
-  groupedPages,
-  pocketResult,
   championResult,
+  groupedPages,
   itemResult,
+  pageResult,
+  pocketResult,
   resultsLength,
 } = await useSearch(searchQuery)
 
@@ -22,7 +22,7 @@ const searchVariants = {
 }
 
 const activeItem = ref(null)
-const itemOpen = ref(false)
+const itemOpen = ref<boolean>(false)
 
 watch(
   () => activeItem.value,
@@ -76,18 +76,15 @@ watch(
           <input
             v-model="searchQuery"
             :spellcheck="false"
-            class="w-full rounded-3xl text-bc/50 h-14 pl-14 !text-xl />
+            class="w-full rounded-3xl text-bc/50 h-14 pl-14 !text-xl" />
 
           <button
-            v-if="
-            searchQuery
-            !=""
-            "
+            v-if="searchQuery != ''"
             class="btn-ghost-dark btn-square !size-9 mr-5.5"
             @click="searchQuery = ''">
-          <icon
-            name="x-sm"
-            class="shrink-0" />
+            <icon
+              name="x-sm"
+              class="shrink-0" />
           </button>
         </div>
 

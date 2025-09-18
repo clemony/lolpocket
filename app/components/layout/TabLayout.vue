@@ -1,10 +1,10 @@
 <script lang="ts" setup>
 const {
   title,
-  description,
   class: className,
-  size = 'default',
+  description,
   icon = false,
+  size = 'default',
 } = defineProps<{
   title?: string
   description?: string

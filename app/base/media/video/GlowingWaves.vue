@@ -1,10 +1,10 @@
 <script setup lang="ts">
-const { class: className, as = 'div' } = defineProps<{
+const { as = 'div', class: className } = defineProps<{
   class?: HTMLAttributes['class']
   as?: string
 }>()
 
-const vRef = ref(null)
+const vRef = useTemplateRef<HTMLVideoElement>('vRef')
 
 onMounted(() => {
   vRef.value.playbackRate = 0.5

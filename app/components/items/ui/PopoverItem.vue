@@ -10,11 +10,11 @@ const { id, class: className } = defineProps<{
 
 const emit = defineEmits(['loaded'])
 
-const loaded = ref(false)
+const loaded = ref<boolean>(false)
 
-const trigger = ref(null)
+const trigger = useTemplateRef<HTMLElement>('trigger')
 const isHovered = useElementHover(trigger)
-const isOpen = ref(false)
+const isOpen = ref<boolean>(false)
 </script>
 
 <template>

@@ -8,7 +8,7 @@ const { progress: p, visible } = defineProps<{
   visible: boolean
 }>()
 
-const us = useUiStore()
+const ui = useUiStore()
 const video = heroDisplays[0]
 const videoRef = ref()
 const prog = ref(0)
@@ -19,7 +19,7 @@ useMotionValueEvent(p, 'change', (latest) => {
   prog.value = a
 })
 
-const welcome = ref<HTMLElement>()
+const welcome = useTemplateRef<HTMLElement>('welcome')
 
 const isVisible = ref(false)
 const { x, y } = useMouse()

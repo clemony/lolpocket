@@ -5,7 +5,7 @@ const { runes, selected } = defineProps<{
 }>()
 
 const emit = defineEmits(['update:rune'])
-const selectedRune = ref(null)
+const selectedRune = ref<number>(null)
 
 watch(
   () => selectedRune.value,

@@ -23,7 +23,7 @@ const inputVariants = {
   },
 }
 
-const query = ref(null)
+const query = ref<string>(null)
 
 function reset() {
   query.value = null

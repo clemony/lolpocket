@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-const { filteredKeys, championKeys } = defineProps<{
+const { championKeys, filteredKeys } = defineProps<{
   filteredKeys: string[]
   championKeys: string[]
 }>()
 
-const selectedChampion = ref(null)
-const loaded = ref(false)
+const selectedChampion = ref<string>(null)
+const loaded = ref<boolean>(false)
 </script>
 
 <!-- after:size-full after:pointer-events-none after:fixed after:top-36 after:rounded-t-[4rem] after:border-x-40 after:border-t-40 after:border-b1 after:z-0 after:scale-x-[101.5%] after:-left-0 -->

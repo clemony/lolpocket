@@ -9,12 +9,12 @@ const tabs = ref('MessageView')
 const inboxes: Record<string, DataObject> = {
   news: {
     name: 'News',
+    component: 'NewsView',
     icon: {
       name: 'lucide:newspaper',
       class: '**:stroke-[1.5] ',
     },
     value: 0,
-    component: 'NewsView',
   },
 }
 </script>
@@ -23,7 +23,9 @@ const inboxes: Record<string, DataObject> = {
   <div class="size-full">
     <div :class="cn('gap-0 border-b  border-b-b3/80 px-3 w-full', className)">
       <div class="w-full flex justify-between items-center">
-        <DropdownMenu class="z-0">
+        <DropdownMenu
+          v-model:open="ui().sidebarStates.inboxDropdown"
+          class="z-0">
           <DropdownMenuTrigger
             :disabled="!dropdown"
             class="flex w-fit items-center justify-between disabled:**:text-bc disabled:hover:drop-shadow-none disabled:opacity-100 disabled:hover:border-transparent disabled:hover:shadow-none disabled:hover:bg-transparent px-2 h-[35.5px] data-[state=open]:inset-shadow-xxs data-[state=open]:shadow-xs data-[state=open]:!bg-b3/50 data-[state=open]:border-b3"
@@ -35,7 +37,7 @@ const inboxes: Record<string, DataObject> = {
               </h2>
             </SidebarMenuButton>
           </DropdownMenuTrigger>
-          <DropdownMenuPopContent>
+          <DropdownMenuPopContent :modal="false">
             <slot name="dropdown-menu" />
           </DropdownMenuPopContent>
         </DropdownMenu>

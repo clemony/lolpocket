@@ -6,7 +6,7 @@ const { progressY } = defineProps<{
   progressY: number
 }>()
 
-const wrapper = ref<HTMLElement | null>(null)
+const wrapper = useTemplateRef<HTMLElement | null>('wrapper')
 
 const data = [
   {

@@ -14,33 +14,33 @@ export interface ChampionIndex {
 }
 
 export interface ChampionLite extends ChampionIndex {
-  resource?: string | null
   attackType?: string | null
-  stats?: Record<string, ChampionStat>
-  positions?: string[]
-  roles?: string[]
   attributeRatings?: Record<string, number>
+  positions?: string[]
+  resource?: string | null
+  roles?: string[]
+  stats?: Record<string, ChampionStat>
 }
 
 export interface Champion extends ChampionIndex {
-  resource: string
-  attackType: string
-  adaptiveType: string
-  stats: Record<string, ChampionStat>
-  positions: string[]
-  roles: string[]
-  attributeRatings: Record<string, number>
-  fullName?: string
   title: string
-  lore?: string
   abilities: Ability[]
+  adaptiveType: string
+  attackType: string
+  attributeRatings: Record<string, number>
   faction: string
-  releaseDate: string
+  fullName?: string
+  lore?: string
   patchLastChanged: string
+  positions: string[]
   price: {
     blueEssence: number
     rp: number
   }
+  releaseDate: string
+  resource: string
+  roles: string[]
+  stats: Record<string, ChampionStat>
 }
 
 export interface StatEntry {
@@ -53,46 +53,46 @@ export interface ChampionLiteStat extends ChampionLite {
 }
 
 export interface Skin {
-  name?: string
-  splashPath?: string
-  centeredPath?: string
-  tilePath?: string
-  loadPath?: string
   id?: string
+  name?: string
+  centeredPath?: string
+  loadPath?: string
+  splashPath?: string
+  tilePath?: string
 }
 
 export interface Ability {
-  name?: string
   key: string
-  icon?: string
-  effects?: AbilityEffect[]
-  cost?: string
-  cooldown?: string
-  targeting?: string
-  affects?: string
-  spellshieldable?: string
-  resource?: string | null
-  damageType?: string | null
-  spellEffects?: string
-  projectile?: string
-  onHitEffects?: string
-  occurrence?: string
-  notes?: string
-  blurb?: string
-  missileSpeed?: string
-  rechargeRate?: string
-  collisionRadius?: string
-  tetherRadius?: string
-  onTargetCdStatic?: string
-  innerRadius?: string
-  speed?: string
+  name?: string
   width?: string
+  affects?: string
   angle?: string
+  blurb?: string
   castTime?: string
+  collisionRadius?: string
+  cooldown?: string
+  cost?: string
+  damageType?: string | null
   effectRadius?: string
-  targetRange?: string
+  effects?: AbilityEffect[]
+  icon?: string
+  innerRadius?: string
   maxCharges?: number
   maxRank?: number
+  missileSpeed?: string
+  notes?: string
+  occurrence?: string
+  onHitEffects?: string
+  onTargetCdStatic?: string
+  projectile?: string
+  rechargeRate?: string
+  resource?: string | null
+  speed?: string
+  spellEffects?: string
+  spellshieldable?: string
+  targeting?: string
+  targetRange?: string
+  tetherRadius?: string
 }
 
 export interface Attribute {
@@ -101,17 +101,15 @@ export interface Attribute {
 }
 
 interface Modifier {
-  values: string
-  unit?: string
   tooltip?: string
+  unit?: string
+  values: string
 }
 
 export interface AbilityEffect {
   description?: string
   leveling?: Attribute[]
 }
-
-export interface ChampionStat {
-  flat?: number
-  perLevel?: number
+export type ChampionStat = {
+  [K in 'flat' | 'perLevel']?: number
 }

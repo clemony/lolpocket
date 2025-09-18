@@ -14,13 +14,24 @@ export interface Role {
 }
 
 export interface Spell {
-  name: string | null
   id: number
-  description: string | null
+  name: string | null
   cd: number | string | null
-  recharge?: number | string | null
   charges?: number | string | null
+  description: string | null
+  recharge?: number | string | null
   text?: string
 }
 
-/* export type SpellSet = [string, string] */
+export interface StatIndex {
+  id: string
+  name: string
+  abbr?: string
+  color?: string
+  current?: number
+  description: string
+  icon?: string
+  longAbbr?: string
+  order?: number
+  values?: Record<string, number | string>
+}

@@ -1,11 +1,12 @@
 // eslint.config.mjs
 // CONFIG eslint
 import antfu from '@antfu/eslint-config'
+import tailwindcss from 'eslint-plugin-tailwindcss'
 import pluginVue from 'eslint-plugin-vue'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import tseslint from 'typescript-eslint'
 // @ts-check
-
 
 export function resolvePath(filePath) {
   const __filename = fileURLToPath(import.meta.url)
@@ -15,7 +16,13 @@ export function resolvePath(filePath) {
 
 export default antfu({
   ...pluginVue.configs['flat/essential'],
+  ...tseslint.configs.recommendedTypeChecked,
 
+  formatters: {
+    css: true,
+    html: true,
+    markdown: 'prettier',
+  },
   ignores: [
     './dist',
     './node_modules',
@@ -28,82 +35,105 @@ export default antfu({
     '**/raw/**',
     '.save.json',
   ],
-  vue: true,
+  languageOptions: {
+    parserOptions: {
+      projectService: true,
+      tsconfigRootDir: resolvePath('./tsconfig.json'),
+    },
+  },
+  plugins: {
+    tailwindcss,
+  },
   rules: {
-    'no-undef': 'off',
+
     'eqeqeq': 'off',
-    'style/comma-dangle': 'off',
-    'vue/html-self-closing': 'off',
-    'no-unused-vars"': 'off',
-    'no-console': 'off',
-    'no-unused-expressions': 'off',
-    'vue/eqeqeq': 'off',
-    'ts/no-unused-expressions': 'off',
-    'unused-imports/no-unused-vars': 'off',
-    'unused-imports/no-unused-imports': 'off',
-    'vue/no-v-text-v-html-on-component': 'off',
-    'style/eol-last': 'off',
-    'perfectionist/sort-imports': 'off',
-    'vue/no-irregular-whitespace': 'off',
-    'no-irregular-whitespace': 'off',
     'eslint-comments/no-unlimited-disable': 'off',
+    'no-console': 'off',
+    'no-irregular-whitespace': 'off',
+    'no-undef': 'off',
+    'no-unused-expressions': 'off',
+    'no-unused-vars"': 'off',
+    'style/comma-dangle': 'off',
+    'style/eol-last': 'off',
+    'ts/no-unused-expressions': 'off',
+    'unused-imports/no-unused-imports': 'off',
+    'unused-imports/no-unused-vars': 'off',
+
+    // sort
+    'perfectionist/sort-imports': ['warn', { newlinesBetween: 0, order: 'asc', type: 'natural' }],
+    'perfectionist/sort-interfaces': ['warn', {
+      customGroups: {
+        pinned: ['name', 'id', 'key', 'title'],
+      },
+      fallbackSort: { order: 'asc', type: 'natural' },
+      groups: [
+        'pinned',
+        'unknown',
+      ],
+      newlinesBetween: 0,
+      order: 'asc',
+      partitionByComment: true,
+      type: 'natural',
+    }],
+    'perfectionist/sort-objects': ['warn', {
+      customGroups: {
+        pinned: ['name', 'id', 'key', 'title'],
+      },
+      fallbackSort: { order: 'asc', type: 'natural' },
+      groups: [
+        'pinned',
+        'unknown',
+      ],
+      newlinesBetween: 0,
+      order: 'asc',
+      partitionByComment: true,
+      type: 'natural',
+    }],
+
+    // vue
     'vue/custom-event-name-casing': 'off',
+    'vue/eqeqeq': 'off',
     'vue/html-closing-bracket-newline': [
       'error',
       {
-        singleline: 'never',
         multiline: 'never',
         selfClosingTag: {
-          singleline: 'never',
           multiline: 'never',
+          singleline: 'never',
         },
+        singleline: 'never',
       },
     ],
-    'vue/padding-line-between-tags': 'off',
-    'vue/padding-line-between-blocks': ['error', 'always'],
-    'vue/multiline-html-element-content-newline': ['error'],
+    'vue/html-self-closing': 'off',
     'vue/max-attributes-per-line': [
       'error',
       {
-        singleline: {
-          max: 1,
-        },
-        multiline: {
-          max: 1,
-        },
+        multiline: { max: 1, },
+        singleline: { max: 1, },
       },
     ],
+    'vue/max-lines-per-block': ['warn', { script: 200, style: 200, template: 200 }],
+    'vue/multiline-html-element-content-newline': ['error'],
+    'vue/no-irregular-whitespace': 'off',
+    'vue/no-unused-properties': 'off',
+    'vue/no-unused-refs': 'off',
+    'vue/no-v-text-v-html-on-component': 'off',
+    'vue/padding-line-between-blocks': ['error', 'always'],
+    'vue/padding-line-between-tags': 'off',
+    'vue/require-typed-ref': 'warn',
   },
-  formatters: {
-    /**
-     * Format CSS, LESS, SCSS files, also the `<style>` blocks in Vue
-     * By default uses Prettier
-     */
-    css: true,
-    /**
-     * Format HTML files
-     * By default uses Prettier
-     */
-    html: true,
-    /**
-     * Format Markdown files
-     * Supports Prettier and dprint
-     * By default uses Prettier
-     */
-    markdown: 'prettier',
+  settings: {
+    rules: {
+      'tailwindcss/classnames-order': 'warn',
+      'tailwindcss/no-contradicting-classname': 'warn',
+      'tailwindcss/no-custom-classname': 'off',
+      'tailwindcss/enforces-shorthand': 'warn',
+    },
+    tailwindcss: {
+      attributes: ['class', '@apply'],
+      cssConfigPath: resolvePath('./app/assets/css/tailwind.css'),
+      functions: ['classnames', 'clsx', 'ctl', 'cva', 'tv', 'tw', 'cn']
+    }
   },
-settings: {
-  tailwindcss: {
-    // Attributes/props that could contain Tailwind CSS classes...
-    // Optional, default values: ["class", "className", "ngClass", "@apply"]
-    attributes: ['class'],
-    // The absolute path pointing to you main Tailwind CSS v4 config file.
-    // It must be a `.css` file (v4), not a `.js` file (v3)
-    // REQUIRED, default value will not help
-    cssConfigPath:  resolvePath('./app/assets/css/tailwind.css'),
-    // Functions/tagFunctions that will be parsed by the plugin.
-    // Optional, default values: ["classnames", "clsx", "ctl", "cva", "tv", "tw"]
-    functions: ['classnames', 'clsx', 'ctl', 'cva', 'tv', 'tw', 'cn']
-  },
-}
+  vue: true
 })

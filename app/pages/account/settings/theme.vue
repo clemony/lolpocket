@@ -4,9 +4,9 @@ import { ListboxContent, ListboxRoot } from 'reka-ui'
 
 definePageMeta({
   name: 'theme',
-  path: '/settings/theme',
-  icon: 'gear',
   description: 'Choose your app interface colors.',
+  icon: 'gear',
+  path: '/settings/theme',
 })
 
 const as = useAccountStore()
@@ -22,7 +22,7 @@ function handleChange(theme) {
     class="w-full py-4 z-0"
     :multiple="false"
     selection-behavior="replace"
-    @entry-focus.prevent
+    @entry-focui.prevent
     @update:model-value="handleChange(as.settings.theme)">
     <ListboxContent class="w-fit grid gap-y-10 gap-x-14 grid-cols-2">
       <ListboxItem

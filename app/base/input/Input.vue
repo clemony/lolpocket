@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from 'vue'
-
 import { useVModel } from '@vueuse/core'
 
 defineOptions({
@@ -20,8 +19,8 @@ const emits = defineEmits<{
 }>()
 
 const modelValue = useVModel(props, 'modelValue', emits, {
-  passive: true,
   defaultValue: props.defaultValue,
+  passive: true,
 })
 </script>
 
@@ -42,7 +41,7 @@ const modelValue = useVModel(props, 'modelValue', emits, {
       :autofocus="false"
       @keydown.stop
       @keydown.enter.prevent
-      @autofocus.prevent />
+      @autofocui.prevent />
     <slot name="2" />
 
     <Button

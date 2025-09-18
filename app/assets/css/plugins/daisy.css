@@ -15,7 +15,6 @@
   color-scheme: dark, light;
   styled: true;
 
-  @theme inline {
     --color-base-100: var(--b1);
     --color-base-200: var(--b2);
     --color-base-300: var(--b3);
@@ -37,7 +36,11 @@
     --color-error: var(--domination);
     --color-error-content: var(--domination-light);
     --input-color: var(--color-b3);
-  }
+      --tabcontent-radius-ss: var(--rounded-xl);
+--tabcontent-radius-se: var(--rounded-xl);
+--tabcontent-radius-es: var(--rounded-xl);
+--tabcontent-radius-ee: var(--rounded-xl);
+
 
   --tab-border-color: var(--b3);
   --tab-border-colors: var(--b3);
@@ -46,4 +49,5 @@
   --radius-field: 0.55rem;
   --depth: 1;
   --noise: 0.8;
+
 }

@@ -9,9 +9,9 @@ const { card } = defineProps<{
 
 definePageMeta({
   name: 'card',
-  path: '/tools/card',
   title: 'Card Editor',
   level: 2,
+  path: '/tools/card',
   search: false,
 })
 
@@ -30,13 +30,13 @@ const fontClass2 = computed (() => {
   a.cardClass ? a.cardClass : ''
 })
  */
-const zoom = ref(1)
-const pan = ref({ x: 0, y: 0 })
+const zoom = ref<number>(1)
+const pan = ref<Record<string, number>>({ x: 0, y: 0 })
 
-const isMenuOpen = ref(true)
-const isSettingsOpen = ref(true)
+const isMenuOpen = ref<boolean>(true)
+const isSettingsOpen = ref<boolean>(true)
 
-const pocketCardRef = ref(null)
+const pocketCardRef = ref<HTMLDivElement>(null)
 
 onMounted(() => {
   ps.pocketCardRef = pocketCardRef.value
