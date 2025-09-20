@@ -8,11 +8,10 @@ const { progress: p, visible } = defineProps<{
   visible: boolean
 }>()
 
-const ui = useUiStore()
 const video = heroDisplays[0]
 const videoRef = ref()
 const prog = ref(0)
-const as = useAccountStore()
+
 useMotionValueEvent(p, 'change', (latest) => {
   let a = latest * 80
   a = Math.round(a * 100) / 100

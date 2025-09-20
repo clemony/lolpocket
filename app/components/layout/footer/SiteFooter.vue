@@ -9,6 +9,6 @@ const { class: className } = defineProps<{
     <SiteMap />
 
     <SiteFooterData
-      class="z-10 max-h-26 h-26 overflow-hidden min-h-26 py-5 border-t border-t-2 border-t-neutral" />
+      class="z-10 max-h-20 h-20 overflow-hidden min-h-20 py-5 border-t border-t-2 border-t-neutral" />
   </div>
 </template>

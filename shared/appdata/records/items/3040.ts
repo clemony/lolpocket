@@ -1,38 +1,38 @@
 const item: Item = {
-  name: 'Seraph\'s Embrace',
   id: 3040,
-  rank: 'Legendary',
-  specialRecipe: 3003,
-  noEffects: false,
-  removed: false,
+  name: 'Seraph\'s Embrace',
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3048_mage_t3_seraphsembrace.png',
+  maps: [11, 12, 21, 35],
+  noEffects: false,
   passives: [
     {
       name: 'Awe',
-      unique: true,
       effects: 'Grants ability power equal to 2% <b>bonus</b> mana.',
+      unique: true,
     },
     {
       name: 'Lifeline',
-      unique: true,
+      cooldown: '90',
       effects:
         'If you would take damage that would reduce you below 30% of your <b>maximum</b> health, you first gain a <img src="/img/icons/shield.webp" class="tip-icon" />shield for 3 seconds that absorbs damage equal to 18% <b>maximum</b> mana for 3 seconds.',
-      cooldown: '90',
+      unique: true,
     },
   ],
-  stats: {
-    abilityPower: 70,
-    mana: 1000,
-    abilityHaste: 25,
-  },
+  rank: 'Legendary',
+  removed: false,
   shop: {
     prices: {
-      total: 2900,
       combined: 2900,
       sell: 1160,
+      total: 2900,
     },
     purchasable: false,
   },
-  maps: [11, 12, 21, 35],
+  specialRecipe: 3003,
+  stats: {
+    abilityHaste: 25,
+    abilityPower: 70,
+    mana: 1000,
+  },
 }
 export default item

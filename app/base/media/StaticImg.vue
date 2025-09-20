@@ -5,8 +5,8 @@ defineOptions({
 
 const {
   alt,
-  img,
   class: className,
+  img,
 } = defineProps<{
   alt: string
   img: string | null

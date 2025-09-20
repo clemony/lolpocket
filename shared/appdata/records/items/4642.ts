@@ -1,7 +1,7 @@
 const item: Item = {
-  name: 'Bandleglass Mirror',
   id: 4642,
-  rank: 'Epic',
+  name: 'Bandleglass Mirror',
+  nicknames: ['yordle'],
   buildsFrom: [
     {
       id: 1004,
@@ -61,24 +61,24 @@ const item: Item = {
       gold: 2200,
     },
   ],
-  specialRecipe: 0,
-  noEffects: true,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4642_enchanter_t2_bandleglassmirror.png',
-  nicknames: ['yordle'],
-  stats: {
-    abilityPower: 20,
-    manaRegen: 100,
-    abilityHaste: 10,
-  },
+  maps: [11, 12, 21, 35],
+  noEffects: true,
+  rank: 'Epic',
+  removed: false,
   shop: {
     prices: {
-      total: 900,
       combined: 50,
       sell: 360,
+      total: 900,
     },
     tags: ['SUPPORT'],
   },
-  maps: [11, 12, 21, 35],
+  specialRecipe: 0,
+  stats: {
+    abilityHaste: 10,
+    abilityPower: 20,
+    manaRegen: 100,
+  },
 }
 export default item

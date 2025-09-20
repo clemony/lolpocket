@@ -7,7 +7,7 @@ definePageMeta({
 })
 
 const route = useRoute()
-const is = useItemStore()
+
 const quote = computed(() => getRandom(itemQuotes))
 const tabs = ref('/library/items')
 

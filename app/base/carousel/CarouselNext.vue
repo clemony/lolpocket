@@ -4,7 +4,7 @@ import { useCarousel } from './useCarousel'
 
 const props = defineProps<WithClassAsProps>()
 
-const { orientation, canScrollNext, scrollNext } = useCarousel()
+const { canScrollNext, orientation, scrollNext } = useCarousel()
 </script>
 
 <template>
@@ -12,7 +12,7 @@ const { orientation, canScrollNext, scrollNext } = useCarousel()
     :disabled="!canScrollNext"
     :class="
       cn(
-        'touch-manipulation absolute group/carobtn z-10 disabled:!bg-transparent size-10 rounded-full p-0',
+        'touch-manipulation absolute group/carobtn z-10 *:pointer-events-none   disabled:!bg-transparent size-10 rounded-full p-0',
         orientation === 'horizontal'
           ? '-right-12 top-1/2 -translate-y-1/2'
           : '-bottom-12 left-1/2 -translate-x-1/2 rotate-90',

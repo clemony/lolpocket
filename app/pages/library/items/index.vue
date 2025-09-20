@@ -6,7 +6,6 @@ definePageMeta({
 })
 
 console.log('🌱 - is().filtered:', is().filtered)
-const ix = useIndexStore()
 </script>
 
 <template>
@@ -15,7 +14,7 @@ const ix = useIndexStore()
     group
     class="flex flex-wrap justify-stretch content-start size-full -mx-2 -mt-4">
     <div
-      v-for="item in ix.items"
+      v-for="item in ix().items"
       :key="item.id"
       :data-state="is().filtered.includes(item.id) ? 'visible' : 'hidden'"
       class="group relative overflow-visible data-[state=hidden]:scale-0 data-[state=hidden]:size-0 data-[state=visible]:scale-100 data-[state=visible]:size-28 grid place-items-center">

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { runePaths } from '#shared/appdata/records/runes'
 import type { Easing } from 'motion-v'
+import { runePaths } from '#shared/appdata/records/runes'
 import { motion, stagger } from 'motion-v'
 
 const emit = defineEmits(['update:paths'])
@@ -19,9 +19,6 @@ const headerVariants = {
   hidden: {
     opacity: 0,
   },
-  visible: {
-    opacity: 1,
-  },
   exit: {
     opacity: 0,
   },
@@ -30,9 +27,20 @@ const headerVariants = {
     duration: 0.8,
     ease: [0.215, 0.61, 0.355, 1.0] as unknown as Easing[],
   },
+  visible: {
+    opacity: 1,
+  },
 }
 
 const titleVariants = {
+  exit: {
+    letterSpacing: '-0.5em',
+    opacity: 0,
+    transition: {
+      duration: 0.8,
+      ease: [0.55, 0.085, 0.68, 0.53] as unknown as Easing[],
+    },
+  },
   initial: {
     letterSpacing: '1em',
     opacity: 0,
@@ -43,14 +51,6 @@ const titleVariants = {
     transition: {
       duration: 0.8,
       ease: [0.215, 0.61, 0.355, 1.0] as unknown as Easing[],
-    },
-  },
-  exit: {
-    letterSpacing: '-0.5em',
-    opacity: 0,
-    transition: {
-      duration: 0.8,
-      ease: [0.55, 0.085, 0.68, 0.53] as unknown as Easing[],
     },
   },
 }
@@ -140,7 +140,7 @@ const pathHovered = ref('')
           backgroundSize: 'cover',
         }"
         class="rounded-lg cursor-pointer flex items-center justify-center my-auto bg-center grow basis-1 max-h-140 aspect-2/3 shadow-sm drop-shadow-sm bg-black relative after:absolute overflow-hidden after:size-full after:bg-black/70 after:opacity-0 hover:after:opacity-100 hover:*:opacity-100 *:opacity-0 after:transition-all after:duration-400 after:backdrop-blur-px after:z-1"
-        @click="handleSet(path.name, runePaths[i == 4 ? 0 : i + 1].name)"
+        @click="handleSet(path.name, runePaths[i === 4 ? 0 : i + 1].name)"
         @hover-start="pathHovered = path.name"
         @hover-end="pathHovered = ''">
         <hicon

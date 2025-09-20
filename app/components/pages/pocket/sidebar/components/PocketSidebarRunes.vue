@@ -2,10 +2,9 @@
 const { pocket } = defineProps<{
   pocket: Pocket
 }>()
-const rs = useRuneStore()
 
 function handleClick(i) {
-  rs.selectedRuneSet = i
+  rs().selectedRuneSet = i
   navigateTo(`/pocket/${pocket.key}/runes`)
 }
 </script>

@@ -12,7 +12,7 @@ const {
 }>()
 console.log(
   '🌱 - pocket:',
-  ps().pockets.filter(p => p.location.folder == '')
+  ps().pockets.filter(p => p.location.folder === '')
 )
 </script>
 
@@ -67,9 +67,9 @@ console.log(
           :style="
             championPositions.map((p) => p.name).includes(tag)
               ? {
-                backgroundColor: championPositions.find((p) => p.name == tag)
+                backgroundColor: championPositions.find((p) => p.name === tag)
                   .color,
-                borderColor: championPositions.find((p) => p.name == tag).color,
+                borderColor: championPositions.find((p) => p.name === tag).color,
               }
               : ''
           "

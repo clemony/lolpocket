@@ -1,9 +1,9 @@
 <script setup lang="ts">
 const {
   class: className,
+  label,
   variant,
   variants,
-  label,
 } = defineProps<{
   class?: HTMLAttributes['class']
   variants?: any

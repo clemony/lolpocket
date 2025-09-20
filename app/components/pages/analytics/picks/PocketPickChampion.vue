@@ -3,8 +3,6 @@ const { champion } = defineProps<{
   champion: any
 }>()
 
-const ms = useMatchStore()
-
 const winrateDiff = computed(() => {
   return -1
 })
@@ -33,7 +31,7 @@ const winrateDiff = computed(() => {
       </div>
 
       <div class="stat-desc">
-        games in {{ ms.filter.patch }}
+        games in {{ ms().filter.patch }}
       </div>
     </div>
 

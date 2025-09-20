@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { useScroll } from '@vueuse/core'
-
 /* import { ChampionGridIcon, GridLastPlayed, GridMasteryPoints } from 'components' */
 import type {
   ColDef,
@@ -9,6 +7,7 @@ import type {
   GridOptions,
   GridReadyEvent,
 } from 'ag-grid-community'
+import { useScroll } from '@vueuse/core'
 import {
   CellStyleModule,
   ClientSideRowModelModule,
@@ -40,51 +39,49 @@ const theme = ref(masteryGridTheme)
 const gridApi = shallowRef<GridApi | null>(null)
 
 const gridOptions: GridOptions<ChampionMastery> = {
-  rowData: mastery,
   columnHoverHighlight: false,
-  rowHeight: 68,
-
   defaultColDef: {
-    flex: 1,
-    minWidth: 66,
-
-    autoHeaderHeight: true,
-    wrapHeaderText: false,
-    headerClass: ['sticky top-0'],
-    cellClass: [''],
-    sortingOrder: ['desc', 'asc', null],
     initialHide: false,
+    minWidth: 66,
+    autoHeaderHeight: true,
+    cellClass: [''],
+    flex: 1,
+    headerClass: ['sticky top-0'],
+    sortingOrder: ['desc', 'asc', null],
+    wrapHeaderText: false,
   },
+  rowData: mastery,
+  rowHeight: 68,
 }
 
 const colDefs: (ColDef<ChampionMastery> | ColGroupDef<ChampionMastery>)[] = [
   {
-    field: 'level',
-    colId: 'rank',
-    headerName: 'Rank',
     cellClass: 'py-2 !px-0',
+    colId: 'rank',
+    field: 'level',
+    headerName: 'Rank',
     /*    cellRenderer: ChampionGridIcon, */
-    valueGetter: params => params.data.level,
+    maxWidth: 360,
+    minWidth: 180,
+    width: 360,
+    cellDataType: 'number',
     cellRendererParams: {
       img: true,
     },
-    cellDataType: 'number',
-    width: 360,
-    maxWidth: 360,
-    minWidth: 180,
+    valueGetter: params => params.data.level,
   },
 
   {
-    field: 'id',
-    colId: 'champion',
+    cellClass: 'text-bc !flex !flex-col justify-center size-full text-start',
+    cellDataType: 'text',
     cellRenderer: params =>
       `<h3 class="dst mb-1 font-bold ">${ix().champNameById(params.data.id)}</h3><p class="italic text-xs font-medium text-bc/90">${ix().getChampionTitle(ix().champKeyById(params.data.id))}</p>`,
-    valueFormatter: params => ix().champNameById(params.data.id),
-    headerName: 'Champion',
+    colId: 'champion',
+    field: 'id',
     headerClass:
       'items-center !flex [&_.ag-header-cell-comp-wrapper]:!h-5 [&_.ag-header-cell-text]:!mt-px ',
-    cellDataType: 'text',
-    cellClass: 'text-bc !flex !flex-col justify-center size-full text-start',
+    headerName: 'Champion',
+    valueFormatter: params => ix().champNameById(params.data.id),
   }, /*  {
     field: 'lastPlayed',
     colId: 'lastPlayed',
@@ -107,15 +104,15 @@ const colDefs: (ColDef<ChampionMastery> | ColGroupDef<ChampionMastery>)[] = [
     headerClass: '',
   }, */
   {
-    field: 'level',
-    colId: 'level',
-    headerName: 'Level',
+    maxWidth: 80,
+    width: 80,
+    cellClass: '!grid place-items-center',
+    cellDataType: 'number',
     cellRenderer: params =>
       `<div class="size-10 text-md font-semibold leading-none  grid place-items-center tracking-wide text-nc inset-shadow-sm inset-shadow-b4/20 shadow-sm drop-shadow-sm bg-linear-to-br from-neutral/80 to-neutral/90  rounded-full">${params.data.level}</div>`,
-    cellDataType: 'number',
-    cellClass: '!grid place-items-center',
-    width: 80,
-    maxWidth: 80,
+    colId: 'level',
+    field: 'level',
+    headerName: 'Level',
   },
 ]
 

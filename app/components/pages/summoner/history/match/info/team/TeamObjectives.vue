@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 const {
+  class: className,
   team,
   teamObject,
-  class: className,
 } = defineProps<{
   team: any
   teamObject: any

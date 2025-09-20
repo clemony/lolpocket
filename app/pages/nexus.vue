@@ -6,18 +6,18 @@ import { toast } from 'vue-sonner'
 const container = useDomRef()
 
 definePageMeta({
-  icon: 'nexus',
-  level: 1,
   name: 'nexus',
+  icon: 'mdi:atom-variant',
+  level: 1,
   order: 1,
   path: '/nexus',
 })
 
+console.log('🌱 - ss().getSummoner(as().account.puuid):', ss().cache)
+console.log('🌱 - as().account.puuid:', as().account.puuid)
 async function hydrateUser1() {
   const client = useSupabaseClient()
   const user = useSupabaseUser().value
-
-  const as = useAccountStore()
 
   console.log('Authenticated user: ', user)
 

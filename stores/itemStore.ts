@@ -1,34 +1,40 @@
-import { akaLookup } from '#shared/appdata/filters/item-aka'
-import { itemFilters } from '#shared/appdata/filters/item-filters'
 import type { GridApi } from 'ag-grid-community'
+import { itemAkaLookup } from '#shared/appdata/filters/item-aka'
+import { itemFilters } from '#shared/appdata/filters/item-filters'
 import { defineStore } from 'pinia'
+
+export interface ItemFilter {
+  map: number
+  purchasable: boolean
+  query: string
+  rank: string
+  stats: string[] | null
+  tags: string[] | null
+}
 
 export const useItemStore = defineStore(
   'itemStore',
   () => {
-    const ix = useIndexStore()
-    console.log('🌱 - ix:', ix.items)
-
     // --- FILTER STATE ---
     const filters = ref<ItemFilter>({
-      query: '',
-      stats: [],
-      tags: [],
-      rank: null,
       map: 11,
       purchasable: true,
+      query: '',
+      rank: null,
+      stats: [],
+      tags: [],
     })
 
     // --- HELPERS ---
 
     function clearFilters() {
       filters.value = {
-        query: '',
-        stats: [],
-        tags: [],
-        rank: null,
         map: 11,
         purchasable: true,
+        query: '',
+        rank: null,
+        stats: [],
+        tags: [],
       }
     }
 
@@ -39,7 +45,7 @@ export const useItemStore = defineStore(
 
     const filtered = computed(() => {
       const query = debouncedQuery.value.toLowerCase()
-      const allIds = ix.items.map(i => i.id)
+      const allIds = ix().items.map(i => i.id)
       let matchedIds: Set<number> = new Set(allIds)
 
       if (filters.value.stats.length > 0) {
@@ -76,12 +82,12 @@ export const useItemStore = defineStore(
       if (query) {
         matchedIds = new Set(
           [...matchedIds].filter((id) => {
-            const item = ix.itemById(id)
+            const item = ix().itemById(id)
             if (!item)
               return false
 
             const name = item.name.toLowerCase()
-            const akas = akaLookup[item.name.toLowerCase()] || []
+            const akas = itemAkaLookup[item.name.toLowerCase()] || []
             return (
               name.includes(query)
               || akas.some(aka => aka.toLowerCase().includes(query))
@@ -114,20 +120,20 @@ export const useItemStore = defineStore(
     ])
 
     return {
-      filters,
-      clearFilters,
-      filtered,
-      isComparing,
+      itemGridApi,
       calculatorSet,
       calculatorSet2,
-      itemGridApi,
+      clearFilters,
+      filtered,
+      filters,
+      isComparing,
     }
   },
   {
     persist: {
-      storage: piniaPluginPersistedstate.localStorage(),
       key: 'itemStore',
       pick: ['itemGridApi'],
+      storage: piniaPluginPersistedstate.localStorage(),
     },
   }
 )

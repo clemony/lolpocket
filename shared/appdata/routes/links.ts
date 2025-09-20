@@ -4,31 +4,31 @@ export const navLinks: LinkGroup = [
   {
     // icon: "cil:briefcase",
     name: 'Backpack',
-    link: '/backpack',
+    component: 'BackpackMenu',
     icon: {
       name: 'backpack',
       class: '**:stroke-[1.6] size-5.5',
     },
+    link: '/backpack',
     links: backpackLinks,
-    component: 'BackpackMenu',
   },
   {
     name: 'Analytics',
+    component: 'AnalyticsMenu',
     icon: {
       name: 'chart',
       class: 'size-4.5 ',
     },
     links: analyticsLinks,
-    component: 'AnalyticsMenu',
   },
   {
     name: 'Library',
-    links: libraryLinks,
+    component: 'LibraryMenu',
     icon: {
       name: 'book',
       class: '**:stroke-[1.6] size-5.5',
     },
-    component: 'LibraryMenu',
+    links: libraryLinks,
   },
 ]
 

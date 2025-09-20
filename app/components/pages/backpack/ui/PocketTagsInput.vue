@@ -15,7 +15,7 @@ watch(
 )
 
 function deleteTag(tag: string) {
-  const a = ps().tags.findIndex(t => t == tag)
+  const a = ps().tags.findIndex(t => t === tag)
 
   if (a) {
     ps().tags.splice(a, 1)
@@ -23,7 +23,7 @@ function deleteTag(tag: string) {
       .pockets
       .map(p => p.tags)
       .forEach((set) => {
-        const a = set.findIndex(t => t == tag)
+        const a = set.findIndex(t => t === tag)
         set.splice(a, 1)
       })
   }
@@ -38,7 +38,7 @@ function deleteTag(tag: string) {
     class="overflow-hidden"
     @entry-focus="null"
     @highlight="null"
-    @entry-focui.stop.prevent>
+    @entry-focus.stop.prevent>
     <ListboxContent class="space-y-3 w-full">
       <!-- custom tags -->
 

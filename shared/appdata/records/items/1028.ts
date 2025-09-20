@@ -1,7 +1,7 @@
 const item: Item = {
-  name: 'Ruby Crystal',
   id: 1028,
-  rank: 'Basic',
+  name: 'Ruby Crystal',
+  nicknames: ['red'],
   buildsInto: [
     {
       id: 323075,
@@ -139,23 +139,23 @@ const item: Item = {
       gold: 3100,
     },
   ],
-  specialRecipe: 0,
-  noEffects: true,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1028_base_t1_rubycrystal.png',
-  simpleDescription: 'Increases Health',
-  nicknames: ['red'],
-  stats: {
-    health: 150,
-  },
+  maps: [11, 12, 21, 35],
+  noEffects: true,
+  rank: 'Basic',
+  removed: false,
   shop: {
     prices: {
-      total: 400,
       combined: 400,
       sell: 160,
+      total: 400,
     },
     tags: ['FIGHTER', 'MARKSMAN', 'ASSASSIN', 'MAGE', 'TANK', 'SUPPORT'],
   },
-  maps: [11, 12, 21, 35],
+  simpleDescription: 'Increases Health',
+  specialRecipe: 0,
+  stats: {
+    health: 150,
+  },
 }
 export default item

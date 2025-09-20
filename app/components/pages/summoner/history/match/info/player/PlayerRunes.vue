@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-const { player, class: className } = defineProps<{
+const { class: className, player } = defineProps<{
   player: Player
   class?: HTMLAttributes['class']
 }>()
-const ix = useIndexStore()
+
 const { playerKeystone, playerPaths } = await useRunes(computed(() => player))
 </script>
 
@@ -24,8 +24,8 @@ const { playerKeystone, playerPaths } = await useRunes(computed(() => player))
     <img
       v-if="playerPaths"
       v-tippy="{ content: playerPaths, placement: 'right' }"
-      :src="`/img/runes/${playerPaths}.webp`"
-      class="h-6 w-auto dst"
-      :class="{ '!h-5.5': playerPaths == 'inspiration' }" />
+      :src="`/img/paths/${playerPaths}.webp`"
+      class="h-6 w-auto "
+      :class="{ '!h-5.5': playerPaths === 'inspiration' }" />
   </div>
 </template>

@@ -16,9 +16,9 @@ export default defineEventHandler(async (event) => {
     totalPoints += m.championPoints
     return {
       id: m.championId,
+      lastPlayed: m.lastPlayTime,
       level: m.championLevel,
       points: m.championPoints,
-      lastPlayed: m.lastPlayTime,
     }
   })
 
@@ -27,7 +27,7 @@ export default defineEventHandler(async (event) => {
   return {
     puuid,
     mastery,
-    totalPoints,
     totalLevels,
+    totalPoints,
   }
 })

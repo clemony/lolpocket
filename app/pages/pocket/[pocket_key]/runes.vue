@@ -5,9 +5,9 @@ import type { CarouselApi } from '~/base/carousel/carousel-index'
 definePageMeta({
   name: 'pocket-runes',
   title: 'runes',
-  path: '/pocket/:pocket_key/runes',
   level: 3,
   order: 3,
+  path: '/pocket/:pocket_key/runes',
   search: false,
 })
 

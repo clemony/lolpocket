@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-const ds = useDataStore()
-
 const { data: ogData, error } = await useFetch<PatchNotesData>(
   '/api/fetch-og',
   {

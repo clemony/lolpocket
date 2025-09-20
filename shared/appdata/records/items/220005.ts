@@ -1,19 +1,19 @@
 const item: Item = {
-  name: 'Legendary Tank Item',
   id: 220005,
-  rank: 'Consumable',
-  specialRecipe: 0,
-  noEffects: false,
-  removed: false,
+  name: 'Legendary Tank Item',
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/220005_tankanvil.png',
-  stats: {},
+  maps: [30],
+  noEffects: false,
+  rank: 'Consumable',
+  removed: false,
   shop: {
     prices: {
-      total: 2000,
       combined: 2000,
       sell: 800,
+      total: 2000,
     },
   },
-  maps: [30],
+  specialRecipe: 0,
+  stats: {},
 }
 export default item

@@ -1,20 +1,20 @@
 const item: Item = {
-  name: 'Cappa Juice',
   id: 2141,
-  rank: 'Consumable',
-  specialRecipe: 0,
-  noEffects: false,
-  removed: false,
+  name: 'Cappa Juice',
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/icon_item_souljuice_funhat.png',
-  stats: {},
+  maps: [11, 12],
+  noEffects: false,
+  rank: 'Consumable',
+  removed: false,
   shop: {
     prices: {
-      total: 300,
       combined: 300,
       sell: 120,
+      total: 300,
     },
     purchasable: false,
   },
-  maps: [11, 12],
+  specialRecipe: 0,
+  stats: {},
 }
 export default item

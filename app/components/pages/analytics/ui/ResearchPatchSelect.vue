@@ -4,10 +4,8 @@ const props = defineProps<{
 }>()
 
 const emit = defineEmits(['update:patch'])
-const ms = useMatchStore()
-const ds = useDataStore()
 
-const modelValue = ref(ms.filter.patch ?? ds.currentPatch)
+const modelValue = ref(ms().filter.patch ?? ds().currentPatch)
 </script>
 
 <template>
@@ -30,7 +28,7 @@ const modelValue = ref(ms.filter.patch ?? ds.currentPatch)
         <SelectLabel>Patch</SelectLabel>
 
         <SelectItem
-          v-for="patch in ds.patchList"
+          v-for="patch in ds().patchList"
           :key="patch"
           :value="patch"
           no-tick>
@@ -39,7 +37,7 @@ const modelValue = ref(ms.filter.patch ?? ds.currentPatch)
           <span class="flex gap-2 items-center">
             <span class="size-4.5">
               <icon
-                v-if="ms.filter.patch == patch"
+                v-if="ms().filter.patch === patch"
                 name="tick-sm"
                 class="size-4.5 dst" />
             </span>

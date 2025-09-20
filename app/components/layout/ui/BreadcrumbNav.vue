@@ -18,8 +18,8 @@ function getRouteChain(path: string) {
   const resolved = router.resolve(path)
   return resolved.matched.map(r => ({
     name: r.name,
-    path: r.path,
     meta: r.meta,
+    path: r.path,
   }))
 }
 
@@ -35,21 +35,21 @@ const chain = computed(() => getRouteChain(route.fullPath))
       <template
         v-for="(link, i) in chain"
         :key="link.name">
-        <template v-if="link.meta?.title != 'Overview'">
+        <template v-if="link.meta?.title !== 'Overview'">
           <BreadcrumbSeparator
-            v-if="i != 0"
+            v-if="i !== 0"
             class="hidden md:block" />
           <BreadcrumbItem
             class="hidden md:block not-last:opacity-60 hover:*:first:opacity-90">
             <BreadcrumbLink as-child>
               <ULink
-                v-if="link.name == 'pocket'"
+                v-if="link.name === 'pocket'"
                 to="/backpack"
                 class="capitalize font-medium transition-all text-md">
                 Backpack
               </ULink>
               <ULink
-                v-else-if="link.meta.level != 0 && link.path != route.path"
+                v-else-if="link.meta.level !== 0 && link.path !== route.path"
                 :to="String(link.path)"
                 class="capitalize font-medium transition-all text-md">
                 {{ link.meta?.title || link.name }}
@@ -58,9 +58,9 @@ const chain = computed(() => getRouteChain(route.fullPath))
                 v-else
                 class="font-medium capitalize text-md">
                 {{
-                  link.name == "champion_key"
+                  link.name === "champion_key"
                     ? ix().champNameByKey(String(route.params.champion_key))
-                    : link.name == "pocket_key"
+                    : link.name === "pocket_key"
                       ? ps().getPocket(String(route.params.pocket_key)).name
                       : link.meta?.title || link.name
                 }}

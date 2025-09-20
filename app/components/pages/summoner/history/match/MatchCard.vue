@@ -1,19 +1,19 @@
 <script setup lang="ts">
 import { queueIndex } from '#shared/appdata/index/queue-index'
 
-const { match, puuid } = defineProps<{
+const { puuid, match } = defineProps<{
   match: MatchData
   puuid: string
 }>()
 
 const player = computed(() => {
-  return match?.participants.find(p => p.puuid == puuid)
+  return match?.participants.find(p => p.puuid === puuid)
 })
 
 const isOpen = ref(false)
 
 const queue = computed(() => {
-  const foundQueue = queueIndex.find(q => q.queueId == match.queueId)
+  const foundQueue = queueIndex.find(q => q.queueId === match.queueId)
   if (!foundQueue)
     return null
   return foundQueue
@@ -39,7 +39,7 @@ const queue = computed(() => {
           player.win
             ? 'before:border-inspiration '
             : 'before:border-domination',
-          isOpen == true ? 'max-h-240' : 'h-36',
+          isOpen === true ? 'max-h-240' : 'h-36',
         )
       ">
       <div

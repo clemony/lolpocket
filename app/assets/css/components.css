@@ -8,62 +8,62 @@
     border: 1px solid red;
   }
   /* progress */
-  
+
   .progress {
-    @supports (-webkit-appearance:none) {
+    @supports (-webkit-appearance: none) {
       &::-webkit-progress-value {
         @apply rounded-xl;
       }
     }
   }
-  
+
   .progress&::-webkit-progress-value {
     border-radius: var(--rounded-xl) !important;
   }
-  
+
   /* popover */
-  
+
   .popover-arrow-down {
     clip-path: inset(0 0 15% 0);
   }
-  
+
   .popover-arrow-up {
     clip-path: inset(58% 0 0 0);
   }
-  
+
   /* field  */
-  
+
   .field {
     @apply fieldset mt-2 relative w-full h-fit bg-b2 border border-b3/60 p-4 rounded-box;
   }
-  
+
   .field-legend {
     @apply fieldset-legend absolute left-5.5 -top-5 text-sm max-w-64  max-h-12;
   }
-  
+
   .field-box {
     @apply shadow-warm-soft overflow-visible border bg-b2/40 drop-shadow-xs border-b3/60 rounded-xl **:select-none text-xs   relative;
   }
-  
+
   /* stat display  */
-  
+
   .stats {
     .stat {
       @apply items-center;
     }
-    
+
     .stat-title {
       @apply !text-sm font-semibold  drop-shadow-[1px_0px_0px_#00000020];
     }
-    
+
     .stat-desc {
       @apply !text-xs font-medium  drop-shadow-[1px_0px_0px_#00000020];
     }
-    
+
     .stat-figure {
       @apply drop-shadow-[1px_0px_0px_#00000020];
     }
-    
+
     .stat-value {
       @apply drop-shadow-[1px_0px_0px_#00000020];
     }

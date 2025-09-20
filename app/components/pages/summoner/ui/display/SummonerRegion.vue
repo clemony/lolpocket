@@ -3,10 +3,10 @@ import type { PrimitiveProps } from 'reka-ui'
 import { Primitive } from 'reka-ui'
 
 const {
-  class: className,
-  summoner,
   as: el = 'span',
+  class: className,
   noIcon,
+  summoner,
 } = defineProps<
   PrimitiveProps & {
     class?: HTMLAttributes['class']

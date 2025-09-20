@@ -14,27 +14,26 @@ const { class: className, summoner } = defineProps<{
     <template #icon>
       <LazySummonerIcon
         :summoner
-        class="rounded-full relative size-20 mt-0" />
+        class="rounded-full relative size-20 mt-3" />
     </template>
 
     <!-- header name -->
     <template #title>
       <SummonerName
         as="h1"
-        class="drop-shadow-sm font-serif text-bc/94 leading-none text-xxs2" />
+        class="drop-shadow-sm font-serif text-bc/94 leading-none text-[2.6rem]" />
 
-      <div class="flex gap-3 mt-0.75">
+      <div class="flex items-center gap-2 mt-0.75">
         <UpdateSummoner
           :summoner
           text
-          size="xs"
-          variant="shadow-outline"
-          class="w-18" />
+          size="sm"
+          variant="shadow"
+          class="w-22 h-9  border-b4/80" />
         <FollowButton
           :summoner
-          size="xs"
-          variant="shadow-outline"
-          class="size-8" />
+          variant="shadow"
+          class="size-9  border-b4/80" />
       </div>
     </template>
 

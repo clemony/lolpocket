@@ -1,8 +1,8 @@
 <script setup lang="ts">
 const {
-  img,
-  class: className,
   champKey,
+  class: className,
+  img,
   scale,
   translate,
 } = defineProps<{

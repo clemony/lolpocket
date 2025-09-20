@@ -1,9 +1,9 @@
-import { storeToRefs } from 'pinia'
 import type { StoredTeammate } from '~~/stores/summonerStore'
+import { storeToRefs } from 'pinia'
 
 export interface Teammate extends StoredTeammate {
-  winrate: number
   bayesianWinrate: number
+  winrate: number
 }
 
 export function useRepeatedTeammates(puuid: string, matches: MatchData[]) {
@@ -29,8 +29,8 @@ export function useRepeatedTeammates(puuid: string, matches: MatchData[]) {
         for (const ally of allies) {
           const existing = teammateStats.get(ally.riotIdGameName) || {
             games: 0,
-            wins: 0,
             profileIcon: ally.profileIcon,
+            wins: 0,
           }
 
           existing.games++
@@ -54,8 +54,8 @@ export function useRepeatedTeammates(puuid: string, matches: MatchData[]) {
           return {
             riotIdGameName,
             ...stats,
-            winrate: Math.round(rawWinrate * 100),
             bayesianWinrate: Math.round(bayesianWinrate),
+            winrate: Math.round(rawWinrate * 100),
           }
         })
         .sort((a, b) => b.games - a.games)

@@ -28,6 +28,7 @@ const { results } = useSimpleSearch(
       <SelectedChampions :pocket="pocket" />
       <Input
         v-model="searchQuery"
+        aria-label="Search champions"
         placeholder="Search champions..."
         class="max-w-100 border-b4/60 w-100"
         type="text"
@@ -43,11 +44,11 @@ const { results } = useSimpleSearch(
           (r) => !pocket.champions.includes(r.key),
         )"
         :key="champion.id"
-        :arrow="false"
         :tag="null"
+        for="pocket-champions"
+        :arrow="false"
         :offset="[-3, 5]"
-        :interactive="true"
-        theme="basic">
+        :interactive="true">
         <ChampionIcon
           :id="champion.id"
           :title="champion.name"
@@ -57,6 +58,7 @@ const { results } = useSimpleSearch(
             class="scale-114 pointer-events-none" />
           <input
             v-model="pocket.champions"
+            :aria-label="champion.name"
             type="checkbox"
             :value="champion.key"
             class="peer hidden" />

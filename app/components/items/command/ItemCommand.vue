@@ -10,7 +10,6 @@ const props = defineProps<{
 
 const emit = defineEmits(['update:open', 'update:set'])
 
-const is = useItemStore()
 const isOpen = ref(false)
 
 watchEffect(() => {
@@ -30,7 +29,7 @@ const { filtered, filters, setFilter } = useItemFilter()
     v-model:open="isOpen"
     @click.stop.prevent>
     <ItemDisplayTrigger
-      v-if="props.type == 'image'"
+      v-if="props.type === 'image'"
       :item-id="itemId" />
 
     <CustomPopoverContent
@@ -43,7 +42,7 @@ const { filtered, filters, setFilter } = useItemFilter()
       "
       align="start"
       :side-offset="props.sideOffset"
-      @open-auto-focui.prevent>
+      @open-auto-focus.prevent>
       <ItemSearch
         placeholder="Type or click a suggestion"
         input-class=" text-nc"
@@ -57,7 +56,7 @@ const { filtered, filters, setFilter } = useItemFilter()
         <TransitionExpand>
           <div
             v-if="
-              filters.rank == '' && !filters.stats.length && !filters.query
+              filters.rank === '' && !filters.stats.length && !filters.query
             ">
             <LazyItemCommandTypes />
 
@@ -71,7 +70,7 @@ const { filtered, filters, setFilter } = useItemFilter()
           tag="div"
           class="w-full justify-center flex">
           <div
-            v-if="filters.rank != '' || filters.stats.length || filters.query"
+            v-if="filters.rank !== '' || filters.stats.length || filters.query"
             class="!flex flex-wrap justify-center gap-1.5 px-4 py-4 z-0">
             <LazyCalculatorFilteredItems
               class="!size-15 z-0"

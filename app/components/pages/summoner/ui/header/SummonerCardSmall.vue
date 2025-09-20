@@ -1,7 +1,5 @@
 <script lang="ts" setup>
-const as = useAccountStore()
-const ss = useSummonerStore()
-const summoner = computed(() => ss.getSummoner(as.account?.puuid))
+const summoner = computed(() => ss().getSummoner(as().account?.puuid))
 </script>
 
 <template>

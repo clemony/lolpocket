@@ -1,9 +1,8 @@
 <script setup lang="ts">
-const { summoner, class: className } = defineProps<{
+const { class: className, summoner } = defineProps<{
   summoner: Summoner
   class?: HTMLAttributes['class']
 }>()
-const ms = useMatchStore()
 
 const state = inject<PlayerData>(SummonerKey)!
 const roleStats = await useMatchRoles(
@@ -21,17 +20,17 @@ const roleModel = computed({
   <div class="w-full">
     <div class="flex items-center mb-2 -ml-1">
       <label
-        :class="{ 'pointer-events-none': ms.filter.role == 'ALL' }"
+        :class="{ 'pointer-events-none': ms().filter.role === 'ALL' }"
         class="btn btn-sm gap-2 font-medium rounded-lg px-2.5 place-self-center text-sm btn-ghost"
         @click="state.clearFilters()">
         {{
-          ms.filter.role != "ALL"
-            ? roleStats.find((r) => r.role == ms.filter.role).name
+          ms().filter.role !== "ALL"
+            ? roleStats.find((r) => r.role === ms().filter.role).name
             : "Position"
         }}
 
         <icon
-          v-if="ms.filter.role != 'ALL'"
+          v-if="ms().filter.role !== 'ALL'"
           name="x-sm"
           class="shrink-0 -mt-px" />
       </label>
@@ -46,7 +45,7 @@ const roleModel = computed({
           v-for="role in roleStats"
           :key="role.role">
           <label
-            v-if="ms.filter.role == 'ALL' || ms.filter.role == role.role"
+            v-if="ms().filter.role === 'ALL' || ms().filter.role === role.role"
             v-tippy="{
               content: `${role.name} - ${role.games} game${role.games > 1 ? 's' : ''}`,
             }"
@@ -54,12 +53,12 @@ const roleModel = computed({
             :class="
               cn({
                 'bgneutral borderneutral shadowneutral/20 shadow-sm order-2  ':
-                  role.role == ms.filter.role,
+                  role.role === ms().filter.role,
                 'border-b3/80 btn  size-14  mr-0 btn-square': role.games,
               })
             ">
             <input
-              v-model="ms.filter.role"
+              v-model="ms().filter.role"
               class="peer hidden absolute"
               type="radio"
               :disabled="!role.games"
@@ -69,7 +68,7 @@ const roleModel = computed({
             <component
               :is="`i-roles-${role.role.toLowerCase().replace(' ', '-').replace('utility', 'support')}`"
               class="h-5 w-auto dst shrink-0 peer-checked:text-nc"
-              :class="{ '!text-bc/80': role.name == 'ALL' }" />
+              :class="{ '!text-bc/80': role.name === 'ALL' }" />
           </label>
         </template>
       </transition-slide>

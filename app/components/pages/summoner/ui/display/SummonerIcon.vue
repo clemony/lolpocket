@@ -6,7 +6,7 @@ const props = defineProps<{
 }>()
 
 const icon = computed(() => {
-  if (props.iconId != null && props.iconId != undefined)
+  if (props.iconId !== null && props.iconId !== undefined)
     return getSummonerIcon(props.iconId)
   else if (as().account?.icon)
     return getSummonerIcon(as().account?.icon)
@@ -30,7 +30,7 @@ const icon = computed(() => {
       :class="
         cn('size-full [&_img]:scale-115', {
           '!size-6 place-self-center **:stroke-[1.7]':
-            icon == 'iconoir:plug-type-a',
+            icon === 'iconoir:plug-type-a',
         })
       " />
 

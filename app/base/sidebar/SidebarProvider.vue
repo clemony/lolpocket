@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import { useEventListener, useMediaQuery, useVModel } from '@vueuse/core'
-
-import { TooltipProvider } from 'reka-ui'
 import type { HTMLAttributes, Ref } from 'vue'
+import { useEventListener, useMediaQuery, useVModel } from '@vueuse/core'
+import { TooltipProvider } from 'reka-ui'
 import { computed, ref } from 'vue'
 import {
   provideSidebarContext,
@@ -70,13 +69,13 @@ useEventListener('keydown', (event: KeyboardEvent) => {
 const state = computed(() => (open.value ? 'expanded' : 'collapsed'))
 
 provideSidebarContext({
-  state,
-  open,
-  setOpen,
-  isMobile,
-  openMobile,
-  setOpenMobile,
   toggleSidebar,
+  isMobile,
+  open,
+  openMobile,
+  setOpen,
+  setOpenMobile,
+  state,
 })
 </script>
 

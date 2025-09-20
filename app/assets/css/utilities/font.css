@@ -1,5 +1,5 @@
 @import 'tailwindcss';
 
 @utility text-* {
-  font-size: --value([*])rem;
+  font-size: --value([*]) rem;
 }

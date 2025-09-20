@@ -12,13 +12,13 @@ const { name, id } = defineProps<{
     v-tippy="'Add Favorite'"
     class="rating cursor-pointer !pointer-events-auto rating-xs  group" @click.stop>
     <input
-      v-model="as.favoriteItems"
+      v-model= as().favoriteItems"
       type="checkbox"
       :value="id"
       name="favorite-item"
       :aria-label="`favorite ${name}`"
       class="mask mask-heart bg-nc"
-      :class="{ 'group-hover:opacity-40 dst  transition-all duration-300': !as.favoriteItems.includes(id) }" />
+      :class="{ 'group-hover:opacity-40 dst  transition-all duration-300': as().favoriteItems.includes(id) }" />
   </label> -->
     <a
       v-tippy="'Official Wiki'"

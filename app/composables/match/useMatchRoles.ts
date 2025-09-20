@@ -2,12 +2,12 @@
 const roleStats = useRoles(filteredMatches)
  */
 export interface RoleStats {
-  role: string
   name: string
-  games: number
-  wins: number
-  winrate: number
   bayesianWinrate: number
+  games: number
+  role: string
+  winrate: number
+  wins: number
 }
 
 export function useMatchRoles(
@@ -22,7 +22,7 @@ export function useMatchRoles(
     let allWins = 0
 
     for (const match of matches.value) {
-      const player = match.participants.find(p => p.puuid == puuid)
+      const player = match.participants.find(p => p.puuid === puuid)
       const role = player.teamPosition.toUpperCase()
       if (!roles.includes(role))
         continue
@@ -66,12 +66,12 @@ export function useMatchRoles(
       const name = formatDisplay(role)
 
       return {
-        role,
         name,
-        games,
-        wins,
-        winrate: games === 0 ? 0 : (wins / games) * 100,
         bayesianWinrate: ((wins + m * globalWinrate) / (games + m)) * 100,
+        games,
+        role,
+        winrate: games === 0 ? 0 : (wins / games) * 100,
+        wins,
       }
     })
   })

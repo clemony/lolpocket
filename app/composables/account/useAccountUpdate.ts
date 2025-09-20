@@ -16,25 +16,25 @@ export async function useAccountUpdate(
     return
 
   const account = {
-    puuid: resolve.puuid,
     name: resolve.name,
-    tag: resolve.tag,
-    level: resolve.level,
-    regionGroup: region,
-    region: resolve.region,
+    puuid: resolve.puuid,
     icon: resolve.profileIcon,
+    level: resolve.level,
+    region: resolve.region,
+    regionGroup: region,
+    tag: resolve.tag,
   }
 
   const session = await useSupabaseClient().auth.getSession()
 
   const post = await $fetch('api/supabase/updateUserAccount', {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${session?.data.session.access_token}`,
-    },
     body: {
       account,
     },
+    headers: {
+      Authorization: `Bearer ${session?.data.session.access_token}`,
+    },
+    method: 'POST',
   })
 
   return account

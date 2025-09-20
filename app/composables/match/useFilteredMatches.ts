@@ -11,10 +11,10 @@ export function useFilteredMatches(puuid: string, matches: MatchData[]) {
   const filtered = computed(() => {
     return matches.filter(match =>
       matchFilters(puuid, match, {
+        ally: ms().filter.ally ?? null,
+        champion: ms().filter.champion ?? null,
         patch: ms().filter.patch ?? null,
         queue: ms().filter.queue ?? null,
-        champion: ms().filter.champion ?? null,
-        ally: ms().filter.ally ?? null,
         role: ms().filter.role ?? null,
       })
     )
@@ -22,11 +22,11 @@ export function useFilteredMatches(puuid: string, matches: MatchData[]) {
   const filteredNoRole = computed(() => {
     return matches.filter(match =>
       matchFilters(puuid, match, {
+        ally: ms().filter.ally ?? null,
+        champion: ms().filter.champion ?? null,
+        ignoreRole: true,
         patch: ms().filter.patch ?? null,
         queue: ms().filter.queue ?? null,
-        champion: ms().filter.champion ?? null,
-        ally: ms().filter.ally ?? null,
-        ignoreRole: true,
       })
     )
   })
@@ -52,7 +52,7 @@ export function useFilteredMatches(puuid: string, matches: MatchData[]) {
       new Set(
         matches.map(p =>
           ix().champNameById(
-            p.participants.find(p => p.puuid == puuid).championId
+            p.participants.find(p => p.puuid === puuid).championId
           )
         )
       )
@@ -60,10 +60,10 @@ export function useFilteredMatches(puuid: string, matches: MatchData[]) {
   })
 
   return {
-    filteredMatches,
-    loading,
-    filtered,
-    filteredNoRole,
     championsPlayed,
+    filtered,
+    filteredMatches,
+    filteredNoRole,
+    loading,
   }
 }

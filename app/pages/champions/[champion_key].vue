@@ -16,7 +16,7 @@ const tabs = shallowRef<string>(null)
 
 const router = useRouter()
 const links = computed(
-  () => router.getRoutes().find(r => r.name == 'champion_key').children
+  () => router.getRoutes().find(r => r.name === 'champion_key').children
 ).value
 onMounted(() => {
   tabs.value = route.name.toString()
@@ -74,7 +74,7 @@ function navigate(path: string) {
           :class="
             cn(
               'group/tab min-w-22  max-w-40 grow has-checked:tab-active  tab ',
-              { 'tab-active ': tabs == item.name },
+              { 'tab-active ': tabs === item.name },
             )
           "
           @click="navigate(item.path)">

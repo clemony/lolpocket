@@ -1,135 +1,135 @@
 // mvpScoring.ts
 export interface PlayerStats {
-  matchId: string
   puuid: string
-  teamId: number
-  teamPosition: string
-  championId: number
-  win: boolean
-  kills: number
-  deaths: number
   assists: number
-  goldEarned: number
-  totalMinionsKilled: number
-  totalDamageDealtToChampions: number
-  effectiveHealAndShielding: number
-  totalDamageShieldedOnTeammates: number
-  totalHealsOnTeammates: number
-  damageSelfMitigated: number
-  totalDamageTaken: number
-  timeCCingOthers: number
-  visionScore: number
-  turretKills: number
-  dragonKills: number
-  objectivesStolen: number
   challenges: {
     killParticipation: number
     teamDamagePercentage: number
     damageTakenOnTeamPercentage: number
     saveAllyFromDeath: number
   }
+  championId: number
+  damageSelfMitigated: number
+  deaths: number
+  dragonKills: number
+  effectiveHealAndShielding: number
+  goldEarned: number
+  kills: number
+  matchId: string
+  objectivesStolen: number
+  teamId: number
+  teamPosition: string
+  timeCCingOthers: number
+  totalDamageDealtToChampions: number
+  totalDamageShieldedOnTeammates: number
+  totalDamageTaken: number
+  totalHealsOnTeammates: number
+  totalMinionsKilled: number
+  turretKills: number
+  visionScore: number
+  win: boolean
 }
 
 const roleWeights: Record<string, Record<string, number>> = {
-  TOP: {
-    kills: 10,
+  BOTTOM: {
+    assists: 5,
+    damageSelfMitigated: 0,
+    damageTakenOnTeamPercentage: 0,
     deathsInverse: 10,
-    assists: 10,
-    goldEarned: 8,
-    totalMinionsKilled: 10,
-    totalDamageDealtToChampions: 15,
-    effectiveHealAndShielding: 5,
-    damageSelfMitigated: 10,
-    totalDamageTaken: 8,
-    timeCCingOthers: 5,
-    visionScore: 5,
-    turretKills: 5,
     dragonKills: 2,
+    effectiveHealAndShielding: 0,
+    goldEarned: 15,
+    killParticipation: 6,
+    kills: 20,
     objectivesStolen: 0,
-    killParticipation: 5,
-    teamDamagePercentage: 5,
-    damageTakenOnTeamPercentage: 5,
     saveAllyFromDeath: 0,
+    teamDamagePercentage: 7,
+    timeCCingOthers: 5,
+    totalDamageDealtToChampions: 20,
+    totalDamageTaken: 0,
+    totalMinionsKilled: 15,
+    turretKills: 5,
+    visionScore: 3,
   },
   JUNGLE: {
-    kills: 10,
-    deathsInverse: 10,
     assists: 15,
-    goldEarned: 8,
-    totalMinionsKilled: 6,
-    totalDamageDealtToChampions: 10,
-    effectiveHealAndShielding: 5,
     damageSelfMitigated: 5,
-    totalDamageTaken: 5,
-    timeCCingOthers: 5,
-    visionScore: 5,
-    turretKills: 4,
-    dragonKills: 8,
-    objectivesStolen: 5,
-    killParticipation: 7,
-    teamDamagePercentage: 4,
     damageTakenOnTeamPercentage: 3,
+    deathsInverse: 10,
+    dragonKills: 8,
+    effectiveHealAndShielding: 5,
+    goldEarned: 8,
+    killParticipation: 7,
+    kills: 10,
+    objectivesStolen: 5,
     saveAllyFromDeath: 0,
+    teamDamagePercentage: 4,
+    timeCCingOthers: 5,
+    totalDamageDealtToChampions: 10,
+    totalDamageTaken: 5,
+    totalMinionsKilled: 6,
+    turretKills: 4,
+    visionScore: 5,
   },
   MIDDLE: {
-    kills: 15,
-    deathsInverse: 10,
     assists: 10,
-    goldEarned: 10,
-    totalMinionsKilled: 12,
-    totalDamageDealtToChampions: 20,
-    effectiveHealAndShielding: 0,
     damageSelfMitigated: 5,
-    totalDamageTaken: 5,
-    timeCCingOthers: 5,
-    visionScore: 5,
-    turretKills: 5,
-    dragonKills: 2,
-    objectivesStolen: 0,
-    killParticipation: 6,
-    teamDamagePercentage: 5,
     damageTakenOnTeamPercentage: 0,
-    saveAllyFromDeath: 0,
-  },
-  BOTTOM: {
-    kills: 20,
     deathsInverse: 10,
-    assists: 5,
-    goldEarned: 15,
-    totalMinionsKilled: 15,
-    totalDamageDealtToChampions: 20,
-    effectiveHealAndShielding: 0,
-    damageSelfMitigated: 0,
-    totalDamageTaken: 0,
-    timeCCingOthers: 5,
-    visionScore: 3,
-    turretKills: 5,
     dragonKills: 2,
-    objectivesStolen: 0,
+    effectiveHealAndShielding: 0,
+    goldEarned: 10,
     killParticipation: 6,
-    teamDamagePercentage: 7,
-    damageTakenOnTeamPercentage: 0,
+    kills: 15,
+    objectivesStolen: 0,
     saveAllyFromDeath: 0,
+    teamDamagePercentage: 5,
+    timeCCingOthers: 5,
+    totalDamageDealtToChampions: 20,
+    totalDamageTaken: 5,
+    totalMinionsKilled: 12,
+    turretKills: 5,
+    visionScore: 5,
+  },
+  TOP: {
+    assists: 10,
+    damageSelfMitigated: 10,
+    damageTakenOnTeamPercentage: 5,
+    deathsInverse: 10,
+    dragonKills: 2,
+    effectiveHealAndShielding: 5,
+    goldEarned: 8,
+    killParticipation: 5,
+    kills: 10,
+    objectivesStolen: 0,
+    saveAllyFromDeath: 0,
+    teamDamagePercentage: 5,
+    timeCCingOthers: 5,
+    totalDamageDealtToChampions: 15,
+    totalDamageTaken: 8,
+    totalMinionsKilled: 10,
+    turretKills: 5,
+    visionScore: 5,
   },
   UTILITY: {
-    kills: 5,
-    deathsInverse: 10,
     assists: 20,
-    goldEarned: 5,
-    totalMinionsKilled: 0,
-    totalDamageDealtToChampions: 10,
-    effectiveHealAndShielding: 20,
     damageSelfMitigated: 10,
-    totalDamageTaken: 10,
-    timeCCingOthers: 10,
-    visionScore: 10,
-    turretKills: 2,
-    dragonKills: 2,
-    objectivesStolen: 0,
-    killParticipation: 6,
-    teamDamagePercentage: 2,
     damageTakenOnTeamPercentage: 3,
+    deathsInverse: 10,
+    dragonKills: 2,
+    effectiveHealAndShielding: 20,
+    goldEarned: 5,
+    killParticipation: 6,
+    kills: 5,
+    objectivesStolen: 0,
     saveAllyFromDeath: 5,
+    teamDamagePercentage: 2,
+    timeCCingOthers: 10,
+    totalDamageDealtToChampions: 10,
+    totalDamageTaken: 10,
+    totalMinionsKilled: 0,
+    turretKills: 2,
+    visionScore: 10,
   },
 }
 

@@ -48,9 +48,9 @@ export function useSupabaseSync<
       = parsed.success ? parsed.output : (v.getDefaults(schema) as T)
 
     await $fetch(endpoint, {
-      method: 'POST',
-      headers: { Authorization: `Bearer ${session.value.access_token}` },
       body: getBody(user.value.id, validated),
+      headers: { Authorization: `Bearer ${session.value.access_token}` },
+      method: 'POST',
     })
 
     snapshotHash = currentHash

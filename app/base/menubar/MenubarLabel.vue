@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import type { HTMLAttributes } from 'vue'
-
 import type { MenubarLabelProps } from 'reka-ui'
+import type { HTMLAttributes } from 'vue'
 import { MenubarLabel } from 'reka-ui'
 
 const props = defineProps<

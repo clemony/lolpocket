@@ -1,55 +1,54 @@
 export const libraryLinks: LinkObject[] = [
   {
     name: 'Items',
-    link: '/library/items',
+    blurb: 'Search, sort, and filter all items in one spot.',
     icon: {
       name: 'lucide:sword',
       class: ['size-5.25 -scale-x-100', 'size-5.75 **:stroke-[1.5]'],
     },
     img: {
-      src: '/img/art/item-moonstone.png',
       class: 'scale-100',
+      src: '/img/art/item-moonstone.png',
     },
-    blurb: 'Search, sort, and filter all items in one spot.',
+    link: '/library/items',
   },
   {
     name: 'Champions',
-    link: '/library/champions',
+    blurb: 'Browse champions and an overview of their abilities.',
     icon: {
       name: 'i-lol-champ-circle',
       class: '!size-5.25 ',
     },
-
     img: {
-      src: '/img/art/morg.jpg',
       class: '',
+      src: '/img/art/morg.jpg',
     },
-    blurb: 'Browse champions and an overview of their abilities.',
+    link: '/library/champions',
   },
 
   {
     name: 'Runes',
-    link: '/library/runes',
+    blurb: 'A rune page that doesn\'t cost 6300 BE',
     icon: {
       name: 'i-lol-rune-circle',
       class: 'size-5.25  contrast-150',
     },
     img: {
-      src: '/img/art/inspiration.png',
       class: 'scale-105 ',
+      src: '/img/art/inspiration.png',
     },
-    blurb: 'A rune page that doesn\'t cost 6300 BE',
+    link: '/library/runes',
   },
   {
     name: 'Spellbook',
-    link: '/library/spellbook',
     icon: {
       name: 'book',
       class: '!size-5',
     },
     img: {
-      src: '/img/art/book.png',
       class: 'scale-100 ',
+      src: '/img/art/book.png',
     },
+    link: '/library/spellbook',
   },
 ]

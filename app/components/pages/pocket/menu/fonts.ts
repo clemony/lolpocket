@@ -1,63 +1,63 @@
 export const fonts = [
   {
-    display: 'Geist Sans',
     id: 'Geist Sans',
     cardClass: 'tracking-tighter',
+    display: 'Geist Sans',
   },
   {
-    display: 'Noto Serif ',
     id: 'Noto Serif KR Variable',
     cardClass: 'font-bold',
+    display: 'Noto Serif ',
   },
   {
-    display: 'Source Code Pro',
     id: 'Source Code Pro Variable',
     cardClass: '',
+    display: 'Source Code Pro',
   },
   {
-    display: 'Poppins',
     id: 'Poppins',
     cardClass: '',
+    display: 'Poppins',
   },
   {
-    display: 'Rubik Doodle',
     id: 'Rubik Doodle Shadow',
     cardClass: '',
+    display: 'Rubik Doodle',
   },
 
   {
-    display: 'La Belle Aurore',
     id: 'La Belle Aurore',
     cardClass: 'text-xxs3 mt-4',
+    display: 'La Belle Aurore',
   },
 
   {
-    display: 'Satisfy',
     id: 'Satisfy',
     cardClass: '',
+    display: 'Satisfy',
   },
 
   {
-    display: 'Comfortaa',
     id: 'Comfortaa Variable',
     cardClass: '',
+    display: 'Comfortaa',
   },
 
   {
-    display: 'Silkscreen',
     id: 'Silkscreen',
     cardClass: '',
+    display: 'Silkscreen',
   },
 
   {
-    display: 'Bellota',
     id: 'Bellota',
     cardClass: '',
+    display: 'Bellota',
   },
 
   {
-    display: 'Sansita Swashed',
     id: 'Sansita Swashed Variable',
     cardClass: '',
+    display: 'Sansita Swashed',
   },
 ]

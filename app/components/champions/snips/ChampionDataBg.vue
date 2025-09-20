@@ -3,9 +3,9 @@ import type { PrimitiveProps } from 'reka-ui'
 import { Primitive } from 'reka-ui'
 
 const {
+  name = 'none',
   as = 'div',
   class: className,
-  name = 'none',
   opacity = 0.35,
 } = defineProps<
   PrimitiveProps & {
@@ -68,7 +68,7 @@ const bg = [
     <span
       class="absolute top-0 left-0 size-full border border-transparent"
       :style="{
-        backgroundColor: `var(--color-${bg.find((p) => p.name == name).color})`,
+        backgroundColor: `var(--color-${bg.find((p) => p.name === name).color})`,
         opacity,
       }" />
 

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import type { RouteRecordRaw } from 'vue-router'
 
-const { summoner, links, childRoutes } = defineProps<{
+const { childRoutes, links, summoner } = defineProps<{
   summoner: Summoner
   links: any
   childRoutes: RouteRecordRaw[]

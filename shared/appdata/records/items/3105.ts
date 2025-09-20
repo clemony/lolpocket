@@ -1,7 +1,6 @@
 const item: Item = {
-  name: 'Aegis of the Legion',
   id: 3105,
-  rank: 'Epic',
+  name: 'Aegis of the Legion',
   buildsFrom: [
     {
       id: 1033,
@@ -46,24 +45,25 @@ const item: Item = {
       gold: 2600,
     },
   ],
-  specialRecipe: 0,
-  noEffects: true,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3105_tank_t2_aegisofthelegion.png',
-  simpleDescription: 'Grants Armor and Magic Resistance',
-  stats: {
-    armor: 25,
-    magicResistance: 25,
-    abilityHaste: 10,
-  },
+  maps: [11, 12, 21, 35],
+  noEffects: true,
+  rank: 'Epic',
+  removed: false,
   shop: {
     prices: {
-      total: 1100,
       combined: 400,
       sell: 440,
+      total: 1100,
     },
     tags: ['TANK', 'SUPPORT'],
   },
-  maps: [11, 12, 21, 35],
+  simpleDescription: 'Grants Armor and Magic Resistance',
+  specialRecipe: 0,
+  stats: {
+    abilityHaste: 10,
+    armor: 25,
+    magicResistance: 25,
+  },
 }
 export default item

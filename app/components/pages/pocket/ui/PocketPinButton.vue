@@ -10,7 +10,7 @@ const pocket = computed(() => p)
 <template>
   <Label
     v-if="pocket"
-    v-tippy="pocket.location?.pinned == true ? 'Unpin' : 'Pin'"
+    v-tippy="pocket.location?.pinned === true ? 'Unpin' : 'Pin'"
     variant="ghost"
     class="btn-square hover:!bg-b3/80 size-10 group/pin *:mt-px *:size-4.25 *:dst *:absolute">
     <input

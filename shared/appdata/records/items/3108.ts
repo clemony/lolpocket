@@ -1,7 +1,7 @@
 const item: Item = {
-  name: 'Fiendish Codex',
   id: 3108,
-  rank: 'Epic',
+  name: 'Fiendish Codex',
+  nicknames: ['book'],
   buildsFrom: [
     {
       id: 1052,
@@ -91,24 +91,24 @@ const item: Item = {
       gold: 2900,
     },
   ],
-  specialRecipe: 0,
-  noEffects: true,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3108_mage_t2_fiendishcodex.png',
-  simpleDescription: 'Increases Ability Power and Cooldown Reduction',
-  nicknames: ['book'],
-  stats: {
-    abilityPower: 25,
-    abilityHaste: 10,
-  },
+  maps: [11, 12, 21, 35],
+  noEffects: true,
+  rank: 'Epic',
+  removed: false,
   shop: {
     prices: {
-      total: 850,
       combined: 200,
       sell: 340,
+      total: 850,
     },
     tags: ['MAGE'],
   },
-  maps: [11, 12, 21, 35],
+  simpleDescription: 'Increases Ability Power and Cooldown Reduction',
+  specialRecipe: 0,
+  stats: {
+    abilityHaste: 10,
+    abilityPower: 25,
+  },
 }
 export default item

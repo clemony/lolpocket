@@ -8,19 +8,21 @@ import {
   toggleRead,
   trashAllRead,
 } from './inbox-management'
-
-const as = useAccountStore()
 </script>
 
 <template>
-  <DropdownMenuLabel class="justify-between w-full flex">
+  <DropdownMenuLabel
+    for="inbox-switch"
+    class="justify-between w-full flex">
     Inbox
-    <label class="flex gap-2 text-xs">
+    <span
+      class="flex gap-2 text-xs">
       Unread
       <Switch
         v-model:model-value="inboxUnreadFilter"
+        name="inbox-switch"
         class="scale-90" />
-    </label>
+    </span>
   </DropdownMenuLabel>
 
   <DropdownMenuSeparator />
@@ -43,7 +45,7 @@ const as = useAccountStore()
   <DropdownMenuLabel>Tools</DropdownMenuLabel>
   <DropdownMenuSeparator />
 
-  <DropdownMenuItem @click="as.account.inbox.messages.push(testMessage)">
+  <DropdownMenuItem @click="as().account.inbox.messages.push(testMessage)">
     <icon
       name="hugeicons:test-tube-01"
       class="size-4.5" />

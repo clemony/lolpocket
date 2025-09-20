@@ -1,7 +1,7 @@
 const item: Item = {
-  name: 'Sapphire Crystal',
   id: 1027,
-  rank: 'Basic',
+  name: 'Sapphire Crystal',
+  nicknames: ['blue'],
   buildsInto: [
     {
       id: 3803,
@@ -19,23 +19,23 @@ const item: Item = {
       gold: 1200,
     },
   ],
-  specialRecipe: 0,
-  noEffects: true,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1027_base_t1_saphirecrystal.png',
-  simpleDescription: 'Increases Mana',
-  nicknames: ['blue'],
-  stats: {
-    mana: 300,
-  },
+  maps: [11, 12, 21, 35],
+  noEffects: true,
+  rank: 'Basic',
+  removed: false,
   shop: {
     prices: {
-      total: 300,
       combined: 300,
       sell: 120,
+      total: 300,
     },
     tags: ['MAGE', 'TANK'],
   },
-  maps: [11, 12, 21, 35],
+  simpleDescription: 'Increases Mana',
+  specialRecipe: 0,
+  stats: {
+    mana: 300,
+  },
 }
 export default item

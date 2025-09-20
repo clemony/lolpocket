@@ -116,9 +116,9 @@ export const itemStatRecord: Record<number, StatRecord> = {
     attackDamage: 15,
   },
   2020: {
+    abilityHaste: 10,
     attackDamage: 25,
     lethality: 5,
-    abilityHaste: 10,
   },
   2021: {
     attackDamage: 15,
@@ -128,24 +128,24 @@ export const itemStatRecord: Record<number, StatRecord> = {
     abilityHaste: 5,
   },
   2049: {
+    abilityHaste: 20,
     abilityPower: 20,
     healAndShieldPower: 15,
-    abilityHaste: 20,
   },
   2050: {
+    abilityHaste: 15,
     abilityPower: 35,
     health: 300,
-    abilityHaste: 15,
   },
   2051: {
     health: 150,
     healthRegen: 20,
   },
   2065: {
+    abilityHaste: 15,
     abilityPower: 50,
     manaRegen: 125,
     percentMovespeed: 4,
-    abilityHaste: 15,
   },
   2420: {
     abilityPower: 40,
@@ -163,15 +163,15 @@ export const itemStatRecord: Record<number, StatRecord> = {
     health: 550,
   },
   2502: {
+    abilityHaste: 10,
     armor: 25,
     health: 400,
     magicResistance: 25,
-    abilityHaste: 10,
   },
   2503: {
+    abilityHaste: 20,
     abilityPower: 80,
     mana: 600,
-    abilityHaste: 20,
   },
   2504: {
     health: 400,
@@ -187,14 +187,14 @@ export const itemStatRecord: Record<number, StatRecord> = {
     percentMovespeed: 4,
   },
   3003: {
+    abilityHaste: 25,
     abilityPower: 70,
     mana: 600,
-    abilityHaste: 25,
   },
   3004: {
+    abilityHaste: 15,
     attackDamage: 35,
     mana: 500,
-    abilityHaste: 15,
   },
   3006: {
     attackSpeed: 25,
@@ -214,9 +214,9 @@ export const itemStatRecord: Record<number, StatRecord> = {
     flatMovespeed: 45,
   },
   3024: {
+    abilityHaste: 10,
     armor: 25,
     mana: 300,
-    abilityHaste: 10,
   },
   3026: {
     armor: 45,
@@ -246,18 +246,18 @@ export const itemStatRecord: Record<number, StatRecord> = {
     criticalStrikeChance: 25,
   },
   3040: {
+    abilityHaste: 25,
     abilityPower: 70,
     mana: 1000,
-    abilityHaste: 25,
   },
   3041: {
     abilityPower: 20,
     health: 100,
   },
   3042: {
+    abilityHaste: 15,
     attackDamage: 35,
     mana: 860,
-    abilityHaste: 15,
   },
   3044: {
     attackDamage: 15,
@@ -273,10 +273,10 @@ export const itemStatRecord: Record<number, StatRecord> = {
     flatMovespeed: 45,
   },
   3050: {
+    abilityHaste: 10,
     armor: 25,
     health: 300,
     magicResistance: 25,
-    abilityHaste: 10,
   },
   3051: {
     attackDamage: 20,
@@ -290,31 +290,31 @@ export const itemStatRecord: Record<number, StatRecord> = {
     abilityHaste: 10,
   },
   3065: {
+    abilityHaste: 10,
     health: 400,
     healthRegen: 100,
     magicResistance: 50,
-    abilityHaste: 10,
   },
   3066: {
     health: 200,
     percentMovespeed: 4,
   },
   3067: {
-    health: 200,
     abilityHaste: 10,
+    health: 200,
   },
   3068: {
+    abilityHaste: 10,
     armor: 50,
     health: 350,
-    abilityHaste: 10,
   },
   3070: {
     mana: 240,
   },
   3071: {
+    abilityHaste: 20,
     attackDamage: 40,
     health: 400,
-    abilityHaste: 20,
   },
   3072: {
     attackDamage: 80,
@@ -326,9 +326,9 @@ export const itemStatRecord: Record<number, StatRecord> = {
     health: 450,
   },
   3074: {
+    abilityHaste: 15,
     attackDamage: 65,
     lifesteal: 12,
-    abilityHaste: 15,
   },
   3075: {
     armor: 75,
@@ -341,10 +341,10 @@ export const itemStatRecord: Record<number, StatRecord> = {
     attackDamage: 20,
   },
   3078: {
+    abilityHaste: 15,
     attackDamage: 36,
     attackSpeed: 30,
     health: 333,
-    abilityHaste: 15,
   },
   3082: {
     armor: 40,
@@ -386,43 +386,43 @@ export const itemStatRecord: Record<number, StatRecord> = {
     percentMovespeed: 4,
   },
   3100: {
+    abilityHaste: 10,
     abilityPower: 100,
     percentMovespeed: 4,
-    abilityHaste: 10,
   },
   3102: {
     abilityPower: 105,
     magicResistance: 40,
   },
   3105: {
+    abilityHaste: 10,
     armor: 25,
     magicResistance: 25,
-    abilityHaste: 10,
   },
   3107: {
+    abilityHaste: 15,
     healAndShieldPower: 10,
     health: 200,
     manaRegen: 100,
-    abilityHaste: 15,
   },
   3108: {
-    abilityPower: 25,
     abilityHaste: 10,
+    abilityPower: 25,
   },
   3109: {
+    abilityHaste: 10,
     armor: 40,
     health: 200,
     healthRegen: 100,
-    abilityHaste: 10,
   },
   3110: {
+    abilityHaste: 20,
     armor: 75,
     mana: 400,
-    abilityHaste: 20,
   },
   3111: {
-    magicResistance: 20,
     flatMovespeed: 45,
+    magicResistance: 20,
     tenacity: 30,
   },
   3112: {
@@ -438,28 +438,28 @@ export const itemStatRecord: Record<number, StatRecord> = {
     manaRegen: 50,
   },
   3115: {
+    abilityHaste: 15,
     abilityPower: 80,
     attackSpeed: 50,
-    abilityHaste: 15,
   },
   3116: {
     abilityPower: 65,
     health: 400,
   },
   3118: {
+    abilityHaste: 15,
     abilityPower: 90,
     mana: 600,
-    abilityHaste: 15,
   },
   3119: {
+    abilityHaste: 15,
     health: 550,
     mana: 500,
-    abilityHaste: 15,
   },
   3121: {
+    abilityHaste: 15,
     health: 550,
     mana: 860,
-    abilityHaste: 15,
   },
   3123: {
     attackDamage: 15,
@@ -470,8 +470,8 @@ export const itemStatRecord: Record<number, StatRecord> = {
     attackSpeed: 25,
   },
   3133: {
-    attackDamage: 20,
     abilityHaste: 10,
+    attackDamage: 20,
   },
   3134: {
     attackDamage: 20,
@@ -482,9 +482,9 @@ export const itemStatRecord: Record<number, StatRecord> = {
     percentMagicPenetration: 40,
   },
   3137: {
+    abilityHaste: 20,
     abilityPower: 75,
     percentMagicPenetration: 30,
-    abilityHaste: 20,
   },
   3139: {
     attackDamage: 40,
@@ -514,9 +514,9 @@ export const itemStatRecord: Record<number, StatRecord> = {
     health: 200,
   },
   3152: {
+    abilityHaste: 20,
     abilityPower: 70,
     health: 300,
-    abilityHaste: 20,
   },
   3153: {
     attackDamage: 40,
@@ -528,43 +528,43 @@ export const itemStatRecord: Record<number, StatRecord> = {
     magicResistance: 25,
   },
   3156: {
+    abilityHaste: 15,
     attackDamage: 60,
     magicResistance: 40,
-    abilityHaste: 15,
   },
   3157: {
     abilityPower: 105,
     armor: 50,
   },
   3158: {
-    flatMovespeed: 45,
     abilityHaste: 10,
+    flatMovespeed: 45,
   },
   3161: {
     attackDamage: 45,
     health: 450,
   },
   3165: {
+    abilityHaste: 15,
     abilityPower: 75,
     health: 350,
-    abilityHaste: 15,
   },
   3170: {
     flatMovespeed: 65,
   },
   3171: {
-    flatMovespeed: 50,
     abilityHaste: 25,
+    flatMovespeed: 50,
   },
   3172: {
+    abilityHaste: 30,
     attackSpeed: 50,
     percentMovespeed: 10,
-    abilityHaste: 30,
     tenacity: 20,
   },
   3173: {
-    magicResistance: 35,
     flatMovespeed: 50,
+    magicResistance: 35,
     tenacity: 30,
   },
   3174: {
@@ -579,14 +579,14 @@ export const itemStatRecord: Record<number, StatRecord> = {
     flatMovespeed: 55,
   },
   3177: {
+    abilityHaste: 15,
     attackDamage: 30,
     health: 150,
-    abilityHaste: 15,
   },
   3179: {
+    abilityHaste: 10,
     attackDamage: 55,
     lethality: 15,
-    abilityHaste: 10,
   },
   3181: {
     attackDamage: 40,
@@ -599,10 +599,10 @@ export const itemStatRecord: Record<number, StatRecord> = {
     lifesteal: 5,
   },
   3190: {
+    abilityHaste: 10,
     armor: 25,
     health: 200,
     magicResistance: 25,
-    abilityHaste: 10,
   },
   3211: {
     health: 200,
@@ -610,19 +610,19 @@ export const itemStatRecord: Record<number, StatRecord> = {
     magicResistance: 35,
   },
   3222: {
+    abilityHaste: 15,
     healAndShieldPower: 12,
     health: 250,
     manaRegen: 100,
-    abilityHaste: 15,
   },
   3302: {
     attackDamage: 30,
     attackSpeed: 35,
   },
   3430: {
+    abilityHaste: 15,
     abilityPower: 50,
     criticalStrikeChance: 25,
-    abilityHaste: 15,
   },
   3504: {
     abilityPower: 45,
@@ -631,9 +631,9 @@ export const itemStatRecord: Record<number, StatRecord> = {
     percentMovespeed: 4,
   },
   3508: {
+    abilityHaste: 15,
     attackDamage: 60,
     criticalStrikeChance: 25,
-    abilityHaste: 15,
   },
   3742: {
     armor: 55,
@@ -649,9 +649,9 @@ export const itemStatRecord: Record<number, StatRecord> = {
     healthRegen: 100,
   },
   3802: {
+    abilityHaste: 10,
     abilityPower: 40,
     mana: 300,
-    abilityHaste: 10,
   },
   3803: {
     health: 350,
@@ -719,15 +719,15 @@ export const itemStatRecord: Record<number, StatRecord> = {
     percentMovespeed: 4,
   },
   4005: {
+    abilityHaste: 20,
     abilityPower: 60,
     manaRegen: 125,
-    abilityHaste: 20,
   },
   4011: {
+    abilityHaste: 15,
     abilityPower: 45,
     healAndShieldPower: 12,
     health: 200,
-    abilityHaste: 15,
   },
   4015: {
     abilityPower: 60,
@@ -736,9 +736,9 @@ export const itemStatRecord: Record<number, StatRecord> = {
     percentMovespeed: 5,
   },
   4016: {
+    abilityHaste: 25,
     abilityPower: 50,
     healAndShieldPower: 25,
-    abilityHaste: 25,
   },
   4017: {
     attackDamage: 35,
@@ -750,14 +750,14 @@ export const itemStatRecord: Record<number, StatRecord> = {
     percentMovespeed: 4,
   },
   4628: {
-    abilityPower: 115,
     abilityHaste: 25,
+    abilityPower: 115,
   },
   4629: {
+    abilityHaste: 25,
     abilityPower: 70,
     health: 350,
     percentMovespeed: 4,
-    abilityHaste: 25,
   },
   4630: {
     abilityPower: 25,
@@ -768,26 +768,26 @@ export const itemStatRecord: Record<number, StatRecord> = {
     magicResistance: 25,
   },
   4633: {
+    abilityHaste: 15,
     abilityPower: 70,
     health: 350,
-    abilityHaste: 15,
   },
   4638: {
+    abilityHaste: 10,
     armor: 10,
     health: 150,
     magicResistance: 15,
-    abilityHaste: 10,
   },
   4642: {
+    abilityHaste: 10,
     abilityPower: 20,
     manaRegen: 100,
-    abilityHaste: 10,
   },
   4643: {
+    abilityHaste: 20,
     armor: 25,
     health: 250,
     magicResistance: 30,
-    abilityHaste: 20,
   },
   4645: {
     abilityPower: 110,
@@ -799,37 +799,37 @@ export const itemStatRecord: Record<number, StatRecord> = {
     percentMovespeed: 6,
   },
   6333: {
+    abilityHaste: 15,
     armor: 50,
     attackDamage: 60,
-    abilityHaste: 15,
   },
   6609: {
+    abilityHaste: 15,
     attackDamage: 45,
     health: 450,
-    abilityHaste: 15,
   },
   6610: {
+    abilityHaste: 10,
     attackDamage: 40,
     health: 400,
-    abilityHaste: 10,
   },
   6616: {
+    abilityHaste: 15,
     abilityPower: 35,
     healAndShieldPower: 10,
     manaRegen: 125,
-    abilityHaste: 15,
   },
   6617: {
+    abilityHaste: 20,
     abilityPower: 25,
     health: 200,
     manaRegen: 125,
-    abilityHaste: 20,
   },
   6620: {
+    abilityHaste: 20,
     abilityPower: 35,
     health: 200,
     manaRegen: 125,
-    abilityHaste: 20,
   },
   6621: {
     abilityPower: 45,
@@ -846,9 +846,9 @@ export const itemStatRecord: Record<number, StatRecord> = {
     health: 300,
   },
   6655: {
+    abilityHaste: 10,
     abilityPower: 100,
     mana: 600,
-    abilityHaste: 10,
   },
   6657: {
     abilityPower: 45,
@@ -856,19 +856,19 @@ export const itemStatRecord: Record<number, StatRecord> = {
     mana: 500,
   },
   6660: {
-    health: 150,
     abilityHaste: 5,
+    health: 150,
   },
   6662: {
+    abilityHaste: 15,
     armor: 50,
     health: 300,
-    abilityHaste: 15,
   },
   6664: {
+    abilityHaste: 10,
     health: 400,
     healthRegen: 100,
     magicResistance: 40,
-    abilityHaste: 10,
   },
   6665: {
     armor: 45,
@@ -903,51 +903,51 @@ export const itemStatRecord: Record<number, StatRecord> = {
     percentMovespeed: 4,
   },
   6692: {
-    attackDamage: 60,
     abilityHaste: 15,
+    attackDamage: 60,
   },
   6694: {
+    abilityHaste: 15,
     armorPenetration: 35,
     attackDamage: 45,
-    abilityHaste: 15,
   },
   6695: {
     attackDamage: 55,
     lethality: 15,
   },
   6696: {
+    abilityHaste: 20,
     attackDamage: 55,
     lethality: 18,
-    abilityHaste: 20,
   },
   6697: {
+    abilityHaste: 10,
     attackDamage: 60,
     lethality: 18,
-    abilityHaste: 10,
   },
   6698: {
+    abilityHaste: 10,
     attackDamage: 60,
     lethality: 18,
-    abilityHaste: 10,
   },
   6699: {
+    abilityHaste: 10,
     attackDamage: 55,
     lethality: 18,
-    abilityHaste: 10,
   },
   6701: {
     attackDamage: 55,
     lethality: 18,
   },
   8010: {
+    abilityHaste: 15,
     abilityPower: 65,
     health: 400,
-    abilityHaste: 15,
   },
   8020: {
+    abilityHaste: 15,
     health: 350,
     magicResistance: 45,
-    abilityHaste: 15,
   },
   223005: {
     flatMovespeed: 70,
@@ -967,9 +967,9 @@ export const itemStatRecord: Record<number, StatRecord> = {
     omnivamp: 15,
   },
   223185: {
+    abilityHaste: 10,
     attackDamage: 25,
     lethality: 11,
-    abilityHaste: 10,
   },
   224004: {
     attackDamage: 50,
@@ -977,6 +977,7 @@ export const itemStatRecord: Record<number, StatRecord> = {
     percentMovespeed: 4,
   },
   224403: {
+    abilityHaste: 20,
     abilityPower: 125,
     armor: 40,
     attackDamage: 90,
@@ -989,21 +990,20 @@ export const itemStatRecord: Record<number, StatRecord> = {
     mana: 350,
     manaRegen: 200,
     percentMovespeed: 10,
-    abilityHaste: 20,
   },
   226630: {
+    abilityHaste: 20,
     attackDamage: 55,
     health: 400,
-    abilityHaste: 20,
   },
   228001: {
-    health: 650,
     abilityHaste: 20,
+    health: 650,
   },
   228002: {
+    abilityHaste: 20,
     abilityPower: 300,
     armor: 50,
-    abilityHaste: 20,
   },
   443054: {
     armor: 55,
@@ -1027,19 +1027,19 @@ export const itemStatRecord: Record<number, StatRecord> = {
     criticalStrikeChance: 50,
   },
   443061: {
+    abilityHaste: 30,
     criticalStrikeChance: 25,
     health: 900,
-    abilityHaste: 30,
   },
   443062: {
+    abilityHaste: 20,
     abilityPower: 80,
     healAndShieldPower: 15,
-    abilityHaste: 20,
   },
   443063: {
+    abilityHaste: 25,
     armor: 50,
     magicResistance: 50,
-    abilityHaste: 25,
   },
   443069: {
     attackDamage: 45,
@@ -1058,36 +1058,36 @@ export const itemStatRecord: Record<number, StatRecord> = {
     percentMovespeed: 10,
   },
   443193: {
+    abilityHaste: 15,
     armor: 65,
     magicResistance: 65,
     percentMovespeed: 10,
-    abilityHaste: 15,
   },
   444636: {
+    abilityHaste: 25,
     abilityPower: 90,
     health: 300,
-    abilityHaste: 25,
   },
   444637: {
     abilityPower: 80,
     health: 700,
   },
   444644: {
+    abilityHaste: 25,
     abilityPower: 85,
     health: 300,
     mana: 600,
-    abilityHaste: 25,
   },
   446632: {
+    abilityHaste: 20,
     attackDamage: 55,
     health: 350,
-    abilityHaste: 20,
   },
   446656: {
+    abilityHaste: 25,
     abilityPower: 100,
     health: 250,
     mana: 600,
-    abilityHaste: 25,
   },
   446667: {
     armor: 35,
@@ -1102,23 +1102,23 @@ export const itemStatRecord: Record<number, StatRecord> = {
     percentMovespeed: 12,
   },
   446691: {
+    abilityHaste: 20,
     attackDamage: 50,
     lethality: 20,
-    abilityHaste: 20,
   },
   446693: {
+    abilityHaste: 20,
     attackDamage: 55,
     lethality: 22,
-    abilityHaste: 20,
   },
   447100: {
     attackSpeed: 60,
     percentMovespeed: 12,
   },
   447101: {
+    abilityHaste: 40,
     attackSpeed: 70,
     percentMovespeed: 8,
-    abilityHaste: 40,
   },
   447102: {
     abilityPower: 80,
@@ -1126,29 +1126,29 @@ export const itemStatRecord: Record<number, StatRecord> = {
     health: 300,
   },
   447103: {
-    attackDamage: 60,
     abilityHaste: 30,
+    attackDamage: 60,
     omnivamp: 15,
   },
   447104: {
+    abilityHaste: 20,
     abilityPower: 70,
     health: 200,
-    abilityHaste: 20,
   },
   447105: {
+    abilityHaste: 30,
     abilityPower: 70,
     healAndShieldPower: 18,
     manaRegen: 125,
-    abilityHaste: 30,
   },
   447107: {
     attackSpeed: 50,
     percentMovespeed: 12,
   },
   447108: {
+    abilityHaste: 20,
     abilityPower: 80,
     percentMovespeed: 8,
-    abilityHaste: 20,
   },
   447109: {
     abilityPower: 80,
@@ -1161,14 +1161,14 @@ export const itemStatRecord: Record<number, StatRecord> = {
     tenacity: 30,
   },
   447112: {
-    health: 500,
     abilityHaste: 20,
+    health: 500,
   },
   447113: {
+    abilityHaste: 20,
     abilityPower: 90,
     flatMagicPenetration: 12,
     mana: 600,
-    abilityHaste: 20,
   },
   447114: {
     armor: 35,
@@ -1181,12 +1181,12 @@ export const itemStatRecord: Record<number, StatRecord> = {
     percentMovespeed: 8,
   },
   447116: {
-    health: 400,
     abilityHaste: 30,
+    health: 400,
   },
   447118: {
-    health: 400,
     abilityHaste: 15,
+    health: 400,
   },
   447119: {
     armor: 30,
@@ -1203,13 +1203,13 @@ export const itemStatRecord: Record<number, StatRecord> = {
     attackDamage: 70,
   },
   447122: {
-    health: 900,
     abilityHaste: 25,
+    health: 900,
   },
   447123: {
+    abilityHaste: 40,
     attackSpeed: 30,
     healAndShieldPower: 15,
     manaRegen: 150,
-    abilityHaste: 40,
   },
 }

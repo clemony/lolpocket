@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const {
-  runes,
   pocket,
+  runes,
   set: s,
 } = defineProps<{
   runes: RuneMin[]
@@ -37,20 +37,20 @@ const gridCols = computed(() => `grid-cols-${runes.length ?? 3}`)
         :class="
           cn(
             'rounded-full opacity-75  hover:opacity-100 hover:grayscale-0  place-self-center  group/r border-transparent relative cursor-pointer tldr-30  grid place-items-center shrink-0 size-22 aspect-square',
-            { 'opacity-100  grayscale-0': set.keystone == rune.id },
+            { 'opacity-100  grayscale-0': set.keystone === rune.id },
           )
         ">
         <Img
           :img="`/img/runes/${set.primary.path}/${rune.id}.webp`"
           :alt="rune.name"
           class="absolute drop-shadow-sm drop-shadow-black/40 pointer-events-none opacity-0 group-hover/r:opacity-90 duration-400 transition-all shrink-0 h-19 w-auto"
-          :class="{ 'opacity-100 ': set.keystone == rune.id }" />
+          :class="{ 'opacity-100 ': set.keystone === rune.id }" />
 
         <Img
           :img="`/img/runes/grayscale/${rune.id}.webp`"
           :alt="rune.name"
           class="h-19 w-auto pointer-events-none drop-shadow-sm shrink-0 absolute contrast-150 brightness-90 opacity-100 group-hover/r:opacity-0 duration-400 transition-all"
-          :class="{ 'opacity-0': set.keystone == rune.id }" />
+          :class="{ 'opacity-0': set.keystone === rune.id }" />
       </IndicatorTabsTrigger>
 
       <TabIndicator

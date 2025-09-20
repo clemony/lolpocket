@@ -3,7 +3,7 @@ defineOptions({
   inheritAttrs: false,
 })
 
-const { match, isOpen } = defineProps<{
+const { isOpen, match } = defineProps<{
   match: MatchData
   player: Player
   isOpen: boolean
@@ -41,7 +41,7 @@ const modelValue = ref<string | number>('Scoreboard')
 
         <TabsContent value="Badges">
           <LazyMatchBadgesEarned
-            v-if="modelValue == 'Badges'"
+            v-if="modelValue === 'Badges'"
             :match="match" />
         </TabsContent>
 
@@ -49,7 +49,7 @@ const modelValue = ref<string | number>('Scoreboard')
           value="Data"
           class="">
           <LazyMatchDataTable
-            v-if="modelValue == 'Data'"
+            v-if="modelValue === 'Data'"
             :match="match" />
         </TabsContent>
       </Tabs>

@@ -11,8 +11,8 @@ const pocket = ref(props.pocket)
 /* const selectedSet = ref<RuneSet>(props.pocket.runes.sets[0])
 
 const secondary = computed(() => {
-  const a = Object.values(selectedSet.value.secondary.runes).filter(r => r != null || undefined)
-  return a.filter(r => r.name != 'empty')
+  const a = Object.values(selectedSet.value.secondary.runes).filter(r => r !== null || undefined)
+  return a.filter(r => r.name !== 'empty')
 })
  */
 const primaryColor = computedAsync(() => {})
@@ -29,7 +29,7 @@ const primaryColor = computedAsync(() => {})
           <div class="from-b1/90 to-b1/40 grid place-items-center rounded-full bg-gradient-to-br size-full backdrop-blur-md overflow-hidden">
             <div class="p-2 ">
               <img
-                :src="selectedSet.primary.runes[0].name == 'empty' ? '/img/runes/blankRune.webp' : `/img/runes/${selectedSet.primary.path}/${selectedSet.primary.runes[0].name.replace(/\s/g, '')}.webp`"
+                :src="selectedSet.primary.runes[0].name==='empty' ? '/img/runes/blankRune.webp' : `/img/runes/${selectedSet.primary.path}/${selectedSet.primary.runes[0].name.replace(/\s/g, '')}.webp`"
 
                 class="drop-shadow-softer shrink-0 object-contain transition-all duration-200 hover:drop-shadow-sm" />
             </div>
@@ -40,7 +40,7 @@ const primaryColor = computedAsync(() => {})
             background: `linear-gradient(110deg, transparent, var(--color-${selectedSet.secondary.path.toLowerCase()}))` }">
           <div class="from-b1/90 to-b1/40 grid size-19 place-items-center rounded-full bg-gradient-to-br p-1 backdrop-blur-md overflow-hidden ">
             <img
-              :src="selectedSet.secondary.path == 'empty' ? '/img/runes/blankRune.webp' : `/img/runes/${selectedSet.secondary.path}.webp`"
+              :src="selectedSet.secondary.path==='empty' ? '/img/runes/blankRune.webp' : `/img/runes/${selectedSet.secondary.path}.webp`"
               class="drop-shadow-softer shrink-0 h-10 w-auto object-contain transition-all duration-200 hover:drop-shadow-sm" />
           </div>
         </div>
@@ -65,12 +65,12 @@ const primaryColor = computedAsync(() => {})
 
             <div
               class="[&_#blank]:peer-checked:ringneutral/15  grid grid-cols-2 w-22 gap-3 place-items-center justify-self-center   transition-all duration-300 peer-checked:opacity-100  [&_#blank]:peer-checked:opacity-80 ">
-              <img :src="set.primary.runes[0].name == 'empty' ? '/img/runes/blankRune.webp' : `/img/runes/${set.primary.path}/${set.primary.runes[0].name.replace(/\s/g, '')}.webp`" class="drop-shadow-soft h-10 w-auto aspect-square" :class="{ '!h-8.5': set.primary.runes[0].name == 'empty' }" />
+              <img :src="set.primary.runes[0].name==='empty' ? '/img/runes/blankRune.webp' : `/img/runes/${set.primary.path}/${set.primary.runes[0].name.replace(/\s/g, '')}.webp`" class="drop-shadow-soft h-10 w-auto aspect-square" :class="{ '!h-8.5': set.primary.runes[0].name==='empty' }" />
 
               <img
                 :src="`/img/runes/${set.secondary.path}.webp`"
                 class="drop-shadow-softer h-10 w-auto p-1.5"
-                :class="{ '!h-9': set.secondary.path == 'empty' }" />
+                :class="{ '!h-9': set.secondary.path==='empty' }" />
             </div>
 
             <Grow />
@@ -81,9 +81,9 @@ const primaryColor = computedAsync(() => {})
               </span>
             </button>
 
-            <button v-tippy="set == pocket.runes.default ? 'Default Set' : 'Set as default'" class="btn btn-ghost btn-sm px-2 -mr-1" @click.stop="set == pocket.runes.default">
+            <button v-tippy="set===pocket.runes.default ? 'Default Set' : 'Set as default'" class="btn btn-ghost btn-sm px-2 -mr-1" @click.stop="set===pocket.runes.default">
 
-              <icon v-if="set == pocket.runes.default" name="star-fill" class="opacity-70 shrink-0 mb-0.5 size-3.5" />
+              <icon v-if="set===pocket.runes.default" name="star-fill" class="opacity-70 shrink-0 mb-0.5 size-3.5" />
               <icon v-else name="star" class="opacity-70 shrink-0 mb-0.5 size-3.5" />
 
             </button>

@@ -5,11 +5,10 @@ const { summoner } = defineProps<{
 
 definePageMeta({
   name: 'ally analysis',
-
   title: 'allies',
-  path: '/analysis/allies',
-  parent: '/analysis',
   icon: 'typcn:heart',
+  parent: '/analysis',
+  path: '/analysis/allies',
 })
 </script>
 

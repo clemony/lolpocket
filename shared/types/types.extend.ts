@@ -20,8 +20,8 @@ export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 export type Shape = 'square' | 'circle'
 
 export interface PageRecord extends RouteRecord {
-  meta: PageMeta
   altName: string
+  meta: PageMeta
 }
 
 export interface RouteRecordExtended extends RouteRecord {
@@ -29,13 +29,13 @@ export interface RouteRecordExtended extends RouteRecord {
 }
 
 export interface PageMeta extends RouteMeta {
-  icon: string
-  section: string
   title: string
+  icon: string
   order: number
   requiresAuth: boolean
   search: boolean
   searchKeys: string[]
+  section: string
 }
 
 export interface TabsRootPropsWithNullableModel extends OriginalTabsRootProps {
@@ -43,8 +43,8 @@ export interface TabsRootPropsWithNullableModel extends OriginalTabsRootProps {
 }
 
 export interface TabsTriggerPropsWithNullableValue {
-  value: any
   disabled?: boolean
+  value: any
 }
 
 export interface Tabs {

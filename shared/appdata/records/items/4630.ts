@@ -1,7 +1,7 @@
 const item: Item = {
-  name: 'Blighting Jewel',
   id: 4630,
-  rank: 'Epic',
+  name: 'Blighting Jewel',
+  nicknames: ['purple'],
   buildsFrom: [
     {
       id: 1052,
@@ -21,23 +21,23 @@ const item: Item = {
       gold: 3000,
     },
   ],
-  specialRecipe: 0,
-  noEffects: true,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4630_mage_t2_voidcrystal.png',
-  nicknames: ['purple'],
+  maps: [11, 12, 21, 35],
+  noEffects: true,
+  rank: 'Epic',
+  removed: false,
+  shop: {
+    prices: {
+      combined: 700,
+      sell: 440,
+      total: 1100,
+    },
+    tags: ['MAGE'],
+  },
+  specialRecipe: 0,
   stats: {
     abilityPower: 25,
     percentMagicPenetration: 13,
   },
-  shop: {
-    prices: {
-      total: 1100,
-      combined: 700,
-      sell: 440,
-    },
-    tags: ['MAGE'],
-  },
-  maps: [11, 12, 21, 35],
 }
 export default item

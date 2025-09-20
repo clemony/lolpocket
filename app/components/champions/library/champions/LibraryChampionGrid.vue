@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import ChampionGridIcon from '#components'
-import { championsLite } from '#shared/appdata/records/champions-lite'
 import type {
   ColDef,
   ColGroupDef,
@@ -9,6 +7,8 @@ import type {
   GridPreDestroyedEvent,
   GridReadyEvent,
 } from 'ag-grid-community'
+import ChampionGridIcon from '#components'
+import { championsLite } from '#shared/appdata/records/champions-lite'
 import {
   CellStyleModule,
   ClientSideRowModelModule,
@@ -26,15 +26,14 @@ import { pocketTheme } from '~/utils/config/tableTheme'
 
 definePageMeta({
   name: 'Champion Stats',
-  section: 'library',
   icon: 'bi:list-ul',
+  section: 'library',
 })
 
 defineExpose({
   ChampionGridIcon,
 })
 
-const cs = useChampStore()
 /* const { filteredKeys, filtered } = useChampionFilter(filters) */
 
 const theme = ref(pocketTheme)
@@ -44,32 +43,31 @@ const gridApi = shallowRef<GridApi | null>(null)
 /* const filteredChamps = computed<ChampionLite[]>(() => championsLite.filter(c => filteredKeys.value.includes(c.key))) */
 
 const gridOptions: GridOptions<ChampionLite> = {
-  rowData: filteredChamps.value,
   columnHoverHighlight: true,
-  rowSelection: {
-    mode: 'multiRow',
-    checkboxes: false,
-    headerCheckbox: false,
-    enableClickSelection: true,
+  defaultColDef: {
+    initialHide: false,
+    minWidth: 66,
+    autoHeaderHeight: true,
+    cellClass: ['champion-grid-cell', '!text-right', '!justify-end', '!px-4'],
+    flex: 1,
+    headerClass: ['champion-grid-header', 'h-full', 'items-end'],
+    sortingOrder: ['desc', 'asc', null],
+    wrapHeaderText: true,
   },
-
   defaultColGroupDef: {
     suppressStickyLabel: true,
   },
-  defaultColDef: {
-    flex: 1,
-    minWidth: 66,
-    autoHeaderHeight: true,
-    wrapHeaderText: true,
-    headerClass: ['champion-grid-header', 'h-full', 'items-end'],
-    cellClass: ['champion-grid-cell', '!text-right', '!justify-end', '!px-4'],
-    sortingOrder: ['desc', 'asc', null],
-    initialHide: false,
+  rowData: filteredChamps.value,
+  rowSelection: {
+    checkboxes: false,
+    enableClickSelection: true,
+    headerCheckbox: false,
+    mode: 'multiRow',
   },
 }
 
 watch(
-  () => cs.championGridLevel,
+  () => cs().championGridLevel,
   (newVal) => {
     if (newVal)
       gridApi.value.refreshCells()
@@ -77,7 +75,7 @@ watch(
 )
 
 watch(
-  () => cs.championGridType,
+  () => cs().championGridType,
   (newVal) => {
     if (newVal)
       gridApi.value.refreshCells()
@@ -85,33 +83,33 @@ watch(
 )
 
 const { resolveStat } = useChampionStatGrowth(
-  computed(() => cs.championGridLevel)
+  computed(() => cs().championGridLevel)
 )
 
 const colDefs: (ColDef<ChampionLite> | ColGroupDef<ChampionLite>)[] = [
   {
-    headerName: '　 ',
-    cellClass: '!py-1 !pr-1 !ml-0',
-    cellRenderer: ChampionGridIcon,
-    sortable: false,
-    width: 64,
     maxWidth: 64,
     minWidth: 64,
+    width: 64,
+    cellClass: '!py-1 !pr-1 !ml-0',
+    cellRenderer: ChampionGridIcon,
+    headerName: '　 ',
     pinned: 'left',
+    sortable: false,
   },
 
   {
-    field: 'name',
-    colId: 'champion',
-    headerName: 'Champion',
-    cellDataType: 'text',
-    minWidth: 80,
-    flex: 1.5,
     maxWidth: 100,
-    sortable: false,
-    pinned: 'left',
+    minWidth: 80,
     cellClass: 'font-medium  text-left',
+    cellDataType: 'text',
+    colId: 'champion',
+    field: 'name',
+    flex: 1.5,
     headerClass: '',
+    headerName: 'Champion',
+    pinned: 'left',
+    sortable: false,
   },
 
   {
@@ -149,9 +147,9 @@ const colDefs: (ColDef<ChampionLite> | ColGroupDef<ChampionLite>)[] = [
     valueGetter: (params) => {
       const { attackSpeed, attackSpeedRatio } = params.data.stats
       return resolveStat(attackSpeed, {
+        ratio: attackSpeedRatio.flat,
         roundTo: 3,
         type: 'attackSpeed',
-        ratio: attackSpeedRatio.flat,
       })
     },
   },
@@ -175,8 +173,8 @@ hide: true },
   ] }, */
 
   {
-    headerName: 'Range',
     flex: 1,
+    headerName: 'Range',
     valueGetter: params => params.data.stats?.attackRange.flat,
   },
   {
@@ -184,23 +182,23 @@ hide: true },
     valueGetter: params => params.data.stats?.movespeed.flat,
   },
   {
-    headerName: 'Resource',
-    field: 'resource',
-    colId: 'resource',
-    flex: 1.5,
     minWidth: 90,
+    colId: 'resource',
+    field: 'resource',
+    flex: 1.5,
+    headerName: 'Resource',
   },
 
   {
-    headerName: 'Position',
-    flex: 1.5,
     minWidth: 90,
+    flex: 1.5,
+    headerName: 'Position',
     valueGetter: params => params.data.positions?.[0] ?? '',
   },
   {
-    headerName: 'Role',
-    flex: 1.5,
     minWidth: 90,
+    flex: 1.5,
+    headerName: 'Role',
     valueGetter: params => params.data.roles?.[0] ?? '',
   },
   {
@@ -236,12 +234,12 @@ hide: true },
     valueGetter: params => params.data.attributeRatings.utility,
   },
 ]
-const listener = event => cs.dbChampionStatListKey++
+const listener = event => cs().dbChampionStatListKey++
 
 async function onGridReady(params: GridReadyEvent) {
   await params.api
   gridApi.value = params.api
-  cs.championGridApi = gridApi.value
+  cs().championGridApi = gridApi.value
 
   const columns = gridApi.value.getColumns()
   columns.forEach((col) => {
@@ -250,7 +248,7 @@ async function onGridReady(params: GridReadyEvent) {
 }
 
 function onGridPreDestroyed(params: GridPreDestroyedEvent) {
-  cs.dbChampionGridState = gridApi.value.getState()
+  cs().dbChampionGridState = gridApi.value.getState()
 
   const columns = gridApi.value.getColumns()
   columns.forEach((col) => {
@@ -286,7 +284,7 @@ ModuleRegistry.registerModules([
       v-if="filtered"
       class="!size-full stat-grid champion-grid mt-38 border-t border-t-b3/40 "
       :tooltip-show-delay="400"
-      :initial-state="cs.dbChampionGridState"
+      :initial-state="cs().dbChampionGridState"
       :grid-options="gridOptions"
       :theme="theme"
       :column-defs="colDefs"

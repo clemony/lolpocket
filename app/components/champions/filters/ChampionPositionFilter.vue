@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { championPositions } from '#shared/appdata'
 
-const cs = useChampStore()
-const { filters, setFilter, filtered } = useItemFilter()
+const { filtered, filters, setFilter } = useItemFilter()
 </script>
 
 <template>
@@ -20,7 +19,7 @@ const { filters, setFilter, filtered } = useItemFilter()
           <component
             :is="`i-roles-${position.name.toLowerCase()}`"
             class="h-4.5 w-auto dst shrink-0 z-10 text-bc/60"
-            :class="{ '**:!text-nc ': position == filters.position }" />
+            :class="{ '**:!text-nc ': position === filters.position }" />
         </IndicatorTabsTrigger>
 
         <TabIndicator

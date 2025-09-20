@@ -42,17 +42,17 @@ export const useDataStore = defineStore(
 
     return {
       currentPatch,
-      patchList,
+      currentPatchNotes,
       lastFetched,
       loadPatchData,
-      currentPatchNotes,
+      patchList,
       patchNotesLink,
     }
   },
   {
     persist: {
-      storage: piniaPluginPersistedstate.localStorage(),
       key: 'dataStore',
+      storage: piniaPluginPersistedstate.localStorage(),
     },
   }
 )

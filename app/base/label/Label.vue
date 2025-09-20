@@ -4,10 +4,10 @@ import { Label } from 'reka-ui'
 import { labelVariants } from '~/assets/ts/variant-index'
 
 interface Props extends LabelProps {
-  variant?: any
-  size?: any
-  hover?: any
   class?: HTMLAttributes['class']
+  hover?: any
+  size?: any
+  variant?: any
 }
 
 const props = defineProps<

@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import type { SplitterGroupEmits, SplitterGroupProps } from 'reka-ui'
-import { SplitterGroup, useForwardPropsEmits } from 'reka-ui'
-
 import type { HTMLAttributes } from 'vue'
+import { SplitterGroup, useForwardPropsEmits } from 'reka-ui'
 
 const props = defineProps<
   SplitterGroupProps & { class?: HTMLAttributes['class'] }

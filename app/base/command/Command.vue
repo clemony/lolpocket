@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import type { ListboxRootEmits, ListboxRootProps } from 'reka-ui'
-
-import { ListboxRoot, useFilter, useForwardPropsEmits } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
+import { ListboxRoot, useFilter, useForwardPropsEmits } from 'reka-ui'
 import { computed, reactive, ref, watch } from 'vue'
 import { provideCommandContext } from './cindex'
 
@@ -24,7 +23,6 @@ const allGroups = ref<Map<string, Set<string>>>(new Map())
 
 const { contains } = useFilter({ sensitivity: 'base' })
 const filterState = reactive({
-  search: '',
   filtered: {
     /** The count of all visible items. */
     count: 0,
@@ -33,6 +31,7 @@ const filterState = reactive({
     /** Set of groups with at least one visible item. */
     groups: new Set() as Set<string>,
   },
+  search: '',
 })
 
 function filterItems() {
@@ -79,8 +78,8 @@ watch(
 )
 
 provideCommandContext({
-  allItems,
   allGroups,
+  allItems,
   filterState,
 })
 </script>

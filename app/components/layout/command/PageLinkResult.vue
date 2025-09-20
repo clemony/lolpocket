@@ -21,9 +21,8 @@ const variants = {
 }
 
 function navigate() {
-  const ui = useUiStore()
   navigateTo(link)
-  ui.commandOpen = false
+  ui().commandOpen = false
 }
 </script>
 

@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 const {
   championKey,
-  splash,
   class: className,
+  splash,
 } = defineProps<{
   championKey: string
   splash?: string

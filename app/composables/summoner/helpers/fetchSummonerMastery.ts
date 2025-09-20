@@ -1,15 +1,14 @@
 export interface ChampionMasteryResponse {
   puuid: string
   mastery: ChampionMastery[]
-  totalPoints: number
   totalLevels: number
+  totalPoints: number
 }
 export async function fetchSummonerMastery(puuid: string) {
   if (!puuid)
     throw new Error('Missing puuid for mastery fetch')
 
-  const ss = useSummonerStore()
-  const summoner = ss.getSummoner(puuid)
+  const summoner = ss().getSummoner(puuid)
   const TWO_HOURS = 1000 * 60 * 60 * 2
 
   const isStale = (timestamp?: Date) =>
@@ -44,12 +43,12 @@ export async function fetchSummonerMastery(puuid: string) {
       result.totalPoints
     )
 
-    await ss.mergeSummonerData(puuid, {
+    await ss().mergeSummonerData(puuid, {
       mastery: {
-        totalPoints: result.totalPoints,
-        totalLevels: result.totalLevels,
         champions: updated.champions,
         lastUpdate: new Date(),
+        totalLevels: result.totalLevels,
+        totalPoints: result.totalPoints,
       } as Summoner['mastery'],
     })
     return updated

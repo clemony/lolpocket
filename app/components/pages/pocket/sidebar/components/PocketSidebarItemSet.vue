@@ -9,43 +9,43 @@ const { pocket, set } = defineProps<{
 
 const variants = {
   closed: {
-    height: '60px',
     width: '60px',
     borderRadius: '0.5rem',
-    zIndex: 1,
+    height: '60px',
     translate: '0px 0px',
+    zIndex: 1,
   },
   open: {
     width: '300px',
-    height: 'max-content',
-    zIndex: 20,
     borderRadius: '1rem',
+    height: 'max-content',
     padding: '10px',
     translate: '-20px -40px',
+    zIndex: 20,
   },
 }
 
 const setWrapperVariants = {
   closed: {
+    width: '60px',
     display: 'flex',
     flexWrap: 'wrap',
-    width: '60px',
     gap: '2px',
   },
   open: {
-    gap: '10px',
     width: '280px',
+    gap: '10px',
   },
 }
 
 const itemVariants = {
   closed: {
-    height: '23px',
     width: '23px',
+    height: '23px',
   },
   open: {
-    height: '40px',
     width: '40px',
+    height: '40px',
   },
 }
 

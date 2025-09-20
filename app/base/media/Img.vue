@@ -5,10 +5,10 @@ defineOptions({
 
 const {
   alt,
-  img,
-  sizes,
-  preload = false,
   class: className,
+  img,
+  preload = false,
+  sizes,
 } = defineProps<{
   alt: string
   sizes?: string[]

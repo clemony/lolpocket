@@ -1,13 +1,13 @@
 <script lang="ts" setup>
 /*
       :style="{
-        background: modelValue == set.primary.path && path == set.primary.path ? `linear-gradient(110deg, transparent, var(--color-${set.primary.path.toLowerCase()}))` : modelValue == set.secondary.path && path == set.secondary.path ? `linear-gradient(110deg, transparent, var(--color-${set.secondary.path.toLowerCase()}))` : '' }" */
+        background: modelValue === set.primary.path && path === set.primary.path ? `linear-gradient(110deg, transparent, var(--color-${set.primary.path.toLowerCase()}))` : modelValue === set.secondary.path && path === set.secondary.path ? `linear-gradient(110deg, transparent, var(--color-${set.secondary.path.toLowerCase()}))` : '' }" */
 
 defineOptions({
   inheritAttrs: false,
 })
 
-const { value, class: className } = defineProps<{
+const { class: className, value } = defineProps<{
   value: string
   class?: HTMLAttributes['class']
 }>()

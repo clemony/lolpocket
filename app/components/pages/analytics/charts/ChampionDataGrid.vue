@@ -29,11 +29,10 @@ const { champions } = defineProps<{
 }>()
 
 defineExpose({
-  PatchCellRenderer,
   ChampionGridIcon,
+  PatchCellRenderer,
 })
 
-const cs = useChampStore()
 const theme = ref(pocketTheme)
 const championList = computed(() => champions)
 console.log('💠 - championList:', championList.value)
@@ -41,147 +40,145 @@ console.log('💠 - championList:', championList.value)
 const gridApi = shallowRef<GridApi | null>(null)
 
 const gridOptions: GridOptions<any[]> = {
-  rowData: championList.value,
   columnHoverHighlight: false,
-
-  rowSelection: {
-    mode: 'multiRow',
-    checkboxes: false,
-    headerCheckbox: false,
-    enableClickSelection: true,
-  },
-
-  defaultColGroupDef: {
-    suppressStickyLabel: true,
-  },
   defaultColDef: {
-    flex: 1,
     minWidth: 50,
+    flex: 1,
     // autoHeaderHeight: true,
     // wrapHeaderText: true,
-    headerClass: ['champion-grid-header', 'text-center'],
-    cellClass: ['champion-grid-cell'],
-    sortingOrder: ['desc', 'asc', null],
     initialHide: false,
+    cellClass: ['champion-grid-cell'],
+    headerClass: ['champion-grid-header', 'text-center'],
+    sortingOrder: ['desc', 'asc', null],
     /*     headerComponentParams: {
       innerHeaderComponent: CustomInnerHeader,
     }, */
 
     // resizable: false,
   },
+  defaultColGroupDef: {
+    suppressStickyLabel: true,
+  },
+  rowData: championList.value,
+  rowSelection: {
+    checkboxes: false,
+    enableClickSelection: true,
+    headerCheckbox: false,
+    mode: 'multiRow',
+  },
 }
 
 const colDefs: ColDef<any>[] = [
   {
-    headerName: '',
-    field: '',
-    cellRenderer: ChampionGridIcon,
-    cellClass: '!py-1 !pr-1 !ml-0',
-    sortable: false,
-    width: 61,
     maxWidth: 61,
     minWidth: 61,
+    width: 61,
+    cellClass: '!py-1 !pr-1 !ml-0',
+    cellRenderer: ChampionGridIcon,
+    field: '',
+    headerName: '',
     pinned: 'left',
+    sortable: false,
   },
 
   {
-    field: 'champion',
-    headerName: 'Champion',
-    cellDataType: 'text',
     maxWidth: 90,
+    cellClass: 'font-medium  ',
+    cellDataType: 'text',
+    field: 'champion',
+    headerClass: '',
+    headerName: 'Champion',
     sortable: false,
-    cellClass: 'font-medium  ',
-    headerClass: '',
   },
   {
+    maxWidth: 80,
+    cellClass: 'font-medium  ',
+    cellDataType: 'number',
     field: 'winrate',
+    headerClass: '',
     headerName: 'Winrate',
-    cellDataType: 'number',
-    maxWidth: 80,
     valueFormatter: params => `${Math.round(params.value * 100) / 100}%`,
-    cellClass: 'font-medium  ',
-    headerClass: '',
   },
   {
+    maxWidth: 80,
+    cellClass: 'font-medium  ',
+    cellDataType: 'number',
     field: 'bayesianWinrate',
-    headerName: 'Adj. WR',
-    cellDataType: 'number',
-    maxWidth: 80,
-    valueFormatter: params => `${Math.round(params.value * 100) / 100}%`,
-    cellClass: 'font-medium  ',
     headerClass: '',
+    headerName: 'Adj. WR',
+    valueFormatter: params => `${Math.round(params.value * 100) / 100}%`,
   },
   {
+    maxWidth: 50,
+    cellClass: 'font-medium',
+    cellDataType: 'number',
     field: 'games',
     headerName: '#',
-    cellDataType: 'number',
-    maxWidth: 50,
-    cellClass: 'font-medium',
   },
   {
+    maxWidth: 50,
+    cellClass: 'font-medium',
+    cellDataType: 'number',
     field: 'wins',
     headerName: 'Win',
-    cellDataType: 'number',
-    maxWidth: 50,
-    cellClass: 'font-medium',
   },
   {
+    maxWidth: 50,
+    cellClass: 'font-medium',
+    cellDataType: 'number',
     field: 'losses',
     headerName: 'Lose',
-    cellDataType: 'number',
-    maxWidth: 50,
-    cellClass: 'font-medium',
   },
   {
+    maxWidth: 50,
+    cellClass: 'font-medium',
+    cellDataType: 'number',
     field: 'avgKills',
     headerName: 'K',
-    cellDataType: 'number',
-    maxWidth: 50,
-    cellClass: 'font-medium',
   },
   {
+    maxWidth: 50,
+    cellClass: 'font-medium',
+    cellDataType: 'number',
     field: 'avgDeaths',
     headerName: 'D',
-    cellDataType: 'number',
-    maxWidth: 50,
-    cellClass: 'font-medium',
   },
   {
+    maxWidth: 50,
+    cellClass: 'font-medium',
+    cellDataType: 'number',
     field: 'avgAssists',
     headerName: 'Games',
-    cellDataType: 'number',
-    maxWidth: 50,
-    cellClass: 'font-medium',
   },
   {
+    maxWidth: 50,
+    cellClass: 'font-medium',
+    cellDataType: 'number',
     field: 'kda',
     headerName: 'Ratio',
-    cellDataType: 'number',
-    maxWidth: 50,
-    cellClass: 'font-medium',
   },
   {
+    maxWidth: 50,
+    cellClass: 'font-medium',
+    cellDataType: 'number',
     field: 'avgKp',
     headerName: 'Games',
-    cellDataType: 'number',
-    maxWidth: 50,
-    cellClass: 'font-medium',
   },
   {
+    maxWidth: 180,
+    minWidth: 180,
+    cellClass: 'font-medium',
+    cellDataType: 'text',
+    cellRenderer: PatchCellRenderer,
     field: 'gamePatches',
     headerName: 'Patch',
-    cellDataType: 'text',
-    minWidth: 180,
-    maxWidth: 180,
-    cellClass: 'font-medium',
-    cellRenderer: PatchCellRenderer,
   },
 ]
 
 async function onGridReady(params: GridReadyEvent) {
   await params.api
   gridApi.value = params.api
-  cs.championGridApi = gridApi.value
+  cs().championGridApi = gridApi.value
 }
 
 watch(
@@ -208,7 +205,7 @@ ModuleRegistry.registerModules([
 
 <template>
   <AgGridVue
-    :initial-state="cs.dbChampionGridState"
+    :initial-state="cs().dbChampionGridState"
     class="!size-full stat-grid champion-grid bg-b1 !shadow-black/3 !drop-shadow-black/3 border-shadow-sm min-w-full"
     :grid-options="gridOptions"
     :theme="theme"

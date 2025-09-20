@@ -31,6 +31,7 @@ export function useSummonerProvider(identifier: string) {
   console.log('currentPuuid: ', currentPuuid)
 
   const { getMatchesForSummoner } = useIndexedDB()
+  console.log('🌱 - useSummonerProvider - getMatchesForSummoner:', getMatchesForSummoner)
   const allMatches = ref<MatchData[]>([])
 
   // --- FILTER STATE ---
@@ -90,7 +91,9 @@ export function useSummonerProvider(identifier: string) {
       return
     allMatches.value = await getMatchesForSummoner(summoner.value.puuid)
   }
+
   const findSummoner = async (options?: { force?: boolean }) => {
+    console.log('🌱 - findSummoner - currentPuuid.value:', currentPuuid.value)
     if (!currentPuuid.value)
       return
     loading.value = true
@@ -98,6 +101,7 @@ export function useSummonerProvider(identifier: string) {
 
     try {
       const resolved = await ss().resolveSummoner({ puuid: currentPuuid.value })
+      console.log('🌱 - findSummoner - resolved:', resolved)
 
       currentPuuid.value = resolved.puuid
       summoner.value = resolved

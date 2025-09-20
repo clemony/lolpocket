@@ -165,34 +165,30 @@
   }
 }
 @utility tooltip {
-
---tt-bg: --alpha(var(--color-b1) / 99%) !important;
+  --tt-bg: --alpha(var(--color-b1) / 99%) !important;
 }
- @utility tooltip{
-    @apply relative;
+@utility tooltip {
+  @apply relative;
 
-    &::before {
-      @apply  z-50 py-1.5 px-3 text-xs border-b3 text-bc max-w-64 whitespace-pre-wrap drop-shadow-sm transition-all duration-300 leading-5.5 text-start bg-[var(--tt-bg)];
-
-    }
-
-    &::after {
-      @apply hidden;
-    }
+  &::before {
+    @apply z-50 py-1.5 px-3 text-xs border-b3 text-bc max-w-64 whitespace-pre-wrap drop-shadow-sm transition-all duration-300 leading-5.5 text-start bg-[var(--tt-bg)];
   }
 
+  &::after {
+    @apply hidden;
+  }
+}
 
-  /* tabs */
+/* tabs */
 
-  @utility tabs-sm {
-    .tab {
+@utility tabs-sm {
+  .tab {
     @apply h-8.5 pt-0.75;
---tab-radius-min: 0.64rem;
-
-    }
-.tab-content {
---tabcontent-radius-se: var(--radius-xl);
---tabcontent-radius-es: var(--radius-xl);
---tabcontent-radius-ee: var(--radius-xl);
-}
+    --tab-radius-min: 0.64rem;
   }
+  .tab-content {
+    --tabcontent-radius-se: var(--radius-xl);
+    --tabcontent-radius-es: var(--radius-xl);
+    --tabcontent-radius-ee: var(--radius-xl);
+  }
+}

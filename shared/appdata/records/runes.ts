@@ -4,10 +4,8 @@ export const runePaths: RunePath[] = [
   {
     id: 8400,
     name: 'Resolve',
-    tooltip: 'Durability and crowd control',
     slots: [
       {
-        tier: 0,
         label: 'Keystone',
         runes: [
           {
@@ -23,9 +21,9 @@ export const runePaths: RunePath[] = [
             name: 'Guardian',
           },
         ],
+        tier: 0,
       },
       {
-        tier: 1,
         label: 'Strength',
         runes: [
           {
@@ -41,9 +39,9 @@ export const runePaths: RunePath[] = [
             name: 'Shield Bash',
           },
         ],
+        tier: 1,
       },
       {
-        tier: 2,
         label: 'Resistance',
         runes: [
           {
@@ -59,9 +57,9 @@ export const runePaths: RunePath[] = [
             name: 'Bone Plating',
           },
         ],
+        tier: 2,
       },
       {
-        tier: 3,
         label: 'Vitality',
         runes: [
           {
@@ -77,16 +75,16 @@ export const runePaths: RunePath[] = [
             name: 'Unflinching',
           },
         ],
+        tier: 3,
       },
     ],
+    tooltip: 'Durability and crowd control',
   },
   {
     id: 8100,
     name: 'Domination',
-    tooltip: 'Burst damage and target access ',
     slots: [
       {
-        tier: 0,
         label: 'Keystone',
         runes: [
           {
@@ -102,9 +100,9 @@ export const runePaths: RunePath[] = [
             name: 'Hail of Blades',
           },
         ],
+        tier: 0,
       },
       {
-        tier: 1,
         label: 'Malice',
         runes: [
           {
@@ -120,9 +118,9 @@ export const runePaths: RunePath[] = [
             name: 'Sudden Impact',
           },
         ],
+        tier: 1,
       },
       {
-        tier: 2,
         label: 'Tracking',
         runes: [
           {
@@ -138,9 +136,9 @@ export const runePaths: RunePath[] = [
             name: 'Deep Ward',
           },
         ],
+        tier: 2,
       },
       {
-        tier: 3,
         label: 'Hunter',
         runes: [
           {
@@ -156,16 +154,16 @@ export const runePaths: RunePath[] = [
             name: 'Ultimate Hunter',
           },
         ],
+        tier: 3,
       },
     ],
+    tooltip: 'Burst damage and target access ',
   },
   {
     id: 8000,
     name: 'Precision',
-    tooltip: 'Improved attacks and sustained damage',
     slots: [
       {
-        tier: 0,
         label: 'Keystone',
         runes: [
           {
@@ -185,9 +183,9 @@ export const runePaths: RunePath[] = [
             name: 'Conqueror',
           },
         ],
+        tier: 0,
       },
       {
-        tier: 1,
         label: 'Heroism',
         runes: [
           {
@@ -203,9 +201,9 @@ export const runePaths: RunePath[] = [
             name: 'Presence of Mind',
           },
         ],
+        tier: 1,
       },
       {
-        tier: 2,
         label: 'Legend',
         runes: [
           {
@@ -221,9 +219,9 @@ export const runePaths: RunePath[] = [
             name: 'Legend: Bloodline',
           },
         ],
+        tier: 2,
       },
       {
-        tier: 3,
         label: 'Combat',
         runes: [
           {
@@ -239,16 +237,16 @@ export const runePaths: RunePath[] = [
             name: 'Last Stand',
           },
         ],
+        tier: 3,
       },
     ],
+    tooltip: 'Improved attacks and sustained damage',
   },
   {
     id: 8200,
     name: 'Sorcery',
-    tooltip: 'Empowered abilities and resource manipulation',
     slots: [
       {
-        tier: 0,
         label: 'Keystone',
         runes: [
           {
@@ -264,9 +262,9 @@ export const runePaths: RunePath[] = [
             name: 'Phase Rush',
           },
         ],
+        tier: 0,
       },
       {
-        tier: 1,
         label: 'Artifact',
         runes: [
           {
@@ -282,9 +280,9 @@ export const runePaths: RunePath[] = [
             name: 'Nimbus Cloak',
           },
         ],
+        tier: 1,
       },
       {
-        tier: 2,
         label: 'Excellence',
         runes: [
           {
@@ -300,9 +298,9 @@ export const runePaths: RunePath[] = [
             name: 'Absolute Focus',
           },
         ],
+        tier: 2,
       },
       {
-        tier: 3,
         label: 'Power',
         runes: [
           {
@@ -318,16 +316,16 @@ export const runePaths: RunePath[] = [
             name: 'Gathering Storm',
           },
         ],
+        tier: 3,
       },
     ],
+    tooltip: 'Empowered abilities and resource manipulation',
   },
   {
     id: 8300,
     name: 'Inspiration',
-    tooltip: 'Creative tools and rule bending ',
     slots: [
       {
-        tier: 0,
         label: 'Keystone',
         runes: [
           {
@@ -343,9 +341,9 @@ export const runePaths: RunePath[] = [
             name: 'First Strike',
           },
         ],
+        tier: 0,
       },
       {
-        tier: 1,
         label: 'Contraptions',
         runes: [
           {
@@ -361,9 +359,9 @@ export const runePaths: RunePath[] = [
             name: 'Cash Back',
           },
         ],
+        tier: 1,
       },
       {
-        tier: 2,
         label: 'Tomorrow',
         runes: [
           {
@@ -379,9 +377,9 @@ export const runePaths: RunePath[] = [
             name: 'Biscuit Delivery',
           },
         ],
+        tier: 2,
       },
       {
-        tier: 3,
         label: 'Beyond',
         runes: [
           {
@@ -397,7 +395,9 @@ export const runePaths: RunePath[] = [
             name: 'Jack Of All Trades',
           },
         ],
+        tier: 3,
       },
     ],
+    tooltip: 'Creative tools and rule bending ',
   },
 ]

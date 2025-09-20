@@ -1,12 +1,11 @@
 export function useCooldown(puuid: string, action: string, wait: number) {
-  const store = useCooldownStore()
   const now = ref(Date.now())
 
   useIntervalFn(() => {
     now.value = Date.now()
   }, 1000)
 
-  const entry = computed(() => store.get(puuid, action))
+  const entry = computed(() => cds().get(puuid, action))
 
   const timeRemaining = computed(() => {
     if (!entry.value)
@@ -18,15 +17,15 @@ export function useCooldown(puuid: string, action: string, wait: number) {
     const seconds = Math.floor(timeRemaining.value / 1000)
     return seconds > 0
       ? {
-          seconds,
           percent: (seconds / (wait / 1000)) * 100,
+          seconds,
         }
       : null
   })
 
   return {
     cooldown,
-    timeRemaining,
     entry,
+    timeRemaining,
   }
 }

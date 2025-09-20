@@ -10,11 +10,10 @@ const props = defineProps<{
 }>()
 
 const dialogOpenState = {
-  opacity: 1,
   filter: 'blur(0px)',
+  opacity: 1,
   rotateX: 0,
   rotateY: 0,
-  z: 0,
   transition: {
     delay: 0.2,
     duration: 0.3,
@@ -25,19 +24,20 @@ const dialogOpenState = {
       ease: 'easeOut',
     },
   },
+  z: 0,
 }
 
 const dialogInitialState = {
-  opacity: 0,
   filter: 'blur(10px)',
-  z: -100,
-  rotateY: 25,
+  opacity: 0,
   rotateX: 5,
+  rotateY: 25,
   transformPerspective: 500,
   transition: {
     duration: 0.2,
     ease: [0.67, 0.17, 0.62, 0.64],
   },
+  z: -100,
 }
 </script>
 

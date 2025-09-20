@@ -16,10 +16,10 @@ const set = computed(() => s).value
 const pathList = pathIndex.map(p => p.name)
 
 const primaryRunes = computed(() =>
-  runePaths.find(p => p.name == set.primary?.path)
+  runePaths.find(p => p.name === set.primary?.path)
 )
 const secondaryRunes = computed(() =>
-  runePaths.find(p => p.name == set.secondary?.path)
+  runePaths.find(p => p.name === set.secondary?.path)
 )
 
 function handlePath1() {
@@ -148,7 +148,7 @@ function handleDelete() {
           v-for="shard in set.shards"
           :id="shard"
           :key="shard"
-          :class="`size-10 border-b3 ${shard == 0 ? 'border !border-b2 bg-b2/30' : ''}`" />
+          :class="`size-10 border-b3 ${shard === 0 ? 'border !border-b2 bg-b2/30' : ''}`" />
       </div>
     </TransitionFade>
   </div>

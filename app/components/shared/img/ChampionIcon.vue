@@ -1,9 +1,9 @@
 <script setup lang="ts">
 const {
   id,
+  title,
   alt,
   class: className,
-  title,
 } = defineProps<{
   id: number
   alt?: string

@@ -1,20 +1,20 @@
 export const summonerLinks = [
   {
     name: `Nexus`,
-    link: '/nexus',
-    section: 'nexus',
     icon: {
       name: 'nexus',
       class: '!size-4.5 -ml-0.5',
     },
+    link: '/nexus',
+    section: 'nexus',
   },
   {
     name: 'Analytics',
-    link: '/analytics/champions',
     icon: {
       name: 'chart',
       class: '',
     },
+    link: '/analytics/champions',
     subLinks: [
       {
         name: 'Champions',
@@ -28,10 +28,10 @@ export const summonerLinks = [
   },
   {
     name: 'Match History',
-    link: '/match',
     icon: {
       name: 'clock',
       class: 'size-5',
     },
+    link: '/match',
   },
 ]

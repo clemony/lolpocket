@@ -20,10 +20,10 @@ export const useIndexStore = defineStore(
     const skins = ref<FullSkinRecord>({})
 
     async function loadPatch() {
-      if (isStale(lastPatchCheck.value) == true) {
+      if (isStale(lastPatchCheck.value) === true) {
         const { patchIndex } = await import('#shared/appdata/index/patch-index')
         lastPatchCheck.value = new Date()
-        if (patch.value != patchIndex[0]) {
+        if (patch.value !== patchIndex[0]) {
           patchList.value = patchIndex
           patch.value = patchIndex[0]
           loadAll()
@@ -269,8 +269,8 @@ export const useIndexStore = defineStore(
   },
   {
     persist: {
-      key: 'indexStore',
-      storage: piniaPluginPersistedstate.localStorage(),
+      storage: piniaPluginPersistedstate.cookies({ sameSite: true }),
+
     },
   }
 )

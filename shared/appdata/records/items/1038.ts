@@ -1,7 +1,7 @@
 const item: Item = {
-  name: 'B. F. Sword',
   id: 1038,
-  rank: 'Basic',
+  name: 'B. F. Sword',
+  nicknames: ['bf'],
   buildsInto: [
     {
       id: 3032,
@@ -39,23 +39,23 @@ const item: Item = {
       gold: 3500,
     },
   ],
-  specialRecipe: 0,
-  noEffects: true,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1038_marksman_t1_bfsword.png',
-  simpleDescription: 'Greatly increases Attack Damage',
-  nicknames: ['bf'],
-  stats: {
-    attackDamage: 40,
-  },
+  maps: [11, 12, 21, 35],
+  noEffects: true,
+  rank: 'Basic',
+  removed: false,
   shop: {
     prices: {
-      total: 1300,
       combined: 1300,
       sell: 520,
+      total: 1300,
     },
     tags: ['FIGHTER', 'MARKSMAN', 'ASSASSIN'],
   },
-  maps: [11, 12, 21, 35],
+  simpleDescription: 'Greatly increases Attack Damage',
+  specialRecipe: 0,
+  stats: {
+    attackDamage: 40,
+  },
 }
 export default item

@@ -5,9 +5,9 @@ import * as v from 'valibot'
 export const InboxItemSchema = v.object({
   id: v.string(),
   date: v.date(),
+  read: v.optional(v.boolean()), // optional default = undefined
   template: v.string(),
   vars: v.record(v.string(), v.string()),
-  read: v.optional(v.boolean()), // optional default = undefined
 })
 
 // InboxMessage (extends InboxItem)
@@ -15,52 +15,51 @@ export const InboxMessageSchema = v.object({
   ...InboxItemSchema.entries,
   title: v.string(),
   content: v.string(),
+  dateTrashed: v.optional(v.nullable(v.date())),
   from: v.object({
-    name: v.string(),
     id: v.string(),
+    name: v.string(),
     icon: v.string(),
   }),
   to: v.optional(v.string()),
   trash: v.optional(v.boolean()),
-  dateTrashed: v.optional(v.nullable(v.date())),
 })
 
 // Account
 export const AccountSchema = v.object({
-  username: v.fallback(v.string(), 'Summoner'),
-  puuid: v.nullable(v.string()),
   name: v.nullable(v.string()),
-  tag: v.nullable(v.string()),
-  level: v.fallback(v.number(), 0),
-  regionGroup: v.fallback(v.string(), 'americas'),
-  region: v.nullable(v.string()),
+  puuid: v.nullable(v.string()),
+  username: v.fallback(v.string(), 'Summoner'),
   icon: v.nullable(v.string()),
   inbox: v.object({
     messages: v.fallback(v.array(InboxMessageSchema), []),
     notifications: v.fallback(v.array(InboxItemSchema), []),
   }),
+  level: v.fallback(v.number(), 0),
+  region: v.nullable(v.string()),
+  regionGroup: v.fallback(v.string(), 'americas'),
+  tag: v.nullable(v.string()),
 })
 
 // Settings
 export const SettingsSchema = v.object({
-  theme: v.fallback(v.string(), 'daylight'),
-  language: v.fallback(v.string(), 'en'),
-
-  alertNewPocket: v.fallback(v.boolean(), true),
+  lockSidebar: v.fallback(v.boolean(), false),
   alertDeletePocket: v.fallback(v.boolean(), true),
+  alertNewPocket: v.fallback(v.boolean(), true),
+  language: v.fallback(v.string(), 'en'),
   motion: v.fallback(v.boolean(), true),
   noConfirmTrash: v.fallback(v.boolean(), false),
-  showSolo: v.fallback(v.boolean(), true),
-  showFlex: v.fallback(v.boolean(), true),
   showAllies: v.fallback(v.boolean(), true),
-  lockSidebar: v.fallback(v.boolean(), false),
+  showFlex: v.fallback(v.boolean(), true),
+  showSolo: v.fallback(v.boolean(), true),
+  theme: v.fallback(v.string(), 'daylight'),
 })
 
 // PublicData
 export const PublicDataSchema = v.object({
-  splash: v.fallback(v.string(), ''),
   title: v.fallback(v.string(), ''),
   peerMessages: v.fallback(v.boolean(), false),
+  splash: v.fallback(v.string(), ''),
 })
 
 // --- Types ---

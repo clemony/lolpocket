@@ -1,7 +1,6 @@
 const item: Item = {
-  name: 'Unending Despair',
   id: 2502,
-  rank: 'Legendary',
+  name: 'Unending Despair',
   buildsFrom: [
     {
       id: 3105,
@@ -14,32 +13,33 @@ const item: Item = {
       gold: 900,
     },
   ],
-  specialRecipe: 0,
-  noEffects: false,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2502_unendingdespair.png',
+  maps: [11, 12, 21, 35],
+  noEffects: false,
   passives: [
     {
       name: 'Anguish',
-      unique: true,
       effects:
         'Every 4 seconds after entering combat with champions, sap all enemy champions around you within 650 units to deal magic damage equal to 3% of your <b>bonus</b> health to them and <img src="/img/icons/heal.webp" class="tip-icon" />heal yourself equal to 250% of the post-mitigation damage dealt.',
+      unique: true,
     },
   ],
-  stats: {
-    armor: 25,
-    health: 400,
-    magicResistance: 25,
-    abilityHaste: 10,
-  },
+  rank: 'Legendary',
+  removed: false,
   shop: {
     prices: {
-      total: 2800,
       combined: 800,
       sell: 1120,
+      total: 2800,
     },
     tags: ['TANK'],
   },
-  maps: [11, 12, 21, 35],
+  specialRecipe: 0,
+  stats: {
+    abilityHaste: 10,
+    armor: 25,
+    health: 400,
+    magicResistance: 25,
+  },
 }
 export default item

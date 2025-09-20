@@ -1,7 +1,16 @@
 const item: Item = {
-  name: 'Mikael\'s Blessing',
   id: 3222,
-  rank: 'Legendary',
+  name: 'Mikael\'s Blessing',
+  nicknames: ['crucible', 'michael'],
+  active: [
+    {
+      name: 'Purify',
+      effects:
+        'Remove all crowd control debuffs (except <img src="/img/icons/airborne.webp" class="tip-icon" />Airborne, <img src="/img/icons/blind.webp" class="tip-icon" />Blind, <img src="/img/icons/disarm.webp" class="tip-icon" />Disarm, <img src="/img/icons/nearsight.webp" class="tip-icon" />Nearsight, and <img src="/img/icons/suppression.webp" class="tip-icon" />Suppression) from yourself or the target allied champion and <img src="/img/icons/heal.webp" class="tip-icon" />heal the target for 100 – 250 (based on target\'s level).',
+      range: 0,
+      unique: true,
+    },
+  ],
   buildsFrom: [
     {
       id: 3067,
@@ -14,36 +23,27 @@ const item: Item = {
       gold: 600,
     },
   ],
-  specialRecipe: 0,
-  noEffects: false,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3222_enchanter_t3_mikaelsblessing.png',
-  simpleDescription:
-    'Activate to remove all disabling effects from an allied champion',
-  nicknames: ['crucible', 'michael'],
-  active: [
-    {
-      name: 'Purify',
-      unique: true,
-      effects:
-        'Remove all crowd control debuffs (except <img src="/img/icons/airborne.webp" class="tip-icon" />Airborne, <img src="/img/icons/blind.webp" class="tip-icon" />Blind, <img src="/img/icons/disarm.webp" class="tip-icon" />Disarm, <img src="/img/icons/nearsight.webp" class="tip-icon" />Nearsight, and <img src="/img/icons/suppression.webp" class="tip-icon" />Suppression) from yourself or the target allied champion and <img src="/img/icons/heal.webp" class="tip-icon" />heal the target for 100 – 250 (based on target\'s level).',
-      range: 0,
-    },
-  ],
-  stats: {
-    healAndShieldPower: 12,
-    health: 250,
-    manaRegen: 100,
-    abilityHaste: 15,
-  },
+  maps: [11, 12, 21, 35],
+  noEffects: false,
+  rank: 'Legendary',
+  removed: false,
   shop: {
     prices: {
-      total: 2300,
       combined: 900,
       sell: 920,
+      total: 2300,
     },
     tags: ['SUPPORT'],
   },
-  maps: [11, 12, 21, 35],
+  simpleDescription:
+    'Activate to remove all disabling effects from an allied champion',
+  specialRecipe: 0,
+  stats: {
+    abilityHaste: 15,
+    healAndShieldPower: 12,
+    health: 250,
+    manaRegen: 100,
+  },
 }
 export default item

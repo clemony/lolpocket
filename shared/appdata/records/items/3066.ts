@@ -1,7 +1,7 @@
 const item: Item = {
-  name: 'Winged Moonplate',
   id: 3066,
-  rank: 'Epic',
+  name: 'Winged Moonplate',
+  nicknames: ['chaps', 'pants', 'leggings', 'zoomin'],
   buildsFrom: [
     {
       id: 1028,
@@ -36,23 +36,23 @@ const item: Item = {
       gold: 2900,
     },
   ],
-  specialRecipe: 0,
-  noEffects: true,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3066_tank_t3_wingedmoonplate.png',
-  nicknames: ['chaps', 'pants', 'leggings', 'zoomin'],
+  maps: [11, 12, 21, 35],
+  noEffects: true,
+  rank: 'Epic',
+  removed: false,
+  shop: {
+    prices: {
+      combined: 400,
+      sell: 320,
+      total: 800,
+    },
+    tags: ['TANK', 'MOVEMENT'],
+  },
+  specialRecipe: 0,
   stats: {
     health: 200,
     percentMovespeed: 4,
   },
-  shop: {
-    prices: {
-      total: 800,
-      combined: 400,
-      sell: 320,
-    },
-    tags: ['TANK', 'MOVEMENT'],
-  },
-  maps: [11, 12, 21, 35],
 }
 export default item

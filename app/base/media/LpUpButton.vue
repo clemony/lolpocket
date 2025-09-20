@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-const ds = useDataStore()
-const ui = useUiStore()
+
 </script>
 
 <template>

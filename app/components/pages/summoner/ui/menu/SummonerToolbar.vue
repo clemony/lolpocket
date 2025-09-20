@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 const {
+  sidebar,
   class: className,
   summoner,
-  sidebar,
 } = defineProps<{
   class?: HTMLAttributes['class']
   summoner: Summoner
@@ -10,11 +10,11 @@ const {
 }>()
 
 const tippy = {
-  placement: 'bottom',
-  theme: 'basic',
   contentClass: 'font-medium capitalize',
   delay: [0, 0],
   offset: [0, 16],
+  placement: 'bottom',
+  theme: 'basic',
 }
 </script>
 

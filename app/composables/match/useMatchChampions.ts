@@ -33,25 +33,25 @@ export function useMatchChampions(puuid: string, matches: MatchData[]) {
     championStats.clear()
 
     matches.forEach((match, index) => {
-      const player = match.participants.find(p => p.puuid == puuid)
+      const player = match.participants.find(p => p.puuid === puuid)
       const champ = player?.championId
       if (!champ)
         return
 
       if (!championStats.has(champ)) {
         championStats.set(champ, {
-          name: ix().champNameById(champ),
           id: champ,
-          games: 0,
-          wins: 0,
-          losses: 0,
-          winrate: 0,
-          kills: 0,
-          deaths: 0,
+          name: ix().champNameById(champ),
           assists: 0,
-          killParticipation: 0,
-          matchIndexes: [],
+          deaths: 0,
           gamePatches: [],
+          games: 0,
+          killParticipation: 0,
+          kills: 0,
+          losses: 0,
+          matchIndexes: [],
+          winrate: 0,
+          wins: 0,
         })
       }
 
@@ -93,20 +93,20 @@ export function useMatchChampions(puuid: string, matches: MatchData[]) {
         })
 
         return {
+          avgAssists: Number(avgAssists.toFixed(2)),
+          avgDeaths: Number(avgDeaths.toFixed(2)),
+          avgKills: Number(avgKills.toFixed(2)),
+          avgKp: Number((avgKP * 100).toFixed(2)),
+          bayesianWinrate,
           champion: stats.name,
           championId: champion.value.id,
-          games: stats.games,
-          wins: stats.wins,
-          losses: stats.losses,
-          winrate: stats.winrate,
-          bayesianWinrate,
-          kda: Number(kda.toFixed(2)),
-          avgKills: Number(avgKills.toFixed(2)),
-          avgDeaths: Number(avgDeaths.toFixed(2)),
-          avgAssists: Number(avgAssists.toFixed(2)),
-          avgKp: Number((avgKP * 100).toFixed(2)),
-          matchIndexes: stats.matchIndexes,
           gamePatches: stats.gamePatches,
+          games: stats.games,
+          kda: Number(kda.toFixed(2)),
+          losses: stats.losses,
+          matchIndexes: stats.matchIndexes,
+          winrate: stats.winrate,
+          wins: stats.wins,
         }
       })
       .sort((a, b) => b.bayesianWinrate - a.bayesianWinrate)

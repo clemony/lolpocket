@@ -139,7 +139,7 @@ function cleanName(name: string): string[] {
 function generateWords(min: number, max: number): string {
   let result = ''
   while (result.length < 4 || result.length > 16) {
-    result = generate({ min, max, join: ' ' })
+    result = generate({ join: ' ', max, min })
   }
   return capitalize(result)
 }

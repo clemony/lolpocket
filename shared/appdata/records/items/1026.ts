@@ -1,7 +1,6 @@
 const item: Item = {
-  name: 'Blasting Wand',
   id: 1026,
-  rank: 'Basic',
+  name: 'Blasting Wand',
   buildsInto: [
     {
       id: 3115,
@@ -64,22 +63,23 @@ const item: Item = {
       gold: 2600,
     },
   ],
-  specialRecipe: 0,
-  noEffects: true,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1026_mage_t1_blastingwand.png',
-  simpleDescription: 'Moderately increases Ability Power',
-  stats: {
-    abilityPower: 45,
-  },
+  maps: [11, 12, 21, 35],
+  noEffects: true,
+  rank: 'Basic',
+  removed: false,
   shop: {
     prices: {
-      total: 850,
       combined: 850,
       sell: 340,
+      total: 850,
     },
     tags: ['MAGE', 'SUPPORT'],
   },
-  maps: [11, 12, 21, 35],
+  simpleDescription: 'Moderately increases Ability Power',
+  specialRecipe: 0,
+  stats: {
+    abilityPower: 45,
+  },
 }
 export default item

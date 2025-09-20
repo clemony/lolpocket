@@ -1,7 +1,6 @@
 const item: Item = {
-  name: 'Serrated Dirk',
   id: 3134,
-  rank: 'Epic',
+  name: 'Serrated Dirk',
   buildsFrom: [
     {
       id: 1036,
@@ -76,23 +75,24 @@ const item: Item = {
       gold: 2700,
     },
   ],
-  specialRecipe: 0,
-  noEffects: true,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3134_assassin_t2_serrateddirk.png',
+  maps: [11, 12, 21, 35],
+  noEffects: true,
+  rank: 'Epic',
+  removed: false,
+  shop: {
+    prices: {
+      combined: 300,
+      sell: 400,
+      total: 1000,
+    },
+    tags: ['ASSASSIN', 'ARMOR_PEN'],
+  },
   simpleDescription: 'Increases Attack Damage and Lethality',
+  specialRecipe: 0,
   stats: {
     attackDamage: 20,
     lethality: 10,
   },
-  shop: {
-    prices: {
-      total: 1000,
-      combined: 300,
-      sell: 400,
-    },
-    tags: ['ASSASSIN', 'ARMOR_PEN'],
-  },
-  maps: [11, 12, 21, 35],
 }
 export default item

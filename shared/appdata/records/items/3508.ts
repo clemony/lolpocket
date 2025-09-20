@@ -1,7 +1,7 @@
 const item: Item = {
-  name: 'Essence Reaver',
   id: 3508,
-  rank: 'Legendary',
+  name: 'Essence Reaver',
+  nicknames: ['er', '<s>bloothirster</s>'],
   buildsFrom: [
     {
       id: 1037,
@@ -19,32 +19,32 @@ const item: Item = {
       gold: 600,
     },
   ],
-  specialRecipe: 0,
-  noEffects: false,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3508_marksman_t3_essencereaver.png',
-  nicknames: ['er', '<s>bloothirster</s>'],
+  maps: [11, 12, 21, 35],
+  noEffects: false,
   passives: [
     {
       name: 'Essence Drain',
-      unique: true,
       effects:
         'Basic attacks on-hit restore 15 mana (+10% <b>bonus</b> AD) ad mana.',
+      unique: true,
     },
   ],
-  stats: {
-    attackDamage: 60,
-    criticalStrikeChance: 25,
-    abilityHaste: 15,
-  },
+  rank: 'Legendary',
+  removed: false,
   shop: {
     prices: {
-      total: 2900,
       combined: 375,
       sell: 1160,
+      total: 2900,
     },
     tags: ['MARKSMAN', 'MANA_AND_REG', 'ONHIT_EFFECTS'],
   },
-  maps: [11, 12, 21, 35],
+  specialRecipe: 0,
+  stats: {
+    abilityHaste: 15,
+    attackDamage: 60,
+    criticalStrikeChance: 25,
+  },
 }
 export default item

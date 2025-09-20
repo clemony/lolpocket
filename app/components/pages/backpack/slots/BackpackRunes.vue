@@ -12,10 +12,10 @@ const secondary = computed (() => {
 })
 
 const hasOneRune = computed (() => {
-  if (secondary.value == null || !secondary.value)
+  if (secondary.value===null || !secondary.value)
     return
   const r = Object.values(secondary.value.runes).flatMap(r => r.id)
-  return r.filter(r => r != 0)
+  return r.filter(r => r !== 0)
 }) */
 </script>
 

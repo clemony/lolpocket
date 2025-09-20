@@ -2,8 +2,8 @@ export function useMatchItems(puuid: string, matches: MatchData[]) {
   // TODO probably fix
 
   const player = matches.map(m => ({
+    data: m.participants.find(p => p.puuid === as().account.puuid),
     patch: m.gamePatch,
-    data: m.participants.find(p => p.puuid == as().account.puuid),
   }))
 
   const itemStats = new Map<
@@ -47,12 +47,12 @@ export function useMatchItems(puuid: string, matches: MatchData[]) {
 
         if (!itemStats.has(itemId)) {
           itemStats.set(itemId, {
-            games: 0,
-            wins: 0,
-            losses: 0,
-            winrate: 0,
-            matchIndexes: [],
             gamePatches: [],
+            games: 0,
+            losses: 0,
+            matchIndexes: [],
+            winrate: 0,
+            wins: 0,
           })
         }
 
@@ -83,14 +83,14 @@ export function useMatchItems(puuid: string, matches: MatchData[]) {
           * 100
 
         return {
-          item: ix().itemNameById(itemId),
-          games: stats.games,
-          win: stats.wins,
-          loss: stats.losses,
-          winrate: stats.winrate,
           bayesianWinrate,
-          matchIndexes: stats.matchIndexes,
           gamePatches: stats.gamePatches,
+          games: stats.games,
+          item: ix().itemNameById(itemId),
+          loss: stats.losses,
+          matchIndexes: stats.matchIndexes,
+          win: stats.wins,
+          winrate: stats.winrate,
         }
       })
       .sort((a, b) => b.bayesianWinrate - a.bayesianWinrate)

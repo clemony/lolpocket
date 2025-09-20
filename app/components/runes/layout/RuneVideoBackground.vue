@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { path, class: className } = defineProps<{
+const { class: className, path } = defineProps<{
   path: PathName
   class?: HTMLAttributes['class']
 }>()
@@ -9,15 +9,15 @@ const url
 
 const runeVideo = computed(() => {
   return `${url}${
-    path == 'Sorcery'
+    path === 'Sorcery'
       ? 'sorcery/background_loop.webm'
-      : path == 'Inspiration'
+      : path === 'Inspiration'
         ? 'inspiration/background_loop.webm'
-        : path == 'Resolve'
+        : path === 'Resolve'
           ? 'resolve/background_loop.webm'
-          : path == 'Domination'
+          : path === 'Domination'
             ? 'domination/background_loop.webm'
-            : path == 'Precision'
+            : path === 'Precision'
               ? 'precision/background_loop.webm'
               : ''
   }`

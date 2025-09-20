@@ -4,8 +4,7 @@ const { champion, championId } = defineProps<{
   championId?: number
 }>()
 
-const ix = useIndexStore()
-const name = computed(() => ix.champNameById(champion?.id ?? championId))
+const name = computed(() => ix().champNameById(champion?.id ?? championId))
 const id = computed(() => champion?.id ?? championId)
 const level = computed(() =>
   champion?.level >= 10
@@ -19,7 +18,7 @@ const level = computed(() =>
 <template>
   <SplashCard
     :alt="name"
-    :skin-url="getSplash(ix.champKeyById(id), 'tile')"
+    :skin-url="getSplash(ix().champKeyById(id), 'tile')"
     class="pb-0.5 group/photo">
     <template #banner>
       <Img

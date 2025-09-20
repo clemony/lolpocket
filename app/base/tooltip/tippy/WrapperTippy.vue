@@ -3,8 +3,8 @@ import { roundArrow } from 'vue-tippy'
 
 const {
   content,
-  placement = 'bottom',
   offset = [0, 10],
+  placement = 'bottom',
 } = defineProps<{
   content: string
   placement?: string

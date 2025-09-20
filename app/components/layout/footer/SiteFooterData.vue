@@ -6,7 +6,7 @@ const { class: className } = defineProps<{
 }>()
 
 const source = 'contact@lolpocket.win'
-const { text, copy, copied, isSupported } = useClipboard({ source })
+const { copied, copy, isSupported, text } = useClipboard({ source })
 
 const copyMsg = computed(() => {
   return copied ? 'Copied!' : 'Copy'
@@ -46,7 +46,7 @@ const copyMsg = computed(() => {
           {{ link.name }}
         </NuxtLink>
         <icon
-          v-if="i + 1 != siteInfoLinks.length"
+          v-if="i + 1 !== siteInfoLinks.length"
           name="slash"
           class="text-nc size-4 opacity-70" />
       </li>

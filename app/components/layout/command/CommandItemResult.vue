@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { item, activeItem: mv } = defineProps<{
+const { activeItem: mv, item } = defineProps<{
   item: ItemIndex
   activeItem: number | null
 }>()

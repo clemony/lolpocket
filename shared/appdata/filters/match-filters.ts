@@ -3,14 +3,12 @@ export function matchFilters(
   match: MatchData,
   options: MatchFilter
 ) {
-  const { patch, queue, champion, ally, role, ignoreRole = false } = options
+  const { ally, champion, ignoreRole = false, patch, queue, role } = options
 
-  const ds = useDataStore()
-
-  const player = match.participants.find(p => p.puuid == puuid)
+  const player = match.participants.find(p => p.puuid === puuid)
 
   const matchesPatch
-    = !patch || patch === ds.currentPatch || match.gamePatch === patch
+    = !patch || patch === ds().currentPatch || match.gamePatch === patch
 
   const matchesQueue
     = !queue || Number(queue) === 0 || match.queueId === Number(queue)

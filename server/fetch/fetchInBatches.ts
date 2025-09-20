@@ -1,3 +1,4 @@
+import type { MatchData } from './../../shared/types/types.match'
 import { getMatchById } from '../api/riotClient'
 
 /**

@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 definePageMeta({
+  key: 'l',
   name: 'live',
   title: 'live match',
   icon: 'lucide:activity',

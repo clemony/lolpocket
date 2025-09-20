@@ -1,7 +1,7 @@
 const item: Item = {
-  name: 'Boots of Swiftness',
   id: 3009,
-  rank: 'Boots',
+  name: 'Boots of Swiftness',
+  nicknames: ['swifties'],
   buildsFrom: [
     {
       id: 1001,
@@ -16,29 +16,29 @@ const item: Item = {
       gold: 1500,
     },
   ],
-  specialRecipe: 0,
-  noEffects: false,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3009_class_t2_bootsofswiftness.png',
-  simpleDescription: 'Enhances Move Speed and reduces the effect of slows',
-  nicknames: ['swifties'],
+  maps: [11, 12, 21, 35],
+  noEffects: false,
   passives: [
     {
       name: 'Fleetfooted',
-      unique: true,
       effects: 'Gain 25% slow resist.',
+      unique: true,
     },
   ],
+  rank: 'Boots',
+  removed: false,
+  shop: {
+    prices: {
+      combined: 700,
+      sell: 400,
+      total: 1000,
+    },
+  },
+  simpleDescription: 'Enhances Move Speed and reduces the effect of slows',
+  specialRecipe: 0,
   stats: {
     flatMovespeed: 55,
   },
-  shop: {
-    prices: {
-      total: 1000,
-      combined: 700,
-      sell: 400,
-    },
-  },
-  maps: [11, 12, 21, 35],
 }
 export default item

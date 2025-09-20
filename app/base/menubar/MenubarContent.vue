@@ -5,9 +5,9 @@ import { MenubarContent, MenubarPortal, useForwardProps } from 'reka-ui'
 const props = withDefaults(
   defineProps<MenubarContentProps & { class?: HTMLAttributes['class'] }>(),
   {
+    sideOffset: 8,
     align: 'start',
     alignOffset: -4,
-    sideOffset: 8,
   }
 )
 

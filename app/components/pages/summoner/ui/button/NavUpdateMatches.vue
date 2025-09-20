@@ -10,9 +10,9 @@ const { class: className, variant = 'shadow' } = defineProps<{
 const state = useSummonerInject()
 
 const {
-  throttled: update,
   cooldown,
   isLoading,
+  throttled: update,
 } = throttleFunction(
   () => state.fetchNewMatches(),
   120_000,

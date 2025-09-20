@@ -7,11 +7,11 @@ const match = computed(() => {
 })
 
 const blue = computed(() => {
-  return match.value.participants.filter(p => p.teamId == 100)
+  return match.value.participants.filter(p => p.teamId === 100)
 })
 
 const red = computed<Player[]>(() => {
-  return match.value.participants.filter(p => p.teamId == 200)
+  return match.value.participants.filter(p => p.teamId === 200)
 })
 
 function navigate() {}

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { PaginationList } from 'reka-ui'
 import type { PaginationListProps } from 'reka-ui'
+import { PaginationList } from 'reka-ui'
 
 const props = defineProps<
   PaginationListProps & { class?: HTMLAttributes['class'] }

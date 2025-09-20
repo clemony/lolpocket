@@ -2,8 +2,8 @@
 import { shardObject } from '#shared/appdata/records/shards'
 
 const {
-  class: className,
   id,
+  class: className,
   label,
 } = defineProps<{
   id?: number | null
@@ -12,7 +12,7 @@ const {
 }>()
 
 const shard = computed(() =>
-  shardObject.flatMap(o => o.shards).find(s => s.id == id)
+  shardObject.flatMap(o => o.shards).find(s => s.id === id)
 )
 </script>
 

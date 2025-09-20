@@ -1,9 +1,7 @@
 <script lang="ts" setup>
-const as = useAccountStore()
-const ss = useSummonerStore()
-const summoner = computed(() => ss.getSummoner(as.account?.puuid))
+const summoner = computed(() => ss().getSummoner(as().account?.puuid))
 
-// "`/summoner/${as.account.region}/${as.account.name}_${as.account.tag}`"
+// "`/summoner/$as().account.region}/$as().account.name}_$as().account.tag}`"
 </script>
 
 <template>

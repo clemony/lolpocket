@@ -3,10 +3,8 @@ import { toast } from 'vue-sonner'
 // delete
 
 export function deletePocket(pocket) {
-  const ps = usePocketStore()
-  const as = useAccountStore()
   const route = useRoute()
-  const inPocket = route.path == `/pocket/${pocket.key}`
+  const inPocket = route.path === `/pocket/${pocket.key}`
 
   pocket.location.folder = 'trash'
 
@@ -14,12 +12,10 @@ export function deletePocket(pocket) {
     navigateTo('/backpack')
   }
 
-  if (as.settings.alertDeletePocket) {
+  if (as().settings.alertDeletePocket) {
     const newPocketToast = toast.success(
       `Pocket ${pocket.name} sent to trash.`,
       {
-        description: 'You can restore it for up to 30 days.',
-        duration: 7000,
         action: {
           label: 'Restore?',
           // onClick: () => navigateTo({ path: `/${newPocket.key}` }),
@@ -28,6 +24,8 @@ export function deletePocket(pocket) {
           label: '×',
           onClick: () => toast.dismiss(newPocketToast),
         },
+        description: 'You can restore it for up to 30 days.',
+        duration: 7000,
       }
     )
 

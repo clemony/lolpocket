@@ -14,7 +14,7 @@ export function useSimpleSearch<T>(
     (val) => {
       fuse.value = new Fuse(val, { keys: [keys || '', 'name'], threshold: 0.3 })
     },
-    { immediate: true, deep: true }
+    { deep: true, immediate: true }
   )
 
   const results = computed<T[]>(() => {

@@ -1,8 +1,7 @@
 <script lang="ts" setup>
-import { PopoverContent, PopoverPortal, useForwardPropsEmits } from 'reka-ui'
-
-import { useScroll as useScrolly } from '@vueuse/core'
 import type { PopoverContentEmits, PopoverContentProps } from 'reka-ui'
+import { useScroll as useScrolly } from '@vueuse/core'
+import { PopoverContent, PopoverPortal, useForwardPropsEmits } from 'reka-ui'
 
 defineOptions({
   inheritAttrs: false,
@@ -16,8 +15,8 @@ const props = withDefaults(
     }
   >(),
   {
-    align: 'center',
     sideOffset: 4,
+    align: 'center',
     position: 'popper',
   }
 )
@@ -28,7 +27,7 @@ const delegatedProps = reactiveOmit(props, 'class')
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 
 const el = ref()
-const { x, y, isScrolling, arrivedState, directions } = useScrolly(el)
+const { arrivedState, directions, isScrolling, x, y } = useScrolly(el)
 watch(
   () => arrivedState.top,
   (newVal) => {
@@ -45,7 +44,7 @@ watch(
       <PopperScrollUpButton
         :class="{
           'opacity-0 pointer-events-none  transition-opacity duration-300':
-            arrivedState.top == true,
+            arrivedState.top === true,
         }" />
 
       <div
@@ -64,7 +63,7 @@ watch(
       <PopperScrollDownButton
         :class="{
           'opacity-0 pointer-events-none  transition-opacity duration-300':
-            arrivedState.bottom == true,
+            arrivedState.bottom === true,
         }" />
     </PopoverContent>
   </PopoverPortal>

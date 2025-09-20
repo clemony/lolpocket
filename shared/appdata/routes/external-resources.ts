@@ -6,55 +6,55 @@ export const externalLinks = [
     submenu: [
       {
         name: 'Official',
-        open: true,
         items: [
           {
             name: 'Dev Updates',
-            url: 'https://www.leagueoflegends.com/en-us/news/dev/',
             icon: '/img/logos/fist.webp',
+            url: 'https://www.leagueoflegends.com/en-us/news/dev/',
           },
           {
             name: 'Patch Notes',
-            url: 'https://www.leagueoflegends.com/en-us/news/tags/patch-notes/',
             icon: '/img/logos/league2.webp',
+            url: 'https://www.leagueoflegends.com/en-us/news/tags/patch-notes/',
           },
           {
             name: 'Wiki',
-            url: 'https://wiki.leagueoflegends.com/en-us/',
             icon: '/img/logos/wiki.webp',
+            url: 'https://wiki.leagueoflegends.com/en-us/',
           },
         ],
+        open: true,
       },
       {
         name: 'Statistics',
-        open: true,
         items: [
           {
             name: 'Lolalytics',
-            url: 'https://lolalytics.com',
             icon: '/img/logos/lolalytics.webp',
+            url: 'https://lolalytics.com',
           },
           {
             name: 'op.gg',
-            url: 'https://www.op.gg',
             icon: '/img/logos/opgg2.webp',
+            url: 'https://www.op.gg',
           },
           {
             name: 'u.gg',
-            url: 'https://u.gg',
             icon: '/img/logos/ugg2.webp',
+            url: 'https://u.gg',
           },
           {
             name: 'League of Graphs',
-            url: 'https://www.leagueofgraphs.com',
             icon: '/img/logos/LoG.webp',
+            url: 'https://www.leagueofgraphs.com',
           },
           {
             name: 'League of Items',
-            url: 'https://leagueofitems.com',
             icon: '/img/logos/LoI.webp',
+            url: 'https://leagueofitems.com',
           },
         ],
+        open: true,
       },
     ],
   },

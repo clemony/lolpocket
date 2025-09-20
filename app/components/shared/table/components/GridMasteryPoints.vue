@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import 'assets/css/components/mastery-progress.css'
-
 import { motion } from 'motion-v'
 import { ProgressIndicator, ProgressRoot } from 'reka-ui'
 

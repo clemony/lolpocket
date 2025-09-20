@@ -14,14 +14,14 @@ const wrapperClass = 'flex h-12  items-center justify-between border-b border-b-
       <h3 class="mb-4 dst">
         Abilities
       </h3>
-      <Blink
+      <BtnLink
         v-for="ability in champion.abilities"
         :key="ability.name"
         as="li"
         size="xl"
         :class="
           cn('justify-start  !gap-4 rounded-xl', {
-            'btn-active !bg-tint-b2/70 drop-shadow-sm drop-shadow-black/6': route.hash == `#${ability.key}`,
+            'btn-active !bg-tint-b2/70 drop-shadow-sm drop-shadow-black/6': route.hash === `#${ability.key}`,
           })
         "
         :to="{ path: route.path, hash: `#${ability.key}` }"
@@ -33,7 +33,7 @@ const wrapperClass = 'flex h-12  items-center justify-between border-b border-b-
             :alt="ability.name" />
         </span>
         {{ ability.name }}
-      </Blink>
+      </BtnLink>
     </menu>
 
     <ChampionStats

@@ -4,8 +4,6 @@ import { getDeviceKey } from '~/utils/config/handleDevice'
 const props = defineProps<{
   pocket: Pocket
 }>()
-
-const as = useAccountStore()
 </script>
 
 <template>

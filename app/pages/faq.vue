@@ -1,8 +1,9 @@
 <script lang="ts" setup>
 definePageMeta({
-  level: 1,
-  order: 9,
   name: 'FAQ',
+  title: 'Support',
+  icon: 'lucide:circle-question-mark',
+  level: 0
 })
 </script>
 

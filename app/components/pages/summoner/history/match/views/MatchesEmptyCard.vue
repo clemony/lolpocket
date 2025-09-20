@@ -15,7 +15,7 @@ const props = defineProps<{
         class="size-8 dst" />
 
       <p
-        v-if="props.error == 'filter'"
+        v-if="props.error === 'filter'"
         class="font-medium">
         No matches available with these filters.
         <br />

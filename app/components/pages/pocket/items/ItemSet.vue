@@ -21,7 +21,7 @@ function onEnd() {
   <div
     :key="setName"
     class="py-3 px-2 group/set">
-    <!-- <input v-model="is.selectedItemSet" type="radio" name="selected-set" class="!hidden z-0" /> -->
+    <!-- <input v-model="is().selectedItemSet" type="radio" name="selected-set" class="!hidden z-0" /> -->
     <EditableInputBox
       :model-value="setName"
       class="*:font-semibold *:tracking-tight focus-within:btn focus-within:btn-sm z-0focus-within:rounded-md focus-within:justify-start focus-within:px-2 focus-within:ring focus-within:ring-neutral/60 max-w-90 h-10 cursor-pointer focus-within:-top-4 focus-within:left-3 transition-colors duration-300 focus-within:text-start focus-within:bg-b1 focus-within:hover:bg-b1 field-legend [&_.edit-trigger]:opacity-0" />

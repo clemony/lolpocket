@@ -1,7 +1,6 @@
 const item: Item = {
-  name: 'Scout\'s Slingshot',
   id: 3144,
-  rank: 'Epic',
+  name: 'Scout\'s Slingshot',
   buildsFrom: [
     {
       id: 1042,
@@ -36,30 +35,31 @@ const item: Item = {
       gold: 2650,
     },
   ],
-  specialRecipe: 0,
-  noEffects: false,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3144_scoutslingshot.png',
-  simpleDescription: 'Activate to deal magic damage and slow target champion',
+  maps: [11, 12, 21, 35],
+  noEffects: false,
   passives: [
     {
       name: 'Bullseye',
-      unique: true,
       effects:
         'Damaging an enemy champion deals 40 <b>bonus</b> magic damage (40 second cooldown, reduced by 1 second ).',
+      unique: true,
     },
   ],
-  stats: {
-    attackSpeed: 20,
-  },
+  rank: 'Epic',
+  removed: false,
   shop: {
     prices: {
-      total: 600,
       combined: 100,
       sell: 240,
+      total: 600,
     },
     tags: ['MARKSMAN', 'ONHIT_EFFECTS'],
   },
-  maps: [11, 12, 21, 35],
+  simpleDescription: 'Activate to deal magic damage and slow target champion',
+  specialRecipe: 0,
+  stats: {
+    attackSpeed: 20,
+  },
 }
 export default item

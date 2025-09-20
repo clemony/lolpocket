@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const {
-  class: className,
   name,
+  class: className,
   iconScale,
 } = defineProps<{
   class?: HTMLAttributes['class']

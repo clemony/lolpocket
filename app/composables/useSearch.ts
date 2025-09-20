@@ -12,21 +12,19 @@ export async function useSearch(
   options: UseSearchOptions = {}
 ) {
   const searchQuery = query
-  const ps = usePocketStore()
   const router = useRouter()
 
   // champion source
   // TODO runes
-  const ix = useIndexStore()
   const championSource
     = isRef(options.customChampions)
       ? options.customChampions
-      : ref(options.customChampions ?? ix.champions)
+      : ref(options.customChampions ?? ix().champions)
 
   const itemSource
     = isRef(options.customItems)
       ? options.customItems
-      : ref(options.customItems ?? ix.items)
+      : ref(options.customItems ?? ix().items)
 
   const championRef = computed(() => Object.values(unref(championSource)))
   const itemsRef = computed(() => Object.values(unref(itemSource)))
@@ -67,7 +65,7 @@ export async function useSearch(
   const pocketFuse
     = options.includePockets !== false
       ? ref(
-          new Fuse(ps.pockets, {
+          new Fuse(ps().pockets, {
             keys: ['name', 'champions', 'tags'],
             includeMatches: true,
             threshold: 0.3,
@@ -103,8 +101,8 @@ export async function useSearch(
       grouped[section].push(route)
     }
     return Object.entries(grouped).map(([section, routes]) => ({
-      section,
       routes,
+      section,
     }))
   })
 
@@ -120,12 +118,12 @@ export async function useSearch(
   )
 
   return {
-    searchQuery,
-    pageResult,
-    groupedPages,
-    pocketResult,
     championResult,
+    groupedPages,
     itemResult,
+    pageResult,
+    pocketResult,
     resultsLength,
+    searchQuery,
   }
 }

@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-const ms = useMatchStore()
-const ds = useDataStore()
 const userMatchData = []
 
 // TODO usermatchdata
@@ -14,7 +12,7 @@ const patchStats = computed(() => {
   // Step 1: Group matches by patch
   userMatchData.forEach(({ patch, win }) => {
     if (!patchMap.has(patch)) {
-      patchMap.set(patch, { games: 0, wins: 0, losses: 0, winrate: 0 })
+      patchMap.set(patch, { games: 0, losses: 0, winrate: 0, wins: 0 })
     }
 
     const stats = patchMap.get(patch)!
@@ -23,12 +21,12 @@ const patchStats = computed(() => {
     stats.winrate = (stats.wins / stats.games) * 100
   })
 
-  const allPatches = ds.patchList
+  const allPatches = ds().patchList
 
   // Step 3: Ensure every patch exists in `patchMap`
   const filledPatches = allPatches.map(patch => ({
-    patch,
     games: patchMap.get(patch)?.games ?? 0,
+    patch,
     winrate: patchMap.get(patch)?.winrate ?? 0,
   }))
 
@@ -36,7 +34,6 @@ const patchStats = computed(() => {
 })
 
 const data = computed(() => ({
-  labels: patchStats.value.map(p => p.patch),
   datasets: [
     {
       data: patchStats.value.map(p => p.winrate ?? 0),
@@ -45,38 +42,13 @@ const data = computed(() => ({
       data: patchStats.value.map(p => p.games ?? 0),
     },
   ],
+  labels: patchStats.value.map(p => p.patch),
 }))
 
 const options = {
   layout: {
     padding: {
       bottom: 30,
-    },
-  },
-  scales: {
-    y: {
-      grid: {
-        display: false,
-      },
-      min: 0,
-      max: 100,
-      ticks: {
-        display: false,
-      },
-      border: {
-        display: false,
-      },
-    },
-    x: {
-      ticks: {
-        display: false,
-      },
-      grid: {
-        display: false,
-      },
-      border: {
-        display: false,
-      },
     },
   },
   plugins: {
@@ -94,6 +66,32 @@ const options = {
 
           return null
         },
+      },
+    },
+  },
+  scales: {
+    x: {
+      grid: {
+        display: false,
+      },
+      border: {
+        display: false,
+      },
+      ticks: {
+        display: false,
+      },
+    },
+    y: {
+      grid: {
+        display: false,
+      },
+      border: {
+        display: false,
+      },
+      max: 100,
+      min: 0,
+      ticks: {
+        display: false,
       },
     },
   },

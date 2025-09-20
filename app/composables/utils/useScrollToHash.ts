@@ -13,8 +13,8 @@ export function useScrollToHash(containerSelector: string, offset?: number) {
 
     if (container && target) {
       container.scrollTo({
-        top: target.offsetTop - container.offsetTop + (offset || 0),
         behavior: opts?.instant ? 'auto' : 'smooth',
+        top: target.offsetTop - container.offsetTop + (offset || 0),
       })
     }
   }

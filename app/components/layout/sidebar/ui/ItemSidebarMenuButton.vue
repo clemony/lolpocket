@@ -3,10 +3,10 @@ import type { RouteRecordRaw } from 'vue-router'
 
 const {
   class: className,
-  size,
-  item,
-  text,
   full,
+  item,
+  size,
+  text,
 } = defineProps<{
   class?: HTMLAttributes['class']
   item: RouteRecordRaw
@@ -25,8 +25,8 @@ const {
       :name="String(item.meta?.icon)"
       :class="
         cn('p-0', {
-          '**:!stroke-[2.1] !size-4.5': item.name == 'live',
-          '!text-bc/60': item.name == 'mastery',
+          '**:!stroke-[2.1] !size-4.5': item.name === 'live',
+          '!text-bc/60': item.name === 'mastery',
         })
       " />
     <span class="capitalize">{{ item.meta.title ?? item.name }}</span>

@@ -1,7 +1,7 @@
 const item: Item = {
-  name: 'Bramble Vest',
   id: 3076,
-  rank: 'Epic',
+  name: 'Bramble Vest',
+  nicknames: ['grievous wounds'],
   buildsFrom: [
     {
       id: 1029,
@@ -26,30 +26,30 @@ const item: Item = {
       gold: 2450,
     },
   ],
-  specialRecipe: 0,
-  noEffects: false,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3076_tank_t2_bramblevest.png',
-  nicknames: ['grievous wounds'],
+  maps: [11, 12, 21, 35],
+  noEffects: false,
   passives: [
     {
       name: 'Thorns',
-      unique: true,
       effects:
         'When struck by a basic attack on-hit, deal 10 magic damage to the attacker and, if they are a champion, inflict them with <img src="/img/icons/grievous-wounds.webp" class="tip-icon" />Grievous Wounds for 3 seconds.',
+      unique: true,
     },
   ],
-  stats: {
-    armor: 30,
-  },
+  rank: 'Epic',
+  removed: false,
   shop: {
     prices: {
-      total: 800,
       combined: 200,
       sell: 320,
+      total: 800,
     },
     tags: ['TANK'],
   },
-  maps: [11, 12, 21, 35],
+  specialRecipe: 0,
+  stats: {
+    armor: 30,
+  },
 }
 export default item

@@ -2,6 +2,11 @@ import process from 'node:process'
 import { fileURLToPath } from 'node:url'
 
 export default defineNuxtConfig({
+  alias: {
+    '@scripts': fileURLToPath(new URL('./scripts', import.meta.url)),
+    '@server': fileURLToPath(new URL('./server', import.meta.url)),
+    '@shared': './shared',
+  },
   components: [
     {
       path: './base',
@@ -89,12 +94,8 @@ export default defineNuxtConfig({
     componentPrefix: 'i',
   },
   typescript: {
-    nodeTsConfig: {
-      include: ['./shared/appdata', './shared/utils', './shared/types'],
-    },
-    sharedTsConfig: {
-      include: ['./appdata', './utils', './types'],
-    },
+    nodeTsConfig: { include: ['shared', 'server', 'scripts'] },
+    sharedTsConfig: { include: ['shared', 'server', 'scripts'] },
     strict: false,
     typeCheck: true,
   },
@@ -127,5 +128,43 @@ export default defineNuxtConfig({
   }, */
 
   compatibilityDate: '2025-07-18',
-  ssr: false,
+  routeRules: {
+    // Root pages
+    '/': { ssr: false },
+    '/backpack': { ssr: false },
+    '/champions': { ssr: false },
+    '/faq': { ssr: false },
+    '/library': { ssr: false },
+    '/nexus': { ssr: false },
+    '/pocket': { ssr: false },
+    '/tools': { ssr: false },
+
+    // Account pages
+    '/account/**': { ssr: false },
+
+    // Backpack folder
+    '/backpack/**': { ssr: false },
+
+    // Champions folder
+    '/champions/**': { ssr: false },
+
+    // FAQ folder
+    '/faq/**': { ssr: false },
+
+    // Library folder
+    '/library/**': { ssr: false },
+
+    // Pocket folder
+    '/pocket/**': { ssr: false },
+
+    // Summoner folder
+    '/summoner/**': { ssr: false },
+
+    // Tools folder
+    '/tools/**': { ssr: false },
+
+    // Auth folder — keep SSR enabled
+    '/auth/**': { ssr: true },
+  },
+  ssr: true,
 })

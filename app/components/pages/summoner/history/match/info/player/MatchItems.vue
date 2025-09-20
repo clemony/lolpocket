@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const {
-  player,
   class: className,
+  player,
   wrapperClass,
 } = defineProps<{
   player: Player
@@ -9,7 +9,6 @@ const {
   wrapperClass?: HTMLAttributes['class']
 }>()
 
-const ds = useDataStore()
 const items = computed(() => {
   const list = [
     player.item0,
@@ -22,8 +21,6 @@ const items = computed(() => {
 
   return Object.values(list)
 })
-
-const ix = useIndexStore()
 </script>
 
 <template>
@@ -41,7 +38,7 @@ const ix = useIndexStore()
       <Item
         v-if="items[i]"
         :id="items[i]"
-        v-tippy="ix.itemNameById(items[i])"
+        v-tippy="ix().itemNameById(items[i])"
         :alt="items[i]"
         class="size-10 rounded-lg" />
 

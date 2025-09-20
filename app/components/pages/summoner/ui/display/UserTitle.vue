@@ -6,10 +6,9 @@ const { class: className, summoner } = defineProps<{
 
 // TODO hookup to supbase with public data &  useSummoner
 const text = computed(() => {
-  const as = useAccountStore()
-  console.log('💠 - as.publicData:', as.publicData)
-  as.publicData.title = 'Pocket Pet'
-  return as.publicData?.title ?? 'Pocket Player'
+  console.log('💠 -as().publicData:', as().publicData)
+  as().publicData.title = 'Pocket Pet'
+  return as().publicData?.title ?? 'Pocket Player'
 })
 console.log('💠 - text:', text)
 </script>

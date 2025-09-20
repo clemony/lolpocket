@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { reactiveOmit } from '@vueuse/core'
 import type { Easing, EasingDefinition } from 'motion-v'
-import { AnimatePresence } from 'motion-v'
 import type { DialogContentEmits, DialogContentProps } from 'reka-ui'
+import { reactiveOmit } from '@vueuse/core'
+import { AnimatePresence } from 'motion-v'
 import {
   DialogClose,
   DialogContent,

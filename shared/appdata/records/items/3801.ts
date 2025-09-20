@@ -1,7 +1,6 @@
 const item: Item = {
-  name: 'Crystalline Bracer',
   id: 3801,
-  rank: 'Epic',
+  name: 'Crystalline Bracer',
   buildsFrom: [
     {
       id: 1028,
@@ -26,23 +25,24 @@ const item: Item = {
       gold: 3000,
     },
   ],
-  specialRecipe: 0,
-  noEffects: true,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3801_tank_t2_crystallinebracer.png',
+  maps: [11, 12, 21, 35],
+  noEffects: true,
+  rank: 'Epic',
+  removed: false,
+  shop: {
+    prices: {
+      combined: 100,
+      sell: 320,
+      total: 800,
+    },
+    tags: ['TANK', 'SUPPORT'],
+  },
   simpleDescription: 'Grants Health and Health Regen',
+  specialRecipe: 0,
   stats: {
     health: 200,
     healthRegen: 100,
   },
-  shop: {
-    prices: {
-      total: 800,
-      combined: 100,
-      sell: 320,
-    },
-    tags: ['TANK', 'SUPPORT'],
-  },
-  maps: [11, 12, 21, 35],
 }
 export default item

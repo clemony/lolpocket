@@ -14,7 +14,6 @@ const { class: className } = defineProps<{
 
 const emit = defineEmits(['dialog:close'])
 
-const as = useAccountStore()
 const champQuery = ref<string | null>('')
 const selectedChampion = ref<string | null>(null)
 
@@ -78,7 +77,7 @@ function reset() {
             <div
               class="search-wrapper w-full group-not-focus-within/input:italic h-full group-not-focus-within/input:text-bc/70" />
             <button
-              v-if="champQuery != ''"
+              v-if="champQuery !== ''"
               class="btn btn-ghost btn-xs btn-square absolute right-2"
               @click="reset()">
               <icon
@@ -133,7 +132,7 @@ function reset() {
                   <div
                     :class="
                       cn('btn btn-ghost w-full justify-start h-[34px] ', {
-                        'btn-active': option.key == selectedChampion,
+                        'btn-active': option.key === selectedChampion,
                       })
                     ">
                     <ChampionIcon
@@ -168,7 +167,7 @@ function reset() {
               :alt="skin.name"
               :skin-url="getSkinSplash(selectedChampion, skin, 'tile')"
               @click="
-                as.publicData.splash = getSkinSplash(
+                as().publicData.splash = getSkinSplash(
                   selectedChampion,
                   skin,
                   'centered',

@@ -1,7 +1,7 @@
 const item: Item = {
-  name: 'Needlessly Large Rod',
   id: 1058,
-  rank: 'Basic',
+  name: 'Needlessly Large Rod',
+  nicknames: ['nlr'],
   buildsInto: [
     {
       id: 3146,
@@ -39,23 +39,23 @@ const item: Item = {
       gold: 7187,
     },
   ],
-  specialRecipe: 0,
-  noEffects: true,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1058_mage_t1_largerod.png',
-  simpleDescription: 'Greatly increases Ability Power',
-  nicknames: ['nlr'],
-  stats: {
-    abilityPower: 65,
-  },
+  maps: [11, 12, 21, 35],
+  noEffects: true,
+  rank: 'Basic',
+  removed: false,
   shop: {
     prices: {
-      total: 1200,
       combined: 1200,
       sell: 480,
+      total: 1200,
     },
     tags: ['MAGE'],
   },
-  maps: [11, 12, 21, 35],
+  simpleDescription: 'Greatly increases Ability Power',
+  specialRecipe: 0,
+  stats: {
+    abilityPower: 65,
+  },
 }
 export default item

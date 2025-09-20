@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { motion } from 'motion-v'
-
 import Fuse from 'fuse.js'
+import { motion } from 'motion-v'
 
 const props = withDefaults(
   defineProps<{
@@ -20,10 +19,6 @@ const emit = defineEmits(['update:query'])
 
 const route = useRoute()
 
-const is = useItemStore()
-
-const ix = useIndexStore()
-
 const searchQuery = ref('')
 /*
 watchEffect(() => {
@@ -35,7 +30,7 @@ const fuse = ref<Fuse<any> | null>(null)
 
 // Initialize Fuse once the items are available
 watch(
-  () => Object.values(ix.items),
+  () => Object.values(ix().items),
   (newItems) => {
     if (newItems && newItems.length > 0) {
       fuse.value = new Fuse(newItems, {
@@ -50,7 +45,7 @@ watch(
 
 const searchResult = computed(() => {
   if (!searchQuery.value) {
-    return ix.items || []
+    return ix().items || []
   }
 
   if (!fuse.value)
@@ -62,9 +57,9 @@ const searchResult = computed(() => {
 // TODO result filter
 watch(searchResult, (newSearchResults) => {
   filters.result = Object.values(newSearchResults)
-  if (route.path == '/items/stats') {
+  if (route.path==='/items/stats') {
     setTimeout(() => {
-      // is.itemGridApi.setGridOption('rowData', filterDbItems())
+      // is().itemGridApi.setGridOption('rowData', filterDbItems())
     }, 300)
   }
 })
@@ -84,8 +79,8 @@ const variants = {
   expanded: {
     width: '220px',
     borderRadius: '1.2rem',
-    padding: '10px',
     gap: '10px',
+    padding: '10px',
   },
 }
 
@@ -100,10 +95,10 @@ const inputVariants = {
   },
 }
 
-const { filters, setFilter, clearFilters } = useItemFilter()
+const { clearFilters, filters, setFilter } = useItemFilter()
 
 watchEffect(() => {
-  if (searchQuery.value == '' || searchQuery.value == undefined)
+  if (searchQuery.value === '' || searchQuery.value === undefined)
     searchQuery.value = null
 })
 </script>
@@ -123,7 +118,7 @@ watchEffect(() => {
       ease: 'easeOut',
     }"
     while-hover="expanded"
-    :animate="searchQuery != null ? 'expanded' : 'collapsed'">
+    :animate="searchQuery !== null ? 'expanded' : 'collapsed'">
     <motion.div :variants="inputVariants">
       <slot>
         <Input
@@ -136,7 +131,7 @@ watchEffect(() => {
     </motion.div>
 
     <button
-      :disabled="searchQuery == null"
+      :disabled="searchQuery === null"
       class="btn btn-ghost btn-circle btn-xs hover:bg-b3/40 absolute z-2 left-1.5 top-1.5 pointer-events-auto"
       @click="clearFilters">
       <icon

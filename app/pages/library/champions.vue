@@ -5,7 +5,6 @@ definePageMeta({
   path: '/library/champions',
 })
 // const { filters, setFilter, filtered } = useItemFilter()
-const cs = useChampStore()
 
 const tabs = ref('grid')
 </script>
@@ -20,13 +19,13 @@ const tabs = ref('grid')
         <IndicatorTabsList class="w-80 shrink-0  **:pointer-events-auto grid grid-cols-2 h-10 border !border-b3/70 bg-b2">
           <IndicatorTabsTrigger
             value="grid"
-            :class="{ '!text-nc': tabs == 'grid' }">
+            :class="{ '!text-nc': tabs==='grid' }">
             Grid
           </IndicatorTabsTrigger>
 
           <IndicatorTabsTrigger
             value="list"
-            :class="{ '!text-nc': tabs == 'list' }">
+            :class="{ '!text-nc': tabs==='list' }">
             List
           </IndicatorTabsTrigger>
 

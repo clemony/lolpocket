@@ -1,7 +1,6 @@
 const item: Item = {
-  name: 'The Brutalizer',
   id: 2020,
-  rank: 'Epic',
+  name: 'The Brutalizer',
   buildsFrom: [
     {
       id: 2022,
@@ -31,23 +30,24 @@ const item: Item = {
       gold: 3000,
     },
   ],
-  specialRecipe: 0,
-  noEffects: true,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2020_thebrutalizer.png',
-  stats: {
-    attackDamage: 25,
-    lethality: 5,
-    abilityHaste: 10,
-  },
+  maps: [11, 12, 21, 35],
+  noEffects: true,
+  rank: 'Epic',
+  removed: false,
   shop: {
     prices: {
-      total: 1337,
       combined: 212,
       sell: 534,
+      total: 1337,
     },
     tags: ['ASSASSIN'],
   },
-  maps: [11, 12, 21, 35],
+  specialRecipe: 0,
+  stats: {
+    abilityHaste: 10,
+    attackDamage: 25,
+    lethality: 5,
+  },
 }
 export default item

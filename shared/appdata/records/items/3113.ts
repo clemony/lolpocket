@@ -1,7 +1,7 @@
 const item: Item = {
-  name: 'Aether Wisp',
   id: 3113,
-  rank: 'Epic',
+  name: 'Aether Wisp',
+  nicknames: ['spooky ghost'],
   buildsFrom: [
     {
       id: 1052,
@@ -46,24 +46,24 @@ const item: Item = {
       gold: 3000,
     },
   ],
-  specialRecipe: 0,
-  noEffects: true,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3113_mage_t2_aetherwisp.png',
+  maps: [11, 12, 21, 35],
+  noEffects: true,
+  rank: 'Epic',
+  removed: false,
+  shop: {
+    prices: {
+      combined: 500,
+      sell: 360,
+      total: 900,
+    },
+    tags: ['MAGE', 'MOVEMENT'],
+  },
   simpleDescription: 'Increases Ability Power and Move Speed',
-  nicknames: ['spooky ghost'],
+  specialRecipe: 0,
   stats: {
     abilityPower: 30,
     percentMovespeed: 4,
   },
-  shop: {
-    prices: {
-      total: 900,
-      combined: 500,
-      sell: 360,
-    },
-    tags: ['MAGE', 'MOVEMENT'],
-  },
-  maps: [11, 12, 21, 35],
 }
 export default item

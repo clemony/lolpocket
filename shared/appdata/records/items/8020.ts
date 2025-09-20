@@ -1,7 +1,6 @@
 const item: Item = {
-  name: 'Abyssal Mask',
   id: 8020,
-  rank: 'Legendary',
+  name: 'Abyssal Mask',
   buildsFrom: [
     {
       id: 3067,
@@ -14,31 +13,32 @@ const item: Item = {
       gold: 850,
     },
   ],
-  specialRecipe: 0,
-  noEffects: false,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/8020_tank_t3_abyssalmask.png',
+  maps: [11, 12, 21, 35],
+  noEffects: false,
   passives: [
     {
       name: 'Unmake',
-      unique: true,
       effects:
         'Enemy champions within 700 units of you become cursed, causing them to receive 12% increased magic damage from all sources.',
+      unique: true,
     },
   ],
-  stats: {
-    health: 350,
-    magicResistance: 45,
-    abilityHaste: 15,
-  },
+  rank: 'Legendary',
+  removed: false,
   shop: {
     prices: {
-      total: 2650,
       combined: 1000,
       sell: 1060,
+      total: 2650,
     },
     tags: ['TANK', 'SUPPORT'],
   },
-  maps: [11, 12, 21, 35],
+  specialRecipe: 0,
+  stats: {
+    abilityHaste: 15,
+    health: 350,
+    magicResistance: 45,
+  },
 }
 export default item

@@ -5,10 +5,9 @@ export const siteInfoLinks: LinkGroup = [
   },
   {
     name: 'About',
-    link: '/About',
-
     icon: {
       name: 'ph:cat',
     },
+    link: '/About',
   },
 ]

@@ -1,7 +1,7 @@
 const item: Item = {
-  name: 'Lost Chapter',
   id: 3802,
-  rank: 'Epic',
+  name: 'Lost Chapter',
+  nicknames: ['book'],
   buildsFrom: [
     {
       id: 1052,
@@ -56,33 +56,33 @@ const item: Item = {
       gold: 2865,
     },
   ],
-  specialRecipe: 0,
-  noEffects: false,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3802_mage_tier2_lostchapter.png',
-  simpleDescription: 'Restores Mana upon levelling up.',
-  nicknames: ['book'],
+  maps: [11, 12, 21, 35],
+  noEffects: false,
   passives: [
     {
       name: 'Enlighten',
-      unique: true,
       effects:
         'Upon leveling up, restores 20% of <b>maximum</b> mana over 3 seconds.',
+      unique: true,
     },
   ],
-  stats: {
-    abilityPower: 40,
-    mana: 300,
-    abilityHaste: 10,
-  },
+  rank: 'Epic',
+  removed: false,
   shop: {
     prices: {
-      total: 1200,
       combined: 250,
       sell: 480,
+      total: 1200,
     },
     tags: ['MAGE'],
   },
-  maps: [11, 12, 21, 35],
+  simpleDescription: 'Restores Mana upon levelling up.',
+  specialRecipe: 0,
+  stats: {
+    abilityHaste: 10,
+    abilityPower: 40,
+    mana: 300,
+  },
 }
 export default item

@@ -44,7 +44,7 @@ watchOnce(api, (api) => {
             v-for="r in page"
             :key="r.id"
             :variants="reviewVariants"
-            :animate="api && inView == i ? 'visible' : 'hidden'"
+            :animate="api && inView === i ? 'visible' : 'hidden'"
             initial="hidden"
             exit="hidden"
             class="flex w-full flex-col gap-4"
@@ -99,7 +99,7 @@ watchOnce(api, (api) => {
 
         <div
           class="group-hover:bg-b4 group-hover:ring-1 ring-neutral bg-b3 size-2 btn btn-circle pointer-events-none tldr-20 ring-offset-2"
-          :class="{ 'bg-neutral group-hover:bg-neutral': i == i }" />
+          :class="{ 'bg-neutral group-hover:bg-neutral': i === i }" />
       </label>
     </div>
   </div>

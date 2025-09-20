@@ -51,92 +51,91 @@ const customPlugin = {
 }
 
 const options = {
-  responsive: true,
   clip: 30,
-  layout: {
-    padding: {
-      right: 30,
-    },
-  },
   drawActiveElementsOnTop: false,
-  maintainAspectRatio: false,
   elements: {
     point: {
       hitRadius: 15,
     },
   },
+  layout: {
+    padding: {
+      right: 30,
+    },
+  },
+  maintainAspectRatio: false,
+  plugins: {
+    tooltip: {
+      boxWidth: 2,
+      boxHeight: 2,
+      boxPadding: 14,
+      callbacks: {
+        beforeLabel: (context) => {},
+        label: (context) => {
+          const dataPoint = context.raw
+          return `${dataPoint.label} - ${dataPoint.x} games, ${dataPoint.y.toFixed()}% wr`
+        },
+      },
+      caretPadding: 20,
+      enabled: true,
+      intersect: false,
+      padding: {
+        bottom: 6,
+        left: 2,
+        right: 12,
+        top: 6,
+      },
+      usePointStyle: true,
+    },
+  },
+  responsive: true,
   scales: {
+    x: {
+      grid: {
+        display: false,
+      },
+      title: {
+        color: 'var(--text-bc)',
+        display: true,
+        text: 'Games Played',
+      },
+      border: {
+        color: `${styles.getPropertyValue('--b2')}`,
+      },
+      ticks: {
+        callback: value => Math.round(value),
+        padding: 14,
+        stepSize: 1, // Force whole number increments
+      },
+    },
     y: {
-      grace: '20%',
       grid: {
         color: `${styles.getPropertyValue('--b2')}`,
         drawTicks: false,
       },
       title: {
-        display: true,
-        text: 'Winrate',
         color: 'var(--text-bc)',
-        padding: { top: 24, left: 0, right: 0, bottom: -16 },
-      },
-      stepSize: 20,
-      min: 0,
-      max: 100,
-      ticks: {
         display: true,
-        padding: 30,
+        padding: { bottom: -16, left: 0, right: 0, top: 24 },
+        text: 'Winrate',
+      },
+      border: {
+        color: `${styles.getPropertyValue('--b2')}`,
+      },
+      grace: '20%',
+      max: 100,
+      min: 0,
+      stepSize: 20,
+      ticks: {
         callback(value, index, ticks) {
           return `${value}%`
         },
+        display: true,
         font: {
           size: 11,
           weight: 500,
         },
-      },
-      border: {
-        color: `${styles.getPropertyValue('--b2')}`,
-      },
-    },
-    x: {
-      title: {
-        display: true,
-        text: 'Games Played',
-        color: 'var(--text-bc)',
-      },
-      ticks: {
-        stepSize: 1, // Force whole number increments
-        callback: value => Math.round(value),
-        padding: 14,
-      },
-      grid: {
-        display: false,
-      },
-
-      border: {
-        color: `${styles.getPropertyValue('--b2')}`,
-      },
-    },
-  },
-  plugins: {
-    tooltip: {
-      padding: {
-        left: 2,
-        right: 12,
-        top: 6,
-        bottom: 6,
-      },
-      caretPadding: 20,
-      intersect: false,
-      usePointStyle: true,
-      boxHeight: 2,
-      boxWidth: 2,
-      boxPadding: 14,
-      enabled: true,
-      callbacks: {
-        label: (context) => {
-          const dataPoint = context.raw
-          return `${dataPoint.label} - ${dataPoint.x} games, ${dataPoint.y.toFixed()}% wr`
-        },
-        beforeLabel: (context) => {},
+        padding: 30,
       },
     },
   },

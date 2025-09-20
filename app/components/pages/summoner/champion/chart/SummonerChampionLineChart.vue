@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 const {
-  class: className,
-  summoner,
   championName,
+  class: className,
   matches,
+  summoner,
 } = defineProps<{
   class?: HTMLAttributes['class']
   summoner?: Summoner
@@ -30,7 +30,6 @@ const data = computed(() => {
     return
 
   return {
-    labels: timeline?.value?.map(p => p.span),
     datasets: [
       {
         data: timeline?.value?.map(p => p.winrate),
@@ -39,6 +38,7 @@ const data = computed(() => {
         data: timeline?.value?.map(p => p.games),
       },
     ],
+    labels: timeline?.value?.map(p => p.span),
   }
 })
 
@@ -62,27 +62,25 @@ const options = {
   },
   scales: {
     y: {
-      type: 'linear',
-      position: 'left',
-      min: 0,
-      max: 100,
+      grid: {
+        display: true,
+      },
       title: {
         display: true,
         text: 'Winrate (%)',
       },
-      grid: {
-        display: true,
-      },
-      ticks: {
-        display: true,
-      },
       border: {
         display: true,
       },
+      max: 100,
+      min: 0,
+      position: 'left',
+      ticks: {
+        display: true,
+      },
+      type: 'linear',
     },
     y1: {
-      type: 'linear',
-      position: 'right',
       grid: {
         drawOnChartArea: false,
       },
@@ -90,6 +88,8 @@ const options = {
         display: true,
         text: 'Games Played',
       },
+      position: 'right',
+      type: 'linear',
     },
   },
 }

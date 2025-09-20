@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { itemsLite } from '#shared/appdata/items-lite'
 import type {
   ColDef,
   GridApi,
@@ -7,6 +6,7 @@ import type {
   GridPreDestroyedEvent,
   GridReadyEvent,
 } from 'ag-grid-community'
+import { itemsLite } from '#shared/appdata/items-lite'
 import {
   CellStyleModule,
   ClientSideRowModelModule,
@@ -30,272 +30,268 @@ definePageMeta({
 const theme = ref(pocketTheme)
 
 const gridOptions: GridOptions<ItemLite> = {
-  rowData: itemsLite.filter(i => is().filtered.includes(i.id)),
   columnHoverHighlight: true,
-
-  rowSelection: {
-    mode: 'multiRow',
-    checkboxes: false,
-    headerCheckbox: false,
-    enableClickSelection: true,
-  },
-
   defaultColDef: {
-    flex: 1,
-    autoHeaderHeight: true,
-    wrapHeaderText: true,
-    minWidth: 63,
-    cellClass: 'text-end grid justify-end size-full',
-    sortingOrder: ['desc', 'asc', null],
     initialHide: false,
+    minWidth: 63,
+    autoHeaderHeight: true,
+    cellClass: 'text-end grid justify-end size-full',
+    flex: 1,
     resizable: false,
+    sortingOrder: ['desc', 'asc', null],
+    wrapHeaderText: true,
+  },
+  rowData: itemsLite.filter(i => is().filtered.includes(i.id)),
+  rowSelection: {
+    checkboxes: false,
+    enableClickSelection: true,
+    headerCheckbox: false,
+    mode: 'multiRow',
   },
 }
 
 const colDefs = [
   {
-    field: 'id',
-    headerName: '',
-    cellRenderer: params =>
-      `<img src="/img/items/${params.value}.webp" class="size-12 aspect-square rounded-full drop-shadow-sm shadow-sm" />`,
-    cellClass: '!py-1 !pr-1 !ml-0',
-    sortable: false,
-    width: 61,
     maxWidth: 61,
     minWidth: 61,
+    width: 61,
+    cellClass: '!py-1 !pr-1 !ml-0',
+    cellRenderer: params =>
+      `<img src="/img/items/${params.value}.webp" class="size-12 aspect-square rounded-full drop-shadow-sm shadow-sm" />`,
+    field: 'id',
+    headerName: '',
+    sortable: false,
   },
   {
-    field: 'name',
-    headerName: 'Item',
-    cellDataType: 'text',
     minWidth: 100,
-    flex: 3,
-    sortable: false,
     cellClass: 'font-medium  ',
+    cellDataType: 'text',
+    field: 'name',
+    flex: 3,
     headerComponentParams: {
       innerHeaderComponentParams: {
         name: 'Item',
       },
     },
+    headerName: 'Item',
+    sortable: false,
   },
   {
-    field: 'stats.abilityHaste',
-    headerName: 'Ability Haste',
     cellDataType: 'number',
+    field: 'stats.abilityHaste',
     headerComponentParams: {
       innerHeaderComponentParams: {
         icon: 'ah',
       },
     },
+    headerName: 'Ability Haste',
   },
   {
-    field: 'stats.abilityPower',
-    headerName: 'Ability Power',
     cellDataType: 'number',
+    field: 'stats.abilityPower',
     headerComponentParams: {
       innerHeaderComponentParams: {
         icon: 'ap',
       },
     },
+    headerName: 'Ability Power',
   },
   {
-    field: 'stats.armor',
-    headerName: 'Armor',
     cellDataType: 'number',
+    field: 'stats.armor',
     headerComponentParams: {
       innerHeaderComponentParams: {
         icon: 'armor',
       },
     },
+    headerName: 'Armor',
   },
   {
-    field: 'stats.armorPenetration',
-    headerName: 'Armor Pen',
     cellDataType: 'number',
+    field: 'stats.armorPenetration',
     headerComponentParams: {
       innerHeaderComponentParams: {
         icon: 'armpen',
       },
     },
+    headerName: 'Armor Pen',
   },
   {
-    field: 'stats.attackDamage',
-    headerName: 'Attack Damage',
-    flex: 1.2,
     minWidth: 60,
     cellDataType: 'number',
+    field: 'stats.attackDamage',
+    flex: 1.2,
     headerComponentParams: {
       innerHeaderComponentParams: {
         icon: 'ad',
       },
     },
+    headerName: 'Attack Damage',
   },
   {
-    field: 'stats.attackSpeed',
-    headerName: 'Attack Speed',
     cellDataType: 'number',
+    field: 'stats.attackSpeed',
     headerComponentParams: {
       innerHeaderComponentParams: {
         icon: 'as',
       },
     },
+    headerName: 'Attack Speed',
   },
   {
-    field: 'stats.criticalStrikeChance',
-    headerName: 'Critical Chance',
     cellDataType: 'number',
+    field: 'stats.criticalStrikeChance',
     headerComponentParams: {
       innerHeaderComponentParams: {
         icon: 'crit',
       },
     },
+    headerName: 'Critical Chance',
   },
   {
-    field: 'stats.goldPer10',
-    headerName: 'Gold per 10',
-    cellDataType: 'number',
     hide: true,
+    cellDataType: 'number',
+    field: 'stats.goldPer10',
     headerComponentParams: {
       innerHeaderComponentParams: {
         icon: 'gp10',
       },
     },
+    headerName: 'Gold per 10',
   },
   {
-    field: 'stats.healAndShieldPower',
-    headerName: 'Heal & Shield',
     cellDataType: 'number',
+    field: 'stats.healAndShieldPower',
     headerComponentParams: {
       innerHeaderComponentParams: {
         icon: 'hsp',
       },
     },
+    headerName: 'Heal & Shield',
   },
   {
-    field: 'stats.health',
-    headerName: 'Health',
     cellDataType: 'number',
+    field: 'stats.health',
     headerComponentParams: {
       innerHeaderComponentParams: {
         icon: 'hp',
       },
     },
+    headerName: 'Health',
   },
   {
-    field: 'stats.healthRegen',
-    headerName: 'Health Regen',
     cellDataType: 'number',
+    field: 'stats.healthRegen',
     headerComponentParams: {
       innerHeaderComponentParams: {
         icon: 'hp5',
       },
     },
+    headerName: 'Health Regen',
   },
   {
-    field: 'stats.lethality',
-    headerName: 'Lethality',
-    headerClass: 'break-none truncate',
     cellDataType: 'number',
+    field: 'stats.lethality',
+    headerClass: 'break-none truncate',
     headerComponentParams: {
       innerHeaderComponentParams: {
         icon: 'lethality',
       },
     },
+    headerName: 'Lethality',
   },
   {
-    field: 'stats.lifesteal',
-    headerName: 'Lifesteal',
     cellDataType: 'number',
+    field: 'stats.lifesteal',
     headerComponentParams: {
       innerHeaderComponentParams: {
         icon: 'lifesteal',
       },
     },
+    headerName: 'Lifesteal',
   },
   {
-    headerName: 'Magic Pen',
     cellDataType: 'text',
-
-    valueGetter: (params) => {
-      const stats = params.data?.stats ?? {}
-      if (stats.mpen != null)
-        return `${stats.percentMagicPenetration}%`
-      if (stats.mpenflat != null)
-        return `${stats.flatMagicPenetration}`
-      return ''
-    },
     headerComponentParams: {
       innerHeaderComponentParams: {
         icon: 'mpen',
       },
     },
+    headerName: 'Magic Pen',
+    valueGetter: (params) => {
+      const stats = params.data?.stats ?? {}
+      if (stats.mpen !== null)
+        return `${stats.percentMagicPenetration}%`
+      if (stats.mpenflat !== null)
+        return `${stats.flatMagicPenetration}`
+      return ''
+    },
   },
 
   {
-    field: 'stats.magicResistance',
-    headerName: 'Magic Resist',
     cellDataType: 'number',
+    field: 'stats.magicResistance',
     headerComponentParams: {
       innerHeaderComponentParams: {
         icon: 'mr',
       },
     },
+    headerName: 'Magic Resist',
   },
   {
-    field: 'stats.mana',
-    headerName: 'Mana',
     cellDataType: 'number',
+    field: 'stats.mana',
     headerComponentParams: {
       innerHeaderComponentParams: {
         icon: 'mana',
       },
     },
+    headerName: 'Mana',
   },
   {
-    field: 'stats.manaRegen',
-    headerName: 'Mana Regen',
     cellDataType: 'number',
+    field: 'stats.manaRegen',
     headerComponentParams: {
       innerHeaderComponentParams: {
         icon: 'mp5',
       },
     },
+    headerName: 'Mana Regen',
   },
   {
-    headerName: 'Move Speed',
     cellDataType: 'text',
-
-    valueGetter: (params) => {
-      const stats = params.data?.stats ?? {}
-      if (stats.ms != null)
-        return `${stats.percentMovespeed}%`
-      if (stats.msflat != null)
-        return `${stats.flatMovespeed}`
-      return ''
-    },
     headerComponentParams: {
       innerHeaderComponentParams: {
         icon: 'ms',
       },
     },
+    headerName: 'Move Speed',
+    valueGetter: (params) => {
+      const stats = params.data?.stats ?? {}
+      if (stats.ms !== null)
+        return `${stats.percentMovespeed}%`
+      if (stats.msflat !== null)
+        return `${stats.flatMovespeed}`
+      return ''
+    },
   },
   {
-    field: 'cost',
-    headerName: 'Shop Price',
-    cellDataType: 'number',
-    flex: 1.5,
     minWidth: 71,
     cellClass: 'pr-6 text-right',
+    cellDataType: 'number',
+    field: 'cost',
+    flex: 1.5,
     headerComponentParams: {
       innerHeaderComponentParams: {
         icon: 'gold',
       },
     },
+    headerName: 'Shop Price',
   },
 ]
 const gridApi = shallowRef<GridApi | null>(null)
 
-// const listener = event => is.dbItemStatListKey++
+// const listener = event => is().dbItemStatListKey++
 
 async function onGridReady(params: GridReadyEvent) {
   await params.api

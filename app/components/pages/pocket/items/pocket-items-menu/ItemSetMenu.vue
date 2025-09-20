@@ -4,11 +4,10 @@ const props = defineProps<{
   pocket?: Pocket
 }>()
 
-const ps = usePocketStore()
 const pocket = computed(() => props.pocket)
-const allPockets = [...ps.pockets]
+const allPockets = [...ps().pockets]
 const notThisPocket = computed(() => {
-  return allPockets.filter(p => p != pocket.value)
+  return allPockets.filter(p => p !== pocket.value)
 })
 console.log('💠 - notThisPocket - notThisPocket:', notThisPocket)
 </script>

@@ -1,39 +1,39 @@
 export interface ChampionMastery {
   id: number
+  lastPlayed: number
   level: number
   points: number
-  lastPlayed: number
 }
 
 export interface Summoner {
   name: string
-  tag: string
   puuid: string
-  profileIcon: string
-  profileSplash: string
+  lastMatchUpdate: Date
+  lastUpdate?: Date
   level: number
-  region: string
-  ranked?: {
-    solo?: RankedEntry
-    flex?: RankedEntry
-  }
   mastery?: {
     totalPoints: number
     totalLevels: number
     champions: ChampionMastery[]
     lastUpdate: Date
   }
-  lastMatchUpdate: Date
-  lastUpdate?: Date
+  profileIcon: string
+  profileSplash: string
+  ranked?: {
+    solo?: RankedEntry
+    flex?: RankedEntry
+  }
+  region: string
+  tag: string
 }
 
 export interface RankedEntry {
-  tier: string
   division: string
-  lp: number
-  wins: number
   losses: number
+  lp: number
   queueType: string
+  tier: string
+  wins: number
 }
 
 export interface TopChampion {

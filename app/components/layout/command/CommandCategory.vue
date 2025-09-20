@@ -1,36 +1,35 @@
 <script lang="ts" setup>
-const { results, name } = defineProps<{
+const { name, results } = defineProps<{
   name: string
   results?: any
 }>()
 
 const variants = {
   hidden: {
-    opacity: 0,
     maxHeight: 0,
+    opacity: 0,
   },
   visible: {
-    opacity: 1,
     maxHeight: '100%',
+    opacity: 1,
   },
 }
 
 const contentVariants = {
   hidden: {
-    opacity: 0,
     maxHeight: 0,
+    opacity: 0,
+    transform: 'translateY(-4px)',
+  },
+  exit: {
+    maxHeight: 0,
+    opacity: 0,
     transform: 'translateY(-4px)',
   },
   visible: {
-    opacity: 1,
     maxHeight: '100%',
+    opacity: 1,
     transform: 'translateY(0)',
-  },
-
-  exit: {
-    opacity: 0,
-    maxHeight: 0,
-    transform: 'translateY(-4px)',
   },
 }
 </script>

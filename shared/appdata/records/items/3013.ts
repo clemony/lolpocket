@@ -1,7 +1,7 @@
 const item: Item = {
-  name: 'Synchronized Souls',
   id: 3013,
-  rank: 'Boots',
+  name: 'Synchronized Souls',
+  nicknames: ['boots'],
   buildsFrom: [
     {
       id: 3010,
@@ -16,35 +16,35 @@ const item: Item = {
       gold: 1400,
     },
   ],
-  specialRecipe: 0,
-  noEffects: false,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3010_voidwalkers.png',
-  nicknames: ['boots'],
+  maps: [11, 21],
+  noEffects: false,
   passives: [
     {
       name: 'Voidborn',
-      unique: true,
       effects:
         'Gain <img src="/img/icons/empowered-recall.webp" class="tip-icon" />Empowered Recall.',
+      unique: true,
     },
     {
       name: 'Synchrony',
-      unique: true,
       effects: 'Gain 45 <b>bonus</b> movement speed while out-of-combat.',
+      unique: true,
     },
   ],
-  stats: {
-    flatMovespeed: 45,
-  },
+  rank: 'Boots',
+  removed: false,
   shop: {
     prices: {
-      total: 900,
       combined: 0,
       sell: 360,
+      total: 900,
     },
     purchasable: false,
   },
-  maps: [11, 21],
+  specialRecipe: 0,
+  stats: {
+    flatMovespeed: 45,
+  },
 }
 export default item

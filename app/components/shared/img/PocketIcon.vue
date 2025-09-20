@@ -1,10 +1,10 @@
 <script setup lang="ts">
 const {
   class: className,
-  url,
+  img,
   size,
   transparent,
-  img,
+  url,
 } = defineProps<{
   url?: string
   img?: string
@@ -51,7 +51,7 @@ const loaded = ref(false)
       :class="
         cn(
           'uppercase subpixel-antialiased text-nc z-0 absolute grid place-items-center size-full font-semibold text-md ',
-          { 'text-[0.7rem] font-bold': size && size == 'sm' },
+          { 'text-[0.7rem] font-bold': size && size === 'sm' },
         )
       ">
       LP

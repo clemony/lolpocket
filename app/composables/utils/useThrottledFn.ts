@@ -4,7 +4,6 @@ export function throttleFunction<T extends (...args: any[]) => any>(
   puuid: string,
   action = 'default'
 ) {
-  const store = useCooldownStore()
   const isLoading = ref(false)
   const now = ref(Date.now())
 
@@ -12,7 +11,7 @@ export function throttleFunction<T extends (...args: any[]) => any>(
     now.value = Date.now()
   }, 1000)
 
-  const entry = computed(() => store.get(puuid, action))
+  const entry = computed(() => cds().get(puuid, action))
 
   const timeRemaining = computed(() => {
     if (!entry.value)
@@ -32,9 +31,9 @@ export function throttleFunction<T extends (...args: any[]) => any>(
       .padStart(2, '0')}`
 
     return {
-      seconds,
-      percent: (seconds / (wait / 1000)) * 100,
       formatted,
+      percent: (seconds / (wait / 1000)) * 100,
+      seconds,
     }
   })
 
@@ -46,7 +45,7 @@ export function throttleFunction<T extends (...args: any[]) => any>(
       isLoading.value = true
       try {
         await fn(...args)
-        store.set(puuid, action, wait) // set cooldown
+        cds().set(puuid, action, wait) // set cooldown
       }
       catch (err) {
         console.error('🛑 Throttled function error:', err)
@@ -61,10 +60,10 @@ export function throttleFunction<T extends (...args: any[]) => any>(
   )
 
   return {
-    throttled,
     cooldown,
-    isLoading,
-    timeRemaining,
     entry,
+    isLoading,
+    throttled,
+    timeRemaining,
   }
 }

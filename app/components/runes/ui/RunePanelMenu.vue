@@ -4,19 +4,18 @@ const props = defineProps<{
   set?: RuneSet
 }>()
 
-const rs = useRuneStore()
 const pocket = ref(props.pocket)
 
 function handleDelete() {
-  rs.selectedRuneSet = 0
+  rs().selectedRuneSet = 0
   deleteRuneSet(props.pocket, props.set)
 }
 
 /* function handleNewSet() {
   const a = newRuneSet(pocket.value.key)
   nextTick(() => {
-    const b = pocket.value.runes.findIndex(s => s == a)
-    rs.selectedRuneSet = b
+    const b = pocket.value.runes.findIndex(s => s === a)
+    rs().selectedRuneSet = b
   })
 } */
 

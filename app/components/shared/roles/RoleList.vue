@@ -75,7 +75,7 @@ function handleReset() {
       <component
         :is="`i-roles-${role.replace(' ', '-')}`"
         class="h-4.5 w-auto dst shrink-0 peer-checked:text-nc"
-        :class="{ 'size-5': role == 'jungle' }" />
+        :class="{ 'size-5': role === 'jungle' }" />
       {{ role }}
     </label>
   </transition-slide>

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { useForwardPropsEmits } from 'reka-ui'
 import type { RadioGroupRootEmits, RadioGroupRootProps } from 'reka-ui'
+import { useForwardPropsEmits } from 'reka-ui'
 
 const props = defineProps<
   RadioGroupRootProps & {

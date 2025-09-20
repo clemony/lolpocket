@@ -6,7 +6,7 @@ const { class: className, position: pos } = defineProps<{
   position: string
 }>()
 
-const position = computed(() => championPositions.find(p => p.name == pos))
+const position = computed(() => championPositions.find(p => p.name === pos))
 </script>
 
 <template>

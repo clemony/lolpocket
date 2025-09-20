@@ -20,15 +20,18 @@ const set = computed(() => s)
           :id="shard.id"
           :key="shard.id"
           v-tippy="{
-            content: '',
+            content: shard.description,
             theme: 'basic',
             arrow: false,
           }"
+          :for="tier.label"
+          as="label"
           label>
           <input
             v-model="set.shards[tier.tier]"
             type="radio"
             :value="shard.id"
+            :aria-label="shard.name"
             :name="tier.label"
             class="peer hidden"
             @change="console.log(set)" />

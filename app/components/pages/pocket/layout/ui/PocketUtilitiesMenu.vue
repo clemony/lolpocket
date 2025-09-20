@@ -13,8 +13,8 @@ async function testSaveAllPockets() {
   console.log('🌱 - testSaveAllPockets - session:', session)
 
   await $fetch('/api/supabase/updatePockets', {
+    body: { pockets: ps().pockets.filter(p => p.location.folder === '') },
     method: 'POST',
-    body: { pockets: ps().pockets.filter(p => p.location.folder == '') },
   })
 
   console.log('🌱 - all pockets sent!')

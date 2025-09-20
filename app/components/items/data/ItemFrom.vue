@@ -24,7 +24,7 @@ const { from, gold } = defineProps<{
           class="ring-neutral/60  size-10 overflow-hidden rounded-lg shadow-sm hover-ring" />
 
         <icon
-          v-if="i != from.length - 1"
+          v-if="i !== from.length - 1"
           name="dashicons:plus"
           class=" opacity-80 size-3.5" />
       </div>

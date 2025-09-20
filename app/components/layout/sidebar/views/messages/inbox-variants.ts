@@ -1,8 +1,4 @@
 export const itemVariants = {
-  visible: {
-    opacity: 1,
-    transform: 'translate(0, 0px)',
-  },
   hidden: {
     opacity: 0,
     transform: 'translate(0, 10px)',
@@ -11,10 +7,14 @@ export const itemVariants = {
     opacity: 0,
     transform: 'translate(10px, 0px)',
   },
+  visible: {
+    opacity: 1,
+    transform: 'translate(0, 0px)',
+  },
 }
 
 export const variants = {
-  visible: {},
   hidden: {},
   exit: {},
+  visible: {},
 }

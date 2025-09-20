@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { tip, class: className } = defineProps<{
+const { class: className, tip } = defineProps<{
   tip?: string
   class?: HTMLAttributes['class']
 }>()

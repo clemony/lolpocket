@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { player, class: className } = defineProps<{
+const { class: className, player } = defineProps<{
   player: Player
   class?: HTMLAttributes['class']
 }>()

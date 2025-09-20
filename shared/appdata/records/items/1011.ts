@@ -1,7 +1,6 @@
 const item: Item = {
-  name: 'Giant\'s Belt',
   id: 1011,
-  rank: 'Epic',
+  name: 'Giant\'s Belt',
   buildsFrom: [
     {
       id: 1028,
@@ -76,22 +75,23 @@ const item: Item = {
       gold: 2600,
     },
   ],
-  specialRecipe: 0,
-  noEffects: true,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1011_class_t2_giantsbelt.png',
-  simpleDescription: 'Greatly increases Health',
-  stats: {
-    health: 350,
-  },
+  maps: [11, 12, 21, 35],
+  noEffects: true,
+  rank: 'Epic',
+  removed: false,
   shop: {
     prices: {
-      total: 900,
       combined: 500,
       sell: 360,
+      total: 900,
     },
     tags: ['FIGHTER', 'MAGE', 'TANK'],
   },
-  maps: [11, 12, 21, 35],
+  simpleDescription: 'Greatly increases Health',
+  specialRecipe: 0,
+  stats: {
+    health: 350,
+  },
 }
 export default item

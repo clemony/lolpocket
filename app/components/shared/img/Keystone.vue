@@ -1,14 +1,17 @@
 <script lang="ts" setup>
 import { runeToPath } from '#shared/appdata/index/'
+import { Primitive } from 'reka-ui'
 
 const {
   id,
+  as = 'label',
   class: className,
-  loadedClass,
+  loadedClass
 } = defineProps<{
   class?: HTMLAttributes['class']
   id: number | null
   loadedClass?: HTMLAttributes['class']
+  as?: string
 }>()
 const loaded = ref(false)
 const imgEl = useTemplateRef<HTMLImageElement>('imgEl')
@@ -27,7 +30,8 @@ watch(
 </script>
 
 <template>
-  <label
+  <Primitive
+    :as
     :class="
       cn(
         'rounded-full overflow-hidden transition-all   duration-300 relative h-20  grid place-items-center aspect-square ',
@@ -51,5 +55,5 @@ watch(
         })
       "
       @load="loaded = true" />
-  </label>
+  </Primitive>
 </template>

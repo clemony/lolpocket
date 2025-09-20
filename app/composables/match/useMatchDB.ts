@@ -54,12 +54,12 @@ export function useIndexedDB() {
   }
 
   return {
+    getAllMatchIdsForPuuid,
     addMatches,
+    clearMatches,
     getAllMatches,
     getAllMatchIds,
     getMatchesForSummoner,
-    getAllMatchIdsForPuuid,
-    clearMatches,
     refreshMatches,
     sortMatchIdsByCreation,
   }

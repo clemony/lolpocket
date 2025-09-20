@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { AccordionTriggerProps } from 'reka-ui'
-import { AccordionHeader, AccordionTrigger } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
+import { AccordionHeader, AccordionTrigger } from 'reka-ui'
 import { computed } from 'vue'
 
 const props = defineProps<

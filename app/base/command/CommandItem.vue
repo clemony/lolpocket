@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import type { ListboxItemEmits, ListboxItemProps } from 'reka-ui'
-
+import type { HTMLAttributes } from 'vue'
 import { useCurrentElement } from '@vueuse/core'
 import { ListboxItem, useForwardPropsEmits, useId } from 'reka-ui'
-import type { HTMLAttributes } from 'vue'
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { useCommand, useCommandGroup } from './cindex'
 
@@ -17,7 +16,7 @@ const delegatedProps = reactiveOmit(props, 'class')
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 
 const id = useId()
-const { filterState, allItems, allGroups } = useCommand()
+const { allGroups, allItems, filterState } = useCommand()
 const groupContext = useCommandGroup()
 
 const isRender = computed(() => {

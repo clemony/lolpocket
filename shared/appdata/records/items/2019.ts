@@ -1,7 +1,6 @@
 const item: Item = {
-  name: 'Steel Sigil',
   id: 2019,
-  rank: 'Epic',
+  name: 'Steel Sigil',
   buildsFrom: [
     {
       id: 1029,
@@ -36,22 +35,23 @@ const item: Item = {
       gold: 2675,
     },
   ],
-  specialRecipe: 0,
-  noEffects: true,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2019_steel_sigil.png',
+  maps: [11, 12, 21, 35],
+  noEffects: true,
+  rank: 'Epic',
+  removed: false,
+  shop: {
+    prices: {
+      combined: 150,
+      sell: 440,
+      total: 1100,
+    },
+    tags: ['FIGHTER'],
+  },
+  specialRecipe: 0,
   stats: {
     armor: 30,
     attackDamage: 15,
   },
-  shop: {
-    prices: {
-      total: 1100,
-      combined: 150,
-      sell: 440,
-    },
-    tags: ['FIGHTER'],
-  },
-  maps: [11, 12, 21, 35],
 }
 export default item

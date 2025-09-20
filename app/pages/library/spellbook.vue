@@ -1,6 +1,8 @@
 <script setup lang="ts">
 definePageMeta({
   name: 'Spellbook',
+  title: 'Spellbook',
+  icon: 'teenyicons:book-outline',
   path: '/library/spellbook',
   searchKeys: [
     'summoner',
@@ -15,14 +17,10 @@ definePageMeta({
     'cleanse',
     'exhaust',
   ],
-  icon: 'teenyicons:book-outline',
-  title: 'Spellbook',
 })
 
-const ix = useIndexStore()
-
 const selectedSpellId = ref(1)
-const selectedSpell = computed(() => ix.spellById(selectedSpellId.value))
+const selectedSpell = computed(() => ix().spellById(selectedSpellId.value))
 </script>
 
 <template>
@@ -32,13 +30,13 @@ const selectedSpell = computed(() => ix.spellById(selectedSpellId.value))
     </div>
 
     <div
-      v-if="ix.spells.length"
+      v-if="ix().spells.length"
       class="w-full flex gap-[8%] px-3 py-24">
       <div class="flex flex-col gap-14 w-114">
         <div
           class="grid grid-cols-3 grid-rows-3 gap-4 py-8 border-b3/80 rounded-box shadow-smooth px-9 h-fit">
           <div
-            v-for="spell in ix.spells"
+            v-for="spell in ix().spells"
             :key="spell.name"
             v-tippy="spell.name"
             class="size-fit">

@@ -7,10 +7,10 @@ const props = defineProps<{
 }>()
 
 const hexColors = {
-  support: '#99c4c8',
-  bottom: '#ebcb8b',
   mid: '#be86b5',
+  bottom: '#ebcb8b',
   jungle: '#a3be8c',
+  support: '#99c4c8',
   top: '#e0746b',
 }
 </script>

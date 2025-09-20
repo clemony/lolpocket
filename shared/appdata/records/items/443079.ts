@@ -1,31 +1,31 @@
 const item: Item = {
-  name: 'Turbo Chemtank',
   id: 443079,
-  rank: 'Special',
-  specialRecipe: 220007,
-  noEffects: false,
-  removed: false,
-  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6664_tank_t4_acceleratedchemtank.png',
+  name: 'Turbo Chemtank',
   nicknames: ['catastrophe'],
   active: [
     {
       name: 'Supercharged',
-      unique: true,
       effects:
         'Removes all crowd control debuffs (except <img src="/img/icons/airborne.webp" class="tip-icon" />Airborne) from your champion and grants you <img src="/img/icons/cc-immune.webp" class="tip-icon" />total crowd control immunity for the next 3 seconds.',
+      unique: true,
     },
   ],
-  stats: {
-    health: 600,
-  },
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6664_tank_t4_acceleratedchemtank.png',
+  maps: [30],
+  noEffects: false,
+  rank: 'Special',
+  removed: false,
   shop: {
     prices: {
-      total: 0,
       combined: 1000,
       sell: 0,
+      total: 0,
     },
     tags: ['TANK'],
   },
-  maps: [30],
+  specialRecipe: 220007,
+  stats: {
+    health: 600,
+  },
 }
 export default item

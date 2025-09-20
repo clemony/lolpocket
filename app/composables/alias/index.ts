@@ -1,6 +1,6 @@
 export * from './stores/as'
 export * from './stores/cds'
-export * from './stores/ch'
+export * from './stores/cs'
 export * from './stores/ds'
 export * from './stores/is'
 export * from './stores/ix'

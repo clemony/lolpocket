@@ -12,8 +12,8 @@ export async function fetchMatchData(puuid: string, existingIds: string[]) {
   try {
     newestIds = await getMatchIdsByPuuid({
       puuid,
-      start: 0,
       count: MAX_IDS_PER_CALL,
+      start: 0,
     })
     console.log('newestIds: ', newestIds)
   }

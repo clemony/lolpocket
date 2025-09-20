@@ -3,10 +3,10 @@ import { riotDisclaimer } from '#shared/appdata'
 
 definePageMeta({
   name: 'terms',
-  path: '/faq/terms',
-  icon: 'gear',
   title: 'Terms & Conditions',
   description: 'Information concerning general app usage.',
+  icon: 'gear',
+  path: '/faq/terms',
 })
 </script>
 

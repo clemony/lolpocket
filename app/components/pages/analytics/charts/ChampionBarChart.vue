@@ -22,34 +22,21 @@ ChartJS.defaults.scale.grid.color = getColorFromVariable('--color-b3')
 ChartJS.register(Title, Tooltip, BarElement, CategoryScale, LinearScale)
 
 const data = computed(() => ({
-  labels: champions.map(c => c.champion ?? ''),
   datasets: [
     {
       data: champions.map(c => c.winrate ?? 0),
     },
   ],
+  labels: champions.map(c => c.champion ?? ''),
 }))
 
 const chartRef = ref<any>(null)
 const imagePositions = ref<{ x: number, label: string }[]>([])
 
 const options = {
-  layout: {
-    padding: {
-      right: 20,
-      left: 10,
-      top: 40,
-      bottom: 60,
-    },
-  },
   backgroundColor: getColorFromVariable('--colorneutral'),
-  color: getColorFromVariable('--colorneutral'),
-  maxBarThickness: 32,
   barThickness: 32,
-  responsive: true,
-  maintainAspectRatio: false,
-  skipNull: false,
-  minBarLength: 4,
+  color: getColorFromVariable('--colorneutral'),
   elements: {
     bar: {
       borderRadius: 4,
@@ -57,64 +44,36 @@ const options = {
       // categoryPercentage: 0.1,
     },
   },
-  scales: {
-    y: {
-      beginAtZero: true,
-      grid: {
-        drawTicks: false,
-      },
-      min: 0,
-      max: 100,
-      ticks: {
-        display: true,
-        font: {
-          size: 11,
-        },
-
-        stepSize: 20,
-        callback(value, index, ticks) {
-          return `${value}%`
-        },
-        padding: 12,
-      },
-      border: {
-        color: `${getColorFromVariable('--color-b2')}`,
-      },
-    },
-    x: {
-      grid: {
-        display: false,
-      },
-      ticks: {
-        display: false,
-      },
-      border: {
-        color: `${getColorFromVariable('--color-b2')}`,
-      },
-      title: {
-        display: false,
-      },
+  layout: {
+    padding: {
+      bottom: 60,
+      left: 10,
+      right: 20,
+      top: 40,
     },
   },
+  maintainAspectRatio: false,
+  maxBarThickness: 32,
+  minBarLength: 4,
   plugins: {
     tooltip: {
-      displayColors: false,
-      caretPadding: 20,
-      bodySpacing: -5,
-      footerSpacing: 0,
       titleFont: {
         size: 16,
       },
+      titleMarginBottom: -3,
+      titleSpacing: 0,
       bodyFont: {
         size: 14,
       },
-      titleSpacing: 0,
-      titleMarginBottom: -3,
-      intersect: false,
-      cornerRadius: 10,
-      padding: 10,
-      enabled: true,
+      bodySpacing: -5,
       callbacks: {
+        title: (context) => {
+          const index = context[0].dataIndex
+          const champion = champions[index]
+          const games = champion.games ?? 0
+          const name = champion.champion ?? ''
+          return [`${name} - ${games} played`]
+        },
         label: (context) => {
           const index = context.dataIndex
           const champion = champions[index]
@@ -126,16 +85,56 @@ const options = {
             ` ${Math.round(champion.avgKp) ?? 'N/A'}% 　kp`,
           ]
         },
-        title: (context) => {
-          const index = context[0].dataIndex
-          const champion = champions[index]
-          const games = champion.games ?? 0
-          const name = champion.champion ?? ''
-          return [`${name} - ${games} played`]
+      },
+      caretPadding: 20,
+      cornerRadius: 10,
+      displayColors: false,
+      enabled: true,
+      footerSpacing: 0,
+      intersect: false,
+      padding: 10,
+    },
+  },
+  responsive: true,
+  scales: {
+    x: {
+      grid: {
+        display: false,
+      },
+      title: {
+        display: false,
+      },
+      border: {
+        color: `${getColorFromVariable('--color-b2')}`,
+      },
+      ticks: {
+        display: false,
+      },
+    },
+    y: {
+      grid: {
+        drawTicks: false,
+      },
+      beginAtZero: true,
+      border: {
+        color: `${getColorFromVariable('--color-b2')}`,
+      },
+      max: 100,
+      min: 0,
+      ticks: {
+        callback(value, index, ticks) {
+          return `${value}%`
         },
+        display: true,
+        font: {
+          size: 11,
+        },
+        padding: 12,
+        stepSize: 20,
       },
     },
   },
+  skipNull: false,
 }
 
 // calculate image positions after chart is rendered
@@ -150,7 +149,7 @@ function calculateImagePositions() {
 
     imagePositions.value = data.value.labels.map((label) => {
       console.log('💠 - nextTick - label:', label)
-      return { x: xScale.getPixelForValue(label), label }
+      return { label, x: xScale.getPixelForValue(label) }
     })
   })
 }

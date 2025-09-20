@@ -3,7 +3,7 @@ export function formatTimeAgo(date: Date, format?: 'letter' | 'short') {
     return
 
   const timeAgo = useTimeAgo(date)
-  if (format == 'short') {
+  if (format === 'short') {
     return timeAgo.value.replace(' minutes', ' min').replace(' seconds', ' sec')
   }
   else {

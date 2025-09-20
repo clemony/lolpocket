@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const as = useAccountStore()
+
 </script>
 
 <template>

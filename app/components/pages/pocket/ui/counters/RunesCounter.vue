@@ -9,13 +9,13 @@ const pocket = ref(props.pocket)
 /*
 const runeSetsLength = computed (() => {
 
-if (pocket.value.runes.length == 1) {
+if (pocket.value.runes.length === 1) {
     const set = ref(pocket.value.runes[0])
     const primaryRunes = computed (() => {
       const a = Object.values(set.value[0].runes)
       const b = () => {
         if (a) {
-          const b1 = a.filter(r => r != null)
+          const b1 = a.filter(r => r !== null)
           return b1
         }
       }

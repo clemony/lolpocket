@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { motion } from 'motion-v'
 import type { TabsIndicatorProps } from 'reka-ui'
+import { motion } from 'motion-v'
 import { TabsIndicator } from 'reka-ui'
 
 defineOptions({ inheritAttrs: false })
@@ -19,15 +19,15 @@ const forwarded = reactiveOmit(props, 'class')
 
 const variants = {
   horizontal: {
-    transform: 'translateX(calc(var(--reka-tabs-indicator-position)))',
     width: 'calc(var(--reka-tabs-indicator-size))',
+    transform: 'translateX(calc(var(--reka-tabs-indicator-position)))',
     transition: {
       duration: 0.3,
     },
   },
   vertical: {
-    transform: 'translateY(calc(var(--reka-tabs-indicator-position)))',
     height: 'calc(var(--reka-tabs-indicator-size))',
+    transform: 'translateY(calc(var(--reka-tabs-indicator-position)))',
     transition: {
       duration: 0.5,
     },
@@ -41,13 +41,13 @@ const variants = {
     as-child
     class="z-0"
     :class="{
-      'h-[81%]': props.orientation != 'vertical',
-      'w-[98%]': props.orientation == 'vertical',
+      'h-[81%]': props.orientation !== 'vertical',
+      'w-[98%]': props.orientation === 'vertical',
     }">
     <motion.div
       :variants="variants"
-      :initial="props.orientation == 'vertical' ? 'vertical' : 'horizontal'"
-      :animate="props.orientation == 'vertical' ? 'vertical' : 'horizontal'"
+      :initial="props.orientation === 'vertical' ? 'vertical' : 'horizontal'"
+      :animate="props.orientation === 'vertical' ? 'vertical' : 'horizontal'"
       :style="{
         transform:
           props.orientation === 'vertical'
@@ -57,7 +57,7 @@ const variants = {
       :class="
         cn(
           ' top-1 absolute transition-all rounded-lg ',
-          { '!top-0 left-1': props.orientation == 'vertical' },
+          { '!top-0 left-1': props.orientation === 'vertical' },
           props.class,
         )
       ">
@@ -69,7 +69,7 @@ const variants = {
             {
               'bg-b1 ': !props.round,
               'shadow-sm shadow-black/3 bg-b1/90 ':
-                props.orientation == 'vertical',
+                props.orientation === 'vertical',
               '!bgneutral/82 border-n3 border drop-shadow-sm inset-shadow-sm inset-shadow-b3/20 rounded-xl rounded-lg-2':
                 props.contrast,
               '!rounded-full  !to-b2/20 rounded-full  shadow-outline ring ring-b3/20 !bg-gradient-to-br backdrop-blur-sm  !from-b1 from-70% !shadow-black/8 mt-0.5 !aspect-square':

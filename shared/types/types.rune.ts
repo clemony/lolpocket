@@ -12,8 +12,8 @@ export interface RuneIndex {
 }
 
 export interface Rune extends RuneIndex {
-  pathId: number
   description: string
+  pathId: number
   tier: number
   tierLabel: string
   tierSlot: number
@@ -22,8 +22,8 @@ export interface Rune extends RuneIndex {
 export interface RunePath {
   id: number
   name: string
-  tooltip: string
   slots: PathSlot[]
+  tooltip: string
 }
 
 export interface RuneMin {
@@ -32,26 +32,26 @@ export interface RuneMin {
 }
 
 export interface PathSlot {
-  tier: number
   label: string
   runes: RuneMin[]
+  tier: number
 }
 
 export interface PathIndex {
-  name: PathName
   id: number
+  name: PathName
   color: string
 }
 
 export interface Shard {
-  name: string
   id: number
-  description: string
+  name: string
   color: string
+  description: string
 }
 
 export interface ShardObject {
-  tier: number
   label: string
   shards: Shard[]
+  tier: number
 }

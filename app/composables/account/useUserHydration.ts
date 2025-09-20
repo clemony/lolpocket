@@ -5,21 +5,20 @@ import { getRandom } from '~/utils/get/getRandom'
 
 interface UserProfileResponse {
   account: Account | null
-  settings: Settings | null
-  public: PublicData | null
   pockets: Pocket[] | null
+  public: PublicData | null
+  settings: Settings | null
 }
 
 interface UserProfileResponse {
   account: Account | null
-  settings: Settings | null
   public: PublicData | null
+  settings: Settings | null
   user_pockets: Pocket[] | null // <- updated key to match RPC
 }
 export async function hydrateUser(progress?: Ref<number>) {
   const client = useSupabaseClient()
   const user = useSupabaseUser().value
-  const as = useAccountStore()
 
   if (!user)
     throw new Error('hydrateUser: no logged-in user')
@@ -55,11 +54,11 @@ export async function hydrateUser(progress?: Ref<number>) {
 
       progress && (progress.value = 70)
 
-      as.account
+      as().account
         = accountParse.success ? accountParse.output : getEmptyAccount()
-      as.settings
+      as().settings
         = settingsParse.success ? settingsParse.output : getEmptySettings()
-      as.publicData
+      as().publicData
         = publicParse.success ? publicParse.output : getEmptyPublicData()
 
       const results = data.user_pockets.map(p => v.safeParse(PocketSchema, p))
@@ -86,18 +85,18 @@ export async function hydrateUser(progress?: Ref<number>) {
     console.error('Unexpected error in hydrateUser:', err)
   }
 
-  if (as.account?.puuid) {
-    // useAccountUpdate(as.account.puuid, as.account.regionGroup)
+  if (as().account?.puuid) {
+    // useAccountUpdate(as().account.puuid, as().account.regionGroup)
   }
 
-  as.loggedIn = true
+  as().loggedIn = true
   navigateTo('/nexus')
 
   toast.success('Welcome back!', {
     description: `Great to see you, ${
-      as.account?.name ?? as.account?.username ?? 'Summoner'
+      as().account?.name ?? as().account?.username ?? 'Summoner'
     }! ${getRandom(appTaglines)}`,
   })
 
-  as.$persist()
+  as().$persist()
 }

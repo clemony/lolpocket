@@ -1,18 +1,16 @@
 <script lang="ts" setup>
 import { useSidebar } from '~/base/sidebar/utils'
 
-const is = useItemStore()
-
 const {
-  state,
-  open,
-  setOpen,
-  openMobile,
-  setOpenMobile,
-  isMobile,
   toggleSidebar,
+  isMobile,
+  open,
+  openMobile,
+  setOpen,
+  setOpenMobile,
+  state,
 } = useSidebar()
-const { filters, setFilter, filtered } = useItemFilter()
+const { filtered, filters, setFilter } = useItemFilter()
 </script>
 
 <template>

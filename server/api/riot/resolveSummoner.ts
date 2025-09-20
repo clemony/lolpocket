@@ -6,18 +6,18 @@ import {
 
 export interface SummonerResponse {
   name: string
-  tag: string
   puuid: string
-  profileIcon: string
   level: number
-  region: string
+  profileIcon: string
   ranked: {
     solo?: RankedEntry
     flex?: RankedEntry
   }
+  region: string
+  tag: string
 }
 export default defineEventHandler(async (event) => {
-  const { region, name, tag, puuid: queryPuuid } = getQuery(event)
+  const { name, puuid: queryPuuid, region, tag } = getQuery(event)
 
   let puuid: string
   const summonerRegion = region as string | undefined
@@ -51,34 +51,34 @@ export default defineEventHandler(async (event) => {
     for (const entry of league) {
       if (entry.queueType === 'RANKED_SOLO_5x5') {
         ranked.solo = {
-          tier: entry.tier,
           division: entry.rank,
-          lp: entry.leaguePoints,
-          wins: entry.wins,
           losses: entry.losses,
+          lp: entry.leaguePoints,
           queueType: entry.queueType,
+          tier: entry.tier,
+          wins: entry.wins,
         }
       }
       else if (entry.queueType === 'RANKED_FLEX_SR') {
         ranked.flex = {
-          tier: entry.tier,
           division: entry.rank,
-          lp: entry.leaguePoints,
-          wins: entry.wins,
           losses: entry.losses,
+          lp: entry.leaguePoints,
           queueType: entry.queueType,
+          tier: entry.tier,
+          wins: entry.wins,
         }
       }
     }
 
     return {
       name: summoner.name,
-      tag: summoner.tagLine,
       puuid: summoner.puuid,
-      profileIcon: summoner.profileIconId,
       level: summoner.summonerLevel,
-      region: summonerRegion || 'unknown',
+      profileIcon: summoner.profileIconId,
       ranked,
+      region: summonerRegion || 'unknown',
+      tag: summoner.tagLine,
     }
   }
   catch (err) {

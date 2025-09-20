@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { LayoutGroup } from 'motion-v'
 import type { RadioGroupRootEmits, RadioGroupRootProps } from 'reka-ui'
+import { LayoutGroup } from 'motion-v'
 import { RadioGroupRoot, useForwardPropsEmits } from 'reka-ui'
 
 const props = defineProps<

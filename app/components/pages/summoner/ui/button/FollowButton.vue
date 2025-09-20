@@ -1,12 +1,12 @@
 <script lang="ts" setup>
 const {
-  summoner,
   class: className,
-  text,
-  variant = 'shadow',
-  size = 'md',
   placement,
+  size = 'md',
+  summoner,
+  text,
   theme,
+  variant = 'shadow',
 } = defineProps<{
   summoner: Summoner
   class?: HTMLAttributes['class']
@@ -17,9 +17,8 @@ const {
   theme?: string
   placement?: Side
 }>()
-const as = useAccountStore()
 
-const isYou = computed(() => as.account?.puuid == summoner?.puuid)
+const isYou = computed(() => as().account?.puuid === summoner?.puuid)
 const isFollowed = ref(false)
 </script>
 
@@ -29,9 +28,11 @@ const isFollowed = ref(false)
     :variant="variant"
     :size="size"
     :followed="isFollowed"
+    for="follow-indicator"
     :class="cn('group/follow  grid place-items-center ', className)">
     <input
       v-model="isFollowed"
+      name="follow-indicator"
       type="checkbox"
       class="peer hidden" />
     <span

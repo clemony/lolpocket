@@ -2,7 +2,6 @@
 const props = defineProps<{
   itemId: number | null
 }>()
-const ix = useIndexStore()
 </script>
 
 <template>
@@ -19,7 +18,7 @@ const ix = useIndexStore()
         v-if="itemId ?? ''"
         :id="props.itemId"
         :key="props.itemId"
-        :alt="ix.itemNameById(itemId)"
+        :alt="ix().itemNameById(itemId)"
         class="shrink-0 overflow-hidden !pointer-events-none **:pointer-events-none rounded-field"
         basic />
 

@@ -8,7 +8,7 @@ const pocket = computed(() => {
 })
 
 const roles = computed(() => {
-  const a = props.pocket.roles.filter(r => r != '' && r != null)
+  const a = props.pocket.roles.filter(r => r !== '' && r !== null)
   const b = a.join(', ')
   return b.replace(/,/, ' &')
 })

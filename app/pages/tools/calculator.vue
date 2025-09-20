@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { motion } from 'motion-v'
 import {
   ListboxContent,
   ListboxFilter,
@@ -10,21 +11,17 @@ import {
   SplitterPanel as ResizablePanel,
 } from 'reka-ui'
 
-import { motion } from 'motion-v'
-
 definePageMeta({
   name: 'calculator',
-  path: '/tools/calculator',
+  icon: 'calc',
   level: 2,
   order: 6,
-  icon: 'calc',
+  path: '/tools/calculator',
 })
-
-const is = useItemStore()
 
 const target = ref()
 
-console.log('💠 - is.calculatorSets:', is.calculatorSet)
+console.log('💠 - is().calculatorSets:', is().calculatorSet)
 </script>
 
 <template>
@@ -41,7 +38,7 @@ console.log('💠 - is.calculatorSets:', is.calculatorSet)
         <div class="relative">
           <CalculatorSet
             :num="1"
-            :set="is.calculatorSet" />
+            :set="is().calculatorSet" />
           <CollapsibleTrigger
             class="absolute right-0 top-0 btn btn-square btn-ghost">
             hi
@@ -50,7 +47,7 @@ console.log('💠 - is.calculatorSets:', is.calculatorSet)
         <CollapsibleContent class="CollapsibleContent pt-14">
           <CalculatorSet
             :num="2"
-            :set="is.calculatorSet2" />
+            :set="is().calculatorSet2" />
         </CollapsibleContent>
       </Collapsible>
 

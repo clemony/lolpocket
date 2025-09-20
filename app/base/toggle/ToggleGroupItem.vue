@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import type { VariantProps } from 'class-variance-authority'
 import type { ToggleGroupItemProps } from 'reka-ui'
-import { ToggleGroupItem, useForwardProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
+import { ToggleGroupItem, useForwardProps } from 'reka-ui'
 import { computed, inject } from 'vue'
 import { toggleVariants } from './toggleVariants'
 
@@ -19,7 +19,7 @@ const props = defineProps<
 const context = inject<ToggleGroupVariants>('toggleGroup')
 
 const delegatedProps = computed(() => {
-  const { class: _, variant, size, ...delegated } = props
+  const { class: _, size, variant, ...delegated } = props
   return delegated
 })
 

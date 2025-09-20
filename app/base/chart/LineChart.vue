@@ -31,42 +31,41 @@ const data = computed(() => {
 })
 
 const options = {
-  responsive: true,
   clip: 10,
-  maintainAspectRatio: false,
+  elements: {
+    line: {
+      borderWidth: 1.5,
+      borderColor: `${styles.getPropertyValue('--colorneutral')}`,
+      cubicInterpolationMode: 'default' as const,
+      tension: 0.35,
+    },
+    point: {
+      borderWidth: 1.5,
+      backgroundColor: `${styles.getPropertyValue('--colorneutral')}`,
+      borderColor: `${styles.getPropertyValue('--colorneutral')}`,
+      hitRadius: 6,
+      hoverRadius: 4,
+      radius: 2,
+    },
+  },
   layout: {
     padding: {
       bottom: props.options.layout.padding.bottom,
     },
   },
-  elements: {
-    point: {
-      hitRadius: 6,
-      radius: 2,
-      backgroundColor: `${styles.getPropertyValue('--colorneutral')}`,
-      borderColor: `${styles.getPropertyValue('--colorneutral')}`,
-      borderWidth: 1.5,
-      hoverRadius: 4,
-    },
-    line: {
-      borderColor: `${styles.getPropertyValue('--colorneutral')}`,
-      borderWidth: 1.5,
-      tension: 0.35,
-      cubicInterpolationMode: 'default' as const,
-    },
-  },
-
+  maintainAspectRatio: false,
   plugins: {
     tooltip: {
       titleMarginBottom: 0,
       titleSpacing: 0,
       bodySpacing: 0,
-      displayColors: false,
-      intersect: false,
-      enabled: true,
       callbacks: props.options.plugins.tooltip.callbacks,
+      displayColors: false,
+      enabled: true,
+      intersect: false,
     },
   },
+  responsive: true,
 }
 </script>
 

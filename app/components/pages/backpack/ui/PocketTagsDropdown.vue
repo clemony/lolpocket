@@ -1,7 +1,6 @@
 <script lang="ts" setup>
-import { championPositions } from '~~/shared/appdata'
-
 import Fuse from 'fuse.js'
+import { championPositions } from '~~/shared/appdata'
 
 const { class: className, pocket: p } = defineProps<{
   class?: HTMLAttributes['class']

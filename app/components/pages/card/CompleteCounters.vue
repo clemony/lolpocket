@@ -18,7 +18,7 @@ const spellsLength = computed(() => {
 })
 
 const itemsLength = computed(() => {
-  if (pocket.value.items.length == 1 && !pocket.value.items[0].items.length) {
+  if (pocket.value.items.length === 1 && !pocket.value.items[0].items.length) {
     return 0
   }
   else {
@@ -26,13 +26,13 @@ const itemsLength = computed(() => {
   }
 })
 /* const runeSetsLength = computed (() => {
-  if (pocket.value.runes.length == 1) {
+  if (pocket.value.runes.length === 1) {
     const set = ref(pocket.value.runes[0])
     const primaryRunes = computed (() => {
       const a = Object.values(set.value[0].runes)
       const b = () => {
         if (a) {
-          const b1 = a.filter(r => r != 'empty')
+          const b1 = a.filter(r => r !== 'empty')
           return b1
         }
       }
@@ -43,7 +43,7 @@ const itemsLength = computed(() => {
       const a = Object.values(set.value.secondary.runes)
       const b = () => {
         if (a) {
-          const b1 = a.filter(r => r.name != 'empty')
+          const b1 = a.filter(r => r.name !== 'empty')
           return b1
         }
       }
@@ -66,7 +66,7 @@ const itemsLength = computed(() => {
 
     <div
       v-tippy="
-        `${championsLength ? championsLength : 'no'} pocket pick${pocket.champions.length == 1 ? '' : 's'}`
+        `${championsLength ? championsLength : 'no'} pocket pick${pocket.champions.length === 1 ? '' : 's'}`
       "
       class="flex gap-1.5 items-center">
       <i-no-champ class="size-8.5 dst opacity-80" />

@@ -5,8 +5,8 @@ const { match } = defineProps<{
 
 const teams = computed(() => {
   return {
-    blue: match.participants.filter(p => p.teamId == 100),
-    red: match.participants.filter(p => p.teamId == 200),
+    blue: match.participants.filter(p => p.teamId === 100),
+    red: match.participants.filter(p => p.teamId === 200),
   }
 })
 
@@ -15,15 +15,15 @@ const playerRank = computed(() => {
     .map(p => ({
       puuid: p.puuid,
       mvpScore: p.mvpScore,
-      win: p.win,
       team: p.teamId,
+      win: p.win,
     }))
     .sort((a, b) => b.mvpScore - a.mvpScore)
 
   return {
+    ace: computed(() => sort.filter(p => p.team !== sort[0].team)[0]).value.puuid,
     list: sort,
     mvp: sort[0].puuid,
-    ace: computed(() => sort.filter(p => p.team != sort[0].team)[0]).value.puuid,
   }
 })
 </script>
@@ -47,7 +47,7 @@ const playerRank = computed(() => {
           :player-rank="playerRank" />
 
         <Separator
-          v-show="i != 4"
+          v-show="i !== 4"
           class="bg-b3/60 !my-0" />
       </template>
     </div>
@@ -68,7 +68,7 @@ const playerRank = computed(() => {
           :player="player"
           :player-rank="playerRank" />
         <Separator
-          v-show="i != 4"
+          v-show="i !== 4"
           class="bg-b3/60 !my-0" />
       </template>
     </div>

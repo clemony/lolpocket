@@ -3,7 +3,7 @@ import type { MotionValue } from 'motion-v'
 import { motion } from 'motion-v'
 import { useBreakpoint } from '~/utils/ui/useBreakpoints'
 
-const { scrollRef, scrollProg } = defineProps<{
+const { scrollProg, scrollRef } = defineProps<{
   scrollRef: HTMLElement
   scrollProg: MotionValue
 }>()
@@ -19,45 +19,45 @@ const progress = [
 const isShown = [ref(false), ref(false), ref(false), ref(false)]
 
 useMotionValueEvent(progress[0], 'change', (latest) => {
-  latest == '0%' ? (isShown[0].value = false) : (isShown[0].value = true)
+  latest === '0%' ? (isShown[0].value = false) : (isShown[0].value = true)
 })
 
 useMotionValueEvent(progress[1], 'change', (latest) => {
-  latest == '0%' ? (isShown[1].value = false) : (isShown[1].value = true)
+  latest === '0%' ? (isShown[1].value = false) : (isShown[1].value = true)
 })
 
 useMotionValueEvent(progress[2], 'change', (latest) => {
-  latest == '0%' ? (isShown[2].value = false) : (isShown[2].value = true)
+  latest === '0%' ? (isShown[2].value = false) : (isShown[2].value = true)
 })
 
 useMotionValueEvent(progress[2], 'change', (latest) => {
-  latest == '110%' ? (isShown[3].value = true) : (isShown[3].value = false)
+  latest === '110%' ? (isShown[3].value = true) : (isShown[3].value = false)
 })
 
 const steps = [
   {
     title: 'Create a Pocket',
+    component: 'CreateAPocket',
     description:
       'Pockets are little spaces designed to hold your builds and ideas -- similar to a pocket folder. Theorycraft within them, or use them to remember that ONE build you saw your favorite pro use. Pockets can be linked to champions or a general role.',
-    component: 'CreateAPocket',
   },
   {
     title: 'Craft a Build',
+    component: 'CraftABuild',
     description:
       'Choose a champion, group of champions—or even just a position. Organize items into full builds or pool them by situation. Theorycraft some new things to try, or pull out your old favorites. Create rune sets, and grab some summoner spells.', // jan 11 2025
-    component: 'CraftABuild',
   },
   {
     title: 'Play Games',
+    component: 'PlayGames',
     description:
       'Send your fully cooked pockets to the rift. Export directly to the league client so your builds show up in game. Then, do what you\'re best at: Queue up and grind some LP.',
-    component: 'PlayGames',
   },
   {
     title: 'Analyze Results',
+    component: 'AnalyzeResults',
     description:
       'With a connected Riot Account, advanced statistics give you insight into the best items and champions for your specific playstyle. The meta may tell you Triforce Yuumi is 82% winrate—but according to your data, you seem to do better with a Moonstone. Easily see where meta slaving away helps or harms.',
-    component: 'AnalyzeResults',
   },
 ]
 </script>

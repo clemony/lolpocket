@@ -1,7 +1,7 @@
 const item: Item = {
-  name: 'Black Cleaver',
   id: 3071,
-  rank: 'Legendary',
+  name: 'Black Cleaver',
+  nicknames: ['bc'],
   buildsFrom: [
     {
       id: 3044,
@@ -19,40 +19,40 @@ const item: Item = {
       gold: 875,
     },
   ],
-  specialRecipe: 0,
-  noEffects: false,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3071_fighter_t3_blackcleaver.png',
-  simpleDescription:
-    'Dealing physical damage to enemy champions reduces their Armor',
-  nicknames: ['bc'],
+  maps: [11, 12, 21, 35],
+  noEffects: false,
   passives: [
     {
       name: 'Carve',
-      unique: true,
       effects:
         'Dealing physical damage to an enemy champion applies a stack of <i>Carve</i> for 6 seconds, stacking up to 5 times. Each stack inflicts 6% armor reduction, up to 30% armor at 5 stacks.',
+      unique: true,
     },
     {
       name: 'Fervor',
-      unique: true,
       effects:
         'Dealing physical damage grants you 20 <b>bonus</b> movement speed for 2 seconds.',
+      unique: true,
     },
   ],
-  stats: {
-    attackDamage: 40,
-    health: 400,
-    abilityHaste: 20,
-  },
+  rank: 'Legendary',
+  removed: false,
   shop: {
     prices: {
-      total: 3000,
       combined: 225,
       sell: 1200,
+      total: 3000,
     },
     tags: ['FIGHTER', 'ONHIT_EFFECTS', 'ARMOR_PEN', 'MOVEMENT'],
   },
-  maps: [11, 12, 21, 35],
+  simpleDescription:
+    'Dealing physical damage to enemy champions reduces their Armor',
+  specialRecipe: 0,
+  stats: {
+    abilityHaste: 20,
+    attackDamage: 40,
+    health: 400,
+  },
 }
 export default item

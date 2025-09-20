@@ -15,32 +15,31 @@
   color-scheme: dark, light;
   styled: true;
 
-    --color-base-100: var(--b1);
-    --color-base-200: var(--b2);
-    --color-base-300: var(--b3);
-    --color-base-content: var(--bc);
-    --color-primary: var(--n1) !important;
-    --color-primary-content: var(--nc);
-    --color-secondary: var(--n1) !important;
-    --color-secondary-content: var(--nc);
-    --color-accent: var(--n1) !important;
-    --color-accent-content: var(--nc);
-    --color-neutral: var(--n1) !important;
-    --color-neutral-content: var(--nc);
-    --color-info: var(--sorcery);
-    --color-info-content: var(--sorcery-light);
-    --color-success: var(--resolve);
-    --color-success-content: var(--resolve-light);
-    --color-warning: var(--precision);
-    --color-warning-content: var(--precision-w600);
-    --color-error: var(--domination);
-    --color-error-content: var(--domination-light);
-    --input-color: var(--color-b3);
-      --tabcontent-radius-ss: var(--rounded-xl);
---tabcontent-radius-se: var(--rounded-xl);
---tabcontent-radius-es: var(--rounded-xl);
---tabcontent-radius-ee: var(--rounded-xl);
-
+  --color-base-100: var(--b1);
+  --color-base-200: var(--b2);
+  --color-base-300: var(--b3);
+  --color-base-content: var(--bc);
+  --color-primary: var(--n1) !important;
+  --color-primary-content: var(--nc);
+  --color-secondary: var(--n1) !important;
+  --color-secondary-content: var(--nc);
+  --color-accent: var(--n1) !important;
+  --color-accent-content: var(--nc);
+  --color-neutral: var(--n1) !important;
+  --color-neutral-content: var(--nc);
+  --color-info: var(--sorcery);
+  --color-info-content: var(--sorcery-light);
+  --color-success: var(--resolve);
+  --color-success-content: var(--resolve-light);
+  --color-warning: var(--precision);
+  --color-warning-content: var(--precision-w600);
+  --color-error: var(--domination);
+  --color-error-content: var(--domination-light);
+  --input-color: var(--color-b3);
+  --tabcontent-radius-ss: var(--rounded-xl);
+  --tabcontent-radius-se: var(--rounded-xl);
+  --tabcontent-radius-es: var(--rounded-xl);
+  --tabcontent-radius-ee: var(--rounded-xl);
 
   --tab-border-color: var(--b3);
   --tab-border-colors: var(--b3);
@@ -49,5 +48,4 @@
   --radius-field: 0.55rem;
   --depth: 1;
   --noise: 0.8;
-
 }

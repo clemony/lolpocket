@@ -27,6 +27,7 @@ const modelValue = useVModel(props, 'modelValue', emits, {
 <template>
   <label
     :id="props.id"
+    for="input"
     :class="
       cn(
         'input text-xs h-12 items-center [&>svg]:text-tint-bc/70 [&>svg]:**:stroke-[2.2]   [&>svg]:size-5',
@@ -37,11 +38,11 @@ const modelValue = useVModel(props, 'modelValue', emits, {
     <input
       v-bind="$attrs"
       v-model="modelValue"
+      name="input"
       class="focus:placeholder:opacity-0 placeholder:text-xs placeholder:italic"
-      :autofocus="false"
       @keydown.stop
       @keydown.enter.prevent
-      @autofocui.prevent />
+      @autofocus.prevent />
     <slot name="2" />
 
     <Button

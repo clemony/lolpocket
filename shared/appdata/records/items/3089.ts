@@ -1,7 +1,7 @@
 const item: Item = {
-  name: 'Rabadon\'s Deathcap',
   id: 3089,
-  rank: 'Legendary',
+  name: 'Rabadon\'s Deathcap',
+  nicknames: ['banksys', 'dc', 'dcap', 'hat'],
   buildsFrom: [
     {
       id: 1058,
@@ -14,30 +14,30 @@ const item: Item = {
       gold: 1200,
     },
   ],
-  specialRecipe: 0,
-  noEffects: false,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3089_mage_t3_deathcap.png',
-  simpleDescription: 'Massively increases Ability Power',
-  nicknames: ['banksys', 'dc', 'dcap', 'hat'],
+  maps: [11, 12, 21, 35],
+  noEffects: false,
   passives: [
     {
       name: 'Magical Opus',
-      unique: true,
       effects: 'Increase your ability power by 30%.',
+      unique: true,
     },
   ],
-  stats: {
-    abilityPower: 130,
-  },
+  rank: 'Legendary',
+  removed: false,
   shop: {
     prices: {
-      total: 3500,
       combined: 1100,
       sell: 1400,
+      total: 3500,
     },
     tags: ['MAGE'],
   },
-  maps: [11, 12, 21, 35],
+  simpleDescription: 'Massively increases Ability Power',
+  specialRecipe: 0,
+  stats: {
+    abilityPower: 130,
+  },
 }
 export default item

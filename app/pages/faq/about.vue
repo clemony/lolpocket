@@ -1,61 +1,61 @@
 <script setup lang="ts">
 definePageMeta({
-  path: '/about',
-  parent: '/faq',
   name: 'about',
   icon: 'lucide:square-terminal',
+  parent: '/faq',
+  path: '/about',
 })
 
 const icons = [
   {
     name: 'Vue',
-    link: 'https://vuejs.org',
     icon: 'fontisto:vuejs',
+    link: 'https://vuejs.org',
   },
   {
     name: 'DaisyUI',
-    link: 'https://v5.daisyui.com',
     icon: 'simple-icons:daisyui',
+    link: 'https://v5.daisyui.com',
   },
   {
     name: 'Typescript',
-    link: '',
     icon: 'file-icons:typescript',
+    link: '',
   },
   {
     name: 'VSCode',
-    link: '',
     icon: 'codicon:vscode-insiders',
+    link: '',
   },
   {
     name: 'TailwindCSS',
-    link: 'https://tailwindcss.com',
     icon: 'simple-icons:tailwindcss',
+    link: 'https://tailwindcss.com',
   },
   {
     name: 'Iconify',
-    link: 'https://iconify.design',
     icon: 'simple-icons:iconify',
+    link: 'https://iconify.design',
   },
   {
     name: 'Eslint',
-    link: '',
     icon: 'teenyicons:eslint-outline',
+    link: '',
   },
   {
     name: 'shadcn-ui',
-    link: 'https://www.shadcn-vue.com',
     icon: 'simple-icons:shadcnui',
+    link: 'https://www.shadcn-vue.com',
   },
   {
     name: 'Nuxt',
-    link: 'https://nuxt.com',
     icon: 'cib:nuxt-js',
+    link: 'https://nuxt.com',
   },
   {
     name: 'Vite',
-    link: 'https://vite.dev',
     icon: 'tabler:brand-vite',
+    link: 'https://vite.dev',
   },
 ]
 
@@ -63,17 +63,15 @@ const hoverClass = 'r'
 
 const faq = [
   {
-    q: 'Where going?',
     a: '',
+    q: 'Where going?',
   },
 ]
 </script>
 
 <template>
-  <div class="px-18 size-full grid place-items-center">
-    <AppTitlebar />
-
-    <div class="flex w-210 flex-col gap-6 items-center mx-auto">
+  <div class="px-18 h-screen w-full grid place-items-center">
+    <div class="flex w-210 flex-col gap-6 items-center mx-auto -mt-[45px]">
       <div
         class="grid grid-cols-[20px_1fr] w-full gap-x-14 **:font-mono mockup-code text-nc text-sm">
         <div class="col-start-1 grid pl-6 gap-y-1 items-center">
@@ -86,7 +84,7 @@ const faq = [
         </div>
 
         <div class="col-start-2 grid h-fit gap-y-1 items-center">
-          <div>const CatTax: cat&#60;image: popUp&#62; = {</div>
+          <div>const CatTax: cat&#60;image: popUp&#62; = &lbrace;</div>
 
           <div class="gap-y-1 grid tiems-center pl-6">
             <div>'Clem': {</div>
@@ -134,7 +132,7 @@ const faq = [
           </div>
 
           <div class="opacity-0">
-            .
+            .&lbrace;
           </div>
 
           <div>
@@ -151,10 +149,11 @@ const faq = [
 
           <span class="text-md gap-3 flex pl-6">
             [LP]
-            <icon
-              name="hugeicons:moon-01"
-              class="size-7 text-nc stroke-0.8 mb-1" />
-          </span>
+            <span class="size-6 relative grid place-items-center">
+              <i-ui-crescent-moon
+                name="hugeicons:moon-01"
+                class="!size-5 text-nc absolute !shrink-0  mb-1" />
+            </span></span>
         </div>
       </div>
 
@@ -188,7 +187,7 @@ const faq = [
         </p>
       </div>
 
-      <Field class="mt-26">
+      <div class="mt-26 field-box py-3 px-4">
         <div
           class="items-center justify-evenly flex gap-5 *:dst **:size-6 pointer-events-auto">
           <tippy
@@ -203,6 +202,7 @@ const faq = [
                 <icon
                   :name="icon.icon"
                   class="size-6 dst shrink-0" />
+                <span class="sr-only">{{ icon.name }}</span>
               </a>
             </template>
 
@@ -221,11 +221,11 @@ const faq = [
             class="brightness-[80%] contrast-200 grayscale"
             name="logos:pinia" />
         </div>
-      </Field>
+      </div>
 
       <div class="flex items-center flex-col tracking-tight dst px-4 mt-6">
         <p class="text-center">
-          <i>Lolpockets</i>
+          <i>Lolpockets </i>
 
           <u>isn't</u>
           endorsed by Riot Games and

@@ -1,7 +1,6 @@
 const item: Item = {
-  name: 'Pickaxe',
   id: 1037,
-  rank: 'Basic',
+  name: 'Pickaxe',
   buildsInto: [
     {
       id: 6035,
@@ -109,22 +108,23 @@ const item: Item = {
       gold: 2700,
     },
   ],
-  specialRecipe: 0,
-  noEffects: true,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1037_class_t1_pickaxe.png',
-  simpleDescription: 'Moderately increases Attack Damage',
-  stats: {
-    attackDamage: 25,
-  },
+  maps: [11, 12, 21, 35],
+  noEffects: true,
+  rank: 'Basic',
+  removed: false,
   shop: {
     prices: {
-      total: 875,
       combined: 875,
       sell: 350,
+      total: 875,
     },
     tags: ['FIGHTER', 'MARKSMAN', 'ASSASSIN'],
   },
-  maps: [11, 12, 21, 35],
+  simpleDescription: 'Moderately increases Attack Damage',
+  specialRecipe: 0,
+  stats: {
+    attackDamage: 25,
+  },
 }
 export default item

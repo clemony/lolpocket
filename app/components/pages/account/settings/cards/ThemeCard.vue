@@ -2,9 +2,9 @@
 import { ListboxItem, ListboxItemIndicator } from 'reka-ui'
 
 const {
-  theme,
   activeTheme,
   class: className,
+  theme,
 } = defineProps<{
   theme: any
   activeTheme: string
@@ -25,13 +25,15 @@ const colorChip
         ' hover-ring overflow-hidden py-4 px-6 !size-full max-w-82 max-h-90 relative bg-b1 text-bc  grid grid-rows-[repeat(2,2fr)_repeat(2,0.5fr)] gap-5 rounded-lg cursor-pointer justify-center   group/theme  shadow-sm shadow-black/16 drop-shadow-xs  items-center cursor-pointer  select-none',
         {
           'border-bc group-hover/label:ring group-hover/label:ring-offset-1    ':
-            theme.name == activeTheme,
+            theme.name === activeTheme,
         },
         className,
       )
     ">
     <Button
-      v-if="as().settings.theme == theme.name"
+      v-if="$1"
+      as().settings.theme="=="
+      theme.name"
       size="sm"
       class="aspect-square rounded-full grid place-items-center relative"
       variant="neutral">

@@ -14,13 +14,15 @@ const route = useRoute()
             'w-full top-0 h-15 sticky  flex shrink-0 items-center gap-3 border-b z-3  bg-linear-to-r from-b1 to-b1/20 backdrop-blur  px-2',
             {
               '[border-image:linear-gradient(to_right,var(--color-b3),transparent)_50] !absolute':
-                route.matched?.[0]?.name == 'pocket',
+                route.matched?.[0]?.name === 'pocket',
             },
           )
         ">
         <BreadcrumbNav />
       </header>
-      <slot />
+      <div class="size-full relative">
+        <slot />
+      </div>
     </div>
 
     <!--     <LazyAppCommand />  -->
