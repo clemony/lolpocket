@@ -40,7 +40,7 @@ const tabListClass = 'bg-b1/45  shadow-smooth h-18 w-120 justify-evenly gap-5  o
             v-tippy="path"
             class="grid aspect-square size-14 place-items-center rounded-full"
             :class="{
-              'bg-b1/70 shadow-sm shadow-black/5 backdrop-blur-sm duration-500': path == selectedPath,
+              'bg-b1/70 shadow-sm shadow-black/5 backdrop-blur-sm duration-500': path===selectedPath,
             }">
             <input
               v-model="selectedPath"
@@ -54,7 +54,7 @@ const tabListClass = 'bg-b1/45  shadow-smooth h-18 w-120 justify-evenly gap-5  o
               :alt="`${path} icon`"
               class="z-10 h-9 w-auto brightness-90 grayscale transition-all duration-300 [&_img]:drop-shadow-sm"
               :class="{
-                'brightness-100 grayscale-0': path == selectedPath,
+                'brightness-100 grayscale-0': path===selectedPath,
               }" />
           </label>
         </div>

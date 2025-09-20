@@ -23,7 +23,7 @@ const props = defineProps<{
               class="size-20 rounded-xl *:rounded-xl">
               <div class="size-full overflow-hidden rounded-lg">
                 <div
-                  v-if="item == 0"
+                  v-if="item === 0"
                   class="size-full bg-b3 aspect-square" />
 
                 <img

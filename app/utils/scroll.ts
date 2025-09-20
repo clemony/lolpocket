@@ -3,9 +3,9 @@ export interface Scroll {
 }
 
 export function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' })
+  window.scrollTo({ behavior: 'smooth', top: 0 })
 }
 
 export function scrollContainerToTop(container: HTMLElement | null) {
-  container?.scrollTo({ top: 0, behavior: 'smooth' })
+  container?.scrollTo({ behavior: 'smooth', top: 0 })
 }

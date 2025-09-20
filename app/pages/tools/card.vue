@@ -15,17 +15,15 @@ definePageMeta({
   search: false,
 })
 
-const ps = usePocketStore()
-
 // TODO nuxt bg here
 
 /* const fontClass1 = computed (() => {
-  const a = fonts.find(f => f.id == card.font[0])
+  const a = fonts.find(f => f.id===card.font[0])
   return ''
   a.cardClass ? a.cardClass : ''
 })
 const fontClass2 = computed (() => {
-  const a = fonts.find(f => f.id == card.font[1])
+  const a = fonts.find(f => f.id===card.font[1])
   return ''
   a.cardClass ? a.cardClass : ''
 })
@@ -39,7 +37,7 @@ const isSettingsOpen = ref<boolean>(true)
 const pocketCardRef = ref<HTMLDivElement>(null)
 
 onMounted(() => {
-  ps.pocketCardRef = pocketCardRef.value
+  ps().pocketCardRef = pocketCardRef.value
 })
 // getSplash(card.splash) ||
 const img = useImage()
@@ -58,7 +56,7 @@ console.log('💠 - card.splash:', card.splash)
       <div class="px-1 dst">
         A simple, customizable build card for your  Easily download, share, and reference a basic overview of your loadout.
       </div>
-      <Field :title="props.champions.children.length != 1 ? 'Champions' : 'Champion'">
+      <Field :title="props.champions.children.length !== 1 ? 'Champions' : 'Champion'">
         <p class=" dst">
           Select a main champion and splash art to display for this
         </p>
@@ -101,7 +99,7 @@ console.log('💠 - card.splash:', card.splash)
         }">
         <div
           class="size-full overflow-hidden rounded-2xl transition-all duration-500 mask-right-100"
-          :class="{ grayscale: card.filter == 'grayscale' }">
+          :class="{ grayscale: card.filter === 'grayscale' }">
           <div
             alt="pocket-card-bg"
             :style="{
@@ -137,11 +135,11 @@ console.log('💠 - card.splash:', card.splash)
                 <template
                   v-if="
                     set
-                      && set != undefined
+                      && set !== undefined
                       && card.items.length
-                      && set != null
-                      && card.items[0] != undefined
-                      && card.items[0] != null
+                      && set !== null
+                      && card.items[0] !== undefined
+                      && card.items[0] !== null
                   ">
                   <!-- CompleteItemSets
                     :set="card.items[i]"

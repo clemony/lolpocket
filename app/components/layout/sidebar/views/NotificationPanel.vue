@@ -1,6 +1,14 @@
 <script lang="ts" setup>
-const as = useAccountStore()
-const notifications = computed(() => as.account?.inbox?.notifications ?? [])
+defineOptions({
+  meta: {
+    name: 'Notifications',
+    badge: computed (() => as().account.inbox.notifications.filter(n => !n.read).length).value,
+    class: '**:stroke-[2.2]',
+    icon: 'lucide:message-square',
+  }
+})
+
+const notifications = computed(() => as().account?.inbox?.notifications ?? [])
 
 const sortedNotifications = computed(() =>
   [...notifications.value]
@@ -16,8 +24,8 @@ function testNotificaition() {
   console.log('💠 - testNotificaition - vars:', vars)
 
   console.log(
-    '💠 - testNotificaition - as.account.inbox.notifications:',
-    as.account.inbox?.notifications
+    '💠 - testNotificaition - as().account.inbox.notifications:',
+    as().account.inbox?.notifications
   )
   saveNotification('newPocket', vars)
 }

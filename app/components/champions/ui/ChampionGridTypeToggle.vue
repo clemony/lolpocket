@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-const cs = useChampStore()
+
 </script>
 
 <template>
   <ToggleGroup
-    v-model:model-value="cs.championGridType"
+    v-model:model-value="cs().championGridType"
     type="single">
     <ToggleGroupItem value="calculated">
       Level

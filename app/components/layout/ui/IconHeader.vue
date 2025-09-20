@@ -8,7 +8,7 @@ const { class: className } = defineProps<{
   <header
     :class="
       cn(
-        'relative gap-6 flex flex flex-nowrap   items-center  w-fit max-w-120 max-h-22 h-22',
+        'relative gap-6 flex flex flex-nowrap  items-center  w-fit max-w-120 max-h-22 h-22',
         className,
       )
     ">

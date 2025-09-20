@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import type { ToggleEmits, ToggleProps } from 'reka-ui'
-import { Toggle, useForwardPropsEmits } from 'reka-ui'
-
 import type { HTMLAttributes } from 'vue'
+import { Toggle, useForwardPropsEmits } from 'reka-ui'
 import type { ToggleVariants } from './toggleVariants'
 import { toggleVariants } from './toggleVariants'
 
@@ -15,9 +14,9 @@ const props = withDefaults(
     }
   >(),
   {
-    variant: 'default',
-    size: 'default',
     disabled: false,
+    size: 'default',
+    variant: 'default',
   }
 )
 

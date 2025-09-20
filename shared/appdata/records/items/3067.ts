@@ -1,7 +1,6 @@
 const item: Item = {
-  name: 'Kindlegem',
   id: 3067,
-  rank: 'Epic',
+  name: 'Kindlegem',
   buildsFrom: [
     {
       id: 1028,
@@ -151,23 +150,24 @@ const item: Item = {
       gold: 2650,
     },
   ],
-  specialRecipe: 0,
-  noEffects: true,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3067_tank_t1_kindlegem.png',
-  simpleDescription: 'Increases Health and Cooldown Reduction',
-  stats: {
-    health: 200,
-    abilityHaste: 10,
-  },
+  maps: [11, 12, 21, 35],
+  noEffects: true,
+  rank: 'Epic',
+  removed: false,
   shop: {
     prices: {
-      total: 800,
       combined: 150,
       sell: 320,
+      total: 800,
     },
     tags: ['FIGHTER', 'MARKSMAN', 'ASSASSIN', 'MAGE', 'TANK', 'SUPPORT'],
   },
-  maps: [11, 12, 21, 35],
+  simpleDescription: 'Increases Health and Cooldown Reduction',
+  specialRecipe: 0,
+  stats: {
+    abilityHaste: 10,
+    health: 200,
+  },
 }
 export default item

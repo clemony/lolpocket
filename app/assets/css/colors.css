@@ -69,16 +69,12 @@
   --color-mid: #be86b5;
   --color-vanguard: oklch(0.7 0.0922 75.66);
   --color-warden: oklch(44% 11% 246deg);
---color-burst: oklch(82% 16% 14deg);
---color-enchanter: oklch(76% 11% 193deg);
+  --color-burst: oklch(82% 16% 14deg);
+  --color-enchanter: oklch(76% 11% 193deg);
   --color-olive: oklch(48% 10% 113deg);
-
-
 }
 
 @theme inline {
-
-
   --mana-hex: var(--color-mana-hex);
   --mana: var(--color-mana);
   --platinum: var(--color-platinum);
@@ -86,7 +82,7 @@
   --challenger: var(--color-challenger);
   --hsp: var(--color-hsp);
   --enchanter: var(--color-enchanter);
---ah: var(--color-ah);
+  --ah: var(--color-ah);
   --emerald: var(--color-emerald);
   --hp: var(--color-hp);
   --resolve: var(--color-resolve);
@@ -113,8 +109,8 @@
   --diamond: var(--color-diamond);
   --master: var(--color-master);
   --grandmaster: var(--color-grandmaster);
---vanguard: var(--color-vanguard);
---warden: var(--color-warden);
+  --vanguard: var(--color-vanguard);
+  --warden: var(--color-warden);
 
   --color-utility: var(--color-inspiration);
   --color-mobility: var(--color-precision);

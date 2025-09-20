@@ -9,7 +9,7 @@ const route = useRoute()
 <template>
   <div v-if="pocket">
     <!--     <NuxtLink :to="`/pocket/${pocket.key}/card`">
-      <Btn :class="{ 'btn-active [&_span]:border-b1 [&_span]:inset-shadow-black/16 [&_span]:bg-b1/60  border-r-b2': route.name == 'card' }">
+      <Btn :class="{ 'btn-active [&_span]:border-b1 [&_span]:inset-shadow-black/16 [&_span]:bg-b1/60  border-r-b2': route.name === 'card' }">
         <slot />
 
         <span>

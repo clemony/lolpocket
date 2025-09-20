@@ -7,9 +7,8 @@ const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 
-const as = useAccountStore()
 const select = useTemplateRef<HTMLElement>('select')
-const selectedRegion = shallowRef<string>(as.account?.region || 'na1')
+const selectedRegion = shallowRef<string>(as().account?.region || 'na1')
 
 const name = ref<string>('')
 const tag = ref<string>('')
@@ -59,7 +58,7 @@ const tagText = computed(() =>
 
       <!--    <Popover
         class=" "
-        @close-auto-focui.prevent
+        @close-auto-focus.prevent
         @click.stop>
         <PopoverTrigger
           no-arrow

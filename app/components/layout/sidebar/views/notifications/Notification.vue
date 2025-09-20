@@ -54,7 +54,7 @@ const hasAction = computed(() => !!template.value.action)
     </div>
 
     <NuxtLink
-      v-if="template.action.type == 'navigate'"
+      v-if="template.action.type === 'navigate'"
       class="chat-footer group-hover/item:opacity-50 hover:opacity-100 opacity-0 items-center p-0 flex gap-1 flex-nowrap !font-medium leading-none cursor-pointer hover:underline transition-opacity duration-200"
       :to="template.action.function">
       <icon

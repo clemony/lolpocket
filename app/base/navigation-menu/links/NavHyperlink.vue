@@ -3,11 +3,11 @@ import { NuxtLink } from '#components'
 import { NavigationMenuLink } from 'reka-ui'
 
 const {
+  at,
   class: className,
   hash,
-  to,
-  at,
   nuxt,
+  to,
 } = defineProps<{
   class?: HTMLAttributes['class']
   to?: string

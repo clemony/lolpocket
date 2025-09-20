@@ -26,6 +26,34 @@ export const matchDataStats = {
       data: 'largestCriticalStrike',
     },
   ],
+  farming: [
+    {
+      id: 'Farming',
+      data: '',
+      i: 6,
+    },
+    {
+      id: 'gold/min',
+      data: 'goldPerMinute',
+      spec: 'round',
+    },
+    {
+      id: 'n1',
+      data: 'n1MinionsKilled',
+    },
+    {
+      id: 'scuttle',
+      data: 'scuttleCrabKills',
+    },
+    {
+      id: 'void monster',
+      data: 'voidMonsterKill',
+    },
+    {
+      id: 'buffs Stolen',
+      data: 'buffsStolen',
+    },
+  ],
   healing: [
     {
       id: 'Effective Healing and Shielding',
@@ -49,87 +77,6 @@ export const matchDataStats = {
       data: 'saveAllyFromDeath',
     },
   ],
-
-  utility: [
-    {
-      id: 'Team Utility',
-      data: '',
-      i: 7,
-    },
-    {
-      id: 'dmg taken',
-      data: 'totalDamageTaken',
-    },
-    {
-      id: 'dmg taken %',
-      data: `damageTakenOnTeamPercentage`,
-      spec: 'round',
-    },
-    {
-      id: 'CC output',
-      data: 'timeCCingOthers',
-    },
-  ],
-  vision: [
-    {
-      id: 'vision',
-      data: '',
-      i: 3,
-    },
-    {
-      id: 'score',
-      data: 'visionScore',
-    },
-    {
-      id: 'sight',
-      data: 'controlWardsPlaced',
-    },
-
-    {
-      id: 'place',
-      data: 'wardsPlaced',
-    },
-    {
-      id: 'guard',
-      data: 'wardsGuarded',
-    },
-  ],
-  objectives: [
-    {
-      id: 'Objectives',
-      data: '',
-      i: 4,
-    },
-    {
-      id: 'dmg to turrets',
-      data: 'damageDealtToObjectives',
-    },
-    {
-      id: 'turret takedowns',
-      data: 'turretKills',
-    },
-    {
-      id: 'inhib takedowns',
-      data: 'inhibitorTakedowns',
-    },
-    {
-      id: 'dmg to objectives',
-      data: 'damageDealtToObjectives',
-    },
-    {
-      id: 'steals',
-      data: 'objectivesStolen',
-    },
-    {
-      id: 'dragon kills',
-      data: 'dragonKills',
-    },
-    {
-      id: 'Baron kills',
-      data: 'teamBaronKills',
-    },
-  ],
-
   kills: [
     {
       id: 'Kills',
@@ -184,32 +131,83 @@ export const matchDataStats = {
       data: 'pentaKills',
     },
   ],
-  farming: [
+  objectives: [
     {
-      id: 'Farming',
+      id: 'Objectives',
       data: '',
-      i: 6,
+      i: 4,
     },
     {
-      id: 'gold/min',
-      data: 'goldPerMinute',
+      id: 'dmg to turrets',
+      data: 'damageDealtToObjectives',
+    },
+    {
+      id: 'turret takedowns',
+      data: 'turretKills',
+    },
+    {
+      id: 'inhib takedowns',
+      data: 'inhibitorTakedowns',
+    },
+    {
+      id: 'dmg to objectives',
+      data: 'damageDealtToObjectives',
+    },
+    {
+      id: 'steals',
+      data: 'objectivesStolen',
+    },
+    {
+      id: 'dragon kills',
+      data: 'dragonKills',
+    },
+    {
+      id: 'Baron kills',
+      data: 'teamBaronKills',
+    },
+  ],
+  utility: [
+    {
+      id: 'Team Utility',
+      data: '',
+      i: 7,
+    },
+    {
+      id: 'dmg taken',
+      data: 'totalDamageTaken',
+    },
+    {
+      id: 'dmg taken %',
+      data: `damageTakenOnTeamPercentage`,
       spec: 'round',
     },
     {
-      id: 'n1',
-      data: 'n1MinionsKilled',
+      id: 'CC output',
+      data: 'timeCCingOthers',
+    },
+  ],
+  vision: [
+    {
+      id: 'vision',
+      data: '',
+      i: 3,
     },
     {
-      id: 'scuttle',
-      data: 'scuttleCrabKills',
+      id: 'score',
+      data: 'visionScore',
     },
     {
-      id: 'void monster',
-      data: 'voidMonsterKill',
+      id: 'sight',
+      data: 'controlWardsPlaced',
+    },
+
+    {
+      id: 'place',
+      data: 'wardsPlaced',
     },
     {
-      id: 'buffs Stolen',
-      data: 'buffsStolen',
+      id: 'guard',
+      data: 'wardsGuarded',
     },
   ],
 }

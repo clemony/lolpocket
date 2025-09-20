@@ -1,8 +1,8 @@
 <script setup lang="ts">
 const {
-  entry,
   title,
   class: className,
+  entry,
 } = defineProps<{
   entry: RankedEntry
   title?: string
@@ -22,14 +22,16 @@ const winrate = computed(() =>
 </script>
 
 <template>
-  <Field
+  <div
     :class="
       cn(
-        'w-120 max-w-120 h-42 max-h-42  bg-b2/30 shadow-warm-soft  drop-shadow-xs border-b3/40 py-0 ',
+        'w-120 max-w-120 h-42 max-h-42 field-box  bg-b2/30 shadow-warm-soft  drop-shadow-xs border-b3/40 py-0 ',
         className,
       )
-    "
-    :title="`Ranked ${title}`">
+    ">
+    <span class="field-legend">
+      {{ `Ranked ${title}` }}
+    </span>
     <div
       class="overflow-hidden size-full grid grid-cols-[1.1fr_1fr_1fr] place-items-center h-42 content-center">
       <div class="grid mt-0.5 overflow-hidden place-items-center">
@@ -97,5 +99,5 @@ const winrate = computed(() =>
         </p>
       </div>
     </div>
-  </Field>
+  </div>
 </template>

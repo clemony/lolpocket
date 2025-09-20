@@ -2,7 +2,7 @@
 import { championPositions } from '#shared/appdata'
 import { VueDraggable } from 'vue-draggable-plus'
 
-const { pocket: p, class: className } = defineProps<{
+const { class: className, pocket: p } = defineProps<{
   pocket: Pocket
   class?: HTMLAttributes['class']
 }>()
@@ -69,7 +69,7 @@ const pocket = computed(() => p)
             <component
               :is="`i-roles-${role.name.toLowerCase()}`"
               class="h-3.75 text-bc/70 w-auto dst shrink-0 peer-checked:text-nc"
-              :class="{ '!text-bc/80': role.name.toLowerCase() == 'all' }" />
+              :class="{ '!text-bc/80': role.name.toLowerCase() === 'all' }" />
             {{ role.name }}
           </Label>
         </template>

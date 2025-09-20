@@ -3,7 +3,7 @@ const { pocketKey } = defineProps<{
   pocketKey: string | null
 }>()
 
-const isDisabled = computed(() => pocketKey == null)
+const isDisabled = computed(() => pocketKey === null)
 
 const pocket = computed(() => {
   if (!pocketKey)
@@ -65,13 +65,13 @@ const pocket = computed(() => {
 
       <PocketTagsDropdown :pocket></PocketTagsDropdown>
       <!-- edit -->
-      <Blink
+      <BtnLink
         v-if="pocket && pocket?.key"
         :to="`/pocket/${pocket.key}`"
         variant="ghost"
         class="size-11">
         <icon name="edit-line" />
-      </Blink>
+      </BtnLink>
     </div>
 
     <div class="ml-auto flex items-center gap-2">

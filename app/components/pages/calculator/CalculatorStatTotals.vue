@@ -5,8 +5,6 @@ import { motion } from 'motion-v'
 
 const checkedStats = ref([])
 
-const is = useItemStore()
-const ix = useIndexStore()
 const stats = ref()
 const stats2 = ref()
 
@@ -32,14 +30,14 @@ const totalCost2 = ref()
 function getTotalCost(set) {
   return set.reduce((sum, item) => sum + (item.buy || 0), 0)
 }
-const set1 = computed(() => is.calculatorSet)
-const set2 = computed(() => is.calculatorSet2)
+const set1 = computed(() => is().calculatorSet)
+const set2 = computed(() => is().calculatorSet2)
 /* watchEffect(() => {
-  if (set1.value && !is.isComparing) {
+  if (set1.value && !is().isComparing) {
     stats.value = mergeItemStats(set1.value)
     totalCost.value = getTotalCost(set1.value)
   }
-  else if (is.isComparing == true) {
+  else if (is().isComparing===true) {
     stats.value = mergeItemStats(set1.value)
     totalCost.value = getTotalCost(set1.value)
 
@@ -61,11 +59,11 @@ const set2 = computed(() => is.calculatorSet2)
       </div>
 
       <div class="dst font-medium justify-center">
-        {{ is.isComparing ? "1" : "TOTAL" }}
+        {{ is().isComparing ? "1" : "TOTAL" }}
       </div>
 
       <div
-        v-if="is.isComparing"
+        v-if="is().isComparing"
         class="dst justify-center font-medium">
         2
       </div>
@@ -130,7 +128,7 @@ const set2 = computed(() => is.calculatorSet2)
       </div>
 
       <div
-        v-if="is.isComparing"
+        v-if="is().isComparing"
         class="dst font-medium justify-center">
         {{ totalCost2 }}
       </div>

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const {
-  class: className,
   champions: c,
+  class: className,
   list,
 } = defineProps<{
   class?: HTMLAttributes['class']

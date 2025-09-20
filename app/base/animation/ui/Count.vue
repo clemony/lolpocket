@@ -1,25 +1,25 @@
 <script setup lang="ts">
 interface Props {
-  to: number
-  from?: number
-  direction?: 'up' | 'down'
-  delay?: number
-  duration?: number
   className?: string
-  startWhen?: boolean
-  separator?: string
-  onStart?: () => void
+  delay?: number
+  direction?: 'up' | 'down'
+  duration?: number
+  from?: number
   onEnd?: () => void
+  onStart?: () => void
+  separator?: string
+  startWhen?: boolean
+  to: number
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  from: 0,
-  direction: 'up',
-  delay: 0,
-  duration: 2,
   className: '',
-  startWhen: true,
+  delay: 0,
+  direction: 'up',
+  duration: 2,
+  from: 0,
   separator: '',
+  startWhen: true,
 })
 
 const elementRef = useTemplateRef<HTMLSpanElement>('elementRef')
@@ -38,9 +38,9 @@ let startTime = 0
 
 function formatNumber(value: number) {
   const options = {
-    useGrouping: !!props.separator,
-    minimumFractionDigits: 0,
     maximumFractionDigits: 0,
+    minimumFractionDigits: 0,
+    useGrouping: !!props.separator,
   }
 
   const formattedNumber = Intl.NumberFormat('en-US', options).format(
@@ -118,8 +118,8 @@ function setupIntersectionObserver() {
       }
     },
     {
-      threshold: 0,
       rootMargin: '0px',
+      threshold: 0,
     }
   )
 

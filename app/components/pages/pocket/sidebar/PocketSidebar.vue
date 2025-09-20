@@ -3,12 +3,6 @@ const route = useRoute()
 const pocket = computed(() =>
   ps().getPocket(String(route.params.pocket_key))
 ).value
-const pocketNav = ref()
-
-onMounted(() => {
-  pocketNav.value = route.path
-})
-
 // pocket.main = { champion: '', items: '', runes: '', role: 'All', spells: [] }
 // pocket.spells = [newSpellSet()]
 

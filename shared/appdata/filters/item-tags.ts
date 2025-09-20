@@ -2,44 +2,44 @@ export const itemTags = [
   {
     id: 'Fighter',
     name: 'Fighter',
-    icon: 'roles-fighter',
     color: '--color-fighter',
+    icon: 'roles-fighter',
   },
   {
     id: 'Marksman',
     name: 'Marksman',
-    icon: 'roles-marksman',
     color: '--color-precision',
+    icon: 'roles-marksman',
   },
   {
     id: 'Assassin',
     name: 'assassin',
-    icon: 'roles-assassin',
     color: '--color-domination',
+    icon: 'roles-assassin',
   },
   {
     id: 'Mage',
     name: 'Mage',
-    icon: 'roles-mage',
     color: '--color-sorcery',
+    icon: 'roles-mage',
   },
   {
     id: 'Tank',
     name: 'Tank',
-    icon: 'roles-tank',
     color: '--color-resolve',
+    icon: 'roles-tank',
   },
   {
     id: 'Support',
     name: 'Support',
-    icon: 'roles-support',
     color: '--color-inspiration',
+    icon: 'roles-support',
   },
   {
     id: 'Onhit_effects',
     name: 'On-Hit Effects',
-    icon: 'stats-on-hit',
     color: '--color-onhit',
+    icon: 'stats-on-hit',
   },
   {
     id: 'Movement',
@@ -49,7 +49,7 @@ export const itemTags = [
   {
     id: 'Lifesteal_vamp',
     name: 'Lifesteal & Omnivamp',
-    icon: 'stats-vamp',
     color: '--color-domination',
+    icon: 'stats-vamp',
   },
 ]

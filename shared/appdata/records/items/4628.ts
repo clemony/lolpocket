@@ -19,7 +19,7 @@ const item: Item = {
       gold: 850,
     },
   ],
-  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4628_mage_t3_horizonfocui.png',
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4628_mage_t3_horizonfocus.png',
   maps: [11, 12, 21, 35],
   noEffects: false,
   passives: [

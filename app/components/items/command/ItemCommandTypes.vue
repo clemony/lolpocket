@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-const is = useItemStore()
 // TODO fix
 </script>
 

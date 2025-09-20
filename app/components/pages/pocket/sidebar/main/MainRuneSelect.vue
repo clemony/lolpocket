@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 const {
-  class: className,
-  pocket: p,
   side,
   sideOffset,
   align,
   alignOffset,
+  class: className,
+  pocket: p,
 } = defineProps<{
   class?: HTMLAttributes['class']
   pocket: Pocket
@@ -19,7 +19,7 @@ const route = useRoute()
 
 const pocket = computed(() => p)
 const mainSet = computed(() =>
-  pocket.value.runes.find(s => s.id == pocket.value.main?.runes)
+  pocket.value.runes.find(s => s.id === pocket.value.main?.runes)
 )
 </script>
 
@@ -86,7 +86,7 @@ const mainSet = computed(() =>
             size="xs"
             title="Clear main runes"
             class="aspect-square *:opacity-60 hover:*:opacity-100 btn-square"
-            @click="pocket.main?.runes == ''">
+            @click="pocket.main?.runes === ''">
             <icon
               name="backspace"
               class="size-5 **:stroke-2" />

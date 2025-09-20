@@ -28,7 +28,7 @@ onMounted(() => {
       role="tab"
       :class="
         cn('group/tab min-w-22  max-w-40 grow has-checked:tab-active  tab ', {
-          'tab-active ': tabs == item.name,
+          'tab-active ': tabs === item.name,
         })
       "
       @click="navigateTo(`/pocket/${pocket.key}/${item.meta?.title}`)">

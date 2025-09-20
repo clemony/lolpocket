@@ -18,7 +18,7 @@ import { VisuallyHidden } from 'reka-ui'
     </SheetTitle>
 
     <VisuallyHidden>
-      <SheetDescription>Choose a new look for your ui.</SheetDescription>
+      <SheetDescription>Choose a new look for your ui().</SheetDescription>
     </VisuallyHidden>
   </div>
 </template>

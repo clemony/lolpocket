@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 interface AccountSwitcherProps {
-  isCollapsed: boolean
   accounts: {
     label: string
     email: string
     icon: string
   }[]
+  isCollapsed: boolean
 }
 
 const props = defineProps<AccountSwitcherProps>()

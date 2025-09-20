@@ -18,7 +18,7 @@ watch(() => champAbilities.value.name, (newVal) => {
 const keyDown = ref(false)
 
 onKeyDown(['p', 'q', 'w', 'e', 'r'], (e) => {
-  if (selectedAbility.value != e.key.toUpperCase()) {
+  if (selectedAbility.value !== e.key.toUpperCase()) {
     selectedAbility.value = e.key.toUpperCase()
     emit('update:ability', selectedAbility.value)
   }
@@ -39,7 +39,7 @@ onKeyUp(['p', 'q', 'w', 'e', 'r'], (e) => {
       :value="i"
       class="!p-0 aspect-square size-20 rounded-lg relative bg-b3 group shrink-0 !cursor-pointer **:pointer-events-none hover:scale-110 transition-transform duration-300"
       :class="{
-        'scale-110 hover:scale-115 ': selectedAbility == ability.key,
+        'scale-110 hover:scale-115 ': selectedAbility === ability.key,
         '  drop-shadow-sm  shadow-sm ': loaded,
       }">
       <input

@@ -3,8 +3,6 @@ import { hexoid } from 'hexoid'
 
 const emit = defineEmits(['update:name'])
 
-const ps = usePocketStore()
-
 const toID = hexoid()
 
 // Form fields
@@ -30,12 +28,12 @@ function submitForm() {
   const key = toID()
   clearForm()
 
-  console.log('pocket added!', ps.pockets)
+  console.log('pocket added!', ps().pockets)
 }
 
 defineExpose({
-  clearForm,
   name,
+  clearForm,
 })
 </script>
 

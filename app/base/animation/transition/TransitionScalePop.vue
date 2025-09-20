@@ -1,10 +1,10 @@
 <script lang="ts" setup>
 const {
-  class: className,
   as = 'div',
+  class: className,
   mode = 'out-in',
-  scale = 0.8,
   origin = 'top',
+  scale = 0.8,
 } = defineProps<{
   class?: HTMLAttributes['class']
   as?: string

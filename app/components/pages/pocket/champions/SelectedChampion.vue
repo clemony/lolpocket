@@ -7,13 +7,13 @@ const { champion, pocket } = defineProps<{
 }>()
 
 const variants = {
-  visible: {
-    opacity: [0, 100],
-    scale: [0, 1],
-  },
   hidden: {
     opacity: 0,
     scale: 0,
+  },
+  visible: {
+    opacity: [0, 100],
+    scale: [0, 1],
   },
 }
 

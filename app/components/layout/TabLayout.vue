@@ -9,7 +9,7 @@ const {
   title?: string
   description?: string
   class?: HTMLAttributes['class']
-  size?: 'default' | 'lg'
+  size?: 'default' | 'lg' | 'xl'
   icon?: boolean
 }>()
 /* ? alsdjlsajd */
@@ -19,22 +19,22 @@ const {
   <div class="overflow-hidden flex flex-col size-full absolute inset-0 top-0">
     <div
       :class="
-        cn('w-full grid grid-cols-2 z-0 pt-26   sticky top-0 bg-b1 z-1 ', {
-          ' max-h-64 h-64': size == 'lg',
-          ' max-h-58 h-58': size == 'default',
+        cn(' grid grid-cols-2 z-0 size-full  sticky top-0 bg-b1 z-1 ', {
+          ' max-h-74 h-74 ': size === 'xl',
+          ' h-64': size === 'lg',
+          ' max-h-58 h-58': size === 'default',
         })
       ">
       <slot name="background" />
       <Separator class="absolute z-0 bottom-0" />
-      <div class="absolute top-25 left-25"></div>
-      <div :class="cn('flex flex-col z-1 *:z-1 size-full gap-6')">
-        <div class="flex items-center gap-8 pl-32">
+      <div :class="cn('flex flex-col z-1  *:z-1 size-full gap-6')">
+        <div class="flex items-center gap-8  grow pl-32">
           <slot name="icon" />
           <slot name="header" />
         </div>
         <div
           :class="
-            cn('flex gap-4 *:first:justify-self-end pl-32', { 'pl-58': icon })
+            cn('flex gap-4  *:first:justify-self-end pl-32', { 'pl-58': icon })
           ">
           <slot name="before-tabs" />
           <slot name="tabs" />

@@ -4,9 +4,9 @@ import { accounts, mails } from '~/components/layout/box/mails'
 definePageMeta({
   name: 'backpack',
   icon: 'backpack',
-  redirect: '/backpack/pockets',
   level: 1,
   order: 4,
+  redirect: '/backpack/pockets',
 })
 const isCollapsed = ref(false)
 const route = useRoute()

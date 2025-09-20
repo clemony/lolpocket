@@ -3,13 +3,13 @@ const props = defineProps<{
   active: boolean
 }>()
 const tabStyles = {
-  tabs: '',
+  activeClass:
+    'tab-active shadow-sm shadow-[color-mix(in_oklch,var(--color-b2)_40%,white_60%)] bg-noise drop-shadow-[0px_-2px_1px_#00000008]   ',
   activeStyle: {
     '--tab-bg': 'color-mix(in oklch, var(--color-b2) 40%, white 60%)',
     '--tab-border-colors': 'var(--color-b3)',
   },
-  activeClass:
-    'tab-active shadow-sm shadow-[color-mix(in_oklch,var(--color-b2)_40%,white_60%)] bg-noise drop-shadow-[0px_-2px_1px_#00000008]   ',
+  tabs: '',
 }
 
 const tabs = ref()

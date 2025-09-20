@@ -4,80 +4,81 @@
 
 @layer components {
   .rune-hover:hover label,
-    .rune-hover[aria-expanded='true'] label {
+  .rune-hover[aria-expanded='true'] label {
     @apply !grayscale-0 ring-neutral opacity-100 ring;
   }
-  
+
   .dst {
     @apply drop-shadow-text;
   }
-  
+
   .role-text {
     @apply saturate-250 brightness-70;
   }
-  
+
   .set-absolute {
     @apply absolute inset-0 top-0 left-0;
   }
-  
+
   .frost {
     @apply bg-b1/94 backdrop-blur-md;
   }
-  
+
   .border-shadow {
     @apply shadow-[#000]/5 border-b3/60 rounded-box shadow-warm-2 border;
   }
-  
+
   .border-shadow-sm {
     @apply shadow-[#000]/4 border-b3/60 rounded-box border shadow-md drop-shadow-sm;
   }
-  
+
   .scrollbar-hidden,
   .scrollbar-hide,
   .scrollbar-hidden::-webkit-scrollbar,
-    .scrollbar-hide::-webkit-scrollbar {
+  .scrollbar-hide::-webkit-scrollbar {
     display: none;
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
-  
+
   .tip-icon {
     @apply mb-0.25 size-4.25 mr-2 ml-0.5 inline-flex align-middle;
   }
-  
+
   .inline-icon {
     @apply mb-0.25 size-4.25 mr-0.5 ml-0.5 inline-flex align-middle;
   }
-  
+
   .item-price-arrow::first-letter {
     writing-mode: sideways-lr;
     text-orientation: sideways;
   }
-  
+
   .ring-check {
     @apply shadow-sm drop-shadow-sm transition-all duration-150 has-checked:ring
     has-checked:ring-n1/50 has-checked:ring-offset-2 has-checked:ring-offset-b2/90
     has-checked:grayscale-0 hover:ring hover:ring-n1/50 hover:ring-offset-2
     hover:ring-offset-b2/90;
   }
-  
+
   .ability-effect {
     @apply drop-shadow-text nth-of-type-2:mt-3 inline-block justify-self-center
     align-middle leading-5 not-first:ml-2 not-first:pl-4 not-first:border-l
     not-first:border-l-b4 not-first:not-nth-of-type-2:pt-3;
   }
-  
+
   .ability-header {
     @apply drop-shadow-text !text-xs font-semibold uppercase tracking-normal;
   }
-  
+
   .corner-mask {
     --r: 4px;
     /* the radius */
     --s: 40px;
     /* the size of the cut */
     --_m: /calc(2 * var(--r)) calc(2 * var(--r)) radial-gradient(#000 70%, #0000 72%) no-repeat;
-    mask: calc(var(--s) + var(--r)) 0 var(--_m),
+    mask:
+      calc(var(--s) + var(--r)) 0 var(--_m),
       0 calc(var(--s) + var(--r)) var(--_m),
       radial-gradient(var(--s) at 0 0, #0000 99%, #000 101%) var(--r) var(--r) no-repeat,
       conic-gradient(at calc(var(--s) + 2 * var(--r)) calc(var(--s) + 2 * var(--r)), #000 75%, #0000 0);

@@ -4,16 +4,14 @@ import { motion } from 'motion-v'
 import { ProgressIndicator } from 'reka-ui'
 
 const {
-  class: className,
-  variant = 'shadow',
-  size = 'md',
-  showIcon,
-  circle,
   tipSide = 'top',
+  circle,
+  class: className,
+  showIcon,
+  size = 'md',
 } = defineProps<{
   class?: HTMLAttributes['class']
   text?: boolean | string | null
-  variant?: any
   size?: any
   showIcon?: boolean
   circle?: boolean
@@ -23,9 +21,9 @@ const {
 const state = useSummonerInject()
 
 const {
-  throttled: update,
   cooldown,
   isLoading,
+  throttled: update,
 } = throttleFunction(
   () => state.fetchNewMatches(),
   120_000,
@@ -44,7 +42,6 @@ const tip = computed(
 <template>
   <Button
     v-tippy="{ content: tip, placement: tipSide }"
-    :variant="variant"
     :class="
       cn(
         'p-0',
@@ -95,86 +92,67 @@ const tip = computed(
         v-if="!cooldown"
         :class="
           cn(
-            'flex items-center place-self-center text-xs tracking-[0.24px]  antialiased font-semibold opacity-68 group-hover/load:opacity-100',
-            { 'text-xxs': size == 'xs' },
+            'flex items-center place-self-center   antialiased font-semibold opacity-68 group-hover/load:opacity-100',
+            { 'text-xxs': size === 'xs' },
           )
         ">
         <icon
           v-if="showIcon"
           name="mingcute:refresh-2-line"
           class="mr-3 -ml-2 size-5" />
-        {{
-          typeof text == "string" ? text
-          : typeof text == "boolean" ? "update"
-            : ""
-        }}
+        <span class="text-xs">
+          {{
+            typeof text === "string" ? text
+            : typeof text === "boolean" ? "update"
+              : ""
+          }}
+        </span>
       </span>
       <div
         v-if="cooldown"
         :class="
           cn(
             'size-full grid place-items-center gap-1.5 p-2 grid-rows-2 *:overflow-hidden overflow-hidden z-0 pointer-events-none',
-            { 'gap-0': size == 'xs' },
-          )
-        "
-        class="">
+            { 'gap-0': size === 'xs' }) ">
         <div
-          v-if="size != 'xs'"
-          :class="
-            cn(
-              'flex items-center justify-between w-full font-semibold text-xxs dst text-end',
-            )
-          ">
-          <!--           <span
-            class="flex items-center gap-2">
-            <icon
-              name="svg-spinners:bars-scale-middle"
-              class="size-3.5 scale-x-130 ml-1" />
-          </span> -->
-          <span
-            class="flex flex-nowrap text-nowrap justify-self-end text-end pr-0.25 items-center inline align-bottom">
-            <span :class="cn('font-mono font-bold text-xs')">
-              {{ cooldown?.formatted }}
-            </span>
+          v-if="size !== 'xs'"
+          class="grid grid-cols-2 grid-flow-col justify-between w-full font-semibold text-xxs dst  text-nowrap text-end pr-0.25 items-center inline align-bottom">
+          <span :class="cn(' font-bold text-xs')">
+            {{ cooldown?.formatted }}
+          </span>
+          <span>
             cd
           </span>
         </div>
 
-        <div class="flex gap-0.75 items-center w-full">
-          <!--           <icon
-            v-if="size != 'xs'"
-            name="material-symbols:play-arrow-rounded"
-            class="size-6 -ml-0.5 " /> -->
-
-          <Progress
-            :model-value="cooldown?.percent"
-            class="bg-transparent"
-            :class="
-              cn(
-                'relative border bg-b3 border-b4  w-full h-2.75 rounded-[3px]',
-                { 'h-3.5 mt-1.5': size == 'xs' },
-              )
-            "
-            :value="cooldown?.percent"
-            :max="100">
-            <ProgressIndicator
-              class="!bg-transparent"
-              :value="cooldown?.percent">
-              <motion.div
-                class="h-full origin-right after:bg-red-500 after:from-neutral after:via-neutral/80 after:to-neutral after:inset-0 after:right-0 after:top-0 after:size-full relative after:absolute"
-                :initial="{
-                  scaleX: 1,
-                  width: '100%',
-                }"
-                :animate="{
-                  scaleX: `${cooldown?.percent}%`,
-                }"
-                :transition="{
-                  ease: 'linear',
-                }"></motion.div>
-            </ProgressIndicator>
-          </Progress>
-        </div>
+        <Progress
+          :model-value="cooldown?.percent"
+          class="bg-transparent"
+          :class="
+            cn(
+              'relative border bg-b3 border-b4 scale-y-60 w-full h-2.75 rounded-[3px]',
+              { 'h-2.5 mt-1.5': size === 'xs' },
+            )
+          "
+          :value="cooldown?.percent"
+          :max="100">
+          <ProgressIndicator
+            class="!bg-transparent"
+            :value="cooldown?.percent">
+            <motion.div
+              class="h-full origin-right after:bg-red-500 after:from-neutral after:via-neutral/80 after:to-neutral after:inset-0 after:right-0 after:top-0 after:size-full relative after:absolute"
+              :initial="{
+                scaleX: 1,
+                width: '100%',
+              }"
+              :animate="{
+                scaleX: `${cooldown?.percent}%`,
+              }"
+              :transition="{
+                ease: 'linear',
+              }"></motion.div>
+          </ProgressIndicator>
+        </Progress>
       </div>
       <slot />
     </TransitionScalePop>

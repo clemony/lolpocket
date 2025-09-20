@@ -11,8 +11,8 @@ export type UnwrapRefCarouselApi = UnwrapRef<CarouselApi>
 
 export interface CarouselProps {
   opts?: CarouselOptions
-  plugins?: CarouselPlugin
   orientation?: 'horizontal' | 'vertical'
+  plugins?: CarouselPlugin
 }
 
 export interface CarouselEmits {

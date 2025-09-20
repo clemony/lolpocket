@@ -25,7 +25,7 @@ onMounted(() => {
         'outline-bc checked:text-bc **:text-bc border-bc': !props.contrast,
       }"
       :value="props.value"
-      :checked="model == props.value" />
+      :checked="model === props.value" />
 
     <slot />
   </label>

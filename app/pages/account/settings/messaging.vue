@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 definePageMeta({
   name: 'messaging',
-  path: '/settings/messaging',
-  icon: 'gear',
   description: 'Manage in app-notifications, messaging, and email preferences.',
+  icon: 'gear',
+  path: '/settings/messaging',
 })
 </script>
 

@@ -3,20 +3,19 @@ const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 
-const ms = useMatchStore()
 const state = useSummonerInject()
 const roleStats = await useMatchRoles(state.summoner.value.puuid, state.matches)
 </script>
 
 <template>
-  <Tabs v-model:model-value="ms.filter.role">
+  <Tabs v-model:model-value="ms().filter.role">
     <FilterLabel
-      v-model="ms.filter.role"
-      :active="ms.filter.role != 'ALL'"
-      @click="ms.filter.role = 'ALL'">
+      v-model="ms().filter.role"
+      :active="ms().filter.role !== 'ALL'"
+      @click="ms().filter.role = 'ALL'">
       {{
-        ms.filter.role != "ALL"
-          ? roleStats.find((r) => r.role == ms.filter.role).name
+        ms().filter.role !== "ALL"
+          ? roleStats.find((r) => r.role === ms().filter.role).name
           : "Position"
       }}
     </FilterLabel>
@@ -35,7 +34,7 @@ const roleStats = await useMatchRoles(state.summoner.value.puuid, state.matches)
           <component
             :is="`i-roles-${role.role.toLowerCase().replace(' ', '-').replace('utility', 'support')}`"
             class="h-5 w-auto dst shrink-0 peer-checked:text-nc"
-            :class="{ '!text-bc/80': role.name == 'ALL' }" />
+            :class="{ '!text-bc/80': role.name === 'ALL' }" />
         </span>
       </IndicatorTabsTrigger>
 

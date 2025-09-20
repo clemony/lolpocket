@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import { reactiveOmit } from '@vueuse/core'
 import type { StepperRootEmits, StepperRootProps } from 'reka-ui'
-import { StepperRoot, useForwardPropsEmits } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
+import { reactiveOmit } from '@vueuse/core'
+import { StepperRoot, useForwardPropsEmits } from 'reka-ui'
 
 const props = defineProps<
   StepperRootProps & { class?: HTMLAttributes['class'] }

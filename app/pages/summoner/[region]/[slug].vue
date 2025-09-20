@@ -1,13 +1,12 @@
 <script setup lang="ts">
 definePageMeta({
   name: 'summoner',
-  path: '/summoner/:region/:slug',
-
   meta: {
     title: 'Summoner Profile',
     parent: '/summoner',
     search: false,
   },
+  path: '/summoner/:region/:slug',
 })
 
 const route = useRoute()
@@ -38,7 +37,9 @@ watch(
 </script>
 
 <template>
-  <SplashLayout v-if="state?.summoner">
+  <TabLayout
+    v-if="state?.summoner"
+    size="lg">
     <!--     <Teleport
       to="#layout-header"
       defer>
@@ -60,9 +61,7 @@ watch(
     <!-- header -->
     <template #header>
       <SummonerHeader
-        :summoner="unref(state?.summoner)"
-        class="pt-5 col-start-2"
-        size="lg" />
+        :summoner="unref(state?.summoner)" />
     </template>
 
     <template #tabs>
@@ -73,14 +72,14 @@ watch(
         :summoner="state?.summoner" />
     </template>
 
-    <template #page>
-      <NuxtPage
-        v-if="state"
-        :key="route.name"
-        :state />
-    </template>
-    <template #footer>
+    <div class="size-full overflow-y-auto relative">
+      <div class="min-h-[calc(100vh-(var(--spacing)*64))] z-auto">
+        <NuxtPage
+          v-if="state"
+          :key="route.name"
+          :state />
+      </div>
       <SiteFooter />
-    </template>
-  </SplashLayout>
+    </div>
+  </TabLayout>
 </template>

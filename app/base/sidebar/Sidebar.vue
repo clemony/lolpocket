@@ -8,11 +8,11 @@ defineOptions({
 
 const props = withDefaults(defineProps<SidebarProps>(), {
   side: 'left',
-  variant: 'sidebar',
   collapsible: 'offcanvas',
+  variant: 'sidebar',
 })
 
-const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
+const { isMobile, openMobile, setOpenMobile, state } = useSidebar()
 </script>
 
 <template>

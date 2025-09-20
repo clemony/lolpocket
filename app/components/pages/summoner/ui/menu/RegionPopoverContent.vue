@@ -35,7 +35,7 @@ const modelValue = ref(as().account.region)
         :class="
           cn(
             'flex rounded-md items-center gap-3 text-xs justify-start py-1.5 text-nowrap',
-            { 'btn-active !bg-b2/30': region == modelValue },
+            { 'btn-active !bg-b2/30': region === modelValue },
           )
         ">
         <span class="">
@@ -52,7 +52,7 @@ const modelValue = ref(as().account.region)
           class="hidden"
           @change="emit('update:model-value', modelValue)" />
         <icon
-          v-if="region == modelValue"
+          v-if="region === modelValue"
           name="tick-sm" />
       </Button>
     </div>

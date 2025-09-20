@@ -6,7 +6,14 @@ import {
   trashMsg,
 } from './messages/inbox-management'
 
-const as = useAccountStore()
+defineOptions({
+  meta: {
+    name: 'Inbox',
+    badge: computed (() => as().account.inbox.messages.filter(m => !m.read).length).value,
+    class: '**:stroke-1.5',
+    icon: 'lucide:mail',
+  },
+})
 </script>
 
 <template>
@@ -29,7 +36,7 @@ const as = useAccountStore()
     </SidebarHeaderWrapper>
 
     <div class="gap-0 -mt-4 overflow-hidden w-full !flex flex-col items-start">
-      <template v-if="as.account?.inbox?.messages.length">
+      <template v-if="as().account?.inbox?.messages.length">
         <div
           v-for="(message, i) in sortedMessages"
           :key="`${message.date}-${i}`"

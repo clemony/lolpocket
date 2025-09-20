@@ -1,7 +1,6 @@
 const item: Item = {
-  name: 'Zeal',
   id: 3086,
-  rank: 'Epic',
+  name: 'Zeal',
   buildsFrom: [
     {
       id: 1018,
@@ -46,25 +45,26 @@ const item: Item = {
       gold: 3500,
     },
   ],
-  specialRecipe: 0,
-  noEffects: true,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3086_fighter_t2_zeal.png',
+  maps: [11, 12, 21, 35],
+  noEffects: true,
+  rank: 'Epic',
+  removed: false,
+  shop: {
+    prices: {
+      combined: 350,
+      sell: 480,
+      total: 1200,
+    },
+    tags: ['MARKSMAN', 'MOVEMENT'],
+  },
   simpleDescription:
     'Slight bonuses to Critical Strike Chance, Move Speed and Attack Speed',
+  specialRecipe: 0,
   stats: {
     attackSpeed: 15,
     criticalStrikeChance: 15,
     percentMovespeed: 4,
   },
-  shop: {
-    prices: {
-      total: 1200,
-      combined: 350,
-      sell: 480,
-    },
-    tags: ['MARKSMAN', 'MOVEMENT'],
-  },
-  maps: [11, 12, 21, 35],
 }
 export default item

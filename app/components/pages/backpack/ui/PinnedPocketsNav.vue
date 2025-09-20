@@ -36,7 +36,7 @@ const { isCollapsed, pinned } = defineProps<{
           v-for="link of pinned"
           :key="link.name"
           class="flex group/tag w-full max-h-9 py-1 pr-2 items-center flex-nowrap">
-          <Blink
+          <BtnLink
             variant="ghost"
             :size="isCollapsed ? 'icon' : 'md'"
             :to="`/${link.key}`"
@@ -51,10 +51,11 @@ const { isCollapsed, pinned } = defineProps<{
               class="capitalize font-medium">
               {{ link.name }}
             </span>
-          </Blink>
+          </BtnLink>
           <Label
             v-show="!isCollapsed"
             v-tippy="'Unpin'"
+            for="toggle-pin"
             variant="ghost"
             class="size-10 *:transition-opacity *:duration-200 hover:*:last:opacity-100 hover:*:first:opacity-0 place-items-center grid relative cursor-pointer"
             @click.stop>
@@ -63,6 +64,7 @@ const { isCollapsed, pinned } = defineProps<{
               class="**:stroke-[1.84] absolute size-4" />
             <input
               v-model="link.location.pinned"
+              name="toggle-pin"
               type="checkbox"
               class="peer hidden" />
             <icon
@@ -77,7 +79,7 @@ const { isCollapsed, pinned } = defineProps<{
   <nav
     v-else
     class="flex flex-col gap-1 items-center justify-center">
-    <Blink
+    <BtnLink
       v-for="link of pinned"
       :key="link.name"
       class="size-12"
@@ -87,6 +89,6 @@ const { isCollapsed, pinned } = defineProps<{
         size="sm"
         :img="link.icon"
         class="size-9 rounded-full" />
-    </Blink>
+    </BtnLink>
   </nav>
 </template>

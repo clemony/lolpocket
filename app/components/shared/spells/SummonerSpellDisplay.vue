@@ -31,7 +31,7 @@ const imgArr = [
     <Popover>
       <PopoverTrigger class="">
         <!--       <img
-        v-if="!pocket.spells[0] || !pocket.spells[0].name || pocket.spells[0].name == 'empty' || pocket.spells[0].name == undefined"
+        v-if="!pocket.spells[0] || !pocket.spells[0].name || pocket.spells[0].name==='empty' || pocket.spells[0].name===undefined"
         :src="getRandom(imgArr)"
         class=" rounded-full overflow-hidden grayscale opacity-30 color-mix-screen  transition-all duration-500"
       />
@@ -54,7 +54,7 @@ const imgArr = [
     <Popover>
       <PopoverTrigger class="">
         <!--  <img
-        v-if="!pocket.spells[1] || !pocket.spells[1].name || pocket.spells[1].name == 'empty' || pocket.spells[1].name == undefined"
+        v-if="!pocket.spells[1] || !pocket.spells[1].name || pocket.spells[1].name==='empty' || pocket.spells[1].name===undefined"
         :src="getRandom(imgArr)"
         class=" rounded-full overflow-hidden grayscale opacity-30 color-mix-screen  transition-all duration-500"
       />

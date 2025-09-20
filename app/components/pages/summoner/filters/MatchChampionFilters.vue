@@ -25,7 +25,7 @@ console.log('champions: ', champions)
     v-model:model-value="championModel"
     class="w-full w-120 max-w-120 gap-0 field-box p-0"
     :multiple="false"
-    @entry-focui.prevent>
+    @entry-focus.prevent>
     <ListboxContent class="w-full">
       <transition-slide
         group
@@ -37,7 +37,7 @@ console.log('champions: ', champions)
           class="rounded-box cursor-pointer focus:outline-0 hover:border-b3 px-4 hover:bg-b3/30 py-2 grid shrink-0 w-full grid-cols-[0.5fr_1.5fr_1.15fr_0.5fr] items-center gap-5 list-champs"
           :class="{
             'bg-b3/40 border-b3 shadow-xs  inset-shadow-sides bg-noise inset-shadow-b3/10':
-              champion.name == championModel,
+              champion.name === championModel,
           }">
           <div class="size-fit rounded-full shadow-sm drop-shadow-sm">
             <div class="size-15 overflow-hidden items-center rounded-full">

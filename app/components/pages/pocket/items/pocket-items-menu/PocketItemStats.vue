@@ -1,8 +1,7 @@
 <script lang="ts" setup>
 import { statIndex } from '#shared/appdata'
 
-const is = useItemStore()
-const { filters, setFilter, filtered } = useItemFilter()
+const { filtered, filters, setFilter } = useItemFilter()
 </script>
 
 <template>

@@ -18,7 +18,7 @@ const isHovered = useElementHover(target, { delayEnter: 400, delayLeave: 400 })
 watch(
   () => isHovered.value,
   (newVal) => {
-    if (newVal == true)
+    if (newVal === true)
       open.value = true
   }
 )

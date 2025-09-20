@@ -16,7 +16,7 @@ const search = ref('')
       @click.stop.prevent />
 
     <CloseButton
-      v-if="search != ''"
+      v-if="search !== ''"
       class="btn-ghost"
       @click="search = ''" />
   </label>

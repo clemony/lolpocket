@@ -1,7 +1,6 @@
 const item: Item = {
-  name: 'Umbral Glaive',
   id: 3179,
-  rank: 'Legendary',
+  name: 'Umbral Glaive',
   buildsFrom: [
     {
       id: 3134,
@@ -14,46 +13,47 @@ const item: Item = {
       gold: 1050,
     },
   ],
-  specialRecipe: 0,
-  noEffects: false,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3179_assassin_t3_umbralglaive.png',
-  simpleDescription: 'Provides trap and ward detection periodically',
+  maps: [11, 12, 21, 35],
+  noEffects: false,
   passives: [
     {
       name: 'Blackout',
-      unique: true,
+      cooldown: '90',
       effects:
         'When near an enemy stealthed <img src="/img/icons/ward.webp" class="tip-icon" />ward or <img src="/img/icons/stealthed-trap.webp" class="tip-icon" />trap, gain <i>Blackout</i> for 8 seconds.',
-      cooldown: '90',
       range: 400,
+      unique: true,
     },
     {
       name: 'Blackout',
-      unique: false,
       effects:
         'You <img src="/img/icons/disabled-ward.webp" class="tip-icon" />disable surrounding stealthed wards, as well as <img src="/img/icons/expose.webp" class="tip-icon" />expose and <img src="/img/icons/true-sight.webp" class="tip-icon" />reveal nearby stealthed wards and traps while <i>Blackout</i> is active.',
+      unique: false,
     },
     {
       name: 'Extinguish',
-      unique: true,
       effects:
         'Your basic attacks deal (<img src="/img/icons/melee.webp" class="inline-icon" />2 /<img src="/img/icons/ranged.webp" class="inline-icon" />1) <b>bonus</b> true damage to wards.',
+      unique: true,
     },
   ],
-  stats: {
-    attackDamage: 55,
-    lethality: 15,
-    abilityHaste: 10,
-  },
+  rank: 'Legendary',
+  removed: false,
   shop: {
     prices: {
-      total: 2500,
       combined: 450,
       sell: 1000,
+      total: 2500,
     },
     tags: ['ASSASSIN'],
   },
-  maps: [11, 12, 21, 35],
+  simpleDescription: 'Provides trap and ward detection periodically',
+  specialRecipe: 0,
+  stats: {
+    abilityHaste: 10,
+    attackDamage: 55,
+    lethality: 15,
+  },
 }
 export default item

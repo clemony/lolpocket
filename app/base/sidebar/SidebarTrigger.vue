@@ -23,11 +23,11 @@ const { toggleSidebar, state } = useSidebar()
     "
     @click="toggleSidebar">
     <icon
-      v-show="state == 'expanded'"
+      v-show="state === 'expanded'"
       name="collapse" />
 
     <icon
-      v-show="state == 'collapsed'"
+      v-show="state === 'collapsed'"
       name="expand" />
     <slot />
     <span class="sr-only">Toggle Sidebar</span>

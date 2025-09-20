@@ -2,7 +2,7 @@
 const { account } = defineProps<{
   account: Account
 }>()
-const as = useAccountStore()
+
 const classObject
   = 'btn justify-start !font-medium tracking-tight !gap-5 btn-ghost px-4 btn-lg w-full '
 </script>
@@ -47,7 +47,7 @@ const classObject
     </SheetClose>
 
     <LazyAdminSheet
-      v-if="useSupabaseUser().value.role == 'admin'"
+      v-if="useSupabaseUser().value.role === 'admin'"
       :account="account"
       class="absolute -right-46 bottom-4 pointer-events-none" />
   </Field>

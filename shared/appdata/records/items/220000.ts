@@ -1,19 +1,19 @@
 const item: Item = {
-  name: 'Stat Bonus',
   id: 220000,
-  rank: 'Consumable',
-  specialRecipe: 0,
-  noEffects: false,
-  removed: false,
+  name: 'Stat Bonus',
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/220000_statanvil.png',
-  stats: {},
+  maps: [30],
+  noEffects: false,
+  rank: 'Consumable',
+  removed: false,
   shop: {
     prices: {
-      total: 750,
       combined: 750,
       sell: 300,
+      total: 750,
     },
   },
-  maps: [30],
+  specialRecipe: 0,
+  stats: {},
 }
 export default item

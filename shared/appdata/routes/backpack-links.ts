@@ -1,50 +1,46 @@
 export const backpackLinks: LinkObject[] = [
   {
     name: 'Backpack',
-    link: '/backpack',
-
+    blurb:
+      '<p class="leading-5 text-pretty">Your main <i><b>pocket</b></i> storage tool. Magically keeps pockets safe and warm in list and grid form.</p>',
     icon: {
       name: 'backpack',
       class: 'size-4.75',
     },
-    blurb:
-      '<p class="leading-5 text-pretty">Your main <i><b>pocket</b></i> storage tool. Magically keeps pockets safe and warm in list and grid form.</p>',
+    link: '/backpack',
   },
   {
     name: 'Calculator',
-    link: '/calculator',
     icon: {
       name: 'streamline:calculator-1',
       class: 'size-4.5',
     },
+    link: '/calculator',
   },
   {
     name: 'Archive',
-    link: '/backpack/archive',
-
+    blurb: 'Outdated or unfinished.',
     icon: {
       name: 'archive',
       class: 'size-4.5',
     },
-    blurb: 'Outdated or unfinished.',
+    link: '/backpack/archive',
   },
   {
     name: 'Trash',
-    link: '/backpack/trash',
-
+    blurb: 'Self deletes after 30 days.',
     icon: {
       name: 'trash',
       class: '',
     },
-    blurb: 'Self deletes after 30 days.',
+    link: '/backpack/trash',
   },
 ]
 
 export const pinnedLink: LinkObject = {
   name: 'Pinned',
-  link: '/pockets/pinned',
-
   icon: {
     name: 'teenyicons:attach-outline',
   },
+  link: '/pockets/pinned',
 }

@@ -1,7 +1,6 @@
 const item: Item = {
-  name: 'Eclipse',
   id: 6692,
-  rank: 'Legendary',
+  name: 'Eclipse',
   buildsFrom: [
     {
       id: 3133,
@@ -19,31 +18,32 @@ const item: Item = {
       gold: 350,
     },
   ],
-  specialRecipe: 0,
-  noEffects: false,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6692_assassin_t4_eclipse.png',
+  maps: [11, 12, 21, 35],
+  noEffects: false,
   passives: [
     {
       name: 'Ever Rising Moon',
-      unique: true,
+      cooldown: '6',
       effects:
         'Damaging basic attacks, abilities, item effects, and summoner spells, as well as the application of crowd control and damage over time effects, generate stacks against enemy champions, up to one per attack or cast per champion. Applying 2 stacks to a champion within a 2 second period deals <b>bonus</b> physical damage to them equal to (<img src="/img/icons/melee.webp" class="inline-icon" />6% /<img src="/img/icons/ranged.webp" class="inline-icon" />4%) of target\'s <b>maximum</b> health and grants you a <img src="/img/icons/shield.webp" class="tip-icon" />shield for (<img src="/img/icons/melee.webp" class="inline-icon" />160 /<img src="/img/icons/ranged.webp" class="inline-icon" />80) (+(<img src="/img/icons/melee.webp" class="inline-icon" />40% /<img src="/img/icons/ranged.webp" class="inline-icon" />20%) <b>bonus</b> AD) for 2 seconds.',
-      cooldown: '6',
+      unique: true,
     },
   ],
-  stats: {
-    attackDamage: 60,
-    abilityHaste: 15,
-  },
+  rank: 'Legendary',
+  removed: false,
   shop: {
     prices: {
-      total: 2900,
       combined: 625,
       sell: 1160,
+      total: 2900,
     },
     tags: ['FIGHTER'],
   },
-  maps: [11, 12, 21, 35],
+  specialRecipe: 0,
+  stats: {
+    abilityHaste: 15,
+    attackDamage: 60,
+  },
 }
 export default item

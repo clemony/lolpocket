@@ -1,7 +1,6 @@
 const item: Item = {
-  name: 'Serylda\'s Grudge',
   id: 6694,
-  rank: 'Legendary',
+  name: 'Serylda\'s Grudge',
   buildsFrom: [
     {
       id: 3133,
@@ -14,31 +13,32 @@ const item: Item = {
       gold: 1450,
     },
   ],
-  specialRecipe: 0,
-  noEffects: false,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6694_assasin_t3_seryldasgrudge.png',
+  maps: [11, 12, 21, 35],
+  noEffects: false,
   passives: [
     {
       name: 'Bitter Cold',
-      unique: true,
       effects:
         'Dealing ability damage to an enemy that is at or below 50% of their <b>maximum</b> health <img src="/img/icons/slow.webp" class="tip-icon" />slows them by 30% for 1 second.',
+      unique: true,
     },
   ],
-  stats: {
-    armorPenetration: 35,
-    attackDamage: 45,
-    abilityHaste: 15,
-  },
+  rank: 'Legendary',
+  removed: false,
   shop: {
     prices: {
-      total: 3000,
       combined: 500,
       sell: 1200,
+      total: 3000,
     },
     tags: ['ASSASSIN'],
   },
-  maps: [11, 12, 21, 35],
+  specialRecipe: 0,
+  stats: {
+    abilityHaste: 15,
+    armorPenetration: 35,
+    attackDamage: 45,
+  },
 }
 export default item

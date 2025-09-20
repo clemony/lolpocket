@@ -20,7 +20,7 @@
   }
 
   * {
-    @apply border-b3 decoration-from-font;
+    @apply border-b3 decoration-from-font underline-offset-2;
   }
 
   html,
@@ -32,9 +32,9 @@
 
   input,
   input:where(:not([type='button'], [type='reset'], [type='submit'])),
-    select,
-    textarea,
-    .reset-input {
+  select,
+  textarea,
+  .reset-input {
     @apply border-transparent outline-0 ring-0 ring-offset-0 focus:outline-0
     focus:ring-0;
   }
@@ -50,11 +50,11 @@
 
 @layer components {
   h1 {
-    @apply text-4xl;
+    @apply text-3xl;
   }
 
   h2 {
-    @apply text-3xl;
+    @apply text-xxl;
   }
 
   h3 {
@@ -87,7 +87,9 @@
   h3 {
     @apply drop-shadow-text font-bold;
   }
-
+  h4 {
+    @apply font-semibold drop-shadow-text;
+  }
   p {
     @apply leading-5.25 antialiased;
   }

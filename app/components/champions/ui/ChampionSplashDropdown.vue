@@ -3,7 +3,6 @@ const { card: c, champion } = defineProps<{
   card: Card
   champion: ChampionKey
 }>()
-const ix = useIndexStore()
 
 const card = computed(() => c)
 
@@ -31,7 +30,7 @@ const card = computed(() => c)
       :side-offset="6"
       :align-offset="-12"
       class="grid grid-cols-4 gap-2 w-fit min-w-90">
-      <!-- <Label v-for="splash in ix.skins" :key="splash.name">
+      <!-- <Label v-for="splash in ix().skins" :key="splash.name">
         <PopoverClose as-child>
           <Champion :url="getSplash(splash.tilePath)" class="size-20 min-h-20 shadow-sm drop-shadow-sm" />
 

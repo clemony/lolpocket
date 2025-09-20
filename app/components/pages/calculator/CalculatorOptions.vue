@@ -5,6 +5,7 @@
     <div class="w-full h-14 rounded-xl border-b3 px-5">
       <input
         type="text"
+        aria-label="save item set as..."
         placeholder="Save set as..."
         class="size-full placeholder:font-mono dst" />
     </div>

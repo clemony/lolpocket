@@ -1,7 +1,6 @@
 const item: Item = {
-  name: 'Recurve Bow',
   id: 1043,
-  rank: 'Epic',
+  name: 'Recurve Bow',
   buildsFrom: [
     {
       id: 1042,
@@ -41,29 +40,30 @@ const item: Item = {
       gold: 3000,
     },
   ],
-  specialRecipe: 0,
-  noEffects: false,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1043_base_t2_recurvebow.png',
-  simpleDescription: 'Greatly increases Attack Speed',
+  maps: [11, 12, 21, 35],
+  noEffects: false,
   passives: [
     {
       name: 'Sting',
-      unique: false,
       effects: 'Basic attacks deal 15 <b>bonus</b> physical damage on-hit.',
+      unique: false,
     },
   ],
-  stats: {
-    attackSpeed: 15,
-  },
+  rank: 'Epic',
+  removed: false,
   shop: {
     prices: {
-      total: 700,
       combined: 450,
       sell: 280,
+      total: 700,
     },
     tags: ['FIGHTER', 'MARKSMAN', 'ONHIT_EFFECTS'],
   },
-  maps: [11, 12, 21, 35],
+  simpleDescription: 'Greatly increases Attack Speed',
+  specialRecipe: 0,
+  stats: {
+    attackSpeed: 15,
+  },
 }
 export default item

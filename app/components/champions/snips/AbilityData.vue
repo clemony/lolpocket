@@ -57,7 +57,7 @@ watch(
         <ValueFormatter :array="ability.cooldown" />
       </div>
 
-      <template v-if="ability.resource == 'Charge'">
+      <template v-if="ability.resource === 'Charge'">
         <div
           v-if="ability.resource"
           v-tippy="'Max Charges'"

@@ -1,7 +1,7 @@
 const item: Item = {
-  name: 'Morellonomicon',
   id: 3165,
-  rank: 'Legendary',
+  name: 'Morellonomicon',
+  nicknames: ['nmst', 'grievous', 'last shadow', 'book', 'forbidden book'],
   buildsFrom: [
     {
       id: 3916,
@@ -19,33 +19,33 @@ const item: Item = {
       gold: 800,
     },
   ],
-  specialRecipe: 0,
-  noEffects: false,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3165_mage_t3_morellonomicon.png',
-  simpleDescription: 'Increases magic damage',
-  nicknames: ['nmst', 'grievous', 'last shadow', 'book', 'forbidden book'],
+  maps: [11, 12, 21, 35],
+  noEffects: false,
   passives: [
     {
       name: 'Grievous Wounds',
-      unique: true,
       effects:
         'Dealing magic damage to enemy champions inflicts them with <img src="/img/icons/grievous-wounds.webp" class="tip-icon" />Grievous Wounds for 3 seconds.',
+      unique: true,
     },
   ],
-  stats: {
-    abilityPower: 75,
-    health: 350,
-    abilityHaste: 15,
-  },
+  rank: 'Legendary',
+  removed: false,
   shop: {
     prices: {
-      total: 2850,
       combined: 400,
       sell: 1140,
+      total: 2850,
     },
     tags: ['MAGE', 'SUPPORT'],
   },
-  maps: [11, 12, 21, 35],
+  simpleDescription: 'Increases magic damage',
+  specialRecipe: 0,
+  stats: {
+    abilityHaste: 15,
+    abilityPower: 75,
+    health: 350,
+  },
 }
 export default item

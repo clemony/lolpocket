@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { team, class: className } = defineProps<{
+const { class: className, team } = defineProps<{
   team: MatchTeam
   class?: HTMLAttributes['class']
 }>()
@@ -21,11 +21,11 @@ const { team, class: className } = defineProps<{
       class="font-bold brightness-70 w-24 pl-2 flex !tracking-wide justify-start"
       :class="
         cn('', {
-          'text-inspiration': team.teamId == 100,
-          'text-domination': team.teamId == 200,
+          'text-inspiration': team.teamId === 100,
+          'text-domination': team.teamId === 200,
         })
       ">
-      {{ team.teamId == 100 ? "Blue" : "Red" }}
+      {{ team.teamId === 100 ? "Blue" : "Red" }}
     </div>
 
     <TeamKDA :team="team" />

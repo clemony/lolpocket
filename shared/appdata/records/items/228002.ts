@@ -1,39 +1,39 @@
 const item: Item = {
-  name: 'Wooglet\'s Witchcap',
   id: 228002,
-  rank: 'Special',
-  specialRecipe: 0,
-  noEffects: false,
-  removed: false,
-  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3385_forge_wooglets_witchcap.png',
-  passives: [
-    {
-      name: 'Magical Opus',
-      unique: true,
-      effects: 'Increase your ability power by 50%.',
-    },
-  ],
+  name: 'Wooglet\'s Witchcap',
   active: [
     {
       name: 'Stasis',
-      unique: true,
       effects:
         'Put yourself in <img src="/img/icons/stasis.webp" class="tip-icon" />stasis for 2.5 seconds, rendering you <img src="/img/icons/untargetable.webp" class="tip-icon" />untargetable and <img src="/img/icons/invulnerable.webp" class="tip-icon" />invulnerable for the duration but also unable to move, declare basic attacks, cast abilities, use summoner spells, or activate items.',
+      unique: true,
     },
   ],
-  stats: {
-    abilityPower: 300,
-    armor: 50,
-    abilityHaste: 20,
-  },
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3385_forge_wooglets_witchcap.png',
+  maps: [30],
+  noEffects: false,
+  passives: [
+    {
+      name: 'Magical Opus',
+      effects: 'Increase your ability power by 50%.',
+      unique: true,
+    },
+  ],
+  rank: 'Special',
+  removed: false,
   shop: {
     prices: {
-      total: 0,
       combined: 6000,
       sell: 0,
+      total: 0,
     },
     tags: ['MAGE'],
   },
-  maps: [30],
+  specialRecipe: 0,
+  stats: {
+    abilityHaste: 20,
+    abilityPower: 300,
+    armor: 50,
+  },
 }
 export default item

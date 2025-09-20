@@ -1,11 +1,10 @@
 <script setup lang="ts">
 definePageMeta({
   name: 'docs',
-  path: '/docs',
-
   meta: {
     parent: '/docs',
   },
+  path: '/docs',
 })
 </script>
 

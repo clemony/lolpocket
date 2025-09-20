@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { championRoles } from '#shared/appdata'
 
-const cs = useChampStore()
-const { filters, setFilter, filtered } = useItemFilter()
+const { filtered, filters, setFilter } = useItemFilter()
 function reset() {
   filters.role = null
   console.log('💠 - reset -  filters.role:', filters.role)

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { DialogContentEmits, DialogContentProps } from 'reka-ui'
+import type { HTMLAttributes } from 'vue'
 import {
   DialogClose,
   DialogContent,
@@ -7,14 +8,12 @@ import {
   DialogPortal,
   useForwardPropsEmits,
 } from 'reka-ui'
-
-import type { HTMLAttributes } from 'vue'
 import type { SheetVariants } from './sheet-variants'
 import { sheetVariants } from './sheet-variants'
 
 interface SheetContentProps extends DialogContentProps {
-  class?: HTMLAttributes['class']
   side?: SheetVariants['side']
+  class?: HTMLAttributes['class']
 }
 
 defineOptions({

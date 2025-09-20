@@ -1,4 +1,13 @@
 <script lang="ts" setup>
+defineOptions({
+  meta: {
+    name: 'Pockets',
+    class: '**:stroke-[2.21]',
+    icon: 'folder'
+
+  },
+})
+
 const emit = defineEmits(['close-sidebar'])
 
 const route = useRoute()
@@ -14,7 +23,7 @@ const groups = [
     name: 'unsorted',
     pockets: computed(() =>
       ps().pockets.filter(
-        p => !p.location.pinned && p.location.folder == 'all'
+        p => !p.location.pinned && p.location.folder === 'all'
       )
     ).value,
   },
@@ -30,19 +39,17 @@ const groups = [
         :key="group.name"
         v-model:open="ui().collapseStates.panel.pocket[i]"
         class="pr-2">
-        <CollapsibleTrigger as-child>
-          <Label class="my-1 gap-4 items-center">
-            <span class="grow text-6 font-bold dst">
-              {{ group.name }}
-            </span>
+        <CollapsibleTrigger class="my-1 gap-4 items-center">
+          <span class="grow text-6 font-bold dst">
+            {{ group.name }}
+          </span>
 
-            <CaretRotate />
-          </Label>
+          <CaretRotate />
         </CollapsibleTrigger>
 
         <CollapsibleContent
           class="after:top-3 mt-2 pt-1 gap-1 relative flex flex-col justify-items-center">
-          <Blink
+          <BtnLink
             v-for="pocket in group.pockets"
             :key="pocket.key"
             :to="`/pocket/${pocket.key}`"
@@ -51,12 +58,12 @@ const groups = [
             :class="
               cn(
                 'gap-2.75 pl-4 w-full !duration-0 !text-bc/60 h-10 text-sm capitalize text-nowrap flex-nowrap overflow-hidden hover:!text-bc justify-start',
-                { 'btn-active': route.params?.pocket_key == pocket.key },
+                { 'btn-active': route.params?.pocket_key === pocket.key },
               )
             "
             @click="emit('close-sidebar')">
             {{ pocket.name || pocket.key }}
-          </Blink>
+          </BtnLink>
         </CollapsibleContent>
       </Collapsible>
     </div>

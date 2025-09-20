@@ -1,7 +1,7 @@
 const item: Item = {
-  name: 'Infinity Edge',
   id: 3031,
-  rank: 'Legendary',
+  name: 'Infinity Edge',
+  nicknames: ['ie'],
   buildsFrom: [
     {
       id: 1038,
@@ -19,25 +19,25 @@ const item: Item = {
       gold: 600,
     },
   ],
-  specialRecipe: 0,
-  noEffects: true,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3031_marksman_t3_infinityedge.png',
+  maps: [11, 12, 21, 35],
+  noEffects: true,
+  rank: 'Legendary',
+  removed: false,
+  shop: {
+    prices: {
+      combined: 675,
+      sell: 1380,
+      total: 3450,
+    },
+    tags: ['MARKSMAN'],
+  },
   simpleDescription: 'Massively enhances critical strikes',
-  nicknames: ['ie'],
+  specialRecipe: 0,
   stats: {
     attackDamage: 65,
     criticalStrikeChance: 25,
     criticalStrikeDamage: 40,
   },
-  shop: {
-    prices: {
-      total: 3450,
-      combined: 675,
-      sell: 1380,
-    },
-    tags: ['MARKSMAN'],
-  },
-  maps: [11, 12, 21, 35],
 }
 export default item

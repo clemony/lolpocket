@@ -1,11 +1,12 @@
 <script lang="ts" setup>
 const { text } = defineProps<{
-text?: string
+  text?: string
 }>()
 </script>
 
 <template>
-  <div>hildfd<br  />
-  {{ text }}
+  <div>
+    hildfd<br />
+    {{ text }}
   </div>
 </template>

@@ -1,7 +1,6 @@
 const item: Item = {
-  name: 'Null-Magic Mantle',
   id: 1033,
-  rank: 'Basic',
+  name: 'Null-Magic Mantle',
   buildsInto: [
     {
       id: 1057,
@@ -64,22 +63,23 @@ const item: Item = {
       gold: 1300,
     },
   ],
-  specialRecipe: 0,
-  noEffects: true,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1033_base_t1_magicmantle.png',
-  simpleDescription: 'Slightly increases Magic Resist',
-  stats: {
-    magicResistance: 20,
-  },
+  maps: [11, 12, 21, 35],
+  noEffects: true,
+  rank: 'Basic',
+  removed: false,
   shop: {
     prices: {
-      total: 400,
       combined: 400,
       sell: 160,
+      total: 400,
     },
     tags: ['FIGHTER', 'MARKSMAN', 'ASSASSIN', 'MAGE', 'TANK', 'SUPPORT'],
   },
-  maps: [11, 12, 21, 35],
+  simpleDescription: 'Slightly increases Magic Resist',
+  specialRecipe: 0,
+  stats: {
+    magicResistance: 20,
+  },
 }
 export default item

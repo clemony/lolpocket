@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { motion } from 'motion-v'
-
 import type { PopoverContentEmits, PopoverContentProps } from 'reka-ui'
+import { motion } from 'motion-v'
 import { PopoverContent, PopoverPortal, useForwardPropsEmits } from 'reka-ui'
 
 defineOptions({
@@ -13,8 +12,8 @@ const props = withDefaults(
     PopoverContentProps & { class?: HTMLAttributes['class'], to?: string }
   >(),
   {
-    align: 'center',
     sideOffset: 4,
+    align: 'center',
   }
 )
 const emits = defineEmits<PopoverContentEmits>()
@@ -24,33 +23,33 @@ const delegatedProps = reactiveOmit(props, 'class')
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 
 const variants = {
-  visible: {
-    opacity: 1,
-    maxHeight: '420px',
-    maxWidth: '340px',
-    visibility: 'visible',
-    scale: 1,
-  },
   hidden: {
     opacity: 0,
     scale: 0.4,
     transitionEnd: { visibility: 'hidden' },
   },
-}
-
-const wrapperVariants = {
   visible: {
+    maxWidth: '340px',
+    maxHeight: '420px',
     opacity: 1,
     scale: 1,
     visibility: 'visible',
-    transition: {
-      delay: 0.2,
-    },
   },
+}
+
+const wrapperVariants = {
   hidden: {
     opacity: 0,
     scale: 1,
     transitionEnd: { visibility: 'hidden' },
+  },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delay: 0.2,
+    },
+    visibility: 'visible',
   },
 }
 </script>

@@ -5,8 +5,6 @@ const { isVisible } = defineProps<{
   isVisible: boolean
 }>()
 
-const as = useAccountStore()
-
 const isPlaying = ref(true)
 </script>
 
@@ -57,16 +55,16 @@ const isPlaying = ref(true)
             class="w-full items-center px-1.5 gap-3 flex py-1 text-xs text-nc/80">
             <icon
               :name="
-                as.settings.motion
+                as().settings.motion
                   ? 'ph:video-camera-fill'
                   : 'ph:video-camera-slash'
               "
               class="opacity-90 shrink-0" />
-            {{ as.settings.motion ? "Motion On" : "Motion Off" }}
+            {{ as().settings.motion ? "Motion On" : "Motion Off" }}
             <Grow />
 
             <Switch
-              v-model="as.settings.motion as boolean"
+              v-model="as().settings.motion as boolean"
               class="data-[state=unchecked]:bg-b3/40 inset-shadow-xs data-[state=checked]:bg-linear-to-br to-ah/90 to-60% from-lime-400/90 border-b4/50 justify-self-end scale-85" />
           </div>
         </ContrastDropdownContent>

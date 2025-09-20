@@ -1,18 +1,16 @@
 import { hexoid } from 'hexoid'
 import * as v from 'valibot'
-import { FixedArray, getDeepDefaults, MinMaxArray } from './helpers/helpers'
-
 import { patchIndex } from '../appdata/index/index'
-
 import { generateName } from '../utils/generateStrings'
+import { FixedArray, getDeepDefaults, MinMaxArray } from './helpers/helpers'
 import { pType } from './helpers/pType'
 
 const toID = hexoid()
 
 // Location
 export const PocketLocationSchema = v.object({
-  pinned: v.fallback(v.boolean(), false),
   folder: v.fallback(v.string(), ''), // normalized instead of nullable
+  pinned: v.fallback(v.boolean(), false),
   trashed: v.optional(
     v.pipe(
       v.string(),
@@ -76,8 +74,8 @@ export type RuneSet = v.InferOutput<typeof RuneSetSchema>
 const MainSchema = v.object({
   champion: v.fallback(v.string(), ''),
   items: v.fallback(v.string(), ''),
-  runes: v.fallback(v.string(), ''),
   role: v.fallback(v.string(), 'All'),
+  runes: v.fallback(v.string(), ''),
   spells: v.fallback(v.string(), ''),
 })
 
@@ -85,23 +83,23 @@ const MainSchema = v.object({
 export const PocketSchema = v.object({
   key: v.optional(v.string()),
   name: v.optional(v.string()),
-  icon: v.optional(v.string()),
-  roles: v.optional(v.array(v.string())),
   champions: v.optional(v.array(v.string())),
-  items: v.optional(v.array(ItemSetSchema)),
-  runes: v.optional(v.array(RuneSetSchema)),
-  spells: v.optional(v.array(SpellSetSchema)),
-  main: v.optional(MainSchema), // keep required if always present
   created: v.optional(
     v.pipe(
       v.string(),
       v.transform(s => new Date(s))
     )
   ),
-  updated: v.optional(v.number()),
-  tags: v.optional(v.array(v.string())),
+  icon: v.optional(v.string()),
+  items: v.optional(v.array(ItemSetSchema)),
   location: PocketLocationSchema,
+  main: v.optional(MainSchema), // keep required if always present
   notes: v.optional(v.array(v.string())),
+  roles: v.optional(v.array(v.string())),
+  runes: v.optional(v.array(RuneSetSchema)),
+  spells: v.optional(v.array(SpellSetSchema)),
+  tags: v.optional(v.array(v.string())),
+  updated: v.optional(v.number()),
 })
 
 // --- Type ---
@@ -116,7 +114,6 @@ export const CardSchema = v.nullable(
     runes: RuneSetSchema,
 
     // Style
-    splash: v.nullable(v.string()),
     align: v.nullable(v.string()),
     color: v.fallback(v.string(), '#FFFFFF'),
     filter: v.fallback(
@@ -127,6 +124,7 @@ export const CardSchema = v.nullable(
       v.fallback(v.string(), 'var(--font-serif)'),
       v.fallback(v.string(), 'var(--font-sans)'),
     ]),
+    splash: v.nullable(v.string()),
   })
 )
 
@@ -198,17 +196,17 @@ export function newPocket(): Pocket {
   return {
     key: toID(),
     name: generateName(),
-    icon: '',
-    roles: ['all'],
     champions: [],
+    created: new Date(),
+    icon: '',
     items: [newItemSet()],
+    location: { folder: '', pinned: false },
+    main: { champion: '', items: '', role: 'All', runes: '', spells: '' },
+    notes: [],
+    roles: ['all'],
     runes: [newRuneSet()],
     spells: [newSpellSet()],
-    main: { champion: '', items: '', runes: '', role: 'All', spells: '' },
-    created: new Date(),
-    updated: patchIndex[0],
     tags: [],
-    location: { pinned: false, folder: '' },
-    notes: [],
+    updated: patchIndex[0],
   }
 }

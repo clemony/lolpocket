@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import type { TabsContentProps } from 'reka-ui'
-import { TabsContent } from 'reka-ui'
-
 import type { HTMLAttributes } from 'vue'
+import { TabsContent } from 'reka-ui'
 
 const props = defineProps<
   TabsContentProps & {

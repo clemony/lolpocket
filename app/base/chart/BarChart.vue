@@ -27,13 +27,8 @@ const data = computed(() => {
 })
 const options = {
   backgroundColor: styles.getPropertyValue('--colorneutral'),
-  color: styles.getPropertyValue('--colorneutral'),
-  maxBarThickness: 32,
   barThickness: 32,
-  responsive: true,
-  maintainAspectRatio: false,
-  skipNull: false,
-  minBarLength: 4,
+  color: styles.getPropertyValue('--colorneutral'),
   elements: {
     bar: {
       borderRadius: 4,
@@ -41,62 +36,66 @@ const options = {
       // categoryPercentage: 0.1,
     },
   },
-  scales: {
-    y: {
-      beginAtZero: true,
-      grid: {
-        // display: false,
-        color: `${styles.getPropertyValue('--color-b2')}`,
-        drawTicks: false,
-      },
-      min: 0,
-      max: 100,
-      ticks: {
-        display: true,
-        font: {
-          size: 16,
-        },
-
-        stepSize: 20,
-        callback(value, index, ticks) {
-          return `${value}%`
-        },
-        padding: 12,
-      },
-      border: {
-        color: `${styles.getPropertyValue('--color-b2')}`,
-      },
-    },
-    x: {
-      grid: {
-        display: false,
-      },
-      ticks: {
-        display: false,
-      },
-      border: {
-        color: `${styles.getPropertyValue('--color-b2')}`,
-      },
-      title: {
-        display: false,
-      },
-    },
-  },
+  maintainAspectRatio: false,
+  maxBarThickness: 32,
+  minBarLength: 4,
   plugins: {
     tooltip: {
       titleMarginBottom: 0,
-      displayColors: false,
-      caretPadding: 20,
-      intersect: false,
-      enabled: true,
       callbacks: {
         label: (context) => {
           const dataPoint = context.raw
           return `${dataPoint.toFixed(2)}% winrate`
         },
       },
+      caretPadding: 20,
+      displayColors: false,
+      enabled: true,
+      intersect: false,
     },
   },
+  responsive: true,
+  scales: {
+    x: {
+      grid: {
+        display: false,
+      },
+      title: {
+        display: false,
+      },
+      border: {
+        color: `${styles.getPropertyValue('--color-b2')}`,
+      },
+      ticks: {
+        display: false,
+      },
+    },
+    y: {
+      grid: {
+        // display: false,
+        color: `${styles.getPropertyValue('--color-b2')}`,
+        drawTicks: false,
+      },
+      beginAtZero: true,
+      border: {
+        color: `${styles.getPropertyValue('--color-b2')}`,
+      },
+      max: 100,
+      min: 0,
+      ticks: {
+        callback(value, index, ticks) {
+          return `${value}%`
+        },
+        display: true,
+        font: {
+          size: 16,
+        },
+        padding: 12,
+        stepSize: 20,
+      },
+    },
+  },
+  skipNull: false,
 }
 </script>
 

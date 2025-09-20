@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { reactiveOmit } from '@vueuse/core'
 import type { Easing, EasingDefinition } from 'motion-v'
-import { AnimatePresence } from 'motion-v'
 import type { DialogContentEmits, DialogContentProps } from 'reka-ui'
+import { reactiveOmit } from '@vueuse/core'
+import { AnimatePresence } from 'motion-v'
 import {
   DialogClose,
   DialogContent,
@@ -34,8 +34,8 @@ const dialogOpenState = {
   opacity: 1,
   transform: 'translate(0, 0px)',
   transition: {
-    ease: 'linear' as EasingDefinition,
     duration: 0.2,
+    ease: 'linear' as EasingDefinition,
   },
 }
 
@@ -43,24 +43,24 @@ const dialogInitialState = {
   opacity: 0,
   transform: 'translate(0, 10px)',
   transition: {
-    ease: 'easeOut' as EasingDefinition,
     duration: 0.2,
+    ease: 'easeOut' as EasingDefinition,
   },
 }
 
 const overlayOpenState = {
   opacity: 1,
   transition: {
-    ease: 'linear' as EasingDefinition,
     duration: 0.3,
+    ease: 'linear' as EasingDefinition,
   },
 }
 
 const overlayInitialState = {
   opacity: 0,
   transition: {
-    ease: 'easeOut' as EasingDefinition,
     duration: 0.4,
+    ease: 'easeOut' as EasingDefinition,
   },
 }
 </script>

@@ -53,10 +53,12 @@ const pagedItems = computed(() => {
           v-for="champion in pagedItems"
           :id="ix().champIdByKey(champion)"
           :key="champion"
+          :for="`${champion}-select`"
           as="label"
           class="rounded-lg hover:after:opacity-100 after:scale-150 **:!text-white after:absolute after:bg-black/70 after:size-full after:grid after:place-items-center after:!text-white after:text-sm after:content-['🞤'] after:z-1 after:rotate-45 size-16 cursor-pointer hover-ring w-full h-auto aspect-square">
           <input
             v-model="pocket.champions"
+            :aria-label="`${champion}-select`"
             type="checkbox"
             :value="champion"
             class="peer hidden" />

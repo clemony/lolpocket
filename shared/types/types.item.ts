@@ -7,18 +7,18 @@ export type StatKeys = keyof ItemLite['stats']
 export type effectAmount = number
 
 export interface ItemIndex {
-  name: ItemName
   id: number
+  name: ItemName
 }
 
 export interface ItemLite extends ItemIndex {
   aka?: string[]
+  cost?: number
+  maps?: number[]
+  purchasable?: boolean
   rank?: string
   stats?: Record<string, number>
-  purchasable?: boolean
-  cost?: number
   tags?: string[]
-  maps?: number[]
 }
 
 export interface CalculatorSet {
@@ -39,20 +39,18 @@ export interface ItemComponent {
 export interface Item {
   id: number
   name: ItemName
-  rank?: string
+  nicknames?: string[] | null
+  active?: Effect[]
   buildsFrom?: ItemComponent[]
   buildsInto?: ItemComponent[]
-  specialRecipe?: string | number
-  noEffects?: boolean
-  removed?: boolean | string
-  requiredChampion?: string
-  requiedAlly?: string
   icon?: string
-  simpleDescription?: string
-  nicknames?: string[] | null
+  maps?: number[]
+  noEffects?: boolean
   passives?: Effect[]
-  active?: Effect[]
-  stats: Record<string, number>
+  rank?: string
+  removed?: boolean | string
+  requiedAlly?: string
+  requiredChampion?: string
   shop?: {
     prices: {
       total?: number
@@ -62,7 +60,9 @@ export interface Item {
     purchasable?: boolean
     tags?: string[]
   }
-  maps?: number[]
+  simpleDescription?: string
+  specialRecipe?: string | number
+  stats: Record<string, number>
 }
 
 /* export interface ItemSet {
@@ -72,12 +72,12 @@ export interface Item {
  */
 export interface Effect {
   name?: string
-  unique?: boolean
-  effects?: string
-  cooldown?: number | string
-  recharge?: string
   charges?: string | number
+  cooldown?: number | string
+  effects?: string
   range?: number
+  recharge?: string
+  unique?: boolean
 }
 
 export interface ItemClone {

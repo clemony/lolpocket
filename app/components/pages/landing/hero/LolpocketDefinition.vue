@@ -4,8 +4,8 @@ import { motion } from 'motion-v'
 
 const h1Variants = {
   animate: {
-    letterSpacing: '-0.5em',
     maxWidth: 0,
+    letterSpacing: '-0.5em',
     opacity: 0,
   },
   initial: {

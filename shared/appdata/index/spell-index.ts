@@ -37,4 +37,12 @@ export const spellIndex: Record<string, string | number>[] = [
     id: 21,
     name: 'Barrier',
   },
+  {
+    id: 2202,
+    name: 'Flash',
+  },
+  {
+    id: 2201,
+    name: 'Hold',
+  },
 ]

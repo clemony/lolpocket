@@ -8,10 +8,10 @@ const props = defineProps<{
 definePageMeta({
   name: 'pocket-items',
   title: 'items',
-  path: '/pocket/:pocket_key/items',
   level: 3,
   order: 2,
   parent: '/pocket',
+  path: '/pocket/:pocket_key/items',
   search: false,
 })
 
@@ -25,14 +25,14 @@ const tabs = ref('items')
 const tabValues = [
   {
     name: 'items',
-    value: 'items',
     icon: 'bow',
+    value: 'items',
   },
 
   {
     name: 'calculator',
-    value: 'calculator',
     icon: 'calc',
+    value: 'calculator',
   },
 ]
 </script>

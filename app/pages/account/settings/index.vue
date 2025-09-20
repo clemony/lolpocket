@@ -1,10 +1,10 @@
 <script lang="ts" setup>
 definePageMeta({
   name: 'settings',
-  path: '/settings',
-  icon: 'gear',
   title: 'General',
   description: 'Manage general app utilities and settings.',
+  icon: 'gear',
+  path: '/settings',
 })
 
 const settingsData = [

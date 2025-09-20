@@ -3,9 +3,9 @@ import { navigationMenuTriggerStyle } from '~/base/navigation-menu/navmenuvarian
 
 const {
   class: className,
-  variant,
-  size,
   shape,
+  size,
+  variant,
 } = defineProps<{
   class?: HTMLAttributes['class']
   shape?: Shape

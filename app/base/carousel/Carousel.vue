@@ -4,7 +4,6 @@ import type {
   CarouselProps,
   WithClassAsProps,
 } from './interface'
-
 import { useProvideCarousel } from './useCarousel'
 
 const props = withDefaults(defineProps<CarouselProps & WithClassAsProps>(), {

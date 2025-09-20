@@ -27,14 +27,14 @@ const { top } = useChampions(as().account.puuid, matchData)
         :alt="`${as().account?.name ?? null}'s Most Played`" />
       <div class="flex flex-col h-full pt-3 gap-4">
         <h4
-          class="dst font-semibold text-lg>
+          class="dst font-semibold text-lg">
           Automatic
         </h4>
         <p>Displays your most played champion in recent games.</p>
 
         <ActiveTick
           v-if="
-          !currentSplash"
+            !currentSplash"
           class="h-6 mt-2" />
       </div>
     </button>
@@ -50,21 +50,21 @@ const { top } = useChampions(as().account.puuid, matchData)
           :alt="`${as().account?.name ?? null}'s splash`" />
         <div class="flex flex-col h-full pt-3 gap-4 w-full">
           <h4
-            class="dst font-semibold text-lg>
+            class="dst font-semibold text-lg">
             Custom
           </h4>
-          <p class="
+          <p
+            class="
             w-full
             min-w-56">
             <span class="italic">Never played a champ?</span>
             <br />
             Np. Rep your guy.
-            </p>
+          </p>
 
-            <ActiveTick
-              v-if="currentSplash"
-              class="h-6 mt-2" />
-          </h4>
+          <ActiveTick
+            v-if="currentSplash"
+            class="h-6 mt-2" />
         </div>
       </button>
     </SplashSelectPanel>

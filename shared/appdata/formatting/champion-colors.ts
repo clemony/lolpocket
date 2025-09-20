@@ -1,7 +1,5 @@
 const colors = [
   {
-    text: '*:[&.ability-header]:text-domination',
-    color: '--color-domination',
     champs: [
       'Aatrox',
       'Annie',
@@ -33,11 +31,10 @@ const colors = [
       'Zyra',
       'Viktor',
     ],
+    color: '--color-domination',
+    text: '*:[&.ability-header]:text-domination',
   },
   {
-    text: '*:[&.ability-header]:text-',
-
-    color: '--color-sorcery',
     champs: [
       'Alistar',
       'Aphelios',
@@ -63,10 +60,10 @@ const colors = [
       'Vex',
       'Yuumi',
     ],
+    color: '--color-sorcery',
+    text: '*:[&.ability-header]:text-',
   },
   {
-    text: '*:[&.ability-header]:text-mana',
-    color: '--color-mana',
     champs: [
       'Ahri',
       'Ashe',
@@ -94,10 +91,10 @@ const colors = [
       'Shen',
       'Janna',
     ],
+    color: '--color-mana',
+    text: '*:[&.ability-header]:text-mana',
   },
   {
-    text: '*:[&.ability-header]:text-',
-    color: '--color-ah',
     champs: [
       'Ekko',
       'Hecarim',
@@ -110,16 +107,15 @@ const colors = [
       'Yorick',
       'Viego',
     ],
+    color: '--color-ah',
+    text: '*:[&.ability-header]:text-',
   },
   {
-    text: '*:[&.ability-header]:text-',
-
-    color: '--color-hp',
     champs: ['Akali', 'Singed', 'Twitch', 'Urgot', 'Warwick', 'Zac', 'Zeri'],
+    color: '--color-hp',
+    text: '*:[&.ability-header]:text-',
   },
   {
-    text: '*:[&.ability-header]:text-',
-    color: '--color-as',
     champs: [
       'Akshan',
       'Bard',
@@ -162,16 +158,18 @@ const colors = [
       'Xayah',
       'MonkeyKing',
     ],
+    color: '--color-as',
+    text: '*:[&.ability-header]:text-',
   },
   {
-    text: '*:[&.ability-header]:text-',
-    color: '--color-ad',
     champs: ['Brand', 'Milio', 'Nautilus'],
+    color: '--color-ad',
+    text: '*:[&.ability-header]:text-',
   },
   {
-    text: '*:[&.ability-header]:text-',
-    color: '---color-onhit',
     champs: ['Irelia', 'Neeko', 'Seraphine', 'Vi'],
+    color: '---color-onhit',
+    text: '*:[&.ability-header]:text-',
   },
 ]
 

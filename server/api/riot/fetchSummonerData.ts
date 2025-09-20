@@ -7,11 +7,11 @@ import {
 
 interface AcccountResponse {
   name: string
-  tag: string
   puuid: string
-  profileIcon: string
   level: number
+  profileIcon: string
   region: string
+  tag: string
 }
 export default defineEventHandler(async (event) => {
   const query = getQuery(event)

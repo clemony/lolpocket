@@ -9,7 +9,7 @@ const { class: className, variant = 'shadow' } = defineProps<{
 
 const state = useSummonerInject()
 
-const isYou = computed(() => as().account?.puuid == state.summoner?.value.puuid)
+const isYou = computed(() => as().account?.puuid === state.summoner?.value.puuid)
 const isFollowed = ref(false)
 
 const buttVariants = {
@@ -51,6 +51,7 @@ const variants = {
         class="aspect-square h-full place-self-center grid place-items-center shrink-0 relative overflow-hidden">
         <input
           v-model="isFollowed"
+          aria-label="follow-indicator"
           type="checkbox"
           class="peer hidden" />
 

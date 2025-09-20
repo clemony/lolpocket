@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { reactiveOmit } from '@vueuse/core'
 import type { SelectTriggerProps } from 'reka-ui'
+import { reactiveOmit } from '@vueuse/core'
 import { SelectIcon, SelectTrigger, useForwardProps } from 'reka-ui'
 
 const props = defineProps<

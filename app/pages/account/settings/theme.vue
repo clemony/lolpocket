@@ -9,21 +9,20 @@ definePageMeta({
   path: '/settings/theme',
 })
 
-const as = useAccountStore()
 function handleChange(theme) {
-  as.settings.theme = theme
+  as().settings.theme = theme
   document.documentElement.setAttribute('data-theme', theme)
 }
 </script>
 
 <template>
   <ListboxRoot
-    v-model:model-value="as.settings.theme"
+    v-model:model-value="as().settings.theme"
     class="w-full py-4 z-0"
     :multiple="false"
     selection-behavior="replace"
-    @entry-focui.prevent
-    @update:model-value="handleChange(as.settings.theme)">
+    @entry-focus.prevent
+    @update:model-value="handleChange(as().settings.theme)">
     <ListboxContent class="w-fit grid gap-y-10 gap-x-14 grid-cols-2">
       <ListboxItem
         v-for="theme in themes"
@@ -33,7 +32,7 @@ function handleChange(theme) {
         <ThemeCard
           class=" "
           :theme="theme"
-          :active-theme="as.settings.theme" />
+          :active-theme="as().settings.theme" />
       </ListboxItem>
     </ListboxContent>
   </ListboxRoot>

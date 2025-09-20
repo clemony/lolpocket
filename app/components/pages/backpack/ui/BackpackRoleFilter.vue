@@ -28,6 +28,7 @@ const tags = ref([])
       <label
         v-for="position in championPositions"
         :key="position.name"
+        for="position.name"
         class="group/btn h-9 flex rounded-lg badge badge-lg !h-6.5 pl-1.5 pr-2.5 gap-1.5 hover:ring hover:ring-offset-2 duration-0 font-medium ring-offset-b1 ring-bc/60 items-center w-fit cursor-pointer"
         :style="{
           backgroundColor: position.color,
@@ -35,6 +36,7 @@ const tags = ref([])
         }">
         <input
           v-model="tags"
+          name="position.name"
           type="checkbox"
           :value="position.name"
           :style="{

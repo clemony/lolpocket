@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { reactiveOmit } from '@vueuse/core'
 import type { Component } from 'vue'
+import { reactiveOmit } from '@vueuse/core'
 import type { SidebarMenuButtonProps } from './SidebarMenuButtonChild.vue'
 import SidebarMenuButtonChild from './SidebarMenuButtonChild.vue'
 import { useSidebar } from './utils'
@@ -18,10 +18,10 @@ const props = withDefaults(
     }
   >(),
   {
-    as: 'button',
     side: 'right',
-    variant: 'default',
+    as: 'button',
     size: 'default',
+    variant: 'default',
   }
 )
 

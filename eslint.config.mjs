@@ -1,11 +1,12 @@
 // eslint.config.mjs
 // CONFIG eslint
 import antfu from '@antfu/eslint-config'
+import pluginJsonc from 'eslint-plugin-jsonc'
 import tailwindcss from 'eslint-plugin-tailwindcss'
 import pluginVue from 'eslint-plugin-vue'
+import jsoncParser from 'jsonc-eslint-parser'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import tseslint from 'typescript-eslint'
 // @ts-check
 
 export function resolvePath(filePath) {
@@ -15,9 +16,8 @@ export function resolvePath(filePath) {
 }
 
 export default antfu({
-  ...pluginVue.configs['flat/essential'],
-  ...tseslint.configs.recommendedTypeChecked,
 
+  ecmaVersion: 'latest',
   formatters: {
     css: true,
     html: true,
@@ -35,18 +35,19 @@ export default antfu({
     '**/raw/**',
     '.save.json',
   ],
-  languageOptions: {
-    parserOptions: {
-      projectService: true,
-      tsconfigRootDir: resolvePath('./tsconfig.json'),
+  parserOptions: {
+    files: ['**/*.json'],
+    languageOptions: {
+      parser: jsoncParser,
     },
   },
   plugins: {
+    pluginJsonc,
+    pluginVue,
     tailwindcss,
   },
   rules: {
-
-    'eqeqeq': 'off',
+    'eqeqeq': ['error', 'smart'],
     'eslint-comments/no-unlimited-disable': 'off',
     'no-console': 'off',
     'no-irregular-whitespace': 'off',
@@ -90,37 +91,6 @@ export default antfu({
       type: 'natural',
     }],
 
-    // vue
-    'vue/custom-event-name-casing': 'off',
-    'vue/eqeqeq': 'off',
-    'vue/html-closing-bracket-newline': [
-      'error',
-      {
-        multiline: 'never',
-        selfClosingTag: {
-          multiline: 'never',
-          singleline: 'never',
-        },
-        singleline: 'never',
-      },
-    ],
-    'vue/html-self-closing': 'off',
-    'vue/max-attributes-per-line': [
-      'error',
-      {
-        multiline: { max: 1, },
-        singleline: { max: 1, },
-      },
-    ],
-    'vue/max-lines-per-block': ['warn', { script: 200, style: 200, template: 200 }],
-    'vue/multiline-html-element-content-newline': ['error'],
-    'vue/no-irregular-whitespace': 'off',
-    'vue/no-unused-properties': 'off',
-    'vue/no-unused-refs': 'off',
-    'vue/no-v-text-v-html-on-component': 'off',
-    'vue/padding-line-between-blocks': ['error', 'always'],
-    'vue/padding-line-between-tags': 'off',
-    'vue/require-typed-ref': 'warn',
   },
   settings: {
     rules: {
@@ -135,5 +105,49 @@ export default antfu({
       functions: ['classnames', 'clsx', 'ctl', 'cva', 'tv', 'tw', 'cn']
     }
   },
-  vue: true
+  sourceType: 'module',
+  typescript: {},
+  vue: {
+
+    overrides: {
+      'vue/custom-event-name-casing': 'off',
+      'vue-a11y/form-control-has-label': 'off',
+      'vue-a11y/label-has-for': 'off',
+      'vue-a11y/no-distracting-elements': [
+        'error',
+        {
+          elements: ['Blink']
+        }
+      ],
+      'vue/eqeqeq': ['error', 'smart'],
+      'vue/html-closing-bracket-newline': [
+        'error',
+        {
+          multiline: 'never',
+          selfClosingTag: {
+            multiline: 'never',
+            singleline: 'never',
+          },
+          singleline: 'never',
+        },
+      ],
+      'vue/html-self-closing': 'off',
+      'vue/max-attributes-per-line': [
+        'error',
+        {
+          multiline: { max: 1, },
+          singleline: { max: 1, },
+        },
+      ],
+      'vue/max-lines-per-block': ['warn', { script: 200, style: 200, template: 200 }],
+      'vue/multiline-html-element-content-newline': ['error'],
+      'vue/no-unused-properties': 'off',
+      'vue/no-unused-refs': 'off',
+      'vue/no-v-text-v-html-on-component': 'off',
+      'vue/padding-line-between-blocks': ['error', 'always'],
+      'vue/padding-line-between-tags': 'off',
+      'vue/require-typed-ref': 'warn',
+    },
+    a11y: true,
+  },
 })

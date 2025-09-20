@@ -1,7 +1,6 @@
 const item: Item = {
-  name: 'Faerie Charm',
   id: 1004,
-  rank: 'Basic',
+  name: 'Faerie Charm',
   buildsInto: [
     {
       id: 3114,
@@ -19,22 +18,23 @@ const item: Item = {
       gold: 900,
     },
   ],
-  specialRecipe: 0,
-  noEffects: true,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1004_class_t1_faeriecharm.png',
-  simpleDescription: 'Slightly increases Mana Regen',
-  stats: {
-    manaRegen: 50,
-  },
+  maps: [11, 12, 21, 35],
+  noEffects: true,
+  rank: 'Basic',
+  removed: false,
   shop: {
     prices: {
-      total: 200,
       combined: 200,
       sell: 80,
+      total: 200,
     },
     tags: ['MAGE', 'SUPPORT'],
   },
-  maps: [11, 12, 21, 35],
+  simpleDescription: 'Slightly increases Mana Regen',
+  specialRecipe: 0,
+  stats: {
+    manaRegen: 50,
+  },
 }
 export default item

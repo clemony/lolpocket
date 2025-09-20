@@ -2,9 +2,9 @@ import type { RouteParamValue, RouteRecordRaw } from 'vue-router'
 
 export interface SummonerRouteProps {
   name: string
-  tag: string
   region: RouteParamValue
   slug: RouteParamValue
+  tag: string
 }
 
 export function useHandleSummoner(routeProps?: SummonerRouteProps) {
@@ -60,9 +60,9 @@ export function useHandleSummoner(routeProps?: SummonerRouteProps) {
   return {
     // props,
     puuid,
-    summoner,
-    loading,
     error,
+    loading,
+    summoner,
     // refresh: fetchSummoner, // optional manual trigger
   }
 }

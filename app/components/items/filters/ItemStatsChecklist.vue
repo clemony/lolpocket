@@ -13,11 +13,11 @@ import {
     v-model:model-value="is().filters.stats"
     class="w-full overflow-y-scroll overscroll-auto px-1.5 h-120 max-h-90"
     :multiple="true"
-    @entry-focui.prevent>
+    @entry-focus.prevent>
     <ListboxContent class="w-full pt-px pb-6">
       <ListboxItem
         v-for="stat in Object.values(statIndex).filter(
-          (s) => s.id != 'msflat' && s.id != 'mpenflat',
+          (s) => s.id !== 'msflat' && s.id !== 'mpenflat',
         )"
         :key="stat.id"
         as-child

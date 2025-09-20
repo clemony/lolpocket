@@ -1,8 +1,8 @@
 export interface TimeSeriesStat {
-  span: string // e.g., '2025-W32'
   games: number
-  wins: number
+  span: string // e.g., '2025-W32'
   winrate: number
+  wins: number
 }
 
 export function useChampionWinrateTimeline(
@@ -14,7 +14,7 @@ export function useChampionWinrateTimeline(
   console.log('💠 - useChampionWinrateTimeline - grouped:', grouped)
 
   for (const match of matches) {
-    const player = match.participants.find(p => p.puuid == puuid)
+    const player = match.participants.find(p => p.puuid === puuid)
     if (ix().champNameById(player.championId) !== championName)
       continue
 
@@ -26,10 +26,10 @@ export function useChampionWinrateTimeline(
 
     if (!grouped[key]) {
       grouped[key] = {
-        span,
         games: 0,
-        wins: 0,
+        span,
         winrate: 0,
+        wins: 0,
       }
     }
 

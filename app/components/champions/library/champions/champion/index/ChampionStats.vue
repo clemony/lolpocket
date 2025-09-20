@@ -66,7 +66,7 @@ const resolvedScalingStats = computed(() => {
         type: isAttackSpeed ? 'attackSpeed' : isCritDmg ? 'criticalStrikeDamage' : undefined,
       })
 
-      if (resolved != null)
+      if (resolved !== null)
         acc[key] = resolved
 
       return acc

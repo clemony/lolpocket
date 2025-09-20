@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { motion } from 'motion-v'
 import type { TabsIndicatorProps } from 'reka-ui'
+import { motion } from 'motion-v'
 import { TabsIndicator } from 'reka-ui'
 
 defineOptions({ inheritAttrs: false })

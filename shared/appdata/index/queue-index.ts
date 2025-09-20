@@ -1,129 +1,129 @@
 export const queueIndex = [
   {
-    queueId: 400,
-    map: {
-      name: 'Summoner\'s Rift',
-      id: 11,
-    },
     description: 'Draft Pick',
+    map: {
+      id: 11,
+      name: 'Summoner\'s Rift',
+    },
+    queueId: 400,
   },
   {
-    queueId: 420,
-    map: {
-      name: 'Summoner\'s Rift',
-      id: 11,
-    },
     description: 'Ranked Solo',
+    map: {
+      id: 11,
+      name: 'Summoner\'s Rift',
+    },
+    queueId: 420,
   },
   {
-    queueId: 430,
-    map: {
-      name: 'Summoner\'s Rift',
-      id: 11,
-    },
     description: 'Blind Pick',
+    map: {
+      id: 11,
+      name: 'Summoner\'s Rift',
+    },
+    queueId: 430,
   },
   {
-    queueId: 440,
-    map: {
-      name: 'Summoner\'s Rift',
-      id: 11,
-    },
     description: 'Ranked Flex',
+    map: {
+      id: 11,
+      name: 'Summoner\'s Rift',
+    },
+    queueId: 440,
   },
   {
-    queueId: 450,
-    map: {
-      name: 'Howling Abyss',
-      id: 12,
-    },
     description: 'ARAM',
-  },
-  {
-    queueId: 480,
     map: {
-      name: 'Summoner\'s Rift',
-      id: 11,
-    },
-    description: 'Swiftplay',
-  },
-  {
-    queueId: 490,
-    map: {
-      name: 'Summoner\'s Rift',
-      id: 11,
-    },
-    description: 'Quickplay',
-  },
-  {
-    queueId: 700,
-    map: {
-      name: 'Summoner\'s Rift',
-      id: 11,
-    },
-    description: 'SR Clash',
-  },
-  {
-    queueId: 720,
-    map: {
-      name: 'Howling Abyss',
       id: 12,
+      name: 'Howling Abyss',
     },
-    description: 'ARAM Clash',
+    queueId: 450,
   },
   {
-    queueId: 820,
+    description: 'Swiftplay',
+    map: {
+      id: 11,
+      name: 'Summoner\'s Rift',
+    },
+    queueId: 480,
+  },
+  {
+    description: 'Quickplay',
+    map: {
+      id: 11,
+      name: 'Summoner\'s Rift',
+    },
+    queueId: 490,
+  },
+  {
+    description: 'SR Clash',
+    map: {
+      id: 11,
+      name: 'Summoner\'s Rift',
+    },
+    queueId: 700,
+  },
+  {
+    description: 'ARAM Clash',
+    map: {
+      id: 12,
+      name: 'Howling Abyss',
+    },
+    queueId: 720,
+  },
+  {
+    description: 'Co-op vs. AI (Beginner)',
     map: {
       name: 'Twisted Treeline',
     },
-    description: 'Co-op vs. AI (Beginner)',
+    queueId: 820,
   },
   {
-    queueId: 870,
-    map: {
-      name: 'Summoner\'s Rift',
-      id: 11,
-    },
     description: 'Co-op vs. AI (Intro)',
+    map: {
+      id: 11,
+      name: 'Summoner\'s Rift',
+    },
+    queueId: 870,
   },
   {
-    queueId: 880,
-    map: {
-      name: 'Summoner\'s Rift',
-      id: 11,
-    },
     description: 'Co-op vs. AI (Beginner)',
+    map: {
+      id: 11,
+      name: 'Summoner\'s Rift',
+    },
+    queueId: 880,
   },
   {
-    queueId: 890,
-    map: {
-      name: 'Summoner\'s Rift',
-      id: 11,
-    },
     description: 'Co-op vs. AI (Intermediate)',
-  },
-  {
-    queueId: 900,
     map: {
-      name: 'Summoner\'s Rift',
       id: 11,
+      name: 'Summoner\'s Rift',
     },
+    queueId: 890,
+  },
+  {
     description: 'ARURF',
+    map: {
+      id: 11,
+      name: 'Summoner\'s Rift',
+    },
+    queueId: 900,
   },
   {
+    description: 'Arena',
+    map: {
+      id: 30,
+      name: 'Rings of Wrath',
+    },
     queueId: 1700,
-    map: {
-      name: 'Rings of Wrath',
-      id: 30,
-    },
-    description: 'Arena',
   },
   {
-    queueId: 1710,
-    map: {
-      name: 'Rings of Wrath',
-      id: 30,
-    },
     description: 'Arena',
+    map: {
+      id: 30,
+      name: 'Rings of Wrath',
+    },
+    queueId: 1710,
   },
 ]

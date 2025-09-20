@@ -1,7 +1,6 @@
 const item: Item = {
-  name: 'Glacial Buckler',
   id: 3024,
-  rank: 'Epic',
+  name: 'Glacial Buckler',
   buildsFrom: [
     {
       id: 1029,
@@ -31,24 +30,25 @@ const item: Item = {
       gold: 2700,
     },
   ],
-  specialRecipe: 0,
-  noEffects: true,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3024_tank_t2_glacialshroud.png',
-  simpleDescription: 'Increases Armor and Cooldown Reduction',
-  stats: {
-    armor: 25,
-    mana: 300,
-    abilityHaste: 10,
-  },
+  maps: [11, 12, 21, 35],
+  noEffects: true,
+  rank: 'Epic',
+  removed: false,
   shop: {
     prices: {
-      total: 900,
       combined: 50,
       sell: 360,
+      total: 900,
     },
     tags: ['TANK', 'SUPPORT'],
   },
-  maps: [11, 12, 21, 35],
+  simpleDescription: 'Increases Armor and Cooldown Reduction',
+  specialRecipe: 0,
+  stats: {
+    abilityHaste: 10,
+    armor: 25,
+    mana: 300,
+  },
 }
 export default item

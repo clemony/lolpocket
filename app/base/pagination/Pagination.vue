@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { PaginationRoot, useForwardPropsEmits } from 'reka-ui'
 import type { PaginationRootEmits, PaginationRootProps } from 'reka-ui'
+import { PaginationRoot, useForwardPropsEmits } from 'reka-ui'
 
 const props = defineProps<
   PaginationRootProps & {

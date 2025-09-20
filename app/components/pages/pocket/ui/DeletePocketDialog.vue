@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { DialogDescription, DialogTitle } from 'reka-ui'
 
-const { pocket, class: className } = defineProps<{
+const { class: className, pocket } = defineProps<{
   pocket: Pocket
   class?: HTMLAttributes['class']
 }>()
@@ -10,8 +10,6 @@ function handleDelete() {
   deletePocket(pocket)
   navigateTo('/backpack')
 }
-
-const as = useAccountStore()
 </script>
 
 <template>
@@ -40,7 +38,7 @@ const as = useAccountStore()
         <Label
           class="gap-3 cursor-pointer text-bc/60 hover:text-bc items-center text-xs underline-offset-2 hover:underline flex">
           <input
-            v-model="as.settings.noConfirmTrash"
+            v-model="as().settings.noConfirmTrash"
             type="checkbox"
             class="peer checkbox checkbox-neutral checkbox-sm" />
           Don't show this again.

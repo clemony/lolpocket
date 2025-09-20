@@ -1,7 +1,5 @@
 <script lang="ts" setup>
-const as = useAccountStore()
-const ss = useSummonerStore()
-const summoner = computed(() => ss.getSummoner(as.account?.puuid))
+const summoner = computed(() => ss().getSummoner(as().account?.puuid))
 </script>
 
 <template>
@@ -10,7 +8,7 @@ const summoner = computed(() => ss.getSummoner(as.account?.puuid))
     as-child
     class="h-16 w-full">
     <NuxtLink
-      :to="`/summoner/${as.account.region}/${as.account.name}_${as.account.tag}`"
+      :to="`/summoner/${as().account.region}/${as().account.name}_${as().account.tag}`"
       class="flex gap-3 justify-start w-full items-center size-full">
       <SummonerIcon class="rounded-full size-11.5 shrink-0" />
 

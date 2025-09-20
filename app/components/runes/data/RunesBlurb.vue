@@ -39,17 +39,17 @@ const pathDescriptions = [
 ]
 
 const a = computed(() => {
-  return pathDescriptions.find(path => path.name == currentPath)
+  return pathDescriptions.find(path => path.name===currentPath)
 })
 </script>
 
 <template>
   <transition-fade
-    v-if="currentPath == currentPath"
+    v-if="currentPath===currentPath"
     group>
     <div class="flex items-center gap-6 leading-none">
       <h1 class="dst transition-all duration-300 text-3xl">
-        {{ currentPath == '' ? 'Runes' : currentPath ?? title }}
+        {{ currentPath==='' ? 'Runes' : currentPath ?? title }}
       </h1>
 
       <span class="pt-1 text-xs lowercase">{{ a.tag ?? 'select a path' }}</span>

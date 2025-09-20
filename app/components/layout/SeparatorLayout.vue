@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 const {
   title,
-  description,
   class: className,
+  description,
 } = defineProps<{
   title?: string
   description?: string

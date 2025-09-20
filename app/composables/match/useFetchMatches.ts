@@ -3,7 +3,7 @@ export async function useFetchMatches(puuid: string) {
   if (!puuid)
     throw new Error('puuid is null')
 
-  const { addMatches, getAllMatchIdsForPuuid, getMatchesForSummoner }
+  const { getAllMatchIdsForPuuid, addMatches, getMatchesForSummoner }
     = useIndexedDB()
 
   // Get all matches already stored for this summoner

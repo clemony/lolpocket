@@ -1,38 +1,38 @@
 export interface ChampionStats {
-  name: string
   id: number
-  games: number
-  wins: number
-  losses: number
-  winrate: number
-  kills: number
-  deaths: number
+  name: string
   assists: number
-  killParticipation: number
-  matchIndexes: number[]
+  deaths: number
   gamePatches: string[]
+  games: number
+  killParticipation: number
+  kills: number
+  losses: number
+  matchIndexes: number[]
+  winrate: number
+  wins: number
 }
 
 export interface BayesianChampion {
-  games: number
-  wins: number
-  losses: number
-  winrate: number
-  kills: number
-  deaths: number
   assists: number
-  killParticipation: number
-  matchIndexes: number[]
+  deaths: number
+  games: number
   gameVersions: string[]
+  killParticipation: number
+  kills: number
+  losses: number
+  matchIndexes: number[]
+  winrate: number
+  wins: number
 }
 
 export interface BayesianChampionStats extends ChampionStats {
+  avgAssists: number
+  avgDeaths: number
+  avgKills: number
+  avgKp: number
   bayesianWinrate: number
   kda: number
-  avgKills: number
-  avgDeaths: number
-  avgAssists: number
-  avgKp: number
 }
 
 export function getChampionStatsMap(
@@ -41,7 +41,7 @@ export function getChampionStatsMap(
   const map = new Map<string, ChampionStats>()
 
   const player = matches.map(m =>
-    m.participants.find(p => p.puuid == as().account.puuid)
+    m.participants.find(p => p.puuid === as().account.puuid)
   )
 
   player.forEach((match, index) => {
@@ -51,18 +51,18 @@ export function getChampionStatsMap(
 
     if (!map.has(champ)) {
       map.set(champ, {
-        name: champ,
         id: match.championId,
-        games: 0,
-        wins: 0,
-        losses: 0,
-        winrate: 0,
-        kills: 0,
-        deaths: 0,
+        name: champ,
         assists: 0,
-        killParticipation: 0,
-        matchIndexes: [],
+        deaths: 0,
         gamePatches: [],
+        games: 0,
+        killParticipation: 0,
+        kills: 0,
+        losses: 0,
+        matchIndexes: [],
+        winrate: 0,
+        wins: 0,
       })
     }
 
@@ -87,8 +87,6 @@ export function useBasicChampionStats(matches: MatchData[]) {
 }
 
 export function useBayesianChampionStats(matches: MatchData[]) {
-  const ix = useIndexStore()
-
   const statsList = useBasicChampionStats(matches)
   const totalGames = statsList.reduce((sum, s) => sum + s.games, 0)
   const globalWinrate
@@ -105,15 +103,15 @@ export function useBayesianChampionStats(matches: MatchData[]) {
 
       return {
         ...stats,
+        avgAssists: Number((stats.assists / stats.games).toFixed(2)),
+        avgDeaths: Number((stats.deaths / stats.games).toFixed(2)),
+        avgKills: Number((stats.kills / stats.games).toFixed(2)),
+        avgKp: Number(
+          ((stats.killParticipation / stats.games) * 100).toFixed(2)
+        ),
         bayesianWinrate,
         kda: Number(
           ((stats.kills + stats.assists) / Math.max(1, stats.deaths)).toFixed(2)
-        ),
-        avgKills: Number((stats.kills / stats.games).toFixed(2)),
-        avgDeaths: Number((stats.deaths / stats.games).toFixed(2)),
-        avgAssists: Number((stats.assists / stats.games).toFixed(2)),
-        avgKp: Number(
-          ((stats.killParticipation / stats.games) * 100).toFixed(2)
         ),
       }
     })

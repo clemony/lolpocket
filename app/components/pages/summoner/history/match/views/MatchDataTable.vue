@@ -6,10 +6,10 @@ const { match } = defineProps<{
 }>()
 
 const gameOutcome = computed(() => {
-  return match.teams[0].win == true ? 'Blue Team Win' : 'Red Team Win'
+  return match.teams[0].win === true ? 'Blue Team Win' : 'Red Team Win'
 })
 const gameEnd = computed(() => {
-  return match.teams[0].gameEndedInSurrender == true ? 'Enemy Surrender' : null
+  return match.teams[0].gameEndedInSurrender === true ? 'Enemy Surrender' : null
 })
 
 const statIndex = [0, 1, 2, 3, 4, 5, 6, 7]
@@ -23,8 +23,8 @@ const statIndex = [0, 1, 2, 3, 4, 5, 6, 7]
         <p
           :class="
             cn('font-medium dst', {
-              'text-inspiration': match.teams[0].win != true,
-              'text-domination': match.teams[0].win != true,
+              'text-inspiration': match.teams[0].win !== true,
+              'text-domination': match.teams[0].win !== true,
             })
           ">
           {{ gameOutcome }}
@@ -37,8 +37,8 @@ const statIndex = [0, 1, 2, 3, 4, 5, 6, 7]
         :key="player.playerId"
         :class="
           cn(' place-items-center grid size-full rounded-xl z-0', {
-            'bg-inspiration/30': player.teamId == 100,
-            'bg-domination/30': player.teamId == 200,
+            'bg-inspiration/30': player.teamId === 100,
+            'bg-domination/30': player.teamId === 200,
           })
         ">
         <div
@@ -84,7 +84,7 @@ const statIndex = [0, 1, 2, 3, 4, 5, 6, 7]
               cn(
                 'text-end !text-xxs *:!text-xxs py-1 tracking-tight last:pr-2 font-medium',
                 {
-                  'text-bc/15 **:text-bc/15': player[stat.data] == 0,
+                  'text-bc/15 **:text-bc/15': player[stat.data] === 0,
                 },
               )
             ">
@@ -97,9 +97,9 @@ const statIndex = [0, 1, 2, 3, 4, 5, 6, 7]
                 let c = b ? b.toFixed(2) : a
                 c
                   = (
-                    stat.data == "effectiveHealAndShielding"
-                    || stat.data == "bountyGold"
-                    || stat.data == "goldPerMinute"
+                    stat.data === "effectiveHealAndShielding"
+                    || stat.data === "bountyGold"
+                    || stat.data === "goldPerMinute"
                   )
                     ? Math.round(c)
                     : c
@@ -107,10 +107,10 @@ const statIndex = [0, 1, 2, 3, 4, 5, 6, 7]
                 // units
 
                 c
-                  = stat.data == "damageTakenOnTeamPercentage" && c
+                  = stat.data === "damageTakenOnTeamPercentage" && c
                     ? `${Math.round(c * 100)}%`
                     : c
-                c = stat.data == "timeCCingOthers" ? `${c}s` : c
+                c = stat.data === "timeCCingOthers" ? `${c}s` : c
 
                 c = c ? c.toLocaleString() : c
                 return c

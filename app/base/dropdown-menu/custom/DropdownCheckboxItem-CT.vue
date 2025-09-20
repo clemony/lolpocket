@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { value, class: className } = defineProps<{
+const { class: className, value } = defineProps<{
   value: string
   class?: HTMLAttributes['class']
 }>()

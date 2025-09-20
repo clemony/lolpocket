@@ -21,13 +21,13 @@ const stats = computed(() => {
     player.item5,
   ]
   return {
-    kda: Math.round(((player.kills + player.assists) / player.deaths) * 100),
-    keystone: ix().runes.find(r => r.id == id),
-    secondaryPath: pathIndex.find(p => p.id == player?.perks?.secondary)
-      ?.name,
+    keystone: ix().runes.find(r => r.id === id),
     cs: player.totalMinionsKilled + player.neutralMinionsKilled,
     items: Object.values(list),
-    lpScore: playerRank.list.findIndex(p => p.puuid == player.puuid) + 1,
+    kda: Math.round(((player.kills + player.assists) / player.deaths) * 100),
+    lpScore: playerRank.list.findIndex(p => p.puuid === player.puuid) + 1,
+    secondaryPath: pathIndex.find(p => p.id === player?.perks?.secondary)
+      ?.name,
   }
 })
 
@@ -119,7 +119,7 @@ const runeClass
           :img="`/img/runes/${stats.secondaryPath}.webp`"
           class="h-4.5 w-auto object-center absolute hover-ring rounded-tiny"
           :class="{
-            '!h-4': stats.secondaryPath?.toLowerCase() == 'inspiration',
+            '!h-4': stats.secondaryPath?.toLowerCase() === 'inspiration',
           }" />
       </p>
     </div>
@@ -142,7 +142,7 @@ const runeClass
       </h4>
 
       <Badge
-        v-if="stats.kda / 100 == Infinity"
+        v-if="stats.kda / 100 === Infinity"
         size="xs"
         class="border-master/40 saturate-180 bg-master/20 text-3xs **:leading-0">
         <icon
@@ -170,7 +170,7 @@ const runeClass
           class="absolute right-0 top-2.5 items-center grid justify-end justify-items-end">
           <span
             v-if="
-              player.puuid == playerRank.mvp || player.puuid == playerRank.ace
+              player.puuid === playerRank.mvp || player.puuid === playerRank.ace
             "
             class="size-full relative grid items-center justify-end">
             <Badge
@@ -178,14 +178,14 @@ const runeClass
               :class="
                 cn('!px-1 gap-1 my-0 right-0 absolute **:leading-0', {
                   'border-gold/40 bg-precision/90 ':
-                    player.puuid == playerRank.mvp,
+                    player.puuid === playerRank.mvp,
                   'bg-fighter/70 border-fighter':
-                    player.puuid == playerRank.ace,
+                    player.puuid === playerRank.ace,
                 })
               "
               class="">
               <span class="font-bold text-white tracking-wide !text-3xs">
-                {{ player.puuid == playerRank.mvp ? "MVP" : "ACE" }}
+                {{ player.puuid === playerRank.mvp ? "MVP" : "ACE" }}
               </span>
             </Badge>
           </span>

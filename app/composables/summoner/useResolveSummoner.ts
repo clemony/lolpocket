@@ -29,8 +29,8 @@ export async function useResolveSummoner(
     = identifier.puuid
       ? { puuid: identifier.puuid }
       : {
-          region: identifier.region!,
           name: identifier.name!,
+          region: identifier.region!,
           tag: identifier.tag!,
         }
 

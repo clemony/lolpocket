@@ -7,13 +7,12 @@ import {
   ListboxRoot,
 } from 'reka-ui'
 
-const is = useItemStore()
 function handleReset() {
-  is.itemGridApi?.refreshCells()
+  is().itemGridApi?.refreshCells()
 }
 // TODO FIx this for ag grid rfresh
 function handleChange() {
-  is.itemGridApi?.refreshCells()
+  is().itemGridApi?.refreshCells()
 }
 </script>
 
@@ -21,10 +20,10 @@ function handleChange() {
   <ListboxRoot
     v-model:model-value="is().filters.tags"
     :multiple="true"
-    @entry-focui.prevent>
+    @entry-focus.prevent>
     <ListboxContent
       class="w-full pt-0 pb-1"
-      @entry-focui.prevent
+      @entry-focus.prevent
       @highlight.prevent>
       <ListboxItem
         v-for="tag in itemTags"

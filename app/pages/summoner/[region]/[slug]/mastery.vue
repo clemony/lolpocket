@@ -1,10 +1,11 @@
 <script lang="ts" setup>
-const { summoner, class: className } = defineProps<{
+const { class: className, summoner } = defineProps<{
   summoner: Summoner
   class?: HTMLAttributes['class']
 }>()
 
 definePageMeta({
+  key: 'm',
   name: 'mastery',
   icon: 'i-lol-mastery',
   iconStyle: 'scale-90 -mb-0.25',
@@ -26,9 +27,9 @@ const noMastery = computed(() => {
   return array.value.map((a) => {
     return {
       id: a,
+      lastPlayed: null,
       level: 1,
       points: 0,
-      lastPlayed: null,
     }
   })
 })

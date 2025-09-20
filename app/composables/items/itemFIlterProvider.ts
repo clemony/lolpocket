@@ -1,20 +1,18 @@
 // useItemFilterProvider.ts
-import { akaLookup } from '#shared/appdata/filters/item-aka'
+import { itemAkaLookup } from '#shared/appdata/filters/item-aka'
 import { itemFilters } from '#shared/appdata/filters/item-filters'
 
 export const ItemFilterKey = Symbol('ItemFilter')
 
 export function useItemFilterProvider() {
-  const ix = useIndexStore()
-
   // --- FILTER STATE ---
   const filters = ref<ItemFilter>({
-    query: '',
-    stats: [],
-    tags: [],
-    rank: 'all',
     map: 11,
     purchasable: true,
+    query: '',
+    rank: 'all',
+    stats: [],
+    tags: [],
   })
 
   // --- HELPERS ---
@@ -24,12 +22,12 @@ export function useItemFilterProvider() {
 
   function clearFilters() {
     filters.value = {
-      query: '',
-      stats: [],
-      tags: null,
-      rank: null,
       map: null,
       purchasable: null,
+      query: '',
+      rank: null,
+      stats: [],
+      tags: null,
     }
   }
 
@@ -49,7 +47,7 @@ export function useItemFilterProvider() {
 
   const filtered = computed(() => {
     const query = debouncedQuery.value.toLowerCase()
-    const allIds = ix.items.map(i => i.id)
+    const allIds = ix().items.map(i => i.id)
     let matchedIds: Set<number> = new Set(allIds)
 
     // pipeline
@@ -83,12 +81,12 @@ export function useItemFilterProvider() {
     if (query) {
       matchedIds = new Set(
         [...matchedIds].filter((id) => {
-          const item = ix.itemById(id)
+          const item = ix().itemById(id)
           if (!item)
             return false
 
           const name = item.name.toLowerCase()
-          const akas = akaLookup[item.name.toLowerCase()] || []
+          const akas = itemAkaLookup[item.name.toLowerCase()] || []
           return (
             name.includes(query)
             || akas.some(aka => aka.toLowerCase().includes(query))
@@ -101,10 +99,10 @@ export function useItemFilterProvider() {
   })
 
   const state = {
-    filters,
-    filtered,
-    setFilter,
     clearFilters,
+    filtered,
+    filters,
+    setFilter,
   }
 
   provide(ItemFilterKey, state)

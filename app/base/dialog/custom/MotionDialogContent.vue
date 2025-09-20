@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { reactiveOmit } from '@vueuse/core'
 import type { DialogContentEmits, DialogContentProps } from 'reka-ui'
+import { reactiveOmit } from '@vueuse/core'
 import {
   DialogClose,
   DialogContent,
@@ -24,20 +24,20 @@ const delegatedProps = reactiveOmit(props, 'class')
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 const variants = {
+  dialogInitialState: {
+    filter: 'blur(10px)',
+    opacity: 0,
+    rotateX: 5,
+    rotateY: 25,
+    transformPerspective: 500,
+    z: -100,
+  },
   dialogOpenState: {
-    opacity: 1,
     filter: 'blur(0px)',
+    opacity: 1,
     rotateX: 0,
     rotateY: 0,
     z: 0,
-  },
-  dialogInitialState: {
-    opacity: 0,
-    filter: 'blur(10px)',
-    z: -100,
-    rotateY: 25,
-    rotateX: 5,
-    transformPerspective: 500,
   },
 }
 </script>

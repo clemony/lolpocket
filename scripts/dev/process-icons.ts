@@ -24,7 +24,7 @@ async function processIcons() {
       const top = Math.floor((height - 100) / 2)
 
       await image
-        .extract({ left, top, width: 100, height: 100 })
+        .extract({ width: 100, height: 100, left, top })
         .webp({ quality: 90 })
         .toFile(outputPath)
 

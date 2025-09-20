@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import type { PaginationPrevProps } from 'reka-ui'
 import { PaginationPrev, useForwardProps } from 'reka-ui'
-
 import { buttonVariants } from '~/assets/ts/variant-index'
 
 const props = withDefaults(

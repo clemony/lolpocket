@@ -1,7 +1,6 @@
 const item: Item = {
-  name: 'Boots',
   id: 1001,
-  rank: 'Boots',
+  name: 'Boots',
   buildsInto: [
     {
       id: 3117,
@@ -49,21 +48,22 @@ const item: Item = {
       gold: 1100,
     },
   ],
-  specialRecipe: 0,
-  noEffects: true,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1001_class_t1_bootsofspeed.png',
+  maps: [11, 12, 21, 35],
+  noEffects: true,
+  rank: 'Boots',
+  removed: false,
+  shop: {
+    prices: {
+      combined: 300,
+      sell: 120,
+      total: 300,
+    },
+  },
   simpleDescription: 'Slightly increases Move Speed',
+  specialRecipe: 0,
   stats: {
     flatMovespeed: 25,
   },
-  shop: {
-    prices: {
-      total: 300,
-      combined: 300,
-      sell: 120,
-    },
-  },
-  maps: [11, 12, 21, 35],
 }
 export default item

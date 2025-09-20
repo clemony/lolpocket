@@ -7,12 +7,12 @@ const { class: className } = defineProps<{
 // TODO fixthis
 function handleReset() {
   // is().filters.rank = null
-  // is.itemGridApi.refreshCells()
+  // is().itemGridApi.refreshCells()
 }
 const route = useRoute()
 function handleUpdate() {
-  if (route.path == '/items/stats') {
-    // is.itemGridApi.refreshCells()
+  if (route.path === '/items/stats') {
+    // is().itemGridApi.refreshCells()
   }
 }
 </script>
@@ -36,15 +36,15 @@ function handleUpdate() {
       :key="rank"
       size="lg"
       :variant="
-        is().filters.rank == rank ? 'neutral'
-        : is().filters.rank && is().filters.rank != rank ? 'hidden'
+        is().filters.rank === rank ? 'neutral'
+        : is().filters.rank && is().filters.rank !== rank ? 'hidden'
           : 'btn'
       "
       class="!font-medium px-5 text-xs"
-      @click="is().filters.rank == rank ? (is().filters.rank = null) : null">
+      @click="is().filters.rank === rank ? (is().filters.rank = null) : null">
       <input
         v-model="is().filters.rank"
-        :disabled="is().filters.rank == rank"
+        :disabled="is().filters.rank === rank"
         class="peer hidden absolute"
         type="radio"
         :value="rank"

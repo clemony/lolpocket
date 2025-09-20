@@ -1,7 +1,6 @@
 const item: Item = {
-  name: 'Warden\'s Mail',
   id: 3082,
-  rank: 'Epic',
+  name: 'Warden\'s Mail',
   buildsFrom: [
     {
       id: 1029,
@@ -31,29 +30,30 @@ const item: Item = {
       gold: 2700,
     },
   ],
-  specialRecipe: 0,
-  noEffects: false,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3082_tank_t2_wardensmail.png',
+  maps: [11, 12, 21, 35],
+  noEffects: false,
   passives: [
     {
       name: 'Rock Solid',
-      unique: true,
       effects:
         'Every first incoming instance of post-mitigation <img src="/img/icons/basic-damage.webp" class="tip-icon" />basic damage per cast instance is reduced by 15, with a <b>maximum</b> of 20% reduction each.',
+      unique: true,
     },
   ],
-  stats: {
-    armor: 40,
-  },
+  rank: 'Epic',
+  removed: false,
   shop: {
     prices: {
-      total: 1000,
       combined: 400,
       sell: 400,
+      total: 1000,
     },
     tags: ['TANK'],
   },
-  maps: [11, 12, 21, 35],
+  specialRecipe: 0,
+  stats: {
+    armor: 40,
+  },
 }
 export default item

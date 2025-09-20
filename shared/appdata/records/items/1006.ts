@@ -1,7 +1,6 @@
 const item: Item = {
-  name: 'Rejuvenation Bead',
   id: 1006,
-  rank: 'Basic',
+  name: 'Rejuvenation Bead',
   buildsInto: [
     {
       id: 3211,
@@ -24,22 +23,23 @@ const item: Item = {
       gold: 800,
     },
   ],
-  specialRecipe: 0,
-  noEffects: true,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1006_tank_t1_rejuvenationbead.png',
-  simpleDescription: 'Slightly increases Health Regen',
-  stats: {
-    healthRegen: 100,
-  },
+  maps: [11, 12, 21, 35],
+  noEffects: true,
+  rank: 'Basic',
+  removed: false,
   shop: {
     prices: {
-      total: 300,
       combined: 300,
       sell: 120,
+      total: 300,
     },
     tags: ['TANK'],
   },
-  maps: [11, 12, 21, 35],
+  simpleDescription: 'Slightly increases Health Regen',
+  specialRecipe: 0,
+  stats: {
+    healthRegen: 100,
+  },
 }
 export default item

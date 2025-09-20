@@ -4,14 +4,14 @@ import { itemTags } from '#shared/appdata'
 const { state } = defineProps<{
   state: any
 }>()
-const is = useItemStore()
+
 const tags = ref()
 function handleReset() {
-  is.itemGridApi?.refreshCells()
+  is().itemGridApi?.refreshCells()
 }
 // TODO FIx this for ag grid rfresh
 function handleChange() {
-  is.itemGridApi?.refreshCells()
+  is().itemGridApi?.refreshCells()
 }
 </script>
 
@@ -53,7 +53,7 @@ function handleChange() {
         :class="{
           '!text-nc ':
             state.filters.tags && state.filters.tags.includes(tag.id),
-          '!size-5 opacity-80': tag.id == 'Movement',
+          '!size-5 opacity-80': tag.id === 'Movement',
         }" />
     </label>
   </transition-slide>

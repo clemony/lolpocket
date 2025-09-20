@@ -1,7 +1,6 @@
 const item: Item = {
-  name: 'Manamune',
   id: 3004,
-  rank: 'Legendary',
+  name: 'Manamune',
   buildsFrom: [
     {
       id: 3070,
@@ -19,43 +18,44 @@ const item: Item = {
       gold: 350,
     },
   ],
-  specialRecipe: 0,
-  noEffects: false,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3004_marksman_t3_manamune.png',
-  simpleDescription: 'Increases Attack Damage based on maximum Mana',
+  maps: [11, 12, 21, 35],
+  noEffects: false,
   passives: [
     {
       name: 'Awe',
-      unique: true,
       effects:
         'Grants <b>bonus</b> attack damage equal to 2% <b>maximum</b> mana.',
+      unique: true,
     },
     {
       name: 'Manaflow',
-      unique: true,
       effects:
         'Grants a charge every 8 seconds, up to 4 charges. Consumes a charge on-hit and whenever affecting an enemy or ally with an ability to grant 3 <b>bonus</b> mana, increased to 6 mana for champion targets, up to a <b>maximum</b> of 360 <b>bonus</b> mana.',
+      unique: true,
     },
     {
-      unique: false,
       effects:
         'Transforms into <img src="/img/icons/muramana.webp" class="tip-icon" />Muramana at 360 <b>bonus</b> mana.',
+      unique: false,
     },
   ],
-  stats: {
-    attackDamage: 35,
-    mana: 500,
-    abilityHaste: 15,
-  },
+  rank: 'Legendary',
+  removed: false,
   shop: {
     prices: {
-      total: 2900,
       combined: 1100,
       sell: 1160,
+      total: 2900,
     },
     tags: ['FIGHTER', 'MARKSMAN', 'ASSASSIN', 'ONHIT_EFFECTS'],
   },
-  maps: [11, 12, 21, 35],
+  simpleDescription: 'Increases Attack Damage based on maximum Mana',
+  specialRecipe: 0,
+  stats: {
+    abilityHaste: 15,
+    attackDamage: 35,
+    mana: 500,
+  },
 }
 export default item

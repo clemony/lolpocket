@@ -5,11 +5,11 @@ defineOptions({
 
 const {
   title,
-  text,
-  button,
-  hover,
   as = 'label',
+  button,
   class: className,
+  hover,
+  text,
 } = defineProps<{
   title?: string
   text?: string

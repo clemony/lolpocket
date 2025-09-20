@@ -31,9 +31,9 @@ export function useInitialMatchSync(puuid: string) {
   })
 
   return {
-    matchData,
     fetchInitialMatches,
     loading,
+    matchData,
     ready,
   }
 }

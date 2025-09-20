@@ -3,10 +3,10 @@ import type { PrimitiveProps } from 'reka-ui'
 import { Primitive } from 'reka-ui'
 
 const {
+  as: el = 'span',
   class: className,
-  summoner,
-  as = 'span',
   noTag,
+  summoner,
 } = defineProps<
   PrimitiveProps & {
     class?: HTMLAttributes['class']
@@ -21,15 +21,14 @@ const summonerLevel = computed(() => {
     return summoner.level
   }
   else {
-    const as = useAccountStore()
-    return as.account.level
+    return as().account.level
   }
 })
 </script>
 
 <template>
   <Primitive
-    :as="as"
+    :as="el"
     :class="cn('flex items-center lowercase leading-0 antialiased', className)">
     {{ !noTag ? "lv. " : null }}{{ summonerLevel || "0" || "" }}
   </Primitive>

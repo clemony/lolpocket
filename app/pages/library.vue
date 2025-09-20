@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 definePageMeta({
+  icon: 'book',
   level: 1,
   order: 8,
-  icon: 'book',
 })
 </script>
 

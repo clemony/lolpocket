@@ -8,8 +8,6 @@ definePageMeta({
   path: '/library/runes',
 })
 
-const ix = useIndexStore()
-
 const { pathList } = useRunes()
 
 const selectedPath = ref<PathName>('Inspiration')
@@ -28,7 +26,7 @@ console.log('💠 - test:', test)
       :class="{ 'opacity-0 ': !selectedRune, 'opacity-100 ': selectedRune }">
       <RuneData
         :key="selectedRune"
-        :rune-index="ix.runeById(selectedRune)" />
+        :rune-index="ix().runeById(selectedRune)" />
 
       <CloseButton
         tip="Close"

@@ -4,7 +4,6 @@ import { positions } from './handleRoles'
 const props = defineProps<{
   class?: HTMLAttributes['class']
 }>()
-const ms = useMatchStore()
 </script>
 
 <template>
@@ -18,7 +17,7 @@ const ms = useMatchStore()
       :key="position"
       class="btn btn-ghost rounded-[0.85rem] hover:bg-b3/40 btn-square has-checked:!btn-neutral has-checked:bgneutral">
       <input
-        v-model="ms.filter.role"
+        v-model="ms().filter.role"
         name="research-positions"
         type="radio"
         class="peer hidden"

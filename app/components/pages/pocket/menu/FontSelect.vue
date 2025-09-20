@@ -19,7 +19,7 @@ const props = defineProps<{
         <div
           :style="{ fontFamily: props.card.font[props.model] }"
           class="text-md items-center align-text-bottom dst font-medium">
-          {{ props.model == 0 ? "Title Font" : "Accent Font" }}
+          {{ props.model === 0 ? "Title Font" : "Accent Font" }}
         </div>
       </SelectValue>
     </SelectTrigger>

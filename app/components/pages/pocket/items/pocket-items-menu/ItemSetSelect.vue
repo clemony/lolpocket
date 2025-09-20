@@ -16,7 +16,7 @@ const pocket = computed(() => {
     <!--   <Select v-model:model-value="pocket.complete.items[props.index]">
       <SelectTrigger
         class="h-auto shadow-none py-4 hover:border-b2 !bg-b2/40 hover:inset-shadow-xs hover:shadow-warm-2 cursor-pointer !rounded-box"
-        :disabled="pocket.items.length == 0">
+        :disabled="pocket.items.length === 0">
         <SelectValue
           as-child
           class="!bg-transparent rounded-box">

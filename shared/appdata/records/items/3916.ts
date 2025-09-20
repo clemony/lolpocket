@@ -1,7 +1,7 @@
 const item: Item = {
-  name: 'Oblivion Orb',
   id: 3916,
-  rank: 'Epic',
+  name: 'Oblivion Orb',
+  nicknames: ['grievous'],
   buildsFrom: [
     {
       id: 1052,
@@ -26,31 +26,31 @@ const item: Item = {
       gold: 2850,
     },
   ],
-  specialRecipe: 0,
-  noEffects: false,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3916_mage_t2_oblivionorb.png',
-  simpleDescription: 'Increases magic damage',
-  nicknames: ['grievous'],
+  maps: [11, 12, 21, 35],
+  noEffects: false,
   passives: [
     {
       name: 'Grievous Wounds',
-      unique: true,
       effects:
         'Dealing magic damage to enemy champions inflicts them with <img src="/img/icons/grievous-wounds.webp" class="tip-icon" />Grievous Wounds for 3 seconds.',
+      unique: true,
     },
   ],
-  stats: {
-    abilityPower: 25,
-  },
+  rank: 'Epic',
+  removed: false,
   shop: {
     prices: {
-      total: 800,
       combined: 400,
       sell: 320,
+      total: 800,
     },
     tags: ['MAGE', 'SUPPORT'],
   },
-  maps: [11, 12, 21, 35],
+  simpleDescription: 'Increases magic damage',
+  specialRecipe: 0,
+  stats: {
+    abilityPower: 25,
+  },
 }
 export default item

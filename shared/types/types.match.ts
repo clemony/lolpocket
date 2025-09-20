@@ -1,57 +1,18 @@
 export interface MatchData {
-  matchId: string
   endOfGameResult: string
   gameDuration: number
   gameEndTimestamp: number
   gamePatch: number
-  queueId: number
-  participants: Player[]
+  matchId: string
   participantIds: string[]
+  participants: Player[]
+  queueId: number
   teams: MatchTeam[]
 }
 
 export interface Player {
-  riotIdGameName: string
-  riotIdTagline: string
   puuid: string
-  profileIcon: number
-  item0: number
-  item1: number
-  item2: number
-  item3: number
-  item4: number
-  item5: number
-  item6: number
-  summoner1Id: number
-  summoner2Id: number
-  teamId: number
-  teamPosition: string
-  championId: number
-  win: boolean
-  kills: number
-  deaths: number
   assists: number
-  mvpScore: number
-  goldEarned: number
-  totalMinionsKilled: number
-  neutralMinionsKilled: number
-  totalDamageDealtToChampions: number
-  totalHealsOnTeammates: number
-  totalDamageShieldedOnTeammates: number
-  damageSelfMitigated: number
-  totalDamageTaken: number
-  timeCCingOthers: number
-  visionScore: number
-  wardsPlaced: number
-  wardsKilled: number
-  turretKills: number
-  objectivesStolen: number
-  dragonKills: number
-  soloKills: number
-  doubleKills: number
-  tripleKills: number
-  quadraKills: number
-  pentaKills: number
   challenges: {
     controlWardsPlaced: number
     damageTakenOnTeamPercentage: number
@@ -62,26 +23,63 @@ export interface Player {
     killParticipation: number
     teamDamagePercentage: number
   }
+  championId: number
+  damageSelfMitigated: number
+  deaths: number
+  doubleKills: number
+  dragonKills: number
+  goldEarned: number
+  item0: number
+  item1: number
+  item2: number
+  item3: number
+  item4: number
+  item5: number
+  item6: number
+  kills: number
+  mvpScore: number
+  neutralMinionsKilled: number
+  objectivesStolen: number
+  pentaKills: number
   perks: {
     keystone: number
     primary: number
     secondary: number
   }
+  profileIcon: number
+  quadraKills: number
+  riotIdGameName: string
+  riotIdTagline: string
+  soloKills: number
+  summoner1Id: number
+  summoner2Id: number
+  teamId: number
+  teamPosition: string
+  timeCCingOthers: number
+  totalDamageDealtToChampions: number
+  totalDamageShieldedOnTeammates: number
+  totalDamageTaken: number
+  totalHealsOnTeammates: number
+  totalMinionsKilled: number
+  tripleKills: number
+  turretKills: number
+  visionScore: number
+  wardsKilled: number
+  wardsPlaced: number
+  win: boolean
 }
 
 export interface MatchTeam {
-  teamId: number
-  win: boolean
-  gold?: number
-  goldSpent?: number
-  kills?: number
-  deaths?: number
   assists?: number
+  deaths?: number
   feats: {
     EPIC_MONSTER_KILL: number
     FIRST_BLOOD: number
     FIRST_TURRET: number
   }
+  gold?: number
+  goldSpent?: number
+  kills?: number
   objectives: {
     atakhan: number
     baron: number
@@ -92,4 +90,6 @@ export interface MatchTeam {
     riftHerald: number
     tower: number
   }
+  teamId: number
+  win: boolean
 }

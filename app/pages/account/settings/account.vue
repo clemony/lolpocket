@@ -41,9 +41,11 @@ console.log('userProviders: ', userProviders)
       id="username"
       class="space-y-6">
       <div class="leading-4">
-        <Label
+        <h4
           as="legend"
-          class="text-lgfont-semibold mb-2">Username</Label>
+          class="text-lg font-semibold mb-2">
+          Username
+        </h4>
 
         <p class="label text-wrap">
           This is the name that will be used throughout the site. Defers to in
@@ -62,9 +64,11 @@ console.log('userProviders: ', userProviders)
       id="region"
       class="space-y-6">
       <div class="leading-4">
-        <Label
+        <h4
           as="legend"
-          class="text-lgfont-semibold mb-2">Region</Label>
+          class="text-lg font-semibold mb-2">
+          Region
+        </h4>
 
         <p class="label text-wrap">
           Your default summoner search region.
@@ -73,10 +77,12 @@ console.log('userProviders: ', userProviders)
 
       <Select
         v-model:model-value="as().account.region"
+        name="region-select"
         position="popper"
         :default-value="as().account.region"
-        @close-auto-focui.prevent>
-        <SelectTrigger class="h-12 w-full inset-shadow-none flex input">
+        @close-auto-focus.prevent>
+        <SelectTrigger
+          class="h-12 w-full inset-shadow-none flex input">
           <!--       <span class="grow">
               {{ select }}
             </span> -->
@@ -93,11 +99,11 @@ console.log('userProviders: ', userProviders)
       id="connected-accounts"
       class="space-y-2">
       <div class="leading-4">
-        <Label
+        <h4
           as="legend"
-          class="text-lgfont-semibold mb-2">
+          class="mb-2">
           Connected Accounts
-        </Label>
+        </h4>
 
         <p class="label text-wrap">
           Manage the accounts used to log in to
@@ -107,12 +113,12 @@ console.log('userProviders: ', userProviders)
       <label
         v-for="(provider, i) in providers"
         :key="i"
+        for="toggle-provider"
         class=""
         :class="
           cn(
             'flex !gap-5  border-b !border-b-b2 items-center justify-start   w-full h-20',
-          )
-        ">
+          )">
         <div
           :class="
             cn(
@@ -139,6 +145,7 @@ console.log('userProviders: ', userProviders)
           class="opacity-60 text-xs">Not Connected</span>
 
         <Switch
+          name="toggle-provider"
           :model-value="userProviders.includes(provider.name)"
           class="switch data-[state=checked]:ring data-[state=checked]:ring-white/60 scale-90 -mt-0.25 dst" />
       </label>
@@ -150,11 +157,11 @@ console.log('userProviders: ', userProviders)
       id="connected-accounts"
       class="space-y-6">
       <div class="leading-4">
-        <Label
+        <h4
           as="legend"
           class="text-lgfont-semibold mb-2 flex gap-2 items-center">
           Email
-        </Label>
+        </h4>
 
         <p class="label text-wrap">
           Used for password reset and update.

@@ -1,20 +1,20 @@
 const item: Item = {
-  name: 'Juice of Vitality',
   id: 2143,
-  rank: 'Consumable',
-  specialRecipe: 0,
-  noEffects: false,
-  removed: false,
+  name: 'Juice of Vitality',
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/icons_souljuice_green.png',
-  stats: {},
+  maps: [30],
+  noEffects: false,
+  rank: 'Consumable',
+  removed: false,
   shop: {
     prices: {
-      total: 500,
       combined: 500,
       sell: 200,
+      total: 500,
     },
     tags: ['HEALTH_AND_REG'],
   },
-  maps: [30],
+  specialRecipe: 0,
+  stats: {},
 }
 export default item

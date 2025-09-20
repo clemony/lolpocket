@@ -13,7 +13,7 @@ const set = computed(() => {
   <div
     class="col-start-1 h-fit gap-1 px-3 py-2 grid w-full grid-cols-6 rounded-box p-i-c **:select-none">
     <template v-for="i in 6">
-      <template v-if="set == null || set == undefined">
+      <template v-if="set === null || set === undefined">
         <Placeholder
           :key="i"
           class="size-16 bg-b3/80" />
@@ -28,7 +28,7 @@ const set = computed(() => {
             class="shadow-sm inset-shadow-black/40 shadow-black/20 inset-shadow-sm btn btn-square size-16 rounded-lg !border-0">
             <div class="size-full overflow-hidden rounded-lg">
               <div
-                v-if="item == 0"
+                v-if="item === 0"
                 class="size-full bg-b3 aspect-square" />
 
               <img

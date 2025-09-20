@@ -12,7 +12,7 @@ const { ranks } = defineProps<{
       v-for="(rank, i) in ranks"
       :key="rank">
       {{ rank.charAt(0) + rank.slice(1).toLowerCase() }}
-      <span v-if="i != ranks.length - 1">
+      <span v-if="i !== ranks.length - 1">
         ,&nbsp;
       </span>
     </span>

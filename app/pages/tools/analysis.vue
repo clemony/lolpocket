@@ -7,16 +7,13 @@ definePageMeta({
   path: '/tools/analysis',
 })
 
-const as = useAccountStore()
-const ss = useSummonerStore()
-const ms = useMatchStore()
 const summoner = ref<Summoner>(null)
 console.log('💠 - summoner:', summoner)
 
 onMounted(async () => {
-  const q = computedAsync(() => ms.analysisQueueSelect)
-  const p = computedAsync(() => ms.analysisPatchSelect)
-  const s = computedAsync(() => ss.getSummoner(as.account.puuid))
+  const q = computedAsync(() => ms().analysisQueueSelect)
+  const p = computedAsync(() => ms().analysisPatchSelect)
+  const s = computedAsync(() => ss().getSummoner(as().account.puuid))
   await { p, q, s }
   summoner.value = s.value
 })

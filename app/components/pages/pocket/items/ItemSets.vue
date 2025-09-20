@@ -4,7 +4,6 @@ import { vDraggable } from 'vue-draggable-plus'
 const props = defineProps<{
   pocket: Pocket
 }>()
-const is = useItemStore()
 
 const pocket = ref(props.pocket)
 

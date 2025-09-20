@@ -1,7 +1,7 @@
 const item: Item = {
-  name: 'Amplifying Tome',
   id: 1052,
-  rank: 'Basic',
+  name: 'Amplifying Tome',
+  nicknames: ['amptome', 'book'],
   buildsInto: [
     {
       id: 4632,
@@ -109,23 +109,23 @@ const item: Item = {
       gold: 2865,
     },
   ],
-  specialRecipe: 0,
-  noEffects: true,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1052_mage_t2_amptome.png',
-  simpleDescription: 'Slightly increases Ability Power',
-  nicknames: ['amptome', 'book'],
-  stats: {
-    abilityPower: 20,
-  },
+  maps: [11, 12, 21, 35],
+  noEffects: true,
+  rank: 'Basic',
+  removed: false,
   shop: {
     prices: {
-      total: 400,
       combined: 400,
       sell: 160,
+      total: 400,
     },
     tags: ['MAGE', 'SUPPORT'],
   },
-  maps: [11, 12, 21, 35],
+  simpleDescription: 'Slightly increases Ability Power',
+  specialRecipe: 0,
+  stats: {
+    abilityPower: 20,
+  },
 }
 export default item

@@ -27,26 +27,26 @@ Chart.defaults.datasets.doughnut.hoverBorderWidth = 1
 Chart.register(Tooltip, DoughnutController, ArcElement)
 
 const chartData = computed(() => ({
-  type: 'doughnut',
-  labels: props.labels,
   datasets: props.datasets,
+  labels: props.labels,
   options: {
-    spacing: props.type == 'gauge' ? -4 : 2,
+    cutout: props.cutout ? props.cutout : '80%',
+    elements: {
+      arc: {
+        backgroundColor: props.colors,
+        borderColor: 'rgba(0,0,0,0)',
+        hoverOffset: 1,
+        roundedCornersFor: props.overlap ? 0 : null,
+      },
+    },
     plugins: {
       tooltip: {
         enabled: false,
       },
     },
-    elements: {
-      arc: {
-        borderColor: 'rgba(0,0,0,0)',
-        backgroundColor: props.colors,
-        hoverOffset: 1,
-        roundedCornersFor: props.overlap ? 0 : null,
-      },
-    },
-    cutout: props.cutout ? props.cutout : '80%',
+    spacing: props.type === 'gauge' ? -4 : 2,
   },
+  type: 'doughnut',
 }))
 </script>
 

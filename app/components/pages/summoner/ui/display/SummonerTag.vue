@@ -3,9 +3,9 @@ import type { PrimitiveProps } from 'reka-ui'
 import { Primitive } from 'reka-ui'
 
 const {
+  as: el = 'span',
   class: className,
   summoner,
-  as = 'span',
 } = defineProps<
   PrimitiveProps & {
     as?: string
@@ -19,8 +19,7 @@ const tag = computed(() => {
     return summoner.tag
   }
   else {
-    const as = useAccountStore()
-    return as.account?.tag ?? null
+    return as().account?.tag ?? null
   }
 })
 </script>
@@ -28,7 +27,7 @@ const tag = computed(() => {
 <template>
   <Primitive
     v-if="tag"
-    :as="as"
+    :as="el"
     :class="cn('inline-flex items-center leading-0 antialiased', className)">
     <icon
       name="lucide:hash"

@@ -5,17 +5,15 @@ export function saveNotification(
   template: string,
   vars: Record<string, string>
 ) {
-  const as = useAccountStore()
-
   const item: InboxItem = {
     id: toId(),
     date: new Date(),
+    read: false,
     template,
     vars,
-    read: false,
   }
 
-  const list = as.account.inbox.notifications
+  const list = as().account.inbox.notifications
 
   list.unshift(item)
 

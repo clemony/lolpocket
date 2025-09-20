@@ -44,7 +44,7 @@ export function copyItemSetToPocket(targetPocket: Pocket, set: ItemSet) {
 }
 
 export function deleteItemSet(pocket: Pocket, set: ItemSet) {
-  const i = pocket.items.findIndex(s => s == set)
+  const i = pocket.items.findIndex(s => s === set)
   if (i) {
     pocket.items.splice(i, 1)
   }

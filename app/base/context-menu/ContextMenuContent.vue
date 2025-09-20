@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { motion } from 'motion-v'
-
 import type { ContextMenuContentEmits, ContextMenuContentProps } from 'reka-ui'
+import { motion } from 'motion-v'
 import {
   ContextMenuContent,
   ContextMenuPortal,
@@ -25,13 +24,13 @@ const delegatedProps = reactiveOmit(props, 'class')
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 
 const variants = {
-  visible: {
-    opacity: 1,
-    scale: 1,
-  },
   hidden: {
     opacity: 0,
     scale: 0.6,
+  },
+  visible: {
+    opacity: 1,
+    scale: 1,
   },
 }
 </script>

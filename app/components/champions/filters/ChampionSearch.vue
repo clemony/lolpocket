@@ -7,14 +7,12 @@ const props = defineProps<{
 
 const emit = defineEmits(['update:input'])
 
-const ix = useIndexStore()
-
 const searchQuery = ref('')
 
 const fuse = ref<Fuse<any> | null>(null)
 
 watch(
-  () => ix.champions,
+  () => ix().champions,
   (newChampions) => {
     if (newChampions && newChampions.length > 0) {
       fuse.value = new Fuse(newChampions, {
@@ -28,7 +26,7 @@ watch(
 )
 const searchResult = computed(() => {
   if (!searchQuery.value) {
-    return ix.champions || []
+    return ix().champions || []
   }
   if (!fuse.value)
     return []

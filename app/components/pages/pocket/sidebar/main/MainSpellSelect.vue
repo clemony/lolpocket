@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 const {
-  class: className,
-  pocket: p,
   side,
   sideOffset,
   align,
   alignOffset,
+  class: className,
+  pocket: p,
 } = defineProps<{
   class?: HTMLAttributes['class']
   pocket: Pocket
@@ -17,7 +17,7 @@ const {
 
 const pocket = computed(() => p)
 const selectedSet = computed(() =>
-  pocket.value.spells?.find(s => s.id == pocket.value.main?.spells)
+  pocket.value.spells?.find(s => s.id === pocket.value.main?.spells)
 )
 
 onMounted(() => {})
@@ -63,7 +63,7 @@ const keyClass
             size="xs"
             title="Clear main spells"
             class="aspect-square *:opacity-60 hover:*:opacity-100 btn-square"
-            @click="pocket.main?.spells == ''">
+            @click="pocket.main?.spells === ''">
             <icon
               name="backspace"
               class="size-5 **:stroke-2" />

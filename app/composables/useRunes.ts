@@ -1,17 +1,15 @@
 export function useRunes(player?: ComputedRef<any>, set?: ComputedRef<any>) {
-  const ix = useIndexStore()
-
-  const runes = computed(() => ix.runes)
+  const runes = computed(() => ix().runes)
 
   const playerKeystone = computed(() =>
-    ix.runeById(player.value.perks.keystone)
+    ix().runeById(player.value.perks.keystone)
   )
 
   const playerPaths = computed(() => {
     if (!player?.value || !runes.value)
       return null
-    ix.loadPaths()
-    const match = ix.pathNameById(player.value.perks.secondary)
+    ix().loadPaths()
+    const match = ix().pathNameById(player.value.perks.secondary)
     return match ?? null
   })
 
@@ -25,7 +23,7 @@ export function useRunes(player?: ComputedRef<any>, set?: ComputedRef<any>) {
 
   const getKeystones = (set: ComputedRef<any>) =>
     computed(
-      () => runes.value?.filter(r => r.path == set.value?.primary?.path) || []
+      () => runes.value?.filter(r => r.path === set.value?.primary?.path) || []
     )
 
   const getPrimarySlots = (set: ComputedRef<any>) =>
@@ -43,12 +41,12 @@ export function useRunes(player?: ComputedRef<any>, set?: ComputedRef<any>) {
     })
 
   return {
-    runes,
-    playerKeystone,
-    playerPaths,
     getKeystones,
     getPrimarySlots,
     getSecondarySlots,
     pathList,
+    playerKeystone,
+    playerPaths,
+    runes,
   }
 }

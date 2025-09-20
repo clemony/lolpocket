@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { statIndex } from '#shared/appdata'
 
-const is = useItemStore()
 const { filtered, filters, setFilter } = useItemFilter()
 const searchInput = ref([])
 </script>
@@ -15,7 +14,7 @@ const searchInput = ref([])
       v-for="query in searchInput"
       :key="query">
       <button
-        v-if="query != ''"
+        v-if="query !== ''"
         :appear="false"
         class="btn btn-xs bg-b2/97 rounded-md !font-normal !text-xs mt-4 f gap-2">
         {{ query }}
@@ -23,7 +22,7 @@ const searchInput = ref([])
     </template>
 
     <button
-      v-if="filters.tags && filters.tags != null"
+      v-if="filters.tags && filters.tags !== null"
       :appear="false"
       class="btn btn-xs rounded-md bg-b2/97 !font-normal !text-xs mt-4 f gap-2"
       @click="filters.tags = null">

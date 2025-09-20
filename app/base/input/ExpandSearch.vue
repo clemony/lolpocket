@@ -41,7 +41,7 @@ onMounted(() => {
     initial="collapsed"
     while-hover="expanded"
     class="relative grid size-9.5"
-    :animate="props.query != null ? 'expanded' : 'collapsed'">
+    :animate="props.query !== null ? 'expanded' : 'collapsed'">
     <div
       class="grid place-items-center size-9.5 z-1 pointer-events-none absolute">
       <icon
@@ -60,7 +60,7 @@ onMounted(() => {
       <slot />
 
       <button
-        :disabled="props.query == null"
+        :disabled="props.query === null"
         class="btn btn-ghost btn-circle btn-xs hover:bg-b3/40 absolute z-2 left-2 pointer-events-auto"
         @click="reset()">
         <icon

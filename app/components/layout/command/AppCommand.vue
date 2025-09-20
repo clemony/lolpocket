@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-const ui = useUiStore()
-
 const searchQuery = ref<string>('')
 
 const {
@@ -79,7 +77,7 @@ watch(
             class="w-full rounded-3xl text-bc/50 h-14 pl-14 !text-xl" />
 
           <button
-            v-if="searchQuery != ''"
+            v-if="searchQuery !== ''"
             class="btn-ghost-dark btn-square !size-9 mr-5.5"
             @click="searchQuery = ''">
             <icon

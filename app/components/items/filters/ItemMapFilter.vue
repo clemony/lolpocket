@@ -2,8 +2,6 @@
 const { modelValue: selectedMap } = defineProps<{
   modelValue?: number
 }>()
-
-const ix = useIndexStore()
 </script>
 
 <template>
@@ -15,12 +13,12 @@ const ix = useIndexStore()
             :is="`i-maps-${selectedMap}`"
             class="absolute dst opacity-80 shrink-0"
             :class="{
-              'size-5': selectedMap == 12 || selectedMap == 11,
-              'size-6': selectedMap == 30,
+              'size-5': selectedMap === 12 || selectedMap === 11,
+              'size-6': selectedMap === 30,
             }" />
         </span>
         <span class="grow">
-          {{ ix.mapNameById(selectedMap) }}
+          {{ ix().mapNameById(selectedMap) }}
         </span>
       </slot>
     </SelectTrigger>
@@ -56,11 +54,11 @@ const ix = useIndexStore()
                   :is="`i-maps${map}`"
                   class="absolute opacity-80 dst shrink-0"
                   :class="{
-                    'size-5': map == 12 || map == 11,
-                    'size-6': map == 30,
+                    'size-5': map === 12 || map === 11,
+                    'size-6': map === 30,
                   }" />
               </span>
-              {{ ix.mapNameById(map) }}
+              {{ ix().mapNameById(map) }}
             </div>
           </SelectItem>
         </SelectGroup>

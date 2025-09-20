@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import type { PaginationListItemProps } from 'reka-ui'
 import { PaginationListItem } from 'reka-ui'
-
 import { buttonVariants } from '~/assets/ts/variant-index'
 
 const props = withDefaults(
@@ -14,8 +13,8 @@ const props = withDefaults(
     }
   >(),
   {
-    size: 'sm',
     shape: 'square',
+    size: 'sm',
   }
 )
 

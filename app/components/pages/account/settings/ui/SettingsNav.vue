@@ -15,8 +15,8 @@ const route = useRoute()
         cn(
           'w-full font-semibold text-bc/80  text-left capitalize justify-start underline-offset-4',
           {
-            'btn-active pointer-events-none': route.path == item.path,
-            'text-bc/40 hover:text-bc': route.fullPath != item.path,
+            'btn-active pointer-events-none': route.path === item.path,
+            'text-bc/40 hover:text-bc': route.fullPath !== item.path,
           },
         )
       "

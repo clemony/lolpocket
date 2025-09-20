@@ -5,7 +5,7 @@ const props = defineProps<{
   currentValue?: string
 }>()
 const emit = defineEmits(['update:spell'])
-const ix = useIndexStore()
+
 const selected = ref('')
 
 onMounted(() => (selected.value = props.currentValue))
@@ -19,9 +19,9 @@ onMounted(() => (selected.value = props.currentValue))
       <Button
         variant="secondary"
         class="overflow-hidden relative size-16 p-0 hover:ring grid place-items-center hover:ring-b4"
-        :class="{ ' shadow-sm drop-shadow-sm': selected != '' }">
+        :class="{ ' shadow-sm drop-shadow-sm': selected !== '' }">
         <icon
-          v-if="selected == ''"
+          v-if="selected === ''"
           name="tabler:flame"
           alt="no summoner spell chosen"
           class="size-6.5 opacity-20" />
@@ -42,11 +42,11 @@ onMounted(() => (selected.value = props.currentValue))
       align="center">
       <div class="gap-3 place-content-evenly grid grid-cols-3">
         <label
-          v-for="ss in ix.spells"
+          v-for="ss in ix().spells"
           :key="ss.name"
           as="label"
           :title="ss.name.toString()"
-          :disabled="selected == ss.name"
+          :disabled="selected === ss.name"
           class="disabled:grayscale transition-[colors,opacity] duration-400 disabled:inset-shadow-sm disabled:opacity-70 shadow-sm size-16 rounded-lg hover:ring-2 hover:ring-bc/60 !cursor-pointer">
           <input
             id="spells"
@@ -54,7 +54,7 @@ onMounted(() => (selected.value = props.currentValue))
             type="radio"
             :value="ss.name"
             class="hidden"
-            :disabled="selected == ss.name"
+            :disabled="selected === ss.name"
             @change="emit('update:spell', ss.name)" />
 
           <Img

@@ -34,7 +34,7 @@ function openInfo(rune: number) {}
     class="items-center field-box justify-center gap-y-16 flex flex-col relative w-full rounded-xl transition-all duration-500 **:select-none pb-16 pt-12">
     <template v-if="runes">
       <div
-        v-for="(slot, i) in runes.slots.filter((r) => r.tier != 0)"
+        v-for="(slot, i) in runes.slots.filter((r) => r.tier !== 0)"
         :key="i"
         class="cursor-pointer flex h-16 justify-evenly w-full gap-3">
         <tippy

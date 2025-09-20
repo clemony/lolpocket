@@ -11,13 +11,13 @@ const { class: className, to } = defineProps<{
 defineNuxtLink({
   componentName: 'InlineLink',
   externalRelAttribute: 'noreferrer',
-  trailingSlash: 'remove',
   prefetch: true,
   prefetchedClass: '',
   prefetchOn: {
-    visibility: false,
     interaction: true,
+    visibility: false,
   },
+  trailingSlash: 'remove',
 })
 </script>
 

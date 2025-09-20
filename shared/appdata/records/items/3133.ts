@@ -1,7 +1,6 @@
 const item: Item = {
-  name: 'Caulfield\'s Warhammer',
   id: 3133,
-  rank: 'Epic',
+  name: 'Caulfield\'s Warhammer',
   buildsFrom: [
     {
       id: 1036,
@@ -111,23 +110,24 @@ const item: Item = {
       gold: 3000,
     },
   ],
-  specialRecipe: 0,
-  noEffects: true,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3133_fighter_t2_caulfieldswarhammer.png',
-  simpleDescription: 'Attack Damage and Cooldown Reduction',
-  stats: {
-    attackDamage: 20,
-    abilityHaste: 10,
-  },
+  maps: [11, 12, 21, 35],
+  noEffects: true,
+  rank: 'Epic',
+  removed: false,
   shop: {
     prices: {
-      total: 1050,
       combined: 100,
       sell: 420,
+      total: 1050,
     },
     tags: ['FIGHTER', 'MARKSMAN', 'ASSASSIN'],
   },
-  maps: [11, 12, 21, 35],
+  simpleDescription: 'Attack Damage and Cooldown Reduction',
+  specialRecipe: 0,
+  stats: {
+    abilityHaste: 10,
+    attackDamage: 20,
+  },
 }
 export default item

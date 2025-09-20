@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 const {
-  class: className,
   as = 'div',
-  mode = 'out-in',
+  class: className,
   invert = false,
+  mode = 'out-in',
 } = defineProps<{
   class?: HTMLAttributes['class']
   as?: string

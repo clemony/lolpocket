@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { class: className, background } = defineProps<{
+const { background, class: className } = defineProps<{
   class?: HTMLAttributes['class']
   background: string
 }>()

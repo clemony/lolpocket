@@ -1,8 +1,7 @@
 <script lang="ts" setup>
-import { reactiveOmit } from '@vueuse/core'
 import type { StepperDescriptionProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
-
+import { reactiveOmit } from '@vueuse/core'
 import { StepperDescription, useForwardProps } from 'reka-ui'
 
 const props = defineProps<

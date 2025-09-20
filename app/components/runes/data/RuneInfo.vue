@@ -9,14 +9,14 @@ const props = defineProps<{
     stats?: string
   }
 }>()
-const ds = useDataStore()
-const rs = useRuneStore()
+
+
 
 const isCollapsed = ref('')
 
 // Create a computed property for the rune
 const rune = computed(() => {
-  return props.rune || rs.selectedRune // Fallback to rs.selectedRune if no prop is passed
+  return props.rune || rs().selectedRune // Fallback to rs().selectedRune if no prop is passed
 })
 </script>
 

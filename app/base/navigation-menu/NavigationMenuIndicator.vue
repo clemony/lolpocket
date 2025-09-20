@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { motion } from 'motion-v'
 import type { NavigationMenuIndicatorProps } from 'reka-ui'
+import { motion } from 'motion-v'
 import { NavigationMenuIndicator, useForwardProps } from 'reka-ui'
 
 const props = defineProps<

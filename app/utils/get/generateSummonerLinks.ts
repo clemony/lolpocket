@@ -5,7 +5,7 @@ export function generateSummonerLinks(summoner: Account | Summoner) {
   const slug = `${summoner.region}/${summoner.name}_${summoner.tag}`
   return {
     name: 'profile', // `${capitalize(as().account.name)}`,
-    links: [
+    children: [
       {
         name: 'Match History',
         path: `/summoner/${slug}`,

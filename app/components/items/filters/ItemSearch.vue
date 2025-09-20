@@ -11,7 +11,6 @@ const props = withDefaults(
   }
 )
 const emit = defineEmits(['update:query'])
-const is = useItemStore()
 
 const searchQuery = ref('')
 </script>

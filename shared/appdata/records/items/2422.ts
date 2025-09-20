@@ -1,7 +1,6 @@
 const item: Item = {
-  name: 'Slightly Magical Boots',
   id: 2422,
-  rank: 'Special',
+  name: 'Slightly Magical Boots',
   buildsInto: [
     {
       id: 3006,
@@ -39,28 +38,29 @@ const item: Item = {
       gold: 1000,
     },
   ],
-  specialRecipe: 0,
-  noEffects: false,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2422_class_t1_slightlymagicalboots.png',
+  maps: [11, 12, 21, 35],
+  noEffects: false,
   passives: [
     {
       name: 'Slightly Quicker',
-      unique: true,
       effects: 'Gain 10 <b>bonus</b> movement speed.',
+      unique: true,
     },
   ],
-  stats: {
-    flatMovespeed: 25,
-  },
+  rank: 'Special',
+  removed: false,
   shop: {
     prices: {
-      total: 0,
       combined: 300,
       sell: 0,
+      total: 0,
     },
     purchasable: false,
   },
-  maps: [11, 12, 21, 35],
+  specialRecipe: 0,
+  stats: {
+    flatMovespeed: 25,
+  },
 }
 export default item

@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { motion } from 'motion-v'
-
 import type { PopoverContentEmits, PopoverContentProps } from 'reka-ui'
+import { motion } from 'motion-v'
 import { PopoverContent, PopoverPortal, useForwardPropsEmits } from 'reka-ui'
 
 defineOptions({
@@ -20,8 +19,8 @@ const props = withDefaults(
     }
   >(),
   {
-    align: 'center',
     sideOffset: 0,
+    align: 'center',
     scaleStart: 0.6,
   }
 )
@@ -32,40 +31,40 @@ const delegatedProps = reactiveOmit(props, 'class')
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 
 const variants = {
-  visible: {
-    opacity: 1,
-    visibility: 'visible',
-    scale: 1,
+  arrowHidden: {
+    opacity: 0,
+    scale: props.scaleStart,
+    transition: {
+      delay: 0,
+      duration: 0,
+    },
+    transitionEnd: { visibility: 'hidden' },
   },
   hidden: {
     opacity: 0,
     scale: props.scaleStart,
     transitionEnd: { visibility: 'hidden' },
   },
-  arrowHidden: {
-    opacity: 0,
-    scale: props.scaleStart,
-    transitionEnd: { visibility: 'hidden' },
-    transition: {
-      duration: 0,
-      delay: 0,
-    },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    visibility: 'visible',
   },
 }
 
 const wrapperVariants = {
-  visible: {
-    opacity: 1,
-    scale: 1,
-    visibility: 'visible',
-    transition: {
-      delay: 0.2,
-    },
-  },
   hidden: {
     opacity: 0,
     scale: 1,
     transitionEnd: { visibility: 'hidden' },
+  },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delay: 0.2,
+    },
+    visibility: 'visible',
   },
 }
 </script>

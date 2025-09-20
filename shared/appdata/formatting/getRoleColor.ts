@@ -1,10 +1,10 @@
 const roleColors = {
-  All: 'bc/40',
-  Top: 'domination',
   Middle: 'sorcery',
-  Jungle: 'resolve',
+  All: 'bc/40',
   Bottom: 'precision',
+  Jungle: 'resolve',
   Support: 'inspiration',
+  Top: 'domination',
 }
 export function getRoleColor(prefix: string, role: string): string {
   console.log('💠 - getRoleColor - role:', role)

@@ -3,9 +3,9 @@ import type { PrimitiveProps } from 'reka-ui'
 import { Primitive } from 'reka-ui'
 
 const {
+  as: el = 'span',
   class: className,
   summoner,
-  as: el = 'span',
 } = defineProps<
   PrimitiveProps & {
     as?: string

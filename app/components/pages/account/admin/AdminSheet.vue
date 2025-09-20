@@ -2,8 +2,6 @@
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
-const ss = useSummonerStore()
-const as = useAccountStore()
 
 const { clearMatches } = useIndexedDB()
 
@@ -19,7 +17,7 @@ const user = useSupabaseUser()
 
 <template>
   <Sheet
-    v-if="user.role == 'admin'"
+    v-if="user.role === 'admin'"
     v-model:open="isOpen">
     <LazyNestedSheetContent class="h-screen max-h-screen overflow-hidden">
       <SheetHeader>
@@ -31,7 +29,7 @@ const user = useSupabaseUser()
       <div class="w-full *:w-full pt-10 grid grid-cols-1 h-fit">
         <button
           class="btn w-full"
-          @click="ss.clearAll()">
+          @click="ss().clearAll()">
           clear summoner store
         </button>
 

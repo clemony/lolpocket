@@ -1,7 +1,6 @@
 const item: Item = {
-  name: 'Forbidden Idol',
   id: 3114,
-  rank: 'Epic',
+  name: 'Forbidden Idol',
   buildsFrom: [
     {
       id: 1004,
@@ -71,24 +70,25 @@ const item: Item = {
       gold: 2500,
     },
   ],
-  specialRecipe: 0,
-  noEffects: true,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3114_mage_t2_forbiddenidol.png',
+  maps: [11, 12, 21, 35],
+  noEffects: true,
+  rank: 'Epic',
+  removed: false,
+  shop: {
+    prices: {
+      combined: 400,
+      sell: 240,
+      total: 600,
+    },
+    tags: ['SUPPORT'],
+  },
   simpleDescription:
     'Increases Heal and Shield Power, Mana Regeneration, and Cooldown Reduction',
+  specialRecipe: 0,
   stats: {
     healAndShieldPower: 8,
     manaRegen: 50,
   },
-  shop: {
-    prices: {
-      total: 600,
-      combined: 400,
-      sell: 240,
-    },
-    tags: ['SUPPORT'],
-  },
-  maps: [11, 12, 21, 35],
 }
 export default item

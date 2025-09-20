@@ -55,11 +55,11 @@ export const useCooldownStore = defineStore(
     setInterval(purgeExpired, 30_000)
 
     return {
-      set,
-      get,
-      clear,
-      purgeExpired,
       _raw: cooldowns,
+      clear,
+      get,
+      purgeExpired,
+      set,
     }
   },
   {

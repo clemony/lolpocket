@@ -6,7 +6,6 @@ const { pocket, set: s } = defineProps<{
 }>()
 const paths = ['Precision', 'Domination', 'Sorcery', 'Resolve', 'Inspiration']
 const set = computed(() => s)
-const rs = useRuneStore()
 </script>
 
 <template>
@@ -19,9 +18,9 @@ const rs = useRuneStore()
         :key="`${item}2`"
         :item="item"
         :class="{
-          'pointer-events-none [&_img]:opacity-20': set.primary.path == item,
+          'pointer-events-none [&_img]:opacity-20': set.primary.path === item,
         }"
-        :disabled="set.primary.path == path"
+        :disabled="set.primary.path === path"
         :value="item"></PathTabTrigger>
 
       <!-- primary indicator  -->

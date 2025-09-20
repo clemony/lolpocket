@@ -5,7 +5,7 @@
 }
 
 @utility tabs-box {
-  @  apply rounded-lg;
+  @apply rounded-lg;
 }
 
 @utility tab {
@@ -21,12 +21,12 @@
     @apply !border-b-transparent **:!border-b-transparent  **:!border-b-0  !border-b-0;
     & .tab {
       --tab-radius-min: 0.65rem !important;
-      --tab-paddings: 4px 26px !important;
+      --tab-paddings: 4px 20px !important;
       @apply gap-2 z-1 text-sm  !font-medium flex items-center !border-b-0 !text-start capitalize has-checked:!border-t-2 has-checked:!border-x-2;
-      &: not(.tab-active) {
+      &:not(.tab-active) {
         @apply border-transparent border-2;
       }
-      &  .tab-active {
+      & .tab-active {
         @apply !border-t-2 !border-x-2 border-b-0 border-b-transparent;
       }
     }

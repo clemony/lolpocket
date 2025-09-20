@@ -1,7 +1,4 @@
 <script lang="ts" setup>
-const ds = useDataStore()
-const ms = useMatchStore()
-
 // TODO fix usermatchdata
 
 const state = inject<PlayerData>(SummonerKey)

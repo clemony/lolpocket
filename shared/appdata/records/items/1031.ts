@@ -1,7 +1,6 @@
 const item: Item = {
-  name: 'Chain Vest',
   id: 1031,
-  rank: 'Epic',
+  name: 'Chain Vest',
   buildsFrom: [
     {
       id: 1029,
@@ -61,22 +60,23 @@ const item: Item = {
       gold: 3200,
     },
   ],
-  specialRecipe: 0,
-  noEffects: true,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1031_base_t2_chainvest.png',
-  simpleDescription: 'Greatly increases Armor',
-  stats: {
-    armor: 40,
-  },
+  maps: [11, 12, 21, 35],
+  noEffects: true,
+  rank: 'Epic',
+  removed: false,
   shop: {
     prices: {
-      total: 800,
       combined: 500,
       sell: 320,
+      total: 800,
     },
     tags: ['FIGHTER', 'MARKSMAN', 'ASSASSIN', 'TANK'],
   },
-  maps: [11, 12, 21, 35],
+  simpleDescription: 'Greatly increases Armor',
+  specialRecipe: 0,
+  stats: {
+    armor: 40,
+  },
 }
 export default item

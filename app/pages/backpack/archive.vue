@@ -1,11 +1,11 @@
 <script setup lang="ts">
 definePageMeta({
   name: 'archive',
-  path: '/backpack/archive',
-  parent: '/backpack',
+  icon: 'archive',
   level: 2,
   order: 2,
-  icon: 'archive',
+  parent: '/backpack',
+  path: '/backpack/archive',
 })
 </script>
 

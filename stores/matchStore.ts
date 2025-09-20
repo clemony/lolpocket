@@ -1,8 +1,14 @@
 import { defineStore } from 'pinia'
 
+export interface MatchFilter {
+  ally?: string | null
+  champion?: string | null
+  ignoreRole?: boolean
+  patch?: number | null
+  queue?: number | null
+  role?: string | null
+}
 export const useMatchStore = defineStore('matchStore', () => {
-  const ds = useDataStore()
-
   const summonerSearch = ref(null)
 
   const championTabsQueue = ref<number>(0)
@@ -28,7 +34,7 @@ export const useMatchStore = defineStore('matchStore', () => {
 
   const seasonTotals = ref()
 
-  const analysisPatchSelect = computedAsync(() => ds.currentPatch)
+  const analysisPatchSelect = computedAsync(() => ds().currentPatch)
   const analysisQueueSelect = ref<number>(0)
 
   return {

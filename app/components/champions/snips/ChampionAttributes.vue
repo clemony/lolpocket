@@ -45,62 +45,61 @@ console.log(
   Object.values(champion.attributeRatings)
 )
 const data = {
-  labels: normalizedKeys,
   datasets: [
     {
-      label: 'My First Dataset',
       data: normalizedValues,
+      label: 'My First Dataset',
     },
   ],
+  labels: normalizedKeys,
 }
 
 const options = {
   elements: {
     line: {
       borderWidth: 1,
-      borderJoinStyle: 'round' as const,
-      borderCapStyle: 'round' as const,
-      fill: 'origin',
       backgroundColor: 'rgba(0, 0, 0, 0.6)',
+      borderCapStyle: 'round' as const,
       borderColor: 'rgb(0, 0, 0)',
-      tension: 0.1,
+      borderJoinStyle: 'round' as const,
+      fill: 'origin',
       spanGaps: true,
+      tension: 0.1,
     },
-
     point: {
-      pointBackgroundColor: '#000',
       borderColor: '#000',
-      pointRadius: 1,
+      pointBackgroundColor: '#000',
       pointHoverBackgroundColor: '#000',
       pointHoverBorderColor: 'rgb(255, 99, 132)',
-    },
-  },
-  scales: {
-    r: {
-      backgroundColor: `color-mix(in oklch, ${getColorFromVariable('--color-b3')} 40%, #00000000 60%)`,
-      beginAtZero: true,
-      angleLines: {
-        display: false,
-      },
-      grid: {
-        display: false,
-      },
-      ticks: {
-        display: false,
-      },
-      title: {
-        align: 'start',
-      },
-      pointLabels: {
-        font: {
-          weight: 'bold' as const,
-        },
-      },
+      pointRadius: 1,
     },
   },
   plugins: {
     filler: {
       propagate: true,
+    },
+  },
+  scales: {
+    r: {
+      grid: {
+        display: false,
+      },
+      title: {
+        align: 'start',
+      },
+      angleLines: {
+        display: false,
+      },
+      backgroundColor: `color-mix(in oklch, ${getColorFromVariable('--color-b3')} 40%, #00000000 60%)`,
+      beginAtZero: true,
+      pointLabels: {
+        font: {
+          weight: 'bold' as const,
+        },
+      },
+      ticks: {
+        display: false,
+      },
     },
   },
 }

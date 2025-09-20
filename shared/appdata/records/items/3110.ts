@@ -1,7 +1,7 @@
 const item: Item = {
-  name: 'Frozen Heart',
   id: 3110,
-  rank: 'Legendary',
+  name: 'Frozen Heart',
+  nicknames: ['fh'],
   buildsFrom: [
     {
       id: 3082,
@@ -14,33 +14,33 @@ const item: Item = {
       gold: 900,
     },
   ],
-  specialRecipe: 0,
-  noEffects: false,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3110_tank_t3_frozenheart.png',
-  simpleDescription: 'Massively increases Armor and slows enemy basic attacks',
-  nicknames: ['fh'],
+  maps: [11, 12, 21, 35],
+  noEffects: false,
   passives: [
     {
       name: 'Winter\'s Caress',
-      unique: true,
       effects:
         '<img src="/img/icons/cripple.webp" class="tip-icon" />Cripples the attack speed of enemy champions within 700 units by 20%.',
+      unique: true,
     },
   ],
-  stats: {
-    armor: 75,
-    mana: 400,
-    abilityHaste: 20,
-  },
+  rank: 'Legendary',
+  removed: false,
   shop: {
     prices: {
-      total: 2500,
       combined: 600,
       sell: 1000,
+      total: 2500,
     },
     tags: ['TANK', 'SUPPORT'],
   },
-  maps: [11, 12, 21, 35],
+  simpleDescription: 'Massively increases Armor and slows enemy basic attacks',
+  specialRecipe: 0,
+  stats: {
+    abilityHaste: 20,
+    armor: 75,
+    mana: 400,
+  },
 }
 export default item

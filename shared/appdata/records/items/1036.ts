@@ -1,7 +1,6 @@
 const item: Item = {
-  name: 'Long Sword',
   id: 1036,
-  rank: 'Basic',
+  name: 'Long Sword',
   buildsInto: [
     {
       id: 3032,
@@ -119,22 +118,23 @@ const item: Item = {
       gold: 2700,
     },
   ],
-  specialRecipe: 0,
-  noEffects: true,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1036_class_t1_longsword.png',
-  simpleDescription: 'Slightly increases Attack Damage',
-  stats: {
-    attackDamage: 10,
-  },
+  maps: [11, 12, 21, 35],
+  noEffects: true,
+  rank: 'Basic',
+  removed: false,
   shop: {
     prices: {
-      total: 350,
       combined: 350,
       sell: 140,
+      total: 350,
     },
     tags: ['FIGHTER', 'MARKSMAN', 'ASSASSIN'],
   },
-  maps: [11, 12, 21, 35],
+  simpleDescription: 'Slightly increases Attack Damage',
+  specialRecipe: 0,
+  stats: {
+    attackDamage: 10,
+  },
 }
 export default item

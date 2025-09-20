@@ -1,9 +1,9 @@
 interface RoleStats {
-  role: string
   games: number
-  wins: number
   losses: number
+  role: string
   winrate: number
+  wins: number
 }
 
 export function useChampionRoleStats(
@@ -13,7 +13,7 @@ export function useChampionRoleStats(
   const grouped: Record<string, RoleStats> = {}
 
   const player = matches.map(m =>
-    m.participants.find(p => p.puuid == as().account.puuid)
+    m.participants.find(p => p.puuid === as().account.puuid)
   )
 
   for (const match of player) {
@@ -23,11 +23,11 @@ export function useChampionRoleStats(
     const role = match.teamPosition || 'UNKNOWN'
     if (!grouped[role]) {
       grouped[role] = {
-        role,
         games: 0,
-        wins: 0,
         losses: 0,
+        role,
         winrate: 0,
+        wins: 0,
       }
     }
 

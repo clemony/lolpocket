@@ -29,15 +29,15 @@ const {
             'scale-94 mt-px': ['health', 'armor', 'movespeed'].includes(stat.id),
           })
         " />
-      <span :class="cn('w-full flex-nowrap text-nowrap font-medium text-start group-hover:underline underline-offset-2 text-xs whitepsace-nowrap', { 'pl-6.5': !stat.icon })">{{ stat.longAbbr || stat.abbr || stat.name }}</span>
+      <span :class="cn('w-full flex-nowrap text-nowrap font-medium text-start group-hover:underline underline-offset-2 text-xs whitepsace-nowrap', { '': !stat.icon })">{{ stat.longAbbr || stat.abbr || stat.name }}</span>
 
       <span class="font-medium text-nowrap ">
-        {{ stat?.values.current || stat.values.flat }}
+        {{ stat?.values.current || stat.values.flat }}<span v-if="stat?.id === 'attackSpeed'">%</span>
       </span>
     </tippy>
 
     <Separator
-      v-if="isEven(length) ? ![length - 1, length - 2].includes(i) : length - 1 != i"
+      v-if="isEven(length) ? ![length - 1, length - 2].includes(i) : length - 1 !== i"
       class="bg-b3/30" />
   </div>
 </template>

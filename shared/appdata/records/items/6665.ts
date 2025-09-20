@@ -1,7 +1,6 @@
 const item: Item = {
-  name: 'Jak\'Sho, The Protean',
   id: 6665,
-  rank: 'Legendary',
+  name: 'Jak\'Sho, The Protean',
   buildsFrom: [
     {
       id: 1011,
@@ -19,31 +18,32 @@ const item: Item = {
       gold: 850,
     },
   ],
-  specialRecipe: 0,
-  noEffects: false,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6665_tank_t4_jakshotheprotean.png',
+  maps: [11, 12, 21, 35],
+  noEffects: false,
   passives: [
     {
       name: 'Voidborn Resilience',
-      unique: true,
       effects:
         'Gain a stack for each second in combat with enemy champions, stacking up to 5 times. At <b>maximum</b> stacks, increase your <b>bonus</b> armor and <b>bonus</b> magic resistance by 30% until the end of combat.',
+      unique: true,
     },
   ],
+  rank: 'Legendary',
+  removed: false,
+  shop: {
+    prices: {
+      combined: 650,
+      sell: 1280,
+      total: 3200,
+    },
+    tags: ['TANK'],
+  },
+  specialRecipe: 0,
   stats: {
     armor: 45,
     health: 350,
     magicResistance: 45,
   },
-  shop: {
-    prices: {
-      total: 3200,
-      combined: 650,
-      sell: 1280,
-    },
-    tags: ['TANK'],
-  },
-  maps: [11, 12, 21, 35],
 }
 export default item

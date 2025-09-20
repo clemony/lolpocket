@@ -99,7 +99,9 @@ export default defineAppConfig({
       'folders': 'lucide:folders',
 
       // media
+      'exit-fullscreen': 'lucide:scan-line',
       'fast-forward': 'material-symbols-light:fast-forward-outline-rounded',
+      'fullscreen': 'lucide:maximize',
       'next': 'teenyicons:next-solid',
       'pause': 'teenyicons:pause-solid',
       'play': 'teenyicons:play-solid',

@@ -1,7 +1,6 @@
 const item: Item = {
-  name: 'Tunneler',
   id: 2021,
-  rank: 'Epic',
+  name: 'Tunneler',
   buildsFrom: [
     {
       id: 1036,
@@ -56,22 +55,23 @@ const item: Item = {
       gold: 3100,
     },
   ],
-  specialRecipe: 0,
-  noEffects: true,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2012_tunneler.png',
+  maps: [11, 12, 21, 35],
+  noEffects: true,
+  rank: 'Epic',
+  removed: false,
+  shop: {
+    prices: {
+      combined: 400,
+      sell: 460,
+      total: 1150,
+    },
+    tags: ['FIGHTER'],
+  },
+  specialRecipe: 0,
   stats: {
     attackDamage: 15,
     health: 250,
   },
-  shop: {
-    prices: {
-      total: 1150,
-      combined: 400,
-      sell: 460,
-    },
-    tags: ['FIGHTER'],
-  },
-  maps: [11, 12, 21, 35],
 }
 export default item

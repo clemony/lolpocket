@@ -8,119 +8,111 @@ export const toggleBase
   = 'inline-flex items-center justify-center btn btn-ghost font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-b2 data-[state=on]:border-b3/60 [&_svg]:pointer-events-none [&_svg]:size-5 [&_svg]:shrink-0 gap-2 '
 
 const variantStyles = {
+  hidden: 'hidden',
   base: 'btn bg-transparent hover:bg-transparent shadow-none border-transparent inset-shadow-none fx-0  drop-shadow-transparent shadow-none drop-shadow-none [--btn-depth:unset] [--btn-shadow:unset]  border-0',
-
   btn: 'px-3  btn  bg-tint-b2/60 border-b2 [&_.btn-active]:!bg-tint-b2/10  [&_.btn-active]:!border-b3/80 font-medium',
-
+  disabled: '',
+  field: 'btn field-box',
+  ghost: 'btn btn-ghost hover:bg-tint-b2/20 font-medium px-3 ',
   label: 'font-medium opacity-50 items-center flex gap-3',
-
+  link: 'text-bc underline-offset-2 data-[state=active]:underline group-data-[state=visible]:underline hover:underline cursor-pointer font-medium px-0',
   neutral:
     ' px-3 btn-neutral btn bg-neutral text-nc bg-neutral  font-medium  *:text-nc  hover:text-nc shadow-sm drop-shadow-sm border-neutral hover:bg-neutral/85 hover:**:text-nc',
-
   outline: 'btn btn-outline px-3  font-medium border-b3',
-
   secondary:
     'btn bg-tint-b3/40 text-bc px-3 !border-b3  font-medium shadow-sm hover:inset-shadow-xs',
-
-  ghost: 'btn btn-ghost hover:bg-tint-b2/20 font-medium px-3 ',
-
-  link: 'text-bc underline-offset-2 data-[state=active]:underline group-data-[state=visible]:underline hover:underline cursor-pointer font-medium px-0',
-
-  tick: 'btn border-transparent hover:border-b3/60 bg-transparent hover:bg-tint-b2/60 fx-0 hover:fx-1 text-bc  font-medium ',
-
-  field: 'btn field-box',
-
   shadow:
     'btn px-3  font-medium shadow-xs shadow-black/6 hover:shadow-black-2 drop-shadow-black/2 drop-shadow-xs hover:inset-shadow-xs hover:drop-shadow-none hover:inset-shadow-black/6 border-b3/80  bg-transparent  hover:bg-tint-b3/30 noise-sm [&.btn-active]:bg-tint-b2/20 ',
-
-  disabled: '',
-  hidden: 'hidden',
+  tick: 'btn border-transparent hover:border-b3/60 bg-transparent hover:bg-tint-b2/60 fx-0 hover:fx-1 text-bc  font-medium ',
 }
 
 const hoverStyles = {
-  base: 'hover:bg-transparent',
   b1: 'hover:!bg-b1',
+  base: 'hover:bg-transparent',
   btn: 'hover:!bg-b2  hover:!border-b3/80',
-  none: '',
+  ghost: 'hover:!bg-b2/40 hover:!border-b3/40 hover:fx-1',
+  link: 'underline-offset-2 hover:underline',
   neutral:
     ' hover:!text-nc hover:!bg-neutral/85 hover:**:!text-nc hover:!border-n3 hover:shadow-sm hover:drop-shadow-sm ',
-
+  none: '',
   outline: 'hover:inset-shadow-xxs hover:!border-bc/60 border ',
-
   secondary: 'hover:inset-shadow-xs',
-
-  ghost: 'hover:!bg-b2/40 hover:!border-b3/40 hover:fx-1',
-
-  link: 'underline-offset-2 hover:underline',
-
   shadow:
     'hover:shadow-black-2  hover:inset-shadow-xs hover:drop-shadow-none hover:inset-shadow-black/6  hover:bg-tint-b2/20 ',
 }
 
 const sizes = {
   base: '',
-  xxs: 'h-6 text-xs rounded-md',
-  xs: 'h-8 text-xs rounded-md',
-  sm: 'h-9 text-xs rounded-lg',
-  md: 'rounded-lg h-10',
-  lg: 'rounded-lg h-12',
-  xl: 'rounded-lg h-14',
   icon: 'aspect-square rounded-lg',
+  lg: 'rounded-lg h-12',
+  md: 'rounded-lg h-10',
+  sm: 'h-9 text-xs rounded-lg',
+  xl: 'rounded-lg h-14',
+  xs: 'h-8 text-xs rounded-md',
+  xxs: 'h-6 text-xs rounded-md',
 }
 
 export const buttonVariants = cva(buttonBase, {
   variants: {
-    variant: {
-      ...variantStyles,
-      default: 'btn',
+    defaultVariants: {
+      hover: 'btn',
+      size: 'md',
+      variant: 'btn',
     },
     hover: {
       ...hoverStyles,
       default: 'btn',
     },
+    shape: {
+      circle: '!btn-circle grid  place-items-center !rounded-full ',
+      square: 'grid aspect-square place-items-center ',
+    },
     size: {
       base: '',
-      xxs: 'h-6 rounded-md text-xs',
-      xs: 'btn-xs rounded-md text-xs',
-      sm: 'btn-sm rounded-lg text-xs',
-      md: 'btn-md rounded-lg',
-      lg: 'btn-lg rounded-lg',
-      xl: 'btn-xl rounded-lg',
-      icon: 'aspect-square rounded-lg',
       default: 'md',
+      icon: 'aspect-square rounded-lg',
+      lg: 'btn-lg rounded-lg',
+      md: 'btn-md rounded-lg',
+      sm: 'btn-sm rounded-lg text-xs',
+      xl: 'btn-xl rounded-lg',
+      xs: 'btn-xs rounded-md text-xs',
+      xxs: 'h-6 rounded-md text-xs',
     },
-    shape: {
-      square: 'grid aspect-square place-items-center ',
-      circle: '!btn-circle grid  place-items-center !rounded-full ',
-    },
-    defaultVariants: {
-      variant: 'btn',
-      hover: 'btn',
-      size: 'md',
+    variant: {
+      ...variantStyles,
+      default: 'btn',
     },
   },
 })
 
 export const labelVariants = cva('', {
   variants: {
-    type: {},
-    variant: {
-      ...variantStyles,
-      default: 'font-medium opacity-60',
+    hover: {
+      ...hoverStyles,
+      default: 'outline',
     },
     size: {
       ...sizes,
       default: 'sm',
     },
-    hover: {
-      ...hoverStyles,
-      default: 'outline',
+    type: {},
+    variant: {
+      ...variantStyles,
+      default: 'font-medium opacity-60',
     },
   },
 })
 
 export const toggleVariants = cva('', {
+  defaultVariants: {
+    size: 'default',
+    variant: 'default',
+  },
   variants: {
+    size: {
+      ...sizes,
+      default: 'md',
+    },
     type: {
       default: toggleBase,
     },
@@ -129,14 +121,6 @@ export const toggleVariants = cva('', {
       outline:
         'border-input hover:bg-accent hover:text-accent-foreground border bg-transparent',
     },
-    size: {
-      ...sizes,
-      default: 'md',
-    },
-  },
-  defaultVariants: {
-    variant: 'default',
-    size: 'default',
   },
 })
 

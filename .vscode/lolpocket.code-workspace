@@ -20,6 +20,7 @@
     "editor.formatOnSave": false,
     // Auto fix
     "editor.codeActionsOnSave": {
+  "source.fixAll": "always",
       "source.fixAll.eslint": "always",
       "source.organizeImports": "always",
     },

@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { championRoles } from '#shared/appdata'
 
-const cs = useChampStore()
-const { filters, setFilter, filtered } = useItemFilter()
+const { filtered, filters, setFilter } = useItemFilter()
 function reset() {
   filters.role = null
   console.log('💠 - reset -  filters.role:', filters.role)
@@ -31,7 +30,7 @@ function reset() {
           v-for="(role, i) in championRoles"
           :key="`${role.name}${i}`"
           class="btn has-checked:!bgneutral has-checked:!text-nc has-checked:!borderneutral !rounded-lg-2 !bg-b2/20 shadow-sm shadow-black/7 border-b2 hover:!border-b3 hover:scale-110 transition-all duration-300 hover:drop-shadow-sm hover:!bg-b3/40 has-checked:!shadowneutral/20 btn-sm !text-sm mr-0 rounded-md font-medium tracking-normal capitalize checked:!shadow-sm"
-          :class="{ hidden: filters.role && role.name != filters.role }">
+          :class="{ hidden: filters.role && role.name !== filters.role }">
           <input
             v-model="filters.role"
             class="hidden peer"

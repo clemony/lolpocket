@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures'
 import '~/assets/css/plugins/embla.css'
+import type { CarouselApi } from '~/base/carousel/carousel-index'
 import {
   setupTweenParallax,
   teardownTweenParallax,
 } from '~/assets/ts/embla-tween-parallax'
-import type { CarouselApi } from '~/base/carousel/carousel-index'
 
 const { champion } = defineProps<{
   champion: Champion
@@ -14,9 +14,9 @@ const { champion } = defineProps<{
 definePageMeta({
   name: 'champion_skins',
   title: 'skins',
-  path: '/champions/:champion_key/skins',
   level: 4,
   order: 3,
+  path: '/champions/:champion_key/skins',
 })
 
 const emblaMainApi = ref<CarouselApi>()

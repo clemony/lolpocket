@@ -29,7 +29,7 @@ const selected = ref<Pocket>(null)
           <TransitionScalePop class="size-full flex flex-col gap-6 px-4">
             <LazyBackpackBoxCard
               v-for="pocket in ps().pockets.filter(
-                (p) => p.location.folder == '',
+                (p) => p.location.folder === '',
               )"
               :key="pocket.key"
               :pocket

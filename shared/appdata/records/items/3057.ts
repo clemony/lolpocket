@@ -1,7 +1,7 @@
 const item: Item = {
-  name: 'Sheen',
   id: 3057,
-  rank: 'Epic',
+  name: 'Sheen',
+  nicknames: ['jimmy neutron'],
   buildsFrom: [
     {
       id: 2022,
@@ -31,31 +31,31 @@ const item: Item = {
       gold: 3450,
     },
   ],
-  specialRecipe: 0,
-  noEffects: false,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3057_fighter_t2_sheen.png',
-  simpleDescription: 'Grants a bonus to next attack after spell cast',
-  nicknames: ['jimmy neutron'],
+  maps: [11, 12, 21, 35],
+  noEffects: false,
   passives: [
     {
       name: 'Spellblade',
-      unique: true,
       effects:
         'After using an ability, your next basic attack within 10 seconds deals 100% <b>base</b> AD <b>bonus</b> physical damage on-hit (1.5 second cooldown, starts after using the empowered attack).',
+      unique: true,
     },
   ],
-  stats: {
-    abilityHaste: 10,
-  },
+  rank: 'Epic',
+  removed: false,
   shop: {
     prices: {
-      total: 900,
       combined: 650,
       sell: 360,
+      total: 900,
     },
     tags: ['FIGHTER', 'MARKSMAN', 'MAGE', 'ONHIT_EFFECTS'],
   },
-  maps: [11, 12, 21, 35],
+  simpleDescription: 'Grants a bonus to next attack after spell cast',
+  specialRecipe: 0,
+  stats: {
+    abilityHaste: 10,
+  },
 }
 export default item

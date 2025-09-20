@@ -10,7 +10,6 @@ definePageMeta({
   parent: '/analysis',
   path: '/analysis/items',
 })
-const ms = useMatchStore()
 </script>
 
 <template>
@@ -20,7 +19,7 @@ const ms = useMatchStore()
       <ResearchItemChart />
     </div>
     <div class="grid grid-cols-[100px_1fr] size-full gap-8">
-      <PocketPickItem :patch-games="ms.patchGames" />
+      <PocketPickItem :patch-games="ms().patchGames" />
       <div class="relative size-full grid place-items-center pb-10">
         <div class="absolute inset-0 top-0 left-0 overflow-auto">
           <ResearchItemList />
@@ -36,7 +35,7 @@ const ms = useMatchStore()
       </h1>
 
       <p class="font-medium text-bc/70">
-        Your best items during patch {{ ms.filter.patch }}
+        Your best items during patch {{ ms().filter.patch }}
       </p>
     </div>
 
@@ -44,22 +43,22 @@ const ms = useMatchStore()
       <div
         class="grid-cols-4 grid gap-10 overflow-hidden pb-2 place-items-center w-full">
         <!--         <PocketPickItem
-          :patch-games="ms.patchGames"
+          :patch-games="ms().patchGames"
           :item-num="0"
           title="Pocket Pick" />
 
         <PocketPickItem
-          :patch-games="ms.patchGames"
+          :patch-games="ms().patchGames"
           :item-num="1"
           title="Pocket Pick" />
 
         <PocketPickItem
-          :patch-games="ms.patchGames"
+          :patch-games="ms().patchGames"
           :item-num="2"
           title="Pocket Pick" />
 
         <PocketPickItem
-          :patch-games="ms.patchGames"
+          :patch-games="ms().patchGames"
           :item-num="2"
           title="☆ Rising Star" /> -->
       </div>

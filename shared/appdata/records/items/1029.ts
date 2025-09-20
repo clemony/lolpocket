@@ -1,7 +1,6 @@
 const item: Item = {
-  name: 'Cloth Armor',
   id: 1029,
-  rank: 'Basic',
+  name: 'Cloth Armor',
   buildsInto: [
     {
       id: 1031,
@@ -74,22 +73,23 @@ const item: Item = {
       gold: 1100,
     },
   ],
-  specialRecipe: 0,
-  noEffects: true,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1029_base_t1_clotharmor.png',
-  simpleDescription: 'Slightly increases Armor',
-  stats: {
-    armor: 15,
-  },
+  maps: [11, 12, 21, 35],
+  noEffects: true,
+  rank: 'Basic',
+  removed: false,
   shop: {
     prices: {
-      total: 300,
       combined: 300,
       sell: 120,
+      total: 300,
     },
     tags: ['FIGHTER', 'MARKSMAN', 'ASSASSIN', 'MAGE', 'TANK', 'SUPPORT'],
   },
-  maps: [11, 12, 21, 35],
+  simpleDescription: 'Slightly increases Armor',
+  specialRecipe: 0,
+  stats: {
+    armor: 15,
+  },
 }
 export default item

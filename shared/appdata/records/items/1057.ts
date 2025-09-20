@@ -1,7 +1,6 @@
 const item: Item = {
-  name: 'Negatron Cloak',
   id: 1057,
-  rank: 'Epic',
+  name: 'Negatron Cloak',
   buildsFrom: [
     {
       id: 1033,
@@ -41,22 +40,23 @@ const item: Item = {
       gold: 2650,
     },
   ],
-  specialRecipe: 0,
-  noEffects: true,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1057_tank_t2_negatroncloak.png',
-  simpleDescription: 'Moderately increases Magic Resist',
-  stats: {
-    magicResistance: 45,
-  },
+  maps: [11, 12, 21, 35],
+  noEffects: true,
+  rank: 'Epic',
+  removed: false,
   shop: {
     prices: {
-      total: 850,
       combined: 450,
       sell: 340,
+      total: 850,
     },
     tags: ['FIGHTER', 'TANK', 'SUPPORT'],
   },
-  maps: [11, 12, 21, 35],
+  simpleDescription: 'Moderately increases Magic Resist',
+  specialRecipe: 0,
+  stats: {
+    magicResistance: 45,
+  },
 }
 export default item

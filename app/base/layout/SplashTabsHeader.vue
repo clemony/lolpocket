@@ -2,22 +2,22 @@
 import { motion } from 'motion-v'
 
 const iconVariants = {
-  open: {
-    height: 'calc(var(--spacing) * 22)',
-    width: 'calc(var(--spacing) * 22)',
-  },
   closed: {
-    height: 'calc(var(--spacing) * 16)',
     width: 'calc(var(--spacing) * 16)',
+    height: 'calc(var(--spacing) * 16)',
+  },
+  open: {
+    width: 'calc(var(--spacing) * 22)',
+    height: 'calc(var(--spacing) * 22)',
   },
 }
 
 const headerVariants = {
-  open: {
-    fontSize: 'var(--text-xxs2)',
-  },
   closed: {
     fontSize: 'var(--text-xl',
+  },
+  open: {
+    fontSize: 'var(--text-xxs2)',
   },
 }
 </script>

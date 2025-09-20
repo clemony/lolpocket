@@ -5,7 +5,6 @@ const { id, base } = defineProps<{
 }>()
 
 const item = ref<Item>()
-console.log("🌱 - item:", item)
 
 watchEffect(async () => {
   if (!id)
@@ -38,7 +37,7 @@ watchEffect(async () => {
 
       <div class="flex flex-col  text-md w-full">
         <div class=" flex items-center justify-between  gap-1">
-          <Blink external
+          <BtnLink external
 variant="link"
             v-if="item.name"
             :to="getWikiLink(item.name)"
@@ -49,7 +48,7 @@ variant="link"
             <icon
               name="link-lg"
               class="size-3.75 dst" />
-          </Blink>
+          </BtnLink>
         </div>
 
         <div class="flex gap-1 ">
@@ -91,7 +90,7 @@ variant="link"
         v-if="!item.noEffects"
         class=" mt-2 mb-2 bg-white/60 " />
 
-      <div v-if="item.passives?.length && item.noEffects != true">
+      <div v-if="item.passives?.length && item.noEffects !== true">
         <ItemEffect
           v-for="(passive, i) in item.passives"
           :key="i"
@@ -99,7 +98,7 @@ variant="link"
           type="Passive" />
       </div>
 
-      <div v-if="item.active?.[0] && item.noEffects != true">
+      <div v-if="item.active?.[0] && item.noEffects !== true">
         <ItemEffect
           :data="item.active[0]"
           type="Active" />

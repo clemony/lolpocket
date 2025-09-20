@@ -7,9 +7,9 @@ const { champion, wrapperClass } = defineProps<{
   wrapperClass: string
 }>()
 
-const resource = computed (() => abilityResources.find(r => r.name.toLowerCase() == champion?.resource.toLowerCase()))
+const resource = computed (() => abilityResources.find(r => r.name.toLowerCase() === champion?.resource.toLowerCase()))
 
-const damageType = computed (() => damageTypes.find(d => d.type == champion.adaptiveType))
+const damageType = computed (() => damageTypes.find(d => d.type === champion.adaptiveType))
 </script>
 
 <template>
@@ -31,7 +31,7 @@ const damageType = computed (() => damageTypes.find(d => d.type == champion.adap
           v-for="role, i in champion.roles"
           :key="i"
           :class="cn('italic font-medium')">
-          {{ role }}<template v-if="i != champion.roles.length - 1">,&nbsp;&thinsp;</template>
+          {{ role }}<template v-if="i !== champion.roles.length - 1">,&nbsp;&thinsp;</template>
         </span>
       </p>
     </div>
@@ -54,7 +54,7 @@ const damageType = computed (() => damageTypes.find(d => d.type == champion.adap
             <component
               :is="damageType?.icon"
               v-if="damageType?.icon"
-              :class="cn('!size-3.5 shrink-0 absolute  dst', { 'mt-0.5 mr-0.75': champion.adaptiveType == 'Magic damage' })"
+              :class="cn('!size-3.5 shrink-0 absolute  dst', { 'mt-0.5 mr-0.75': champion.adaptiveType === 'Magic damage' })"
               :style="{
                 /*  color: damageType.color, */
               }" />
@@ -69,6 +69,7 @@ const damageType = computed (() => damageTypes.find(d => d.type == champion.adap
       <p class="flex gap-2 font-medium items-center">
         <img
           v-if="resource?.img"
+          :alt="`${resource.name}-image`"
           :src="resource.img"
           class="size-6 shrink-0 rounded-md drop-shadow-sm shadow-sm " />
         <component
@@ -108,13 +109,13 @@ const damageType = computed (() => damageTypes.find(d => d.type == champion.adap
       <tippy
         :tag="null"
         :interactive="true">
-        <Blink
+        <BtnLink
           external
           :to="`https://wiki.leagueoflegends.com/en-us/V${champion.patchLastChanged}`"
           variant="link"
           :class="cn('!gap-1 underline underline-offset-3 font-medium  group/l decoration-bc/40  hover:decoration-bc opacity-80 !text-nowrap hover:opacity-100')">
           Patch {{ champion.patchLastChanged }}
-        </Blink>
+        </BtnLink>
         <template #content>
           <p class="flex gap-1 items-center">
             View notes on wiki

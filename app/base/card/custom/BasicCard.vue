@@ -2,7 +2,7 @@
 import type { PrimitiveProps } from 'reka-ui'
 import { Primitive } from 'reka-ui'
 
-const { class: className, as = 'div' } = defineProps<
+const { as = 'div', class: className } = defineProps<
   PrimitiveProps & {
     class?: HTMLAttributes['class']
     as?: string

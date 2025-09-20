@@ -3,6 +3,8 @@ const { stat } = defineProps<{
   stat: StatIndex
   value?: Record<string, number>
 }>()
+
+const pClass = 'justify-between w-full flex items-center gap-10'
 </script>
 
 <template>
@@ -15,20 +17,35 @@ const { stat } = defineProps<{
     </div>
     <p
       v-if=" stat.description"
-      class="inline-block text-xs whitespace-normal text-pretty text-wrap py-1">
+      class="inline-block text-xs whitespace-normal text-pretty text-wrap py-3">
       {{ stat.description }}
     </p>
-    <template v-if=" stat.values?.min == stat.values?.max">
-      <p>
-        Flat: {{ stat.values?.current }}
+    <template v-if=" stat.values?.min === stat.values?.max">
+      <p :class="pClass">
+        Flat
+        <span>
+          {{ stat.values?.current }}
+        </span>
       </p>
     </template>
     <template v-else>
-      <p>
-        Level 1:  {{ stat.values?.min }}
+      <p :class="pClass">
+        Level 1
+        <span>
+          {{ stat.values?.min }}
+        </span>
       </p>
-      <p>
-        Level: 18: {{ stat.values?.max }}
+      <p :class="pClass">
+        Level 18
+        <span>
+          {{ stat.values?.max }}
+        </span>
+      </p>
+      <p :class="pClass">
+        per Lv.
+        <span>
+          +{{ stat.values?.perLevel }}
+        </span>
       </p>
     </template>
   </div>

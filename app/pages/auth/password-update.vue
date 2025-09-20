@@ -1,0 +1,63 @@
+<script lang="ts" setup>
+import { toast } from 'vue-sonner'
+
+definePageMeta({
+  name: 'Update Password',
+  title: 'Choose a new password',
+  description: 'Let\'s try out a password manager this time, yeah?',
+  icon: 'key',
+  layout: 'basic',
+})
+
+const password = ref('')
+
+function handleReset() {
+  toast.success('Password reset link sent!', {
+    description:
+      'Check your email for a message from the customer support lolpocat.',
+  })
+}
+</script>
+
+<template>
+  <SingleCard>
+    <form>
+      <div class="grid gap-6">
+        <div class="grid gap-6">
+          <div class="grid gap-2">
+            <div class="flex items-center">
+              <Label html-for="password">New Password</Label>
+            </div>
+            <Input
+              id="password"
+              v-model:password="password"
+              class="h-12"
+              type="password"
+              required
+              @clear:input="password = ''" />
+          </div>
+          <div class="w-full gap-y-2 grid">
+            <Button
+              variant="neutral"
+              size="lg"
+              type="submit"
+              class="w-full h-14 font-medium"
+              @click="handleReset()">
+              Reset Password
+            </Button>
+
+            <Button
+              as="a"
+              variant="link"
+              size="lg"
+              hover="link"
+              class="underline-offset-1.5 justify-center gap-3 h-14 justify-self-start w-full"
+              @click="navigateTo('/login')">
+              Remembered it? Log in
+            </Button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </SingleCard>
+</template>

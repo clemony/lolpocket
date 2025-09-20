@@ -5,8 +5,8 @@ export const useRuneStore = defineStore('runeStore', () => {
   const hoveredRune = ref<Rune | null>(null)
   const selectedRune = ref(null)
   return {
+    hoveredRune,
     selectedRune,
     selectedRuneSet,
-    hoveredRune,
   }
 })

@@ -1,4 +1,11 @@
 <script lang="ts" setup>
+defineOptions({
+  meta: {
+    name: 'Search',
+    class: '!size-5.5  **:!stroke-[2]',
+    icon: 'mage:search',
+  },
+})
 const searchType = shallowRef('summoner')
 </script>
 
@@ -22,14 +29,14 @@ const searchType = shallowRef('summoner')
           <TabIndicator />
         </IndicatorTabsList>
         <SummonerSearchBox
-          v-if="searchType == 'summoner'"
+          v-if="searchType === 'summoner'"
           class="h-12 my-2" />
       </template>
     </SidebarHeaderWrapper>
     <TabsContent
       value="summoner"
       class="w-full !flex flex-col items-start">
-      <SummonerSearchUserContent v-if="searchType == 'summoner'" />
+      <SummonerSearchUserContent v-if="searchType === 'summoner'" />
     </TabsContent>
   </Tabs>
 </template>

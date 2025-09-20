@@ -1,7 +1,6 @@
 const item: Item = {
-  name: 'Glowing Mote',
   id: 2022,
-  rank: 'Basic',
+  name: 'Glowing Mote',
   buildsInto: [
     {
       id: 3158,
@@ -54,21 +53,22 @@ const item: Item = {
       gold: 900,
     },
   ],
-  specialRecipe: 0,
-  noEffects: true,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2022_glowingmote.png',
-  stats: {
-    abilityHaste: 5,
-  },
+  maps: [11, 12, 21, 35],
+  noEffects: true,
+  rank: 'Basic',
+  removed: false,
   shop: {
     prices: {
-      total: 250,
       combined: 250,
       sell: 100,
+      total: 250,
     },
     tags: ['FIGHTER', 'MARKSMAN', 'ASSASSIN', 'MAGE', 'TANK', 'SUPPORT'],
   },
-  maps: [11, 12, 21, 35],
+  specialRecipe: 0,
+  stats: {
+    abilityHaste: 5,
+  },
 }
 export default item

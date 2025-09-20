@@ -30,10 +30,10 @@ async function useSignUpNewUser(email: string, password: string) {
   const client = useSupabaseClient()
   const { data, error } = await client.auth.signUp({
     email,
-    password,
     options: {
       emailRedirectTo: `http://localhost:8080/welcome`,
     },
+    password,
   })
   if (error) {
     console.error('Error logging in with Discord:', error)

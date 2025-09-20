@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const {
-  class: className,
   name,
+  class: className,
   variant = 'btn',
 } = defineProps<{
   class?: HTMLAttributes['class']

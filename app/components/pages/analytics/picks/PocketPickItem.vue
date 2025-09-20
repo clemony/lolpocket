@@ -1,10 +1,8 @@
 <script lang="ts" setup>
-const { itemNum, title } = defineProps<{
+const { title, itemNum } = defineProps<{
   itemNum: number
   title?: string
 }>()
-const ms = useMatchStore()
-const ds = useDataStore()
 
 const state = inject<PlayerData>(SummonerKey)
 
@@ -64,7 +62,7 @@ console.log('💠 - itemColor - itemColor:', itemColor)
         <Grow />
 
         <p>
-          {{ ms.filter.patch }}
+          {{ ms().filter.patch }}
         </p>
 
         <p class="-mb-px">

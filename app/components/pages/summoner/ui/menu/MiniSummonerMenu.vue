@@ -2,11 +2,11 @@
 import { DropdownMenuTrigger } from 'reka-ui'
 
 const {
-  class: className,
-  summoner,
-  align,
   side,
+  align,
+  class: className,
   disableLink,
+  summoner,
 } = defineProps<{
   class?: HTMLAttributes['class']
   summoner: Summoner

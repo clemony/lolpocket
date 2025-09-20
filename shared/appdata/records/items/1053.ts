@@ -1,7 +1,6 @@
 const item: Item = {
-  name: 'Vampiric Scepter',
   id: 1053,
-  rank: 'Epic',
+  name: 'Vampiric Scepter',
   buildsFrom: [
     {
       id: 1036,
@@ -36,23 +35,24 @@ const item: Item = {
       gold: 7187,
     },
   ],
-  specialRecipe: 0,
-  noEffects: true,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1053_fighter_t2_vampiricscepter.png',
+  maps: [11, 12, 21, 35],
+  noEffects: true,
+  rank: 'Epic',
+  removed: false,
+  shop: {
+    prices: {
+      combined: 550,
+      sell: 360,
+      total: 900,
+    },
+    tags: ['FIGHTER', 'MARKSMAN', 'ASSASSIN'],
+  },
   simpleDescription: 'Basic attacks restore Health',
+  specialRecipe: 0,
   stats: {
     attackDamage: 15,
     lifesteal: 7,
   },
-  shop: {
-    prices: {
-      total: 900,
-      combined: 550,
-      sell: 360,
-    },
-    tags: ['FIGHTER', 'MARKSMAN', 'ASSASSIN'],
-  },
-  maps: [11, 12, 21, 35],
 }
 export default item

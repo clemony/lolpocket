@@ -1,7 +1,7 @@
 const item: Item = {
-  name: 'Haunting Guise',
   id: 3147,
-  rank: 'Epic',
+  name: 'Haunting Guise',
+  nicknames: ['mask'],
   buildsFrom: [
     {
       id: 1052,
@@ -31,32 +31,32 @@ const item: Item = {
       gold: 2900,
     },
   ],
-  specialRecipe: 0,
-  noEffects: false,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3147_hauntingguise.png',
-  simpleDescription: 'Deals additional physical damage when ambushing enemies',
-  nicknames: ['mask'],
+  maps: [11, 12, 21, 35],
+  noEffects: false,
   passives: [
     {
       name: 'Madness',
-      unique: false,
       effects:
         'For each second in combat with enemy champions, deal 2% increased damage, stacking up to 3 times for a total of 6%.',
+      unique: false,
     },
   ],
+  rank: 'Epic',
+  removed: false,
+  shop: {
+    prices: {
+      combined: 500,
+      sell: 520,
+      total: 1300,
+    },
+    tags: ['MAGE'],
+  },
+  simpleDescription: 'Deals additional physical damage when ambushing enemies',
+  specialRecipe: 0,
   stats: {
     abilityPower: 30,
     health: 200,
   },
-  shop: {
-    prices: {
-      total: 1300,
-      combined: 500,
-      sell: 520,
-    },
-    tags: ['MAGE'],
-  },
-  maps: [11, 12, 21, 35],
 }
 export default item

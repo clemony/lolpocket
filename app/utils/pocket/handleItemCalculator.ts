@@ -1,5 +1,4 @@
 export function createCalculatorSet() {
-  const is = useItemStore()
 
   /*   is.calculatorSets.push([
 0,0,0,0,0,0

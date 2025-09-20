@@ -20,33 +20,33 @@ export interface PatchNotesData extends OgResponse {
 export interface IconObject {
   name: string
   alt?: IconObject
-  modifier?: IconObject
   class?: string | string[]
+  modifier?: IconObject
 }
 
 export interface BadgeObject {
-  text?: string
-  icon?: IconObject
   class?: string
+  icon?: IconObject
+  text?: string
 }
 
 export interface ImgObject {
-  src: string
   class?: string
+  src: string
 }
 
 export type LinkGroup = LinkObject[]
 
 export interface LinkObject {
   name: string
-  link?: string
-  links?: LinkObject[]
+  blurb?: string
+  component?: any
+  external?: boolean
   hash?: string
   icon?: IconObject
   img?: ImgObject
-  external?: boolean
-  component?: any
-  blurb?: string
+  link?: string
+  links?: LinkObject[]
 }
 export interface DataObject extends LinkObject {
   data?: object
@@ -56,30 +56,30 @@ export interface DataObject extends LinkObject {
 export interface Category {
   id: string
   name?: string
-  checked: boolean
-  icon?: string
-  color?: string
   champions?: Array<string>
+  checked: boolean
+  color?: string
+  icon?: string
 }
 
 export type categories = Category[]
 
 export interface dateObject {
-  patch: string
   date: string
+  patch: string
   time: string
 }
 
 export interface UserPockets {
   all: Pocket[]
-  pinned: string[]
   archived: string[]
+  pinned: string[]
 }
 
 export interface Note {
   title: string
   content: string
-  icon: string
   date: string
   heart?: boolean
+  icon: string
 }

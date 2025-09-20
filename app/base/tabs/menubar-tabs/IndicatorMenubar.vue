@@ -21,7 +21,7 @@ const route = useRoute()
 watchEffect(() => {
   if (!menu.value)
     return
-  if (tabs.value.charAt(0) == '/') {
+  if (tabs.value.charAt(0) === '/') {
     previousTab.value = tabs.value
   }
   tabs.value = menu.value
@@ -36,8 +36,8 @@ watch(
 )
 
 onMounted(() => {
-  if (route.path != '/') {
-    route.meta.section.toString().charAt(0) != '/'
+  if (route.path !== '/') {
+    route.meta.section.toString().charAt(0) !== '/'
       ? (tabs.value = route.path)
       : (tabs.value = route.meta.section.toString())
   }

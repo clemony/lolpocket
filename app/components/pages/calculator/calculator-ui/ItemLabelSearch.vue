@@ -5,8 +5,6 @@ const props = defineProps<{
   set?: CalculatorSet
 }>()
 
-const is = useItemStore()
-
 const item = ref(0)
 
 async function handleItem(e) {

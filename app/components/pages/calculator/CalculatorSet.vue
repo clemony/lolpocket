@@ -10,8 +10,6 @@ const props = defineProps<{
 }>()
 
 const emit = defineEmits(['update:set'])
-
-const is = useItemStore()
 </script>
 
 <template>

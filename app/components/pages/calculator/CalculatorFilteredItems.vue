@@ -7,8 +7,8 @@ const props = defineProps<{
 }>()
 
 const emit = defineEmits(['update:item'])
-const is = useItemStore()
-const { filters, setFilter, filtered } = useItemFilter()
+
+const { filtered, filters, setFilter } = useItemFilter()
 </script>
 
 <template>

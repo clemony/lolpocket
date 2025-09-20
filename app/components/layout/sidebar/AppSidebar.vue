@@ -6,56 +6,21 @@ import {
   PocketPanel,
   SearchPanel,
 } from '#components'
-import { VisuallyHidden } from 'reka-ui'
 
-const userMenu: DataObject[] = [
-  {
-    name: 'Navigation',
-    component: NavPanel,
-    icon: {
-      name: 'lucide:gallery-vertical-end',
-      class: 'size-5.5 ',
-    },
-  },
-  {
-    name: 'Search',
-    component: SearchPanel,
-    icon: {
-      name: 'mage:search',
-      class: 'size-5.25  **:!stroke-[2]',
-    },
-  },
-  {
-    name: 'Pockets',
-    component: PocketPanel,
-    icon: {
-      name: 'folder',
-      class: '**:stroke-[2.21]',
-    },
-  },
-
-  {
-    name: 'Inbox',
-    component: MessagePanel,
-    icon: {
-      name: 'lucide:mail',
-      class: ' **:stroke-1.5',
-    },
-    value: computed (() => as().account.inbox.messages.filter(m => !m.read).length).value,
-  },
-  {
-    name: 'Notifications',
-    component: NotificationPanel,
-    icon: {
-      name: 'lucide:message-square',
-      class: '**:stroke-[2.2]',
-    },
-    value: computed (() => as().account.inbox.notifications.filter(n => !n.read).length).value,
-
-  },
+const userMenu = [
+  NavPanel,
+  //*
+  SearchPanel,
+  //*
+  PocketPanel,
+  //*
+  MessagePanel,
+  //*
+  NotificationPanel,
 ]
-
-const currentHover = ref<number | null>(null)
+const currentHover = ref<number | null>(null) // hover intent index (mouseenter)
+const activeIndex = ref<number | null>(null) // the index currently shown in panel
+const prevActiveIndex = ref<number | null>(null) // previous active index (for invert)
 const activeItem = shallowRef<Component | null>(null)
 
 const sidebarWrapper = useTemplateRef<HTMLElement>('sidebarWrapper')
@@ -66,35 +31,58 @@ const wrapperHovered = useElementHover(sidebarWrapper, {
 
 const dropdownOpen = computed(() => ui().sidebarStates.inboxDropdown)
 
-const lastHoverIndex = ref<number | null>(null)
+const pendingItem = shallowRef<Component | null>(null)
+const pendingHoverIndex = ref<number | null>(null)
 
-function handleButtonHover(item: any, i: number) {
+const { start, stop } = useTimeoutFn(() => {
+  if (currentHover.value === pendingHoverIndex.value) {
+    activeItem.value = pendingItem.value
+    prevActiveIndex.value = activeIndex.value
+    activeIndex.value = pendingHoverIndex.value
+  }
+}, 400, { immediate: false })
+
+function handleButtonHover(item: Component, i: number) {
+  pendingItem.value = item
+  pendingHoverIndex.value = i
   currentHover.value = i
-  setTimeout(() => {
-    if (currentHover.value === i) {
-      activeItem.value = item
-      lastHoverIndex.value = i
-    }
-  }, 400)
+  stop()
+  start()
 }
 
-// derived "invert" based on direction
+function handleButtonLeave() {
+  currentHover.value = null
+  stop()
+}
+
+// computed "invert" based on previous vs current active indices
 const invert = computed(() => {
-  if (lastHoverIndex.value === null || currentHover.value === null)
+  const prev = prevActiveIndex.value
+  const cur = activeIndex.value
+  if (prev === null || cur === null)
     return false
-  return currentHover.value < lastHoverIndex.value
+  return cur < prev
 })
 
+// single source of truth for open — only activeItem or dropdown keep it open
 const open = computed({
-  get: () =>
-    !!activeItem.value || wrapperHovered.value || dropdownOpen.value,
+  get: () => !!activeItem.value || dropdownOpen.value,
   set: (value: boolean) => {
     if (!value) {
       currentHover.value = null
       activeItem.value = null
-      lastHoverIndex.value = null
+      activeIndex.value = null
+      prevActiveIndex.value = null
+      pendingItem.value = null
+      pendingHoverIndex.value = null
+      stop()
     }
   },
+})
+
+watch(wrapperHovered, (hovering) => {
+  if (!hovering && !dropdownOpen.value)
+    open.value = false
 })
 </script>
 
@@ -106,41 +94,43 @@ const open = computed({
     <menu
       class="items-center py-3 justify-between z-10 flex flex-col w-15 h-full fixed top-0 left-0 border-r border-r-b3 !bg-b1 ">
       <div class="flex grow flex-col gap-2.5">
-        <Blink
+        <BtnLink
           class="btn-square mb-1 size-11 p-0 grid place-items-center"
           variant="neutral"
           to="/">
           <h5 class="font-bold jusify-self-center absolute">
             LP
           </h5>
-        </Blink>
+        </BtnLink>
 
         <Button
           v-for="(item, i) in userMenu"
           :key="item.name"
           as="li"
           size="icon"
-          :variant="!item?.data ? 'outline' : 'outline'"
+          :variant="!item?.meta?.data ? 'ghost' : 'outline'"
           :auto-focus="false"
           :class="
-            cn('!p-0 grid  [&.btn-active]:**:!text-nc [&.btn-active]:!bg-neutral relative !place-items-center size-11 btn-square', {
-              'btn-active !border-b3': activeItem == item.component && open,
+            cn('!p-0 grid [&.btn-active]:!bg-b2 [&.btn-active]:drop-shadow-xs [&.btn-active]:shadow-sm relative !place-items-center size-11 btn-square', {
+              'btn-active ': activeItem === item && open,
             })
           "
-          :is-active="activeItem === item.component"
-          @mouseleave="currentHover = null"
-          @mouseenter="handleButtonHover(item.component, i)">
+          :is-active="activeItem === item"
+          @focusin="handleButtonHover(item, i)"
+          @mouseenter="handleButtonHover(item, i)"
+          @focusout="handleButtonLeave"
+          @mouseleave="handleButtonLeave">
           <Button
-            v-if="item?.data"
+            v-if="item?.meta.data"
             as="label"
-            :name="`${item.name}-count`"
+            :name="`${item.meta.name}-count`"
             class="rounded-full pointer-events-none ring ring-b2 h-4 text-[0.8] !border-0 absolute -right-0.75 -top-0.75 !px-1.25 py-1 grid place-items-center leading-0"
             variant="neutral">
             {{ item.data }}
           </Button>
           <hicon
-            :name="item.icon.name"
-            :class="cn('text-bc size-5 ', item.icon.class)" />
+            :name="item.meta.icon"
+            :class="cn('text-bc size-5 ', item.meta.class)" />
         </Button>
       </div>
       <div class="justify-self-end">
@@ -148,6 +138,7 @@ const open = computed({
       </div>
     </menu>
 
+    <!-- component sheet content -->
     <Sheet
       v-model:open="open"
       :modal="false">
@@ -155,7 +146,7 @@ const open = computed({
         side="left"
         class="z-9 left-[45px] border-l-0 border-b3 flex flex-col">
         <HiddenDialogHeader
-          :title="userMenu.find(m => m.component == activeItem)?.name || 'sidebar'"
+          :title="userMenu.find(m => m.component === activeItem)?.name || 'sidebar'"
           desc="keep it up!" />
         <SlideInTopOutBottom
           :invert="invert"

@@ -91,8 +91,8 @@ export async function fetchRegionByPuuid(puuid: string, region: string) {
 
 export async function getMatchesByPuuid({
   puuid,
-  start = 0,
   count = 20,
+  start = 0,
 }: {
   puuid: string
   start?: number
@@ -101,7 +101,7 @@ export async function getMatchesByPuuid({
   return riotGet(
     `https://${REGION}.api.riotgames.com`,
     `/lol/match/v5/matches/by-puuid/${puuid}/ids`,
-    { start, count }
+    { count, start }
   )
 }
 
@@ -114,9 +114,9 @@ export async function getMatchDetails(matchId: string) {
 
 export async function getMatchIdsByPuuid({
   puuid,
-  start = 0,
   count = 20,
   region = 'americas',
+  start = 0,
 }: {
   puuid: string
   start?: number
@@ -126,7 +126,7 @@ export async function getMatchIdsByPuuid({
   return riotGet(
     `https://${region}.api.riotgames.com`,
     `/lol/match/v5/matches/by-puuid/${puuid}/ids`,
-    { start, count }
+    { count, start }
   )
 }
 

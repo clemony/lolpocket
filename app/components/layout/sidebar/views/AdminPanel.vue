@@ -1,20 +1,19 @@
 <script lang="ts" setup>
 const emit = defineEmits(['open:settings', 'open:admin', 'reset-count'])
-
-const as = useAccountStore()
 </script>
 
 <template>
   <!--   <LazyAdminSheet
-    v-if="as && as.account?.role === 'admin'"
+    v-if="as &  as().account?.role === 'admin'"
     v-model:open="adminOpen"
-    :account="as.account" /> -->
+    :account="as().account" /> -->
   <SidebarHeaderWrapper title="Settings"></SidebarHeaderWrapper>
   <div class="gap-6 py-4 w-full !flex flex-col items-start">
-    <Login v-if="!as.loggedIn" />
+    <Login
+      v-if="as().loggedIn" />
     <div v-else>
       <button
-        v-if="useSupabaseUser().value.role == 'admin'"
+        v-if="useSupabaseUser().value.role === 'admin'"
         v-tippy="'Admin'"
         class="size-10 btn btn-ghost grid place-items-center -mr-2 opacity-60 hover:opacity-100 cursor-pointer"
         @click="emit('open:admin')">

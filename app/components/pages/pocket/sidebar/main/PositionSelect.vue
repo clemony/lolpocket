@@ -2,12 +2,12 @@
 import { championPositions } from '#shared/appdata'
 
 const {
-  class: className,
-  pocket: p,
   side,
   sideOffset,
   align,
   alignOffset,
+  class: className,
+  pocket: p,
 } = defineProps<{
   class?: HTMLAttributes['class']
   pocket: Pocket
@@ -22,7 +22,7 @@ const pocket = computed(() => p)
 const select = ref('All')
 
 const color = computed(
-  () => championPositions.find(p => p.name == pocket.value.main.role).color
+  () => championPositions.find(p => p.name === pocket.value.main.role).color
 )
 </script>
 

@@ -1,372 +1,372 @@
 // Updated Patch 25.17 - 09/18/2025 02:20:02 AM CDT
 
 const champion: Champion = {
-  "id": 103,
-  "key": "Ahri",
-  "name": "Ahri",
-  "title": "the Nine-Tailed Fox",
-  "abilities": [
+  id: 103,
+  key: 'Ahri',
+  name: 'Ahri',
+  title: 'the Nine-Tailed Fox',
+  abilities: [
     {
-      "key": "P",
-      "name": "Essence Theft",
-      "affects": "Self",
-      "blurb": "Innate:  Ahri generates a  stack of Essence Fragment from killing  minions and  monsters. At max stacks, she consumes them to  heal herself.",
-      "effects": [
+      key: 'P',
+      name: 'Essence Theft',
+      affects: 'Self',
+      blurb: 'Innate:  Ahri generates a  stack of Essence Fragment from killing  minions and  monsters. At max stacks, she consumes them to  heal herself.',
+      effects: [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Ahri generates a stack of Essence Fragment whenever she kills a minion or monster. At 9 stacks, she consumes them to heal herself for 35 - 95 (based on level) (+ 20% AP).</p>"
+          description: '<p class="ability-effect"><span class="ability-header">Innate:</span> Ahri generates a stack of Essence Fragment whenever she kills a minion or monster. At 9 stacks, she consumes them to heal herself for 35 - 95 (based on level) (+ 20% AP).</p>'
         },
         {
-          "description": "Additionally, whenever Ahri scores a champion takedown within 3 seconds of damaging them, she brings their essence to her to consume it to heal herself for 75 - 165 (based on level) (+ 30% AP)."
+          description: 'Additionally, whenever Ahri scores a champion takedown within 3 seconds of damaging them, she brings their essence to her to consume it to heal herself for 75 - 165 (based on level) (+ 30% AP).'
         }
       ],
-      "icon": "https://cdn.communitydragon.org/latest/champion/Ahri/ability-icon/p",
-      "notes": "No additional details.",
-      "targeting": "Passive"
+      icon: 'https://cdn.communitydragon.org/latest/champion/Ahri/ability-icon/p',
+      notes: 'No additional details.',
+      targeting: 'Passive'
     },
     {
-      "key": "Q",
-      "name": "Orb of Deception",
-      "width": "200",
-      "affects": "Enemies",
-      "blurb": "Active:  Ahri sends out her orb, dealing magic damage to enemies it passes through. After a point, the orb travels back to her, dealing the same amount in true damage to enemies it passes through.",
-      "castTime": "0.25",
-      "cooldown": "7",
-      "cost": "55 / 65 / 75 / 85 / 95",
-      "damageType": "Other damage",
-      "effectRadius": "100",
-      "effects": [
+      key: 'Q',
+      name: 'Orb of Deception',
+      width: '200',
+      affects: 'Enemies',
+      blurb: 'Active:  Ahri sends out her orb, dealing magic damage to enemies it passes through. After a point, the orb travels back to her, dealing the same amount in true damage to enemies it passes through.',
+      castTime: '0.25',
+      cooldown: '7',
+      cost: '55 / 65 / 75 / 85 / 95',
+      damageType: 'Other damage',
+      effectRadius: '100',
+      effects: [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ahri sends her orb in the target direction that deals magic damage to enemies it passes through. Upon reaching maximum range, it returns to her to deal the same amount in true damage to enemies it passes through.</p>",
-          "leveling": [
+          description: '<p class="ability-effect"><span class="ability-header">Active:</span> Ahri sends her orb in the target direction that deals magic damage to enemies it passes through. Upon reaching maximum range, it returns to her to deal the same amount in true damage to enemies it passes through.</p>',
+          leveling: [
             {
-              "attribute": "Damage Per Pass",
-              "modifiers": [
+              attribute: 'Damage Per Pass',
+              modifiers: [
                 {
-                  "values": "40 / 65 / 90 / 115 / 140"
+                  values: '40 / 65 / 90 / 115 / 140'
                 },
                 {
-                  "unit": "% AP",
-                  "values": "50"
+                  unit: '% AP',
+                  values: '50'
                 }
               ]
             },
             {
-              "attribute": "Total Mixed Damage",
-              "modifiers": [
+              attribute: 'Total Mixed Damage',
+              modifiers: [
                 {
-                  "values": "80 / 130 / 180 / 230 / 280"
+                  values: '80 / 130 / 180 / 230 / 280'
                 },
                 {
-                  "unit": "% AP",
-                  "values": "100"
+                  unit: '% AP',
+                  values: '100'
                 }
               ]
             }
           ]
         },
         {
-          "description": "Enemies can be hit only once per pass."
+          description: 'Enemies can be hit only once per pass.'
         }
       ],
-      "icon": "https://cdn.communitydragon.org/latest/champion/Ahri/ability-icon/q",
-      "maxCharges": -1,
-      "notes": "Orb of Deception will hit additional units around the return point in a small circle when the orb turns around.\nThis applies both to the initial and return missile's damage, but the initial missile only deals damage if the unit was not hit by it already.\nEach pass of the projectile can only damage an enemy once.\nIf Ahri dies while the orb is out, the orb will visually disappear but continue to deal damage and return to Ahri.(bug)\nThis ability will cast from wherever the caster is at the end of the cast time.\nThis ability's damage is calculated based on the caster's current stats and changes dynamically.",
-      "projectile": "TRUE",
-      "resource": "Mana",
-      "speed": "1550 / 60 - 2600",
-      "spellEffects": "Area of effect",
-      "spellshieldable": "Special",
-      "targeting": "Direction"
+      icon: 'https://cdn.communitydragon.org/latest/champion/Ahri/ability-icon/q',
+      maxCharges: -1,
+      notes: 'Orb of Deception will hit additional units around the return point in a small circle when the orb turns around.\nThis applies both to the initial and return missile\'s damage, but the initial missile only deals damage if the unit was not hit by it already.\nEach pass of the projectile can only damage an enemy once.\nIf Ahri dies while the orb is out, the orb will visually disappear but continue to deal damage and return to Ahri.(bug)\nThis ability will cast from wherever the caster is at the end of the cast time.\nThis ability\'s damage is calculated based on the caster\'s current stats and changes dynamically.',
+      projectile: 'TRUE',
+      resource: 'Mana',
+      speed: '1550 / 60 - 2600',
+      spellEffects: 'Area of effect',
+      spellshieldable: 'Special',
+      targeting: 'Direction'
     },
     {
-      "key": "W",
-      "name": "Fox-Fire",
-      "affects": "Enemies",
-      "blurb": "Active:  Ahri gains a burst of  move speed and conjures three fox-fires that orbit her for a short time. Fox-fires home onto nearby enemies, dealing magic damage.",
-      "castTime": "none",
-      "cooldown": "10 / 9 / 8 / 7 / 6",
-      "cost": "30",
-      "damageType": "Magic damage",
-      "effectRadius": "150 / 550 / 725",
-      "effects": [
+      key: 'W',
+      name: 'Fox-Fire',
+      affects: 'Enemies',
+      blurb: 'Active:  Ahri gains a burst of  move speed and conjures three fox-fires that orbit her for a short time. Fox-fires home onto nearby enemies, dealing magic damage.',
+      castTime: 'none',
+      cooldown: '10 / 9 / 8 / 7 / 6',
+      cost: '30',
+      damageType: 'Magic damage',
+      effectRadius: '150 / 550 / 725',
+      effects: [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ahri gains 40% bonus movement speed that decays over 2 seconds and conjures three flames which orbit her clockwise for up to 2.5 seconds.</p>"
+          description: '<p class="ability-effect"><span class="ability-header">Active:</span> Ahri gains 40% bonus movement speed that decays over 2 seconds and conjures three flames which orbit her clockwise for up to 2.5 seconds.</p>'
         },
         {
-          "description": "After 0.25 seconds of the cast, each flame targets a visible enemy based on priority, or after 0.4 seconds, simply targets the closest visible enemy in range. Each flame deals magic damage, with subsequent flames against a target dealing 30% damage.",
-          "leveling": [
+          description: 'After 0.25 seconds of the cast, each flame targets a visible enemy based on priority, or after 0.4 seconds, simply targets the closest visible enemy in range. Each flame deals magic damage, with subsequent flames against a target dealing 30% damage.',
+          leveling: [
             {
-              "attribute": "Initial Flame Magic Damage",
-              "modifiers": [
+              attribute: 'Initial Flame Magic Damage',
+              modifiers: [
                 {
-                  "values": "40 / 60 / 80 / 100 / 120"
+                  values: '40 / 60 / 80 / 100 / 120'
                 },
                 {
-                  "unit": "% AP",
-                  "values": "40"
+                  unit: '% AP',
+                  values: '40'
                 }
               ]
             },
             {
-              "attribute": "Subsequent Flame Magic Damage",
-              "modifiers": [
+              attribute: 'Subsequent Flame Magic Damage',
+              modifiers: [
                 {
-                  "values": "12 / 18 / 24 / 30 / 36"
+                  values: '12 / 18 / 24 / 30 / 36'
                 },
                 {
-                  "unit": "% AP",
-                  "values": "12"
+                  unit: '% AP',
+                  values: '12'
                 }
               ]
             },
             {
-              "attribute": "Total Single-Target Damage",
-              "modifiers": [
+              attribute: 'Total Single-Target Damage',
+              modifiers: [
                 {
-                  "values": "64 / 96 / 128 / 160 / 192"
+                  values: '64 / 96 / 128 / 160 / 192'
                 },
                 {
-                  "unit": "% AP",
-                  "values": "64"
+                  unit: '% AP',
+                  values: '64'
                 }
               ]
             }
           ]
         },
         {
-          "description": "Flames prioritize enemy champions hit by Charm, then enemy champions, then minions that would die to Fox-Fire's damage, and then the target of Ahri's last basic attack within 3 seconds."
+          description: 'Flames prioritize enemy champions hit by Charm, then enemy champions, then minions that would die to Fox-Fire\'s damage, and then the target of Ahri\'s last basic attack within 3 seconds.'
         },
         {
-          "description": "Fox-Fire's damage is doubled against minions below 20% maximum health.",
-          "leveling": [
+          description: 'Fox-Fire\'s damage is doubled against minions below 20% maximum health.',
+          leveling: [
             {
-              "attribute": "Increased Initial Flame Minion Damage",
-              "modifiers": [
+              attribute: 'Increased Initial Flame Minion Damage',
+              modifiers: [
                 {
-                  "values": "80 / 120 / 160 / 200 / 240"
+                  values: '80 / 120 / 160 / 200 / 240'
                 },
                 {
-                  "unit": "% AP",
-                  "values": "80"
+                  unit: '% AP',
+                  values: '80'
                 }
               ]
             },
             {
-              "attribute": "Increased Subsequent Flame Minion Damage",
-              "modifiers": [
+              attribute: 'Increased Subsequent Flame Minion Damage',
+              modifiers: [
                 {
-                  "values": "24 / 36 / 48 / 60 / 72"
+                  values: '24 / 36 / 48 / 60 / 72'
                 },
                 {
-                  "unit": "% AP",
-                  "values": "24"
+                  unit: '% AP',
+                  values: '24'
                 }
               ]
             }
           ]
         }
       ],
-      "icon": "https://cdn.communitydragon.org/latest/champion/Ahri/ability-icon/w",
-      "maxCharges": -1,
-      "notes": "Each missile of Fox-Fire has its own shorter non-priority range.\nAny unused Fox-Fires will fizzle upon death.\nThis ability's damage is calculated based on the caster's current stats and changes dynamically.",
-      "projectile": "TRUE",
-      "resource": "Mana",
-      "speed": "75.92° per second / 1400",
-      "spellEffects": "Single target",
-      "spellshieldable": "True",
-      "targeting": "Auto"
+      icon: 'https://cdn.communitydragon.org/latest/champion/Ahri/ability-icon/w',
+      maxCharges: -1,
+      notes: 'Each missile of Fox-Fire has its own shorter non-priority range.\nAny unused Fox-Fires will fizzle upon death.\nThis ability\'s damage is calculated based on the caster\'s current stats and changes dynamically.',
+      projectile: 'TRUE',
+      resource: 'Mana',
+      speed: '75.92° per second / 1400',
+      spellEffects: 'Single target',
+      spellshieldable: 'True',
+      targeting: 'Auto'
     },
     {
-      "key": "E",
-      "name": "Charm",
-      "width": "120",
-      "affects": "Enemies",
-      "blurb": "Active:  Ahri blows forth a kiss that  charms the first enemy hit, dealing magic damage and  knocking them down.",
-      "castTime": "0.25",
-      "cooldown": "12",
-      "cost": "60",
-      "damageType": "Magic damage",
-      "effects": [
+      key: 'E',
+      name: 'Charm',
+      width: '120',
+      affects: 'Enemies',
+      blurb: 'Active:  Ahri blows forth a kiss that  charms the first enemy hit, dealing magic damage and  knocking them down.',
+      castTime: '0.25',
+      cooldown: '12',
+      cost: '60',
+      damageType: 'Magic damage',
+      effects: [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ahri blows forth a kiss in the target direction that deals magic damage to the first enemy hit, knocking them down and charming and slowing them by 65% for a duration.</p>",
-          "leveling": [
+          description: '<p class="ability-effect"><span class="ability-header">Active:</span> Ahri blows forth a kiss in the target direction that deals magic damage to the first enemy hit, knocking them down and charming and slowing them by 65% for a duration.</p>',
+          leveling: [
             {
-              "attribute": "Magic Damage",
-              "modifiers": [
+              attribute: 'Magic Damage',
+              modifiers: [
                 {
-                  "values": "80 / 120 / 160 / 200 / 240"
+                  values: '80 / 120 / 160 / 200 / 240'
                 },
                 {
-                  "unit": "% AP",
-                  "values": "85"
+                  unit: '% AP',
+                  values: '85'
                 }
               ]
             },
             {
-              "attribute": "Disable Duration",
-              "modifiers": [
+              attribute: 'Disable Duration',
+              modifiers: [
                 {
-                  "unit": " seconds",
-                  "values": "1.2 / 1.35 / 1.5 / 1.65 / 1.8"
+                  unit: ' seconds',
+                  values: '1.2 / 1.35 / 1.5 / 1.65 / 1.8'
                 }
               ]
             }
           ]
         }
       ],
-      "icon": "https://cdn.communitydragon.org/latest/champion/Ahri/ability-icon/e",
-      "maxCharges": -1,
-      "notes": "Charm is able to  slow targets otherwise  immune to slows upon  charming them.(bug)\nThis ability's damage is calculated based on the caster's stats at the time of its application.\nThis ability will cast from wherever the caster is at the end of the cast time.",
-      "projectile": "TRUE",
-      "resource": "Mana",
-      "speed": "1550",
-      "spellEffects": "spell",
-      "spellshieldable": "True",
-      "targeting": "Direction"
+      icon: 'https://cdn.communitydragon.org/latest/champion/Ahri/ability-icon/e',
+      maxCharges: -1,
+      notes: 'Charm is able to  slow targets otherwise  immune to slows upon  charming them.(bug)\nThis ability\'s damage is calculated based on the caster\'s stats at the time of its application.\nThis ability will cast from wherever the caster is at the end of the cast time.',
+      projectile: 'TRUE',
+      resource: 'Mana',
+      speed: '1550',
+      spellEffects: 'spell',
+      spellshieldable: 'True',
+      targeting: 'Direction'
     },
     {
-      "key": "R",
-      "name": "Spirit Rush",
-      "affects": "Enemies",
-      "blurb": "Active:  Ahri  dashes forward and fires essence bolts to nearby enemies, dealing magic damage.",
-      "castTime": "none",
-      "cooldown": "140 / 120 / 100",
-      "cost": "100",
-      "damageType": "Magic damage",
-      "effectRadius": "600",
-      "effects": [
+      key: 'R',
+      name: 'Spirit Rush',
+      affects: 'Enemies',
+      blurb: 'Active:  Ahri  dashes forward and fires essence bolts to nearby enemies, dealing magic damage.',
+      castTime: 'none',
+      cooldown: '140 / 120 / 100',
+      cost: '100',
+      damageType: 'Magic damage',
+      effectRadius: '600',
+      effects: [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Ahri dashes to the target location and then fires essence bolts to up to 3 nearby visible enemies, each dealing magic damage. Spirit Rush can be recast twice more within 15 seconds of the activation at no additional cost, with a 1-second static cooldown between casts. Consuming a champion's essence with Essence Theft while Spirit Rush is active extends the recast duration by and up to 10 seconds, and grants an additional recast, storing up to 3 recasts at a time.</p>",
-          "leveling": [
+          description: '<p class="ability-effect"><span class="ability-header">Active:</span> Ahri dashes to the target location and then fires essence bolts to up to 3 nearby visible enemies, each dealing magic damage. Spirit Rush can be recast twice more within 15 seconds of the activation at no additional cost, with a 1-second static cooldown between casts. Consuming a champion\'s essence with Essence Theft while Spirit Rush is active extends the recast duration by and up to 10 seconds, and grants an additional recast, storing up to 3 recasts at a time.</p>',
+          leveling: [
             {
-              "attribute": "Magic Damage",
-              "modifiers": [
+              attribute: 'Magic Damage',
+              modifiers: [
                 {
-                  "values": "60 / 90 / 120"
+                  values: '60 / 90 / 120'
                 },
                 {
-                  "unit": "% AP",
-                  "values": "35"
+                  unit: '% AP',
+                  values: '35'
                 }
               ]
             }
           ]
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Recast:</span> Ahri mimics the first cast's effects.</p>"
+          description: '<p class="ability-effect"><span class="ability-header">Recast:</span> Ahri mimics the first cast\'s effects.</p>'
         },
         {
-          "description": "Spirit Rush's recast duration will persist even after using all recasts. Fox-Fire can be cast during the dash."
+          description: 'Spirit Rush\'s recast duration will persist even after using all recasts. Fox-Fire can be cast during the dash.'
         }
       ],
-      "icon": "https://cdn.communitydragon.org/latest/champion/Ahri/ability-icon/r",
-      "maxCharges": -1,
-      "notes": "Each cast counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse's passive.\nSpirit Rush uses quick cast by default.\nThere's a slight delay before a champion gains vision of the fog of war once inside it. Because of this, if Ahri dashes into it, it is possible that Spirit Rush will not target any enemy in range.\nThe bolts do not fire if Ahri dies while  dashing, unless she was saved by  resurrection.\nThe bolts will fire if the dash is  interrupted by other means.\nThis ability's damage is calculated based on the caster's current stats and changes dynamically.",
-      "projectile": "TRUE",
-      "resource": "Mana",
-      "speed": "1200 + 100% movement speed / 1400",
-      "spellEffects": "aoe",
-      "spellshieldable": "True",
-      "targeting": "Location",
-      "targetRange": "500"
+      icon: 'https://cdn.communitydragon.org/latest/champion/Ahri/ability-icon/r',
+      maxCharges: -1,
+      notes: 'Each cast counts as an ability activation for the purposes of on-cast effects such as  Spellblade and triggering  Force Pulse\'s passive.\nSpirit Rush uses quick cast by default.\nThere\'s a slight delay before a champion gains vision of the fog of war once inside it. Because of this, if Ahri dashes into it, it is possible that Spirit Rush will not target any enemy in range.\nThe bolts do not fire if Ahri dies while  dashing, unless she was saved by  resurrection.\nThe bolts will fire if the dash is  interrupted by other means.\nThis ability\'s damage is calculated based on the caster\'s current stats and changes dynamically.',
+      projectile: 'TRUE',
+      resource: 'Mana',
+      speed: '1200 + 100% movement speed / 1400',
+      spellEffects: 'aoe',
+      spellshieldable: 'True',
+      targeting: 'Location',
+      targetRange: '500'
     }
   ],
-  "adaptiveType": "Magic damage",
-  "attackType": "Ranged",
-  "attributeRatings": {
-    "damage": 3,
-    "toughness": 1,
-    "control": 2,
-    "mobility": 3,
-    "utility": 1,
-    "abilityReliance": 100,
-    "difficulty": 2
+  adaptiveType: 'Magic damage',
+  attackType: 'Ranged',
+  attributeRatings: {
+    abilityReliance: 100,
+    control: 2,
+    damage: 3,
+    difficulty: 2,
+    mobility: 3,
+    toughness: 1,
+    utility: 1
   },
-  "faction": "ionia",
-  "lore": "Innately connected to the magic of the spirit realm, Ahri is a fox-like vastaya who can manipulate her prey's emotions and consume their essence—receiving flashes of their memory and insight from each soul she consumes. Once a powerful yet wayward predator, Ahri is now traveling the world in search of remnants of her ancestors while also trying to replace her stolen memories with ones of her own making.",
-  "patchLastChanged": "25.13",
-  "positions": [
-    "Middle"
+  faction: 'ionia',
+  lore: 'Innately connected to the magic of the spirit realm, Ahri is a fox-like vastaya who can manipulate her prey\'s emotions and consume their essence—receiving flashes of their memory and insight from each soul she consumes. Once a powerful yet wayward predator, Ahri is now traveling the world in search of remnants of her ancestors while also trying to replace her stolen memories with ones of her own making.',
+  patchLastChanged: '25.13',
+  positions: [
+    'Middle'
   ],
-  "price": {
-    "blueEssence": 1575,
-    "rp": 790
+  price: {
+    blueEssence: 1575,
+    rp: 790
   },
-  "releaseDate": "2011-12-14",
-  "resource": "Mana",
-  "roles": [
-    "Assassin",
-    "Burst",
-    "Mage"
+  releaseDate: '2011-12-14',
+  resource: 'Mana',
+  roles: [
+    'Assassin',
+    'Burst',
+    'Mage'
   ],
-  "stats": {
-    "health": {
-      "flat": 590,
-      "perLevel": 104
+  stats: {
+    acquisitionRadius: {
+      flat: 525
     },
-    "healthRegen": {
-      "flat": 2.5,
-      "perLevel": 0.6
+    armor: {
+      flat: 21,
+      perLevel: 4.2
     },
-    "mana": {
-      "flat": 418,
-      "perLevel": 25
+    attackCastTime: {
+      flat: 0.3
     },
-    "manaRegen": {
-      "flat": 8,
-      "perLevel": 0.8
+    attackDamage: {
+      flat: 53,
+      perLevel: 3
     },
-    "armor": {
-      "flat": 21,
-      "perLevel": 4.2
+    attackDelayOffset: {
+      flat: -0.1
     },
-    "magicResistance": {
-      "flat": 30,
-      "perLevel": 1.3
+    attackRange: {
+      flat: 550
     },
-    "attackDamage": {
-      "flat": 53,
-      "perLevel": 3
+    attackSpeed: {
+      flat: 0.668,
+      perLevel: 2.2
     },
-    "movespeed": {
-      "flat": 330
+    attackSpeedRatio: {
+      flat: 0.625
     },
-    "acquisitionRadius": {
-      "flat": 525
+    attackTotalTime: {
+      flat: 1.6
     },
-    "selectionRadius": {
-      "flat": 100
+    criticalStrikeDamage: {
+      flat: 175
     },
-    "pathingRadius": {
-      "flat": 35
+    criticalStrikeDamageModifier: {
+      flat: 1
     },
-    "gameplayRadius": {
-      "flat": 65
+    gameplayRadius: {
+      flat: 65
     },
-    "criticalStrikeDamage": {
-      "flat": 175
+    health: {
+      flat: 590,
+      perLevel: 104
     },
-    "criticalStrikeDamageModifier": {
-      "flat": 1
+    healthRegen: {
+      flat: 2.5,
+      perLevel: 0.6
     },
-    "attackSpeed": {
-      "flat": 0.668,
-      "perLevel": 2.2
+    magicResistance: {
+      flat: 30,
+      perLevel: 1.3
     },
-    "attackSpeedRatio": {
-      "flat": 0.625
+    mana: {
+      flat: 418,
+      perLevel: 25
     },
-    "attackCastTime": {
-      "flat": 0.3
+    manaRegen: {
+      flat: 8,
+      perLevel: 0.8
     },
-    "attackTotalTime": {
-      "flat": 1.6
+    movespeed: {
+      flat: 330
     },
-    "attackDelayOffset": {
-      "flat": -0.1
+    pathingRadius: {
+      flat: 35
     },
-    "attackRange": {
-      "flat": 550
+    selectionRadius: {
+      flat: 100
     }
   }
 }

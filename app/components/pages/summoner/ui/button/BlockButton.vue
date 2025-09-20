@@ -1,9 +1,9 @@
 <script setup lang="ts">
 const {
   class: className,
+  size = 'md',
   summoner,
   variant = 'shadow',
-  size = 'md',
 } = defineProps<{
   class?: HTMLAttributes['class']
   summoner: Summoner

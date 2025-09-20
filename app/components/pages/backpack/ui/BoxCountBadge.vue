@@ -5,12 +5,12 @@ const { name } = defineProps<{
 console.log('🌱 - name:', name)
 
 const box = computed(() =>
-  name == 'pockets'
-    ? ps().pockets.filter(p => p.location.folder == '').length
-    : name == 'archive'
-      ? ps().pockets.filter(p => p.location.folder == 'archive').length
-      : name == 'archive'
-        ? ps().pockets.filter(p => p.location.folder == 'trash').length
+  name === 'pockets'
+    ? ps().pockets.filter(p => p.location.folder === '').length
+    : name === 'archive'
+      ? ps().pockets.filter(p => p.location.folder === 'archive').length
+      : name === 'archive'
+        ? ps().pockets.filter(p => p.location.folder === 'trash').length
         : null
 )
 console.log('🌱 - box:', box)

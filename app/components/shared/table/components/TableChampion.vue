@@ -8,7 +8,7 @@ const p = ref(props.params)
 
 <template>
   <div
-    v-if="props.params.value != undefined"
+    v-if="props.params.value !== undefined"
     v-tippy="props.params.value.name"
     class="ti-container">
     <div class="ti-wrapper">

@@ -1,7 +1,14 @@
 const item: Item = {
-  name: 'Tiamat',
   id: 3077,
-  rank: 'Epic',
+  name: 'Tiamat',
+  active: [
+    {
+      name: 'Crescent',
+      effects:
+        'Deal 75% AD physical damage to enemies within a 450 radius in front of you.',
+      unique: true,
+    },
+  ],
   buildsFrom: [
     {
       id: 1036,
@@ -36,38 +43,31 @@ const item: Item = {
       gold: 3300,
     },
   ],
-  specialRecipe: 0,
-  noEffects: false,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3077_fighter_t2_tiamat.png',
-  simpleDescription: 'Melee attacks hit nearby enemies',
+  maps: [11, 12, 21, 35],
+  noEffects: false,
   passives: [
     {
       name: 'Cleave',
-      unique: true,
       effects:
         'Basic attacks on-hit deal (<img src="/img/icons/melee.webp" class="inline-icon" />40% AD /<img src="/img/icons/ranged.webp" class="inline-icon" />20% AD) ad physical damage to other enemies in a 350 radius centered around the target.',
-    },
-  ],
-  active: [
-    {
-      name: 'Crescent',
       unique: true,
-      effects:
-        'Deal 75% AD physical damage to enemies within a 450 radius in front of you.',
     },
   ],
-  stats: {
-    attackDamage: 20,
-  },
+  rank: 'Epic',
+  removed: false,
   shop: {
     prices: {
-      total: 1200,
       combined: 500,
       sell: 480,
+      total: 1200,
     },
     tags: ['FIGHTER', 'TANK', 'ONHIT_EFFECTS'],
   },
-  maps: [11, 12, 21, 35],
+  simpleDescription: 'Melee attacks hit nearby enemies',
+  specialRecipe: 0,
+  stats: {
+    attackDamage: 20,
+  },
 }
 export default item

@@ -1,7 +1,7 @@
 const item: Item = {
-  name: 'Blackfire Torch',
   id: 2503,
-  rank: 'Legendary',
+  name: 'Blackfire Torch',
+  nicknames: ['bft'],
   buildsFrom: [
     {
       id: 3802,
@@ -14,38 +14,38 @@ const item: Item = {
       gold: 900,
     },
   ],
-  specialRecipe: 0,
-  noEffects: false,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2503_blackfiretorch64.png',
-  nicknames: ['bft'],
+  maps: [11, 12, 21, 35],
+  noEffects: false,
   passives: [
     {
       name: 'Baleful Blaze',
-      unique: true,
       effects:
         'Dealing ability damage burns enemies, causing them to take 10 (+1% AP) magic damage every 0.5 seconds over 3 seconds, for a total of 60 magic damage (+6% AP). Against monsters, the burn deals 10 <b>bonus</b> magic damage per tick, dealing a total of 20 (+1% AP) magic damage per tick for up to 120 magic damage (+6% AP).',
+      unique: true,
     },
     {
       name: 'Blackfire',
-      unique: true,
       effects:
         'For each champion, epic monster, and large monster afflicted with <i>Baleful Blaze\'s</i> burn, increase your ability power by 4%.',
+      unique: true,
     },
   ],
-  stats: {
-    abilityPower: 80,
-    mana: 600,
-    abilityHaste: 20,
-  },
+  rank: 'Legendary',
+  removed: false,
   shop: {
     prices: {
-      total: 2800,
       combined: 700,
       sell: 1120,
+      total: 2800,
     },
     tags: ['MAGE'],
   },
-  maps: [11, 12, 21, 35],
+  specialRecipe: 0,
+  stats: {
+    abilityHaste: 20,
+    abilityPower: 80,
+    mana: 600,
+  },
 }
 export default item

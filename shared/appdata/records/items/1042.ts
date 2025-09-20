@@ -1,7 +1,6 @@
 const item: Item = {
-  name: 'Dagger',
   id: 1042,
-  rank: 'Basic',
+  name: 'Dagger',
   buildsInto: [
     {
       id: 6631,
@@ -59,22 +58,23 @@ const item: Item = {
       gold: 2300,
     },
   ],
-  specialRecipe: 0,
-  noEffects: true,
-  removed: false,
   icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/1042_base_t1_dagger.png',
-  simpleDescription: 'Slightly increases Attack Speed',
-  stats: {
-    attackSpeed: 10,
-  },
+  maps: [11, 12, 21, 35],
+  noEffects: true,
+  rank: 'Basic',
+  removed: false,
   shop: {
     prices: {
-      total: 250,
       combined: 250,
       sell: 100,
+      total: 250,
     },
     tags: ['FIGHTER', 'MARKSMAN', 'ASSASSIN'],
   },
-  maps: [11, 12, 21, 35],
+  simpleDescription: 'Slightly increases Attack Speed',
+  specialRecipe: 0,
+  stats: {
+    attackSpeed: 10,
+  },
 }
 export default item
