@@ -11,9 +11,9 @@ const math = computed(() => {
 
 <template>
   <div
-    class="flex w-25 gap-1 grid auto-rows-max *:w-full justify-end justify-items-end py-1 ml-2 items-center *:items-center text-xs">
+    class="flex w-25 gap-2 **:text-end grid auto-rows-max *:w-full justify-end justify-items-end py-1 ml-2 items-center *:items-center ">
     <p
-      class="text-lggrid items-center font-bold grid justify-end tracking-wide text-nowrap inline-flex flex-nowrap leading-4">
+      class="text-lg grid items-center font-bold grid justify-end tracking-wide text-nowrap inline-flex flex-nowrap  leading-4">
       {{ player.kills }}&thinsp;/&thinsp;
       <span class="text-shade-domination/10 inline">
         {{ player.deaths }}
@@ -22,7 +22,7 @@ const math = computed(() => {
     </p>
 
     <div
-      class="grid *:flex *:items-center size-full justify-end gap-0 items-center font-medium text-xxs **:leading-none **:text-end">
+      class="grid *:flex **:!text-xs *:items-center text-end size-full justify-end flex flex-col gap-0.5 items-center font-medium **:justify-items-end **:justify-end **:flex **:leading-none **:text-end">
       <p>
         {{ Math.round(player.challenges.killParticipation * 100) }}
         <span>%&nbsp;KP</span>
@@ -30,13 +30,16 @@ const math = computed(() => {
 
       <p
         v-if="!player.deaths"
-        class="text-nowrap tracking-tight truncate">
-        PERFECT KDA
+        class="text-nowrap tracking-tight items-center flex gap-1 truncate">
+        <icon
+          name="proicons:infinity"
+          class="size-4.5 **:stroke-[1.6]" />
+        KDA
       </p>
 
       <p v-else>
         {{ (math / 100).toFixed(1) }}
-        <span class="text-[0.89rem]">&nbsp;KDA</span>
+        <span>&nbsp;KDA</span>
       </p>
     </div>
   </div>

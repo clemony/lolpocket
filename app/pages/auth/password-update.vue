@@ -7,6 +7,7 @@ definePageMeta({
   description: 'Let\'s try out a password manager this time, yeah?',
   icon: 'key',
   layout: 'basic',
+  search: 'user',
 })
 
 const password = ref('')

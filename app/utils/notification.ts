@@ -7,7 +7,7 @@ export function saveNotification(
 ) {
   const item: InboxItem = {
     id: toId(),
-    date: new Date(),
+    date: Date.now(),
     read: false,
     template,
     vars,

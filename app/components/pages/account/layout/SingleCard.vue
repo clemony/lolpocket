@@ -18,16 +18,14 @@ const route = useRoute()
         <Card class="!max-w-180 !w-full">
           <CardHeader class="text-center my-2">
             <CardTitle
-              class="text-xl>
+              class="text-xl">
               {{ route.meta?.title || route.name }}
             </CardTitle>
             <CardDescription
-              v-if="
-              route.meta?.description"
+              v-if="route.meta?.description"
               class="mt-1">
               {{ route.meta?.description }}
-              </CardDescription>
-            </cardtitle>
+            </CardDescription>
           </CardHeader>
           <CardContent>
             <slot />

@@ -1,12 +1,14 @@
 <script setup lang="ts">
+import 'tippy.js/themes/light.css'
+import { useSingleton } from 'vue-tippy'
+
 definePageMeta({
   name: 'pocket-champions',
   title: 'champions',
   alias: '/pocket/:pocket_key/champions',
-  level: 3,
   order: 1,
   path: '/pocket/:pocket_key',
-  search: false,
+  search: 'hidden',
 })
 
 const route = useRoute()
@@ -19,6 +21,15 @@ const { results } = useSimpleSearch(
   ix().champions, // array or ref
   searchQuery
 )
+
+const triggers = useTemplateRef<HTMLElement[]>('triggers')
+
+onMounted(() => {
+  useSingleton(triggers, {
+    moveTransition: 'transform 0.2s ease-out',
+    offset: [-3, 5],
+  })
+})
 </script>
 
 <template>
@@ -39,20 +50,25 @@ const { results } = useSimpleSearch(
 
     <div
       class="h-fit pb-34 grid grid-flow-row auto-cols-auto pt-14 grid-cols-[repeat(auto-fill,minmax(80px,1fr))] pl-16 pr-24 w-full inset-0 gap-3">
-      <tippy
-        v-for="champion in results.filter(
-          (r) => !pocket.champions.includes(r.key),
-        )"
+      <button
+        v-for="champion in results.filter(r => !pocket.champions.includes(r.key))"
         :key="champion.id"
-        :tag="null"
-        for="pocket-champions"
-        :arrow="false"
-        :offset="[-3, 5]"
-        :interactive="true">
+        v-tippy="{
+          content: `
+          <a href='/champions/${champion.key}' class='flex gap-1 items-center'>
+            ${champion.name}
+            <i class='icon-link size-3.5'></i>
+          </a>
+        `,
+          placement: 'bottom',
+          theme: 'light',
+          onCreate: (instance) => triggers?.push(instance),
+        }"
+        class="hover-ring cursor-pointer rounded-lg size-26">
         <ChampionIcon
           :id="champion.id"
-          :title="champion.name"
-          :class="cn('hover-ring cursor-pointer rounded-lg size-26')">
+          class="rounded-lg"
+          :title="champion.name">
           <PrismaticShine
             v-if="pocket.champions.includes(champion.key)"
             class="scale-114 pointer-events-none" />
@@ -63,17 +79,7 @@ const { results } = useSimpleSearch(
             :value="champion.key"
             class="peer hidden" />
         </ChampionIcon>
-        <template #content>
-          <ULink
-            :to="`/champions/${champion.key}`"
-            class="flex gap-1 items-center">
-            {{ champion.name }}
-            <icon
-              name="link"
-              class="size-3.5" />
-          </ULink>
-        </template>
-      </tippy>
+      </button>
     </div>
   </div>
 </template>

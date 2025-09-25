@@ -7,6 +7,7 @@ definePageMeta({
   description: 'Login with your Riot, Google, or Discord account',
   icon: 'plug',
   layout: 'basic',
+  search: '!user',
 })
 
 const email = ref('')

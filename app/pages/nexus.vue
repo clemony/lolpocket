@@ -8,47 +8,9 @@ const container = useDomRef()
 definePageMeta({
   name: 'nexus',
   icon: 'mdi:atom-variant',
-  level: 1,
   order: 1,
   path: '/nexus',
 })
-
-console.log('🌱 - ss().getSummoner(as().account.puuid):', ss().cache)
-console.log('🌱 - as().account.puuid:', as().account.puuid)
-async function hydrateUser1() {
-  const client = useSupabaseClient()
-  const user = useSupabaseUser().value
-
-  console.log('Authenticated user: ', user)
-
-  if (!user)
-    throw new Error('hydrateUser: no logged-in user')
-
-  console.log('logpoint-1')
-
-  try {
-    console.log('user.id: ', user.id)
-    const { data, error } = await client
-      .from('user_account')
-      .select('*')
-      .eq('uuid', user.id)
-      .single()
-
-    console.log('logpoint-2')
-    console.log('error: ', error)
-    console.log('data: ', data)
-    if (error)
-      throw error
-
-    if (data) {
-      // Use the entire row
-      console.log(data)
-    }
-  }
-  catch (error) {
-    console.error('Error fetching user account:', error)
-  }
-}
 </script>
 
 <template>

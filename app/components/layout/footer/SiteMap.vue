@@ -32,7 +32,7 @@ watch(
         <h1>
           Looking for something?
         </h1>
-        <SummonerSearchBox class="!h-13 -mx-1"></SummonerSearchBox>
+        <Search class="!h-13 -mx-1 w-100"></Search>
 
         <p class="flex text-bc flex-col gap-2 mt-2 pl-px">
           <span>Browse your favorite players...</span>

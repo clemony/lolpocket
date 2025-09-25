@@ -7,6 +7,7 @@ definePageMeta({
     'Set your public profile display settings and hide your annoyances.',
   icon: 'at',
   path: '/settings/profile',
+  search: 'user',
   /* middleware: 'confirm-auth', */
 })
 
@@ -73,8 +74,18 @@ async function onSubmit(values: any) {
       </div>
       <div class="grid gap-2">
         <label :class="labelClass">
-          <h5>Ranked Solo/Duo</h5>
+          <h5>Profile Header & Splash</h5>
 
+          <p class="flex gap-4 mt-2 items-center font-medium italic">
+            {{ as().settings.profileSplashHeader ? "Visible" : "Hidden" }}
+            <Switch
+              v-model:model-value="as().settings.showSolo"
+              class="!pointer-events-auto hover-ring" />
+          </p>
+        </label>
+        <h5>Ranked Solo/Duo</h5>
+
+        <label :class="labelClass">
           <p class="flex gap-4 mt-2 items-center font-medium italic">
             {{ as().settings.showSolo ? "Visible" : "Hidden" }}
             <Switch

@@ -3,8 +3,8 @@ const { state } = defineProps<{
   state: PlayerData
 }>()
 
-const emit = defineEmits(['scroll-to-top'])
-const itemsPerPage = 12
+const emit = defineEmits(['scroll-top'])
+const itemsPerPage = 20
 const currentPage = ref(1)
 
 const pagedMatches = computed(() => {
@@ -19,32 +19,25 @@ watch(
       currentPage.value = 1
   }
 )
-
-const scroll = inject<Scroll>('scroll-top')
-watch(
-  () => currentPage.value,
-  (newVal) => {
-    if (newVal)
-      scroll.top()
-  }
-)
 </script>
 
 <template>
-  <div class="flex-col py-24 flex w-full">
+  <div
+    class="flex-col overflow-visible py-24 flex w-full">
     <div
       v-if="state.loading"
       class="flex flex-col gap-8">
-      <LazyMatchCardSkeleton
+      <Skeleton
         v-for="i in itemsPerPage"
-        :key="i" />
+        :key="i"
+        class="h-40 field-box w-full max-w-220" />
     </div>
 
     <TransitionScalePop
       v-else-if="pagedMatches.length > 0"
       :appear="false"
       group
-      class="flex flex-col gap-8 pb-px">
+      class="flex  flex-col gap-8 pb-px">
       <LazyMatchCard
         v-for="match in pagedMatches"
         :key="match.matchId"
@@ -76,9 +69,9 @@ watch(
             v-if="page.type === 'page'"
             :key="index"
             variant="outline"
-            :value="index + 1"
             size="sm"
-            :is-active="index + 1 === currentPage"></PaginationItem>
+            :value="page.value"
+            :is-active="page.value === currentPage"></PaginationItem>
           <PaginationEllipsis
             v-else
             :key="page.type"

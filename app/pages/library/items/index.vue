@@ -4,8 +4,6 @@ definePageMeta({
   title: 'Items',
   icon: 'bow',
 })
-
-console.log('🌱 - is().filtered:', is().filtered)
 </script>
 
 <template>

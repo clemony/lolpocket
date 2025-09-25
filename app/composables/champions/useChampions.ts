@@ -9,6 +9,10 @@ export interface ChampionStatsGroup {
   splash: string
 }
 
+export interface UseChampionOptions {
+  champion?: string
+  filtered?: boolean
+}
 export interface UseChampionsReturn {
   bayesian: () => BayesianChampionStats[]
   liteChampionStats: Record<string, number>
@@ -23,14 +27,14 @@ export function useChampions(
   matches: MatchData[],
   championName?: string
 ): UseChampionsReturn {
-  const player = matches.map(p =>
-    p.participants.find(p => p.puuid === puuid)
-  )
-
   const liteChampionStats = computed<Record<string, number>>(() => {
     const counts: Record<string, number> = {}
 
-    for (const p of player) {
+    const playerMatches = matches.map(p =>
+      p.participants.find(p => p.puuid === puuid)
+    )
+
+    for (const p of playerMatches) {
       const champ = ix().champNameById(p.championId)
       counts[champ] = (counts[champ] || 0) + 1
     }
@@ -38,7 +42,6 @@ export function useChampions(
     const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1])
     return Object.fromEntries(sorted) as Record<string, number>
   })
-
   const topChampion = computed(() => {
     const champ = Object.keys(liteChampionStats.value)[0]
     return {
@@ -56,13 +59,13 @@ export function useChampions(
   )
 
   return {
-    bayesian: () => useBayesianChampionStats(matches),
+    bayesian: () => useBayesianChampionStats(matches, puuid),
     liteChampionStats: liteChampionStats.value,
     singleBayesian: (championName: string) =>
-      useSingleBayesianChampionStats(matches, championName),
+      useSingleBayesianChampionStats(matches, championName, puuid),
     singleStat: (championName: string) =>
-      useSingleChampionStats(matches, championName),
-    stats: () => useBasicChampionStats(matches),
+      useSingleChampionStats(matches, championName, puuid),
+    stats: () => useBasicChampionStats(matches, puuid),
     top: () => topChampion.value,
   }
 }

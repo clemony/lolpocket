@@ -80,7 +80,7 @@ const runeClass
           content: player.riotIdGameName,
           placement: 'top',
         }"
-        class="font-bold text-nowrap text-xs truncate flex-nowrap items-end size-full">
+        class="font-semibold text-nowrap text-xs truncate flex-nowrap items-end size-full">
         {{ player.riotIdGameName }}
       </h4>
 
@@ -116,7 +116,7 @@ const runeClass
         :class="runeClass">
         <Img
           :alt="stats.secondaryPath"
-          :img="`/img/runes/${stats.secondaryPath}.webp`"
+          :img="`/img/paths/${stats.secondaryPath}.webp`"
           class="h-4.5 w-auto object-center absolute hover-ring rounded-tiny"
           :class="{
             '!h-4': stats.secondaryPath?.toLowerCase() === 'inspiration',
@@ -129,17 +129,9 @@ const runeClass
     <div
       class=""
       :class="divClass">
-      <h4 class="font-bold leading-0 items-center text-nowrap flex flex-nowrap">
-        {{ player.kills }}
-        <icon
-          name="slash"
-          class="-mx-px dst size-3" />
-        {{ player.deaths }}
-        <icon
-          name="slash"
-          class="-mx-px dst size-3" />
-        {{ player.assists }}
-      </h4>
+      <p class="font-semibold leading-0 items-center text-nowrap flex !text-xs flex-nowrap tracking-wide **:tracking-wide">
+        {{ player.kills }}&#8198;/&#8198;<span class="text-red-800">{{ player.deaths }}</span>&#8198;/&#8198;{{ player.assists }}
+      </p>
 
       <Badge
         v-if="stats.kda / 100 === Infinity"

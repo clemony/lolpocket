@@ -1,52 +1,51 @@
 <script lang="ts" setup>
-const {
-  title,
-  class: className,
-  description,
-  icon = false,
-  size = 'default',
-} = defineProps<{
-  title?: string
-  description?: string
-  class?: HTMLAttributes['class']
-  size?: 'default' | 'lg' | 'xl'
-  icon?: boolean
+const { size = 'default', } = defineProps<{
+  size?: 'default' | 'lg'
 }>()
-/* ? alsdjlsajd */
 </script>
 
 <template>
-  <div class="overflow-hidden flex flex-col size-full absolute inset-0 top-0">
-    <div
-      :class="
-        cn(' grid grid-cols-2 z-0 size-full  sticky top-0 bg-b1 z-1 ', {
-          ' max-h-74 h-74 ': size === 'xl',
-          ' h-64': size === 'lg',
-          ' max-h-58 h-58': size === 'default',
-        })
-      ">
+  <div class="relative  max-w-mw size-full">
+    <!-- BG slice, behind everything but above context -->
+    <div class="absolute top-0 left-0 w-full h-16 z-5 overflow-hidden">
       <slot name="background" />
-      <Separator class="absolute z-0 bottom-0" />
-      <div :class="cn('flex flex-col z-1  *:z-1 size-full gap-6')">
-        <div class="flex items-center gap-8  grow pl-32">
+    </div>
+
+    <!-- Background (fills whole area) -->
+    <slot name="background" />
+
+    <!-- Header block -->
+    <div
+      :class="cn('grid grid-cols-2 z-0 size-full overflow-hidden', {
+        'h-70 min-h-70': size === 'lg',
+        'max-h-58 h-58 min-h-58': size === 'default',
+      })">
+      <div class="flex flex-col pt-14 z-1 grow *:z-1 size-full">
+        <div class="flex items-center gap-8 h-full pl-72">
           <slot name="icon" />
           <slot name="header" />
         </div>
-        <div
-          :class="
-            cn('flex gap-4  *:first:justify-self-end pl-32', { 'pl-58': icon })
-          ">
-          <slot name="before-tabs" />
-          <slot name="tabs" />
-          <slot name="after-tabs" />
-        </div>
-      </div>
-      <div class="size-full overflow-hidden border-b border-b-b3">
-        <slot name="header-right" />
       </div>
     </div>
-    <div class="size-full overflow-hidden relative">
-      <slot />
+
+    <!-- Scrollable content -->
+    <div
+      :class="cn('absolute inset-0 top-0 overflow-y-auto', {
+        'pt-70': size === 'lg',
+        'pt-32': size === 'default',
+      })">
+      <!-- Sticky Tabs (now ABOVE parent header) -->
+      <div
+        class="flex w-full gap-4 pointer-events-none overflow-hidden h-16 min-h-16 sticky -top-70 z-11 items-end pl-82">
+        <Separator class="absolute left-0 w-full z-0 bottom-0 bg-b3/60" />
+        <NavFileTabs />
+      </div>
+
+      <!-- Context wrapper -->
+      <div class="relative w-full min-h-screen z-1 bg-b1">
+        <slot />
+        <SiteFooter />
+      </div>
     </div>
   </div>
 </template>

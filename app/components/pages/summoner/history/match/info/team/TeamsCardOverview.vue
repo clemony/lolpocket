@@ -1,79 +1,38 @@
 <script lang="ts" setup>
-const props = defineProps<{
+const { match } = defineProps<{
   match: MatchData
 }>()
-const match = computed(() => {
-  return props.match
-})
 
-const blue = computed(() => {
-  return match.value.participants.filter(p => p.teamId === 100)
-})
-
-const red = computed<Player[]>(() => {
-  return match.value.participants.filter(p => p.teamId === 200)
-})
-
-function navigate() {}
+const route = useRoute()
 </script>
 
 <template>
   <div
-    class="grid grid-cols-[repeat(2,100px)] @min-xl/match:*:max-w-36 @min-xl/match:*:w-36 @min-lg/match:*:max-w-24 @min-lg/match:*:w-24 gap-4 overflow-hidden *:gap-y-px *:grid *:grid-rows-5">
-    <div class="size-full">
+    class="grid grid-cols-2 justify-self-end max-w-74 gap-4 grid-flow-col overflow-hidden gap-y-px grid grid-rows-5 ">
+    <BtnLink
+      v-for="player in match.participants"
+      :key="player.puuid"
+      variant="link"
+      :to="`/summoner/${route.params.region}/${player.riotIdGameName}_${player.riotIdTagline}`"
+      :class="cn('flex grow gap-2 overflow-hidden', { 'col-start-1': player.teamId === 100, 'col-start-2 ': player.teamId === 200 })">
       <div
-        v-for="player in blue"
-        :key="player.puuid"
-        class="flex grow gap-2 overflow-hidden">
-        <div
-          class="flex gap-2 overflow-hidden"
-          @click.stop="navigate()">
-          <ChampionIcon
-            v-if="player"
-            :id="player?.championId"
-            v-tippy="{
-              content: ix().champNameById(player?.championId),
-              placement: 'right',
-            }"
-            alt="champion-icon"
-            class="rounded-tiny size-5.5" />
-
-          <a
-            v-tippy="{ content: player.riotIdGameName, placement: 'left' }"
-            class="text-xxs tracking-tight h-full align-middle w-full text-nowrap hover:underline decoration-1 font-medium truncate">
-            {{ player.riotIdGameName }}
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="size-full">
-      <div
-        v-for="player in red"
-        :key="player.puuid"
-        class="flex grow gap-2 overflow-hidden">
-        <a
+        class="flex gap-2 overflow-hidden">
+        <ChampionIcon
+          v-if="player"
+          :id="player?.championId"
           v-tippy="{
-            content: `${player.riotIdGameName} 🡭`,
+            content: ix().champNameById(player?.championId),
             placement: 'right',
           }"
-          class="flex gap-2">
-          <ChampionIcon
-            v-if="player"
-            :id="player?.championId"
-            v-tippy="{
-              content: ix().champNameById(player?.championId),
-              placement: 'left',
-            }"
-            alt="champion-icon"
-            class="rounded-tiny size-5.5" />
+          alt="champion-icon"
+          class="rounded-tiny size-6 dst shadow-xs" />
 
-          <span
-            class="@max-lg/match:hidden @max-lg/match:opacity-0 text-xxs tracking-tight h-full align-middle w-full text-nowrap hover:underline decoration-1 font-medium truncate">
-            {{ player.riotIdGameName }}
-          </span>
+        <a
+          v-tippy="{ content: player.riotIdGameName, placement: 'right' }"
+          class="text-xxs tracking-tight h-full  w-full text-nowrap  font-medium truncate">
+          {{ player.riotIdGameName }}
         </a>
       </div>
-    </div>
+    </BtnLink>
   </div>
 </template>

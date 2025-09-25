@@ -8,7 +8,7 @@ const { class: className } = defineProps<{
   <header
     :class="
       cn(
-        'relative gap-6 flex flex flex-nowrap  items-center  w-fit max-w-120 max-h-22 h-22',
+        'relative gap-6 flex flex flex-nowrap  items-center  w-fit max-w-120 max-h-18 h-18',
         className,
       )
     ">
@@ -20,10 +20,10 @@ const { class: className } = defineProps<{
     <div class="flex flex-col w-full">
       <!-- header pre-text -->
       <div
-        class="inline-flex max-h-4 **:text-sm dst flex-nowrap text-nowrap lowercase gap-4 pl-0.5 font-normal">
+        class="inline-flex max-h-4 **:text-sm dst flex-nowrap text-nowrap lowercase gap-3 pl-0.5 font-normal">
         <slot name="pre-header" />
       </div>
-      <div class="flex items-center justify-between w-full gap-8 mb-3 max-h-12">
+      <div class="flex items-center justify-between w-full gap-8 mb-1 max-h-12">
         <!-- header name -->
 
         <slot name="title" />

@@ -5,7 +5,8 @@ definePageMeta({
   name: 'terms',
   title: 'Terms & Conditions',
   description: 'Information concerning general app usage.',
-  icon: 'gear',
+  icon: 'lucide:file-text',
+  iconClass: '!**:stroke-1.1',
   path: '/faq/terms',
 })
 </script>

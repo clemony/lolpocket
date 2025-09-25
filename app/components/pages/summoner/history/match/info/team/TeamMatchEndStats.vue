@@ -14,7 +14,7 @@ const { class: className, team } = defineProps<{
       )
     ">
     <h3
-      class="text-lgdst text-start text-nowrap text-white/86 font-bold uppercase">
+      class="text-lg dst text-start text-nowrap text-white/86 font-bold uppercase">
       {{ team.win ? "Win" : "Loss" }}
     </h3>
     <div
@@ -35,7 +35,7 @@ const { class: className, team } = defineProps<{
       :team-object="team" />
 
     <p class="flex gap-2 justify-end">
-      <i-ui-gold-icon class="size-4 text-[#C2A76E]" />
+      <i-lol-gold class="size-4 text-[#C2A76E]" />
 
       <span
         v-if="team.gold"

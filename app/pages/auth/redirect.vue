@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 definePageMeta({
   layout: 'basic',
+  search: 'hidden',
 })
 
 const progress = ref(0)

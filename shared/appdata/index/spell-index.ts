@@ -45,4 +45,56 @@ export const spellIndex: Record<string, string | number>[] = [
     id: 2201,
     name: 'Hold',
   },
+  {
+    id: 13,
+    name: 'Clarity',
+  },
+
+  {
+    id: 30,
+    name: 'To the King!',
+
+  },
+  {
+    id: 31,
+    name: 'Poro Toss',
+
+  },
+  {
+    id: 32,
+    name: 'Mark',
+  },
+  {
+    id: 39,
+    name: 'Mark',
+
+  },
+  {
+    id: 54,
+    name: 'Placeholder',
+
+  },
+  {
+    id: 55,
+    name: 'Placeholder and Attack-Smite',
+
+  },
+  {
+    id: 2201,
+    name: 'Flee',
+
+  },
+  {
+    id: 2202,
+    name: 'Flash',
+
+  },
+  {
+    id: 2203,
+    name: 'Flash',
+  },
+  {
+    id: 4294967295,
+    name: 'Primal Smite',
+  }
 ]

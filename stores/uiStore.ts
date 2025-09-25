@@ -38,10 +38,13 @@ export const useUiStore = defineStore(
         pocket: ref([true, true]),
       },
     }
-
+    const blockDialog = ref<boolean>(false)
     return {
 
       // dialog
+      blockDialog,
+
+      // collapse
       sidebarStates,
       champTabs,
       champTabValue,

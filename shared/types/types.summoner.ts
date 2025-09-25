@@ -4,18 +4,18 @@ export interface ChampionMastery {
   level: number
   points: number
 }
-
 export interface Summoner {
   name: string
   puuid: string
-  lastMatchUpdate: Date
-  lastUpdate?: Date
+  lastMatchUpdate: number
+  lastNameCheck: number
+  lastUpdate?: number
   level: number
   mastery?: {
     totalPoints: number
     totalLevels: number
     champions: ChampionMastery[]
-    lastUpdate: Date
+    lastUpdate: number
   }
   profileIcon: string
   profileSplash: string

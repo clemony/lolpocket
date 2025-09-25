@@ -1,6 +1,6 @@
 import fs from 'node:fs'
 import path from 'node:path'
-import { markUpdate } from '~/server/utils'
+import { markUpdate } from '../../../shared/utils/markUpdate'
 import { normalizeArray } from '../utils'
 
 interface ItemLite {

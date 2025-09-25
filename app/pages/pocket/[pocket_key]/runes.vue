@@ -8,7 +8,7 @@ definePageMeta({
   level: 3,
   order: 3,
   path: '/pocket/:pocket_key/runes',
-  search: false,
+  search: 'hidden',
 })
 
 const route = useRoute()

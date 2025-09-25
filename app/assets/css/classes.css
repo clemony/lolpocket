@@ -8,10 +8,6 @@
     @apply !grayscale-0 ring-neutral opacity-100 ring;
   }
 
-  .dst {
-    @apply drop-shadow-text;
-  }
-
   .role-text {
     @apply saturate-250 brightness-70;
   }
@@ -62,13 +58,13 @@
   }
 
   .ability-effect {
-    @apply drop-shadow-text nth-of-type-2:mt-3 inline-block justify-self-center
+    @apply dst nth-of-type-2:mt-3 inline-block justify-self-center
     align-middle leading-5 not-first:ml-2 not-first:pl-4 not-first:border-l
     not-first:border-l-b4 not-first:not-nth-of-type-2:pt-3;
   }
 
   .ability-header {
-    @apply drop-shadow-text !text-xs font-semibold uppercase tracking-normal;
+    @apply dst !text-xs font-semibold uppercase tracking-normal;
   }
 
   .corner-mask {

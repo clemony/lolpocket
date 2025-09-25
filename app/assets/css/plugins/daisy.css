@@ -2,6 +2,175 @@
 @import '../theme.css';
 @plugin "daisyui";
 
+@utility fx-0 {
+  --noise: 0;
+  --depth: 0;
+}
+
+@utility fx-1 {
+  --noise: 0.8;
+  --depth: 1;
+}
+
+/* input */
+
+@utility input {
+  @apply focus-within:outline-0 focus-within:outline-offset-0 text-xs   focus-within:ring-n1/50 focus-within:ring-1 w-full ring-offset-b1  inset-shadow-black/4  inset-shadow-xs border-b3 **:text-xs h-10;
+  border-image-width: 0 !important;
+  --input-color: var(--b3);
+}
+
+/* divider */
+
+@utility divider {
+  @apply h-px text-xs font-semibold opacity-50;
+}
+
+/* badge */
+
+@utility badge {
+  @apply rounded-lg shadow-sm shadow-black/2 text-xs px-2 flex gap-2 dst items-center  box-border;
+}
+
+@utility badge-neutral {
+  @apply text-nc bg-neutral;
+}
+
+@utility badge-default {
+  @apply bg-b1/94 backdrop-blur-sm border-b4/70  text-bc;
+}
+
+/* collapse */
+
+@utility collapse-input {
+  @apply !min-h-0 !py-0 h-11 text-nowrap flex-nowrap items-center justify-start;
+}
+
+@utility collapse-title {
+  @apply !min-h-0 !py-0 h-11 text-nowrap flex-nowrap items-center justify-start;
+ /* @apply p-0 w-auto h-auto; */
+}
+
+/* chkbx */
+
+@utility checkbox-neutral {
+  @apply border-b4 inset-shadow-none;
+}
+@utility checkbox-sm {
+  @apply rounded-[3.5px];
+}
+
+/*  btn */
+
+@utility btn {
+  --noise: 1;
+  @apply font-normal px-3 text-sm gap-3 items-center bg-transparent;
+}
+
+@layer utilities {
+  .btn-ghost-dark {
+    @apply py-1 cursor-pointer capitalize  text-white/60  text-sm hover:text-white/80  rounded-xl w-full border border-transparent hover:border-black-30/70 hover:drop-shadow-xs hover:shadow-sm hover:bg-black-25/60 hover:backdrop-blur-md  hover:inset-shadow-xs inset-shadow-black-30/30 hover:shadow-black-25/60   hover:drop-shadow-black-35/60;
+  }
+
+  .btn-ghost-dark:where(:not(.btn-square)) {
+    @apply flex items-center gap-3  px-3;
+  }
+
+  .btn-ghost-dark:where(.btn-square) {
+    @apply grid place-items-center;
+  }
+}
+
+/* chat */
+
+@utility chat-header {
+  @apply text-xxs px-2 !leading-0 translate-y-0.75;
+}
+@utility chat-footer {
+  @apply !text-xxs px-2 !leading-0 -translate-y-2.75;
+}
+
+@utility chat-bubble {
+  @apply bg-b2;
+  &::before {
+    @apply scale-y-250 scale-x-200  -translate-y-[6.5px] translate-x-1;
+  }
+}
+
+/* tooltip */
+
+@utility tooltip {
+  --tt-bg: --alpha(var(--color-b1) / 99%) !important;
+}
+@utility tooltip {
+  @apply relative;
+
+  &::before {
+    @apply z-50 py-1.5 px-3 text-xs border-b3 text-bc max-w-64 whitespace-pre-wrap drop-shadow-sm transition-all duration-300 leading-5.5 text-start bg-[var(--tt-bg)];
+  }
+
+  &::after {
+    @apply hidden;
+  }
+}
+
+@layer components {
+  /* field  */
+
+  .field {
+    @apply fieldset mt-2 relative w-full h-fit bg-b2 border border-b3/60 p-4 rounded-box;
+  }
+
+  .field-legend {
+    @apply fieldset-legend absolute left-5.5 -top-5 text-sm max-w-64  max-h-12;
+  }
+
+  .field-box {
+    background: url('../icons/ui/noise.svg');
+    @apply shadow-warm-soft overflow-visible border bg-size-[160px] bg-b2/40 bg-repeat  drop-shadow-xs border-b3/60 rounded-xl **:select-none text-xs   relative;
+  }
+
+    /* progress */
+
+  .progress {
+    @supports (-webkit-appearance: none) {
+      &::-webkit-progress-value {
+        @apply rounded-xl;
+      }
+    }
+  }
+
+  .progress&::-webkit-progress-value {
+    border-radius: var(--rounded-xl) !important;
+  }
+
+    /* stat display  */
+
+  .stats {
+    .stat {
+      @apply items-center;
+    }
+
+    .stat-title {
+      @apply !text-sm font-semibold  drop-shadow-[1px_0px_0px_#00000020];
+    }
+
+    .stat-desc {
+      @apply !text-xs font-medium  drop-shadow-[1px_0px_0px_#00000020];
+    }
+
+    .stat-figure {
+      @apply drop-shadow-[1px_0px_0px_#00000020];
+    }
+
+    .stat-value {
+      @apply drop-shadow-[1px_0px_0px_#00000020];
+    }
+  }
+}
+
+/* config */
+
 @plugin "daisyui" {
   root: ':root';
   themes: lofi;
@@ -41,8 +210,8 @@
   --tabcontent-radius-es: var(--rounded-xl);
   --tabcontent-radius-ee: var(--rounded-xl);
 
-  --tab-border-color: var(--b3);
-  --tab-border-colors: var(--b3);
+
+
   --radius-selector: 0.4rem;
   --radius-box: 1rem;
   --radius-field: 0.55rem;

@@ -1,6 +1,4 @@
 import type { RouteRecordRaw } from 'vue-router'
-import { onKeyDown, onKeyUp } from '@vueuse/core'
-// composables/useRouteKeyNavigation.ts
 import { useRoute, useRouter } from 'vue-router'
 
 export function useRouteNavigation() {

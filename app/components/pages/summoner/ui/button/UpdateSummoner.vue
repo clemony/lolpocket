@@ -59,7 +59,7 @@ const tip = computed(
       class="relative grid overflow-hidden size-full place-items-center">
       <icon
         v-if="!cooldown"
-        name="mingcute:refresh-2-line"
+        name="reset"
         :class="
           cn(
             ' size-5   shrink-0 in-[.btn-neutral]:opacity-80 not-in-[.btn-neutral]:opacity-60 group-hover/load:opacity-100 dst transition-all duration-200',

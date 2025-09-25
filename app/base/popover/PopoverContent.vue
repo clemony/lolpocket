@@ -31,6 +31,8 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
   <PopoverPortal :to="props.to">
     <PopoverContent
       :id="props.id"
+      :align
+      :side-offset
       v-bind="{ forwarded }"
       :class="
         cn(

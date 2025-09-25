@@ -4,10 +4,10 @@ import { /* championAkaLookup, */ championFilters } from '~~/shared/appdata'
 
 export interface ChampionFilter {
   attackType: string | null
-  positions: string
+  position: string
   query: string | null
   resource: string | null
-  roles: string | null
+  role: string | null
 }
 
 export const useChampStore = defineStore('ChampStore', () => {
@@ -22,10 +22,10 @@ export const useChampStore = defineStore('ChampStore', () => {
   // --- FILTER STATE ---
   const filters = ref<ChampionFilter>({
     attackType: null,
-    positions: null,
+    position: null,
     query: null,
     resource: null,
-    roles: null,
+    role: null,
   })
 
   // --- HELPERS ---
@@ -33,10 +33,10 @@ export const useChampStore = defineStore('ChampStore', () => {
   function clearFilters() {
     filters.value = {
       attackType: null,
-      positions: null,
+      position: null,
       query: null,
       resource: null,
-      roles: null,
+      role: null,
     }
   }
 
@@ -47,6 +47,7 @@ export const useChampStore = defineStore('ChampStore', () => {
 
   const filtered = computed(() => {
     const query = debouncedQuery.value.toLowerCase()
+
     const allIds = ix().champions.map(i => i.id)
     let matchedIds: Set<number> = new Set(allIds)
 
@@ -57,15 +58,15 @@ export const useChampStore = defineStore('ChampStore', () => {
       }
     }
 
-    if (filters.value.positions.length > 0) {
-      for (const tag of filters.value.positions) {
+    if (filters.value.position.length > 0) {
+      for (const tag of filters.value.position) {
         const ids = championFilters.positions[tag] ?? []
         matchedIds = new Set(ids.filter(id => matchedIds.has(id)))
       }
     }
 
-    if (filters.value.roles && filters.value.roles !== 'all') {
-      const rolesIds = championFilters.roles[filters.value.roles] ?? []
+    if (filters.value.role && filters.value.role !== 'all') {
+      const rolesIds = championFilters.roles[filters.value.role] ?? []
       matchedIds = new Set(rolesIds.filter(id => matchedIds.has(id)))
     }
 
@@ -104,5 +105,6 @@ export const useChampStore = defineStore('ChampStore', () => {
     dbChampionStatListKey,
     filtered,
     filters,
+
   }
 })

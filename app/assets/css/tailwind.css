@@ -14,7 +14,7 @@
   :root {
     scrollbar-color: oklch(0 0.02476 255.702 / 0.075) rgba(0, 0, 0, 0) !important;
     font-size: 12px;
-    user-select: none;
+    /* user-select: none; */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -22,12 +22,14 @@
   * {
     @apply border-b3 decoration-from-font underline-offset-2;
   }
-
+img {
+  @apply select-none;
+}
   html,
   body,
   #app {
     font-family: var(--font-sans);
-    @apply text-bc h-screen w-screen text-sm selection:bg-n1/80 selection:text-nc;
+    @apply text-bc h-screen w-screen text-sm selection:bg-n1/80 selection:text-nc relative;
   }
 
   input,
@@ -44,7 +46,6 @@
   }
 
   body {
-    @apply bg-b1;
   }
 }
 
@@ -85,10 +86,10 @@
   h1,
   h2,
   h3 {
-    @apply drop-shadow-text font-bold;
+    @apply dst font-bold;
   }
   h4 {
-    @apply font-semibold drop-shadow-text;
+    @apply font-semibold dst;
   }
   p {
     @apply leading-5.25 antialiased;
