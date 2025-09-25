@@ -2,7 +2,7 @@
 const state = useSummonerInject()
 
 const queueModel = computed({
-  get: () => state.filter.queue,
+  get: () => state.filter.value.queue,
   set: val => state.setFilter('queue', val),
 })
 </script>

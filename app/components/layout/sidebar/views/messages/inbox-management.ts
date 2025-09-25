@@ -54,7 +54,7 @@ export function trashMsg(msgId) {
   const msg = matchMsg(msgId)
   if (msg) {
     msg.trash = true
-    msg.dateTrashed = new Date()
+    msg.dateTrashed = Date.now()
   }
 }
 

@@ -1,4 +1,4 @@
-export function formatTimeAgo(date: Date, format?: 'letter' | 'short') {
+export function formatTimeAgo(date: number, format?: 'letter' | 'short') {
   if (!date)
     return
 
@@ -14,14 +14,20 @@ export function formatTimeAgo(date: Date, format?: 'letter' | 'short') {
   }
 }
 
-export function isStale(date?: Date | string | null, maxMinutes = 30) {
+export function isStale(date?: number | string | Date | null, maxMinutes = 30) {
   if (!date)
     return true
-  const updated = typeof date === 'string' ? new Date(date) : date
+
+  const updated
+    = typeof date === 'number'
+      ? new Date(date)
+      : typeof date === 'string'
+        ? new Date(date)
+        : date
+
   const diff = (Date.now() - updated.getTime()) / 1000 / 60
   return diff > maxMinutes
 }
-
 /**
  * Takes a Date, string, null, or undefined and returns a Date
  * object. If the input is a string, it will be parsed as a date.

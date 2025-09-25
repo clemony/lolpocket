@@ -10,7 +10,8 @@ export function useIndexedDB() {
   }
 
   const getAllMatches = async () => {
-    return await matchDB.matchData.toArray()
+    const a = await matchDB.matchData.toArray()
+    return a.filter(m => m.queueId !== 3200)
   }
 
   const getAllMatchIds = async () => {
@@ -18,11 +19,13 @@ export function useIndexedDB() {
   }
 
   const getMatchesForSummoner = async (puuid: string): Promise<MatchData[]> => {
-    return await matchDB.matchData
+    const a = await matchDB.matchData
       .where('participantIds')
       .equals(puuid)
       .reverse() // newest first
       .sortBy('creation')
+
+    return a.filter(m => m.queueId !== 3200)
   }
 
   const getAllMatchIdsForPuuid = async (puuid: string): Promise<string[]> => {

@@ -15,7 +15,7 @@ export function matchFilters(
 
   const matchesChampion
     = !champion
-      || champion === null
+      || champion === ''
       || ix().champNameById(player.championId) === champion
 
   const matchesPlayer
@@ -33,4 +33,29 @@ export function matchFilters(
   )
 }
 
-//
+export function matchFiltersIgnoreChampion(
+  puuid: string,
+  match: MatchData,
+  options: MatchFilter
+) {
+  const { ally, ignoreRole = false, patch, queue, role } = options
+  const player = match.participants.find(p => p.puuid === puuid)
+
+  if (!player)
+    return false
+
+  const matchesPatch
+    = !patch || patch === ds().currentPatch || match.gamePatch === patch
+
+  const matchesQueue
+    = !queue || Number(queue) === 0 || match.queueId === Number(queue)
+
+  const matchesPlayer
+    = !ally || match.participants.some(p => p.riotIdGameName === ally)
+
+  const matchesRole
+    = ignoreRole || !role || role === 'ALL' || player.teamPosition === role
+
+  // note: no champion filtering here
+  return matchesPatch && matchesQueue && matchesPlayer && matchesRole
+}

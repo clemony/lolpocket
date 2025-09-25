@@ -7,6 +7,7 @@ definePageMeta({
   description: 'Manage your account settings and login settings.',
   icon: 'at',
   path: '/settings/account',
+  search: 'user',
   /*   middleware: 'confirm-auth', */
 })
 
@@ -207,6 +208,29 @@ console.log('userProviders: ', userProviders)
           </Button>
         </template>
       </Input>
+    </fieldset>
+
+    <!-- username -->
+
+    <fieldset
+      id="blocked-users"
+      class="space-y-6">
+      <div class="leading-4">
+        <h4
+          as="legend"
+          class="text-lg font-semibold mb-2">
+          Blocked Users
+        </h4>
+
+        <p class="label text-wrap">
+          This is the name that will be used throughout the site. Defers to in
+          game name if a Riot account is connected.
+        </p>
+      </div>
+      <Input
+        v-model="as().account.username"
+        type="text"
+        placeholder="Username" />
     </fieldset>
 
     <div class="flex justify-start">

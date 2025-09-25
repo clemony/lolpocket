@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-/* import { ChampionGridIcon, GridLastPlayed, GridMasteryPoints } from 'components' */
 import type {
   ColDef,
   ColGroupDef,
@@ -7,6 +6,7 @@ import type {
   GridOptions,
   GridReadyEvent,
 } from 'ag-grid-community'
+import { ChampionGridIcon, GridLastPlayed, GridMasteryPoints } from '#components'
 import { useScroll } from '@vueuse/core'
 import {
   CellStyleModule,
@@ -27,13 +27,13 @@ const { mastery, summoner } = defineProps<{
   mastery: ChampionMastery[]
   summoner: Summoner
 }>()
-// FIXME
-/* defineExpose({
+
+defineExpose({
   ChampionGridIcon,
   GridLastPlayed,
   GridMasteryPoints,
 })
- */
+
 const theme = ref(masteryGridTheme)
 
 const gridApi = shallowRef<GridApi | null>(null)
@@ -56,18 +56,18 @@ const gridOptions: GridOptions<ChampionMastery> = {
 
 const colDefs: (ColDef<ChampionMastery> | ColGroupDef<ChampionMastery>)[] = [
   {
-    cellClass: 'py-2 !px-0',
-    colId: 'rank',
-    field: 'level',
-    headerName: 'Rank',
-    /*    cellRenderer: ChampionGridIcon, */
     maxWidth: 360,
     minWidth: 180,
     width: 360,
+    cellClass: 'py-2 !px-0',
     cellDataType: 'number',
+    cellRenderer: ChampionGridIcon,
     cellRendererParams: {
       img: true,
     },
+    colId: 'rank',
+    field: 'level',
+    headerName: 'Rank',
     valueGetter: params => params.data.level,
   },
 
@@ -82,27 +82,28 @@ const colDefs: (ColDef<ChampionMastery> | ColGroupDef<ChampionMastery>)[] = [
       'items-center !flex [&_.ag-header-cell-comp-wrapper]:!h-5 [&_.ag-header-cell-text]:!mt-px ',
     headerName: 'Champion',
     valueFormatter: params => ix().champNameById(params.data.id),
-  }, /*  {
-    field: 'lastPlayed',
-    colId: 'lastPlayed',
-    cellRenderer: GridLastPlayed,
-    headerName: 'Last Played',
-    cellDataType: 'text',
-    cellClass: 'font-medium  ',
-    headerClass: '',
   },
   {
-    field: 'points',
-    colId: 'points',
+    cellClass: 'font-medium  ',
+    cellDataType: 'text',
+    cellRenderer: GridLastPlayed,
+    colId: 'lastPlayed',
+    field: 'lastPlayed',
+    headerClass: '',
+    headerName: 'Last Played',
+  },
+  {
+    cellClass: 'font-medium  text-left',
+    cellDataType: 'number',
     cellRenderer: GridMasteryPoints,
     cellRendererParams: {
       totalPoints: summoner.mastery.totalPoints,
     },
-    headerName: 'Points',
-    cellDataType: 'number',
-    cellClass: 'font-medium  text-left',
+    colId: 'points',
+    field: 'points',
     headerClass: '',
-  }, */
+    headerName: 'Points',
+  },
   {
     maxWidth: 80,
     width: 80,

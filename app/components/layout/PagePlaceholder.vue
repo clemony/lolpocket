@@ -14,7 +14,7 @@ const facts: CatFact[] = [
     text: 'Cats have a unique “vocabulary” with their owners! Unlike dogs, who tend to bark similarly at everyone, cats develop distinct meows and sounds specifically for their humms. They rarely meow at other cats!',
   },
   {
-    title: 'Cats are witches.',
+    title: 'Cats are wizards.',
     num: 2,
     text: 'A cat’s purr has healing properties. The frequency of a cat’s purr (between 25 and 150 Hz) has been shown to promote bone growth and healing in both cats and humms. Some scientists believe this might be why cats recover from injuries so quickly!',
   },
@@ -55,31 +55,30 @@ onMounted(() => {
     :class="cn('', props.class)">
     <article class="container mx-auto p-6 max-w-250 min-w-190 dst">
       <header
-        class="text-start text-mdxl font-bold mb-6 dst tracking-tight font-serif leading-14">
-        This page seems afk.
+        class="text-start mb-6 dst tracking-tight">
+        <span class="text-xl">
+          404: <span class="italic">page seems afk</span>
+        </span>
         <br />
 
-        <span class="pl-8">I offer you a cat fact. Refresh in peace.</span>
+        <span class=" leading-14 font-bold font-serif text-[2rem] ">In place, I offer you a cat fact.</span>
       </header>
 
       <section
         class="pb-28 items-start flex gap-4 pt-20 gap-3 max-w-180 w-full **:text-pretty relative">
-        <h2 class="text-8xl float-left dst font-semibold -mt-3 font-serif">
-          {{ catFact.num }}
-        </h2>
         <div class="flex flex-col gap-3">
-          <h3 class="font-serif mt-1 font-black">
+          <p class="mt-1 text-xl dst">
             <!-- #{{catFact.num}}  -->
-            {{ catFact.title }}
-          </h3>
-          <p class="leading-6">
+            {{ catFact.num }}: {{ catFact.title }}
+          </p>
+          <p class="leading-7">
             {{ catFact.text }}
           </p>
         </div>
       </section>
 
       <footer
-        class="text-end italic text-xs items-end flex flex-col *:flex *:items-end justify-center *:gap-2">
+        class="text-end italic text-xs items-center flex gap-4 *:flex *:items-end justify-center *:gap-2">
         <p class="text-xxs text-bc/70">
           Brought to you by
         </p>
@@ -91,7 +90,7 @@ onMounted(() => {
           <span class="">2028</span>
         </p>
         <p class="text-xxs text-bc/70">
-          Collect them all!
+          Refresh in peace
         </p>
       </footer>
     </article>

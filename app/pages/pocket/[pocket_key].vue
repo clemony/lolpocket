@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 definePageMeta({
   name: 'pocket_key',
-  level: 0,
   props: true,
   redirect: '/pocket/:pocket_key/champions',
+  search: 'hidden',
 })
 
 const route = useRoute()
@@ -24,7 +24,9 @@ async function testSync() {
 </script>
 
 <template>
-  <TabLayout v-if="pocket">
+  <TabLayout
+    v-if="pocket"
+    size="lg">
     <!-- splash -->
 
     <template #background>

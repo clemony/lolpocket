@@ -11,7 +11,7 @@ export async function fetchSummonerMastery(puuid: string) {
   const summoner = ss().getSummoner(puuid)
   const TWO_HOURS = 1000 * 60 * 60 * 2
 
-  const isStale = (timestamp?: Date) =>
+  const isStale = (timestamp?: number) =>
     !timestamp || Date.now() - new Date(timestamp).getTime() > TWO_HOURS
 
   const needsUpdate
@@ -46,7 +46,7 @@ export async function fetchSummonerMastery(puuid: string) {
     await ss().mergeSummonerData(puuid, {
       mastery: {
         champions: updated.champions,
-        lastUpdate: new Date(),
+        lastUpdate: Date.now(),
         totalLevels: result.totalLevels,
         totalPoints: result.totalPoints,
       } as Summoner['mastery'],

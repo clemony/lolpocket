@@ -9,13 +9,13 @@ const props = withDefaults(
   defineProps<
     ToggleProps & {
       class?: HTMLAttributes['class']
-      variant?: ToggleVariants['variant']
-      size?: ToggleVariants['size']
+      variant?: ToggleVariants['variant'] | ''
+      size?: ToggleVariants['size'] | ''
     }
   >(),
   {
     disabled: false,
-    size: 'default',
+    size: '',
     variant: 'default',
   }
 )
@@ -34,7 +34,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 <template>
   <Toggle
     v-bind="forwarded"
-    :class="cn(toggleVariants({ variant, size }), props.class)">
+    :class="cn(variant && size ? toggleVariants({ variant, size }) : '', props.class)">
     <slot />
   </Toggle>
 </template>

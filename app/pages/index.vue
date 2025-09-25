@@ -15,7 +15,6 @@ useSeoMeta({
 definePageMeta({
   name: 'home',
   layout: 'basic',
-  level: 0,
   meta: {
     title: 'lolpocket',
     icon: 'teenyicons:home-alt-outline',
@@ -23,6 +22,7 @@ definePageMeta({
     searchKeys: ['home', 'landing', 'testimonials'],
   },
   path: '/',
+  search: 'hidden',
 })
 
 const homeWrapper = useTemplateRef<HTMLElement | null>('homeWrapper')

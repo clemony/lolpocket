@@ -31,9 +31,7 @@ const colorChip
       )
     ">
     <Button
-      v-if="$1"
-      as().settings.theme="=="
-      theme.name"
+      v-if="as().settings.theme === theme.name"
       size="sm"
       class="aspect-square rounded-full grid place-items-center relative"
       variant="neutral">

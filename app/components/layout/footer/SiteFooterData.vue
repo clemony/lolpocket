@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { contactLinks, riotDisclaimer, siteInfoLinks } from '#shared/appdata'
+import { contactLinks, riotDisclaimer } from '#shared/appdata'
 
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
@@ -11,6 +11,11 @@ const { copied, copy, isSupported, text } = useClipboard({ source })
 const copyMsg = computed(() => {
   return copied ? 'Copied!' : 'Copy'
 })
+
+const router = useRouter()
+const links = computed (() =>
+  router.getRoutes().filter(r => r.name === 'docs')
+)
 </script>
 
 <template>
@@ -37,16 +42,16 @@ const copyMsg = computed(() => {
     </aside>
     <ul class="flex">
       <li
-        v-for="(link, i) in siteInfoLinks"
+        v-for="(link, i) in links"
         :key="link.name"
         class="flex gap-1.5 items-center">
         <NuxtLink
-          :to="link.link"
+          :to="link.path"
           class="text-xxs font-medium hover:underline underline-offset-2">
-          {{ link.name }}
+          {{ link.meta?.title || link.name }}
         </NuxtLink>
         <icon
-          v-if="i + 1 !== siteInfoLinks.length"
+          v-if="i + 1 !== links.length"
           name="slash"
           class="text-nc size-4 opacity-70" />
       </li>
@@ -94,5 +99,3 @@ const copyMsg = computed(() => {
     </menu>
   </footer>
 </template>
-
-<style scoped></style>

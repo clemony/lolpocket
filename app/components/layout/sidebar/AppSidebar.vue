@@ -89,10 +89,10 @@ watch(wrapperHovered, (hovering) => {
 <template>
   <div
     ref="sidebarWrapper"
-    class="'h-screen min-w-16 w-15 z-10">
+    class="'h-screen min-w-16 w-15 z-15">
     <!-- This is the first sidebar -->
     <menu
-      class="items-center py-3 justify-between z-10 flex flex-col w-15 h-full fixed top-0 left-0 border-r border-r-b3 !bg-b1 ">
+      class="items-center py-3 justify-between z-15 flex flex-col w-15 h-full fixed top-0 left-0 border-r border-r-b3 !bg-b1 ">
       <div class="flex grow flex-col gap-2.5">
         <BtnLink
           class="btn-square mb-1 size-11 p-0 grid place-items-center"

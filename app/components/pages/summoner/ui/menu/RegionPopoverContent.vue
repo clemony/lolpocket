@@ -2,6 +2,10 @@
 import { regionIndex } from '#shared/appdata/index/region-index'
 import { PopoverArrow } from 'reka-ui'
 
+defineOptions({
+  inheritAttrs: false
+})
+
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
@@ -49,6 +53,7 @@ const modelValue = ref(as().account.region)
           v-model="modelValue"
           type="radio"
           :value="region"
+          v-bind="$attrs"
           class="hidden"
           @change="emit('update:model-value', modelValue)" />
         <icon

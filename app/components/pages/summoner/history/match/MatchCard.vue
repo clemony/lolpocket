@@ -25,42 +25,42 @@ const queue = computed(() => {
     v-model:open="isOpen"
     :class="
       cn(
-        ' shadow-sm shadow-black/5 drop-shadow-xs group size-full border-b3/70 rounded-xl justify-start max-w-220 group/collapse gap-0 overflow-hidden bg-clip-padding items-center relative **:select-none text-xs flex-col !p-0  btn  min-w-134 !bg-tint-b2/70  cursor-pointer group/collapse',
+        ' group size-full border-b3/70 justify-start max-w-220 group/collapse  overflow-hidden bg-clip-padding items-center relative **:select-none text-xs flex-col field-box  min-w-134   cursor-pointer group/collapse',
       )
     ">
     <CollapsibleTrigger
       :for="match.matchId"
       :class="
         cn(
-          ' h-36 flex gap-7 z-2 w-full text-xs  relative bg-linear-to-r pointer-events-auto to-transparent to-40% rounded-xl overflow-hidden bg-clip-padding relative items-center justify-items-start bg-transparent   cursor-pointer  px-5 justify-start rounded-box cursor-pointer  data-[state=open]:rounded-b-none ',
+          ' h-40 flex gap-7 z-2 w-full text-xs  relative bg-linear-to-r pointer-events-auto to-transparent to-40% rounded-xl overflow-hidden bg-clip-padding relative items-center justify-items-start bg-transparent   cursor-pointer  px-5 justify-start rounded-box cursor-pointer  data-[state=open]:rounded-b-none ',
           player.win ? 'from-inspiration/80 ' : 'from-domination/80',
           'before:absolute before:left-0 before:z-3  before:h-full before:w-1/2 before:pointer-events-none before:brightness-94 before:opacity-40 before:mask-r-from-0 before:border before:rounded-xl before:shadow-sm before:shadow-black',
 
           player.win
             ? 'before:border-inspiration '
             : 'before:border-domination',
-          isOpen === true ? 'max-h-240' : 'h-36',
+          isOpen === true ? 'max-h-240' : 'h-40',
         )
       ">
       <div
-        class="flex w-30 **:antialiased h-full max-h-30 overflow-hidden **:select-none flex-col justify-start gap-1 py-1">
+        class="flex w-30 **:antialiased h-fit self-center  **:select-none flex-col justify-start gap-1 py-1">
         <h3
-          class="text-lgdst text-start text-nowrap text-white/86 font-bold uppercase">
+          class="text-lg dst text-start text-nowrap text-white/86 font-bold uppercase">
           {{ player.win ? "Win" : "Loss" }}
         </h3>
 
         <div class="font-semibold *:text-left opacity-76 w-full flex flex-col">
-          <p class="text-md text-left text-nowrap font-bold">
-            {{ queue.description }}
+          <p class="text-md text-left text-nowrap flex items-center font-bold flex gap-1.5">
+            {{ queue?.description || queue?.map?.name || '' }}
           </p>
 
           <p
             class="!text-[0.92rem] leading-4 flex flex-col mt-1 py-1 justify-center text-start">
             <span>
-              {{ queue.map.name }}
+              {{ queue?.map?.name }}
             </span>
             <span class="capitalize">
-              {{ formatTimeAgo(new Date(match.gameEndTimestamp)) }}
+              {{ formatTimeAgo(match.gameEndTimestamp) }}
             </span>
           </p>
           <p class="tracking-wide font-bold">
@@ -71,7 +71,7 @@ const queue = computed(() => {
         </div>
       </div>
 
-      <div class="flex flex-col gap-2 grow">
+      <div class="flex h-full flex-col  py-6 gap-2 justify-between grow">
         <div class="flex items-start">
           <!-- champ image -->
           <ChampionIcon

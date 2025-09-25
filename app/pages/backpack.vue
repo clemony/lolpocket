@@ -4,7 +4,6 @@ import { accounts, mails } from '~/components/layout/box/mails'
 definePageMeta({
   name: 'backpack',
   icon: 'backpack',
-  level: 1,
   order: 4,
   redirect: '/backpack/pockets',
 })

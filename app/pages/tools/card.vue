@@ -12,7 +12,7 @@ definePageMeta({
   title: 'Card Editor',
   level: 2,
   path: '/tools/card',
-  search: false,
+  search: 'hidden',
 })
 
 // TODO nuxt bg here

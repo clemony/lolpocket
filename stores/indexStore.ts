@@ -83,22 +83,22 @@ export const useIndexStore = defineStore(
     }
 
     function resetIndexStore() {
-      /*       champions.value = [] */
+      champions.value = []
       runes.value = []
       paths.value = []
-      /*    items.value = []
+      items.value = []
       maps.value = []
       shards.value = []
       skin.value = {}
       spells.value = []
-      skins.value = {} */
+      skins.value = {}
     }
 
     // resetIndexStore()
 
     async function loadAll() {
       console.log('💠 - loadAll - else hihihi')
-      /* await resetIndexStore() */
+      await resetIndexStore()
       await Promise.all([
         loadChamps(),
         loadItems(),
@@ -114,6 +114,7 @@ export const useIndexStore = defineStore(
 
     async function loadBasic() {
       console.log('💠 - loadBasic - loading basic data...')
+      await resetIndexStore()
       if (!champions.value.length)
         await loadChamps()
 
@@ -128,7 +129,6 @@ export const useIndexStore = defineStore(
 
       if (!paths.value.length)
         await loadPaths()
-
       if (!maps.value.length)
         await loadMaps()
 
@@ -269,7 +269,7 @@ export const useIndexStore = defineStore(
   },
   {
     persist: {
-      storage: piniaPluginPersistedstate.cookies({ sameSite: true }),
+      storage: piniaPluginPersistedstate.sessionStorage(),
 
     },
   }

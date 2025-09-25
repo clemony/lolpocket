@@ -1,6 +1,6 @@
 export const queueIndex = [
   {
-    description: 'Draft Pick',
+    description: 'Draft',
     map: {
       id: 11,
       name: 'Summoner\'s Rift',

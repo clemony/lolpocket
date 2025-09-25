@@ -15,6 +15,7 @@ const {
 <template>
   <transition-slide
     group
+
     :appear="false"
     :as="as"
     :class="cn(className)"

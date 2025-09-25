@@ -1,7 +1,7 @@
 <script setup lang="ts">
 definePageMeta({
   title: 'Champions',
-  icon1: 'lol-champ',
+  icon: 'lol-champ',
   path: '/library/champions',
 })
 // const { filters, setFilter, filtered } = useItemFilter()

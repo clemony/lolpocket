@@ -13,6 +13,12 @@ function path(region: string): string {
   return `https://${region}.api.riotgames.com`
 }
 
+export interface RegionReturn {
+  puuid: string
+  game: string
+  region: string
+}
+
 async function safeFetch<T>(
   url: string,
   params?: Record<string, any>,
@@ -76,15 +82,15 @@ export async function fetchLeagueEntriesByPuuid(puuid: string, region: string) {
     `/lol/league/v4/entries/by-puuid/${puuid}`
   )
 }
-export async function fetchAccountByPuuid(puuid: string, region: string) {
+export async function fetchAccountByPuuid(puuid: string) {
   return riotGet(
-    path(region ?? REGION),
+    path(REGION),
     `/riot/account/v1/accounts/by-puuid/${puuid}`
   )
 }
-export async function fetchRegionByPuuid(puuid: string, region: string) {
+export async function fetchRegionByPuuid(puuid: string): Promise<RegionReturn> {
   return riotGet(
-    path(region ?? REGION),
+    path(REGION),
     `/riot/account/v1/region/by-game/lol/by-puuid/${puuid}`
   )
 }

@@ -3,7 +3,8 @@ definePageMeta({
   name: 'FAQ',
   title: 'Support',
   icon: 'lucide:circle-question-mark',
-  level: 0
+  order: -1,
+  search: 'children',
 })
 </script>
 

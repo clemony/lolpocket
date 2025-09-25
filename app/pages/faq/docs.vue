@@ -1,9 +1,7 @@
 <script setup lang="ts">
 definePageMeta({
   name: 'docs',
-  meta: {
-    parent: '/docs',
-  },
+  icon: 'lucide:square-terminal',
   path: '/docs',
 })
 </script>

@@ -1,10 +1,9 @@
 <script setup lang="ts">
 definePageMeta({
-  middleware: 'set-champion-title',
   name: 'champion_key',
-  level: 0,
   path: '/champions/:champion_key',
   props: true,
+  search: 'hidden',
 })
 const route = useRoute()
 const championData = await import(
@@ -71,16 +70,20 @@ function navigate(path: string) {
           v-for="item in links"
           :key="item.name"
           role="tab"
+          :tabindex="0"
+          :for="String(item.name)"
           :class="
             cn(
               'group/tab min-w-22  max-w-40 grow has-checked:tab-active  tab ',
               { 'tab-active ': tabs === item.name },
             )
           "
+          @keydown.enter="navigateTo(item.path)"
           @click="navigate(item.path)">
           <input
             v-model="tabs"
             type="radio"
+            :name="String(item.name)"
             :value="item.name"
             class="peer hidden" />
           {{ item.meta?.title }}

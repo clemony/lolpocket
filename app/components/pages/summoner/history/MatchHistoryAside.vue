@@ -6,7 +6,7 @@ const { state } = defineProps<{
 
 <template>
   <div
-    class="w-124 sticky py-24 top-24 scrollbar-none overflow-y-auto max-h-screen justify-center gap-10 auto-rows-max items-start grid">
+    class="w-124 justify-center overflow-y-auto py-24 gap-10 auto-rows-max items-start grid">
     <RankCard
       v-if="as().settings?.showSolo && !state.loading"
       title="Solo/Duo"

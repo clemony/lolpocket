@@ -14,6 +14,7 @@ import {
 definePageMeta({
   name: 'calculator',
   icon: 'calc',
+  iconClass: 'scale-90 **:stroke-1.2',
   level: 2,
   order: 6,
   path: '/tools/calculator',

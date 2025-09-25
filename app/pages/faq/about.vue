@@ -1,8 +1,7 @@
 <script setup lang="ts">
 definePageMeta({
   name: 'about',
-  icon: 'lucide:square-terminal',
-  parent: '/faq',
+  icon: 'cat',
   path: '/about',
 })
 
@@ -71,12 +70,12 @@ const faq = [
 
 <template>
   <div class="px-18 h-screen w-full grid place-items-center">
-    <div class="flex w-210 flex-col gap-6 items-center mx-auto -mt-[45px]">
+    <div class="flex w-180 flex-col gap-6 items-center mx-auto -mt-[45px]">
       <div
-        class="grid grid-cols-[20px_1fr] w-full gap-x-14 **:font-mono mockup-code text-nc text-sm">
+        class="relative grid grid-cols-[20px_1fr] w-full gap-x-14 **:font-mono mockup-code text-nc text-sm">
         <div class="col-start-1 grid pl-6 gap-y-1 items-center">
           <div
-            v-for="index in 13"
+            v-for="index in 10"
             :key="index"
             class="grid items-center">
             {{ index }}
@@ -84,7 +83,7 @@ const faq = [
         </div>
 
         <div class="col-start-2 grid h-fit gap-y-1 items-center">
-          <div>const CatTax: cat&#60;image: popUp&#62; = &lbrace;</div>
+          <div>const catTax: Record&#60;name, image[]&#62; = &lbrace;</div>
 
           <div class="gap-y-1 grid tiems-center pl-6">
             <div>'Clem': {</div>
@@ -126,65 +125,27 @@ const faq = [
             </div>
 
             <div>
-              };
+              }
               <span class="animate-[blink-1_1s_infinite_both] text-md">|</span>
             </div>
           </div>
-
-          <div class="opacity-0">
-            .&lbrace;
-          </div>
-
           <div>
-            <span
-              v-tippy="'! (logical NOT) operator'"
-              class="hover:bg-b3 hover:text-bc">
-              !
-            </span>
-
-            <span>frequently asked questions</span>
+            &rbrace;
           </div>
-
-          <span class="pl-6">[Q] Where going?</span>
-
-          <span class="text-md gap-3 flex pl-6">
-            [LP]
-            <span class="size-6 relative grid place-items-center">
-              <i-ui-crescent-moon
-                name="hugeicons:moon-01"
-                class="!size-5 text-nc absolute !shrink-0  mb-1" />
-            </span></span>
+          <div class="opacity-0">
+            .
+          </div>
         </div>
-      </div>
 
-      <div class="items-end self-end flex flex-col pr-3 mt-2 gap-2 py-4 **:dst">
-        <p class="">
-          thanks for trying the app
-        </p>
+        <NuxtLink
+          to="https://github.com/clemony/lolpocket"
+          external
+          class="absolute right-6 bottom-6 items-center gap-1 underline flex **:text-nc underline-offset-2 font-mono italic hover:underline">
+          <Icon name="github" />
 
-        <p class="inline-flex items-center gap-1">
-          <Icon
-            name="typcn:heart-outline"
-            class="size-3" />
-          from
-          <Icon
-            name="teenyicons:arrow-right-outline"
-            class="size-3" />
-
-          <span class="italic font-mono">clem & nell's</span>
-          human
-        </p>
-
-        <p>
-          <a
-            href="https://github.com/clemony/lolpocket"
-            class="mt-2 inline-flex items-center gap-1 underline transition-all duration-300 underline-offset-2 font-mono italic hover:underline">
-            <Icon name="github" />
-
-            <Icon name="at" />
-            clemony
-          </a>
-        </p>
+          <Icon name="at" />
+          clemony
+        </NuxtLink>
       </div>
 
       <div class="mt-26 field-box py-3 px-4">

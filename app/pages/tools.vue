@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 definePageMeta({
-  level: 0,
+  icon: 'lucide:wrench',
+  search: 'children'
 })
 </script>
 

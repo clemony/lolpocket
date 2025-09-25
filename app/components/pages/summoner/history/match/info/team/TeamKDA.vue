@@ -12,13 +12,9 @@ const { class: className, team } = defineProps<{
     <p
       class="text-sm grid items-center font-semibold grid justify-start tracking-tight text-nowrap inline-flex flex-nowrap">
       {{ team.kills }}
-      <icon
-        name="slash"
-        class="-mx-px dst size-4" />
+      /
       {{ team.deaths }}
-      <icon
-        name="slash"
-        class="-mx-px dst size-4" />
+      /
       {{ team.assists }}
     </p>
   </div>

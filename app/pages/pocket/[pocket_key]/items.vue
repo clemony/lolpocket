@@ -12,7 +12,7 @@ definePageMeta({
   order: 2,
   parent: '/pocket',
   path: '/pocket/:pocket_key/items',
-  search: false,
+  search: 'hidden',
 })
 
 const route = useRoute()

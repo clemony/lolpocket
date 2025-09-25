@@ -1,4 +1,3 @@
-import download from 'downloadjs'
 import * as htmlToImage from 'html-to-image'
 
 /* export async function downloadPocketPng(pocket) {

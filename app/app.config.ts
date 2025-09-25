@@ -62,7 +62,7 @@ export default defineAppConfig({
       'pin': 'iconoir:pin',
       'refresh': 'radix-icons:reload',
       'reset': 'lucide:refresh-ccw',
-      'search': 'tabler:search',
+      'search': 'lucide:search',
       'tag': 'lucide:tag',
       'tags': 'lucide:tags',
       'unpin': 'iconoir:pin-slash',
@@ -110,9 +110,11 @@ export default defineAppConfig({
       // keys
       'command': 'lucide:command',
       'shift': 'lucide:arrow-big-up-dash',
+      'tab': 'hugeicons:arrow-right-03',
 
       // symbol
       'alert': 'lucide:circle-alert',
+      'ban': 'lucide:ban',
 
       // external / social
       'at': 'lucide:at-sign',
@@ -137,9 +139,10 @@ export default defineAppConfig({
       // simple
       'circle-dot': 'lucide:circle-dot',
       'dot': 'lucide:dot',
-      'heart': 'ph:heart-straight',
-      'heart-sm': 'teenyicons:heart-small-outline',
-      'heart-sm-fill': 'teenyicons:heart-small-solid',
+      'heart': 'teenyicons:heart-outline',
+      'heart-fill': 'teenyicons:heart-solid',
+      'heart-sm': 'teenyicons:heart-small-solid',
+      'heart-sm-outline': 'teenyicons:heart-small-outline',
       'infinity': 'solar:infinity-outline',
       'shield': 'teenyicons:shield-tick-outline',
       'star': 'ph:star',
@@ -155,6 +158,7 @@ export default defineAppConfig({
       'cat-geo': 'streamline-cyber:cat-2',
       'chart': 'lucide:bar-chart-3',
       'clock': 'lucide:clock',
+      'favorite': 'f7:square-favorites-alt',
       'history': 'lucide:history',
       'image': 'lucide:image',
       'images': 'entypo:images',

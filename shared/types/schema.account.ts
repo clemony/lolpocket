@@ -4,7 +4,7 @@ import * as v from 'valibot'
 // InboxItem
 export const InboxItemSchema = v.object({
   id: v.string(),
-  date: v.date(),
+  date: v.number(),
   read: v.optional(v.boolean()), // optional default = undefined
   template: v.string(),
   vars: v.record(v.string(), v.string()),
@@ -15,7 +15,7 @@ export const InboxMessageSchema = v.object({
   ...InboxItemSchema.entries,
   title: v.string(),
   content: v.string(),
-  dateTrashed: v.optional(v.nullable(v.date())),
+  dateTrashed: v.optional(v.nullable(v.number())),
   from: v.object({
     id: v.string(),
     name: v.string(),
@@ -49,6 +49,7 @@ export const SettingsSchema = v.object({
   language: v.fallback(v.string(), 'en'),
   motion: v.fallback(v.boolean(), true),
   noConfirmTrash: v.fallback(v.boolean(), false),
+  profileSplashHeader: v.fallback(v.boolean(), true), // new
   showAllies: v.fallback(v.boolean(), true),
   showFlex: v.fallback(v.boolean(), true),
   showSolo: v.fallback(v.boolean(), true),

@@ -4,6 +4,7 @@ definePageMeta({
   description: 'Manage in app-notifications, messaging, and email preferences.',
   icon: 'gear',
   path: '/settings/messaging',
+  search: 'user',
 })
 </script>
 

@@ -36,12 +36,13 @@ export interface BayesianChampionStats extends ChampionStats {
 }
 
 export function getChampionStatsMap(
-  matches: MatchData[]
+  matches: MatchData[],
+  puuid: string
 ): Map<string, ChampionStats> {
   const map = new Map<string, ChampionStats>()
 
   const player = matches.map(m =>
-    m.participants.find(p => p.puuid === as().account.puuid)
+    m.participants.find(p => p.puuid === puuid)
   )
 
   player.forEach((match, index) => {
@@ -81,13 +82,13 @@ export function getChampionStatsMap(
   return map
 }
 
-export function useBasicChampionStats(matches: MatchData[]) {
-  const stats = getChampionStatsMap(matches)
+export function useBasicChampionStats(matches: MatchData[], puuid: string) {
+  const stats = getChampionStatsMap(matches, puuid)
   return Array.from(stats.values())
 }
 
-export function useBayesianChampionStats(matches: MatchData[]) {
-  const statsList = useBasicChampionStats(matches)
+export function useBayesianChampionStats(matches: MatchData[], puuid) {
+  const statsList = useBasicChampionStats(matches, puuid)
   const totalGames = statsList.reduce((sum, s) => sum + s.games, 0)
   const globalWinrate
     = statsList.reduce((sum, s) => sum + s.wins, 0) / totalGames || 0
