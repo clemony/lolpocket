@@ -16,12 +16,12 @@ const bg = computed(() => {
     class="flex flex-1 flex-col">
     <!-- header -->
     <div class="flex items-start p-4">
-      <div class="flex items-start gap-4 text-xs">
+      <div class="flex items-start gap-4 text-2">
         <PocketIcon
           :img="pocket.icon"
           class="size-16 rounded-full aspect-square" />
         <div class="grid gap-px">
-          <div class="font-semibold text-sm leading-4">
+          <div class="font-semibold text-3 leading-4">
             {{ pocket.name }}
           </div>
 
@@ -31,7 +31,7 @@ const bg = computed(() => {
             :champions="pocket.champions"
             list />
 
-          <div class="line-clamp-1 leading-4 text-xs capitalize">
+          <div class="line-clamp-1 leading-4 text-2 capitalize">
             <span class="font-medium">Role:</span>
             <template
               v-for="role in pocket.roles"
@@ -42,7 +42,7 @@ const bg = computed(() => {
         </div>
       </div>
       <div
-        class="ml-auto text-xs text-bc/60 *:justify-end *:gap-2 *:flex *:items-center">
+        class="ml-auto text-2 text-bc/60 *:justify-end *:gap-2 *:flex *:items-center">
         <p v-if="pocket.created">
           Created {{ useDateFormat(pocket.created, "MMMM D, YYYY") }}
         </p>
@@ -64,7 +64,7 @@ const bg = computed(() => {
         class="w-full h-70 bg-no-repeat relative z-1 before:z-0 bg-fixed bg-[170%_55%] inset-shadow-sm inset-shadow-black/20 bg-size-[88%]"
         :style="bg" />
     </div>
-    <div class="flex-1 whitespace-pre-wrap p-4 text-xs">
+    <div class="flex-1 whitespace-pre-wrap p-4 text-2">
       {{ pocket.notes[0] }}
     </div>
     <Separator class="mt-auto" />
@@ -77,7 +77,7 @@ const bg = computed(() => {
           <div class="flex items-center">
             <Label
               html-for="mute"
-              class="flex items-center gap-2 text-xs font-normal">
+              class="flex items-center gap-2 text-2 font-normal">
               <Switch
                 id="mute"
                 aria-label="Mute thread" />

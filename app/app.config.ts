@@ -2,16 +2,6 @@
 
 export default defineAppConfig({
   icon: {
-    class: 'text-[var(--color-bc)] shrink-0 pointer-events-none',
-    mode: 'svg',
-    size: '15px',
-
-    /*     customize: (content: string, name: string, prefix: string, provider: string) => {
-      if (prefix !== 'lucide') {
-        return content
-      }
-      return content.replace(/stroke-width="[^"]*"/g, `stroke-width="1.8"`)
-    }, */
     aliases: {
       // math
       'calc-solid': 'streamline:calculator-1-solid',
@@ -58,7 +48,7 @@ export default defineAppConfig({
       'filter': 'lucide:list-filter',
       'log-in': 'lucide:log-in', // tabler:transfer-in in house
       'log-out': 'lucide:log-out', // tabler:transfer-out
-      'open': 'iconoir:open-in-window',
+      'open': 'radix-icons:open-in-new-window',
       'pin': 'iconoir:pin',
       'refresh': 'radix-icons:reload',
       'reset': 'lucide:refresh-ccw',
@@ -123,6 +113,7 @@ export default defineAppConfig({
       'chat': 'lucide:message-square',
       'hash': 'lucide:hash',
       'link': 'lucide:external-link',
+      'link-2': 'lucide:link-2',
       'mail': 'lucide:mail',
       'mail-all': 'lucide:mails',
       'mail-fill': 'fluent:mail-32-filled',
@@ -139,7 +130,7 @@ export default defineAppConfig({
       // simple
       'circle-dot': 'lucide:circle-dot',
       'dot': 'lucide:dot',
-      'heart': 'teenyicons:heart-outline',
+      'heart': 'gg:heart',
       'heart-fill': 'teenyicons:heart-solid',
       'heart-sm': 'teenyicons:heart-small-solid',
       'heart-sm-outline': 'teenyicons:heart-small-outline',
@@ -158,6 +149,7 @@ export default defineAppConfig({
       'cat-geo': 'streamline-cyber:cat-2',
       'chart': 'lucide:bar-chart-3',
       'clock': 'lucide:clock',
+      'compass': 'lucide:compass',
       'favorite': 'f7:square-favorites-alt',
       'history': 'lucide:history',
       'image': 'lucide:image',
@@ -170,6 +162,9 @@ export default defineAppConfig({
       // 'boot': 'hugeicons:armored-boot',
       // tabler:brand-juejin upside down league xp icon?
     },
+    class: 'text-[var(--color-bc)] shrink-0 pointer-events-none',
+    mode: 'svg',
+    size: '15px',
   },
   theme: {},
 })

@@ -53,7 +53,7 @@ function deleteTag(tag: string) {
             class="w-full"
             size="md">
             <span
-              class="font-semibold duration-0 grow tracking-normal opacity-40 text-md capitalize">
+              class="font-semibold duration-0 grow tracking-normal opacity-40 text-4 capitalize">
               Tags
             </span>
             <CaretRotate />
@@ -107,7 +107,7 @@ function deleteTag(tag: string) {
             as="div"
             variant="base"
             hover="outline"
-            class="px-3 justify-self-center duration-0 py-0 focus-within:border-neutral/60 focus-within:[&_input]:placeholder:opacity-0 w-full flex-nowrap group !gap-3 flex items-center text-xs">
+            class="px-3 justify-self-center duration-0 py-0 focus-within:border-neutral/60 focus-within:[&_input]:placeholder:opacity-0 w-full flex-nowrap group !gap-3 flex items-center text-2">
             <span class="bg-b1 grid z-1 place-items-center h-full w-4.5">
               <icon
                 name="tag"

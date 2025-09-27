@@ -28,7 +28,7 @@ onMounted(async () => {
 
     <ContextMenuPortal>
       <ContextMenuContent
-        class="context-menu w-74 h-max z-999 pointer-events-auto text-xs **:text-xs"
+        class="context-menu w-74 h-max z-999 pointer-events-auto text-2 **:text-2"
         @interact-outside="emit('update:grid')">
         <ContextMenuItem
           icon="basil:add-outline"

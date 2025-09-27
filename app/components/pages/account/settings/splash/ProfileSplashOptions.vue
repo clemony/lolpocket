@@ -27,7 +27,7 @@ const { top } = useChampions(as().account.puuid, matchData)
         :alt="`${as().account?.name ?? null}'s Most Played`" />
       <div class="flex flex-col h-full pt-3 gap-4">
         <h4
-          class="dst font-semibold text-lg">
+          class="dst font-semibold text-5">
           Automatic
         </h4>
         <p>Displays your most played champion in recent games.</p>
@@ -50,7 +50,7 @@ const { top } = useChampions(as().account.puuid, matchData)
           :alt="`${as().account?.name ?? null}'s splash`" />
         <div class="flex flex-col h-full pt-3 gap-4 w-full">
           <h4
-            class="dst font-semibold text-lg">
+            class="dst font-semibold text-5">
             Custom
           </h4>
           <p

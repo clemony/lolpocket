@@ -8,7 +8,7 @@ const { class: className, note } = defineProps<{
 <template>
   <div
     v-if="note"
-    :class="cn('line-clamp-2 text-xs text-bc/60', className)">
+    :class="cn('line-clamp-2 text-2 text-bc/60', className)">
     {{ note.substring(0, 200) || "" }}
   </div>
 </template>

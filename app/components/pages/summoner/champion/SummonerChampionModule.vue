@@ -23,7 +23,7 @@ const champKey = computed(() => String(ix().champKeyByName(championName)))
         <div
           class="absolute bottom-0 left-0 inset-0 p-2 z-1 grid items-end justify-start bg-radial-[at_70%_30%] bg-size-[120%] from-transparent from-50% to-black/90">
           <h2
-            class="font-black text-start text-shadow-sm dst text-xxs1 text-white/90">
+            class="font-black text-start text-shadow-sm dst text-11 text-white/90">
             {{ hyphenateChampionName(championName) }}
           </h2>
         </div>

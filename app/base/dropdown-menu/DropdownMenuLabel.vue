@@ -16,7 +16,7 @@ const forwarded = useForwardProps(delegatedProps)
     v-bind="forwarded"
     :class="
       cn(
-        'px-2 flex [&_svg]:size-4.25 [&_svg]:opacity-60 items-center py-1.5 text-xs text-bc/50 font-semibold',
+        'px-2 flex [&_svg]:size-4.25 [&_svg]:opacity-60 items-center py-1.5 text-2 text-bc/50 font-semibold',
         inset && 'pl-9',
         props.class,
       )

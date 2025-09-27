@@ -4,7 +4,7 @@
   }
 
   .my-toast-description {
-    @apply !text-sm;
+    @apply !text-3;
   }
 
   [data-sonner-toast] [data-close-button] {

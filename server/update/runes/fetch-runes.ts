@@ -14,9 +14,9 @@ const rawPaths = await $fetch(
 const outputRawRunes = resolvePath('./runes/raw/runes-raw.json')
 const outputRawPaths = resolvePath('./runes/raw/paths-raw.json')
 const outputRunes = resolvePath('./runes/raw/runes.json')
-const runesTSOutput = resolvePath('../../shared/appdata/records/runes.ts')
+const runesTSOutput = resolvePath('#shared/appdata/records/runes.ts')
 const rawShards = resolvePath('./runes/raw/shards-raw.json')
-const shardOutput = resolvePath('../../shared/appdata/records/shards.ts')
+const shardOutput = resolvePath('#shared/appdata/records/shards.ts')
 
 function transformDescription(desc: string) {
   return desc

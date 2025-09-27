@@ -42,10 +42,6 @@ async function testSync() {
       </div>
     </template>
 
-    <template #tabs>
-      <PocketTabs :pocket />
-    </template>
-
     <template #after-tabs>
       <PocketUtilitiesMenu :pocket />
     </template>

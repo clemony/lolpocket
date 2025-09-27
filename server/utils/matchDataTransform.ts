@@ -1,7 +1,7 @@
 import { normalizePatchNumber } from '#shared/utils/normalizePatch'
 
 export function transformMatchData(raw: any): MatchData {
-  // 1️⃣ Map raw participants into Player
+  // map raw participants into player
   const participants: Player[] = raw.info.participants.map(
     (p: any): Player => ({
       puuid: p.puuid,
@@ -66,7 +66,7 @@ export function transformMatchData(raw: any): MatchData {
     })
   )
 
-  // 2️⃣ Prepare PlayerStats for MVP
+  // prep stats for mvp
   const playerStats: PlayerStats[] = participants.map(p => ({
     puuid: p.puuid,
     assists: p.assists,
@@ -99,15 +99,15 @@ export function transformMatchData(raw: any): MatchData {
     win: p.win,
   }))
 
-  // 3️⃣ Calculate MVP scores
+  // calc mvp scores
   const mvpScores = calculateMvpScores(playerStats)
 
-  // 4️⃣ Inject MVP into participants
+  // inject mvp into player
   for (const participant of participants) {
     participant.mvpScore = mvpScores[participant.puuid] ?? 0
   }
 
-  // … continue mapping teams and matchData as before
+  // continue mapping
   const teams: MatchTeam[] = raw.info.teams.map((team: any): MatchTeam => {
     const teamParticipants = participants.filter(
       p => p.teamId === team.teamId

@@ -44,7 +44,7 @@ console.log('userProviders: ', userProviders)
       <div class="leading-4">
         <h4
           as="legend"
-          class="text-lg font-semibold mb-2">
+          class="text-5 font-semibold mb-2">
           Username
         </h4>
 
@@ -67,7 +67,7 @@ console.log('userProviders: ', userProviders)
       <div class="leading-4">
         <h4
           as="legend"
-          class="text-lg font-semibold mb-2">
+          class="text-5 font-semibold mb-2">
           Region
         </h4>
 
@@ -131,19 +131,19 @@ console.log('userProviders: ', userProviders)
             :name="String(provider.icon)"
             :class="cn('size-6.5 dst')" />
         </div>
-        <h4 class="capitalize text-start dst font-semibold text-md grow">
+        <h4 class="capitalize text-start dst font-semibold text-4 grow">
           {{ provider.name }}
         </h4>
 
         <span
           v-if="userProviders.includes(provider.name)"
-          class="text-xs">
+          class="text-2">
           Connected
         </span>
 
         <span
           v-else
-          class="opacity-60 text-xs">Not Connected</span>
+          class="opacity-60 text-2">Not Connected</span>
 
         <Switch
           name="toggle-provider"
@@ -160,7 +160,7 @@ console.log('userProviders: ', userProviders)
       <div class="leading-4">
         <h4
           as="legend"
-          class="text-lgfont-semibold mb-2 flex gap-2 items-center">
+          class="text-5font-semibold mb-2 flex gap-2 items-center">
           Email
         </h4>
 
@@ -218,7 +218,7 @@ console.log('userProviders: ', userProviders)
       <div class="leading-4">
         <h4
           as="legend"
-          class="text-lg font-semibold mb-2">
+          class="text-5 font-semibold mb-2">
           Blocked Users
         </h4>
 

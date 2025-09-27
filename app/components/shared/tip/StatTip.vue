@@ -17,7 +17,7 @@ const pClass = 'justify-between w-full flex items-center gap-10'
     </div>
     <p
       v-if=" stat.description"
-      class="inline-block text-xs whitespace-normal text-pretty text-wrap py-3">
+      class="inline-block text-2 whitespace-normal text-pretty text-wrap py-3">
       {{ stat.description }}
     </p>
     <template v-if=" stat.values?.min === stat.values?.max">

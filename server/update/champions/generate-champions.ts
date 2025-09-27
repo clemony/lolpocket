@@ -1,8 +1,8 @@
+import type { Ability, Champion } from '@types'
+import { markUpdate } from '#shared/utils/markUpdate'
 import fs from 'node:fs'
 import path from 'node:path'
 import process from 'node:process'
-import type { Ability, Champion } from '../../../shared/types/types.champion'
-import { markUpdate } from '../../../shared/utils/markUpdate'
 import { resolvePath } from '../resolvePath'
 import {
   normalize,
@@ -20,7 +20,7 @@ const SCRIPT_KEY = 'generate-champions'
 // ---------- File paths ----------
 const dataPathM = resolvePath('./champions/raw/champions-raw-meraki.json')
 const dataPathD = resolvePath('./champions/raw/champions-raw-data-dragon.json')
-const outputDir = resolvePath('../../shared/appdata/records/champions/')
+const outputDir = resolvePath('#shared/appdata/records/champions/')
 const outputMergedRaw = resolvePath('./champions/raw/champions-raw.json')
 const savepointPath = resolvePath(
   './champions/raw/.generate-champions-save.json'

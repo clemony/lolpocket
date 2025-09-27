@@ -65,7 +65,7 @@ definePageMeta({
 
       <div class="w-full pt-26 pb-10 mb-10 border-b border-b-b3">
         <h1
-          class="font-semibold dst pb-2 text-3xl">
+          class="font-semibold dst pb-2 text-8">
           Winrates & Playrates
         </h1>
 

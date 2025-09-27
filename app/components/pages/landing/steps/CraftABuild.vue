@@ -96,7 +96,7 @@ onMounted(async () => {
       <Transition name="puff">
         <p
           v-if="!champModel"
-          class="f-sb text-md f-tt">
+          class="f-sb text-4 f-tt">
           Select a Champion...
         </p>
       </Transition>
@@ -124,7 +124,7 @@ onMounted(async () => {
       <Transition name="puff">
         <p
           v-if="!itemModel[itemIndex].item"
-          class="f-sb text-md f-tt">
+          class="f-sb text-4 f-tt">
           Select your first item...
         </p>
       </Transition>

@@ -21,7 +21,7 @@ const champions = computed(() => [...c].slice(0, 3).reverse())
     v-if="list"
     :class="
       cn(
-        'text-xs opacity-80 line-clamp-1 gap-1 grow items-center flex',
+        'text-2 opacity-80 line-clamp-1 gap-1 grow items-center flex',
         className,
       )
     ">
@@ -66,7 +66,7 @@ const champions = computed(() => [...c].slice(0, 3).reverse())
     <div
       v-if="champions?.length > 3"
       class="avatar avatar-placeholder">
-      <div class="bg-neutral text-neutral-content w-11 text-xs">
+      <div class="bg-neutral text-neutral-content w-11 text-2">
         <span>+99</span>
       </div>
     </div>

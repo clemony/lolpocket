@@ -5,7 +5,7 @@ defineOptions({
   meta: {
     name: 'Navigation',
     class: 'size-5.5',
-    icon: 'lucide:gallery-vertical-end',
+    icon: 'compass',
   },
 })
 
@@ -38,7 +38,7 @@ const navLinks = computed(() => {
           class="justify-between w-full"
           to="/nexus"
           @click="emit('close-sidebar')">
-          <span class="font-bold dst text-xl">Nexus</span>
+          <span class="font-bold dst text-6">Nexus</span>
 
           <SummonerIcon class="size-8 rounded-lg " />
         </BtnLink>

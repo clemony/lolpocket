@@ -30,7 +30,7 @@ const props = defineProps<{
       :placeholder="props.placeholder"
       :class="
         cn(
-          'text-sm text-bc  outline-0 ring-0 border-0 flex !h-full grow text-start  hover:outline-0 hover:ring-0 hover:border-0',
+          'text-3 text-bc  outline-0 ring-0 border-0 flex !h-full grow text-start  hover:outline-0 hover:ring-0 hover:border-0',
           props.inputClass,
         )
       " />

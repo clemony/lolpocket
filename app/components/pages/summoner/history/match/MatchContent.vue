@@ -16,7 +16,7 @@ const modelValue = ref<string | number>('Scoreboard')
   <AnimatePresence>
     <LazyCollapsibleContent
       v-if="isOpen"
-      class="'CollapsibleContent relative h-200 group w-220 max-w-220 translate-x-0 transition duration-0 **:select-none text-xs p-0">
+      class="'CollapsibleContent relative h-200 group w-220 max-w-220 translate-x-0 transition duration-0 **:select-none text-2 p-0">
       <Tabs
         v-model:model-value="modelValue"
         class="relative">

@@ -25,7 +25,7 @@ function getBadgeVariantFromLabel(label: string) {
     :key="item.id"
     :class="
       cn(
-        'flex flex-col items-start gap-2 rounded-lg border p-3 text-left text-xs transition-all hover:bg-b2/50',
+        'flex flex-col items-start gap-2 rounded-lg border p-3 text-left text-2 transition-all hover:bg-b2/50',
         selected === item.id && 'bg-b2/30',
       )
     "
@@ -43,7 +43,7 @@ function getBadgeVariantFromLabel(label: string) {
         <div
           :class="
             cn(
-              'ml-auto text-xs',
+              'ml-auto text-2',
               selected === item.id ? 'text-bc' : 'text-bc/60',
             )
           ">
@@ -51,11 +51,11 @@ function getBadgeVariantFromLabel(label: string) {
         </div>
       </div>
 
-      <div class="text-xs font-medium">
+      <div class="text-2 font-medium">
         {{ item.subject }}
       </div>
     </div>
-    <div class="line-clamp-2 text-xs text-bc/60">
+    <div class="line-clamp-2 text-2 text-bc/60">
       {{ item.text.substring(0, 300) }}
     </div>
     <div class="flex items-center gap-2">

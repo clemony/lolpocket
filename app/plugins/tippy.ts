@@ -28,7 +28,7 @@ export default defineNuxtPlugin((nuxtApp) => {
         placement: 'top',
         role: 'tooltip',
         showOnCreate: false,
-        theme: 'light'
+        theme: 'base'
 
       },
       directive: 'tippy', // => v-tippy

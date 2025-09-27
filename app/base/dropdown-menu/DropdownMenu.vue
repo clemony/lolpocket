@@ -10,6 +10,6 @@ const forwarded = useForwardPropsEmits(props, emits)
 
 <template>
   <DropdownMenuRoot v-bind="forwarded">
-    <slot />
+    <slot :open="props.open" />
   </DropdownMenuRoot>
 </template>

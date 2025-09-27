@@ -44,7 +44,7 @@ const data = [
           :style="{
             transform: `translateY(${Math.round(progressY * 100) / 100}%)`,
           }"
-          class="text-xxs4 absolute pr-14 h-full"
+          class="text-14 absolute pr-14 h-full"
           :transition="{ type: 'inertia' }">
           Additional Tools.
         </motion.h2>
@@ -79,7 +79,7 @@ const data = [
           </div>
 
           <p
-            class="text-pretty leading-loose text-nc font-light text-md"
+            class="text-pretty leading-loose text-nc font-light text-4"
             v-html="item.text" />
         </motion.div>
       </div>

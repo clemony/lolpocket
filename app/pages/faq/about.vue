@@ -1,7 +1,7 @@
 <script setup lang="ts">
 definePageMeta({
   name: 'about',
-  icon: 'cat',
+  icon: 'lucide:message-circle-question-mark',
   path: '/about',
 })
 
@@ -72,7 +72,7 @@ const faq = [
   <div class="px-18 h-screen w-full grid place-items-center">
     <div class="flex w-180 flex-col gap-6 items-center mx-auto -mt-[45px]">
       <div
-        class="relative grid grid-cols-[20px_1fr] w-full gap-x-14 **:font-mono mockup-code text-nc text-sm">
+        class="relative grid grid-cols-[20px_1fr] w-full gap-x-14 **:font-mono mockup-code text-nc text-3">
         <div class="col-start-1 grid pl-6 gap-y-1 items-center">
           <div
             v-for="index in 10"
@@ -126,7 +126,7 @@ const faq = [
 
             <div>
               }
-              <span class="animate-[blink-1_1s_infinite_both] text-md">|</span>
+              <span class="animate-[blink-1_1s_infinite_both] text-4">|</span>
             </div>
           </div>
           <div>

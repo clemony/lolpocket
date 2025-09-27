@@ -18,7 +18,7 @@ const { childRoutes, links, summoner } = defineProps<{
               :summoner
               class="rounded-field size-full size-11"></SummonerIcon>
             <SummonerLevel
-              class="pt-px absolute z-1 -bottom-1.5 bg-neutral rounded-full text-nc text-xs" />
+              class="pt-px absolute z-1 -bottom-1.5 bg-neutral rounded-full text-nc text-2" />
           </div>
         </template>
         <template #content>
@@ -30,7 +30,7 @@ const { childRoutes, links, summoner } = defineProps<{
                 class="leading-none font-serif font-bold truncate" />
             </p>
             <p
-              class="flex w-full text-xs gap-2 justify-between items-center [&_svg]:size-3 **:leading-none inline-flex align-bottom">
+              class="flex w-full text-2 gap-2 justify-between items-center [&_svg]:size-3 **:leading-none inline-flex align-bottom">
               <SummonerTag />
 
               <SummonerRegion />

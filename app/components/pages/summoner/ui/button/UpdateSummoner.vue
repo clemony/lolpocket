@@ -71,7 +71,7 @@ const tip = computed(
 
       <div
         v-if="cooldown"
-        class="text-3xs shadow-sm border-neutral border-2 absolute bg-neutral text-nc **:text-nc radial-progress place-self-center font-semibold opacity-90"
+        class="text-0 shadow-sm border-neutral border-2 absolute bg-neutral text-nc **:text-nc radial-progress place-self-center font-semibold opacity-90"
         :style="{
           '--value': cooldown?.seconds,
           '--size': '2rem',
@@ -93,14 +93,14 @@ const tip = computed(
         :class="
           cn(
             'flex items-center place-self-center   antialiased font-semibold opacity-68 group-hover/load:opacity-100',
-            { 'text-xxs': size === 'xs' },
+            { 'text-1': size === 'xs' },
           )
         ">
         <icon
           v-if="showIcon"
           name="mingcute:refresh-2-line"
           class="mr-3 -ml-2 size-5" />
-        <span class="text-xs">
+        <span class="text-2">
           {{
             typeof text === "string" ? text
             : typeof text === "boolean" ? "update"
@@ -116,8 +116,8 @@ const tip = computed(
             { 'gap-0': size === 'xs' }) ">
         <div
           v-if="size !== 'xs'"
-          class="grid grid-cols-2 grid-flow-col justify-between w-full font-semibold text-xxs dst  text-nowrap text-end pr-0.25 items-center inline align-bottom">
-          <span :class="cn(' font-bold text-xs')">
+          class="grid grid-cols-2 grid-flow-col justify-between w-full font-semibold text-1 dst  text-nowrap text-end pr-0.25 items-center inline align-bottom">
+          <span :class="cn(' font-bold text-2')">
             {{ cooldown?.formatted }}
           </span>
           <span>

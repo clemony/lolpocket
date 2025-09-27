@@ -49,7 +49,7 @@ const colorChip
       <p class="text-pretty leading-5 h-9 italic">
         '{{ theme.quote }}'
       </p>
-      <p class="text-pretty text-end leading-4 pr-4 italic text-xs opacity-80">
+      <p class="text-pretty text-end leading-4 pr-4 italic text-2 opacity-80">
         —{{ theme.champion }}
       </p>
     </div>

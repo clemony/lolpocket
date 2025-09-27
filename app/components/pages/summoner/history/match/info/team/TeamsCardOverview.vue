@@ -29,7 +29,7 @@ const route = useRoute()
 
         <a
           v-tippy="{ content: player.riotIdGameName, placement: 'right' }"
-          class="text-xxs tracking-tight h-full  w-full text-nowrap  font-medium truncate">
+          class="text-1 tracking-tight h-full  w-full text-nowrap  font-medium truncate">
           {{ player.riotIdGameName }}
         </a>
       </div>

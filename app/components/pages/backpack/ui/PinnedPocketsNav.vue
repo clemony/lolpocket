@@ -20,7 +20,7 @@ const { isCollapsed, pinned } = defineProps<{
         class="w-full"
         size="md">
         <span
-          class="font-semibold grow tracking-normal opacity-40 text-md capitalize">
+          class="font-semibold grow tracking-normal opacity-40 text-4 capitalize">
           Pinned Pockets
         </span>
         <CaretRotate />
@@ -40,7 +40,7 @@ const { isCollapsed, pinned } = defineProps<{
             variant="ghost"
             :size="isCollapsed ? 'icon' : 'md'"
             :to="`/${link.key}`"
-            class="px-2 !duration-0 text-sm justify-start grow !gap-3 flex items-center">
+            class="px-2 !duration-0 text-3 justify-start grow !gap-3 flex items-center">
             <PocketIcon
               size="sm"
               :img="link.icon"

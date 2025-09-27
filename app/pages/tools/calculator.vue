@@ -13,7 +13,7 @@ import {
 
 definePageMeta({
   name: 'calculator',
-  icon: 'calc',
+  icon: 'teenyicons:calculator-outline',
   iconClass: 'scale-90 **:stroke-1.2',
   level: 2,
   order: 6,

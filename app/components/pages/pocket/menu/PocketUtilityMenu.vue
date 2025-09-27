@@ -8,7 +8,7 @@ const pocket = ref(props.pocket)
 
 <template>
   <div
-    class="flex *:cursor-pointer flex-col gap-2 *:py-3 *:justify-start *:text-left *:w-full *:text-sm **:pointer-events-auto">
+    class="flex *:cursor-pointer flex-col gap-2 *:py-3 *:justify-start *:text-left *:w-full *:text-3 **:pointer-events-auto">
     <button
       class="group btn btn-ghost btn-lg"
       @click="duplicatePocket(pocket)">

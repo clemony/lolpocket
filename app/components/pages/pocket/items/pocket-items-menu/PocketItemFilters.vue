@@ -27,7 +27,7 @@ const { filtered, filters, setFilter } = useItemFilter()
       <SidebarHeader class="gap-3.5 border-b p-4 border-b3">
         <div class="flex w-full items-center justify-between">
           <h3>Filter</h3>
-          <Label class="flex items-center text-xs font-medium">
+          <Label class="flex items-center text-2 font-medium">
             <span>{{ filters.purchasable ? "Purchasable" : "All" }}</span>
             <Switch
               v-model:model-value="filters.purchasable"

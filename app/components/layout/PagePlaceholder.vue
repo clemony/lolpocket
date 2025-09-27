@@ -56,7 +56,7 @@ onMounted(() => {
     <article class="container mx-auto p-6 max-w-250 min-w-190 dst">
       <header
         class="text-start mb-6 dst tracking-tight">
-        <span class="text-xl">
+        <span class="text-6">
           404: <span class="italic">page seems afk</span>
         </span>
         <br />
@@ -67,7 +67,7 @@ onMounted(() => {
       <section
         class="pb-28 items-start flex gap-4 pt-20 gap-3 max-w-180 w-full **:text-pretty relative">
         <div class="flex flex-col gap-3">
-          <p class="mt-1 text-xl dst">
+          <p class="mt-1 text-6 dst">
             <!-- #{{catFact.num}}  -->
             {{ catFact.num }}: {{ catFact.title }}
           </p>
@@ -78,8 +78,8 @@ onMounted(() => {
       </section>
 
       <footer
-        class="text-end italic text-xs items-center flex gap-4 *:flex *:items-end justify-center *:gap-2">
-        <p class="text-xxs text-bc/70">
+        class="text-end italic text-2 items-center flex gap-4 *:flex *:items-end justify-center *:gap-2">
+        <p class="text-1 text-bc/70">
           Brought to you by
         </p>
         <p class="font-semibold italic opacity-80 antialiased">
@@ -89,7 +89,7 @@ onMounted(() => {
           Paws for Progress
           <span class="">2028</span>
         </p>
-        <p class="text-xxs text-bc/70">
+        <p class="text-1 text-bc/70">
           Refresh in peace
         </p>
       </footer>

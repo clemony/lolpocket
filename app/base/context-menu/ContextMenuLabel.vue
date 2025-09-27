@@ -19,7 +19,7 @@ const delegatedProps = computed(() => {
     v-bind="delegatedProps"
     :class="
       cn(
-        'px-2 py-1.5 text-xs font-semibold text-bc',
+        'px-2 py-1.5 text-2 font-semibold flex items-center gap-2 text-bc/50',
         inset && 'pl-8',
         props.class,
       )

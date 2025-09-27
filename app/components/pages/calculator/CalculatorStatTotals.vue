@@ -53,7 +53,7 @@ const set2 = computed(() => is().calculatorSet2)
   <div class="w-full overflow-hidden">
     <!-- head -->
     <div
-      class="w-full grid grid-cols-[40px_1fr_30px_30px] z-1 py-2 *:text-xs items-center btn-depth h-13">
+      class="w-full grid grid-cols-[40px_1fr_30px_30px] z-1 py-2 *:text-2 items-center btn-depth h-13">
       <div class="dst col-start-2 font-medium">
         STAT
       </div>
@@ -114,7 +114,7 @@ const set2 = computed(() => is().calculatorSet2)
     </div>
 
     <div
-      class="w-full grid grid-cols-[40px_1fr_30px_30px] h-13 border-y border-y-b3/50 z-1 py-2 *:text-xs items-center">
+      class="w-full grid grid-cols-[40px_1fr_30px_30px] h-13 border-y border-y-b3/50 z-1 py-2 *:text-2 items-center">
       <div class="justify-center ml-4">
         <i-ui-gold class="text-bc/80 size-6" />
       </div>

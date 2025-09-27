@@ -79,7 +79,7 @@ const selectedMailData = computed(() => mails.find(item => item.id === selected.
           <div
             class="flex items-center border-box max-w-220 size-full px-4 gap-3">
             <h1
-              class="dst text-xxl">
+              class="dst text-7">
               {{ title }}
             </h1>
             <slot name="tabs" />

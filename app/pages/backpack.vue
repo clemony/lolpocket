@@ -32,7 +32,7 @@ const pinned = computed(() => ps().pockets.filter(p => p.location.pinned))
               class="justify-start w-full group pl-4.5 pr-5 !gap-3 data-[state=open]:fx-noise data-[state=open]:shadow-sm data-[state=open]:border-b3/80 data-[state=open]:shadow-black/8 data-[state=open]:inset-shadow-xs hover:bg-transparent">
               <SummonerIcon class="rounded-full size-7" />
               <span
-                class="w-full truncate text-md dst font-semibold *:first:capitalize items-center">
+                class="w-full truncate text-4 dst font-semibold *:first:capitalize items-center">
                 <SummonerName class="inline" />
                 's Backpack
               </span>

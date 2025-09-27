@@ -55,12 +55,12 @@ defineOptions({
               class="grid size-full justify-items-start"
               @click="markRead(message.id)">
               <div class="flex w-full justify-between items-center gap-2">
-                <span class="text-xs font-medium text-bc/60">
+                <span class="text-2 font-medium text-bc/60">
                   {{ message.from.name }}
                 </span>
 
                 <span
-                  class="text-xxs flex h-5 items-center justify-self-end text-bc/80 relative *:absolute *:right-4 *:first:opacity-0 group-hover/msg:*:first:opacity-100 group-hover/msg:*:last:opacity-0 *:transition-opacity group-hover/msg:*:last:pointer-events-none *:duration-200">
+                  class="text-1 flex h-5 items-center justify-self-end text-bc/80 relative *:absolute *:right-4 *:first:opacity-0 group-hover/msg:*:first:opacity-100 group-hover/msg:*:last:opacity-0 *:transition-opacity group-hover/msg:*:last:pointer-events-none *:duration-200">
                   <span class="flex gap-1 size-fit">
                     <Button
                       :variant="!message.read ? 'neutral' : 'ghost'"
@@ -76,14 +76,14 @@ defineOptions({
               </div>
               <span
                 :class="
-                  cn('font-bold tracking-tight py-1 text-md', {
+                  cn('font-bold tracking-tight py-1 text-4', {
                     'opacity-70': message.read,
                   })
                 ">
                 {{ message.title }}
               </span>
               <span
-                class="line-clamp-2 text-start w-[260px] whitespace-break-spaces text-xs">
+                class="line-clamp-2 text-start w-[260px] whitespace-break-spaces text-2">
                 {{ message.content }}
               </span>
             </DialogTrigger>
@@ -96,7 +96,7 @@ defineOptions({
       <div
         v-else
         class="w-full h-44 grid place-items-center">
-        <span class="text-xs dst text-nowrap overflow-hidden">
+        <span class="text-2 dst text-nowrap overflow-hidden">
           {{ `No mail right now!` }}
         </span>
       </div>

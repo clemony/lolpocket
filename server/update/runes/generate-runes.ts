@@ -1,10 +1,10 @@
+import { markUpdate } from '#shared/utils'
 import fs from 'node:fs'
 import path from 'node:path'
-import { markUpdate } from '../../shared/utils'
 import { resolvePath } from '../resolvePath'
 
 const dataPath = resolvePath('./runes/raw/runes.json')
-const runeOutputDir = resolvePath('../../shared/appdata/records/runes')
+const runeOutputDir = resolvePath('#shared/appdata/records/runes')
 const raw = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
 
 const outputIndex: Record<string, any> = {}

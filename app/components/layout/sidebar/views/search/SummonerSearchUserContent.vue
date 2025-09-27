@@ -40,7 +40,7 @@
   <!--   <Collapsible
     :default-open="true"
     class="size-full grid">
-    <CollapsibleTrigger class=" px-3 border-y border-y-b3/90 py-2  group/collapse flex  px-3 !gap-2 font-medium items-center text-bc/70 text-xs hover:underline ">
+    <CollapsibleTrigger class=" px-3 border-y border-y-b3/90 py-2  group/collapse flex  px-3 !gap-2 font-medium items-center text-bc/70 text-2 hover:underline ">
       <icon
         name="star"
         class="dst size-3.75 opacity-80 " />

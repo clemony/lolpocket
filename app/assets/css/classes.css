@@ -64,7 +64,7 @@
   }
 
   .ability-header {
-    @apply dst !text-xs font-semibold uppercase tracking-normal;
+    @apply dst !text-2 font-semibold uppercase tracking-normal;
   }
 
   .corner-mask {

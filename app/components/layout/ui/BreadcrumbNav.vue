@@ -51,18 +51,18 @@ const chain = computed(() => getRouteChain(route.fullPath))
                 <ULink
                   v-if="link.name === 'pocket'"
                   to="/backpack"
-                  class="capitalize font-medium transition-all text-md">
+                  class="capitalize font-medium transition-all text-4">
                   Backpack
                 </ULink>
                 <ULink
                   v-else-if="!link.meta?.search && link.path !== route.path"
                   :to="String(link.path)"
-                  class="capitalize font-medium transition-all text-md not-group-last-of-type:opacity-60 not-group-last-of-type:hover:opacity-90">
+                  class="capitalize font-medium transition-all text-4 not-group-last-of-type:opacity-60 not-group-last-of-type:hover:opacity-90">
                   {{ link.meta?.title || link.name }}
                 </ULink>
                 <span
                   v-else
-                  class="font-medium capitalize text-md not-group-last-of-type:opacity-60 not-group-last-of-type:hover:opacity-90">
+                  class="font-medium capitalize text-4 not-group-last-of-type:opacity-60 not-group-last-of-type:hover:opacity-90">
                   {{
                     link.name === "champion_key"
                       ? ix().champNameByKey(String(route.params.champion_key))

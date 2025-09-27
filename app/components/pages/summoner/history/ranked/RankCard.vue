@@ -86,13 +86,13 @@ const winrate = computed(() =>
           }}
         </p>
 
-        <p class="capitalize font-semibold text-md">
+        <p class="capitalize font-semibold text-4">
           {{ entry?.lp ?? 0 }} LP
         </p>
 
         <p
           v-tippy="`${entry ? entry?.wins + entry?.losses : 0} total`"
-          class="hover:underline decoration-dotted underline-offset-2 flex text-xxs items-center gap-1 text-end justify-end text-nowrap">
+          class="hover:underline decoration-dotted underline-offset-2 flex text-1 items-center gap-1 text-end justify-end text-nowrap">
           <span>{{ entry ? entry.wins : 0 }}W</span>
 
           <span>{{ entry ? entry.losses : 0 }}L</span>

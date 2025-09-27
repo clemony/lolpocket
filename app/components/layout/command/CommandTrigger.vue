@@ -38,11 +38,11 @@ watchEffect(() => {
         class="size-4 shrink-0 opacity-70 group-hover:opacity-100 dst" />
 
       <span
-        class="text-bc/70 text-left mt-px font-medium tracking-tight text-xs grow">
+        class="text-bc/70 text-left mt-px font-medium tracking-tight text-2 grow">
         summoners, data, pockets...
       </span>
 
-      <span class="!text-sm font-medium text-bc/60">{{ getDeviceKey() }} K</span>
+      <span class="!text-3 font-medium text-bc/60">{{ getDeviceKey() }} K</span>
     </div>
   </SheetClose>
 </template>

@@ -46,6 +46,7 @@ export const SettingsSchema = v.object({
   lockSidebar: v.fallback(v.boolean(), false),
   alertDeletePocket: v.fallback(v.boolean(), true),
   alertNewPocket: v.fallback(v.boolean(), true),
+  closedDblClickChampion: v.fallback(v.boolean(), false), // new
   language: v.fallback(v.string(), 'en'),
   motion: v.fallback(v.boolean(), true),
   noConfirmTrash: v.fallback(v.boolean(), false),

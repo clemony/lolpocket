@@ -62,7 +62,7 @@ onKeyUp(['p', 'q', 'w', 'e', 'r'], (e) => {
         @load="loaded = true" />
 
       <h3
-        class="absolute !text-lgopacity-0 group-hover:opacity-100 transition duration-300 group-hover:text-shadow-black/50 group-hover:drop-shadow-black/70 text-shadow-xs text-white/86 drop-shadow-sm bottom-1 right-1.5">
+        class="absolute !text-5opacity-0 group-hover:opacity-100 transition duration-300 group-hover:text-shadow-black/50 group-hover:drop-shadow-black/70 text-shadow-xs text-white/86 drop-shadow-sm bottom-1 right-1.5">
         {{ i }}
       </h3>
     </Label>

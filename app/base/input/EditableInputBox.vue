@@ -24,7 +24,7 @@ const modelValue = ref(props.modelValue)
     class="p-0 w-fit group"
     :class="cn('', props.class)">
     <EditableArea
-      class="text-sm !p-0 font-medium capitalize flex flex-nowrap items-center relative h-fit !gap-0 group w-auto">
+      class="text-3 !p-0 font-medium capitalize flex flex-nowrap items-center relative h-fit !gap-0 group w-auto">
       <EditablePreview class="!w-fit !p-0" />
 
       <EditableInput

@@ -1,5 +1,5 @@
+import type { RunePath } from '#shared/types/types.rune'
 import fs from 'node:fs'
-import type { RunePath } from '../../../shared/types/types.rune'
 import { markUpdate } from '../../../scripts'
 import { resolvePath } from '../resolvePath'
 
@@ -16,7 +16,7 @@ const index: { id: number, name: string, color: string }[] = paths.map(
   })
 )
 
-const outputDir = resolvePath('../../shared/appdata/index/path-index.ts')
+const outputDir = resolvePath('#shared/appdata/index/path-index.ts')
 const tsOutput = `// ${markUpdate()}
 
 export const pathIndex: PathIndex[] = ${JSON.stringify(index, null, 2)}`

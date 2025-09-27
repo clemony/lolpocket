@@ -40,7 +40,7 @@ function handleUpdate() {
         : is().filters.rank && is().filters.rank !== rank ? 'hidden'
           : 'btn'
       "
-      class="!font-medium px-5 text-xs"
+      class="!font-medium px-5 text-2"
       @click="is().filters.rank === rank ? (is().filters.rank = null) : null">
       <input
         v-model="is().filters.rank"

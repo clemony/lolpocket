@@ -16,7 +16,7 @@ const props = defineProps<{
       v-bind="$attrs"
       :class="
         cn(
-          ' rounded-lg ml-1  border-b4/30 border  bgneutral/74 backdrop-blur-lg p-1 text-nc/80 text-xs ',
+          ' rounded-lg ml-1  border-b4/30 border  bgneutral/74 backdrop-blur-lg p-1 text-nc/80 text-2 ',
           props.class,
         )
       ">

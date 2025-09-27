@@ -21,7 +21,7 @@ const roleModel = computed({
     <div class="flex items-center mb-2 -ml-1">
       <label
         :class="{ 'pointer-events-none': ms().filter.role === 'ALL' }"
-        class="btn btn-sm gap-2 font-medium rounded-lg px-2.5 place-self-center text-sm btn-ghost"
+        class="btn btn-sm gap-2 font-medium rounded-lg px-2.5 place-self-center text-3 btn-ghost"
         @click="state.clearFilters()">
         {{
           ms().filter.role !== "ALL"

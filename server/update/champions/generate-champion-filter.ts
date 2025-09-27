@@ -1,8 +1,8 @@
+import type { Champion } from '#shared/types/types.champion'
+import { markUpdate } from '#shared/utils/markUpdate'
 import fs from 'node:fs'
 import { join } from 'node:path'
 import process from 'node:process'
-import type { Champion } from '../../../shared/types/types.champion'
-import { markUpdate } from '../../../shared/utils/markUpdate'
 import { normalize, normalizeArray } from '../utils'
 
 const rootDir = process.cwd()

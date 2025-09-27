@@ -50,7 +50,7 @@ const loaded = ref(false)
       v-else
       :class="
         cn(
-          'uppercase subpixel-antialiased text-nc z-0 absolute grid place-items-center size-full font-semibold text-md ',
+          'uppercase subpixel-antialiased text-nc z-0 absolute grid place-items-center size-full font-semibold text-4 ',
           { 'text-[0.7rem] font-bold': size && size === 'sm' },
         )
       ">

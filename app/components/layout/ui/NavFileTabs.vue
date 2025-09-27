@@ -29,7 +29,7 @@ const { childRoutes, targetRoutes } = useRouteNavigation()
       </div>
       <FakeTab />
 
-      <div :class="cn('overflow-hidden absolute text-md h-10 z-30 capitalize mt-1.5 items-center text-bc/90 flex-nowrap justify-center w-full grow flex font-semibold ', { 'opacity-60 font-medium': item.name !== route.name })">
+      <div :class="cn('overflow-hidden absolute text-4 h-10 z-30 capitalize mt-1.5 items-center text-bc/90 flex-nowrap justify-center w-full grow flex font-semibold ', { 'opacity-60 font-medium': item.name !== route.name })">
         {{ item?.meta?.title || item.name.toString() }}
       </div>
     </Button>

@@ -13,10 +13,10 @@ const heal = computed(() => {
 
 <template>
   <div
-    class="p-1 h-full max-w-24 w-24 mx-1 **:leading-none *:text-xxs *:tracking-tight font-medium">
+    class="p-1 h-full max-w-24 w-24 mx-1 **:leading-none *:text-1 *:tracking-tight font-medium">
     <tippy
       class="flex gap-2 items-center hover:underline text-nowrap truncate"
-      content-class="py-1 space-y-1 w-32 *:w-full *:flex *:tracking-tight *:text-xs">
+      content-class="py-1 space-y-1 w-32 *:w-full *:flex *:tracking-tight *:text-2">
       <span class="size-3 relative grid justify-center">
         <icon
           name="el:fire"
@@ -27,7 +27,7 @@ const heal = computed(() => {
 
     <tippy
       class="flex gap-2 mt-2.25 items-center hover:underline text-nowrap truncate"
-      content-class="py-1 space-y-1 w-32 *:w-full *:flex *:tracking-tight *:text-xs">
+      content-class="py-1 space-y-1 w-32 *:w-full *:flex *:tracking-tight *:text-2">
       <span class="size-3 relative grid justify-center">
         <icon
           name="oi:plus"
@@ -55,7 +55,7 @@ const heal = computed(() => {
 
     <div
       class="flex gap-2.25 mt-2 items-center hover:underline text-nowrap truncate"
-      content-class="py-1 space-y-1 w-32 *:w-full *:flex *:tracking-tight *:text-xs">
+      content-class="py-1 space-y-1 w-32 *:w-full *:flex *:tracking-tight *:text-2">
       <span class="size-3 relative grid justify-center">
         <icon
           name="ph:shield-fill"

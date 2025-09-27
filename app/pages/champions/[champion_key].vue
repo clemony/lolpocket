@@ -10,21 +10,11 @@ const championData = await import(
   `#shared/appdata/records/champions/${String(route.params.champion_key)}.ts`
 )
 const champion = computed(() => championData.default)
-console.log('🌱 - champion:', champion)
 const tabs = shallowRef<string>(null)
 
-const router = useRouter()
-const links = computed(
-  () => router.getRoutes().find(r => r.name === 'champion_key').children
-).value
 onMounted(() => {
   tabs.value = route.name.toString()
 })
-
-function navigate(path: string) {
-  const end = path.split('/').pop()
-  navigateTo(`/champions/${champion.value.key}/${end}`)
-}
 </script>
 
 <template>
@@ -52,45 +42,10 @@ function navigate(path: string) {
         <h1 class="!text-[2.1] tracking-tight pt-1 font-bold leading-10 dst">
           {{ champion.name }}
         </h1>
-        <p class="text-sm px-1 -mt-1 text-bc font-medium italic leading-5">
+        <p class="text-3 px-1 -mt-1 text-bc font-medium italic leading-5">
           {{ champion.title }}
         </p>
       </header>
-    </template>
-
-    <template #tabs>
-      <nav
-        role="tablist"
-        class="tabs tab-menu relative h-10 justify-start col-start-2 w-max mb-2 tabs-lg tabs-lift z-1 flex">
-        <FakeTab />
-
-        <!-- ALL tabs -->
-
-        <label
-          v-for="item in links"
-          :key="item.name"
-          role="tab"
-          :tabindex="0"
-          :for="String(item.name)"
-          :class="
-            cn(
-              'group/tab min-w-22  max-w-40 grow has-checked:tab-active  tab ',
-              { 'tab-active ': tabs === item.name },
-            )
-          "
-          @keydown.enter="navigateTo(item.path)"
-          @click="navigate(item.path)">
-          <input
-            v-model="tabs"
-            type="radio"
-            :name="String(item.name)"
-            :value="item.name"
-            class="peer hidden" />
-          {{ item.meta?.title }}
-        </label>
-
-        <FakeTab />
-      </nav>
     </template>
 
     <div class="size-full flex bg-b1 pl-60 relative gap-6 overflow-hidden ">

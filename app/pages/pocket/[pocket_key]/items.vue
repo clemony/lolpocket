@@ -8,9 +8,7 @@ const props = defineProps<{
 definePageMeta({
   name: 'pocket-items',
   title: 'items',
-  level: 3,
   order: 2,
-  parent: '/pocket',
   path: '/pocket/:pocket_key/items',
   search: 'hidden',
 })

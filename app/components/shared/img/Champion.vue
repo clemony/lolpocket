@@ -1,15 +1,14 @@
 <script setup lang="ts">
 const {
-  champKey,
+  id,
   class: className,
   img,
-  scale,
-  translate,
+  k,
+  type,
 } = defineProps<{
-  champKey?: string
-  img: string
-  scale?: string
-  translate?: string
+  k?: string
+  id?: number
+  img?: string
   type?: SplashType
   class?: HTMLAttributes['class']
 }>()
@@ -22,10 +21,10 @@ const lower = [
   'Yuumi',
   'Senna',
   'Taric',
+  'Morgana',
   'Mordekaiser',
   'Darius',
   'Ryze',
-  'Sona',
 ]
 const mid = ['Fiora', 'Fizz', 'Lilia', 'Nami', 'DrMundo']
 const left = ['Ivern', 'Riven', 'Ryze', 'Hwei', '', '']
@@ -50,38 +49,38 @@ const out = [
 ]
 
 const y = computed(() =>
-  lower.includes(champKey)
-    ? `50%`
-    : mid.includes(champKey)
+  lower.includes(k)
+    ? `30%`
+    : mid.includes(k)
       ? '20%'
       : '40%'
 )
+/* , {'translate-y-10': } */
+const x = computed(() => (left.includes(k) ? '70%' : '50%'))
 
-const x = computed(() => (left.includes(champKey) ? '70%' : '50%'))
-
-const bgSize = computed(() =>
-  scale || out.includes(champKey) ? '160%' : '180%'
-)
+const image = useImage()
+const splash = computed (() => `url('${image(getSplash(k ?? id, type))}')`)
+console.log('🌱 - splash:', splash)
 </script>
 
 <template>
   <div
-    class="size-full"
     :class="
       cn(
-        'grid place-items-center shrink-0 overflow-hidden  relative cursor-pointer shadow-sm drop-shadow-sm bg-no-repeat rounded-lg  size-full **:select-none  group relative',
-        className,
-      )
-    ">
+        'size-full grid place-items-center shrink-0 overflow-hidden  relative cursor-pointer shadow-sm drop-shadow-sm bg-no-repeat rounded-lg bg-cover size-full **:select-none  group relative',
+        className)"
+    :style="{
+      /*       'background': splash,
+      'background-position-y': y, */
+
+    }">
     <Img
-      :img="img"
-      class="object-center size-full"
+      :img="img || getSplash(k ?? id, type)"
+      :class="cn('object-cover shrink-0  !aspect-video  size-full')"
       :style="{
-        scale: bgSize,
-        transform: `translate(${translate})`,
-        objectPosition: `${x} ${y}`,
+        transform: `()`,
       }"
-      :alt="`${champKey}-Splash`" />
+      :alt="`${k}-Splash`" />
     <slot />
   </div>
 </template>

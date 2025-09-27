@@ -74,7 +74,7 @@ const variants = {
 
         <div
           v-if="cooldown"
-          class="text-3xs shadow-sm absolute border-neutral border-2 absolute bg-neutral text-nc **:text-nc radial-progress place-self-center font-semibold opacity-90"
+          class="text-0 shadow-sm absolute border-neutral border-2 absolute bg-neutral text-nc **:text-nc radial-progress place-self-center font-semibold opacity-90"
           :style="{
             '--value': cooldown?.seconds,
             '--size': '2rem',
@@ -99,7 +99,7 @@ const variants = {
     <motion.span
       :variants="variants"
       :transition="{ delay: 200 }"
-      class="text-3xs absolute italic align-baseline grow right-5 translate-y-0.5 text-right inline justify-self-end">
+      class="text-0 absolute italic align-baseline grow right-5 translate-y-0.5 text-right inline justify-self-end">
       {{ `${formatTimeAgo(state.summoner.value.lastMatchUpdate, 'short').replace('ago', 'old')}` }}
     </motion.span> -->
   </NavigationMenuItem>

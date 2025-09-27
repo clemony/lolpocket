@@ -1,10 +1,10 @@
+import type { Champion } from '#shared/types/types.champion'
+import { markUpdate } from '#shared/utils/markUpdate'
 import fs from 'node:fs'
-import type { Champion } from '../../../shared/types/types.champion'
-import { markUpdate } from '../../../shared/utils/markUpdate'
 import { resolvePath } from '../resolvePath'
 
 const outputFile = resolvePath(
-  '../../shared/appdata/index/champion-title-index.ts'
+  '#shared/appdata/index/champion-title-index.ts'
 )
 const dataPath = resolvePath('./champions/raw/champions-raw.json')
 const champs = JSON.parse(fs.readFileSync(dataPath, 'utf-8')) as Record<

@@ -12,12 +12,12 @@ console.log('💠 - champion.positions[0]:', champion.positions[0])
         {{ champion.fullName || champion.name }}
       </h1>
 
-      <p class="text-md uppercase grow dst text-wrap">
+      <p class="text-4 uppercase grow dst text-wrap">
         {{ champion.title }}
       </p>
     </div>
 
-    <p class="leading-7 text-pretty text-sm">
+    <p class="leading-7 text-pretty text-3">
       {{ champion.lore }}
     </p>
 
@@ -26,7 +26,7 @@ console.log('💠 - champion.positions[0]:', champion.positions[0])
     <div class="flex gap-6 items-center justify-between flex-nowrap">
       <ValueFormatter
         :array="champion.roles"
-        class="text-xs font-medium" />
+        class="text-2 font-medium" />
 
       <ValueFormatter
         :array="champion.positions"

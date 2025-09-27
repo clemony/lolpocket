@@ -36,13 +36,13 @@ const props = defineProps<{
           Unranked
         </p>
 
-        <p class="capitalize font-semibold text-md">
+        <p class="capitalize font-semibold text-4">
           0 LP
         </p>
 
         <p
           v-tippy="`0 total`"
-          class="hover:border-b-bc border-b-transparent border-b flex text-xxs items-center gap-1 text-end justify-end text-nowrap">
+          class="hover:border-b-bc border-b-transparent border-b flex text-1 items-center gap-1 text-end justify-end text-nowrap">
           <span>0W</span>
 
           <span>0L</span>

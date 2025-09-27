@@ -40,7 +40,7 @@
     & .tab {
       --tab-radius-min: 0.65rem !important;
       --tab-paddings: 4px 20px !important;
-      @apply gap-2 z-1 text-sm  !font-medium flex items-center !border-b-0 !text-start capitalize has-checked:!border-t-2 has-checked:!border-x-2;
+      @apply gap-2 z-1 text-3  !font-medium flex items-center !border-b-0 !text-start capitalize has-checked:!border-t-2 has-checked:!border-x-2;
       &:not(.tab-active) {
         @apply border-transparent border-2;
         &:hover {

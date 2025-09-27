@@ -32,7 +32,7 @@ const stats = computed(() => {
 })
 
 const divClass
-  = '**:not-[h4]:tracking-tight **:not-[h4]:font-semibold **:text-xs grid items-center grid-rows-2 justify-start justify-items-start h-full py-2  max-h-16.5'
+  = '**:not-[h4]:tracking-tight **:not-[h4]:font-semibold **:text-2 grid items-center grid-rows-2 justify-start justify-items-start h-full py-2  max-h-16.5'
 
 const pClass
   = 'leading-0 rounded-tiny flex gap-2 py-px  text-end items-center justify-end font-semibold tracking-tight text-nowrap truncate hover:underline'
@@ -80,12 +80,12 @@ const runeClass
           content: player.riotIdGameName,
           placement: 'top',
         }"
-        class="font-semibold text-nowrap text-xs truncate flex-nowrap items-end size-full">
+        class="font-semibold text-nowrap text-2 truncate flex-nowrap items-end size-full">
         {{ player.riotIdGameName }}
       </h4>
 
       <p
-        class="font-medium text-nowrap text-xs flex self-start items-center truncate opacity-60">
+        class="font-medium text-nowrap text-2 flex self-start items-center truncate opacity-60">
         <span>#{{ player.riotIdTagline }}</span>
       </p>
     </div>
@@ -129,14 +129,14 @@ const runeClass
     <div
       class=""
       :class="divClass">
-      <p class="font-semibold leading-0 items-center text-nowrap flex !text-xs flex-nowrap tracking-wide **:tracking-wide">
+      <p class="font-semibold leading-0 items-center text-nowrap flex !text-2 flex-nowrap tracking-wide **:tracking-wide">
         {{ player.kills }}&#8198;/&#8198;<span class="text-red-800">{{ player.deaths }}</span>&#8198;/&#8198;{{ player.assists }}
       </p>
 
       <Badge
         v-if="stats.kda / 100 === Infinity"
         size="xs"
-        class="border-master/40 saturate-180 bg-master/20 text-3xs **:leading-0">
+        class="border-master/40 saturate-180 bg-master/20 text-0 **:leading-0">
         <icon
           name="fa6-solid:infinity"
           class="size-3.5 dst mt-[0.04em]" />
@@ -176,7 +176,7 @@ const runeClass
                 })
               "
               class="">
-              <span class="font-bold text-white tracking-wide !text-3xs">
+              <span class="font-bold text-white tracking-wide !text-0">
                 {{ player.puuid === playerRank.mvp ? "MVP" : "ACE" }}
               </span>
             </Badge>
@@ -184,7 +184,7 @@ const runeClass
 
           <span
             v-else
-            class="**:!text-xxs font-normal -mt-0.5 opacity-60 leading-0 px-1">
+            class="**:!text-1 font-normal -mt-0.5 opacity-60 leading-0 px-1">
             <span>{{ stats.lpScore }}</span>
             <span>
               {{ formatNumberPosition(stats.lpScore) }}
@@ -193,9 +193,9 @@ const runeClass
         </p>
       </div>
       <p
-        class="text-bc/80 w-full leading-4 truncate font-medium tracking-tight !text-xs">
+        class="text-bc/80 w-full leading-4 truncate font-medium tracking-tight !text-2">
         {{ Math.round(player.challenges.killParticipation * 100) }}%
-        <span class="**:!text-xxs font-normal opacity-60 leading-0 px-1">kp</span>
+        <span class="**:!text-1 font-normal opacity-60 leading-0 px-1">kp</span>
       </p>
     </div>
 

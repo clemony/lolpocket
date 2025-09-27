@@ -9,7 +9,7 @@ const props = defineProps<
 </script>
 
 <template>
-  <SelectLabel :class="cn('px-2 py-1.5 text-xs font-semibold', props.class)">
+  <SelectLabel :class="cn('px-2 py-1.5 text-2 font-semibold', props.class)">
     <slot />
   </SelectLabel>
 </template>

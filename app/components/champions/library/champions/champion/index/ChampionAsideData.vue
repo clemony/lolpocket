@@ -86,19 +86,19 @@ const damageType = computed (() => damageTypes.find(d => d.type === champion.ada
     <div :class="wrapperClass">
       <p>Price</p>
       <div
-        class="flex gap-4 items-center overflow-hidden *:gap-1 *:text-sm *:flex *:items-center">
+        class="flex gap-4 items-center overflow-hidden *:gap-1 *:text-3 *:flex *:items-center">
         <div class="font-medium">
           <i-lol-be class="!size-4.25 text-platinum !shrink-0 dst mr-0.5" />
           <p>
             {{ champion.price.blueEssence }}
-            <span class="text-xxs font-medium pr-0.5">BE</span>
+            <span class="text-1 font-medium pr-0.5">BE</span>
           </p>
         </div>
         <div>
           <i-lol-rp class="!size-4.5 mr-1  text-gold !shrink-0 dst" />
           <p class="font-medium">
             {{ champion.price.rp }}
-            <span class="text-xxs font-medium pr-0.5">RP</span>
+            <span class="text-1 font-medium pr-0.5">RP</span>
           </p>
         </div>
       </div>

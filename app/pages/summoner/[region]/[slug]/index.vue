@@ -20,7 +20,7 @@ provide<Scroll>('scroll-top', { top: scroll })
         'flex mx-auto  gap-6  z-auto mb-42 min-h-screen  w-full justify-start items-start',
       )
     ">
-    <div class="w-[43%] grid  sticky  scrollbar-none    justify-end pl-6 pr-8">
+    <div class="w-[43%] grid   scrollbar-none    justify-end pl-6 pr-8">
       <MatchHistoryAside :state />
     </div>
     <SlideInTopOutBottom

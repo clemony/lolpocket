@@ -36,7 +36,7 @@ function handleDelete() {
 
       <div class="mt-6 w-full grow justify-between flex items-center">
         <Label
-          class="gap-3 cursor-pointer text-bc/60 hover:text-bc items-center text-xs underline-offset-2 hover:underline flex">
+          class="gap-3 cursor-pointer text-bc/60 hover:text-bc items-center text-2 underline-offset-2 hover:underline flex">
           <input
             v-model="as().settings.noConfirmTrash"
             type="checkbox"

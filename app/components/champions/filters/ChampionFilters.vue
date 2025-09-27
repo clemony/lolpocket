@@ -37,11 +37,11 @@ const query = ref<string>(null)
 
         <ChampionQuote
           as="p"
-          class="text-sm dst items-center pt-1 px-2 font-serif tracking-wide text-nowrap flex" />
+          class="text-3 dst items-center pt-1 px-2 font-serif tracking-wide text-nowrap flex" />
       </div>
 
       <!--     <NumberField id="level" v-model:model-value="cs().championGridLevel" :min="1" :max="18">
-      <Label class="text-xs">Champion Level</Label>
+      <Label class="text-2">Champion Level</Label>
 
       <NumberPickerContent class="w-32">
         <NumberFieldDecrement />

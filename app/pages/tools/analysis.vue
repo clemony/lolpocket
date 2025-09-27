@@ -3,6 +3,7 @@ import { getMatchesByPuuid } from '~~/server/api/riotClient'
 
 definePageMeta({
   title: 'analysis',
+  icon: 'chart',
   order: 5,
   path: '/tools/analysis',
 })

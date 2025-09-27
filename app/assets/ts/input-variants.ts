@@ -16,9 +16,9 @@ const inputVariants = cva(
         default: '',
         lg: 'btn-lg',
         md: 'btn-md h-10',
-        sm: 'btn-sm h-9 text-xs rounded-lg',
+        sm: 'btn-sm h-9 text-2 rounded-lg',
         xl: 'btn-xl',
-        xs: 'btn-xs h-8 text-xxs rounded-md',
+        xs: 'btn-xs h-8 text-1 rounded-md',
       },
       variant: {
         'base': 'btn bg-transparent hover:bg-transparent fx-0 shadow-0  border-0',

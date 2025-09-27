@@ -29,7 +29,7 @@ img {
   body,
   #app {
     font-family: var(--font-sans);
-    @apply text-bc h-screen w-screen text-sm selection:bg-n1/80 selection:text-nc relative;
+    @apply text-bc h-screen w-screen text-3 selection:bg-n1/80 selection:text-nc relative;
   }
 
   input,
@@ -51,27 +51,27 @@ img {
 
 @layer components {
   h1 {
-    @apply text-3xl;
+    @apply text-9;
   }
 
   h2 {
-    @apply text-xxl;
+    @apply text-7;
   }
 
   h3 {
-    @apply text-xl;
+    @apply text-6;
   }
 
   h4 {
-    @apply text-lg;
+    @apply text-5;
   }
 
   h5 {
-    @apply text-md;
+    @apply text-4;
   }
 
   h6 {
-    @apply text-sm;
+    @apply text-2 font-semibold antialiased;
   }
 
   h1,
@@ -80,7 +80,12 @@ img {
   h4,
   h5,
   h6 {
-    @apply leading-snug antialiased;
+    @apply  antialiased;
+  }
+
+
+  h6 {
+    @apply  text-bc/50 flex gap-3;
   }
 
   h1,

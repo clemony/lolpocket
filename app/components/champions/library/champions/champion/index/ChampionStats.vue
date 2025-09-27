@@ -143,7 +143,7 @@ const filteredStats = computed (() => {
           :step="1"
           :min-steps-between-thumbs="1"
           :min="1">
-          <span class="!text-xxs absolute font-semibold">{{ level[0] }}</span>
+          <span class="!text-1 absolute font-semibold">{{ level[0] }}</span>
         </Slider>
         <div class=" absolute pl-5.5 pr-4 h-10 z-0 w-full left-1  top-1 grid grid-cols-18 justify-evenly ">
           <button
@@ -162,7 +162,7 @@ const filteredStats = computed (() => {
               </span>
               <span
                 v-if="[1, 6, 11, 16, 18].includes(i) "
-                class="absolute font-mono items-end self-end justify-self-center  translate-y-4.5 text-xxs ">
+                class="absolute font-mono items-end self-end justify-self-center  translate-y-4.5 text-1 ">
                 {{ i }}
               </span>
             </div>
@@ -190,7 +190,7 @@ const filteredStats = computed (() => {
             :key="ix">
             <Separator class="bg-b3/80 first-of-type:hidden" />
             <div
-              class="!px-5 pt-0.5 justify-self-start justify-start text-lg font-bold">
+              class="!px-5 pt-0.5 justify-self-start justify-start text-5 font-bold">
               {{ group.name }}
             </div>
             <div

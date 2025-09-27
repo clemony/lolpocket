@@ -9,7 +9,7 @@ const { class: className, value } = defineProps<{
   <DropdownMenuCheckboxItem
     :value="value"
     :class="
-      cn('[&_svg]:text-nc hover:!bg-b3/15 !text-nc/80 text-xs', className)
+      cn('[&_svg]:text-nc hover:!bg-b3/15 !text-nc/80 text-2', className)
     ">
     <slot />
   </DropdownMenuCheckboxItem>

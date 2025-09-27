@@ -35,9 +35,9 @@ const props = defineProps<{
 
           a set and
 
-          <span class="text-lgml-1 drop-shadow-text">{{ getDeviceKey() }}</span>
+          <span class="text-5ml-1 drop-shadow-text">{{ getDeviceKey() }}</span>
 
-          <span class="text-md px-1">+</span>
+          <span class="text-4 px-1">+</span>
 
           <icon
             name="ph:mouse-left-click-fill"

@@ -14,7 +14,7 @@ const emit = defineEmits(['update:active'])
   <div class="flex items-center mb-2 -ml-1">
     <label
       :class="{ 'pointer-events-none': !props.active }"
-      class="btn btn-sm gap-2 font-semibold text-bc/65 rounded-lg px-2.5 place-self-center text-sm btn-ghost"
+      class="btn btn-sm gap-2 font-semibold text-bc/65 rounded-lg px-2.5 place-self-center text-3 btn-ghost"
       @click="emit('update:active')">
       <input
         v-bind="$attrs"

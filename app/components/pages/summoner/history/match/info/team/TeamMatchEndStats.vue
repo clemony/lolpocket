@@ -14,7 +14,7 @@ const { class: className, team } = defineProps<{
       )
     ">
     <h3
-      class="text-lg dst text-start text-nowrap text-white/86 font-bold uppercase">
+      class="text-5 dst text-start text-nowrap text-white/86 font-bold uppercase">
       {{ team.win ? "Win" : "Loss" }}
     </h3>
     <div

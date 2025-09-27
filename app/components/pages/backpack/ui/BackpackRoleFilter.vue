@@ -17,7 +17,7 @@ const tags = ref([])
         class="w-full"
         size="md">
         <span
-          class="font-semibold grow tracking-normal duration-0 opacity-40 text-md capitalize">
+          class="font-semibold grow tracking-normal duration-0 opacity-40 text-4 capitalize">
           Position
         </span>
         <CaretRotate />

@@ -11,7 +11,7 @@ const props = defineProps<{
     data-slot="input"
     :class="
       cn(
-        'flex relative h-9 w-full rounded-md border border-b3 bg-transparent py-1 text-sm text-center shadow-xs transition-colors placeholder:text-bc/60 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50',
+        'flex relative h-9 w-full rounded-md border border-b3 bg-transparent py-1 text-3 text-center shadow-xs transition-colors placeholder:text-bc/60 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50',
         props.class,
       )
     " />

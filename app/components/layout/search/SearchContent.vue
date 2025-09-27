@@ -32,14 +32,7 @@ const groups = computed (() => {
 <template>
   <ComboboxList
     :class="cn(' max-h-120', className)">
-    <div class="w-full p-3 ">
-      <p class="align-middle inline">
-        Type a name and hit <icon
-          name="tab"
-          class=" inline shrink-0 align-middle" /> tab to start a summoner search.
-      </p>
-    </div>
-    <ComboboxSeparator />
+    <TabForTag />
 
     <ComboboxItem
       v-for="item in items"

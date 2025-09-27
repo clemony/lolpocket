@@ -58,7 +58,7 @@ const skins = computed(() => ix().skins[champion.key])
   <div class="flex size-full gap-14 overflow-hidden pr-22">
     <Carousel
       orientation="vertical"
-      class="mask-y-from-0% mask-y-to-6% mask-y-from-transparent mask-y-to-black relative size-full max-h-full max-w-66 overflow-auto"
+      class="mask-y-from-0% mask-y-to-6% mask-y-from-transparent mask-y-to-black relative size-full max-h-screen max-w-66 overflow-auto"
       @init-api="(val) => (emblaThumbnailApi = val)">
       <CarouselContent
         class="scrollbar-hidden ml-0 flex gap-1 overflow-y-auto px-3 py-22">
@@ -104,7 +104,7 @@ const skins = computed(() => ix().skins[champion.key])
                   class="embla__slide__img embla__parallax__img" />
 
                 <div
-                  class="text-md absolute bottom-4 left-6 grid w-max place-items-center rounded-full bg-black/70 px-5 py-1 font-medium text-white/80 italic opacity-90 backdrop-blur ">
+                  class="text-4 absolute bottom-4 left-6 grid w-max place-items-center rounded-full bg-black/70 px-5 py-1 font-medium text-white/80 italic opacity-90 backdrop-blur ">
                   {{ skin.name }}
                 </div>
               </CardContent>

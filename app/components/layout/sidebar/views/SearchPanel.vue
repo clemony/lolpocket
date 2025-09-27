@@ -2,7 +2,7 @@
 defineOptions({
   meta: {
     name: 'Search',
-    class: '!size-5.5  **:!stroke-[2]',
+    class: 'size-5.5 ', // '!size-5.5  **:!stroke-[2]',
     icon: 'heart'// 'mage:search',
   },
 })

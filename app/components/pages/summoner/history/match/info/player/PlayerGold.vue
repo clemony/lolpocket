@@ -15,7 +15,7 @@ const cs = computed(() => {
     :offset="[2, -2]"
     :class="
       cn(
-        'flex flex-col *:py-0.5 *:text-xxs py-1 *:leading-none font-medium items-end justify-start size-full **:text-nowrap',
+        'flex flex-col *:py-0.5 *:text-1 py-1 *:leading-none font-medium items-end justify-start size-full **:text-nowrap',
         className,
       )
     ">

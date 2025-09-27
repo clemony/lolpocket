@@ -1,14 +1,14 @@
-import fs from 'node:fs'
 import type {
   ChampionLite,
   ChampionLiteRecord,
-} from '../../../shared/types/types.champion'
-import { markUpdate } from '../../../shared/utils/markUpdate'
+} from '#shared/types/types.champion'
+import { markUpdate } from '#shared/utils/markUpdate'
+import fs from 'node:fs'
 import { resolvePath } from '../resolvePath'
 import { normalize, normalizeArray } from '../utils'
 
 const dataPath = resolvePath('./champions/raw/champions-raw.json')
-const outputLite = resolvePath('../../shared/appdata/records/champions-lite.ts')
+const outputLite = resolvePath('#shared/appdata/records/champions-lite.ts')
 const outputRoles = resolvePath('./champions/raw/unique-roles.json')
 const outputPositions = resolvePath('./champions/raw/unique-positions.json')
 

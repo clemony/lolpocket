@@ -28,9 +28,13 @@ const { size = 'default', } = defineProps<{
       </div>
     </div>
 
+    <div class="fixed top-0 left-[45px]  z-12 h-[45px] justify-center flex items-center w-82">
+      <slot name="crumb" />
+    </div>
+
     <!-- Scrollable content -->
     <div
-      :class="cn('absolute inset-0 top-0 overflow-y-auto', {
+      :class="cn('absolute max-w-mw overflow-x-hidden inset-0 top-0 overflow-y-auto', {
         'pt-70': size === 'lg',
         'pt-32': size === 'default',
       })">
@@ -42,7 +46,7 @@ const { size = 'default', } = defineProps<{
       </div>
 
       <!-- Context wrapper -->
-      <div class="relative w-full min-h-screen z-1 bg-b1">
+      <div class="relative w-mw max-w-mw min-h-screen z-1 bg-b1">
         <slot />
         <SiteFooter />
       </div>

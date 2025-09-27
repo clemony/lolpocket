@@ -37,7 +37,7 @@ const winrateFormula = ref('absolute')
               variant="ghost"
               class="grid grid-cols-[4fr_repeat(2,1fr)] gap-3 hover:shadow-xs !duration-0 px-5 grid  w-full  **:font-medium dst ">
               <div
-                class="grow items-center justify-self-start text-start flex gap-3 text-xs">
+                class="grow items-center justify-self-start text-start flex gap-3 text-2">
                 <SummonerIcon
                   class="size-8 shadow-sm drop-shadow-sm rounded-full"
                   :icon-id="ally.profileIcon"
@@ -51,11 +51,11 @@ const winrateFormula = ref('absolute')
                   class="size-3.5 dst **:!text-bc/80" />
               </div>
 
-              <div class="text-xs text-end">
+              <div class="text-2 text-end">
                 {{ ally.games }}
               </div>
 
-              <div class="text-xs text-end">
+              <div class="text-2 text-end">
                 {{
                   winrateFormula === "absolute"
                     ? ally.winrate

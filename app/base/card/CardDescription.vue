@@ -5,7 +5,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <p :class="cn('text-sm text-bc/60', props.class)">
+  <p :class="cn('text-3 text-bc/60', props.class)">
     <slot />
   </p>
 </template>

@@ -20,7 +20,7 @@ const props = withDefaults(
       v-bind="$attrs"
       :animate="{ scale: [0, 1] }"
       :transition="{ delay: props.delay, type: 'spring' }"
-      class="indicator-item badge font-mono badge-sm px-1.75 top-1 right-1 rounded-full text-xxs">
+      class="indicator-item badge font-mono badge-sm px-1.75 top-1 right-1 rounded-full text-1">
       <slot />
     </motion.span>
   </AnimatePresence>

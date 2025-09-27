@@ -64,7 +64,7 @@ defineExpose({
           @update:selected-icon="(e) => (selectedIcon = e)" />
 
         <div
-          class="[&_label]:text-sm w-full flex flex-col justify-start gap-6 pt-4 px-0.5 h-full">
+          class="[&_label]:text-3 w-full flex flex-col justify-start gap-6 pt-4 px-0.5 h-full">
           <div class="flex flex-col gap-1">
             <div class="input w-full shrink-0">
               <div class="grow">
@@ -73,7 +73,7 @@ defineExpose({
                   type="text"
                   name="pocket-name"
                   placeholder="Pocket Name"
-                  class="size-full text-sm" />
+                  class="size-full text-3" />
               </div>
 
               <span class="flex gap-2">
@@ -89,7 +89,7 @@ defineExpose({
               v-model="tags"
               class="flex-col p-2 mt-6">
               <div
-                class="*:text-sm flex w-full flex-row flex-wrap justify-start gap-2">
+                class="*:text-3 flex w-full flex-row flex-wrap justify-start gap-2">
                 <template v-if="tags.length">
                   <TransitionGroup name="pop">
                     <TagsInputItem
@@ -120,7 +120,7 @@ defineExpose({
 
               <TagsInputInput
                 placeholder="optional"
-                class="text-sm min-h-10 w-full rounded-md border-0 focus:border-0"
+                class="text-3 min-h-10 w-full rounded-md border-0 focus:border-0"
                 name="pocket-tags " />
             </TagsInput>
           </div>
@@ -134,7 +134,7 @@ defineExpose({
       <DialogFooter class="mt-1 justify-start">
         <button
           type="submit"
-          class="btn btn-neutral px-6 btn-md !text-sm !font-medium"
+          class="btn btn-neutral px-6 btn-md !text-3 !font-medium"
           @click="submitForm">
           Create
         </button>

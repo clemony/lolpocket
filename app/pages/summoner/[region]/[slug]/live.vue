@@ -3,7 +3,7 @@ definePageMeta({
   key: 'l',
   name: 'live',
   title: 'live match',
-  icon: 'lucide:activity',
+  icon: 'mingcute:sound-line-line',
   iconStyle: '',
   order: 2,
 })

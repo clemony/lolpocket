@@ -39,7 +39,7 @@ function handleReset() {
 <template>
   <form class="flex flex-wrap gap-3 gap-y-5">
     <input
-      class="btn btn-square btn-sm !text-lgrounded-md font-normal"
+      class="btn btn-square btn-sm !text-5rounded-md font-normal"
       type="reset"
       value="×"
       @click="handleReset()" />
@@ -49,7 +49,7 @@ function handleReset() {
         v-for="stat in ''"
         :key="stat.id"
         v-model="to"
-        class="btn checked:bgneutral checked:borderneutral checked:shadowneutral/20 btn-sm !text-sm mr-0 rounded-md font-medium tracking-normal capitalize checked:shadow-sm"
+        class="btn checked:bgneutral checked:borderneutral checked:shadowneutral/20 btn-sm !text-3 mr-0 rounded-md font-medium tracking-normal capitalize checked:shadow-sm"
         :value="stat.id"
         type="checkbox"
         name="categories"

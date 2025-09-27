@@ -19,7 +19,7 @@ watch(
 
 <template>
   <div
-    class="flex flex-col pt-6 **:text-sm gap-6 size-full max-h-full items-center">
+    class="flex flex-col pt-6 **:text-3 gap-6 size-full max-h-full items-center">
     <div class="h-20 w-full">
       <LazyChampionAbilityTabs
         v-model:model-value="selected"

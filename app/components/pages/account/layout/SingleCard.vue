@@ -18,7 +18,7 @@ const route = useRoute()
         <Card class="!max-w-180 !w-full">
           <CardHeader class="text-center my-2">
             <CardTitle
-              class="text-xl">
+              class="text-6">
               {{ route.meta?.title || route.name }}
             </CardTitle>
             <CardDescription
@@ -32,7 +32,7 @@ const route = useRoute()
           </CardContent>
         </Card>
         <div
-          class="text-balance text-center text-xxs text-bc/60 [&_a]:underline [&_a]:underline-offset-1 [&_a]:hover:text-bc">
+          class="text-balance text-center text-1 text-bc/60 [&_a]:underline [&_a]:underline-offset-1 [&_a]:hover:text-bc">
           By continuing, you agree to our
           <a href="#">Terms of Service</a>
           <br />

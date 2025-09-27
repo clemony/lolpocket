@@ -56,7 +56,7 @@ const progress = computed(
               :placement="progress < 50 ? 'top-start' : 'top-end'">
               <template #content>
                 <div
-                  class="flex gap-3 tracking-tight px-0 py-1 text-xs font-normal leading-none text-nc items-center">
+                  class="flex gap-3 tracking-tight px-0 py-1 text-2 font-normal leading-none text-nc items-center">
                   <i-lol-mastery class="opacity-80 size-4 dst -ml-1" />
 
                   {{ params.data.points.toLocaleString() }} &nbsp; [

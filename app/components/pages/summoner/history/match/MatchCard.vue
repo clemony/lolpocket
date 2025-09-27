@@ -25,14 +25,14 @@ const queue = computed(() => {
     v-model:open="isOpen"
     :class="
       cn(
-        ' group size-full border-b3/70 justify-start max-w-220 group/collapse  overflow-hidden bg-clip-padding items-center relative **:select-none text-xs flex-col field-box  min-w-134   cursor-pointer group/collapse',
+        ' group size-full border-b3/70 justify-start max-w-220 group/collapse  overflow-hidden bg-clip-padding items-center relative **:select-none text-2 flex-col field-box  min-w-134   cursor-pointer group/collapse',
       )
     ">
     <CollapsibleTrigger
       :for="match.matchId"
       :class="
         cn(
-          ' h-40 flex gap-7 z-2 w-full text-xs  relative bg-linear-to-r pointer-events-auto to-transparent to-40% rounded-xl overflow-hidden bg-clip-padding relative items-center justify-items-start bg-transparent   cursor-pointer  px-5 justify-start rounded-box cursor-pointer  data-[state=open]:rounded-b-none ',
+          ' h-40 flex gap-7 z-2 w-full text-2  relative bg-linear-to-r pointer-events-auto to-transparent to-40% rounded-xl overflow-hidden bg-clip-padding relative items-center justify-items-start bg-transparent   cursor-pointer  px-5 justify-start rounded-box cursor-pointer  data-[state=open]:rounded-b-none ',
           player.win ? 'from-inspiration/80 ' : 'from-domination/80',
           'before:absolute before:left-0 before:z-3  before:h-full before:w-1/2 before:pointer-events-none before:brightness-94 before:opacity-40 before:mask-r-from-0 before:border before:rounded-xl before:shadow-sm before:shadow-black',
 
@@ -45,12 +45,12 @@ const queue = computed(() => {
       <div
         class="flex w-30 **:antialiased h-fit self-center  **:select-none flex-col justify-start gap-1 py-1">
         <h3
-          class="text-lg dst text-start text-nowrap text-white/86 font-bold uppercase">
+          class="text-5 dst text-start text-nowrap text-white/86 font-bold uppercase">
           {{ player.win ? "Win" : "Loss" }}
         </h3>
 
         <div class="font-semibold *:text-left opacity-76 w-full flex flex-col">
-          <p class="text-md text-left text-nowrap flex items-center font-bold flex gap-1.5">
+          <p class="text-4 text-left text-nowrap flex items-center font-bold flex gap-1.5">
             {{ queue?.description || queue?.map?.name || '' }}
           </p>
 

@@ -19,7 +19,7 @@ const pocket = ref(props.pocket)
           v-if="pocket.roles"
           :key="pocket.roles"
           v-tippy="pocket.roles"
-          class="size-6.5 drop-shadow-text focus:outline-0 shrink-0 !text-sm text-white/70" />
+          class="size-6.5 drop-shadow-text focus:outline-0 shrink-0 !text-3 text-white/70" />
 
         <i-roles-all-lanes
           v-else
@@ -34,7 +34,7 @@ const pocket = ref(props.pocket)
       <DropdownMenuItem>
         <label
           for="all"
-          class="flex gap-4 text-xs hover:!bg-b2/60">
+          class="flex gap-4 text-2 hover:!bg-b2/60">
           <input
             id="all"
             v-model="pocket.roles"
@@ -59,7 +59,7 @@ const pocket = ref(props.pocket)
         class="">
         <label
           :for="role"
-          class="flex gap-4 text-xs hover:!bg-b2/60">
+          class="flex gap-4 text-2 hover:!bg-b2/60">
           <input
             :id="role"
             v-model="pocket.roles[0]"

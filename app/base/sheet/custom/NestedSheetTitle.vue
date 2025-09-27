@@ -13,7 +13,7 @@ import { VisuallyHidden } from 'reka-ui'
 
     <Grow />
 
-    <SheetTitle class="text-lgdst">
+    <SheetTitle class="text-5dst">
       <slot />
     </SheetTitle>
 

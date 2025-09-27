@@ -16,7 +16,7 @@ import {
     class="justify-between w-full flex">
     Inbox
     <span
-      class="flex gap-2 text-xs">
+      class="flex gap-2 text-2">
       Unread
       <Switch
         v-model:model-value="inboxUnreadFilter"
@@ -74,7 +74,7 @@ import {
       <icon
         name="trash"
         class="size-4 !-ml-1 -mt-1" />
-      <span class="absolute -bottom-1.5 opacity-70 text-md -right-1">🡭</span>
+      <span class="absolute -bottom-1.5 opacity-70 text-4 -right-1">🡭</span>
     </IconWrapper>
     Trash all Read Messages
   </DropdownMenuItem>
