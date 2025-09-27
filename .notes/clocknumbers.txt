@@ -18,7 +18,7 @@
 
                 v-if="number != ','"
 
-                class="font-black bg-neutral rounded-md text-nc py-1 px-1.25 justify-self-center tracking-wide text-nowrap text-xxs0">
+                class="font-black bg-neutral rounded-md text-nc py-1 px-1.25 justify-self-center tracking-wide text-nowrap text-10">
 
                 {{ number }}
 
@@ -28,7 +28,7 @@
 
                 v-else
 
-                class="font-black w-3.5 h-full relative items-end justify-self-center tracking-wide text-nowrap text-4xl>
+                class="font-black w-3.5 h-full relative items-end justify-self-center tracking-wide text-nowrap text-9>
 
                 <icon
 

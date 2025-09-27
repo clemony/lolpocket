@@ -10,6 +10,6 @@ import { getDeviceKey } from '~/utils/config/handleDevice'
       name="search-bold"
       class="-mt-px size-4 group-hover:opacity-100 text-nc" />
 
-    <span class="!text-sm font-light text-nc">{{ getDeviceKey() }} K</span>
+    <span class="!text-3 font-light text-nc">{{ getDeviceKey() }} K</span>
   </button>
 </template>

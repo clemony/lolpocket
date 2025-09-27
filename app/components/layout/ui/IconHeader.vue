@@ -20,7 +20,7 @@ const { class: className } = defineProps<{
     <div class="flex flex-col w-full">
       <!-- header pre-text -->
       <div
-        class="inline-flex max-h-4 **:text-sm dst flex-nowrap text-nowrap lowercase gap-3 pl-0.5 font-normal">
+        class="inline-flex max-h-4 **:text-3 dst flex-nowrap text-nowrap lowercase gap-3 pl-0.5 font-normal">
         <slot name="pre-header" />
       </div>
       <div class="flex items-center justify-between w-full gap-8 mb-1 max-h-12">
@@ -31,7 +31,7 @@ const { class: className } = defineProps<{
 
       <!-- header sub-text -->
       <div
-        class="inline-flex max-h-4 **:text-sm dst flex-nowrap text-nowrap lowercase gap-4 pl-0.5 font-normal">
+        class="inline-flex max-h-4 **:text-3 dst flex-nowrap text-nowrap lowercase gap-4 pl-0.5 font-normal">
         <slot name="subheader" />
       </div>
     </div>

@@ -7,7 +7,7 @@ const { class: className } = defineProps<{
 <template>
   <p
     :class="
-      cn('leading-tight text-xs normal-case text-balanced text-start', className)
+      cn('leading-tight text-2 normal-case text-balanced text-start', className)
     ">
     <slot />
   </p>

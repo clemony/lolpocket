@@ -19,7 +19,7 @@ console.log('💠 - ms:', ms().filter.patch)
 
       <NumberFieldContent class="size-full grow">
         <NumberFieldInput
-          class="text-xxs0 dst font-bold h-full w-full inset-shadow-none shadow-none border-0" />
+          class="text-10 dst font-bold h-full w-full inset-shadow-none shadow-none border-0" />
       </NumberFieldContent>
 
       <NumberFieldIncrement

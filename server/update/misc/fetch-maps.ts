@@ -1,6 +1,6 @@
+import type { MapIndex } from '#shared/types'
 import fs from 'node:fs'
 import { $fetch } from 'ofetch'
-import type { MapIndex } from '../../../shared/types'
 import { markUpdate } from '../../../scripts'
 
 // FIXME maps and queue together thingy? where they're merged remember that ok

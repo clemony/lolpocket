@@ -14,7 +14,7 @@ const forwarded = useForwardProps(delegatedProps)
 <template>
   <MenubarTrigger
     v-bind="forwarded"
-    :class="cn('flex gap-1.5 group/menu text-sm ', props.class)">
+    :class="cn('flex gap-1.5 group/menu text-3 ', props.class)">
     <slot />
 
     <icon

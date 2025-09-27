@@ -38,7 +38,7 @@ const modelValue = ref(as().account.region)
         :value="region"
         :class="
           cn(
-            'flex rounded-md items-center gap-3 text-xs justify-start py-1.5 text-nowrap',
+            'flex rounded-md items-center gap-3 text-2 justify-start py-1.5 text-nowrap',
             { 'btn-active !bg-b2/30': region === modelValue },
           )
         ">

@@ -7,14 +7,14 @@ defineOptions({
 })
 
 const props = defineProps<{
-  defaultValue?: string | number
-  modelValue?: string | number
+  defaultValue?: string
+  modelValue?: string
   class?: HTMLAttributes['class']
   id?: string
 }>()
 
 const emits = defineEmits<{
-  (e: 'update:modelValue', payload: string | number): void
+  (e: 'update:modelValue', payload: string): void
   (e: 'clear:input', payload: string): void
 }>()
 
@@ -30,7 +30,7 @@ const modelValue = useVModel(props, 'modelValue', emits, {
     for="input"
     :class="
       cn(
-        'input text-xs h-12 items-center [&>svg]:text-tint-bc/70 [&>svg]:**:stroke-[2.2]   [&>svg]:size-5',
+        'input text-2 h-12 items-center [&>svg]:text-tint-bc/70 [&>svg]:**:stroke-[2.2]   [&>svg]:size-5',
         props.class,
       )
     ">
@@ -39,7 +39,7 @@ const modelValue = useVModel(props, 'modelValue', emits, {
       v-bind="$attrs"
       v-model="modelValue"
       name="input"
-      class="focus:placeholder:opacity-0 placeholder:text-xs placeholder:italic"
+      class="focus:placeholder:opacity-0 placeholder:text-2 placeholder:italic"
       @keydown.stop
       @keydown.enter.prevent
       @autofocus.prevent />

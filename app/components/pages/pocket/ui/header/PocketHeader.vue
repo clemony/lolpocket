@@ -13,7 +13,7 @@ const pocket = computed(() =>
           variant="ghost"
           size="xl"
           class="w-fit">
-          <h1 class="text-xxs0 tracking-tight hover:!bg-b3">
+          <h1 class="text-10 tracking-tight hover:!bg-b3">
             {{ pocket.name }}
           </h1>
         </Button>
@@ -25,7 +25,7 @@ const pocket = computed(() =>
         class="p-0 shadow-none drop-shadow-none w-min translate-x-[34px] min-w-[calc(var(--reka-popover-trigger-width)+70px)] -translate-y-[var(--reka-popover-trigger-height)] h-[var(--reka-popover-trigger-height)]">
         <Input
           v-model="pocket.name"
-          class="size-full **:font-bold field-sizing-content **:text-xxs0 **:tracking-tight"
+          class="size-full **:font-bold field-sizing-content **:text-10 **:tracking-tight"
           @clear:input="pocket.name = ''">
           <template #2>
             <Button

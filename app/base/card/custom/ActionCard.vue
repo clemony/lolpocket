@@ -32,7 +32,7 @@ const {
         className,
       )
     ">
-    <CardTitle class="dst text-lgself-start">
+    <CardTitle class="dst text-5self-start">
       <slot name="title">
         {{ title }}
       </slot>

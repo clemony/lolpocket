@@ -22,13 +22,21 @@ const route = useRoute()
         <BreadcrumbNav />
         <span class="grow" />
         <div id="navbar-right" />
+
+        <Button
+          variant="btn"
+          @click="ui().commandOpen = true">
+          open
+        </Button>
+
         <Search
-          class=" h-10 bg-b1/94 backdrop-blur w-80"
-          kbd />
+          class=" h-10 bg-b1/94 backdrop-blur w-80 max-w-80"
+          shortcut />
       </header>
       <div
         class="size-full relative justify-self-end">
         <slot />
+        <LazyAppCommand />
       </div>
 
       <!-- toaster -->
@@ -46,7 +54,5 @@ const route = useRoute()
     background: repeating-linear-gradient(to right, var(--color-n3) 0%, var(--color-n2), var(--color-neutral) 100%);
     " />
     </div>
-
-    <!--     <LazyAppCommand />  -->
   </div>
 </template>

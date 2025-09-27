@@ -52,7 +52,7 @@ const statIndex = [0, 1, 2, 3, 4, 5, 6, 7]
     </div>
 
     <div
-      class="overflow-auto mt-2 **:text-xxs grid grid-cols-[2fr_repeat(10,1fr)] grid-flow-row overscroll-none relative grid px-2 h-180">
+      class="overflow-auto mt-2 **:text-1 grid grid-cols-[2fr_repeat(10,1fr)] grid-flow-row overscroll-none relative grid px-2 h-180">
       <template
         v-for="category in matchDataStats"
         :key="category">
@@ -82,7 +82,7 @@ const statIndex = [0, 1, 2, 3, 4, 5, 6, 7]
             :key="player.id"
             :class="
               cn(
-                'text-end !text-xxs *:!text-xxs py-1 tracking-tight last:pr-2 font-medium',
+                'text-end !text-1 *:!text-1 py-1 tracking-tight last:pr-2 font-medium',
                 {
                   'text-bc/15 **:text-bc/15': player[stat.data] === 0,
                 },

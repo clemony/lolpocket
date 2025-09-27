@@ -33,7 +33,7 @@ const password = ref('')
           </Button>
         </div>
         <div
-          class="relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t after:border-b4">
+          class="relative text-center text-3 after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t after:border-b4">
           <span class="relative z-10 bg-b1 px-2 text-bc/60">
             Or continue with
           </span>
@@ -55,7 +55,7 @@ const password = ref('')
               <Label html-for="password">Password</Label>
               <NuxtLink
                 to="/password-reset"
-                class="ml-auto text-xs underline-offset-1.5 hover:underline">
+                class="ml-auto text-2 underline-offset-1.5 hover:underline">
                 Forgot your password?
               </NuxtLink>
             </div>

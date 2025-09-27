@@ -38,14 +38,14 @@ const rune = ref<Rune>()
             :src="`/img/runes/${rune.path}.webp`"
             class="h-5 w-auto dst" />
 
-          <span class="text-md font-medium grow">{{ rune.path }}</span>
+          <span class="text-4 font-medium grow">{{ rune.path }}</span>
         </div>
       </div>
     </div>
 
     <div
       :key="rune.id"
-      class="max-w-105 px-1 !text-sm text-pretty whitespace-pre-line flex flex-col h-full w-full justify-between gap-8">
+      class="max-w-105 px-1 !text-3 text-pretty whitespace-pre-line flex flex-col h-full w-full justify-between gap-8">
       {{ rune.description }}
       <a
         :key="rune.id"
@@ -53,7 +53,7 @@ const rune = ref<Rune>()
         :href="getWikiLink(rune.name)"
         target="_blank"
         alt="link to league wiki"
-        class="flex items-center gap-3 hover:underline underline-offset-2 text-xs self-end">
+        class="flex items-center gap-3 hover:underline underline-offset-2 text-2 self-end">
         Official Wiki
 
         <icon

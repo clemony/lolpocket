@@ -60,7 +60,7 @@ watch(
           class="text-bc/20 size-10" />
         <Champion
           v-else
-          class=""
+          class="*:scale-160"
           :img="ix().getSplash(pocket.main?.champion, 'tile')" />
         <div
           class="size-full opacity-0 group-hover/collapse:opacity-100 group-data-[state=open]/collapse:opacity-100 inset-0 transition-opacity duration-200 bg-neutral/70 absolute grid place-items-center">
@@ -81,7 +81,7 @@ watch(
         <icon name="search" />
         <input
           v-model="searchQuery"
-          class="h-full placeholder:italic w-full pr-4 text-xs transition-all duration-200"
+          class="h-full placeholder:italic w-full pr-4 text-2 transition-all duration-200"
           placeholder="Search All Champions..."
           @keydown.stop
           @keydown.enter.prevent />

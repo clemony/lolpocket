@@ -29,7 +29,7 @@ const {
             'scale-94 mt-px': ['health', 'armor', 'movespeed'].includes(stat.id),
           })
         " />
-      <span :class="cn('w-full flex-nowrap text-nowrap font-medium text-start group-hover:underline underline-offset-2 text-xs whitepsace-nowrap', { '': !stat.icon })">{{ stat.longAbbr || stat.abbr || stat.name }}</span>
+      <span :class="cn('w-full flex-nowrap text-nowrap font-medium text-start group-hover:underline underline-offset-2 text-2 whitepsace-nowrap', { '': !stat.icon })">{{ stat.longAbbr || stat.abbr || stat.name }}</span>
 
       <span class="font-medium text-nowrap ">
         {{ stat?.values.current || stat.values.flat }}<span v-if="stat?.id === 'attackSpeed'">%</span>

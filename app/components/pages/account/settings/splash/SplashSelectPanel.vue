@@ -110,7 +110,7 @@ function reset() {
               <ListboxFilter
                 v-model:model-value="champQuery"
                 type="text"
-                class="size-full px-5 text-xs grow" />
+                class="size-full px-5 text-2 grow" />
             </Teleport>
 
             <ListboxVirtualizer
@@ -180,7 +180,7 @@ function reset() {
             class="size-full grid place-items-end p-6">
             <Badge
               variant="neutral"
-              class="**:text-xs font-medium">
+              class="**:text-2 font-medium">
               Select or search a champion...
             </Badge>
           </div>

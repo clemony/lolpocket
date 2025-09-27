@@ -9,10 +9,9 @@ const { card } = defineProps<{
 
 definePageMeta({
   name: 'card',
-  title: 'Card Editor',
-  level: 2,
+  title: 'Card Builder',
+  icon: 'lucide:square-pen',
   path: '/tools/card',
-  search: 'hidden',
 })
 
 // TODO nuxt bg here
@@ -121,7 +120,7 @@ console.log('💠 - card.splash:', card.splash)
               </h3>
 
               <h1
-                class="text-xxs2 tracking-tight drop-shadow-sm"
+                class="text-12 tracking-tight drop-shadow-sm"
                 :style="{ fontFamily: card.font[0] }"
                 :class="fontClass1">
                 {{ ix().champNameByKey(card.champion) ?? '' }}

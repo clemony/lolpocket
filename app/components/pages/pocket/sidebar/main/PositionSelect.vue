@@ -40,7 +40,7 @@ const color = computed(
       ">
       <PositionBadge
         :position="pocket.main?.role"
-        class="badge-sm text-xs">
+        class="badge-sm text-2">
         <SelectValue
           placeholder="Select position"
           class="text-left text-white capitalize" />

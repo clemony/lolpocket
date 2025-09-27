@@ -3,8 +3,8 @@ import { pathIndex } from '#shared/appdata/index/path-index'
 
 definePageMeta({
   title: 'Runes',
-  icon: 'lol-rune',
-  parent: '/library',
+  icon: 'i-lol-rune-circle',
+  listClass: '!size-5 ',
   path: '/library/runes',
 })
 
@@ -13,7 +13,6 @@ const { pathList } = useRunes()
 const selectedPath = ref<PathName>('Inspiration')
 const selectedRune = ref<number>(null)
 const test = ref<PathName>(pathIndex[selectedPath.value])
-console.log('💠 - test:', test)
 </script>
 
 <template>

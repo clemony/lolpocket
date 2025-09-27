@@ -57,7 +57,7 @@ const groups = [
             size="lg"
             :class="
               cn(
-                'gap-2.75 pl-4 w-full !duration-0 !text-bc/60 h-10 text-sm capitalize text-nowrap flex-nowrap overflow-hidden hover:!text-bc justify-start',
+                'gap-2.75 pl-4 w-full !duration-0 !text-bc/60 h-10 text-3 capitalize text-nowrap flex-nowrap overflow-hidden hover:!text-bc justify-start',
                 { 'btn-active': route.params?.pocket_key === pocket.key },
               )
             "

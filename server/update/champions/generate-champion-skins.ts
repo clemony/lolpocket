@@ -1,20 +1,21 @@
+/* eslint-disable antfu/no-top-level-await */
+import type {
+  FullSkinRecord,
+  SkinRecord,
+} from '#shared/types/types.champion'
+import { markUpdate } from '#shared/utils/markUpdate'
 import { Buffer } from 'node:buffer'
 import fs from 'node:fs'
 import path from 'node:path'
 import { $fetch } from 'ofetch'
-import type {
-  FullSkinRecord,
-  SkinRecord,
-} from '../../../shared/types/types.champion'
-import { markUpdate } from '../../../shared/utils/markUpdate'
 import { resolvePath } from '../resolvePath'
 import { cleanImageLink, cleanImageNum } from '../utils'
 
 const championsPath = resolvePath('./champions/raw/champions-raw-meraki.json')
-const baseSkinPath = resolvePath('../../shared/appdata/index/skins-base.ts')
-const iconsDir = resolvePath('../../public/img/champions')
-const outputFull = resolvePath('../../shared/appdata/index/skins-full.ts')
-const outputBase = resolvePath('../../shared/appdata/index/skins-base.ts')
+const baseSkinPath = resolvePath('#shared/appdata/index/skins-base.ts')
+const iconsDir = resolvePath('~/public/img/champions')
+const outputFull = resolvePath('#shared/appdata/index/skins-full.ts')
+const outputBase = resolvePath('#shared/appdata/index/skins-base.ts')
 
 // ensure icons dir exists
 fs.mkdirSync(iconsDir, { recursive: true })

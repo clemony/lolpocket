@@ -42,7 +42,7 @@ function handleReset() {
 </script>
 
 <template>
-  <p class="text-xs mb-3">
+  <p class="text-2 mb-3">
     Is your pocket for a specific role? Roles can be specified in addition to
     champions, or in place of them.
   </p>
@@ -62,7 +62,7 @@ function handleReset() {
       v-for="role in sortedRoles"
       :key="role"
       :for="role"
-      class="flex gap-3 peer-not-checked:first-of-type:-ml-2 capitalize text-xs btn bg-b1 !rounded-lg has-checked:!bgneutral has-checked:!btn-neutral has-checked:text-nc">
+      class="flex gap-3 peer-not-checked:first-of-type:-ml-2 capitalize text-2 btn bg-b1 !rounded-lg has-checked:!bgneutral has-checked:!btn-neutral has-checked:text-nc">
       <input
         :id="role"
         v-model="pocket.roles"

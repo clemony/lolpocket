@@ -8,15 +8,24 @@ export function generateSummonerLinks(summoner: Account | Summoner) {
     children: [
       {
         name: 'Match History',
+        meta: {
+          icon: 'history'
+        },
         path: `/summoner/${slug}`,
       },
       {
         name: 'Mastery',
+        meta: {
+          icon: 'i-lol-mastery'
+        },
         path: `/summoner/${slug}/mastery`,
       },
       {
         name: 'Live',
-        path: `/summoner/${slug}/live`,
+        meta: {
+          icon: 'mingcute:sound-line-line'
+        },
+        path: `/summoner/${slug}/live`
       },
     ] as any,
   }

@@ -48,7 +48,7 @@ const {
         <div
           class="w-full h-5 max-h-5 w-34 max-w-34 mt-1.5 px-0.5 grid items-center relative">
           <span
-            class="italic items-center text-xxs flex-wrap flex absolute leading-none size-fit">
+            class="italic items-center text-1 flex-wrap flex absolute leading-none size-fit">
             {{ text }}
           </span>
         </div>

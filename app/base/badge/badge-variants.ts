@@ -2,7 +2,7 @@ import type { VariantProps } from 'class-variance-authority'
 import { cva } from 'class-variance-authority'
 
 export const badgeVariants = cva(
-  'inline-flex text-xs items-center rounded-lg badge w-fit leading-4 font-normal transition-colors focus:outline-none focus:ring-2 focus:ring-neutral focus:ring-offset-2',
+  'inline-flex text-2 items-center rounded-lg badge w-fit leading-4 font-normal transition-colors focus:outline-none focus:ring-2 focus:ring-neutral focus:ring-offset-2',
   {
     defaultVariants: {
       size: 'default',
@@ -12,9 +12,9 @@ export const badgeVariants = cva(
       size: {
         default: 'px-2.5 py-1 ',
         lg: 'badge-lg',
-        sm: ' text-xs py-0.75 px-2.5',
+        sm: ' text-2 py-0.75 px-2.5',
         xl: 'badge-xl rounded-field',
-        xs: 'badge-xs **:text-xxs px-1.5 !py-px h-5 rounded-md',
+        xs: 'badge-xs **:text-1 px-1.5 !py-px h-5 rounded-md',
       },
       variant: {
         default: 'badge-default',

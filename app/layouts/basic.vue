@@ -7,7 +7,7 @@
       class="sticky top-0 flex shrink-0 items-center gap-2 border-b z-2 border-b3 bg-b1/80 backdrop-blur-lg p-4">
       <Button
         variant="neutral"
-        class="size-7 text-3xs font-bold">
+        class="size-7 text-0 font-bold">
         LP
       </Button>
 

@@ -16,7 +16,7 @@ const { bayesianItems } = useMatchItems(state.summoner.puuid, state.matches)
       <div class="size-full !overflow-hidden">
         <div class="oveflow-y-auto size-full">
           <div
-            class="pt-3 pb-1 px-2 opacity-60 tracking-wide items-center flex gap-4 text-xs capitalize w-full">
+            class="pt-3 pb-1 px-2 opacity-60 tracking-wide items-center flex gap-4 text-2 capitalize w-full">
             <span class="grow pl-2">{{ ms().filter.patch }} Items</span>
 
             <APDtooltip>Absolute</APDtooltip>
@@ -39,7 +39,7 @@ const { bayesianItems } = useMatchItems(state.summoner.puuid, state.matches)
                   'box-shadow': `0px 1px 0px color-mix(in oklab, var(--color-${getGradeColor(entry.bayesianWinrate)}-b100) 40%, transparent),1px 1px 1px var(--color-${getGradeColor(entry.bayesianWinrate)}-w600) inset`,
                 }">
                 <span
-                  class="text-md dst font-mono text-[#FFF] text-shadow-black/5 text-shadow-xs tracking-wide">
+                  class="text-4 dst font-mono text-[#FFF] text-shadow-black/5 text-shadow-xs tracking-wide">
                   {{ getGrade(entry.bayesianWinrate) }}
                 </span>
               </div>
@@ -51,20 +51,20 @@ const { bayesianItems } = useMatchItems(state.summoner.puuid, state.matches)
               </div>
 
               <div class="list-col-grow -space-y-1">
-                <div class="text-sm truncate">
+                <div class="text-3 truncate">
                   {{ entry.item?.name }}
                 </div>
 
-                <div class="text-xxs uppercase font-semibold opacity-60">
+                <div class="text-1 uppercase font-semibold opacity-60">
                   {{ entry.win }}W {{ entry.loss }}L
                 </div>
               </div>
 
-              <div class="text-end text-xs">
+              <div class="text-end text-2">
                 {{ entry.winrate.toFixed(1) }}%
               </div>
 
-              <div class="text-end text-xs">
+              <div class="text-end text-2">
                 {{ entry.bayesianWinrate.toFixed(1) }}%
               </div>
             </div>

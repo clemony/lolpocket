@@ -108,7 +108,7 @@ const options = {
 <template>
   <Field class="w-full bg-b3/30 m-0 relative !pb-0 pt-6 justify-self-center">
     <div
-      class="absolute top-5 text-sm tracking-tight left-6 text-bc/50 font-bold drop-shadow-sm">
+      class="absolute top-5 text-3 tracking-tight left-6 text-bc/50 font-bold drop-shadow-sm">
       Champion Attributes
     </div>
 

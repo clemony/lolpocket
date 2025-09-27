@@ -33,7 +33,7 @@ import { vDraggable } from 'vue-draggable-plus'
         },
       ]"
       class="flex flex-wrap select-none overscroll-auto justify-self-center justify-start gap-4 px-10 pb-10 pt-14">
-      <LazyPopoverItem
+      <LazyItemPopover
         v-for="item in is().filtered"
         :id="item"
         :key="item"

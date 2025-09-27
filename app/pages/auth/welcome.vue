@@ -22,7 +22,7 @@ definePageMeta({
                 class="flex aspect-square items-center justify-center p-6">
                 <MotionByWord words="Just a few more things..." />
 
-                <span class="text-mdxl font-semibold">{{ index + 1 }}</span>
+                <span class="text-9 font-semibold">{{ index + 1 }}</span>
               </CardContent>
             </Card>
           </div>

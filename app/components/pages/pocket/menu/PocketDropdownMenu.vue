@@ -12,7 +12,7 @@ const pocket = ref(props.pocket)
       name="teenyicons:layers-subtract-outline"
       class="size-5" />
 
-    <span class="-ml-[1px] text-sm">Duplicate</span>
+    <span class="-ml-[1px] text-3">Duplicate</span>
   </DropdownMenuItem>
 
   <DropdownMenuItem>
@@ -20,7 +20,7 @@ const pocket = ref(props.pocket)
       name="teenyicons:upload-outline"
       class="size-5" />
 
-    <span class="text-sm">Export to League Client</span>
+    <span class="text-3">Export to League Client</span>
   </DropdownMenuItem>
 
   <DropdownMenuItem>
@@ -34,7 +34,7 @@ const pocket = ref(props.pocket)
   <DropdownMenuSeparator />
 
   <DropdownMenuItem
-    class="!text-sm font-medium"
+    class="!text-3 font-medium"
     @click="deletePocket(pocket.key)">
     <icon
       name="x-folder"

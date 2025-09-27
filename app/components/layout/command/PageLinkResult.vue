@@ -43,7 +43,7 @@ function navigate() {
       </span>
 
       <Badge
-        class="capitalize justify-self-end opacity-40 text-xxs group-hover:opacity-80 mr-1">
+        class="capitalize justify-self-end opacity-40 text-1 group-hover:opacity-80 mr-1">
         {{ page.meta?.section ?? "" }}
       </Badge>
 

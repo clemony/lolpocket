@@ -13,7 +13,7 @@ const position = computed(() => championPositions.find(p => p.name === pos))
   <label
     :class="
       cn(
-        'group/btn h-9 inset-shadow-sm inset-shadow-white/20 flex rounded-lg shadow-xs drop-shadow-xs badge badge-lg !h-6.5 px-2  gap-1.5 !text-xs  **:text-white text-white *:dst  !font-medium items-center w-min cursor-pointer',
+        'group/btn h-9 inset-shadow-sm inset-shadow-white/20 flex rounded-lg shadow-xs drop-shadow-xs badge badge-lg !h-6.5 px-2  gap-1.5 !text-2  **:text-white text-white *:dst  !font-medium items-center w-min cursor-pointer',
         className,
       )
     "

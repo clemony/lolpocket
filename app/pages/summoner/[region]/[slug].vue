@@ -7,13 +7,9 @@ definePageMeta({
 })
 
 const route = useRoute()
-
-/* const { summoner, props, loading, error } = useHandleSummoner() */
-
 const puuid = computed(() => as().account?.puuid)
 
 const state = ref<ReturnType<typeof useSummonerProvider> | null>(null)
-/* console.log('state: ', state.value.summoner) */
 
 provide(SummonerKey, state)
 
@@ -35,12 +31,13 @@ watch(
   <TabLayout
     v-if="state?.summoner"
     size="lg">
-    <!-- summoner menu -->
-    <Teleport
+    <!-- summoner menu   <Teleport
       to="#breadcrumb-1"
-      defer>
+      defer></Teleport> -->
+
+    <template #crumb>
       <SummonerDropdown :summoner="state.summoner" />
-    </Teleport>
+    </template>
 
     <!-- summoner utils -->
     <Teleport

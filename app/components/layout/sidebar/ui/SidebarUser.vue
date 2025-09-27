@@ -33,9 +33,9 @@ watch(
       class="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground md:size-11 shrink-0 md:p-0 group/menu">
       <SummonerIcon
         class="size-full *:size-full text-nc rounded-full grayscale transition-all duration-200 group-hover/menu:grayscale-0 group-data-[state=open]/menu:grayscale-0" />
-      <div class="grid flex-1 text-left text-xs leading-tight">
+      <div class="grid flex-1 text-left text-2 leading-tight">
         <SummonerName class="truncate font-semibold" />
-        <SummonerRegion class="truncate text-xxs" />
+        <SummonerRegion class="truncate text-1" />
       </div>
       <!--
       <icon
@@ -48,12 +48,12 @@ watch(
       align="end"
       :side-offset="4">
       <DropdownMenuLabel class="p-0 font-normal">
-        <div class="flex items-center gap-2 px-1 py-1.5 text-left text-xs">
+        <div class="flex items-center gap-2 px-1 py-1.5 text-left text-2">
           <SummonerIcon class="h-8 w-8 rounded-lg text-nc" />
 
-          <div class="grid flex-1 text-left text-xs leading-tight">
+          <div class="grid flex-1 text-left text-2 leading-tight">
             <SummonerName class="truncate font-semibold" />
-            <SummonerTag class="truncate text-xxs" />
+            <SummonerTag class="truncate text-1" />
           </div>
         </div>
       </DropdownMenuLabel>

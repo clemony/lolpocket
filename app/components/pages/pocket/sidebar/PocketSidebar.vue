@@ -22,7 +22,7 @@ const hoverClass = 'hover:bg-b2/60 inset-shadow-black/2 hover:inset-shadow-xs'
           :side-offset="-5"
           :pocket />
       </div>
-      <p class="text-sm font-medium">
+      <p class="text-3 font-medium">
         {{ ix().getChampionTitle(pocket.main?.champion) }}
       </p>
     </div>

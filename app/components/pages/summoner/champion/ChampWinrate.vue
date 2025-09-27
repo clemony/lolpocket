@@ -20,7 +20,7 @@ const a = computed(() => {
         'color': getColorFromVariable(`--color-${getAbsoluteColor(a)}`),
       }"
       role="progressbar">
-      <span class="text-bc !text-xxs font-medium dst">
+      <span class="text-bc !text-1 font-medium dst">
         {{ a.toFixed(1).replace(".0", "") }}%
       </span>
     </div>

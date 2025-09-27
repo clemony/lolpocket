@@ -81,7 +81,7 @@ watchEffect(async () => {
           <!--  <div
             v-if="!ms.patchGames.length"
             class="absolute top-0 left-0 size-full bg-black/40 rounded-box grid place-items-center">
-            <div class="badge badge-xl text-xs shadow-lg opacity-90">
+            <div class="badge badge-xl text-2 shadow-lg opacity-90">
               No data this patch.
             </div>
           </div> -->

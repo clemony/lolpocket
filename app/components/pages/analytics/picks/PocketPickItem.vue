@@ -23,21 +23,21 @@ console.log('💠 - itemColor - itemColor:', itemColor)
     :title="title">
     <div class="w-full pt-8 items-center px-5 gap-5 dst flex relative">
       <div class="rounded-full size-16 shadow-sm drop-shadow-sm">
-        <PopoverItem
+        <ItemPopover
           :id="bayesianItems[itemNum]"
           class="size-16 rounded-full overflow-hidden" />
       </div>
 
       <div class="text-bc grow">
-        <p class="tracking-tight text-lgfont-semibold pb-1">
+        <p class="tracking-tight text-5font-semibold pb-1">
           {{ bayesianItems[itemNum].item?.name }}
         </p>
 
-        <p class="text-sm font-medium tracking-tight text-bc/60">
+        <p class="text-3 font-medium tracking-tight text-bc/60">
           {{ bayesianItems[itemNum].games }} Total Matches
         </p>
 
-        <p class="text-sm font-medium text-bc/60">
+        <p class="text-3 font-medium text-bc/60">
           {{ bayesianItems[itemNum].win }}W {{ bayesianItems[itemNum].loss }}L
         </p>
       </div>
@@ -49,7 +49,7 @@ console.log('💠 - itemColor - itemColor:', itemColor)
           'box-shadow': `0px 1px 0px color-mix(in oklab, var(--color-${itemColor}-b100) 40%, transparent),1px 1px 1px var(--color-${itemColor}-w600) inset`,
         }">
         <span
-          class="text-md dst font-mono text-[#FFF] text-shadow-black/5 text-shadow-xs tracking-wide">
+          class="text-4 dst font-mono text-[#FFF] text-shadow-black/5 text-shadow-xs tracking-wide">
           {{ getGrade(bayesianItems[itemNum].bayesianWinrate) }}
         </span>
       </div>
@@ -57,8 +57,8 @@ console.log('💠 - itemColor - itemColor:', itemColor)
 
     <Separator />
 
-    <div class="dst text-xs flex justify-between px-6">
-      <div class="items-end grid text-xs font-medium text-bc/60">
+    <div class="dst text-2 flex justify-between px-6">
+      <div class="items-end grid text-2 font-medium text-bc/60">
         <Grow />
 
         <p>

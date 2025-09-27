@@ -15,7 +15,7 @@
 /* input */
 
 @utility input {
-  @apply focus-within:outline-0 focus-within:outline-offset-0 text-xs   focus-within:ring-n1/50 focus-within:ring-1 w-full ring-offset-b1  inset-shadow-black/4  inset-shadow-xs border-b3 **:text-xs h-10;
+  @apply focus-within:outline-0 focus-within:outline-offset-0 text-2   focus-within:ring-n1/50 focus-within:ring-1 w-full ring-offset-b1  inset-shadow-black/4  inset-shadow-xs border-b3 **:text-2 h-10;
   border-image-width: 0 !important;
   --input-color: var(--b3);
 }
@@ -23,13 +23,13 @@
 /* divider */
 
 @utility divider {
-  @apply h-px text-xs font-semibold opacity-50;
+  @apply h-px text-2 font-semibold opacity-50;
 }
 
 /* badge */
 
 @utility badge {
-  @apply rounded-lg shadow-sm shadow-black/2 text-xs px-2 flex gap-2 dst items-center  box-border;
+  @apply rounded-lg shadow-sm shadow-black/2 text-2 px-2 flex gap-2 dst items-center  box-border;
 }
 
 @utility badge-neutral {
@@ -60,16 +60,20 @@
   @apply rounded-[3.5px];
 }
 
+@utility checkbox-xs {
+  @apply rounded-[3.5px];
+}
+
 /*  btn */
 
 @utility btn {
   --noise: 1;
-  @apply font-normal px-3 text-sm gap-3 items-center bg-transparent;
+  @apply font-normal px-3 text-3 gap-3 items-center bg-transparent;
 }
 
 @layer utilities {
   .btn-ghost-dark {
-    @apply py-1 cursor-pointer capitalize  text-white/60  text-sm hover:text-white/80  rounded-xl w-full border border-transparent hover:border-black-30/70 hover:drop-shadow-xs hover:shadow-sm hover:bg-black-25/60 hover:backdrop-blur-md  hover:inset-shadow-xs inset-shadow-black-30/30 hover:shadow-black-25/60   hover:drop-shadow-black-35/60;
+    @apply py-1 cursor-pointer capitalize  text-white/60  text-3 hover:text-white/80  rounded-xl w-full border border-transparent hover:border-black-30/70 hover:drop-shadow-xs hover:shadow-sm hover:bg-black-25/60 hover:backdrop-blur-md  hover:inset-shadow-xs inset-shadow-black-30/30 hover:shadow-black-25/60   hover:drop-shadow-black-35/60;
   }
 
   .btn-ghost-dark:where(:not(.btn-square)) {
@@ -84,10 +88,10 @@
 /* chat */
 
 @utility chat-header {
-  @apply text-xxs px-2 !leading-0 translate-y-0.75;
+  @apply text-1 px-2 !leading-0 translate-y-0.75;
 }
 @utility chat-footer {
-  @apply !text-xxs px-2 !leading-0 -translate-y-2.75;
+  @apply !text-1 px-2 !leading-0 -translate-y-2.75;
 }
 
 @utility chat-bubble {
@@ -106,7 +110,7 @@
   @apply relative;
 
   &::before {
-    @apply z-50 py-1.5 px-3 text-xs border-b3 text-bc max-w-64 whitespace-pre-wrap drop-shadow-sm transition-all duration-300 leading-5.5 text-start bg-[var(--tt-bg)];
+    @apply z-50 py-1.5 px-3 text-2 border-b3 text-bc max-w-64 whitespace-pre-wrap drop-shadow-sm transition-all duration-300 leading-5.5 text-start bg-[var(--tt-bg)];
   }
 
   &::after {
@@ -122,12 +126,12 @@
   }
 
   .field-legend {
-    @apply fieldset-legend absolute left-5.5 -top-5 text-sm max-w-64  max-h-12;
+    @apply fieldset-legend absolute left-5.5 -top-5 text-3 max-w-64  max-h-12;
   }
 
   .field-box {
     background: url('../icons/ui/noise.svg');
-    @apply shadow-warm-soft overflow-visible border bg-size-[160px] bg-b2/40 bg-repeat  drop-shadow-xs border-b3/60 rounded-xl **:select-none text-xs   relative;
+    @apply shadow-warm-soft overflow-visible border bg-size-[160px] bg-b2/40 bg-repeat  drop-shadow-xs border-b3/60 rounded-xl **:select-none text-2   relative;
   }
 
     /* progress */
@@ -152,11 +156,11 @@
     }
 
     .stat-title {
-      @apply !text-sm font-semibold  drop-shadow-[1px_0px_0px_#00000020];
+      @apply !text-3 font-semibold  drop-shadow-[1px_0px_0px_#00000020];
     }
 
     .stat-desc {
-      @apply !text-xs font-medium  drop-shadow-[1px_0px_0px_#00000020];
+      @apply !text-2 font-medium  drop-shadow-[1px_0px_0px_#00000020];
     }
 
     .stat-figure {

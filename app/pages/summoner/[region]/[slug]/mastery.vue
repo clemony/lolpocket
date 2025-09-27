@@ -75,7 +75,7 @@ const masteryStats = [
               v-for="data in masteryStats"
               :key="data.title"
               class="px-7 min-w-64 w-80 h-32 pb-5 pt-7 grid gap-4">
-              <h1 class="font-black tracking-wide text-nowrap text-xxs0">
+              <h1 class="font-black tracking-wide text-nowrap text-10">
                 {{ data.data }}
               </h1>
               <h6 class="lowercase opacity-50 self-end">
@@ -86,7 +86,7 @@ const masteryStats = [
             <BasicCard class="px-7 min-w-64 w-80 h-32 pb-5 pt-5 grid gap-4">
               <input
                 type="text"
-                class="input w-full font-black tracking-wide h-full text-nowrap text-xxs0" />
+                class="input w-full font-black tracking-wide h-full text-nowrap text-10" />
 
               <h6 class="lowercase opacity-50 self-end">
                 fun

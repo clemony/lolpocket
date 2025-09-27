@@ -11,7 +11,7 @@ const pocket = computed(() => props.pocket)
   <Label
     variant="neutral"
     size="xs"
-    class="justify-start !text-xs rounded-lg gap-2 group/role capitalize relative overflow-hidden"
+    class="justify-start !text-2 rounded-lg gap-2 group/role capitalize relative overflow-hidden"
     @click.stop>
     <input
       v-model="pocket.roles"

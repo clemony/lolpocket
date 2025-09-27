@@ -34,7 +34,7 @@ async function onSubmit(values: any) {
       <div class="leading-4">
         <Label
           as="legend"
-          class="text-lgfont-semibold mb-2">
+          class="text-5font-semibold mb-2">
           Summoner Splash
         </Label>
 
@@ -50,7 +50,7 @@ async function onSubmit(values: any) {
       <div class="leading-4">
         <Label
           as="legend"
-          class="text-lg font-semibold mb-2">Title</Label>
+          class="text-5 font-semibold mb-2">Title</Label>
         <p class="label text-wrap">
           Display a title from an earned Badge.
         </p>
@@ -61,7 +61,7 @@ async function onSubmit(values: any) {
       <div class="leading-4">
         <Label
           as="legend"
-          class="text-lg font-semibold mb-2">
+          class="text-5 font-semibold mb-2">
           Hide Profile Elements
         </Label>
 

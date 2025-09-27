@@ -65,7 +65,7 @@ watchOnce(api, (api) => {
 
               <div>
                 <p
-                  class="text-bc text-md w-full [&_u]:decoration-dotted dst mt-5"
+                  class="text-bc text-4 w-full [&_u]:decoration-dotted dst mt-5"
                   v-html="r.text" />
 
                 <p

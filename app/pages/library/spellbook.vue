@@ -68,7 +68,7 @@ const selectedSpell = computed(() => ix().spellById(selectedSpellId.value))
             v-if="selectedSpell.text"
             :key="selectedSpell.name"
             class="pl-4.5 pr-3">
-            <p class="font-serif text-md leading-9 dst">
+            <p class="font-serif text-4 leading-9 dst">
               {{ selectedSpell.text }}
             </p>
 

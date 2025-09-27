@@ -2,7 +2,7 @@ import type { VariantProps } from 'class-variance-authority'
 import { cva } from 'class-variance-authority'
 
 export const buttonBase
-  = 'data-[state=active]:btn-active data-[state=checked]:btn-active data-[state=open]:btn-active has-[first:[&_svg]]:gap-3 has-not-[span:empty]:gap-2 text-start data-[state=open]:btn-active has-[span:empty]:gap-0  [&_svg]:inline-flex align-middle text-sm font-normal items-center disabled:opacity-80 flex'
+  = 'data-[state=active]:btn-active data-[state=checked]:btn-active data-[state=open]:btn-active has-[first:[&_svg]]:gap-3 has-not-[span:empty]:gap-2 text-start data-[state=open]:btn-active has-[span:empty]:gap-0  [&_svg]:inline-flex align-middle text-3 font-normal items-center disabled:opacity-80 flex'
 
 export const toggleBase
   = 'inline-flex items-center justify-center btn btn-ghost font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-b2 data-[state=on]:border-b3/60 [&_svg]:pointer-events-none [&_svg]:size-5 [&_svg]:shrink-0 gap-2 '
@@ -63,10 +63,10 @@ const sizes = {
   icon: 'aspect-square rounded-lg',
   lg: 'rounded-lg h-12',
   md: 'rounded-lg h-10',
-  sm: 'h-9 text-xs rounded-lg',
+  sm: 'h-9 text-2 rounded-lg',
   xl: 'rounded-lg h-14',
-  xs: 'h-8 text-xs rounded-md',
-  xxs: 'h-6 text-xs rounded-md',
+  xs: 'h-8 text-2 rounded-md',
+  xxs: 'h-6 text-2 rounded-md',
 }
 
 export const buttonVariants = cva(buttonBase, {
@@ -93,10 +93,10 @@ export const buttonVariants = cva(buttonBase, {
       icon: 'aspect-square rounded-lg',
       lg: 'btn-lg rounded-lg',
       md: 'btn-md rounded-lg',
-      sm: 'btn-sm rounded-lg text-xs',
+      sm: 'btn-sm rounded-lg text-2',
       xl: 'btn-xl rounded-lg',
-      xs: 'btn-xs rounded-md text-xs',
-      xxs: 'h-6 rounded-md text-xs',
+      xs: 'btn-xs rounded-md text-2',
+      xxs: 'h-6 rounded-md text-2',
     },
     variant: {
       ...variantStyles,

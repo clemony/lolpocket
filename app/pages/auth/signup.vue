@@ -38,7 +38,7 @@ onBeforeRouteLeave(() => {
           </Button>
         </div>
         <div
-          class="relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t after:border-b4">
+          class="relative text-center text-3 after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t after:border-b4">
           <span class="relative z-10 bg-b1 px-2 text-bc/60">
             Or continue with
           </span>
@@ -88,7 +88,7 @@ onBeforeRouteLeave(() => {
                 Logging in?
               </Button>
 
-              <span class="text-xs opacity-50">or</span>
+              <span class="text-2 opacity-50">or</span>
               <Button
                 as="a"
                 variant="link"

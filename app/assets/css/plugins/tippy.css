@@ -1,34 +1,53 @@
-/* @import 'tailwindcss';
+@import 'tailwindcss';
 @import '../theme.css';
 
+
 @layer base {
-  .tippy-content {
-    @apply text-sm whitespace-pre;
+    .tippy-box[data-inertia][data-state='visible'] {
+    transition-timing-function: cubic-bezier(0.28, 0.93, 0.75, 1.38);
   }
 
   .tippy-box {
-    @apply border h-max  w-auto max-w-80  rounded-lg backdrop-blur  font-medium  **:text-xs drop-shadow-[1px_2px_2px_#00000020] shadow-none px-3 py-1.5 z-1 shadow-md !bg-neutral/76 inline-block text-nc/80 drop-shadow-lg rounded-lg inset-shadow-white/10 border border-neutral/50;
+    @apply border h-fit !p-0  z-1 w-auto max-w-80  rounded-lg  shadow-none  border;
 
+  .tippy-content {
+    @apply text-3 whitespace-pre inline-block  px-3 py-1.5 font-medium  **:text-2 ;
+  }
+
+    &::before {
+      @apply absolute inset-0 rounded-lg backdrop-blur-md drop-shadow-[1px_2px_2px_#00000020] shadow-md;
+    }
+
+  }
+}
+.tippy-box[data-theme='default']{
+  @apply !bg-neutral/76 inset-shadow-white/10  border-neutral/50;  .tippy-content {
+    @apply  text-nc/80 ;
+  }
   & > .tippy-svg-arrow > svg:first-child {
     @apply fill-neutral/76 fill-neutral;
   }
   & > .tippy-svg-arrow > svg:last-child {
     @apply fill-neutral/76;
-  }
+}
 
 
-&[data-theme='base'] {
-  @apply border-b3 !bg-b1/90  text-bc/90 font-medium  drop-shadow-[1px_2px_2px_#00000020] shadow-none;
+  .tippy-box[data-theme='base'] {
+  @apply border-b3  text-bc/90 font-medium  !bg-transparent;
 
+    &::after {
+      @apply absolute inset-0 rounded-lg backdrop-blur drop-shadow-[1px_2px_2px_#00000020] !bg-b1/90 shadow-md;
+    }
   & > .tippy-svg-arrow > svg:first-child {
     @apply !text-b3 !fill-b3;
   }
   & > .tippy-arrow > svg:last-child {
     @apply !text-b1/90 !fill-b1/90;
   }
+
 }
 
-&[data-theme~='blur'] {
+ .tippy-box[data-theme~='blur'] {
   @apply bg-transparent border-0 shadow-none  text-bc/80;
 
   & > .tippy-svg-arrow {
@@ -36,85 +55,7 @@
   }
 }
 
-  }
 
-  .tippy-box[data-inertia][data-state='visible'] {
-    transition-timing-function: cubic-bezier(0.28, 0.93, 0.75, 1.38);
-  }
 }
 
 
-
-.tippy-box[data-theme~='mastery'] {
-  @apply shadow-md bg-n1/76 !max-w-62 text-nc/80 drop-shadow-lg rounded-lg px-4 py-1 backdrop-blur-md inset-shadow-white/20 border border-b4/50;
-
-  & > .tippy-svg-arrow {
-    @apply drop-shadow-sm !-top-1.25;
-
-    & > .tippy-svg-arrow > svg:first-child,
-    & > .tippy-svg-arrow > svg:last-child {
-      @apply -translate-x-1.5 mx-auto !-translate-y-4;
-    }
-  }
-
-  & > .tippy-svg-arrow {
-    @apply scale-90;
-  }
-
-  & > .tippy-svg-arrow > svg:first-child {
-    @apply text-n1/76;
-  }
-  & > .tippy-svg-arrow > svg:last-child {
-    @apply text-n3;
-  }
-}
- */
-
-
-
-    /*   & > .tippy-svg-arrow {
-    @apply absolute size-4 grid place-items-center !z-0 *:absolute;
-    } */
-
-/* & > .tippy-svg-arrow > svg:first-child {
-      @apply scale-70 translate-y-0 drop-shadow-[0px_1px_0_#00000016] mask-b-from-68% text-neutral/76 mask-b-to-69%;
-    }
-    & > .tippy-svg-arrow > svg:last-child {
-      @apply translate-y-px scale-70 text-neutral/76 mask-b-from-68% mask-b-to-69%;
-    }
-
-    &[data-placement='bottom'],
-    &[data-placement='bottom-start'],
-    &[data-placement='bottom-end'] {
-      & > .tippy-svg-arrow {
-        @apply -top-5.75  text-neutral/76;
-        & > svg:first-child,
-        & > svg:last-child {
-          @apply top-0  text-neutral/76;
-        }
-      }
-    }
-
-    &[data-placement='top'],
-    &[data-placement='top-start'],
-    &[data-placement='top-end'] {
-      @apply -bottom-5.75;
-
-      & > .tippy-svg-arrow > svg:first-child,
-      & > .tippy-svg-arrow > svg:last-child {
-        @apply bottom-0;
-      }
-    }
-
-    &[data-placement='left'] {
-      @apply -translate-x-0.25;
-      > .tippy-svg-arrow > svg:first-child,
-      > .tippy-svg-arrow > svg:last-child {
-        @apply -translate-y-4 -translate-x-2.5;
-      }
-    }
-
-    &[data-placement='right'] > .tippy-svg-arrow > svg:first-child,
-    &[data-placement='right'] > .tippy-svg-arrow > svg:last-child {
-      @apply -translate-y-4 translate-x-2.5;
-    } */

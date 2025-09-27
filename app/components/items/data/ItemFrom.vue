@@ -9,7 +9,7 @@ const { from, gold } = defineProps<{
   <div
     v-if="from"
     class=" mt-1">
-    <div class="divider divider-start after:h-px  !text-3xs">
+    <div class="divider divider-start after:h-px  !text-0">
       RECIPE
     </div>
 
@@ -19,7 +19,7 @@ const { from, gold } = defineProps<{
         :key="i"
         v-tippy="`${item.name} ‑ ${item.gold}g`"
         class="flex gap-3 items-center">
-        <LazyPopoverItem
+        <LazyItemPopover
           :id="item.id"
           class="ring-neutral/60  size-10 overflow-hidden rounded-lg shadow-sm hover-ring" />
 

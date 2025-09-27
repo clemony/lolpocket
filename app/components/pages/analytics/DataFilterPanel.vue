@@ -33,7 +33,7 @@ const entries = [
       <Tabs
         v-model:model-value="tabs"
         class="max-w-100">
-        <IndicatorTabsList class="grid-cols-3 *:!text-sm">
+        <IndicatorTabsList class="grid-cols-3 *:!text-3">
           <IndicatorTabsTrigger
             v-for="tab in entries"
             :key="tab.name"

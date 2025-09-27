@@ -30,7 +30,7 @@ const variants = {
 
         <motion.div
           :variants="variants"
-          class="w-full text-sm font-medium overflow-hidden">
+          class="w-full text-3 font-medium overflow-hidden">
           <slot name="content" />
         </motion.div>
       </Button>

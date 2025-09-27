@@ -17,7 +17,7 @@ const { message } = defineProps<{
       @close-auto-focus.stop.prevent>
       <DialogHeader
         class="gap-4 object-contain size-full tracking-normal flex-row flex items-center px-3 justify-between">
-        <DialogTitle class="!text-xs text-bc/50 items-center pl-2 font-semibold">
+        <DialogTitle class="!text-2 text-bc/50 items-center pl-2 font-semibold">
           Message Received!
         </DialogTitle>
         <DialogDescription class=""></DialogDescription>
@@ -30,7 +30,7 @@ const { message } = defineProps<{
       </DialogHeader>
       <form class="px-6 pt-1 pb-6 flex flex-col gap-4 w-full">
         <label
-          class="**:text-sm items-center **:font-normal grid grid-cols-[60px_1fr] gap-2">
+          class="**:text-3 items-center **:font-normal grid grid-cols-[60px_1fr] gap-2">
           <span>Subject:</span>
           <span class="input h-11 w-full bg-b1/40 backdrop-blur-lg btn">
             <input
@@ -39,7 +39,7 @@ const { message } = defineProps<{
               readonly />
           </span>
         </label>
-        <label class="**:text-sm items-center grid grid-cols-[60px_1fr] gap-2">
+        <label class="**:text-3 items-center grid grid-cols-[60px_1fr] gap-2">
           <span>From:</span>
           <span class="input h-11 w-full bg-b1/40 backdrop-blur-lg btn">
             <span
@@ -60,7 +60,7 @@ const { message } = defineProps<{
         <textarea
           :value="message.content"
           readonly
-          class="textarea size-full text-sm text-start bg-b1/40 backdrop-blur-lg btn" />
+          class="textarea size-full text-3 text-start bg-b1/40 backdrop-blur-lg btn" />
       </article>
     </LazyDialogContentPop>
   </div>

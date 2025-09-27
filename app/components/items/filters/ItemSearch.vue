@@ -19,7 +19,7 @@ const searchQuery = ref('')
   <div
     :class="
       cn(
-        'border-b3 text-sm items-center gap-4 !bg-b1 flex h-12 border py-2 px-3',
+        'border-b3 text-3 items-center gap-4 !bg-b1 flex h-12 border py-2 px-3',
         props.class,
       )
     ">
@@ -32,7 +32,7 @@ const searchQuery = ref('')
       :placeholder="props.placeholder"
       :class="
         cn(
-          'text-sm  outline-0 ring-0 border-0 flex h-full grow text-start  hover:outline-0 hover:ring-0 hover:border-0',
+          'text-3  outline-0 ring-0 border-0 flex h-full grow text-start  hover:outline-0 hover:ring-0 hover:border-0',
           props.inputClass,
         )
       " />

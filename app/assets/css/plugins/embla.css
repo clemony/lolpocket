@@ -1,11 +1,4 @@
-/*     <div class="embla">
-      <div class="embla__viewport">
-        <div class="embla__container">
-          <div class="embla__slide">
-            <div class="embla__parallax">
-              <div class="embla__parallax__layer">
-                <img
-                  class="embla__slide__img embla__parallax__img" */
+
 
 .embla {
   margin: auto;
@@ -46,3 +39,4 @@
   flex: 0 0 calc(115% + (var(--slide-spacing) * 2));
   object-fit: cover;
 }
+

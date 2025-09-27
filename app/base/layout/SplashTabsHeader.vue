@@ -14,10 +14,10 @@ const iconVariants = {
 
 const headerVariants = {
   closed: {
-    fontSize: 'var(--text-xl',
+    fontSize: 'var(--text-6',
   },
   open: {
-    fontSize: 'var(--text-xxs2)',
+    fontSize: 'var(--text-12)',
   },
 }
 </script>

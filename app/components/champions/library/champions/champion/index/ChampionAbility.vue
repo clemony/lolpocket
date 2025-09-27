@@ -8,7 +8,7 @@ const { ability } = defineProps<{
   <Collapsible
     :id="ability.key"
     :default-open="true"
-    class="flex field-box max-w-230 flex-col **:text-sm gap-6 w-full justify-center">
+    class="flex field-box max-w-230 flex-col **:text-3 gap-6 w-full justify-center">
     <CollapsibleTrigger
       class="px-6 py-4 data-[state=open]:border-b border-b-b3 flex items-center justify-items-start gap-6">
       <div class="size-18 rounded-lg shadow-sm drop-shadow-sm overflow-hidden">
@@ -20,7 +20,7 @@ const { ability } = defineProps<{
       <div class="gap-2 flex flex-col grow justify-center">
         <h2
           v-if="ability?.name"
-          class="tracking-tight leading-8 !text-3xl  justify-start text-start grow">
+          class="tracking-tight leading-8 !text-8  justify-start text-start grow">
           {{ ability.name }}
         </h2>
 

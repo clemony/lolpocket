@@ -1,9 +1,8 @@
 <script setup lang="ts">
 definePageMeta({
   name: 'Summoner Search',
-  level: 1,
-  order: 3,
   path: '/summoner',
+  search: 'hidden',
 })
 
 const router = useRouter()

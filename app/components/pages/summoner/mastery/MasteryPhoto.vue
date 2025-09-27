@@ -42,12 +42,12 @@ const level = computed(() =>
       class="size-full relative flex flex-col h-12 justify-center overflow-hidden pb-1 *:leading-none px-0.75 pt-0.25">
       <div class="flex items-end gap-1.5">
         <h2
-          class="font-semibold dst text-lg>
+          class="font-semibold dst text-5>
           {{ name }}
         </h2>
 
         <span class="
-          text-xs
+          text-2
           pb-px
           tracking-tight
           font-medium
@@ -59,7 +59,7 @@ const level = computed(() =>
       </div>
 
       <div class="text-nowrap h-3 items-center">
-        <p class="text-xxs flex gap-1 items-center absolute font-medium">
+        <p class="text-1 flex gap-1 items-center absolute font-medium">
           <span
             class="size-4 relative overflow-hidden rounded-full dst shadow-sm">
             <i-lol-cm-mastery-token
@@ -70,13 +70,13 @@ const level = computed(() =>
       </div>
 
       <!--  <div class="text-nowrap h-3 items-center  *:transition-all *:duration-200">
-        <p class="text-xxs flex gap-1 items-center group-hover/photo:-translate-y-full absolute group-hover/photo:opacity-0 font-medium">
+        <p class="text-1 flex gap-1 items-center group-hover/photo:-translate-y-full absolute group-hover/photo:opacity-0 font-medium">
           <span class="size-4 relative overflow-hidden rounded-full dst shadow-sm">
             <i-lol-cm-mastery-token class="size-full scale-105 grid place-items-center absolute object-center" />
           </span>
           {{ champion?.points?.toLocaleString() ?? 0 }}
         </p>
-        <p class="text-xxs italic translate-y-full opacity-0 absolute group-hover/photo:opacity-100 group-hover/photo:translate-y-0">
+        <p class="text-1 italic translate-y-full opacity-0 absolute group-hover/photo:opacity-100 group-hover/photo:translate-y-0">
           <template v-if="champion?.lastPlayed">
             Last Played {{ useDateFormat(champion.lastPlayed, 'MMM D, YYYY') }}
           </template>

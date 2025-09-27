@@ -13,6 +13,8 @@ const svg = /i-/
 const img = /https:/
 const img1 = /\/img\//
 const classes = 'shrink-0 size-full'
+const teenyicons = /teenyicons:/
+const teeny = computed (() => name.match(teenyicons) ? '!scale-96 **:stroke-[1.3]' : '')
 </script>
 
 <template>
@@ -34,7 +36,7 @@ const classes = 'shrink-0 size-full'
     v-else
     role="img"
     :name="name"
-    :class="cn('', classes, className)"
+    :class="cn('', classes, className, teeny)"
     :style="{
       objectFit: 'cover',
       scale: iconScale,

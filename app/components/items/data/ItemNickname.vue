@@ -7,7 +7,7 @@ const { item } = defineProps<{
 <template>
   <p
     v-if="item.nicknames.length"
-    class="text-xxs ml-0.5 italic">
+    class="text-1 ml-0.5 italic">
     a.k.a.
     <span
       v-for="(name, index) in item.nicknames"

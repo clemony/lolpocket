@@ -16,7 +16,7 @@ const forwarded = useForwardProps(delegatedProps)
     v-bind="forwarded"
     :class="
       cn(
-        'flex cursor-default w-full gap-2 select-none items-center rounded-lg px-2 py-1.5 text-sm outline-none focus:bg-b2 data-[state=open]:bg-b2',
+        'flex cursor-default w-full gap-2 select-none items-center rounded-lg px-2 py-1.5 text-3 outline-none focus:bg-b2 data-[state=open]:bg-b2',
         props.class,
       )
     ">

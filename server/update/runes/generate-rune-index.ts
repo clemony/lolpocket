@@ -1,12 +1,12 @@
+import type { RunePath } from '#shared/types/types.rune'
 import fs from 'node:fs'
-import type { RunePath } from '../../../shared/types/types.rune'
 import { markUpdate } from '../../../scripts'
 import { resolvePath } from '../resolvePath'
 
 // Load the transformed rune paths
 const dataPath = resolvePath('./runes/raw/runes.json')
 const paths: RunePath[] = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
-const outputDir = resolvePath('../../shared/appdata/index/rune-index.ts')
+const outputDir = resolvePath('#shared/appdata/index/rune-index.ts')
 
 // Extract id, name, and path
 const index: { id: number, name: string, path: string }[] = []

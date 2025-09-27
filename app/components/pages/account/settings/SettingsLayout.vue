@@ -14,7 +14,7 @@ const route = useRoute()
       </h3>
       <p
         v-if="route.meta?.description"
-        class="text-sm leading-8 opacity-60">
+        class="text-3 leading-8 opacity-60">
         {{ description || route.meta?.description }}
       </p>
       <Separator class="my-4" />

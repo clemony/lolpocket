@@ -75,7 +75,7 @@ const colDefs: (ColDef<ChampionMastery> | ColGroupDef<ChampionMastery>)[] = [
     cellClass: 'text-bc !flex !flex-col justify-center size-full text-start',
     cellDataType: 'text',
     cellRenderer: params =>
-      `<h3 class="dst mb-1 font-bold ">${ix().champNameById(params.data.id)}</h3><p class="italic text-xs font-medium text-bc/90">${ix().getChampionTitle(ix().champKeyById(params.data.id))}</p>`,
+      `<h3 class="dst mb-1 font-bold ">${ix().champNameById(params.data.id)}</h3><p class="italic text-2 font-medium text-bc/90">${ix().getChampionTitle(ix().champKeyById(params.data.id))}</p>`,
     colId: 'champion',
     field: 'id',
     headerClass:
@@ -110,7 +110,7 @@ const colDefs: (ColDef<ChampionMastery> | ColGroupDef<ChampionMastery>)[] = [
     cellClass: '!grid place-items-center',
     cellDataType: 'number',
     cellRenderer: params =>
-      `<div class="size-10 text-md font-semibold leading-none  grid place-items-center tracking-wide text-nc inset-shadow-sm inset-shadow-b4/20 shadow-sm drop-shadow-sm bg-linear-to-br from-neutral/80 to-neutral/90  rounded-full">${params.data.level}</div>`,
+      `<div class="size-10 text-4 font-semibold leading-none  grid place-items-center tracking-wide text-nc inset-shadow-sm inset-shadow-b4/20 shadow-sm drop-shadow-sm bg-linear-to-br from-neutral/80 to-neutral/90  rounded-full">${params.data.level}</div>`,
     colId: 'level',
     field: 'level',
     headerName: 'Level',

@@ -50,11 +50,11 @@ const championModel = computed({
               :class="cn('size-15 overflow-hidden items-center rounded-full rounded-full shadow-sm drop-shadow-sm', { 'grayscale brightness-105 contrast-105': championModel.length > 1 && champion.name !== championModel })" />
 
             <div class="grid size-full dst gap-1.5 font-medium">
-              <p class="!text-sm self-end">
+              <p class="!text-3 self-end">
                 {{ champion.name }}
               </p>
 
-              <p class="text-nowrap text-xs">
+              <p class="text-nowrap text-2">
                 {{ `${champion.games} Games` }}
               </p>
             </div>

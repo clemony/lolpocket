@@ -59,7 +59,7 @@ watch(
         <input
           v-model="newTag"
           placeholder="attach new tag"
-          class="h-10 placeholder:italic w-full pr-4 text-xs focus:placeholder:opacity-0 transition-all duration-200"
+          class="h-10 placeholder:italic w-full pr-4 text-2 focus:placeholder:opacity-0 transition-all duration-200"
           @keydown.stop
           @keydown.enter.prevent="
             () => {
@@ -112,7 +112,7 @@ watch(
           class="w-full py-6 grid place-items-center">
           <div class="w-fit justify-start space-y-1">
             <p class="flex items-center gap-3">
-              <span class="text-xxs drop-shadow-xs shadow-sm badge border-b4/80">
+              <span class="text-1 drop-shadow-xs shadow-sm badge border-b4/80">
                 ENTER
               </span>
               to

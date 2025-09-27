@@ -39,7 +39,7 @@ console.log(
           </div>
           <PocketChampions
             list
-            class="!text-bc/70 text-xs"
+            class="!text-bc/70 text-2"
             :champions="pocket.champions" />
         </div>
       </div>

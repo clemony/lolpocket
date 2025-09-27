@@ -37,7 +37,7 @@ onMounted(async () => {
 
       <div class="flex flex-col gap-2">
         <div class="!max-w-180 !w-full flex flex-col gap-2">
-          <div class="w-full overflow-hidden text-xs font-medium h-6 px-px">
+          <div class="w-full overflow-hidden text-2 font-medium h-6 px-px">
             {{ loadingText[Math.floor(progress / 25)] || loadingText.at(-1) }}
           </div>
           <Progress

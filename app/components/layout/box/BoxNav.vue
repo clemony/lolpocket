@@ -24,7 +24,7 @@ const route = useRoute()
         variant="ghost"
         :class="
           cn(
-            'justify-start capitalize text-sm rounded-md px-4 !font-medium max-h-9',
+            'justify-start capitalize text-3 rounded-md px-4 !font-medium max-h-9',
             { 'btn-active': route.path === link.path },
           )
         ">

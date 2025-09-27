@@ -3,9 +3,9 @@ import { fileURLToPath } from 'node:url'
 
 export default defineNuxtConfig({
   alias: {
+    '#server': fileURLToPath(new URL('./server', import.meta.url)),
     '@scripts': fileURLToPath(new URL('./scripts', import.meta.url)),
-    '@server': fileURLToPath(new URL('./server', import.meta.url)),
-    '@shared': './shared',
+    '@types': fileURLToPath(new URL('./shared/types', import.meta.url)),
   },
   components: [
     {
