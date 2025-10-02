@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { ListboxGroupProps } from 'reka-ui'
-import type { HTMLAttributes } from 'vue'
 import { ListboxGroup, ListboxGroupLabel, useId } from 'reka-ui'
 import { computed, onMounted, onUnmounted } from 'vue'
 import { provideCommandGroupContext, useCommand } from './cindex'

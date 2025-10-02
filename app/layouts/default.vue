@@ -11,10 +11,10 @@ const route = useRoute()
       <header
         :class="
           cn(
-            'w-full top-0 h-15 max-w-mw sticky flex shrink-0 items-center gap-3 border-b z-10  bg-linear-to-r from-b1/90 to-b1/20 backdrop-blur pr-3 pl-2 ',
+            'w-full top-0 h-16 max-w-mw sticky flex shrink-0 items-center gap-5 border-b z-10  bg-linear-to-r from-b1/90 to-b1/40 backdrop-blur pr-5 pl-2 ',
             {
-              'border-0 !bg-linear-to-r   h-16 !from-transparent !to-b1/40 !absolute':
-                ['pocket', 'summoner'].includes(String(route.matched?.[0]?.name)),
+              'border-0 !bg-linear-to-r  h-16 !from-transparent !to-b1/40 !absolute':
+                ['pocket', 'summoner', 'champions'].includes(String(route.matched?.[0]?.name)),
 
             },
           )
@@ -23,15 +23,10 @@ const route = useRoute()
         <span class="grow" />
         <div id="navbar-right" />
 
-        <Button
-          variant="btn"
-          @click="ui().commandOpen = true">
-          open
-        </Button>
+        <!-- search buttton -->
+        <SearchBox />
 
-        <Search
-          class=" h-10 bg-b1/94 backdrop-blur w-80 max-w-80"
-          shortcut />
+        <SidebarUser />
       </header>
       <div
         class="size-full relative justify-self-end">

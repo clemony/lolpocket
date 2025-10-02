@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { Presence } from 'reka-ui'
-
 const { champion, class: className, pocket: p } = defineProps<{
   class?: HTMLAttributes['class']
   champion: ChampionIndex
@@ -21,11 +19,11 @@ watch(() => active.value, (newVal) => {
 </script>
 
 <template>
-  <Popover
+  <ContextMenu
     ref="target"
     v-model:open="open">
-    <PopoverTrigger
-      class="hover:ring hover:ring-offset-3 ring-offset-b1 ring-bc/50 data-[state=open]:ring-offset-3 data-[state=open]:ring group cursor-pointer rounded-lg size-26 "
+    <ContextMenuTrigger
+      class="hover:ring hover:ring-offset-3 ring-offset-b1 !cursor-context-menu ring-bc/50 data-[state=open]:ring-offset-3 data-[state=open]:ring group  rounded-lg size-26 **:pointer-events-none"
       @mouseover="hover = true"
       @mouseleave="!open ? hover = false : null"
       @focusin="hover = true"
@@ -39,8 +37,8 @@ watch(() => active.value, (newVal) => {
           v-if="active === true"
           class="scale-111 " />
       </ChampionIcon>
-    </PopoverTrigger>
-    <PopoverContent
+    </ContextMenuTrigger>
+    <ContextMenuContent
       v-if="open"
       align="start"
       class="w-54 p-1.5">
@@ -85,6 +83,6 @@ watch(() => active.value, (newVal) => {
           </button>
         </template>
       </tippy>
-    </PopoverContent>
-  </Popover>
+    </ContextMenuContent>
+  </ContextMenu>
 </template>

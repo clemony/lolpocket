@@ -98,9 +98,12 @@ watch(wrapperHovered, (hovering) => {
           class="btn-square mb-1 size-11 p-0 grid place-items-center"
           variant="neutral"
           to="/">
-          <h5 class="font-bold jusify-self-center absolute">
+          <h5 :class="cn('font-bold justify-self-center transition-all duration-300 absolute opacity-100', { 'opacity-0 scale-0': open })">
             LP
           </h5>
+          <icon
+            name="menu"
+            :class="cn(' absolute scale-0  justify-self-center  transition-all duration-300 opacity-0', { 'opacity-100 scale-100': open })" />
         </BtnLink>
 
         <Button
@@ -134,7 +137,6 @@ watch(wrapperHovered, (hovering) => {
         </Button>
       </div>
       <div class="justify-self-end">
-        <SidebarUser />
       </div>
     </menu>
 

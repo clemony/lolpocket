@@ -142,6 +142,9 @@ export default defineNuxtConfig({
     // Account pages
     '/account/**': { ssr: false },
 
+    // Settings pages
+    '/settings/**': { ssr: false },
+
     // Backpack folder
     '/backpack/**': { ssr: false },
 

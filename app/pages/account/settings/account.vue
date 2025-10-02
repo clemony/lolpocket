@@ -29,7 +29,6 @@ const user = useSupabaseUser()
 const userProviders = computed(() =>
   Object.values(user.value.app_metadata.providers)
 )
-console.log('userProviders: ', userProviders)
 </script>
 
 <template>
@@ -53,10 +52,12 @@ console.log('userProviders: ', userProviders)
           game name if a Riot account is connected.
         </p>
       </div>
-      <Input
-        v-model="as().account.username"
-        type="text"
-        placeholder="Username" />
+      <ClientOnly>
+        <Input
+          v-model="as().account.username"
+          type="text"
+          placeholder="Username" />
+      </ClientOnly>
     </fieldset>
 
     <!-- region select -->
@@ -76,22 +77,24 @@ console.log('userProviders: ', userProviders)
         </p>
       </div>
 
-      <Select
-        v-model:model-value="as().account.region"
-        name="region-select"
-        position="popper"
-        :default-value="as().account.region"
-        @close-auto-focus.prevent>
-        <SelectTrigger
-          class="h-12 w-full inset-shadow-none flex input">
-          <!--       <span class="grow">
+      <ClientOnly>
+        <Select
+          v-model:model-value="as().account.region"
+          name="region-select"
+          position="popper"
+          :default-value="as().account.region"
+          @close-auto-focus.prevent>
+          <SelectTrigger
+            class="h-12 w-full inset-shadow-none flex input">
+            <!--       <span class="grow">
               {{ select }}
             </span> -->
-          <SelectValue />
-        </SelectTrigger>
-        <LazyRegionSelectContent
-          class="!w-[var(--reka-select-trigger-width)] -top-[calc(var(--reka-select-trigger-height)+4px)]" />
-      </Select>
+            <SelectValue />
+          </SelectTrigger>
+          <LazyRegionSelectContent
+            class="!w-[var(--reka-select-trigger-width)] -top-[calc(var(--reka-select-trigger-height)+4px)]" />
+        </Select>
+      </ClientOnly>
     </fieldset>
 
     <!-- connected accounts -->
@@ -228,7 +231,6 @@ console.log('userProviders: ', userProviders)
         </p>
       </div>
       <Input
-        v-model="as().account.username"
         type="text"
         placeholder="Username" />
     </fieldset>

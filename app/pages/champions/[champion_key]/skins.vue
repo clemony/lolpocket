@@ -55,21 +55,22 @@ const skins = computed(() => ix().skins[champion.key])
 </script>
 
 <template>
-  <div class="flex size-full gap-14 overflow-hidden pr-22">
+  <div class="size-full gap-14 overflow-hidden -ml-10 pr-22">
     <Carousel
-      orientation="vertical"
-      class="mask-y-from-0% mask-y-to-6% mask-y-from-transparent mask-y-to-black relative size-full max-h-screen max-w-66 overflow-auto"
+      :plugins="[WheelGesturesPlugin()]"
+      orientation="horizontal"
+      class="mask-x-from-0% -ml-6 pl-6 mask-x-to-6% mask-x-from-transparent mask-x-to-black relative w-full  overflow-auto"
       @init-api="(val) => (emblaThumbnailApi = val)">
       <CarouselContent
-        class="scrollbar-hidden ml-0 flex gap-1 overflow-y-auto px-3 py-22">
+        class="scrollbar-hidden -ml-6 pb-6  flex pt-22">
         <CarouselItem
           v-for="(skin, index) in skins"
           :key="index"
-          class="cursor-pointer"
+          class="cursor-pointer !basis-1/6 pl-46h-38"
           @click="onThumbClick(index)">
           <div :class="cn('transition-all cursor-pointer duration-300 rounded-xl hover:opacity-100 hover:ring hover:ring-b4 **:pointer-events-none', index === selectedIndex ? 'opacity-100 ring ring-bc/40 pointer-events-none ring-offset-5 ring-offset-b1' : 'opacity-80')">
             <Card
-              class="drop-shadow-black/20 h-38  overflow-hidden !rounded-xl border-0 !p-0 shadow-sm shadow-black/20 drop-shadow-sm">
+              class="drop-shadow-black/20 h-38 overflow-hidden !rounded-xl border-0 !p-0 shadow-sm shadow-black/20 drop-shadow-sm">
               <CardContent
                 class="relative flex items-center justify-center p-0">
                 <Img
@@ -88,7 +89,7 @@ const skins = computed(() => ix().skins[champion.key])
       :plugins="[WheelGesturesPlugin()]"
       class="relative size-full"
       @init-api="(val) => (emblaMainApi = val)">
-      <CarouselContent class="embla__container py-20">
+      <CarouselContent class="embla__container pb-20 pt-2">
         <CarouselItem
           v-for="(skin, index) in skins"
           :key="index"

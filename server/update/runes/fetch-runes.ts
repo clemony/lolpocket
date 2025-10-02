@@ -1,6 +1,6 @@
 import fs from 'node:fs'
 import { $fetch } from 'ofetch'
-import { colorDict, markUpdate } from '../../../scripts'
+import { colorDict, markUpdate } from '../../../server'
 import { resolvePath } from '../resolvePath'
 
 const rawRunes = await $fetch(

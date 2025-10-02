@@ -5,7 +5,7 @@ const patchGames = computed(() =>
   userMatchData.filter(g => g.patch === ms().filter.patch)
 )
 
-const state = inject<PlayerData>(SummonerKey)
+const state = inject<SummonerData>(SummonerKey)
 
 const { bayesianItems } = useMatchItems(state.summoner.puuid, state.matches)
 </script>
@@ -47,6 +47,7 @@ const { bayesianItems } = useMatchItems(state.summoner.puuid, state.matches)
               <div>
                 <img
                   class="size-10 rounded-xl"
+                  :alt="entry.item?.id"
                   :src="`/img/items/${entry.item?.id}.webp`" />
               </div>
 

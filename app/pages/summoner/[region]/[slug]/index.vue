@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const { state } = defineProps<{
-  state: PlayerData
+  state: SummonerData
 }>()
 definePageMeta({
   name: 'history',
@@ -17,16 +17,16 @@ provide<Scroll>('scroll-top', { top: scroll })
   <div
     :class="
       cn(
-        'flex mx-auto  gap-6  z-auto mb-42 min-h-screen  w-full justify-start items-start',
+        'flex mx-auto  h-max  z-auto mb-42 min-h-screen gap-8 w-[1040px] ',
       )
     ">
-    <div class="w-[43%] grid   scrollbar-none    justify-end pl-6 pr-8">
-      <MatchHistoryAside :state />
+    <div class="grid  shrink scrollbar-none  justify-end  ">
+      <MatchHistoryAside />
     </div>
     <SlideInTopOutBottom
       group
       :class="
-        cn('flex flex-col gap-10   justify-center w-[57%] pl-8 pr-4 pb-px')
+        cn('flex flex-col gap-8 h-max grow min-w-220 justify-center')
       ">
       <!--         <SummonerChampionModule
           v-if="ms().filter?.champion"
@@ -37,19 +37,5 @@ provide<Scroll>('scroll-top', { top: scroll })
         ref="scrollMain"
         :state />
     </SlideInTopOutBottom>
-
-    <div class="fab bottom-24 right-14">
-      <Button
-        v-tippy="'Top'"
-        size="xl"
-        hover="neutral"
-        variant="btn"
-        class="bg-b1/90 btn-circle hover:shadow-black/14 hover:dss rounded-full border-b3 hover:!bg-neutral/94 shadow-sm shadow-black/6 drop-shadow-black/6 *:opacity-60 hover:*:opacity-100  backdrop-blur"
-        @click="scrollToTop()">
-        <icon
-          name="arrow-up"
-          class="transition-opacity duration-200" />
-      </button>
-    </div>
   </div>
 </template>

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { ScrollAreaScrollbarProps } from 'reka-ui'
-import type { HTMLAttributes } from 'vue'
 import { ScrollAreaScrollbar, ScrollAreaThumb } from 'reka-ui'
 import { computed } from 'vue'
 

@@ -1,30 +1,26 @@
 <script lang="ts" setup>
-const { state } = defineProps<{
-  state: PlayerData
-}>()
+const { loading, summoner } = useSummonerInject()
 </script>
 
 <template>
   <div
-    class="w-124 justify-center overflow-y-auto py-24 gap-10 auto-rows-max items-start grid">
+    class="w-124 justify-center overflow-y-auto py-24 gap-8 auto-rows-max items-start grid">
     <RankCard
-      v-if="as().settings?.showSolo && !state.loading"
+      v-if="as().settings?.showSolo && !loading"
       title="Solo/Duo"
-      :entry="state?.summoner?.ranked?.solo"
+      :entry="summoner?.ranked?.solo"
       class="order-2" />
 
     <RankCard
-      v-if="state.summoner.ranked?.flex && as().settings?.showFlex"
+      v-if="summoner.ranked?.flex && as().settings?.showFlex"
       title="Flex"
-      :entry="state.summoner.ranked.flex"
+      :entry="summoner.ranked.flex"
       class="order-3" />
 
     <QueueFilters
-      :state
       class="order-5" />
 
     <MatchChampionFilters
-      :state
       class="order-6" />
 
     <div class="order-7">
@@ -33,7 +29,6 @@ const { state } = defineProps<{
 
     <LazyMatchAlliesFilter
       v-if="as().settings.showAllies"
-      :state
       class="order-last" />
   </div>
 </template>

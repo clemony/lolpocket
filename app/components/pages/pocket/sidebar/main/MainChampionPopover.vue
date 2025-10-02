@@ -60,6 +60,7 @@ watch(
           class="text-bc/20 size-10" />
         <Champion
           v-else
+          v-memo="pocket.main?.champion"
           class="*:scale-160"
           :img="ix().getSplash(pocket.main?.champion, 'tile')" />
         <div

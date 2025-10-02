@@ -1,4 +1,4 @@
-import type { Ability } from '../#shared/types/types.champion'
+import type { Ability } from '#shared/types/types.champion'
 import { normalize } from './normalizeStrings'
 
 interface DirtyModifier {

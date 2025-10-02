@@ -7,8 +7,6 @@ definePageMeta({
   name: 'analysis',
   title: 'analysis',
   icon: 'chart',
-  parent: '/analysis',
-  path: '/analysis',
 })
 </script>
 

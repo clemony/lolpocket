@@ -4,9 +4,7 @@ const {
   img,
   size,
   transparent,
-  url,
 } = defineProps<{
-  url?: string
   img?: string
   class?: HTMLAttributes['class']
   imgClass?: HTMLAttributes['class']
@@ -23,14 +21,14 @@ const loaded = ref(false)
         ' size-full relative text-nc overflow-hidden bg-neutral shrink-0 grid place-items-center',
         {
           'shadow-sm shadow-black/6 drop-shadow-sm drop-shadow-black/6':
-            !transparent || (transparent && !url),
+            !transparent || (transparent && !img),
         },
         className,
       )
     ">
     <Img
-      v-if="url || img"
-      :img="url || img"
+      v-if=" img"
+      :img="img"
       alt="pocket icon"
       :class="
         cn(
@@ -42,7 +40,7 @@ const loaded = ref(false)
       @load="loaded = true" />
 
     <icon
-      v-if="!loaded && (url || img)"
+      v-if="!loaded && img"
       name="svg-spinners:bars-scale-middle"
       class="absolute opacity-80 text-nc" />
 

@@ -1,6 +1,6 @@
 import type { RunePath } from '#shared/types/types.rune'
 import fs from 'node:fs'
-import { markUpdate } from '../../../scripts'
+import { markUpdate } from '../../../server'
 import { resolvePath } from '../resolvePath'
 
 // Load the transformed rune paths

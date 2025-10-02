@@ -2,7 +2,7 @@ import { matchFilters, matchFiltersIgnoreChampion } from '~~/shared/appdata'
 
 export const SummonerKey = Symbol('SummonerProvider')
 
-export interface PlayerData {
+export interface SummonerData {
   allMatches: MatchData[]
   clearFilters: () => void
   fetchMastery: () => void
@@ -157,7 +157,7 @@ export function useSummonerProvider(identifier: string) {
       if (!summoner.value)
         return
       allMatches.value = await useFetchMatches(currentPuuid.value)
-      summoner.value.lastMatchUpdate = Date.now()
+      summoner.value.updatedMatch = Date.now()
     },
     loadMatches: () => loadMatchesFromDB,
   }

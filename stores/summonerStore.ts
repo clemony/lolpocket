@@ -26,11 +26,11 @@ export const useSummonerStore = defineStore(
       }
     }
 
-    function isNameStale(lastNameCheck?: number) {
-      if (!lastNameCheck)
+    function isNameStale(updatedName?: number) {
+      if (!updatedName)
         return true
       const THIRTY_DAYS = 1000 * 60 * 60 * 24 * 30
-      return Date.now() - lastNameCheck > THIRTY_DAYS
+      return Date.now() - updatedName > THIRTY_DAYS
     }
 
     function getSummoner(puuid: string) {
@@ -72,8 +72,8 @@ export const useSummonerStore = defineStore(
       const cached: Summoner | null = identifier.puuid ? getSummoner(identifier.puuid) : null
 
       // Fresh enough? Return cached immediately
-      if (cached && !options?.force && !isStale(cached.lastUpdate)) {
-        if (isNameStale(cached.lastNameCheck)) {
+      if (cached && !options?.force && !isStale(cached.updatedData)) {
+        if (isNameStale(cached.updatedName)) {
           // Fire-and-forget background refresh of name
           ;(async () => {
             try {
@@ -82,7 +82,7 @@ export const useSummonerStore = defineStore(
               })
               mergeSummonerData(cached!.puuid, {
                 name: n.gameName,
-                lastNameCheck: Date.now(),
+                updatedName: Date.now(),
               })
             }
             catch (err) {

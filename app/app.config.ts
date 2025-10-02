@@ -98,6 +98,7 @@ export default defineAppConfig({
       'shuffle': 'qlementine-icons:shuffle-16',
 
       // keys
+      'win-key': 'streamline-logos:microsoft-windows-logo-3-solid',
       'command': 'lucide:command',
       'shift': 'lucide:arrow-big-up-dash',
       'tab': 'hugeicons:arrow-right-03',
@@ -133,9 +134,10 @@ export default defineAppConfig({
       'heart': 'gg:heart',
       'heart-fill': 'teenyicons:heart-solid',
       'heart-sm': 'teenyicons:heart-small-solid',
-      'heart-sm-outline': 'teenyicons:heart-small-outline',
+      'heart-sm-line': 'teenyicons:heart-small-outline',
       'infinity': 'solar:infinity-outline',
       'shield': 'teenyicons:shield-tick-outline',
+      'square': 'lucide:square',
       'star': 'ph:star',
       'star-fill': 'ph:star-fill',
 
@@ -144,7 +146,10 @@ export default defineAppConfig({
       'pin-solid': 'iconoir:pin-solid',
       'backpack': 'tabler:briefcase', // 'radix-icons:backpack',
       'book': 'tabler:notebook', // 'lucide:book-marked',
+      'bot': 'lucide:bot',
+      'bot-chat': 'lucide:bot-message-square',
       'bow': 'mdi:bow-arrow',
+      'calendar': 'lucide:calendar',
       'cat': 'lucide:cat',
       'cat-geo': 'streamline-cyber:cat-2',
       'chart': 'lucide:bar-chart-3',

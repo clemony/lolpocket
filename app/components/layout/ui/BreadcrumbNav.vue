@@ -33,7 +33,7 @@ const chain = computed(() => getRouteChain(route.fullPath))
       :key="route.fullPath"
       class="px-3">
       <div
-        v-if="chain[0].name === 'summoner'"
+        v-if="['summoner', 'pocket', 'champions'].includes(String(chain[0].name))"
         id="breadcrumb-1"
         class="breadcrumb-1">
       </div>
@@ -49,13 +49,7 @@ const chain = computed(() => getRouteChain(route.fullPath))
               class="hidden md:block  group">
               <BreadcrumbLink as-child>
                 <ULink
-                  v-if="link.name === 'pocket'"
-                  to="/backpack"
-                  class="capitalize font-medium transition-all text-4">
-                  Backpack
-                </ULink>
-                <ULink
-                  v-else-if="!link.meta?.search && link.path !== route.path"
+                  v-if="!link.meta?.search && link.path !== route.path"
                   :to="String(link.path)"
                   class="capitalize font-medium transition-all text-4 not-group-last-of-type:opacity-60 not-group-last-of-type:hover:opacity-90">
                   {{ link.meta?.title || link.name }}

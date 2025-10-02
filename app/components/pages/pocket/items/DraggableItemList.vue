@@ -19,8 +19,8 @@ import { vDraggable } from 'vue-draggable-plus'
           scroll: false,
           delay: 0,
           chosenClass: 'item-set-item-chosen',
-          ghostClass: 'draggable-item-ghost',
-          fallbackClass: 'draggable-item-fallback',
+          ghostClass: 'draggable-icon-ghost',
+          fallbackClass: 'draggable-icon-fallback',
 
           forceFallback: true,
           fallbackTolerance: 0,
@@ -37,7 +37,6 @@ import { vDraggable } from 'vue-draggable-plus'
         v-for="item in is().filtered"
         :id="item"
         :key="item"
-        hydrate-on-visible
         class="size-20 aspect-square shadow-sm drop-shadow-sm rounded-lg" />
     </div>
   </div>

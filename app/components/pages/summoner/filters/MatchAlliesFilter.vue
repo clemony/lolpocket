@@ -4,13 +4,13 @@ import { ListboxContent, ListboxItem, ListboxRoot } from 'reka-ui'
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
-const state = useSummonerInject()
+const { allies: getAllies, filter, loading, setFilter } = useSummonerInject()
 
 const allyModel = computed({
-  get: () => state.filter.value.ally,
-  set: val => state.setFilter('ally', val),
+  get: () => filter.value.ally,
+  set: val => setFilter('ally', val),
 })
-const { allies, loading, topAllies } = state.allies()
+const { allies, topAllies } = getAllies()
 
 const winrateFormula = ref('absolute')
 </script>
@@ -18,7 +18,6 @@ const winrateFormula = ref('absolute')
 <template>
   <div :class="cn('p-0 w-120 field-box max-w-120 ', className)">
     <ListboxRoot
-      v-if="state"
       v-model:model-value="allyModel"
       :highlight-on-hover="false"
       class="w-full overflow-y-scroll overscroll-auto px-1.5 h-max max-h-120"

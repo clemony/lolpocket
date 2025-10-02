@@ -14,7 +14,9 @@ const hoverClass = 'hover:bg-b2/60 inset-shadow-black/2 hover:inset-shadow-xs'
     class="h-full max-h-[86vh] gap-8 sticky top-0 pt-15 pb-20 px-1 flex flex-col overflow-y-auto scrollbar-none relative min-w-85 max-w-85">
     <div class="w-full px-1 flex flex-col">
       <div class="flex items-center gap-4">
-        <h1 class="dst">
+        <h1
+          v-memo="pocket.main?.champion"
+          class="dss h-11">
           {{ ix().champNameByKey(pocket.main?.champion) || "" }}
         </h1>
         <LazyPositionSelect
@@ -22,7 +24,9 @@ const hoverClass = 'hover:bg-b2/60 inset-shadow-black/2 hover:inset-shadow-xs'
           :side-offset="-5"
           :pocket />
       </div>
-      <p class="text-3 font-medium">
+      <p
+        v-memo="pocket.main?.champion"
+        class="text-3 font-medium">
         {{ ix().getChampionTitle(pocket.main?.champion) }}
       </p>
     </div>

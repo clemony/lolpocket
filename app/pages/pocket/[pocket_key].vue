@@ -27,6 +27,10 @@ async function testSync() {
   <TabLayout
     v-if="pocket"
     size="lg">
+    <template #crumb>
+      <PocketSwitcher />
+    </template>
+
     <!-- splash -->
 
     <template #background>

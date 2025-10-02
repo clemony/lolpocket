@@ -216,9 +216,9 @@ const runeClass
           ).toLocaleString()
         }}
         <span class="size-3 relative grid justify-end">
-          <i-stats-hsp
+          <i-lol-hsp
             name="oi:plus"
-            class="!text-shade-b4/50 dst size-3 left-0.25" />
+            class="!text-bc/50 dst !size-3 left-0.25" />
         </span>
       </p>
 
@@ -229,7 +229,7 @@ const runeClass
         }"
         :class="cn(pClass)">
         {{ player.visionScore }}
-        <i-roles-support class="size-3 dst text-bc" />
+        <i-lol-support class="!size-3 dst text-bc" />
       </p>
     </div>
 

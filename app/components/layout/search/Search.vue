@@ -4,11 +4,15 @@ import { summonerSearchSchema } from '#shared/types/schema.forms'
 import { useDebounceFn } from '@vueuse/core'
 import { safeParse, string } from 'valibot'
 
+defineOptions({
+  inheritAttrs: false
+})
+
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 
-const emit = defineEmits(['update:search'])
+const emit = defineEmits(['update:search', 'update:focus'])
 
 const query = ref('')
 const tag = ref('')
@@ -16,7 +20,6 @@ const region = shallowRef<keyof typeof regionIndex>('na1')
 const queryName = useTemplateRef<HTMLElement>('queryName')
 
 const { focused } = useFocus(queryName)
-const { control, k, meta } = useMagicKeys()
 
 function clear() {
   query.value = ''
@@ -69,7 +72,6 @@ watch([query, tag, selectedRegion], runSearch) */
     type="text"
     placeholder="Search..."
     :class="cn('field-sizing-content relative flex w-auto min-w-36 grow peer', className)"
-    @keydown.meta.k="focused = true"
     @update:model-value="e => query = e"
     @clear:input="clear()">
     <icon
@@ -92,11 +94,9 @@ watch([query, tag, selectedRegion], runSearch) */
     </template>
   </Input>
 
-  <!--     <span :class="cn('flex gap-1 italic right-18 absolute !text-1 items-center peer-focus:opacity-60 opacity-0', { 'opacity-0': tag.length })">
-      <icon
-        name="hugeicons:arrow-right-03"
-        class="**:stroke-[1.5]" />
-      tab to add tag
-    </span>
- -->
+  <TransitionScalePop>
+    <slot
+      :focused
+      :query />
+  </TransitionScalePop>
 </template>

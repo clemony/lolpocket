@@ -1,6 +1,6 @@
+import { getFormattedDateTime } from '#shared/utils/markUpdate'
 import { writeFile } from 'node:fs/promises'
 import { ofetch } from 'ofetch'
-import { getFormattedDateTime } from '../../../scripts'
 
 const MIN_PATCH_MAJOR = 15
 
@@ -26,12 +26,12 @@ async function main() {
     const normalized = filtered.map(patch => normalizePatch(patch))
 
     await writeFile(
-      './scripts/update/misc/raw/patch-index.json',
+      './server/update/misc/raw/patch-index.json',
       JSON.stringify(normalized, null, 2)
     )
 
     await writeFile(
-      './scripts/update/misc/raw/patch-index-raw.json',
+      './server/update/misc/raw/patch-index-raw.json',
       JSON.stringify(filtered, null, 2)
     )
     await writeFile(

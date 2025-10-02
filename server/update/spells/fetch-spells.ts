@@ -40,10 +40,10 @@ const transformedSpells = filterSpells.map((spell: any) => ({
 /* console.log('💠 - transformedSpells - transformedSpells:', transformedSpells)
 
 writeFileSync(
-  './scripts/data/summoner-spells.json',
+  './server/data/summoner-spells.json',
   JSON.stringify(transformedSpells, null, 2),
 ) */
-console.log('File written to ./scripts/data/summoner-spells.json')
+console.log('File written to ./server/data/summoner-spells.json')
 // const run = async () => {
 //   try {
 //     const url = 'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/summoner-spells.json'
@@ -52,10 +52,10 @@ console.log('File written to ./scripts/data/summoner-spells.json')
 //     if (response) {
 //       console.log('Fetched', response.length, 'spells')
 //       writeFileSync(
-//         './scripts/data/summoner-spells.json',
+//         './server/data/summoner-spells.json',
 //         JSON.stringify(response, null, 2),
 //       )
-//       console.log('File written to ./scripts/data/summoner-spells.json')
+//       console.log('File written to ./server/data/summoner-spells.json')
 //     }
 //   } catch (error) {
 //     console.error('Fetch failed:', error)

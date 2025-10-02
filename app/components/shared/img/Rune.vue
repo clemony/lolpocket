@@ -23,7 +23,7 @@ watch(
 
 <template>
   <Label
-    variant="b1"
+    variant="base"
     :class="
       cn(
         'h-full border border-b2 bg-b2/30 rounded-full overflow-hidden transition-all duration-300 relative size-17  grid place-items-center aspect-square ',

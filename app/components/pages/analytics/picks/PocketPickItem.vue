@@ -4,7 +4,7 @@ const { title, itemNum } = defineProps<{
   title?: string
 }>()
 
-const state = inject<PlayerData>(SummonerKey)
+const state = inject<SummonerData>(SummonerKey)
 
 const { bayesianItems } = useMatchItems(state.summoner.puuid, state.matches)
 

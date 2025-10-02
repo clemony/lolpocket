@@ -33,7 +33,7 @@ export default defineEventHandler(async (event) => {
 
   let summonerName = name as string | undefined
   let summonerRegion = region as string | undefined
-  let lastNameCheck = Date.now()
+  let updatedName = Date.now()
 
   if (!summonerRegion) {
     const r = await fetchRegionByPuuid(puuid)
@@ -44,7 +44,7 @@ export default defineEventHandler(async (event) => {
   if (!summonerName) {
     const n = await fetchAccountByPuuid(puuid)
     summonerName = n.gameName
-    lastNameCheck = Date.now()
+    updatedName = Date.now()
   }
 
   try {
@@ -53,12 +53,12 @@ export default defineEventHandler(async (event) => {
     return {
       name: summonerName,
       puuid: summoner.puuid,
-      lastNameCheck,
       lastUpdate: Date.now(),
       level: summoner.summonerLevel,
       profileIcon: summoner.profileIconId,
       region: summonerRegion || 'unknown',
       tag: summoner.tagLine,
+      updatedName,
     }
   }
   catch (err) {

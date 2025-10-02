@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import type { StepperTriggerProps } from 'reka-ui'
-import type { HTMLAttributes } from 'vue'
 import { reactiveOmit } from '@vueuse/core'
 import { StepperTrigger, useForwardProps } from 'reka-ui'
 

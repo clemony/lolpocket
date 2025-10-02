@@ -100,7 +100,7 @@ const variants = {
       :variants="variants"
       :transition="{ delay: 200 }"
       class="text-0 absolute italic align-baseline grow right-5 translate-y-0.5 text-right inline justify-self-end">
-      {{ `${formatTimeAgo(state.summoner.value.lastMatchUpdate, 'short').replace('ago', 'old')}` }}
+      {{ `${formatTimeAgo(state.summoner.value.updated.match, 'short').replace('ago', 'old')}` }}
     </motion.span> -->
   </NavigationMenuItem>
 </template>

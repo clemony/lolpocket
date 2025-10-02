@@ -1,7 +1,5 @@
 import type { Provider } from '@supabase/supabase-js'
 
-const user = useSupabaseUser()
-const providerMap = computed(() => user.value?.app_metadata?.providers ?? null)
 export const authProviders: Provider[] = [
   'riot' as Provider,
   'google',

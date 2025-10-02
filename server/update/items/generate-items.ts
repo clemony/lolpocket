@@ -122,7 +122,7 @@ export const itemIndex: ItemIndex[] = ${JSON.stringify(Object.values(index), nul
 export const itemsLite: ItemLite[] = ${JSON.stringify(Object.values(simplified), null, 2)}`
   )
   fs.writeFileSync(
-    './scripts/data/items-lite.json',
+    './server/data/items-lite.json',
     JSON.stringify(Object.values(simplified), null, 2)
   )
   fs.writeFileSync(
@@ -138,5 +138,5 @@ export const itemsLite: ItemLite[] = ${JSON.stringify(Object.values(simplified),
 buildItems()
 
 console.log('✅ items-lite.json written')
-console.log('📁 individual item files written to ./scripts/data/items/')
+console.log('📁 individual item files written to ./server/data/items/')
 console.log('🔖 unique-tags.json and unique-ranks.json written')

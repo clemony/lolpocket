@@ -20,7 +20,7 @@ export async function useResolveSummoner(
   if (identifier.puuid && !options?.force) {
     cached = ss().getSummoner(identifier.puuid)
   }
-  if (cached && !isStale(cached.lastUpdate)) {
+  if (cached && !isStale(cached.updatedData)) {
     return cached
   }
 

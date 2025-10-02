@@ -1,61 +1,71 @@
 @import 'tailwindcss';
 @import '../theme.css';
 
-
 @layer base {
-    .tippy-box[data-inertia][data-state='visible'] {
+  .tippy-box[data-inertia][data-state='visible'] {
     transition-timing-function: cubic-bezier(0.28, 0.93, 0.75, 1.38);
   }
 
   .tippy-box {
-    @apply border h-fit !p-0  z-1 w-auto max-w-80  rounded-lg  shadow-none  border;
+    @apply border px-3 py-1 z-1 w-auto max-w-80 rounded-lg backdrop-blur  drop-shadow-[1px_2px_2px_#00000020] shadow-md;
 
-  .tippy-content {
-    @apply text-3 whitespace-pre inline-block  px-3 py-1.5 font-medium  **:text-2 ;
-  }
-
-    &::before {
-      @apply absolute inset-0 rounded-lg backdrop-blur-md drop-shadow-[1px_2px_2px_#00000020] shadow-md;
+    .tippy-content {
+      @apply text-3 whitespace-pre inline-block font-medium **:text-2;
     }
 
-  }
+& > .tippy-svg-arrow{
+  @apply -scale-y-100;
+
 }
-.tippy-box[data-theme='default']{
-  @apply !bg-neutral/76 inset-shadow-white/10  border-neutral/50;  .tippy-content {
-    @apply  text-nc/80 ;
-  }
+
+&[data-placement='top'],
+&[data-placement='bottom']{
   & > .tippy-svg-arrow > svg:first-child {
-    @apply fill-neutral/76 fill-neutral;
-  }
-  & > .tippy-svg-arrow > svg:last-child {
-    @apply fill-neutral/76;
+  @apply translate-y-1 scale-96 z-0;
+
+}   & > .tippy-svg-arrow > svg:last-child {
+  @apply -translate-y-0.75 scale-90 z-2;
+      }
 }
 
+    /* default / contrast */
+    &[data-theme~='default'] {
+      @apply !bg-neutral/76 inset-shadow-white/10 border-neutral/50;
 
-  .tippy-box[data-theme='base'] {
-  @apply border-b3  text-bc/90 font-medium  !bg-transparent;
+      .tippy-content {
+        @apply text-nc/80;
+      }
 
-    &::after {
-      @apply absolute inset-0 rounded-lg backdrop-blur drop-shadow-[1px_2px_2px_#00000020] !bg-b1/90 shadow-md;
+      & > .tippy-svg-arrow > svg:first-child {
+        @apply fill-neutral/76;
+      }
+
+      & > .tippy-svg-arrow > svg:last-child {
+        @apply fill-neutral/76;
+      }
     }
-  & > .tippy-svg-arrow > svg:first-child {
-    @apply !text-b3 !fill-b3;
+
+    /* base color */
+    &[data-theme~='base'] {
+      @apply border-b3/80 text-bc/90 font-medium !bg-b1/90 ;
+
+
+      & > .tippy-svg-arrow > svg:first-child {
+        @apply !fill-b4/80;
+      }
+
+      & > .tippy-svg-arrow > svg:last-child {
+        @apply !fill-b1/92;
+      }
+    }
+
+    /* blur transparent */
+    &[data-theme~='blur'] {
+      @apply bg-transparent border-0 shadow-none text-bc/80;
+
+      & > .tippy-svg-arrow {
+        @apply hidden;
+      }
+    }
   }
-  & > .tippy-arrow > svg:last-child {
-    @apply !text-b1/90 !fill-b1/90;
-  }
-
 }
-
- .tippy-box[data-theme~='blur'] {
-  @apply bg-transparent border-0 shadow-none  text-bc/80;
-
-  & > .tippy-svg-arrow {
-    @apply hidden;
-  }
-}
-
-
-}
-
-

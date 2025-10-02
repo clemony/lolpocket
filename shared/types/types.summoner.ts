@@ -7,15 +7,12 @@ export interface ChampionMastery {
 export interface Summoner {
   name: string
   puuid: string
-  lastMatchUpdate: number
-  lastNameCheck: number
-  lastUpdate?: number
   level: number
   mastery?: {
     totalPoints: number
     totalLevels: number
     champions: ChampionMastery[]
-    lastUpdate: number
+    updated: number
   }
   profileIcon: string
   profileSplash: string
@@ -25,13 +22,15 @@ export interface Summoner {
   }
   region: string
   tag: string
+  updatedData: number
+  updatedMatch: number
+  updatedName: number
 }
-
 export interface RankedEntry {
   division: string
   losses: number
   lp: number
-  queueType: string
+  queue: string
   tier: string
   wins: number
 }

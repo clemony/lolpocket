@@ -5,12 +5,14 @@ import { Primitive } from 'reka-ui'
 const {
   as: el = 'span',
   class: className,
-  summoner,
+  noTag,
+  summoner
 } = defineProps<
   PrimitiveProps & {
     as?: string
     class?: HTMLAttributes['class']
     summoner?: Summoner
+    noTag?: boolean
   }
 >()
 
@@ -30,6 +32,7 @@ const tag = computed(() => {
     :as="el"
     :class="cn('inline-flex items-center leading-0 antialiased', className)">
     <icon
+      v-if="!noTag"
       name="lucide:hash"
       class="size-3.75 inline align-bottom" />
     {{ tag }}

@@ -10,13 +10,12 @@ const { class: className, summoner } = defineProps<{
 </script>
 
 <template>
-  <IconHeader>
+  <IconHeader class="-ml-6">
     <template #icon>
-      <LazySummonerIcon
-        :summoner
-        class="rounded-full size-full absolute   relative !size-22 mt-2.5" />
+      <SummonerIcon
+        class="size-20 rounded-full mt-2 ml-6"
+        :summoner />
     </template>
-
     <!-- header name -->
     <template #title>
       <SummonerName
@@ -28,7 +27,7 @@ const { class: className, summoner } = defineProps<{
 
     <template #subheader>
       <SummonerTag :summoner />
-      <SummonerRegion :region-id="summoner?.region" />
+      <!--       <SummonerRegion :region-id="summoner?.region" /> -->
 
       <SummonerLevel :summoner />
     </template>

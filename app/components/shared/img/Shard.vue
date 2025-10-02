@@ -18,7 +18,7 @@ const shard = computed(() =>
 
 <template>
   <Label
-    variant="b1"
+    variant="base"
     hover="ghost"
     :style="{ '--shard-color': shard?.color }"
     :title="shard?.description"
