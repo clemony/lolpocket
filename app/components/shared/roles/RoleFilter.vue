@@ -4,7 +4,7 @@ const { class: className, summoner } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 
-const state = inject<PlayerData>(SummonerKey)!
+const state = inject<SummonerData>(SummonerKey)!
 const roleStats = await useMatchRoles(
   state.summoner.puuid,
   computed(() => state.matches)
@@ -19,9 +19,11 @@ const roleModel = computed({
 <template>
   <div class="w-full">
     <div class="flex items-center mb-2 -ml-1">
-      <label
+      <Button
+        size="sm"
+        variant="ghost"
         :class="{ 'pointer-events-none': ms().filter.role === 'ALL' }"
-        class="btn btn-sm gap-2 font-medium rounded-lg px-2.5 place-self-center text-3 btn-ghost"
+        class=" gap-2 font-medium rounded-lg px-2.5 place-self-center text-3"
         @click="state.clearFilters()">
         {{
           ms().filter.role !== "ALL"
@@ -33,7 +35,7 @@ const roleModel = computed({
           v-if="ms().filter.role !== 'ALL'"
           name="x-sm"
           class="shrink-0 -mt-px" />
-      </label>
+      </Button>
     </div>
 
     <div class="w-full h-15 justify-start overflow-hidden px-2">
@@ -49,10 +51,11 @@ const roleModel = computed({
             v-tippy="{
               content: `${role.name} - ${role.games} game${role.games > 1 ? 's' : ''}`,
             }"
+            for="item-types"
             class="size-14 grid place-items-center"
             :class="
               cn({
-                'bgneutral borderneutral shadowneutral/20 shadow-sm order-2  ':
+                'bg-neutral border-neutral shadow-neutral/20 shadow-sm order-2  ':
                   role.role === ms().filter.role,
                 'border-b3/80 btn  size-14  mr-0 btn-square': role.games,
               })

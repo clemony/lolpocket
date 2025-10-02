@@ -15,86 +15,84 @@ function handleBlock() {
 
 <template>
   <Popover
-    v-model:open="open"
-    class="w-fit">
+    v-model:open="open">
     <PopoverTrigger
-      as-child
-      class="h-11 w-76 -ml-2">
+      as-child>
       <Button
         variant="ghost"
         hover="b1"
         active="b1"
         :class="
           cn(
-            ' px-2  justify-start **:tracking-tight  items-center gap-1', { 'btn-active': open },
+            ' px-2 h-11 w-full relative rounded-full justify-start **:tracking-tight  items-center gap-1', { 'btn-active': open },
             className,
           )
         ">
         <LazySummonerIcon
           v-if="summoner"
           :summoner
-          class="rounded-full relative size-7 " />
-        <SummonerName
-          class="dst text-bc/94 leading-none  text-nowrap truncate font-bold !text-6  " />
-        <SummonerTag
-          :summoner
-          class="leading-none -ml-0.5  mt-px grow" />
+          class="rounded-full relative  size-9 " />
 
+        <SummonerName
+          :summoner
+          class="" />
         <icon
           name="select"
-          class="size-3.5" />
+          class="size-3.5 absolute right-3" />
       </Button>
     </PopoverTrigger>
     <LazyPopoverContent
       class="w-[var(--reka-popover-trigger-width)] p-0"
       align="start"
-      :side-offset="2"
-      trap-focus="false"
-      :disable-auto-focus="true"
+      :side-offset="4"
       @open-auto-focus.stop.prevent>
-      <div class="flex justify-between p-3 ">
-        <icon
-          name="tag"
-          class="**:stroke-[2.4] size-4.5 !opacity-30" />
-        <Grow />
-        <UserTitle
-          class="badge bg-tint-domination/50 border-tint-domination/20 !text-2 text-white/96" />
-      </div>
+      <div class="grid grid-cols-2 gap-y-1 *:odd:opacity-50 *:even:justify-self-end items-center auto-rows-fr pl-3 pr-4 py-2">
+        <span class="flex gap-1.5 items-center font-medium opacity-60">
+          <icon
+            name="lucide:user"
+            class="**:stroke-[2.1] size-3.5" />name:
+        </span>
+        <SummonerName
+          :summoner
+          class="" />
 
-      <Separator />
-      <div class=" p-3">
-        <div class="w-full flex items-center gap-2 justify-between">
-          <span class="flex gap-1.5 items-center font-medium opacity-60">
+        <span class="flex gap-1.5 items-center font-medium opacity-60">
+          <icon
+            name="hash"
+            class="**:stroke-[2.1] size-3.5" />tag:
+        </span>
+        <SummonerTag
+          :summoner
+          no-tag
+          class="" />
+        <span class="flex gap-1.5 items-center font-medium opacity-60">
+          <icon
+            name="at"
+            class="**:stroke-[2.1] size-3.5" />region:
+        </span>
+        <SummonerRegion
+          class=" opacity-80 "
+          :summoner
+          no-icon />
+
+        <span class="flex gap-1.5 items-center font-medium opacity-60">
+          <span class="size-3.5 overflow-hidden relative grid place-items-center">
+
             <icon
-              name="at"
-              class="**:stroke-[2.1] size-4" />Region:
-          </span>
-          <SummonerRegion
-            class=" opacity-80 "
-            :summoner
-            no-icon />
-        </div>
+              name="gg:loadbar-sound"
+              class="size-5.5  absolute" /></span>
+          level:
 
-        <div class="w-full flex items-center gap-2 justify-between">
-          <span class="flex gap-1.5 items-center font-medium opacity-60">
-            <icon
-              name="token:lvl"
-              class="size-4" />Level:</span>
-          <SummonerLevel
-            no-tag
-            class="opacity-80 -mt-px"
-            :summoner />
-        </div>
-
-      <!--       <Separator class="mt-2" />
-      <PopoverLabel class="pb-0">
-        Social
-      </PopoverLabel> -->
+        </span>
+        <SummonerLevel
+          no-tag
+          class="opacity-80 -mt-px"
+          :summoner />
       </div>
       <Separator />
 
       <div
-        class="grid grid-cols-4 px-3 py-2  gap-1.5 *:place-items-center *:grid *:[&_svg]:stroke-2 *:[&_svg]:size-5 *:size-full h-14 p-1  [&_svg]:group-hover:opacity-100">
+        class="grid grid-cols-3 px-3 py-2  gap-1.5 *:place-items-center *:grid *:[&_svg]:stroke-2 *:[&_svg]:size-5  *:size-full h-14 p-1  [&_svg]:group-hover:opacity-100">
         <Button
           v-tippy="{ content: 'Block', theme: 'base', placement: 'bottom' }"
           tabindex="-1"
@@ -106,7 +104,7 @@ function handleBlock() {
             name="ban"
             class="opacity-60" />
         </Button>
-
+        <!-- TODO add disable messaging -->
         <Button
           v-tippy="{ content: 'Message', theme: 'base', placement: 'bottom' }"
           variant="emboss"
@@ -122,12 +120,9 @@ function handleBlock() {
           class="group size-full"
           as-child>
           <FollowButton
-            v-tippy="{ content: 'Follow', theme: 'base', placement: 'bottom' }"
+            placement="bottom"
             tabindex="-1"
             :summoner>
-            <icon
-              name="heart-fill"
-              class="text-bc/30 !size-4.5 group-hover:text-domination group-hover:scale-115 transition-all duration-250" />
           </FollowButton>
         </Button>
       </div>

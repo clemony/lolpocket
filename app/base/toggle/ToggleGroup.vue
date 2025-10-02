@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import type { VariantProps } from 'class-variance-authority'
 import type { ToggleGroupRootEmits, ToggleGroupRootProps } from 'reka-ui'
-import type { HTMLAttributes } from 'vue'
 import { ToggleGroupRoot, useForwardPropsEmits } from 'reka-ui'
 import { computed, provide } from 'vue'
 import type { toggleVariants } from './toggleVariants'

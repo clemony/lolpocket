@@ -1,5 +1,5 @@
 import fs from 'node:fs'
-import { markUpdate } from '../../../scripts'
+import { markUpdate } from '../../../server'
 import { resolvePath } from '../resolvePath'
 import { pathIds } from './raw/pathIds'
 

@@ -3,7 +3,6 @@ import type {
   SplitterResizeHandleEmits,
   SplitterResizeHandleProps,
 } from 'reka-ui'
-import type { HTMLAttributes } from 'vue'
 import { SplitterResizeHandle, useForwardPropsEmits } from 'reka-ui'
 
 const props = defineProps<

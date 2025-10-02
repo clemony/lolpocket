@@ -1,7 +1,7 @@
 import type { Spell } from '#shared/types'
 import fs from 'node:fs'
 import path from 'node:path'
-import { markUpdate } from '../../../scripts'
+import { markUpdate } from '../../../server'
 
 const dataPath = path.resolve('scripts/data/spells.json')
 const raw: Spell[] = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))

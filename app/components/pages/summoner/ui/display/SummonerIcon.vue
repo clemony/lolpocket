@@ -28,7 +28,7 @@ const icon = computed(() => {
       :name="String(icon)"
       alt="summoner icon"
       :class="
-        cn('size-full [&_img]:scale-115', {
+        cn('size-full pointer-events-none [&_img]:scale-115', {
           '!size-6 place-self-center **:stroke-[1.7]':
             icon === 'iconoir:plug-type-a',
         })

@@ -17,7 +17,7 @@ export async function fetchSummonerMastery(puuid: string) {
   const needsUpdate
     = !summoner?.mastery?.champions?.length
       || !summoner?.mastery?.totalPoints
-      || isStale(summoner.mastery.lastUpdate)
+      || isStale(summoner.mastery.updated)
 
   // If nothing is stale or missing, return existing data
   if (!needsUpdate)
@@ -33,22 +33,17 @@ export async function fetchSummonerMastery(puuid: string) {
 
     const updated = {
       ...(summoner?.mastery ?? {}),
-      lastUpdate: new Date(),
+      updated: Date.now(),
     }
 
     updated.champions = result.mastery as ChampionMastery[]
-    console.log('💠 - fetchSummonerMastery - updated:', updated)
-    console.log(
-      '💠 - fetchSummonerMastery - result.totalPoints:',
-      result.totalPoints
-    )
 
     await ss().mergeSummonerData(puuid, {
       mastery: {
         champions: updated.champions,
-        lastUpdate: Date.now(),
         totalLevels: result.totalLevels,
         totalPoints: result.totalPoints,
+        updated: Date.now(),
       } as Summoner['mastery'],
     })
     return updated

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { ListboxItemEmits, ListboxItemProps } from 'reka-ui'
-import type { HTMLAttributes } from 'vue'
 import { useCurrentElement } from '@vueuse/core'
 import { ListboxItem, useForwardPropsEmits, useId } from 'reka-ui'
 import { computed, onMounted, onUnmounted, ref } from 'vue'
@@ -71,7 +70,7 @@ onUnmounted(() => {
     ref="itemRef"
     :class="
       cn(
-        'relative flex cursor-default gap-2 select-none items-center rounded-md px-2 py-1.5 text-3 outline-none data-[highlighted]:border-b3/60 data-[highlighted]:shadow-xs data-[highlighted]:bg-b2 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg]:size-4.5 [&_svg]:shrink-0 [&_svg]:-mx-1',
+        'relative flex cursor-default gap-3 select-none items-center rounded-md px-2 py-1.75 text-3 outline-none data-[highlighted]:border-b3/60 data-[highlighted]:shadow-xs data-[highlighted]:bg-b2 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg]:size-5 [&_svg]:shrink-0 [&_svg]:-mx-1',
         props.class,
       )
     "

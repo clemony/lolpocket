@@ -25,12 +25,10 @@ const championModel = computed({
   <ListboxRoot
     v-if="champions"
     v-model:model-value="championModel"
-    class="w-full w-120 max-w-120 gap-0 field-box px-2 pb-4 pt-6"
+    class="w-full w-120 max-w-120 gap-0 field-box px-2  py-4 space-y-4"
     :multiple="false"
     @entry-focus.prevent>
-    <span class="field-legend">
-      {{ queues[state.filter.value.queue] }} Champions
-    </span>
+    <PatchDateRange />
     <ListboxContent class="w-full overflow-hidden">
       <SlideInTopOutBottom
         group
@@ -73,21 +71,6 @@ const championModel = computed({
             </div>
           </Button>
         </ListboxItem>
-        <!--
-        <ListboxItem
-          v-if="model !== ''"
-          value=""
-          as-child
-          class="w-full peer-has-not-[data-[state=checked]]:hidden">
-          <Button
-            class=" *:opacity-50 hover:*:opacity-100 !grid grid-cols-[45px_1fr]"
-            variant="ghost">
-            <icon
-              name="x"
-              class="place-self-center size-4" />
-            <span>Clear</span>
-          </Button>
-        </ListboxItem> -->
         <LilKrug v-if="!champions.length" />
       </SlideInTopOutBottom>
     </ListboxContent>

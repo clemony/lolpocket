@@ -59,7 +59,7 @@ async function run() {
 
     writeFileSync('./raw/items-raw.json', JSON.stringify(merged, null, 2))
     console.log(
-      `✅ Merged ${Object.keys(merged).length} items to ./scripts/data/items.json`
+      `✅ Merged ${Object.keys(merged).length} items to ./server/data/items.json`
     )
   }
   catch (error) {

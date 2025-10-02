@@ -1,5 +1,6 @@
 import type { VariantProps } from 'class-variance-authority'
 import { cva } from 'class-variance-authority'
+// import { tv } from 'tailwind-variants'
 
 export const buttonBase
   = 'data-[state=active]:btn-active data-[state=checked]:btn-active data-[state=open]:btn-active has-[first:[&_svg]]:gap-3 has-not-[span:empty]:gap-2 text-start data-[state=open]:btn-active has-[span:empty]:gap-0  [&_svg]:inline-flex align-middle text-3 font-normal items-center disabled:opacity-80 flex'
@@ -9,16 +10,17 @@ export const toggleBase
 
 const variantStyles = {
   hidden: 'hidden',
-  base: 'btn bg-transparent hover:bg-transparent shadow-none border-transparent inset-shadow-none fx-0  drop-shadow-transparent shadow-none drop-shadow-none [--btn-depth:unset] [--btn-shadow:unset]  border-0',
+  base: 'bg-b1/90 px-3  border-b3 btn ',
   btn: 'px-3  btn  bg-tint-b2/60 border-b2 [&_.btn-active]:!bg-tint-b2/10  [&_.btn-active]:!border-b3/80 font-medium',
   disabled: '',
   emboss: 'btn btn-outline px-3  font-medium border-b3 shadow-xs shadow-black/6 drop-shadow-xs hover:inset-shadow-xs hover:inset-shadow-black/6 ',
   field: 'btn field-box',
-  ghost: 'btn btn-ghost hover:bg-tint-b2/20 hover:border-b3/60  font-medium px-3 data-[state=checked]:border-b3 data-[state=checked]:shadow-xs data-[state=checked]:bg-b3/36 data-[state=checked]:!fx-1  [&_.btn-active]:bg-b2/60 [&_.btn-active]:border-b3/60',
+  ghost: 'btn btn-ghost hover:bg-tint-b2/20 hover:border-b3/60  font-medium px-3 data-[state=checked]:border-b3 data-[state=checked]:shadow-xs data-[state=checked]:bg-b3/36 data-[state=checked]:!fx-1  [&_.btn-active]:!bg-b2 [&_.btn-active]:!border-b3',
   label: 'font-medium opacity-50 items-center flex gap-3',
   link: 'text-bc underline-offset-2 data-[state=active]:underline group-data-[state=visible]:underline hover:underline cursor-pointer font-medium px-0',
   neutral:
-    ' px-3 btn-neutral btn bg-neutral text-nc bg-neutral  font-medium  *:text-nc  hover:text-nc shadow-sm drop-shadow-sm border-neutral hover:bg-neutral/85 hover:**:text-nc',
+    ' px-3 btn-neutral btn bg-neutral text-nc bg-neutral  font-medium  *:text-nc  hover:text-nc shadow-sm drop-shadow-sm border-neutral hover:bg-neutral/85 hover:**:text-nc **:text-nc',
+  none: 'btn bg-transparent hover:bg-transparent shadow-none border-transparent inset-shadow-none fx-0  drop-shadow-transparent shadow-none drop-shadow-none [--btn-depth:unset] [--btn-shadow:unset]  border-0',
   outline: 'btn btn-outline px-3  font-medium border-b3',
   red: 'px-3  btn  bg-domination hover:bg-domination/80 border-domination/60 font-semibold text-white **:text-white',
   secondary:
@@ -29,14 +31,13 @@ const variantStyles = {
 }
 
 const hoverStyles = {
-  b1: 'hover:!bg-b1 hover:!border-b3 fx-0 ',
-  base: 'hover:bg-transparent',
+  base: 'hover:!bg-b1 hover:!border-b3 fx-0 ',
   btn: 'hover:!bg-b2  hover:!border-b3/80',
   ghost: 'hover:!bg-b2/40 hover:!border-b3/40 hover:fx-1',
   link: 'underline-offset-2 hover:underline',
   neutral:
     ' hover:!text-nc hover:!bg-neutral/85 hover:**:!text-nc hover:!border-n3 hover:shadow-sm hover:drop-shadow-sm ',
-  none: '',
+  none: 'hover:bg-transparent',
   outline: 'hover:inset-shadow-xxs hover:!border-bc/60 border ',
   secondary: 'hover:inset-shadow-xs',
   shadow:
@@ -44,14 +45,13 @@ const hoverStyles = {
 }
 
 const activeStyles = {
-  b1: '[&.btn-active]:!bg-b1 [&.btn-active]:!border-b4/60 fx-0 ',
-  base: '[&.btn-active]:bg-transparent',
+  base: '[&.btn-active]:!bg-b1 [&.btn-active]:shadow-sm shadow-black/4 [&.btn-active]:!border-b3/80 fx-0 ',
   btn: '[&.btn-active]:!bg-b2  [&.btn-active]:!border-b3/80',
   ghost: '[&.btn-active]:!bg-b2/40 [&.btn-active]:!border-b3/40 [&.btn-active]:fx-1',
   link: 'underline-offset-2 [&.btn-active]:underline',
   neutral:
     ' [&.btn-active]:!text-nc [&.btn-active]:!bg-neutral/85 [&.btn-active]:**:!text-nc [&.btn-active]:!border-n3 [&.btn-active]:shadow-sm [&.btn-active]:drop-shadow-sm ',
-  none: '',
+  none: '[&.btn-active]:bg-transparent',
   outline: '[&.btn-active]:inset-shadow-xxs [&.btn-active]:!border-bc/60 border ',
   secondary: '[&.btn-active]:inset-shadow-xs',
   shadow:
@@ -84,7 +84,7 @@ export const buttonVariants = cva(buttonBase, {
       default: 'btn',
     },
     shape: {
-      circle: '!btn-circle grid  place-items-center !rounded-full ',
+      circle: '!btn-circle grid !p-0 place-items-center overflow-hidden',
       square: 'grid aspect-square place-items-center ',
     },
     size: {
@@ -107,6 +107,9 @@ export const buttonVariants = cva(buttonBase, {
 
 export const labelVariants = cva('', {
   variants: {
+    active: {
+      ...activeStyles
+    },
     hover: {
       ...hoverStyles,
       default: 'outline',
@@ -148,3 +151,45 @@ export type ToggleVariants = VariantProps<typeof toggleVariants>
 
 export type ButtonVariants = VariantProps<typeof buttonVariants>
 export type LabelVariants = VariantProps<typeof labelVariants>
+/*
+const baseVariants = tv({
+  variants: {
+    intent: {
+      ghost: 'bg-transparent text-gray-700',
+      primary: 'bg-blue-500 text-white',
+      secondary: 'bg-gray-200 text-gray-800',
+    },
+    rounded: {
+      full: 'rounded-full',
+      lg: 'rounded-lg',
+      md: 'rounded-md',
+      none: 'rounded-none',
+      sm: 'rounded-sm',
+    },
+    size: {
+      lg: 'text-base py-3 px-4',
+      md: 'text-sm py-2 px-3',
+      sm: 'text-xs py-1 px-2',
+    },
+  },
+})
+
+export const buttonVariants = tv({
+  base: 'inline-flex items-center justify-center font-medium',
+  defaultVariants: {
+    intent: 'primary',
+    rounded: 'md',
+    size: 'md',
+  },
+  extend: baseVariants,
+})
+
+export const labelVariants = tv({
+  base: 'block font-semibold cursor-pointer',
+  defaultVariants: {
+    intent: 'secondary',
+    rounded: 'none',
+    size: 'sm',
+  },
+  extend: baseVariants,
+}) */

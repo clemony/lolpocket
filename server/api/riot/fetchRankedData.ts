@@ -27,7 +27,7 @@ export default defineEventHandler(async (event) => {
         division: entry.rank,
         losses: entry.losses,
         lp: entry.leaguePoints,
-        queueType: entry.queueType,
+        queue: entry.queueType,
         tier: entry.tier,
         wins: entry.wins,
       }

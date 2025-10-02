@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { HoverCardContentProps } from 'reka-ui'
-import type { HTMLAttributes } from 'vue'
 import { motion } from 'motion-v'
 import { HoverCardContent, HoverCardPortal, useForwardProps } from 'reka-ui'
 import { computed } from 'vue'

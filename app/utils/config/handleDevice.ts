@@ -16,13 +16,18 @@ export function getDevice() {
 export function getDeviceKey() {
   const device = getDevice()
   return (
-    device === 'MacOS'
-      ? '⌘'
-      : device === 'Windows'
-        ? 'ctrl'
-        : device === 'Mobile'
-          ? ''
-          : 'meta'
+    device === 'Windows'
+      ? '⊞'
+      : '⌘'
+  )
+}
+
+export function getMetaIcon() {
+  const device = getDevice()
+  return (
+    device === 'Windows'
+      ? 'win-key'
+      : 'command'
   )
 }
 

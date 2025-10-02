@@ -1,19 +1,18 @@
 <script lang="ts" setup>
-const { state } = defineProps<{
-  state: PlayerData
-}>()
-
 const emit = defineEmits(['scroll-top'])
+
+const { loading, matches, summoner } = useSummonerInject()
+
 const itemsPerPage = 20
 const currentPage = ref(1)
 
 const pagedMatches = computed(() => {
   const start = (currentPage.value - 1) * itemsPerPage
-  return state.matches.slice(start, start + itemsPerPage)
+  return matches.value.slice(start, start + itemsPerPage)
 })
 
 watch(
-  () => state.matches.length,
+  () => matches.value.length,
   (newVal) => {
     if (newVal)
       currentPage.value = 1
@@ -25,7 +24,7 @@ watch(
   <div
     class="flex-col overflow-visible py-24 flex w-full">
     <div
-      v-if="state.loading"
+      v-if="loading"
       class="flex flex-col gap-8">
       <Skeleton
         v-for="i in itemsPerPage"
@@ -41,7 +40,7 @@ watch(
       <LazyMatchCard
         v-for="match in pagedMatches"
         :key="match.matchId"
-        :puuid="state.summoner?.puuid"
+        :puuid="summoner?.puuid"
         :match="match"></LazyMatchCard>
     </TransitionScalePop>
 
@@ -53,7 +52,7 @@ watch(
 
     <Pagination
       v-model:page="currentPage"
-      :total="state.matches?.length"
+      :total="matches?.length"
       :default-page="1"
       :sibling-count="1"
       :show-edges="false"

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { VueDraggable } from 'vue-draggable-plus'
+
 definePageMeta({
   name: 'pocket-champions',
   title: 'champions',
@@ -21,30 +23,43 @@ const { results } = useSimpleSearch(
 </script>
 
 <template>
-  <div class="size-full z-auto overflow-y-auto pt-12 -mr-34 pr-30">
+  <div class="w-full pr-32 pl-14 z-auto overflow-y-auto pt-12 mx-auto">
     <div
-      class="flex gap-8 sticky z-1 bg-linear-to-b from-b1 to-b1/70 backdrop-blur-lg -top-12 py-4 pl-11 pr-25 items-end flex-col justify-center w-full">
-      <h1>Selected Champions</h1>
-      <SelectedChampions :pocket="pocket" />
-      <Input
-        v-model="searchQuery"
-        aria-label="Search champions"
-        placeholder="Search champions..."
-        class="max-w-100 border-b4/60 w-100"
-        type="text"
-        @clear:input="searchQuery = ''">
-        <icon name="search" />
-      </Input>
+      class="flex gap-12 sticky z-1 bg-linear-to-b from-b1 to-b1/70 backdrop-blur-lg -top-12 py-4 items-end flex-col px-2 justify-center w-full">
+      <h2 class="self-start dss tracking-tight">
+        Selected Champions
+      </h2>
+      <SelectedChampions :pocket="pocket">
+        <Input
+          v-model="searchQuery"
+          aria-label="Search champions"
+          placeholder="Search champions..."
+          class="max-w-100 border-b4/60 w-100"
+          type="text"
+          @clear:input="searchQuery = ''">
+          <icon name="search" />
+        </Input>
+      </SelectedChampions>
     </div>
 
-    <div
-      class="h-fit pb-34 grid grid-flow-row auto-cols-auto pt-6 grid-cols-[repeat(auto-fill,minmax(80px,1fr))] pl-16 pr-24 w-full inset-0 gap-3">
+    <VueDraggable
+      :animation="100"
+
+      chosen-class="item-set-item-chosen-80px"
+      ghost-class="draggable-icon-ghost-80px"
+      fallback-class="draggable-icon-fallback-80px"
+      :group="{ name: 'champions', put: false, pull: 'clone' }"
+      :force-fallback="true"
+      :fallback-tolerance="0"
+      :fallback-on-body="true"
+      :model-value="ix().champions"
+      class="h-fit pb-34 grid grid-flow-row auto-cols-auto pt-10 grid-cols-[repeat(auto-fill,minmax(80px,1fr))] w-full inset-0 px-2 gap-3">
       <PocketChampion
         v-for="champion in results.filter(r => !pocket.champions.includes(r.key))"
         :key="champion.id"
         :champion
         :pocket />
-    </div>
+    </VueDraggable>
   </div>
 </template>
 

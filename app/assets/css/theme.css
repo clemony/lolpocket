@@ -90,4 +90,13 @@
       background-position: 0% 50%;
     }
   }
+
+  @keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    25%      { transform: scale(1.2); }
+    50%      { transform: scale(0.9); }
+    75%      { transform: scale(1.05); }
+  }
+
+  --animate-heartbeat: heartbeat 0.6s ease-in-out;
 }

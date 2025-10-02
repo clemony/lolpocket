@@ -1,4 +1,5 @@
 export * from './useChildRoutes'
+export * from './useElementScroll'
 export * from './useParentMeta'
 export * from './useRouteKey'
 export * from './useRouteNavigation'

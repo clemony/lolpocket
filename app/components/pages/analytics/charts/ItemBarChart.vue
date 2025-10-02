@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 // TODO fix usermatchdata
 
-const state = inject<PlayerData>(SummonerKey)
+const state = inject<SummonerData>(SummonerKey)
 
 const { bayesianItems } = useMatchItems(state.summoner.puuid, state.matches)
 

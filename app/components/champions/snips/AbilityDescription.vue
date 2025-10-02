@@ -29,17 +29,20 @@ const { class: className, effect } = defineProps<{
           <p class="!text-2 text-wrap text-balance">
             {{ attribute.attribute }}:
           </p>
-          <template v-if="attribute.modifiers?.[0]">
-            {{ `${attribute.modifiers?.[0].values}${attribute.modifiers?.[0]?.unit ?? ''}` }}&nbsp;
-          </template>
+          <p class="text-wrap whitespace-pre overflow-hidden">
+            <template v-if="attribute.modifiers?.[0]">
+              {{ `${attribute.modifiers?.[0].values}${attribute.modifiers?.[0]?.unit ?? ''}` }}&nbsp;
+            </template>
 
-          <span
-            v-if="attribute.modifiers?.[1]"
-            v-tippy="{ content: attribute.modifiers?.[1].tooltip, theme: 'basic', placement: 'bottom-start', offset: [0, 6] }"
-            :class="cn('inline-flex items-center gap-0 px-2 bg-b2/10  -mt-1 z-10 whitespace-pre badge  border border-b3 !text-2', { 'hover:bg-b2 pb-0.5 decoration-bc/40 hover:*:decoration-bc ': attribute.modifiers?.[1].tooltip })">+<span :class=" { 'underline decoration-dotted  decoration-bc/40  underline-offset-2': attribute.modifiers?.[1].tooltip }">
-              {{ attribute.modifiers?.[1].values }}
-            </span>{{ attribute.modifiers?.[1].unit }}
-          </span>
+            <span
+              v-if="attribute.modifiers?.[1]"
+              v-tippy="{ content: attribute.modifiers?.[1].tooltip, theme: 'basic', placement: 'bottom-start', offset: [0, 6] }"
+              :class="cn('inline items-center gap-0 px-2 bg-b2/10  -mt-1 z-10 whitespace-pre badge text-wrap border border-b3 !text-2', { 'hover:bg-b2 pb-0.5 decoration-bc/40 hover:*:decoration-bc ': attribute.modifiers?.[1].tooltip })">+&thinsp;
+              <span :class=" { 'underline decoration-dotted  decoration-bc/40  underline-offset-2': attribute.modifiers?.[1].tooltip }">
+                {{ attribute.modifiers?.[1].values }}
+              </span>{{ attribute.modifiers?.[1].unit }}
+            </span>
+          </p>
         </div>
       </div>
     </div>

@@ -1,0 +1,344 @@
+// Updated Patch 25.19 - 09/27/2025 06:08:58 PM CDT
+
+const champion: Champion = {
+  "id": 23,
+  "key": "Tryndamere",
+  "name": "Tryndamere",
+  "title": "the Barbarian King",
+  "abilities": [
+    {
+      "key": "P",
+      "name": "Battle Fury",
+      "affects": "Self",
+      "blurb": "Innate:  Tryndamere generates  Fury on his basic attacks,  critical strikes, and enemy kills. His Fury begins to decay after a period without dealing or taking damage.",
+      "effects": [
+        {
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Tryndamere generates 5 Fury on his basic attacks, and 10 Fury on critical strikes and each time he kills an enemy. After 8 seconds without dealing or taking damage, Tryndamere loses 5 Fury per second.</p>"
+        },
+        {
+          "description": "Tryndamere gains 0% - 50% (based on Fury) critical strike chance."
+        }
+      ],
+      "icon": "https://cdn.communitydragon.org/latest/champion/Tryndamere/ability-icon/p",
+      "notes": "Fury generation stacks additively: if the given action triggers multiple ways of generating Fury, all of them apply.\nKilling an enemy with a basic attack basic attack generates 15 Fury (5 Fury from the basic attack + 10 Fury from the kill).\nKilling an enemy with a  critical strike generates 20 Fury (10 Fury from the  critical strike + 10 Fury from the kill).\nThe Fury gain for killing an enemy also stacks with  Spinning Slash's Fury generation per enemy hit.\nAttacks against  structures will not grant bonus Fury, but will still reset the timer on Fury decay.\nAttacks against  wards behave like attacks on normal enemies, generating 5 Fury and resetting the decay timer. Attacks against wards can  critically strike, generating 10 Fury.\nAttacks against jungle plants will generate 5 Fury and reset the decay timer. Attacks can also  critically strike, generating 10 Fury. Additionally,  Honeyfruit drops restore 5 Fury for each pod collected and reset the decay timer.\nAttacking an  Honeyfruit and collecting the pods generates 30 Fury, or 35 Fury if the plant was hit by a  critical strike.\nFury is only granted if the basic attack hits and will not be granted if Tryndamere cancels his basic attack windup.",
+      "targeting": "Passive"
+    },
+    {
+      "key": "Q",
+      "name": "Bloodlust",
+      "affects": "Self",
+      "blurb": "Passive:  Tryndamere gains  bonus attack damage, increased based on his missing health.",
+      "castTime": "none",
+      "cooldown": "12",
+      "cost": "0",
+      "effects": [
+        {
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Passive:</span> Tryndamere gains bonus attack damage, plus an additional amount based on his missing health.</p>",
+          "leveling": [
+            {
+              "attribute": "Bonus Attack Damage",
+              "modifiers": [
+                {
+                  "values": "5 / 10 / 15 / 20 / 25"
+                }
+              ]
+            },
+            {
+              "attribute": "Additional Bonus AD",
+              "modifiers": [
+                {
+                  "unit": " per 1% missing health",
+                  "values": "0.15 / 0.25 / 0.35 / 0.45 / 0.55"
+                }
+              ]
+            },
+            {
+              "attribute": "Maximum Total Bonus AD",
+              "modifiers": [
+                {
+                  "values": "20 / 35 / 50 / 65 / 80"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Tryndamere consumes all of his Fury to heal himself, increased for every point of Fury consumed.</p>",
+          "leveling": [
+            {
+              "attribute": "Minimum Heal",
+              "modifiers": [
+                {
+                  "values": "30 / 40 / 50 / 60 / 70"
+                },
+                {
+                  "unit": "% AP",
+                  "values": "30"
+                }
+              ]
+            },
+            {
+              "attribute": "Heal Per 1 Fury",
+              "modifiers": [
+                {
+                  "values": "0.5 / 0.95 / 1.4 / 1.85 / 2.3"
+                },
+                {
+                  "unit": "% AP",
+                  "values": "1.2"
+                }
+              ]
+            },
+            {
+              "attribute": "Maximum Heal",
+              "modifiers": [
+                {
+                  "values": "80 / 135 / 190 / 245 / 300"
+                },
+                {
+                  "unit": "% AP",
+                  "values": "150"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "icon": "https://cdn.communitydragon.org/latest/champion/Tryndamere/ability-icon/q",
+      "maxCharges": -1,
+      "notes": "Bloodlust can still be activated even if Tryndamere does not have any Fury.\nBloodlust can be activated at any point of Tryndamere's basic attack.\nNote that if an basic attack will  critically strike is determined when the basic attack starts.\nThis means that if  Bloodlust is cast during Tryndamere's basic attack windup, the attack will use the  critical strike chance given by the Fury before the  Bloodlust cast.\nFurthermore, the Fury for that basic attack will be given once the windup completes. This lets Tryndamere start building Fury immediately.",
+      "resource": "Fury",
+      "targeting": "Auto"
+    },
+    {
+      "key": "W",
+      "name": "Mocking Shout",
+      "affects": "Enemies",
+      "blurb": "Active:  Tryndamere reduces the  attack damage of nearby champions for a few seconds. Targets facing away from him are also  slowed.",
+      "castTime": "0.3",
+      "cooldown": "14",
+      "cost": "0",
+      "effectRadius": "850",
+      "effects": [
+        {
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Tryndamere reduces the bonus attack damage of nearby enemy champions for 4 seconds.</p>",
+          "leveling": [
+            {
+              "attribute": "Attack Damage Reduction",
+              "modifiers": [
+                {
+                  "values": "20 / 35 / 50 / 65 / 80"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "description": "Targets facing in the opposite direction of Tryndamere are also slowed for the duration.",
+          "leveling": [
+            {
+              "attribute": "Slow",
+              "modifiers": [
+                {
+                  "unit": "%",
+                  "values": "30 / 37.5 / 45 / 52.5 / 60"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "description": "A nearby enemy champion is required to cast this ability. The target does not have to be visible to be targeted by this ability."
+        }
+      ],
+      "icon": "https://cdn.communitydragon.org/latest/champion/Tryndamere/ability-icon/w",
+      "maxCharges": -1,
+      "notes": "Mocking Shout very briefly  reveals Tryndamere if he uses it while in the fog of war to enemies.",
+      "spellshieldable": "True",
+      "targeting": "Proximity"
+    },
+    {
+      "key": "E",
+      "name": "Spinning Slash",
+      "affects": "Enemies",
+      "blurb": "Active:  Tryndamere  dashes to the target location, dealing physical damage and generating  Fury per enemy hit.",
+      "castTime": "none",
+      "cooldown": "12 / 11 / 10 / 9 / 8",
+      "cost": "0",
+      "damageType": "Physical damage",
+      "effectRadius": "225",
+      "effects": [
+        {
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Tryndamere dashes to the target location, dealing physical damage to enemies hit and generating 2 Fury per enemy hit, increased to 5 Fury against champions.</p>",
+          "leveling": [
+            {
+              "attribute": "Physical Damage",
+              "modifiers": [
+                {
+                  "values": "75 / 105 / 135 / 165 / 195"
+                },
+                {
+                  "unit": "% bonus AD",
+                  "values": "130"
+                },
+                {
+                  "unit": "% AP",
+                  "values": "80"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "description": "Critical strikes on-hit reduce Spinning Slash's current cooldown by 0.75 seconds, doubled to 1.5 seconds against champions."
+        },
+        {
+          "description": "Bloodlust and Undying Rage can be cast during the dash."
+        }
+      ],
+      "icon": "https://cdn.communitydragon.org/latest/champion/Tryndamere/ability-icon/e",
+      "maxCharges": -1,
+      "notes": "Spinning Slash's  Fury generation stacks additively with  Battle Fury's Fury generation on kill.\nKilling an minion with Spinning Slash grants 12 Fury (2 Fury from enemy hit + 10 Fury from the kill).\nKilling an champion with Spinning Slash grants 15 Fury (5 Fury from champion hit + 10 Fury from the kill).\nThere is no cooldown on Fury generation on kill with Spinning Slash.\nSpinning Slash has no minimum dash range.\n Flash will interrupt the  dash but Spinning Slash will deal damage to enemies at the new location instantly.\nEnemies already hit by Spinning Slash cannot be damaged more than once.\nTo ensure Spinning Slash deals damage when dashing away from an enemy champion, Tryndamere needs to move r-35 units towards the enemy beyond the distance he can basic attack at, where r represents the enemy's radius and 35 is the distance in units beyond Tryndamere's basic attack range that Spinning Slash can reach.\nThe cooldown reduction upon  critically striking triggers on  wards and jungle plants.\nThe cooldown reduction upon  critically striking triggers even if the attack is  blocked.\nPENDING FOR TEST:: Cooldown reduction on  critical strike interaction with parrying effects ( dodge,  blind).",
+      "spellEffects": "aoe",
+      "spellshieldable": "True",
+      "targeting": "Location",
+      "targetRange": "660"
+    },
+    {
+      "key": "R",
+      "name": "Undying Rage",
+      "affects": "Self",
+      "blurb": "Active:  Tryndamere becomes enraged, gaining  Fury and a  minimum health threshold for a few seconds.",
+      "castTime": "none",
+      "cooldown": "120 / 100 / 80",
+      "cost": "0",
+      "effects": [
+        {
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Tryndamere becomes enraged, instantly gaining Fury and a minimum health threshold for 5 seconds.</p>",
+          "leveling": [
+            {
+              "attribute": "Fury Gained",
+              "modifiers": [
+                {
+                  "values": "50 / 75 / 100"
+                }
+              ]
+            },
+            {
+              "attribute": "Minimum Health Threshold",
+              "modifiers": [
+                {
+                  "values": "30 / 50 / 70"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "description": "Undying Rage can be used while affected by cast-inhibiting crowd control."
+        }
+      ],
+      "icon": "https://cdn.communitydragon.org/latest/champion/Tryndamere/ability-icon/r",
+      "maxCharges": -1,
+      "notes": "Undying Rage will prevent  Mel's  Overwhelm's stacks from being consumed.",
+      "targeting": "Auto"
+    }
+  ],
+  "adaptiveType": "Physical damage",
+  "attackType": "Melee",
+  "attributeRatings": {
+    "damage": 3,
+    "toughness": 2,
+    "control": 1,
+    "mobility": 2,
+    "utility": 1,
+    "abilityReliance": 10,
+    "difficulty": 1
+  },
+  "faction": "freljord",
+  "lore": "Fueled by unbridled fury and rage, Tryndamere once carved his way through the Freljord, openly challenging the greatest warriors of the north to prepare himself for even darker days ahead. The wrathful barbarian has long sought revenge for the annihilation of his clan, though more recently he has found companionship with Ashe, the Avarosan warmother, and a home with her people. His almost inhuman strength and fortitude is legendary, and has delivered him and his new allies countless victories against the greatest of odds.",
+  "patchLastChanged": "14.20",
+  "positions": [
+    "Top"
+  ],
+  "price": {
+    "blueEssence": 675,
+    "rp": 585
+  },
+  "releaseDate": "2009-05-01",
+  "resource": "Fury",
+  "roles": [
+    "Assassin",
+    "Fighter",
+    "Skirmisher"
+  ],
+  "stats": {
+    "health": {
+      "flat": 696,
+      "perLevel": 108
+    },
+    "healthRegen": {
+      "flat": 8.5,
+      "perLevel": 0.9
+    },
+    "mana": {
+      "flat": 100
+    },
+    "manaRegen": {
+      "flat": 0
+    },
+    "armor": {
+      "flat": 33,
+      "perLevel": 4.8
+    },
+    "magicResistance": {
+      "flat": 32,
+      "perLevel": 2.05
+    },
+    "attackDamage": {
+      "flat": 66,
+      "perLevel": 4
+    },
+    "movespeed": {
+      "flat": 345
+    },
+    "acquisitionRadius": {
+      "flat": 400
+    },
+    "selectionRadius": {
+      "flat": 135
+    },
+    "pathingRadius": {
+      "flat": 35
+    },
+    "gameplayRadius": {
+      "flat": 65
+    },
+    "criticalStrikeDamage": {
+      "flat": 175
+    },
+    "criticalStrikeDamageModifier": {
+      "flat": 1
+    },
+    "attackSpeed": {
+      "flat": 0.67,
+      "perLevel": 3.4
+    },
+    "attackSpeedRatio": {
+      "flat": 0.694
+    },
+    "attackCastTime": {
+      "flat": 0.3
+    },
+    "attackTotalTime": {
+      "flat": 1.6
+    },
+    "attackDelayOffset": {
+      "flat": -0.11
+    },
+    "attackRange": {
+      "flat": 175
+    }
+  }
+}
+export default champion

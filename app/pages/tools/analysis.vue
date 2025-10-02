@@ -6,6 +6,7 @@ definePageMeta({
   icon: 'chart',
   order: 5,
   path: '/tools/analysis',
+  search: 'hidden',
 })
 
 const summoner = ref<Summoner>(null)

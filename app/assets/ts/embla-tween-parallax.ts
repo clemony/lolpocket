@@ -1,6 +1,6 @@
 import type { EmblaCarouselType, EmblaEventType } from 'embla-carousel'
 
-const TWEEN_FACTOR_BASE = 0.1
+const TWEEN_FACTOR_BASE = 0.2
 let tweenFactor = 0
 let tweenNodes: HTMLElement[] = []
 

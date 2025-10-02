@@ -4,18 +4,20 @@ import { motion } from 'motion-v'
 import { ProgressIndicator } from 'reka-ui'
 
 const {
-  tipSide = 'top',
-  circle,
   class: className,
+  placement = 'top',
+  shape,
   showIcon,
   size = 'md',
+  tip,
 } = defineProps<{
   class?: HTMLAttributes['class']
   text?: boolean | string | null
   size?: any
   showIcon?: boolean
-  circle?: boolean
-  tipSide?: Side
+  shape?: 'circle' | 'square' | null
+  placement?: Side
+  tip?: boolean
 }>()
 
 const state = useSummonerInject()
@@ -31,17 +33,16 @@ const {
   'match-refresh'
 )
 
-const tip = computed(
+const tippy = computed(
   () =>
-    `Updated:
-        ${formatTimeAgo(state.summoner.value.lastMatchUpdate, 'short')}
-        ${cooldown.value?.seconds ? `${cooldown.value?.seconds} cd` : ''}`
+    !cooldown.value?.seconds ? (state.summoner.value.updatedMatch ? `last updated ${state.summoner.value.updatedMatch}` : 'not updated yet') : `${cooldown.value?.seconds} cd`
 )
 </script>
 
 <template>
   <Button
-    v-tippy="{ content: tip, placement: tipSide }"
+    v-tippy="{ content: tip ? tippy : null, theme: 'default' }"
+    :shape
     :class="
       cn(
         'p-0',
@@ -52,17 +53,16 @@ const tip = computed(
         className,
       )
     "
-    :size="size"
     @click="update()">
     <TransitionScalePop
-      v-if="circle"
+      v-if="shape"
       class="relative grid overflow-hidden size-full place-items-center">
       <icon
         v-if="!cooldown"
         name="reset"
         :class="
           cn(
-            ' size-5   shrink-0 in-[.btn-neutral]:opacity-80 not-in-[.btn-neutral]:opacity-60 group-hover/load:opacity-100 dst transition-all duration-200',
+            ' size-5 **:stroke-[1.8]   group-hover/load:opacity-100 dst transition-all duration-200',
             {
               'animate-rotate': isLoading,
             },
@@ -98,7 +98,7 @@ const tip = computed(
         ">
         <icon
           v-if="showIcon"
-          name="mingcute:refresh-2-line"
+          name="reset"
           class="mr-3 -ml-2 size-5" />
         <span class="text-2">
           {{

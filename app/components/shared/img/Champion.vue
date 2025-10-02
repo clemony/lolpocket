@@ -60,7 +60,6 @@ const x = computed(() => (left.includes(k) ? '70%' : '50%'))
 
 const image = useImage()
 const splash = computed (() => `url('${image(getSplash(k ?? id, type))}')`)
-console.log('🌱 - splash:', splash)
 </script>
 
 <template>

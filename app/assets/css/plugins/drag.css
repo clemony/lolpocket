@@ -58,13 +58,18 @@
   @apply border-b2 bg-b2/30 overflow-hidden aspect-square !size-18 cursor-pointer items-center justify-center gap-2 self-center border opacity-70 shadow-xs rounded-lg;
 }
 
-/* draggable item */
+/* draggable icon */
 
-.draggable-item-ghost,
-.draggable-item-fallback {
+.draggable-icon-ghost,
+.draggable-icon-fallback {
   @apply border-b2 bg-b2/30 overflow-hidden aspect-square !size-20 cursor-pointer items-center justify-center gap-2 self-center border opacity-70 shadow-xs rounded-lg;
 }
 
+.draggable-icon-fallback-80px,
+.draggable-icon-ghost-80px,
+.item-set-item-chosen-80px {
+  @apply border-b2 bg-b2/30 overflow-hidden aspect-square cursor-pointer items-center justify-center gap-2 self-center border opacity-70 shadow-xs rounded-lg !size-[78px];
+}
 /* spell set */
 
 .spell-set-ghost,

@@ -30,21 +30,20 @@ watch(() => isFollowed.value, (newVal) => {
   <Toggle
     v-if="isYou"
     v-model="isFollowed"
-    :followed="isFollowed"
     as-child>
     <Button
+      v-tippy="{ content: isFollowed ? 'Unfollow' : 'Follow', placement, arrow: false }"
+      :followed="isFollowed"
       :variant="variant"
       :size="size"
-      :class="cn('group/follow z-10  grid place-items-center ', className)">
+      :class="cn('group/follow  grid place-items-center ', className)">
       <slot>
         <icon
-          name="heart-sm"
+          name="heart-fill"
           :class="
             cn(
-              ' group-hover/follow:text-tint-domination/40    group-hover/follow:opacity-90  absolute transition-all duration-300  dst !size-8 text-b4 opacity-90 shrink-0',
-
-              { 'text-domination group-hover/follow:**:text-domination opacity-70 group-hover/follow:opacity-100': isFollowed,
-              },
+              ' !size-4.5 group-hover/follow:opacity-100  text-domination/70   in-data-[state=on]:grayscale-0 in-data-[state=on]:opacity-100 opacity-40 grayscale absolute transition-all duration-100  dst ',
+              isFollowed ? 'animate-heartbeat' : '',
             )
           " />
       </slot>

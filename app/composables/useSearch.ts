@@ -1,15 +1,21 @@
+import type { regionIndex } from '#shared/appdata'
+import type { RouteRecordRaw } from 'vue-router'
+import { summonerSearchSchema } from '#shared/types/schema.forms'
+import { useDebounceFn } from '@vueuse/core'
 import Fuse from 'fuse.js'
+import { safeParse, string } from 'valibot'
 
 interface UseSearchOptions {
   customChampions?: Ref<ChampionIndex[]> | ChampionIndex[]
   customItems?: Ref<ItemIndex[]> | ItemIndex[]
-  includePages?: boolean
-  includePockets?: boolean
+  pages?: boolean
+  pockets?: boolean
 }
 
 export async function useSearch(
-  query = ref(''),
-  options: UseSearchOptions = {}
+  query = ref<string>(''),
+  tag = ref<string>(''),
+  options: UseSearchOptions
 ) {
   const searchQuery = query
   const router = useRouter()
@@ -52,10 +58,10 @@ export async function useSearch(
   )
 
   const pageFuse
-    = options.includePages !== false
+    = options.pages !== false
       ? ref(
           new Fuse(router.getRoutes(), {
-            keys: ['name', 'meta.title', 'meta.section', 'meta.searchKeys'],
+            keys: ['name', 'meta.title', 'path', 'meta.searchKeys'],
             includeMatches: true,
             threshold: 0.3,
           })
@@ -63,7 +69,7 @@ export async function useSearch(
       : ref(null)
 
   const pocketFuse
-    = options.includePockets !== false
+    = options.pockets !== false
       ? ref(
           new Fuse(ps().pockets, {
             keys: ['name', 'champions', 'tags'],
@@ -73,57 +79,73 @@ export async function useSearch(
         )
       : ref(null)
 
-  const championResult = computed(() => {
+  const champions = computed(() => {
     return (
       championFuse.value?.search(searchQuery.value).map(r => r.item) || []
     )
   })
 
-  const itemResult = computed(() => {
+  const items = computed(() => {
     return itemFuse.value?.search(searchQuery.value).map(r => r.item) || []
   })
 
-  const pageResult = computed(() => {
+  const pageResults = computed(() => {
     if (!pageFuse.value)
       return []
     return pageFuse.value
       .search(searchQuery.value)
       .map(r => r.item)
-      .filter(p => p.meta.search !== false)
+      .filter(p => !p.meta?.search && p.path.split('/').length === 2)
   })
 
-  const groupedPages = computed(() => {
-    const grouped: Record<string, PageRecord[]> = {}
-    for (const route of pageResult.value) {
-      const section = route.meta?.section || 'Uncategorized'
-      if (!grouped[section])
-        grouped[section] = []
-      grouped[section].push(route)
-    }
-    return Object.entries(grouped).map(([section, routes]) => ({
-      routes,
-      section,
-    }))
-  })
-
-  const pocketResult = computed(() => {
+  const pockets = computed(() => {
     return pocketFuse.value?.search(searchQuery.value).map(r => r.item) || []
   })
 
   const resultsLength = computed(
     () =>
-      itemResult.value.length
-      + championResult.value.length
-      + pocketResult.value.length
+      items.value.length
+      + champions.value.length
+      + pockets.value.length
+      + pageResults.value.length
   )
 
+  const pages = computed (() => {
+    const results = computed (() => !resultsLength || resultsLength === undefined ? pageResults.value : router.getRoutes().filter(r => r.meta?.search !== 'hidden' && r.path.split('/').length === 2))
+
+    const g = shallowRef([])
+
+    const singlePages = {
+      name: '',
+      items: (results.value.filter(r => r.meta?.search !== 'children') as RouteRecordRaw[]).sort((a, b) => Number(a.meta?.order) - Number(b.meta?.order)),
+      order: 0
+    }
+    g.value.push(singlePages)
+
+    results.value.filter(r => r.meta?.search === 'children').forEach((parent) => {
+      g.value.push({
+        name: parent.meta?.title || parent.name,
+        items: (parent.children as RouteRecordRaw[]).sort((a, b) => Number(a.meta?.order) - Number(b.meta?.order)),
+        order: parent.meta?.order
+      })
+    })
+    return g.value.sort((a, b) => (b.order - a.order))
+  })
+
+  // const emit = defineEmits(['update:search', 'update:focus'])
+  function clear() {
+    query.value = ''
+    tag.value = ''
+    // emit('update:search', { search: { query, tag } })
+  }
+
   return {
-    championResult,
-    groupedPages,
-    itemResult,
-    pageResult,
-    pocketResult,
+    champions,
+    clear,
+    items,
+    pages,
+    pockets,
     resultsLength,
-    searchQuery,
+    searchQuery
   }
 }

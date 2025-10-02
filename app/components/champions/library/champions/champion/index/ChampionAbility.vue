@@ -78,7 +78,7 @@ const { ability } = defineProps<{
             :name="ability.resource"
             class="flex gap-2 items-center">
             <component
-              :is="`i-lol-${ability.resource}`"
+              :is="`i-lol-${ability.resource.replace(/\s/g, '-')}`"
               :class="cn('dst size-4   text-bc/80')" />
 
             {{ ability.cost }}

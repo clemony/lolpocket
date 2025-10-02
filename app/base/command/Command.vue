@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { ListboxRootEmits, ListboxRootProps } from 'reka-ui'
-import type { HTMLAttributes } from 'vue'
 import { ListboxRoot, useFilter, useForwardPropsEmits } from 'reka-ui'
 import { computed, reactive, ref, watch } from 'vue'
 import { provideCommandContext } from './cindex'
