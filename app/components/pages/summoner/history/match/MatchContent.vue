@@ -50,6 +50,7 @@ const modelValue = ref<string | number>('Scoreboard')
           class="">
           <LazyMatchDataTable
             v-if="modelValue === 'Data'"
+            :player
             :match="match" />
         </TabsContent>
       </Tabs>

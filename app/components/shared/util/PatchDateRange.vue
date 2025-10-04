@@ -3,7 +3,7 @@ import type { DateRange } from 'reka-ui'
 import { getLocalTimeZone, isToday, today } from '@internationalized/date'
 
 const start = today(getLocalTimeZone())
-const end = start.add({ days: 7 })
+const end = start.subtract({ days: 14 })
 const matches = shallowRef<string>('amount')
 
 const dateRange = ref({

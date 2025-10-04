@@ -12,6 +12,11 @@ const currentSplash = computed(() => as().publicData?.splash ?? null)
 const { getMatchesForSummoner } = useIndexedDB()
 const matchData = await getMatchesForSummoner(as().account.puuid)
 const { top } = useChampions(as().account.puuid, matchData)
+
+function handleSplash(e: string) {
+  as().publicData.splash = e
+  isOpen.value = false
+}
 </script>
 
 <template>
@@ -41,6 +46,7 @@ const { top } = useChampions(as().account.puuid, matchData)
 
     <SplashSelectPanel
       v-model:open="isOpen"
+      @update:splash="e => handleSplash(e)"
       @dialog:close="isOpen = false">
       <button :class="cn(!currentSplash ? inactiveClass : '', cardClass)">
         <SplashCard

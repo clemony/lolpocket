@@ -2,7 +2,7 @@
 import type { CalendarNextProps } from 'reka-ui'
 import { reactiveOmit } from '@vueuse/core'
 import { CalendarNext, useForwardProps } from 'reka-ui'
-import { buttonVariants } from '~/assets/ts/variant-index'
+import { buttonVariants } from '~/assets/variants/variant-index'
 
 const props = defineProps<CalendarNextProps & { class?: HTMLAttributes['class'] }>()
 

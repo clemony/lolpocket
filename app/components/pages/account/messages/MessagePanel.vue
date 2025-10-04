@@ -4,7 +4,7 @@ import {
   sortedMessages,
   toggleRead,
   trashMsg,
-} from './messages/inbox-management'
+} from './inbox-management'
 
 defineOptions({
   meta: {

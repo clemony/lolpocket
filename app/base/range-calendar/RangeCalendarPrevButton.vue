@@ -2,7 +2,7 @@
 import type { RangeCalendarPrevProps } from 'reka-ui'
 import { reactiveOmit } from '@vueuse/core'
 import { RangeCalendarPrev, useForwardProps } from 'reka-ui'
-import { buttonVariants } from '~/assets/ts/variant-index'
+import { buttonVariants } from '~/assets/variants/variant-index'
 
 const props = defineProps<RangeCalendarPrevProps & { class?: HTMLAttributes['class'] }>()
 

@@ -1,5 +1,4 @@
 import type { Provider, Session } from '@supabase/supabase-js'
-import { toast } from 'vue-sonner'
 
 // TODO env var url
 export async function useSignIn(provider: Provider) {
@@ -58,5 +57,5 @@ export async function useSignOut() {
   await supabaseClient.auth.signOut()
   as().loggedIn = false
   console.log('Successfully logged out')
-  toast.success('Successfully logged out')
+  toast({ title: 'Successfully logged out' })
 }

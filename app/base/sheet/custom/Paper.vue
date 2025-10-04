@@ -29,9 +29,8 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 
 <template>
   <DialogContent
-    :class="cn('', sheetVariants({ side }), props.class)"
+    :class="cn('max-h-screen h-screen bg-b1/92 backdrop-blur-md !p-0 focus:ring-0 focus:ring-offset-0 focus:outline-0 outline-0 border border-x-b3 shadow-warm-soft', sheetVariants({ side }), props.class)"
     v-bind="{ ...forwarded, ...$attrs }"
-    class="isolate max-h-screen bg-b1/92 backdrop-blur-md !p-0 focus:ring-0 focus:ring-offset-0 focus:outline-0 outline-0 border border-x-b3 shadow-warm-soft"
     @open-auto-focus.prevent>
     <slot />
   </DialogContent>

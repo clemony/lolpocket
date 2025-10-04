@@ -6,7 +6,7 @@ export const useUiStore = defineStore(
     const sidebarStates = {
       inboxDropdown: ref<boolean>(false)
     }
-
+    const sidebarOpen = ref(false)
     const commandOpen = ref(false)
     const champTabValue = ref('all')
     const matchTabValue = ref('score')
@@ -35,7 +35,7 @@ export const useUiStore = defineStore(
       championInfo: ref([true, true, true]),
       panel: {
         nav: ref([true, true, true, true, true, true]),
-        pocket: ref([true, true]),
+        pocket: ref(true),
       },
     }
     const blockDialog = ref<boolean>(false)
@@ -45,6 +45,7 @@ export const useUiStore = defineStore(
       blockDialog,
 
       // collapse
+      sidebarOpen,
       sidebarStates,
       champTabs,
       champTabValue,

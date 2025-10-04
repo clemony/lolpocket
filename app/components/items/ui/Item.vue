@@ -1,52 +1,28 @@
 <script setup lang="ts">
-import type { PrimitiveProps } from 'reka-ui'
-import { Primitive } from 'reka-ui'
-
 const {
   id,
-  as = 'div',
   class: className,
-} = defineProps<
-  PrimitiveProps & {
-    id: number | null
-    class?: HTMLAttributes['class']
-    as?: string
-  }
->()
-const emit = defineEmits(['loaded'])
-
-const loaded = ref(false)
-function handleLoad() {
-  loaded.value = true
+} = defineProps<{
+  id: number | null
+  class?: HTMLAttributes['class']
 }
+>()
 </script>
 
 <template>
-  <Primitive
-    :as="as"
+  <div
     :class="
       cn(
-        'rounded-lg relative bg-b2/0 overflow-hidden grid place-items-center aspect-square  ',
-        {
-          ' shadow-sm shadow-black/50  drop-shadow-sm':
-            loaded === true && id !== null && id !== 0,
-          ' shadow-warm-soft ': !loaded || id === null || id === 0,
-        },
+        'rounded-lg relative bg-b2/0 overflow-hidden grid place-items-center aspect-square shadow-warm-soft shadow-sm shadow-black/50  drop-shadow-sm ',
+
         className,
       )
     ">
     <Img
-      v-show="id !== null"
       :img="`/img/items/${id}.webp`"
-      alt=" "
-      class="aspect-square opacity-96 size-full absolute rounded-lg"
-      @load="handleLoad()" />
+      :alt="ix().itemNameById(id)"
+      class="aspect-square opacity-96 size-full absolute rounded-lg" />
 
-    <Skeleton
-      v-show="!loaded && id !== null && id !== 0"
-      class="absolute opacity-99 size-full" />
     <slot />
-  </Primitive>
+  </div>
 </template>
-
-<style scoped></style>

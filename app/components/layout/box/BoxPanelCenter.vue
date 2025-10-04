@@ -29,41 +29,6 @@ const filteredMailList = computed(() => {
 
   return output
 })
-
-/*
-            <!--
-            <IndicatorTabsList class="ml-auto">
-              <IndicatorTabsTrigger
-                value="all">
-                All mail
-              </IndicatorTabsTrigger>
-              <IndicatorTabsTrigger
-                value="unread">
-                Unread
-              </IndicatorTabsTrigger>
-              <TabIndicator />
-            </IndicatorTabsList> -->const unreadMailList = computed(() => filteredMailList.value.filter(item => !item.read))
-
-const selectedMailData = computed(() => mails.find(item => item.id === selected.value))
-
-<TransitionSlideLeft
-        group
-        class="flex-1 flex flex-col gap-2 p-4 pt-0">
-        <TabsContent
-          value="all"
-          class="m-0">
-          <BoxPane
-            v-model:selected="selected"
-            :items="filteredMailList" />
-        </TabsContent>
-        <TabsContent
-          value="unread"
-          class="m-0">
-          <BoxPane
-            v-model:selected="selected"
-            :items="unreadMailList" />
-        </TabsContent>
-      </TransitionSlideLeft> */
 </script>
 
 <template>
@@ -72,7 +37,7 @@ const selectedMailData = computed(() => mails.find(item => item.id === selected.
     as-child>
     <ScrollArea
       scrollbar-class="bg-transparent border-0"
-      class="h-[calc(100vh-45px)]">
+      class="h-[calc(100vh-(var(--spacing)*16))]">
       <div
         class="flex items-center flex-col w-full bg-background/95 sticky top-0 backdrop-blur supports-[backdrop-filter]:bg-background/6 z-1">
         <div class="w-full grid place-items-center h-[45px] border-b">

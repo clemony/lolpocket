@@ -1,165 +1,143 @@
 <script lang="ts" setup>
-import {
-  MessagePanel,
-  NavPanel,
-  NotificationPanel,
-  PocketPanel,
-  SearchPanel,
-} from '#components'
-
-const userMenu = [
-  NavPanel,
-  //*
-  SearchPanel,
-  //*
-  PocketPanel,
-  //*
-  MessagePanel,
-  //*
-  NotificationPanel,
-]
-const currentHover = ref<number | null>(null) // hover intent index (mouseenter)
-const activeIndex = ref<number | null>(null) // the index currently shown in panel
-const prevActiveIndex = ref<number | null>(null) // previous active index (for invert)
-const activeItem = shallowRef<Component | null>(null)
-
-const sidebarWrapper = useTemplateRef<HTMLElement>('sidebarWrapper')
-const wrapperHovered = useElementHover(sidebarWrapper, {
+const sidebarWrapper = shallowRef<HTMLElement | null>(null)
+const trigger = useTemplateRef<HTMLElement>('trigger')
+const slug = computed (() => getSummonerSlug(as().account))
+const { isOutside } = useMouseInElement(sidebarWrapper)
+const triggerHovered = useElementHover(trigger, {
   delayEnter: 200,
   delayLeave: 100,
 })
 
-const dropdownOpen = computed(() => ui().sidebarStates.inboxDropdown)
-
-const pendingItem = shallowRef<Component | null>(null)
-const pendingHoverIndex = ref<number | null>(null)
-
-const { start, stop } = useTimeoutFn(() => {
-  if (currentHover.value === pendingHoverIndex.value) {
-    activeItem.value = pendingItem.value
-    prevActiveIndex.value = activeIndex.value
-    activeIndex.value = pendingHoverIndex.value
-  }
-}, 400, { immediate: false })
-
-function handleButtonHover(item: Component, i: number) {
-  pendingItem.value = item
-  pendingHoverIndex.value = i
-  currentHover.value = i
-  stop()
-  start()
-}
-
-function handleButtonLeave() {
-  currentHover.value = null
-  stop()
-}
-
-// computed "invert" based on previous vs current active indices
-const invert = computed(() => {
-  const prev = prevActiveIndex.value
-  const cur = activeIndex.value
-  if (prev === null || cur === null)
-    return false
-  return cur < prev
+watch(() => isOutside.value, (newVal) => {
+  console.log('🌱 - newVal:', newVal)
+  if (newVal === true)
+    ui().sidebarOpen = false
 })
 
-// single source of truth for open — only activeItem or dropdown keep it open
-const open = computed({
-  get: () => !!activeItem.value || dropdownOpen.value,
-  set: (value: boolean) => {
-    if (!value) {
-      currentHover.value = null
-      activeItem.value = null
-      activeIndex.value = null
-      prevActiveIndex.value = null
-      pendingItem.value = null
-      pendingHoverIndex.value = null
-      stop()
-    }
+watch(() => triggerHovered.value, (newVal) => {
+  if (newVal === true)
+    ui().sidebarOpen = true
+})
+
+const btns = [
+  {
+    name: 'Account',
+    action: () => navigateTo('/settings/account'),
+    icon: 'at',
   },
-})
+  {
+    name: 'Settings',
+    action: () => navigateTo('/settings'),
+    icon: 'gear',
+  },
+  {
+    name: 'Inbox',
+    action: () => navigateTo('/account/inbox'),
+    icon: 'mail',
+  },
+  {
+    name: 'Search',
+    action: () => ui().commandOpen = true,
+    icon: 'search',
+  },
+]
 
-watch(wrapperHovered, (hovering) => {
-  if (!hovering && !dropdownOpen.value)
-    open.value = false
-})
+function handleAction(action: () => void) {
+  ui().sidebarOpen = false
+  action()
+}
 </script>
 
 <template>
+  <!-- component sheet content -->
   <div
     ref="sidebarWrapper"
-    class="'h-screen min-w-16 w-15 z-15">
-    <!-- This is the first sidebar -->
-    <menu
-      class="items-center py-3 justify-between z-15 flex flex-col w-15 h-full fixed top-0 left-0 border-r border-r-b3 !bg-b1 ">
-      <div class="flex grow flex-col gap-2.5">
-        <BtnLink
-          class="btn-square mb-1 size-11 p-0 grid place-items-center"
-          variant="neutral"
-          to="/">
-          <h5 :class="cn('font-bold justify-self-center transition-all duration-300 absolute opacity-100', { 'opacity-0 scale-0': open })">
-            LP
-          </h5>
-          <icon
-            name="menu"
-            :class="cn(' absolute scale-0  justify-self-center  transition-all duration-300 opacity-0', { 'opacity-100 scale-100': open })" />
-        </BtnLink>
-
-        <Button
-          v-for="(item, i) in userMenu"
-          :key="item.name"
-          as="li"
-          size="icon"
-          :variant="!item?.meta?.data ? 'ghost' : 'outline'"
-          :auto-focus="false"
-          :class="
-            cn('!p-0 grid [&.btn-active]:!bg-b2 [&.btn-active]:drop-shadow-xs [&.btn-active]:shadow-sm relative !place-items-center size-11 btn-square', {
-              'btn-active ': activeItem === item && open,
-            })
-          "
-          :is-active="activeItem === item"
-          @focusin="handleButtonHover(item, i)"
-          @mouseenter="handleButtonHover(item, i)"
-          @focusout="handleButtonLeave"
-          @mouseleave="handleButtonLeave">
-          <Button
-            v-if="item?.meta.data"
-            as="label"
-            :name="`${item.meta.name}-count`"
-            class="rounded-full pointer-events-none ring ring-b2 h-4 text-[0.8] !border-0 absolute -right-0.75 -top-0.75 !px-1.25 py-1 grid place-items-center leading-0"
-            variant="neutral">
-            {{ item.data }}
-          </Button>
-          <hicon
-            :name="item.meta.icon"
-            :class="cn('text-bc size-5 ', item.meta.class)" />
-        </Button>
-      </div>
-      <div class="justify-self-end">
-      </div>
-    </menu>
-
-    <!-- component sheet content -->
+    class=" ">
+    <button
+      ref="trigger"
+      :class="cn('fixed group/trigger hover:border-l-3 hover:border-l-neutral transition-all duration-200 h-screen z-30 w-4 top-0 left-0', { 'pointer-events-none': ui().sidebarOpen })">
+    </button>
     <Sheet
-      v-model:open="open"
+      v-model:open="ui().sidebarOpen"
       :modal="false">
-      <Paper
+      <SheetTrigger as-child>
+        <slot />
+      </SheetTrigger>
+      <SheetContent
         side="left"
-        class="z-9 left-[45px] border-l-0 border-b3 flex flex-col">
-        <HiddenDialogHeader
-          :title="userMenu.find(m => m.component === activeItem)?.name || 'sidebar'"
-          desc="keep it up!" />
-        <SlideInTopOutBottom
-          :invert="invert"
-          class="w-full">
-          <component
-            :is="activeItem"
-            loading="lazy"
-            :open="open"
-            @close-sidebar="open = false" />
-        </SlideInTopOutBottom>
-      </Paper>
+        class="!z-15 left-0  border-t-0  !min-w-110 shadow-none drop-shadow-md p-0 drop-shadow-black/9 border-l-0 border-b3 flex flex-col ">
+        <DialogHeader>
+          <DialogTitle class="sr-only">
+            lolpocket
+          </DialogTitle>
+          <DialogDescription class="sr-only">
+            Navigate your pocket.
+          </DialogDescription>
+
+          <div class="bg-tint-b2/40 h-30 grid relative">
+            <div class="tabs tabs-lift relative  tab-menu tabs-lg self-end ">
+              <Separator class="absolute bottom-0 bg-b3/60" />
+              <div class="tab tab-active relative w-29 h-15">
+                <SummonerIcon class="size-22 absolute top-3 relative rounded-lg">
+                  <span class="absolute badge badge-sm text-0 bg-b1/92 backdrop-blur bottom-0.5">
+                    <SummonerLevel />
+                  </span>
+                </SummonerIcon>
+              </div>
+              <div class="tab hover:!bg-transparent cursor-default !text-bc !pt-4 justify-start grow h-15">
+                <SummonerName
+                  as="h2"
+                  class="dst pl-1 text-bc/80" />
+                <SummonerTag class="pl-1 italic" />
+              </div>
+            </div>
+          </div>
+          <div class="h-9   grid grid-cols-4 pr-4 pl-29 gap-3 max-w-full">
+            <Button
+              v-for="btn in btns"
+              :key="btn.name"
+              v-tippy="{ content: btn.name, theme: 'base', placement: 'bottom' }"
+              variant="ghost"
+              tabindex="-1"
+              class="size-full "
+              hover="btn"
+              @click="handleAction(btn.action)">
+              <icon
+                :name="btn.icon"
+                class="size-4.5" />
+            </Button>
+          </div>
+        </DialogHeader>
+
+        <aside>
+          <div class="py-2 flex flex-col gap-2">
+            <div class=" px-3 space-y-1 w-full">
+              <SidebarBtnLink
+                item="nexus"
+                class="px-3.5 !gap-3 h-11" />
+              <SidebarBtnLink
+                v-if="slug"
+                :link="`/summoner/${slug}`"
+                class="px-3.5  h-11">
+                <icon
+                  name="history"
+                  class="size-4.75" />
+                Summoner Profile
+              </SidebarBtnLink>
+            </div>
+            <PocketPanel />
+            <NavPanel />
+          </div>
+        </aside>
+      </SheetContent>
     </Sheet>
   </div>
 </template>
+
+<style scoped>
+.tab {
+  --tab-border-color: var(--color-b3) !important;
+  --tab-border-colors: var(--color-b3) !important;
+  --tab-radius-min: 0.6rem !important;
+}
+</style>

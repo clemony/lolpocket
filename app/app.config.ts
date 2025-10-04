@@ -12,15 +12,6 @@ export default defineAppConfig({
       'minus': 'lucide:minus',
       'weighted': 'tabler:math-integral-x',
 
-      // letters
-      'x-solid': 'teenyicons:x-circle-solid',
-      'and': 'lucide:ampersand',
-      'i': 'ion:information-sharp',
-      'info': 'lucide:info',
-      'slash': 'lucide:slash',
-      'x': 'lucide:x',
-      'x-sm': 'lucide:x',
-
       // check
       'check-fill': 'bi:check-circle-fill',
       'tick': 'lucide:check',
@@ -99,9 +90,16 @@ export default defineAppConfig({
 
       // keys
       'win-key': 'streamline-logos:microsoft-windows-logo-3-solid',
+      'x-solid': 'teenyicons:x-circle-solid',
+      'and': 'lucide:ampersand',
       'command': 'lucide:command',
+      'i': 'ion:information-sharp',
+      'info': 'lucide:info',
       'shift': 'lucide:arrow-big-up-dash',
+      'slash': 'heroicons:slash',
       'tab': 'hugeicons:arrow-right-03',
+      'x': 'lucide:x',
+      'x-sm': 'lucide:x',
 
       // symbol
       'alert': 'lucide:circle-alert',

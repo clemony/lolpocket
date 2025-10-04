@@ -26,7 +26,7 @@ onMounted(() => {
 
     <template #background>
       <BackgroundSplashFixed
-        :background="
+        :img="
           getSplash(String(route.params.champion_key), 'centered')
         " />
     </template>

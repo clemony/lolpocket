@@ -26,7 +26,7 @@ const isOpen = ref<boolean>(false)
       v-bind="$attrs"
       :class="
         cn(
-          'relative  hover:ring-neutral hover:ring hover:ring-offset-2 hover:ring-offset-b1 data-[state=open]:ring-1 aspect-square  data-[state=open]:ring-offset-2 data-[state=open]:ring-neutral data-[state=open]:ring-offset-b1  group/item',
+          'relative transition-all duration-200 hover:ring-neutral hover:ring hover:ring-offset-2 hover:ring-offset-b1 data-[state=open]:ring-1 aspect-square  data-[state=open]:ring-offset-2 data-[state=open]:ring-neutral data-[state=open]:ring-offset-b1  group/item',
           className,
         )
       ">
@@ -38,7 +38,7 @@ const isOpen = ref<boolean>(false)
           class="rounded-lg opacity-96 size-full rounded-lg select-none size-full z-0 pointer-events-none absolute top-0 left-0 z-0">
           <LazyPrismaticShine
             v-if="isOpen || isHovered"
-            class="absolute scale-114 top-0 left-0 z-1" />
+            class="absolute scale-120 top-0 left-0 z-1" />
         </Item>
       </div>
     </PopoverTrigger>

@@ -17,7 +17,7 @@ const props = withDefaults(
     alignOffset: 0,
   }
 )
-
+// TRASH delete
 const emit = defineEmits(['update:open'])
 
 const pocket = computed(() => {
@@ -53,6 +53,10 @@ function handleInput() {
 
 onMounted(() => {
   ix().loadSkins()
+
+  console.log('🌱 - pocket.value.icon:', pocket.value.icon)
+  if (!pocket.value.icon && pocket.value.main.champion)
+    pocket.value.icon = getSplash(pocket.value.main.champion, 'tile')
 })
 
 const isOpen = ref<boolean>(false)
@@ -79,7 +83,7 @@ function handleImg(img: string) {
       <slot>
         <!-- TODO default splash -->
         <PocketIcon
-          :url="pocket ? pocket?.icon : ''"
+          :img="pocket ? pocket?.icon : ''"
           alt="pocket icon"
           class="group-hover/icon:brightness-50 pointer-events-none z-1 group-data-[state=open]/icon:brightness-50 transition-all duration-200 group-data-[state=open]/icon:ring group-data-[state=open]/icon:ring-offset-2 ring-neutral/40 ring-offset-b1 size-full rounded-full" />
 

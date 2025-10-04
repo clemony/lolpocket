@@ -34,7 +34,7 @@ const keyClass
       icon-class="opacity-10 group-hover/select:opacity-50"
       :class="
         cn(
-          'w-full hover:ring hover:ring-b3/50  group/select justify-start h-fit py-1 pl-2  gap-1.75 items-center *:last:left-auto  *:last:!right-2 grid grid-cols-[10px_auto] grid-rows-2 *:last:top-[calc(50%-6px)] ',
+          'w-full hover:ring hover:ring-b3/50  group/select justify-start h-fit py-1 pl-2  gap-1.75 items-center grid grid-cols-[10px_auto] grid-rows-2  ',
           className,
         )
       ">
@@ -42,7 +42,7 @@ const keyClass
       <span :class="keyClass">F</span>
       <Spell
         :name="selectedSet?.d"
-        class="size-10 col-start-2 row-start-1 rounded-full" />
+        class="size-10 col-start-2 row-start-1 place-self-center rounded-full" />
       <Spell
         :name="selectedSet?.f"
         class="size-10 col-start-2 rounded-full" />

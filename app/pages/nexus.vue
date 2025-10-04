@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import type { description } from 'valibot'
 import { motion, useDomRef } from 'motion-v'
-import { toast } from 'vue-sonner'
+import { toast } from '~/base/toast/use-toast'
 
 const container = useDomRef()
 
@@ -40,12 +40,23 @@ definePageMeta({
 
       <Button
         @click="
-          toast('Hello toast!', {
+          toast({
+            title: 'Hello toast!',
             description:
               'Canadian neurosurgeon Dr. Wilder Penfield, while operating on epilepsy patients, discovered the “toast centre” of the human brain, which is wholly dedicated to detecting when toast is burning.',
           })
         ">
         toast
+      </Button>
+
+      <Button
+        @click="() => {
+          toast({
+            title: 'Scheduled: Catch up',
+            description: 'Friday, February 10, 2023 at 5:57 PM',
+          });
+        }">
+        Add to calendar
       </Button>
     </div>
 

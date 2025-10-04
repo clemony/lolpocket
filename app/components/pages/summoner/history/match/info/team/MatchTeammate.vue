@@ -47,7 +47,7 @@ const runeClass
     :class="
       cn(
         'grid z-1 grid-flow-col gap-1  items-center overflow-hidden justify-between grow size-full *:size-full max-h-16.5 h-16.5 pl-2 pr-2 ',
-        'grid-cols-[33px_18px_1.25fr_18px_1fr_0.9fr_1fr_1.1fr_3.4fr_0.9fr]',
+        'grid-cols-[33px_18px_1.25fr_18px_1fr_1fr_1fr_1.1fr_3fr_0.9fr]',
       )
     ">
     <div
@@ -152,50 +152,39 @@ const runeClass
 
     <!-- mvp kp -->
 
-    <div :class="cn('relative !size-full', divClass)">
-      <div class="flex items-center w-full text-start justify-start relative">
-        <span class="font-bold tracking-wide text-start">
+    <div :class="cn('relative size-full', divClass)">
+      <div class="grid grid-cols-2 items-center w-full ">
+        <div class="font-bold tracking-wide">
           {{ player.mvpScore }}
-        </span>
+        </div>
         <!-- badge - rank / kp -->
-        <p
-          class="absolute right-0 top-2.5 items-center grid justify-end justify-items-end">
-          <span
-            v-if="
-              player.puuid === playerRank.mvp || player.puuid === playerRank.ace
-            "
-            class="size-full relative grid items-center justify-end">
-            <Badge
-              size="xs"
-              :class="
-                cn('!px-1 gap-1 my-0 right-0 absolute **:leading-0', {
-                  'border-gold/40 bg-precision/90 ':
-                    player.puuid === playerRank.mvp,
-                  'bg-fighter/70 border-fighter':
-                    player.puuid === playerRank.ace,
-                })
-              "
-              class="">
-              <span class="font-bold text-white tracking-wide !text-0">
-                {{ player.puuid === playerRank.mvp ? "MVP" : "ACE" }}
-              </span>
-            </Badge>
-          </span>
 
-          <span
-            v-else
-            class="**:!text-1 font-normal -mt-0.5 opacity-60 leading-0 px-1">
-            <span>{{ stats.lpScore }}</span>
-            <span>
-              {{ formatNumberPosition(stats.lpScore) }}
-            </span>
-          </span>
-        </p>
+        <Badge
+          v-if="
+            player.puuid === playerRank.mvp || player.puuid === playerRank.ace
+          "
+          size="xs"
+          :class="
+            cn('!px-1 gap-1 absolute right-0 font-bold text-white tracking-wide !text-0 **:leading-0', {
+              'border-gold/40 bg-precision ':
+                player.puuid === playerRank.mvp,
+              'bg-fighter/70 border-fighter':
+                player.puuid === playerRank.ace,
+            })
+          ">
+          {{ player.puuid === playerRank.mvp ? "MVP" : "ACE" }}
+        </Badge>
+
+        <div
+          v-else
+          class="text-1  font-normal absolute right-0 opacity-60 leading-0 ">
+          {{ stats.lpScore }}{{ formatNumberPosition(stats.lpScore) }}
+        </div>
       </div>
       <p
         class="text-bc/80 w-full leading-4 truncate font-medium tracking-tight !text-2">
         {{ Math.round(player.challenges.killParticipation * 100) }}%
-        <span class="**:!text-1 font-normal opacity-60 leading-0 px-1">kp</span>
+        <span class="**:!text-1  leading-0 ">kp</span>
       </p>
     </div>
 
@@ -272,7 +261,7 @@ const runeClass
           content: ix().itemNameById(stats.items[i]),
           placement: 'top',
         }"
-        class="size-9 rounded-md *:rounded-md hover-ring" />
+        class="size-8 rounded-md *:rounded-md hover-ring" />
     </div>
 
     <!-- gold -->

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { RouteRecordRaw } from 'vue-router'
-import { contactLinks, siteInfoLinks } from '#shared/appdata'
 
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']

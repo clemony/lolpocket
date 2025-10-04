@@ -1,8 +1,7 @@
 <script lang="ts" setup></script>
 
 <template>
-  <transition-expand
-    group
+  <div
     class="flex flex-col h-full gap-8">
     <Input
       v-model:model-value="is().filters.query"
@@ -67,5 +66,5 @@
       @click="is().clearFilters()">
       Reset Filters
     </Button>
-  </transition-expand>
+  </div>
 </template>

@@ -1,6 +1,5 @@
 import { appTaglines } from '#shared/appdata/content/taglines'
 import * as v from 'valibot'
-import { toast } from 'vue-sonner'
 import { getRandom } from '~/utils/get/getRandom'
 
 interface UserProfileResponse {
@@ -92,7 +91,8 @@ export async function hydrateUser(progress?: Ref<number>) {
   as().loggedIn = true
   navigateTo('/nexus')
 
-  toast.success('Welcome back!', {
+  toast({
+    title: 'Welcome back!',
     description: `Great to see you, ${
       as().account?.name ?? as().account?.username ?? 'Summoner'
     }! ${getRandom(appTaglines)}`,

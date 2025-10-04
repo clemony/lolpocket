@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     '#server': fileURLToPath(new URL('./server', import.meta.url)),
     '@scripts': fileURLToPath(new URL('./scripts', import.meta.url)),
     '@types': fileURLToPath(new URL('./shared/types', import.meta.url)),
+    '@variants': fileURLToPath(new URL('./app/assets/variants', import.meta.url)),
   },
   components: [
     {
@@ -37,7 +38,7 @@ export default defineNuxtConfig({
     format: ['webp'],
   },
   imports: {
-    dirs: ['#shared/appdata', './shared/types'],
+    dirs: ['#shared/appdata', './shared/types', '@variants'],
   },
   modules: [
     '@pinia/nuxt',
@@ -48,7 +49,6 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxtjs/tailwindcss',
     '@morev/vue-transitions/nuxt',
-    'vue-sonner/nuxt',
     '@nuxt/icon',
     'nuxt-svgo',
     'motion-v/nuxt',
@@ -108,10 +108,20 @@ export default defineNuxtConfig({
   vueTransitions: {
     componentDefaultProps: {
       TransitionSlide: {
+        appear: false,
         duration: 300,
         easing: 'cubic-bezier(.25, .8, .5, 1)',
         mode: 'out-in',
         offset: [0, 8],
+      },
+      TransitionExpand: {
+        appear: false,
+      },
+      TransitionFade: {
+        appear: false,
+      },
+      TransitionScale: {
+        appear: false,
       },
     },
     defaultProps: {

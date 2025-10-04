@@ -1,16 +1,24 @@
 <script setup lang="ts">
 import { useVModel } from '@vueuse/core'
+import type { InputSize, InputVariantProps } from '~/assets/variants/input-variants'
+import { inputVariants } from '~/assets/variants/input-variants'
 
 defineOptions({
   inheritAttrs: false,
 })
 
-const props = defineProps<{
-  defaultValue?: string
-  modelValue?: string
-  class?: HTMLAttributes['class']
-  id?: string
-}>()
+const props = withDefaults(
+  defineProps<InputVariantProps & {
+    class?: HTMLAttributes['class']
+    defaultValue?: string
+    modelValue?: string
+    id?: string
+    size?: InputSize
+  }>(),
+  {
+    size: 'default'
+  }
+)
 
 const emits = defineEmits<{
   (e: 'update:modelValue', payload: string): void
@@ -27,12 +35,7 @@ const modelValue = useVModel(props, 'modelValue', emits, {
   <label
     :id="props.id"
     for="input"
-    :class="
-      cn(
-        'input text-2 h-12 items-center [&>svg]:text-tint-bc/70 [&>svg]:**:stroke-[2.2]   [&>svg]:size-5',
-        props.class,
-      )
-    ">
+    :class="cn(inputVariants({ size: props.size }), props.class)">
     <slot />
     <input
       v-bind="$attrs"

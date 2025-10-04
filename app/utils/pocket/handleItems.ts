@@ -1,5 +1,3 @@
-import { toast } from 'vue-sonner'
-
 export function removeItemFromSet(
   pocket: Pocket,
   itemSet: ItemSet,
@@ -35,11 +33,11 @@ export function copyItemSetToPocket(targetPocket: Pocket, set: ItemSet) {
   const newSet = deepCopy(set)
 
   if (!set || !newSet || !targetPocket) {
-    toast('Something went wrong!')
+    toast({ title: 'Something went wrong!' })
   }
   else {
     targetPocket.items.push(newSet)
-    toast(`Set copied to ${targetPocket.name}!`)
+    toast({ description: ` Set copied to ${targetPocket.name}!` })
   }
 }
 

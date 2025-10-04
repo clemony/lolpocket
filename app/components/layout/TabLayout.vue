@@ -9,7 +9,7 @@ useScrollProvider(el)
 
 <template>
   <div
-    class="relative  max-w-mw size-full">
+    class="relative  max-w-screen size-full">
     <!-- BG slice, behind everything but above context -->
     <div class="absolute top-0 left-0 w-full h-16 z-5 overflow-hidden">
       <slot name="background" />
@@ -21,25 +21,35 @@ useScrollProvider(el)
     <!-- Header block -->
     <div
       :class="cn('grid grid-cols-2 z-0 size-full overflow-hidden pointer-events-none', {
-        'h-70 min-h-70': size === 'lg',
+        'h-70 min-h-70 max-h-70': size === 'lg',
         'max-h-58 h-58 min-h-58': size === 'default',
       })">
       <div class="flex flex-col pt-14 z-1 grow *:z-1 size-full">
-        <div class="flex items-center gap-8 h-full pl-72">
+        <div class="flex items-center gap-8  h-full pl-72">
           <slot name="icon" />
           <slot name="header" />
         </div>
       </div>
+      <div class="col-start-2 size-full h-70  grid">
+        <slot name="header-right" />
+      </div>
     </div>
 
-    <div class="fixed top-1  left-[45px] pl-2 z-12 h-[45px]  flex items-center w-82">
+    <div class="fixed top-0  left-[45px]  z-12 h-16  flex items-center w-56">
+      <icon
+        name=""
+        class="stroke-2 size-6.5 -mx-1" />
       <slot name="crumb" />
+    </div>
+
+    <div class="fixed top-16  left-2.5 z-12 gap-2  grid auto-rows-fr items-center w-16">
+      <slot name="menu" />
     </div>
 
     <!-- Scrollable content -->
     <div
       ref="el"
-      :class="cn('absolute max-w-mw overflow-x-hidden inset-0 top-0 overflow-y-auto', {
+      :class="cn('absolute max-w-screen overflow-x-hidden inset-0 top-0 overflow-y-auto', {
         'pt-70': size === 'lg',
         'pt-32': size === 'default',
       })">
@@ -50,9 +60,8 @@ useScrollProvider(el)
         <NavFileTabs />
       </div>
 
-      <div class="w-full  after:bg-blend-screen h-px after:w-full after:left-0 after:top-0 translate-y-15 after:bg-linear-to-b after:from-2% after:to-50% after:pointer-events-none after:from-b1 after:to-transparent z-5 sticky -top-70 after:absolute after:h-22" />
       <!-- Context wrapper -->
-      <div class="relative -mt-px w-mw max-w-mw min-h-screen z-1 bg-b1">
+      <div class="relative -mt-px w-screen max-w-screen min-h-screen z-1 bg-b1">
         <slot />
         <SiteFooter />
       </div>

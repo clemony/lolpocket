@@ -38,7 +38,7 @@ const props = defineProps<{
         name="formkit:caretdown"
         :class="
           cn(
-            '!size-full z-1 icon absolute bottom-[9px] text-neutral/77  stroke-[0.5]  drop-shadow-xs mask-t-from-70% mask-t-to-74%',
+            '!size-full z-1 icon absolute bottom-[9px] text-neutral/77  stroke-[0.5]  drop-shadow-xs mask-t-from-64% mask-t-to-66%',
             props.class,
           )
         " />

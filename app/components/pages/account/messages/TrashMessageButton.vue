@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { trashMsg } from '../../views/messages/inbox-management'
+import { trashMsg } from './inbox-management'
 
 const { class: className, message } = defineProps<{
   class?: HTMLAttributes['class']

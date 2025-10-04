@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useSidebar } from './utils'
+import { useSidebar } from './sidebar-utils'
 
 const props = defineProps<{
   class?: HTMLAttributes['class']
