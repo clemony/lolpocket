@@ -1,11 +1,8 @@
 <script lang="ts" setup>
 definePageMeta({
-  name: 'trash',
+  title: 'trash',
   icon: 'trash',
-  level: 2,
   order: 3,
-  parent: '/backpack',
-  path: '/backpack/trash',
 })
 
 /*

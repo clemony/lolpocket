@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import type { LabelProps } from 'reka-ui'
 import { Label } from 'reka-ui'
-import { labelVariants } from '~/assets/ts/variant-index'
+import { labelVariants } from '~/assets/variants/variant-index'
 
 interface Props extends LabelProps {
   active?: any
+  base?: any
   class?: HTMLAttributes['class']
   hover?: any
+  shape?: any
   size?: any
   variant?: any
 }
@@ -30,7 +32,7 @@ const delegatedProps = computed(() => {
     :class="
       cn(
         'text-3 font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70',
-        labelVariants({ variant, size, hover, active }),
+        labelVariants({ base, variant, shape, size, hover, active }),
         props.class,
       )
     ">

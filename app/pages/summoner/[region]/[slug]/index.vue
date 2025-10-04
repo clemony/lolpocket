@@ -17,7 +17,7 @@ provide<Scroll>('scroll-top', { top: scroll })
   <div
     :class="
       cn(
-        'flex mx-auto  h-max  z-auto mb-42 min-h-screen gap-8 w-[1040px] ',
+        'flex justify-self-center -ml-15 h-max  z-auto mb-42 min-h-screen gap-8 w-[1040px] ',
       )
     ">
     <div class="grid  shrink scrollbar-none  justify-end  ">

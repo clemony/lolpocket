@@ -1,5 +1,3 @@
-import { toast } from 'vue-sonner'
-
 // delete
 
 export function deletePocket(pocket) {
@@ -13,16 +11,12 @@ export function deletePocket(pocket) {
   }
 
   if (as().settings.alertDeletePocket) {
-    const newPocketToast = toast.success(
-      `Pocket ${pocket.name} sent to trash.`,
+    const newPocketToast = toast(
       {
+        title: `Pocket ${pocket.name} sent to trash.`,
         action: {
           label: 'Restore?',
           // onClick: () => navigateTo({ path: `/${newPocket.key}` }),
-        },
-        cancel: {
-          label: '×',
-          onClick: () => toast.dismiss(newPocketToast),
         },
         description: 'You can restore it for up to 30 days.',
         duration: 7000,

@@ -2,8 +2,8 @@
 import type { Component } from 'vue'
 import { reactiveOmit } from '@vueuse/core'
 import type { SidebarMenuButtonProps } from './SidebarMenuButtonChild.vue'
+import { useSidebar } from './sidebar-utils'
 import SidebarMenuButtonChild from './SidebarMenuButtonChild.vue'
-import { useSidebar } from './utils'
 
 defineOptions({
   inheritAttrs: false,

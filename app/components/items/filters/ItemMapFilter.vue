@@ -10,11 +10,11 @@ const { modelValue: selectedMap } = defineProps<{
       <slot>
         <span class="size-5 relative grid place-items-center">
           <component
-            :is="`i-maps-${selectedMap}`"
+            :is="`i-lol-${selectedMap}`"
             class="absolute dst opacity-80 shrink-0"
             :class="{
-              'size-5': selectedMap === 12 || selectedMap === 11,
-              'size-6': selectedMap === 30,
+              '!size-5': selectedMap === 12 || selectedMap === 11,
+              '!size-6': selectedMap === 30,
             }" />
         </span>
         <span class="grow">
@@ -51,11 +51,11 @@ const { modelValue: selectedMap } = defineProps<{
             <div class="flex gap-3 items-center font-medium">
               <span class="size-5 relative grid place-items-center">
                 <component
-                  :is="`i-maps${map}`"
+                  :is="`i-lol-${map}`"
                   class="absolute opacity-80 dst shrink-0"
                   :class="{
-                    'size-5': map === 12 || map === 11,
-                    'size-6': map === 30,
+                    '!size-5': map === 12 || map === 11,
+                    '!size-6': map === 30,
                   }" />
               </span>
               {{ ix().mapNameById(map) }}

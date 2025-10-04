@@ -35,7 +35,7 @@ watch(
 
     <template #background>
       <LazyBackgroundSplashFixed
-        :background="
+        :img="
           (
             as().publicData?.splash ?? state.champions().top().splash
           ).replace('centered', 'uncentered')
@@ -43,26 +43,26 @@ watch(
     </template>
 
     <!-- nav -->
-    <template #crumb>
-      <div class="flex items-center gap-1 w-59">
-        <UpdateSummoner
-          :summoner="state.summoner"
-          placement="bottom"
-          tip
-          circle
-          shape="circle"
-          variant="neutral"
-          class="[&_svg]:size-4 !size-9 p-0 border-0" />
+    <template #menu>
+      <UpdateSummoner
+        shape="circle"
+        placement="right"
+        variant="base"
+        class="[&_svg]:size-4 !size-11 p-0 " />
 
-        <!--     <FollowButton
+      <!--     <FollowButton
           placement="bottom"
           shape="circle"
           :summoner="state.summoner"
           variant="base"
           class=" !size-9 [&_svg]:size-4.5 border-0 ring ring-b3/60" /> -->
-        <SummonerDropdown :summoner="state.summoner" />
-      </div>
     </template>
+
+    <!-- crumb -->
+    <template #crumb>
+      <SummonerDropdown :summoner="state.summoner" />
+    </template>
+
     <!-- header -->
     <template #header>
       <SummonerHeader
@@ -74,5 +74,6 @@ watch(
         :key="route.name"
         :state />
     </div>
+    <UpFAB />
   </TabLayout>
 </template>

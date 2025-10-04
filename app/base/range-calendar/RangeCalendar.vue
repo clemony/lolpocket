@@ -45,21 +45,20 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
             <RangeCalendarCell
               v-for="weekDate in weekDates"
               :key="weekDate.toString()"
-              class="indicator"
+              class="indicator group"
               :date="weekDate">
               <RangeCalendarCellTrigger
                 :day="weekDate"
                 class="peer"
                 :month="month.value" />
-
               <span
                 v-if="isToday(weekDate, getLocalTimeZone())"
-                class="indicator-item status status-sm status-neutral -translate-x-1" />
-              <!--
-              <icon
-                v-if="isToday(weekDate, getLocalTimeZone())"
-                name="dot"
-                class="absolute z-1 -top-1 size-4.5 justify-self-center group-has-data-[selected]:text-nc" /> -->
+                :class="cn(
+                  'indicator-item size-2 shadow-xs shadow-black/8  drop-shadow-xs rounded-full grid-place-items-center overflow-hidden bg-radial-[at_15%_15%]  from-10%  -translate-x-0.75 translate-y-0.75',
+                  'group-has-not-data-[selected]:from-neutral/30 group-has-not-data-[selected]:to-neutral',
+                  'group-has-data-[selected]:from-b1 group-has-data-[selected]:to-b4',
+                )">
+              </span>
             </RangeCalendarCell>
           </RangeCalendarGridRow>
         </RangeCalendarGridBody>

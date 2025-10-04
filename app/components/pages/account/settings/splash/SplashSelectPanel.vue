@@ -12,7 +12,7 @@ const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 
-const emit = defineEmits(['dialog:close'])
+const emit = defineEmits(['dialog:close', 'update:splash'])
 
 const champQuery = ref<string | null>('')
 const selectedChampion = ref<string | null>(null)
@@ -37,27 +37,30 @@ function reset() {
 
 <template>
   <ResponsiveDialog
-    as="div"
-    :class="cn('', className)"
     v-bind="$attrs">
-    <ResponsiveDialogTrigger class="w-fit">
+    <ResponsiveDialogTrigger
+      :class="
+        cn(
+          'group/icon z-0 shrink-0 cursor-pointer self-center  size-20 shadow-xs drop-shadow-sm   rounded-full pointer-events-auto  aspect-square  grid place-items-center relative transition-colors duration-300  hover:ring-b4 ring-transparent ring hover:ring-offset-neutral ring-offset-3 ring-offset-transparent  ',
+          className,
+        )
+      ">
       <slot />
     </ResponsiveDialogTrigger>
     <LazyResponsiveDialogContent
-      class="h-164 w-250 min-w-250 border-n3/70 rounded-xl overflow-hidden p-0 shadow-b4/30 shadow-xs drop-shadow-md"
-      align="end">
+      class="h-164 w-250 min-w-250 border-n3/70 rounded-xl overflow-hidden p-0 shadow-b4/30 shadow-xs drop-shadow-md">
       <HiddenDialogHeader
         title="Select a custom profile splash."
         desc="Personalize your profile with your favorite champion!" />
       <article
-        class="inset-shadow-shade-sm inset-shadow-black/40 grid grid-cols-[1fr_6fr] rounded-xl overflow-hidden auto-rows-auto size-full">
+        class="inset-shadow-shade-sm inset-shadow-black/40 grid grid-cols-[1fr_6fr] rounded-lg overflow-hidden auto-rows-auto size-full">
         <header
-          class="h-14.5 flex items-center row-start-1 col-span-full bg-b4/40 border-b border-b-b3/60 gap-3 pt-1 pl-1 px-4">
+          class="h-14.5 flex items-center row-start-1 col-span-full bg-b4/40 border-b border-b-b3/60 gap-2 pt-1 pl-3 pr-3">
           <button
             v-tippy="{ content: 'Reset to Automatic', placement: 'top' }"
             class="btn btn-square grid place-items-center btn-ghost">
             <icon
-              name="ix:undo"
+              name="refresh"
               class="size-3.75 dst absolute" />
           </button>
 
@@ -66,7 +69,7 @@ function reset() {
             class="btn btn-square grid place-items-center btn-ghost">
             <icon
               name="shuffle"
-              class="size-3 dst stroke-[1.5]" />
+              class="size-3.5 dst stroke-[1.5]" />
           </button>
 
           <div
@@ -85,13 +88,14 @@ function reset() {
                 class="shrink-0" />
             </button>
           </div>
-          <button
+          <Button
             v-tippy="{ content: 'Close', placement: 'top' }"
-            class="btn btn-square grid place-items-center btn-ghost">
+            variant="ghost"
+            shape="square">
             <icon
               name="x-sm"
-              class="!size-5 shrink-0 absolute dst" />
-          </button>
+              class="size-4 shrink-0 absolute dst" />
+          </Button>
         </header>
 
         <section
@@ -159,19 +163,19 @@ function reset() {
           <transition-slide
             v-if="selectedChampion"
             group
-            class="overflow-y-auto size-full max-h-150 w-full h-inherit h-min gap-8 grid grid-cols-4 p-8">
+            class="overflow-y-auto size-full max-h-150 w-full h-inherit h-min gap-6 grid grid-cols-4 p-8">
             <LazySplashCard
               v-for="skin in ix().skins[selectedChampion]"
               :key="skin.name"
               :text="skin.name"
               :alt="skin.name"
               :skin-url="getSkinSplash(selectedChampion, skin, 'tile')"
-              @click="
-                as().publicData.splash = getSkinSplash(
-                  selectedChampion,
-                  skin,
-                  'centered',
-                )
+              @click="emit('update:splash',
+                           getSkinSplash(
+                             selectedChampion,
+                             skin,
+                             'centered',
+                           ))
               " />
           </transition-slide>
 

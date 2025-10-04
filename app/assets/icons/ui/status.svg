@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800"><defs><radialGradient id="sssurface-grad-dark" r="50%" cx="26%" cy="14%">
+      <stop offset="0%" stop-color="hsla(0, 0%, 0%, 0.09)" stop-opacity="0"></stop>
+      <stop offset="100%" stop-color="#00000017" stop-opacity="1"></stop>
+    </radialGradient><radialGradient id="sssurface-grad-light" r="24%" cx="24%" cy="24%">
+    <stop offset="0%" stop-color="#b0b0b017" stop-opacity="0.55"></stop>
+    <stop offset="100%" stop-color="hsla(0, 0%, 0%, 0.09)" stop-opacity="0"></stop>
+  </radialGradient><filter id="sssurface-blur" x="-100%" y="-100%" width="400%" height="400%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+	<feGaussianBlur stdDeviation="30" x="0%" y="0%" width="100%" height="100%" in="SourceGraphic" edgeMode="none" result="blur"></feGaussianBlur></filter></defs><g><ellipse rx="350" ry="175" cx="450" cy="500" fill="#00000017" opacity="0.25" filter="url(#sssurface-blur)"></ellipse><circle r="350" cx="400" cy="400" fill="hsla(0, 0%, 0%, 0.09)"></circle><circle r="350" cx="400" cy="400" fill="url(#sssurface-grad-dark)"></circle><circle r="350" cx="400" cy="400" fill="url(#sssurface-grad-light)"></circle></g></svg>

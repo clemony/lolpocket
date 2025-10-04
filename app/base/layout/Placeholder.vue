@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { AsTag, PrimitiveProps } from 'reka-ui'
 import { Primitive } from 'reka-ui'
-import { labelVariants } from '~/assets/ts/variant-index'
+import { labelVariants } from '~/assets/variants/variant-index'
 
 const { as = 'label', class: className } = defineProps<
   PrimitiveProps & {

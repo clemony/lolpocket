@@ -1,8 +1,15 @@
+export function getSummonerSlug(summoner: Account | Summoner) {
+  if (!summoner)
+    return
+
+  return `${summoner.region}/${summoner.name}_${summoner.tag}`
+}
+
 export function generateSummonerLinks(summoner: Account | Summoner) {
   if (!summoner)
     return null
 
-  const slug = `${summoner.region}/${summoner.name}_${summoner.tag}`
+  const slug = getSummonerSlug(summoner)
   return {
     name: 'profile', // `${capitalize(as().account.name)}`,
     children: [

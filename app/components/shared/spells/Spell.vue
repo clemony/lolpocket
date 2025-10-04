@@ -22,6 +22,7 @@ watch(
 
 <template>
   <Label
+    base="btn"
     :variant="variant"
     :class="
       cn(

@@ -11,35 +11,32 @@ const pocket = ref<Pocket>(ps().getPocket(String(route.params.pocket_key)))
     class="w-fit">
     <PopoverTrigger
       as-child
-      class="h-11 w-76 -ml-2">
+      class="h-10 w-full -ml-4 ">
       <Button
         variant="ghost"
-        hover="b1"
-        active="b1"
+        hover="base"
+        active="base"
         :class="
           cn(
-            ' px-2  justify-start **:tracking-tight  items-center gap-1', { 'btn-active': open }) ">
+            ' pl-2 pr-6 rounded-full relative  justify-start **:tracking-tight  items-center gap-1', { 'btn-active': open }) ">
         <LazyPocketIcon
           v-if="pocket"
           :img="pocket.icon"
           class="rounded-full relative size-7 " />
         <span
-          class="dst text-bc/94 leading-none  text-nowrap truncate font-bold !text-6 grow ">
+          class="dst text-bc/94 leading-none  text-nowrap truncate font-medium !text-3 ">
           {{ pocket.name }}
         </span>
 
         <icon
           name="select"
-          class="size-3.5" />
+          class="size-3.5 absolute right-3" />
       </Button>
     </PopoverTrigger>
     <LazyPopoverContent
       class="w-[var(--reka-popover-trigger-width)] p-1.5"
       align="start"
-      :side-offset="2"
-      trap-focus="false"
-      :disable-auto-focus="true"
-      @open-auto-focus.stop.prevent>
+      :side-offset="2">
       <div class="w-full bg-b1/90 backdrop-blur grid grid-cols-4 gap-1.5 h-10 px-1 mb-3 mt-1">
         <Button
           v-tippy="{ content: 'Message', theme: 'base', placement: 'bottom' }"
@@ -85,11 +82,11 @@ const pocket = ref<Pocket>(ps().getPocket(String(route.params.pocket_key)))
             class="size-4.5 dst" />
         </Button>
       </div>
-      <h6 class="w-full px-2">
+      <h6 class="w-full px-2 pb-1">
         Pinned
       </h6>
       <template
-        v-for="pock in ps().pockets.filter(p => p.location.pinned)"
+        v-for="pock in ps().pockets.filter(p => p.location.pinned).sort((a, b) => a.name.localeCompare(b.name))"
         :key="pock.key">
         <PopoverItem
           :pocket
@@ -97,6 +94,7 @@ const pocket = ref<Pocket>(ps().getPocket(String(route.params.pocket_key)))
           @click="navigateTo(`/pocket/${pock.key}`)">
           <LazyPocketIcon
             v-if="pock"
+            size="sm"
             :img="pock.icon"
             class="rounded-full relative size-6 " />
           <span
@@ -105,19 +103,26 @@ const pocket = ref<Pocket>(ps().getPocket(String(route.params.pocket_key)))
           </span>
         </PopoverItem>
       </template>
-      <DropdownMenuSeparator />
 
-      <h6 class="w-full px-2">
+      <div
+        v-if="!ps().pockets.filter(p => p.location.pinned).length"
+        class="grid h-8 pb-2 text-2 opacity-50  w-full place-items-center">
+        No pockets found.
+      </div>
+      <DropdownMenuSeparator class="my-1" />
+
+      <h6 class="w-full px-2 pb-1">
         All
       </h6>
       <template
-        v-for="pock in ps().pockets.filter(p => !p.location.pinned)"
+        v-for="pock in ps().pockets.filter(p => !p.location.pinned).sort((a, b) => a.name.localeCompare(b.name))"
         :key="pock.key">
         <PopoverItem
           :pocket
           @click="navigateTo(`/pocket/${pock.key}`)">
           <LazyPocketIcon
             v-if="pock"
+            size="sm"
             :img="pock.icon"
             class="rounded-full relative size-7 " />
           <span
@@ -126,6 +131,12 @@ const pocket = ref<Pocket>(ps().getPocket(String(route.params.pocket_key)))
           </span>
         </PopoverItem>
       </template>
+
+      <div
+        v-if="!ps().pockets.filter(p => !p.location.pinned).length"
+        class="grid  pb-3 text-2 opacity-50  w-full place-items-center">
+        No pockets found.
+      </div>
     </LazyPopoverContent>
   </Popover>
 </template>

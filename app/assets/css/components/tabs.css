@@ -25,8 +25,8 @@
 @utility tab {
   --radius-field: 1rem;
   --tab-bg: var(--b1);
-  --tab-border-color: var(--color-b3) !important;
-  --tab-border-colors: var(--color-b3) !important;
+  --tab-border-color: var(--color-b3);
+  --tab-border-colors: var(--color-b3);
 
   &::before {
     @apply mix-blend-plus-lighter opacity-90;
@@ -34,13 +34,10 @@
 }
 
 @layer utilities {
-  .tab-menu.tabs {
-    --tabs-height: 30px ;
-    @apply !border-b-transparent **:!border-b-transparent  **:!border-b-0  !border-b-0;
-    & .tab {
-      --tab-radius-min: 0.65rem !important;
-      --tab-paddings: 4px 20px !important;
-      @apply gap-2 z-1 text-3  !font-medium flex items-center !border-b-0 !text-start capitalize has-checked:!border-t-2 has-checked:!border-x-2;
+
+  .tab {
+
+      @apply gap-2 z-1 text-3  !font-medium flex items-center !border-b-0 !text-start has-checked:!border-t-2 has-checked:!border-x-2;
       &:not(.tab-active) {
         @apply border-transparent border-2;
         &:hover {
@@ -51,5 +48,4 @@
         @apply !border-t-2 !border-x-2 border-b-0 border-b-transparent;
       }
     }
-  }
 }

@@ -25,7 +25,7 @@ watchEffect(async () => {
   <div
     v-if="item"
     class="px-3 py-2 max-h-[404px] overflow-hidden flex flex-col **:select-text">
-    <div class="flex gap-4 pb-3 ">
+    <div class="flex h-fit gap-4 ">
       <div class="!size-14 rounded-lg aspect-square shrink-0 shadow-sm drop-shadow-sm ">
         <Img
           v-if="item"
@@ -77,20 +77,22 @@ variant="link"
       </div>
     </div>
 
-    <div class="  py-2    relative overflow-y-auto    flex flex-col ">
+    <div class="    relative overflow-y-auto    flex flex-col ">
       <div
         v-if="item.stats && Object.entries(item.stats).length"
-        class="pb-1">
+        class="pb-1 pt-2">
+
         <ItemStats
           :stats="item.stats"
           :base="base" />
       </div>
 
-      <Separator
-        v-if="!item.noEffects"
-        class=" mt-2 mb-2 bg-white/60 " />
+
 
       <div v-if="item.passives?.length && item.noEffects !== true">
+
+      <Separator
+        class=" mt-2 mb-2 !bg-white opacity-10" />
         <ItemEffect
           v-for="(passive, i) in item.passives"
           :key="i"
@@ -99,6 +101,9 @@ variant="link"
       </div>
 
       <div v-if="item.active?.[0] && item.noEffects !== true">
+
+      <Separator
+        class=" mt-2 mb-2 !bg-white opacity-10 " />
         <ItemEffect
           :data="item.active[0]"
           type="Active" />

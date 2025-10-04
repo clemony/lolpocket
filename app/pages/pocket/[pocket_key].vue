@@ -36,22 +36,11 @@ async function testSync() {
     <template #background>
       <BackgroundSplashFixed
         v-memo="pocket.icon"
-        :background="pocket.icon.replace('tile', 'centered') ?? null" />
+        :img="pocket.icon.replace('tile', 'centered') ?? null" />
     </template>
-    <template #icon></template>
+
     <template #header>
-      <div class="flex items-center">
-        <PocketHeader :pocket="pocket" />
-        <PocketPinButton :pocket />
-      </div>
-    </template>
-
-    <template #after-tabs>
-      <PocketUtilitiesMenu :pocket />
-    </template>
-
-    <template #header-right>
-      <!--   <PocketHeaderRight /> -->
+      <PocketHeader :pocket="pocket" />
     </template>
 
     <div class="size-full pl-32 relative gap-6 overflow-hidden flex bg-b1">

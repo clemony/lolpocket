@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { toast } from 'vue-sonner'
-
 definePageMeta({
   name: 'profile',
   description:
@@ -15,7 +13,7 @@ const labelClass
   = 'w-full h-16 border-b flex justify-between items-center pr-1 !border-b-b2 [&_h5]:font-semibold [&_h5]:text-bc/70'
 
 async function onSubmit(values: any) {
-  toast.success({
+  toast({
     title: 'Account Updated!',
     description: h(
       'pre',

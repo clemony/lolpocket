@@ -10,7 +10,7 @@ import {
   SIDEBAR_KEYBOARD_SHORTCUT,
   SIDEBAR_WIDTH,
   SIDEBAR_WIDTH_ICON,
-} from './utils'
+} from './sidebar-utils'
 
 const props = withDefaults(
   defineProps<{

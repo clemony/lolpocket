@@ -30,7 +30,7 @@ watch(
     popover-class="ml-6.5 mt-2 w-98">
     <!--
     @update:open="e => isOpen = e" -->
-    <PopoverAnchor class="z-2">
+    <PopoverTrigger class="border border-black z-200 size-10">
       <icon
         name="images"
         :class="
@@ -38,7 +38,7 @@ watch(
             'text-nc size-7 opacity-60 transition-opacity duration-500  group-hover/pop:opacity-100',
             { 'opacity-100': isOpen },
           )
-        " />
-    </PopoverAnchor>
+        " />dfddfd
+    </PopoverTrigger>
   </LazyIconPopover>
 </template>

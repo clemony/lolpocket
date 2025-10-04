@@ -16,26 +16,25 @@ function handleBlock() {
 <template>
   <Popover
     v-model:open="open">
-    <PopoverTrigger
-      as-child>
+    <PopoverTrigger as-child>
       <Button
         variant="ghost"
-        hover="b1"
-        active="b1"
+        hover="base"
+        active="base"
         :class="
           cn(
-            ' px-2 h-11 w-full relative rounded-full justify-start **:tracking-tight  items-center gap-1', { 'btn-active': open },
+            'relative w-full text-nowrap text-start pr-8 pl-2 justify-start rounded-full', { 'btn-active': open },
             className,
           )
         ">
         <LazySummonerIcon
           v-if="summoner"
           :summoner
-          class="rounded-full relative  size-9 " />
+          class="size-6 min-w-6 min-h-6 rounded-full" />
 
         <SummonerName
           :summoner
-          class="" />
+          class="font-medium w-full truncate" />
         <icon
           name="select"
           class="size-3.5 absolute right-3" />

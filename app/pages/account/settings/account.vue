@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { providers } from '#shared/appdata/authProviders'
-import { toast } from 'vue-sonner'
 
 definePageMeta({
   name: 'account',
@@ -14,7 +13,7 @@ definePageMeta({
 const select = shallowRef<string>(null)
 
 async function onSubmit(values: any) {
-  toast.success({
+  toast({
     title: 'Account Updated!',
     description: h(
       'pre',

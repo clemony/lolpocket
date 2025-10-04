@@ -47,6 +47,12 @@ img {
 
   body {
   }
+
+  .vt-expand-enter-from,
+.vt-expand-appear-from {
+  max-height: none !important;
+  transform: none !important;
+}
 }
 
 @layer components {

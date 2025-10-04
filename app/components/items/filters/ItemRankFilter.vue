@@ -18,7 +18,7 @@ function handleUpdate() {
 </script>
 
 <template>
-  <transition-slide
+  <TransitionSlideLeft
     group
     :class="cn('flex items-center w-full flex-wrap gap-3 relative', className)">
     <Button
@@ -35,12 +35,13 @@ function handleUpdate() {
       v-for="rank in itemRanks"
       :key="rank"
       size="lg"
+      base="btn"
       :variant="
         is().filters.rank === rank ? 'neutral'
         : is().filters.rank && is().filters.rank !== rank ? 'hidden'
           : 'btn'
       "
-      class="!font-medium px-5 text-2"
+      :class="cn('!font-medium px-5 text-2', { 'order-first ml-15': is().filters.rank === rank })"
       @click="is().filters.rank === rank ? (is().filters.rank = null) : null">
       <input
         v-model="is().filters.rank"
@@ -51,7 +52,7 @@ function handleUpdate() {
         name="item-types" />
       {{ rank }}
     </Label>
-  </transition-slide>
+  </TransitionSlideLeft>
 </template>
 
 <style scoped></style>

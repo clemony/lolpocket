@@ -2,7 +2,7 @@
 import type { Easing, EasingDefinition } from 'motion-v'
 import type { DialogContentEmits, DialogContentProps } from 'reka-ui'
 import { reactiveOmit } from '@vueuse/core'
-import { AnimatePresence } from 'motion-v'
+import { AnimatePresence, motion } from 'motion-v'
 import {
   DialogClose,
   DialogContent,
@@ -52,9 +52,9 @@ const overlayInitialState = {
 <template>
   <DialogPortal>
     <DialogOverlay
-      class="fixed inset-0 z-50 isolate bg-black/70"
+      class="fixed inset-0 z-50 isolate bg-black/70 !blur-0"
       :class="{ 'opacity-0 invisible': props.noOverlay }">
-      <Motion
+      <motion.div
         class="overlay"
         :initial="overlayInitialState"
         :animate="overlayOpenState"
@@ -106,6 +106,5 @@ const overlayInitialState = {
   position: fixed;
   inset: 0;
   z-index: 9999998;
-  backdrop-filter: blur(3px);
 }
 </style>

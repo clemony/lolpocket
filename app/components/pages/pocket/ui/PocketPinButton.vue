@@ -10,9 +10,13 @@ const pocket = computed(() => p)
 <template>
   <Label
     v-if="pocket"
-    v-tippy="pocket.location?.pinned === true ? 'Unpin' : 'Pin'"
+    v-tippy="{ content: pocket.location?.pinned === true ? 'Unpin' : 'Pin', theme: 'default', placement: 'bottom' }"
     variant="ghost"
-    class="btn-square hover:!bg-b3/80 size-10 group/pin *:mt-px *:size-4.25 *:dst *:absolute">
+    shape="circle"
+    base="btn"
+    size="sm"
+    hover="neutral"
+    :class="cn(' pointer-events-auto !size-8  group/pin *:mt-px *:size-4.25 *:dst *:absolute', className)">
     <input
       v-model="pocket.location.pinned"
       type="checkbox"

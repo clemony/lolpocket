@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { SidebarProps } from './sidebar-index'
-import { SIDEBAR_WIDTH_MOBILE, useSidebar } from './utils'
+import { SIDEBAR_WIDTH_MOBILE, useSidebar } from './sidebar-utils'
 
 defineOptions({
   inheritAttrs: false,

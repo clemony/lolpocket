@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useSidebar } from '~/base/sidebar/utils'
+import { useSidebar } from '~/base/sidebar/sidebar-utils'
 
 const {
   toggleSidebar,
