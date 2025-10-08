@@ -6,11 +6,7 @@ const props = withDefaults(
   defineProps<
     PopoverContentProps & {
       class?: HTMLAttributes['class']
-      sideOffset?: number
-      alignOffset?: number
-      align?: Align
       id?: string
-      side?: Side
       to?: string
     }
   >(),
