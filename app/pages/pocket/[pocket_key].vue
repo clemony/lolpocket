@@ -35,7 +35,13 @@ async function testSync() {
 
     <template #background>
       <BackgroundSplashFixed
-        v-memo="pocket.icon"
+        v-memo="[pocket.icon]"
+        :img="pocket.icon.replace('tile', 'centered') ?? null" />
+    </template>
+
+    <template #background-slice>
+      <BackgroundSplashFixed
+        v-memo="[pocket.icon]"
         :img="pocket.icon.replace('tile', 'centered') ?? null" />
     </template>
 

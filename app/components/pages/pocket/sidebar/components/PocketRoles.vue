@@ -16,10 +16,10 @@ const pocket = computed(() => p)
     class="w-full field-box">
     <CollapsibleTrigger
       v-if="pocket.roles && pocket.roles?.[0]"
-      class="w-full items-center text-start justify-start gap-1 py-3 px-4 text-3 capitalize flex group">
-      <h2 class="grow dst">
+      class="w-full items-center text-start justify-start gap-1 py-3 px-3 text-3 capitalize flex group">
+      <h3 class="grow dst">
         Roles
-      </h2>
+      </h3>
 
       <CaretRotate />
     </CollapsibleTrigger>

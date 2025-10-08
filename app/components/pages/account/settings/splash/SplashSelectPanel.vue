@@ -41,7 +41,7 @@ function reset() {
     <ResponsiveDialogTrigger
       :class="
         cn(
-          'group/icon z-0 shrink-0 cursor-pointer self-center  size-20 shadow-xs drop-shadow-sm   rounded-full pointer-events-auto  aspect-square  grid place-items-center relative transition-colors duration-300  hover:ring-b4 ring-transparent ring hover:ring-offset-neutral ring-offset-3 ring-offset-transparent  ',
+          'group/icon z-0 shrink-0 cursor-pointer self-center  size-fit shadow-xs drop-shadow-sm   rounded-full pointer-events-auto  aspect-square  grid place-items-center relative transition-colors duration-300  hover:ring-b4 ring-transparent ring hover:ring-offset-neutral ring-offset-3 ring-offset-transparent  ',
           className,
         )
       ">
@@ -72,89 +72,51 @@ function reset() {
               class="size-3.5 dst stroke-[1.5]" />
           </button>
 
-          <div
-            class="input ml-1 shadow-none inset-shadow-xs group/input w-full border-b3 focus-within:ring-bc/50 rounded-field bg-b1/70 justify-self-end flex relative h-10">
-            <icon
-              name="search"
-              class="absolute left-2 pointer-events-none transition-opacity duration-200 opacity-40 group-focus-within/input:opacity-80 size-4.25" />
-            <div
-              class="search-wrapper w-full group-not-focus-within/input:italic h-full group-not-focus-within/input:text-bc/70" />
-            <button
-              v-if="champQuery !== ''"
-              class="btn btn-ghost btn-xs btn-square absolute right-2"
-              @click="reset()">
-              <icon
-                name="x-sm"
-                class="shrink-0" />
-            </button>
-          </div>
+          <Input
+            v-model:model-value="searchQuery"
+            class="h-11 -mt-px">
+            <icon name="search" />
+          </Input>
           <Button
             v-tippy="{ content: 'Close', placement: 'top' }"
             variant="ghost"
             shape="square">
             <icon
-              name="x-sm"
+              name="x"
               class="size-4 shrink-0 absolute dst" />
           </Button>
         </header>
 
-        <section
-          class="p-1 relative w-60 max-h-150 h-150 bg-b2/30 border-r-b3 border-r overflow-hidden">
-          <div
-            class="grid justify-items-center w-full px-1.25 pt-2.25 h-fit"></div>
-
-          <ListboxRoot
-            v-model:model-value="selectedChampion"
-            :multiple="false"
-            selection-behavior="replace"
-            class="overflow-y-auto transition-all duration-200 h-inherit w-full max-h-imherit">
-            <Teleport
-              defer
-              to=".search-wrapper">
-              <ListboxFilter
-                v-model:model-value="champQuery"
-                type="text"
-                class="size-full px-5 text-2 grow" />
-            </Teleport>
-
-            <ListboxVirtualizer
-              v-slot="{ option }"
-              as-child
-              :options="result"
-              :text-content="(o) => o.name"
-              :estimate-size="40"
-              class="h-inherit max-h-imherit w-full">
-              <SlideInTopOutBottom class="size-full">
-                <ListboxItem
-                  :key="option.key"
-                  :value="option.key"
-                  :class="
-                    cn(
-                      'h-[40px] w-full px-1 mt-2 flex items-center gap-3 font-medium',
-                    )
-                  ">
-                  <div
-                    :class="
-                      cn('btn btn-ghost w-full justify-start h-[34px] ', {
-                        'btn-active': option.key === selectedChampion,
-                      })
-                    ">
-                    <ChampionIcon
-                      :id="option.id"
-                      :alt="option.name"
-                      class="size-10 rounded-lg bg-black **:text-white" />
-                    <span class="grow text-start truncate">
-                      {{ option.name }}
-                    </span>
-                    <ListboxItemIndicator>
-                      <icon name="right" />
-                    </ListboxItemIndicator>
-                  </div>
-                </ListboxItem>
-              </SlideInTopOutBottom>
-            </ListboxVirtualizer>
-          </ListboxRoot>
-        </section>
+        <RadioGroup
+          v-model:model-value="selectedChampion"
+          :multiple="false"
+          as="div"
+          selection-behavior="replace"
+          class="overflow-y-auto transition-all duration-200 h-full p-1 relative w-60 max-h-150 h-150 bg-b2/30 border-r-b3 border-r ">
+          <Label
+            v-for="item in result"
+            :key="item.key"
+            variant="ghost"
+            :class="
+              cn('w-full overflow-hidden', {
+                'btn-active': item.key === selectedChampion,
+              })
+            ">
+            <ChampionIcon
+              :id="item.id"
+              for="item-key"
+              :alt="item.name"
+              class="size-10 rounded-lg bg-black **:text-white" />
+            <span class="grow text-start truncate">
+              {{ item.name }}
+            </span>
+            <RadioGroupItem
+              name="item-key"
+              :value="item.key">
+              <icon name="right" />
+            </RadioGroupItem>
+          </Label>
+        </RadioGroup>
 
         <transition-fade
           as="section"
@@ -163,7 +125,7 @@ function reset() {
           <transition-slide
             v-if="selectedChampion"
             group
-            class="overflow-y-auto size-full max-h-150 w-full h-inherit h-min gap-6 grid grid-cols-4 p-8">
+            class="overflow-y-auto size-full max-h-150 w-full h-inherit h-min gap-6 grid grid-cols-3 p-8">
             <LazySplashCard
               v-for="skin in ix().skins[selectedChampion]"
               :key="skin.name"

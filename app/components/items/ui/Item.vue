@@ -11,6 +11,7 @@ const {
 
 <template>
   <div
+    v-if="id"
     :class="
       cn(
         'rounded-lg relative bg-b2/0 overflow-hidden grid place-items-center aspect-square shadow-warm-soft shadow-sm shadow-black/50  drop-shadow-sm ',
@@ -20,7 +21,7 @@ const {
     ">
     <Img
       :img="`/img/items/${id}.webp`"
-      :alt="ix().itemNameById(id)"
+      :alt="id.toString()"
       class="aspect-square opacity-96 size-full absolute rounded-lg" />
 
     <slot />

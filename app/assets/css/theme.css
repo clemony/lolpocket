@@ -49,7 +49,7 @@
 
   --text-*: initial;
   --text-0: 0.82rem;
-  --text-1: 0.87rem;
+  --text-1: 0.90rem;
   --text-2: 0.94;
   --text-3: 0.99rem;
   --text-4: 1.05rem;
@@ -58,6 +58,7 @@
   --text-7: 1.5rem;
   --text-8: 1.675rem;
   --text-9: 1.875rem;
+  --text-10: 1.9rem;
 
   --shadow-pretty: 0 3px 10px rgba(0, 0, 0, 0.2);
   --shadow-warm: rgba(0, 0, 0, 0.08) 0px 2px 7px;

@@ -28,13 +28,14 @@ watch(
 <template>
   <main
     id="container"
-    class="overflow-y-auto size-full flex gap-28">
+    class="z-auto flex gap-28">
     <ChampionIndexAside :champion />
-    <article class="grow w-full py-22 h-max pb-16 gap-10 flex flex-col">
+    <article class="grow w-full z-auto py-22 h-max pb-16 gap-10 flex flex-col">
       <ChampionAbility
         v-for="ability in champion.abilities"
         :key="ability.key"
         :ability />
     </article>
+    <AbilityNav :champion />
   </main>
 </template>

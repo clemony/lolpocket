@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   alias: {
     '#server': fileURLToPath(new URL('./server', import.meta.url)),
     '@scripts': fileURLToPath(new URL('./scripts', import.meta.url)),
-    '@types': fileURLToPath(new URL('./shared/types', import.meta.url)),
+    '@types': fileURLToPath(new URL('./types', import.meta.url)),
     '@variants': fileURLToPath(new URL('./app/assets/variants', import.meta.url)),
   },
   components: [
@@ -38,7 +38,7 @@ export default defineNuxtConfig({
     format: ['webp'],
   },
   imports: {
-    dirs: ['#shared/appdata', './shared/types', '@variants'],
+    dirs: ['#shared/utils', '#shared/types', '@variants', '@types'],
   },
   modules: [
     '@pinia/nuxt',
@@ -97,6 +97,11 @@ export default defineNuxtConfig({
     nodeTsConfig: { include: ['shared', 'server', 'scripts'] },
     sharedTsConfig: { include: ['shared', 'server', 'scripts'] },
     strict: false,
+    tsConfig: {
+      compilerOptions: {
+        skipLibCheck: true
+      }
+    },
     typeCheck: true,
   },
   vite: {

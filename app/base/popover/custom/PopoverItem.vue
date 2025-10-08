@@ -17,7 +17,7 @@ const props = withDefaults(defineProps<Props>(), {
 <template>
   <Button
     v-bind="{ ...props, ...$attrs }"
-    :class="cn('rounded-md w-full justify-start px-2', props.class)">
+    :class="cn('rounded-md w-full justify-start !h-8.5 text-2 px-1.5 [&_svg]:size-4.5', props.class)">
     <slot />
   </Button>
 </template>

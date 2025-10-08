@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type { TabsTriggerPropsWithNullableValue } from '~~/shared/types/types.extend'
+import type { TabsTriggerProps } from 'reka-ui'
 import { TabsTrigger, useForwardProps } from 'reka-ui'
 
 const props = defineProps<
-  TabsTriggerPropsWithNullableValue & { class?: HTMLAttributes['class'] }
+  TabsTriggerProps & { class?: HTMLAttributes['class'] }
 >()
 
 const delegatedProps = reactiveOmit(props, 'class')

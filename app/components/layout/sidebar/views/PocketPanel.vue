@@ -42,13 +42,15 @@ const pinned = computed(() => {
           <tippy
             v-for="pocket in set"
             :key="pocket.key"
+            theme="base"
+            :placement="i === 0 ? 'top-start' : 'bottom-start'"
             tag="div"
             :class="
               cn(
-                'relative group/p  flex max-h-22 min-h-22 h-full rounded-lg flex-1 items-center cursor-pointer *:pointer-events-none shadow-sm drop-shadow-sm shadow-black/8 overflow-hidden transition-all duration-500 ease-in-out hover:flex-[3]',
+                'relative group/p  flex max-h-22 min-h-22 h-full rounded-lg flex-1 items-center cursor-pointer *:pointer-events-none shadow-sm drop-shadow-sm shadow-black/8 overflow-hidden transition-all duration-500 ease-in-out hover:flex-[]',
 
                 //hover
-                '*:transition-scale *:ease-in-out hover:*:scale-100 *:duration-500  group-has-hover/wrap:*:scale-140 ',
+                '*:transition-scale *:ease-in-out hover:*:scale-100 *:duration-500  group-has-hover/wrap:*:scale-170 ',
                 { 'btn-active': route.params?.pocket_key === pocket.key },
               )
             "
@@ -60,19 +62,20 @@ const pinned = computed(() => {
                 :img="pocket.icon"
                 class=" h-full absolute grow object-cover" />
             </AspectRatio>
-            <div
-              v-if="pocket.main.items"
-              class="opacity-0 absolute bottom-0 gap-1 group-hover/p:opacity-100 w-full grid h-10 px-1 -translate-y-full group-hover/p:translate-y-0 grid-cols-6">
-              <template
-                v-for="item in pocket.items.find(p => p.id === pocket.main.items).items"
-                :key="item">
-                <LazyItem
-                  v-if="item"
-                  :id="item"
-                  class="w-full aspect-square h-auto rounded-lg " />
-              </template>
-            </div>
+
             <template #content>
+              <div
+                v-if="pocket.main.items"
+                class="gap-1 w-fit grid grid-cols-6">
+                <template
+                  v-for="item in pocket.items.find(p => p.id === pocket.main.items).items"
+                  :key="item">
+                  <LazyItem
+                    v-if="item"
+                    :id="item"
+                    class="size-7 rounded-lg " />
+                </template>
+              </div>
             </template>
           </tippy>
         </div>

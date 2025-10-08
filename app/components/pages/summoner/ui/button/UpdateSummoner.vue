@@ -1,13 +1,21 @@
 <script lang="ts" setup>
-const {
-  class: className,
-  placement = 'top',
-  theme = 'base'
-} = defineProps<{
+import { useForwardProps } from 'reka-ui'
+import type { ButtonVariantProps } from '~/assets/variants'
+
+const props = withDefaults(defineProps<{
   class?: HTMLAttributes['class']
   placement?: Side
-  theme?
-}>()
+  theme?: string
+  size?: ButtonVariantProps['size']
+  variant: ButtonVariantProps['variant']
+}>(), {
+  placement: 'top',
+  theme: 'base'
+})
+
+const delegatedProps = reactiveOmit(props, 'class')
+
+const forwarded = useForwardProps(delegatedProps)
 
 const state = useSummonerInject()
 
@@ -31,6 +39,7 @@ const tippy = computed(
 <template>
   <Button
     v-tippy="{ content: tippy ?? null, theme, placement }"
+    v-bind="forwarded"
     :class="
       cn(
         'p-0 shrink-0',
@@ -38,7 +47,7 @@ const tippy = computed(
           'pointer-events-none bg-b2/80 btn-active cursor-not-allowed':
             cooldown,
         },
-        className,
+        props.class,
       )
     "
     @click="update()">

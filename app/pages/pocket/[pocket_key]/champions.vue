@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { VueDraggable } from 'vue-draggable-plus'
+import { motion } from 'motion-v'
 
 definePageMeta({
   name: 'pocket-champions',
@@ -15,26 +15,32 @@ const pocket = computed(() =>
   ps().getPocket(String(route.params.pocket_key))
 ).value
 
+const containerRef = ref<HTMLElement>()
+const { height } = useElementSize(containerRef)
+const baseHeight = ref<number | null>(null)
+
 const searchQuery = ref<string>('')
 const { results } = useSimpleSearch(
   ix().champions, // array or ref
   searchQuery
 )
+watchEffect(() => {
+  if (!baseHeight.value && results.value.length === ix().champions.length) {
+    baseHeight.value = height.value
+  }
+})
 </script>
 
 <template>
   <div class="w-full pr-32 pl-14 z-auto overflow-y-auto pt-12 mx-auto">
     <div
-      class="flex gap-12 sticky z-1 bg-linear-to-b from-b1 to-b1/70 backdrop-blur-lg -top-12 py-4 items-end flex-col px-2 justify-center w-full">
-      <h2 class="self-start dss tracking-tight">
-        Selected Champions
-      </h2>
+      class="flex gap-6 sticky z-1 bg-linear-to-b from-b1 to-b1/70 backdrop-blur-lg -top-12 py-4 items-end flex-col px-2 justify-center w-full">
       <SelectedChampions :pocket="pocket">
         <Input
           v-model="searchQuery"
           aria-label="Search champions"
           placeholder="Search champions..."
-          class="max-w-100 border-b4/60 w-100"
+          class="max-w-80 border-b4/60 h-11 w-80 ml-3"
           type="text"
           @clear:input="searchQuery = ''">
           <icon name="search" />
@@ -42,24 +48,19 @@ const { results } = useSimpleSearch(
       </SelectedChampions>
     </div>
 
-    <VueDraggable
-      :animation="100"
-
-      chosen-class="item-set-item-chosen-80px"
-      ghost-class="draggable-icon-ghost-80px"
-      fallback-class="draggable-icon-fallback-80px"
-      :group="{ name: 'champions', put: false, pull: 'clone' }"
-      :force-fallback="true"
-      :fallback-tolerance="0"
-      :fallback-on-body="true"
-      :model-value="ix().champions"
-      class="h-fit pb-34 grid grid-flow-row auto-cols-auto pt-10 grid-cols-[repeat(auto-fill,minmax(80px,1fr))] w-full inset-0 px-2 gap-3">
-      <PocketChampion
-        v-for="champion in results.filter(r => !pocket.champions.includes(r.key))"
-        :key="champion.id"
-        :champion
-        :pocket />
-    </VueDraggable>
+    <motion.div
+      layout
+      class="h-fit pb-34 justify-start grid grid-flow-row auto-cols-auto pt-10 grid-cols-[repeat(auto-fill,minmax(80px,1fr))] w-full inset-0 px-2 gap-3">
+      <AnimatePresence>
+        <motion.div
+          v-for="champion in results.filter(r => !pocket.champions.includes(r.key))"
+          :key="champion.id">
+          <PocketChampion
+            :champion
+            :pocket />
+        </motion.div>
+      </AnimatePresence>
+    </motion.div>
   </div>
 </template>
 

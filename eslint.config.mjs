@@ -111,7 +111,7 @@ export default antfu({
     tailwindcss: {
       attributes: ['class', '@apply'],
       cssConfigPath: resolvePath('./app/assets/css/tailwind.css'),
-      functions: ['classnames', 'clsx', 'ctl', 'cva', 'tv', 'tw', 'cn'],
+      functions: ['classnames', 'clsx', 'ctl', 'cva', 'tv', 'tw', 'cn', 'defineTv'],
     },
   },
   sourceType: 'module',

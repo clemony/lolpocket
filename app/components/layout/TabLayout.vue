@@ -12,11 +12,13 @@ useScrollProvider(el)
     class="relative  max-w-screen size-full">
     <!-- BG slice, behind everything but above context -->
     <div class="absolute top-0 left-0 w-full h-16 z-5 overflow-hidden">
-      <slot name="background" />
+      <slot
+        name="background-slice" />
     </div>
 
-    <!-- Background (fills whole area) -->
-    <slot name="background" />
+    <slot
+      key="main"
+      name="background" />
 
     <!-- Header block -->
     <div

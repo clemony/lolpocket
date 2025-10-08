@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+/* ──────────────────────────────────────────────
+   Reka UI Variants
+   ────────────────────────────────────────────── */
+
+/* Element-level data states */
+@custom-variant open (&[data-state="open"]);
+@custom-variant closed (&[data-state="closed"]);
+@custom-variant on (&[data-state="checked"]);
+@custom-variant off (&[data-state="unchecked"]);
+@custom-variant on (&[data-state="on"]);
+@custom-variant off (&[data-state="off"]);
+@custom-variant active (&[data-state="active"]);
+@custom-variant selected (&[data-state="selected"]);
+/* @custom-variant on (&[data-state="on"]);
+@custom-variant off (&[data-state="off"]); */
+
+/* Group-level data states *//*
+@custom-variant group-open (:merge(.group)[data-state="open"] &);
+@custom-variant group-closed (:merge(.group)[data-state="closed"] &);
+@custom-variant group-on (:merge(.group)[data-state="checked"] &);
+@custom-variant group-off (:merge(.group)[data-state="unchecked"] &);
+@custom-variant group-active (:merge(.group)[data-state="active"] &); */
+
+
+/* ──────────────────────────────────────────────
+   Optional: Add your custom layers/utilities here
+   ────────────────────────────────────────────── */
+@layer utilities {
+
+}

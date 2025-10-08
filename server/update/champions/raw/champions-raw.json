@@ -2449,8 +2449,8 @@
                     "values": "30"
                   },
                   {
-                    "tooltip": "Scaling per rank:\n1 / 1.5 / 2 / 2.5 / 3% (+1.5% per 100 bonus AD) of the target's maximum health",
-                    "unit": "% (+1.5% per 100 bonus AD) of the target's maximum health",
+                    "tooltip": "Scaling per rank:\n1 / 1.5 / 2 / 2.5 / 3% (+ 1.5% per 100 bonus AD) of the target's maximum health",
+                    "unit": "% (+ 1.5% per 100 bonus AD) of the target's maximum health",
                     "values": "1 - 3"
                   }
                 ]
@@ -2467,8 +2467,8 @@
                     "values": "60"
                   },
                   {
-                    "tooltip": "Scaling per rank:\n2 / 3 / 4 / 5 / 6% (+3% per 100 bonus AD) of the target's maximum health",
-                    "unit": "% (+3% per 100 bonus AD) of the target's maximum health",
+                    "tooltip": "Scaling per rank:\n2 / 3 / 4 / 5 / 6% (+ 3% per 100 bonus AD) of the target's maximum health",
+                    "unit": "% (+ 3% per 100 bonus AD) of the target's maximum health",
                     "values": "2 - 6"
                   }
                 ]
@@ -2531,8 +2531,8 @@
                     "values": "45"
                   },
                   {
-                    "tooltip": "Scaling per rank:\n1 / 1.5 / 2 / 2.5 / 3% (+2% per 100 bonus AD) of the target's maximum health",
-                    "unit": "% (+2% per 100 bonus AD) of the target's maximum health",
+                    "tooltip": "Scaling per rank:\n1 / 1.5 / 2 / 2.5 / 3% (+ 2% per 100 bonus AD) of the target's maximum health",
+                    "unit": "% (+ 2% per 100 bonus AD) of the target's maximum health",
                     "values": "1 - 3"
                   }
                 ]
@@ -2549,8 +2549,8 @@
                     "values": "90"
                   },
                   {
-                    "tooltip": "Scaling per rank:\n2 / 3 / 4 / 5 / 6% (+4% per 100 bonus AD) of the target's maximum health",
-                    "unit": "% (+4% per 100 bonus AD) of the target's maximum health",
+                    "tooltip": "Scaling per rank:\n2 / 3 / 4 / 5 / 6% (+ 4% per 100 bonus AD) of the target's maximum health",
+                    "unit": "% (+ 4% per 100 bonus AD) of the target's maximum health",
                     "values": "2 - 6"
                   }
                 ]
@@ -3058,8 +3058,8 @@
                     "values": "5"
                   },
                   {
-                    "tooltip": "Scaling per rank:\n0.5 / 0.63 / 0.75 / 0.88 / 1% (+0.25% per 100 AP) of target's maximum health",
-                    "unit": "% (+0.25% per 100 AP) of target's maximum health",
+                    "tooltip": "Scaling per rank:\n0.5 / 0.63 / 0.75 / 0.88 / 1% (+ 0.25% per 100 AP) of target's maximum health",
+                    "unit": "% (+ 0.25% per 100 AP) of target's maximum health",
                     "values": "0.5 - 1"
                   }
                 ]
@@ -5444,7 +5444,7 @@
                 "attribute": "Bonus Magic Damage",
                 "modifiers": [
                   {
-                    "unit": "  (+(3.1% Stardust)% of target's maximum health",
+                    "unit": "  (+ (3.1% Stardust)% of target's maximum health",
                     "values": "55 / 65 / 75 / 85 / 95"
                   },
                   {
@@ -9193,7 +9193,7 @@
                     "values": "5"
                   },
                   {
-                    "unit": "% (+2.5% per 100 bonus AD) of the target's missing health",
+                    "unit": "% (+ 2.5% per 100 bonus AD) of the target's missing health",
                     "values": "9"
                   }
                 ]
@@ -9224,7 +9224,7 @@
                     "values": "5.5"
                   },
                   {
-                    "unit": "% (+2.75% per 100 bonus AD) of the target's missing health",
+                    "unit": "% (+ 2.75% per 100 bonus AD) of the target's missing health",
                     "values": "9.9"
                   }
                 ]
@@ -11133,8 +11133,8 @@
                     "values": "30"
                   },
                   {
-                    "tooltip": "Scaling per rank:\n2.5 / 2.85 / 3.2 / 3.55 / 3.9% (+0.5% per Feast stack) of target's maximum health",
-                    "unit": "% (+0.5% per Feast stack) of target's maximum health",
+                    "tooltip": "Scaling per rank:\n2.5 / 2.85 / 3.2 / 3.55 / 3.9% (+ 0.5% per Feast stack) of target's maximum health",
+                    "unit": "% (+ 0.5% per Feast stack) of target's maximum health",
                     "values": "2.5 - 3.9"
                   }
                 ]
@@ -11151,8 +11151,8 @@
                     "values": "90"
                   },
                   {
-                    "tooltip": "Scaling per rank:\n7.5 / 8.55 / 9.6 / 10.65 / 11.7% (+1.5% per Feast stack) of target's maximum health",
-                    "unit": "% (+1.5% per Feast stack) of target's maximum health",
+                    "tooltip": "Scaling per rank:\n7.5 / 8.55 / 9.6 / 10.65 / 11.7% (+ 1.5% per Feast stack) of target's maximum health",
+                    "unit": "% (+ 1.5% per Feast stack) of target's maximum health",
                     "values": "7.5 - 11.7"
                   }
                 ]
@@ -14167,7 +14167,7 @@
                     "values": "40 / 70 / 100 / 130 / 160"
                   },
                   {
-                    "unit": "% (+3% per 100 AP) of target's current health",
+                    "unit": "% (+ 3% per 100 AP) of target's current health",
                     "values": "4"
                   }
                 ]
@@ -14227,7 +14227,7 @@
                     "values": "50 / 80 / 110 / 140 / 170"
                   },
                   {
-                    "unit": "% (+3% per 100 AP) of target's missing health",
+                    "unit": "% (+ 3% per 100 AP) of target's missing health",
                     "values": "8"
                   }
                 ]
@@ -14964,7 +14964,7 @@
                     "values": "60 / 90 / 120 / 150 / 180"
                   },
                   {
-                    "unit": "% (+1.5% per 100 AP) of target's maximum health",
+                    "unit": "% (+ 1.5% per 100 AP) of target's maximum health",
                     "values": "3"
                   }
                 ]
@@ -15033,7 +15033,7 @@
                     "values": "80 / 120 / 160 / 200 / 240"
                   },
                   {
-                    "unit": "% (+2.5% per 100 AP) of target's maximum health",
+                    "unit": "% (+ 2.5% per 100 AP) of target's maximum health",
                     "values": "4"
                   }
                 ]
@@ -20191,7 +20191,7 @@
                     "values": "2"
                   },
                   {
-                    "unit": "% (+0.55% per 100 AP) of the target's maximum health",
+                    "unit": "% (+ 0.55% per 100 AP) of the target's maximum health",
                     "values": "1"
                   }
                 ]
@@ -20221,7 +20221,7 @@
                     "values": "35"
                   },
                   {
-                    "unit": "% (+0.55% per 100 AP) of the target's maximum health",
+                    "unit": "% (+ 0.55% per 100 AP) of the target's maximum health",
                     "values": "1"
                   }
                 ]
@@ -20256,7 +20256,7 @@
                     "values": "37"
                   },
                   {
-                    "unit": "% (+1.1% per 100 AP) of the target's maximum health",
+                    "unit": "% (+ 1.1% per 100 AP) of the target's maximum health",
                     "values": "2"
                   }
                 ]
@@ -20286,7 +20286,7 @@
                     "values": "45"
                   },
                   {
-                    "unit": "% (+3.3% per 100 AP) of the target's maximum health",
+                    "unit": "% (+ 3.3% per 100 AP) of the target's maximum health",
                     "values": "6"
                   }
                 ]
@@ -20471,7 +20471,7 @@
                     "values": "8"
                   },
                   {
-                    "unit": "% (+0.55% per 100 AP) of the target's maximum health",
+                    "unit": "% (+ 0.55% per 100 AP) of the target's maximum health",
                     "values": "1"
                   }
                 ]
@@ -20497,7 +20497,7 @@
                     "values": "24"
                   },
                   {
-                    "unit": "% (+1.65% per 100 AP) of the target's maximum health",
+                    "unit": "% (+ 1.65% per 100 AP) of the target's maximum health",
                     "values": "3"
                   }
                 ]
@@ -20514,7 +20514,7 @@
                     "values": "40"
                   },
                   {
-                    "unit": "% (+2.75% per 100 AP) of the target's maximum health",
+                    "unit": "% (+ 2.75% per 100 AP) of the target's maximum health",
                     "values": "5"
                   }
                 ]
@@ -20531,7 +20531,7 @@
                     "values": "72"
                   },
                   {
-                    "unit": "% (+4.95% per 100 AP) of the target's maximum health",
+                    "unit": "% (+ 4.95% per 100 AP) of the target's maximum health",
                     "values": "9"
                   }
                 ]
@@ -27192,7 +27192,7 @@
                     "values": "45 / 75 / 105 / 135 / 165"
                   },
                   {
-                    "unit": "% (+2% per 100 bonus armor) (+2% per 100 bonus magic resistance) of target's maximum health",
+                    "unit": "% (+ 2% per 100 bonus armor) (+ 2% per 100 bonus magic resistance) of target's maximum health",
                     "values": "8"
                   }
                 ]
@@ -27219,7 +27219,7 @@
                     "values": "4.5 / 7.5 / 10.5 / 13.5 / 16.5"
                   },
                   {
-                    "unit": "% (+0.2% per 100 bonus armor) (+0.2% per 100 bonus magic resistance) of target's maximum health",
+                    "unit": "% (+ 0.2% per 100 bonus armor) (+ 0.2% per 100 bonus magic resistance) of target's maximum health",
                     "values": "0.8"
                   }
                 ]
@@ -27232,7 +27232,7 @@
                     "values": "36 / 60 / 84 / 108 / 132"
                   },
                   {
-                    "unit": "% (+1.6% per 100 bonus armor) (+1.6% per 100 bonus magic resistance) of target's maximum health",
+                    "unit": "% (+ 1.6% per 100 bonus armor) (+ 1.6% per 100 bonus magic resistance) of target's maximum health",
                     "values": "6.4"
                   }
                 ]
@@ -27245,7 +27245,7 @@
                     "values": "81 / 135 / 189 / 243 / 297"
                   },
                   {
-                    "unit": "% (+3.6% per 100 bonus armor) (+3.6% per 100 bonus magic resistance) of target's maximum health",
+                    "unit": "% (+ 3.6% per 100 bonus armor) (+ 3.6% per 100 bonus magic resistance) of target's maximum health",
                     "values": "14.4"
                   }
                 ]
@@ -32440,7 +32440,7 @@
                     "values": "20"
                   },
                   {
-                    "unit": "% (+1% per mark) of target's current health",
+                    "unit": "% (+ 1% per mark) of target's current health",
                     "values": "1.5"
                   }
                 ]
@@ -32461,7 +32461,7 @@
                     "values": "30"
                   },
                   {
-                    "unit": "% (+1.5% per mark) of target's current health",
+                    "unit": "% (+ 1.5% per mark) of target's current health",
                     "values": "2.25"
                   }
                 ]
@@ -32524,7 +32524,7 @@
                     "values": "100"
                   },
                   {
-                    "unit": "% (+0.5% per Mark) of target's missing health",
+                    "unit": "% (+ 0.5% per Mark) of target's missing health",
                     "values": "5"
                   }
                 ]
@@ -32541,7 +32541,7 @@
                     "values": "100"
                   },
                   {
-                    "unit": "% (+2%) (+0.75% (+0.2%) per Mark) of target's missing health",
+                    "unit": "% (+ 2%) (+ 0.75% (+ 0.2%) per Mark) of target's missing health",
                     "values": "7.5"
                   }
                 ]
@@ -33052,8 +33052,8 @@
                     "values": "20 / 30 / 40 / 50 / 60"
                   },
                   {
-                    "tooltip": "Scaling per rank:\n4.5 / 5 / 5.5 / 6 / 6.5% (+2% per 100 bonus AD) (+0.4% per 100 bonus health) of target's maximum health",
-                    "unit": "% (+2% per 100 bonus AD) (+0.4% per 100 bonus health) of target's maximum health",
+                    "tooltip": "Scaling per rank:\n4.5 / 5 / 5.5 / 6 / 6.5% (+ 2% per 100 bonus AD) (+ 0.4% per 100 bonus health) of target's maximum health",
+                    "unit": "% (+ 2% per 100 bonus AD) (+ 0.4% per 100 bonus health) of target's maximum health",
                     "values": "4.5 - 6.5"
                   }
                 ]
@@ -39905,8 +39905,8 @@
                     "values": "30"
                   },
                   {
-                    "tooltip": "Scaling per rank:\n4 / 7 / 10 (+3.5% AP) per Overwhelm stack on the target",
-                    "unit": " (+3.5% AP) per Overwhelm stack on the target",
+                    "tooltip": "Scaling per rank:\n4 / 7 / 10 (+ 3.5% AP) per Overwhelm stack on the target",
+                    "unit": " (+ 3.5% AP) per Overwhelm stack on the target",
                     "values": "4 - 10"
                   }
                 ]
@@ -56576,7 +56576,7 @@
                     "values": "10 / 20 / 30 / 40 / 50"
                   },
                   {
-                    "unit": "% (+1 / 1.5 / 2 / 2.5 / 3% per 100 AD) of target's maximum health",
+                    "unit": "% (+ 1 / 1.5 / 2 / 2.5 / 3% per 100 AD) of target's maximum health",
                     "values": "1"
                   }
                 ]
@@ -56589,7 +56589,7 @@
                     "values": "20 / 40 / 60 / 80 / 100"
                   },
                   {
-                    "unit": "% (+2 / 3 / 4 / 5 / 6% per 100 AD) of target's maximum health",
+                    "unit": "% (+ 2 / 3 / 4 / 5 / 6% per 100 AD) of target's maximum health",
                     "values": "2"
                   }
                 ]
@@ -56656,7 +56656,7 @@
                     "values": "80 / 100 / 120 / 140 / 160"
                   },
                   {
-                    "unit": "% (+25% per 100 bonus AD) of expended Grit",
+                    "unit": "% (+ 25% per 100 bonus AD) of expended Grit",
                     "values": "25"
                   }
                 ]
@@ -57572,8 +57572,8 @@
                     "values": "10 / 11.76 / 13.53 / 15.29 / 17.06 / 18.82 / 20.59 / 22.35 / 24.12 / 25.88 / 27.65 / 29.41 / 31.18 / 32.94 / 34.71 / 36.47 / 38.24 / 40"
                   },
                   {
-                    "tooltip": "Scaling per rank:\n2 / 2.5 / 3 / 3.5 / 4% (+1.5% per 100 AP) of target's maximum health",
-                    "unit": "% (+1.5% per 100 AP) of target's maximum health",
+                    "tooltip": "Scaling per rank:\n2 / 2.5 / 3 / 3.5 / 4% (+ 1.5% per 100 AP) of target's maximum health",
+                    "unit": "% (+ 1.5% per 100 AP) of target's maximum health",
                     "values": "2 - 4"
                   }
                 ]
@@ -57586,8 +57586,8 @@
                     "values": "30 / 35.29 / 40.59 / 45.88 / 51.18 / 56.47 / 61.76 / 67.06 / 72.35 / 77.65 / 82.94 / 88.24 / 93.53 / 98.82 / 104.12 / 109.41 / 114.71 / 120"
                   },
                   {
-                    "tooltip": "Scaling per rank:\n6 / 7.5 / 9 / 10.5 / 12% (+4.5% per 100 AP) of target's maximum health",
-                    "unit": "% (+4.5% per 100 AP) of target's maximum health",
+                    "tooltip": "Scaling per rank:\n6 / 7.5 / 9 / 10.5 / 12% (+ 4.5% per 100 AP) of target's maximum health",
+                    "unit": "% (+ 4.5% per 100 AP) of target's maximum health",
                     "values": "6 - 12"
                   }
                 ]
@@ -57605,8 +57605,8 @@
                     "values": "10 / 11.76 / 13.53 / 15.29 / 17.06 / 18.82 / 20.59 / 22.35 / 24.12 / 25.88 / 27.65 / 29.41 / 31.18 / 32.94 / 34.71 / 36.47 / 38.24 / 40"
                   },
                   {
-                    "tooltip": "Scaling per rank:\n5 / 5.5 / 6 / 6.5 / 7% (+2% per 100 AP) of target's maximum health",
-                    "unit": "% (+2% per 100 AP) of target's maximum health",
+                    "tooltip": "Scaling per rank:\n5 / 5.5 / 6 / 6.5 / 7% (+ 2% per 100 AP) of target's maximum health",
+                    "unit": "% (+ 2% per 100 AP) of target's maximum health",
                     "values": "5 - 7"
                   }
                 ]
@@ -57619,8 +57619,8 @@
                     "values": "30 / 35.29 / 40.59 / 45.88 / 51.18 / 56.47 / 61.76 / 67.06 / 72.35 / 77.65 / 82.94 / 88.24 / 93.53 / 98.82 / 104.12 / 109.41 / 114.71 / 120"
                   },
                   {
-                    "tooltip": "Scaling per rank:\n15 / 16.5 / 18 / 19.5 / 21% (+6% per 100 AP) of target's maximum health",
-                    "unit": "% (+6% per 100 AP) of target's maximum health",
+                    "tooltip": "Scaling per rank:\n15 / 16.5 / 18 / 19.5 / 21% (+ 6% per 100 AP) of target's maximum health",
+                    "unit": "% (+ 6% per 100 AP) of target's maximum health",
                     "values": "15 - 21"
                   }
                 ]
@@ -63596,7 +63596,7 @@
                     "values": "100 / 250 / 400"
                   },
                   {
-                    "unit": "% (+7% per 100 AP) of the target's maximum health",
+                    "unit": "% (+ 7% per 100 AP) of the target's maximum health",
                     "values": "15"
                   }
                 ]
@@ -78512,8 +78512,8 @@
                     "values": "40 / 50 / 60 / 70 / 80"
                   },
                   {
-                    "tooltip": "Scaling per rank:\n4 / 5 / 6 / 7 / 8% (+3% per 100 AP) of target's maximum health",
-                    "unit": "% (+3% per 100 AP) of target's maximum health",
+                    "tooltip": "Scaling per rank:\n4 / 5 / 6 / 7 / 8% (+ 3% per 100 AP) of target's maximum health",
+                    "unit": "% (+ 3% per 100 AP) of target's maximum health",
                     "values": "4 - 8"
                   }
                 ]

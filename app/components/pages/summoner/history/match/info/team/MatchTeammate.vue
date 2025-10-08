@@ -60,7 +60,7 @@ const runeClass
           placement: 'top',
         }"
         alt="champion-icon"
-        class="rounded-lg size-11 self-center hover-ring mb-px" />
+        class="rounded-lg size-11 self-center  hover:scale-105 transition-all duration-300 mb-px" />
     </div>
 
     <div
@@ -68,7 +68,7 @@ const runeClass
       :class="divClass">
       <PlayerSpells
         :player="player"
-        class="[&_img]:size-5 [&_img]:rounded-[3px] h-11 gap-0.5" />
+        class="[&_img]:size-5 [&_img]:rounded-[3px] h-11 gap-0.5   " />
     </div>
     <!-- name and tag -->
 
@@ -97,7 +97,7 @@ const runeClass
           '!flex flex-col h-16 self-center py-2 justify-center items-center gap-0.5',
         )
       ">
-      <p
+      <div
         v-tippy="{
           content: ix().runeNameById(player?.perks?.keystone).toString(),
           placement: 'left',
@@ -105,10 +105,10 @@ const runeClass
         :class="runeClass">
         <Img
           :img="`/img/runes/${stats.keystone?.path}/${stats.keystone?.id}.webp`"
-          :alt="stats.keystone.id.toString()"
-          class="!h-5.5 w-auto object-center absolute tippy-target hover-ring rounded-tiny" />
-      </p>
-      <p
+          :alt="stats?.keystone?.id?.toString()"
+          class="*:!h-5.5 size-full  object-center absolute tippy-target  hover:ring hover:scale-110 transition-all duration-300 ring-bc/60 rounded-tiny" />
+      </div>
+      <div
         v-tippy="{
           content: stats.secondaryPath,
           placement: 'left',
@@ -117,11 +117,11 @@ const runeClass
         <Img
           :alt="stats.secondaryPath"
           :img="`/img/paths/${stats.secondaryPath}.webp`"
-          class="h-4.5 w-auto object-center absolute hover-ring rounded-tiny"
+          class="*:h-4.5 size-full object-center absolute  hover:ring hover:scale-120 transition-all duration-300 ring-bc/60 rounded-tiny"
           :class="{
             '!h-4': stats.secondaryPath?.toLowerCase() === 'inspiration',
           }" />
-      </p>
+      </div>
     </div>
 
     <!-- kda -->
@@ -253,15 +253,23 @@ const runeClass
       :class="
         cn('!grid-cols-6  pl-3 justify-self-end  !grid-rows-1', divClass)
       ">
-      <Item
+      <template
         v-for="i in 6"
-        :id="stats.items[i] ?? null"
-        :key="i"
-        v-tippy="{
-          content: ix().itemNameById(stats.items[i]),
-          placement: 'top',
-        }"
-        class="size-8 rounded-md *:rounded-md hover-ring" />
+        :key="i">
+        <Item
+          v-if="stats?.items[i]"
+          :id="stats?.items[i]"
+          v-tippy="{
+            content: ix().itemNameById(stats.items[i]),
+            placement: 'bottom',
+            theme: 'base',
+          }"
+          class="size-8 rounded-md *:rounded-md hover:ring hover:scale-105 transition-all duration-300 ring-bc/60" />
+
+        <Placeholder
+          v-else
+          class="size-8 rounded-md shrink-0 bg-b2/80 border-b3 shadow-sm  shadow-black/4" />
+      </template>
     </div>
 
     <!-- gold -->

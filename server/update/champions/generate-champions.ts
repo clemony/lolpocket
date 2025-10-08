@@ -20,7 +20,7 @@ const SCRIPT_KEY = 'generate-champions'
 // ---------- File paths ----------
 const dataPathM = resolvePath('./champions/raw/champions-raw-meraki.json')
 const dataPathD = resolvePath('./champions/raw/champions-raw-data-dragon.json')
-const outputDir = resolvePath('#shared/appdata/records/champions/')
+const outputDir = resolvePath('../../shared/appdata/records/champions/')
 const outputMergedRaw = resolvePath('./champions/raw/champions-raw.json')
 const savepointPath = resolvePath(
   './champions/raw/.generate-champions-save.json'

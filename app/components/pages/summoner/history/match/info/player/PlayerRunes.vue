@@ -18,14 +18,16 @@ const { playerKeystone, playerPaths } = await useRunes(computed(() => player))
     <img
       v-if="playerKeystone"
       v-tippy="{ content: playerKeystone.name, placement: 'right' }"
+      :alt="playerKeystone.name"
       :src="`/img/runes/${playerKeystone.path}/${playerKeystone.id}.webp`"
-      class="h-8 w-auto drop-shadow-xs !shrink-0" />
+      class="h-8 w-auto drop-shadow-xs !shrink-0  hover:scale-120 transition-all duration-300 " />
 
     <img
       v-if="playerPaths"
       v-tippy="{ content: playerPaths, placement: 'right' }"
+      :alt="playerPaths"
       :src="`/img/paths/${playerPaths}.webp`"
-      class="h-6 w-auto "
+      class="h-6 w-auto   hover:scale-120 transition-all duration-300 "
       :class="{ '!h-5.5': playerPaths === 'inspiration' }" />
   </div>
 </template>

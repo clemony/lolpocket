@@ -44,7 +44,7 @@ function handleSplash(e: string) {
       </div>
     </button>
 
-    <SplashSelectPanel
+    <LazySplashSelectPanel
       v-model:open="isOpen"
       @update:splash="e => handleSplash(e)"
       @dialog:close="isOpen = false">
@@ -73,6 +73,6 @@ function handleSplash(e: string) {
             class="h-6 mt-2" />
         </div>
       </button>
-    </SplashSelectPanel>
+    </LazySplashSelectPanel>
   </section>
 </template>

@@ -1,15 +1,8 @@
 <script setup lang="ts">
-import type { DateRange } from 'reka-ui'
+import type { CalendarDate } from '@internationalized/date'
 import { getLocalTimeZone, isToday, today } from '@internationalized/date'
 
-const start = today(getLocalTimeZone())
-const end = start.subtract({ days: 14 })
 const matches = shallowRef<string>('amount')
-
-const dateRange = ref({
-  end,
-  start,
-}) as Ref<DateRange>
 
 const state = useSummonerInject()
 
@@ -43,45 +36,81 @@ const blocks = computed (() => Math.round(state.allMatches.value.length / 20))
       </PopoverTrigger>
       <LazyPopoverContent
         align="start"
-        class="grid place-items-center p-0">
-        <RangeCalendar
-          v-model="dateRange"
-          :max-value=" today(getLocalTimeZone())"
-          class="rounded-lg" />
+        class="grid grid-cols-2 py-2 px-1 w-fit">
+        <Select :multiple="false">
+          <Label
+            for="match-select"
+            as-child
+            variant="outline"
+            :class="cn('h-9 max-w-40', { 'btn-active': matches === 'amount' })"
+            active="base">
+            <BaseSelectTrigger>
+
+              <SelectValue />
+            </BaseSelectTrigger>
+            <input
+              v-model="matches"
+              type="radio"
+              name="match-select"
+              value="amount"
+              class="peer hidden" />
+          </Label>
+          <LazySelectContent class="w-[var(--reka-select-trigger-width)]">
+            <SelectGroup>
+              <SelectLabel class="opacity-50">
+                # matches:
+              </SelectLabel>
+              <SelectItem
+                v-for="i in blocks"
+                :key="i"
+                class="flex-row-reverse font-medium"
+                :value="i * 20">
+                {{ i === blocks ? 'All' : i * 20 }}
+              </SelectItem>
+            </SelectGroup>
+          </LazySelectContent>
+        </Select>
+
+        <CalendarWrapper
+          v-slot="{ month }"
+          :fixed-weeks="true"
+          :max-value="today(getLocalTimeZone())">
+          <RangeCalendarGridBody>
+            <RangeCalendarGridRow
+              v-for="(weekDates, index) in month.rows"
+              :key="`weekDate-${index}`"
+              class="mt-2 w-full">
+              <RangeCalendarCell
+                v-for="weekDate in weekDates"
+                :key="weekDate.toString()"
+                class="indicator w-11 group"
+                :date="weekDate">
+                <RangeCalendarCellTrigger
+
+                  v-tippy="{ content: isPatchDay(weekDate as CalendarDate) ? `Patch ${getPatchForDate(weekDate)}` : null, theme: 'base', placement: 'top' }"
+                  :day="weekDate"
+                  :class="cn('peer w-full',
+                             {
+                               '': isToday(weekDate, getLocalTimeZone()),
+                               '!bg-resolve !text-white selected:!border-bc !border-3': isPatchDay(weekDate as CalendarDate),
+                             },
+                  )"
+                  :month="month.value" />
+                <span
+                  v-if="isToday(weekDate, getLocalTimeZone()) || isPatchDay(weekDate as CalendarDate)"
+                  :class="cn(
+                    'indicator-item size-2 shadow-xs shadow-black/8  drop-shadow-xs rounded-full grid-place-items-center overflow-hidden bg-radial-[at_15%_15%]  from-10%  -translate-x-0.75 translate-y-0.75',
+                    '',
+
+                    {
+                      'group-has-not-data-[selected]:from-neutral/30 group-has-not-data-[selected]:to-neutral group-has-data-[selected]:from-b1 group-has-data-[selected]:to-b4': isToday(weekDate, getLocalTimeZone()) },
+                  )">
+                </span>
+              </RangeCalendarCell>
+            </RangeCalendarGridRow>
+          </RangeCalendarGridBody>
+        </CalendarWrapper>
       </LazyPopoverContent>
     </Popover>
-    <Select :multiple="false">
-      <Label
-        for="match-select"
-        as-child
-        variant="outline"
-        :class="cn('h-9 max-w-40', { 'btn-active': matches === 'amount' })"
-        active="base">
-        <BaseSelectTrigger>
-
-          <SelectValue />
-        </BaseSelectTrigger>
-        <input
-          v-model="matches"
-          type="radio"
-          name="match-select"
-          value="amount"
-          class="peer hidden" />
-      </Label>
-      <LazySelectContent class="w-[var(--reka-select-trigger-width)]">
-        <SelectGroup>
-          <SelectLabel class="opacity-50">
-            # matches:
-          </SelectLabel>
-          <SelectItem
-            v-for="i in blocks"
-            :key="i"
-            class="flex-row-reverse font-medium"
-            :value="i * 20">
-            {{ i === blocks ? 'All' : i * 20 }}
-          </SelectItem>
-        </SelectGroup>
-      </LazySelectContent>
-    </Select>
   </div>
 </template>

@@ -1,382 +1,382 @@
-// Updated Patch 25.17 - 09/18/2025 02:20:03 AM CDT
+// Updated Patch 25.19 - 10/07/2025 08:16:12 AM CDT
 
 const champion: Champion = {
-  id: 145,
-  key: 'Kaisa',
-  name: 'Kai\'Sa',
-  title: 'Daughter of the Void',
-  abilities: [
+  "id": 145,
+  "key": "Kaisa",
+  "name": "Kai'Sa",
+  "title": "Daughter of the Void",
+  "abilities": [
     {
-      key: 'P',
-      name: 'Second Skin',
-      affects: 'Self, Enemies',
-      blurb: 'Innate - Living Weapon:  Kai\'Sa can permanently evolve each of her basic abilities by obtaining  attack damage,  ability power, and  attack speed, respectively.',
-      damageType: 'Magic damage',
-      effectRadius: '2750',
-      effects: [
+      "key": "P",
+      "name": "Second Skin",
+      "affects": "Self, Enemies",
+      "blurb": "Innate - Living Weapon:  Kai'Sa can permanently evolve each of her basic abilities by obtaining  attack damage,  ability power, and  attack speed, respectively.",
+      "damageType": "Magic damage",
+      "effectRadius": "2750",
+      "effects": [
         {
-          description: '<p class="ability-effect"><span class="ability-header">Innate - Living Weapon:</span> Kai\'Sa can evolve each of her basic abilities by gaining a set amount of permanent stats from items and stat growth, granting them additional effects. Evolving an ability causes her to enter a 2-second cast time. The upgrade is lost if the stat requirement is no longer met.</p>'
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Living Weapon:</span> Kai'Sa can evolve each of her basic abilities by gaining a set amount of permanent stats from items and stat growth, granting them additional effects. Evolving an ability causes her to enter a 2-second cast time. The upgrade is lost if the stat requirement is no longer met.</p>"
         },
         {
-          description: '<p class="ability-effect"><span class="ability-header">Innate - Plasma:</span> Kai\'Sa\'s basic attacks on-hit and Void Seeker apply stacks of Plasma to enemies for 4 seconds, refreshing on subsequent applications and stacking up to 5 times. Basic attacks each apply 1 stack and Void Seeker applies 2 stacks, increased to 3 if it is evolved. Her and nearby allies\' immobilizing effects and polymorphs against enemy champions will also apply a stack of Plasma.</p>'
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Plasma:</span> Kai'Sa's basic attacks on-hit and Void Seeker apply stacks of Plasma to enemies for 4 seconds, refreshing on subsequent applications and stacking up to 5 times. Basic attacks each apply 1 stack and Void Seeker applies 2 stacks, increased to 3 if it is evolved. Her and nearby allies' immobilizing effects and polymorphs against enemy champions will also apply a stack of Plasma.</p>"
         },
         {
-          description: '<p class="ability-effect"><span class="ability-header">Innate - Caustic Wounds:</span> Plasma stacks applied by Kai\'Sa\'s basic attacks or Void Seeker deal 4 - 24 (based on level) (+ 1 - 6 (based on level) per Plasma stack before application) (+ 12% - 24% (based on Plasma stacks before application) AP) bonus magic damage. The fifth stack against a target consumes them all to deal additional bonus magic damage equal to 15% (+ 6% per 100 AP) of the target\'s missing health, capped at 400 against monsters.</p>'
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Caustic Wounds:</span> Plasma stacks applied by Kai'Sa's basic attacks or Void Seeker deal 4 - 24 (based on level) (+ 1 - 6 (based on level) per Plasma stack before application) (+ 12% - 24% (based on Plasma stacks before application) AP) bonus magic damage. The fifth stack against a target consumes them all to deal additional bonus magic damage equal to 15% (+ 6% per 100 AP) of the target's missing health, capped at 400 against monsters.</p>"
         }
       ],
-      icon: 'https://cdn.communitydragon.org/latest/champion/Kaisa/ability-icon/p',
-      notes: 'adaptive force from items does not count toward evolutions.\nKai\'Sa may receives an evolution even if she dies during its  lockout.\nKai\'Sa can evolve an ability even if she hasn\'t learned it yet.\nThe bonus missing health damage is evaluated after the initial damage from Caustic Wounds is evaluated, and after  Void Seeker\'s damage if triggered by it, but before a triggering basic attack\'s is.\nThis effectively increases the "flat" Caustic Wounds damage preceding the expunge proc and (if applicable)  Void Seeker damage and any potential preceding on-hit damage (usually not possible to acquire due to buff slot order) by 15% (+ 6% per 100 AP) divided by (1+the target\'s MR post penetration/100).\nPlasma stacks that exceed the rupture are reapplied normally.\n Spell shield will block the Plasma application from  Void Seeker only.\nWith  Void Seeker, if the stacks detonate Plasma, any remaining stacks are reapplied afterwards.  Void Seeker also deals Caustic Wounds\' damage based on Plasma stacks on the target. This damage is calculated as if each stack was applied successively.',
-      spellEffects: 'Proc',
-      spellshieldable: 'special',
-      targeting: 'Passive'
+      "icon": "https://cdn.communitydragon.org/latest/champion/Kaisa/ability-icon/p",
+      "notes": "adaptive force from items does not count toward evolutions.\nKai'Sa may receives an evolution even if she dies during its  lockout.\nKai'Sa can evolve an ability even if she hasn't learned it yet.\nThe bonus missing health damage is evaluated after the initial damage from Caustic Wounds is evaluated, and after  Void Seeker's damage if triggered by it, but before a triggering basic attack's is.\nThis effectively increases the \"flat\" Caustic Wounds damage preceding the expunge proc and (if applicable)  Void Seeker damage and any potential preceding on-hit damage (usually not possible to acquire due to buff slot order) by 15% (+ 6% per 100 AP) divided by (1+the target's MR post penetration/100).\nPlasma stacks that exceed the rupture are reapplied normally.\n Spell shield will block the Plasma application from  Void Seeker only.\nWith  Void Seeker, if the stacks detonate Plasma, any remaining stacks are reapplied afterwards.  Void Seeker also deals Caustic Wounds' damage based on Plasma stacks on the target. This damage is calculated as if each stack was applied successively.",
+      "spellEffects": "Proc",
+      "spellshieldable": "special",
+      "targeting": "Passive"
     },
     {
-      key: 'Q',
-      name: 'Icathian Rain',
-      affects: 'Enemies',
-      blurb: 'Active:  Kai\'Sa shoots a swarm of missiles that evenly seek out nearby enemies, dealing physical damage.',
-      castTime: 'none',
-      cooldown: '10 / 9 / 8 / 7 / 6',
-      cost: '55',
-      damageType: 'Physical damage',
-      effects: [
+      "key": "Q",
+      "name": "Icathian Rain",
+      "affects": "Enemies",
+      "blurb": "Active:  Kai'Sa shoots a swarm of missiles that evenly seek out nearby enemies, dealing physical damage.",
+      "castTime": "none",
+      "cooldown": "10 / 9 / 8 / 7 / 6",
+      "cost": "55",
+      "damageType": "Physical damage",
+      "effects": [
         {
-          description: '<p class="ability-effect"><span class="ability-header">Active:</span> Kai\'Sa releases a swarm of 6 missiles that evenly distributes among nearby visible enemies, each one hitting their target after 0.4 seconds to deal physical damage. Minions below 35% health take double damage.</p>',
-          leveling: [
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kai'Sa releases a swarm of 6 missiles that evenly distributes among nearby visible enemies, each one hitting their target after 0.4 seconds to deal physical damage. Minions below 35% health take double damage.</p>",
+          "leveling": [
             {
-              attribute: 'Physical Damage Per Missile',
-              modifiers: [
+              "attribute": "Physical Damage Per Missile",
+              "modifiers": [
                 {
-                  values: '40 / 55 / 70 / 85 / 100'
+                  "values": "40 / 55 / 70 / 85 / 100"
                 },
                 {
-                  unit: '% bonus AD',
-                  values: '55'
+                  "unit": "% bonus AD",
+                  "values": "55"
                 },
                 {
-                  unit: '% AP',
-                  values: '20'
+                  "unit": "% AP",
+                  "values": "20"
                 }
               ]
             }
           ]
         },
         {
-          description: 'Non-minions take 25% damage from missiles beyond their first.',
-          leveling: [
+          "description": "Non-minions take 25% damage from missiles beyond their first.",
+          "leveling": [
             {
-              attribute: 'Reduced Damage Per Missile',
-              modifiers: [
+              "attribute": "Reduced Damage Per Missile",
+              "modifiers": [
                 {
-                  values: '10 / 13.75 / 17.5 / 21.25 / 25'
+                  "values": "10 / 13.75 / 17.5 / 21.25 / 25"
                 },
                 {
-                  unit: '% bonus AD',
-                  values: '13.75'
+                  "unit": "% bonus AD",
+                  "values": "13.75"
                 },
                 {
-                  unit: '% AP',
-                  values: '5'
+                  "unit": "% AP",
+                  "values": "5"
                 }
               ]
             },
             {
-              attribute: 'Total Single-Target Damage',
-              modifiers: [
+              "attribute": "Total Single-Target Damage",
+              "modifiers": [
                 {
-                  values: '90 / 123.75 / 157.5 / 191.25 / 225'
+                  "values": "90 / 123.75 / 157.5 / 191.25 / 225"
                 },
                 {
-                  unit: '% bonus AD',
-                  values: '123.75'
+                  "unit": "% bonus AD",
+                  "values": "123.75"
                 },
                 {
-                  unit: '% AP',
-                  values: '45'
+                  "unit": "% AP",
+                  "values": "45"
                 }
               ]
             }
           ]
         },
         {
-          description: '<p class="ability-effect"><span class="ability-header">Evolution:</span> Requires[ 100 - 56 (based on level) attack damage from items ][ 100 attack damage from items and stat growth ]to upgrade : Icathian Rain instead fires 12 missiles.</p>',
-          leveling: [
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Evolution:</span> Requires[ 100 - 56 (based on level) attack damage from items ][ 100 attack damage from items and stat growth ]to upgrade : Icathian Rain instead fires 12 missiles.</p>",
+          "leveling": [
             {
-              attribute: 'Total Evolved Single-Target Damage',
-              modifiers: [
+              "attribute": "Total Evolved Single-Target Damage",
+              "modifiers": [
                 {
-                  values: '150 / 206.25 / 262.5 / 318.75 / 375'
+                  "values": "150 / 206.25 / 262.5 / 318.75 / 375"
                 },
                 {
-                  unit: '% bonus AD',
-                  values: '206.25'
+                  "unit": "% bonus AD",
+                  "values": "206.25"
                 },
                 {
-                  unit: '% AP',
-                  values: '75'
+                  "unit": "% AP",
+                  "values": "75"
                 }
               ]
             }
           ]
         },
         {
-          description: 'A nearby enemy is required to cast this ability.'
+          "description": "A nearby enemy is required to cast this ability."
         }
       ],
-      icon: 'https://cdn.communitydragon.org/latest/champion/Kaisa/ability-icon/q',
-      maxCharges: -1,
-      notes: 'The first missile on a target applies  area damage, while the rest on the same target apply  persistent area damage.\n Spell shields only block the damage from a single missile.\nIcathian Rain acquires its targets upon cast. Moving will not change its targets.\nCharging  Supercharge will not stop the missiles from firing.\nIt takes 1 second for all missiles to fire at a single target.',
-      projectile: 'TRUE',
-      resource: 'Mana',
-      spellEffects: 'special',
-      spellshieldable: 'Special',
-      targeting: 'Proximity',
-      targetRange: '600'
+      "icon": "https://cdn.communitydragon.org/latest/champion/Kaisa/ability-icon/q",
+      "maxCharges": -1,
+      "notes": "The first missile on a target applies  area damage, while the rest on the same target apply  persistent area damage.\n Spell shields only block the damage from a single missile.\nIcathian Rain acquires its targets upon cast. Moving will not change its targets.\nCharging  Supercharge will not stop the missiles from firing.\nIt takes 1 second for all missiles to fire at a single target.",
+      "projectile": "TRUE",
+      "resource": "Mana",
+      "spellEffects": "special",
+      "spellshieldable": "Special",
+      "targeting": "Proximity",
+      "targetRange": "600"
     },
     {
-      key: 'W',
-      name: 'Void Seeker',
-      width: '200',
-      affects: 'Enemies',
-      blurb: 'Active:  Kai\'Sa fires a void bolt in the target direction that grants  sight around its trajectory as it travels and deals magic damage to the first enemy hit,  revealing them for a few seconds.',
-      castTime: '0.4',
-      cooldown: '22 / 20 / 18 / 16 / 14',
-      cost: '55 / 60 / 65 / 70 / 75',
-      damageType: 'Magic damage',
-      effects: [
+      "key": "W",
+      "name": "Void Seeker",
+      "width": "200",
+      "affects": "Enemies",
+      "blurb": "Active:  Kai'Sa fires a void bolt in the target direction that grants  sight around its trajectory as it travels and deals magic damage to the first enemy hit,  revealing them for a few seconds.",
+      "castTime": "0.4",
+      "cooldown": "22 / 20 / 18 / 16 / 14",
+      "cost": "55 / 60 / 65 / 70 / 75",
+      "damageType": "Magic damage",
+      "effects": [
         {
-          description: '<p class="ability-effect"><span class="ability-header">Active:</span> Kai\'Sa fires a void bolt in the target direction that briefly grants sight around its trajectory as it travels, deals magic damage to the first enemy hit, applies 2 Plasma, and reveals them for 4 seconds.</p>',
-          leveling: [
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kai'Sa fires a void bolt in the target direction that briefly grants sight around its trajectory as it travels, deals magic damage to the first enemy hit, applies 2 Plasma, and reveals them for 4 seconds.</p>",
+          "leveling": [
             {
-              attribute: 'Magic Damage',
-              modifiers: [
+              "attribute": "Magic Damage",
+              "modifiers": [
                 {
-                  values: '30 / 55 / 80 / 105 / 130'
+                  "values": "30 / 55 / 80 / 105 / 130"
                 },
                 {
-                  unit: '% AD',
-                  values: '130'
+                  "unit": "% AD",
+                  "values": "130"
                 },
                 {
-                  unit: '% AP',
-                  values: '45'
+                  "unit": "% AP",
+                  "values": "45"
                 }
               ]
             }
           ]
         },
         {
-          description: '<p class="ability-effect"><span class="ability-header">Evolution:</span> Requires 100 ability power from items to upgrade : Void Seeker applies 3 Plasma instead and refunds 75% of its cooldown if it hits an enemy champion.</p>'
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Evolution:</span> Requires 100 ability power from items to upgrade : Void Seeker applies 3 Plasma instead and refunds 75% of its cooldown if it hits an enemy champion.</p>"
         }
       ],
-      icon: 'https://cdn.communitydragon.org/latest/champion/Kaisa/ability-icon/w',
-      maxCharges: -1,
-      notes: 'This ability will cast from wherever the caster is at the end of the cast time.',
-      projectile: 'TRUE',
-      resource: 'Mana',
-      speed: '1750',
-      spellEffects: 'Single',
-      spellshieldable: 'True',
-      targeting: 'Direction',
-      targetRange: '3000'
+      "icon": "https://cdn.communitydragon.org/latest/champion/Kaisa/ability-icon/w",
+      "maxCharges": -1,
+      "notes": "This ability will cast from wherever the caster is at the end of the cast time.",
+      "projectile": "TRUE",
+      "resource": "Mana",
+      "speed": "1750",
+      "spellEffects": "Single",
+      "spellshieldable": "True",
+      "targeting": "Direction",
+      "targetRange": "3000"
     },
     {
-      key: 'E',
-      name: 'Supercharge',
-      affects: 'Self',
-      blurb: 'Active:  Kai\'Sa briefly becomes  ghosted and gains  bonus move speed during the cast time, then gains  bonus attack speed for a few seconds.',
-      castTime: '1.2 : 0.6 (based on bonus attack speed)',
-      cooldown: '16 / 14.5 / 13 / 11.5 / 10',
-      cost: '30',
-      effects: [
+      "key": "E",
+      "name": "Supercharge",
+      "affects": "Self",
+      "blurb": "Active:  Kai'Sa briefly becomes  ghosted and gains  bonus move speed during the cast time, then gains  bonus attack speed for a few seconds.",
+      "castTime": "1.2 : 0.6 (based on bonus attack speed)",
+      "cooldown": "16 / 14.5 / 13 / 11.5 / 10",
+      "cost": "30",
+      "effects": [
         {
-          description: '<p class="ability-effect"><span class="ability-header">Active:</span> Kai\'Sa charges up over the cast time, during which she is still able to move, becoming ghosted and gaining bonus movement speed for the duration, with the effectiveness increased by 0% - 100% (based on bonus attack speed).</p>',
-          leveling: [
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kai'Sa charges up over the cast time, during which she is still able to move, becoming ghosted and gaining bonus movement speed for the duration, with the effectiveness increased by 0% - 100% (based on bonus attack speed).</p>",
+          "leveling": [
             {
-              attribute: 'Minimum Movement Speed',
-              modifiers: [
+              "attribute": "Minimum Movement Speed",
+              "modifiers": [
                 {
-                  unit: '%',
-                  values: '55 / 60 / 65 / 70 / 75'
+                  "unit": "%",
+                  "values": "55 / 60 / 65 / 70 / 75"
                 }
               ]
             },
             {
-              attribute: 'Maximum Movement Speed',
-              modifiers: [
+              "attribute": "Maximum Movement Speed",
+              "modifiers": [
                 {
-                  unit: '%',
-                  values: '110 / 120 / 130 / 140 / 150'
+                  "unit": "%",
+                  "values": "110 / 120 / 130 / 140 / 150"
                 }
               ]
             }
           ]
         },
         {
-          description: 'After completing the charge, she gains bonus attack speed for 4 seconds, during which her attacks have a lower windup of 6.44% and an increased missile speed.',
-          leveling: [
+          "description": "After completing the charge, she gains bonus attack speed for 4 seconds, during which her attacks have a lower windup of 6.44% and an increased missile speed.",
+          "leveling": [
             {
-              attribute: 'Bonus Attack Speed',
-              modifiers: [
+              "attribute": "Bonus Attack Speed",
+              "modifiers": [
                 {
-                  unit: '%',
-                  values: '40 / 50 / 60 / 70 / 80'
+                  "unit": "%",
+                  "values": "40 / 50 / 60 / 70 / 80"
                 }
               ]
             }
           ]
         },
         {
-          description: 'Supercharge\'s current cooldown is reduced by 0.5 seconds on-attack.'
+          "description": "Supercharge's current cooldown is reduced by 0.5 seconds on-attack."
         },
         {
-          description: '<p class="ability-effect"><span class="ability-header">Evolution:</span> Requires[ 100% - 70% (based on level) attack speed from items ][ 100% attack speed from items and stat growth ]to upgrade : Supercharge grants invisibility at the start of the cast time for 0.5 seconds.</p>'
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Evolution:</span> Requires[ 100% - 70% (based on level) attack speed from items ][ 100% attack speed from items and stat growth ]to upgrade : Supercharge grants invisibility at the start of the cast time for 0.5 seconds.</p>"
         }
       ],
-      icon: 'https://cdn.communitydragon.org/latest/champion/Kaisa/ability-icon/e',
-      maxCharges: -1,
-      notes: 'Her attack commands during this time are switched to movement commands instead. Upon finishing the charge and if an attack command was issued, Kai\'Sa will continue walking toward her target.\nKai\'Sa behaves normally if attack move click was issued not on a target during the cast time, stopping at attack range of the closest target and starts attacking when charged up.',
-      resource: 'Mana',
-      targeting: 'Auto'
+      "icon": "https://cdn.communitydragon.org/latest/champion/Kaisa/ability-icon/e",
+      "maxCharges": -1,
+      "notes": "Her attack commands during this time are switched to movement commands instead. Upon finishing the charge and if an attack command was issued, Kai'Sa will continue walking toward her target.\nKai'Sa behaves normally if attack move click was issued not on a target during the cast time, stopping at attack range of the closest target and starts attacking when charged up.",
+      "resource": "Mana",
+      "targeting": "Auto"
     },
     {
-      key: 'R',
-      name: 'Killer Instinct',
-      affects: 'Self',
-      blurb: 'Active:  Kai\'Sa briefly  shields herself and  dashes near an enemy champion affected by Plasma.',
-      castTime: 'none',
-      cooldown: '120 / 90 / 60',
-      cost: '100',
-      effectRadius: '525',
-      effects: [
+      "key": "R",
+      "name": "Killer Instinct",
+      "affects": "Self",
+      "blurb": "Active:  Kai'Sa briefly  shields herself and  dashes near an enemy champion affected by Plasma.",
+      "castTime": "none",
+      "cooldown": "120 / 90 / 60",
+      "cost": "100",
+      "effectRadius": "525",
+      "effects": [
         {
-          description: '<p class="ability-effect"><span class="ability-header">Active:</span> Kai\'Sa grants herself a shield for 2 seconds and dashes to a target location near a visible enemy champion that was affected by Plasma within the last 4 seconds. The shield\'s duration is refreshed when the dash ends.</p>',
-          leveling: [
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Kai'Sa grants herself a shield for 2 seconds and dashes to a target location near a visible enemy champion that was affected by Plasma within the last 4 seconds. The shield's duration is refreshed when the dash ends.</p>",
+          "leveling": [
             {
-              attribute: 'Shield Strength',
-              modifiers: [
+              "attribute": "Shield Strength",
+              "modifiers": [
                 {
-                  values: '70 / 90 / 110'
+                  "values": "70 / 90 / 110"
                 },
                 {
-                  unit: '% AD',
-                  values: '90 / 135 / 180'
+                  "unit": "% AD",
+                  "values": "90 / 135 / 180"
                 },
                 {
-                  unit: '% AP',
-                  values: '120'
+                  "unit": "% AP",
+                  "values": "120"
                 }
               ]
             }
           ]
         },
         {
-          description: 'An enemy champion within range and affected by Plasma is required to cast this ability. Killer Instinct resets Kai\'Sa\'s basic attack timer. Kai\'Sa can cast any of her abilities during the dash.'
+          "description": "An enemy champion within range and affected by Plasma is required to cast this ability. Killer Instinct resets Kai'Sa's basic attack timer. Kai'Sa can cast any of her abilities during the dash."
         }
       ],
-      icon: 'https://cdn.communitydragon.org/latest/champion/Kaisa/ability-icon/r',
-      maxCharges: -1,
-      notes: 'Kai\'Sa will issue a movement command to the targeted location regardless of whether the target location is valid. The dash is not buffered during this movement command. Kai\'Sa will not dash if the targeted location becomes valid by walking in range or a nearby enemy champion becomes affected by Plasma.\nIf the targeted location is not valid, the range indicator will glow.\nThe enemy champion recently affected by Plasma must be in range of Kai\'Sa for the targeted location to be valid, and not the targeted location itself.\nThe basic attack reset is not considered one for  Hail of Blades.',
-      resource: 'Mana',
-      targeting: 'Location',
-      targetRange: '2000 / 2250 / 2500 / 2750 / 3000'
+      "icon": "https://cdn.communitydragon.org/latest/champion/Kaisa/ability-icon/r",
+      "maxCharges": -1,
+      "notes": "Kai'Sa will issue a movement command to the targeted location regardless of whether the target location is valid. The dash is not buffered during this movement command. Kai'Sa will not dash if the targeted location becomes valid by walking in range or a nearby enemy champion becomes affected by Plasma.\nIf the targeted location is not valid, the range indicator will glow.\nThe enemy champion recently affected by Plasma must be in range of Kai'Sa for the targeted location to be valid, and not the targeted location itself.\nThe basic attack reset is not considered one for  Hail of Blades.",
+      "resource": "Mana",
+      "targeting": "Location",
+      "targetRange": "2000 / 2250 / 2500 / 2750 / 3000"
     }
   ],
-  adaptiveType: 'Magic damage',
-  attackType: 'Ranged',
-  attributeRatings: {
-    abilityReliance: 10,
-    control: 1,
-    damage: 3,
-    difficulty: 3,
-    mobility: 3,
-    toughness: 1,
-    utility: 1
+  "adaptiveType": "Magic damage",
+  "attackType": "Ranged",
+  "attributeRatings": {
+    "damage": 3,
+    "toughness": 1,
+    "control": 1,
+    "mobility": 3,
+    "utility": 1,
+    "abilityReliance": 10,
+    "difficulty": 3
   },
-  faction: 'void',
-  lore: 'Claimed by the Void when she was only a child, Kai\'Sa managed to survive through sheer tenacity and strength of will. Her experiences have made her a deadly hunter and, to some, the harbinger of a future they would rather not live to see. Having entered into an uneasy symbiosis with a living Void carapace, the time will soon come when she must decide whether to forgive those mortals who would call her a monster, and defeat the coming darkness together… or simply to forget, as the Void consumes the world that left her behind.',
-  patchLastChanged: '25.14',
-  positions: [
-    'Bottom'
+  "faction": "void",
+  "lore": "Claimed by the Void when she was only a child, Kai'Sa managed to survive through sheer tenacity and strength of will. Her experiences have made her a deadly hunter and, to some, the harbinger of a future they would rather not live to see. Having entered into an uneasy symbiosis with a living Void carapace, the time will soon come when she must decide whether to forgive those mortals who would call her a monster, and defeat the coming darkness together… or simply to forget, as the Void consumes the world that left her behind.",
+  "patchLastChanged": "25.14",
+  "positions": [
+    "Bottom"
   ],
-  price: {
-    blueEssence: 675,
-    rp: 585
+  "price": {
+    "blueEssence": 675,
+    "rp": 585
   },
-  releaseDate: '2018-03-07',
-  resource: 'Mana',
-  roles: [
-    'Mage',
-    'Marksman'
+  "releaseDate": "2018-03-07",
+  "resource": "Mana",
+  "roles": [
+    "Mage",
+    "Marksman"
   ],
-  stats: {
-    acquisitionRadius: {
-      flat: 800
+  "stats": {
+    "health": {
+      "flat": 640,
+      "perLevel": 102
     },
-    armor: {
-      flat: 27,
-      perLevel: 4.2
+    "healthRegen": {
+      "flat": 4,
+      "perLevel": 0.55
     },
-    attackCastTime: {
-      flat: 0.25
+    "mana": {
+      "flat": 345,
+      "perLevel": 40
     },
-    attackDamage: {
-      flat: 59,
-      perLevel: 2.6
+    "manaRegen": {
+      "flat": 8.2,
+      "perLevel": 0.7
     },
-    attackDelayOffset: {
-      flat: 0
+    "armor": {
+      "flat": 27,
+      "perLevel": 4.2
     },
-    attackRange: {
-      flat: 525
+    "magicResistance": {
+      "flat": 30,
+      "perLevel": 1.3
     },
-    attackSpeed: {
-      flat: 0.644,
-      perLevel: 1.8
+    "attackDamage": {
+      "flat": 59,
+      "perLevel": 2.6
     },
-    attackSpeedRatio: {
-      flat: 0.644
+    "movespeed": {
+      "flat": 335
     },
-    attackTotalTime: {
-      flat: 1.552
+    "acquisitionRadius": {
+      "flat": 800
     },
-    criticalStrikeDamage: {
-      flat: 175
+    "selectionRadius": {
+      "flat": 100
     },
-    criticalStrikeDamageModifier: {
-      flat: 1
+    "pathingRadius": {
+      "flat": 40.68
     },
-    gameplayRadius: {
-      flat: 65
+    "gameplayRadius": {
+      "flat": 65
     },
-    health: {
-      flat: 640,
-      perLevel: 102
+    "criticalStrikeDamage": {
+      "flat": 175
     },
-    healthRegen: {
-      flat: 4,
-      perLevel: 0.55
+    "criticalStrikeDamageModifier": {
+      "flat": 1
     },
-    magicResistance: {
-      flat: 30,
-      perLevel: 1.3
+    "attackSpeed": {
+      "flat": 0.644,
+      "perLevel": 1.8
     },
-    mana: {
-      flat: 345,
-      perLevel: 40
+    "attackSpeedRatio": {
+      "flat": 0.644
     },
-    manaRegen: {
-      flat: 8.2,
-      perLevel: 0.7
+    "attackCastTime": {
+      "flat": 0.25
     },
-    movespeed: {
-      flat: 335
+    "attackTotalTime": {
+      "flat": 1.552
     },
-    pathingRadius: {
-      flat: 40.68
+    "attackDelayOffset": {
+      "flat": 0
     },
-    selectionRadius: {
-      flat: 100
+    "attackRange": {
+      "flat": 525
     }
   }
 }

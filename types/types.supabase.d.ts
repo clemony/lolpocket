@@ -1,7 +1,8 @@
 // types/supabase.d.ts
+import type { SupabaseClient } from '@supabase/supabase-js'
+import type { Database } from './database.types'
+
 declare module '#supabase/server' {
-  import type { Database } from '#types/database.types'
-  import type { SupabaseClient } from '@supabase/supabase-js'
 
   export function serverSupabaseClient(event?: any): SupabaseClient<Database>
 }

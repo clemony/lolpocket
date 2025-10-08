@@ -44,23 +44,14 @@ watch(
 
     <!-- nav -->
     <template #menu>
-      <UpdateSummoner
-        shape="circle"
-        placement="right"
-        variant="base"
-        class="[&_svg]:size-4 !size-11 p-0 " />
-
-      <!--     <FollowButton
-          placement="bottom"
-          shape="circle"
-          :summoner="state.summoner"
-          variant="base"
-          class=" !size-9 [&_svg]:size-4.5 border-0 ring ring-b3/60" /> -->
+      <!--    -->
     </template>
 
     <!-- crumb -->
     <template #crumb>
-      <SummonerDropdown :summoner="state.summoner" />
+      <SummonerDropdown
+        :summoner="state.summoner"
+        class="-ml-4" />
     </template>
 
     <!-- header -->
@@ -75,5 +66,19 @@ watch(
         :state />
     </div>
     <UpFAB />
+    <UpdateSummoner
+      shape="circle"
+      placement="left"
+      size="xl"
+      variant="outline"
+      class="[&_svg]:size-4 fab  z-10 bg-b1/80 bottom-64 right-24 *:opacity-60 hover:*:opacity-100 !cursor-pointer !pointer-events-auto !size-16 backdrop-blur shadow-sm shadow-black/4" />
+    <FollowButton
+      :summoner="state.summoner"
+      shape="circle"
+      placement="left"
+      size="xl"
+      active="base"
+      variant="outline"
+      class="[&_svg]:size-4 fab  z-10 bg-b1/80 bottom-44 right-24 *:opacity-60 hover:*:opacity-100 !cursor-pointer !pointer-events-auto !size-16 backdrop-blur shadow-sm shadow-black/4" />
   </TabLayout>
 </template>

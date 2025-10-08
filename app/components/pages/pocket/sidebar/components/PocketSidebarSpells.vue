@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { addSpellSet } from '~~/shared/types/schema.pocket'
-
 const route = useRoute()
 const pocket = computed(() =>
   ps().getPocket(String(route.params.pocket_key))
@@ -10,7 +8,7 @@ const pocket = computed(() =>
 <template>
   <Collapsible class="field-box grid p-3">
     <CollapsibleTrigger class="flex justify-between items-center">
-      <h2>Spells</h2>
+      <h3>Spells</h3>
 
       <CaretRotate />
     </CollapsibleTrigger>

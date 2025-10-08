@@ -1,6 +1,5 @@
 import type { regionIndex } from '#shared/appdata'
 import type { RouteRecordRaw } from 'vue-router'
-import { summonerSearchSchema } from '#shared/types/schema.forms'
 import { useDebounceFn } from '@vueuse/core'
 import Fuse from 'fuse.js'
 import { safeParse, string } from 'valibot'
