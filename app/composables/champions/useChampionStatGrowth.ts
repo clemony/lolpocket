@@ -17,7 +17,6 @@ export function useChampionStatGrowth(level: Ref<number>) {
     ratio?: number,
     lvl: number = level.value
   ) {
-    console.log('🌱 - calcAttackSpeed - ratio:', ratio)
     if (base === null || ratio === null)
       return null
     const totalLevelUps = lvl - 1
@@ -25,9 +24,7 @@ export function useChampionStatGrowth(level: Ref<number>) {
       return base
 
     const levelGrowth = (0.0175 * totalLevelUps) + 0.7025
-    console.log('🌱 - calcAttackSpeed - levelGrowth:', levelGrowth)
     const bonusAS = (growth * totalLevelUps) * levelGrowth
-    // return base + (bonusAS * ratio)
     return bonusAS
   }
 

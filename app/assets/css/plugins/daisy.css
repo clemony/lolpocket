@@ -21,6 +21,13 @@
 
 }
 
+@utility input-lg {
+    @reference theme('../theme.css');
+  &.input {
+  @apply **:text-10;
+}
+}
+
 /* divider */
 
 @utility divider {

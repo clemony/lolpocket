@@ -37,6 +37,7 @@ export default defineAppConfig({
       'copy': 'lucide:copy',
       'export': 'lucide:upload',
       'filter': 'lucide:list-filter',
+      'lock': 'gg:lock',
       'log-in': 'lucide:log-in', // tabler:transfer-in in house
       'log-out': 'lucide:log-out', // tabler:transfer-out
       'open': 'radix-icons:open-in-new-window',
@@ -46,6 +47,7 @@ export default defineAppConfig({
       'search': 'lucide:search',
       'tag': 'lucide:tag',
       'tags': 'lucide:tags',
+      'unlock': 'gg:lock-unlock',
       'unpin': 'iconoir:pin-slash',
       'update': 'radix-icons:update',
 
@@ -57,8 +59,6 @@ export default defineAppConfig({
       'menu': 'lucide:menu',
       'more': 'ri:more-line',
       'more-vertical': 'ri:more-2-line',
-      'nut': 'ph:nut',
-      'nut-fill': 'ph:nut-fill',
       'settings': 'lucide:settings-2',
 
       // editing
@@ -99,7 +99,6 @@ export default defineAppConfig({
       'slash': 'heroicons:slash',
       'tab': 'hugeicons:arrow-right-03',
       'x': 'lucide:x',
-      'x-sm': 'lucide:x',
 
       // symbol
       'alert': 'lucide:circle-alert',
@@ -119,6 +118,7 @@ export default defineAppConfig({
       'mail-open': 'lucide:mail-open',
       'send': 'lucide:send',
       'share': 'lucide:share',
+      'wifi': 'lucide:wifi',
 
       // logo
       'discord': 'simple-icons:discord',
@@ -126,13 +126,13 @@ export default defineAppConfig({
       'google': 'lineicons:google',
       'riot': 'simple-icons:riotgames',
 
-      // simple
+      // shape
       'circle-dot': 'lucide:circle-dot',
       'dot': 'lucide:dot',
       'heart': 'gg:heart',
       'heart-fill': 'teenyicons:heart-solid',
       'heart-sm': 'teenyicons:heart-small-solid',
-      'heart-sm-line': 'teenyicons:heart-small-outline',
+      'heart-sm-outline': 'teenyicons:heart-small-outline',
       'infinity': 'solar:infinity-outline',
       'shield': 'teenyicons:shield-tick-outline',
       'square': 'lucide:square',
@@ -153,6 +153,7 @@ export default defineAppConfig({
       'chart': 'lucide:bar-chart-3',
       'clock': 'lucide:clock',
       'compass': 'lucide:compass',
+      'crown': 'gg:crown',
       'favorite': 'f7:square-favorites-alt',
       'history': 'lucide:history',
       'image': 'lucide:image',

@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import type { regionIndex } from '#shared/appdata'
-import { summonerSearchSchema } from '#shared/types/schema.forms'
 import { useDebounceFn } from '@vueuse/core'
 import { safeParse, string } from 'valibot'
 

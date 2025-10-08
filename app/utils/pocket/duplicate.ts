@@ -13,6 +13,9 @@ export function duplicatePocket(original: Pocket): Pocket {
   newPocket.key = toID()
   newPocket.name = `${original.name} (copy)`
 
+  if (!newPocket.author.includes(as().account.puuid))
+    newPocket.author.push(as().account.puuid)
+
   ps().pockets.push(newPocket)
   return newPocket
 }

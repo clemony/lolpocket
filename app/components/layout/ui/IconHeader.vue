@@ -11,37 +11,28 @@ const y = useTransform(scrollYProgress, [0, 1], ['-3%', '-80%'])
   <header
     :class="
       cn(
-        'relative flex  items-center  w-fit max-w-220 ',
+        'relative flex flex-nowrap items-center gap-4  items-center h-20  w-fit max-w-220 ',
         className,
       )
-    ">
-    <div
-      class="w-fit absolute flex  flex-nowrap  items-center gap-6"
-      :style="{
-        transform: `translateY(${y})`,
-      }">
-      <!-- icon -->
+    "
+    :style="{
+      transform: `translateY(${y})`,
+    }">
+    <!-- icon -->
 
-      <div class="size-20 place-items-center relative grid">
-        <slot name="icon" />
+    <div class="size-20 place-items-center relative grid">
+      <slot name="icon" />
+    </div>
+    <div class="flex flex-col pt-1.5 justify-center gap-1.5 w-full">
+      <!-- header name -->
+      <div class="flex items-center  w-full gap-8 max-h-12">
+        <slot name="title" />
       </div>
-      <div class="flex flex-col w-full">
-        <!-- header pre-text -->
-        <div
-          class="inline-flex max-h-4 **:text-3 dst flex-nowrap text-nowrap lowercase gap-3 pl-0.5 font-normal">
-          <slot name="pre-header" />
-        </div>
-        <div class="flex items-center justify-between w-full gap-8 mb-1 max-h-12">
-          <!-- header name -->
 
-          <slot name="title" />
-        </div>
-
-        <!-- header sub-text -->
-        <div
-          class="inline-flex max-h-4 **:text-3 dst flex-nowrap text-nowrap lowercase gap-4 pl-0.5 font-normal">
-          <slot name="subheader" />
-        </div>
+      <!-- header sub-text -->
+      <div
+        class="inline-flex **:text-3 dst flex-nowrap text-nowrap lowercase gap-2  font-normal">
+        <slot name="subheader" />
       </div>
     </div>
   </header>

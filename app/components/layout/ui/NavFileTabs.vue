@@ -7,7 +7,7 @@ const { childRoutes, targetRoutes } = useRouteNavigation()
   <nav
     v-if="childRoutes"
     role="tablist"
-    class=" relative h-[36px]  justify-start items-start gap-2  col-start-2 w-full z-3 flex">
+    class=" relative h-[36px]  *:select-none justify-start items-start gap-2  col-start-2 w-full z-3 flex">
     <button
       v-for="item in childRoutes.sort((a, b) => (a.meta?.order - b.meta?.order))"
       :key="item.name"

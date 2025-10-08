@@ -1,24 +1,35 @@
+import type { VariantProps } from 'tailwind-variants'
 import { tv } from 'tailwind-variants'
 
 const baseVariants = tv({
   variants: {
+
+    // disabled
+    disabled: {
+      disabled: 'has-disabled:opacity-60 has-disabled:pointer-events-none has-disabled:cursor-not-allowed '
+    },
 
     /* base */
     base: {
       btn: 'btn focus-visible:outline-0 focus-visible:ring-1 focus-visible:ring-bc/60 data-[state=active]:btn-active data-[state=checked]:btn-active group-data-[state=open]:btn-active data-[state=open]:btn-active has-[first:[&_svg]]:gap-3 has-not-[span:empty]:gap-2 text-start data-[state=open]:btn-active has-[span:empty]:gap-0  [&_svg]:inline-flex align-middle text-3 font-normal items-center disabled:opacity-80 flex',
       label: 'font-medium opacity-60',
       none: '',
+      toggle: 'inline-flex items-center justify-center btn btn-ghost font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 on:bg-b2 on:border-b3/60 [&_svg]:pointer-events-none  gap-2 on:btn-active',
     },
     /* hover */
     hover: {
       base: 'hover:!bg-b1 hover:!border-b3 fx-0 ',
       btn: 'hover:!bg-b2  hover:!border-b3/80',
+      emboss: '',
+      field: '',
       ghost: 'hover:!bg-b2/40 hover:!border-b3/40 hover:fx-1',
+      label: '',
       link: 'underline-offset-2 hover:underline',
       neutral:
     ' hover:!text-nc hover:!bg-neutral/95 hover:**:!text-nc hover:!border-n3 hover:shadow-sm hover:drop-shadow-sm ',
       none: 'hover:bg-transparent',
       outline: 'hover:inset-shadow-xxs hover:!border-bc/60 border ',
+      red: '',
       secondary: 'hover:inset-shadow-xs',
       shadow:
     'hover:shadow-black-2  hover:inset-shadow-xs hover:drop-shadow-none hover:inset-shadow-black/6  hover:bg-tint-b2/20 ',
@@ -46,7 +57,6 @@ const baseVariants = tv({
     variant: {
       base: '  bg-b1/90 px-3  border-b3',
       btn: 'px-3  bg-tint-b2/60 border-b2 [&_.btn-active]:!bg-tint-b2/10  [&_.btn-active]:!border-b3/80 font-medium',
-      disabled: '',
       emboss: 'btn-outline px-3  font-medium border-b3 shadow-xs shadow-black/6 drop-shadow-xs hover:inset-shadow-xs hover:inset-shadow-black/6 ',
       field: 'btn field-box',
       ghost: 'btn-ghost hover:bg-tint-b2/20 hover:border-b3/60  font-medium px-3 data-[state=checked]:border-b3 data-[state=checked]:shadow-xs data-[state=checked]:bg-b3/36 data-[state=checked]:!fx-1  [&_.btn-active]:!bg-b2 [&_.btn-active]:!border-b3',
@@ -58,10 +68,9 @@ const baseVariants = tv({
       outline: 'btn btn-outline px-3  font-medium border-b3',
       red: ' btn px-3  bg-domination hover:bg-domination/80 border-domination/60 font-semibold text-white **:text-white',
       secondary:
-    'btn bg-tint-b3/40 text-bc px-3 !border-b3  font-medium shadow-sm hover:inset-shadow-xs',
+    'btn bg-tint-b3/40 fx-1 text-bc px-3 !border-b3  font-medium shadow-xs shadow-black/7 hover:inset-shadow-xs',
       shadow:
     'btn px-3  font-medium shadow-xs shadow-black/6 hover:shadow-black-2 drop-shadow-black/2 drop-shadow-xs hover:inset-shadow-xs hover:drop-shadow-none hover:inset-shadow-black/6 border-b3/80  bg-transparent  hover:bg-tint-b3/30 noise-sm [&.btn-active]:bg-tint-b2/20 ',
-      tick: 'btn border-transparent hover:border-b3/60 bg-transparent hover:bg-tint-b2/60 fx-0 hover:fx-1 text-bc  font-medium ',
     },
 
     /* active */
@@ -84,6 +93,7 @@ const baseVariants = tv({
 export const buttonVariants = tv({
   defaultVariants: {
     base: 'btn',
+    disabled: 'disabled',
     size: 'md',
     variant: 'btn',
   },
@@ -93,15 +103,19 @@ export const buttonVariants = tv({
 export const labelVariants = tv({
   defaultVariants: {
     base: 'btn',
+    disabled: 'disabled',
   },
   extend: baseVariants,
 })
 
 export const toggleVariants = tv({
-  base: 'inline-flex items-center justify-center btn btn-ghost font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-b2 data-[state=on]:border-b3/60 [&_svg]:pointer-events-none [&_svg]:size-5 [&_svg]:shrink-0 gap-2',
   defaultVariants: {
+    base: 'toggle',
+    disabled: 'disabled',
     size: 'md',
     variant: 'ghost'
   },
   extend: baseVariants,
 })
+export type ButtonVariantProps = VariantProps<typeof buttonVariants>
+export type ToggleVariantProps = VariantProps<typeof toggleVariants>

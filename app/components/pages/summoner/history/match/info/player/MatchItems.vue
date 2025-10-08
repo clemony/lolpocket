@@ -40,7 +40,7 @@ const items = computed(() => {
         :id="items[i]"
         v-tippy="ix().itemNameById(items[i])"
         :alt="items[i]"
-        class="size-10 rounded-lg" />
+        class="size-10 rounded-lg  hover:ring hover:scale-105 transition-all duration-300 ring-bc/60" />
 
       <Placeholder
         v-else

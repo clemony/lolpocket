@@ -14,7 +14,7 @@ const { scrollTop } = useScrollInject()
     size="xl"
     shape="circle"
     variant="outline"
-    :class="cn('fab z-10 bg-b1/80 bottom-24 right-24 *:opacity-40 hover:*:opacity-100 !cursor-pointer !pointer-events-auto !size-16 backdrop-blur shadow-sm shadow-black/4', className)"
+    :class="cn('fab z-10 bg-b1/80 bottom-24 right-24 *:opacity-60 hover:*:opacity-100 !cursor-pointer !pointer-events-auto !size-16 backdrop-blur shadow-sm shadow-black/4', className)"
     @click="scrollTop()">
     <icon
       name="arrow-up"

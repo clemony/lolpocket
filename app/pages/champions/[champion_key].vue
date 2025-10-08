@@ -26,6 +26,7 @@ onMounted(() => {
 
     <template #background>
       <BackgroundSplashFixed
+        v-once
         :img="
           getSplash(String(route.params.champion_key), 'centered')
         " />
@@ -48,7 +49,7 @@ onMounted(() => {
       </header>
     </template>
 
-    <div class="size-full flex bg-b1 pl-60 relative gap-6 overflow-hidden ">
+    <div class="size-full flex bg-b1 justify-center gap-6 z-auto">
       <NuxtPage :champion />
     </div>
   </TabLayout>

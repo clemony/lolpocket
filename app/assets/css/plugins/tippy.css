@@ -7,10 +7,10 @@
   }
 
   .tippy-box {
-    @apply border px-3 py-1 z-1 w-auto max-w-80 rounded-lg backdrop-blur  drop-shadow-[1px_2px_2px_#00000020] shadow-md;
+    @apply border px-3 py-1 z-1 w-auto max-w-80 rounded-field backdrop-blur  drop-shadow-[1px_1px_2px_#00000010] shadow-md;
 
     .tippy-content {
-      @apply text-3 whitespace-pre inline-block font-medium **:text-2;
+      @apply text-2 whitespace-pre inline-block font-medium **:text-2;
     }
 
 & > .tippy-svg-arrow{
@@ -61,11 +61,13 @@
 
     /* blur transparent */
     &[data-theme~='blur'] {
-      @apply bg-transparent border-0 shadow-none text-bc/80;
+      @apply bg-transparent border-0 p-0 shadow-none text-bc/80;
 
       & > .tippy-svg-arrow {
         @apply hidden;
       }
     }
   }
+
+
 }

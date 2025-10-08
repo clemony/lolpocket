@@ -73,7 +73,7 @@ const { ability } = defineProps<{
           </template>
 
           <div
-            v-else-if="ability.cost?.length"
+            v-else-if="ability.cost?.length && ability.resource"
             v-tippy="`${ability.resource} Cost`"
             :name="ability.resource"
             class="flex gap-2 items-center">

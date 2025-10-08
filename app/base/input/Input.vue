@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useVModel } from '@vueuse/core'
-import type { InputSize, InputVariantProps } from '~/assets/variants/input-variants'
+import { useForwardPropsEmits } from 'reka-ui'
+import type { InputVariantProps } from '~/assets/variants/input-variants'
 import { inputVariants } from '~/assets/variants/input-variants'
 
 defineOptions({
@@ -13,7 +14,7 @@ const props = withDefaults(
     defaultValue?: string
     modelValue?: string
     id?: string
-    size?: InputSize
+    size?: 'default' | 'header'
   }>(),
   {
     size: 'default'
@@ -29,16 +30,20 @@ const modelValue = useVModel(props, 'modelValue', emits, {
   defaultValue: props.defaultValue,
   passive: true,
 })
+
+const delegatedProps = reactiveOmit(props, 'class')
+
+const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
   <label
     :id="props.id"
     for="input"
+    v-bind="forwarded"
     :class="cn(inputVariants({ size: props.size }), props.class)">
     <slot />
     <input
-      v-bind="$attrs"
       v-model="modelValue"
       name="input"
       class="focus:placeholder:opacity-0 placeholder:text-2 placeholder:italic"
@@ -56,5 +61,6 @@ const modelValue = useVModel(props, 'modelValue', emits, {
         name="x"
         class="size-4" />
     </Button>
+    <slot name="3" />
   </label>
 </template>

@@ -1,24 +1,23 @@
 <script lang="ts" setup>
-const {
-  class: className,
-  placement,
-  size = 'md',
-  summoner,
-  text,
-  theme,
-  variant = 'shadow',
-} = defineProps<{
-  summoner: Summoner
-  class?: HTMLAttributes['class']
-  text?: boolean
-  bold?: boolean
-  variant?: any
-  size?: any
-  theme?: string
-  placement?: Side
-}>()
+import { useForwardProps } from 'reka-ui'
+import type { ToggleVariantProps } from '~/assets/variants'
 
-const isYou = computed(() => as().account?.puuid === summoner?.puuid)
+const props = withDefaults(defineProps<{
+  class?: HTMLAttributes['class']
+  summoner: Summoner
+  placement?: Side
+  theme?: string
+  size?: ToggleVariantProps['size']
+  variant?: ToggleVariantProps['variant']
+}>(), {
+  placement: 'top',
+  theme: 'base'
+})
+
+const delegatedProps = reactiveOmit(props, 'class')
+const forwarded = useForwardProps(delegatedProps)
+
+const isYou = computed(() => as().account?.puuid === props.summoner?.puuid)
 const isFollowed = ref(false)
 
 watch(() => isFollowed.value, (newVal) => {
@@ -29,14 +28,12 @@ watch(() => isFollowed.value, (newVal) => {
 <template>
   <Toggle
     v-if="isYou"
+    v-bind="forwarded"
     v-model="isFollowed"
     as-child>
     <Button
-      v-tippy="{ content: isFollowed ? 'Unfollow' : 'Follow', placement, arrow: false }"
-      :followed="isFollowed"
-      :variant="variant"
-      :size="size"
-      :class="cn('group/follow  grid place-items-center ', className)">
+      v-tippy="{ content: isFollowed ? 'unfollow' : `follow ${summoner.name}?`, placement, arrow: false, theme: 'base' }"
+      :class="cn('group/follow  grid place-items-center ', props.class)">
       <slot>
         <icon
           name="heart-fill"

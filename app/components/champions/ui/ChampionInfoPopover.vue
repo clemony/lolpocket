@@ -24,10 +24,5 @@ const isOpen = ref(false)
         :class="cn('min-h-64', className)"
         object-position="50% -1.5rem" />
     </DialogTrigger>
-
-    <LazyChampionPopoverContent
-      v-if="isOpen"
-      :champion-key="championKey"
-      class="champion w-full" />
   </Dialog>
 </template>

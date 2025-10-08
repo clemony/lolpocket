@@ -17,23 +17,42 @@ const {
   <div class="w-full  group">
     <tippy
       placement="top-start"
+      theme="blur"
       :content="h(StatTip, { stat })"
       :offset="[-6, -3]"
       :arrow="false"
-      class="!gap-3 items-center flex-nowrap  whitepsace-nowrap  w-full h-11 flex">
-      <component
+      class="!gap-3 items-center flex-nowrap justify-between  **:whitespace-nowrap  w-full h-11 flex">
+      <!--       <component
         :is="stat?.icon"
         :class="
           cn('!size-3.5 shrink-0 dst group-hover/stat:opacity-80 opacity-80', {
             'scale-115': ['manaRegen', 'healthRegen'].includes(stat.id),
             'scale-94 mt-px': ['health', 'armor', 'movespeed'].includes(stat.id),
           })
-        " />
-      <span :class="cn('w-full flex-nowrap text-nowrap font-medium text-start group-hover:underline underline-offset-2 text-2 whitepsace-nowrap', { '': !stat.icon })">{{ stat.longAbbr || stat.abbr || stat.name }}</span>
-
-      <span class="font-medium text-nowrap ">
-        {{ stat?.values.current || stat.values.flat }}<span v-if="stat?.id === 'attackSpeed'">%</span>
+        " /> -->
+      <span :class="cn('text-nowrap font-medium text-start group-hover:underline underline-offset-2 text-2  lowercase')">
+        {{ stat.longAbbr || stat.abbr || stat.name }}
       </span>
+
+      <div class="**:inline-block **:tabular-nums **:!text-3   opacity-80  **:text-bc **:font-semibold">
+        <NumberTicker
+          v-if="stat?.values.current && stat?.id !== 'criticalStrikeDamage'"
+          :value="Number(stat?.values.current)">
+        </NumberTicker>
+
+        <span
+          v-else-if=" stat.values.flat"
+          class="">
+          {{ stat.values.flat }}
+        </span>
+
+        <span v-else>
+          0
+        </span>
+        <span
+          v-if="['criticalStrikeDamage', 'attackSpeed'].includes(stat?.id)"
+          class="font-mono inline">&thinsp;%</span>
+      </div>
     </tippy>
 
     <Separator

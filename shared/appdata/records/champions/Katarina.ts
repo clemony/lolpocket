@@ -1,333 +1,333 @@
-// Updated Patch 25.17 - 09/18/2025 02:20:03 AM CDT
+// Updated Patch 25.19 - 10/07/2025 08:16:12 AM CDT
 
 const champion: Champion = {
-  id: 55,
-  key: 'Katarina',
-  name: 'Katarina',
-  title: 'the Sinister Blade',
-  abilities: [
+  "id": 55,
+  "key": "Katarina",
+  "name": "Katarina",
+  "title": "the Sinister Blade",
+  "abilities": [
     {
-      key: 'P',
-      name: 'Voracity',
-      affects: 'Enemies, Self',
-      blurb: 'Innate: Scoring a champion  takedown within a short time of damaging them  reduces the current cooldowns of  Katarina\'s abilities.',
-      damageType: 'Magic damage',
-      effectRadius: '340',
-      effects: [
+      "key": "P",
+      "name": "Voracity",
+      "affects": "Enemies, Self",
+      "blurb": "Innate: Scoring a champion  takedown within a short time of damaging them  reduces the current cooldowns of  Katarina's abilities.",
+      "damageType": "Magic damage",
+      "effectRadius": "340",
+      "effects": [
         {
-          description: '<p class="ability-effect"><span class="ability-header">Innate:</span> Scoring a champion takedown within 3 seconds of damaging them will reduce the current cooldowns of Katarina\'s abilities by 15 seconds.</p>'
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Scoring a champion takedown within 3 seconds of damaging them will reduce the current cooldowns of Katarina's abilities by 15 seconds.</p>"
         },
         {
-          description: '<p class="ability-effect"><span class="ability-header">Innate - Sinister Steel:</span> Whenever Katarina retrieves a Dagger, she slashes around herself to deal 68 - 240 (based on level) (+ 60% bonus AD) (+ 70% / 80% / 90% / 100% (based on level) AP) magic damage to nearby enemies, apply on-hit effects to enemy champions hit, and reduce Shunpo\'s current cooldown by 78% / 84% / 90% / 96% (based on level) of its total cooldown.</p>'
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate - Sinister Steel:</span> Whenever Katarina retrieves a Dagger, she slashes around herself to deal 68 - 240 (based on level) (+ 60% bonus AD) (+ 70% / 80% / 90% / 100% (based on level) AP) magic damage to nearby enemies, apply on-hit effects to enemy champions hit, and reduce Shunpo's current cooldown by 78% / 84% / 90% / 96% (based on level) of its total cooldown.</p>"
         },
         {
-          description: 'Daggers grant sight of their radius and will disappear after being on the ground for 4 seconds.'
+          "description": "Daggers grant sight of their radius and will disappear after being on the ground for 4 seconds."
         }
       ],
-      icon: 'https://cdn.communitydragon.org/latest/champion/Katarina/ability-icon/p',
-      notes: 'Voracity\'s cooldown reduction will still take effect even after Katarina dies.\nThe Dagger\'s area of effect indicator is displayed even before it lands, although Katarina may not slash until it has. This can be targeted by  Shunpo.\nDaggers will still deal damage but not apply on-hit effects if  dodged. They cannot be  blocked nor can they be missed while Katarina is  blinded.\nSingle-use on-hit effects, such as  Spellblade, will apply to the closest target to Katarina when she uses a Dagger.',
-      spellEffects: 'Area of effect',
-      spellshieldable: 'True',
-      targeting: 'Passive'
+      "icon": "https://cdn.communitydragon.org/latest/champion/Katarina/ability-icon/p",
+      "notes": "Voracity's cooldown reduction will still take effect even after Katarina dies.\nThe Dagger's area of effect indicator is displayed even before it lands, although Katarina may not slash until it has. This can be targeted by  Shunpo.\nDaggers will still deal damage but not apply on-hit effects if  dodged. They cannot be  blocked nor can they be missed while Katarina is  blinded.\nSingle-use on-hit effects, such as  Spellblade, will apply to the closest target to Katarina when she uses a Dagger.",
+      "spellEffects": "Area of effect",
+      "spellshieldable": "True",
+      "targeting": "Passive"
     },
     {
-      key: 'Q',
-      name: 'Bouncing Blade',
-      affects: 'Enemies',
-      blurb: 'Active:  Katarina throws a Dagger at the target enemy that can bounce to up to two additional nearby enemies, dealing magic damage.',
-      castTime: '0.25',
-      cooldown: '11 / 10 / 9 / 8 / 7',
-      cost: '0',
-      damageType: 'Magic damage',
-      effectRadius: '450',
-      effects: [
+      "key": "Q",
+      "name": "Bouncing Blade",
+      "affects": "Enemies",
+      "blurb": "Active:  Katarina throws a Dagger at the target enemy that can bounce to up to two additional nearby enemies, dealing magic damage.",
+      "castTime": "0.25",
+      "cooldown": "11 / 10 / 9 / 8 / 7",
+      "cost": "0",
+      "damageType": "Magic damage",
+      "effectRadius": "450",
+      "effects": [
         {
-          description: '<p class="ability-effect"><span class="ability-header">Active:</span> Katarina throws a Dagger at the target enemy that deals magic damage and can bounce to up to two additional visible nearby enemies.</p>',
-          leveling: [
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Katarina throws a Dagger at the target enemy that deals magic damage and can bounce to up to two additional visible nearby enemies.</p>",
+          "leveling": [
             {
-              attribute: 'Magic Damage',
-              modifiers: [
+              "attribute": "Magic Damage",
+              "modifiers": [
                 {
-                  values: '80 / 115 / 150 / 185 / 220'
+                  "values": "80 / 115 / 150 / 185 / 220"
                 },
                 {
-                  unit: '% AP',
-                  values: '40'
+                  "unit": "% AP",
+                  "values": "40"
                 }
               ]
             }
           ]
         },
         {
-          description: 'The Dagger lands 1.023 seconds after striking the first target, about 350 units opposite from their position when it struck them.'
+          "description": "The Dagger lands 1.023 seconds after striking the first target, about 350 units opposite from their position when it struck them."
         }
       ],
-      icon: 'https://cdn.communitydragon.org/latest/champion/Katarina/ability-icon/q',
-      maxCharges: -1,
-      notes: 'Bouncing Blade will not be destroyed in-flight if the target dies before reaching them but it will on  clones that expire.\nIf the Dagger\'s intended landing position is inside terrain it will instead land at the closest spot that isn\'t inside terrain.\nValid targets are determined after each bounce.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).',
-      projectile: 'TRUE',
-      speed: '1600 / Travel distance ÷ 0.15 seconds',
-      spellEffects: 'spellaoe',
-      spellshieldable: 'True',
-      targeting: 'Unit',
-      targetRange: '625'
+      "icon": "https://cdn.communitydragon.org/latest/champion/Katarina/ability-icon/q",
+      "maxCharges": -1,
+      "notes": "Bouncing Blade will not be destroyed in-flight if the target dies before reaching them but it will on  clones that expire.\nIf the Dagger's intended landing position is inside terrain it will instead land at the closest spot that isn't inside terrain.\nValid targets are determined after each bounce.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but does not go on  cooldown nor pay its cost (if applicable).",
+      "projectile": "TRUE",
+      "speed": "1600 / Travel distance ÷ 0.15 seconds",
+      "spellEffects": "spellaoe",
+      "spellshieldable": "True",
+      "targeting": "Unit",
+      "targetRange": "625"
     },
     {
-      key: 'W',
-      name: 'Preparation',
-      affects: 'Self',
-      blurb: 'Active:  Katarina briefly gains  ghosting and a burst of  movement speed, tossing a Dagger into the air directly above herself.',
-      castTime: 'none',
-      cooldown: '15 / 14 / 13 / 12 / 11',
-      cost: '0',
-      effects: [
+      "key": "W",
+      "name": "Preparation",
+      "affects": "Self",
+      "blurb": "Active:  Katarina briefly gains  ghosting and a burst of  movement speed, tossing a Dagger into the air directly above herself.",
+      "castTime": "none",
+      "cooldown": "15 / 14 / 13 / 12 / 11",
+      "cost": "0",
+      "effects": [
         {
-          description: '<p class="ability-effect"><span class="ability-header">Active:</span> Katarina tosses a Dagger into the air above her current location and gains bonus movement speed that decays until it lands after 1.25 seconds, becoming ghosted for the same duration.</p>',
-          leveling: [
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Katarina tosses a Dagger into the air above her current location and gains bonus movement speed that decays until it lands after 1.25 seconds, becoming ghosted for the same duration.</p>",
+          "leveling": [
             {
-              attribute: 'Bonus Movement speed',
-              modifiers: [
+              "attribute": "Bonus Movement speed",
+              "modifiers": [
                 {
-                  unit: '%',
-                  values: '50 / 60 / 70 / 80 / 90'
+                  "unit": "%",
+                  "values": "50 / 60 / 70 / 80 / 90"
                 }
               ]
             }
           ]
         }
       ],
-      icon: 'https://cdn.communitydragon.org/latest/champion/Katarina/ability-icon/w',
-      maxCharges: -1,
-      notes: 'No additional details.',
-      targeting: 'Auto'
+      "icon": "https://cdn.communitydragon.org/latest/champion/Katarina/ability-icon/w",
+      "maxCharges": -1,
+      "notes": "No additional details.",
+      "targeting": "Auto"
     },
     {
-      key: 'E',
-      name: 'Shunpo',
-      affects: 'Enemies',
-      castTime: 'None',
-      cooldown: '12 / 11 / 10 / 9 / 8',
-      cost: '0',
-      damageType: 'Magic damage',
-      effects: [
+      "key": "E",
+      "name": "Shunpo",
+      "affects": "Enemies",
+      "castTime": "None",
+      "cooldown": "12 / 11 / 10 / 9 / 8",
+      "cost": "0",
+      "damageType": "Magic damage",
+      "effects": [
         {
-          description: '<p class="ability-effect"><span class="ability-header">Active:</span> Katarina blinks to a target location near the unit or Dagger closest to the cursor, dealing magic damage to the nearest enemy in range and applying on-hit effects.</p>',
-          leveling: [
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Katarina blinks to a target location near the unit or Dagger closest to the cursor, dealing magic damage to the nearest enemy in range and applying on-hit effects.</p>",
+          "leveling": [
             {
-              attribute: 'Magic Damage',
-              modifiers: [
+              "attribute": "Magic Damage",
+              "modifiers": [
                 {
-                  values: '20 / 30 / 40 / 50 / 60'
+                  "values": "20 / 30 / 40 / 50 / 60"
                 },
                 {
-                  unit: '% AD',
-                  values: '40'
+                  "unit": "% AD",
+                  "values": "40"
                 },
                 {
-                  unit: '% AP',
-                  values: '25'
+                  "unit": "% AP",
+                  "values": "25"
                 }
               ]
             }
           ]
         },
         {
-          description: 'Katarina prioritizes blinking to the location near Daggers, then enemy champions, then enemy non-champions, and then any other unit.'
+          "description": "Katarina prioritizes blinking to the location near Daggers, then enemy champions, then enemy non-champions, and then any other unit."
         },
         {
-          description: 'Shunpo resets Katarina\'s basic attack timer. Upon blinking, Katarina enters a 0.15-second cast time.'
+          "description": "Shunpo resets Katarina's basic attack timer. Upon blinking, Katarina enters a 0.15-second cast time."
         }
       ],
-      icon: 'https://cdn.communitydragon.org/latest/champion/Katarina/ability-icon/e',
-      maxCharges: -1,
-      notes: 'Shunpo does not reset Katarina\'s basic attack timer if it killed the target.(note)\nShunpo can be used on any unit except structures and  wards.\nShunpo can be cast on Daggers that haven\'t landed yet.\nShunpo prioritizes damaging enemy champions within range at the targeted location.\nAfter the cast time, Katarina will attempt to move towards the closest enemy in  acquisition range and basic attack them, prioritizing champions, unless an attack command was already active on another target in range or any attack command was applied during the cast time. Movement commands applied during cast time will override the automatic attack, but they may not override an already active manually applied attack command. If no enemy is in range, pre-cast commands will remain active, and attack commands applied during the cast time will be ignored (note).\nIf a Dagger is picked during the cast time, pre-cast commands will be cancelled, even if no enemy is nearby. And if an enemy is nearby, Katarina may or may not start an automatic attack (note).\nIf the target is very close to a wall and Katarina targets Shunpo behind the target, she can blink over the wall.\nShunpo will still deal damage but not apply on-hit effects if  dodged. It cannot be  blocked nor can it be missed while Katarina is  blinded.\nShunpo does not require the enemy to be within targeting range to damage them. It only requires them to be within the max range around a unit that Shunpo allows them to blink to.\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya\'s Battlesong  Youmuu\'s Ghostblade  Randuin\'s Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash\n\n\nDisabled\n\n Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection',
-      spellEffects: 'Single target',
-      spellshieldable: 'True',
-      targeting: 'Location',
-      targetRange: '725 / 775'
+      "icon": "https://cdn.communitydragon.org/latest/champion/Katarina/ability-icon/e",
+      "maxCharges": -1,
+      "notes": "Shunpo does not reset Katarina's basic attack timer if it killed the target.(note)\nShunpo can be used on any unit except structures and  wards.\nShunpo can be cast on Daggers that haven't landed yet.\nShunpo prioritizes damaging enemy champions within range at the targeted location.\nAfter the cast time, Katarina will attempt to move towards the closest enemy in  acquisition range and basic attack them, prioritizing champions, unless an attack command was already active on another target in range or any attack command was applied during the cast time. Movement commands applied during cast time will override the automatic attack, but they may not override an already active manually applied attack command. If no enemy is in range, pre-cast commands will remain active, and attack commands applied during the cast time will be ignored (note).\nIf a Dagger is picked during the cast time, pre-cast commands will be cancelled, even if no enemy is nearby. And if an enemy is nearby, Katarina may or may not start an automatic attack (note).\nIf the target is very close to a wall and Katarina targets Shunpo behind the target, she can blink over the wall.\nShunpo will still deal damage but not apply on-hit effects if  dodged. It cannot be  blocked nor can it be missed while Katarina is  blinded.\nShunpo does not require the enemy to be within targeting range to damage them. It only requires them to be within the max range around a unit that Shunpo allows them to blink to.\n\n\nType\n\nCast time\n\n\nAttacking\n\nDisabled\n\n\nAbilities\n\nDisabled\n\n\nMovement\n\nDisabled\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\nAll the other item-actives are disabled\n\n\nInterrupted by\n\nN/A\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite  Flash\n\n\nDisabled\n\n Teleport  Recall  Hexflash\n\n\nInterrupted by\n\nN/A\n\n\nInterrupted by\n\nDeath, unless protected by  Resurrection",
+      "spellEffects": "Single target",
+      "spellshieldable": "True",
+      "targeting": "Location",
+      "targetRange": "725 / 775"
     },
     {
-      key: 'R',
-      name: 'Death Lotus',
-      affects: 'Enemies',
-      castTime: 'none',
-      cooldown: '75 / 60 / 45',
-      cost: '0',
-      damageType: 'Magic damage',
-      effectRadius: '550',
-      effects: [
+      "key": "R",
+      "name": "Death Lotus",
+      "affects": "Enemies",
+      "castTime": "none",
+      "cooldown": "75 / 60 / 45",
+      "cost": "0",
+      "damageType": "Magic damage",
+      "effectRadius": "550",
+      "effects": [
         {
-          description: '<p class="ability-effect"><span class="ability-header">Active:</span> Katarina channels for up to 2.5 seconds, rapidly throwing a dagger every 0.166 seconds to up to 3 of the closest nearby enemy champions, revealing herself in the process.Each dagger deals physical damage and magic damage, applies on-hit effects, with on-hit damage reduced in effectiveness, triggers on-attack effects, and inflicts Grievous Wounds on the target for 3 seconds.</p>',
-          leveling: [
+          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Katarina channels for up to 2.5 seconds, rapidly throwing a dagger every 0.166 seconds to up to 3 of the closest nearby enemy champions, revealing herself in the process.Each dagger deals physical damage and magic damage, applies on-hit effects, with on-hit damage reduced in effectiveness, triggers on-attack effects, and inflicts Grievous Wounds on the target for 3 seconds.</p>",
+          "leveling": [
             {
-              attribute: 'Physical Damage Per Dagger',
-              modifiers: [
+              "attribute": "Physical Damage Per Dagger",
+              "modifiers": [
                 {
-                  unit: '%  bonus AD',
-                  values: '16'
+                  "unit": "%  bonus AD",
+                  "values": "16"
                 },
                 {
-                  unit: '% per 100% bonus attack speed',
-                  values: '50'
+                  "unit": "% per 100% bonus attack speed",
+                  "values": "50"
                 }
               ]
             },
             {
-              attribute: 'Maximum Physical Damage',
-              modifiers: [
+              "attribute": "Maximum Physical Damage",
+              "modifiers": [
                 {
-                  unit: '%  bonus AD',
-                  values: '240'
+                  "unit": "%  bonus AD",
+                  "values": "240"
                 },
                 {
-                  unit: '% per 100% bonus attack speed',
-                  values: '750'
+                  "unit": "% per 100% bonus attack speed",
+                  "values": "750"
                 }
               ]
             },
             {
-              attribute: 'Magic Damage Per Dagger',
-              modifiers: [
+              "attribute": "Magic Damage Per Dagger",
+              "modifiers": [
                 {
-                  values: '25 / 37.5 / 50'
+                  "values": "25 / 37.5 / 50"
                 },
                 {
-                  unit: '% AP',
-                  values: '19'
+                  "unit": "% AP",
+                  "values": "19"
                 }
               ]
             },
             {
-              attribute: 'Maximum Magic Damage',
-              modifiers: [
+              "attribute": "Maximum Magic Damage",
+              "modifiers": [
                 {
-                  values: '375 / 562.5 / 750'
+                  "values": "375 / 562.5 / 750"
                 },
                 {
-                  unit: '% AP',
-                  values: '285'
+                  "unit": "% AP",
+                  "values": "285"
                 }
               ]
             },
             {
-              attribute: 'On-Hit Damage Effectiveness',
-              modifiers: [
+              "attribute": "On-Hit Damage Effectiveness",
+              "modifiers": [
                 {
-                  unit: '%',
-                  values: '25 / 30 / 35'
+                  "unit": "%",
+                  "values": "25 / 30 / 35"
                 }
               ]
             }
           ]
         },
         {
-          description: 'An enemy champion within 500 units is required to cast this ability. The target does not have to be visible to be hit by this ability.'
+          "description": "An enemy champion within 500 units is required to cast this ability. The target does not have to be visible to be hit by this ability."
         }
       ],
-      icon: 'https://cdn.communitydragon.org/latest/champion/Katarina/ability-icon/r',
-      maxCharges: -1,
-      notes: 'An alternate form of writing the formula for the bonus AD ratio (and which the game data is using internally) is (16% × (1 + 312.5% per 100% bonus attack speed) bonus AD).\nAt level 6, Katarina has a minimum of 10.82% bonus attack speed.\nThe minimum physical damage per dagger is 21.41% bonus AD.\nIn addition to already revealing herself, Katarina will  reveal her location (400 radius) for 4.5 seconds every time she throws a dagger at an enemy while the enemy team does not otherwise have vision of her.(bug)\nBecause of this, the vision on Katarina\'s location will persist for up-to 4.5 seconds after the channel ends.\nDeath Lotus will not end if no enemies remain in range.\n Spell shield will block and be consumed by only one dagger.\nEach dagger counts as a separate hit for effects such as  Conqueror,  Electrocute, and  Eclipse\'s Ever Rising Moon.\nThe following table refers for interactions while Katarina is  channeling:\nTrying to cast a disabled active (excluding  Hextech Rocketbelt) will buffer it to cast at the completion of the channel.\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled in the first and last 0.25 seconds of channel, otherwise, interrupts.\n\n\nAbilities\n\nInterrupts\n\n\nMovement\n\nDisabled in the first and last 0.25 seconds of channel, otherwise, interrupts.\n\n\nItems\n\nUsable\n\n Shurelya\'s Battlesong  Youmuu\'s Ghostblade  Randuin\'s Omen\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\nAll item-actives not specified above interrupt\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Recall  Hexflash\n\n\nInterrupted by\n\n Flash  Teleport\n\n\nInterrupted by\n\nDeath Cast-inhibiting effects',
-      projectile: 'TRUE',
-      speed: '2400',
-      spellEffects: 'aoe',
-      spellshieldable: 'Special',
-      targeting: 'Proximity'
+      "icon": "https://cdn.communitydragon.org/latest/champion/Katarina/ability-icon/r",
+      "maxCharges": -1,
+      "notes": "An alternate form of writing the formula for the bonus AD ratio (and which the game data is using internally) is (16% × (1 + 312.5% per 100% bonus attack speed) bonus AD).\nAt level 6, Katarina has a minimum of 10.82% bonus attack speed.\nThe minimum physical damage per dagger is 21.41% bonus AD.\nIn addition to already revealing herself, Katarina will  reveal her location (400 radius) for 4.5 seconds every time she throws a dagger at an enemy while the enemy team does not otherwise have vision of her.(bug)\nBecause of this, the vision on Katarina's location will persist for up-to 4.5 seconds after the channel ends.\nDeath Lotus will not end if no enemies remain in range.\n Spell shield will block and be consumed by only one dagger.\nEach dagger counts as a separate hit for effects such as  Conqueror,  Electrocute, and  Eclipse's Ever Rising Moon.\nThe following table refers for interactions while Katarina is  channeling:\nTrying to cast a disabled active (excluding  Hextech Rocketbelt) will buffer it to cast at the completion of the channel.\n\n\nType\n\nChannel\n\n\nAttacking\n\nDisabled in the first and last 0.25 seconds of channel, otherwise, interrupts.\n\n\nAbilities\n\nInterrupts\n\n\nMovement\n\nDisabled in the first and last 0.25 seconds of channel, otherwise, interrupts.\n\n\nItems\n\nUsable\n\n Shurelya's Battlesong  Youmuu's Ghostblade  Randuin's Omen\n\n\nDisabled\n\n Hextech Rocketbelt\n\n\nInterrupted by\n\nAll item-actives not specified above interrupt\n\n\nConsumables\n\nUsable\n\n\nSpells\n\nUsable\n\n Barrier  Clarity  Cleanse  Exhaust  Ghost  Heal  Ignite  Smite\n\n\nDisabled\n\n Recall  Hexflash\n\n\nInterrupted by\n\n Flash  Teleport\n\n\nInterrupted by\n\nDeath Cast-inhibiting effects",
+      "projectile": "TRUE",
+      "speed": "2400",
+      "spellEffects": "aoe",
+      "spellshieldable": "Special",
+      "targeting": "Proximity"
     }
   ],
-  adaptiveType: 'Magic damage',
-  attackType: 'Melee',
-  attributeRatings: {
-    abilityReliance: 100,
-    control: 1,
-    damage: 3,
-    difficulty: 2,
-    mobility: 3,
-    toughness: 1,
-    utility: 1
+  "adaptiveType": "Magic damage",
+  "attackType": "Melee",
+  "attributeRatings": {
+    "damage": 3,
+    "toughness": 1,
+    "control": 1,
+    "mobility": 3,
+    "utility": 1,
+    "abilityReliance": 100,
+    "difficulty": 2
   },
-  faction: 'noxus',
-  fullName: 'Katarina Du Couteau',
-  lore: 'Decisive in judgment and lethal in combat, Katarina is a Noxian assassin of the highest caliber. Eldest daughter to the legendary General Du Couteau, she made her talents known with swift kills against unsuspecting enemies. Her fiery ambition has driven her to pursue heavily-guarded targets, even at the risk of endangering her allies—but no matter the mission, Katarina will not hesitate to execute her duty amid a whirlwind of serrated daggers.',
-  patchLastChanged: '25.13',
-  positions: [
-    'Middle'
+  "faction": "noxus",
+  "fullName": "Katarina Du Couteau",
+  "lore": "Decisive in judgment and lethal in combat, Katarina is a Noxian assassin of the highest caliber. Eldest daughter to the legendary General Du Couteau, she made her talents known with swift kills against unsuspecting enemies. Her fiery ambition has driven her to pursue heavily-guarded targets, even at the risk of endangering her allies—but no matter the mission, Katarina will not hesitate to execute her duty amid a whirlwind of serrated daggers.",
+  "patchLastChanged": "25.13",
+  "positions": [
+    "Middle"
   ],
-  price: {
-    blueEssence: 1575,
-    rp: 790
+  "price": {
+    "blueEssence": 1575,
+    "rp": 790
   },
-  releaseDate: '2009-09-19',
-  resource: 'None',
-  roles: [
-    'Assassin',
-    'Mage'
+  "releaseDate": "2009-09-19",
+  "resource": "None",
+  "roles": [
+    "Assassin",
+    "Mage"
   ],
-  stats: {
-    acquisitionRadius: {
-      flat: 400
+  "stats": {
+    "health": {
+      "flat": 672,
+      "perLevel": 108
     },
-    armor: {
-      flat: 28,
-      perLevel: 4.7
+    "healthRegen": {
+      "flat": 7.5,
+      "perLevel": 0.7
     },
-    attackCastTime: {
-      flat: 0.3
+    "mana": {
+      "flat": 0
     },
-    attackDamage: {
-      flat: 58,
-      perLevel: 3.2
+    "manaRegen": {
+      "flat": 0
     },
-    attackDelayOffset: {
-      flat: -0.15
+    "armor": {
+      "flat": 28,
+      "perLevel": 4.7
     },
-    attackRange: {
-      flat: 125
+    "magicResistance": {
+      "flat": 32,
+      "perLevel": 2.05
     },
-    attackSpeed: {
-      flat: 0.658,
-      perLevel: 2.74
+    "attackDamage": {
+      "flat": 58,
+      "perLevel": 3.2
     },
-    attackSpeedRatio: {
-      flat: 0.658
+    "movespeed": {
+      "flat": 335
     },
-    attackTotalTime: {
-      flat: 1.6
+    "acquisitionRadius": {
+      "flat": 400
     },
-    criticalStrikeDamage: {
-      flat: 175
+    "selectionRadius": {
+      "flat": 120
     },
-    criticalStrikeDamageModifier: {
-      flat: 1
+    "pathingRadius": {
+      "flat": 35
     },
-    gameplayRadius: {
-      flat: 65
+    "gameplayRadius": {
+      "flat": 65
     },
-    health: {
-      flat: 672,
-      perLevel: 108
+    "criticalStrikeDamage": {
+      "flat": 175
     },
-    healthRegen: {
-      flat: 7.5,
-      perLevel: 0.7
+    "criticalStrikeDamageModifier": {
+      "flat": 1
     },
-    magicResistance: {
-      flat: 32,
-      perLevel: 2.05
+    "attackSpeed": {
+      "flat": 0.658,
+      "perLevel": 2.74
     },
-    mana: {
-      flat: 0
+    "attackSpeedRatio": {
+      "flat": 0.658
     },
-    manaRegen: {
-      flat: 0
+    "attackCastTime": {
+      "flat": 0.3
     },
-    movespeed: {
-      flat: 335
+    "attackTotalTime": {
+      "flat": 1.6
     },
-    pathingRadius: {
-      flat: 35
+    "attackDelayOffset": {
+      "flat": -0.15
     },
-    selectionRadius: {
-      flat: 120
+    "attackRange": {
+      "flat": 125
     }
   }
 }

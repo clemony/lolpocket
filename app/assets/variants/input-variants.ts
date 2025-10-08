@@ -9,10 +9,15 @@ export const inputVariants = tv({
   variants: {
     size: {
       default: 'text-2',
-      header: 'text-10 font-bold tracking-tight [&_input]:text-10 [&_input]:font-bold [&_input]:tracking-tight',
+      header: 'text-10 font-bold tracking-tight **:text-10 shrink-0 [&_input]:text-10 [&_input]:font-bold [&_input]:tracking-tight',
     },
   },
 })
 
-export type InputVariantProps = VariantProps<typeof inputVariants>
-export type InputSize = NonNullable<VariantProps<typeof inputVariants>['size']>
+export interface InputVariantProps {
+  id?: string
+  class?: string
+  defaultValue?: string
+  modelValue?: string
+  size?: 'default' | 'header'
+}

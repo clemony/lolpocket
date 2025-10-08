@@ -22,12 +22,12 @@ const spells = computed(() => {
       v-tippy="{ content: spells?.sum1, placement: 'right' }"
       :alt="String(spells?.sum1)"
       :src="`/img/spells/${spells?.sum1}.webp`"
-      class="size-8 drop-shadow-sm shadow-sm rounded-md hover-ring" />
+      class="size-8 drop-shadow-sm shadow-sm rounded-md  hover:ring hover:scale-105 transition-all duration-300 ring-bc/60" />
 
     <img
       v-tippy="{ content: spells?.sum2, placement: 'right' }"
       :alt="String(spells?.sum2)"
       :src="`/img/spells/${spells?.sum2}.webp`"
-      class="size-8 shadow-sm rounded-md drop-shadow-sm hover-ring" />
+      class="size-8 shadow-sm rounded-md drop-shadow-sm  hover:ring hover:scale-105 transition-all duration-300 ring-bc/60" />
   </div>
 </template>

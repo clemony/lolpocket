@@ -8,81 +8,38 @@ const { champion, class: className, pocket: p } = defineProps<{
 const pocket = computed (() => p)
 
 const open = shallowRef<boolean>(false)
-const hover = shallowRef<boolean>(false)
+/* const hover = shallowRef<boolean>(false)
 const debounced = refDebounced(hover, 400)
 
 const active = computed (() => open.value || debounced.value)
 
 watch(() => active.value, (newVal) => {
   console.log('💠 - watch - newVal:', newVal)
-})
+}) */
 </script>
 
 <template>
-  <ContextMenu
+  <Popover
     ref="target"
     v-model:open="open">
-    <ContextMenuTrigger
-      class="hover:ring hover:ring-offset-3 ring-offset-b1 !cursor-context-menu ring-bc/50 data-[state=open]:ring-offset-3 data-[state=open]:ring group  rounded-lg size-26 **:pointer-events-none"
-      @mouseover="hover = true"
-      @mouseleave="!open ? hover = false : null"
-      @focusin="hover = true"
-      @focusout="!open ? hover = false : null"
-      @dblclick="pocket.champions.push(champion.key)">
+    <PopoverTrigger
+      :class="cn('hover:ring hover:ring-2 relative transition-all duration-300 overflow-hidden shadow-sm drop-shadow-sm **:cursor-context-menu group focus:ring focus:ring-offset-3 ring-offset-b1 !cursor-context-menu ring-bc/50 open:ring-offset-3 open:ring grid  group  rounded-lg size-26  *:pointer-events-none focus:*:pointer-events-auto', className)"
+      tabindex="0">
       <ChampionIcon
         :id="champion.id"
-        class="rounded-lg"
-        :title="champion.name">
-        <PrismaticShine
-          v-if="active === true"
-          class="scale-111 " />
-      </ChampionIcon>
-    </ContextMenuTrigger>
-    <ContextMenuContent
-      v-if="open"
-      align="start"
-      class="w-54 p-1.5">
-      <PopoverItem
+        :title="champion.name"
         class=""
-        @click="navigateTo(`/champions/${champion.key}`)">
+        @click="pocket.champions.push(champion.key)">
+      </ChampionIcon>
+      <span class="group-focus:opacity-100 group-open:opacity-100   transition-all duration-300   opacity-0 bg-neutral/70 **:text-nc/30 justify-self-center  p-2 absolute  size-full  flex justify-center">
         <icon
-          name="open"
-          class="size-5" />
-        {{ champion.name }} Info
-      </PopoverItem>
-      <DropdownMenuSeparator />
-      <tippy
-        :tag="null"
-        placement="right-start"
-        :interactive="true"
-        :offset="[0, 6]"
-        theme="base"
-        :hide-on-click="true">
-        <PopoverItem
-          as="label">
-          <icon
-            name="add" />
-          <input
-            v-model="pocket.champions"
-            :aria-label="champion.name"
-            type="checkbox"
-            :value="champion.key"
-            class="peer hidden" />
-          Add to pocket
-        </PopoverItem>
-
-        <template #content>
-          <button
-            class="w-48 rounded-lg cursor-pointer hover:underline h-7 flex justify-between items-center"
-            @click="as().settings.closedDblClickChampion">
-            ...or double-click icon.
-
-            <icon
-              name="x"
-              class="size-4" />
-          </button>
-        </template>
-      </tippy>
-    </ContextMenuContent>
-  </ContextMenu>
+          name="gg:arrow-up"
+          class="size-full mix-blend-screen" />
+      </span>
+    </PopoverTrigger>
+    <PocketChampionMenu
+      v-if="open"
+      :pocket
+      :champion />
+  </Popover>
 </template>

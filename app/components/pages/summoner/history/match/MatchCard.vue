@@ -81,7 +81,7 @@ const queue = computed(() => {
               placement: 'top',
             }"
             alt="champion-icon"
-            class="rounded-xl size-17" />
+            class="rounded-xl size-17  hover:scale-105 transition-all duration-300 " />
 
           <!--  spells -->
           <PlayerSpells

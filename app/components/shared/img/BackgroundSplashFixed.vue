@@ -9,7 +9,7 @@ const { class: className, img: i } = defineProps<{
 const img = useImage()
 const { scrollYProgress } = useScrollInject()
 
-const y = useTransform(scrollYProgress, [0, 1], ['-3%', '-80%'])
+const y = useTransform(scrollYProgress, [0, 1], ['-10%', '-80%'])
 </script>
 
 <template>

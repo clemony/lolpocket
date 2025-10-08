@@ -123,55 +123,64 @@ const filteredStats = computed (() => {
 <template>
   <Collapsible
     v-model:open="ui().collapseStates.championInfo[0]"
-    class="px-0 data-[state=open]:!overflow-visible field-box  ">
-    <CollapsibleTrigger
-      class="flex z-0   min-h-16 h-16  w-full items-center justify-between  px-5  ">
-      <h3 class="dst">
-        {{ champion.name }} lv. {{ level[0] }}
-      </h3>
-      <CaretFlip />
-    </CollapsibleTrigger>
-    <CollapsibleContent class="z-1 h-fit w-full gap-2 flex flex-col pb-2 data-[state=open]:!overflow-visible">
-      <div class="w-full h-12 mt-2 relative px-4">
-        <Slider
-          v-model:model-value="level"
-          class="z-1 "
-          thumb-class="size-6  shadow-none drop-shadow-none !overflow-visible  grid place-items-center relative border-0  focus-visible:!ring-1 ring ring-b4 focus-visible:!ring-neutral focus-visible:!ring-offset-2"
-          thumb-alignment="contain"
-          :default-value="[1]"
-          :max="18"
-          :step="1"
-          :min-steps-between-thumbs="1"
-          :min="1">
-          <span class="!text-1 absolute font-semibold">{{ level[0] }}</span>
-        </Slider>
-        <div class=" absolute pl-5.5 pr-4 h-10 z-0 w-full left-1  top-1 grid grid-cols-18 justify-evenly ">
-          <button
-            v-for="i in 18"
-            :key="i"
-            class="size-full hover:**:font-bold hover:**:opacity-100 cursor-pointer transition-all duration-200 grid  relative "
-            @click="level[0] = i">
-            <div
-              :class="cn('absolute  !self-start grid')"
-              :style="{
-                transform: `translateX(${((i - 1) / 18) * 100}%)`,
-              }">
-              <span
-                :class="cn('opacity-50 !self-start scale-y-50', { 'scale-y-80 translate-y-0.5': [1, 6, 11, 16, 18].includes(i) })">
-                |
-              </span>
-              <span
-                v-if="[1, 6, 11, 16, 18].includes(i) "
-                class="absolute font-mono items-end self-end justify-self-center  translate-y-4.5 text-1 ">
-                {{ i }}
-              </span>
-            </div>
-          </button>
-        </div>
+    class="px-0 data-[state=open]:!overflow-visible group/cl flex flex-col gap-6 data-[state=open]:h-auto">
+    <CollapsibleTrigger class="w-full cursor-default field-box flex flex-col">
+      <div
+        class="flex group/tr  min-h-16  h-16 px-5  cursor-pointer  w-full items-center justify-between">
+        <h3 class="dst group-hover/tr:underline underline-offset-3">
+          Stats
+        </h3>
+        <CaretFlip />
       </div>
       <div
+        class="w-full pb-2  px-5  -mt-3 flex flex-col items-start group-data-[state=open]/cl:animate-in  group-data-[state=open]/cl:fade-in-0  group-data-[state=closed]/cl:animate-out  group-data-[state=closed]/cl:fade-out group-data-[state=closed]/cl:hidden duration-300"
+        @click.stop>
+        <span class="w-full text-start">
+          {{ champion.name }} lv. {{ level[0] }}
+        </span>
+        <div class="w-full h-12 mt-5 mb-1 relative">
+          <Slider
+            v-model:model-value="level"
+            class="z-1 "
+            thumb-class="size-6  shadow-none drop-shadow-none !overflow-visible  grid place-items-center relative border-0  focus-visible:!ring-1 ring ring-b4 focus-visible:!ring-neutral focus-visible:!ring-offset-2"
+            thumb-alignment="contain"
+            :default-value="[1]"
+            :max="18"
+            :step="1"
+            :min-steps-between-thumbs="1"
+            :min="1">
+            <span class="!text-1 absolute font-semibold">{{ level[0] }}</span>
+          </Slider>
+          <div class=" absolute pl-5.5 pr-4 h-10 z-0 w-full left-1  top-1 grid grid-cols-18 justify-evenly ">
+            <button
+              v-for="i in 18"
+              :key="i"
+              class="size-full hover:**:font-bold hover:**:opacity-100 cursor-pointer transition-all duration-200 grid  relative "
+              @click="level[0] = i">
+              <div
+                :class="cn('absolute  !self-start grid')"
+                :style="{
+                  transform: `translateX(${((i - 1) / 18) * 100}%)`,
+                }">
+                <span
+                  :class="cn('opacity-50 !self-start scale-y-50', { 'scale-y-80 translate-y-0.5': [1, 6, 11, 16, 18].includes(i) })">
+                  |
+                </span>
+                <span
+                  v-if="[1, 6, 11, 16, 18].includes(i) "
+                  class="absolute tabular-nums items-end self-end justify-self-center  translate-y-4.5 text-1 ">
+                  {{ i }}
+                </span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </CollapsibleTrigger>
+    <CollapsibleContent class="z-1 h-fit  w-full gap-2 flex flex-col pb-2 data-[state=open]:!overflow-visible">
+      <div
         :class="
-          cn('grid grid-cols-2 gap-x-6 px-5  mt-2  gap-y-2  *:w-full w-full items-center auto-rows-fr transition-all duration-100', { 'max-h-0 opacity-0 hidden invisible': open })
+          cn('grid grid-cols-2 gap-x-8 px-5  mt-2  field-box pt-3  gap-y-2  *:w-full w-full items-center auto-rows-fr transition-all duration-100', { 'max-h-0 opacity-0 hidden invisible': open })
         ">
         <ChampionStat
           v-for="(stat, i) in filteredStats.default.stats"
@@ -184,13 +193,13 @@ const filteredStats = computed (() => {
       <Collapsible
         v-model:open="open"
         class="w-full">
-        <CollapsibleContent class="flex gap-2 flex-col pb-1">
-          <template
+        <CollapsibleContent class="flex pt-2 gap-8 flex-col pb-1">
+          <div
             v-for="group, ix in filteredStats.more"
-            :key="ix">
-            <Separator class="bg-b3/80 first-of-type:hidden" />
+            :key="ix"
+            class=" field-box pt-3 ">
             <div
-              class="!px-5 pt-0.5 justify-self-start justify-start text-5 font-bold">
+              class="field-legend">
               {{ group.name }}
             </div>
             <div
@@ -205,15 +214,18 @@ const filteredStats = computed (() => {
                 :length="group.stats.length"
                 :stat />
             </div>
-          </template>
+          </div>
         </CollapsibleContent>
         <CollapsibleTrigger
           class="w-full">
           <Button
-            size="sm"
-            variant="ghost"
-            class="w-[98%] justify-self-center  justify-center">
-            <CaretFlip fill />
+            variant="link"
+            class="w-[98%] px-2 inline justify-self-center mt-2 text-1 opacity-50 hover:opacity-100 text-end">
+            <span class="align-bottom">{{ open ? 'less' : 'more' }}</span>
+
+            <span class="font-mono inline align-baseline -tracking-[2.5px] size-4.5 grid place-items-center">
+              [{{ open ? '-' : '+' }}]
+            </span>
           </Button>
         </CollapsibleTrigger>
       </Collapsible>

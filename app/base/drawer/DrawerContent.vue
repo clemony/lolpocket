@@ -4,6 +4,9 @@ import { useForwardPropsEmits } from 'reka-ui'
 import { DrawerContent, DrawerPortal } from './drawer-index'
 import DrawerOverlay from './DrawerOverlay.vue'
 
+defineOptions({
+  inheritAttrs: false
+})
 const props = defineProps<DialogContentProps & { class?: HTMLAttributes['class'], side?: Side }>()
 const emits = defineEmits<DialogContentEmits>()
 const forwarded = useForwardPropsEmits(props, emits)

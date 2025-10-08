@@ -10,10 +10,10 @@ const { class: className, summoner } = defineProps<{
 </script>
 
 <template>
-  <IconHeader class="-ml-6">
+  <IconHeader class="gap-6">
     <template #icon>
       <SummonerIcon
-        class="size-20 rounded-full mt-2 ml-6"
+        class="size-20 rounded-full mt-2"
         :summoner />
     </template>
     <!-- header name -->
@@ -26,10 +26,12 @@ const { class: className, summoner } = defineProps<{
     <!-- header sub-text -->
 
     <template #subheader>
-      <SummonerTag :summoner />
-      <!--       <SummonerRegion :region-id="summoner?.region" /> -->
+      <div class="flex items-center gap-4 px-0.5">
+        <SummonerTag :summoner />
+        <!--       <SummonerRegion :region-id="summoner?.region" /> -->
 
-      <SummonerLevel :summoner />
+        <SummonerLevel :summoner />
+      </div>
     </template>
   </IconHeader>
 </template>

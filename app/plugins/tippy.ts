@@ -1,4 +1,5 @@
 import 'tippy.js/animations/scale.css'
+import 'tippy.js/themes/translucent.css'
 import VueTippy, { roundArrow } from 'vue-tippy'
 
 export default defineNuxtPlugin((nuxtApp) => {
@@ -17,7 +18,7 @@ export default defineNuxtPlugin((nuxtApp) => {
           expanded: 'auto',
         },
         // arrow: roundArrow + roundArrow,
-        delay: [800, 0],
+        delay: [1000, 0],
         duration: [150],
         flip: true,
         followCursor: false,
@@ -25,16 +26,16 @@ export default defineNuxtPlugin((nuxtApp) => {
         interactiveBorder: 2,
         offset: [0, 8],
         placement: 'top',
-        popperOptions: {
+        /*         popperOptions: {
           modifiers: [
             {
               name: 'arrow',
               options: {
-                padding: 4, // Ensure arrow has space to position
+                padding: 4,
               },
             },
           ],
-        },
+        }, */
         role: 'tooltip',
         showOnCreate: false,
         theme: 'base',

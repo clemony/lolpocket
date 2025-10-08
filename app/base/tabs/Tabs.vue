@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import type { TabsRootEmits } from 'reka-ui'
-import type { TabsRootPropsWithNullableModel } from '~~/shared/types/types.extend'
+import type { TabsRootEmits, TabsRootProps } from 'reka-ui'
 import { TabsRoot, useForwardPropsEmits } from 'reka-ui'
 
-const props = defineProps<TabsRootPropsWithNullableModel>()
+const props = defineProps<TabsRootProps>()
 const emits = defineEmits<TabsRootEmits>()
 
 const forwarded = useForwardPropsEmits(props, emits)

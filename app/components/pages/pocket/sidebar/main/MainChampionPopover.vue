@@ -50,7 +50,7 @@ watch(
         hover="btn"
         :class="
           cn(
-            'aspect-square  relative transition-[colors, opacity] p-0 duration-300 relative w-full h-auto hover:text-bc/60 hover:inset-shadow-xs data-[state=open]:ring-2 hover:ring overflow-hidden ring-bc/60 data-[state=open]:btn-active',
+            'aspect-square  relative transition-[colors, opacity] p-0 duration-300 relative w-full h-auto hover:text-bc/60 hover:inset-shadow-xs open:ring-2 hover:ring overflow-hidden ring-bc/60 open:btn-active',
             { 'shadow-sm drop-shadow-sm ': pocket.main?.champion },
           )
         ">
@@ -64,7 +64,7 @@ watch(
           class="*:scale-160"
           :img="ix().getSplash(pocket.main?.champion, 'tile')" />
         <div
-          class="size-full opacity-0 group-hover/collapse:opacity-100 group-data-[state=open]/collapse:opacity-100 inset-0 transition-opacity duration-300 bg-neutral/60 absolute grid place-items-center">
+          :class="cn('size-full opacity-0 group-hover/collapse:opacity-100 group-open/collapse:opacity-100 inset-0 transition-opacity duration-300 bg-neutral/60 absolute grid place-items-center', { 'bg-b2 **:text-bc/40': !pocket.main?.champion })">
           <CaretFlip
             class="!text-nc size-8 drop-shadow-sm opacity-80 translate-y-18"
             fill />

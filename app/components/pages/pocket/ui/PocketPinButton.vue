@@ -1,7 +1,8 @@
 <script lang="ts" setup>
-const { class: className, pocket: p } = defineProps<{
+const { class: className, pocket: p, size } = defineProps<{
   class?: HTMLAttributes['class']
   pocket: Pocket
+  size: string
 }>()
 
 const pocket = computed(() => p)
@@ -14,9 +15,9 @@ const pocket = computed(() => p)
     variant="ghost"
     shape="circle"
     base="btn"
-    size="sm"
+    :size
     hover="neutral"
-    :class="cn(' pointer-events-auto !size-8  group/pin *:mt-px *:size-4.25 *:dst *:absolute', className)">
+    :class="cn(' pointer-events-auto !size-7  group/pin *:mt-px *:size-4.25 *:dst *:absolute', className)">
     <input
       v-model="pocket.location.pinned"
       type="checkbox"
