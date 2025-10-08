@@ -64,9 +64,9 @@ watch(
           class="*:scale-160"
           :img="ix().getSplash(pocket.main?.champion, 'tile')" />
         <div
-          :class="cn('size-full opacity-0 group-hover/collapse:opacity-100 group-open/collapse:opacity-100 inset-0 transition-opacity duration-300 bg-neutral/60 absolute grid place-items-center', { 'bg-b2 **:text-bc/40': !pocket.main?.champion })">
+          :class="cn('size-full opacity-0 group-hover/collapse:opacity-100 group-open/collapse:opacity-100 inset-0 p-1 transition-opacity duration-300 bg-neutral/60 absolute grid justify-center items-end', { 'bg-b2 **:text-bc/40': !pocket.main?.champion })">
           <CaretFlip
-            class="!text-nc size-8 drop-shadow-sm opacity-80 translate-y-18"
+            class="!text-nc size-8 drop-shadow-sm opacity-80 "
             fill />
         </div>
       </Button>

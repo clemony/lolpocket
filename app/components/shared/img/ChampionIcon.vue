@@ -22,7 +22,7 @@ const champId = computed (() => params ? params.value : id)
     :alt="title || alt || `Champion ${champId} icon`"
     :class="
       cn(
-        'object-center overflow-hidden shadow-sm size-full rounded-lg  bg-b2/40 drop-shadow-sm grid place-items-center ',
+        'object-center overflow-hidden shrink-0 shadow-sm size-full rounded-lg  bg-b2/40 drop-shadow-sm grid place-items-center ',
         className,
       )
     ">

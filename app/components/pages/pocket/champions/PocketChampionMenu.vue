@@ -1,24 +1,32 @@
 <script setup lang="ts">
-const { champion, pocket: p } = defineProps<{
-  champion: Champion
+import type { PopoverContentEmits, PopoverContentProps } from 'reka-ui'
+import { useForwardPropsEmits } from 'reka-ui'
+
+const props = defineProps<PopoverContentProps & {
+  champion: ChampionIndex
   pocket: Pocket
 }>()
 
-const pocket = computed (() => p)
+const emits = defineEmits<PopoverContentEmits>()
+
+const forwarded = useForwardPropsEmits(props, emits)
+const pocket = computed (() => props.pocket)
 </script>
 
 <template>
   <PopoverContent
+    v-bind="forwarded"
     align="start"
-    class="w-54 p-1 rounded-lg">
+    class="w-54 p-1 pb-1.5 rounded-lg">
     <PopoverItem
-      class="justify-between"
       @click="navigateTo(`/champions/${champion.key}`)">
+      <span class="size-4.5 relative grid place-items-center">
+        <ChampionIcon
+          :id="champion.id"
+          :title="champion.name"
+          class="size-5.5 absolute" />
+      </span>
       {{ champion.name }}'s profile
-      <ChampionIcon
-        :id="champion.id"
-        :title="champion.name"
-        class="size-6 -ml-1" />
     </PopoverItem>
     <DropdownMenuSeparator class="mt-1.25 mb-1" />
     <PopoverItem

@@ -1,0 +1,43 @@
+        <BasicCard
+
+          v-for="data in masteryStats"
+
+          :key="data.title"
+
+          class="px-7 min-w-64 w-80 pb-5 pt-7 grid gap-4">
+
+          <div class="w-full gap-0.25 flex items-center">
+
+            <template
+
+              v-for="number in data.data.toString().split('')"
+
+              :key="number">
+
+              <h1
+
+                v-if="number != ','"
+
+                class="font-black bg-neutral rounded-md text-nc py-1 px-1.25 justify-self-center tracking-wide text-nowrap text-10">
+
+                {{ number }}
+
+              </h1>
+
+              <h1
+
+                v-else
+
+                class="font-black w-3.5 h-full relative items-end justify-self-center tracking-wide text-nowrap text-9>
+
+                <icon
+
+                  name="simple-icons:comma"
+
+                  class="size-3.5 absolute bottom-0" />
+
+              </h1>
+
+            </template>
+
+          </div>

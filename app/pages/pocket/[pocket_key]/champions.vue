@@ -56,6 +56,7 @@ watchEffect(() => {
           v-for="champion in results.filter(r => !pocket.champions.includes(r.key))"
           :key="champion.id">
           <PocketChampion
+            :align-offset="-9"
             :champion
             :pocket />
         </motion.div>

@@ -1,0 +1,6 @@
+ps().pockets.forEach(p =>
+  Object.assign(p, {
+    likes: 1,
+  })
+)
+console.log(ps().pockets)
