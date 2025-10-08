@@ -17,6 +17,7 @@ logs
 *.log
 
 #notes
+.notes
 **/📌*
 
 #old
