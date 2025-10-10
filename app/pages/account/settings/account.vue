@@ -2,7 +2,7 @@
 import { providers } from '#shared/appdata/authProviders'
 
 definePageMeta({
-  name: 'account',
+  title: 'account',
   description: 'Manage your account settings and login settings.',
   icon: 'at',
   path: '/settings/account',
@@ -25,39 +25,42 @@ async function onSubmit(values: any) {
 
 const user = useSupabaseUser()
 
-const userProviders = computed(() =>
+const userProviders = await computedAsync(() =>
   Object.values(user.value.app_metadata.providers)
 )
 </script>
 
 <template>
   <form
+    v-if="user"
     class="space-y-12 w-full"
     @submit="onSubmit">
     <!-- username -->
 
-    <fieldset
-      id="username"
-      class="space-y-6">
-      <div class="leading-4">
-        <h4
-          as="legend"
-          class="text-5 font-semibold mb-2">
+    <FieldSet
+      id="username">
+      <FieldContent>
+        <FieldTitle>
           Username
-        </h4>
+        </FieldTitle>
 
-        <p class="label text-wrap">
+        <FieldDescription>
           This is the name that will be used throughout the site. Defers to in
           game name if a Riot account is connected.
-        </p>
-      </div>
+        </FieldDescription>
+      </FieldContent>
       <ClientOnly>
-        <Input
-          v-model="as().account.username"
-          type="text"
-          placeholder="Username" />
+        <InputGroup>
+          <InputGroupInput
+            v-model="as().account.username"
+            type="text"
+            placeholder="Username" />
+          <InputGroupAddon>
+            <icon name="user" />
+          </InputGroupAddon>
+        </InputGroup>
       </ClientOnly>
-    </fieldset>
+    </FieldSet>
 
     <!-- region select -->
 
@@ -138,7 +141,7 @@ const userProviders = computed(() =>
         </h4>
 
         <span
-          v-if="userProviders.includes(provider.name)"
+          v-if="userProviders?.includes(provider.name)"
           class="text-2">
           Connected
         </span>
@@ -149,7 +152,7 @@ const userProviders = computed(() =>
 
         <Switch
           name="toggle-provider"
-          :model-value="userProviders.includes(provider.name)"
+          :model-value="userProviders?.includes(provider.name)"
           class="switch data-[state=checked]:ring data-[state=checked]:ring-white/60 scale-90 -mt-0.25 dst" />
       </label>
     </fieldset>

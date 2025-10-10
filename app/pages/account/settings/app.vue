@@ -1,10 +1,9 @@
 <script lang="ts" setup>
 definePageMeta({
-  name: 'settings',
-  title: 'General',
+  title: 'App Settings',
   description: 'Manage general app utilities and settings.',
-  icon: 'gear',
-  path: '/settings',
+  icon: 'lucide:monitor-cog',
+  path: '/settings/app',
 })
 
 const settingsData = [

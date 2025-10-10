@@ -30,7 +30,7 @@ const tag = computed(() => {
   <Primitive
     v-if="tag"
     :as="el"
-    :class="cn('inline-flex items-center leading-0 antialiased', className)">
+    :class="cn('flex items-center leading-0 antialiased', className)">
     <icon
       v-if="!noTag"
       name="lucide:hash"

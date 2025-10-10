@@ -59,6 +59,7 @@ function onKeyDown(event: KeyboardEvent) {
     @keydown="onKeyDown">
     <slot
       :can-scroll-next
+
       :can-scroll-prev
       :carousel-api
       :carousel-ref

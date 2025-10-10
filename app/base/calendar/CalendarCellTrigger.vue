@@ -22,7 +22,7 @@ const forwardedProps = useForwardProps(delegatedProps)
       // Disabled
       'data-[disabled]:text-bc/50 data-[disabled]:opacity-50',
       // Unavailable
-      'data-[unavailable]:text-destructive-foreground data-[unavailable]:line-through',
+      'data-[unavailable]:text-destructive-bc data-[unavailable]:line-through',
       // Outside months
       'data-[outside-view]:text-bc/50 data-[outside-view]:opacity-50 [&[data-outside-view][data-selected]]:bg-b2/50 [&[data-outside-view][data-selected]]:text-bc/50 [&[data-outside-view][data-selected]]:opacity-30',
       props.class,

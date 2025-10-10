@@ -6,6 +6,7 @@ definePageMeta({
   name: 'history',
   title: 'match history',
   icon: 'history',
+  listClass: '**:stroke-[1.6]',
   order: 0,
 })
 

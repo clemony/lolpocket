@@ -29,6 +29,8 @@
   --color-mana-hex: #145b96;
   --color-energy: #d0b800;
   --color-error: oklch(59.33% 0.1319 21.78);
+  --color-success: oklch(68% 51% 157deg),
+
   --color-top: #e0746b;
   --color-fighter: oklch(78.32% 0.1173 37);
   --color-apen: oklch(0.6 0.1303 32.32);
@@ -83,6 +85,7 @@
   --hsp: var(--color-hsp);
   --enchanter: var(--color-enchanter);
   --ah: var(--color-ah);
+  --success: var(--color-success);
   --emerald: var(--color-emerald);
   --hp: var(--color-hp);
   --resolve: var(--color-resolve);

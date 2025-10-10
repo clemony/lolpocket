@@ -1,8 +1,9 @@
 <script lang="ts" setup>
 definePageMeta({
   title: 'settings',
-  level: 1,
   order: 10,
+  path: '/settings',
+  redirect: '/settings/app'
 })
 
 // Account tracking
@@ -24,6 +25,7 @@ const { syncIfDirty: syncSettings } = useSupabaseSync(
 
 <template>
   <SeparatorLayout
+    class="!overflow-hidden"
     description="Manage your account settings and set display preferences."
     title="Settings">
     <LayoutAsideSplit>

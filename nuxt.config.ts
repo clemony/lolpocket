@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url'
 export default defineNuxtConfig({
   alias: {
     '#server': fileURLToPath(new URL('./server', import.meta.url)),
+    '@schema': fileURLToPath(new URL('./schema', import.meta.url)),
     '@scripts': fileURLToPath(new URL('./scripts', import.meta.url)),
     '@types': fileURLToPath(new URL('./types', import.meta.url)),
     '@variants': fileURLToPath(new URL('./app/assets/variants', import.meta.url)),
@@ -38,7 +39,7 @@ export default defineNuxtConfig({
     format: ['webp'],
   },
   imports: {
-    dirs: ['#shared/utils', '#shared/types', '@variants', '@types'],
+    dirs: ['#shared/utils', '#shared/types', '@variants', '@types', '@schema'],
   },
   modules: [
     '@pinia/nuxt',
@@ -87,6 +88,7 @@ export default defineNuxtConfig({
       login: '/login',
       saveRedirectToCookie: true,
     },
+    types: '@types/database.types.ts',
     url: process.env.NUXT_PUBLIC_SUPABASE_URL,
     useSsrCookies: false,
   },

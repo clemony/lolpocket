@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 definePageMeta({
-  name: 'profile',
+  title: 'profile settings',
   description:
     'Set your public profile display settings and hide your annoyances.',
-  icon: 'at',
+  icon: 'user-cog',
   path: '/settings/profile',
   search: 'user',
   /* middleware: 'confirm-auth', */

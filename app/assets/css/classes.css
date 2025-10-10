@@ -29,12 +29,13 @@
   }
 
   .scrollbar-hidden,
-  .scrollbar-hide,
-  .scrollbar-hidden::-webkit-scrollbar,
-  .scrollbar-hide::-webkit-scrollbar {
+  .scrollbar-none {
+  &::-webkit-scrollbar {
     display: none;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+
   }
 
   .tip-icon {

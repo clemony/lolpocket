@@ -7,64 +7,99 @@ const user = useSupabaseUser()
 
 const router = useRouter()
 
-const routes = computed(() => {
-  return router.getRoutes().filter(r => r.path.match(/\/settings.*/g))
+const settings = computed(() => {
+  return useRoute('settings').matched[0].children.filter(r => r.path !== '/settings/account').sort()
 })
+console.log('🌱 - settings:', settings)
 
 const open = shallowRef(false)
 const target = shallowRef<HTMLButtonElement>(null)
 </script>
 
 <template>
-  <Popover v-model:open="open">
-    <PopoverTrigger
-      ref="target"
-      as-child
-      size="icon"
-      class="size-9 shrink-0 p-0 cursor-pointer grayscale transition-all duration-200  hover:ring ring-bc/50 hover:grayscale-0 group data-[state=open]:grayscale-0">
-      <SummonerIcon
-        class="size-9  *:size-full  rounded-full" />
+  <Popover>
+    <PopoverTrigger as-child>
+      <Button
+        variant="outline"
+        class="h-16 w-full shadow-warm shadow-black/5  pl-2 justify-between">
+        <div class="gap-3 inline-flex **:align-bottom items-center ">
+          <SummonerIcon class="size-11 rounded-lg relative" />
+          <SummonerName
+            as="h2"
+            class="dst pl-1 truncate leading-5 text-bc/90" />
+          <SummonerTag class="pl-1 [&_svg]:pt-px align-bottom italic leading-5" />
+        </div>
+
+        <icon
+          name="select"
+          class="size-4" />
+      </Button>
     </PopoverTrigger>
     <PopoverContent
-      class="w-[--reka-dropdown-menu-trigger-width] min-w-56 rounded-lg p-1"
-      side="bottom"
-      align="end"
+      class="w-[var(--reka-popover-trigger-width)] rounded-lg pb-2"
+      side="top"
+      align="start"
       :side-offset="4">
-      <div class="flex items-center gap-2 px-1 py-1.5 text-left text-2">
-        <SummonerIcon class="h-8 w-8 rounded-lg text-nc" />
+      <PopoverItem
+        class="h-10 ">
+        <icon name="mail" />
+        Inbox
 
-        <div class="grid flex-1 text-left text-2 leading-tight">
-          <SummonerName class="truncate font-semibold" />
-          <SummonerTag class="truncate text-1" />
-        </div>
-      </div>
+        <span
+          v-if="as().account"
+          class="absolute right-4 text-2 font-mono opacity-60">
+          {{ as().account?.inbox.messages.filter(m => !m.read).length }}
+        </span>
+      </PopoverItem>
+
+      <DropdownMenuSeparator class="my-1" />
+
+      <PopoverItem
+        v-if="as().loggedIn"
+        class="h-10"
+        @click="closeAndNavigate('/settings/account')">
+        <icon name="at" />
+        Account
+      </PopoverItem>
+
+      <HoverCard>
+        <HoverCardTrigger as-child>
+          <PopoverItem
+            class="h-10 open:btn-active open:bg-b2/80 open:border-b3/60 open:noise-1 group/t"
+            @click="closeAndNavigate('/settings')">
+            <icon
+              name="gear"
+              class="!size-4.75" />
+            Settings
+
+            <icon
+              name="right"
+              class="size-3.5 absolute right-3 opacity-50 group-hover:opacity-60 group-open:opacity-60" />
+          </PopoverItem>
+        </HoverCardTrigger>
+
+        <HoverCardContent
+          class="!py-1.5 p-1"
+          side="right"
+          :align-offset="-4"
+          align="end">
+          <PopoverItem
+            v-for="child in settings"
+            :key="child.path"
+            class="h-10 capitalize">
+            <icon
+              :name="String(child.meta?.icon)"
+              :class="cn('', child.meta?.listClass)"
+              @click="navigateTo(child.path)" />
+            {{ child.meta?.title || child.name }}
+          </PopoverItem>
+        </HoverCardContent>
+      </HoverCard>
 
       <DropdownMenuSeparator />
-      <div>
-        <PopoverItem>
-          <icon name="arrow-up" />
-          h
-        </PopoverItem>
-      </div>
-      <DropdownMenuSeparator />
-      <div>
-        <PopoverItem
-          v-if="as().loggedIn"
-          @click="closeAndNavigate('/settings/account')">
-          <icon name="at" />
-          Account
-        </PopoverItem>
-        <PopoverItem @click="closeAndNavigate('/settings')">
-          <icon name="gear" />
-          Settings
-        </PopoverItem>
-        <PopoverItem>
-          <icon name="ph:bell" />
-          Notifications
-        </PopoverItem>
-      </div>
-      <DropdownMenuSeparator />
-      <PopoverItem v-if="as().loggedIn">
+      <PopoverItem
+        v-if="as().loggedIn"
+        class="h-9">
         <icon
           name="log-out"
           @click="useSignOut()" />

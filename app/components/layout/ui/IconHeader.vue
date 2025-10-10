@@ -1,17 +1,24 @@
 <script lang="ts" setup>
+import { motion } from 'motion-v'
+
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
 }>()
 
-const { scrollYProgress } = useScrollInject()
-const y = useTransform(scrollYProgress, [0, 1], ['-3%', '-80%'])
+const { scrollY } = useScrollInject()
+const y = useTransform(scrollY, [0, 208], ['0', '-200%'])
+
+useMotionValueEvent(scrollY, 'change', (latest) => {
+  console.log('Page scroll: ', Math.round(latest * 100) / 100)
+  console.log('🌱 - y:', y)
+})
 </script>
 
 <template>
-  <header
+  <motion.header
     :class="
       cn(
-        'relative flex flex-nowrap items-center gap-4  items-center h-20  w-fit max-w-220 ',
+        'absolute flex flex-nowrap items-center gap-4  items-center h-20  w-fit max-w-220 ',
         className,
       )
     "
@@ -35,5 +42,5 @@ const y = useTransform(scrollYProgress, [0, 1], ['-3%', '-80%'])
         <slot name="subheader" />
       </div>
     </div>
-  </header>
+  </motion.header>
 </template>

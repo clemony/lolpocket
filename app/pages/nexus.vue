@@ -7,7 +7,8 @@ const container = useDomRef()
 
 definePageMeta({
   name: 'nexus',
-  icon: 'mdi:atom-variant',
+  icon: 'majesticons:atom-2',
+  listClass: '!size-5.25 **:stroke-[1.6]',
   order: 1,
   path: '/nexus',
 })

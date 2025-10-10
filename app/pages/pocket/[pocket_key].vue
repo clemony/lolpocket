@@ -49,7 +49,7 @@ async function testSync() {
       <PocketHeader :pocket="pocket" />
     </template>
 
-    <div class="size-full pl-32 relative gap-6 overflow-hidden flex bg-b1">
+    <div class="w-4/5 px-14 justify-self-center relative gap-6 overflow-hidden flex bg-b1">
       <PocketSidebar>
         <Button
           variant="btn"

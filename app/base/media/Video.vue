@@ -24,7 +24,7 @@ function reload() {
   <video
     ref="videoRef"
     autoplay
-    muted
+    b2
     loop
     disablepictureinpicture
     disableremoteplayback
