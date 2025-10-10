@@ -10,11 +10,7 @@ const props = defineProps<
   }
 >()
 
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
-
-  return delegated
-})
+const delegatedProps = reactiveOmit(props, 'class', 'scrollbarClass')
 </script>
 
 <template>
@@ -24,11 +20,11 @@ const delegatedProps = computed(() => {
     :class="cn('relative', props.class)">
     <ScrollAreaViewport
       data-slot="scroll-area-viewport"
-      class="focus-visible:ring-ring/50 size-full rounded-[inherit] transition-[color,box-shadow] outline-none focus-visible:ring-[3px] focus-visible:outline-1">
+      :class="cn('focus-visible:ring-ring/50 size-full rounded-[inherit] transition-[color,box-shadow] outline-none focus-visible:ring-[3px] focus-visible:outline-1', props.class)">
       <slot />
     </ScrollAreaViewport>
 
-    <ScrollBar :class="cn('bg-black z-10', props.scrollbarClass)" />
+    <ScrollBar :class="cn('', props.scrollbarClass)" />
 
     <ScrollAreaCorner />
   </ScrollAreaRoot>

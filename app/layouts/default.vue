@@ -35,9 +35,7 @@ const route = useRoute()
         <div id="navbar-right" />
 
         <!-- search buttton -->
-        <SearchBox />
-
-        <SidebarUser />
+        <SearchBox class="!bg-b1/60" />
       </header>
       <div
         class="size-full relative justify-self-end">

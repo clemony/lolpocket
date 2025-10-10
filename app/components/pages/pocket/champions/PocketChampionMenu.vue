@@ -7,17 +7,14 @@ const props = defineProps<PopoverContentProps & {
   pocket: Pocket
 }>()
 
-const emits = defineEmits<PopoverContentEmits>()
-
-const forwarded = useForwardPropsEmits(props, emits)
 const pocket = computed (() => props.pocket)
 </script>
 
 <template>
   <PopoverContent
-    v-bind="forwarded"
     align="start"
-    class="w-54 p-1 pb-1.5 rounded-lg">
+    :hide-when-detached="true"
+    class="w-54 p-1 pb-1.5 rounded-lg pointer-events-auto">
     <PopoverItem
       @click="navigateTo(`/champions/${champion.key}`)">
       <span class="size-4.5 relative grid place-items-center">
@@ -30,30 +27,40 @@ const pocket = computed (() => props.pocket)
     </PopoverItem>
     <DropdownMenuSeparator class="mt-1.25 mb-1" />
     <PopoverItem
+      for="champion-add-or-remove-from-pocket"
       as="label">
       <icon
-        name="add" />
+        :name="pocket.champions.includes(champion.key) ? 'minus' : 'add'" />
       <input
         v-model="pocket.champions"
         :aria-label="champion.name"
         type="checkbox"
+        name="champion-add-or-remove-from-pocket"
         :value="champion.key"
         class="peer hidden" />
-      Add to pocket
+      <span class="peer-checked:hidden">
+        Add to pocket
+      </span>
+      <span class="peer-not-checked:hidden">
+        Remove from pocket
+      </span>
     </PopoverItem>
 
     <PopoverItem
-      as="label">
+      as="label"
+      :class="cn('has-disabled:opacity-100 disabled')"
+      @click="pocket.main.champion = champion.key">
       <icon
         name="star"
-        class="!size-4 ml-px **:stroke-[2.8] dst" />
+        :class="cn('!size-4 ml-px **:stroke-[2.8] dst', { 'fill-precision': pocket.main.champion === champion.key })" />
       <input
         v-model="pocket.champions"
+        :disabled="pocket.champions.includes(champion.key)"
         :aria-label="champion.name"
         type="checkbox"
         :value="champion.key"
         class="peer hidden" />
-      Set main champion
+      {{ pocket.main.champion === champion.key ? 'Main champion' : 'Set main champion' }}
     </PopoverItem>
   </PopoverContent>
 </template>

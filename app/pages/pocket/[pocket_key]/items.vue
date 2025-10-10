@@ -36,35 +36,16 @@ const tabValues = [
 </script>
 
 <template>
-  <SidebarProvider
-    style="
-      --sidebar-width: 26rem;
-      --sidebar-width-mobile: 26rem;
-      --sidebar-icon-width: 3.8rem;
-    "
-    class="w-full h-full max-h-[95vh] relative overflow-hidden">
-    <ResizablePanelGroup
-      as-child
-      direction="horizontal"
-      class="inset-0 max-h-[95vh]">
-      <SidebarInset as-child>
-        <ResizablePanel
-          :default-size="50"
-          :min-size="20"
-          class="bg-b1 flex size-full relative overflow-y-auto">
-          <ItemSets :pocket="pocket" />
-        </ResizablePanel>
-        <ResizableHandle with-handle />
-        <ResizablePanel
-          :min-size="35"
-          class="relative overflow-hidden flex flex-col z-0 justify-end">
-          <section
-            class="size-full relative overscroll-auto justify-center overflow-y-auto">
-            <LazyDraggableItemList />
-          </section>
-        </ResizablePanel>
-      </SidebarInset>
-    </ResizablePanelGroup>
-    <!-- <PocketItemFilters /> -->
-  </SidebarProvider>
+  <div
+    class="w-full">
+    <div
+      class="bg-b1 flex  relative overflow-y-auto">
+      <ItemSets :pocket="pocket" />
+    </div>
+    <div
+      class="relative  flex flex-col z-0 justify-end">
+      <PocketItemFilters />
+      <LazyDraggableItemList />
+    </div>
+  </div>
 </template>

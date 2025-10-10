@@ -18,7 +18,7 @@ const y = useTransform(scrollYProgress, [0, 1], ['-10%', '-80%'])
       class="h-full pointer-events-none -right-4 top-0 bottom-32 inset-0 before:size-full before:absolute before:z-1 before:bg-linear-to-r before:from-bg-tint-b2/60 before:from-45% before:to-75% before:to-transparent">
       <motion.div
         :style="{
-          backgroundImage: `url('${img(i)}')`,
+          backgroundImage: `url('${img(i, { quality: 100 })}')`,
           backgroundPositionX: '140%',
           backgroundPositionY: y,
         }"

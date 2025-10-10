@@ -31,9 +31,9 @@ watch(() => active.value, (newVal) => {
         class=""
         @click="pocket.champions.push(champion.key)">
       </ChampionIcon>
-      <span class="group-focus:opacity-100 group-open:opacity-100   transition-all duration-300   opacity-0 bg-neutral/70 **:text-nc/30 justify-self-center  p-2 absolute  size-full  flex justify-center">
+      <span class="group-focus:opacity-100 group-open:opacity-100   transition-all duration-300   opacity-0 bg-neutral/70 **:text-nc/30 justify-self-center  p-4 absolute  size-full  flex justify-center">
         <icon
-          name="gg:arrow-up"
+          name="ic:sharp-arrow-upward"
           class="size-full mix-blend-screen" />
       </span>
     </PopoverTrigger>

@@ -32,9 +32,9 @@ watchEffect(() => {
 </script>
 
 <template>
-  <div class="w-full pr-32 pl-14 z-auto overflow-y-auto pt-12 mx-auto">
+  <div class="w-full  pl-14 z-auto overflow-y-auto pt-30 mx-auto">
     <div
-      class="flex gap-6 sticky z-1 bg-linear-to-b from-b1 to-b1/70 backdrop-blur-lg -top-12 py-4 items-end flex-col px-2 justify-center w-full">
+      class="flex gap-6  z-1 bg-linear-to-b from-b1 to-b1/70 backdrop-blur-lg py-4 items-end flex-col px-2 justify-center w-full">
       <SelectedChampions :pocket="pocket">
         <Input
           v-model="searchQuery"
@@ -43,14 +43,15 @@ watchEffect(() => {
           class="max-w-80 border-b4/60 h-11 w-80 ml-3"
           type="text"
           @clear:input="searchQuery = ''">
-          <icon name="search" />
+          <icon
+            name="search" />
         </Input>
       </SelectedChampions>
     </div>
 
     <motion.div
       layout
-      class="h-fit pb-34 justify-start grid grid-flow-row auto-cols-auto pt-10 grid-cols-[repeat(auto-fill,minmax(80px,1fr))] w-full inset-0 px-2 gap-3">
+      class="h-fit pb-34 justify-start grid grid-flow-row auto-cols-auto pt-4 grid-cols-[repeat(auto-fill,minmax(80px,1fr))] w-full inset-0 pl-2 gap-3">
       <AnimatePresence>
         <motion.div
           v-for="champion in results.filter(r => !pocket.champions.includes(r.key))"

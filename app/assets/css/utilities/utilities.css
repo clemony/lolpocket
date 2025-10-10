@@ -14,10 +14,12 @@
   @apply drop-shadow-tiny;
 }
 
-@utility scrollbar-none {
-  display: none;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+@utility scrollbar-hidden {
+  &::-webkit-scrollbar {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 @utility trim {

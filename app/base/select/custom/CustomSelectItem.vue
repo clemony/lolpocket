@@ -13,7 +13,7 @@ const props = defineProps<{
     :value="props.value"
     :class="
       cn(
-        ' data-[state=highlighted]:bg-accent rounded-lg  btn-depth ',
+        ' data-[state=highlighted]:bg-tint-b2/60 rounded-lg  btn-depth ',
         props.class,
       )
     ">

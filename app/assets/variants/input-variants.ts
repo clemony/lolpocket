@@ -2,7 +2,7 @@ import type { VariantProps } from 'tailwind-variants'
 import { tv } from 'tailwind-variants'
 
 export const inputVariants = tv({
-  base: 'input text-2 h-12 items-center [&>svg]:text-tint-bc/70 [&>svg]:**:stroke-[2.2] [&>svg]:size-5',
+  base: 'input text-2 h-12 items-center [&>svg]:text-tint-bc/70 [&>svg]:**:stroke-[2.2] [&>svg]:size-4.5',
   defaultVariants: {
     size: 'default',
   },
@@ -14,10 +14,52 @@ export const inputVariants = tv({
   },
 })
 
+export const inputGroupAddonVariants = tv({
+  base: 'text-bc/60 flex h-auto cursor-text items-center justify-center gap-2 py-1.5  font-medium select-none [&>svg:not([class*=\'size-\'])]:size-4 [&>kbd]:rounded-[calc(var(--radius)-5px)] group-data-[disabled=true]/input-group:opacity-50',
+  defaultVariants: {
+    align: 'inline-start',
+  },
+  variants: {
+    align: {
+      'block-end':
+          'order-last w-full justify-start px-3 pb-3 [.border-t]:pt-3 group-has-[>input]/input-group:pb-2.5',
+      'block-start':
+          'order-first w-full justify-start px-3 pt-3 [.border-b]:pb-3 group-has-[>input]/input-group:pt-2.5',
+      'inline-end':
+          'order-last pr-3 has-[>button]:mr-[-0.45rem] has-[>kbd]:mr-[-0.35rem]',
+      'inline-start':
+          'order-first pl-3 has-[>button]:ml-[-0.45rem] has-[>kbd]:ml-[-0.35rem]',
+    },
+  },
+})
+
+export const inputGroupButtonVariants = tv({
+  base: ' shadow-none flex gap-2 items-center',
+  defaultVariants: {
+    size: 'xs',
+  },
+  variants: {
+    size: {
+      'icon-sm': 'size-8 p-0 has-[>svg]:p-0',
+      'icon-xs': 'size-6 rounded-[calc(var(--radius)-5px)] p-0 has-[>svg]:p-0',
+      'sm': 'h-8 px-2.5 gap-1.5 rounded-md has-[>svg]:px-2.5',
+      'xs': 'h-6 gap-1 px-2 rounded-[calc(var(--radius)-5px)] [&>svg:not([class*=\'size-\'])]:size-3.5 has-[>svg]:px-2',
+    },
+  },
+})
+
+export type InputGroupVariants = VariantProps<typeof inputGroupAddonVariants>
+export type InputGroupButtonVariants = VariantProps<typeof inputGroupButtonVariants>
+
 export interface InputVariantProps {
   id?: string
   class?: string
   defaultValue?: string
   modelValue?: string
   size?: 'default' | 'header'
+}
+export interface InputGroupButtonProps {
+  class?: HTMLAttributes['class']
+  size?: InputGroupButtonVariants['size']
+  variant?: ButtonVariants['variant']
 }

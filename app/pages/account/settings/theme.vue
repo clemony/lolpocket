@@ -3,9 +3,10 @@ import { themes } from '#shared/appdata'
 import { ListboxContent, ListboxRoot } from 'reka-ui'
 
 definePageMeta({
-  name: 'theme',
+  title: 'themes',
   description: 'Choose your app interface colors.',
-  icon: 'gear',
+  icon: 'swatch',
+  listClass: '**:stroke-[1.5] !size-4.75 -mr-0.25',
   path: '/settings/theme',
 })
 

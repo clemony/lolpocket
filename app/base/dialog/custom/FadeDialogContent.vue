@@ -45,7 +45,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 
       <DialogClose
         v-if="props.close"
-        class="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-1 focus:ring-ring focus:ring-offset-1 disabled:pointer-events-none data-[state=open]:bg-accent data-[state=open]:text-bc/50">
+        class="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-1 focus:ring-ring focus:ring-offset-1 disabled:pointer-events-none data-[state=open]:bg-tint-b2/60 data-[state=open]:text-bc/50">
         <icon
           name="x"
           class="size-4.5" />

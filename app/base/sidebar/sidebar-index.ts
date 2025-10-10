@@ -11,7 +11,7 @@ export interface SidebarProps {
 export { useSidebar } from './sidebar-utils'
 
 export const sidebarMenuButtonVariants = cva(
-  'peer/menu-button flex w-full items-center gap-3 justify-start  overflow-hidden rounded-lg p-2 text-left text-3 outline-hidden ring-sidebar-ring transition-[width,height,padding] hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground  [&>span:last-child]:truncate [&>svg]:size-4.5 [&>svg]:shrink-0',
+  'peer/menu-button flex w-full items-center gap-3 justify-start  overflow-hidden rounded-lg p-2 text-left text-3 outline-hidden ring-bc/60 ring transition-[width,height,padding] hover:bg-b3 hover:text-sidebar-bc focus-visible:ring-2 active:bg-b3 active:text-sidebar-bc disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-b3 data-[active=true]:font-medium data-[active=true]:text-sidebar-bc data-[state=open]:hover:bg-b3 data-[state=open]:hover:text-sidebar-bc  [&>span:last-child]:truncate [&>svg]:size-4.5 [&>svg]:shrink-0',
   {
     defaultVariants: {
       size: 'default',
@@ -30,7 +30,7 @@ export const sidebarMenuButtonVariants = cva(
         link: 'btn btn-link no-underline hover:!bg-transparent underline-offset-2',
         neutral: 'btn-neutral text-nc hover:next-nc',
         outline:
-          'bg-background shadow-[0_0_0_1px_hsl(var(--b3))] hover:bg-sidebar-accent hover:text-sidebar-accent-foreground hover:shadow-[0_0_0_1px_hsl(var(--sidebar-accent))]',
+          'bg-b1 shadow-[0_0_0_1px_hsl(var(--b3))] hover:bg-b3 hover:text-sidebar-bc hover:shadow-[0_0_0_1px_hsl(var(--b3))]',
         shadow: 'btn btn-shadow  btn not-hover:!bg-b1',
       },
     },

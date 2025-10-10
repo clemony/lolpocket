@@ -34,7 +34,8 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
         props.class,
       )
     "
-    v-bind="{ ...forwarded, ...$attrs }">
+    v-bind="{ ...forwarded, ...$attrs }"
+    @open-auto-focus.stop>
     <slot />
   </DialogContent>
 </template>

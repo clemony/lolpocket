@@ -21,7 +21,7 @@ const { isMobile, openMobile, setOpenMobile, state } = useSidebar()
     data-slot="sidebar"
     :class="
       cn(
-        'bg-tint-b2/40 text-sidebar-foreground flex h-full w-(--sidebar-width) flex-col',
+        'bg-tint-b2/40 text-bc flex h-full w-(--sidebar-width) flex-col',
         props.class,
       )
     "
@@ -39,7 +39,7 @@ const { isMobile, openMobile, setOpenMobile, state } = useSidebar()
       data-slot="sidebar"
       data-mobile="true"
       :side="side"
-      class="bg-sidebar text-sidebar-foreground w-(--sidebar-width) p-0 [&>button]:hidden"
+      class="bg-sidebar text-bc w-(--sidebar-width) p-0 [&>button]:hidden"
       :style="{
         '--sidebar-width': SIDEBAR_WIDTH_MOBILE,
       }">
@@ -55,7 +55,7 @@ const { isMobile, openMobile, setOpenMobile, state } = useSidebar()
 
   <div
     v-else
-    class="group peer text-sidebar-foreground hidden md:block"
+    class="group peer text-bc hidden md:block"
     data-slot="sidebar"
     :data-state="state"
     :data-collapsible="state === 'collapsed' ? collapsible : ''"

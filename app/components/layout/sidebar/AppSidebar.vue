@@ -1,18 +1,21 @@
 <script lang="ts" setup>
-const sheet = shallowRef<HTMLElement>(null)
+import { SplitterPanel as ResizablePanel } from 'reka-ui'
+
+const layout = shallowRef<HTMLElement>(null)
 const trigger = useTemplateRef<HTMLElement>('trigger')
 const slug = computed (() => getSummonerSlug(as().account))
-const { isOutside } = useMouseInElement(sheet)
+const hovered = ref<boolean>(false)
+const { isOutside } = useMouseInElement(layout)
 const triggerHovered = useElementHover(trigger, {
   delayEnter: 100,
   delayLeave: 100,
 })
 
-watch(() => isOutside.value, (newVal) => {
+/* watch(() => isOutside.value, (newVal) => {
   console.log('🌱 - newVal:', newVal)
   if (newVal === true)
     ui().sidebarOpen = false
-}, { immediate: false })
+}, { immediate: false }) */
 
 watch(() => triggerHovered.value, (newVal) => {
   if (newVal === true)
@@ -46,6 +49,12 @@ function handleAction(action: () => void) {
   ui().sidebarOpen = false
   action()
 }
+
+const pinned = computed(() => {
+  const p = ps().pockets.filter(p => p.location.pinned)
+  console.log('🌱 - p:', p)
+  return [p.slice(0, 3), p.slice(3, 7)]
+})
 </script>
 
 <template>
@@ -63,73 +72,76 @@ function handleAction(action: () => void) {
       <SheetOverlay />
       <SheetContent
         side="left"
-        class="p-0 !z-15 left-0  border-t-0  !min-w-110 shadow-none drop-shadow-md  drop-shadow-black/9 border-l-0 border-b3">
+        class="p-0 !z-15 left-0  border-t-0  !min-w-100 shadow-none drop-shadow-md  drop-shadow-black/9 border-l-0 border-b3">
+        <!-- required header (hidden) -->
+        <HiddenDialogHeader
+          title="lolpocket"
+          desc="Navigate your pocket."
+          class="sr-only" />
         <div
-          ref="sheet"
-          class=" flex flex-col inset-0">
-          <DialogHeader>
-            <DialogTitle class="sr-only">
-              lolpocket
-            </DialogTitle>
-            <DialogDescription class="sr-only">
-              Navigate your pocket.
-            </DialogDescription>
+          ref="layout"
+          class="absolute h-screen inset-0 px-3   scrollbar-hidden  scrollbar-none  py-3 flex flex-col gap-5">
+          <div class="w-full px-1">
+            <h1 class="dss">
+              LP
+            </h1>
+          </div>
 
-            <div class="bg-tint-b2/40 h-30 grid relative">
-              <div class="tabs tabs-lift relative  tab-menu tabs-lg self-end ">
-                <Separator class="absolute bottom-0 bg-b3/60" />
-                <div class="tab tab-active relative w-29 h-15">
-                  <SummonerIcon class="size-22 absolute top-3 relative rounded-lg">
-                    <span class="absolute badge badge-sm badge-neutral text-0 bg-neutral/75 backdrop-blur bottom-0.5">
-                      <SummonerLevel />
-                    </span>
-                  </SummonerIcon>
-                </div>
-                <div class="tab hover:!bg-transparent cursor-default !text-bc !pt-4 justify-start grow h-15">
-                  <SummonerName
-                    as="h2"
-                    class="dst pl-1 text-bc/80" />
-                  <SummonerTag class="pl-1 italic" />
-                </div>
-              </div>
-            </div>
-            <div class="h-9   grid grid-cols-4 pr-4 pl-29 gap-3 max-w-full">
-              <Button
-                v-for="btn in btns"
-                :key="btn.name"
-                v-tippy="{ content: btn.name, theme: 'base', placement: 'bottom' }"
-                variant="ghost"
-                tabindex="-1"
-                class="size-full "
-                hover="btn"
-                @click="handleAction(btn.action)">
-                <icon
-                  :name="btn.icon"
-                  class="size-4.5" />
-              </Button>
-            </div>
-          </DialogHeader>
+          <!-- search buttton -->
+          <SearchBox class="justify-between h-11 *:first:gap-4" />
 
-          <aside>
-            <div class="py-2 flex flex-col gap-2">
-              <div class=" px-3 space-y-1 w-full">
-                <SidebarBtnLink
-                  item="nexus"
-                  class="px-3.5 !gap-3 h-11" />
-                <SidebarBtnLink
-                  v-if="slug"
-                  :link="`/summoner/${slug}`"
-                  class="px-3.5  h-11">
+          <!-- summoner linkies -->
+          <div class="space-y-1 my-2">
+            <SidebarBtnLink
+              item="nexus"
+              class="px-3.5 !gap-3 h-11" />
+            <SidebarBtnLink
+              v-if="slug"
+              :link="`/summoner/${slug}`"
+              class="px-3.5  h-11">
+              <icon
+                name="history"
+                class="size-4.75" />
+              Summoner Profile
+            </SidebarBtnLink>
+          </div>
+
+          <DropdownMenuSeparator class="-mx-3" />
+          <!-- pockets -->
+          <div class=" px-1 pb-0 gap-2 grid auto-rows-min ">
+            <PocketPanel :pinned />
+            <Collapsible
+              v-model:open="ui().collapseStates.panel.pocket">
+              <CollapsibleContent class=" gap-2 grid auto-rows-min ">
+                <PocketPanel :pinned />
+              </CollapsibleContent>
+              <CollapsibleTrigger
+                class="w-full mt-1 justify-end group/b"
+                @mouseover="hovered = true"
+                @mouseleave="hovered = false"
+                @blur="hovered = false"
+                @focus="hovered = true">
+                <Button
+                  class="relative  *:transition-all *:duration-200"
+                  shape="square"
+                  :variant="hovered ? 'btn' : 'ghost'"
+                  size="xs">
                   <icon
-                    name="history"
-                    class="size-4.75" />
-                  Summoner Profile
-                </SidebarBtnLink>
-              </div>
-              <PocketPanel />
-              <NavPanel />
-            </div>
-          </aside>
+                    name="more"
+                    class="group-open/b:opacity-0 absolute" />
+                  <icon
+                    name="minus"
+                    class="group-open/b:opacity-50 opacity-0 scale-x-0 group-open/b:scale-x-100 absolute" />
+                </Button>
+              </CollapsibleTrigger>
+            </Collapsible>
+          </div>
+
+          <DropdownMenuSeparator class="-mx-3 -mt-3" />
+          <NavPanel />
+          <!-- summoner menu -->
+
+          <SidebarUser />
         </div>
       </SheetContent>
     </SheetPortal>

@@ -8,7 +8,7 @@ export const authProviders: Provider[] = [
 export const providers = [
   {
     name: 'riot',
-    class: '*:!size-5.25 *:-ml-px *:!text-white bg-neutral/90',
+    class: '*:!size-5.25 *:-ml-px *:!text-white !bg-neutral/90',
     icon: 'riot',
   },
   {

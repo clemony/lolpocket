@@ -20,7 +20,6 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 
 <template>
   <SplitterResizeHandle
-    :hit-area-margins="60"
     v-bind="forwarded"
     :class="
       cn(

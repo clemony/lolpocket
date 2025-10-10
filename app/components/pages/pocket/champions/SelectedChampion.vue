@@ -1,83 +1,70 @@
 <script lang="ts" setup>
-import { motion } from 'motion-v'
+defineOptions({
+  inheritAttrs: false
+})
 
-const { champion, pocket } = defineProps<{
-  champion: string
+const { champion, pocket: p } = defineProps<{
+  champion: ChampionIndex
   pocket: Pocket
 }>()
+const pocket = computed <Pocket>(() => p)
+const open = ref<boolean>(false)
 
-const variants = {
-  hidden: {
-    opacity: 0,
-    scale: 0,
-  },
-  visible: {
-    opacity: [0, 100],
-    scale: [0, 1],
-  },
+function handleRemove() {
+  const champ = pocket.value.champions.findIndex(c => c === champion.key)
+  if (champ)
+    pocket.value.champions.splice(champ, 1)
 }
-
-const werid = computed(() =>
-  isOdd(pocket.champions?.length - (pocket.main?.champion ? 1 : 0))
-)
-console.log('🌱 - werid:', werid)
 </script>
 
 <template>
-  <div class="h-full relative min-w-24 grow max-w-44">
-    <AnimatePresence mode="popLayout">
-      <motion.div
-        :key="champion"
-        animate="visible"
-        initial="hidden"
-        exit="hidden"
-        :transition="{
-          type: 'spring',
-          bounce: 0.2,
-          duration: 0.4,
-        }"
-        :variants="variants"
-        layout
-        :class="
-          cn(
-            'size-full overflow-hidden shadow-sm drop-shadow-sm flex rounded-lg hover:ring-1.5 hover:ring-neutral/80 group/c',
-          )
-        ">
-        <Champion
-          :img="getSplash(champion, 'tile')"
-          :alt="champion"
-          :class="
-            cn(
-              'aspect-auto inset-shadow-sm inset-shadow-black/26 h-24  group-hover/c:*:-translate-y-12 relative *:!scale-120  rounded-lg *:transition-all *:duration-500 *:ease-out overflow-hidden',
-              {
-                'group-last/c:*:-translate-y-26 group-last/c:group-hover/c:*:-translate-y-31':
-                  isOdd(
-                    pocket.champions?.length - (pocket.main?.champion ? 1 : 0),
-                  ),
-              },
-            )
-          "></Champion>
-        <div
-          :class="
-            cn(
-              'size-full  opacity-0 flex-nowrap text-nc transition-all duration-200  flex items-center justify-between  !cursor-pointer absolute bg-neutral/60 left-0 pl-3 pr-2 bottom-0 group-hover/c:opacity-100',
-            )
-          "
-          @click="removeChampion(champion, pocket)">
-          <h2 class="text-wrap text-pretty">
-            {{ hyphenateChampionName(ix().champNameByKey(champion)) }}
-          </h2>
-          <button
-            :title="`Remove ${champion}`"
-            :aria-label="`remove ${champion} from pocket`"
-            class="size-10 group/bbb grid place-items-center btn-square cursor-pointer rounded-lg"
-            hover="btn">
-            <icon
-              name="x"
-              class="!size-6 text-nc group-hover/bbb:**:stroke-4 transition duration-200" />
-          </button>
-        </div>
-      </motion.div>
-    </AnimatePresence>
+  <div class="h-30 overflow-hidden @7xl:basis-1/6 basis-1/3 @3xl:basis-1/4 shrink-0 ">
+    <Popover
+      v-model:open="open">
+      <CarouselItem
+        class="overflow-hidden relative group/all p-1.5 h-30 ">
+        <PopoverTrigger
+          class="hover:ring ring-bc/60 focus:ring open:ring open:ring-offset-3  focus:ring-offset-2 ring-offset-b1 transition-all duration-100 rounded-lg embla__slide group/wrap grid place-items-center size-full shrink-0  *:last:pointer-events-none focus:*:last:pointer-events-auto">
+          <div
+            :class="cn('pointer-events-none size-full group rounded-lg overflow-hidden relative border-0 grid place-items-center overflow-hidden embla__slide z-0 shrink-0 p-0 shadow-sm shadow-black/15 drop-shadow-sm',
+                       'after:inset-0 after:bg-radial-[at_75%_25%] after:from-45% after:absolute after:from-transparent after:to-black/70 after:pointer-events-none after:z-2',
+            )">
+            <AspectRatio
+              :ratio="16 / 9"
+              class="embla__parallax__layer  p-0 size-full scale-[360%] inset-0  **:pointer-events-none  relative  object-center shrink-0">
+              <Champion
+                :k="champion.key"
+                type="centered"
+                class="embla__slide__img embla__parallax__img shrink-0 translate-y-6 bg-black">
+              </Champion>
+            </AspectRatio>
+          </div>
+        </PopoverTrigger>
+        <button
+          :for="`${champion}-select`"
+          class=" m-1.5 rounded-lg justify-between z-2 flex items-end absolute bg-black/0 group-has-focus/all:bg-black/70 group-has-open/all:bg-black/70 pointer-events-none group-has-focus/all:pointer-events-auto group-has-open/all:pointer-events-auto transition-colors duration-300 inset-0 py-1 px-2.5 **:text-white"
+          @click="handleRemove()">
+          <input
+            v-model="pocket.champions"
+            :name="`${champion}-select`"
+            :disabled="!open"
+            type="checkbox"
+            :value="champion.key"
+            class="peer hidden" />
+          <h1 class=" dss  font-bold">
+            {{ champion.name }}
+          </h1>
+
+          <icon
+            name="ic:sharp-arrow-upward"
+            class="rotate-180 mb-2 group-open/wrap:opacity-70 opacity-0" />
+        </button>
+      </CarouselItem>
+      <PocketChampionMenu
+        v-if="open"
+        class="w-[var(--reka-popover-trigger-width)]"
+        :champion
+        :pocket />
+    </Popover>
   </div>
 </template>

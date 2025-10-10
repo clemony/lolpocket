@@ -218,15 +218,9 @@ const filteredStats = computed (() => {
         </CollapsibleContent>
         <CollapsibleTrigger
           class="w-full">
-          <Button
-            variant="link"
-            class="w-[98%] px-2 inline justify-self-center mt-2 text-1 opacity-50 hover:opacity-100 text-end">
-            <span class="align-bottom">{{ open ? 'less' : 'more' }}</span>
-
-            <span class="font-mono inline align-baseline -tracking-[2.5px] size-4.5 grid place-items-center">
-              [{{ open ? '-' : '+' }}]
-            </span>
-          </Button>
+          <LessOrMore
+            :open
+            class="w-[98%] justify-self-center " />
         </CollapsibleTrigger>
       </Collapsible>
     </CollapsibleContent>
