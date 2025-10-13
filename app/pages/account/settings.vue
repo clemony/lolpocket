@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 definePageMeta({
-  title: 'settings',
+  name: 'settings',
   order: 10,
   path: '/settings',
   redirect: '/settings/app'

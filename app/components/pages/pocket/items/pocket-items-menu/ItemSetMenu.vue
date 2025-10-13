@@ -5,53 +5,69 @@ const props = defineProps<{
 }>()
 
 const pocket = computed(() => props.pocket)
-const allPockets = [...ps().pockets]
-const notThisPocket = computed(() => {
-  return allPockets.filter(p => p !== pocket.value)
-})
-console.log('💠 - notThisPocket - notThisPocket:', notThisPocket)
 </script>
 
 <template>
-  <ContrastDropdownItem
+  <PopoverItem
     class=""
     @click="duplicateItemSet(props.set, props.pocket.key)">
     <icon name="copy" />
     Duplicate
-  </ContrastDropdownItem>
+  </PopoverItem>
 
-  <DropdownMenuSub>
-    <ContrastDropdownSubTrigger>
-      <icon
-        name="material-symbols-light:how-to-vote"
-        class="size-7 -ml-1 mr-1.25" />
-      Copy to Pocket
-    </ContrastDropdownSubTrigger>
+  <HoverCard>
+    <HoverCardTrigger
+      as-child
+      class="w-full">
+      <PopoverItem class="relative w-full">
+        <!--         <span class="size-4.5 relative grid place-items-center">
+          <icon
+            name="material-symbols-light:how-to-vote"
+            class="!size-6 shrink-0 absolute" />
+        </span> -->
+        <icon name="arrow-curve-right" />
+        Copy to Pocket
 
-    <ContrastDropdownSubContent>
-      <ContrastDropdownItem
-        v-for="friendlyPocket in notThisPocket"
+        <icon
+          name="right"
+          class="size-4 opacity-50 absolute right-1" />
+      </PopoverItem>
+    </HoverCardTrigger>
+
+    <LazyHoverCardContent
+      side="right"
+      class="px-1 py-1.5 w-64 max-h-100 overflow-y-scroll items-center grid auto-rows-fr"
+      align="start">
+      <PopoverItem
+        v-for="friendlyPocket in ps().pockets.filter(p => p.key !== pocket.key)"
         :key="friendlyPocket.key"
+        class="w-full "
         @click="copyItemSetToPocket(friendlyPocket, props.set)">
-        {{ friendlyPocket.name }}
-      </ContrastDropdownItem>
-    </ContrastDropdownSubContent>
-  </DropdownMenuSub>
+        <PocketIcon
+          :pocket
+          size="sm"
+          class="size-6 rounded-full" />
+        <span class="truncate ">
+          {{ friendlyPocket.name }}
+        </span>
+      </PopoverItem>
+    </LazyHoverCardContent>
+  </HoverCard>
 
-  <ContrastDropdownItem @click="''">
-    <icon name="icon-park-outline:add-item" />
+  <PopoverItem @click="''">
+    <icon name="panel-dash" />
     New Pocket with Set
-  </ContrastDropdownItem>
+  </PopoverItem>
 
-  <ContrastDropdownSeparator />
+  <DropdownMenuSeparator />
 
-  <ContrastDropdownItem @click="resetItems(set)">
+  <PopoverItem @click="resetItems(set)">
     <icon name="reset" />
     Reset Items
-  </ContrastDropdownItem>
+  </PopoverItem>
 
-  <ContrastDropdownItem @click="deleteItemSet(pocket, set)">
+  <PopoverItem @click="deleteItemSet(pocket, set)">
     <icon name="trash" />
     Delete Set
-  </ContrastDropdownItem>
+  </PopoverItem>
 </template>

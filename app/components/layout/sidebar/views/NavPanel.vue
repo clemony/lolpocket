@@ -20,7 +20,7 @@ const navLinks = computed(() => {
 </script>
 
 <template>
-  <div class=" overflow-y-auto scrollbar-hidden  scrollbar-none max-h-full h-full px-2 space-y-2 w-full">
+  <div class=" overflow-y-auto scrollbar-hidden  py-3  max-h-full h-full px-2 space-y-2 w-full">
     <Collapsible
       v-for="parentRoute, i in navLinks"
       :key="parentRoute.name"

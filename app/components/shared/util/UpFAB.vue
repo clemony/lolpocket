@@ -13,8 +13,8 @@ const { scrollTop } = useScrollInject()
     v-tippy="{ content: 'Top', theme, placement, arrow: false }"
     size="xl"
     shape="circle"
-    variant="outline"
-    :class="cn('fab z-10 bg-b1/80 bottom-24 right-24 *:opacity-60 hover:*:opacity-100 !cursor-pointer !pointer-events-auto !size-16 backdrop-blur shadow-sm shadow-black/4', className)"
+    variant="base"
+    :class="cn('fab fx-0 z-10 bg-b1/80 bottom-24 right-24 *:opacity-60 hover:*:opacity-100 !cursor-pointer !pointer-events-auto !size-16 backdrop-blur shadow-sm shadow-black/4', className)"
     @click="scrollTop()">
     <icon
       name="arrow-up"

@@ -12,7 +12,6 @@
 
 @layer base {
   :root {
-    scrollbar-color: oklch(0 0.02476 255.702 / 0.075) rgba(0, 0, 0, 0) !important;
     font-size: 12px;
     /* user-select: none; */
     -webkit-font-smoothing: antialiased;
@@ -28,6 +27,9 @@ img {
   html,
   body,
   #app {
+
+    scrollbar-color: --alpha(var(--color-b3) / 40%) transparent;
+    scrollbar-width: thin;
     font-family: var(--font-sans);
     @apply text-bc h-screen w-screen text-3 selection:bg-n1/80 selection:text-nc relative;
   }

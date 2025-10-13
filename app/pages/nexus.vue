@@ -7,7 +7,7 @@ const container = useDomRef()
 
 definePageMeta({
   name: 'nexus',
-  icon: 'majesticons:atom-2',
+  icon: 'nexus',
   listClass: '!size-5.25 **:stroke-[1.6]',
   order: 1,
   path: '/nexus',
@@ -62,7 +62,14 @@ definePageMeta({
     </div>
 
     <Separator class="bg-b3/60 w-full" />
-
+    <div class="tabs tabs-lift-start !space-x-0 !gap-0 w-200 h-200">
+      <a class="tab size-24">Advanced</a>
+      <a class="tab tab-active size-24">General</a>
+      <div class="tab-content p-4 bg-base-200 w-160 h-160">
+        <p>Content for the active tab dfdfd</p>
+      </div>
+      <a class="tab size-24">Settings</a>
+    </div>
     <div class="w-100 h-60">
       <!-- <RecentPatchWinrates /> -->
     </div>

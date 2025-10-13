@@ -3,10 +3,10 @@ import { championPositions } from '#shared/appdata'
 
 const { class: className, position: pos } = defineProps<{
   class?: HTMLAttributes['class']
-  position: string
+  position: string | null
 }>()
 
-const position = computed(() => championPositions.find(p => p.name === pos))
+const position = computed(() => championPositions.find(p => p.name === (pos ?? 'All')))
 </script>
 
 <template>
@@ -18,15 +18,15 @@ const position = computed(() => championPositions.find(p => p.name === pos))
       )
     "
     :style="{
-      backgroundColor: position.color,
-      borderColor: position.color,
+      backgroundColor: position?.color,
+      borderColor: position?.color,
     }">
     <slot name="1" />
     <component
-      :is="`i-lol-${position.name}`"
+      :is="`i-lol-${position?.name}`"
       :class="cn('size-3.5  dst shrink-0')" />
     <slot>
-      {{ position.name }}
+      {{ position?.name }}
     </slot>
   </label>
 </template>

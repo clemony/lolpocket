@@ -1,82 +1,40 @@
-import type { EmblaCarouselType, EmblaEventType } from 'embla-carousel'
+import type { EmblaCarouselType } from 'embla-carousel'
 
-const TWEEN_FACTOR_BASE = 0.2
-let tweenFactor = 0
-let tweenNodes: HTMLElement[] = []
-
-function setTweenNodes(emblaApi: EmblaCarouselType): void {
-  tweenNodes = emblaApi.slideNodes().map((slideNode) => {
-    return slideNode.querySelector('.embla__parallax__layer') as HTMLElement
-  })
-}
-
-function setTweenFactor(emblaApi: EmblaCarouselType): void {
-  tweenFactor = TWEEN_FACTOR_BASE * emblaApi.scrollSnapList().length
-}
-
-function tweenParallax(
+export function setupTweenParallax(
   emblaApi: EmblaCarouselType,
-  eventName?: EmblaEventType
-): void {
-  const engine = emblaApi.internalEngine()
-  const scrollProgress = emblaApi.scrollProgress()
-  const slidesInView = emblaApi.slidesInView()
-  const isScrollEvent = eventName === 'scroll'
+  options?: {
+    axisRef?: Ref<'horizontal' | 'vertical'>
+    factor?: number
+  },
+) {
+  const isVertical = computed(() => options?.axisRef?.value === 'vertical')
+  const tweenFactor = options?.factor ?? 1.2
 
-  emblaApi.scrollSnapList().forEach((scrollSnap, snapIndex) => {
-    let diffToTarget = scrollSnap - scrollProgress
-    const slidesInSnap = engine.slideRegistry[snapIndex]
+  const tweenNodes = emblaApi.slideNodes().map(node =>
+    node.querySelector('.embla__parallax__layer') as HTMLElement
+  )
 
-    slidesInSnap.forEach((slideIndex) => {
-      if (isScrollEvent && !slidesInView.includes(slideIndex))
+  const applyTween = () => {
+    const scrollProgress = emblaApi.scrollProgress()
+    emblaApi.slideNodes().forEach((slideNode, index) => {
+      const diffToTarget = emblaApi.scrollSnapList()[index] - scrollProgress
+      const translate = diffToTarget * (-1 * tweenFactor) * 100
+      const tweenNode = tweenNodes[index]
+      if (!tweenNode)
         return
 
-      if (engine.options.loop) {
-        engine.slideLooper.loopPoints.forEach((loopItem) => {
-          const target = loopItem.target()
-
-          if (slideIndex === loopItem.index && target !== 0) {
-            const sign = Math.sign(target)
-
-            if (sign === -1) {
-              diffToTarget = scrollSnap - (1 + scrollProgress)
-            }
-            if (sign === 1) {
-              diffToTarget = scrollSnap + (1 - scrollProgress)
-            }
-          }
-        })
-      }
-
-      const translate = diffToTarget * (-1 * tweenFactor) * 100
-      const tweenNode = tweenNodes[slideIndex]
-      tweenNode.style.transform = `translateX(${translate}%)`
+      tweenNode.style.transform = isVertical.value
+        ? `translateY(${translate}%)`
+        : `translateX(${translate}%)`
     })
-  })
-}
-
-export function setupTweenParallax(emblaApi: EmblaCarouselType): () => void {
-  setTweenNodes(emblaApi)
-  setTweenFactor(emblaApi)
-  tweenParallax(emblaApi)
-
-  emblaApi
-    .on('reInit', setTweenNodes)
-    .on('reInit', setTweenFactor)
-    .on('reInit', tweenParallax)
-    .on('scroll', tweenParallax)
-    .on('slideFocus', tweenParallax)
-
-  return (): void => {
-    tweenNodes.forEach(slide => slide.removeAttribute('style'))
   }
-}
 
-export function teardownTweenParallax(emblaApi: EmblaCarouselType) {
-  emblaApi
-    .off('reInit', setTweenNodes)
-    .off('reInit', setTweenFactor)
-    .off('reInit', tweenParallax)
-    .off('scroll', tweenParallax)
-    .off('slideFocus', tweenParallax)
+  emblaApi.on('scroll', applyTween)
+  emblaApi.on('reInit', applyTween)
+  applyTween()
+
+  return () => {
+    emblaApi.off('scroll', applyTween)
+    emblaApi.off('reInit', applyTween)
+  }
 }

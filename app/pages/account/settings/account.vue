@@ -205,7 +205,7 @@ const userProviders = await computedAsync(() =>
             }"
             size="xxs"
             class="rounded-md border-b3/60"
-            variant="default">
+            variant="base">
             <icon
               name="refresh"
               class="size-3.5" />

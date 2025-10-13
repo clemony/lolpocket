@@ -37,13 +37,11 @@ const tabValues = [
 
 <template>
   <div
-    class="w-full">
+    class="w-full flex gap-10">
+    <ItemSets :pocket="pocket" />
+
     <div
-      class="bg-b1 flex  relative overflow-y-auto">
-      <ItemSets :pocket="pocket" />
-    </div>
-    <div
-      class="relative  flex flex-col z-0 justify-end">
+      class="relative w-1/2 flex flex-col z-0 justify-end">
       <PocketItemFilters />
       <LazyDraggableItemList />
     </div>

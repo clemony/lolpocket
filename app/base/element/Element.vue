@@ -9,6 +9,7 @@ const { as = 'label', class: className } = defineProps<
     variant?: LabelVariants['variant']
     size?: LabelVariants['size']
     hover?: LabelVariants['hover']
+    shape?: LabelVariants['shape']
     as?: AsTag | string
   }
 >()
@@ -21,7 +22,7 @@ const { as = 'label', class: className } = defineProps<
     :class="
       cn(
         'group/placeholder pointer-events-none size-full items-center justify-center gap-2 self-center aspect-square btn btn-square !p-0 ',
-        labelVariants({ variant, size, hover }),
+        labelVariants({ variant, size, hover, shape }),
         className,
       )
     ">

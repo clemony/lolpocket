@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { closeAndNav } from '../utils'
-
 defineOptions({
   meta: {
     name: 'Pockets',
@@ -9,48 +7,54 @@ defineOptions({
 
   },
 })
-const { pinned } = defineProps<{
-  pinned: Array<Pocket[]>
-}>()
-const route = useRoute()
+
+const pinned = computed(() => {
+  const p = ps().pockets.filter(p => p.location.pinned)
+  const result: Pocket[][] = []
+
+  for (let i = 0; i < p.length; i += 3)
+    result.push(p.slice(i, i + 3))
+
+  return result
+})
+console.log('🌱 - pinned:', pinned)
 </script>
 
 <template>
-  <div
-    v-for="set, i in pinned"
-    :key="i"
-    class="w-full flex w-full group/wrap gap-2">
-    <button
-      v-for="pocket in set"
-      :key="pocket.key"
-      theme="base"
-      :placement="i === 0 ? 'top-start' : 'bottom-start'"
-      tag="div"
-      :class="
-        cn(
-          'relative group/p  flex max-h-22 min-h-22 h-full rounded-lg flex-1 items-center cursor-pointer *:pointer-events-none shadow-sm drop-shadow-sm shadow-black/8 overflow-hidden transition-all duration-500 delay-50 ease-in-out hover:flex-[3]',
+  <Collapsible
+    v-model:open="ui().collapseStates.panel.pocket">
+    <!-- pockets -->
 
-          //hover
-          '*:transition-scale *:ease-in-out hover:*:scale-100 *:duration-500  group-has-hover/wrap:*:scale-170 ',
-          { 'btn-active': route.params?.pocket_key === pocket.key },
-        )
-      "
-      @click="closeAndNav(`/pocket/${pocket.key}`)">
-      <AspectRatio
-        :ratio="1 / 1"
-        class=" relative  grid place-items-center overflow-hidden  grow flex object-cover">
-        <PocketIcon
-          :img="pocket.icon"
-          class=" h-full absolute grow object-cover" />
-      </AspectRatio>
-      <div class="absolute z-1 size-full text-start flex justify-start items-end bg-neutral/70 text-nc opacity-0 p-1 font-bold text-nc group-hover/p:opacity-100 transition-opacity duration-300">
-        <icon
-          name="open"
-          class="absolute top-1.5 right-1.5 text-nc" />
-        <span class="absolute w-full truncate px-1">
-          {{ pocket.name }}
-        </span>
+    <div
+      class=" px-1 py-2 pb-0 gap-2 grid auto-rows-min">
+      <div
+        v-for="row, i in pinned?.slice(0, 2)"
+        :key="i"
+        class="w-full flex w-full group/wrap gap-2">
+        <PocketFlexRow :row />
       </div>
-    </button>
-  </div>
+    </div>
+    <CollapsibleContent>
+      <div
+        class=" px-1 py-2 pb-0 gap-2 grid auto-rows-min">
+        <div
+          v-for="row, i in pinned?.slice(2)"
+          :key="i"
+          class="w-full flex w-full group/wrap gap-2">
+          <LazyPocketFlexRow
+            :row />
+        </div>
+      </div>
+    </CollapsibleContent>
+
+    <!-- trigger -->
+    <CollapsibleTrigger
+      :disabled="!pinned?.slice(2).length"
+      class="disabled:pointer-events-none w-full relative group/tgr h-8 mt-3 flex items-center justify-center ">
+      <DropdownMenuSeparator class="-mx-4 transition-colors group-hover/tgr:!bg-shade-b3/6 absolute !inset-x-0 duration-200  mb-px mt-0" />
+      <icon
+        name="down"
+        class="self-end size-4 duration-200 mt-px transition-all text-bc/0   group-hover-open/tgr:-scale-y-100 group-hover/tgr:text-bc/50" />
+    </CollapsibleTrigger>
+  </Collapsible>
 </template>

@@ -28,15 +28,13 @@
     @apply shadow-[#000]/4 border-b3/60 rounded-box border shadow-md drop-shadow-sm;
   }
 
-  .scrollbar-hidden,
-  .scrollbar-none {
-  &::-webkit-scrollbar {
+  .scrollbar-hidden::-webkit-scrollbar {
     display: none;
     opacity: 0;
     visibility: hidden;
   }
 
-  }
+
 
   .tip-icon {
     @apply mb-0.25 size-4.25 mr-2 ml-0.5 inline-flex align-middle;

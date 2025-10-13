@@ -1,14 +1,14 @@
 <script lang="ts" setup>
 import { useForwardProps } from 'reka-ui'
-import type { ToggleVariantProps } from '~/assets/variants'
+import type { ToggleVariants } from '~/assets/variants'
 
 const props = withDefaults(defineProps<{
   class?: HTMLAttributes['class']
   summoner: Summoner
   placement?: Side
   theme?: string
-  size?: ToggleVariantProps['size']
-  variant?: ToggleVariantProps['variant']
+  size?: ToggleVariants['size']
+  variant?: ToggleVariants['variant']
 }>(), {
   placement: 'top',
   theme: 'base'

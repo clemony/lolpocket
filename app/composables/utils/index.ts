@@ -1,3 +1,5 @@
 export * from './useCooldown'
+export * from './useDownloadFile'
+export * from './usePinScrollDuringOpen'
 export * from './useSupabaseSessionWait'
 export * from './useThrottledFn'

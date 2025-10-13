@@ -69,14 +69,12 @@ watch(
     <UpdateSummoner
       shape="circle"
       placement="left"
-      size="xl"
       variant="outline"
       class="[&_svg]:size-4 fab  z-10 bg-b1/80 bottom-64 right-24 *:opacity-60 hover:*:opacity-100 !cursor-pointer !pointer-events-auto !size-16 backdrop-blur shadow-sm shadow-black/4" />
     <FollowButton
       :summoner="state.summoner"
       shape="circle"
       placement="left"
-      size="xl"
       active="base"
       variant="outline"
       class="[&_svg]:size-4 fab  z-10 bg-b1/80 bottom-44 right-24 *:opacity-60 hover:*:opacity-100 !cursor-pointer !pointer-events-auto !size-16 backdrop-blur shadow-sm shadow-black/4" />

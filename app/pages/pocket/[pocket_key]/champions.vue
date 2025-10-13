@@ -32,37 +32,76 @@ watchEffect(() => {
 </script>
 
 <template>
-  <div class="w-full  pl-14 z-auto overflow-y-auto pt-30 mx-auto">
-    <div
-      class="flex gap-6  z-1 bg-linear-to-b from-b1 to-b1/70 backdrop-blur-lg py-4 items-end flex-col px-2 justify-center w-full">
-      <SelectedChampions :pocket="pocket">
-        <Input
-          v-model="searchQuery"
-          aria-label="Search champions"
-          placeholder="Search champions..."
-          class="max-w-80 border-b4/60 h-11 w-80 ml-3"
-          type="text"
-          @clear:input="searchQuery = ''">
-          <icon
-            name="search" />
-        </Input>
-      </SelectedChampions>
-    </div>
+  <div class="inset-0 z-auto">
+    <div class="w-full py-10 px-1 sticky z-2 bg-b1/98 backdrop-blur items-center  -top-56 ">
+      <div class=" flex items-center">
+        <h1 class="capitalize w-85">
+          Champions
+        </h1>
+        <div class="flex gap-3 items-center grow ">
+          <Input
+            v-model="cs().filters.query"
+            size="lg"
+            aria-label="Search champions"
+            placeholder="Search champions..."
+            class=" border-b4/60 grow "
+            type="text"
+            @clear:input="cs().filters.query = ''">
+            <icon
+              name="search" />
+          </Input>
 
-    <motion.div
-      layout
-      class="h-fit pb-34 justify-start grid grid-flow-row auto-cols-auto pt-4 grid-cols-[repeat(auto-fill,minmax(80px,1fr))] w-full inset-0 pl-2 gap-3">
-      <AnimatePresence>
-        <motion.div
-          v-for="champion in results.filter(r => !pocket.champions.includes(r.key))"
-          :key="champion.id">
-          <PocketChampion
-            :align-offset="-9"
-            :champion
-            :pocket />
-        </motion.div>
-      </AnimatePresence>
-    </motion.div>
+          <BadgePositionSelect
+            v-model:model-value="cs().filters.position"
+            @update:select="e => cs().filters.position = e" />
+
+          <ToggleGroup
+            type="single"
+            class="gap-0"
+            as-child>
+            <ButtonGroup>
+              <ToggleGroupItem
+                class="bg-b1"
+                size="lg"
+                value="az"
+                variant="shadow"
+                shape="square">
+                <icon
+                  name="qlementine-icons:sort-alpha-asc-16"
+                  class="size-5 " />
+              </ToggleGroupItem>
+              <ToggleGroupItem
+                class="bg-b1"
+                size="lg"
+                value="za"
+                variant="shadow"
+                shape="square">
+                <icon
+                  name="qlementine-icons:sort-alpha-desc-16"
+                  class="size-5" />
+              </ToggleGroupItem>
+            </ButtonGroup>
+          </ToggleGroup>
+        </div>
+      </div>
+    </div>
+    <div class="size-full flex gap-8  z-auto   mx-auto">
+      <motion.div
+        layout
+        class="h-fit justify-between grid grid-flow-row auto-cols-auto p-1 grid-cols-[repeat(auto-fill,minmax(70px,1fr))] w-full inset-0 pb-44  gap-4">
+        <AnimatePresence>
+          <motion.div
+            v-for="champion in cs().filtered.filter(r => !pocket.champions.includes(r.key))"
+            :key="champion.id">
+            <PocketChampion
+              :align-offset="-9"
+              :champion
+              :pocket />
+          </motion.div>
+        </AnimatePresence>
+      </motion.div>
+      <SelectedChampions :pocket="pocket" />
+    </div>
   </div>
 </template>
 

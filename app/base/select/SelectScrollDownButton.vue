@@ -21,7 +21,7 @@ const forwarded = useForwardProps(delegatedProps)
     <slot>
       <icon
         name="down"
-        class="size-6" />
+        class="size-4" />
     </slot>
   </SelectScrollDownButton>
 </template>

@@ -8,7 +8,7 @@ const user = useSupabaseUser()
 const router = useRouter()
 
 const settings = computed(() => {
-  return useRoute('settings').matched[0].children.filter(r => r.path !== '/settings/account').sort()
+  return router.getRoutes().filter(r => r.path === '/settings')[0].children.filter(r => r.path !== '/settings/account').sort()
 })
 console.log('🌱 - settings:', settings)
 
@@ -18,16 +18,17 @@ const target = shallowRef<HTMLButtonElement>(null)
 
 <template>
   <Popover>
-    <PopoverTrigger as-child>
+    <PopoverTrigger
+      as-child>
       <Button
-        variant="outline"
-        class="h-16 w-full shadow-warm shadow-black/5  pl-2 justify-between">
+        variant="ghost"
+        class="h-19 rounded-none pb-1 inset-x-0 -mx-3  px-4 justify-between">
         <div class="gap-3 inline-flex **:align-bottom items-center ">
           <SummonerIcon class="size-11 rounded-lg relative" />
           <SummonerName
-            as="h2"
-            class="dst pl-1 truncate leading-5 text-bc/90" />
-          <SummonerTag class="pl-1 [&_svg]:pt-px align-bottom italic leading-5" />
+            as="h3"
+            class="dst pl-1 font-semibold truncate leading-none text-bc/90" />
+          <SummonerTag class="pl-1 [&_svg]:pt-px align-bottom italic leading-none" />
         </div>
 
         <icon
@@ -36,7 +37,7 @@ const target = shallowRef<HTMLButtonElement>(null)
       </Button>
     </PopoverTrigger>
     <PopoverContent
-      class="w-[var(--reka-popover-trigger-width)] rounded-lg pb-2"
+      class="w-[var(--reka-popover-trigger-width)] rounded-lg shadow-sm pb-2"
       side="top"
       align="start"
       :side-offset="4">

@@ -2,10 +2,7 @@
 import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures'
 import '~/assets/css/plugins/embla.css'
 import type { CarouselApi } from '~/base/carousel/carousel-index'
-import {
-  setupTweenParallax,
-  teardownTweenParallax,
-} from '~/assets/ts/embla-tween-parallax'
+import { setupTweenParallax } from '~/assets/ts/embla-tween-parallax'
 
 const { champion } = defineProps<{
   champion: Champion
@@ -21,6 +18,7 @@ definePageMeta({
 
 const emblaMainApi = ref<CarouselApi>()
 const emblaThumbnailApi = ref<CarouselApi>()
+const carouselOrientation = ref<'horizontal' | 'vertical'>('horizontal')
 const selectedIndex = ref(0)
 
 function onSelect() {
@@ -42,11 +40,14 @@ watchOnce(emblaMainApi, (emblaApi) => {
     return
 
   onSelect()
-  const teardown = setupTweenParallax(emblaApi)
+
+  const teardown = setupTweenParallax(emblaApi, {
+    axisRef: carouselOrientation,
+    factor: 3.5, // tweak this freely
+  })
 
   onBeforeUnmount(() => {
     teardown()
-    teardownTweenParallax(emblaApi)
   })
 })
 
@@ -58,7 +59,7 @@ const skins = computed(() => ix().skins[champion.key])
   <div class="size-full gap-14 overflow-hidden -ml-10 pr-22">
     <Carousel
       :plugins="[WheelGesturesPlugin()]"
-      orientation="horizontal"
+      :orientation="carouselOrientation"
       class="mask-x-from-0% -ml-6 pl-6 mask-x-to-6% mask-x-from-transparent mask-x-to-black relative w-full  overflow-auto"
       @init-api="(val) => (emblaThumbnailApi = val)">
       <CarouselContent

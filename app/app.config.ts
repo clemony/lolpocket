@@ -18,6 +18,7 @@ export default defineAppConfig({
       'tick-sm': 'teenyicons:tick-small-outline',
 
       // arrow
+      'arrow-curve-right': 'lucide:corner-down-right',
       'arrow-left': 'lucide:arrow-left',
       'arrow-right': 'lucide:arrow-right',
       'arrow-up': 'lucide:arrow-up',
@@ -32,6 +33,7 @@ export default defineAppConfig({
       'select': 'lucide:chevrons-up-down',
       'up': 'tabler:chevron-up',
       'up-fill': 'tabler:caret-up-filled',
+      'up-to-line': 'lucide:arrow-up-to-line',
 
       // actions
       'copy': 'lucide:copy',
@@ -162,9 +164,10 @@ export default defineAppConfig({
       'history': 'lucide:history',
       'image': 'lucide:image',
       'images': 'entypo:images',
-      'nexus': 'lucide:atom',
+      'nexus': 'majesticons:atom-2',
       'paint-bucket': 'lucide:paint-bucket',
       'paintbrush': 'lucide:paintbrush-vertical',
+      'panel-dash': 'lucide:panel-top-dashed',
       'plug': 'tabler:plug',
       'swatch': 'lucide:swatch-book',
       'up-face': 'iconoir:emoji-look-up',

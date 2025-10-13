@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-import type { ToggleVariantProps } from '@variants'
+import type { ToggleVariants } from '@variants'
 import type { ToggleProps } from 'reka-ui'
 import { toggleVariants } from '@variants'
 
 interface ToggleItem {
   icon: string
   text: string
-  variant: ToggleVariantProps['variant']
+  variant: ToggleVariants['variant']
 }
 
 const props = defineProps<ToggleProps & {

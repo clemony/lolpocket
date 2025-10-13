@@ -45,7 +45,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
       <SelectViewport
         :class="
           cn(
-            'px-1.25 py-1.5',
+            'px-1.25 py-1.75',
             position === 'popper'
               && 'h-[--reka-select-trigger-height] w-full min-w-[--reka-select-trigger-width] ',
           )
