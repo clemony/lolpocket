@@ -214,6 +214,7 @@ export const useIndexStore = defineStore(
         findInIndex(champions.value, 'key', key, 'id') as number,
       champIdByName: (name: string) =>
         findInIndex(champions.value, 'name', name, 'id'),
+      championById: (id: number) => getByIndex(champions.value, 'id', id),
       championByKey: (key: string) => getByIndex(champions.value, 'key', key),
       champKeyById: (id: number) =>
         findInIndex(champions.value, 'id', id, 'key') as string,

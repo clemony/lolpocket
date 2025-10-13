@@ -1,180 +1,140 @@
 <script lang="ts" setup>
+import { HeadingTip } from '#components'
+import { SelectTrigger } from 'reka-ui'
+
+const {
+  side = 'bottom',
+  sideOffset,
+  align = 'start',
+  class: className,
+  type = 'card',
+} = defineProps<{
+  class?: HTMLAttributes['class']
+  type?: 'card' | 'btn'
+  side?: Side
+  sideOffset?: number
+  align?: Align
+  alignOffset?: number
+}>()
+
 const route = useRoute()
 const pocket = computed(() =>
   ps().getPocket(String(route.params.pocket_key))
 ).value
 
-const searchQuery = ref<string>('')
-const { results } = useSimpleSearch(ix().champions, searchQuery)
-
-function handleChampions(champion: string) {
-  if (pocket.champions.includes(champion))
-    return
-
-  pocket.champions.push(champion)
-}
-
-const itemsPerPage = 8
-const currentPage = ref(1)
-
-const pagedSearchItems = computed(() => {
-  if (!results.value)
-    return null
-  const start = (currentPage.value - 1) * itemsPerPage
-  return results.value.slice(start, start + itemsPerPage)
-})
-
-const pagedItems = computed(() => {
-  const start = (currentPage.value - 1) * itemsPerPage
-  return pocket.champions.slice(start, start + itemsPerPage)
-})
-
 const open = ref(false)
 
-watch(
-  () => results.value.length,
-  (newVal) => {
-    if (newVal)
-      currentPage.value = 1
-  }
-)
+const trigger = useTemplateRef<HTMLElement>('trigger')
 </script>
 
 <template>
-  <Popover v-model:open="open">
-    <PopoverTrigger
-      as-child
-      class="group/collapse">
-      <Button
-        variant="btn"
-        hover="btn"
-        :class="
-          cn(
-            'aspect-square  relative transition-[colors, opacity] p-0 duration-300 relative w-full h-auto hover:text-bc/60 hover:inset-shadow-xs open:ring-2 hover:ring overflow-hidden ring-bc/60 open:btn-active',
-            { 'shadow-sm drop-shadow-sm ': pocket.main?.champion },
-          )
-        ">
-        <icon
-          v-if="!pocket?.main?.champion"
-          name="lp:champ"
-          class="text-bc/20 size-10" />
-        <Champion
-          v-else
-          v-memo="pocket.main?.champion"
-          class="*:scale-160"
-          :img="ix().getSplash(pocket.main?.champion, 'tile')" />
-        <div
-          :class="cn('size-full opacity-0 group-hover/collapse:opacity-100 group-open/collapse:opacity-100 inset-0 p-1 transition-opacity duration-300 bg-neutral/60 absolute grid justify-center items-end', { 'bg-b2 **:text-bc/40': !pocket.main?.champion })">
-          <CaretFlip
-            class="!text-nc size-8 drop-shadow-sm opacity-80 "
-            fill />
-        </div>
-      </Button>
-    </PopoverTrigger>
-    <LazyPopPopoverContent
-      align="start"
-      :side-offset="-10"
-      :align-offset="-2"
-      arrow-class="translate-y-0"
-      class="p-0">
-      <div
-        class="relative w-full px-3 h-12 shrink-0 group/txt gap-3 flex items-center w-full">
-        <icon name="search" />
-        <input
-          v-model="searchQuery"
-          class="h-full placeholder:italic w-full pr-4 text-2 transition-all duration-200"
-          placeholder="Search All Champions..."
-          @keydown.stop
-          @keydown.enter.prevent />
+  <Select
+    v-model:model-value="pocket.main.champion"
+    v-model:open="open">
+    <slot :open>
+      <Card
+        v-if="type === 'card'"
+        ref="trigger"
+        :class="cn('flex basis-1/5  items-center pr-0', className)">
+        <CardContent
+          as="button"
+          :disabled="!pocket.main.champion"
+          class="flex gap-3 py-3 px-4 items-center grow group/c cursor-pointer **:pointer-events-none  disabled:pointer-events-none"
+          @click="pocket.main.champion ? navigateTo(`/chamions/${pocket.main.champion}`) : null">
+          <Element
+            variant="btn"
+            shape="square"
+            class="overflow-hidden shadow-sm drop-shadow-sm relative after:bg-black/70 after:inset-0 after:z-1  after:absolute after:opacity-0 group-hover/c:after:opacity-100 after:transition-opacity after:duration-300 size-16">
+            <icon
+              v-if="!pocket?.main?.champion"
+              name="lp:champ"
+              class="text-bc/20 size-10" />
+            <Champion
+              v-else
+              v-memo="[pocket.main?.champion]"
+              class="*:scale-160"
+              :img="ix().getSplash(pocket.main?.champion, 'tile')" />
 
+            <icon
+              name="open"
+              class="absolute place-self-center text-white/60 z-2 size-6 transition-opacity duration-300 group-hover/c:opacity-100 opacity-0" />
+          </Element>
+
+          <div class=" @6xl:block @6xl:animate-in @6xl:slide-in-from-right @6xl:fade-in hidden flex gap-2 flex-col overflow-hidden shrink">
+            <h3
+              v-memo="[pocket.main?.champion]"
+              :class="cn('truncate leading-7', {
+                'dss group-hover/c:underline': pocket.main?.champion,
+                '!font-normal  opacity-10': !pocket.main?.champion,
+              })">
+              {{ ix().champNameByKey(pocket.main?.champion) || "Champion" }}
+            </h3>
+
+            <p
+              v-memo="[pocket.main?.champion]"
+              :class="cn('text-3 truncate italic leading-none', {
+                'font-medium': pocket.main?.champion,
+                '!font-normal  opacity-20': !pocket.main?.champion,
+              })">
+              {{ ix().getChampionTitle(pocket.main?.champion) || 'None Selected' }}
+            </p>
+          </div>
+        </CardContent>
+
+        <JoinSelectTrigger />
+      </Card>
+
+      <!-- button trigger -->
+      <SelectTrigger
+        v-else-if="type === 'btn'"
+        class="grid place-items-center h-22  group/btn  z-10  pointer-events-auto **:pointer-events-none cursor-pointer !outline-none">
         <Button
-          variant="ghost"
-          size="xs"
-          class="btn-square absolute top-3 right-2 shrink-0 group-has-[:placeholder-shown]/txt:opacity-0 opacity-100 size-6"
-          @click="searchQuery = ''">
-          <icon
-            name="x-sm"
-            class="size-4 **:stroke-[1.5]" />
-        </Button>
-      </div>
-
-      <Separator />
-
-      <div class="pt-3 pb-2 px-1 overflow-y-scroll w-full flex flex-col">
-        <template v-if="results && searchQuery">
-          <LazyLabel
-            v-for="result in pagedSearchItems"
-            :key="result.key"
-            variant="ghost"
-            size="sm"
-            class="justify-start duration-0">
-            <input
-              v-model="pocket.main.champion"
-              type="radio"
-              class="peer hidden"
-              :value="result.key"
-              @change="handleChampions(result.key)" />
-
-            <span class="size-8">
-              <LazyChampionIcon
-                :id="result.id"
-                :alt="result.name"
-                class="size-8 pointer-events-none rounded-lg"
-                hydrate-on-visible />
-            </span>
-            {{ result.name }}
-          </LazyLabel>
-        </template>
-
-        <span v-else-if="searchQuery && !results">
-          No champions found :&lpar;
-        </span>
-        <div
-          v-else
-          class="px-1 grid grid-cols-3 w-full gap-2 grid-flow-row">
-          <PopoverClose as-child>
-            <Button
-              variant="btn"
-              title="Clear main champion"
-              class="w-full border-b3 bg-b2 hover-ring hover:!bg-b3/80 h-auto aspect-square"
-              @click="pocket.main.champion = ''">
-              <icon
-                name="lp:champ"
-                class="text-bc/20 size-7" />
-            </Button>
-          </PopoverClose>
+          v-tippy="{ content: !open ? h(HeadingTip, { subheading: 'Main Champion', heading: ix().champNameByKey(pocket?.main?.champion) || 'None Selected', class: 'py-1 min-w-44' }) : null, theme: 'base', placement: 'left' }"
+          shape="circle"
+          placement="right"
+          variant="outline"
+          class=" bg-b1/80 dss shadow-sm  !size-16  shadow-black/10 ">
+          <span
+            v-if="!pocket?.main?.champion"
+            class="relative size-full grid place-items-center *:transition-opacity *:duration-200">
+            <icon
+              name="lp:champ"
+              class="text-bc/20 size-full group-hover/btn:opacity-0" />
+            <icon
+              name="select"
+              class="size-8 text-bc/60 absolute opacity-0 group-hover/btn:opacity-100" />
+          </span>
           <ChampionIcon
-            v-for="champion in pagedItems"
-            :id="ix().champIdByKey(champion)"
-            :key="champion"
-            as="label"
-            class="rounded-lg cursor-pointer hover-ring w-full h-auto aspect-square"
-            @click="open = false">
-            <input
-              v-model="pocket.main.champion"
-              type="radio"
-              :value="champion"
-              class="peer hidden" />
+            v-else
+            v-memo="[pocket.main?.champion]"
+            :k="pocket.main?.champion"
+            class="relative">
+            <span class="size-full absolute z-11 top-0 opacity-0 left-0 grid group-hover/btn:opacity-100 place-items-center transition-all duration-300 **:text-white/40 bg-black/70">
+              <icon
+                name="select"
+                class="size-8" />
+            </span>
           </ChampionIcon>
-        </div>
-        <Pagination
-          v-model:page="currentPage"
-          :total="pocket.champions.length"
-          :default-page="1"
-          :sibling-count="1"
-          :show-edges="false"
-          :items-per-page="itemsPerPage"
-          class="pt-2 max-w-220 justify-center justify-self-start mx-0">
-          <PaginationContent>
-            <PaginationPrev
-              size="xs"
-              class="disabled:opacity-40 btn-square size-8" />
-            <PaginationNext
-              size="xs"
-              class="disabled:opacity-40 btn-square size-8" />
-          </PaginationContent>
-        </Pagination>
-      </div>
-    </LazyPopPopoverContent>
-  </Popover>
+        </Button>
+      </SelectTrigger>
+    </slot>
+    <LazySelectContent
+      :reference="trigger"
+      :align
+      :side
+      class="p-0 w-[var(--reka-select-trigger-width)] top-[calc(var(--reka-select-trigger-height)+2px)] min-w-54">
+      <SelectItem
+        v-for="champion in pocket.champions"
+        :key="champion"
+        class="*:flex *:gap-3 *:items-center"
+        :value="champion">
+        <ChampionIcon
+          :k="champion"
+          class="size-12" />
+        <span class="font-medium">
+          {{ ix().champNameByKey(champion) }}
+        </span>
+      </SelectItem>
+    </LazySelectContent>
+  </Select>
 </template>

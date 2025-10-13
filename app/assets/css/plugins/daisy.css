@@ -8,24 +8,15 @@
 }
 
 @utility fx-1 {
-  --noise: 0.8;
+  --noise: 0.7;
   --depth: 1;
 }
 
 /* input */
 
 @utility input {
-  @apply focus-within:outline-0 focus-within:outline-offset-0 text-2   focus-within:ring-n1/50 focus-within:ring-1 w-full ring-offset-b1  inset-shadow-black/4  inset-shadow-xs border-b3 **:text-2 h-10;
-  border-image-width: 0 !important;
   --input-color: var(--b3);
 
-}
-
-@utility input-lg {
-    @reference theme('../theme.css');
-  &.input {
-  @apply **:text-10;
-}
 }
 
 /* divider */
@@ -48,16 +39,7 @@
   @apply bg-b1/94 backdrop-blur-sm border-b4/70  text-bc;
 }
 
-/* collapse */
 
-@utility collapse-input {
-  @apply !min-h-0 !py-0 h-11 text-nowrap flex-nowrap items-center justify-start;
-}
-
-@utility collapse-title {
-  @apply !min-h-0 !py-0 h-11 text-nowrap flex-nowrap items-center justify-start;
- /* @apply p-0 w-auto h-auto; */
-}
 
 /* chkbx */
 
@@ -76,13 +58,6 @@
 
 @utility btn {
   @apply font-normal px-3 text-3 gap-3 items-center bg-transparent;
-}
-
-@layer utilities {
-.header.input,
-  .header.input * {
-    font-size: var(--text-10) !important;
-  }
 }
 
 /* chat */
@@ -202,13 +177,13 @@
   --color-neutral: var(--n1) !important;
   --color-neutral-content: var(--nc);
   --color-info: var(--sorcery);
-  --color-info-content: var(--sorcery-light);
+  --color-info-content:#000000;
   --color-success: var(--resolve);
-  --color-success-content: var(--resolve-light);
+  --color-success-content: #000000;
   --color-warning: var(--precision);
-  --color-warning-content: var(--precision-w600);
+  --color-warning-content: #000000;
   --color-error: var(--domination);
-  --color-error-content: var(--domination-light);
+  --color-error-content: #000000;
   --input-color: var(--color-b3);
   --tabcontent-radius-ss: var(--rounded-xl);
   --tabcontent-radius-se: var(--rounded-xl);
@@ -222,4 +197,100 @@
   --radius-field: 0.55rem;
   --depth: 1;
   --noise: 0.8;
+}
+
+.tabs-lift-start {
+  @layer daisyui.modifier {
+    --tabs-height: auto;
+    --tabs-direction: column;
+
+    > .tab {
+      /* ⤷ Inactive state: borders are transparent */
+      --tab-border: var(--border) 0 var(--border) var(--border);
+      --tab-border-colors: #0000 #0000 #0000 #0000;
+      --tab-radius-ss: min(var(--radius-field), var(--tab-radius-min)); /* top-left */
+      --tab-radius-se: 0; /* top-right */
+      --tab-radius-es: min(var(--radius-field), var(--tab-radius-min)); /* bottom-left */
+      --tab-radius-ee: 0; /* bottom-right */
+      --tab-paddings: var(--tab-p) var(--border) var(--tab-p) 0;
+
+      border-width: var(--tab-border);
+      border-color: var(--tab-border-colors);
+      border-radius: var(--tab-radius-ss) var(--tab-radius-se)
+        var(--tab-radius-ee) var(--tab-radius-es);
+      padding: var(--tab-paddings);
+      position: relative;
+      background-color: transparent;
+
+
+     /* ⤷ Active state: visible borders, mask corners */
+      &:is(.tab-active, [aria-selected="true"], [aria-current="true"], [aria-current="page"]),
+      &:is(input:checked, label:has(:checked)) {
+        --tab-border: var(--border) var(--border) var(--border) 0;
+        --tab-border-colors: var(--tab-border-color)
+        #0000
+        var(--tab-border-color)
+          var(--tab-border-color);
+        --tab-paddings: calc(var(--tab-p) - var(--border)) 0
+          calc(var(--tab-p) - var(--border)) var(--border);
+        --tab-inset: 0 auto 0 auto;
+        --tab-grad: calc(69% - var(--border));
+
+        --tab-corner-width: min(var(--radius-field), var(--tab-radius-min));
+        --tab-corner-height: calc(100% + min(var(--radius-field), var(--tab-radius-min)) * 2);
+        --tab-corner-position: top left, bottom left;
+
+        background-color: var(--tab-bg);
+        border-color: var(--tab-border-color);
+
+        --radius-start: radial-gradient(
+          circle at top left,
+          #0000 var(--tab-grad),
+          var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
+          var(--tab-border-color) calc(var(--tab-grad) + var(--border)),
+          var(--tab-bg) calc(var(--tab-grad) + var(--border) + 0.25px)
+        );
+        --radius-end: radial-gradient(
+          circle at bottom left,
+          #0000 var(--tab-grad),
+          var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
+          var(--tab-border-color) calc(var(--tab-grad) + var(--border)),
+          var(--tab-bg) calc(var(--tab-grad) + var(--border) + 0.25px)
+        );
+
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          height: var(--tab-corner-height);
+          width: var(--tab-corner-width);
+          background-position: var(--tab-corner-position);
+          background-image: var(--radius-start), var(--radius-end);
+          background-size: var(--tab-corner-width) var(--tab-corner-width);
+          background-repeat: no-repeat;
+          right: 0;
+          top: calc(-1 * var(--tab-corner-width));
+          bottom: calc(-1 * var(--tab-corner-width));
+          z-index: 1;
+        }
+
+        &:first-child:before {
+          --radius-start: none;
+        }
+
+        &:last-child:before {
+          --radius-end: none;
+        }
+    }
+  }
+
+    > .tab-content {
+       --tabcontent-margin: 0 0 0 calc(-1 * var(--border));
+      --tabcontent-radius-ss: 0;
+      --tabcontent-radius-se: var(--radius-box);
+      --tabcontent-radius-es: var(--radius-box);
+      --tabcontent-radius-ee: var(--radius-box);
+      order: 1;
+    }
+  }
 }

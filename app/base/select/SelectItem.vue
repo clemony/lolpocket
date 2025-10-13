@@ -22,7 +22,7 @@ const forwarded = useForwardProps(delegatedProps)
     v-bind="forwarded"
     :class="
       cn(
-        'relative justify-between  data-[state=checked]:justify-between  flex w-full cursor-default select-none items-center rounded-md py-1.25  px-3 data-[state=checked]:px-3 data-[state=checked]:py-1.25 data-[state=checked]:btn text-2 outline-none focus:bg-b2 focus:text-bc data-[disabled]:pointer-events-none data-[disabled]:opacity-50 data-[state=checked]:border data-[state=checked]:border-b3/60 data-[state=checked]:shadow-xs data-[state=checked]:bg-b2/40',
+        'relative justify-between  data-[state=checked]:justify-between  flex w-full cursor-default select-none items-center rounded-md py-1.25  px-3 data-[state=checked]:px-3   text-2 outline-none focus:bg-b2 focus:text-bc data-[disabled]:pointer-events-none data-[disabled]:opacity-50  border-transparent border data-[state=checked]:border-b2 data-[state=checked]:shadow-xs data-[state=checked]:bg-b2/40',
         props.class,
       )
     ">

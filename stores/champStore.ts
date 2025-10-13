@@ -51,14 +51,14 @@ export const useChampStore = defineStore('ChampStore', () => {
     const allIds = ix().champions.map(i => i.id)
     let matchedIds: Set<number> = new Set(allIds)
 
-    if (filters.value.attackType.length > 0) {
+    if (filters.value.attackType?.length > 0) {
       for (const stat of filters.value.attackType) {
         const ids = championFilters.attackType[stat] ?? []
         matchedIds = new Set(ids.filter(id => matchedIds.has(id)))
       }
     }
 
-    if (filters.value.position.length > 0) {
+    if (filters.value.position?.length > 0) {
       for (const tag of filters.value.position) {
         const ids = championFilters.positions[tag] ?? []
         matchedIds = new Set(ids.filter(id => matchedIds.has(id)))
@@ -75,7 +75,7 @@ export const useChampStore = defineStore('ChampStore', () => {
       matchedIds = new Set(resourceIds.filter(id => matchedIds.has(id)))
     }
 
-    /* if (query) {
+    if (query) {
       matchedIds = new Set(
         [...matchedIds].filter((id) => {
           const champion = ix().championById(id)
@@ -83,16 +83,13 @@ export const useChampStore = defineStore('ChampStore', () => {
             return false
 
           const name = champion.name.toLowerCase()
-          const akas = akaLookup[champion.name.toLowerCase()] || []
-          return (
-            name.includes(query)
-            || akas.some(aka => aka.toLowerCase().includes(query))
-          )
+          return name.includes(query)
         })
       )
     }
- */
-    return Array.from(matchedIds)
+
+    return Array.from(matchedIds).map(id =>
+      ix().champions.find(c => c.id === id))
   })
 
   return {

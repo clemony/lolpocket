@@ -15,10 +15,10 @@
 }
 
 @utility scrollbar-hidden {
+ scrollbar-color: transparent transparent !important;
   &::-webkit-scrollbar {
-    display: none;
-    opacity: 0;
-    visibility: hidden;
+ scrollbar-color: transparent transparent !important;
+    display: none !important;
   }
 }
 

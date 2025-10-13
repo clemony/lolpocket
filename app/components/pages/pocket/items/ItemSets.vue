@@ -35,7 +35,7 @@ watch(items, (newItemSets) => {
 </script>
 
 <template>
-  <div class="absolute top-0 left-0 inset-0 pt-20 px-16">
+  <div class="w-2/5 min-w-146">
     <ItemsHeader :pocket="pocket" />
 
     <div
@@ -61,7 +61,7 @@ watch(items, (newItemSets) => {
         },
       ]"
       group
-      class="z-0 h-full min-w-110 w-full pt-2 flex-wrap flex-col gap-8 flex">
+      class="z-0   w-full pt-2 flex-col gap-8 flex">
       <!-- <div class="absolute bottom-2 right-3 opacity-0 group-hover/set:opacity-40 tldr-30 hover:opacity-100  handle">
           <icon name="ph:arrows-out-line-vertical" class="rotate-180 size-5 shrink-0" />
         </div> -->

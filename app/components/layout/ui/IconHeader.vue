@@ -6,16 +6,12 @@ const { class: className } = defineProps<{
 }>()
 
 const { scrollY } = useScrollInject()
-const y = useTransform(scrollY, [0, 208], ['0', '-200%'])
-
-useMotionValueEvent(scrollY, 'change', (latest) => {
-  console.log('Page scroll: ', Math.round(latest * 100) / 100)
-  console.log('🌱 - y:', y)
-})
+const y = useTransform(scrollY, [0, 198], ['0', '-200%'])
+const opacity = useTransform(scrollY, [0, 99, 198], [1, 1, 0])
 </script>
 
 <template>
-  <motion.header
+  <motion.div
     :class="
       cn(
         'absolute flex flex-nowrap items-center gap-4  items-center h-20  w-fit max-w-220 ',
@@ -23,7 +19,8 @@ useMotionValueEvent(scrollY, 'change', (latest) => {
       )
     "
     :style="{
-      transform: `translateY(${y})`,
+      y,
+      opacity,
     }">
     <!-- icon -->
 
@@ -42,5 +39,5 @@ useMotionValueEvent(scrollY, 'change', (latest) => {
         <slot name="subheader" />
       </div>
     </div>
-  </motion.header>
+  </motion.div>
 </template>

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { RouteRecordRaw } from 'vue-router'
-import { closeAndNav } from '../../utils'
 
 const { item: i, link } = defineProps<{
   item?: RouteRecordRaw | string
@@ -22,12 +21,13 @@ const item = computed (() => {
 <template>
   <Button
     v-if="link || item"
-    variant="ghost"
+    :variant="route.path.match(link || item?.path) ? 'link' : 'ghost'"
+    active="link"
     size="lg"
     :class="
       cn(
         ' flex-nowrap overflow-hidden hover:!text-bc !gap-2.75 pl-4 w-full !duration-0 h-10 text-3 capitalize text-nowrap justify-start',
-        { 'btn-active bg-b2/40 !border-b3/80': route.path.match(link || item?.path) },
+        { 'btn-active': route.path.match(link || item?.path) },
       )
     "
     @click="closeAndNav(link || item.path)">

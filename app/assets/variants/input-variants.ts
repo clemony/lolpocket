@@ -2,15 +2,23 @@ import type { VariantProps } from 'tailwind-variants'
 import { tv } from 'tailwind-variants'
 
 export const inputVariants = tv({
-  base: 'input text-2 h-12 items-center [&>svg]:text-tint-bc/70 [&>svg]:**:stroke-[2.2] [&>svg]:size-4.5',
+  base: 'input text-2 h-12 items-center [&>svg]:text-tint-bc/70 [&>svg]:**:stroke-[2.2] [&>svg]:size-4.5 focus-within:outline-0 focus-within:outline-offset-0 text-2   focus-within:ring-n1/50 focus-within:ring-1 w-full ring-offset-b1  inset-shadow-black/4  inset-shadow-xs border-b3 **:text-2 h-10',
   defaultVariants: {
+    hover: 'ring',
     size: 'default',
   },
   variants: {
+    hover: {
+      ring: 'hover:ring hover:ring-bc/50 transition-all duration-200'
+    },
     size: {
+      ...sizeVariants,
       default: 'text-2',
       header: 'text-10 font-bold tracking-tight **:text-10 shrink-0 [&_input]:text-10 [&_input]:font-bold [&_input]:tracking-tight',
     },
+    variant: {
+      ...variantVariants
+    }
   },
 })
 
@@ -48,16 +56,10 @@ export const inputGroupButtonVariants = tv({
   },
 })
 
+export type InputVariants = VariantProps<typeof inputVariants>
 export type InputGroupVariants = VariantProps<typeof inputGroupAddonVariants>
 export type InputGroupButtonVariants = VariantProps<typeof inputGroupButtonVariants>
 
-export interface InputVariantProps {
-  id?: string
-  class?: string
-  defaultValue?: string
-  modelValue?: string
-  size?: 'default' | 'header'
-}
 export interface InputGroupButtonProps {
   class?: HTMLAttributes['class']
   size?: InputGroupButtonVariants['size']

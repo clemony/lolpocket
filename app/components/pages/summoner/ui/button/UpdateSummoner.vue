@@ -1,13 +1,13 @@
 <script lang="ts" setup>
 import { useForwardProps } from 'reka-ui'
-import type { ButtonVariantProps } from '~/assets/variants'
+import type { ButtonVariants } from '~/assets/variants'
 
 const props = withDefaults(defineProps<{
   class?: HTMLAttributes['class']
   placement?: Side
   theme?: string
-  size?: ButtonVariantProps['size']
-  variant: ButtonVariantProps['variant']
+  size?: ButtonVariants['size']
+  variant: ButtonVariants['variant']
 }>(), {
   placement: 'top',
   theme: 'base'

@@ -1,17 +1,18 @@
 <script setup lang="ts">
 import type { PrimitiveProps } from 'reka-ui'
+import { buttonVariants } from '@variants'
 import { Primitive } from 'reka-ui'
-import { buttonVariants } from '~/assets/variants/variant-index'
 
 interface Props extends PrimitiveProps {
-  active?: any
-  base?: any
+  active?: ButtonVariants['active']
+  base?: ButtonVariants['base']
   class?: HTMLAttributes['class']
-  hover?: any
-  shape?: any
-  size?: any
-  variant?: any
+  hover?: ButtonVariants['hover']
+  shape?: ButtonVariants['shape']
+  size?: ButtonVariants['size']
+  variant?: ButtonVariants['variant']
 }
+
 const props = withDefaults(defineProps<Props>(), {
   as: 'button',
 })

@@ -4,16 +4,18 @@ const {
   title,
   alt,
   class: className,
+  k,
   params,
 } = defineProps<{
   id?: number
+  k?: string
   params?: any
   alt?: string
   class?: HTMLAttributes['class']
   title?: string
 }>()
 
-const champId = computed (() => params ? params.value : id)
+const champId = computed (() => params ? params.value : k ? ix().champIdByKey(k) : id)
 </script>
 
 <template>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import type { InputVariants } from '@variants'
 import { useVModel } from '@vueuse/core'
 import { useForwardPropsEmits } from 'reka-ui'
-import type { InputVariantProps } from '~/assets/variants/input-variants'
 import { inputVariants } from '~/assets/variants/input-variants'
 
 defineOptions({
@@ -9,12 +9,12 @@ defineOptions({
 })
 
 const props = withDefaults(
-  defineProps<InputVariantProps & {
+  defineProps<{
     class?: HTMLAttributes['class']
     defaultValue?: string
     modelValue?: string
     id?: string
-    size?: 'default' | 'header'
+    size?: InputVariants['size']
   }>(),
   {
     size: 'default'

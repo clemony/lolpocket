@@ -6,7 +6,9 @@
 
 /* Element-level data states */
 @custom-variant open (&[data-state="open"]);
+@custom-variant hover-open (&[data-state="open"]:hover);
 @custom-variant closed (&[data-state="closed"]);
+@custom-variant hover-closed (&[data-state="closed"]:hover);
 @custom-variant active (&[data-state="active"]);
 @custom-variant selected (&[data-state="selected"]);
 
@@ -14,12 +16,17 @@
 @custom-variant on (
       &[data-state="on"],
       &[data-state="checked"],
-      &[data-state="active"]
+      &[data-state="active"],
+      &[data-state="open"]
     );
 @custom-variant off (
       &[data-state="off"],
-      &[data-state="unchecked"]
+      &[data-state="unchecked"],
+      &[data-state="closed"]
    );
+
+
+
 
 /* ──────────────────────────────────────────────
    Optional: Add your custom layers/utilities here

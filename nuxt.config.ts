@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@schema': fileURLToPath(new URL('./schema', import.meta.url)),
     '@scripts': fileURLToPath(new URL('./scripts', import.meta.url)),
     '@types': fileURLToPath(new URL('./types', import.meta.url)),
+    '@utils': fileURLToPath(new URL('./app/utils', import.meta.url)),
     '@variants': fileURLToPath(new URL('./app/assets/variants', import.meta.url)),
   },
   components: [

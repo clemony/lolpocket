@@ -9,18 +9,12 @@ const props = defineProps<{
 <template>
   <div class="w-full flex">
     <Collapsible
-      class="py-8 w-full"
-      :default-open="true"
-      arrow>
+      :default-open="true">
       <CollapsibleTrigger
-        class="group/c flex items-center px-2.25 w-full text-left max-w-184 gap-6 cursor-pointer">
-        <h2 class="">
+        class="group/c flex items-center hover:underline w-full text-left gap-6 cursor-pointer">
+        <h1 class="">
           Item Sets
-        </h2>
-
-        <icon
-          name="up"
-          class="dst group-data-[state=open]/c:rotate-180" />
+        </h1>
       </CollapsibleTrigger>
 
       <CollapsibleContent

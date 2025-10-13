@@ -19,16 +19,16 @@ const route = useRoute()
           )
         ">
         <Button
-          class="!size-11 relative p-0 grid place-items-center"
+          class="!size-11 relative p-0 grid place-items-center group/logo"
           variant="neutral"
           shape="square"
           @click="ui().sidebarOpen = true">
-          <h5 :class="cn('font-bold justify-self-center transition-all duration-300 absolute opacity-100', { 'opacity-0 scale-0': ui().sidebarOpen })">
+          <h5 class="font-bold justify-self-center transition-all duration-300 absolute opacity-100  group-hover/logo:opacity-0  group-hover/logo:scale-0">
             LP
           </h5>
           <icon
-            name="menu"
-            :class="cn(' absolute scale-0  justify-self-center  transition-all duration-300 opacity-0', { 'opacity-100 scale-100': ui().sidebarOpen })" />
+            name="nexus"
+            class="absolute scale-0  justify-self-center  transition-all duration-300 opacity-0 group-hover/logo:opacity-100  group-hover/logo:scale-100" />
         </Button>
         <BreadcrumbNav />
         <span class="grow" />
