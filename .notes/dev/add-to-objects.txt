@@ -1,6 +1,6 @@
 ps().pockets.forEach(p =>
   Object.assign(p, {
-    likes: 1,
+    comments: false,
   })
 )
 console.log(ps().pockets)
