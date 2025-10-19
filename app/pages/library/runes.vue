@@ -42,7 +42,8 @@ const test = ref<PathName>(pathIndex[selectedPath.value])
         :current-path="selectedPath" />
 
       <Tabs v-model:model-value="selectedPath">
-        <IndicatorTabsList
+        <TabsList
+          base="indicator"
           class="items-center h-19 justify-evenly grid-cols-5 w-full field-box bg-b2/40 !rounded-box shadow-warm">
           <div
             class="absolute size-full top-0 left-0 rounded-box overflow-hidden opacity-28">
@@ -58,7 +59,7 @@ const test = ref<PathName>(pathIndex[selectedPath.value])
             :value="path" />
 
           <TabIndicator round />
-        </IndicatorTabsList>
+        </TabsList>
       </Tabs>
 
       <KeystoneSelect

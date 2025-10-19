@@ -16,7 +16,7 @@ const emit = defineEmits(['update:path'])
 </script>
 
 <template>
-  <IndicatorTabsTrigger
+  <TabsTrigger
     :value="value"
     class="rounded-full relative group aspect-square size-15 place-self-center disabled:pointer-events-none shrink-0"
     :class="cn('', className)">
@@ -28,7 +28,7 @@ const emit = defineEmits(['update:path'])
     </div>
 
     <slot />
-  </IndicatorTabsTrigger>
+  </TabsTrigger>
 </template>
 
 <style scoped></style>

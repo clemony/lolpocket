@@ -3,13 +3,10 @@
 @import 'tailwindcss';
 
 @theme inline {
-
   --background: var(--color-b1);
-
 
   --border-color: var(--color-b2);
   --input: var(--color-b2);
-
 
   --secondary: var(--color-b3) !important;
 
@@ -19,7 +16,6 @@
   --destructive-foreground: 0 0% 98%;
 
   --ring: var(--color-b2);
-
 
   --animate-accordion-up: accordion-up 0.2s ease-out;
 }

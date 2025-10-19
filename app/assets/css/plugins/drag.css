@@ -1,31 +1,5 @@
 @import 'tailwindcss';
 
-/* .ghostClass {
-  @apply border-b2 bg-b2/30 aspect-square size-full cursor-pointer items-center justify-center gap-2 self-center rounded-md border opacity-70 shadow-xs;
-}
-*/
-.sortable-drag {
-  @apply border-b2 bg-b2/30 overflow-hidden aspect-square size-16 cursor-pointer items-center justify-center gap-2 self-center border opacity-70 shadow-xs rounded-lg;
-}
-
-.sortable-ghost {
-  @apply border-b2 bg-b2/30 overflow-hidden aspect-square size-16 cursor-pointer items-center justify-center gap-2 self-center border opacity-70 shadow-xs rounded-lg;
-}
-
-.sortable-fallback {
-  opacity: 0.5;
-  pointer-events: none;
-  position: absolute;
-}
-
-.sortable-chosen {
-  @apply border-b2 bg-b2/30 overflow-hidden aspect-square size-16 cursor-pointer items-center justify-center gap-2 self-center border opacity-70 shadow-xs rounded-lg;
-}
-
-.sortable-ghost {
-  @apply size-full rounded-lg border-b2 ring ring-n1/90 ring-offset-1 ring-offset-b2;
-}
-
 .module-ghost {
   @apply size-full bg-b2/20 rounded-xl inset-shadow-sm;
 }
@@ -52,10 +26,14 @@
 
 /* item set item */
 
-.item-set-item-ghost,
-.item-set-item-fallback,
-.item-set-item-chosen {
-  @apply border-b2 bg-b2/30 overflow-hidden aspect-square !size-18 cursor-pointer items-center justify-center gap-2 self-center border opacity-70 shadow-xs rounded-lg;
+.item-set-icon {
+  border-color: var(--color-b2);
+  background-color: --alpha(var(--bg-b2) / 30%);
+  overflow: hidden;
+  aspect-ratio: square;
+  width: var(--spacing) * 18;
+  height: var(--spacing) * 18;
+  border-radius: var(--radius-lg);
 }
 
 /* draggable icon */

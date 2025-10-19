@@ -27,7 +27,7 @@ export const PocketLocationSchema = v.object({
 export const ItemSetSchema = v.object({
   id: v.fallback(v.string(), ''),
   name: v.fallback(v.string(), ''),
-  items: v.fallback(MinMaxArray(v.number(), 0, 20), [0, 0, 0, 0, 0, 0]),
+  items: v.fallback(MinMaxArray(v.number(), 0, 20), []),
 })
 
 // Runes
@@ -83,6 +83,7 @@ export const PocketSchema = v.object({
   key: v.optional(v.string()),
   name: v.optional(v.string()),
   author: v.optional(v.array(v.string())),
+  comments: v.fallback(v.boolean(), false),
   champions: v.optional(v.array(v.string())),
   created: v.optional(
     v.pipe(
@@ -158,6 +159,7 @@ export async function generatePocket(pockets: Pocket[]) {
 export function newItemSet(): ItemSet {
   const a = getDeepDefaults(ItemSetSchema)
   a.id = toID()
+  a.name = generateName()
   return a
 }
 
@@ -201,6 +203,7 @@ export function newPocket(): Pocket {
     author: [as().account.puuid],
     champions: [],
     created: new Date(),
+    comments: false,
     icon: '',
     items: [newItemSet()],
     likes: 1,
@@ -241,6 +244,7 @@ const a = newItemSet()
     main: { champion: '', items: '', role: 'All', runes: '', spells: '' },
     notes: [],
     public: false,
+    comments: false,
     roles: ['all'],
     runes: [newRuneSet()],
     spells: [newSpellSet()],

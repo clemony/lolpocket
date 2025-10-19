@@ -7,7 +7,7 @@ const { params } = defineProps<{
   params: any
 }>()
 
-const root = ref(null)
+const root = useTemplateRef<HTMLElement>('root')
 const progress = computed(
   () => Math.round((params.data.points / params.totalPoints) * 100 * 100) / 100
 )

@@ -8,7 +8,6 @@
   @apply rounded-lg;
 }
 
-
 @utility tabs-sm {
   .tab {
     @apply h-8.5 pt-0.75;
@@ -20,7 +19,6 @@
     --tabcontent-radius-ee: var(--radius-xl);
   }
 }
-
 
 @utility tab {
   --radius-field: 1rem;
@@ -34,18 +32,19 @@
 }
 
 @layer utilities {
-
   .tab {
-
-      @apply gap-2 z-1 text-3  !font-medium flex items-center !border-b-0 !text-start has-checked:!border-t-2 has-checked:!border-x-2;
-      &:not(.tab-active) {
-        @apply border-transparent border-2;
-        &:hover {
+    @apply gap-2 z-1 text-3  !font-medium flex items-center !text-start;
+  }
+  &:where(:not(.tabs-lift-start)) > .tab {
+    @apply !border-b-0  has-checked:!border-t-2 has-checked:!border-x-2;
+    &:not(.tab-active) {
+      @apply border-transparent border-2;
+      &:hover {
         @apply border-[var(tab-border-color)] bg-b2;
       }
-      }
-      & .tab-active {
-        @apply !border-t-2 !border-x-2 border-b-0 border-b-transparent;
-      }
     }
+    & .tab-active {
+      @apply !border-t-2 !border-x-2 border-b-0 border-b-transparent;
+    }
+  }
 }

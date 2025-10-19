@@ -70,7 +70,7 @@ onMounted(() => {
         <div class="grid items-center size-full relative max-w-140 w-140">
           <LolpocketDefinition>
             <Button
-              variant="shadow"
+              variant="outline"
               size="lg"
               :class="
                 cn(

@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 /* ──────────────────────────────────────────────
    Reka UI Variants
@@ -12,7 +12,6 @@
 @custom-variant active (&[data-state="active"]);
 @custom-variant selected (&[data-state="selected"]);
 
-
 @custom-variant on (
       &[data-state="on"],
       &[data-state="checked"],
@@ -25,12 +24,8 @@
       &[data-state="closed"]
    );
 
-
-
-
 /* ──────────────────────────────────────────────
    Optional: Add your custom layers/utilities here
    ────────────────────────────────────────────── */
 @layer utilities {
-
 }

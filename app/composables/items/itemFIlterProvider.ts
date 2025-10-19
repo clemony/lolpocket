@@ -59,7 +59,7 @@ export function useItemFilterProvider() {
 
     if (filters.value.tags.length > 0) {
       for (const tag of filters.value.tags) {
-        matchedIds = intersect(matchedIds, itemFilters.tags[tag])
+        matchedIds = intersect(matchedIds, itemFilters.tags[String(tag)])
       }
     }
 

@@ -1,2 +1,2 @@
-export * from './input-variants';
-export * from './variant-index';
+export * from './input-variants'
+export * from './variant-index'

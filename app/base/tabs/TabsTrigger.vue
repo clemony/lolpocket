@@ -1,9 +1,18 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import type { TabsTriggerProps } from 'reka-ui'
 import { TabsTrigger, useForwardProps } from 'reka-ui'
 
 const props = defineProps<
-  TabsTriggerProps & { class?: HTMLAttributes['class'] }
+  TabsTriggerProps & {
+    value?: string | number | null
+    class?: HTMLAttributes['class']
+    contrast?: boolean
+    base?: TabListVariants['base']
+    variant?: TabListVariants['variant']
+    hover?: TabListVariants['hover']
+    size?: TabListVariants['size']
+    on?: TabListVariants['active']
+  }
 >()
 
 const delegatedProps = reactiveOmit(props, 'class')
@@ -13,15 +22,19 @@ const forwarded = useForwardProps(delegatedProps)
 
 <template>
   <TabsTrigger
+    :value="props.value"
     v-bind="forwarded"
     :class="
-      cn(
-        'inline-flex items-center cursor-pointer justify-center whitespace-nowrap rounded-md px-3 py-1 text-2 font-medium ring-offset-b1 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-b2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-b1 data-[state=active]:text-bc data-[state=active]:shadow',
-        props.class,
+      cn({
+           ' on:text-bc on:**:text-bc':
+             !props.contrast,
+           ' on:text-nc on:**:text-nc ':
+             props.contrast,
+         },
+         tabTriggerVariants({ variant, hover, size, base, active: on }),
+         props.class,
       )
     ">
-    <span class="truncate">
-      <slot />
-    </span>
+    <slot />
   </TabsTrigger>
 </template>

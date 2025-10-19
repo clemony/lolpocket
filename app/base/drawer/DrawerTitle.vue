@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { reactiveOmit } from '@vueuse/core'
 import type { DrawerTitleProps } from 'vaul-vue'
+import { reactiveOmit } from '@vueuse/core'
 import { DrawerTitle } from 'vaul-vue'
 
 const props = defineProps<DrawerTitleProps & { class?: HTMLAttributes['class'] }>()

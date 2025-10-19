@@ -9,7 +9,7 @@ export interface ItemFilter {
   query: string
   rank: string
   stats: string[] | null
-  tags: string[] | null
+  tags: string[]
 }
 
 export const useItemStore = defineStore(
@@ -25,17 +25,18 @@ export const useItemStore = defineStore(
       tags: [],
     })
 
+    const defaultFilterLength = computed<number>(() => itemFilters.maps[11].filter(i => !itemFilters.unpurchasable.includes(i)).length)
+    console.log('🌱 - defaultFilterLength:', defaultFilterLength)
     // --- HELPERS ---
 
     function clearFilters() {
-      filters.value = {
-        map: 11,
-        purchasable: true,
-        query: '',
-        rank: null,
-        stats: [],
-        tags: [],
-      }
+      console.log('🌱 - clearFilters - newFilters:')
+      filters.value.map = 11
+      filters.value.purchasable = true
+      filters.value.query = ''
+      filters.value.rank = null
+      filters.value.stats.length = 0
+      filters.value.tags.length - 0
     }
 
     // --- FILTER LOGIC ---
@@ -57,7 +58,7 @@ export const useItemStore = defineStore(
 
       if (filters.value.tags.length > 0) {
         for (const tag of filters.value.tags) {
-          const ids = itemFilters.tags[tag] ?? []
+          const ids = itemFilters.tags[String(tag)] ?? []
           matchedIds = new Set(ids.filter(id => matchedIds.has(id)))
         }
       }
@@ -124,6 +125,7 @@ export const useItemStore = defineStore(
       calculatorSet,
       calculatorSet2,
       clearFilters,
+      defaultFilterLength,
       filtered,
       filters,
       isComparing,

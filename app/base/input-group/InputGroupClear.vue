@@ -1,0 +1,14 @@
+<script setup lang="ts">
+const emit = defineEmits(['clear:input'])
+</script>
+
+<template>
+  <InputGroupButton
+    size="sq-xs"
+    class="peer-has-placeholder-shown:opacity-0 mr-2"
+    @click="emit('clear:input')">
+    <icon
+      name="x"
+      class="size-4 opacity-70" />
+  </InputGroupButton>
+</template>

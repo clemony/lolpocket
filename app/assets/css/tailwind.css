@@ -3,7 +3,7 @@
 @import './index.css';
 
 @source "./colors.css";
-
+@source "@variants/variants.css"
 @source "./theme.css";
 
 @source not "../icons";
@@ -21,13 +21,12 @@
   * {
     @apply border-b3 decoration-from-font underline-offset-2;
   }
-img {
-  @apply select-none;
-}
+  img {
+    @apply select-none;
+  }
   html,
   body,
   #app {
-
     scrollbar-color: --alpha(var(--color-b3) / 40%) transparent;
     scrollbar-width: thin;
     font-family: var(--font-sans);
@@ -51,10 +50,10 @@ img {
   }
 
   .vt-expand-enter-from,
-.vt-expand-appear-from {
-  max-height: none !important;
-  transform: none !important;
-}
+  .vt-expand-appear-from {
+    max-height: none !important;
+    transform: none !important;
+  }
 }
 
 @layer components {
@@ -88,12 +87,11 @@ img {
   h4,
   h5,
   h6 {
-    @apply  antialiased;
+    @apply antialiased;
   }
 
-
   h6 {
-    @apply  text-bc/50 flex gap-3;
+    @apply text-bc/50 flex gap-3;
   }
 
   h1,

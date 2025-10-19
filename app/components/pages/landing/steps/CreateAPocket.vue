@@ -77,17 +77,17 @@ const cardStyle = computed(() => ({
             :style="layer0">
             <div
               class="badge badge-md z-10 bg-b1 text-3 shadow-md shadow-black/10 ring ring-b3">
-              # jungle
+              #&#x202F;jungle
             </div>
 
             <div
               class="badge badge-md z-10 bg-b1 text-3 shadow-md shadow-black/10 ring ring-b3">
-              # support
+              #&#x202F;support
             </div>
 
             <div
               class="badge badge-md z-10 bg-b1 text-3 shadow-md shadow-black/10 ring ring-b3">
-              # marksman
+              #&#x202F;marksman
             </div>
           </div>
 

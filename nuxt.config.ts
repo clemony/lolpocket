@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url'
 export default defineNuxtConfig({
   alias: {
     '#server': fileURLToPath(new URL('./server', import.meta.url)),
+    '@appdata': fileURLToPath(new URL('./shared/appdata', import.meta.url)),
     '@schema': fileURLToPath(new URL('./schema', import.meta.url)),
     '@scripts': fileURLToPath(new URL('./scripts', import.meta.url)),
     '@types': fileURLToPath(new URL('./types', import.meta.url)),
@@ -13,6 +14,10 @@ export default defineNuxtConfig({
   components: [
     {
       path: './base',
+      pathPrefix: false,
+    },
+    {
+      path: './layout',
       pathPrefix: false,
     },
     {
@@ -54,6 +59,7 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     'nuxt-svgo',
     'motion-v/nuxt',
+    'nuxt-tiptap-editor',
   ],
   nitro: {
     routeRules: {

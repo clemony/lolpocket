@@ -3,7 +3,7 @@
 
 @theme {
   --color-discord: oklch(58% 52 274);
-
+  --color-b4: var(--b4);
   --color-all-roles: oklch(37% 0 0);
 
   /* path */
@@ -25,14 +25,13 @@
   --color-grandmaster: oklch(68.06% 0.1352 26.61);
   --color-challenger: oklch(83.25% 0.0787 213.4);
 
-  --color-onhit: oklch(70.72% 0.099 10.55);
+  --color-onhit: oklch(75% 27% 10deg);
+  --color-vamp: oklch(58% 22% 17deg);
   --color-mana-hex: #145b96;
   --color-energy: #d0b800;
   --color-error: oklch(59.33% 0.1319 21.78);
-  --color-success: oklch(68% 51% 157deg),
-
-  --color-top: #e0746b;
-  --color-fighter: oklch(78.32% 0.1173 37);
+  --color-success: oklch(68% 51% 157deg), --color-top: #e0746b;
+  --color-fighter: oklch(71% 30% 34deg);
   --color-apen: oklch(0.6 0.1303 32.32);
   --color-ad: oklch(0.6903 0.121 65.62);
   --color-g: oklch(0.795 0.1468 90.49);
@@ -43,7 +42,7 @@
   --color-ah: oklch(0.7329 0.1007 192.64);
   --color-mana: oklch(0.6173 0.096 231.0549);
   --color-mr: oklch(70% 33% 319deg);
-
+  --color-mpen: oklch(49% 27% 288deg);
   --color-ap: oklch(65% 25% 310deg);
   --color-transparent: #00000000;
   --color-black: oklch(0% 0 0);
@@ -89,12 +88,13 @@
   --emerald: var(--color-emerald);
   --hp: var(--color-hp);
   --resolve: var(--color-resolve);
-
+  --mpen: var(--color-mpen);
   --onhit: var(--color-onhit);
   --burst: var(--color-burst);
 
   --energy: var(--color-energy);
   --error: var(--color-error);
+  --vamp: var(--color-vamp);
   --top: var(--color-top);
   --fighter: var(--color-fighter);
   --apen: var(--color-apen);

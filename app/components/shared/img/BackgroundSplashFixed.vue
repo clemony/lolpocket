@@ -24,7 +24,7 @@ const y = useTransform(scrollYProgress, [0, 1], ['-10%', '-80%'])
         }"
         :class="
           cn(
-            'size-full  bg-fixed bg-no-repeat  bg-size-[74%] mask-l-from-30% mask-l-to-60%  ',
+            'size-full  bg-fixed bg-no-repeat min-w-7xl bg-size-[74%] mask-l-from-30% mask-l-to-60%  ',
           )
         " />
     </div>

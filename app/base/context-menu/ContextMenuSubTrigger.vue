@@ -28,7 +28,6 @@ const forwarded = useForwardProps(delegatedProps)
 
     <icon
       name="right"
-      Icon
       class="ml-auto h-4 w-4" />
   </ContextMenuSubTrigger>
 </template>

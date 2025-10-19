@@ -12,11 +12,12 @@ const forwarded = useForwardProps(delegatedProps)
 </script>
 
 <template>
+  <!-- focus:bg-b2  -->
   <MenubarTrigger
     v-bind="forwarded"
     :class="
       cn(
-        'flex cursor-default select-none items-center rounded-sm px-3 py-1 text-2 font-medium outline-none focus:bg-b2 focus:textneutral-bc data-[state=open]:bg-b2 data-[state=open]:textneutral-bc',
+        'flex cursor-default select-none items-center rounded-md px-3.5 py-1 text-2 font-medium outline-none focus:text-bc data-[state=open]:bg-b2 data-[state=open]:text-bc',
         props.class,
       )
     ">

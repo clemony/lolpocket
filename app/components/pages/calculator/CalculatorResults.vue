@@ -14,21 +14,23 @@ const tab = ref('stats')
     <Tabs
       default-value="stats"
       class="">
-      <IndicatorTabsList class="h-11 w-full max-w-110 grid grid-cols-3">
-        <IndicatorTabsTrigger value="stats">
+      <TabsList
+        base="indicator"
+        class="h-11 w-full max-w-110 grid grid-cols-3">
+        <TabsTrigger value="stats">
           Stat Totals
-        </IndicatorTabsTrigger>
+        </TabsTrigger>
 
-        <IndicatorTabsTrigger value="effects">
+        <TabsTrigger value="effects">
           Item Effects
-        </IndicatorTabsTrigger>
+        </TabsTrigger>
 
-        <IndicatorTabsTrigger value="options">
+        <TabsTrigger value="options">
           Options
-        </IndicatorTabsTrigger>
+        </TabsTrigger>
 
         <TabIndicator />
-      </IndicatorTabsList>
+      </TabsList>
 
       <TabsContent
         value="stats"
