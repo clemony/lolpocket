@@ -76,7 +76,7 @@ const wrapperVariants = {
               'z-50 w-max h-max rounded-xl border  backdrop-blur-lg drop-shadow-md !border-black-30  bg-black-22/94 not-[.icon]:text-white/80 **:not-[&_.icon]:**:text-white/80  shadow-md outline-none group-data-[state=visible]:**:opacity-100 group-data-[state=hidden]:**:opacity-0',
             )
           ">
-          <CustomPopoverArrow class="!text-black/80 **:!text-black/80 icon translate-y-0.25" />
+          <PopoverArrow class="!text-black/80 **:!text-black/80 icon translate-y-0.25" />
 
           <motion.div
             :variants="wrapperVariants"

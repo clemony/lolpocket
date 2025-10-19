@@ -24,19 +24,13 @@ const backgroundStyles = computed(() => {
     :style="backgroundStyles">
     <div class="w-full z-2 text-shadow-md text-white">
       <h3
-        class="font-serif font-black text-9>
+        class="font-serif font-black text-9">
         {{ ogData.title }}
       </h3>
 
-      <p class="
-        text-4
-        text-shadow-md
-        mt-3
-        px-0.75
-        tracking-tight">
+      <p class=" text-4 text-shadow-md mt-3  px-0.75 tracking-tight">
         {{ ogData.description }}
-        </p>
-      </h3>
+      </p>
     </div>
   </div>
 </template>

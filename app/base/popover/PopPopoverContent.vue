@@ -107,7 +107,7 @@ const wrapperVariants = {
             }">
             <slot />
           </motion.div>
-          <CustomPopoverArrow
+          <PopoverArrow
             initial="hidden"
             animate="visible"
             :variants="variants"

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { VueInstance } from '@vueuse/core'
 import type { ListboxItemEmits, ListboxItemProps } from 'reka-ui'
 import { useCurrentElement } from '@vueuse/core'
 import { ListboxItem, useForwardPropsEmits, useId } from 'reka-ui'
@@ -35,7 +36,7 @@ const isRender = computed(() => {
   }
 })
 
-const itemRef = ref()
+const itemRef = shallowRef<VueInstance>()
 const currentElement = useCurrentElement(itemRef)
 onMounted(() => {
   if (!(currentElement.value instanceof HTMLElement))

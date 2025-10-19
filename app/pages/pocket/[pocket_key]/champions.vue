@@ -4,10 +4,7 @@ import { motion } from 'motion-v'
 definePageMeta({
   name: 'pocket-champions',
   title: 'champions',
-  alias: '/pocket/:pocket_key/champions',
   order: 1,
-  path: '/pocket/:pocket_key',
-  search: 'hidden',
 })
 
 const route = useRoute()
@@ -64,7 +61,7 @@ watchEffect(() => {
                 class="bg-b1"
                 size="lg"
                 value="az"
-                variant="shadow"
+                variant="outline"
                 shape="square">
                 <icon
                   name="qlementine-icons:sort-alpha-asc-16"
@@ -74,7 +71,7 @@ watchEffect(() => {
                 class="bg-b1"
                 size="lg"
                 value="za"
-                variant="shadow"
+                variant="outline"
                 shape="square">
                 <icon
                   name="qlementine-icons:sort-alpha-desc-16"
@@ -100,7 +97,6 @@ watchEffect(() => {
           </motion.div>
         </AnimatePresence>
       </motion.div>
-      <SelectedChampions :pocket="pocket" />
     </div>
   </div>
 </template>

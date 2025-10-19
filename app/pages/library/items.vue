@@ -20,13 +20,14 @@ onMounted(() => {
 <template>
   <SeparatorLayout
     :description="quote">
-    <LayoutAsideSplit class="*:last:lg:max-w-full">
+    <LayoutAsideSplit
+      full-width>
       <template #aside>
         <ItemFilterSidebar />
       </template>
 
       <ItemRankFilter
-        class="sticky top-0" />
+        class="sticky top-38 pb-6 pt-5 w-[calc(100%+10px)] -mt-2 mb-0 -ml-[5px] bg-b1" />
       <LazyNuxtPage />
     </LayoutAsideSplit>
 
@@ -35,17 +36,19 @@ onMounted(() => {
         v-model:model-value="tabs"
         class="**:pointer-events-auto"
         @update:model-value="navigateTo(tabs)">
-        <IndicatorTabsList class="grid grid-cols-2 h-10 max-w-120 w-80">
-          <IndicatorTabsTrigger value="/library/items">
+        <TabsList
+          base="indicator"
+          class="grid grid-cols-2 h-10 max-w-120 w-80">
+          <TabsTrigger value="/library/items">
             Grid
-          </IndicatorTabsTrigger>
+          </TabsTrigger>
 
-          <IndicatorTabsTrigger value="/library/items/list">
+          <TabsTrigger value="/library/items/list">
             List
-          </IndicatorTabsTrigger>
+          </TabsTrigger>
 
           <TabIndicator />
-        </IndicatorTabsList>
+        </TabsList>
       </Tabs>
     </template>
   </SeparatorLayout>

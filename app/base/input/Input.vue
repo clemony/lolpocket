@@ -15,9 +15,11 @@ const props = withDefaults(
     modelValue?: string
     id?: string
     size?: InputVariants['size']
+    placeholder?: string
   }>(),
   {
-    size: 'default'
+    placeholder: '',
+    size: 'default',
   }
 )
 
@@ -46,21 +48,14 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
     <input
       v-model="modelValue"
       name="input"
+      :placeholder
+      autocomplete="off"
       class="focus:placeholder:opacity-0 placeholder:text-2 placeholder:italic"
       @keydown.stop
       @keydown.enter.prevent
       @autofocus.prevent />
     <slot name="2" />
 
-    <Button
-      v-if="modelValue"
-      variant="ghost"
-      class="btn-square size-7 opacity-100"
-      @click="emits('clear:input', '')">
-      <icon
-        name="x"
-        class="size-4" />
-    </Button>
     <slot name="3" />
   </label>
 </template>

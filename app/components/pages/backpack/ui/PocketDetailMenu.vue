@@ -21,7 +21,7 @@ const pocket = computed(() => {
       <!-- pin -->
       <Button
         v-tippy="'Pin to sidebar'"
-        :variant="pocket?.location?.pinned ? 'shadow' : 'ghost'"
+        :variant="pocket?.location?.pinned ? 'outline' : 'ghost'"
         :class="
           cn('size-11 relative grid place-items-center *:absolute', {
             'bg-b2/30': pocket?.location?.pinned,

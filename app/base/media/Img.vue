@@ -21,7 +21,7 @@ const loaded = ref(false)
 </script>
 
 <template>
-  <label :class="cn('size-full relative shrink-0 transform-3d', className)">
+  <label :class="cn('size-full relative shrink-0 transform-3d select-none', className)">
     <NuxtImg
       :key="img"
       format="webp"

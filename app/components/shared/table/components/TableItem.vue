@@ -11,6 +11,7 @@ const props = defineProps<{
     class="ti-container">
     <div class="ti-wrapper">
       <img
+        :alt="props.params.value.name"
         :src="`/img/items/${props.params.value.id}.webp`"
         class="size-full" />
     </div>

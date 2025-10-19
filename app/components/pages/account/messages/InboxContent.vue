@@ -45,16 +45,18 @@ const inboxes: Record<string, DataObject> = {
         <Tabs
           v-model:model-value="tabs"
           class="z-1">
-          <IndicatorTabsList class="grid-cols-3 h-9">
-            <IndicatorTabsTrigger
+          <TabsList
+            base="indicator"
+            class="grid-cols-3 h-9">
+            <TabsTrigger
               v-for="item in inboxes"
               :key="item.name"
               class="h-full px-3"
               :value="item.component">
               <icon :name="item.icon.name" />
-            </IndicatorTabsTrigger>
+            </TabsTrigger>
             <TabIndicator class="bg-b1" />
-          </IndicatorTabsList>
+          </TabsList>
         </Tabs>
       </div>
       <div class="flex relative items-center gap-1 w-full">

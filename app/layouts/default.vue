@@ -10,15 +10,16 @@ const route = useRoute()
       <header
         :class="
           cn(
-            'w-full top-0 h-16 max-w-screen sticky flex shrink-0 items-center gap-2 border-b z-10  bg-linear-to-r from-b1/90 to-b1/40 backdrop-blur pr-5 pl-2.5',
+            'w-full top-0 h-15 max-w-screen sticky flex shrink-0 items-center gap-2 border-b z-10  bg-linear-to-r from-b1/90 to-b1/40 backdrop-blur pr-5 pl-2.5',
             {
-              'border-0 !bg-linear-to-r  h-16 !from-transparent !to-b1/40 !absolute':
+              'border-0 !bg-linear-to-r  h-15 !from-transparent !to-b1/40 !absolute':
                 ['pocket', 'summoner', 'champions'].includes(String(route.matched?.[0]?.name)),
 
             },
           )
         ">
         <Button
+          v-tippy="{ content: 'Nexus', theme: 'base', placement: 'bottom' }"
           class="!size-11 relative p-0 grid place-items-center group/logo"
           variant="neutral"
           shape="square"

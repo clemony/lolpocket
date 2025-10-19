@@ -1,11 +1,13 @@
 <script setup lang="ts">
-import { itemTags } from '#shared/appdata'
+import { itemTags } from '@appdata'
 
-const { state } = defineProps<{
-  state: any
+const { class: className, hover = 'base', size = ['sq-lg', 'lg'], variant = 'btn' } = defineProps<{
+  class?: HTMLAttributes['class']
+  size?: ButtonVariants['size'][]
+  variant?: ButtonVariants['variant']
+  hover?: ButtonVariants['hover']
 }>()
 
-const tags = ref()
 function handleReset() {
   is().itemGridApi?.refreshCells()
 }
@@ -13,50 +15,51 @@ function handleReset() {
 function handleChange() {
   is().itemGridApi?.refreshCells()
 }
+
+watch(() => is().filters.tags, (newVal) => {
+  console.log('💠 - watch - newVal:', newVal)
+})
 </script>
 
 <template>
-  <transition-slide
-    group
-    class="flex flex-wrap gap-5 relative justify-between">
-    <button
-      class="btn btn-square btn-xl absolute left-0"
-      type="reset"
-      @click="handleReset()">
-      <icon
-        name="x-sm"
-        class="size-6 dst" />
-    </button>
+  <Listbox
+    v-model:model-value="is().filters.tags"
+    :multiple="true">
+    <ListboxContent as-child>
+      <TransitionSlideLeft
+        group
+        :class="cn('flex items-center w-full z-1  flex-wrap gap-3  relative', className)">
+        <h6 class="opacity-100 w-22 order-first font-semibold text-bc/90">
+          Shop Tags
+        </h6>
+        <Button
+          v-if="is().filters.tags.length"
+          :variant
+          :hover
 
-    <label
-      v-for="tag in itemTags"
-      :key="tag.id"
-      v-tippy="{ content: tag.name }"
-      :aria-label="tag.id"
-      class="size-fit grid place-items-center btn !size-14 btn-xl mr-0 btn-square"
-      :class="{
-        '!bgneutral !borderneutral !shadowneutral/20 !shadow-sm order-first  ml-20.5':
-          state.filters.tags && state.filters.tags.includes(tag.id),
-        'first-of-type:ml-20.5': !state.filters.tags,
-      }">
-      <input
-        v-model="tags"
-        class="peer hidden absolute"
-        type="radio"
-        :value="tag.id"
-        name="item-Rolesition"
-        @change="handleChange()" />
+          :size="size[0]"
+          class="order-first hover:*:opacity-100"
+          @click="is().filters.tags.length = 0">
+          <icon
+            name="x"
+            class="size-4" />
+        </Button>
 
-      <component
-        :is="`i-${tag.icon}`"
-        class="size-6.5 drop-shadow-sm"
-        :class="{
-          '!text-nc ':
-            state.filters.tags && state.filters.tags.includes(tag.id),
-          '!size-5 opacity-80': tag.id === 'Movement',
-        }" />
-    </label>
-  </transition-slide>
+        <BaseListboxItem
+          v-for="tag in itemTags"
+          :key="tag.name"
+          :value="tag.name"
+          as-child>
+          <ItemTagButton
+            as="label"
+            :size="size[1]"
+            :active="is().filters.tags.includes(tag.name)"
+            :tag>
+          </ItemTagButton>
+        </BaseListboxItem>
+      </TransitionSlideLeft>
+    </ListboxContent>
+  </Listbox>
 </template>
 
 <style scoped></style>

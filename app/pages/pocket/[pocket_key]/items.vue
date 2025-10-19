@@ -37,13 +37,21 @@ const tabValues = [
 
 <template>
   <div
-    class="w-full flex gap-10">
-    <ItemSets :pocket="pocket" />
-
-    <div
-      class="relative w-1/2 flex flex-col z-0 justify-end">
-      <PocketItemFilters />
-      <LazyDraggableItemList />
+    class="size-full z-auto pt-22 min-h-screen">
+    <div class="flex w-full z-auto gap-16">
+      <div class="w-2/5 z-auto">
+        <ItemsHeader />
+        <div class=" sticky z-2 -top-44 self-start w-full">
+          <div class="max-h-[calc(100vh-5.5rem)] pr-2 overflow-x-visible scrollbar-none overflow-y-auto">
+            <ItemSets :pocket="pocket" />
+          </div>
+        </div>
+      </div>
+      <div
+        class=" w-3/5 flex flex-col z-auto ">
+        <PocketItemFilters />
+        <LazyDraggableItemList />
+      </div>
     </div>
   </div>
 </template>

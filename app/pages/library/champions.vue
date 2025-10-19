@@ -17,21 +17,21 @@ const tabs = ref('grid')
       class="flex flex-col px-8 size-full relative"
       as="div">
       <!-- <ChampionFilters>
-        <IndicatorTabsList class="w-80 shrink-0  **:pointer-events-auto grid grid-cols-2 h-10 border !border-b3/70 bg-b2">
-          <IndicatorTabsTrigger
+        <TabsList base="indicator" class="w-80 shrink-0  **:pointer-events-auto grid grid-cols-2 h-10 border !border-b3/70 bg-b2">
+          <TabsTrigger
             value="grid"
             :class="{ '!text-nc': tabs==='grid' }">
             Grid
-          </IndicatorTabsTrigger>
+          </TabsTrigger>
 
-          <IndicatorTabsTrigger
+          <TabsTrigger
             value="list"
             :class="{ '!text-nc': tabs==='list' }">
             List
-          </IndicatorTabsTrigger>
+          </TabsTrigger>
 
           <TabIndicator contrast />
-        </IndicatorTabsList>
+        </TabsList>
       </ChampionFilters> -->
 
       <TabsContent

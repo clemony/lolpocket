@@ -15,6 +15,7 @@ export const statIndex: Record<string, StatIndex> = {
     color: 'var(--color-ah)',
     description: '',
     icon: 'i-lol-ah',
+    type: ['item'],
   },
   abilityPower: {
     id: 'abilityPower',
@@ -23,6 +24,7 @@ export const statIndex: Record<string, StatIndex> = {
     color: 'var(--color-sorcery)',
     description: '',
     icon: 'i-lol-ap',
+    type: ['item'],
   },
   acquisitionRadius: {
     id: 'acquisitionRadius',
@@ -37,6 +39,7 @@ export const statIndex: Record<string, StatIndex> = {
     color: 'var(--color-iron)',
     description: '',
     icon: 'i-lol-armor',
+    type: ['item'],
   },
   armorPenetration: {
     id: 'armorPenetration',
@@ -46,6 +49,7 @@ export const statIndex: Record<string, StatIndex> = {
     description: '',
     icon: 'i-lol-armor-pen',
     longAbbr: 'Armor Pen.',
+    type: ['item'],
   },
   attackCastTime: {
     id: 'attackCastTime',
@@ -60,6 +64,7 @@ export const statIndex: Record<string, StatIndex> = {
     color: 'var(--color-ad)',
     description: '',
     icon: 'i-lol-ad',
+    type: ['item'],
   },
   attackDelayOffset: {
     id: 'attackDelayOffset',
@@ -82,6 +87,7 @@ export const statIndex: Record<string, StatIndex> = {
     description: '',
     icon: 'i-lol-as',
     longAbbr: 'Bonus AS',
+    type: ['item'],
   },
   attackSpeedRatio: {
     id: 'attackSpeedRatio',
@@ -103,14 +109,16 @@ export const statIndex: Record<string, StatIndex> = {
     description: '',
     icon: 'i-lol-cs',
     longAbbr: 'Crit Chance',
+    type: ['item'],
   },
   criticalStrikeDamage: {
     id: 'criticalStrikeDamage',
     name: 'Critical Damage',
     abbr: 'Crit Dmg',
-    color: 'var(--color-precision)',
+    color: 'var(--color-fighter)',
     description: '',
     icon: 'i-lol-crit-dmg',
+    type: ['item'],
   },
   criticalStrikeDamageModifier: {
     id: 'criticalStrikeDamageModifier',
@@ -123,10 +131,11 @@ export const statIndex: Record<string, StatIndex> = {
     id: 'flatMagicPenetration',
     name: 'Flat Magic Penetration',
     abbr: 'MPEN',
-    color: 'var(--color-master)',
+    color: 'var(--color-mpen)',
     description: '',
     icon: 'i-lol-mpen',
     longAbbr: 'Magic Pen.',
+    type: ['item'],
   },
   flatMovespeed: {
     id: 'flatMovespeed',
@@ -135,7 +144,7 @@ export const statIndex: Record<string, StatIndex> = {
     color: 'var(--color-white-70)',
     description: '',
     icon: 'i-lol-ms',
-    longAbbr: 'Movespeed',
+    type: ['item'],
   },
   gameplayRadius: {
     id: 'gameplayRadius',
@@ -152,6 +161,7 @@ export const statIndex: Record<string, StatIndex> = {
     description: '',
     icon: 'i-lol-gold',
     longAbbr: '',
+    type: ['item'],
   },
   healAndShieldPower: {
     id: 'healAndShieldPower',
@@ -160,6 +170,7 @@ export const statIndex: Record<string, StatIndex> = {
     color: 'var(--color-enchanter)',
     description: '',
     icon: 'i-lol-hsp',
+    type: ['item'],
   },
   health: {
     id: 'health',
@@ -169,6 +180,7 @@ export const statIndex: Record<string, StatIndex> = {
     description: '',
     icon: 'i-lol-health',
     longAbbr: 'Health',
+    type: ['item'],
   },
   healthRegen: {
     id: 'healthRegen',
@@ -178,6 +190,7 @@ export const statIndex: Record<string, StatIndex> = {
     description: '',
     icon: 'i-lol-hp',
     longAbbr: 'HP ∕ 5',
+    type: ['item'],
   },
   lethality: {
     id: 'lethality',
@@ -187,6 +200,7 @@ export const statIndex: Record<string, StatIndex> = {
     description: '',
     icon: 'i-lol-armor-pen',
     longAbbr: 'Lethality',
+    type: ['item'],
   },
   lifesteal: {
     id: 'lifesteal',
@@ -196,6 +210,7 @@ export const statIndex: Record<string, StatIndex> = {
     description: '',
     icon: 'i-lol-ls',
     longAbbr: 'Lifesteal',
+    type: ['item'],
   },
   magicResistance: {
     id: 'magicResistance',
@@ -204,6 +219,7 @@ export const statIndex: Record<string, StatIndex> = {
     color: 'var(--color-mr)',
     description: '',
     icon: 'i-lol-mr',
+    type: ['item'],
   },
   mana: {
     id: 'mana',
@@ -211,6 +227,7 @@ export const statIndex: Record<string, StatIndex> = {
     color: 'var(--color-inspiration)',
     description: '',
     icon: 'i-lol-mana',
+    type: ['item'],
   },
   manaRegen: {
     id: 'manaRegen',
@@ -220,24 +237,17 @@ export const statIndex: Record<string, StatIndex> = {
     description: '',
     icon: 'i-lol-mana-regen',
     longAbbr: 'Mana ∕ 5',
-  },
-  movespeed: {
-    id: 'movespeed',
-    name: 'Movespeed',
-    abbr: 'MS',
-    color: 'var(--color-white-70)',
-    description: '',
-    icon: 'i-lol-ms',
-    longAbbr: 'Movespeed',
+    type: ['item'],
   },
   omnivamp: {
     id: 'omnivamp',
     name: 'Omnivamp',
     abbr: 'Vamp',
-    color: 'var(--color-onhit)',
+    color: 'var(--color-vamp)',
     description: '',
     icon: 'i-lol-vamp',
     longAbbr: 'Omnivamp',
+    type: ['item'],
   },
   pathingRadius: {
     id: 'pathingRadius',
@@ -250,10 +260,11 @@ export const statIndex: Record<string, StatIndex> = {
     id: 'percentMagicPenetration',
     name: 'Magic Penetration',
     abbr: 'MPEN',
-    color: 'var(--color-master)',
+    color: 'var(--color-mpen)',
     description: '',
     icon: 'i-lol-mpen',
     longAbbr: 'Magic Pen',
+    type: ['item'],
   },
   percentMovespeed: {
     id: 'percentMovespeed',
@@ -262,6 +273,7 @@ export const statIndex: Record<string, StatIndex> = {
     color: 'var(--color-white-70)',
     description: '',
     icon: 'i-lol-ms',
+    type: ['item'],
   },
   selectionRadius: {
     id: 'selectionRadius',
@@ -276,5 +288,6 @@ export const statIndex: Record<string, StatIndex> = {
     color: 'var(--color-platinum)',
     description: '',
     icon: 'i-lol-tenacity',
+    type: ['item'],
   },
 }

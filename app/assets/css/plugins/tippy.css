@@ -13,20 +13,19 @@
       @apply text-2 whitespace-pre inline-block font-medium **:text-2;
     }
 
-& > .tippy-svg-arrow{
-  @apply -scale-y-100;
+    & > .tippy-svg-arrow {
+      @apply -scale-y-100;
+    }
 
-}
-
-&[data-placement='top'],
-&[data-placement='bottom']{
-  & > .tippy-svg-arrow > svg:first-child {
-  @apply translate-y-1 scale-96 z-0;
-
-}   & > .tippy-svg-arrow > svg:last-child {
-  @apply -translate-y-0.75 scale-90 z-2;
+    &[data-placement='top'],
+    &[data-placement='bottom'] {
+      & > .tippy-svg-arrow > svg:first-child {
+        @apply translate-y-1 scale-96 z-0;
       }
-}
+      & > .tippy-svg-arrow > svg:last-child {
+        @apply -translate-y-0.75 scale-90 z-2;
+      }
+    }
 
     /* default / contrast */
     &[data-theme~='default'] {
@@ -47,8 +46,7 @@
 
     /* base color */
     &[data-theme~='base'] {
-      @apply border-b3/80 text-bc/90 font-medium !bg-b1/90 ;
-
+      @apply border-b3/80 text-bc/90 font-medium !bg-b1/90;
 
       & > .tippy-svg-arrow > svg:first-child {
         @apply !fill-b4/80;
@@ -68,6 +66,4 @@
       }
     }
   }
-
-
 }

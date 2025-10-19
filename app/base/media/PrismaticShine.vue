@@ -14,6 +14,6 @@ const props = defineProps<{
     ">
     <video-background
       src="/video/prismatic-shine.webm"
-      class="size-full object-cover aspect-square pointer-events-none"></video-background>
+      class="size-full scale-110 object-cover aspect-square pointer-events-none"></video-background>
   </TransitionFade>
 </template>

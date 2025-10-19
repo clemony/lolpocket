@@ -33,5 +33,6 @@ export interface StatIndex {
   icon?: string
   longAbbr?: string
   order?: number
+  type?: string[]
   values?: Record<string, number | string>
 }

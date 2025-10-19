@@ -16,7 +16,6 @@
 
 @utility input {
   --input-color: var(--b3);
-
 }
 
 /* divider */
@@ -39,10 +38,13 @@
   @apply bg-b1/94 backdrop-blur-sm border-b4/70  text-bc;
 }
 
-
-
 /* chkbx */
 
+@utility checkbox {
+  &::before {
+    clip-path: polygon(26.6% 50%, 46.6% 66.6%, 73.3% 33.3%);
+  }
+}
 @utility checkbox-neutral {
   @apply border-b4 inset-shadow-none;
 }
@@ -94,7 +96,6 @@
 }
 
 @layer components {
-
   /* field  */
 
   .field {
@@ -110,7 +111,7 @@
     @apply shadow-warm-soft overflow-visible border bg-size-[160px] bg-b2/40 bg-repeat  drop-shadow-xs border-b3/60 rounded-xl **:select-none text-2   relative;
   }
 
-    /* progress */
+  /* progress */
 
   .progress {
     @supports (-webkit-appearance: none) {
@@ -124,7 +125,7 @@
     border-radius: var(--rounded-xl) !important;
   }
 
-    /* stat display  */
+  /* stat display  */
 
   .stats {
     .stat {
@@ -177,7 +178,7 @@
   --color-neutral: var(--n1) !important;
   --color-neutral-content: var(--nc);
   --color-info: var(--sorcery);
-  --color-info-content:#000000;
+  --color-info-content: #000000;
   --color-success: var(--resolve);
   --color-success-content: #000000;
   --color-warning: var(--precision);
@@ -190,8 +191,6 @@
   --tabcontent-radius-es: var(--rounded-xl);
   --tabcontent-radius-ee: var(--rounded-xl);
 
-
-
   --radius-selector: 0.4rem;
   --radius-box: 1rem;
   --radius-field: 0.55rem;
@@ -203,6 +202,7 @@
   @layer daisyui.modifier {
     --tabs-height: auto;
     --tabs-direction: column;
+    --border: 2px;
 
     > .tab {
       /* ⤷ Inactive state: borders are transparent */
@@ -216,23 +216,29 @@
 
       border-width: var(--tab-border);
       border-color: var(--tab-border-colors);
-      border-radius: var(--tab-radius-ss) var(--tab-radius-se)
-        var(--tab-radius-ee) var(--tab-radius-es);
+      border-radius: var(--tab-radius-ss) var(--tab-radius-se) var(--tab-radius-ee) var(--tab-radius-es);
       padding: var(--tab-paddings);
       position: relative;
       background-color: transparent;
 
-
-     /* ⤷ Active state: visible borders, mask corners */
-      &:is(.tab-active, [aria-selected="true"], [aria-current="true"], [aria-current="page"]),
+      /* ⤷ Active state: visible borders, mask corners */
+      &:is(.tab-active, [aria-selected='true'], [aria-current='true'], [aria-current='page']),
       &:is(input:checked, label:has(:checked)) {
-        --tab-border: var(--border) var(--border) var(--border) 0;
-        --tab-border-colors: var(--tab-border-color)
-        #0000
-        var(--tab-border-color)
-          var(--tab-border-color);
-        --tab-paddings: calc(var(--tab-p) - var(--border)) 0
-          calc(var(--tab-p) - var(--border)) var(--border);
+        --tab-border-color: color-mix(in lch, var(--color-b3) 100%, #ffffff 2%);
+        background-color: var(--tab-bg);
+        border-color: var(--tab-border-color);
+
+        border-top-width: var(--border);
+        border-right-width: 0;
+        border-bottom-width: var(--border) !important;
+        border-left-width: var(--border);
+
+        border-top-color: var(--tab-border-color);
+        border-bottom-color: var(--tab-border-color);
+        border-right-color: #0000;
+        border-left-color: var(--tab-border-color);
+
+        --tab-paddings: calc(var(--tab-p) - var(--border)) 0 calc(var(--tab-p) - var(--border)) var(--border);
         --tab-inset: 0 auto 0 auto;
         --tab-grad: calc(69% - var(--border));
 
@@ -240,26 +246,23 @@
         --tab-corner-height: calc(100% + min(var(--radius-field), var(--tab-radius-min)) * 2);
         --tab-corner-position: top left, bottom left;
 
-        background-color: var(--tab-bg);
-        border-color: var(--tab-border-color);
-
         --radius-start: radial-gradient(
           circle at top left,
           #0000 var(--tab-grad),
-          var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
+          var(--tab-border-color) calc(var(--tab-grad)),
           var(--tab-border-color) calc(var(--tab-grad) + var(--border)),
-          var(--tab-bg) calc(var(--tab-grad) + var(--border) + 0.25px)
+          var(--tab-bg) calc(var(--tab-grad) + var(--border))
         );
         --radius-end: radial-gradient(
           circle at bottom left,
           #0000 var(--tab-grad),
-          var(--tab-border-color) calc(var(--tab-grad) + 0.25px),
+          var(--tab-border-color) calc(var(--tab-grad)),
           var(--tab-border-color) calc(var(--tab-grad) + var(--border)),
-          var(--tab-bg) calc(var(--tab-grad) + var(--border) + 0.25px)
+          var(--tab-bg) calc(var(--tab-grad) + var(--border))
         );
 
         &:before {
-          content: "";
+          content: '';
           display: block;
           position: absolute;
           height: var(--tab-corner-height);
@@ -281,11 +284,11 @@
         &:last-child:before {
           --radius-end: none;
         }
+      }
     }
-  }
 
     > .tab-content {
-       --tabcontent-margin: 0 0 0 calc(-1 * var(--border));
+      --tabcontent-margin: 0 0 0 calc(-1 * var(--border));
       --tabcontent-radius-ss: 0;
       --tabcontent-radius-se: var(--radius-box);
       --tabcontent-radius-es: var(--radius-box);

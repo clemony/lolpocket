@@ -1,11 +1,5 @@
 <script setup lang="ts">
-import { itemTags } from '#shared/appdata'
-import {
-  ListboxContent,
-  ListboxItem,
-  ListboxItemIndicator,
-  ListboxRoot,
-} from 'reka-ui'
+import { itemTags } from '@appdata'
 
 function handleReset() {
   is().itemGridApi?.refreshCells()
@@ -17,12 +11,12 @@ function handleChange() {
 </script>
 
 <template>
-  <ListboxRoot
+  <Listbox
     v-model:model-value="is().filters.tags"
     :multiple="true"
     @entry-focus.prevent>
     <ListboxContent
-      class="w-full pt-0 pb-1"
+      class="w-full "
       @entry-focus.prevent
       @highlight.prevent>
       <ListboxItem
@@ -30,23 +24,12 @@ function handleChange() {
         :key="tag.id"
         as-child
         :value="tag.id">
-        <!-- <icon name="tick-sm" /> -->
-        <Button
-          variant="ghost"
-          size="sm"
-          :class="cn('justify-start capitalize')">
-          {{ tag.name }}
-          <ListboxItemIndicator
-            class="h-fit w-auto aspect-square justify-self-end justify-end">
-            <input
-              type="checkbox"
-              class="checkbox checkbox-xs pointer-events-none checkbox-neutral"
-              :checked="true" />
-          </ListboxItemIndicator>
-        </Button>
+        {{ tag.name }}
+
+        <ListboxItemIndicator />
       </ListboxItem>
     </ListboxContent>
-  </ListboxRoot>
+  </Listbox>
 </template>
 
 <style scoped></style>

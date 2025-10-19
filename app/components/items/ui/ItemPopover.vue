@@ -26,7 +26,7 @@ const isOpen = ref<boolean>(false)
       v-bind="$attrs"
       :class="
         cn(
-          'relative transition-all duration-200 hover:ring-neutral hover:ring hover:ring-offset-2 hover:ring-offset-b1 data-[state=open]:ring-1 aspect-square  data-[state=open]:ring-offset-2 data-[state=open]:ring-neutral data-[state=open]:ring-offset-b1  group/item',
+          'relative transition-all duration-200 hover:ring-neutral hover:ring hover:ring-offset-2 hover:ring-offset-b1 data-[state=open]:ring-1 aspect-square  data-[state=open]:ring-offset-2 data-[state=open]:ring-neutral data-[state=open]:ring-offset-b1 rounded-lg  group/item',
           className,
         )
       ">
@@ -35,17 +35,17 @@ const isOpen = ref<boolean>(false)
           :id="id"
           :quality="100"
           alt="Item Image"
-          class="rounded-lg opacity-96 size-full rounded-lg select-none size-full z-0 pointer-events-none absolute top-0 left-0 z-0">
+          class="opacity-96 size-full z-0 pointer-events-none absolute top-0 left-0 z-0">
           <LazyPrismaticShine
-            v-if="isOpen || isHovered"
-            class="absolute scale-120 top-0 left-0 z-1" />
+            v-if="isOpen || isHovered" />
         </Item>
+        <slot :open />
       </div>
     </PopoverTrigger>
 
     <LazyPopperPopoverContent
       :side-offset="8"
-      class="!w-110 max-h-[420px] inset-shadow-xs min-w-110">
+      class="!w-100 py-2 px-0 max-h-[420px] inset-shadow-xs min-w-110">
       <LazyItemData
         v-if="open"
         :id="id" />

@@ -4,11 +4,8 @@ export function removeItemFromSet(
   itemx: ItemId
 ) {
   const set = pocket?.items.find(set => set === itemSet)
-
-  console.log('💠 - removeItemFromSet - set:', set)
   if (set) {
     const index = set.items.findIndex(item => item === itemx)
-    console.log('💠 - removeItemFromSet - index:', index)
     if (set && Array.isArray(set.items)) {
       set.items.splice(index, 1)
     }

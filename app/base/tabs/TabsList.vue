@@ -2,24 +2,22 @@
 import type { TabsListProps } from 'reka-ui'
 import { TabsList } from 'reka-ui'
 
-const props = defineProps<TabsListProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<TabsListProps & {
+  class?: HTMLAttributes['class']
+  variant?: TabListVariants['variant']
+  orientation?: TabListVariants['orientation']
+  base?: TabListVariants['base']
+  size?: TabListVariants['size']
+}>()
 
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
-
-  return delegated
-})
+const forwarded = reactiveOmit(props, 'class')
 </script>
 
 <template>
   <TabsList
-    v-bind="delegatedProps"
+    v-bind="forwarded"
     :class="
-      cn(
-        'inline-flex items-center justify-center rounded-lg bg-b2 p-1 text-bc',
-        props.class,
-      )
-    ">
+      cn(tabListVariants({ variant, orientation, base, size }), props.class) ">
     <slot />
   </TabsList>
 </template>

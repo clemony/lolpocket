@@ -33,17 +33,19 @@ const entries = [
       <Tabs
         v-model:model-value="tabs"
         class="max-w-100">
-        <IndicatorTabsList class="grid-cols-3 *:!text-3">
-          <IndicatorTabsTrigger
+        <TabsList
+          base="indicator"
+          class="grid-cols-3 *:!text-3">
+          <TabsTrigger
             v-for="tab in entries"
             :key="tab.name"
             :value="tab.value"
             contrast>
             {{ tab.name }}
-          </IndicatorTabsTrigger>
+          </TabsTrigger>
 
           <TabIndicator contrast />
-        </IndicatorTabsList>
+        </TabsList>
       </Tabs>
     </div>
   </div>

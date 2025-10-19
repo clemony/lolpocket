@@ -1,400 +1,400 @@
 // Updated Patch 25.19 - 10/07/2025 08:16:13 AM CDT
 
 const champion: Champion = {
-  "id": 117,
-  "key": "Lulu",
-  "name": "Lulu",
-  "title": "the Fae Sorceress",
-  "abilities": [
+  id: 117,
+  key: 'Lulu',
+  name: 'Lulu',
+  title: 'the Fae Sorceress',
+  abilities: [
     {
-      "key": "P",
-      "name": "Pix, Faerie Companion",
-      "width": "60",
-      "affects": "Self",
-      "blurb": "Innate:  Lulu is assisted by Pix, whom follows her around. Whenever Lulu basic attacks, Pix fires 3 bolts that deal magic damage to the first enemy hit.",
-      "damageType": "Magic damage",
-      "effects": [
+      key: 'P',
+      name: 'Pix, Faerie Companion',
+      width: '60',
+      affects: 'Self',
+      blurb: 'Innate:  Lulu is assisted by Pix, whom follows her around. Whenever Lulu basic attacks, Pix fires 3 bolts that deal magic damage to the first enemy hit.',
+      damageType: 'Magic damage',
+      effects: [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Innate:</span> Lulu is assisted by Pix, an untargetable faerie, who follows her around and fires a barrage of 3 bolts towards her target whenever she uses a basic attack on-attack. Each bolt deals 5 - 39 (based on level) (+ 5% AP) magic damage to the first enemy it collides with, for a total of 15 - 117 (based on level) (+ 15% AP) on hitting a single target with all three bolts.</p>"
+          description: '<p class="ability-effect"><span class="ability-header">Innate:</span> Lulu is assisted by Pix, an untargetable faerie, who follows her around and fires a barrage of 3 bolts towards her target whenever she uses a basic attack on-attack. Each bolt deals 5 - 39 (based on level) (+ 5% AP) magic damage to the first enemy it collides with, for a total of 15 - 117 (based on level) (+ 15% AP) on hitting a single target with all three bolts.</p>'
         },
         {
-          "description": "Casting Help, Pix! on an ally champion transfers Pix's help to them, causing him to fire the bolts dependent on their basic attacks."
+          description: 'Casting Help, Pix! on an ally champion transfers Pix\'s help to them, causing him to fire the bolts dependent on their basic attacks.'
         },
         {
-          "description": "Pix snaps back to Lulu if she is too far away."
+          description: 'Pix snaps back to Lulu if she is too far away.'
         }
       ],
-      "icon": "https://cdn.communitydragon.org/latest/champion/Lulu/ability-icon/p",
-      "notes": "Pix's bolts do not fire alongside abilities that apply  on-hit effects (e.g.  Runaan's Hurricane).\nPix does not fire if the target dies.\nPix fires from his own location and not from the unit he is following.\nWhen on an ally champion, Pix's damage respects  enchantment redirection.\nThe empowered attack does not trigger against structures nor wards.\nNeither of them will intercept Pix's bolts.",
-      "projectile": "TRUE",
-      "speed": "900 - 2600",
-      "spellEffects": "default",
-      "targeting": "Passive"
+      icon: 'https://cdn.communitydragon.org/latest/champion/Lulu/ability-icon/p',
+      notes: 'Pix\'s bolts do not fire alongside abilities that apply  on-hit effects (e.g.  Runaan\'s Hurricane).\nPix does not fire if the target dies.\nPix fires from his own location and not from the unit he is following.\nWhen on an ally champion, Pix\'s damage respects  enchantment redirection.\nThe empowered attack does not trigger against structures nor wards.\nNeither of them will intercept Pix\'s bolts.',
+      projectile: 'TRUE',
+      speed: '900 - 2600',
+      spellEffects: 'default',
+      targeting: 'Passive'
     },
     {
-      "key": "Q",
-      "name": "Glitterlance",
-      "width": "120",
-      "affects": "Enemies",
-      "blurb": "Active:  Lulu and  Pix each fire a magic bolt toward the target location, dealing magic damage and  slowing enemies hit for a short time.",
-      "castTime": "0.25",
-      "cooldown": "7",
-      "cost": "50 / 55 / 60 / 65 / 70",
-      "damageType": "Magic damage",
-      "effects": [
+      key: 'Q',
+      name: 'Glitterlance',
+      width: '120',
+      affects: 'Enemies',
+      blurb: 'Active:  Lulu and  Pix each fire a magic bolt toward the target location, dealing magic damage and  slowing enemies hit for a short time.',
+      castTime: '0.25',
+      cooldown: '7',
+      cost: '50 / 55 / 60 / 65 / 70',
+      damageType: 'Magic damage',
+      effects: [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lulu and Pix each fire a magic bolt towards the target point, each one dealing magic damage to enemies hit, reduced to 70% against minions, and slowing them by 80% decaying over 2 seconds.</p>",
-          "leveling": [
+          description: '<p class="ability-effect"><span class="ability-header">Active:</span> Lulu and Pix each fire a magic bolt towards the target point, each one dealing magic damage to enemies hit, reduced to 70% against minions, and slowing them by 80% decaying over 2 seconds.</p>',
+          leveling: [
             {
-              "attribute": "Magic Damage",
-              "modifiers": [
+              attribute: 'Magic Damage',
+              modifiers: [
                 {
-                  "values": "60 / 95 / 130 / 165 / 200"
+                  values: '60 / 95 / 130 / 165 / 200'
                 },
                 {
-                  "unit": "% AP",
-                  "values": "50"
+                  unit: '% AP',
+                  values: '50'
                 }
               ]
             },
             {
-              "attribute": "Minion Damage",
-              "modifiers": [
+              attribute: 'Minion Damage',
+              modifiers: [
                 {
-                  "values": "42 / 66.5 / 91 / 115.5 / 140"
+                  values: '42 / 66.5 / 91 / 115.5 / 140'
                 },
                 {
-                  "unit": "% AP",
-                  "values": "35"
+                  unit: '% AP',
+                  values: '35'
                 }
               ]
             }
           ]
         },
         {
-          "description": "Enemies take 50% damage from a second bolt.",
-          "leveling": [
+          description: 'Enemies take 50% damage from a second bolt.',
+          leveling: [
             {
-              "attribute": "Reduced Damage",
-              "modifiers": [
+              attribute: 'Reduced Damage',
+              modifiers: [
                 {
-                  "values": "30 / 47.5 / 65 / 82.5 / 100"
+                  values: '30 / 47.5 / 65 / 82.5 / 100'
                 },
                 {
-                  "unit": "% AP",
-                  "values": "25"
+                  unit: '% AP',
+                  values: '25'
                 }
               ]
             },
             {
-              "attribute": "Total Magic Damage",
-              "modifiers": [
+              attribute: 'Total Magic Damage',
+              modifiers: [
                 {
-                  "values": "90 / 142.5 / 195 / 247.5 / 300"
+                  values: '90 / 142.5 / 195 / 247.5 / 300'
                 },
                 {
-                  "unit": "% AP",
-                  "values": "75"
+                  unit: '% AP',
+                  values: '75'
                 }
               ]
             },
             {
-              "attribute": "Reduced Minion Damage",
-              "modifiers": [
+              attribute: 'Reduced Minion Damage',
+              modifiers: [
                 {
-                  "values": "21 / 33.25 / 45.5 / 57.75 / 70"
+                  values: '21 / 33.25 / 45.5 / 57.75 / 70'
                 },
                 {
-                  "unit": "% AP",
-                  "values": "17.5"
+                  unit: '% AP',
+                  values: '17.5'
                 }
               ]
             },
             {
-              "attribute": "Total Minion Damage",
-              "modifiers": [
+              attribute: 'Total Minion Damage',
+              modifiers: [
                 {
-                  "values": "63 / 99.75 / 136.5 / 173.25 / 210"
+                  values: '63 / 99.75 / 136.5 / 173.25 / 210'
                 },
                 {
-                  "unit": "% AP",
-                  "values": "52.5"
+                  unit: '% AP',
+                  values: '52.5'
                 }
               ]
             }
           ]
         }
       ],
-      "icon": "https://cdn.communitydragon.org/latest/champion/Lulu/ability-icon/q",
-      "maxCharges": -1,
-      "notes": "This ability will cast from wherever the caster is at the end of the cast time.\nPix fires his bolt from wherever he is when Lulu casts Glitterlance. Lulu's bolt will fire from wherever she is at the end of the cast time.\nDepending on cursor position both bolts can either crossfire, fire in parallel, or in opposite directions.",
-      "projectile": "TRUE",
-      "resource": "Mana",
-      "speed": "1450",
-      "spellEffects": "Area of effect",
-      "spellshieldable": "True",
-      "targeting": "Direction"
+      icon: 'https://cdn.communitydragon.org/latest/champion/Lulu/ability-icon/q',
+      maxCharges: -1,
+      notes: 'This ability will cast from wherever the caster is at the end of the cast time.\nPix fires his bolt from wherever he is when Lulu casts Glitterlance. Lulu\'s bolt will fire from wherever she is at the end of the cast time.\nDepending on cursor position both bolts can either crossfire, fire in parallel, or in opposite directions.',
+      projectile: 'TRUE',
+      resource: 'Mana',
+      speed: '1450',
+      spellEffects: 'Area of effect',
+      spellshieldable: 'True',
+      targeting: 'Direction'
     },
     {
-      "key": "W",
-      "name": "Whimsy",
-      "affects": "Enemies / Allies / Self",
-      "blurb": "Active:  Lulu can cast Whimsy on herself or the target champion.",
-      "castTime": "0.2419 / None",
-      "cooldown": "18",
-      "cost": "65",
-      "effects": [
+      key: 'W',
+      name: 'Whimsy',
+      affects: 'Enemies / Allies / Self',
+      blurb: 'Active:  Lulu can cast Whimsy on herself or the target champion.',
+      castTime: '0.2419 / None',
+      cooldown: '18',
+      cost: '65',
+      effects: [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lulu can cast Whimsy on herself or a champion.</p>"
+          description: '<p class="ability-effect"><span class="ability-header">Active:</span> Lulu can cast Whimsy on herself or a champion.</p>'
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Enemy Cast:</span> Lulu launches a spell onto the target enemy champion that polymorphs them into a harmless critter for a duration, during which their base movement speed is reduced by 60, and disarms them for the same duration.</p>",
-          "leveling": [
+          description: '<p class="ability-effect"><span class="ability-header">Enemy Cast:</span> Lulu launches a spell onto the target enemy champion that polymorphs them into a harmless critter for a duration, during which their base movement speed is reduced by 60, and disarms them for the same duration.</p>',
+          leveling: [
             {
-              "attribute": "Disable Duration",
-              "modifiers": [
+              attribute: 'Disable Duration',
+              modifiers: [
                 {
-                  "unit": " seconds",
-                  "values": "1.2 / 1.4 / 1.6 / 1.8 / 2"
+                  unit: ' seconds',
+                  values: '1.2 / 1.4 / 1.6 / 1.8 / 2'
                 }
               ]
             }
           ]
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Self / Ally Cast:</span> Lulu instantly casts erratic magic upon the target allied champion or herself, granting the target bonus attack speed and 25% (+ 5% per 100 AP) bonus movement speed for a duration.</p>",
-          "leveling": [
+          description: '<p class="ability-effect"><span class="ability-header">Self / Ally Cast:</span> Lulu instantly casts erratic magic upon the target allied champion or herself, granting the target bonus attack speed and 25% (+ 5% per 100 AP) bonus movement speed for a duration.</p>',
+          leveling: [
             {
-              "attribute": "Bonus Attack Speed",
-              "modifiers": [
+              attribute: 'Bonus Attack Speed',
+              modifiers: [
                 {
-                  "unit": "%",
-                  "values": "20 / 22.5 / 25 / 27.5 / 30"
+                  unit: '%',
+                  values: '20 / 22.5 / 25 / 27.5 / 30'
                 }
               ]
             },
             {
-              "attribute": "Effect Duration",
-              "modifiers": [
+              attribute: 'Effect Duration',
+              modifiers: [
                 {
-                  "unit": " seconds",
-                  "values": "3 / 3.25 / 3.5 / 3.75 / 4"
+                  unit: ' seconds',
+                  values: '3 / 3.25 / 3.5 / 3.75 / 4'
                 }
               ]
             }
           ]
         }
       ],
-      "icon": "https://cdn.communitydragon.org/latest/champion/Lulu/ability-icon/w",
-      "maxCharges": -1,
-      "notes": "Whimsy's movement speed reduction is not affected by  slow resist.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but still go on  cooldown and pay its cost.(bug)\nThis only applies to the enemy cast.",
-      "projectile": "TRUE",
-      "resource": "Mana",
-      "speed": "2250",
-      "spellshieldable": "True",
-      "targeting": "Unit",
-      "targetRange": "650"
+      icon: 'https://cdn.communitydragon.org/latest/champion/Lulu/ability-icon/w',
+      maxCharges: -1,
+      notes: 'Whimsy\'s movement speed reduction is not affected by  slow resist.\nIf the target becomes  untargetable,  dies, or is too far away or no longer in  sight during the cast time, this ability will cancel but still go on  cooldown and pay its cost.(bug)\nThis only applies to the enemy cast.',
+      projectile: 'TRUE',
+      resource: 'Mana',
+      speed: '2250',
+      spellshieldable: 'True',
+      targeting: 'Unit',
+      targetRange: '650'
     },
     {
-      "key": "E",
-      "name": "Help, Pix!",
-      "affects": "Enemies / Allies / Self",
-      "blurb": "Active:  Lulu can cast Help, Pix! on herself or a unit.",
-      "castTime": "none",
-      "cooldown": "10 / 9.5 / 9 / 8.5 / 8",
-      "cost": "60 / 65 / 70 / 75 / 80",
-      "damageType": "Magic damage",
-      "effects": [
+      key: 'E',
+      name: 'Help, Pix!',
+      affects: 'Enemies / Allies / Self',
+      blurb: 'Active:  Lulu can cast Help, Pix! on herself or a unit.',
+      castTime: 'none',
+      cooldown: '10 / 9.5 / 9 / 8.5 / 8',
+      cost: '60 / 65 / 70 / 75 / 80',
+      damageType: 'Magic damage',
+      effects: [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lulu can cast Help, Pix! on herself or an ally or enemy.</p>"
+          description: '<p class="ability-effect"><span class="ability-header">Active:</span> Lulu can cast Help, Pix! on herself or an ally or enemy.</p>'
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Enemy Cast:</span> Lulu sends Pix to the far side of the target enemy for 4 seconds, dealing magic damage and revealing them for the same duration.</p>",
-          "leveling": [
+          description: '<p class="ability-effect"><span class="ability-header">Enemy Cast:</span> Lulu sends Pix to the far side of the target enemy for 4 seconds, dealing magic damage and revealing them for the same duration.</p>',
+          leveling: [
             {
-              "attribute": "Magic Damage",
-              "modifiers": [
+              attribute: 'Magic Damage',
+              modifiers: [
                 {
-                  "values": "80 / 120 / 160 / 200 / 240"
+                  values: '80 / 120 / 160 / 200 / 240'
                 },
                 {
-                  "unit": "% AP",
-                  "values": "50"
+                  unit: '% AP',
+                  values: '50'
                 }
               ]
             }
           ]
         },
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Self / Ally Cast:</span> Lulu sends Pix to the target ally for 6.25 seconds. If the target is a champion, they are granted a shield for 2.5 seconds.</p>",
-          "leveling": [
+          description: '<p class="ability-effect"><span class="ability-header">Self / Ally Cast:</span> Lulu sends Pix to the target ally for 6.25 seconds. If the target is a champion, they are granted a shield for 2.5 seconds.</p>',
+          leveling: [
             {
-              "attribute": "Shield Strength",
-              "modifiers": [
+              attribute: 'Shield Strength',
+              modifiers: [
                 {
-                  "values": "80 / 120 / 160 / 200 / 240"
+                  values: '80 / 120 / 160 / 200 / 240'
                 },
                 {
-                  "unit": "% AP",
-                  "values": "55"
+                  unit: '% AP',
+                  values: '55'
                 }
               ]
             }
           ]
         }
       ],
-      "icon": "https://cdn.communitydragon.org/latest/champion/Lulu/ability-icon/e",
-      "maxCharges": -1,
-      "notes": "Help, Pix! can be self-cast.\nIf the player casts Help, Pix! on a non-champion target, the spell script will first search for a targetable allied or enemy champion within  75 radius around the target. If there is at least one, it'll apply the effects to the closest one instead of the initial target.\nPENDING FOR TEST: Allies or enemies or proximity take priortity?\nThis effect does not respect that the champion may not be visible to Lulu and not a valid target for normal selection for this reason. Therefore it can for instance apply the effects to stealthed enemy champions this way.(bug)\nSince the original cast did not target the champion, some effects (such as  Guardian) may behave incorrectly.(bug)\nIt is not known in which patch this effect was added.\n Spell shield and  Riposte will block the damage but Pix will still follow regardless.\nPix will continue to assist the target ally for the full duration even if the shield breaks (the same applies for the shield if the target ally leaves Pix's leash range).\nPix's  Glitterlance bolt can be fired while he is away from Lulu from his location and towards the cursor (effectively extending  Glitterlance's range).",
-      "projectile": "FALSE",
-      "resource": "Mana",
-      "spellEffects": "spell",
-      "spellshieldable": "special",
-      "targeting": "Unit",
-      "targetRange": "650"
+      icon: 'https://cdn.communitydragon.org/latest/champion/Lulu/ability-icon/e',
+      maxCharges: -1,
+      notes: 'Help, Pix! can be self-cast.\nIf the player casts Help, Pix! on a non-champion target, the spell script will first search for a targetable allied or enemy champion within  75 radius around the target. If there is at least one, it\'ll apply the effects to the closest one instead of the initial target.\nPENDING FOR TEST: Allies or enemies or proximity take priortity?\nThis effect does not respect that the champion may not be visible to Lulu and not a valid target for normal selection for this reason. Therefore it can for instance apply the effects to stealthed enemy champions this way.(bug)\nSince the original cast did not target the champion, some effects (such as  Guardian) may behave incorrectly.(bug)\nIt is not known in which patch this effect was added.\n Spell shield and  Riposte will block the damage but Pix will still follow regardless.\nPix will continue to assist the target ally for the full duration even if the shield breaks (the same applies for the shield if the target ally leaves Pix\'s leash range).\nPix\'s  Glitterlance bolt can be fired while he is away from Lulu from his location and towards the cursor (effectively extending  Glitterlance\'s range).',
+      projectile: 'FALSE',
+      resource: 'Mana',
+      spellEffects: 'spell',
+      spellshieldable: 'special',
+      targeting: 'Unit',
+      targetRange: '650'
     },
     {
-      "key": "R",
-      "name": "Wild Growth",
-      "affects": "Allies / Self, Enemies",
-      "blurb": "Active:  Lulu enchants herself or the target allied champion,  knocking up surrounding enemies.",
-      "castTime": "none",
-      "cooldown": "120 / 100 / 80",
-      "cost": "100",
-      "effectRadius": "400 / 400",
-      "effects": [
+      key: 'R',
+      name: 'Wild Growth',
+      affects: 'Allies / Self, Enemies',
+      blurb: 'Active:  Lulu enchants herself or the target allied champion,  knocking up surrounding enemies.',
+      castTime: 'none',
+      cooldown: '120 / 100 / 80',
+      cost: '100',
+      effectRadius: '400 / 400',
+      effects: [
         {
-          "description": "<p class=\"ability-effect\"><span class=\"ability-header\">Active:</span> Lulu enlarges herself or the target allied champion, knocking up nearby enemies for 1 second. For the next 7 seconds, the target gains bonus health and 40% increased size and slows nearby enemies, which lingers for 0.25 seconds.</p>",
-          "leveling": [
+          description: '<p class="ability-effect"><span class="ability-header">Active:</span> Lulu enlarges herself or the target allied champion, knocking up nearby enemies for 1 second. For the next 7 seconds, the target gains bonus health and 40% increased size and slows nearby enemies, which lingers for 0.25 seconds.</p>',
+          leveling: [
             {
-              "attribute": "Bonus Health",
-              "modifiers": [
+              attribute: 'Bonus Health',
+              modifiers: [
                 {
-                  "values": "275 / 425 / 575"
+                  values: '275 / 425 / 575'
                 },
                 {
-                  "unit": "% AP",
-                  "values": "55"
+                  unit: '% AP',
+                  values: '55'
                 }
               ]
             },
             {
-              "attribute": "Slow",
-              "modifiers": [
+              attribute: 'Slow',
+              modifiers: [
                 {
-                  "unit": "%",
-                  "values": "30 / 45 / 60"
+                  unit: '%',
+                  values: '30 / 45 / 60'
                 }
               ]
             }
           ]
         }
       ],
-      "icon": "https://cdn.communitydragon.org/latest/champion/Lulu/ability-icon/r",
-      "maxCharges": -1,
-      "notes": "Wild Growth's size increase scales additively with other size increases.",
-      "resource": "Mana",
-      "spellshieldable": "True",
-      "targeting": "Unit",
-      "targetRange": "900"
+      icon: 'https://cdn.communitydragon.org/latest/champion/Lulu/ability-icon/r',
+      maxCharges: -1,
+      notes: 'Wild Growth\'s size increase scales additively with other size increases.',
+      resource: 'Mana',
+      spellshieldable: 'True',
+      targeting: 'Unit',
+      targetRange: '900'
     }
   ],
-  "adaptiveType": "Magic damage",
-  "attackType": "Ranged",
-  "attributeRatings": {
-    "damage": 2,
-    "toughness": 1,
-    "control": 2,
-    "mobility": 1,
-    "utility": 3,
-    "abilityReliance": 80,
-    "difficulty": 2
+  adaptiveType: 'Magic damage',
+  attackType: 'Ranged',
+  attributeRatings: {
+    abilityReliance: 80,
+    control: 2,
+    damage: 2,
+    difficulty: 2,
+    mobility: 1,
+    toughness: 1,
+    utility: 3
   },
-  "faction": "bandle-city",
-  "lore": "The yordle mage Lulu is known for conjuring dreamlike illusions and fanciful creatures as she roams Runeterra with her fairy companion Pix. Lulu shapes reality on a whim, warping the fabric of the world, and what she views as the constraints of this mundane, physical realm. While others might consider her magic at best unnatural, and at worst dangerous, she believes everyone could use a touch of enchantment.",
-  "patchLastChanged": "25.14",
-  "positions": [
-    "Support"
+  faction: 'bandle-city',
+  lore: 'The yordle mage Lulu is known for conjuring dreamlike illusions and fanciful creatures as she roams Runeterra with her fairy companion Pix. Lulu shapes reality on a whim, warping the fabric of the world, and what she views as the constraints of this mundane, physical realm. While others might consider her magic at best unnatural, and at worst dangerous, she believes everyone could use a touch of enchantment.',
+  patchLastChanged: '25.14',
+  positions: [
+    'Support'
   ],
-  "price": {
-    "blueEssence": 2400,
-    "rp": 880
+  price: {
+    blueEssence: 2400,
+    rp: 880
   },
-  "releaseDate": "2012-03-20",
-  "resource": "Mana",
-  "roles": [
-    "Enchanter",
-    "Mage",
-    "Support"
+  releaseDate: '2012-03-20',
+  resource: 'Mana',
+  roles: [
+    'Enchanter',
+    'Mage',
+    'Support'
   ],
-  "stats": {
-    "health": {
-      "flat": 565,
-      "perLevel": 92
+  stats: {
+    acquisitionRadius: {
+      flat: 625
     },
-    "healthRegen": {
-      "flat": 6,
-      "perLevel": 0.6
+    armor: {
+      flat: 26,
+      perLevel: 4.6
     },
-    "mana": {
-      "flat": 350,
-      "perLevel": 55
+    attackCastTime: {
+      flat: 0.3
     },
-    "manaRegen": {
-      "flat": 11,
-      "perLevel": 0.6
+    attackDamage: {
+      flat: 47,
+      perLevel: 2.6
     },
-    "armor": {
-      "flat": 26,
-      "perLevel": 4.6
+    attackDelayOffset: {
+      flat: -0.112
     },
-    "magicResistance": {
-      "flat": 30,
-      "perLevel": 1.3
+    attackRange: {
+      flat: 550
     },
-    "attackDamage": {
-      "flat": 47,
-      "perLevel": 2.6
+    attackSpeed: {
+      flat: 0.625,
+      perLevel: 2.25
     },
-    "movespeed": {
-      "flat": 330
+    attackSpeedRatio: {
+      flat: 0.625
     },
-    "acquisitionRadius": {
-      "flat": 625
+    attackTotalTime: {
+      flat: 1.6
     },
-    "selectionRadius": {
-      "flat": 100
+    criticalStrikeDamage: {
+      flat: 175
     },
-    "pathingRadius": {
-      "flat": 30
+    criticalStrikeDamageModifier: {
+      flat: 1
     },
-    "gameplayRadius": {
-      "flat": 55
+    gameplayRadius: {
+      flat: 55
     },
-    "criticalStrikeDamage": {
-      "flat": 175
+    health: {
+      flat: 565,
+      perLevel: 92
     },
-    "criticalStrikeDamageModifier": {
-      "flat": 1
+    healthRegen: {
+      flat: 6,
+      perLevel: 0.6
     },
-    "attackSpeed": {
-      "flat": 0.625,
-      "perLevel": 2.25
+    magicResistance: {
+      flat: 30,
+      perLevel: 1.3
     },
-    "attackSpeedRatio": {
-      "flat": 0.625
+    mana: {
+      flat: 350,
+      perLevel: 55
     },
-    "attackCastTime": {
-      "flat": 0.3
+    manaRegen: {
+      flat: 11,
+      perLevel: 0.6
     },
-    "attackTotalTime": {
-      "flat": 1.6
+    movespeed: {
+      flat: 330
     },
-    "attackDelayOffset": {
-      "flat": -0.112
+    pathingRadius: {
+      flat: 30
     },
-    "attackRange": {
-      "flat": 550
+    selectionRadius: {
+      flat: 100
     }
   }
 }

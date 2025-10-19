@@ -9,9 +9,13 @@ import {
   useForwardPropsEmits,
 } from 'reka-ui'
 
-const props = defineProps<
-  MenubarCheckboxItemProps & { class?: HTMLAttributes['class'] }
->()
+const props = withDefaults(defineProps<MenubarCheckboxItemProps & {
+  class?: HTMLAttributes['class']
+  checkboxType?: 'tick' | 'switch' | 'checkbox' | 'tick-end'
+}>(), {
+  checkboxType: 'tick'
+})
+
 const emits = defineEmits<MenubarCheckboxItemEmits>()
 
 const delegatedProps = reactiveOmit(props, 'class')
@@ -24,13 +28,21 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
     v-bind="forwarded"
     :class="
       cn(
-        'relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-2 outline-none focus:bg-b2 focus:textneutral-bc data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
+        'relative flex cursor-default select-none items-center rounded-sm gap-2.5 py-1.5 px-2 text-2 outline-none focus:bg-b2 font-medium focus:text-bc data-[disabled]:pointer-events-none data-[disabled]:opacity-50', { ' pl-8': !props.checkboxType || props.checkboxType === 'tick' },
         props.class,
       )
     ">
-    <span class="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
-      <MenubarItemIndicator>
-        <CheckIcon class="w-4 h-4" />
+    <span :class="cn('absolute right-1.5 flex w-fit h-fit items-center justify-center', { 'left-2': !props.checkboxType || props.checkboxType === 'tick' })">
+
+      <Switch
+        v-if="props.checkboxType === 'switch'"
+        v-model:model-value="forwarded.modelValue as boolean"
+        class="scale-70 justify-self-end" />
+      <MenubarItemIndicator
+        v-else>
+        <icon
+          name="tick-sm"
+          class="size-6 mr-1" />
       </MenubarItemIndicator>
     </span>
 

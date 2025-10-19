@@ -45,23 +45,26 @@ export const inputGroupButtonVariants = tv({
   base: ' shadow-none flex gap-2 items-center',
   defaultVariants: {
     size: 'xs',
+    variant: 'ghost',
   },
   variants: {
+    /* shape */
+    shape: {
+      ...shapeVariants
+    },
     size: {
       'icon-sm': 'size-8 p-0 has-[>svg]:p-0',
-      'icon-xs': 'size-6 rounded-[calc(var(--radius)-5px)] p-0 has-[>svg]:p-0',
-      'sm': 'h-8 px-2.5 gap-1.5 rounded-md has-[>svg]:px-2.5',
-      'xs': 'h-6 gap-1 px-2 rounded-[calc(var(--radius)-5px)] [&>svg:not([class*=\'size-\'])]:size-3.5 has-[>svg]:px-2',
+      'icon-xs': '[&_svg]:size-3.5 size-6 rounded-sm p-0 has-[>svg]:p-0',
+      /*       'sm': 'h-8 px-2.5 gap-1.5 rounded-md has-[>svg]:px-2.5',
+      'xs': 'h-6 gap-1 px-2 rounded-[calc(var(--radius)-5px)] [&>svg:not([class*=\'size-\'])]:size-3.5 has-[>svg]:px-2', */
+      ...sizeVariants
     },
+    variant: {
+      ...variantVariants
+    }
   },
 })
 
 export type InputVariants = VariantProps<typeof inputVariants>
 export type InputGroupVariants = VariantProps<typeof inputGroupAddonVariants>
 export type InputGroupButtonVariants = VariantProps<typeof inputGroupButtonVariants>
-
-export interface InputGroupButtonProps {
-  class?: HTMLAttributes['class']
-  size?: InputGroupButtonVariants['size']
-  variant?: ButtonVariants['variant']
-}

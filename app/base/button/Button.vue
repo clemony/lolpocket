@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { PrimitiveProps } from 'reka-ui'
-import { buttonVariants } from '@variants'
 import { Primitive } from 'reka-ui'
 
 interface Props extends PrimitiveProps {
@@ -20,7 +19,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 <template>
   <Primitive
-    :as="as"
+    :as
     :as-child="asChild"
     :class="cn(buttonVariants({ base, variant, size, shape, hover, active }), props.class)"
     :autofocus="false">

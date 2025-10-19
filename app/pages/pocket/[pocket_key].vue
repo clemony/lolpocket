@@ -40,7 +40,7 @@ const selectedSet = computed(() => {
     v-if="pocket"
     size="lg">
     <template #crumb>
-      <PocketSwitcher />
+      <PocketMenubar />
     </template>
 
     <!-- splash -->
@@ -61,58 +61,26 @@ const selectedSet = computed(() => {
       <PocketHeader :pocket="pocket" />
     </template>
 
-    <div class="w-4/5 px-14 justify-self-center z-auto grid  bg-b1">
-      <div class="w-full pb-10 pt-18 ">
-        <div class="h-26 flex inset-x-0 @container gap-5">
-          <MainChampionPopover />
-
-          <LazyMainRuneSelect
-            :pocket />
-
-          <LazyMainSpellSelect
-            :pocket />
-          <MainPositionSelect
-            :pocket />
-          <Card class="basis-1/5 h-full shrink-0" />
-        </div>
-      </div>
-
-      <Dock
-        :magnification="40"
-        class="fixed left-10 top-93 py-5"
+    <div class="w-4/5 px-14 justify-self-center z-auto grid bg-b1 min-h-screen">
+      <ButtonGroup
+        class="fixed right-6 border-b3/80 border rounded-xl  shadow-sm flex flex-col top-93 "
         orientation="vertical">
-        <DockIcon>
-          <MainChampionPopover
-            side="right"
-            align="start"
-            type="btn" />
-        </DockIcon>
-        <DockIcon>
-          <MainRuneSelect
-            :pocket
-            side="right"
-            align="start"
-            type="btn" />
-        </DockIcon>
-        <DockIcon>
-          <MainSpellSelect :pocket>
-            <SelectTrigger class="rounded-full size-14 aspect-square  grid place-items-center relative">
-              <Spell
-                v-for="spell, i in selectedSet"
-                :key="i"
-                :name="spell"
-                :class="cn('size-full pointer-events-none absolute rounded-full', { '-mask-linear-55 mask-linear-from-40% mask-linear-to-58%': i === 'f' })" />
-            </SelectTrigger>
-          </MainSpellSelect>
-        </DockIcon>
-        <DockIcon>
-          <MainPositionSelect
-            side="right"
-            align="start"
-            type="btn"
-            :pocket />
-        </DockIcon>
-      </Dock>
+        <MainChampionPopover
+          side="right"
+          align="start" />
+        <MainRuneSelect
+          :pocket
+          side="right"
+          align="start" />
+        <MainSpellSelect
+          side="right"
+          align="start"
+          :pocket />
+        <MainPositionSelect
+          side="right"
+          align="start"
+          :pocket />
+      </ButtonGroup>
 
       <NuxtPage
         v-if="pocket"

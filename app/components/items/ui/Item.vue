@@ -14,7 +14,7 @@ const {
     v-if="id"
     :class="
       cn(
-        'rounded-lg relative bg-b2/0 overflow-hidden grid place-items-center aspect-square shadow-warm-soft shadow-sm shadow-black/50  drop-shadow-sm ',
+        'rounded-lg relative bg-b2 overflow-hidden grid place-items-center aspect-square shadow-warm-soft shadow-sm shadow-black/30  drop-shadow-sm ',
 
         className,
       )

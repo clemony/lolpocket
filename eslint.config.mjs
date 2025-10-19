@@ -1,11 +1,13 @@
 // eslint.config.mjs
 import antfu from '@antfu/eslint-config'
+import css from '@eslint/css'
 import pluginJsonc from 'eslint-plugin-jsonc'
 import tailwindcss from 'eslint-plugin-tailwindcss'
 import pluginVue from 'eslint-plugin-vue'
 import jsoncParser from 'jsonc-eslint-parser'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { tailwind4 } from 'tailwind-csstree'
 
 export function resolvePath(filePath) {
   const __filename = fileURLToPath(import.meta.url)
@@ -43,10 +45,42 @@ export default antfu({
         'jsonc/valid-jsonc': 'error',
       },
     },
+    // CSS
+    {
+      files: ['**/*.css'],
+      ...css.configs.recommended,
+      language: 'css/css',
+      languageOptions: {
+        customSyntax: tailwind4,
+      },
+      rules: {
+        ...css.configs.recommended.rules,
+        'css/no-duplicate-imports': 'error',
+        'prettier/prettier': ['error', { parser: 'css' }],
+      },
+    },
+    {
+      files: ['**/*.vue'],
+      processor: 'vue/block',
+    },
+    {
+      files: ['**/*.vue/*.css'],
+      ...css.configs.recommended,
+      language: 'css/css',
+      languageOptions: {
+        customSyntax: tailwind4,
+      },
+      rules: {
+        ...css.configs.recommended.rules,
+        'css/no-duplicate-imports': 'error',
+        'prettier/prettier': ['error', { parser: 'css' }],
+      },
+      settings: { tailwindcss: { callees: ['tw'], cssFiles: ['**/*.vue/*.css'] } },
+    }
   ],
   ecmaVersion: 'latest',
   formatters: {
-    css: true,
+    css: 'prettier',
     html: true,
     json: 'prettier',
     markdown: 'prettier',
@@ -64,9 +98,10 @@ export default antfu({
     '.save.json',
   ],
   plugins: {
+    css,
     pluginJsonc,
     pluginVue,
-    tailwindcss,
+    tailwindcss
   },
   rules: {
     'eqeqeq': ['error', 'smart'],
@@ -115,6 +150,7 @@ export default antfu({
     },
   },
   sourceType: 'module',
+  stylistic: true,
   vue: {
     overrides: {
       'vue/custom-event-name-casing': 'off',

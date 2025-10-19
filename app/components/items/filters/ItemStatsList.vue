@@ -1,63 +1,47 @@
-<script setup lang="ts">
-import { statIndex } from '#shared/appdata'
+<script lang="ts" setup>
+import { statIndex } from '@appdata'
 
-const emit = defineEmits(['update:model'])
-
-const to = ref([])
-const categories = ref(Object.values(statIndex))
-const originalOrder = ref([
-  ...categories.value.sort((a, b) => {
-    if (a.name < b.name) {
-      return -1
-    }
-    if (a.name > b.name) {
-      return 1
-    }
-    return 0
-  }),
-])
-function moveToTop(stat) {
-  const index = categories.value.findIndex(cat => cat.id === stat.id)
-  if (index !== -1) {
-    categories.value.splice(index, 1) // Remove stat
-    categories.value.unshift(stat) // Add it to the top
-  }
-  emit('update:model', to.value)
-}
-
-function resetCategories() {
-  categories.value = [...originalOrder.value] // Reset to the original A-Z order
-}
-
-function handleReset() {
-  to.value.length = 0
-  resetCategories()
-  emit('update:model', to.value)
-}
+const { icons } = defineProps<{
+  icons?: boolean
+}>()
 </script>
 
 <template>
-  <form class="flex flex-wrap gap-3 gap-y-5">
-    <input
-      class="btn btn-square btn-sm !text-5rounded-md font-normal"
-      type="reset"
-      value="×"
-      @click="handleReset()" />
-    <!--
-    <TransitionGroup name="pop">
-      <input
-        v-for="stat in ''"
-        :key="stat.id"
-        v-model="to"
-        class="btn checked:bgneutral checked:borderneutral checked:shadowneutral/20 btn-sm !text-3 mr-0 rounded-md font-medium tracking-normal capitalize checked:shadow-sm"
-        :value="stat.id"
-        type="checkbox"
-        name="categories"
-        :aria-label="(stat.abbr as string) || stat.name"
-        @change="moveToTop(stat)"
-      />
-    </TransitionGroup> -->
-  </form>
+  <Listbox
+    v-model:model-value="is().filters.stats"
+    class="w-full overflow-y-scroll overscroll-auto px-1.5 h-120 max-h-90"
+    :multiple="true"
+    @entry-focus.prevent>
+    <ListboxContent as-child>
+      <TransitionScalePop
+        group
+        class="w-full flex flex-col gap-1 pb-6">
+        <ListboxItem
+          v-for="stat in Object.values(statIndex).filter(s => s.type && s.type.includes('item'))"
+          :key="stat.id"
+          :class="
+            cn('!gap-3 font-medium', {
+              'btn-active text-white **:text-white  order-first': is().filters.stats.includes(stat.id),
+            })
+          "
+          :style="{
+            backgroundColor: is().filters.stats.includes(stat.id) ? stat.color : '',
+          }"
+          :value="stat.id">
+          <Badge
+            v-if="icons"
+            :style="{
+              backgroundColor: stat.color,
+            }"
+            :class="cn('badge-lg px-2 border-0', { 'shadow-none drop-shadow-none inset-shadow-none': is().filters.stats.includes(stat.id) })">
+            <hicon
+              :name="stat.icon"
+              class="size-4 text-white" />
+          </Badge>
+          {{ stat.name }}
+          <ListboxItemIndicator />
+        </ListboxItem>
+      </TransitionScalePop>
+    </ListboxContent>
+  </Listbox>
 </template>
-
-<style scoped></style>

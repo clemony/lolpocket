@@ -17,10 +17,10 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
     v-bind="forwarded"
     :class="
       cn(
-        'flex h-9 items-center space-x-1 rounded-md border border-b2  bg-b1 p-1 shadow-sm',
+        'flex h-9 items-center rounded-lg  p-1 ',
         props.class,
       )
     ">
-    <slot />
+    <slot :model-value="forwarded.modelValue" />
   </MenubarRoot>
 </template>

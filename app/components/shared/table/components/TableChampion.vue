@@ -13,6 +13,7 @@ const p = ref(props.params)
     class="ti-container">
     <div class="ti-wrapper">
       <img
+        alt="props.params.value.name"
         :src="`/img/champion/${props.params.value.id}.webp`"
         class="size-full scale-115" />
     </div>
