@@ -1,6 +1,0 @@
-ps().pockets.forEach(p =>
-  Object.assign(p, {
-    comments: false,
-  })
-)
-console.log(ps().pockets)
