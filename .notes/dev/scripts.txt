@@ -1,4 +1,0 @@
-"update": "npm update",
-"typecheck": "npx nuxt typecheck",
-"generate supabase types": "npx supabase gen types --lang=typescript --project-id zsxuzlzfwovsbzzrpcbc > types/database.types.ts",
-"upgrade+": "npx nuxt upgrade --dedupe",
