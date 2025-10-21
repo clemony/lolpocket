@@ -7,7 +7,6 @@ interface Props extends PrimitiveProps {
   base?: ButtonVariants['base']
   class?: HTMLAttributes['class']
   hover?: ButtonVariants['hover']
-  shape?: ButtonVariants['shape']
   size?: ButtonVariants['size']
   variant?: ButtonVariants['variant']
 }
@@ -21,7 +20,7 @@ const props = withDefaults(defineProps<Props>(), {
   <Primitive
     :as
     :as-child="asChild"
-    :class="cn(buttonVariants({ base, variant, size, shape, hover, active }), props.class)"
+    :class="cn(buttonVariants({ base, variant, size, hover, active }), props.class)"
     :autofocus="false">
     <slot />
   </Primitive>

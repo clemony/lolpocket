@@ -2,7 +2,7 @@
 const { class: className, pocket: p, size } = defineProps<{
   class?: HTMLAttributes['class']
   pocket: Pocket
-  size: string
+  size: LabelVariants['size']
 }>()
 
 const pocket = computed(() => p)

@@ -17,7 +17,12 @@ logs
 *.log
 
 #notes
+
 .notes
+**/.notes/**
+notes
+.notes/**
+*.notes
 **/📌*
 
 #old

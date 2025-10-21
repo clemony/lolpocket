@@ -7,5 +7,8 @@ export function scrollToTop() {
 }
 
 export function scrollContainerToTop(container: HTMLElement | null) {
-  container?.scrollTo({ behavior: 'smooth', top: 0 })
+  console.log('hi')
+  nextTick(() => {
+    container?.scrollTo({ behavior: 'smooth', top: 0 })
+  })
 }

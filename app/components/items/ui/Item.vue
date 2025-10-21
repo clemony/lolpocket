@@ -11,15 +11,16 @@ const {
 
 <template>
   <div
-    v-if="id"
     :class="
       cn(
-        'rounded-lg relative bg-b2 overflow-hidden grid place-items-center aspect-square shadow-warm-soft shadow-sm shadow-black/30  drop-shadow-sm ',
+        'rounded-lg relative bg-b2 overflow-hidden grid place-items-center aspect-square', { ' shadow-warm-soft shadow-sm shadow-black/30  drop-shadow-sm ': id },
 
         className,
       )
     ">
     <Img
+      v-if="id"
+
       :img="`/img/items/${id}.webp`"
       :alt="id.toString()"
       class="aspect-square opacity-96 size-full absolute rounded-lg" />

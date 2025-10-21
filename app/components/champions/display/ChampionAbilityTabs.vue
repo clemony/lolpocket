@@ -1,13 +1,24 @@
 <script setup lang="ts">
 import { onKeyDown, onKeyUp } from '@vueuse/core'
 
-const { abilities } = defineProps<{
-  abilities: Ability[]
+const { abilities, k } = defineProps<{
+  abilities?: Ability[]
+  k?: string
 }>()
 
 const emit = defineEmits(['update:ability'])
+const champion = await import(
+  `#shared/appdata/records/champions/${k}.ts`
+)
 const loaded = ref(false)
-const champAbilities = computed(() => abilities)
+const champAbilities = computed(() => {
+  console.log('🌱 - champion:', champion)
+  if (!champion)
+    return null
+
+  return champion.default.abilities
+})
+console.log('🌱 - champAbilities:', champAbilities)
 const selectedAbility = ref('P')
 /*
 watch(() => champAbilities.value.name, (newVal) => {
@@ -28,20 +39,22 @@ onKeyDown(['p', 'q', 'w', 'e', 'r'], (e) => {
 onKeyUp(['p', 'q', 'w', 'e', 'r'], (e) => {
   keyDown.value = false
 })
+
+const gridCols = computed (() => `grid grid-cols-${champAbilities.value.length}`)
 </script>
 
 <template>
-  <menu
-    class="flex w-full h-20 items-center px-8 justify-between gap-2.5 pointer-events-auto z-1">
+  <menu :class="cn('items-center justify-between gap-2 pointer-events-auto z-1', gridCols)">
     <Label
       v-for="(ability, i) in champAbilities"
       :key="i"
+      base="btn"
+      variant="neutral"
+      size="sq-xl"
       :value="i"
-      class="!p-0 aspect-square size-20 rounded-lg relative bg-b3 group shrink-0 !cursor-pointer **:pointer-events-none hover:scale-110 transition-transform duration-300"
+      class=" w-full h-auto aspect-square p-0 overflow-hidden border-0 group !cursor-pointer **:pointer-events-none hover:scale-110 transition-transform duration-300"
       :class="{
-        'scale-110 hover:scale-115 ': selectedAbility === ability.key,
-        '  drop-shadow-sm  shadow-sm ': loaded,
-      }">
+        'scale-110 hover:scale-115 ': selectedAbility === ability.key }">
       <input
         v-model="selectedAbility"
         :value="i"
@@ -51,9 +64,9 @@ onKeyUp(['p', 'q', 'w', 'e', 'r'], (e) => {
         @change="emit('update:ability', selectedAbility)" />
 
       <Img
-        :img="ability[0].icon"
+        :img="ability.icon"
         alt="passive icon"
-        class="size-full rounded-lg pointer-events-none duration-300 transition grayscale contrast-80 opacity-70 group-hover:opacity-100 group-hover:contrast-100 group-hover:grayscale-0"
+        class="size-full  pointer-events-none duration-300 transition grayscale contrast-80 opacity-70 group-hover:opacity-100 group-hover:contrast-100 group-hover:grayscale-0"
         :class="{
           'opacity-100 contrast-100 grayscale-0  ': selectedAbility,
           'animate-in fade-in duration-500  ': loaded,
@@ -61,10 +74,6 @@ onKeyUp(['p', 'q', 'w', 'e', 'r'], (e) => {
         }"
         @load="loaded = true" />
 
-      <h3
-        class="absolute !text-5opacity-0 group-hover:opacity-100 transition duration-300 group-hover:text-shadow-black/50 group-hover:drop-shadow-black/70 text-shadow-xs text-white/86 drop-shadow-sm bottom-1 right-1.5">
-        {{ i }}
-      </h3>
     </Label>
   </menu>
 </template>

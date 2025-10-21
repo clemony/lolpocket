@@ -1,23 +1,21 @@
 <script setup lang="ts">
 import type { ToggleEmits, ToggleProps } from 'reka-ui'
-import { toggleVariants } from '@variants'
 import { Toggle, useForwardPropsEmits } from 'reka-ui'
 
 const props = withDefaults(
   defineProps<
     ToggleProps & {
       class?: HTMLAttributes['class']
-      variant?: any
-      size?: any
-      base?: any
-      shape?: any
-      hover?: any
+      variant?: ToggleVariants['variant']
+      size?: ToggleVariants['size']
+      base?: ToggleVariants['base']
+      hover?: ToggleVariants['hover']
     }
   >(),
   {
     disabled: false,
-    size: '',
-    variant: 'default',
+    size: 'sq-md',
+    variant: 'outline',
   }
 )
 
@@ -37,7 +35,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
     v-slot="{ modelValue }"
 
     v-bind="forwarded"
-    :class="cn(toggleVariants({ variant, size, base, hover, shape }), props.class)">
+    :class="cn(toggleVariants({ variant, size, base, hover }), props.class)">
     <slot :model-value />
   </Toggle>
 </template>

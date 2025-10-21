@@ -1,9 +1,5 @@
 <script lang="ts" setup>
-import { hexoid } from 'hexoid'
-
 const emit = defineEmits(['update:name'])
-
-const toID = hexoid()
 
 // Form fields
 const name = ref('')
@@ -25,7 +21,6 @@ function clearForm() {
 
 function submitForm() {
   console.log('hi')
-  const key = toID()
   clearForm()
 
   console.log('pocket added!', ps().pockets)

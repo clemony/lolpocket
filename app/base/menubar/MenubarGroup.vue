@@ -8,7 +8,7 @@ const props = defineProps<MenubarGroupProps>()
 <template>
   <MenubarGroup
     v-bind="props"
-    class="">
+    class="menu-group">
     <slot />
   </MenubarGroup>
 </template>

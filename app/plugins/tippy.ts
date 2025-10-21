@@ -18,7 +18,7 @@ export default defineNuxtPlugin((nuxtApp) => {
           expanded: 'auto',
         },
         // arrow: roundArrow + roundArrow,
-        delay: [1000, 0],
+        delay: [700, 0],
         duration: [150],
         flip: true,
         followCursor: false,

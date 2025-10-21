@@ -1,4 +1,3 @@
-import { hexoid } from 'hexoid'
 import { generate } from 'random-words'
 
 const moreWords = [
@@ -108,11 +107,6 @@ export function getKey(): string {
     .replace(/\//g, '')
     .replace(/:/g, '')
     .trim()
-}
-
-// Generate a unique ID using hexoid
-export function generateKey(): string {
-  return hexoid()()
 }
 
 // Capitalize first letter

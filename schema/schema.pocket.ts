@@ -1,10 +1,7 @@
 import { patchIndex } from '#shared/appdata/index/index'
-import { hexoid } from 'hexoid'
 import * as v from 'valibot'
 import { FixedArray, getDeepDefaults, MinMaxArray } from './utils/helpers'
 import { pType } from './utils/pType'
-
-const toID = hexoid()
 
 // Location
 export const PocketLocationSchema = v.object({
@@ -138,7 +135,7 @@ export type Card = v.InferOutput<typeof CardSchema>
 
 export function newRuneSet(): RuneSet {
   return {
-    id: toID(),
+    id: crypto.randomUUID(),
     keystone: null,
     primary: {
       path: '',
@@ -158,7 +155,7 @@ export async function generatePocket(pockets: Pocket[]) {
 
 export function newItemSet(): ItemSet {
   const a = getDeepDefaults(ItemSetSchema)
-  a.id = toID()
+  a.id = crypto.randomUUID()
   a.name = generateName()
   return a
 }
@@ -172,7 +169,7 @@ export function resetRuneSet(set: RuneSet): RuneSet {
 
 export function newSpellSet(): SpellSet {
   const a = getDeepDefaults(SpellSetSchema)
-  a.id = toID()
+  a.id = crypto.randomUUID()
   return a
 }
 
@@ -180,7 +177,7 @@ export function addSpellSet(pocket: Pocket | string) {
   let set = <SpellSet[]>[]
   set = pType(pocket).spells
   const a = getDeepDefaults(SpellSetSchema)
-  a.id = toID()
+  a.id = crypto.randomUUID()
   set.push(a)
 }
 
@@ -192,13 +189,13 @@ export function addRuneSet(pocket: Pocket | string) {
   let set = <RuneSet[]>[]
   set = p.runes
   const a = newRuneSet()
-  a.id = toID()
+  a.id = crypto.randomUUID()
   set.push(a)
 }
 
 export function newPocket(): Pocket {
   return {
-    key: toID(),
+    key: crypto.randomUUID(),
     name: generateName(),
     author: [as().account.puuid],
     champions: [],
@@ -227,12 +224,12 @@ const itemSet = computed (() => {
 const a = newItemSet()
  a.items.fill(getRandom(ix().items.map(i => i.id)))
  a.name = generateName()
- a.id = toID()
+ a.id = crypto.randomUUID()
  return a
 }).value
 
   return {
-    key: toID(),
+    key: crypto.randomUUID(),
     name: generateName(),
     author: [as().account.puuid],
     champions: [],

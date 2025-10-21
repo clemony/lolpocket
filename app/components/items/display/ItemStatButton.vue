@@ -23,7 +23,7 @@ const statValue = computed <StatIndex>(() => {
     v-if="statValue"
     :variant="active ? 'base' : 'btn'"
     :size
-    :hover="active ? 'neutral' : 'secondary'"
+    hover="btn"
     :style="{
       backgroundColor: active ? statValue?.color : '',
     }"

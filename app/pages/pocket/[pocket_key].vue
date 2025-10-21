@@ -62,26 +62,6 @@ const selectedSet = computed(() => {
     </template>
 
     <div class="w-4/5 px-14 justify-self-center z-auto grid bg-b1 min-h-screen">
-      <ButtonGroup
-        class="fixed right-6 border-b3/80 border rounded-xl  shadow-sm flex flex-col top-93 "
-        orientation="vertical">
-        <MainChampionPopover
-          side="right"
-          align="start" />
-        <MainRuneSelect
-          :pocket
-          side="right"
-          align="start" />
-        <MainSpellSelect
-          side="right"
-          align="start"
-          :pocket />
-        <MainPositionSelect
-          side="right"
-          align="start"
-          :pocket />
-      </ButtonGroup>
-
       <NuxtPage
         v-if="pocket"
         :pocket="pocket" />

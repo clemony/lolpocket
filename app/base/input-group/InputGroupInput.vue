@@ -1,7 +1,8 @@
 <script setup lang="ts">
-const { class: className, placeholder = '' } = defineProps<{
+const { class: className, focused, placeholder = '' } = defineProps<{
   class?: HTMLAttributes['class']
   placeholder?: string
+  focused?: boolean
 }>()
 </script>
 

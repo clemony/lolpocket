@@ -30,6 +30,7 @@ export interface StatIndex {
   color?: string
   current?: number
   description: string
+  group?: string
   icon?: string
   longAbbr?: string
   order?: number

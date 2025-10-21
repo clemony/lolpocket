@@ -1,15 +1,13 @@
 <script setup lang="ts">
 import type { AsTag, PrimitiveProps } from 'reka-ui'
-import { elementVariants } from '@variants'
 import { Primitive } from 'reka-ui'
 
-const { as = 'element', class: className } = defineProps<
+const { as = 'div', class: className } = defineProps<
   PrimitiveProps & {
     class?: HTMLAttributes['class']
     variant?: ElementVariants['variant']
     size?: ElementVariants['size']
     hover?: ElementVariants['hover']
-    shape?: ElementVariants['shape']
     as?: AsTag | string
   }
 >()
@@ -22,7 +20,7 @@ const { as = 'element', class: className } = defineProps<
     :class="
       cn(
         '',
-        elementVariants({ variant, size, hover, shape }),
+        elementVariants({ variant, size, hover }),
         className,
       )
     ">

@@ -14,7 +14,7 @@ const forwardedProps = useForwardProps(delegatedProps)
 <template>
   <RangeCalendarNext
     :class="cn(
-      buttonVariants({ variant: 'outline', shape: 'square' }),
+      buttonVariants({ variant: 'outline', size: 'sq-md' }),
       'size-8 bg-transparent p-0 opacity-50 hover:opacity-100',
       props.class,
     )"

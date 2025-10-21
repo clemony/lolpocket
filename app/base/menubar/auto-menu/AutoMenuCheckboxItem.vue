@@ -16,7 +16,7 @@ const modelProxy = computed({
     :checkbox-type="item.checkboxType"
     :inset="item.inset">
     <icon
-      v-if="getIcon(item.icon)?.name"
+      v-if="typeof item.icon !== 'string' && getIcon(item.icon)?.name"
       :name="getIcon(item.icon)?.name"
       :class="cn('size-4.5', getIcon(item.icon)?.class)" />
     {{ item.name }}

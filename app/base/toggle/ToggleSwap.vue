@@ -1,7 +1,5 @@
 <script lang="ts" setup>
-import type { ToggleVariants } from '@variants'
 import type { ToggleProps } from 'reka-ui'
-import { toggleVariants } from '@variants'
 
 interface ToggleItem {
   icon: string
@@ -12,10 +10,9 @@ interface ToggleItem {
 const props = defineProps<ToggleProps & {
   items?: ToggleItem[]
   class?: HTMLAttributes['class']
-  size?: any
-  base?: any
-  shape?: any
-  hover?: any
+  size?: ToggleVariants['size']
+  base?: ToggleVariants['base']
+  hover?: ToggleVariants['hover']
   value: boolean
 }>()
 
@@ -47,7 +44,7 @@ onMounted(() => {
     v-model:model-value="modelValue"
     as="button"
     :class="cn(
-      toggleVariants({ variant: currentVariant?.variant, size, base, hover, shape }),
+      toggleVariants({ variant: currentVariant?.variant, size, base, hover }),
       'group relative w-max cursor-pointer hover:data-[state=on]:**:text-bc data-[state=on]:bg-neutral/90 overflow-hidden rounded-full border px-3 !py-0 text-center',
       props.class,
     )"
