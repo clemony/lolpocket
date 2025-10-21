@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { ChampionIcon } from '#components'
-import type { MenubarItem, MenubarRadioGroup } from '~/base/menubar/menubar.types'
+import { ChampionIcon, Hicon, ItemsAutoMenu, MiniItemAvatars, MiniRuneSet, MiniSpellAvatars, PositionBadge, RuneAndPathImg, RunesAutoMenu, SpellsAutoMenu, SpellSetDuo } from '#components'
+import { championPositions } from '~~/shared/appdata'
+import type { MenubarGroup, MenubarItem, MenubarRadioGroup } from '~/base/menubar/menubar.types'
 
 const route = useRoute()
 const pocket = ref<Pocket>(ps().getPocket(String(route.params.pocket_key)))
@@ -21,10 +22,6 @@ const set = computed (() => pocket.value?.runes.find(s => s.id === pocket.value.
 const spells = computed (() => pocket.value.spells.find(s => s.id === pocket.value.main?.spells))
 const dlClass = 'size-3.5  opacity-70 **:stroke-[2.3]  group-hover/subitem:opacity-100'
 
-interface MenubarGroup {
-  name: string
-  items: MenubarItem[]
-}
 const menu: MenubarGroup[] = [
   {
     name: 'file',
@@ -105,6 +102,7 @@ const menu: MenubarGroup[] = [
   },
   {
     name: 'settings',
+    class: 'w-74',
     items: [
       createCheckboxItem({
         name: () => pocket.value.location.pinned ? 'Pinned' : 'Pin Pocket',
@@ -119,45 +117,62 @@ const menu: MenubarGroup[] = [
         name: 'core',
         items: [
           {
-            name: pocket.value.main?.champion || 'Champion',
+            name: 'champion',
+            class: { content: 'w-62' },
             inset: true,
             items: [
-              {
-                name: computed(() => pocket.value.main?.champion || 'Champion'),
-                inset: true,
-                items: [
-                  createRadioGroupItem({
-                    name: 'Core Champion',
-                    get: () => pocket.value.main.champion,
-                    optionIcon: k => h(ChampionIcon, { k }),
-                    optionName: k => ix().champNameByKey(k),
-                    options: pocket.value.champions,
-                    set: v => (pocket.value.main.champion = v),
-                  }),
-                ],
-                type: 'radio',
-              },
+              createRadioGroupItem({
+                name: 'Core Champion',
+                get: () => pocket.value.main.champion,
+                optionIcon: k => h(ChampionIcon, { class: 'size-6 rounded-md', k }),
+                optionName: k => ix().champNameByKey(k),
+                options: pocket.value.champions,
+                set: v => (pocket.value.main.champion = v),
+              }),
             ],
-            type: 'submenu'
+            shortcut: { component: h(ChampionIcon, { class: 'size-6 shadow-none rounded-full', k: pocket.value.main.champion }) },
+            type: 'submenu',
           },
+
           {
-            name: pocket.value.main?.role || 'Role',
+            name: 'role',
+            class: { content: 'w-52' },
             inset: true,
+            items: [
+              createRadioGroupItem({
+                name: 'Main Role',
+                get: () => pocket.value.main.role,
+                optionIcon: k => h(Hicon, { name: `i-lol-${k}`, class: '!size-4 mx-1' }),
+                optionName: k => k,
+                options: championPositions.map(p => p.name),
+                set: v => (pocket.value.main.role = v),
+              }),
+            ],
+            shortcut: { text: pocket.value.main?.role || '' },
             type: 'submenu',
           },
           {
-            name: `${ix().runeNameById(unref(set)?.keystone) || 'Keystone'} / ${unref(set)?.secondary.path || 'Path'}` || 'Runes',
+            name: 'runes',
+            class: { content: 'w-70' },
+            component: RunesAutoMenu,
             inset: true,
+            shortcut: { component: h(RuneAndPathImg, { class: 'size-7 rounded-full', pathClass: 'scale-60 translate-x-1 translate-y-1 border-b4/80', set: unref(set) }) },
             type: 'submenu',
           },
           {
-            name: pocket.value.main?.items || 'Items',
+            name: 'items',
+            class: { content: 'w-56' },
+            component: ItemsAutoMenu,
             inset: true,
+            shortcut: { component: h(MiniItemAvatars, { set: pocket.value.items.find(s => s.id === pocket.value.main?.items) }) },
             type: 'submenu',
           },
           {
-            name: `${unref(spells.value.d)} / ${unref(spells.value.f)}` || 'Spells',
+            name: 'spells',
+            class: { content: 'w-38' },
+            component: SpellsAutoMenu,
             inset: true,
+            shortcut: { component: h(MiniSpellAvatars, { set: pocket.value.spells.find(s => s.id === pocket.value.main?.spells) }) },
             type: 'submenu',
           },
         ],
@@ -182,11 +197,12 @@ const menu: MenubarGroup[] = [
     ]
   }
 ]
+console.log('🌱 - menu:', menu)
 </script>
 
 <template>
   <Menubar
-    class="h-11 self-end pb-2.5 -ml-4 w-fit">
+    class="h-11 self-end pb-2.5 -ml-4 w-fit z-1">
     <MenubarMenu
       v-for="group in menu"
       :key="group.name"
@@ -204,7 +220,7 @@ const menu: MenubarGroup[] = [
       </MenubarTrigger>
       <LazyMenubarContent
         :side-offset="2"
-        class="**:capitalize w-64">
+        :class="cn('**:capitalize w-64', group.class)">
         <AutoMenuContent
           v-for="item in group.items"
           :key="item.name.toString()"

@@ -29,7 +29,7 @@ const variants = {
     height: 'calc(var(--reka-tabs-indicator-size))',
     transform: 'translateY(calc(var(--reka-tabs-indicator-position)))',
     transition: {
-      duration: 0.5,
+      duration: 0.3,
     },
   },
 }
@@ -39,10 +39,10 @@ const variants = {
   <TabsIndicator
     v-bind="{ ...forwarded, ...$attrs }"
     as-child
-    class="z-0"
+    class="z-0 !min-w-0"
     :class="{
       'h-[81%]': props.orientation !== 'vertical',
-      'w-[98%]': props.orientation === 'vertical',
+      'w-[81%]': props.orientation === 'vertical',
     }">
     <motion.div
       :variants="variants"
@@ -62,15 +62,15 @@ const variants = {
         )
       ">
       <motion.div
-        class="h-full w-full rounded-lg text-bc shadow"
+        class="h-full w-full rounded-lg !min-w-0 text-bc shadow"
         :class="
           cn(
             '  bg-b1',
             {
               ' ring-b3/20 !from-b1 from-70%  !bg-gradient-to-br !to-b2/20': !props.contrast && props.round,
-              'shadow-sm shadow-black/3 bg-b1/90 ':
+              'shadow-sm shadow-black/3 h-full ':
                 props.orientation === 'vertical',
-              '!bg-neutral/82 border-n3 border drop-shadow-sm inset-shadow-sm inset-shadow-b3/20 rounded-xl rounded-lg-2':
+              '!bg-neutral/82 border-n3 border drop-shadow-sm inset-shadow-sm inset-shadow-b3/20 rounded-lg':
                 props.contrast,
               '!rounded-full    shadow-outline ring  backdrop-blur-sm !shadow-black/8 mt-0.5 !aspect-square':
                 props.round,

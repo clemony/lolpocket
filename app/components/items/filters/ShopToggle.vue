@@ -7,14 +7,13 @@
     v-tippy="{ content: is().filters.purchasable ? 'Items purchasable in shop' : 'All items', theme: 'base', placement: 'top-end' }"
     variant="outline"
     active="neutral"
-    shape="square"
     class="group/tog  relative *:transition-opacity *:duration-100  off:!bg-tint-b2/40 off:inset-shadow-sm"
     size="lg">
     <icon
       name="infinity"
-      class="group-on/tog:opacity-0 absolute   **:stroke-[2]" />
+      class="group-on/tog:opacity-0 absolute size-4.5  **:stroke-[2]" />
     <icon
       name="tag"
-      class="absolute group-off/tog:opacity-0  group-on/tog:opacity-100" />
+      class="absolute group-off/tog:opacity-0  size-4.75   group-on/tog:opacity-100" />
   </Toggle>
 </template>

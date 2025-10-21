@@ -1,6 +1,5 @@
 import { patchIndex } from '#shared/appdata/index/index'
-import { hexoid } from 'hexoid'
-const toID = hexoid()
+
 
 export function newTestPocket(): Pocket{
   // ps().pockets[0].main.items = 'test'
@@ -10,12 +9,12 @@ const itemSet = computed (() => {
 const a = newItemSet()
  a.items.fill(getRandom(ix().items.map(i => i.id)))
  a.name = generateName()
- a.id = toID()
+ a.id = crypto.randomUUID()
  return a
 }).value
 
   return {
-    key: toID(),
+    key: crypto.randomUUID(),
     name: generateName(),
     author: [as().account.puuid],
     champions: [],

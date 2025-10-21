@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { Primitive } from 'reka-ui'
 
-const { class: className } = defineProps<{
+const { class: className, pathClass } = defineProps<{
   class?: HTMLAttributes['class']
   set: RuneSet
+  pathClass?: HTMLAttributes['class']
 }>()
 </script>
 
@@ -28,6 +29,7 @@ const { class: className } = defineProps<{
         :class="
           cn(
             'size-7  rounded-full  overflow-hidden   group-hover/btn:!bg-tint-b2/40 transition-all duration-250 *:transition-opacity *:duration-200 after:absolute after:inset-0 after:opacity-0 after:bg-black/70 after:z-1 border grid place-items-center shadow-xs border-b3/90 absolute -bottom-0 -right-1.5', { 'after:bg-transparent': !set.secondary.path },
+            pathClass,
           )
         ">
         <img
@@ -35,7 +37,7 @@ const { class: className } = defineProps<{
           :title="set.secondary.path"
           :alt="set.secondary.path"
           :src="`/img/paths/${set.secondary.path}.webp`"
-          class="w-4.5 !h-auto" />
+          class="!w-4.5 !h-max shrink-0 absolute" />
 
         <i-lol-runes
           v-else

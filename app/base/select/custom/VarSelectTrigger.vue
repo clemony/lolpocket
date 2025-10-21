@@ -9,7 +9,6 @@ const props = defineProps<
     active?: ButtonVariants['active']
     base?: ButtonVariants['base']
     hover?: ButtonVariants['hover']
-    shape?: ButtonVariants['shape']
     size?: ButtonVariants['size']
     variant?: ButtonVariants['variant']
   }
@@ -25,7 +24,7 @@ const forwarded = useForwardProps(delegatedProps)
     v-bind="forwarded"
     :class="
       cn(
-        buttonVariants({ variant, hover, active, size, shape, base }),
+        buttonVariants({ variant, hover, active, size, base }),
         props.class,
       )">
     <slot />

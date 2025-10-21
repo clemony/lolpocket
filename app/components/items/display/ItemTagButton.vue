@@ -23,14 +23,14 @@ const tagValue = computed <ItemTag>(() => {
 <template>
   <Button
     v-if="tagValue"
-    :variant="active ? 'base' : 'btn'"
+    variant="outline"
+    hover="btn"
     :size
     :as
-    :hover="active ? 'neutral' : 'secondary'"
+    :class="cn('w-fit !text-2 border-b3/80 !font-medium  bg-clip-padding px-5 text-bc/90 capitalize ', { 'hover:**:text-bc hover:text-bc order-first text-white': active, 'pr-3': active && clear }, className)"
     :style="{
-      backgroundColor: active ? tagValue.color : '',
-    }"
-    :class="cn('w-fit font-medium px-5 text-bc/90 capitalize shadow-xs dxs', { '  order-first text-white': active, 'pr-3': active && clear }, className)">
+      backgroundColor: `${is().filters.tags.length && is().filters.tags.includes(tagValue.id) || active ? tagValue.color : 'transparent'}`,
+    }">
     {{ tagValue.name }}
     <icon
       v-if="clear"

@@ -138,6 +138,7 @@ export default defineAppConfig({
       'riot': 'simple-icons:riotgames',
 
       // shape
+      'circle-big-dot': 'clarity:dot-circle-line',
       'circle-dot': 'lucide:circle-dot',
       'dot': 'lucide:dot',
       'heart': 'gg:heart',

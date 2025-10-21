@@ -3,7 +3,6 @@ import type { variant } from 'valibot'
 
 interface InputGroupButtonProps {
   class?: HTMLAttributes['class']
-  shape?: ButtonVariants['shape']
   size?: InputGroupButtonVariants['size']
   variant?: ButtonVariants['variant']
 }

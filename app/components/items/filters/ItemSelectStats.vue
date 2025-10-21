@@ -16,8 +16,12 @@
       <icon name="bar-chart" />
     </VarSelectTrigger>
     <SelectContent
-      class=" w-64 top-[calc(var(--reka-select-trigger-height)+2px)] -translate-x-52">
-      <ItemStatsList icons />
+      class=" w-74 top-[calc(var(--reka-select-trigger-height)+2px)] -translate-x-63">
+      <ItemStatsList
+        class="flex-row *:w-fit"
+        icons
+        variant="btn"
+        labels />
     </SelectContent>
   </Select>
 </template>

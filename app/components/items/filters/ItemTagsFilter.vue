@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { itemTags } from '@appdata'
 
-const { class: className, hover = 'base', size = ['sq-lg', 'lg'], variant = 'btn' } = defineProps<{
+const { class: className, clear = true, size = ['sq-lg', 'lg'] } = defineProps<{
   class?: HTMLAttributes['class']
   size?: ButtonVariants['size'][]
   variant?: ButtonVariants['variant']
   hover?: ButtonVariants['hover']
+  clear?: boolean
 }>()
 
 function handleReset() {
@@ -28,15 +29,11 @@ watch(() => is().filters.tags, (newVal) => {
     <ListboxContent as-child>
       <TransitionSlideLeft
         group
-        :class="cn('flex items-center w-full z-1  flex-wrap gap-3  relative', className)">
-        <h6 class="opacity-100 w-22 order-first font-semibold text-bc/90">
-          Shop Tags
-        </h6>
+        :class="cn('flex items-center w-full z-1 py-0 flex-wrap gap-3  relative', className)">
         <Button
-          v-if="is().filters.tags.length"
+          v-if="is().filters.tags.length && clear"
           :variant
           :hover
-
           :size="size[0]"
           class="order-first hover:*:opacity-100"
           @click="is().filters.tags.length = 0">
@@ -48,12 +45,13 @@ watch(() => is().filters.tags, (newVal) => {
         <BaseListboxItem
           v-for="tag in itemTags"
           :key="tag.name"
+          class="bg-transparent fx-0"
           :value="tag.name"
           as-child>
           <ItemTagButton
             as="label"
+            :variant
             :size="size[1]"
-            :active="is().filters.tags.includes(tag.name)"
             :tag>
           </ItemTagButton>
         </BaseListboxItem>

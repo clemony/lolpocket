@@ -82,7 +82,8 @@ watchEffect(() => {
         </div>
       </div>
     </div>
-    <div class="size-full flex gap-8  z-auto   mx-auto">
+    <SelectedChampions />
+    <div class="w-full flex gap-8  z-auto   mx-auto">
       <motion.div
         layout
         class="h-fit justify-between grid grid-flow-row auto-cols-auto p-1 grid-cols-[repeat(auto-fill,minmax(70px,1fr))] w-full inset-0 pb-44  gap-4">

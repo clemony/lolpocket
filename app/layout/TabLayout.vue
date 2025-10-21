@@ -38,7 +38,7 @@ useScrollProvider(el)
       <slot name="crumb" />
     </div>
 
-    <div class="fixed top-15  left-2.5 z-12 gap-2  grid auto-rows-fr items-center w-16">
+    <div class="fixed top-15  left-2.5 z-13 gap-2  grid auto-rows-fr items-center w-16">
       <slot name="menu" />
     </div>
 
@@ -51,7 +51,7 @@ useScrollProvider(el)
       })">
       <!-- Sticky Tabs (now ABOVE parent header) -->
       <div
-        class="flex w-full gap-4 pointer-events-none overflow-hidden h-15 min-h-15 sticky -top-70 z-11 items-end pl-66">
+        class="flex w-full gap-4 pointer-events-none overflow-hidden h-15 min-h-15 sticky -top-70 z-13 items-end pl-66">
         <Separator class="absolute left-0 w-full z-0 bottom-0 bg-b3/60" />
         <NavFileTabs />
       </div>

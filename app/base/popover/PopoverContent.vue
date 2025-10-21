@@ -22,12 +22,15 @@ const emits = defineEmits<PopoverContentEmits>()
 const delegatedProps = reactiveOmit(props, 'class')
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
+const content = useTemplateRef<HTMLElement>('content')
+onMounted(() => content.value?.scrollTo({ top: 0 }))
 </script>
 
 <template>
   <PopoverPortal :to="props.to">
     <PopoverContent
       :id="props.id"
+      ref="content"
       :align
       :side-offset
       v-bind="{ forwarded }"

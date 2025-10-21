@@ -16,7 +16,7 @@ const mainSet = computed(() =>
 
       placement="left"
       variant="ghost"
-      :class="cn('group/btn  fx-0 z-10  rounded-full !cursor-pointer !pointer-events-auto **:pointer-events-none size-22  hover:shadow-sm hover:shadow-black/4')"
+      :class="cn('group/btn  fx-0 z-10  rounded-full !cursor-pointer !pointer-events-auto **:pointer-events-none size-20  hover:shadow-sm hover:shadow-black/4')"
       :set="mainSet" />
 
     <icon

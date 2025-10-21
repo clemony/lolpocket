@@ -19,13 +19,7 @@ const {
 }>()
 
 const pocket = computed(() => p)
-const selectedSet = computed(() => {
-  const s = pocket.value.spells?.find(s => s.id === pocket.value.main?.spells)
-  if (!s)
-    return null
-  const { id, ...rest } = s
-  return rest
-})
+const selectedSet = computed(() => pocket.value.spells?.find(s => s.id === pocket.value.main?.spells))
 const open = ref(false)
 
 const trigger = useTemplateRef<HTMLElement>('trigger')
@@ -41,13 +35,9 @@ const keyClass
       <VarSelectTrigger
         variant="ghost"
         class="overflow-hidden relative size-max grid place-items-center py-4  **:pointer-events-none ">
-        <div :class="cn('rounded-full size-12 aspect-square  grid place-items-center relative', className)">
-          <Spell
-            v-for="spell, i in selectedSet"
-            :key="i"
-            :name="spell"
-            :class="cn('size-full pointer-events-none absolute rounded-full', { '-mask-linear-55 mask-linear-from-40% mask-linear-to-58%': i === 'f' })" />
-        </div>
+        <SpellSetDuo
+          :set="selectedSet"
+          :class="cn('', className)" />
         <!--        <icon
             name="select"
             class=" size-4 absolute right-1.5" /> -->

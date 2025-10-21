@@ -56,6 +56,6 @@ export function createRadioGroupItem<T extends string | number>(config: {
     optionIcon: config.optionIcon,
     optionName: config.optionName,
     options: config.options,
-    type: 'group',
+    type: 'radio',
   } as MenubarRadioGroup
 }

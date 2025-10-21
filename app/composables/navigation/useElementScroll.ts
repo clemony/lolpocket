@@ -6,7 +6,7 @@ export function useScrollProvider(el: Ref<HTMLElement | null>) {
     if (el.value)
       el.value.scrollTo({ behavior: 'smooth', top: 0 })
   }
-  const { scrollY, scrollYProgress } = useScroll({
+  const { scrollY, scrollYProgress } = useMotionScroll({
     container: el
   })
   const state = { scrollTop, scrollY, scrollYProgress }

@@ -6,7 +6,7 @@ const {
 } = defineProps<{
   class?: HTMLAttributes['class']
   name: string | undefined
-  variant?: string
+  variant?: LabelVariants['variant']
 }>()
 
 const loaded = ref(false)
@@ -24,9 +24,10 @@ watch(
   <Label
     base="btn"
     :variant="variant"
+    size="sq-xl"
     :class="
       cn(
-        'btn-square size-14 overflow-hidden relative group-hover/select:bg-b3/50',
+        'size-14 overflow-hidden group-hover/select:bg-b3/50',
         { ' shadow-sm drop-shadow-sm border border-b4 ': name },
         className,
       )
@@ -38,10 +39,10 @@ watch(
       :src="`/img/spells/${name}.webp`"
       class="size-full absolute"
       @load="loaded = true" />
-
+    <!--
     <icon
       name="tabler:flame"
       alt="no summoner spell chosen"
-      class="size-6 opacity-6 absolute" />
+      class="size-6 opacity-6 absolute **:stroke-[1.5]" /> -->
   </Label>
 </template>

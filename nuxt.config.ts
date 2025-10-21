@@ -46,6 +46,13 @@ export default defineNuxtConfig({
   },
   imports: {
     dirs: ['#shared/utils', '#shared/types', '@variants', '@types', '@schema'],
+    presets: [
+      {
+
+        from: 'motion-v',
+        imports: ['useSpring', 'useMotionValue', 'useMotionValueEvent', 'Motion', 'useTransform', 'motion']
+      },
+    ],
   },
   modules: [
     '@pinia/nuxt',
@@ -58,8 +65,6 @@ export default defineNuxtConfig({
     '@morev/vue-transitions/nuxt',
     '@nuxt/icon',
     'nuxt-svgo',
-    'motion-v/nuxt',
-    'nuxt-tiptap-editor',
   ],
   nitro: {
     routeRules: {

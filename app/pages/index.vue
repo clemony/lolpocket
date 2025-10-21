@@ -30,13 +30,13 @@ const home = useTemplateRef<HTMLElement | null>('home')
 const steps = useTemplateRef<HTMLElement | null>('steps')
 const hero = useTemplateRef<HTMLElement | null>('hero')
 
-const { scrollYProgress: stepProgress } = useScroll({
+const { scrollYProgress: stepProgress } = useMotionScroll({
   container: homeWrapper,
   offset: ['start end', 'end start'],
   target: steps,
 })
 
-const { scrollYProgress } = useScroll({
+const { scrollYProgress } = useMotionScroll({
   container: homeWrapper,
   offset: ['start end', 'end start'],
   target: home,

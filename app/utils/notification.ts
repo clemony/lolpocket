@@ -1,12 +1,9 @@
-import { hexoid } from 'hexoid'
-
-const toId = hexoid()
 export function saveNotification(
   template: string,
   vars: Record<string, string>
 ) {
   const item: InboxItem = {
-    id: toId(),
+    id: crypto.randomUUID(),
     date: Date.now(),
     read: false,
     template,
