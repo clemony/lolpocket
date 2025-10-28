@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 // @config app
-=======
-// CONFIG app
->>>>>>> refs/remotes/origin/main
 
 export default defineAppConfig({
   icon: {
@@ -71,16 +67,11 @@ export default defineAppConfig({
 
       // editing
       'archive': 'lucide:archive',
-<<<<<<< HEAD
       'bold': 'lucide:bold',
-=======
-      'backspace': 'cil:backspace',
->>>>>>> refs/remotes/origin/main
       'clear': 'tabler:circle-half-vertical',
       'edit': 'material-symbols-light:edit-square-outline',
       'edit-line': 'lucide:pen-line',
       'erase': 'lucide:eraser',
-<<<<<<< HEAD
       'h1': 'lucide:heading-1',
       'h2': 'lucide:heading-2',
       'italic': 'lucide:italic',
@@ -88,9 +79,6 @@ export default defineAppConfig({
       'paperclip': 'lucide:paperclip',
       'save': 'lucide:save',
       'strikethrough': 'lucide:strikethrough',
-=======
-      'paperclip': 'lucide:paperclip',
->>>>>>> refs/remotes/origin/main
       'trash': 'lucide:trash-2',
 
       // folder
@@ -116,10 +104,7 @@ export default defineAppConfig({
       'win-key': 'streamline-logos:microsoft-windows-logo-3-solid',
       'x-solid': 'teenyicons:x-circle-solid',
       'and': 'lucide:ampersand',
-<<<<<<< HEAD
       'backspace': 'cil:backspace',
-=======
->>>>>>> refs/remotes/origin/main
       'command': 'lucide:command',
       'i': 'ion:information-sharp',
       'info': 'lucide:info',
@@ -185,12 +170,7 @@ export default defineAppConfig({
       'bow': 'mdi:bow-arrow',
       'calendar': 'lucide:calendar',
       'cart': 'lucide:shopping-cart',
-<<<<<<< HEAD
       'cat': 'solar:cat-outline',
-=======
-      'cat': 'lucide:cat',
-      'cat-geo': 'streamline-cyber:cat-2',
->>>>>>> refs/remotes/origin/main
       'chart': 'lucide:bar-chart-3',
       'clock': 'lucide:clock',
       'compass': 'lucide:compass',
@@ -203,17 +183,11 @@ export default defineAppConfig({
       'panel-dash': 'lucide:panel-top-dashed',
       'plug': 'tabler:plug',
       'shopping-bag': 'lucide:shopping-bag',
-<<<<<<< HEAD
       'smile': 'lucide:smile',
       'swatch': 'lucide:swatch-book',
       'todo': 'lucide:list-todo',
       'up-face': 'iconoir:emoji-look-up',
       'user': 'lucide:user',
-=======
-      'swatch': 'lucide:swatch-book',
-      'todo': 'lucide:list-todo',
-      'up-face': 'iconoir:emoji-look-up',
->>>>>>> refs/remotes/origin/main
       'user-cog': 'lucide:user-cog',
       'user-square': 'lucide:square-user',
 
