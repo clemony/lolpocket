@@ -20,7 +20,6 @@
     "@eslint/css": "^0.13.0",
     "@internationalized/date": "^3.10.0",
     "@morev/vue-transitions": "^3.0.5",
-<<<<<<< HEAD
     "@nuxt/icon": "2.1.0",
     "@nuxt/image": "^1.11.0",
     "@nuxtjs/supabase": "^2.0.1",
@@ -40,21 +39,6 @@
     "@vueuse/router": "^14.0.0",
     "ag-grid-community": "^34.3.0",
     "ag-grid-vue3": "^34.3.0",
-=======
-    "@nuxt/icon": "2.0.0",
-    "@nuxt/image": "^1.11.0",
-    "@nuxtjs/supabase": "^2.0.1",
-    "@pinia/nuxt": "^0.11.2",
-    "@supabase/supabase-js": "^2.75.1",
-    "@tiptap/core": "^3.7.2",
-    "@tiptap/pm": "^3.7.2",
-    "@tiptap/starter-kit": "^3.7.2",
-    "@tiptap/vue-3": "^3.7.2",
-    "@vueuse/nuxt": "^13.9.0",
-    "@vueuse/router": "^13.9.0",
-    "ag-grid-community": "^34.2.0",
-    "ag-grid-vue3": "^34.2.0",
->>>>>>> refs/remotes/origin/main
     "chart.js": "^4.5.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -64,10 +48,7 @@
     "embla-carousel-fade": "^8.6.0",
     "embla-carousel-vue": "^8.6.0",
     "embla-carousel-wheel-gestures": "^8.1.0",
-<<<<<<< HEAD
     "eslint-plugin-better-tailwindcss": "^3.7.10",
-=======
->>>>>>> refs/remotes/origin/main
     "expr-eval": "^2.0.2",
     "focus-trap": "^7.6.6",
     "fuse.js": "^7.1.0",
