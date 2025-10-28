@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const item: Item =  {
   "name": "Umbral Glaive",
   "id": 3179,
@@ -61,3 +62,64 @@ const item: Item =  {
   ]
 }
 export default item
+=======
+const item: Item = {
+  id: 3179,
+  name: 'Umbral Glaive',
+  buildsFrom: [
+    {
+      id: 3134,
+      name: 'Serrated Dirk',
+      gold: 1000,
+    },
+    {
+      id: 3133,
+      name: 'Caulfield\'s Warhammer',
+      gold: 1050,
+    },
+  ],
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3179_assassin_t3_umbralglaive.png',
+  maps: [11, 12, 21, 35],
+  noEffects: false,
+  passives: [
+    {
+      name: 'Blackout',
+      cooldown: '90',
+      effects:
+        'When near an enemy stealthed <img src="/img/icons/ward.webp" class="tip-icon" />ward or <img src="/img/icons/stealthed-trap.webp" class="tip-icon" />trap, gain <i>Blackout</i> for 8 seconds.',
+      range: 400,
+      unique: true,
+    },
+    {
+      name: 'Blackout',
+      effects:
+        'You <img src="/img/icons/disabled-ward.webp" class="tip-icon" />disable surrounding stealthed wards, as well as <img src="/img/icons/expose.webp" class="tip-icon" />expose and <img src="/img/icons/true-sight.webp" class="tip-icon" />reveal nearby stealthed wards and traps while <i>Blackout</i> is active.',
+      unique: false,
+    },
+    {
+      name: 'Extinguish',
+      effects:
+        'Your basic attacks deal (<img src="/img/icons/melee.webp" class="inline-icon" />2 /<img src="/img/icons/ranged.webp" class="inline-icon" />1) <b>bonus</b> true damage to wards.',
+      unique: true,
+    },
+  ],
+  rank: 'Legendary',
+  removed: false,
+  shop: {
+    prices: {
+      combined: 450,
+      sell: 1000,
+      total: 2500,
+    },
+    tags: ['ASSASSIN'],
+  },
+  simpleDescription: 'Provides trap and ward detection periodically',
+  specialRecipe: 0,
+  stats: {
+    abilityHaste: 10,
+    attackDamage: 55,
+    lethality: 15,
+  },
+}
+export default item
+>>>>>>> refs/remotes/origin/main

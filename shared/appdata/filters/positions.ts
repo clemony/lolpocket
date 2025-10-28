@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 export interface ChampionPosition {
   name: string
   color: string
   twColor: string
 }
+=======
+>>>>>>> refs/remotes/origin/main
 export const championPositions = [
   {
     name: 'All',

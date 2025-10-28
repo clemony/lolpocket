@@ -1,6 +1,10 @@
 import { appTaglines } from '#shared/appdata/content/taglines'
 import * as v from 'valibot'
+<<<<<<< HEAD
 import { getRandom } from '~/utils/helpers/getRandom'
+=======
+import { getRandom } from '~/utils/get/getRandom'
+>>>>>>> refs/remotes/origin/main
 
 interface UserProfileResponse {
   account: Account | null

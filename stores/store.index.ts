@@ -1,5 +1,9 @@
 import { defineStore } from 'pinia'
+<<<<<<< HEAD:stores/store.index.ts
 import { getSplash } from '~/utils/ui/getSplash'
+=======
+import { getSplash } from '~/utils/splash'
+>>>>>>> refs/remotes/origin/main:stores/indexStore.ts
 
 export const useIndexStore = defineStore(
   'indexStore',

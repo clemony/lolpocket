@@ -1,6 +1,9 @@
 <script lang="ts" setup>
+<<<<<<< HEAD
 import { Element, TransitionSlide } from '#components'
 
+=======
+>>>>>>> refs/remotes/origin/main
 const {
   as = 'div',
   class: className,
@@ -42,5 +45,9 @@ onMounted (() => {
         }
     ">
     <slot />
+<<<<<<< HEAD
   </component>
+=======
+  </transition-slide>
+>>>>>>> refs/remotes/origin/main
 </template>

@@ -60,11 +60,19 @@ function handleRemove() {
             class="rotate-180 mb-2 group-open/wrap:opacity-70 opacity-0" />
         </button>
       </CarouselItem>
+<<<<<<< HEAD
       <!--       <PocketChampionMenu
         v-if="open"
         class="w-[var(--reka-popover-trigger-width)]"
         :champion
         :pocket /> -->
+=======
+      <PocketChampionMenu
+        v-if="open"
+        class="w-[var(--reka-popover-trigger-width)]"
+        :champion
+        :pocket />
+>>>>>>> refs/remotes/origin/main
     </Popover>
   </div>
 </template>

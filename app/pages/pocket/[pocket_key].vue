@@ -37,7 +37,11 @@ const selectedSet = computed(() => {
 
 <template>
   <TabLayout
+<<<<<<< HEAD
     v-if="pocket && route.name !== 'pocket-core'"
+=======
+    v-if="pocket"
+>>>>>>> refs/remotes/origin/main
     size="lg">
     <template #crumb>
       <PocketMenubar />
@@ -48,16 +52,24 @@ const selectedSet = computed(() => {
     <template #background>
       <BackgroundSplashFixed
         v-memo="[pocket.icon]"
+<<<<<<< HEAD
         size="header"
         :img="pocket?.icon" />
+=======
+        :img="pocket.icon.replace('tile', 'centered') ?? null" />
+>>>>>>> refs/remotes/origin/main
     </template>
 
     <template #background-slice>
       <BackgroundSplashFixed
         v-memo="[pocket.icon]"
+<<<<<<< HEAD
         size="header"
         slice
         :img="pocket?.icon" />
+=======
+        :img="pocket.icon.replace('tile', 'centered') ?? null" />
+>>>>>>> refs/remotes/origin/main
     </template>
 
     <template #header>
@@ -75,6 +87,7 @@ const selectedSet = computed(() => {
 
     <!--   -->
   </TabLayout>
+<<<<<<< HEAD
 
   <div
     v-else
@@ -83,4 +96,6 @@ const selectedSet = computed(() => {
       v-if="pocket"
       :pocket="pocket" />
   </div>
+=======
+>>>>>>> refs/remotes/origin/main
 </template>

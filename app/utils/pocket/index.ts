@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+export * from './createNote'
+>>>>>>> refs/remotes/origin/main
 export * from './deletePocket'
 export * from './duplicate'
 export * from './handleCard'

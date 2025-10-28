@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface ChampionRole {
   name: string
   class?: string
@@ -67,6 +68,33 @@ export const championRoles: ChampionRole[] = [
   {
     name: 'Juggernaut',
     color: 'var(--color-vamp)',
+=======
+export const championRoles = [
+
+  {
+    name: 'Artillery',
+    color: 'var(--color-ad)',
+    icon: '',
+  },
+  {
+    name: 'Assassin',
+    color: 'var(--color-apen)',
+    icon: '',
+  },
+  {
+    name: 'Battlemage',
+    color: 'var(--color-mr)',
+    icon: '',
+  },
+  {
+    name: 'Burst',
+    color: 'var(--color-burst)',
+    icon: '',
+  },
+  {
+    name: 'Catcher',
+    color: 'var(--color-ah)',
+>>>>>>> refs/remotes/origin/main
     icon: '',
   },
   {
@@ -74,16 +102,61 @@ export const championRoles: ChampionRole[] = [
     color: 'var(--color-iron)',
     icon: '',
   },
+<<<<<<< HEAD
 
   // utility
   {
     name: 'Catcher',
+=======
+  {
+    name: 'Enchanter',
+    color: 'var(--color-hsp)',
+    icon: '',
+  },
+  {
+    name: 'Fighter',
+    color: 'var(--color-fighter)',
+    icon: '',
+  },
+  {
+    name: 'Juggernaut',
+>>>>>>> refs/remotes/origin/main
     color: 'var(--color-hp)',
     icon: '',
   },
   {
+<<<<<<< HEAD
     name: 'Tank',
     color: 'var(--color-silver)',
+=======
+    name: 'Mage',
+    color: 'var(--color-sorcery)',
+    icon: '',
+  },
+  {
+    name: 'Marksman',
+    color: 'var(--color-precision)',
+    icon: '',
+  },
+  {
+    name: 'Skirmisher',
+    color: 'var(--color-grandmaster)',
+    icon: '',
+  },
+  {
+    name: 'Specialist',
+    color: 'var(--color-enchanter)',
+    icon: '',
+  },
+  {
+    name: 'Support',
+    color: 'var(--color-inspiration)',
+    icon: '',
+  },
+  {
+    name: 'Tank',
+    color: 'var(--color-hp)',
+>>>>>>> refs/remotes/origin/main
     icon: '',
   },
   {

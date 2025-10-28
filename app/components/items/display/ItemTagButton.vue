@@ -27,7 +27,11 @@ const tagValue = computed <ItemTag>(() => {
     hover="btn"
     :size
     :as
+<<<<<<< HEAD
     :class="cn('w-fit !text-2 !font-medium  px-5 text-bc/90 capitalize ', { 'hover:**:text-bc hover:text-bc order-first text-white': active, 'pr-3': active && clear }, className)"
+=======
+    :class="cn('w-fit !text-2 border-b3/80 !font-medium  bg-clip-padding px-5 text-bc/90 capitalize ', { 'hover:**:text-bc hover:text-bc order-first text-white': active, 'pr-3': active && clear }, className)"
+>>>>>>> refs/remotes/origin/main
     :style="{
       backgroundColor: `${is().filters.tags.length && is().filters.tags.includes(tagValue.id) || active ? tagValue.color : 'transparent'}`,
     }">

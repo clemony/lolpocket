@@ -4,7 +4,11 @@
     "resolveJsonModule": true,
     "strict": false,
     "noEmit": true,
+<<<<<<< HEAD
     "pretty": true,
     "skipLibCheck": true
+=======
+    "pretty": true
+>>>>>>> refs/remotes/origin/main
   }
 }

@@ -70,9 +70,13 @@ onMounted(() => {
           v-for="position in championPositions"
           :key="position.name"
           :value="position.name">
+<<<<<<< HEAD
           <PositionBadge
             :position="position.name"
             active />
+=======
+          <PositionBadge :position="position.name" />
+>>>>>>> refs/remotes/origin/main
         </SelectItem>
       </SelectGroup>
     </LazySelectContent>

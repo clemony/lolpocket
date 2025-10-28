@@ -1,5 +1,8 @@
 // formatItem.ts
+<<<<<<< HEAD
 import { normalize } from '../index'
+=======
+>>>>>>> refs/remotes/origin/main
 
 interface ItemStatEntry {
   flat: number

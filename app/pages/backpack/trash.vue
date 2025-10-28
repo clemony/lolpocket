@@ -2,7 +2,10 @@
 definePageMeta({
   title: 'trash',
   icon: 'trash',
+<<<<<<< HEAD
   listClass: '**:stroke-[1.8] size-5.25',
+=======
+>>>>>>> refs/remotes/origin/main
   order: 3,
 })
 

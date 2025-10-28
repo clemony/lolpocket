@@ -2,19 +2,31 @@ import type { VariantProps } from 'tailwind-variants'
 import { tv } from 'tailwind-variants'
 
 export const inputVariants = tv({
+<<<<<<< HEAD
   base: 'input text-2 [&>svg]:text-tint-bc/70 text-2 focus-within:ring-n1/50 ring-offset-b1 border-b3 **:text-2 h-10 h-12   w-full items-center inset-shadow-xs inset-shadow-black/4  focus-within:ring-1  focus-within:outline-0 focus-within:outline-offset-0 [&>svg]:size-4.5 [&>svg]:**:stroke-[2.2]',
+=======
+  base: 'input text-2 h-12 items-center [&>svg]:text-tint-bc/70 [&>svg]:**:stroke-[2.2] [&>svg]:size-4.5 focus-within:outline-0 focus-within:outline-offset-0 text-2   focus-within:ring-n1/50 focus-within:ring-1 w-full ring-offset-b1  inset-shadow-black/4  inset-shadow-xs border-b3 **:text-2 h-10',
+>>>>>>> refs/remotes/origin/main
   defaultVariants: {
     hover: 'ring',
     size: 'default',
   },
   variants: {
     hover: {
+<<<<<<< HEAD
       ring: 'hover:ring-bc/50 transition-all duration-200 hover:ring'
+=======
+      ring: 'hover:ring hover:ring-bc/50 transition-all duration-200'
+>>>>>>> refs/remotes/origin/main
     },
     size: {
       ...sizeVariants,
       default: 'text-2',
+<<<<<<< HEAD
       header: 'text-10 **:text-10 [&_input]:text-10 shrink-0 font-bold tracking-tight [&_input]:font-bold [&_input]:tracking-tight',
+=======
+      header: 'text-10 font-bold tracking-tight **:text-10 shrink-0 [&_input]:text-10 [&_input]:font-bold [&_input]:tracking-tight',
+>>>>>>> refs/remotes/origin/main
     },
     variant: {
       ...variantVariants
@@ -23,16 +35,26 @@ export const inputVariants = tv({
 })
 
 export const inputGroupAddonVariants = tv({
+<<<<<<< HEAD
   base: 'text-bc/60 flex h-auto cursor-text items-center justify-center gap-2 py-1.5  font-medium select-none group-data-[disabled=true]/input-group:opacity-50 [&>kbd]:rounded-[calc(var(--radius)-5px)] [&>svg:not([class*="size-"])]:size-4',
+=======
+  base: 'text-bc/60 flex h-auto cursor-text items-center justify-center gap-2 py-1.5  font-medium select-none [&>svg:not([class*=\'size-\'])]:size-4 [&>kbd]:rounded-[calc(var(--radius)-5px)] group-data-[disabled=true]/input-group:opacity-50',
+>>>>>>> refs/remotes/origin/main
   defaultVariants: {
     align: 'inline-start',
   },
   variants: {
     align: {
       'block-end':
+<<<<<<< HEAD
           'order-last w-full justify-start px-3 pb-3 group-has-[>input]/input-group:pb-2.5 [.border-t]:pt-3',
       'block-start':
           'order-first w-full justify-start px-3 pt-3 group-has-[>input]/input-group:pt-2.5 [.border-b]:pb-3',
+=======
+          'order-last w-full justify-start px-3 pb-3 [.border-t]:pt-3 group-has-[>input]/input-group:pb-2.5',
+      'block-start':
+          'order-first w-full justify-start px-3 pt-3 [.border-b]:pb-3 group-has-[>input]/input-group:pt-2.5',
+>>>>>>> refs/remotes/origin/main
       'inline-end':
           'order-last pr-3 has-[>button]:mr-[-0.45rem] has-[>kbd]:mr-[-0.35rem]',
       'inline-start':
@@ -42,15 +64,29 @@ export const inputGroupAddonVariants = tv({
 })
 
 export const inputGroupButtonVariants = tv({
+<<<<<<< HEAD
   base: ' flex items-center gap-2 shadow-none',
+=======
+  base: ' shadow-none flex gap-2 items-center',
+>>>>>>> refs/remotes/origin/main
   defaultVariants: {
     size: 'xs',
     variant: 'ghost',
   },
   variants: {
+<<<<<<< HEAD
     size: {
       'icon-sm': 'size-8 p-0 has-[>svg]:p-0',
       'icon-xs': 'size-6 rounded-sm p-0 has-[>svg]:p-0 [&_svg]:size-3.5',
+=======
+    /* shape */
+    shape: {
+      ...shapeVariants
+    },
+    size: {
+      'icon-sm': 'size-8 p-0 has-[>svg]:p-0',
+      'icon-xs': '[&_svg]:size-3.5 size-6 rounded-sm p-0 has-[>svg]:p-0',
+>>>>>>> refs/remotes/origin/main
       /*       'sm': 'h-8 px-2.5 gap-1.5 rounded-md has-[>svg]:px-2.5',
       'xs': 'h-6 gap-1 px-2 rounded-[calc(var(--radius)-5px)] [&>svg:not([class*=\'size-\'])]:size-3.5 has-[>svg]:px-2', */
       ...sizeVariants
@@ -61,6 +97,7 @@ export const inputGroupButtonVariants = tv({
   },
 })
 
+<<<<<<< HEAD
 export const inputGroupVariants = tv({
   base: cn('group/input-group   hover:ring  transition-all duration-200 relative flex w-full items-center rounded-field border inset-shadow-xs transition-[color,box-shadow] outline-none', 'h-10 min-w-0 has-[>textarea]:h-auto',
 
@@ -88,4 +125,8 @@ export const inputGroupVariants = tv({
 export type InputVariants = VariantProps<typeof inputVariants>
 export type InputGroupAddonVariants = VariantProps<typeof inputGroupAddonVariants>
 export type InputGroupVariants = VariantProps<typeof inputGroupVariants>
+=======
+export type InputVariants = VariantProps<typeof inputVariants>
+export type InputGroupVariants = VariantProps<typeof inputGroupAddonVariants>
+>>>>>>> refs/remotes/origin/main
 export type InputGroupButtonVariants = VariantProps<typeof inputGroupButtonVariants>

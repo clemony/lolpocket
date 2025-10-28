@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import { itemTags } from '@appdata'
 
+<<<<<<< HEAD
 const { class: className, clear = true, hover = 'btn', size = ['sq-lg', 'lg'], variant = 'ghost', } = defineProps<{
+=======
+const { class: className, clear = true, size = ['sq-lg', 'lg'] } = defineProps<{
+>>>>>>> refs/remotes/origin/main
   class?: HTMLAttributes['class']
   size?: ButtonVariants['size'][]
   variant?: ButtonVariants['variant']
@@ -16,6 +20,10 @@ function handleReset() {
 function handleChange() {
   is().itemGridApi?.refreshCells()
 }
+
+watch(() => is().filters.tags, (newVal) => {
+  console.log('💠 - watch - newVal:', newVal)
+})
 </script>
 
 <template>
@@ -41,7 +49,11 @@ function handleChange() {
         <BaseListboxItem
           v-for="tag in itemTags"
           :key="tag.name"
+<<<<<<< HEAD
           class="fx-0 bg-transparent"
+=======
+          class="bg-transparent fx-0"
+>>>>>>> refs/remotes/origin/main
           :value="tag.name"
           as-child>
           <ItemTagButton

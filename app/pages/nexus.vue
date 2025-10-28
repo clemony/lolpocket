@@ -8,16 +8,27 @@ const container = useDomRef()
 definePageMeta({
   name: 'nexus',
   icon: 'nexus',
+<<<<<<< HEAD
   listClass: '!size-5.75 **:stroke-[1.6]',
   order: 1,
   path: '/nexus',
 })
 const text = ref<string>()
+=======
+  listClass: '!size-5.25 **:stroke-[1.6]',
+  order: 1,
+  path: '/nexus',
+})
+>>>>>>> refs/remotes/origin/main
 </script>
 
 <template>
   <div
+<<<<<<< HEAD
     class="pt-8 w-full flex flex-col h-full overflow-auto w-full items-center  px-8 pb-6">
+=======
+    class="pt-8 w-full flex flex-col h-full w-full items-center max-h-screen px-8 pb-6">
+>>>>>>> refs/remotes/origin/main
     <header class="w-full">
       <h1>Nexus</h1>
     </header>
@@ -28,6 +39,15 @@ const text = ref<string>()
         try update
       </Button>
 
+<<<<<<< HEAD
+=======
+    <div class="w-1/5 mx-auto space-y-2">
+      <Hihi />
+      <Button @click="useFetchSummonerData(as().account.puuid)">
+        try update
+      </Button>
+
+>>>>>>> refs/remotes/origin/main
       <Button @click="hydrateUser()">
         fetch user datasss
       </Button>
@@ -47,7 +67,11 @@ const text = ref<string>()
         toast
       </Button>
 
+<<<<<<< HEAD
       <!--       <Button
+=======
+      <Button
+>>>>>>> refs/remotes/origin/main
         @click="() => {
           toast({
             title: 'Scheduled: Catch up',
@@ -59,7 +83,11 @@ const text = ref<string>()
     </div>
 
     <Separator class="bg-b3/60 w-full" />
+<<<<<<< HEAD
     <div class="w-full grid grid-cols-2">
+=======
+    <div class="w-full">
+>>>>>>> refs/remotes/origin/main
       <div class="tabs tabs-lift-start !space-x-0 !gap-0 w-200 h-200">
         <a class="tab size-24">Advanced</a>
         <a class="tab tab-active size-24">General</a>
@@ -68,6 +96,16 @@ const text = ref<string>()
         </div>
         <a class="tab size-24">Settings</a>
       </div>
+<<<<<<< HEAD
+=======
+    </div>
+    <div class="w-100 h-60">
+      <!-- <RecentPatchWinrates /> -->
+    </div>
+    <!--
+    <div class="w-full h-80 self-end ">
+      <News />
+>>>>>>> refs/remotes/origin/main
     </div> -->
     </div>
     <div class=" mt-12 flex w-full justify-center">

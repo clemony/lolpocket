@@ -20,7 +20,11 @@ export async function useSearch(
   const router = useRouter()
 
   // champion source
+<<<<<<< HEAD
   // @todo runes
+=======
+  // TODO runes
+>>>>>>> refs/remotes/origin/main
   const championSource
     = isRef(options.customChampions)
       ? options.customChampions

@@ -35,7 +35,11 @@ const pocket = computed(() => p)
         drag-class="role-drag"
         selected-class="role-select"
         class="flex flex-wrap gap-3 relative w-full h-fit items-center">
+<<<<<<< HEAD
         <RoleBadge
+=======
+        <RoleButton
+>>>>>>> refs/remotes/origin/main
           v-for="role in pocket.roles"
           :key="role"
           :pocket="pocket"

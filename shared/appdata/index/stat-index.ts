@@ -17,20 +17,53 @@ export const statIndex: Record<string, StatIndex> = {
     abbr: 'AP',
     color: 'var(--color-sorcery)',
     description: '',
+<<<<<<< HEAD
     group: 'spells',
     icon: 'i-lol-ap',
   },
+=======
+    group: 'magic',
+    icon: 'i-lol-ap',
+  },
+  healAndShieldPower: {
+    id: 'healAndShieldPower',
+    name: 'Heal & Shield Power',
+    abbr: 'HSP',
+    color: 'var(--color-enchanter)',
+    description: '',
+    group: 'magic',
+    icon: 'i-lol-hsp',
+
+  },
+  //
+  flatMagicPenetration: {
+    id: 'flatMagicPenetration',
+    name: 'Flat Magic Penetration',
+    abbr: 'MPEN',
+    color: 'var(--color-mpen)',
+    description: '',
+    group: 'magic',
+    icon: 'i-lol-mpen',
+    longAbbr: 'Magic Pen.',
+
+  },
+>>>>>>> refs/remotes/origin/main
   percentMagicPenetration: {
     id: 'percentMagicPenetration',
     name: 'Magic Penetration',
     abbr: 'MPEN',
     color: 'var(--color-mpen)',
     description: '',
+<<<<<<< HEAD
     group: 'spells',
+=======
+    group: 'magic',
+>>>>>>> refs/remotes/origin/main
     icon: 'i-lol-mpen',
     longAbbr: 'Magic Pen',
 
   },
+<<<<<<< HEAD
   //
   healAndShieldPower: {
     id: 'healAndShieldPower',
@@ -53,6 +86,8 @@ export const statIndex: Record<string, StatIndex> = {
     icon: 'i-lol-ah',
 
   },
+=======
+>>>>>>> refs/remotes/origin/main
 
   // physical
 
@@ -199,9 +234,44 @@ export const statIndex: Record<string, StatIndex> = {
     icon: 'i-lol-mr',
 
   },
+<<<<<<< HEAD
 
   // utility
 
+=======
+  tenacity: {
+    id: 'tenacity',
+    name: 'Tenacity',
+    color: 'var(--color-platinum)',
+    description: '',
+    group: 'defense',
+    icon: 'i-lol-tenacity',
+
+  },
+
+  // utility
+
+  abilityHaste: {
+    id: 'abilityHaste',
+    name: 'Ability Haste',
+    abbr: 'AH',
+    color: 'var(--color-ah)',
+    description: '',
+    group: 'utility',
+    icon: 'i-lol-ah',
+
+  },
+  flatMovespeed: {
+    id: 'flatMovespeed',
+    name: 'Base Movespeed',
+    abbr: 'MS',
+    color: 'var(--color-white-70)',
+    description: '',
+    group: 'utility',
+    icon: 'i-lol-ms',
+
+  },
+>>>>>>> refs/remotes/origin/main
   percentMovespeed: {
     id: 'percentMovespeed',
     name: 'Movespeed',
@@ -212,6 +282,7 @@ export const statIndex: Record<string, StatIndex> = {
     icon: 'i-lol-ms',
 
   },
+<<<<<<< HEAD
   tenacity: {
     id: 'tenacity',
     name: 'Tenacity',
@@ -221,6 +292,8 @@ export const statIndex: Record<string, StatIndex> = {
     icon: 'i-lol-tenacity',
 
   },
+=======
+>>>>>>> refs/remotes/origin/main
   //
   goldPer10: {
     id: 'goldPer10',
@@ -231,8 +304,13 @@ export const statIndex: Record<string, StatIndex> = {
     group: 'utility',
     icon: 'i-lol-gold',
     longAbbr: '',
+<<<<<<< HEAD
   },
   //
+=======
+
+  },
+>>>>>>> refs/remotes/origin/main
   omnivamp: {
     id: 'omnivamp',
     name: 'Omnivamp',
@@ -246,6 +324,7 @@ export const statIndex: Record<string, StatIndex> = {
 
   // champion
 
+<<<<<<< HEAD
   flatMagicPenetration: {
     id: 'flatMagicPenetration',
     name: 'Flat Magic Penetration',
@@ -268,6 +347,8 @@ export const statIndex: Record<string, StatIndex> = {
 
   },
   //
+=======
+>>>>>>> refs/remotes/origin/main
   acquisitionRadius: {
     id: 'acquisitionRadius',
     name: 'Acquisition Radius',

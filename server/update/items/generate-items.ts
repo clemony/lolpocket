@@ -1,5 +1,6 @@
 import fs from 'node:fs'
 import path from 'node:path'
+<<<<<<< HEAD
 import type { ItemIndex, ItemLite } from '../../../types'
 import { resolvePath } from '../resolvePath'
 import { formatStats, handleWikiText, ludensPreProcess, markUpdate, normalizeItemData, stripEmpty } from '../utils'
@@ -16,6 +17,13 @@ const itemOutputDir = resolvePath('../../shared/appdata/records/items/')
 
 // input
 const inputPath = resolvePath('./items/raw/items-raw.json')
+=======
+
+const inputPath = path.resolve('/server/update/items/raw/items-raw.json')
+const outputIndex = path.resolve('shared/appdata/index/item-index.ts')
+const outputLitePath = path.resolve('shared/appdata/records/items-lite.ts')
+const itemOutputDir = path.resolve('shared/appdata/records/items/')
+>>>>>>> refs/remotes/origin/main
 const fullData = JSON.parse(fs.readFileSync(inputPath, 'utf-8'))
 
 const index: Record<string, ItemIndex> = {}
@@ -42,7 +50,10 @@ async function buildItems() {
 
     index[id] = {
       id: item.id,
+<<<<<<< HEAD
       key: item.id.toString(),
+=======
+>>>>>>> refs/remotes/origin/main
       name: item.name,
     }
 
@@ -132,6 +143,7 @@ export const itemIndex: ItemIndex[] = ${JSON.stringify(Object.values(index), nul
 export const itemsLite: ItemLite[] = ${JSON.stringify(Object.values(simplified), null, 2)}`
   )
   fs.writeFileSync(
+<<<<<<< HEAD
     itemLiteOutput,
     JSON.stringify(Object.values(simplified), null, 2)
   )
@@ -141,6 +153,17 @@ export const itemsLite: ItemLite[] = ${JSON.stringify(Object.values(simplified),
   )
   fs.writeFileSync(
     ranksOutput,
+=======
+    './server/data/items-lite.json',
+    JSON.stringify(Object.values(simplified), null, 2)
+  )
+  fs.writeFileSync(
+    './raw/unique-tags.json',
+    JSON.stringify([...uniqueTags].sort(), null, 2)
+  )
+  fs.writeFileSync(
+    './raw/unique-ranks.json',
+>>>>>>> refs/remotes/origin/main
     JSON.stringify([...uniqueRanks].sort(), null, 2)
   )
 }

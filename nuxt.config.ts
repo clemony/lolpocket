@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url'
 export default defineNuxtConfig({
   alias: {
     '#server': fileURLToPath(new URL('./server', import.meta.url)),
+<<<<<<< HEAD
     '@app': fileURLToPath(new URL('./app', import.meta.url)),
     '@appdata': fileURLToPath(new URL('./shared/appdata', import.meta.url)),
     '@base': fileURLToPath(new URL('./app/base', import.meta.url)),
@@ -11,12 +12,18 @@ export default defineNuxtConfig({
     '@composables': fileURLToPath(new URL('./app/composables', import.meta.url)),
     '@css': fileURLToPath(new URL('./app/assets/css', import.meta.url)),
     '@plugins': fileURLToPath(new URL('./app/plugins', import.meta.url)),
+=======
+    '@appdata': fileURLToPath(new URL('./shared/appdata', import.meta.url)),
+>>>>>>> refs/remotes/origin/main
     '@schema': fileURLToPath(new URL('./schema', import.meta.url)),
     '@scripts': fileURLToPath(new URL('./scripts', import.meta.url)),
     '@types': fileURLToPath(new URL('./types', import.meta.url)),
     '@utils': fileURLToPath(new URL('./app/utils', import.meta.url)),
     '@variants': fileURLToPath(new URL('./app/assets/variants', import.meta.url)),
+<<<<<<< HEAD
     '~tiptap': fileURLToPath(new URL('./app/components/tiptap', import.meta.url)),
+=======
+>>>>>>> refs/remotes/origin/main
   },
   components: [
     {
@@ -39,6 +46,7 @@ export default defineNuxtConfig({
     port: 8080,
   },
   devtools: { enabled: true },
+<<<<<<< HEAD
   experimental: {
     extractAsyncDataHandlers: true,
     typescriptPlugin: true,
@@ -47,6 +55,8 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 5
   },
+=======
+>>>>>>> refs/remotes/origin/main
   icon: {
     provider: 'server',
     componentName: 'icon',
@@ -123,6 +133,17 @@ export default defineNuxtConfig({
     componentPrefix: 'i',
   },
   typescript: {
+<<<<<<< HEAD
+=======
+    nodeTsConfig: { include: ['shared', 'server', 'scripts'] },
+    sharedTsConfig: { include: ['shared', 'server', 'scripts'] },
+    strict: false,
+    tsConfig: {
+      compilerOptions: {
+        skipLibCheck: true
+      }
+    },
+>>>>>>> refs/remotes/origin/main
     typeCheck: true,
   },
   vite: {

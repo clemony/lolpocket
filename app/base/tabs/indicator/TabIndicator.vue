@@ -13,12 +13,15 @@ const props = defineProps<
     contrast?: boolean
     round?: boolean
     roundDisabled?: boolean
+<<<<<<< HEAD
 
     active?: ButtonVariants['active']
     base?: ButtonVariants['base']
     hover?: ButtonVariants['hover']
     size?: ButtonVariants['size']
     variant?: ButtonVariants['variant']
+=======
+>>>>>>> refs/remotes/origin/main
   }
 >()
 const forwarded = reactiveOmit(props, 'class')
@@ -83,8 +86,11 @@ const variants = {
               '!rounded-full  !to-b2/90  ring ring-b3/20 !bg-gradient-to-br   !from-b2 inset-shadow-xs !aspect-square scale-90 opacity-96 ':
                 props.roundDisabled,
             },
+<<<<<<< HEAD
 
             buttonVariants({ base, variant, size, hover, active }),
+=======
+>>>>>>> refs/remotes/origin/main
             indicatorClass,
           )
         " />

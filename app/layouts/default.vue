@@ -4,8 +4,13 @@ const route = useRoute()
 
 <template>
   <div
+<<<<<<< HEAD
     class="relative grid  h-screen w-screen grid-rows-1  overflow-hidden ">
     <div class="z-auto flex size-full max-w-screen flex-col overflow-y-auto">
+=======
+    class="w-screen grid  grid-rows-1 h-screen relative  overflow-hidden ">
+    <div class="flex size-full max-w-screen overflow-y-auto flex-col z-auto">
+>>>>>>> refs/remotes/origin/main
       <!-- header -->
       <header
         :class="
@@ -19,6 +24,7 @@ const route = useRoute()
           )
         ">
         <Button
+<<<<<<< HEAD
           v-tippy="{ content: 'Menu', theme: 'base', placement: 'bottom' }"
           class="group/logo relative grid !size-11 place-items-center p-0"
           variant="neutral"
@@ -30,6 +36,19 @@ const route = useRoute()
           <icon
             name="menu"
             class="absolute scale-0  justify-self-center  opacity-0 transition-all duration-300 group-hover/logo:scale-100  group-hover/logo:opacity-100" />
+=======
+          v-tippy="{ content: 'Nexus', theme: 'base', placement: 'bottom' }"
+          class="!size-11 relative p-0 grid place-items-center group/logo"
+          variant="neutral"
+          shape="square"
+          @click="ui().sidebarOpen = true">
+          <h5 class="font-bold justify-self-center transition-all duration-300 absolute opacity-100  group-hover/logo:opacity-0  group-hover/logo:scale-0">
+            LP
+          </h5>
+          <icon
+            name="nexus"
+            class="absolute scale-0  justify-self-center  transition-all duration-300 opacity-0 group-hover/logo:opacity-100  group-hover/logo:scale-100" />
+>>>>>>> refs/remotes/origin/main
         </Button>
         <BreadcrumbNav />
         <span class="grow" />
@@ -39,7 +58,11 @@ const route = useRoute()
         <SearchBox class="!bg-b1/60" />
       </header>
       <div
+<<<<<<< HEAD
         class="relative size-full justify-self-end">
+=======
+        class="size-full relative justify-self-end">
+>>>>>>> refs/remotes/origin/main
         <slot />
         <LazyAppCommand />
       </div>

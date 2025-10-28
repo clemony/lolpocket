@@ -20,6 +20,11 @@ definePageMeta({
   path: '/tools/calculator',
 })
 
+<<<<<<< HEAD
+=======
+const target = ref()
+
+>>>>>>> refs/remotes/origin/main
 console.log('💠 - is().calculatorSets:', is().calculatorSet)
 </script>
 

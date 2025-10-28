@@ -7,7 +7,10 @@ const { toasts } = useToast()
 
 <template>
   <ToastProvider
+<<<<<<< HEAD
     :duration="8000"
+=======
+>>>>>>> refs/remotes/origin/main
     as="div">
     <Toast
       v-for="toast in toasts"

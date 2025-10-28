@@ -12,6 +12,7 @@ const {
   img: string | null
   class?: HTMLAttributes['class']
 }>()
+<<<<<<< HEAD
 const emit = defineEmits(['loaded'])
 
 /* skeleton size-full bg-blend-screen rounded-lg bg-b3 border-b3 inset-shadow-5 inset-shadow-xs border !opacity-40 */
@@ -26,11 +27,20 @@ function onLoad() {
 
 <template>
   <label :class="cn('size-full bg-b2 rounded-lg relative shrink-0 transform-3d', className)">
+=======
+
+const loaded = ref(false)
+</script>
+
+<template>
+  <label :class="cn('size-full relative shrink-0 transform-3d', className)">
+>>>>>>> refs/remotes/origin/main
     <img
       :key="img"
       decoding="async"
       loading="lazy"
       :src="img"
+<<<<<<< HEAD
       placeholder-class=""
       v-bind="$attrs"
       :alt="alt"
@@ -40,6 +50,17 @@ function onLoad() {
         })
       "
       @load="onLoad()" />
+=======
+      placeholder-class="skeleton size-full bg-blend-screen rounded-lg bg-b3 border-b3 inset-shadow-5 inset-shadow-xs border !opacity-40"
+      v-bind="$attrs"
+      :alt="alt"
+      :class="
+        cn('size-full opacity-0 transition-[opacity,transform]', {
+          'translate-z-0 opacity-100': loaded,
+        })
+      "
+      @load="loaded = true" />
+>>>>>>> refs/remotes/origin/main
     <slot />
   </label>
 </template>

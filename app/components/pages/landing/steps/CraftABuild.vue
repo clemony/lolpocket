@@ -14,32 +14,56 @@ const isChampVisible = ref(true)
 const itemModel = [
   {
     complete: ref(false),
+<<<<<<< HEAD
     item: ref<ItemIndex>(null),
+=======
+    item: ref(null),
+>>>>>>> refs/remotes/origin/main
     visible: ref(false),
   },
   {
     complete: ref(false),
+<<<<<<< HEAD
     item: ref<ItemIndex>(null),
+=======
+    item: ref(null),
+>>>>>>> refs/remotes/origin/main
     visible: ref(false),
   },
   {
     complete: ref(false),
+<<<<<<< HEAD
     item: ref<ItemIndex>(null),
+=======
+    item: ref(null),
+>>>>>>> refs/remotes/origin/main
     visible: ref(false),
   },
   {
     complete: ref(false),
+<<<<<<< HEAD
     item: ref<ItemIndex>(null),
+=======
+    item: ref(null),
+>>>>>>> refs/remotes/origin/main
     visible: ref(false),
   },
   {
     complete: ref(false),
+<<<<<<< HEAD
     item: ref<ItemIndex>(null),
+=======
+    item: ref(null),
+>>>>>>> refs/remotes/origin/main
     visible: ref(false),
   },
   {
     complete: ref(false),
+<<<<<<< HEAD
     item: ref<ItemIndex>(null),
+=======
+    item: ref(null),
+>>>>>>> refs/remotes/origin/main
     visible: ref(false),
   },
 ]
@@ -76,7 +100,11 @@ onMounted(async () => {
     <div class="flex gap-4 absolute top-5 h-16">
       <div
         v-if="champModel && champComplete"
+<<<<<<< HEAD
         v-tippy="ix().champNameById(champModel)"
+=======
+        v-tippy="champModel.name"
+>>>>>>> refs/remotes/origin/main
         class="size-16 hover:scale-110 hover:ring-1 hover:ring-neutral rounded-lg shadow-sm drop-shadow-sm transition-all duration-400 animate-in slide-in-from-bottom-10 hover:ring-offset-2 hover:ring-offset-b2">
         <ChampionIcon
           :id="champModel"
@@ -137,10 +165,17 @@ onMounted(async () => {
         <template
           v-for="item in currentItems"
           :key="item.name">
+<<<<<<< HEAD
           <!--     <label
             v-if="
               item.id
                 ? item.id === itemModel
+=======
+          <label
+            v-if="
+              itemModel[itemIndex].item
+                ? item === itemModel[itemIndex]
+>>>>>>> refs/remotes/origin/main
                 : currentItems.includes(item)
             "
             v-tippy="item.name"
@@ -149,6 +184,7 @@ onMounted(async () => {
               hidden:
                 itemModel[itemIndex].item !== null
                 && item !== itemModel[itemIndex].item,
+<<<<<<< HEAD
             }"> -->
           <input
             v-model="itemModel[itemIndex].item"
@@ -168,6 +204,26 @@ onMounted(async () => {
 
           <!--  <h1
             v-if="item.id === itemModel"
+=======
+            }">
+            <input
+              v-model="itemModel[itemIndex].item"
+              name="item"
+              type="radio"
+              class="peer hidden"
+              :value="item"
+              @change="setTimer('item', itemIndex, item)" />
+
+            <div class="overflow-hidden size-16 rounded-lg">
+              <img
+                :src="`/img/items/${item.id}.webp`"
+                class="size-full s" />
+            </div>
+          </label>
+
+          <h1
+            v-if="item === itemModel[itemIndex].item"
+>>>>>>> refs/remotes/origin/main
             class="flex gap-3 items-center">
             {{ item.name }}
             <icon

@@ -4,8 +4,12 @@ const pocket = computed(() => ps().getPocket(String(route.params.pocket_key)))
 </script>
 
 <template>
+<<<<<<< HEAD
   <!--   <div class="w-full justify-self-center mx-auto px-4  items-center sticky py-0 -top-50  z-1 bg-b1/86 backdrop-blur  relative rounded-lg  gap-4 flex flex-col before:border-b1"></div> -->
   <div class="w-full  items-center sticky pt-4  -top-55  z-1 before:bg-b1/96 before:backdrop-blur before:size-full before:absolute before:top-0 before:box-content before:border-4  before:-left-1 relative gap-4 flex flex-col before:border-b1">
+=======
+  <div class="w-full ring-3 ring-b1 items-center sticky pt-4 pb-3 -top-54  z-1 bg-b1/96 backdrop-blur gap-4 flex flex-col">
+>>>>>>> refs/remotes/origin/main
     <div class="flex w-full justify-start items-center h-14 gap-4 pr-1.5 flex-nowrap">
       <Button
         variant="neutral"
@@ -17,9 +21,30 @@ const pocket = computed(() => ps().getPocket(String(route.params.pocket_key)))
           class="size-4.5" />
         Set
       </Button>
+<<<<<<< HEAD
       <InputGroupPopover>
         <LazyItemFilterPopoverContent />
       </InputGroupPopover>
+=======
+      <Popover>
+        <PopoverTrigger class="w-full *:pointer-events-none cursor-text">
+          <InputGroup class="h-12">
+            <InputGroupAddon>
+              <icon
+                name="search"
+                class="size-4.5 opacity-50" />
+            </InputGroupAddon>
+            <InputGroupInput />
+            <InputGroupAddon align="inline-end">
+              <icon
+                name="filter"
+                class="size-4.5 mr-2 opacity-50" />
+            </InputGroupAddon>
+          </InputGroup>
+        </PopoverTrigger>
+        <LazyItemFilterPopoverContent />
+      </Popover>
+>>>>>>> refs/remotes/origin/main
     </div>
 
     <TransitionSlideLeft

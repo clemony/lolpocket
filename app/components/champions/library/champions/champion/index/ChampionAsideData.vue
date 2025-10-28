@@ -20,7 +20,10 @@ const damageType = computed (() => damageTypes.find(d => d.type === champion.ada
         <PositionBadge
           v-for="pos, i in champion.positions"
           :key="i"
+<<<<<<< HEAD
           active
+=======
+>>>>>>> refs/remotes/origin/main
           :position="pos" />
       </p>
     </div>
@@ -68,9 +71,20 @@ const damageType = computed (() => damageTypes.find(d => d.type === champion.ada
     <div :class="wrapperClass">
       <p>Resource</p>
       <p class="flex gap-2 font-medium items-center">
+<<<<<<< HEAD
         <hicon
           v-if="resource?.icon"
           :name="resource?.icon"
+=======
+        <img
+          v-if="resource?.img"
+          :alt="`${resource.name}-image`"
+          :src="resource.img"
+          class="size-6 shrink-0 rounded-md drop-shadow-sm shadow-sm " />
+        <component
+          :is="resource?.icon"
+          v-else-if="resource?.icon"
+>>>>>>> refs/remotes/origin/main
           :style="{
           /*   color: resource.color, */
           }"

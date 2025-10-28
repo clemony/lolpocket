@@ -3,6 +3,7 @@
 
 @custom-variant on,
     @custom-variant open {
+<<<<<<< HEAD
   @apply btn-active;
 }
 
@@ -12,3 +13,16 @@
     @apply !bg-b1  shadow-sm shadow-black/4 !border-b3/80  fx-0;
   }
 }
+=======
+      @apply btn-active ;
+    }
+
+@layer utilities {
+    :hover,
+
+  .btn-base-active {
+      @apply  !bg-b1  shadow-sm shadow-black/4 !border-b3/80  fx-0;
+    }
+  }
+
+>>>>>>> refs/remotes/origin/main

@@ -9,7 +9,10 @@ const props = withDefaults(
       id?: string
       to?: string
       variant?: PopoverContentVariants['variant']
+<<<<<<< HEAD
       dataTheme?: string
+=======
+>>>>>>> refs/remotes/origin/main
     }
   >(),
   {
@@ -23,9 +26,14 @@ const emits = defineEmits<PopoverContentEmits>()
 const delegatedProps = reactiveOmit(props, 'class', 'dataTheme')
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
+<<<<<<< HEAD
 const { base } = popoverContentVariants({ variant: props.variant })
 
 provide('popoverVariant', props.variant)
+=======
+const content = useTemplateRef<HTMLElement>('content')
+onMounted(() => content.value?.scrollTo({ top: 0 }))
+>>>>>>> refs/remotes/origin/main
 </script>
 
 <template>
@@ -36,7 +44,14 @@ provide('popoverVariant', props.variant)
       :align
       :side-offset
       v-bind="{ forwarded }"
+<<<<<<< HEAD
       :class="cn(base(), props.class)"
+=======
+      :class="
+        cn(popoverContentVariants({ variant }), props.class,
+        )
+      "
+>>>>>>> refs/remotes/origin/main
       @close-auto-focus.prevent>
       <slot />
     </PopoverContent>

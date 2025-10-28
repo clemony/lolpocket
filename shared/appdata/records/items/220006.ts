@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const item: Item =  {
   "name": "Legendary Support Item",
   "id": 220006,
@@ -19,3 +20,24 @@ const item: Item =  {
   ]
 }
 export default item
+=======
+const item: Item = {
+  id: 220006,
+  name: 'Legendary Support Item',
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/220006_supportanvil.png',
+  maps: [30],
+  noEffects: false,
+  rank: 'Consumable',
+  removed: false,
+  shop: {
+    prices: {
+      combined: 2000,
+      sell: 800,
+      total: 2000,
+    },
+  },
+  specialRecipe: 0,
+  stats: {},
+}
+export default item
+>>>>>>> refs/remotes/origin/main

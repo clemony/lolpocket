@@ -6,7 +6,11 @@ import type {
   GridPreDestroyedEvent,
   GridReadyEvent,
 } from 'ag-grid-community'
+<<<<<<< HEAD
 import { itemsLite } from '@appdata/records/items-lite'
+=======
+import { itemsLite } from '#shared/appdata/items-lite'
+>>>>>>> refs/remotes/origin/main
 import {
   CellStyleModule,
   ClientSideRowModelModule,
@@ -332,7 +336,11 @@ ModuleRegistry.registerModules([
       :grid-options="gridOptions"
       :theme="theme"
       :column-defs="colDefs"
+<<<<<<< HEAD
       class="stat-grid h-full grow pt-16"
+=======
+      class="h-full grow stat-grid pt-16"
+>>>>>>> refs/remotes/origin/main
       :tooltip-show-delay="400"
       @grid-ready="onGridReady"></AgGridVue>
   </div>

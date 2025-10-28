@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const item: Item =  {
   "name": "Reality Fracture",
   "id": 447102,
@@ -33,3 +34,37 @@ const item: Item =  {
   ]
 }
 export default item
+=======
+const item: Item = {
+  id: 447102,
+  name: 'Reality Fracture',
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/7102_realityfracture.png',
+  maps: [30],
+  noEffects: false,
+  passives: [
+    {
+      name: 'ZZ\'Rot',
+      effects:
+        'Basic attacks on-attack and damaging abilities against enemies summon 8 allied <img src="/img/icons/voidmites.webp" class="tip-icon" />Voidmites that are <img src="/img/icons/untargetable.webp" class="tip-icon" />untargetable and attack the target (15 second cooldown). <img src="/img/icons/voidmites.webp" class="tip-icon" />Voidmites deal 6 magic damage (+4% of your AD) (+8% of your AP) magic damage with each of their basic attacks and last for up to 3 seconds. Additionally, summon 6 <img src="/img/icons/voidmites.webp" class="tip-icon" />Voidmites upon your death.',
+      unique: true,
+    },
+  ],
+  rank: 'Special',
+  removed: false,
+  shop: {
+    prices: {
+      combined: 1000,
+      sell: 0,
+      total: 0,
+    },
+    tags: ['MAGE'],
+  },
+  specialRecipe: 220007,
+  stats: {
+    abilityPower: 80,
+    attackSpeed: 40,
+    health: 300,
+  },
+}
+export default item
+>>>>>>> refs/remotes/origin/main

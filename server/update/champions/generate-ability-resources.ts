@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import type { Champion } from '@types'
+=======
+import type { Champion } from '#shared/types/types.champion'
+>>>>>>> refs/remotes/origin/main
 import fs from 'node:fs'
 import path from 'node:path'
 import { normalize } from '../utils'

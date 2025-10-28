@@ -1,4 +1,5 @@
 <script setup lang="ts">
+<<<<<<< HEAD
 import { circOut, easeInOut, motion } from 'motion-v'
 
 const { class: className, img: i, size, slice } = defineProps<{
@@ -6,11 +7,19 @@ const { class: className, img: i, size, slice } = defineProps<{
   img: string
   size: 'header' | 'full'
   slice?: boolean
+=======
+import { motion } from 'motion-v'
+
+const { class: className, img: i } = defineProps<{
+  class?: HTMLAttributes['class']
+  img: string
+>>>>>>> refs/remotes/origin/main
 }>()
 
 const img = useImage()
 const { scrollYProgress } = useScrollInject()
 
+<<<<<<< HEAD
 const y = useTransform(scrollYProgress, [0, 1], ['0%', '-80%'], { ease: easeInOut })
 
 const bg = computed (() => `url('${img(i.replace('tile', 'centered'), { quality: 100 })}')`)
@@ -59,6 +68,26 @@ const bg = computed (() => `url('${img(i.replace('tile', 'centered'), { quality:
           )
         " />
       <div class="size-full absolute z-1 from-transparent scale-x-104 scale-y-230 bg-radial-[at_80%_50%] to-b2 via-b2/60 via-42% from-24% to-60% " />
+=======
+const y = useTransform(scrollYProgress, [0, 1], ['-10%', '-80%'])
+</script>
+
+<template>
+  <div class="absolute dss -top-16 overflow-hidden h-120 bg-tint-b2/30 w-screen  isolate">
+    <div
+      class="h-full pointer-events-none -right-4 top-0 bottom-32 inset-0 before:size-full before:absolute before:z-1 before:bg-linear-to-r before:from-bg-tint-b2/60 before:from-45% before:to-75% before:to-transparent">
+      <motion.div
+        :style="{
+          backgroundImage: `url('${img(i, { quality: 100 })}')`,
+          backgroundPositionX: '140%',
+          backgroundPositionY: y,
+        }"
+        :class="
+          cn(
+            'size-full  bg-fixed bg-no-repeat min-w-7xl bg-size-[74%] mask-l-from-30% mask-l-to-60%  ',
+          )
+        " />
+>>>>>>> refs/remotes/origin/main
     </div>
   </div>
 </template>

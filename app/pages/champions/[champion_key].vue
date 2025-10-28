@@ -24,6 +24,7 @@ onMounted(() => {
     size="lg">
     <!-- splash -->
 
+<<<<<<< HEAD
     <template #background-slice>
       <BackgroundSplashFixed
         v-once
@@ -40,6 +41,13 @@ onMounted(() => {
         size="header"
         :img="
           getSplash(champion.key, 'centered')
+=======
+    <template #background>
+      <BackgroundSplashFixed
+        v-once
+        :img="
+          getSplash(String(route.params.champion_key), 'centered')
+>>>>>>> refs/remotes/origin/main
         " />
     </template>
     <template #icon>

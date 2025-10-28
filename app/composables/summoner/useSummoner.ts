@@ -1,5 +1,8 @@
 import { matchFilters, matchFiltersIgnoreChampion } from '~~/shared/appdata'
+<<<<<<< HEAD
 import { fetchSummonerMastery } from './helpers'
+=======
+>>>>>>> refs/remotes/origin/main
 
 export const SummonerKey = Symbol('SummonerProvider')
 

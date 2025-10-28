@@ -1,16 +1,27 @@
 <script lang="ts" setup>
+<<<<<<< HEAD
+=======
+import { SplitterPanel as ResizablePanel } from 'reka-ui'
+
+>>>>>>> refs/remotes/origin/main
 const layout = shallowRef<HTMLElement>(null)
 const trigger = useTemplateRef<HTMLElement>('trigger')
 const slug = computed (() => getSummonerSlug(as().account))
 const hovered = ref<boolean>(false)
 const { isOutside } = useMouseInElement(layout)
+<<<<<<< HEAD
 
 const triggerHovered = useElementHover(trigger, {
   delayEnter: 600,
+=======
+const triggerHovered = useElementHover(trigger, {
+  delayEnter: 100,
+>>>>>>> refs/remotes/origin/main
   delayLeave: 100,
 })
 
 watch(() => isOutside.value, (newVal) => {
+<<<<<<< HEAD
   if (newVal === true) {
     ui().sidebarOpen = false
     hovered.value = false
@@ -28,12 +39,24 @@ watch(() => triggerHovered.value, (newVal) => {
     hovered.value = false
   }
 })
+=======
+  console.log('🌱 - newVal:', newVal)
+  if (newVal === true)
+    ui().sidebarOpen = false
+}, { immediate: false })
+
+watch(() => triggerHovered.value, (newVal) => {
+  if (newVal === true)
+    ui().sidebarOpen = true
+})
+>>>>>>> refs/remotes/origin/main
 </script>
 
 <template>
   <Sheet
     v-model:open="ui().sidebarOpen"
     :modal="false">
+<<<<<<< HEAD
     <div
       :class="cn(' pointer-events-none grid place-items-center  fixed group/trigger transition-all duration-200 h-screen z-30 w-8 top-0 left-0', { 'pointer-events-none hidden': ui().sidebarOpen && !hovered })">
       <button
@@ -44,6 +67,12 @@ watch(() => triggerHovered.value, (newVal) => {
         <span class="h-full rounded-full w-3 bg-tint-b3/50 border-b3 border" />
       </button>
     </div>
+=======
+    <button
+      ref="trigger"
+      :class="cn(' opacity-0 hover:opacity-0 fixed group/trigger hover:border-l-3 hover:border-l-neutral transition-all duration-200 h-[calc(100vh-45px)] z-30 w-8 top-15 left-0', { 'pointer-events-none hidden': ui().sidebarOpen })">
+    </button>
+>>>>>>> refs/remotes/origin/main
     <SheetTrigger as-child>
       <slot />
     </SheetTrigger>
@@ -51,6 +80,7 @@ watch(() => triggerHovered.value, (newVal) => {
       <SheetOverlay />
       <SheetContent
         side="left"
+<<<<<<< HEAD
         :class="cn('p-0 !z-15 left-0 border-y-1 border-r rounded-r-xl !min-w-110 w-110 shadow-none drop-shadow-md  drop-shadow-black/9 border-l-0 border-b3', { '-translate-x-102': hovered })">
         <div
           ref="layout"
@@ -111,6 +141,50 @@ watch(() => triggerHovered.value, (newVal) => {
             <!-- summoner menu -->
             <SidebarUser />
           </div>
+=======
+        class="p-0 !z-15 left-0  border-t-0  !min-w-100 shadow-none drop-shadow-md  drop-shadow-black/9 border-l-0 border-b3">
+        <!-- required header (hidden) -->
+        <HiddenDialogHeader
+          title="lolpocket"
+          desc="Navigate your pocket."
+          class="sr-only" />
+        <div
+          ref="layout"
+          class="absolute h-screen inset-0 px-2   scrollbar-hidden  scrollbar-none  pt-3 flex flex-col ">
+          <div class="w-full px-1 mb-5">
+            <h1 class="dss">
+              LP
+            </h1>
+          </div>
+
+          <!-- search buttton -->
+
+          <SearchBox class="justify-between h-11 mx-1 fx-0 *:first:gap-4" />
+
+          <!-- summoner linkies -->
+          <div class="space-y-1 px-1 mb-4.5 mt-7">
+            <SidebarBtnLink
+              item="nexus"
+              class="px-3.5 !gap-3 h-11" />
+            <SidebarBtnLink
+              v-if="slug"
+              :link="`/summoner/${slug}`"
+              class="px-3.5  h-11">
+              <icon
+                name="history"
+                class="size-4.75" />
+              Summoner Profile
+            </SidebarBtnLink>
+          </div>
+
+          <NavPanel />
+          <DropdownMenuSeparator class="-mx-3 mb-1" />
+          <PocketPanel />
+          <!-- summoner menu -->
+          <DropdownMenuSeparator class="-mx-3  my-0" />
+
+          <SidebarUser />
+>>>>>>> refs/remotes/origin/main
         </div>
       </SheetContent>
     </SheetPortal>

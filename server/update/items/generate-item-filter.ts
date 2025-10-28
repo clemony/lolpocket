@@ -1,6 +1,12 @@
+import { markUpdate } from '#shared/utils/markUpdate'
 import fs from 'node:fs'
+<<<<<<< HEAD
 import { resolvePath } from '../resolvePath'
 import { markUpdate, normalizeArray } from '../utils'
+=======
+import path from 'node:path'
+import { normalizeArray } from '../utils'
+>>>>>>> refs/remotes/origin/main
 
 interface ItemLite {
   id: number
@@ -14,7 +20,11 @@ interface ItemLite {
   tags?: string[]
 }
 
+<<<<<<< HEAD
 const dataPath = resolvePath('./items/raw/items-lite.json')
+=======
+const dataPath = path.resolve('scripts/data/items-lite.json')
+>>>>>>> refs/remotes/origin/main
 const raw = JSON.parse(fs.readFileSync(dataPath, 'utf-8')) as Record<
   string,
   ItemLite

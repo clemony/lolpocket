@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [
   "Basic",
   "Boots",
@@ -7,3 +8,6 @@
   "Special",
   "Starter"
 ]
+=======
+["Basic", "Boots", "Consumable", "Epic", "Legendary", "Special", "Starter"]
+>>>>>>> refs/remotes/origin/main

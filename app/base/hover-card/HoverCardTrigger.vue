@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import type { HoverCardTriggerProps } from 'reka-ui'
+<<<<<<< HEAD
 import { HoverCardTrigger, useForwardProps } from 'reka-ui'
+=======
+import { HoverCardTrigger } from 'reka-ui'
+>>>>>>> refs/remotes/origin/main
 
 const props = defineProps<HoverCardTriggerProps & {
 

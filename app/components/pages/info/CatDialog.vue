@@ -55,7 +55,10 @@ const { enter, exit, isFullscreen, toggle } = useFullscreen(photoBox)
                 class="border-0 focus-visible:outline-0 bg-black rounded-xl overflow-hidden aspect-square shadow-sm shadow-black/18 drop-shadow-black/18 drop-shadow-sm max-h-screen overflow-hidden bg-black mx-auto flex items-center p-0 relative justify-center rounded-xl inset-shadow-sm inset-shadow-black/15">
                 <img
                   :src="img.url"
+<<<<<<< HEAD
                   alt="clem"
+=======
+>>>>>>> refs/remotes/origin/main
                   :class="cn('size-full m-auto rounded-lg', img.class)" />
               </Card>
             </div>

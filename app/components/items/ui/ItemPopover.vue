@@ -4,7 +4,11 @@ defineOptions({
 })
 
 const { id, class: className } = defineProps<{
+<<<<<<< HEAD
   id: number
+=======
+  id: ItemId
+>>>>>>> refs/remotes/origin/main
   class?: HTMLAttributes['class']
 }>()
 

@@ -15,7 +15,11 @@ const props = defineProps<CollapsibleTriggerProps & {
 <template>
   <CollapsibleTrigger
     v-bind="props"
+<<<<<<< HEAD
     :class="cn(' group/collapse ', collapsibleTriggerVariants({ hover, active, size, base, variant }), props.class)">
+=======
+    class="flex justify-between items-center gap-3 group/collapse [&_svg]:opacity-60 [&_svg]:opacity-100 cursor-pointer">
+>>>>>>> refs/remotes/origin/main
     <slot />
   </CollapsibleTrigger>
 </template>

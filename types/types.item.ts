@@ -8,7 +8,10 @@ export type effectAmount = number
 
 export interface ItemIndex {
   id: number
+<<<<<<< HEAD
   key: string
+=======
+>>>>>>> refs/remotes/origin/main
   name: ItemName
 }
 

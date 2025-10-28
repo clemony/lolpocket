@@ -4,7 +4,11 @@ const { class: className, summoner } = defineProps<{
   summoner?: Summoner
 }>()
 
+<<<<<<< HEAD
 // @todo hookup to supbase with public data &  useSummoner
+=======
+// TODO hookup to supbase with public data &  useSummoner
+>>>>>>> refs/remotes/origin/main
 const text = computed(() => {
   console.log('💠 -as().publicData:', as().publicData)
   as().publicData.title = 'Pocket Pet'

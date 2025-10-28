@@ -4,7 +4,11 @@ import { itemTags } from '@appdata'
 function handleReset() {
   is().itemGridApi?.refreshCells()
 }
+<<<<<<< HEAD
 // @todo FIx this for ag grid rfresh
+=======
+// TODO FIx this for ag grid rfresh
+>>>>>>> refs/remotes/origin/main
 function handleChange() {
   is().itemGridApi?.refreshCells()
 }

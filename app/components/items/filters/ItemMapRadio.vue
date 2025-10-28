@@ -7,7 +7,11 @@
     orientation="vertical">
     <TabsList
       base="indicator"
+<<<<<<< HEAD
       variant="none"
+=======
+      variant="transparent"
+>>>>>>> refs/remotes/origin/main
       orientation="vertical"
       contrast
       class="grid-rows-4  !w-11  !gap-4 px-1 py-1">

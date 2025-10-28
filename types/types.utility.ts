@@ -78,6 +78,15 @@ export interface dateObject {
   time: string
 }
 
+<<<<<<< HEAD
+=======
+export interface UserPockets {
+  all: Pocket[]
+  archived: string[]
+  pinned: string[]
+}
+
+>>>>>>> refs/remotes/origin/main
 export interface Note {
   title: string
   content: string

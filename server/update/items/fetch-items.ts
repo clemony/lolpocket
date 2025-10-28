@@ -3,7 +3,10 @@ import { $fetch } from 'ofetch'
 import { resolvePath } from '../resolvePath'
 
 const dataPath = resolvePath('./misc/raw/patch-index-raw.json')
+<<<<<<< HEAD
 const outputPath = resolvePath('./items/raw/items-raw.json')
+=======
+>>>>>>> refs/remotes/origin/main
 const loadPatch = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
 
 async function run() {
@@ -58,7 +61,11 @@ async function run() {
       }
     }
 
+<<<<<<< HEAD
     writeFileSync(outputPath, JSON.stringify(merged, null, 2))
+=======
+    writeFileSync('./raw/items-raw.json', JSON.stringify(merged, null, 2))
+>>>>>>> refs/remotes/origin/main
     console.log(
       `✅ Merged ${Object.keys(merged).length} items to ./server/data/items.json`
     )

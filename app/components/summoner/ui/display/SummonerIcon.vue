@@ -1,8 +1,12 @@
 <script lang="ts" setup>
+<<<<<<< HEAD
 import type { PrimitiveProps } from 'reka-ui'
 import { Primitive } from 'reka-ui'
 
 const props = defineProps<PrimitiveProps & {
+=======
+const props = defineProps<{
+>>>>>>> refs/remotes/origin/main
   class?: HTMLAttributes['class']
   iconId?: number | string | null
   alt?: string
@@ -16,12 +20,20 @@ const icon = computed(() => {
   else return 'iconoir:plug-type-a'
 })
 
+<<<<<<< HEAD
 const forwarded = reactiveOmit(props, 'class')
 </script>
 
 <template>
   <Primitive
     v-bind="forwarded"
+=======
+/*  */
+</script>
+
+<template>
+  <div
+>>>>>>> refs/remotes/origin/main
     :class="
       cn(
         'size-12 shrink-0 bg-neutral aspect-square overflow-hidden grid place-items-center relative  shadow-sm drop-shadow-sm  shadow-black/15 drop-shadow-black/15',
@@ -39,7 +51,11 @@ const forwarded = reactiveOmit(props, 'class')
       " />
 
     <slot />
+<<<<<<< HEAD
   </Primitive>
+=======
+  </div>
+>>>>>>> refs/remotes/origin/main
 </template>
 
 <style scoped></style>

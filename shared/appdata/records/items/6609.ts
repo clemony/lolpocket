@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const item: Item =  {
   "name": "Chempunk Chainsword",
   "id": 6609,
@@ -57,3 +58,55 @@ const item: Item =  {
   ]
 }
 export default item
+=======
+const item: Item = {
+  id: 6609,
+  name: 'Chempunk Chainsword',
+  nicknames: ['grievous'],
+  buildsFrom: [
+    {
+      id: 3123,
+      name: 'Executioner\'s Calling',
+      gold: 800,
+    },
+    {
+      id: 1011,
+      name: 'Giant\'s Belt',
+      gold: 900,
+    },
+    {
+      id: 3133,
+      name: 'Caulfield\'s Warhammer',
+      gold: 1050,
+    },
+  ],
+  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6609_fighter_t3_chempunkchainsword.png',
+  maps: [11, 12, 21, 35],
+  noEffects: false,
+  passives: [
+    {
+      name: 'Hackshorn',
+      effects:
+        'Dealing physical damage to enemy champions inflicts them with <img src="/img/icons/grievous-wounds.webp" class="tip-icon" />Grievous Wounds for 3 seconds.',
+      unique: true,
+    },
+  ],
+  rank: 'Legendary',
+  removed: false,
+  shop: {
+    prices: {
+      combined: 350,
+      sell: 1240,
+      total: 3100,
+    },
+    tags: ['FIGHTER', 'ASSASSIN'],
+  },
+  specialRecipe: 0,
+  stats: {
+    abilityHaste: 15,
+    attackDamage: 45,
+    health: 450,
+  },
+}
+export default item
+>>>>>>> refs/remotes/origin/main

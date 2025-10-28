@@ -1,5 +1,9 @@
 <script lang="ts" setup>
+<<<<<<< HEAD
 // @todo fix
+=======
+// TODO fix
+>>>>>>> refs/remotes/origin/main
 </script>
 
 <template>

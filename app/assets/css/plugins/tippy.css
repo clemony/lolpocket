@@ -6,6 +6,7 @@
     transition-timing-function: cubic-bezier(0.28, 0.93, 0.75, 1.38);
   }
 
+<<<<<<< HEAD
   .tippy-box[data-theme~='transparent'] {
   }
 
@@ -13,6 +14,10 @@
   .tippy-box[data-theme~='base'],
   .tippy-box[data-theme~='blur'] {
     @apply border px-3 py-1 z-1 w-auto max-w-80 rounded-field backdrop-blur  drop-shadow-[1px_1px_2px_#0000006] shadow-md;
+=======
+  .tippy-box {
+    @apply border px-3 py-1 z-1 w-auto max-w-80 rounded-field backdrop-blur  drop-shadow-[1px_1px_2px_#00000010] shadow-md;
+>>>>>>> refs/remotes/origin/main
 
     .tippy-content {
       @apply text-2 whitespace-pre inline-block font-medium **:text-2;

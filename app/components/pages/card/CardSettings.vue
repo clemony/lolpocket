@@ -10,8 +10,13 @@ const emit = defineEmits([
 ])
 const card = computed(() => c)
 const align = ref('0')
+<<<<<<< HEAD
 const color = ref<string>()
 const filter = ref<string>()
+=======
+const color = ref()
+const filter = ref()
+>>>>>>> refs/remotes/origin/main
 watch(
   () => align.value,
   (newVal) => {

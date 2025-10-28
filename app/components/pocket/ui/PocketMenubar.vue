@@ -1,7 +1,13 @@
 <script setup lang="ts">
+<<<<<<< HEAD
 import { ChampionIcon, Hicon, ItemsAutoMenu, MiniItemAvatars, MiniSpellAvatars, RuneAndPathImg, RunesAutoMenu, SpellsAutoMenu } from '#components'
 import { championPositions } from '~~/shared/appdata'
 import type { MenubarGroup } from '~/base/menubar/menubar.types'
+=======
+import { ChampionIcon, Hicon, ItemsAutoMenu, MiniItemAvatars, MiniRuneSet, MiniSpellAvatars, PositionBadge, RuneAndPathImg, RunesAutoMenu, SpellsAutoMenu, SpellSetDuo } from '#components'
+import { championPositions } from '~~/shared/appdata'
+import type { MenubarGroup, MenubarItem, MenubarRadioGroup } from '~/base/menubar/menubar.types'
+>>>>>>> refs/remotes/origin/main
 
 const route = useRoute()
 const pocket = ref<Pocket>(ps().getPocket(String(route.params.pocket_key)))

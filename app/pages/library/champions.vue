@@ -2,7 +2,11 @@
 definePageMeta({
   title: 'Champions',
   icon: 'i-lol-champ-circle',
+<<<<<<< HEAD
   listClass: '!size-5.5',
+=======
+  listClass: '!size-5',
+>>>>>>> refs/remotes/origin/main
   path: '/library/champions',
 })
 // const { filters, setFilter, filtered } = useItemFilter()

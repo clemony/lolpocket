@@ -1,8 +1,20 @@
+<<<<<<< HEAD
 // 10/27/2025 10:50:39 AM CDT
 
 export const patchIndex = [
   25.21,
   25.2,
+=======
+<<<<<<<< HEAD:server/update/misc/raw/patch-index.json
+[
+  25.21,
+  25.2,
+========
+// 09/27/2025 06:05:10 PM CDT
+
+export const patchIndex = [
+>>>>>>>> refs/remotes/origin/main:shared/appdata/index/patch-index.ts
+>>>>>>> refs/remotes/origin/main
   25.19,
   25.18,
   25.17,

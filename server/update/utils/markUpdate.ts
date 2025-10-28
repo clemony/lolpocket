@@ -1,5 +1,9 @@
 import fs from 'node:fs'
+<<<<<<<< HEAD:server/update/utils/markUpdate.ts
 import patchIndex from '../misc/raw/patch-index.json'
+========
+import { patchIndex } from '../appdata'
+>>>>>>>> refs/remotes/origin/main:shared/utils/markUpdate.ts
 
 export function getFormattedDateTime(): string {
   const now = new Date()

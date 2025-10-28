@@ -35,7 +35,10 @@ watch(
 
     <template #background>
       <LazyBackgroundSplashFixed
+<<<<<<< HEAD
         size="header"
+=======
+>>>>>>> refs/remotes/origin/main
         :img="
           (
             as().publicData?.splash ?? state.champions().top().splash

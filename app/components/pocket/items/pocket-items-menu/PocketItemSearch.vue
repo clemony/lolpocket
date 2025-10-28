@@ -124,7 +124,11 @@ watchEffect(() => {
         <Input
           v-model="searchQuery"
           type="text"
+<<<<<<< HEAD
           class="m-0 size-full border-0 py-0 pl-5 shadow-none"
+=======
+          class="size-full pl-5 border-0 shadow-none py-0 m-0"
+>>>>>>> refs/remotes/origin/main
           :placeholder="props.placeholder"
           @clear:input="searchQuery = ''" />
       </slot>
@@ -132,7 +136,11 @@ watchEffect(() => {
 
     <button
       :disabled="searchQuery === null"
+<<<<<<< HEAD
       class="btn btn-ghost btn-circle btn-xs hover:bg-b3/40 pointer-events-auto absolute top-1.5 left-1.5 z-2"
+=======
+      class="btn btn-ghost btn-circle btn-xs hover:bg-b3/40 absolute z-2 left-1.5 top-1.5 pointer-events-auto"
+>>>>>>> refs/remotes/origin/main
       @click="clearFilters">
       <icon
         v-if="searchQuery"
@@ -142,7 +150,11 @@ watchEffect(() => {
       <icon
         v-else
         name="search"
+<<<<<<< HEAD
         class="text-bc/70 dst absolute size-4.75 shrink-0" />
+=======
+        class="size-4.75 shrink-0 text-bc/70 absolute dst" />
+>>>>>>> refs/remotes/origin/main
     </button>
   </motion.div>
 </template>

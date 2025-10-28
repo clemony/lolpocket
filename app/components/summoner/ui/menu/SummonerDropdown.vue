@@ -96,7 +96,11 @@ function handleBlock() {
           v-tippy="{ content: 'Block', theme: 'base', placement: 'bottom' }"
           tabindex="-1"
           class="size-full"
+<<<<<<< HEAD
           variant="outline"
+=======
+          variant="emboss"
+>>>>>>> refs/remotes/origin/main
           hover="btn"
           @click="handleBlock()">
           <icon
@@ -106,7 +110,11 @@ function handleBlock() {
         <!-- TODO add disable messaging -->
         <Button
           v-tippy="{ content: 'Message', theme: 'base', placement: 'bottom' }"
+<<<<<<< HEAD
           variant="outline"
+=======
+          variant="emboss"
+>>>>>>> refs/remotes/origin/main
           tabindex="-1"
           class="size-full"
           hover="btn">
@@ -115,7 +123,11 @@ function handleBlock() {
             name="lucide:message-square-more" />
         </Button>
         <Button
+<<<<<<< HEAD
           variant="outline"
+=======
+          variant="emboss"
+>>>>>>> refs/remotes/origin/main
           class="group size-full"
           as-child>
           <FollowButton

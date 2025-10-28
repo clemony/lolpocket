@@ -3,6 +3,32 @@
 
 @utility dss {
   @apply drop-shadow-sm;
+<<<<<<< HEAD
+=======
+}
+
+@utility dsm {
+  @apply drop-shadow-md;
+}
+
+@utility dxs {
+  @apply drop-shadow-xs;
+}
+@utility dst {
+  @apply drop-shadow-tiny;
+}
+
+@utility scrollbar-hidden {
+  scrollbar-color: transparent transparent !important;
+  &::-webkit-scrollbar {
+    scrollbar-color: transparent transparent !important;
+    display: none !important;
+  }
+}
+
+@utility trim {
+  @apply text-ellipsis whitespace-nowrap   text-clip;
+>>>>>>> refs/remotes/origin/main
 }
 
 @utility dsm {

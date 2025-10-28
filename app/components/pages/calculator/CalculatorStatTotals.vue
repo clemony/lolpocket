@@ -5,8 +5,13 @@ import { motion } from 'motion-v'
 
 const checkedStats = ref([])
 
+<<<<<<< HEAD
 const stats = ref([])
 const stats2 = ref([])
+=======
+const stats = ref()
+const stats2 = ref()
+>>>>>>> refs/remotes/origin/main
 
 function mergeItemStats(set: number[]) {
   const mergedStats: Record<string, number> = {}

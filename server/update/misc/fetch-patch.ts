@@ -1,6 +1,10 @@
+import { getFormattedDateTime } from '#shared/utils/markUpdate'
 import { writeFile } from 'node:fs/promises'
 import { ofetch } from 'ofetch'
+<<<<<<< HEAD
 import { getFormattedDateTime } from '../utils/markUpdate'
+=======
+>>>>>>> refs/remotes/origin/main
 
 const MIN_PATCH_MAJOR = 15
 

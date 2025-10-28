@@ -14,7 +14,11 @@ definePageMeta({
   path: '/tools/card',
 })
 
+<<<<<<< HEAD
 // @todo nuxt bg here
+=======
+// TODO nuxt bg here
+>>>>>>> refs/remotes/origin/main
 
 /* const fontClass1 = computed (() => {
   const a = fonts.find(f => f.id===card.font[0])
@@ -49,7 +53,11 @@ console.log('💠 - card.splash:', card.splash)
 
 <template>
   <div
+<<<<<<< HEAD
     class="relative grid h-full w-full items-center justify-center overflow-hidden">
+=======
+    class="h-full w-full grid items-center relative justify-center overflow-hidden">
+>>>>>>> refs/remotes/origin/main
     <!--
 
       <div class="px-1 dst">
@@ -88,16 +96,28 @@ console.log('💠 - card.splash:', card.splash)
       :min-zoom="0.5"
       :max-zoom="2"
       :wheel-zoom-step="0.01"
+<<<<<<< HEAD
       class="relative grid h-screen w-full place-items-center overflow-hidden">
       <div
         id="pocket-card"
         ref="pocketCardRef"
         class="border-b3/70 shadow-smooth rounded-box relative aspect-square h-300 w-300 border object-contain inset-shadow-sm"
+=======
+      class="h-screen w-full grid place-items-center relative overflow-hidden">
+      <div
+        id="pocket-card"
+        ref="pocketCardRef"
+        class="inset-shadow-sm border-b3/70 border h-300 shadow-smooth w-300 relative rounded-box object-contain aspect-square"
+>>>>>>> refs/remotes/origin/main
         :style="{
           backgroundImage: `linear-gradient(130deg, ${card.color} 0%, #FFFFFF 60%)`,
         }">
         <div
+<<<<<<< HEAD
           class="mask-right-100 size-full overflow-hidden rounded-2xl transition-all duration-500"
+=======
+          class="size-full overflow-hidden rounded-2xl transition-all duration-500 mask-right-100"
+>>>>>>> refs/remotes/origin/main
           :class="{ grayscale: card.filter === 'grayscale' }">
           <div
             alt="pocket-card-bg"
@@ -105,11 +125,19 @@ console.log('💠 - card.splash:', card.splash)
               backgroundImage: `url(${img(splash, { quality: 100 })})`,
               backgroundPositionX: `${card.align}%`,
             }"
+<<<<<<< HEAD
             class="mask-top size-full bg-cover" />
         </div>
 
         <div
           class="absolute inset-0 top-0 left-0 grid h-full grid-cols-[1.5fr_1fr] px-16 pt-28">
+=======
+            class="size-full bg-cover mask-top" />
+        </div>
+
+        <div
+          class="absolute grid grid-cols-[1.5fr_1fr] h-full top-0 inset-0 left-0 pt-28 px-16">
+>>>>>>> refs/remotes/origin/main
           <div class="flex flex-col **:select-none">
             <!--         <div class="">
               <h3
@@ -127,7 +155,11 @@ console.log('💠 - card.splash:', card.splash)
               </h1>
             </div> -->
 
+<<<<<<< HEAD
             <div class="mt-20 h-auto space-y-12">
+=======
+            <div class="h-auto space-y-12 mt-20">
+>>>>>>> refs/remotes/origin/main
               <template
                 v-for="(set, i) in card.items"
                 :key="i">

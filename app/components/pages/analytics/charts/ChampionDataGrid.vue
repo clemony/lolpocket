@@ -40,8 +40,11 @@ console.log('💠 - championList:', championList.value)
 const gridApi = shallowRef<GridApi | null>(null)
 
 const gridOptions: GridOptions<any[]> = {
+<<<<<<< HEAD
   // autoSizeStrategy: ,
   // scaleUpToFitGridWidth: true,
+=======
+>>>>>>> refs/remotes/origin/main
   columnHoverHighlight: false,
   defaultColDef: {
     minWidth: 50,
