@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { fromDate, ZonedDateTime } from '@internationalized/date'
 import type { HTMLContent, JSONContent } from '@tiptap/core'
 
@@ -17,16 +16,6 @@ export interface CommentItem {
 }
 
 export interface Doc {
-  content: JSONContent[]
-  type: string
-=======
-// types/comments.ts
-export interface Comment {
-  id: string
-  authorId: string
-  content: string // tiptap JSON or HTML
-  createdAt: string
-  parentId?: string | null
-  replies?: Comment[]
->>>>>>> refs/remotes/origin/main
-}
+    type: string
+    content: JSONContent[]
+  }
