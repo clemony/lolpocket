@@ -10,8 +10,8 @@ const emit = defineEmits([
 ])
 const card = computed(() => c)
 const align = ref('0')
-const color = ref()
-const filter = ref()
+const color = ref<string>()
+const filter = ref<string>()
 watch(
   () => align.value,
   (newVal) => {

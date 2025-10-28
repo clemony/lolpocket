@@ -37,7 +37,7 @@ const selectedSet = computed(() => {
 
 <template>
   <TabLayout
-    v-if="pocket"
+    v-if="pocket && route.name !== 'pocket-core'"
     size="lg">
     <template #crumb>
       <PocketMenubar />
@@ -48,13 +48,16 @@ const selectedSet = computed(() => {
     <template #background>
       <BackgroundSplashFixed
         v-memo="[pocket.icon]"
-        :img="pocket.icon.replace('tile', 'centered') ?? null" />
+        size="header"
+        :img="pocket?.icon" />
     </template>
 
     <template #background-slice>
       <BackgroundSplashFixed
         v-memo="[pocket.icon]"
-        :img="pocket.icon.replace('tile', 'centered') ?? null" />
+        size="header"
+        slice
+        :img="pocket?.icon" />
     </template>
 
     <template #header>
@@ -72,4 +75,12 @@ const selectedSet = computed(() => {
 
     <!--   -->
   </TabLayout>
+
+  <div
+    v-else
+    class="w-screen h-screen">
+    <NuxtPage
+      v-if="pocket"
+      :pocket="pocket" />
+  </div>
 </template>

@@ -25,6 +25,7 @@ const forwardedProps = useForwardPropsEmits(delegatedProps)
   <ListboxItem
     v-bind="forwardedProps"
     as-child
+    :autofocus="false"
     class="!outline-0 !outline-offset-0">
     <Button
       :variant

@@ -7,10 +7,9 @@ onMounted(() => scrollArea.value?.scrollTo({ top: 0 }))
 <template>
   <PopoverContent
     update-position-strategy="always"
-    class="w-[var(--reka-popover-trigger-width)] grid -translate-y-[calc(var(--reka-popover-trigger-height)+9px)] h-120 max-h-120 border-b3 p-0 overflow-hidden">
-    <InputGroup
-      ref="input"
-      class="h-12 rounded-b-none border-x-0 border-t-0 hover:ring-0">
+    variant="input"
+    @open-auto-focus.prevent>
+    <InputGroup class="h-12 rounded-b-none border-x-0 border-t-0 hover:ring-0">
       <InputGroupAddon>
         <icon
           name="search"
@@ -18,7 +17,9 @@ onMounted(() => scrollArea.value?.scrollTo({ top: 0 }))
       </InputGroupAddon>
       <InputGroupInput
         v-model="is().filters.query" />
-      <InputGroupClear @clear:input="is().filters.query = ''" />
+      <InputGroupClear
+        class="mr-6"
+        @clear:input="is().filters.query = ''" />
 
       <InputGroupAddon align="inline-end">
         <icon
@@ -30,17 +31,28 @@ onMounted(() => scrollArea.value?.scrollTo({ top: 0 }))
       <div
         ref="scrollArea"
         class="overflow-auto ">
-        <div class=" pl-5 pb-7 pt-5 flex w-full items-start grid auto-rows-auto gap-3">
+        <div class=" pl-5 pb-7 pt-5 flex relative w-full items-start grid auto-rows-auto gap-3">
+          <Button
+            v-if="is().filters.stats.length"
+            size="sq-xxs"
+            hover="btn"
+            variant="outline"
+            class="absolute right-6 top-7"
+            @click="is().filters.stats.length = 0">
+            <icon
+              name="x"
+              class="size-4" />
+          </Button>
           <ItemStatsList
-            wrapper-class="grid grid-cols-[0.74fr_repeat(2,1fr)] pr-8 gap-x-6"
-            class="gap-3.5 *:w-max *:px-4   *:border-b3/60 "
+            wrapper-class="flex-wrap pr-8 gap-x-6 max-h-106 flex flex-col gap-y-0"
+            class="gap-3.5 *:w-max *:pl-4 *:pr-6  *:!gap-2.5 "
             icons
             :indicator="false"
             labels />
-          <Separator class="-mx-6 w-[calc(100%+var(--spacing)*12)] -translate-x-6" />
+          <Separator class="-mx-6 -translate-y-3 w-[calc(100%+var(--spacing)*12)] -translate-x-6" />
 
-          <div class="grid grid-cols-[0.6fr_1fr] w-full gap-y-3 gap-x-12 pr-8">
-            <Label class="!text-2 h-6 pr-1 my-2 cursor-pointer justify-between font-semibold text-bc/90 w-full">
+          <div class="grid grid-cols-[0.6fr_1fr] w-full gap-y-1 gap-x-12 pr-8">
+            <Label class="popover-button-label">
               Item Tier
               <Button
                 v-if="is().filters.rank"
@@ -52,7 +64,7 @@ onMounted(() => scrollArea.value?.scrollTo({ top: 0 }))
                   class="size-4" />
               </Button>
             </Label>
-            <Label class="!text-2 h-6 pr-5 w-9/10 cursor-pointer justify-between my-2 font-semibold text-bc/90 ">
+            <Label class="popover-button-label">
               Categories
               <Button
                 v-if="is().filters.tags.length"
@@ -70,7 +82,7 @@ onMounted(() => scrollArea.value?.scrollTo({ top: 0 }))
               hover="btn"
               class="flex-col flex-wrap max-h-56  items-start"
               :size="['sq-xs', 'xs']"
-              variant="outline" />
+              variant="ghost" />
             <!-- tags -->
             <ItemTagsFilter
               :clear="false"

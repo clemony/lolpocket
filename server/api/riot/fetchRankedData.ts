@@ -1,3 +1,4 @@
+import type { RankedEntry } from '~~/types'
 import { fetchLeagueEntriesByPuuid } from '../riotClient'
 
 export interface RankedResponse {
@@ -10,13 +11,12 @@ export default defineEventHandler(async (event) => {
   const { puuid: queryPuuid, region: queryRegion } = getQuery(event)
 
   let puuid: string
-  if (typeof queryPuuid === 'string') {
+  if (typeof queryPuuid === 'string')
     puuid = queryPuuid
-  }
+
   let region: string
-  if (typeof queryRegion === 'string') {
+  if (typeof queryRegion === 'string')
     region = queryRegion
-  }
 
   try {
     const league = await fetchLeagueEntriesByPuuid(puuid, region)

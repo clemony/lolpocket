@@ -18,6 +18,12 @@
   --input-color: var(--b3);
 }
 
+@utility text-area {
+  &:hover,
+  &:focus-within {
+    @apply ring-1 ring-bc/60;
+  }
+}
 /* divider */
 
 @utility divider {

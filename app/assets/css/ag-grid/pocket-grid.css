@@ -1,10 +1,5 @@
 @import 'tailwindcss';
 
-.trash {
-  .ag-row {
-    @apply border-b-b2/60 bg-b2/30 rounded-lg;
-  }
-}
 
 .pockets-grid .ag-root-wrapper-body {
   @apply after:inset-shadow-b1 after:rounded-box after:shadow-b1

@@ -17,30 +17,8 @@ export const statIndex: Record<string, StatIndex> = {
     abbr: 'AP',
     color: 'var(--color-sorcery)',
     description: '',
-    group: 'magic',
+    group: 'spells',
     icon: 'i-lol-ap',
-  },
-  healAndShieldPower: {
-    id: 'healAndShieldPower',
-    name: 'Heal & Shield Power',
-    abbr: 'HSP',
-    color: 'var(--color-enchanter)',
-    description: '',
-    group: 'magic',
-    icon: 'i-lol-hsp',
-
-  },
-  //
-  flatMagicPenetration: {
-    id: 'flatMagicPenetration',
-    name: 'Flat Magic Penetration',
-    abbr: 'MPEN',
-    color: 'var(--color-mpen)',
-    description: '',
-    group: 'magic',
-    icon: 'i-lol-mpen',
-    longAbbr: 'Magic Pen.',
-
   },
   percentMagicPenetration: {
     id: 'percentMagicPenetration',
@@ -48,9 +26,31 @@ export const statIndex: Record<string, StatIndex> = {
     abbr: 'MPEN',
     color: 'var(--color-mpen)',
     description: '',
-    group: 'magic',
+    group: 'spells',
     icon: 'i-lol-mpen',
     longAbbr: 'Magic Pen',
+
+  },
+  //
+  healAndShieldPower: {
+    id: 'healAndShieldPower',
+    name: 'Heal & Shield Power',
+    abbr: 'HSP',
+    color: 'var(--color-enchanter)',
+    description: '',
+    group: 'spells',
+    icon: 'i-lol-hsp',
+
+  },
+  //
+  abilityHaste: {
+    id: 'abilityHaste',
+    name: 'Ability Haste',
+    abbr: 'AH',
+    color: 'var(--color-ah)',
+    description: '',
+    group: 'spells',
+    icon: 'i-lol-ah',
 
   },
 
@@ -199,38 +199,9 @@ export const statIndex: Record<string, StatIndex> = {
     icon: 'i-lol-mr',
 
   },
-  tenacity: {
-    id: 'tenacity',
-    name: 'Tenacity',
-    color: 'var(--color-platinum)',
-    description: '',
-    group: 'defense',
-    icon: 'i-lol-tenacity',
-
-  },
 
   // utility
 
-  abilityHaste: {
-    id: 'abilityHaste',
-    name: 'Ability Haste',
-    abbr: 'AH',
-    color: 'var(--color-ah)',
-    description: '',
-    group: 'utility',
-    icon: 'i-lol-ah',
-
-  },
-  flatMovespeed: {
-    id: 'flatMovespeed',
-    name: 'Base Movespeed',
-    abbr: 'MS',
-    color: 'var(--color-white-70)',
-    description: '',
-    group: 'utility',
-    icon: 'i-lol-ms',
-
-  },
   percentMovespeed: {
     id: 'percentMovespeed',
     name: 'Movespeed',
@@ -239,6 +210,15 @@ export const statIndex: Record<string, StatIndex> = {
     description: '',
     group: 'utility',
     icon: 'i-lol-ms',
+
+  },
+  tenacity: {
+    id: 'tenacity',
+    name: 'Tenacity',
+    color: 'var(--color-platinum)',
+    description: '',
+    group: 'utility',
+    icon: 'i-lol-tenacity',
 
   },
   //
@@ -251,8 +231,8 @@ export const statIndex: Record<string, StatIndex> = {
     group: 'utility',
     icon: 'i-lol-gold',
     longAbbr: '',
-
   },
+  //
   omnivamp: {
     id: 'omnivamp',
     name: 'Omnivamp',
@@ -266,6 +246,28 @@ export const statIndex: Record<string, StatIndex> = {
 
   // champion
 
+  flatMagicPenetration: {
+    id: 'flatMagicPenetration',
+    name: 'Flat Magic Penetration',
+    abbr: 'MPEN',
+    color: 'var(--color-mpen)',
+    description: '',
+    group: 'champion',
+    icon: 'i-lol-mpen',
+    longAbbr: 'Magic Pen.',
+
+  },
+  flatMovespeed: {
+    id: 'flatMovespeed',
+    name: 'Base Movespeed',
+    abbr: 'MS',
+    color: 'var(--color-white-70)',
+    description: '',
+    group: 'champion',
+    icon: 'i-lol-ms',
+
+  },
+  //
   acquisitionRadius: {
     id: 'acquisitionRadius',
     name: 'Acquisition Radius',

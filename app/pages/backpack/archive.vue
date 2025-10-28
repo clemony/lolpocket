@@ -2,7 +2,8 @@
 definePageMeta({
   title: 'archive',
   icon: 'archive',
-  order: 2,
+  listClass: '**:stroke-[1.8]',
+  order: 2
 })
 </script>
 

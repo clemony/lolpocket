@@ -2,10 +2,8 @@
 definePageMeta({
   name: 'pockets',
   icon: 'folder',
-  level: 2,
+  listClass: ' size-4.75',
   order: 1,
-  parent: '/backpack',
-  path: '/backpack/pockets',
 })
 
 const selected = ref<Pocket>(null)

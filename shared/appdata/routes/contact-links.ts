@@ -1,4 +1,4 @@
-export const contactLinks: LinkGroup = [
+export const contactLinks = [
   {
     name: 'Github',
     external: true,

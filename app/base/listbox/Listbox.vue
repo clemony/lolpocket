@@ -12,7 +12,9 @@ const forwarded = useForwardPropsEmits(delegated, emit)
 </script>
 
 <template>
-  <ListboxRoot v-bind="forwarded">
+  <ListboxRoot
+    :autofocus="false"
+    v-bind="forwarded">
     <slot />
   </ListboxRoot>
 </template>

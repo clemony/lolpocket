@@ -13,6 +13,12 @@ const props = defineProps<
     contrast?: boolean
     round?: boolean
     roundDisabled?: boolean
+
+    active?: ButtonVariants['active']
+    base?: ButtonVariants['base']
+    hover?: ButtonVariants['hover']
+    size?: ButtonVariants['size']
+    variant?: ButtonVariants['variant']
   }
 >()
 const forwarded = reactiveOmit(props, 'class')
@@ -77,6 +83,8 @@ const variants = {
               '!rounded-full  !to-b2/90  ring ring-b3/20 !bg-gradient-to-br   !from-b2 inset-shadow-xs !aspect-square scale-90 opacity-96 ':
                 props.roundDisabled,
             },
+
+            buttonVariants({ base, variant, size, hover, active }),
             indicatorClass,
           )
         " />

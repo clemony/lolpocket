@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-// TODO fix usermatchdata
+// @todo fix usermatchdata
 
 const state = inject<SummonerData>(SummonerKey)
 
@@ -70,10 +70,10 @@ watchEffect(async () => {
 
 <template>
   <div class="size-full overflow-hidden pb-9">
-    <div class="bg-b1 border-shadow size-full max-h-160 inset-shadow-xxs">
+    <div class="bg-b1 border-shadow inset-shadow-xxs size-full max-h-160">
       <div
-        class="px-4 pb-5 pt-4 bg-b1 relative flex flex-col size-full rounded-box overflow-hidden">
-        <div class="justify-self-end w-full h-full pt-4 -ml-6">
+        class="bg-b1 rounded-box relative flex size-full flex-col overflow-hidden px-4 pt-4 pb-5">
+        <div class="-ml-6 h-full w-full justify-self-end pt-4">
           <BubbleChart :data="data" />
         </div>
 

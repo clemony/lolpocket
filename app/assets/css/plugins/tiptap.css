@@ -1,0 +1,8 @@
+@import 'tailwindcss';
+
+.tiptap {
+  @apply focus-within:outline-0;
+  p {
+    @apply focus-within:outline-0;
+  }
+}

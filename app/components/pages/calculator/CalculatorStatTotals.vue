@@ -5,8 +5,8 @@ import { motion } from 'motion-v'
 
 const checkedStats = ref([])
 
-const stats = ref()
-const stats2 = ref()
+const stats = ref([])
+const stats2 = ref([])
 
 function mergeItemStats(set: number[]) {
   const mergedStats: Record<string, number> = {}
@@ -24,8 +24,8 @@ function mergeItemStats(set: number[]) {
   return mergedStats
 }
 
-const totalCost = ref()
-const totalCost2 = ref()
+const totalCost = ref<number>()
+const totalCost2 = ref<number>()
 
 function getTotalCost(set) {
   return set.reduce((sum, item) => sum + (item.buy || 0), 0)

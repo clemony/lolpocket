@@ -19,11 +19,11 @@ function handleDelete() {
   })
 } */
 
-// TODO MOVE
+// @todo MOVE
 </script>
 
 <template>
-  <div class="flex gap-2 items-center">
+  <div class="flex items-center gap-2">
     <!--     <button
       v-tippy="'New Rune Set'"
       class="btn btn-md btn-square"
@@ -35,11 +35,11 @@ function handleDelete() {
 
     <button
       v-tippy="'Delete Current Set'"
-      class="btn rounded-lg btn-sm btn-ghost hover:bg-b3/5 hover:border b3/4 *:dst"
+      class="btn btn-sm btn-ghost hover:bg-b3/5 b3/4 *:dst rounded-lg hover:border"
       @click="handleDelete()">
       <icon
         name="trash"
-        class="opacity-70 shrink-0 size-5 text-nc" />
+        class="text-nc size-5 shrink-0 opacity-70" />
     </button>
   </div>
 </template>

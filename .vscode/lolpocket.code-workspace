@@ -6,12 +6,19 @@
     },
   ],
   "settings": {
+      "css.customData": ["./tailwind-custom-data.json"],
+"tailwindCSS.includeLanguages": {
+    "vue": "html",
+    "plaintext": "html"
+  },
+    "css.lint.unknownAtRules": "ignore",
     "editor.formatOnType": false,
     "editor.formatOnPaste": true,
     "editor.formatOnSaveMode": "file",
     "files.autoSave": "onFocusChange",
     "vs-code-prettier-eslint.prettierLast": false,
     "eslint.enable": true,
+      "tailwindCSS.experimental.configFile": "../app/assets/css/tailwind.css",
     "vscode_custom_css.imports": [
       "file://Users/caitlin/Documents/css/vscode/vscode.css",
     ],

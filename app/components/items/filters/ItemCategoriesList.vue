@@ -4,7 +4,7 @@ import { itemTags } from '@appdata'
 function handleReset() {
   is().itemGridApi?.refreshCells()
 }
-// TODO FIx this for ag grid rfresh
+// @todo FIx this for ag grid rfresh
 function handleChange() {
   is().itemGridApi?.refreshCells()
 }

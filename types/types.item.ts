@@ -8,6 +8,7 @@ export type effectAmount = number
 
 export interface ItemIndex {
   id: number
+  key: string
   name: ItemName
 }
 

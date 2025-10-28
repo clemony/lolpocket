@@ -1,6 +1,5 @@
-export * from './helpers/fetchSummonerMastery'
-export * from './helpers/resolveSummonerFromRiot'
 export * from './useFetchSummonerData'
 export * from './useHandleSummoner'
+export * from './useNavigateToSummoner'
 export * from './useResolveSummoner'
 export * from './useSummoner'

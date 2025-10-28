@@ -1,4 +1,3 @@
-export * from './createNote'
 export * from './deletePocket'
 export * from './duplicate'
 export * from './handleCard'

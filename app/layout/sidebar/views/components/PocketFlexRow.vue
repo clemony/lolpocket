@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { closeAndNav } from '@app/layout/sidebar/utils.sidebar'
+
 const { class: className, row } = defineProps<{
   class?: HTMLAttributes['class']
   row?: Pocket[]
@@ -24,15 +26,15 @@ const route = useRoute()
     @click="closeAndNav(`/pocket/${pocket.key}`)">
     <AspectRatio
       :ratio="1 / 1"
-      class=" relative  grid place-items-center overflow-hidden  grow flex object-cover">
+      class=" relative  flex grow items-center  justify-center overflow-hidden object-cover">
       <PocketIcon
         :img="pocket.icon"
-        class=" h-full absolute grow object-cover" />
+        class=" absolute h-full grow object-cover" />
     </AspectRatio>
-    <div class="absolute z-1 size-full text-start flex justify-start items-end bg-neutral/70 text-nc opacity-0 p-1 font-bold text-nc group-hover/p:opacity-100 transition-opacity duration-300">
+    <div class="bg-neutral/70 text-nc absolute z-1 flex size-full items-end justify-start p-1 text-start font-bold opacity-0 transition-opacity duration-300 group-hover/p:opacity-100">
       <icon
         name="open"
-        class="absolute top-1.5 right-1.5 text-nc" />
+        class="text-nc absolute top-1.5 right-1.5" />
       <span class="absolute w-full truncate px-1">
         {{ pocket.name }}
       </span>

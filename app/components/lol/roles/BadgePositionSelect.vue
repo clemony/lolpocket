@@ -70,7 +70,9 @@ onMounted(() => {
           v-for="position in championPositions"
           :key="position.name"
           :value="position.name">
-          <PositionBadge :position="position.name" />
+          <PositionBadge
+            :position="position.name"
+            active />
         </SelectItem>
       </SelectGroup>
     </LazySelectContent>

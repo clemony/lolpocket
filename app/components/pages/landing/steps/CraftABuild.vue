@@ -5,41 +5,41 @@ const selectedChamps = computed (() => {
   return shuffled.slice(0, 6)
 })
  */
-const currentItems = ref()
+const currentItems = ref<ItemIndex[]>()
 
-const champModel = ref(null)
+const champModel = ref<number>(null)
 const champComplete = ref(false)
 const isChampVisible = ref(true)
 
 const itemModel = [
   {
     complete: ref(false),
-    item: ref(null),
+    item: ref<ItemIndex>(null),
     visible: ref(false),
   },
   {
     complete: ref(false),
-    item: ref(null),
+    item: ref<ItemIndex>(null),
     visible: ref(false),
   },
   {
     complete: ref(false),
-    item: ref(null),
+    item: ref<ItemIndex>(null),
     visible: ref(false),
   },
   {
     complete: ref(false),
-    item: ref(null),
+    item: ref<ItemIndex>(null),
     visible: ref(false),
   },
   {
     complete: ref(false),
-    item: ref(null),
+    item: ref<ItemIndex>(null),
     visible: ref(false),
   },
   {
     complete: ref(false),
-    item: ref(null),
+    item: ref<ItemIndex>(null),
     visible: ref(false),
   },
 ]
@@ -76,7 +76,7 @@ onMounted(async () => {
     <div class="flex gap-4 absolute top-5 h-16">
       <div
         v-if="champModel && champComplete"
-        v-tippy="champModel.name"
+        v-tippy="ix().champNameById(champModel)"
         class="size-16 hover:scale-110 hover:ring-1 hover:ring-neutral rounded-lg shadow-sm drop-shadow-sm transition-all duration-400 animate-in slide-in-from-bottom-10 hover:ring-offset-2 hover:ring-offset-b2">
         <ChampionIcon
           :id="champModel"
@@ -137,10 +137,10 @@ onMounted(async () => {
         <template
           v-for="item in currentItems"
           :key="item.name">
-          <label
+          <!--     <label
             v-if="
-              itemModel[itemIndex].item
-                ? item === itemModel[itemIndex]
+              item.id
+                ? item.id === itemModel
                 : currentItems.includes(item)
             "
             v-tippy="item.name"
@@ -149,30 +149,31 @@ onMounted(async () => {
               hidden:
                 itemModel[itemIndex].item !== null
                 && item !== itemModel[itemIndex].item,
-            }">
-            <input
-              v-model="itemModel[itemIndex].item"
-              name="item"
-              type="radio"
-              class="peer hidden"
-              :value="item"
-              @change="setTimer('item', itemIndex, item)" />
+            }"> -->
+          <input
+            v-model="itemModel[itemIndex].item"
+            name="item"
+            type="radio"
+            class="peer hidden"
+            :value="item"
+            @change="setTimer('item', itemIndex, item)" />
 
-            <div class="overflow-hidden size-16 rounded-lg">
-              <img
-                :src="`/img/items/${item.id}.webp`"
-                class="size-full s" />
-            </div>
-          </label>
+          <div class="overflow-hidden size-16 rounded-lg">
+            <img
+              :alt="item.name"
+              :src="`/img/items/${item.id}.webp`"
+              class="size-full s" />
+          </div>
+          <!--   </label> -->
 
-          <h1
-            v-if="item === itemModel[itemIndex].item"
+          <!--  <h1
+            v-if="item.id === itemModel"
             class="flex gap-3 items-center">
             {{ item.name }}
             <icon
               name="line-md:confirm-circle"
               class="size-7" />
-          </h1>
+          </h1> -->
         </template>
       </transition-slide>
     </template>

@@ -4,6 +4,7 @@
     "resolveJsonModule": true,
     "strict": false,
     "noEmit": true,
-    "pretty": true
+    "pretty": true,
+    "skipLibCheck": true
   }
 }

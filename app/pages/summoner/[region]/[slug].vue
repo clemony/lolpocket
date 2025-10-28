@@ -35,6 +35,7 @@ watch(
 
     <template #background>
       <LazyBackgroundSplashFixed
+        size="header"
         :img="
           (
             as().publicData?.splash ?? state.champions().top().splash

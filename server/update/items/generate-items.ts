@@ -1,16 +1,27 @@
 import fs from 'node:fs'
 import path from 'node:path'
+import type { ItemIndex, ItemLite } from '../../../types'
+import { resolvePath } from '../resolvePath'
+import { formatStats, handleWikiText, ludensPreProcess, markUpdate, normalizeItemData, stripEmpty } from '../utils'
 
-const inputPath = path.resolve('/server/update/items/raw/items-raw.json')
-const outputIndex = path.resolve('shared/appdata/index/item-index.ts')
-const outputLitePath = path.resolve('shared/appdata/records/items-lite.ts')
-const itemOutputDir = path.resolve('shared/appdata/records/items/')
+// server
+const itemLiteOutput = resolvePath('./items/raw/items-lite.json')
+const tagsOutput = resolvePath('./items/raw/unique-tags.json')
+const ranksOutput = resolvePath('./items/raw/unique-ranks.json')
+
+// shared
+const outputIndex = resolvePath('../../shared/appdata/index/item-index.ts')
+const outputLitePath = resolvePath('../../shared/appdata/records/items-lite.ts')
+const itemOutputDir = resolvePath('../../shared/appdata/records/items/')
+
+// input
+const inputPath = resolvePath('./items/raw/items-raw.json')
 const fullData = JSON.parse(fs.readFileSync(inputPath, 'utf-8'))
 
-const index = {}
-const simplified = {}
-const uniqueTags = new Set()
-const uniqueRanks = new Set()
+const index: Record<string, ItemIndex> = {}
+const simplified: Record<string, ItemLite> = {}
+const uniqueTags = new Set<string>()
+const uniqueRanks = new Set<string>()
 
 fs.mkdirSync(itemOutputDir, { recursive: true })
 
@@ -31,12 +42,14 @@ async function buildItems() {
 
     index[id] = {
       id: item.id,
+      key: item.id.toString(),
       name: item.name,
     }
 
     // Enrich the "lite" output
     simplified[id] = stripEmpty({
       id: item.id,
+      key: item.id.toString(),
       name: item.name,
       aka: item.nicknames,
       cost: item.shop?.prices?.total ?? 0,
@@ -54,7 +67,7 @@ async function buildItems() {
 
     const active = item.active || []
     const expandedActive = await Promise.all(
-      active.map(async (a) => {
+      active.map(async (a: any) => { // if you know the shape, replace `any`
         const effects = await handleWikiText(a.effects, sharedVars)
         return {
           name: a.name,
@@ -69,14 +82,11 @@ async function buildItems() {
     )
 
     const passives = item.passives || []
-
     const expandedPassives = await Promise.all(
-      passives.map(async (p) => {
+      passives.map(async (p: any) => {
         let pText = p.effects
-        if (item.id === 6655 && p.effects?.includes('Shot Charges')) {
+        if (item.id === 6655 && p.effects?.includes('Shot Charges'))
           pText = ludensPreProcess(p.effects)
-          console.log('💠 - passives.map - pText:', pText)
-        }
         const effects = await handleWikiText(pText, sharedVars)
         return {
           name: p.name,
@@ -122,15 +132,15 @@ export const itemIndex: ItemIndex[] = ${JSON.stringify(Object.values(index), nul
 export const itemsLite: ItemLite[] = ${JSON.stringify(Object.values(simplified), null, 2)}`
   )
   fs.writeFileSync(
-    './server/data/items-lite.json',
+    itemLiteOutput,
     JSON.stringify(Object.values(simplified), null, 2)
   )
   fs.writeFileSync(
-    './raw/unique-tags.json',
+    tagsOutput,
     JSON.stringify([...uniqueTags].sort(), null, 2)
   )
   fs.writeFileSync(
-    './raw/unique-ranks.json',
+    ranksOutput,
     JSON.stringify([...uniqueRanks].sort(), null, 2)
   )
 }

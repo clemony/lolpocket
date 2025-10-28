@@ -28,9 +28,9 @@
   @apply text-ellipsis whitespace-nowrap   text-clip;
 }
 
-@utility animate-gradient-* {
+/* @utility animate-gradient-* {
   animation: gradient --value(integer) s ease infinite;
-}
+} */
 @utility col-span-all {
   column-span: all;
 }

@@ -3,14 +3,12 @@
 
 @custom-variant on,
     @custom-variant open {
-      @apply btn-active ;
-    }
+  @apply btn-active;
+}
 
 @layer utilities {
-    :hover,
-
+  :hover,
   .btn-base-active {
-      @apply  !bg-b1  shadow-sm shadow-black/4 !border-b3/80  fx-0;
-    }
+    @apply !bg-b1  shadow-sm shadow-black/4 !border-b3/80  fx-0;
   }
-
+}

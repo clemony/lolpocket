@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-// TODO fix
+// @todo fix
 </script>
 
 <template>
-  <p class="font-semibold tracking-tight mb-1.5 mt-4 pl-4">
+  <p class="mt-4 mb-1.5 pl-4 font-semibold tracking-tight">
     Search by Item Category
   </p>
 

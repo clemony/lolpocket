@@ -1,4 +1,4 @@
-// CONFIG app
+// @config app
 
 export default defineAppConfig({
   icon: {
@@ -67,12 +67,18 @@ export default defineAppConfig({
 
       // editing
       'archive': 'lucide:archive',
-      'backspace': 'cil:backspace',
+      'bold': 'lucide:bold',
       'clear': 'tabler:circle-half-vertical',
       'edit': 'material-symbols-light:edit-square-outline',
       'edit-line': 'lucide:pen-line',
       'erase': 'lucide:eraser',
+      'h1': 'lucide:heading-1',
+      'h2': 'lucide:heading-2',
+      'italic': 'lucide:italic',
+      'letter-text': 'lucide:letter-text',
       'paperclip': 'lucide:paperclip',
+      'save': 'lucide:save',
+      'strikethrough': 'lucide:strikethrough',
       'trash': 'lucide:trash-2',
 
       // folder
@@ -98,6 +104,7 @@ export default defineAppConfig({
       'win-key': 'streamline-logos:microsoft-windows-logo-3-solid',
       'x-solid': 'teenyicons:x-circle-solid',
       'and': 'lucide:ampersand',
+      'backspace': 'cil:backspace',
       'command': 'lucide:command',
       'i': 'ion:information-sharp',
       'info': 'lucide:info',
@@ -163,8 +170,7 @@ export default defineAppConfig({
       'bow': 'mdi:bow-arrow',
       'calendar': 'lucide:calendar',
       'cart': 'lucide:shopping-cart',
-      'cat': 'lucide:cat',
-      'cat-geo': 'streamline-cyber:cat-2',
+      'cat': 'solar:cat-outline',
       'chart': 'lucide:bar-chart-3',
       'clock': 'lucide:clock',
       'compass': 'lucide:compass',
@@ -177,9 +183,11 @@ export default defineAppConfig({
       'panel-dash': 'lucide:panel-top-dashed',
       'plug': 'tabler:plug',
       'shopping-bag': 'lucide:shopping-bag',
+      'smile': 'lucide:smile',
       'swatch': 'lucide:swatch-book',
       'todo': 'lucide:list-todo',
       'up-face': 'iconoir:emoji-look-up',
+      'user': 'lucide:user',
       'user-cog': 'lucide:user-cog',
       'user-square': 'lucide:square-user',
 

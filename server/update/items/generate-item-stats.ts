@@ -1,6 +1,6 @@
 import fs from 'node:fs'
-import path from 'node:path'
-import { markUpdate } from '~~/server/utils'
+import { resolvePath } from '../resolvePath'
+import { markUpdate } from '../utils'
 
 interface Item {
   id: number
@@ -8,7 +8,7 @@ interface Item {
   stats: Record<string, number>
 }
 
-const itemsPath = path.resolve('scripts/data/items-lite.json')
+const itemsPath = resolvePath('./items/raw/items-lite.json')
 const itemsRaw = fs.readFileSync(itemsPath, 'utf-8')
 const items: Item[] = JSON.parse(itemsRaw)
 

@@ -4,7 +4,7 @@ import { pathIndex } from '#shared/appdata/index/path-index'
 definePageMeta({
   title: 'Runes',
   icon: 'i-lol-rune-circle',
-  listClass: '!size-5 ',
+  listClass: '!size-5.5 ',
   path: '/library/runes',
 })
 

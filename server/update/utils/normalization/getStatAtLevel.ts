@@ -1,13 +1,13 @@
 export function getStatAtLevel(
-  base?: number,
+  base?: number | undefined,
   growth?: number,
   level = 18
 ): number | null {
-  if (base === null)
+  if (base === undefined)
     return null
   const totalLevelUps = level - 1
 
-  if (totalLevelUps === 0 || growth === null)
+  if (totalLevelUps === 0 || growth === undefined)
     return base
 
   const levelGrowth = 0.0175 * totalLevelUps + 0.7025
@@ -21,11 +21,11 @@ export function getAttackSpeedAtLevel(
   ratio?: number,
   level = 18
 ): number | null {
-  if (base === null || ratio === null)
+  if (base === undefined || ratio === undefined)
     return null
   const totalLevelUps = level - 1
 
-  if (totalLevelUps === 0 || growth === null)
+  if (totalLevelUps === 0 || growth === undefined)
     return base
 
   const levelGrowth = 0.0175 * totalLevelUps + 0.7025

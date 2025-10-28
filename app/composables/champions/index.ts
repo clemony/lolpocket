@@ -1,4 +1,5 @@
-export * from './internal/getChampionStatsMap'
+export * from './internal'
+export * from './useChampionContextMenu'
 export * from './useChampionDetails'
 export * from './useChampionFilter'
 export * from './useChampionRoleStats'

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { RouteRecordRaw } from 'vue-router'
+import { closeAndNav } from '@app/layout/sidebar/utils.sidebar'
 
 const { item: i, link } = defineProps<{
   item?: RouteRecordRaw | string
@@ -26,16 +27,16 @@ const item = computed (() => {
     size="lg"
     :class="
       cn(
-        ' flex-nowrap overflow-hidden hover:!text-bc !gap-2.75 pl-4 w-full !duration-0 h-10 text-3 capitalize text-nowrap justify-start',
+        ' flex-nowrap overflow-hidden hover:!text-bc !gap-2.75 pl-4 w-full h-11 !duration-0  text-3 capitalize text-nowrap justify-start',
         { 'btn-active': route.path.match(link || item?.path) },
       )
     "
     @click="closeAndNav(link || item.path)">
     <slot>
-      <span class="size-4.5 shrink-0 grid place-items-center relative">
+      <span class="relative grid size-4.5 shrink-0 place-items-center">
         <hicon
           :name="String(item.meta?.icon) "
-          :class="cn('size-4.5 absolute', item?.meta?.listClass)" />
+          :class="cn('size-5 absolute', item?.meta?.listClass)" />
       </span>
       {{ item.meta?.title || item.name }}
     </slot>

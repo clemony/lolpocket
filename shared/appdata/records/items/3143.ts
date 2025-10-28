@@ -1,54 +1,58 @@
-const item: Item = {
-  id: 3143,
-  name: 'Randuin\'s Omen',
-  active: [
+const item: Item =  {
+  "name": "Randuin's Omen",
+  "id": 3143,
+  "rank": "Legendary",
+  "buildsFrom": [
     {
-      name: 'Humility',
-      effects:
-        'Unleash a shockwave around you that <img src="/img/icons/slow.webp" class="tip-icon" />slows nearby enemies by 70% for 2 seconds.',
-      range: 0,
-      unique: true,
+      "id": 3082,
+      "name": "Warden's Mail",
+      "gold": 1000
     },
+    {
+      "id": 1011,
+      "name": "Giant's Belt",
+      "gold": 900
+    }
   ],
-  buildsFrom: [
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3143_tank_t3_randuinsomen.png",
+  "simpleDescription": "Greatly increases defenses, activate to slow nearby enemies",
+  "passives": [
     {
-      id: 3082,
-      name: 'Warden\'s Mail',
-      gold: 1000,
-    },
-    {
-      id: 1011,
-      name: 'Giant\'s Belt',
-      gold: 900,
-    },
+      "name": "Resilience",
+      "effects": "Reduces incoming damage from <img src=\"/img/icons/critical-strike.webp\" class=\"tip-icon\" />critical strikes by 30%.",
+      "unique": true
+    }
   ],
-  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3143_tank_t3_randuinsomen.png',
-  maps: [11, 12, 21, 35],
-  noEffects: false,
-  passives: [
+  "active": [
     {
-      name: 'Resilience',
-      effects:
-        'Reduces incoming damage from <img src="/img/icons/critical-strike.webp" class="tip-icon" />critical strikes by 30%.',
-      unique: true,
-    },
+      "name": "Humility",
+      "effects": "Unleash a shockwave around you that <img src=\"/img/icons/slow.webp\" class=\"tip-icon\" />slows nearby enemies by 70% for 2 seconds.",
+      "range": 0,
+      "unique": true
+    }
   ],
-  rank: 'Legendary',
-  removed: false,
-  shop: {
-    prices: {
-      combined: 800,
-      sell: 1080,
-      total: 2700,
-    },
-    tags: ['TANK'],
+  "stats": {
+    "armor": 75,
+    "health": 350
   },
-  simpleDescription:
-    'Greatly increases defenses, activate to slow nearby enemies',
-  specialRecipe: 0,
-  stats: {
-    armor: 75,
-    health: 350,
+  "shop": {
+    "prices": {
+      "total": 2700,
+      "combined": 800,
+      "sell": 1080
+    },
+    "tags": [
+      "TANK"
+    ]
   },
+  "maps": [
+    11,
+    12,
+    21,
+    35
+  ]
 }
 export default item

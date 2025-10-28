@@ -1,6 +1,15 @@
 // formatItem.ts
+import { normalize } from '../index'
 
-export function formatStats(stats = {}): Record<string, number> {
+interface ItemStatEntry {
+  flat: number
+  percent: number
+  percentBase: number
+  percentBonus: number
+  percentPerLevel: number
+  perLevel: number
+}
+export function formatStats(stats: Record<string, ItemStatEntry> = {}): Record<string, number> {
   const flatStats: Record<string, number> = {}
 
   for (const statName in stats) {

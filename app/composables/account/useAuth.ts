@@ -1,6 +1,6 @@
 import type { Provider, Session } from '@supabase/supabase-js'
 
-// TODO env var url
+// @todo env var url
 export async function useSignIn(provider: Provider) {
   const client = useSupabaseClient()
   const { data, error } = await client.auth.signInWithOAuth({

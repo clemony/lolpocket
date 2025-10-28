@@ -4,7 +4,7 @@ defineOptions({
 })
 
 const { id, class: className } = defineProps<{
-  id: ItemId
+  id: number
   class?: HTMLAttributes['class']
 }>()
 

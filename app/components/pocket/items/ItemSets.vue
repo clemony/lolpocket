@@ -35,7 +35,7 @@ watch(items, (newItemSets) => {
 </script>
 
 <template>
-  <div class="inset-0 min-w-146 min-h-fit pt-1 overflow-x-visble flex flex-col gap-8">
+  <div class="inset-0 pb-33 min-w-146 min-h-fit pt-1 overflow-x-visble flex flex-col gap-8">
     <div
       v-draggable="[
         pocket.items,

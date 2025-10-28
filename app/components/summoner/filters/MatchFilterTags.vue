@@ -7,7 +7,7 @@ const { class: className, summoner } = defineProps<{
 const state = useSummonerInject()
 const roleStats = await useMatchRoles(state.summoner.value.puuid, state.matches)
 
-/* //FIXME what */
+/* // @fixme what */
 </script>
 
 <template>

@@ -1,51 +1,57 @@
-const item: Item = {
-  id: 6698,
-  name: 'Profane Hydra',
-  active: [
+const item: Item =  {
+  "name": "Profane Hydra",
+  "id": 6698,
+  "rank": "Legendary",
+  "buildsFrom": [
     {
-      name: 'Heretical Cleave',
-      effects: 'Deal 80% AD physical damage to enemies in a 450 radius.',
-      unique: true,
+      "id": 3077,
+      "name": "Tiamat",
+      "gold": 1200
     },
+    {
+      "id": 2020,
+      "name": "The Brutalizer",
+      "gold": 1337
+    }
   ],
-  buildsFrom: [
+  "specialRecipe": 0,
+  "noEffects": false,
+  "removed": false,
+  "icon": "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6698_profanehydra.png",
+  "passives": [
     {
-      id: 3077,
-      name: 'Tiamat',
-      gold: 1200,
-    },
-    {
-      id: 2020,
-      name: 'The Brutalizer',
-      gold: 1337,
-    },
+      "name": "Cleave",
+      "effects": "Damaging basic attacks deal (<img src=\"/img/icons/melee.webp\" class=\"inline-icon\" />40% AD /<img src=\"/img/icons/ranged.webp\" class=\"inline-icon\" />20% AD) ad physical damage to other enemies in a 350 radius centered around the target.",
+      "unique": true
+    }
   ],
-  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/6698_profanehydra.png',
-  maps: [11, 12, 21, 35],
-  noEffects: false,
-  passives: [
+  "active": [
     {
-      name: 'Cleave',
-      effects:
-        'Damaging basic attacks deal (<img src="/img/icons/melee.webp" class="inline-icon" />40% AD /<img src="/img/icons/ranged.webp" class="inline-icon" />20% AD) ad physical damage to other enemies in a 350 radius centered around the target.',
-      unique: true,
-    },
+      "name": "Heretical Cleave",
+      "effects": "Deal 80% AD physical damage to enemies in a 450 radius.",
+      "unique": true
+    }
   ],
-  rank: 'Legendary',
-  removed: false,
-  shop: {
-    prices: {
-      combined: 663,
-      sell: 1280,
-      total: 3200,
-    },
-    tags: ['ASSASSIN'],
+  "stats": {
+    "attackDamage": 60,
+    "lethality": 18,
+    "abilityHaste": 10
   },
-  specialRecipe: 0,
-  stats: {
-    abilityHaste: 10,
-    attackDamage: 60,
-    lethality: 18,
+  "shop": {
+    "prices": {
+      "total": 3200,
+      "combined": 313,
+      "sell": 1280
+    },
+    "tags": [
+      "ASSASSIN"
+    ]
   },
+  "maps": [
+    11,
+    12,
+    21,
+    35
+  ]
 }
 export default item

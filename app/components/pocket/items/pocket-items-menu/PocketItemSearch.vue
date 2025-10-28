@@ -54,7 +54,7 @@ const searchResult = computed(() => {
   const results = fuse.value.search(searchQuery.value)
   return results.map(result => result.item)
 })
-// TODO result filter
+// @todo result filter
 watch(searchResult, (newSearchResults) => {
   filters.result = Object.values(newSearchResults)
   if (route.path==='/items/stats') {
@@ -124,7 +124,7 @@ watchEffect(() => {
         <Input
           v-model="searchQuery"
           type="text"
-          class="size-full pl-5 border-0 shadow-none py-0 m-0"
+          class="m-0 size-full border-0 py-0 pl-5 shadow-none"
           :placeholder="props.placeholder"
           @clear:input="searchQuery = ''" />
       </slot>
@@ -132,17 +132,17 @@ watchEffect(() => {
 
     <button
       :disabled="searchQuery === null"
-      class="btn btn-ghost btn-circle btn-xs hover:bg-b3/40 absolute z-2 left-1.5 top-1.5 pointer-events-auto"
+      class="btn btn-ghost btn-circle btn-xs hover:bg-b3/40 pointer-events-auto absolute top-1.5 left-1.5 z-2"
       @click="clearFilters">
       <icon
         v-if="searchQuery"
         name="x-sm"
-        class="size-5.5 shrink-0 text-bc/70 absolute dst" />
+        class="text-bc/70 dst absolute size-5.5 shrink-0" />
 
       <icon
         v-else
         name="search"
-        class="size-4.75 shrink-0 text-bc/70 absolute dst" />
+        class="text-bc/70 dst absolute size-4.75 shrink-0" />
     </button>
   </motion.div>
 </template>

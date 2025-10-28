@@ -24,11 +24,22 @@ onMounted(() => {
     size="lg">
     <!-- splash -->
 
+    <template #background-slice>
+      <BackgroundSplashFixed
+        v-once
+        size="header"
+        slice
+        :img="
+          getSplash(champion.key, 'centered')
+        " />
+    </template>
+
     <template #background>
       <BackgroundSplashFixed
         v-once
+        size="header"
         :img="
-          getSplash(String(route.params.champion_key), 'centered')
+          getSplash(champion.key, 'centered')
         " />
     </template>
     <template #icon>

@@ -11,7 +11,7 @@ const { class: className, icons, indicator = true, labels, variant = 'ghost', wr
   indicator?: boolean
 }>()
 
-const groups = ['basic', 'magic', 'physical', 'defense', 'utility']
+const groups = ['basic', 'utility', 'spells', 'defense', 'physical',]
 </script>
 
 <template>
@@ -27,7 +27,7 @@ const groups = ['basic', 'magic', 'physical', 'defense', 'utility']
         :class="cn({ 'row-span-2': group === 'physical' })">
         <ListboxGroupLabel
           v-if="labels"
-          class="capitalize !text-2 mb-3 pl-0 font-semibold text-bc/90">
+          class="capitalize !text-2 mb-1 pl-0 font-semibold text-bc/90">
           {{ group }}
         </ListboxGroupLabel>
 
@@ -39,13 +39,13 @@ const groups = ['basic', 'magic', 'physical', 'defense', 'utility']
             :active
             :class="
               cn('!gap-2 font-medium', {
-                'text-white **:text-white ': is().filters.stats.includes(stat.id),
+                'text-white order-first **:text-white hover:opacity-80 ': is().filters.stats.includes(stat.id),
               })
             "
             :style="{
               backgroundColor: `${is().filters.stats.includes(stat.id) ? stat.color : ''}`,
             }"
-            :hover="!indicator ? 'btn' : 'none'"
+            :hover="!indicator && !is().filters.stats.includes(stat.id) ? 'btn' : 'none'"
             :value="stat.id">
             <span
               v-if="icons">

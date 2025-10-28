@@ -16,6 +16,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 <template>
   <Button
+    as="button"
     v-bind="{ ...props, ...$attrs }"
     :class="cn('rounded-md flex-nowrap text-nowrap truncate w-full max-w-full overflow-hidden justify-start h-8.5 text-2 px-2 [&_svg]:size-4.5', props.class)">
     <slot />

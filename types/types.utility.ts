@@ -1,3 +1,11 @@
+export type Extension<T, E> = T & E
+
+export type Side = 'top' | 'right' | 'bottom' | 'left'
+export type Direction = 'left' | 'right' | 'down' | 'up'
+export type Align = 'start' | 'center' | 'end'
+export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+export type Shape = 'square' | 'circle'
+
 export type DeepPartial<T> = {
   [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P]
 }
@@ -68,12 +76,6 @@ export interface dateObject {
   date: string
   patch: string
   time: string
-}
-
-export interface UserPockets {
-  all: Pocket[]
-  archived: string[]
-  pinned: string[]
 }
 
 export interface Note {

@@ -1,23 +1,11 @@
-import type {
-  TabsRootProps as OriginalTabsRootProps,
-  PrimitiveProps,
-} from 'reka-ui'
-import type { HTMLAttributes } from 'vue'
+import type { SizeColumnsToContentStrategy, SizeColumnsToFitGridStrategy, SizeColumnsToFitProvidedWidthStrategy } from 'ag-grid-community'
 import type { RouteMeta, RouteRecord } from 'vue-router'
 
 export type { MotionValue } from 'motion-v'
+
 export type { AcceptableValue, PrimitiveProps } from 'reka-ui'
+
 export type { CSSProperties, HTMLAttributes } from 'vue'
-
-export type Extension<T, E> = T & E
-
-export interface HTMLAttr extends HTMLAttributes {}
-
-export type Side = 'top' | 'right' | 'bottom' | 'left'
-
-export type Align = 'start' | 'center' | 'end'
-export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
-export type Shape = 'square' | 'circle'
 
 export interface PageRecord extends RouteRecord {
   altName: string
@@ -27,6 +15,11 @@ export interface PageRecord extends RouteRecord {
 export interface RouteRecordExtended extends RouteRecord {
   meta: PageMeta
 }
+
+export type AutoSizeStrategy
+  = SizeColumnsToFitGridStrategy
+    | SizeColumnsToFitProvidedWidthStrategy
+    | SizeColumnsToContentStrategy
 
 export interface PageMeta extends RouteMeta {
   title: string
@@ -38,26 +31,4 @@ export interface PageMeta extends RouteMeta {
   section: string
 }
 
-export interface TabsRootPropsWithNullableModel extends OriginalTabsRootProps {
-  modelValue?: any
-}
-
-export interface TabsTriggerPropsWithNullableValue {
-  disabled?: boolean
-  value: any
-}
-
-export interface Tabs {
-  currentValue: {
-    pos: number
-    width: number
-  }
-  returnValue: {
-    pos: number
-    width: number
-  }
-}
-
-export interface CustomRadioGroupProps extends PrimitiveProps {
-  contrast?: boolean
-}
+export type TippyTheme = 'base' | 'default' | 'transparent'

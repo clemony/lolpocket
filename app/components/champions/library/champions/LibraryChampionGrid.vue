@@ -38,7 +38,7 @@ defineExpose({
 
 const theme = ref(pocketTheme)
 const filteredChamps = ref([])
-// TODO
+// @todo
 const gridApi = shallowRef<GridApi | null>(null)
 /* const filteredChamps = computed<ChampionLite[]>(() => championsLite.filter(c => filteredKeys.value.includes(c.key))) */
 
@@ -279,7 +279,7 @@ ModuleRegistry.registerModules([
 </script>
 
 <template>
-  <article class="overflow-y-auto grow relative h-full relative">
+  <article class="relative h-full grow overflow-y-auto">
     <!--  <AgGridVue
       v-if="filtered"
       class="!size-full stat-grid champion-grid mt-38 border-t border-t-b3/40 "

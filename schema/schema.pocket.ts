@@ -3,6 +3,12 @@ import * as v from 'valibot'
 import { FixedArray, getDeepDefaults, MinMaxArray } from './utils/helpers'
 import { pType } from './utils/pType'
 
+/* export interface UserPockets {
+  all: Pocket[]
+  archived: string[]
+  pinned: string[]
+} */
+
 // Location
 export const PocketLocationSchema = v.object({
   folder: v.fallback(v.string(), ''), // normalized instead of nullable

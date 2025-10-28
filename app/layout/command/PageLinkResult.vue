@@ -32,9 +32,10 @@ function navigate() {
     initial="hidden"
     animate="visible"
     exit="hidden">
-    <a
+    <button
       class="btn-ghost-dark group"
       :class="cn('', className)"
+      @focus="navigate()"
       @click="navigate()">
       <slot />
 
@@ -50,6 +51,6 @@ function navigate() {
       <icon
         name="link"
         class="size-3.5 justify-self-end opacity-0 group-hover:opacity-100 tldr-20 -ml-1" />
-    </a>
+    </button>
   </li>
 </template>

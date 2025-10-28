@@ -5,7 +5,7 @@ import type { ToastProps } from './toast-variants'
         name="mingcute:check-circle-fill"
         class="absolute top-4.75 left-5 size-6 drop-shadow-sm rounded-full" /> */
 const TOAST_LIMIT = 3
-const TOAST_REMOVE_DELAY = 1000000
+const TOAST_REMOVE_DELAY = 10000
 
 export type StringOrVNode
   = | string

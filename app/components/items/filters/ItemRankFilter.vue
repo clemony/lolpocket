@@ -8,7 +8,7 @@ const { class: className, clear = true, hover = 'neutral', size = ['sq-lg', 'lg'
   hover?: ButtonVariants['hover']
   clear?: boolean
 }>()
-// TODO fixthis
+// @todo fixthis
 function handleReset() {
   // is().filters.rank = null
   // is().itemGridApi.refreshCells()
@@ -47,11 +47,11 @@ function handleUpdate() {
       :variant="
         is().filters.rank === rank.name ? 'neutral' : variant
       "
-      :class="cn('!font-medium px-5 text-2 hover:text-bc order-2 shadow-none border-b3/80', { 'order-1 ': is().filters.rank === rank.name })"
+      :class="cn('!font-medium px-5 text-2 hover:text-bc order-2 shadow-none ', { 'order-1 ': is().filters.rank === rank.name })"
       @click="is().filters.rank === rank.name ? (is().filters.rank = null) : null">
       <input
         v-model="is().filters.rank"
-        class="peer hidden absolute"
+        class="peer absolute hidden"
         type="radio"
         :value="rank.name"
         name="item-types" />

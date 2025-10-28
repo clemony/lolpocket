@@ -104,6 +104,14 @@ export default antfu({
     tailwindcss
   },
   rules: {
+
+    // tailwind
+    'tailwindcss/classnames-order': 'warn',
+    'tailwindcss/no-contradicting-classname': 'warn',
+    'tailwindcss/no-custom-classname': 'off',
+    'tailwindcss/enforces-shorthand': 'warn',
+
+    // other
     'eqeqeq': ['error', 'smart'],
     'eslint-comments/no-unlimited-disable': 'off',
     'no-console': 'off',
@@ -138,10 +146,6 @@ export default antfu({
   },
   settings: {
     rules: {
-      'tailwindcss/classnames-order': 'warn',
-      'tailwindcss/no-contradicting-classname': 'warn',
-      'tailwindcss/no-custom-classname': 'off',
-      'tailwindcss/enforces-shorthand': 'warn',
     },
     tailwindcss: {
       attributes: ['class', '@apply'],

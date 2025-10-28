@@ -15,7 +15,16 @@ const {
   title?: string
 }>()
 
+const emit = defineEmits(['loaded'])
+
 const champId = computed (() => params ? params.value : k ? ix().champIdByKey(k) : id)
+
+const loaded = ref(false)
+
+function onLoad() {
+  loaded.value = true
+  emit('loaded')
+}
 </script>
 
 <template>
@@ -24,10 +33,9 @@ const champId = computed (() => params ? params.value : k ? ix().champIdByKey(k)
     :alt="title || alt || `Champion ${champId} icon`"
     :class="
       cn(
-        'object-center overflow-hidden shrink-0 shadow-sm size-full rounded-lg  bg-b2/40 drop-shadow-sm grid place-items-center ',
+        '',
         className,
       )
-    ">
-    <slot />
-  </StaticImg>
+    "
+    @loaded="onLoad" />
 </template>

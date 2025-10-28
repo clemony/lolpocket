@@ -9,6 +9,7 @@ const props = withDefaults(
       id?: string
       to?: string
       variant?: PopoverContentVariants['variant']
+      dataTheme?: string
     }
   >(),
   {
@@ -19,11 +20,12 @@ const props = withDefaults(
 
 const emits = defineEmits<PopoverContentEmits>()
 
-const delegatedProps = reactiveOmit(props, 'class')
+const delegatedProps = reactiveOmit(props, 'class', 'dataTheme')
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
-const content = useTemplateRef<HTMLElement>('content')
-onMounted(() => content.value?.scrollTo({ top: 0 }))
+const { base } = popoverContentVariants({ variant: props.variant })
+
+provide('popoverVariant', props.variant)
 </script>
 
 <template>
@@ -34,12 +36,17 @@ onMounted(() => content.value?.scrollTo({ top: 0 }))
       :align
       :side-offset
       v-bind="{ forwarded }"
-      :class="
-        cn(popoverContentVariants({ variant }), props.class,
-        )
-      "
+      :class="cn(base(), props.class)"
       @close-auto-focus.prevent>
       <slot />
     </PopoverContent>
   </PopoverPortal>
 </template>
+
+<style>
+@reference '@css/tailwind.css';
+
+.popover-button-label {
+  @apply !text-2 h-6 pr-4 items-center my-2 cursor-pointer items-center justify-between font-semibold text-bc/90 whitespace-nowrap w-full;
+}
+</style>

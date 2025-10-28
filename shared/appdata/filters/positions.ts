@@ -1,3 +1,8 @@
+export interface ChampionPosition {
+  name: string
+  color: string
+  twColor: string
+}
 export const championPositions = [
   {
     name: 'All',

@@ -1,6 +1,8 @@
+export * from './ability-resource-index'
+export * from './champion-icon-index'
 export * from './champion-index'
 export * from './champion-title-index'
-
+export * from './damage-type-index'
 export * from './item-index'
 export * from './item-stat-index'
 export * from './map-index'

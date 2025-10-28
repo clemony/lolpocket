@@ -4,12 +4,19 @@ import { fileURLToPath } from 'node:url'
 export default defineNuxtConfig({
   alias: {
     '#server': fileURLToPath(new URL('./server', import.meta.url)),
+    '@app': fileURLToPath(new URL('./app', import.meta.url)),
     '@appdata': fileURLToPath(new URL('./shared/appdata', import.meta.url)),
+    '@base': fileURLToPath(new URL('./app/base', import.meta.url)),
+    '@components': fileURLToPath(new URL('./app/components', import.meta.url)),
+    '@composables': fileURLToPath(new URL('./app/composables', import.meta.url)),
+    '@css': fileURLToPath(new URL('./app/assets/css', import.meta.url)),
+    '@plugins': fileURLToPath(new URL('./app/plugins', import.meta.url)),
     '@schema': fileURLToPath(new URL('./schema', import.meta.url)),
     '@scripts': fileURLToPath(new URL('./scripts', import.meta.url)),
     '@types': fileURLToPath(new URL('./types', import.meta.url)),
     '@utils': fileURLToPath(new URL('./app/utils', import.meta.url)),
     '@variants': fileURLToPath(new URL('./app/assets/variants', import.meta.url)),
+    '~tiptap': fileURLToPath(new URL('./app/components/tiptap', import.meta.url)),
   },
   components: [
     {
@@ -32,6 +39,14 @@ export default defineNuxtConfig({
     port: 8080,
   },
   devtools: { enabled: true },
+  experimental: {
+    extractAsyncDataHandlers: true,
+    typescriptPlugin: true,
+    viteEnvironmentApi: true,
+  },
+  future: {
+    compatibilityVersion: 5
+  },
   icon: {
     provider: 'server',
     componentName: 'icon',
@@ -108,14 +123,6 @@ export default defineNuxtConfig({
     componentPrefix: 'i',
   },
   typescript: {
-    nodeTsConfig: { include: ['shared', 'server', 'scripts'] },
-    sharedTsConfig: { include: ['shared', 'server', 'scripts'] },
-    strict: false,
-    tsConfig: {
-      compilerOptions: {
-        skipLibCheck: true
-      }
-    },
     typeCheck: true,
   },
   vite: {

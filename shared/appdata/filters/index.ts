@@ -1,4 +1,5 @@
 export * from './champion-filters'
+export * from './champion-resources'
 export * from './item-aka'
 export * from './item-filters'
 export * from './item-ranks'

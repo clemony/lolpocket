@@ -42,9 +42,12 @@ watchEffect(async () => {
             variant="link"
             :to="getWikiLink(item.name)"
             target="_blank"
-            class="font-bold text-4 "
+            size="xs"
+            class="font-bold text-4 h-7"
             :title="`Official LoL Wiki - ${item.name}`">
-            {{ item.name }}
+            <h4 class="leading-4">
+              {{ item.name }}
+            </h4>
             <icon
               name="link-lg"
               class="size-3.75 dst" />

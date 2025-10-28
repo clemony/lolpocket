@@ -7,6 +7,7 @@ const { toasts } = useToast()
 
 <template>
   <ToastProvider
+    :duration="8000"
     as="div">
     <Toast
       v-for="toast in toasts"

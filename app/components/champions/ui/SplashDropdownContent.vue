@@ -31,7 +31,7 @@ onMounted(async () => {
   await images.value
 })
 
-// TODO nuxt bg here
+// @todo nuxt bg here
 </script>
 
 <template>
@@ -39,7 +39,7 @@ onMounted(async () => {
     align="start"
     :align-offset="props.alignOffset"
     :side-offset="props.sideOffset"
-    class="grid grid-cols-4 gap-2 w-fit">
+    class="grid w-fit grid-cols-4 gap-2">
     <PopoverClose as-child>
       <!--       <LazyPocketIcon v-for="(splash, i) in splashResults" :key="props.champion.id + i" :alt="`${props.champion.id}-splash-${i}`" :image="splash" class="size-18 rounded-xl **:rounded-xl" :class="{ 'ring-1 ring-offset-2 ring-offset-b1 ringneutral': splash===pocket.card.splash }">
         <input v-model="pocket.card.splash" type="radio" class="peer hidden" :value="splash" @change="pocket.champions.default = champion" />

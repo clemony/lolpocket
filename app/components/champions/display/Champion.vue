@@ -63,26 +63,9 @@ const splash = computed (() => `url('${image(getSplash(k ?? id, type))}')`)
 </script>
 
 <template>
-  <AspectRatio
-    :aspect="16 / 9"
-    :class="
-      cn(
-        'size-full grid place-items-center shrink-0 overflow-hidden  relative cursor-pointer shadow-sm drop-shadow-sm bg-no-repeat rounded-lg bg-cover size-full **:select-none  group relative',
-        className)"
-    :style="{
-      'background': splash,
-      'background-position-y': y,
-
-    }">
-    <Img
-      :img="img || getSplash(k ?? id, type)"
-      :class="cn('object-cover shrink-0  !aspect-video  size-full')"
-      :style="{
-        transform: `()`,
-      }"
-      :alt="`${k}-Splash`" />
-    <slot />
-  </AspectRatio>
+  <Img
+    :img="img || getSplash(k ?? id, type)"
+    :class="cn('object-cover shrink-0 overflow-hidden  shadow-sm drop-shadow-sm  rounded-lg select-none   size-full',
+               className)"
+    :alt="`${k}-Splash`" />
 </template>
-
-<style scoped></style>

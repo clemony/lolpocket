@@ -1,4 +1,4 @@
-import type { Champion } from '#shared/types/types.champion'
+import type { Champion } from '@types'
 import fs from 'node:fs'
 import path from 'node:path'
 import { normalize } from '../utils'

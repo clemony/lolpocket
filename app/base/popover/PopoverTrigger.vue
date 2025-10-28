@@ -11,8 +11,8 @@ interface Props extends PopoverTriggerProps {
   variant?: ButtonVariants['variant']
 }
 const props = withDefaults(defineProps<Props>(), {
-  base: 'none',
-  size: 'none',
+  base: 'btn',
+  size: 'md',
   variant: 'none'
 })
 const delegatedProps = reactiveOmit(props, 'class')

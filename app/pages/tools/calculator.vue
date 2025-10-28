@@ -20,8 +20,6 @@ definePageMeta({
   path: '/tools/calculator',
 })
 
-const target = ref()
-
 console.log('💠 - is().calculatorSets:', is().calculatorSet)
 </script>
 

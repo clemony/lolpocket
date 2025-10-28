@@ -10,6 +10,7 @@ const props = withDefaults(
       size?: ToggleVariants['size']
       base?: ToggleVariants['base']
       hover?: ToggleVariants['hover']
+      active?: ToggleVariants['active']
     }
   >(),
   {
@@ -22,7 +23,7 @@ const props = withDefaults(
 const emits = defineEmits<ToggleEmits>()
 
 const delegatedProps = computed(() => {
-  const { class: _, size, variant, ...delegated } = props
+  const { base, class: _, size, variant, ...delegated } = props
 
   return delegated
 })
@@ -35,7 +36,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
     v-slot="{ modelValue }"
 
     v-bind="forwarded"
-    :class="cn(toggleVariants({ variant, size, base, hover }), props.class)">
+    :class="cn(toggleVariants({ variant, size, base, hover, active }), props.class)">
     <slot :model-value />
   </Toggle>
 </template>

@@ -1,3 +1,5 @@
+export * from './colors'
 export * from './createCheckboxItem'
 export * from './getIcon'
+export * from './getSplash'
 export * from './useBreakpoints'

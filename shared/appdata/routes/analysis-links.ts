@@ -1,4 +1,4 @@
-export const analyticsLinks: LinkObject[] = [
+export const analyticsLinks = [
   {
     name: 'Champions',
     icon: {

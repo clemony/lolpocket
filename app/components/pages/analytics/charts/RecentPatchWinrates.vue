@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const userMatchData = []
 
-// TODO usermatchdata
+// @todo usermatchdata
 
 const patchStats = computed(() => {
   const patchMap = new Map<
@@ -106,9 +106,9 @@ const range = computed(() => {
 
 <template>
   <div
-    class="stats bg-b1 rounded-box border border-b3 shadow-warm-soft h-62 w-full px-5 relative">
-    <div class="absolute top-6 left-6 text-bc z-0 pointer-events-none">
-      <div class="text-1 stat-desc font-medium mb-1">
+    class="stats bg-b1 rounded-box border-b3 shadow-warm-soft relative h-62 w-full border px-5">
+    <div class="text-bc pointer-events-none absolute top-6 left-6 z-0">
+      <div class="text-1 stat-desc mb-1 font-medium">
         {{ range }}
       </div>
 

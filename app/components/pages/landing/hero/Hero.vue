@@ -9,7 +9,7 @@ const { progress: p, visible } = defineProps<{
 }>()
 
 const video = heroDisplays[0]
-const videoRef = ref()
+const videoRef = ref<any>()
 const prog = ref(0)
 
 useMotionValueEvent(p, 'change', (latest) => {

@@ -19,28 +19,27 @@ const target = shallowRef<HTMLButtonElement>(null)
 <template>
   <Popover>
     <PopoverTrigger
-      as-child>
-      <Button
-        variant="ghost"
-        class="h-19 rounded-none pb-1 inset-x-0 -mx-3  px-4 justify-between">
-        <div class="gap-3 inline-flex **:align-bottom items-center ">
-          <SummonerIcon class="size-11 rounded-lg relative" />
-          <SummonerName
-            as="h3"
-            class="dst pl-1 font-semibold truncate leading-none text-bc/90" />
-          <SummonerTag class="pl-1 [&_svg]:pt-px align-bottom italic leading-none" />
-        </div>
+      variant="ghost"
+      hover="btn"
+      active="inset"
+      class="h-16  inset-x-0 bg-b1/80 backdrop-blur mx-3 absolute bottom-5  px-4 justify-between">
+      <div class="gap-3  flex items-center ">
+        <SummonerIcon class="size-11 rounded-lg " />
+        <SummonerName
+          as="h3"
+          class="dst pl-1 font-semibold truncate leading-none text-bc/90" />
+        <SummonerTag class="pl-1 [&_svg]:pt-px align-bottom italic leading-none" />
+      </div>
 
-        <icon
-          name="select"
-          class="size-4" />
-      </Button>
+      <icon
+        name="select"
+        class="size-4" />
     </PopoverTrigger>
     <PopoverContent
       class="w-[var(--reka-popover-trigger-width)] rounded-lg shadow-sm pb-2"
       side="top"
       align="start"
-      :side-offset="4">
+      :side-offset="6">
       <PopoverItem
         class="h-10 ">
         <icon name="mail" />

@@ -1,42 +1,42 @@
 <script setup lang="ts">
-import type { PopoverContentEmits, PopoverContentProps } from 'reka-ui'
-import { useForwardPropsEmits } from 'reka-ui'
+import type { PopoverContentProps } from 'reka-ui'
 
-const props = defineProps<PopoverContentProps & {
-  champion: ChampionIndex
+const { k, pocket: p } = defineProps<PopoverContentProps & {
+  k: string
   pocket: Pocket
 }>()
 
-const pocket = computed (() => props.pocket)
+const pocket = computed (() => p)
+const name = computed (() => ix().champNameByKey(k))
 </script>
 
 <template>
   <PopoverContent
     align="start"
-    :hide-when-detached="true"
-    class="w-54 p-1 pb-1.5 rounded-lg pointer-events-auto">
+    class="w-50 p-0 rounded-lg pb-0.5 -mx-2 pointer-events-auto">
     <PopoverItem
-      @click="navigateTo(`/champions/${champion.key}`)">
+      class="hover:bg-b3/60"
+      @click="navigateTo(`/champions/${k}`)">
       <span class="size-4.5 relative grid place-items-center">
         <ChampionIcon
-          :id="champion.id"
-          :title="champion.name"
+          :k
           class="size-5.5 absolute" />
       </span>
-      {{ champion.name }}'s profile
+      {{ name }}'s profile
     </PopoverItem>
     <DropdownMenuSeparator class="mt-1.25 mb-1" />
     <PopoverItem
+      class="hover:bg-b3/60"
       for="champion-add-or-remove-from-pocket"
       as="label">
       <icon
-        :name="pocket.champions.includes(champion.key) ? 'minus' : 'add'" />
+        :name="pocket.champions.includes(k) ? 'minus' : 'add'" />
       <input
         v-model="pocket.champions"
-        :aria-label="champion.name"
+        :aria-label="name"
         type="checkbox"
         name="champion-add-or-remove-from-pocket"
-        :value="champion.key"
+        :value="k"
         class="peer hidden" />
       <span class="peer-checked:hidden">
         Add to pocket
@@ -48,19 +48,19 @@ const pocket = computed (() => props.pocket)
 
     <PopoverItem
       as="label"
-      :class="cn('has-disabled:opacity-100 disabled')"
-      @click="pocket.main.champion = champion.key">
+      :class="cn('has-disabled:opacity-100 hover:bg-b3/60 disabled')"
+      @click="pocket.main.champion = k">
       <icon
         name="star"
-        :class="cn('!size-4 ml-px **:stroke-[2.8] dst', { 'fill-precision': pocket.main.champion === champion.key })" />
+        :class="cn('!size-4 ml-px **:stroke-[2.8] dst', { 'fill-precision': pocket.main.champion === k })" />
       <input
         v-model="pocket.champions"
-        :disabled="pocket.champions.includes(champion.key)"
-        :aria-label="champion.name"
+        :disabled="pocket.champions.includes(k)"
+        :aria-label="name"
         type="checkbox"
-        :value="champion.key"
+        :value="k"
         class="peer hidden" />
-      {{ pocket.main.champion === champion.key ? 'Main champion' : 'Set main champion' }}
+      {{ pocket.main.champion === k ? 'Main champion' : 'Set main champion' }}
     </PopoverItem>
   </PopoverContent>
 </template>

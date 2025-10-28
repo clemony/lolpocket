@@ -20,7 +20,7 @@ const navLinks = computed(() => {
 </script>
 
 <template>
-  <div class=" overflow-y-auto scrollbar-hidden  py-3  max-h-full h-full px-3 space-y-2 w-full">
+  <div class=" overflow-y-auto scrollbar-hidden  py-3  max-h-full h-full pl-6 pr-6 space-y-2 w-full">
     <Collapsible
       v-for="parentRoute, i in navLinks"
       :key="parentRoute.name"
@@ -31,8 +31,8 @@ const navLinks = computed(() => {
         <span class="grow text-2 capitalize font-semibold text-bc/50">
           {{ parentRoute?.meta?.title || parentRoute?.name }}
         </span>
-
-        <CaretRotate />
+        <!--
+        <CaretRotate /> -->
       </CollapsibleTrigger>
 
       <CollapsibleContent
@@ -42,6 +42,7 @@ const navLinks = computed(() => {
         <SidebarBtnLink
           v-for="child in parentRoute?.children.sort((a, b) => (Number(a.meta.order) - Number(b.meta.order)))"
           :key="child?.name"
+          class=" text-4"
           :item="child" />
       </CollapsibleContent>
 
@@ -52,14 +53,15 @@ const navLinks = computed(() => {
         <SidebarBtnLink
           v-for="child in parentRoute?.children.filter(p => ['docs', 'about'].includes(String(p.name))).sort((a, b) => (Number(a.meta.order) - Number(b.meta.order)))"
           :key="child?.name"
+          class=" text-4"
           :item="child" />
 
         <Collapsible :default-open="false">
-          <CollapsibleTrigger class="flex-nowrap overflow-hidden hover:!text-bc !gap-2.75 pl-4 pr-1 w-full !duration-0 items-center flex h-10 w-full text-3 hover:underline font-medium capitalize text-nowrap justify-start">
+          <CollapsibleTrigger class="flex-nowrap overflow-hidden hover:!text-bc !gap-2.75 pl-4 pr-1 w-full !duration-0 items-center flex h-10 w-full text-4 hover:underline font-medium capitalize text-nowrap justify-start">
             <span class="size-4.5 shrink-0 grid place-items-center relative">
               <icon
                 name="lucide:scale"
-                class="size-5 **:stroke-[1.4] absolute" />
+                class="size-5.5 **:stroke-[1.6] absolute" />
             </span>
             Policies & Terms
             <Grow />
@@ -72,6 +74,7 @@ const navLinks = computed(() => {
             <SidebarBtnLink
               v-for="child in parentRoute?.children.filter(p => !['docs', 'about'].includes(String(p.name))).sort((a, b) => (Number(a.meta.order) - Number(b.meta.order)))"
               :key="child?.name"
+              class=" text-4"
               :item="child" />
           </CollapsibleContent>
         </Collapsible>

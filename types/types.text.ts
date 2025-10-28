@@ -1,9 +1,21 @@
+import type { fromDate, ZonedDateTime } from '@internationalized/date'
+import type { HTMLContent, JSONContent } from '@tiptap/core'
+
 // types/comments.ts
-export interface Comment {
+export interface CommentItem {
+  authorPuuid: string
   id: string
-  authorId: string
-  content: string // tiptap JSON or HTML
+  authorIcon: string
+  authorName: string
+  authorTag: string
+  content: Doc
   createdAt: string
+  editedAt: string | null
   parentId?: string | null
-  replies?: Comment[]
+  replies?: CommentItem[]
+}
+
+export interface Doc {
+  content: JSONContent[]
+  type: string
 }

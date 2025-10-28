@@ -1,5 +1,8 @@
 <script lang="ts" setup>
-const props = defineProps<{
+import type { PrimitiveProps } from 'reka-ui'
+import { Primitive } from 'reka-ui'
+
+const props = defineProps<PrimitiveProps & {
   class?: HTMLAttributes['class']
   iconId?: number | string | null
   alt?: string
@@ -13,11 +16,12 @@ const icon = computed(() => {
   else return 'iconoir:plug-type-a'
 })
 
-/*  */
+const forwarded = reactiveOmit(props, 'class')
 </script>
 
 <template>
-  <div
+  <Primitive
+    v-bind="forwarded"
     :class="
       cn(
         'size-12 shrink-0 bg-neutral aspect-square overflow-hidden grid place-items-center relative  shadow-sm drop-shadow-sm  shadow-black/15 drop-shadow-black/15',
@@ -35,7 +39,7 @@ const icon = computed(() => {
       " />
 
     <slot />
-  </div>
+  </Primitive>
 </template>
 
 <style scoped></style>

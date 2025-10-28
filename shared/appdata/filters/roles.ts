@@ -1,28 +1,72 @@
-export const championRoles = [
+export interface ChampionRole {
+  name: string
+  class?: string
+  color: string
+  icon?: string
+}
 
+export const championRoles: ChampionRole[] = [
+// mage
   {
     name: 'Artillery',
-    color: 'var(--color-ad)',
-    icon: '',
-  },
-  {
-    name: 'Assassin',
-    color: 'var(--color-apen)',
-    icon: '',
-  },
-  {
-    name: 'Battlemage',
-    color: 'var(--color-mr)',
-    icon: '',
+    color: 'var(--color-onhit)',
   },
   {
     name: 'Burst',
-    color: 'var(--color-burst)',
+    color: 'var(--color-mr)',
+  },
+  {
+    name: 'Mage',
+    color: 'var(--color-sorcery)',
+    icon: '',
+  },
+  //
+  {
+    name: 'Battlemage',
+    color: 'var(--color-mpen)',
     icon: '',
   },
   {
-    name: 'Catcher',
-    color: 'var(--color-ah)',
+    name: 'Enchanter',
+    color: 'var(--color-enchanter)',
+    icon: '',
+  },
+  {
+    name: 'Specialist',
+    color: 'var(--color-platinum)',
+    icon: '',
+  },
+  /*   {
+    name: 'Support',
+    color: 'var(--color-inspiration)',
+    icon: '',
+  }, */
+
+  // ad
+  {
+    name: 'Assassin',
+    class: '!size-4',
+    color: 'var(--color-apen)'
+  },
+  {
+    name: 'Marksman',
+    class: '!size-4.5 -translate-x-px',
+    color: 'var(--color-precision)',
+  },
+  {
+    name: 'Fighter',
+    class: '!size-4',
+    color: 'var(--color-ad)',
+  },
+  {
+    name: 'Skirmisher',
+    color: 'var(--color-fighter)',
+    icon: '',
+  },
+  //
+  {
+    name: 'Juggernaut',
+    color: 'var(--color-vamp)',
     icon: '',
   },
   {
@@ -30,49 +74,16 @@ export const championRoles = [
     color: 'var(--color-iron)',
     icon: '',
   },
+
+  // utility
   {
-    name: 'Enchanter',
-    color: 'var(--color-hsp)',
-    icon: '',
-  },
-  {
-    name: 'Fighter',
-    color: 'var(--color-fighter)',
-    icon: '',
-  },
-  {
-    name: 'Juggernaut',
+    name: 'Catcher',
     color: 'var(--color-hp)',
-    icon: '',
-  },
-  {
-    name: 'Mage',
-    color: 'var(--color-sorcery)',
-    icon: '',
-  },
-  {
-    name: 'Marksman',
-    color: 'var(--color-precision)',
-    icon: '',
-  },
-  {
-    name: 'Skirmisher',
-    color: 'var(--color-grandmaster)',
-    icon: '',
-  },
-  {
-    name: 'Specialist',
-    color: 'var(--color-enchanter)',
-    icon: '',
-  },
-  {
-    name: 'Support',
-    color: 'var(--color-inspiration)',
     icon: '',
   },
   {
     name: 'Tank',
-    color: 'var(--color-hp)',
+    color: 'var(--color-silver)',
     icon: '',
   },
   {
