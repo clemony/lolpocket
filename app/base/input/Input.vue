@@ -2,7 +2,7 @@
 import type { InputVariants } from '@variants'
 import { useVModel } from '@vueuse/core'
 import { useForwardPropsEmits } from 'reka-ui'
-import { inputVariants } from '~/assets/variants/input-variants'
+import { inputVariants } from '~/assets/variants/components/input-variants'
 
 defineOptions({
   inheritAttrs: false,
@@ -55,7 +55,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
       name="input"
       :placeholder
       autocomplete="off"
-      class="focus:placeholder:opacity-0 placeholder:text-2 placeholder:italic"
+      class="placeholder:text-2 placeholder:italic focus:placeholder:opacity-0"
       @keydown.stop
       @keydown.enter.prevent />
     <slot name="2" />

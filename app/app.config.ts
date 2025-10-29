@@ -20,6 +20,7 @@ export default defineAppConfig({
       // arrow
       'arrow-curve-right': 'lucide:corner-down-right',
       'arrow-left': 'lucide:arrow-left',
+      'arrow-ne': 'lucide:arrow-up-right',
       'arrow-right': 'lucide:arrow-right',
       'arrow-up': 'lucide:arrow-up',
       'collapse': 'lucide:arrow-left-from-line',
@@ -77,6 +78,7 @@ export default defineAppConfig({
       'italic': 'lucide:italic',
       'letter-text': 'lucide:letter-text',
       'paperclip': 'lucide:paperclip',
+      'pencil': 'lucide:pencil',
       'save': 'lucide:save',
       'strikethrough': 'lucide:strikethrough',
       'trash': 'lucide:trash-2',
@@ -116,6 +118,7 @@ export default defineAppConfig({
       // symbol
       'alert': 'lucide:circle-alert',
       'ban': 'lucide:ban',
+      'warning': 'lucide:triangle-alert',
 
       // external / social
       'at': 'lucide:at-sign',
@@ -130,6 +133,7 @@ export default defineAppConfig({
       'hash': 'lucide:hash',
       'link': 'lucide:external-link',
       'link-2': 'lucide:link-2',
+      'link-sq': 'bx:link-external',
       'mail': 'lucide:mail',
       'mail-all': 'lucide:mails',
       'mail-fill': 'fluent:mail-32-filled',

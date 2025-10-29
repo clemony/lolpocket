@@ -10,7 +10,7 @@ const {
 } = defineProps<
   PrimitiveProps & {
     class?: HTMLAttributes['class']
-    summoner?: Summoner
+    summoner?: Summoner | Partial<Summoner>
     noIcon?: boolean
     as?: string
   }
@@ -35,14 +35,14 @@ const region = computed(() => {
     :as="el"
     :class="
       cn(
-        'flex items-center lowercase leading-0 antialiased gap-[2px]',
+        'inline lowercase leading-none antialiased',
         className,
       )
     ">
     <icon
       v-show="!noIcon"
       name="at"
-      class="size-3.25 dst" />
+      class="dst inline size-3.25 " />
     {{ region }}
   </Primitive>
 

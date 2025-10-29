@@ -9,6 +9,7 @@ const props = defineProps<{
 >>>>>>> refs/remotes/origin/main
   class?: HTMLAttributes['class']
   iconId?: number | string | null
+  summoner?: Summoner | Partial<Summoner>
   alt?: string
 }>()
 

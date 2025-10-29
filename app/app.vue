@@ -43,7 +43,11 @@ client.auth.onAuthStateChange(async (event, session) => {
 </script>
 
 <template>
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
+  <ToastProvider
+    :duration="8000"
+    as-child>
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
+  </ToastProvider>
 </template>

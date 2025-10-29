@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { class: className, summoner } = defineProps<{
   class?: HTMLAttributes['class']
-  summoner?: Summoner
+  summoner?: Summoner | Partial<Summoner>
 }>()
 
 <<<<<<< HEAD

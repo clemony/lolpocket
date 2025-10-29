@@ -1,26 +1,43 @@
 <script setup lang="ts">
-const { class: className, comment, open } = defineProps<{
+const { class: className, comment, hovered, open } = defineProps<{
   class?: HTMLAttributes['class']
   comment: CommentItem
   open: boolean
+  hovered?: ComputedRef<boolean>
 }>()
+
+const summoner = computed (() => {
+  return {
+    name: comment.authorName,
+    puuid: comment.authorPuuid,
+    icon: comment.authorIcon,
+    tag: comment.authorTag,
+  }
+})
+/*      :id=""
+            @click="useNavigateToSummoner()" */
 </script>
 
 <template>
   <div
-    class="pointer-events-none relative flex h-14 w-full grow -translate-x-4 items-center justify-start gap-2.5 px-3 select-none">
-    <CollapsibleTrigger
-      :disabled="!comment.replies?.length"
-      class="pointer-events-auto mr-3.5 h-full disabled:opacity-0">
-      <CaretRotate
-        direction="right" />
-    </CollapsibleTrigger>
-    <SummonerIcon
-      :id="comment.authorIcon"
-      as="button"
-      class="pointer-events-auto size-9 translate-y-px rounded-full"
-      @click="useNavigateToSummoner(comment.authorPuuid)" />
-
+    class="pointer-events-none relative flex h-14 w-full grow  items-center justify-start gap-2.5 pr-3 pl-12 select-none">
+    <div class="absolute top-2.5 left-0 flex flex-col  items-center gap-2">
+      <Popover>
+        <PopoverTrigger
+          size="c"
+          class="hover-ring pointer-events-auto z-4 size-max translate-y-px ">
+          <SummonerIcon
+            class="pointer-events-none size-9 rounded-full" />
+        </PopoverTrigger>
+        <LazySummonerPopover :puuid="comment.authorPuuid" />
+      </Popover>
+      <CollapsibleTrigger
+        :disabled="!comment.replies?.length"
+        class="pointer-events-auto size-5  disabled:opacity-0">
+        <CaretFlip
+          :class="cn('text-bc/40 -translate-x-px hover:!text-bc/90', { '!text-bc/90': hovered })" />
+      </CollapsibleTrigger>
+    </div>
     <div
       class=" flex-col "
       @click.stop>
@@ -38,8 +55,25 @@ const { class: className, comment, open } = defineProps<{
         </span>
       </button>
 
-      <div class="text-1   flex items-center gap-2 opacity-60">
-        {{ parseISOString(comment.createdAt) }}
+      <div class="flex  items-center gap-2 *:align-bottom ">
+        <span class="text-1 opacity-60   ">
+          {{ parseISOStringToRelative(comment.createdAt) }}
+        </span>
+        <span
+          v-if="comment.editedAt"
+          v-tippy="{ content: 'Edited', theme: 'base', placement: 'top-start', followCursor: true }"
+          class="text-0  inline ">
+          <span class="opacity-60">
+            -&thinsp;
+          </span>
+          <icon
+            name="lucide:pencil"
+            class="inline size-3 align-middle opacity-60" />
+          <span
+            class="pointer-events-auto ml-1 opacity-70 hover:underline hover:opacity-100">
+            {{ parseISOStringToDate(comment.editedAt) }}
+          </span>
+        </span>
       </div>
     </div>
   </div>

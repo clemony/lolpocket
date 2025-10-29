@@ -21,15 +21,16 @@ const target = shallowRef<HTMLButtonElement>(null)
     <PopoverTrigger
 <<<<<<< HEAD
       variant="ghost"
-      hover="btn"
+      hover="inset"
+      base="btn"
       active="inset"
-      class="h-16  inset-x-0 bg-b1/80 backdrop-blur mx-3 absolute bottom-5  px-4 justify-between">
-      <div class="gap-3  flex items-center ">
+      class="on:!bg-b2/60 on:border-b3 absolute inset-x-0 bottom-5 mx-3 h-16 justify-between border-transparent  px-4 backdrop-blur">
+      <div class="flex  items-center gap-3 ">
         <SummonerIcon class="size-11 rounded-lg " />
         <SummonerName
           as="h3"
-          class="dst pl-1 font-semibold truncate leading-none text-bc/90" />
-        <SummonerTag class="pl-1 [&_svg]:pt-px align-bottom italic leading-none" />
+          class="dst text-bc/90 truncate pl-1 leading-none font-semibold" />
+        <SummonerTag class="pl-1 align-bottom leading-none italic [&_svg]:pt-px" />
       </div>
 
       <icon
@@ -55,7 +56,7 @@ const target = shallowRef<HTMLButtonElement>(null)
 >>>>>>> refs/remotes/origin/main
     </PopoverTrigger>
     <PopoverContent
-      class="w-[var(--reka-popover-trigger-width)] rounded-lg shadow-sm pb-2"
+      class="w-[var(--reka-popover-trigger-width)] rounded-lg pb-2 shadow-sm"
       side="top"
       align="start"
 <<<<<<< HEAD
@@ -70,7 +71,7 @@ const target = shallowRef<HTMLButtonElement>(null)
 
         <span
           v-if="as().account"
-          class="absolute right-4 text-2 font-mono opacity-60">
+          class="text-2 absolute right-4 font-mono opacity-60">
           {{ as().account?.inbox.messages.filter(m => !m.read).length }}
         </span>
       </PopoverItem>
@@ -88,7 +89,7 @@ const target = shallowRef<HTMLButtonElement>(null)
       <HoverCard>
         <HoverCardTrigger as-child>
           <PopoverItem
-            class="h-10 open:btn-active open:bg-b2/80 open:border-b3/60 open:noise-1 group/t"
+            class="open:btn-active open:bg-b2/80 open:border-b3/60 open:noise-1 group/t h-10 w-full"
             @click="closeAndNavigate('/settings')">
             <icon
               name="gear"
@@ -97,12 +98,12 @@ const target = shallowRef<HTMLButtonElement>(null)
 
             <icon
               name="right"
-              class="size-3.5 absolute right-3 opacity-50 group-hover:opacity-60 group-open:opacity-60" />
+              class="absolute right-3 size-3.5 opacity-50 group-open:opacity-60 group-hover:opacity-60" />
           </PopoverItem>
         </HoverCardTrigger>
 
         <HoverCardContent
-          class="!py-1.5 p-1"
+          class="p-1 !py-1.5"
           side="right"
           :align-offset="-4"
           align="end">

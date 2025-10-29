@@ -39,11 +39,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
     v-slot="{ modelValue }"
 
     v-bind="forwarded"
-<<<<<<< HEAD
-    :class="cn(toggleVariants({ variant, size, base, hover, active }), props.class)">
-=======
-    :class="cn(toggleVariants({ variant, size, base, hover }), props.class)">
->>>>>>> refs/remotes/origin/main
+    :class="cn('group/toggle', toggleVariants({ variant, size, base, hover, active }), props.class)">
     <slot :model-value />
   </Toggle>
 </template>

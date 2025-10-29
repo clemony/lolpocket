@@ -22,7 +22,7 @@ onMounted (() => {
 </script>
 
 <template>
-  <div class="  relative flex w-full items-center justify-end   px-2  ">
+  <div class="  relative  inline-flex w-full translate-y-1 items-center pl-2 pl-4  align-bottom ">
     <Toggle
       v-model:model-value="editModel"
       variant="link"
@@ -30,7 +30,7 @@ onMounted (() => {
       active="link"
       base="btn"
       hover="link"
-      class="text-1 inline w-17 px-2 text-end align-bottom opacity-30"
+      class="text-1 inline w-17 px-1 text-end align-bottom opacity-30"
       @update:model-value="e => emit('update:edit-model', e)">
       {{ !editModel ? 'Edit' : 'Cancel' }}
     </Toggle>
@@ -47,7 +47,7 @@ onMounted (() => {
       hover="link"
       :disabled="comment.authorPuuid !== as().account.puuid"
       size="xs"
-      class="text-1 inline px-1.5 align-bottom opacity-30 disabled:hidden"
+      class="text-1 inline px-1 align-bottom opacity-30 disabled:hidden"
       @click="emit('comment:remove', comment.id)">
       Remove
     </Button>
@@ -65,9 +65,11 @@ onMounted (() => {
       base="btn"
       hover="link"
       active="link"
-      class="text-1 inline w-17 px-2 align-bottom opacity-30 "
+      class="text-1 inline w-17 px-1 align-bottom opacity-30 "
       @update:model-value="e => emit('update:reply-model', e)">
       {{ !replyModel ? 'Reply' : 'Cancel' }}
     </Toggle>
+    <Grow />
+    <slot />
   </div>
 </template>

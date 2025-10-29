@@ -1,42 +1,41 @@
 <script lang="ts" setup>
-<<<<<<< HEAD
-=======
-import { SplitterPanel as ResizablePanel } from 'reka-ui'
+const slug = computed (() => getSummonerSlug(as().account) || null)
 
->>>>>>> refs/remotes/origin/main
 const layout = shallowRef<HTMLElement>(null)
 const trigger = useTemplateRef<HTMLElement>('trigger')
-const slug = computed (() => getSummonerSlug(as().account))
-const hovered = ref<boolean>(false)
-const { isOutside } = useMouseInElement(layout)
-<<<<<<< HEAD
 
-const triggerHovered = useElementHover(trigger, {
-  delayEnter: 600,
-=======
-const triggerHovered = useElementHover(trigger, {
-  delayEnter: 100,
->>>>>>> refs/remotes/origin/main
-  delayLeave: 100,
-})
+const hovered = refAutoReset<boolean>(false, 700)
+const open = shallowRef<boolean>(false)
+
+const { isOutside } = useMouseInElement(layout)
 
 watch(() => isOutside.value, (newVal) => {
 <<<<<<< HEAD
   if (newVal === true) {
-    ui().sidebarOpen = false
-    hovered.value = false
+    setTimeout(() => {
+      if (isOutside.value) {
+        open.value = false
+        ui().sidebarOpen = false
+        hovered.value = false
+      }
+    }, 300)
   }
 }, { immediate: false })
 
 watch(() => hovered.value, (newVal) => {
+  console.log('🌱 - newVal:', newVal)
   if (newVal === true)
     ui().sidebarOpen = true
 })
 
-watch(() => triggerHovered.value, (newVal) => {
+watch(() => hovered.value, (newVal) => {
   if (newVal === true) {
-    ui().sidebarOpen = true
-    hovered.value = false
+    setTimeout(() => {
+      if (hovered.value) {
+        ui().sidebarOpen = true
+        hovered.value = false
+      }
+    }, 600)
   }
 })
 =======
@@ -61,10 +60,10 @@ watch(() => triggerHovered.value, (newVal) => {
       :class="cn(' pointer-events-none grid place-items-center  fixed group/trigger transition-all duration-200 h-screen z-30 w-8 top-0 left-0', { 'pointer-events-none hidden': ui().sidebarOpen && !hovered })">
       <button
         ref="trigger"
-        class="h-32 w-full grid place-items-center pointer-events-auto "
+        class="pointer-events-auto grid h-32 w-full place-items-center "
         @focusin="hovered = true"
         @mouseenter="hovered = true">
-        <span class="h-full rounded-full w-3 bg-tint-b3/50 border-b3 border" />
+        <span class="bg-tint-b3/50 border-b3 h-full w-3 rounded-full border" />
       </button>
     </div>
 =======
@@ -84,11 +83,11 @@ watch(() => triggerHovered.value, (newVal) => {
         :class="cn('p-0 !z-15 left-0 border-y-1 border-r rounded-r-xl !min-w-110 w-110 shadow-none drop-shadow-md  drop-shadow-black/9 border-l-0 border-b3', { '-translate-x-102': hovered })">
         <div
           ref="layout"
-          class="size-full grid grid-cols-[45px_1fr] items-center">
+          class="grid size-full grid-cols-[45px_1fr] items-center">
           <!-- handle -->
           <div
-            class="h-32 z-2 self-center w-8 absolute right-0 my-auto grid place-items-center pointer-events-auto ">
-            <span class="h-full rounded-full w-3 bg-tint-b3/50 border-b3 border" />
+            class="pointer-events-auto absolute right-0 z-2 my-auto grid h-32 w-8 place-items-center self-center ">
+            <span class="bg-tint-b3/50 border-b3 h-full w-3 rounded-full border" />
           </div>
 
           <!-- required header (hidden) -->
@@ -98,7 +97,7 @@ watch(() => triggerHovered.value, (newVal) => {
             class="sr-only absolute" />
 
           <!-- logo -->
-          <div class="h-screen flex flex-col items-center  border-r border-r-b3/80 gap-y-3 pt-3 w-full">
+          <div class="border-r-b3/80 flex h-screen w-full  flex-col items-center gap-y-3 border-r pt-3">
             <h1 class="dss mb-1">
               LP
             </h1>
@@ -107,7 +106,7 @@ watch(() => triggerHovered.value, (newVal) => {
               :key="pocket.key"
               :to="`/pocket/${pocket.key}`"
               size="c-md"
-              class="p-0 overflow-hidden border-none "
+              class="overflow-hidden border-none p-0 "
               variant="neutral">
               <PocketIcon
                 :img="pocket.icon"
@@ -116,20 +115,20 @@ watch(() => triggerHovered.value, (newVal) => {
           </div>
 
           <div
-            class=" h-screen w-full pr-2 overflow-hidden relative scrollbar-hidden  pt-16 flex flex-col ">
+            class=" scrollbar-hidden relative flex h-screen w-full flex-col  overflow-hidden pt-16 pr-2 ">
             <!-- search buttton -->
 
-            <SearchBox class="justify-between h-11 ml-3 mr-1 fx-0 *:first:gap-4" />
+            <SearchBox class="fx-0 mr-1 ml-3 h-11 justify-between *:first:gap-4" />
 
             <!-- summoner linkies -->
-            <div class="space-y-1 px-3 mt-5">
+            <div class="mt-5 space-y-1 px-3">
               <SidebarBtnLink
                 item="nexus"
-                class="px-3.5 !gap-3 text-4 [&_svg]:size-5.5 " />
+                class="text-4 !gap-3 px-3.5 [&_svg]:size-5.5 " />
               <SidebarBtnLink
                 v-if="slug"
                 :link="`/summoner/${slug}`"
-                class="px-3.5 !gap-2.5 text-4 ">
+                class="text-4 !gap-2.5 px-3.5 ">
                 <icon
                   name="history"
                   class="size-5" />
@@ -139,7 +138,8 @@ watch(() => triggerHovered.value, (newVal) => {
 
             <NavPanel />
             <!-- summoner menu -->
-            <SidebarUser />
+
+            <SidebarUser v-model:open="open" />
           </div>
 =======
         class="p-0 !z-15 left-0  border-t-0  !min-w-100 shadow-none drop-shadow-md  drop-shadow-black/9 border-l-0 border-b3">

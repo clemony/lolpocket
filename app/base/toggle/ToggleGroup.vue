@@ -1,24 +1,22 @@
 <script setup lang="ts">
-import type { VariantProps } from 'class-variance-authority'
 import type { ToggleGroupRootEmits, ToggleGroupRootProps } from 'reka-ui'
 import { ToggleGroupRoot, useForwardPropsEmits } from 'reka-ui'
 import { computed, provide } from 'vue'
-import type { toggleVariants } from './toggleVariants'
-
-type ToggleGroupVariants = VariantProps<typeof toggleVariants>
 
 const props = defineProps<
   ToggleGroupRootProps & {
     class?: HTMLAttributes['class']
     variant?: ToggleGroupVariants['variant']
     size?: ToggleGroupVariants['size']
+    on?: ToggleGroupVariants['active']
   }
 >()
 const emits = defineEmits<ToggleGroupRootEmits>()
 
 provide('toggleGroup', {
+  active: props.on,
   size: props.size,
-  variant: props.variant,
+  variant: props.variant
 })
 
 const delegatedProps = computed(() => {
@@ -33,6 +31,9 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
   <ToggleGroupRoot
     v-bind="forwarded"
     :class="cn('flex items-center justify-center gap-1', props.class)">
-    <slot />
+    <slot
+      :variant
+      :size
+      :on />
   </ToggleGroupRoot>
 </template>

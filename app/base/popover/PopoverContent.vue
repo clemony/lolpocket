@@ -26,8 +26,7 @@ const emits = defineEmits<PopoverContentEmits>()
 const delegatedProps = reactiveOmit(props, 'class', 'dataTheme')
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
-<<<<<<< HEAD
-const { base } = popoverContentVariants({ variant: props.variant })
+const { base } = popoverContentVariants({ variant: props.variant || 'base' })
 
 provide('popoverVariant', props.variant)
 =======
