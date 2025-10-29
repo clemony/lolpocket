@@ -11,7 +11,7 @@ const {
   PrimitiveProps & {
     as?: string
     class?: HTMLAttributes['class']
-    summoner?: Summoner
+    summoner?: Summoner | Partial<Summoner>
     noTag?: boolean
   }
 >()
@@ -30,11 +30,13 @@ const tag = computed(() => {
   <Primitive
     v-if="tag"
     :as="el"
-    :class="cn('flex items-center leading-0 antialiased', className)">
-    <icon
-      v-if="!noTag"
-      name="lucide:hash"
-      class="size-3.75 inline align-bottom" />
+    :class="cn('inline leading-none antialiased', className)">
+    <span class="max-size-3.25  relative inline size-3.25 overflow-hidden">
+      <icon
+        v-if="!noTag"
+        name="lucide:hash"
+        class="inline size-3.5" />
+    </span>
     {{ tag }}
   </Primitive>
 

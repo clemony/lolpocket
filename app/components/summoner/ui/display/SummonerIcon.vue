@@ -5,6 +5,7 @@ import { Primitive } from 'reka-ui'
 const props = defineProps<PrimitiveProps & {
   class?: HTMLAttributes['class']
   iconId?: number | string | null
+  summoner?: Summoner | Partial<Summoner>
   alt?: string
 }>()
 

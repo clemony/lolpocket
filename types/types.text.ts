@@ -10,9 +10,11 @@ export interface CommentItem {
   authorTag: string
   content: Doc
   createdAt: string
+  downvotes?: string[]
   editedAt: string | null
   parentId?: string | null
   replies?: CommentItem[]
+  upvotes?: string[]
 }
 
 export interface Doc {

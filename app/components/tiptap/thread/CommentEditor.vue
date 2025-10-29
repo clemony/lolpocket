@@ -7,6 +7,7 @@ import { CustomMention, emojiSuggestions, mentionSuggestions, normalizeJSONConte
 
 const props = defineProps<{
   modelValue: Doc | null
+  class?: HTMLAttributes['class']
 }>()
 
 const emit = defineEmits<{
@@ -18,7 +19,9 @@ const editor = useEditor({
   content: props.modelValue ?? null,
   extensions: [
     StarterKit,
-    /*     CharacterCount.configure({ limit: 2000 }),
+
+    CharacterCount.configure({ limit: 2000 }),
+    /*   disabled for testing but keeping this!!!!
     CustomMention.configure({
       deleteTriggerWithBackspace: true,
       suggestions: mentionSuggestions
@@ -67,13 +70,11 @@ watch(focused, (focused) => {
   if (focused)
     editor.value.commands.focus()
 })
-
-// as().comments = []
 </script>
 
 <template>
   <button
-    class="text-area group/text relative flex min-h-[80px] w-full cursor-text flex-col justify-between rounded-lg border p-2 text-start"
+    :class="cn('text-area group/text relative flex min-h-[80px] w-full cursor-text flex-col justify-between rounded-lg border p-2 text-start', props.class)"
     @dblclick="editor?.commands.selectAll()"
     @click="editor?.commands.focus('end')">
     <div class="w-full grow p-2 pr-12">
@@ -99,10 +100,10 @@ watch(focused, (focused) => {
           :editor /> -->
       </div>
       <div class="flex items-center gap-6">
-        <!--         <CharacterCounter
+        <CharacterCounter
           v-if="editor"
           :editor
-          :limit="2000" /> -->
+          :limit="2000" />
         <slot
           :editor
           :update-content="updateContent" />

@@ -2,9 +2,13 @@
 import { useForwardProps } from 'reka-ui'
 import type { ToggleVariants } from '~/assets/variants'
 
+defineOptions({
+  inheritAttrs: false
+})
+
 const props = withDefaults(defineProps<{
   class?: HTMLAttributes['class']
-  summoner: Summoner
+  summoner: Summoner | Partial<Summoner>
   placement?: Side
   theme?: string
   size?: ToggleVariants['size']
@@ -14,7 +18,7 @@ const props = withDefaults(defineProps<{
   theme: 'base'
 })
 
-const delegatedProps = reactiveOmit(props, 'class')
+const delegatedProps = reactiveOmit(props, 'class', 'placement', 'variant', 'theme', 'size')
 const forwarded = useForwardProps(delegatedProps)
 
 const isYou = computed(() => as().account?.puuid === props.summoner?.puuid)
@@ -32,7 +36,7 @@ watch(() => isFollowed.value, (newVal) => {
     v-model="isFollowed"
     as-child>
     <Button
-      v-tippy="{ content: isFollowed ? 'unfollow' : `follow ${summoner.name}?`, placement, arrow: false, theme: 'base' }"
+      v-tippy="{ content: isFollowed ? 'Unfollow' : `Follow ${summoner.name}?`, placement, arrow: false, theme: 'base' }"
       :class="cn('group/follow  grid place-items-center ', props.class)">
       <slot>
         <icon

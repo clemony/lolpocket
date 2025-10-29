@@ -32,7 +32,7 @@ const {
 
 const tippy = computed(
   () =>
-    !cooldown.value?.seconds ? (state.summoner.value.updatedMatch ? `last updated ${state.summoner.value.updatedMatch}` : 'not updated yet') : `${cooldown.value?.seconds} cd`
+    !cooldown.value?.seconds ? (state.summoner.value.updatedMatch ? `Last updated ${state.summoner.value.updatedMatch}` : 'Not updated yet') : `${cooldown.value?.seconds} cd`
 )
 </script>
 
@@ -52,7 +52,7 @@ const tippy = computed(
     "
     @click="update()">
     <TransitionScalePop
-      class="relative grid overflow-hidden size-full place-items-center">
+      class="relative grid size-full place-items-center overflow-hidden">
       <icon
         v-if="!cooldown"
         name="reset"
@@ -67,7 +67,7 @@ const tippy = computed(
 
       <div
         v-if="cooldown"
-        class="text-0 shadow-sm border-neutral border-2 absolute bg-neutral text-nc **:text-nc radial-progress place-self-center font-semibold opacity-90"
+        class="text-0 border-neutral bg-neutral text-nc **:text-nc radial-progress absolute place-self-center border-2 font-semibold opacity-90 shadow-sm"
         :style="{
           '--value': cooldown?.seconds,
           '--size': '2rem',
@@ -75,7 +75,7 @@ const tippy = computed(
         }"
         :aria-valuenow="cooldown?.percent"
         role="progressbar">
-        <span class="grid rounded-full bg-neutral size-full place-items-center">
+        <span class="bg-neutral grid size-full place-items-center rounded-full">
           {{ cooldown?.seconds }}
         </span>
       </div>

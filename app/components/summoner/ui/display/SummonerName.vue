@@ -10,7 +10,7 @@ const {
   PrimitiveProps & {
     as?: string
     class?: HTMLAttributes['class']
-    summoner?: Summoner
+    summoner?: Summoner | Partial<Summoner>
   }
 >()
 const name = computed(() => {

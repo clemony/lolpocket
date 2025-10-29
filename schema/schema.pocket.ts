@@ -207,6 +207,7 @@ export function newPocket(): Pocket {
     champions: [],
     created: new Date(),
     comments: false,
+    //protected: false,
     icon: '',
     items: [newItemSet()],
     likes: 1,

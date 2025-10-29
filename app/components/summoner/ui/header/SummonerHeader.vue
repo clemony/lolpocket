@@ -5,7 +5,7 @@ defineOptions({
 
 const { class: className, summoner } = defineProps<{
   class?: HTMLAttributes['class']
-  summoner: Summoner
+  summoner: Summoner | Partial<Summoner>
 }>()
 </script>
 
@@ -13,14 +13,14 @@ const { class: className, summoner } = defineProps<{
   <IconHeader class="gap-6">
     <template #icon>
       <SummonerIcon
-        class="size-20 rounded-full mt-2"
+        class="mt-2 size-20 rounded-full"
         :summoner />
     </template>
     <!-- header name -->
     <template #title>
       <SummonerName
         as="h1"
-        class="drop-shadow-sm font-serif text-bc/94 leading-none text-[2.6rem]" />
+        class="text-bc/94 font-serif text-[2.6rem] leading-none drop-shadow-sm" />
     </template>
 
     <!-- header sub-text -->

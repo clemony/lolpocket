@@ -14,16 +14,16 @@ const {
     class?: HTMLAttributes['class']
     noTag?: boolean
     variant?: LevelVariantProps['variant']
-    summoner?: Summoner
+    summoner?: Summoner | Partial<Summoner>
     as?: string
   }
 >()
 
 const levelVariants = tv({
-  base: 'flex items-center lowercase leading-0 antialiased',
+  base: 'inline leading-none lowercase antialiased',
   variants: {
     variant: {
-      badge: 'badge badge-sm badge-neutral text-0 bg-neutral/75 backdrop-blur bottom-0.5'
+      badge: 'badge badge-sm badge-neutral text-0 bg-neutral/75 bottom-0.5 backdrop-blur'
     }
   },
 })

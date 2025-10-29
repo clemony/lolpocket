@@ -2,11 +2,12 @@
 import type { Editor, JSONContent } from '@tiptap/vue-3'
 import { renderCommentHTML } from '../utils'
 
-const { comment, depth } = defineProps<{
+const { comment, depth, parentHovered } = defineProps<{
   comment: CommentItem
   depth?: number
+  parentHovered?: boolean
 }>()
-const emit = defineEmits(['comment:reply', 'comment:update'])
+const emit = defineEmits(['comment:reply', 'comment:vote', 'comment:update', 'trigger-hovered'])
 const replyContent = ref<Doc>(null)
 
 const replying = shallowRef(false)
@@ -14,20 +15,14 @@ const editing = shallowRef(false)
 
 const hasReplies = computed (() => comment.replies?.length)
 
-const target = useTemplateRef<HTMLElement>('target')
-const hovered = useElementHover(target)
-
-watch(() => hovered.value, (newVal) => {
-  console.log('💠 - watch - newVal:', newVal)
-})
-
-// as().comments = []
+const hovered = ref<boolean>(false)
 
 const newContent = ref<Doc>(null)
 const updated = shallowRef<boolean>(false)
 
 watch(() => updated.value, (newVal) => {
-  console.log('💠 - watch - newVal:', newVal)
+  console.log('🌱 - newVal:', newVal)
+  emit('trigger-hovered', newVal)
 })
 const renderedHtml = computed(() => {
   if (!comment.content)
@@ -46,31 +41,46 @@ onMounted (() => {
     v-slot="{ open }"
     :default-open="true"
     :disabled="!hasReplies"
-    :class="cn('z-auto pt-2 !overflow-auto ', { ' ml-8': depth })">
-    <div
+    :class="cn('z-auto pt-2 !overflow-auto ', { ' ml-12': depth })">
+    <!-- child trigger -->
+
+    <CollapsibleTrigger
       v-if="!hasReplies && depth"
-      class=" before:bg-b1 absolute  -z-1 grid h-14 w-16 -translate-x-5.75 grid-rows-2 -space-y-[0.5px] before:absolute before:top-2 before:left-0 before:z-0 before:h-9 before:w-1     ">
-      <span class="border-l-b3/80 border-b-b3/40 z-1 rounded-bl-lg border-b border-l" />
-      <span class="border-l-b3/80 border-t-b3/40  z-1 rounded-tl-lg border-t border-l" />
-    </div>
+      :class="cn('border-b-b3 hover:border-shade-b3/20  pointer-events-none  absolute -z-1 z-1 grid h-7 w-8 -translate-x-7  border-b', { '!border-shade-b3/20': parentHovered })"
+      @mouseenter="emit('trigger-hovered', true)"
+      @mouseleave="emit('trigger-hovered', false)"
+      @focusin="emit('trigger-hovered', true)"
+      @focusout="emit('trigger-hovered', false)" />
     <div class="relative w-full">
+      <!-- main trigger -->
+
       <CollapsibleTrigger
         v-if="hasReplies"
         ref="target"
         class="
-          'transition-all group/tree absolute top-0 bottom-0 left-2.25 grid h-full w-4 shrink-0 items-center pt-12 pb-5.25 duration-300">
+          'transition-all group/tree absolute top-0 bottom-0 left-5 z-2 grid h-full w-4 shrink-0 items-center pt-19 pb-5.25 duration-300"
+        @mouseenter="hovered = true"
+        @mouseleave="hovered = false"
+        @focusin="hovered = true"
+        @focusout="hovered = false">
         <Separator
           orientation="vertical"
           :class="cn(
-            'group-hover/tree:border-shade-b3/20 border-b3 transition-colors duration-200 bg-transparent rounded-bl-lg border-l')" />
+            'group-hover/tree:border-shade-b3/20 border-shade-b3/10 transition-colors duration-200 bg-transparent rounded-bl-lg border-l',
+            { '!border-shade-b3/20': hovered })" />
       </CollapsibleTrigger>
+
       <div class="relative grow pl-1">
+        <!-- header -->
+
         <CommentHeader
           :comment
           :open />
+
+        <!-- update comment -->
         <div
           v-if="editing"
-          class="mt-8 mb-1 pr-px pb-px pl-8">
+          class="mt-2 mb-1 pr-px pb-px pl-10">
           <CommentEditor
             v-slot="{ updateContent }"
             v-model="newContent"
@@ -78,30 +88,41 @@ onMounted (() => {
             <PostButton
               save
               @click.stop="() => {
-                if (updated){
+                if (updated) {
                   const update = updateContent(newContent)
                   if (update) {
                     updated = false
                     editing = false
+                    emit('comment:update', { id: comment.id, content: newContent })
                   }
                 }
               }" />
           </CommentEditor>
         </div>
+
+        <!-- render comment -->
+
         <div
           v-else-if="comment.content"
-          class="prose  py-2 pl-9"
+          class="tiptap py-2 pl-12.5"
           v-html="renderedHtml" />
         <CommentToolbar
           :comment
           :editing
+          :hovered="computed (() => hovered)"
           :replying
           @update:edit-model="e => editing = e"
-          @update:reply-model="e => replying = e" />
+          @update:reply-model="e => replying = e">
+          <CommentVotes
+            :comment
+            @comment:vote="$emit('comment:vote', $event)" />
+        </CommentToolbar>
+
+        <!-- reply -->
 
         <div
           v-if="replying"
-          class="mt-2  pr-px pb-px pl-8">
+          class="mt-2  pr-px pb-px pl-12">
           <CommentEditor
             v-model="replyContent">
             <PostButton
@@ -114,25 +135,36 @@ onMounted (() => {
       </div>
 
       <!-- content  -->
+
       <CollapsibleContent
         v-if="comment.replies?.length"
         class=" relative flex w-full items-center">
-        <div class="relative z-2 grid grow auto-rows-auto">
+        <div class="relative grid grow auto-rows-auto">
           <CommentItem
             v-for="reply in comment.replies"
             :key="reply.id"
             :comment="reply"
             :depth="(depth ?? 0) + 1"
-            @reply="$emit('comment:reply', $event)" />
+            @trigger-hovered="e => hovered === e"
+            @comment:vote="$emit('comment:vote', $event)"
+            @comment:update="$emit('comment:update', $event)"
+            @comment:reply="$emit('comment:reply', $event)" />
         </div>
       </CollapsibleContent>
+
+      <!-- collapse text trigger -->
 
       <CollapsibleTrigger
         v-if="comment.replies?.length"
         size="xs"
-        class="text-bc/30 hover:text-bc text-1 relative  ml-2.25 px-8"
-        variant="link">
-        <span :class="cn('border-b3/80 absolute transition-colors duration-200  top-0 left-0 h-1/2 w-6 rounded-bl-lg border-b', { '!border-shade-b3/20': hovered === true })" />
+        class="text-bc/30 hover:text-bc text-1 relative  ml-5 px-5"
+        variant="link"
+        :parent-hovered="hovered"
+        @mouseenter="hovered = true"
+        @mouseleave="hovered = false"
+        @focusin="hovered = true"
+        @focusout="hovered = false">
+        <span :class="cn(' border-shade-b3/10  absolute transition-colors duration-200 hover:border-shade-b3/20  dst top-0 left-0 h-1/2 w-4 rounded-bl-lg border-b', { '!border-shade-b3/25': hovered })" />
         {{ open ? 'Collapse' : `${comment.replies.length} more...` }}
       </CollapsibleTrigger>
     </div>

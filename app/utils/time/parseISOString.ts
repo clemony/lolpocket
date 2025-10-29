@@ -1,7 +1,11 @@
 import { parseAbsoluteToLocal } from '@internationalized/date'
 
-export function parseISOString(ISO: string) {
+export function parseISOStringToRelative(ISO: string) {
   const a = parseAbsoluteToLocal(ISO).toAbsoluteString()
-  // return useDateFormat(a, 'MMM D, YYYY h:MM a')
   return useTimeAgo(a)
+}
+
+export function parseISOStringToDate(ISO: string) {
+  const a = parseAbsoluteToLocal(ISO).toAbsoluteString()
+  return useDateFormat(a, 'M/D/YY h:MM a')
 }

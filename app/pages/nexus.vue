@@ -17,12 +17,12 @@ const text = ref<string>()
 
 <template>
   <div
-    class="pt-8 w-full flex flex-col h-full overflow-auto w-full items-center  px-8 pb-6">
+    class="flex h-full w-full flex-col items-center overflow-auto pt-8 ">
     <header class="w-full">
       <h1>Nexus</h1>
     </header>
 
-    <div class="w-1/5 mx-auto space-y-2">
+    <div class="mx-auto w-1/5 space-y-2">
       <Hihi />
       <Button @click="useFetchSummonerData(as().account.puuid)">
         try update
@@ -70,8 +70,10 @@ const text = ref<string>()
       </div>
     </div> -->
     </div>
-    <div class=" mt-12 flex w-full justify-center">
+    <div class=" mt-12 flex w-full justify-center pb-54">
       <CommentsThread />
     </div>
+
+    <SiteFooter />
   </div>
 </template>
