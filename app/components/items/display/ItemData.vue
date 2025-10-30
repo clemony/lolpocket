@@ -24,17 +24,17 @@ watchEffect(async () => {
 <template>
   <div
     v-if="item"
-    class="px-4 py-3 max-h-[404px] overflow-hidden flex flex-col **:select-text">
+    class="flex max-h-[404px] flex-col overflow-hidden px-4 py-3 **:select-text">
     <div class="flex h-fit gap-4 ">
-      <div class="!size-14 rounded-lg aspect-square shrink-0 shadow-sm drop-shadow-sm ">
+      <div class="aspect-square !size-14 shrink-0 rounded-lg shadow-sm drop-shadow-sm ">
         <Item
           v-if="item"
           :id="item.id"
           :alt="`${item.name} Image`"
-          class="!size-full rounded-lg overflow-hidden" />
+          class="!size-full overflow-hidden rounded-lg" />
       </div>
 
-      <div class="flex flex-col  text-4 w-full">
+      <div class="text-4 flex  w-full flex-col">
         <div class=" flex items-center justify-between  gap-1">
           <BtnLink
             v-if="item.name"
@@ -42,15 +42,15 @@ watchEffect(async () => {
             variant="link"
             :to="getWikiLink(item.name)"
             target="_blank"
-            size="xs"
-            class="font-bold text-4 h-7"
+            size="8"
+            class="text-4 h-7 font-bold"
             :title="`Official LoL Wiki - ${item.name}`">
             <h4 class="leading-4">
               {{ item.name }}
             </h4>
             <icon
               name="link-lg"
-              class="size-3.75 dst" />
+              class="dst size-3.75" />
           </BtnLink>
         </div>
 
@@ -63,11 +63,11 @@ watchEffect(async () => {
 
           <div
             v-if="item && item.shop?.prices?.total"
-            class="flex items-end gap-1 text-3 font-medium ">
+            class="text-3 flex items-end gap-1 font-medium ">
             <Img
               img="/img/icons/gold-coin.webp"
               alt="coin"
-              class="size-4 ml-1 self-center opacity-80" />
+              class="ml-1 size-4 self-center opacity-80" />
             {{ item.shop.prices.total }}
           </div>
         </div>
@@ -80,10 +80,10 @@ watchEffect(async () => {
       </div>
     </div>
 
-    <div class="    relative overflow-y-auto    flex flex-col ">
+    <div class="    relative flex    flex-col overflow-y-auto ">
       <div
         v-if="item.stats && Object.entries(item.stats).length"
-        class="pb-1 pt-2">
+        class="pt-2 pb-1">
         <ItemStats
           :stats="item.stats"
           :base="base" />

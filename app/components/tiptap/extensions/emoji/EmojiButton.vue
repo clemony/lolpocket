@@ -11,7 +11,7 @@ const { class: className, index, item } = defineProps<{
 <template>
   <Button
     :id="index"
-    size="sq-md"
+    size="sq-10"
     variant="ghost"
     hover="inset"
     tabindex="0"

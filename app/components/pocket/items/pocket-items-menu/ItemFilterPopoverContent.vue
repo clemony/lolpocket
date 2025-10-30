@@ -24,20 +24,20 @@ onMounted(() => scrollArea.value?.scrollTo({ top: 0 }))
       <InputGroupAddon align="inline-end">
         <icon
           name="filter"
-          class="size-4.5 opacity-50 mr-2" />
+          class="mr-2 size-4.5 opacity-50" />
       </InputGroupAddon>
     </InputGroup>
-    <div class="h-108 w-full relative grid-cols-[1fr_calc(var(--spacing)*14)] grid">
+    <div class="relative grid h-108 w-full grid-cols-[1fr_calc(var(--spacing)*14)]">
       <div
         ref="scrollArea"
         class="overflow-auto ">
-        <div class=" pl-5 pb-7 pt-5 flex relative w-full items-start grid auto-rows-auto gap-3">
+        <div class=" relative  grid w-full auto-rows-auto items-start gap-3 pt-5 pb-7 pl-5">
           <Button
             v-if="is().filters.stats.length"
             size="sq-xxs"
             hover="btn"
             variant="outline"
-            class="absolute right-6 top-7"
+            class="absolute top-7 right-6"
             @click="is().filters.stats.length = 0">
             <icon
               name="x"
@@ -45,13 +45,13 @@ onMounted(() => scrollArea.value?.scrollTo({ top: 0 }))
           </Button>
           <ItemStatsList
             wrapper-class="flex-wrap pr-8 gap-x-6 max-h-106 flex flex-col gap-y-0"
-            class="gap-3.5 *:w-max *:pl-4 *:pr-6  *:!gap-2.5 "
+            class="gap-3.5 *:w-max *:!gap-2.5 *:pr-6  *:pl-4 "
             icons
             :indicator="false"
             labels />
-          <Separator class="-mx-6 -translate-y-3 w-[calc(100%+var(--spacing)*12)] -translate-x-6" />
+          <Separator class="-mx-6 w-[calc(100%+var(--spacing)*12)] -translate-x-6 -translate-y-3" />
 
-          <div class="grid grid-cols-[0.6fr_1fr] w-full gap-y-1 gap-x-12 pr-8">
+          <div class="grid w-full grid-cols-[0.6fr_1fr] gap-x-12 gap-y-1 pr-8">
             <Label class="popover-button-label">
               Item Tier
               <Button
@@ -80,28 +80,28 @@ onMounted(() => scrollArea.value?.scrollTo({ top: 0 }))
             <ItemRankFilter
               :clear="false"
               hover="btn"
-              class="flex-col flex-wrap max-h-56  items-start"
-              :size="['sq-xs', 'xs']"
+              class="max-h-56 flex-col flex-wrap  items-start"
+              :size="['sq-xs', '8']"
               variant="ghost" />
             <!-- tags -->
             <ItemTagsFilter
               :clear="false"
-              class="flex-col flex-wrap gap-y-3 w-9/10 max-h-56 items-start"
-              :size="['sq-xs', 'xs']" />
+              class="max-h-56 w-9/10 flex-col flex-wrap items-start gap-y-3"
+              :size="['sq-xs', '8']" />
           </div>
         </div>
       </div>
-      <div class="pb-2 shrink-0 max-w-14 flex flex-col justify-between gap-3 items-center pt-3 pb-3 z-2 border-l border-l-b3 sticky top-0 right-0 h-108 w-14  ">
+      <div class="border-l-b3 sticky top-0 right-0 z-2 flex h-108 w-14 max-w-14 shrink-0 flex-col items-center justify-between gap-3 border-l pt-3 pb-2 pb-3  ">
         <ItemMapRadio />
         <!-- shop -->
 
         <Grow class="max-w-14" />
         <ShopToggle
-          size="sq-sm"
-          class="border !border-b4/60" />
+          size="sq-9"
+          class="!border-b4/60 border" />
         <Button
           variant="neutral"
-          size="sq-sm"
+          size="sq-9"
           @click="is().clearFilters()">
           <icon
             name="reset"

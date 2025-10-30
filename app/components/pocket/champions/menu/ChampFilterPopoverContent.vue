@@ -5,7 +5,7 @@
   <PopoverContent
     update-position-strategy="always"
     variant="input">
-    <InputGroup class="h-12 rounded-b-none border-x-0 border-t-0 hover:ring-0 pr-2">
+    <InputGroup class="h-12 rounded-b-none border-x-0 border-t-0 pr-2 hover:ring-0">
       <InputGroupAddon>
         <icon
           name="search"
@@ -22,11 +22,11 @@
           class="size-4.5 opacity-50" />
       </InputGroupAddon>
     </InputGroup>
-    <div class="h-108 w-full relative grid-cols-[1fr_calc(var(--spacing)*14)] grid">
+    <div class="relative grid h-108 w-full grid-cols-[1fr_calc(var(--spacing)*14)]">
       <div
         ref="scrollArea"
         class="overflow-auto ">
-        <div class=" pl-4 pb-7 pt-4 flex w-full items-start grid auto-rows-auto gap-1">
+        <div class=" flex grid w-full auto-rows-auto items-start gap-1 pt-4 pb-7 pl-4">
           <Label class="popover-button-label">
             Champion Role
             <Button
@@ -42,7 +42,7 @@
           <ChampionRoleFilter />
           <Separator class="-mx-6 mt-4 mb-2 w-[calc(100%+var(--spacing)*12)] -translate-x-6" />
 
-          <div class="grid grid-cols-[0.56fr_1fr] w-full gap-y-1  pr-8">
+          <div class="grid w-full grid-cols-[0.56fr_1fr] gap-y-1  pr-8">
             <Label class="popover-button-label">
               Map Position
               <Button
@@ -72,7 +72,7 @@
           </div>
         </div>
       </div>
-      <div class="pb-2 shrink-0 max-w-14 flex flex-col justify-between gap-3 items-center pt-3 pb-3 z-2 border-l border-l-b3 sticky top-0 right-0 h-108 w-14  ">
+      <div class="border-l-b3 sticky top-0 right-0 z-2 flex h-108 w-14 max-w-14 shrink-0 flex-col items-center justify-between gap-3 border-l pt-3 pb-2 pb-3  ">
         <ToggleGroup
           v-model:model-value="cs().filters.sort"
           type="single"
@@ -80,14 +80,14 @@
           as-child>
           <ButtonGroup orientation="vertical">
             <ToggleGroupItem
-              size="sq-sm"
+              size="sq-9"
               value="az">
               <icon
                 name="qlementine-icons:sort-alpha-asc-16"
                 class="size-5 " />
             </ToggleGroupItem>
             <ToggleGroupItem
-              size="sq-sm"
+              size="sq-9"
               value="za">
               <icon
                 name="qlementine-icons:sort-alpha-desc-16"
@@ -98,7 +98,7 @@
         <Grow class="max-w-14" />
         <Button
           variant="neutral"
-          size="sq-sm"
+          size="sq-9"
           @click="cs().clearFilters()">
           <icon
             name="reset"

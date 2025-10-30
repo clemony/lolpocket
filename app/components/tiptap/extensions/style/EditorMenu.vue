@@ -33,7 +33,7 @@ const menu = [
 </script>
 
 <template>
-  <div class="tippy-content flex gap-1 items-center">
+  <div class="tippy-content flex items-center gap-1">
     <template
       v-for="item, i in menu"
       :key="i">
@@ -41,7 +41,7 @@ const menu = [
         v-if="!item.name"
         variant="ghost"
         hover="inset"
-        size="sq-sm"
+        size="sq-9"
         @click="item.action()">
         <icon
           :name="item.icon"
@@ -49,7 +49,7 @@ const menu = [
       </Button>
       <Separator
         v-if="item.name === 'separator'"
-        class="h-[11px] bg-b3"
+        class="bg-b3 h-[11px]"
         orientation="vertical" />
     </template>
   </div>

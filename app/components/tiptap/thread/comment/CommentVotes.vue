@@ -3,13 +3,10 @@ const { comment } = defineProps<{
   comment?: CommentItem
 }>()
 const emit = defineEmits(['comment:vote'])
-const commentVotes = ref<number>(233)
 const vote = ref<number>(0)
 const calculatedVotes = computed (() => comment.upvotes.length - comment.downvotes.length)
 
 watch(() => vote.value, (newVote, oldVote) => {
-  console.log('💠 - watch - newVal:', newVote)
-
   if (newVote !== oldVote && as().account.puuid) {
     emit('comment:vote', {
       id: comment.id,
@@ -18,7 +15,7 @@ watch(() => vote.value, (newVote, oldVote) => {
       oldVote
     })
   }
-})
+}, { immediate: false })
 
 onMounted (() => {
   if (!as().account?.puuid)
@@ -28,16 +25,18 @@ onMounted (() => {
   else if (comment.downvotes.includes(as().account.puuid))
     vote.value = -1
 })
-// @todo actual votes
 </script>
 
 <template>
   <ToggleGroup
+
     v-model:model-value="vote"
+    :disabled="!comment.authorPuuid"
     type="single"
+    :class="{ '!pointer-events-none **:!pointer-events-none': !comment.authorPuuid }"
     variant="ghost"
     size="sq-5"
-    on="neutral"
+    :on="!comment.authorPuuid ? 'inset' : 'neutral'"
     as-child
     orientation="horizontal"
     @update:model-value="(val) => {
@@ -45,14 +44,15 @@ onMounted (() => {
     }">
     <label
       for="downvote"
+      :disabled="!comment.authorPuuid"
       aria-label="downvote"
-      class="grid size-7 cursor-pointer place-items-center">
+      class="grid size-7 cursor-pointer place-items-center disabled:!pointer-events-none">
       <ToggleGroupItem
         name="downvote"
         :value="-1">
         <icon
           name="mynaui:arrow-up"
-          class="group-on/toggle:opacity-100 group-on/toggle:**:stroke-[4] absolute size-3.5 -scale-y-100 opacity-40  **:stroke-2" />
+          class="group-on/toggle:opacity-100 group-on/toggle:group-not-disabled/toggle:stroke-[4] absolute size-3.5 -scale-y-100 opacity-40 **:stroke-2 group-disabled/toggle:opacity-20" />
       </ToggleGroupItem>
     </label>
     <Element
@@ -70,7 +70,7 @@ onMounted (() => {
         :value="1">
         <icon
           name="mynaui:arrow-up"
-          class="group-on/toggle:opacity-100 group-on/toggle:**:stroke-[4] absolute size-3.5 opacity-40  **:stroke-2" />
+          class="group-on/toggle:opacity-100 group-on/toggle:group-not-disabled/toggle:**:stroke-[4] absolute size-3.5 opacity-40 **:stroke-2  group-disabled/toggle:opacity-20 " />
       </ToggleGroupItem>
     </label>
   </ToggleGroup>

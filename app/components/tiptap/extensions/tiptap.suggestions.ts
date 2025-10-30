@@ -156,31 +156,6 @@ export const mentionSuggestions = [
     char: '@',
     items: ({ query }) => {
       return [
-        'Lea Thompson',
-        'Cyndi Lauper',
-        'Tom Cruise',
-        'Madonna',
-        'Jerry Hall',
-        'Joan Collins',
-        'Winona Ryder',
-        'Christina Applegate',
-        'Alyssa Milano',
-        'Molly Ringwald',
-        'Ally Sheedy',
-        'Debbie Harry',
-        'Olivia Newton-John',
-        'Elton John',
-        'Michael J. Fox',
-        'Axl Rose',
-        'Emilio Estevez',
-        'Ralph Macchio',
-        'Rob Lowe',
-        'Jennifer Grey',
-        'Mickey Rourke',
-        'John Cusack',
-        'Matthew Broderick',
-        'Justine Bateman',
-        'Lisa Bonet',
       ]
         .filter(item => item.toLowerCase().startsWith(query.toLowerCase()))
         .slice(0, 5)
@@ -192,7 +167,7 @@ export const mentionSuggestions = [
     items: ({ query }) => {
       return [...ix().items, ...ix().champions]
         .filter(item => item.name.toLowerCase().startsWith(query.toLowerCase()))
-        .slice(0, 5)
+        .slice(0, 15)
     },
     render: renderSuggestion(MentionFilter)
   },

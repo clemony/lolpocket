@@ -34,7 +34,7 @@ const keyClass
     <slot>
       <VarSelectTrigger
         variant="ghost"
-        class="overflow-hidden relative size-max grid place-items-center py-4  **:pointer-events-none ">
+        class="relative grid size-max place-items-center overflow-hidden py-4  **:pointer-events-none ">
         <SpellSetDuo
           :set="selectedSet"
           :class="cn('', className)" />
@@ -63,16 +63,16 @@ const keyClass
       :reference="trigger"
       :align-offset
       position="popper"
-      class="p-0 w-[var(--reka-select-trigger-width)]  min-w-54">
+      class="w-[var(--reka-select-trigger-width)] min-w-54  p-0">
       <SelectGroup>
-        <SelectLabel class="justify-between flex items-center">
+        <SelectLabel class="flex items-center justify-between">
           Main Spells
 
           <Button
             variant="ghost"
-            size="xs"
+            size="8"
             title="Clear main spells"
-            class="aspect-square *:opacity-60 hover:*:opacity-100 btn-square"
+            class="btn-square aspect-square *:opacity-60 hover:*:opacity-100"
             @click="pocket.main?.spells === ''">
             <icon
               name="backspace"
@@ -82,7 +82,7 @@ const keyClass
         <SelectItem
           v-for="set in pocket.spells"
           :key="set.id"
-          class="*:flex *:items-center group/select flex-nowrap"
+          class="group/select flex-nowrap *:flex *:items-center"
           :value="set.id">
           <Spell
             :name="set.d"

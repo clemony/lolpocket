@@ -44,7 +44,7 @@ export const inputGroupAddonVariants = tv({
 export const inputGroupButtonVariants = tv({
   base: ' flex items-center gap-2 shadow-none',
   defaultVariants: {
-    size: 'xs',
+    size: '8',
     variant: 'ghost',
   },
   variants: {

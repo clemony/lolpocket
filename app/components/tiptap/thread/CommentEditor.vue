@@ -3,7 +3,7 @@ import Emoji, { gitHubEmojis } from '@tiptap/extension-emoji'
 import { CharacterCount } from '@tiptap/extensions'
 import StarterKit from '@tiptap/starter-kit'
 import { EditorContent, useEditor } from '@tiptap/vue-3'
-import { CustomMention, emojiSuggestions, mentionSuggestions, normalizeJSONContent } from '~tiptap'
+import { emojiSuggestions, MentionLeague, mentionSuggestions } from '~tiptap'
 
 const props = defineProps<{
   modelValue: Doc | null
@@ -19,49 +19,20 @@ const editor = useEditor({
   content: props.modelValue ?? null,
   extensions: [
     StarterKit,
-
     CharacterCount.configure({ limit: 2000 }),
-    /*   disabled for testing but keeping this!!!!
-    CustomMention.configure({
-      deleteTriggerWithBackspace: true,
-      suggestions: mentionSuggestions
+    MentionLeague.configure({
+      suggestion: mentionSuggestions,
     }),
     Emoji.configure({
       emojis: gitHubEmojis,
       enableEmoticons: true,
       suggestion: emojiSuggestions
-    }), */
+    }),
   ],
   onUpdate: ({ editor }) => {
     emit('update:modelValue', editor.getJSON())
   },
 })
-
-watch(
-  () => props.modelValue,
-  (newContent) => {
-    if (!editor.value)
-      return
-    const next = newContent
-    editor.value.commands.setContent(next, { emitUpdate: false })
-  }
-)
-
-function updateContent(newContent: Doc) {
-  if (!editor.value)
-    return
-
-  const next = newContent
-
-  editor.value.commands.setContent(next, { emitUpdate: false })
-
-  toast({
-    title: 'Comment Updated!',
-    description: `Successfully updated your comment on ${capitalize(String(useRoute().meta?.title || useRoute().name))}`,
-  })
-
-  return true
-}
 
 // helper for handling refs
 const target = shallowRef<HTMLElement>(null)
@@ -74,9 +45,9 @@ watch(focused, (focused) => {
 
 <template>
   <button
+    ref="target"
     :class="cn('text-area group/text relative flex min-h-[80px] w-full cursor-text flex-col justify-between rounded-lg border p-2 text-start', props.class)"
-    @dblclick="editor?.commands.selectAll()"
-    @click="editor?.commands.focus('end')">
+    @dblclick="editor?.commands.selectAll()">
     <div class="w-full grow p-2 pr-12">
       <EditorContent
         id="editor"
@@ -89,15 +60,15 @@ watch(focused, (focused) => {
 
     <div class="flex items-center justify-between">
       <div class="flex items-end gap-1 self-end">
-        <!--         <EmojiMenu
+        <EmojiMenu
           v-if="editor"
           :editor />
-        <EditorChampionAndItemMenu
+        <!--     -->  <EditorChampionAndItemMenu
           v-if="editor"
           :editor />
         <EditorExtrasMenu
           v-if="editor"
-          :editor /> -->
+          :editor />
       </div>
       <div class="flex items-center gap-6">
         <CharacterCounter
@@ -105,8 +76,7 @@ watch(focused, (focused) => {
           :editor
           :limit="2000" />
         <slot
-          :editor
-          :update-content="updateContent" />
+          :editor />
       </div>
     </div>
   </button>

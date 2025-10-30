@@ -1,13 +1,17 @@
 <script setup lang="ts">
-import type { Editor, JSONContent } from '@tiptap/vue-3'
-import { renderCommentHTML } from '../utils'
+import { renderCommentHTML } from './utils'
 
 const { comment, depth, parentHovered } = defineProps<{
   comment: CommentItem
   depth?: number
   parentHovered?: boolean
 }>()
-const emit = defineEmits(['comment:reply', 'comment:vote', 'comment:update', 'trigger-hovered'])
+const emit = defineEmits(['comment:reply', 'comment:remove', 'comment:vote', 'comment:update', 'trigger-hovered', 'comment:delete'])
+
+function handleRemovalEmit() {
+  emit('comment:remove', comment.id)
+  console.log('🌱 - handleRemovalEmit - comment.id :', comment.id)
+}
 const replyContent = ref<Doc>(null)
 
 const replying = shallowRef(false)
@@ -21,7 +25,6 @@ const newContent = ref<Doc>(null)
 const updated = shallowRef<boolean>(false)
 
 watch(() => updated.value, (newVal) => {
-  console.log('🌱 - newVal:', newVal)
   emit('trigger-hovered', newVal)
 })
 const renderedHtml = computed(() => {
@@ -38,10 +41,11 @@ onMounted (() => {
 
 <template>
   <Collapsible
+    :id="comment.id"
     v-slot="{ open }"
-    :default-open="true"
+    :default-open="!!comment.authorPuuid"
     :disabled="!hasReplies"
-    :class="cn('z-auto pt-2 !overflow-auto ', { ' ml-12': depth })">
+    :class="cn('z-auto pt-2 !overflow-visible h-max ', { ' ml-12': depth })">
     <!-- child trigger -->
 
     <CollapsibleTrigger
@@ -82,19 +86,26 @@ onMounted (() => {
           v-if="editing"
           class="mt-2 mb-1 pr-px pb-px pl-10">
           <CommentEditor
-            v-slot="{ updateContent }"
+            v-slot="{ editor }"
             v-model="newContent"
             @update:model-value="updated = true">
             <PostButton
+              cancellable
+              :change="(comment.content !== newContent) && !editor?.isEmpty"
               save
               @click.stop="() => {
-                if (updated) {
-                  const update = updateContent(newContent)
-                  if (update) {
-                    updated = false
-                    editing = false
-                    emit('comment:update', { id: comment.id, content: newContent })
-                  }
+                if (updated && !editor?.isEmpty) {
+                  emit('comment:update', {
+                    id: comment.id,
+                    content: newContent,
+                  })
+                  updated = false
+                  editing = false
+                  editor.commands.blur()
+                }
+                else {
+                  editing = false
+                  editor.commands.blur()
                 }
               }" />
           </CommentEditor>
@@ -104,14 +115,18 @@ onMounted (() => {
 
         <div
           v-else-if="comment.content"
-          class="tiptap py-2 pl-12.5"
+          :class="cn('tiptap py-2 pl-12.5', { 'opacity-60': !comment.authorPuuid })"
           v-html="renderedHtml" />
+
+        <!-- comment toolbar -->
         <CommentToolbar
           :comment
           :editing
           :hovered="computed (() => hovered)"
           :replying
+          :class="cn({ 'pl-6.5': editing })"
           @update:edit-model="e => editing = e"
+          @comment:remove="handleRemovalEmit()"
           @update:reply-model="e => replying = e">
           <CommentVotes
             :comment
@@ -124,11 +139,18 @@ onMounted (() => {
           v-if="replying"
           class="mt-2  pr-px pb-px pl-12">
           <CommentEditor
+            v-slot="{ editor }"
             v-model="replyContent">
             <PostButton
+              cancellable
+              :change="!editor?.isEmpty"
               @click.stop="() => {
-                $emit('comment:reply', { parentId: comment.id, content: replyContent })
+                $emit('comment:reply', {
+                  parentId: comment.id,
+                  content: replyContent,
+                  clearEditor: () => editor.commands.clearContent() })
                 replying = false
+                editor.commands.blur()
               }" />
           </CommentEditor>
         </div>
@@ -147,6 +169,7 @@ onMounted (() => {
             :depth="(depth ?? 0) + 1"
             @trigger-hovered="e => hovered === e"
             @comment:vote="$emit('comment:vote', $event)"
+            @comment:remove="$emit('comment:remove', $event)"
             @comment:update="$emit('comment:update', $event)"
             @comment:reply="$emit('comment:reply', $event)" />
         </div>
@@ -156,7 +179,7 @@ onMounted (() => {
 
       <CollapsibleTrigger
         v-if="comment.replies?.length"
-        size="xs"
+        size="8"
         class="text-bc/30 hover:text-bc text-1 relative  ml-5 px-5"
         variant="link"
         :parent-hovered="hovered"
@@ -165,7 +188,7 @@ onMounted (() => {
         @focusin="hovered = true"
         @focusout="hovered = false">
         <span :class="cn(' border-shade-b3/10  absolute transition-colors duration-200 hover:border-shade-b3/20  dst top-0 left-0 h-1/2 w-4 rounded-bl-lg border-b', { '!border-shade-b3/25': hovered })" />
-        {{ open ? 'Collapse' : `${comment.replies.length} more...` }}
+        {{ open ? 'Collapse' : `${comment.replies.length} replies...` }}
       </CollapsibleTrigger>
     </div>
   </Collapsible>

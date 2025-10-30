@@ -5,6 +5,7 @@ export const useAccountStore = defineStore(
   () => {
     const userNotes = ref<Note[]>([])
     const comments = ref<CommentItem[]>([])
+    const removedComments = ref <CommentLog[]>([])
 
     const loggedIn = ref(false)
     const toggles = ref({
@@ -51,6 +52,7 @@ export const useAccountStore = defineStore(
       loggedIn,
       pockets,
       publicData,
+      removedComments,
       settings,
       toggles,
       topChampion,

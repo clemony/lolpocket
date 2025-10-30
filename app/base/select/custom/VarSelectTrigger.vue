@@ -24,6 +24,7 @@ const forwarded = useForwardProps(delegatedProps)
     v-bind="forwarded"
     :class="
       cn(
+        'group/select',
         buttonVariants({ variant, hover, active, size, base }),
         props.class,
       )">

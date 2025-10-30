@@ -21,3 +21,5 @@ export interface Doc {
   content: JSONContent[]
   type: string
 }
+
+export type CommentLog = Partial<CommentItem>

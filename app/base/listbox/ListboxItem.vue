@@ -12,7 +12,7 @@ interface Props extends ListboxItemProps {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  size: 'xs',
+  size: '8',
   variant: 'ghost'
 })
 

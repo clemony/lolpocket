@@ -3,7 +3,7 @@ export interface MapIndex {
   name: string
   mapStringId: string
 }
-
+export type Index = ChampionIndex | ItemIndex
 export interface MapData extends MapIndex {
   description: string
 }

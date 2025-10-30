@@ -93,7 +93,7 @@ function toggleListType() {
       <Button
         variant="outline"
         active="inset"
-        size="sq-md"
+        size="sq-10"
         @click="toggleListType">
         Toggle list type
       </button>

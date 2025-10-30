@@ -6,3 +6,21 @@
     @apply focus-within:outline-0 leading-6 text-pretty;
   }
 }
+
+@layer utilities {
+  .mention {
+    @apply text-3 inline-flex w-max flex-nowrap font-medium gap-1  px-2  align-bottom  whitespace-nowrap  hover:underline cursor-pointer inset-shadow-[-1px_-1px_0px_rgba(0,0,0,0.06)] border border-b1 rounded-lg;
+
+   img {
+      @apply size-5 rounded-full inline-block mt-0.5 shadow-xs;
+    }
+
+    &[data-label="item"]{
+      @apply bg-precision/44;
+    }
+
+    &[data-label="champion"]{
+      @apply bg-challenger/44 hover:bg-challenger/80 tooltip tooltip-bottom;
+    }
+    }
+}

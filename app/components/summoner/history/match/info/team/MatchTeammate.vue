@@ -60,7 +60,7 @@ const runeClass
           placement: 'top',
         }"
         alt="champion-icon"
-        class="rounded-lg size-11 self-center  hover:scale-105 transition-all duration-300 mb-px" />
+        class="mb-px size-11 self-center  rounded-lg transition-all duration-300 hover:scale-105" />
     </div>
 
     <div
@@ -68,7 +68,7 @@ const runeClass
       :class="divClass">
       <PlayerSpells
         :player="player"
-        class="[&_img]:size-5 [&_img]:rounded-[3px] h-11 gap-0.5   " />
+        class="h-11 gap-0.5 [&_img]:size-5 [&_img]:rounded-[3px]   " />
     </div>
     <!-- name and tag -->
 
@@ -80,12 +80,12 @@ const runeClass
           content: player.riotIdGameName,
           placement: 'top',
         }"
-        class="font-semibold text-nowrap text-2 truncate flex-nowrap items-end size-full">
+        class="text-2 size-full flex-nowrap items-end truncate font-semibold text-nowrap">
         {{ player.riotIdGameName }}
       </h4>
 
       <p
-        class="font-medium text-nowrap text-2 flex self-start items-center truncate opacity-60">
+        class="text-2 flex items-center self-start truncate font-medium text-nowrap opacity-60">
         <span>#{{ player.riotIdTagline }}</span>
       </p>
     </div>
@@ -106,7 +106,7 @@ const runeClass
         <Img
           :img="`/img/runes/${stats.keystone?.path}/${stats.keystone?.id}.webp`"
           :alt="stats?.keystone?.id?.toString()"
-          class="*:!h-5.5 size-full  object-center absolute tippy-target  hover:ring hover:scale-110 transition-all duration-300 ring-bc/60 rounded-tiny" />
+          class="tippy-target ring-bc/60  rounded-tiny absolute size-full  object-center transition-all duration-300 *:!h-5.5 hover:scale-110 hover:ring" />
       </div>
       <div
         v-tippy="{
@@ -117,7 +117,7 @@ const runeClass
         <Img
           :alt="stats.secondaryPath"
           :img="`/img/paths/${stats.secondaryPath}.webp`"
-          class="*:h-4.5 size-full object-center absolute  hover:ring hover:scale-120 transition-all duration-300 ring-bc/60 rounded-tiny"
+          class="ring-bc/60 rounded-tiny absolute size-full  object-center transition-all duration-300 *:h-4.5 hover:scale-120 hover:ring"
           :class="{
             '!h-4': stats.secondaryPath?.toLowerCase() === 'inspiration',
           }" />
@@ -129,23 +129,23 @@ const runeClass
     <div
       class=""
       :class="divClass">
-      <p class="font-semibold leading-0 items-center text-nowrap flex !text-2 flex-nowrap tracking-wide **:tracking-wide">
+      <p class="!text-2 flex flex-nowrap items-center leading-0 font-semibold tracking-wide text-nowrap **:tracking-wide">
         {{ player.kills }}&#8198;/&#8198;<span class="text-red-800">{{ player.deaths }}</span>&#8198;/&#8198;{{ player.assists }}
       </p>
 
       <Badge
         v-if="stats.kda / 100 === Infinity"
-        size="xs"
-        class="border-master/40 saturate-180 bg-master/20 text-0 **:leading-0">
+        size="8"
+        class="border-master/40 bg-master/20 text-0 saturate-180 **:leading-0">
         <icon
           name="fa6-solid:infinity"
-          class="size-3.5 dst mt-[0.04em]" />
+          class="dst mt-[0.04em] size-3.5" />
         KDA
       </Badge>
 
       <p
         v-else
-        class="flex leading-0 gap-1 dst text-bc/80 text-nowrap leading-3 truncate font-medium">
+        class="dst text-bc/80 flex gap-1 truncate leading-0 leading-3 font-medium text-nowrap">
         {{ stats.kda / 100 }} KDA
       </p>
     </div>
@@ -153,7 +153,7 @@ const runeClass
     <!-- mvp kp -->
 
     <div :class="cn('relative size-full', divClass)">
-      <div class="grid grid-cols-2 items-center w-full ">
+      <div class="grid w-full grid-cols-2 items-center ">
         <div class="font-bold tracking-wide">
           {{ player.mvpScore }}
         </div>
@@ -163,7 +163,7 @@ const runeClass
           v-if="
             player.puuid === playerRank.mvp || player.puuid === playerRank.ace
           "
-          size="xs"
+          size="8"
           :class="
             cn('!px-1 gap-1 absolute right-0 font-bold text-white tracking-wide !text-0 **:leading-0', {
               'border-gold/40 bg-precision ':
@@ -177,12 +177,12 @@ const runeClass
 
         <div
           v-else
-          class="text-1  font-normal absolute right-0 opacity-60 leading-0 ">
+          class="text-1  absolute right-0 leading-0 font-normal opacity-60 ">
           {{ stats.lpScore }}{{ formatNumberPosition(stats.lpScore) }}
         </div>
       </div>
       <p
-        class="text-bc/80 w-full leading-4 truncate font-medium tracking-tight !text-2">
+        class="text-bc/80 !text-2 w-full truncate leading-4 font-medium tracking-tight">
         {{ Math.round(player.challenges.killParticipation * 100) }}%
         <span class="**:!text-1  leading-0 ">kp</span>
       </p>
@@ -191,7 +191,7 @@ const runeClass
     <!-- healing & vision score -->
 
     <div
-      class="!justify-items-end !justify-end text-nowrap"
+      class="!justify-end !justify-items-end text-nowrap"
       :class="divClass">
       <p
         v-tippy="{
@@ -204,10 +204,10 @@ const runeClass
             player.challenges.effectiveHealAndShielding ?? 0,
           ).toLocaleString()
         }}
-        <span class="size-3 relative grid justify-end">
+        <span class="relative grid size-3 justify-end">
           <i-lol-hsp
             name="oi:plus"
-            class="!text-bc/50 dst !size-3 left-0.25" />
+            class="!text-bc/50 dst left-0.25 !size-3" />
         </span>
       </p>
 
@@ -218,16 +218,16 @@ const runeClass
         }"
         :class="cn(pClass)">
         {{ player.visionScore }}
-        <i-lol-support class="!size-3 dst text-bc" />
+        <i-lol-support class="dst text-bc !size-3" />
       </p>
     </div>
 
     <div
-      class="!justify-items-end !justify-end text-nowrap"
+      class="!justify-end !justify-items-end text-nowrap"
       :class="divClass">
       <p :class="cn(pClass)">
         {{ player.totalDamageDealtToChampions.toLocaleString() }}
-        <span class="size-3 relative grid justify-center">
+        <span class="relative grid size-3 justify-center">
           <icon
             name="el:fire"
             :class="cn(' dst absolute size-3')" />
@@ -241,10 +241,10 @@ const runeClass
         }"
         :class="cn(pClass)">
         {{ Math.round(player.totalDamageTaken).toLocaleString() }}
-        <span class="size-3 relative grid justify-center">
+        <span class="relative grid size-3 justify-center">
           <icon
             name="ph:shield-fill"
-            class="!text-zinc-400 dst size-3.5 bottom-px" />
+            class="dst bottom-px size-3.5 !text-zinc-400" />
         </span>
       </p>
     </div>
@@ -264,18 +264,18 @@ const runeClass
             placement: 'bottom',
             theme: 'base',
           }"
-          class="size-8 rounded-md *:rounded-md hover:ring hover:scale-105 transition-all duration-300 ring-bc/60" />
+          class="ring-bc/60 size-8 rounded-md transition-all duration-300 *:rounded-md hover:scale-105 hover:ring" />
 
         <Placeholder
           v-else
-          class="size-8 rounded-md shrink-0 bg-b2/80 border-b3 shadow-sm  shadow-black/4" />
+          class="bg-b2/80 border-b3 size-8 shrink-0 rounded-md shadow-sm  shadow-black/4" />
       </template>
     </div>
 
     <!-- gold -->
 
     <div
-      class="!justify-items-end !justify-end text-nowrap"
+      class="!justify-end !justify-items-end text-nowrap"
       :class="divClass">
       <p
         v-tippy="{

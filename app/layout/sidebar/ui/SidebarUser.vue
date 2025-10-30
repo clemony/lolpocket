@@ -37,6 +37,7 @@ const target = shallowRef<HTMLButtonElement>(null)
         class="size-4" />
     </PopoverTrigger>
     <PopoverContent
+      variant="base"
       class="w-[var(--reka-popover-trigger-width)] rounded-lg pb-2 shadow-sm"
       side="top"
       align="start"

@@ -7,15 +7,20 @@ import {
   TooltipPortal,
   useForwardPropsEmits,
 } from 'reka-ui'
+import 'tippy.js/animations/scale.css'
 
 defineOptions({
   inheritAttrs: false,
 })
 
 const props = withDefaults(
-  defineProps<TooltipContentProps & { class?: HTMLAttributes['class'] }>(),
+  defineProps<TooltipContentProps & {
+    class?: HTMLAttributes['class']
+    variant?: TippyTheme
+  }>(),
   {
     sideOffset: 4,
+    variant: 'base',
   }
 )
 
@@ -30,9 +35,10 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
     <TooltipContent
       data-slot="tooltip-content"
       v-bind="{ ...forwarded, ...$attrs }"
+      :data-theme="props.variant"
       :class="
         cn(
-          'bg-neutral/80 backdrop-blur-md *:text-nc text-nc animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 w-fit rounded-md px-3 py-1.5 text-2 text-balance',
+          'tippy-box  ease-spring-soft   animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95  data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 w-fit text-balance',
           props.class,
         )
       ">

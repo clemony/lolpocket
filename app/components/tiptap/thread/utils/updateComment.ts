@@ -16,6 +16,10 @@ function updateComment(list: CommentItem[], id: string, content: Doc) {
     if (comment.id === id) {
       comment.content = content
       comment.editedAt = new Date().toISOString()
+      toast({
+        title: 'Comment Updated!',
+        description: `Successfully updated your comment on ${capitalize(String(useRoute().meta?.title || useRoute().name))}.`,
+      })
       return true
     }
     if (comment.replies?.length) {

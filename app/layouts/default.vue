@@ -5,7 +5,9 @@ const route = useRoute()
 <template>
   <div
     class="relative grid  h-screen w-screen grid-rows-1  overflow-hidden ">
-    <div class="z-auto flex size-full max-w-screen flex-col overflow-y-auto">
+    <div
+      id="app"
+      class="z-auto flex size-full max-w-screen flex-col overflow-y-auto">
       <!-- header -->
       <header
         :class="
@@ -22,6 +24,7 @@ const route = useRoute()
           v-tippy="{ content: 'Menu', theme: 'base', placement: 'bottom' }"
           class="group/logo relative grid !size-11 place-items-center p-0"
           variant="neutral"
+          tabindex="0"
           shape="square"
           @click="ui().sidebarOpen = true">
           <h5 class="absolute justify-self-center font-bold opacity-100 transition-all duration-300  group-hover/logo:scale-0  group-hover/logo:opacity-0">

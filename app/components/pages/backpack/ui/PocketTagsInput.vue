@@ -39,7 +39,7 @@ function deleteTag(tag: string) {
     @entry-focus="null"
     @highlight="null"
     @entry-focus.stop.prevent>
-    <ListboxContent class="space-y-3 w-full">
+    <ListboxContent class="w-full space-y-3">
       <!-- custom tags -->
 
       <Collapsible
@@ -53,7 +53,7 @@ function deleteTag(tag: string) {
             class="w-full"
             size="md">
             <span
-              class="font-semibold duration-0 grow tracking-normal opacity-40 text-4 capitalize">
+              class="text-4 grow font-semibold tracking-normal capitalize opacity-40 duration-0">
               Tags
             </span>
             <CaretRotate />
@@ -63,15 +63,15 @@ function deleteTag(tag: string) {
         <CollapsibleContent
           menu
           class="CollapsibleContent space-y-1">
-          <ListboxGroup class="justify-start flex gap-y-1 flex-col relative">
+          <ListboxGroup class="relative flex flex-col justify-start gap-y-1">
             <div
               v-for="item in ps().tags"
               :key="item"
-              class="grid group/tag p-0 w-full grid-cols-[1fr_min-content] pr-2 justify-self-start !h-9 items-center">
+              class="group/tag grid !h-9 w-full grid-cols-[1fr_min-content] items-center justify-self-start p-0 pr-2">
               <!-- list item -->
               <ListboxItem
                 as-child
-                class="group/bt p-0 grow size-full cursor-pointer"
+                class="group/bt size-full grow cursor-pointer p-0"
                 :value="item">
                 <Button
                   size="md"
@@ -85,7 +85,7 @@ function deleteTag(tag: string) {
                   <icon
                     name="hash"
                     class="!size-3.5" />
-                  <span class="w-full font-medium truncate">
+                  <span class="w-full truncate font-medium">
                     {{ item }}
                   </span>
                 </Button>
@@ -95,7 +95,7 @@ function deleteTag(tag: string) {
               <Button
                 v-tippy="'Delete Tag'"
                 variant="ghost"
-                class="h-9 duration-0 btn-square not-hover:**:text-bc/60 group-hover/tag:opacity-100 opacity-0"
+                class="btn-square not-hover:**:text-bc/60 h-9 opacity-0 duration-0 group-hover/tag:opacity-100"
                 @click="deleteTag(item)">
                 <icon name="x-sm" />
               </Button>
@@ -107,8 +107,8 @@ function deleteTag(tag: string) {
             as="div"
             variant="base"
             hover="outline"
-            class="px-3 justify-self-center duration-0 py-0 focus-within:border-neutral/60 focus-within:[&_input]:placeholder:opacity-0 w-full flex-nowrap group !gap-3 flex items-center text-2">
-            <span class="bg-b1 grid z-1 place-items-center h-full w-4.5">
+            class="focus-within:border-neutral/60 group text-2 flex w-full flex-nowrap items-center !gap-3 justify-self-center px-3 py-0 duration-0 focus-within:[&_input]:placeholder:opacity-0">
+            <span class="bg-b1 z-1 grid h-full w-4.5 place-items-center">
               <icon
                 name="tag"
                 class="size-4.5 opacity-50" />
@@ -116,7 +116,7 @@ function deleteTag(tag: string) {
             <input
               v-model="newTag"
               placeholder="create new tag..."
-              class="grow w-full rounded-none placeholder:italic transition-all duration-300 h-full"
+              class="h-full w-full grow rounded-none transition-all duration-300 placeholder:italic"
               @keydown.enter="
                 () => {
                   ;(ps().tags.push(newTag), (newTag = ''))
@@ -125,8 +125,8 @@ function deleteTag(tag: string) {
 
             <Button
               variant="ghost"
-              size="xs"
-              class="btn-square group-has-[:placeholder-shown]:opacity-0 duration-0 size-6"
+              size="8"
+              class="btn-square size-6 duration-0 group-has-[:placeholder-shown]:opacity-0"
               @click="newTag = ''">
               <icon name="x-sm" />
             </Button>

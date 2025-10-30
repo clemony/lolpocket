@@ -24,12 +24,23 @@ const summoner = computed (() => {
     <div class="absolute top-2.5 left-0 flex flex-col  items-center gap-2">
       <Popover>
         <PopoverTrigger
+          :disabled="!comment.authorPuuid"
           size="c"
-          class="hover-ring pointer-events-auto z-4 size-max translate-y-px ">
+          class="hover-ring z-4 size-max translate-y-px not-disabled:pointer-events-auto ">
           <SummonerIcon
+            v-if="comment.authorPuuid"
             class="pointer-events-none size-9 rounded-full" />
+          <Element
+            v-else
+            variant="neutral"
+            size="c-9"
+            class="overflow-hidden">
+            <i-ui-oh-no class="absolute !size-9 " />
+          </Element>
         </PopoverTrigger>
-        <LazySummonerPopover :puuid="comment.authorPuuid" />
+        <LazySummonerPopover
+          v-if="comment.authorPuuid"
+          :puuid="comment.authorPuuid" />
       </Popover>
       <CollapsibleTrigger
         :disabled="!comment.replies?.length"
@@ -49,9 +60,10 @@ const summoner = computed (() => {
         </span>
         <span class="text-2 ml-1 inline-flex align-bottom">
           <icon
+            v-if="comment.authorTag"
             name="hash"
             class="mt-0.5 inline size-3" />
-          {{ comment.authorTag || 'Runeterra' }}
+          {{ comment.authorTag }}
         </span>
       </button>
 

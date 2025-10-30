@@ -17,7 +17,7 @@ const text = ref<string>()
 
 <template>
   <div
-    class="flex h-full w-full flex-col items-center overflow-auto pt-8 ">
+    class="flex h-full w-full flex-col items-center pt-8 ">
     <header class="w-full">
       <h1>Nexus</h1>
     </header>

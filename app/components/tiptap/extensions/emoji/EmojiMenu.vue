@@ -180,18 +180,27 @@ watch(() => tab.value, (newVal, oldVal) => {
             variant="none"
             size="md"
             class="w-full justify-stretch ">
-            <TabsTrigger
+            <Tooltip
               v-for="group, i in groups"
-              :key="i"
-              v-tippy="{ content: group.name, theme: 'base', placement: 'bottom' }"
-              :disabled="group.name === 'Search Results' && !query.length"
+              :key="i">
+              <TooltipTrigger
+                as-child>
+                <TabsTrigger
+                  :disabled="group.name === 'Search Results' && !query.length"
 
-              class="group/btn  on:**:text-nc on:*:opacity-100 h-7 *:opacity-40   hover:*:opacity-90 "
-              :value="i">
-              <icon
-                :name="group.icon"
-                :class="cn('size-5 absolute dxs **:stroke-[1.7]', group.class)" />
-            </TabsTrigger>
+                  class="group/btn  on:**:text-nc on:*:opacity-100 h-7 *:opacity-40   hover:*:opacity-90 "
+                  :value="i">
+                  <icon
+                    :name="group.icon"
+                    :class="cn('size-5 absolute dxs **:stroke-[1.7]', group.class)" />
+                </TabsTrigger>
+              </TooltipTrigger>
+              <TooltipContent
+                side="bottom"
+                :side-offset="8">
+                {{ group.name }}
+              </TooltipContent>
+            </Tooltip>
             <TabIndicator
               variant="neutral"
               class="*:!bg-neutral/80" />

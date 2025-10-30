@@ -8,7 +8,7 @@ interface InputGroupButtonProps {
 }
 
 const props = withDefaults(defineProps<InputGroupButtonProps>(), {
-  size: 'xs',
+  size: '8',
   variant: 'ghost',
 })
 </script>

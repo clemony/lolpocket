@@ -31,12 +31,12 @@ function openInfo(rune: number) {}
 
 <template>
   <div
-    class="items-center field-box justify-center gap-y-16 flex flex-col relative w-full rounded-xl transition-all duration-500 **:select-none pb-16 pt-12">
+    class="field-box relative flex w-full flex-col items-center justify-center gap-y-16 rounded-xl pt-12 pb-16 transition-all duration-500 **:select-none">
     <template v-if="runes">
       <div
         v-for="(slot, i) in runes.slots.filter((r) => r.tier !== 0)"
         :key="i"
-        class="cursor-pointer flex h-16 justify-evenly w-full gap-3">
+        class="flex h-16 w-full cursor-pointer justify-evenly gap-3">
         <tippy
           v-for="rune in slot.runes"
           :key="rune.id"
@@ -44,7 +44,7 @@ function openInfo(rune: number) {}
           :arrow="false"
           placement="bottom"
           :interactive="true"
-          class="size-fit rounded-full items-center justify-stretch rune-hover">
+          class="rune-hover size-fit items-center justify-stretch rounded-full">
           <Rune
             :id="rune.id"
             :class="
@@ -65,14 +65,14 @@ function openInfo(rune: number) {}
           <template #content>
             <Button
               variant="link"
-              size="xs"
+              size="8"
               class="flex items-center"
               @click="openInfo(rune.id)">
               {{ rune.name }}
-              <span class="size-4 grid place-items-center relative">
+              <span class="relative grid size-4 place-items-center">
                 <icon
                   name="streamline:information-circle"
-                  class="size-4.5 absolute mb-0.75 shrink-0" />
+                  class="absolute mb-0.75 size-4.5 shrink-0" />
               </span>
             </Button>
           </template>
@@ -81,11 +81,11 @@ function openInfo(rune: number) {}
     </template>
     <div
       v-else
-      class="size-full grid grid-cols-3 gap-y-14">
+      class="grid size-full grid-cols-3 gap-y-14">
       <Placeholder
         v-for="i in 9"
         :key="i"
-        class="size-18 rounded-full place-self-center" />
+        class="size-18 place-self-center rounded-full" />
     </div>
   </div>
 </template>

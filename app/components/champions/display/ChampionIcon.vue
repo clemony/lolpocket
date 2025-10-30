@@ -28,14 +28,11 @@ function onLoad() {
 </script>
 
 <template>
-  <StaticImg
-    :img="`/img/champions/${champId}.webp`"
-    :alt="title || alt || `Champion ${champId} icon`"
-    :class="
-      cn(
-        '',
-        className,
-      )
-    "
-    @loaded="onLoad" />
+  <span
+    :class="cn('overflow-hidden shadow-sm  place-items-center grid   drop-shadow-sm rounded-lg', className)">
+    <StaticImg
+      :img="`/img/champions/${champId}.webp`"
+      :alt="title || alt || `Champion ${champId} icon`"
+      @loaded="onLoad" />
+  </span>
 </template>

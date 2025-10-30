@@ -16,6 +16,7 @@ const isOpen = shallowRef<boolean>(false)
       variant="base"
       class="*:last:fill-b1" /><!--
       :summoner="state.summoner.value" -->
+    hi wtf
     <!--     <SummonerCardSmall
       full-width
       base="btn"

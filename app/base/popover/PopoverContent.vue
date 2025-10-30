@@ -19,7 +19,6 @@ const props = withDefaults(
 )
 
 const emits = defineEmits<PopoverContentEmits>()
-
 const delegatedProps = reactiveOmit(props, 'class', 'dataTheme')
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)

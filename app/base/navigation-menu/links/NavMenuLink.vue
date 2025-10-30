@@ -10,7 +10,7 @@ const {
   class?: HTMLAttributes['class']
   shape?: Shape
   variant?: any
-  size?: Size
+  size?: ButtonVariants['size']
 }>()
 </script>
 

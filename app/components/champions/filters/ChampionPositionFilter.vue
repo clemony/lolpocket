@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { championPositions } from '#shared/appdata'
 
-const { class: className, clear = false, hover = 'btn', size = ['sq-xs', 'xs'], variant = 'ghost' } = defineProps<{
+const { class: className, clear = false, hover = 'btn', size = ['sq-xs', '8'], variant = 'ghost' } = defineProps<{
   class?: HTMLAttributes['class']
   clear?: boolean
   size?: ButtonVariants['size'][]
@@ -33,7 +33,7 @@ const { class: className, clear = false, hover = 'btn', size = ['sq-xs', 'xs'], 
         <BaseListboxItem
           v-for="position in championPositions.filter(p => p.name !== 'All')"
           :key="position.name"
-          class="bg-transparent fx-0"
+          class="fx-0 bg-transparent"
           :value="position.name"
           as-child>
           <PositionBadge

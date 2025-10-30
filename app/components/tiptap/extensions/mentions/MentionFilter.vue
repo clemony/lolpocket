@@ -2,23 +2,23 @@
 import { exitSuggestion } from '@tiptap/suggestion'
 import { useFocusTrap } from '@vueuse/integrations/useFocusTrap'
 
-type Index = Array<Record<string, string | number>>
+type Index = ItemIndex | ChampionIndex
 
 const { class: className, command, editor, items } = defineProps<{
   class?: HTMLAttributes['class']
-  items: Index
+  items: Index[]
   editor: any
-  command: (payload: { id: string | number, label: string }) => any
+  command: (payload: { item: { id: number, key: string, name: string }, label: string }) => any
 }>()
 
 const selectedIndex = ref(0)
-const selectedItem = computed<Record<string, string | number>>(() => items[selectedIndex.value])
+const selectedItem = computed<Index>(() => items[selectedIndex.value])
 function update() {
   if (!selectedItem.value)
     return
   command({
-    id: selectedItem.value?.key ? selectedItem.value?.key : selectedItem.value?.id,
-    label: selectedItem.value?.key ? 'champions' : 'items'
+    item: selectedItem.value,
+    label: selectedItem.value?.key === selectedItem.value?.id.toString() ? 'item' : 'champion'
   })
   exitSuggestion(editor.view, 'suggestion' as any)
 }
@@ -69,9 +69,10 @@ watch(arrowup, (v) => {
 
 <template>
   <Card
-    ref="target"
-    class="bg-b1/88 backdrop-blur-md min-w-44 px-1 py-1.5 overflow-hidden">
-    <SlideInTopOutBottom class="size-full transition-discrete  flex flex-col">
+    class="bg-b1/88 z-20 max-h-70 min-w-44 overflow-auto px-1 py-1.5 backdrop-blur-md">
+    <SlideInTopOutBottom
+      ref="target"
+      class="flex size-full  flex-col transition-discrete">
       <template
         v-if="items.length">
         <PopoverItem
@@ -80,16 +81,16 @@ watch(arrowup, (v) => {
           :key="index"
           tabindex="0"
           :value="item"
-          :class="cn('transition-discrete pr-8', `index-${index}`)"
+          :class="cn('transition-discrete focus:bg-b2/60 pr-8', `index-${index}`)"
           @mousedown.prevent="selectedIndex = index; update()">
-          <ChampionIcon
-            v-if="item?.key"
-            class="size-6 rounded-full"
-            :k="String(item.key)" />
           <Item
-            v-else
+            v-if="item?.key === item?.id.toString()"
             :id="Number(item?.id)"
             class="size-6 rounded-full" />
+          <ChampionIcon
+            v-else
+            class="size-6 rounded-full"
+            :k="String(item.key)" />
           {{ item.name }}
         </PopoverItem>
       </template>

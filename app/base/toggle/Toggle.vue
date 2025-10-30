@@ -15,7 +15,7 @@ const props = withDefaults(
   >(),
   {
     disabled: false,
-    size: 'sq-md',
+    size: 'sq-10',
     variant: 'outline',
   }
 )

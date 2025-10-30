@@ -2,7 +2,7 @@ import type { VariantProps } from 'tailwind-variants'
 import { tv } from 'tailwind-variants'
 
 export const elementBaseVariants = {
-  btn: 'btn focus:outline-0 focus-visible:outline-0 relative focus-visible:ring-0 flex bg-transparent has-[first:[&_svg]]:gap-3 has-not-[span:empty]:gap-2 text-start has-[span:empty]:gap-0 [&_svg]:inline-flex align-middle text-3 font-normal items-center disabled:opacity-80 flex',
+  btn: 'btn relative focus:outline-0 focus-visible:outline-0 relative focus-visible:ring-0 flex bg-transparent has-[first:[&_svg]]:gap-3 has-not-[span:empty]:gap-2 text-start has-[span:empty]:gap-0 [&_svg]:inline-flex align-middle text-3 font-normal items-center disabled:opacity-80 flex',
   indicator: 'py-0.5 h-9 bg-b2 px-1 items-center justify-center grid  rounded-xl inset-shadow-xs inset-shadow-black/3  border text-bc/50 relative',
   label: 'font-medium flex gap-4 items-center',
   none: '',
@@ -27,7 +27,10 @@ export const variantVariants = {
   secondary:
     'bg-tint-b3/40 fx-1 text-bc px-3 !border-b3  font-medium shadow-xs shadow-black/7 hover:inset-shadow-xs',
 }
+function createVariant({ size, variant}: { size: number, variant: string }) {
+  // :variant="{10, neutral, ^btn, @inset, _btn}"
 
+}
 export const baseVariants = tv({
   variants: {
 
@@ -64,7 +67,7 @@ export const baseVariants = tv({
       neutral:
     ' hover:!text-nc hover:!bg-neutral/95 hover:**:!text-nc hover:!border-n3 hover:shadow-sm hover:drop-shadow-sm ',
       none: '!fx-0 border-0 !bg-transparent p-0 inset-shadow-none shadow-none drop-shadow-none hover:!bg-transparent',
-      opacity: 'opacity-84',
+      opacity: 'hover:opacity-80',
       outline: 'hover:!fx-0 hover:!border-b3 hover:!border hover:shadow-xs',
       red: '',
       secondary: ' hover:!bg-tint-b3/40 hover:!border-b3 px-3   hover:inset-shadow-xs hover:shadow-xs hover:shadow-black/7',

@@ -36,7 +36,7 @@ function onLoad() {
       :alt="alt"
       :class="
         cn('size-full translate-z-0  overflow-hidden  shrink-0 object-center  rounded-lg  ', {
-          'opacity-100 shadow-sm  drop-shadow-sm ': loaded, 'opacity-0': !loaded,
+          'opacity-100 ': loaded, 'opacity-0': !loaded,
         })
       "
       @load="onLoad()" />

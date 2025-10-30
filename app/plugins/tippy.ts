@@ -8,7 +8,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     // optional
     {
       component: 'tippy', // => <tippy/>
-      componentSingleton: 'tippies', // => <tippy-singleton/>,
+      componentSingleton: 'tippyton', // => <tippy-singleton/>,
       defaultProps: {
         hideOnClick: false,
         allowHTML: true,

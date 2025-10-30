@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { championResources } from '@appdata'
 
-const { class: className, clear = false, hover = 'btn', size = ['sq-xs', 'xs'], variant = 'ghost' } = defineProps<{
+const { class: className, clear = false, hover = 'btn', size = ['sq-xs', '8'], variant = 'ghost' } = defineProps<{
   class?: HTMLAttributes['class']
   clear?: boolean
   size?: ButtonVariants['size'][]
@@ -33,7 +33,7 @@ const { class: className, clear = false, hover = 'btn', size = ['sq-xs', 'xs'], 
         <BaseListboxItem
           v-for="resource in championResources"
           :key="resource.name"
-          class="bg-transparent fx-0"
+          class="fx-0 bg-transparent"
           :value="resource.name"
           as-child>
           <ResourceBadge

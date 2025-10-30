@@ -1,6 +1,6 @@
 import { computePosition } from '@floating-ui/dom'
 import { VueRenderer } from '@tiptap/vue-3'
-import EmojiList from './ui/EmojiList.vue'
+import EmojiList from './EmojiList.vue'
 
 export const emojiSuggestions = {
   items: ({ editor, query }) => {

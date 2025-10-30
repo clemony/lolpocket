@@ -7,7 +7,7 @@ definePageMeta({
 })
 const route = useRoute()
 const championData = await import(
-  `#shared/appdata/records/champions/${String(route.params.champion_key)}.ts`
+  `@appdata/records/champions/${String(route.params.champion_key)}.ts`
 )
 const champion = computed(() => championData.default)
 const tabs = shallowRef<string>(null)
@@ -43,24 +43,24 @@ onMounted(() => {
         " />
     </template>
     <template #icon>
-      <div class="size-20 -ml-2">
+      <div class="-ml-2 size-20">
         <ChampionIcon
           :id="champion.id"
-          class="rounded-full size-20" />
+          class="size-20 rounded-full" />
       </div>
     </template>
     <template #header>
-      <header class="justify-center grid h-20">
-        <h1 class="!text-[2.1] tracking-tight pt-1 font-bold leading-10 dst">
+      <header class="grid h-20 justify-center">
+        <h1 class="dst pt-1 leading-10 font-bold tracking-tight !text-[2.1]">
           {{ champion.name }}
         </h1>
-        <p class="text-3 px-1 -mt-1 text-bc font-medium italic leading-5">
+        <p class="text-3 text-bc -mt-1 px-1 leading-5 font-medium italic">
           {{ champion.title }}
         </p>
       </header>
     </template>
 
-    <div class="size-full flex bg-b1 justify-center gap-6 z-auto">
+    <div class="bg-b1 z-auto flex size-full justify-center gap-6">
       <NuxtPage :champion />
     </div>
   </TabLayout>

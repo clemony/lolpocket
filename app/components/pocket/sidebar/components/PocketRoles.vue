@@ -13,11 +13,11 @@ const pocket = computed(() => p)
 <template>
   <Collapsible
     v-if="pocket"
-    class="w-full field-box">
+    class="field-box w-full">
     <CollapsibleTrigger
       v-if="pocket.roles && pocket.roles?.[0]"
-      class="w-full items-center text-start justify-start gap-1 py-3 px-3 text-3 capitalize flex group">
-      <h3 class="grow dst">
+      class="text-3 group flex w-full items-center justify-start gap-1 px-3 py-3 text-start capitalize">
+      <h3 class="dst grow">
         Roles
       </h3>
 
@@ -25,7 +25,7 @@ const pocket = computed(() => p)
     </CollapsibleTrigger>
 
     <CollapsibleContent
-      class="CollapsibleContent flex flex-col gap-4 justify-start overflow-hidden w-full px-4 pt-1 pb-4">
+      class="CollapsibleContent flex w-full flex-col justify-start gap-4 overflow-hidden px-4 pt-1 pb-4">
       <VueDraggable
         :model-value="pocket.roles"
         ghost-class="role-ghost"
@@ -34,7 +34,7 @@ const pocket = computed(() => p)
         chosen-class="role-chosen"
         drag-class="role-drag"
         selected-class="role-select"
-        class="flex flex-wrap gap-3 relative w-full h-fit items-center">
+        class="relative flex h-fit w-full flex-wrap items-center gap-3">
         <RoleBadge
           v-for="role in pocket.roles"
           :key="role"
@@ -46,20 +46,20 @@ const pocket = computed(() => p)
       <transition-slide
         :offset="{ enter: [10, 0], leave: [-10, 0] }"
         group
-        class="flex flex-wrap gap-3 relative w-full h-fit">
+        class="relative flex h-fit w-full flex-wrap gap-3">
         <template
           v-for="role in championPositions"
           :key="role">
           <Label
             v-if="role"
             variant="outline"
-            size="xs"
-            class="border-b3/80 bg-b1 rounded-lg order-3"
+            size="8"
+            class="border-b3/80 bg-b1 order-3 rounded-lg"
             :class="cn({ 'hidden ': pocket.roles.includes(role.name) })"
             @click.stop>
             <input
               v-model="pocket.roles"
-              class="peer hidden absolute"
+              class="peer absolute hidden"
               type="checkbox"
               :disabled="!role"
               :value="role.name"
@@ -68,7 +68,7 @@ const pocket = computed(() => p)
 
             <component
               :is="`i-roles-${role.name.toLowerCase()}`"
-              class="h-3.75 text-bc/70 w-auto dst shrink-0 peer-checked:text-nc"
+              class="text-bc/70 dst peer-checked:text-nc h-3.75 w-auto shrink-0"
               :class="{ '!text-bc/80': role.name.toLowerCase() === 'all' }" />
             {{ role.name }}
           </Label>
