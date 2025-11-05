@@ -25,28 +25,28 @@ const selectedSpell = computed(() => ix().spellById(selectedSpellId.value))
 </script>
 
 <template>
-  <div class="items-center justify-center gap-15 px-27 size-full">
+  <div class="size-full items-center justify-center gap-15 px-27">
     <div class="w-full pt-28">
       <h1>Summoner Spells</h1>
     </div>
 
     <div
       v-if="ix().spells.length"
-      class="w-full flex gap-[8%] px-3 py-24">
-      <div class="flex flex-col gap-14 w-114">
+      class="flex w-full gap-[8%] px-3 py-24">
+      <div class="flex w-114 flex-col gap-14">
         <div
-          class="grid grid-cols-3 grid-rows-3 gap-4 py-8 border-b3/80 rounded-box shadow-smooth px-9 h-fit">
+          class="border-b3/80 rounded-box shadow-smooth grid h-fit grid-cols-3 grid-rows-3 gap-4 px-9 py-8">
           <div
             v-for="spell in ix().spells"
             :key="spell.name"
             v-tippy="spell.name"
             class="size-fit">
             <label
-              class="btn py-2 !cursor-pointer btn-ghost px-2.5 size-27 has-checked:bg-b3/70 has-checked:border-b3 has-checked:shadow-sm hover:bg-b2 hover:border-b3">
+              class="btn btn-ghost has-checked:bg-b3/70 has-checked:border-b3 hover:bg-b2 hover:border-b3 size-27 !cursor-pointer px-2.5 py-2 has-checked:shadow-sm">
               <img
                 :alt="selectedSpell.name.toString()"
                 :src="`/img/spells/${spell.name}.webp`"
-                class="size-22 rounded-lg shadow-sm inset-shadow-sm shadow-black/20 border border-b3 peer-checked:borderneutral/90" />
+                class="border-b3 peer-checked:borderneutral/90 size-22 rounded-lg border inset-shadow-sm shadow-sm shadow-black/20" />
 
               <input
                 v-model="selectedSpellId"
@@ -57,7 +57,7 @@ const selectedSpell = computed(() => ix().spellById(selectedSpellId.value))
           </div>
         </div>
 
-        <Transition
+        <!--     <Transition
           v-if="selectedSpell"
           enter-active-class="transition-all duration-500"
           enter-from-class="opacity-0 -translate-y-2"
@@ -66,7 +66,7 @@ const selectedSpell = computed(() => ix().spellById(selectedSpellId.value))
           leave-from-class="opacity-100 "
           leave-to-class="opacity-0 -translate-y-2"
           mode="out-in">
-          <div
+              <div
             v-if="selectedSpell.text"
             :key="selectedSpell.name"
             class="pl-4.5 pr-3">
@@ -87,7 +87,7 @@ const selectedSpell = computed(() => ix().spellById(selectedSpellId.value))
               </a>
             </p>
           </div>
-        </Transition>
+        </Transition> -->
       </div>
 
       <Transition
@@ -100,16 +100,16 @@ const selectedSpell = computed(() => ix().spellById(selectedSpellId.value))
         mode="out-in">
         <div
           :key="selectedSpell.name"
-          class="flex flex-col gap-14 w-160 transition-all duration-300">
+          class="flex w-160 flex-col gap-14 transition-all duration-300">
           <div
-            class="border-b3/80 rounded-xl shadow-smooth pt-7 pb-8 px-9 w-full border flex max-h-min flex-col gap-6 transition-all duration-300">
-            <div class="w-full flex gap-6 i-c">
+            class="border-b3/80 shadow-smooth flex max-h-min w-full flex-col gap-6 rounded-xl border px-9 pt-7 pb-8 transition-all duration-300">
+            <div class="i-c flex w-full gap-6">
               <img
                 :alt="selectedSpell.name.toString()"
-                :src="`/img/spells/${selectedSpell.name}.webp`"
-                class="rounded-lg shadow-sm shadow-black/20 size-24" />
+                :src="`/img/spells/${selectedSpell.id}.webp`"
+                class="size-24 rounded-lg shadow-sm shadow-black/20" />
 
-              <div class="h-full grid items-between py-2">
+              <div class="items-between grid h-full py-2">
                 <p class="font-medium">
                   Summoner
                 </p>
@@ -120,7 +120,7 @@ const selectedSpell = computed(() => ix().spellById(selectedSpellId.value))
               </div>
             </div>
 
-            <p>{{ selectedSpell.description }}</p>
+            <!--  <p>{{ selectedSpell.description }}</p>
 
             <ul class="w-74 space-y-3">
               <li
@@ -158,13 +158,13 @@ const selectedSpell = computed(() => ix().spellById(selectedSpellId.value))
                   {{ selectedSpell.recharge }} seconds
                 </p>
               </li>
-            </ul>
+            </ul> -->
           </div>
 
-          <div class="bg-black/90 w-full rounded-xl shadow-pretty">
+          <div class="shadow-pretty w-full rounded-xl bg-black/90">
             <video-background
               :src="`https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-collections/global/default/video/spells/spells_${selectedSpell.id}.webm`"
-              class="w-90 h-auto aspect-video rounded-xl"></video-background>
+              class="aspect-video h-auto w-90 rounded-xl"></video-background>
           </div>
         </div>
       </Transition>

@@ -9,7 +9,7 @@ const pocket = computed(() => ps().getPocket(String(route.params.pocket_key)))
     <div class="flex h-14 w-full flex-nowrap items-center justify-start gap-4 pr-1.5">
       <Button
         variant="neutral"
-        size="lg"
+        size="12"
         class="pr-4"
         @click="pocket.items.push(newItemSet())">
         <icon

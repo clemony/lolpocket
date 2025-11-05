@@ -2,7 +2,7 @@
 import type { HTMLAttributes } from 'vue'
 import { useId } from 'reka-ui'
 import { provide } from 'vue'
-import { FORM_ITEM_INJECTION_KEY } from './injectionKeys'
+import { FORM_ITEM_INJECTION_KEY } from './formInjectionKeys'
 
 const props = defineProps<{
   class?: HTMLAttributes['class']

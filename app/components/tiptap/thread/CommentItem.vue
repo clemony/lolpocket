@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import { renderCommentHTML } from './utils'
+import { renderCommentHTML, useMentionTooltips } from '#tiptap'
 
 const { comment, depth, parentHovered } = defineProps<{
   comment: CommentItem
   depth?: number
   parentHovered?: boolean
 }>()
+
 const emit = defineEmits(['comment:reply', 'comment:remove', 'comment:vote', 'comment:update', 'trigger-hovered', 'comment:delete'])
 
 function handleRemovalEmit() {
   emit('comment:remove', comment.id)
-  console.log('🌱 - handleRemovalEmit - comment.id :', comment.id)
 }
 const replyContent = ref<Doc>(null)
 
@@ -37,6 +37,15 @@ const renderedHtml = computed(() => {
 onMounted (() => {
   newContent.value = comment.content
 })
+
+const container = useTemplateRef<HTMLElement>('container')
+
+useMentionTooltips(container)
+
+/* if (comment.authorTag === '007') {
+  comment.authorPuuid = 'defnotclem'
+  comment.authorTag = 'mod'
+} */
 </script>
 
 <template>
@@ -45,7 +54,7 @@ onMounted (() => {
     v-slot="{ open }"
     :default-open="!!comment.authorPuuid"
     :disabled="!hasReplies"
-    :class="cn('z-auto pt-2 !overflow-visible h-max ', { ' ml-12': depth })">
+    :class="cn('z-auto pt-2  pb-2 !overflow-visible h-max ', { ' ml-12': depth })">
     <!-- child trigger -->
 
     <CollapsibleTrigger
@@ -115,6 +124,7 @@ onMounted (() => {
 
         <div
           v-else-if="comment.content"
+          ref="container"
           :class="cn('tiptap py-2 pl-12.5', { 'opacity-60': !comment.authorPuuid })"
           v-html="renderedHtml" />
 
@@ -124,7 +134,7 @@ onMounted (() => {
           :editing
           :hovered="computed (() => hovered)"
           :replying
-          :class="cn({ 'pl-6.5': editing })"
+          :class="cn('pl-11.75', { 'pl-6.5': editing })"
           @update:edit-model="e => editing = e"
           @comment:remove="handleRemovalEmit()"
           @update:reply-model="e => replying = e">

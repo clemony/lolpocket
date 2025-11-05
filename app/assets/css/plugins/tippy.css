@@ -1,55 +1,81 @@
 @import 'tailwindcss';
 @import '../theme.css';
 
-@layer base {
-  .tippy-box[data-inertia][data-state='visible'] {
+@utility tippy-box {
+    @apply border z-60 w-auto max-w-80 rounded-field backdrop-blur-md  drop-shadow-[1px_1px_2px_#0000006] shadow-md;
+
+  &[data-inertia][data-state='visible'] {
     transition-timing-function: cubic-bezier(0.28, 0.93, 0.75, 1.38);
   }
 
-  .tippy-box[data-theme~='transparent'] {
-  }
 
-  .tippy-box[data-theme~='default'],
-  .tippy-box[data-theme~='base'],
-  .tippy-box[data-theme~='blur'] {
-    @apply border px-3 py-1 z-1 w-auto max-w-80 rounded-field backdrop-blur  drop-shadow-[1px_1px_2px_#0000006] shadow-md;
+
+  &[data-theme~='neutral-no-padding'],
+  &[data-theme~='base-no-padding'] {
+  @apply !p-0  ;
+
+  &[data-theme~='neutral-no-padding']{
+@apply !w-[258px] !max-w-[258px];
+}
+    .tippy-content {
+      @apply !p-0 w-full;
+    }
+
+}
+
+
+  .tippy-content:where(:not([data-theme="neutral-no-padding"])) {
+    @apply px-3 py-1 ;
+  }
 
     .tippy-content {
       @apply text-2 whitespace-pre inline-block font-medium **:text-2;
     }
 
-    & > .tippy-svg-arrow {
-      @apply -scale-y-100;
+    &[data-placement='bottom'] > .tippy-svg-arrow,
+    &[data-placement='top'] > .tippy-svg-arrow,
+    &[data-placement='left'] > .tippy-svg-arrow ,
+    &[data-placement='right'] > .tippy-svg-arrow {
+@apply !z-61 *:!z-61 absolute  *:scale-74;
+}
+
+    &[data-placement='right'] > .tippy-svg-arrow > svg {
+      @apply   !right-[calc(50%-2px)] !top-[calc(50%-11px)];
+    }
+    &[data-placement~='left'] > .tippy-svg-arrow > svg {
+      @apply  !left-[calc(50%+1px)] !-top-[calc(50%+1px)];
+    }
+        &[data-placement~='bottom'] > .tippy-svg-arrow > svg {
+      @apply  !translate-x-1 !-top-5.5;
     }
 
-    &[data-placement='top'],
-    &[data-placement='bottom'] {
-      & > .tippy-svg-arrow > svg:first-child {
-        @apply translate-y-1 scale-96 z-0;
-      }
-      & > .tippy-svg-arrow > svg:last-child {
-        @apply -translate-y-0.75 scale-90 z-2;
-      }
+    &[data-placement~='top'] > .tippy-svg-arrow > svg {
+      @apply  !left-[calc(200%+1px)] !top-3;
     }
+
+
+
 
     /* default / contrast */
-    &[data-theme~='default'] {
-      @apply !bg-neutral/76 inset-shadow-white/10 border-neutral/50;
+  &[data-theme~='neutral-no-padding'],
+    &[data-theme~='neutral'] {
+      @apply bg-neutral/86  border-b3/30   inset-shadow-white/10;
 
       .tippy-content {
-        @apply text-nc/80;
+        @apply  text-nc/80 **:text-nc/80;
       }
 
       & > .tippy-svg-arrow > svg:first-child {
-        @apply fill-neutral/76;
+        @apply text-neutral/86 mask-b-from-58% mask-b-to-64%;
       }
 
       & > .tippy-svg-arrow > svg:last-child {
-        @apply fill-neutral/76;
+        @apply text-neutral/86;
       }
     }
 
     /* base color */
+  &[data-theme~='base-no-padding'],
     &[data-theme~='base'] {
       @apply border-b3/80 text-bc/90 font-medium !bg-b1/90;
 
@@ -62,6 +88,23 @@
       }
     }
 
+
+    &[data-theme~='error'] {
+      @apply bg-domination/86  border-b3/30   inset-shadow-white/10;
+
+      .tippy-content {
+        @apply  text-white/90 **:text-white/90;
+      }
+
+      & > .tippy-svg-arrow > svg:first-child {
+        @apply fill-domination/90;
+      }
+
+      & > .tippy-svg-arrow > svg:last-child {
+        @apply fill-domination/90;
+      }
+    }
+
     /* blur transparent */
     &[data-theme~='blur'] {
       @apply bg-transparent border-0 p-0 shadow-none text-bc/80;
@@ -71,4 +114,3 @@
       }
     }
   }
-}

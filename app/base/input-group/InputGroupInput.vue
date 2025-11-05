@@ -1,13 +1,21 @@
 <script setup lang="ts">
-const { class: className, focused, placeholder = '' } = defineProps<{
+const { class: className, placeholder = '' } = defineProps<{
   class?: HTMLAttributes['class']
   placeholder?: string
-  focused?: boolean
 }>()
+
+const target = useTemplateRef('target')
+function focusInput() {
+  target.value.focusInput()
+}
+defineExpose({
+  focusInput
+})
 </script>
 
 <template>
   <Input
+    ref="target"
     data-slot="input-group-control"
     :placeholder
     :class="cn(

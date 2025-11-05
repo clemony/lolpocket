@@ -10,5 +10,21 @@
   "[vue]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "exportall.config.folderListener": [
+    "/app/components/tiptap",
+    "/app/composables/utils",
+    "/app/composables",
+    "/app/utils/data",
+    "/app/utils",
+    "/app/utils/formatting",
+    "/app/utils/helpers",
+    "/app/utils/navigation",
+    "/app/utils/time",
+    "/app/utils/pocket",
+    "/app/components/tiptap/utils"
+  ],
+  "exportall.config.relExclusion": [
+    "/app/utils/config"
+  ]
 }

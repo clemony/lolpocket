@@ -34,12 +34,21 @@ const modelValue = useVModel(props, 'modelValue', emits, {
   passive: true,
 })
 
-const input = shallowRef<HTMLInputElement>()
-const { focused } = useFocus(input, { initialValue: props.focused })
+const inputRef = shallowRef<HTMLElement>()
+const { focused } = useFocus(inputRef, { initialValue: props.focused })
 
 const delegatedProps = reactiveOmit(props, 'class')
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
+
+function focusInput() {
+  if (!focused.value)
+    focused.value = true
+}
+defineExpose({
+  focusInput,
+  inputRef
+})
 </script>
 
 <template>
@@ -50,9 +59,9 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
     :class="cn(inputVariants({ size: props.size }), props.class)">
     <slot />
     <input
-      ref="input"
+      ref="inputRef"
       v-model="modelValue"
-      name="input"
+      name="inputRef"
       :placeholder
       autocomplete="off"
       class="placeholder:text-2 placeholder:italic focus:placeholder:opacity-0"

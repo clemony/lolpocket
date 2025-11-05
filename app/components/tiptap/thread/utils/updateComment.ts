@@ -13,7 +13,7 @@ export function handleUpdate({ id, content }: { id: string, content: Doc }) {
 
 function updateComment(list: CommentItem[], id: string, content: Doc) {
   for (const comment of list) {
-    if (comment.id === id) {
+    if (comment.id === id && comment.authorPuuid === as().account.puuid) {
       comment.content = content
       comment.editedAt = new Date().toISOString()
       toast({

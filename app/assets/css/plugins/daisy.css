@@ -12,6 +12,34 @@
   --depth: 1;
 }
 
+
+/* tooltip */
+
+@utility tooltip-light {
+  --tt-bg: --alpha(var(--color-b1) / 99%) !important;
+  @apply relative;
+
+  &::before {
+    @apply border-b3 text-bc  bg-[var(--tt-bg)];
+
+  }
+
+  &::after {
+    @apply hidden;
+  }
+}
+@utility tooltip {
+  @apply select-none hover:underline cursor-default;
+  &::before {
+    @apply z-50 py-1.5 px-3 text-2 text-nc text-pretty max-w-66 whitespace-pre-wrap drop-shadow-sm transition-all duration-300 leading-5.5 text-start ;
+    &::after {
+      @apply duration-200 transition-all delay-200;
+    }
+
+  }
+}
+
+
 /* input */
 
 @utility input {
@@ -84,27 +112,6 @@
   }
 }
 
-/* tooltip */
-
-@utility tooltip {
-  --tt-bg: --alpha(var(--color-b1) / 99%) !important;
-}
-@utility tooltip {
-  @apply relative;
-
-  &::before {
-    @apply z-50 py-1.5 px-3 text-2 border-b3 text-bc max-w-64 whitespace-pre-wrap drop-shadow-sm transition-all duration-300 leading-5.5 text-start bg-[var(--tt-bg)];
-
-  }
-&.mention{
-  --tt-bg: --alpha(var(--color-neutral) / 80%) !important;
-     &[data-label="champion"]::before {
-        @apply !right-0 !translate-x-[40%] !h-7 !leading-none !text-nc bg-[var(--tt-bg)];
-      }}
-  &::after {
-    @apply hidden;
-  }
-}
 
 @layer components {
   /* field  */

@@ -5,6 +5,7 @@ export const useAccountStore = defineStore(
   () => {
     const userNotes = ref<Note[]>([])
     const comments = ref<CommentItem[]>([])
+
     const removedComments = ref <CommentLog[]>([])
 
     const loggedIn = ref(false)

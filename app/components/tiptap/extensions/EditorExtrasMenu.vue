@@ -25,8 +25,7 @@ const shortcuts = [
   <Popover>
     <PopoverTrigger
       ref="triggerEl"
-      size="sq"
-      class="size-7"
+      size="sq-7"
       variant="ghost"
       active="inset"
       hover="inset"
@@ -60,7 +59,7 @@ const shortcuts = [
             <th class="grid items-start py-2 pt-4">
               <Kbd
                 class=""
-                size="sq-xxs">
+                size="sq-6">
                 <icon
                   :name="item.key"
                   class="absolute size-3.5 opacity-90" />

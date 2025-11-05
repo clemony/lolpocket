@@ -118,6 +118,7 @@ export default defineAppConfig({
       // symbol
       'alert': 'lucide:circle-alert',
       'ban': 'lucide:ban',
+      'error': 'tabler:alert-circle',
       'warning': 'lucide:triangle-alert',
 
       // external / social

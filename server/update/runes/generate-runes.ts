@@ -1,10 +1,10 @@
-import { markUpdate } from '#shared/utils'
 import fs from 'node:fs'
 import path from 'node:path'
 import { resolvePath } from '../resolvePath'
+import { markUpdate } from '../utils'
 
 const dataPath = resolvePath('./runes/raw/runes.json')
-const runeOutputDir = resolvePath('#shared/appdata/records/runes')
+const runeOutputDir = path.resolve('./shared/appdata/records/runes')
 const raw = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
 
 const outputIndex: Record<string, any> = {}
@@ -20,7 +20,7 @@ for (const runePath of raw) {
     slot.runes.map((rune: any, tierSlot: number) => {
       const enriched = {
         ...rune,
-        description: rune.description,
+        description: rune.description.replace(/\|\|/g, '/'),
         path: runePath.name,
         pathId: runePath.id,
         tier: slot.tier,
@@ -30,7 +30,7 @@ for (const runePath of raw) {
 
       const filePath = path.join(
         runeOutputDir,
-        `${rune.name.replace(/\s+/g, '_')}.ts`
+        `${rune.id}.ts`
       )
       fs.writeFileSync(
         filePath,

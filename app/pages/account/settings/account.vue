@@ -33,7 +33,7 @@ const userProviders = await computedAsync(() =>
 <template>
   <form
     v-if="user"
-    class="space-y-12 w-full"
+    class="w-full space-y-12"
     @submit="onSubmit">
     <!-- username -->
 
@@ -70,7 +70,7 @@ const userProviders = await computedAsync(() =>
       <div class="leading-4">
         <h4
           as="legend"
-          class="text-5 font-semibold mb-2">
+          class="text-5 mb-2 font-semibold">
           Region
         </h4>
 
@@ -87,14 +87,14 @@ const userProviders = await computedAsync(() =>
           :default-value="as().account.region"
           @close-auto-focus.prevent>
           <SelectTrigger
-            class="h-12 w-full inset-shadow-none flex input">
+            class="input flex h-12 w-full inset-shadow-none">
             <!--       <span class="grow">
               {{ select }}
             </span> -->
             <SelectValue />
           </SelectTrigger>
           <LazyRegionSelectContent
-            class="!w-[var(--reka-select-trigger-width)] -top-[calc(var(--reka-select-trigger-height)+4px)]" />
+            class="-top-[calc(var(--reka-select-trigger-height)+4px)] !w-[var(--reka-select-trigger-width)]" />
         </Select>
       </ClientOnly>
     </fieldset>
@@ -136,7 +136,7 @@ const userProviders = await computedAsync(() =>
             :name="String(provider.icon)"
             :class="cn('size-6.5 dst')" />
         </div>
-        <h4 class="capitalize text-start dst font-semibold text-4 grow">
+        <h4 class="dst text-4 grow text-start font-semibold capitalize">
           {{ provider.name }}
         </h4>
 
@@ -148,12 +148,12 @@ const userProviders = await computedAsync(() =>
 
         <span
           v-else
-          class="opacity-60 text-2">Not Connected</span>
+          class="text-2 opacity-60">Not Connected</span>
 
         <Switch
           name="toggle-provider"
           :model-value="userProviders?.includes(provider.name)"
-          class="switch data-[state=checked]:ring data-[state=checked]:ring-white/60 scale-90 -mt-0.25 dst" />
+          class="switch dst -mt-0.25 scale-90 data-[state=checked]:ring data-[state=checked]:ring-white/60" />
       </label>
     </fieldset>
 
@@ -165,7 +165,7 @@ const userProviders = await computedAsync(() =>
       <div class="leading-4">
         <h4
           as="legend"
-          class="text-5font-semibold mb-2 flex gap-2 items-center">
+          class="text-5font-semibold mb-2 flex items-center gap-2">
           Email
         </h4>
 
@@ -191,8 +191,8 @@ const userProviders = await computedAsync(() =>
             v-tippy="'verified!'"
             variant="neutral"
             hover="neutral"
-            class="aspect-square rounded-full scale-90 dst"
-            size="xxs">
+            class="dst aspect-square scale-90 rounded-full"
+            size="6">
             <icon
               name="tick"
               class="absolute size-4.25 **:stroke-[3.3]" />
@@ -203,8 +203,8 @@ const userProviders = await computedAsync(() =>
               content: `Check your inbox! Verification email sent at ${user.email_change_sent_at}.`,
               offset: [0, 12],
             }"
-            size="xxs"
-            class="rounded-md border-b3/60"
+            size="6"
+            class="border-b3/60 rounded-md"
             variant="base">
             <icon
               name="refresh"
@@ -223,7 +223,7 @@ const userProviders = await computedAsync(() =>
       <div class="leading-4">
         <h4
           as="legend"
-          class="text-5 font-semibold mb-2">
+          class="text-5 mb-2 font-semibold">
           Blocked Users
         </h4>
 

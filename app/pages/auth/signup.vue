@@ -27,10 +27,10 @@ onBeforeRouteLeave(() => {
           <Button
             v-for="provider in authProviders"
             :key="provider"
-            size="lg"
+            size="12"
             variant="link"
             hover="outline"
-            class="w-full h-14 grid place-items-center border border-b4/60 shadow-xs [&_svg]:opacity-80"
+            class="border-b4/60 grid h-14 w-full place-items-center border shadow-xs [&_svg]:opacity-80"
             @click="useSignIn(provider)">
             <icon
               :name="provider"
@@ -38,8 +38,8 @@ onBeforeRouteLeave(() => {
           </Button>
         </div>
         <div
-          class="relative text-center text-3 after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t after:border-b4">
-          <span class="relative z-10 bg-b1 px-2 text-bc/60">
+          class="text-3 after:border-b4 relative text-center after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t">
+          <span class="bg-b1 text-bc/60 relative z-10 px-2">
             Or continue with
           </span>
         </div>
@@ -67,23 +67,23 @@ onBeforeRouteLeave(() => {
               required
               @clear:input="password = ''" />
           </div>
-          <div class="w-full gap-y-2 grid">
+          <div class="grid w-full gap-y-2">
             <Button
               variant="neutral"
-              size="lg"
+              size="12"
               type="submit"
-              class="w-full font-medium col-span-full">
+              class="col-span-full w-full font-medium">
               Sign up with Email
             </Button>
 
             <div
-              class="size-full flex items-center justify-center gap-3 *:align-baseline">
+              class="flex size-full items-center justify-center gap-3 *:align-baseline">
               <Button
                 as="a"
                 variant="link"
-                size="lg"
+                size="12"
                 hover="link"
-                class="underline-offset-1.5 justify-center justify-self-start max-w-fit"
+                class="underline-offset-1.5 max-w-fit justify-center justify-self-start"
                 @click="navigateTo('/login')">
                 Logging in?
               </Button>
@@ -92,9 +92,9 @@ onBeforeRouteLeave(() => {
               <Button
                 as="a"
                 variant="link"
-                size="lg"
+                size="12"
                 hover="link"
-                class="underline-offset-1.5 justify-center justify-self-end max-w-fit"
+                class="underline-offset-1.5 max-w-fit justify-center justify-self-end"
                 @click="navigateTo('/password-reset')">
                 Forgot Password?
               </Button>

@@ -57,7 +57,7 @@ onMounted (() => {
     </label>
     <Element
       variant="none"
-      size="xxs"
+      size="6"
       :class="cn('text-0 relative grid place-items-center px-2 leading-3 lining-nums tabular-nums opacity-50 select-none', { 'opacity-100 font-medium': vote })">
       {{ calculatedVotes }}
     </Element>

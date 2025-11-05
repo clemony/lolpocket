@@ -21,26 +21,21 @@ const summoner = computed (() => {
 <template>
   <div
     class="pointer-events-none relative flex h-14 w-full grow  items-center justify-start gap-2.5 pr-3 pl-12 select-none">
-    <div class="absolute top-2.5 left-0 flex flex-col  items-center gap-2">
+    <div class="absolute left-0 flex size-9 flex-col items-center gap-2">
       <Popover>
         <PopoverTrigger
-          :disabled="!comment.authorPuuid"
-          size="c"
-          class="hover-ring z-4 size-max translate-y-px not-disabled:pointer-events-auto ">
-          <SummonerIcon
-            v-if="comment.authorPuuid"
-            class="pointer-events-none size-9 rounded-full" />
-          <Element
-            v-else
-            variant="neutral"
+          :disabled="!comment.authorPuuid">
+          <CommentAvatar
+            :comment
             size="c-9"
-            class="overflow-hidden">
-            <i-ui-oh-no class="absolute !size-9 " />
-          </Element>
+            class="hover-ring absolute z-4  translate-y-px not-disabled:pointer-events-auto " />
         </PopoverTrigger>
-        <LazySummonerPopover
-          v-if="comment.authorPuuid"
-          :puuid="comment.authorPuuid" />
+        <PopoverContent :side-offset="12">
+          <PopoverArrow />
+          <LazyCommentUserCard
+            v-if="comment.authorPuuid"
+            :comment="comment" />
+        </PopoverContent>
       </Popover>
       <CollapsibleTrigger
         :disabled="!comment.replies?.length"

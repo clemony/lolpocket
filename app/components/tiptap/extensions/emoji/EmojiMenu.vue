@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import type { Editor, EmojiItem } from '~tiptap'
-import { gitHubEmojis } from '@tiptap/extension-emoji'
-import { motion } from 'motion-v'
+import type { Editor, EmojiItem } from '#tiptap'
+import { filterEmojiArray } from '#tiptap'
 
 const { editor } = defineProps<{
   editor: Editor | null
@@ -82,7 +81,7 @@ const tab = shallowRef<number>(1)
 const filter = computed (() => {
   const emoji = ref<EmojiItem[]>([])
   const group = groups[tab.value]
-  console.log('🌱 - group:', group)
+  const emojiArray = filterEmojiArray(editor)
 
   if (!group)
     return null
@@ -92,15 +91,15 @@ const filter = computed (() => {
 
   if (group?.keywords?.length) {
     group?.keywords.forEach((k) => {
-      emoji.value.push(...gitHubEmojis.filter(e => e.tags.includes(k)))
+      emoji.value.push(...emojiArray.filter(e => e.tags.includes(k)))
     })
   }
 
   if (group?.groups?.length)
-    group.groups.forEach(k => emoji.value.push(...gitHubEmojis.filter(e => e.group.includes(k))))
+    group.groups.forEach(k => emoji.value.push(...emojiArray.filter(e => e.group.includes(k))))
 
   if (group?.name === 'Symbols & Miscellaneous')
-    emoji.value.push(...gitHubEmojis.filter(e => !e.tags?.length && !e.group?.length).filter(e => !e.tags.includes('Face')).concat(...gitHubEmojis.filter(e => e.group.includes('github'))))
+    emoji.value.push(...emojiArray.filter(e => !e.tags?.length && !e.group?.length).filter(e => !e.tags.includes('Face')).concat(...emojiArray.filter(e => e.group.includes('github'))))
 
   return emoji.value
 })
@@ -160,7 +159,7 @@ watch(() => tab.value, (newVal, oldVal) => {
         class="size-full overflow-auto ">
         <div
           :key="tab"
-          class=" grid  w-full  grid-cols-[repeat(auto-fill,minmax(28px,1fr))] justify-between gap-x-1 gap-y-0.5 overflow-auto  px-2  pt-14 pb-18">
+          class=" grid  w-full  grid-cols-[repeat(auto-fill,minmax(24px,1fr))] justify-between gap-x-1 gap-y-0.5 overflow-auto  px-2  pt-14 pb-18">
           <EmojiButton
             v-for="item, index in filter"
             :key="index"

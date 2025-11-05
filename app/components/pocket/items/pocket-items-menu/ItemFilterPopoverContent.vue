@@ -34,7 +34,7 @@ onMounted(() => scrollArea.value?.scrollTo({ top: 0 }))
         <div class=" relative  grid w-full auto-rows-auto items-start gap-3 pt-5 pb-7 pl-5">
           <Button
             v-if="is().filters.stats.length"
-            size="sq-xxs"
+            size="sq-6"
             hover="btn"
             variant="outline"
             class="absolute top-7 right-6"
@@ -56,7 +56,7 @@ onMounted(() => scrollArea.value?.scrollTo({ top: 0 }))
               Item Tier
               <Button
                 v-if="is().filters.rank"
-                size="sq-xxs"
+                size="sq-6"
                 variant="outline"
                 @click="is().filters.rank = null">
                 <icon
@@ -68,7 +68,7 @@ onMounted(() => scrollArea.value?.scrollTo({ top: 0 }))
               Categories
               <Button
                 v-if="is().filters.tags.length"
-                size="sq-xxs"
+                size="sq-6"
                 variant="outline"
                 hover="neutral"
                 @click="is().filters.tags.length = 0">
@@ -81,13 +81,13 @@ onMounted(() => scrollArea.value?.scrollTo({ top: 0 }))
               :clear="false"
               hover="btn"
               class="max-h-56 flex-col flex-wrap  items-start"
-              :size="['sq-xs', '8']"
+              :size="['sq-8', '8']"
               variant="ghost" />
             <!-- tags -->
             <ItemTagsFilter
               :clear="false"
               class="max-h-56 w-9/10 flex-col flex-wrap items-start gap-y-3"
-              :size="['sq-xs', '8']" />
+              :size="['sq-8', '8']" />
           </div>
         </div>
       </div>

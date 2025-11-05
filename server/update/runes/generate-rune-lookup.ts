@@ -1,6 +1,6 @@
 import fs from 'node:fs'
-import { markUpdate } from '../../../server'
 import { resolvePath } from '../resolvePath'
+import { markUpdate } from '../utils'
 import { pathIds } from './raw/pathIds'
 
 // pathIds is your existing object: path name -> array of perk IDs

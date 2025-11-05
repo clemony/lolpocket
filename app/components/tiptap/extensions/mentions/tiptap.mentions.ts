@@ -1,18 +1,17 @@
-import type { NodeViewProps } from '~tiptap'
-import { Mention, mergeAttributes, VueNodeViewRenderer } from '~tiptap'
-import MentionLinkRaw from '~/components/tiptap/extensions/mentions/MentionLink.vue'
+import type { NodeViewProps } from '@tiptap/core'
+import { constructMentionAttrs } from '#tiptap'
+import Mention from '@tiptap/extension-mention'
+import { mergeAttributes, VueNodeViewRenderer } from '@tiptap/vue-3'
+import MentionLinkRaw from '~/components/tiptap/extensions/mentions/lol-index/MentionEditorBadge.vue'
 
 const MentionLink = MentionLinkRaw as unknown as Component<NodeViewProps>
-export const MentionLeague = Mention.extend({
-  name: 'mentionChampionsAndItems',
+export const Mentions = Mention.extend({
+  name: 'mentions',
   addAttributes() {
     return {
-      item: {
-        id: 0,
-        key: '',
-        name: '',
-      },
-      label: '',
+      'data-id': 0,
+      'data-key': null,
+      'data-name': null,
     }
   },
   addNodeView() {
@@ -22,53 +21,25 @@ export const MentionLeague = Mention.extend({
   parseHTML() {
     return [
       {
-        tag: 'MentionLink',
+        tag: 'mentions',
       },
     ]
   },
   renderHTML({ HTMLAttributes, node }) {
-    const { item, label } = node.attrs
-
-    if (label === 'champion') {
-      return [
-        'a',
-        mergeAttributes(HTMLAttributes, {
-          'data-id': item.id,
-          'data-key': item.key,
-          'alt': item.name,
-          'class': 'mention',
-          'data-label': label,
-          'data-tip': `go to ${item.name}'s profile`,
-          'href': `/champions/${item.key}`,
-        }),
-
-        [
-          'img',
-          {
-            alt: item.name,
-            src: `/img/champions/${item.id}.webp`,
-          },
-        ],
-        item.name,
-      ]
-    }
-
+    const item = node.attrs
+    const attrs = constructMentionAttrs(item)
     return [
-      'span',
-      mergeAttributes(HTMLAttributes, {
-        'data-id': item.id,
-        'data-key': item.key,
-        'class': 'mention',
-        'data-label': label,
-      }),
+      'button',
+      mergeAttributes(HTMLAttributes, attrs),
+
       [
         'img',
         {
-          alt: item.name,
-          src: `/img/items/${item.id}.webp`,
+          alt: item['data-name'],
+          src: `/img/${attrs['data-label']}s/${item['data-id']}.webp`,
         },
       ],
-      item.name,
+      item['data-name'],
     ]
   }
 })

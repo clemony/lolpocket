@@ -14,7 +14,7 @@ export function handleRemoval(id: string) {
 
 function removeComment(list: CommentItem[], id: string) {
   for (const comment of list) {
-    if (comment.id === id) {
+    if (comment.id === id && comment.authorPuuid === as().account.puuid) {
       as().removedComments.push({
         authorPuuid: comment.authorPuuid,
         id: comment.id,
@@ -39,6 +39,7 @@ function removeComment(list: CommentItem[], id: string) {
         createdAt: comment.createdAt,
         downvotes: comment.downvotes,
         editedAt: comment.editedAt,
+        removed: true,
         replies: comment.replies,
         upvotes: comment.upvotes,
       }

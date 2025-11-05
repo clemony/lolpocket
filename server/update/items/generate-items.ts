@@ -1,6 +1,6 @@
 import fs from 'node:fs'
 import path from 'node:path'
-import type { ItemIndex, ItemLite } from '../../../types'
+import type { ItemIndex, ItemLite } from '../../../@types'
 import { resolvePath } from '../resolvePath'
 import { formatStats, handleWikiText, ludensPreProcess, markUpdate, normalizeItemData, stripEmpty } from '../utils'
 
@@ -42,14 +42,14 @@ async function buildItems() {
 
     index[id] = {
       id: item.id,
-      key: item.id.toString(),
+      key: 'item',
       name: item.name,
     }
 
     // Enrich the "lite" output
     simplified[id] = stripEmpty({
       id: item.id,
-      key: item.id.toString(),
+      key: 'item',
       name: item.name,
       aka: item.nicknames,
       cost: item.shop?.prices?.total ?? 0,

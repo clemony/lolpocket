@@ -18,24 +18,24 @@ const test = ref<PathName>(pathIndex[selectedPath.value])
 <template>
   <transition-slide
     group
-    class="size-full dr-2000 relative gap-14 flex pt-54 justify-center">
+    class="dr-2000 relative flex size-full justify-center gap-14 pt-54">
     <div
       v-if="selectedRune"
-      class="flex-col w-1/2 mt-22 w-114 max-h-165 max-w-114 tldr-80 z-0 relative"
+      class="tldr-80 relative z-0 mt-22 max-h-165 w-1/2 w-114 max-w-114 flex-col"
       :class="{ 'opacity-0 ': !selectedRune, 'opacity-100 ': selectedRune }">
       <RuneData
-        :key="selectedRune"
-        :rune-index="ix().runeById(selectedRune)" />
+        :id="selectedRune"
+        :key="selectedRune" />
 
       <CloseButton
         tip="Close"
-        class="btn-ghost absolute right-0 top-0 !shadow-none"
+        class="btn-ghost absolute top-0 right-0 !shadow-none"
         @click="selectedRune = null" />
     </div>
 
     <transition-fade
       group
-      class="order-first flex-col w-114 flex z-1 max-w-114 gap-8">
+      class="z-1 order-first flex w-114 max-w-114 flex-col gap-8">
       <RunesBlurb
         v-if="selectedPath"
         :key="selectedPath"
@@ -44,11 +44,11 @@ const test = ref<PathName>(pathIndex[selectedPath.value])
       <Tabs v-model:model-value="selectedPath">
         <TabsList
           base="indicator"
-          class="items-center h-19 justify-evenly grid-cols-5 w-full field-box bg-b2/40 !rounded-box shadow-warm">
+          class="field-box bg-b2/40 !rounded-box shadow-warm h-19 w-full grid-cols-5 items-center justify-evenly">
           <div
-            class="absolute size-full top-0 left-0 rounded-box overflow-hidden opacity-28">
+            class="rounded-box absolute top-0 left-0 size-full overflow-hidden opacity-28">
             <div
-              class="absolute size-full top-0 left-0 gradient mask-bottom-right"
+              class="gradient mask-bottom-right absolute top-0 left-0 size-full"
               :data-path="selectedPath" />
           </div>
 

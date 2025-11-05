@@ -14,7 +14,7 @@ const forwarded = useForwardProps(delegatedProps)
   <DialogTitle
     v-bind="forwarded"
     :class="
-      cn('text-5 font-semibold leading-none tracking-tight', props.class)
+      cn('text-[1.3rem] font-bold dst leading-none ', props.class)
     ">
     <slot />
   </DialogTitle>

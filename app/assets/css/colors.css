@@ -25,12 +25,18 @@
   --color-grandmaster: oklch(68.06% 0.1352 26.61);
   --color-challenger: oklch(83.25% 0.0787 213.4);
 
+  /* roles */
+  --color-jungle: oklch(77% 49% 126deg);
+  --color-support: oklch(80% 29% 184deg);
+  --color-top: oklch(68% 34% 26deg);
+
+
   --color-onhit: oklch(75% 27% 10deg);
   --color-vamp: oklch(58% 22% 17deg);
   --color-mana-hex: #145b96;
   --color-energy: #d0b800;
   --color-error: oklch(59.33% 0.1319 21.78);
-  --color-success: oklch(68% 51% 157deg), --color-top: #e0746b;
+  --color-success: oklch(68% 51% 157deg);
   --color-fighter: oklch(71% 30% 34deg);
   --color-apen: oklch(0.6 0.1303 32.32);
   --color-ad: oklch(0.6903 0.121 65.62);
@@ -85,6 +91,7 @@
   --enchanter: var(--color-enchanter);
   --ah: var(--color-ah);
   --success: var(--color-success);
+  --jungle: var(--color-jungle);
   --emerald: var(--color-emerald);
   --hp: var(--color-hp);
   --resolve: var(--color-resolve);
@@ -114,7 +121,6 @@
   --grandmaster: var(--color-grandmaster);
   --vanguard: var(--color-vanguard);
   --warden: var(--color-warden);
-
   --color-utility: var(--color-inspiration);
   --color-mobility: var(--color-precision);
   --color-toughness: var(--color-resolve);

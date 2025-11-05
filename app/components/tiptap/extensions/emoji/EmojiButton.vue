@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { EmojiItem } from '~tiptap'
+import type { EmojiItem } from '#tiptap'
 
 const { class: className, index, item } = defineProps<{
   class?: HTMLAttributes['class']
@@ -15,7 +15,7 @@ const { class: className, index, item } = defineProps<{
     variant="ghost"
     hover="inset"
     tabindex="0"
-    :class="cn('text-9', `index-${index}`)">
+    :class="cn('text-8', `index-${index}`)">
     <span
       v-if="item.emoji"
       class="dst drop-shadow-black/10">

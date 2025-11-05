@@ -27,6 +27,10 @@ const pocketTitleIndex = [
     },
   },
   {
+    title: 'polypocket',
+    feat: 'shared one pocket with multiple friends!'
+  },
+  {
     title: 'praiser',
     class: '',
     feat: 'donated',

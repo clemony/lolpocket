@@ -9,7 +9,7 @@ const {
   alignOffset,
   class: className,
   modelValue: mv,
-  size = 'lg',
+  size = '12',
   variant = 'input'
 } = defineProps<{
   class?: HTMLAttributes['class']
@@ -55,7 +55,7 @@ onMounted(() => {
         placeholder="all" />
       <icon
         name="select"
-        class="opacity-50 size-4 absolute group-hover/s:!text-bc  group-hover/s:opacity-100  right-1.5" />
+        class="group-hover/s:!text-bc absolute right-1.5 size-4  opacity-50  group-hover/s:opacity-100" />
     </SelectTrigger>
     <LazySelectContent
       :side="side"
@@ -63,7 +63,7 @@ onMounted(() => {
       :align="align"
       :align-offset="alignOffset"
       position="popper"
-      class="!w-[var(--reka-select-trigger-width)] top-[calc(var(--reka-select-trigger-height)+2px)]">
+      class="top-[calc(var(--reka-select-trigger-height)+2px)] !w-[var(--reka-select-trigger-width)]">
       <SelectGroup>
         <SelectLabel>Select main position</SelectLabel>
         <SelectItem

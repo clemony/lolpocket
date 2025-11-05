@@ -2,7 +2,7 @@
 import type { ChampionPosition } from '#shared/appdata'
 import { championPositions } from '#shared/appdata'
 
-const { class: className, position: p } = defineProps<{
+const { class: className, position: pos } = defineProps<{
   class?: HTMLAttributes['class']
   position: ChampionPosition | string | null
   noLabel?: boolean
@@ -10,12 +10,13 @@ const { class: className, position: p } = defineProps<{
   active?: boolean
   clear?: boolean
 }>()
+console.log('🌱 - p:', pos)
 
 const position = computed(() => {
-  if (typeof p !== 'string')
-    return p
+  if (typeof pos !== 'string')
+    return pos
 
-  return championPositions.find(p => p.name === (p ?? 'All'))
+  return championPositions.find(p => p.name === String(pos))
 })
 </script>
 
@@ -29,11 +30,10 @@ const position = computed(() => {
     :style="{
       backgroundColor: `${cs().filters.position && cs().filters.position === position.name || active ? position.color : 'transparent'}`,
     }">
-    <component
-      :is="`i-lol-${position?.name.toLowerCase()}`"
-      :class="cn('!size-4  dst shrink-0')" />
-
-    {{ position.name }}
+    <RoleIcon :position="position.name" />
+    <slot>
+      {{ position.name }}
+    </slot>
     <icon
       v-if="clear"
       name="x"

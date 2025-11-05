@@ -1,5 +1,6 @@
-import { EmojiList, MentionFilter } from '#components'
+import { EmojiList, MentionLeagueFilter } from '#components'
 import { computePosition, flip, shift } from '@floating-ui/dom'
+import { SuggestionPluginKey } from '@tiptap/suggestion'
 import { posToDOMRect, VueRenderer } from '@tiptap/vue-3'
 
 function updatePosition(editor, element) {
@@ -160,15 +161,16 @@ export const mentionSuggestions = [
         .filter(item => item.toLowerCase().startsWith(query.toLowerCase()))
         .slice(0, 5)
     },
-    render: renderSuggestion(MentionFilter),
+    render: renderSuggestion(MentionLeagueFilter),
   },
   {
     char: '#',
     items: ({ query }) => {
-      return [...ix().items, ...ix().champions]
-        .filter(item => item.name.toLowerCase().startsWith(query.toLowerCase()))
-        .slice(0, 15)
+      const arr = [...ix().items, ...ix().champions, ...ix().runes, ...ix().spells]
+
+      const { results } = useSimpleSearch(arr, computed(() => query))
+      return results.value.slice(0, 15)
     },
-    render: renderSuggestion(MentionFilter)
+    render: renderSuggestion(MentionLeagueFilter)
   },
 ]

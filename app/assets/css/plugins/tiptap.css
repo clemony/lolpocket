@@ -1,26 +1,96 @@
 @import 'tailwindcss';
 
 @utility tiptap {
-  @apply focus-within:outline-0;
+  @apply focus-within:outline-0 hover:!outline-0 hover:!ring-0 hover:!border-b3;
   p {
-    @apply focus-within:outline-0 leading-6 text-pretty;
+    @apply focus-within:outline-0 leading-6.5 text-pretty;
   }
 }
 
+/*       */
 @layer utilities {
+  .tiptap .mention,
   .mention {
-    @apply text-3 inline-flex w-max flex-nowrap font-medium gap-1  px-2  align-bottom  whitespace-nowrap  hover:underline cursor-pointer inset-shadow-[-1px_-1px_0px_rgba(0,0,0,0.06)] border border-b1 rounded-lg;
-
+    @apply text-3 inline-flex items-center  flex-nowrap  font-medium  w-max gap-1  align-bottom  whitespace-nowrap   rounded-lg;
    img {
-      @apply size-5 rounded-full inline-block mt-0.5 shadow-xs;
+      @apply size-5 rounded-full inline-block align-[-0.25em] shadow-xs;
     }
 
-    &[data-label="item"]{
-      @apply bg-precision/44;
+
+
+ &[data-label="champion"]{
+  @apply italic text-bc/80;
+
+}
+
+  &[data-role="mod"],
+    &[data-label="champion"],
+    &[data-label="item"],
+    &[data-label="spell"],
+  &[data-label="rune"]{
+    @apply inset-shadow-[-1px_-1px_0px_rgba(0,0,0,0.06)] shadow-xs  my-px px-2;
+  }
+
+  /* data labels */
+
+      &[data-tier="legendary"]{
+        @apply bg-ad/36 hover:bg-ad/70;
+      }
+
+    &[data-label="spell"],
+  &[data-tier="basic"],
+      &[data-tier="boots"],
+      &[data-tier="consumable"],
+      &[data-tier="special"],
+      &[data-tier="starter"]{
+        @apply bg-silver/15 hover:bg-silver/55;
+      }
+
+    &[data-path="precision"]{
+      @apply bg-precision/34 hover:bg-precision/70;
     }
 
-    &[data-label="champion"]{
-      @apply bg-challenger/44 hover:bg-challenger/80 tooltip tooltip-bottom;
+     &[data-tier="epic"],
+    &[data-path="inspiration"]{
+      @apply bg-inspiration/33 hover:bg-inspiration/70;
     }
+
+
+    &[data-path="sorcery"]{
+      @apply bg-sorcery/28 hover:bg-sorcery/70;
+    }
+
+    &[data-path="domination"]{
+      @apply bg-domination/26 hover:bg-domination/70;
+    }
+
+
+    &[data-path="resolve"]{
+      @apply bg-resolve/30 hover:bg-resolve/70;
+    }
+
+    &[data-role="top"]{
+      @apply bg-domination/33 hover:bg-domination/70;
+    }
+  &[data-role="middle"]{
+      @apply bg-sorcery/33 hover:bg-sorcery/70;
+    }
+
+    &[data-role="mod"],
+    &[data-role="bottom"]{
+      @apply bg-g/34 hover:bg-g/70;
+    }
+
+
+    &[data-role="jungle"]{
+      @apply bg-resolve/32 hover:bg-resolve/70;
+    }
+    &[data-role="support"]{
+      @apply bg-inspiration/36 hover:bg-inspiration/70;
+    }
+
+  }
+    .emoji {
+      @apply !text-7 align-bottom;
     }
 }

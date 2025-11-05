@@ -15,6 +15,10 @@ const menu = [
     icon: 'italic',
   },
   {
+    action: () => editor.commands.toggleUnderline(),
+    icon: 'lucide:underline',
+  },
+  {
     action: () => editor.commands.toggleStrike(),
     icon: 'strikethrough',
   },
@@ -33,7 +37,7 @@ const menu = [
 </script>
 
 <template>
-  <div class="tippy-content flex items-center gap-1">
+  <div class="tippy-content flex items-center gap-1 px-0">
     <template
       v-for="item, i in menu"
       :key="i">
@@ -45,7 +49,7 @@ const menu = [
         @click="item.action()">
         <icon
           :name="item.icon"
-          :class="cn('', { 'size-3.75 **:stroke-[2.6]': !['h1', 'h2'].includes(item.icon), 'size-4': item.icon === 'bldc' })" />
+          :class="cn('', { 'size-3.75 **:stroke-[2.6]': !['h1', 'h2'].includes(item.icon), 'size-4 ': item.icon === 'lucide:underline, bold' })" />
       </Button>
       <Separator
         v-if="item.name === 'separator'"

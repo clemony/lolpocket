@@ -4,9 +4,9 @@ const emit = defineEmits(['clear:input'])
 
 <template>
   <InputGroupButton
-    size="sq-xs"
+    size="sq-8"
     align="inline-end"
-    class="peer-has-placeholder-shown:opacity-0 mr-2 pointer-events-auto"
+    class="pointer-events-auto mr-2 peer-has-placeholder-shown:opacity-0"
     @click.stop="emit('clear:input')">
     <icon
       name="x"

@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { getSplash } from '~/utils/ui/getSplash'
+import { getSplash } from '~/utils/data/getSplash'
 
 export const useIndexStore = defineStore(
   'indexStore',
@@ -16,7 +16,7 @@ export const useIndexStore = defineStore(
     const shards = ref<Shard[]>([])
     const skin = ref<SkinRecord>({})
     const titles = ref<Record<string, string>>({})
-    const spells = ref<Record<string, string | number>[]>([])
+    const spells = ref<SpellIndex[]>([])
     const skins = ref<FullSkinRecord>({})
 
     async function loadPatch() {

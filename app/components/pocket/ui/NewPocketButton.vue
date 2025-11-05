@@ -4,10 +4,10 @@
 <template>
   <!-- new pocket -->
   <Button
-    v-tippy="{ content: 'Create & go to new pocket.', theme: 'default', placement: 'bottom-start', delay: 300 }"
+    v-tippy="{ content: 'Create & go to new pocket.', theme: 'neutral', placement: 'bottom-start', delay: 300 }"
     variant="ghost"
     hover="outline"
-    class="font-normal rounded-md h-8 pl-1 w-10  relative !gap-0 ">
+    class="relative h-8 w-10 !gap-0 rounded-md  pl-1 font-normal ">
     <icon
       name="add"
       class=" size-3  **:stroke-[1.9] " />

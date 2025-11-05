@@ -21,7 +21,7 @@ onMounted(() => {
   <TabLayout
     v-if="champion"
     icon
-    size="lg">
+    size="12">
     <!-- splash -->
 
     <template #background-slice>

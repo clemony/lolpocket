@@ -1,7 +1,7 @@
-import type { Champion } from '#shared/types/types.champion'
-import { markUpdate } from '#shared/utils/markUpdate'
+import type { Champion } from '@types'
 import fs from 'node:fs'
 import { resolvePath } from '../resolvePath'
+import { markUpdate } from '../utils/markUpdate'
 
 const outputFile = resolvePath(
   '#shared/appdata/index/champion-title-index.ts'

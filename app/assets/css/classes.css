@@ -3,6 +3,10 @@
 @import './theme.css';
 
 @layer components {
+
+.icon-grid-style {
+  @apply hover:ring-neutral hover:bg-neutral rounded-lg !size-full cursor-pointer  hover:ring;
+}
   .rune-hover:hover label,
   .rune-hover[aria-expanded='true'] label {
     @apply !grayscale-0 ring-neutral opacity-100 ring;

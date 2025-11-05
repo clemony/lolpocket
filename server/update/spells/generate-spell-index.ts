@@ -1,21 +1,24 @@
-import type { Spell } from '#shared/types'
 import fs from 'node:fs'
 import path from 'node:path'
-import { markUpdate } from '../../../server'
+import type { Spell } from '../../../@types'
+import { resolvePath } from '../resolvePath'
+import { markUpdate } from '../utils'
 
-const dataPath = path.resolve('scripts/data/spells.json')
+const dataPath = resolvePath('./spells/raw/spells.json')
+const outputPath = path.resolve('./shared/appdata/index/spell-index.ts')
 const raw: Spell[] = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
 
 const index = raw.map(spell => ({
   id: spell.id,
-  name: spell.name,
+  key: 'spell',
+  name: spell.name
 }))
 
 fs.writeFileSync(
-  './shared/appdata/index/spell-index.ts',
+  outputPath,
   `// ${markUpdate()}
 
-export const spellIndex: Record<string, string | number>[] = ${JSON.stringify(index, null, 2)}`
+export const spellIndex: SpellIndex[] = ${JSON.stringify(index, null, 2)}`
 )
 
 console.log('✅ spell-index.json written with id and name only')

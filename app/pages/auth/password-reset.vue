@@ -32,12 +32,12 @@ function handleReset() {
               placeholder="m@example.com"
               required />
           </div>
-          <div class="w-full gap-y-2 grid">
+          <div class="grid w-full gap-y-2">
             <Button
               variant="neutral"
-              size="lg"
+              size="12"
               type="submit"
-              class="w-full h-14 font-medium"
+              class="h-14 w-full font-medium"
               @click="handleReset()">
               Send Reset Link
             </Button>
@@ -45,9 +45,9 @@ function handleReset() {
             <Button
               as="a"
               variant="link"
-              size="lg"
+              size="12"
               hover="link"
-              class="underline-offset-1.5 justify-center gap-3 h-14 justify-self-start w-full"
+              class="underline-offset-1.5 h-14 w-full justify-center gap-3 justify-self-start"
               @click="navigateTo('/login')">
               Remembered it? Log in
             </Button>

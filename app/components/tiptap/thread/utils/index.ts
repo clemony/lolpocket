@@ -1,6 +1,0 @@
-export * from './postComment'
-export * from './removeComment'
-export * from './renderCommentHTML'
-export * from './replyComment'
-export * from './updateComment'
-export * from './updateCommentVote'

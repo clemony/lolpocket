@@ -1,309 +1,309 @@
-// Updated Patch 25.17 - 09/04/2025 06:01:08 PM CDT
+// Updated Patch 25.21 - 11/02/2025 05:06:32 PM CST
 
 export const runeIndex: RuneIndex[] = [
   {
-    id: 8437,
-    name: 'Grasp of the Undying',
-    path: 'Resolve',
+    "id": 8437,
+    "key": "rune",
+    "name": "Grasp of the Undying"
   },
   {
-    id: 8439,
-    name: 'Aftershock',
-    path: 'Resolve',
+    "id": 8439,
+    "key": "rune",
+    "name": "Aftershock"
   },
   {
-    id: 8465,
-    name: 'Guardian',
-    path: 'Resolve',
+    "id": 8465,
+    "key": "rune",
+    "name": "Guardian"
   },
   {
-    id: 8446,
-    name: 'Demolish',
-    path: 'Resolve',
+    "id": 8446,
+    "key": "rune",
+    "name": "Demolish"
   },
   {
-    id: 8463,
-    name: 'Font of Life',
-    path: 'Resolve',
+    "id": 8463,
+    "key": "rune",
+    "name": "Font of Life"
   },
   {
-    id: 8401,
-    name: 'Shield Bash',
-    path: 'Resolve',
+    "id": 8401,
+    "key": "rune",
+    "name": "Shield Bash"
   },
   {
-    id: 8429,
-    name: 'Conditioning',
-    path: 'Resolve',
+    "id": 8429,
+    "key": "rune",
+    "name": "Conditioning"
   },
   {
-    id: 8444,
-    name: 'Second Wind',
-    path: 'Resolve',
+    "id": 8444,
+    "key": "rune",
+    "name": "Second Wind"
   },
   {
-    id: 8473,
-    name: 'Bone Plating',
-    path: 'Resolve',
+    "id": 8473,
+    "key": "rune",
+    "name": "Bone Plating"
   },
   {
-    id: 8451,
-    name: 'Overgrowth',
-    path: 'Resolve',
+    "id": 8451,
+    "key": "rune",
+    "name": "Overgrowth"
   },
   {
-    id: 8453,
-    name: 'Revitalize',
-    path: 'Resolve',
+    "id": 8453,
+    "key": "rune",
+    "name": "Revitalize"
   },
   {
-    id: 8242,
-    name: 'Unflinching',
-    path: 'Resolve',
+    "id": 8242,
+    "key": "rune",
+    "name": "Unflinching"
   },
   {
-    id: 8112,
-    name: 'Electrocute',
-    path: 'Domination',
+    "id": 8112,
+    "key": "rune",
+    "name": "Electrocute"
   },
   {
-    id: 8128,
-    name: 'Dark Harvest',
-    path: 'Domination',
+    "id": 8128,
+    "key": "rune",
+    "name": "Dark Harvest"
   },
   {
-    id: 9923,
-    name: 'Hail of Blades',
-    path: 'Domination',
+    "id": 9923,
+    "key": "rune",
+    "name": "Hail of Blades"
   },
   {
-    id: 8126,
-    name: 'Cheap Shot',
-    path: 'Domination',
+    "id": 8126,
+    "key": "rune",
+    "name": "Cheap Shot"
   },
   {
-    id: 8139,
-    name: 'Taste of Blood',
-    path: 'Domination',
+    "id": 8139,
+    "key": "rune",
+    "name": "Taste of Blood"
   },
   {
-    id: 8143,
-    name: 'Sudden Impact',
-    path: 'Domination',
+    "id": 8143,
+    "key": "rune",
+    "name": "Sudden Impact"
   },
   {
-    id: 8137,
-    name: 'Sixth Sense',
-    path: 'Domination',
+    "id": 8137,
+    "key": "rune",
+    "name": "Sixth Sense"
   },
   {
-    id: 8140,
-    name: 'Grisly Mementos',
-    path: 'Domination',
+    "id": 8140,
+    "key": "rune",
+    "name": "Grisly Mementos"
   },
   {
-    id: 8141,
-    name: 'Deep Ward',
-    path: 'Domination',
+    "id": 8141,
+    "key": "rune",
+    "name": "Deep Ward"
   },
   {
-    id: 8135,
-    name: 'Treasure Hunter',
-    path: 'Domination',
+    "id": 8135,
+    "key": "rune",
+    "name": "Treasure Hunter"
   },
   {
-    id: 8105,
-    name: 'Relentless Hunter',
-    path: 'Domination',
+    "id": 8105,
+    "key": "rune",
+    "name": "Relentless Hunter"
   },
   {
-    id: 8106,
-    name: 'Ultimate Hunter',
-    path: 'Domination',
+    "id": 8106,
+    "key": "rune",
+    "name": "Ultimate Hunter"
   },
   {
-    id: 8005,
-    name: 'Press the Attack',
-    path: 'Precision',
+    "id": 8005,
+    "key": "rune",
+    "name": "Press the Attack"
   },
   {
-    id: 8008,
-    name: 'Lethal Tempo',
-    path: 'Precision',
+    "id": 8008,
+    "key": "rune",
+    "name": "Lethal Tempo"
   },
   {
-    id: 8021,
-    name: 'Fleet Footwork',
-    path: 'Precision',
+    "id": 8021,
+    "key": "rune",
+    "name": "Fleet Footwork"
   },
   {
-    id: 8010,
-    name: 'Conqueror',
-    path: 'Precision',
+    "id": 8010,
+    "key": "rune",
+    "name": "Conqueror"
   },
   {
-    id: 9101,
-    name: 'Absorb Life',
-    path: 'Precision',
+    "id": 9101,
+    "key": "rune",
+    "name": "Absorb Life"
   },
   {
-    id: 9111,
-    name: 'Triumph',
-    path: 'Precision',
+    "id": 9111,
+    "key": "rune",
+    "name": "Triumph"
   },
   {
-    id: 8009,
-    name: 'Presence of Mind',
-    path: 'Precision',
+    "id": 8009,
+    "key": "rune",
+    "name": "Presence of Mind"
   },
   {
-    id: 9104,
-    name: 'Legend: Alacrity',
-    path: 'Precision',
+    "id": 9104,
+    "key": "rune",
+    "name": "Legend: Alacrity"
   },
   {
-    id: 9105,
-    name: 'Legend: Haste',
-    path: 'Precision',
+    "id": 9105,
+    "key": "rune",
+    "name": "Legend: Haste"
   },
   {
-    id: 9103,
-    name: 'Legend: Bloodline',
-    path: 'Precision',
+    "id": 9103,
+    "key": "rune",
+    "name": "Legend: Bloodline"
   },
   {
-    id: 8014,
-    name: 'Coup de Grace',
-    path: 'Precision',
+    "id": 8014,
+    "key": "rune",
+    "name": "Coup de Grace"
   },
   {
-    id: 8017,
-    name: 'Cut Down',
-    path: 'Precision',
+    "id": 8017,
+    "key": "rune",
+    "name": "Cut Down"
   },
   {
-    id: 8299,
-    name: 'Last Stand',
-    path: 'Precision',
+    "id": 8299,
+    "key": "rune",
+    "name": "Last Stand"
   },
   {
-    id: 8214,
-    name: 'Summon Aery',
-    path: 'Sorcery',
+    "id": 8214,
+    "key": "rune",
+    "name": "Summon Aery"
   },
   {
-    id: 8229,
-    name: 'Arcane Comet',
-    path: 'Sorcery',
+    "id": 8229,
+    "key": "rune",
+    "name": "Arcane Comet"
   },
   {
-    id: 8230,
-    name: 'Phase Rush',
-    path: 'Sorcery',
+    "id": 8230,
+    "key": "rune",
+    "name": "Phase Rush"
   },
   {
-    id: 8224,
-    name: 'Axiom Arcanist',
-    path: 'Sorcery',
+    "id": 8224,
+    "key": "rune",
+    "name": "Axiom Arcanist"
   },
   {
-    id: 8226,
-    name: 'Manaflow Band',
-    path: 'Sorcery',
+    "id": 8226,
+    "key": "rune",
+    "name": "Manaflow Band"
   },
   {
-    id: 8275,
-    name: 'Nimbus Cloak',
-    path: 'Sorcery',
+    "id": 8275,
+    "key": "rune",
+    "name": "Nimbus Cloak"
   },
   {
-    id: 8210,
-    name: 'Transcendence',
-    path: 'Sorcery',
+    "id": 8210,
+    "key": "rune",
+    "name": "Transcendence"
   },
   {
-    id: 8234,
-    name: 'Celerity',
-    path: 'Sorcery',
+    "id": 8234,
+    "key": "rune",
+    "name": "Celerity"
   },
   {
-    id: 8233,
-    name: 'Absolute Focus',
-    path: 'Sorcery',
+    "id": 8233,
+    "key": "rune",
+    "name": "Absolute Focus"
   },
   {
-    id: 8237,
-    name: 'Scorch',
-    path: 'Sorcery',
+    "id": 8237,
+    "key": "rune",
+    "name": "Scorch"
   },
   {
-    id: 8232,
-    name: 'Waterwalking',
-    path: 'Sorcery',
+    "id": 8232,
+    "key": "rune",
+    "name": "Waterwalking"
   },
   {
-    id: 8236,
-    name: 'Gathering Storm',
-    path: 'Sorcery',
+    "id": 8236,
+    "key": "rune",
+    "name": "Gathering Storm"
   },
   {
-    id: 8351,
-    name: 'Glacial Augment',
-    path: 'Inspiration',
+    "id": 8351,
+    "key": "rune",
+    "name": "Glacial Augment"
   },
   {
-    id: 8360,
-    name: 'Unsealed Spellbook',
-    path: 'Inspiration',
+    "id": 8360,
+    "key": "rune",
+    "name": "Unsealed Spellbook"
   },
   {
-    id: 8369,
-    name: 'First Strike',
-    path: 'Inspiration',
+    "id": 8369,
+    "key": "rune",
+    "name": "First Strike"
   },
   {
-    id: 8306,
-    name: 'Hextech Flashtraption',
-    path: 'Inspiration',
+    "id": 8306,
+    "key": "rune",
+    "name": "Hextech Flashtraption"
   },
   {
-    id: 8304,
-    name: 'Magical Footwear',
-    path: 'Inspiration',
+    "id": 8304,
+    "key": "rune",
+    "name": "Magical Footwear"
   },
   {
-    id: 8321,
-    name: 'Cash Back',
-    path: 'Inspiration',
+    "id": 8321,
+    "key": "rune",
+    "name": "Cash Back"
   },
   {
-    id: 8313,
-    name: 'Triple Tonic',
-    path: 'Inspiration',
+    "id": 8313,
+    "key": "rune",
+    "name": "Triple Tonic"
   },
   {
-    id: 8352,
-    name: 'Time Warp Tonic',
-    path: 'Inspiration',
+    "id": 8352,
+    "key": "rune",
+    "name": "Time Warp Tonic"
   },
   {
-    id: 8345,
-    name: 'Biscuit Delivery',
-    path: 'Inspiration',
+    "id": 8345,
+    "key": "rune",
+    "name": "Biscuit Delivery"
   },
   {
-    id: 8347,
-    name: 'Cosmic Insight',
-    path: 'Inspiration',
+    "id": 8347,
+    "key": "rune",
+    "name": "Cosmic Insight"
   },
   {
-    id: 8410,
-    name: 'Approach Velocity',
-    path: 'Inspiration',
+    "id": 8410,
+    "key": "rune",
+    "name": "Approach Velocity"
   },
   {
-    id: 8316,
-    name: 'Jack Of All Trades',
-    path: 'Inspiration',
-  },
+    "id": 8316,
+    "key": "rune",
+    "name": "Jack Of All Trades"
+  }
 ]

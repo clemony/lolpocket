@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ORIENTATION_INJECTION_KEY } from './injectionKeys'
+import { ORIENTATION_INJECTION_KEY } from './dockInjectionKeys'
 
 const orientation = inject(ORIENTATION_INJECTION_KEY, 'vertical')
 </script>

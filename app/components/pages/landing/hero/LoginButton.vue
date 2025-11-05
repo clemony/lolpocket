@@ -12,7 +12,7 @@ const viewLogin = ref(false)
     <Label
       :button="true"
       variant="outline"
-      size="lg"
+      size="12"
       class="hover:bgneutral hover:text-nc !font-sans">
       <input
         v-model="viewLogin"

@@ -22,10 +22,10 @@ const password = ref('')
           <Button
             v-for="provider in authProviders"
             :key="provider"
-            size="lg"
+            size="12"
             variant="link"
             hover="outline"
-            class="w-full h-14 grid place-items-center border border-b4/60 shadow-xs [&_svg]:opacity-80"
+            class="border-b4/60 grid h-14 w-full place-items-center border shadow-xs [&_svg]:opacity-80"
             @click="useSignIn(provider)">
             <icon
               :name="provider"
@@ -33,8 +33,8 @@ const password = ref('')
           </Button>
         </div>
         <div
-          class="relative text-center text-3 after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t after:border-b4">
-          <span class="relative z-10 bg-b1 px-2 text-bc/60">
+          class="text-3 after:border-b4 relative text-center after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t">
+          <span class="bg-b1 text-bc/60 relative z-10 px-2">
             Or continue with
           </span>
         </div>
@@ -55,7 +55,7 @@ const password = ref('')
               <Label html-for="password">Password</Label>
               <NuxtLink
                 to="/password-reset"
-                class="ml-auto text-2 underline-offset-1.5 hover:underline">
+                class="text-2 underline-offset-1.5 ml-auto hover:underline">
                 Forgot your password?
               </NuxtLink>
             </div>
@@ -70,7 +70,7 @@ const password = ref('')
           <div class="w-full space-y-2">
             <Button
               variant="neutral"
-              size="lg"
+              size="12"
               type="submit"
               class="w-full font-medium">
               Login
@@ -78,9 +78,9 @@ const password = ref('')
             <Button
               as="a"
               variant="link"
-              size="lg"
+              size="12"
               hover="link"
-              class="underline-offset-1.5 justify-center w-full"
+              class="underline-offset-1.5 w-full justify-center"
               @click="navigateTo('/signup')">
               Signing up?
             </Button>

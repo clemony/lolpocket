@@ -1,39 +1,107 @@
 <script setup lang="ts">
 import type { SeparatorProps } from 'reka-ui'
+import type { VariantProps } from 'tailwind-variants'
 import { Separator } from 'reka-ui'
+import { tv } from 'tailwind-variants'
 
-const props = defineProps<
-  SeparatorProps & { class?: HTMLAttributes['class'], label?: string }
->()
+type SeparatorVariants = VariantProps<typeof separatorVariants>
+
+const props = withDefaults(defineProps<
+  SeparatorProps & {
+    class?: HTMLAttributes['class']
+    label?: string
+    color?: SeparatorVariants['color']
+    placement?: SeparatorVariants['placement']
+    size?: SeparatorVariants['size']
+  }
+>(), {
+  color: 'base'
+})
+
+const separatorVariants = tv({
+  defaultVariants: {
+    color: 'base',
+    placement: 'start',
+    size: 0,
+  },
+  slots: {
+    label: '!text-0 font-medium whitespace-nowrap select-none',
+    separator: 'flex-1 shrink-0 bg-current',
+    wrapper: 'relative flex w-full shrink-0 items-center',
+  },
+  variants: {
+    color: {
+      base: {
+        label: 'text-bc/60',
+        separator: 'bg-b3/60',
+      },
+      neutral: {
+        label: 'text-nc/50',
+        separator: 'bg-nc/10',
+      },
+    },
+    placement: {
+      center: { label: 'order-2 ml-2', separator: 'order-1' },
+      end: { label: 'order-last', separator: 'order-first' },
+      start: { label: 'order-first mr-2', separator: 'order-last' },
+    },
+    size: {
+      0: { wrapper: 'h-px' },
+      1: { wrapper: 'h-2' },
+      2: { wrapper: 'h-4' },
+      3: { wrapper: 'h-5' },
+      4: { wrapper: 'h-6' },
+    },
+  },
+})
 
 const delegatedProps = computed(() => {
   const { class: _, ...delegated } = props
-
   return delegated
 })
+
+const styles = separatorVariants({
+  color: props.color,
+  placement: props.placement,
+  size: props.size,
+})
+
+const { label, separator, wrapper } = styles
 </script>
 
 <template>
-  <Separator
-    v-bind="delegatedProps"
-    :class="
-      cn(
-        'shrink-0 bg-b3/60 border-b2  relative',
+  <div
+    :class="cn(
+      wrapper(),
+      props.orientation === 'vertical'
+        ? 'flex-col justify-center h-full w-px'
+        : 'flex-row items-center w-full',
+      props.class,
+    )">
+    <!-- First separator -->
+    <Separator
+      v-bind="delegatedProps"
+      :orientation="props.orientation"
+      :class="cn(
+        separator(),
         props.orientation === 'vertical' ? 'w-px h-full' : 'h-px w-full',
-        props.class,
-      )
-    ">
+      )" />
+
+    <!-- Label -->
     <span
       v-if="props.label"
-      :class="
-        cn(
-          'text-2 text-bc/60  absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex justify-center items-center',
-          props.orientation === 'vertical'
-            ? 'w-[1px] px-1 py-2'
-            : 'h-[1px] py-1 px-2',
-        )
-      ">
+      :class="cn(label())">
       {{ props.label }}
     </span>
-  </Separator>
+
+    <!-- Second separator (for center placement only) -->
+    <Separator
+      v-if="props.placement === 'center'"
+      v-bind="delegatedProps"
+      :orientation="props.orientation"
+      :class="cn(
+        separator(),
+        props.orientation === 'vertical' ? 'w-px h-full' : 'h-px w-full',
+      )" />
+  </div>
 </template>

@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url'
 export default defineNuxtConfig({
   alias: {
     '#server': fileURLToPath(new URL('./server', import.meta.url)),
+    '#tiptap': fileURLToPath(new URL('./app/components/tiptap', import.meta.url)),
     '@app': fileURLToPath(new URL('./app', import.meta.url)),
     '@appdata': fileURLToPath(new URL('./shared/appdata', import.meta.url)),
     '@base': fileURLToPath(new URL('./app/base', import.meta.url)),
@@ -11,12 +12,11 @@ export default defineNuxtConfig({
     '@composables': fileURLToPath(new URL('./app/composables', import.meta.url)),
     '@css': fileURLToPath(new URL('./app/assets/css', import.meta.url)),
     '@plugins': fileURLToPath(new URL('./app/plugins', import.meta.url)),
-    '@schema': fileURLToPath(new URL('./schema', import.meta.url)),
+    '@schema': fileURLToPath(new URL('./@schema', import.meta.url)),
     '@scripts': fileURLToPath(new URL('./scripts', import.meta.url)),
-    '@types': fileURLToPath(new URL('./types', import.meta.url)),
+    '@types': fileURLToPath(new URL('./@types', import.meta.url)),
     '@utils': fileURLToPath(new URL('./app/utils', import.meta.url)),
     '@variants': fileURLToPath(new URL('./app/assets/variants', import.meta.url)),
-    '~tiptap': fileURLToPath(new URL('./app/components/tiptap', import.meta.url)),
   },
   components: [
     {
@@ -24,7 +24,7 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
     {
-      path: './layout',
+      path: './layout-components',
       pathPrefix: false,
     },
     {
@@ -60,7 +60,7 @@ export default defineNuxtConfig({
     format: ['webp'],
   },
   imports: {
-    dirs: ['#shared/utils', '#shared/types', '@variants', '@types', '@schema'],
+    dirs: ['#shared/utils', '#shared/types', '@variants', '@types', '@schema', '@appdata/index'],
     presets: [
       {
 
@@ -123,7 +123,7 @@ export default defineNuxtConfig({
     componentPrefix: 'i',
   },
   typescript: {
-    typeCheck: true,
+    typeCheck: true
   },
   vite: {
     build: {

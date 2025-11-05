@@ -1,7 +1,5 @@
 <script lang="ts" setup>
-import type { DraggableEvent, UseDraggableReturn } from 'vue-draggable-plus'
-import { ChampionCard } from '#components'
-import { motion } from 'motion-v'
+import type { DraggableEvent } from 'vue-draggable-plus'
 import { vDraggable } from 'vue-draggable-plus'
 
 const route = useRoute()
@@ -18,7 +16,7 @@ function onSpill(e: DraggableEvent) {
 </script>
 
 <template>
-  <div class="inset-x-1 h-36 overflow-x-hidden relative">
+  <div class="relative inset-x-1 h-36 overflow-x-hidden">
     <TransitionScalePop
       v-draggable="[
         pocket.champions, {
@@ -39,20 +37,25 @@ function onSpill(e: DraggableEvent) {
           filter: 'undraggable',
           onSpill,
         }]"
-      class="absolute inset-0 py-2 h-36 grid-rows-1 grid-cols-[repeat(auto-fill,minmax(170px,1fr))] grid overflow-y-hidden overflow-x-scroll items-center">
+      class="absolute inset-0 grid h-36 grid-cols-[repeat(auto-fill,minmax(170px,1fr))] grid-rows-1 items-center overflow-x-scroll overflow-y-hidden py-2">
       <template v-if="pocket.champions.length">
-        <ChampionCard
+        <Card
           v-for="champion in pocket.champions"
           :id="champion"
           :key="champion"
-          :k="champion" />
+          class=" relative grid h-36 w-[170px] shrink-0 place-items-center overflow-hidden inset-shadow-sm shadow-sm shadow-black/10 inset-shadow-black/10 drop-shadow-sm ">
+          <Champion
+            :k="champion"
+            type="centered"
+            class="absolute size-[260%] translate-y-[16%] object-center" />
+        </Card>
       </template>
       <div
         v-else
-        class="undraggable select-none size-full grid place-items-center">
+        class="undraggable grid size-full place-items-center select-none">
         <Badge
-          size="lg"
-          class="absolute pointer-events-none"
+          size="12"
+          class="pointer-events-none absolute"
           variant="outline">
           Pocket is championless.
         </Badge>

@@ -10,6 +10,6 @@ const forwarded = useForwardPropsEmits(props, emits)
 
 <template>
   <TabsRoot v-bind="forwarded">
-    <slot />
+    <slot :model-value="forwarded.modelValue" />
   </TabsRoot>
 </template>

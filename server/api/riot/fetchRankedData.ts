@@ -1,4 +1,4 @@
-import type { RankedEntry } from '~~/types'
+import type { RankedEntry } from '~~/@types'
 import { fetchLeagueEntriesByPuuid } from '../riotClient'
 
 export interface RankedResponse {

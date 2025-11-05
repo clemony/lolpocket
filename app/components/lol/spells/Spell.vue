@@ -24,7 +24,7 @@ watch(
   <Label
     base="btn"
     :variant="variant"
-    size="sq-xl"
+    size="sq-14"
     :class="
       cn(
         'size-14 overflow-hidden group-hover/select:bg-b3/50',
@@ -37,7 +37,7 @@ watch(
       :title="name"
       :alt="name"
       :src="`/img/spells/${name}.webp`"
-      class="size-full absolute"
+      class="absolute size-full"
       @load="loaded = true" />
     <!--
     <icon

@@ -11,7 +11,7 @@ const pocket = computed(() => p)
 <template>
   <Label
     v-if="pocket"
-    v-tippy="{ content: pocket.location?.pinned === true ? 'Unpin' : 'Pin', theme: 'default', placement: 'bottom' }"
+    v-tippy="{ content: pocket.location?.pinned === true ? 'Unpin' : 'Pin', theme: 'neutral', placement: 'bottom' }"
     variant="ghost"
     base="btn"
     :size
@@ -24,14 +24,14 @@ const pocket = computed(() => p)
 
     <icon
       name="pin"
-      class="group-hover/pin:opacity-0 peer-checked:opacity-0 *:stroke-[1.8]" />
+      class="*:stroke-[1.8] group-hover/pin:opacity-0 peer-checked:opacity-0" />
 
     <icon
       name="pin-solid"
-      class="opacity-0 peer-checked:opacity-90 group-hover/pin:not-checked:opacity-100 group-hover/pin:not-checked:text-bc/50" />
+      class="group-hover/pin:not-checked:text-bc/50 opacity-0 group-hover/pin:not-checked:opacity-100 peer-checked:opacity-90" />
 
     <icon
       name="iconoir:pin-slash-solid"
-      class="opacity-0 group-hover/pin:peer-checked:opacity-80 peer-checked:text-bc" />
+      class="peer-checked:text-bc opacity-0 group-hover/pin:peer-checked:opacity-80" />
   </Label>
 </template>

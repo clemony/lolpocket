@@ -1,0 +1,56 @@
+<script setup lang="ts">
+const { stat } = defineProps<{
+  stat: StatValues
+  value?: Record<string, number>
+}>()
+
+const pClass = 'justify-between w-full flex items-center gap-10'
+</script>
+
+<template>
+  <div class="field-box bg-b1/80 border-b3 w-54 border px-3.5 pt-4 pb-2 bg-blend-screen drop-shadow-none">
+    <div class="text-2 field-legend dst text-shadow-sm -ml-2 flex items-center !gap-1">
+      <hicon
+        v-if="stat.icon"
+        :name="stat.icon"
+        class="!size-3.5" />
+      {{ stat.name }}
+    </div>
+
+    <div class="">
+      <p
+        v-if=" stat.description"
+        class="text-2 inline-block py-3  text-wrap whitespace-normal">
+        {{ stat.description }}
+      </p>
+      <template v-if="!stat.values?.max">
+        <p :class="pClass">
+          Flat
+          <span>
+            {{ stat.values?.flat || stat.values?.current }}
+          </span>
+        </p>
+      </template>
+      <template v-else>
+        <p :class="pClass">
+          Level 1
+          <span>
+            {{ stat.values?.min }}
+          </span>
+        </p>
+        <p :class="pClass">
+          Level 18
+          <span>
+            {{ stat.values?.max }}
+          </span>
+        </p>
+        <p :class="pClass">
+          per Lv.
+          <span>
+            +{{ stat.values?.perLevel }}
+          </span>
+        </p>
+      </template>
+    </div>
+  </div>
+</template>

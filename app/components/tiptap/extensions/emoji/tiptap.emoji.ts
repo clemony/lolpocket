@@ -1,14 +1,24 @@
+import { filterEmojiArray } from '#tiptap'
 import { computePosition } from '@floating-ui/dom'
 import { VueRenderer } from '@tiptap/vue-3'
 import EmojiList from './EmojiList.vue'
 
 export const emojiSuggestions = {
+  command: ({ editor, props, range }) => {
+    // Replace the trigger and query with the emoji character
+    editor
+      .chain()
+      .focus()
+      .insertContentAt(range, `${props.emoji} `)// props.emoji = actual emoji char
+      .run()
+  },
   items: ({ editor, query }) => {
-    return editor.storage.emoji.emojis
+    return filterEmojiArray(editor)
       .filter(({ shortcodes, tags }) => {
+        const q = query.toLowerCase()
         return (
-          shortcodes.find(shortcode => shortcode.startsWith(query.toLowerCase()))
-          || tags.find(tag => tag.startsWith(query.toLowerCase()))
+          shortcodes.some(s => s.startsWith(q))
+          || tags.some(t => t.startsWith(q))
         )
       })
       .slice(0, 20)
@@ -17,15 +27,10 @@ export const emojiSuggestions = {
     let component
 
     function repositionComponent(clientRect) {
-      if (!component || !component.element) {
+      if (!component || !component.element)
         return
-      }
 
-      const virtualElement = {
-        getBoundingClientRect() {
-          return clientRect
-        },
-      }
+      const virtualElement = { getBoundingClientRect: () => clientRect }
 
       computePosition(virtualElement, component.element, {
         placement: 'bottom-start',
@@ -40,27 +45,23 @@ export const emojiSuggestions = {
 
     return {
       onExit() {
-        if (document.body.contains(component.element)) {
+        if (document.body.contains(component.element))
           document.body.removeChild(component.element)
-        }
         component.destroy()
       },
       onKeyDown(props) {
         if (props.event.key === 'Escape') {
           document.body.removeChild(component.element)
           component.destroy()
-
           return true
         }
-
         return component.ref?.onKeyDown(props)
       },
-      onStart: (props) => {
+      onStart(props) {
         component = new VueRenderer(EmojiList, {
           editor: props.editor,
           props,
         })
-
         document.body.appendChild(component.element)
         repositionComponent(props.clientRect())
       },

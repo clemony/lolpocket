@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Editor } from '~tiptap'
+import type { Editor } from '#tiptap'
 import { findParentNode, isTextSelection, posToDOMRect } from '@tiptap/core'
 import { BubbleMenu } from '@tiptap/vue-3/menus'
 

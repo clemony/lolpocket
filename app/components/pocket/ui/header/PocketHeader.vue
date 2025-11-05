@@ -16,8 +16,8 @@ const pocket = computed(() =>
         <PopoverTrigger
           variant="ghost"
           hover="base"
-          size="lg"
-          class="w-max min-w-54 pointer-events-auto rounded-xl ">
+          size="12"
+          class="pointer-events-auto w-max min-w-54 rounded-xl ">
           <h1 class="text-10 dst !font-bold tracking-tight text-nowrap">
             {{ pocket.name }}
           </h1>
@@ -28,17 +28,17 @@ const pocket = computed(() =>
           side="bottom"
           :side-offset="0"
           position-strategy="absolute"
-          class="p-0 shadow-none pointer-events-auto  drop-shadow-none w-min  min-w-[calc(var(--reka-popover-trigger-width)+70px)] -translate-y-[var(--reka-popover-trigger-height)] h-[var(--reka-popover-trigger-height)]">
+          class="pointer-events-auto h-[var(--reka-popover-trigger-height)] w-min  min-w-[calc(var(--reka-popover-trigger-width)+70px)] -translate-y-[var(--reka-popover-trigger-height)]  p-0 shadow-none drop-shadow-none">
           <Input
             v-model="pocket.name"
             size="header"
-            class=" size-full **:font-bold field-sizing-content  **:tracking-tight"
+            class=" field-sizing-content size-full **:font-bold  **:tracking-tight"
             @clear:input="pocket.name = ''">
             <template #2>
               <Button
                 title="No brain? Meet button."
                 variant="ghost"
-                class="size-7 btn-square"
+                class="btn-square size-7"
                 @click="pocket.name = generateName()">
                 <icon
                   name="shuffle"
@@ -50,14 +50,14 @@ const pocket = computed(() =>
       </Popover>
       <PocketPinButton
         :pocket
-        size="sq-xs"
+        size="sq-8"
         class="" />
     </template>
 
     <!-- header sub-text -->
 
     <template #subheader>
-      <div class="flex gap-4 items-center pointer-events-auto pl-4">
+      <div class="pointer-events-auto flex items-center gap-4 pl-4">
         <PocketLikes :pocket />
       </div>
     </template>

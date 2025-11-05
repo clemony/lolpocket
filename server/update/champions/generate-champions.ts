@@ -1,4 +1,4 @@
-import type { Ability, Champion } from '@types'
+import type { Ability, Champion } from '~~/@types'
 import { markUpdate } from '#shared/utils/markUpdate'
 import fs from 'node:fs'
 import path from 'node:path'

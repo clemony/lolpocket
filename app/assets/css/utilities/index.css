@@ -1,4 +1,5 @@
 @import './utilities.css';
 @import './font.css';
-@import './hover-ring';
-@import './color-utilities';
+@import './hover-ring.css';
+@import './utility-classes.css';
+@import './color-utilities.css';

@@ -5,7 +5,7 @@ import {
   MOUSE_X_INJECTION_KEY,
   MOUSE_Y_INJECTION_KEY,
   ORIENTATION_INJECTION_KEY,
-} from './injectionKeys'
+} from './dockInjectionKeys'
 
 const iconRef = ref<HTMLDivElement | null>(null)
 

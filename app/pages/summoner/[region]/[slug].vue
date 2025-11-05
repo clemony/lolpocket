@@ -30,7 +30,7 @@ watch(
 <template>
   <TabLayout
     v-if="state?.summoner"
-    size="lg">
+    size="12">
     <!-- splash -->
 
     <template #background>
@@ -60,7 +60,7 @@ watch(
       <SummonerHeader
         :summoner="unref(state?.summoner)" />
     </template>
-    <div class="w-full min-h-screen bg-b1">
+    <div class="bg-b1 min-h-screen w-full">
       <NuxtPage
         v-if="state"
         :key="route.name"
@@ -71,13 +71,13 @@ watch(
       shape="circle"
       placement="left"
       variant="outline"
-      class="[&_svg]:size-4 fab  z-10 bg-b1/80 bottom-64 right-24 *:opacity-60 hover:*:opacity-100 !cursor-pointer !pointer-events-auto !size-16 backdrop-blur shadow-sm shadow-black/4" />
+      class="fab bg-b1/80  !pointer-events-auto right-24 bottom-64 z-10 !size-16 !cursor-pointer shadow-sm shadow-black/4 backdrop-blur *:opacity-60 hover:*:opacity-100 [&_svg]:size-4" />
     <FollowButton
       :summoner="state.summoner"
       shape="circle"
       placement="left"
       active="base"
       variant="outline"
-      class="[&_svg]:size-4 fab  z-10 bg-b1/80 bottom-44 right-24 *:opacity-60 hover:*:opacity-100 !cursor-pointer !pointer-events-auto !size-16 backdrop-blur shadow-sm shadow-black/4" />
+      class="fab bg-b1/80  !pointer-events-auto right-24 bottom-44 z-10 !size-16 !cursor-pointer shadow-sm shadow-black/4 backdrop-blur *:opacity-60 hover:*:opacity-100 [&_svg]:size-4" />
   </TabLayout>
 </template>

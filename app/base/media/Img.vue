@@ -33,7 +33,7 @@ const loaded = ref(false)
     v-bind="$attrs"
     :alt="alt"
     :class="
-      cn('size-full opacity-0 transition-[opacity,transform]', {
+      cn('size-full shrink-0 opacity-0 transition-[opacity,transform]', {
            'translate-z-0 opacity-100': loaded },
          loaded ? className : '',
       )

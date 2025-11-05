@@ -31,7 +31,7 @@
             Champion Role
             <Button
               v-if="cs().filters.role"
-              size="sq-xxs"
+              size="sq-6"
               variant="outline"
               @click="cs().filters.role = null">
               <icon
@@ -47,7 +47,7 @@
               Map Position
               <Button
                 v-if="cs().filters.position !== 'all'"
-                size="sq-xxs"
+                size="sq-6"
                 variant="outline"
                 @click="cs().filters.position = 'all'">
                 <icon
@@ -59,7 +59,7 @@
               Ability Resource
               <Button
                 v-if="cs().filters.resource "
-                size="sq-xxs"
+                size="sq-6"
                 variant="outline"
                 @click="cs().filters.resource = null">
                 <icon

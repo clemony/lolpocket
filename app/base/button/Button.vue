@@ -20,7 +20,7 @@ const props = withDefaults(defineProps<Props>(), {
   <Primitive
     :as
     :as-child="asChild"
-    :class="cn(buttonVariants({ base, variant, size, hover, active }), props.class)"
+    :class="cn('group/button', buttonVariants({ base, variant, size, hover, active }), props.class)"
     :autofocus="false">
     <slot />
   </Primitive>

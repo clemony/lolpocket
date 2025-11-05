@@ -62,7 +62,7 @@ export const inputGroupButtonVariants = tv({
 })
 
 export const inputGroupVariants = tv({
-  base: cn('group/input-group   hover:ring  transition-all duration-200 relative flex w-full items-center rounded-field border inset-shadow-xs transition-[color,box-shadow] outline-none', 'h-10 min-w-0 has-[>textarea]:h-auto',
+  base: cn('group/input-group   focus-within:ring ring-bc/60 transition-all duration-200 relative flex w-full items-center rounded-field border inset-shadow-xs transition-[color,box-shadow] outline-none', 'h-10 min-w-0 has-[>textarea]:h-auto',
 
     // Variants based on alignment.
     'has-[>[data-align=inline-start]]:[&>input]:pl-2', 'has-[>[data-align=inline-end]]:[&>input]:pr-2', 'has-[>[data-align=block-start]]:h-auto has-[>[data-align=block-start]]:flex-col has-[>[data-align=block-start]]:[&>input]:pb-3', 'has-[>[data-align=block-end]]:h-auto has-[>[data-align=block-end]]:flex-col has-[>[data-align=block-end]]:[&>input]:pt-3',

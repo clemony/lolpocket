@@ -25,36 +25,41 @@ onMounted (() => {
 
 <template>
   <div :class="cn('relative  inline-flex w-full translate-y-1 items-center pl-3   align-bottom', className)">
-    <template
-      v-if="comment.authorPuuid">
-      <Toggle
-        v-model:model-value="editModel"
-        variant="link"
-        size="8"
-        active="link"
-        base="btn"
-        hover="link"
-        class="text-1 inline w-17 px-1 text-end align-bottom opacity-30"
-        @update:model-value="e => emit('update:edit-model', e)">
-        {{ !editModel ? 'Edit' : 'Cancel' }}
-      </Toggle>
+    <template v-if="!comment.removed">
+      <template
+        v-if="comment && comment.authorPuuid === as().account.puuid">
+        <Toggle
+          v-model:model-value="editModel"
+          variant="link"
+          size="8"
+          active="link"
+          base="btn"
+          hover="link"
+          class="text-1 inline px-1 align-bottom opacity-30"
+          @update:model-value="e => emit('update:edit-model', e)">
+          {{ !editModel ? 'Edit' : 'Cancel' }}
+        </Toggle>
 
-      <span class="relative grid size-2 place-items-center opacity-40">
-        <icon
-          name="slash"
-          class="absolute size-4" />
-      </span>
+        <span class="relative grid size-2 place-items-center opacity-40">
+          <icon
+            name="slash"
+            class="absolute size-4" />
+        </span>
 
-      <Button
-        v-if="comment && comment.authorPuuid === as().account.puuid"
-        variant="link"
-        hover="link"
-        :disabled="comment.authorPuuid !== as().account.puuid"
-        size="8"
-        class="text-1 inline px-1 align-bottom opacity-30 disabled:hidden"
-        @click="emit('comment:remove')">
-        Remove
-      </Button>
+        <Button
+          variant="link"
+          hover="link"
+          :disabled="comment.authorPuuid !== as().account.puuid"
+          size="8"
+          class="text-1 inline px-1 align-bottom opacity-30 disabled:hidden"
+          @click="emit('comment:remove')">
+          Remove
+        </Button>
+      </template>
+
+      <LazyReportDialog
+        v-if="comment.authorPuuid !== as().account.puuid"
+        :comment />
 
       <span class="relative grid size-2 place-items-center opacity-40">
         <icon

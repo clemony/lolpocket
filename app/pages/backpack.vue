@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { accounts, mails } from '~/layout/box/mails'
+import { accounts, mails } from '~/layout-components/box/mails'
 
 definePageMeta({
   name: 'backpack',
@@ -23,16 +23,16 @@ const pinned = computed(() => ps().pockets.filter(p => p.location.pinned))
       @expand="isCollapsed = true"
       @collapse="isCollapsed = false">
       <template #nav>
-        <div class="size-full h-16 p-1 w-full flex items-center border-b">
+        <div class="flex size-full h-16 w-full items-center border-b p-1">
           <DropdownMenu>
             <DropdownMenuTrigger
               variant="ghost"
               hover="base"
-              size="lg"
-              class="justify-start w-full group pl-4.5 pr-5 !gap-3 data-[state=open]:fx-noise data-[state=open]:shadow-sm data-[state=open]:border-b3/80 data-[state=open]:shadow-black/8 data-[state=open]:inset-shadow-xs hover:bg-transparent">
-              <SummonerIcon class="rounded-full size-7" />
+              size="12"
+              class="group data-[state=open]:fx-noise data-[state=open]:border-b3/80 w-full justify-start !gap-3 pr-5 pl-4.5 hover:bg-transparent data-[state=open]:inset-shadow-xs data-[state=open]:shadow-sm data-[state=open]:shadow-black/8">
+              <SummonerIcon class="size-7 rounded-full" />
               <span
-                class="w-full truncate text-5 dst font-semibold *:first:capitalize items-center">
+                class="text-5 dst w-full items-center truncate font-semibold *:first:capitalize">
                 <SummonerName class="inline" />
                 's Backpack
               </span>
@@ -64,7 +64,7 @@ const pinned = computed(() => ps().pockets.filter(p => p.location.pinned))
         <Separator />
 
         <!-- tags -->
-        <div class="px-0 pb-1 flex flex-col gap-4">
+        <div class="flex flex-col gap-4 px-0 pb-1">
           <template v-if="isCollapsed">
             <Popover>
               <PopoverTrigger as-child>
@@ -85,7 +85,7 @@ const pinned = computed(() => ps().pockets.filter(p => p.location.pinned))
         <Separator />
 
         <!-- roles -->
-        <div class="px-0 pb-1 flex flex-col gap-4">
+        <div class="flex flex-col gap-4 px-0 pb-1">
           <template v-if="isCollapsed">
             <Popover>
               <PopoverTrigger as-child>

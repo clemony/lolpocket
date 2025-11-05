@@ -15,12 +15,13 @@ const props = withDefaults(
       tooltip?: string | Component
       as?: string
       side?: Side
+      size?: ButtonVariants['size']
     }
   >(),
   {
     side: 'right',
     as: 'button',
-    size: 'default',
+    size: '12',
     variant: 'default',
   }
 )

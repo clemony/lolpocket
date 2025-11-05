@@ -38,7 +38,7 @@ const selectedSet = computed(() => {
 <template>
   <TabLayout
     v-if="pocket && route.name !== 'pocket-core'"
-    size="lg">
+    size="12">
     <template #crumb>
       <PocketMenubar />
     </template>
@@ -64,7 +64,7 @@ const selectedSet = computed(() => {
       <PocketHeader :pocket="pocket" />
     </template>
 
-    <div class="w-4/5 px-14 justify-self-center z-auto grid bg-b1 min-h-screen">
+    <div class="bg-b1 z-auto grid min-h-screen w-4/5 justify-self-center px-14">
       <NuxtPage
         v-if="pocket"
         :pocket="pocket" />
@@ -78,7 +78,7 @@ const selectedSet = computed(() => {
 
   <div
     v-else
-    class="w-screen h-screen">
+    class="h-screen w-screen">
     <NuxtPage
       v-if="pocket"
       :pocket="pocket" />
