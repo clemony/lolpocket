@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { SpellSet } from '~~/shared/schema'
+
 const { class: className, set: s } = defineProps<{
   class?: HTMLAttributes['class']
   set: SpellSet

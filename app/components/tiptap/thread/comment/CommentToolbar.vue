@@ -5,7 +5,7 @@ const { class: className, comment, editing, replying } = defineProps<{
   editing: boolean
   class?: HTMLAttributes['class']
 }>()
-const emit = defineEmits(['update:reply-model', 'update:edit-model', 'comment:remove'])
+const emit = defineEmits(['update:reply-model', 'update:edit-model', 'comment:remove', 'click:report'])
 
 const replyModel = shallowRef<boolean>(false)
 const editModel = shallowRef<boolean>(false)
@@ -27,7 +27,7 @@ onMounted (() => {
   <div :class="cn('relative  inline-flex w-full translate-y-1 items-center pl-3   align-bottom', className)">
     <template v-if="!comment.removed">
       <template
-        v-if="comment && comment.authorPuuid === as().account.puuid">
+        v-if="comment && comment.authorPuuid === as().account.puuid ">
         <Toggle
           v-model:model-value="editModel"
           variant="link"
@@ -50,16 +50,22 @@ onMounted (() => {
           variant="link"
           hover="link"
           :disabled="comment.authorPuuid !== as().account.puuid"
-          size="8"
+          size="max"
           class="text-1 inline px-1 align-bottom opacity-30 disabled:hidden"
-          @click="emit('comment:remove')">
+          @click="() => emit('comment:remove')">
           Remove
         </Button>
       </template>
 
-      <LazyReportDialog
+      <Button
         v-if="comment.authorPuuid !== as().account.puuid"
-        :comment />
+        variant="link"
+        hover="link"
+        size="max"
+        class="text-1 inline px-1 align-bottom opacity-30 disabled:hidden"
+        @click="emit('click:report')">
+        Report
+      </Button>
 
       <span class="relative grid size-2 place-items-center opacity-40">
         <icon
@@ -70,11 +76,11 @@ onMounted (() => {
       <Toggle
         v-model:model-value="replyModel"
         variant="link"
-        size="8"
+        size="max"
         base="btn"
         hover="link"
         active="link"
-        class="text-1 inline w-17 px-1 align-bottom opacity-30 "
+        class="text-1 inline  px-1 align-bottom opacity-30 "
         @update:model-value="e => emit('update:reply-model', e)">
         {{ !replyModel ? 'Reply' : 'Cancel' }}
       </Toggle>

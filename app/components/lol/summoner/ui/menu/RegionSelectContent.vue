@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-import { regionIndex } from '#shared/appdata/index/region-index'
-import { SelectArrow } from 'reka-ui'
+import { regionIndex } from '~~/shared/references'
 
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']
@@ -16,7 +15,7 @@ const { class: className } = defineProps<{
     <SelectLabel class="px-4 opacity-50">
       Select Region
     </SelectLabel>
-    <SelectSeparator class="mb-3 mt-1" />
+    <SelectSeparator class="mt-1 mb-3" />
 
     <SelectGroup class="">
       <SelectItem
@@ -24,7 +23,7 @@ const { class: className } = defineProps<{
         :key="region"
         :value="region"
         class="flex items-center gap-3 py-1.5 text-nowrap">
-        <SelectItemText class="truncate text-3">
+        <SelectItemText class="text-3 truncate">
           <span class="italic">
             {{ regionIndex[region] }}
           </span>

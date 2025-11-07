@@ -1,4 +1,4 @@
-import { championRoleIndex, runeToPath } from '~~/shared/appdata'
+import { championRoleIndex, runeToPath } from '~~/shared/indexes'
 
 export function constructMentionAttrs(attrs) {
   const item = computed (() => attrsToProps(attrs)).value

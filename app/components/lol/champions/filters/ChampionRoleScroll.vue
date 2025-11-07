@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { championRoles } from '#shared/appdata'
 
+import { championRoles } from '#shared/references'
 const { filtered, filters, setFilter } = useItemFilter()
 function reset() {
   filters.role = null
@@ -12,11 +12,11 @@ function reset() {
   <ScrollArea
     as="div"
     class="relative">
-    <div class="size-fit mask-right-sm">
+    <div class="mask-right-sm size-fit">
       <TransitionSlide
         :offset="['100%', 0]"
         group
-        class="grow flex mask-left-sm flex-nowrap overflow-x-auto max-w-160 gap-3 mt-3 px-10 pb-4 pt-2">
+        class="mask-left-sm mt-3 flex max-w-160 grow flex-nowrap gap-3 overflow-x-auto px-10 pt-2 pb-4">
         <button
           class="btn btn-square btn-sm !text-5rounded-md font-normal"
           :class="{ hidden: !filters.role }">
@@ -29,11 +29,11 @@ function reset() {
         <label
           v-for="(role, i) in championRoles"
           :key="`${role.name}${i}`"
-          class="btn has-checked:!bgneutral has-checked:!text-nc has-checked:!borderneutral !rounded-lg-2 !bg-b2/20 shadow-sm shadow-black/7 border-b2 hover:!border-b3 hover:scale-110 transition-all duration-300 hover:drop-shadow-sm hover:!bg-b3/40 has-checked:!shadowneutral/20 btn-sm !text-3 mr-0 rounded-md font-medium tracking-normal capitalize checked:!shadow-sm"
+          class="btn has-checked:!bgneutral has-checked:!text-nc has-checked:!borderneutral !rounded-lg-2 !bg-b2/20 border-b2 hover:!border-b3 hover:!bg-b3/40 has-checked:!shadowneutral/20 btn-sm !text-3 mr-0 rounded-md font-medium tracking-normal capitalize shadow-sm shadow-black/7 transition-all duration-300 checked:!shadow-sm hover:scale-110 hover:drop-shadow-sm"
           :class="{ hidden: filters.role && role.name !== filters.role }">
           <input
             v-model="filters.role"
-            class="hidden peer"
+            class="peer hidden"
             :value="role.name"
             type="radio"
             name="championClass" />
@@ -46,15 +46,15 @@ function reset() {
 
     <div
       v-if="!filters.role"
-      class="absolute h-13 bg-b1 w-6 -left-4 top-2 grid place-items-center">
+      class="bg-b1 absolute top-2 -left-4 grid h-13 w-6 place-items-center">
       <icon
         name="left"
-        class="size-6 z-1 shrink-0" />
+        class="z-1 size-6 shrink-0" />
     </div>
 
     <div
       v-if="!filters.role"
-      class="absolute h-13 bg-b1 w-6 -right-4 top-2 grid place-items-center">
+      class="bg-b1 absolute top-2 -right-4 grid h-13 w-6 place-items-center">
       <icon
         name="right"
         class="size-6" />

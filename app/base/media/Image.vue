@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { AnimatePresence, LayoutGroup, motion } from 'motion-v'
+import { motion } from 'motion-v'
 
 defineOptions({
   inheritAttrs: false,
@@ -34,19 +34,21 @@ const emit = defineEmits(['loaded'])
         as="div"
         mode="popLayout"
         class="size-full">
-        <motion.img
+        <motion.div
           v-if="isLoaded"
           :initial="{ opacity: 0 }"
           :animate="{ opacity: [0, 100] }"
           :transition="{
             duration: 0.3,
             ease: 'easeIn',
-          }"
-          v-bind="imgAttrs"
-          :img-attrs="{ ...imgAttrs, loading: 'lazy' }"
-          :class="cn('size-full', props.imgClass)"
-          :src="src" />
-
+          }">
+          <img
+            alt="img"
+            v-bind="imgAttrs"
+            :img-attrs="{ ...imgAttrs, loading: 'lazy' }"
+            :class="cn('size-full', props.imgClass)"
+            :src="src" />
+        </motion.div>
         <!-- Show a placeholder while loading -->
         <Motion
           v-else

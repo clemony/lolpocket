@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { queueIndex } from '#shared/appdata/index/queue-index'
+import { queueIndex } from '~~/shared/references'
 
 const { puuid, match } = defineProps<{
   match: MatchData
@@ -43,19 +43,19 @@ const queue = computed(() => {
         )
       ">
       <div
-        class="flex w-30 **:antialiased h-fit self-center  **:select-none flex-col justify-start gap-1 py-1">
+        class="flex h-fit w-30 flex-col justify-start  gap-1 self-center py-1 **:antialiased **:select-none">
         <h3
-          class="text-5 dst text-start text-nowrap text-white/86 font-bold uppercase">
+          class="text-5 dst text-start font-bold text-nowrap text-white/86 uppercase">
           {{ player.win ? "Win" : "Loss" }}
         </h3>
 
-        <div class="font-semibold *:text-left opacity-76 w-full flex flex-col">
-          <p class="text-4 text-left text-nowrap flex items-center font-bold flex gap-1.5">
+        <div class="flex w-full flex-col font-semibold opacity-76 *:text-left">
+          <p class="text-4 flex items-center gap-1.5 text-left font-bold text-nowrap">
             {{ queue?.description || queue?.map?.name || '' }}
           </p>
 
           <p
-            class="!text-[0.92rem] leading-4 flex flex-col mt-1 py-1 justify-center text-start">
+            class="mt-1 flex flex-col justify-center py-1 text-start !text-[0.92rem] leading-4">
             <span>
               {{ queue?.map?.name }}
             </span>
@@ -63,7 +63,7 @@ const queue = computed(() => {
               {{ formatTimeAgo(match.gameEndTimestamp) }}
             </span>
           </p>
-          <p class="tracking-wide font-bold">
+          <p class="font-bold tracking-wide">
             {{
               (match.gameDuration / 60).toFixed(2).toString().replace(".", ":")
             }}
@@ -71,7 +71,7 @@ const queue = computed(() => {
         </div>
       </div>
 
-      <div class="flex h-full flex-col  py-6 gap-2 justify-between grow">
+      <div class="flex h-full grow  flex-col justify-between gap-2 py-6">
         <div class="flex items-start">
           <!-- champ image -->
           <ChampionIcon
@@ -81,7 +81,7 @@ const queue = computed(() => {
               placement: 'top',
             }"
             alt="champion-icon"
-            class="rounded-xl size-17  hover:scale-105 transition-all duration-300 " />
+            class="size-17 rounded-xl  transition-all duration-300 hover:scale-105 " />
 
           <!--  spells -->
           <PlayerSpells
@@ -102,13 +102,13 @@ const queue = computed(() => {
         </div>
 
         <!-- items -->
-        <div class="flex gap-3 min-w-64">
+        <div class="flex min-w-64 gap-3">
           <MatchItems :player />
         </div>
       </div>
       <TeamsCardOverview :match />
 
-      <div class="w-8 grid place-items-center">
+      <div class="grid w-8 place-items-center">
         <icon
           name="up"
           :class="

@@ -1,7 +1,10 @@
+/* eslint-disable antfu/no-top-level-await */
 import fs from 'node:fs'
+import path from 'node:path'
 import { $fetch } from 'ofetch'
-import { colorDict, markUpdate } from '../../../server'
 import { resolvePath } from '../resolvePath'
+import { markUpdate } from '../utils'
+import { colorDict } from '../utils/colorDict'
 
 const rawRunes = await $fetch(
   'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/perks.json'
@@ -14,9 +17,9 @@ const rawPaths = await $fetch(
 const outputRawRunes = resolvePath('./runes/raw/runes-raw.json')
 const outputRawPaths = resolvePath('./runes/raw/paths-raw.json')
 const outputRunes = resolvePath('./runes/raw/runes.json')
-const runesTSOutput = resolvePath('#shared/appdata/records/runes.ts')
+const runesTSOutput = path.resolve('./shared/records/runes.ts')
 const rawShards = resolvePath('./runes/raw/shards-raw.json')
-const shardOutput = resolvePath('#shared/appdata/records/shards.ts')
+const shardOutput = path.resolve('./shared/records/shards.ts')
 
 function transformDescription(desc: string) {
   return desc

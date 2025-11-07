@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { itemRanks } from '~~/shared/appdata/filters/item-ranks'
+import { itemRanks } from '#shared/references'
 
 const { class: className, clear = true, hover = 'neutral', size = ['sq-12', '12'], variant = 'btn' } = defineProps<{
   class?: HTMLAttributes['class']

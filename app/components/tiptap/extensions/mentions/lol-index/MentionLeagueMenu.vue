@@ -141,7 +141,8 @@ const { selectedIndex, selectedItem } = useGridFocusTrap(target, {
               :key="item.id">
               <IndexIcon
                 :item
-                :class="cn('icon-grid-style', { 'rounded-full': item?.key === 'rune' })" />
+                :class="cn('icon-grid-style', { 'rounded-full': item?.key === 'rune' })"
+                @click="insertMention(item)" />
             </template>
           </template>
           <template v-else>

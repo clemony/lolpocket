@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { PocketSchema } from '~~/shared/schema'
+
 definePageMeta({
   name: 'pocket_key',
   props: true,

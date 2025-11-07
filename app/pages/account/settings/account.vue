@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { providers } from '#shared/appdata/authProviders'
+import { providers } from '~~/shared/references'
+import { toast } from '~/base/notification/toast/use-toast'
 
 definePageMeta({
   title: 'account',

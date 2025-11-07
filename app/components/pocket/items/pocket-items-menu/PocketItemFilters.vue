@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { newItemSet } from '#shared/schema'
 const route = useRoute()
 const pocket = computed(() => ps().getPocket(String(route.params.pocket_key)))
 </script>

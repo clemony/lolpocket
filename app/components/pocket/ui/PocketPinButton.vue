@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import type { Pocket } from '~~/shared/schema'
+
 const { class: className, pocket: p, size } = defineProps<{
   class?: HTMLAttributes['class']
   pocket: Pocket

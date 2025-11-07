@@ -1,5 +1,7 @@
 // CHAMPS
 
+import { newRuneSet } from '~~/shared/schema'
+
 export function removeChampion(champion, pocket) {
   const find = pocket.champions.findIndex(c => c === champion)
   if (find !== -1)

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { themes } from '#shared/appdata'
+import { themes } from '#shared/data'
 import { ListboxContent, ListboxRoot } from 'reka-ui'
 
 definePageMeta({
@@ -19,17 +19,17 @@ function handleChange(theme) {
 <template>
   <ListboxRoot
     v-model:model-value="as().settings.theme"
-    class="w-full py-4 z-0"
+    class="z-0 w-full py-4"
     :multiple="false"
     selection-behavior="replace"
     @entry-focus.prevent
     @update:model-value="handleChange(as().settings.theme)">
-    <ListboxContent class="w-fit grid gap-y-10 gap-x-14 grid-cols-2">
+    <ListboxContent class="grid w-fit grid-cols-2 gap-x-14 gap-y-10">
       <ListboxItem
         v-for="theme in themes"
         :key="theme.name"
         :value="theme.name"
-        class="grid size-full !border-transparent group/label h-max items-center">
+        class="group/label grid size-full h-max items-center !border-transparent">
         <ThemeCard
           class=" "
           :theme="theme"

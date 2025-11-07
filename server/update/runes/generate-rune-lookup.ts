@@ -1,4 +1,5 @@
 import fs from 'node:fs'
+import path from 'node:path'
 import { resolvePath } from '../resolvePath'
 import { markUpdate } from '../utils'
 import { pathIds } from './raw/pathIds'
@@ -12,8 +13,8 @@ Object.entries(pathIds).forEach(([pathName, perkIds]) => {
 })
 
 // write it as a TS file
-const runeIdToPathOutput = resolvePath(
-  '#shared/appdata/index/rune-to-path.ts'
+const runeIdToPathOutput = path.resolve(
+  './shared/indexes/rune-to-path.ts'
 )
 fs.writeFileSync(
   runeIdToPathOutput,

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
+import { matchFiltersIgnoreChampion } from '#shared/references'
 import { ListboxContent, ListboxItem, ListboxRoot } from 'reka-ui'
-import { matchFiltersIgnoreChampion } from '~~/shared/appdata'
 
 const queues = {
   0: 'All Recent',
@@ -25,20 +25,20 @@ const championModel = computed({
   <ListboxRoot
     v-if="champions"
     v-model:model-value="championModel"
-    class="w-full w-120 max-w-120 gap-0 field-box px-2  py-4 space-y-4"
+    class="field-box w-120 w-full max-w-120 gap-0 space-y-4  px-2 py-4"
     :multiple="false"
     @entry-focus.prevent>
     <PatchDateRange />
     <ListboxContent class="w-full overflow-hidden">
       <SlideInTopOutBottom
         group
-        class="grid overflow-hidden h-fit gap-1.5">
+        class="grid h-fit gap-1.5 overflow-hidden">
         <ListboxItem
           v-for="champion in champions"
           :key="champion.name"
           :value="champion.name"
           as-child
-          class="w-full peer focus-visible:outline-0">
+          class="peer w-full focus-visible:outline-0">
           <Button
             :class="cn('h-18 duration-0 grid-cols-[0.5fr_1fr_1fr_0.5fr] !grid justify-around  items-center ', { 'opacity-80': championModel.length > 1 && champion.name !== championModel })"
             variant="ghost">
@@ -47,18 +47,18 @@ const championModel = computed({
               :alt="champion.name"
               :class="cn('size-15 overflow-hidden items-center rounded-full rounded-full shadow-sm drop-shadow-sm', { 'grayscale brightness-105 contrast-105': championModel.length > 1 && champion.name !== championModel })" />
 
-            <div class="grid size-full dst gap-1.5 font-medium">
+            <div class="dst grid size-full gap-1.5 font-medium">
               <p class="!text-3 self-end">
                 {{ champion.name }}
               </p>
 
-              <p class="text-nowrap text-2">
+              <p class="text-2 text-nowrap">
                 {{ `${champion.games} Games` }}
               </p>
             </div>
 
-            <div class="grid size-full justify-end *:text-end dst gap-1.5">
-              <p class="self-end dst font-medium text-nowrap">
+            <div class="dst grid size-full justify-end gap-1.5 *:text-end">
+              <p class="dst self-end font-medium text-nowrap">
                 {{ champion.wins }}&nbsp;Win
               </p>
 
@@ -66,7 +66,7 @@ const championModel = computed({
                 {{ champion.games - champion.wins }}&nbsp;Loss
               </p>
             </div>
-            <div class="justify-end  justify-self-end grid place-items-center size-full">
+            <div class="grid  size-full place-items-center justify-end justify-self-end">
               <ChampWinrate :champion="champion" />
             </div>
           </Button>

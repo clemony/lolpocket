@@ -1,5 +1,4 @@
 @import 'tailwindcss';
-@import '../theme.css';
 @plugin "daisyui";
 
 @utility fx-0 {
@@ -12,7 +11,6 @@
   --depth: 1;
 }
 
-
 /* tooltip */
 
 @utility tooltip-light {
@@ -21,7 +19,6 @@
 
   &::before {
     @apply border-b3 text-bc  bg-[var(--tt-bg)];
-
   }
 
   &::after {
@@ -31,14 +28,12 @@
 @utility tooltip {
   @apply select-none hover:underline cursor-default;
   &::before {
-    @apply z-50 py-1.5 px-3 text-2 text-nc text-pretty max-w-66 whitespace-pre-wrap drop-shadow-sm transition-all duration-300 leading-5.5 text-start ;
+    @apply z-50 py-1.5 px-3 text-2 text-nc text-pretty max-w-66 whitespace-pre-wrap drop-shadow-sm transition-all duration-300 leading-5.5 text-start;
     &::after {
       @apply duration-200 transition-all delay-200;
     }
-
   }
 }
-
 
 /* input */
 
@@ -111,7 +106,6 @@
     @apply scale-y-250 scale-x-200  -translate-y-[6.5px] translate-x-1;
   }
 }
-
 
 @layer components {
   /* field  */

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { handleRemoval, handleReply, handleUpdate, handleVote, postComment, postNotClemComment } from '#tiptap'
+import { handlePost, handleRemoval, handleReply, handleUpdate, handleVote, postComment, postNotClemComment } from '#tiptap'
 
 const newComment = ref<Doc>(null)
 // as().comments = []
@@ -20,9 +20,10 @@ const sorted = computed (() => sortRef.value?.sortedComments)
         v-slot="{ editor }"
         v-model="newComment"
         class="min-h-36 ">
-        <AdminPostButton
+        <PostButtonWrapper
           :editor
-          :new-comment />
+          :new-comment
+          @post:comment="e => handlePost(editor, newComment, e)" />
       </CommentEditor>
     </div>
     <div class="mt-8 inline-flex w-full items-center justify-end gap-2 px-1 align-bottom">

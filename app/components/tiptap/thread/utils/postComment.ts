@@ -1,4 +1,14 @@
-export function postComment(editor, newComment) {
+import type { Editor } from '@tiptap/core'
+import { toast } from '~/base/notification/toast/use-toast'
+
+export function handlePost(editor: Editor, newComment: Doc, author?: string,) {
+  if (author === 'defnotclem')
+    postNotClemComment(editor, newComment)
+
+  else postComment(editor, newComment)
+}
+
+export function postComment(editor: Editor, newComment: Doc) {
   const id = crypto.randomUUID()
   as().comments.push({
     authorPuuid: as().account.puuid,
@@ -23,7 +33,7 @@ export function postComment(editor, newComment) {
   router.replace({ hash: `#${id}` }) */
 }
 
-export function postNotClemComment(editor, newComment) {
+export function postNotClemComment(editor: Editor, newComment: Doc) {
   const id = crypto.randomUUID()
   as().comments.push({
     authorPuuid: 'defnotclem',

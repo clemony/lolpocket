@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { authProviders } from '#shared/appdata/authProviders'
+import { authProviders } from '~~/shared/references'
 
 definePageMeta({
   name: 'login',

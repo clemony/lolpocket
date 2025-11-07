@@ -1,5 +1,7 @@
 <script setup lang="ts">
+import type { Pocket } from '~~/shared/schema'
 import { vDraggable } from 'vue-draggable-plus'
+import { newItemSet } from '~~/shared/schema'
 
 const props = defineProps<{
   pocket: Pocket
@@ -35,7 +37,7 @@ watch(items, (newItemSets) => {
 </script>
 
 <template>
-  <div class="inset-0 pb-33 min-w-146 min-h-fit pt-1 overflow-x-visble flex flex-col gap-8">
+  <div class="overflow-x-visble inset-0 flex min-h-fit min-w-146 flex-col gap-8 pt-1 pb-33">
     <div
       v-draggable="[
         pocket.items,
@@ -59,7 +61,7 @@ watch(items, (newItemSets) => {
         },
       ]"
       group
-      class="z-0   w-full pt-6 flex-col gap-8 flex">
+      class="z-0   flex w-full flex-col gap-8 pt-6">
       <!-- <div class="absolute bottom-2 right-3 opacity-0 group-hover/set:opacity-40 tldr-30 hover:opacity-100  handle">
           <icon name="ph:arrows-out-line-vertical" class="rotate-180 size-5 shrink-0" />
         </div> -->
@@ -74,7 +76,7 @@ watch(items, (newItemSets) => {
 
     <Button
       variant="outline"
-      class="w-full rounded-xl h-22 border-b3/40"
+      class="border-b3/40 h-22 w-full rounded-xl"
       @click="pocket.items.push(newItemSet())">
       <icon
         name="add"

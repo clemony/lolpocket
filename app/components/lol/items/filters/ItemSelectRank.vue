@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import { itemRanks } from '#shared/appdata'
-
-console.log('🌱 - itemRanks:', itemRanks)
+import { itemRanks } from '#shared/references'
 const ranks = ref(itemRanks)
 console.log('🌱 - ranks:', ranks)
 function onClick(rank: string): void {
@@ -17,7 +15,7 @@ function onClick(rank: string): void {
       :key="rank.name"
       variant="ghost"
       size="sm"
-      class=" shadow-none  justify-start !gap-4 !pl-3  capitalize">
+      class=" justify-start  !gap-4 !pl-3 capitalize  shadow-none">
 
       <input
         v-model="is().filters.rank"
@@ -26,14 +24,14 @@ function onClick(rank: string): void {
         :value="rank.name"
         class="peer hidden"
         @click="onClick(rank.name)" />
-      <span class="size-5 grid place-items-center">
+      <span class="grid size-5 place-items-center">
         <icon
           v-if="rank.icon"
           :style="{
             color: rank.color,
           }"
           :name="rank.icon"
-          class="size-5 absolute" />
+          class="absolute size-5" />
       </span>
       <span class="grow">
         {{ rank.name }}
@@ -51,7 +49,7 @@ function onClick(rank: string): void {
       <icon
         v-if="is().filters.rank === rank.name"
         name="tick-sm"
-        class="size-6 dst" />
+        class="dst size-6" />
 
     </Label>
   </div>

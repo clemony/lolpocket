@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { MotionValue } from 'motion-v'
 import { motion } from 'motion-v'
-import { heroDisplays } from '~~/shared/appdata/content/video'
+import { heroDisplays } from '~~/shared/data/video'
 
 const { progress: p, visible } = defineProps<{
   progress: MotionValue

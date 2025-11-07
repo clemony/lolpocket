@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import type { Pocket } from '#shared/schema'
+
 const props = defineProps<{
   pocket: Pocket
 }>()
@@ -14,7 +16,7 @@ const rolesLength = computed(() => {
 <template>
   <span
     v-tippy="`${rolesLength ? rolesLength : 'no'} selected roles`"
-    class="flex gap-3 items-center">
-    <span class="dst font-mono text-1 opacity-60">{{ rolesLength }}</span>
+    class="flex items-center gap-3">
+    <span class="dst text-1 font-mono opacity-60">{{ rolesLength }}</span>
   </span>
 </template>

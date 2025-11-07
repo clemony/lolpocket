@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import { championPositions } from '~~/shared/appdata'
+import { championPositions } from '#shared/references'
+import type { Pocket } from '~~/shared/schema'
 
 const {
   class: className,
@@ -25,16 +26,16 @@ console.log(
       )
     "
     @dblclick="navigateTo(`/pocket/${pocket.key}`)">
-    <div class="flex w-full h-14 gap-2 items-center justify-between">
-      <div class="flex cursor-pointer text-start items-center gap-3">
+    <div class="flex h-14 w-full items-center justify-between gap-2">
+      <div class="flex cursor-pointer items-center gap-3 text-start">
         <!-- icon -->
         <PocketIcon
           :img="pocket.icon"
           class="size-11 rounded-full" />
         <div
-          class="flex flex-col justify-center items-start text-start gap-1 leading-4">
+          class="flex flex-col items-start justify-center gap-1 text-start leading-4">
           <!-- name -->
-          <div class="font-semibold flex gap-2 items-center">
+          <div class="flex items-center gap-2 font-semibold">
             {{ pocket.name }}
           </div>
           <PocketChampions
@@ -44,7 +45,7 @@ console.log(
         </div>
       </div>
       <div
-        class="relative max-h-14 gap-1 h-full w-max flex flex-nowrap items-center justify-items-end">
+        class="relative flex h-full max-h-14 w-max flex-nowrap items-center justify-items-end gap-1">
         <PocketChampions
           class="ml-auto"
           :champions="pocket.champions" />
@@ -59,7 +60,7 @@ console.log(
     </div>
 
     <!-- tags -->
-    <div class="flex items-center gap-2 mt-2">
+    <div class="mt-2 flex items-center gap-2">
       <template v-if="pocket.tags?.length">
         <Badge
           v-for="tag in pocket.tags"
@@ -78,7 +79,7 @@ console.log(
             <component
               :is="`i-roles-${tag}`"
               :class="cn('size-3.5 dst text-white mr-1.25')" />
-            <span class="text-white font-medium lowercase">
+            <span class="font-medium text-white lowercase">
               {{ tag }}
             </span>
           </template>

@@ -1,4 +1,5 @@
-import { championFilters } from '#shared/appdata/filters/champion-filters'
+
+import { championFilters } from '~~/shared/filters/champion-filters'
 
 export function useChampionFilter(filters: ChampionFilter) {
   const champions = ix().champions // ChampionIndex[]

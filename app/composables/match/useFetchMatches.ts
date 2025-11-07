@@ -4,7 +4,6 @@ export async function useFetchMatches(puuid: string) {
 
   const { getAllMatchIdsForPuuid, addMatches, getMatchesForSummoner }
     = useIndexedDB()
-  const summonerStore = useSummonerStore()
 
   // Get all matches already stored for this summoner
   const existingIds = await getAllMatchIdsForPuuid(puuid)
@@ -25,12 +24,12 @@ export async function useFetchMatches(puuid: string) {
     if (hasRanked) {
       ;(async () => {
         try {
-          const summoner = summonerStore.getSummoner(puuid)
+          const summoner = ss().getSummoner(puuid)
           if (summoner) {
             const ranked = await $fetch('/api/riot/fetchRankedData', {
               params: { puuid: summoner.puuid, region: summoner.region },
             })
-            summonerStore.mergeSummonerData(puuid, ranked)
+            ss().mergeSummonerData(puuid, ranked)
           }
         }
         catch (err) {

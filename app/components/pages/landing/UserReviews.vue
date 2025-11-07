@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import { reviews } from '#shared/appdata'
+import { reviews } from '#shared/data'
 import { motion } from 'motion-v'
-import type { CarouselApi } from '~/base/carousel/carousel-index'
+import type { CarouselApi } from '~/base/layout/carousel/carousel-index'
 import { reviewVariants } from './variants'
 
 const api = ref<CarouselApi>()
@@ -29,7 +29,7 @@ watchOnce(api, (api) => {
 
 <template>
   <div
-    class="w-full bg-b1 items-center pt-40 pb-40 px-30 grid items-center relative overflow-hidden">
+    class="bg-b1 relative grid w-full items-center overflow-hidden px-30 pt-40 pb-40">
     <Carousel
       :opts="{
         loop: true,
@@ -39,7 +39,7 @@ watchOnce(api, (api) => {
         <CarouselItem
           v-for="(page, i) in reviews"
           :key="i"
-          class="**:[&_p]:leading-7 w-full place-items-center justify-self-center grid grid-cols-2 grid-rows-2 p-30 gap-x-40 gap-y-60 h-full items-center">
+          class="grid h-full w-full grid-cols-2 grid-rows-2 place-items-center gap-x-40 gap-y-60 justify-self-center p-30 **:[&_p]:leading-7">
           <motion.div
             v-for="r in page"
             :key="r.id"
@@ -53,23 +53,23 @@ watchOnce(api, (api) => {
               delay: 0.3,
               duration: 0.4,
             }">
-            <h1 class="dst font-black font-serif leading-9">
+            <h1 class="dst font-serif leading-9 font-black">
               “{{ r.title }}”
             </h1>
 
-            <div class="flex gap-8 justify-start items-start">
+            <div class="flex items-start justify-start gap-8">
               <ChampionIcon
                 :id="r.id"
                 :alt="r.name"
-                class="size-22 overflow-hidden rounded-full shrink-0 mt-4" />
+                class="mt-4 size-22 shrink-0 overflow-hidden rounded-full" />
 
               <div>
                 <p
-                  class="text-bc text-4 w-full [&_u]:decoration-dotted dst mt-5"
+                  class="text-bc text-4 dst mt-5 w-full [&_u]:decoration-dotted"
                   v-html="r.text" />
 
                 <p
-                  class="text-right mt-2 italic justify-self-end flex gap-2 items-center">
+                  class="mt-2 flex items-center gap-2 justify-self-end text-right italic">
                   - {{ r.location }}
                   <icon
                     v-tippy="`${r.tip}`"
@@ -87,18 +87,18 @@ watchOnce(api, (api) => {
       <CarouselNext class="scale-120" />
     </Carousel>
 
-    <div class="w-full flex justify-center items-center gap-1 pt-10">
+    <div class="flex w-full items-center justify-center gap-1 pt-10">
       <label
         v-for="i in 2"
         :key="i"
-        class="size-5 cursor-pointer rounded-full grid place-items-center overflow-hidden group">
+        class="group grid size-5 cursor-pointer place-items-center overflow-hidden rounded-full">
         <input
           type="radio"
           :value="i"
           class="peer hidden" />
 
         <div
-          class="group-hover:bg-b4 group-hover:ring-1 ring-neutral bg-b3 size-2 btn btn-circle pointer-events-none tldr-20 ring-offset-2"
+          class="group-hover:bg-b4 ring-neutral bg-b3 btn btn-circle tldr-20 pointer-events-none size-2 ring-offset-2 group-hover:ring-1"
           :class="{ 'bg-neutral group-hover:bg-neutral': i === i }" />
       </label>
     </div>

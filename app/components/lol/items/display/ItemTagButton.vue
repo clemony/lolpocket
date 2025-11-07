@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import type { ItemTag } from '#shared/references'
+import { itemTags } from '#shared/references'
 import type { AsTag } from 'reka-ui'
-import type { ItemTag } from '~~/shared/appdata'
-import { itemTags } from '~~/shared/appdata'
 
 const { active, as, class: className, clear, size = '8', tag } = defineProps<{
   class?: HTMLAttributes['class']

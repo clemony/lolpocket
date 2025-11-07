@@ -1,7 +1,8 @@
-import type { MapIndex } from '#shared/types'
+/* eslint-disable antfu/no-top-level-await */
 import fs from 'node:fs'
 import { $fetch } from 'ofetch'
-import { markUpdate } from '../../../server'
+import type { MapIndex } from '../../types/types.import'
+import { markUpdate } from '../utils'
 
 // FIXME maps and queue together thingy? where they're merged remember that ok
 const url
@@ -14,7 +15,7 @@ const cleanedMapData: MapIndex[] = rawMapData
   .map(({ id, name, mapStringId }) => ({ id, name, mapStringId }))
 
 fs.writeFileSync(
-  './shared/appdata/index/map-index.ts',
+  './shared/indexes/map-index.ts',
   `// ${markUpdate()}
 
 export const mapIndex: MapIndex[] = ${JSON.stringify(cleanedMapData, null, 2)}`

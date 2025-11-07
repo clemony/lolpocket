@@ -1,3 +1,5 @@
+import { runeToPath } from '~~/shared/indexes'
+
 export function useRunes(player?: ComputedRef<any>, set?: ComputedRef<any>) {
   const runes = computed(() => ix().runes)
 
@@ -5,13 +7,7 @@ export function useRunes(player?: ComputedRef<any>, set?: ComputedRef<any>) {
     ix().runeById(player.value.perks.keystone)
   )
 
-  const playerPaths = computed(() => {
-    if (!player?.value || !runes.value)
-      return null
-    ix().loadPaths()
-    const match = ix().pathNameById(player.value.perks.secondary)
-    return match ?? null
-  })
+  const playerPaths = runeToPath[player.value?.perks?.secondary] ?? null
 
   const pathList = [
     'Precision',

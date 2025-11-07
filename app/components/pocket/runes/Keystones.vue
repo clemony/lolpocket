@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import type { Pocket, RuneSet } from '~~/shared/schema'
+
 const {
   pocket,
   runes,
@@ -17,7 +19,7 @@ const gridCols = computed(() => `grid-cols-${runes.length ?? 3}`)
   <Tabs
     v-model="set.keystone"
     as="div"
-    class="w-114 h-28 w-114 max-w-114 relative grid place-items-center overflow-hidden">
+    class="relative grid h-28 w-114 max-w-114 place-items-center overflow-hidden">
     <TabsList
       v-if="runes"
       base="indicator"
@@ -44,13 +46,13 @@ const gridCols = computed(() => `grid-cols-${runes.length ?? 3}`)
         <Img
           :img="`/img/runes/${set.primary.path}/${rune.id}.webp`"
           :alt="rune.name"
-          class="absolute drop-shadow-sm drop-shadow-black/40 pointer-events-none opacity-0 group-hover/r:opacity-90 duration-400 transition-all shrink-0 h-19 w-auto"
+          class="drop-shadow-black/40 pointer-events-none absolute h-19 w-auto shrink-0 opacity-0 drop-shadow-sm transition-all duration-400 group-hover/r:opacity-90"
           :class="{ 'opacity-100 ': set.keystone === rune.id }" />
 
         <Img
           :img="`/img/runes/grayscale/${rune.id}.webp`"
           :alt="rune.name"
-          class="h-19 w-auto pointer-events-none drop-shadow-sm shrink-0 absolute contrast-150 brightness-90 opacity-100 group-hover/r:opacity-0 duration-400 transition-all"
+          class="pointer-events-none absolute h-19 w-auto shrink-0 opacity-100 brightness-90 contrast-150 drop-shadow-sm transition-all duration-400 group-hover/r:opacity-0"
           :class="{ 'opacity-0': set.keystone === rune.id }" />
       </TabsTrigger>
 
@@ -61,11 +63,11 @@ const gridCols = computed(() => `grid-cols-${runes.length ?? 3}`)
 
     <div
       v-else
-      class="size-full grid grid-cols-3 py-4">
+      class="grid size-full grid-cols-3 py-4">
       <Placeholder
         v-for="i in 3"
         :key="i"
-        class="size-18 rounded-full place-self-center" />
+        class="size-18 place-self-center rounded-full" />
     </div>
   </Tabs>
 </template>

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { Pocket } from '~~/shared/schema'
+
 const { class: className, pocket: p } = defineProps<{
   class?: HTMLAttributes['class']
   pocket: Pocket
@@ -27,11 +29,11 @@ pocket.icon = pocket.icon.replace('centered', 'tile')
       <PocketIcon
         :img="pocket ? pocket?.icon : ''"
         alt="pocket icon"
-        class="group-hover/icon:brightness-50 pointer-events-none z-1 group-data-[state=open]/icon:brightness-50 transition-all duration-500 ease-in-out  !size-22 rounded-full" />
+        class="pointer-events-none z-1 !size-22 rounded-full transition-all duration-500 ease-in-out  group-hover/icon:brightness-50 group-data-[state=open]/icon:brightness-50" />
 
       <icon
         name="images"
-        class="size-6 !text-nc absolute opacity-0 group-hover/icon:opacity-80 z-2 transition-all pointer-events-none duration-500 ease-in-out group-data-[state=open]/icon:opacity-100" />
+        class="!text-nc pointer-events-none absolute z-2 size-6 opacity-0 transition-all duration-500 ease-in-out group-hover/icon:opacity-80 group-data-[state=open]/icon:opacity-100" />
     </slot>
   </GlassSplashBrowser>
 </template>

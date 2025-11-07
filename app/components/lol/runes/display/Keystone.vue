@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { runeToPath } from '#shared/appdata/index/'
 import { Primitive } from 'reka-ui'
+import { runeToPath } from '~~/shared/indexes'
 
 const {
   id,

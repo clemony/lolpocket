@@ -16,7 +16,8 @@ logs
 *.log
 
 #notes
-
+**.no
+**.note
 .notes
 **/.notes/**
 notes
@@ -49,9 +50,9 @@ notes
 
 
 # data folders
-/data/
+
 /z/
-data
+
 d1
 
 #wrangler

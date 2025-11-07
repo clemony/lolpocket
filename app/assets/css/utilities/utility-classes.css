@@ -1,8 +1,7 @@
 @import 'tailwindcss';
 
 @layer utilities {
-
-.color-badge-content {
-  @apply brightness-40 contrast-110 dst opacity-96 saturate-180;
-}
+  .color-badge-content {
+    @apply brightness-40 contrast-110 dst opacity-96 saturate-180;
+  }
 }

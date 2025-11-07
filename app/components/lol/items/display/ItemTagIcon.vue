@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ItemTag } from '~~/shared/appdata'
+import type { ItemTag } from '#shared/references'
 
 const { class: className } = defineProps<{
   class?: HTMLAttributes['class']

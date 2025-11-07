@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { toast } from '~/base/notification/toast/use-toast'
+
 definePageMeta({
   name: 'Reset Password',
   title: 'Forgot password?',

@@ -17,7 +17,7 @@ const tabs = ref('abilities')
         v-if="championKey"
         :key="championKey"
         :champ-key="championKey"
-        :img="ix().getSplash(championKey, 'centered')"
+        :img="getSplash(championKey, 'centered')"
         class="z-1 size-full scale-180" />
 
       <header

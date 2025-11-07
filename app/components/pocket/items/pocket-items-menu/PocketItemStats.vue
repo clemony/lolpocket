@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-import { statIndex } from '#shared/appdata'
-
+import { statIndex } from '#shared/references'
 const { filtered, filters, setFilter } = useItemFilter()
 </script>
 
@@ -8,7 +7,7 @@ const { filtered, filters, setFilter } = useItemFilter()
   <Select
     v-model="filters"
     multiple>
-    <SelectTrigger class="w-80 items-center flex gap-3">
+    <SelectTrigger class="flex w-80 items-center gap-3">
       <SelectValue placeholder="Filter Stat" />
     </SelectTrigger>
 
@@ -20,7 +19,7 @@ const { filtered, filters, setFilter } = useItemFilter()
           v-for="stat in statIndex"
           :key="stat.id"
           :value="stat.id">
-          <div class="flex gap-3 items-center">
+          <div class="flex items-center gap-3">
             {{ stat.name }}
           </div>
         </SelectItem>

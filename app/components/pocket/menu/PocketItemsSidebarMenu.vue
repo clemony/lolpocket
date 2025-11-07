@@ -1,18 +1,20 @@
 <script lang="ts" setup>
+import type { Pocket } from '~~/shared/schema'
+
 const { pocket } = defineProps<{
   pocket: Pocket
 }>()
 </script>
 
 <template>
-  <Field class="px-3 w-full flex">
+  <Field class="flex w-full px-3">
     <div
       v-if="pocket?.items && pocket?.items?.length"
-      class="w-full flex-wrap py-3 flex gap-3.5">
+      class="flex w-full flex-wrap gap-3.5 py-3">
       <Placeholder
         v-for="set in pocket.items"
         :key="set.name"
-        class="size-20 p-1.5 flex flex-wrap hover:ring-2 hover:ringneutral/40 cursor-pointer items-between pointer-events-auto justify-between !gap-0.75 !border-b3/50 border"
+        class="hover:ringneutral/40 items-between !border-b3/50 pointer-events-auto flex size-20 cursor-pointer flex-wrap justify-between !gap-0.75 border p-1.5 hover:ring-2"
         @click="navigateTo(`/pocket/${pocket.key}/items`)">
         <template v-if="set.items && set.items?.length">
           <template
@@ -21,7 +23,7 @@ const { pocket } = defineProps<{
             <Item
               v-if="i < 4"
               :id="item"
-              class="pointer-events-none rounded-lg size-7.5"></Item>
+              class="pointer-events-none size-7.5 rounded-lg"></Item>
           </template>
         </template>
       </Placeholder>

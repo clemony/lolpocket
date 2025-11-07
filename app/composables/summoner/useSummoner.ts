@@ -1,4 +1,5 @@
-import { matchFilters, matchFiltersIgnoreChampion } from '~~/shared/appdata'
+
+import { matchFilters, matchFiltersIgnoreChampion } from '#shared/references'
 import { fetchSummonerMastery } from './helpers'
 
 export const SummonerKey = Symbol('SummonerProvider')

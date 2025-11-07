@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { itemQuotes } from '~~/shared/appdata'
+import { itemQuotes } from '~~/shared/data'
 
 definePageMeta({
   title: 'Items',
@@ -27,7 +27,7 @@ onMounted(() => {
       </template>
 
       <ItemRankFilter
-        class="sticky top-38 pb-6 pt-5 w-[calc(100%+10px)] -mt-2 mb-0 -ml-[5px] bg-b1" />
+        class="bg-b1 sticky top-38 -mt-2 mb-0 -ml-[5px] w-[calc(100%+10px)] pt-5 pb-6" />
       <LazyNuxtPage />
     </LayoutAsideSplit>
 
@@ -38,7 +38,7 @@ onMounted(() => {
         @update:model-value="navigateTo(tabs)">
         <TabsList
           base="indicator"
-          class="grid grid-cols-2 h-10 max-w-120 w-80">
+          class="grid h-10 w-80 max-w-120 grid-cols-2">
           <TabsTrigger value="/library/items">
             Grid
           </TabsTrigger>

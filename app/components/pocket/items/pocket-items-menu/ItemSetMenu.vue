@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import type { ItemSet, Pocket } from '~~/shared/schema'
+
 const props = defineProps<{
   set?: ItemSet
   pocket?: Pocket
@@ -30,13 +32,13 @@ const pocket = computed(() => props.pocket)
 
         <icon
           name="right"
-          class="size-4 opacity-50 absolute right-1" />
+          class="absolute right-1 size-4 opacity-50" />
       </PopoverItem>
     </HoverCardTrigger>
 
     <LazyHoverCardContent
       side="right"
-      class="px-1 py-1.5 w-64 max-h-100 overflow-y-scroll items-center grid auto-rows-fr"
+      class="grid max-h-100 w-64 auto-rows-fr items-center overflow-y-scroll px-1 py-1.5"
       align="start">
       <PopoverItem
         v-for="friendlyPocket in ps().pockets.filter(p => p.key !== pocket.key)"

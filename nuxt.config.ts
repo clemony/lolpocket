@@ -2,20 +2,28 @@ import process from 'node:process'
 import { fileURLToPath } from 'node:url'
 
 export default defineNuxtConfig({
+
   alias: {
-    '#server': fileURLToPath(new URL('./server', import.meta.url)),
-    '#tiptap': fileURLToPath(new URL('./app/components/tiptap', import.meta.url)),
-    '@app': fileURLToPath(new URL('./app', import.meta.url)),
-    '@appdata': fileURLToPath(new URL('./shared/appdata', import.meta.url)),
-    '@base': fileURLToPath(new URL('./app/base', import.meta.url)),
-    '@components': fileURLToPath(new URL('./app/components', import.meta.url)),
+
+    // '@base': fileURLToPath(new URL('./app/base', import.meta.url)),
+    //
     '@composables': fileURLToPath(new URL('./app/composables', import.meta.url)),
+    //
     '@css': fileURLToPath(new URL('./app/assets/css', import.meta.url)),
+    //
+    '@data': fileURLToPath(new URL('./shared', import.meta.url)),
+    //
+    '@layout': fileURLToPath(new URL('./app/layout', import.meta.url)),
+    //
     '@plugins': fileURLToPath(new URL('./app/plugins', import.meta.url)),
-    '@schema': fileURLToPath(new URL('./@schema', import.meta.url)),
-    '@scripts': fileURLToPath(new URL('./scripts', import.meta.url)),
-    '@types': fileURLToPath(new URL('./@types', import.meta.url)),
-    '@utils': fileURLToPath(new URL('./app/utils', import.meta.url)),
+    //
+    '@records': fileURLToPath(new URL('./shared/records', import.meta.url)),
+    //
+    '@schema': fileURLToPath(new URL('./shared/schema', import.meta.url)),
+    //
+    '#tiptap': fileURLToPath(new URL('./app/components/tiptap', import.meta.url)),
+
+    //
     '@variants': fileURLToPath(new URL('./app/assets/variants', import.meta.url)),
   },
   components: [
@@ -24,7 +32,7 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
     {
-      path: './layout-components',
+      path: './layout',
       pathPrefix: false,
     },
     {
@@ -32,7 +40,7 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
-  css: ['~/assets/css/tailwind.css'],
+  css: ['./app/assets/css/tailwind.css'],
   devServer: {
     host: 'localhost',
     https: false,
@@ -60,10 +68,9 @@ export default defineNuxtConfig({
     format: ['webp'],
   },
   imports: {
-    dirs: ['#shared/utils', '#shared/types', '@variants', '@types', '@schema', '@appdata/index'],
+    dirs: ['@variants', '@schema', '@data'],
     presets: [
       {
-
         from: 'motion-v',
         imports: ['useSpring', 'useMotionValue', 'useMotionValueEvent', 'Motion', 'useTransform', 'motion']
       },
@@ -90,12 +97,7 @@ export default defineNuxtConfig({
     },
   },
   pinia: {
-    storesDirs: ['./stores/**'],
-  },
-  router: {
-    options: {
-      scrollBehaviorType: 'smooth',
-    },
+    storesDirs: ['./app/stores'],
   },
   runtimeConfig: {
     public: {
@@ -115,7 +117,7 @@ export default defineNuxtConfig({
       login: '/login',
       saveRedirectToCookie: true,
     },
-    types: '@types/database.types.ts',
+    types: './shared/types/database.types.ts',
     url: process.env.NUXT_PUBLIC_SUPABASE_URL,
     useSsrCookies: false,
   },
@@ -123,6 +125,14 @@ export default defineNuxtConfig({
     componentPrefix: 'i',
   },
   typescript: {
+    strict: false,
+    tsConfig: {
+      compilerOptions: {
+        pretty: true,
+        skipLibCheck: true
+      }
+
+    },
     typeCheck: true
   },
   vite: {
@@ -130,40 +140,16 @@ export default defineNuxtConfig({
       sourcemap: false,
     },
     clearScreen: false,
-  },
-  vueTransitions: {
-    componentDefaultProps: {
-      TransitionSlide: {
-        appear: false,
-        duration: 300,
-        easing: 'cubic-bezier(.25, .8, .5, 1)',
-        mode: 'out-in',
-        offset: [0, 8],
-      },
-      TransitionExpand: {
-        appear: false,
-      },
-      TransitionFade: {
-        appear: false,
-      },
-      TransitionScale: {
-        appear: false,
-      },
-    },
-    defaultProps: {
-      appear: false,
-      duration: 400,
-      easing: 'cubic-bezier(.25, .8, .5, 1)',
-      mode: 'out-in',
-      tag: 'div',
-    },
+
   },
 
-  /*   future: {
-    typescriptBundlerResolution: true,
-  }, */
+  // routes
 
-  compatibilityDate: '2025-07-18',
+  router: {
+    options: {
+      scrollBehaviorType: 'smooth',
+    },
+  },
   routeRules: {
     // Root pages
     '/': { ssr: false },
@@ -206,4 +192,7 @@ export default defineNuxtConfig({
     '/auth/**': { ssr: true },
   },
   ssr: true,
+
+  //
+  compatibilityDate: '2025-07-18',
 })

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { riotDisclaimer } from '#shared/appdata'
+import { riotDisclaimer } from '#shared/data/riot-disclaimer'
 
 definePageMeta({
   name: 'terms',
@@ -23,7 +23,7 @@ definePageMeta({
         title="Data"
         description="Where the raw data on lolpockets comes from. Raw data is processed and calculated by lolpocket's own algorithms and functions.">
         <ol
-          class="space-y-6 list-[upper-roman] list-outside text-pretty marker:w-12 marker:text-start marker:justify-start marker:pr-6 leading-7 pl-6">
+          class="list-outside list-[upper-roman] space-y-6 pl-6 leading-7 text-pretty marker:w-12 marker:justify-start marker:pr-6 marker:text-start">
           <li>
             <b>Riot's</b>
             public
@@ -68,7 +68,7 @@ definePageMeta({
         title="Riot Policies"
         description="About Riot data and asset usage.">
         <ol
-          class="space-y-6 list-[upper-roman] list-outside text-pretty marker:w-12 marker:text-start marker:justify-start marker:pr-6 leading-7 pl-6">
+          class="list-outside list-[upper-roman] space-y-6 pl-6 leading-7 text-pretty marker:w-12 marker:justify-start marker:pr-6 marker:text-start">
           <li>
             {{ riotDisclaimer }}
           </li>

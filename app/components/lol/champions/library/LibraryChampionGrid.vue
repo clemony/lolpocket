@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import ChampionGridIcon from '#components'
 import type {
   ColDef,
   ColGroupDef,
@@ -7,8 +8,6 @@ import type {
   GridPreDestroyedEvent,
   GridReadyEvent,
 } from 'ag-grid-community'
-import ChampionGridIcon from '#components'
-import { championsLite } from '#shared/appdata/records/champions-lite'
 import {
   CellStyleModule,
   ClientSideRowModelModule,
@@ -23,6 +22,7 @@ import {
 } from 'ag-grid-community'
 import { AgGridVue } from 'ag-grid-vue3'
 import { pocketTheme } from '~/utils/config/tableTheme'
+import { championsLite } from '~~/shared/records/champions-lite'
 
 definePageMeta({
   name: 'Champion Stats',

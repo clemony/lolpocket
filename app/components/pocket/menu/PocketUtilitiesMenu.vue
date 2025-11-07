@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import type { Pocket } from '~~/shared/schema'
+
 const { pocket: p } = defineProps<{
   pocket: Pocket
 }>()
@@ -33,7 +35,7 @@ async function testSaveAllPockets() {
         ">
         <icon
           name="more"
-          class="group-data-[state=open]/drop:opacity-80 group-hover/drop:opacity-80 opacity-60" />
+          class="opacity-60 group-hover/drop:opacity-80 group-data-[state=open]/drop:opacity-80" />
       </Button>
     </PopoverTrigger>
 
@@ -42,7 +44,7 @@ async function testSaveAllPockets() {
       align="start"
       :side-offset="-18"
       :align-offset="-4"
-      class="min-w-76 ml-3 px-1 py-3 overflow-hidden flex flex-col justify-items-center justify-center **:[&_button]:w-full **:[&_button]:justify-start **:[&_button]:!gap-3 **:[&_button]:px-3">
+      class="ml-3 flex min-w-76 flex-col justify-center justify-items-center overflow-hidden px-1 py-3 **:[&_button]:w-full **:[&_button]:justify-start **:[&_button]:!gap-3 **:[&_button]:px-3">
       <Button
         variant="ghost"
         size="sm"
@@ -71,13 +73,13 @@ async function testSaveAllPockets() {
         Download Pocket Card
       </Button>
 
-      <Separator class="-mx-2 my-2 justify-self-center bg-b3" />
+      <Separator class="bg-b3 -mx-2 my-2 justify-self-center" />
       <Label
         variant="label"
-        class="px-3 py-2 mb-1">
+        class="mb-1 px-3 py-2">
         <icon
           name="export"
-          class="size-4.5 dst" />
+          class="dst size-4.5" />
         Export to League Client
       </Label>
       <Button
@@ -94,7 +96,7 @@ async function testSaveAllPockets() {
         Runes
       </Button>
 
-      <Separator class="-mx-2 my-2 justify-self-center bg-b3" />
+      <Separator class="bg-b3 -mx-2 my-2 justify-self-center" />
       <Button
         variant="ghost"
         size="sm"
@@ -103,7 +105,7 @@ async function testSaveAllPockets() {
         <DeletePocketDialog :pocket="pocket">
           <icon
             name="trash"
-            class="size-4.5 dst" />
+            class="dst size-4.5" />
           Delete Pocket
         </DeletePocketDialog>
       </Button>

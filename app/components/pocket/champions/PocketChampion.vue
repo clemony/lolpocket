@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { motion } from 'motion-v'
+import type { Pocket } from '~~/shared/schema'
 
 /* const hover = shallowRef<boolean>(false)
 const debounced = refDebounced(hover, 400)

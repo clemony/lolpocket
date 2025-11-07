@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { shardObject } from '#shared/appdata/records/shards'
+import { shardObject } from '~~/shared/records/shards'
 
 const {
   id,

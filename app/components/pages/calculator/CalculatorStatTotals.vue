@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import { itemStatRecord } from '#shared/appdata'
-import { statIndex } from '#shared/appdata/index'
+import { statIndex } from '#shared/references'
 import { motion } from 'motion-v'
+import { itemStatRecord } from '~~/shared/indexes'
 
 const checkedStats = ref([])
 
@@ -53,12 +53,12 @@ const set2 = computed(() => is().calculatorSet2)
   <div class="w-full overflow-hidden">
     <!-- head -->
     <div
-      class="w-full grid grid-cols-[40px_1fr_30px_30px] z-1 py-2 *:text-2 items-center btn-depth h-13">
+      class="*:text-2 btn-depth z-1 grid h-13 w-full grid-cols-[40px_1fr_30px_30px] items-center py-2">
       <div class="dst col-start-2 font-medium">
         STAT
       </div>
 
-      <div class="dst font-medium justify-center">
+      <div class="dst justify-center font-medium">
         {{ is().isComparing ? "1" : "TOTAL" }}
       </div>
 
@@ -69,19 +69,19 @@ const set2 = computed(() => is().calculatorSet2)
       </div>
     </div>
 
-    <div class="overflow-y-auto w-full">
+    <div class="w-full overflow-y-auto">
       <LayoutGroup>
         <motion.label
           v-for="stat in checkedStats"
           :key="stat.id"
           :layout="true"
-          class="sticky top-0 left-0 bg-b1 border-b first:border-t last:!border-b-b3 border-b-b3/55 border-t-b3/60 cursor-pointer *:justify-start z-1 grid grid-cols-[40px_1fr_30px_30px] py-3 hover:border-y hover:border-y-b3/80 items-center hover:bg-b1/50">
+          class="bg-b1 last:!border-b-b3 border-b-b3/55 border-t-b3/60 hover:border-y-b3/80 hover:bg-b1/50 sticky top-0 left-0 z-1 grid cursor-pointer grid-cols-[40px_1fr_30px_30px] items-center border-b py-3 *:justify-start first:border-t hover:border-y">
           <!-- row 1 -->
 
           <input
             v-model="checkedStats"
             type="checkbox"
-            class="peer hidden absolute"
+            class="peer absolute hidden"
             :value="stat" />
 
           <StatRowContents
@@ -97,11 +97,11 @@ const set2 = computed(() => is().calculatorSet2)
           <motion.label
             v-if="!checkedStats.includes(stat)"
             :layout="true"
-            class="hover:bg-b2/60 first:border-t first:border-t-b3 cursor-pointer py-3.5 has-checked:hidden w-full grid grid-cols-[40px_1fr_30px_30px] border-b-b3/40 border-b items-center">
+            class="hover:bg-b2/60 first:border-t-b3 border-b-b3/40 grid w-full cursor-pointer grid-cols-[40px_1fr_30px_30px] items-center border-b py-3.5 first:border-t has-checked:hidden">
             <input
               v-model="checkedStats"
               type="checkbox"
-              class="peer hidden absolute"
+              class="peer absolute hidden"
               :value="stat" />
 
             <StatRowContents
@@ -114,8 +114,8 @@ const set2 = computed(() => is().calculatorSet2)
     </div>
 
     <div
-      class="w-full grid grid-cols-[40px_1fr_30px_30px] h-13 border-y border-y-b3/50 z-1 py-2 *:text-2 items-center">
-      <div class="justify-center ml-4">
+      class="border-y-b3/50 *:text-2 z-1 grid h-13 w-full grid-cols-[40px_1fr_30px_30px] items-center border-y py-2">
+      <div class="ml-4 justify-center">
         <i-ui-gold class="text-bc/80 size-6" />
       </div>
 
@@ -123,13 +123,13 @@ const set2 = computed(() => is().calculatorSet2)
         TOTAL GOLD
       </div>
 
-      <div class="dst font-medium justify-center">
+      <div class="dst justify-center font-medium">
         {{ totalCost }}
       </div>
 
       <div
         v-if="is().isComparing"
-        class="dst font-medium justify-center">
+        class="dst justify-center font-medium">
         {{ totalCost2 }}
       </div>
     </div>

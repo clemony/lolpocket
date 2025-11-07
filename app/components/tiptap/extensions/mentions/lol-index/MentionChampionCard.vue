@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { championPositions } from '#shared/appdata'
+import { championPositions } from '~~/shared/references'
 
 const { id } = defineProps<{
   id: number
@@ -12,7 +12,7 @@ watchEffect(async () => {
     return
 
   try {
-    const module = await import(`#shared/appdata/records/champions/${ix().champKeyById(id)}.ts`)
+    const module = await import(`#shared/records/champions/${ix().champKeyById(id)}.ts`)
     item.value = module.default || null
   }
   catch (err) {

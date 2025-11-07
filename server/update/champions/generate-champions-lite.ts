@@ -1,14 +1,14 @@
+import fs from 'node:fs'
+import path from 'node:path'
 import type {
   ChampionLite,
   ChampionLiteRecord,
-} from '#shared/types/types.champion'
-import { markUpdate } from '#shared/utils/markUpdate'
-import fs from 'node:fs'
+} from '../../types/types.import'
 import { resolvePath } from '../resolvePath'
-import { normalize, normalizeArray } from '../utils'
+import { markUpdate, normalize, normalizeArray } from '../utils'
 
 const dataPath = resolvePath('./champions/raw/champions-raw.json')
-const outputLite = resolvePath('#shared/appdata/records/champions-lite.ts')
+const outputLite = path.resolve('./shared/records/champions-lite.ts')
 const outputRoles = resolvePath('./champions/raw/unique-roles.json')
 const outputPositions = resolvePath('./champions/raw/unique-positions.json')
 
@@ -50,7 +50,7 @@ const championsLite = Object.values(champions).reduce((acc, champ) => {
     attackType: normalize(attackType),
     attributeRatings,
     positions: normalizedPositions,
-    resource: normalize(resource.replace('_', ' ')),
+    resource: normalize(resource?.replace('_', ' ')),
     roles: normalizedRoles,
     stats: Object.fromEntries(
       Object.entries(stats)

@@ -4,7 +4,7 @@ import { resolvePath } from '../resolvePath'
 import { markUpdate } from '../utils'
 
 const dataPath = resolvePath('./runes/raw/runes.json')
-const runeOutputDir = path.resolve('./shared/appdata/records/runes')
+const runeOutputDir = path.resolve('./shared/records/runes')
 const raw = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
 
 const outputIndex: Record<string, any> = {}

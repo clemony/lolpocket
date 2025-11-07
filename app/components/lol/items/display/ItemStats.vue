@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { statIndex } from '#shared/appdata'
+import { statIndex } from '#shared/references'
 
 const { stats } = defineProps<{
   stats: Record<string, number>

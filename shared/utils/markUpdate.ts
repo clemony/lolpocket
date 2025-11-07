@@ -1,5 +1,5 @@
 import fs from 'node:fs'
-import { patchIndex } from '../appdata'
+import { patchIndex } from '../indexes'
 
 export function getFormattedDateTime(): string {
   const now = new Date()

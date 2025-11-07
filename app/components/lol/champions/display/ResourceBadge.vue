@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import type { ChampionResource } from '@appdata'
-import { championResources } from '@appdata'
+import type { ChampionResource } from '#shared/references'
+import { championResources } from '#shared/references'
 
 const { class: className, resource: p } = defineProps<{
   class?: HTMLAttributes['class']

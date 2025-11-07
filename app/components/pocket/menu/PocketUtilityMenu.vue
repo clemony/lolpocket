@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import type { Pocket } from '~~/shared/schema'
+
 const props = defineProps<{
   pocket: Pocket
 }>()
@@ -8,7 +10,7 @@ const pocket = ref(props.pocket)
 
 <template>
   <div
-    class="flex *:cursor-pointer flex-col gap-2 *:py-3 *:justify-start *:text-left *:w-full *:text-3 **:pointer-events-auto">
+    class="*:text-3 flex flex-col gap-2 *:w-full *:cursor-pointer *:justify-start *:py-3 *:text-left **:pointer-events-auto">
     <button
       class="group btn btn-ghost btn-lg"
       @click="duplicatePocket(pocket)">

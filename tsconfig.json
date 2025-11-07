@@ -1,10 +1,3 @@
 {
-  "extends": "./.nuxt/tsconfig.json",
-  "compilerOptions": {
-    "resolveJsonModule": true,
-    "strict": false,
-    "noEmit": true,
-    "pretty": true,
-    "skipLibCheck": true
-  }
+  "extends": "./.nuxt/tsconfig.json"
 }

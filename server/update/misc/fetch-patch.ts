@@ -35,7 +35,7 @@ async function main() {
       JSON.stringify(filtered, null, 2)
     )
     await writeFile(
-      './shared/appdata/index/patch-index.ts',
+      './shared/indexes/patch-index.ts',
       `// ${getFormattedDateTime()}
 
 export const patchIndex = ${JSON.stringify(normalized, null, 2)}`

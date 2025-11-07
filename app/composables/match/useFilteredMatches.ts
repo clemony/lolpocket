@@ -1,4 +1,4 @@
-import { matchFilters } from '~~/shared/appdata/filters/match-filters'
+import { matchFilters } from '~~/shared/references'
 
 export function useFilteredMatches(puuid: string, matches: MatchData[]) {
   console.log('puuid: ', puuid)

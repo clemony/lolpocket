@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { FormField } from '@base/form/form-index'
+import { FormField } from '~/base/form/index.form'
 
 const { name = 'options', class: className, values } = defineProps<{
   class?: HTMLAttributes['class']
@@ -41,7 +41,9 @@ const { name = 'options', class: className, values } = defineProps<{
             <ul
               v-if="option.id !== 'other'"
               class="text-balanced w-full pr-3">
-              <template v-if="option?.description">
+              <OffensiveName
+                v-if="option?.name === 'offensiveName'" />
+              <template v-else-if="option?.description">
                 <li
                   v-for="str, ix in option.description"
                   :key="ix"
@@ -49,9 +51,6 @@ const { name = 'options', class: className, values } = defineProps<{
                   &bull;&ensp;{{ str }}
                 </li>
               </template>
-              <component
-                :is="option?.component"
-                v-else />
             </ul>
           </FormDescription>
         </FormLabel>

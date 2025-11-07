@@ -4,7 +4,7 @@ import VueZoomable from 'vue-zoomable'
 import 'vue-zoomable/dist/style.css'
 
 const { card } = defineProps<{
-  card: Card
+  card: any
 }>()
 
 definePageMeta({

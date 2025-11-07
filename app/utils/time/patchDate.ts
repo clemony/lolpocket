@@ -1,6 +1,6 @@
 import type { DateValue, ZonedDateTime } from '@internationalized/date'
-import { patchDates } from '#shared/appdata/index/patch-date'
 import { getLocalTimeZone, parseAbsoluteToLocal, Time, toCalendarDateTime, toZoned } from '@internationalized/date'
+import { patchDates } from '~~/shared/references/patch-date'
 
 export const patchDatesMap: Record<string, ZonedDateTime> = Object.fromEntries(
   Object.entries(patchDates).map(([patch, dateStr]) => {

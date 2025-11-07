@@ -1,3 +1,5 @@
+import type { Account } from '~~/shared/schema'
+
 export function getSummonerSlug(summoner: Account | Summoner) {
   if (!summoner)
     return

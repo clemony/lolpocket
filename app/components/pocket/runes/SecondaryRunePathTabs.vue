@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import type { Pocket, RuneSet } from '~~/shared/schema'
+
 const { pocket, set: s } = defineProps<{
   pocket: Pocket
   path: string | undefined
@@ -13,7 +15,7 @@ const set = computed(() => s)
   <Tabs>
     <TabsList
       base="indicator"
-      class="items-center h-19 justify-evenly pt-2 grid-cols-5 w-full field-box">
+      class="field-box h-19 w-full grid-cols-5 items-center justify-evenly pt-2">
       <PathTabTrigger
         v-for="item in paths"
         :key="`${item}2`"
@@ -28,12 +30,12 @@ const set = computed(() => s)
       <Tabs v-model:model-value="set.primary.path">
         <TabsList
           base="indicator"
-          class="absolute top-0 left-0 pointer-events-none h-19 justify-evenly grid-cols-5 w-full bg-transparent shadow-none inset-shadow-none border-none">
+          class="pointer-events-none absolute top-0 left-0 h-19 w-full grid-cols-5 justify-evenly border-none bg-transparent inset-shadow-none shadow-none">
           <TabsTrigger
             v-for="item in paths"
             :key="`${item}-tabs`"
             :title="item"
-            class="rounded-full relative group aspect-square size-15 place-self-center invisible opacity-0"
+            class="group invisible relative aspect-square size-15 place-self-center rounded-full opacity-0"
             :value="item" />
 
           <TabIndicator

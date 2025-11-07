@@ -37,7 +37,7 @@ const menu = [
 </script>
 
 <template>
-  <div class="tippy-content flex items-center gap-1 px-0">
+  <div class="!z-66 flex w-max flex-nowrap items-center gap-1 px-1 py-1.5">
     <template
       v-for="item, i in menu"
       :key="i">
@@ -53,6 +53,7 @@ const menu = [
       </Button>
       <Separator
         v-if="item.name === 'separator'"
+        :size="2"
         class="bg-b3 h-[11px]"
         orientation="vertical" />
     </template>

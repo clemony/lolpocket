@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { ItemSet } from '~~/shared/schema'
+
 const { class: className, set } = defineProps<{
   class?: HTMLAttributes['class']
   set: ItemSet

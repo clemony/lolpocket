@@ -6,6 +6,7 @@ import StarterKit from '@tiptap/starter-kit'
 import Suggestion from '@tiptap/suggestion'
 import { EditorContent, useEditor } from '@tiptap/vue-3'
 
+
 const props = defineProps<{
   modelValue: Doc | null
   class?: HTMLAttributes['class']

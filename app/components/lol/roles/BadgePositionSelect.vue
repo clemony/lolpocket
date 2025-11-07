@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { championPositions } from '#shared/appdata'
 import { SelectTrigger } from 'reka-ui'
+import { championPositions } from '~~/shared/references'
 
 const {
   side,

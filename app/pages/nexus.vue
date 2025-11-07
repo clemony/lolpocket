@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import type { description } from 'valibot'
 import { motion, useDomRef } from 'motion-v'
-import { toast } from '~/base/toast/use-toast'
+import type { description } from 'valibot'
+import { toast } from '~/base/notification/toast/use-toast'
 
 const container = useDomRef()
 
@@ -23,7 +23,6 @@ const text = ref<string>()
     </header>
 
     <div class="mx-auto w-1/5 space-y-2">
-      <Hihi />
       <Button @click="useFetchSummonerData(as().account.puuid)">
         try update
       </Button>

@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import type { Pocket } from '~~/shared/schema'
 import { DialogDescription, DialogTitle } from 'reka-ui'
 
 const { class: className, pocket } = defineProps<{
@@ -18,9 +19,9 @@ function handleDelete() {
       <slot></slot>
     </DialogTrigger>
 
-    <MotionDialogContent class="pb-8 flex flex-col justify-between">
+    <MotionDialogContent class="flex flex-col justify-between pb-8">
       <DialogClose
-        class="absolute right-6 top-5 opacity-60 rounded-lg size-8 grid place-items-center cursor-pointer hover:ring hover:ring-b3 focus:ring-b3 focus:ring hover:opacity-100">
+        class="hover:ring-b3 focus:ring-b3 absolute top-5 right-6 grid size-8 cursor-pointer place-items-center rounded-lg opacity-60 hover:opacity-100 hover:ring focus:ring">
         <icon name="x-sm" />
       </DialogClose>
 
@@ -28,15 +29,15 @@ function handleDelete() {
         Delete Pocket and head back to Backpack?
       </DialogTitle>
 
-      <DialogDescription class="font-normal leading-7 mt-4">
+      <DialogDescription class="mt-4 leading-7 font-normal">
         You can view your trash from the Backpack's sidebar. Trash can be
         retrieved, but is automatically removed at 30 days old. In the Bin,
         you'll also find a button for immediate dumpster fire.
       </DialogDescription>
 
-      <div class="mt-6 w-full grow justify-between flex items-center">
+      <div class="mt-6 flex w-full grow items-center justify-between">
         <Label
-          class="gap-3 cursor-pointer text-bc/60 hover:text-bc items-center text-2 underline-offset-2 hover:underline flex">
+          class="text-bc/60 hover:text-bc text-2 flex cursor-pointer items-center gap-3 underline-offset-2 hover:underline">
           <input
             v-model="as().settings.noConfirmTrash"
             type="checkbox"
@@ -45,7 +46,7 @@ function handleDelete() {
         </Label>
 
         <DialogClose
-          class="btn btn-neutral btn-lg pl-7 pr-9 !justify-start"
+          class="btn btn-neutral btn-lg !justify-start pr-9 pl-7"
           @click="handleDelete()">
           <icon name="trash" />
           Send to Trash

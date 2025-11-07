@@ -12,7 +12,7 @@ export const variantVariants = {
   hidden: 'hidden',
   base: 'backdrop-blur  bg-b1/90 px-3  border-b3',
   btn: 'px-3  bg-tint-b2/60 border-b3/60 font-medium text-bc **:text-bc',
-  ghost: 'btn-ghost hover:bg-tint-b2/20 hover:border-b3/60 shadow-none drop-shadow-none fx-0  font-medium px-3 ',
+  ghost: 'btn-ghost hover:bg-tint-b2/20 hover:border-b3/60 shadow-none drop-shadow-none  border-transparent fx-0  font-medium px-3 ',
   ghostBase: 'on:!bg-b1 open:!bg-b1 on:shadow-sm open:shadow-sm shadow-black/4 on:!border-b3/80 open:!border-b3/80  fx-0 font-medium px-3 ',
   input: 'btn-outline px-3 !bg-transparent inset-shadow-xs  font-medium border-b3 shadow-[1px_1px_1px_rgba(0,0,0,0.04)]',
   inset: 'inset-shadow-xs fx-1 !border-b3/80 border !bg-b2',

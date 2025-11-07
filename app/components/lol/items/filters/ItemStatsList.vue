@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-import { statIndex } from '@appdata'
-
+import type { statIndex } from '#shared/references'
 const { class: className, icons, indicator = true, labels, variant = 'ghost', wrapperClass } = defineProps<{
   icons?: boolean
   labels?: boolean
@@ -17,7 +16,7 @@ const groups = ['basic', 'utility', 'spells', 'defense', 'physical',]
 <template>
   <Listbox
     v-model:model-value="is().filters.stats"
-    class="w-full overflow-y-scroll overscroll-auto px-1.5 h-120 max-h-90"
+    class="h-120 max-h-90 w-full overflow-y-scroll overscroll-auto px-1.5"
     :multiple="true"
     @entry-focus.prevent>
     <ListboxContent :class="cn(wrapperClass)">
@@ -27,11 +26,11 @@ const groups = ['basic', 'utility', 'spells', 'defense', 'physical',]
         :class="cn({ 'row-span-2': group === 'physical' })">
         <ListboxGroupLabel
           v-if="labels"
-          class="capitalize !text-2 mb-1 pl-0 font-semibold text-bc/90">
+          class="!text-2 text-bc/90 mb-1 pl-0 font-semibold capitalize">
           {{ group }}
         </ListboxGroupLabel>
 
-        <TransitionScalePop :class="cn('w-full flex flex-col gap-1 pb-6', className)">
+       <!--  <TransitionScalePop :class="cn('w-full flex flex-col gap-1 pb-6', className)">
           <ListboxItem
             v-for="stat in Object.values(statIndex).filter(s => s.group === group)"
             :key="stat.id"
@@ -54,12 +53,12 @@ const groups = ['basic', 'utility', 'spells', 'defense', 'physical',]
                   color: is().filters.stats.includes(stat.id) ? '#FFFFFF' : stat.color,
                 }"
                 :name="stat.icon"
-                class="size-4 dst" />
+                class="dst size-4" />
             </span>
             {{ stat.name }}
             <ListboxItemIndicator v-if="indicator === true" />
           </ListboxItem>
-        </TransitionScalePop>
+        </TransitionScalePop> -->
       </ListboxGroup>
     </ListboxContent>
   </Listbox>

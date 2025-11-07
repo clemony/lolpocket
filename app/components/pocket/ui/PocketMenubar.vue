@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { ChampionIcon, Hicon, ItemsAutoMenu, MiniItemAvatars, MiniSpellAvatars, RuneAndPathImg, RunesAutoMenu, SpellsAutoMenu } from '#components'
-import { championPositions } from '~~/shared/appdata'
-import type { MenubarGroup } from '~/base/menubar/menubar.types'
+import type { MenubarGroup } from '~/base/menu/menubar/menubar.types'
+import { championPositions } from '~~/shared/references'
+import type { Pocket } from '~~/shared/schema'
 
 const route = useRoute()
 const pocket = ref<Pocket>(ps().getPocket(String(route.params.pocket_key)))
@@ -202,7 +203,7 @@ console.log('🌱 - menu:', menu)
 
 <template>
   <Menubar
-    class="h-11 self-end pb-2.5 -ml-4 w-fit z-1">
+    class="z-1 -ml-4 h-11 w-fit self-end pb-2.5">
     <MenubarMenu
       v-for="group in menu"
       :key="group.name"
@@ -214,7 +215,7 @@ console.log('🌱 - menu:', menu)
           variant="link"
           active="secondary"
           size="sm"
-          class="rounded-lg open:brightness-98 capitalize px-4 ">
+          class="rounded-lg px-4 capitalize open:brightness-98 ">
           {{ group.name }}
         </Button>
       </MenubarTrigger>

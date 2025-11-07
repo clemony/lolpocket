@@ -1,6 +1,5 @@
 @import 'tailwindcss';
 
-
 .pockets-grid .ag-root-wrapper-body {
   @apply after:inset-shadow-b1 after:rounded-box after:shadow-b1
     after:shadow-[inset_0px_0px_20px_16px_#00000089] after:inset-shadow-mask

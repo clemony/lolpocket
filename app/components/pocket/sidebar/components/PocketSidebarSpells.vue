@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { addSpellSet } from '#shared/schema'
+
 const route = useRoute()
 const pocket = computed(() =>
   ps().getPocket(String(route.params.pocket_key))
@@ -7,16 +9,16 @@ const pocket = computed(() =>
 
 <template>
   <Collapsible class="field-box grid p-3">
-    <CollapsibleTrigger class="flex justify-between items-center">
+    <CollapsibleTrigger class="flex items-center justify-between">
       <h3>Spells</h3>
 
       <CaretRotate />
     </CollapsibleTrigger>
-    <CollapsibleContent class="grid auto-rows-fr px-1 pt-3 gap-4 !pb-0">
+    <CollapsibleContent class="grid auto-rows-fr gap-4 px-1 pt-3 !pb-0">
       <div
         v-for="set in pocket.spells"
         :key="set.id"
-        class="flex gap-3 items-center">
+        class="flex items-center gap-3">
         <SpellPicker
           class="size-16"
           :current-value="set.d"
@@ -25,7 +27,7 @@ const pocket = computed(() =>
           class="size-16"
           :current-value="set.f"
           @update:spell="(e) => (set.f = e)" />
-        <span class="items-center flex gap-1">
+        <span class="flex items-center gap-1">
           <Button
             class="inline"
             variant="link">

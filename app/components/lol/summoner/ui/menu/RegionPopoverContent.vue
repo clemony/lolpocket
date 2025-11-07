@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { regionIndex } from '#shared/appdata/index/region-index'
+import { regionIndex } from '~~/shared/references'
 
 defineOptions({
   inheritAttrs: false
@@ -23,10 +23,10 @@ const modelValue = ref(as().account.region)
       )
     ">
     <!--  <PopoverArrow /> -->
-    <div class="size-full overflow-y-auto grid gap-px pb-2 px-1">
+    <div class="grid size-full gap-px overflow-y-auto px-1 pb-2">
       <div
-        class="w-full flex items-center mb-2 h-11 sticky top-0 bg-b1 z-1 border-b">
-        <Label class="px-4 text-bc/50">Select Region...</Label>
+        class="bg-b1 sticky top-0 z-1 mb-2 flex h-11 w-full items-center border-b">
+        <Label class="text-bc/50 px-4">Select Region...</Label>
       </div>
 
       <Button
@@ -44,7 +44,7 @@ const modelValue = ref(as().account.region)
         <span class="">
           {{ regionIndex[region] }}
         </span>
-        <span class="uppercase grow opacity-50">
+        <span class="grow uppercase opacity-50">
           ({{ capitalize(region) }})
         </span>
 

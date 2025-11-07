@@ -3,8 +3,8 @@ import path from 'node:path'
 import { resolvePath } from '../resolvePath'
 import { markUpdate } from '../utils/markUpdate'
 
-const outputFile = path.resolve('./shared/appdata/index/champion-index.ts')
-const outputRoles = path.resolve('./shared/appdata/index/champion-role-index.ts')
+const outputFile = path.resolve('./shared/indexes/champion-index.ts')
+const outputRoles = path.resolve('./shared/indexes/champion-role-index.ts')
 const dataPath = resolvePath('./champions/raw/champions-raw.json')
 
 const champs = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))

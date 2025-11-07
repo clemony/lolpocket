@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import type { RuneSet } from '~~/shared/schema'
+
 const { set } = defineProps<{
   set: RuneSet
   kClass?: HTMLAttributes['class']
@@ -8,8 +10,8 @@ const { set } = defineProps<{
 </script>
 
 <template>
-  <div class="size-full gap-3 grid grid-cols-2 !justify-end items-center">
-    <span class="size-full relative grid items-center justify-end">
+  <div class="grid size-full grid-cols-2 items-center !justify-end gap-3">
+    <span class="relative grid size-full items-center justify-end">
       <img
         v-if="set?.keystone"
         c

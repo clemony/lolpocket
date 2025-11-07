@@ -1,6 +1,6 @@
 import fs from 'node:fs'
 import path from 'node:path'
-import type { ItemIndex, ItemLite } from '../../../@types'
+import type { ItemIndex, ItemLite } from '../../types/types.import'
 import { resolvePath } from '../resolvePath'
 import { formatStats, handleWikiText, ludensPreProcess, markUpdate, normalizeItemData, stripEmpty } from '../utils'
 
@@ -10,9 +10,9 @@ const tagsOutput = resolvePath('./items/raw/unique-tags.json')
 const ranksOutput = resolvePath('./items/raw/unique-ranks.json')
 
 // shared
-const outputIndex = resolvePath('../../shared/appdata/index/item-index.ts')
-const outputLitePath = resolvePath('../../shared/appdata/records/items-lite.ts')
-const itemOutputDir = resolvePath('../../shared/appdata/records/items/')
+const outputIndex = path.resolve('./shared/indexes/item-index.ts')
+const outputLitePath = path.resolve('./shared/records/items-lite.ts')
+const itemOutputDir = path.resolve('./shared/records/items/')
 
 // input
 const inputPath = resolvePath('./items/raw/items-raw.json')

@@ -1,4 +1,5 @@
 import type { Instance } from 'tippy.js'
+import type { Pocket } from '~~/shared/schema'
 import { PocketChampionMenu } from '#components'
 import tippy from 'tippy.js'
 import { ref, render } from 'vue'

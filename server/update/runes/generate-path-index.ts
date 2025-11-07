@@ -1,7 +1,8 @@
-import type { RunePath } from '#shared/types/types.rune'
 import fs from 'node:fs'
-import { markUpdate } from '../../../server'
+import path from 'node:path'
+import type { RunePath } from '../../types/types.import'
 import { resolvePath } from '../resolvePath'
+import { markUpdate } from '../utils'
 
 // Load the transformed rune paths
 const dataPath = resolvePath('./runes/raw/runes.json')
@@ -13,10 +14,11 @@ const index: { id: number, name: string, color: string }[] = paths.map(
     id: path.id,
     name: path.name,
     color: `var(--color-${path.name.toLowerCase()})`,
+    tooltip: path.tooltip,
   })
 )
 
-const outputDir = resolvePath('#shared/appdata/index/path-index.ts')
+const outputDir = path.resolve('./shared/indexes/path-index.ts')
 const tsOutput = `// ${markUpdate()}
 
 export const pathIndex: PathIndex[] = ${JSON.stringify(index, null, 2)}`

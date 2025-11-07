@@ -1,6 +1,7 @@
 <script lang="ts" setup>
-import { championPositions } from '#shared/appdata'
+import { championPositions } from '#shared/references'
 import { VueDraggable } from 'vue-draggable-plus'
+import type { Pocket } from '~~/shared/schema'
 
 const { class: className, pocket: p } = defineProps<{
   pocket: Pocket

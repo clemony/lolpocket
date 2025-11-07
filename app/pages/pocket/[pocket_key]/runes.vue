@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures'
-import type { CarouselApi } from '~/base/carousel/carousel-index'
+import type { CarouselApi } from '~/base/layout/carousel/carousel-index'
+import { addRuneSet } from '~~/shared/schema'
 
 definePageMeta({
   name: 'pocket-runes',
@@ -58,19 +59,19 @@ function handleAdd() {
 
 <template>
   <div
-    class="size-full z-auto overflow-y-scroll max-h-full *:max-w-[1200px] pt-10 -space-y-6 pl-10 pr-16 flex flex-col items-center">
+    class="z-auto flex size-full max-h-full flex-col items-center -space-y-6 overflow-y-scroll pt-10 pr-16 pl-10 *:max-w-[1200px]">
     <!-- thumbnails -->
     <Carousel
-      class="w-full sticky -top-10 py-4 bg-b1/60 mask-x-from-0% mask-x-to-10% mask-x-from-transparent mask-x-to-black backdrop-blur-md z-1 flex-shrink-1 items-center justify-center flex gap-2"
+      class="bg-b1/60 mask-x-from-0% mask-x-to-10% mask-x-from-transparent mask-x-to-black sticky -top-10 z-1 flex w-full flex-shrink-1 items-center justify-center gap-2 py-4 backdrop-blur-md"
       :opts="{ loop: true }"
       :plugins="[WheelGesturesPlugin()]"
       @init-api="(val) => (emblaThumbnailApi = val)">
       <CarouselContent
-        class="w-fit ml-0 overflow-x-scroll scrollbar-none scroll-smooth overscroll-auto max-w-full"
+        class="scrollbar-none ml-0 w-fit max-w-full overflow-x-scroll overscroll-auto scroll-smooth"
         as-child>
         <TransitionScalePop
           group
-          class="flex py-0 gap-2 px-32 w-fit items-center">
+          class="flex w-fit items-center gap-2 px-32 py-0">
           <CarouselItem
             v-for="(thumbSet, index) in pocket.runes"
             :key="index"
@@ -82,7 +83,7 @@ function handleAdd() {
             "
             @click="onThumbClick(index)">
             <Card
-              class="w-40 h-22"
+              class="h-22 w-40"
               as-child>
               <KeystoneAndPath :set="thumbSet" />
             </Card>
@@ -110,7 +111,7 @@ function handleAdd() {
                 variant="base"
                 hover="btn"
                 :disabled="pocket.runes.length >= 10"
-                class="grid place-items-center w-40 h-22"
+                class="grid h-22 w-40 place-items-center"
                 @click="handleAdd()">
                 <icon name="add" />
               </Button>
@@ -130,7 +131,7 @@ function handleAdd() {
         class="sticky left-10"
         @click="emblaMainApi.scrollPrev()" />
       <CarouselNext
-        class="left-[calc(100%-60px)] !sticky"
+        class="!sticky left-[calc(100%-60px)]"
         @click="emblaMainApi.scrollNext()" />
       <CarouselContent>
         <CarouselItem

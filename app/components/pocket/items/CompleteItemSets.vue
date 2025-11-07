@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import type { ItemSet, Pocket } from '~~/shared/schema'
+
 const props = defineProps<{
   set?: ItemSet
   pocket?: Pocket
@@ -7,14 +9,14 @@ const props = defineProps<{
 
 <template>
   <div
-    class="rounded-box p-i-c **:select-none h-auto pb-5 pt-4 shadow-smooth shadow-black/10 drop-shadow-md px-6 backdrop-blur-md w-fit">
+    class="rounded-box p-i-c shadow-smooth h-auto w-fit px-6 pt-4 pb-5 shadow-black/10 drop-shadow-md backdrop-blur-md **:select-none">
     <div class="w-full justify-start">
       <!--  <span
         class="text-5dst font-medium"
         :style="{ fontFamily: pocket.card.font[1] || 'Geist Mono' }"> {{ set.name }}</span> -->
     </div>
 
-    <div class="flex gap-2 mt-2">
+    <div class="mt-2 flex gap-2">
       <template v-if="set && set.items.length">
         <template v-for="(item, i) in set.items">
           <template v-if="i < 6">
@@ -24,12 +26,12 @@ const props = defineProps<{
               <div class="size-full overflow-hidden rounded-lg">
                 <div
                   v-if="item === 0"
-                  class="size-full bg-b3 aspect-square" />
+                  class="bg-b3 aspect-square size-full" />
 
                 <img
                   :alt="ix().itemNameById(item)"
                   :src="`/img/items/${item}.webp`"
-                  class="size-full bg-b3 aspect-square inset-shadow-rounded shadow-rounded inset-shadow-black shadow-black" />
+                  class="bg-b3 inset-shadow-rounded shadow-rounded aspect-square size-full shadow-black inset-shadow-black" />
               </div>
             </div>
           </template>

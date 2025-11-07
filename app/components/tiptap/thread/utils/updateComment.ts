@@ -1,3 +1,5 @@
+import { toast } from '~/base/notification/toast/use-toast'
+
 /* future
 async function handleUpdate({ id, content }: { id: string; content: Doc }) {
   updateComment(as().comments, id, content)
@@ -10,10 +12,10 @@ async function handleUpdate({ id, content }: { id: string; content: Doc }) {
 export function handleUpdate({ id, content }: { id: string, content: Doc }) {
   updateComment(as().comments, id, content)
 }
-
-function updateComment(list: CommentItem[], id: string, content: Doc) {
+async function updateComment(list: CommentItem[], id: string, content: Doc) {
   for (const comment of list) {
-    if (comment.id === id && comment.authorPuuid === as().account.puuid) {
+    const user = await useSupabaseUser() as unknown as ExtendedPayload
+    if (comment.id === id/*  && (comment.authorPuuid === as().account?.puuid || user?.app_metadata?.user_role === 'admin') */) {
       comment.content = content
       comment.editedAt = new Date().toISOString()
       toast({

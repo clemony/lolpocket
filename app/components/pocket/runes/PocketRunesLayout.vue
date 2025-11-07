@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { pathIndex } from '#shared/appdata/index/path-index'
-import { runePaths } from '#shared/appdata/records/runes'
+import type { RuneSet } from '~~/shared/schema'
+import { pathIndex } from '~~/shared/indexes'
+import { runePaths } from '~~/shared/records/runes'
 
 const { set: s } = defineProps<{
   set: RuneSet
@@ -47,13 +48,13 @@ function handleDelete() {
 </script>
 
 <template>
-  <div class="overflow-y-scroll size-full flex">
+  <div class="flex size-full overflow-y-scroll">
     <TransitionFade
       group
-      class="size-full relative @container justify-center flex gap-10 left-0 justify-center flex-wrap flex gap-18 px-12">
+      class="@container relative left-0 flex size-full flex-wrap justify-center gap-10 gap-18 px-12">
       <div
         v-if="set?.primary && primaryRunes"
-        class="flex flex-col gap-8 w-1/2 min-w-90 flex relative max-w-114">
+        class="relative flex w-1/2 max-w-114 min-w-90 flex-col gap-8">
         <RunesBlurb
           layout-id="path1"
           :current-path="set.primary?.path" />
@@ -63,7 +64,7 @@ function handleDelete() {
           @update:model-value="handlePath1()">
           <TabsList
             base="indicator"
-            class="items-center h-19 justify-evenly grid-cols-5 w-full field-box">
+            class="field-box h-19 w-full grid-cols-5 items-center justify-evenly">
             <PathTabTrigger
               v-for="path in pathList"
               :key="path"
@@ -90,19 +91,19 @@ function handleDelete() {
         <!-- menu buttons -->
 
         <div
-          class="absolute -left-24 bottom-50 flex flex-col flex-nowrap items-center px-1 mb-4 gap-5">
+          class="absolute bottom-50 -left-24 mb-4 flex flex-col flex-nowrap items-center gap-5 px-1">
           <Button
             variant="outline"
             title="Delete Set"
-            class="h-full size-11 rounded-full shadow-sm shadow-black/6"
+            class="size-11 h-full rounded-full shadow-sm shadow-black/6"
             @click="handleDelete()">
             <icon name="trash" />
           </Button>
           <Button
             variant="outline"
             title="Reset set runes"
-            class="h-full size-11 shadow-sm rounded-full shadow-black/6"
-            @click="resetRuneSet(set)">
+            class="size-11 h-full rounded-full shadow-sm shadow-black/6"
+            @click="resetRunes(set)">
             <icon name="reset" />
           </Button>
         </div>
@@ -112,7 +113,7 @@ function handleDelete() {
         @update:paths="handlePathUpdate($event)" />
       <div
         v-if="set?.secondary && secondaryRunes"
-        class="flex flex-col gap-7 w-1/2 min-w-90 flex overflow-hidden max-w-114">
+        class="flex w-1/2 max-w-114 min-w-90 flex-col gap-7 overflow-hidden">
         <RunesBlurb
           layout-id="path2"
           :current-path="set.secondary?.path" />
@@ -134,7 +135,7 @@ function handleDelete() {
           :pocket="pocket"
           :set />
       </div>
-      <div class="w-32 h-full flex flex-col items-center *:rounded-full gap-6">
+      <div class="flex h-full w-32 flex-col items-center gap-6 *:rounded-full">
         <Keystone
           :id="set.keystone"
           class="size-16"

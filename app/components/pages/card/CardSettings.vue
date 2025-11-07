@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import type { Card } from '~~/shared/schema'
+
 const { card: c } = defineProps<{
   card: Card
 }>()

@@ -1,4 +1,7 @@
 <script lang="ts" setup>
+import type { Pocket } from '~~/shared/schema'
+import { generatePocket } from '~~/shared/schema'
+
 definePageMeta({
   name: 'pockets',
   icon: 'folder',
@@ -17,14 +20,14 @@ const selected = ref<Pocket>(null)
           <template #tabs>
             <Button
               variant="neutral"
-              class="ml-auto font-normal pr-4 pl-2.5"
+              class="ml-auto pr-4 pl-2.5 font-normal"
               @click="generatePocket(ps().pockets)">
               <icon name="add" />
               Add Pocket
             </Button>
           </template>
 
-          <TransitionScalePop class="size-full flex flex-col gap-6 px-4">
+          <TransitionScalePop class="flex size-full flex-col gap-6 px-4">
             <LazyBackpackBoxCard
               v-for="pocket in ps().pockets.filter(
                 (p) => p.location.folder === '',
@@ -35,7 +38,7 @@ const selected = ref<Pocket>(null)
               @click="selected = pocket" />
             <Button
               v-tippy="'Add Pocket'"
-              class="w-full h-38"
+              class="h-38 w-full"
               variant="ghost">
               <icon
                 name="add"

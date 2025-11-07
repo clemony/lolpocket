@@ -1,10 +1,9 @@
 <script setup lang="ts">
-const { card: c, champion } = defineProps<{
-  card: Card
+const {  champion } = defineProps<{
+
   champion: ChampionKey
 }>()
 
-const card = computed(() => c)
 
 // @todo FIX
 </script>

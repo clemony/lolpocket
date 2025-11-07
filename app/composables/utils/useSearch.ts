@@ -1,4 +1,3 @@
-import type { regionIndex } from '#shared/appdata'
 import type { RouteRecordRaw } from 'vue-router'
 import { useDebounceFn } from '@vueuse/core'
 import Fuse from 'fuse.js'

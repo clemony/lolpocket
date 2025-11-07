@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import type { ItemSet, Pocket } from '~~/shared/schema'
+
 const props = defineProps<{
   item: ItemId
   set?: ItemSet

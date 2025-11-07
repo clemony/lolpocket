@@ -1,5 +1,8 @@
 <script setup lang="ts">
-import { shardObject } from '#shared/appdata/records/shards'
+import type { Pocket, RuneSet } from '~~/shared/schema'
+
+import { shardObject } from '#shared/records/shards'
+
 
 const { pocket, set: s } = defineProps<{
   pocket: Pocket
@@ -10,7 +13,7 @@ const set = computed(() => s)
 </script>
 
 <template>
-  <div class="flex justify-center field-box rounded-xl w-full py-10">
+  <div class="field-box flex w-full justify-center rounded-xl py-10">
     <div class="grid grid-cols-3 place-items-center gap-x-16 gap-y-7">
       <template
         v-for="tier in shardObject"

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { championRoles } from '#shared/appdata'
+import { championRoles } from '#shared/references'
 
 const { class: className, clear = false, hover = 'btn', size = ['sq-8', '8'], variant = 'ghost' } = defineProps<{
   class?: HTMLAttributes['class']

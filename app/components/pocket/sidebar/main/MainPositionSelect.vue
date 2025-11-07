@@ -1,7 +1,8 @@
 <script lang="ts" setup>
+import type { Pocket } from '~~/shared/schema'
 import { HeadingTip } from '#components'
-import { championPositions } from '#shared/appdata'
 import { SelectTrigger, } from 'reka-ui'
+import { championPositions } from '~~/shared/references'
 
 const {
   side = 'bottom',
@@ -41,15 +42,15 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
     <SelectTrigger as-child>
       <Button
         variant="ghost"
-        class="overflow-hidden relative size-20  grid place-items-center   **:pointer-events-none ">
+        class="relative grid size-20  place-items-center overflow-hidden   **:pointer-events-none ">
         <div
-          class="!size-12 grid place-items-center ">
+          class="grid !size-12 place-items-center ">
           <component
             :is="pocket?.main?.role ? `i-lol-${pocket?.main?.role}` : 'all'"
             :style="{
               color: championPositions.find(p => p.name === pocket?.main?.role).color,
             }"
-            class="!size-7  absolute dst z-2" />
+            class="dst  absolute z-2 !size-7" />
         </div><!--
         <icon
           name="select"
@@ -63,14 +64,14 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
       :reference="trigger"
       :align-offset
       position="popper"
-      class="p-0 w-[var(--reka-select-trigger-width)]  min-w-54">
-      <div class="flex gap-3 p-2 items-center">
+      class="w-[var(--reka-select-trigger-width)] min-w-54  p-0">
+      <div class="flex items-center gap-3 p-2">
         <component
           :is="pocket?.main?.role ? `i-lol-${pocket?.main?.role}` : 'all'"
           :style="{
             color: championPositions.find(p => p.name === pocket?.main?.role).color,
           }"
-          class="!size-6 dst " />
+          class="dst !size-6 " />
         <h3
           v-memo="[pocket.main.role]"
           :class="cn('truncate', {

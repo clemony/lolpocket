@@ -1,24 +1,31 @@
 <script setup lang="ts">
-const { cancellable, change, save, variant = 'neutral' } = defineProps<{
+const { cancellable, change, hover = 'opacity', icon: i, save, variant = 'neutral' } = defineProps<{
   save?: boolean
   change?: boolean
   cancellable?: boolean
   variant?: ButtonVariants['variant']
+  hover?: ButtonVariants['hover']
+  icon?: string
 }>()
+
+const iconic = computed (() => {
+  if (i)
+    return i
+
+  return !change && (cancellable || save) ? 'x' : save && change ? 'tick' : 'send'
+})
 </script>
 
 <template>
   <Button
     :variant
     size="sm"
-    hover="opacity"
+    :hover
     class="pr-6 pl-5 font-semibold">
     <Element size="icon-sm">
-      <icon
-        :name="
-          !change && (cancellable || save) ? 'x'
-          : save && change ? 'tick' : 'send'"
-        :class="cn('size-4', { 'size-5': save, 'size-3.5': cancellable })" />
+      <hicon
+        :name="iconic"
+        :class="cn('size-full ', { 'size-5': save, 'size-4': cancellable || icon })" />
     </Element>
     <slot>
       {{

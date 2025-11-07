@@ -1,3 +1,5 @@
+import type { InboxItem } from '~~/shared/schema'
+
 export function saveNotification(
   template: string,
   vars: Record<string, string>

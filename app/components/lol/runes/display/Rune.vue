@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-import { runeToPath } from '#shared/appdata/index/'
-
+import { runeToPath } from '~~/shared/indexes'
 const { id, class: className } = defineProps<{
   class?: HTMLAttributes['class']
   id?: number | null
@@ -19,6 +18,7 @@ watch(
     })
   }
 )
+const img = `/img/runes/${runeToPath[id]}/${id}.webp`
 </script>
 
 <template>
@@ -39,7 +39,7 @@ watch(
       v-if="id"
       :key="id"
       ref="imgEl"
-      :src="`/img/runes/${runeToPath[id]}/${id}.webp`"
+      :src="img"
       :alt="ix().runeNameById(id)"
       :class="
         cn('transition-all duration-300  rounded-full size-full', {

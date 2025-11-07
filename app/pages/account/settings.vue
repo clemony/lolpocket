@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { AccountSchema, SettingsSchema } from '~~/shared/schema'
+
 definePageMeta({
   name: 'settings',
   order: 10,

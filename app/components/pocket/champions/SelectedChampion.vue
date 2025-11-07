@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import type { Pocket } from '~~/shared/schema'
+
 defineOptions({
   inheritAttrs: false
 })

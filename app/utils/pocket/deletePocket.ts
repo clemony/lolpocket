@@ -1,5 +1,7 @@
 // delete
 
+import { toast } from '~/base/notification/toast/use-toast'
+
 export function deletePocket(pocket) {
   const route = useRoute()
   const inPocket = route.path === `/pocket/${pocket.key}`

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { matchDataStats } from '#shared/appdata/content/match-data-stats'
+import { matchDataStats } from '~~/shared/data/match-data-stats'
 
 const { match, player } = defineProps<{
   match: any
@@ -21,9 +21,9 @@ const players = computed (() => match.participants as Player[])
 
 <template>
   <div
-    class="grid grid-cols-[2.3fr_repeat(10,1fr)] grid-flow-row w-full gap-1 px-2 py-1 h-18 group/head">
+    class="group/head grid h-18 w-full grid-flow-row grid-cols-[2.3fr_repeat(10,1fr)] gap-1 px-2 py-1">
     <div class="size-full items-center pl-2">
-      <div class="text-1 uppercase font-semibold text-bc/60">
+      <div class="text-1 text-bc/60 font-semibold uppercase">
         {{ gameOutcome.player }}
       </div>
       <p
@@ -48,23 +48,23 @@ const players = computed (() => match.participants as Player[])
         })
       ">
       <div
-        class="shrink-0 overflow-hidden rounded-lg size-13 aspect-square grid place-items-center">
+        class="grid aspect-square size-13 shrink-0 place-items-center overflow-hidden rounded-lg">
         <ChampionIcon
           :id="p.championId"
           :alt="p.championName"
-          class="rounded-lg !size-full" />
+          class="!size-full rounded-lg" />
       </div>
     </div>
   </div>
 
-  <div class="h-171 w-full relative overflow-auto">
+  <div class="relative h-171 w-full overflow-auto">
     <div
-      class="auto-rows-max mt-2 pb-3 **:text-1 grid grid-cols-[2fr_repeat(10,1fr)] grid-flow-row  z-auto grid pl-2 pr-4 h-max">
+      class="**:text-1 z-auto mt-2 grid h-max grid-flow-row  auto-rows-max grid-cols-[2fr_repeat(10,1fr)] pr-4 pb-3 pl-2">
       <template
         v-for="group in matchDataStats"
         :key="group">
         <div
-          class="capitalize mt-2 mb-3 top-0 bg-b2 font-semibold items-center  text-nowrap py-1 px-2 -mr-4 -ml-2 !sticky left-0 grid col-span-full italic">
+          class="bg-b2 !sticky top-0 left-0 col-span-full mt-2 -mr-4  mb-3 -ml-2 grid items-center px-2 py-1 font-semibold text-nowrap capitalize italic">
           {{ group.name }}
         </div>
 
@@ -72,7 +72,7 @@ const players = computed (() => match.participants as Player[])
           v-for="stat in group.stats"
           :key="stat.name">
           <div
-            class="capitalize pl-2 col-start-1 whitespace-nowrap truncate font-medium tracking-tight">
+            class="col-start-1 truncate pl-2 font-medium tracking-tight whitespace-nowrap capitalize">
             {{ stat.name }}
           </div>
 

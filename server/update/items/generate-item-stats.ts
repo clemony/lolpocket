@@ -1,4 +1,5 @@
 import fs from 'node:fs'
+import path from 'node:path'
 import { resolvePath } from '../resolvePath'
 import { markUpdate } from '../utils'
 
@@ -9,6 +10,7 @@ interface Item {
 }
 
 const itemsPath = resolvePath('./items/raw/items-lite.json')
+const outputPath = path.resolve('./shared/indexes/item-stat-index.ts')
 const itemsRaw = fs.readFileSync(itemsPath, 'utf-8')
 const items: Item[] = JSON.parse(itemsRaw)
 
@@ -39,7 +41,7 @@ ${statRecordInterface}
 export const itemStatRecord: Record<number, StatRecord> = ${JSON.stringify(statIndex, null, 2)};
 `
 
-fs.writeFileSync('./shared/appdata/index/item-stat-index.ts', output)
+fs.writeFileSync(outputPath, output)
 
 console.log(
   '✅ item stat record and StatRecord interface written successfully.'

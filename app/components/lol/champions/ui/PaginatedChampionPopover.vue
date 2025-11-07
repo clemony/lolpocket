@@ -62,7 +62,7 @@ watch(
           v-else
           v-memo="pocket.main?.champion"
           class="*:scale-160"
-          :img="ix().getSplash(pocket.main?.champion, 'tile')" />
+          :img="getSplash(pocket.main?.champion, 'tile')" />
         <div
           :class="cn('size-full opacity-0 group-hover/collapse:opacity-100 group-open/collapse:opacity-100 inset-0 p-1 transition-opacity duration-300 bg-neutral/60 absolute grid justify-center items-end', { 'bg-b2 **:text-bc/40': !pocket.main?.champion })">
           <CaretFlip

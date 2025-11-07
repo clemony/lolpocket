@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { itemTags } from '@appdata'
 
+import type { itemTags } from '~~/shared/references'
 const { class: className, clear = true, hover = 'btn', size = ['sq-12', '12'], variant = 'ghost', } = defineProps<{
   class?: HTMLAttributes['class']
   size?: ButtonVariants['size'][]
@@ -38,7 +38,7 @@ function handleChange() {
             class="size-4" />
         </Button>
 
-        <BaseListboxItem
+       <!--  <BaseListboxItem
           v-for="tag in itemTags"
           :key="tag.name"
           class="fx-0 bg-transparent"
@@ -50,7 +50,7 @@ function handleChange() {
             :size="size[1]"
             :tag>
           </ItemTagButton>
-        </BaseListboxItem>
+        </BaseListboxItem> -->
       </TransitionSlideLeft>
     </ListboxContent>
   </Listbox>

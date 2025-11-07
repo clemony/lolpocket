@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import type { Pocket } from '~~/shared/schema'
+
 const props = defineProps<{
   pocket: Pocket
 }>()
@@ -12,7 +14,7 @@ const pocket = ref(props.pocket)
       name="teenyicons:layers-subtract-outline"
       class="size-5" />
 
-    <span class="-ml-[1px] text-3">Duplicate</span>
+    <span class="text-3 -ml-[1px]">Duplicate</span>
   </DropdownMenuItem>
 
   <DropdownMenuItem>

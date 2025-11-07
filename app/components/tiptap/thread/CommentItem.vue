@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { renderCommentHTML, useMentionTooltips } from '#tiptap'
+import { useMentionTooltips } from '../extensions/mentions/useMentionTooltips'
+import { renderCommentHTML } from './utils/renderCommentHTML'
 
 const { comment, depth, parentHovered } = defineProps<{
   comment: CommentItem
@@ -13,39 +14,28 @@ function handleRemovalEmit() {
   emit('comment:remove', comment.id)
 }
 const replyContent = ref<Doc>(null)
-
 const replying = shallowRef(false)
 const editing = shallowRef(false)
-
 const hasReplies = computed (() => comment.replies?.length)
-
-const hovered = ref<boolean>(false)
-
 const newContent = ref<Doc>(null)
 const updated = shallowRef<boolean>(false)
+const hovered = ref<boolean>(false)
+const container = useTemplateRef<HTMLElement>('container')
+const reportRef = useTemplateRef('reportRef')
+const user = await useSupabaseUser()
+const isAdmin = computed (() => user?.value.app_metadata?.user_role === 'admin')
 
-watch(() => updated.value, (newVal) => {
-  emit('trigger-hovered', newVal)
-})
 const renderedHtml = computed(() => {
   if (!comment.content)
     return null
-
   return renderCommentHTML(comment.content)
 })
+
+useMentionTooltips(container)
 
 onMounted (() => {
   newContent.value = comment.content
 })
-
-const container = useTemplateRef<HTMLElement>('container')
-
-useMentionTooltips(container)
-
-/* if (comment.authorTag === '007') {
-  comment.authorPuuid = 'defnotclem'
-  comment.authorTag = 'mod'
-} */
 </script>
 
 <template>
@@ -54,7 +44,7 @@ useMentionTooltips(container)
     v-slot="{ open }"
     :default-open="!!comment.authorPuuid"
     :disabled="!hasReplies"
-    :class="cn('z-auto pt-2  pb-2 !overflow-visible h-max ', { ' ml-12': depth })">
+    :class="cn('z-auto pt-2  pb-2  h-max ', { ' ml-12': depth })">
     <!-- child trigger -->
 
     <CollapsibleTrigger
@@ -88,7 +78,16 @@ useMentionTooltips(container)
 
         <CommentHeader
           :comment
-          :open />
+          :open>
+          <LazyUserCard
+            v-if="comment.authorPuuid"
+            :comment="comment">
+            <Separator
+              v-if="isAdmin"
+              class="!-mx-2 justify-self-center my-1" />
+            <LazyCommentModMenu v-if="isAdmin" />
+          </LazyUserCard>
+        </CommentHeader>
 
         <!-- update comment -->
         <div
@@ -98,7 +97,7 @@ useMentionTooltips(container)
             v-slot="{ editor }"
             v-model="newContent"
             @update:model-value="updated = true">
-            <PostButton
+            <PostButtonWrapper
               cancellable
               :change="(comment.content !== newContent) && !editor?.isEmpty"
               save
@@ -136,6 +135,7 @@ useMentionTooltips(container)
           :replying
           :class="cn('pl-11.75', { 'pl-6.5': editing })"
           @update:edit-model="e => editing = e"
+          @click:report="reportRef.report()"
           @comment:remove="handleRemovalEmit()"
           @update:reply-model="e => replying = e">
           <CommentVotes
@@ -151,7 +151,7 @@ useMentionTooltips(container)
           <CommentEditor
             v-slot="{ editor }"
             v-model="replyContent">
-            <PostButton
+            <PostButtonWrapper
               cancellable
               :change="!editor?.isEmpty"
               @click.stop="() => {
@@ -201,5 +201,8 @@ useMentionTooltips(container)
         {{ open ? 'Collapse' : `${comment.replies.length} replies...` }}
       </CollapsibleTrigger>
     </div>
+    <ReportDialog
+      ref="reportRef"
+      :comment />
   </Collapsible>
 </template>

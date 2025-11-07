@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { Pocket } from '~~/shared/schema'
+
 const {
   pocket: p,
 } = defineProps<{
@@ -16,15 +18,15 @@ const mainSet = computed(() =>
   <SelectTrigger as-child>
     <Button
       variant="ghost"
-      class="overflow-hidden relative size-20  grid place-items-center   **:pointer-events-none ">
+      class="relative grid size-20  place-items-center overflow-hidden   **:pointer-events-none ">
       <RuneAndPathImg
 
         placement="left"
         variant="ghost"
-        class=" group/btn  fx-0 z-10  rounded-full !cursor-pointer !pointer-events-auto **:pointer-events-none !size-16  hover:shadow-sm hover:shadow-black/4"
+        class=" group/btn  fx-0 !pointer-events-auto  z-10 !size-16 !cursor-pointer rounded-full **:pointer-events-none  hover:shadow-sm hover:shadow-black/4"
 
         :set="mainSet" />
-      <div class="@6xl:block @6xl:animate-in @6xl:slide-in-from-right @6xl:fade-in hidden flex flex-col overflow-hidden shrink">
+      <div class="@6xl:animate-in @6xl:slide-in-from-right @6xl:fade-in hidden shrink flex-col overflow-hidden @6xl:flex">
         <h3
           v-memo="[mainSet]"
           :class="cn('truncate  leading-7', {

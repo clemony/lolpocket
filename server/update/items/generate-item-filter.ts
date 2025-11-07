@@ -1,4 +1,5 @@
 import fs from 'node:fs'
+import path from 'node:path'
 import { resolvePath } from '../resolvePath'
 import { markUpdate, normalizeArray } from '../utils'
 
@@ -19,6 +20,9 @@ const raw = JSON.parse(fs.readFileSync(dataPath, 'utf-8')) as Record<
   string,
   ItemLite
 >
+
+const outputFilter = path.resolve('./shared/filters/item-aka.ts')
+const outputAka = path.resolve('./shared/filters/item-filters.ts')
 
 const itemsById: Record<number, ItemLite> = {}
 const itemFilters = {
@@ -68,10 +72,9 @@ for (const item of Object.values(raw)) {
     akaLookup[akaName] = id
   }
 }
-
 // Output filters
 fs.writeFileSync(
-  './shared/appdata/filters/item-filters.ts',
+  outputFilter,
   `// ${markUpdate()}
 
 export const itemFilters = ${JSON.stringify(itemFilters, null, 2)}`
@@ -79,7 +82,7 @@ export const itemFilters = ${JSON.stringify(itemFilters, null, 2)}`
 
 // Optional: output aka map
 fs.writeFileSync(
-  './shared/appdata/filters/item-aka.ts',
+  outputAka,
   `// ${markUpdate()}
 
 export const akaLookup = ${JSON.stringify(akaLookup, null, 2)}`

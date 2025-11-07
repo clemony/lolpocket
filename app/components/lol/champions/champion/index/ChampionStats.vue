@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { statIndex } from '~~/shared/appdata'
-
+import { statIndex } from '#shared/references'
 const { champion } = defineProps<{
   champion: Champion
 }>()
@@ -123,22 +122,22 @@ const filteredStats = computed (() => {
 <template>
   <Collapsible
     v-model:open="ui().collapseStates.championInfo[0]"
-    class="px-0 data-[state=open]:!overflow-visible group/cl flex flex-col gap-6 data-[state=open]:h-auto">
-    <CollapsibleTrigger class="w-full cursor-default field-box flex flex-col">
+    class="group/cl flex flex-col gap-6 px-0 data-[state=open]:h-auto data-[state=open]:!overflow-visible">
+    <CollapsibleTrigger class="field-box flex w-full cursor-default flex-col">
       <div
-        class="flex group/tr  min-h-16  h-16 px-5  cursor-pointer  w-full items-center justify-between">
-        <h3 class="dst group-hover/tr:underline underline-offset-3">
+        class="group/tr flex  h-16  min-h-16 w-full  cursor-pointer  items-center justify-between px-5">
+        <h3 class="dst underline-offset-3 group-hover/tr:underline">
           Stats
         </h3>
         <CaretFlip />
       </div>
       <div
-        class="w-full pb-2  px-5  -mt-3 flex flex-col items-start group-data-[state=open]/cl:animate-in  group-data-[state=open]/cl:fade-in-0  group-data-[state=closed]/cl:animate-out  group-data-[state=closed]/cl:fade-out group-data-[state=closed]/cl:hidden duration-300"
+        class="group-data-[state=open]/cl:animate-in group-data-[state=open]/cl:fade-in-0  group-data-[state=closed]/cl:animate-out  group-data-[state=closed]/cl:fade-out -mt-3 flex w-full flex-col  items-start  px-5  pb-2 duration-300 group-data-[state=closed]/cl:hidden"
         @click.stop>
         <span class="w-full text-start">
           {{ champion.name }} lv. {{ level[0] }}
         </span>
-        <div class="w-full h-12 mt-5 mb-1 relative">
+        <div class="relative mt-5 mb-1 h-12 w-full">
           <Slider
             v-model:model-value="level"
             class="z-1 "
@@ -151,11 +150,11 @@ const filteredStats = computed (() => {
             :min="1">
             <span class="!text-1 absolute font-semibold">{{ level[0] }}</span>
           </Slider>
-          <div class=" absolute pl-5.5 pr-4 h-10 z-0 w-full left-1  top-1 grid grid-cols-18 justify-evenly ">
+          <div class=" absolute top-1 left-1 z-0 grid h-10 w-full  grid-cols-18 justify-evenly pr-4 pl-5.5 ">
             <button
               v-for="i in 18"
               :key="i"
-              class="size-full hover:**:font-bold hover:**:opacity-100 cursor-pointer transition-all duration-200 grid  relative "
+              class="relative grid size-full cursor-pointer transition-all duration-200 hover:**:font-bold  hover:**:opacity-100 "
               @click="level[0] = i">
               <div
                 :class="cn('absolute  !self-start grid')"
@@ -168,7 +167,7 @@ const filteredStats = computed (() => {
                 </span>
                 <span
                   v-if="[1, 6, 11, 16, 18].includes(i) "
-                  class="absolute tabular-nums items-end self-end justify-self-center  translate-y-4.5 text-1 ">
+                  class="text-1 absolute translate-y-4.5 items-end self-end  justify-self-center tabular-nums ">
                   {{ i }}
                 </span>
               </div>
@@ -177,7 +176,7 @@ const filteredStats = computed (() => {
         </div>
       </div>
     </CollapsibleTrigger>
-    <CollapsibleContent class="z-1 h-fit  w-full gap-2 flex flex-col pb-2 data-[state=open]:!overflow-visible">
+    <CollapsibleContent class="z-1 flex  h-fit w-full flex-col gap-2 pb-2 data-[state=open]:!overflow-visible">
       <div
         :class="
           cn('grid grid-cols-2 gap-x-8 px-5  mt-2  field-box pt-3  gap-y-2  *:w-full w-full items-center auto-rows-fr transition-all duration-100', { 'max-h-0 opacity-0 hidden invisible': open })
@@ -193,7 +192,7 @@ const filteredStats = computed (() => {
       <Collapsible
         v-model:open="open"
         class="w-full">
-        <CollapsibleContent class="flex pt-2 gap-8 flex-col pb-1">
+        <CollapsibleContent class="flex flex-col gap-8 pt-2 pb-1">
           <div
             v-for="group, ix in filteredStats.more"
             :key="ix"

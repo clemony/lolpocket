@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import type { Pocket } from '~~/shared/schema'
+
 const { isCollapsed, pinned } = defineProps<{
   isCollapsed: boolean
   pinned: Pocket[]

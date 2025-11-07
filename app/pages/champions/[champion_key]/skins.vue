@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures'
 import '~/assets/css/plugins/embla.css'
-import type { CarouselApi } from '~/base/carousel/carousel-index'
 import { setupTweenParallax } from '~/assets/ts/embla-tween-parallax'
+import type { CarouselApi } from '~/base/layout/carousel/carousel-index'
+import { skinIndex } from '~~/shared/indexes'
 
 const { champion } = defineProps<{
   champion: Champion
@@ -52,22 +53,22 @@ watchOnce(emblaMainApi, (emblaApi) => {
 })
 
 const img = useImage()
-const skins = computed(() => ix().skins[champion.key])
+const skins = computed(() => skinIndex[champion.key])
 </script>
 
 <template>
-  <div class="size-full gap-14 overflow-hidden -ml-10 pr-22">
+  <div class="-ml-10 size-full gap-14 overflow-hidden pr-22">
     <Carousel
       :plugins="[WheelGesturesPlugin()]"
       :orientation="carouselOrientation"
-      class="mask-x-from-0% -ml-6 pl-6 mask-x-to-6% mask-x-from-transparent mask-x-to-black relative w-full  overflow-auto"
+      class="mask-x-from-0% mask-x-to-6% mask-x-from-transparent mask-x-to-black relative -ml-6 w-full overflow-auto  pl-6"
       @init-api="(val) => (emblaThumbnailApi = val)">
       <CarouselContent
-        class="scrollbar-hidden -ml-6 pb-6  flex pt-22">
+        class="scrollbar-hidden -ml-6 flex  pt-22 pb-6">
         <CarouselItem
           v-for="(skin, index) in skins"
           :key="index"
-          class="cursor-pointer !basis-1/6 pl-46h-38"
+          class="pl-46h-38 !basis-1/6 cursor-pointer"
           @click="onThumbClick(index)">
           <div :class="cn('transition-all cursor-pointer duration-300 rounded-xl hover:opacity-100 hover:ring hover:ring-b4 **:pointer-events-none', index === selectedIndex ? 'opacity-100 ring ring-bc/40 pointer-events-none ring-offset-5 ring-offset-b1' : 'opacity-80')">
             <Card
@@ -76,7 +77,7 @@ const skins = computed(() => ix().skins[champion.key])
                 class="relative flex items-center justify-center p-0">
                 <Img
                   :alt="skin.name"
-                  :img="getSkinSplash(champion.key, skin, 'tile')"
+                  :img="getSplash(champion.key, 'tile', skin)"
                   class="inset-0 -mt-10 size-full object-cover" />
               </CardContent>
             </Card>
@@ -90,7 +91,7 @@ const skins = computed(() => ix().skins[champion.key])
       :plugins="[WheelGesturesPlugin()]"
       class="relative size-full"
       @init-api="(val) => (emblaMainApi = val)">
-      <CarouselContent class="embla__container pb-20 pt-2">
+      <CarouselContent class="embla__container pt-2 pb-20">
         <CarouselItem
           v-for="(skin, index) in skins"
           :key="index"
@@ -102,7 +103,7 @@ const skins = computed(() => ix().skins[champion.key])
                 class="embla__parallax__layer p-0 after:absolute after:size-full after:inset-shadow-[1px_1px_5px_rgba(0,0,0,0.25)]">
                 <Img
                   :alt="skin.name"
-                  :img="getSkinSplash(champion.key, skin, 'uncentered')"
+                  :img="getSplash(champion.key, 'uncentered', skin)"
                   class="embla__slide__img embla__parallax__img" />
 
                 <div

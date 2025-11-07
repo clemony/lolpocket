@@ -13,18 +13,17 @@
   "typescript.tsdk": "node_modules/typescript/lib",
   "exportall.config.folderListener": [
     "/app/components/tiptap",
-    "/app/composables/utils",
     "/app/composables",
-    "/app/utils/data",
     "/app/utils",
-    "/app/utils/formatting",
-    "/app/utils/helpers",
-    "/app/utils/navigation",
-    "/app/utils/time",
-    "/app/utils/pocket",
-    "/app/components/tiptap/utils"
+    "/app/layouts/components",
+    "/shared/indexes"
   ],
   "exportall.config.relExclusion": [
-    "/app/utils/config"
+    "/app/utils/config",
+    "/shared/data/records",
+    "/shared/data/records/champions",
+    "/shared/data/records/items",
+    "/shared/data/records/runes",
+    "/shared/records"
   ]
 }

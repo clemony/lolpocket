@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { spellIndex } from '#shared/appdata'
+import { spellIndex } from '~~/shared/references'
 
 const { class: className, player } = defineProps<{
   player: Player
@@ -22,12 +22,12 @@ const spells = computed(() => {
       v-tippy="{ content: spells?.sum1, placement: 'right' }"
       :alt="String(spells?.sum1)"
       :src="`/img/spells/${spells?.sum1}.webp`"
-      class="size-8 drop-shadow-sm shadow-sm rounded-md  hover:ring hover:scale-105 transition-all duration-300 ring-bc/60" />
+      class="ring-bc/60 size-8 rounded-md shadow-sm  drop-shadow-sm transition-all duration-300 hover:scale-105 hover:ring" />
 
     <img
       v-tippy="{ content: spells?.sum2, placement: 'right' }"
       :alt="String(spells?.sum2)"
       :src="`/img/spells/${spells?.sum2}.webp`"
-      class="size-8 shadow-sm rounded-md drop-shadow-sm  hover:ring hover:scale-105 transition-all duration-300 ring-bc/60" />
+      class="ring-bc/60 size-8 rounded-md shadow-sm  drop-shadow-sm transition-all duration-300 hover:scale-105 hover:ring" />
   </div>
 </template>

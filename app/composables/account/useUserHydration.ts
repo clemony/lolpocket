@@ -1,5 +1,8 @@
-import { appTaglines } from '#shared/appdata/content/taglines'
+import type { Account, Pocket, PublicData, Settings } from '~~/shared/schema'
 import * as v from 'valibot'
+import { appTaglines } from '~~/shared/data/taglines'
+import { AccountSchema, getEmptyAccount, getEmptyPublicData, getEmptySettings, PocketSchema, PublicDataSchema, SettingsSchema } from '~~/shared/schema'
+import { toast } from '~/base/notification/toast/use-toast'
 import { getRandom } from '~/utils/helpers/getRandom'
 
 interface UserProfileResponse {

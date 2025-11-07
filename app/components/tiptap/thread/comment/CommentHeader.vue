@@ -25,16 +25,14 @@ const summoner = computed (() => {
       <Popover>
         <PopoverTrigger
           :disabled="!comment.authorPuuid">
-          <CommentAvatar
+          <UserAvatar
             :comment
             size="c-9"
             class="hover-ring absolute z-4  translate-y-px not-disabled:pointer-events-auto " />
         </PopoverTrigger>
         <PopoverContent :side-offset="12">
           <PopoverArrow />
-          <LazyCommentUserCard
-            v-if="comment.authorPuuid"
-            :comment="comment" />
+          <slot />
         </PopoverContent>
       </Popover>
       <CollapsibleTrigger

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { FormField } from '@base/form/form-index'
+import { FormField } from '~/base/form/index.form'
 
 const {
   name = 'options',
@@ -11,7 +11,7 @@ const {
   option: FieldOption
 }>()
 console.log('🌱 - option:', option)
-const modelValue = ref<string>(null)
+const modelValue = ref<string>('')
 const checked = shallowRef<boolean>(false)
 
 const inputRef = useTemplateRef('inputRef')

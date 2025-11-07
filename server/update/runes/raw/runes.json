@@ -2,10 +2,8 @@
   {
     "id": 8400,
     "name": "Resolve",
-    "tooltip": "Durability and crowd control",
     "slots": [
       {
-        "tier": 0,
         "label": "Keystone",
         "runes": [
           {
@@ -21,12 +19,12 @@
           {
             "id": 8465,
             "name": "Guardian",
-            "description": "<i>Guard</i> allies within 350 units of you, and allies you target with spells for 2.5s. While <i>Guarding</i>, if you or the ally take more than a small amount of damage over the duration of the <i>Guard</i>, both of you gain a shield for 1.5s.<br><br>Cooldown: <span class=\"scale-level\">90 - 40</span> seconds<br>Shield: <span class=\"scale-level\">45 - 150</span> + <scaleAP>15%</scaleAP> of your ability power + <scalehealth>5%</scalehealth> of your bonus health<br>Proc Threshold: <span class=\"scale-level\">50 - 165</span> postmitigation damage"
+            "description": "<i>Guard</i> allies within 350 units of you, and allies you target with spells for 2.5s. While <i>Guarding</i>, if you or the ally take more than a small amount of damage over the duration of the <i>Guard</i>, both of you gain a shield for 1.5s.<br><br>Cooldown: <span class=\"scale-level\">90 - 40</span> seconds<br>Shield: <span class=\"scale-level\">45 - 180</span> + <scaleAP>25%</scaleAP> of your ability power + <scalehealth>5%</scalehealth> of your bonus health<br>Proc Threshold: <span class=\"scale-level\">50 - 165</span> postmitigation damage"
           }
-        ]
+        ],
+        "tier": 0
       },
       {
-        "tier": 1,
         "label": "Strength",
         "runes": [
           {
@@ -44,10 +42,10 @@
             "name": "Shield Bash",
             "description": "Whenever you gain a new shield,  your next basic attack against a champion deals <span class=\"scale-level\">5 - 30</span> <scaleHealth>(+2.5% Bonus Health)</scaleHealth> <scaleMana>(+15.0% New Shield Amount)</scaleMana> bonus <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>adaptive</font></lol-uikit-tooltipped-keyword> damage.<br><br>You have up to 2s after the shield expires to use this effect."
           }
-        ]
+        ],
+        "tier": 1
       },
       {
-        "tier": 2,
         "label": "Resistance",
         "runes": [
           {
@@ -58,17 +56,17 @@
           {
             "id": 8444,
             "name": "Second Wind",
-            "description": "After taking damage from an enemy champion, heal for 4% of your missing health +3 over 10s."
+            "description": "After taking damage from an enemy champion, heal for 4% of your missing health over 10s."
           },
           {
             "id": 8473,
             "name": "Bone Plating",
             "description": "After taking damage from an enemy champion, the next 3 spells or attacks you receive from them deal 30-60 (based on level) less damage.<br><br>Duration: 1.5s<br>Cooldown: 55s"
           }
-        ]
+        ],
+        "tier": 2
       },
       {
-        "tier": 3,
         "label": "Vitality",
         "runes": [
           {
@@ -86,17 +84,17 @@
             "name": "Unflinching",
             "description": "Gain 10 Armor and Magic Resist when crowd controlled and for 2 seconds after."
           }
-        ]
+        ],
+        "tier": 3
       }
-    ]
+    ],
+    "tooltip": "Durability and crowd control"
   },
   {
     "id": 8100,
     "name": "Domination",
-    "tooltip": "Burst damage and target access ",
     "slots": [
       {
-        "tier": 0,
         "label": "Keystone",
         "runes": [
           {
@@ -112,12 +110,12 @@
           {
             "id": 9923,
             "name": "Hail of Blades",
-            "description": "Gain 140% (80% for ranged champions) Attack Speed when you attack an enemy champion for up to 3 attacks.<br><br>No more than 3s can elapse between attacks or this effect will end.<br><br>Cooldown: 10s.<br><br><rules>Attack resets increase the attack limit by 1.<br>Allows you to temporarily exceed the attack speed limit.</rules>"
+            "description": "Gain 160% (80% for ranged champions) Attack Speed when you attack an enemy champion for up to 3 attacks.<br><br>No more than 3s can elapse between attacks or this effect will end.<br><br>Cooldown: 10s.<br><br><rules>Attack resets increase the attack limit by 1.<br>Allows you to temporarily exceed the attack speed limit.</rules>"
           }
-        ]
+        ],
+        "tier": 0
       },
       {
-        "tier": 1,
         "label": "Malice",
         "runes": [
           {
@@ -135,10 +133,10 @@
             "name": "Sudden Impact",
             "description": "Damaging basic attacks and abilities deal a bonus <trueDamage>20 - 80 True Damage</trueDamage> based on level to enemy champions after using a dash, leap, blink, teleport, or when leaving stealth for 4s.<br><br>Cooldown: 10s"
           }
-        ]
+        ],
+        "tier": 1
       },
       {
-        "tier": 2,
         "label": "Tracking",
         "runes": [
           {
@@ -156,10 +154,10 @@
             "name": "Deep Ward",
             "description": "Your wards in the enemy jungle are <keywordMajor>Deep</keywordMajor>. <keywordMajor>Deep</keywordMajor> wards gain +1 extra Health and +[30 - 45]s increased duration (+[45 - 150]s for Trinket stealth wards).<br><br>Level 9: Wards in the river are also <keywordMajor>Deep</keywordMajor>."
           }
-        ]
+        ],
+        "tier": 2
       },
       {
-        "tier": 3,
         "label": "Hunter",
         "runes": [
           {
@@ -177,17 +175,17 @@
             "name": "Ultimate Hunter",
             "description": "Your ultimate gains <attention>6</attention> Ability Haste, plus an additional <attention>5</attention> Ability Haste per <i>Bounty Hunter</i> stack. <i>Bounty Hunter</i> stacks are earned the first time you get a takedown on each enemy champion."
           }
-        ]
+        ],
+        "tier": 3
       }
-    ]
+    ],
+    "tooltip": "Burst damage and target access "
   },
   {
     "id": 8000,
     "name": "Precision",
-    "tooltip": "Improved attacks and sustained damage",
     "slots": [
       {
-        "tier": 0,
         "label": "Keystone",
         "runes": [
           {
@@ -210,10 +208,10 @@
             "name": "Conqueror",
             "description": "Basic attacks or spells that deal damage to an enemy champion grant 2 stacks of Conqueror for 5s, gaining 1.8-4 <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>Adaptive Force</font></lol-uikit-tooltipped-keyword> per stack. Stacks up to 12 times. Ranged champions gain only 1 stack per basic attack.<br><br>When fully stacked, heal for 8% of the damage you deal to champions (5% for ranged champions)."
           }
-        ]
+        ],
+        "tier": 0
       },
       {
-        "tier": 1,
         "label": "Heroism",
         "runes": [
           {
@@ -231,10 +229,10 @@
             "name": "Presence of Mind",
             "description": "Damaging an enemy champion restores 6-50 (80% for ranged) mana or 6 energy.<br><br>Takedowns restore 15% of your maximum mana or energy. <br><br>Cooldown for damage restoration: 8s"
           }
-        ]
+        ],
+        "tier": 1
       },
       {
-        "tier": 2,
         "label": "Legend",
         "runes": [
           {
@@ -250,12 +248,12 @@
           {
             "id": 9103,
             "name": "Legend: Bloodline",
-            "description": "Gain <scaleAD>0.35% Life Steal</scaleAD> for every <i>Legend</i> stack (<statGood>max 15 stacks</statGood>). At maximum <i>Legend</i> stacks, gain <scaleHealth>85 max health</scaleHealth>.<br><br>Earn progress toward <i>Legend</i> stacks for every champion takedown, epic monster takedown, large monster kill, and minion kill."
+            "description": "Gain <scaleAD>0.40% Life Steal</scaleAD> for every <i>Legend</i> stack (<statGood>max 15 stacks</statGood>). At maximum <i>Legend</i> stacks, gain <scaleHealth>85 max health</scaleHealth>.<br><br>Earn progress toward <i>Legend</i> stacks for every champion takedown, epic monster takedown, large monster kill, and minion kill."
           }
-        ]
+        ],
+        "tier": 2
       },
       {
-        "tier": 3,
         "label": "Combat",
         "runes": [
           {
@@ -273,17 +271,17 @@
             "name": "Last Stand",
             "description": "Deal 5% - 11% increased damage to champions while you are below 60% health. Max damage gained at 30% health."
           }
-        ]
+        ],
+        "tier": 3
       }
-    ]
+    ],
+    "tooltip": "Improved attacks and sustained damage"
   },
   {
     "id": 8200,
     "name": "Sorcery",
-    "tooltip": "Empowered abilities and resource manipulation",
     "slots": [
       {
-        "tier": 0,
         "label": "Keystone",
         "runes": [
           {
@@ -299,12 +297,12 @@
           {
             "id": 8230,
             "name": "Phase Rush",
-            "description": "Hitting an enemy champion with 3 attacks or <b>separate</b> abilities within 4s grants <speed>25 - 50% Move Speed</speed> based on level and <status>75% Slow Resistance</status> for 3s. Move Speed is 75% effective for ranged champions.<br>Cooldown: 30s - 10s"
+            "description": "Hitting an enemy champion with 3 attacks or <b>separate</b> abilities within 4s grants <speed>25 - 50% Move Speed</speed> based on level and <status>50% Slow Resistance</status> for 3s. Move Speed is 75% effective for ranged champions.<br>Cooldown: 30s - 10s"
           }
-        ]
+        ],
+        "tier": 0
       },
       {
-        "tier": 1,
         "label": "Artifact",
         "runes": [
           {
@@ -320,12 +318,12 @@
           {
             "id": 8275,
             "name": "Nimbus Cloak",
-            "description": "After casting a Summoner Spell, gain a <speed>Move Speed</speed> increase that lasts for 2s and allows you to pass through units.<br><br>Increase: <speed>14% - 40% Move Speed</speed> based on the Summoner Spell's cooldown. (Higher cooldown Summoner Spells grant more <speed>Move Speed</speed>). "
+            "description": "After casting a Summoner Spell, gain a <speed>Move Speed</speed> increase that lasts for 2s and allows you to pass through units.<br><br>Increase: <speed>15% - 45% Move Speed</speed> based on the Summoner Spell's cooldown. (Higher cooldown Summoner Spells grant more <speed>Move Speed</speed>). "
           }
-        ]
+        ],
+        "tier": 1
       },
       {
-        "tier": 2,
         "label": "Excellence",
         "runes": [
           {
@@ -343,10 +341,10 @@
             "name": "Absolute Focus",
             "description": "While above 70% health, gain an <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>adaptive</font></lol-uikit-tooltipped-keyword> bonus of up to 18 Attack Damage or 30 Ability Power (based on level). <br><br>Grants 1.8 Attack Damage or 3 Ability Power at level 1. "
           }
-        ]
+        ],
+        "tier": 2
       },
       {
-        "tier": 3,
         "label": "Power",
         "runes": [
           {
@@ -364,17 +362,17 @@
             "name": "Gathering Storm",
             "description": "Every 10 min gain AP or AD, <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'><font color='#48C4B7'>adaptive</font></lol-uikit-tooltipped-keyword>.<br><br><i>10 min</i>: + 8 AP or 5 AD <br><i>20 min</i>: + 24 AP or 14 AD<br><i>30 min</i>: + 48 AP or 29 AD<br><i>40 min</i>: + 80 AP or 48 AD<br><i>50 min</i>: + 120 AP or 72 AD<br><i>60 min</i>: + 168 AP or 101 AD<br>etc..."
           }
-        ]
+        ],
+        "tier": 3
       }
-    ]
+    ],
+    "tooltip": "Empowered abilities and resource manipulation"
   },
   {
     "id": 8300,
     "name": "Inspiration",
-    "tooltip": "Creative tools and rule bending ",
     "slots": [
       {
-        "tier": 0,
         "label": "Keystone",
         "runes": [
           {
@@ -385,17 +383,17 @@
           {
             "id": 8360,
             "name": "Unsealed Spellbook",
-            "description": "Swap one of your equipped Summoner Spells to a new, single use Summoner Spell. Each unique Summoner Spell you swap to permanently decreases your swap cooldown by 25s (initial swap cooldown is at 4 mins). <br><br>Your first swap becomes available at 6 mins. <br><rules><br>Summoner Spells can only be swapped while out of combat. <br>After using a swapped Summoner Spell you must swap 3 more times before the first can be selected again.<br>Smite damage increases after two Summoner Spell swaps. </rules>"
+            "description": "Swap one of your equipped Summoner Spells to a new, single use Summoner Spell. Each unique Summoner Spell you swap to permanently decreases your swap cooldown by 25s (initial swap cooldown is @f3@ seconds). <br><br>Your first swap becomes available at 6 mins. <br><rules><br>Summoner Spells can only be swapped while out of combat. <br>After using a swapped Summoner Spell you must swap 3 more times before the first can be selected again.<br>Smite damage increases after two Summoner Spell swaps. </rules>"
           },
           {
             "id": 8369,
             "name": "First Strike",
             "description": "Attacks or abilities against an enemy champion within 0.25s of entering champion combat grant 10 gold and <b>First Strike</b> for 3 seconds, causing you to deal <span class=\"truedamage\">7%</span> extra <span class=\"truedamage\"> damage</span> against champions, and granting <span class=\"gold\">50% (35% for ranged champions)</span> of bonus damage dealt as <span class=\"gold\">gold</span>.<br><br>Cooldown: <span class=\"scale-level\">25 - 15</span>s"
           }
-        ]
+        ],
+        "tier": 0
       },
       {
-        "tier": 1,
         "label": "Contraptions",
         "runes": [
           {
@@ -411,12 +409,12 @@
           {
             "id": 8321,
             "name": "Cash Back",
-            "description": "Get 6% Gold back when you purchase Legendary Items."
+            "description": "Get 8% Gold back when you purchase Legendary Items."
           }
-        ]
+        ],
+        "tier": 1
       },
       {
-        "tier": 2,
         "label": "Tomorrow",
         "runes": [
           {
@@ -434,10 +432,10 @@
             "name": "Biscuit Delivery",
             "description": "Biscuit Delivery: Gain a Total Biscuit of Everlasting Will every 2 mins, until 6 min.<br><br>Biscuits restore 20 + 2% of your maximum health, increased by up to 100% based on missing Health. Consuming or selling a Biscuit permanently increases your max health by 30. "
           }
-        ]
+        ],
+        "tier": 2
       },
       {
-        "tier": 3,
         "label": "Beyond",
         "runes": [
           {
@@ -455,8 +453,10 @@
             "name": "Jack Of All Trades",
             "description": "For each different stat gained from items, gain one Jack stack. Each stack grants you <speed>1 Ability Haste</speed>.<br><br>Gain 10 or 25 bonus <lol-uikit-tooltipped-keyword key='LinkTooltip_Description_Adaptive'>Adaptive Force</lol-uikit-tooltipped-keyword> at 5 and 10 stacks, respectively."
           }
-        ]
+        ],
+        "tier": 3
       }
-    ]
+    ],
+    "tooltip": "Creative tools and rule bending "
   }
 ]

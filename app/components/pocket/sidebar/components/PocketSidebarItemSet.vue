@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import type { ItemSet, Pocket } from '~~/shared/schema'
 import { AnimatePresence, easeOut, motion } from 'motion-v'
 import { PopoverAnchor, PopoverContent, PopoverPortal } from 'reka-ui'
 
@@ -57,7 +58,7 @@ const hovered = ref(false)
     v-model:open="hovered"
     @click="navigateTo(`/pocket/${pocket.key}/items`)">
     <PopoverTrigger
-      class="p-1.5 bg-b2/80 backdrop-blur-md flex flex-wrap cursor-pointer !z-1 hover:!z-2 size-20 items-between rounded-lg pointer-events-auto justify-between !gap-0.75 !border-b3/50 border">
+      class="bg-b2/80 items-between !border-b3/50 pointer-events-auto !z-1 flex size-20 cursor-pointer flex-wrap justify-between !gap-0.75 rounded-lg border p-1.5 backdrop-blur-md hover:!z-2">
       <template v-if="set.items && set.items?.length">
         <template
           v-for="(item, i) in set.items"
@@ -65,7 +66,7 @@ const hovered = ref(false)
           <Item
             v-if="i < 4"
             :id="item"
-            class="pointer-events-none rounded-lg size-7.5"></Item>
+            class="pointer-events-none size-7.5 rounded-lg"></Item>
         </template>
       </template>
     </PopoverTrigger>
@@ -84,14 +85,16 @@ const hovered = ref(false)
             :transition="{
               delay: 0.2,
             }"
-            class="bg-b2/90 backdrop-blur-md border-b3/50 overflow-hidden border grid items-center shadow-smooth"
+            class="bg-b2/90 border-b3/50 shadow-smooth grid items-center overflow-hidden border backdrop-blur-md"
             :style="{
               transformOrigin: 'var(--reka-popover-content-transform-origin)',
             }"
+            @focusin="hovered = true"
+            @focusout="hovered = false"
             @mouseenter="hovered = true"
             @mouseleave="hovered = false">
-            <div class="w-full flex pb-2 items-center">
-              <span class="grow capitalize font-medium tracking-tight">
+            <div class="flex w-full items-center pb-2">
+              <span class="grow font-medium tracking-tight capitalize">
                 {{ set.name }}
               </span>
 
@@ -104,7 +107,7 @@ const hovered = ref(false)
 
             <motion.div
               v-if="set.items && set.items?.length"
-              class="p-1.5 cursor-pointer rounded-lg justify-start flex-wrap"
+              class="cursor-pointer flex-wrap justify-start rounded-lg p-1.5"
               initial="closed"
               animate="open"
               exit="closed"
@@ -120,7 +123,7 @@ const hovered = ref(false)
                 :transition="{ delay: 0.2, type: 'spring', bounce: 0.25 }">
                 <Item
                   :id="item"
-                  class="pointer-events-none shadow-sm drop-shadow-sm rounded-lg size-full"></Item>
+                  class="pointer-events-none size-full rounded-lg shadow-sm drop-shadow-sm"></Item>
               </motion.div>
             </motion.div>
           </motion.div>

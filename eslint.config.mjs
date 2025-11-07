@@ -5,7 +5,9 @@ import pluginJsonc from 'eslint-plugin-jsonc'
 import tailwindcss from 'eslint-plugin-tailwindcss'
 import pluginVue from 'eslint-plugin-vue'
 import jsoncParser from 'jsonc-eslint-parser'
+import fs from 'node:fs'
 import path from 'node:path'
+import process from 'node:process'
 import { fileURLToPath } from 'node:url'
 import { tailwind4 } from 'tailwind-csstree'
 
@@ -101,15 +103,10 @@ export default antfu({
     css,
     pluginJsonc,
     pluginVue,
-    tailwindcss
+
   },
   rules: {
 
-    // tailwind
-    'tailwindcss/classnames-order': 'warn',
-    'tailwindcss/no-contradicting-classname': 'warn',
-    'tailwindcss/no-custom-classname': 'off',
-    'tailwindcss/enforces-shorthand': 'warn',
 
     // other
     'eqeqeq': ['error', 'smart'],
@@ -145,13 +142,7 @@ export default antfu({
     'unused-imports/no-unused-vars': 'off',
   },
   settings: {
-    rules: {
-    },
-    tailwindcss: {
-      attributes: ['class', '@apply'],
-      cssConfigPath: resolvePath('./app/assets/css/tailwind.css'),
-      functions: ['classnames', 'clsx', 'ctl', 'cva', 'tv', 'tw', 'cn', 'defineTv'],
-    },
+
   },
   sourceType: 'module',
   stylistic: true,

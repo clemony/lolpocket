@@ -1,6 +1,6 @@
 // factories/menubarItem.ts
 import type { Ref } from 'vue'
-import type { MenubarRadioGroup } from '~/base/menubar/menubar.types'
+import type { MenubarRadioGroup } from '~/base/menu/menubar/menubar.types'
 
 export interface CheckboxItemFactory {
   name: () => string

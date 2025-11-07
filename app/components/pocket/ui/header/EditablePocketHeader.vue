@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import type { Pocket } from '~~/shared/schema'
 import {
   EditableArea,
   EditableEditTrigger,
@@ -64,12 +65,12 @@ onMounted(async () => {
     as-child
     @update:model-value="modelValue = $event">
     <!-- Name Input/Preview -->
-    <div
-      class="w-full relative flex w-160 pr-20 items-center truncate justify-between gap-2"
+    <button
+      class="relative flex w-160 w-full items-center justify-between gap-2 truncate pr-20"
       @click="(e) => activateEdit(e, edit)">
       <EditableArea class="w-160 overflow-hidden">
         <div
-          class="w-160 pr-18 overflow-hidden **:tracking-tight *:font-bold **:truncate *:text-nowrap *:dst">
+          class="*:dst w-160 overflow-hidden pr-18 *:font-bold *:text-nowrap **:truncate **:tracking-tight">
           <EditablePreview :class="cn('', className)">
             {{ pocket.name || "Pocket" }}
           </EditablePreview>
@@ -82,13 +83,13 @@ onMounted(async () => {
 
       <!-- Icon Buttons -->
       <div
-        class="absolute right-3 flex items-center justify-end h-full w-10 min-w-10 max-w-10 pointer-events-none"
+        class="pointer-events-none absolute right-3 flex h-full w-10 max-w-10 min-w-10 items-center justify-end"
         :class="cn('', buttonClass)">
         <!-- Show edit icon only when not editing -->
         <EditableEditTrigger
           v-show="!isEditing"
           as="button"
-          class="opacity-0 group-hover/edit:opacity-100 transition-opacity pointer-events-auto">
+          class="pointer-events-auto opacity-0 transition-opacity group-hover/edit:opacity-100">
           <icon
             name="edit"
             class="text-bc/50 mr-2 size-4" />
@@ -97,13 +98,13 @@ onMounted(async () => {
         <!-- Show action icons when editing -->
         <div
           v-show="isEditing"
-          class="absolute flex items-center justify-end gap-1 px-1 pointer-events-auto">
+          class="pointer-events-auto absolute flex items-center justify-end gap-1 px-1">
           <button
             class="btn btn-ghost btn-xs btn-square hover:!bg-b3/40 hover:border-b3/80 hover:inset-shadow-xxs"
             @click="pocket.name = generateName()">
             <icon
               name="shuffle"
-              class="size-3 dst" />
+              class="dst size-3" />
           </button>
 
           <button
@@ -115,6 +116,6 @@ onMounted(async () => {
           </button>
         </div>
       </div>
-    </div>
+    </button>
   </EditableRoot>
 </template>

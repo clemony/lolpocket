@@ -6,7 +6,6 @@ import type {
   GridPreDestroyedEvent,
   GridReadyEvent,
 } from 'ag-grid-community'
-import { itemsLite } from '@appdata/records/items-lite'
 import {
   CellStyleModule,
   ClientSideRowModelModule,
@@ -41,7 +40,7 @@ const gridOptions: GridOptions<ItemLite> = {
     sortingOrder: ['desc', 'asc', null],
     wrapHeaderText: true,
   },
-  rowData: itemsLite.filter(i => is().filtered.includes(i.id)),
+  // rowData: itemsLite.filter(i => is().filtered.includes(i.id)),
   rowSelection: {
     checkboxes: false,
     enableClickSelection: true,

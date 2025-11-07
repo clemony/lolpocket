@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import type { Easing } from 'motion-v'
-import { runePaths } from '#shared/appdata/records/runes'
+import { pathIndex } from '#shared/indexes'
 import { motion, stagger } from 'motion-v'
 
 const emit = defineEmits(['update:paths'])
@@ -65,11 +65,11 @@ const pathHovered = ref('')
 </script>
 
 <template>
-  <div class="max-w-400 w-full px-10 flex flex-col justify-center gap-4">
-    <div class="h-18 relative pl-1 pr-2 w-full">
+  <div class="flex w-full max-w-400 flex-col justify-center gap-4 px-10">
+    <div class="relative h-18 w-full pr-2 pl-1">
       <div
         v-if="pathHovered"
-        class="absolute gap-3 size-full items-center justify-between">
+        class="absolute size-full items-center justify-between gap-3">
         <h1
           v-if="pathHovered"
           :key="pathHovered"
@@ -90,12 +90,12 @@ const pathHovered = ref('')
               'animate-out fade-out': !pathHovered,
             })
           ">
-          {{ runePaths.find((r) => r.name === pathHovered)?.tooltip }}
+          {{ pathIndex.find((r) => r.name === pathHovered)?.tooltip }}
         </p>
       </div>
       <div
         v-else
-        class="absolute gap-3 size-full items-center justify-between">
+        class="absolute size-full items-center justify-between gap-3">
         <h1
           key="default"
           class="dst"
@@ -119,12 +119,12 @@ const pathHovered = ref('')
       </div>
     </div>
     <motion.div
-      class="flex items-center max-h-160 justify-center gap-1.5"
+      class="flex max-h-160 items-center justify-center gap-1.5"
       :transition="{
         delayChildren: stagger(0.2),
       }">
       <motion.button
-        v-for="(path, i) in runePaths"
+        v-for="(path, i) in pathIndex"
         :key="path.name"
         :variants="variants"
         initial="hidden"
@@ -139,13 +139,13 @@ const pathHovered = ref('')
           backgroundPosition: '50% 50%',
           backgroundSize: 'cover',
         }"
-        class="rounded-lg cursor-pointer flex items-center justify-center my-auto bg-center grow basis-1 max-h-140 aspect-2/3 shadow-sm drop-shadow-sm bg-black relative after:absolute overflow-hidden after:size-full after:bg-black/70 after:opacity-0 hover:after:opacity-100 hover:*:opacity-100 *:opacity-0 after:transition-all after:duration-400 after:backdrop-blur-px after:z-1"
-        @click="handleSet(path.name, runePaths[i === 4 ? 0 : i + 1].name)"
+        class="after:backdrop-blur-px relative my-auto flex aspect-2/3 max-h-140 grow basis-1 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-black bg-center shadow-sm drop-shadow-sm *:opacity-0 after:absolute after:z-1 after:size-full after:bg-black/70 after:opacity-0 after:transition-all after:duration-400 hover:*:opacity-100 hover:after:opacity-100"
+        @click="handleSet(path.name, pathIndex[i === 4 ? 0 : i + 1].name)"
         @hover-start="pathHovered = path.name"
         @hover-end="pathHovered = ''">
         <hicon
           :name="`i-path-${path.name.toLowerCase()}`"
-          class="z-2 !text-white/30 !size-20" />
+          class="z-2 !size-20 !text-white/30" />
       </motion.button>
     </motion.div>
   </div>

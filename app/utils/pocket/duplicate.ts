@@ -1,5 +1,7 @@
 // duplicate
 
+import type { ItemSet, Pocket, RuneSet } from '~~/shared/schema'
+
 export function deepCopy<T>(obj: T): T {
   return JSON.parse(JSON.stringify(obj))
 }

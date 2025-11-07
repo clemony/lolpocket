@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SplitterPanel as ResizablePanel } from 'reka-ui'
+import type { Pocket } from '#shared/schema'
 
 const props = defineProps<{
   pocket: Pocket
@@ -37,18 +37,18 @@ const tabValues = [
 
 <template>
   <div
-    class="size-full z-auto pt-22 min-h-screen">
-    <div class="flex w-full z-auto gap-16">
-      <div class="w-2/5 z-auto">
+    class="z-auto size-full min-h-screen pt-22">
+    <div class="z-auto flex w-full gap-16">
+      <div class="z-auto w-2/5">
         <ItemsHeader />
-        <div class=" sticky z-2 -top-44 self-start w-full">
-          <div class="max-h-[calc(100vh-5.5rem)] pr-2 overflow-x-visible scrollbar-none overflow-y-auto">
+        <div class=" sticky -top-44 z-2 w-full self-start">
+          <div class="scrollbar-none max-h-[calc(100vh-5.5rem)] overflow-x-visible overflow-y-auto pr-2">
             <ItemSets :pocket="pocket" />
           </div>
         </div>
       </div>
       <div
-        class=" w-3/5 flex flex-col z-auto ">
+        class=" z-auto flex w-3/5 flex-col ">
         <PocketItemFilters />
         <LazyDraggableItemList />
       </div>

@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { abilityResources } from '~~/shared/appdata/index/ability-resource-index'
-import { damageTypes } from '~~/shared/appdata/index/damage-type-index'
+import { abilityResources, damageTypes } from '~~/shared/references'
 
 const { champion, wrapperClass } = defineProps<{
   champion: Champion
@@ -13,10 +12,10 @@ const damageType = computed (() => damageTypes.find(d => d.type === champion.ada
 </script>
 
 <template>
-  <div class=" py-3 px-5.5 w-full">
+  <div class=" w-full px-5.5 py-3">
     <div :class="wrapperClass">
       <p>Position</p>
-      <p class="flex gap-2 items-center">
+      <p class="flex items-center gap-2">
         <PositionBadge
           v-for="pos, i in champion.positions"
           :key="i"
@@ -39,19 +38,19 @@ const damageType = computed (() => damageTypes.find(d => d.type === champion.ada
 
     <div :class="wrapperClass">
       <p>Damage Style</p>
-      <div class="flex *:flex *:gap-1.5 *:items-center gap-3 items-center">
+      <div class="flex items-center gap-3 *:flex *:items-center *:gap-1.5">
         <span class="font-medium">
           <component
             :is="`i-lol-${champion.attackType.toLowerCase()}`"
             v-if="champion.attackType"
-            class="!size-4.5 shrink-0  dst **:stroke-0 " />
+            class="dst !size-4.5  shrink-0 **:stroke-0 " />
           {{ champion.attackType }}
         </span>
         <span v-if="champion.attackType && champion.adaptiveType">
           +
         </span>
         <div class="font-medium">
-          <span class="size-4 grid place-items-center relative">
+          <span class="relative grid size-4 place-items-center">
             <component
               :is="damageType?.icon"
               v-if="damageType?.icon"
@@ -67,14 +66,14 @@ const damageType = computed (() => damageTypes.find(d => d.type === champion.ada
 
     <div :class="wrapperClass">
       <p>Resource</p>
-      <p class="flex gap-2 font-medium items-center">
+      <p class="flex items-center gap-2 font-medium">
         <hicon
           v-if="resource?.icon"
           :name="resource?.icon"
           :style="{
           /*   color: resource.color, */
           }"
-          class="!size-3.5 opacity-90 shrink-0  dst " />
+          class="dst !size-3.5 shrink-0  opacity-90 " />
         {{ champion.resource }}
       </p>
     </div>
@@ -82,19 +81,19 @@ const damageType = computed (() => damageTypes.find(d => d.type === champion.ada
     <div :class="wrapperClass">
       <p>Price</p>
       <div
-        class="flex gap-4 items-center overflow-hidden *:gap-1 *:text-3 *:flex *:items-center">
+        class="*:text-3 flex items-center gap-4 overflow-hidden *:flex *:items-center *:gap-1">
         <div class="font-medium">
-          <i-lol-be class="!size-4.25 text-platinum !shrink-0 dst mr-0.5" />
+          <i-lol-be class="text-platinum dst mr-0.5 !size-4.25 !shrink-0" />
           <p>
             {{ champion.price.blueEssence }}
-            <span class="text-1 font-medium pr-0.5">BE</span>
+            <span class="text-1 pr-0.5 font-medium">BE</span>
           </p>
         </div>
         <div>
-          <i-lol-rp class="!size-4.5 mr-1  text-gold !shrink-0 dst" />
+          <i-lol-rp class="text-gold dst  mr-1 !size-4.5 !shrink-0" />
           <p class="font-medium">
             {{ champion.price.rp }}
-            <span class="text-1 font-medium pr-0.5">RP</span>
+            <span class="text-1 pr-0.5 font-medium">RP</span>
           </p>
         </div>
       </div>
@@ -113,11 +112,11 @@ const damageType = computed (() => damageTypes.find(d => d.type === champion.ada
           Patch {{ champion.patchLastChanged }}
         </BtnLink>
         <template #content>
-          <p class="flex gap-1 items-center">
+          <p class="flex items-center gap-1">
             View notes on wiki
             <icon
               name="link"
-              class="size-3 opacity-60 group-hover/l:opacity-100 mb-0.5" />
+              class="mb-0.5 size-3 opacity-60 group-hover/l:opacity-100" />
           </p>
         </template>
       </tippy>

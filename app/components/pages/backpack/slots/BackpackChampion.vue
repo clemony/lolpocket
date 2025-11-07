@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { Pocket } from '~~/shared/schema/schema.pocket'
+
 const props = defineProps<{
   pocket: Pocket
 }>()
