@@ -11,7 +11,7 @@ defineOptions({
 })
 
 const pinned = computed(() => {
-  const p = ps().pockets.filter(p => p.location.pinned)
+  const p = ps().pockets.filter(p => ps().pinned.includes(p.key))
   const result: Pocket[][] = []
 
   for (let i = 0; i < p.length; i += 3)

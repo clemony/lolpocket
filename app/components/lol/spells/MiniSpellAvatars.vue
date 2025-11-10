@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import type { SpellSet } from '~~/shared/schema'
 
 const { class: className, set } = defineProps<{
   class?: HTMLAttributes['class']
@@ -12,14 +11,14 @@ const { class: className, set } = defineProps<{
     :class="cn('avatar-group    -space-x-3 justify-end items-center translate-x-px ', className)">
     <div
       class="avatar    group-open/trig:border-b2   !border-3 size-7.5">
-      <Spell
-        :name="set.d"
+      <IndexIcon
+            :item="spellbook[set.d]"
         class="size-6.5 -mt-px -ml-px " />
     </div>
     <div
       class="avatar    group-open/trig:border-b2   !border-3 size-7.5">
-      <Spell
-        :name="set.f"
+      <IndexIcon
+        :item="spellbook[set.f]"
         class="size-6.5 -ml-px -mt-px aspect-square shrink-0" />
     </div>
   </div>

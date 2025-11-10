@@ -2,33 +2,26 @@
 import type { DropdownMenuTriggerProps } from 'reka-ui'
 import { DropdownMenuTrigger, useForwardProps } from 'reka-ui'
 
-const props = defineProps<
-  DropdownMenuTriggerProps & {
-    class?: HTMLAttributes['class']
-    size?: any
-    variant?: any
-    shape?: any
-  }
->()
+interface Props extends DropdownMenuTriggerProps {
+  base?: ButtonVariants['base']
+  class?: HTMLAttributes['class']
+  hover?: ButtonVariants['hover']
+  on?: ButtonVariants['on']
+  size?: ButtonVariants['size']
+  variant?: ButtonVariants['variant']
+}
+const props = withDefaults(defineProps<Props>(), {
+  base: 'btn',
+  size: 'md',
+  variant: 'none'
+})
 const forwarded = useForwardProps(props)
 </script>
 
 <template>
   <DropdownMenuTrigger
     v-bind="forwarded"
-    as-child>
-    <Button
-      :variant="variant"
-      as="button"
-      :size="size"
-      :shape="shape"
-      :class="
-        cn(
-          'outline-none  data-[state=open]:btn-active cursor-pointer',
-          props.class,
-        )
-      ">
-      <slot />
-    </Button>
+    :class="cn('group/drop', buttonVariants({ base, variant, size, hover, on }), '', props.class)">
+    <slot />
   </DropdownMenuTrigger>
 </template>

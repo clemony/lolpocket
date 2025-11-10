@@ -3,10 +3,10 @@ import type { PopoverTriggerProps } from 'reka-ui'
 import { PopoverTrigger, useForwardProps } from 'reka-ui'
 
 interface Props extends PopoverTriggerProps {
-  active?: ButtonVariants['active']
   base?: ButtonVariants['base']
   class?: HTMLAttributes['class']
   hover?: ButtonVariants['hover']
+  on?: ButtonVariants['on']
   size?: ButtonVariants['size']
   variant?: ButtonVariants['variant']
 }
@@ -23,7 +23,7 @@ const forwarded = useForwardProps(delegatedProps)
 <template>
   <PopoverTrigger
     v-bind="forwarded"
-    :class="cn('group/pop', buttonVariants({ base, variant, size, hover, active }), '', props.class)">
+    :class="cn('group/pop', buttonVariants({ base, variant, size, hover, on }), '', props.class)">
     <slot />
   </PopoverTrigger>
 </template>

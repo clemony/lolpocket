@@ -5,10 +5,19 @@
 @source "./colors.css";
 @source "@variants/variants.css"
 @source "./theme.css";
-
 @source not "../icons";
-
 @source not "../img";
+@import './utilities/index.css';
+@import './classes.css';
+@import './plugins/index.css';
+@import './theme.css';
+@import './colors.css';
+@import './animation/index.css';
+@import './fonts.css';
+@import './color-themes.css';
+@import './ag-grid/index.css';
+@import './components/index.css';
+
 
 @layer base {
   :root {

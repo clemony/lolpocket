@@ -1,12 +1,11 @@
-import type { Account, Pocket, PublicData, Settings } from '~~/shared/schema'
 import { defineStore } from 'pinia'
+import type { Account, Pocket, PublicData, Settings } from '~~/shared/schema'
 import { getEmptyAccount } from '~~/shared/schema'
 
 export const useAccountStore = defineStore(
   'as',
   () => {
-    const userNotes = ref<Note[]>([])
-    const comments = ref<CommentItem[]>([])
+    const comments = ref<CommentSchema[]>([])
 
     const removedComments = ref <CommentLog[]>([])
 
@@ -21,6 +20,7 @@ export const useAccountStore = defineStore(
     const account = ref<Account>()
     const settings = ref<Settings>()
     const publicData = ref<PublicData>()
+    const inbox = ref<Inbox>()
 
     const pockets = <Record<string, Pocket[]>>{
       all: [],
@@ -42,24 +42,21 @@ export const useAccountStore = defineStore(
       // const matchData = getMatchesForSummoner(account.value.puuid)
     }
     return {
-      // account
-
       toggleSidebarLock: () =>
-        (settings.value.lockSidebar
+        (settings.value.pin_sidebar
           = true
-            ? !settings.value.lockSidebar
-            : (settings.value.lockSidebar = true)),
+            ? !settings.value.pin_sidebar
+            : (settings.value.pin_sidebar = true)),
       account,
+      settings,
+      inbox,
       clearAccount,
       comments,
       loggedIn,
       pockets,
-      publicData,
       removedComments,
-      settings,
       toggles,
       topChampion,
-      userNotes,
     }
   },
   {

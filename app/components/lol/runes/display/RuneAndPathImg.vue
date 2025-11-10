@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { Primitive } from 'reka-ui'
 import type { RuneSet } from '~~/shared/schema'
+import { Primitive } from 'reka-ui'
 
 const { class: className, pathClass } = defineProps<{
   class?: HTMLAttributes['class']

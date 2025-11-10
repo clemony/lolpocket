@@ -1,8 +1,8 @@
-import { sha256 } from 'ohash'
+
 import * as v from 'valibot'
 
 function hash(obj: any) {
-  return sha256(JSON.stringify(obj ?? {}))
+  return crypto.subtle.digest("SHA-256", obj ?? {})
 }
 
 export function useSupabaseSync<
@@ -23,7 +23,7 @@ export function useSupabaseSync<
 
   onMounted(() => {
     const parsed = v.safeParse(schema, source())
-    snapshotHash = hash(parsed.output)
+    snapshotHash =  hash(parsed.output).toString()
   })
 
   async function syncIfDirty() {
@@ -32,7 +32,7 @@ export function useSupabaseSync<
 
     const parsed = v.safeParse(schema, source())
 
-    const currentHash = hash(parsed.output)
+    const currentHash = hash(parsed.output).toString()
 
     if (currentHash === snapshotHash)
       return

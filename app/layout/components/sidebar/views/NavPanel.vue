@@ -20,7 +20,7 @@ const navLinks = computed(() => {
 </script>
 
 <template>
-  <div class=" overflow-y-auto scrollbar-hidden  py-3  max-h-full h-full pl-6 pr-6 space-y-2 w-full">
+  <div class=" overflow-y-auto scrollbar-hidden **:text-3  py-3  max-h-full h-full pl-6 pr-6 space-y-2 w-full">
     <Collapsible
       v-for="parentRoute, i in navLinks"
       :key="parentRoute.name"
@@ -37,44 +37,39 @@ const navLinks = computed(() => {
 
       <CollapsibleContent
         v-if="parentRoute.path !== '/support'"
-        class="after:top-3 gap-1 relative flex flex-col justify-items-center"
+        class="after:top-3 *:-ml-2 gap-1 relative flex flex-col justify-items-center"
         menu>
         <SidebarBtnLink
           v-for="child in parentRoute?.children.sort((a, b) => (Number(a.meta.order) - Number(b.meta.order)))"
           :key="child?.name"
-          class=" text-4"
           :item="child" />
       </CollapsibleContent>
 
       <CollapsibleContent
         v-else-if="parentRoute.path === '/support'"
-        class="after:top-3 gap-1 relative flex flex-col justify-items-center"
+        class="after:top-3  *:-ml-2  gap-1 relative flex flex-col justify-items-center"
         menu>
         <SidebarBtnLink
           v-for="child in parentRoute?.children.filter(p => ['docs', 'about'].includes(String(p.name))).sort((a, b) => (Number(a.meta.order) - Number(b.meta.order)))"
           :key="child?.name"
-          class=" text-4"
           :item="child" />
 
         <Collapsible :default-open="false">
-          <CollapsibleTrigger class="flex-nowrap overflow-hidden hover:!text-bc !gap-2.75 pl-4 pr-1 w-full !duration-0 items-center flex h-10 w-full text-4 hover:underline font-medium capitalize text-nowrap justify-start">
+          <CollapsibleTrigger class="flex-nowrap overflow-hidden text-bc/50 hover:!text-bc !gap-3.25 pl-1.5 pr-1 w-full !duration-0 items-center flex h-10 w-full hover:underline font-medium capitalize text-nowrap justify-start">
             <span class="size-4.5 shrink-0 grid place-items-center relative">
-              <icon
-                name="lucide:scale"
-                class="size-5.5 **:stroke-[1.6] absolute" />
+
+            <CaretRotate direction="right" class="!size-5"/>
             </span>
             Policies & Terms
             <Grow />
-            <CaretRotate />
           </CollapsibleTrigger>
 
           <CollapsibleContent
-            class="after:top-3 gap-1 relative pl-4.25 flex flex-col justify-items-center"
+            class="after:top-3 mt-1 pl-px  gap-1 relative  flex flex-col justify-items-center"
             menu>
             <SidebarBtnLink
               v-for="child in parentRoute?.children.filter(p => !['docs', 'about'].includes(String(p.name))).sort((a, b) => (Number(a.meta.order) - Number(b.meta.order)))"
               :key="child?.name"
-              class=" text-4"
               :item="child" />
           </CollapsibleContent>
         </Collapsible>

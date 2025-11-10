@@ -1,6 +1,6 @@
 <script setup lang="ts">
-const { active = 'btn', base = 'btn', class: className, hover = 'ghost', size = '8', variant = 'ghost' } = defineProps<{
-  active?: ButtonVariants['active']
+const { base = 'btn', class: className, hover = 'btn', on = 'btn', size = '8', variant = 'ghost' } = defineProps<{
+  on?: ButtonVariants['on']
   class?: HTMLAttributes['class']
   hover?: ButtonVariants['hover']
   size?: ButtonVariants['size']
@@ -12,7 +12,7 @@ const { active = 'btn', base = 'btn', class: className, hover = 'ghost', size = 
 <template>
   <Button
     as="button"
-    :class="cn(buttonVariants({ base, active, hover, size, variant }), 'rounded-md flex-nowrap text-nowrap truncate w-full max-w-full overflow-hidden justify-start text-2 px-2 [&_svg]:size-4.5', className)">
+    :class="cn(buttonVariants({ base, on, hover, size, variant }), 'rounded-md flex-nowrap text-nowrap truncate w-full max-w-full overflow-hidden justify-start text-2 px-2 [&_svg]:size-4.5', className)">
     <slot />
   </Button>
 </template>

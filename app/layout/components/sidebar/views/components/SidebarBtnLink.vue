@@ -21,24 +21,23 @@ const item = computed (() => {
 
 <template>
   <Button
+  :disabled="route.path.match(link || item?.path)"
     v-if="link || item"
-    :variant="route.path.match(link || item?.path) ? 'link' : 'ghost'"
-    active="link"
+    variant="link"
+    on="link"
     size="12"
-    :class="
-      cn(
-        ' flex-nowrap overflow-hidden hover:!text-bc !gap-2.75 pl-4 w-full h-11 !duration-0  text-3 capitalize text-nowrap justify-start',
-        { 'btn-active': route.path.match(link || item?.path) },
-      )
-    "
+    class=" pl-2 w-full h-11 !duration-0 justify-start "
     @click="closeAndNav(link || item.path)">
     <slot>
+      <span :class="cn('flex-nowrap flex items-center text-3 capitalize text-nowrap !gap-2.75',
+        { 'badge badge-ghost badge-xl inset-shadow-sm inset-shadow-black/3': route.path.match(link || item?.path) },)">
       <span class="relative grid size-4.5 shrink-0 place-items-center">
         <hicon
           :name="String(item.meta?.icon) "
           :class="cn('size-5 absolute', item?.meta?.listClass)" />
       </span>
       {{ item.meta?.title || item.name }}
+    </span>
     </slot>
   </Button>
 </template>

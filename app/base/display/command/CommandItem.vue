@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { VueInstance } from '@vueuse/core'
-import { useCurrentElement } from '@vueuse/core'
 import type { ListboxItemEmits, ListboxItemProps } from 'reka-ui'
+import { useCurrentElement } from '@vueuse/core'
 import { ListboxItem, useForwardPropsEmits, useId } from 'reka-ui'
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { useCommand, useCommandGroup } from './index.command'

@@ -3,10 +3,10 @@ import type { ListboxItemEmits, ListboxItemProps } from 'reka-ui'
 import { ListboxItem, useForwardPropsEmits } from 'reka-ui'
 
 interface Props extends ListboxItemProps {
-  active?: ButtonVariants['active']
   base?: ButtonVariants['base']
   class?: HTMLAttributes['class']
   hover?: ButtonVariants['hover']
+  on?: ButtonVariants['on']
   size?: ButtonVariants['size']
   variant?: ButtonVariants['variant']
 }
@@ -16,7 +16,7 @@ const props = withDefaults(defineProps<Props>(), {
   variant: 'ghost'
 })
 
-const delegatedProps = reactiveOmit(props, 'class', 'active', 'variant')
+const delegatedProps = reactiveOmit(props, 'class', 'on', 'variant')
 
 const forwardedProps = useForwardPropsEmits(delegatedProps)
 </script>
@@ -31,7 +31,7 @@ const forwardedProps = useForwardPropsEmits(delegatedProps)
       :variant
       :size
       :hover
-      :active
+      :on
       :base
       :class="
         cn('w-full relative justify-start focus:outline-1 !outline-offset-0 capitalize', props.class) ">

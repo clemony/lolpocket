@@ -18,12 +18,12 @@ const pocket = ref<Pocket>(ps().getPocket(String(route.params.pocket_key)))
       :key="i"
       class="z-0 gap-1 px-2.5 [&_#indicator]:order-last"
       :value="set.id">
-      <Spell
-        :name="set.d"
+    <IndexIcon
+            :item="spellbook[set.d]"
         class="size-6" />
 
-      <Spell
-        :name="set.f"
+     <IndexIcon
+            :item="spellbook[set.f]"
         class="size-6" />
       <Grow />
     </MenubarRadioItem>

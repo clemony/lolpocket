@@ -10,28 +10,39 @@ import {
 } from 'reka-ui'
 
 const props = withDefaults(
-  defineProps<DropdownMenuContentProps & { class?: HTMLAttributes['class'] }>(),
+  defineProps<DropdownMenuContentProps & {
+    class?: HTMLAttributes['class']
+    theme?: TippyTheme
+    animation?: TippyAnimation
+  }>(),
   {
     sideOffset: 4,
+    animation: 'shift-toward',
+    theme: 'base-0'
   }
 )
 const emits = defineEmits<DropdownMenuContentEmits>()
 
-const delegatedProps = reactiveOmit(props, 'class')
+const delegatedProps = reactiveOmit(props, 'class', 'animation', 'theme')
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
-  <DropdownMenuContent
-    v-bind="forwarded"
-    :class="
-      cn(
-        'z-50  overflow-hidden rounded-lg border border-b3/80 before:absolute before:size-full before:backdrop-blur before:bg-b1/90 backdrop-blur bg-b1/90 before:top-0 before:left-0 before:inset-0   p-1.5 text-bc before:shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out  data-[side=bottom]:slide-in-from-top-100 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 w-(--reka-dropdown-menu-trigger-width)',
-        props.class,
-      )
-    "
-    @close-auto-focus.prevent>
-    <slot />
-  </DropdownMenuContent>
+  <DropdownMenuPortal>
+    <DropdownMenuContent
+      v-bind="forwarded"
+      :data-theme="props.theme"
+      :data-placement="forwarded.side"
+      :data-animation="props.animation"
+      :class="
+        cn(
+          'tippy-box',
+          props.class,
+        )
+      "
+      @close-auto-focus.prevent>
+      <slot />
+    </DropdownMenuContent>
+  </DropdownMenuPortal>
 </template>

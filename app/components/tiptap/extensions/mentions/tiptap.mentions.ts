@@ -1,7 +1,7 @@
 import type { NodeViewProps } from '@tiptap/core'
-import { constructMentionAttrs } from '#tiptap'
 import Mention from '@tiptap/extension-mention'
 import { mergeAttributes, VueNodeViewRenderer } from '@tiptap/vue-3'
+import { constructMentionAttrs } from 'tiptap'
 import MentionLinkRaw from '~/components/tiptap/extensions/mentions/lol-index/MentionEditorBadge.vue'
 
 const MentionLink = MentionLinkRaw as unknown as Component<NodeViewProps>

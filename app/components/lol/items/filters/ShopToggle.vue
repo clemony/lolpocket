@@ -6,7 +6,7 @@
     v-model:model-value="is().filters.purchasable"
     v-tippy="{ content: is().filters.purchasable ? 'Items purchasable in shop' : 'All items', theme: 'base', placement: 'top-end' }"
     variant="outline"
-    active="neutral"
+    on="neutral"
     class="group/tog  off:!bg-tint-b2/40 off:inset-shadow-sm relative  *:transition-opacity *:duration-100"
     size="12">
     <icon

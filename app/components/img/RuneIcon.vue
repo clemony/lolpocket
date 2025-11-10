@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { keystoneIndex } from '#shared/indexes'
+
 const { id, as = 'div', class: className, size = 'sq' } = defineProps<{
   class?: HTMLAttributes['class']
   id?: number

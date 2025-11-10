@@ -1,9 +1,8 @@
 <script setup lang="ts">
-const {  champion } = defineProps<{
+const { champion } = defineProps<{
 
-  champion: ChampionKey
+  champion: string
 }>()
-
 
 // @todo FIX
 </script>

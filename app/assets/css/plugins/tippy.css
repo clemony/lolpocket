@@ -1,56 +1,67 @@
 @import 'tailwindcss';
 @import '../theme.css';
+@import 'tippy.js/dist/svg-arrow.css';
+
+@import 'tippy.js/animations/shift-toward-subtle.css';
+@import 'tippy.js/animations/shift-toward.css';
 
 @utility tippy-box {
-  @apply border z-60 w-auto max-w-80 rounded-field backdrop-blur-md  drop-shadow-[1px_1px_2px_#0000006] shadow-md;
+  @apply border !z-60 w-auto max-w-80 rounded-field backdrop-blur-md  drop-shadow-[1px_1px_2px_#0000006] shadow-md;
 
   &[data-inertia][data-state='visible'] {
     transition-timing-function: cubic-bezier(0.28, 0.93, 0.75, 1.38);
   }
 
-  &[data-theme~='neutral-no-padding'],
-  &[data-theme~='base-no-padding'] {
-    @apply !p-0;
+  &[data-theme~='neutral-0'],
+  &[data-theme~='base-0'] {
+    @apply p-0 max-w-none;
 
-    &[data-theme~='neutral-no-padding'] {
+    &[data-theme~='neutral-0'] {
       @apply !w-[258px] !max-w-[258px];
     }
     .tippy-content {
-      @apply !p-0 w-full;
+      @apply p-0 max-w-none;
     }
   }
+  &[data-theme~='sidebar']{
+@apply !my-0  fixed !p-0 border-l-black border-r max-h-screen   !-top-15 !left-0 rounded-r-xl !min-w-110 w-110 shadow-none drop-shadow-md  drop-shadow-black/9 border-l-0 border-b3  border-y-1 ;
 
-  .tippy-content:where(:not([data-theme='neutral-no-padding'])) {
-    @apply px-3 py-1;
+.tippy-content{
+  @apply !p-0 !m-0 !h-screen  w-full left-0 top-0;
+}
   }
 
-  .tippy-content {
-    @apply text-2 whitespace-pre inline-block font-medium **:text-2;
+  &[data-theme~='sidebar-dropdown']{
+  @apply h-fit max-h-46    -translate-y-20 translate-x-1 ;
+}
+
+  .tippy-content&:not-[data-theme='neutral-0']&:not-[data-theme='base-0'] {
+    @apply px-3 py-1 text-2  whitespace-pre inline-block font-medium **:text-2;
   }
+
 
   &[data-placement='bottom'] > .tippy-svg-arrow,
   &[data-placement='top'] > .tippy-svg-arrow,
   &[data-placement='left'] > .tippy-svg-arrow,
   &[data-placement='right'] > .tippy-svg-arrow {
-    @apply !z-61 *:!z-61  *:scale-74;
+    @apply !z-61 *:!z-61;
   }
 
   &[data-placement='right'] > .tippy-svg-arrow > svg {
-    @apply !right-[calc(50%-2px)] !top-[calc(50%-11px)];
+    @apply !right-1/2 !-top-px;
   }
   &[data-placement~='left'] > .tippy-svg-arrow > svg {
-    @apply !left-[calc(50%+1px)] !-top-[calc(50%+1px)];
+    @apply !left-1/2 !-top-px;
   }
   &[data-placement~='bottom'] > .tippy-svg-arrow > svg {
-    @apply !translate-x-1 !bottom-[calc(50%-1px)];
+    @apply !-left-px !bottom-1/2;
   }
-
   &[data-placement~='top'] > .tippy-svg-arrow > svg {
-    @apply !left-[calc(200%+1px)] !-top-[calc(50%+1px)];
+    @apply !left-px !top-1/2;
   }
 
   /* default / contrast */
-  &[data-theme~='neutral-no-padding'],
+  &[data-theme~='neutral-0'],
   &[data-theme~='neutral'] {
     @apply bg-neutral/86  border-b3/30   inset-shadow-white/10;
 
@@ -59,25 +70,17 @@
     }
 
     & > .tippy-svg-arrow > svg:first-child {
-      @apply text-neutral/86 mask-b-from-58% mask-b-to-64%;
-    }
-
-    & > .tippy-svg-arrow > svg:last-child {
-      @apply text-neutral/86;
+      @apply text-neutral/80 dss **:fill-neutral/80  mask-b-from-58% mask-b-to-64%;
     }
   }
 
   /* base color */
-  &[data-theme~='base-no-padding'],
+  &[data-theme~='base-0'],
   &[data-theme~='base'] {
-    @apply border-b3/80 text-bc/90 font-medium !bg-b1/90;
+    @apply border-b3/80 text-bc/90 !bg-b1/90;
 
     & > .tippy-svg-arrow > svg:first-child {
-      @apply !fill-b4/80;
-    }
-
-    & > .tippy-svg-arrow > svg:last-child {
-      @apply !fill-b1/92;
+      @apply **:fill-b1/95 **:text-b3 dss mask-b-from-55% mask-b-to-56%;
     }
   }
 
@@ -89,10 +92,6 @@
     }
 
     & > .tippy-svg-arrow > svg:first-child {
-      @apply fill-domination/90;
-    }
-
-    & > .tippy-svg-arrow > svg:last-child {
       @apply fill-domination/90;
     }
   }

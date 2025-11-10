@@ -1,6 +1,6 @@
 <script setup lang="ts">
-
 import { championRoles } from '#shared/references'
+
 const { filtered, filters, setFilter } = useItemFilter()
 function reset() {
   filters.role = null

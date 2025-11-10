@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { extractReadableText } from '#tiptap'
 import { toTypedSchema } from '@vee-validate/valibot'
 import { useToggle } from '@vueuse/core'
+import { extractReadableText } from 'tiptap'
 import { parse } from 'valibot'
 import { useForm } from 'vee-validate'
 import { toast } from '~/base/notification/toast/use-toast'
-import { reportOptions, reportSchema } from './schema.report'
+import { reportOptions } from './reportOptions'
 
 const { button, comment } = defineProps<{
-  comment: CommentItem
+  comment: CommentData
   button?: boolean
 }>()
 
@@ -31,16 +31,16 @@ const onSubmit = handleSubmit((values) => {
   console.log('🌱 - values:', values)
   if (!comment.content.content.length)
     return console.log('🚫 Error')
-  const contentText = extractReadableText(comment.content.content[0])
-  console.log('🌱 - onSubmit - contentText:', contentText)
+  const content_text = extractReadableText(comment.content.content[0])
+  console.log('🌱 - onSubmit - contentText:', content_text)
 
   const payload = {
     ...values,
     comment: {
       id: comment.id,
-      authorName: comment.authorName,
-      contentText,
-      createdAt: comment.createdAt,
+      author_id: comment.author_id,
+      content_text,
+      created: comment.created,
     },
   }
 

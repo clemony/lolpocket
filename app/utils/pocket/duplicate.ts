@@ -12,8 +12,7 @@ export function duplicatePocket(original: Pocket): Pocket {
   newPocket.key = crypto.randomUUID()
   newPocket.name = `${original.name} (copy)`
 
-  if (!newPocket.author.includes(as().account.puuid))
-    newPocket.author.push(as().account.puuid)
+    newPocket.ouuid = as().account.uuid
 
   ps().pockets.push(newPocket)
   return newPocket

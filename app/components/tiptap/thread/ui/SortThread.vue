@@ -3,7 +3,7 @@ import { parseAbsoluteToLocal } from '@internationalized/date'
 
 useScrollToHash('#app')
 const sort = shallowRef<string>('best')
-const sortedComments = ref<CommentItem[]>(null)
+const sortedComments = ref<CommentSchema[]>(null)
 function sortComments() {
   const comments = [...as().comments] // make a shallow copy to avoid mutating original
 
@@ -14,8 +14,8 @@ function sortComments() {
 
   else if (sort.value === 'new') {
     comments.sort((a, b) =>
-      parseAbsoluteToLocal(b.createdAt).toDate().getTime()
-      - parseAbsoluteToLocal(a.createdAt).toDate().getTime()
+      parseAbsoluteToLocal(b.created).toDate().getTime()
+      - parseAbsoluteToLocal(a.created).toDate().getTime()
     )
   }
 

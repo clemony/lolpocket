@@ -7,14 +7,14 @@ const inactiveClass
 
 const isOpen = ref(false)
 
-const currentSplash = computed(() => as().publicData?.splash ?? null)
+const currentSplash = computed(() => as().account?.splash ?? null)
 
 const { getMatchesForSummoner } = useIndexedDB()
 const matchData = await getMatchesForSummoner(as().account.puuid)
 const { top } = useChampions(as().account.puuid, matchData)
 
 function handleSplash(e: string) {
-  as().publicData.splash = e
+  as().account.splash = e
   isOpen.value = false
 }
 </script>
@@ -51,8 +51,8 @@ function handleSplash(e: string) {
       <button :class="cn(!currentSplash ? inactiveClass : '', cardClass)">
         <SplashCard
           class="w-36"
-          :text="skinNameFromUrl(as().publicData?.splash) ?? ''"
-          :skin-url="as().publicData?.splash"
+          :text="skinNameFromUrl(as().account?.splash) ?? ''"
+          :skin-url="as().account?.splash"
           :alt="`${as().account?.name ?? null}'s splash`" />
         <div class="flex h-full w-full flex-col gap-4 pt-3">
           <h4

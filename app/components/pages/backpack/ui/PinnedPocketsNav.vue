@@ -65,7 +65,7 @@ const { isCollapsed, pinned } = defineProps<{
               name="pin"
               class="**:stroke-[1.84] absolute size-4" />
             <input
-              v-model="link.location.pinned"
+              v-model="ps().pinned"
               name="toggle-pin"
               type="checkbox"
               class="peer hidden" />

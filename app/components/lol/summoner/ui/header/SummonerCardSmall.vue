@@ -2,8 +2,8 @@
 import type { PrimitiveProps } from 'reka-ui'
 import { Primitive } from 'reka-ui'
 
-const { fullWidth, active = 'none', base = 'none', class: className, hover = 'none', variant = 'none' } = defineProps<PrimitiveProps & {
-  active?: ButtonVariants['active']
+const { fullWidth, base = 'none', class: className, hover = 'none', on = 'none', variant = 'none' } = defineProps<PrimitiveProps & {
+  on?: ButtonVariants['on']
   base?: ButtonVariants['base']
   class?: HTMLAttributes['class']
   hover?: ButtonVariants['hover']
@@ -17,7 +17,7 @@ const summoner = computed(() => ss().getSummoner(as().account?.puuid))
 <template>
   <Primitive
     v-if="summoner"
-    :class="cn('flex w-full items-center gap-3.5', buttonVariants({ base, variant, size, hover, active }), className)">
+    :class="cn('flex w-full items-center gap-3.5', buttonVariants({ base, variant, size, hover, on }), className)">
     <SummonerIcon class="size-11.5 rounded-full" />
 
     <div class="flex size-full flex-col justify-center gap-0.5">

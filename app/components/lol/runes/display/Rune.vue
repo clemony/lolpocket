@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { runeToPath } from '~~/shared/indexes'
+
 const { id, class: className } = defineProps<{
   class?: HTMLAttributes['class']
   id?: number | null

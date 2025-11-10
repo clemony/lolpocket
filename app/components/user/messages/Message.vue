@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { InboxMessage } from '#shared/schema'
+
 defineOptions({
   inheritAttrs: false,
 })

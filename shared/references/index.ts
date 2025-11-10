@@ -1,3 +1,4 @@
+
 export * from './ability-resource-index'
 export * from './authProviders'
 export * from './champion-resources'
@@ -10,6 +11,5 @@ export * from './positions'
 export * from './queue-index'
 export * from './region-index'
 export * from './roles'
-export * from './spell-index'
 export * from './stat-index'
 

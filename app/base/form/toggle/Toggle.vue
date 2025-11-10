@@ -10,7 +10,7 @@ const props = withDefaults(
       size?: ToggleVariants['size']
       base?: ToggleVariants['base']
       hover?: ToggleVariants['hover']
-      active?: ToggleVariants['active']
+      on?: ToggleVariants['on']
     }
   >(),
   {
@@ -36,7 +36,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
     v-slot="{ modelValue }"
 
     v-bind="forwarded"
-    :class="cn('group/toggle', toggleVariants({ variant, size, base, hover, active }), props.class)">
+    :class="cn('group/toggle', toggleVariants({ variant, size, base, hover, on }), props.class)">
     <slot :model-value />
   </Toggle>
 </template>

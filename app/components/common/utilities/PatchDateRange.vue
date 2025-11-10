@@ -21,7 +21,7 @@ const blocks = computed (() => Math.round(state.allMatches.value.length / 20))
           variant="outline"
           shape="square"
           :class="cn('size-9', { 'btn-active': matches === 'range' })"
-          active="base">
+          on="base">
           <icon
             name="calendar"
             class="size-4" />
@@ -43,7 +43,7 @@ const blocks = computed (() => Math.round(state.allMatches.value.length / 20))
             as-child
             variant="outline"
             :class="cn('h-9 max-w-40', { 'btn-active': matches === 'amount' })"
-            active="base">
+            on="base">
             <BaseSelectTrigger>
 
               <SelectValue />

@@ -38,7 +38,7 @@ watch(
         size="header"
         :img="
           (
-            as().publicData?.splash ?? state.champions().top().splash
+            as().account?.splash ?? state.champions().top().splash
           ).replace('centered', 'uncentered')
         " />
     </template>
@@ -76,7 +76,7 @@ watch(
       :summoner="state.summoner"
       shape="circle"
       placement="left"
-      active="base"
+      on="base"
       variant="outline"
       class="fab bg-b1/80  !pointer-events-auto right-24 bottom-44 z-10 !size-16 !cursor-pointer shadow-sm shadow-black/4 backdrop-blur *:opacity-60 hover:*:opacity-100 [&_svg]:size-4" />
   </TabLayout>

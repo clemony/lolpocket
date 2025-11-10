@@ -1,6 +1,8 @@
+//@fixme probably fix
+
 import { EmojiList, MentionLeagueFilter } from '#components'
+// @ts-ignore
 import { computePosition, flip, shift } from '@floating-ui/dom'
-import { SuggestionPluginKey } from '@tiptap/suggestion'
 import { posToDOMRect, VueRenderer } from '@tiptap/vue-3'
 
 function updatePosition(editor, element) {
@@ -166,7 +168,7 @@ export const mentionSuggestions = [
   {
     char: '#',
     items: ({ query }) => {
-      const arr = [...ix().items, ...ix().champions, ...ix().runes, ...ix().spells]
+      const arr = [...ix().items, ...ix().champions, ...ix().runes, ...Object.values(spellbook)]
 
       const { results } = useSimpleSearch(arr, computed(() => query))
       return results.value.slice(0, 15)

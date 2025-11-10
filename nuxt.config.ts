@@ -1,29 +1,19 @@
+import tailwindcss from '@tailwindcss/vite'
 import process from 'node:process'
 import { fileURLToPath } from 'node:url'
 
 export default defineNuxtConfig({
 
   alias: {
-
-    // '@base': fileURLToPath(new URL('./app/base', import.meta.url)),
-    //
+    'tiptap': fileURLToPath(new URL('./app/components/tiptap', import.meta.url)),
     '@composables': fileURLToPath(new URL('./app/composables', import.meta.url)),
-    //
+    '@stores': fileURLToPath(new URL('./app/stores', import.meta.url)),
     '@css': fileURLToPath(new URL('./app/assets/css', import.meta.url)),
-    //
     '@data': fileURLToPath(new URL('./shared', import.meta.url)),
-    //
     '@layout': fileURLToPath(new URL('./app/layout', import.meta.url)),
-    //
     '@plugins': fileURLToPath(new URL('./app/plugins', import.meta.url)),
-    //
     '@records': fileURLToPath(new URL('./shared/records', import.meta.url)),
-    //
     '@schema': fileURLToPath(new URL('./shared/schema', import.meta.url)),
-    //
-    '#tiptap': fileURLToPath(new URL('./app/components/tiptap', import.meta.url)),
-
-    //
     '@variants': fileURLToPath(new URL('./app/assets/variants', import.meta.url)),
   },
   components: [
@@ -40,7 +30,6 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
-  css: ['./app/assets/css/tailwind.css'],
   devServer: {
     host: 'localhost',
     https: false,
@@ -68,7 +57,7 @@ export default defineNuxtConfig({
     format: ['webp'],
   },
   imports: {
-    dirs: ['@variants', '@schema', '@data'],
+    dirs: ['@variants', '@schema', '@data', '@stores'],
     presets: [
       {
         from: 'motion-v',
@@ -83,7 +72,6 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@vueuse/nuxt',
     '@nuxt/eslint',
-    '@nuxtjs/tailwindcss',
     '@morev/vue-transitions/nuxt',
     '@nuxt/icon',
     'nuxt-svgo',
@@ -97,7 +85,7 @@ export default defineNuxtConfig({
     },
   },
   pinia: {
-    storesDirs: ['./app/stores'],
+    storesDirs: ['app/stores/**'],
   },
   runtimeConfig: {
     public: {
@@ -117,7 +105,7 @@ export default defineNuxtConfig({
       login: '/login',
       saveRedirectToCookie: true,
     },
-    types: './shared/types/database.types.ts',
+   // types: './shared/types/database.types.ts',
     url: process.env.NUXT_PUBLIC_SUPABASE_URL,
     useSsrCookies: false,
   },
@@ -129,18 +117,22 @@ export default defineNuxtConfig({
     tsConfig: {
       compilerOptions: {
         pretty: true,
-        skipLibCheck: true
+        skipLibCheck: true,
       }
-
     },
     typeCheck: true
   },
+
+  //
+  css: ['./app/assets/css/tailwind.css'],
   vite: {
     build: {
       sourcemap: false,
     },
     clearScreen: false,
-
+    plugins: [
+      tailwindcss(),
+    ],
   },
 
   // routes

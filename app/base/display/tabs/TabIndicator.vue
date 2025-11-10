@@ -13,8 +13,7 @@ const props = defineProps<
     contrast?: boolean
     round?: boolean
     roundDisabled?: boolean
-
-    active?: ButtonVariants['active']
+    on?: ButtonVariants['on']
     base?: ButtonVariants['base']
     hover?: ButtonVariants['hover']
     size?: ButtonVariants['size']
@@ -84,7 +83,7 @@ const variants = {
                 props.roundDisabled,
             },
 
-            buttonVariants({ base, variant, size, hover, active }),
+            buttonVariants({ base, variant, size, hover, on }),
             indicatorClass,
           )
         " />

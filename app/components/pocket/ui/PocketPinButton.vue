@@ -13,16 +13,16 @@ const pocket = computed(() => p)
 <template>
   <Label
     v-if="pocket"
-    v-tippy="{ content: pocket.location?.pinned === true ? 'Unpin' : 'Pin', theme: 'neutral', placement: 'bottom' }"
+    v-tippy="{ content: ps().pinned.includes(pocket.key) === true ? 'Unpin' : 'Pin', theme: 'neutral', placement: 'bottom' }"
     variant="ghost"
     base="btn"
     :size
     hover="neutral"
     :class="cn(' pointer-events-auto !size-7 rounded-full group/pin *:mt-px *:size-4.25  *:absolute', className)">
-    <input
-      v-model="pocket.location.pinned"
+<!--     <input
+      v-model="ps().pinned"
       type="checkbox"
-      class="peer hidden" />
+      class="peer hidden" /> -->
 
     <icon
       name="pin"

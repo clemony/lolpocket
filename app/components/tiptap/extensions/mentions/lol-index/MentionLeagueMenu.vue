@@ -21,7 +21,7 @@ const data = computed (() => [
   ...ix().champions,
   ...ix().items,
   ...ix().runes,
-  ...ix().spells
+  ...Object.values(spellbook)
 ])
 
 const query = shallowRef<string>('')
@@ -60,7 +60,7 @@ const groups: IndexGroup[] = [
   {
     name: 'Spells',
     icon: 'i-lol-mage',
-    items: ix().spells
+    items: Object.values(spellbook)
   },
 ]
 
@@ -101,7 +101,7 @@ const { selectedIndex, selectedItem } = useGridFocusTrap(target, {
       ref="triggerEl"
       size="sq-7"
       variant="ghost"
-      active="inset"
+      on="inset"
       hover="inset"
       @click.stop>
       <icon

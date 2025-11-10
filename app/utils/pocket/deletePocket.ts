@@ -12,7 +12,7 @@ export function deletePocket(pocket) {
     navigateTo('/backpack')
   }
 
-  if (as().settings.alertDeletePocket) {
+  if (as().settings.ping_delete_pocket) {
     const newPocketToast = toast(
       {
         title: `Pocket ${pocket.name} sent to trash.`,

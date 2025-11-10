@@ -22,8 +22,8 @@ const {
     :name>
     <FormItem :class="cn('relative mt-1 mb-3  pl-3', className)">
       <FormLabel
-        v-tippy="{ content: optional ? 'optional' : null, theme: 'neutral', placement: 'right' }"
-        class="group/label text-5 mb-3 flex w-min items-center pr-1 font-bold">
+        v-tippy="{ content: optional ? 'optional' : null, theme: 'neutral', placement: 'right', offset: [0, 0] }"
+        class="group/label text-5 mb-3 flex w-min cursor-help items-center font-bold">
         <slot>{{ title }}</slot>
         <Element
           v-if="optional"

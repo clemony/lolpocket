@@ -1,14 +1,14 @@
 <script lang="ts" setup>
 const { class: className, comment, size = 'c-9' } = defineProps<{
   class?: HTMLAttributes['class']
-  comment: CommentItem
+  comment: CommentData
   size?: ElementVariants['size']
 }>()
 const icon = computed(() => {
-  if (comment.authorIcon && comment.authorPuuid === 'defnotclem')
-    return comment.authorIcon
-  else if (comment.authorIcon)
-    return getSummonerIcon(comment.authorIcon)
+  if (comment.author.icon && comment.author_id === 'defnotclem')
+    return comment.author.icon
+  else if (comment.author.icon)
+    return getSummonerIcon(comment.author.icon)
   else return 'i-ui-oh-no'
 })
 </script>
@@ -16,7 +16,8 @@ const icon = computed(() => {
 <template>
   <Element
     :size
-    :variant="comment.authorPuuid === 'defnotclem' ? 'btn' : 'neutral'"
+    base="btn"
+    :variant="comment.author_id === 'defnotclem' ? 'btn' : 'neutral'"
     :class="
       cn(
         'shrink-0   shadow-sm drop-shadow-sm overflow-hidden shadow-black/15 drop-shadow-black/15',

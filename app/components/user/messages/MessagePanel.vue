@@ -9,7 +9,7 @@ import {
 defineOptions({
   meta: {
     name: 'Inbox',
-    badge: computed (() => as().account.inbox.messages.filter(m => !m.read).length).value,
+    badge: computed (() => as().inbox.messages.filter(m => !m.read).length).value,
     class: '**:stroke-1.5',
     icon: 'lucide:mail',
   },
@@ -36,7 +36,7 @@ defineOptions({
     </SidebarHeaderWrapper>
 
     <div class="-mt-4 !flex w-full flex-col items-start gap-0 overflow-hidden">
-      <template v-if="as().account?.inbox?.messages.length">
+      <template v-if="as().inbox?.messages.length">
         <div
           v-for="(message, i) in sortedMessages"
           :key="`${message.date}-${i}`"

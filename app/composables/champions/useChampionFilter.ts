@@ -1,4 +1,3 @@
-
 import { championFilters } from '~~/shared/filters/champion-filters'
 
 export function useChampionFilter(filters: ChampionFilter) {

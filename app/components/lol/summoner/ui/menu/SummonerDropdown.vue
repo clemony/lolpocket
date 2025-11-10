@@ -20,7 +20,7 @@ function handleBlock() {
       <Button
         variant="ghost"
         hover="base"
-        active="base"
+        on="base"
         :class="
           cn(
             'relative w-full text-nowrap text-start pr-8 pl-2 justify-start rounded-full', { 'btn-active': open },

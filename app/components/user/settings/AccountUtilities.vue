@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { Account } from '#shared/schema'
+
 const { account } = defineProps<{
   account: Account
 }>()

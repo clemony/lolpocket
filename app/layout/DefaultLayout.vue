@@ -1,12 +1,13 @@
 <script lang="ts" setup>
+
 const route = useRoute()
 </script>
 
 <template>
   <div
+      id="app"
     class="relative grid  h-screen w-screen grid-rows-1  overflow-hidden ">
     <div
-      id="app"
       class="z-auto flex size-full max-w-screen flex-col overflow-y-auto">
       <!-- header -->
       <header
@@ -41,13 +42,17 @@ const route = useRoute()
         <!-- search buttton -->
         <SearchBox class="!bg-b1/60" />
       </header>
+
+
+<AppSidebarTrigger />
+
+
       <div
         class="relative size-full justify-self-end">
         <slot />
         <LazyAppCommand />
       </div>
 
-      <AppSidebar />
       <!-- toaster -->
       <Toaster />
 

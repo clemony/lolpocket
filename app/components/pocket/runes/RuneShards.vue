@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import type { Pocket, RuneSet } from '~~/shared/schema'
-
 import { shardObject } from '#shared/records/shards'
-
 
 const { pocket, set: s } = defineProps<{
   pocket: Pocket

@@ -98,8 +98,8 @@ for (const champ of Object.values(merakiData)) {
           riotAbility = riotChamp.passive
         }
         else {
-          const spellIndex = ['Q', 'W', 'E', 'R'].indexOf(slot)
-          riotAbility = riotChamp.spells?.[spellIndex]
+          const spellbook = ['Q', 'W', 'E', 'R'].indexOf(slot)
+          riotAbility = riotChamp.spells?.[spellbook]
         }
 
         const maxAmmoRaw = riotAbility?.maxammo

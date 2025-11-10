@@ -3,13 +3,12 @@ export async function useAccountUpdate(
   regionGroup?: string
 ) {
   const puuid = riotPuuid || as().account?.puuid?.toString()
-  const region = regionGroup || as().account?.regionGroup
   if (!puuid)
     return
 
   const resolve = await $fetch<Partial<Summoner>>(
     '/api/riot/fetchSummonerData',
-    { params: { puuid, region } }
+    { params: { puuid } }
   )
 
   if (!resolve)
@@ -21,7 +20,6 @@ export async function useAccountUpdate(
     icon: resolve.profileIcon,
     level: resolve.level,
     region: resolve.region,
-    regionGroup: region,
     tag: resolve.tag,
   }
 

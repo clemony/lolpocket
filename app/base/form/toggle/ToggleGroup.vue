@@ -8,13 +8,13 @@ const props = defineProps<
     class?: HTMLAttributes['class']
     variant?: ToggleGroupVariants['variant']
     size?: ToggleGroupVariants['size']
-    on?: ToggleGroupVariants['active']
+    on?: ToggleGroupVariants['on']
   }
 >()
 const emits = defineEmits<ToggleGroupRootEmits>()
 
 provide('toggleGroup', {
-  active: props.on,
+  on: props.on,
   size: props.size,
   variant: props.variant
 })

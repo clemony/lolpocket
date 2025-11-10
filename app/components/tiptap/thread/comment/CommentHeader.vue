@@ -1,17 +1,17 @@
 <script setup lang="ts">
 const { class: className, comment, hovered, open } = defineProps<{
   class?: HTMLAttributes['class']
-  comment: CommentItem
+  comment: CommentData
   open: boolean
   hovered?: ComputedRef<boolean>
 }>()
 
 const summoner = computed (() => {
   return {
-    name: comment.authorName,
-    puuid: comment.authorPuuid,
-    icon: comment.authorIcon,
-    tag: comment.authorTag,
+    name: comment.author.name,
+    puuid: comment.author_id,
+    icon: comment.author.icon,
+    tag: comment.author.tag,
   }
 })
 /*      :id=""
@@ -22,19 +22,7 @@ const summoner = computed (() => {
   <div
     class="pointer-events-none relative flex h-14 w-full grow  items-center justify-start gap-2.5 pr-3 pl-12 select-none">
     <div class="absolute left-0 flex size-9 flex-col items-center gap-2">
-      <Popover>
-        <PopoverTrigger
-          :disabled="!comment.authorPuuid">
-          <UserAvatar
-            :comment
-            size="c-9"
-            class="hover-ring absolute z-4  translate-y-px not-disabled:pointer-events-auto " />
-        </PopoverTrigger>
-        <PopoverContent :side-offset="12">
-          <PopoverArrow />
-          <slot />
-        </PopoverContent>
-      </Popover>
+      <slot />
       <CollapsibleTrigger
         :disabled="!comment.replies?.length"
         class="pointer-events-auto size-5  disabled:opacity-0">
@@ -47,25 +35,25 @@ const summoner = computed (() => {
       @click.stop>
       <button
         class="inline-flex cursor-pointer align-bottom leading-none hover:*:first:underline"
-        @click="useNavigateToSummoner(comment.authorPuuid)">
+        @click="useNavigateToSummoner(comment.author_id)">
         <span class="!text-4 inline  font-semibold">
-          {{ comment.authorName || 'Summoner' }}
+          {{ comment.author.name || 'Summoner' }}
         </span>
         <span class="text-2 ml-1 inline-flex align-bottom">
           <icon
-            v-if="comment.authorTag"
+            v-if="comment.author.tag"
             name="hash"
             class="mt-0.5 inline size-3" />
-          {{ comment.authorTag }}
+          {{ comment.author.tag }}
         </span>
       </button>
 
       <div class="flex  items-center gap-2 *:align-bottom ">
         <span class="text-1 opacity-60   ">
-          {{ parseISOStringToRelative(comment.createdAt) }}
+          {{ parseISOStringToRelative(comment.created) }}
         </span>
         <span
-          v-if="comment.editedAt"
+          v-if="comment.updated"
           v-tippy="{ content: 'Edited', theme: 'base', placement: 'top-start', followCursor: true }"
           class="text-0  inline ">
           <span class="opacity-60">
@@ -76,7 +64,7 @@ const summoner = computed (() => {
             class="inline size-3 align-middle opacity-60" />
           <span
             class="pointer-events-auto ml-1 opacity-70 hover:underline hover:opacity-100">
-            {{ parseISOStringToDate(comment.editedAt) }}
+            {{ parseISOStringToDate(comment.updated) }}
           </span>
         </span>
       </div>

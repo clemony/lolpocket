@@ -28,7 +28,9 @@ export function getSplash(
   })
 
   const partialUrl
-    = type === 'uncentered'
+    = skin.key.replace('<type', type)
+
+  /* type === 'uncentered'
       ? `images/${champ}_splash_uncentered_${skin.id}`
       : type === 'centered'
         ? `images/${champ}_splash_centered_${skin.id}`
@@ -36,7 +38,7 @@ export function getSplash(
           ? `images/${champ}_splash_tile_${skin.id}`
           : type === 'load'
             ? `${champ}loadscreen_skin`
-            : null
+            : null */
   return `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/assets/characters/${champ}/skins/${folder.value}/${partialUrl}.jpg`
 }
 

@@ -13,7 +13,6 @@ const {
 }>()
 console.log(
   '🌱 - pocket:',
-  ps().pockets.filter(p => p.location.folder === '')
 )
 </script>
 
@@ -54,7 +53,6 @@ console.log(
     <div class="w-full">
       <!-- description -->
 
-      <PocketDescription :note="pocket.notes?.[0] ?? null" />
       <!-- items -->
       <PocketItemSet :set="pocket.items[0]?.items" />
     </div>

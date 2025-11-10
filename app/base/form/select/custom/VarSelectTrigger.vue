@@ -6,7 +6,7 @@ import { SelectTrigger, useForwardProps } from 'reka-ui'
 const props = defineProps<
   SelectTriggerProps & {
     class?: HTMLAttributes['class']
-    active?: ButtonVariants['active']
+    on?: ButtonVariants['on']
     base?: ButtonVariants['base']
     hover?: ButtonVariants['hover']
     size?: ButtonVariants['size']
@@ -25,7 +25,7 @@ const forwarded = useForwardProps(delegatedProps)
     :class="
       cn(
         'group/select',
-        buttonVariants({ variant, hover, active, size, base }),
+        buttonVariants({ variant, hover, on, size, base }),
         props.class,
       )">
     <slot />

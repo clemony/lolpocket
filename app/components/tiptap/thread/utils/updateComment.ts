@@ -12,23 +12,23 @@ async function handleUpdate({ id, content }: { id: string; content: Doc }) {
 export function handleUpdate({ id, content }: { id: string, content: Doc }) {
   updateComment(as().comments, id, content)
 }
-async function updateComment(list: CommentItem[], id: string, content: Doc) {
+async function updateComment(list: CommentSchema[], id: string, content: Doc) {
   for (const comment of list) {
-    const user = await useSupabaseUser() as unknown as ExtendedPayload
-    if (comment.id === id/*  && (comment.authorPuuid === as().account?.puuid || user?.app_metadata?.user_role === 'admin') */) {
+    const user = await useSupabaseUserJwt()
+    if (comment.id === id/*  && (comment.author_id === as().account?.puuid || user?.app_metadata?.user_role === 'admin') */) {
       comment.content = content
-      comment.editedAt = new Date().toISOString()
+      comment.updated = new Date().toISOString()
       toast({
         title: 'Comment Updated!',
         description: `Successfully updated your comment on ${capitalize(String(useRoute().meta?.title || useRoute().name))}.`,
       })
       return true
     }
-    if (comment.replies?.length) {
+/*     if (comment.replies?.length) {
       const found = updateComment(comment.replies, id, content)
       if (found)
         return true
-    }
+    } */
   }
   return false
 }

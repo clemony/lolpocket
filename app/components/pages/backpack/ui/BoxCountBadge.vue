@@ -6,11 +6,11 @@ console.log('🌱 - name:', name)
 
 const box = computed(() =>
   name === 'pockets'
-    ? ps().pockets.filter(p => p.location.folder === '').length
+    ? ps().pockets.length
     : name === 'archive'
-      ? ps().pockets.filter(p => p.location.folder === 'archive').length
+      ? ps().archive.length
       : name === 'archive'
-        ? ps().pockets.filter(p => p.location.folder === 'trash').length
+        ? ps().trash.length
         : null
 )
 console.log('🌱 - box:', box)

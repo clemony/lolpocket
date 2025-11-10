@@ -3,8 +3,7 @@ import type { HoverCardTriggerProps } from 'reka-ui'
 import { HoverCardTrigger, useForwardProps } from 'reka-ui'
 
 const props = defineProps<HoverCardTriggerProps & {
-
-  active?: TriggerVariants['active']
+  on?: ButtonVariants['on']
   base?: TriggerVariants['base']
   class?: HTMLAttributes['class']
   hover?: TriggerVariants['hover']
@@ -20,7 +19,7 @@ const forwarded = useForwardProps(delegatedProps)
 <template>
   <HoverCardTrigger
     v-bind="forwarded"
-    :class="cn(triggerVariants({ base, variant, size, hover, active }), '', props.class)">
+    :class="cn(triggerVariants({ base, variant, size, hover, on }), 'justify-start px-2', props.class)">
     <slot />
   </HoverCardTrigger>
 </template>

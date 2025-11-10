@@ -77,14 +77,14 @@ const menu: MenubarGroup[] = [
       {
         name: 'Pinned',
         icon: { name: 'pin', class: '**:stroke-[1.8]' },
-        items: ps().pockets.filter(p => p.location.pinned).sort((a, b) => a.name.localeCompare(b.name)),
+        items: ps().pockets.filter(p => ps().pinned.includes(p.key)).sort((a, b) => a.name.localeCompare(b.name)),
         pocket: true,
         type: 'submenu',
       },
       {
         name: 'All',
         icon: { name: 'folders' },
-        items: ps().pockets.filter(p => !p.location.pinned).sort((a, b) => a.name.localeCompare(b.name)),
+        items: ps().pockets.filter(p => !ps().pinned.includes(p.key)).sort((a, b) => a.name.localeCompare(b.name)),
         pocket: true,
         type: 'submenu',
       },
@@ -105,14 +105,14 @@ const menu: MenubarGroup[] = [
     name: 'settings',
     class: 'w-74',
     items: [
-      createCheckboxItem({
+/*       createCheckboxItem({
         name: () => pocket.value.location.pinned ? 'Pinned' : 'Pin Pocket',
         checkboxType: 'tick-end',
         get: () => pocket.value.location.pinned,
         icon: () => pocket.value.location.pinned ? 'pin-solid' : 'pin',
         iconClass: '**:stroke-[1.8]',
         set: v => pocket.value.location.pinned = v,
-      }),
+      }), */
       { name: 'separator' },
       {
         name: 'core',
@@ -213,7 +213,7 @@ console.log('🌱 - menu:', menu)
         class="hover:bg-transparent">
         <Button
           variant="link"
-          active="secondary"
+          on="secondary"
           size="sm"
           class="rounded-lg px-4 capitalize open:brightness-98 ">
           {{ group.name }}
@@ -230,7 +230,7 @@ console.log('🌱 - menu:', menu)
     </MenubarMenu>
 
     <!--             <div
-              v-if="!ps().pockets.filter(p => p.location.pinned).length"
+              v-if="!ps().pockets.filter(p => ps().pinned.includes(p.key)).length"
               class="grid h-8 pb-2 text-2 opacity-50  w-full place-items-center">
               No pockets found.
             </div> -->

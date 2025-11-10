@@ -1,6 +1,6 @@
+import type { Pocket } from '~~/shared/schema'
 import { serverSupabaseClient } from '#supabase/server'
 import * as v from 'valibot'
-import type { Pocket } from '~~/shared/schema'
 import { PocketSchema } from '~~/shared/schema'
 
 export default defineEventHandler(async (event) => {
@@ -20,7 +20,7 @@ export default defineEventHandler(async (event) => {
 
   // --- Upsert into Supabase ---
   // @fixme fix upsert into supabase
-/*   const { error } = await client.from('user_pockets').upsert({
+  /*   const { error } = await client.from('user_pockets').upsert({
     uuid: data.user.id,
     pockets: validatedPocket,
     updated: new Date().toISOString(),

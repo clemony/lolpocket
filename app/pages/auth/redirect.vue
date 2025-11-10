@@ -17,7 +17,7 @@ onMounted(async () => {
   const user = useSupabaseUser().value
 
   if (user) {
-    await hydrateUser(progress)
+    await useHydrateUser(progress)
   }
   else {
     navigateTo('/login')

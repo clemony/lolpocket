@@ -1,5 +1,3 @@
-
-
 export function transformMatchData(raw: any): MatchData {
   // map raw participants into player
   const participants: Player[] = raw.info.participants.map(

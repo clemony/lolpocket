@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { Editor, EmojiItem } from '#tiptap'
-import { filterEmojiArray } from '#tiptap'
+import type { Editor, EmojiItem } from 'tiptap';
+import { filterEmojiArray } from 'tiptap';
 
 const { editor } = defineProps<{
   editor: Editor | null
@@ -130,7 +130,7 @@ watch(() => tab.value, (newVal, oldVal) => {
       size="sq"
       class="size-7"
       variant="ghost"
-      active="inset"
+      on="inset"
       hover="inset"
       @click.stop>
       <icon

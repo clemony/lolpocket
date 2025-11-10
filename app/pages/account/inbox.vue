@@ -50,7 +50,7 @@ const selectedMailData = computed(() => props.mails.find(item => item.id === sel
             <Button
               variant="ghost"
               hover="base"
-              active="base"
+              on="base"
               :class="cn('', { 'w-full': !isCollapsed, 'rounded-full h-full self-center': isCollapsed })"
               :size="isCollapsed ? 'sq-11' : '12'">
               <SummonerIcon :class="cn('rounded-full size-full', { 'size-7': !isCollapsed, 'size-10': isCollapsed })" />

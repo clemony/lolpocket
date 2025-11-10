@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { FormField } from '~/base/form/index.form'
+import type { FieldOption } from '../types.forms'
 
 const { name = 'options', class: className, values } = defineProps<{
   class?: HTMLAttributes['class']
@@ -22,8 +23,8 @@ const { name = 'options', class: className, values } = defineProps<{
       size="auto"
       hover="outline"
       variant="ghost"
-      class="hover:fx-1 hover:!border-b3/50 hover:bg-b2/40 border border-transparent py-2">
-      <FormItem>
+      class="hover:fx-1 w-full hover:!border-b3/50 hover:bg-b2/40 border border-transparent py-2">
+      <FormItem as-child>
         <FormLabel
           class="w-full cursor-pointer">
           <FormControl class="mt-0.5 self-start">
@@ -32,7 +33,7 @@ const { name = 'options', class: className, values } = defineProps<{
               @update:model-value="handleChange" />
           </FormControl>
           <FormDescription
-            class="grid h-max w-full auto-rows-max gap-1">
+            class="grid h-max w-full auto-rows-max gap-1 ">
             <h5 class="text-bc flex w-full items-center gap-4 font-semibold">
               {{ option.name }}
             </h5>
@@ -41,13 +42,14 @@ const { name = 'options', class: className, values } = defineProps<{
             <ul
               v-if="option.id !== 'other'"
               class="text-balanced w-full pr-3">
-              <OffensiveName
-                v-if="option?.name === 'offensiveName'" />
+              <component
+                :is="option.component"
+                v-if="option?.component" />
               <template v-else-if="option?.description">
                 <li
                   v-for="str, ix in option.description"
                   :key="ix"
-                  class="!text-2 text-balanced pl-3 leading-6">
+                  class="!text-2 text-balanced pl-3 leading-6 w-full">
                   &bull;&ensp;{{ str }}
                 </li>
               </template>

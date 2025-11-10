@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import { emojiSuggestions, Mentions, mentionSuggestions } from '#tiptap'
 import Emoji, { emojis } from '@tiptap/extension-emoji'
 import { CharacterCount } from '@tiptap/extensions'
 import StarterKit from '@tiptap/starter-kit'
 import Suggestion from '@tiptap/suggestion'
 import { EditorContent, useEditor } from '@tiptap/vue-3'
-
+import { emojiSuggestions, Mentions, mentionSuggestions } from 'tiptap'
 
 const props = defineProps<{
   modelValue: Doc | null
@@ -108,6 +107,7 @@ watch(focused, (focused) => {
           v-if="editor"
           :editor
           :limit="2000" />
+
         <slot
           :editor />
       </div>

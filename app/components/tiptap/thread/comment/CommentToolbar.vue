@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { class: className, comment, editing, replying } = defineProps<{
-  comment?: CommentItem
+  comment?: CommentData
   replying: boolean
   editing: boolean
   class?: HTMLAttributes['class']
@@ -27,12 +27,12 @@ onMounted (() => {
   <div :class="cn('relative  inline-flex w-full translate-y-1 items-center pl-3   align-bottom', className)">
     <template v-if="!comment.removed">
       <template
-        v-if="comment && comment.authorPuuid === as().account.puuid ">
+        v-if="comment && comment.author_id === as().account.puuid ">
         <Toggle
           v-model:model-value="editModel"
           variant="link"
           size="8"
-          active="link"
+          on="link"
           base="btn"
           hover="link"
           class="text-1 inline px-1 align-bottom opacity-30"
@@ -49,7 +49,7 @@ onMounted (() => {
         <Button
           variant="link"
           hover="link"
-          :disabled="comment.authorPuuid !== as().account.puuid"
+          :disabled="comment.author_id !== as().account.puuid"
           size="max"
           class="text-1 inline px-1 align-bottom opacity-30 disabled:hidden"
           @click="() => emit('comment:remove')">
@@ -58,7 +58,7 @@ onMounted (() => {
       </template>
 
       <Button
-        v-if="comment.authorPuuid !== as().account.puuid"
+        v-if="comment.author_id !== as().account.puuid"
         variant="link"
         hover="link"
         size="max"
@@ -79,7 +79,7 @@ onMounted (() => {
         size="max"
         base="btn"
         hover="link"
-        active="link"
+        on="link"
         class="text-1 inline  px-1 align-bottom opacity-30 "
         @update:model-value="e => emit('update:reply-model', e)">
         {{ !replyModel ? 'Reply' : 'Cancel' }}

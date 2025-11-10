@@ -12,6 +12,7 @@ const props = defineProps<{
   <kbd
     :class="cn(
       kbdVariants({ size, variant }),
+      'w-min',
       props.class,
     )">
     <slot />

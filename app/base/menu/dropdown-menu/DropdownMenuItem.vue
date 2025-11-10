@@ -2,9 +2,23 @@
 import type { DropdownMenuItemProps } from 'reka-ui'
 import { DropdownMenuItem, useForwardProps } from 'reka-ui'
 
-const props = defineProps<
-  DropdownMenuItemProps & { class?: HTMLAttributes['class'], inset?: boolean }
->()
+const props = withDefaults(defineProps<
+  DropdownMenuItemProps & {
+    class?: HTMLAttributes['class']
+    inset?: boolean
+    on?: ButtonVariants['on']
+    hover?: ButtonVariants['hover']
+    size?: ButtonVariants['size']
+    variant?: ButtonVariants['variant']
+    base?: ButtonVariants['base']
+  }
+>(), {
+  base: 'btn',
+  hover: 'btn',
+  on: 'secondary',
+  size: '8',
+  variant: 'ghost'
+})
 
 const delegatedProps = reactiveOmit(props, 'class')
 
@@ -16,8 +30,9 @@ const forwarded = useForwardProps(delegatedProps)
     v-bind="forwarded"
     :class="
       cn(
-        'relative w-full  cursor-pointer justify-start flex cursor-default select-none **:items-center items-center rounded-lg gap-3 px-2 py-1.5 text-2 **:text-2 outline-none transition-colors focus:bg-b2 focus:textneutral-bc data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&>svg]:dst  [&>svg]:size-4 [&>svg]:shrink-0 [&>svg]:opacity-90',
-        inset && 'pl-8',
+        buttonVariants({ base, hover, on, size, variant }),
+        inset && '!pl-8',
+        'group/menu-item justify-start text-2 px-2',
         props.class,
       )
     ">

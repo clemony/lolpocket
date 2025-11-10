@@ -1,38 +1,86 @@
-import { patchIndex } from '../../indexes'
-import type { Pocket } from '../schema.pocket'
-import { newItemSet, newRuneSet, newSpellSet } from '../schema.pocket'
+import { championPositions, skinIndex, spellbook } from '~~/shared'
+import { runePaths } from '~~/shared/records/runes'
 
-export function newTTestPocket(): Pocket {
-  // ps().pockets[0].main.items = 'test'
-// ps().pockets[0].items[0].id = 'test'
-// ps().pockets[0].items[0].items.push(getRandom(ix().items).id)
+export function newTestPocket(): Pocket {
   const itemSet = computed (() => {
     const a = newItemSet()
-    a.items.fill(getRandom(ix().items.map(i => i.id)))
-    a.name = generateName()
-    a.id = crypto.randomUUID()
+    a.items.fill(getRandom(ix().items.map(i => i.id)), 0, 6)
     return a
   }).value
 
+  const runeSet = computed (() => {
+    const a = newRuneSet()
+
+    const i1 = getRandomInt(5)
+    const i2 = getRandomInt[4]
+    const set = [1, 2, 3].filter(n => n !== getRandomInt[3] + 1)
+
+    const path1 = runePaths[i1]
+    const path2 = runePaths.filter(p => p.id === path1.id)[i2]
+
+    a.primary.path = path1.name
+    a.keystone = getRandom(path1.slots[0].runes.map(k => k.id))
+    a.primary.runes = [
+      getRandom(path1.slots[1].runes.map(k => k.id)),
+      getRandom(path1.slots[2].runes.map(k => k.id)),
+      getRandom(path1.slots[3].runes.map(k => k.id))
+    ]
+    a.secondary.path = path2.name
+    a.secondary.runes = [
+      getRandom(path2.slots[set[0]].runes.map(k => k.id)),
+      getRandom(path2.slots[set[1]].runes.map(k => k.id))
+    ]
+    return a
+  }).value
+
+  const champion = getRandom(ix().champions.map(c => c.key))
+  const spellSet = computed (() => {
+    const a = newSpellSet()
+    const b = getRandom(Object.values(spellbook).map(s => s.id))
+    a.d = b
+    a.f = getRandom(Object.values(spellbook).map(s => s.id).filter(s => s !== b))
+    return a
+  }).value
+
+  const role = getRandom(championPositions.map(p => p.name))
+  const icon = computed (() => {
+    const a = skinIndex[getRandomInt(skinIndex.length)]
+    const b = a[getRandomInt(a.length)]
+    return getSplash(getKeyByValue(skinIndex, a), 'tile', b)
+  })
   return {
+    guide: [],
     key: crypto.randomUUID(),
     name: generateName(),
-    author: [as().account.puuid],
-    champions: [],
-    commentsAllowed: true,
-    created: new Date(),
+    ouuid: as().account.puuid,
+    uuid: as().account.puuid,
     icon: '',
+    main: {
+      champion,
+      items: itemSet.id,
+      role,
+      runes: runeSet.id,
+      spells: spellSet.id
+    },
+
+    // sets
+    champions: [champion],
     items: [itemSet],
-    likes: 1,
-    location: { folder: '', pinned: false },
-    main: { champion: '', items: '', role: 'All', runes: '', spells: '' },
-    notes: [],
+    roles: [role],
+    runes: [runeSet],
+    spells: [spellSet],
+
+    // social
+    comments: false,
+    likes: 0,
     public: false,
-    roles: ['all'],
-    runes: [newRuneSet()],
-    spells: [newSpellSet()],
     tags: [],
-    threadId: null,
-    updated: patchIndex[0],
+
+    // links
+    thread: null,
+
+    // time
+    created: new Date().toISOString(),
+    updated: new Date().toISOString(),
   }
 }

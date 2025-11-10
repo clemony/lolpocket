@@ -98,17 +98,6 @@ const moreWords = [
   'Zoning Ult',
 ].sort()
 
-// Generate a compact date-based key
-export function getKey(): string {
-  return new Date()
-    .toLocaleString()
-    .replace(/,\s/g, '')
-    .replace(/\s+/g, '')
-    .replace(/\//g, '')
-    .replace(/:/g, '')
-    .trim()
-}
-
 // Capitalize first letter
 function capitalize(str: string): string {
   return str.charAt(0).toUpperCase() + str.slice(1)

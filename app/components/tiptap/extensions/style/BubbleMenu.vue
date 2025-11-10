@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type { Editor } from '#tiptap'
-import { findParentNode, isTextSelection, posToDOMRect } from '@tiptap/core'
-import { BubbleMenu } from '@tiptap/vue-3/menus'
+import { findParentNode, isTextSelection, posToDOMRect } from '@tiptap/core';
+import { BubbleMenu } from '@tiptap/vue-3/menus';
+import type { Editor } from 'tiptap';
 
 const { editor, theme = 'base' } = defineProps<{
   editor: Editor | null
@@ -92,7 +92,7 @@ function toggleListType() {
     <div class="bubble-menu">
       <Button
         variant="outline"
-        active="inset"
+        on="inset"
         size="sq-10"
         @click="toggleListType">
         Toggle list type

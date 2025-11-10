@@ -21,7 +21,7 @@ definePageMeta({
 })
 
 const selectedSpellId = ref(1)
-const selectedSpell = computed(() => ix().spellById(selectedSpellId.value))
+const selectedSpell = computed(() => spellbook[selectedSpellId.value])
 </script>
 
 <template>
@@ -31,13 +31,12 @@ const selectedSpell = computed(() => ix().spellById(selectedSpellId.value))
     </div>
 
     <div
-      v-if="ix().spells.length"
       class="flex w-full gap-[8%] px-3 py-24">
       <div class="flex w-114 flex-col gap-14">
         <div
           class="border-b3/80 rounded-box shadow-smooth grid h-fit grid-cols-3 grid-rows-3 gap-4 px-9 py-8">
           <div
-            v-for="spell in ix().spells"
+            v-for="spell in spellbook"
             :key="spell.name"
             v-tippy="spell.name"
             class="size-fit">

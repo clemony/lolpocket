@@ -27,7 +27,7 @@ const shortcuts = [
       ref="triggerEl"
       size="sq-7"
       variant="ghost"
-      active="inset"
+      on="inset"
       hover="inset"
       @click.stop>
       <icon

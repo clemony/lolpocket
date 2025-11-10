@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/schema'
 import { DialogDescription, DialogTitle } from 'reka-ui'
+import type { Pocket } from '~~/shared/schema'
 
 const { class: className, pocket } = defineProps<{
   pocket: Pocket
@@ -39,7 +39,7 @@ function handleDelete() {
         <Label
           class="text-bc/60 hover:text-bc text-2 flex cursor-pointer items-center gap-3 underline-offset-2 hover:underline">
           <input
-            v-model="as().settings.noConfirmTrash"
+            v-model="as().settings.instant_trash"
             type="checkbox"
             class="peer checkbox checkbox-neutral checkbox-sm" />
           Don't show this again.

@@ -2,13 +2,13 @@
 defineOptions({
   meta: {
     name: 'Notifications',
-    badge: computed (() => as().account.inbox.notifications.filter(n => !n.read).length).value,
+    badge: computed (() => as().inbox.notifications.filter(n => !n.read).length).value,
     class: '**:stroke-[2.2]',
     icon: 'lucide:message-square',
   }
 })
 
-const notifications = computed(() => as().account?.inbox?.notifications ?? [])
+const notifications = computed(() => as().inbox?.notifications ?? [])
 
 const sortedNotifications = computed(() =>
   [...notifications.value]
@@ -24,8 +24,8 @@ function testNotificaition() {
   console.log('💠 - testNotificaition - vars:', vars)
 
   console.log(
-    '💠 - testNotificaition - as().account.inbox.notifications:',
-    as().account.inbox?.notifications
+    '💠 - testNotificaition - as().inbox.notifications:',
+    as().inbox?.notifications
   )
   saveNotification('newPocket', vars)
 }

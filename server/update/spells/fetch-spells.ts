@@ -1,65 +1,22 @@
-// npx tsx scripts/fetchSpells.ts
-import dotenv from 'dotenv'
-import fs, { writeFileSync } from 'node:fs'
-import process from 'node:process'
-import { $fetch } from 'ofetch' // if using ofetch, e.g. in Nuxt or standalone
-import { Client } from 'shieldbow'
 
-dotenv.config()
+import fs from 'node:fs'
+import { resolvePath } from '../resolvePath'
+import { markUpdate } from '../utils'
 
-/* const client = new Client('placeholder')
+export async function fetchSpells(){
+const response = await fetch('https://ddragon.leagueoflegends.com/cdn/15.22.1/data/en_US/summoner.json')
+if (!response.ok) throw new Error(`Failed to fetch spells: ${response.status}`)
+const rawSpells = await response.json()
 
-await client.initialize({
-  region: 'na',
-  fetch: false,
-  storage: {
-    enable: {
-      dragon: false,
-      api: false,
-    },
-  },
-  cache: { enable: { api: true } },
-})
 
-const fetchSpells = await client.summonerSpells.fetchAll()
-const filterSpells = fetchSpells.filter(s => s.name != 'Placeholder')
-const transformedSpells = filterSpells.map((spell: any) => ({
-  id: spell.id,
-  name: spell.name,
-  key: spell.key,
-  sharedVars: spell.sharedVars,
-  values: spell.values,
-  cooldown: spell.cooldown,
-  range: spell.range,
-  maxAmmo: spell.maxAmmo,
-  summonerLevel: spell.summonerLevel,
-  description: spell.description,
-  tooltip: spell.tooltip,
-  modes: spell.modes,
-})) */
-/* console.log('💠 - transformedSpells - transformedSpells:', transformedSpells)
+const patch = await import(resolvePath('./misc/raw/patch-index.json'))
+const outputPath = resolvePath('./spells/raw/spells-raw.json')
+const updatedPath = resolvePath('./spells/raw/spells-updated.ts')
 
-writeFileSync(
-  './server/data/summoner-spells.json',
-  JSON.stringify(transformedSpells, null, 2),
-) */
+fs.writeFileSync( outputPath, JSON.stringify(rawSpells, null, 2))
+fs.writeFileSync( updatedPath, `// ${markUpdate()}
+
+export const spellsUpdated: number = ${JSON.stringify(patch.default[0], null, 2)}`
+)
 console.log('File written to ./server/data/summoner-spells.json')
-// const run = async () => {
-//   try {
-//     const url = 'https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/summoner-spells.json'
-//     const response = await $fetch(url)
-
-//     if (response) {
-//       console.log('Fetched', response.length, 'spells')
-//       writeFileSync(
-//         './server/data/summoner-spells.json',
-//         JSON.stringify(response, null, 2),
-//       )
-//       console.log('File written to ./server/data/summoner-spells.json')
-//     }
-//   } catch (error) {
-//     console.error('Fetch failed:', error)
-//   }
-// }
-
-// run()
+}

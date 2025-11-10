@@ -9,7 +9,7 @@ definePageMeta({
 })
 const isCollapsed = ref(false)
 const route = useRoute()
-const pinned = computed(() => ps().pockets.filter(p => p.location.pinned))
+const pinned = computed(() => ps().pockets.filter(p => ps().pinned.includes(p.key)))
 </script>
 
 <template>

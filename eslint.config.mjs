@@ -107,7 +107,6 @@ export default antfu({
   },
   rules: {
 
-
     // other
     'eqeqeq': ['error', 'smart'],
     'eslint-comments/no-unlimited-disable': 'off',

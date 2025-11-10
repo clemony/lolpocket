@@ -2,25 +2,26 @@ import { toast } from '~/base/notification/toast/use-toast'
 
 export function handleReply({ clearEditor, content, parentId }: { parentId: string, content: Doc, clearEditor: () => boolean }) {
   // Replace with actual save call (e.g. Supabase insert)
-  const reply: CommentItem = {
-    authorPuuid: as().account.puuid,
+/*   const reply: CommentData = {
+    author_id: as().account.puuid,
     id: crypto.randomUUID(),
     authorIcon: as().account.icon,
     authorName: as().account.name,
     authorTag: as().account.tag,
     content,
-    createdAt: new Date().toISOString(),
+    created: new Date().toISOString(),
     downvotes: [],
-    editedAt: null,
-    parentId,
+    updated: null,
+    parent_id,
     replies: [],
     upvotes: [as().account.puuid],
   }
-  addReply(as().comments, parentId, reply, clearEditor)
+  addReply(as().comments, parentId, reply, clearEditor) */
 }
 
-function addReply(list: CommentItem[], parentId: string, reply: CommentItem, clearEditor: () => boolean) {
-  for (const comment of list) {
+function addReply(list: CommentData[], parentId: string, reply: CommentData, clearEditor: () => boolean) {
+  // @todo probably trash?
+  /* for (const comment of list) {
     if (comment.id === parentId) {
       comment.replies ??= []
       comment.replies.push(reply)
@@ -33,5 +34,5 @@ function addReply(list: CommentItem[], parentId: string, reply: CommentItem, cle
     }
     if (comment.replies?.length)
       addReply(comment.replies, parentId, reply, clearEditor)
-  }
+  } */
 }

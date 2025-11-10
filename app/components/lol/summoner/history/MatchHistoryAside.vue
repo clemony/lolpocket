@@ -6,13 +6,13 @@ const { loading, summoner } = useSummonerInject()
   <div
     class="w-124 justify-center overflow-y-auto py-24 gap-8 auto-rows-max items-start grid">
     <RankCard
-      v-if="as().settings?.showSolo && !loading"
+      v-if="as().settings?.show_solo && !loading"
       title="Solo/Duo"
       :entry="summoner?.ranked?.solo"
       class="order-2" />
 
     <RankCard
-      v-if="summoner.ranked?.flex && as().settings?.showFlex"
+      v-if="summoner.ranked?.flex && as().settings?.show_flex"
       title="Flex"
       :entry="summoner.ranked.flex"
       class="order-3" />
@@ -28,7 +28,7 @@ const { loading, summoner } = useSummonerInject()
     </div>
 
     <LazyMatchAlliesFilter
-      v-if="as().settings.showAllies"
+      v-if="as().settings.show_allies"
       class="order-last" />
   </div>
 </template>

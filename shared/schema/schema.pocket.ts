@@ -48,8 +48,8 @@ export const RunesSecondarySchema = v.object({
 // Spells (always 2 slots)
 export const SpellSetSchema = v.object({
   id: v.fallback(v.string(), ''),
-  d: v.fallback(v.string(), ''),
-  f: v.fallback(v.string(), ''),
+  d: v.fallback(v.number(), 0),
+  f: v.fallback(v.number(), 0),
 })
 
 // --- Types ---
@@ -86,58 +86,35 @@ const MainSchema = v.object({
 export const PocketSchema = v.object({
   key: v.optional(v.string()),
   name: v.optional(v.string()),
-  author: v.optional(v.array(v.string())),
-  champions: v.optional(v.array(v.string())),
-  commentsAllowed: v.fallback(v.boolean(), false),
-  created: v.optional(
-    v.pipe(
-      v.string(),
-      v.transform(s => new Date(s))
-    )
-  ),
+  ouuid: v.fallback(v.string(), 'mysterious pocket'),
+  uuid: v.fallback(v.string(), 'missing uuid'),
+
+  //
+  guide: v.optional(v.array(v.string())),
   icon: v.optional(v.string()),
+  main: v.optional(MainSchema),
+
+  //
+  champions: v.optional(v.array(v.string())),
   items: v.optional(v.array(ItemSetSchema)),
-  likes: v.fallback(v.number(), 1),
-  location: PocketLocationSchema,
-  main: v.optional(MainSchema), // keep required if always present
-  notes: v.optional(v.array(v.string())),
-  public: v.fallback(v.boolean(), false),
   roles: v.optional(v.array(v.string())),
   runes: v.optional(v.array(RuneSetSchema)),
   spells: v.optional(v.array(SpellSetSchema)),
+
+  //
+  comments: v.fallback(v.boolean(), false),
+  likes: v.fallback(v.number(), 1),
+  public: v.fallback(v.boolean(), false),
   tags: v.optional(v.array(v.string())),
-  threadId: v.nullable(v.string()),
-  updated: v.optional(v.number()),
+  thread: v.nullable(v.string()),
+
+  //
+  created: v.optional(v.string()),
+  updated: v.optional(v.string()),
 })
 
 // --- Type ---
 export type Pocket = v.InferOutput<typeof PocketSchema>
-
-// Card
-export const CardSchema = v.nullable(
-  v.object({
-    key: v.string(),
-    champion: v.string(),
-    items: MinMaxArray(v.fallback(v.array(ItemSetSchema), []), 0, 4),
-    runes: RuneSetSchema,
-
-    // Style
-    align: v.nullable(v.string()),
-    color: v.fallback(v.string(), '#FFFFFF'),
-    filter: v.fallback(
-      v.union([v.literal('color'), v.literal('grayscale')]),
-      'grayscale'
-    ),
-    font: v.strictTuple([
-      v.fallback(v.string(), 'var(--font-serif)'),
-      v.fallback(v.string(), 'var(--font-sans)'),
-    ]),
-    splash: v.nullable(v.string()),
-  })
-)
-
-// --- Type ---
-export type Card = v.InferOutput<typeof CardSchema>
 
 // --- Pocket Factory ---
 
@@ -203,60 +180,34 @@ export function addRuneSet(pocket: Pocket | string) {
 
 export function newPocket(): Pocket {
   return {
+    // data
     key: crypto.randomUUID(),
     name: generateName(),
-    author: [as().account.puuid],
-    champions: [],
-    commentsAllowed: false,
-    created: new Date(),
-    threadId: null,
-    // protected: false,
+    ouuid: as().account.puuid,
+    uuid: as().account.puuid,
+
+    // info
+    guide: [],
     icon: '',
+    main: { champion: '', items: '', role: 'All', runes: '', spells: '' },
+
+    // sets
+    champions: [],
     items: [newItemSet()],
-    likes: 1,
-    location: { folder: '', pinned: false },
-    main: { champion: '', items: '', role: 'All', runes: '', spells: '' },
-    notes: [],
-    public: false,
     roles: ['all'],
     runes: [newRuneSet()],
     spells: [newSpellSet()],
-    tags: [],
-    updated: patchIndex[0],
-  }
-}
 
-export function newTestPocket(): Pocket {
-  // ps().pockets[0].main.items = 'test'
-// ps().pockets[0].items[0].id = 'test'
-// ps().pockets[0].items[0].items.push(getRandom(ix().items).id)
-  const itemSet = computed (() => {
-    const a = newItemSet()
-    a.items.fill(getRandom(ix().items.map(i => i.id)))
-    a.name = generateName()
-    a.id = crypto.randomUUID()
-    return a
-  }).value
-
-  return {
-    key: crypto.randomUUID(),
-    name: generateName(),
-    author: [as().account.puuid],
-    champions: [],
-    commentsAllowed: false,
-    created: new Date(),
-    icon: '',
-    items: [itemSet],
-    likes: 1,
-    location: { folder: '', pinned: false },
-    main: { champion: '', items: '', role: 'All', runes: '', spells: '' },
-    notes: [],
+    // social
+    comments: false,
+    likes: 0,
     public: false,
-    roles: ['all'],
-    runes: [newRuneSet()],
-    spells: [newSpellSet()],
     tags: [],
-    threadId: null,
-    updated: patchIndex[0],
+    thread: null,
+
+    // time
+    created: new Date().toISOString(),
+    updated: new Date().toISOString(),
   }
 }
+// protected: false,

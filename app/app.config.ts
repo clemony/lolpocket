@@ -169,6 +169,7 @@ export default defineAppConfig({
       'backpack': 'radix-icons:backpack', // 'radix-icons:backpack',
       'bar-chart': 'lucide:chart-no-axes-column',
       'basket': 'lucide:shopping-basket',
+      'bell-ring': 'lucide:bell-ring',
       'book': 'tabler:notebook', // 'lucide:book-marked',
       'bot': 'lucide:bot',
       'bot-chat': 'lucide:bot-message-square',

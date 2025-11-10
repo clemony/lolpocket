@@ -10,7 +10,7 @@ import {
 const props = defineProps<
   SliderThumbProps & {
     class?: HTMLAttributes['class']
-    active?: ButtonVariants['active']
+    on?: ButtonVariants['on']
     base?: ButtonVariants['base']
     hover?: ButtonVariants['hover']
     size?: ButtonVariants['size']
@@ -29,6 +29,6 @@ const forwarded = useForwardProps(delegatedProps)
     v-for="(_, key) in context.modelValue"
     :key="key"
     :variant
-    :class="cn(buttonVariants({ base, variant, size, hover, active }), props.class)"
+    :class="cn(buttonVariants({ base, variant, size, hover, on }), props.class)"
     v-bind="forwarded" />
 </template>

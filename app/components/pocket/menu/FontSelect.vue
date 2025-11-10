@@ -14,7 +14,8 @@ const props = defineProps<{
       <SelectValue
         placeholder="Aa"
         as-child
-        class="p-0"><!--
+        class="p-0">
+        <!--
           :style="{ fontFamily: props.card.font[props.model] }" -->
         <div
           class="text-4 items-center align-text-bottom dst font-medium">

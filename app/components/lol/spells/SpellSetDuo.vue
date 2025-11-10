@@ -16,7 +16,8 @@ const set = computed(() => {
 
 <template>
   <div :class="cn('rounded-full size-12 aspect-square  grid place-items-center relative', className)">
-    <Spell
+    <IndexIcon
+            :item="spellbook[i]"
       v-for="spell, i in set"
       :key="i"
       :name="spell"

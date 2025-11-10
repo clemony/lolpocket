@@ -77,9 +77,9 @@ async function onSubmit(values: any) {
           <h5>Profile Header & Splash</h5>
 
           <p class="flex gap-4 mt-2 items-center font-medium italic">
-            {{ as().settings.profileSplashHeader ? "Visible" : "Hidden" }}
+            lies
             <Switch
-              v-model:model-value="as().settings.showSolo"
+              v-model:model-value="as().settings.show_solo"
               class="!pointer-events-auto hover-ring" />
           </p>
         </label>
@@ -87,9 +87,9 @@ async function onSubmit(values: any) {
 
         <label :class="labelClass">
           <p class="flex gap-4 mt-2 items-center font-medium italic">
-            {{ as().settings.showSolo ? "Visible" : "Hidden" }}
+            {{ as().settings.show_solo ? "Visible" : "Hidden" }}
             <Switch
-              v-model:model-value="as().settings.showSolo"
+              v-model:model-value="as().settings.show_solo"
               class="!pointer-events-auto hover-ring" />
           </p>
         </label>
@@ -98,9 +98,9 @@ async function onSubmit(values: any) {
           <h5>Ranked Flex</h5>
 
           <p class="flex gap-4 mt-2 items-center font-medium italic">
-            {{ as().settings.showFlex ? "Visible" : "Hidden" }}
+            {{ as().settings.show_flex ? "Visible" : "Hidden" }}
             <Switch
-              v-model:model-value="as().settings.showFlex"
+              v-model:model-value="as().settings.show_flex"
               class="!pointer-events-auto hover-ring" />
           </p>
         </label>
@@ -109,9 +109,9 @@ async function onSubmit(values: any) {
           <h5>Ally Filters</h5>
 
           <p class="flex gap-4 mt-2 items-center font-medium italic">
-            {{ as().settings.showAllies ? "Visible" : "Hidden" }}
+            {{ as().settings.show_allies ? "Visible" : "Hidden" }}
             <Switch
-              v-model:model-value="as().settings.showAllies"
+              v-model:model-value="as().settings.show_allies"
               class="!pointer-events-auto hover-ring" />
           </p>
         </label>

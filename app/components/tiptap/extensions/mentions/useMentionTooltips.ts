@@ -3,7 +3,7 @@ import tippy from 'tippy.js'
 import 'tippy.js/animations/scale-subtle.css'
 import 'tippy.js/animations/shift-toward.css'
 import { createApp, defineAsyncComponent } from 'vue'
-import { roundArrow } from 'vue-tippy'
+import { popoverArrow } from '~/assets/ts/popoverArrow'
 
 const ChampionCard = defineAsyncComponent(() => import('./lol-index/MentionChampionCard.vue'))
 const ItemData = defineAsyncComponent(() => import('./lol-index/MentionItemCard.vue'))
@@ -38,7 +38,6 @@ export function useMentionTooltips(container: MaybeRef<HTMLElement | null>) {
 
     mentions.forEach((node) => {
       const label = node.dataset.label
-      console.log('🌱 - useMentionTooltips - label:', label)
       const id = node.dataset.id
       if (!label || !id)
         return
@@ -65,6 +64,7 @@ export function useMentionTooltips(container: MaybeRef<HTMLElement | null>) {
         })
 
         Object.assign(app._context, nuxtApp.vueApp._context)
+        console.log("🌱 - useMentionTooltips - app:", app)
 
         entry = { app, content, mounted: false, visible }
         tooltipCache.set(node, entry)
@@ -84,7 +84,7 @@ export function useMentionTooltips(container: MaybeRef<HTMLElement | null>) {
         allowHTML: true,
         animation: 'shift-toward',
         appendTo: document.body,
-        arrow: roundArrow,
+        arrow: popoverArrow,
         content: entry.content,
         delay: [100, 50],
         interactive: true,
@@ -92,7 +92,7 @@ export function useMentionTooltips(container: MaybeRef<HTMLElement | null>) {
         interactiveDebounce: 0.75,
         offset: [0, 8],
         placement: 'top',
-        theme: 'neutral-no-padding',
+        theme: 'neutral-0',
         // trigger: 'click',
 
         //

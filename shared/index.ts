@@ -1,4 +1,3 @@
-export * from './data'
 export * from './filters'
 export * from './indexes'
 export * from './references'

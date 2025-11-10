@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/schema'
 import { HeadingTip } from '#components'
 import { SelectTrigger } from 'reka-ui'
+import type { Pocket } from '~~/shared/schema'
 
 const {
   side = 'bottom',
@@ -85,10 +85,11 @@ const keyClass
           :key="set.id"
           class="group/select flex-nowrap *:flex *:items-center"
           :value="set.id">
-          <Spell
-            :name="set.d"
+      <IndexIcon
+            :item="spellbook[set.d]"
             class="mr-1" />
-          <Spell :name="set.f" />
+            <IndexIcon
+            :item="spellbook[set.f]" />
         </SelectItem>
       </SelectGroup>
     </LazySelectContent>

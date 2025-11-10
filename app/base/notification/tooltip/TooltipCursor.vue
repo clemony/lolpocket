@@ -1,7 +1,5 @@
-
 <script setup lang="ts">
 import { TooltipArrow, TooltipContent, TooltipPortal, TooltipProvider, TooltipRoot, TooltipTrigger } from 'reka-ui'
-
 
 const open = ref(false)
 const anchor = ref({
@@ -13,11 +11,11 @@ const position = computed(() => ({
   getBoundingClientRect: () =>
     ({
       width: 0,
+      bottom: anchor.value.y,
       height: 0,
       left: anchor.value.x,
       right: anchor.value.x,
       top: anchor.value.y,
-      bottom: anchor.value.y,
       ...anchor.value,
     } as DOMRect),
 }))
@@ -32,8 +30,7 @@ const position = computed(() => ({
       @pointermove="(ev) => {
         anchor.x = ev.clientX
         anchor.y = ev.clientY
-      }"
-    >
+      }">
       Container
     </div>
     <TooltipRoot :open="open">
@@ -43,8 +40,7 @@ const position = computed(() => ({
           side="top"
           :side-offset="12"
           class="bg-card px-4 py-2 rounded-md text-sm border border-muted-foreground/30"
-          update-position-strategy="always"
-        >
+          update-position-strategy="always">
           Following
 
           <TooltipArrow class="fill-card stroke-muted-foreground/30 -translate-y-[1px]" />

@@ -1,6 +1,3 @@
-export type ChampionId = number
-export type ChampionName = string
-export type ChampionKey = string
 export type ChampionRecord = Record<string, Champion>
 export type ChampionLiteRecord = Record<string, ChampionLite>
 export type SplashType = 'tile' | 'centered' | 'load' | 'uncentered'

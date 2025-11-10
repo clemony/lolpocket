@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Editor, EmojiItem } from '#tiptap'
+import type { Editor, EmojiItem } from 'tiptap';
 
 const props = defineProps<{
   class?: HTMLAttributes['class']

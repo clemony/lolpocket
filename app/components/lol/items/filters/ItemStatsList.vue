@@ -1,11 +1,12 @@
 <script lang="ts" setup>
 import type { statIndex } from '#shared/references'
+
 const { class: className, icons, indicator = true, labels, variant = 'ghost', wrapperClass } = defineProps<{
   icons?: boolean
   labels?: boolean
   class?: HTMLAttributes['class']
   variant?: ButtonVariants['variant']
-  active?: ButtonVariants['active']
+  on?: ButtonVariants['on']
   wrapperClass?: HTMLAttributes['class']
   indicator?: boolean
 }>()
@@ -30,7 +31,7 @@ const groups = ['basic', 'utility', 'spells', 'defense', 'physical',]
           {{ group }}
         </ListboxGroupLabel>
 
-       <!--  <TransitionScalePop :class="cn('w-full flex flex-col gap-1 pb-6', className)">
+        <!--  <TransitionScalePop :class="cn('w-full flex flex-col gap-1 pb-6', className)">
           <ListboxItem
             v-for="stat in Object.values(statIndex).filter(s => s.group === group)"
             :key="stat.id"

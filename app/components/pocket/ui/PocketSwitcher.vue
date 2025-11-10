@@ -27,7 +27,7 @@ useIntersectionObserver(
       variant="ghost"
       hover="neutral"
       base="btn"
-      active="neutral"
+      on="neutral"
       class=" relative -ml-4 h-11 w-20 items-center  justify-start  gap-1 pr-2 pl-1  **:pointer-events-none **:tracking-tight">
       <LazyPocketIcon
         v-if="pocket"
@@ -102,7 +102,7 @@ useIntersectionObserver(
           </div>
           <!-- pinned -->
           <template
-            v-for="pock in ps().pockets.filter(p => p.location.pinned).sort((a, b) => a.name.localeCompare(b.name))"
+            v-for="pock in ps().pockets.filter(p => ps().pinned.includes(p.key)).sort((a, b) => a.name.localeCompare(b.name))"
             :key="pock.key">
             <PopoverItem
               :pocket
@@ -122,7 +122,7 @@ useIntersectionObserver(
 
           <!-- no pockets -->
           <div
-            v-if="!ps().pockets.filter(p => p.location.pinned).length"
+            v-if="!ps().pockets.filter(p => ps().pinned.includes(p.key)).length"
             class="text-2 grid h-8 w-full place-items-center  pb-2 opacity-50">
             No pockets found.
           </div>
@@ -148,7 +148,7 @@ useIntersectionObserver(
 
           <!-- all pocket -->
           <template
-            v-for="pock in ps().pockets.filter(p => !p.location.pinned).sort((a, b) => a.name.localeCompare(b.name))"
+            v-for="pock in ps().pockets.filter(p => !ps().pinned.includes(p.key)).sort((a, b) => a.name.localeCompare(b.name))"
             :key="pock.key">
             <PopoverItem
               :pocket
@@ -165,7 +165,7 @@ useIntersectionObserver(
             </PopoverItem>
           </template>
           <div
-            v-if="!ps().pockets.filter(p => !p.location.pinned).length"
+            v-if="!ps().pockets.filter(p => !ps().pinned.includes(p.key)).length"
             class="text-2  grid w-full place-items-center  pb-3 opacity-50">
             No pockets found.
           </div>

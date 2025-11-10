@@ -3,10 +3,10 @@ import { tv } from 'tailwind-variants'
 
 export const toggleVariants = tv({
   defaultVariants: {
-    active: 'inset',
     base: 'btn',
     disabled: 'disabled',
     hover: 'inset',
+    on: 'inset',
     size: 'md',
     states: 'states',
     variant: 'outline',

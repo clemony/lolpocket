@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { comment } = defineProps<{
-  comment?: CommentItem
+  comment?: CommentData
 }>()
 const emit = defineEmits(['comment:vote'])
 const vote = ref<number>(0)
@@ -31,12 +31,12 @@ onMounted (() => {
   <ToggleGroup
 
     v-model:model-value="vote"
-    :disabled="!comment.authorPuuid"
+    :disabled="!comment.author_id"
     type="single"
-    :class="{ '!pointer-events-none **:!pointer-events-none': !comment.authorPuuid }"
+    :class="{ '!pointer-events-none **:!pointer-events-none': !comment.author_id }"
     variant="ghost"
     size="sq-5"
-    :on="!comment.authorPuuid ? 'inset' : 'neutral'"
+    :on="!comment.author_id ? 'inset' : 'neutral'"
     as-child
     orientation="horizontal"
     @update:model-value="(val) => {
@@ -44,7 +44,7 @@ onMounted (() => {
     }">
     <label
       for="downvote"
-      :disabled="!comment.authorPuuid"
+      :disabled="!comment.author_id"
       aria-label="downvote"
       class="grid size-7 cursor-pointer place-items-center disabled:!pointer-events-none">
       <ToggleGroupItem

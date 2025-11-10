@@ -14,11 +14,11 @@ export function handleRemoval(id: string) {
   removeComment(as().comments, id)
 }
 
-function removeComment(list: CommentItem[], id: string) {
+function removeComment(list: CommentSchema[], id: string) {
   for (const comment of list) {
-    if (comment.id === id && comment.authorPuuid === as().account.puuid) {
+    if (comment.id === id && comment.author_id === as().account.puuid) {
       as().removedComments.push({
-        authorPuuid: comment.authorPuuid,
+        author_id: comment.author_id,
         id: comment.id,
         content: comment.content,
       })
@@ -38,11 +38,10 @@ function removeComment(list: CommentItem[], id: string) {
           }],
           type: 'doc'
         },
-        createdAt: comment.createdAt,
+        created: comment.created,
         downvotes: comment.downvotes,
-        editedAt: comment.editedAt,
+        updated: comment.updated,
         removed: true,
-        replies: comment.replies,
         upvotes: comment.upvotes,
       }
 
@@ -53,11 +52,12 @@ function removeComment(list: CommentItem[], id: string) {
       })
       return true
     }
-    if (comment.replies?.length) {
+    /* @fixme sb call */
+   /*  if (comment.replies?.length) {
       const found = removeComment(comment.replies, id)
       if (found)
         return true
-    }
+    } */
   }
   return false
 }

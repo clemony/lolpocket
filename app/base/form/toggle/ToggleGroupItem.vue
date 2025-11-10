@@ -7,7 +7,7 @@ const props = defineProps<
     class?: HTMLAttributes['class']
     variant?: ToggleGroupVariants['variant']
     size?: ToggleGroupVariants['size']
-    on?: ToggleGroupVariants['active']
+    on?: ToggleGroupVariants['on']
   }
 >()
 
@@ -29,7 +29,7 @@ const forwarded = useForwardProps(delegatedProps)
         toggleVariants({
           variant: context?.variant || variant,
           size: context?.size || size,
-          active: context?.active || on,
+          on: context?.on || on,
         }),
         props.class,
       )

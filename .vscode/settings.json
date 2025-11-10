@@ -16,7 +16,8 @@
     "/app/composables",
     "/app/utils",
     "/app/layouts/components",
-    "/shared/indexes"
+    "/shared/indexes",
+    "/shared/schema"
   ],
   "exportall.config.relExclusion": [
     "/app/utils/config",

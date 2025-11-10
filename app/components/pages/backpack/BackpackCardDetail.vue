@@ -67,7 +67,6 @@ const bg = computed(() => {
         :style="bg" />
     </div>
     <div class="flex-1 whitespace-pre-wrap p-4 text-2">
-      {{ pocket.notes[0] }}
     </div>
     <Separator class="mt-auto" />
     <div class="p-4">

@@ -21,12 +21,12 @@ const pocket = computed(() =>
         class="flex items-center gap-3">
         <SpellPicker
           class="size-16"
-          :current-value="set.d"
+          :current-value="spellbook[set.d].name"
           @update:spell="(e) => (set.d = e)" />
-        <SpellPicker
+<!--         <SpellPicker
           class="size-16"
           :current-value="set.f"
-          @update:spell="(e) => (set.f = e)" />
+          @update:spell="(e) => (set.f = e)" /> -->
         <span class="flex items-center gap-1">
           <Button
             class="inline"

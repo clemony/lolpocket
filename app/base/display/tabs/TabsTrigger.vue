@@ -5,7 +5,7 @@ import { TabsTrigger, useForwardProps } from 'reka-ui'
 const props = defineProps<
   TabsTriggerProps & {
     value?: string | number | null
-    active?: TabsTriggerVariants['active']
+    on?: TabsTriggerVariants['on']
     base?: TabsTriggerVariants['base']
     class?: HTMLAttributes['class']
     hover?: TabsTriggerVariants['hover']
@@ -23,7 +23,7 @@ const forwarded = useForwardProps(delegatedProps)
   <TabsTrigger
     :value="props.value"
     v-bind="forwarded"
-    :class=" cn('', tabsTriggerVariants({ base, variant, size, hover, active }), props.class)">
+    :class=" cn('', tabsTriggerVariants({ base, variant, size, hover, on }), props.class)">
     <slot />
   </TabsTrigger>
 </template>

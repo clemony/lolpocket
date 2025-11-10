@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { itemRanks } from '#shared/references'
+
 const ranks = ref(itemRanks)
 console.log('🌱 - ranks:', ranks)
 function onClick(rank: string): void {

@@ -1,6 +1,8 @@
-import { filterEmojiArray } from '#tiptap'
+//@fixme probably fix
+/* @ts-ignore */
 import { computePosition } from '@floating-ui/dom'
 import { VueRenderer } from '@tiptap/vue-3'
+import { filterEmojiArray } from 'tiptap'
 import EmojiList from './EmojiList.vue'
 
 export const emojiSuggestions = {

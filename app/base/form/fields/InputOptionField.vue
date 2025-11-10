@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { FormField } from '~/base/form/index.form'
+import type { FieldOption } from '../types.forms'
 
 const {
   name = 'options',
@@ -35,7 +36,7 @@ function onBlur() {}
       hover="outline"
       variant="ghost"
       class="hover:fx-1 hover:!border-b3/50 hover:bg-b2/40 w-full border border-transparent py-2">
-      <FormItem>
+      <FormItem class="w-full">
         <FormLabel class="flex w-full cursor-pointer items-center gap-2">
           <!-- Checkbox -->
           <div class="flex items-center gap-3">
@@ -77,7 +78,8 @@ function onBlur() {}
 
             <InputGroupAddon
               v-tippy="{ content: h('p', { class: 'max-w-42 text-pretty' }, 'Description required if option is selected.'), theme: errorMessage ? 'error' : 'neutral', placement: 'right' }"
-              align="inline-end">
+              align="inline-end"
+              class=" !pointer-events-auto !z-2 !cursor-help">
               <icon
                 name="error"
                 :class="cn('text-bc/30 size-5', { 'text-domination': errorMessage })" />

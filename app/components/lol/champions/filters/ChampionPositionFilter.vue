@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { championPositions } from '#shared/references'
+
 const { class: className, clear = false, hover = 'btn', size = ['sq-8', '8'], variant = 'ghost' } = defineProps<{
   class?: HTMLAttributes['class']
   clear?: boolean

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures'
-import type { CarouselApi } from '~/base/layout/carousel/carousel-index'
 import { addRuneSet } from '~~/shared/schema'
+import type { CarouselApi } from '~/base/layout/carousel/carousel-index'
 
 definePageMeta({
   name: 'pocket-runes',

@@ -12,9 +12,9 @@ const { class: className, pocket: p } = defineProps<{
 
 const pocket = computed (() => p).value
 function handleLike() {
-  as().account.favorites.pockets.includes(pocket.key) ? pocket.likes + 1 : pocket.likes - 1
+  as().settings.favorite_pockets.includes(pocket.key) ? pocket.likes + 1 : pocket.likes - 1
   console.log('🌱 - handleLike - pocket.likes:', pocket.likes)
-  console.log('🌱 - handleLike - as().account.favorites.pockets.includes(pocket.key):', as().account.favorites.pockets.includes(pocket.key))
+  console.log('🌱 - handleLike - as().settings.favorite_pockets.includes(pocket.key):', as().settings.favorite_pockets.includes(pocket.key))
 }
 </script>
 
@@ -23,8 +23,8 @@ function handleLike() {
     :class="cn(' pl-2 pr-2.5 has-checked: inset-shadow-xs !gap-1.5 group/x rounded-full has-checked:*:opacity-100 duration-0 has-not-checked:*:opacity-40 hover:ring hover:ring-offset-1 h-6 ring-bc/50 ring-offset-b2', className)"
     variant="outline">
     <input
-      v-model="as().account.favorites.pockets"
-      :disabled="pocket.author.includes(as().account.puuid)"
+      v-model="as().settings.favorite_pockets"
+      :disabled="pocket.uuid === as().account.puuid"
       type="checkbox"
       :value="pocket.key"
       class="peer hidden"

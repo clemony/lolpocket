@@ -1,4 +1,4 @@
-import type { InboxItem } from '../schema'
+
 
 export interface InboxTemplate {
   title: string

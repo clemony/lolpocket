@@ -27,7 +27,7 @@ import { testMessage } from './test-message'
   <div class="text-2 opacity-50  pt-1 px-2 font-semibold">
     Tools
   </div>
-  <PopoverItem @click="as().account.inbox.messages.push(testMessage)">
+  <PopoverItem @click="as().inbox.messages.push(testMessage)">
     <icon
       name="hugeicons:test-tube-01"
       class="size-4.5" />

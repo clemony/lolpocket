@@ -21,7 +21,7 @@ export const openBox = shallowRef<string>('Messages')
 export const inboxUnreadFilter = shallowRef<boolean>(false)
 
 export const sortedMessages = computed(() => {
-  let box = [...(as().account?.inbox?.messages || [])]
+  let box = [...(as().inbox?.messages || [])]
   box
     = openBox.value === 'Messages'
       ? box.filter(m => !m.trash)
@@ -36,7 +36,7 @@ export const sortedMessages = computed(() => {
 })
 
 export function matchMsg(msgId: string, index?: boolean): InboxMessage {
-  return as().account.inbox.messages.find(m => m.id === msgId)
+  return as().inbox.messages.find(m => m.id === msgId)
 }
 
 export function markRead(msgId) {
@@ -61,7 +61,7 @@ export function trashMsg(msgId) {
 }
 
 export function trashAllRead() {
-  const a = as().account.inbox.messages.filter(m => m.read === true)
+  const a = as().inbox.messages.filter(m => m.read === true)
   a.forEach((m) => {
     trashMsg(m.id)
   })

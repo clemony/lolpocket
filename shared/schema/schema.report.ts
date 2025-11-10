@@ -1,26 +1,5 @@
 import * as v from 'valibot'
 
-export const reportOptions: FieldOption[] = [
-  {
-    id: 'abuse',
-    name: 'Verbal Abuse',
-    description: ['Harassment, offensive language, threats, and other negative and disruptive communication.']
-  },
-  {
-    id: 'offensiveName',
-    name: 'Offensive or Inappropriate Name',
-  },
-  {
-    id: 'spam',
-    name: 'Spam / Promotional Content',
-    description: ['Blatant and/or repeated low quality posts. Can include links to unrelated content or unwarranted self promotion that does not add context or depth.']
-  },
-  {
-    id: 'other',
-    name: 'Other',
-  }
-]
-
 const customOptionSchema = v.pipe(
   v.object({
     checkbox: v.boolean(),
@@ -44,19 +23,20 @@ export const reportSchema = v.object({
   //
   options: v.pipe(
     v.array(
-      v.pipe(v.string(), v.minLength(3, 'Please length 3. You can succeed.'))
+      v.pipe(v.string(), v.minLength(3, 'Please length 3+ characters. You can succeed.'))
     ),
     v.minLength(1, 'At least one report reason is required.'),
   ),
 
   //
   comment: v.object({
-    id: v.string(),
-    authorName: v.string(),
-    contentText: v.optional(
+    comment_id: v.pipe(v.string(), v.uuid()),
+    author_id: v.pipe(v.string(), v.uuid()),
+    reporter_id: v.pipe(v.string(), v.uuid()),
+    content_text: v.optional(
       v.pipe(v.string(), v.minLength(1, 'Comment content cannot be empty.'))
     ),
-    createdAt: v.string()
+    created: v.string()
   }),
   //
   message: v.optional(v.string())

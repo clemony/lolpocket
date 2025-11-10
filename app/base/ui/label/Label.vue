@@ -3,10 +3,10 @@ import type { LabelProps } from 'reka-ui'
 import { Label } from 'reka-ui'
 
 interface Props extends LabelProps {
-  active?: LabelVariants['active']
   base?: LabelVariants['base']
   class?: HTMLAttributes['class']
   hover?: LabelVariants['hover']
+  on?: ButtonVariants['on']
   size?: LabelVariants['size']
   variant?: LabelVariants['variant']
 }
@@ -30,7 +30,7 @@ const delegatedProps = computed(() => {
     :class="
       cn(
         'text-3 font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70',
-        labelVariants({ base, variant, size, hover, active }),
+        labelVariants({ base, variant, size, hover, on }),
         props.class,
       )
     ">

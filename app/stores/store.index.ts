@@ -1,6 +1,5 @@
 import { defineStore } from 'pinia'
 import { championIndex, championTitleIndex, itemIndex, mapIndex, patchIndex, pathIndex, runeIndex } from '~~/shared/indexes'
-import { spellIndex } from '~~/shared/references'
 
 export const useIndexStore = defineStore(
   'indexStore',
@@ -16,12 +15,10 @@ export const useIndexStore = defineStore(
     const maps = ref<MapIndex[]>([])
     const shards = ref<Shard[]>([])
     const titles = ref<Record<string, string>>({})
-    const spells = ref<SpellIndex[]>([])
 
     async function loadBasic() {
       champions.value = championIndex
       items.value = itemIndex
-      spells.value = spellIndex
       runes.value = runeIndex
       paths.value = pathIndex
       maps.value = mapIndex
@@ -49,7 +46,6 @@ export const useIndexStore = defineStore(
       items.value = []
       maps.value = []
       shards.value = []
-      spells.value = []
     }
 
     // resetIndexStore()
@@ -87,7 +83,6 @@ export const useIndexStore = defineStore(
       patchList,
       runes,
       shards,
-      spells,
 
       // load
       loadBasic,
@@ -97,7 +92,6 @@ export const useIndexStore = defineStore(
       // helpers
       findInIndex,
       getByIndex,
-      spellById: (id: number) => getByIndex(spells.value, 'id', id),
 
       // champion helpers
       champIdByKey: (key: string) =>
@@ -137,9 +131,6 @@ export const useIndexStore = defineStore(
       pathNameById: (id: number) =>
         findInIndex(paths.value, 'id', id, 'name') as string,
 
-      // spells
-      spellNameById: (id: number) =>
-        findInIndex(spells.value, 'id', id, 'name') as string,
 
       // maps
       mapIdById: (id: number) =>

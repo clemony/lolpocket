@@ -118,7 +118,7 @@ function reset() {
             :key="skin.name"
             :text="skin.name"
             :alt="skin.name"
-            :skin-url="getSplash(selectedChampion,'tile', skin, )"
+            :skin-url="getSplash(selectedChampion, 'tile', skin)"
             @click="emit('update:splash',
                          getSplash(
                            selectedChampion,

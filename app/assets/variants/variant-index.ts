@@ -17,7 +17,7 @@ export const variantVariants = {
   input: 'btn-outline px-3 !bg-transparent inset-shadow-xs  font-medium border-b3 shadow-[1px_1px_1px_rgba(0,0,0,0.04)]',
   inset: 'inset-shadow-xs fx-1 !border-b3/80 border !bg-b2',
   label: 'font-medium opacity-50 items-center flex gap-3',
-  link: 'fx-0 h-auto justify-start p-0 bg-transparent border-0 shadow-0 text-bc underline-offset-2 active:underline group-data-[state=visible]:underline hover:underline cursor-pointer font-medium px-0',
+  link: 'fx-0 h-auto justify-start p-0 bg-transparent border-0 shadow-0 text-bc underline-offset-2 on:underline group-data-[state=visible]:underline hover:underline cursor-pointer font-medium px-0',
   neutral:
     '  btn-neutral bg-neutral px-3 text-nc bg-neutral  font-medium  *:text-nc  shadow-sm drop-shadow-sm border-neutral   **:text-nc',
   none: 'items-center bg-transparent border-0 border-transparent shadow-transparent shadow-none inset-shadow-none inset-shadow-transparen drop-shadow-transparent drop-shadow-none p-0 fx-0 outline-0 ring-0',
@@ -74,7 +74,7 @@ export const baseVariants = tv({
     },
 
     // active
-    active: {
+    on: {
       base: 'on:!bg-b1 open:!bg-b1 on:shadow-sm on:!border-b3/80 open:!border-b3/80 fx-0 shadow-black/4  open:shadow-sm ',
       btn: 'on:!bg-b2  on:!border-b3/80',
       ghost: 'on:!bg-b2/40 on:!border-b3/40 on:fx-1',
@@ -84,7 +84,7 @@ export const baseVariants = tv({
     ' on:!text-nc on:!bg-neutral/95 on:**:!text-nc on:!border-n3 on:shadow-sm on:drop-shadow-sm ',
       none: 'on:bg-transparent on:!fx-0 on:!text-bc on:!opacity-100',
       outline: 'on:!fx-0 on:shadow-xs on:!border on:!border-b3',
-      secondary: 'on:inset-shadow-xs',
+      secondary: 'on:inset-shadow-xs on:bg-b3/40 on:fx-1 on:shadow-xs',
     },
 
     // state
@@ -167,6 +167,7 @@ export const kbdVariants = tv({
   base: 'pointer-events-none  relative inline-flex w-fit min-w-5 items-center justify-center   gap-1 rounded-md border  p-1 !text-[0.92rem] shadow-xs select-none [&_svg:not([class*="size-"])]:size-3 ',
   defaultVariants: {
     variant: 'secondary',
+    size: '6'
   },
   extend: baseVariants,
 

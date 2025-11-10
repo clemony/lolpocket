@@ -14,8 +14,8 @@ const sv = {
 }
 
 export const sizeVariants = {
-  '5': 'h-5 text-2 rounded-md',
-  '6': 'h-6 text-2 rounded-md',
+  '5': 'h-5 text-2 px-2 rounded-md',
+  '6': 'h-6 text-2 px-2 rounded-md',
   '7': 'h-7 text-2 rounded-md',
   '8': 'h-8 text-2 rounded-lg',
   '9': 'h-9 text-2 rounded-lg',

@@ -11,6 +11,8 @@ const pocket = computed(() => {
 
   return pocketKey ? ps().getPocket(pocketKey) : null
 })
+
+const pinned = computed (() => ps().pinned.includes(pocket.value.key))
 </script>
 
 <template>
@@ -19,17 +21,17 @@ const pocket = computed(() => {
     :class="cn('', { 'pointer-events-none opacity-50': isDisabled })">
     <div class="flex items-center gap-2">
       <!-- pin -->
-      <Button
-        v-tippy="'Pin to sidebar'"
-        :variant="pocket?.location?.pinned ? 'outline' : 'ghost'"
+      <Label
+      base="btn"  v-tippy="'Pin to sidebar'"
+        :variant="pinned ? 'outline' : 'ghost'"
         :class="
           cn('size-11 relative grid place-items-center *:absolute', {
-            'bg-b2/30': pocket?.location?.pinned,
+            'bg-b2/30': pinned,
           })
-        "
-        @click="pocket.location.pinned = true">
+        ">
+        <input :value="pocket.key" type="checkbox" v-model="ps().pinned" class="peer hidden" />
         <icon
-          v-if="!pocket?.location?.pinned"
+          v-if="!pinned"
           name="pin"
           class="size-4.75 **:stroke-[2]" />
 
@@ -37,23 +39,30 @@ const pocket = computed(() => {
           v-else
           name="unpin"
           class="size-4.75 **:stroke-[2]" />
-      </Button>
+      </Label>
 
       <!-- archive -->
-      <Button
+      <Label
+      base="btn"
         v-tippy="'Move to archive'"
-        variant="ghost"
-        class="size-11"
-        @click="pocket.location.folder = 'archive'">
+        :variant="ps().archive.includes(pocket.key) ? 'outline' : 'ghost'"
+        :class="cn('size-11 relative grid place-items-center *:absolute', {
+            'bg-b2/30': pinned,
+          })
+        ">
+        <input :value="pocket.key" type="checkbox" v-model="ps().pinned" class="peer hidden" />
         <icon name="archive" />
-      </Button>
+      </Label>
 
       <!-- trash -->
       <Button
+      base="btn"
         v-tippy="'Move to trash'"
-        variant="ghost"
-        class="size-11"
-        @click="pocket.location.folder = 'trash'">
+        :variant="ps().trash.includes(pocket.key) ? 'outline' : 'ghost'"
+        :class="cn('size-11 relative grid place-items-center *:absolute', {
+            'bg-b2/30': pinned,
+          })
+        ">
         <icon name="trash" />
       </Button>
 

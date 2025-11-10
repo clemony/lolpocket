@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import type { EmojiItem } from '@tiptap/extension-emoji'
 
-
 const { class: className, index, item } = defineProps<{
   class?: HTMLAttributes['class']
   item: EmojiItem

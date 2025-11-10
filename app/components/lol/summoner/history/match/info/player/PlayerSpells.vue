@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { spellIndex } from '~~/shared/references'
 
 const { class: className, player } = defineProps<{
   player: Player
@@ -8,8 +7,8 @@ const { class: className, player } = defineProps<{
 
 const spells = computed(() => {
   return {
-    sum1: spellIndex.find(s => s.id === player?.summoner1Id).name,
-    sum2: spellIndex.find(s => s.id === player?.summoner2Id).name,
+    sum1: spellbook[player?.summoner1Id].name,
+    sum2: spellbook[player?.summoner2Id].name,
   }
 })
 </script>

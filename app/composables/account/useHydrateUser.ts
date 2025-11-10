@@ -1,24 +1,17 @@
-import type { Account, Pocket, PublicData, Settings } from '~~/shared/schema'
 import * as v from 'valibot'
-import { appTaglines } from '~~/shared/data/taglines'
-import { AccountSchema, getEmptyAccount, getEmptyPublicData, getEmptySettings, PocketSchema, PublicDataSchema, SettingsSchema } from '~~/shared/schema'
 import { toast } from '~/base/notification/toast/use-toast'
 import { getRandom } from '~/utils/helpers/getRandom'
+import { appTaglines } from '~~/shared/data/taglines'
+import type { Account, Pocket, PublicData, Settings } from '~~/shared/schema'
+import { AccountSchema, getEmptyAccount, getEmptySettings, PocketSchema, PublicDataSchema, SettingsSchema } from '~~/shared/schema'
 
 interface UserProfileResponse {
   account: Account | null
-  pockets: Pocket[] | null
+  pockets: Pocket[] | null // <- updated key to match RPC
   public: PublicData | null
   settings: Settings | null
 }
-
-interface UserProfileResponse {
-  account: Account | null
-  public: PublicData | null
-  settings: Settings | null
-  user_pockets: Pocket[] | null // <- updated key to match RPC
-}
-export async function hydrateUser(progress?: Ref<number>) {
+export async function useHydrateUser(progress?: Ref<number>) {
   const client = useSupabaseClient()
   const user = useSupabaseUser().value
 
@@ -49,10 +42,6 @@ export async function hydrateUser(progress?: Ref<number>) {
         SettingsSchema,
         data.settings ?? getEmptySettings()
       )
-      const publicParse = v.safeParse(
-        PublicDataSchema,
-        data.public ?? getEmptyPublicData()
-      )
 
       progress && (progress.value = 70)
 
@@ -60,25 +49,23 @@ export async function hydrateUser(progress?: Ref<number>) {
         = accountParse.success ? accountParse.output : getEmptyAccount()
       as().settings
         = settingsParse.success ? settingsParse.output : getEmptySettings()
-      as().publicData
-        = publicParse.success ? publicParse.output : getEmptyPublicData()
 
-      const results = data.user_pockets.map(p => v.safeParse(PocketSchema, p))
+      const results = data.pockets.map(p => v.safeParse(PocketSchema, p))
       results.forEach((r, i) => {
         if (!r.success) {
           console.warn(`Pocket ${i} failed validation:`, r.issues)
         }
       })
 
-      let validatedPockets: Pocket[] = []
-      if (Array.isArray(data.user_pockets)) {
-        validatedPockets = data.user_pockets
+/*       let validatedPockets: Pocket[] = []
+      if (Array.isArray(data.pockets)) {
+        validatedPockets = data.pockets
           .map(p => v.safeParse(PocketSchema, p))
           .filter(p => p.success)
           .map(p => (p as { success: true, output: Pocket }).output)
       }
       ps().pockets = validatedPockets
-      console.log('🌱 - hydrateUser - ps().pockets:', ps().pockets)
+      console.log('🌱 - hydrateUser - ps().pockets:', ps().pockets) */
     }
 
     progress && (progress.value = 100)
@@ -101,5 +88,4 @@ export async function hydrateUser(progress?: Ref<number>) {
     }! ${getRandom(appTaglines)}`,
   })
 
-  as().$persist()
 }

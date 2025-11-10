@@ -27,7 +27,7 @@ const text = ref<string>()
         try update
       </Button>
 
-      <Button @click="hydrateUser()">
+      <Button @click="useHydrateUser()">
         fetch user datasss
       </Button>
 
@@ -45,6 +45,8 @@ const text = ref<string>()
         ">
         toast
       </Button>
+
+      <div class="w-44 h-12  dss border">hi</div>
 
       <!--       <Button
         @click="() => {

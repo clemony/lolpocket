@@ -1,18 +1,18 @@
 <script lang="ts" setup>
 const {
-  name,
+  id,
   class: className,
   variant = 'btn',
 } = defineProps<{
   class?: HTMLAttributes['class']
-  name: string | undefined
+  id: number | undefined
   variant?: LabelVariants['variant']
 }>()
 
 const loaded = ref(false)
 
 watch(
-  () => name,
+  () => id,
   (newVal) => {
     if (newVal)
       loaded.value = false
@@ -28,20 +28,20 @@ watch(
     :class="
       cn(
         'size-14 overflow-hidden group-hover/select:bg-b3/50',
-        { ' shadow-sm drop-shadow-sm border border-b4 ': name },
+        { ' shadow-sm drop-shadow-sm border border-b4 ': id },
         className,
       )
     ">
     <img
-      v-if="name"
-      :title="name"
-      :alt="name"
-      :src="`/img/spells/${name}.webp`"
+      v-if="id"
+      :title="spellbook[id].name"
+      :alt="spellbook[id].name"
+      :src="`/img/spells/${id}.webp`"
       class="absolute size-full"
       @load="loaded = true" />
     <!--
     <icon
-      name="tabler:flame"
+      id="tabler:flame"
       alt="no summoner spell chosen"
       class="size-6 opacity-6 absolute **:stroke-[1.5]" /> -->
   </Label>

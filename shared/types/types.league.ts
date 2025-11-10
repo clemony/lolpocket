@@ -25,8 +25,9 @@ export interface Role {
 
 export interface Spell {
   id: number
-  name: string | null
-  cd: number | string | null
+  key: string | number
+  name: string
+  cd: number | string
   charges?: number | string | null
   description: string | null
   recharge?: number | string | null

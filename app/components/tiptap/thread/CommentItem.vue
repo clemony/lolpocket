@@ -3,13 +3,14 @@ import { useMentionTooltips } from '../extensions/mentions/useMentionTooltips'
 import { renderCommentHTML } from './utils/renderCommentHTML'
 
 const { comment, depth, parentHovered } = defineProps<{
-  comment: CommentItem
+  comment: CommentData
   depth?: number
   parentHovered?: boolean
 }>()
-
 const emit = defineEmits(['comment:reply', 'comment:remove', 'comment:vote', 'comment:update', 'trigger-hovered', 'comment:delete'])
-
+const route = useRoute()
+console.log('🌱 - route:', route)
+console.log(as().comments)
 function handleRemovalEmit() {
   emit('comment:remove', comment.id)
 }
@@ -22,9 +23,6 @@ const updated = shallowRef<boolean>(false)
 const hovered = ref<boolean>(false)
 const container = useTemplateRef<HTMLElement>('container')
 const reportRef = useTemplateRef('reportRef')
-const user = await useSupabaseUser()
-const isAdmin = computed (() => user?.value.app_metadata?.user_role === 'admin')
-
 const renderedHtml = computed(() => {
   if (!comment.content)
     return null
@@ -42,7 +40,7 @@ onMounted (() => {
   <Collapsible
     :id="comment.id"
     v-slot="{ open }"
-    :default-open="!!comment.authorPuuid"
+    :default-open="!!comment.author_id"
     :disabled="!hasReplies"
     :class="cn('z-auto pt-2  pb-2  h-max ', { ' ml-12': depth })">
     <!-- child trigger -->
@@ -79,14 +77,7 @@ onMounted (() => {
         <CommentHeader
           :comment
           :open>
-          <LazyUserCard
-            v-if="comment.authorPuuid"
-            :comment="comment">
-            <Separator
-              v-if="isAdmin"
-              class="!-mx-2 justify-self-center my-1" />
-            <LazyCommentModMenu v-if="isAdmin" />
-          </LazyUserCard>
+          <UserMenu :comment />
         </CommentHeader>
 
         <!-- update comment -->
@@ -97,7 +88,7 @@ onMounted (() => {
             v-slot="{ editor }"
             v-model="newContent"
             @update:model-value="updated = true">
-            <PostButtonWrapper
+            <PostButton
               cancellable
               :change="(comment.content !== newContent) && !editor?.isEmpty"
               save
@@ -124,7 +115,7 @@ onMounted (() => {
         <div
           v-else-if="comment.content"
           ref="container"
-          :class="cn('tiptap py-2 pl-12.5', { 'opacity-60': !comment.authorPuuid })"
+          :class="cn('tiptap py-2 pl-12.5', { 'opacity-60': !comment.author_id })"
           v-html="renderedHtml" />
 
         <!-- comment toolbar -->
@@ -174,8 +165,8 @@ onMounted (() => {
         <div class="relative grid grow auto-rows-auto">
           <CommentItem
             v-for="reply in comment.replies"
-            :key="reply.id"
-            :comment="reply"
+            :key="reply"
+            :comment="ts().threads[reply]"
             :depth="(depth ?? 0) + 1"
             @trigger-hovered="e => hovered === e"
             @comment:vote="$emit('comment:vote', $event)"
@@ -190,14 +181,13 @@ onMounted (() => {
       <CollapsibleTrigger
         v-if="comment.replies?.length"
         size="8"
-        class="text-bc/30 hover:text-bc text-1 relative  ml-5 px-5"
-        variant="link"
+        class="text-bc/30 hover:text-bc hover:underline text-1 relative  ml-5 px-5"
         :parent-hovered="hovered"
         @mouseenter="hovered = true"
         @mouseleave="hovered = false"
         @focusin="hovered = true"
         @focusout="hovered = false">
-        <span :class="cn(' border-shade-b3/10  absolute transition-colors duration-200 hover:border-shade-b3/20  dst top-0 left-0 h-1/2 w-4 rounded-bl-lg border-b', { '!border-shade-b3/25': hovered })" />
+        <span :class="cn(' border-shade-b3/10  absolute transition-colors duration-200 hover:border-shade-b3/20  dst top-0 left-0 h-1/2 w-4 rounded-bl-lg border-b ', { '!border-shade-b3/25': hovered })" />
         {{ open ? 'Collapse' : `${comment.replies.length} replies...` }}
       </CollapsibleTrigger>
     </div>

@@ -2,12 +2,13 @@
 import type { AsTag, PrimitiveProps } from 'reka-ui'
 import { Primitive } from 'reka-ui'
 
-const { as = 'div', class: className } = defineProps<
+const { as = 'div', base = 'none', class: className } = defineProps<
   PrimitiveProps & {
     class?: HTMLAttributes['class']
     variant?: ElementVariants['variant']
     size?: ElementVariants['size']
     hover?: ElementVariants['hover']
+    base?: ElementVariants['base']
     as?: AsTag | string
   }
 >()
@@ -20,7 +21,7 @@ const { as = 'div', class: className } = defineProps<
     :class="
       cn(
         '',
-        elementVariants({ variant, size, hover }),
+        elementVariants({ base, variant, size, hover }),
         className,
       )
     ">

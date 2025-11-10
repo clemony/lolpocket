@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import Fuse from 'fuse.js'
 import type { Pocket } from '~~/shared/schema'
+import Fuse from 'fuse.js'
 
 const { class: className, pocket: p } = defineProps<{
   class?: HTMLAttributes['class']

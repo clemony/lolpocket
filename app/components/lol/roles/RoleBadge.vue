@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import { championRoles, type ChampionRole } from '~~/shared/references'
+import type { ChampionRole } from '~~/shared/references'
+import { championRoles } from '~~/shared/references'
 
 const { class: className, role: rl } = defineProps<{
   class?: HTMLAttributes['class']

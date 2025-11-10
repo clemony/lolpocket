@@ -13,7 +13,7 @@ export function handleVote({
 }
 
 function updateCommentVote(
-  list: CommentItem[],
+  list: CommentSchema[],
   id: string,
   puuid: string,
   newVote: number,
@@ -41,11 +41,11 @@ function updateCommentVote(
       return true
     }
 
-    if (comment.replies?.length) {
-      const found = updateCommentVote(comment.replies, id, puuid, newVote, oldVote)
+/*     if (comment.replies?.length) {
+      const found = psid, uuid, newVote, oldVote)
       if (found)
         return true
-    }
+    } */
   }
 
   return false

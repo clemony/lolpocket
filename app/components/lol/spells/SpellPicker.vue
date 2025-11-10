@@ -42,7 +42,7 @@ onMounted(() => (selected.value = props.currentValue))
       align="center">
       <div class="gap-3 place-content-evenly grid grid-cols-3">
         <label
-          v-for="ss in ix().spells"
+          v-for="ss in spellbook"
           :key="ss.name"
           as="label"
           :title="ss.name.toString()"
