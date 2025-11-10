@@ -27,7 +27,9 @@ onMounted(() => {
       </template>
 
       <ItemRankFilter
-        class="bg-b1 sticky top-38 -mt-2 mb-0 -ml-[5px] w-[calc(100%+10px)] pt-5 pb-6" />
+        class="
+          sticky top-38 -mt-2 mb-0 -ml-[5px] w-[calc(100%+10px)] bg-b1 pt-5 pb-6
+        " />
       <LazyNuxtPage />
     </LayoutAsideSplit>
 

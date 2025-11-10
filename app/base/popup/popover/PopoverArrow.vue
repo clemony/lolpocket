@@ -18,12 +18,12 @@ const { arrow } = popoverContentVariants({ variant: injectedVariant || props.var
 <template>
   <PopoverArrow
     v-bind="forwarded"
-    :class="cn('invert z-0 opacity-20 dxs translate-y-[1px]', arrow(), props.class)"
+    :class="cn('z-0 translate-y-[1px] opacity-20 dxs invert', arrow(), props.class)"
     :height="9"
     :width="18" />
   <PopoverArrow
     v-bind="forwarded"
-    :class="cn('z-50     z-1 outline-none overflow-hidden', arrow(), props.class)"
+    :class="cn('z-1 z-50 overflow-hidden outline-none', arrow(), props.class)"
     :height="9"
     :width="18" />
 </template>

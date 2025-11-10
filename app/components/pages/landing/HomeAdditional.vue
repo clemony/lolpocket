@@ -35,22 +35,28 @@ const data = [
 <template>
   <div
     ref="wrapper"
-    class="bg-b1 relative z-2 h-[80vh] w-full items-center justify-center">
+    class="relative z-2 h-[80vh] w-full items-center justify-center bg-b1">
     <div
-      class="bgneutral items-center text-nc flex overflow-hidden px-10 z-20 m-auto h-[98%] w-[95%] rounded-3xl grid grid-cols-2 gap-10">
+      class="
+        bgneutral z-20 m-auto flex grid h-[98%] w-[95%] grid-cols-2 items-center
+        gap-10 overflow-hidden rounded-3xl px-10 text-nc
+      ">
       <div
-        class="size-full grid wp-77% justify-items-center relative py-20 overflow-hidden">
+        class="
+          wp-77% relative grid size-full justify-items-center overflow-hidden
+          py-20
+        ">
         <motion.h2
           :style="{
             transform: `translateY(${Math.round(progressY * 100) / 100}%)`,
           }"
-          class="text-14 absolute pr-14 h-full"
+          class="text-14 absolute h-full pr-14"
           :transition="{ type: 'inertia' }">
           Additional Tools.
         </motion.h2>
       </div>
 
-      <div class="grid h-full items-center grow justify-start wp-82% py-22">
+      <div class="wp-82% grid h-full grow items-center justify-start py-22">
         <motion.div
           v-for="(item, i) in data"
           :key="item.title"
@@ -67,25 +73,25 @@ const data = [
             amount: 0.8,
           }"
           class="">
-          <div class="mb-5 gap-5 flex w-full items-center">
+          <div class="mb-5 flex w-full items-center gap-5">
             <icon
               v-if="item.icon"
               :name="item.icon"
-              class="size-7 justify-self-center text-nc stroke-[0.5]" />
+              class="size-7 justify-self-center stroke-[0.5] text-nc" />
 
-            <h3 class="!text-7 grow text-nc !font-semibold">
+            <h3 class="grow !text-7 !font-semibold text-nc">
               {{ item.title }}
             </h3>
           </div>
 
           <p
-            class="text-pretty leading-loose text-nc font-light text-4"
+            class="text-4 leading-loose font-light text-pretty text-nc"
             v-html="item.text" />
         </motion.div>
       </div>
     </div>
 
-    <div class="min-w-32 wp-17% shrink" />
+    <div class="wp-17% min-w-32 shrink" />
   </div>
 </template>
 

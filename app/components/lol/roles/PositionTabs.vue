@@ -22,7 +22,7 @@ const roleStats = await useMatchRoles(state.summoner.value.puuid, state.matches)
 
     <TabsList
       base="indicator"
-      class="w-full grid grid-cols-6 h-14">
+      class="grid h-14 w-full grid-cols-6">
       <TabsTrigger
         v-for="role in roleStats"
         :key="role.role"
@@ -32,10 +32,13 @@ const roleStats = await useMatchRoles(state.summoner.value.puuid, state.matches)
         :disabled="!role.games"
         :value="role.role"
         class="">
-        <span class="size-5.5 relative grid place-items-center">
+        <span class="relative grid size-5.5 place-items-center">
           <component
             :is="`i-roles-${role.role.toLowerCase().replace(' ', '-').replace('utility', 'support')}`"
-            class="h-5 w-auto dst shrink-0 peer-checked:text-nc"
+            class="
+              h-5 w-auto shrink-0 dst
+              peer-checked:text-nc
+            "
             :class="{ '!text-bc/80': role.name === 'ALL' }" />
         </span>
       </TabsTrigger>

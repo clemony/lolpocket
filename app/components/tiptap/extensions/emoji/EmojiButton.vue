@@ -15,7 +15,9 @@ const { class: className, index, item } = defineProps<{
     variant="ghost"
     hover="inset"
     tabindex="0"
-    :class="cn('text-8', `index-${index}`)">
+    :class="cn('text-8', `
+      index-${index}
+    `)">
     <span
       v-if="item.emoji"
       class="dst drop-shadow-black/10">
@@ -23,7 +25,7 @@ const { class: className, index, item } = defineProps<{
     </span>
     <span
       v-else-if="item.fallbackImage"
-      class="dss drop-shadow-black/10  size-6">
+      class="size-6 dss drop-shadow-black/10">
       <img
         :alt="item.name"
         :src="item.fallbackImage"

@@ -53,7 +53,10 @@ const variants = {
           exit="hidden"
           :class="
             cn(
-              'z-50 min-w-32 overflow-hidden rounded-lg border border-b4/60  bg-b1/90 backdrop-blur-md p-1 text-popover-bc shadow-md ',
+              `
+                text-popover-bc z-50 min-w-32 overflow-hidden rounded-lg border
+                border-b4/60 bg-b1/90 p-1 shadow-md backdrop-blur-md
+              `,
               props.class,
             )
           ">

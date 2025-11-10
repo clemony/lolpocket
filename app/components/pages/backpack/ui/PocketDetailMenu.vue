@@ -17,51 +17,75 @@ const pinned = computed (() => ps().pinned.includes(pocket.value.key))
 
 <template>
   <div
-    class="flex items-center px-2 h-[45px] border-box"
+    class="border-box flex h-[45px] items-center px-2"
     :class="cn('', { 'pointer-events-none opacity-50': isDisabled })">
     <div class="flex items-center gap-2">
       <!-- pin -->
       <Label
-      base="btn"  v-tippy="'Pin to sidebar'"
+        v-tippy="'Pin to sidebar'"
+        base="btn"
         :variant="pinned ? 'outline' : 'ghost'"
         :class="
-          cn('size-11 relative grid place-items-center *:absolute', {
+          cn(`
+            relative grid size-11 place-items-center
+            *:absolute
+          `, {
             'bg-b2/30': pinned,
           })
         ">
-        <input :value="pocket.key" type="checkbox" v-model="ps().pinned" class="peer hidden" />
+        <input
+          v-model="ps().pinned"
+          :value="pocket.key"
+          type="checkbox"
+          class="peer hidden" />
         <icon
           v-if="!pinned"
           name="pin"
-          class="size-4.75 **:stroke-[2]" />
+          class="
+            size-4.75
+            **:stroke-[2]
+          " />
 
         <icon
           v-else
           name="unpin"
-          class="size-4.75 **:stroke-[2]" />
+          class="
+            size-4.75
+            **:stroke-[2]
+          " />
       </Label>
 
       <!-- archive -->
       <Label
-      base="btn"
         v-tippy="'Move to archive'"
+        base="btn"
         :variant="ps().archive.includes(pocket.key) ? 'outline' : 'ghost'"
-        :class="cn('size-11 relative grid place-items-center *:absolute', {
-            'bg-b2/30': pinned,
-          })
+        :class="cn(`
+          relative grid size-11 place-items-center
+          *:absolute
+        `, {
+          'bg-b2/30': pinned,
+        })
         ">
-        <input :value="pocket.key" type="checkbox" v-model="ps().pinned" class="peer hidden" />
+        <input
+          v-model="ps().pinned"
+          :value="pocket.key"
+          type="checkbox"
+          class="peer hidden" />
         <icon name="archive" />
       </Label>
 
       <!-- trash -->
       <Button
-      base="btn"
         v-tippy="'Move to trash'"
+        base="btn"
         :variant="ps().trash.includes(pocket.key) ? 'outline' : 'ghost'"
-        :class="cn('size-11 relative grid place-items-center *:absolute', {
-            'bg-b2/30': pinned,
-          })
+        :class="cn(`
+          relative grid size-11 place-items-center
+          *:absolute
+        `, {
+          'bg-b2/30': pinned,
+        })
         ">
         <icon name="trash" />
       </Button>

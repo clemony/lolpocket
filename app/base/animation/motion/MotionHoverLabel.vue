@@ -10,7 +10,7 @@ const wrapperVariants = {
 <template>
   <motion.label
     :variants="wrapperVariants"
-    class="flex gap-4 items-center group cursor-pointer"
+    class="group flex cursor-pointer items-center gap-4"
     while-hover="visible"
     initial="hidden"
     exit="hidden">

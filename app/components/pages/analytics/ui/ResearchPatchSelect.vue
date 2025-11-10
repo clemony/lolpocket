@@ -13,7 +13,10 @@ const modelValue = ref(ms().filter.patch ?? ds().currentPatch)
     v-model:model-value="modelValue"
     class="p-0">
     <SelectTrigger
-      class="bg-transparent border-none shadow-none focus:ring-0 focus:outline-0 px-2"
+      class="
+        border-none bg-transparent px-2 shadow-none
+        focus:ring-0 focus:outline-0
+      "
       :class="cn('', props.class)"
       no-arrow>
       <icon
@@ -34,7 +37,7 @@ const modelValue = ref(ms().filter.patch ?? ds().currentPatch)
           no-tick>
           <slot :value="patch.toString()" />
 
-          <span class="flex gap-2 items-center">
+          <span class="flex items-center gap-2">
             <span class="size-4.5">
               <icon
                 v-if="ms().filter.patch === patch"

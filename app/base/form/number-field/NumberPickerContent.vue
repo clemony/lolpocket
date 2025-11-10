@@ -2,7 +2,13 @@
 
 <template>
   <NumberFieldContent
-    class="border bgneutral/85 **:text-nc rounded-lg h-10 items-center grid *:first:cursor-pointer *:first:*:size-5 *:last:*:size-5 shadow-sm drop-shadow-sm *:last:cursor-pointer *:focus:!ring-0">
+    class="
+      bgneutral/85 grid h-10 items-center rounded-lg border shadow-sm
+      drop-shadow-sm
+      **:text-nc
+      *:first:*:size-5 *:first:cursor-pointer *:last:*:size-5
+      *:last:cursor-pointer *:focus:!ring-0
+    ">
     <slot />
   </NumberFieldContent>
 </template>

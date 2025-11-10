@@ -208,7 +208,10 @@ ModuleRegistry.registerModules([
 <template>
   <AgGridVue
     :initial-state="cs().dbChampionGridState"
-    class="!size-full stat-grid champion-grid bg-b1 !shadow-black/3 !drop-shadow-black/3 border-shadow-sm min-w-full"
+    class="
+      stat-grid champion-grid border-shadow-sm !size-full min-w-full bg-b1
+      !shadow-black/3 !drop-shadow-black/3
+    "
     :grid-options="gridOptions"
     :theme="theme"
     :column-defs="colDefs"

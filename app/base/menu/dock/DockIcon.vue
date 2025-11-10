@@ -47,7 +47,10 @@ const iconWidth = computed(() => {
 <template>
   <div
     ref="iconRef"
-    class="flex cursor-pointer items-center justify-center rounded-full transition-all duration-200 ease-out"
+    class="
+      flex cursor-pointer items-center justify-center rounded-full
+      transition-all duration-200 ease-out
+    "
     :style="{
       width: `${iconWidth}px`,
       height: `${iconWidth}px`,

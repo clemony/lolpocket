@@ -35,7 +35,7 @@ const variants = {
 
 <template>
   <NavigationMenuItem
-    class="overflow-hidden p-0 ml-px"
+    class="ml-px overflow-hidden p-0"
     as-child>
     <MButton
       label
@@ -43,12 +43,18 @@ const variants = {
       :variants="buttVariants"
       :class="
         cn(
-          'max-w-full h-11 flex flex-row flex-nowrap items-center w-full gap-3  justify-start p-0  relative',
+          `
+            relative flex h-11 w-full max-w-full flex-row flex-nowrap
+            items-center justify-start gap-3 p-0
+          `,
           { 'pointer-events-none ': isYou },
         )
       ">
       <div
-        class="aspect-square h-full place-self-center grid place-items-center shrink-0 relative overflow-hidden">
+        class="
+          relative grid aspect-square h-full shrink-0 place-items-center
+          place-self-center overflow-hidden
+        ">
         <input
           v-model="isFollowed"
           aria-label="follow-indicator"
@@ -58,13 +64,19 @@ const variants = {
         <icon
           v-if="isYou"
           name="lucide:house"
-          class="size-5.5 -ml-0.5" />
+          class="-ml-0.5 size-5.5" />
         <icon
           v-else
           name="ph:heart-straight-fill"
           :class="
             cn(
-              ' group-hover/follow:text-tint-domination/40 dst   group-hover/follow:opacity-90 group-hover/follow:scale-120 absolute transition-all duration-300 drop-shadow-b2 drop-shadow-sm size-5.5 text-b4 ',
+              `
+                absolute size-5.5 text-b4 drop-shadow-sm dst drop-shadow-b2
+                transition-all duration-300
+                group-hover/follow:scale-120
+                group-hover/follow:text-tint-domination/40
+                group-hover/follow:opacity-90
+              `,
               {
                 'text-domination group-hover/follow:**:text-domination opacity-60 group-hover/follow:opacity-100':
                   isFollowed,
@@ -75,7 +87,10 @@ const variants = {
 
       <motion.div
         :variants="variants"
-        class="inline-flex text-nowrap gap-3 w-full justify-between flex-nowrap overflow-hidden items-center self-center">
+        class="
+          inline-flex w-full flex-nowrap items-center justify-between gap-3
+          self-center overflow-hidden text-nowrap
+        ">
         {{
           isYou ? "You"
           : isFollowed ? "Unfollow"

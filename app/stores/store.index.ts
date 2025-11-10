@@ -131,7 +131,6 @@ export const useIndexStore = defineStore(
       pathNameById: (id: number) =>
         findInIndex(paths.value, 'id', id, 'name') as string,
 
-
       // maps
       mapIdById: (id: number) =>
         maps.value.find(m => m.id === id)?.mapStringId,

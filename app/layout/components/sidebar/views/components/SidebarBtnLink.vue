@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { RouteRecordRaw } from 'vue-router'
-import { closeAndNav } from '~/layout'
 
 const { item: i, link } = defineProps<{
   item?: RouteRecordRaw | string
@@ -17,27 +16,32 @@ const item = computed (() => {
   else
     return i
 })
+
+const utils = inject<TippyUtils>('tippy-utils')
 </script>
 
 <template>
-  <Button
-  :disabled="route.path.match(link || item?.path)"
+  <BtnLink
     v-if="link || item"
+    :disabled="route.path.match(link || item?.path)"
     variant="link"
     on="link"
     size="12"
-    class=" pl-2 w-full h-11 !duration-0 justify-start "
-    @click="closeAndNav(link || item.path)">
+    class="h-11 w-full justify-start pl-2 !duration-0"
+    @click="">
     <slot>
-      <span :class="cn('flex-nowrap flex items-center text-3 capitalize text-nowrap !gap-2.75',
-        { 'badge badge-ghost badge-xl inset-shadow-sm inset-shadow-black/3': route.path.match(link || item?.path) },)">
-      <span class="relative grid size-4.5 shrink-0 place-items-center">
-        <hicon
-          :name="String(item.meta?.icon) "
-          :class="cn('size-5 absolute', item?.meta?.listClass)" />
+      <span
+        :class="cn(`
+          flex flex-nowrap items-center !gap-2.75 text-3 text-nowrap capitalize
+        `,
+                   { 'badge badge-ghost badge-xl inset-shadow-sm inset-shadow-black/3': route.path.match(link || item?.path) })">
+        <span class="relative grid size-4.5 shrink-0 place-items-center">
+          <hicon
+            :name="String(item.meta?.icon) "
+            :class="cn('absolute size-5', item?.meta?.listClass)" />
+        </span>
+        {{ item.meta?.title || item.name }}
       </span>
-      {{ item.meta?.title || item.name }}
-    </span>
     </slot>
-  </Button>
+  </BtnLink>
 </template>

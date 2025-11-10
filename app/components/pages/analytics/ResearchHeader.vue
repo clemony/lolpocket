@@ -32,17 +32,25 @@ const timeLeft = computed(() => {
         :while-press="{
           rotate: '180deg',
         }"
-        class="btn not-disabled:btn-neutral btn-square dr-30 absolute -right-1 bottom-0 size-7 justify-self-end rounded-full p-0 opacity-80 backdrop-blur-md transition-colors hover:opacity-100 disabled:!pointer-events-none disabled:cursor-default disabled:!opacity-90"
+        class="
+          dr-30 btn absolute -right-1 bottom-0 btn-square size-7
+          justify-self-end rounded-full p-0 opacity-80 backdrop-blur-md
+          transition-colors
+          not-disabled:btn-neutral
+          hover:opacity-100
+          disabled:!pointer-events-none disabled:cursor-default
+          disabled:!opacity-90
+        "
         :disabled="timeLeft !== '1:40'"
         @click="fetchData()">
         <icon
           name="ion:sync-sharp"
-          class="text-nc size-4.5" />
+          class="size-4.5 text-nc" />
       </Motion>
     </SummonerIcon>
 
     <div class="flex flex-col items-center justify-center">
-      <SummonerName class="text-6 dst truncate leading-none font-semibold" />
+      <SummonerName class="truncate text-6 leading-none font-semibold dst" />
 
       <p class="left-2 mt-2.5">
         #

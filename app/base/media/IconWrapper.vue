@@ -7,7 +7,7 @@ const props = defineProps<{
 
 <template>
   <div
-    class="size-5 relative shrink-0 !overflow-visible grid place-items-center">
+    class="relative grid size-5 shrink-0 place-items-center !overflow-visible">
     <hicon
       v-if="props.name"
       :name="props.name"

@@ -59,36 +59,42 @@ const masteryStats = [
 </script>
 
 <template>
-  <div class="size-full relative">
+  <div class="relative size-full">
     <div
-      class="absolute inset-0 min-h-[130vh] size-full grid auto-rows-[max-content_100vh] bg-b1 items-center">
-      <article class="w-3/5 mx-auto">
-        <header class="w-full flex pt-24 items-center justify-between pb-2">
-          <h1 class="self-start dst font-bold">
+      class="
+        absolute inset-0 grid size-full min-h-[130vh]
+        auto-rows-[max-content_100vh] items-center bg-b1
+      ">
+      <article class="mx-auto w-3/5">
+        <header class="flex w-full items-center justify-between pt-24 pb-2">
+          <h1 class="self-start font-bold dst">
             Champion Mastery
           </h1>
         </header>
 
-        <div class="flex flex-col w-full gap-5 py-3">
-          <section class="gap-8 flex gap-3 w-full h-fit items-center py-4">
+        <div class="flex w-full flex-col gap-5 py-3">
+          <section class="flex h-fit w-full items-center gap-8 py-4">
             <BasicCard
               v-for="data in masteryStats"
               :key="data.title"
-              class="px-7 min-w-64 w-80 h-32 pb-5 pt-7 grid gap-4">
-              <h1 class="font-black tracking-wide text-nowrap text-10">
+              class="grid h-32 w-80 min-w-64 gap-4 px-7 pt-7 pb-5">
+              <h1 class="text-10 font-black tracking-wide text-nowrap">
                 {{ data.data }}
               </h1>
-              <h6 class="lowercase opacity-50 self-end">
+              <h6 class="self-end lowercase opacity-50">
                 {{ data.title }}
               </h6>
             </BasicCard>
 
-            <BasicCard class="px-7 min-w-64 w-80 h-32 pb-5 pt-5 grid gap-4">
+            <BasicCard class="grid h-32 w-80 min-w-64 gap-4 px-7 pt-5 pb-5">
               <input
                 type="text"
-                class="input w-full font-black tracking-wide h-full text-nowrap text-10" />
+                class="
+                  input h-full w-full text-10 font-black tracking-wide
+                  text-nowrap
+                " />
 
-              <h6 class="lowercase opacity-50 self-end">
+              <h6 class="self-end lowercase opacity-50">
                 fun
               </h6>
             </BasicCard>

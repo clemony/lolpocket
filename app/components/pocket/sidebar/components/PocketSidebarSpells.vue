@@ -23,7 +23,7 @@ const pocket = computed(() =>
           class="size-16"
           :current-value="spellbook[set.d].name"
           @update:spell="(e) => (set.d = e)" />
-<!--         <SpellPicker
+        <!--         <SpellPicker
           class="size-16"
           :current-value="set.f"
           @update:spell="(e) => (set.f = e)" /> -->

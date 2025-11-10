@@ -32,7 +32,7 @@ function handleSplash(e: string) {
         :alt="`${as().account?.name ?? null}'s Most Played`" />
       <div class="flex h-full flex-col gap-4 pt-3">
         <h4
-          class="dst text-5 font-semibold">
+          class="text-5 font-semibold dst">
           Automatic
         </h4>
         <p>Displays your most played champion in recent games.</p>
@@ -56,13 +56,11 @@ function handleSplash(e: string) {
           :alt="`${as().account?.name ?? null}'s splash`" />
         <div class="flex h-full w-full flex-col gap-4 pt-3">
           <h4
-            class="dst text-5 font-semibold">
+            class="text-5 font-semibold dst">
             Custom
           </h4>
           <p
-            class="
-            w-full
-            min-w-56">
+            class="w-full min-w-56">
             <span class="italic">Never played a champ?</span>
             <br />
             Np. Rep your guy.

@@ -17,8 +17,18 @@ const props = defineProps<
     :as-child="asChild"
     :class="
       cn(
-        'text-bc ring-bc/60 ring hover:bg-b3 hover:text-sidebar-bc absolute top-3.5 right-3 flex aspect-square w-5 items-center justify-center rounded-md p-0 outline-hidden transition-transform focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0',
-        'after:absolute after:-inset-2 md:after:hidden',
+        `
+          hover:text-sidebar-bc hover:bg-b3
+          absolute top-3.5 right-3 flex aspect-square w-5 items-center
+          justify-center rounded-md p-0 text-bc ring ring-bc/60 outline-hidden
+          transition-transform
+          focus-visible:ring-2
+          [&>svg]:size-4 [&>svg]:shrink-0
+        `,
+        `
+          after:absolute after:-inset-2
+          md:after:hidden
+        `,
         'group-data-[collapsible=icon]:hidden',
         props.class,
       )

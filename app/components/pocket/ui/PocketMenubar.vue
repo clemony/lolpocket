@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { ChampionIcon, Hicon, ItemsAutoMenu, MiniItemAvatars, MiniSpellAvatars, RuneAndPathImg, RunesAutoMenu, SpellsAutoMenu } from '#components'
-import type { MenubarGroup } from '~/base/menu/menubar/menubar.types'
-import { championPositions } from '~~/shared/references'
 import type { Pocket } from '~~/shared/schema'
+import { ChampionIcon, Hicon, ItemsAutoMenu, MiniItemAvatars, MiniSpellAvatars, RuneAndPathImg, RunesAutoMenu, SpellsAutoMenu } from '#components'
+import { championPositions } from '~~/shared/references'
+import type { MenubarGroup } from '~/base/menu/menubar/menubar.types'
 
 const route = useRoute()
 const pocket = ref<Pocket>(ps().getPocket(String(route.params.pocket_key)))
@@ -105,7 +105,7 @@ const menu: MenubarGroup[] = [
     name: 'settings',
     class: 'w-74',
     items: [
-/*       createCheckboxItem({
+      /*       createCheckboxItem({
         name: () => pocket.value.location.pinned ? 'Pinned' : 'Pin Pocket',
         checkboxType: 'tick-end',
         get: () => pocket.value.location.pinned,
@@ -215,13 +215,19 @@ console.log('🌱 - menu:', menu)
           variant="link"
           on="secondary"
           size="sm"
-          class="rounded-lg px-4 capitalize open:brightness-98 ">
+          class="
+            rounded-lg px-4 capitalize
+            open:brightness-98
+          ">
           {{ group.name }}
         </Button>
       </MenubarTrigger>
       <LazyMenubarContent
         :side-offset="2"
-        :class="cn('**:capitalize w-64', group.class)">
+        :class="cn(`
+          w-64
+          **:capitalize
+        `, group.class)">
         <AutoMenuContent
           v-for="item in group.items"
           :key="item.name.toString()"

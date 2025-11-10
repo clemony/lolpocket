@@ -18,7 +18,11 @@ const roles = computed(() => {
 
 <template>
   <p
-    class="divider divider-start text-nowrap flex-nowrap mt-0 mb-3 divider-neutral after:opacity-40 grow"
+    class="
+      divider mt-0 mb-3 divider-start grow flex-nowrap divider-neutral
+      text-nowrap
+      after:opacity-40
+    "
     :class="{ 'opacity-20': !roles.length }">
     <span class="group/role capitalize">
       {{ roles }}

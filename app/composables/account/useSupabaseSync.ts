@@ -1,8 +1,7 @@
-
 import * as v from 'valibot'
 
 function hash(obj: any) {
-  return crypto.subtle.digest("SHA-256", obj ?? {})
+  return crypto.subtle.digest('SHA-256', obj ?? {})
 }
 
 export function useSupabaseSync<
@@ -23,7 +22,7 @@ export function useSupabaseSync<
 
   onMounted(() => {
     const parsed = v.safeParse(schema, source())
-    snapshotHash =  hash(parsed.output).toString()
+    snapshotHash = hash(parsed.output).toString()
   })
 
   async function syncIfDirty() {

@@ -31,13 +31,21 @@ const groups = computed (() => {
   <div
     :class="
       cn(
-        'bg-b2 relative before:size-full before:bg-b2 z-1 before:absolute before:z-0 text-bc flex w-full justify-center border-t border-t-b3/60 h-146 min-h-146 overflow-hidden max-h-146 z-1',
+        `
+          relative z-1 flex h-146 max-h-146 min-h-146 w-full justify-center
+          overflow-hidden border-t border-t-b3/60 bg-b2 text-bc
+          before:absolute before:z-0 before:size-full before:bg-b2
+        `,
         className,
       )
     ">
     <div
       v-if="groups.length"
-      class="grid auto-cols-max grid-flow-col h-full [&_h1]:dss items-start z-1 gap-x-10 gap-y-16 px-12 pt-30 pb-40">
+      class="
+        z-1 grid h-full auto-cols-max grid-flow-col items-start gap-x-10
+        gap-y-16 px-12 pt-30 pb-40
+        [&_h1]:dss
+      ">
       <ul
         v-for="group in groups"
         :key="group?.name"

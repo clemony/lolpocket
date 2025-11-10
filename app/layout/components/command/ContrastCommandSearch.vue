@@ -4,11 +4,21 @@ import { getDeviceKey } from '~/utils/config/handleDevice'
 
 <template>
   <button
-    class="justify-self-end btn gap-2 mx-3 btn-neutral !bgneutral/88 border-b3 hover:ringneutral/50 flex h-8.5 !bg-b1 cursor-pointer items-center btn-xs px-3 rounded-xl btn-sm !py-0 inset-shadow-black hover:ring-1 group inset-shadow-xs group"
+    class="
+      !bgneutral/88
+      hover:ringneutral/50
+      group btn mx-3 flex h-8.5 cursor-pointer items-center gap-2
+      justify-self-end rounded-xl border-b3 !bg-b1 px-3 !py-0 inset-shadow-xs
+      inset-shadow-black btn-sm btn-xs btn-neutral
+      hover:ring-1
+    "
     @click.stop="ui().commandOpen = true">
     <icon
       name="search-bold"
-      class="-mt-px size-4 group-hover:opacity-100 text-nc" />
+      class="
+        -mt-px size-4 text-nc
+        group-hover:opacity-100
+      " />
 
     <span class="!text-3 font-light text-nc">{{ getDeviceKey() }} K</span>
   </button>

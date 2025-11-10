@@ -43,7 +43,7 @@ watch(searchResult, (newSearchResults) => {
     v-model="searchQuery"
     placeholder="Search Champions..."
     :class="
-      cn('size-full border-0 shadow-none py-0 m-0 size-full pl-8', props.class)
+      cn('m-0 size-full border-0 py-0 pl-8 shadow-none', props.class)
     "
     @update:model-value="emit('update:input', searchQuery)" />
 </template>

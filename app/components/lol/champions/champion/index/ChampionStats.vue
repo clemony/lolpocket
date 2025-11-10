@@ -123,17 +123,34 @@ const filteredStats = computed (() => {
 <template>
   <Collapsible
     v-model:open="ui().collapseStates.championInfo[0]"
-    class="group/cl flex flex-col gap-6 px-0 data-[state=open]:h-auto data-[state=open]:!overflow-visible">
+    class="
+      group/cl flex flex-col gap-6 px-0
+      data-[state=open]:h-auto data-[state=open]:!overflow-visible
+    ">
     <CollapsibleTrigger class="field-box flex w-full cursor-default flex-col">
       <div
-        class="group/tr flex  h-16  min-h-16 w-full  cursor-pointer  items-center justify-between px-5">
-        <h3 class="dst underline-offset-3 group-hover/tr:underline">
+        class="
+          group/tr flex h-16 min-h-16 w-full cursor-pointer items-center
+          justify-between px-5
+        ">
+        <h3
+          class="
+            underline-offset-3 dst
+            group-hover/tr:underline
+          ">
           Stats
         </h3>
         <CaretFlip />
       </div>
       <div
-        class="group-data-[state=open]/cl:animate-in group-data-[state=open]/cl:fade-in-0  group-data-[state=closed]/cl:animate-out  group-data-[state=closed]/cl:fade-out -mt-3 flex w-full flex-col  items-start  px-5  pb-2 duration-300 group-data-[state=closed]/cl:hidden"
+        class="
+          group-data-[state=open]/cl:animate-in
+          group-data-[state=open]/cl:fade-in-0
+          group-data-[state=closed]/cl:fade-out
+          -mt-3 flex w-full flex-col items-start px-5 pb-2 duration-300
+          group-data-[state=closed]/cl:animate-out
+          group-data-[state=closed]/cl:hidden
+        "
         @click.stop>
         <span class="w-full text-start">
           {{ champion.name }} lv. {{ level[0] }}
@@ -141,7 +158,7 @@ const filteredStats = computed (() => {
         <div class="relative mt-5 mb-1 h-12 w-full">
           <Slider
             v-model:model-value="level"
-            class="z-1 "
+            class="z-1"
             thumb-class="size-6  shadow-none drop-shadow-none !overflow-visible  grid place-items-center relative border-0  focus-visible:!ring-1 ring ring-b4 focus-visible:!ring-neutral focus-visible:!ring-offset-2"
             thumb-alignment="contain"
             :default-value="[1]"
@@ -149,26 +166,37 @@ const filteredStats = computed (() => {
             :step="1"
             :min-steps-between-thumbs="1"
             :min="1">
-            <span class="!text-1 absolute font-semibold">{{ level[0] }}</span>
+            <span class="absolute !text-1 font-semibold">{{ level[0] }}</span>
           </Slider>
-          <div class=" absolute top-1 left-1 z-0 grid h-10 w-full  grid-cols-18 justify-evenly pr-4 pl-5.5 ">
+          <div
+            class="
+              absolute top-1 left-1 z-0 grid h-10 w-full grid-cols-18
+              justify-evenly pr-4 pl-5.5
+            ">
             <button
               v-for="i in 18"
               :key="i"
-              class="relative grid size-full cursor-pointer transition-all duration-200 hover:**:font-bold  hover:**:opacity-100 "
+              class="
+                relative grid size-full cursor-pointer transition-all
+                duration-200
+                hover:**:font-bold hover:**:opacity-100
+              "
               @click="level[0] = i">
               <div
-                :class="cn('absolute  !self-start grid')"
+                :class="cn('absolute grid !self-start')"
                 :style="{
                   transform: `translateX(${((i - 1) / 18) * 100}%)`,
                 }">
                 <span
-                  :class="cn('opacity-50 !self-start scale-y-50', { 'scale-y-80 translate-y-0.5': [1, 6, 11, 16, 18].includes(i) })">
+                  :class="cn('scale-y-50 !self-start opacity-50', { 'scale-y-80 translate-y-0.5': [1, 6, 11, 16, 18].includes(i) })">
                   |
                 </span>
                 <span
                   v-if="[1, 6, 11, 16, 18].includes(i) "
-                  class="text-1 absolute translate-y-4.5 items-end self-end  justify-self-center tabular-nums ">
+                  class="
+                    absolute translate-y-4.5 items-end self-end
+                    justify-self-center text-1 tabular-nums
+                  ">
                   {{ i }}
                 </span>
               </div>
@@ -177,10 +205,18 @@ const filteredStats = computed (() => {
         </div>
       </div>
     </CollapsibleTrigger>
-    <CollapsibleContent class="z-1 flex  h-fit w-full flex-col gap-2 pb-2 data-[state=open]:!overflow-visible">
+    <CollapsibleContent
+      class="
+        z-1 flex h-fit w-full flex-col gap-2 pb-2
+        data-[state=open]:!overflow-visible
+      ">
       <div
         :class="
-          cn('grid grid-cols-2 gap-x-8 px-5  mt-2  field-box pt-3  gap-y-2  *:w-full w-full items-center auto-rows-fr transition-all duration-100', { 'max-h-0 opacity-0 hidden invisible': open })
+          cn(`
+            field-box mt-2 grid w-full auto-rows-fr grid-cols-2 items-center
+            gap-x-8 gap-y-2 px-5 pt-3 transition-all duration-100
+            *:w-full
+          `, { 'max-h-0 opacity-0 hidden invisible': open })
         ">
         <ChampionStat
           v-for="(stat, i) in filteredStats.default.stats"
@@ -197,14 +233,17 @@ const filteredStats = computed (() => {
           <div
             v-for="group, ix in filteredStats.more"
             :key="ix"
-            class=" field-box pt-3 ">
+            class="field-box pt-3">
             <div
               class="field-legend">
               {{ group.name }}
             </div>
             <div
               :class="
-                cn('!grid !grid-cols-2 px-5 gap-x-6  gap-y-1   pb-1 w-full items-center auto-rows-fr  ')
+                cn(`
+                  !grid w-full auto-rows-fr !grid-cols-2 items-center gap-x-6
+                  gap-y-1 px-5 pb-1
+                `)
               ">
               <ChampionStat
                 v-for="stat, i in group.stats"
@@ -220,7 +259,7 @@ const filteredStats = computed (() => {
           class="w-full">
           <LessOrMore
             :open
-            class="w-[98%] justify-self-center " />
+            class="w-[98%] justify-self-center" />
         </CollapsibleTrigger>
       </Collapsible>
     </CollapsibleContent>

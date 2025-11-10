@@ -16,7 +16,11 @@ const { toggleSidebar, state } = useSidebar()
     size="icon"
     :class="
       cn(
-        ' relative grid place-items-center *:opacity-70 *:dst *:absolute *:**:stroke-[1.7] *:size-4.75 hover:*:opacity-100',
+        `
+          relative grid place-items-center
+          *:absolute *:size-4.75 *:opacity-70 *:dst *:**:stroke-[1.7]
+          hover:*:opacity-100
+        `,
         props.class,
       )
     "

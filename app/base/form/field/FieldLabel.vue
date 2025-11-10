@@ -10,9 +10,20 @@ const props = defineProps<{
   <Label
     data-slot="field-label"
     :class="cn(
-      'group/field-label peer/field-label flex w-fit gap-2 leading-snug group-data-[disabled=true]/field:opacity-50',
-      'has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col has-[>[data-slot=field]]:rounded-md has-[>[data-slot=field]]:border [&_>[data-slot=field]]:p-4',
-      'has-[[data-state=checked]]:bg-neutral/5 has-[[data-state=checked]]:border-neutral dark:has-[[data-state=checked]]:bg-neutral/10',
+      `
+        group/field-label peer/field-label flex w-fit gap-2 leading-snug
+        group-data-[disabled=true]/field:opacity-50
+      `,
+      `
+        has-[>[data-slot=field]]:w-full has-[>[data-slot=field]]:flex-col
+        has-[>[data-slot=field]]:rounded-md has-[>[data-slot=field]]:border
+        [&_>[data-slot=field]]:p-4
+      `,
+      `
+        has-[[data-state=checked]]:border-neutral
+        has-[[data-state=checked]]:bg-neutral/5
+        dark:has-[[data-state=checked]]:bg-neutral/10
+      `,
       props.class,
     )">
     <slot />

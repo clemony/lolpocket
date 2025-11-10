@@ -21,6 +21,6 @@ const variants = {
     :variants="variants">
     <icon
       name="right"
-      :class="cn('stroke-[1.2] shrink-0', className)" />
+      :class="cn('shrink-0 stroke-[1.2]', className)" />
   </Motion>
 </template>

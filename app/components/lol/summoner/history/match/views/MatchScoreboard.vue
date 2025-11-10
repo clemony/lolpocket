@@ -29,7 +29,7 @@ const playerRank = computed(() => {
 </script>
 
 <template>
-  <div class="gap-2 flex flex-col overflow-visible pb-3">
+  <div class="flex flex-col gap-2 overflow-visible pb-3">
     <!-- Blue Stats -->
 
     <TeamMatchEndStats
@@ -48,7 +48,7 @@ const playerRank = computed(() => {
 
         <Separator
           v-show="i !== 4"
-          class="bg-b3/60 !my-0" />
+          class="!my-0 bg-b3/60" />
       </template>
     </div>
 
@@ -69,7 +69,7 @@ const playerRank = computed(() => {
           :player-rank="playerRank" />
         <Separator
           v-show="i !== 4"
-          class="bg-b3/60 !my-0" />
+          class="!my-0 bg-b3/60" />
       </template>
     </div>
   </div>

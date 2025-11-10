@@ -24,10 +24,17 @@ const summoner = computed(() => ss().getSummoner(as().account?.puuid))
       <div class="flex items-center justify-between">
         <SummonerName
           as="h1"
-          class="text-6 text-bc/94 font-serif leading-none font-bold drop-shadow-sm" />
+          class="
+            font-serif text-6 leading-none font-bold text-bc/94 drop-shadow-sm
+          " />
         <slot />
       </div>
-      <div :class="cn('inline-flex w-full items-center gap-4  leading-none font-normal  lowercase *:align-bottom', { 'justify-between': fullWidth })">
+      <div
+        :class="cn(`
+          inline-flex w-full items-center gap-4 leading-none font-normal
+          lowercase
+          *:align-bottom
+        `, { 'justify-between': fullWidth })">
         <SummonerTag :summoner />
 
         <SummonerRegion :region-id="summoner.region" />

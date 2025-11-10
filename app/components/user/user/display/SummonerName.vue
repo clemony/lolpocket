@@ -28,7 +28,7 @@ const name = computed(() => {
   <Primitive
     v-if="name"
     :as="el"
-    :class="cn('align-baseline truncate', className)">
+    :class="cn('truncate align-baseline', className)">
     {{ name ?? null }}
   </Primitive>
 </template>

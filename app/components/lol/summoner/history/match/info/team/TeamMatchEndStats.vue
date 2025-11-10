@@ -9,16 +9,24 @@ const { class: className, team } = defineProps<{
   <div
     :class="
       cn(
-        'flex items-center border-y border-y-b4/50 gap-2 px-5 h-9 bg-linear-to-r to-transparent w-full justify-between flex overflow-hidden inset-shadow-xxs',
+        `
+          flex h-9 w-full items-center justify-between gap-2 overflow-hidden
+          border-y border-y-b4/50 bg-linear-to-r to-transparent px-5
+          inset-shadow-xxs
+        `,
         className,
       )
     ">
     <h3
-      class="text-5 dst text-start text-nowrap text-white/86 font-bold uppercase">
+      class="
+        text-start text-5 font-bold text-nowrap text-white/86 uppercase dst
+      ">
       {{ team.win ? "Win" : "Loss" }}
     </h3>
     <div
-      class="font-bold brightness-70 w-24 pl-2 flex !tracking-wide justify-start"
+      class="
+        flex w-24 justify-start pl-2 font-bold !tracking-wide brightness-70
+      "
       :class="
         cn('', {
           'text-inspiration': team.teamId === 100,
@@ -34,12 +42,12 @@ const { class: className, team } = defineProps<{
       :team="team"
       :team-object="team" />
 
-    <p class="flex gap-2 justify-end">
+    <p class="flex justify-end gap-2">
       <i-lol-gold class="size-4 text-[#C2A76E]" />
 
       <span
         v-if="team.gold"
-        class="flex font-semibold items-center tracking-wide">
+        class="flex items-center font-semibold tracking-wide">
         {{ team.gold.toLocaleString() }}
       </span>
     </p>

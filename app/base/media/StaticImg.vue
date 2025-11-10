@@ -25,7 +25,7 @@ function onLoad() {
 </script>
 
 <template>
-  <label :class="cn('size-full bg-b2 rounded-lg relative shrink-0 transform-3d', className)">
+  <label :class="cn('relative size-full shrink-0 rounded-lg bg-b2 transform-3d', className)">
     <img
       :key="img"
       decoding="async"
@@ -35,7 +35,10 @@ function onLoad() {
       v-bind="$attrs"
       :alt="alt"
       :class="
-        cn('size-full translate-z-0  overflow-hidden  shrink-0 object-center  rounded-lg  ', {
+        cn(`
+          size-full shrink-0 translate-z-0 overflow-hidden rounded-lg
+          object-center
+        `, {
           'opacity-100 ': loaded, 'opacity-0': !loaded,
         })
       "

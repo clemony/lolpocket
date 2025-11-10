@@ -9,7 +9,10 @@ const wrapperClass = 'flex h-12  items-center justify-between border-b border-b-
 
 <template>
   <aside
-    class="flex flex-col px-1 shrink-0 gap-10 scrollbar-hidden py-22 w-120 overflow-y-auto sticky top-0">
+    class="
+      sticky top-0 scrollbar-hidden flex w-120 shrink-0 flex-col gap-10
+      overflow-y-auto px-1 py-22
+    ">
     <menu class="space-y-2">
       <h3 class="mb-4 dst">
         Abilities
@@ -20,14 +23,14 @@ const wrapperClass = 'flex h-12  items-center justify-between border-b border-b-
         as="li"
         size="xl"
         :class="
-          cn('justify-start  !gap-4 rounded-xl', {
+          cn('justify-start !gap-4 rounded-xl', {
             'btn-active !bg-tint-b2/70 drop-shadow-sm drop-shadow-black/6': route.hash === `#${ability.key}`,
           })
         "
         :to="{ path: route.path, hash: `#${ability.key}` }"
         variant="ghost">
         <span
-          class="size-10 rounded-lg shadow-sm drop-shadow-sm overflow-hidden">
+          class="size-10 overflow-hidden rounded-lg shadow-sm drop-shadow-sm">
           <Img
             :img="ability.icon"
             :alt="ability.name" />
@@ -42,9 +45,12 @@ const wrapperClass = 'flex h-12  items-center justify-between border-b border-b-
 
     <Collapsible
       v-model:open="ui().collapseStates.championInfo[1]"
-      class="data  field-box ">
+      class="data field-box">
       <CollapsibleTrigger
-        class="flex  min-h-16 h-16 w-full px-5  data-[state=open]:border-b  data-[state=open]:border-b-b3 items-center justify-between">
+        class="
+          flex h-16 min-h-16 w-full items-center justify-between px-5
+          data-[state=open]:border-b data-[state=open]:border-b-b3
+        ">
         <h3>Data</h3>
 
         <CaretFlip />
@@ -60,7 +66,10 @@ const wrapperClass = 'flex h-12  items-center justify-between border-b border-b-
       v-model:open="ui().collapseStates.championInfo[2]"
       class="field-box">
       <CollapsibleTrigger
-        class="flex min-h-16 h-16 w-full  px-5  data-[state=open]:border-b  data-[state=open]:border-b-b3  items-center justify-between">
+        class="
+          flex h-16 min-h-16 w-full items-center justify-between px-5
+          data-[state=open]:border-b data-[state=open]:border-b-b3
+        ">
         <h3>Bio</h3>
 
         <CaretFlip />
@@ -75,7 +84,7 @@ const wrapperClass = 'flex h-12  items-center justify-between border-b border-b-
           <p>Faction</p>
           {{ champion.faction }}
         </div>
-        <p class="mt-4 text-pretty indent-2 leading-7 pl-2">
+        <p class="mt-4 pl-2 indent-2 leading-7 text-pretty">
           {{ champion.lore }}
         </p>
       </CollapsibleContent>

@@ -11,7 +11,10 @@ definePageMeta({
     <transition-slide
       v-if="is().filtered.length"
       group
-      class=" w-full pt-3 justify-between grid grid-cols-[repeat(auto-fill,minmax(60px,1fr))]  gap-6 ">
+      class="
+        grid w-full grid-cols-[repeat(auto-fill,minmax(60px,1fr))]
+        justify-between gap-6 pt-3
+      ">
       <div
         v-for="item in is().filtered"
         :key="item"
@@ -19,17 +22,24 @@ definePageMeta({
         <LazyItemPopover
           v-if="is().filtered.includes(item)"
           :id="item"
-          class="aspect-square rounded-lg max-w-22 size-22 **:size-22'" />
+          class="
+            **:size-22'
+            aspect-square size-22 max-w-22 rounded-lg
+          " />
       </div>
     </transition-slide>
 
     <TransitionScalePop
       v-else
-      class="w-full h-[30vh] grid place-items-center">
+      class="grid h-[30vh] w-full place-items-center">
       <Button
         variant="outline"
         size="sm"
-        class="w-fit hover:inset-shadow-xs *:opacity-80 hover:*:opacity-100"
+        class="
+          w-fit
+          *:opacity-80
+          hover:inset-shadow-xs hover:*:opacity-100
+        "
         @click="is().clearFilters()">
         <span>
           sold out

@@ -15,7 +15,7 @@ const delegatedProps = computed(() => {
 
 <template>
   <DialogDescription
-    :class="cn('text-2 text-bc ', props.class)"
+    :class="cn('text-2 text-bc', props.class)"
     v-bind="delegatedProps">
     <slot />
   </DialogDescription>

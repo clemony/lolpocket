@@ -51,7 +51,10 @@ const itemVariants = {
             staggerChildren: 0.1,
             type: 'spring',
           }"
-          class="py-4 rounded-3xl flex mask-y-from-90% mask-y-to-100% overflow-auto  max-h-full  h-[40vh] flex-col-reverse">
+          class="
+            flex h-[40vh] max-h-full flex-col-reverse overflow-auto rounded-3xl
+            mask-y-from-90% mask-y-to-100% py-4
+          ">
           <Button
             v-for="champion, i in pocket.champions"
             :key="champion"
@@ -62,7 +65,7 @@ const itemVariants = {
               zIndex: `-${i}`,
             }"
             as-child
-            class="!size-22 bg-b1 fx-0 border-0 grid place-items-center">
+            class="grid !size-22 place-items-center border-0 bg-b1 fx-0">
             <motion.div
               :variants="itemVariants"
               :transition="{
@@ -77,14 +80,15 @@ const itemVariants = {
         </motion.div>
       </CollapsibleContent>
       <CollapsibleTrigger as-child>
-        <div class="group -space-y-10 flex z-11 fixed right-22 bottom-22 flex-col">
+        <div
+          class="group fixed right-22 bottom-22 z-11 flex flex-col -space-y-10">
           <template v-if="!open">
             <Element
               v-for="champion in groups"
               :key="champion"
               variant="base"
               shape="circle"
-              class="!size-22 bg-b1 z-1 fx-0 border-0 grid place-items-center">
+              class="z-1 grid !size-22 place-items-center border-0 bg-b1 fx-0">
               <ChampionIcon
                 :k="champion"
                 class="!size-18 rounded-full" />
@@ -94,15 +98,23 @@ const itemVariants = {
             v-if="l"
             variant="base"
             shape="circle"
-            class="!size-22 bg-b1 z-1 fx-0 border-0 relative grid place-items-center ">
+            class="
+              relative z-1 grid !size-22 place-items-center border-0 bg-b1 fx-0
+            ">
             <Element
               shape="circle"
               variant="neutral"
-              class="!size-18 *:transition-all *:duration-300">
+              class="
+                !size-18
+                *:transition-all *:duration-300
+              ">
               <icon
                 name="up"
-                class="absolute group-closed:opacity-0" />
-              <h3 class="group-open:opacity-0 group-open:text-transparent">
+                class="
+                  absolute
+                  group-closed:opacity-0
+                " />
+              <h3 class="group-open:text-transparent group-open:opacity-0">
                 +{{ pocket.champions.length - 4 }}
               </h3>
             </Element>

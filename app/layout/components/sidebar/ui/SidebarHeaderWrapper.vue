@@ -7,9 +7,9 @@ const { title, class: className } = defineProps<{
 
 <template>
   <div>
-    <div :class="cn('gap-0 h-[45px] flex items-center px-3 w-full', className)">
+    <div :class="cn('flex h-[45px] w-full items-center gap-0 px-3', className)">
       <slot name="header">
-        <h2 class="dst font-bold pt-1">
+        <h2 class="pt-1 font-bold dst">
           {{ title }}
         </h2>
       </slot>

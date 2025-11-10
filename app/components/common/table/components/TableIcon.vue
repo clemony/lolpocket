@@ -5,7 +5,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="size-full grid place-items-center">
+  <div class="grid size-full place-items-center">
   </div>
 </template>
 

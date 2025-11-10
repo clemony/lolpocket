@@ -22,14 +22,20 @@ const forwarded = useForwardProps(delegatedProps)
     v-bind="forwarded"
     :class="
       cn(
-        'absolute ContextMenuArrow will-change-[position,opacity]  pointer-events-none z-3 grid  place-items-center  ',
+        `
+          ContextMenuArrow pointer-events-none absolute z-3 grid
+          place-items-center will-change-[position,opacity]
+        `,
         props.class,
       )
     ">
     <div
       :class="
         cn(
-          'grid size-8 absolute mask-b-from-68% mask-b-to-69% -top-0.5  place-items-center  ',
+          `
+            absolute -top-0.5 grid size-8 place-items-center mask-b-from-68%
+            mask-b-to-69%
+          `,
           props.iconClass,
         )
       ">
@@ -37,7 +43,11 @@ const forwarded = useForwardProps(delegatedProps)
         name="ion:caret-up-sharp"
         :class="
           cn(
-            '!size-8 mask-b-from-70% mask-b-to-90% text-b1/91 stroke-6 text-shadow-sm *:stroke-b4 drop-shadow-xs drop-shadow-black/30 ',
+            `
+              !size-8 mask-b-from-70% mask-b-to-90% stroke-6 text-b1/91
+              drop-shadow-xs drop-shadow-black/30 text-shadow-sm
+              *:stroke-b4
+            `,
           )
         " />
     </div>

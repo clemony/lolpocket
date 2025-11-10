@@ -24,10 +24,14 @@ watchEffect(() => {
   <SheetClose
     as-child
     class="">
-    <div
+    <button
       :class="
         cn(
-          'rounded-lg-2 px-3 input gap-2  !bg-transparent !flex   hover:ring-b4 flex-nowrap text-nowrap cursor-text items-center   w-full h-12   hover:ring-1 group ',
+          `
+            group input !flex h-12 w-full cursor-text flex-nowrap items-center
+            gap-2 rounded-lg-2 !bg-transparent px-3 text-nowrap
+            hover:ring-1 hover:ring-b4
+          `,
           props.class,
         )
       "
@@ -35,14 +39,19 @@ watchEffect(() => {
       @click.stop="ui().commandOpen = true">
       <icon
         name="search"
-        class="size-4 shrink-0 opacity-70 group-hover:opacity-100 dst" />
+        class="
+          size-4 shrink-0 opacity-70 dst
+          group-hover:opacity-100
+        " />
 
       <span
-        class="text-bc/70 text-left mt-px font-medium tracking-tight text-2 grow">
+        class="
+          mt-px grow text-left text-2 font-medium tracking-tight text-bc/70
+        ">
         summoners, data, pockets...
       </span>
 
       <span class="!text-3 font-medium text-bc/60">{{ getDeviceKey() }} K</span>
-    </div>
+    </button>
   </SheetClose>
 </template>

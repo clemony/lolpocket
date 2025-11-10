@@ -17,10 +17,18 @@ async function clear() {
     <template #text>
       Remove
       <tippy
-        class="underline transition-colors duration-200 cursor-help underline-dotted rounded-tiny hover:bg-neutral/96 hover:text-nc">
+        class="
+          underline-dotted cursor-help rounded-tiny underline transition-colors
+          duration-200
+          hover:bg-neutral/96 hover:text-nc
+        ">
         stored data
         <template #content>
-          <ul class="p-3 list-disc not-first:mt-2">
+          <ul
+            class="
+              list-disc p-3
+              not-first:mt-2
+            ">
             <li>
               Match data is cached in your browser's internal database to limit
               strain on Riot's API servers.
@@ -37,9 +45,16 @@ async function clear() {
       this button ↘︎ or
       <ResponsiveDialog>
         <ResponsiveDialogTrigger
-          class="items-center !overflow-visible align-baseline w-24 !h-4 justify-center origin-center relative inline-flex self-center">
+          class="
+            relative inline-flex !h-4 w-24 origin-center items-center
+            justify-center self-center !overflow-visible align-baseline
+          ">
           <span
-            class="absolute font-medium w-24 !h-6 mt-0.5 text-center hover:font-bold transition-all underline duration-200">
+            class="
+              absolute mt-0.5 !h-6 w-24 text-center font-medium underline
+              transition-all duration-200
+              hover:font-bold
+            ">
             contact me.
           </span>
         </ResponsiveDialogTrigger>

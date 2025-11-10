@@ -45,27 +45,41 @@ onMounted(() => {
     as="button"
     :class="cn(
       toggleVariants({ variant: currentVariant?.variant, size, base, hover }),
-      'group relative w-max cursor-pointer hover:data-[state=on]:**:text-bc data-[state=on]:bg-neutral/90 overflow-hidden rounded-full border px-3 !py-0 text-center',
+      `
+        group relative w-max cursor-pointer overflow-hidden rounded-full border
+        px-3 !py-0 text-center
+        data-[state=on]:bg-neutral/90
+        hover:data-[state=on]:**:text-bc
+      `,
       props.class,
     )"
     @update:model-value="emit('update:model-value', modelValue)">
-    <div class="flex flex-nowrap size-full relative items-center gap-2">
+    <div class="relative flex size-full flex-nowrap items-center gap-2">
       <div
         :class="
           cn(
             toggleVariants({ variant: oppositeVariant?.variant }),
-            'size-2 !p-0 shrink-0  scale-100  rounded-full shadow-none drop-shadow-xs transition-all duration-350 group-hover:scale-[110] absolute -left-4 -translate-x-4',
+            `
+              absolute -left-4 size-2 shrink-0 -translate-x-4 scale-100
+              rounded-full !p-0 shadow-none drop-shadow-xs transition-all
+              duration-350
+              group-hover:scale-[110]
+            `,
           )
         ">
       </div>
 
       <span
         :class="cn(
-          '!inline-block items-center flex gap-1 flex-nowrap text-nowrap whitespace-nowrap mx-auto transition-all duration-350 group-hover:translate-x-12 group-hover:opacity-0',
+          `
+            mx-auto !inline-block flex flex-nowrap items-center gap-1
+            text-nowrap whitespace-nowrap transition-all duration-350
+            group-hover:translate-x-12 group-hover:opacity-0
+          `,
         )">
         <icon
           :name="currentVariant?.icon"
-          class="!size-3.5 inline align-[-1.5px]" />
+          class="inline !size-3.5 align-[-1.5px]" />
         {{ currentVariant?.text }}
       </span>
     </div>
@@ -74,13 +88,17 @@ onMounted(() => {
       :class="
         cn(
           toggleVariants({ variant: oppositeVariant?.variant }),
-          'absolute top-0 z-10 flex size-full translate-x-24 items-center justify-center gap-2 opacity-0 transition-all duration-350 group-hover:-translate-x-0 group-hover:opacity-100',
+          `
+            absolute top-0 z-10 flex size-full translate-x-24 items-center
+            justify-center gap-2 opacity-0 transition-all duration-350
+            group-hover:-translate-x-0 group-hover:opacity-100
+          `,
         )
       ">
-      <span class="whitespace-nowrap flex items-center gap-1">
+      <span class="flex items-center gap-1 whitespace-nowrap">
         <icon
           :name="oppositeVariant?.icon"
-          class="!size-3.5 inline align-[-1.5px]" />
+          class="inline !size-3.5 align-[-1.5px]" />
         {{ oppositeVariant?.text }}
       </span>
     </div>

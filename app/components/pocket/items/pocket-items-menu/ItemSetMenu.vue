@@ -38,18 +38,21 @@ const pocket = computed(() => props.pocket)
 
     <LazyHoverCardContent
       side="right"
-      class="grid max-h-100 w-64 auto-rows-fr items-center overflow-y-scroll px-1 py-1.5"
+      class="
+        grid max-h-100 w-64 auto-rows-fr items-center overflow-y-scroll px-1
+        py-1.5
+      "
       align="start">
       <PopoverItem
         v-for="friendlyPocket in ps().pockets.filter(p => p.key !== pocket.key)"
         :key="friendlyPocket.key"
-        class="w-full "
+        class="w-full"
         @click="copyItemSetToPocket(friendlyPocket, props.set)">
         <PocketIcon
           :pocket
           size="sm"
           class="size-6 rounded-full" />
-        <span class="truncate ">
+        <span class="truncate">
           {{ friendlyPocket.name }}
         </span>
       </PopoverItem>

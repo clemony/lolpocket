@@ -10,22 +10,22 @@ const { class: className, page } = defineProps<{
 <template>
   <span
     class=""
-    :class="cn('size-4.5 relative place-items-center grid', className)">
+    :class="cn('relative grid size-4.5 place-items-center', className)">
     <icon
       v-if="page.meta.section === 'analysis' && page.path !== '/analysis'"
       name="guidance:search"
-      class="absolute size-4.5 dst stroke-[1.3]" />
+      class="absolute size-4.5 stroke-[1.3] dst" />
 
     <icon
       v-if="page.meta.icon"
       :name="page.meta.icon as string"
       :alt="page.name"
-      class="size-4 absolute"
+      class="absolute size-4"
       :class="{
-        '!size-3.5 left-[1.25px] top-[1px] text-bc/60':
+        'top-[1px] left-[1.25px] !size-3.5 text-bc/60':
           page.name === 'champion analysis',
-        '!size-3 left-[2px] top-0.5 text-bc/70': page.name === 'ally analysis',
-        '!size-2.5 left-[2.5px] top-[2.75px]  dst text-bc/64':
+        'top-0.5 left-[2px] !size-3 text-bc/70': page.name === 'ally analysis',
+        'top-[2.75px] left-[2.5px] !size-2.5 text-bc/64 dst':
           page.name === 'item analysis',
       }" />
 
@@ -33,7 +33,7 @@ const { class: className, page } = defineProps<{
       :is="`i-${page.meta.icon1}`"
       v-if="page.meta.icon1"
       :alt="page.name"
-      class="size-4.5 absolute dst"
-      :class="{ ' text-bc/60': page.meta.icon1 === 'lol-champ' }" />
+      class="absolute size-4.5 dst"
+      :class="{ 'text-bc/60': page.meta.icon1 === 'lol-champ' }" />
   </span>
 </template>

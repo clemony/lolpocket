@@ -24,7 +24,10 @@ onMounted (() => {
 </script>
 
 <template>
-  <div :class="cn('relative  inline-flex w-full translate-y-1 items-center pl-3   align-bottom', className)">
+  <div
+    :class="cn(`
+      relative inline-flex w-full translate-y-1 items-center pl-3 align-bottom
+    `, className)">
     <template v-if="!comment.removed">
       <template
         v-if="comment && comment.author_id === as().account.puuid ">
@@ -35,7 +38,7 @@ onMounted (() => {
           on="link"
           base="btn"
           hover="link"
-          class="text-1 inline px-1 align-bottom opacity-30"
+          class="inline px-1 align-bottom text-1 opacity-30"
           @update:model-value="e => emit('update:edit-model', e)">
           {{ !editModel ? 'Edit' : 'Cancel' }}
         </Toggle>
@@ -51,7 +54,10 @@ onMounted (() => {
           hover="link"
           :disabled="comment.author_id !== as().account.puuid"
           size="max"
-          class="text-1 inline px-1 align-bottom opacity-30 disabled:hidden"
+          class="
+            inline px-1 align-bottom text-1 opacity-30
+            disabled:hidden
+          "
           @click="() => emit('comment:remove')">
           Remove
         </Button>
@@ -62,7 +68,10 @@ onMounted (() => {
         variant="link"
         hover="link"
         size="max"
-        class="text-1 inline px-1 align-bottom opacity-30 disabled:hidden"
+        class="
+          inline px-1 align-bottom text-1 opacity-30
+          disabled:hidden
+        "
         @click="emit('click:report')">
         Report
       </Button>
@@ -80,7 +89,7 @@ onMounted (() => {
         base="btn"
         hover="link"
         on="link"
-        class="text-1 inline  px-1 align-bottom opacity-30 "
+        class="inline px-1 align-bottom text-1 opacity-30"
         @update:model-value="e => emit('update:reply-model', e)">
         {{ !replyModel ? 'Reply' : 'Cancel' }}
       </Toggle>

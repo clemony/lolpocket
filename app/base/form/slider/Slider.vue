@@ -25,15 +25,25 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
   <SliderRoot
     :class="
       cn(
-        'relative flex w-full touch-none select-none items-center data-[orientation=vertical]:flex-col data-[orientation=vertical]:w-1.5 data-[orientation=vertical]:h-full',
+        `
+          relative flex w-full touch-none items-center select-none
+          data-[orientation=vertical]:h-full data-[orientation=vertical]:w-1.5
+          data-[orientation=vertical]:flex-col
+        `,
         props.class,
       )
     "
     v-bind="forwarded">
     <SliderTrack
-      class="relative h-1.5 w-full data-[orientation=vertical]:w-1.5 grow overflow-hidden rounded-full bg-tint-b3/20">
+      class="
+        relative h-1.5 w-full grow overflow-hidden rounded-full bg-tint-b3/20
+        data-[orientation=vertical]:w-1.5
+      ">
       <SliderRange
-        class="absolute h-full data-[orientation=vertical]:w-full bg-neutral" />
+        class="
+          absolute h-full bg-neutral
+          data-[orientation=vertical]:w-full
+        " />
     </SliderTrack>
 
     <SliderThumb
@@ -41,7 +51,14 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
       :key="key"
       :class="
         cn(
-          'block cursor-pointer size-4 rounded-full shadow-xs shadow-black/10 drop-shadow-sm border-2 border-neutral bg-b1 ring-offset-b1 transition-colors focus-visible:outline-none focus-visible:ring focus-visible:ring-neutral focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
+          `
+            block size-4 cursor-pointer rounded-full border-2 border-neutral
+            bg-b1 shadow-xs shadow-black/10 ring-offset-b1 drop-shadow-sm
+            transition-colors
+            focus-visible:ring focus-visible:ring-neutral
+            focus-visible:ring-offset-2 focus-visible:outline-none
+            disabled:pointer-events-none disabled:opacity-50
+          `,
           props.thumbClass,
         )
       ">

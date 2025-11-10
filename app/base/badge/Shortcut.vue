@@ -1,7 +1,7 @@
 <script lang="ts" setup></script>
 
 <template>
-  <Label class="opacity-60 text-2 tracking-[2px]">
+  <Label class="text-2 tracking-[2px] opacity-60">
     <slot />
   </Label>
 </template>

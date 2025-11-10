@@ -25,7 +25,7 @@ const forwarded = useForwardProps(delegatedProps)
     :class="
       cn(
         buttonVariants({ variant: 'ghost', size }),
-        'gap-1  aspect-square btn-square',
+        'aspect-square btn-square gap-1',
         props.class,
       )
     "

@@ -16,7 +16,7 @@ function handleChange() {
     :multiple="true"
     @entry-focus.prevent>
     <ListboxContent
-      class="w-full "
+      class="w-full"
       @entry-focus.prevent
       @highlight.prevent>
       <ListboxItem

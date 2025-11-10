@@ -22,7 +22,7 @@ provide('popoverVariant', props.variant)
   <HoverCardPortal>
     <HoverCardContent
       v-bind="forwarded"
-      :class="cn('z-50 w-64 outline-none overflow-hidden', base(), props.class)">
+      :class="cn('z-50 w-64 overflow-hidden outline-none', base(), props.class)">
       <slot :variant />
     </HoverCardContent>
   </HoverCardPortal>

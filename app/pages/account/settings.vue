@@ -9,20 +9,20 @@ definePageMeta({
 })
 
 // Account tracking
-const { syncIfDirty: syncAccount } = useSupabaseSync(
+/* const { syncIfDirty: syncAccount } = useSupabaseSync(
   () => as().account,
   '/api/supabase/updateUserAccount',
   (uuid, account) => ({ uuid, account }),
   AccountSchema
 )
-
+ */
 // Settings tracking
-const { syncIfDirty: syncSettings } = useSupabaseSync(
+/* const { syncIfDirty: syncSettings } = useSupabaseSync(
   () => as().settings,
   '/api/supabase/updateUserSettings',
   (uuid, settings) => ({ uuid, settings }),
   SettingsSchema
-)
+) */
 </script>
 
 <template>

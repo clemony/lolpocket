@@ -15,7 +15,7 @@ const props = defineProps<{
       :class="cn('size-full object-cover', props.class)">
       <video-background
         src="/video/level-ring.webm"
-        class="size-full object-cover aspect-square"></video-background>
+        class="aspect-square size-full object-cover"></video-background>
     </motion.div>
   </AnimatePresence>
 </template>

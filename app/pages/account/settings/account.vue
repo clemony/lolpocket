@@ -71,7 +71,7 @@ const userProviders = await computedAsync(() =>
       <div class="leading-4">
         <h4
           as="legend"
-          class="text-5 mb-2 font-semibold">
+          class="mb-2 text-5 font-semibold">
           Region
         </h4>
 
@@ -95,7 +95,10 @@ const userProviders = await computedAsync(() =>
             <SelectValue />
           </SelectTrigger>
           <LazyRegionSelectContent
-            class="-top-[calc(var(--reka-select-trigger-height)+4px)] !w-[var(--reka-select-trigger-width)]" />
+            class="
+              -top-[calc(var(--reka-select-trigger-height)+4px)]
+              !w-[var(--reka-select-trigger-width)]
+            " />
         </Select>
       </ClientOnly>
     </fieldset>
@@ -124,12 +127,18 @@ const userProviders = await computedAsync(() =>
         class=""
         :class="
           cn(
-            'flex !gap-5  border-b !border-b-b2 items-center justify-start   w-full h-20',
+            `
+              flex h-20 w-full items-center justify-start !gap-5 border-b
+              !border-b-b2
+            `,
           )">
         <div
           :class="
             cn(
-              'aspect-square size-11 shadow-sm grid place-items-center rounded-lg border border-b3',
+              `
+                grid aspect-square size-11 place-items-center rounded-lg border
+                border-b3 shadow-sm
+              `,
               provider.class,
             )
           ">
@@ -137,7 +146,7 @@ const userProviders = await computedAsync(() =>
             :name="String(provider.icon)"
             :class="cn('size-6.5 dst')" />
         </div>
-        <h4 class="dst text-4 grow text-start font-semibold capitalize">
+        <h4 class="grow text-start text-4 font-semibold capitalize dst">
           {{ provider.name }}
         </h4>
 
@@ -154,7 +163,10 @@ const userProviders = await computedAsync(() =>
         <Switch
           name="toggle-provider"
           :model-value="userProviders?.includes(provider.name)"
-          class="switch dst -mt-0.25 scale-90 data-[state=checked]:ring data-[state=checked]:ring-white/60" />
+          class="
+            switch -mt-0.25 scale-90 dst
+            data-[state=checked]:ring data-[state=checked]:ring-white/60
+          " />
       </label>
     </fieldset>
 
@@ -192,11 +204,14 @@ const userProviders = await computedAsync(() =>
             v-tippy="'verified!'"
             variant="neutral"
             hover="neutral"
-            class="dst aspect-square scale-90 rounded-full"
+            class="aspect-square scale-90 rounded-full dst"
             size="6">
             <icon
               name="tick"
-              class="absolute size-4.25 **:stroke-[3.3]" />
+              class="
+                absolute size-4.25
+                **:stroke-[3.3]
+              " />
           </Button>
           <Button
             v-else
@@ -205,7 +220,7 @@ const userProviders = await computedAsync(() =>
               offset: [0, 12],
             }"
             size="6"
-            class="border-b3/60 rounded-md"
+            class="rounded-md border-b3/60"
             variant="base">
             <icon
               name="refresh"
@@ -224,7 +239,7 @@ const userProviders = await computedAsync(() =>
       <div class="leading-4">
         <h4
           as="legend"
-          class="text-5 mb-2 font-semibold">
+          class="mb-2 text-5 font-semibold">
           Blocked Users
         </h4>
 

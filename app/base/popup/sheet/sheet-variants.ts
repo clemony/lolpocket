@@ -2,7 +2,11 @@ import type { VariantProps } from 'class-variance-authority'
 import { cva } from 'class-variance-authority'
 
 export const sheetVariants = cva(
-  'bg-b1/92 data-[state=open]:animate-in data-[state=closed]:animate-out fixed z-19 gap-4 shadow-lg backdrop-blur transition ease-out data-[state=closed]:duration-300 data-[state=open]:duration-300',
+  `
+    data-[state=open]:animate-in data-[state=open]:duration-300
+    data-[state=closed]:animate-out data-[state=closed]:duration-300
+    fixed z-19 gap-4 bg-b1/92 shadow-lg backdrop-blur transition ease-out
+  `,
   {
     defaultVariants: {
       side: 'right',

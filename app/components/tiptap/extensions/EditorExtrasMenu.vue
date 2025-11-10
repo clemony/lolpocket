@@ -32,7 +32,11 @@ const shortcuts = [
       @click.stop>
       <icon
         name="i"
-        class="!size-5 opacity-60 transition-all duration-100 group-focus-within/text:opacity-90 group-hover/text:opacity-90" />
+        class="
+          !size-5 opacity-60 transition-all duration-100
+          group-focus-within/text:opacity-90
+          group-hover/text:opacity-90
+        " />
     </PopoverTrigger>
 
     <LazyPopoverContent
@@ -40,9 +44,13 @@ const shortcuts = [
       data-theme="base"
       align="start"
       class="tippy-box w-58 -translate-x-2 rounded-xl px-0 pt-px pb-1">
-      <table class="table pr-0 [&_th]:pr-1 [&_th]:pb-1">
+      <table
+        class="
+          table pr-0
+          [&_th]:pr-1 [&_th]:pb-1
+        ">
         <!-- head -->
-        <thead class="border-b-b3 mb-0 border-b pb-0">
+        <thead class="mb-0 border-b border-b-b3 pb-0">
           <tr>
             <th>
               Key
@@ -65,7 +73,7 @@ const shortcuts = [
                   class="absolute size-3.5 opacity-90" />
               </Kbd>
             </th>
-            <td class="text-2 py-2 pr-0 leading-5 ">
+            <td class="py-2 pr-0 text-2 leading-5">
               {{ item.description }}
             </td>
           </tr>

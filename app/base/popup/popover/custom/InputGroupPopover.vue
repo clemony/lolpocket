@@ -10,7 +10,7 @@ const modelValue = computed (() => mv)
 
 <template>
   <Popover>
-    <PopoverTrigger :class="cn('w-full  cursor-text', className)">
+    <PopoverTrigger :class="cn('w-full cursor-text', className)">
       <InputGroup class="h-12">
         <InputGroupAddon>
           <icon
@@ -27,7 +27,7 @@ const modelValue = computed (() => mv)
         <InputGroupAddon align="inline-end">
           <icon
             name="filter"
-            class="size-4.5 mr-2 opacity-50" />
+            class="mr-2 size-4.5 opacity-50" />
         </InputGroupAddon>
       </InputGroup>
     </PopoverTrigger>

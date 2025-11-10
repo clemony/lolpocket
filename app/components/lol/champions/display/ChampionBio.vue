@@ -6,35 +6,35 @@ console.log('💠 - champion.positions[0]:', champion.positions[0])
 </script>
 
 <template>
-  <div class="pb-3 pt-7 flex flex-col gap-6 px-6">
-    <div class="flex gap-4 items-end justify-between">
+  <div class="flex flex-col gap-6 px-6 pt-7 pb-3">
+    <div class="flex items-end justify-between gap-4">
       <h1 class="font-serif dst">
         {{ champion.fullName || champion.name }}
       </h1>
 
-      <p class="text-4 uppercase grow dst text-wrap">
+      <p class="grow text-4 text-wrap uppercase dst">
         {{ champion.title }}
       </p>
     </div>
 
-    <p class="leading-7 text-pretty text-3">
+    <p class="text-3 leading-7 text-pretty">
       {{ champion.lore }}
     </p>
 
-    <Separator class="bg-b3 shadow-none mb-0" />
+    <Separator class="mb-0 bg-b3 shadow-none" />
 
-    <div class="flex gap-6 items-center justify-between flex-nowrap">
+    <div class="flex flex-nowrap items-center justify-between gap-6">
       <ValueFormatter
         :array="champion.roles"
         class="text-2 font-medium" />
 
       <ValueFormatter
         :array="champion.positions"
-        class="badge badge-lg shrink-0 w-fit role-bg border-b4/30 mb-1"
+        class="role-bg mb-1 badge w-fit shrink-0 border-b4/30 badge-lg"
         :data-role="champion.positions[0].toLowerCase()">
         <component
           :is="`i-roles-${champion.positions[0].toLowerCase()}`"
-          class="size-4 mr-2 -mt-1" />
+          class="-mt-1 mr-2 size-4" />
       </ValueFormatter>
     </div>
   </div>

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
+import type { Pocket } from '~~/shared/schema'
 import { HeadingTip } from '#components'
 import { SelectTrigger } from 'reka-ui'
-import type { Pocket } from '~~/shared/schema'
 
 const {
   side = 'bottom',
@@ -35,7 +35,10 @@ const keyClass
     <slot>
       <VarSelectTrigger
         variant="ghost"
-        class="relative grid size-max place-items-center overflow-hidden py-4  **:pointer-events-none ">
+        class="
+          relative grid size-max place-items-center overflow-hidden py-4
+          **:pointer-events-none
+        ">
         <SpellSetDuo
           :set="selectedSet"
           :class="cn('', className)" />
@@ -64,7 +67,7 @@ const keyClass
       :reference="trigger"
       :align-offset
       position="popper"
-      class="w-[var(--reka-select-trigger-width)] min-w-54  p-0">
+      class="w-[var(--reka-select-trigger-width)] min-w-54 p-0">
       <SelectGroup>
         <SelectLabel class="flex items-center justify-between">
           Main Spells
@@ -73,22 +76,32 @@ const keyClass
             variant="ghost"
             size="8"
             title="Clear main spells"
-            class="btn-square aspect-square *:opacity-60 hover:*:opacity-100"
+            class="
+              aspect-square btn-square
+              *:opacity-60
+              hover:*:opacity-100
+            "
             @click="pocket.main?.spells === ''">
             <icon
               name="backspace"
-              class="size-5 **:stroke-2" />
+              class="
+                size-5
+                **:stroke-2
+              " />
           </Button>
         </SelectLabel>
         <SelectItem
           v-for="set in pocket.spells"
           :key="set.id"
-          class="group/select flex-nowrap *:flex *:items-center"
+          class="
+            group/select flex-nowrap
+            *:flex *:items-center
+          "
           :value="set.id">
-      <IndexIcon
+          <IndexIcon
             :item="spellbook[set.d]"
             class="mr-1" />
-            <IndexIcon
+          <IndexIcon
             :item="spellbook[set.f]" />
         </SelectItem>
       </SelectGroup>

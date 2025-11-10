@@ -3,7 +3,7 @@ import { ListboxItemIndicator } from 'reka-ui'
 </script>
 
 <template>
-  <ListboxItemIndicator class=" absolute right-2 self-center">
+  <ListboxItemIndicator class="absolute right-2 self-center">
     <slot>
       <icon
         name="tick-sm"

@@ -17,6 +17,6 @@ const rolesLength = computed(() => {
   <span
     v-tippy="`${rolesLength ? rolesLength : 'no'} selected roles`"
     class="flex items-center gap-3">
-    <span class="dst text-1 font-mono opacity-60">{{ rolesLength }}</span>
+    <span class="font-mono text-1 opacity-60 dst">{{ rolesLength }}</span>
   </span>
 </template>

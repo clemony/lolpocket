@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { Editor, EmojiItem } from 'tiptap';
-import { filterEmojiArray } from 'tiptap';
+import type { Editor, EmojiItem } from 'tiptap'
+import { filterEmojiArray } from 'tiptap'
 
 const { editor } = defineProps<{
   editor: Editor | null
@@ -135,16 +135,32 @@ watch(() => tab.value, (newVal, oldVal) => {
       @click.stop>
       <icon
         name="smile"
-        class="mt-px !size-4.25 opacity-70 transition-all  duration-100 group-focus-within/text:opacity-90 group-hover/text:opacity-90" />
+        class="
+          mt-px !size-4.25 opacity-70 transition-all duration-100
+          group-focus-within/text:opacity-90
+          group-hover/text:opacity-90
+        " />
     </PopoverTrigger>
 
     <LazyPopoverContent
       ref="target"
       data-theme="base"
       align="start"
-      class="tippy-box relative h-90 max-h-90 w-78 -translate-x-2 overflow-hidden rounded-xl px-0 py-px inset-shadow-xs">
-      <div class="from-b1 absolute top-0 z-1 w-full overflow-hidden bg-linear-to-b from-6% to-transparent to-30% px-2 pt-2 pb-1.5">
-        <InputGroup class="!bg-b1/74 bg-brightness-104 border-b3/80 h-11 w-full rounded-xl  border-[groove] bg-blend-screen    shadow-xs shadow-black/4 backdrop-blur">
+      class="
+        tippy-box relative h-90 max-h-90 w-78 -translate-x-2 overflow-hidden
+        rounded-xl px-0 py-px inset-shadow-xs
+      ">
+      <div
+        class="
+          absolute top-0 z-1 w-full overflow-hidden bg-linear-to-b from-b1
+          from-6% to-transparent to-30% px-2 pt-2 pb-1.5
+        ">
+        <InputGroup
+          class="
+            bg-brightness-104 h-11 w-full rounded-xl border-[groove]
+            border-b3/80 !bg-b1/74 bg-blend-screen shadow-xs shadow-black/4
+            backdrop-blur
+          ">
           <InputGroupSearch />
           <InputGroupInput v-model:model-value="query" />
           <InputGroupClear
@@ -156,10 +172,13 @@ watch(() => tab.value, (newVal, oldVal) => {
       </div>
       <TransitionSlideLeft
         :invert
-        class="size-full overflow-auto ">
+        class="size-full overflow-auto">
         <div
           :key="tab"
-          class=" grid  w-full  grid-cols-[repeat(auto-fill,minmax(24px,1fr))] justify-between gap-x-1 gap-y-0.5 overflow-auto  px-2  pt-14 pb-18">
+          class="
+            grid w-full grid-cols-[repeat(auto-fill,minmax(24px,1fr))]
+            justify-between gap-x-1 gap-y-0.5 overflow-auto px-2 pt-14 pb-18
+          ">
           <EmojiButton
             v-for="item, index in filter"
             :key="index"
@@ -170,15 +189,23 @@ watch(() => tab.value, (newVal, oldVal) => {
         </div>
       </TransitionSlideLeft>
 
-      <div class="from-b1 absolute bottom-0 w-full bg-linear-to-t  from-12% to-transparent to-40% px-2 pb-2 ">
+      <div
+        class="
+          absolute bottom-0 w-full bg-linear-to-t from-b1 from-12%
+          to-transparent to-40% px-2 pb-2
+        ">
         <Tabs
           v-model:model-value="tab"
           as="div"
-          class="border-b3/80 bg-brightness-104 bg-b1/70  flex   h-9 w-full items-center  rounded-xl border border-[groove] px-1 bg-blend-screen shadow-md shadow-black/4 backdrop-blur ">
+          class="
+            bg-brightness-104 flex h-9 w-full items-center rounded-xl border
+            border-[groove] border-b3/80 bg-b1/70 px-1 bg-blend-screen shadow-md
+            shadow-black/4 backdrop-blur
+          ">
           <TabsList
             variant="none"
             size="md"
-            class="w-full justify-stretch ">
+            class="w-full justify-stretch">
             <Tooltip
               v-for="group, i in groups"
               :key="i">
@@ -187,11 +214,19 @@ watch(() => tab.value, (newVal, oldVal) => {
                 <TabsTrigger
                   :disabled="group.name === 'Search Results' && !query.length"
 
-                  class="group/btn  on:**:text-nc on:*:opacity-100 h-7 *:opacity-40   hover:*:opacity-90 "
+                  class="
+                    group/btn h-7
+                    *:opacity-40
+                    hover:*:opacity-90
+                    on:*:opacity-100 on:**:text-nc
+                  "
                   :value="i">
                   <icon
                     :name="group.icon"
-                    :class="cn('size-5 absolute dxs **:stroke-[1.7]', group.class)" />
+                    :class="cn(`
+                      absolute size-5 dxs
+                      **:stroke-[1.7]
+                    `, group.class)" />
                 </TabsTrigger>
               </TooltipTrigger>
               <TooltipContent

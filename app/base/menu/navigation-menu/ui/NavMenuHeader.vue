@@ -15,8 +15,11 @@ const variants = {
 
 <template>
   <NavigationMenuItem
-    class="max-w-full h-12 pr-2 flex flex-row flex-nowrap items-start w-full gap-3 justify-start overflow-hidden">
-    <div class="w-11 h-full place-self-center grid place-items-center shrink-0">
+    class="
+      flex h-12 w-full max-w-full flex-row flex-nowrap items-start justify-start
+      gap-3 overflow-hidden pr-2
+    ">
+    <div class="grid h-full w-11 shrink-0 place-items-center place-self-center">
       <slot name="icon" />
     </div>
 

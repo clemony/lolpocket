@@ -64,7 +64,7 @@ const bg = [
   <Primitive
     v-bind="$attrs"
     :as="as"
-    :class="cn('relative bg-transparent overflow-hidden', className)">
+    :class="cn('relative overflow-hidden bg-transparent', className)">
     <span
       class="absolute top-0 left-0 size-full border border-transparent"
       :style="{

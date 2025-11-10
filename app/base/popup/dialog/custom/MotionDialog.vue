@@ -15,7 +15,7 @@ const props = defineProps<{
     <MotionDialogContent
       class=""
       :class="
-        cn('!rounded-xl top-[10%] translate-y-1/4 !max-w-171', props.class)
+        cn('top-[10%] !max-w-171 translate-y-1/4 !rounded-xl', props.class)
       ">
       <DialogHeader>
         <DialogTitle>

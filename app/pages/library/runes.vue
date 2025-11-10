@@ -21,15 +21,15 @@ const test = ref<PathName>(pathIndex[selectedPath.value])
     class="dr-2000 relative flex size-full justify-center gap-14 pt-54">
     <div
       v-if="selectedRune"
-      class="tldr-80 relative z-0 mt-22 max-h-165 w-1/2 w-114 max-w-114 flex-col"
-      :class="{ 'opacity-0 ': !selectedRune, 'opacity-100 ': selectedRune }">
+      class="tldr-80 relative z-0 mt-22 max-h-165 w-114 max-w-114 flex-col"
+      :class="{ 'opacity-0': !selectedRune, 'opacity-100': selectedRune }">
       <RuneData
         :id="selectedRune"
         :key="selectedRune" />
 
       <CloseButton
         tip="Close"
-        class="btn-ghost absolute top-0 right-0 !shadow-none"
+        class="absolute top-0 right-0 !shadow-none btn-ghost"
         @click="selectedRune = null" />
     </div>
 
@@ -44,11 +44,17 @@ const test = ref<PathName>(pathIndex[selectedPath.value])
       <Tabs v-model:model-value="selectedPath">
         <TabsList
           base="indicator"
-          class="field-box bg-b2/40 !rounded-box shadow-warm h-19 w-full grid-cols-5 items-center justify-evenly">
+          class="
+            field-box h-19 w-full grid-cols-5 items-center justify-evenly
+            !rounded-box bg-b2/40 shadow-warm
+          ">
           <div
-            class="rounded-box absolute top-0 left-0 size-full overflow-hidden opacity-28">
+            class="
+              absolute top-0 left-0 size-full overflow-hidden rounded-box
+              opacity-28
+            ">
             <div
-              class="gradient mask-bottom-right absolute top-0 left-0 size-full"
+              class="gradient absolute top-0 left-0 size-full mask-bottom-right"
               :data-path="selectedPath" />
           </div>
 

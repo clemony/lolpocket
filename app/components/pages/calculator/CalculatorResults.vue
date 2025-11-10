@@ -10,13 +10,13 @@ const tab = ref('stats')
         </button>
       </div> -->
 
-  <div class="size-full pt-26 px-3">
+  <div class="size-full px-3 pt-26">
     <Tabs
       default-value="stats"
       class="">
       <TabsList
         base="indicator"
-        class="h-11 w-full max-w-110 grid grid-cols-3">
+        class="grid h-11 w-full max-w-110 grid-cols-3">
         <TabsTrigger value="stats">
           Stat Totals
         </TabsTrigger>
@@ -34,7 +34,7 @@ const tab = ref('stats')
 
       <TabsContent
         value="stats"
-        class="mt-8 bg-b1 w-full rounded-lg">
+        class="mt-8 w-full rounded-lg bg-b1">
         <LazyCalculatorStatTotals />
       </TabsContent>
 

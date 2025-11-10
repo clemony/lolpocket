@@ -8,9 +8,12 @@ const { class: className, team } = defineProps<{
 <template>
   <div
     class=""
-    :class="cn('flex  w-26 flex-nowrap justify-items-start ', className)">
+    :class="cn('flex w-26 flex-nowrap justify-items-start', className)">
     <p
-      class="text-3 grid items-center font-semibold grid justify-start tracking-tight text-nowrap inline-flex flex-nowrap">
+      class="
+        grid inline-flex flex-nowrap items-center justify-start text-3
+        font-semibold tracking-tight text-nowrap
+      ">
       {{ team.kills }}
       /
       {{ team.deaths }}

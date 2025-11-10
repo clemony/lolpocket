@@ -64,18 +64,21 @@ const steps = [
 
 <template>
   <motion.div
-    class="[&_hr]:bg-b2 pt-46 bg-b1 border-b2/30 relative z-1 w-full border-t px-18 pb-6 [&_hr]:mx-16"
+    class="
+      relative z-1 w-full border-t border-b2/30 bg-b1 px-18 pt-46 pb-6
+      [&_hr]:mx-16 [&_hr]:bg-b2
+    "
     :initial="{ boxShadow: '0 0 0 0 #00000000' }"
     :while-in-view="{ boxShadow: '0px -10px 20px 5px #00000010' }">
-    <ul class="timeline timeline-snap-icon timeline-vertical">
+    <ul class="timeline timeline-vertical timeline-snap-icon">
       <li
         v-for="(step, i) in steps"
         :key="i"
         class="group relative"
         :class="cn('', { '!grid-cols-1 !justify-start !-left-20': lessThan })">
         <div
-          class="timeline-middle drop-shadow-sm rounded-full scale-110 z-2"
-          :class="{ 'bg-b2 ': isShown[i] && !isShown?.[i].value }">
+          class="z-2 timeline-middle scale-110 rounded-full drop-shadow-sm"
+          :class="{ 'bg-b2': isShown[i] && !isShown?.[i].value }">
           <Motion
             as-child
             :animate="{ scale: isShown[i] && !isShown?.[i].value ? 0 : 1.1 }"
@@ -113,17 +116,21 @@ const steps = [
           }"
           :class="
             cn(
-              'group-last:ml-16 relative grid  pb-44 max-w-160 mb-10 w-full will-change-[transform,opacity] justify-start',
+              `
+                relative mb-10 grid w-full max-w-160 justify-start pb-44
+                will-change-[transform,opacity]
+                group-last:ml-16
+              `,
               isEven(i) && greaterOrEqual
                 ? 'timeline-start  md:text-end'
                 : 'timeline-end',
             )
           ">
-          <p class="font-mono italic py-2 dst text-4">
+          <p class="py-2 font-mono text-4 italic dst">
             Step {{ i }}
           </p>
 
-          <h2 class="dst pt-1">
+          <h2 class="pt-1 dst">
             {{ step.title }}
           </h2>
 
@@ -132,7 +139,10 @@ const steps = [
           </p>
 
           <div
-            class="bg-b2/40 shadow-warm-2 shadow-black/4 drop-shadow-sm relative mt-10 h-90 w-full overflow-hidden rounded-xl">
+            class="
+              relative mt-10 h-90 w-full overflow-hidden rounded-xl bg-b2/40
+              shadow-warm-2 shadow-black/4 drop-shadow-sm
+            ">
             <component
               :is="step.component"
               :scroll-prog="scrollProg" />
@@ -141,13 +151,22 @@ const steps = [
 
         <motion.hr
           v-if="scrollProg"
-          class="group-last:hidden !bg/b2 !mt-2 !w-0.75 relative grid items-start !rounded-full overflow-hidden">
+          class="
+            !bg/b2 relative !mt-2 grid !w-0.75 items-start overflow-hidden
+            !rounded-full
+            group-last:hidden
+          ">
           <motion.hr
             v-if="isShown[i] && isShown?.[i].value"
             :style="{
               scaleY: progress[i] || 0,
             }"
-            class="group-last:hidden absolute origin-top !bg-neutral/70 size-full starting:scale-y-0 !overflow-hidden !rounded-full -top-1.5 -left-16"></motion.hr>
+            class="
+              absolute -top-1.5 -left-16 size-full origin-top !overflow-hidden
+              !rounded-full !bg-neutral/70
+              group-last:hidden
+              starting:scale-y-0
+            "></motion.hr>
         </motion.hr>
       </li>
     </ul>

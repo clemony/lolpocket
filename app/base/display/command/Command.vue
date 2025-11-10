@@ -88,7 +88,10 @@ provideCommandContext({
     v-bind="forwarded"
     :class="
       cn(
-        'flex h-full w-full flex-col overflow-hidden rounded-lg bg-b1/94 backdrop-blur-md text-bc',
+        `
+          flex h-full w-full flex-col overflow-hidden rounded-lg bg-b1/94
+          text-bc backdrop-blur-md
+        `,
         props.class,
       )
     ">

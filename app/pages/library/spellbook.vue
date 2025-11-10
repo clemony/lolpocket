@@ -34,18 +34,29 @@ const selectedSpell = computed(() => spellbook[selectedSpellId.value])
       class="flex w-full gap-[8%] px-3 py-24">
       <div class="flex w-114 flex-col gap-14">
         <div
-          class="border-b3/80 rounded-box shadow-smooth grid h-fit grid-cols-3 grid-rows-3 gap-4 px-9 py-8">
+          class="
+            grid h-fit grid-cols-3 grid-rows-3 gap-4 rounded-box border-b3/80
+            px-9 py-8 shadow-smooth
+          ">
           <div
             v-for="spell in spellbook"
             :key="spell.name"
             v-tippy="spell.name"
             class="size-fit">
             <label
-              class="btn btn-ghost has-checked:bg-b3/70 has-checked:border-b3 hover:bg-b2 hover:border-b3 size-27 !cursor-pointer px-2.5 py-2 has-checked:shadow-sm">
+              class="
+                btn size-27 !cursor-pointer px-2.5 py-2 btn-ghost
+                hover:border-b3 hover:bg-b2
+                has-checked:border-b3 has-checked:bg-b3/70 has-checked:shadow-sm
+              ">
               <img
                 :alt="selectedSpell.name.toString()"
                 :src="`/img/spells/${spell.name}.webp`"
-                class="border-b3 peer-checked:borderneutral/90 size-22 rounded-lg border inset-shadow-sm shadow-sm shadow-black/20" />
+                class="
+                  peer-checked:borderneutral/90
+                  size-22 rounded-lg border border-b3 shadow-sm inset-shadow-sm
+                  shadow-black/20
+                " />
 
               <input
                 v-model="selectedSpellId"
@@ -101,7 +112,11 @@ const selectedSpell = computed(() => spellbook[selectedSpellId.value])
           :key="selectedSpell.name"
           class="flex w-160 flex-col gap-14 transition-all duration-300">
           <div
-            class="border-b3/80 shadow-smooth flex max-h-min w-full flex-col gap-6 rounded-xl border px-9 pt-7 pb-8 transition-all duration-300">
+            class="
+              flex max-h-min w-full flex-col gap-6 rounded-xl border
+              border-b3/80 px-9 pt-7 pb-8 shadow-smooth transition-all
+              duration-300
+            ">
             <div class="i-c flex w-full gap-6">
               <img
                 :alt="selectedSpell.name.toString()"
@@ -113,7 +128,7 @@ const selectedSpell = computed(() => spellbook[selectedSpellId.value])
                   Summoner
                 </p>
 
-                <h1 class="text-9 dst tracking-tight">
+                <h1 class="text-9 tracking-tight dst">
                   {{ selectedSpell.name }}
                 </h1>
               </div>
@@ -160,7 +175,7 @@ const selectedSpell = computed(() => spellbook[selectedSpellId.value])
             </ul> -->
           </div>
 
-          <div class="shadow-pretty w-full rounded-xl bg-black/90">
+          <div class="w-full rounded-xl bg-black/90 shadow-pretty">
             <video-background
               :src="`https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-collections/global/default/video/spells/spells_${selectedSpell.id}.webm`"
               class="aspect-video h-auto w-90 rounded-xl"></video-background>

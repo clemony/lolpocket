@@ -29,8 +29,8 @@ definePageMeta({
   </div> -->
 
   <div class="size-full px-14">
-    <div class="w-full pt-10 pb-8 mb-8 border-b border-b-b3">
-      <h1 class="font-semibold dst text-8 pb-2">
+    <div class="mb-8 w-full border-b border-b-b3 pt-10 pb-8">
+      <h1 class="pb-2 text-8 font-semibold dst">
         Item Data
       </h1>
 
@@ -41,7 +41,9 @@ definePageMeta({
 
     <div class="size-full overflow-hidden">
       <div
-        class="grid-cols-4 grid gap-10 overflow-hidden pb-2 place-items-center w-full">
+        class="
+          grid w-full grid-cols-4 place-items-center gap-10 overflow-hidden pb-2
+        ">
         <!--         <PocketPickItem
           :patch-games="ms().patchGames"
           :item-num="0"
@@ -63,19 +65,21 @@ definePageMeta({
           title="☆ Rising Star" /> -->
       </div>
 
-      <div class="w-full pt-26 pb-10 mb-10 border-b border-b-b3">
+      <div class="mb-10 w-full border-b border-b-b3 pt-26 pb-10">
         <h1
-          class="font-semibold dst pb-2 text-8">
+          class="pb-2 text-8 font-semibold dst">
           Winrates & Playrates
         </h1>
 
-        <p class=" font-medium text-bc/70">
+        <p class="font-medium text-bc/70">
           How are your most played be doing well left right ->
         </p>
       </div>
 
       <div
-        class="grid-cols-2 grid gap-x-10 w-full overflow-hidden place-items-center">
+        class="
+          grid w-full grid-cols-2 place-items-center gap-x-10 overflow-hidden
+        ">
         <ResearchItemChart />
 
         <ResearchItemList />

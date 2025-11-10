@@ -41,10 +41,15 @@ onMounted(() => {
 
 <template>
   <div
-    class="relative top-0 left-0 z-0 h-[100vh] w-full overflow-hidden *:z-0 *:size-full"
+    class="
+      relative top-0 left-0 z-0 h-[100vh] w-full overflow-hidden
+      *:z-0 *:size-full
+    "
     :class="{ sticky: visible }">
     <motion.div
-      class="top-0 z-0 grid h-screen w-full items-start justify-start overflow-hidden">
+      class="
+        top-0 z-0 grid h-screen w-full items-start justify-start overflow-hidden
+      ">
       <!--   :style="{ transform: `translate(0, -${prog}%)` }" -->
       <div class="relative h-screen w-screen">
         <video-background
@@ -52,7 +57,7 @@ onMounted(() => {
           :autoplay="true"
           :src="video.url"
           :class="
-            cn('h-[100vh] opacity-50  absolute grayscale block', video.class)
+            cn('absolute block h-[100vh] opacity-50 grayscale', video.class)
           "
           :style="{
             display: 'block',
@@ -65,7 +70,10 @@ onMounted(() => {
 
     <div
       ref="welcome"
-      class="from-b1 absolute inset-0 top-0 left-0 z-1 grid grid-cols-2 place-items-center bg-linear-to-r from-25% to-transparent to-90%">
+      class="
+        absolute inset-0 top-0 left-0 z-1 grid grid-cols-2 place-items-center
+        bg-linear-to-r from-b1 from-25% to-transparent to-90%
+      ">
       <div class="justify-self-start">
         <div class="relative grid size-full w-140 max-w-140 items-center">
           <LolpocketDefinition>
@@ -74,7 +82,13 @@ onMounted(() => {
               size="12"
               :class="
                 cn(
-                  'pointer-events-auto w-28 justify-self-end relative hover:bgneutral  mt-3  border-b3 hover:text-nc text-2  self-end justify-self-end overflow-hidden shadow-xs transition-all duration-200',
+                  `
+                    hover:bgneutral
+                    pointer-events-auto relative mt-3 w-28 self-end
+                    justify-self-end overflow-hidden border-b3 text-2 shadow-xs
+                    transition-all duration-200
+                    hover:text-nc
+                  `,
                 )
               "
               @click="navigateTo('/login')">

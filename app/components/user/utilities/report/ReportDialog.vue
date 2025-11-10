@@ -37,8 +37,8 @@ const onSubmit = handleSubmit((values) => {
   const payload = {
     ...values,
     comment: {
-      id: comment.id,
       author_id: comment.author_id,
+      id: comment.id,
       content_text,
       created: comment.created,
     },
@@ -89,7 +89,7 @@ defineExpose({
       </DialogHeader>
 
       <form
-        class="mt-2 grid auto-rows-max gap-1 "
+        class="mt-2 grid auto-rows-max gap-1"
         @submit="onSubmit">
         <!-- option checkbox items -->
         <template
@@ -107,18 +107,23 @@ defineExpose({
         </template>
 
         <!-- separator  -->
-        <Separator class="  my-4 opacity-70" />
+        <Separator class="my-4 opacity-70" />
         <TextAreaField
           placeholder="Any comments, context, or messages to clarify the situation?"
           optional />
-        <DialogFooter class="flex w-full items-center ">
+        <DialogFooter class="flex w-full items-center">
           <TransitionScalePop
             v-if="errorBag?.options?.length"
 
-            class="text-2 text-shade-domination/8 mr-2 flex items-center gap-2 leading-none">
+            class="
+              mr-2 flex items-center gap-2 text-2 leading-none
+              text-shade-domination/8
+            ">
             <icon
               name="error"
-              class="text-shade-domination/8 inline size-4.5 align-bottom font-medium " />
+              class="
+                inline size-4.5 align-bottom font-medium text-shade-domination/8
+              " />
             <span
               v-for="reason, i in errorBag.options"
               :key="i"

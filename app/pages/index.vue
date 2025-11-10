@@ -59,14 +59,19 @@ const { stop } = useIntersectionObserver(hero, ([entry], observerElement) => {
 <template>
   <div
     ref="homeWrapper"
-    class="relative w-full overflow-x-hidden home-wrapper size-full overflow-y-scroll">
+    class="
+      home-wrapper relative size-full w-full overflow-x-hidden overflow-y-scroll
+    ">
     <Hero
       :progress="stepProgress"
       :visible="heroVisible" />
 
     <div
       ref="hero"
-      class="absolute pointer-events-none left-0 size-px overflow-hidden bg-transparent" />
+      class="
+        pointer-events-none absolute left-0 size-px overflow-hidden
+        bg-transparent
+      " />
 
     <div ref="steps">
       <LazyHomeSteps

@@ -64,7 +64,7 @@ export function useMentionTooltips(container: MaybeRef<HTMLElement | null>) {
         })
 
         Object.assign(app._context, nuxtApp.vueApp._context)
-        console.log("🌱 - useMentionTooltips - app:", app)
+        console.log('🌱 - useMentionTooltips - app:', app)
 
         entry = { app, content, mounted: false, visible }
         tooltipCache.set(node, entry)

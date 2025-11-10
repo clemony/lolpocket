@@ -11,8 +11,15 @@ const hoverClass = 'hover:bg-b2/60 inset-shadow-black/2 hover:inset-shadow-xs'
 
 <template>
   <aside
-    class="h-full max-h-[86vh] gap-8 sticky top-0 pt-15 pb-20 px-1 flex flex-col overflow-y-auto scrollbar-none relative min-w-85 max-w-85">
-    <div class="size-full *:shrink-0 flex flex-col gap-8">
+    class="
+      scrollbar-none relative sticky top-0 flex h-full max-h-[86vh] max-w-85
+      min-w-85 flex-col gap-8 overflow-y-auto px-1 pt-15 pb-20
+    ">
+    <div
+      class="
+        flex size-full flex-col gap-8
+        *:shrink-0
+      ">
       <Textarea
         placeholder="Pocket description, tips, tricks, explanations."
         class="" />

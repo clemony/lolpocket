@@ -15,7 +15,10 @@ const delegatedProps = reactiveOmit(props, 'class')
     v-bind="delegatedProps"
     :orientation="props.orientation"
     :class="cn(
-      'bg-input relative !m-0 self-stretch data-[orientation=vertical]:h-auto',
+      `
+        bg-input relative !m-0 self-stretch
+        data-[orientation=vertical]:h-auto
+      `,
       props.class,
     )" />
 </template>

@@ -4,7 +4,10 @@ const { loading, summoner } = useSummonerInject()
 
 <template>
   <div
-    class="w-124 justify-center overflow-y-auto py-24 gap-8 auto-rows-max items-start grid">
+    class="
+      grid w-124 auto-rows-max items-start justify-center gap-8 overflow-y-auto
+      py-24
+    ">
     <RankCard
       v-if="as().settings?.show_solo && !loading"
       title="Solo/Duo"

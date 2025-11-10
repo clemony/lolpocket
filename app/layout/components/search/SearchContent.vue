@@ -31,7 +31,7 @@ const groups = computed (() => {
 
 <template>
   <ComboboxList
-    :class="cn(' max-h-120', className)">
+    :class="cn('max-h-120', className)">
     <TabForTag />
 
     <ComboboxItem
@@ -43,7 +43,10 @@ const groups = computed (() => {
       <BtnLink
         size="md"
         variant="link"
-        class="capitalize shrink-0 px-3 h-8 py-1.25 justify-start font-normal size-full"
+        class="
+          size-full h-8 shrink-0 justify-start px-3 py-1.25 font-normal
+          capitalize
+        "
         :to="item.path">
         <hicon
           v-if="item.meta?.icon"
@@ -67,7 +70,10 @@ const groups = computed (() => {
         <BtnLink
           size="md"
           variant="link"
-          class="capitalize shrink-0 px-3 h-8 py-1.25 justify-start font-normal size-full"
+          class="
+            size-full h-8 shrink-0 justify-start px-3 py-1.25 font-normal
+            capitalize
+          "
           :to="item.path">
           <hicon
             v-if="item.meta?.icon"

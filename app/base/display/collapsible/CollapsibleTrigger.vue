@@ -15,7 +15,7 @@ const props = defineProps<CollapsibleTriggerProps & {
 <template>
   <CollapsibleTrigger
     v-bind="props"
-    :class="cn(' group/collapse ', collapsibleTriggerVariants({ hover, on, size, base, variant }), props.class)">
+    :class="cn('group/collapse', collapsibleTriggerVariants({ hover, on, size, base, variant }), props.class)">
     <slot />
   </CollapsibleTrigger>
 </template>

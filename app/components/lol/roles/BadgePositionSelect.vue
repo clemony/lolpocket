@@ -42,20 +42,27 @@ onMounted(() => {
     <SelectTrigger
       :class="
         cn(buttonVariants({ size, variant, hover: 'input' }),
-           'justify-start relative w-44 hover:ring hover:ring-bc/50 transition-all duration-200 fx-0 inset-shadow-xs group/s',
+           `
+             group/s relative w-44 justify-start inset-shadow-xs transition-all
+             duration-200 fx-0
+             hover:ring hover:ring-bc/50
+           `,
            className,
         )
       "
       :position="currentValue">
       <component
         :is="`i-lol-${currentValue}`"
-        :class="cn('!size-4.5 !text-bc  dst shrink-0')" />
+        :class="cn('!size-4.5 shrink-0 !text-bc dst')" />
 
       <SelectValue
         placeholder="all" />
       <icon
         name="select"
-        class="group-hover/s:!text-bc absolute right-1.5 size-4  opacity-50  group-hover/s:opacity-100" />
+        class="
+          absolute right-1.5 size-4 opacity-50
+          group-hover/s:!text-bc group-hover/s:opacity-100
+        " />
     </SelectTrigger>
     <LazySelectContent
       :side="side"
@@ -63,7 +70,10 @@ onMounted(() => {
       :align="align"
       :align-offset="alignOffset"
       position="popper"
-      class="top-[calc(var(--reka-select-trigger-height)+2px)] !w-[var(--reka-select-trigger-width)]">
+      class="
+        top-[calc(var(--reka-select-trigger-height)+2px)]
+        !w-[var(--reka-select-trigger-width)]
+      ">
       <SelectGroup>
         <SelectLabel>Select main position</SelectLabel>
         <SelectItem

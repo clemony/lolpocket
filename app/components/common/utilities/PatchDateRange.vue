@@ -11,7 +11,7 @@ const blocks = computed (() => Math.round(state.allMatches.value.length / 20))
 
 <template>
   <div
-    class="w-full flex items-center gap-2 px-3 ">
+    class="flex w-full items-center gap-2 px-3">
     <Popover>
       <PopoverTrigger
         as-child>
@@ -36,7 +36,7 @@ const blocks = computed (() => Math.round(state.allMatches.value.length / 20))
       </PopoverTrigger>
       <LazyPopoverContent
         align="start"
-        class="grid grid-cols-2 py-2 px-1 w-fit">
+        class="grid w-fit grid-cols-2 px-1 py-2">
         <Select :multiple="false">
           <Label
             for="match-select"
@@ -83,7 +83,7 @@ const blocks = computed (() => Math.round(state.allMatches.value.length / 20))
               <RangeCalendarCell
                 v-for="weekDate in weekDates"
                 :key="weekDate.toString()"
-                class="indicator w-11 group"
+                class="group indicator w-11"
                 :date="weekDate">
                 <RangeCalendarCellTrigger
 
@@ -99,7 +99,12 @@ const blocks = computed (() => Math.round(state.allMatches.value.length / 20))
                 <span
                   v-if="isToday(weekDate, getLocalTimeZone()) || isPatchDay(weekDate as CalendarDate)"
                   :class="cn(
-                    'indicator-item size-2 shadow-xs shadow-black/8  drop-shadow-xs rounded-full grid-place-items-center overflow-hidden bg-radial-[at_15%_15%]  from-10%  -translate-x-0.75 translate-y-0.75',
+                    `
+                      indicator-item grid-place-items-center size-2
+                      -translate-x-0.75 translate-y-0.75 overflow-hidden
+                      rounded-full bg-radial-[at_15%_15%] from-10% shadow-xs
+                      shadow-black/8 drop-shadow-xs
+                    `,
                     '',
 
                     {

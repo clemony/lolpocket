@@ -19,11 +19,17 @@ const query = ref<string>(null)
 
 <template>
   <menu
-    class="overflow-hidden inset-x-0 px-8 pt-11 flex flex-col gap-5 h-32 z-1 top-16 bg-b1 absolute">
+    class="
+      absolute inset-x-0 top-16 z-1 flex h-32 flex-col gap-5 overflow-hidden
+      bg-b1 px-8 pt-11
+    ">
     <div class="flex items-center gap-10">
-      <div class="flex relative items-center grow gap-6">
+      <div class="relative flex grow items-center gap-6">
         <ExpandSearch
-          class="absolute **:[&_svg]:!opacity-96 left-0 btn-neutral max-w-60"
+          class="
+            absolute left-0 max-w-60 btn-neutral
+            **:[&_svg]:!opacity-96
+          "
           @update:reset="filters.query = null">
           <input
             v-model="filters.query"
@@ -31,13 +37,16 @@ const query = ref<string>(null)
             class="size-full" />
         </ExpandSearch>
 
-        <h1 class="!text-9 tracking-tight mr-1">
+        <h1 class="mr-1 !text-9 tracking-tight">
           Champions
         </h1>
 
         <ChampionQuote
           as="p"
-          class="text-3 dst items-center pt-1 px-2 font-serif tracking-wide text-nowrap flex" />
+          class="
+            flex items-center px-2 pt-1 font-serif text-3 tracking-wide
+            text-nowrap dst
+          " />
       </div>
 
       <!--     <NumberField id="level" v-model:model-value="cs().championGridLevel" :min="1" :max="18">
@@ -58,7 +67,7 @@ const query = ref<string>(null)
       <slot />
     </div>
 
-    <div class="flex gap-12 items-center w-full"></div>
+    <div class="flex w-full items-center gap-12"></div>
     <!-- <ChampionGridTypeToggle /> -->
   </menu>
 </template>

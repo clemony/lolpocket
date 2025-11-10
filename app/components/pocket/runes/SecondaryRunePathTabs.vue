@@ -30,12 +30,19 @@ const set = computed(() => s)
       <Tabs v-model:model-value="set.primary.path">
         <TabsList
           base="indicator"
-          class="pointer-events-none absolute top-0 left-0 h-19 w-full grid-cols-5 justify-evenly border-none bg-transparent inset-shadow-none shadow-none">
+          class="
+            pointer-events-none absolute top-0 left-0 h-19 w-full grid-cols-5
+            justify-evenly border-none bg-transparent shadow-none
+            inset-shadow-none
+          ">
           <TabsTrigger
             v-for="item in paths"
             :key="`${item}-tabs`"
             :title="item"
-            class="group invisible relative aspect-square size-15 place-self-center rounded-full opacity-0"
+            class="
+              group invisible relative aspect-square size-15 place-self-center
+              rounded-full opacity-0
+            "
             :value="item" />
 
           <TabIndicator

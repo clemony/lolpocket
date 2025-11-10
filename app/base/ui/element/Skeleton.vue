@@ -10,7 +10,10 @@ const props = defineProps<SkeletonProps>()
   <div
     :class="
       cn(
-        'skeleton size-full bg-blend-screen rounded-lg bg-b3 border-b3 inset-shadow-5 inset-shadow-xs border  !opacity-40 ',
+        `
+          inset-shadow-5 size-full skeleton rounded-lg border border-b3 bg-b3
+          !opacity-40 bg-blend-screen inset-shadow-xs
+        `,
         props.class,
       )
     "

@@ -9,7 +9,10 @@ const props = defineProps<{
     position="popper"
     :class="
       cn(
-        '!w-[var(--reka-select-trigger-width)] !bg-b1/80 backdrop-blur-lg border-b2  !rounded-xl',
+        `
+          !w-[var(--reka-select-trigger-width)] !rounded-xl border-b2 !bg-b1/80
+          backdrop-blur-lg
+        `,
         props.class,
       )
     ">

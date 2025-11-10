@@ -24,7 +24,11 @@ const position = computed(() => ({
 <template>
   <TooltipProvider :delay-duration="0">
     <div
-      class="w-48 h-32 border border-dashed border-muted-foreground/30 rounded-lg flex items-center justify-center dark:text-foreground text-sm font-medium"
+      class="
+        border-muted-foreground/30 flex h-32 w-48 items-center justify-center
+        rounded-lg border border-dashed text-sm font-medium
+        dark:text-foreground
+      "
       @pointerenter="open = true"
       @pointerleave="open = false"
       @pointermove="(ev) => {
@@ -39,11 +43,15 @@ const position = computed(() => ({
         <TooltipContent
           side="top"
           :side-offset="12"
-          class="bg-card px-4 py-2 rounded-md text-sm border border-muted-foreground/30"
+          class="
+            bg-card border-muted-foreground/30 rounded-md border px-4 py-2
+            text-sm
+          "
           update-position-strategy="always">
           Following
 
-          <TooltipArrow class="fill-card stroke-muted-foreground/30 -translate-y-[1px]" />
+          <TooltipArrow
+            class="fill-card stroke-muted-foreground/30 -translate-y-[1px]" />
         </TooltipContent>
       </TooltipPortal>
     </TooltipRoot>

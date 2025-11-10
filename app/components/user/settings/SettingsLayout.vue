@@ -9,7 +9,7 @@ const route = useRoute()
 <template>
   <article class="w-full space-y-8">
     <header>
-      <h3 class="text-7 font-semibold dst capitalize">
+      <h3 class="text-7 font-semibold capitalize dst">
         {{ title || route.meta?.title || route.name }}
       </h3>
       <p

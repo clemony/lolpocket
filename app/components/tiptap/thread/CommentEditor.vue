@@ -53,13 +53,18 @@ watch(focused, (focused) => {
 <template>
   <button
     ref="target"
-    :class="cn(' group/text relative flex min-h-[80px] w-full cursor-text flex-col justify-between focus-within:ring-bc/60 transition-all duration-200 ring-transparent ring inset-shadow-xs rounded-lg border border-b3/80 p-2 text-start', props.class)"
+    :class="cn(`
+      group/text relative flex min-h-[80px] w-full cursor-text flex-col
+      justify-between rounded-lg border border-b3/80 p-2 text-start ring
+      inset-shadow-xs ring-transparent transition-all duration-200
+      focus-within:ring-bc/60
+    `, props.class)"
     @dblclick="editor?.commands.selectAll()">
     <div class="w-full grow p-2 pr-12">
       <EditorContent
         id="editor"
         :editor="editor"
-        class="text-3 mr-12 w-full grow border-0 !outline-0" />
+        class="mr-12 w-full grow border-0 text-3 !outline-0" />
       <BubbleMenu
         v-if="editor"
         :editor />
@@ -88,7 +93,10 @@ watch(focused, (focused) => {
           @click="editor.commands.undo()">
           <icon
             name="lucide:undo"
-            class="size-4 opacity-60 group-hover/button:opacity-100 " />
+            class="
+              size-4 opacity-60
+              group-hover/button:opacity-100
+            " />
         </Button>
         <Button
           variant="ghost"
@@ -99,7 +107,10 @@ watch(focused, (focused) => {
           @click="editor.commands.redo()">
           <icon
             name="lucide:redo"
-            class="size-4 opacity-60 group-hover/button:opacity-100" />
+            class="
+              size-4 opacity-60
+              group-hover/button:opacity-100
+            " />
         </Button>
       </div>
       <div class="flex items-center gap-6">

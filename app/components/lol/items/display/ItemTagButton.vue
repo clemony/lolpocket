@@ -27,7 +27,7 @@ const tagValue = computed <ItemTag>(() => {
     hover="btn"
     :size
     :as
-    :class="cn('w-fit !text-2 !font-medium  px-5 text-bc/90 capitalize ', { 'hover:**:text-bc hover:text-bc order-first text-white': active, 'pr-3': active && clear }, className)"
+    :class="cn('w-fit px-5 !text-2 !font-medium text-bc/90 capitalize', { 'hover:**:text-bc hover:text-bc order-first text-white': active, 'pr-3': active && clear }, className)"
     :style="{
       backgroundColor: `${is().filters.tags.length && is().filters.tags.includes(tagValue.id) || active ? tagValue.color : 'transparent'}`,
     }">
@@ -35,6 +35,9 @@ const tagValue = computed <ItemTag>(() => {
     <icon
       v-if="clear"
       name="x"
-      class="size-4 text-white **:stroke-[2.6] " />
+      class="
+        size-4 text-white
+        **:stroke-[2.6]
+      " />
   </Button>
 </template>

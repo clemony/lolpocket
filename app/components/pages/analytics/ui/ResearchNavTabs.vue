@@ -12,7 +12,7 @@ onMounted(() => {
     v-model:model-value="researchNav"
     class="w-full"
     @update:model-value="(e) => navigateTo(e.toString())">
-    <TabsList class="w-full grid grid-cols-2">
+    <TabsList class="grid w-full grid-cols-2">
       <TabsTrigger value="/research/champions">
         Champions
       </TabsTrigger>

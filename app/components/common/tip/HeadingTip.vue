@@ -11,7 +11,7 @@ const { class: className, heading, subheading, text } = defineProps<{
   <div :class="cn('', className)">
     <p
       v-if="subheading"
-      class="leading-none text-2 opacity-50 italic pb-0.5">
+      class="pb-0.5 text-2 leading-none italic opacity-50">
       {{ subheading }}
     </p>
     <h3 class="leading-none">

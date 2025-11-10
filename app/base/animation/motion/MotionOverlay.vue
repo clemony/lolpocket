@@ -13,6 +13,6 @@ const { show } = defineProps<{
     to="body">
     <motion.div
       v-show="show"
-      class="fixed size-full z-49 bg-black/40 top-0 left-0 pointer-events-none" />
+      class="pointer-events-none fixed top-0 left-0 z-49 size-full bg-black/40" />
   </Teleport>
 </template>

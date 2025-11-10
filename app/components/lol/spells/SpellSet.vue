@@ -21,23 +21,26 @@ function handleSpells(e, i) {
 </script>
 
 <template>
-  <div class="flex items-center gap-4 w-full">
+  <div class="flex w-full items-center gap-4">
     <LazySpellPicker
       v-for="(spell, i) in props.set"
       :key="i"
       :selected-spell="spell"
-      :class="cn('rounded-lg size-16  border-b3/60 border ', props.class)"
+      :class="cn('size-16 rounded-lg border border-b3/60', props.class)"
       @update:spell="handleSpells($event, i)" />
 
     <Grow />
 
     <button
       v-tippy="'Remove Set'"
-      class="btn trash-button group/btn btn-ghost btn-xs btn-square"
+      class="trash-button group/btn btn btn-square btn-ghost btn-xs"
       @click="removeSpellSet(pocket, props.set)">
       <icon
         name="trash"
-        class="size-5 dst shrink-0 group-hover/btn:text-bc/100 text-bc/50" />
+        class="
+          size-5 shrink-0 text-bc/50 dst
+          group-hover/btn:text-bc/100
+        " />
     </button>
   </div>
 </template>

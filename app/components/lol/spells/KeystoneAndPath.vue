@@ -20,7 +20,7 @@ const { set } = defineProps<{
         :src="`/img/runes/${set?.primary?.path}/${set?.keystone}.webp`"
         :class="
           cn(
-            '!w-14 shrink-0 absolute !justify-self-end drop-shadow-sm -right-2',
+            'absolute -right-2 !w-14 shrink-0 !justify-self-end drop-shadow-sm',
             kClass,
           )
         " />
@@ -28,7 +28,7 @@ const { set } = defineProps<{
       <Placeholder
         v-else
         :class="
-          cn('rounded-full size-11 bg-b2/80 justify-end  shrink-0', xClass)
+          cn('size-11 shrink-0 justify-end rounded-full bg-b2/80', xClass)
         "
         class="" />
     </span>
@@ -37,11 +37,11 @@ const { set } = defineProps<{
       :title="set?.secondary?.path"
       :alt="set?.secondary?.path"
       :src="`/img/paths/${set?.secondary?.path}.webp`"
-      :class="cn('w-7 drop-shadow-sm  justify-self-start ml-2', pClass)" />
+      :class="cn('ml-2 w-7 justify-self-start drop-shadow-sm', pClass)" />
     <Placeholder
       v-else
       :class="
-        cn('rounded-full size-11 bg-b2/80 shrink-0 justify-start', xClass)
+        cn('size-11 shrink-0 justify-start rounded-full bg-b2/80', xClass)
       " />
   </div>
 </template>

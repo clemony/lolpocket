@@ -15,7 +15,12 @@ const props = defineProps<{
   <div
     :class="
       cn(
-        ' text-3 items-center gap-4  flex h-12 border py-3.5 px-3 input w-full  shadow-sm drop-shadow-sm !bgneutral/85 inset-shadow-sm border-accent text-nc **:text-nc',
+        `
+          !bgneutral/85 input flex h-12 w-full items-center gap-4 border
+          border-accent px-3 py-3.5 text-3 text-nc shadow-sm inset-shadow-sm
+          drop-shadow-sm
+          **:text-nc
+        `,
         props.class,
       )
     ">
@@ -29,7 +34,10 @@ const props = defineProps<{
       :placeholder="props.placeholder"
       :class="
         cn(
-          'text-3  outline-0 ring-0 border-0 flex h-full grow text-start  hover:outline-0 hover:ring-0 hover:border-0',
+          `
+            flex h-full grow border-0 text-start text-3 ring-0 outline-0
+            hover:border-0 hover:ring-0 hover:outline-0
+          `,
           props.inputClass,
         )
       " />

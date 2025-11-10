@@ -24,7 +24,11 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
       <RangeCalendarNextButton />
     </RangeCalendarHeader>
 
-    <div class="flex flex-col gap-y-4 mt-4 sm:flex-row sm:gap-x-4 sm:gap-y-0">
+    <div
+      class="
+        mt-4 flex flex-col gap-y-4
+        sm:flex-row sm:gap-x-4 sm:gap-y-0
+      ">
       <RangeCalendarGrid
         v-for="month in grid"
         :key="month.value.toString()">
@@ -45,7 +49,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
             <RangeCalendarCell
               v-for="weekDate in weekDates"
               :key="weekDate.toString()"
-              class="indicator group"
+              class="group indicator"
               :date="weekDate">
               <RangeCalendarCellTrigger
                 :day="weekDate"
@@ -54,9 +58,20 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
               <span
                 v-if="isToday(weekDate, getLocalTimeZone())"
                 :class="cn(
-                  'indicator-item size-2 shadow-xs shadow-black/8  drop-shadow-xs rounded-full grid-place-items-center overflow-hidden bg-radial-[at_15%_15%]  from-10%  -translate-x-0.75 translate-y-0.75',
-                  'group-has-not-data-[selected]:from-neutral/30 group-has-not-data-[selected]:to-neutral',
-                  'group-has-data-[selected]:from-b1 group-has-data-[selected]:to-b4',
+                  `
+                    indicator-item grid-place-items-center size-2
+                    -translate-x-0.75 translate-y-0.75 overflow-hidden
+                    rounded-full bg-radial-[at_15%_15%] from-10% shadow-xs
+                    shadow-black/8 drop-shadow-xs
+                  `,
+                  `
+                    group-has-not-data-[selected]:from-neutral/30
+                    group-has-not-data-[selected]:to-neutral
+                  `,
+                  `
+                    group-has-data-[selected]:from-b1
+                    group-has-data-[selected]:to-b4
+                  `,
                 )">
               </span>
             </RangeCalendarCell>

@@ -23,7 +23,10 @@ definePageMeta({
         title="Data"
         description="Where the raw data on lolpockets comes from. Raw data is processed and calculated by lolpocket's own algorithms and functions.">
         <ol
-          class="list-outside list-[upper-roman] space-y-6 pl-6 leading-7 text-pretty marker:w-12 marker:justify-start marker:pr-6 marker:text-start">
+          class="
+            list-outside list-[upper-roman] space-y-6 pl-6 leading-7 text-pretty
+            marker:w-12 marker:justify-start marker:pr-6 marker:text-start
+          ">
           <li>
             <b>Riot's</b>
             public
@@ -68,7 +71,10 @@ definePageMeta({
         title="Riot Policies"
         description="About Riot data and asset usage.">
         <ol
-          class="list-outside list-[upper-roman] space-y-6 pl-6 leading-7 text-pretty marker:w-12 marker:justify-start marker:pr-6 marker:text-start">
+          class="
+            list-outside list-[upper-roman] space-y-6 pl-6 leading-7 text-pretty
+            marker:w-12 marker:justify-start marker:pr-6 marker:text-start
+          ">
           <li>
             {{ riotDisclaimer }}
           </li>

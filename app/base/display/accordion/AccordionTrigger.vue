@@ -21,7 +21,13 @@ const delegatedProps = computed(() => {
       v-bind="delegatedProps"
       :class="
         cn(
-          'flex flex-1 items-start justify-between group/acc-trigger gap-4 text-left text-3 transition-all outline-none  disabled:pointer-events-none disabled:opacity-50 [&[data-state=open]>svg]:-rotate-90 [&_svg]:transition-rotate [&_svg]:duration-250',
+          `
+            group/acc-trigger flex flex-1 items-start justify-between gap-4
+            text-left text-3 transition-all outline-none
+            [&_svg]:transition-rotate [&_svg]:duration-250
+            disabled:pointer-events-none disabled:opacity-50
+            [&[data-state=open]>svg]:-rotate-90
+          `,
           props.class,
         )
       ">
@@ -30,7 +36,7 @@ const delegatedProps = computed(() => {
       <slot name="icon">
         <icon
           name="left"
-          class="dst size-5 mx-4" />
+          class="mx-4 size-5 dst" />
       </slot>
     </AccordionTrigger>
   </AccordionHeader>

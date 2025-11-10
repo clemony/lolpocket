@@ -2,7 +2,7 @@ import type { SizeColumnsToContentStrategy, SizeColumnsToFitGridStrategy, SizeCo
 
 export type { MotionValue } from 'motion-v'
 
-export type { UUID } from 'crypto'
+export type { UUID } from 'node:crypto'
 export type { AcceptableValue, PrimitiveProps } from 'reka-ui'
 
 export type AutoSizeStrategy

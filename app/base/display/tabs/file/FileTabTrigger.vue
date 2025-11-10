@@ -24,7 +24,11 @@ const forwarded = useForwardProps(delegatedProps)
     }"
     :class="
       cn(
-        'tab data-[state=active]:tab-active text-2 font-medium  *:text-nowrap *:flex-nowrap gap-2 !border-b-transparent',
+        `
+          data-[state=active]:tab-active
+          tab gap-2 !border-b-transparent text-2 font-medium
+          *:flex-nowrap *:text-nowrap
+        `,
         props.class,
       )
     ">

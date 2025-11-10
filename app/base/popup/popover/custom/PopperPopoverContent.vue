@@ -73,17 +73,29 @@ const wrapperVariants = {
           v-bind="{ forwarded }"
           :class="
             cn(
-              'z-50 w-max h-max rounded-xl border  backdrop-blur-lg drop-shadow-md !border-black-30  bg-black-22/94 not-[.icon]:text-white/80 **:not-[&_.icon]:**:text-white/80  shadow-md outline-none group-data-[state=visible]:**:opacity-100 group-data-[state=hidden]:**:opacity-0',
+              `
+                z-50 h-max w-max rounded-xl border !border-black-30
+                bg-black-22/94 shadow-md drop-shadow-md backdrop-blur-lg
+                outline-none
+                **:not-[&_.icon]:**:text-white/80
+                not-[.icon]:text-white/80
+                group-data-[state=hidden]:**:opacity-0
+                group-data-[state=visible]:**:opacity-100
+              `,
             )
           ">
-          <PopoverArrow class="!text-black/80 **:!text-black/80 icon translate-y-0.25" />
+          <PopoverArrow
+            class="
+              icon translate-y-0.25 !text-black/80
+              **:!text-black/80
+            " />
 
           <motion.div
             :variants="wrapperVariants"
             initial="hidden"
             animate="visible"
             exit="hidden"
-            :class="cn('size-full p-4  overflow-y-auto', props.class)"
+            :class="cn('size-full overflow-y-auto p-4', props.class)"
             class=""
             :transition="{
               type: 'spring',

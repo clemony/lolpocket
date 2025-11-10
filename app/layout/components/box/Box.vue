@@ -19,7 +19,7 @@ const today = new Date()
 
 <template>
   <div class="flex h-full flex-col">
-    <div class="flex items-center px-2 h-16">
+    <div class="flex h-16 items-center px-2">
       <div class="flex items-center gap-2">
         <!-- pin -->
 
@@ -31,7 +31,10 @@ const today = new Date()
               :disabled="!mail">
               <icon
                 name="pin"
-                class="size-4.75 **:stroke-[2]" />
+                class="
+                  size-4.75
+                  **:stroke-[2]
+                " />
               <span class="sr-only">Pin</span>
             </Button>
           </TooltipTrigger>
@@ -204,7 +207,7 @@ const today = new Date()
       class="flex flex-1 flex-col">
       <div class="flex items-start p-4">
         <div class="flex items-start gap-4 text-2">
-          <PocketIcon class="size-17 rounded-full aspect-square" />
+          <PocketIcon class="aspect-square size-17 rounded-full" />
           <div class="grid gap-1">
             <div class="font-semibold">
               {{ mail.name }}
@@ -225,7 +228,7 @@ const today = new Date()
         </div>
       </div>
       <Separator />
-      <div class="flex-1 whitespace-pre-wrap p-4 text-2">
+      <div class="flex-1 p-4 text-2 whitespace-pre-wrap">
         {{ mail.text }}
       </div>
       <Separator class="mt-auto" />

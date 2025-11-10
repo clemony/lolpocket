@@ -6,7 +6,7 @@ const props = defineProps<{
 
 <template>
   <button
-    class="btn rounded-md btn-sm shadow-sm size-6 btn-square"
+    class="btn btn-square size-6 rounded-md shadow-sm btn-sm"
     :class="cn('relative', props.class)">
     <icon
       name="qlementine-icons:shuffle-16"

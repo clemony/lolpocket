@@ -16,7 +16,12 @@ const forwarded = useForwardProps(delegatedProps)
     v-bind="forwarded"
     :class="
       cn(
-        'flex h-7 px-2 items-center rounded-md  data-[state=active]:ring-ring btn data-[state=active]:ring-2 data-[state=active]:ring-offset-2  font-medium ring-offset-background',
+        `
+          data-[state=active]:ring-ring data-[state=active]:ring-2
+          data-[state=active]:ring-offset-2
+          ring-offset-background btn flex h-7 items-center rounded-md px-2
+          font-medium
+        `,
         props.class,
       )
     ">

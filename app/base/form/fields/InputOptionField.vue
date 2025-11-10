@@ -35,7 +35,10 @@ function onBlur() {}
       size="auto"
       hover="outline"
       variant="ghost"
-      class="hover:fx-1 hover:!border-b3/50 hover:bg-b2/40 w-full border border-transparent py-2">
+      class="
+        w-full border border-transparent py-2
+        hover:!border-b3/50 hover:bg-b2/40 hover:fx-1
+      ">
       <FormItem class="w-full">
         <FormLabel class="flex w-full cursor-pointer items-center gap-2">
           <!-- Checkbox -->
@@ -49,12 +52,15 @@ function onBlur() {}
                 @update:model-value="handleCheck($event)" />
             </FormControl>
 
-            <span class="text-bc font-semibold">
+            <span class="font-semibold text-bc">
               {{ option.name }}
             </span>
           </div>
 
-          <InputGroup :class="cn('h-11 !bg-b1 items-center gap-4 relative flex grow self-center')">
+          <InputGroup
+            :class="cn(`
+              relative flex h-11 grow items-center gap-4 self-center !bg-b1
+            `)">
             <FormControl as-child>
               <InputGroupInput
                 ref="inputRef"
@@ -71,7 +77,7 @@ function onBlur() {}
                     @input="e => handleChange({ ...value, reason: e.target.value })" 'ring ring-domination': reasonError } */     -->
             <FormMessage
               v-if="errorMessage"
-              class="text-domination absolute z-10" />
+              class="absolute z-10 text-domination" />
             <InputGroupClear
               type="button"
               @clear:input="componentField.modelValue = null" />
@@ -79,10 +85,10 @@ function onBlur() {}
             <InputGroupAddon
               v-tippy="{ content: h('p', { class: 'max-w-42 text-pretty' }, 'Description required if option is selected.'), theme: errorMessage ? 'error' : 'neutral', placement: 'right' }"
               align="inline-end"
-              class=" !pointer-events-auto !z-2 !cursor-help">
+              class="!pointer-events-auto !z-2 !cursor-help">
               <icon
                 name="error"
-                :class="cn('text-bc/30 size-5', { 'text-domination': errorMessage })" />
+                :class="cn('size-5 text-bc/30', { 'text-domination': errorMessage })" />
             </InputGroupAddon>
           </InputGroup>
         </FormLabel>

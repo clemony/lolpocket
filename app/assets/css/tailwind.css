@@ -18,7 +18,6 @@
 @import './ag-grid/index.css';
 @import './components/index.css';
 
-
 @layer base {
   :root {
     font-size: 12px;

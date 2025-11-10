@@ -19,7 +19,7 @@ const forwarded = useForwardPropsEmits(props, emits)
     <DrawerContent
       v-bind="forwarded"
       :class="cn(
-        'fixed z-50  border border-b3 bg-b1 overflow-hidden',
+        'fixed z-50 overflow-hidden border border-b3 bg-b1',
 
         {
           'mt-24 rounded-t-[10px] bottom-0': side === 'bottom',
@@ -36,9 +36,9 @@ const forwarded = useForwardPropsEmits(props, emits)
 
       <div
         v-else
-        class="h-full grid  items-center">
+        class="grid h-full items-center">
         <div
-          class="my-auto   w-2 h-[100px]  rounded-full bg-b3/60"
+          class="my-auto h-[100px] w-2 rounded-full bg-b3/60"
           :class="{ 'ml-4': side === 'right' }" />
       </div>
 

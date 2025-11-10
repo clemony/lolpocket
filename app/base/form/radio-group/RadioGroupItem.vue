@@ -16,7 +16,10 @@ const forwarded = useForwardProps(delegatedProps)
     v-bind="forwarded"
     :class="
       cn(
-        'aspect-square size-5 rounded-full  disabled:cursor-not-allowed disabled:opacity-50',
+        `
+          aspect-square size-5 rounded-full
+          disabled:cursor-not-allowed disabled:opacity-50
+        `,
         props.class,
       )
     ">
@@ -24,7 +27,7 @@ const forwarded = useForwardProps(delegatedProps)
       <slot>
         <icon
           name="codicon:circle-filled"
-          class="size-5.25 -mt-px text-neutral" />
+          class="-mt-px size-5.25 text-neutral" />
       </slot>
     </RadioGroupIndicator>
   </RadioGroupItem>

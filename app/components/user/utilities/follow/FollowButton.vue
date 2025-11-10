@@ -37,13 +37,18 @@ watch(() => isFollowed.value, (newVal) => {
     as-child>
     <Button
       v-tippy="{ content: isFollowed ? 'Unfollow' : `Follow ${summoner.name}?`, placement, arrow: false, theme: 'base' }"
-      :class="cn('group/follow  grid place-items-center ', props.class)">
+      :class="cn('group/follow grid place-items-center', props.class)">
       <slot>
         <icon
           name="heart-fill"
           :class="
             cn(
-              ' !size-4.5 group-hover/follow:opacity-100  text-domination/70   in-data-[state=on]:grayscale-0 in-data-[state=on]:opacity-100 opacity-40 grayscale absolute transition-all duration-100  dst ',
+              `
+                absolute !size-4.5 text-domination/70 opacity-40 dst grayscale
+                transition-all duration-100
+                group-hover/follow:opacity-100
+                in-data-[state=on]:opacity-100 in-data-[state=on]:grayscale-0
+              `,
               isFollowed ? 'animate-heartbeat' : '',
             )
           " />

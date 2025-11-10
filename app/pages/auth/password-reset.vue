@@ -49,7 +49,10 @@ function handleReset() {
               variant="link"
               size="12"
               hover="link"
-              class="underline-offset-1.5 h-14 w-full justify-center gap-3 justify-self-start"
+              class="
+                underline-offset-1.5 h-14 w-full justify-center gap-3
+                justify-self-start
+              "
               @click="navigateTo('/login')">
               Remembered it? Log in
             </Button>

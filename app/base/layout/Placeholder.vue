@@ -20,7 +20,10 @@ const { as = 'label', class: className } = defineProps<
     v-bind="$attrs"
     :class="
       cn(
-        'group/placeholder pointer-events-none size-full items-center justify-center gap-2 self-center aspect-square btn btn-square !p-0 ',
+        `
+          group/placeholder btn pointer-events-none aspect-square btn-square
+          size-full items-center justify-center gap-2 self-center !p-0
+        `,
         labelVariants({ variant, size, hover }),
         className,
       )

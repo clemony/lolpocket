@@ -18,10 +18,10 @@ watchEffect(() => {
 <template>
   <Popover v-model:open="isOpen">
     <PopoverTrigger
-      class="btn btn-neutral flex items-center btn-square relative">
+      class="btn relative flex btn-square items-center btn-neutral">
       <icon
         name="search-bold"
-        class="text-nc shrink-0 size-4.5 -mt-px" />
+        class="-mt-px size-4.5 shrink-0 text-nc" />
 
       <StatusIndicator
         v-if="hasData"
@@ -30,14 +30,19 @@ watchEffect(() => {
 
     <CustomPopoverContent
       class=""
-      :class="cn('w-140 rounded-lg h-130  p-0', props.class)"
+      :class="cn('h-130 w-140 rounded-lg p-0', props.class)"
       align="end"
       :side-offset="2"
       side="bottom"
       @open-auto-focus.prevent>
       <ItemSearch
         placeholder="Type or click a suggestion"
-        class="w-full rounded-t-lg z-2 sticky top-0 left-0 shadow-none h-13 [&_svg]:size-4 **:!text-nc !bg-accent border-neutral/30 border-4"
+        class="
+          sticky top-0 left-0 z-2 h-13 w-full rounded-t-lg border-4
+          border-neutral/30 !bg-accent shadow-none
+          **:!text-nc
+          [&_svg]:size-4
+        "
         set-focus
         @update:query="(e) => e" />
 
@@ -48,14 +53,14 @@ watchEffect(() => {
           <Separator class="bg-accent mt-3 mb-3 " />
           <LazyItemCommandTags />
         </div> -->
-        <div class="relative overflow-hidden size-full h-117">
+        <div class="relative size-full h-117 overflow-hidden">
           <div
             as="div"
-            class="absolute top-0 left-0 inset-0 overflow-y-scroll">
+            class="absolute inset-0 top-0 left-0 overflow-y-scroll">
             <div>
               <LazyItemCommandTypes />
 
-              <Separator class="bg-accent mt-3 mb-1.5" />
+              <Separator class="mt-3 mb-1.5 bg-accent" />
 
               <LazyItemCommandStats />
             </div>

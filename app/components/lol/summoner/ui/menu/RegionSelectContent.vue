@@ -9,7 +9,7 @@ const { class: className } = defineProps<{
 <template>
   <LazySelectContent
     align="end"
-    :class="cn('w-64 rounded-lg -translate-y-0.5 p-0  h-100', className)">
+    :class="cn('h-100 w-64 -translate-y-0.5 rounded-lg p-0', className)">
     <!--  <SelectArrow /> -->
 
     <SelectLabel class="px-4 opacity-50">
@@ -23,7 +23,7 @@ const { class: className } = defineProps<{
         :key="region"
         :value="region"
         class="flex items-center gap-3 py-1.5 text-nowrap">
-        <SelectItemText class="text-3 truncate">
+        <SelectItemText class="truncate text-3">
           <span class="italic">
             {{ regionIndex[region] }}
           </span>

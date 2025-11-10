@@ -29,7 +29,12 @@ const tabPaddingX = useTransform(sticky, [0, 1], ['3.5rem', '1.6rem'])
     role="tablist"
     :style="{ gap, opacity, translateX }"
     :class="cn(
-      'relative h-15 w-fit !border-b-0 **:text-2 *:select-none justify-start self-end items-end z-3 flex transition-none',
+      `
+        relative z-3 flex h-15 w-fit items-end justify-start self-end
+        !border-b-0 transition-none
+        *:select-none
+        **:text-2
+      `,
     )">
     <motion.button
       v-for="item in childRoutes.sort((a, b) => a.meta?.order - b.meta?.order)"
@@ -41,7 +46,11 @@ const tabPaddingX = useTransform(sticky, [0, 1], ['3.5rem', '1.6rem'])
         paddingRight: tabPaddingX,
       }"
       :class="cn(
-        'group/tab origin-bottom tabs tabs-lift tabs-lg pointer-events-auto grow transition-none cursor-pointer w-max self-start min-w-22 !border-b-0 relative flex items-start self-end',
+        `
+          group/tab pointer-events-auto tabs-lift relative tabs flex w-max
+          min-w-22 grow origin-bottom cursor-pointer items-start self-end
+          self-start !border-b-0 tabs-lg transition-none
+        `,
         {
           grow: stickyRaw.get() <= 0.5,
         },
@@ -50,7 +59,9 @@ const tabPaddingX = useTransform(sticky, [0, 1], ['3.5rem', '1.6rem'])
       <FakeTab />
 
       <div
-        :class="cn('absolute origin-bottom !border-b-0  left-0 !bottom-0  tab w-full grow', {
+        :class="cn(`
+          tab absolute !bottom-0 left-0 w-full grow origin-bottom !border-b-0
+        `, {
           ' ': stickyRaw.get() > 0.5,
           'bg-b1/90': stickyRaw.get() > 0.5 && item.name === route.name,
           'tab-active': item.name === route.name,
@@ -58,7 +69,12 @@ const tabPaddingX = useTransform(sticky, [0, 1], ['3.5rem', '1.6rem'])
 
       <motion.div
         :class="cn(
-          ' text-2 h-10 z-3 capitalize  font-medium text-bc/90 flex-nowrap justify-center items-center w-full grow flex font-semibold transition-[opacity,transform]  duration-100 ease-out group-hover/tab:underline',
+          `
+            z-3 flex h-10 w-full grow flex-nowrap items-center justify-center
+            text-2 font-medium font-semibold text-bc/90 capitalize
+            transition-[opacity,transform] duration-100 ease-out
+            group-hover/tab:underline
+          `,
           {
             'opacity-60': item.name !== route.name,
             'opacity-100': item.name === route.name,

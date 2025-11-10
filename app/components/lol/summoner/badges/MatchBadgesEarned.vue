@@ -5,7 +5,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="grid grid-cols-2 w-full">
+  <div class="grid w-full grid-cols-2">
     <icon name="hugeicons:wanted" />
     highest bounty
     <icon name="mynaui:click" />
@@ -44,7 +44,7 @@ const props = defineProps<{
 
       <icon
         name="arcticons:shadow-fight-2"
-        class="stroke-3 size-7" />
+        class="size-7 stroke-3" />
     </div>
     killing spree
 

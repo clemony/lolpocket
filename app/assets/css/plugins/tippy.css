@@ -5,6 +5,9 @@
 @import 'tippy.js/animations/shift-toward-subtle.css';
 @import 'tippy.js/animations/shift-toward.css';
 
+.tippy-content {
+  @apply bg-transparent;
+}
 @utility tippy-box {
   @apply border !z-60 w-auto max-w-80 rounded-field backdrop-blur-md  drop-shadow-[1px_1px_2px_#0000006] shadow-md;
 
@@ -23,22 +26,21 @@
       @apply p-0 max-w-none;
     }
   }
-  &[data-theme~='sidebar']{
-@apply !my-0  fixed !p-0 border-l-black border-r max-h-screen   !-top-15 !left-0 rounded-r-xl !min-w-110 w-110 shadow-none drop-shadow-md  drop-shadow-black/9 border-l-0 border-b3  border-y-1 ;
+  &[data-theme~='sidebar'] {
+    @apply !my-0  fixed !p-0 border-l-black border-r max-h-screen   !-top-15 !left-0 rounded-r-xl !min-w-110 w-110 shadow-none drop-shadow-md  drop-shadow-black/9 border-l-0 border-b3  border-y-1;
 
-.tippy-content{
-  @apply !p-0 !m-0 !h-screen  w-full left-0 top-0;
-}
+    .tippy-content {
+      @apply !p-0 !m-0 !h-screen  w-full left-0 top-0;
+    }
   }
 
-  &[data-theme~='sidebar-dropdown']{
-  @apply h-fit max-h-46    -translate-y-20 translate-x-1 ;
-}
+  &[data-theme~='sidebar-dropdown'] {
+    @apply h-fit max-h-46    -translate-y-20 translate-x-1;
+  }
 
   .tippy-content&:not-[data-theme='neutral-0']&:not-[data-theme='base-0'] {
     @apply px-3 py-1 text-2  whitespace-pre inline-block font-medium **:text-2;
   }
-
 
   &[data-placement='bottom'] > .tippy-svg-arrow,
   &[data-placement='top'] > .tippy-svg-arrow,

@@ -35,11 +35,16 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
       <SelectTrigger as-child>
         <Button
           variant="ghost"
-          class="overflow-hidden relative *:transition-scale *:duration-300 size-20 hover:*:scale-110  grid place-items-center   **:pointer-events-none ">
+          class="
+            *:transition-scale *:duration-300
+            relative grid size-20 place-items-center overflow-hidden
+            **:pointer-events-none
+            hover:*:scale-110
+          ">
           <icon
             v-if="!pocket?.main?.champion"
             name="lp:champ"
-            class="text-bc/20 size-10" />
+            class="size-10 text-bc/20" />
           <ChampionIcon
             v-else
             v-memo="[pocket.main?.champion]"
@@ -56,12 +61,12 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
       :reference="trigger"
       :align
       :side
-      class="p-0 w-[var(--reka-select-trigger-width)]  min-w-54">
+      class="w-[var(--reka-select-trigger-width)] min-w-54 p-0">
       <div class="flex gap-3">
         <ChampionIcon
           :k="pocket.main?.champion"
           class="size-12" />
-        <div class=" flex gap-1 flex-col k">
+        <div class="k flex flex-col gap-1">
           <h3
             v-memo="[pocket.main?.champion]"
             :class="cn('truncate leading-7', {
@@ -73,7 +78,7 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
 
           <p
             v-memo="[pocket.main?.champion]"
-            :class="cn('text-3 truncate italic leading-none', {
+            :class="cn('truncate text-3 leading-none italic', {
               'font-medium': pocket.main?.champion,
               '!font-normal  opacity-20': !pocket.main?.champion,
             })">
@@ -84,7 +89,7 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
       <SelectItem
         v-for="champion in pocket.champions"
         :key="champion"
-        class="*:flex *:gap-3 *:items-center"
+        class="*:flex *:items-center *:gap-3"
         :value="champion">
         <ChampionIcon
           :k="champion"

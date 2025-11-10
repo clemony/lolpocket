@@ -45,7 +45,7 @@ function deleteTag(tag: string) {
       <Collapsible
         v-model:open="as().toggles.backpack.tags"
         :disabled="false"
-        :class="cn(' px-3 pb-3 space-y-1', paddingClass)">
+        :class="cn('space-y-1 px-3 pb-3', paddingClass)">
         <CollapsibleTrigger as-child>
           <Button
             as="button"
@@ -53,7 +53,10 @@ function deleteTag(tag: string) {
             class="w-full"
             size="md">
             <span
-              class="text-4 grow font-semibold tracking-normal capitalize opacity-40 duration-0">
+              class="
+                grow text-4 font-semibold tracking-normal capitalize opacity-40
+                duration-0
+              ">
               Tags
             </span>
             <CaretRotate />
@@ -67,7 +70,10 @@ function deleteTag(tag: string) {
             <div
               v-for="item in ps().tags"
               :key="item"
-              class="group/tag grid !h-9 w-full grid-cols-[1fr_min-content] items-center justify-self-start p-0 pr-2">
+              class="
+                group/tag grid !h-9 w-full grid-cols-[1fr_min-content]
+                items-center justify-self-start p-0 pr-2
+              ">
               <!-- list item -->
               <ListboxItem
                 as-child
@@ -78,7 +84,11 @@ function deleteTag(tag: string) {
                   variant="ghost"
                   :class="
                     cn(
-                      'size-full px-3 duration-0 hover:bg-b2/60 !gap-px items-center justify-start hover:inset-shadow-none rounded-lg text-bc/80 hover:text-bc',
+                      `
+                        size-full items-center justify-start !gap-px rounded-lg
+                        px-3 text-bc/80 duration-0
+                        hover:bg-b2/60 hover:text-bc hover:inset-shadow-none
+                      `,
                       { 'btn-active !bg-b2/20': tags.includes(item) },
                     )
                   ">
@@ -95,7 +105,11 @@ function deleteTag(tag: string) {
               <Button
                 v-tippy="'Delete Tag'"
                 variant="ghost"
-                class="btn-square not-hover:**:text-bc/60 h-9 opacity-0 duration-0 group-hover/tag:opacity-100"
+                class="
+                  btn-square h-9 opacity-0 duration-0
+                  not-hover:**:text-bc/60
+                  group-hover/tag:opacity-100
+                "
                 @click="deleteTag(item)">
                 <icon name="x-sm" />
               </Button>
@@ -107,8 +121,13 @@ function deleteTag(tag: string) {
             as="div"
             variant="base"
             hover="outline"
-            class="focus-within:border-neutral/60 group text-2 flex w-full flex-nowrap items-center !gap-3 justify-self-center px-3 py-0 duration-0 focus-within:[&_input]:placeholder:opacity-0">
-            <span class="bg-b1 z-1 grid h-full w-4.5 place-items-center">
+            class="
+              group flex w-full flex-nowrap items-center !gap-3
+              justify-self-center px-3 py-0 text-2 duration-0
+              focus-within:border-neutral/60
+              focus-within:[&_input]:placeholder:opacity-0
+            ">
+            <span class="z-1 grid h-full w-4.5 place-items-center bg-b1">
               <icon
                 name="tag"
                 class="size-4.5 opacity-50" />
@@ -116,7 +135,10 @@ function deleteTag(tag: string) {
             <input
               v-model="newTag"
               placeholder="create new tag..."
-              class="h-full w-full grow rounded-none transition-all duration-300 placeholder:italic"
+              class="
+                h-full w-full grow rounded-none transition-all duration-300
+                placeholder:italic
+              "
               @keydown.enter="
                 () => {
                   ;(ps().tags.push(newTag), (newTag = ''))
@@ -126,7 +148,10 @@ function deleteTag(tag: string) {
             <Button
               variant="ghost"
               size="8"
-              class="btn-square size-6 duration-0 group-has-[:placeholder-shown]:opacity-0"
+              class="
+                btn-square size-6 duration-0
+                group-has-[:placeholder-shown]:opacity-0
+              "
               @click="newTag = ''">
               <icon name="x-sm" />
             </Button>

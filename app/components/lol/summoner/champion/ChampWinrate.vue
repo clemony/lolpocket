@@ -9,7 +9,7 @@ const a = computed(() => {
 </script>
 
 <template>
-  <div class="relative size-15 grid place-items-center rounded-lg">
+  <div class="relative grid size-15 place-items-center rounded-lg">
     <DonutSkeleton class="absolute size-15" />
 
     <div
@@ -20,7 +20,7 @@ const a = computed(() => {
         'color': getColorFromVariable(`--color-${getAbsoluteColor(a)}`),
       }"
       role="progressbar">
-      <span class="text-bc !text-1 font-medium dst">
+      <span class="!text-1 font-medium text-bc dst">
         {{ a.toFixed(1).replace(".0", "") }}%
       </span>
     </div>

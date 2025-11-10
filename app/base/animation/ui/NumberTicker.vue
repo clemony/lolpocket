@@ -70,7 +70,7 @@ watch(
 <template>
   <span
     ref="spanRef"
-    :class="cn('inline-block tabular-nums text-bc ', props.class)">
+    :class="cn('inline-block text-bc tabular-nums', props.class)">
     {{ output }}
   </span>
 </template>

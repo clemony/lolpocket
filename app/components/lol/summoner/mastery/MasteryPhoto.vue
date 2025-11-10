@@ -19,14 +19,17 @@ const level = computed(() =>
   <SplashCard
     :alt="name"
     :skin-url="getSplash(ix().champKeyById(id), 'tile')"
-    class="pb-0.5 group/photo">
+    class="group/photo pb-0.5">
     <template #banner>
       <Img
         :img="`/img/mastery/banner/crest-and-banner-mastery-${level}.webp`"
         :alt="level.toString()"
         :class="
           cn(
-            'size-17 absolute z-4 drop-shadow-sm drop-shadow-black/20  -top-1.5 right-0',
+            `
+              absolute -top-1.5 right-0 z-4 size-17 drop-shadow-sm
+              drop-shadow-black/20
+            `,
           )
         " />
     </template>
@@ -39,31 +42,32 @@ const level = computed(() =>
     </template> -->
 
     <div
-      class="size-full relative flex flex-col h-12 justify-center overflow-hidden pb-1 *:leading-none px-0.75 pt-0.25">
+      class="
+        relative flex size-full h-12 flex-col justify-center overflow-hidden
+        px-0.75 pt-0.25 pb-1
+        *:leading-none
+      ">
       <div class="flex items-end gap-1.5">
         <h2
-          class="font-semibold dst text-5">
+          class="text-5 font-semibold dst">
           {{ name }}
         </h2>
 
         <span
-          class="
-          text-2
-          pb-px
-          tracking-tight
-          font-medium
-          flex
-          items-end">
+          class="flex items-end pb-px text-2 font-medium tracking-tight">
           lv.&thinsp;{{ champion?.level ?? 0 }}
         </span>
       </div>
 
-      <div class="text-nowrap h-3 items-center">
-        <p class="text-1 flex gap-1 items-center absolute font-medium">
+      <div class="h-3 items-center text-nowrap">
+        <p class="absolute flex items-center gap-1 text-1 font-medium">
           <span
-            class="size-4 relative overflow-hidden rounded-full dst shadow-sm">
+            class="relative size-4 overflow-hidden rounded-full shadow-sm dst">
             <i-lol-cm-mastery-token
-              class="size-full scale-105 grid place-items-center absolute object-center" />
+              class="
+                absolute grid size-full scale-105 place-items-center
+                object-center
+              " />
           </span>
           {{ champion?.points?.toLocaleString() ?? 0 }}
         </p>

@@ -30,8 +30,8 @@ export const reportSchema = v.object({
 
   //
   comment: v.object({
-    comment_id: v.pipe(v.string(), v.uuid()),
     author_id: v.pipe(v.string(), v.uuid()),
+    comment_id: v.pipe(v.string(), v.uuid()),
     reporter_id: v.pipe(v.string(), v.uuid()),
     content_text: v.optional(
       v.pipe(v.string(), v.minLength(1, 'Comment content cannot be empty.'))

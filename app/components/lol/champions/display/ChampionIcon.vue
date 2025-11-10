@@ -32,7 +32,10 @@ function onLoad() {
 <template>
   <Element
     :as
-    :class="cn('overflow-hidden shrink-0 shadow-sm aspect-square  place-items-center grid   drop-shadow-sm rounded-lg', className)">
+    :class="cn(`
+      grid aspect-square shrink-0 place-items-center overflow-hidden rounded-lg
+      shadow-sm drop-shadow-sm
+    `, className)">
     <StaticImg
       :img="`/img/champions/${champId}.webp`"
       :alt="title || alt || `Champion ${champId} icon`"

@@ -20,14 +20,19 @@ const bg = computed (() => `url('${img(i.replace('tile', 'centered'), { quality:
   <!--  translate-x-[30%] -->
   <div
     :class="cn(
-      'absolute dss -top-16   bg-tint-b2/30 w-screen  isolate',
+      'absolute -top-16 isolate w-screen bg-tint-b2/30 dss',
       {
         'h-120': size === 'header',
         'h-[90vh]': size === 'full',
       })">
     <div
       :class="cn(
-        'size-full grid-rows-1 flex flex-nowrap pointer-events-none -right-4 top-0 bottom-32  before:size-full before:absolute before:z-1 before:bg-linear-to-r before:from-bg-tint-b2/60 before:to-transparent relative',
+        `
+          before:from-bg-tint-b2/60 before:absolute before:z-1 before:size-full
+          before:bg-linear-to-r before:to-transparent
+          pointer-events-none relative top-0 -right-4 bottom-32 flex size-full
+          grid-rows-1 flex-nowrap
+        `,
         {
           'mask-l-from-20% mask-l-to-66% before:from-0% before:to-75% ': slice,
           'mask-l-from-30% mask-l-to-70% before:from-45% before:to-75%': !slice,
@@ -44,7 +49,10 @@ const bg = computed (() => `url('${img(i.replace('tile', 'centered'), { quality:
         }"
         :class="
           cn(
-            'size-full -scale-x-100 z-0  duration-100 -translate-x-[30%] bg-fixed bg-no-repeat w-[36%]  bg-auto  blur-sm',
+            `
+              z-0 size-full w-[36%] -translate-x-[30%] -scale-x-100 bg-auto
+              bg-fixed bg-no-repeat blur-sm duration-100
+            `,
           )
         " />
 
@@ -55,10 +63,17 @@ const bg = computed (() => `url('${img(i.replace('tile', 'centered'), { quality:
         }"
         :class="
           cn(
-            'size-full col-start-2 w-80% mask-l-from-98% z-0 bg-cover bg-fixed  contrast-110 grayscale-10 duration-100 bg-fixed bg-no-repeat min-w-7xl  ',
+            `
+              w-80% z-0 col-start-2 size-full min-w-7xl mask-l-from-98% bg-cover
+              bg-fixed bg-no-repeat contrast-110 grayscale-10 duration-100
+            `,
           )
         " />
-      <div class="size-full absolute z-1 from-transparent scale-x-104 scale-y-230 bg-radial-[at_80%_50%] to-b2 via-b2/60 via-42% from-24% to-60% " />
+      <div
+        class="
+          absolute z-1 size-full scale-x-104 scale-y-230 bg-radial-[at_80%_50%]
+          from-transparent from-24% via-b2/60 via-42% to-b2 to-60%
+        " />
     </div>
   </div>
 </template>

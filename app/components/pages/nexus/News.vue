@@ -6,7 +6,7 @@
 </script>
 
 <template>
-  <div class="flex py-10 overflow-x-auto">
+  <div class="flex overflow-x-auto py-10">
     <PatchNotesNews />
   </div>
 </template>

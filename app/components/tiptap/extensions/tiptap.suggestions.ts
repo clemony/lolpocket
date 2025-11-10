@@ -1,7 +1,7 @@
-//@fixme probably fix
+// @fixme probably fix
 
 import { EmojiList, MentionLeagueFilter } from '#components'
-// @ts-ignore
+// @ts-expect-error import module
 import { computePosition, flip, shift } from '@floating-ui/dom'
 import { posToDOMRect, VueRenderer } from '@tiptap/vue-3'
 

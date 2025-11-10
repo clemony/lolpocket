@@ -18,13 +18,22 @@ const emit = defineEmits(['update:path'])
 <template>
   <TabsTrigger
     :value="value"
-    class="rounded-full relative group aspect-square size-15 place-self-center disabled:pointer-events-none shrink-0"
+    class="
+      group relative aspect-square size-15 shrink-0 place-self-center
+      rounded-full
+      disabled:pointer-events-none
+    "
     :class="cn('', className)">
-    <div class="size-full relative grid place-items-center">
+    <div class="relative grid size-full place-items-center">
       <img
         :src="`/img/paths/${value}.webp`"
         :alt="`${value} icon`"
-        class="z-10 h-9 w-auto absolute brightness-90 grayscale transition-all duration-300 dst shrink-0 group-data-[state=active]:grayscale-0 group-data-[state=active]:brightness-100" />
+        class="
+          absolute z-10 h-9 w-auto shrink-0 brightness-90 dst grayscale
+          transition-all duration-300
+          group-data-[state=active]:brightness-100
+          group-data-[state=active]:grayscale-0
+        " />
     </div>
 
     <slot />

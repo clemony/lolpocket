@@ -31,7 +31,11 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
   <SheetPortal>
     <SheetOverlay />
     <DialogContent
-      :class="cn('max-h-screen h-screen bg-b1/92 backdrop-blur-md !p-0 focus:ring-0 focus:ring-offset-0 focus:outline-0 outline-0 border border-x-b3 shadow-warm-soft', sheetVariants({ side }), props.class)"
+      :class="cn(`
+        h-screen max-h-screen border border-x-b3 bg-b1/92 !p-0 shadow-warm-soft
+        outline-0 backdrop-blur-md
+        focus:ring-0 focus:ring-offset-0 focus:outline-0
+      `, sheetVariants({ side }), props.class)"
       v-bind="{ ...forwarded, ...$attrs }"
       @open-auto-focus.prevent>
       <slot />

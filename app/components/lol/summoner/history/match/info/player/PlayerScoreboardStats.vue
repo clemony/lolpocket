@@ -13,25 +13,35 @@ const heal = computed(() => {
 
 <template>
   <div
-    class="p-1 h-full max-w-24 w-24 mx-1 **:leading-none *:text-1 *:tracking-tight font-medium">
+    class="
+      mx-1 h-full w-24 max-w-24 p-1 font-medium
+      *:text-1 *:tracking-tight
+      **:leading-none
+    ">
     <tippy
-      class="flex gap-2 items-center hover:underline text-nowrap truncate"
+      class="
+        flex items-center gap-2 truncate text-nowrap
+        hover:underline
+      "
       content-class="py-1 space-y-1 w-32 *:w-full *:flex *:tracking-tight *:text-2">
-      <span class="size-3 relative grid justify-center">
+      <span class="relative grid size-3 justify-center">
         <icon
           name="el:fire"
-          class="text-domination dst absolute size-3.25" />
+          class="absolute size-3.25 text-domination dst" />
       </span>
       {{ player.totalDamageDealtToChampions.toLocaleString() }}
     </tippy>
 
     <tippy
-      class="flex gap-2 mt-2.25 items-center hover:underline text-nowrap truncate"
+      class="
+        mt-2.25 flex items-center gap-2 truncate text-nowrap
+        hover:underline
+      "
       content-class="py-1 space-y-1 w-32 *:w-full *:flex *:tracking-tight *:text-2">
-      <span class="size-3 relative grid justify-center">
+      <span class="relative grid size-3 justify-center">
         <icon
           name="oi:plus"
-          class="text-inspiration dst size-2.75" />
+          class="size-2.75 text-inspiration dst" />
       </span>
       {{ Math.round(heal).toLocaleString() }}
 
@@ -54,12 +64,15 @@ const heal = computed(() => {
     </tippy>
 
     <div
-      class="flex gap-2.25 mt-2 items-center hover:underline text-nowrap truncate"
+      class="
+        mt-2 flex items-center gap-2.25 truncate text-nowrap
+        hover:underline
+      "
       content-class="py-1 space-y-1 w-32 *:w-full *:flex *:tracking-tight *:text-2">
-      <span class="size-3 relative grid justify-center">
+      <span class="relative grid size-3 justify-center">
         <icon
           name="ph:shield-fill"
-          class="!text-[#C2A76E] dst size-3.25" />
+          class="size-3.25 !text-[#C2A76E] dst" />
       </span>
       {{ Math.round(player.totalDamageTaken).toLocaleString() }}
     </div>

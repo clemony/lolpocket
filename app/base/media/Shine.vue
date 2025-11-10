@@ -11,22 +11,33 @@ const { isOutside } = useMouseInElement(target)
     ref="target"
     :class="
       cn(
-        ' rounded-full flex shadow-sm justify-center items-center   border border-transparent',
+        `
+          flex items-center justify-center rounded-full border
+          border-transparent shadow-sm
+        `,
         props.class,
       )
     ">
     <div
       :class="
         cn(
-          'group  flex rounded-full justify-center items-center relative  overflow-hidden',
+          `
+            group relative flex items-center justify-center overflow-hidden
+            rounded-full
+          `,
           props.class,
         )
       ">
       <slot />
 
       <div
-        class="absolute top-0 -translate-x-[150%] h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white/40 group-hover:translate-x-full opacity-0 group-hover:opacity-100 transition-all duration-400"
-        :class="{ 'opacity-0 hidden': isOutside }" />
+        class="
+          absolute top-0 z-5 block h-full w-1/2 -translate-x-[150%] -skew-x-12
+          transform bg-gradient-to-r from-transparent to-white/40 opacity-0
+          transition-all duration-400
+          group-hover:translate-x-full group-hover:opacity-100
+        "
+        :class="{ 'hidden opacity-0': isOutside }" />
     </div>
   </label>
 </template>

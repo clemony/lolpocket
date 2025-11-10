@@ -11,12 +11,15 @@ const winrateDiff = computed(() => {
 <template>
   <!--     <NoDataOverlay v-if="!summoner.simplifiedMatches.length" /> -->
 
-  <div class="stats border-shadow-sm w-210 h-34">
+  <div class="border-shadow-sm stats h-34 w-210">
     <div class="stat items-center">
       <div class="stat-figure">
         <div
-          class="size-8 leading-none tracking-wide font-mono font-bold relative grid place-items-center">
-          <span class="text-9 object-center absolute object-center right-1.5">
+          class="
+            relative grid size-8 place-items-center font-mono leading-none
+            font-bold tracking-wide
+          ">
+          <span class="absolute right-1.5 object-center text-9">
             S+
           </span>
         </div>
@@ -38,10 +41,13 @@ const winrateDiff = computed(() => {
     <div class="stat">
       <div class="stat-figure text-secondary">
         <div
-          class="size-8 leading-none tracking-wider !font-black relative grid place-items-center">
+          class="
+            relative grid size-8 place-items-center leading-none !font-black
+            tracking-wider
+          ">
           <icon
             name="teenyicons:heart-circle-solid"
-            class="size-8 text-bc -mt-0.5 dst" />
+            class="-mt-0.5 size-8 text-bc dst" />
         </div>
       </div>
 
@@ -63,8 +69,11 @@ const winrateDiff = computed(() => {
     <div class="stat">
       <div class="stat-figure text-secondary">
         <div
-          class="avatar online shadow-md drop-shadow-sm rounded-full size-16 relative grid place-items-center">
-          <div class="size-20 absolute rounded-full overflow-hidden">
+          class="
+            online avatar relative grid size-16 place-items-center rounded-full
+            shadow-md drop-shadow-sm
+          ">
+          <div class="absolute size-20 overflow-hidden rounded-full">
             <ChampionIcon
               :id="champion.championId"
               :alt="champion.champion"

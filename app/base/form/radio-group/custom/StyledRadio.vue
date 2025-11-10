@@ -14,15 +14,15 @@ onMounted(() => {
 
 <template>
   <label
-    class="flex gap-4 py-2 cursor-pointer items-center"
+    class="flex cursor-pointer items-center gap-4 py-2"
     :class="{ '**:text-nc': props.contrast, 'text-bc': !props.contrast }">
     <input
       v-model="model"
       type="radio"
-      class="radio radio-xs !bg-transparent outline"
+      class="radio !bg-transparent radio-xs outline"
       :class="{
-        'outline-nc checked:text-nc **:text-nc border-nc': props.contrast,
-        'outline-bc checked:text-bc **:text-bc border-bc': !props.contrast,
+        'border-nc outline-nc **:text-nc checked:text-nc': props.contrast,
+        'border-bc outline-bc **:text-bc checked:text-bc': !props.contrast,
       }"
       :value="props.value"
       :checked="model === props.value" />

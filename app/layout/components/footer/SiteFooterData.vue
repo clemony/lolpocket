@@ -23,14 +23,21 @@ const links = computed (() =>
     class=""
     :class="
       cn(
-        'h-26 bg-neutral max-h-26 flex min-h-26 w-full footer sm:footer-horizontal bgneutral text-nc gap-12 items-center p-6 z-0 ',
+        `
+          bgneutral z-0 footer flex h-26 max-h-26 min-h-26 w-full items-center
+          gap-12 bg-neutral p-6 text-nc
+          sm:footer-horizontal
+        `,
         className,
       )
     ">
     <aside class="flex grow items-center gap-5">
       <button
         title="home"
-        class="aspect-square cursor-pointer p-3 decoration-3 underline-offset-4 hover:underline">
+        class="
+          aspect-square cursor-pointer p-3 decoration-3 underline-offset-4
+          hover:underline
+        ">
         <h1 class="text-10 font-bold">
           LP
         </h1>
@@ -47,17 +54,24 @@ const links = computed (() =>
         class="flex items-center gap-1.5">
         <NuxtLink
           :to="link.path"
-          class="text-1 font-medium underline-offset-2 hover:underline">
+          class="
+            text-1 font-medium underline-offset-2
+            hover:underline
+          ">
           {{ link.meta?.title || link.name }}
         </NuxtLink>
         <icon
           v-if="i + 1 !== links.length"
           name="slash"
-          class="text-nc size-4 opacity-70" />
+          class="size-4 text-nc opacity-70" />
       </li>
     </ul>
     <menu
-      class="shrink-0 grid-flow-col grid-cols-3 items-center justify-end gap-4 justify-self-end *:grid *:place-items-center">
+      class="
+        shrink-0 grid-flow-col grid-cols-3 items-center justify-end gap-4
+        justify-self-end
+        *:grid *:place-items-center
+      ">
       <NuxtLink
         v-for="link in contactLinks"
         :key="link.name"
@@ -65,7 +79,10 @@ const links = computed (() =>
         external
         :to="link.link"
         target="_blank"
-        class="*:text-nc grid place-items-center">
+        class="
+          grid place-items-center
+          *:text-nc
+        ">
         <icon
           :name="link.icon.name"
           :class="link.icon.class" />
@@ -78,20 +95,23 @@ const links = computed (() =>
         @click="copy()">
         <icon
           name="teenyicons:at-outline"
-          class="text-nc size-6 shrink-0 stroke-1/2" />
+          class="size-6 shrink-0 stroke-1/2 text-nc" />
 
         <template #content>
           <div class="flex flex-col gap-1 p-2">
-            <span class="text-3 badge badge-neutral -mx-2 italic">
+            <span class="-mx-2 badge badge-neutral text-3 italic">
               contact@lolpocket.win
             </span>
 
-            <span class="text-1 flex items-center gap-1">
+            <span class="flex items-center gap-1 text-1">
               {{ !copied ? "Click @ to Copy" : "Copied!" }}
 
               <icon
                 name="copy"
-                class="*:text-nc !size-3.5" />
+                class="
+                  !size-3.5
+                  *:text-nc
+                " />
             </span>
           </div>
         </template>

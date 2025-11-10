@@ -11,16 +11,24 @@ const mainSet = computed(() =>
 <template>
   <VarSelectTrigger
     variant="ghost"
-    class="overflow-hidden size-max relative grid place-items-center   **:pointer-events-none ">
+    class="
+      relative grid size-max place-items-center overflow-hidden
+      **:pointer-events-none
+    ">
     <RuneAndPathImg
 
       placement="left"
       variant="ghost"
-      :class="cn('group/btn  fx-0 z-10  rounded-full !cursor-pointer !pointer-events-auto **:pointer-events-none size-20  hover:shadow-sm hover:shadow-black/4')"
+      :class="cn(`
+        group/btn !pointer-events-auto z-10 size-20 !cursor-pointer rounded-full
+        fx-0
+        **:pointer-events-none
+        hover:shadow-sm hover:shadow-black/4
+      `)"
       :set="mainSet" />
 
     <icon
       name="select"
-      class=" size-4 absolute right-1.5" />
+      class="absolute right-1.5 size-4" />
   </VarSelectTrigger>
 </template>

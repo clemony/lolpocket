@@ -31,7 +31,11 @@ function openInfo(rune: number) {}
 
 <template>
   <div
-    class="field-box relative flex w-full flex-col items-center justify-center gap-y-16 rounded-xl pt-12 pb-16 transition-all duration-500 **:select-none">
+    class="
+      field-box relative flex w-full flex-col items-center justify-center
+      gap-y-16 rounded-xl pt-12 pb-16 transition-all duration-500
+      **:select-none
+    ">
     <template v-if="runes">
       <div
         v-for="(slot, i) in runes.slots.filter((r) => r.tier !== 0)"
@@ -48,7 +52,7 @@ function openInfo(rune: number) {}
           <Rune
             :id="rune.id"
             :class="
-              cn('grayscale  cursor-pointer opacity-75 ', {
+              cn('cursor-pointer opacity-75 grayscale', {
                 'opacity-100 scale-110 grayscale-0 opacity-94':
                   currentSet.includes(rune.id),
               })

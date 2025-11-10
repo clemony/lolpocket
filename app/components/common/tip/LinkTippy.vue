@@ -26,7 +26,10 @@ const { class: className, content, hover, size = 'md', to, variant = 'link' } = 
 
       <icon
         name="link-2"
-        class="size-4.5 **:stroke-[2]" />
+        class="
+          size-4.5
+          **:stroke-[2]
+        " />
     </Button>
   </div>
 </template>

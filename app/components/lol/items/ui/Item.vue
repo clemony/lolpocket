@@ -16,7 +16,10 @@ const {
     :as
     :class="
       cn(
-        'rounded-lg shrink-0  relative bg-b2 overflow-hidden grid place-items-center aspect-square', { ' shadow-warm-soft shadow-sm shadow-black/30  drop-shadow-sm ': id },
+        `
+          relative grid aspect-square shrink-0 place-items-center
+          overflow-hidden rounded-lg bg-b2
+        `, { ' shadow-warm-soft shadow-sm shadow-black/30  drop-shadow-sm ': id },
 
         className,
       )

@@ -37,7 +37,11 @@ watch(items, (newItemSets) => {
 </script>
 
 <template>
-  <div class="overflow-x-visble inset-0 flex min-h-fit min-w-146 flex-col gap-8 pt-1 pb-33">
+  <div
+    class="
+      overflow-x-visble inset-0 flex min-h-fit min-w-146 flex-col gap-8 pt-1
+      pb-33
+    ">
     <div
       v-draggable="[
         pocket.items,
@@ -61,7 +65,7 @@ watch(items, (newItemSets) => {
         },
       ]"
       group
-      class="z-0   flex w-full flex-col gap-8 pt-6">
+      class="z-0 flex w-full flex-col gap-8 pt-6">
       <!-- <div class="absolute bottom-2 right-3 opacity-0 group-hover/set:opacity-40 tldr-30 hover:opacity-100  handle">
           <icon name="ph:arrows-out-line-vertical" class="rotate-180 size-5 shrink-0" />
         </div> -->
@@ -76,7 +80,7 @@ watch(items, (newItemSets) => {
 
     <Button
       variant="outline"
-      class="border-b3/40 h-22 w-full rounded-xl"
+      class="h-22 w-full rounded-xl border-b3/40"
       @click="pocket.items.push(newItemSet())">
       <icon
         name="add"

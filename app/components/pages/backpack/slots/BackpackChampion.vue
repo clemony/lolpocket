@@ -17,7 +17,7 @@ const champion = computed(() => {
 <template>
   <h1
     v-if="champion"
-    class="!text-7 font-serif grow opacity-90 dst font-bold pb-3">
+    class="grow pb-3 font-serif !text-7 font-bold opacity-90 dst">
     <!--     {{ champion.key }} -->
   </h1>
 </template>

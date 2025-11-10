@@ -15,7 +15,7 @@ const spells = computed(() => {
 </script>
 
 <template>
-  <div class="flex gap-1.5 opacity-50 justify-end self-start">
+  <div class="flex justify-end gap-1.5 self-start opacity-50">
     <img
       v-for="spell in spells"
       :key="spell"

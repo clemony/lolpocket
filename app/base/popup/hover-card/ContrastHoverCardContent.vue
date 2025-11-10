@@ -4,7 +4,10 @@ import { motion } from 'motion-v'
 
 <template>
   <HoverCardContent
-    class="bgneutral/85 border-accent backdrop-blur-md **:text-nc p-2 **:text-2 **:justify-start **:font-normal"
+    class="
+      bgneutral/85 border-accent p-2 backdrop-blur-md
+      **:justify-start **:text-2 **:font-normal **:text-nc
+    "
     as-child>
     <motion.div :transition="{ type: 'spring' }">
       <slot />

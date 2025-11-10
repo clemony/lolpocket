@@ -70,7 +70,7 @@ watch([query, tag, selectedRegion], runSearch) */
     v-model:model-value="query"
     type="text"
     placeholder="Search..."
-    :class="cn('field-sizing-content relative flex w-auto min-w-36 grow peer', className)"
+    :class="cn('peer relative flex field-sizing-content w-auto min-w-36 grow', className)"
     @update:model-value="e => query = e"
     @clear:input="clear()">
     <icon

@@ -17,7 +17,7 @@ console.log('💠 - text:', text)
   <span
     v-if="text"
     :class="
-      cn('antialiased lowercase flex items-center leading-0 ', className)
+      cn('flex items-center leading-0 lowercase antialiased', className)
     ">
     <slot />
     {{ text ?? null }}

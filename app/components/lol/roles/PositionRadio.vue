@@ -10,12 +10,17 @@ const props = defineProps<{
   <Field
     class=""
     :class="{
-      'w-full !justify-between !flex py-2 !px-4 gap-2.5 ': props.class,
+      '!flex w-full !justify-between gap-2.5 !px-4 py-2': props.class,
     }">
     <label
       v-for="position in positions"
       :key="position"
-      class="btn btn-ghost rounded-[0.85rem] hover:bg-b3/40 btn-square has-checked:!btn-neutral has-checked:bgneutral">
+      class="
+        has-checked:bgneutral
+        btn btn-square rounded-[0.85rem] btn-ghost
+        hover:bg-b3/40
+        has-checked:!btn-neutral
+      ">
       <input
         v-model="ms().filter.role"
         name="research-positions"
@@ -23,10 +28,13 @@ const props = defineProps<{
         class="peer hidden"
         value="all" />
 
-      <span class="w-8.5 flex items-center justify-center">
+      <span class="flex w-8.5 items-center justify-center">
         <component
           :is="`i-roles-${position.replace(' ', '-')}`"
-          class="h-5 w-auto dst shrink-0 peer-checked:text-nc" />
+          class="
+            h-5 w-auto shrink-0 dst
+            peer-checked:text-nc
+          " />
       </span>
     </label>
   </Field>

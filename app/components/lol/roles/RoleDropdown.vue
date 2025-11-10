@@ -14,17 +14,23 @@ const pocket = ref(props.pocket)
     <DropdownMenuTrigger as-child>
       <Button
         variant="ghost"
-        class="flex aspect-square rounded-lg px-1 top-1.5 right-2 hover:bgneutral/50 size-10">
+        class="
+          hover:bgneutral/50
+          top-1.5 right-2 flex aspect-square size-10 rounded-lg px-1
+        ">
         <component
           :is="`i-roles-${pocket.roles}`"
           v-if="pocket.roles"
           :key="pocket.roles"
           v-tippy="pocket.roles"
-          class="size-6.5 drop-shadow-text focus:outline-0 shrink-0 !text-3 text-white/70" />
+          class="
+            drop-shadow-text size-6.5 shrink-0 !text-3 text-white/70
+            focus:outline-0
+          " />
 
         <i-roles-all-lanes
           v-else
-          class="size-6 shrink-0 dst text-white/80" />
+          class="size-6 shrink-0 text-white/80 dst" />
       </Button>
     </DropdownMenuTrigger>
 
@@ -35,19 +41,25 @@ const pocket = ref(props.pocket)
       <DropdownMenuItem>
         <label
           for="all"
-          class="flex gap-4 text-2 hover:!bg-b2/60">
+          class="
+            flex gap-4 text-2
+            hover:!bg-b2/60
+          ">
           <input
             id="all"
             v-model="pocket.roles"
             type="radio"
-            class="hidden peer"
+            class="peer hidden"
             value="all"
             checked="true"
             @change="console.log(pocket.roles)" />
 
           <icon
             name="tick-sm"
-            class="size-5 opacity-0 peer-checked:opacity-100" />
+            class="
+              size-5 opacity-0
+              peer-checked:opacity-100
+            " />
           All
         </label>
       </DropdownMenuItem>
@@ -60,18 +72,24 @@ const pocket = ref(props.pocket)
         class="">
         <label
           :for="role"
-          class="flex gap-4 text-2 hover:!bg-b2/60">
+          class="
+            flex gap-4 text-2
+            hover:!bg-b2/60
+          ">
           <input
             :id="role"
             v-model="pocket.roles[0]"
             type="radio"
-            class="hidden peer"
+            class="peer hidden"
             :value="role"
             @change="console.log(pocket.roles)" />
 
           <icon
             name="tick-sm"
-            class="size-5 opacity-0 peer-checked:opacity-100" />
+            class="
+              size-5 opacity-0
+              peer-checked:opacity-100
+            " />
           {{ role }}
         </label>
       </DropdownMenuItem>

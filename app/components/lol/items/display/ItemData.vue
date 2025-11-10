@@ -24,9 +24,16 @@ watchEffect(async () => {
 <template>
   <div
     v-if="item"
-    class="flex max-h-[404px] max-w-90 flex-col justify-self-center overflow-hidden px-4 py-3 **:select-text">
-    <div class="flex h-fit gap-4 ">
-      <div class="aspect-square !size-14 shrink-0 rounded-lg shadow-sm drop-shadow-sm ">
+    class="
+      flex max-h-[404px] max-w-90 flex-col justify-self-center overflow-hidden
+      px-4 py-3
+      **:select-text
+    ">
+    <div class="flex h-fit gap-4">
+      <div
+        class="
+          aspect-square !size-14 shrink-0 rounded-lg shadow-sm drop-shadow-sm
+        ">
         <Item
           v-if="item"
           :id="item.id"
@@ -34,8 +41,8 @@ watchEffect(async () => {
           class="!size-full overflow-hidden rounded-lg" />
       </div>
 
-      <div class="text-4 flex  w-full flex-col">
-        <div class=" flex items-center justify-between  gap-1">
+      <div class="flex w-full flex-col text-4">
+        <div class="flex items-center justify-between gap-1">
           <BtnLink
             v-if="item.name"
             external
@@ -43,18 +50,18 @@ watchEffect(async () => {
             :to="getWikiLink(item.name)"
             target="_blank"
             size="8"
-            class="text-4 h-7 font-bold"
+            class="h-7 text-4 font-bold"
             :title="`Official LoL Wiki - ${item.name}`">
             <h4 class="leading-4">
               {{ item.name }}
             </h4>
             <icon
               name="link-lg"
-              class="dst size-3.75" />
+              class="size-3.75 dst" />
           </BtnLink>
         </div>
 
-        <div class="flex gap-1 ">
+        <div class="flex gap-1">
           <div v-if="item.rank">
             {{ item.rank }}
           </div>
@@ -63,7 +70,7 @@ watchEffect(async () => {
 
           <div
             v-if="item && item.shop?.prices?.total"
-            class="text-3 flex items-end gap-1 font-medium ">
+            class="flex items-end gap-1 text-3 font-medium">
             <Img
               img="/img/icons/gold-coin.webp"
               alt="coin"
@@ -80,7 +87,7 @@ watchEffect(async () => {
       </div>
     </div>
 
-    <div class="    relative flex    flex-col overflow-y-auto ">
+    <div class="relative flex flex-col overflow-y-auto">
       <div
         v-if="item.stats && Object.entries(item.stats).length"
         class="pt-2 pb-1">
@@ -91,7 +98,7 @@ watchEffect(async () => {
 
       <div v-if="item.passives?.length && item.noEffects !== true">
         <Separator
-          class=" mt-2 mb-2 !bg-white opacity-10" />
+          class="mt-2 mb-2 !bg-white opacity-10" />
         <ItemEffect
           v-for="(passive, i) in item.passives"
           :key="i"
@@ -101,7 +108,7 @@ watchEffect(async () => {
 
       <div v-if="item.active?.[0] && item.noEffects !== true">
         <Separator
-          class=" mt-2 mb-2 !bg-white opacity-10 " />
+          class="mt-2 mb-2 !bg-white opacity-10" />
         <ItemEffect
           :data="item.active[0]"
           type="Active" />

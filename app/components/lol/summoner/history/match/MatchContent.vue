@@ -16,13 +16,20 @@ const modelValue = ref<string | number>('Scoreboard')
   <AnimatePresence>
     <LazyCollapsibleContent
       v-if="isOpen"
-      class="'CollapsibleContent relative h-200 group w-220 max-w-220 translate-x-0 transition duration-0 **:select-none text-2 p-0">
+      class="
+        'CollapsibleContent group relative h-200 w-220 max-w-220 translate-x-0
+        p-0 text-2 transition duration-0
+        **:select-none
+      ">
       <Tabs
         v-model:model-value="modelValue"
         class="relative">
         <TabsList
           base="indicator"
-          class="grid-flow-col rounded-none justify-start auto-cols-min w-full bg-b3/36 border border-b3 !mb-0">
+          class="
+            !mb-0 w-full auto-cols-min grid-flow-col justify-start rounded-none
+            border border-b3 bg-b3/36
+          ">
           <TabsTrigger
             v-for="tab in ['Scoreboard', 'Data', 'Badges']"
             :key="tab"
@@ -36,7 +43,7 @@ const modelValue = ref<string | number>('Scoreboard')
 
         <TabsContent
           value="Scoreboard"
-          class="p-0 !m-0">
+          class="!m-0 p-0">
           <LazyMatchScoreboard :match="match" />
         </TabsContent>
 

@@ -25,7 +25,11 @@ function getBadgeVariantFromLabel(label: string) {
     :key="item.id"
     :class="
       cn(
-        'flex flex-col items-start gap-2 rounded-lg border p-3 text-left text-2 transition-all hover:bg-b2/50',
+        `
+          flex flex-col items-start gap-2 rounded-lg border p-3 text-left text-2
+          transition-all
+          hover:bg-b2/50
+        `,
         selected === item.id && 'bg-b2/30',
       )
     "

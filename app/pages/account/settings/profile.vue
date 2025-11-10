@@ -28,9 +28,9 @@ async function onSubmit(values: any) {
 
 <template>
   <form
-    class="space-y-12 w-full"
+    class="w-full space-y-12"
     @submit="onSubmit">
-    <fieldset class="space-y-6 mb-10 w-full">
+    <fieldset class="mb-10 w-full space-y-6">
       <div class="leading-4">
         <Label
           as="legend"
@@ -50,7 +50,7 @@ async function onSubmit(values: any) {
       <div class="leading-4">
         <Label
           as="legend"
-          class="text-5 font-semibold mb-2">Title</Label>
+          class="mb-2 text-5 font-semibold">Title</Label>
         <p class="label text-wrap">
           Display a title from an earned Badge.
         </p>
@@ -61,11 +61,11 @@ async function onSubmit(values: any) {
       <div class="leading-4">
         <Label
           as="legend"
-          class="text-5 font-semibold mb-2">
+          class="mb-2 text-5 font-semibold">
           Hide Profile Elements
         </Label>
 
-        <p class="label text-wrap inline">
+        <p class="label inline text-wrap">
           Hide what you don't want to see from
           <i>yourself</i>
           . This will not hide elements publically, but if you really think
@@ -76,7 +76,7 @@ async function onSubmit(values: any) {
         <label :class="labelClass">
           <h5>Profile Header & Splash</h5>
 
-          <p class="flex gap-4 mt-2 items-center font-medium italic">
+          <p class="mt-2 flex items-center gap-4 font-medium italic">
             lies
             <Switch
               v-model:model-value="as().settings.show_solo"
@@ -86,7 +86,7 @@ async function onSubmit(values: any) {
         <h5>Ranked Solo/Duo</h5>
 
         <label :class="labelClass">
-          <p class="flex gap-4 mt-2 items-center font-medium italic">
+          <p class="mt-2 flex items-center gap-4 font-medium italic">
             {{ as().settings.show_solo ? "Visible" : "Hidden" }}
             <Switch
               v-model:model-value="as().settings.show_solo"
@@ -97,7 +97,7 @@ async function onSubmit(values: any) {
         <label :class="labelClass">
           <h5>Ranked Flex</h5>
 
-          <p class="flex gap-4 mt-2 items-center font-medium italic">
+          <p class="mt-2 flex items-center gap-4 font-medium italic">
             {{ as().settings.show_flex ? "Visible" : "Hidden" }}
             <Switch
               v-model:model-value="as().settings.show_flex"
@@ -108,7 +108,7 @@ async function onSubmit(values: any) {
         <label :class="labelClass">
           <h5>Ally Filters</h5>
 
-          <p class="flex gap-4 mt-2 items-center font-medium italic">
+          <p class="mt-2 flex items-center gap-4 font-medium italic">
             {{ as().settings.show_allies ? "Visible" : "Hidden" }}
             <Switch
               v-model:model-value="as().settings.show_allies"

@@ -16,7 +16,14 @@ async function handleItem(e) {
 <template>
   <ItemCommand @update:item="handleItem($event)">
     <button
-      class="size-20 group/b hover:ring hover:ringneutral/40 rounded-lg ring-offset-2 hover:ring-offset-b1 data-[state=open]:ringneutral/40 data-[state=open]:ring data-[state=open]:ring-offset-b1">
+      class="
+        group/b
+        hover:ringneutral/40
+        data-[state=open]:ringneutral/40
+        size-20 rounded-lg ring-offset-2
+        hover:ring hover:ring-offset-b1
+        data-[state=open]:ring data-[state=open]:ring-offset-b1
+      ">
       <!--       <LazyItem
         v-if="item.name"
         :id="item.id"

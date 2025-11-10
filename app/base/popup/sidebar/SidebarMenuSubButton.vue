@@ -27,8 +27,18 @@ const props = withDefaults(
     :data-active="isActive"
     :class="
       cn(
-        'text-bc ring-bc/60 ring hover:bg-b3 hover:text-sidebar-bc on:bg-b3 on:text-sidebar-bc [&>svg]:text-sidebar-bc flex h-7 min-w-0 -translate-x-px items-center gap-2 overflow-hidden rounded-md px-2 outline-hidden focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0',
-        'data-[active=true]:bg-b3 data-[active=true]:text-sidebar-bc',
+        `
+          hover:text-sidebar-bc hover:bg-b3
+          on:text-sidebar-bc on:bg-b3
+          [&>svg]:text-sidebar-bc [&>svg]:size-4 [&>svg]:shrink-0
+          flex h-7 min-w-0 -translate-x-px items-center gap-2 overflow-hidden
+          rounded-md px-2 text-bc ring ring-bc/60 outline-hidden
+          focus-visible:ring-2
+          disabled:pointer-events-none disabled:opacity-50
+          aria-disabled:pointer-events-none aria-disabled:opacity-50
+          [&>span:last-child]:truncate
+        `,
+        'data-[active=true]:text-sidebar-bc data-[active=true]:bg-b3',
         size === 'sm' && 'text-2',
         size === 'md' && 'text-3',
         'group-data-[collapsible=icon]:hidden',

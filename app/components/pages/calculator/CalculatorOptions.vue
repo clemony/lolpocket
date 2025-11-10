@@ -1,17 +1,20 @@
 <script lang="ts" setup></script>
 
 <template>
-  <div class="grid grid-rows-4 h-fit gap-6 w-70">
-    <div class="w-full h-14 rounded-xl border-b3 px-5">
+  <div class="grid h-fit w-70 grid-rows-4 gap-6">
+    <div class="h-14 w-full rounded-xl border-b3 px-5">
       <input
         type="text"
         aria-label="save item set as..."
         placeholder="Save set as..."
-        class="size-full placeholder:font-mono dst" />
+        class="
+          size-full dst
+          placeholder:font-mono
+        " />
     </div>
 
     <div class="">
-      <button class="btn btn-xl btn-square">
+      <button class="btn btn-square btn-xl">
         <icon name="add" />
       </button>
     </div>

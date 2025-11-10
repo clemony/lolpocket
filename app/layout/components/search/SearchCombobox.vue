@@ -17,7 +17,13 @@ const query = ref('')
         class="input"
         :class="
           cn(
-            'flex size-full focus-within:ring-offset-1 items-center focus-within:ring-offset-b2 focus-within:!border-transparent focus:!border-transparent relative w-full items-center py-0 has-[&_input]:placeholder-shown:*:last:opacity-0 group',
+            `
+              group relative flex size-full w-full items-center py-0
+              focus-within:!border-transparent focus-within:ring-offset-1
+              focus-within:ring-offset-b2
+              focus:!border-transparent
+              has-[&_input]:placeholder-shown:*:last:opacity-0
+            `,
             className,
           )
         ">

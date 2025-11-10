@@ -14,19 +14,30 @@ const {
 </script>
 
 <template>
-  <div class="group  w-full">
+  <div class="group w-full">
     <tippy
       placement="top-start"
       theme="blur"
       :content="h(StatTip, { stat })"
       :offset="[-6, -3]"
       :arrow="false"
-      class="flex h-11 w-full flex-nowrap  items-center  justify-between !gap-3 **:whitespace-nowrap">
-      <span :class="cn('text-nowrap font-medium text-start group-hover:underline underline-offset-2 text-2  lowercase')">
+      class="
+        flex h-11 w-full flex-nowrap items-center justify-between !gap-3
+        **:whitespace-nowrap
+      ">
+      <span
+        :class="cn(`
+          text-start text-2 font-medium text-nowrap lowercase underline-offset-2
+          group-hover:underline
+        `)">
         {{ stat.abbr[1] || stat.abbr || stat.name }}
       </span>
 
-      <div class="**:!text-3 **:text-bc opacity-80   **:inline-block  **:font-semibold **:tabular-nums">
+      <div
+        class="
+          opacity-80
+          **:inline-block **:!text-3 **:font-semibold **:text-bc **:tabular-nums
+        ">
         <NumberTicker
           v-if="stat?.values.current && stat?.id !== 'criticalStrikeDamage'"
           :value="Number(stat?.values.current)">

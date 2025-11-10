@@ -29,17 +29,17 @@ console.log('💠 - is().calculatorSets:', is().calculatorSet)
     direction="horizontal">
     <ResizablePanel
       :default-size="50"
-      class="size-full relative pt-26 flex flex-col">
+      class="relative flex size-full flex-col pt-26">
       <Collapsible
         group
         :offset="{ enter: [0, 16], leave: [0, 16] }"
-        class="basis-1 grid items-center p-14">
+        class="grid basis-1 items-center p-14">
         <div class="relative">
           <CalculatorSet
             :num="1"
             :set="is().calculatorSet" />
           <CollapsibleTrigger
-            class="absolute right-0 top-0 btn btn-square btn-ghost">
+            class="btn absolute top-0 right-0 btn-square btn-ghost">
             hi
           </CollapsibleTrigger>
         </div>
@@ -57,7 +57,7 @@ console.log('💠 - is().calculatorSets:', is().calculatorSet)
     <ResizableHandle />
 
     <ResizablePanel
-      class="flex justify-center h-full relative pt-8 overflow-y-auto">
+      class="relative flex h-full justify-center overflow-y-auto pt-8">
       <DraggableItemList />
     </ResizablePanel>
   </ResizablePanelGroup>

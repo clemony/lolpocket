@@ -13,7 +13,10 @@ const props = defineProps<{
     class="input"
     :class="
       cn(
-        'relative max-w-100 items-center has-[&_input]:placeholder-shown:*:last:opacity-0',
+        `
+          relative max-w-100 items-center
+          has-[&_input]:placeholder-shown:*:last:opacity-0
+        `,
         props.class,
       )
     ">
@@ -27,7 +30,10 @@ const props = defineProps<{
 
     <button
       v-bind="$attrs"
-      class="btn btn-ghost btn-square btn-sm absolute transition-all duration-200 right-2">
+      class="
+        btn absolute right-2 btn-square btn-ghost transition-all duration-200
+        btn-sm
+      ">
       <icon
         name="x-sm"
         class="" />

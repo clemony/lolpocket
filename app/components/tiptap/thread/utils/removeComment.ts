@@ -40,8 +40,8 @@ function removeComment(list: CommentSchema[], id: string) {
         },
         created: comment.created,
         downvotes: comment.downvotes,
-        updated: comment.updated,
         removed: true,
+        updated: comment.updated,
         upvotes: comment.upvotes,
       }
 
@@ -53,7 +53,7 @@ function removeComment(list: CommentSchema[], id: string) {
       return true
     }
     /* @fixme sb call */
-   /*  if (comment.replies?.length) {
+    /*  if (comment.replies?.length) {
       const found = removeComment(comment.replies, id)
       if (found)
         return true

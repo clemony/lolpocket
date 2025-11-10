@@ -20,7 +20,7 @@ const { class: className, summoner } = defineProps<{
     <template #title>
       <SummonerName
         as="h1"
-        class="text-bc/94 font-serif text-[2.6rem] leading-none drop-shadow-sm" />
+        class="font-serif text-[2.6rem] leading-none text-bc/94 drop-shadow-sm" />
     </template>
 
     <!-- header sub-text -->

@@ -42,12 +42,16 @@ onMounted (() => {
     v-slot="{ open }"
     :default-open="!!comment.author_id"
     :disabled="!hasReplies"
-    :class="cn('z-auto pt-2  pb-2  h-max ', { ' ml-12': depth })">
+    :class="cn('z-auto h-max pt-2 pb-2', { ' ml-12': depth })">
     <!-- child trigger -->
 
     <CollapsibleTrigger
       v-if="!hasReplies && depth"
-      :class="cn('border-b-b3 hover:border-shade-b3/20  pointer-events-none  absolute -z-1 z-1 grid h-7 w-8 -translate-x-7  border-b', { '!border-shade-b3/20': parentHovered })"
+      :class="cn(`
+        pointer-events-none absolute -z-1 grid h-7 w-8 -translate-x-7 border-b
+        border-b-b3
+        hover:border-shade-b3/20
+      `, { '!border-shade-b3/20': parentHovered })"
       @mouseenter="emit('trigger-hovered', true)"
       @mouseleave="emit('trigger-hovered', false)"
       @focusin="emit('trigger-hovered', true)"
@@ -59,7 +63,9 @@ onMounted (() => {
         v-if="hasReplies"
         ref="target"
         class="
-          'transition-all group/tree absolute top-0 bottom-0 left-5 z-2 grid h-full w-4 shrink-0 items-center pt-19 pb-5.25 duration-300"
+          group/tree absolute top-0 bottom-0 left-5 z-2 grid h-full w-4 shrink-0
+          items-center pt-19 pb-5.25 transition-all duration-300
+        "
         @mouseenter="hovered = true"
         @mouseleave="hovered = false"
         @focusin="hovered = true"
@@ -67,7 +73,11 @@ onMounted (() => {
         <Separator
           orientation="vertical"
           :class="cn(
-            'group-hover/tree:border-shade-b3/20 border-shade-b3/10 transition-colors duration-200 bg-transparent rounded-bl-lg border-l',
+            `
+              rounded-bl-lg border-l border-shade-b3/10 bg-transparent
+              transition-colors duration-200
+              group-hover/tree:border-shade-b3/20
+            `,
             { '!border-shade-b3/20': hovered })" />
       </CollapsibleTrigger>
 
@@ -138,7 +148,7 @@ onMounted (() => {
 
         <div
           v-if="replying"
-          class="mt-2  pr-px pb-px pl-12">
+          class="mt-2 pr-px pb-px pl-12">
           <CommentEditor
             v-slot="{ editor }"
             v-model="replyContent">
@@ -161,7 +171,7 @@ onMounted (() => {
 
       <CollapsibleContent
         v-if="comment.replies?.length"
-        class=" relative flex w-full items-center">
+        class="relative flex w-full items-center">
         <div class="relative grid grow auto-rows-auto">
           <CommentItem
             v-for="reply in comment.replies"
@@ -181,13 +191,21 @@ onMounted (() => {
       <CollapsibleTrigger
         v-if="comment.replies?.length"
         size="8"
-        class="text-bc/30 hover:text-bc hover:underline text-1 relative  ml-5 px-5"
+        class="
+          relative ml-5 px-5 text-1 text-bc/30
+          hover:text-bc hover:underline
+        "
         :parent-hovered="hovered"
         @mouseenter="hovered = true"
         @mouseleave="hovered = false"
         @focusin="hovered = true"
         @focusout="hovered = false">
-        <span :class="cn(' border-shade-b3/10  absolute transition-colors duration-200 hover:border-shade-b3/20  dst top-0 left-0 h-1/2 w-4 rounded-bl-lg border-b ', { '!border-shade-b3/25': hovered })" />
+        <span
+          :class="cn(`
+            absolute top-0 left-0 h-1/2 w-4 rounded-bl-lg border-b
+            border-shade-b3/10 dst transition-colors duration-200
+            hover:border-shade-b3/20
+          `, { '!border-shade-b3/25': hovered })" />
         {{ open ? 'Collapse' : `${comment.replies.length} replies...` }}
       </CollapsibleTrigger>
     </div>

@@ -39,16 +39,25 @@ defineExpose({
     <VarSelectTrigger
       variant="ghost"
       hover="inset"
-      class="hover:!border-b4/50 w-28 justify-start pl-3"
+      class="
+        w-28 justify-start pl-3
+        hover:!border-b4/50
+      "
       size="sm">
       <SelectValue />
       <icon
         name="down"
-        class="absolute right-2 size-4 opacity-60 group-hover/select:opacity-100" />
+        class="
+          absolute right-2 size-4 opacity-60
+          group-hover/select:opacity-100
+        " />
     </VarSelectTrigger>
     <LazySelectContent
       align="end"
-      class="**:text-3 w-29.5 !-translate-y-[calc(var(--reka-select-trigger-height)+6px)]">
+      class="
+        w-29.5 !-translate-y-[calc(var(--reka-select-trigger-height)+6px)]
+        **:text-3
+      ">
       <SelectItem
         class="!pr-1"
         value="best">

@@ -12,7 +12,7 @@ const damageType = computed (() => damageTypes.find(d => d.type === champion.ada
 </script>
 
 <template>
-  <div class=" w-full px-5.5 py-3">
+  <div class="w-full px-5.5 py-3">
     <div :class="wrapperClass">
       <p>Position</p>
       <p class="flex items-center gap-2">
@@ -30,7 +30,7 @@ const damageType = computed (() => damageTypes.find(d => d.type === champion.ada
         <span
           v-for="role, i in champion.roles"
           :key="i"
-          :class="cn('italic font-medium')">
+          :class="cn('font-medium italic')">
           {{ role }}<template v-if="i !== champion.roles.length - 1">,&nbsp;&thinsp;</template>
         </span>
       </p>
@@ -38,12 +38,19 @@ const damageType = computed (() => damageTypes.find(d => d.type === champion.ada
 
     <div :class="wrapperClass">
       <p>Damage Style</p>
-      <div class="flex items-center gap-3 *:flex *:items-center *:gap-1.5">
+      <div
+        class="
+          flex items-center gap-3
+          *:flex *:items-center *:gap-1.5
+        ">
         <span class="font-medium">
           <component
             :is="`i-lol-${champion.attackType.toLowerCase()}`"
             v-if="champion.attackType"
-            class="dst !size-4.5  shrink-0 **:stroke-0 " />
+            class="
+              !size-4.5 shrink-0 dst
+              **:stroke-0
+            " />
           {{ champion.attackType }}
         </span>
         <span v-if="champion.attackType && champion.adaptiveType">
@@ -54,7 +61,7 @@ const damageType = computed (() => damageTypes.find(d => d.type === champion.ada
             <component
               :is="damageType?.icon"
               v-if="damageType?.icon"
-              :class="cn('!size-3.5 shrink-0 absolute  dst', { 'mt-0.5 mr-0.75': champion.adaptiveType === 'Magic damage' })"
+              :class="cn('absolute !size-3.5 shrink-0 dst', { 'mt-0.5 mr-0.75': champion.adaptiveType === 'Magic damage' })"
               :style="{
                 /*  color: damageType.color, */
               }" />
@@ -73,7 +80,7 @@ const damageType = computed (() => damageTypes.find(d => d.type === champion.ada
           :style="{
           /*   color: resource.color, */
           }"
-          class="dst !size-3.5 shrink-0  opacity-90 " />
+          class="!size-3.5 shrink-0 opacity-90 dst" />
         {{ champion.resource }}
       </p>
     </div>
@@ -81,19 +88,22 @@ const damageType = computed (() => damageTypes.find(d => d.type === champion.ada
     <div :class="wrapperClass">
       <p>Price</p>
       <div
-        class="*:text-3 flex items-center gap-4 overflow-hidden *:flex *:items-center *:gap-1">
+        class="
+          flex items-center gap-4 overflow-hidden
+          *:flex *:items-center *:gap-1 *:text-3
+        ">
         <div class="font-medium">
-          <i-lol-be class="text-platinum dst mr-0.5 !size-4.25 !shrink-0" />
+          <i-lol-be class="mr-0.5 !size-4.25 !shrink-0 text-platinum dst" />
           <p>
             {{ champion.price.blueEssence }}
-            <span class="text-1 pr-0.5 font-medium">BE</span>
+            <span class="pr-0.5 text-1 font-medium">BE</span>
           </p>
         </div>
         <div>
-          <i-lol-rp class="text-gold dst  mr-1 !size-4.5 !shrink-0" />
+          <i-lol-rp class="mr-1 !size-4.5 !shrink-0 text-gold dst" />
           <p class="font-medium">
             {{ champion.price.rp }}
-            <span class="text-1 pr-0.5 font-medium">RP</span>
+            <span class="pr-0.5 text-1 font-medium">RP</span>
           </p>
         </div>
       </div>
@@ -108,7 +118,11 @@ const damageType = computed (() => damageTypes.find(d => d.type === champion.ada
           external
           :to="`https://wiki.leagueoflegends.com/en-us/V${champion.patchLastChanged}`"
           variant="link"
-          :class="cn('!gap-1 underline underline-offset-3 font-medium  group/l decoration-bc/40  hover:decoration-bc opacity-80 !text-nowrap hover:opacity-100')">
+          :class="cn(`
+            group/l !gap-1 font-medium !text-nowrap underline decoration-bc/40
+            underline-offset-3 opacity-80
+            hover:decoration-bc hover:opacity-100
+          `)">
           Patch {{ champion.patchLastChanged }}
         </BtnLink>
         <template #content>
@@ -116,7 +130,10 @@ const damageType = computed (() => damageTypes.find(d => d.type === champion.ada
             View notes on wiki
             <icon
               name="link"
-              class="mb-0.5 size-3 opacity-60 group-hover/l:opacity-100" />
+              class="
+                mb-0.5 size-3 opacity-60
+                group-hover/l:opacity-100
+              " />
           </p>
         </template>
       </tippy>

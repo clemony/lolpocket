@@ -7,11 +7,15 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div :class="cn('relative w-fit cursor-pointer group/ul', props.class)">
+  <div :class="cn('group/ul relative w-fit cursor-pointer', props.class)">
     <slot />
 
     <span
-      class="absolute -bottom-1 left-0 w-0 transition-all duration-300 h-0.5 group-hover/ul:w-full group-focus/ul:w-full"
+      class="
+        absolute -bottom-1 left-0 h-0.5 w-0 transition-all duration-300
+        group-hover/ul:w-full
+        group-focus/ul:w-full
+      "
       :class="{ 'w-full': props.active === true }"
       :style="{ backgroundColor: props.bg || 'var(--bc)' }"></span>
   </div>

@@ -15,12 +15,15 @@ const set = computed(() => {
 </script>
 
 <template>
-  <div :class="cn('rounded-full size-12 aspect-square  grid place-items-center relative', className)">
+  <div
+    :class="cn(`
+      relative grid aspect-square size-12 place-items-center rounded-full
+    `, className)">
     <IndexIcon
-            :item="spellbook[i]"
       v-for="spell, i in set"
       :key="i"
+      :item="spellbook[i]"
       :name="spell"
-      :class="cn('size-full pointer-events-none absolute rounded-full', { '-mask-linear-55 mask-linear-from-40% mask-linear-to-58%': i === 'f' })" />
+      :class="cn('pointer-events-none absolute size-full rounded-full', { '-mask-linear-55 mask-linear-from-40% mask-linear-to-58%': i === 'f' })" />
   </div>
 </template>

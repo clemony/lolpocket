@@ -27,8 +27,12 @@ const itemImgClass = 'hover:ring-nc/90   hover:ring-offset-neutral/80 size-8 rou
 <template>
   <div
     v-if="item"
-    class="flex max-h-[304px] w-full max-w-[258px] flex-col justify-self-center overflow-hidden pt-4 pb-3 **:select-text">
-    <div class="flex h-fit w-full gap-4 px-4 ">
+    class="
+      flex max-h-[304px] w-full max-w-[258px] flex-col justify-self-center
+      overflow-hidden pt-4 pb-3
+      **:select-text
+    ">
+    <div class="flex h-fit w-full gap-4 px-4">
       <!-- IMG -->
 
       <Item
@@ -37,8 +41,8 @@ const itemImgClass = 'hover:ring-nc/90   hover:ring-offset-neutral/80 size-8 rou
         :alt="`${item.name} Image`"
         class="size-13" />
 
-      <div class="text-4 flex  w-full flex-col">
-        <div class=" flex w-full items-center justify-between  gap-1">
+      <div class="flex w-full flex-col text-4">
+        <div class="flex w-full items-center justify-between gap-1">
           <!-- NAME / LINK -->
 
           <h5 class="leading-4 font-semibold">
@@ -68,7 +72,7 @@ const itemImgClass = 'hover:ring-nc/90   hover:ring-offset-neutral/80 size-8 rou
           <!-- PRICE -->
           <figure
             v-if="item && item.shop?.prices?.total"
-            class="text-3 flex items-end gap-1 font-medium ">
+            class="flex items-end gap-1 text-3 font-medium">
             <img
               src="/img/icons/gold-coin.webp"
               alt="coin"
@@ -92,9 +96,9 @@ const itemImgClass = 'hover:ring-nc/90   hover:ring-offset-neutral/80 size-8 rou
     <Separator
       v-if="item.stats && Object.entries(item.stats).length"
       :size="3"
-      class=" px-4"
+      class="px-4"
       color="neutral" />
-    <div class="    relative grid auto-rows-auto overflow-y-auto px-4 pb-2">
+    <div class="relative grid auto-rows-auto overflow-y-auto px-4 pb-2">
       <!-- STATS -->
       <div
         v-if="item.stats && Object.entries(item.stats).length"
@@ -132,7 +136,7 @@ const itemImgClass = 'hover:ring-nc/90   hover:ring-offset-neutral/80 size-8 rou
           :size="4"
           label="RECIPE"
           color="neutral" />
-        <div class="group flex items-center gap-3 p-1 ">
+        <div class="group flex items-center gap-3 p-1">
           <template
             v-for="(fromItem, i) in item.buildsFrom"
             :key="i">
@@ -144,15 +148,15 @@ const itemImgClass = 'hover:ring-nc/90   hover:ring-offset-neutral/80 size-8 rou
             <icon
               v-if="i !== item.buildsFrom.length - 1"
               name="dashicons:plus"
-              class=" size-3.5 opacity-80" />
+              class="size-3.5 opacity-80" />
           </template>
 
           <div
             v-if="item.shop?.prices?.combined"
-            class="flex items-center  ">
+            class="flex items-center">
             <icon
               name="dashicons:plus"
-              class=" size-3.5 opacity-80" />
+              class="size-3.5 opacity-80" />
 
             <img
               src="/img/icons/gold-coin.webp"

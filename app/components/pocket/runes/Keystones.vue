@@ -19,7 +19,9 @@ const gridCols = computed(() => `grid-cols-${runes.length ?? 3}`)
   <Tabs
     v-model="set.keystone"
     as="div"
-    class="relative grid h-28 w-114 max-w-114 place-items-center overflow-hidden">
+    class="
+      relative grid h-28 w-114 max-w-114 place-items-center overflow-hidden
+    ">
     <TabsList
       v-if="runes"
       base="indicator"
@@ -28,7 +30,10 @@ const gridCols = computed(() => `grid-cols-${runes.length ?? 3}`)
       group
       :class="
         cn(
-          'min-w-114  max-w-114 overflow-hidden  relative flex-nowrap  size-full  **:select-none',
+          `
+            relative size-full max-w-114 min-w-114 flex-nowrap overflow-hidden
+            **:select-none
+          `,
           gridCols,
         )
       ">
@@ -39,25 +44,42 @@ const gridCols = computed(() => `grid-cols-${runes.length ?? 3}`)
         :value="rune.id"
         :class="
           cn(
-            'rounded-full opacity-75  hover:opacity-100 hover:grayscale-0  place-self-center  group/r border-transparent relative cursor-pointer tldr-30  grid place-items-center shrink-0 size-22 aspect-square',
+            `
+              group/r tldr-30 relative grid aspect-square size-22 shrink-0
+              cursor-pointer place-items-center place-self-center rounded-full
+              border-transparent opacity-75
+              hover:opacity-100 hover:grayscale-0
+            `,
             { 'opacity-100  grayscale-0': set.keystone === rune.id },
           )
         ">
         <Img
           :img="`/img/runes/${set.primary.path}/${rune.id}.webp`"
           :alt="rune.name"
-          class="drop-shadow-black/40 pointer-events-none absolute h-19 w-auto shrink-0 opacity-0 drop-shadow-sm transition-all duration-400 group-hover/r:opacity-90"
-          :class="{ 'opacity-100 ': set.keystone === rune.id }" />
+          class="
+            pointer-events-none absolute h-19 w-auto shrink-0 opacity-0
+            drop-shadow-sm drop-shadow-black/40 transition-all duration-400
+            group-hover/r:opacity-90
+          "
+          :class="{ 'opacity-100': set.keystone === rune.id }" />
 
         <Img
           :img="`/img/runes/grayscale/${rune.id}.webp`"
           :alt="rune.name"
-          class="pointer-events-none absolute h-19 w-auto shrink-0 opacity-100 brightness-90 contrast-150 drop-shadow-sm transition-all duration-400 group-hover/r:opacity-0"
+          class="
+            pointer-events-none absolute h-19 w-auto shrink-0 opacity-100
+            brightness-90 contrast-150 drop-shadow-sm transition-all
+            duration-400
+            group-hover/r:opacity-0
+          "
           :class="{ 'opacity-0': set.keystone === rune.id }" />
       </TabsTrigger>
 
       <TabIndicator
-        class="*:to-b1/40 mt-1"
+        class="
+          mt-1
+          *:to-b1/40
+        "
         round />
     </TabsList>
 

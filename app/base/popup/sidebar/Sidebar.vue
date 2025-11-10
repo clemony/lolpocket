@@ -21,7 +21,7 @@ const { isMobile, openMobile, setOpenMobile, state } = useSidebar()
     data-slot="sidebar"
     :class="
       cn(
-        'bg-tint-b2/40 text-bc flex h-full w-(--sidebar-width) flex-col',
+        'flex h-full w-(--sidebar-width) flex-col bg-tint-b2/40 text-bc',
         props.class,
       )
     "
@@ -39,7 +39,10 @@ const { isMobile, openMobile, setOpenMobile, state } = useSidebar()
       data-slot="sidebar"
       data-mobile="true"
       :side="side"
-      class="bg-sidebar text-bc w-(--sidebar-width) p-0 [&>button]:hidden"
+      class="
+        bg-sidebar w-(--sidebar-width) p-0 text-bc
+        [&>button]:hidden
+      "
       :style="{
         '--sidebar-width': SIDEBAR_WIDTH_MOBILE,
       }">
@@ -55,7 +58,10 @@ const { isMobile, openMobile, setOpenMobile, state } = useSidebar()
 
   <div
     v-else
-    class="group peer text-bc hidden md:block"
+    class="
+      group peer hidden text-bc
+      md:block
+    "
     data-slot="sidebar"
     :data-state="state"
     :data-collapsible="state === 'collapsed' ? collapsible : ''"
@@ -65,7 +71,10 @@ const { isMobile, openMobile, setOpenMobile, state } = useSidebar()
     <div
       :class="
         cn(
-          'relative w-(--sidebar-width) bg-transparent transition-[width] duration-200 ease-linear',
+          `
+            relative w-(--sidebar-width) bg-transparent transition-[width]
+            duration-200 ease-linear
+          `,
           'group-data-[collapsible=offcanvas]:w-0',
           'group-data-[side=right]:rotate-180',
           variant === 'floating' || variant === 'inset'
@@ -76,7 +85,11 @@ const { isMobile, openMobile, setOpenMobile, state } = useSidebar()
     <div
       :class="
         cn(
-          'fixed inset-y-0 z-10 hidden h-svh w-(--sidebar-width) transition-[left,right,width] duration-200 ease-linear md:flex',
+          `
+            fixed inset-y-0 z-10 hidden h-svh w-(--sidebar-width)
+            transition-[left,right,width] duration-200 ease-linear
+            md:flex
+          `,
           side === 'left'
             ? 'left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)]'
             : 'right-0 group-data-[collapsible=offcanvas]:right-[calc(var(--sidebar-width)*-1)]',
@@ -90,7 +103,12 @@ const { isMobile, openMobile, setOpenMobile, state } = useSidebar()
       v-bind="$attrs">
       <div
         data-sidebar="sidebar"
-        class="bg-sidebar/90 backdrop-blur-lg group-data-[variant=floating]:border border-b3 flex h-full w-full flex-col group-data-[variant=floating]:rounded-xl group-data-[variant=floating]:border border-b3 group-data-[variant=floating]:shadow-sm">
+        class="
+          bg-sidebar/90 flex h-full w-full flex-col border-b3 backdrop-blur-lg
+          group-data-[variant=floating]:rounded-xl
+          group-data-[variant=floating]:border
+          group-data-[variant=floating]:shadow-sm
+        ">
         <slot />
       </div>
     </div>

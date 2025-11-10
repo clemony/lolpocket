@@ -3,17 +3,22 @@
 </script>
 
 <template>
-  <div class="flex gap-4 w-full h-20 items-center pr-2 overflow-hidden">
-    <button class="overflow-hidden btn btn-ghost group/up pr-4 !btn-lg">
+  <div class="flex h-20 w-full items-center gap-4 overflow-hidden pr-2">
+    <button class="group/up btn overflow-hidden pr-4 btn-ghost !btn-lg">
       <NuxtLink
         to="/"
-        class="w-full pt-px items-center flex justify-start">
-        <h4 class="dst select-none !tracking-normal">
+        class="flex w-full items-center justify-start pt-px">
+        <h4 class="!tracking-normal dst select-none">
           LP
         </h4>
 
         <span
-          class="flex gap-1 pl-3 mt-0.5 items-center translate-y-3 opacity-0 pointer-events-none group-hover/up:translate-y-0 group-hover/up:opacity-100 transition-[translate_opacity] dr-30 ease-in-out expand-hide">
+          class="
+            dr-30 expand-hide pointer-events-none mt-0.5 flex translate-y-3
+            items-center gap-1 pl-3 opacity-0 transition-[translate_opacity]
+            ease-in-out
+            group-hover/up:translate-y-0 group-hover/up:opacity-100
+          ">
           up
           <icon
             name="arrow-up"

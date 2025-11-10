@@ -12,7 +12,7 @@ const { class: className, theme = 'base' } = defineProps<{
     :data-theme="theme"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
-    class="size-6 tippy-svg-arrow">
+    class="tippy-svg-arrow size-6">
     <path
       fill="none"
       stroke="currentColor"

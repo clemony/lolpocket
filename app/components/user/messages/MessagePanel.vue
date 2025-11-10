@@ -30,7 +30,7 @@ defineOptions({
         <div class="px-3">
           <Input
             placeholder="Search messages..."
-            class="input !bg-b1 mb-3 h-12" />
+            class="input mb-3 h-12 !bg-b1" />
         </div>
       </template>
     </SidebarHeaderWrapper>
@@ -42,7 +42,11 @@ defineOptions({
           :key="`${message.date}-${i}`"
           :class="
             cn(
-              'flex w-full flex-col items-start gap-2 whitespace-nowrap border-b border-b-b3 p-4 leading-tight last:border-b-0 group/msg',
+              `
+                group/msg flex w-full flex-col items-start gap-2 border-b
+                border-b-b3 p-4 leading-tight whitespace-nowrap
+                last:border-b-0
+              `,
               {
                 ' bg-b1/80 ': !message.read,
                 'bg-transparent hover:bg-sidebar-accent opacity-70':
@@ -55,12 +59,20 @@ defineOptions({
               class="grid size-full justify-items-start"
               @click="markRead(message.id)">
               <div class="flex w-full items-center justify-between gap-2">
-                <span class="text-2 text-bc/60 font-medium">
+                <span class="text-2 font-medium text-bc/60">
                   {{ message.from.name }}
                 </span>
 
                 <span
-                  class="text-1 text-bc/80 relative flex h-5 items-center justify-self-end *:absolute *:right-4 *:transition-opacity *:duration-200 *:first:opacity-0 group-hover/msg:*:first:opacity-100 group-hover/msg:*:last:pointer-events-none group-hover/msg:*:last:opacity-0">
+                  class="
+                    relative flex h-5 items-center justify-self-end text-1
+                    text-bc/80
+                    *:absolute *:right-4 *:transition-opacity *:duration-200
+                    *:first:opacity-0
+                    group-hover/msg:*:first:opacity-100
+                    group-hover/msg:*:last:pointer-events-none
+                    group-hover/msg:*:last:opacity-0
+                  ">
                   <span class="flex size-fit gap-1">
                     <Button
                       :variant="!message.read ? 'neutral' : 'ghost'"
@@ -76,14 +88,17 @@ defineOptions({
               </div>
               <span
                 :class="
-                  cn('font-bold tracking-tight py-1 text-4', {
+                  cn('py-1 text-4 font-bold tracking-tight', {
                     'opacity-70': message.read,
                   })
                 ">
                 {{ message.title }}
               </span>
               <span
-                class="text-2 line-clamp-2 w-[260px] text-start whitespace-break-spaces">
+                class="
+                  line-clamp-2 w-[260px] text-start text-2
+                  whitespace-break-spaces
+                ">
                 {{ message.content }}
               </span>
             </DialogTrigger>
@@ -96,7 +111,7 @@ defineOptions({
       <div
         v-else
         class="grid h-44 w-full place-items-center">
-        <span class="text-2 dst overflow-hidden text-nowrap">
+        <span class="overflow-hidden text-2 text-nowrap dst">
           {{ `No mail right now!` }}
         </span>
       </div>

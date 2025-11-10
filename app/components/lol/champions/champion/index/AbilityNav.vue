@@ -9,7 +9,7 @@ const abilityCount = computed (() => `grid-cols-${champion.abilities.length}`)
 </script>
 
 <template>
-  <div class="flex flex-col fixed bottom-22 right-22 gap-6">
+  <div class="fixed right-22 bottom-22 flex flex-col gap-6">
     <BtnLink
       v-for="ability in champion.abilities"
       :key="ability.name"
@@ -19,7 +19,11 @@ const abilityCount = computed (() => `grid-cols-${champion.abilities.length}`)
       shape="circle"
       size="xl"
       :class="
-        cn('p-0 overflow-hidden !size-20 border-0 *:pointer-events-none shadow-black/10 shadow-sm drop-shadow-sm drop-shadow-black/30', {
+        cn(`
+          !size-20 overflow-hidden border-0 p-0 shadow-sm shadow-black/10
+          drop-shadow-sm drop-shadow-black/30
+          *:pointer-events-none
+        `, {
           'btn-active !bg-tint-b2/70': route.hash === `#${ability.key}`,
         })
       "

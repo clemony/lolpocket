@@ -25,16 +25,32 @@ const queue = computed(() => {
     v-model:open="isOpen"
     :class="
       cn(
-        ' group size-full border-b3/70 justify-start max-w-220 group/collapse  overflow-hidden bg-clip-padding items-center relative **:select-none text-2 flex-col field-box  min-w-134   cursor-pointer group/collapse',
+        `
+          group group/collapse field-box relative size-full max-w-220 min-w-134
+          cursor-pointer flex-col items-center justify-start overflow-hidden
+          border-b3/70 bg-clip-padding text-2
+          **:select-none
+        `,
       )
     ">
     <CollapsibleTrigger
       :for="match.matchId"
       :class="
         cn(
-          ' h-40 flex gap-7 z-2 w-full text-2  relative bg-linear-to-r pointer-events-auto to-transparent to-40% rounded-xl overflow-hidden bg-clip-padding relative items-center justify-items-start bg-transparent   cursor-pointer  px-5 justify-start rounded-box cursor-pointer  data-[state=open]:rounded-b-none ',
+          `
+            pointer-events-auto relative z-2 flex h-40 w-full cursor-pointer
+            items-center justify-start justify-items-start gap-7 overflow-hidden
+            rounded-box rounded-xl bg-transparent bg-linear-to-r to-transparent
+            to-40% bg-clip-padding px-5 text-2
+            data-[state=open]:rounded-b-none
+          `,
           player.win ? 'from-inspiration/80 ' : 'from-domination/80',
-          'before:absolute before:left-0 before:z-3  before:h-full before:w-1/2 before:pointer-events-none before:brightness-94 before:opacity-40 before:mask-r-from-0 before:border before:rounded-xl before:shadow-sm before:shadow-black',
+          `
+            before:pointer-events-none before:absolute before:left-0 before:z-3
+            before:h-full before:w-1/2 before:rounded-xl before:border
+            before:mask-r-from-0 before:opacity-40 before:shadow-sm
+            before:shadow-black before:brightness-94
+          `,
 
           player.win
             ? 'before:border-inspiration '
@@ -43,19 +59,34 @@ const queue = computed(() => {
         )
       ">
       <div
-        class="flex h-fit w-30 flex-col justify-start  gap-1 self-center py-1 **:antialiased **:select-none">
+        class="
+          flex h-fit w-30 flex-col justify-start gap-1 self-center py-1
+          **:antialiased **:select-none
+        ">
         <h3
-          class="text-5 dst text-start font-bold text-nowrap text-white/86 uppercase">
+          class="
+            text-start text-5 font-bold text-nowrap text-white/86 uppercase dst
+          ">
           {{ player.win ? "Win" : "Loss" }}
         </h3>
 
-        <div class="flex w-full flex-col font-semibold opacity-76 *:text-left">
-          <p class="text-4 flex items-center gap-1.5 text-left font-bold text-nowrap">
+        <div
+          class="
+            flex w-full flex-col font-semibold opacity-76
+            *:text-left
+          ">
+          <p
+            class="
+              flex items-center gap-1.5 text-left text-4 font-bold text-nowrap
+            ">
             {{ queue?.description || queue?.map?.name || '' }}
           </p>
 
           <p
-            class="mt-1 flex flex-col justify-center py-1 text-start !text-[0.92rem] leading-4">
+            class="
+              mt-1 flex flex-col justify-center py-1 text-start !text-[0.92rem]
+              leading-4
+            ">
             <span>
               {{ queue?.map?.name }}
             </span>
@@ -71,7 +102,7 @@ const queue = computed(() => {
         </div>
       </div>
 
-      <div class="flex h-full grow  flex-col justify-between gap-2 py-6">
+      <div class="flex h-full grow flex-col justify-between gap-2 py-6">
         <div class="flex items-start">
           <!-- champ image -->
           <ChampionIcon
@@ -81,7 +112,10 @@ const queue = computed(() => {
               placement: 'top',
             }"
             alt="champion-icon"
-            class="size-17 rounded-xl  transition-all duration-300 hover:scale-105 " />
+            class="
+              size-17 rounded-xl transition-all duration-300
+              hover:scale-105
+            " />
 
           <!--  spells -->
           <PlayerSpells
@@ -112,7 +146,7 @@ const queue = computed(() => {
         <icon
           name="up"
           :class="
-            cn('dst transition-rotate duration-200 size-5 mx-4', {
+            cn('transition-rotate mx-4 size-5 dst duration-200', {
               '-rotate-180': isOpen,
             })
           " />

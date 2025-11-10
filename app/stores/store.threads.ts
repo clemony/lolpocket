@@ -3,9 +3,9 @@ import { defineStore } from 'pinia'
 export const useThreadStore = defineStore(
   'threadStore',
   () => {
-const threads = ref<Thread[]>([])
+    const threads = ref<Thread[]>([])
     return {
-threads,
+      threads,
     }
   },
   {

@@ -106,9 +106,12 @@ const range = computed(() => {
 
 <template>
   <div
-    class="stats bg-b1 rounded-box border-b3 shadow-warm-soft relative h-62 w-full border px-5">
-    <div class="text-bc pointer-events-none absolute top-6 left-6 z-0">
-      <div class="text-1 stat-desc mb-1 font-medium">
+    class="
+      stats relative h-62 w-full rounded-box border border-b3 bg-b1 px-5
+      shadow-warm-soft
+    ">
+    <div class="pointer-events-none absolute top-6 left-6 z-0 text-bc">
+      <div class="stat-desc mb-1 text-1 font-medium">
         {{ range }}
       </div>
 
@@ -116,7 +119,7 @@ const range = computed(() => {
         Recent Patch
       </div>
 
-      <div class="text-3 stat-desc">
+      <div class="stat-desc text-3">
         Winrate vs. Games
       </div>
     </div>

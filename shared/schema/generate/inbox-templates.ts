@@ -1,5 +1,3 @@
-
-
 export interface InboxTemplate {
   title: string
   action?: {

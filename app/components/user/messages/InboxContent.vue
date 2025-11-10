@@ -21,18 +21,25 @@ const inboxes: Record<string, DataObject> = {
 
 <template>
   <div class="size-full">
-    <div :class="cn('gap-0 border-b  border-b-b3/80 px-3 w-full', className)">
-      <div class="w-full flex justify-between items-center">
+    <div :class="cn('w-full gap-0 border-b border-b-b3/80 px-3', className)">
+      <div class="flex w-full items-center justify-between">
         <DropdownMenu
           v-model:open="ui().sidebarStates.inboxDropdown"
           class="z-0">
           <DropdownMenuTrigger
             :disabled="!dropdown"
-            class="flex w-fit items-center justify-between disabled:**:text-bc disabled:hover:drop-shadow-none disabled:opacity-100 disabled:hover:border-transparent disabled:hover:shadow-none disabled:hover:bg-transparent px-2 h-[35.5px] data-[state=open]:inset-shadow-xxs data-[state=open]:shadow-xs data-[state=open]:!bg-b3/50 data-[state=open]:border-b3"
+            class="
+              flex h-[35.5px] w-fit items-center justify-between px-2
+              disabled:opacity-100 disabled:**:text-bc
+              disabled:hover:border-transparent disabled:hover:bg-transparent
+              disabled:hover:shadow-none disabled:hover:drop-shadow-none
+              data-[state=open]:border-b3 data-[state=open]:!bg-b3/50
+              data-[state=open]:shadow-xs data-[state=open]:inset-shadow-xxs
+            "
             as-child>
             <SidebarMenuButton class="flex gap-2">
               <icon name="gallery" />
-              <h2 class="dst font-bold">
+              <h2 class="font-bold dst">
                 {{ title }}
               </h2>
             </SidebarMenuButton>
@@ -47,7 +54,7 @@ const inboxes: Record<string, DataObject> = {
           class="z-1">
           <TabsList
             base="indicator"
-            class="grid-cols-3 h-9">
+            class="h-9 grid-cols-3">
             <TabsTrigger
               v-for="item in inboxes"
               :key="item.name"
@@ -59,12 +66,12 @@ const inboxes: Record<string, DataObject> = {
           </TabsList>
         </Tabs>
       </div>
-      <div class="flex relative items-center gap-1 w-full">
+      <div class="relative flex w-full items-center gap-1">
         <slot name="subheader" />
       </div>
     </div>
 
-    <div class="px-0 size-full">
+    <div class="size-full px-0">
       <component :is="tabs"></component>
     </div>
   </div>

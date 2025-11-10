@@ -64,11 +64,19 @@ onBeforeMount(() => {
       v-model:open="open">
       <PopoverTrigger
         v-bind="$attrs"
-        :class="cn('hover:ring hover:ring-2 relative transition-all duration-300 target **:cursor-context-menu group focus:ring focus:ring-offset-3 ring-offset-b1 !cursor-context-menu ring-bc/50 open:ring-offset-3 open:ring grid  aspect-square group  rounded-lg size-full ', className)"
+        :class="cn(`
+          target group relative grid aspect-square size-full
+          !cursor-context-menu rounded-lg ring-bc/50 ring-offset-b1
+          transition-all duration-300
+          **:cursor-context-menu
+          open:ring open:ring-offset-3
+          hover:ring hover:ring-2
+          focus:ring focus:ring-offset-3
+        `, className)"
         tabindex="0">
         <ChampionIcon
           :k
-          class="size-full "
+          class="size-full"
           role="button"
           @loaded="loaded = true" />
       </PopoverTrigger>

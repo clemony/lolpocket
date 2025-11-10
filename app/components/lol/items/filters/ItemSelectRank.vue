@@ -16,7 +16,7 @@ function onClick(rank: string): void {
       :key="rank.name"
       variant="ghost"
       size="sm"
-      class=" justify-start  !gap-4 !pl-3 capitalize  shadow-none">
+      class="justify-start !gap-4 !pl-3 capitalize shadow-none">
 
       <input
         v-model="is().filters.rank"
@@ -50,7 +50,7 @@ function onClick(rank: string): void {
       <icon
         v-if="is().filters.rank === rank.name"
         name="tick-sm"
-        class="dst size-6" />
+        class="size-6 dst" />
 
     </Label>
   </div>

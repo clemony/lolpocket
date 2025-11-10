@@ -53,19 +53,22 @@ onMounted(() => {
     v-if="catFact"
     class="grid size-full min-h-[70vh] justify-center py-24"
     :class="cn('', props.class)">
-    <article class="container mx-auto p-6 max-w-250 min-w-190 dst">
+    <article class="container mx-auto max-w-250 min-w-190 p-6 dst">
       <header
-        class="text-start mb-6 dst tracking-tight">
+        class="mb-6 text-start tracking-tight dst">
         <span class="text-6">
           404: <span class="italic">page seems afk</span>
         </span>
         <br />
 
-        <span class=" leading-14 font-bold font-serif text-[2rem] ">In place, I offer you a cat fact.</span>
+        <span class="font-serif text-[2rem] leading-14 font-bold">In place, I offer you a cat fact.</span>
       </header>
 
       <section
-        class="pb-28 items-start flex gap-4 pt-20 gap-3 max-w-180 w-full **:text-pretty relative">
+        class="
+          relative flex w-full max-w-180 items-start gap-3 gap-4 pt-20 pb-28
+          **:text-pretty
+        ">
         <div class="flex flex-col gap-3">
           <p class="mt-1 text-6 dst">
             <!-- #{{catFact.num}}  -->
@@ -78,11 +81,14 @@ onMounted(() => {
       </section>
 
       <footer
-        class="text-end italic text-2 items-center flex gap-4 *:flex *:items-end justify-center *:gap-2">
+        class="
+          flex items-center justify-center gap-4 text-end text-2 italic
+          *:flex *:items-end *:gap-2
+        ">
         <p class="text-1 text-bc/70">
           Brought to you by
         </p>
-        <p class="font-semibold italic opacity-80 antialiased">
+        <p class="font-semibold italic antialiased opacity-80">
           <icon
             name="la:flag-usa"
             class="size-5" />

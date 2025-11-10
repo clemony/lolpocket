@@ -3,7 +3,7 @@ import path from 'node:path'
 import type { Index, Spell } from '../../types/types.import'
 import { resolvePath } from '../resolvePath'
 import { checkUpdate, markUpdate } from '../utils'
-import { fetchSpells } from './fetch-spells'; // import your handler directly
+import { fetchSpells } from './fetch-spells' // import your handler directly
 
 const dataPath = resolvePath('./spells/raw/summoner-spells.json')
 const outputPath = path.resolve('./shared/indexes/spellbook.ts')
@@ -16,14 +16,14 @@ async function buildSpellIndex() {
   }
 
   const raw: Spell[] = JSON.parse(fs.readFileSync(dataPath, 'utf-8'))
-const index: Record<number, Index> = raw.reduce((acc, spell) => {
-  acc[Number(spell.key)] = {
-    id: Number(spell.key),
-    key: 'spell',
-    name: spell.name,
-  }
-  return acc
-}, {} as Record<number, Index>)
+  const index: Record<number, Index> = raw.reduce((acc, spell) => {
+    acc[Number(spell.key)] = {
+      id: Number(spell.key),
+      key: 'spell',
+      name: spell.name,
+    }
+    return acc
+  }, {} as Record<number, Index>)
 
   fs.writeFileSync(
     outputPath,

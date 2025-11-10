@@ -124,7 +124,12 @@ const masteryGrid = useTemplateRef<HTMLElement>('masteryGrid')
   <AgGridVue
     v-if="match"
     ref="masteryGrid"
-    class="mastery-grid w-full h-[100vh] sticky min-h-[100vh] w-full pt-20 top-20 [&_.ag-center-cols-viewport]:mx-auto [&_.ag-center-cols-viewport]:max-w-[1100px] [&_.ag-header-container]:mx-auto"
+    class="
+      mastery-grid sticky top-20 h-[100vh] min-h-[100vh] w-full pt-20
+      [&_.ag-center-cols-viewport]:mx-auto
+      [&_.ag-center-cols-viewport]:max-w-[1100px]
+      [&_.ag-header-container]:mx-auto
+    "
 
     :tooltip-show-delay="400"
     :grid-options="gridOptions"

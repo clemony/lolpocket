@@ -20,7 +20,10 @@ const elder = computed(() => {
     class=""
     :class="
       cn(
-        'grid grid-cols-5 justify-center 0 **:font-semibold **:text-bc',
+        `
+          0 grid grid-cols-5 justify-center
+          **:font-semibold **:text-bc
+        `,
         className,
       )
     ">
@@ -30,7 +33,7 @@ const elder = computed(() => {
       <img
         alt="dragons"
         :src="`/img/ui/dragon-${team.teamId}.png`"
-        class="size-4 drop-shadow-sm opacity-85" />
+        class="size-4 opacity-85 drop-shadow-sm" />
 
       <span>
         {{ team.objectives.dragon.kills ?? 0 }}
@@ -43,7 +46,7 @@ const elder = computed(() => {
       <img
         alt="baron"
         :src="`/img/ui/baron-${team.teamId}.png`"
-        class="size-4 drop-shadow-sm opacity-85" />
+        class="size-4 opacity-85 drop-shadow-sm" />
 
       <span class="w-7 max-w-7">
         {{ team.objectives.baron.kills ?? 0 }}
@@ -56,7 +59,7 @@ const elder = computed(() => {
       <img
         alt="elder"
         :src="`/img/ui/elder-${team.teamId}.png`"
-        class="size-4 drop-shadow-sm opacity-85" />
+        class="size-4 opacity-85 drop-shadow-sm" />
 
       <span class="w-7 max-w-7">
         {{ team.objectives.baron.kills ?? 0 }}
@@ -69,7 +72,7 @@ const elder = computed(() => {
       <img
         alt="towers"
         :src="`/img/ui/tower-${team.teamId}.png`"
-        class="size-5 drop-shadow-sm opacity-85" />
+        class="size-5 opacity-85 drop-shadow-sm" />
 
       <span class="w-7 max-w-7">
         {{ team.objectives.tower.kills }}
@@ -82,7 +85,7 @@ const elder = computed(() => {
       <img
         alt="inhibitors"
         :src="`/img/ui/inhibitor-${team.teamId}.png`"
-        class="size-4 drop-shadow-sm opacity-85" />
+        class="size-4 opacity-85 drop-shadow-sm" />
 
       <span class="w-7 max-w-7">
         {{ team.objectives.inhibitor.kills }}

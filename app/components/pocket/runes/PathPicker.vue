@@ -74,7 +74,7 @@ const pathHovered = ref('')
           v-if="pathHovered"
           :key="pathHovered"
           :class="
-            cn('dst duration-600 ', {
+            cn('dst duration-600', {
               'animate-in fade-in blur-in-50 zoom-in-120': pathHovered,
               'animate-out fade-out blur-out-50 zoom-out-120': !pathHovered,
             })
@@ -85,7 +85,7 @@ const pathHovered = ref('')
           v-if="pathHovered"
           :key="pathHovered"
           :class="
-            cn('dst font-medium duration-600  pt-1 pr-2 text-end', {
+            cn('pt-1 pr-2 text-end font-medium dst duration-600', {
               'animate-in fade-in ': pathHovered,
               'animate-out fade-out': !pathHovered,
             })
@@ -100,7 +100,7 @@ const pathHovered = ref('')
           key="default"
           class="dst"
           :class="
-            cn('dst duration-600 ', {
+            cn('dst duration-600', {
               'animate-in fade-in blur-in-50 zoom-in-120': !pathHovered,
               'animate-out fade-out blur-out-50 zoom-out-120': pathHovered,
             })
@@ -109,7 +109,7 @@ const pathHovered = ref('')
         </h1>
         <p
           :class="
-            cn('dst font-medium duration-600 pt-1 pr-2  text-end', {
+            cn('pt-1 pr-2 text-end font-medium dst duration-600', {
               'animate-in fade-in ': !pathHovered,
               'animate-out fade-out': pathHovered,
             })
@@ -139,7 +139,16 @@ const pathHovered = ref('')
           backgroundPosition: '50% 50%',
           backgroundSize: 'cover',
         }"
-        class="after:backdrop-blur-px relative my-auto flex aspect-2/3 max-h-140 grow basis-1 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-black bg-center shadow-sm drop-shadow-sm *:opacity-0 after:absolute after:z-1 after:size-full after:bg-black/70 after:opacity-0 after:transition-all after:duration-400 hover:*:opacity-100 hover:after:opacity-100"
+        class="
+          after:backdrop-blur-px after:absolute after:z-1 after:size-full
+          after:bg-black/70 after:opacity-0 after:transition-all
+          after:duration-400
+          relative my-auto flex aspect-2/3 max-h-140 grow basis-1 cursor-pointer
+          items-center justify-center overflow-hidden rounded-lg bg-black
+          bg-center shadow-sm drop-shadow-sm
+          *:opacity-0
+          hover:*:opacity-100 hover:after:opacity-100
+        "
         @click="handleSet(path.name, pathIndex[i === 4 ? 0 : i + 1].name)"
         @hover-start="pathHovered = path.name"
         @hover-end="pathHovered = ''">

@@ -27,25 +27,30 @@ const {
     class=""
     :class="
       cn(
-        'pt-8 pb-6 *:px-7 gap-2 grid rounded-xl   justify-start **:text-start justify-items-start h-50 max-w-110 w-110 w-110 ',
+        `
+          grid h-50 w-110 max-w-110 justify-start justify-items-start gap-2
+          rounded-xl pt-8 pb-6
+          *:px-7
+          **:text-start
+        `,
         { 'hover:!bg-b2/60 hover-ring': hover },
         className,
       )
     ">
-    <CardTitle class="dst text-5self-start">
+    <CardTitle class="text-5self-start dst">
       <slot name="title">
         {{ title }}
       </slot>
     </CardTitle>
     <CardDescription
-      class="leading-6 opacity-70 text-pretty self-start inline align-baseline">
+      class="inline self-start align-baseline leading-6 text-pretty opacity-70">
       <slot name="text">
         {{ text }}
       </slot>
     </CardDescription>
     <p
       v-if="button"
-      class="w-full flex items-center justify-end px-6.75">
+      class="flex w-full items-center justify-end px-6.75">
       <Button
         variant="neutral"
         class="hover-ring">
@@ -54,7 +59,7 @@ const {
     </p>
     <p
       v-else
-      class="flex gap-4 mt-2 items-center font-medium italic">
+      class="mt-2 flex items-center gap-4 font-medium italic">
       <Switch
         :id="title"
         v-bind="$attrs"

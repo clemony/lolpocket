@@ -28,7 +28,7 @@ console.log('🌱 - pinned:', pinned)
     <!-- pockets -->
 
     <div
-      class="  grid auto-rows-min gap-2 py-1 pb-0">
+      class="grid auto-rows-min gap-2 py-1 pb-0">
       <div
         v-for="row, i in pinned?.slice(0, 2)"
         :key="i"
@@ -38,7 +38,7 @@ console.log('🌱 - pinned:', pinned)
     </div>
     <CollapsibleContent>
       <div
-        class="  grid auto-rows-min gap-2 py-1 pb-0">
+        class="grid auto-rows-min gap-2 py-1 pb-0">
         <div
           v-for="row, i in pinned?.slice(2)"
           :key="i"
@@ -52,11 +52,22 @@ console.log('🌱 - pinned:', pinned)
     <!-- trigger -->
     <CollapsibleTrigger
       :disabled="!pinned?.slice(2).length"
-      class="group/tgr relative mt-0 flex h-8 w-full items-center justify-center disabled:pointer-events-none ">
-      <DropdownMenuSeparator class="group-hover/tgr:!bg-shade-b3/6 absolute !inset-x-0 -mx-4 mt-0 mb-px  transition-colors duration-200" />
+      class="
+        group/tgr relative mt-0 flex h-8 w-full items-center justify-center
+        disabled:pointer-events-none
+      ">
+      <DropdownMenuSeparator
+        class="
+          absolute !inset-x-0 -mx-4 mt-0 mb-px transition-colors duration-200
+          group-hover/tgr:!bg-shade-b3/6
+        " />
       <icon
         name="down"
-        class="text-bc/0 group-hover-open/tgr:-scale-y-100 group-hover/tgr:text-bc/50 mt-px size-4 self-end   transition-all duration-200" />
+        class="
+          mt-px size-4 self-end text-bc/0 transition-all duration-200
+          group-hover/tgr:text-bc/50
+          group-hover-open/tgr:-scale-y-100
+        " />
     </CollapsibleTrigger>
   </Collapsible>
 </template>

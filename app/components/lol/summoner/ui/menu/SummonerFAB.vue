@@ -5,7 +5,7 @@ const { summoner } = useSummonerInject()
 
 const { scrollTop, scrollYProgress } = useScrollInject()
 
-const classes = '!cursor-pointer !size-18 backdrop-blur shadow-sm '
+const classes = '!size-18 !cursor-pointer shadow-sm backdrop-blur'
 
 const x = useTransform(scrollYProgress, [0, 0.08], ['160px', '110px'])
 useMotionValueEvent(scrollYProgress, 'change', (latest) => {
@@ -43,7 +43,9 @@ const buttons = [
     as-child>
     <motion.div
       class="
-fixed top-34 pointer-events-none  [&_button]:pointer-events-auto   z-20 !flex-col items-start"
+        pointer-events-none fixed top-34 z-20 !flex-col items-start
+        [&_button]:pointer-events-auto
+      "
       :style="{
         left: useSpring(x, {
           mass: 1,
@@ -55,7 +57,7 @@ fixed top-34 pointer-events-none  [&_button]:pointer-events-auto   z-20 !flex-co
           as="button"
           shape="circle"
           variant="base"
-          :class="cn('!shadow-black/30 border-0 ', classes)">
+          :class="cn('border-0 !shadow-black/30', classes)">
           <SummonerIcon
             :summoner
             class="size-18" />
@@ -81,7 +83,7 @@ fixed top-34 pointer-events-none  [&_button]:pointer-events-auto   z-20 !flex-co
         <!-- buttons that show up when FAB is open -->
 
         <div
-          class=" gap-3  flex items-center">
+          class="flex items-center gap-3">
           <UpdateSummoner
             size="xl"
             :summoner
@@ -90,7 +92,11 @@ fixed top-34 pointer-events-none  [&_button]:pointer-events-auto   z-20 !flex-co
             shape="circle"
             variant="neutral"
             :class="cn('', classes)" />
-          <p class="border-b2 border !text-3 p-2 bg-b1/70 backdrop-blur rounded-lg italic leading-4 ">
+          <p
+            class="
+              rounded-lg border border-b2 bg-b1/70 p-2 !text-3 leading-4 italic
+              backdrop-blur
+            ">
             Last Updated<br />
             {{ formatTimeAgo(summoner.updatedMatch, 'short') || 'Never' }}
           </p>
@@ -101,7 +107,7 @@ fixed top-34 pointer-events-none  [&_button]:pointer-events-auto   z-20 !flex-co
           shape="circle"
           :summoner
           variant="base"
-          :class="cn(' ', classes)" />
+          :class="cn('', classes)" />
 
         <Button
           v-for="button in buttons"
@@ -111,7 +117,7 @@ fixed top-34 pointer-events-none  [&_button]:pointer-events-auto   z-20 !flex-co
           shape="circle"
           :summoner
           variant="base"
-          :class="cn(' ', classes)"
+          :class="cn('', classes)"
           @click="button.click()">
           <icon
             :name="button.icon"

@@ -34,7 +34,14 @@ function reset() {
     <DialogTrigger
       :class="
         cn(
-          'group/icon z-0 shrink-0 cursor-pointer self-center  size-fit shadow-xs drop-shadow-sm   rounded-full pointer-events-auto  aspect-square  grid place-items-center relative transition-colors duration-300  hover:ring-b4 ring-transparent ring hover:ring-offset-neutral ring-offset-3 ring-offset-transparent  ',
+          `
+            group/icon pointer-events-auto relative z-0 grid aspect-square
+            size-fit shrink-0 cursor-pointer place-items-center self-center
+            rounded-full shadow-xs ring ring-transparent ring-offset-3
+            ring-offset-transparent drop-shadow-sm transition-colors
+            duration-300
+            hover:ring-b4 hover:ring-offset-neutral
+          `,
           className,
         )
       ">
@@ -42,15 +49,24 @@ function reset() {
     </DialogTrigger>
     <LazyGlassDialogContent
 
-      class="grid h-screen w-screen min-w-screen justify-center p-0 backdrop-blur">
+      class="
+        grid h-screen w-screen min-w-screen justify-center p-0 backdrop-blur
+      ">
       <HiddenDialogHeader
         title="Select a custom profile splash."
         desc="Personalize your profile with your favorite champion!" />
 
-      <div class=" relative flex w-screen max-w-screen flex-col items-center gap-8 overflow-x-hidden overflow-y-auto px-32">
+      <div
+        class="
+          relative flex w-screen max-w-screen flex-col items-center gap-8
+          overflow-x-hidden overflow-y-auto px-32
+        ">
         <Input
           v-model:model-value="searchQuery"
-          class="bg-b1/90 sticky top-0 z-2 mt-44 h-14 w-full max-w-160 shrink-0 rounded-xl backdrop-blur ">
+          class="
+            sticky top-0 z-2 mt-44 h-14 w-full max-w-160 shrink-0 rounded-xl
+            bg-b1/90 backdrop-blur
+          ">
           <icon name="search" />
 
           <template #3>
@@ -62,7 +78,7 @@ function reset() {
               variant="ghost">
               <icon
                 name="refresh"
-                class="dst size-3.75" />
+                class="size-3.75 dst" />
             </Button>
 
             <Button
@@ -73,7 +89,7 @@ function reset() {
               variant="ghost">
               <icon
                 name="shuffle"
-                class="dst size-3.5 stroke-[1.5]" />
+                class="size-3.5 stroke-[1.5] dst" />
             </Button>
           </template>
         </Input>
@@ -83,22 +99,34 @@ function reset() {
           v-if="!selectedChampion"
           v-model:model-value="selectedChampion"
           as="div"
-          class="mask-t-from-50% mask-t-to-96% mx-auto flex h-max  max-h-screen w-fit flex-wrap justify-center gap-8  overflow-x-hidden pt-64">
+          class="
+            mx-auto flex h-max max-h-screen w-fit flex-wrap justify-center gap-8
+            overflow-x-hidden mask-t-from-50% mask-t-to-96% pt-64
+          ">
           <label
             v-for="item in result"
             :key="item.key"
             for="item-key"
             :class="
-              cn('max-w-60 min-w-50 min-h-40 inset-shadow-sm inset-shadow-black/30 max-h-50 basis-1/2 relative rounded-md overflow-hidden')
+              cn(`
+                relative max-h-50 min-h-40 max-w-60 min-w-50 basis-1/2
+                overflow-hidden rounded-md inset-shadow-sm inset-shadow-black/30
+              `)
             ">
             <Champion
               :img="getSplash(item.id, 'tile')"
               :alt="item.name"
-              class="absolute size-full bg-black *:object-cover **:text-white" />
+              class="
+                absolute size-full bg-black
+                *:object-cover
+                **:text-white
+              " />
             <Badge
               variant="neutral"
               size="xl"
-              class="bg-neutral/86 absolute  bottom-2 left-2 truncate backdrop-blur">
+              class="
+                absolute bottom-2 left-2 truncate bg-neutral/86 backdrop-blur
+              ">
               {{ item.name }}
             </Badge>
             <RadioGroupItem
@@ -112,7 +140,10 @@ function reset() {
         <div
           v-else-if="selectedChampion"
           group
-          class="h-inherit grid size-full h-min max-h-150 w-full grid-cols-3 gap-6 overflow-y-auto p-8">
+          class="
+            grid size-full h-inherit h-min max-h-150 w-full grid-cols-3 gap-6
+            overflow-y-auto p-8
+          ">
           <LazySplashCard
             v-for="skin in skinIndex[selectedChampion]"
             :key="skin.name"
@@ -133,7 +164,10 @@ function reset() {
           class="grid size-full place-items-end p-6">
           <Badge
             variant="neutral"
-            class="**:text-2 font-medium">
+            class="
+              font-medium
+              **:text-2
+            ">
             Select or search a champion...
           </Badge>
         </div>
@@ -144,11 +178,18 @@ function reset() {
         <Button
           variant="ghost"
           size="12"
-          class="hover:**:text-bc hover:bg-b1/80 border-0 **:text-white "
+          class="
+            border-0
+            **:text-white
+            hover:bg-b1/80 hover:**:text-bc
+          "
           shape="square">
           <icon
             name="x"
-            class="size-6 **:stroke-[1.5]" />
+            class="
+              size-6
+              **:stroke-[1.5]
+            " />
         </Button>
       </DialogClose>
     </LazyGlassDialogContent>

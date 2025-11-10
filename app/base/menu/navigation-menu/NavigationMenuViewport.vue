@@ -30,7 +30,7 @@ const variants = {
 </script>
 
 <template>
-  <div :class="cn('absolute left-0 top-full grid justify-center')">
+  <div :class="cn('absolute top-full left-0 grid justify-center')">
     <AnimatePresence>
       <NavigationMenuViewport
         ref="target"
@@ -48,7 +48,11 @@ const variants = {
           }"
           :class="
             cn(
-              '  bg-blend-screen items-center bg-b1/92 backdrop-blur-md overflow-hidden  border border-b4/70 rounded-xl  text-bc shadow-lg shadow-black/10 relative justify-center grid ',
+              `
+                relative grid items-center justify-center overflow-hidden
+                rounded-xl border border-b4/70 bg-b1/92 text-bc bg-blend-screen
+                shadow-lg shadow-black/10 backdrop-blur-md
+              `,
               props.class,
             )
           ">

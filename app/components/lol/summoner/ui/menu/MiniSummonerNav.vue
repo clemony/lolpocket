@@ -16,21 +16,32 @@ const { childRoutes, links, summoner } = defineProps<{
           <div class="relative">
             <SummonerIcon
               :summoner
-              class="rounded-field size-full size-11"></SummonerIcon>
+              class="size-11 size-full rounded-field"></SummonerIcon>
             <SummonerLevel
-              class="pt-px absolute z-1 -bottom-1.5 bg-neutral rounded-full text-nc text-2" />
+              class="
+                absolute -bottom-1.5 z-1 rounded-full bg-neutral pt-px text-2
+                text-nc
+              " />
           </div>
         </template>
         <template #content>
-          <div class="w-full py-1 flex flex-col gap-1">
+          <div class="flex w-full flex-col gap-1 py-1">
             <p
-              class="items-center justify-between gap-2 text-nowrap flex-nowrap inline-flex">
+              class="
+                inline-flex flex-nowrap items-center justify-between gap-2
+                text-nowrap
+              ">
               <SummonerName
                 as="h4"
-                class="leading-none font-serif font-bold truncate" />
+                class="truncate font-serif leading-none font-bold" />
             </p>
             <p
-              class="flex w-full text-2 gap-2 justify-between items-center [&_svg]:size-3 **:leading-none inline-flex align-bottom">
+              class="
+                flex inline-flex w-full items-center justify-between gap-2
+                align-bottom text-2
+                **:leading-none
+                [&_svg]:size-3
+              ">
               <SummonerTag />
 
               <SummonerRegion />
@@ -50,7 +61,7 @@ const { childRoutes, links, summoner } = defineProps<{
         <template #icon>
           <hicon
             :name="String(item.meta?.icon)"
-            class="size-5.5 absolute object-center place-self-center"
+            class="absolute size-5.5 place-self-center object-center"
             :class="cn('', item.meta?.iconStyle ?? null)" />
         </template>
 

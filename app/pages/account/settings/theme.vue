@@ -29,9 +29,11 @@ function handleChange(theme) {
         v-for="theme in themes"
         :key="theme.name"
         :value="theme.name"
-        class="group/label grid size-full h-max items-center !border-transparent">
+        class="
+          group/label grid size-full h-max items-center !border-transparent
+        ">
         <ThemeCard
-          class=" "
+          class=""
           :theme="theme"
           :active-theme="as().settings.theme" />
       </ListboxItem>

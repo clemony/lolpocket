@@ -16,7 +16,7 @@ const forwarded = useForwardProps(delegatedProps)
   <SelectScrollUpButton
     v-bind="forwarded"
     :class="
-      cn('flex sticky top-0 cursor-default items-center justify-center py-1', props.class)
+      cn('sticky top-0 flex cursor-default items-center justify-center py-1', props.class)
     ">
     <slot>
       <icon

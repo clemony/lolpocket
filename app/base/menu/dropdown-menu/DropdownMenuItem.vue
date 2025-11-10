@@ -32,7 +32,7 @@ const forwarded = useForwardProps(delegatedProps)
       cn(
         buttonVariants({ base, hover, on, size, variant }),
         inset && '!pl-8',
-        'group/menu-item justify-start text-2 px-2',
+        'group/menu-item justify-start px-2 text-2',
         props.class,
       )
     ">

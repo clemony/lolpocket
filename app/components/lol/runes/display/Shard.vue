@@ -24,7 +24,10 @@ const shard = computed(() =>
     :title="shard?.description"
     :class="
       cn(
-        'grid rounded-full relative  group/shard shrink-0 place-items-center shadow-black/5 drop-shadow-black/5 drop-shadow-sm border border-b2',
+        `
+          group/shard relative grid shrink-0 place-items-center rounded-full
+          border border-b2 shadow-black/5 drop-shadow-sm drop-shadow-black/5
+        `,
         {
           'grayscale has-checked:grayscale-0 hover:!bg-b1 hover:grayscale-0 ring-[var(--shard-color)]/80 has-checked:border-[var(--shard-color)]/80 has-checked:ring bg-b1 hover:ring size-14 shadow-sm cursor-pointer  ':
             label,
@@ -39,7 +42,11 @@ const shard = computed(() =>
       :alt="`shard-${shard?.name}`"
       :class="
         cn(
-          'shrink-0 absolute peer-not-checked:brightness-0 group-hover/shard:!brightness-100 peer-not-checked:opacity-50  text-[var(--shard-color)]  dst',
+          `
+            absolute shrink-0 text-[var(--shard-color)] dst
+            group-hover/shard:!brightness-100
+            peer-not-checked:opacity-50 peer-not-checked:brightness-0
+          `,
           {
             '!size-5': ![5011, 5010, 5007].includes(id),
             '!size-4.5': [5011, 5010, 5007].includes(id),

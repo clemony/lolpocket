@@ -38,7 +38,10 @@ const emit = defineEmits(['update:set'])
     filter=".no-drag"
     :class="
       cn(
-        'grid items-center size-full justify-center place-self-center gap-4 group relative field-box p-4 w-150 grid-cols-6',
+        `
+          group field-box relative grid size-full w-150 grid-cols-6 items-center
+          justify-center gap-4 place-self-center p-4
+        `,
         { '': props.split, '': !props.split },
         props.class,
       )

@@ -23,7 +23,7 @@ const { ability, class: className } = defineProps<{
       class="flex items-center gap-2">
       <i-lol-ah
         name="ph:hourglass"
-        class="dst mt-px inline size-3.5 shrink-0 text-black" />
+        class="mt-px inline size-3.5 shrink-0 text-black dst" />
 
       {{ ability.cooldown }}
     </div>
@@ -35,7 +35,10 @@ const { ability, class: className } = defineProps<{
         class="flex items-center gap-2">
         <component
           :is="`i-lol-charge-${ability.maxCharges}`"
-          class="dst text-bc/80 -mt-px inline size-7 *:stroke-[1.3]" />
+          class="
+            -mt-px inline size-7 text-bc/80 dst
+            *:stroke-[1.3]
+          " />
 
         <span>
           {{ ability.maxCharges }}
@@ -48,7 +51,10 @@ const { ability, class: className } = defineProps<{
         class="flex items-center gap-2">
         <icon
           name="mynaui:battery-charging"
-          class="dst text-bc/80 -mt-px size-7 *:stroke-[1.3]" />
+          class="
+            -mt-px size-7 text-bc/80 dst
+            *:stroke-[1.3]
+          " />
 
         {{ ability.rechargeRate }}
       </div>
@@ -61,7 +67,7 @@ const { ability, class: className } = defineProps<{
       class="flex items-center gap-2">
       <component
         :is="`i-lol-${ability.resource.replace(/\s/g, '-')}`"
-        :class="cn('dst size-4   text-bc/80')" />
+        :class="cn('size-4 text-bc/80 dst')" />
 
       {{ ability.cost }}
     </div>
@@ -71,7 +77,7 @@ const { ability, class: className } = defineProps<{
       v-tippy="{ content: 'Effect Radius', theme: 'base' }"
       class="flex items-center gap-3">
       <span class="relative size-3 justify-start">
-        <i-lol-radius class="text-bc/80 dst absolute -top-0.5 size-4.5" />
+        <i-lol-radius class="absolute -top-0.5 size-4.5 text-bc/80 dst" />
       </span>
       {{ ability.effectRadius }}
     </div>
@@ -80,7 +86,7 @@ const { ability, class: className } = defineProps<{
       v-if="ability.targetRange"
       v-tippy="{ content: 'Range', theme: 'base' }"
       class="flex items-center gap-2">
-      <i-lol-range class="text-bc dst text-bc/80 size-4" />
+      <i-lol-range class="size-4 text-bc text-bc/80 dst" />
       {{ ability.targetRange }}
     </div>
   </div>

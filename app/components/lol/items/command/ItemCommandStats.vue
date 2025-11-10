@@ -25,7 +25,10 @@ const { filtered, filters, setFilter } = useItemFilter()
           as="div">
           <label
             v-if="!filters.stats.includes(stat.id)"
-            class="hover:bg-accent flex w-full rounded-md py-1.5 pr-2.5 pl-8 capitalize">
+            class="
+              flex w-full rounded-md py-1.5 pr-2.5 pl-8 capitalize
+              hover:bg-accent
+            ">
             <input
               v-model="filters.stats"
               type="checkbox"
@@ -36,8 +39,10 @@ const { filtered, filters, setFilter } = useItemFilter()
             <span class="grow">{{ stat.name }}</span>
 
             <div
-              class="!text-1 badge bg-b1/90 border-accent rounded-field tracking-wide">
-              <span class="dst text-bc">{{ stat.abbr[0] }}</span>
+              class="
+                badge rounded-field border-accent bg-b1/90 !text-1 tracking-wide
+              ">
+              <span class="text-bc dst">{{ stat.abbr[0] }}</span>
             </div>
           </label>
         </Motion>

@@ -1,10 +1,13 @@
 <script lang="ts" setup></script>
 
 <template>
-  <main class="overflow-y-auto !w-screen h-screen">
+  <main class="h-screen !w-screen overflow-y-auto">
     <!-- header -->
     <header
-      class="sticky top-0 flex shrink-0 items-center gap-2 border-b z-2 border-b3 bg-b1/80 backdrop-blur-lg p-4">
+      class="
+        sticky top-0 z-2 flex shrink-0 items-center gap-2 border-b border-b3
+        bg-b1/80 p-4 backdrop-blur-lg
+      ">
       <Button
         variant="neutral"
         class="size-7 text-0 font-bold">
@@ -19,7 +22,7 @@
         Nexus
       </Button>
     </header>
-    <div class="flex flex-1 flex-col gap-4 relative size-full">
+    <div class="relative flex size-full flex-1 flex-col gap-4">
       <slot />
     </div>
     <!-- toaster -->

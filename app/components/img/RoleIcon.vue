@@ -19,5 +19,5 @@ const position = computed(() => {
 <template>
   <component
     :is="`i-lol-${position?.name.toLowerCase()}`"
-    :class="cn('size-4  dst shrink-0', className)" />
+    :class="cn('size-4 shrink-0 dst', className)" />
 </template>

@@ -18,7 +18,11 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 <template>
   <ContextMenuRadioItem
     v-bind="forwarded"
-    class="cursor-pointer text-nc/90 **:text-nc/90 rounded-md focus:bg-b3/20 focus:text-nc">
+    class="
+      cursor-pointer rounded-md text-nc/90
+      **:text-nc/90
+      focus:bg-b3/20 focus:text-nc
+    ">
     <slot />
   </ContextMenuRadioItem>
 </template>

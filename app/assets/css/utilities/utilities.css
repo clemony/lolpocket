@@ -2,7 +2,7 @@
 @import '../theme.css';
 
 @utility dss-* {
- box-shadow: var(--drop-shadow-sm) --value([color]) --modifier(integer);
+  box-shadow: var(--drop-shadow-sm) --value([color]) --modifier(integer);
 }
 @utility dss {
   @apply drop-shadow-sm;

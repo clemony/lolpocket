@@ -41,7 +41,11 @@ definePageMeta({
             :key="b">
             {{ section.title }}
             <ol
-              class="list-outside list-[upper-roman] space-y-6 pl-6 leading-7 text-pretty marker:w-12 marker:justify-start marker:pr-6 marker:text-start">
+              class="
+                list-outside list-[upper-roman] space-y-6 pl-6 leading-7
+                text-pretty
+                marker:w-12 marker:justify-start marker:pr-6 marker:text-start
+              ">
               <li
                 v-for="item, c in section.description"
                 :key="c">

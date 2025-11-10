@@ -5,16 +5,17 @@ import { fileURLToPath } from 'node:url'
 export default defineNuxtConfig({
 
   alias: {
-    'tiptap': fileURLToPath(new URL('./app/components/tiptap', import.meta.url)),
     '@composables': fileURLToPath(new URL('./app/composables', import.meta.url)),
-    '@stores': fileURLToPath(new URL('./app/stores', import.meta.url)),
     '@css': fileURLToPath(new URL('./app/assets/css', import.meta.url)),
     '@data': fileURLToPath(new URL('./shared', import.meta.url)),
     '@layout': fileURLToPath(new URL('./app/layout', import.meta.url)),
+    '@app-types': fileURLToPath(new URL('./app/types', import.meta.url)),
     '@plugins': fileURLToPath(new URL('./app/plugins', import.meta.url)),
     '@records': fileURLToPath(new URL('./shared/records', import.meta.url)),
     '@schema': fileURLToPath(new URL('./shared/schema', import.meta.url)),
+    '@stores': fileURLToPath(new URL('./app/stores', import.meta.url)),
     '@variants': fileURLToPath(new URL('./app/assets/variants', import.meta.url)),
+    'tiptap': fileURLToPath(new URL('./app/components/tiptap', import.meta.url)),
   },
   components: [
     {
@@ -57,7 +58,7 @@ export default defineNuxtConfig({
     format: ['webp'],
   },
   imports: {
-    dirs: ['@variants', '@schema', '@data', '@stores'],
+    dirs: ['@variants', '@schema', '@data', '@stores', '@app-types'],
     presets: [
       {
         from: 'motion-v',
@@ -105,7 +106,7 @@ export default defineNuxtConfig({
       login: '/login',
       saveRedirectToCookie: true,
     },
-   // types: './shared/types/database.types.ts',
+    types: './shared/types/database.types.ts',
     url: process.env.NUXT_PUBLIC_SUPABASE_URL,
     useSsrCookies: false,
   },
@@ -118,7 +119,8 @@ export default defineNuxtConfig({
       compilerOptions: {
         pretty: true,
         skipLibCheck: true,
-      }
+      },
+      include: ['app/types/**/*.ts']
     },
     typeCheck: true
   },

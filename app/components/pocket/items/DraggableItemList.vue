@@ -10,7 +10,7 @@ watch(() => a.value, (newVal) => {
 </script>
 
 <template>
-  <div class="w-full flex-col flex pb-32">
+  <div class="flex w-full flex-col pb-32">
     <motion.div
       v-if="is().filtered.length"
       v-draggable="[
@@ -30,7 +30,10 @@ watch(() => a.value, (newVal) => {
         },
       ]"
       layout="position"
-      class="select-none w-full justify-between grid grid-cols-[repeat(auto-fill,minmax(60px,1fr))]  gap-4   pt-6">
+      class="
+        grid w-full grid-cols-[repeat(auto-fill,minmax(60px,1fr))]
+        justify-between gap-4 pt-6 select-none
+      ">
       <AnimatePresence>
         <motion.div
           v-for="item in is().filtered"
@@ -41,17 +44,21 @@ watch(() => a.value, (newVal) => {
           layout="position">
           <LazyItemPopover
             :id="item"
-            class="size-20 aspect-square " />
+            class="aspect-square size-20" />
         </motion.div>
       </AnimatePresence>
     </motion.div>
     <TransitionScalePop
       v-if="is().filtered.length < is().defaultFilterLength"
-      class="w-full z-2 pt-32  grid place-items-center">
+      class="z-2 grid w-full place-items-center pt-32">
       <Button
         variant="outline"
         size="sm"
-        class="w-fit hover:inset-shadow-xs *:opacity-80 hover:*:opacity-100"
+        class="
+          w-fit
+          *:opacity-80
+          hover:inset-shadow-xs hover:*:opacity-100
+        "
         @click="is().clearFilters()">
         <span>
           {{ !is().filtered.length ? 'sold out' : 'reset' }}

@@ -23,11 +23,11 @@ const variants = {
     initial="hidden"
     animate="visible"
     exit="hidden">
-    <label
+    <Label
       class="btn-ghost-dark group"
       :class="cn('', className)"
       @click="console.log('click')">
       <slot />
-    </label>
+    </Label>
   </li>
 </template>

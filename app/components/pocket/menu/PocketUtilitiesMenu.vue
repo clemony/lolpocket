@@ -31,11 +31,18 @@ async function testSaveAllPockets() {
         size="md"
         hover="ghost"
         :class="
-          cn('btn-square self-end mb-1 hover:!bg-b3', { 'btn-active': isOpen })
+          cn(`
+            mb-1 btn-square self-end
+            hover:!bg-b3
+          `, { 'btn-active': isOpen })
         ">
         <icon
           name="more"
-          class="opacity-60 group-hover/drop:opacity-80 group-data-[state=open]/drop:opacity-80" />
+          class="
+            opacity-60
+            group-hover/drop:opacity-80
+            group-data-[state=open]/drop:opacity-80
+          " />
       </Button>
     </PopoverTrigger>
 
@@ -44,7 +51,12 @@ async function testSaveAllPockets() {
       align="start"
       :side-offset="-18"
       :align-offset="-4"
-      class="ml-3 flex min-w-76 flex-col justify-center justify-items-center overflow-hidden px-1 py-3 **:[&_button]:w-full **:[&_button]:justify-start **:[&_button]:!gap-3 **:[&_button]:px-3">
+      class="
+        ml-3 flex min-w-76 flex-col justify-center justify-items-center
+        overflow-hidden px-1 py-3
+        **:[&_button]:w-full **:[&_button]:justify-start **:[&_button]:!gap-3
+        **:[&_button]:px-3
+      ">
       <Button
         variant="ghost"
         size="sm"
@@ -73,13 +85,13 @@ async function testSaveAllPockets() {
         Download Pocket Card
       </Button>
 
-      <Separator class="bg-b3 -mx-2 my-2 justify-self-center" />
+      <Separator class="-mx-2 my-2 justify-self-center bg-b3" />
       <Label
         variant="label"
         class="mb-1 px-3 py-2">
         <icon
           name="export"
-          class="dst size-4.5" />
+          class="size-4.5 dst" />
         Export to League Client
       </Label>
       <Button
@@ -96,7 +108,7 @@ async function testSaveAllPockets() {
         Runes
       </Button>
 
-      <Separator class="bg-b3 -mx-2 my-2 justify-self-center" />
+      <Separator class="-mx-2 my-2 justify-self-center bg-b3" />
       <Button
         variant="ghost"
         size="sm"
@@ -105,7 +117,7 @@ async function testSaveAllPockets() {
         <DeletePocketDialog :pocket="pocket">
           <icon
             name="trash"
-            class="dst size-4.5" />
+            class="size-4.5 dst" />
           Delete Pocket
         </DeletePocketDialog>
       </Button>

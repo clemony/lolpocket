@@ -25,7 +25,13 @@ watch(
 
 <template>
   <div
-    class="absolute before:z-0 before:absolute before:size-full before:bg-b1/60 before:top-0 before:left-0 z-1 bg-b2/40 backdrop-blur-md flex items-center py-1 top-16 left-0 w-full rounded-none shadow-none border-b border-b-b3/80 border-x-2 border-x-b3/30 h-14 px-5.25 gap-2">
+    class="
+      absolute top-16 left-0 z-1 flex h-14 w-full items-center gap-2
+      rounded-none border-x-2 border-b border-x-b3/30 border-b-b3/80 bg-b2/40
+      px-5.25 py-1 shadow-none backdrop-blur-md
+      before:absolute before:top-0 before:left-0 before:z-0 before:size-full
+      before:bg-b1/60
+    ">
     <LazyChampionDropdown
       :disabled="!card.champion"
       :champion="card.champion"
@@ -33,17 +39,22 @@ watch(
 
     <label
       v-tippy="'Background Color'"
-      class="mx-2 aspect-square border border-neutral/60 drop-shadow-xs relative rounded-full grid-place-items-center size-6.5 overflow-hidden hover:border-neutral hover:ring hover:ring-neutral tldr-30 cursor-pointer">
+      class="
+        grid-place-items-center tldr-30 relative mx-2 aspect-square size-6.5
+        cursor-pointer overflow-hidden rounded-full border border-neutral/60
+        drop-shadow-xs
+        hover:border-neutral hover:ring hover:ring-neutral
+      ">
       <input
         v-model="color"
         type="color"
-        class="size-16 -top-2 -left-2 cursor-pointer absolute"
+        class="absolute -top-2 -left-2 size-16 cursor-pointer"
         @change="emit('update:color', color)" />
     </label>
 
     <label
       v-tippy="'Filter'"
-      class="swap swap-rotate btn btn-square group btn-ghost">
+      class="group btn swap btn-square swap-rotate btn-ghost">
       <input
         v-model="filter"
         type="checkbox"
@@ -53,11 +64,17 @@ watch(
 
       <icon
         name="hugeicons:monocle"
-        class="size-5.5 dst swap-off peer-disabled:text-bc/20" />
+        class="
+          swap-off size-5.5 dst
+          peer-disabled:text-bc/20
+        " />
 
       <icon
         name="streamline:rainbow"
-        class="swap-on dst size-6 peer-disabled:text-bc/20" />
+        class="
+          swap-on size-6 dst
+          peer-disabled:text-bc/20
+        " />
     </label>
 
     <Popover>
@@ -67,7 +84,7 @@ watch(
           class="btn btn-square btn-ghost">
           <icon
             name="ph:arrows-out-line-horizontal"
-            class="size-5.5 dst shrink-0" />
+            class="size-5.5 shrink-0 dst" />
         </button>
       </PopoverTrigger>
 
@@ -75,7 +92,7 @@ watch(
         align="start"
         :side-offset="10"
         side="bottom"
-        class="w-44 PopoverContent border border-b3">
+        class="PopoverContent w-44 border border-b3">
         <input
           v-model="align"
           type="range"
@@ -111,7 +128,7 @@ watch(
 
     <Separator
       orientation="vertical"
-      class="bg-b2 h-5/6 mx-3" />
+      class="mx-3 h-5/6 bg-b2" />
 
     <button
       v-tippy="'Share'"
@@ -132,24 +149,24 @@ watch(
 
     <Separator
       orientation="vertical"
-      class="bg-b2 h-5/6 mx-3" />
+      class="mx-3 h-5/6 bg-b2" />
 
-    <button class="btn btn-ghost btn-square control-btn">
+    <button class="control-btn btn btn-square btn-ghost">
       <icon
         name="ph:arrows-in-simple-light"
-        class="dst size-5.5" />
+        class="size-5.5 dst" />
     </button>
 
-    <button class="btn btn-ghost btn-square">
+    <button class="btn btn-square btn-ghost">
       <icon
         name="iconoir:zoom-in"
-        class="dst size-5.5" />
+        class="size-5.5 dst" />
     </button>
 
-    <button class="btn btn-ghost btn-square">
+    <button class="btn btn-square btn-ghost">
       <icon
         name="iconoir:zoom-out"
-        class="dst size-5.5" />
+        class="size-5.5 dst" />
     </button>
   </div>
 </template>

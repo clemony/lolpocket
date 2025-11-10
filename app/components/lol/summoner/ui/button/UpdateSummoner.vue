@@ -42,7 +42,7 @@ const tippy = computed(
     v-bind="forwarded"
     :class="
       cn(
-        'p-0 shrink-0',
+        'shrink-0 p-0',
         {
           'pointer-events-none bg-b2/80 btn-active cursor-not-allowed':
             cooldown,
@@ -58,7 +58,11 @@ const tippy = computed(
         name="reset"
         :class="
           cn(
-            ' size-5 **:stroke-[1.8]   group-hover/load:opacity-100 dst transition-all duration-200',
+            `
+              size-5 dst transition-all duration-200
+              **:stroke-[1.8]
+              group-hover/load:opacity-100
+            `,
             {
               'animate-rotate': isLoading,
             },
@@ -67,7 +71,11 @@ const tippy = computed(
 
       <div
         v-if="cooldown"
-        class="text-0 border-neutral bg-neutral text-nc **:text-nc radial-progress absolute place-self-center border-2 font-semibold opacity-90 shadow-sm"
+        class="
+          radial-progress absolute place-self-center border-2 border-neutral
+          bg-neutral text-0 font-semibold text-nc opacity-90 shadow-sm
+          **:text-nc
+        "
         :style="{
           '--value': cooldown?.seconds,
           '--size': '2rem',
@@ -75,7 +83,7 @@ const tippy = computed(
         }"
         :aria-valuenow="cooldown?.percent"
         role="progressbar">
-        <span class="bg-neutral grid size-full place-items-center rounded-full">
+        <span class="grid size-full place-items-center rounded-full bg-neutral">
           {{ cooldown?.seconds }}
         </span>
       </div>

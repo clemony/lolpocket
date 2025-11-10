@@ -7,18 +7,18 @@ const { data, type } = defineProps<{
 
 <template>
   <div
-    class="w-full    gap-x-1 align-middle  leading-normal text-pretty ">
+    class="w-full gap-x-1 align-middle leading-normal text-pretty">
     <span
       v-if="data.unique"
-      class=" !text-precision/90  tracking-tight italic">Unique {{ type }}</span>
+      class="tracking-tight !text-precision/90 italic">Unique {{ type }}</span>
 
     <span
       v-if="data.name"
-      class="!text-precision/90 tracking-tight italic"> -&nbsp;{{ data.name }}</span>
+      class="tracking-tight !text-precision/90 italic"> -&nbsp;{{ data.name }}</span>
 
     <span
       v-if="data.unique || data.name"
-      class=" !text-precision/90">
+      class="!text-precision/90">
       :&nbsp;
     </span>
 

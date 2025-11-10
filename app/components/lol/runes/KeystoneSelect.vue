@@ -26,11 +26,15 @@ watch(
 <template>
   <Field
     title="Keystone"
-    class="pb-4 pt-6 shadow-warm h-29 px-3 flex items-center w-114 max-w-114 relative">
+    class="
+      relative flex h-29 w-114 max-w-114 items-center px-3 pt-6 pb-4 shadow-warm
+    ">
     <div
-      class="absolute size-full top-0 left-0 rounded-box overflow-hidden opacity-26">
+      class="
+        absolute top-0 left-0 size-full overflow-hidden rounded-box opacity-26
+      ">
       <div
-        class="absolute size-full top-0 left-0 gradient mask-bottom-right"
+        class="gradient absolute top-0 left-0 size-full mask-bottom-right"
         :data-path="runes[0].path" />
     </div>
 
@@ -38,8 +42,13 @@ watch(
       v-model:model-value="selectedRune"
       :class="
         cn(
-          ' items-center justify-around  flex  relative rounded-xl size-full rounded-xl  **:select-none',
-          `grid-cols-${runes.length ?? 3}`,
+          `
+            relative flex size-full items-center justify-around rounded-xl
+            **:select-none
+          `,
+          `
+            grid-cols-${runes.length ?? 3}
+          `,
         )
       "
       @update:model-value="emit('update:rune', selectedRune)">

@@ -25,7 +25,10 @@ const winrate = computed(() =>
   <div
     :class="
       cn(
-        'w-120 max-w-120 h-42 max-h-42 field-box  bg-b2/30 shadow-warm-soft  drop-shadow-xs border-b3/40 py-0 ',
+        `
+          field-box h-42 max-h-42 w-120 max-w-120 border-b3/40 bg-b2/30 py-0
+          shadow-warm-soft drop-shadow-xs
+        `,
         className,
       )
     ">
@@ -33,29 +36,35 @@ const winrate = computed(() =>
       {{ `Ranked ${title}` }}
     </span>
     <div
-      class="overflow-hidden size-full grid grid-cols-[1.1fr_1fr_1fr] place-items-center h-42 content-center">
-      <div class="grid mt-0.5 overflow-hidden place-items-center">
+      class="
+        grid size-full h-42 grid-cols-[1.1fr_1fr_1fr] place-items-center
+        content-center overflow-hidden
+      ">
+      <div class="mt-0.5 grid place-items-center overflow-hidden">
         <!-- crest -->
         <img
           v-if="!entry"
           alt="unranked"
           src="/img/crests/unranked.webp"
-          class="drop-shadow-sm object-contain opacity-40 size-25 saturate-0" />
+          class="size-25 object-contain opacity-40 drop-shadow-sm saturate-0" />
 
         <img
           v-else
           :alt="entry?.tier?.toLowerCase()"
           :src="`/img/crests/${entry?.tier?.toLowerCase()}.webp`"
-          class="drop-shadow-md object-contain size-28 drop-shadow-black/30" />
+          class="size-28 object-contain drop-shadow-md drop-shadow-black/30" />
       </div>
 
-      <div class="relative grid place-items-center size-full">
+      <div class="relative grid size-full place-items-center">
         <div
-          class="relative size-21 overflow-hidden mt-1 grid place-items-center rounded-lg">
+          class="
+            relative mt-1 grid size-21 place-items-center overflow-hidden
+            rounded-lg
+          ">
           <DonutSkeleton class="absolute size-21" />
 
           <div
-            class="radial-progress dst absolute"
+            class="radial-progress absolute dst"
             :style="{
               '--value': winrate,
               '--size': '5.25rem',
@@ -66,7 +75,7 @@ const winrate = computed(() =>
             role="progressbar">
             <span
               v-if="entry"
-              class="text-bc font-medium dst">
+              class="font-medium text-bc dst">
               {{ winrate.toFixed(1).replace(".0", "") }}%
             </span>
           </div>
@@ -76,7 +85,10 @@ const winrate = computed(() =>
       <div
         :class="
           cn(
-            'pt-3  overflow-hidden font-medium flex flex-col items-end justify-center pb-3 text-end gap-2.75',
+            `
+              flex flex-col items-end justify-center gap-2.75 overflow-hidden
+              pt-3 pb-3 text-end font-medium
+            `,
             { 'opacity-40': !entry },
           )
         ">
@@ -88,13 +100,17 @@ const winrate = computed(() =>
           }}
         </p>
 
-        <p class="capitalize font-semibold text-4">
+        <p class="text-4 font-semibold capitalize">
           {{ entry?.lp ?? 0 }} LP
         </p>
 
         <p
           v-tippy="`${entry ? entry?.wins + entry?.losses : 0} total`"
-          class="hover:underline decoration-dotted underline-offset-2 flex text-1 items-center gap-1 text-end justify-end text-nowrap">
+          class="
+            flex items-center justify-end gap-1 text-end text-1 text-nowrap
+            decoration-dotted underline-offset-2
+            hover:underline
+          ">
           <span>{{ entry ? entry.wins : 0 }}W</span>
 
           <span>{{ entry ? entry.losses : 0 }}L</span>

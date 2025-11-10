@@ -46,31 +46,49 @@ onMounted (() => {
       for="downvote"
       :disabled="!comment.author_id"
       aria-label="downvote"
-      class="grid size-7 cursor-pointer place-items-center disabled:!pointer-events-none">
+      class="
+        grid size-7 cursor-pointer place-items-center
+        disabled:!pointer-events-none
+      ">
       <ToggleGroupItem
         name="downvote"
         :value="-1">
         <icon
           name="mynaui:arrow-up"
-          class="group-on/toggle:opacity-100 group-on/toggle:group-not-disabled/toggle:stroke-[4] absolute size-3.5 -scale-y-100 opacity-40 **:stroke-2 group-disabled/toggle:opacity-20" />
+          class="
+            absolute size-3.5 -scale-y-100 opacity-40
+            **:stroke-2
+            group-disabled/toggle:opacity-20
+            group-on/toggle:opacity-100
+            group-on/toggle:group-not-disabled/toggle:stroke-[4]
+          " />
       </ToggleGroupItem>
     </label>
     <Element
       variant="none"
       size="6"
-      :class="cn('text-0 relative grid place-items-center px-2 leading-3 lining-nums tabular-nums opacity-50 select-none', { 'opacity-100 font-medium': vote })">
+      :class="cn(`
+        relative grid place-items-center px-2 text-0 leading-3 lining-nums
+        tabular-nums opacity-50 select-none
+      `, { 'opacity-100 font-medium': vote })">
       {{ calculatedVotes }}
     </Element>
     <label
       for="upvote"
       aria-label="upvote"
-      class="grid size-7 cursor-pointer place-items-center ">
+      class="grid size-7 cursor-pointer place-items-center">
       <ToggleGroupItem
         name="upvote"
         :value="1">
         <icon
           name="mynaui:arrow-up"
-          class="group-on/toggle:opacity-100 group-on/toggle:group-not-disabled/toggle:**:stroke-[4] absolute size-3.5 opacity-40 **:stroke-2  group-disabled/toggle:opacity-20 " />
+          class="
+            absolute size-3.5 opacity-40
+            **:stroke-2
+            group-disabled/toggle:opacity-20
+            group-on/toggle:opacity-100
+            group-on/toggle:group-not-disabled/toggle:**:stroke-[4]
+          " />
       </ToggleGroupItem>
     </label>
   </ToggleGroup>

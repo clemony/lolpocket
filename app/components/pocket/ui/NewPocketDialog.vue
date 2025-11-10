@@ -34,13 +34,13 @@ defineExpose({
 
 <template>
   <Dialog>
-    <MotionDialogContent class="!rounded-xl w-110 pt-8 pb-6 px-7">
+    <MotionDialogContent class="w-110 !rounded-xl px-7 pt-8 pb-6">
       <DialogHeader>
         <DialogTitle class="text-6 dst">
           New Pocket
         </DialogTitle>
 
-        <DialogDescription class="leading-6 mt-1 dst mb-5">
+        <DialogDescription class="mt-1 mb-5 leading-6 dst">
           Choose a pocket name, tag your pocket (for easier searching), and
           create your pocket icon.
           <span class="font-semibold">All items can be left blank</span>
@@ -48,18 +48,21 @@ defineExpose({
         </DialogDescription>
       </DialogHeader>
 
-      <div class="grid field-box gap-4 size-full">
+      <div class="field-box grid size-full gap-4">
         <IconPopover
           v-model:selected-icon="selectedIcon"
           side="right"
           :side-offset="70"
           align="start"
           :align-offset="-136"
-          class="size-30 place-self-center cursor-pointer"
+          class="size-30 cursor-pointer place-self-center"
           @update:selected-icon="(e) => (selectedIcon = e)" />
 
         <div
-          class="[&_label]:text-3 w-full flex flex-col justify-start gap-6 pt-4 px-0.5 h-full">
+          class="
+            flex h-full w-full flex-col justify-start gap-6 px-0.5 pt-4
+            [&_label]:text-3
+          ">
           <div class="flex flex-col gap-1">
             <div class="input w-full shrink-0">
               <div class="grow">
@@ -82,9 +85,12 @@ defineExpose({
 
             <TagsInput
               v-model="tags"
-              class="flex-col p-2 mt-6">
+              class="mt-6 flex-col p-2">
               <div
-                class="*:text-3 flex w-full flex-row flex-wrap justify-start gap-2">
+                class="
+                  flex w-full flex-row flex-wrap justify-start gap-2
+                  *:text-3
+                ">
                 <template v-if="tags.length">
                   <TransitionGroup name="pop">
                     <TagsInputItem
@@ -115,7 +121,10 @@ defineExpose({
 
               <TagsInputInput
                 placeholder="optional"
-                class="text-3 min-h-10 w-full rounded-md border-0 focus:border-0"
+                class="
+                  min-h-10 w-full rounded-md border-0 text-3
+                  focus:border-0
+                "
                 name="pocket-tags " />
             </TagsInput>
           </div>
@@ -129,7 +138,7 @@ defineExpose({
       <DialogFooter class="mt-1 justify-start">
         <button
           type="submit"
-          class="btn btn-neutral px-6 btn-md !text-3 !font-medium"
+          class="btn px-6 !text-3 !font-medium btn-md btn-neutral"
           @click="submitForm">
           Create
         </button>

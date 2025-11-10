@@ -28,7 +28,10 @@ const items = computed(() => {
     v-if="player"
     :class="
       cn(
-        'flex gap-1.5 size-full max-w-66   items-start *:rounded-md ',
+        `
+          flex size-full max-w-66 items-start gap-1.5
+          *:rounded-md
+        `,
         wrapperClass,
       )
     ">
@@ -40,11 +43,14 @@ const items = computed(() => {
         :id="items[i]"
         v-tippy="ix().itemNameById(items[i])"
         :alt="items[i]"
-        class="size-10 rounded-lg  hover:ring hover:scale-105 transition-all duration-300 ring-bc/60" />
+        class="
+          size-10 rounded-lg ring-bc/60 transition-all duration-300
+          hover:scale-105 hover:ring
+        " />
 
       <Placeholder
         v-else
-        :class="cn('size-10 !bg-b3/60 rounded-lg', className)" />
+        :class="cn('size-10 rounded-lg !bg-b3/60', className)" />
     </template>
   </div>
 </template>

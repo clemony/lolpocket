@@ -8,7 +8,7 @@ const { item } = defineProps<{ item: MenubarItem }>()
   <!-- separator -->
   <MenubarSeparator
     v-if="item.name === 'separator'"
-    class="mb-0.5 mt-0.75  bg-b3/60" />
+    class="mt-0.75 mb-0.5 bg-b3/60" />
 
   <!-- checkbox -->
   <AutoMenuCheckboxItem

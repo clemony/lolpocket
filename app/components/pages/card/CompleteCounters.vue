@@ -63,35 +63,38 @@ const itemsLength = computed(() => {
 
 <template>
   <div
-    class="flex gap-7 w-full items-center justify-evenly -ml-1.5 **:select-none">
+    class="
+      -ml-1.5 flex w-full items-center justify-evenly gap-7
+      **:select-none
+    ">
     <slot />
 
     <div
       v-tippy="
         `${championsLength ? championsLength : 'no'} pocket pick${pocket.champions.length === 1 ? '' : 's'}`
       "
-      class="flex gap-1.5 items-center">
-      <i-no-champ class="size-8.5 dst opacity-80" />
+      class="flex items-center gap-1.5">
+      <i-no-champ class="size-8.5 opacity-80 dst" />
 
-      <span class="dst font-medium">{{ championsLength }}</span>
+      <span class="font-medium dst">{{ championsLength }}</span>
     </div>
 
     <div
       v-tippy="`${rolesLength ? rolesLength : 'no'} selected roles`"
-      class="flex gap-3 items-center">
+      class="flex items-center gap-3">
       <i-roles-all class="size-5 opacity-80 dst" />
 
-      <span class="dst font-medium">{{ rolesLength }}</span>
+      <span class="font-medium dst">{{ rolesLength }}</span>
     </div>
 
     <div
       v-tippy="`${spellsLength ? spellsLength : 'no'} spells`"
-      class="flex gap-2 items-center">
+      class="flex items-center gap-2">
       <icon
         name="game-icons:fire-spell-cast"
-        class="size-6 dst opacity-70" />
+        class="size-6 opacity-70 dst" />
 
-      <span class="dst font-medium">{{ spellsLength }}</span>
+      <span class="font-medium dst">{{ spellsLength }}</span>
     </div>
     <!--
     <div v-tippy="`${runeSetsLength ? runeSetsLength : 'no'} rune sets`" class="flex gap-2 items-center">
@@ -101,12 +104,12 @@ const itemsLength = computed(() => {
 
     <div
       v-tippy="`${itemsLength ? itemsLength : 'no'} item sets`"
-      class="flex gap-2.5 items-center">
+      class="flex items-center gap-2.5">
       <icon
         name="bow"
         class="size-6 dst" />
 
-      <span class="dst font-medium">{{ itemsLength }}</span>
+      <span class="font-medium dst">{{ itemsLength }}</span>
     </div>
   </div>
 </template>

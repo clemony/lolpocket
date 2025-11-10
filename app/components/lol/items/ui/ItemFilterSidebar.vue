@@ -21,12 +21,19 @@
       v-slot="{ open }"
       :default-open="true">
       <CollapsibleTrigger
-        class="text-bc/50 flex w-full cursor-pointer items-center justify-between py-2 pl-1 font-semibold underline-offset-2 hover:underline ">
+        class="
+          flex w-full cursor-pointer items-center justify-between py-2 pl-1
+          font-semibold text-bc/50 underline-offset-2
+          hover:underline
+        ">
         Statistics
         <PlusMinusExpand :open />
       </CollapsibleTrigger>
       <CollapsibleContent
-        class="CollapsibleContent h-90 max-h-90 w-full overflow-y-scroll overscroll-auto px-1.5">
+        class="
+          CollapsibleContent h-90 max-h-90 w-full overflow-y-scroll
+          overscroll-auto px-1.5
+        ">
         <ItemStatsList />
       </CollapsibleContent>
     </Collapsible>
@@ -36,12 +43,19 @@
       v-slot="{ open }"
       :default-open="true">
       <CollapsibleTrigger
-        class="text-bc/50 flex w-full cursor-pointer items-center justify-between py-2 pl-1 font-semibold underline-offset-2 hover:underline">
+        class="
+          flex w-full cursor-pointer items-center justify-between py-2 pl-1
+          font-semibold text-bc/50 underline-offset-2
+          hover:underline
+        ">
         Categories
         <PlusMinusExpand :open />
       </CollapsibleTrigger>
       <CollapsibleContent
-        class="CollapsibleContent h-90 max-h-90 w-full overflow-y-scroll overscroll-auto px-1.5">
+        class="
+          CollapsibleContent h-90 max-h-90 w-full overflow-y-scroll
+          overscroll-auto px-1.5
+        ">
         <ItemCategoriesList />
       </CollapsibleContent>
     </Collapsible>
@@ -51,7 +65,7 @@
 
     <!-- map -->
     <div class="flex flex-col gap-3">
-      <span class=" text-bc/50 pl-1 font-semibold">Map</span>
+      <span class="pl-1 font-semibold text-bc/50">Map</span>
       <ItemMapFilter
         v-model:model-value="is().filters.map"
         class="w-full" />

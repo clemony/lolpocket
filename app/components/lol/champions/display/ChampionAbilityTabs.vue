@@ -44,7 +44,7 @@ const gridCols = computed (() => `grid grid-cols-${champAbilities.value.length}`
 </script>
 
 <template>
-  <menu :class="cn('items-center justify-between gap-2 pointer-events-auto z-1', gridCols)">
+  <menu :class="cn('pointer-events-auto z-1 items-center justify-between gap-2', gridCols)">
     <Label
       v-for="(ability, i) in champAbilities"
       :key="i"
@@ -52,9 +52,14 @@ const gridCols = computed (() => `grid grid-cols-${champAbilities.value.length}`
       variant="neutral"
       size="sq-14"
       :value="i"
-      class=" group aspect-square h-auto w-full !cursor-pointer overflow-hidden border-0 p-0 transition-transform duration-300 **:pointer-events-none hover:scale-110"
+      class="
+        group aspect-square h-auto w-full !cursor-pointer overflow-hidden
+        border-0 p-0 transition-transform duration-300
+        **:pointer-events-none
+        hover:scale-110
+      "
       :class="{
-        'scale-110 hover:scale-115 ': selectedAbility === ability.key }">
+        'scale-110 hover:scale-115': selectedAbility === ability.key }">
       <input
         v-model="selectedAbility"
         :value="i"
@@ -66,11 +71,16 @@ const gridCols = computed (() => `grid grid-cols-${champAbilities.value.length}`
       <Img
         :img="ability.icon"
         alt="passive icon"
-        class="pointer-events-none  size-full opacity-70 contrast-80 grayscale transition duration-300 group-hover:opacity-100 group-hover:contrast-100 group-hover:grayscale-0"
+        class="
+          pointer-events-none size-full opacity-70 contrast-80 grayscale
+          transition duration-300
+          group-hover:opacity-100 group-hover:contrast-100
+          group-hover:grayscale-0
+        "
         :class="{
-          'opacity-100 contrast-100 grayscale-0  ': selectedAbility,
-          'animate-in fade-in duration-500  ': loaded,
-          'animate-out  fade-out-50 duration-500': loaded,
+          'opacity-100 contrast-100 grayscale-0': selectedAbility,
+          'animate-in fade-in duration-500': loaded,
+          'animate-out fade-out-50 duration-500': loaded,
         }"
         @load="loaded = true" />
 

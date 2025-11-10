@@ -27,7 +27,7 @@ const isOpen = ref<boolean>(false)
       v-bind="$attrs"
       :class="
         cn(
-          ' rounded-lg  group/item',
+          'group/item rounded-lg',
           className,
         )
       ">
@@ -35,7 +35,9 @@ const isOpen = ref<boolean>(false)
         :id="id"
         :quality="100"
         alt="Item Image"
-        class="pointer-events-none absolute top-0 left-0 z-0 size-full opacity-96">
+        class="
+          pointer-events-none absolute top-0 left-0 z-0 size-full opacity-96
+        ">
         <LazyPrismaticShine
           v-if="isOpen || isHovered" />
       </Item>

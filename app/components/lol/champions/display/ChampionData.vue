@@ -9,9 +9,15 @@ const tabs = ref('abilities')
 
 <template>
   <div
-    class="field-box border-b3/80 bg-b2/40 !rounded-xxl relative flex max-h-full w-full flex-col drop-shadow-sm">
+    class="
+      field-box relative flex max-h-full w-full flex-col !rounded-xxl
+      border-b3/80 bg-b2/40 drop-shadow-sm
+    ">
     <div
-      class="rounded-t-xxl bg-b2/30 relative h-50 w-full overflow-hidden inset-shadow-sm drop-shadow-sm"
+      class="
+        relative h-50 w-full overflow-hidden rounded-t-xxl bg-b2/30
+        inset-shadow-sm drop-shadow-sm
+      "
       :class="{ 'shadow-warm': !champion }">
       <Champion
         v-if="championKey"
@@ -21,7 +27,10 @@ const tabs = ref('abilities')
         class="z-1 size-full scale-180" />
 
       <header
-        class="*:dst *:text-shadow-sm absolute right-5 bottom-4 z-2 w-full drop-shadow-sm *:text-right *:text-white/86">
+        class="
+          absolute right-5 bottom-4 z-2 w-full drop-shadow-sm
+          *:text-right *:text-white/86 *:dst *:text-shadow-sm
+        ">
         <Grow />
 
         <h1 class="text-11 font-bold tracking-tight">
@@ -40,7 +49,7 @@ const tabs = ref('abilities')
       class="size-full max-h-full overflow-hidden">
       <TabsList
         base="indicator"
-        class="!bg-b3 relative h-10 w-full grid-cols-3 rounded-none">
+        class="relative h-10 w-full grid-cols-3 rounded-none !bg-b3">
         <TabsTrigger value="abilities">
           Abilities
         </TabsTrigger>

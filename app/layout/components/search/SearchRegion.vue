@@ -17,7 +17,10 @@ watch(() => r, newVal => region.value = newVal)
 <template>
   <Presence
     :present
-    class="opacity-0 data-[present=true]:opacity-100">
+    class="
+      opacity-0
+      data-[present=true]:opacity-100
+    ">
     <LazyPopover
 
       @close-auto-focus.prevent
@@ -29,7 +32,11 @@ watch(() => r, newVal => region.value = newVal)
         <Button
           variant="ghost"
           size="sm"
-          class="  text-bc/60 *:first:text-bc/60 !text-2  z-1  flex w-14 flex-nowrap items-center  tracking-[0.5px] text-nowrap   lowercase">
+          class="
+            z-1 flex w-14 flex-nowrap items-center !text-2 tracking-[0.5px]
+            text-nowrap text-bc/60 lowercase
+            *:first:text-bc/60
+          ">
           <span class="relative -mr-1 grid place-items-center">
             <icon
               name="at"

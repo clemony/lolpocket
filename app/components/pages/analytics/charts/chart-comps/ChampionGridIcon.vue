@@ -9,9 +9,13 @@ const img = useImage()
 <template>
   <div
     v-if="params.img"
-    class="size-full relative">
+    class="relative size-full">
     <div
-      class="rounded-none rounded-r-xl border-r border-y border-y-b4 shadow-sm border-r-b4 drop-shadow-sm size-full mask-l-from-60% bg-no-repeat bg-[40%_24%] inset-0 absolute bg-size-[220%]"
+      class="
+        absolute inset-0 size-full rounded-none rounded-r-xl border-y border-r
+        border-y-b4 border-r-b4 mask-l-from-60% bg-size-[220%] bg-[40%_24%]
+        bg-no-repeat shadow-sm drop-shadow-sm
+      "
       :style="{
         backgroundImage: `url('${img(getSplash(ix().champKeyById(params.data.id), 'centered'))}')`,
       }"></div>
@@ -19,12 +23,14 @@ const img = useImage()
     <Img
       :img="`/img/mastery/banner/crest-and-banner-mastery-${params.data.level > 10 ? 10 : params.data.level}.webp`"
       alt="banner"
-      class="absolute h-full w-auto z-2 -top-1.5 drop-shadow-sm drop-shadow-black/15" />
+      class="
+        absolute -top-1.5 z-2 h-full w-auto drop-shadow-sm drop-shadow-black/15
+      " />
   </div>
 
   <div
     v-else
-    class="overflow-hidden size-12 rounded-lg shadow-sm drop-shadow-sm">
+    class="size-12 overflow-hidden rounded-lg shadow-sm drop-shadow-sm">
     <ChampionIcon
       :id="params.data.championId ?? params.data.id"
       :alt="params.data.champion ?? params.data.name"

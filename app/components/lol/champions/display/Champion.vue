@@ -65,7 +65,10 @@ const splash = computed (() => `url('${image(getSplash(k ?? id, type))}')`)
 <template>
   <Img
     :img="img || getSplash(k ?? id, type)"
-    :class="cn('object-cover shrink-0 overflow-hidden  shadow-sm drop-shadow-sm  rounded-lg select-none   size-full',
+    :class="cn(`
+      size-full shrink-0 overflow-hidden rounded-lg object-cover shadow-sm
+      drop-shadow-sm select-none
+    `,
                className)"
     :alt="`${k}-Splash`" />
 </template>

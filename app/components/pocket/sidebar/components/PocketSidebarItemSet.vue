@@ -58,7 +58,12 @@ const hovered = ref(false)
     v-model:open="hovered"
     @click="navigateTo(`/pocket/${pocket.key}/items`)">
     <PopoverTrigger
-      class="bg-b2/80 items-between !border-b3/50 pointer-events-auto !z-1 flex size-20 cursor-pointer flex-wrap justify-between !gap-0.75 rounded-lg border p-1.5 backdrop-blur-md hover:!z-2">
+      class="
+        items-between pointer-events-auto !z-1 flex size-20 cursor-pointer
+        flex-wrap justify-between !gap-0.75 rounded-lg border !border-b3/50
+        bg-b2/80 p-1.5 backdrop-blur-md
+        hover:!z-2
+      ">
       <template v-if="set.items && set.items?.length">
         <template
           v-for="(item, i) in set.items"
@@ -85,7 +90,10 @@ const hovered = ref(false)
             :transition="{
               delay: 0.2,
             }"
-            class="bg-b2/90 border-b3/50 shadow-smooth grid items-center overflow-hidden border backdrop-blur-md"
+            class="
+              grid items-center overflow-hidden border border-b3/50 bg-b2/90
+              shadow-smooth backdrop-blur-md
+            "
             :style="{
               transformOrigin: 'var(--reka-popover-content-transform-origin)',
             }"
@@ -99,7 +107,7 @@ const hovered = ref(false)
               </span>
 
               <button
-                class="btn btn-sm btn-square btn-ghost"
+                class="btn btn-square btn-ghost btn-sm"
                 @click="deleteItemSet(pocket, set)">
                 <icon name="trash" />
               </button>
@@ -123,7 +131,10 @@ const hovered = ref(false)
                 :transition="{ delay: 0.2, type: 'spring', bounce: 0.25 }">
                 <Item
                   :id="item"
-                  class="pointer-events-none size-full rounded-lg shadow-sm drop-shadow-sm"></Item>
+                  class="
+                    pointer-events-none size-full rounded-lg shadow-sm
+                    drop-shadow-sm
+                  "></Item>
               </motion.div>
             </motion.div>
           </motion.div>

@@ -1,6 +1,6 @@
 import type { GridApi } from 'ag-grid-community'
-import { defineStore } from 'pinia'
 import type { Pocket } from '~~/shared/schema'
+import { defineStore } from 'pinia'
 
 export const usePocketStore = defineStore(
   'pocketStore',
@@ -17,9 +17,9 @@ export const usePocketStore = defineStore(
     const pinned = ref<string[]>([])
 
     return {
-      trash,
       archive,
       pinned,
+      trash,
       //
       downloadCard,
       pocketCardRef,

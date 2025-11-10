@@ -42,15 +42,18 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
     <SelectTrigger as-child>
       <Button
         variant="ghost"
-        class="relative grid size-20  place-items-center overflow-hidden   **:pointer-events-none ">
+        class="
+          relative grid size-20 place-items-center overflow-hidden
+          **:pointer-events-none
+        ">
         <div
-          class="grid !size-12 place-items-center ">
+          class="grid !size-12 place-items-center">
           <component
             :is="pocket?.main?.role ? `i-lol-${pocket?.main?.role}` : 'all'"
             :style="{
               color: championPositions.find(p => p.name === pocket?.main?.role).color,
             }"
-            class="dst  absolute z-2 !size-7" />
+            class="absolute z-2 !size-7 dst" />
         </div><!--
         <icon
           name="select"
@@ -64,14 +67,14 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
       :reference="trigger"
       :align-offset
       position="popper"
-      class="w-[var(--reka-select-trigger-width)] min-w-54  p-0">
+      class="w-[var(--reka-select-trigger-width)] min-w-54 p-0">
       <div class="flex items-center gap-3 p-2">
         <component
           :is="pocket?.main?.role ? `i-lol-${pocket?.main?.role}` : 'all'"
           :style="{
             color: championPositions.find(p => p.name === pocket?.main?.role).color,
           }"
-          class="dst !size-6 " />
+          class="!size-6 dst" />
         <h3
           v-memo="[pocket.main.role]"
           :class="cn('truncate', {

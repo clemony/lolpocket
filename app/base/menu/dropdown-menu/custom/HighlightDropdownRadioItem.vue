@@ -25,14 +25,25 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
     v-bind="forwarded"
     :class="
       cn(
-        'relative flex gap-2 cursor-default select-none items-center relative  py-2  pl-2 pr-2 text-2 outline-none transition-colors focus:bg-b2 rounded-md focus:text-bc data-[disabled]:pointer-events-none data-[disabled]:opacity-30 data-[state=checked]:border-b3/80 data-[state=checked]:opacity-100 opacity-50 hover:opacity-80  group/radio cursor-pointer',
+        `
+          group/radio relative flex cursor-default cursor-pointer items-center
+          gap-2 rounded-md py-2 pr-2 pl-2 text-2 opacity-50 transition-colors
+          outline-none select-none
+          hover:opacity-80
+          focus:bg-b2 focus:text-bc
+          data-[disabled]:pointer-events-none data-[disabled]:opacity-30
+          data-[state=checked]:border-b3/80 data-[state=checked]:opacity-100
+        `,
         props.class,
       )
     ">
     <IconWrapper>
       <icon
         name="tick-sm"
-        class="size-5.5 group-data-[state=checked]/radio:opacity-100 opacity-0 transition-opacity duration-200 dst absolute" />
+        class="
+          absolute size-5.5 opacity-0 dst transition-opacity duration-200
+          group-data-[state=checked]/radio:opacity-100
+        " />
     </IconWrapper>
     <slot />
   </DropdownMenuRadioItem>

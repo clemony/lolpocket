@@ -17,10 +17,21 @@ watch(
 
 <template>
   <LazyIconPopover
-    class="size-full rounded-none place-items-end pr-10 pb-4 before:bottom-0 before:right-0 before:absolute before:size-full before:bg-linear-145 before:from-transparent before:from-30% before:to-black/70 before:transition-opacity before:duration-500 hover:before:opacity-100 before:z-0 after:content-['Edit'] justify-end after:order-first after:font-bold group/pop **:!text-nc after:!text-nc after:-mb-1 flex after:mr-4 after:transition-opacity after:duration-500 hover:after:opacity-100 after:z-1 after:text-5overflow-hidden"
+    class="
+      group/pop flex size-full place-items-end justify-end rounded-none pr-10
+      pb-4
+      after:text-5overflow-hidden after:z-1 after:order-first after:mr-4
+      after:-mb-1 after:font-bold after:!text-nc after:transition-opacity
+      after:duration-500 after:content-['Edit']
+      **:!text-nc
+      before:absolute before:right-0 before:bottom-0 before:z-0 before:size-full
+      before:bg-linear-145 before:from-transparent before:from-30%
+      before:to-black/70 before:transition-opacity before:duration-500
+      hover:before:opacity-100 hover:after:opacity-100
+    "
     :class="{
-      'after:opacity-0  before:opacity-0': !isOpen,
-      'after:!opacity-100 before:!opacity-100': isOpen,
+      'before:opacity-0 after:opacity-0': !isOpen,
+      'before:!opacity-100 after:!opacity-100': isOpen,
     }"
     :pocket="pocket"
     align="end"
@@ -30,12 +41,15 @@ watch(
     popover-class="ml-6.5 mt-2 w-98">
     <!--
     @update:open="e => isOpen = e" -->
-    <PopoverTrigger class="border border-black z-200 size-10">
+    <PopoverTrigger class="z-200 size-10 border border-black">
       <icon
         name="images"
         :class="
           cn(
-            'text-nc size-7 opacity-60 transition-opacity duration-500  group-hover/pop:opacity-100',
+            `
+              size-7 text-nc opacity-60 transition-opacity duration-500
+              group-hover/pop:opacity-100
+            `,
             { 'opacity-100': isOpen },
           )
         " />dfddfd

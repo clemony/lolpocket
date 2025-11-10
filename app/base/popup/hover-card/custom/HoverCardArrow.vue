@@ -17,7 +17,7 @@ const { arrow } = popoverContentVariants({ variant: injectedVariant ?? 'base' })
 <template>
   <HoverCardArrow
     v-bind="forwarded"
-    :class="cn('invert opacity-90 dst translate-y-[1px]', arrow(), props.class)"
+    :class="cn('translate-y-[1px] opacity-90 dst invert', arrow(), props.class)"
     :height="10"
     :width="16"
     rounded />
@@ -26,6 +26,6 @@ const { arrow } = popoverContentVariants({ variant: injectedVariant ?? 'base' })
     :height="10"
     :width="16"
     v-bind="forwarded"
-    :class="cn('z-50 w-64 outline-none overflow-hidden', arrow(), props.class)"
+    :class="cn('z-50 w-64 overflow-hidden outline-none', arrow(), props.class)"
     rounded />
 </template>

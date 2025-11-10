@@ -20,7 +20,7 @@ const delegatedProps = computed(() => {
 <template>
   <PaginationFirst v-bind="delegatedProps">
     <button
-      :class="cn('btn btn-ghost btn-square btn-sm ', props.class)"
+      :class="cn('btn btn-square btn-ghost btn-sm', props.class)"
       v>
       <slot>
         <icon

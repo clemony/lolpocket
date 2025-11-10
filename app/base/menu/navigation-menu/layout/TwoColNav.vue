@@ -9,7 +9,10 @@ const { class: className } = defineProps<{
     class=""
     :class="
       cn(
-        'grid grid-cols-2 gap-x-6 gap-y-3 p-4 place-items-center grid-rows-2 w-160 h-90 overflow-hidden',
+        `
+          grid h-90 w-160 grid-cols-2 grid-rows-2 place-items-center gap-x-6
+          gap-y-3 overflow-hidden p-4
+        `,
         className,
       )
     ">

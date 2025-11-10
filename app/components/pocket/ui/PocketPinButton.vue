@@ -18,22 +18,38 @@ const pocket = computed(() => p)
     base="btn"
     :size
     hover="neutral"
-    :class="cn(' pointer-events-auto !size-7 rounded-full group/pin *:mt-px *:size-4.25  *:absolute', className)">
-<!--     <input
+    :class="cn(`
+      group/pin pointer-events-auto !size-7 rounded-full
+      *:absolute *:mt-px *:size-4.25
+    `, className)">
+    <!--     <input
       v-model="ps().pinned"
       type="checkbox"
       class="peer hidden" /> -->
 
     <icon
       name="pin"
-      class="*:stroke-[1.8] group-hover/pin:opacity-0 peer-checked:opacity-0" />
+      class="
+        *:stroke-[1.8]
+        group-hover/pin:opacity-0
+        peer-checked:opacity-0
+      " />
 
     <icon
       name="pin-solid"
-      class="group-hover/pin:not-checked:text-bc/50 opacity-0 group-hover/pin:not-checked:opacity-100 peer-checked:opacity-90" />
+      class="
+        opacity-0
+        group-hover/pin:not-checked:text-bc/50
+        group-hover/pin:not-checked:opacity-100
+        peer-checked:opacity-90
+      " />
 
     <icon
       name="iconoir:pin-slash-solid"
-      class="peer-checked:text-bc opacity-0 group-hover/pin:peer-checked:opacity-80" />
+      class="
+        opacity-0
+        peer-checked:text-bc
+        group-hover/pin:peer-checked:opacity-80
+      " />
   </Label>
 </template>

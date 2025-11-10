@@ -34,35 +34,51 @@ function reset() {
     <ResponsiveDialogTrigger
       :class="
         cn(
-          'group/icon z-0 shrink-0 cursor-pointer self-center  size-fit shadow-xs drop-shadow-sm   rounded-full pointer-events-auto  aspect-square  grid place-items-center relative transition-colors duration-300  hover:ring-b4 ring-transparent ring hover:ring-offset-neutral ring-offset-3 ring-offset-transparent  ',
+          `
+            group/icon pointer-events-auto relative z-0 grid aspect-square
+            size-fit shrink-0 cursor-pointer place-items-center self-center
+            rounded-full shadow-xs ring ring-transparent ring-offset-3
+            ring-offset-transparent drop-shadow-sm transition-colors
+            duration-300
+            hover:ring-b4 hover:ring-offset-neutral
+          `,
           className,
         )
       ">
       <slot />
     </ResponsiveDialogTrigger>
     <LazyResponsiveDialogContent
-      class="border-n3/70 shadow-b4/30 h-164 w-250 min-w-250 overflow-hidden rounded-xl p-0 shadow-xs drop-shadow-md">
+      class="
+        h-164 w-250 min-w-250 overflow-hidden rounded-xl border-n3/70 p-0
+        shadow-xs shadow-b4/30 drop-shadow-md
+      ">
       <HiddenDialogHeader
         title="Select a custom profile splash."
         desc="Personalize your profile with your favorite champion!" />
       <article
-        class="inset-shadow-shade-sm grid size-full auto-rows-auto grid-cols-[1fr_6fr] overflow-hidden rounded-lg inset-shadow-black/40">
+        class="
+          grid size-full auto-rows-auto grid-cols-[1fr_6fr] overflow-hidden
+          rounded-lg inset-shadow-shade-sm inset-shadow-black/40
+        ">
         <header
-          class="bg-b4/40 border-b-b3/60 col-span-full row-start-1 flex h-14.5 items-center gap-2 border-b pt-1 pr-3 pl-3">
+          class="
+            col-span-full row-start-1 flex h-14.5 items-center gap-2 border-b
+            border-b-b3/60 bg-b4/40 pt-1 pr-3 pl-3
+          ">
           <button
             v-tippy="{ content: 'Reset to Automatic', placement: 'top' }"
-            class="btn btn-square btn-ghost grid place-items-center">
+            class="btn grid btn-square place-items-center btn-ghost">
             <icon
               name="refresh"
-              class="dst absolute size-3.75" />
+              class="absolute size-3.75 dst" />
           </button>
 
           <button
             v-tippy="{ content: 'Randomize', placement: 'top' }"
-            class="btn btn-square btn-ghost grid place-items-center">
+            class="btn grid btn-square place-items-center btn-ghost">
             <icon
               name="shuffle"
-              class="dst size-3.5 stroke-[1.5]" />
+              class="size-3.5 stroke-[1.5] dst" />
           </button>
 
           <Input
@@ -76,7 +92,7 @@ function reset() {
             shape="square">
             <icon
               name="x"
-              class="dst absolute size-4 shrink-0" />
+              class="absolute size-4 shrink-0 dst" />
           </Button>
         </header>
 
@@ -85,7 +101,10 @@ function reset() {
           :multiple="false"
           as="div"
           selection-behavior="replace"
-          class="bg-b2/30 border-r-b3 relative h-150 h-full max-h-150 w-60 overflow-y-auto border-r p-1 transition-all duration-200 ">
+          class="
+            relative h-150 h-full max-h-150 w-60 overflow-y-auto border-r
+            border-r-b3 bg-b2/30 p-1 transition-all duration-200
+          ">
           <Label
             v-for="item in result"
             :key="item.key"
@@ -99,7 +118,10 @@ function reset() {
               :id="item.id"
               for="item-key"
               :alt="item.name"
-              class="size-10 rounded-lg bg-black **:text-white" />
+              class="
+                size-10 rounded-lg bg-black
+                **:text-white
+              " />
             <span class="grow truncate text-start">
               {{ item.name }}
             </span>
@@ -114,11 +136,16 @@ function reset() {
         <transition-fade
           as="section"
           group
-          class="col-start-2 size-full max-h-150 overflow-hidden inset-shadow-sm">
+          class="
+            col-start-2 size-full max-h-150 overflow-hidden inset-shadow-sm
+          ">
           <transition-slide
             v-if="selectedChampion"
             group
-            class="h-inherit grid size-full h-min max-h-150 w-full grid-cols-3 gap-6 overflow-y-auto p-8">
+            class="
+              grid size-full h-inherit h-min max-h-150 w-full grid-cols-3 gap-6
+              overflow-y-auto p-8
+            ">
             <LazySplashCard
               v-for="skin in skinIndex[selectedChampion]"
               :key="skin.name"
@@ -139,7 +166,10 @@ function reset() {
             class="grid size-full place-items-end p-6">
             <Badge
               variant="neutral"
-              class="**:text-2 font-medium">
+              class="
+                font-medium
+                **:text-2
+              ">
               Select or search a champion...
             </Badge>
           </div>

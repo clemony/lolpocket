@@ -36,19 +36,33 @@ function onOpen() {
       v-model:open="open"
       @update:open="onOpen()">
       <PopoverTrigger
-        class="hover:border-bc/60 field-legend z-0 h-10  max-w-90  min-w-54 cursor-text transition-colors duration-300 *:font-semibold *:tracking-tight  open:opacity-0 ">
+        class="
+          field-legend z-0 h-10 max-w-90 min-w-54 cursor-text transition-colors
+          duration-300
+          *:font-semibold *:tracking-tight
+          open:opacity-0
+          hover:border-bc/60
+        ">
         {{ set.name || 'Set name...' }}
       </PopoverTrigger>
       <PopoverContent
         as-child
         align="start"
-        class="w-[var(--reka-popover-trigger-width)] -translate-x-3 -translate-y-[calc(var(--reka-popover-trigger-height)+4px)] bg-transparent p-0 backdrop-blur-none"
+        class="
+          w-[var(--reka-popover-trigger-width)] -translate-x-3
+          -translate-y-[calc(var(--reka-popover-trigger-height)+4px)]
+          bg-transparent p-0 backdrop-blur-none
+        "
         @interact-outside="set.name = name">
-        <InputGroup class=" border-b4 field-sizing-content h-7 bg-transparent pr-1">
+        <InputGroup
+          class="field-sizing-content h-7 border-b4 bg-transparent pr-1">
           <InputGroupInput
             v-model:model-value="name"
             placeholder="Set name..."
-            class="peer field-sizing-content w-max bg-transparent font-semibold tracking-tight inset-shadow-none shadow-none"
+            class="
+              peer field-sizing-content w-max bg-transparent font-semibold
+              tracking-tight shadow-none inset-shadow-none
+            "
             @clear:input="name = ''"
             @keydown.enter="set.name = name"
             @blur="set.name = name"
@@ -77,14 +91,21 @@ function onOpen() {
     </Popover>
     <Popover>
       <PopoverTrigger
-        class="group/pop absolute -top-2 -right-1 grid size-6.5 place-items-center">
+        class="
+          group/pop absolute -top-2 -right-1 grid size-6.5 place-items-center
+        ">
         <Button
           variant="neutral"
           shape="square"
-          class="group/trig ease-spring-bouncy z-2 !size-6.5 scale-0 overflow-hidden rounded-full opacity-0 transition-all duration-200 group-open/pop:scale-100 group-open/pop:opacity-100 group-hover/set:scale-100 group-hover/set:opacity-100">
+          class="
+            group/trig z-2 !size-6.5 scale-0 overflow-hidden rounded-full
+            opacity-0 transition-all duration-200 ease-spring-bouncy
+            group-open/pop:scale-100 group-open/pop:opacity-100
+            group-hover/set:scale-100 group-hover/set:opacity-100
+          ">
           <icon
             name="more"
-            class="!text-nc/70 absolute size-4 shrink-0" />
+            class="absolute size-4 shrink-0 !text-nc/70" />
         </Button>
       </PopoverTrigger>
 
@@ -118,24 +139,33 @@ function onOpen() {
           filter: 'no-drag',
         },
       ]"
-      class="group flex  h-fit min-h-23 flex-wrap justify-start gap-3 px-4 pt-2 pb-2 **:select-none"
+      class="
+        group flex h-fit min-h-23 flex-wrap justify-start gap-3 px-4 pt-2 pb-2
+        **:select-none
+      "
       @end="onEnd"
       @start="isDragging = true">
       <LazyItemPopover
         v-for="item in set.items"
         :id="item"
         :key="item.toString()"
-        class="group/x aspect-square  size-20">
+        class="group/x aspect-square size-20">
         <div
           class="size-full">
           <Button
             variant="neutral"
             shape="square"
-            class="ease-spring-bouncy group/x hover-ring absolute -top-2 -right-2.5 z-2 grid !size-6.5 size-6.5 scale-0 place-items-center overflow-hidden rounded-full opacity-0 transition-all duration-200 group-open/x:scale-100 group-open/x:opacity-100 group-hover/x:scale-100 group-hover/x:opacity-100"
+            class="
+              group/x absolute -top-2 -right-2.5 z-2 grid !size-6.5 size-6.5
+              scale-0 hover-ring place-items-center overflow-hidden rounded-full
+              opacity-0 transition-all duration-200 ease-spring-bouncy
+              group-open/x:scale-100 group-open/x:opacity-100
+              group-hover/x:scale-100 group-hover/x:opacity-100
+            "
             @click="removeItemFromSet(pocket, itemSet, item)">
             <icon
               name="x"
-              class="!text-nc/70 absolute size-3.5 shrink-0" />
+              class="absolute size-3.5 shrink-0 !text-nc/70" />
           </Button>
         </div>
       </LazyItemPopover>
@@ -143,7 +173,10 @@ function onOpen() {
       <transition-slide>
         <div
           v-show="!set.items.length"
-          class="bg-b3/40 animate-in zoom-in no-drag size-20 rounded-lg border-0 shadow-sm shadow-black/7" />
+          class="
+            animate-in zoom-in no-drag size-20 rounded-lg border-0 bg-b3/40
+            shadow-sm shadow-black/7
+          " />
       </transition-slide>
     </div>
   </div>

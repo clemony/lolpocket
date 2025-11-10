@@ -10,7 +10,10 @@ const props = defineProps<{
     data-sidebar="input"
     :class="
       cn(
-        'bg-b1 input inset-shadow-xs inset-shadow-black/4 text-2 h-10 border border-b3-b3/80 w-full shadow-none',
+        `
+          border-b3-b3/80 input h-10 w-full border bg-b1 text-2 shadow-none
+          inset-shadow-xs inset-shadow-black/4
+        `,
         props.class,
       )
     ">

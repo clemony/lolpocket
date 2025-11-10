@@ -41,7 +41,7 @@ function updateCommentVote(
       return true
     }
 
-/*     if (comment.replies?.length) {
+    /*     if (comment.replies?.length) {
       const found = psid, uuid, newVote, oldVote)
       if (found)
         return true

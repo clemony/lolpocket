@@ -27,7 +27,11 @@ const img = `/img/runes/${runeToPath[id]}/${id}.webp`
     variant="base"
     :class="
       cn(
-        'h-full border border-b2 bg-b2/30 rounded-full overflow-hidden transition-all duration-300 relative size-17 p-0  grid place-items-center aspect-square ',
+        `
+          relative grid aspect-square size-17 h-full place-items-center
+          overflow-hidden rounded-full border border-b2 bg-b2/30 p-0
+          transition-all duration-300
+        `,
         {
           'drop-shadow-sm shadow-sm inset-shadow-sides  shadow-black/20 border border-black/60 inset-shadow-black/60':
             loaded,
@@ -43,7 +47,7 @@ const img = `/img/runes/${runeToPath[id]}/${id}.webp`
       :src="img"
       :alt="ix().runeNameById(id)"
       :class="
-        cn('transition-all duration-300  rounded-full size-full', {
+        cn('size-full rounded-full transition-all duration-300', {
           'scale-108 ': loaded,
         })
       "

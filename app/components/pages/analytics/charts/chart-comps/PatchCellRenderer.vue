@@ -9,13 +9,13 @@ console.log('💠 - patch - patch:', patch)
 </script>
 
 <template>
-  <div class="size-full p-2 items-center flex gap-2">
+  <div class="flex size-full items-center gap-2 p-2">
     <template
       v-for="(p, i) in patch.value"
       :key="i">
       <div
         v-if="i <= 2"
-        class="badge badge-sm border badge-ghost !border-b3/60">
+        class="badge border badge-ghost !border-b3/60 badge-sm">
         {{ p }}
       </div>
     </template>
@@ -26,7 +26,7 @@ console.log('💠 - patch - patch:', patch)
       </PopoverTrigger>
 
       <ScrollPopperContent class="w-41">
-        <div class="font-semibold tracking-tight opacity-50 mb-2">
+        <div class="mb-2 font-semibold tracking-tight opacity-50">
           Played Patch
         </div>
 

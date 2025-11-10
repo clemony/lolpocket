@@ -11,25 +11,39 @@ const { class: className, pathClass } = defineProps<{
 
 <template>
   <Primitive
-    :class="cn('grid place-items-center size-20 padding-0 group/btn dss drop-shadow-black/4 !overflow-visible shrink-0', className)">
-    <div class="inset-0 absolute grid place-items-center overflow-visible ">
+    :class="cn(`
+      padding-0 group/btn grid size-20 shrink-0 place-items-center
+      !overflow-visible dss drop-shadow-black/4
+    `, className)">
+    <div class="absolute inset-0 grid place-items-center overflow-visible">
       <img
         v-if="set.keystone"
         v-memo="[set.keystone]"
         :alt="set.keystone.toString()"
         :src="`/img/runes/${set.primary.path}/${set.keystone}.webp`"
-        class="!w-full shrink-0 place-self-center absolute drop-shadow-md drop-shadow-black/30 opacity-97 !h-auto" />
+        class="
+          absolute !h-auto !w-full shrink-0 place-self-center opacity-97
+          drop-shadow-md drop-shadow-black/30
+        " />
 
       <i-lol-runes
         v-else
-        class="!size-9 text-bc/30 absolute opacity-60 shrink-0" />
+        class="absolute !size-9 shrink-0 text-bc/30 opacity-60" />
 
       <Element
         v-memo="[set.secondary.path]"
         variant="base"
         :class="
           cn(
-            'size-7  rounded-full  overflow-hidden   group-hover/btn:!bg-tint-b2/40 transition-all duration-250 *:transition-opacity *:duration-200 after:absolute after:inset-0 after:opacity-0 after:bg-black/70 after:z-1 border grid place-items-center shadow-xs border-b3/90 absolute -bottom-0 -right-1.5', { 'after:bg-transparent': !set.secondary.path },
+            `
+              absolute -right-1.5 -bottom-0 grid size-7 place-items-center
+              overflow-hidden rounded-full border border-b3/90 shadow-xs
+              transition-all duration-250
+              *:transition-opacity *:duration-200
+              group-hover/btn:!bg-tint-b2/40
+              after:absolute after:inset-0 after:z-1 after:bg-black/70
+              after:opacity-0
+            `, { 'after:bg-transparent': !set.secondary.path },
             pathClass,
           )
         ">
@@ -38,15 +52,21 @@ const { class: className, pathClass } = defineProps<{
           :title="set.secondary.path"
           :alt="set.secondary.path"
           :src="`/img/paths/${set.secondary.path}.webp`"
-          class="!w-4.5 !h-max shrink-0 absolute" />
+          class="absolute !h-max !w-4.5 shrink-0" />
 
         <i-lol-runes
           v-else
-          class="!size-5.5 text-bc/30 group-hover/btn:opacity-0 shrink-0" />
+          class="
+            !size-5.5 shrink-0 text-bc/30
+            group-hover/btn:opacity-0
+          " />
 
         <icon
           name="select"
-          :class="cn('size-4 group-hover/btn:opacity-60 opacity-0 absolute z-2', { 'text-white': set.secondary })" />
+          :class="cn(`
+            absolute z-2 size-4 opacity-0
+            group-hover/btn:opacity-60
+          `, { 'text-white': set.secondary })" />
       </Element>
     </div>
   </Primitive>

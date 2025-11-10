@@ -10,14 +10,19 @@ const classObject
 </script>
 
 <template>
-  <Field class="grid px-2 h-fit py-3 *:w-full w-full **:text-2 relative">
+  <Field
+    class="
+      relative grid h-fit w-full px-2 py-3
+      *:w-full
+      **:text-2
+    ">
     <SheetClose
       :class="classObject"
       @click="navigateTo('/about')">
       <IconWrapper>
         <icon
           name="solar:cat-outline"
-          class="size-5.75 -left-0.5 top-0 absolute" />
+          class="absolute top-0 -left-0.5 size-5.75" />
       </IconWrapper>
       About & Cats
     </SheetClose>
@@ -39,7 +44,7 @@ const classObject
       <IconWrapper>
         <icon
           name="mdi:sign-out"
-          class="size-4.75 dst absolute left-0.25" />
+          class="absolute left-0.25 size-4.75 dst" />
       </IconWrapper>
       Sign Out
     </SheetClose>
@@ -51,6 +56,6 @@ const classObject
     <LazyAdminSheet
       v-if="useSupabaseUser().value.role === 'admin'"
       :account="account"
-      class="absolute -right-46 bottom-4 pointer-events-none" />
+      class="pointer-events-none absolute -right-46 bottom-4" />
   </Field>
 </template>

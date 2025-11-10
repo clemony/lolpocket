@@ -72,15 +72,20 @@ onMounted(async () => {
 
 <template>
   <div
-    class="size-full relative flex flex-col gap-6 items-center justify-center">
-    <div class="flex gap-4 absolute top-5 h-16">
+    class="relative flex size-full flex-col items-center justify-center gap-6">
+    <div class="absolute top-5 flex h-16 gap-4">
       <div
         v-if="champModel && champComplete"
         v-tippy="ix().champNameById(champModel)"
-        class="size-16 hover:scale-110 hover:ring-1 hover:ring-neutral rounded-lg shadow-sm drop-shadow-sm transition-all duration-400 animate-in slide-in-from-bottom-10 hover:ring-offset-2 hover:ring-offset-b2">
+        class="
+          animate-in slide-in-from-bottom-10 size-16 rounded-lg shadow-sm
+          drop-shadow-sm transition-all duration-400
+          hover:scale-110 hover:ring-1 hover:ring-neutral hover:ring-offset-2
+          hover:ring-offset-b2
+        ">
         <ChampionIcon
           :id="champModel"
-          class="overflow-hidden size-16 rounded-lg" />
+          class="size-16 overflow-hidden rounded-lg" />
       </div>
       <!--
       <template v-for="(item, i) in itemModel">
@@ -96,7 +101,7 @@ onMounted(async () => {
       <Transition name="puff">
         <p
           v-if="!champModel"
-          class="f-sb text-4 f-tt">
+          class="f-sb f-tt text-4">
           Select a Champion...
         </p>
       </Transition>
@@ -124,7 +129,7 @@ onMounted(async () => {
       <Transition name="puff">
         <p
           v-if="!itemModel[itemIndex].item"
-          class="f-sb text-4 f-tt">
+          class="f-sb f-tt text-4">
           Select your first item...
         </p>
       </Transition>
@@ -158,11 +163,11 @@ onMounted(async () => {
             :value="item"
             @change="setTimer('item', itemIndex, item)" />
 
-          <div class="overflow-hidden size-16 rounded-lg">
+          <div class="size-16 overflow-hidden rounded-lg">
             <img
               :alt="item.name"
               :src="`/img/items/${item.id}.webp`"
-              class="size-full s" />
+              class="s size-full" />
           </div>
           <!--   </label> -->
 

@@ -50,7 +50,10 @@ const variants = {
       :variants="buttVariants"
       :class="
         cn(
-          'max-w-full h-11 flex flex-row flex-nowrap items-center w-full gap-3  justify-start p-0  relative',
+          `
+            relative flex h-11 w-full max-w-full flex-row flex-nowrap
+            items-center justify-start gap-3 p-0
+          `,
           {
             'pointer-events-none w-full !bg-b2/80 btn-active cursor-not-allowed':
               cooldown,
@@ -59,13 +62,19 @@ const variants = {
       "
       @click="update()">
       <TransitionScalePop
-        class="aspect-square h-full place-self-center grid place-items-center shrink-0 relative overflow-hidden">
+        class="
+          relative grid aspect-square h-full shrink-0 place-items-center
+          place-self-center overflow-hidden
+        ">
         <icon
           v-if="!cooldown"
           name="mingcute:refresh-2-line"
           :class="
             cn(
-              'absolute size-5 group-hover/load:opacity-100 dst transition-all duration-200',
+              `
+                absolute size-5 dst transition-all duration-200
+                group-hover/load:opacity-100
+              `,
               {
                 'animate-rotate': state.loading,
               },
@@ -74,7 +83,11 @@ const variants = {
 
         <div
           v-if="cooldown"
-          class="text-0 shadow-sm absolute border-neutral border-2 absolute bg-neutral text-nc **:text-nc radial-progress place-self-center font-semibold opacity-90"
+          class="
+            radial-progress absolute place-self-center border-2 border-neutral
+            bg-neutral text-0 font-semibold text-nc opacity-90 shadow-sm
+            **:text-nc
+          "
           :style="{
             '--value': cooldown?.seconds,
             '--size': '2rem',
@@ -83,7 +96,7 @@ const variants = {
           :aria-valuenow="cooldown?.percent"
           role="progressbar">
           <span
-            class="grid rounded-full bg-neutral size-full place-items-center">
+            class="grid size-full place-items-center rounded-full bg-neutral">
             {{ cooldown?.seconds }}
           </span>
         </div>
@@ -91,7 +104,10 @@ const variants = {
 
       <motion.div
         :variants="variants"
-        class="inline-flex text-nowrap gap-3 w-full justify-between flex-nowrap overflow-hidden items-center self-center">
+        class="
+          inline-flex w-full flex-nowrap items-center justify-between gap-3
+          self-center overflow-hidden text-nowrap
+        ">
         {{ cooldown ? `${cooldown?.formatted} cd` : "Update" }}
       </motion.div>
     </MButton>

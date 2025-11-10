@@ -3,27 +3,37 @@
 </script>
 
 <template>
-  <menu class="px-3 mb-3 w-full flex flex-col">
+  <menu class="mb-3 flex w-full flex-col px-3">
     <SummonerLabel />
   </menu>
   <Collapsible
     :default-open="true"
-    class="px-3 w-full">
+    class="w-full px-3">
     <CollapsibleTrigger as-child>
-      <Label class="group/collapse grow hover:underline">
+      <Label
+        class="
+          group/collapse grow
+          hover:underline
+        ">
         <icon
           name="ci:heart-02"
-          class="dst size-3.75 opacity-80" />
+          class="size-3.75 opacity-80 dst" />
         <span class="grow text-left">following</span>
 
         <icon
           name="left"
-          class="group-data-[state=open]/collapse:-rotate-90 ml-1 transition-rotate duration-200" />
+          class="
+            transition-rotate ml-1 duration-200
+            group-data-[state=open]/collapse:-rotate-90
+          " />
       </Label>
     </CollapsibleTrigger>
 
     <CollapsibleContent
-      class="CollapsibleContent pl-5.25 py-6 w-full flex flex-col gap-6 data-[state=closed]:gap-0">
+      class="
+        CollapsibleContent flex w-full flex-col gap-6 py-6 pl-5.25
+        data-[state=closed]:gap-0
+      ">
       <SummonerFriend
         v-for="i in 4"
         :key="i" />

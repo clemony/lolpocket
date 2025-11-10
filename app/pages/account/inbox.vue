@@ -43,7 +43,10 @@ const selectedMailData = computed(() => props.mails.find(item => item.id === sel
     @expand="isCollapsed = true"
     @collapse="isCollapsed = false">
     <template #nav>
-      <div class="flex size-full h-16 w-full items-center justify-center border-b p-1">
+      <div
+        class="
+          flex size-full h-16 w-full items-center justify-center border-b p-1
+        ">
         <Popover>
           <PopoverTrigger
             as-child>
@@ -53,10 +56,13 @@ const selectedMailData = computed(() => props.mails.find(item => item.id === sel
               on="base"
               :class="cn('', { 'w-full': !isCollapsed, 'rounded-full h-full self-center': isCollapsed })"
               :size="isCollapsed ? 'sq-11' : '12'">
-              <SummonerIcon :class="cn('rounded-full size-full', { 'size-7': !isCollapsed, 'size-10': isCollapsed })" />
+              <SummonerIcon :class="cn('size-full rounded-full', { 'size-7': !isCollapsed, 'size-10': isCollapsed })" />
               <span
                 v-show="!isCollapsed"
-                class="text-5 dst grow items-center font-semibold *:first:capitalize">
+                class="
+                  grow items-center text-5 font-semibold dst
+                  *:first:capitalize
+                ">
                 <SummonerName class="inline" />
                 's Inbox
               </span>
@@ -66,7 +72,10 @@ const selectedMailData = computed(() => props.mails.find(item => item.id === sel
                 :class="cn('size-4.5 text-bc/60')" />
             </Button>
           </PopoverTrigger>
-          <LazyPopoverContent class="w-[var(--reka-popover-trigger-width)] min-w-64 space-y-1 p-1.5">
+          <LazyPopoverContent
+            class="
+              w-[var(--reka-popover-trigger-width)] min-w-64 space-y-1 p-1.5
+            ">
             <InboxDropdownMenu />
           </LazyPopoverContent>
         </Popover>

@@ -18,16 +18,19 @@ provide<Scroll>('scroll-top', { top: scroll })
   <div
     :class="
       cn(
-        'flex justify-self-center -ml-15 h-max  z-auto mb-42 min-h-screen gap-8 w-[1040px] ',
+        `
+          z-auto mb-42 -ml-15 flex h-max min-h-screen w-[1040px] gap-8
+          justify-self-center
+        `,
       )
     ">
-    <div class="grid  shrink scrollbar-none  justify-end  ">
+    <div class="scrollbar-none grid shrink justify-end">
       <MatchHistoryAside />
     </div>
     <SlideInTopOutBottom
       group
       :class="
-        cn('flex flex-col gap-8 h-max grow min-w-220 justify-center')
+        cn('flex h-max min-w-220 grow flex-col justify-center gap-8')
       ">
       <!--         <SummonerChampionModule
           v-if="ms().filter?.champion"

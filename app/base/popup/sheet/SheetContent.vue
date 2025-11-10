@@ -29,7 +29,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
   <DialogContent
     :class="
       cn(
-        'overflow-hidden h-screen drop-shadow-sm drop-shadow-black  max-h-screen',
+        'h-screen max-h-screen overflow-hidden drop-shadow-sm drop-shadow-black',
         sheetVariants({ side }),
         props.class,
       )

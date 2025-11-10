@@ -29,12 +29,15 @@ const { enter, exit, isFullscreen, toggle } = useFullscreen(photoBox)
 <template>
   <Dialog>
     <DialogTrigger
-      class="hover:underline underline-offset-2 flex hover:bg-b2/35 cursor-pointer">
+      class="
+        flex cursor-pointer underline-offset-2
+        hover:bg-b2/35 hover:underline
+      ">
       <slot />
     </DialogTrigger>
 
     <DialogContent
-      class="!rounded-xl top-[10%] translate-y-1/4 !max-w-190 w-190 pb-10 px-16">
+      class="top-[10%] w-190 !max-w-190 translate-y-1/4 !rounded-xl px-16 pb-10">
       <DialogHeader>
         <DialogTitle>Clem</DialogTitle>
 
@@ -44,7 +47,11 @@ const { enter, exit, isFullscreen, toggle } = useFullscreen(photoBox)
       <Carousel
         ref="photoBox"
         :opts="{ loop: true }"
-        :class="cn('relative w-full max-h-full  focus-visible:outline-0  **:focus-visible:outline-0')">
+        :class="cn(`
+          relative max-h-full w-full
+          focus-visible:outline-0
+          **:focus-visible:outline-0
+        `)">
         <CarouselContent>
           <CarouselItem
             v-for="(img, i) in clem"
@@ -52,11 +59,17 @@ const { enter, exit, isFullscreen, toggle } = useFullscreen(photoBox)
             <div>
               <Card
                 :key="showClem"
-                class="border-0 focus-visible:outline-0 bg-black rounded-xl overflow-hidden aspect-square shadow-sm shadow-black/18 drop-shadow-black/18 drop-shadow-sm max-h-screen overflow-hidden bg-black mx-auto flex items-center p-0 relative justify-center rounded-xl inset-shadow-sm inset-shadow-black/15">
+                class="
+                  relative mx-auto flex aspect-square max-h-screen items-center
+                  justify-center overflow-hidden rounded-xl border-0 bg-black
+                  p-0 shadow-sm inset-shadow-sm shadow-black/18
+                  inset-shadow-black/15 drop-shadow-sm drop-shadow-black/18
+                  focus-visible:outline-0
+                ">
                 <img
                   :src="img.url"
                   alt="clem"
-                  :class="cn('size-full m-auto rounded-lg', img.class)" />
+                  :class="cn('m-auto size-full rounded-lg', img.class)" />
               </Card>
             </div>
           </CarouselItem>
@@ -65,7 +78,7 @@ const { enter, exit, isFullscreen, toggle } = useFullscreen(photoBox)
           v-tippy="{ content: isFullscreen ? 'Exit fullscreen' : 'Fullscreen', placement: 'bottom-end' }"
           variant="ghost"
           hover="neutral"
-          class="absolute  top-4 grid place-items-center btn-square right-4"
+          class="absolute top-4 right-4 grid btn-square place-items-center"
           @click="toggle()">
           <icon
             v-show="!isFullscreen"
@@ -78,10 +91,16 @@ const { enter, exit, isFullscreen, toggle } = useFullscreen(photoBox)
         </Button>
         <CarouselPrevious
           :variant="!isFullscreen ? 'ghost' : 'neutral'"
-          :class="cn('size-12 rounded-lg *:size-6', !isFullscreen ? '-left-14 ' : 'left-10')" />
+          :class="cn(`
+            size-12 rounded-lg
+            *:size-6
+          `, !isFullscreen ? '-left-14 ' : 'left-10')" />
         <CarouselNext
           :variant="!isFullscreen ? 'ghost' : 'neutral'"
-          :class="cn('size-12 rounded-lg *:size-6', !isFullscreen ? '-right-14 ' : 'right-10')" />
+          :class="cn(`
+            size-12 rounded-lg
+            *:size-6
+          `, !isFullscreen ? '-right-14 ' : 'right-10')" />
       </Carousel>
     </DialogContent>
   </Dialog>

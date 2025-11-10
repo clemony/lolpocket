@@ -13,7 +13,7 @@ const forwarded = useForwardProps(delegated)
 <template>
   <ListboxGroupLabel
     v-bind="forwarded"
-    :class="cn('py-1 font-semibold text-2 px-3 text-bc/50', props.class)">
+    :class="cn('px-3 py-1 text-2 font-semibold text-bc/50', props.class)">
     <slot />
   </ListboxGroupLabel>
 </template>

@@ -19,7 +19,7 @@ const pocket = computed(() => {
   <div
     v-tippy="`${pocket.spells.length ?? 'no'} spells`"
     class="flex items-center gap-2">
-    <span class="dst text-1 font-mono opacity-60">
+    <span class="font-mono text-1 opacity-60 dst">
       {{ pocket.spells.length }}
     </span>
   </div>

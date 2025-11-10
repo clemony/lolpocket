@@ -12,11 +12,11 @@ const emit = defineEmits(['update:shown'])
   <motion.div
     drag
     :while-dragging="{ scale: 1.2 }"
-    class="tippy-box !size-px !bg-transparent ">
+    class="tippy-box !size-px !bg-transparent">
     <div class="tippy-content">
       <div
         data-theme="base"
-        class=" tippy-box w-64 px-1.5 py-1">
+        class="tippy-box w-64 px-1.5 py-1">
         <div
           class="flex w-full flex-nowrap items-center gap-1 p-0">
           <Element
@@ -24,7 +24,10 @@ const emit = defineEmits(['update:shown'])
             class="!w-3">
             <icon
               name="teenyicons:drag-vertical-outline"
-              class=" absolute size-4 -translate-x-px opacity-40 mix-blend-hard-light contrast-160" />
+              class="
+                absolute size-4 -translate-x-px opacity-40 mix-blend-hard-light
+                contrast-160
+              " />
           </Element>
           <template
             v-for="item, i in menu"

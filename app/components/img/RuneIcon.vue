@@ -12,11 +12,11 @@ const { id, as = 'div', class: className, size = 'sq' } = defineProps<{
 <template>
   <Element
     :as
-    :class="cn('overflow-hidden  relative shrink-0', elementVariants({ size }), className)">
+    :class="cn('relative shrink-0 overflow-hidden', elementVariants({ size }), className)">
     <img
       :src="`/img/runes/${id}.webp`"
       :alt="ix().runeNameById(id)"
-      :class="cn('size-full top-0 left-0 absolute self-center object-contain', { 'scale-110': keystoneIndex.includes(id), ' rounded-full inset-ring inset-ring-black/80': !keystoneIndex.includes(id) })" />
+      :class="cn('absolute top-0 left-0 size-full self-center object-contain', { 'scale-110': keystoneIndex.includes(id), ' rounded-full inset-ring inset-ring-black/80': !keystoneIndex.includes(id) })" />
     <slot />
   </Element>
 </template>

@@ -6,7 +6,7 @@ const { class: className } = defineProps<{
 
 <template>
   <NavigationMenuLink
-    :class="cn('grid relative place-items-center size-full ', className)">
+    :class="cn('relative grid size-full place-items-center', className)">
     <slot />
   </NavigationMenuLink>
 </template>

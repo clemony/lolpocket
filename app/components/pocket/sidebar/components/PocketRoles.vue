@@ -17,8 +17,11 @@ const pocket = computed(() => p)
     class="field-box w-full">
     <CollapsibleTrigger
       v-if="pocket.roles && pocket.roles?.[0]"
-      class="text-3 group flex w-full items-center justify-start gap-1 px-3 py-3 text-start capitalize">
-      <h3 class="dst grow">
+      class="
+        group flex w-full items-center justify-start gap-1 px-3 py-3 text-start
+        text-3 capitalize
+      ">
+      <h3 class="grow dst">
         Roles
       </h3>
 
@@ -26,7 +29,10 @@ const pocket = computed(() => p)
     </CollapsibleTrigger>
 
     <CollapsibleContent
-      class="CollapsibleContent flex w-full flex-col justify-start gap-4 overflow-hidden px-4 pt-1 pb-4">
+      class="
+        CollapsibleContent flex w-full flex-col justify-start gap-4
+        overflow-hidden px-4 pt-1 pb-4
+      ">
       <VueDraggable
         :model-value="pocket.roles"
         ghost-class="role-ghost"
@@ -55,7 +61,7 @@ const pocket = computed(() => p)
             v-if="role"
             variant="outline"
             size="8"
-            class="border-b3/80 bg-b1 order-3 rounded-lg"
+            class="order-3 rounded-lg border-b3/80 bg-b1"
             :class="cn({ 'hidden ': pocket.roles.includes(role.name) })"
             @click.stop>
             <input
@@ -69,7 +75,10 @@ const pocket = computed(() => p)
 
             <component
               :is="`i-roles-${role.name.toLowerCase()}`"
-              class="text-bc/70 dst peer-checked:text-nc h-3.75 w-auto shrink-0"
+              class="
+                h-3.75 w-auto shrink-0 text-bc/70 dst
+                peer-checked:text-nc
+              "
               :class="{ '!text-bc/80': role.name.toLowerCase() === 'all' }" />
             {{ role.name }}
           </Label>

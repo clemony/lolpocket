@@ -16,7 +16,7 @@ const hexColors = {
 </script>
 
 <template>
-  <div class="relative size-22 grid items-center justify-center">
+  <div class="relative grid size-22 items-center justify-center">
     <Donut
       :datasets="props.datasets"
       :colors="props.colors"

@@ -9,19 +9,28 @@ const { class: className, set } = defineProps<{
 
 <template>
   <div
-    :class="cn('avatar-group    -space-x-2.5 justify-end items-center translate-x-px ', className)">
+    :class="cn(`
+      avatar-group translate-x-px items-center justify-end -space-x-2.5
+    `, className)">
     <div
-      class="avatar    group-open/trig:border-b2   !border-3 size-8">
+      class="
+        avatar size-8 !border-3
+        group-open/trig:border-b2
+      ">
       <Keystone
         :id="set.keystone"
-        class="size-7 -mt-px -ml-px " />
+        class="-mt-px -ml-px size-7" />
     </div>
     <div
-      class="avatar bg-b1  grid !place-items-center relative group-open/trig:border-b2   !border-1 border-b4/60 size-7">
+      class="
+        avatar relative grid size-7 !place-items-center !border-1 border-b4/60
+        bg-b1
+        group-open/trig:border-b2
+      ">
       <img
         :alt="set.secondary.path"
         :src="`/img/paths/${set.secondary.path}.webp`"
-        class="size-4.5  absolute shrink-0" />
+        class="absolute size-4.5 shrink-0" />
     </div>
   </div>
 </template>

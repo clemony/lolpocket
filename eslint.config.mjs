@@ -1,15 +1,14 @@
 // eslint.config.mjs
 import antfu from '@antfu/eslint-config'
 import css from '@eslint/css'
+import eslintPluginBetterTailwindcss from 'eslint-plugin-better-tailwindcss'
 import pluginJsonc from 'eslint-plugin-jsonc'
-import tailwindcss from 'eslint-plugin-tailwindcss'
 import pluginVue from 'eslint-plugin-vue'
 import jsoncParser from 'jsonc-eslint-parser'
-import fs from 'node:fs'
 import path from 'node:path'
-import process from 'node:process'
 import { fileURLToPath } from 'node:url'
 import { tailwind4 } from 'tailwind-csstree'
+import eslintParserVue from 'vue-eslint-parser'
 
 export function resolvePath(filePath) {
   const __filename = fileURLToPath(import.meta.url)
@@ -39,10 +38,10 @@ export default antfu({
           pathPattern: '^(?:dev|peer|optional|bundled)?[Dd]ependencies$', // deps
         }, {
           order: ['name', 'id', 'key'],
-          pathPattern: '^.*$', // identifiers first
+          pathPattern: '.*', // identifiers first
         }, {
           order: { type: 'asc' },
-          pathPattern: '^.*$', // everything else
+          pathPattern: '.*', // everything else
         },],
         'jsonc/valid-jsonc': 'error',
       },
@@ -100,12 +99,16 @@ export default antfu({
     '.save.json',
   ],
   plugins: {
+    'better-tailwindcss': eslintPluginBetterTailwindcss,
     css,
     pluginJsonc,
-    pluginVue,
-
+    pluginVue
   },
   rules: {
+    // tw
+
+    ...eslintPluginBetterTailwindcss.configs['recommended-warn'].rules,
+    'better-tailwindcss/no-unregistered-classes': 'off',
 
     // other
     'eqeqeq': ['error', 'smart'],
@@ -141,7 +144,11 @@ export default antfu({
     'unused-imports/no-unused-vars': 'off',
   },
   settings: {
+    'better-tailwindcss': {
+      callees: ['cn', 'clsx', 'cva', 'tw', 'tv'],
+      entryPoint: path.resolve('./app/assets/css/tailwind.css'),
 
+    }
   },
   sourceType: 'module',
   stylistic: true,
@@ -172,5 +179,9 @@ export default antfu({
       'vue/require-typed-ref': 'warn',
     },
     a11y: true,
+    files: ['**/*.vue'],
+    languageOptions: {
+      parser: eslintParserVue
+    },
   },
 })

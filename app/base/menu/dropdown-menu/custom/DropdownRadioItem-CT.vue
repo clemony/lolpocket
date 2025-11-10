@@ -9,7 +9,11 @@ const { class: className, value } = defineProps<{
   <DropdownMenuRadioItem
     :value="value"
     :class="
-      cn('[&_svg]:text-nc hover:!bg-b3/15 pl-10 !text-nc/90 text-2', className)
+      cn(`
+        pl-10 text-2 !text-nc/90
+        hover:!bg-b3/15
+        [&_svg]:text-nc
+      `, className)
     ">
     <slot />
   </DropdownMenuRadioItem>

@@ -8,27 +8,35 @@ const emit = defineEmits(['open:settings', 'open:admin', 'reset-count'])
     v-model:open="adminOpen"
     :account="as().account" /> -->
   <SidebarHeaderWrapper title="Settings"></SidebarHeaderWrapper>
-  <div class="gap-6 py-4 w-full !flex flex-col items-start">
+  <div class="!flex w-full flex-col items-start gap-6 py-4">
     <Login
       v-if="as().loggedIn" />
     <div v-else>
       <button
         v-if="useSupabaseUser().value.role === 'admin'"
         v-tippy="'Admin'"
-        class="size-10 btn btn-ghost grid place-items-center -mr-2 opacity-60 hover:opacity-100 cursor-pointer"
+        class="
+          btn -mr-2 grid size-10 cursor-pointer place-items-center opacity-60
+          btn-ghost
+          hover:opacity-100
+        "
         @click="emit('open:admin')">
         <icon
           name="ri:key-2-line"
-          class="size-6 shrink-0 dst pointer-events-none" />
+          class="pointer-events-none size-6 shrink-0 dst" />
       </button>
 
       <button
         v-tippy="'Account Settings'"
-        class="size-10 grid btn btn-ghost place-items-center -mr-2 opacity-60 hover:opacity-100 cursor-pointer"
+        class="
+          btn -mr-2 grid size-10 cursor-pointer place-items-center opacity-60
+          btn-ghost
+          hover:opacity-100
+        "
         @click="emit('open:settings')">
         <icon
           name="gear-solid"
-          class="size-4.5 shrink-0 dst pointer-events-none" />
+          class="pointer-events-none size-4.5 shrink-0 dst" />
       </button>
     </div>
     <menu>

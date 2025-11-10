@@ -71,7 +71,14 @@ onUnmounted(() => {
     ref="itemRef"
     :class="
       cn(
-        'relative flex cursor-default gap-3 select-none items-center rounded-md px-2 py-1.75 text-3 outline-none data-[highlighted]:border-b3/60 data-[highlighted]:shadow-xs data-[highlighted]:bg-b2 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg]:size-5 [&_svg]:shrink-0 [&_svg]:-mx-1',
+        `
+          relative flex cursor-default items-center gap-3 rounded-md px-2
+          py-1.75 text-3 outline-none select-none
+          data-[disabled]:pointer-events-none data-[disabled]:opacity-50
+          data-[highlighted]:border-b3/60 data-[highlighted]:bg-b2
+          data-[highlighted]:shadow-xs
+          [&_svg]:-mx-1 [&_svg]:size-5 [&_svg]:shrink-0
+        `,
         props.class,
       )
     "

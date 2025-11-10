@@ -20,7 +20,14 @@ function handleLike() {
 
 <template>
   <Label
-    :class="cn(' pl-2 pr-2.5 has-checked: inset-shadow-xs !gap-1.5 group/x rounded-full has-checked:*:opacity-100 duration-0 has-not-checked:*:opacity-40 hover:ring hover:ring-offset-1 h-6 ring-bc/50 ring-offset-b2', className)"
+    :class="cn(`
+      has-checked:
+      group/x h-6 !gap-1.5 rounded-full pr-2.5 pl-2 inset-shadow-xs ring-bc/50
+      ring-offset-b2 duration-0
+      hover:ring hover:ring-offset-1
+      has-not-checked:*:opacity-40
+      has-checked:*:opacity-100
+    `, className)"
     variant="outline">
     <input
       v-model="as().settings.favorite_pockets"
@@ -32,7 +39,13 @@ function handleLike() {
     <span class="relative grid size-4 place-items-center overflow-hidden">
       <icon
         name="heart-sm"
-        class="group-has-checked/x:text-tint-domination/20 group-hover/x:!text-tint-domination/20 group-has-not-checked/x:text-bc/30 dst absolute !size-6.5 -translate-y-[0.5px] transition-colors duration-200" />
+        class="
+          absolute !size-6.5 -translate-y-[0.5px] dst transition-colors
+          duration-200
+          group-hover/x:!text-tint-domination/20
+          group-has-not-checked/x:text-bc/30
+          group-has-checked/x:text-tint-domination/20
+        " />
     </span>
     <span class="!text-1 font-semibold">
       {{ pocket.likes }}

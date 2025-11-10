@@ -62,7 +62,12 @@ provide(DISTANCE_INJECTION_KEY, distance)
     :tabindex="0"
     :class="
       cn(
-        'supports-backdrop-blur:bg-b1/80 bg-b1/90 shadow-sm drop-shadow-black/5 shadow-black/5 dss mx-auto mt-8 flex h-[60px] w-max rounded-2xl border p-2 backdrop-blur-md transition-all gap-4',
+        `
+          mx-auto mt-8 flex h-[60px] w-max gap-4 rounded-2xl border bg-b1/90 p-2
+          shadow-sm shadow-black/5 dss drop-shadow-black/5 backdrop-blur-md
+          transition-all
+          supports-backdrop-blur:bg-b1/80
+        `,
         orientation === 'vertical' && 'flex-col w-[62px] h-max',
         props.class,
         dockClass,

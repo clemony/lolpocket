@@ -71,54 +71,114 @@ function handlePointerLeave() {
     ref="refElement"
     class=""
     :class="cn(
-      'container-style  duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] container relative isolate transition-transform will-change-transform  [contain:layout_style] [perspective:600px]', ' ')"
+      `
+        container-style relative isolate container transition-transform
+        delay-[var(--delay)] duration-[var(--duration)] ease-[var(--easing)]
+        will-change-transform
+        [contain:layout_style]
+        [perspective:600px]
+      `, '')"
     @pointermove="handlePointerMove"
     @pointerenter="handlePointerEnter"
     @pointerleave="handlePointerLeave">
     <BasicCard
-      :class="cn('duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] grid h-full origin-center overflow-hidden rounded-lg  transition-transform will-change-transform [transform:rotateY(var(--r-x))_rotateX(var(--r-y))] group-hover/photo:filter-none group-hover/photo:[--duration:200ms] group-hover/photo:[--easing:linear] group-hover/photo:[--opacity:0.6]',
-                 ' min-w-32 w-full aspect-7/8  shrink-0 h-auto  !bg-b1  cursor-pointer inset-shadow-xxs p-2 border-b3 group/photo grid grid-rows-[1fr_0.25fr]',
+      :class="cn(`
+        grid h-full origin-center
+        [transform:rotateY(var(--r-x))_rotateX(var(--r-y))]
+        overflow-hidden rounded-lg transition-transform delay-[var(--delay)]
+        duration-[var(--duration)] ease-[var(--easing)] will-change-transform
+        group-hover/photo:filter-none group-hover/photo:[--duration:200ms]
+        group-hover/photo:[--easing:linear] group-hover/photo:[--opacity:0.6]
+      `,
+                 `
+                   group/photo grid aspect-7/8 h-auto w-full min-w-32 shrink-0
+                   cursor-pointer grid-rows-[1fr_0.25fr] border-b3 !bg-b1 p-2
+                   inset-shadow-xxs
+                 `,
 
       )">
       <div
-        :class="cn('duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] grid h-full origin-center overflow-hidden rounded-lg  transition-transform will-change-transform [transform:rotateY(var(--r-x))_rotateX(var(--r-y))] group-hover/photo:filter-none group-hover/photo:[--duration:200ms] group-hover/photo:[--easing:linear] group-hover/photo:[--opacity:0.6]',
+        :class="cn(`
+          grid h-full origin-center
+          [transform:rotateY(var(--r-x))_rotateX(var(--r-y))]
+          overflow-hidden rounded-lg transition-transform delay-[var(--delay)]
+          duration-[var(--duration)] ease-[var(--easing)] will-change-transform
+          group-hover/photo:filter-none group-hover/photo:[--duration:200ms]
+          group-hover/photo:[--easing:linear] group-hover/photo:[--opacity:0.6]
+        `,
 
         )">
         <div
-          class="grid size-full mix-blend-soft-light  [grid-area:1/1]">
+          class="
+            grid size-full mix-blend-soft-light
+            [grid-area:1/1]
+          ">
           <transition-scale
             group
-            class="relative !rounded-md overflow-hidden drop-shadow-sm shadow-sm shrink-0 size-full pointer-events-none bg-black/90 **:text-white grid place-items-center">
+            class="
+              pointer-events-none relative grid size-full shrink-0
+              place-items-center overflow-hidden !rounded-md bg-black/90
+              shadow-sm drop-shadow-sm
+              **:text-white
+            ">
             <Champion
               v-if="skinUrl"
               :alt="alt"
               :img="skinUrl.replace('uncentered', 'tile').replace('centered', 'tile')"
-              class="size-full absolute z-0"></Champion>
+              class="absolute z-0 size-full"></Champion>
             <div
               v-else
-              class="opacity-40 z-0 size-8">
-              <i-lol-champ class="size-8 absolute" />
+              class="z-0 size-8 opacity-40">
+              <i-lol-champ class="absolute size-8" />
               <icon
                 name="material-symbols:edit"
-                class="absolute size-6 -right-4 -bottom-2" />
+                class="absolute -right-4 -bottom-2 size-6" />
             </div>
 
             <slot name="img-container" />
           </transition-scale>
         </div>
         <div
-          class="transition-background duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] will-change-background grid size-full opacity-[var(--opacity)] mix-blend-soft-light transition-opacity [background:radial-gradient(farthest-corner_circle_at_var(--m-x)_var(--m-y),_rgba(255,255,255,0.8)_10%,_rgba(255,255,255,0.65)_20%,_rgba(255,255,255,0)_90%)] [clip-path:inset(0_0_1px_0_round_var(--radius))] [grid-area:1/1]" />
+          class="
+            transition-background will-change-background grid size-full
+            opacity-[var(--opacity)] mix-blend-soft-light transition-opacity
+            delay-[var(--delay)] duration-[var(--duration)] ease-[var(--easing)]
+            [background:radial-gradient(farthest-corner_circle_at_var(--m-x)_var(--m-y),_rgba(255,255,255,0.8)_10%,_rgba(255,255,255,0.65)_20%,_rgba(255,255,255,0)_90%)]
+            [clip-path:inset(0_0_1px_0_round_var(--radius))]
+            [grid-area:1/1]
+          " />
         <div
-          class="background-style will-change-background after:grid-area-[inherit] after:bg-repeat-[inherit] after:bg-attachment-[inherit] after:bg-origin-[inherit] after:bg-clip-[inherit] relative grid size-full opacity-[var(--opacity)] mix-blend-color-dodge transition-opacity [background-blend-mode:hue_hue_hue_overlay] [background:var(--pattern),_var(--rainbow),_var(--diagonal),_var(--shade)] [clip-path:inset(0_0_1px_0_round_var(--radius))] [grid-area:1/1] after:bg-[inherit] after:mix-blend-exclusion after:content-[\'\'] after:[background-blend-mode:soft-light,_hue,_hard-light] after:[background-position:center,_0%_var(--bg-y),_calc(var(--bg-x)*_-1)_calc(var(--bg-y)*_-1),_var(--bg-x)_var(--bg-y)] after:[background-size:var(--foil-size),_200%_400%,_800%,_200%]" />
+          class="
+            background-style will-change-background
+            after:grid-area-[inherit] after:bg-repeat-[inherit]
+            after:bg-attachment-[inherit] after:bg-origin-[inherit]
+            after:bg-clip-[inherit]
+            relative grid size-full opacity-[var(--opacity)]
+            [background-blend-mode:hue_hue_hue_overlay]
+            mix-blend-color-dodge transition-opacity
+            [background:var(--pattern),_var(--rainbow),_var(--diagonal),_var(--shade)]
+            [clip-path:inset(0_0_1px_0_round_var(--radius))]
+            [grid-area:1/1]
+            after:bg-[inherit]
+            after:[background-size:var(--foil-size),_200%_400%,_800%,_200%]
+            after:[background-position:center,_0%_var(--bg-y),_calc(var(--bg-x)*_-1)_calc(var(--bg-y)*_-1),_var(--bg-x)_var(--bg-y)]
+            after:[background-blend-mode:soft-light,_hue,_hard-light]
+            after:mix-blend-exclusion after:content-[\'\']
+          " />
       </div>
 
-      <div class="relative size-full grid items-center">
+      <div class="relative grid size-full items-center">
         <slot name="crest" />
         <slot>
           <div
-            class="w-full h-5 max-h-5 w-34  mt-1.5 px-0.5 grid items-center relative">
+            class="
+              relative mt-1.5 grid h-5 max-h-5 w-34 w-full items-center px-0.5
+            ">
             <span
-              class="italic items-center text-1 flex-wrap flex absolute leading-none size-fit">
+              class="
+                absolute flex size-fit flex-wrap items-center text-1
+                leading-none italic
+              ">
               {{ text }}
             </span>
           </div>

@@ -10,7 +10,9 @@ const { class: className, editor, limit } = defineProps<{
 
 <template>
   <div
-    :class="cn('inline select-none pointer-events-none !text-1 text-bc/60 self-end', className)">
+    :class="cn(`
+      pointer-events-none inline self-end !text-1 text-bc/60 select-none
+    `, className)">
     {{ editor.storage.characterCount.characters() }}
     <template v-if="limit">
       &nbsp;/&nbsp;

@@ -7,13 +7,13 @@ const pocket = computed(() =>
 
 <template>
   <div class="inset-0 z-auto grid grid-cols-[1fr_2.5fr] gap-22">
-    <div class="grid-cols-[2.5fr_1fr] grid pt-22 w-full gap-4">
+    <div class="grid w-full grid-cols-[2.5fr_1fr] gap-4 pt-22">
       <div class="flex w-full flex-col gap-3">
-        <div class="h-16 mb-2">
+        <div class="mb-2 h-16">
           <h1 class="leading-10 tracking-tight dst">
             {{ pocket.main?.champion }}
           </h1>
-          <div class="italic text-4 font-medium">
+          <div class="text-4 font-medium italic">
             {{ ix().getChampionTitle(pocket.main?.champion) }}
           </div>
         </div>
@@ -22,18 +22,35 @@ const pocket = computed(() =>
             <Champion
               :k="pocket.main?.champion"
               type="tile"
-              class="w-full max-w-80 h-auto inset-shadow-sm inset-shadow-black/20 *:scale-[130%] aspect-square" />
+              class="
+                aspect-square h-auto w-full max-w-80 inset-shadow-sm
+                inset-shadow-black/20
+                *:scale-[130%]
+              " />
           </HoverCardTrigger>
           <HoverCardContent
             align="start"
             side="bottom"
-            class="-translate-y-[calc(var(--reka-hover-card-trigger-height)+6px)] h-[calc(var(--reka-hover-card-trigger-height)+3px)] -translate-x-0.75 w-[calc(var(--reka-hover-card-trigger-width)+3px)] shadow-none open:animate-in open:fade-in closed:animate-out closed:fade-out drop-shadow-none border-b3">
+            class="
+              open:animate-in open:fade-in
+              closed:fade-out
+              h-[calc(var(--reka-hover-card-trigger-height)+3px)]
+              w-[calc(var(--reka-hover-card-trigger-width)+3px)]
+              -translate-x-0.75
+              -translate-y-[calc(var(--reka-hover-card-trigger-height)+6px)]
+              border-b3 shadow-none drop-shadow-none
+              closed:animate-out
+            ">
           </HoverCardContent>
         </HoverCard>
         <ChampionAbilityTabs :k="pocket.main?.champion" />
       </div>
 
-      <div class="w-full  *:w-full grid grid-rows-max place-items-center pt-20.5 h-fit">
+      <div
+        class="
+          grid-rows-max grid h-fit w-full place-items-center pt-20.5
+          *:w-full
+        ">
         <MainRuneSelect :pocket>
           <CoreRuneTrigger
             :pocket />
@@ -43,12 +60,12 @@ const pocket = computed(() =>
           :pocket />
       </div>
     </div>
-    <div class="w-full flex flex-col gap-4 pt-22">
+    <div class="flex w-full flex-col gap-4 pt-22">
       <div class="h-16">
         <h2 class="leading-10 tracking-tight dst">
           Pocket Stats
         </h2>
-        <div class="italic text-4 font-medium">
+        <div class="text-4 font-medium italic">
         </div>
       </div>
       <div class="grid grid-cols-3 gap-8">

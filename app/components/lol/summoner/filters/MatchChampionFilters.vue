@@ -25,7 +25,7 @@ const championModel = computed({
   <ListboxRoot
     v-if="champions"
     v-model:model-value="championModel"
-    class="field-box w-120 w-full max-w-120 gap-0 space-y-4  px-2 py-4"
+    class="field-box w-120 w-full max-w-120 gap-0 space-y-4 px-2 py-4"
     :multiple="false"
     @entry-focus.prevent>
     <PatchDateRange />
@@ -38,17 +38,26 @@ const championModel = computed({
           :key="champion.name"
           :value="champion.name"
           as-child
-          class="peer w-full focus-visible:outline-0">
+          class="
+            peer w-full
+            focus-visible:outline-0
+          ">
           <Button
-            :class="cn('h-18 duration-0 grid-cols-[0.5fr_1fr_1fr_0.5fr] !grid justify-around  items-center ', { 'opacity-80': championModel.length > 1 && champion.name !== championModel })"
+            :class="cn(`
+              !grid h-18 grid-cols-[0.5fr_1fr_1fr_0.5fr] items-center
+              justify-around duration-0
+            `, { 'opacity-80': championModel.length > 1 && champion.name !== championModel })"
             variant="ghost">
             <ChampionIcon
               :id="champion.id"
               :alt="champion.name"
-              :class="cn('size-15 overflow-hidden items-center rounded-full rounded-full shadow-sm drop-shadow-sm', { 'grayscale brightness-105 contrast-105': championModel.length > 1 && champion.name !== championModel })" />
+              :class="cn(`
+                size-15 items-center overflow-hidden rounded-full shadow-sm
+                drop-shadow-sm
+              `, { 'grayscale brightness-105 contrast-105': championModel.length > 1 && champion.name !== championModel })" />
 
-            <div class="dst grid size-full gap-1.5 font-medium">
-              <p class="!text-3 self-end">
+            <div class="grid size-full gap-1.5 font-medium dst">
+              <p class="self-end !text-3">
                 {{ champion.name }}
               </p>
 
@@ -57,8 +66,12 @@ const championModel = computed({
               </p>
             </div>
 
-            <div class="dst grid size-full justify-end gap-1.5 *:text-end">
-              <p class="dst self-end font-medium text-nowrap">
+            <div
+              class="
+                grid size-full justify-end gap-1.5 dst
+                *:text-end
+              ">
+              <p class="self-end font-medium text-nowrap dst">
                 {{ champion.wins }}&nbsp;Win
               </p>
 
@@ -66,7 +79,10 @@ const championModel = computed({
                 {{ champion.games - champion.wins }}&nbsp;Loss
               </p>
             </div>
-            <div class="grid  size-full place-items-center justify-end justify-self-end">
+            <div
+              class="
+                grid size-full place-items-center justify-end justify-self-end
+              ">
               <ChampWinrate :champion="champion" />
             </div>
           </Button>

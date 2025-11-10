@@ -28,6 +28,6 @@ const runeStyle = computed (() => {
         ? `/img/${item.key}s/${item.id}.webp`
         : `/img/champions/${item.id}.webp`"
       :alt="item.name"
-      :class="cn('size-full ', keystoneStyle)" />
+      :class="cn('size-full', keystoneStyle)" />
   </Element>
 </template>

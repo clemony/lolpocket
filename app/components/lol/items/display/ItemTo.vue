@@ -10,8 +10,12 @@ const filtered = computed (() => to.filter(to => to.id < 9999))
 <template>
   <div
     v-if="to && filtered"
-    class=" mt-1.5">
-    <div class="divider divider-start  !text-0 my-2 after:h-px after:bg-white  after:opacity-10">
+    class="mt-1.5">
+    <div
+      class="
+        divider my-2 divider-start !text-0
+        after:h-px after:bg-white after:opacity-10
+      ">
       BUILDS INTO
     </div>
 
@@ -25,7 +29,11 @@ const filtered = computed (() => to.filter(to => to.id < 9999))
         class="flex items-center gap-3">
         <LazyItemPopover
           :id="item.id"
-          class="hover:ring-nc/90  hover:ring-offset-neutral/80 tldr-20 size-9 overflow-hidden rounded-lg  shadow-sm hover:ring-1 hover:ring-offset-2" />
+          class="
+            tldr-20 size-9 overflow-hidden rounded-lg shadow-sm
+            hover:ring-1 hover:ring-nc/90 hover:ring-offset-2
+            hover:ring-offset-neutral/80
+          " />
       </div>
     </div>
   </div>

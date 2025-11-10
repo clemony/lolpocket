@@ -8,7 +8,10 @@ const route = useRoute()
 
 <template>
   <div
-    class="grid grid-cols-2 justify-self-end max-w-74 gap-4 grid-flow-col overflow-hidden gap-y-px grid grid-rows-5 ">
+    class="
+      grid max-w-74 grid-flow-col grid-cols-2 grid-rows-5 gap-4 gap-y-px
+      justify-self-end overflow-hidden
+    ">
     <BtnLink
       v-for="player in match.participants"
       :key="player.puuid"
@@ -25,11 +28,13 @@ const route = useRoute()
             placement: 'right',
           }"
           alt="champion-icon"
-          class="rounded-tiny size-6 dst shadow-xs" />
+          class="size-6 rounded-tiny shadow-xs dst" />
 
         <a
           v-tippy="{ content: player.riotIdGameName, placement: 'right' }"
-          class="text-1 tracking-tight h-full  w-full text-nowrap  font-medium truncate">
+          class="
+            h-full w-full truncate text-1 font-medium tracking-tight text-nowrap
+          ">
           {{ player.riotIdGameName }}
         </a>
       </div>

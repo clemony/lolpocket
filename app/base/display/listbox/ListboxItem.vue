@@ -34,7 +34,10 @@ const forwardedProps = useForwardPropsEmits(delegatedProps)
       :on
       :base
       :class="
-        cn('w-full relative justify-start focus:outline-1 !outline-offset-0 capitalize', props.class) ">
+        cn(`
+          relative w-full justify-start capitalize !outline-offset-0
+          focus:outline-1
+        `, props.class) ">
       <slot />
     </Button>
   </ListboxItem>

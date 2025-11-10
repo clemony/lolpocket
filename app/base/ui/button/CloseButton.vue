@@ -12,7 +12,7 @@ const props = withDefaults(
 <template>
   <button
     v-tippy="props.tip"
-    class="btn rounded-md btn-sm size-6 shadow-sm btn-square">
+    class="btn btn-square size-6 rounded-md shadow-sm btn-sm">
     <icon
       name="x-sm"
       class="size-5.5 shrink-0" />

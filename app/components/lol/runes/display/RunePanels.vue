@@ -30,7 +30,7 @@ const tabListClass = 'bg-b1/45  shadow-smooth h-18 w-120 justify-evenly gap-5  o
           layout-id="path1" />
       </Transition>
 
-      <div class="shadow-smooth relative h-18 w-120 rounded-xl">
+      <div class="relative h-18 w-120 rounded-xl shadow-smooth">
         <div
           class="gradient absolute z-0 size-full rounded-xl"
           :data-path="selectedPath" />
@@ -54,7 +54,11 @@ const tabListClass = 'bg-b1/45  shadow-smooth h-18 w-120 justify-evenly gap-5  o
             <Img
               :img="`/img/runes/${path}.webp`"
               :alt="`${path} icon`"
-              class="z-10 h-9 w-auto brightness-90 grayscale transition-all duration-300 [&_img]:drop-shadow-sm"
+              class="
+                z-10 h-9 w-auto brightness-90 grayscale transition-all
+                duration-300
+                [&_img]:drop-shadow-sm
+              "
               :class="{
                 'brightness-100 grayscale-0': path === selectedPath,
               }" />

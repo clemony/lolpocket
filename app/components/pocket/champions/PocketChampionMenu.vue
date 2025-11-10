@@ -14,14 +14,14 @@ const name = computed (() => ix().champNameByKey(k))
 <template>
   <PopoverContent
     align="start"
-    class="w-50 p-0 rounded-lg pb-0.5 -mx-2 pointer-events-auto">
+    class="pointer-events-auto -mx-2 w-50 rounded-lg p-0 pb-0.5">
     <PopoverItem
       class="hover:bg-b3/60"
       @click="navigateTo(`/champions/${k}`)">
-      <span class="size-4.5 relative grid place-items-center">
+      <span class="relative grid size-4.5 place-items-center">
         <ChampionIcon
           :k
-          class="size-5.5 absolute" />
+          class="absolute size-5.5" />
       </span>
       {{ name }}'s profile
     </PopoverItem>
@@ -49,11 +49,18 @@ const name = computed (() => ix().champNameByKey(k))
 
     <PopoverItem
       as="label"
-      :class="cn('has-disabled:opacity-100 hover:bg-b3/60 disabled')"
+      :class="cn(`
+        disabled
+        hover:bg-b3/60
+        has-disabled:opacity-100
+      `)"
       @click="pocket.main.champion = k">
       <icon
         name="star"
-        :class="cn('!size-4 ml-px **:stroke-[2.8] dst', { 'fill-precision': pocket.main.champion === k })" />
+        :class="cn(`
+          ml-px !size-4 dst
+          **:stroke-[2.8]
+        `, { 'fill-precision': pocket.main.champion === k })" />
       <input
         v-model="pocket.champions"
         :disabled="pocket.champions.includes(k)"

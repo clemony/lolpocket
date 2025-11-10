@@ -7,7 +7,7 @@ const { class: className } = defineProps<{
 <template>
   <div
     :class="
-      cn('flex items-center gap-3 mt-1 mb-1  justify-start w-full', className)
+      cn('mt-1 mb-1 flex w-full items-center justify-start gap-3', className)
     ">
     <slot />
   </div>

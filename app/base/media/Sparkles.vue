@@ -7,9 +7,9 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div :class="cn('size-full absolute top-0 left-0 object-cover', props.class)">
+  <div :class="cn('absolute top-0 left-0 size-full object-cover', props.class)">
     <video-background
       src="/video/sparkles.webm"
-      class="size-full object-cover aspect-square"></video-background>
+      class="aspect-square size-full object-cover"></video-background>
   </div>
 </template>

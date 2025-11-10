@@ -36,7 +36,7 @@ const { filtered, filters, setFilter } = useItemFilter()
       class=""
       :class="
         cn(
-          'w-110 rounded-lg max-h-130 overflow-auto p-0 border-b-6',
+          'max-h-130 w-110 overflow-auto rounded-lg border-b-6 p-0',
           props.class,
         )
       "
@@ -46,7 +46,12 @@ const { filtered, filters, setFilter } = useItemFilter()
       <ItemSearch
         placeholder="Type or click a suggestion"
         input-class=" text-nc"
-        class="w-full rounded-t-lg z-2 sticky top-0 left-0 shadow-none h-13 [&_svg]:size-4 **:!text-nc !bg-accent borderneutral/30 border-4"
+        class="
+          borderneutral/30 sticky top-0 left-0 z-2 h-13 w-full rounded-t-lg
+          border-4 !bg-accent shadow-none
+          **:!text-nc
+          [&_svg]:size-4
+        "
         set-focus
         @update:query="(e) => e" />
 
@@ -60,7 +65,7 @@ const { filtered, filters, setFilter } = useItemFilter()
             ">
             <LazyItemCommandTypes />
 
-            <Separator class="bg-accent mt-3 mb-1.5" />
+            <Separator class="mt-3 mb-1.5 bg-accent" />
 
             <LazyItemCommandStats />
           </div>
@@ -68,12 +73,12 @@ const { filtered, filters, setFilter } = useItemFilter()
 
         <TransitionExpand
           tag="div"
-          class="w-full justify-center flex">
+          class="flex w-full justify-center">
           <div
             v-if="filters.rank !== '' || filters.stats.length || filters.query"
-            class="!flex flex-wrap justify-center gap-1.5 px-4 py-4 z-0">
+            class="z-0 !flex flex-wrap justify-center gap-1.5 px-4 py-4">
             <LazyCalculatorFilteredItems
-              class="!size-15 z-0"
+              class="z-0 !size-15"
               @update:item="handleItem($event)" />
           </div>
         </TransitionExpand>

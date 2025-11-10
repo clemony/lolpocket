@@ -104,15 +104,18 @@ const range = computed(() => {
 
 <template>
   <div
-    class="stats bg-b1 rounded-box border border-b3 shadow-warm-soft h-54 w-full px-5 relative">
-    <div class="absolute top-6 left-6 text-bc z-0 pointer-events-none">
-      <div class="text-1 stat-desc font-medium mb-1">
+    class="
+      stats relative h-54 w-full rounded-box border border-b3 bg-b1 px-5
+      shadow-warm-soft
+    ">
+    <div class="pointer-events-none absolute top-6 left-6 z-0 text-bc">
+      <div class="stat-desc mb-1 text-1 font-medium">
         {{ range }}
       </div>
 
       <div class="text-5font-semibold dst"></div>
 
-      <div class="text-3 stat-desc"></div>
+      <div class="stat-desc text-3"></div>
     </div>
 
     <LineChart

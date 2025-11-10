@@ -18,12 +18,12 @@ const roleModel = computed({
 
 <template>
   <div class="w-full">
-    <div class="flex items-center mb-2 -ml-1">
+    <div class="mb-2 -ml-1 flex items-center">
       <Button
         size="sm"
         variant="ghost"
         :class="{ 'pointer-events-none': ms().filter.role === 'ALL' }"
-        class=" gap-2 font-medium rounded-lg px-2.5 place-self-center text-3"
+        class="gap-2 place-self-center rounded-lg px-2.5 text-3 font-medium"
         @click="state.clearFilters()">
         {{
           ms().filter.role !== "ALL"
@@ -34,15 +34,15 @@ const roleModel = computed({
         <icon
           v-if="ms().filter.role !== 'ALL'"
           name="x-sm"
-          class="shrink-0 -mt-px" />
+          class="-mt-px shrink-0" />
       </Button>
     </div>
 
-    <div class="w-full h-15 justify-start overflow-hidden px-2">
+    <div class="h-15 w-full justify-start overflow-hidden px-2">
       <transition-slide
         :offset="{ enter: [10, 0], leave: [-10, 0] }"
         group
-        class="flex flex-wrap gap-5 relative w-full">
+        class="relative flex w-full flex-wrap gap-5">
         <template
           v-for="role in roleStats"
           :key="role.role">
@@ -52,7 +52,7 @@ const roleModel = computed({
               content: `${role.name} - ${role.games} game${role.games > 1 ? 's' : ''}`,
             }"
             for="item-types"
-            class="size-14 grid place-items-center"
+            class="grid size-14 place-items-center"
             :class="
               cn({
                 'bg-neutral border-neutral shadow-neutral/20 shadow-sm order-2  ':
@@ -62,7 +62,7 @@ const roleModel = computed({
             ">
             <input
               v-model="ms().filter.role"
-              class="peer hidden absolute"
+              class="peer absolute hidden"
               type="radio"
               :disabled="!role.games"
               :value="role.role"
@@ -70,7 +70,10 @@ const roleModel = computed({
 
             <component
               :is="`i-roles-${role.role.toLowerCase().replace(' ', '-').replace('utility', 'support')}`"
-              class="h-5 w-auto dst shrink-0 peer-checked:text-nc"
+              class="
+                h-5 w-auto shrink-0 dst
+                peer-checked:text-nc
+              "
               :class="{ '!text-bc/80': role.name === 'ALL' }" />
           </label>
         </template>

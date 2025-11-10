@@ -14,12 +14,15 @@ onMounted(() => (selected.value = props.currentValue))
 <template>
   <Popover>
     <PopoverTrigger
-      :class="cn('p-0 group/trig w-full ', props.class)"
+      :class="cn('group/trig w-full p-0', props.class)"
       @click.stop.prevent>
       <Button
         variant="secondary"
-        class="overflow-hidden relative size-16 p-0 hover:ring grid place-items-center hover:ring-b4"
-        :class="{ ' shadow-sm drop-shadow-sm': selected !== '' }">
+        class="
+          relative grid size-16 place-items-center overflow-hidden p-0
+          hover:ring hover:ring-b4
+        "
+        :class="{ 'shadow-sm drop-shadow-sm': selected !== '' }">
         <icon
           v-if="selected === ''"
           name="tabler:flame"
@@ -40,14 +43,19 @@ onMounted(() => (selected.value = props.currentValue))
       arrow-class=""
       :side-offset="5"
       align="center">
-      <div class="gap-3 place-content-evenly grid grid-cols-3">
+      <div class="grid grid-cols-3 place-content-evenly gap-3">
         <label
           v-for="ss in spellbook"
           :key="ss.name"
           as="label"
           :title="ss.name.toString()"
           :disabled="selected === ss.name"
-          class="disabled:grayscale transition-[colors,opacity] duration-400 disabled:inset-shadow-sm disabled:opacity-70 shadow-sm size-16 rounded-lg hover:ring-2 hover:ring-bc/60 !cursor-pointer">
+          class="
+            size-16 !cursor-pointer rounded-lg shadow-sm
+            transition-[colors,opacity] duration-400
+            hover:ring-2 hover:ring-bc/60
+            disabled:opacity-70 disabled:inset-shadow-sm disabled:grayscale
+          ">
           <input
             id="spells"
             v-model="selected"

@@ -52,8 +52,8 @@ const overlayInitialState = {
 <template>
   <DialogPortal>
     <DialogOverlay
-      class="fixed inset-0 z-50 isolate bg-black/70 !blur-0"
-      :class="{ 'opacity-0 invisible': props.noOverlay }">
+      class="!blur-0 fixed inset-0 isolate z-50 bg-black/70"
+      :class="{ 'invisible opacity-0': props.noOverlay }">
       <motion.div
         class="overlay"
         :initial="overlayInitialState"
@@ -70,7 +70,14 @@ const overlayInitialState = {
       v-bind="forwarded"
       :class="
         cn(
-          'fixed  left-1/2 top-1/2 translate-x-[-50%] translate-y-[-50%] z-50 isolate   gap-4 border bg-b1 px-10 py-8 shadow-lg data-[state=closed]:duration-200  data-[state=closed]:animate-out data-[state=closed]:fade-out-0  data-[state=closed]:zoom-out-95  data-[state=closed]:slide-out-to-bottom-[48%]  sm:rounded-xl',
+          `
+            data-[state=closed]:animate-out data-[state=closed]:duration-200
+            data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95
+            data-[state=closed]:slide-out-to-bottom-[48%]
+            fixed top-1/2 left-1/2 isolate z-50 translate-x-[-50%]
+            translate-y-[-50%] gap-4 border bg-b1 px-10 py-8 shadow-lg
+            sm:rounded-xl
+          `,
           props.class,
         )
       ">
@@ -88,7 +95,14 @@ const overlayInitialState = {
 
         <DialogClose
           v-if="props.noButton"
-          class="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring focus:ringneutral disabled:pointer-events-none">
+          class="
+            ring-offset-background
+            focus:ringneutral
+            absolute top-4 right-4 rounded-sm opacity-70 transition-opacity
+            hover:opacity-100
+            focus:ring focus:outline-none
+            disabled:pointer-events-none
+          ">
           <icon
             name="x-sm"
             class="size-6" />

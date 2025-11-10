@@ -18,7 +18,10 @@ const loaded = ref(false)
   <label
     :class="
       cn(
-        ' size-full relative text-nc overflow-hidden bg-neutral shrink-0 grid place-items-center',
+        `
+          relative grid size-full shrink-0 place-items-center overflow-hidden
+          bg-neutral text-nc
+        `,
         {
           'shadow-sm shadow-black/6 drop-shadow-sm drop-shadow-black/6':
             !transparent || (transparent && !img),
@@ -32,7 +35,10 @@ const loaded = ref(false)
       alt="pocket icon"
       :class="
         cn(
-          ' pointer-events-none  size-full z-2 scale-160 mt-1.5 shrink-0 size-full absolute object-center opacity-0 transition-opacity duration-300',
+          `
+            pointer-events-none absolute z-2 mt-1.5 size-full shrink-0 scale-160
+            object-center opacity-0 transition-opacity duration-300
+          `,
           { 'opacity-100': loaded },
           imgClass,
         )
@@ -42,13 +48,16 @@ const loaded = ref(false)
     <icon
       v-if="!loaded && img"
       name="svg-spinners:bars-scale-middle"
-      class="absolute opacity-80 text-nc" />
+      class="absolute text-nc opacity-80" />
 
     <span
       v-else
       :class="
         cn(
-          'uppercase subpixel-antialiased text-nc z-0 absolute grid place-items-center size-full font-semibold text-4 ',
+          `
+            absolute z-0 grid size-full place-items-center text-4 font-semibold
+            text-nc uppercase subpixel-antialiased
+          `,
           { '!text-[0.74rem] mt-px font-semibold': size && size === 'sm' },
         )
       ">

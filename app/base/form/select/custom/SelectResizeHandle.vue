@@ -1,9 +1,9 @@
 <script lang="ts" setup></script>
 
 <template>
-  <div class="btn btn-xs bg-b1 !px-px">
+  <div class="btn bg-b1 !px-px btn-xs">
     <icon
       name="select"
-      class="rotate-90 shrink-0 size-5 text-bc/50" />
+      class="size-5 shrink-0 rotate-90 text-bc/50" />
   </div>
 </template>

@@ -46,7 +46,11 @@ const runeClass
     v-if="player"
     :class="
       cn(
-        'grid z-1 grid-flow-col gap-1  items-center overflow-hidden justify-between grow size-full *:size-full max-h-16.5 h-16.5 pl-2 pr-2 ',
+        `
+          z-1 grid size-full h-16.5 max-h-16.5 grow grid-flow-col items-center
+          justify-between gap-1 overflow-hidden pr-2 pl-2
+          *:size-full
+        `,
         'grid-cols-[33px_18px_1.25fr_18px_1fr_1fr_1fr_1.1fr_3fr_0.9fr]',
       )
     ">
@@ -60,7 +64,10 @@ const runeClass
           placement: 'top',
         }"
         alt="champion-icon"
-        class="mb-px size-11 self-center  rounded-lg transition-all duration-300 hover:scale-105" />
+        class="
+          mb-px size-11 self-center rounded-lg transition-all duration-300
+          hover:scale-105
+        " />
     </div>
 
     <div
@@ -68,7 +75,10 @@ const runeClass
       :class="divClass">
       <PlayerSpells
         :player="player"
-        class="h-11 gap-0.5 [&_img]:size-5 [&_img]:rounded-[3px]   " />
+        class="
+          h-11 gap-0.5
+          [&_img]:size-5 [&_img]:rounded-[3px]
+        " />
     </div>
     <!-- name and tag -->
 
@@ -80,12 +90,18 @@ const runeClass
           content: player.riotIdGameName,
           placement: 'top',
         }"
-        class="text-2 size-full flex-nowrap items-end truncate font-semibold text-nowrap">
+        class="
+          size-full flex-nowrap items-end truncate text-2 font-semibold
+          text-nowrap
+        ">
         {{ player.riotIdGameName }}
       </h4>
 
       <p
-        class="text-2 flex items-center self-start truncate font-medium text-nowrap opacity-60">
+        class="
+          flex items-center self-start truncate text-2 font-medium text-nowrap
+          opacity-60
+        ">
         <span>#{{ player.riotIdTagline }}</span>
       </p>
     </div>
@@ -94,7 +110,10 @@ const runeClass
     <div
       :class="
         cn(
-          '!flex flex-col h-16 self-center py-2 justify-center items-center gap-0.5',
+          `
+            !flex h-16 flex-col items-center justify-center gap-0.5 self-center
+            py-2
+          `,
         )
       ">
       <div
@@ -106,7 +125,12 @@ const runeClass
         <Img
           :img="`/img/runes/${stats.keystone?.id}.webp`"
           :alt="stats?.keystone?.id?.toString()"
-          class="tippy-target ring-bc/60  rounded-tiny absolute size-full  object-center transition-all duration-300 *:!h-5.5 hover:scale-110 hover:ring" />
+          class="
+            tippy-target absolute size-full rounded-tiny object-center
+            ring-bc/60 transition-all duration-300
+            *:!h-5.5
+            hover:scale-110 hover:ring
+          " />
       </div>
       <div
         v-tippy="{
@@ -117,7 +141,12 @@ const runeClass
         <Img
           :alt="stats.secondaryPath"
           :img="`/img/paths/${stats.secondaryPath}.webp`"
-          class="ring-bc/60 rounded-tiny absolute size-full  object-center transition-all duration-300 *:h-4.5 hover:scale-120 hover:ring"
+          class="
+            absolute size-full rounded-tiny object-center ring-bc/60
+            transition-all duration-300
+            *:h-4.5
+            hover:scale-120 hover:ring
+          "
           :class="{
             '!h-4': stats.secondaryPath?.toLowerCase() === 'inspiration',
           }" />
@@ -129,23 +158,34 @@ const runeClass
     <div
       class=""
       :class="divClass">
-      <p class="!text-2 flex flex-nowrap items-center leading-0 font-semibold tracking-wide text-nowrap **:tracking-wide">
+      <p
+        class="
+          flex flex-nowrap items-center !text-2 leading-0 font-semibold
+          tracking-wide text-nowrap
+          **:tracking-wide
+        ">
         {{ player.kills }}&#8198;/&#8198;<span class="text-red-800">{{ player.deaths }}</span>&#8198;/&#8198;{{ player.assists }}
       </p>
 
       <Badge
         v-if="stats.kda / 100 === Infinity"
         size="8"
-        class="border-master/40 bg-master/20 text-0 saturate-180 **:leading-0">
+        class="
+          border-master/40 bg-master/20 text-0 saturate-180
+          **:leading-0
+        ">
         <icon
           name="fa6-solid:infinity"
-          class="dst mt-[0.04em] size-3.5" />
+          class="mt-[0.04em] size-3.5 dst" />
         KDA
       </Badge>
 
       <p
         v-else
-        class="dst text-bc/80 flex gap-1 truncate leading-0 leading-3 font-medium text-nowrap">
+        class="
+          flex gap-1 truncate leading-0 leading-3 font-medium text-nowrap
+          text-bc/80 dst
+        ">
         {{ stats.kda / 100 }} KDA
       </p>
     </div>
@@ -153,7 +193,7 @@ const runeClass
     <!-- mvp kp -->
 
     <div :class="cn('relative size-full', divClass)">
-      <div class="grid w-full grid-cols-2 items-center ">
+      <div class="grid w-full grid-cols-2 items-center">
         <div class="font-bold tracking-wide">
           {{ player.mvpScore }}
         </div>
@@ -165,7 +205,11 @@ const runeClass
           "
           size="8"
           :class="
-            cn('!px-1 gap-1 absolute right-0 font-bold text-white tracking-wide !text-0 **:leading-0', {
+            cn(`
+              absolute right-0 gap-1 !px-1 !text-0 font-bold tracking-wide
+              text-white
+              **:leading-0
+            `, {
               'border-gold/40 bg-precision ':
                 player.puuid === playerRank.mvp,
               'bg-fighter/70 border-fighter':
@@ -177,14 +221,21 @@ const runeClass
 
         <div
           v-else
-          class="text-1  absolute right-0 leading-0 font-normal opacity-60 ">
+          class="absolute right-0 text-1 leading-0 font-normal opacity-60">
           {{ stats.lpScore }}{{ formatNumberPosition(stats.lpScore) }}
         </div>
       </div>
       <p
-        class="text-bc/80 !text-2 w-full truncate leading-4 font-medium tracking-tight">
+        class="
+          w-full truncate !text-2 leading-4 font-medium tracking-tight
+          text-bc/80
+        ">
         {{ Math.round(player.challenges.killParticipation * 100) }}%
-        <span class="**:!text-1  leading-0 ">kp</span>
+        <span
+          class="
+            leading-0
+            **:!text-1
+          ">kp</span>
       </p>
     </div>
 
@@ -207,7 +258,7 @@ const runeClass
         <span class="relative grid size-3 justify-end">
           <i-lol-hsp
             name="oi:plus"
-            class="!text-bc/50 dst left-0.25 !size-3" />
+            class="left-0.25 !size-3 !text-bc/50 dst" />
         </span>
       </p>
 
@@ -218,7 +269,7 @@ const runeClass
         }"
         :class="cn(pClass)">
         {{ player.visionScore }}
-        <i-lol-support class="dst text-bc !size-3" />
+        <i-lol-support class="!size-3 text-bc dst" />
       </p>
     </div>
 
@@ -230,7 +281,7 @@ const runeClass
         <span class="relative grid size-3 justify-center">
           <icon
             name="el:fire"
-            :class="cn(' dst absolute size-3')" />
+            :class="cn('absolute size-3 dst')" />
         </span>
       </p>
 
@@ -244,14 +295,14 @@ const runeClass
         <span class="relative grid size-3 justify-center">
           <icon
             name="ph:shield-fill"
-            class="dst bottom-px size-3.5 !text-zinc-400" />
+            class="bottom-px size-3.5 !text-zinc-400 dst" />
         </span>
       </p>
     </div>
 
     <div
       :class="
-        cn('!grid-cols-6  pl-3 justify-self-end  !grid-rows-1', divClass)
+        cn('!grid-cols-6 !grid-rows-1 justify-self-end pl-3', divClass)
       ">
       <template
         v-for="i in 6"
@@ -264,11 +315,18 @@ const runeClass
             placement: 'bottom',
             theme: 'base',
           }"
-          class="ring-bc/60 size-8 rounded-md transition-all duration-300 *:rounded-md hover:scale-105 hover:ring" />
+          class="
+            size-8 rounded-md ring-bc/60 transition-all duration-300
+            *:rounded-md
+            hover:scale-105 hover:ring
+          " />
 
         <Placeholder
           v-else
-          class="bg-b2/80 border-b3 size-8 shrink-0 rounded-md shadow-sm  shadow-black/4" />
+          class="
+            size-8 shrink-0 rounded-md border-b3 bg-b2/80 shadow-sm
+            shadow-black/4
+          " />
       </template>
     </div>
 

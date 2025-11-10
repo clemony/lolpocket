@@ -30,7 +30,7 @@ watch(
     id="container"
     class="z-auto flex gap-28">
     <ChampionIndexAside :champion />
-    <article class="grow w-full z-auto py-22 h-max pb-16 gap-10 flex flex-col">
+    <article class="z-auto flex h-max w-full grow flex-col gap-10 py-22 pb-16">
       <ChampionAbility
         v-for="ability in champion.abilities"
         :key="ability.key"

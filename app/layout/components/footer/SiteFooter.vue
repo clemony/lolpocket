@@ -7,10 +7,13 @@ const { class: className } = defineProps<{
 <template>
   <div
     v-once
-    :class="cn(' w-full isolate  grid auto-rows-max  z-1', className)">
+    :class="cn('isolate z-1 grid w-full auto-rows-max', className)">
     <SiteMap />
 
     <SiteFooterData
-      class="z-10 max-h-20 h-20 overflow-hidden min-h-20 py-5 border-t border-t-2 border-t-neutral" />
+      class="
+        z-10 h-20 max-h-20 min-h-20 overflow-hidden border-t border-t-2
+        border-t-neutral py-5
+      " />
   </div>
 </template>

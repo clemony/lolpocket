@@ -51,16 +51,16 @@ onMounted(() => {
     </template>
     <template #header>
       <header class="grid h-20 justify-center">
-        <h1 class="dst pt-1 leading-10 font-bold tracking-tight !text-[2.1]">
+        <h1 class="pt-1 !text-[2.1] leading-10 font-bold tracking-tight dst">
           {{ champion.name }}
         </h1>
-        <p class="text-3 text-bc -mt-1 px-1 leading-5 font-medium italic">
+        <p class="-mt-1 px-1 text-3 leading-5 font-medium text-bc italic">
           {{ champion.title }}
         </p>
       </header>
     </template>
 
-    <div class="bg-b1 z-auto flex size-full justify-center gap-6">
+    <div class="z-auto flex size-full justify-center gap-6 bg-b1">
       <NuxtPage :champion />
     </div>
   </TabLayout>

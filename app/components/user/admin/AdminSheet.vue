@@ -26,7 +26,11 @@ const user = useSupabaseUser()
         <SheetDescription>Take care of business okay.</SheetDescription>
       </SheetHeader>
 
-      <div class="w-full *:w-full pt-10 grid grid-cols-1 h-fit">
+      <div
+        class="
+          grid h-fit w-full grid-cols-1 pt-10
+          *:w-full
+        ">
         <button
           class="btn w-full"
           @click="ss().clearAll()">

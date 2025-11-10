@@ -27,17 +27,21 @@ onMounted(async () => {
 
 <template>
   <div
-    class="flex min-h-svh flex-col items-center justify-center gap-6 bg-tint-b2/40 p-6 md:p-10">
-    <div class="flex w-full max-w-md flex-col gap-16 -mt-16">
+    class="
+      flex min-h-svh flex-col items-center justify-center gap-6 bg-tint-b2/40
+      p-6
+      md:p-10
+    ">
+    <div class="-mt-16 flex w-full max-w-md flex-col gap-16">
       <NuxtLink
         to="/"
-        class="flex items-center gap-3 self-center justify-center w-full px-2">
+        class="flex w-full items-center justify-center gap-3 self-center px-2">
         <h2>lolpocket</h2>
       </NuxtLink>
 
       <div class="flex flex-col gap-2">
-        <div class="!max-w-180 !w-full flex flex-col gap-2">
-          <div class="w-full overflow-hidden text-2 font-medium h-6 px-px">
+        <div class="flex !w-full !max-w-180 flex-col gap-2">
+          <div class="h-6 w-full overflow-hidden px-px text-2 font-medium">
             {{ loadingText[Math.floor(progress / 25)] || loadingText.at(-1) }}
           </div>
           <Progress

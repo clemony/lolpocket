@@ -36,7 +36,7 @@ const {
         :class="attributeWrapper()">
         <div
           :class="attributeContent()">
-          <p class="!text-2 text-wrap ">
+          <p class="!text-2 text-wrap">
             {{ attribute.attribute }}:
           </p>
           <p class="overflow-hidden text-wrap whitespace-pre">
@@ -48,7 +48,7 @@ const {
               v-if="attribute.modifiers?.[1]"
               v-tippy="{ content: attribute.modifiers?.[1].tooltip, theme: 'base', placement: 'bottom-start', offset: [0, 6] }"
               :class="cn({ 'hover:bg-b2 pb-0.5 decoration-bc/40 hover:*:decoration-bc ': attribute.modifiers?.[1].tooltip }, attributeBadge())">+&thinsp;
-              <span :class=" { 'decoration-bc/40 underline  decoration-dotted  underline-offset-2': attribute.modifiers?.[1].tooltip }">
+              <span :class=" { 'underline decoration-bc/40 decoration-dotted underline-offset-2': attribute.modifiers?.[1].tooltip }">
                 {{ attribute.modifiers?.[1].values }}
               </span>{{ attribute.modifiers?.[1].unit }}
             </span>

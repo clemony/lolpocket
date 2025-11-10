@@ -14,7 +14,7 @@ const queueModel = computed({
     class="w-120 max-w-120">
     <TabsList
       base="indicator"
-      class=" field-box h-10 w-full grid grid-cols-4">
+      class="field-box grid h-10 w-full grid-cols-4">
       <TabIndicator />
       <TabsTrigger :value="0">
         All

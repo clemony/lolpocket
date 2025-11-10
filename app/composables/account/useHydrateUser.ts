@@ -1,14 +1,14 @@
+import type { Account, Pocket, PublicData, Settings } from '~~/shared/schema'
 import * as v from 'valibot'
+import { appTaglines } from '~~/shared/data/taglines'
+import { AccountSchema, getEmptyAccount, getEmptySettings, PocketSchema, PublicDataSchema, SettingsSchema } from '~~/shared/schema'
 import { toast } from '~/base/notification/toast/use-toast'
 import { getRandom } from '~/utils/helpers/getRandom'
-import { appTaglines } from '~~/shared/data/taglines'
-import type { Account, Pocket, PublicData, Settings } from '~~/shared/schema'
-import { AccountSchema, getEmptyAccount, getEmptySettings, PocketSchema, PublicDataSchema, SettingsSchema } from '~~/shared/schema'
 
 interface UserProfileResponse {
   account: Account | null
   pockets: Pocket[] | null // <- updated key to match RPC
-  public: PublicData | null
+  // public: PublicData | null
   settings: Settings | null
 }
 export async function useHydrateUser(progress?: Ref<number>) {
@@ -50,14 +50,14 @@ export async function useHydrateUser(progress?: Ref<number>) {
       as().settings
         = settingsParse.success ? settingsParse.output : getEmptySettings()
 
-      const results = data.pockets.map(p => v.safeParse(PocketSchema, p))
+      /*    const results = data.pockets.map(p => v.safeParse(PocketSchema, p))
       results.forEach((r, i) => {
         if (!r.success) {
           console.warn(`Pocket ${i} failed validation:`, r.issues)
         }
       })
 
-/*       let validatedPockets: Pocket[] = []
+      let validatedPockets: Pocket[] = []
       if (Array.isArray(data.pockets)) {
         validatedPockets = data.pockets
           .map(p => v.safeParse(PocketSchema, p))
@@ -87,5 +87,4 @@ export async function useHydrateUser(progress?: Ref<number>) {
       as().account?.name ?? as().account?.username ?? 'Summoner'
     }! ${getRandom(appTaglines)}`,
   })
-
 }

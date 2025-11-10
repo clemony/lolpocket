@@ -7,20 +7,32 @@ const summoner = computed(() => ss().getSummoner(as().account?.puuid))
 <template>
   <Button
     v-if="summoner"
-    class="h-16 w-full group/friend chat chat-start">
-    <SummonerIcon class="rounded-full chat-image size-11.5 shrink-0" />
+    class="group/friend chat-start chat h-16 w-full">
+    <SummonerIcon class="chat-image size-11.5 shrink-0 rounded-full" />
 
     <div
-      class="flex chat-header justify-between w-full gap-px -translate-y-1 pl-1 pr-10">
+      class="
+        chat-header flex w-full -translate-y-1 justify-between gap-px pr-10 pl-1
+      ">
       <div class="flex items-center gap-1">
         <SummonerName
-          class="!text-3 drop-shadow-sm group-hover/friend:underline text-bc/94 font-normal" />
+          class="
+            !text-3 font-normal text-bc/94 drop-shadow-sm
+            group-hover/friend:underline
+          " />
         <SummonerTag
           :summoner
-          class="mb-px text-1 [&_svg]:size-3 opacity-50" />
+          class="
+            mb-px text-1 opacity-50
+            [&_svg]:size-3
+          " />
       </div>
       <div
-        class="flex items-center lowercase gap-2 opacity-0 transition-opacity duration-200 group-hover/friend:opacity-50 align-middle font-normal">
+        class="
+          flex items-center gap-2 align-middle font-normal lowercase opacity-0
+          transition-opacity duration-200
+          group-hover/friend:opacity-50
+        ">
         <SummonerRegion
           :region-id="summoner.region"
           class="[&_svg]:size-2.5" />

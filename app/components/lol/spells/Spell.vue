@@ -27,7 +27,10 @@ watch(
     size="sq-14"
     :class="
       cn(
-        'size-14 overflow-hidden group-hover/select:bg-b3/50',
+        `
+          size-14 overflow-hidden
+          group-hover/select:bg-b3/50
+        `,
         { ' shadow-sm drop-shadow-sm border border-b4 ': id },
         className,
       )

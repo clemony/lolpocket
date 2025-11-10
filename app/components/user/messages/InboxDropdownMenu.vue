@@ -13,7 +13,7 @@ import { testMessage } from './test-message'
 <template>
   <Label
     for="inbox-switch"
-    class="justify-between items-center px-2 py-2 w-full flex">
+    class="flex w-full items-center justify-between px-2 py-2">
 
     Show Unread Only
     <Switch
@@ -22,9 +22,9 @@ import { testMessage } from './test-message'
 
   </Label>
 
-  <DropdownMenuSeparator class=" my-1.5" />
+  <DropdownMenuSeparator class="my-1.5" />
 
-  <div class="text-2 opacity-50  pt-1 px-2 font-semibold">
+  <div class="px-2 pt-1 text-2 font-semibold opacity-50">
     Tools
   </div>
   <PopoverItem @click="as().inbox.messages.push(testMessage)">
@@ -51,14 +51,14 @@ import { testMessage } from './test-message'
     Mark all as Unread
   </PopoverItem>
 
-  <DropdownMenuSeparator class=" my-1.5" />
+  <DropdownMenuSeparator class="my-1.5" />
 
   <PopoverItem>
     <IconWrapper>
       <icon
         name="trash"
-        class="size-4 !-ml-1 -mt-1" />
-      <span class="absolute -bottom-1.5 opacity-70 text-4 -right-1">🡭</span>
+        class="-mt-1 !-ml-1 size-4" />
+      <span class="absolute -right-1 -bottom-1.5 text-4 opacity-70">🡭</span>
     </IconWrapper>
     Trash all Read Messages
   </PopoverItem>

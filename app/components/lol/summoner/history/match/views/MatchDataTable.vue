@@ -21,9 +21,12 @@ const players = computed (() => match.participants as Player[])
 
 <template>
   <div
-    class="group/head grid h-18 w-full grid-flow-row grid-cols-[2.3fr_repeat(10,1fr)] gap-1 px-2 py-1">
+    class="
+      group/head grid h-18 w-full grid-flow-row grid-cols-[2.3fr_repeat(10,1fr)]
+      gap-1 px-2 py-1
+    ">
     <div class="size-full items-center pl-2">
-      <div class="text-1 text-bc/60 font-semibold uppercase">
+      <div class="text-1 font-semibold text-bc/60 uppercase">
         {{ gameOutcome.player }}
       </div>
       <p
@@ -42,13 +45,16 @@ const players = computed (() => match.participants as Player[])
       v-for="p in match.participants"
       :key="p.pId"
       :class="
-        cn(' place-items-center grid size-full rounded-xl z-0', {
+        cn('z-0 grid size-full place-items-center rounded-xl', {
           'bg-inspiration/30': p.teamId === 100,
           'bg-domination/30': p.teamId === 200,
         })
       ">
       <div
-        class="grid aspect-square size-13 shrink-0 place-items-center overflow-hidden rounded-lg">
+        class="
+          grid aspect-square size-13 shrink-0 place-items-center overflow-hidden
+          rounded-lg
+        ">
         <ChampionIcon
           :id="p.championId"
           :alt="p.championName"
@@ -59,12 +65,20 @@ const players = computed (() => match.participants as Player[])
 
   <div class="relative h-171 w-full overflow-auto">
     <div
-      class="**:text-1 z-auto mt-2 grid h-max grid-flow-row  auto-rows-max grid-cols-[2fr_repeat(10,1fr)] pr-4 pb-3 pl-2">
+      class="
+        z-auto mt-2 grid h-max grid-flow-row auto-rows-max
+        grid-cols-[2fr_repeat(10,1fr)] pr-4 pb-3 pl-2
+        **:text-1
+      ">
       <template
         v-for="group in matchDataStats"
         :key="group">
         <div
-          class="bg-b2 !sticky top-0 left-0 col-span-full mt-2 -mr-4  mb-3 -ml-2 grid items-center px-2 py-1 font-semibold text-nowrap capitalize italic">
+          class="
+            !sticky top-0 left-0 col-span-full mt-2 -mr-4 mb-3 -ml-2 grid
+            items-center bg-b2 px-2 py-1 font-semibold text-nowrap capitalize
+            italic
+          ">
           {{ group.name }}
         </div>
 
@@ -72,7 +86,10 @@ const players = computed (() => match.participants as Player[])
           v-for="stat in group.stats"
           :key="stat.name">
           <div
-            class="col-start-1 truncate pl-2 font-medium tracking-tight whitespace-nowrap capitalize">
+            class="
+              col-start-1 truncate pl-2 font-medium tracking-tight
+              whitespace-nowrap capitalize
+            ">
             {{ stat.name }}
           </div>
 
@@ -81,7 +98,10 @@ const players = computed (() => match.participants as Player[])
             :key="p.puuid"
             :class="
               cn(
-                'text-end !text-1 *:!text-1 py-1 tracking-tight font-medium',
+                `
+                  py-1 text-end !text-1 font-medium tracking-tight
+                  *:!text-1
+                `,
                 {
                   'text-bc/15 **:text-bc/15': p[stat.id] === 0,
                 },

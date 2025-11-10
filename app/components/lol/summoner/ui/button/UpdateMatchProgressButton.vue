@@ -60,7 +60,11 @@ const tippy = computed(
         v-if="!cooldown"
         :class="
           cn(
-            'flex items-center place-self-center   antialiased font-semibold opacity-68 group-hover/load:opacity-100',
+            `
+              flex items-center place-self-center font-semibold antialiased
+              opacity-68
+              group-hover/load:opacity-100
+            `,
             { 'text-1': size === 'xs' },
           )
         ">
@@ -80,12 +84,20 @@ const tippy = computed(
         v-if="cooldown"
         :class="
           cn(
-            'size-full grid place-items-center gap-1.5 p-2 grid-rows-2 *:overflow-hidden overflow-hidden z-0 pointer-events-none',
+            `
+              pointer-events-none z-0 grid size-full grid-rows-2
+              place-items-center gap-1.5 overflow-hidden p-2
+              *:overflow-hidden
+            `,
             { 'gap-0': size === 'xs' }) ">
         <div
           v-if="size !== 'xs'"
-          class="text-1 dst grid inline w-full grid-flow-col grid-cols-2 items-center  justify-between pr-0.25 text-end align-bottom font-semibold text-nowrap">
-          <span :class="cn(' font-bold text-2')">
+          class="
+            grid inline w-full grid-flow-col grid-cols-2 items-center
+            justify-between pr-0.25 text-end align-bottom text-1 font-semibold
+            text-nowrap dst
+          ">
+          <span :class="cn('text-2 font-bold')">
             {{ cooldown?.formatted }}
           </span>
           <span>
@@ -98,7 +110,10 @@ const tippy = computed(
           class="bg-transparent"
           :class="
             cn(
-              'relative border bg-b3 border-b4 scale-y-60 w-full h-2.75 rounded-[3px]',
+              `
+                relative h-2.75 w-full scale-y-60 rounded-[3px] border border-b4
+                bg-b3
+              `,
               { 'h-2.5 mt-1.5': size === 'xs' },
             )
           "
@@ -108,7 +123,12 @@ const tippy = computed(
             class="!bg-transparent"
             :value="cooldown?.percent">
             <motion.div
-              class="after:from-neutral after:via-neutral/80 after:to-neutral relative h-full origin-right after:absolute after:inset-0 after:top-0 after:right-0 after:size-full after:bg-red-500"
+              class="
+                relative h-full origin-right
+                after:absolute after:inset-0 after:top-0 after:right-0
+                after:size-full after:bg-red-500 after:from-neutral
+                after:via-neutral/80 after:to-neutral
+              "
               :initial="{
                 scaleX: 1,
                 width: '100%',

@@ -164,7 +164,10 @@ onMounted(() => {
 
 <template>
   <div
-    class="relative border-shadow-sm pt-4 grid place-items-center h-150 min-h-150 w-210">
+    class="
+      border-shadow-sm relative grid h-150 min-h-150 w-210 place-items-center
+      pt-4
+    ">
     <Bar
       id="championAnalysis"
       ref="chartRef"
@@ -175,13 +178,13 @@ onMounted(() => {
     <div
       v-for="(pos, idx) in imagePositions"
       :key="idx"
-      class="absolute shadow-sm drop-shadow-sm bottom-9"
+      class="absolute bottom-9 shadow-sm drop-shadow-sm"
       :style="{
         left: `${pos.x - 16}px`,
         width: '32px',
         height: '32px',
       }">
-      <div class="size-[32px] rounded-lg overflow-hidden">
+      <div class="size-[32px] overflow-hidden rounded-lg">
         <ChampionIcon
           :id="champions[idx].championId"
           :alt="pos.label"

@@ -1,5 +1,5 @@
-import { defineStore } from 'pinia'
 import type { Account, Pocket, PublicData, Settings } from '~~/shared/schema'
+import { defineStore } from 'pinia'
 import { getEmptyAccount } from '~~/shared/schema'
 
 export const useAccountStore = defineStore(
@@ -48,13 +48,13 @@ export const useAccountStore = defineStore(
             ? !settings.value.pin_sidebar
             : (settings.value.pin_sidebar = true)),
       account,
-      settings,
-      inbox,
       clearAccount,
       comments,
+      inbox,
       loggedIn,
       pockets,
       removedComments,
+      settings,
       toggles,
       topChampion,
     }

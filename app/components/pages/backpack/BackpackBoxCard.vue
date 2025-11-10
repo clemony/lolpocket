@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { championPositions } from '#shared/references'
 import type { Pocket } from '~~/shared/schema'
+import { championPositions } from '#shared/references'
 
 const {
   class: className,
@@ -20,7 +20,12 @@ console.log(
   <button
     :class="
       cn(
-        'flex flex-col items-start gap-2 rounded-xl shadow-black/8 shadow-sm border border-b4/70 pb-5 px-6 pb-5 pt-3 text-left cursor-pointer transition-colors ring ring-transparent hover:ring-neutral/50',
+        `
+          flex cursor-pointer flex-col items-start gap-2 rounded-xl border
+          border-b4/70 px-6 pt-3 pb-5 text-left shadow-sm ring shadow-black/8
+          ring-transparent transition-colors
+          hover:ring-neutral/50
+        `,
         selected?.key === pocket?.key && 'bg-b2/30',
       )
     "
@@ -32,19 +37,24 @@ console.log(
           :img="pocket.icon"
           class="size-11 rounded-full" />
         <div
-          class="flex flex-col items-start justify-center gap-1 text-start leading-4">
+          class="
+            flex flex-col items-start justify-center gap-1 text-start leading-4
+          ">
           <!-- name -->
           <div class="flex items-center gap-2 font-semibold">
             {{ pocket.name }}
           </div>
           <PocketChampions
             list
-            class="!text-bc/70 text-2"
+            class="text-2 !text-bc/70"
             :champions="pocket.champions" />
         </div>
       </div>
       <div
-        class="relative flex h-full max-h-14 w-max flex-nowrap items-center justify-items-end gap-1">
+        class="
+          relative flex h-full max-h-14 w-max flex-nowrap items-center
+          justify-items-end gap-1
+        ">
         <PocketChampions
           class="ml-auto"
           :champions="pocket.champions" />
@@ -76,7 +86,7 @@ console.log(
           <template v-if="championPositions.map((p) => p.name).includes(tag)">
             <component
               :is="`i-roles-${tag}`"
-              :class="cn('size-3.5 dst text-white mr-1.25')" />
+              :class="cn('mr-1.25 size-3.5 text-white dst')" />
             <span class="font-medium text-white lowercase">
               {{ tag }}
             </span>

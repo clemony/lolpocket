@@ -9,5 +9,5 @@ const { class: className } = defineProps<{
   <component
     :is="`i-roles-${role}`"
     v-if="role"
-    :class="cn('size-4 ml-auto mr-1', className)" />
+    :class="cn('mr-1 ml-auto size-4', className)" />
 </template>

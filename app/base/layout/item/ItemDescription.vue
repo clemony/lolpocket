@@ -10,8 +10,11 @@ const props = defineProps<{
   <p
     data-slot="item-description"
     :class="cn(
-      'text-bc/60 line-clamp-2  leading-normal font-normal text-balance',
-      '[&>a:hover]:text-neutral [&>a]:underline [&>a]:underline-offset-4',
+      'line-clamp-2 leading-normal font-normal text-balance text-bc/60',
+      `
+        [&>a]:underline [&>a]:underline-offset-4
+        [&>a:hover]:text-neutral
+      `,
       props.class,
     )">
     <slot />

@@ -1,10 +1,8 @@
 import type { Editor } from '@tiptap/core'
 import { toast } from '~/base/notification/toast/use-toast'
 
-
 export function postComment(editor: Editor, newComment: Doc, parent?: Record<string, UUID>) {
-
-const comment: CommentSchema  = {
+  const comment: CommentSchema = {
     author_id: as().account.uuid,
     id: crypto.randomUUID(),
     parent_id: parent?.parent_id || null,
@@ -13,14 +11,14 @@ const comment: CommentSchema  = {
     //
     content: newComment,
     //
-    upvotes: [as().account.uuid],
     downvotes: [],
+    upvotes: [as().account.uuid],
     //
     created: new Date().toISOString(),
-    updated: new Date().toISOString(),
     removed: null,
+    updated: new Date().toISOString(),
   }
-as().comments.push(comment)
+  as().comments.push(comment)
   editor.commands.clearContent()
   editor.commands.blur()
   toast({
@@ -30,4 +28,3 @@ as().comments.push(comment)
 /*   const router = useRouter()
   router.replace({ hash: `#${id}` }) */
 }
-

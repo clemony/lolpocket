@@ -27,7 +27,7 @@ const resource = computed(() => {
     hover="btn"
     :size
     :class="cn(
-      'w-fit !text-2 !font-medium  !gap-2  px-5  text-bc/90  ',
+      'w-fit !gap-2 px-5 !text-2 !font-medium text-bc/90',
       {
         //
         'hover:**:text-bc hover:text-bc order-first ':
@@ -52,6 +52,9 @@ const resource = computed(() => {
     <icon
       v-if="clear"
       name="x"
-      class="size-4 text-white **:stroke-[2.6] " />
+      class="
+        size-4 text-white
+        **:stroke-[2.6]
+      " />
   </Button>
 </template>

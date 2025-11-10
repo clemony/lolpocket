@@ -40,7 +40,10 @@ function navigate(url: string) {
           v-model:model-value="query"
           type="text"
           placeholder="Search..."
-          class="peer border-b-b3 relative flex field-sizing-content h-14 w-auto min-w-36 grow !rounded-b-none !ring-0 !outline-0"
+          class="
+            peer relative flex field-sizing-content h-14 w-auto min-w-36 grow
+            !rounded-b-none border-b-b3 !ring-0 !outline-0
+          "
           @update:model-value="e => query = e"
           @clear:input="clear()">
           <icon
@@ -122,7 +125,11 @@ function navigate(url: string) {
                   :class="cn('size-5', option.meta?.listClass)" />
                 {{ option.meta?.title || option.name }}
               </CommandItem>
-              <CommandSeparator class="mt-2 group-last/pages:hidden" />
+              <CommandSeparator
+                class="
+                  mt-2
+                  group-last/pages:hidden
+                " />
             </CommandGroup>
           </TransitionExpand>
         </CommandList>

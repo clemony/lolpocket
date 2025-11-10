@@ -29,10 +29,21 @@ const pinned = computed(() => ps().pockets.filter(p => ps().pinned.includes(p.ke
               variant="ghost"
               hover="base"
               size="12"
-              class="group data-[state=open]:fx-noise data-[state=open]:border-b3/80 w-full justify-start !gap-3 pr-5 pl-4.5 hover:bg-transparent data-[state=open]:inset-shadow-xs data-[state=open]:shadow-sm data-[state=open]:shadow-black/8">
+              class="
+                group
+                data-[state=open]:fx-noise
+                w-full justify-start !gap-3 pr-5 pl-4.5
+                hover:bg-transparent
+                data-[state=open]:border-b3/80 data-[state=open]:shadow-sm
+                data-[state=open]:inset-shadow-xs
+                data-[state=open]:shadow-black/8
+              ">
               <SummonerIcon class="size-7 rounded-full" />
               <span
-                class="text-5 dst w-full items-center truncate font-semibold *:first:capitalize">
+                class="
+                  w-full items-center truncate text-5 font-semibold dst
+                  *:first:capitalize
+                ">
                 <SummonerName class="inline" />
                 's Backpack
               </span>

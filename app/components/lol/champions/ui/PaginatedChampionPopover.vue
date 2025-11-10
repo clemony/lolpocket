@@ -50,23 +50,33 @@ watch(
         hover="btn"
         :class="
           cn(
-            'aspect-square  relative transition-[colors, opacity] p-0 duration-300 relative w-full h-auto hover:text-bc/60 hover:inset-shadow-xs open:ring-2 hover:ring overflow-hidden ring-bc/60 open:btn-active',
+            `
+              transition-[colors, opacity] relative aspect-square h-auto w-full
+              overflow-hidden p-0 ring-bc/60 duration-300
+              open:btn-active open:ring-2
+              hover:text-bc/60 hover:ring hover:inset-shadow-xs
+            `,
             { 'shadow-sm drop-shadow-sm ': pocket.main?.champion },
           )
         ">
         <icon
           v-if="!pocket?.main?.champion"
           name="lp:champ"
-          class="text-bc/20 size-10" />
+          class="size-10 text-bc/20" />
         <Champion
           v-else
           v-memo="pocket.main?.champion"
           class="*:scale-160"
           :img="getSplash(pocket.main?.champion, 'tile')" />
         <div
-          :class="cn('size-full opacity-0 group-hover/collapse:opacity-100 group-open/collapse:opacity-100 inset-0 p-1 transition-opacity duration-300 bg-neutral/60 absolute grid justify-center items-end', { 'bg-b2 **:text-bc/40': !pocket.main?.champion })">
+          :class="cn(`
+            absolute inset-0 grid size-full items-end justify-center
+            bg-neutral/60 p-1 opacity-0 transition-opacity duration-300
+            group-open/collapse:opacity-100
+            group-hover/collapse:opacity-100
+          `, { 'bg-b2 **:text-bc/40': !pocket.main?.champion })">
           <CaretFlip
-            class="!text-nc size-8 opacity-80 drop-shadow-sm "
+            class="size-8 !text-nc opacity-80 drop-shadow-sm"
             fill />
         </div>
       </Button>
@@ -78,11 +88,16 @@ watch(
       arrow-class="translate-y-0"
       class="p-0">
       <div
-        class="group/txt relative flex h-12 w-full shrink-0 items-center gap-3 px-3">
+        class="
+          group/txt relative flex h-12 w-full shrink-0 items-center gap-3 px-3
+        ">
         <icon name="search" />
         <input
           v-model="searchQuery"
-          class="text-2 h-full w-full pr-4 transition-all duration-200 placeholder:italic"
+          class="
+            h-full w-full pr-4 text-2 transition-all duration-200
+            placeholder:italic
+          "
           placeholder="Search All Champions..."
           @keydown.stop
           @keydown.enter.prevent />
@@ -90,11 +105,17 @@ watch(
         <Button
           variant="ghost"
           size="8"
-          class="btn-square absolute top-3 right-2 size-6 shrink-0 opacity-100 group-has-[:placeholder-shown]/txt:opacity-0"
+          class="
+            absolute top-3 right-2 btn-square size-6 shrink-0 opacity-100
+            group-has-[:placeholder-shown]/txt:opacity-0
+          "
           @click="searchQuery = ''">
           <icon
             name="x-sm"
-            class="size-4 **:stroke-[1.5]" />
+            class="
+              size-4
+              **:stroke-[1.5]
+            " />
         </Button>
       </div>
 
@@ -136,11 +157,14 @@ watch(
             <Button
               variant="btn"
               title="Clear main champion"
-              class="border-b3 bg-b2 hover-ring hover:!bg-b3/80 aspect-square h-auto w-full"
+              class="
+                aspect-square h-auto w-full hover-ring border-b3 bg-b2
+                hover:!bg-b3/80
+              "
               @click="pocket.main.champion = ''">
               <icon
                 name="lp:champ"
-                class="text-bc/20 size-7" />
+                class="size-7 text-bc/20" />
             </Button>
           </PopoverClose>
           <ChampionIcon
@@ -148,7 +172,9 @@ watch(
             :id="ix().champIdByKey(champion)"
             :key="champion"
             as="label"
-            class="hover-ring aspect-square h-auto w-full cursor-pointer rounded-lg"
+            class="
+              aspect-square h-auto w-full hover-ring cursor-pointer rounded-lg
+            "
             @click="open = false">
             <input
               v-model="pocket.main.champion"
@@ -168,10 +194,16 @@ watch(
           <PaginationContent>
             <PaginationPrev
               size="8"
-              class="btn-square size-8 disabled:opacity-40" />
+              class="
+                btn-square size-8
+                disabled:opacity-40
+              " />
             <PaginationNext
               size="8"
-              class="btn-square size-8 disabled:opacity-40" />
+              class="
+                btn-square size-8
+                disabled:opacity-40
+              " />
           </PaginationContent>
         </Pagination>
       </div>

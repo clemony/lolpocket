@@ -19,10 +19,13 @@ onMounted(() => {
     <PocketIcon
       :pocket="pocket"
       :url="pocket.icon"
-      class="rounded-md **:rounded-md" />
+      class="
+        rounded-md
+        **:rounded-md
+      " />
 
     <div class="flex flex-col gap-3">
-      <h5 class="!text-4 pt-0.5 leading-none tracking-tight">
+      <h5 class="pt-0.5 !text-4 leading-none tracking-tight">
         New Pocket Created!
       </h5>
 

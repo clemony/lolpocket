@@ -34,7 +34,10 @@ watch(
     :as
     :class="
       cn(
-        'rounded-full overflow-hidden transition-all   duration-300 relative h-20  grid place-items-center aspect-square ',
+        `
+          relative grid aspect-square h-20 place-items-center overflow-hidden
+          rounded-full transition-all duration-300
+        `,
         {
           'drop-shadow-md': loaded,
         },
@@ -50,7 +53,7 @@ watch(
       :src="`/img/runes/${runeToPath[id]}/${id}.webp`"
       :alt="ix().runeNameById(id)"
       :class="
-        cn('transition-all duration-300 bg-b3/80 rounded-full size-full', {
+        cn('size-full rounded-full bg-b3/80 transition-all duration-300', {
           'scale-105 ': loaded,
         })
       "

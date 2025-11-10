@@ -21,7 +21,7 @@ const champions = computed(() => [...c].slice(0, 3).reverse())
     v-if="list"
     :class="
       cn(
-        'text-2 opacity-80 line-clamp-1 gap-1 grow items-center flex',
+        'line-clamp-1 flex grow items-center gap-1 text-2 opacity-80',
         className,
       )
     ">
@@ -46,27 +46,27 @@ const champions = computed(() => [...c].slice(0, 3).reverse())
 
   <div
     v-else
-    :class="cn('avatar-group  -space-x-5', className)">
+    :class="cn('avatar-group -space-x-5', className)">
     <template v-if="champions?.length">
       <template
         v-for="(champion, i) in champions"
         :key="champion">
         <div
           v-if="i < 3"
-          class="avatar bg-b1 size-fit">
+          class="avatar size-fit bg-b1">
           <ChampionIcon
             :id="ix().champIdByKey(champion)"
-            class="size-11 border-bc shadow-sm shadow-black rounded-full" />
+            class="size-11 rounded-full border-bc shadow-sm shadow-black" />
         </div>
       </template>
     </template>
     <Placeholder
       v-else
-      class="size-11 rounded-full mr-1"></Placeholder>
+      class="mr-1 size-11 rounded-full"></Placeholder>
     <div
       v-if="champions?.length > 3"
       class="avatar avatar-placeholder">
-      <div class="bg-neutral text-neutral-content w-11 text-2">
+      <div class="w-11 bg-neutral text-2 text-neutral-content">
         <span>+99</span>
       </div>
     </div>

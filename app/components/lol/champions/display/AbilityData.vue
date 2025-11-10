@@ -18,11 +18,14 @@ watch(
 
 <template>
   <div
-    class="**:text-3 flex size-full max-h-full flex-col items-center gap-6 pt-6">
+    class="
+      flex size-full max-h-full flex-col items-center gap-6 pt-6
+      **:text-3
+    ">
     <div class="mt-2 flex w-full items-center justify-between gap-3 px-7">
       <h2
         v-if="ability?.name"
-        class="!text-8 grow tracking-tight">
+        class="grow !text-8 tracking-tight">
         {{ ability.name }}
       </h2>
     </div>
@@ -37,14 +40,17 @@ watch(
             || ability.effectRadius
             || ability.targetRange)
       "
-      class="flex w-full flex-wrap items-center gap-x-8 gap-y-4 px-9 pr-1 **:font-medium">
+      class="
+        flex w-full flex-wrap items-center gap-x-8 gap-y-4 px-9 pr-1
+        **:font-medium
+      ">
       <div
         v-if="ability.cooldown?.length"
         v-tippy="'Cooldown'"
         class="flex items-center gap-2">
         <i-stats-ah
           name="ph:hourglass"
-          class="dst mt-px inline size-3.5 shrink-0 text-black" />
+          class="mt-px inline size-3.5 shrink-0 text-black dst" />
 
         <ValueFormatter :array="ability.cooldown" />
       </div>
@@ -56,7 +62,10 @@ watch(
           class="flex items-center gap-2">
           <component
             :is="`i-stats-charge-${ability.maxCharges}`"
-            class="dst text-bc/80 -mt-px inline size-7 *:stroke-[1.3]" />
+            class="
+              -mt-px inline size-7 text-bc/80 dst
+              *:stroke-[1.3]
+            " />
 
           <span>
             {{ ability.maxCharges }}
@@ -69,7 +78,10 @@ watch(
           class="flex items-center gap-2">
           <icon
             name="mynaui:battery-charging"
-            class="dst text-bc/80 -mt-px size-7 *:stroke-[1.3]" />
+            class="
+              -mt-px size-7 text-bc/80 dst
+              *:stroke-[1.3]
+            " />
 
           <ValueFormatter :array="ability.rechargeRate" />
         </div>
@@ -83,7 +95,7 @@ watch(
         <ChampionDataIcon
           v-if="ability.resource"
           :name="ability.resource"
-          class="dst text-bc/80 size-4" />
+          class="size-4 text-bc/80 dst" />
 
         <ValueFormatter :array="ability.cost" />
       </div>
@@ -94,7 +106,7 @@ watch(
         class="flex items-center gap-2">
         <span class="relative size-3 justify-start">
           <i-stats-radius
-            class="text-bc/80 dst absolute -top-0.5 -left-1.5 size-4.5" />
+            class="absolute -top-0.5 -left-1.5 size-4.5 text-bc/80 dst" />
         </span>
         {{ ability.effectRadius }}
       </div>
@@ -103,7 +115,7 @@ watch(
         v-if="ability.targetRange"
         v-tippy="'Range'"
         class="flex items-center gap-2">
-        <i-stats-range class="text-bc dst text-bc/80 size-4" />
+        <i-stats-range class="size-4 text-bc text-bc/80 dst" />
         {{ ability.targetRange }}
       </div>
 
@@ -120,7 +132,10 @@ watch(
       v-if="ability"
       class="relative size-full self-center overflow-hidden">
       <div
-        class=" absolute inset-0 top-0 left-0 mr-px flex size-full flex-col items-start gap-3 overflow-y-auto px-5 pb-4">
+        class="
+          absolute inset-0 top-0 left-0 mr-px flex size-full flex-col
+          items-start gap-3 overflow-y-auto px-5 pb-4
+        ">
         <AbilityDescription
           v-for="(effect, i) in ability.effects"
           :key="i"
@@ -133,7 +148,9 @@ watch(
             class="CollapsibleContent text-balanced px-3 leading-5">
             {{ ability.notes }}
             <CollapsibleTrigger
-              class="ability-header flex w-full flex-nowrap justify-between px-3">
+              class="
+                ability-header flex w-full flex-nowrap justify-between px-3
+              ">
               <icon name="add" />
             </CollapsibleTrigger>
           </CollapsibleContent>

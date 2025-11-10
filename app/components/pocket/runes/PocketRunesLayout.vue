@@ -51,7 +51,10 @@ function handleDelete() {
   <div class="flex size-full overflow-y-scroll">
     <TransitionFade
       group
-      class="@container relative left-0 flex size-full flex-wrap justify-center gap-10 gap-18 px-12">
+      class="
+        @container relative left-0 flex size-full flex-wrap justify-center
+        gap-10 gap-18 px-12
+      ">
       <div
         v-if="set?.primary && primaryRunes"
         class="relative flex w-1/2 max-w-114 min-w-90 flex-col gap-8">
@@ -64,7 +67,9 @@ function handleDelete() {
           @update:model-value="handlePath1()">
           <TabsList
             base="indicator"
-            class="field-box h-19 w-full grid-cols-5 items-center justify-evenly">
+            class="
+              field-box h-19 w-full grid-cols-5 items-center justify-evenly
+            ">
             <PathTabTrigger
               v-for="path in pathList"
               :key="path"
@@ -91,7 +96,10 @@ function handleDelete() {
         <!-- menu buttons -->
 
         <div
-          class="absolute bottom-50 -left-24 mb-4 flex flex-col flex-nowrap items-center gap-5 px-1">
+          class="
+            absolute bottom-50 -left-24 mb-4 flex flex-col flex-nowrap
+            items-center gap-5 px-1
+          ">
           <Button
             variant="outline"
             title="Delete Set"
@@ -135,7 +143,11 @@ function handleDelete() {
           :pocket="pocket"
           :set />
       </div>
-      <div class="flex h-full w-32 flex-col items-center gap-6 *:rounded-full">
+      <div
+        class="
+          flex h-full w-32 flex-col items-center gap-6
+          *:rounded-full
+        ">
         <Keystone
           :id="set.keystone"
           class="size-16"
@@ -150,7 +162,10 @@ function handleDelete() {
           v-for="shard in set.shards"
           :id="shard"
           :key="shard"
-          :class="`size-10 border-b3 ${shard === 0 ? 'border !border-b2 bg-b2/30' : ''}`" />
+          :class="`
+            size-10 border-b3
+            ${shard === 0 ? `border !border-b2 bg-b2/30` : ''}
+          `" />
       </div>
     </TransitionFade>
   </div>

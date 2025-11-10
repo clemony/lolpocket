@@ -166,8 +166,8 @@ export const collapsibleTriggerVariants = tv({
 export const kbdVariants = tv({
   base: 'pointer-events-none  relative inline-flex w-fit min-w-5 items-center justify-center   gap-1 rounded-md border  p-1 !text-[0.92rem] shadow-xs select-none [&_svg:not([class*="size-"])]:size-3 ',
   defaultVariants: {
-    variant: 'secondary',
-    size: '6'
+    size: '6',
+    variant: 'secondary'
   },
   extend: baseVariants,
 

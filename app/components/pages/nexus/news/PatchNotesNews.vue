@@ -20,15 +20,22 @@ const backgroundStyles = computed(() => {
 
 <template>
   <div
-    class="w-100 h-60 bg-cover rounded-box bg-center flex overflow-hidden flex-col relative py-4 px-4 drop-shadow-sm inset-shadow-sm inset-shadow-black/50 justify-end before:to-black/100 before:from-20% before:z-1 before:from-transparent before:absolute before:-bg-linear-155 shadow-sm before:size-full before:top-0 before:left-0"
+    class="
+      relative flex h-60 w-100 flex-col justify-end overflow-hidden rounded-box
+      bg-cover bg-center px-4 py-4 shadow-sm inset-shadow-sm
+      inset-shadow-black/50 drop-shadow-sm
+      before:absolute before:top-0 before:left-0 before:z-1 before:size-full
+      before:-bg-linear-155 before:from-transparent before:from-20%
+      before:to-black/100
+    "
     :style="backgroundStyles">
-    <div class="w-full z-2 text-shadow-md text-white">
+    <div class="z-2 w-full text-white text-shadow-md">
       <h3
-        class="font-serif font-black text-9">
+        class="font-serif text-9 font-black">
         {{ ogData.title }}
       </h3>
 
-      <p class=" text-4 text-shadow-md mt-3  px-0.75 tracking-tight">
+      <p class="mt-3 px-0.75 text-4 tracking-tight text-shadow-md">
         {{ ogData.description }}
       </p>
     </div>

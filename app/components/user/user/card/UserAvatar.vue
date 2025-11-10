@@ -20,7 +20,10 @@ const icon = computed(() => {
     :variant="comment.author_id === 'defnotclem' ? 'btn' : 'neutral'"
     :class="
       cn(
-        'shrink-0   shadow-sm drop-shadow-sm overflow-hidden shadow-black/15 drop-shadow-black/15',
+        `
+          shrink-0 overflow-hidden shadow-sm shadow-black/15 drop-shadow-sm
+          drop-shadow-black/15
+        `,
         className,
       )
     ">
@@ -28,7 +31,10 @@ const icon = computed(() => {
       :name="String(icon)"
       alt="summoner icon"
       :class="
-        cn('size-full pointer-events-none [&_img]:scale-115', {
+        cn(`
+          pointer-events-none size-full
+          [&_img]:scale-115
+        `, {
           '!size-9 place-self-center **:text-nc ':
             icon === 'i-ui-oh-no',
         })

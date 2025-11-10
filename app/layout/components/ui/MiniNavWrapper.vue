@@ -20,7 +20,10 @@ const variants = {
         :variants="variants"
         initial="hidden"
         exit="hidden"
-        class="opacity-0 border border-b3 py-3.5 px-2 rounded-full bg-b1/80 backdrop-blur-lg gap-2.5 place-items-center flex-col shadow-warm-soft">
+        class="
+          flex-col place-items-center gap-2.5 rounded-full border border-b3
+          bg-b1/80 px-2 py-3.5 opacity-0 shadow-warm-soft backdrop-blur-lg
+        ">
         <NavigationMenuItem as-child>
           <HoverCard>
             <!-- ------------------------------ trigger ------------------------------ -->
@@ -38,7 +41,10 @@ const variants = {
               :align-offset="-6"
               align="start"
               side="right"
-              class="w-50 shadow-warm-soft shadow-black/6 border-b3/70 drop-shadow-none bg-b1/80 backdrop-blur-lg rounded-xl max-w-50">
+              class="
+                w-50 max-w-50 rounded-xl border-b3/70 bg-b1/80 shadow-warm-soft
+                shadow-black/6 drop-shadow-none backdrop-blur-lg
+              ">
               <slot name="menu-content" />
             </HoverPopContent>
           </HoverCard>

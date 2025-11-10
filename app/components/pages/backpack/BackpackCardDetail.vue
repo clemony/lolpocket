@@ -21,9 +21,9 @@ const bg = computed(() => {
       <div class="flex items-start gap-4 text-2">
         <PocketIcon
           :img="pocket.icon"
-          class="size-16 rounded-full aspect-square" />
+          class="aspect-square size-16 rounded-full" />
         <div class="grid gap-px">
-          <div class="font-semibold text-3 leading-4">
+          <div class="text-3 leading-4 font-semibold">
             {{ pocket.name }}
           </div>
 
@@ -33,7 +33,7 @@ const bg = computed(() => {
             :champions="pocket.champions"
             list />
 
-          <div class="line-clamp-1 leading-4 text-2 capitalize">
+          <div class="line-clamp-1 text-2 leading-4 capitalize">
             <span class="font-medium">Role:</span>
             <template
               v-for="role in pocket.roles"
@@ -44,7 +44,10 @@ const bg = computed(() => {
         </div>
       </div>
       <div
-        class="ml-auto text-2 text-bc/60 *:justify-end *:gap-2 *:flex *:items-center">
+        class="
+          ml-auto text-2 text-bc/60
+          *:flex *:items-center *:justify-end *:gap-2
+        ">
         <p v-if="pocket.created">
           Created {{ useDateFormat(pocket.created, "MMMM D, YYYY") }}
         </p>
@@ -61,19 +64,23 @@ const bg = computed(() => {
     <Separator />
 
     <!-- content -->
-    <div class="bg-black border-y border-y-b4">
+    <div class="border-y border-y-b4 bg-black">
       <div
-        class="w-full h-70 bg-no-repeat relative z-1 before:z-0 bg-fixed bg-[170%_55%] inset-shadow-sm inset-shadow-black/20 bg-size-[88%]"
+        class="
+          relative z-1 h-70 w-full bg-size-[88%] bg-fixed bg-[170%_55%]
+          bg-no-repeat inset-shadow-sm inset-shadow-black/20
+          before:z-0
+        "
         :style="bg" />
     </div>
-    <div class="flex-1 whitespace-pre-wrap p-4 text-2">
+    <div class="flex-1 p-4 text-2 whitespace-pre-wrap">
     </div>
     <Separator class="mt-auto" />
     <div class="p-4">
       <form>
         <div class="grid gap-4">
           <Textarea
-            class="p-4 border-b3/60 inset-shadow-xs"
+            class="border-b3/60 p-4 inset-shadow-xs"
             :placeholder="`Comment on ${pocket.name}...`" />
           <div class="flex items-center">
             <Label
@@ -97,7 +104,7 @@ const bg = computed(() => {
   </div>
   <div
     v-else
-    class="size-full grid justify-center text-center text-bc/60">
+    class="grid size-full justify-center text-center text-bc/60">
     <span class="translate-y-1/4">No pocket selected</span>
   </div>
 </template>

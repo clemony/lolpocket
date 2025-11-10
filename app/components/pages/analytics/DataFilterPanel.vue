@@ -22,7 +22,7 @@ const entries = [
 </script>
 
 <template>
-  <div class="px-6 pb-4 pt-16 bg-b2/40 flex items-center w-full">
+  <div class="flex w-full items-center bg-b2/40 px-6 pt-16 pb-4">
     <h1 class="dst">
       Champion Analysis
     </h1>
@@ -35,7 +35,10 @@ const entries = [
         class="max-w-100">
         <TabsList
           base="indicator"
-          class="grid-cols-3 *:!text-3">
+          class="
+            grid-cols-3
+            *:!text-3
+          ">
           <TabsTrigger
             v-for="tab in entries"
             :key="tab.name"

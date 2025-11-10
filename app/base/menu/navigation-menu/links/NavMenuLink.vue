@@ -22,7 +22,7 @@ const {
     :class="
       cn(
         navigationMenuTriggerStyle(),
-        'flex flex-col justify-center size-full items-start py-2',
+        'flex size-full flex-col items-start justify-center py-2',
         className,
       )
     ">

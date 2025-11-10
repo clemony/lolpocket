@@ -11,13 +11,18 @@ const props = defineProps<{
   <RadioGroupItem
     :class="
       cn(
-        'aspect-square size-5 rounded-full border outline outline-bc border-bc  text-bc shadow-sm relative group focus-visible:ring-1 focus-visible:ring-b2 disabled:cursor-not-allowed disabled:opacity-50',
+        `
+          group relative aspect-square size-5 rounded-full border border-bc
+          text-bc shadow-sm outline outline-bc
+          focus-visible:ring-1 focus-visible:ring-b2
+          disabled:cursor-not-allowed disabled:opacity-50
+        `,
         props.class,
       )
     ">
     <RadioGroupIndicator
       as-child
-      class="flex items-center justify-center relative">
+      class="relative flex items-center justify-center">
       <Motion
         layout
         :initial="{
@@ -40,7 +45,10 @@ const props = defineProps<{
         }">
         <icon
           name="codicon:circle-filled"
-          class="size-5.25 -mt-px textneutral opacity-100 group-disabled:opacity-0 absolute" />
+          class="
+            textneutral absolute -mt-px size-5.25 opacity-100
+            group-disabled:opacity-0
+          " />
       </Motion>
     </RadioGroupIndicator>
   </RadioGroupItem>

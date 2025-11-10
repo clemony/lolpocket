@@ -15,20 +15,30 @@ const cs = computed(() => {
     :offset="[2, -2]"
     :class="
       cn(
-        'flex flex-col *:py-0.5 *:text-1 py-1 *:leading-none font-medium items-end justify-start size-full **:text-nowrap',
+        `
+          flex size-full flex-col items-end justify-start py-1 font-medium
+          *:py-0.5 *:text-1 *:leading-none
+          **:text-nowrap
+        `,
         className,
       )
     ">
     <p
       v-tippy="'Minions Farmed'"
-      class="flex gap-1 items-center hover:underline decoration-1">
+      class="
+        flex items-center gap-1 decoration-1
+        hover:underline
+      ">
       {{ cs }}
       <span class="font-mono">CS</span>
     </p>
 
     <p
       v-tippy="'Gold Earned'"
-      class="flex gap-1 items-center hover:underline decoration-1">
+      class="
+        flex items-center gap-1 decoration-1
+        hover:underline
+      ">
       {{ player.goldEarned.toLocaleString() }}
       <span class="font-mono">G</span>
     </p>

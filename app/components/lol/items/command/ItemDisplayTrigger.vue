@@ -9,9 +9,16 @@ const props = defineProps<{
     class="size-20"
     @click.stop>
     <button
-      class="size-full group/b hover:ring hover:ringneutral/40 rounded-lg !pointer-events-none hover:inset-shadow-sm data-[state=open]:ringneutral/40 data-[state=open]:ring data-[state=open]:inset-shadow-sm"
+      class="
+        group/b
+        hover:ringneutral/40
+        data-[state=open]:ringneutral/40
+        !pointer-events-none size-full rounded-lg
+        hover:ring hover:inset-shadow-sm
+        data-[state=open]:ring data-[state=open]:inset-shadow-sm
+      "
       :class="{
-        'shadow-sm shadow-black/20 inset-shadow-sm border border-black/60':
+        'border border-black/60 shadow-sm inset-shadow-sm shadow-black/20':
           itemId,
       }">
       <LazyItem
@@ -19,15 +26,26 @@ const props = defineProps<{
         :id="props.itemId"
         :key="props.itemId"
         :alt="ix().itemNameById(itemId)"
-        class="shrink-0 overflow-hidden !pointer-events-none **:pointer-events-none rounded-field"
+        class="
+          !pointer-events-none shrink-0 overflow-hidden rounded-field
+          **:pointer-events-none
+        "
         basic />
 
       <div
         v-else
-        class="!size-20 !pointer-events-none btn no-drag group-data-[state=open]/b:!bg-b1/60 group-hover/b:!bg-b1/60 tldr-30">
+        class="
+          no-drag tldr-30 btn !pointer-events-none !size-20
+          group-hover/b:!bg-b1/60
+          group-data-[state=open]/b:!bg-b1/60
+        ">
         <icon
           name="search"
-          class="size-4 !pointer-events-none text-bc/70 group-hover/b:text-bc group-data-[state=open]/b:text-bc" />
+          class="
+            !pointer-events-none size-4 text-bc/70
+            group-hover/b:text-bc
+            group-data-[state=open]/b:text-bc
+          " />
       </div>
     </button>
   </PopoverTrigger>

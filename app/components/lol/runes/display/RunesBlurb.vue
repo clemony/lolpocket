@@ -48,14 +48,14 @@ const a = computed(() => {
     v-if="currentPath === currentPath"
     group>
     <div class="flex items-center gap-6 leading-none">
-      <h1 class="dst transition-all duration-300 text-8">
+      <h1 class="text-8 dst transition-all duration-300">
         {{ currentPath === '' ? 'Runes' : currentPath ?? title }}
       </h1>
 
       <span class="pt-1 text-2 lowercase">{{ a.tag ?? 'select a path' }}</span>
     </div>
 
-    <p class="text-4 mt-2.5 font-serif">
+    <p class="mt-2.5 font-serif text-4">
       {{ a.description || 'Precision, Domination, Sorcery, Resolve, Inspiration' }}.
     </p>
   </transition-fade>

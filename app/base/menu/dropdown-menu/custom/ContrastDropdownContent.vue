@@ -49,7 +49,11 @@ const dialogInitialState = {
     :align-offset="props.alignOffset"
     :class="
       cn(
-        'bgneutral/73 backdrop-blur-lg **:text-nc border-b3/50 border rounded-xl min-w-44 px-1.5 py-1.5',
+        `
+          bgneutral/73 min-w-44 rounded-xl border border-b3/50 px-1.5 py-1.5
+          backdrop-blur-lg
+          **:text-nc
+        `,
         props.class,
       )
     ">

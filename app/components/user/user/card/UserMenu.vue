@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import type { TippyOptions } from 'vue-tippy';
-import { popoverArrow } from '~/assets/ts/popoverArrow';
+import type { TippyOptions } from 'vue-tippy'
+import { popoverArrow } from '~/assets/ts/popoverArrow'
 
 const props = withDefaults(defineProps<TippyOptions & {
   class?: HTMLAttributes['class']
@@ -30,28 +30,32 @@ const isAdmin = computed (() => user?.value?.app_metadata?.user_role === 'admin'
     <Button
       base="btn"
       size="c-9"
-      class="rounded-full  hover-ring  pointer-events-auto z-4  "
+      class="pointer-events-auto z-4 hover-ring rounded-full"
       :disabled="!props.comment.author_id"
       @click.stop>
       <UserAvatar
         :comment
         size="c-9"
-        class="  self-center absolute pointer-events-none " />
+        class="pointer-events-none absolute self-center" />
     </Button>
     <template #content>
       <div
-        class="w-64 max-w-88 z-100 *:first:pt-1 tippy-content pointer-events-auto py-2 mb-1 [&_button]:px-2">
-        <div class="flex items-center gap-3 px-2 py-2 mt-2">
+        class="
+          tippy-content pointer-events-auto z-100 mb-1 w-64 max-w-88 py-2
+          *:first:pt-1
+          [&_button]:px-2
+        ">
+        <div class="mt-2 flex items-center gap-3 px-2 py-2">
           <UserAvatar
             :comment
             class="size-12" />
-          <div class="inline justify-between flex-wrap align-middle space-x-2">
-            <h2 class="dst leading-none  inline font-serif leading-3">
-              {{ comment.author. name }}
+          <div class="inline flex-wrap justify-between space-x-2 align-middle">
+            <h2 class="inline font-serif leading-3 dst">
+              {{ comment.author.name }}
             </h2>
             <span
               :data-role="comment.author_id === 'defnotclem' ? 'mod' : null"
-              class="align-text-start leading-4 pb-1">
+              class="pb-1 align-middle leading-4">
               <icon
                 name="hash"
                 class="inline size-3.5 pb-0.5" />{{ comment.author.tag }}
@@ -60,7 +64,7 @@ const isAdmin = computed (() => user?.value?.app_metadata?.user_role === 'admin'
         </div>
 
         <Separator :size="1" />
-        <div class="px-1  flex flex-col gap-1 ">
+        <div class="flex flex-col gap-1 px-1">
           <PopoverItem class="!pl-7.5">
             View Profile
           </PopoverItem>
@@ -72,7 +76,7 @@ const isAdmin = computed (() => user?.value?.app_metadata?.user_role === 'admin'
           </PopoverItem>
         </div>
         <Separator :size="1" />
-        <div class="px-1  flex flex-col gap-1 ">
+        <div class="flex flex-col gap-1 px-1">
           <!--    <FollowButton /> -->
 
           <PopoverItem>

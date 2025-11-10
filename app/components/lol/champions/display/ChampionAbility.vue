@@ -84,7 +84,9 @@ provide('ability-variants', {
             class="text-balanced px-3 leading-5">
             {{ ability.notes }}
             <CollapsibleTrigger
-              class="ability-header flex w-full flex-nowrap justify-between px-3">
+              class="
+                ability-header flex w-full flex-nowrap justify-between px-3
+              ">
               <icon name="add" />
             </CollapsibleTrigger>
           </CollapsibleContent>

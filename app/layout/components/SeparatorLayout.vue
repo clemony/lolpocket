@@ -13,9 +13,13 @@ const route = useRoute()
 </script>
 
 <template>
-  <main class="w-full z-auto">
-    <div :class="cn('space-y-6 px-22 pb-16 w-full z-auto ', className)">
-      <div class="w-[calc(100%+10px)] -ml-[5px] h-max space-y-0.5 sticky top-0 bg-b1 z-3 pt-12">
+  <main class="z-auto w-full">
+    <div :class="cn('z-auto w-full space-y-6 px-22 pb-16', className)">
+      <div
+        class="
+          sticky top-0 z-3 -ml-[5px] h-max w-[calc(100%+10px)] space-y-0.5 bg-b1
+          pt-12
+        ">
         <slot name="header">
           <h1 class="text-9 font-bold dst">
             {{ title || route.meta?.title || route.name }}
@@ -23,12 +27,12 @@ const route = useRoute()
         </slot>
         <div class="flex justify-between">
           <slot name="description">
-            <p class="text-bc/60 leading-8">
+            <p class="leading-8 text-bc/60">
               {{ description || route.meta?.description }}
             </p>
           </slot>
-          <div class="relative size-px grid self-end">
-            <div class="absolute w-max h-max justify-self-end self-end bottom-2">
+          <div class="relative grid size-px self-end">
+            <div class="absolute bottom-2 h-max w-max self-end justify-self-end">
               <slot name="right" />
             </div>
           </div>

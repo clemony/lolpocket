@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { Parser } from 'expr-eval'
 
 export function preProcess(input: string): string {

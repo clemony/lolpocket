@@ -22,21 +22,21 @@ watch(
 
 <template>
   <div
-    class="flex-col overflow-visible py-24 flex w-full">
+    class="flex w-full flex-col overflow-visible py-24">
     <div
       v-if="loading"
       class="flex flex-col gap-8">
       <Skeleton
         v-for="i in itemsPerPage"
         :key="i"
-        class="h-40 field-box w-full max-w-220" />
+        class="field-box h-40 w-full max-w-220" />
     </div>
 
     <TransitionScalePop
       v-else-if="pagedMatches.length > 0"
       :appear="false"
       group
-      class="flex  flex-col gap-8 pb-px">
+      class="flex flex-col gap-8 pb-px">
       <LazyMatchCard
         v-for="match in pagedMatches"
         :key="match.matchId"
@@ -46,7 +46,7 @@ watch(
 
     <div
       v-else
-      class="grid place-items-center w-220 h-64 font-medium">
+      class="grid h-64 w-220 place-items-center font-medium">
       No matches found with these filters.
     </div>
 
@@ -57,12 +57,15 @@ watch(
       :sibling-count="1"
       :show-edges="false"
       :items-per-page="itemsPerPage"
-      class="pt-8 max-w-220 justify-center justify-self-start mx-0">
+      class="mx-0 max-w-220 justify-center justify-self-start pt-8">
       <PaginationContent v-slot="{ items }">
         <PaginationFirst class="disabled:hidden" />
         <PaginationPrev
           size="sm"
-          class="disabled:hidden btn-square" />
+          class="
+            btn-square
+            disabled:hidden
+          " />
         <template v-for="(page, index) in items">
           <PaginationItem
             v-if="page.type === 'page'"
@@ -78,7 +81,10 @@ watch(
         </template>
         <PaginationNext
           size="sm"
-          class="disabled:hidden btn-square" />
+          class="
+            btn-square
+            disabled:hidden
+          " />
         <PaginationLast class="disabled:hidden" />
       </PaginationContent>
     </Pagination>

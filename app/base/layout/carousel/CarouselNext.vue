@@ -12,7 +12,12 @@ const { canScrollNext, orientation, scrollNext } = useCarousel()
     :disabled="!canScrollNext"
     :class="
       cn(
-        'touch-manipulation absolute group/carobtn z-10 *:pointer-events-none   disabled:!bg-transparent size-10 rounded-full p-0',
+        `
+          group/carobtn absolute z-10 size-10 touch-manipulation rounded-full
+          p-0
+          *:pointer-events-none
+          disabled:!bg-transparent
+        `,
         orientation === 'horizontal'
           ? '-right-12 top-1/2 -translate-y-1/2'
           : '-bottom-12 left-1/2 -translate-x-1/2 rotate-90',
@@ -24,7 +29,10 @@ const { canScrollNext, orientation, scrollNext } = useCarousel()
     <slot>
       <icon
         name="right"
-        class="opacity-60 group-hover/carobtn:opacity-100 text-current" />
+        class="
+          text-current opacity-60
+          group-hover/carobtn:opacity-100
+        " />
 
       <span class="sr-only">Next Slide</span>
     </slot>

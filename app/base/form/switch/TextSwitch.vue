@@ -25,36 +25,58 @@ const modelValue = ref<boolean>(false)
 <template>
   <SwitchRoot
     v-bind="forwarded"
-    :class="cn('w-25 h-6 overflow-hidden border data-[state=unchecked]:bg-b3/30 data-[state=unchecked]:border-b3 data-[state=checked]:border-neutral/60 relative [&_#switch-thumb]:h-[90%] [&_#switch-thumb]:z-2  [&_#switch-thumb]:w-auto [&_#switch-thumb]:aspect-square [&_#switch-thumb]:translate-x-0.25 hover:ring shadow-xs drop-shadow-xs ring-bc/50 hover:ring-offset-3 ring-offset-b2 [&_#switch-thumb]:shrink-0 on:[&_#switch-thumb]:translate-x-13 has-disabled:!bg-transparent  w-12 h-6 overflow-hidden border relative shadow-xs drop-shadow-xs peer inline-flex  shrink-0 cursor-pointer items-center rounded-full transition-colors ',
+    :class="cn(`
+      peer relative inline-flex h-6 w-12 w-25 shrink-0 cursor-pointer
+      items-center overflow-hidden rounded-full border shadow-xs ring-bc/50
+      ring-offset-b2 drop-shadow-xs transition-colors
+      hover:ring hover:ring-offset-3
+      has-disabled:!bg-transparent
+      data-[state=checked]:border-neutral/60
+      data-[state=unchecked]:border-b3 data-[state=unchecked]:bg-b3/30
+      [&_#switch-thumb]:z-2 [&_#switch-thumb]:aspect-square
+      [&_#switch-thumb]:h-[90%] [&_#switch-thumb]:w-auto
+      [&_#switch-thumb]:shrink-0 [&_#switch-thumb]:translate-x-0.25
+      on:[&_#switch-thumb]:translate-x-13
+    `,
 
                //disabled
                'disabled:cursor-not-allowed disabled:opacity-50',
 
                //hover
-               'hover:ring-offset-1 ring-offset-b2 hover:ring ring-bc/50 ',
+               `
+                 ring-bc/50 ring-offset-b2
+                 hover:ring hover:ring-offset-1
+               `,
 
                // focus
-               'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-b2 focus-visible:ring-offset-2 focus-visible:ring-offset-b1',
+               `
+                 focus-visible:ring-2 focus-visible:ring-b2
+                 focus-visible:ring-offset-2 focus-visible:ring-offset-b1
+                 focus-visible:outline-none
+               `,
 
                // checked
-               'on:border-neutral/60  on:bg-neutral',
+               'on:border-neutral/60 on:bg-neutral',
 
                //unchecked
-               'off:bg-b3/30 off:border-b3',
+               'off:border-b3 off:bg-b3/30',
 
                props.class,
     )">
     <!-- off icon -->
     <div
       v-if="!forwarded.modelValue"
-      class="inline absolute right-0 !text-2 pr-1.5 z-0 slide-in-from-right animate-in text-bc/50">
+      class="
+        slide-in-from-right animate-in absolute right-0 z-0 inline pr-1.5
+        !text-2 text-bc/50
+      ">
       {{ items[0].text }}
     </div>
 
     <!-- on icon -->
     <span
       v-else-if="forwarded.modelValue"
-      class="inline absolute text-nc animate-in slide-in-from-left pl-2">
+      class="animate-in slide-in-from-left absolute inline pl-2 text-nc">
       {{ items[1].text }}
     </span>
 
@@ -63,7 +85,12 @@ const modelValue = ref<boolean>(false)
       id="switch-thumb"
       :class="
         cn(
-          'shrink-0 on:translate-x-6.75 size-4.5 z-2  translate-x-0.25 pointer-events-none grid place-items-center block rounded-full bg-b1 shadow-lg ring-0 transition-transform',
+          `
+            pointer-events-none z-2 block grid size-4.5 shrink-0
+            translate-x-0.25 place-items-center rounded-full bg-b1 shadow-lg
+            ring-0 transition-transform
+            on:translate-x-6.75
+          `,
         )
       ">
       <slot name="thumb" />

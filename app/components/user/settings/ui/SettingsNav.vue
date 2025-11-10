@@ -4,7 +4,10 @@ const route = useRoute()
 
 <template>
   <nav
-    class="flex gap-y-1 space-x-2 lg:flex-col lg:space-x-0 size-full  pl-0.5 pr-4 overflow-hidden">
+    class="
+      flex size-full space-x-2 gap-y-1 overflow-hidden pr-4 pl-0.5
+      lg:flex-col lg:space-x-0
+    ">
     <Button
       v-for="item in route.matched[0].children"
       :key="item.name"
@@ -13,7 +16,10 @@ const route = useRoute()
       variant="link"
       :class="
         cn(
-          'w-full font-medium text-bc/80 !text-4 h-12  text-left capitalize justify-start underline-offset-4',
+          `
+            h-12 w-full justify-start text-left !text-4 font-medium text-bc/80
+            capitalize underline-offset-4
+          `,
           {
             'btn-active pointer-events-none font-semibold': route.path === item.path,
             'text-bc/40 hover:text-bc': route.fullPath !== item.path,

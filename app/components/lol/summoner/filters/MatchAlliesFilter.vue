@@ -16,7 +16,7 @@ const winrateFormula = ref('absolute')
 </script>
 
 <template>
-  <div :class="cn('p-0 w-120 field-box max-w-120 ', className)">
+  <div :class="cn('field-box w-120 max-w-120 p-0', className)">
     <ListboxRoot
       v-model:model-value="allyModel"
       :highlight-on-hover="false"
@@ -28,15 +28,26 @@ const winrateFormula = ref('absolute')
           <ListboxItem
             v-for="ally in allies"
             :key="ally.riotIdGameName"
-            class="w-full focus:outline-0"
+            class="
+              w-full
+              focus:outline-0
+            "
             :value="ally.riotIdGameName"
             as-child>
             <Button
               size="12"
               variant="ghost"
-              class="dst grid w-full grid-cols-[4fr_repeat(2,1fr)] gap-3 px-5  !duration-0  **:font-medium hover:shadow-xs ">
+              class="
+                grid w-full grid-cols-[4fr_repeat(2,1fr)] gap-3 px-5 dst
+                !duration-0
+                **:font-medium
+                hover:shadow-xs
+              ">
               <div
-                class="text-2 flex grow items-center gap-3 justify-self-start text-start">
+                class="
+                  flex grow items-center gap-3 justify-self-start text-start
+                  text-2
+                ">
                 <SummonerIcon
                   class="size-8 rounded-full shadow-sm drop-shadow-sm"
                   :icon-id="ally.profileIcon"
@@ -47,14 +58,17 @@ const winrateFormula = ref('absolute')
                   v-if="ally === topAllies[0]"
                   v-tippy="'Great Teamwork'"
                   name="ion:star"
-                  class="dst **:!text-bc/80 size-3.5" />
+                  class="
+                    size-3.5 dst
+                    **:!text-bc/80
+                  " />
               </div>
 
-              <div class="text-2 text-end">
+              <div class="text-end text-2">
                 {{ ally.games }}
               </div>
 
-              <div class="text-2 text-end">
+              <div class="text-end text-2">
                 {{
                   winrateFormula === "absolute"
                     ? ally.winrate
@@ -70,7 +84,10 @@ const winrateFormula = ref('absolute')
           <div
             v-for="i in 10"
             :key="i"
-            class="btn btn-ghost pointer-events-none grid w-full grid-cols-[20px_1fr] items-center justify-items-end gap-3 py-3 opacity-60">
+            class="
+              btn pointer-events-none grid w-full grid-cols-[20px_1fr]
+              items-center justify-items-end gap-3 py-3 opacity-60 btn-ghost
+            ">
             <Skeleton class="size-7 rounded-full" />
 
             <Skeleton class="h-5 w-full" />

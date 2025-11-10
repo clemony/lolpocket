@@ -31,7 +31,7 @@ const tag = computed(() => {
     v-if="tag"
     :as="el"
     :class="cn('inline leading-none antialiased', className)">
-    <span class="max-size-3.25  relative inline size-3.25 overflow-hidden">
+    <span class="max-size-3.25 relative inline size-3.25 overflow-hidden">
       <icon
         v-if="!noTag"
         name="lucide:hash"

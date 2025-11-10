@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { DialogDescription, DialogTitle } from 'reka-ui'
 import type { Pocket } from '~~/shared/schema'
+import { DialogDescription, DialogTitle } from 'reka-ui'
 
 const { class: className, pocket } = defineProps<{
   pocket: Pocket
@@ -21,11 +21,16 @@ function handleDelete() {
 
     <MotionDialogContent class="flex flex-col justify-between pb-8">
       <DialogClose
-        class="hover:ring-b3 focus:ring-b3 absolute top-5 right-6 grid size-8 cursor-pointer place-items-center rounded-lg opacity-60 hover:opacity-100 hover:ring focus:ring">
+        class="
+          absolute top-5 right-6 grid size-8 cursor-pointer place-items-center
+          rounded-lg opacity-60
+          hover:opacity-100 hover:ring hover:ring-b3
+          focus:ring focus:ring-b3
+        ">
         <icon name="x-sm" />
       </DialogClose>
 
-      <DialogTitle class="text-6 mt-3">
+      <DialogTitle class="mt-3 text-6">
         Delete Pocket and head back to Backpack?
       </DialogTitle>
 
@@ -37,16 +42,20 @@ function handleDelete() {
 
       <div class="mt-6 flex w-full grow items-center justify-between">
         <Label
-          class="text-bc/60 hover:text-bc text-2 flex cursor-pointer items-center gap-3 underline-offset-2 hover:underline">
+          class="
+            flex cursor-pointer items-center gap-3 text-2 text-bc/60
+            underline-offset-2
+            hover:text-bc hover:underline
+          ">
           <input
             v-model="as().settings.instant_trash"
             type="checkbox"
-            class="peer checkbox checkbox-neutral checkbox-sm" />
+            class="peer checkbox checkbox-sm checkbox-neutral" />
           Don't show this again.
         </Label>
 
         <DialogClose
-          class="btn btn-neutral btn-lg !justify-start pr-9 pl-7"
+          class="btn !justify-start pr-9 pl-7 btn-lg btn-neutral"
           @click="handleDelete()">
           <icon name="trash" />
           Send to Trash

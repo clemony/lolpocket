@@ -8,12 +8,15 @@ const props = defineProps<{
   <TransitionFade
     :class="
       cn(
-        'size-full absolute top-0 left-0 z-3 transition-all duration-500  pointer-events-none   object-cover',
+        `
+          pointer-events-none absolute top-0 left-0 z-3 size-full object-cover
+          transition-all duration-500
+        `,
         props.class,
       )
     ">
     <video-background
       src="/video/prismatic-shine.webm"
-      class="size-full scale-110 object-cover aspect-square pointer-events-none"></video-background>
+      class="pointer-events-none aspect-square size-full scale-110 object-cover"></video-background>
   </TransitionFade>
 </template>

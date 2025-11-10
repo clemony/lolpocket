@@ -6,28 +6,28 @@ const { class: className, summoner } = defineProps<{
 </script>
 
 <template>
-  <div class="w-full flex flex-col px-2 py-2">
-    <div class="w-full !bg-b1 border flex items-center gap-4">
+  <div class="flex w-full flex-col px-2 py-2">
+    <div class="flex w-full items-center gap-4 border !bg-b1">
       <slot name="icon">
-        <SummonerIcon class="rounded-lg ml-2 size-19" />
+        <SummonerIcon class="ml-2 size-19 rounded-lg" />
       </slot>
-      <div class="size-full flex relative -mt-3 flex-col gap-0.5">
+      <div class="relative -mt-3 flex size-full flex-col gap-0.5">
         <div
-          class="flex justify-between text-nowrap flex-nowrap items-center pr-3">
+          class="flex flex-nowrap items-center justify-between pr-3 text-nowrap">
           <SummonerName
             as="h1"
-            class="font-serif font-black center leading-snug truncate" />
+            class="center truncate font-serif leading-snug font-black" />
 
           <SummonerLevel class="mt-1" />
         </div>
 
-        <div class="flex items-center justify-between w-full pr-0 relative">
-          <div class="flex gap-3 justify-self-center items-center">
+        <div class="relative flex w-full items-center justify-between pr-0">
+          <div class="flex items-center gap-3 justify-self-center">
             <SummonerTag />
 
             <SummonerRegion />
           </div>
-          <span class="h-4 w-6 grid place-items-center relative">
+          <span class="relative grid h-4 w-6 place-items-center">
             <slot name="button" />
           </span>
         </div>

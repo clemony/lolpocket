@@ -23,18 +23,21 @@ const { name = 'options', class: className, values } = defineProps<{
       size="auto"
       hover="outline"
       variant="ghost"
-      class="hover:fx-1 w-full hover:!border-b3/50 hover:bg-b2/40 border border-transparent py-2">
+      class="
+        w-full border border-transparent py-2
+        hover:!border-b3/50 hover:bg-b2/40 hover:fx-1
+      ">
       <FormItem as-child>
         <FormLabel
           class="w-full cursor-pointer">
           <FormControl class="mt-0.5 self-start">
             <Checkbox
-              :class="cn('transition-colors duration-200 ', { '!ring-domination bg-domination/10 border-domination': checkboxErrors.length })"
+              :class="cn('transition-colors duration-200', { '!ring-domination bg-domination/10 border-domination': checkboxErrors.length })"
               @update:model-value="handleChange" />
           </FormControl>
           <FormDescription
-            class="grid h-max w-full auto-rows-max gap-1 ">
-            <h5 class="text-bc flex w-full items-center gap-4 font-semibold">
+            class="grid h-max w-full auto-rows-max gap-1">
+            <h5 class="flex w-full items-center gap-4 font-semibold text-bc">
               {{ option.name }}
             </h5>
 
@@ -49,7 +52,7 @@ const { name = 'options', class: className, values } = defineProps<{
                 <li
                   v-for="str, ix in option.description"
                   :key="ix"
-                  class="!text-2 text-balanced pl-3 leading-6 w-full">
+                  class="text-balanced w-full pl-3 !text-2 leading-6">
                   &bull;&ensp;{{ str }}
                 </li>
               </template>

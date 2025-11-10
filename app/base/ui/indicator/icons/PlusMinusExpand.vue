@@ -5,16 +5,22 @@ const { open } = defineProps<{
 </script>
 
 <template>
-  <div class="place-items-center font-medium  text-bc/60 px-3.5 relative  grid">
+  <div class="relative grid place-items-center px-3.5 font-medium text-bc/60">
     <icon
       name="add"
-      class="size-5 group-data-[state=open]:opacity-0 group-data-[state=open]:scale-y-0 transition-all scale-x-0 opacity-0 absolute m-auto duration-400 "
+      class="
+        absolute m-auto size-5 scale-x-0 opacity-0 transition-all duration-400
+        group-data-[state=open]:scale-y-0 group-data-[state=open]:opacity-0
+      "
       :class="{ 'scale-x-100 opacity-60': !open }" />
 
     <icon
       name="add"
-      :class="{ 'opacity-90  scale-y-100': open }"
-      class="size-5 group-data-[state=open]:opacity-100 transition-all opacity-0 absolute m-auto duration-400" />
+      :class="{ 'scale-y-100 opacity-90': open }"
+      class="
+        absolute m-auto size-5 opacity-0 transition-all duration-400
+        group-data-[state=open]:opacity-100
+      " />
   </div>
 </template>
 

@@ -19,17 +19,20 @@ console.log('💠 - itemColor - itemColor:', itemColor)
 <template>
   <Field
     v-if="bayesianItems[itemNum]"
-    class="bg-b1 pb-6 px-0 pt-0 w-full flex border-shadow items-center gap-5 inset-shadow-xxs"
+    class="
+      border-shadow flex w-full items-center gap-5 bg-b1 px-0 pt-0 pb-6
+      inset-shadow-xxs
+    "
     :title="title">
-    <div class="w-full pt-8 items-center px-5 gap-5 dst flex relative">
-      <div class="rounded-full size-16 shadow-sm drop-shadow-sm">
+    <div class="relative flex w-full items-center gap-5 px-5 pt-8 dst">
+      <div class="size-16 rounded-full shadow-sm drop-shadow-sm">
         <ItemPopover
           :id="bayesianItems[itemNum]"
-          class="size-16 rounded-full overflow-hidden" />
+          class="size-16 overflow-hidden rounded-full" />
       </div>
 
-      <div class="text-bc grow">
-        <p class="tracking-tight text-5font-semibold pb-1">
+      <div class="grow text-bc">
+        <p class="text-5font-semibold pb-1 tracking-tight">
           {{ bayesianItems[itemNum].item?.name }}
         </p>
 
@@ -43,13 +46,19 @@ console.log('💠 - itemColor - itemColor:', itemColor)
       </div>
 
       <div
-        class="flex rounded-xl font-semibold badge-xl self-start justify-self-end drop-shadow-xs shadow-xs border border-black/10 inset-shadow-sm"
+        class="
+          flex self-start justify-self-end rounded-xl border border-black/10
+          badge-xl font-semibold shadow-xs inset-shadow-sm drop-shadow-xs
+        "
         :style="{
           'backgroundColor': `color-mix(in oklab, var(--color-${itemColor}) 70%, transparent)`,
           'box-shadow': `0px 1px 0px color-mix(in oklab, var(--color-${itemColor}-b100) 40%, transparent),1px 1px 1px var(--color-${itemColor}-w600) inset`,
         }">
         <span
-          class="text-4 dst font-mono text-[#FFF] text-shadow-black/5 text-shadow-xs tracking-wide">
+          class="
+            font-mono text-4 text-[#FFF] tracking-wide dst text-shadow-black/5
+            text-shadow-xs
+          ">
           {{ getGrade(bayesianItems[itemNum].bayesianWinrate) }}
         </span>
       </div>
@@ -57,8 +66,8 @@ console.log('💠 - itemColor - itemColor:', itemColor)
 
     <Separator />
 
-    <div class="dst text-2 flex justify-between px-6">
-      <div class="items-end grid text-2 font-medium text-bc/60">
+    <div class="flex justify-between px-6 text-2 dst">
+      <div class="grid items-end text-2 font-medium text-bc/60">
         <Grow />
 
         <p>
@@ -71,9 +80,9 @@ console.log('💠 - itemColor - itemColor:', itemColor)
       </div>
 
       <p class="flex flex-col gap-1">
-        <span class="mb-px opacity-60 font-medium">Absolute</span>
+        <span class="mb-px font-medium opacity-60">Absolute</span>
 
-        <span class="text-7 font-bold dst flex text-bc">
+        <span class="flex text-7 font-bold text-bc dst">
           {{ bayesianItems[itemNum].winrate.toFixed(2) }}
           <icon
             name="ph:percent-bold"
@@ -82,9 +91,9 @@ console.log('💠 - itemColor - itemColor:', itemColor)
       </p>
 
       <p class="flex flex-col gap-1">
-        <span class="mb-px opacity-60 font-medium">Weighted</span>
+        <span class="mb-px font-medium opacity-60">Weighted</span>
 
-        <span class="text-7 dst font-bold text-bc flex">
+        <span class="flex text-7 font-bold text-bc dst">
           {{ bayesianItems[itemNum].bayesianWinrate.toFixed(2) }}
           <icon
             name="ph:percent-bold"

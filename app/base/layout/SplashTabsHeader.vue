@@ -23,21 +23,21 @@ const headerVariants = {
 </script>
 
 <template>
-  <div class="relative flex items-center w-120 h-22 items-center gap-6">
+  <div class="relative flex h-22 w-120 items-center gap-6">
     <motion.div
       as-child
       :variants="iconVariants">
       <slot name="icon" />
     </motion.div>
 
-    <div class="flex flex-col grow justify-center gap-1.5">
+    <div class="flex grow flex-col justify-center gap-1.5">
       <motion.div
         class="flex items-center gap-4"
         :variants="headerVariants">
         <slot name="header" />
       </motion.div>
 
-      <motion.div class="flex items-center lowercase gap-4 pl-0.5 font-normal">
+      <motion.div class="flex items-center gap-4 pl-0.5 font-normal lowercase">
         <slot name="text" />
       </motion.div>
     </div>

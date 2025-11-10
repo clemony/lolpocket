@@ -27,8 +27,12 @@ const position = computed(() => championPositions.find(p => p.name === String(it
 <template>
   <div
     v-if="item"
-    class="flex max-h-[304px] w-full max-w-[258px] flex-col justify-self-center overflow-hidden pt-4 pb-3 **:select-text">
-    <div class="flex h-fit w-full gap-4 px-4 ">
+    class="
+      flex max-h-[304px] w-full max-w-[258px] flex-col justify-self-center
+      overflow-hidden pt-4 pb-3
+      **:select-text
+    ">
+    <div class="flex h-fit w-full gap-4 px-4">
       <!-- IMG -->
 
       <ChampionIcon
@@ -37,10 +41,10 @@ const position = computed(() => championPositions.find(p => p.name === String(it
         :alt="`${item.name} Image`"
         class="size-13" />
 
-      <div class="text-4 flex  w-full flex-col">
+      <div class="flex w-full flex-col text-4">
         <div
           :style="{ '--position-color': position.color }"
-          class=" flex w-full items-center justify-between  gap-1">
+          class="flex w-full items-center justify-between gap-1">
           <!-- NAME / LINK -->
           <h5 class="leading-4 font-semibold">
             {{ item.name }}
@@ -72,13 +76,13 @@ const position = computed(() => championPositions.find(p => p.name === String(it
           </div> -->
         </div>
 
-        <span class="text-2 text-nc/60  grow font-normal italic ">
+        <span class="grow text-2 font-normal text-nc/60 italic">
           {{ ix().getChampionTitle(item?.key) }}
         </span>
       </div>
     </div>
 
-    <div class="relative    grid w-full auto-rows-auto overflow-y-auto px-4 pb-2">
+    <div class="relative grid w-full auto-rows-auto overflow-y-auto px-4 pb-2">
       <!-- component OF -->
 
       <Separator

@@ -27,11 +27,14 @@ const statValue = computed <StatIndex>(() => {
     :style="{
       backgroundColor: active ? statValue?.color : '',
     }"
-    :class="cn('w-fit font-medium px-3 text-bc/90 capitalize shadow-xs dxs', { '  order-first text-white': active, 'pr-2': active && clear }, className)">
+    :class="cn('w-fit px-3 font-medium text-bc/90 capitalize shadow-xs dxs', { '  order-first text-white': active, 'pr-2': active && clear }, className)">
     {{ statValue.name }}
     <icon
       v-if="clear"
       name="x"
-      class="size-4 text-white **:stroke-[2.6] " />
+      class="
+        size-4 text-white
+        **:stroke-[2.6]
+      " />
   </Button>
 </template>

@@ -16,9 +16,12 @@ function reset() {
       <TransitionSlide
         :offset="['100%', 0]"
         group
-        class="mask-left-sm mt-3 flex max-w-160 grow flex-nowrap gap-3 overflow-x-auto px-10 pt-2 pb-4">
+        class="
+          mask-left-sm mt-3 flex max-w-160 grow flex-nowrap gap-3
+          overflow-x-auto px-10 pt-2 pb-4
+        ">
         <button
-          class="btn btn-square btn-sm !text-5rounded-md font-normal"
+          class="!text-5rounded-md btn btn-square font-normal btn-sm"
           :class="{ hidden: !filters.role }">
           <icon
             name="x-sm"
@@ -29,7 +32,17 @@ function reset() {
         <label
           v-for="(role, i) in championRoles"
           :key="`${role.name}${i}`"
-          class="btn has-checked:!bgneutral has-checked:!text-nc has-checked:!borderneutral !rounded-lg-2 !bg-b2/20 border-b2 hover:!border-b3 hover:!bg-b3/40 has-checked:!shadowneutral/20 btn-sm !text-3 mr-0 rounded-md font-medium tracking-normal capitalize shadow-sm shadow-black/7 transition-all duration-300 checked:!shadow-sm hover:scale-110 hover:drop-shadow-sm"
+          class="
+            has-checked:!bgneutral has-checked:!borderneutral
+            has-checked:!shadowneutral/20
+            btn mr-0 !rounded-lg-2 rounded-md border-b2 !bg-b2/20 !text-3
+            font-medium tracking-normal capitalize shadow-sm shadow-black/7
+            transition-all duration-300 btn-sm
+            checked:!shadow-sm
+            hover:scale-110 hover:!border-b3 hover:!bg-b3/40
+            hover:drop-shadow-sm
+            has-checked:!text-nc
+          "
           :class="{ hidden: filters.role && role.name !== filters.role }">
           <input
             v-model="filters.role"
@@ -46,7 +59,7 @@ function reset() {
 
     <div
       v-if="!filters.role"
-      class="bg-b1 absolute top-2 -left-4 grid h-13 w-6 place-items-center">
+      class="absolute top-2 -left-4 grid h-13 w-6 place-items-center bg-b1">
       <icon
         name="left"
         class="z-1 size-6 shrink-0" />
@@ -54,7 +67,7 @@ function reset() {
 
     <div
       v-if="!filters.role"
-      class="bg-b1 absolute top-2 -right-4 grid h-13 w-6 place-items-center">
+      class="absolute top-2 -right-4 grid h-13 w-6 place-items-center bg-b1">
       <icon
         name="right"
         class="size-6" />

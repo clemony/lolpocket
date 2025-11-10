@@ -23,21 +23,24 @@ function handleBlock() {
         on="base"
         :class="
           cn(
-            'relative w-full text-nowrap text-start pr-8 pl-2 justify-start rounded-full', { 'btn-active': open },
+            `
+              relative w-full justify-start rounded-full pr-8 pl-2 text-start
+              text-nowrap
+            `, { 'btn-active': open },
             className,
           )
         ">
         <LazySummonerIcon
           v-if="summoner"
           :summoner
-          class="size-6 min-w-6 min-h-6 rounded-full" />
+          class="size-6 min-h-6 min-w-6 rounded-full" />
 
         <SummonerName
           :summoner
-          class="font-medium w-full truncate" />
+          class="w-full truncate font-medium" />
         <icon
           name="select"
-          class="size-3.5 absolute right-3" />
+          class="absolute right-3 size-3.5" />
       </Button>
     </PopoverTrigger>
     <LazyPopoverContent
@@ -45,53 +48,72 @@ function handleBlock() {
       align="start"
       :side-offset="4"
       @open-auto-focus.stop.prevent>
-      <div class="grid grid-cols-2 gap-y-1 *:odd:opacity-50 *:even:justify-self-end items-center auto-rows-fr pl-3 pr-4 py-2">
-        <span class="flex gap-1.5 items-center font-medium opacity-60">
+      <div
+        class="
+          grid auto-rows-fr grid-cols-2 items-center gap-y-1 py-2 pr-4 pl-3
+          *:odd:opacity-50 *:even:justify-self-end
+        ">
+        <span class="flex items-center gap-1.5 font-medium opacity-60">
           <icon
             name="lucide:user"
-            class="**:stroke-[2.1] size-3.5" />name:
+            class="
+              size-3.5
+              **:stroke-[2.1]
+            " />name:
         </span>
         <SummonerName
           :summoner
           class="" />
 
-        <span class="flex gap-1.5 items-center font-medium opacity-60">
+        <span class="flex items-center gap-1.5 font-medium opacity-60">
           <icon
             name="hash"
-            class="**:stroke-[2.1] size-3.5" />tag:
+            class="
+              size-3.5
+              **:stroke-[2.1]
+            " />tag:
         </span>
         <SummonerTag
           :summoner
           no-tag
           class="" />
-        <span class="flex gap-1.5 items-center font-medium opacity-60">
+        <span class="flex items-center gap-1.5 font-medium opacity-60">
           <icon
             name="at"
-            class="**:stroke-[2.1] size-3.5" />region:
+            class="
+              size-3.5
+              **:stroke-[2.1]
+            " />region:
         </span>
         <SummonerRegion
-          class=" opacity-80 "
+          class="opacity-80"
           :summoner
           no-icon />
 
-        <span class="flex gap-1.5 items-center font-medium opacity-60">
-          <span class="size-3.5 overflow-hidden relative grid place-items-center">
+        <span class="flex items-center gap-1.5 font-medium opacity-60">
+          <span
+            class="relative grid size-3.5 place-items-center overflow-hidden">
 
             <icon
               name="gg:loadbar-sound"
-              class="size-5.5  absolute" /></span>
+              class="absolute size-5.5" /></span>
           level:
 
         </span>
         <SummonerLevel
           no-tag
-          class="opacity-80 -mt-px"
+          class="-mt-px opacity-80"
           :summoner />
       </div>
       <Separator />
 
       <div
-        class="grid grid-cols-3 px-3 py-2  gap-1.5 *:place-items-center *:grid *:[&_svg]:stroke-2 *:[&_svg]:size-5  *:size-full h-14 p-1  [&_svg]:group-hover:opacity-100">
+        class="
+          grid h-14 grid-cols-3 gap-1.5 p-1 px-3 py-2
+          *:grid *:size-full *:place-items-center *:[&_svg]:size-5
+          *:[&_svg]:stroke-2
+          [&_svg]:group-hover:opacity-100
+        ">
         <Button
           v-tippy="{ content: 'Block', theme: 'base', placement: 'bottom' }"
           tabindex="-1"

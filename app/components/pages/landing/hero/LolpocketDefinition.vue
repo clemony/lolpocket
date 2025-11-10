@@ -37,10 +37,18 @@ const h1Visibility = {
 </script>
 
 <template>
-  <div class="[&_svg]:text-bc relative grid size-full translate-y-20 gap-8">
+  <div
+    class="
+      relative grid size-full translate-y-20 gap-8
+      [&_svg]:text-bc
+    ">
     <div class="relative grid h-20 w-100 items-end">
       <motion.div
-        class="ws-nowrap **:text-12 relative flex h-full w-full origin-bottom-left items-center font-bold drop-shadow-sm">
+        class="
+          ws-nowrap relative flex h-full w-full origin-bottom-left items-center
+          font-bold drop-shadow-sm
+          **:text-12
+        ">
         <h1>l</h1>
 
         <motion.h1
@@ -75,7 +83,7 @@ const h1Visibility = {
       :initial="{ opacity: 0, transform: 'translateY(10%)' }"
       :animate="{ opacity: 1, transform: 'translateY(0)' }"
       :transition="{ duration: 0.5, delay: 2, ease: 'easeInOut' }"
-      class="text-bc grid w-140 shrink-0 space-y-3 justify-self-start">
+      class="grid w-140 shrink-0 space-y-3 justify-self-start text-bc">
       <div class="flex items-center gap-2 drop-shadow-sm">
         <h1
           class="!text-9">

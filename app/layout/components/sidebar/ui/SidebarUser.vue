@@ -14,54 +14,57 @@ console.log('🌱 - settings:', settings)
 
 const open = shallowRef(false)
 const target = shallowRef<HTMLButtonElement>(null)
-
-
 </script>
 
 <template>
+  <div
+    class="z-70 h-fit w-86">
+    <PopoverItem
+      class="h-10">
+      <icon name="mail" />
+      Inbox
 
+      <span
+        v-if="as().inbox?.messages?.length"
+        class="absolute right-4 font-mono text-2 opacity-60">
+        {{ as().inbox.messages.filter(m => !m.read).length }}
+      </span>
+    </PopoverItem>
 
+    <DropdownMenuSeparator class="my-1" />
 
+    <PopoverItem
+      v-if="as().loggedIn"
+      class="h-10"
+      @click="closeAndNavigate('/settings/account')">
+      <icon name="at" />
+      Account
+    </PopoverItem>
 
-    <div
-      class="z-70 w-86 h-fit">
+    <tippy
+      placement="right"
+      theme="base-0">
       <PopoverItem
-        class="h-10 ">
-        <icon name="mail" />
-        Inbox
+        class="
+          group/t h-10 w-full
+          open:btn-active open:border-b3/60 open:bg-b2/80 open:fx-1
+        "
+        @click="closeAndNavigate('/settings')">
+        <icon
+          name="gear"
+          class="!size-4.75" />
+        Settings
 
-        <span
-          v-if="as().inbox?.messages?.length"
-          class="text-2 absolute right-4 font-mono opacity-60">
-          {{ as().inbox.messages.filter(m => !m.read).length }}
-        </span>
+        <icon
+          name="right"
+          class="
+            absolute right-3 size-3.5 opacity-50
+            group-open:opacity-60
+            group-hover:opacity-60
+          " />
       </PopoverItem>
 
-      <DropdownMenuSeparator class="my-1" />
-
-      <PopoverItem
-        v-if="as().loggedIn"
-        class="h-10"
-        @click="closeAndNavigate('/settings/account')">
-        <icon name="at" />
-        Account
-      </PopoverItem>
-
-      <tippy placement="right" theme="base-0">
-          <PopoverItem
-            class="open:btn-active open:bg-b2/80 open:border-b3/60 open:noise-1 group/t h-10 w-full"
-            @click="closeAndNavigate('/settings')">
-            <icon
-              name="gear"
-              class="!size-4.75" />
-            Settings
-
-            <icon
-              name="right"
-              class="absolute right-3 size-3.5 opacity-50 group-open:opacity-60 group-hover:opacity-60" />
-          </PopoverItem>
-
-          <template #content>
+      <template #content>
         <div
           class="p-1 !py-1.5"
           side="right"
@@ -78,24 +81,24 @@ const target = shallowRef<HTMLButtonElement>(null)
             {{ child.meta?.title || child.name }}
           </PopoverItem>
         </div>
-        </template>
-      </tippy>
+      </template>
+    </tippy>
 
-      <DropdownMenuSeparator />
-      <PopoverItem
-        v-if="as().loggedIn"
-        class="h-9">
-        <icon
-          name="log-out"
-          @click="useSignOut()" />
-        Log out
-      </PopoverItem>
+    <DropdownMenuSeparator />
+    <PopoverItem
+      v-if="as().loggedIn"
+      class="h-9">
+      <icon
+        name="log-out"
+        @click="useSignOut()" />
+      Log out
+    </PopoverItem>
 
-      <PopoverItem
-        v-else
-        @click="navigateTo('/login')">
-        <icon name="log-in" />
-        Log in
-      </PopoverItem>
-    </div>
+    <PopoverItem
+      v-else
+      @click="navigateTo('/login')">
+      <icon name="log-in" />
+      Log in
+    </PopoverItem>
+  </div>
 </template>

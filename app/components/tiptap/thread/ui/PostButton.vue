@@ -25,7 +25,7 @@ const iconic = computed (() => {
     <Element size="icon-sm">
       <hicon
         :name="iconic"
-        :class="cn('size-full ', { 'size-5': save, 'size-4': cancellable || icon })" />
+        :class="cn('size-full', { 'size-5': save, 'size-4': cancellable || icon })" />
     </Element>
     <slot>
       {{

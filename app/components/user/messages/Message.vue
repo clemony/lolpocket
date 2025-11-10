@@ -13,39 +13,55 @@ const { message } = defineProps<{
 <template>
   <div>
     <LazyDialogContentPop
-      class="grid grid-rows-[28px_80px_1fr] p-0 h-160 w-220 gap-1 bg-b1/86 backdrop-blur-lg"
+      class="
+        grid h-160 w-220 grid-rows-[28px_80px_1fr] gap-1 bg-b1/86 p-0
+        backdrop-blur-lg
+      "
       :auto-focus="false"
       @open-auto-focus.stop.prevent
       @close-auto-focus.stop.prevent>
       <DialogHeader
-        class="gap-4 object-contain size-full tracking-normal flex-row flex items-center px-3 justify-between">
-        <DialogTitle class="!text-2 text-bc/50 items-center pl-2 font-semibold">
+        class="
+          flex size-full flex-row items-center justify-between gap-4
+          object-contain px-3 tracking-normal
+        ">
+        <DialogTitle class="items-center pl-2 !text-2 font-semibold text-bc/50">
           Message Received!
         </DialogTitle>
         <DialogDescription class=""></DialogDescription>
 
         <DialogClose
           as="button"
-          class="btn btn-ghost btn-sm btn-square">
+          class="btn btn-square btn-ghost btn-sm">
           <icon name="x-sm" />
         </DialogClose>
       </DialogHeader>
-      <form class="px-6 pt-1 pb-6 flex flex-col gap-4 w-full">
+      <form class="flex w-full flex-col gap-4 px-6 pt-1 pb-6">
         <label
-          class="**:text-3 items-center **:font-normal grid grid-cols-[60px_1fr] gap-2">
+          class="
+            grid grid-cols-[60px_1fr] items-center gap-2
+            **:text-3 **:font-normal
+          ">
           <span>Subject:</span>
-          <span class="input h-11 w-full bg-b1/40 backdrop-blur-lg btn">
+          <span class="btn input h-11 w-full bg-b1/40 backdrop-blur-lg">
             <input
               type="text"
               :value="message.title"
               readonly />
           </span>
         </label>
-        <label class="**:text-3 items-center grid grid-cols-[60px_1fr] gap-2">
+        <label
+          class="
+            grid grid-cols-[60px_1fr] items-center gap-2
+            **:text-3
+          ">
           <span>From:</span>
-          <span class="input h-11 w-full bg-b1/40 backdrop-blur-lg btn">
+          <span class="btn input h-11 w-full bg-b1/40 backdrop-blur-lg">
             <span
-              class="rounded-full size-7.5 shadow-sm drop-shadow-xs shrink-0 bg-neutral">
+              class="
+                size-7.5 shrink-0 rounded-full bg-neutral shadow-sm
+                drop-shadow-xs
+              ">
               <hicon
                 :name="message.from.icon"
                 class="text-nc"
@@ -62,7 +78,9 @@ const { message } = defineProps<{
         <textarea
           :value="message.content"
           readonly
-          class="textarea size-full text-3 text-start bg-b1/40 backdrop-blur-lg btn" />
+          class="
+            btn textarea size-full bg-b1/40 text-start text-3 backdrop-blur-lg
+          " />
       </article>
     </LazyDialogContentPop>
   </div>

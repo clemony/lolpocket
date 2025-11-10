@@ -39,18 +39,28 @@ function navigate() {
       @click="navigate()">
       <slot />
 
-      <span class="group-hover:underline grow ml-2">
+      <span
+        class="
+          ml-2 grow
+          group-hover:underline
+        ">
         {{ page.altName ?? page.name }}
       </span>
 
       <Badge
-        class="capitalize justify-self-end opacity-40 text-1 group-hover:opacity-80 mr-1">
+        class="
+          mr-1 justify-self-end text-1 capitalize opacity-40
+          group-hover:opacity-80
+        ">
         {{ page.meta?.section ?? "" }}
       </Badge>
 
       <icon
         name="link"
-        class="size-3.5 justify-self-end opacity-0 group-hover:opacity-100 tldr-20 -ml-1" />
+        class="
+          tldr-20 -ml-1 size-3.5 justify-self-end opacity-0
+          group-hover:opacity-100
+        " />
     </button>
   </li>
 </template>

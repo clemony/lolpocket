@@ -6,7 +6,7 @@ const { id, name } = defineProps<{
 </script>
 
 <template>
-  <div class="flex items-center gap-1 -mr-2">
+  <div class="-mr-2 flex items-center gap-1">
     <!--
   <label
     v-tippy="'Add Favorite'"
@@ -22,7 +22,11 @@ const { id, name } = defineProps<{
   </label> -->
     <a
       v-tippy="'Official Wiki'"
-      class="btn btn-sm btn-ghost btn-square size-7 hover:bgneutral hover:*:text-nc "
+      class="
+        hover:bgneutral
+        btn btn-square size-7 btn-ghost btn-sm
+        hover:*:text-nc
+      "
       :href="getWikiLink(name)"
       target="_blank"
       alt="link to league wiki">

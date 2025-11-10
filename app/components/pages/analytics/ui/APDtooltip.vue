@@ -5,8 +5,12 @@ const props = defineProps<{
 </script>
 
 <template>
-  <tippy :class="cn('flex gap-1 transition dr-20 cursor-info', props.class)">
-    <span class="hover:underline underline-offset-2"><slot /></span>
+  <tippy :class="cn('dr-20 cursor-info flex gap-1 transition', props.class)">
+    <span
+      class="
+        underline-offset-2
+        hover:underline
+      "><slot /></span>
 
     <icon
       name="ph:info"
@@ -18,7 +22,7 @@ const props = defineProps<{
       : Absolute Percentage Diff
       <br />
 
-      <Separator class="opacity-10 my-0.5" />
+      <Separator class="my-0.5 opacity-10" />
 
       A simple calculation of the number
       <br />

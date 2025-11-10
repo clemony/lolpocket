@@ -12,20 +12,26 @@ const roleModel = computed({
   <Tabs
     v-model:model-value="roleModel"
     default-value="ALL"
-    class="w-120 max-w-120 p-0 field-box">
+    class="field-box w-120 max-w-120 p-0">
     <TabsList
       base="indicator"
-      class="bg-transparent gap-1 grid-cols-[1fr_1fr_1.2fr_1fr_1fr_1.2fr] h-10 w-full">
+      class="
+        h-10 w-full grid-cols-[1fr_1fr_1.2fr_1fr_1fr_1.2fr] gap-1 bg-transparent
+      ">
       <TabIndicator class="z-0" />
       <TabsTrigger
         v-for="role in roles"
         :key="role.name"
         :value="role.role"
-        class="place-items-center z-1 not-disabled:!opacity-100 hover:bg-b3/40 hover:inset-shadow-sm rounded-field"
+        class="
+          z-1 place-items-center rounded-field
+          not-disabled:!opacity-100
+          hover:bg-b3/40 hover:inset-shadow-sm
+        "
         :disabled="!role.games">
         <component
           :is="`i-lol-${role.role.toLowerCase().replace(' ', '-').replace('utility', 'support')}`"
-          class="h-4.5 w-auto dst shrink-0" />
+          class="h-4.5 w-auto shrink-0 dst" />
       </TabsTrigger>
     </TabsList>
 

@@ -12,7 +12,11 @@ const { base = 'btn', class: className, hover = 'btn', on = 'btn', size = '8', v
 <template>
   <Button
     as="button"
-    :class="cn(buttonVariants({ base, on, hover, size, variant }), 'rounded-md flex-nowrap text-nowrap truncate w-full max-w-full overflow-hidden justify-start text-2 px-2 [&_svg]:size-4.5', className)">
+    :class="cn(buttonVariants({ base, on, hover, size, variant }), `
+      w-full max-w-full flex-nowrap justify-start truncate overflow-hidden
+      rounded-md px-2 text-2 text-nowrap
+      [&_svg]:size-4.5
+    `, className)">
     <slot />
   </Button>
 </template>

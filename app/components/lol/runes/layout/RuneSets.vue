@@ -21,7 +21,7 @@ const primaryColor = computedAsync(() => {})
 </script>
 
 <template>
-  <div class="flex flex-col gap-4 h-full">
+  <div class="flex h-full flex-col gap-4">
     <!--  <DropdownMenu>
       <DropdownMenuTrigger
         class="rounded-lg   gap-4 cursor-pointer  p-3 hover:border-b3 hover:shadow-warm-2 hover:shadow-black/6 hover:shadow-inset-sm transition-all duration-300  border-transparent items-center    h-fit  justify-start  data-[state=open]:border-b3 group grid grid-cols-3">

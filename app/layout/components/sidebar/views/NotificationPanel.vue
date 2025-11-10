@@ -44,14 +44,17 @@ onBeforeUnmount(() => {
     <SidebarHeaderWrapper title="Notifications">
       <template #header>
         <button
-          class="btn btn-sm pointer-events-auto"
+          class="btn pointer-events-auto btn-sm"
           @click="testNotificaition()">
           cool
         </button>
       </template>
     </SidebarHeaderWrapper>
     <div
-      class="gap-0 h-full -space-y-2 overflow-hidden w-full !flex flex-col items-start">
+      class="
+        !flex h-full w-full flex-col items-start gap-0 -space-y-2
+        overflow-hidden
+      ">
       <template v-if="sortedNotifications">
         <Notification
           v-for="item in sortedNotifications"

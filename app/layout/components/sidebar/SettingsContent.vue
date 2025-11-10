@@ -20,12 +20,15 @@ const option = ref('General')
               <AccordionTrigger class="group/option">
                 <SidebarMenuButton
                   size="12"
-                  class="text-3 text-bc/60 justify-between font-semibold">
+                  class="justify-between text-3 font-semibold text-bc/60">
                   General
 
                   <icon
                     name="left"
-                    class="transition-rotate size-5.5 duration-200 group-data-[state=open]/option:-rotate-90" />
+                    class="
+                      transition-rotate size-5.5 duration-200
+                      group-data-[state=open]/option:-rotate-90
+                    " />
                 </SidebarMenuButton>
               </AccordionTrigger>
               <AccordionContent class="AccordionContent">
@@ -43,11 +46,14 @@ const option = ref('General')
               <AccordionTrigger class="group/option">
                 <SidebarMenuButton
                   size="12"
-                  class="text-3 text-bc/60 justify-between font-semibold">
+                  class="justify-between text-3 font-semibold text-bc/60">
                   Account
                   <icon
                     name="left"
-                    class="transition-rotate size-5.5 duration-200 group-data-[state=open]/option:-rotate-90" />
+                    class="
+                      transition-rotate size-5.5 duration-200
+                      group-data-[state=open]/option:-rotate-90
+                    " />
                 </SidebarMenuButton>
               </AccordionTrigger>
               <AccordionContent class="AccordionContent">

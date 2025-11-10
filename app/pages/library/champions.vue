@@ -14,7 +14,7 @@ const tabs = ref('grid')
   <div class="size-full overflow-y-auto">
     <Tabs
       v-model:model-value="tabs"
-      class="flex flex-col px-8 size-full relative"
+      class="relative flex size-full flex-col px-8"
       as="div">
       <!-- <ChampionFilters>
         <TabsList base="indicator" class="w-80 shrink-0  **:pointer-events-auto grid grid-cols-2 h-10 border !border-b3/70 bg-b2">

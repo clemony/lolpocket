@@ -24,7 +24,7 @@ async function updateComment(list: CommentSchema[], id: string, content: Doc) {
       })
       return true
     }
-/*     if (comment.replies?.length) {
+    /*     if (comment.replies?.length) {
       const found = updateComment(comment.replies, id, content)
       if (found)
         return true

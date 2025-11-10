@@ -22,13 +22,15 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="size-full oveflow-hidden">
+  <div class="oveflow-hidden size-full">
     <menu
-      class="overflow-hidden shadow-warm-2 shadow-black/7 border-r border-r-b3/40">
+      class="
+        overflow-hidden border-r border-r-b3/40 shadow-warm-2 shadow-black/7
+      ">
       <DataFilterPanel />
     </menu>
 
-    <main class="overflow-y-auto grow relative px-10 w-full overflow-x-hidden">
+    <main class="relative w-full grow overflow-x-hidden overflow-y-auto px-10">
       <NuxtPage
         v-if="summoner"
         :matches="getMatchesByPuuid(summoner)" />

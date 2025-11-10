@@ -18,18 +18,30 @@ const mainSet = computed(() =>
   <SelectTrigger as-child>
     <Button
       variant="ghost"
-      class="relative grid size-20  place-items-center overflow-hidden   **:pointer-events-none ">
+      class="
+        relative grid size-20 place-items-center overflow-hidden
+        **:pointer-events-none
+      ">
       <RuneAndPathImg
 
         placement="left"
         variant="ghost"
-        class=" group/btn  fx-0 !pointer-events-auto  z-10 !size-16 !cursor-pointer rounded-full **:pointer-events-none  hover:shadow-sm hover:shadow-black/4"
+        class="
+          group/btn !pointer-events-auto z-10 !size-16 !cursor-pointer
+          rounded-full fx-0
+          **:pointer-events-none
+          hover:shadow-sm hover:shadow-black/4
+        "
 
         :set="mainSet" />
-      <div class="@6xl:animate-in @6xl:slide-in-from-right @6xl:fade-in hidden shrink flex-col overflow-hidden @6xl:flex">
+      <div
+        class="
+          @6xl:animate-in @6xl:flex @6xl:slide-in-from-right @6xl:fade-in
+          hidden shrink flex-col overflow-hidden
+        ">
         <h3
           v-memo="[mainSet]"
-          :class="cn('truncate  leading-7', {
+          :class="cn('truncate leading-7', {
             'dss group-hover/c:underline': mainSet?.keystone,
             '!font-normal  opacity-10': !mainSet?.keystone,
           })">
@@ -38,7 +50,7 @@ const mainSet = computed(() =>
 
         <p
           v-memo="[mainSet?.secondary?.path]"
-          :class="cn('text-3 truncate italic  leading-none', {
+          :class="cn('truncate text-3 leading-none italic', {
             'font-medium': mainSet?.secondary?.path,
             '!font-normal  opacity-20': !mainSet?.secondary?.path,
           })">

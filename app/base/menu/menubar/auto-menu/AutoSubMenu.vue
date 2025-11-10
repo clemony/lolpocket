@@ -23,7 +23,7 @@ const { class: className, item } = defineProps<{
 
       <MenubarShortcut
         v-if="item.shortcut"
-        class="flex items-center size-max absolute right-8  gap-2  ">
+        class="absolute right-8 flex size-max items-center gap-2">
         <component
           :is="item.shortcut?.component"
           v-if="item.shortcut?.component" />
@@ -33,13 +33,18 @@ const { class: className, item } = defineProps<{
           :class="cn(item.shortcut?.class)" />
         <span
           v-if="item.shortcut?.text"
-          class="tracking-normal badge badge-sm badge-neutral !font-semibold group-hover/trig:badge-neutral group-open/trig:badge-neutral !text-1 max-w-40 truncate">
+          class="
+            badge max-w-40 truncate badge-neutral badge-sm !text-1
+            !font-semibold tracking-normal
+            group-open/trig:badge-neutral
+            group-hover/trig:badge-neutral
+          ">
           {{ item.shortcut?.text }}
         </span>
       </MenubarShortcut>
     </MenubarSubTrigger>
     <LazyMenubarSubContent
-      :class="cn('w-64 max-h-90 overflow-y-auto', item.class?.content)"
+      :class="cn('max-h-90 w-64 overflow-y-auto', item.class?.content)"
       :align-offset="-2">
       <component
         :is="item.component"

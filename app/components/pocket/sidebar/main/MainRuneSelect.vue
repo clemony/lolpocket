@@ -42,7 +42,7 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
       :reference="trigger"
       :align-offset
       position="popper"
-      class="w-[var(--reka-select-trigger-width)] min-w-54  p-0">
+      class="w-[var(--reka-select-trigger-width)] min-w-54 p-0">
       <SelectGroup>
         <SelectLabel class="flex items-center justify-between">
           Main Runes
@@ -51,11 +51,18 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
             variant="ghost"
             size="8"
             title="Clear main runes"
-            class="btn-square aspect-square *:opacity-60 hover:*:opacity-100"
+            class="
+              aspect-square btn-square
+              *:opacity-60
+              hover:*:opacity-100
+            "
             @click="pocket.main?.runes === ''">
             <icon
               name="backspace"
-              class="size-5 **:stroke-2" />
+              class="
+                size-5
+                **:stroke-2
+              " />
           </Button>
         </SelectLabel>
         <SelectItem

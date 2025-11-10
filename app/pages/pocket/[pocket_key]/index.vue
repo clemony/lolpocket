@@ -15,14 +15,14 @@ useScrollProvider(el)
 
 <template>
   <div
-    class="relative  max-w-screen size-full">
-    <div class="fixed top-0  left-[45px]  z-12 h-15  flex items-center w-56">
+    class="relative size-full max-w-screen">
+    <div class="fixed top-0 left-[45px] z-12 flex h-15 w-56 items-center">
       <icon
         name=""
-        class="stroke-2 size-6.5 -mx-1" />
+        class="-mx-1 size-6.5 stroke-2" />
       <PocketMenubar />
     </div>
-    <div class="absolute top-0 left-0 w-full h-15 z-5 overflow-hidden">
+    <div class="absolute top-0 left-0 z-5 h-15 w-full overflow-hidden">
       <BackgroundSplashFixed
         size="full"
         :img="pocket.icon" />
@@ -34,8 +34,16 @@ useScrollProvider(el)
 
     <!-- Header block -->
     <div
-      :class="cn('grid grid-cols-2 z-0 size-full overflow-hidden pointer-events-none h-[70vh] min-h-[70vh] max-h-[70vh]')">
-      <div class="flex w-40% justify-center items-start pl-68 flex-col pt-16 z-1 grow *:z-1 size-full">
+      :class="cn(`
+        pointer-events-none z-0 grid size-full h-[70vh] max-h-[70vh]
+        min-h-[70vh] grid-cols-2 overflow-hidden
+      `)">
+      <div
+        class="
+          w-40% z-1 flex size-full grow flex-col items-start justify-center
+          pt-16 pl-68
+          *:z-1
+        ">
         <BlurReveal>
           <h1 class="!text-[3.4rem] dst">
             {{ pocket.name }}
@@ -47,17 +55,23 @@ useScrollProvider(el)
     <!-- Scrollable content -->
     <div
       ref="el"
-      :class="cn('absolute max-w-screen overflow-x-hidden inset-0 top-0 overflow-y-auto pt-[70vh]', {
+      :class="cn(`
+        absolute inset-0 top-0 max-w-screen overflow-x-hidden overflow-y-auto
+        pt-[70vh]
+      `, {
       })">
       <!-- Sticky Tabs (now ABOVE parent header) -->
       <div
-        class="flex w-full gap-4 pointer-events-none overflow-hidden h-15 min-h-15 sticky -top-[70vh] z-13 items-end pl-66">
-        <Separator class="absolute left-0 w-full z-0 bottom-0 bg-b3/60" />
+        class="
+          pointer-events-none sticky -top-[70vh] z-13 flex h-15 min-h-15 w-full
+          items-end gap-4 overflow-hidden pl-66
+        ">
+        <Separator class="absolute bottom-0 left-0 z-0 w-full bg-b3/60" />
         <NavFileTabs />
       </div>
 
       <!-- Context wrapper -->
-      <div class="relative -mt-px w-screen max-w-screen min-h-screen z-1 bg-b1">
+      <div class="relative z-1 -mt-px min-h-screen w-screen max-w-screen bg-b1">
         <CoreContent />
         <SiteFooter />
       </div>

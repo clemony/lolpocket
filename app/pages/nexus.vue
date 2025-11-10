@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { motion, useDomRef } from 'motion-v'
 import type { description } from 'valibot'
+import { motion, useDomRef } from 'motion-v'
 import { toast } from '~/base/notification/toast/use-toast'
 
 const container = useDomRef()
@@ -17,7 +17,7 @@ const text = ref<string>()
 
 <template>
   <div
-    class="flex h-full w-full flex-col items-center pt-8 ">
+    class="flex h-full w-full flex-col items-center pt-8">
     <header class="w-full">
       <h1>Nexus</h1>
     </header>
@@ -46,7 +46,9 @@ const text = ref<string>()
         toast
       </Button>
 
-      <div class="w-44 h-12  dss border">hi</div>
+      <div class="h-12 w-44 border dss">
+        hi
+      </div>
 
       <!--       <Button
         @click="() => {
@@ -71,7 +73,7 @@ const text = ref<string>()
       </div>
     </div> -->
     </div>
-    <div class=" mt-12 flex w-full justify-center pb-54">
+    <div class="mt-12 flex w-full justify-center pb-54">
       <CommentsThread />
     </div>
 

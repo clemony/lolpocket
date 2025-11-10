@@ -24,14 +24,17 @@ function handleUpdate() {
 <template>
   <TransitionSlideLeft
     group
-    :class="cn('flex items-center w-full z-1  flex-wrap gap-3 relative', className)">
+    :class="cn('relative z-1 flex w-full flex-wrap items-center gap-3', className)">
     <Button
       v-if="is().filters.rank && clear"
       :variant
       :hover
 
       :size="size[0]"
-      class="order-first hover:*:opacity-100"
+      class="
+        order-first
+        hover:*:opacity-100
+      "
       @click="is().filters.rank = null">
       <icon
         name="x"
@@ -47,7 +50,10 @@ function handleUpdate() {
       :variant="
         is().filters.rank === rank.name ? 'neutral' : variant
       "
-      :class="cn('!font-medium px-5 text-2 hover:text-bc order-2 shadow-none ', { 'order-1 ': is().filters.rank === rank.name })"
+      :class="cn(`
+        order-2 px-5 text-2 !font-medium shadow-none
+        hover:text-bc
+      `, { 'order-1 ': is().filters.rank === rank.name })"
       @click="is().filters.rank === rank.name ? (is().filters.rank = null) : null">
       <input
         v-model="is().filters.rank"

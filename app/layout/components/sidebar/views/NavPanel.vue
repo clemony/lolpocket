@@ -20,15 +20,24 @@ const navLinks = computed(() => {
 </script>
 
 <template>
-  <div class=" overflow-y-auto scrollbar-hidden **:text-3  py-3  max-h-full h-full pl-6 pr-6 space-y-2 w-full">
+  <div
+    class="
+      scrollbar-hidden h-full max-h-full w-full space-y-2 overflow-y-auto py-3
+      pr-6 pl-6
+      **:text-3
+    ">
     <Collapsible
       v-for="parentRoute, i in navLinks"
       :key="parentRoute.name"
       v-model:open="ui().collapseStates.panel.nav[i + 1]"
       :i="i + 1">
       <CollapsibleTrigger
-        class="mt-1 gap-4 pr-0.75 w-full text-start hover:underline py-1 hover:*:text-bc/80 focus-visible:outline-0 items-center">
-        <span class="grow text-2 capitalize font-semibold text-bc/50">
+        class="
+          mt-1 w-full items-center gap-4 py-1 pr-0.75 text-start
+          hover:underline hover:*:text-bc/80
+          focus-visible:outline-0
+        ">
+        <span class="grow text-2 font-semibold text-bc/50 capitalize">
           {{ parentRoute?.meta?.title || parentRoute?.name }}
         </span>
         <!--
@@ -37,7 +46,11 @@ const navLinks = computed(() => {
 
       <CollapsibleContent
         v-if="parentRoute.path !== '/support'"
-        class="after:top-3 *:-ml-2 gap-1 relative flex flex-col justify-items-center"
+        class="
+          relative flex flex-col justify-items-center gap-1
+          *:-ml-2
+          after:top-3
+        "
         menu>
         <SidebarBtnLink
           v-for="child in parentRoute?.children.sort((a, b) => (Number(a.meta.order) - Number(b.meta.order)))"
@@ -47,7 +60,11 @@ const navLinks = computed(() => {
 
       <CollapsibleContent
         v-else-if="parentRoute.path === '/support'"
-        class="after:top-3  *:-ml-2  gap-1 relative flex flex-col justify-items-center"
+        class="
+          relative flex flex-col justify-items-center gap-1
+          *:-ml-2
+          after:top-3
+        "
         menu>
         <SidebarBtnLink
           v-for="child in parentRoute?.children.filter(p => ['docs', 'about'].includes(String(p.name))).sort((a, b) => (Number(a.meta.order) - Number(b.meta.order)))"
@@ -55,17 +72,28 @@ const navLinks = computed(() => {
           :item="child" />
 
         <Collapsible :default-open="false">
-          <CollapsibleTrigger class="flex-nowrap overflow-hidden text-bc/50 hover:!text-bc !gap-3.25 pl-1.5 pr-1 w-full !duration-0 items-center flex h-10 w-full hover:underline font-medium capitalize text-nowrap justify-start">
-            <span class="size-4.5 shrink-0 grid place-items-center relative">
+          <CollapsibleTrigger
+            class="
+              flex h-10 w-full flex-nowrap items-center justify-start !gap-3.25
+              overflow-hidden pr-1 pl-1.5 font-medium text-nowrap text-bc/50
+              capitalize !duration-0
+              hover:!text-bc hover:underline
+            ">
+            <span class="relative grid size-4.5 shrink-0 place-items-center">
 
-            <CaretRotate direction="right" class="!size-5"/>
+              <CaretRotate
+                direction="right"
+                class="!size-5" />
             </span>
             Policies & Terms
             <Grow />
           </CollapsibleTrigger>
 
           <CollapsibleContent
-            class="after:top-3 mt-1 pl-px  gap-1 relative  flex flex-col justify-items-center"
+            class="
+              relative mt-1 flex flex-col justify-items-center gap-1 pl-px
+              after:top-3
+            "
             menu>
             <SidebarBtnLink
               v-for="child in parentRoute?.children.filter(p => !['docs', 'about'].includes(String(p.name))).sort((a, b) => (Number(a.meta.order) - Number(b.meta.order)))"

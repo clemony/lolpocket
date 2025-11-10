@@ -68,14 +68,21 @@ function showContextMenu(e: MouseEvent, champion: string) {
 
 <template>
   <div class="inset-0 z-auto pt-12">
-    <div class="w-full space-y-6 pt-10 pb-6 sticky z-2 bg-b1/98 backdrop-blur items-center  -top-56 ">
-      <div class=" flex items-center gap-8 px-1 ">
-        <h1 class="capitalize ">
+    <div
+      class="
+        sticky -top-56 z-2 w-full items-center space-y-6 bg-b1/98 pt-10 pb-6
+        backdrop-blur
+      ">
+      <div class="flex items-center gap-8 px-1">
+        <h1 class="capitalize">
           Champions
         </h1>
         <ChampionQuote
           v-once
-          class="italic whitespace-nowrap text-nowrap text-2 font-normal  grow text-end" />
+          class="
+            grow text-end text-2 font-normal text-nowrap whitespace-nowrap
+            italic
+          " />
         <InputGroupPopover
 
           v-model:model-value="cs().filters.query"
@@ -87,7 +94,7 @@ function showContextMenu(e: MouseEvent, champion: string) {
       <SelectedChampions />
     </div>
 
-    <div class="w-full flex gap-8  z-auto   mx-auto">
+    <div class="z-auto mx-auto flex w-full gap-8">
       <VueDraggable
         v-model="rendered"
         :group="{
@@ -103,7 +110,11 @@ function showContextMenu(e: MouseEvent, champion: string) {
         drag-class="champion-icon-ghost-class"
         ghost-class="champion-icon-ghost-class"
         layout="position"
-        class="h-fit justify-between grid auto-rows-max p-1 grid-cols-[repeat(auto-fill,minmax(70px,1fr))] w-full inset-0 pb-44  gap-4"
+        class="
+          inset-0 grid h-fit w-full auto-rows-max
+          grid-cols-[repeat(auto-fill,minmax(70px,1fr))] justify-between gap-4
+          p-1 pb-44
+        "
         @start="onStart()"
         @end="onEnd($event)"
         @add="onAdd($event)">

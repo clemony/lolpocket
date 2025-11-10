@@ -44,19 +44,29 @@ const contentVariants = {
         initial="hidden"
         animate="visible"
         exit="hidden"
-        class="z-1 g h-10 flex gap-3 relative sticky px-6 top-0 left-0 backdrop-blur-md items-center font-medium w-full group cursor-pointer">
+        class="
+          g group relative sticky top-0 left-0 z-1 flex h-10 w-full
+          cursor-pointer items-center gap-3 px-6 font-medium backdrop-blur-md
+        ">
         <div
-          class="backdrop-blur-md size-full absolute top-0 left-0 z-0" />
+          class="absolute top-0 left-0 z-0 size-full backdrop-blur-md" />
 
         <span
-          class="flex z-1 tldr-20 capitalize items-center group-hover:text-bc/80 group-hover:**:text-bc/60 text-bc/40 gap-3">
+          class="
+            tldr-20 z-1 flex items-center gap-3 text-bc/40 capitalize
+            group-hover:text-bc/80 group-hover:**:text-bc/60
+          ">
           <slot name="icon" />
           {{ name }}
         </span>
 
         <Grow />
 
-        <Badge class="mr-1 z-1 group-hover:opacity-100">
+        <Badge
+          class="
+            z-1 mr-1
+            group-hover:opacity-100
+          ">
           {{ results.length ?? "no results" }}
         </Badge>
 
@@ -75,13 +85,17 @@ const contentVariants = {
       exit="exit"
       class="overflow-hidden">
       <CollapsibleContent
-        class="CollapsibleContent mb-1 mx-7 before:w-px before:absolute before:bg-black-30/64 before:left-0 before:top-2.5"
+        class="
+          CollapsibleContent mx-7 mb-1
+          before:absolute before:top-2.5 before:left-0 before:w-px
+          before:bg-black-30/64
+        "
         :class="{
           'before:h-[calc(100%-36px)]': results.length > 3,
           'before:h-[calc(100%-4px)]': results.length <= 3,
         }">
         <ul
-          class="flex relative flex-col ml-2 pl-2 pr-7"
+          class="relative ml-2 flex flex-col pr-7 pl-2"
           :transition="{
             staggerChildren: 0.5,
             type: 'spring',

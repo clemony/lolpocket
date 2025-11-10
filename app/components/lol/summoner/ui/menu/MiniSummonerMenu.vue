@@ -22,11 +22,18 @@ const open = ref(false)
   <DropdownMenu v-model:open="open">
     <DropdownMenuTrigger
       as-child
-      :class="cn('z-2 group/dd data-[state=open]:bg-b2', className)">
+      :class="cn(`
+        group/dd z-2
+        data-[state=open]:bg-b2
+      `, className)">
       <slot>
         <icon
           name="more"
-          class="opacity-60 group-hover/dd:opacity-100 group-data-[state=open]/dd:opacity-100" />
+          class="
+            opacity-60
+            group-hover/dd:opacity-100
+            group-data-[state=open]/dd:opacity-100
+          " />
       </slot>
     </DropdownMenuTrigger>
 
@@ -43,7 +50,7 @@ const open = ref(false)
       </Label>
 
       <DropdownMenuItem
-        class="!opacity-100 h-full max-w-full flex"
+        class="flex h-full max-w-full !opacity-100"
         @click="navigateTo('/')">
         <SummonerIcon
           :summoner
@@ -51,7 +58,7 @@ const open = ref(false)
         <SummonerName
           :summoner
           as="h3"
-          class="grow !text-5truncate font-serif" />
+          class="!text-5truncate grow font-serif" />
 
         <SummonerTag :summoner />
       </DropdownMenuItem>

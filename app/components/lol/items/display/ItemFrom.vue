@@ -8,38 +8,45 @@ const { from, gold } = defineProps<{
 <template>
   <div
     v-if="from"
-    class=" mt-1">
-    <div class="divider divider-start after:h-px  !text-0">
+    class="mt-1">
+    <div
+      class="
+        divider divider-start !text-0
+        after:h-px
+      ">
       RECIPE
     </div>
 
-    <div class="group flex items-center px-1 pt-2 gap-3">
+    <div class="group flex items-center gap-3 px-1 pt-2">
       <div
         v-for="(item, i) in from"
         :key="i"
         v-tippy="`${item.name} ‑ ${item.gold}g`"
-        class="flex gap-3 items-center">
+        class="flex items-center gap-3">
         <LazyItemPopover
           :id="item.id"
-          class="ring-neutral/60  size-10 overflow-hidden rounded-lg shadow-sm hover-ring" />
+          class="
+            size-10 hover-ring overflow-hidden rounded-lg shadow-sm
+            ring-neutral/60
+          " />
 
         <icon
           v-if="i !== from.length - 1"
           name="dashicons:plus"
-          class=" opacity-80 size-3.5" />
+          class="size-3.5 opacity-80" />
       </div>
 
       <div
         v-if="gold"
-        class="flex items-center  ">
+        class="flex items-center">
         <icon
           name="dashicons:plus"
-          class=" opacity-80 size-3.5" />
+          class="size-3.5 opacity-80" />
 
         <Img
           img="/img/icons/gold-coin.webp"
           alt="coin"
-          class="size-4.25 ml-3 opacity-80 mr-1" />
+          class="mr-1 ml-3 size-4.25 opacity-80" />
         {{ gold }}
       </div>
     </div>

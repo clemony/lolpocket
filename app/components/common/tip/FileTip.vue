@@ -8,13 +8,20 @@ const pClass = 'justify-between w-full flex items-center gap-10'
 </script>
 
 <template>
-  <div class="tabs tabs-lift tabs-xs rounded-tl-0 border-b3 bg-b1/94 max-w-64  rounded-tr-lg rounded-b-lg  border drop-shadow-none">
-    <div class="tab tab-active -ml-[0.5px] flex -translate-y-[17.6px] items-center gap-1 ">
+  <div
+    class="
+      rounded-tl-0 tabs-lift tabs max-w-64 rounded-tr-lg rounded-b-lg border
+      border-b3 bg-b1/94 tabs-xs drop-shadow-none
+    ">
+    <div
+      class="
+        tab-active tab -ml-[0.5px] flex -translate-y-[17.6px] items-center gap-1
+      ">
       <hicon
         v-if="stat.icon"
         :name="stat.icon"
         class="!size-3.5 -translate-x-1" />
-      <span class=" -translate-x-1">
+      <span class="-translate-x-1">
         {{ stat.name }}
 
       </span>
@@ -23,7 +30,7 @@ const pClass = 'justify-between w-full flex items-center gap-10'
     <div class="tab-content -mt-5 px-2.5 py-2">
       <p
         v-if=" stat.description"
-        class="text-2 inline-block py-3 text-wrap whitespace-normal">
+        class="inline-block py-3 text-2 text-wrap whitespace-normal">
         {{ stat.description }}
       </p>
       <template v-if=" stat.values?.min === stat.values?.max">

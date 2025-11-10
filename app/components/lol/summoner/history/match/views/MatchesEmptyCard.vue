@@ -8,8 +8,12 @@ const props = defineProps<{
 
 <template>
   <div
-    class="bg-b2/30 drop-shadow-xs border-b3/40 p-0 h-44 w-220 field grid justify-center **:select-none text-2 shadow-warm-soft overflow-visible">
-    <div class="flex h-43 w-full gap-4 justify-center items-center">
+    class="
+      field grid h-44 w-220 justify-center overflow-visible border-b3/40
+      bg-b2/30 p-0 text-2 shadow-warm-soft drop-shadow-xs
+      **:select-none
+    ">
+    <div class="flex h-43 w-full items-center justify-center gap-4">
       <i-lol-check-back-later
         name="fluent:emoji-sad-slight-20-regular"
         class="size-8 dst" />

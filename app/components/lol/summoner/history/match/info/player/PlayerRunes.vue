@@ -11,7 +11,11 @@ const { playerKeystone, playerPaths } = await useRunes(computed(() => player))
   <div
     :class="
       cn(
-        'flex flex-col size-full place-items-center drop-shadow-sm   -ml-1 gap-2  max-w-10 min-w-10  **:[&_img]:shrink-0',
+        `
+          -ml-1 flex size-full max-w-10 min-w-10 flex-col place-items-center
+          gap-2 drop-shadow-sm
+          **:[&_img]:shrink-0
+        `,
         className,
       )
     ">
@@ -20,14 +24,20 @@ const { playerKeystone, playerPaths } = await useRunes(computed(() => player))
       v-tippy="{ content: playerKeystone.name, placement: 'right' }"
       :alt="playerKeystone.name"
       :src="`/img/runes/${playerKeystone.id}.webp`"
-      class="h-8 w-auto !shrink-0 drop-shadow-xs  transition-all duration-300 hover:scale-120 " />
+      class="
+        h-8 w-auto !shrink-0 drop-shadow-xs transition-all duration-300
+        hover:scale-120
+      " />
 
     <img
       v-if="playerPaths"
       v-tippy="{ content: playerPaths, placement: 'right' }"
       :alt="playerPaths"
       :src="`/img/paths/${playerPaths}.webp`"
-      class="h-6 w-auto   transition-all duration-300 hover:scale-120 "
+      class="
+        h-6 w-auto transition-all duration-300
+        hover:scale-120
+      "
       :class="{ '!h-5.5': playerPaths === 'inspiration' }" />
   </div>
 </template>

@@ -26,7 +26,9 @@ const position = computed(() => {
     variant="outline"
     hover="btn"
     :size
-    :class="cn('w-fit !text-2  !font-medium  !gap-2.5 pl-4 pr-6  text-bc/90 capitalize ', { 'hover:**:text-bc hover:text-bc order-first text-white': active || cs().filters.position && cs().filters.position === position.name, 'pr-3': active && clear }, className)"
+    :class="cn(`
+      w-fit !gap-2.5 pr-6 pl-4 !text-2 !font-medium text-bc/90 capitalize
+    `, { 'hover:**:text-bc hover:text-bc order-first text-white': active || cs().filters.position && cs().filters.position === position.name, 'pr-3': active && clear }, className)"
     :style="{
       backgroundColor: `${cs().filters.position && cs().filters.position === position.name || active ? position.color : 'transparent'}`,
     }">
@@ -37,6 +39,9 @@ const position = computed(() => {
     <icon
       v-if="clear"
       name="x"
-      class="size-4 text-white **:stroke-[2.6] " />
+      class="
+        size-4 text-white
+        **:stroke-[2.6]
+      " />
   </Button>
 </template>

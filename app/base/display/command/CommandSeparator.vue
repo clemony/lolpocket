@@ -16,7 +16,7 @@ const delegatedProps = computed(() => {
 <template>
   <Separator
     v-bind="delegatedProps"
-    :class="cn('-mx-1 h-px bg-b3/60 shrink-0', props.class)">
+    :class="cn('-mx-1 h-px shrink-0 bg-b3/60', props.class)">
     <slot />
   </Separator>
 </template>

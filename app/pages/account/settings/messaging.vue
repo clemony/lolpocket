@@ -9,7 +9,7 @@ definePageMeta({
 </script>
 
 <template>
-  <form class="space-y-12 w-full">
+  <form class="w-full space-y-12">
     <!-- username -->
 
     <fieldset

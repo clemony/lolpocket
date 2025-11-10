@@ -69,11 +69,15 @@ const faq = [
 </script>
 
 <template>
-  <div class="px-18 h-screen w-full grid place-items-center">
-    <div class="flex w-180 flex-col gap-6 items-center mx-auto -mt-[45px]">
+  <div class="grid h-screen w-full place-items-center px-18">
+    <div class="mx-auto -mt-[45px] flex w-180 flex-col items-center gap-6">
       <div
-        class="relative grid grid-cols-[20px_1fr] w-full gap-x-14 **:font-mono mockup-code text-nc text-3">
-        <div class="col-start-1 grid pl-6 gap-y-1 items-center">
+        class="
+          mockup-code relative grid w-full grid-cols-[20px_1fr] gap-x-14 text-3
+          text-nc
+          **:font-mono
+        ">
+        <div class="col-start-1 grid items-center gap-y-1 pl-6">
           <div
             v-for="index in 10"
             :key="index"
@@ -82,10 +86,10 @@ const faq = [
           </div>
         </div>
 
-        <div class="col-start-2 grid h-fit gap-y-1 items-center">
+        <div class="col-start-2 grid h-fit items-center gap-y-1">
           <div>const catTax: Record&#60;name, image[]&#62; = &lbrace;</div>
 
-          <div class="gap-y-1 grid tiems-center pl-6">
+          <div class="tiems-center grid gap-y-1 pl-6">
             <div>'Clem': {</div>
 
             <div class="flex items-center gap-1 pl-6">
@@ -140,7 +144,12 @@ const faq = [
         <NuxtLink
           to="https://github.com/clemony/lolpocket"
           external
-          class="absolute right-6 bottom-6 items-center gap-1 underline flex **:text-nc underline-offset-2 font-mono italic hover:underline">
+          class="
+            absolute right-6 bottom-6 flex items-center gap-1 font-mono italic
+            underline underline-offset-2
+            **:text-nc
+            hover:underline
+          ">
           <Icon name="github" />
 
           <Icon name="at" />
@@ -148,9 +157,13 @@ const faq = [
         </NuxtLink>
       </div>
 
-      <div class="mt-26 field-box py-3 px-4">
+      <div class="field-box mt-26 px-4 py-3">
         <div
-          class="items-center justify-evenly flex gap-5 *:dst **:size-6 pointer-events-auto">
+          class="
+            pointer-events-auto flex items-center justify-evenly gap-5
+            *:dst
+            **:size-6
+          ">
           <tippy
             v-for="icon in icons"
             :key="icon.name"
@@ -162,13 +175,13 @@ const faq = [
                 :target="icon.link ? '_blank' : ''">
                 <icon
                   :name="icon.icon"
-                  class="size-6 dst shrink-0" />
+                  class="size-6 shrink-0 dst" />
                 <span class="sr-only">{{ icon.name }}</span>
               </a>
             </template>
 
             <template #content>
-              <div class="flex gap-2 items-center">
+              <div class="flex items-center gap-2">
                 {{ icon.name }}
                 <icon
                   v-if="icon.link"
@@ -184,7 +197,7 @@ const faq = [
         </div>
       </div>
 
-      <div class="flex items-center flex-col tracking-tight dst px-4 mt-6">
+      <div class="mt-6 flex flex-col items-center px-4 tracking-tight dst">
         <p class="text-center">
           <i>Lolpockets </i>
 
@@ -217,12 +230,15 @@ const faq = [
           <a
             href="https://www.leagueoflegends.com/en-us/?utm_medium=card1%2Bwww.riotgames.com&utm_source=riotbar"
             target="_blank"
-            class="hover:underline flex items-center gap-1">
+            class="
+              flex items-center gap-1
+              hover:underline
+            ">
             <b>Riot Games, Inc</b>
 
             <icon
               name="link"
-              class="size-4 mb-0.5" />
+              class="mb-0.5 size-4" />
           </a>
           .
         </p>

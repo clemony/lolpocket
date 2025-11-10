@@ -12,7 +12,10 @@ const { isCollapsed, pinned } = defineProps<{
     v-if="!isCollapsed"
     v-model:open="as().toggles.backpack.pinned"
     :data-collapsed="isCollapsed"
-    class="px-3 pb-2 data-[collapsed=true]:py-2">
+    class="
+      px-3 pb-2
+      data-[collapsed=true]:py-2
+    ">
     <CollapsibleTrigger
       as-child
       class="group/collapse">
@@ -22,7 +25,9 @@ const { isCollapsed, pinned } = defineProps<{
         class="w-full"
         size="md">
         <span
-          class="font-semibold grow tracking-normal opacity-40 text-4 capitalize">
+          class="
+            grow text-4 font-semibold tracking-normal capitalize opacity-40
+          ">
           Pinned Pockets
         </span>
         <CaretRotate />
@@ -31,18 +36,30 @@ const { isCollapsed, pinned } = defineProps<{
 
     <CollapsibleContent
       menu
-      class="CollapsibleContent **:duration-0 group w-full flex flex-col gap-4 relative">
+      class="
+        CollapsibleContent group relative flex w-full flex-col gap-4
+        **:duration-0
+      ">
       <nav
-        class="grid gap-1 group-[[data-collapsed=true]]:justify-center group-[[data-collapsed=true]]:px-2">
+        class="
+          grid gap-1
+          group-[[data-collapsed=true]]:justify-center
+          group-[[data-collapsed=true]]:px-2
+        ">
         <div
           v-for="link of pinned"
           :key="link.name"
-          class="flex group/tag w-full max-h-9 py-1 pr-2 items-center flex-nowrap">
+          class="
+            group/tag flex max-h-9 w-full flex-nowrap items-center py-1 pr-2
+          ">
           <BtnLink
             variant="ghost"
             :size="isCollapsed ? 'icon' : 'md'"
             :to="`/${link.key}`"
-            class="px-2 !duration-0 text-3 justify-start grow !gap-3 flex items-center">
+            class="
+              flex grow items-center justify-start !gap-3 px-2 text-3
+              !duration-0
+            ">
             <PocketIcon
               size="sm"
               :img="link.icon"
@@ -50,7 +67,7 @@ const { isCollapsed, pinned } = defineProps<{
 
             <span
               v-show="!isCollapsed"
-              class="capitalize font-medium">
+              class="font-medium capitalize">
               {{ link.name }}
             </span>
           </BtnLink>
@@ -59,11 +76,18 @@ const { isCollapsed, pinned } = defineProps<{
             v-tippy="'Unpin'"
             for="toggle-pin"
             variant="ghost"
-            class="size-10 *:transition-opacity *:duration-200 hover:*:last:opacity-100 hover:*:first:opacity-0 place-items-center grid relative cursor-pointer"
+            class="
+              relative grid size-10 cursor-pointer place-items-center
+              *:transition-opacity *:duration-200
+              hover:*:first:opacity-0 hover:*:last:opacity-100
+            "
             @click.stop>
             <icon
               name="pin"
-              class="**:stroke-[1.84] absolute size-4" />
+              class="
+                absolute size-4
+                **:stroke-[1.84]
+              " />
             <input
               v-model="ps().pinned"
               name="toggle-pin"
@@ -71,7 +95,10 @@ const { isCollapsed, pinned } = defineProps<{
               class="peer hidden" />
             <icon
               name="unpin"
-              class="**:stroke-[1.84] opacity-0 absolute size-4" />
+              class="
+                absolute size-4 opacity-0
+                **:stroke-[1.84]
+              " />
           </Label>
         </div>
       </nav>
@@ -80,7 +107,7 @@ const { isCollapsed, pinned } = defineProps<{
 
   <nav
     v-else
-    class="flex flex-col gap-1 items-center justify-center">
+    class="flex flex-col items-center justify-center gap-1">
     <BtnLink
       v-for="link of pinned"
       :key="link.name"

@@ -25,13 +25,16 @@ function handleChange() {
     <ListboxContent as-child>
       <TransitionSlideLeft
         group
-        :class="cn('flex items-center w-full z-1 py-0 flex-wrap gap-3  relative', className)">
+        :class="cn('relative z-1 flex w-full flex-wrap items-center gap-3 py-0', className)">
         <Button
           v-if="is().filters.tags.length && clear"
           :variant
           :hover
           :size="size[0]"
-          class="order-first hover:*:opacity-100"
+          class="
+            order-first
+            hover:*:opacity-100
+          "
           @click="is().filters.tags.length = 0">
           <icon
             name="x"

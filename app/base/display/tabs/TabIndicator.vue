@@ -61,16 +61,16 @@ const variants = {
       }"
       :class="
         cn(
-          ' top-1 absolute transition-all rounded-lg ',
+          'absolute top-1 rounded-lg transition-all',
           { '!top-0 left-1': props.orientation === 'vertical' },
           props.class,
         )
       ">
       <motion.div
-        class="h-full w-full rounded-lg !min-w-0 text-bc shadow"
+        class="h-full w-full !min-w-0 rounded-lg text-bc shadow"
         :class="
           cn(
-            '  bg-b1',
+            'bg-b1',
             {
               ' ring-b3/20 !from-b1 from-70%  !bg-gradient-to-br !to-b2/20': !props.contrast && props.round,
               'shadow-sm shadow-black/3 h-full ':

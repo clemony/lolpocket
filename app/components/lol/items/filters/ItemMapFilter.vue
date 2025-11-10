@@ -6,12 +6,12 @@ const { modelValue: selectedMap } = defineProps<{
 
 <template>
   <Select v-bind="$attrs">
-    <SelectTrigger class="items-center justify-start flex gap-3 h-12">
+    <SelectTrigger class="flex h-12 items-center justify-start gap-3">
       <slot>
-        <span class="size-5 relative grid place-items-center">
+        <span class="relative grid size-5 place-items-center">
           <component
             :is="`i-lol-${selectedMap}`"
-            class="absolute dst opacity-80 shrink-0"
+            class="absolute shrink-0 opacity-80 dst"
             :class="{
               '!size-5': selectedMap === 12 || selectedMap === 11,
               '!size-6': selectedMap === 30,
@@ -30,15 +30,15 @@ const { modelValue: selectedMap } = defineProps<{
         <SelectLabel class="w-full border-b border-b-b3/60">
           <span class="opacity-50">Select a Map...</span>
         </SelectLabel>
-        <SelectGroup class="size-full p-0.5 space-y-1">
+        <SelectGroup class="size-full space-y-1 p-0.5">
           <SelectItem
-            class="py-2 mt-1 rounded-md"
+            class="mt-1 rounded-md py-2"
             :value="0">
-            <div class="flex gap-3 items-center font-medium">
-              <span class="size-5 relative grid place-items-center">
+            <div class="flex items-center gap-3 font-medium">
+              <span class="relative grid size-5 place-items-center">
                 <icon
                   name="stash:infinity-solid"
-                  class="size-6 opacity-60 -ml-0.25" />
+                  class="-ml-0.25 size-6 opacity-60" />
               </span>
               All
             </div>
@@ -46,13 +46,13 @@ const { modelValue: selectedMap } = defineProps<{
           <SelectItem
             v-for="map in [11, 12, 30]"
             :key="map"
-            class="py-2 rounded-md"
+            class="rounded-md py-2"
             :value="map">
-            <div class="flex gap-3 items-center font-medium">
-              <span class="size-5 relative grid place-items-center">
+            <div class="flex items-center gap-3 font-medium">
+              <span class="relative grid size-5 place-items-center">
                 <component
                   :is="`i-lol-${map}`"
-                  class="absolute opacity-80 dst shrink-0"
+                  class="absolute shrink-0 opacity-80 dst"
                   :class="{
                     '!size-5': map === 12 || map === 11,
                     '!size-6': map === 30,

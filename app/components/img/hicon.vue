@@ -12,7 +12,7 @@ const {
 const svg = /i-/
 const img = /https:/
 const img1 = /\/img\//
-const classes = 'shrink-0 size-full'
+const classes = 'size-full shrink-0'
 const teenyicons = /teenyicons:/
 const teeny = computed (() => name.match(teenyicons) ? '!scale-96 **:stroke-[1.3]' : '')
 </script>

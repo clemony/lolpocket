@@ -33,7 +33,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
     <DialogContent
       :class="
         cn(
-          'pt-26 w-116 min-w-116 !border-l-accent/30 drop-shadow-sm',
+          'w-116 min-w-116 !border-l-accent/30 pt-26 drop-shadow-sm',
           sheetVariants({ side }),
           props.class,
         )

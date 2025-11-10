@@ -13,7 +13,12 @@ const pocket = ref<Pocket>(ps().getPocket(String(route.params.pocket_key)))
   <MenubarRadioGroup
     v-model:model-value="pocket.main.runes"
     :class="cn('', className)">
-    <MenubarLabel class="before:bg-b1/30 sticky top-0 z-1 -mx-1 -translate-y-1 px-3 pt-2 pb-1 backdrop-blur  before:absolute  before:top-0 before:left-0 before:z-1 before:mix-blend-lighten">
+    <MenubarLabel
+      class="
+        sticky top-0 z-1 -mx-1 -translate-y-1 px-3 pt-2 pb-1 backdrop-blur
+        before:absolute before:top-0 before:left-0 before:z-1 before:bg-b1/30
+        before:mix-blend-lighten
+      ">
       <span class="isolate z-2">
         Core Runes
       </span>
@@ -22,11 +27,17 @@ const pocket = ref<Pocket>(ps().getPocket(String(route.params.pocket_key)))
     <MenubarRadioItem
       v-for="set, i in pocket.runes"
       :key="i"
-      class="z-0 gap-1 px-2.5 [&_#indicator]:order-last"
+      class="
+        z-0 gap-1 px-2.5
+        [&_#indicator]:order-last
+      "
       :value="set.id">
       <Rune
         :id="Number(set.keystone)"
-        class="!size-6 *:scale-130" />
+        class="
+          !size-6
+          *:scale-130
+        " />
       <template
         v-for="ix in 4"
         :key="ix">

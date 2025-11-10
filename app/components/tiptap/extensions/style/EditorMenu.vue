@@ -54,7 +54,7 @@ const menu = [
       <Separator
         v-if="item.name === 'separator'"
         :size="2"
-        class="bg-b3 h-[11px]"
+        class="h-[11px] bg-b3"
         orientation="vertical" />
     </template>
   </div>

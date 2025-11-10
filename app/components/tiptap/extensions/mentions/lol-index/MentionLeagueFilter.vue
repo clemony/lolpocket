@@ -80,20 +80,27 @@ onClickOutside(target, (event) => {
 <template>
   <div
     data-theme="base"
-    :class="cn('tippy-box h-full grid overflow-hidden min-w-34 min-h-10 max-h-10 !p-0', { ' max-h-50  min-w-44': items.length })">
+    :class="cn(`
+      tippy-box grid h-full max-h-10 min-h-10 min-w-34 overflow-hidden !p-0
+    `, { ' max-h-50  min-w-44': items.length })">
     <SlideInTopOutBottom
       ref="target"
-      class="tippy-content h-full  overflow-y-auto !p-1.5">
+      class="tippy-content h-full overflow-y-auto !p-1.5">
       <div
         v-if="items.length"
-        class="flex h-max w-full flex-col ">
+        class="flex h-max w-full flex-col">
         <PopoverItem
           v-for="(item, index) in items"
           :id="index"
           :key="index"
           tabindex="0"
           :value="item"
-          :class="cn('transition-discrete focus:bg-b2/60 pr-8', `index-${index}`)"
+          :class="cn(`
+            pr-8 transition-discrete
+            focus:bg-b2/60
+          `, `
+            index-${index}
+          `)"
           @mousedown.prevent="selectedIndex = index; update()">
           <IndexIcon
             :item
@@ -103,11 +110,17 @@ onClickOutside(target, (event) => {
       </div>
       <div
         v-else
-        class=" eslf-center grid size-full place-items-center">
-        <span class="inline-flex -translate-x-0.25 items-center gap-0.75 align-middle">
+        class="eslf-center grid size-full place-items-center">
+        <span
+          class="
+            inline-flex -translate-x-0.25 items-center gap-0.75 align-middle
+          ">
           <icon
             name="ban"
-            class="-mt-[0.5px] inline size-3.5 align-middle **:stroke-[2.2]" />
+            class="
+              -mt-[0.5px] inline size-3.5 align-middle
+              **:stroke-[2.2]
+            " />
           No result
         </span>
       </div>

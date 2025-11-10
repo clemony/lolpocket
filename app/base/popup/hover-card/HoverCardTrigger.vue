@@ -19,7 +19,9 @@ const forwarded = useForwardProps(delegatedProps)
 <template>
   <HoverCardTrigger
     v-bind="forwarded"
-    :class="cn(triggerVariants({ base, variant, size, hover, on }), 'justify-start px-2', props.class)">
+    :class="cn(triggerVariants({ base, variant, size, hover, on }), `
+      justify-start px-2
+    `, props.class)">
     <slot />
   </HoverCardTrigger>
 </template>

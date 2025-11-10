@@ -1,4 +1,3 @@
-
 import * as v from 'valibot'
 
 // InboxItem
@@ -27,16 +26,15 @@ export const InboxMessageSchema = v.object({
 
 // Inbox
 
-  export const InboxSchema = v.fallback(v.object({
-    messages: v.fallback(v.array(InboxMessageSchema), []),
-    notifications: v.fallback(v.array(InboxItemSchema), []),
-  }), {messages: [], notifications: []})
+export const InboxSchema = v.fallback(v.object({
+  messages: v.fallback(v.array(InboxMessageSchema), []),
+  notifications: v.fallback(v.array(InboxItemSchema), []),
+}), { messages: [], notifications: [] })
 
 // --- Types ---
 export type Inbox = v.InferOutput<typeof InboxSchema>
 export type InboxItem = v.InferOutput<typeof InboxItemSchema>
 export type InboxMessage = v.InferOutput<typeof InboxMessageSchema>
 
-
 // --- Helpers ---
-//export const getEmptyInbox = () => <Account>getDeepDefaults(InboxSchema)
+// export const getEmptyInbox = () => <Account>getDeepDefaults(InboxSchema)

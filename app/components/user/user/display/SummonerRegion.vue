@@ -35,14 +35,14 @@ const region = computed(() => {
     :as="el"
     :class="
       cn(
-        'inline lowercase leading-none antialiased',
+        'inline leading-none lowercase antialiased',
         className,
       )
     ">
     <icon
       v-show="!noIcon"
       name="at"
-      class="dst inline size-3.25 " />
+      class="inline size-3.25 dst" />
     {{ region }}
   </Primitive>
 

@@ -59,15 +59,26 @@ function handleAdd() {
 
 <template>
   <div
-    class="z-auto flex size-full max-h-full flex-col items-center -space-y-6 overflow-y-scroll pt-10 pr-16 pl-10 *:max-w-[1200px]">
+    class="
+      z-auto flex size-full max-h-full flex-col items-center -space-y-6
+      overflow-y-scroll pt-10 pr-16 pl-10
+      *:max-w-[1200px]
+    ">
     <!-- thumbnails -->
     <Carousel
-      class="bg-b1/60 mask-x-from-0% mask-x-to-10% mask-x-from-transparent mask-x-to-black sticky -top-10 z-1 flex w-full flex-shrink-1 items-center justify-center gap-2 py-4 backdrop-blur-md"
+      class="
+        sticky -top-10 z-1 flex w-full flex-shrink-1 items-center justify-center
+        gap-2 bg-b1/60 mask-x-from-transparent mask-x-from-0% mask-x-to-black
+        mask-x-to-10% py-4 backdrop-blur-md
+      "
       :opts="{ loop: true }"
       :plugins="[WheelGesturesPlugin()]"
       @init-api="(val) => (emblaThumbnailApi = val)">
       <CarouselContent
-        class="scrollbar-none ml-0 w-fit max-w-full overflow-x-scroll overscroll-auto scroll-smooth"
+        class="
+          scrollbar-none ml-0 w-fit max-w-full overflow-x-scroll overscroll-auto
+          scroll-smooth
+        "
         as-child>
         <TransitionScalePop
           group
@@ -77,7 +88,7 @@ function handleAdd() {
             :key="index"
             :class="
               cn(
-                'p-1 basis-1 grow  cursor-pointer',
+                'grow basis-1 cursor-pointer p-1',
                 index === selectedIndex ? '' : 'opacity-50',
               )
             "
@@ -94,7 +105,11 @@ function handleAdd() {
           <CarouselItem
             :class="
               cn(
-                'p-1 basis-1  opacity-60 has-disabled:opacity-40 has-disabled:cursor-not-allowed has-[not-disabled]:hover:opacity-100 grow w-min cursor-pointer',
+                `
+                  w-min grow basis-1 cursor-pointer p-1 opacity-60
+                  has-disabled:cursor-not-allowed has-disabled:opacity-40
+                  has-[not-disabled]:hover:opacity-100
+                `,
               )
             ">
             <Card
