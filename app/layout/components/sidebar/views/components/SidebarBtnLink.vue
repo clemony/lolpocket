@@ -1,47 +1,25 @@
 <script setup lang="ts">
-import type { RouteRecordRaw } from 'vue-router'
+import type { RouteRecordRaw } from "vue-router";
 
-const { item: i, link } = defineProps<{
-  item?: RouteRecordRaw | string
-  link?: string
-}>()
+const { to } = defineProps<{
+  to?: RouteRecordRaw;
+}>();
 
-const route = useRoute()
-
-const item = computed (() => {
-  if (!i)
-    return null
-  if (typeof i == 'string')
-    return useRouter().getRoutes().find(r => r.name === i)
-  else
-    return i
-})
-
-const utils = inject<TippyUtils>('tippy-utils')
+const route = useRoute();
 </script>
 
 <template>
   <BtnLink
-    v-if="link || item"
-    :disabled="route.path.match(link || item?.path)"
-    variant="link"
-    on="link"
-    size="12"
-    class="h-11 w-full justify-start pl-2 !duration-0"
-    @click="">
+    v-if="to && to"
+    :disabled="route?.path.match(to.path)"
+    :to="{ name: to?.name }"
+  >
     <slot>
-      <span
-        :class="cn(`
-          flex flex-nowrap items-center !gap-2.75 text-3 text-nowrap capitalize
-        `,
-                   { 'badge badge-ghost badge-xl inset-shadow-sm inset-shadow-black/3': route.path.match(link || item?.path) })">
-        <span class="relative grid size-4.5 shrink-0 place-items-center">
-          <hicon
-            :name="String(item.meta?.icon) "
-            :class="cn('absolute size-5', item?.meta?.listClass)" />
-        </span>
-        {{ item.meta?.title || item.name }}
-      </span>
+      <Icons
+        :name="String(to.meta?.icon)"
+        :class="cn('size-5', to?.meta?.listClass)"
+      />
+      {{ to.meta?.title || to.name }}
     </slot>
   </BtnLink>
 </template>

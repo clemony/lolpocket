@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const route = useRoute()
 const pocket = computed(() =>
-  ps().getPocket(String(route.params.pocket_key))
+  ps().getPocket(String(route.params.pocket_key)),
 ).value
 
 const searchQuery = ref<string>('')
@@ -36,7 +36,7 @@ watch(
   (newVal) => {
     if (newVal)
       currentPage.value = 1
-  }
+  },
 )
 </script>
 
@@ -56,27 +56,32 @@ watch(
               open:btn-active open:ring-2
               hover:text-bc/60 hover:ring hover:inset-shadow-xs
             `,
-            { 'shadow-sm drop-shadow-sm ': pocket.main?.champion },
+            { 'shadow-sm drop-shadow-sm ': pocket._champion },
           )
         ">
         <icon
-          v-if="!pocket?.main?.champion"
+          v-if="!pocket?._champion"
           name="lp:champ"
           class="size-10 text-bc/20" />
         <Champion
           v-else
-          v-memo="pocket.main?.champion"
+          v-memo="pocket._champion"
           class="*:scale-160"
-          :img="getSplash(pocket.main?.champion, 'tile')" />
+          :img="getSplash(pocket._champion, 'tile')" />
         <div
-          :class="cn(`
-            absolute inset-0 grid size-full items-end justify-center
-            bg-neutral/60 p-1 opacity-0 transition-opacity duration-300
-            group-open/collapse:opacity-100
-            group-hover/collapse:opacity-100
-          `, { 'bg-b2 **:text-bc/40': !pocket.main?.champion })">
+          :class="
+            cn(
+              `
+                absolute inset-0 grid size-full items-end justify-center
+                bg-neutral/60 p-1 opacity-0 transition-opacity duration-300
+                group-open/collapse:opacity-100
+                group-hover/collapse:opacity-100
+              `,
+              { 'bg-b2 **:text-bc/40': !pocket._champion },
+            )
+          ">
           <CaretFlip
-            class="size-8 !text-nc opacity-80 drop-shadow-sm"
+            class="size-8 text-nc! opacity-80 drop-shadow-sm"
             fill />
         </div>
       </Button>
@@ -130,7 +135,7 @@ watch(
             size="sm"
             class="justify-start duration-0">
             <input
-              v-model="pocket.main.champion"
+              v-model="pocket._champion"
               type="radio"
               class="peer hidden"
               :value="result.key"
@@ -159,9 +164,9 @@ watch(
               title="Clear main champion"
               class="
                 aspect-square h-auto w-full hover-ring border-b3 bg-b2
-                hover:!bg-b3/80
+                hover:bg-b3/80!
               "
-              @click="pocket.main.champion = ''">
+              @click="pocket._champion = ''">
               <icon
                 name="lp:champ"
                 class="size-7 text-bc/20" />
@@ -177,7 +182,7 @@ watch(
             "
             @click="open = false">
             <input
-              v-model="pocket.main.champion"
+              v-model="pocket._champion"
               type="radio"
               :value="champion"
               class="peer hidden" />

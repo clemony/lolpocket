@@ -1,33 +1,26 @@
 <script lang="ts" setup>
-const route = useRoute()
+const route = useRoute();
 </script>
 
 <template>
   <div
-    class="
-      flex size-full min-h-svh flex-col items-center justify-center gap-6
-      bg-tint-b2/40 p-6
-      md:p-10
-    ">
+    class="flex size-full min-h-svh flex-col items-center justify-center gap-6 bg-tint-b2/40 p-6 md:p-10"
+  >
     <div class="flex w-full max-w-md flex-col gap-6">
       <NuxtLink
         to="/"
-        class="flex w-full items-center justify-center gap-3 self-center px-2">
-        <h2 class="dst">
-          lolpocket
-        </h2>
+        class="flex w-full items-center justify-center gap-3 self-center px-2"
+      >
+        <h2 class="dst">lolpocket</h2>
       </NuxtLink>
 
       <div class="flex flex-col gap-6">
-        <Card class="!w-full !max-w-180">
+        <Card class="w-full! max-w-180!">
           <CardHeader class="my-2 text-center">
-            <CardTitle
-              class="text-6">
+            <CardTitle class="text-6">
               {{ route.meta?.title || route.name }}
             </CardTitle>
-            <CardDescription
-              v-if="route.meta?.description"
-              class="mt-1">
+            <CardDescription v-if="route.meta?.description" class="mt-1">
               {{ route.meta?.description }}
             </CardDescription>
           </CardHeader>
@@ -36,10 +29,8 @@ const route = useRoute()
           </CardContent>
         </Card>
         <div
-          class="
-            text-center text-1 text-balance text-bc/60
-            [&_a]:underline [&_a]:underline-offset-1 [&_a]:hover:text-bc
-          ">
+          class="text-center text-1 text-balance text-bc/60 [&_a]:underline [&_a]:underline-offset-1 [&_a]:hover:text-bc"
+        >
           By continuing, you agree to our
           <a href="#">Terms of Service</a>
           <br />

@@ -1,47 +1,43 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/schema'
-import { HeadingTip } from '#components'
-import { SelectTrigger } from 'reka-ui'
+import { HeadingTip } from "#components"
+import { SelectTrigger } from "reka-ui"
+import type { Pocket } from "~~/shared/schema"
 
 const {
-  side = 'bottom',
+  side = "bottom",
   sideOffset,
-  align = 'start',
+  align = "start",
   class: className,
   pocket: p,
 } = defineProps<{
-  class?: HTMLAttributes['class']
-  pocket: Pocket
-  type?: 'card' | 'btn'
-  side?: Side
-  sideOffset?: number
-  align?: Align
-  alignOffset?: number
-}>()
+  class?: HTMLAttributes["class"];
+  pocket: Pocket;
+  type?: "card" | "btn";
+  side?: Side;
+  sideOffset?: number;
+  align?: Align;
+  alignOffset?: number;
+}>();
 
-const pocket = computed(() => p)
-const selectedSet = computed(() => pocket.value.spells?.find(s => s.id === pocket.value.main?.spells))
-const open = ref(false)
+const pocket = computed(() => p);
+const selectedSet = computed(() =>
+  pocket.value.spells?.find((s) => s.id === pocket.value._spells),
+);
+const open = ref(false);
 
-const trigger = useTemplateRef<HTMLElement>('trigger')
-const keyClass
-  = 'col-start-1 opacity-0 group-hover/select:opacity-50  transition-all duration-200 font-bold place-self-center'
+const trigger = useTemplateRef<HTMLElement>("trigger");
+const keyClass =
+  "col-start-1 opacity-0 group-hover/select:opacity-50  transition-all duration-200 font-bold place-self-center";
 </script>
 
 <template>
-  <Select
-    v-model:model-value="pocket.main.spells"
-    v-model:open="open">
+  <Select v-model:model-value="pocket._spells" v-model:open="open">
     <slot>
       <VarSelectTrigger
         variant="ghost"
-        class="
-          relative grid size-max place-items-center overflow-hidden py-4
-          **:pointer-events-none
-        ">
-        <SpellSetDuo
-          :set="selectedSet"
-          :class="cn('', className)" />
+        class="relative grid size-max place-items-center overflow-hidden py-4 **:pointer-events-none"
+      >
+        <SpellSetDuo :set="selectedSet" :class="cn('', className)" />
         <!--        <icon
             name="select"
             class=" size-4 absolute right-1.5" /> -->
@@ -67,7 +63,8 @@ const keyClass
       :reference="trigger"
       :align-offset
       position="popper"
-      class="w-[var(--reka-select-trigger-width)] min-w-54 p-0">
+      class="w-[var(--reka-select-trigger-width)] min-w-54 p-0"
+    >
       <SelectGroup>
         <SelectLabel class="flex items-center justify-between">
           Main Spells
@@ -76,33 +73,20 @@ const keyClass
             variant="ghost"
             size="8"
             title="Clear main spells"
-            class="
-              aspect-square btn-square
-              *:opacity-60
-              hover:*:opacity-100
-            "
-            @click="pocket.main?.spells === ''">
-            <icon
-              name="backspace"
-              class="
-                size-5
-                **:stroke-2
-              " />
+            class="aspect-square btn-square *:opacity-60 hover:*:opacity-100"
+            @click="pocket._spells === ''"
+          >
+            <icon name="backspace" class="size-5 **:stroke-2" />
           </Button>
         </SelectLabel>
         <SelectItem
           v-for="set in pocket.spells"
           :key="set.id"
-          class="
-            group/select flex-nowrap
-            *:flex *:items-center
-          "
-          :value="set.id">
-          <IndexIcon
-            :item="spellbook[set.d]"
-            class="mr-1" />
-          <IndexIcon
-            :item="spellbook[set.f]" />
+          class="group/select flex-nowrap *:flex *:items-center"
+          :value="set.id"
+        >
+          <IndexIcon :item="spellbook[set.d]" class="mr-1" />
+          <IndexIcon :item="spellbook[set.f]" />
         </SelectItem>
       </SelectGroup>
     </LazySelectContent>

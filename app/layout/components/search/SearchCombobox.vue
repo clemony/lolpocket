@@ -1,17 +1,16 @@
 <script setup lang="ts">
 const { class: className, kbd } = defineProps<{
-  class?: HTMLAttributes['class']
-  kbd?: boolean
-}>()
+  class?: HTMLAttributes["class"];
+  kbd?: boolean;
+}>();
 
-const emit = defineEmits(['update:search'])
+const emit = defineEmits(["update:search"]);
 
-const query = ref('')
+const query = ref("");
 </script>
 
 <template>
-  <Combobox
-    position="popper">
+  <Combobox position="popper">
     <ComboboxAnchor as-child>
       <ComboboxTrigger
         class="input"
@@ -19,19 +18,18 @@ const query = ref('')
           cn(
             `
               group relative flex size-full w-full items-center py-0
-              focus-within:!border-transparent focus-within:ring-offset-1
+              focus-within:border-transparent! focus-within:ring-offset-1
               focus-within:ring-offset-b2
-              focus:!border-transparent
+              focus:border-transparent!
               has-[&_input]:placeholder-shown:*:last:opacity-0
             `,
             className,
           )
-        ">
+        "
+      >
         <slot />
       </ComboboxTrigger>
     </ComboboxAnchor>
-    <LazySearchContent
-      class="w-[var(--reka-combobox-trigger-width)]"
-      :query />
+    <LazySearchContent class="w-[var(--reka-combobox-trigger-width)]" :query />
   </Combobox>
 </template>

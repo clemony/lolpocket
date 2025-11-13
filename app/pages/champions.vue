@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 definePageMeta({
   order: 0,
-  search: 'hidden',
-})
+  search: "hidden",
+});
 </script>
 
 <template>

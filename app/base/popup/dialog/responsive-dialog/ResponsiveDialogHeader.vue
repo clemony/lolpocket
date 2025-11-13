@@ -2,11 +2,11 @@
 /* import { DialogDescription, DialogHeader, DialogTitle, DrawerDescription, DrawerHeader, DrawerTitle } from 'reka-ui' */
 
 const { title, description } = defineProps<{
-  title?: string
-  description?: string
-}>()
+  title?: string;
+  description?: string;
+}>();
 
-const isDesktop = useMediaQuery('(min-width: 768px)')
+const isDesktop = useMediaQuery("(min-width: 768px)");
 </script>
 
 <template>

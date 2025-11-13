@@ -1,6 +1,0 @@
-export type { NodeViewProps } from '@tiptap/core'
-export type { EmojiItem } from '@tiptap/extension-emoji'
-export { Mention } from '@tiptap/extension-mention'
-export { mergeAttributes, VueNodeViewRenderer } from '@tiptap/vue-3'
-export type { Editor, JSONContent } from '@tiptap/vue-3'
-export type { VNodeChild } from 'vue'

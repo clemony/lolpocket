@@ -1,17 +1,23 @@
 <script setup lang="ts">
-import type { HTMLAttributes } from 'vue'
+import type { HTMLAttributes } from "vue";
 
 const props = defineProps<{
-  class?: HTMLAttributes['class']
-}>()
+  class?: HTMLAttributes["class"];
+}>();
 </script>
 
 <template>
   <div
-    :class="cn(`
+    :class="
+      cn(
+        `
       flex flex-col gap-y-2 text-center
       sm:text-left
-    `, props.class)">
+    `,
+        props.class,
+      )
+    "
+  >
     <slot />
   </div>
 </template>

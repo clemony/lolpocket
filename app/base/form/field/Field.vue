@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import type { HTMLAttributes } from 'vue'
-import type { FieldVariants } from './field-variants'
-import { fieldVariants } from './field-variants'
+import type { HTMLAttributes } from "vue";
+import type { FieldVariants } from "./field-variants";
+import { fieldVariants } from "./field-variants";
 
 const props = defineProps<{
-  class?: HTMLAttributes['class']
-  orientation?: FieldVariants['orientation']
-}>()
+  class?: HTMLAttributes["class"];
+  orientation?: FieldVariants["orientation"];
+}>();
 </script>
 
 <template>
@@ -14,10 +14,8 @@ const props = defineProps<{
     role="group"
     data-slot="field"
     :data-orientation="orientation"
-    :class="cn(
-      fieldVariants({ orientation }),
-      props.class,
-    )">
+    :class="cn(fieldVariants({ orientation }), props.class)"
+  >
     <slot />
   </div>
 </template>

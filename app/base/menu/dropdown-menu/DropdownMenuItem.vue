@@ -1,28 +1,31 @@
 <script setup lang="ts">
-import type { DropdownMenuItemProps } from 'reka-ui'
-import { DropdownMenuItem, useForwardProps } from 'reka-ui'
+import type { DropdownMenuItemProps } from "reka-ui";
+import { DropdownMenuItem, useForwardProps } from "reka-ui";
 
-const props = withDefaults(defineProps<
-  DropdownMenuItemProps & {
-    class?: HTMLAttributes['class']
-    inset?: boolean
-    on?: ButtonVariants['on']
-    hover?: ButtonVariants['hover']
-    size?: ButtonVariants['size']
-    variant?: ButtonVariants['variant']
-    base?: ButtonVariants['base']
-  }
->(), {
-  base: 'btn',
-  hover: 'btn',
-  on: 'secondary',
-  size: '8',
-  variant: 'ghost'
-})
+const props = withDefaults(
+  defineProps<
+    DropdownMenuItemProps & {
+      class?: HTMLAttributes["class"];
+      inset?: boolean;
+      on?: ButtonVariants["on"];
+      hover?: ButtonVariants["hover"];
+      size?: ButtonVariants["size"];
+      variant?: ButtonVariants["variant"];
+      base?: ButtonVariants["base"];
+    }
+  >(),
+  {
+    base: "btn",
+    hover: "btn",
+    on: "secondary",
+    size: "8",
+    variant: "ghost",
+  },
+);
 
-const delegatedProps = reactiveOmit(props, 'class')
+const delegatedProps = reactiveOmit(props, "class");
 
-const forwarded = useForwardProps(delegatedProps)
+const forwarded = useForwardProps(delegatedProps);
 </script>
 
 <template>
@@ -35,7 +38,8 @@ const forwarded = useForwardProps(delegatedProps)
         'group/menu-item justify-start px-2 text-2',
         props.class,
       )
-    ">
+    "
+  >
     <slot />
   </DropdownMenuItem>
 </template>

@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import type { Editor, EmojiItem } from 'tiptap'
+import type { Editor } from '@tiptap/core'
+import type { EmojiItem } from '@tiptap/extension-emoji'
 import { filterEmojiArray } from 'tiptap'
 
 const { editor } = defineProps<{
@@ -8,9 +9,11 @@ const { editor } = defineProps<{
 
 const query = shallowRef<string>('')
 
-const { results: r } = useSimpleSearch(editor.storage.emoji.emojis, query, { keys: ['shortcodes', 'tags'] })
+const { results: r } = useSimpleSearch(editor.storage.emoji.emojis, query, {
+  keys: ['shortcodes', 'tags'],
+})
 
-const results = computed (() => [...r.value].splice(0, 20))
+const results = computed(() => [...r.value].splice(0, 20))
 const selectedIndex = ref(0)
 // const selectedItem = computed(() => items[selectedIndex.value])
 
@@ -18,7 +21,7 @@ const groups = [
   {
     name: 'Search Results',
     class: '!size-4.5',
-    icon: 'search'
+    icon: 'search',
   },
   {
     keywords: ['face'],
@@ -39,7 +42,7 @@ const groups = [
     name: 'Animals & Nature',
     class: 'size-5.5 ',
     groups: ['animals & nature'],
-    icon: 'cat'
+    icon: 'cat',
   },
   {
     keywords: [],
@@ -68,7 +71,8 @@ const groups = [
     icon: 'lucide-lab:bottle-spray',
   },
 
-  { // no key or group
+  {
+    // no key or group
     keywords: ['regional'],
     name: 'Symbols & Miscellaneous',
     groups: ['symbols', 'github', 'components', 'flags'],
@@ -78,7 +82,7 @@ const groups = [
 
 const tab = shallowRef<number>(1)
 
-const filter = computed (() => {
+const filter = computed(() => {
   const emoji = ref<EmojiItem[]>([])
   const group = groups[tab.value]
   const emojiArray = filterEmojiArray(editor)
@@ -95,32 +99,50 @@ const filter = computed (() => {
     })
   }
 
-  if (group?.groups?.length)
-    group.groups.forEach(k => emoji.value.push(...emojiArray.filter(e => e.group.includes(k))))
+  if (group?.groups?.length) {
+    group.groups.forEach(k =>
+      emoji.value.push(...emojiArray.filter(e => e.group.includes(k))),
+    )
+  }
 
-  if (group?.name === 'Symbols & Miscellaneous')
-    emoji.value.push(...emojiArray.filter(e => !e.tags?.length && !e.group?.length).filter(e => !e.tags.includes('Face')).concat(...emojiArray.filter(e => e.group.includes('github'))))
+  if (group?.name === 'Symbols & Miscellaneous') {
+    emoji.value.push(
+      ...emojiArray
+        .filter(e => !e.tags?.length && !e.group?.length)
+        .filter(e => !e.tags.includes('Face'))
+        .concat(...emojiArray.filter(e => e.group.includes('github'))),
+    )
+  }
 
   return emoji.value
 })
 
-watch(() => query.value.length, (newVal) => {
-  if (newVal > 0 && tab.value !== 0)
-    tab.value = 0
-})
+watch(
+  () => query.value.length,
+  (newVal) => {
+    if (newVal > 0 && tab.value !== 0)
+      tab.value = 0
+  },
+)
 
-watch(() => query.value, (newVal) => {
-  if (newVal === '' && tab.value !== 0)
-    tab.value = 1
-})
+watch(
+  () => query.value,
+  (newVal) => {
+    if (newVal === '' && tab.value !== 0)
+      tab.value = 1
+  },
+)
 
 const invert = shallowRef<boolean>(false)
 
-watch(() => tab.value, (newVal, oldVal) => {
-  if (newVal < oldVal)
-    invert.value = true
-  else invert.value = false
-})
+watch(
+  () => tab.value,
+  (newVal, oldVal) => {
+    if (newVal < oldVal)
+      invert.value = true
+    else invert.value = false
+  },
+)
 </script>
 
 <template>
@@ -136,7 +158,7 @@ watch(() => tab.value, (newVal, oldVal) => {
       <icon
         name="smile"
         class="
-          mt-px !size-4.25 opacity-70 transition-all duration-100
+          mt-px size-4.25! opacity-70 transition-all duration-100
           group-focus-within/text:opacity-90
           group-hover/text:opacity-90
         " />
@@ -147,7 +169,7 @@ watch(() => tab.value, (newVal, oldVal) => {
       data-theme="base"
       align="start"
       class="
-        tippy-box relative h-90 max-h-90 w-78 -translate-x-2 overflow-hidden
+        relative tippy-box h-90 max-h-90 w-78 -translate-x-2 overflow-hidden
         rounded-xl px-0 py-px inset-shadow-xs
       ">
       <div
@@ -157,17 +179,18 @@ watch(() => tab.value, (newVal, oldVal) => {
         ">
         <InputGroup
           class="
-            bg-brightness-104 h-11 w-full rounded-xl border-[groove]
-            border-b3/80 !bg-b1/74 bg-blend-screen shadow-xs shadow-black/4
-            backdrop-blur
+            bg-brightness-104 h-11 w-full rounded-xl border-b3/80 bg-b1/74!
+            bg-blend-screen shadow-xs shadow-black/4 backdrop-blur
           ">
           <InputGroupSearch />
           <InputGroupInput v-model:model-value="query" />
           <InputGroupClear
-            @clear:input="() => {
-              query = ''
-              tab = 1
-            }" />
+            @clear:input="
+              () => {
+                query = '';
+                tab = 1;
+              }
+            " />
         </InputGroup>
       </div>
       <TransitionSlideLeft
@@ -180,7 +203,7 @@ watch(() => tab.value, (newVal, oldVal) => {
             justify-between gap-x-1 gap-y-0.5 overflow-auto px-2 pt-14 pb-18
           ">
           <EmojiButton
-            v-for="item, index in filter"
+            v-for="(item, index) in filter"
             :key="index"
             :item
             :index
@@ -199,21 +222,19 @@ watch(() => tab.value, (newVal, oldVal) => {
           as="div"
           class="
             bg-brightness-104 flex h-9 w-full items-center rounded-xl border
-            border-[groove] border-b3/80 bg-b1/70 px-1 bg-blend-screen shadow-md
-            shadow-black/4 backdrop-blur
+            border-b3/80 bg-b1/70 px-1 bg-blend-screen shadow-md shadow-black/4
+            backdrop-blur
           ">
           <TabsList
             variant="none"
             size="md"
             class="w-full justify-stretch">
             <Tooltip
-              v-for="group, i in groups"
+              v-for="(group, i) in groups"
               :key="i">
-              <TooltipTrigger
-                as-child>
+              <TooltipTrigger as-child>
                 <TabsTrigger
                   :disabled="group.name === 'Search Results' && !query.length"
-
                   class="
                     group/btn h-7
                     *:opacity-40
@@ -223,10 +244,15 @@ watch(() => tab.value, (newVal, oldVal) => {
                   :value="i">
                   <icon
                     :name="group.icon"
-                    :class="cn(`
-                      absolute size-5 dxs
-                      **:stroke-[1.7]
-                    `, group.class)" />
+                    :class="
+                      cn(
+                        `
+                          absolute size-5 dxs
+                          **:stroke-[1.7]
+                        `,
+                        group.class,
+                      )
+                    " />
                 </TabsTrigger>
               </TooltipTrigger>
               <TooltipContent
@@ -237,7 +263,7 @@ watch(() => tab.value, (newVal, oldVal) => {
             </Tooltip>
             <TabIndicator
               variant="neutral"
-              class="*:!bg-neutral/80" />
+              class="*:bg-neutral/80!" />
           </TabsList>
         </Tabs>
       </div>

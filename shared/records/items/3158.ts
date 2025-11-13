@@ -1,54 +1,49 @@
 const item: Item = {
   id: 3158,
-  name: 'Ionian Boots of Lucidity',
+  name: "Ionian Boots of Lucidity",
   buildsFrom: [
     {
       id: 1001,
-      name: 'Boots',
-      gold: 300
+      name: "Boots",
+      gold: 300,
     },
     {
       id: 2022,
-      name: 'Glowing Mote',
-      gold: 250
-    }
+      name: "Glowing Mote",
+      gold: 250,
+    },
   ],
   buildsInto: [
     {
       id: 3171,
-      name: 'Crimson Lucidity',
-      gold: 1400
-    }
+      name: "Crimson Lucidity",
+      gold: 1400,
+    },
   ],
-  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3158_class_t2_ionianbootsoflucidity.png',
-  maps: [
-    11,
-    12,
-    21,
-    35
-  ],
+  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3158_class_t2_ionianbootsoflucidity.png",
+  maps: [11, 12, 21, 35],
   noEffects: false,
   passives: [
     {
-      name: 'Ionian Insight',
-      effects: 'Gain 10 summoner spell haste.',
-      unique: true
-    }
+      name: "Ionian Insight",
+      effects: "Gain 10 summoner spell haste.",
+      unique: true,
+    },
   ],
-  rank: 'Boots',
+  rank: "Boots",
   removed: false,
   shop: {
     prices: {
       combined: 350,
       sell: 360,
-      total: 900
-    }
+      total: 900,
+    },
   },
-  simpleDescription: 'Increases Move Speed and Cooldown Reduction',
+  simpleDescription: "Increases Move Speed and Cooldown Reduction",
   specialRecipe: 0,
   stats: {
     abilityHaste: 10,
-    flatMovespeed: 45
-  }
-}
-export default item
+    flatMovespeed: 45,
+  },
+};
+export default item;

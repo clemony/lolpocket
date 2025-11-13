@@ -1,59 +1,60 @@
 <script setup lang="ts">
-import type { Easing, EasingDefinition } from 'motion-v'
-import type { DialogContentEmits, DialogContentProps } from 'reka-ui'
-import { reactiveOmit } from '@vueuse/core'
-import { AnimatePresence, motion } from 'motion-v'
+import type { Easing, EasingDefinition } from "motion-v";
+import type { DialogContentEmits, DialogContentProps } from "reka-ui";
+import { reactiveOmit } from "@vueuse/core";
+import { AnimatePresence, motion } from "motion-v";
 import {
   DialogClose,
   DialogContent,
   DialogOverlay,
   DialogPortal,
   useForwardPropsEmits,
-} from 'reka-ui'
+} from "reka-ui";
 
 defineOptions({
   inheritAttrs: false,
-})
+});
 
 const props = defineProps<
   DialogContentProps & {
-    class?: HTMLAttributes['class']
-    noOverlay?: boolean
-    noButton?: boolean
-    delay?: number
-    side?: Side
+    class?: HTMLAttributes["class"];
+    noOverlay?: boolean;
+    noButton?: boolean;
+    delay?: number;
+    side?: Side;
   }
->()
+>();
 
-const emits = defineEmits<DialogContentEmits>()
+const emits = defineEmits<DialogContentEmits>();
 
-const delegatedProps = reactiveOmit(props, 'class')
+const delegatedProps = reactiveOmit(props, "class");
 
-const forwarded = useForwardPropsEmits(delegatedProps, emits)
+const forwarded = useForwardPropsEmits(delegatedProps, emits);
 const dialogOpenState = {
   opacity: 1,
   scale: 1,
-}
+};
 
 const dialogInitialState = {
   opacity: 0,
   scale: 0.8,
-}
+};
 
 const overlayOpenState = {
   opacity: 1,
-}
+};
 
 const overlayInitialState = {
   opacity: 0,
-}
+};
 </script>
 
 <template>
   <DialogPortal>
     <DialogOverlay
-      class="!blur-0 fixed inset-0 isolate z-50 bg-black/70"
-      :class="{ 'invisible opacity-0': props.noOverlay }">
+      class="blur-0! fixed inset-0 isolate z-50 bg-black/70"
+      :class="{ 'invisible opacity-0': props.noOverlay }"
+    >
       <motion.div
         class="overlay"
         :initial="overlayInitialState"
@@ -62,7 +63,8 @@ const overlayInitialState = {
           ease: 'easeOut',
           duration: 0.3,
         }"
-        :exit="overlayInitialState" />
+        :exit="overlayInitialState"
+      />
     </DialogOverlay>
 
     <DialogContent
@@ -80,7 +82,8 @@ const overlayInitialState = {
           `,
           props.class,
         )
-      ">
+      "
+    >
       <Motion
         class="modal-container"
         :initial="dialogInitialState"
@@ -90,22 +93,15 @@ const overlayInitialState = {
           bounce: 0.35,
           duration: 0.3,
         }"
-        :exit="dialogInitialState">
+        :exit="dialogInitialState"
+      >
         <slot />
 
         <DialogClose
           v-if="props.noButton"
-          class="
-            ring-offset-background
-            focus:ringneutral
-            absolute top-4 right-4 rounded-sm opacity-70 transition-opacity
-            hover:opacity-100
-            focus:ring focus:outline-none
-            disabled:pointer-events-none
-          ">
-          <icon
-            name="x-sm"
-            class="size-6" />
+          class="ring-offset-background focus:ringneutral absolute top-4 right-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:ring focus:outline-none disabled:pointer-events-none"
+        >
+          <icon name="x-sm" class="size-6" />
 
           <span class="sr-only">Close</span>
         </DialogClose>

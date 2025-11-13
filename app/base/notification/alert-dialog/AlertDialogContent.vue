@@ -1,32 +1,29 @@
 <script setup lang="ts">
-import type { AlertDialogContentEmits, AlertDialogContentProps } from 'reka-ui'
-import type { HTMLAttributes } from 'vue'
-import { reactiveOmit } from '@vueuse/core'
+import type { AlertDialogContentEmits, AlertDialogContentProps } from "reka-ui";
+import type { HTMLAttributes } from "vue";
+import { reactiveOmit } from "@vueuse/core";
 import {
   AlertDialogContent,
-
   AlertDialogOverlay,
   AlertDialogPortal,
   useForwardPropsEmits,
-} from 'reka-ui'
+} from "reka-ui";
 
-const props = defineProps<AlertDialogContentProps & { class?: HTMLAttributes['class'] }>()
-const emits = defineEmits<AlertDialogContentEmits>()
+const props = defineProps<
+  AlertDialogContentProps & { class?: HTMLAttributes["class"] }
+>();
+const emits = defineEmits<AlertDialogContentEmits>();
 
-const delegatedProps = reactiveOmit(props, 'class')
+const delegatedProps = reactiveOmit(props, "class");
 
-const forwarded = useForwardPropsEmits(delegatedProps, emits)
+const forwarded = useForwardPropsEmits(delegatedProps, emits);
 </script>
 
 <template>
   <AlertDialogPortal>
     <AlertDialogOverlay
-      class="
-        data-[state=open]:animate-in
-        data-[state=closed]:animate-out data-[state=closed]:fade-out-0
-        data-[state=open]:fade-in-0
-        fixed inset-0 z-50 bg-black/80
-      " />
+      class="data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/80"
+    />
     <AlertDialogContent
       v-bind="forwarded"
       :class="
@@ -47,7 +44,8 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
           `,
           props.class,
         )
-      ">
+      "
+    >
       <slot />
     </AlertDialogContent>
   </AlertDialogPortal>

@@ -1,87 +1,81 @@
 <script setup lang="ts">
 definePageMeta({
-  name: 'about',
-  icon: 'lucide:message-circle-question-mark',
-  path: '/support/about',
-})
+  name: "about",
+  icon: "lucide:message-circle-question-mark",
+  path: "/support/about",
+});
 
 const icons = [
   {
-    name: 'Vue',
-    icon: 'fontisto:vuejs',
-    link: 'https://vuejs.org',
+    name: "Vue",
+    icon: "fontisto:vuejs",
+    link: "https://vuejs.org",
   },
   {
-    name: 'DaisyUI',
-    icon: 'simple-icons:daisyui',
-    link: 'https://v5.daisyui.com',
+    name: "DaisyUI",
+    icon: "simple-icons:daisyui",
+    link: "https://v5.daisyui.com",
   },
   {
-    name: 'Typescript',
-    icon: 'file-icons:typescript',
-    link: '',
+    name: "Typescript",
+    icon: "file-icons:typescript",
+    link: "",
   },
   {
-    name: 'VSCode',
-    icon: 'codicon:vscode-insiders',
-    link: '',
+    name: "VSCode",
+    icon: "codicon:vscode-insiders",
+    link: "",
   },
   {
-    name: 'TailwindCSS',
-    icon: 'simple-icons:tailwindcss',
-    link: 'https://tailwindcss.com',
+    name: "TailwindCSS",
+    icon: "simple-icons:tailwindcss",
+    link: "https://tailwindcss.com",
   },
   {
-    name: 'Iconify',
-    icon: 'simple-icons:iconify',
-    link: 'https://iconify.design',
+    name: "Iconify",
+    icon: "simple-icons:iconify",
+    link: "https://iconify.design",
   },
   {
-    name: 'Eslint',
-    icon: 'teenyicons:eslint-outline',
-    link: '',
+    name: "Eslint",
+    icon: "teenyicons:eslint-outline",
+    link: "",
   },
   {
-    name: 'shadcn-ui',
-    icon: 'simple-icons:shadcnui',
-    link: 'https://www.shadcn-vue.com',
+    name: "shadcn-ui",
+    icon: "simple-icons:shadcnui",
+    link: "https://www.shadcn-vue.com",
   },
   {
-    name: 'Nuxt',
-    icon: 'cib:nuxt-js',
-    link: 'https://nuxt.com',
+    name: "Nuxt",
+    icon: "cib:nuxt-js",
+    link: "https://nuxt.com",
   },
   {
-    name: 'Vite',
-    icon: 'tabler:brand-vite',
-    link: 'https://vite.dev',
+    name: "Vite",
+    icon: "tabler:brand-vite",
+    link: "https://vite.dev",
   },
-]
+];
 
-const hoverClass = 'r'
+const hoverClass = "r";
 
 const faq = [
   {
-    a: '',
-    q: 'Where going?',
+    a: "",
+    q: "Where going?",
   },
-]
+];
 </script>
 
 <template>
   <div class="grid h-screen w-full place-items-center px-18">
     <div class="mx-auto -mt-[45px] flex w-180 flex-col items-center gap-6">
       <div
-        class="
-          mockup-code relative grid w-full grid-cols-[20px_1fr] gap-x-14 text-3
-          text-nc
-          **:font-mono
-        ">
+        class="mockup-code relative grid w-full grid-cols-[20px_1fr] gap-x-14 text-3 text-nc **:font-mono"
+      >
         <div class="col-start-1 grid items-center gap-y-1 pl-6">
-          <div
-            v-for="index in 10"
-            :key="index"
-            class="grid items-center">
+          <div v-for="index in 10" :key="index" class="grid items-center">
             {{ index }}
           </div>
         </div>
@@ -108,9 +102,7 @@ const faq = [
 
             <div>},</div>
 
-            <div class="opacity-0">
-              .
-            </div>
+            <div class="opacity-0">.</div>
 
             <div>'Nell': {</div>
 
@@ -133,23 +125,15 @@ const faq = [
               <span class="animate-[blink-1_1s_infinite_both] text-4">|</span>
             </div>
           </div>
-          <div>
-            &rbrace;
-          </div>
-          <div class="opacity-0">
-            .
-          </div>
+          <div>&rbrace;</div>
+          <div class="opacity-0">.</div>
         </div>
 
         <NuxtLink
           to="https://github.com/clemony/lolpocket"
           external
-          class="
-            absolute right-6 bottom-6 flex items-center gap-1 font-mono italic
-            underline underline-offset-2
-            **:text-nc
-            hover:underline
-          ">
+          class="absolute right-6 bottom-6 flex items-center gap-1 font-mono italic underline underline-offset-2 **:text-nc hover:underline"
+        >
           <Icon name="github" />
 
           <Icon name="at" />
@@ -159,23 +143,17 @@ const faq = [
 
       <div class="field-box mt-26 px-4 py-3">
         <div
-          class="
-            pointer-events-auto flex items-center justify-evenly gap-5
-            *:dst
-            **:size-6
-          ">
+          class="pointer-events-auto flex items-center justify-evenly gap-5 *:dst **:size-6"
+        >
           <tippy
             v-for="icon in icons"
             :key="icon.name"
             tag="button"
-            content-tag="div">
+            content-tag="div"
+          >
             <template #default>
-              <a
-                :href="icon.link"
-                :target="icon.link ? '_blank' : ''">
-                <icon
-                  :name="icon.icon"
-                  class="size-6 shrink-0 dst" />
+              <a :href="icon.link" :target="icon.link ? '_blank' : ''">
+                <icon :name="icon.icon" class="size-6 shrink-0 dst" />
                 <span class="sr-only">{{ icon.name }}</span>
               </a>
             </template>
@@ -183,17 +161,15 @@ const faq = [
             <template #content>
               <div class="flex items-center gap-2">
                 {{ icon.name }}
-                <icon
-                  v-if="icon.link"
-                  name="link"
-                  class="size-3.5 text-nc" />
+                <icon v-if="icon.link" name="link" class="size-3.5 text-nc" />
               </div>
             </template>
           </tippy>
 
           <icon
             class="brightness-[80%] contrast-200 grayscale"
-            name="logos:pinia" />
+            name="logos:pinia"
+          />
         </div>
       </div>
 
@@ -230,15 +206,11 @@ const faq = [
           <a
             href="https://www.leagueoflegends.com/en-us/?utm_medium=card1%2Bwww.riotgames.com&utm_source=riotbar"
             target="_blank"
-            class="
-              flex items-center gap-1
-              hover:underline
-            ">
+            class="flex items-center gap-1 hover:underline"
+          >
             <b>Riot Games, Inc</b>
 
-            <icon
-              name="link"
-              class="mb-0.5 size-4" />
+            <icon name="link" class="mb-0.5 size-4" />
           </a>
           .
         </p>

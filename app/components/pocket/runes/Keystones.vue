@@ -1,27 +1,26 @@
 <script lang="ts" setup>
-import type { Pocket, RuneSet } from '~~/shared/schema'
+import type { Pocket, RuneSet } from "~~/shared/schema";
 
 const {
   pocket,
   runes,
   set: s,
 } = defineProps<{
-  runes: RuneMin[]
-  set: RuneSet
-  pocket: Pocket
-}>()
-const set = computed(() => s)
+  runes: RuneMin[];
+  set: RuneSet;
+  pocket: Pocket;
+}>();
+const set = computed(() => s);
 
-const gridCols = computed(() => `grid-cols-${runes.length ?? 3}`)
+const gridCols = computed(() => `grid-cols-${runes.length ?? 3}`);
 </script>
 
 <template>
   <Tabs
     v-model="set.keystone"
     as="div"
-    class="
-      relative grid h-28 w-114 max-w-114 place-items-center overflow-hidden
-    ">
+    class="relative grid h-28 w-114 max-w-114 place-items-center overflow-hidden"
+  >
     <TabsList
       v-if="runes"
       base="indicator"
@@ -36,7 +35,8 @@ const gridCols = computed(() => `grid-cols-${runes.length ?? 3}`)
           `,
           gridCols,
         )
-      ">
+      "
+    >
       <TabsTrigger
         v-for="rune in runes"
         :key="rune.id"
@@ -52,44 +52,32 @@ const gridCols = computed(() => `grid-cols-${runes.length ?? 3}`)
             `,
             { 'opacity-100  grayscale-0': set.keystone === rune.id },
           )
-        ">
+        "
+      >
         <Img
           :img="`/img/runes/${set.primary.path}/${rune.id}.webp`"
           :alt="rune.name"
-          class="
-            pointer-events-none absolute h-19 w-auto shrink-0 opacity-0
-            drop-shadow-sm drop-shadow-black/40 transition-all duration-400
-            group-hover/r:opacity-90
-          "
-          :class="{ 'opacity-100': set.keystone === rune.id }" />
+          class="pointer-events-none absolute h-19 w-auto shrink-0 opacity-0 drop-shadow-sm drop-shadow-black/40 transition-all duration-400 group-hover/r:opacity-90"
+          :class="{ 'opacity-100': set.keystone === rune.id }"
+        />
 
         <Img
           :img="`/img/runes/grayscale/${rune.id}.webp`"
           :alt="rune.name"
-          class="
-            pointer-events-none absolute h-19 w-auto shrink-0 opacity-100
-            brightness-90 contrast-150 drop-shadow-sm transition-all
-            duration-400
-            group-hover/r:opacity-0
-          "
-          :class="{ 'opacity-0': set.keystone === rune.id }" />
+          class="pointer-events-none absolute h-19 w-auto shrink-0 opacity-100 brightness-90 contrast-150 drop-shadow-sm transition-all duration-400 group-hover/r:opacity-0"
+          :class="{ 'opacity-0': set.keystone === rune.id }"
+        />
       </TabsTrigger>
 
-      <TabIndicator
-        class="
-          mt-1
-          *:to-b1/40
-        "
-        round />
+      <TabIndicator class="mt-1 *:to-b1/40" round />
     </TabsList>
 
-    <div
-      v-else
-      class="grid size-full grid-cols-3 py-4">
+    <div v-else class="grid size-full grid-cols-3 py-4">
       <Placeholder
         v-for="i in 3"
         :key="i"
-        class="size-18 place-self-center rounded-full" />
+        class="size-18 place-self-center rounded-full"
+      />
     </div>
   </Tabs>
 </template>

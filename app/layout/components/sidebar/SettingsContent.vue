@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const option = ref('General')
+const option = ref("General");
 </script>
 
 <template>
@@ -8,27 +8,27 @@ const option = ref('General')
     v-model:open="settingsOpen"
     hydrate-on-interact /> -->
   <SidebarContentWrapper title="Settings">
-    <div class="!flex w-full flex-col items-start gap-6 py-4">
+    <div class="flex! w-full flex-col items-start gap-6 py-4">
       <Accordion
         v-model:model-value="option"
         type="single"
         collapsible
-        class="w-full justify-start">
+        class="w-full justify-start"
+      >
         <SidebarMenu>
           <AccordionItem value="General">
             <SidebarMenuItem>
               <AccordionTrigger class="group/option">
                 <SidebarMenuButton
                   size="12"
-                  class="justify-between text-3 font-semibold text-bc/60">
+                  class="justify-between text-3 font-semibold text-bc/60"
+                >
                   General
 
                   <icon
                     name="left"
-                    class="
-                      transition-rotate size-5.5 duration-200
-                      group-data-[state=open]/option:-rotate-90
-                    " />
+                    class="transition-rotate size-5.5 duration-200 group-data-[state=open]/option:-rotate-90"
+                  />
                 </SidebarMenuButton>
               </AccordionTrigger>
               <AccordionContent class="AccordionContent">
@@ -46,14 +46,13 @@ const option = ref('General')
               <AccordionTrigger class="group/option">
                 <SidebarMenuButton
                   size="12"
-                  class="justify-between text-3 font-semibold text-bc/60">
+                  class="justify-between text-3 font-semibold text-bc/60"
+                >
                   Account
                   <icon
                     name="left"
-                    class="
-                      transition-rotate size-5.5 duration-200
-                      group-data-[state=open]/option:-rotate-90
-                    " />
+                    class="transition-rotate size-5.5 duration-200 group-data-[state=open]/option:-rotate-90"
+                  />
                 </SidebarMenuButton>
               </AccordionTrigger>
               <AccordionContent class="AccordionContent">

@@ -1,26 +1,25 @@
 interface RoleStats {
-  games: number
-  losses: number
-  role: string
-  winrate: number
-  wins: number
+  games: number;
+  losses: number;
+  role: string;
+  winrate: number;
+  wins: number;
 }
 
 export function useChampionRoleStats(
   matches: MatchData[],
-  championName: string
+  championName: string,
 ): RoleStats[] {
-  const grouped: Record<string, RoleStats> = {}
+  const grouped: Record<string, RoleStats> = {};
 
-  const player = matches.map(m =>
-    m.participants.find(p => p.puuid === as().account.puuid)
-  )
+  const player = matches.map((m) =>
+    m.participants.find((p) => p.puuid === as().account.puuid),
+  );
 
   for (const match of player) {
-    if (ix().champNameById(match.championId) !== championName)
-      continue
+    if (ix().champNameById(match.championId) !== championName) continue;
 
-    const role = match.teamPosition || 'UNKNOWN'
+    const role = match.teamPosition || "UNKNOWN";
     if (!grouped[role]) {
       grouped[role] = {
         games: 0,
@@ -28,17 +27,17 @@ export function useChampionRoleStats(
         role,
         winrate: 0,
         wins: 0,
-      }
+      };
     }
 
-    grouped[role].games++
-    match.win ? grouped[role].wins++ : grouped[role].losses++
+    grouped[role].games++;
+    match.win ? grouped[role].wins++ : grouped[role].losses++;
   }
 
   for (const role in grouped) {
-    const r = grouped[role]
-    r.winrate = (r.wins / r.games) * 100
+    const r = grouped[role];
+    r.winrate = (r.wins / r.games) * 100;
   }
 
-  return Object.values(grouped)
+  return Object.values(grouped);
 }

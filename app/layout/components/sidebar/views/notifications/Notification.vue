@@ -48,7 +48,7 @@ const hasAction = computed(() => !!template.value.action)
       <button
         class="
           btn absolute -top-3 -right-2 z-2 grid btn-circle size-6 shrink-0
-          cursor-pointer place-items-center !border-b4 !bg-b4 opacity-0
+          cursor-pointer place-items-center border-b4! bg-b4! opacity-0
           shadow-sm inset-shadow-xs drop-shadow-xs transition-opacity
           duration-200 btn-xs
           group-hover/item:opacity-100
@@ -76,7 +76,7 @@ const hasAction = computed(() => !!template.value.action)
       v-if="template.action.type === 'navigate'"
       class="
         chat-footer flex cursor-pointer flex-nowrap items-center gap-1 p-0
-        leading-none !font-medium opacity-0 transition-opacity duration-200
+        leading-none font-medium! opacity-0 transition-opacity duration-200
         group-hover/item:opacity-50
         hover:underline hover:opacity-100
       "

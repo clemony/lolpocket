@@ -6,6 +6,5 @@ export default defineNuxtRouteMiddleware((to, from) => {
   // navigateTo('/login')
   // navigateTo('/nexus') // for now
   // console.log('🌱 - session:', session)
-  if (to)
-    console.log('fml')
-})
+  if (to) console.log("fml");
+});

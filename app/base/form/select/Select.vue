@@ -6,10 +6,12 @@ const props = defineProps<SelectRootProps>()
 const emits = defineEmits<SelectRootEmits>()
 
 const forwarded = useForwardPropsEmits(props, emits)
+
+const toggleOpen = useToggle(props.open)
 </script>
 
 <template>
   <SelectRoot v-bind="forwarded">
-    <slot />
+    <slot :toggle-open />
   </SelectRoot>
 </template>

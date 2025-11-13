@@ -1,67 +1,53 @@
 <script lang="ts" setup>
-import type { PopoverContentEmits, PopoverContentProps } from 'reka-ui'
-import { useScroll as useScrolly } from '@vueuse/core'
-import { PopoverContent, PopoverPortal, useForwardPropsEmits } from 'reka-ui'
+import type { PopoverContentEmits, PopoverContentProps } from "reka-ui";
+import { useScroll as useScrolly } from "@vueuse/core";
+import { PopoverContent, PopoverPortal, useForwardPropsEmits } from "reka-ui";
 
 defineOptions({
   inheritAttrs: false,
-})
+});
 
 const props = withDefaults(
   defineProps<
     PopoverContentProps & {
-      class?: HTMLAttributes['class']
-      position?: string
+      class?: HTMLAttributes["class"];
+      position?: string;
     }
   >(),
   {
     sideOffset: 4,
-    align: 'center',
-    position: 'popper',
-  }
-)
-const emits = defineEmits<PopoverContentEmits>()
+    align: "center",
+    position: "popper",
+  },
+);
+const emits = defineEmits<PopoverContentEmits>();
 
-const delegatedProps = reactiveOmit(props, 'class')
+const delegatedProps = reactiveOmit(props, "class");
 
-const forwarded = useForwardPropsEmits(delegatedProps, emits)
+const forwarded = useForwardPropsEmits(delegatedProps, emits);
 
-const el = ref()
-const { arrivedState, directions, isScrolling, x, y } = useScrolly(el)
+const el = ref();
+const { arrivedState, directions, isScrolling, x, y } = useScrolly(el);
 watch(
   () => arrivedState.top,
   (newVal) => {
-    console.log('💠 - newVal:', newVal)
-  }
-)
+    console.log("💠 - newVal:", newVal);
+  },
+);
 </script>
 
 <template>
   <PopoverPortal>
     <PopoverContent
-      class="
-        data-[state=open]:animate-in
-        data-[state=closed]:animate-out data-[state=closed]:fade-out-0
-        data-[state=open]:fade-in-0
-        data-[state=closed]:zoom-out-95
-        data-[state=open]:zoom-in-95
-        data-[side=bottom]:slide-in-from-top-2
-        data-[side=left]:slide-in-from-right-2
-        data-[side=right]:slide-in-from-left-2
-        data-[side=top]:slide-in-from-bottom-2
-        relative z-50 overflow-hidden rounded-xl border border-b2 bg-b1 text-bc
-        shadow-md drop-shadow-lg drop-shadow-black/4
-        data-[side=bottom]:translate-y-1
-        data-[side=left]:-translate-x-1
-        data-[side=right]:translate-x-1
-        data-[side=top]:-translate-y-1
-      "
-      v-bind="{ ...forwarded, ...$attrs }">
+      class="data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 relative z-50 overflow-hidden rounded-xl border border-b2 bg-b1 text-bc shadow-md drop-shadow-lg drop-shadow-black/4 data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1"
+      v-bind="{ ...forwarded, ...$attrs }"
+    >
       <PopperScrollUpButton
         :class="{
           'pointer-events-none opacity-0 transition-opacity duration-300':
             arrivedState.top === true,
-        }" />
+        }"
+      />
 
       <div
         ref="el"
@@ -73,7 +59,8 @@ watch(
             `,
             props.class,
           )
-        ">
+        "
+      >
         <div :class="cn('size-full min-w-[--reka-popover-trigger-width] p-2')">
           <slot />
         </div>
@@ -83,7 +70,8 @@ watch(
         :class="{
           'pointer-events-none opacity-0 transition-opacity duration-300':
             arrivedState.bottom === true,
-        }" />
+        }"
+      />
     </PopoverContent>
   </PopoverPortal>
 </template>

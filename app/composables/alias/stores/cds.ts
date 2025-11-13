@@ -1,1 +1,1 @@
-export const cds = () => useCooldownStore()
+export const cds = () => useCooldownStore();

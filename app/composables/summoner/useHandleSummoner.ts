@@ -1,15 +1,15 @@
-import type { RouteParamValue, RouteRecordRaw } from 'vue-router'
+import type { RouteParamValue, RouteRecordRaw } from "vue-router";
 
 export interface SummonerRouteProps {
-  name: string
-  region: RouteParamValue
-  slug: RouteParamValue
-  tag: string
+  name: string;
+  region: RouteParamValue;
+  slug: RouteParamValue;
+  tag: string;
 }
 
 export function useHandleSummoner(routeProps?: SummonerRouteProps) {
-  const router = useRouter()
-  const route = useRoute()
+  const router = useRouter();
+  const route = useRoute();
 
   // This stays reactive to either passed props or route
   /*   const props = computed<SummonerRouteProps>(() => {
@@ -21,10 +21,10 @@ export function useHandleSummoner(routeProps?: SummonerRouteProps) {
     return { name, tag, region, slug }
   }) */
 
-  const puuid = ref<string | null>(null)
-  const summoner = ref<Summoner | null>(null)
-  const loading = ref(false)
-  const error = ref<unknown>(null)
+  const puuid = ref<string | null>(null);
+  const summoner = ref<Summoner | null>(null);
+  const loading = ref(false);
+  const error = ref<unknown>(null);
   /*
   async function fetchSummoner() {
     if (!props.value.region || !props.value.name || !props.value.tag) {
@@ -64,5 +64,5 @@ export function useHandleSummoner(routeProps?: SummonerRouteProps) {
     loading,
     summoner,
     // refresh: fetchSummoner, // optional manual trigger
-  }
+  };
 }

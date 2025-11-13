@@ -1,93 +1,85 @@
 <script setup lang="ts">
-import { LayoutGroup, motion } from 'motion-v'
-import { VueDraggable } from 'vue-draggable-plus'
+import { LayoutGroup, motion } from "motion-v";
+import { VueDraggable } from "vue-draggable-plus";
 
 definePageMeta({
-  name: 'pocket-champions',
-  title: 'champions',
+  name: "pocket-champions",
+  title: "champions",
   order: 1,
-})
+});
 
-const route = useRoute()
+const route = useRoute();
 const pocket = computed(() =>
-  ps().getPocket(String(route.params.pocket_key))
-).value
+  ps().getPocket(String(route.params.pocket_key)),
+).value;
 
-const isDragging = ref(false)
+const isDragging = ref(false);
 
 function onStart() {
-  isDragging.value = true
+  isDragging.value = true;
 }
 
 const source = computed(() =>
-  cs().filtered.filter(r => !pocket.champions.includes(r))
-)
+  cs().filtered.filter((r) => !pocket.champions.includes(r)),
+);
 
 // shallowRef prevents Vue from deeply tracking reorder mutations
-const rendered = shallowRef<string[]>([])
+const rendered = shallowRef<string[]>([]);
 
 // Sync rendered list to source, debounced to avoid flickers
 const syncRendered = useDebounceFn(() => {
-  const newList = source.value
+  const newList = source.value;
   if (JSON.stringify(newList) !== JSON.stringify(rendered.value))
-    rendered.value = [...newList]
-}, 100)
+    rendered.value = [...newList];
+}, 100);
 
-watch(source, syncRendered, { deep: true, immediate: true })
+watch(source, syncRendered, { deep: true, immediate: true });
 
 function onEnd(e) {
-  isDragging.value = false
-  const { newIndex, oldIndex } = e
-  if (oldIndex === newIndex)
-    return
+  isDragging.value = false;
+  const { newIndex, oldIndex } = e;
+  if (oldIndex === newIndex) return;
 
-  const moved = rendered.value.splice(oldIndex, 1)[0]
-  rendered.value.splice(newIndex, 0, moved)
+  const moved = rendered.value.splice(oldIndex, 1)[0];
+  rendered.value.splice(newIndex, 0, moved);
 
   // update the real store order here:
-  cs().reorder(rendered.value)
+  cs().reorder(rendered.value);
 }
 
 watch(source, () => {
-  if (!isDragging.value)
-    syncRendered()
-})
+  if (!isDragging.value) syncRendered();
+});
 
 function onAdd(e) {
-  console.log('🌱 - onAdd - e:', e)
-  pocket.champions.splice(e.oldIndex, 1)
-  cs().reorder(rendered.value.sort())
+  console.log("🌱 - onAdd - e:", e);
+  pocket.champions.splice(e.oldIndex, 1);
+  cs().reorder(rendered.value.sort());
 }
 
-const { show } = useChampionContextMenu()
+const { show } = useChampionContextMenu();
 
 function showContextMenu(e: MouseEvent, champion: string) {
-  show(e, champion, pocket)
+  show(e, champion, pocket);
 }
 </script>
 
 <template>
   <div class="inset-0 z-auto pt-12">
     <div
-      class="
-        sticky -top-56 z-2 w-full items-center space-y-6 bg-b1/98 pt-10 pb-6
-        backdrop-blur
-      ">
+      class="sticky -top-56 z-2 w-full items-center space-y-6 bg-b1/98 pt-10 pb-6 backdrop-blur"
+    >
       <div class="flex items-center gap-8 px-1">
-        <h1 class="capitalize">
-          Champions
-        </h1>
+        <h1 class="capitalize">Champions</h1>
         <ChampionQuote
           v-once
-          class="
-            grow text-end text-2 font-normal text-nowrap whitespace-nowrap
-            italic
-          " />
+          class="grow text-end text-2 font-normal text-nowrap whitespace-nowrap italic"
+        />
         <InputGroupPopover
-
           v-model:model-value="cs().filters.query"
           class="max-w-140"
-          @clear:input="cs().filters.query = ''">
+          @clear:input="cs().filters.query = ''"
+        >
           <ChampFilterPopoverContent />
         </InputGroupPopover>
       </div>
@@ -110,21 +102,19 @@ function showContextMenu(e: MouseEvent, champion: string) {
         drag-class="champion-icon-ghost-class"
         ghost-class="champion-icon-ghost-class"
         layout="position"
-        class="
-          inset-0 grid h-fit w-full auto-rows-max
-          grid-cols-[repeat(auto-fill,minmax(70px,1fr))] justify-between gap-4
-          p-1 pb-44
-        "
+        class="inset-0 grid h-fit w-full auto-rows-max grid-cols-[repeat(auto-fill,minmax(70px,1fr))] justify-between gap-4 p-1 pb-44"
         @start="onStart()"
         @end="onEnd($event)"
-        @add="onAdd($event)">
+        @add="onAdd($event)"
+      >
         <LayoutGroup>
           <AnimatePresence mode="sync">
             <PocketChampion
               v-for="champion in rendered"
               :key="champion"
               :k="champion"
-              :pocket />
+              :pocket
+            />
           </AnimatePresence>
         </LayoutGroup>
       </VueDraggable>
@@ -132,11 +122,11 @@ function showContextMenu(e: MouseEvent, champion: string) {
   </div>
 </template>
 
-        <!--
+<!--
           :id="champion.key"
           :data-id="champion.key"
           class="size-fit  aspect-square target shrink-0 p-0"> -->
-          <!--        <PocketChampion
+<!--        <PocketChampion
             :align-offset="-9"
             :k="champion.key"
           :pocket /> -->

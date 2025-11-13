@@ -1,17 +1,24 @@
 <script lang="ts" setup>
-import type { statIndex } from '#shared/references'
+import type { statIndex } from "#shared/references";
 
-const { class: className, icons, indicator = true, labels, variant = 'ghost', wrapperClass } = defineProps<{
-  icons?: boolean
-  labels?: boolean
-  class?: HTMLAttributes['class']
-  variant?: ButtonVariants['variant']
-  on?: ButtonVariants['on']
-  wrapperClass?: HTMLAttributes['class']
-  indicator?: boolean
-}>()
+const {
+  class: className,
+  icons,
+  indicator = true,
+  labels,
+  variant = "ghost",
+  wrapperClass,
+} = defineProps<{
+  icons?: boolean;
+  labels?: boolean;
+  class?: HTMLAttributes["class"];
+  variant?: ButtonVariants["variant"];
+  on?: ButtonVariants["on"];
+  wrapperClass?: HTMLAttributes["class"];
+  indicator?: boolean;
+}>();
 
-const groups = ['basic', 'utility', 'spells', 'defense', 'physical',]
+const groups = ["basic", "utility", "spells", "defense", "physical"];
 </script>
 
 <template>
@@ -19,15 +26,18 @@ const groups = ['basic', 'utility', 'spells', 'defense', 'physical',]
     v-model:model-value="is().filters.stats"
     class="h-120 max-h-90 w-full overflow-y-scroll overscroll-auto px-1.5"
     :multiple="true"
-    @entry-focus.prevent>
+    @entry-focus.prevent
+  >
     <ListboxContent :class="cn(wrapperClass)">
       <ListboxGroup
-        v-for="group, i in groups"
+        v-for="(group, i) in groups"
         :key="i"
-        :class="cn({ 'row-span-2': group === 'physical' })">
+        :class="cn({ 'row-span-2': group === 'physical' })"
+      >
         <ListboxGroupLabel
           v-if="labels"
-          class="mb-1 pl-0 !text-2 font-semibold text-bc/90 capitalize">
+          class="mb-1 pl-0 text-2! font-semibold text-bc/90 capitalize"
+        >
           {{ group }}
         </ListboxGroupLabel>
 

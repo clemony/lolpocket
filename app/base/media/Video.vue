@@ -1,22 +1,20 @@
 <script lang="ts" setup>
 const { src } = defineProps<{
-  src: string
-}>()
+  src: string;
+}>();
 
-const videoRef = useTemplateRef<HTMLMediaElement>('videoRef')
+const videoRef = useTemplateRef<HTMLMediaElement>("videoRef");
 
 function canPlay() {
-  if (!videoRef.value)
-    return
+  if (!videoRef.value) return;
 
-  videoRef.value.play()
+  videoRef.value.play();
 }
 
 function reload() {
-  if (!videoRef.value)
-    return
+  if (!videoRef.value) return;
 
-  videoRef.value.load()
+  videoRef.value.load();
 }
 </script>
 
@@ -32,9 +30,8 @@ function reload() {
     playsinline
     class="size-full overflow-hidden object-cover"
     @canplay="canPlay()"
-    @error="reload()">
-    <source
-      :src="src"
-      type="video/webm" />
+    @error="reload()"
+  >
+    <source :src="src" type="video/webm" />
   </video>
 </template>

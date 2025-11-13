@@ -1,11 +1,14 @@
 <script lang="ts" setup>
 const { class: className, summoner } = defineProps<{
-  summoner: Summoner
-  class?: HTMLAttributes['class']
-}>()
+  summoner: Summoner;
+  class?: HTMLAttributes["class"];
+}>();
 
-const state = useSummonerInject()
-const roleStats = await useMatchRoles(state.summoner.value.puuid, state.matches)
+const state = useSummonerInject();
+const roleStats = await useMatchRoles(
+  state.summoner.value.puuid,
+  state.matches,
+);
 
 /* // @fixme what */
 </script>

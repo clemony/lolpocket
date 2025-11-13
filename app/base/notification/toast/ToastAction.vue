@@ -1,18 +1,22 @@
 <script setup lang="ts">
-import type { ToastActionProps } from 'reka-ui'
-import type { HTMLAttributes } from 'vue'
-import { reactiveOmit } from '@vueuse/core'
-import { ToastAction } from 'reka-ui'
+import type { ToastActionProps } from "reka-ui";
+import type { HTMLAttributes } from "vue";
+import { reactiveOmit } from "@vueuse/core";
+import { ToastAction } from "reka-ui";
 
-const props = defineProps<ToastActionProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<
+  ToastActionProps & { class?: HTMLAttributes["class"] }
+>();
 
-const delegatedProps = reactiveOmit(props, 'class')
+const delegatedProps = reactiveOmit(props, "class");
 </script>
 
 <template>
   <ToastAction
     v-bind="delegatedProps"
-    :class="cn(`
+    :class="
+      cn(
+        `
       focus:ring-ring focus:ring-2 focus:ring-offset-2 focus:outline-none
       group-[.destructive]:hover:border-destructive/30
       group-[.destructive]:hover:bg-destructive
@@ -23,7 +27,11 @@ const delegatedProps = reactiveOmit(props, 'class')
       group-[.destructive]:border-b2/40
       hover:bg-tint-b2/40
       disabled:pointer-events-none disabled:opacity-50
-    `, props.class)">
+    `,
+        props.class,
+      )
+    "
+  >
     <slot />
   </ToastAction>
 </template>

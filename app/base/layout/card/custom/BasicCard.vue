@@ -1,13 +1,13 @@
 <script lang="ts" setup>
-import type { PrimitiveProps } from 'reka-ui'
-import { Primitive } from 'reka-ui'
+import type { PrimitiveProps } from "reka-ui";
+import { Primitive } from "reka-ui";
 
-const { as = 'div', class: className } = defineProps<
+const { as = "div", class: className } = defineProps<
   PrimitiveProps & {
-    class?: HTMLAttributes['class']
-    as?: string
+    class?: HTMLAttributes["class"];
+    as?: string;
   }
->()
+>();
 </script>
 
 <template>
@@ -21,7 +21,8 @@ const { as = 'div', class: className } = defineProps<
         `,
         className,
       )
-    ">
+    "
+  >
     <slot />
   </Primitive>
 </template>

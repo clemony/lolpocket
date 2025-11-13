@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import type { RuneSet } from '~~/shared/schema'
+import type { RuneSet } from "~~/shared/schema";
 
 const { class: className } = defineProps<{
-  class?: HTMLAttributes['class']
-  set: RuneSet
-}>()
+  class?: HTMLAttributes["class"];
+  set: RuneSet;
+}>();
 </script>
 
 <template>

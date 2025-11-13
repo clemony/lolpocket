@@ -2,20 +2,20 @@
 import type {
   SplitterResizeHandleEmits,
   SplitterResizeHandleProps,
-} from 'reka-ui'
-import { SplitterResizeHandle, useForwardPropsEmits } from 'reka-ui'
+} from "reka-ui";
+import { SplitterResizeHandle, useForwardPropsEmits } from "reka-ui";
 
 const props = defineProps<
-  SplitterResizeHandleProps & { class?: HTMLAttributes['class'] }
->()
-const emits = defineEmits<SplitterResizeHandleEmits>()
+  SplitterResizeHandleProps & { class?: HTMLAttributes["class"] }
+>();
+const emits = defineEmits<SplitterResizeHandleEmits>();
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
-  return delegated
-})
+  const { class: _, ...delegated } = props;
+  return delegated;
+});
 
-const forwarded = useForwardPropsEmits(delegatedProps, emits)
+const forwarded = useForwardPropsEmits(delegatedProps, emits);
 </script>
 
 <template>
@@ -37,11 +37,12 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
           [&[data-orientation=vertical]]:after:w-full
           [&[data-orientation=vertical]]:after:translate-x-0
           [&[data-orientation=vertical]]:after:-translate-y-1/2
-          [&[data-orientation=vertical]]:[&_.icon-thing]:!rotate-90
+          [&[data-orientation=vertical]]:[&_.icon-thing]:rotate-90!
         `,
         props.class,
       )
-    ">
+    "
+  >
     <slot />
   </SplitterResizeHandle>
 </template>

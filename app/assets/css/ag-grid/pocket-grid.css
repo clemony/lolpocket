@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 .pockets-grid .ag-root-wrapper-body {
   @apply after:inset-shadow-b1 after:rounded-box after:shadow-b1
@@ -7,16 +7,16 @@
     after:pointer-events-none;
 }
 
-:is([col-id='champion']) .ag-header-cell-text,
-:is([col-id='resource']) .ag-header-cell-label-container {
+:is([col-id="champion"]) .ag-header-cell-text,
+:is([col-id="resource"]) .ag-header-cell-label-container {
   @apply -mt-6 z-10 absolute;
 }
 
-:is([col-id='buy']).cell-class {
+:is([col-id="buy"]).cell-class {
   @apply justify-end;
 }
 
-:is([col-id='name']).cell-class {
+:is([col-id="name"]).cell-class {
   @apply justify-start;
 }
 

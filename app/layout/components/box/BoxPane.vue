@@ -1,21 +1,19 @@
 <script lang="ts" setup>
-import type { Mail } from './mails'
+import type { Mail } from "./mails";
 
 interface MailListProps {
-  items: Mail[]
+  items: Mail[];
 }
 
-defineProps<MailListProps>()
-const selected = defineModel<string>('selected', { required: false })
+defineProps<MailListProps>();
+const selected = defineModel<string>("selected", { required: false });
 
 function getBadgeVariantFromLabel(label: string) {
-  if (['work'].includes(label.toLowerCase()))
-    return 'default'
+  if (["work"].includes(label.toLowerCase())) return "default";
 
-  if (['personal'].includes(label.toLowerCase()))
-    return 'outline'
+  if (["personal"].includes(label.toLowerCase())) return "outline";
 
-  return 'secondary'
+  return "secondary";
 }
 </script>
 
@@ -33,7 +31,8 @@ function getBadgeVariantFromLabel(label: string) {
         selected === item.id && 'bg-b2/30',
       )
     "
-    @click="selected = item.id">
+    @click="selected = item.id"
+  >
     <div class="flex w-full flex-col gap-1">
       <div class="flex items-center">
         <div class="flex items-center gap-2">
@@ -42,7 +41,8 @@ function getBadgeVariantFromLabel(label: string) {
           </div>
           <span
             v-if="!item.read"
-            class="flex h-2 w-2 rounded-full bg-blue-600" />
+            class="flex h-2 w-2 rounded-full bg-blue-600"
+          />
         </div>
         <div
           :class="
@@ -50,7 +50,8 @@ function getBadgeVariantFromLabel(label: string) {
               'ml-auto text-2',
               selected === item.id ? 'text-bc' : 'text-bc/60',
             )
-          ">
+          "
+        >
           12 minutes ago
         </div>
       </div>
@@ -66,7 +67,8 @@ function getBadgeVariantFromLabel(label: string) {
       <Badge
         v-for="label of item.labels"
         :key="label"
-        :variant="getBadgeVariantFromLabel(label)">
+        :variant="getBadgeVariantFromLabel(label)"
+      >
         {{ label }}
       </Badge>
     </div>

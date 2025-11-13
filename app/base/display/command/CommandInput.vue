@@ -1,32 +1,31 @@
 <script setup lang="ts">
-import type { ListboxFilterProps } from 'reka-ui'
-import { ListboxFilter, useForwardProps } from 'reka-ui'
-import { useCommand } from './index.command'
+import type { ListboxFilterProps } from "reka-ui";
+import { ListboxFilter, useForwardProps } from "reka-ui";
+import { useCommand } from "./index.command";
 
 defineOptions({
   inheritAttrs: false,
-})
+});
 
 const props = defineProps<
   ListboxFilterProps & {
-    class?: HTMLAttributes['class']
+    class?: HTMLAttributes["class"];
   }
->()
+>();
 
-const delegatedProps = reactiveOmit(props, 'class')
+const delegatedProps = reactiveOmit(props, "class");
 
-const forwarded = useForwardProps(delegatedProps)
+const forwarded = useForwardProps(delegatedProps);
 
-const { filterState } = useCommand()
+const { filterState } = useCommand();
 </script>
 
 <template>
   <div
     class="flex items-center border-b border-b-b3/65 px-3"
-    cmdk-input-wrapper>
-    <icon
-      name="search"
-      class="mr-2 h-4 w-4 shrink-0 opacity-50" />
+    cmdk-input-wrapper
+  >
+    <icon name="search" class="mr-2 h-4 w-4 shrink-0 opacity-50" />
 
     <ListboxFilter
       v-bind="{ ...forwarded, ...$attrs }"
@@ -40,6 +39,7 @@ const { filterState } = useCommand()
           `,
           props.class,
         )
-      " />
+      "
+    />
   </div>
 </template>

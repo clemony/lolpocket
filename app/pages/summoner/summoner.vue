@@ -1,11 +1,11 @@
 <script setup lang="ts">
 definePageMeta({
-  name: 'Summoner Search',
-  path: '/summoner',
-  search: 'hidden',
-})
+  name: "Summoner Search",
+  path: "/summoner",
+  search: "hidden",
+});
 
-const router = useRouter()
+const router = useRouter();
 </script>
 
 <template>

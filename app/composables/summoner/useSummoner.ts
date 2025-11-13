@@ -1,129 +1,127 @@
-import { matchFilters, matchFiltersIgnoreChampion } from '#shared/references'
-import type { MatchFilter } from '~/stores'
-import { fetchSummonerMastery } from './helpers'
+import { matchFilters, matchFiltersIgnoreChampion } from "#shared/references";
+import type { MatchFilter } from "~/stores";
+import { fetchSummonerMastery } from "./helpers";
 
-export const SummonerKey = Symbol('SummonerProvider')
+export const SummonerKey = Symbol("SummonerProvider");
 
 export interface SummonerData {
-  allMatches: MatchData[]
-  clearFilters: () => void
-  fetchMastery: () => void
-  filter: MatchFilter
-  filteredChampions: any
-  findSummoner: () => void
-  links: Record<string, string>
-  loading: boolean
-  matches: MatchData[]
-  setFilter: (string, key) => void
-  summoner: Summoner
-  useAllies: any
-  useChampions: any
-  useItems: any
-  useRoles: any
+  allMatches: MatchData[];
+  clearFilters: () => void;
+  fetchMastery: () => void;
+  filter: MatchFilter;
+  filteredChampions: any;
+  findSummoner: () => void;
+  links: Record<string, string>;
+  loading: boolean;
+  matches: MatchData[];
+  setFilter: (string, key) => void;
+  summoner: Summoner;
+  useAllies: any;
+  useChampions: any;
+  useItems: any;
+  useRoles: any;
 }
 export function useSummonerProvider(identifier: string) {
-  const loading = ref(false)
-  const ready = ref(false)
-  const summoner = ref<Summoner | null>(null)
+  const loading = ref(false);
+  const ready = ref(false);
+  const summoner = ref<Summoner | null>(null);
   const currentPuuid = ref<string | null>(
-    typeof identifier === 'string' ? identifier : null
-  )
+    typeof identifier === "string" ? identifier : null,
+  );
 
-  const { getMatchesForSummoner } = useIndexedDB()
+  const { getMatchesForSummoner } = useIndexedDB();
 
-  const allMatches = ref<MatchData[]>([])
+  const allMatches = ref<MatchData[]>([]);
 
   // --- FILTER STATE ---
   const filter = ref<MatchFilter>({
-    ally: '',
-    champion: '',
+    ally: "",
+    champion: "",
     patch: 0,
     queue: 0,
-    role: 'ALL',
-  })
+    role: "ALL",
+  });
 
   // --- FILTER HELPERS ---
   function setFilter<K extends keyof MatchFilter>(
     key: K,
-    value: MatchFilter[K]
+    value: MatchFilter[K],
   ) {
-    filter.value[key] = value
+    filter.value[key] = value;
   }
 
   function clearFilters() {
     filter.value = {
-      ally: '',
-      champion: '',
+      ally: "",
+      champion: "",
       patch: 0,
       queue: 0,
-      role: 'ALL',
-    }
+      role: "ALL",
+    };
   }
 
   // --- FILTERED MATCHES ---
   const matches = computed(() => {
     if (
-      !filter.value
-      || Object.values(filter.value).every(v => !v || v === 0 || v === 'ALL')
+      !filter.value ||
+      Object.values(filter.value).every((v) => !v || v === 0 || v === "ALL")
     ) {
-      return allMatches.value
+      return allMatches.value;
     }
-    return allMatches.value.filter(match =>
-      matchFilters(currentPuuid.value!, match, filter.value)
-    )
-  })
+    return allMatches.value.filter((match) =>
+      matchFilters(currentPuuid.value!, match, filter.value),
+    );
+  });
 
-  const filteredChampionList = computed (() => {
+  const filteredChampionList = computed(() => {
     if (
-      !filter.value
-      || Object.values(filter.value).every(v => !v || v === 0 || v === 'ALL')
+      !filter.value ||
+      Object.values(filter.value).every((v) => !v || v === 0 || v === "ALL")
     ) {
-      return allMatches.value
+      return allMatches.value;
     }
-    return allMatches.value.filter(match =>
-      matchFiltersIgnoreChampion(currentPuuid.value!, match, filter.value)
-    )
-  })
+    return allMatches.value.filter((match) =>
+      matchFiltersIgnoreChampion(currentPuuid.value!, match, filter.value),
+    );
+  });
 
   const loadMatchesFromDB = async () => {
-    if (!summoner.value)
-      return
-    allMatches.value = await getMatchesForSummoner(summoner.value.puuid)
-  }
+    if (!summoner.value) return;
+    allMatches.value = await getMatchesForSummoner(summoner.value.puuid);
+  };
 
   const findSummoner = async (options?: { force?: boolean }) => {
-    if (!currentPuuid.value)
-      return
-    loading.value = true
-    ready.value = false
+    if (!currentPuuid.value) return;
+    loading.value = true;
+    ready.value = false;
 
     try {
-      const resolved = await ss().resolveSummoner({ puuid: currentPuuid.value })
+      const resolved = await ss().resolveSummoner({
+        puuid: currentPuuid.value,
+      });
 
-      currentPuuid.value = resolved.puuid
-      summoner.value = resolved
+      currentPuuid.value = resolved.puuid;
+      summoner.value = resolved;
 
-      await loadMatchesFromDB()
+      await loadMatchesFromDB();
+    } finally {
+      loading.value = false;
+      ready.value = true;
     }
-    finally {
-      loading.value = false
-      ready.value = true
-    }
-  }
+  };
 
   // --- FETCH MASTERY ---
   const fetchMastery = async () => {
-    if (!currentPuuid.value)
-      return null
-    return await fetchSummonerMastery(currentPuuid.value)
-  }
+    if (!currentPuuid.value) return null;
+    return await fetchSummonerMastery(currentPuuid.value);
+  };
 
   /*      FETCH from supabase user_public! table
   /*
 
  */
   // --- WATCH PUUID ---
-  watch(currentPuuid, () => findSummoner(), { immediate: true })
+  watch(currentPuuid, () => findSummoner(), { immediate: true });
 
   const state = {
     summoner,
@@ -133,14 +131,17 @@ export function useSummonerProvider(identifier: string) {
     matches,
 
     // data
-    allies: () =>
-      useRepeatedTeammates(summoner.value.puuid, allMatches.value),
+    allies: () => useRepeatedTeammates(summoner.value.puuid, allMatches.value),
     fetchMastery,
     roles: () => useMatchRoles(summoner.value.puuid, allMatches),
 
     // champions
     champions: (opt?: UseChampionOptions) =>
-      useChampions(summoner.value.puuid, opt?.filtered ? filteredChampionList.value : allMatches.value, opt?.champion),
+      useChampions(
+        summoner.value.puuid,
+        opt?.filtered ? filteredChampionList.value : allMatches.value,
+        opt?.champion,
+      ),
     findSummoner,
 
     // filters
@@ -156,56 +157,54 @@ export function useSummonerProvider(identifier: string) {
 
     // fetch
     fetchNewMatches: async () => {
-      if (!summoner.value)
-        return
-      allMatches.value = await useFetchMatches(currentPuuid.value)
-      summoner.value.updatedMatch = Date.now()
+      if (!summoner.value) return;
+      allMatches.value = await useFetchMatches(currentPuuid.value);
+      summoner.value.updatedMatch = Date.now();
     },
     loadMatches: () => loadMatchesFromDB,
-  }
+  };
 
-  provide(SummonerKey, state)
-  return state
+  provide(SummonerKey, state);
+  return state;
 }
 
 export function useSummonerInject() {
   const state = inject<{
-    summoner: Ref<Summoner | null>
+    summoner: Ref<Summoner | null>;
 
     // match
-    allMatches: Ref<MatchData[]>
-    matches: Ref<MatchData[]>
+    allMatches: Ref<MatchData[]>;
+    matches: Ref<MatchData[]>;
 
     // champions
-    champions: (opt?: UseChampionOptions | null) => UseChampionsReturn
+    champions: (opt?: UseChampionOptions | null) => UseChampionsReturn;
 
     // data
-    roles: () => Promise<any>
-    fetchMastery: () => Promise<any>
-    allies: () => MatchTeammatesReturn
+    roles: () => Promise<any>;
+    fetchMastery: () => Promise<any>;
+    allies: () => MatchTeammatesReturn;
 
     // filter
-    filter: Ref<MatchFilter>
-    clearFilter: () => void
-    setFilter: (string, key) => void
-    filteredChampionList: Ref<MatchData[]>
+    filter: Ref<MatchFilter>;
+    clearFilter: () => void;
+    setFilter: (string, key) => void;
+    filteredChampionList: Ref<MatchData[]>;
 
     // loading
-    loading: Ref<boolean>
-    ready: Ref<boolean>
-    forceReload: () => void
+    loading: Ref<boolean>;
+    ready: Ref<boolean>;
+    forceReload: () => void;
 
     // fetch
-    fetchNewMatches: () => Promise<void>
-    loadMatches: () => Promise<void>
-
-  }>(SummonerKey)
+    fetchNewMatches: () => Promise<void>;
+    loadMatches: () => Promise<void>;
+  }>(SummonerKey);
 
   if (!state) {
     throw new Error(
-      'No Summoner provider found. Make sure provideSummoner is called in a parent component.'
-    )
+      "No Summoner provider found. Make sure provideSummoner is called in a parent component.",
+    );
   }
 
-  return state
+  return state;
 }

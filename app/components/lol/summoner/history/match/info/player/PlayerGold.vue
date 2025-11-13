@@ -1,12 +1,12 @@
 <script lang="ts" setup>
 const { class: className, player } = defineProps<{
-  player: Player
-  class?: HTMLAttributes['class']
-}>()
+  player: Player;
+  class?: HTMLAttributes["class"];
+}>();
 
 const cs = computed(() => {
-  return player.totalMinionsKilled + player.neutralMinionsKilled
-})
+  return player.totalMinionsKilled + player.neutralMinionsKilled;
+});
 </script>
 
 <template>
@@ -22,23 +22,20 @@ const cs = computed(() => {
         `,
         className,
       )
-    ">
+    "
+  >
     <p
       v-tippy="'Minions Farmed'"
-      class="
-        flex items-center gap-1 decoration-1
-        hover:underline
-      ">
+      class="flex items-center gap-1 decoration-1 hover:underline"
+    >
       {{ cs }}
       <span class="font-mono">CS</span>
     </p>
 
     <p
       v-tippy="'Gold Earned'"
-      class="
-        flex items-center gap-1 decoration-1
-        hover:underline
-      ">
+      class="flex items-center gap-1 decoration-1 hover:underline"
+    >
       {{ player.goldEarned.toLocaleString() }}
       <span class="font-mono">G</span>
     </p>

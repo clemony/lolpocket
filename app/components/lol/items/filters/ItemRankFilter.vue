@@ -1,21 +1,27 @@
 <script setup lang="ts">
-import { itemRanks } from '#shared/references'
+import { itemRanks } from "#shared/references";
 
-const { class: className, clear = true, hover = 'neutral', size = ['sq-12', '12'], variant = 'btn' } = defineProps<{
-  class?: HTMLAttributes['class']
-  size?: ButtonVariants['size'][]
-  variant?: ButtonVariants['variant']
-  hover?: ButtonVariants['hover']
-  clear?: boolean
-}>()
+const {
+  class: className,
+  clear = true,
+  hover = "neutral",
+  size = ["sq-12", "12"],
+  variant = "btn",
+} = defineProps<{
+  class?: HTMLAttributes["class"];
+  size?: ButtonVariants["size"][];
+  variant?: ButtonVariants["variant"];
+  hover?: ButtonVariants["hover"];
+  clear?: boolean;
+}>();
 // @todo fixthis
 function handleReset() {
   // is().filters.rank = null
   // is().itemGridApi.refreshCells()
 }
-const route = useRoute()
+const route = useRoute();
 function handleUpdate() {
-  if (route.path === '/items/stats') {
+  if (route.path === "/items/stats") {
     // is().itemGridApi.refreshCells()
   }
 }
@@ -24,21 +30,19 @@ function handleUpdate() {
 <template>
   <TransitionSlideLeft
     group
-    :class="cn('relative z-1 flex w-full flex-wrap items-center gap-3', className)">
+    :class="
+      cn('relative z-1 flex w-full flex-wrap items-center gap-3', className)
+    "
+  >
     <Button
       v-if="is().filters.rank && clear"
       :variant
       :hover
-
       :size="size[0]"
-      class="
-        order-first
-        hover:*:opacity-100
-      "
-      @click="is().filters.rank = null">
-      <icon
-        name="x"
-        class="size-4" />
+      class="order-first hover:*:opacity-100"
+      @click="is().filters.rank = null"
+    >
+      <icon name="x" class="size-4" />
     </Button>
 
     <Label
@@ -46,21 +50,28 @@ function handleUpdate() {
       :key="rank.name"
       :size="size[1]"
       base="btn"
-      :hover=" is().filters.rank === rank.name ? 'btn' : hover"
-      :variant="
-        is().filters.rank === rank.name ? 'neutral' : variant
-      "
-      :class="cn(`
-        order-2 px-5 text-2 !font-medium shadow-none
+      :hover="is().filters.rank === rank.name ? 'btn' : hover"
+      :variant="is().filters.rank === rank.name ? 'neutral' : variant"
+      :class="
+        cn(
+          `
+        order-2 px-5 text-2 font-medium! shadow-none
         hover:text-bc
-      `, { 'order-1 ': is().filters.rank === rank.name })"
-      @click="is().filters.rank === rank.name ? (is().filters.rank = null) : null">
+      `,
+          { 'order-1 ': is().filters.rank === rank.name },
+        )
+      "
+      @click="
+        is().filters.rank === rank.name ? (is().filters.rank = null) : null
+      "
+    >
       <input
         v-model="is().filters.rank"
         class="peer absolute hidden"
         type="radio"
         :value="rank.name"
-        name="item-types" />
+        name="item-types"
+      />
       {{ rank.name }}
     </Label>
   </TransitionSlideLeft>

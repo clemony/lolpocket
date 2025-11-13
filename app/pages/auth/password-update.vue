@@ -1,23 +1,23 @@
 <script lang="ts" setup>
-import { toast } from '~/base/notification/toast/use-toast'
+import { toast } from "~/base/notification/toast/use-toast";
 
 definePageMeta({
-  name: 'Update Password',
-  title: 'Choose a new password',
-  description: 'Let\'s try out a password manager this time, yeah?',
-  icon: 'key',
-  layout: 'basic',
-  search: 'user',
-})
+  name: "Update Password",
+  title: "Choose a new password",
+  description: "Let's try out a password manager this time, yeah?",
+  icon: "key",
+  layout: "basic",
+  search: "user",
+});
 
-const password = ref('')
+const password = ref("");
 
 function handleReset() {
   toast({
-    title: 'Password reset link sent!',
+    title: "Password reset link sent!",
     description:
-      'Check your email for a message from the customer support lolpocat.',
-  })
+      "Check your email for a message from the customer support lolpocat.",
+  });
 }
 </script>
 
@@ -36,7 +36,8 @@ function handleReset() {
               class="h-12"
               type="password"
               required
-              @clear:input="password = ''" />
+              @clear:input="password = ''"
+            />
           </div>
           <div class="grid w-full gap-y-2">
             <Button
@@ -44,7 +45,8 @@ function handleReset() {
               size="12"
               type="submit"
               class="h-14 w-full font-medium"
-              @click="handleReset()">
+              @click="handleReset()"
+            >
               Reset Password
             </Button>
 
@@ -53,11 +55,9 @@ function handleReset() {
               variant="link"
               size="12"
               hover="link"
-              class="
-                underline-offset-1.5 h-14 w-full justify-center gap-3
-                justify-self-start
-              "
-              @click="navigateTo('/login')">
+              class="underline-offset-1.5 h-14 w-full justify-center gap-3 justify-self-start"
+              @click="navigateTo('/login')"
+            >
               Remembered it? Log in
             </Button>
           </div>

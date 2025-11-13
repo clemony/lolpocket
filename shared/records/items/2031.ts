@@ -1,43 +1,35 @@
 const item: Item = {
   id: 2031,
-  name: 'Refillable Potion',
-  nicknames: [
-    'Green Potion'
-  ],
+  name: "Refillable Potion",
+  nicknames: ["Green Potion"],
   buildsInto: [
     {
       id: 2033,
-      name: 'Corrupting Potion',
-      gold: 500
-    }
+      name: "Corrupting Potion",
+      gold: 500,
+    },
   ],
-  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2031_class_t1_refillablepotion.png',
-  maps: [
-    11,
-    12,
-    21
-  ],
+  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2031_class_t1_refillablepotion.png",
+  maps: [11, 12, 21],
   noEffects: false,
   passives: [
     {
-      effects: 'Holds charges that refill upon visiting the shop.',
-      unique: true
-    }
+      effects: "Holds charges that refill upon visiting the shop.",
+      unique: true,
+    },
   ],
-  rank: 'Consumable',
+  rank: "Consumable",
   removed: false,
   shop: {
     prices: {
       combined: 150,
       sell: 60,
-      total: 150
+      total: 150,
     },
-    tags: [
-      'HEALTH_AND_REG'
-    ]
+    tags: ["HEALTH_AND_REG"],
   },
-  simpleDescription: 'Restores Health over time. Refills at shop.',
+  simpleDescription: "Restores Health over time. Refills at shop.",
   specialRecipe: 0,
-  stats: {}
-}
-export default item
+  stats: {},
+};
+export default item;

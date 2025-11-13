@@ -1,32 +1,27 @@
 <script lang="ts" setup>
 const props = defineProps<{
-  class?: HTMLAttributes['class']
-}>()
+  class?: HTMLAttributes["class"];
+}>();
 
-const emit = defineEmits(['update:patch'])
+const emit = defineEmits(["update:patch"]);
 
-const modelValue = ref(ms().filter.patch ?? ds().currentPatch)
+const modelValue = ref(ms().filter.patch ?? ds().currentPatch);
 </script>
 
 <template>
-  <Select
-    v-model:model-value="modelValue"
-    class="p-0">
+  <Select v-model:model-value="modelValue" class="p-0">
     <SelectTrigger
-      class="
-        border-none bg-transparent px-2 shadow-none
-        focus:ring-0 focus:outline-0
-      "
+      class="border-none bg-transparent px-2 shadow-none focus:ring-0 focus:outline-0"
       :class="cn('', props.class)"
-      no-arrow>
-      <icon
-        name="more"
-        class="size-5 shrink-0" />
+      no-arrow
+    >
+      <icon name="more" class="size-5 shrink-0" />
     </SelectTrigger>
 
     <SelectContent
       position="popper"
-      class="!w-[var(--reka-select-trigger-width)]">
+      class="w-[var(--reka-select-trigger-width)]!"
+    >
       <SelectGroup>
         <SelectLabel>Patch</SelectLabel>
 
@@ -34,7 +29,8 @@ const modelValue = ref(ms().filter.patch ?? ds().currentPatch)
           v-for="patch in ds().patchList"
           :key="patch"
           :value="patch"
-          no-tick>
+          no-tick
+        >
           <slot :value="patch.toString()" />
 
           <span class="flex items-center gap-2">
@@ -42,7 +38,8 @@ const modelValue = ref(ms().filter.patch ?? ds().currentPatch)
               <icon
                 v-if="ms().filter.patch === patch"
                 name="tick-sm"
-                class="size-4.5 dst" />
+                class="size-4.5 dst"
+              />
             </span>
             {{ patch }}
           </span>

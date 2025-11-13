@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import type { SplitterGroupEmits, SplitterGroupProps } from 'reka-ui'
-import { SplitterGroup, useForwardPropsEmits } from 'reka-ui'
+import type { SplitterGroupEmits, SplitterGroupProps } from "reka-ui";
+import { SplitterGroup, useForwardPropsEmits } from "reka-ui";
 
 const props = defineProps<
-  SplitterGroupProps & { class?: HTMLAttributes['class'] }
->()
-const emits = defineEmits<SplitterGroupEmits>()
+  SplitterGroupProps & { class?: HTMLAttributes["class"] }
+>();
+const emits = defineEmits<SplitterGroupEmits>();
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
-  return delegated
-})
+  const { class: _, ...delegated } = props;
+  return delegated;
+});
 
-const forwarded = useForwardPropsEmits(delegatedProps, emits)
+const forwarded = useForwardPropsEmits(delegatedProps, emits);
 </script>
 
 <template>
@@ -26,7 +26,8 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
         `,
         props.class,
       )
-    ">
+    "
+  >
     <slot />
   </SplitterGroup>
 </template>

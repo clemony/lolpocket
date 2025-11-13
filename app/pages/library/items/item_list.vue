@@ -5,7 +5,7 @@ import type {
   GridOptions,
   GridPreDestroyedEvent,
   GridReadyEvent,
-} from 'ag-grid-community'
+} from "ag-grid-community";
 import {
   CellStyleModule,
   ClientSideRowModelModule,
@@ -17,16 +17,16 @@ import {
   RenderApiModule,
   RowSelectionModule,
   ValidationModule,
-} from 'ag-grid-community'
-import { AgGridVue } from 'ag-grid-vue3'
-import { pocketTheme } from '~/utils/config/tableTheme'
+} from "ag-grid-community";
+import { AgGridVue } from "ag-grid-vue3";
+import { pocketTheme } from "~/utils/config/tableTheme";
 
 definePageMeta({
-  name: 'Item Stats',
-  icon: 'bi:list-ul',
-})
+  name: "Item Stats",
+  icon: "bi:list-ul",
+});
 
-const theme = ref(pocketTheme)
+const theme = ref(pocketTheme);
 
 const gridOptions: GridOptions<ItemLite> = {
   columnHoverHighlight: true,
@@ -34,10 +34,10 @@ const gridOptions: GridOptions<ItemLite> = {
     initialHide: false,
     minWidth: 63,
     autoHeaderHeight: true,
-    cellClass: 'text-end grid justify-end size-full',
+    cellClass: "text-end grid justify-end size-full",
     flex: 1,
     resizable: false,
-    sortingOrder: ['desc', 'asc', null],
+    sortingOrder: ["desc", "asc", null],
     wrapHeaderText: true,
   },
   // rowData: itemsLite.filter(i => is().filtered.includes(i.id)),
@@ -45,271 +45,266 @@ const gridOptions: GridOptions<ItemLite> = {
     checkboxes: false,
     enableClickSelection: true,
     headerCheckbox: false,
-    mode: 'multiRow',
+    mode: "multiRow",
   },
-}
+};
 
 const colDefs = [
   {
     maxWidth: 61,
     minWidth: 61,
     width: 61,
-    cellClass: '!py-1 !pr-1 !ml-0',
-    cellRenderer: params =>
+    cellClass: "!py-1 !pr-1 !ml-0",
+    cellRenderer: (params) =>
       `<img src="/img/items/${params.value}.webp" class="size-12 aspect-square rounded-full drop-shadow-sm shadow-sm" />`,
-    field: 'id',
-    headerName: '',
+    field: "id",
+    headerName: "",
     sortable: false,
   },
   {
     minWidth: 100,
-    cellClass: 'font-medium  ',
-    cellDataType: 'text',
-    field: 'name',
+    cellClass: "font-medium  ",
+    cellDataType: "text",
+    field: "name",
     flex: 3,
     headerComponentParams: {
       innerHeaderComponentParams: {
-        name: 'Item',
+        name: "Item",
       },
     },
-    headerName: 'Item',
+    headerName: "Item",
     sortable: false,
   },
   {
-    cellDataType: 'number',
-    field: 'stats.abilityHaste',
+    cellDataType: "number",
+    field: "stats.abilityHaste",
     headerComponentParams: {
       innerHeaderComponentParams: {
-        icon: 'ah',
+        icon: "ah",
       },
     },
-    headerName: 'Ability Haste',
+    headerName: "Ability Haste",
   },
   {
-    cellDataType: 'number',
-    field: 'stats.abilityPower',
+    cellDataType: "number",
+    field: "stats.abilityPower",
     headerComponentParams: {
       innerHeaderComponentParams: {
-        icon: 'ap',
+        icon: "ap",
       },
     },
-    headerName: 'Ability Power',
+    headerName: "Ability Power",
   },
   {
-    cellDataType: 'number',
-    field: 'stats.armor',
+    cellDataType: "number",
+    field: "stats.armor",
     headerComponentParams: {
       innerHeaderComponentParams: {
-        icon: 'armor',
+        icon: "armor",
       },
     },
-    headerName: 'Armor',
+    headerName: "Armor",
   },
   {
-    cellDataType: 'number',
-    field: 'stats.armorPenetration',
+    cellDataType: "number",
+    field: "stats.armorPenetration",
     headerComponentParams: {
       innerHeaderComponentParams: {
-        icon: 'armpen',
+        icon: "armpen",
       },
     },
-    headerName: 'Armor Pen',
+    headerName: "Armor Pen",
   },
   {
     minWidth: 60,
-    cellDataType: 'number',
-    field: 'stats.attackDamage',
+    cellDataType: "number",
+    field: "stats.attackDamage",
     flex: 1.2,
     headerComponentParams: {
       innerHeaderComponentParams: {
-        icon: 'ad',
+        icon: "ad",
       },
     },
-    headerName: 'Attack Damage',
+    headerName: "Attack Damage",
   },
   {
-    cellDataType: 'number',
-    field: 'stats.attackSpeed',
+    cellDataType: "number",
+    field: "stats.attackSpeed",
     headerComponentParams: {
       innerHeaderComponentParams: {
-        icon: 'as',
+        icon: "as",
       },
     },
-    headerName: 'Attack Speed',
+    headerName: "Attack Speed",
   },
   {
-    cellDataType: 'number',
-    field: 'stats.criticalStrikeChance',
+    cellDataType: "number",
+    field: "stats.criticalStrikeChance",
     headerComponentParams: {
       innerHeaderComponentParams: {
-        icon: 'crit',
+        icon: "crit",
       },
     },
-    headerName: 'Critical Chance',
+    headerName: "Critical Chance",
   },
   {
     hide: true,
-    cellDataType: 'number',
-    field: 'stats.goldPer10',
+    cellDataType: "number",
+    field: "stats.goldPer10",
     headerComponentParams: {
       innerHeaderComponentParams: {
-        icon: 'gp10',
+        icon: "gp10",
       },
     },
-    headerName: 'Gold per 10',
+    headerName: "Gold per 10",
   },
   {
-    cellDataType: 'number',
-    field: 'stats.healAndShieldPower',
+    cellDataType: "number",
+    field: "stats.healAndShieldPower",
     headerComponentParams: {
       innerHeaderComponentParams: {
-        icon: 'hsp',
+        icon: "hsp",
       },
     },
-    headerName: 'Heal & Shield',
+    headerName: "Heal & Shield",
   },
   {
-    cellDataType: 'number',
-    field: 'stats.health',
+    cellDataType: "number",
+    field: "stats.health",
     headerComponentParams: {
       innerHeaderComponentParams: {
-        icon: 'hp',
+        icon: "hp",
       },
     },
-    headerName: 'Health',
+    headerName: "Health",
   },
   {
-    cellDataType: 'number',
-    field: 'stats.healthRegen',
+    cellDataType: "number",
+    field: "stats.healthRegen",
     headerComponentParams: {
       innerHeaderComponentParams: {
-        icon: 'hp5',
+        icon: "hp5",
       },
     },
-    headerName: 'Health Regen',
+    headerName: "Health Regen",
   },
   {
-    cellDataType: 'number',
-    field: 'stats.lethality',
-    headerClass: 'break-none truncate',
+    cellDataType: "number",
+    field: "stats.lethality",
+    headerClass: "break-none truncate",
     headerComponentParams: {
       innerHeaderComponentParams: {
-        icon: 'lethality',
+        icon: "lethality",
       },
     },
-    headerName: 'Lethality',
+    headerName: "Lethality",
   },
   {
-    cellDataType: 'number',
-    field: 'stats.lifesteal',
+    cellDataType: "number",
+    field: "stats.lifesteal",
     headerComponentParams: {
       innerHeaderComponentParams: {
-        icon: 'lifesteal',
+        icon: "lifesteal",
       },
     },
-    headerName: 'Lifesteal',
+    headerName: "Lifesteal",
   },
   {
-    cellDataType: 'text',
+    cellDataType: "text",
     headerComponentParams: {
       innerHeaderComponentParams: {
-        icon: 'mpen',
+        icon: "mpen",
       },
     },
-    headerName: 'Magic Pen',
+    headerName: "Magic Pen",
     valueGetter: (params) => {
-      const stats = params.data?.stats ?? {}
-      if (stats.mpen !== null)
-        return `${stats.percentMagicPenetration}%`
-      if (stats.mpenflat !== null)
-        return `${stats.flatMagicPenetration}`
-      return ''
+      const stats = params.data?.stats ?? {};
+      if (stats.mpen !== null) return `${stats.percentMagicPenetration}%`;
+      if (stats.mpenflat !== null) return `${stats.flatMagicPenetration}`;
+      return "";
     },
   },
 
   {
-    cellDataType: 'number',
-    field: 'stats.magicResistance',
+    cellDataType: "number",
+    field: "stats.magicResistance",
     headerComponentParams: {
       innerHeaderComponentParams: {
-        icon: 'mr',
+        icon: "mr",
       },
     },
-    headerName: 'Magic Resist',
+    headerName: "Magic Resist",
   },
   {
-    cellDataType: 'number',
-    field: 'stats.mana',
+    cellDataType: "number",
+    field: "stats.mana",
     headerComponentParams: {
       innerHeaderComponentParams: {
-        icon: 'mana',
+        icon: "mana",
       },
     },
-    headerName: 'Mana',
+    headerName: "Mana",
   },
   {
-    cellDataType: 'number',
-    field: 'stats.manaRegen',
+    cellDataType: "number",
+    field: "stats.manaRegen",
     headerComponentParams: {
       innerHeaderComponentParams: {
-        icon: 'mp5',
+        icon: "mp5",
       },
     },
-    headerName: 'Mana Regen',
+    headerName: "Mana Regen",
   },
   {
-    cellDataType: 'text',
+    cellDataType: "text",
     headerComponentParams: {
       innerHeaderComponentParams: {
-        icon: 'ms',
+        icon: "ms",
       },
     },
-    headerName: 'Move Speed',
+    headerName: "Move Speed",
     valueGetter: (params) => {
-      const stats = params.data?.stats ?? {}
-      if (stats.ms !== null)
-        return `${stats.percentMovespeed}%`
-      if (stats.msflat !== null)
-        return `${stats.flatMovespeed}`
-      return ''
+      const stats = params.data?.stats ?? {};
+      if (stats.ms !== null) return `${stats.percentMovespeed}%`;
+      if (stats.msflat !== null) return `${stats.flatMovespeed}`;
+      return "";
     },
   },
   {
     minWidth: 71,
-    cellClass: 'pr-6 text-right',
-    cellDataType: 'number',
-    field: 'cost',
+    cellClass: "pr-6 text-right",
+    cellDataType: "number",
+    field: "cost",
     flex: 1.5,
     headerComponentParams: {
       innerHeaderComponentParams: {
-        icon: 'gold',
+        icon: "gold",
       },
     },
-    headerName: 'Shop Price',
+    headerName: "Shop Price",
   },
-]
-const gridApi = shallowRef<GridApi | null>(null)
+];
+const gridApi = shallowRef<GridApi | null>(null);
 
 // const listener = event => is().dbItemStatListKey++
 
 async function onGridReady(params: GridReadyEvent) {
-  await params.api
-  gridApi.value = params.api
-  is().itemGridApi = gridApi.value
+  await params.api;
+  gridApi.value = params.api;
+  is().itemGridApi = gridApi.value;
 
-  const columns = gridApi.value.getColumns()
+  const columns = gridApi.value.getColumns();
   columns.forEach((col) => {
     // col.addEventListener('visibleChanged', listener)
-  })
+  });
 }
 
 watch(
   () => is().filtered,
   (newVal) => {
-    if (newVal && gridApi.value)
-      gridApi.value.setGridOption('rowData', [])
-  }
-)
+    if (newVal && gridApi.value) gridApi.value.setGridOption("rowData", []);
+  },
+);
 
 ModuleRegistry.registerModules([
   ClientSideRowModelModule,
@@ -322,7 +317,7 @@ ModuleRegistry.registerModules([
   CellStyleModule,
   GridStateModule,
   RenderApiModule,
-])
+]);
 </script>
 
 <template>
@@ -333,6 +328,7 @@ ModuleRegistry.registerModules([
       :column-defs="colDefs"
       class="stat-grid h-full grow pt-16"
       :tooltip-show-delay="400"
-      @grid-ready="onGridReady"></AgGridVue>
+      @grid-ready="onGridReady"
+    ></AgGridVue>
   </div>
 </template>

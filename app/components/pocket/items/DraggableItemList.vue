@@ -1,12 +1,15 @@
 <script setup lang="ts">
-import { motion } from 'motion-v'
-import { vDraggable } from 'vue-draggable-plus'
+import { motion } from "motion-v";
+import { vDraggable } from "vue-draggable-plus";
 
-const a = computed (() => is().filtered.length < is().defaultFilterLength)
+const a = computed(() => is().filtered.length < is().defaultFilterLength);
 
-watch(() => a.value, (newVal) => {
-  console.log('💠 - watch - newVal:', newVal)
-})
+watch(
+  () => a.value,
+  (newVal) => {
+    console.log("💠 - watch - newVal:", newVal);
+  },
+);
 </script>
 
 <template>
@@ -30,10 +33,8 @@ watch(() => a.value, (newVal) => {
         },
       ]"
       layout="position"
-      class="
-        grid w-full grid-cols-[repeat(auto-fill,minmax(60px,1fr))]
-        justify-between gap-4 pt-6 select-none
-      ">
+      class="grid w-full grid-cols-[repeat(auto-fill,minmax(60px,1fr))] justify-between gap-4 pt-6 select-none"
+    >
       <AnimatePresence>
         <motion.div
           v-for="item in is().filtered"
@@ -41,31 +42,26 @@ watch(() => a.value, (newVal) => {
           :transition="{
             duration: 0.2,
           }"
-          layout="position">
-          <LazyItemPopover
-            :id="item"
-            class="aspect-square size-20" />
+          layout="position"
+        >
+          <LazyItemPopover :id="item" class="aspect-square size-20" />
         </motion.div>
       </AnimatePresence>
     </motion.div>
     <TransitionScalePop
       v-if="is().filtered.length < is().defaultFilterLength"
-      class="z-2 grid w-full place-items-center pt-32">
+      class="z-2 grid w-full place-items-center pt-32"
+    >
       <Button
         variant="outline"
         size="sm"
-        class="
-          w-fit
-          *:opacity-80
-          hover:inset-shadow-xs hover:*:opacity-100
-        "
-        @click="is().clearFilters()">
+        class="w-fit *:opacity-80 hover:inset-shadow-xs hover:*:opacity-100"
+        @click="is().clearFilters()"
+      >
         <span>
-          {{ !is().filtered.length ? 'sold out' : 'reset' }}
+          {{ !is().filtered.length ? "sold out" : "reset" }}
         </span>
-        <icon
-          name="reset"
-          class="size-3.5" />
+        <icon name="reset" class="size-3.5" />
       </Button>
     </TransitionScalePop>
   </div>

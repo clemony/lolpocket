@@ -7,9 +7,7 @@ const { abilities, k } = defineProps<{
 }>()
 
 const emit = defineEmits(['update:ability'])
-const champion = await import(
-  `#shared/appdata/records/champions/${k}.ts`
-)
+const champion = await import(`#shared/records/champions/${k}.ts`)
 const loaded = ref(false)
 const champAbilities = computed(() => {
   console.log('🌱 - champion:', champion)
@@ -40,11 +38,16 @@ onKeyUp(['p', 'q', 'w', 'e', 'r'], (e) => {
   keyDown.value = false
 })
 
-const gridCols = computed (() => `grid grid-cols-${champAbilities.value.length}`)
+const gridCols = computed(
+  () => `grid grid-cols-${champAbilities.value.length}`,
+)
 </script>
 
 <template>
-  <menu :class="cn('pointer-events-auto z-1 items-center justify-between gap-2', gridCols)">
+  <menu
+    :class="
+      cn('pointer-events-auto z-1 items-center justify-between gap-2', gridCols)
+    ">
     <Label
       v-for="(ability, i) in champAbilities"
       :key="i"
@@ -53,13 +56,14 @@ const gridCols = computed (() => `grid grid-cols-${champAbilities.value.length}`
       size="sq-14"
       :value="i"
       class="
-        group aspect-square h-auto w-full !cursor-pointer overflow-hidden
+        group aspect-square h-auto w-full cursor-pointer! overflow-hidden
         border-0 p-0 transition-transform duration-300
         **:pointer-events-none
         hover:scale-110
       "
       :class="{
-        'scale-110 hover:scale-115': selectedAbility === ability.key }">
+        'scale-110 hover:scale-115': selectedAbility === ability.key,
+      }">
       <input
         v-model="selectedAbility"
         :value="i"
@@ -83,7 +87,6 @@ const gridCols = computed (() => `grid grid-cols-${champAbilities.value.length}`
           'animate-out fade-out-50 duration-500': loaded,
         }"
         @load="loaded = true" />
-
     </Label>
   </menu>
 </template>

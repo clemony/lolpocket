@@ -1,32 +1,32 @@
 <script lang="ts" setup>
-import { Primitive } from 'reka-ui'
-import { runeToPath } from '~~/shared/indexes'
+import { Primitive } from "reka-ui";
+import { runeToPath } from "~~/shared/indexes";
 
 const {
   id,
-  as = 'label',
+  as = "label",
   class: className,
-  loadedClass
+  loadedClass,
 } = defineProps<{
-  class?: HTMLAttributes['class']
-  id: number | null
-  loadedClass?: HTMLAttributes['class']
-  as?: string
-}>()
-const loaded = ref(false)
-const imgEl = useTemplateRef<HTMLImageElement>('imgEl')
+  class?: HTMLAttributes["class"];
+  id: number | null;
+  loadedClass?: HTMLAttributes["class"];
+  as?: string;
+}>();
+const loaded = ref(false);
+const imgEl = useTemplateRef<HTMLImageElement>("imgEl");
 
 watch(
   () => id,
   () => {
-    loaded.value = false
+    loaded.value = false;
     nextTick(() => {
       if (imgEl.value?.complete) {
-        loaded.value = true
+        loaded.value = true;
       }
-    })
-  }
-)
+    });
+  },
+);
 </script>
 
 <template>
@@ -44,7 +44,8 @@ watch(
         loaded ? loadedClass : ' border border-b2 bg-b2/30 ',
         className,
       )
-    ">
+    "
+  >
     <slot />
     <img
       v-if="id"
@@ -57,6 +58,7 @@ watch(
           'scale-105 ': loaded,
         })
       "
-      @load="loaded = true" />
+      @load="loaded = true"
+    />
   </Primitive>
 </template>

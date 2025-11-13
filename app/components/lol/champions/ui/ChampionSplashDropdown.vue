@@ -1,8 +1,7 @@
 <script setup lang="ts">
 const { champion } = defineProps<{
-
-  champion: string
-}>()
+  champion: string;
+}>();
 
 // @todo FIX
 </script>
@@ -10,19 +9,19 @@ const { champion } = defineProps<{
 <template>
   <Popover>
     <PopoverTrigger
-      class="
-        btn btn-circle size-11 btn-ghost
-        hover:border-b3 hover:bg-b2
-      ">
+      class="btn btn-circle size-11 btn-ghost hover:border-b3 hover:bg-b2"
+    >
       <div
         v-if="champion"
         :key="champion"
         class="size-8 overflow-hidden rounded-full"
-        :class="{}">
+        :class="{}"
+      >
         <Image
           :image="`/img/champion/${champion}.webp`"
           :alt="champion"
-          class="!size-8 scale-114" />
+          class="size-8! scale-114"
+        />
       </div>
     </PopoverTrigger>
 
@@ -30,7 +29,8 @@ const { champion } = defineProps<{
       align="start"
       :side-offset="6"
       :align-offset="-12"
-      class="grid w-fit min-w-90 grid-cols-4 gap-2">
+      class="grid w-fit min-w-90 grid-cols-4 gap-2"
+    >
       <!-- <Label v-for="splash in ix().skins" :key="splash.name">
         <PopoverClose as-child>
           <Champion :url="getSplash(splash.tilePath)" class="size-20 min-h-20 shadow-sm drop-shadow-sm" />

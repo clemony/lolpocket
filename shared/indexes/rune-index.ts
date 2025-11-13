@@ -3,307 +3,307 @@
 export const runeIndex: RuneIndex[] = [
   {
     id: 8437,
-    key: 'rune',
-    name: 'Grasp of the Undying'
+    key: "rune",
+    name: "Grasp of the Undying",
   },
   {
     id: 8439,
-    key: 'rune',
-    name: 'Aftershock'
+    key: "rune",
+    name: "Aftershock",
   },
   {
     id: 8465,
-    key: 'rune',
-    name: 'Guardian'
+    key: "rune",
+    name: "Guardian",
   },
   {
     id: 8446,
-    key: 'rune',
-    name: 'Demolish'
+    key: "rune",
+    name: "Demolish",
   },
   {
     id: 8463,
-    key: 'rune',
-    name: 'Font of Life'
+    key: "rune",
+    name: "Font of Life",
   },
   {
     id: 8401,
-    key: 'rune',
-    name: 'Shield Bash'
+    key: "rune",
+    name: "Shield Bash",
   },
   {
     id: 8429,
-    key: 'rune',
-    name: 'Conditioning'
+    key: "rune",
+    name: "Conditioning",
   },
   {
     id: 8444,
-    key: 'rune',
-    name: 'Second Wind'
+    key: "rune",
+    name: "Second Wind",
   },
   {
     id: 8473,
-    key: 'rune',
-    name: 'Bone Plating'
+    key: "rune",
+    name: "Bone Plating",
   },
   {
     id: 8451,
-    key: 'rune',
-    name: 'Overgrowth'
+    key: "rune",
+    name: "Overgrowth",
   },
   {
     id: 8453,
-    key: 'rune',
-    name: 'Revitalize'
+    key: "rune",
+    name: "Revitalize",
   },
   {
     id: 8242,
-    key: 'rune',
-    name: 'Unflinching'
+    key: "rune",
+    name: "Unflinching",
   },
   {
     id: 8112,
-    key: 'rune',
-    name: 'Electrocute'
+    key: "rune",
+    name: "Electrocute",
   },
   {
     id: 8128,
-    key: 'rune',
-    name: 'Dark Harvest'
+    key: "rune",
+    name: "Dark Harvest",
   },
   {
     id: 9923,
-    key: 'rune',
-    name: 'Hail of Blades'
+    key: "rune",
+    name: "Hail of Blades",
   },
   {
     id: 8126,
-    key: 'rune',
-    name: 'Cheap Shot'
+    key: "rune",
+    name: "Cheap Shot",
   },
   {
     id: 8139,
-    key: 'rune',
-    name: 'Taste of Blood'
+    key: "rune",
+    name: "Taste of Blood",
   },
   {
     id: 8143,
-    key: 'rune',
-    name: 'Sudden Impact'
+    key: "rune",
+    name: "Sudden Impact",
   },
   {
     id: 8137,
-    key: 'rune',
-    name: 'Sixth Sense'
+    key: "rune",
+    name: "Sixth Sense",
   },
   {
     id: 8140,
-    key: 'rune',
-    name: 'Grisly Mementos'
+    key: "rune",
+    name: "Grisly Mementos",
   },
   {
     id: 8141,
-    key: 'rune',
-    name: 'Deep Ward'
+    key: "rune",
+    name: "Deep Ward",
   },
   {
     id: 8135,
-    key: 'rune',
-    name: 'Treasure Hunter'
+    key: "rune",
+    name: "Treasure Hunter",
   },
   {
     id: 8105,
-    key: 'rune',
-    name: 'Relentless Hunter'
+    key: "rune",
+    name: "Relentless Hunter",
   },
   {
     id: 8106,
-    key: 'rune',
-    name: 'Ultimate Hunter'
+    key: "rune",
+    name: "Ultimate Hunter",
   },
   {
     id: 8005,
-    key: 'rune',
-    name: 'Press the Attack'
+    key: "rune",
+    name: "Press the Attack",
   },
   {
     id: 8008,
-    key: 'rune',
-    name: 'Lethal Tempo'
+    key: "rune",
+    name: "Lethal Tempo",
   },
   {
     id: 8021,
-    key: 'rune',
-    name: 'Fleet Footwork'
+    key: "rune",
+    name: "Fleet Footwork",
   },
   {
     id: 8010,
-    key: 'rune',
-    name: 'Conqueror'
+    key: "rune",
+    name: "Conqueror",
   },
   {
     id: 9101,
-    key: 'rune',
-    name: 'Absorb Life'
+    key: "rune",
+    name: "Absorb Life",
   },
   {
     id: 9111,
-    key: 'rune',
-    name: 'Triumph'
+    key: "rune",
+    name: "Triumph",
   },
   {
     id: 8009,
-    key: 'rune',
-    name: 'Presence of Mind'
+    key: "rune",
+    name: "Presence of Mind",
   },
   {
     id: 9104,
-    key: 'rune',
-    name: 'Legend: Alacrity'
+    key: "rune",
+    name: "Legend: Alacrity",
   },
   {
     id: 9105,
-    key: 'rune',
-    name: 'Legend: Haste'
+    key: "rune",
+    name: "Legend: Haste",
   },
   {
     id: 9103,
-    key: 'rune',
-    name: 'Legend: Bloodline'
+    key: "rune",
+    name: "Legend: Bloodline",
   },
   {
     id: 8014,
-    key: 'rune',
-    name: 'Coup de Grace'
+    key: "rune",
+    name: "Coup de Grace",
   },
   {
     id: 8017,
-    key: 'rune',
-    name: 'Cut Down'
+    key: "rune",
+    name: "Cut Down",
   },
   {
     id: 8299,
-    key: 'rune',
-    name: 'Last Stand'
+    key: "rune",
+    name: "Last Stand",
   },
   {
     id: 8214,
-    key: 'rune',
-    name: 'Summon Aery'
+    key: "rune",
+    name: "Summon Aery",
   },
   {
     id: 8229,
-    key: 'rune',
-    name: 'Arcane Comet'
+    key: "rune",
+    name: "Arcane Comet",
   },
   {
     id: 8230,
-    key: 'rune',
-    name: 'Phase Rush'
+    key: "rune",
+    name: "Phase Rush",
   },
   {
     id: 8224,
-    key: 'rune',
-    name: 'Axiom Arcanist'
+    key: "rune",
+    name: "Axiom Arcanist",
   },
   {
     id: 8226,
-    key: 'rune',
-    name: 'Manaflow Band'
+    key: "rune",
+    name: "Manaflow Band",
   },
   {
     id: 8275,
-    key: 'rune',
-    name: 'Nimbus Cloak'
+    key: "rune",
+    name: "Nimbus Cloak",
   },
   {
     id: 8210,
-    key: 'rune',
-    name: 'Transcendence'
+    key: "rune",
+    name: "Transcendence",
   },
   {
     id: 8234,
-    key: 'rune',
-    name: 'Celerity'
+    key: "rune",
+    name: "Celerity",
   },
   {
     id: 8233,
-    key: 'rune',
-    name: 'Absolute Focus'
+    key: "rune",
+    name: "Absolute Focus",
   },
   {
     id: 8237,
-    key: 'rune',
-    name: 'Scorch'
+    key: "rune",
+    name: "Scorch",
   },
   {
     id: 8232,
-    key: 'rune',
-    name: 'Waterwalking'
+    key: "rune",
+    name: "Waterwalking",
   },
   {
     id: 8236,
-    key: 'rune',
-    name: 'Gathering Storm'
+    key: "rune",
+    name: "Gathering Storm",
   },
   {
     id: 8351,
-    key: 'rune',
-    name: 'Glacial Augment'
+    key: "rune",
+    name: "Glacial Augment",
   },
   {
     id: 8360,
-    key: 'rune',
-    name: 'Unsealed Spellbook'
+    key: "rune",
+    name: "Unsealed Spellbook",
   },
   {
     id: 8369,
-    key: 'rune',
-    name: 'First Strike'
+    key: "rune",
+    name: "First Strike",
   },
   {
     id: 8306,
-    key: 'rune',
-    name: 'Hextech Flashtraption'
+    key: "rune",
+    name: "Hextech Flashtraption",
   },
   {
     id: 8304,
-    key: 'rune',
-    name: 'Magical Footwear'
+    key: "rune",
+    name: "Magical Footwear",
   },
   {
     id: 8321,
-    key: 'rune',
-    name: 'Cash Back'
+    key: "rune",
+    name: "Cash Back",
   },
   {
     id: 8313,
-    key: 'rune',
-    name: 'Triple Tonic'
+    key: "rune",
+    name: "Triple Tonic",
   },
   {
     id: 8352,
-    key: 'rune',
-    name: 'Time Warp Tonic'
+    key: "rune",
+    name: "Time Warp Tonic",
   },
   {
     id: 8345,
-    key: 'rune',
-    name: 'Biscuit Delivery'
+    key: "rune",
+    name: "Biscuit Delivery",
   },
   {
     id: 8347,
-    key: 'rune',
-    name: 'Cosmic Insight'
+    key: "rune",
+    name: "Cosmic Insight",
   },
   {
     id: 8410,
-    key: 'rune',
-    name: 'Approach Velocity'
+    key: "rune",
+    name: "Approach Velocity",
   },
   {
     id: 8316,
-    key: 'rune',
-    name: 'Jack Of All Trades'
-  }
-]
+    key: "rune",
+    name: "Jack Of All Trades",
+  },
+];

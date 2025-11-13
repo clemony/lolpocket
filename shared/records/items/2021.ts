@@ -1,84 +1,77 @@
 const item: Item = {
   id: 2021,
-  name: 'Tunneler',
+  name: "Tunneler",
   buildsFrom: [
     {
       id: 1036,
-      name: 'Long Sword',
-      gold: 350
+      name: "Long Sword",
+      gold: 350,
     },
     {
       id: 1028,
-      name: 'Ruby Crystal',
-      gold: 400
-    }
+      name: "Ruby Crystal",
+      gold: 400,
+    },
   ],
   buildsInto: [
     {
       id: 3748,
-      name: 'Titanic Hydra',
-      gold: 3300
+      name: "Titanic Hydra",
+      gold: 3300,
     },
     {
       id: 3161,
-      name: 'Spear of Shojin',
-      gold: 3100
+      name: "Spear of Shojin",
+      gold: 3100,
     },
     {
       id: 3814,
-      name: 'Edge of Night',
-      gold: 3000
+      name: "Edge of Night",
+      gold: 3000,
     },
     {
       id: 3181,
-      name: 'Hullbreaker',
-      gold: 3000
+      name: "Hullbreaker",
+      gold: 3000,
     },
     {
       id: 2501,
-      name: 'Overlord\'s Bloodmail',
-      gold: 3300
+      name: "Overlord's Bloodmail",
+      gold: 3300,
     },
     {
       id: 3053,
-      name: 'Sterak\'s Gage',
-      gold: 3200
+      name: "Sterak's Gage",
+      gold: 3200,
     },
     {
       id: 3073,
-      name: 'Experimental Hexplate',
-      gold: 3000
+      name: "Experimental Hexplate",
+      gold: 3000,
     },
     {
       id: 6610,
-      name: 'Sundered Sky',
-      gold: 3100
-    }
+      name: "Sundered Sky",
+      gold: 3100,
+    },
   ],
-  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2012_tunneler.png',
-  maps: [
-    11,
-    12,
-    21,
-    35
-  ],
+  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/2012_tunneler.png",
+  maps: [11, 12, 21, 35],
   noEffects: true,
-  rank: 'Epic',
+  rank: "Epic",
   removed: false,
   shop: {
     prices: {
       combined: 400,
       sell: 460,
-      total: 1150
+      total: 1150,
     },
-    tags: [
-      'FIGHTER'
-    ]
+    tags: ["FIGHTER"],
   },
   specialRecipe: 0,
   stats: {
     attackDamage: 15,
-    health: 250
-  }
-}
-export default item
+    health: 250,
+  },
+};
+export default item;

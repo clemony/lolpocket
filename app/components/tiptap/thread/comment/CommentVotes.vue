@@ -4,51 +4,53 @@ const { comment } = defineProps<{
 }>()
 const emit = defineEmits(['comment:vote'])
 const vote = ref<number>(0)
-const calculatedVotes = computed (() => comment.upvotes.length - comment.downvotes.length)
+const calculatedVotes = ref<number>(1)
 
-watch(() => vote.value, (newVote, oldVote) => {
-  if (newVote !== oldVote && as().account.puuid) {
-    emit('comment:vote', {
-      id: comment.id,
-      puuid: as().account.puuid,
-      newVote,
-      oldVote
-    })
-  }
-}, { immediate: false })
+watch(
+  () => vote.value,
+  (newVote, oldVote) => {
+    if (newVote !== oldVote && as().account.puuid) {
+      emit('comment:vote', {
+        id: comment.id,
+        puuid: as().account.puuid,
+        newVote,
+        oldVote,
+      })
+    }
+  },
+  { immediate: false },
+)
 
 onMounted (() => {
-  if (!as().account?.puuid)
-    return
-  if (comment.upvotes.includes(as().account.puuid))
-    vote.value = 1
-  else if (comment.downvotes.includes(as().account.puuid))
-    vote.value = -1
+  calculatedVotes.value = comment.score
 })
 </script>
 
 <template>
   <ToggleGroup
-
     v-model:model-value="vote"
-    :disabled="!comment.author_id"
+    :disabled="!comment.author_id || comment.author_id === as().account.uuid"
     type="single"
-    :class="{ '!pointer-events-none **:!pointer-events-none': !comment.author_id }"
+    :class="{
+      'pointer-events-none! **:pointer-events-none!': !comment.author_id,
+    }"
     variant="ghost"
     size="sq-5"
     :on="!comment.author_id ? 'inset' : 'neutral'"
     as-child
     orientation="horizontal"
-    @update:model-value="(val) => {
-      if (!val) vote = 0
-    }">
+    @update:model-value="
+      (val) => {
+        if (!val) vote = 0;
+      }
+    ">
     <label
       for="downvote"
       :disabled="!comment.author_id"
       aria-label="downvote"
       class="
         grid size-7 cursor-pointer place-items-center
-        disabled:!pointer-events-none
+        disabled:pointer-events-none!
       ">
       <ToggleGroupItem
         name="downvote"
@@ -67,10 +69,15 @@ onMounted (() => {
     <Element
       variant="none"
       size="6"
-      :class="cn(`
-        relative grid place-items-center px-2 text-0 leading-3 lining-nums
-        tabular-nums opacity-50 select-none
-      `, { 'opacity-100 font-medium': vote })">
+      :class="
+        cn(
+          `
+            relative grid place-items-center px-2 text-0 leading-3 lining-nums
+            tabular-nums opacity-50 select-none
+          `,
+          { 'opacity-100 font-medium': vote },
+        )
+      ">
       {{ calculatedVotes }}
     </Element>
     <label

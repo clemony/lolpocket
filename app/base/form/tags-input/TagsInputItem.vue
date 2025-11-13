@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import type { TagsInputItemProps } from 'reka-ui'
-import { TagsInputItem, useForwardProps } from 'reka-ui'
+import type { TagsInputItemProps } from "reka-ui";
+import { TagsInputItem, useForwardProps } from "reka-ui";
 
 const props = defineProps<
-  TagsInputItemProps & { class?: HTMLAttributes['class'] }
->()
+  TagsInputItemProps & { class?: HTMLAttributes["class"] }
+>();
 
-const delegatedProps = reactiveOmit(props, 'class')
+const delegatedProps = reactiveOmit(props, "class");
 
-const forwarded = useForwardProps(delegatedProps)
+const forwarded = useForwardProps(delegatedProps);
 </script>
 
 <template>
@@ -24,7 +24,8 @@ const forwarded = useForwardProps(delegatedProps)
         `,
         props.class,
       )
-    ">
+    "
+  >
     <slot />
   </TagsInputItem>
 </template>

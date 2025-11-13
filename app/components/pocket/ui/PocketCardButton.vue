@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/schema'
+import type { Pocket } from "~~/shared/schema";
 
 const { pocket } = defineProps<{
-  pocket: Pocket
-}>()
+  pocket: Pocket;
+}>();
 
-const route = useRoute()
+const route = useRoute();
 </script>
 
 <template>

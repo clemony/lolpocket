@@ -1,17 +1,17 @@
 <script lang="ts" setup>
-import { authProviders } from '~~/shared/references'
+import { authProviders } from "~~/shared/references";
 
 definePageMeta({
-  name: 'login',
-  title: 'Welcome back!',
-  description: 'Login with your Riot, Google, or Discord account',
-  icon: 'plug',
-  layout: 'basic',
-  search: '!user',
-})
+  name: "login",
+  title: "Welcome back!",
+  description: "Login with your Riot, Google, or Discord account",
+  icon: "plug",
+  layout: "basic",
+  search: "!user",
+});
 
-const email = ref('')
-const password = ref('')
+const email = ref("");
+const password = ref("");
 </script>
 
 <template>
@@ -25,22 +25,15 @@ const password = ref('')
             size="12"
             variant="link"
             hover="outline"
-            class="
-              grid h-14 w-full place-items-center border border-b4/60 shadow-xs
-              [&_svg]:opacity-80
-            "
-            @click="useSignIn(provider)">
-            <icon
-              :name="provider"
-              :class="cn('size-5.5')" />
+            class="grid h-14 w-full place-items-center border border-b4/60 shadow-xs [&_svg]:opacity-80"
+            @click="useSignIn(provider)"
+          >
+            <icon :name="provider" :class="cn('size-5.5')" />
           </Button>
         </div>
         <div
-          class="
-            relative text-center text-3
-            after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex
-            after:items-center after:border-t after:border-b4
-          ">
+          class="relative text-center text-3 after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t after:border-b4"
+        >
           <span class="relative z-10 bg-b1 px-2 text-bc/60">
             Or continue with
           </span>
@@ -55,17 +48,16 @@ const password = ref('')
               class="h-12"
               placeholder="mail@example.com"
               required
-              @clear:input="email = ''" />
+              @clear:input="email = ''"
+            />
           </div>
           <div class="grid gap-2">
             <div class="flex items-center">
               <Label html-for="password">Password</Label>
               <NuxtLink
                 to="/password-reset"
-                class="
-                  underline-offset-1.5 ml-auto text-2
-                  hover:underline
-                ">
+                class="underline-offset-1.5 ml-auto text-2 hover:underline"
+              >
                 Forgot your password?
               </NuxtLink>
             </div>
@@ -75,14 +67,16 @@ const password = ref('')
               class="h-12"
               type="password"
               required
-              @clear:input="password = ''" />
+              @clear:input="password = ''"
+            />
           </div>
           <div class="w-full space-y-2">
             <Button
               variant="neutral"
               size="12"
               type="submit"
-              class="w-full font-medium">
+              class="w-full font-medium"
+            >
               Login
             </Button>
             <Button
@@ -91,7 +85,8 @@ const password = ref('')
               size="12"
               hover="link"
               class="underline-offset-1.5 w-full justify-center"
-              @click="navigateTo('/signup')">
+              @click="navigateTo('/signup')"
+            >
               Signing up?
             </Button>
           </div>

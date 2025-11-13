@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const props = defineProps<{ class?: HTMLAttributes['class'] }>()
+const props = defineProps<{ class?: HTMLAttributes["class"] }>();
 </script>
 
 <template>
@@ -12,7 +12,8 @@ const props = defineProps<{ class?: HTMLAttributes['class'] }>()
         `,
         props.class,
       )
-    ">
+    "
+  >
     <slot />
   </div>
 </template>

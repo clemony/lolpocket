@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 const emit = defineEmits([
   // "pandown", "panup", "zoomdown", "zoomup", "home",
-  'buttondown',
-  'buttonup',
-])
+  "buttondown",
+  "buttonup",
+]);
 
 // function onButtonDown(event: PointerEvent, button: string) {
 //     // emit("pandown", button);
@@ -19,23 +19,21 @@ const emit = defineEmits([
 // }
 
 function onButtonDown(event: PointerEvent, button: string) {
-  emit('buttondown', {
+  emit("buttondown", {
     key: button,
-  })
+  });
 }
 
 function onButtonUp(event: PointerEvent, button: string) {
-  emit('buttonup', {
+  emit("buttonup", {
     key: button,
-  })
+  });
 }
 </script>
 
 <template>
   <div>
-    <button
-      class="btn"
-      @pointerdown="(ev) => onButtonDown(ev, 'home')">
+    <button class="btn" @pointerdown="(ev) => onButtonDown(ev, 'home')">
       hi
     </button>
   </div>

@@ -1,23 +1,29 @@
 <script lang="ts" setup>
-import type { PrimitiveProps } from 'reka-ui'
-import { Primitive } from 'reka-ui'
+import type { PrimitiveProps } from "reka-ui";
+import { Primitive } from "reka-ui";
 
 const props = withDefaults(
-  defineProps<PrimitiveProps & { class?: HTMLAttributes['class'] }>(),
+  defineProps<PrimitiveProps & { class?: HTMLAttributes["class"] }>(),
   {
-    as: 'a',
-  }
-)
+    as: "a",
+  },
+);
 </script>
 
 <template>
   <Primitive
     :as="as"
     :as-child="asChild"
-    :class="cn(`
+    :class="
+      cn(
+        `
       transition-colors
       hover:text-bc
-    `, props.class)">
+    `,
+        props.class,
+      )
+    "
+  >
     <slot />
   </Primitive>
 </template>

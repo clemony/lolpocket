@@ -1,22 +1,24 @@
 <script setup lang="ts">
 const { class: className, summoner } = defineProps<{
-  class?: HTMLAttributes['class']
-  summoner: Summoner
-}>()
+  class?: HTMLAttributes["class"];
+  summoner: Summoner;
+}>();
 </script>
 
 <template>
   <div class="flex w-full flex-col px-2 py-2">
-    <div class="flex w-full items-center gap-4 border !bg-b1">
+    <div class="flex w-full items-center gap-4 border bg-b1!">
       <slot name="icon">
         <SummonerIcon class="ml-2 size-19 rounded-lg" />
       </slot>
       <div class="relative -mt-3 flex size-full flex-col gap-0.5">
         <div
-          class="flex flex-nowrap items-center justify-between pr-3 text-nowrap">
+          class="flex flex-nowrap items-center justify-between pr-3 text-nowrap"
+        >
           <SummonerName
             as="h1"
-            class="center truncate font-serif leading-snug font-black" />
+            class="center truncate font-serif leading-snug font-black"
+          />
 
           <SummonerLevel class="mt-1" />
         </div>

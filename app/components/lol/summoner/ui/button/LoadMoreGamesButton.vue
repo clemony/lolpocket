@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const emit = defineEmits(['loaded'])
+const emit = defineEmits(["loaded"]);
 </script>
 
 <template>

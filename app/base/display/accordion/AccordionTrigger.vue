@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import type { AccordionTriggerProps } from 'reka-ui'
-import { AccordionHeader, AccordionTrigger } from 'reka-ui'
-import { computed } from 'vue'
+import type { AccordionTriggerProps } from "reka-ui";
+import { AccordionHeader, AccordionTrigger } from "reka-ui";
+import { computed } from "vue";
 
 const props = defineProps<
-  AccordionTriggerProps & { class?: HTMLAttributes['class'] }
->()
+  AccordionTriggerProps & { class?: HTMLAttributes["class"] }
+>();
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
+  const { class: _, ...delegated } = props;
 
-  return delegated
-})
+  return delegated;
+});
 </script>
 
 <template>
@@ -30,13 +30,12 @@ const delegatedProps = computed(() => {
           `,
           props.class,
         )
-      ">
+      "
+    >
       <slot />
 
       <slot name="icon">
-        <icon
-          name="left"
-          class="mx-4 size-5 dst" />
+        <icon name="left" class="mx-4 size-5 dst" />
       </slot>
     </AccordionTrigger>
   </AccordionHeader>

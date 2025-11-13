@@ -9,7 +9,9 @@ definePageMeta({
 })
 const isCollapsed = ref(false)
 const route = useRoute()
-const pinned = computed(() => ps().pockets.filter(p => ps().pinned.includes(p.key)))
+const pinned = computed(() =>
+  ps().pockets.filter(p => ps().pinned.includes(p.key)),
+)
 </script>
 
 <template>
@@ -32,7 +34,7 @@ const pinned = computed(() => ps().pockets.filter(p => ps().pinned.includes(p.ke
               class="
                 group
                 data-[state=open]:fx-noise
-                w-full justify-start !gap-3 pr-5 pl-4.5
+                w-full justify-start gap-3! pr-5 pl-4.5
                 hover:bg-transparent
                 data-[state=open]:border-b3/80 data-[state=open]:shadow-sm
                 data-[state=open]:inset-shadow-xs
@@ -103,7 +105,7 @@ const pinned = computed(() => ps().pockets.filter(p => ps().pinned.includes(p.ke
                 <Button
                   variant="ghost"
                   size="icon">
-                  <hicon name="i-roles-all" />
+                  <Icon name="lp:all" />
                 </Button>
               </PopoverTrigger>
               <PopoverContent>

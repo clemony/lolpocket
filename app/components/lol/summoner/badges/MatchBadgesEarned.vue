@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const props = defineProps<{
-  match: any
-}>()
+  match: any;
+}>();
 </script>
 
 <template>
@@ -42,9 +42,7 @@ const props = defineProps<{
     <div class="flex gap-2">
       <icon name="solar:running-bold" />
 
-      <icon
-        name="arcticons:shadow-fight-2"
-        class="size-7 stroke-3" />
+      <icon name="arcticons:shadow-fight-2" class="size-7 stroke-3" />
     </div>
     killing spree
 

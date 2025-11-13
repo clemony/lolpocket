@@ -1,51 +1,46 @@
 <script lang="ts" setup>
-import { reviews } from '#shared/data'
-import { motion } from 'motion-v'
-import type { CarouselApi } from '~/base/layout/carousel/carousel-index'
-import { reviewVariants } from './variants'
+import { reviews } from "#shared/data";
+import { motion } from "motion-v";
+import type { CarouselApi } from "~/base/layout/carousel/carousel-index";
+import { reviewVariants } from "./variants";
 
-const api = ref<CarouselApi>()
-const inView = ref(0)
+const api = ref<CarouselApi>();
+const inView = ref(0);
 function setApi(val: CarouselApi) {
-  api.value = val
+  api.value = val;
 }
 
 computed(() => {
-  if (!api.value)
-    return null
+  if (!api.value) return null;
 
-  return api.value.selectedScrollSnap()
-})
+  return api.value.selectedScrollSnap();
+});
 
 watchOnce(api, (api) => {
-  if (!api)
-    return
+  if (!api) return;
 
-  api.on('select', () => {
-    inView.value = api.selectedScrollSnap()
-  })
-})
+  api.on("select", () => {
+    inView.value = api.selectedScrollSnap();
+  });
+});
 </script>
 
 <template>
   <div
-    class="
-      relative grid w-full items-center overflow-hidden bg-b1 px-30 pt-40 pb-40
-    ">
+    class="relative grid w-full items-center overflow-hidden bg-b1 px-30 pt-40 pb-40"
+  >
     <Carousel
       :opts="{
         loop: true,
       }"
-      @init-api="setApi">
+      @init-api="setApi"
+    >
       <CarouselContent class="size-full">
         <CarouselItem
           v-for="(page, i) in reviews"
           :key="i"
-          class="
-            grid h-full w-full grid-cols-2 grid-rows-2 place-items-center
-            gap-x-40 gap-y-60 justify-self-center p-30
-            **:[&_p]:leading-7
-          ">
+          class="grid h-full w-full grid-cols-2 grid-rows-2 place-items-center gap-x-40 gap-y-60 justify-self-center p-30 **:[&_p]:leading-7"
+        >
           <motion.div
             v-for="r in page"
             :key="r.id"
@@ -58,35 +53,32 @@ watchOnce(api, (api) => {
               type: 'spring',
               delay: 0.3,
               duration: 0.4,
-            }">
-            <h1 class="font-serif leading-9 font-black dst">
-              “{{ r.title }}”
-            </h1>
+            }"
+          >
+            <h1 class="font-serif leading-9 font-black dst">“{{ r.title }}”</h1>
 
             <div class="flex items-start justify-start gap-8">
               <ChampionIcon
                 :id="r.id"
                 :alt="r.name"
-                class="mt-4 size-22 shrink-0 overflow-hidden rounded-full" />
+                class="mt-4 size-22 shrink-0 overflow-hidden rounded-full"
+              />
 
               <div>
                 <p
-                  class="
-                    mt-5 w-full text-4 text-bc dst
-                    [&_u]:decoration-dotted
-                  "
-                  v-html="r.text" />
+                  class="mt-5 w-full text-4 text-bc dst [&_u]:decoration-dotted"
+                  v-html="r.text"
+                />
 
                 <p
-                  class="
-                    mt-2 flex items-center gap-2 justify-self-end text-right
-                    italic
-                  ">
+                  class="mt-2 flex items-center gap-2 justify-self-end text-right italic"
+                >
                   - {{ r.location }}
                   <icon
                     v-tippy="`${r.tip}`"
                     name="carbon:information"
-                    class="size-4.5 stroke-2" />
+                    class="size-4.5 stroke-2"
+                  />
                 </p>
               </div>
             </div>
@@ -103,22 +95,14 @@ watchOnce(api, (api) => {
       <label
         v-for="i in 2"
         :key="i"
-        class="
-          group grid size-5 cursor-pointer place-items-center overflow-hidden
-          rounded-full
-        ">
-        <input
-          type="radio"
-          :value="i"
-          class="peer hidden" />
+        class="group grid size-5 cursor-pointer place-items-center overflow-hidden rounded-full"
+      >
+        <input type="radio" :value="i" class="peer hidden" />
 
         <div
-          class="
-            tldr-20 btn pointer-events-none btn-circle size-2 bg-b3 ring-neutral
-            ring-offset-2
-            group-hover:bg-b4 group-hover:ring-1
-          "
-          :class="{ 'bg-neutral group-hover:bg-neutral': i === i }" />
+          class="tldr-20 btn pointer-events-none btn-circle size-2 bg-b3 ring-neutral ring-offset-2 group-hover:bg-b4 group-hover:ring-1"
+          :class="{ 'bg-neutral group-hover:bg-neutral': i === i }"
+        />
       </label>
     </div>
   </div>

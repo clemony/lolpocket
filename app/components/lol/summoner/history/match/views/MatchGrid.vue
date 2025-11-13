@@ -5,8 +5,8 @@ import type {
   GridApi,
   GridOptions,
   GridReadyEvent,
-} from 'ag-grid-community'
-import { ChampionIcon } from '#components'
+} from "ag-grid-community";
+import { ChampionIcon } from "#components";
 import {
   CellStyleModule,
   ClientSideRowModelModule,
@@ -18,19 +18,19 @@ import {
   RenderApiModule,
   RowSelectionModule,
   TooltipModule,
-  ValidationModule
-} from 'ag-grid-community'
-import { AgGridVue } from 'ag-grid-vue3'
-import { masteryGridTheme } from '~/utils/config/masteryTheme'
+  ValidationModule,
+} from "ag-grid-community";
+import { AgGridVue } from "ag-grid-vue3";
+import { masteryGridTheme } from "~/utils/config/masteryTheme";
 
 const { match, player } = defineProps<{
-  match: MatchData
-  player: Player
-}>()
+  match: MatchData;
+  player: Player;
+}>();
 
-const theme = ref(masteryGridTheme)
+const theme = ref(masteryGridTheme);
 
-const gridApi = shallowRef<GridApi | null>(null)
+const gridApi = shallowRef<GridApi | null>(null);
 
 const gridOptions: GridOptions<Player> = {
   columnHoverHighlight: false,
@@ -38,63 +38,79 @@ const gridOptions: GridOptions<Player> = {
     initialHide: false,
     minWidth: 66,
     autoHeaderHeight: true,
-    cellClass: [''],
+    cellClass: [""],
     flex: 1,
-    headerClass: ['sticky top-0'],
-    sortingOrder: ['desc', 'asc', null],
+    headerClass: ["sticky top-0"],
+    sortingOrder: ["desc", "asc", null],
     wrapHeaderText: false,
   },
   rowData: match.participants,
   rowHeight: 38,
-  tooltipShowMode: 'whenTruncated',
-}
+  tooltipShowMode: "whenTruncated",
+};
 
 const colDefs: (ColDef<Player> | ColGroupDef<Player>)[] = [
   {
     cellRenderer: ChampionIcon,
-    field: 'championId',
-    headerName: '',
-    tooltipValueGetter: (params: any) => `${params.riotIdGameName} #${params.riotIdTagline}`
+    field: "championId",
+    headerName: "",
+    tooltipValueGetter: (params: any) =>
+      `${params.riotIdGameName} #${params.riotIdTagline}`,
   },
   {
     children: [
-      { field: 'kills', headerName: 'Kills', headerTooltip: 'Kills' },
-      { field: 'deaths', headerName: 'Deaths', headerTooltip: 'Deaths' },
-      { field: 'assists', headerName: 'Assists', headerTooltip: 'Assists' },
-      { field: 'challenges.kda', headerName: 'KDA', headerTooltip: 'KDA' },
-      { field: 'challenges.killParticipation', headerName: 'Kill Participation', headerTooltip: 'Kill Participation' }
+      { field: "kills", headerName: "Kills", headerTooltip: "Kills" },
+      { field: "deaths", headerName: "Deaths", headerTooltip: "Deaths" },
+      { field: "assists", headerName: "Assists", headerTooltip: "Assists" },
+      { field: "challenges.kda", headerName: "KDA", headerTooltip: "KDA" },
+      {
+        field: "challenges.killParticipation",
+        headerName: "Kill Participation",
+        headerTooltip: "Kill Participation",
+      },
     ],
-    headerName: ''
+    headerName: "",
   },
   {
     children: [
-      { field: 'totalDamageDealtToChampions', headerName: 'Damage to Champions', headerTooltip: 'Damage to Champions', },
-      { field: 'challenges.teamDamagePercentage', headerName: 'Team Dmg %', headerTooltip: 'Team Dmg %' }
+      {
+        field: "totalDamageDealtToChampions",
+        headerName: "Damage to Champions",
+        headerTooltip: "Damage to Champions",
+      },
+      {
+        field: "challenges.teamDamagePercentage",
+        headerName: "Team Dmg %",
+        headerTooltip: "Team Dmg %",
+      },
     ],
-    headerName: 'Damage',
-    headerTooltip: 'Damage'
+    headerName: "Damage",
+    headerTooltip: "Damage",
   },
   {
     children: [
-      { field: 'challenges.effectiveHealAndShielding', headerName: 'Effective Healing & Shielding', headerTooltip: 'Effective Healing & Shielding' }
+      {
+        field: "challenges.effectiveHealAndShielding",
+        headerName: "Effective Healing & Shielding",
+        headerTooltip: "Effective Healing & Shielding",
+      },
     ],
-    headerName: 'Teamplay',
-    headerTooltip: 'Teamplay'
+    headerName: "Teamplay",
+    headerTooltip: "Teamplay",
   },
-]
+];
 
 async function onGridReady(params: GridReadyEvent) {
-  await params.api
-  gridApi.value = params.api
+  await params.api;
+  gridApi.value = params.api;
 }
 
 watch(
-  () => '',
+  () => "",
   (newVal) => {
-    if (newVal && gridApi.value)
-      gridApi.value.setGridOption('rowData', [])
-  }
-)
+    if (newVal && gridApi.value) gridApi.value.setGridOption("rowData", []);
+  },
+);
 
 /* onMounted (async () => {
   if (params.img) {
@@ -115,25 +131,20 @@ ModuleRegistry.registerModules([
   CellStyleModule,
   GridStateModule,
   RenderApiModule,
-])
+]);
 
-const masteryGrid = useTemplateRef<HTMLElement>('masteryGrid')
+const masteryGrid = useTemplateRef<HTMLElement>("masteryGrid");
 </script>
 
 <template>
   <AgGridVue
     v-if="match"
     ref="masteryGrid"
-    class="
-      mastery-grid sticky top-20 h-[100vh] min-h-[100vh] w-full pt-20
-      [&_.ag-center-cols-viewport]:mx-auto
-      [&_.ag-center-cols-viewport]:max-w-[1100px]
-      [&_.ag-header-container]:mx-auto
-    "
-
+    class="mastery-grid sticky top-20 h-[100vh] min-h-[100vh] w-full pt-20 [&_.ag-center-cols-viewport]:mx-auto [&_.ag-center-cols-viewport]:max-w-[1100px] [&_.ag-header-container]:mx-auto"
     :tooltip-show-delay="400"
     :grid-options="gridOptions"
     :theme="theme"
     :column-defs="colDefs"
-    @grid-ready="onGridReady" />
+    @grid-ready="onGridReady"
+  />
 </template>

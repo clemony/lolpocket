@@ -8,26 +8,27 @@ function sortComments() {
   const comments = [...as().comments] // make a shallow copy to avoid mutating original
 
   if (sort.value === 'best') {
-    comments.sort((a, b) =>
-      (b.upvotes.length - b.downvotes.length) - (a.upvotes.length - a.downvotes.length))
+    comments.sort(
+      (a, b) => a.score - b.score
+    )
   }
-
   else if (sort.value === 'new') {
-    comments.sort((a, b) =>
-      parseAbsoluteToLocal(b.created).toDate().getTime()
-      - parseAbsoluteToLocal(a.created).toDate().getTime()
+    comments.sort(
+      (a, b) =>
+        parseAbsoluteToLocal(b.created).toDate().getTime()
+        - parseAbsoluteToLocal(a.created).toDate().getTime(),
     )
   }
 
-  return sortedComments.value = comments
+  return (sortedComments.value = comments)
 }
 
-onMounted (() => {
+onMounted(() => {
   sortComments()
 })
 
 defineExpose({
-  sortedComments
+  sortedComments,
 })
 </script>
 
@@ -41,7 +42,7 @@ defineExpose({
       hover="inset"
       class="
         w-28 justify-start pl-3
-        hover:!border-b4/50
+        hover:border-b4/50!
       "
       size="sm">
       <SelectValue />
@@ -55,11 +56,11 @@ defineExpose({
     <LazySelectContent
       align="end"
       class="
-        w-29.5 !-translate-y-[calc(var(--reka-select-trigger-height)+6px)]
+        w-29.5 -translate-y-[calc(var(--reka-select-trigger-height)+6px)]!
         **:text-3
       ">
       <SelectItem
-        class="!pr-1"
+        class="pr-1!"
         value="best">
         Best
       </SelectItem>

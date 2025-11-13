@@ -1,13 +1,13 @@
 export function escapeHtml(text: string): string {
   return text.replace(
     /[&<>"']/g,
-    ch =>
+    (ch) =>
       ({
-        '"': '&quot;',
-        '&': '&amp;',
-        '\'': '&#039;',
-        '<': '&lt;',
-        '>': '&gt;',
-      })[ch]!
-  )
+        '"': "&quot;",
+        "&": "&amp;",
+        "'": "&#039;",
+        "<": "&lt;",
+        ">": "&gt;",
+      })[ch]!,
+  );
 }

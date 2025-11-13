@@ -1,14 +1,13 @@
 export function isStale(date?: number | string | Date | null, maxMinutes = 30) {
-  if (!date)
-    return true
+  if (!date) return true;
 
-  const updated
-    = typeof date === 'number'
+  const updated =
+    typeof date === "number"
       ? new Date(date)
-      : typeof date === 'string'
+      : typeof date === "string"
         ? new Date(date)
-        : date
+        : date;
 
-  const diff = (Date.now() - updated.getTime()) / 1000 / 60
-  return diff > maxMinutes
+  const diff = (Date.now() - updated.getTime()) / 1000 / 60;
+  return diff > maxMinutes;
 }

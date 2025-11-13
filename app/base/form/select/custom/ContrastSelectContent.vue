@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const props = defineProps<{
-  class?: HTMLAttributes['class']
-}>()
+  class?: HTMLAttributes["class"];
+}>();
 </script>
 
 <template>
@@ -10,13 +10,14 @@ const props = defineProps<{
     :class="
       cn(
         `
-          bgneutral/83 !w-[var(--reka-select-trigger-width)] rounded-xl
+          bgneutral/83 w-[var(--reka-select-trigger-width)]! rounded-xl
           border-accent text-nc backdrop-blur-lg
           **:text-nc
         `,
         props.class,
       )
-    ">
+    "
+  >
     <slot />
   </SelectContent>
 </template>

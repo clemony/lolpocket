@@ -1,23 +1,23 @@
 <script setup lang="ts">
-import type { ToggleGroupItemProps } from 'reka-ui'
-import { ToggleGroupItem, useForwardProps } from 'reka-ui'
+import type { ToggleGroupItemProps } from "reka-ui";
+import { ToggleGroupItem, useForwardProps } from "reka-ui";
 
 const props = defineProps<
   ToggleGroupItemProps & {
-    class?: HTMLAttributes['class']
-    variant?: ToggleGroupVariants['variant']
-    size?: ToggleGroupVariants['size']
-    on?: ToggleGroupVariants['on']
+    class?: HTMLAttributes["class"];
+    variant?: ToggleGroupVariants["variant"];
+    size?: ToggleGroupVariants["size"];
+    on?: ToggleGroupVariants["on"];
   }
->()
+>();
 
-const context = inject<ToggleGroupVariants>('toggleGroup')
+const context = inject<ToggleGroupVariants>("toggleGroup");
 const delegatedProps = computed(() => {
-  const { class: _, size, variant, ...delegated } = props
-  return delegated
-})
+  const { class: _, size, variant, ...delegated } = props;
+  return delegated;
+});
 
-const forwarded = useForwardProps(delegatedProps)
+const forwarded = useForwardProps(delegatedProps);
 </script>
 
 <template>
@@ -33,7 +33,8 @@ const forwarded = useForwardProps(delegatedProps)
         }),
         props.class,
       )
-    ">
+    "
+  >
     <slot />
   </ToggleGroupItem>
 </template>

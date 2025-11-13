@@ -1,5 +1,5 @@
-@import 'tailwindcss';
-@import '../theme.css';
+@import "tailwindcss";
+@import "../theme.css";
 
 @utility dss-* {
   box-shadow: var(--drop-shadow-sm) --value([color]) --modifier(integer);
@@ -24,6 +24,10 @@
     scrollbar-color: transparent transparent !important;
     display: none !important;
   }
+}
+
+@utility text-link {
+  @apply hover:underline font-medium decoration-dotted hover:decoration-solid decoration-bc/60 hover:decoration-bc;
 }
 
 @utility trim {

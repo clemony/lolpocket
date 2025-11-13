@@ -1,4 +1,4 @@
-import * as htmlToImage from 'html-to-image'
+import * as htmlToImage from "html-to-image";
 
 /* export async function downloadPocketPng(pocket) {
   await ps().pocketCardRef

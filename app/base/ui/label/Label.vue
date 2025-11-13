@@ -1,27 +1,27 @@
 <script setup lang="ts">
-import type { LabelProps } from 'reka-ui'
-import { Label } from 'reka-ui'
+import type { LabelProps } from "reka-ui";
+import { Label } from "reka-ui";
 
 interface Props extends LabelProps {
-  base?: LabelVariants['base']
-  class?: HTMLAttributes['class']
-  hover?: LabelVariants['hover']
-  on?: ButtonVariants['on']
-  size?: LabelVariants['size']
-  variant?: LabelVariants['variant']
+  base?: LabelVariants["base"];
+  class?: HTMLAttributes["class"];
+  hover?: LabelVariants["hover"];
+  on?: ButtonVariants["on"];
+  size?: LabelVariants["size"];
+  variant?: LabelVariants["variant"];
 }
 
 const props = defineProps<
   Props & {
-    class?: HTMLAttributes['class']
+    class?: HTMLAttributes["class"];
   }
->()
+>();
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
+  const { class: _, ...delegated } = props;
 
-  return delegated
-})
+  return delegated;
+});
 </script>
 
 <template>
@@ -36,7 +36,8 @@ const delegatedProps = computed(() => {
         labelVariants({ base, variant, size, hover, on }),
         props.class,
       )
-    ">
+    "
+  >
     <slot />
   </Label>
 </template>

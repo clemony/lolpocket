@@ -1,36 +1,27 @@
 <script setup lang="ts">
-const state = useSummonerInject()
+const state = useSummonerInject();
 
 const queueModel = computed({
   get: () => state.filter.value.queue,
-  set: val => state.setFilter('queue', val),
-})
+  set: (val) => state.setFilter("queue", val),
+});
 </script>
 
 <template>
   <Tabs
     v-model:model-value="queueModel"
     :default-value="0"
-    class="w-120 max-w-120">
-    <TabsList
-      base="indicator"
-      class="field-box grid h-10 w-full grid-cols-4">
+    class="w-120 max-w-120"
+  >
+    <TabsList base="indicator" class="field-box grid h-10 w-full grid-cols-4">
       <TabIndicator />
-      <TabsTrigger :value="0">
-        All
-      </TabsTrigger>
+      <TabsTrigger :value="0"> All </TabsTrigger>
 
-      <TabsTrigger :value="420">
-        Solo
-      </TabsTrigger>
+      <TabsTrigger :value="420"> Solo </TabsTrigger>
 
-      <TabsTrigger :value="440">
-        Flex
-      </TabsTrigger>
+      <TabsTrigger :value="440"> Flex </TabsTrigger>
 
-      <TabsTrigger :value="400">
-        Normal
-      </TabsTrigger>
+      <TabsTrigger :value="400"> Normal </TabsTrigger>
       <!--
         <TabsTrigger :value="-1">
           <icon

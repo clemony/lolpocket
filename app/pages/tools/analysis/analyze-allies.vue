@@ -1,15 +1,15 @@
 <script lang="ts" setup>
 const { summoner } = defineProps<{
-  summoner: Summoner
-}>()
+  summoner: Summoner;
+}>();
 
 definePageMeta({
-  name: 'ally analysis',
-  title: 'allies',
-  icon: 'typcn:heart',
-  parent: '/analysis',
-  path: '/analysis/allies',
-})
+  name: "ally analysis",
+  title: "allies",
+  icon: "typcn:heart",
+  parent: "/analysis",
+  path: "/analysis/allies",
+});
 </script>
 
 <template>

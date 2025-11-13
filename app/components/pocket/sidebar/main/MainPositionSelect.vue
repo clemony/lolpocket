@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/schema'
 import { HeadingTip } from '#components'
-import { SelectTrigger, } from 'reka-ui'
+import { SelectTrigger } from 'reka-ui'
 import { championPositions } from '~~/shared/references'
+import type { Pocket } from '~~/shared/schema'
 
 const {
   side = 'bottom',
@@ -26,10 +26,11 @@ const pocket = computed(() => p)
 const select = ref('All')
 
 const color = computed(
-  () => championPositions.find(p => p.name === pocket?.value?.main?.role).twColor
+  () =>
+    championPositions.find(p => p.name === pocket?.value?._role).twColor,
 ).value
 
-const gradientClass = computed (() => `bg-${color} bg-clip-text `)
+const gradientClass = computed(() => `bg-${color} bg-clip-text `)
 const open = ref(false)
 
 const trigger = useTemplateRef<HTMLElement>('trigger')
@@ -37,7 +38,7 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
 
 <template>
   <Select
-    v-model:model-value="pocket.main.role"
+    v-model:model-value="pocket._role"
     v-model:open="open">
     <SelectTrigger as-child>
       <Button
@@ -46,15 +47,17 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
           relative grid size-20 place-items-center overflow-hidden
           **:pointer-events-none
         ">
-        <div
-          class="grid !size-12 place-items-center">
+        <div class="grid size-12! place-items-center">
           <component
-            :is="pocket?.main?.role ? `i-lol-${pocket?.main?.role}` : 'all'"
+            :is="pocket?._role ? `i-lol-${pocket?._role}` : 'all'"
             :style="{
-              color: championPositions.find(p => p.name === pocket?.main?.role).color,
+              color: championPositions.find(
+                (p) => p.name === pocket?._role,
+              ).color,
             }"
-            class="absolute z-2 !size-7 dst" />
-        </div><!--
+            class="absolute z-2 size-7! dst" />
+        </div>
+        <!--
         <icon
           name="select"
           class=" size-4 absolute right-1.5" /> -->
@@ -70,18 +73,21 @@ const trigger = useTemplateRef<HTMLElement>('trigger')
       class="w-[var(--reka-select-trigger-width)] min-w-54 p-0">
       <div class="flex items-center gap-3 p-2">
         <component
-          :is="pocket?.main?.role ? `i-lol-${pocket?.main?.role}` : 'all'"
+          :is="pocket?._role ? `i-lol-${pocket?._role}` : 'all'"
           :style="{
-            color: championPositions.find(p => p.name === pocket?.main?.role).color,
+            color: championPositions.find((p) => p.name === pocket?._role)
+              .color,
           }"
-          class="!size-6 dst" />
+          class="size-6! dst" />
         <h3
-          v-memo="[pocket.main.role]"
-          :class="cn('truncate', {
-            'dst': pocket.main.role,
-            '!font-normal  opacity-10': !pocket.main.role,
-          })">
-          {{ pocket.main.role || "Role" }}
+          v-memo="[pocket._role]"
+          :class="
+            cn('truncate', {
+              'dst': pocket._role,
+              '!font-normal  opacity-10': !pocket._role,
+            })
+          ">
+          {{ pocket._role || "Role" }}
         </h3>
       </div>
       <SelectSeparator class="mb-2" />

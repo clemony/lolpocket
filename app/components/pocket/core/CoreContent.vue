@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const route = useRoute()
 const pocket = computed(() =>
-  ps().getPocket(String(route.params.pocket_key))
+  ps().getPocket(String(route.params.pocket_key)),
 ).value
 </script>
 
@@ -11,16 +11,16 @@ const pocket = computed(() =>
       <div class="flex w-full flex-col gap-3">
         <div class="mb-2 h-16">
           <h1 class="leading-10 tracking-tight dst">
-            {{ pocket.main?.champion }}
+            {{ pocket._champion }}
           </h1>
           <div class="text-4 font-medium italic">
-            {{ ix().getChampionTitle(pocket.main?.champion) }}
+            {{ ix().getChampionTitle(pocket._champion) }}
           </div>
         </div>
         <HoverCard>
           <HoverCardTrigger>
             <Champion
-              :k="pocket.main?.champion"
+              :k="pocket._champion"
               type="tile"
               class="
                 aspect-square h-auto w-full max-w-80 inset-shadow-sm
@@ -43,7 +43,7 @@ const pocket = computed(() =>
             ">
           </HoverCardContent>
         </HoverCard>
-        <ChampionAbilityTabs :k="pocket.main?.champion" />
+        <ChampionAbilityTabs :k="pocket._champion" />
       </div>
 
       <div
@@ -52,8 +52,7 @@ const pocket = computed(() =>
           *:w-full
         ">
         <MainRuneSelect :pocket>
-          <CoreRuneTrigger
-            :pocket />
+          <CoreRuneTrigger :pocket />
         </MainRuneSelect>
         <MainSpellSelect
           class="size-14"
@@ -65,8 +64,7 @@ const pocket = computed(() =>
         <h2 class="leading-10 tracking-tight dst">
           Pocket Stats
         </h2>
-        <div class="text-4 font-medium italic">
-        </div>
+        <div class="text-4 font-medium italic"></div>
       </div>
       <div class="grid grid-cols-3 gap-8">
         <Card>

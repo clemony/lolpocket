@@ -1,20 +1,20 @@
-import type { GridApi } from 'ag-grid-community'
-import type { Pocket } from '~~/shared/schema'
-import { defineStore } from 'pinia'
+import type { GridApi } from "ag-grid-community";
+import type { Pocket } from "~~/shared/schema";
+import { defineStore } from "pinia";
 
 export const usePocketStore = defineStore(
-  'pocketStore',
+  "pocketStore",
   () => {
-    const pockets = ref<Pocket[]>([])
-    const tags = ref<string[]>([])
+    const pockets = ref<Pocket[]>([]);
+    const tags = ref<string[]>([]);
     // In your usePocketStore
 
-    const downloadCard = refAutoReset(false, 1000)
-    const pocketCardRef = ref<HTMLDivElement>(null)
+    const downloadCard = refAutoReset(false, 1000);
+    const pocketCardRef = ref<HTMLDivElement>(null);
 
-    const trash = ref<string[]>([])
-    const archive = ref<string[]>([])
-    const pinned = ref<string[]>([])
+    const trash = ref<string[]>([]);
+    const archive = ref<string[]>([]);
+    const pinned = ref<string[]>([]);
 
     return {
       archive,
@@ -28,14 +28,14 @@ export const usePocketStore = defineStore(
 
       // helpers
       getPocket: (key: string) =>
-        pockets.value.find(pocket => pocket.key === key),
-    }
+        pockets.value.find((pocket) => pocket.key === key),
+    };
   },
 
   {
     persist: {
-      key: 'pocketStore',
+      key: "pocketStore",
       storage: piniaPluginPersistedstate.localStorage(),
     },
-  }
-)
+  },
+);

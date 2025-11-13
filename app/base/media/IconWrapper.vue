@@ -1,18 +1,20 @@
 <script lang="ts" setup>
 const props = defineProps<{
-  name?: string
-  class?: HTMLAttributes['class']
-}>()
+  name?: string;
+  class?: HTMLAttributes["class"];
+}>();
 </script>
 
 <template>
   <div
-    class="relative grid size-5 shrink-0 place-items-center !overflow-visible">
+    class="relative grid size-5 shrink-0 place-items-center overflow-visible!"
+  >
     <hicon
       v-if="props.name"
       :name="props.name"
       class="absolute shrink-0"
-      :class="cn('size-5 dst', props.class)" />
+      :class="cn('size-5 dst', props.class)"
+    />
 
     <slot />
   </div>

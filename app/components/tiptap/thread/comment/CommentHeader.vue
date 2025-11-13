@@ -1,12 +1,17 @@
 <script setup lang="ts">
-const { class: className, comment, hovered, open } = defineProps<{
+const {
+  class: className,
+  comment,
+  hovered,
+  open,
+} = defineProps<{
   class?: HTMLAttributes['class']
   comment: CommentData
   open: boolean
   hovered?: ComputedRef<boolean>
 }>()
 
-const summoner = computed (() => {
+const summoner = computed(() => {
   return {
     name: comment.author.name,
     puuid: comment.author_id,
@@ -33,10 +38,15 @@ const summoner = computed (() => {
           disabled:opacity-0
         ">
         <CaretFlip
-          :class="cn(`
-            -translate-x-px text-bc/40
-            hover:!text-bc/90
-          `, { '!text-bc/90': hovered })" />
+          :class="
+            cn(
+              `
+                -translate-x-px text-bc/40
+                hover:text-bc/90!
+              `,
+              { '!text-bc/90': hovered },
+            )
+          " />
       </CollapsibleTrigger>
     </div>
     <div
@@ -48,8 +58,8 @@ const summoner = computed (() => {
           hover:*:first:underline
         "
         @click="useNavigateToSummoner(comment.author_id)">
-        <span class="inline !text-4 font-semibold">
-          {{ comment.author.name || 'Summoner' }}
+        <span class="inline text-4! font-semibold">
+          {{ comment.author.name || "Summoner" }}
         </span>
         <span class="ml-1 inline-flex align-bottom text-2">
           <icon
@@ -70,11 +80,14 @@ const summoner = computed (() => {
         </span>
         <span
           v-if="comment.updated"
-          v-tippy="{ content: 'Edited', theme: 'base', placement: 'top-start', followCursor: true }"
+          v-tippy="{
+            content: 'Edited',
+            theme: 'base',
+            placement: 'top-start',
+            followCursor: true,
+          }"
           class="inline text-0">
-          <span class="opacity-60">
-            -&thinsp;
-          </span>
+          <span class="opacity-60"> -&thinsp; </span>
           <icon
             name="lucide:pencil"
             class="inline size-3 align-middle opacity-60" />

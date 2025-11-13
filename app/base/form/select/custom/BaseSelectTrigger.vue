@@ -1,19 +1,19 @@
 <script setup lang="ts">
-import type { SelectTriggerProps } from 'reka-ui'
-import { reactiveOmit } from '@vueuse/core'
-import { SelectIcon, SelectTrigger, useForwardProps } from 'reka-ui'
+import type { SelectTriggerProps } from "reka-ui";
+import { reactiveOmit } from "@vueuse/core";
+import { SelectIcon, SelectTrigger, useForwardProps } from "reka-ui";
 
 const props = defineProps<
   SelectTriggerProps & {
-    class?: HTMLAttributes['class']
-    noArrow?: boolean
-    iconClass?: HTMLAttributes['class']
+    class?: HTMLAttributes["class"];
+    noArrow?: boolean;
+    iconClass?: HTMLAttributes["class"];
   }
->()
+>();
 
-const delegatedProps = reactiveOmit(props, 'class')
+const delegatedProps = reactiveOmit(props, "class");
 
-const forwarded = useForwardProps(delegatedProps)
+const forwarded = useForwardProps(delegatedProps);
 </script>
 
 <template>
@@ -32,19 +32,20 @@ const forwarded = useForwardProps(delegatedProps)
         `,
         props.class,
       )
-    ">
+    "
+  >
     <slot />
 
     <SelectIcon
       v-if="!noArrow"
       :class="{ hidden: props.noArrow }"
       as-child
-      class="absolute right-3 justify-self-end">
+      class="absolute right-3 justify-self-end"
+    >
       <icon
         name="select"
-        :class="
-          cn('absolute right-0 size-4 shrink-0 opacity-50', iconClass)
-        " />
+        :class="cn('absolute right-0 size-4 shrink-0 opacity-50', iconClass)"
+      />
     </SelectIcon>
   </SelectTrigger>
 </template>

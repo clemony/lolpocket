@@ -14,8 +14,7 @@ useScrollProvider(el)
 </script>
 
 <template>
-  <div
-    class="relative size-full max-w-screen">
+  <div class="relative size-full max-w-screen">
     <div class="fixed top-0 left-[45px] z-12 flex h-15 w-56 items-center">
       <icon
         name=""
@@ -34,10 +33,12 @@ useScrollProvider(el)
 
     <!-- Header block -->
     <div
-      :class="cn(`
-        pointer-events-none z-0 grid size-full h-[70vh] max-h-[70vh]
-        min-h-[70vh] grid-cols-2 overflow-hidden
-      `)">
+      :class="
+        cn(`
+          pointer-events-none z-0 grid size-full h-[70vh] max-h-[70vh]
+          min-h-[70vh] grid-cols-2 overflow-hidden
+        `)
+      ">
       <div
         class="
           w-40% z-1 flex size-full grow flex-col items-start justify-center
@@ -45,7 +46,7 @@ useScrollProvider(el)
           *:z-1
         ">
         <BlurReveal>
-          <h1 class="!text-[3.4rem] dst">
+          <h1 class="text-[3.4rem]! dst">
             {{ pocket.name }}
           </h1>
         </BlurReveal>
@@ -55,11 +56,15 @@ useScrollProvider(el)
     <!-- Scrollable content -->
     <div
       ref="el"
-      :class="cn(`
-        absolute inset-0 top-0 max-w-screen overflow-x-hidden overflow-y-auto
-        pt-[70vh]
-      `, {
-      })">
+      :class="
+        cn(
+          `
+            absolute inset-0 top-0 max-w-screen overflow-x-hidden
+            overflow-y-auto pt-[70vh]
+          `,
+          {},
+        )
+      ">
       <!-- Sticky Tabs (now ABOVE parent header) -->
       <div
         class="
@@ -73,6 +78,10 @@ useScrollProvider(el)
       <!-- Context wrapper -->
       <div class="relative z-1 -mt-px min-h-screen w-screen max-w-screen bg-b1">
         <CoreContent />
+
+        <div class="mt-12 flex w-full justify-center pb-54">
+          <CommentsThread :thread-id="pocket.key as UUID" />
+        </div>
         <SiteFooter />
       </div>
       <slot name="fab" />

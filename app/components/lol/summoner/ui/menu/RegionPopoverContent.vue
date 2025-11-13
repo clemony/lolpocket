@@ -1,16 +1,16 @@
 <script lang="ts" setup>
-import { regionIndex } from '~~/shared/references'
+import { regionIndex } from "~~/shared/references";
 
 defineOptions({
-  inheritAttrs: false
-})
+  inheritAttrs: false,
+});
 
 const { class: className } = defineProps<{
-  class?: HTMLAttributes['class']
-}>()
+  class?: HTMLAttributes["class"];
+}>();
 
-const emit = defineEmits(['update:model-value'])
-const modelValue = ref(as().account.region)
+const emit = defineEmits(["update:model-value"]);
+const modelValue = ref(as().account.region);
 </script>
 
 <template>
@@ -21,13 +21,13 @@ const modelValue = ref(as().account.region)
         'h-100 w-86 -translate-x-34 -translate-y-10.25 rounded-lg p-0',
         className,
       )
-    ">
+    "
+  >
     <!--  <PopoverArrow /> -->
     <div class="grid size-full gap-px overflow-y-auto px-1 pb-2">
       <div
-        class="
-          sticky top-0 z-1 mb-2 flex h-11 w-full items-center border-b bg-b1
-        ">
+        class="sticky top-0 z-1 mb-2 flex h-11 w-full items-center border-b bg-b1"
+      >
         <Label class="px-4 text-bc/50">Select Region...</Label>
       </div>
 
@@ -45,7 +45,8 @@ const modelValue = ref(as().account.region)
             `,
             { 'btn-active !bg-b2/30': region === modelValue },
           )
-        ">
+        "
+      >
         <span class="">
           {{ regionIndex[region] }}
         </span>
@@ -59,10 +60,9 @@ const modelValue = ref(as().account.region)
           :value="region"
           v-bind="$attrs"
           class="hidden"
-          @change="emit('update:model-value', modelValue)" />
-        <icon
-          v-if="region === modelValue"
-          name="tick-sm" />
+          @change="emit('update:model-value', modelValue)"
+        />
+        <icon v-if="region === modelValue" name="tick-sm" />
       </Button>
     </div>
   </LazyPopoverContent>

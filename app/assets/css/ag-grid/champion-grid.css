@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 .champion-grid {
   @apply pt-36 border-t border-t-b3/60;

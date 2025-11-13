@@ -1,7 +1,6 @@
-import type { Pocket } from '..'
+import type { Pocket } from "..";
 
 export function pType(pocket: Pocket | string) {
-  if (typeof pocket === 'string')
-    return ps().getPocket(pocket)
-  else return pocket as unknown as Pocket
+  if (typeof pocket === "string") return ps().getPocket(pocket);
+  else return pocket as unknown as Pocket;
 }

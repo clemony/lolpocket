@@ -1,24 +1,24 @@
 <script setup lang="ts">
 defineOptions({
   inheritAttrs: false,
-})
+});
 
 const { class: className, to } = defineProps<{
-  to: any
-  class?: HTMLAttributes['class']
-}>()
+  to: any;
+  class?: HTMLAttributes["class"];
+}>();
 
 defineNuxtLink({
-  componentName: 'InlineLink',
-  externalRelAttribute: 'noreferrer',
+  componentName: "InlineLink",
+  externalRelAttribute: "noreferrer",
   prefetch: true,
-  prefetchedClass: '',
+  prefetchedClass: "",
   prefetchOn: {
     interaction: true,
     visibility: false,
   },
-  trailingSlash: 'remove',
-})
+  trailingSlash: "remove",
+});
 </script>
 
 <template>
@@ -33,7 +33,8 @@ defineNuxtLink({
       )
     "
     v-bind="$attrs"
-    :to="to">
+    :to="to"
+  >
     <span>
       <slot />
     </span>

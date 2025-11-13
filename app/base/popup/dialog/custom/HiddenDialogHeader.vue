@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import { VisuallyHidden } from 'reka-ui'
+import { VisuallyHidden } from "reka-ui";
 
 const props = defineProps<{
-  title: string
-  desc: string
-}>()
+  title: string;
+  desc: string;
+}>();
 </script>
 
 <template>

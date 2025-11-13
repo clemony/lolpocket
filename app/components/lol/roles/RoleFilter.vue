@@ -1,19 +1,19 @@
 <script setup lang="ts">
 const { class: className, summoner } = defineProps<{
-  summoner: Summoner
-  class?: HTMLAttributes['class']
-}>()
+  summoner: Summoner;
+  class?: HTMLAttributes["class"];
+}>();
 
-const state = inject<SummonerData>(SummonerKey)!
+const state = inject<SummonerData>(SummonerKey)!;
 const roleStats = await useMatchRoles(
   state.summoner.puuid,
-  computed(() => state.matches)
-)
+  computed(() => state.matches),
+);
 
 const roleModel = computed({
   get: () => state.filter.role,
-  set: val => state.setFilter('role', val),
-})
+  set: (val) => state.setFilter("role", val),
+});
 </script>
 
 <template>
@@ -24,7 +24,8 @@ const roleModel = computed({
         variant="ghost"
         :class="{ 'pointer-events-none': ms().filter.role === 'ALL' }"
         class="gap-2 place-self-center rounded-lg px-2.5 text-3 font-medium"
-        @click="state.clearFilters()">
+        @click="state.clearFilters()"
+      >
         {{
           ms().filter.role !== "ALL"
             ? roleStats.find((r) => r.role === ms().filter.role).name
@@ -34,7 +35,8 @@ const roleModel = computed({
         <icon
           v-if="ms().filter.role !== 'ALL'"
           name="x-sm"
-          class="-mt-px shrink-0" />
+          class="-mt-px shrink-0"
+        />
       </Button>
     </div>
 
@@ -42,10 +44,9 @@ const roleModel = computed({
       <transition-slide
         :offset="{ enter: [10, 0], leave: [-10, 0] }"
         group
-        class="relative flex w-full flex-wrap gap-5">
-        <template
-          v-for="role in roleStats"
-          :key="role.role">
+        class="relative flex w-full flex-wrap gap-5"
+      >
+        <template v-for="role in roleStats" :key="role.role">
           <label
             v-if="ms().filter.role === 'ALL' || ms().filter.role === role.role"
             v-tippy="{
@@ -59,22 +60,22 @@ const roleModel = computed({
                   role.role === ms().filter.role,
                 'border-b3/80 btn  size-14  mr-0 btn-square': role.games,
               })
-            ">
+            "
+          >
             <input
               v-model="ms().filter.role"
               class="peer absolute hidden"
               type="radio"
               :disabled="!role.games"
               :value="role.role"
-              name="item-types" />
+              name="item-types"
+            />
 
             <component
               :is="`i-roles-${role.role.toLowerCase().replace(' ', '-').replace('utility', 'support')}`"
-              class="
-                h-5 w-auto shrink-0 dst
-                peer-checked:text-nc
-              "
-              :class="{ '!text-bc/80': role.name === 'ALL' }" />
+              class="h-5 w-auto shrink-0 dst peer-checked:text-nc"
+              :class="{ 'text-bc/80!': role.name === 'ALL' }"
+            />
           </label>
         </template>
       </transition-slide>

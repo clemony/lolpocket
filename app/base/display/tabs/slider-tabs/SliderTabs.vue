@@ -1,28 +1,28 @@
 <script setup lang="ts">
-import type { SliderRootEmits, SliderRootProps } from 'reka-ui'
-import { SliderRoot, useForwardPropsEmits, } from 'reka-ui'
+import type { SliderRootEmits, SliderRootProps } from "reka-ui";
+import { SliderRoot, useForwardPropsEmits } from "reka-ui";
 
 const props = defineProps<
   SliderRootProps & {
-    class?: HTMLAttributes['class']
+    class?: HTMLAttributes["class"];
   }
->()
-const emits = defineEmits<SliderRootEmits>()
+>();
+const emits = defineEmits<SliderRootEmits>();
 
-const delegatedProps = reactiveOmit(props, 'class')
+const delegatedProps = reactiveOmit(props, "class");
 
-const forwarded = useForwardPropsEmits(delegatedProps, emits)
+const forwarded = useForwardPropsEmits(delegatedProps, emits);
 
-watch(() => forwarded.value.modelValue, (newVal) => {
-  console.log('💠 - watch - newVal:', newVal)
-})
+watch(
+  () => forwarded.value.modelValue,
+  (newVal) => {
+    console.log("💠 - watch - newVal:", newVal);
+  },
+);
 </script>
 
 <template>
-  <SliderRoot
-    as-child
-    :class=" props.class "
-    v-bind="forwarded">
+  <SliderRoot as-child :class="props.class" v-bind="forwarded">
     <slot />
   </SliderRoot>
 </template>

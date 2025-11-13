@@ -1,26 +1,26 @@
 <script lang="ts" setup>
-import { motion } from 'motion-v'
+import { motion } from "motion-v";
 
-const route = useRoute()
-const { childRoutes, targetRoutes } = useRouteNavigation()
-const { scrollY } = useScrollInject()
+const route = useRoute();
+const { childRoutes, targetRoutes } = useRouteNavigation();
+const { scrollY } = useScrollInject();
 
 // Smooth sticky state (0 → not sticky, 1 → sticky)
-const stickyRaw = useMotionValue(0)
-const sticky = useSpring(stickyRaw, { damping: 18, mass: 0.7, stiffness: 180 })
+const stickyRaw = useMotionValue(0);
+const sticky = useSpring(stickyRaw, { damping: 18, mass: 0.7, stiffness: 180 });
 
-useMotionValueEvent(scrollY, 'change', (latest) => {
-  stickyRaw.set(latest > 220 ? 1 : 0)
-})
+useMotionValueEvent(scrollY, "change", (latest) => {
+  stickyRaw.set(latest > 220 ? 1 : 0);
+});
 
 // Nav container transforms
-const gap = useTransform(sticky, [0, 1], ['0.5rem', '0rem'])
-const translateY = useTransform(sticky, [0, 1], ['-6%', '-13%'])
-const translateX = useTransform(sticky, [0, 1], ['0%', '8%'])
-const opacity = useTransform(sticky, [0, 1], ['1', '0.95'])
+const gap = useTransform(sticky, [0, 1], ["0.5rem", "0rem"]);
+const translateY = useTransform(sticky, [0, 1], ["-6%", "-13%"]);
+const translateX = useTransform(sticky, [0, 1], ["0%", "8%"]);
+const opacity = useTransform(sticky, [0, 1], ["1", "0.95"]);
 
 // Individual tab transforms
-const tabPaddingX = useTransform(sticky, [0, 1], ['3.5rem', '1.6rem'])
+const tabPaddingX = useTransform(sticky, [0, 1], ["3.5rem", "1.6rem"]);
 </script>
 
 <template>
@@ -28,14 +28,17 @@ const tabPaddingX = useTransform(sticky, [0, 1], ['3.5rem', '1.6rem'])
     v-if="childRoutes"
     role="tablist"
     :style="{ gap, opacity, translateX }"
-    :class="cn(
-      `
+    :class="
+      cn(
+        `
         relative z-3 flex h-15 w-fit items-end justify-start self-end
-        !border-b-0 transition-none
+        border-b-0! transition-none
         *:select-none
         **:text-2
       `,
-    )">
+      )
+    "
+  >
     <motion.button
       v-for="item in childRoutes.sort((a, b) => a.meta?.order - b.meta?.order)"
       :key="item.name"
@@ -45,44 +48,56 @@ const tabPaddingX = useTransform(sticky, [0, 1], ['3.5rem', '1.6rem'])
         paddingLeft: tabPaddingX,
         paddingRight: tabPaddingX,
       }"
-      :class="cn(
-        `
+      :class="
+        cn(
+          `
           group/tab pointer-events-auto tabs-lift relative tabs flex w-max
-          min-w-22 grow origin-bottom cursor-pointer items-start self-end
-          self-start !border-b-0 tabs-lg transition-none
+          min-w-22 grow origin-bottom cursor-pointer items-start self-start
+          border-b-0! tabs-lg transition-none
         `,
-        {
-          grow: stickyRaw.get() <= 0.5,
-        },
-      )"
-      @click="navigateTo(targetRoutes[String(item.name)])">
+          {
+            grow: stickyRaw.get() <= 0.5,
+          },
+        )
+      "
+      @click="navigateTo(targetRoutes[String(item.name)])"
+    >
       <FakeTab />
 
       <div
-        :class="cn(`
-          tab absolute !bottom-0 left-0 w-full grow origin-bottom !border-b-0
-        `, {
-          ' ': stickyRaw.get() > 0.5,
-          'bg-b1/90': stickyRaw.get() > 0.5 && item.name === route.name,
-          'tab-active': item.name === route.name,
-        })" />
+        :class="
+          cn(
+            `
+          tab absolute bottom-0! left-0 w-full grow origin-bottom border-b-0!
+        `,
+            {
+              ' ': stickyRaw.get() > 0.5,
+              'bg-b1/90': stickyRaw.get() > 0.5 && item.name === route.name,
+              'tab-active': item.name === route.name,
+            },
+          )
+        "
+      />
 
       <motion.div
-        :class="cn(
-          `
-            z-3 flex h-10 w-full grow flex-nowrap items-center justify-center
-            text-2 font-medium font-semibold text-bc/90 capitalize
+        :class="
+          cn(
+            `
+            d z-3 flex h-10 w-full grow flex-nowrap items-center justify-center
+            text-2 font-medium text-bc/90 capitalize
             transition-[opacity,transform] duration-100 ease-out
             group-hover/tab:underline
           `,
-          {
-            'opacity-60': item.name !== route.name,
-            'opacity-100': item.name === route.name,
-          },
-        )"
+            {
+              'opacity-60': item.name !== route.name,
+              'opacity-100': item.name === route.name,
+            },
+          )
+        "
         :style="{
           translateY,
-        }">
+        }"
+      >
         {{ item?.meta?.title || item.name.toString() }}
       </motion.div>
 

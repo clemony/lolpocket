@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { useSidebar } from './sidebar-utils'
+import { useSidebar } from "./sidebar-utils";
 
 const props = defineProps<{
-  class?: HTMLAttributes['class']
-}>()
+  class?: HTMLAttributes["class"];
+}>();
 
-const { toggleSidebar, state } = useSidebar()
+const { toggleSidebar, state } = useSidebar();
 </script>
 
 <template>
@@ -24,14 +24,11 @@ const { toggleSidebar, state } = useSidebar()
         props.class,
       )
     "
-    @click="toggleSidebar">
-    <icon
-      v-show="state === 'expanded'"
-      name="collapse" />
+    @click="toggleSidebar"
+  >
+    <icon v-show="state === 'expanded'" name="collapse" />
 
-    <icon
-      v-show="state === 'collapsed'"
-      name="expand" />
+    <icon v-show="state === 'collapsed'" name="expand" />
     <slot />
     <span class="sr-only">Toggle Sidebar</span>
   </Label>

@@ -39,13 +39,13 @@ export function transformMatchData(raw: any): MatchData {
       },
       profileIcon: p.profileIcon,
       quadraKills: p.quadraKills,
-      riotIdGameName: p.riotIdGameName ?? '',
-      riotIdTagline: p.riotIdTagline ?? '',
+      riotIdGameName: p.riotIdGameName ?? "",
+      riotIdTagline: p.riotIdTagline ?? "",
       soloKills: p.soloKills,
       summoner1Id: p.summoner1Id,
       summoner2Id: p.summoner2Id,
       teamId: p.teamId,
-      teamPosition: p.teamPosition ?? '',
+      teamPosition: p.teamPosition ?? "",
       timeCCingOthers: p.timeCCingOthers,
       totalDamageDealtToChampions: p.totalDamageDealtToChampions,
       totalDamageShieldedOnTeammates: p.totalDamageShieldedOnTeammates,
@@ -61,11 +61,11 @@ export function transformMatchData(raw: any): MatchData {
 
       // placeholder, will overwrite after MVP calculation
       mvpScore: 0,
-    })
-  )
+    }),
+  );
 
   // prep stats for mvp
-  const playerStats: PlayerStats[] = participants.map(p => ({
+  const playerStats: PlayerStats[] = participants.map((p) => ({
     puuid: p.puuid,
     assists: p.assists,
     challenges: {
@@ -95,21 +95,21 @@ export function transformMatchData(raw: any): MatchData {
     turretKills: p.turretKills,
     visionScore: p.visionScore,
     win: p.win,
-  }))
+  }));
 
   // calc mvp scores
-  const mvpScores = calculateMvpScores(playerStats)
+  const mvpScores = calculateMvpScores(playerStats);
 
   // inject mvp into player
   for (const participant of participants) {
-    participant.mvpScore = mvpScores[participant.puuid] ?? 0
+    participant.mvpScore = mvpScores[participant.puuid] ?? 0;
   }
 
   // continue mapping
   const teams: MatchTeam[] = raw.info.teams.map((team: any): MatchTeam => {
     const teamParticipants = participants.filter(
-      p => p.teamId === team.teamId
-    )
+      (p) => p.teamId === team.teamId,
+    );
 
     return {
       assists: teamParticipants.reduce((sum, p) => sum + p.assists, 0),
@@ -133,8 +133,8 @@ export function transformMatchData(raw: any): MatchData {
       },
       teamId: team.teamId,
       win: team.win,
-    }
-  })
+    };
+  });
 
   return {
     endOfGameResult: raw.info.endOfGameResult,
@@ -146,5 +146,5 @@ export function transformMatchData(raw: any): MatchData {
     participants,
     queueId: raw.info.queueId ?? 420,
     teams,
-  }
+  };
 }

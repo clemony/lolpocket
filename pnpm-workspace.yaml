@@ -1,7 +1,7 @@
 onlyBuiltDependencies:
-  - '@morev/vue-transitions'
-  - '@parcel/watcher'
-  - '@tailwindcss/oxide'
+  - "@morev/vue-transitions"
+  - "@parcel/watcher"
+  - "@tailwindcss/oxide"
   - esbuild
   - re2
   - sharp

@@ -1,1 +1,1 @@
-export const as = () => useAccountStore()
+export const as = () => useAccountStore();

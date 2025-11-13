@@ -1,20 +1,20 @@
 <script lang="ts" setup>
-import { roundArrow } from 'vue-tippy'
+import { roundArrow } from "vue-tippy";
 
 const {
   content,
   offset = [0, 10],
-  placement = 'bottom',
+  placement = "bottom",
 } = defineProps<{
-  content: string
-  placement?: string
-  offset?: number[]
-}>()
+  content: string;
+  placement?: string;
+  offset?: number[];
+}>();
 
-const side = computed(() => placement.split('-')[0])
+const side = computed(() => placement.split("-")[0]);
 
-const sharpArrow
-  = '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M5 15h14l-7-8z"/></svg>'
+const sharpArrow =
+  '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M5 15h14l-7-8z"/></svg>';
 </script>
 
 <template>
@@ -27,7 +27,8 @@ const sharpArrow
     trigger="click"
     :arrow="roundArrow + roundArrow"
     :placement="placement"
-    :offset="offset">
+    :offset="offset"
+  >
     <slot />
   </tippy>
 </template>

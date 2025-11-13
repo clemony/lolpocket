@@ -3,9 +3,12 @@ import type { SeparatorProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { reactiveOmit } from '@vueuse/core'
 
-const props = withDefaults(defineProps<SeparatorProps & { class?: HTMLAttributes['class'] }>(), {
-  orientation: 'vertical',
-})
+const props = withDefaults(
+  defineProps<SeparatorProps & { class?: HTMLAttributes['class'] }>(),
+  {
+    orientation: 'vertical',
+  },
+)
 const delegatedProps = reactiveOmit(props, 'class')
 </script>
 
@@ -14,11 +17,13 @@ const delegatedProps = reactiveOmit(props, 'class')
     data-slot="button-group-separator"
     v-bind="delegatedProps"
     :orientation="props.orientation"
-    :class="cn(
-      `
-        bg-input relative !m-0 self-stretch
-        data-[orientation=vertical]:h-auto
-      `,
-      props.class,
-    )" />
+    :class="
+      cn(
+        `
+          relative m-0! self-stretch bg-b3
+          data-[orientation=vertical]:h-auto
+        `,
+        props.class,
+      )
+    " />
 </template>

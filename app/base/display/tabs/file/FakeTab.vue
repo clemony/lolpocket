@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const { class: className } = defineProps<{
-  class?: HTMLAttributes['class']
-}>()
+  class?: HTMLAttributes["class"];
+}>();
 </script>
 
 <template>
@@ -10,12 +10,13 @@ const { class: className } = defineProps<{
     :class="
       cn(
         `
-          tab-menu tab pointer-events-none relative !w-0 !min-w-0 !grow-0
-          !border-b-transparent !p-0
+          tab-menu tab pointer-events-none relative w-0! min-w-0! grow-0!
+          border-b-transparent! p-0!
         `,
         className,
       )
-    ">
+    "
+  >
     <slot />
   </li>
 </template>

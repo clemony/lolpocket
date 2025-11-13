@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 @plugin "daisyui";
 
 @utility fx-0 {
@@ -119,7 +119,7 @@
   }
 
   .field-box {
-    background: url('../icons/ui/noise.svg');
+    background: url("../icons/ui/noise.svg");
     @apply shadow-warm-soft overflow-visible border bg-size-[160px] bg-b2/40 bg-repeat  drop-shadow-xs border-b3/60 rounded-xl **:select-none text-2   relative;
   }
 
@@ -165,13 +165,13 @@
 /* config */
 
 @plugin "daisyui" {
-  root: ':root';
+  root: ":root";
   themes: lofi;
   styled: true;
 }
 
 @plugin "daisyui/theme" {
-  name: 'lofi';
+  name: "lofi";
   default: true;
   prefersdark: true, false;
   color-scheme: dark, light;
@@ -220,21 +220,33 @@
       /* ⤷ Inactive state: borders are transparent */
       --tab-border: var(--border) 0 var(--border) var(--border);
       --tab-border-colors: #0000 #0000 #0000 #0000;
-      --tab-radius-ss: min(var(--radius-field), var(--tab-radius-min)); /* top-left */
+      --tab-radius-ss: min(
+        var(--radius-field),
+        var(--tab-radius-min)
+      ); /* top-left */
       --tab-radius-se: 0; /* top-right */
-      --tab-radius-es: min(var(--radius-field), var(--tab-radius-min)); /* bottom-left */
+      --tab-radius-es: min(
+        var(--radius-field),
+        var(--tab-radius-min)
+      ); /* bottom-left */
       --tab-radius-ee: 0; /* bottom-right */
       --tab-paddings: var(--tab-p) var(--border) var(--tab-p) 0;
 
       border-width: var(--tab-border);
       border-color: var(--tab-border-colors);
-      border-radius: var(--tab-radius-ss) var(--tab-radius-se) var(--tab-radius-ee) var(--tab-radius-es);
+      border-radius: var(--tab-radius-ss) var(--tab-radius-se)
+        var(--tab-radius-ee) var(--tab-radius-es);
       padding: var(--tab-paddings);
       position: relative;
       background-color: transparent;
 
       /* ⤷ Active state: visible borders, mask corners */
-      &:is(.tab-active, [aria-selected='true'], [aria-current='true'], [aria-current='page']),
+      &:is(
+        .tab-active,
+        [aria-selected="true"],
+        [aria-current="true"],
+        [aria-current="page"]
+      ),
       &:is(input:checked, label:has(:checked)) {
         --tab-border-color: color-mix(in lch, var(--color-b3) 100%, #ffffff 2%);
         background-color: var(--tab-bg);
@@ -250,12 +262,15 @@
         border-right-color: #0000;
         border-left-color: var(--tab-border-color);
 
-        --tab-paddings: calc(var(--tab-p) - var(--border)) 0 calc(var(--tab-p) - var(--border)) var(--border);
+        --tab-paddings: calc(var(--tab-p) - var(--border)) 0
+          calc(var(--tab-p) - var(--border)) var(--border);
         --tab-inset: 0 auto 0 auto;
         --tab-grad: calc(69% - var(--border));
 
         --tab-corner-width: min(var(--radius-field), var(--tab-radius-min));
-        --tab-corner-height: calc(100% + min(var(--radius-field), var(--tab-radius-min)) * 2);
+        --tab-corner-height: calc(
+          100% + min(var(--radius-field), var(--tab-radius-min)) * 2
+        );
         --tab-corner-position: top left, bottom left;
 
         --radius-start: radial-gradient(
@@ -274,7 +289,7 @@
         );
 
         &:before {
-          content: '';
+          content: "";
           display: block;
           position: absolute;
           height: var(--tab-corner-height);

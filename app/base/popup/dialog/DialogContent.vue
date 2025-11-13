@@ -1,42 +1,38 @@
 <script setup lang="ts">
-import type { DialogContentEmits, DialogContentProps } from 'reka-ui'
+import type { DialogContentEmits, DialogContentProps } from "reka-ui";
 import {
   DialogClose,
   DialogContent,
   DialogOverlay,
   DialogPortal,
   useForwardPropsEmits,
-} from 'reka-ui'
+} from "reka-ui";
 
 defineOptions({
-  inheritAttrs: false
-})
+  inheritAttrs: false,
+});
 
 const props = defineProps<
   DialogContentProps & {
-    class?: HTMLAttributes['class']
-    noOverlay?: boolean
-    close?: boolean
+    class?: HTMLAttributes["class"];
+    noOverlay?: boolean;
+    close?: boolean;
   }
->()
+>();
 
-const emits = defineEmits<DialogContentEmits>()
+const emits = defineEmits<DialogContentEmits>();
 
-const delegatedProps = reactiveOmit(props, 'class')
+const delegatedProps = reactiveOmit(props, "class");
 
-const forwarded = useForwardPropsEmits(delegatedProps, emits)
+const forwarded = useForwardPropsEmits(delegatedProps, emits);
 </script>
 
 <template>
   <DialogPortal>
     <DialogOverlay
-      class="
-        data-[state=open]:animate-in
-        data-[state=closed]:animate-out data-[state=closed]:fade-out-0
-        data-[state=open]:fade-in-0
-        fixed inset-0 isolate z-50 bg-black/80
-      "
-      :class="{ 'invisible opacity-0': noOverlay }" />
+      class="data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 isolate z-50 bg-black/80"
+      :class="{ 'invisible opacity-0': noOverlay }"
+    />
 
     <DialogContent
       v-bind="forwarded"
@@ -58,23 +54,17 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
             sm:rounded-lg
           `,
           props.class,
-        )"
-      @close-auto-focus.prevent>
+        )
+      "
+      @close-auto-focus.prevent
+    >
       <slot />
 
       <DialogClose
         v-if="props.close"
-        class="
-          ring-offset-background absolute top-4 right-4 rounded-sm opacity-70
-          transition-opacity
-          focus:ring-ring focus:ring-1 focus:ring-offset-1 focus:outline-none
-          hover:opacity-100
-          disabled:pointer-events-none
-          data-[state=open]:bg-tint-b2/60 data-[state=open]:text-bc/50
-        ">
-        <icon
-          name="x"
-          class="size-4.5" />
+        class="ring-offset-background absolute top-4 right-4 rounded-sm opacity-70 transition-opacity focus:ring-ring focus:ring-1 focus:ring-offset-1 focus:outline-none hover:opacity-100 disabled:pointer-events-none data-[state=open]:bg-tint-b2/60 data-[state=open]:text-bc/50"
+      >
+        <icon name="x" class="size-4.5" />
 
         <span class="sr-only">Close</span>
       </DialogClose>

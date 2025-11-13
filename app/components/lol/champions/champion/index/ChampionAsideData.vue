@@ -1,14 +1,20 @@
 <script setup lang="ts">
-import { abilityResources, damageTypes } from '~~/shared/references'
+import { abilityResources, damageTypes } from "~~/shared/references";
 
 const { champion, wrapperClass } = defineProps<{
-  champion: Champion
-  wrapperClass: string
-}>()
+  champion: Champion;
+  wrapperClass: string;
+}>();
 
-const resource = computed (() => abilityResources.find(r => r.name.toLowerCase() === champion?.resource.toLowerCase()))
+const resource = computed(() =>
+  abilityResources.find(
+    (r) => r.name.toLowerCase() === champion?.resource.toLowerCase(),
+  ),
+);
 
-const damageType = computed (() => damageTypes.find(d => d.type === champion.adaptiveType))
+const damageType = computed(() =>
+  damageTypes.find((d) => d.type === champion.adaptiveType),
+);
 </script>
 
 <template>
@@ -17,10 +23,11 @@ const damageType = computed (() => damageTypes.find(d => d.type === champion.ada
       <p>Position</p>
       <p class="flex items-center gap-2">
         <PositionBadge
-          v-for="pos, i in champion.positions"
+          v-for="(pos, i) in champion.positions"
           :key="i"
           active
-          :position="pos" />
+          :position="pos"
+        />
       </p>
     </div>
 
@@ -28,45 +35,46 @@ const damageType = computed (() => damageTypes.find(d => d.type === champion.ada
       <p>Role</p>
       <p class="flex items-center">
         <span
-          v-for="role, i in champion.roles"
+          v-for="(role, i) in champion.roles"
           :key="i"
-          :class="cn('font-medium italic')">
-          {{ role }}<template v-if="i !== champion.roles.length - 1">,&nbsp;&thinsp;</template>
+          :class="cn('font-medium italic')"
+        >
+          {{ role
+          }}<template v-if="i !== champion.roles.length - 1"
+            >,&nbsp;&thinsp;</template
+          >
         </span>
       </p>
     </div>
 
     <div :class="wrapperClass">
       <p>Damage Style</p>
-      <div
-        class="
-          flex items-center gap-3
-          *:flex *:items-center *:gap-1.5
-        ">
+      <div class="flex items-center gap-3 *:flex *:items-center *:gap-1.5">
         <span class="font-medium">
           <component
             :is="`i-lol-${champion.attackType.toLowerCase()}`"
             v-if="champion.attackType"
-            class="
-              !size-4.5 shrink-0 dst
-              **:stroke-0
-            " />
+            class="size-4.5! shrink-0 dst **:stroke-0"
+          />
           {{ champion.attackType }}
         </span>
-        <span v-if="champion.attackType && champion.adaptiveType">
-          +
-        </span>
+        <span v-if="champion.attackType && champion.adaptiveType"> + </span>
         <div class="font-medium">
           <span class="relative grid size-4 place-items-center">
             <component
               :is="damageType?.icon"
               v-if="damageType?.icon"
-              :class="cn('absolute !size-3.5 shrink-0 dst', { 'mt-0.5 mr-0.75': champion.adaptiveType === 'Magic damage' })"
+              :class="
+                cn('absolute size-3.5! shrink-0 dst', {
+                  'mt-0.5 mr-0.75': champion.adaptiveType === 'Magic damage',
+                })
+              "
               :style="{
                 /*  color: damageType.color, */
-              }" />
+              }"
+            />
           </span>
-          {{ champion.adaptiveType?.replace('damage', '') }}
+          {{ champion.adaptiveType?.replace("damage", "") }}
         </div>
       </div>
     </div>
@@ -78,9 +86,10 @@ const damageType = computed (() => damageTypes.find(d => d.type === champion.ada
           v-if="resource?.icon"
           :name="resource?.icon"
           :style="{
-          /*   color: resource.color, */
+            /*   color: resource.color, */
           }"
-          class="!size-3.5 shrink-0 opacity-90 dst" />
+          class="size-3.5! shrink-0 opacity-90 dst"
+        />
         {{ champion.resource }}
       </p>
     </div>
@@ -88,19 +97,17 @@ const damageType = computed (() => damageTypes.find(d => d.type === champion.ada
     <div :class="wrapperClass">
       <p>Price</p>
       <div
-        class="
-          flex items-center gap-4 overflow-hidden
-          *:flex *:items-center *:gap-1 *:text-3
-        ">
+        class="flex items-center gap-4 overflow-hidden *:flex *:items-center *:gap-1 *:text-3"
+      >
         <div class="font-medium">
-          <i-lol-be class="mr-0.5 !size-4.25 !shrink-0 text-platinum dst" />
+          <i-lol-be class="mr-0.5 size-4.25! shrink-0! text-platinum dst" />
           <p>
             {{ champion.price.blueEssence }}
             <span class="pr-0.5 text-1 font-medium">BE</span>
           </p>
         </div>
         <div>
-          <i-lol-rp class="mr-1 !size-4.5 !shrink-0 text-gold dst" />
+          <i-lol-rp class="mr-1 size-4.5! shrink-0! text-gold dst" />
           <p class="font-medium">
             {{ champion.price.rp }}
             <span class="pr-0.5 text-1 font-medium">RP</span>
@@ -111,18 +118,19 @@ const damageType = computed (() => damageTypes.find(d => d.type === champion.ada
 
     <div :class="wrapperClass">
       <p>Last Changed</p>
-      <tippy
-        :tag="null"
-        :interactive="true">
+      <tippy :tag="null" :interactive="true">
         <BtnLink
           external
           :to="`https://wiki.leagueoflegends.com/en-us/V${champion.patchLastChanged}`"
           variant="link"
-          :class="cn(`
-            group/l !gap-1 font-medium !text-nowrap underline decoration-bc/40
+          :class="
+            cn(`
+            group/l gap-1! font-medium text-nowrap! underline decoration-bc/40
             underline-offset-3 opacity-80
             hover:decoration-bc hover:opacity-100
-          `)">
+          `)
+          "
+        >
           Patch {{ champion.patchLastChanged }}
         </BtnLink>
         <template #content>
@@ -130,21 +138,17 @@ const damageType = computed (() => damageTypes.find(d => d.type === champion.ada
             View notes on wiki
             <icon
               name="link"
-              class="
-                mb-0.5 size-3 opacity-60
-                group-hover/l:opacity-100
-              " />
+              class="mb-0.5 size-3 opacity-60 group-hover/l:opacity-100"
+            />
           </p>
         </template>
       </tippy>
     </div>
 
     <div class="flex h-12 w-full items-center justify-between">
-      <p class="opacity-50">
-        Release Date
-      </p>
+      <p class="opacity-50">Release Date</p>
       <p class="font-medium">
-        {{ useDateFormat(champion.releaseDate, 'MMMM D, YYYY') }}
+        {{ useDateFormat(champion.releaseDate, "MMMM D, YYYY") }}
       </p>
     </div>
   </div>

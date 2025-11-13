@@ -6,10 +6,11 @@ const props = defineProps<PopoverRootProps>()
 const emits = defineEmits<PopoverRootEmits>()
 
 const forwarded = useForwardPropsEmits(props, emits)
+const toggleOpen = useToggle(props.open)
 </script>
 
 <template>
   <PopoverRoot v-bind="forwarded">
-    <slot />
+    <slot :toggle-open />
   </PopoverRoot>
 </template>

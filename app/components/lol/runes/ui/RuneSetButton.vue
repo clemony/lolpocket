@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import type { Pocket, RuneSet } from '~~/shared/schema'
-import RunePanelMenu from '#components'
+import type { Pocket, RuneSet } from "~~/shared/schema";
+import RunePanelMenu from "#components";
 
 const {
   class: className,
@@ -9,20 +9,20 @@ const {
   set,
   setKey,
 } = defineProps<{
-  set?: RuneSet
-  pocket?: Pocket
-  class?: HTMLAttributes['class']
-  pathClass?: HTMLAttributes['class']
-  setKey?: number
-}>()
+  set?: RuneSet;
+  pocket?: Pocket;
+  class?: HTMLAttributes["class"];
+  pathClass?: HTMLAttributes["class"];
+  setKey?: number;
+}>();
 
-const menu = shallowRef(RunePanelMenu)
+const menu = shallowRef(RunePanelMenu);
 
-const route = useRoute()
+const route = useRoute();
 
 onMounted(async () => {
-  await rs().selectedRuneSet
-}) /*
+  await rs().selectedRuneSet;
+}); /*
     v-tippy="{content: h(menu, {pocket: pocket, set: set}),   interactive: true, followCursor: false,}" */
 /*
 const bgStyle = computed (() => {

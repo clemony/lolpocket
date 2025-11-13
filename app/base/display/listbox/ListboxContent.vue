@@ -1,20 +1,23 @@
 <script setup lang="ts">
-import type { ListboxContentProps } from 'reka-ui'
-import { ListboxContent, useForwardProps } from 'reka-ui'
+import type { ListboxContentProps } from "reka-ui";
+import { ListboxContent, useForwardProps } from "reka-ui";
 
-const props = defineProps<ListboxContentProps & {
-  class?: HTMLAttributes['class']
-}>()
+const props = defineProps<
+  ListboxContentProps & {
+    class?: HTMLAttributes["class"];
+  }
+>();
 
-const delegated = reactiveOmit(props, 'class')
-const forwarded = useForwardProps(delegated)
+const delegated = reactiveOmit(props, "class");
+const forwarded = useForwardProps(delegated);
 </script>
 
 <template>
   <ListboxContent
     v-bind="forwarded"
     :autofocus="false"
-    :class="cn('gap-1 py-1', props.class)">
+    :class="cn('gap-1 py-1', props.class)"
+  >
     <slot />
   </ListboxContent>
 </template>

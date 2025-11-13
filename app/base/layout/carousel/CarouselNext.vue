@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import type { WithClassAsProps } from './interface'
-import { useCarousel } from './useCarousel'
+import type { WithClassAsProps } from "./interface";
+import { useCarousel } from "./useCarousel";
 
-const props = defineProps<WithClassAsProps>()
+const props = defineProps<WithClassAsProps>();
 
-const { canScrollNext, orientation, scrollNext } = useCarousel()
+const { canScrollNext, orientation, scrollNext } = useCarousel();
 </script>
 
 <template>
@@ -16,7 +16,7 @@ const { canScrollNext, orientation, scrollNext } = useCarousel()
           group/carobtn absolute z-10 size-10 touch-manipulation rounded-full
           p-0
           *:pointer-events-none
-          disabled:!bg-transparent
+          disabled:bg-transparent!
         `,
         orientation === 'horizontal'
           ? '-right-12 top-1/2 -translate-y-1/2'
@@ -25,14 +25,13 @@ const { canScrollNext, orientation, scrollNext } = useCarousel()
       )
     "
     variant="outline"
-    @click="scrollNext">
+    @click="scrollNext"
+  >
     <slot>
       <icon
         name="right"
-        class="
-          text-current opacity-60
-          group-hover/carobtn:opacity-100
-        " />
+        class="text-current opacity-60 group-hover/carobtn:opacity-100"
+      />
 
       <span class="sr-only">Next Slide</span>
     </slot>

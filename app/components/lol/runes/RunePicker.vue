@@ -1,46 +1,44 @@
 <script setup lang="ts">
 const { limit, path, runes, set } = defineProps<{
-  set: number[]
-  runes: RunePath
-  path: string | undefined
-  limit?: boolean
-}>()
+  set: number[];
+  runes: RunePath;
+  path: string | undefined;
+  limit?: boolean;
+}>();
 const emit = defineEmits<{
-  (e: 'update:runes', currentSet: number[]): void
-}>()
+  (e: "update:runes", currentSet: number[]): void;
+}>();
 
-const currentRunes = ref<number[]>([])
+const currentRunes = ref<number[]>([]);
 
 const currentSet = computed(() => [
   currentRunes.value[0],
   currentRunes.value[1],
   currentRunes.value[2],
-])
+]);
 
 function handleChange(slotTier: number, selectedKey: number) {
-  currentRunes.value[slotTier] = selectedKey
-  emit('update:runes', currentRunes.value)
+  currentRunes.value[slotTier] = selectedKey;
+  emit("update:runes", currentRunes.value);
 }
 
 onMounted(() => {
-  currentRunes.value = set ?? [0, 0, 0]
-})
+  currentRunes.value = set ?? [0, 0, 0];
+});
 
 function openInfo(rune: number) {}
 </script>
 
 <template>
   <div
-    class="
-      field-box relative flex w-full flex-col items-center justify-center
-      gap-y-16 rounded-xl pt-12 pb-16 transition-all duration-500
-      **:select-none
-    ">
+    class="field-box relative flex w-full flex-col items-center justify-center gap-y-16 rounded-xl pt-12 pb-16 transition-all duration-500 **:select-none"
+  >
     <template v-if="runes">
       <div
         v-for="(slot, i) in runes.slots.filter((r) => r.tier !== 0)"
         :key="i"
-        class="flex h-16 w-full cursor-pointer justify-evenly gap-3">
+        class="flex h-16 w-full cursor-pointer justify-evenly gap-3"
+      >
         <tippy
           v-for="rune in slot.runes"
           :key="rune.id"
@@ -48,7 +46,8 @@ function openInfo(rune: number) {}
           :arrow="false"
           placement="bottom"
           :interactive="true"
-          class="rune-hover size-fit items-center justify-stretch rounded-full">
+          class="rune-hover size-fit items-center justify-stretch rounded-full"
+        >
           <Rune
             :id="rune.id"
             :class="
@@ -56,14 +55,16 @@ function openInfo(rune: number) {}
                 'opacity-100 scale-110 grayscale-0 opacity-94':
                   currentSet.includes(rune.id),
               })
-            ">
+            "
+          >
             <input
               v-model="currentSet[i]"
               :value="rune.id"
               type="radio"
               :name="`tier-${i}`"
               class="peer hidden"
-              @change="handleChange(i, rune.id)" />
+              @change="handleChange(i, rune.id)"
+            />
           </Rune>
 
           <template #content>
@@ -71,25 +72,26 @@ function openInfo(rune: number) {}
               variant="link"
               size="8"
               class="flex items-center"
-              @click="openInfo(rune.id)">
+              @click="openInfo(rune.id)"
+            >
               {{ rune.name }}
               <span class="relative grid size-4 place-items-center">
                 <icon
                   name="streamline:information-circle"
-                  class="absolute mb-0.75 size-4.5 shrink-0" />
+                  class="absolute mb-0.75 size-4.5 shrink-0"
+                />
               </span>
             </Button>
           </template>
         </tippy>
       </div>
     </template>
-    <div
-      v-else
-      class="grid size-full grid-cols-3 gap-y-14">
+    <div v-else class="grid size-full grid-cols-3 gap-y-14">
       <Placeholder
         v-for="i in 9"
         :key="i"
-        class="size-18 place-self-center rounded-full" />
+        class="size-18 place-self-center rounded-full"
+      />
     </div>
   </div>
 </template>

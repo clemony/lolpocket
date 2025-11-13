@@ -1,19 +1,19 @@
 <script setup lang="ts">
-import type { TabsContentProps } from 'reka-ui'
-import { TabsContent } from 'reka-ui'
+import type { TabsContentProps } from "reka-ui";
+import { TabsContent } from "reka-ui";
 
 const props = defineProps<
   TabsContentProps & {
-    class?: HTMLAttributes['class']
-    radius?: string
+    class?: HTMLAttributes["class"];
+    radius?: string;
   }
->()
+>();
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
+  const { class: _, ...delegated } = props;
 
-  return delegated
-})
+  return delegated;
+});
 </script>
 
 <template>
@@ -25,7 +25,8 @@ const delegatedProps = computed(() => {
       '--tabcontent-radius-es': props.radius,
       '--tabcontent-radius-ee': props.radius,
     }"
-    v-bind="delegatedProps">
+    v-bind="delegatedProps"
+  >
     <slot />
   </TabsContent>
 </template>

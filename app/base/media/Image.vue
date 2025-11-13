@@ -1,19 +1,19 @@
 <script lang="ts" setup>
-import { motion } from 'motion-v'
+import { motion } from "motion-v";
 
 defineOptions({
   inheritAttrs: false,
-})
+});
 
 const props = defineProps<{
-  image: string
-  alt: string
-  class?: HTMLAttributes['class']
-  imgClass?: string
-  quality?: number
-}>()
+  image: string;
+  alt: string;
+  class?: HTMLAttributes["class"];
+  imgClass?: string;
+  quality?: number;
+}>();
 
-const emit = defineEmits(['loaded'])
+const emit = defineEmits(["loaded"]);
 </script>
 
 <template>
@@ -26,14 +26,11 @@ const emit = defineEmits(['loaded'])
       class=""
       :class="cn('size-full', props.class)"
       :custom="true"
-      @load="emit('loaded')">
+      @load="emit('loaded')"
+    >
       <!-- Show the actual image when loaded -->
 
-      <AnimatePresence
-        multiple
-        as="div"
-        mode="popLayout"
-        class="size-full">
+      <AnimatePresence multiple as="div" mode="popLayout" class="size-full">
         <motion.div
           v-if="isLoaded"
           :initial="{ opacity: 0 }"
@@ -41,13 +38,15 @@ const emit = defineEmits(['loaded'])
           :transition="{
             duration: 0.3,
             ease: 'easeIn',
-          }">
+          }"
+        >
           <img
             alt="img"
             v-bind="imgAttrs"
             :img-attrs="{ ...imgAttrs, loading: 'lazy' }"
             :class="cn('size-full', props.imgClass)"
-            :src="src" />
+            :src="src"
+          />
         </motion.div>
         <!-- Show a placeholder while loading -->
         <Motion
@@ -57,10 +56,9 @@ const emit = defineEmits(['loaded'])
             duration: 0.3,
             ease: 'easeOut',
           }"
-          as-child>
-          <Skeleton
-            :class="cn('size-full', props.class)"
-            alt="placeholder" />
+          as-child
+        >
+          <Skeleton :class="cn('size-full', props.class)" alt="placeholder" />
         </Motion>
       </AnimatePresence>
     </NuxtImg>

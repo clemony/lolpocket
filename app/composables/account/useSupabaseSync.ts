@@ -1,9 +1,8 @@
-import * as v from 'valibot'
-
+import * as v from "valibot";
+/*
 function hash(obj: any) {
   return crypto.subtle.digest('SHA-256', obj ?? {})
 }
-
 export function useSupabaseSync<
   T extends object,
   S extends v.BaseSchema<any, T, any>,
@@ -12,20 +11,21 @@ export function useSupabaseSync<
   endpoint: string,
   getBody: (userId: string, value: T) => any,
   schema: S // S is a BaseSchema that outputs T
-) {
+)
+ */ /*  {
   const user = useSupabaseUser()
   console.log('🌱 - useSupabaseSync - user:', user)
   const session = useSupabaseSession()
 
   let snapshotHash: string | null = null
-  console.log('🌱 - useSupabaseSync - snapshotHash:', snapshotHash)
+  console.log('🌱 - useSupabaseSync - snapshotHash:', snapshotHash) */
 
-  onMounted(() => {
+/*   onMounted(() => {
     const parsed = v.safeParse(schema, source())
     snapshotHash = hash(parsed.output).toString()
-  })
+  }) */
 
-  async function syncIfDirty() {
+/*  async function syncIfDirty() {
     if (!user.value)
       return
 
@@ -54,7 +54,6 @@ export function useSupabaseSync<
 
     snapshotHash = currentHash
   }
-
   onBeforeRouteLeave(async () => {
     await syncIfDirty()
     console.log('synced')
@@ -62,3 +61,5 @@ export function useSupabaseSync<
 
   return { syncIfDirty }
 }
+
+ */

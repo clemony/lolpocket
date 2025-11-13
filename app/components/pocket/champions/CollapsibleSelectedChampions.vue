@@ -1,44 +1,43 @@
 <script lang="ts" setup>
-import { motion } from 'motion-v'
+import { motion } from "motion-v";
 
-const target = useTemplateRef<HTMLElement>('target')
+const target = useTemplateRef<HTMLElement>("target");
 
-const open = ref<boolean>(false)
+const open = ref<boolean>(false);
 
-const route = useRoute()
+const route = useRoute();
 const pocket = computed(() =>
-  ps().getPocket(String(route.params.pocket_key))
-).value
+  ps().getPocket(String(route.params.pocket_key)),
+).value;
 
-const l = computed (() => pocket.champions.length > 5).value
+const l = computed(() => pocket.champions.length > 5).value;
 
-const groups = computed (() => l ? pocket.champions.slice(0, 4) : pocket.champions.slice(0, 5))
+const groups = computed(() =>
+  l ? pocket.champions.slice(0, 4) : pocket.champions.slice(0, 5),
+);
 
 const variants = {
-  closed: {
-  },
-  open: {
-  }
-}
+  closed: {},
+  open: {},
+};
 
 const itemVariants = {
   closed: {
     opacity: 0,
     scale: 0.4,
-    transform: 'translateY(100%)'
+    transform: "translateY(100%)",
   },
   open: {
     opacity: 1,
     scale: 1,
-    transform: 'translateY(0)'
+    transform: "translateY(0)",
   },
-}
+};
 </script>
 
 <template>
   <div class="">
-    <Collapsible
-      v-model:open="open">
+    <Collapsible v-model:open="open">
       <CollapsibleContent>
         <motion.div
           ref="target"
@@ -51,69 +50,63 @@ const itemVariants = {
             staggerChildren: 0.1,
             type: 'spring',
           }"
-          class="
-            flex h-[40vh] max-h-full flex-col-reverse overflow-auto rounded-3xl
-            mask-y-from-90% mask-y-to-100% py-4
-          ">
+          class="flex h-[40vh] max-h-full flex-col-reverse overflow-auto rounded-3xl mask-y-from-90% mask-y-to-100% py-4"
+        >
           <Button
-            v-for="champion, i in pocket.champions"
+            v-for="(champion, i) in pocket.champions"
             :key="champion"
-            v-tippy="{ content: ix().champNameByKey(champion), theme: 'base', placement: 'left' }"
+            v-tippy="{
+              content: ix().champNameByKey(champion),
+              theme: 'base',
+              placement: 'left',
+            }"
             variant="base"
             shape="circle"
             :style="{
               zIndex: `-${i}`,
             }"
             as-child
-            class="grid !size-22 place-items-center border-0 bg-b1 fx-0">
+            class="grid size-22! place-items-center border-0 bg-b1 fx-0"
+          >
             <motion.div
               :variants="itemVariants"
               :transition="{
                 bounce: 0.15,
                 type: 'spring',
-              }">
-              <ChampionIcon
-                :k="champion"
-                class="!size-18 rounded-full" />
+              }"
+            >
+              <ChampionIcon :k="champion" class="size-18! rounded-full" />
             </motion.div>
           </Button>
         </motion.div>
       </CollapsibleContent>
       <CollapsibleTrigger as-child>
         <div
-          class="group fixed right-22 bottom-22 z-11 flex flex-col -space-y-10">
+          class="group fixed right-22 bottom-22 z-11 flex flex-col -space-y-10"
+        >
           <template v-if="!open">
             <Element
               v-for="champion in groups"
               :key="champion"
               variant="base"
               shape="circle"
-              class="z-1 grid !size-22 place-items-center border-0 bg-b1 fx-0">
-              <ChampionIcon
-                :k="champion"
-                class="!size-18 rounded-full" />
+              class="z-1 grid size-22! place-items-center border-0 bg-b1 fx-0"
+            >
+              <ChampionIcon :k="champion" class="size-18! rounded-full" />
             </Element>
           </template>
           <Element
             v-if="l"
             variant="base"
             shape="circle"
-            class="
-              relative z-1 grid !size-22 place-items-center border-0 bg-b1 fx-0
-            ">
+            class="relative z-1 grid size-22! place-items-center border-0 bg-b1 fx-0"
+          >
             <Element
               shape="circle"
               variant="neutral"
-              class="
-                !size-18
-                *:transition-all *:duration-300
-              ">
-              <icon
-                name="up"
-                class="
-                  absolute
-                  group-closed:opacity-0
-                " />
+              class="size-18! *:transition-all *:duration-300"
+            >
+              <icon name="up" class="absolute group-closed:opacity-0" />
               <h3 class="group-open:text-transparent group-open:opacity-0">
                 +{{ pocket.champions.length - 4 }}
               </h3>

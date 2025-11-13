@@ -1,33 +1,35 @@
 <script setup lang="ts">
-import type { TooltipContentEmits, TooltipContentProps } from 'reka-ui'
-import { reactiveOmit } from '@vueuse/core'
+import type { TooltipContentEmits, TooltipContentProps } from "reka-ui";
+import { reactiveOmit } from "@vueuse/core";
 import {
   TooltipArrow,
   TooltipContent,
   TooltipPortal,
   useForwardPropsEmits,
-} from 'reka-ui'
-import 'tippy.js/animations/scale.css'
+} from "reka-ui";
+import "tippy.js/animations/scale.css";
 
 defineOptions({
   inheritAttrs: false,
-})
+});
 
 const props = withDefaults(
-  defineProps<TooltipContentProps & {
-    class?: HTMLAttributes['class']
-    variant?: TippyTheme
-  }>(),
+  defineProps<
+    TooltipContentProps & {
+      class?: HTMLAttributes["class"];
+      variant?: TippyTheme;
+    }
+  >(),
   {
     sideOffset: 4,
-    variant: 'base',
-  }
-)
+    variant: "base",
+  },
+);
 
-const emits = defineEmits<TooltipContentEmits>()
+const emits = defineEmits<TooltipContentEmits>();
 
-const delegatedProps = reactiveOmit(props, 'class')
-const forwarded = useForwardPropsEmits(delegatedProps, emits)
+const delegatedProps = reactiveOmit(props, "class");
+const forwarded = useForwardPropsEmits(delegatedProps, emits);
 </script>
 
 <template>
@@ -49,7 +51,8 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
           `,
           props.class,
         )
-      ">
+      "
+    >
       <slot />
 
       <!--       <TooltipArrow class="bg-neutral fill-neutral z-50 size-2.5 translate-y-[calc(-50%_-_2px)] rotate-45 rounded-[2px]" /> -->

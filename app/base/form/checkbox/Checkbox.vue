@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import type { CheckboxRootEmits, CheckboxRootProps } from 'reka-ui'
-import { CheckboxIndicator, CheckboxRoot, useForwardPropsEmits } from 'reka-ui'
+import type { CheckboxRootEmits, CheckboxRootProps } from "reka-ui";
+import { CheckboxIndicator, CheckboxRoot, useForwardPropsEmits } from "reka-ui";
 
 const props = defineProps<
-  CheckboxRootProps & { class?: HTMLAttributes['class'] }
->()
-const emits = defineEmits<CheckboxRootEmits>()
-const delegatedProps = reactiveOmit(props, 'class')
+  CheckboxRootProps & { class?: HTMLAttributes["class"] }
+>();
+const emits = defineEmits<CheckboxRootEmits>();
+const delegatedProps = reactiveOmit(props, "class");
 
-const forwarded = useForwardPropsEmits(delegatedProps, emits)
+const forwarded = useForwardPropsEmits(delegatedProps, emits);
 </script>
 
 <template>
@@ -28,16 +28,13 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
         `,
         props.class,
       )
-    ">
+    "
+  >
     <CheckboxIndicator
-      class="flex h-full w-full items-center justify-center text-current">
+      class="flex h-full w-full items-center justify-center text-current"
+    >
       <slot>
-        <icon
-          name="tick"
-          class="
-            size-4
-            **:!stroke-[2.8]
-          " />
+        <icon name="tick" class="size-4 **:stroke-[2.8]!" />
       </slot>
     </CheckboxIndicator>
   </CheckboxRoot>

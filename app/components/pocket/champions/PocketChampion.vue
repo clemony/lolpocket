@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { Pocket } from '~~/shared/schema'
-import { motion } from 'motion-v'
+import type { Pocket } from "~~/shared/schema";
+import { motion } from "motion-v";
 
 /* const hover = shallowRef<boolean>(false)
 const debounced = refDebounced(hover, 400)
@@ -12,20 +12,24 @@ watch(() => active.value, (newVal) => {
 }) */
 
 defineOptions({
-  inheritAttrs: false
-})
+  inheritAttrs: false,
+});
 
-const { class: className, k, pocket: p } = defineProps<{
-  class?: HTMLAttributes['class']
-  k: string
-  pocket: Pocket
-}>()
+const {
+  class: className,
+  k,
+  pocket: p,
+} = defineProps<{
+  class?: HTMLAttributes["class"];
+  k: string;
+  pocket: Pocket;
+}>();
 
-const pocket = computed (() => p)
+const pocket = computed(() => p);
 
-const open = shallowRef<boolean>(false)
+const open = shallowRef<boolean>(false);
 
-const loaded = ref(false)
+const loaded = ref(false);
 
 const variants = {
   loaded: {
@@ -35,21 +39,24 @@ const variants = {
   unloaded: {
     opacity: 0,
     scale: 0.8,
-  }
-}
+  },
+};
 const defaultFilters = {
   attackType: null,
   position: null,
-  query: '',
+  query: "",
   resource: null,
   role: null,
-  sort: 'az'
-}
+  sort: "az",
+};
 onBeforeMount(() => {
   if (cs().filters === defaultFilters)
-    console.log('🌱 - cs().filters === defaultFilters:', cs().filters === defaultFilters)
-  loaded.value = true
-})
+    console.log(
+      "🌱 - cs().filters === defaultFilters:",
+      cs().filters === defaultFilters,
+    );
+  loaded.value = true;
+});
 </script>
 
 <template>
@@ -59,31 +66,35 @@ onBeforeMount(() => {
     :initial="loaded ? 'loaded' : 'unloaded'"
     :animate="loaded ? 'loaded' : 'unloaded'"
     exit="unloaded"
-    layout="position">
-    <Popover
-      v-model:open="open">
+    layout="position"
+  >
+    <Popover v-model:open="open">
       <PopoverTrigger
         v-bind="$attrs"
-        :class="cn(`
+        :class="
+          cn(
+            `
           target group relative grid aspect-square size-full
-          !cursor-context-menu rounded-lg ring-bc/50 ring-offset-b1
+          cursor-context-menu! rounded-lg ring-bc/50 ring-offset-b1
           transition-all duration-300
           **:cursor-context-menu
           open:ring open:ring-offset-3
           hover:ring hover:ring-2
           focus:ring focus:ring-offset-3
-        `, className)"
-        tabindex="0">
+        `,
+            className,
+          )
+        "
+        tabindex="0"
+      >
         <ChampionIcon
           :k
           class="size-full"
           role="button"
-          @loaded="loaded = true" />
+          @loaded="loaded = true"
+        />
       </PopoverTrigger>
-      <PocketChampionMenu
-        v-if="open"
-        :pocket
-        :k />
+      <PocketChampionMenu v-if="open" :pocket :k />
     </Popover>
   </motion.div>
 </template>

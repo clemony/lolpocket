@@ -1,24 +1,34 @@
 <script setup lang="ts">
-import type { ComboboxContentEmits, ComboboxContentProps } from 'reka-ui'
-import { ComboboxContent, ComboboxPortal, ComboboxViewport, useForwardPropsEmits } from 'reka-ui'
+import type { ComboboxContentEmits, ComboboxContentProps } from "reka-ui";
+import {
+  ComboboxContent,
+  ComboboxPortal,
+  ComboboxViewport,
+  useForwardPropsEmits,
+} from "reka-ui";
 
-const props = withDefaults(defineProps<ComboboxContentProps & { class?: HTMLAttributes['class'] }>(), {
-  sideOffset: 4,
-  align: 'center',
-  position: 'popper',
-})
-const emits = defineEmits<ComboboxContentEmits>()
+const props = withDefaults(
+  defineProps<ComboboxContentProps & { class?: HTMLAttributes["class"] }>(),
+  {
+    sideOffset: 4,
+    align: "center",
+    position: "popper",
+  },
+);
+const emits = defineEmits<ComboboxContentEmits>();
 
-const delegatedProps = reactiveOmit(props, 'class')
+const delegatedProps = reactiveOmit(props, "class");
 
-const forwarded = useForwardPropsEmits(delegatedProps, emits)
+const forwarded = useForwardPropsEmits(delegatedProps, emits);
 </script>
 
 <template>
   <ComboboxPortal>
     <ComboboxContent
       v-bind="forwarded"
-      :class="cn(`
+      :class="
+        cn(
+          `
         data-[state=open]:animate-in
         data-[state=closed]:animate-out data-[state=closed]:fade-out-0
         data-[state=open]:fade-in-0
@@ -30,7 +40,11 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
         data-[side=top]:slide-in-from-bottom-2
         z-50 w-[200px] rounded-lg border border-b4 bg-b1/94 text-bc shadow-md
         backdrop-blur outline-none
-      `, props.class)">
+      `,
+          props.class,
+        )
+      "
+    >
       <ComboboxViewport>
         <slot />
       </ComboboxViewport>

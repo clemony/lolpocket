@@ -4,5 +4,5 @@ export function useItemDetails(id: number) {
     key: `item-${id}`,
     lazy: false,
     server: false, // assume it's triggered by user interaction
-  })
+  });
 }

@@ -1,25 +1,25 @@
 <script lang="ts" setup>
-import { runeToPath } from '~~/shared/indexes'
+import { runeToPath } from "~~/shared/indexes";
 
 const { id, class: className } = defineProps<{
-  class?: HTMLAttributes['class']
-  id?: number | null
-}>()
-const loaded = ref(false)
-const imgEl = useTemplateRef<HTMLImageElement>('imgEl')
+  class?: HTMLAttributes["class"];
+  id?: number | null;
+}>();
+const loaded = ref(false);
+const imgEl = useTemplateRef<HTMLImageElement>("imgEl");
 
 watch(
   () => id,
   () => {
-    loaded.value = false
+    loaded.value = false;
     nextTick(() => {
       if (imgEl.value?.complete) {
-        loaded.value = true
+        loaded.value = true;
       }
-    })
-  }
-)
-const img = `/img/runes/${runeToPath[id]}/${id}.webp`
+    });
+  },
+);
+const img = `/img/runes/${runeToPath[id]}/${id}.webp`;
 </script>
 
 <template>
@@ -38,7 +38,8 @@ const img = `/img/runes/${runeToPath[id]}/${id}.webp`
         },
         className,
       )
-    ">
+    "
+  >
     <slot />
     <img
       v-if="id"
@@ -51,6 +52,7 @@ const img = `/img/runes/${runeToPath[id]}/${id}.webp`
           'scale-108 ': loaded,
         })
       "
-      @load="loaded = true" />
+      @load="loaded = true"
+    />
   </Label>
 </template>

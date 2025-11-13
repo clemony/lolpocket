@@ -1,11 +1,11 @@
 <script setup lang="ts">
 const { class: className, modelValue: mv } = defineProps<{
-  class?: HTMLAttributes['class']
-  modelValue?: string
-}>()
+  class?: HTMLAttributes["class"];
+  modelValue?: string;
+}>();
 
-const emit = defineEmits(['clear:input'])
-const modelValue = computed (() => mv)
+const emit = defineEmits(["clear:input"]);
+const modelValue = computed(() => mv);
 </script>
 
 <template>
@@ -13,21 +13,13 @@ const modelValue = computed (() => mv)
     <PopoverTrigger :class="cn('w-full cursor-text', className)">
       <InputGroup class="h-12">
         <InputGroupAddon>
-          <icon
-            name="search"
-            class="size-4.5 opacity-50" />
+          <icon name="search" class="size-4.5 opacity-50" />
         </InputGroupAddon>
-        <InputGroupInput
-          v-model:model-value="modelValue"
-          @focus.prevent />
+        <InputGroupInput v-model:model-value="modelValue" @focus.prevent />
 
-        <InputGroupClear
-          class="mr-6"
-          @clear:input="emit('clear:input')" />
+        <InputGroupClear class="mr-6" @clear:input="emit('clear:input')" />
         <InputGroupAddon align="inline-end">
-          <icon
-            name="filter"
-            class="mr-2 size-4.5 opacity-50" />
+          <icon name="filter" class="mr-2 size-4.5 opacity-50" />
         </InputGroupAddon>
       </InputGroup>
     </PopoverTrigger>

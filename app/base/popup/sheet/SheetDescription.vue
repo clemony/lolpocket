@@ -1,22 +1,23 @@
 <script setup lang="ts">
-import type { DialogDescriptionProps } from 'reka-ui'
-import { DialogDescription } from 'reka-ui'
+import type { DialogDescriptionProps } from "reka-ui";
+import { DialogDescription } from "reka-ui";
 
 const props = defineProps<
-  DialogDescriptionProps & { class?: HTMLAttributes['class'] }
->()
+  DialogDescriptionProps & { class?: HTMLAttributes["class"] }
+>();
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
+  const { class: _, ...delegated } = props;
 
-  return delegated
-})
+  return delegated;
+});
 </script>
 
 <template>
   <DialogDescription
     :class="cn('text-2 text-bc', props.class)"
-    v-bind="delegatedProps">
+    v-bind="delegatedProps"
+  >
     <slot />
   </DialogDescription>
 </template>

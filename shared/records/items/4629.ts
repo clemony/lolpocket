@@ -1,61 +1,52 @@
 const item: Item = {
   id: 4629,
-  name: 'Cosmic Drive',
-  nicknames: [
-    'hat'
-  ],
+  name: "Cosmic Drive",
+  nicknames: ["hat"],
   buildsFrom: [
     {
       id: 3067,
-      name: 'Kindlegem',
-      gold: 800
+      name: "Kindlegem",
+      gold: 800,
     },
     {
       id: 3113,
-      name: 'Aether Wisp',
-      gold: 900
+      name: "Aether Wisp",
+      gold: 900,
     },
     {
       id: 3108,
-      name: 'Fiendish Codex',
-      gold: 850
-    }
+      name: "Fiendish Codex",
+      gold: 850,
+    },
   ],
-  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4629_mage_t3_cosmicdrive.png',
-  maps: [
-    11,
-    12,
-    21,
-    35
-  ],
+  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/4629_mage_t3_cosmicdrive.png",
+  maps: [11, 12, 21, 35],
   noEffects: false,
   passives: [
     {
-      name: 'Spelldance',
-      effects: 'Dealing magic damage or true damage damage to an enemy champion grants you 20 <b>bonus</b> movement speed ms for 4 seconds.',
-      unique: true
-    }
+      name: "Spelldance",
+      effects:
+        "Dealing magic damage or true damage damage to an enemy champion grants you 20 <b>bonus</b> movement speed ms for 4 seconds.",
+      unique: true,
+    },
   ],
-  rank: 'Legendary',
+  rank: "Legendary",
   removed: false,
   shop: {
     prices: {
       combined: 450,
       sell: 1200,
-      total: 3000
+      total: 3000,
     },
-    tags: [
-      'MAGE',
-      'MOVEMENT'
-    ]
+    tags: ["MAGE", "MOVEMENT"],
   },
-  simpleDescription: 'Massive amounts of Cooldown Reduction',
+  simpleDescription: "Massive amounts of Cooldown Reduction",
   specialRecipe: 0,
   stats: {
     abilityHaste: 25,
     abilityPower: 70,
     health: 350,
-    percentMovespeed: 4
-  }
-}
-export default item
+    percentMovespeed: 4,
+  },
+};
+export default item;

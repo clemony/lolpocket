@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import type { Editor, EmojiItem } from 'tiptap'
+import type { EmojiItem } from '@tiptap/extension-emoji'
+import type { Editor } from '@tiptap/vue-3'
 
 const props = defineProps<{
   class?: HTMLAttributes['class']
@@ -34,15 +35,17 @@ defineExpose({ onKeyDown })
         variant="ghost"
         hover="inset"
         tabindex="0"
-        :class="cn(
-          `
-            rounded-md text-6
-            focus:bg-b2/80 focus:ring focus:ring-b3
-          `,
-          `
-            index-${index}
-          `,
-        )"
+        :class="
+          cn(
+            `
+              rounded-md text-6
+              focus:bg-b2/80 focus:ring focus:ring-b3
+            `,
+            `
+              index-${index}
+            `,
+          )
+        "
         @click="command(item)">
         <span class="dss drop-shadow-black/20">{{ item.emoji }}</span>
       </Button>

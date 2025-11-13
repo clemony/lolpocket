@@ -1,63 +1,63 @@
 export const fonts = [
   {
-    id: 'Geist Sans',
-    cardClass: 'tracking-tighter',
-    display: 'Geist Sans',
+    id: "Geist Sans",
+    cardClass: "tracking-tighter",
+    display: "Geist Sans",
   },
   {
-    id: 'Noto Serif KR Variable',
-    cardClass: 'font-bold',
-    display: 'Noto Serif ',
+    id: "Noto Serif KR Variable",
+    cardClass: "font-bold",
+    display: "Noto Serif ",
   },
   {
-    id: 'Source Code Pro Variable',
-    cardClass: '',
-    display: 'Source Code Pro',
+    id: "Source Code Pro Variable",
+    cardClass: "",
+    display: "Source Code Pro",
   },
   {
-    id: 'Poppins',
-    cardClass: '',
-    display: 'Poppins',
+    id: "Poppins",
+    cardClass: "",
+    display: "Poppins",
   },
   {
-    id: 'Rubik Doodle Shadow',
-    cardClass: '',
-    display: 'Rubik Doodle',
+    id: "Rubik Doodle Shadow",
+    cardClass: "",
+    display: "Rubik Doodle",
   },
 
   {
-    id: 'La Belle Aurore',
-    cardClass: 'text-13 mt-4',
-    display: 'La Belle Aurore',
+    id: "La Belle Aurore",
+    cardClass: "text-13 mt-4",
+    display: "La Belle Aurore",
   },
 
   {
-    id: 'Satisfy',
-    cardClass: '',
-    display: 'Satisfy',
+    id: "Satisfy",
+    cardClass: "",
+    display: "Satisfy",
   },
 
   {
-    id: 'Comfortaa Variable',
-    cardClass: '',
-    display: 'Comfortaa',
+    id: "Comfortaa Variable",
+    cardClass: "",
+    display: "Comfortaa",
   },
 
   {
-    id: 'Silkscreen',
-    cardClass: '',
-    display: 'Silkscreen',
+    id: "Silkscreen",
+    cardClass: "",
+    display: "Silkscreen",
   },
 
   {
-    id: 'Bellota',
-    cardClass: '',
-    display: 'Bellota',
+    id: "Bellota",
+    cardClass: "",
+    display: "Bellota",
   },
 
   {
-    id: 'Sansita Swashed Variable',
-    cardClass: '',
-    display: 'Sansita Swashed',
+    id: "Sansita Swashed Variable",
+    cardClass: "",
+    display: "Sansita Swashed",
   },
-]
+];

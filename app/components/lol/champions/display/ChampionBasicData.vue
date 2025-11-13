@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const { champion } = defineProps<{
-  champion: Champion
-}>()
+  champion: Champion;
+}>();
 </script>
 
 <template>

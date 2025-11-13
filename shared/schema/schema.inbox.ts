@@ -1,9 +1,9 @@
-import * as v from 'valibot'
+import * as v from "valibot"
 
 // InboxItem
 export const InboxItemSchema = v.object({
   id: v.string(),
-  date: v.number(),
+  date: v.pipe(v.string(), v.isoTimestamp("incorrect date format")),
   read: v.optional(v.boolean()), // optional default = undefined
   template: v.string(),
   vars: v.record(v.string(), v.string()),
@@ -21,15 +21,20 @@ export const InboxMessageSchema = v.object({
     icon: v.string(),
   }),
   to: v.optional(v.string()),
-  trash: v.optional(v.boolean()),
+  trash: v.optional(
+    v.pipe(v.string(), v.isoTimestamp("incorrect date format"))
+  ),
 })
 
 // Inbox
 
-export const InboxSchema = v.fallback(v.object({
-  messages: v.fallback(v.array(InboxMessageSchema), []),
-  notifications: v.fallback(v.array(InboxItemSchema), []),
-}), { messages: [], notifications: [] })
+export const InboxSchema = v.fallback(
+  v.object({
+    messages: v.fallback(v.array(InboxMessageSchema), []),
+    notifications: v.fallback(v.array(InboxItemSchema), []),
+  }),
+  { messages: [], notifications: [] }
+)
 
 // --- Types ---
 export type Inbox = v.InferOutput<typeof InboxSchema>

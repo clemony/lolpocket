@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-import { AccountSchema, SettingsSchema } from '~~/shared/schema'
+import { AccountSchema, SettingsSchema } from "~~/shared/schema";
 
 definePageMeta({
-  name: 'settings',
+  name: "settings",
   order: 10,
-  path: '/settings',
-  redirect: '/settings/app'
-})
+  path: "/settings",
+  redirect: "/settings/app",
+});
 
 // Account tracking
 /* const { syncIfDirty: syncAccount } = useSupabaseSync(
@@ -27,9 +27,10 @@ definePageMeta({
 
 <template>
   <SeparatorLayout
-    class="!overflow-hidden"
+    class="overflow-hidden!"
     description="Manage your account settings and set display preferences."
-    title="Settings">
+    title="Settings"
+  >
     <LayoutAsideSplit>
       <template #aside>
         <SettingsNav />

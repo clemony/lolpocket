@@ -1,106 +1,98 @@
 const item: Item = {
   id: 3134,
-  name: 'Serrated Dirk',
+  name: "Serrated Dirk",
   buildsFrom: [
     {
       id: 1036,
-      name: 'Long Sword',
-      gold: 350
+      name: "Long Sword",
+      gold: 350,
     },
     {
       id: 1036,
-      name: 'Long Sword',
-      gold: 350
-    }
+      name: "Long Sword",
+      gold: 350,
+    },
   ],
   buildsInto: [
     {
       id: 3142,
-      name: 'Youmuu\'s Ghostblade',
-      gold: 2800
+      name: "Youmuu's Ghostblade",
+      gold: 2800,
     },
     {
       id: 126697,
-      name: 'Hubris',
-      gold: 2950
+      name: "Hubris",
+      gold: 2950,
     },
     {
       id: 6693,
-      name: 'Prowler\'s Claw',
-      gold: 2850
+      name: "Prowler's Claw",
+      gold: 2850,
     },
     {
       id: 6691,
-      name: 'Duskblade of Draktharr',
-      gold: 2950
+      name: "Duskblade of Draktharr",
+      gold: 2950,
     },
     {
       id: 3814,
-      name: 'Edge of Night',
-      gold: 3000
+      name: "Edge of Night",
+      gold: 3000,
     },
     {
       id: 4004,
-      name: 'Spectral Cutlass',
-      gold: 2800
+      name: "Spectral Cutlass",
+      gold: 2800,
     },
     {
       id: 6676,
-      name: 'The Collector',
-      gold: 3000
+      name: "The Collector",
+      gold: 3000,
     },
     {
       id: 6697,
-      name: 'Hubris',
-      gold: 3000
+      name: "Hubris",
+      gold: 3000,
     },
     {
       id: 3131,
-      name: 'Sword of the Divine',
-      gold: 2300
+      name: "Sword of the Divine",
+      gold: 2300,
     },
     {
       id: 3179,
-      name: 'Umbral Glaive',
-      gold: 2500
+      name: "Umbral Glaive",
+      gold: 2500,
     },
     {
       id: 6695,
-      name: 'Serpent\'s Fang',
-      gold: 2500
+      name: "Serpent's Fang",
+      gold: 2500,
     },
     {
       id: 6701,
-      name: 'Opportunity',
-      gold: 2700
-    }
+      name: "Opportunity",
+      gold: 2700,
+    },
   ],
-  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3134_assassin_t2_serrateddirk.png',
-  maps: [
-    11,
-    12,
-    21,
-    35
-  ],
+  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3134_assassin_t2_serrateddirk.png",
+  maps: [11, 12, 21, 35],
   noEffects: true,
-  rank: 'Epic',
+  rank: "Epic",
   removed: false,
   shop: {
     prices: {
       combined: 300,
       sell: 400,
-      total: 1000
+      total: 1000,
     },
-    tags: [
-      'ASSASSIN',
-      'ARMOR_PEN'
-    ]
+    tags: ["ASSASSIN", "ARMOR_PEN"],
   },
-  simpleDescription: 'Increases Attack Damage and Lethality',
+  simpleDescription: "Increases Attack Damage and Lethality",
   specialRecipe: 0,
   stats: {
     attackDamage: 20,
-    lethality: 10
-  }
-}
-export default item
+    lethality: 10,
+  },
+};
+export default item;

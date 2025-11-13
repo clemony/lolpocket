@@ -1,22 +1,22 @@
 <script setup lang="ts">
-import type { SelectTriggerProps } from 'reka-ui'
-import { reactiveOmit } from '@vueuse/core'
-import { SelectTrigger, useForwardProps } from 'reka-ui'
+import type { SelectTriggerProps } from "reka-ui";
+import { reactiveOmit } from "@vueuse/core";
+import { SelectTrigger, useForwardProps } from "reka-ui";
 
 const props = defineProps<
   SelectTriggerProps & {
-    class?: HTMLAttributes['class']
-    on?: ButtonVariants['on']
-    base?: ButtonVariants['base']
-    hover?: ButtonVariants['hover']
-    size?: ButtonVariants['size']
-    variant?: ButtonVariants['variant']
+    class?: HTMLAttributes["class"];
+    on?: ButtonVariants["on"];
+    base?: ButtonVariants["base"];
+    hover?: ButtonVariants["hover"];
+    size?: ButtonVariants["size"];
+    variant?: ButtonVariants["variant"];
   }
->()
+>();
 
-const delegatedProps = reactiveOmit(props, 'class')
+const delegatedProps = reactiveOmit(props, "class");
 
-const forwarded = useForwardProps(delegatedProps)
+const forwarded = useForwardProps(delegatedProps);
 </script>
 
 <template>
@@ -27,7 +27,9 @@ const forwarded = useForwardProps(delegatedProps)
         'group/select',
         buttonVariants({ variant, hover, on, size, base }),
         props.class,
-      )">
+      )
+    "
+  >
     <slot />
   </SelectTrigger>
 </template>

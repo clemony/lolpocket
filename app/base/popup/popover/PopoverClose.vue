@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import type { PopoverCloseProps } from 'reka-ui'
-import { PopoverClose, useForwardProps } from 'reka-ui'
+import type { PopoverCloseProps } from "reka-ui";
+import { PopoverClose, useForwardProps } from "reka-ui";
 
 const props = defineProps<
   PopoverCloseProps & {
-    class?: HTMLAttributes['class']
+    class?: HTMLAttributes["class"];
   }
->()
-const delegatedProps = reactiveOmit(props, 'class')
-const forwarded = useForwardProps(delegatedProps)
+>();
+const delegatedProps = reactiveOmit(props, "class");
+const forwarded = useForwardProps(delegatedProps);
 </script>
 
 <template>

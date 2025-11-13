@@ -1,1 +1,1 @@
-export const rs = () => useRuneStore()
+export const rs = () => useRuneStore();

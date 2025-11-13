@@ -1,18 +1,16 @@
 export async function useAccountUpdate(
   riotPuuid?: string,
-  regionGroup?: string
+  regionGroup?: string,
 ) {
-  const puuid = riotPuuid || as().account?.puuid?.toString()
-  if (!puuid)
-    return
+  const puuid = riotPuuid || as().account?.puuid?.toString();
+  if (!puuid) return;
 
   const resolve = await $fetch<Partial<Summoner>>(
-    '/api/riot/fetchSummonerData',
-    { params: { puuid } }
-  )
+    "/api/riot/fetchSummonerData",
+    { params: { puuid } },
+  );
 
-  if (!resolve)
-    return
+  if (!resolve) return;
 
   const account = {
     name: resolve.name,
@@ -21,19 +19,19 @@ export async function useAccountUpdate(
     level: resolve.level,
     region: resolve.region,
     tag: resolve.tag,
-  }
+  };
 
-  const session = await useSupabaseClient().auth.getSession()
+  const session = await useSupabaseClient().auth.getSession();
 
-  const post = await $fetch('api/supabase/updateUserAccount', {
+  const post = await $fetch("api/supabase/updateUserAccount", {
     body: {
       account,
     },
     headers: {
       Authorization: `Bearer ${session?.data.session.access_token}`,
     },
-    method: 'POST',
-  })
+    method: "POST",
+  });
 
-  return account
+  return account;
 }

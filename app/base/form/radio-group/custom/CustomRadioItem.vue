@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import type { AcceptableValue } from 'reka-ui'
-import { RadioGroupIndicator } from 'reka-ui'
+import type { AcceptableValue } from "reka-ui";
+import { RadioGroupIndicator } from "reka-ui";
 
 const props = defineProps<{
-  class?: HTMLAttributes['class']
-}>()
+  class?: HTMLAttributes["class"];
+}>();
 </script>
 
 <template>
@@ -19,10 +19,12 @@ const props = defineProps<{
         `,
         props.class,
       )
-    ">
+    "
+  >
     <RadioGroupIndicator
       as-child
-      class="relative flex items-center justify-center">
+      class="relative flex items-center justify-center"
+    >
       <Motion
         layout
         :initial="{
@@ -42,13 +44,12 @@ const props = defineProps<{
           stiffness: 260,
           damping: 20,
           duration: 1,
-        }">
+        }"
+      >
         <icon
           name="codicon:circle-filled"
-          class="
-            textneutral absolute -mt-px size-5.25 opacity-100
-            group-disabled:opacity-0
-          " />
+          class="textneutral absolute -mt-px size-5.25 opacity-100 group-disabled:opacity-0"
+        />
       </Motion>
     </RadioGroupIndicator>
   </RadioGroupItem>

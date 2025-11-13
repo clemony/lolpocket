@@ -1,12 +1,9 @@
 <script setup lang="ts">
 const { class: className } = defineProps<{
-  class?: HTMLAttributes['class']
-
-}>()
+  class?: HTMLAttributes["class"];
+}>();
 </script>
 
 <template>
-  <span>
-
-  </span>
+  <span> </span>
 </template>

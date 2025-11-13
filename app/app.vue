@@ -15,7 +15,7 @@ useHead({
 onMounted(() => {
   document.documentElement.setAttribute(
     'data-theme',
-    as()?.settings?.theme ?? 'daylight'
+    as()?.settings?.theme ?? 'daylight',
   )
   ix().loadPatch()
 })
@@ -23,7 +23,7 @@ onMounted(() => {
 
 <template>
   <ToastProvider
-    :duration="8000"
+    :duration="16000"
     as-child>
     <TooltipProvider as-child>
       <DefaultLayout>

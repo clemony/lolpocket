@@ -1,40 +1,40 @@
 <script setup lang="ts">
-import { motion } from 'motion-v'
+import { motion } from "motion-v";
 
 defineOptions({
   inheritAttrs: false,
-})
+});
 
 const {
   sideOffset = 4,
-  align = 'center',
+  align = "center",
   class: className,
   scaleStart = 0.6,
 } = defineProps<{
-  class?: HTMLAttributes['class']
-  sideOffset?: number
-  align?: Align
-  scaleStart?: number
-}>()
+  class?: HTMLAttributes["class"];
+  sideOffset?: number;
+  align?: Align;
+  scaleStart?: number;
+}>();
 
 const variants = {
   hidden: {
     opacity: 0,
     scale: scaleStart,
-    transitionEnd: { visibility: 'hidden' },
+    transitionEnd: { visibility: "hidden" },
   },
   visible: {
     opacity: 1,
     scale: 1,
-    visibility: 'visible',
+    visibility: "visible",
   },
-}
+};
 
 const wrapperVariants = {
   hidden: {
     opacity: 0,
     scale: 1,
-    transitionEnd: { visibility: 'hidden' },
+    transitionEnd: { visibility: "hidden" },
   },
   visible: {
     opacity: 1,
@@ -42,16 +42,13 @@ const wrapperVariants = {
     transition: {
       delay: 0.2,
     },
-    visibility: 'visible',
+    visibility: "visible",
   },
-}
+};
 </script>
 
 <template>
-  <DropdownMenuContent
-    as-child
-    :align="align"
-    v-bind="$attrs">
+  <DropdownMenuContent as-child :align="align" v-bind="$attrs">
     <motion.div
       :variants="variants"
       initial="hidden"
@@ -65,15 +62,16 @@ const wrapperVariants = {
       :class="
         cn(
           `
-            z-50 w-(--reka-dropdown-menu-trigger-width) !rounded-lg border
-            !border-b3 bg-b1/94 p-1 text-bc shadow-md drop-shadow-md
+            z-50 w-(--reka-dropdown-menu-trigger-width) rounded-lg! border
+            border-b3! bg-b1/94 p-1 text-bc shadow-md drop-shadow-md
             backdrop-blur-lg outline-none
             group-data-[state=hidden]:**:opacity-0
             group-data-[state=visible]:**:opacity-100
           `,
           className,
         )
-      ">
+      "
+    >
       <slot />
     </motion.div>
   </DropdownMenuContent>

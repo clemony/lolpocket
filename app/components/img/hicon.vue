@@ -4,17 +4,19 @@ const {
   class: className,
   iconScale,
 } = defineProps<{
-  class?: HTMLAttributes['class']
-  name?: string
-  iconScale?: number
-}>()
+  class?: HTMLAttributes["class"];
+  name?: string;
+  iconScale?: number;
+}>();
 
-const svg = /i-/
-const img = /https:/
-const img1 = /\/img\//
-const classes = 'size-full shrink-0'
-const teenyicons = /teenyicons:/
-const teeny = computed (() => name.match(teenyicons) ? '!scale-96 **:stroke-[1.3]' : '')
+const svg = /i-/;
+const img = /https:/;
+const img1 = /\/img\//;
+const classes = "size-full shrink-0";
+const teenyicons = /teenyicons:/;
+const teeny = computed(() =>
+  name.match(teenyicons) ? "!scale-96 **:stroke-[1.3]" : "",
+);
 </script>
 
 <template>
@@ -22,12 +24,14 @@ const teeny = computed (() => name.match(teenyicons) ? '!scale-96 **:stroke-[1.3
     :is="name"
     v-if="name.match(svg)"
     role="img"
-    :class="cn('', classes, className)" />
+    :class="cn('', classes, className)"
+  />
   <Img
     v-else-if="name.match(img) || name.match(img1)"
     :img="name"
     alt="icon"
-    :class="cn('', classes, className)" />
+    :class="cn('', classes, className)"
+  />
   <icon
     v-else
     role="img"
@@ -36,5 +40,6 @@ const teeny = computed (() => name.match(teenyicons) ? '!scale-96 **:stroke-[1.3
     :style="{
       objectFit: 'cover',
       scale: iconScale,
-    }" />
+    }"
+  />
 </template>

@@ -1,36 +1,36 @@
 <script lang="ts" setup>
-import type { regionIndex } from '#shared/references'
-import { useDebounceFn } from '@vueuse/core'
-import { safeParse, string } from 'valibot'
+import type { regionIndex } from "#shared/references";
+import { useDebounceFn } from "@vueuse/core";
+import { safeParse, string } from "valibot";
 
 defineOptions({
-  inheritAttrs: false
-})
+  inheritAttrs: false,
+});
 
 const { class: className } = defineProps<{
-  class?: HTMLAttributes['class']
-}>()
+  class?: HTMLAttributes["class"];
+}>();
 
-const emit = defineEmits(['update:search', 'update:focus'])
+const emit = defineEmits(["update:search", "update:focus"]);
 
-const query = ref('')
-const tag = ref('')
-const region = shallowRef<keyof typeof regionIndex>('na1')
-const queryName = useTemplateRef<HTMLElement>('queryName')
+const query = ref("");
+const tag = ref("");
+const region = shallowRef<keyof typeof regionIndex>("na1");
+const queryName = useTemplateRef<HTMLElement>("queryName");
 
-const { focused } = useFocus(queryName)
+const { focused } = useFocus(queryName);
 
 function clear() {
-  query.value = ''
-  tag.value = ''
-  emit('update:search', { search: { query, tag } })
+  query.value = "";
+  tag.value = "";
+  emit("update:search", { search: { query, tag } });
 }
 
 const errors = ref<Record<string, string | null>>({
   query: null,
   region: null,
   tag: null,
-})
+});
 
 /* function validate() {
   const result = safeParse(summonerSearchSchema, {
@@ -70,32 +70,32 @@ watch([query, tag, selectedRegion], runSearch) */
     v-model:model-value="query"
     type="text"
     placeholder="Search..."
-    :class="cn('peer relative flex field-sizing-content w-auto min-w-36 grow', className)"
-    @update:model-value="e => query = e"
-    @clear:input="clear()">
-    <icon
-      name="search"
-      class="!size-4.5" />
+    :class="
+      cn(
+        'peer relative flex field-sizing-content w-auto min-w-36 grow',
+        className,
+      )
+    "
+    @update:model-value="(e) => (query = e)"
+    @clear:input="clear()"
+  >
+    <icon name="search" class="size-4.5!" />
     <template #2>
       <SearchTagInput
         :tag
         @focus:return="focused = true"
-        @update:tag="e => tag = e" />
+        @update:tag="(e) => (tag = e)"
+      />
       <SearchRegion
         :present="tag.length > 0"
         :region
-        @update:region="e => region = e" />
-      <DeviceKey
-        v-if="!query"
-        class="mr-2">
-        K
-      </DeviceKey>
+        @update:region="(e) => (region = e)"
+      />
+      <DeviceKey v-if="!query" class="mr-2"> K </DeviceKey>
     </template>
   </Input>
 
   <TransitionScalePop>
-    <slot
-      :focused
-      :query />
+    <slot :focused :query />
   </TransitionScalePop>
 </template>

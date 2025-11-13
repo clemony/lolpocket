@@ -47,8 +47,7 @@ const filteredMailList = computed(() => {
         <div class="grid h-[45px] w-full place-items-center border-b">
           <div
             class="border-box flex size-full max-w-220 items-center gap-3 px-4">
-            <h1
-              class="text-7 dst">
+            <h1 class="text-7 dst">
               {{ title }}
             </h1>
             <slot name="tabs" />

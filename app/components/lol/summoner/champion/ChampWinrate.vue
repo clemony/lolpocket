@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 const props = defineProps<{
-  champion: any
-}>()
+  champion: any;
+}>();
 
 const a = computed(() => {
-  return (props.champion.wins / props.champion.games) * 100
-})
+  return (props.champion.wins / props.champion.games) * 100;
+});
 </script>
 
 <template>
@@ -17,10 +17,11 @@ const a = computed(() => {
       :style="{
         '--value': a,
         '--size': '3.65rem',
-        'color': getColorFromVariable(`--color-${getAbsoluteColor(a)}`),
+        color: getColorFromVariable(`--color-${getAbsoluteColor(a)}`),
       }"
-      role="progressbar">
-      <span class="!text-1 font-medium text-bc dst">
+      role="progressbar"
+    >
+      <span class="text-1! font-medium text-bc dst">
         {{ a.toFixed(1).replace(".0", "") }}%
       </span>
     </div>

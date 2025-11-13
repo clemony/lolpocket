@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const props = defineProps<{
-  class?: HTMLAttributes['class']
-}>()
+  class?: HTMLAttributes["class"];
+}>();
 </script>
 
 <template>
@@ -14,7 +14,8 @@ const props = defineProps<{
         `,
         props.class,
       )
-    ">
+    "
+  >
     <slot />
   </ol>
 </template>

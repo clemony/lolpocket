@@ -4,9 +4,8 @@
  * If the input is null or undefined, the function will return null.
  */
 export function parseDate(
-  input: Date | string | null | undefined
+  input: Date | string | null | undefined,
 ): Date | null {
-  if (!input)
-    return null
-  return typeof input === 'string' ? new Date(input) : input
+  if (!input) return null;
+  return typeof input === "string" ? new Date(input) : input;
 }

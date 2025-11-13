@@ -1,18 +1,17 @@
 {
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "editor.formatOnType": false, // required
+  "editor.formatOnPaste": true, // optional
+  "editor.formatOnSave": true, // optional
+  "editor.formatOnSaveMode": "file", // required to format on save
+  "files.autoSave": "onFocusChange", // optional but recommended
+  "vs-code-prettier-eslint.prettierLast": false, // set as "true" to run 'prettier' last not first
+
   "vscode_custom_css.imports": [
     "file://Users/caitlin/Documents/css/vscode/vscode.css"
   ],
-  "editor.formatOnType": false,
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
-  "editor.formatOnSaveMode": "file",
-  "files.autoSave": "onFocusChange",
-/*   "[vue]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  }, */
-
   // enable ESLint to validate Vue files
-  "eslint.validate": [ "vue"],
+  "eslint.validate": ["vue"],
 
   // enable ESLint to fix tailwind classes on save
   "editor.codeActionsOnSave": {
@@ -20,12 +19,12 @@
   },
   "typescript.tsdk": "node_modules/typescript/lib",
   "exportall.config.folderListener": [
-    "/app/components/tiptap",
     "/app/composables",
     "/app/utils",
     "/app/layouts/components",
     "/shared/indexes",
-    "/shared/schema"
+    "/shared/schema",
+    "/app/components/tiptap"
   ],
   "exportall.config.relExclusion": [
     "/app/utils/config",
@@ -34,5 +33,8 @@
     "/shared/data/records/items",
     "/shared/data/records/runes",
     "/shared/records"
-  ]
+  ],
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

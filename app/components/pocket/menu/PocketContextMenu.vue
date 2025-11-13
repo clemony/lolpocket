@@ -1,24 +1,24 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/schema'
-import { getDeviceKey } from '~/utils/config/handleDevice'
+import type { Pocket } from "~~/shared/schema";
+import { getDeviceKey } from "~/utils/config/handleDevice";
 
 const props = defineProps<{
-  pocketData?: Pocket
-}>()
+  pocketData?: Pocket;
+}>();
 
-const emit = defineEmits(['update:grid'])
-const pocket = computedAsync(() => props.pocketData)
+const emit = defineEmits(["update:grid"]);
+const pocket = computedAsync(() => props.pocketData);
 
 // console.log('💠 - pocket:', pocket)
 // const { userFolders } = useUserFolders()
 
-const sort = ref('id')
+const sort = ref("id");
 
 onMounted(async () => {
-  const a = ref(props.pocketData)
-  await a
-  console.log('💠 - onMounted - a:', a)
-})
+  const a = ref(props.pocketData);
+  await a;
+  console.log("💠 - onMounted - a:", a);
+});
 </script>
 
 <template>
@@ -29,15 +29,14 @@ onMounted(async () => {
 
     <ContextMenuPortal>
       <ContextMenuContent
-        class="
-          context-menu pointer-events-auto z-999 h-max w-74 text-2
-          **:text-2
-        "
-        @interact-outside="emit('update:grid')">
+        class="context-menu pointer-events-auto z-999 h-max w-74 text-2 **:text-2"
+        @interact-outside="emit('update:grid')"
+      >
         <ContextMenuItem
           icon="basil:add-outline"
           icon-class="!size-5.5 opacity-60 -mt-0.5 shrink-0"
-          class="[&_svg]:stroke-2">
+          class="[&_svg]:stroke-2"
+        >
           New Pocket
           <ContextMenuShortcut>{{ getDeviceKey() }}P</ContextMenuShortcut>
         </ContextMenuItem>
@@ -50,22 +49,16 @@ onMounted(async () => {
           <ContextMenuPortal>
             <ContextMenuSubContent>
               <ContextMenuRadioGroup v-model="sort">
-                <ContextMenuRadioItem
-                  value="id"
-                  @select.prevent>
+                <ContextMenuRadioItem value="id" @select.prevent>
                   By Item ID
                   <ContextMenuShortcut>⌘⇧B</ContextMenuShortcut>
                 </ContextMenuRadioItem>
 
-                <ContextMenuRadioItem
-                  value="az"
-                  @select.prevent>
+                <ContextMenuRadioItem value="az" @select.prevent>
                   Alphabetically
                 </ContextMenuRadioItem>
 
-                <ContextMenuRadioItem
-                  value="price"
-                  @select.prevent>
+                <ContextMenuRadioItem value="price" @select.prevent>
                   Price
                 </ContextMenuRadioItem>
               </ContextMenuRadioGroup>
@@ -97,9 +90,7 @@ onMounted(async () => {
           <ContextMenuSeparator />
 
           <ContextMenuItem>
-            <NuxtLink :to="`/pocket/${pocket.key}/`">
-              Edit
-            </NuxtLink>
+            <NuxtLink :to="`/pocket/${pocket.key}/`"> Edit </NuxtLink>
           </ContextMenuItem>
 
           <ContextMenuItem @click="duplicatePocket(pocket)">
@@ -108,17 +99,9 @@ onMounted(async () => {
             <ContextMenuShortcut>⌘R</ContextMenuShortcut>
           </ContextMenuItem>
 
-          <ContextMenuItem
-            inset
-            disabled>
-            Pin
-          </ContextMenuItem>
+          <ContextMenuItem inset disabled> Pin </ContextMenuItem>
 
-          <ContextMenuItem
-            inset
-            disabled>
-            Archive
-          </ContextMenuItem>
+          <ContextMenuItem inset disabled> Archive </ContextMenuItem>
 
           <ContextMenuSeparator />
 

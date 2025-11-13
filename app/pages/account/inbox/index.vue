@@ -1,9 +1,9 @@
 <script setup lang="ts">
 definePageMeta({
-  title: 'All',
-  icon: 'mail',
+  title: "All",
+  icon: "mail",
   order: 0,
-})
+});
 </script>
 
 <template>

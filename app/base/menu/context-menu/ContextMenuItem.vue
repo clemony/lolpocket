@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import type { ContextMenuItemEmits, ContextMenuItemProps } from 'reka-ui'
-import { ContextMenuItem, useForwardPropsEmits } from 'reka-ui'
+import type { ContextMenuItemEmits, ContextMenuItemProps } from "reka-ui";
+import { ContextMenuItem, useForwardPropsEmits } from "reka-ui";
 
 const props = defineProps<
-  ContextMenuItemProps & { class?: HTMLAttributes['class'], inset?: boolean }
->()
-const emits = defineEmits<ContextMenuItemEmits>()
+  ContextMenuItemProps & { class?: HTMLAttributes["class"]; inset?: boolean }
+>();
+const emits = defineEmits<ContextMenuItemEmits>();
 
-const delegatedProps = reactiveOmit(props, 'class')
+const delegatedProps = reactiveOmit(props, "class");
 
-const forwarded = useForwardPropsEmits(delegatedProps, emits)
+const forwarded = useForwardPropsEmits(delegatedProps, emits);
 </script>
 
 <template>
@@ -26,7 +26,8 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
         inset && 'pl-8',
         props.class,
       )
-    ">
+    "
+  >
     <slot />
   </ContextMenuItem>
 </template>

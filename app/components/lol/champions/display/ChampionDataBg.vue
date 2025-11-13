@@ -1,76 +1,78 @@
 <script lang="ts" setup>
-import type { PrimitiveProps } from 'reka-ui'
-import { Primitive } from 'reka-ui'
+import type { PrimitiveProps } from "reka-ui";
+import { Primitive } from "reka-ui";
 
 const {
-  name = 'none',
-  as = 'div',
+  name = "none",
+  as = "div",
   class: className,
   opacity = 0.35,
 } = defineProps<
   PrimitiveProps & {
-    as?: string
-    name?: string
-    opacity?: number
-    class?: HTMLAttributes['class']
+    as?: string;
+    name?: string;
+    opacity?: number;
+    class?: HTMLAttributes["class"];
   }
->()
+>();
 
 const bg = [
   {
-    name: 'Charge',
-    color: 'b2',
+    name: "Charge",
+    color: "b2",
   },
   {
-    name: 'Current health',
-    color: 'hp',
+    name: "Current health",
+    color: "hp",
   },
   {
-    name: 'Energy',
-    color: 'energy',
+    name: "Energy",
+    color: "energy",
   },
   {
-    name: 'Fury',
-    color: 'ad',
+    name: "Fury",
+    color: "ad",
   },
   {
-    name: 'Grit',
-    color: 'armor',
+    name: "Grit",
+    color: "armor",
   },
   {
-    name: 'Health',
-    color: 'hp',
+    name: "Health",
+    color: "hp",
   },
   {
-    name: 'Mana',
-    color: 'mana',
+    name: "Mana",
+    color: "mana",
   },
   {
-    name: 'Mana / s',
-    color: 'mana',
+    name: "Mana / s",
+    color: "mana",
   },
   {
-    name: 'Maximum health',
-    color: 'hp',
+    name: "Maximum health",
+    color: "hp",
   },
   {
-    name: 'none',
-    color: 'v',
+    name: "none",
+    color: "v",
   },
-]
+];
 </script>
 
 <template>
   <Primitive
     v-bind="$attrs"
     :as="as"
-    :class="cn('relative overflow-hidden bg-transparent', className)">
+    :class="cn('relative overflow-hidden bg-transparent', className)"
+  >
     <span
       class="absolute top-0 left-0 size-full border border-transparent"
       :style="{
         backgroundColor: `var(--color-${bg.find((p) => p.name === name).color})`,
         opacity,
-      }" />
+      }"
+    />
 
     <slot />
   </Primitive>

@@ -7,7 +7,7 @@ definePageMeta({
 })
 const route = useRoute()
 const championData = await import(
-  `@appdata/records/champions/${String(route.params.champion_key)}.ts`
+  `#shared/records/champions/${String(route.params.champion_key)}.ts`
 )
 const champion = computed(() => championData.default)
 const tabs = shallowRef<string>(null)
@@ -29,18 +29,14 @@ onMounted(() => {
         v-once
         size="header"
         slice
-        :img="
-          getSplash(champion.key, 'centered')
-        " />
+        :img="getSplash(champion.key, 'centered')" />
     </template>
 
     <template #background>
       <BackgroundSplashFixed
         v-once
         size="header"
-        :img="
-          getSplash(champion.key, 'centered')
-        " />
+        :img="getSplash(champion.key, 'centered')" />
     </template>
     <template #icon>
       <div class="-ml-2 size-20">
@@ -51,7 +47,7 @@ onMounted(() => {
     </template>
     <template #header>
       <header class="grid h-20 justify-center">
-        <h1 class="pt-1 !text-[2.1] leading-10 font-bold tracking-tight dst">
+        <h1 class="pt-1 text-[2.1]! leading-10 font-bold tracking-tight dst">
           {{ champion.name }}
         </h1>
         <p class="-mt-1 px-1 text-3 leading-5 font-medium text-bc italic">

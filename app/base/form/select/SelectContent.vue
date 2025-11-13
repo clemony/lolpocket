@@ -1,30 +1,30 @@
 <script setup lang="ts">
-import type { SelectContentEmits, SelectContentProps } from 'reka-ui'
-import { reactiveOmit } from '@vueuse/core'
+import type { SelectContentEmits, SelectContentProps } from "reka-ui";
+import { reactiveOmit } from "@vueuse/core";
 import {
   SelectContent,
   SelectPortal,
   SelectViewport,
   useForwardPropsEmits,
-} from 'reka-ui'
-import SelectScrollDownButton from './SelectScrollDownButton.vue'
-import SelectScrollUpButton from './SelectScrollUpButton.vue'
+} from "reka-ui";
+import SelectScrollDownButton from "./SelectScrollDownButton.vue";
+import SelectScrollUpButton from "./SelectScrollUpButton.vue";
 
 defineOptions({
   inheritAttrs: false,
-})
+});
 
 const props = withDefaults(
-  defineProps<SelectContentProps & { class?: HTMLAttributes['class'] }>(),
+  defineProps<SelectContentProps & { class?: HTMLAttributes["class"] }>(),
   {
-    position: 'popper',
-  }
-)
-const emits = defineEmits<SelectContentEmits>()
+    position: "popper",
+  },
+);
+const emits = defineEmits<SelectContentEmits>();
 
-const delegatedProps = reactiveOmit(props, 'class')
+const delegatedProps = reactiveOmit(props, "class");
 
-const forwarded = useForwardPropsEmits(delegatedProps, emits)
+const forwarded = useForwardPropsEmits(delegatedProps, emits);
 </script>
 
 <template>
@@ -47,22 +47,24 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
             border-b3/80 bg-b1/92 text-bc shadow-md inset-shadow-xs
             backdrop-blur-md
           `,
-          position === 'popper'
-            && ' data-[side=bottom]:-translate-y-[var(--reka-select-trigger-height)] data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1',
+          position === 'popper' &&
+            ' data-[side=bottom]:-translate-y-[var(--reka-select-trigger-height)] data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1',
           props.class,
         )
       "
-      @close-auto-focus.prevent>
+      @close-auto-focus.prevent
+    >
       <SelectScrollUpButton />
 
       <SelectViewport
         :class="
           cn(
             'px-1.25 py-1.75',
-            position === 'popper'
-              && 'h-[--reka-select-trigger-height] w-full min-w-[--reka-select-trigger-width] ',
+            position === 'popper' &&
+              'h-[--reka-select-trigger-height] w-full min-w-[--reka-select-trigger-width] ',
           )
-        ">
+        "
+      >
         <slot />
       </SelectViewport>
 

@@ -1,14 +1,14 @@
 <script lang="ts" setup>
-import { statIndex } from '#shared/references'
+import { statIndex } from "#shared/references";
 
 const { stats } = defineProps<{
-  stats: Record<string, number>
-}>()
+  stats: Record<string, number>;
+}>();
 
 const statEntries = computed(() =>
   Object.entries(stats).map(([key, value]) => ({ key, value })),
-)
-console.log('🌱 - statEntries:', statEntries)
+);
+console.log("🌱 - statEntries:", statEntries);
 </script>
 
 <template>
@@ -18,9 +18,10 @@ console.log('🌱 - statEntries:', statEntries)
         v-for="stat in statEntries"
         :key="stat.key"
         :style="{ '--stat-color': statIndex[stat.key].color }"
-        class="flex w-full items-center gap-1">
+        class="flex w-full items-center gap-1"
+      >
         <p class="flex flex-nowrap text-2 font-medium">
-          {{ `${stat.value}${statIndex[stat.key]?.unit ?? ''}` }}
+          {{ `${stat.value}${statIndex[stat.key]?.unit ?? ""}` }}
         </p>
 
         <p class="grow text-2 font-medium tracking-tight">
@@ -28,23 +29,18 @@ console.log('🌱 - statEntries:', statEntries)
         </p>
 
         <p
-          class="
-            badge h-5.5 gap-1 justify-self-end border-none badge-sm px-1.25
-            !drop-shadow-black/20
-          "
+          class="badge h-5.5 gap-1 justify-self-end border-none badge-sm px-1.25 drop-shadow-black/20!"
           :style="{
             backgroundColor: 'var(--stat-color)',
-          }">
+          }"
+        >
           <StatIcon
             :stat="stat.key"
-            class="
-              stat-badge-content color-badge-content !size-3.25 self-center
-            " />
+            class="stat-badge-content color-badge-content size-3.25! self-center"
+          />
           <span
-            class="
-              stat-badge-content color-badge-content !text-1 font-bold
-              text-shadow-xs
-            ">
+            class="stat-badge-content color-badge-content text-1! font-bold text-shadow-xs"
+          >
             {{ statIndex[stat.key].abbr[0] }}
           </span>
         </p>

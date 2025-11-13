@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const tab = ref('stats')
+const tab = ref("stats");
 </script>
 
 <template>
@@ -11,42 +11,24 @@ const tab = ref('stats')
       </div> -->
 
   <div class="size-full px-3 pt-26">
-    <Tabs
-      default-value="stats"
-      class="">
-      <TabsList
-        base="indicator"
-        class="grid h-11 w-full max-w-110 grid-cols-3">
-        <TabsTrigger value="stats">
-          Stat Totals
-        </TabsTrigger>
+    <Tabs default-value="stats" class="">
+      <TabsList base="indicator" class="grid h-11 w-full max-w-110 grid-cols-3">
+        <TabsTrigger value="stats"> Stat Totals </TabsTrigger>
 
-        <TabsTrigger value="effects">
-          Item Effects
-        </TabsTrigger>
+        <TabsTrigger value="effects"> Item Effects </TabsTrigger>
 
-        <TabsTrigger value="options">
-          Options
-        </TabsTrigger>
+        <TabsTrigger value="options"> Options </TabsTrigger>
 
         <TabIndicator />
       </TabsList>
 
-      <TabsContent
-        value="stats"
-        class="mt-8 w-full rounded-lg bg-b1">
+      <TabsContent value="stats" class="mt-8 w-full rounded-lg bg-b1">
         <LazyCalculatorStatTotals />
       </TabsContent>
 
-      <LazyTabsContent
-        value="effects"
-        class="m-0">
-        effects
-      </LazyTabsContent>
+      <LazyTabsContent value="effects" class="m-0"> effects </LazyTabsContent>
 
-      <LazyTabsContent
-        value="options"
-        class="m-0">
+      <LazyTabsContent value="options" class="m-0">
         <CalculatorMenu />
 
         <LazyCalculatorOptions />

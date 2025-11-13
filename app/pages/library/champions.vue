@@ -1,7 +1,7 @@
 <script setup lang="ts">
 definePageMeta({
   title: 'Champions',
-  icon: 'i-lol-champ-circle',
+  icon: 'lp:champ-circle',
   listClass: '!size-5.5',
   path: '/library/champions',
 })

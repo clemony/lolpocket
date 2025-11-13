@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-import type { HTMLAttributes } from 'vue'
+import type { HTMLAttributes } from "vue";
 
 const props = defineProps<{
-  title: string
-  description: string
-  noContent?: boolean
-  contentClass?: HTMLAttributes['class']
-}>()
+  title: string;
+  description: string;
+  noContent?: boolean;
+  contentClass?: HTMLAttributes["class"];
+}>();
 </script>
 
 <template>

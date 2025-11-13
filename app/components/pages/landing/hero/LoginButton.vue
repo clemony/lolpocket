@@ -1,10 +1,10 @@
 <script setup lang="ts">
 const props = defineProps<{
-  viewLogin: boolean
-}>()
+  viewLogin: boolean;
+}>();
 
-const emit = defineEmits(['update:login'])
-const viewLogin = ref(false)
+const emit = defineEmits(["update:login"]);
+const viewLogin = ref(false);
 </script>
 
 <template>
@@ -13,16 +13,14 @@ const viewLogin = ref(false)
       :button="true"
       variant="outline"
       size="12"
-      class="
-        hover:bgneutral
-        !font-sans
-        hover:text-nc
-      ">
+      class="hover:bgneutral font-sans! hover:text-nc"
+    >
       <input
         v-model="viewLogin"
         type="checkbox"
         class="peer hidden"
-        @change="emit('update:login', viewLogin)" />
+        @change="emit('update:login', viewLogin)"
+      />
       {{ viewLogin ? "Log In" : "Back" }}
     </Label>
   </div>

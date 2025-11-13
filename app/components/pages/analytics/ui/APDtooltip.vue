@@ -1,20 +1,14 @@
 <script lang="ts" setup>
 const props = defineProps<{
-  class?: HTMLAttributes['class']
-}>()
+  class?: HTMLAttributes["class"];
+}>();
 </script>
 
 <template>
   <tippy :class="cn('dr-20 cursor-info flex gap-1 transition', props.class)">
-    <span
-      class="
-        underline-offset-2
-        hover:underline
-      "><slot /></span>
+    <span class="underline-offset-2 hover:underline"><slot /></span>
 
-    <icon
-      name="ph:info"
-      class="size-3.5" />
+    <icon name="ph:info" class="size-3.5" />
 
     <template #content>
       <b>APD</b>

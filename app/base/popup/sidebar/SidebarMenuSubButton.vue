@@ -1,20 +1,20 @@
 <script setup lang="ts">
-import type { PrimitiveProps } from 'reka-ui'
-import { Primitive } from 'reka-ui'
+import type { PrimitiveProps } from "reka-ui";
+import { Primitive } from "reka-ui";
 
 const props = withDefaults(
   defineProps<
     PrimitiveProps & {
-      size?: 'sm' | 'md'
-      isActive?: boolean
-      class?: HTMLAttributes['class']
+      size?: "sm" | "md";
+      isActive?: boolean;
+      class?: HTMLAttributes["class"];
     }
   >(),
   {
-    as: 'a',
-    size: 'md',
-  }
-)
+    as: "a",
+    size: "md",
+  },
+);
 </script>
 
 <template>
@@ -44,7 +44,8 @@ const props = withDefaults(
         'group-data-[collapsible=icon]:hidden',
         props.class,
       )
-    ">
+    "
+  >
     <slot />
   </Primitive>
 </template>

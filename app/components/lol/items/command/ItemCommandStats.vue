@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import { statIndex } from '#shared/references'
+import { statIndex } from "#shared/references";
 
-const { filtered, filters, setFilter } = useItemFilter()
+const { filtered, filters, setFilter } = useItemFilter();
 </script>
 
 <template>
@@ -18,30 +18,26 @@ const { filtered, filters, setFilter } = useItemFilter()
         as="div"
         unwrap-element
         class="z-0 mb-2 flex flex-col px-1.5"
-        :appear="false">
-        <Motion
-          v-for="stat in statIndex"
-          :key="stat.id"
-          as="div">
+        :appear="false"
+      >
+        <Motion v-for="stat in statIndex" :key="stat.id" as="div">
           <label
             v-if="!filters.stats.includes(stat.id)"
-            class="
-              flex w-full rounded-md py-1.5 pr-2.5 pl-8 capitalize
-              hover:bg-accent
-            ">
+            class="flex w-full rounded-md py-1.5 pr-2.5 pl-8 capitalize hover:bg-accent"
+          >
             <input
               v-model="filters.stats"
               type="checkbox"
               name="item-types"
               class="peer hidden"
-              :value="stat" />
+              :value="stat"
+            />
 
             <span class="grow">{{ stat.name }}</span>
 
             <div
-              class="
-                badge rounded-field border-accent bg-b1/90 !text-1 tracking-wide
-              ">
+              class="badge rounded-field border-accent bg-b1/90 text-1! tracking-wide"
+            >
               <span class="text-bc dst">{{ stat.abbr[0] }}</span>
             </div>
           </label>

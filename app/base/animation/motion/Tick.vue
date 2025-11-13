@@ -1,13 +1,13 @@
 <script lang="ts" setup>
-import { motion } from 'motion-v'
+import { motion } from "motion-v";
 
 defineOptions({
   inheritAttrs: false,
-})
+});
 
 const { class: className } = defineProps<{
-  class?: HTMLAttributes['class']
-}>()
+  class?: HTMLAttributes["class"];
+}>();
 </script>
 
 <template>
@@ -19,9 +19,8 @@ const { class: className } = defineProps<{
     :transition="{
       duration: 0.5,
     }"
-    class="relative grid size-5 place-items-center overflow-hidden">
-    <icon
-      name="tick"
-      :class="cn('absolute size-5 shrink-0 dst', className)" />
+    class="relative grid size-5 place-items-center overflow-hidden"
+  >
+    <icon name="tick" :class="cn('absolute size-5 shrink-0 dst', className)" />
   </motion.div>
 </template>

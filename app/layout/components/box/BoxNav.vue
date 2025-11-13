@@ -25,14 +25,14 @@ const route = useRoute()
       <BtnLink
         v-for="link of links"
         :key="link.name"
-        :to="`/${link.path}`"
-        :size="isCollapsed ? 'icon' : 'lg'"
+        :to="{ name: link.name }"
+        :size="isCollapsed ? 'icon' : '11'"
         variant="ghost"
         :class="
-          cn(
-            'rounded-md text-3 !font-medium capitalize',
-            { 'btn-active border-b3/60 shadow-xs': route.path === link.path, 'w-full px-4 justify-start  !gap-3 ': !isCollapsed },
-          )
+          cn('rounded-md text-3 font-medium! capitalize', {
+            'btn-active border-b3/60 shadow-xs': route.path === link.path,
+            'w-full px-4 justify-start  !gap-3 ': !isCollapsed,
+          })
         ">
         <icon
           :name="String(link.meta.icon)"

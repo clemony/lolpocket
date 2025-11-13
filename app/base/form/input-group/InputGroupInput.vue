@@ -1,16 +1,16 @@
 <script setup lang="ts">
-const { class: className, placeholder = '' } = defineProps<{
-  class?: HTMLAttributes['class']
-  placeholder?: string
-}>()
+const { class: className, placeholder = "" } = defineProps<{
+  class?: HTMLAttributes["class"];
+  placeholder?: string;
+}>();
 
-const target = useTemplateRef('target')
+const target = useTemplateRef("target");
 function focusInput() {
-  target.value.focusInput()
+  target.value.focusInput();
 }
 defineExpose({
-  focusInput
-})
+  focusInput,
+});
 </script>
 
 <template>
@@ -18,8 +18,9 @@ defineExpose({
     ref="target"
     data-slot="input-group-control"
     :placeholder
-    :class="cn(
-      `
+    :class="
+      cn(
+        `
         peer flex-1 rounded-none border-0 bg-transparent shadow-none
         inset-shadow-none ring-offset-transparent outline-0
         focus-within:ring-0
@@ -28,6 +29,8 @@ defineExpose({
         focus-visible:ring-0 focus-visible:ring-transparent
         dark:bg-transparent
       `,
-      className,
-    )" />
+        className,
+      )
+    "
+  />
 </template>

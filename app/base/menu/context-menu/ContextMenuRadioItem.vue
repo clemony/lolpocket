@@ -2,21 +2,21 @@
 import type {
   ContextMenuRadioItemEmits,
   ContextMenuRadioItemProps,
-} from 'reka-ui'
+} from "reka-ui";
 import {
   ContextMenuItemIndicator,
   ContextMenuRadioItem,
   useForwardPropsEmits,
-} from 'reka-ui'
+} from "reka-ui";
 
 const props = defineProps<
-  ContextMenuRadioItemProps & { class?: HTMLAttributes['class'] }
->()
-const emits = defineEmits<ContextMenuRadioItemEmits>()
+  ContextMenuRadioItemProps & { class?: HTMLAttributes["class"] }
+>();
+const emits = defineEmits<ContextMenuRadioItemEmits>();
 
-const delegatedProps = reactiveOmit(props, 'class')
+const delegatedProps = reactiveOmit(props, "class");
 
-const forwarded = useForwardPropsEmits(delegatedProps, emits)
+const forwarded = useForwardPropsEmits(delegatedProps, emits);
 </script>
 
 <template>
@@ -33,7 +33,8 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
         `,
         props.class,
       )
-    ">
+    "
+  >
     <span class="left-2 flex size-4.5 items-center justify-center">
       <ContextMenuItemIndicator>
         <icon name="dot" />

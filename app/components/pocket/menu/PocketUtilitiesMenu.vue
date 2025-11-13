@@ -11,9 +11,6 @@ const route = useRoute()
 const pocket = computed(() => ps().getPocket(String(route.params.pocket_key)))
 
 async function testSaveAllPockets() {
-  const session = useSupabaseSession() // reactive
-  console.log('🌱 - testSaveAllPockets - session:', session)
-
   await $fetch('/api/supabase/updatePockets', {
     body: { pockets: ps().pockets },
     method: 'POST',
@@ -31,10 +28,13 @@ async function testSaveAllPockets() {
         size="md"
         hover="ghost"
         :class="
-          cn(`
-            mb-1 btn-square self-end
-            hover:!bg-b3
-          `, { 'btn-active': isOpen })
+          cn(
+            `
+              mb-1 btn-square self-end
+              hover:bg-b3!
+            `,
+            { 'btn-active': isOpen },
+          )
         ">
         <icon
           name="more"
@@ -54,13 +54,13 @@ async function testSaveAllPockets() {
       class="
         ml-3 flex min-w-76 flex-col justify-center justify-items-center
         overflow-hidden px-1 py-3
-        **:[&_button]:w-full **:[&_button]:justify-start **:[&_button]:!gap-3
+        **:[&_button]:w-full **:[&_button]:justify-start **:[&_button]:gap-3!
         **:[&_button]:px-3
       ">
       <Button
         variant="ghost"
         size="sm"
-        class="!h-9 rounded-md"
+        class="h-9! rounded-md"
         @click="testSaveAllPockets()">
         sync
       </Button>
@@ -68,7 +68,7 @@ async function testSaveAllPockets() {
       <Button
         variant="ghost"
         size="sm"
-        class="!h-9 rounded-md">
+        class="h-9! rounded-md">
         <icon
           name="send"
           class="size-4.5" />
@@ -78,7 +78,7 @@ async function testSaveAllPockets() {
       <Button
         variant="ghost"
         size="sm"
-        class="!h-9 rounded-md">
+        class="h-9! rounded-md">
         <icon
           name="hugeicons:image-download"
           class="dst" />
@@ -97,14 +97,14 @@ async function testSaveAllPockets() {
       <Button
         variant="ghost"
         size="sm"
-        class="!h-9 rounded-md !pl-10.75">
+        class="h-9! rounded-md pl-10.75!">
         Items & Champions
       </Button>
 
       <Button
         variant="ghost"
         size="sm"
-        class="!h-9 rounded-md !pl-10.75">
+        class="h-9! rounded-md pl-10.75!">
         Runes
       </Button>
 
@@ -112,7 +112,7 @@ async function testSaveAllPockets() {
       <Button
         variant="ghost"
         size="sm"
-        class="!h-9 rounded-md"
+        class="h-9! rounded-md"
         as-child>
         <DeletePocketDialog :pocket="pocket">
           <icon

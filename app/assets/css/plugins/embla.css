@@ -35,36 +35,36 @@
 /* ────────────────────────────── */
 /* Orientation: Horizontal        */
 /* ────────────────────────────── */
-.embla[orientation='horizontal'] .embla__container {
+.embla[orientation="horizontal"] .embla__container {
   display: flex;
   flex-direction: row;
   touch-action: pan-y pinch-zoom;
   margin-left: calc(var(--slide-spacing) * -1);
 }
 
-.embla[orientation='horizontal'] .embla__slide {
+.embla[orientation="horizontal"] .embla__slide {
   flex: 0 0 var(--slide-size);
 }
 
-.embla[orientation='horizontal'] .embla__parallax__img {
+.embla[orientation="horizontal"] .embla__parallax__img {
   flex: 0 0 calc(115% + (var(--slide-spacing) * 2));
 }
 
 /* ────────────────────────────── */
 /* Orientation: Vertical          */
 /* ────────────────────────────── */
-.embla[orientation='vertical'] .embla__container {
+.embla[orientation="vertical"] .embla__container {
   display: flex;
   flex-direction: column;
   touch-action: pan-x pinch-zoom;
   margin-top: calc(var(--slide-spacing) * -1);
 }
 
-.embla[orientation='vertical'] .embla__slide {
+.embla[orientation="vertical"] .embla__slide {
   flex: 0 0 var(--slide-size);
   min-height: 0;
 }
 
-.embla[orientation='vertical'] .embla__parallax__img {
+.embla[orientation="vertical"] .embla__parallax__img {
   flex: 0 0 calc(115% + (var(--slide-spacing) * 2));
 }

@@ -11,25 +11,27 @@ definePageMeta({
 const route = useRoute()
 const pocket = computed(() => ps().getPocket(String(route.params.pocket_key)))
 
-const { syncIfDirty } = useSupabaseSync(
-  () => pocket.value, // <- keep it reactive
+/* const { syncIfDirty } = useSupabaseSync(
+  () => pocket.value,
   '/api/pockets',
   (userId, value) => ({ pocket: value }),
   PocketSchema
-)
+) */
 
-async function testSync() {
+/* async function testSync() {
   console.log('🌱 - testSync fired')
   await syncIfDirty()
   console.log('🌱 - sync forced!')
 }
-
+ */
 const mainSet = computed(() =>
-  pocket.value.runes.find(s => s.id === pocket.value.main?.runes)
+  pocket.value.runes.find(s => s.id === pocket.value._runes),
 )
 
 const selectedSet = computed(() => {
-  const s = pocket.value.spells?.find(s => s.id === pocket.value.main?.spells)
+  const s = pocket.value.spells?.find(
+    s => s.id === pocket.value._spells,
+  )
   if (!s)
     return null
   const { id, ...rest } = s

@@ -1,9 +1,18 @@
 <script setup lang="ts">
-import { handleRemoval, handleReply, handleUpdate, handleVote, postComment } from 'tiptap'
+import {
+  handleRemoval,
+  postComment,
+  updateComment,
+  updateCommentVote,
+} from 'tiptap'
+
+const { threadId } = defineProps<{
+  threadId: UUID
+}>()
 
 const newComment = ref<Doc>(null)
 const sortRef = useTemplateRef('sortRef')
-const sorted = computed (() => sortRef.value?.sortedComments)
+const sorted = computed(() => sortRef.value?.sortedComments)
 // as().comments = []
 console.log(as().comments)
 </script>
@@ -23,10 +32,12 @@ console.log(as().comments)
         <PostButton
           :editor
           :new-comment
-          @click="e => {
-            console.log(e)
-            postComment(editor, newComment)
-          }" />
+          @click="
+            (e) => {
+              console.log(e);
+              postComment(editor, newComment, threadId);
+            }
+          " />
       </CommentEditor>
     </div>
     <div
@@ -36,7 +47,7 @@ console.log(as().comments)
       <span class="mt-0.5 text-2 opacity-60">Sort by: </span>
       <SortThread ref="sortRef" />
     </div>
-    <div
+    <!--  <div
       v-if="sorted?.length"
       :key="sorted?.length"
       class="grid h-max auto-rows-max">
@@ -48,6 +59,6 @@ console.log(as().comments)
         @comment:remove="handleRemoval"
         @comment:vote="handleVote"
         @comment:reply="handleReply" />
-    </div>
+    </div> -->
   </div>
 </template>

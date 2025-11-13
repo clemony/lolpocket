@@ -2,21 +2,21 @@
 import type {
   ContextMenuCheckboxItemEmits,
   ContextMenuCheckboxItemProps,
-} from 'reka-ui'
+} from "reka-ui";
 import {
   ContextMenuCheckboxItem,
   ContextMenuItemIndicator,
   useForwardPropsEmits,
-} from 'reka-ui'
+} from "reka-ui";
 
 const props = defineProps<
-  ContextMenuCheckboxItemProps & { class?: HTMLAttributes['class'] }
->()
-const emits = defineEmits<ContextMenuCheckboxItemEmits>()
+  ContextMenuCheckboxItemProps & { class?: HTMLAttributes["class"] }
+>();
+const emits = defineEmits<ContextMenuCheckboxItemEmits>();
 
-const delegatedProps = reactiveOmit(props, 'class')
+const delegatedProps = reactiveOmit(props, "class");
 
-const forwarded = useForwardPropsEmits(delegatedProps, emits)
+const forwarded = useForwardPropsEmits(delegatedProps, emits);
 </script>
 
 <template>
@@ -33,12 +33,11 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
         `,
         props.class,
       )
-    ">
+    "
+  >
     <span class="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
       <ContextMenuItemIndicator>
-        <input
-          type="checkbox"
-          class="checkbox checkbox-sm checkbox-neutral">
+        <input type="checkbox" class="checkbox checkbox-sm checkbox-neutral" />
       </ContextMenuItemIndicator>
     </span>
 

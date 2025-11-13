@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { NumberFieldInput } from 'reka-ui'
+import { NumberFieldInput } from "reka-ui";
 
 const props = defineProps<{
-  class?: HTMLAttributes['class']
-}>()
+  class?: HTMLAttributes["class"];
+}>();
 </script>
 
 <template>
@@ -21,5 +21,6 @@ const props = defineProps<{
         `,
         props.class,
       )
-    " />
+    "
+  />
 </template>

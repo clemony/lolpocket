@@ -1,4 +1,4 @@
-import type { Pocket } from '~~/shared/schema'
+import type { Pocket } from "~~/shared/schema"
 
 export interface MenubarGroup {
   name: string
@@ -7,17 +7,20 @@ export interface MenubarGroup {
 }
 
 export interface MenubarItemModel {
-
   get: () => boolean | string
   set: (v: boolean | string) => void
   valueOf: () => boolean | string
 }
-export type MenubarItemType = MenubarItem | MenubarSubItem | MenubarPocket | MenubarRadioGroup
+export type MenubarItemType =
+  | MenubarItem
+  | MenubarSubItem
+  | MenubarPocket
+  | MenubarRadioGroup
 
 export interface MenubarItem {
   key?: string
   name?: string | ComputedRef<string>
-  checkboxType?: 'tick' | 'switch' | 'checkbox' | 'tick-end'
+  checkboxType?: "tick" | "switch" | "checkbox" | "tick-end"
   class?: Record<string, string>
   click?: () => void
   component?: Component
@@ -33,7 +36,14 @@ export interface MenubarItem {
     text?: string
     class?: string
   }
-  type?: 'checkbox' | 'radioItem' | 'radio' | 'submenu' | 'separator' | 'pocket' | 'group'
+  type?:
+    | "checkbox"
+    | "radioItem"
+    | "radio"
+    | "submenu"
+    | "separator"
+    | "pocket"
+    | "group"
   value?: string
 }
 
@@ -41,7 +51,7 @@ export interface MenubarSubItem extends MenubarItem {}
 export interface MenubarPocket extends Pocket {
   class?: Record<string, string>
   component?: Component
-  icon?: string
+  icon: string
   inset?: boolean
   options?: string[]
   pocket?: boolean
@@ -51,7 +61,7 @@ export interface MenubarPocket extends Pocket {
     class?: string
     component?: Component
   }
-  type?: 'checkbox' | 'radioItem' | 'radio' | 'submenu' | 'separator' | 'pocket'
+  type?: "checkbox" | "radioItem" | "radio" | "submenu" | "separator" | "pocket"
   value?: string
 }
 

@@ -1,34 +1,34 @@
 <script setup lang="ts">
-import type { PopoverContentEmits, PopoverContentProps } from 'reka-ui'
-import { motion } from 'motion-v'
-import { PopoverContent, PopoverPortal, useForwardPropsEmits } from 'reka-ui'
+import type { PopoverContentEmits, PopoverContentProps } from "reka-ui";
+import { motion } from "motion-v";
+import { PopoverContent, PopoverPortal, useForwardPropsEmits } from "reka-ui";
 
 defineOptions({
   inheritAttrs: false,
-})
+});
 
 const props = withDefaults(
   defineProps<
     PopoverContentProps & {
-      class?: HTMLAttributes['class']
-      arrowClass?: HTMLAttributes['class']
-      to?: string
-      sideOffset?: number
-      align?: string
-      scaleStart?: number
+      class?: HTMLAttributes["class"];
+      arrowClass?: HTMLAttributes["class"];
+      to?: string;
+      sideOffset?: number;
+      align?: string;
+      scaleStart?: number;
     }
   >(),
   {
     sideOffset: 0,
-    align: 'center',
+    align: "center",
     scaleStart: 0.6,
-  }
-)
-const emits = defineEmits<PopoverContentEmits>()
+  },
+);
+const emits = defineEmits<PopoverContentEmits>();
 
-const delegatedProps = reactiveOmit(props, 'class')
+const delegatedProps = reactiveOmit(props, "class");
 
-const forwarded = useForwardPropsEmits(delegatedProps, emits)
+const forwarded = useForwardPropsEmits(delegatedProps, emits);
 
 const variants = {
   arrowHidden: {
@@ -38,25 +38,25 @@ const variants = {
       delay: 0,
       duration: 0,
     },
-    transitionEnd: { visibility: 'hidden' },
+    transitionEnd: { visibility: "hidden" },
   },
   hidden: {
     opacity: 0,
     scale: props.scaleStart,
-    transitionEnd: { visibility: 'hidden' },
+    transitionEnd: { visibility: "hidden" },
   },
   visible: {
     opacity: 1,
     scale: 1,
-    visibility: 'visible',
+    visibility: "visible",
   },
-}
+};
 
 const wrapperVariants = {
   hidden: {
     opacity: 0,
     scale: 1,
-    transitionEnd: { visibility: 'hidden' },
+    transitionEnd: { visibility: "hidden" },
   },
   visible: {
     opacity: 1,
@@ -64,18 +64,15 @@ const wrapperVariants = {
     transition: {
       delay: 0.2,
     },
-    visibility: 'visible',
+    visibility: "visible",
   },
-}
+};
 </script>
 
 <template>
   <PopoverPortal :to="props.to">
     <AnimatePresence>
-      <PopoverContent
-        as-child
-        :align="align"
-        v-bind="forwarded">
+      <PopoverContent as-child :align="align" v-bind="forwarded">
         <motion.div
           :variants="variants"
           initial="hidden"
@@ -90,14 +87,15 @@ const wrapperVariants = {
           :class="
             cn(
               `
-                z-50 w-72 rounded-lg border !border-b3 bg-b1/90 p-4 text-bc
+                z-50 w-72 rounded-lg border border-b3! bg-b1/90 p-4 text-bc
                 shadow-md drop-shadow-md backdrop-blur-md outline-none
                 group-data-[state=hidden]:**:opacity-0
                 group-data-[state=visible]:**:opacity-100
               `,
               props.class,
             )
-          ">
+          "
+        >
           <motion.div
             v-bind="$attrs"
             :variants="wrapperVariants"
@@ -109,7 +107,8 @@ const wrapperVariants = {
               type: 'spring',
               bounce: 0.25,
               duration: 0.4,
-            }">
+            }"
+          >
             <slot />
           </motion.div>
           <PopoverArrow
@@ -118,8 +117,9 @@ const wrapperVariants = {
             :variants="variants"
             exit="arrowHidden"
             :class="
-              cn('absolute !z-53 scale-y-90 text-b1/99', props.arrowClass)
-            " />
+              cn('absolute z-53! scale-y-90 text-b1/99', props.arrowClass)
+            "
+          />
         </motion.div>
       </PopoverContent>
     </AnimatePresence>

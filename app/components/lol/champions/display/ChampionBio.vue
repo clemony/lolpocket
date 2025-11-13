@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 const { champion } = defineProps<{
-  champion: Champion
-}>()
-console.log('💠 - champion.positions[0]:', champion.positions[0])
+  champion: Champion;
+}>();
+console.log("💠 - champion.positions[0]:", champion.positions[0]);
 </script>
 
 <template>
@@ -24,17 +24,17 @@ console.log('💠 - champion.positions[0]:', champion.positions[0])
     <Separator class="mb-0 bg-b3 shadow-none" />
 
     <div class="flex flex-nowrap items-center justify-between gap-6">
-      <ValueFormatter
-        :array="champion.roles"
-        class="text-2 font-medium" />
+      <ValueFormatter :array="champion.roles" class="text-2 font-medium" />
 
       <ValueFormatter
         :array="champion.positions"
         class="role-bg mb-1 badge w-fit shrink-0 border-b4/30 badge-lg"
-        :data-role="champion.positions[0].toLowerCase()">
+        :data-role="champion.positions[0].toLowerCase()"
+      >
         <component
           :is="`i-roles-${champion.positions[0].toLowerCase()}`"
-          class="-mt-1 mr-2 size-4" />
+          class="-mt-1 mr-2 size-4"
+        />
       </ValueFormatter>
     </div>
   </div>

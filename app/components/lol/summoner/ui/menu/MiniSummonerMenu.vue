@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { DropdownMenuTrigger } from 'reka-ui'
+import { DropdownMenuTrigger } from "reka-ui";
 
 const {
   side,
@@ -8,39 +8,39 @@ const {
   disableLink,
   summoner,
 } = defineProps<{
-  class?: HTMLAttributes['class']
-  summoner: Summoner
-  side?: Side
-  align?: Align
-  disableLink?: boolean
-}>()
+  class?: HTMLAttributes["class"];
+  summoner: Summoner;
+  side?: Side;
+  align?: Align;
+  disableLink?: boolean;
+}>();
 
-const open = ref(false)
+const open = ref(false);
 </script>
 
 <template>
   <DropdownMenu v-model:open="open">
     <DropdownMenuTrigger
       as-child
-      :class="cn(`
+      :class="
+        cn(
+          `
         group/dd z-2
         data-[state=open]:bg-b2
-      `, className)">
+      `,
+          className,
+        )
+      "
+    >
       <slot>
         <icon
           name="more"
-          class="
-            opacity-60
-            group-hover/dd:opacity-100
-            group-data-[state=open]/dd:opacity-100
-          " />
+          class="opacity-60 group-hover/dd:opacity-100 group-data-[state=open]/dd:opacity-100"
+        />
       </slot>
     </DropdownMenuTrigger>
 
-    <LazyDropdownMenuPopContent
-      :align
-      :side
-      class="w-54">
+    <LazyDropdownMenuPopContent :align :side class="w-54">
       <Label>
         <!--    <icon
           name="tag"
@@ -50,47 +50,35 @@ const open = ref(false)
       </Label>
 
       <DropdownMenuItem
-        class="flex h-full max-w-full !opacity-100"
-        @click="navigateTo('/')">
-        <SummonerIcon
-          :summoner
-          class="size-7 rounded-md" />
+        class="flex h-full max-w-full opacity-100!"
+        @click="navigateTo('/')"
+      >
+        <SummonerIcon :summoner class="size-7 rounded-md" />
         <SummonerName
           :summoner
           as="h3"
-          class="!text-5truncate grow font-serif" />
+          class="text-5truncate! grow font-serif"
+        />
 
         <SummonerTag :summoner />
       </DropdownMenuItem>
 
       <Separator class="mt-2" />
-      <DropdownMenuLabel class="py-1">
-        Social
-      </DropdownMenuLabel>
+      <DropdownMenuLabel class="py-1"> Social </DropdownMenuLabel>
       <Separator class="mb-1" />
 
       <DropdownMenuItem as-child>
-        <FollowButton
-          text
-          size="sm"
-          variant="base"
-          :summoner />
+        <FollowButton text size="sm" variant="base" :summoner />
       </DropdownMenuItem>
       <DropdownMenuItem as-child>
-        <MessageButton
-          size="sm"
-          variant="base"
-          :summoner>
+        <MessageButton size="sm" variant="base" :summoner>
           Message
           <span>{{ summoner.name }}</span>
         </MessageButton>
       </DropdownMenuItem>
 
       <DropdownMenuItem as-child>
-        <BlockButton
-          size="sm"
-          variant="base"
-          :summoner>
+        <BlockButton size="sm" variant="base" :summoner>
           Block User
         </BlockButton>
       </DropdownMenuItem>

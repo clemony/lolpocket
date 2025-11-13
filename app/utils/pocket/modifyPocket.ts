@@ -1,13 +1,11 @@
 // CHAMPS
 
-import { newRuneSet } from '~~/shared/schema'
+import { newRuneSet } from "~~/shared/schema"
 
 export function removeChampion(champion, pocket) {
-  const find = pocket.champions.findIndex(c => c === champion)
-  if (find !== -1)
-    pocket.champions.splice(find, 1)
-  if (champion === pocket.main.champion)
-    pocket.main.champion = ''
+  const find = pocket.champions.findIndex((c) => c === champion)
+  if (find !== -1) pocket.champions.splice(find, 1)
+  if (champion === pocket._champion) pocket._champion = ""
 }
 
 // RUNES
@@ -19,16 +17,15 @@ export function resetRunes(set) {
 }
 
 export function deleteRuneSet(pocket, set) {
-  const a = pocket.runes.findIndex(s => s.id === set.id)
-  console.log('💠 - deleteRuneSet - a:', a)
+  const a = pocket.runes.findIndex((s) => s.id === set.id)
+  console.log("💠 - deleteRuneSet - a:", a)
   if (a !== -1) {
     pocket.runes.splice(a, 1)
   }
 }
 
 export function removeSpellSet(pocket, set) {
-  const a = pocket.spells.sets.findIndex(s => s === set)
-  if (!a)
-    return
+  const a = pocket.spells.sets.findIndex((s) => s === set)
+  if (!a) return
   pocket.spells.sets.splice(a, 1)
 }

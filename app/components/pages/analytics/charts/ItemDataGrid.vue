@@ -1,25 +1,23 @@
 <script lang="ts" setup>
 // @todo fix usermatchdata
-const userMatchData = []
+const userMatchData = [];
 const patchGames = computed(() =>
-  userMatchData.filter(g => g.patch === ms().filter.patch)
-)
+  userMatchData.filter((g) => g.patch === ms().filter.patch),
+);
 
-const state = inject<SummonerData>(SummonerKey)
+const state = inject<SummonerData>(SummonerKey);
 
-const { bayesianItems } = useMatchItems(state.summoner.puuid, state.matches)
+const { bayesianItems } = useMatchItems(state.summoner.puuid, state.matches);
 </script>
 
 <template>
   <div class="size-full overflow-hidden pb-9">
     <div class="border-shadow h-160 max-h-160 w-full bg-b1 inset-shadow-xxs">
-      <div class="size-full !overflow-hidden">
+      <div class="size-full overflow-hidden!">
         <div class="oveflow-y-auto size-full">
           <div
-            class="
-              flex w-full items-center gap-4 px-2 pt-3 pb-1 text-2 tracking-wide
-              capitalize opacity-60
-            ">
+            class="flex w-full items-center gap-4 px-2 pt-3 pb-1 text-2 tracking-wide capitalize opacity-60"
+          >
             <span class="grow pl-2">{{ ms().filter.patch }} Items</span>
 
             <APDtooltip>Absolute</APDtooltip>
@@ -27,33 +25,23 @@ const { bayesianItems } = useMatchItems(state.summoner.puuid, state.matches)
             <BayesianTooltip>Weighted</BayesianTooltip>
           </div>
 
-          <template
-            v-for="entry in bayesianItems"
-            :key="entry.item?.id">
+          <template v-for="entry in bayesianItems" :key="entry.item?.id">
             <div
               v-if="entry"
-              class="
-                grid w-full
-                grid-cols-[20px_repeat(2,40px)_1fr_repeat(2,60px)_20px]
-                items-center overflow-y-auto border-b border-b-b2 py-3
-              ">
+              class="grid w-full grid-cols-[20px_repeat(2,40px)_1fr_repeat(2,60px)_20px] items-center overflow-y-auto border-b border-b-b2 py-3"
+            >
               <div />
 
               <div
-                class="
-                  flex w-fit self-center rounded-xl border border-black/10
-                  badge-xl px-2.5 font-semibold shadow-xs inset-shadow-sm
-                  drop-shadow-xs
-                "
+                class="flex w-fit self-center rounded-xl border border-black/10 badge-xl px-2.5 font-semibold shadow-xs inset-shadow-sm drop-shadow-xs"
                 :style="{
-                  'backgroundColor': `color-mix(in oklab, var(--color-${getGradeColor(entry.bayesianWinrate)}) 70%, transparent)`,
+                  backgroundColor: `color-mix(in oklab, var(--color-${getGradeColor(entry.bayesianWinrate)}) 70%, transparent)`,
                   'box-shadow': `0px 1px 0px color-mix(in oklab, var(--color-${getGradeColor(entry.bayesianWinrate)}-b100) 40%, transparent),1px 1px 1px var(--color-${getGradeColor(entry.bayesianWinrate)}-w600) inset`,
-                }">
+                }"
+              >
                 <span
-                  class="
-                    font-mono text-4 text-[#FFF] tracking-wide dst
-                    text-shadow-black/5 text-shadow-xs
-                  ">
+                  class="font-mono text-4 text-[#FFF] tracking-wide dst text-shadow-black/5 text-shadow-xs"
+                >
                   {{ getGrade(entry.bayesianWinrate) }}
                 </span>
               </div>
@@ -62,7 +50,8 @@ const { bayesianItems } = useMatchItems(state.summoner.puuid, state.matches)
                 <img
                   class="size-10 rounded-xl"
                   :alt="entry.item?.id"
-                  :src="`/img/items/${entry.item?.id}.webp`" />
+                  :src="`/img/items/${entry.item?.id}.webp`"
+                />
               </div>
 
               <div class="list-col-grow -space-y-1">
@@ -75,9 +64,7 @@ const { bayesianItems } = useMatchItems(state.summoner.puuid, state.matches)
                 </div>
               </div>
 
-              <div class="text-end text-2">
-                {{ entry.winrate.toFixed(1) }}%
-              </div>
+              <div class="text-end text-2">{{ entry.winrate.toFixed(1) }}%</div>
 
               <div class="text-end text-2">
                 {{ entry.bayesianWinrate.toFixed(1) }}%

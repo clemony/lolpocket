@@ -1,20 +1,20 @@
 <script lang="ts" setup>
-import type { ContextMenuArrowProps } from 'reka-ui'
-import { ContextMenuArrow, useForwardProps } from 'reka-ui'
+import type { ContextMenuArrowProps } from "reka-ui";
+import { ContextMenuArrow, useForwardProps } from "reka-ui";
 
 const props = defineProps<
   ContextMenuArrowProps & {
-    class?: HTMLAttributes['class']
-    sideOffset?: number
-    alignOffset?: number
-    iconClass?: HTMLAttributes['class']
-    orientation?: 'vertical' | 'horizontal'
+    class?: HTMLAttributes["class"];
+    sideOffset?: number;
+    alignOffset?: number;
+    iconClass?: HTMLAttributes["class"];
+    orientation?: "vertical" | "horizontal";
   }
->()
+>();
 
-const delegatedProps = reactiveOmit(props, 'class')
+const delegatedProps = reactiveOmit(props, "class");
 
-const forwarded = useForwardProps(delegatedProps)
+const forwarded = useForwardProps(delegatedProps);
 </script>
 
 <template>
@@ -28,7 +28,8 @@ const forwarded = useForwardProps(delegatedProps)
         `,
         props.class,
       )
-    ">
+    "
+  >
     <div
       :class="
         cn(
@@ -38,18 +39,20 @@ const forwarded = useForwardProps(delegatedProps)
           `,
           props.iconClass,
         )
-      ">
+      "
+    >
       <icon
         name="ion:caret-up-sharp"
         :class="
           cn(
             `
-              !size-8 mask-b-from-70% mask-b-to-90% stroke-6 text-b1/91
+              size-8! mask-b-from-70% mask-b-to-90% stroke-6 text-b1/91
               drop-shadow-xs drop-shadow-black/30 text-shadow-sm
               *:stroke-b4
             `,
           )
-        " />
+        "
+      />
     </div>
   </ContextMenuArrow>
 </template>

@@ -1,4 +1,4 @@
-import { cva } from 'class-variance-authority'
+import { cva } from "class-variance-authority";
 
 export const navigationMenuTriggerStyle = cva(
   `
@@ -7,7 +7,7 @@ export const navigationMenuTriggerStyle = cva(
     hover:bg-b2/60 hover:text-2 hover:text-bc
     focus:bg-b2/60 focus:text-bc focus:outline-none
     disabled:pointer-events-none disabled:opacity-50
-    data-[active]:!bg-b2/60
-    data-[state=open]:!bg-b2/60
-  `
-)
+    data-[active]:bg-b2/60!
+    data-[state=open]:bg-b2/60!
+  `,
+);

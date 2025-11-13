@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 defineOptions({
   inheritAttrs: false,
-})
+});
 
 const {
   alt,
@@ -10,14 +10,14 @@ const {
   preload = false,
   sizes,
 } = defineProps<{
-  alt: string
-  sizes?: string[]
-  preload?: boolean
-  img: string | null
-  class?: HTMLAttributes['class']
-}>()
+  alt: string;
+  sizes?: string[];
+  preload?: boolean;
+  img: string | null;
+  class?: HTMLAttributes["class"];
+}>();
 
-const loaded = ref(false)
+const loaded = ref(false);
 </script>
 
 <template>
@@ -33,10 +33,14 @@ const loaded = ref(false)
     v-bind="$attrs"
     :alt="alt"
     :class="
-      cn('size-full shrink-0 opacity-0 transition-[opacity,transform]', {
-           'translate-z-0 opacity-100': loaded },
-         loaded ? className : '',
+      cn(
+        'size-full shrink-0 opacity-0 transition-[opacity,transform]',
+        {
+          'translate-z-0 opacity-100': loaded,
+        },
+        loaded ? className : '',
       )
     "
-    @load="loaded = true"></NuxtImg>
+    @load="loaded = true"
+  ></NuxtImg>
 </template>

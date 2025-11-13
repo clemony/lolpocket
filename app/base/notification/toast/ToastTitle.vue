@@ -4,7 +4,9 @@ import type { HTMLAttributes } from 'vue'
 import { reactiveOmit } from '@vueuse/core'
 import { ToastTitle } from 'reka-ui'
 
-const props = defineProps<ToastTitleProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<
+  ToastTitleProps & { class?: HTMLAttributes['class'] }
+>()
 
 const delegatedProps = reactiveOmit(props, 'class')
 </script>
@@ -12,7 +14,7 @@ const delegatedProps = reactiveOmit(props, 'class')
 <template>
   <ToastTitle
     v-bind="delegatedProps"
-    :class="cn('text-4 font-semibold', props.class)">
+    :class="cn('text-5! font-bold tracking-tight text-bc/80', props.class)">
     <slot />
   </ToastTitle>
 </template>

@@ -1,11 +1,20 @@
 <script lang="ts" setup>
 import type { description } from 'valibot'
 import { motion, useDomRef } from 'motion-v'
-import { toast } from '~/base/notification/toast/use-toast'
+import { heyGoodJob } from '~~/shared/data/good-job'
+import { toast, } from '~/base/notification/toast/use-toast'
 
 const container = useDomRef()
-
+function toasty() {
+  toast({
+    title: `Created Toast!`,
+    color: 'error',
+    description: `${getRandom(heyGoodJob)}, ${as().account.username || as().account.name}!`,
+    icon: 'x',
+  })
+}
 definePageMeta({
+  id: '8e12b21b-2f27-43b0-b7e7-77c49bbe972d',
   name: 'nexus',
   icon: 'nexus',
   listClass: '!size-5.75 **:stroke-[1.6]',
@@ -16,17 +25,23 @@ const text = ref<string>()
 </script>
 
 <template>
-  <div
-    class="flex h-full w-full flex-col items-center pt-8">
+  <div class="flex h-full w-full flex-col items-center pt-8">
     <header class="w-full">
       <h1>Nexus</h1>
     </header>
 
-    <div class="mx-auto w-1/5 space-y-2">
+    <div class="mx-auto flex w-1/5 items-center gap-3 space-y-2">
       <Button @click="useFetchSummonerData(as().account.puuid)">
         try update
       </Button>
 
+      <Button
+        variant="neutral"
+        class="ml-auto pr-4 pl-2.5 font-normal"
+        @click="toasty()">
+        <icon name="add" />
+        toast
+      </Button>
       <Button @click="useHydrateUser()">
         fetch user datasss
       </Button>
@@ -34,21 +49,6 @@ const text = ref<string>()
       <Button @click="useSignOut()">
         sign out
       </Button>
-
-      <Button
-        @click="
-          toast({
-            title: 'Hello toast!',
-            description:
-              'Canadian neurosurgeon Dr. Wilder Penfield, while operating on epilepsy patients, discovered the “toast centre” of the human brain, which is wholly dedicated to detecting when toast is burning.',
-          })
-        ">
-        toast
-      </Button>
-
-      <div class="h-12 w-44 border dss">
-        hi
-      </div>
 
       <!--       <Button
         @click="() => {
@@ -74,7 +74,7 @@ const text = ref<string>()
     </div> -->
     </div>
     <div class="mt-12 flex w-full justify-center pb-54">
-      <CommentsThread />
+      <CommentsThread :thread-id="String(useRoute().meta?.id) as UUID" />
     </div>
 
     <SiteFooter />

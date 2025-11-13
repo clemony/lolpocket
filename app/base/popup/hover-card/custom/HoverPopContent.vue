@@ -1,38 +1,38 @@
 <script setup lang="ts">
-import type { HoverCardContentProps } from 'reka-ui'
-import { motion } from 'motion-v'
-import { HoverCardContent, HoverCardPortal, useForwardProps } from 'reka-ui'
-import { computed } from 'vue'
+import type { HoverCardContentProps } from "reka-ui";
+import { motion } from "motion-v";
+import { HoverCardContent, HoverCardPortal, useForwardProps } from "reka-ui";
+import { computed } from "vue";
 
 const props = withDefaults(
-  defineProps<HoverCardContentProps & { class?: HTMLAttributes['class'] }>(),
+  defineProps<HoverCardContentProps & { class?: HTMLAttributes["class"] }>(),
   {
     sideOffset: 4,
-  }
-)
+  },
+);
 
-const delegatedProps = reactiveOmit(props, 'class')
+const delegatedProps = reactiveOmit(props, "class");
 
-const forwarded = useForwardProps(delegatedProps)
+const forwarded = useForwardProps(delegatedProps);
 
 const variants = {
   hidden: {
     opacity: 0,
     scale: 0.6,
-    transitionEnd: { visibility: 'hidden' },
+    transitionEnd: { visibility: "hidden" },
   },
   visible: {
     opacity: 1,
     scale: 1,
-    visibility: 'visible',
+    visibility: "visible",
   },
-}
+};
 
 const wrapperVariants = {
   hidden: {
     opacity: 0,
     scale: 1,
-    transitionEnd: { visibility: 'hidden' },
+    transitionEnd: { visibility: "hidden" },
   },
   visible: {
     opacity: 1,
@@ -40,17 +40,15 @@ const wrapperVariants = {
     transition: {
       delay: 0,
     },
-    visibility: 'visible',
+    visibility: "visible",
   },
-}
+};
 </script>
 
 <template>
   <HoverCardPortal>
     <AnimatePresence>
-      <HoverCardContent
-        as-child
-        v-bind="forwarded">
+      <HoverCardContent as-child v-bind="forwarded">
         <motion.div
           :variants="variants"
           initial="hidden"
@@ -65,14 +63,15 @@ const wrapperVariants = {
           :class="
             cn(
               `
-                z-50 w-72 rounded-lg border !border-b3 bg-b1/94 p-2 text-bc
+                z-50 w-72 rounded-lg border border-b3! bg-b1/94 p-2 text-bc
                 shadow-md drop-shadow-md backdrop-blur-lg outline-none
                 group-data-[state=hidden]:**:opacity-0
                 group-data-[state=visible]:**:opacity-100
               `,
               props.class,
             )
-          ">
+          "
+        >
           <motion.div
             :variants="wrapperVariants"
             initial="hidden"
@@ -83,7 +82,8 @@ const wrapperVariants = {
               type: 'spring',
               bounce: 0.25,
               duration: 0.4,
-            }">
+            }"
+          >
             <slot />
           </motion.div>
         </motion.div>

@@ -1,25 +1,25 @@
 <script lang="ts" setup>
-import { Element, TransitionSlide } from '#components'
+import { Element, TransitionSlide } from "#components";
 
 const {
-  as = 'div',
+  as = "div",
   class: className,
   invert = false,
-  mode = 'out-in',
+  mode = "out-in",
 } = defineProps<{
-  class?: HTMLAttributes['class']
-  as?: string
-  mode?: 'out-in' | 'in-out'
-  invert?: boolean
-}>()
+  class?: HTMLAttributes["class"];
+  as?: string;
+  mode?: "out-in" | "in-out";
+  invert?: boolean;
+}>();
 
-const is = shallowRef<Component>(Element)
+const is = shallowRef<Component>(Element);
 
-onMounted (() => {
+onMounted(() => {
   setTimeout(() => {
-    is.value = TransitionSlide
-  }, 300)
-})
+    is.value = TransitionSlide;
+  }, 300);
+});
 </script>
 
 <template>
@@ -33,14 +33,15 @@ onMounted (() => {
     :offset="
       !invert
         ? {
-          enter: ['100%', 0],
-          leave: ['-100%', 0],
-        }
+            enter: ['100%', 0],
+            leave: ['-100%', 0],
+          }
         : {
-          enter: ['-100%', 0],
-          leave: ['100%', 0],
-        }
-    ">
+            enter: ['-100%', 0],
+            leave: ['100%', 0],
+          }
+    "
+  >
     <slot />
   </component>
 </template>

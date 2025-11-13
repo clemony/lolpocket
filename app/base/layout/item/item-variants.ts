@@ -1,5 +1,5 @@
-import type { VariantProps } from 'class-variance-authority'
-import { cva } from 'class-variance-authority'
+import type { VariantProps } from "class-variance-authority";
+import { cva } from "class-variance-authority";
 
 export const itemVariants = cva(
   `
@@ -13,22 +13,22 @@ export const itemVariants = cva(
   `,
   {
     defaultVariants: {
-      size: 'default',
-      variant: 'default',
+      size: "default",
+      variant: "default",
     },
     variants: {
       size: {
-        default: 'p-4 gap-4 ',
-        sm: 'py-3 px-4 gap-2.5',
+        default: "p-4 gap-4 ",
+        sm: "py-3 px-4 gap-2.5",
       },
       variant: {
-        b2: 'bg-b2/50',
-        default: 'bg-transparent',
-        outline: 'border-border',
+        b2: "bg-b2/50",
+        default: "bg-transparent",
+        outline: "border-border",
       },
     },
   },
-)
+);
 
 export const itemMediaVariants = cva(
   `
@@ -39,18 +39,18 @@ export const itemMediaVariants = cva(
   `,
   {
     defaultVariants: {
-      variant: 'default',
+      variant: "default",
     },
     variants: {
       variant: {
-        default: 'bg-transparent',
-        icon: 'size-8 border rounded-sm bg-b2 [&_svg:not([class*=\'size-\'])]:size-4',
+        default: "bg-transparent",
+        icon: "size-8 border rounded-sm bg-b2 [&_svg:not([class*='size-'])]:size-4",
         image:
-          'size-10 rounded-sm overflow-hidden [&_img]:size-full [&_img]:object-cover',
+          "size-10 rounded-sm overflow-hidden [&_img]:size-full [&_img]:object-cover",
       },
     },
   },
-)
+);
 
-export type ItemVariants = VariantProps<typeof itemVariants>
-export type ItemMediaVariants = VariantProps<typeof itemMediaVariants>
+export type ItemVariants = VariantProps<typeof itemVariants>;
+export type ItemMediaVariants = VariantProps<typeof itemMediaVariants>;

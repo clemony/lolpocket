@@ -1,96 +1,88 @@
 const item: Item = {
   id: 3802,
-  name: 'Lost Chapter',
-  nicknames: [
-    'book'
-  ],
+  name: "Lost Chapter",
+  nicknames: ["book"],
   buildsFrom: [
     {
       id: 1052,
-      name: 'Amplifying Tome',
-      gold: 400
+      name: "Amplifying Tome",
+      gold: 400,
     },
     {
       id: 1027,
-      name: 'Sapphire Crystal',
-      gold: 300
+      name: "Sapphire Crystal",
+      gold: 300,
     },
     {
       id: 2022,
-      name: 'Glowing Mote',
-      gold: 250
-    }
+      name: "Glowing Mote",
+      gold: 250,
+    },
   ],
   buildsInto: [
     {
       id: 323003,
-      name: 'Archangel\'s Staff',
-      gold: 2900
+      name: "Archangel's Staff",
+      gold: 2900,
     },
     {
       id: 3003,
-      name: 'Archangel\'s Staff',
-      gold: 2900
+      name: "Archangel's Staff",
+      gold: 2900,
     },
     {
       id: 3118,
-      name: 'Malignance',
-      gold: 2700
+      name: "Malignance",
+      gold: 2700,
     },
     {
       id: 2503,
-      name: 'Blackfire Torch',
-      gold: 2800
+      name: "Blackfire Torch",
+      gold: 2800,
     },
     {
       id: 4644,
-      name: 'Crown of the Shattered Queen',
-      gold: 2865
+      name: "Crown of the Shattered Queen",
+      gold: 2865,
     },
     {
       id: 6655,
-      name: 'Luden\'s Companion',
-      gold: 2750
+      name: "Luden's Companion",
+      gold: 2750,
     },
     {
       id: 6656,
-      name: 'Everfrost',
-      gold: 2865
-    }
+      name: "Everfrost",
+      gold: 2865,
+    },
   ],
-  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3802_mage_tier2_lostchapter.png',
-  maps: [
-    11,
-    12,
-    21,
-    35
-  ],
+  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3802_mage_tier2_lostchapter.png",
+  maps: [11, 12, 21, 35],
   noEffects: false,
   passives: [
     {
-      name: 'Enlighten',
-      effects: 'Upon leveling up, restores 20% of <b>maximum</b> mana over 3 seconds.',
-      unique: true
-    }
+      name: "Enlighten",
+      effects:
+        "Upon leveling up, restores 20% of <b>maximum</b> mana over 3 seconds.",
+      unique: true,
+    },
   ],
-  rank: 'Epic',
+  rank: "Epic",
   removed: false,
   shop: {
     prices: {
       combined: 250,
       sell: 480,
-      total: 1200
+      total: 1200,
     },
-    tags: [
-      'MAGE'
-    ]
+    tags: ["MAGE"],
   },
-  simpleDescription: 'Restores Mana upon levelling up.',
+  simpleDescription: "Restores Mana upon levelling up.",
   specialRecipe: 0,
   stats: {
     abilityHaste: 10,
     abilityPower: 40,
-    mana: 300
-  }
-}
-export default item
+    mana: 300,
+  },
+};
+export default item;

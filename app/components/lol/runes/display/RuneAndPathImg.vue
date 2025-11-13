@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import type { RuneSet } from '~~/shared/schema'
 import { Primitive } from 'reka-ui'
 
 const { class: className, pathClass } = defineProps<{
@@ -11,10 +10,15 @@ const { class: className, pathClass } = defineProps<{
 
 <template>
   <Primitive
-    :class="cn(`
-      padding-0 group/btn grid size-20 shrink-0 place-items-center
-      !overflow-visible dss drop-shadow-black/4
-    `, className)">
+    :class="
+      cn(
+        `
+          padding-0 group/btn grid size-20 shrink-0 place-items-center
+          overflow-visible! dss drop-shadow-black/4
+        `,
+        className,
+      )
+    ">
     <div class="absolute inset-0 grid place-items-center overflow-visible">
       <img
         v-if="set.keystone"
@@ -22,13 +26,14 @@ const { class: className, pathClass } = defineProps<{
         :alt="set.keystone.toString()"
         :src="`/img/runes/${set.primary.path}/${set.keystone}.webp`"
         class="
-          absolute !h-auto !w-full shrink-0 place-self-center opacity-97
+          absolute h-auto! w-full! shrink-0 place-self-center opacity-97
           drop-shadow-md drop-shadow-black/30
         " />
 
-      <i-lol-runes
+      <Icon
         v-else
-        class="absolute !size-9 shrink-0 text-bc/30 opacity-60" />
+        name="lp:runes"
+        class="absolute size-9! shrink-0 text-bc/30 opacity-60" />
 
       <Element
         v-memo="[set.secondary.path]"
@@ -40,10 +45,11 @@ const { class: className, pathClass } = defineProps<{
               overflow-hidden rounded-full border border-b3/90 shadow-xs
               transition-all duration-250
               *:transition-opacity *:duration-200
-              group-hover/btn:!bg-tint-b2/40
+              group-hover/btn:bg-tint-b2/40!
               after:absolute after:inset-0 after:z-1 after:bg-black/70
               after:opacity-0
-            `, { 'after:bg-transparent': !set.secondary.path },
+            `,
+            { 'after:bg-transparent': !set.secondary.path },
             pathClass,
           )
         ">
@@ -52,21 +58,27 @@ const { class: className, pathClass } = defineProps<{
           :title="set.secondary.path"
           :alt="set.secondary.path"
           :src="`/img/paths/${set.secondary.path}.webp`"
-          class="absolute !h-max !w-4.5 shrink-0" />
+          class="absolute h-max! w-4.5! shrink-0" />
 
-        <i-lol-runes
+        <Icon
           v-else
+          name="lp:runes"
           class="
-            !size-5.5 shrink-0 text-bc/30
+            size-5.5! shrink-0 text-bc/30
             group-hover/btn:opacity-0
           " />
 
         <icon
           name="select"
-          :class="cn(`
-            absolute z-2 size-4 opacity-0
-            group-hover/btn:opacity-60
-          `, { 'text-white': set.secondary })" />
+          :class="
+            cn(
+              `
+                absolute z-2 size-4 opacity-0
+                group-hover/btn:opacity-60
+              `,
+              { 'text-white': set.secondary },
+            )
+          " />
       </Element>
     </div>
   </Primitive>

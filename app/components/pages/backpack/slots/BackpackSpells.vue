@@ -1,17 +1,17 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/schema/schema.pocket'
+import type { Pocket } from "~~/shared/schema/schema.pocket";
 
 const props = defineProps<{
-  pocket: Pocket
-}>()
+  pocket: Pocket;
+}>();
 
 const pocket = computed(() => {
-  return props.pocket
-})
+  return props.pocket;
+});
 
 const spells = computed(() => {
-  return pocket.value.spells[0]
-})
+  return pocket.value.spells[0];
+});
 </script>
 
 <template>
@@ -20,6 +20,7 @@ const spells = computed(() => {
       v-for="spell in spells"
       :key="spell"
       :src="`/img/spells/${spell}.webp`"
-      class="size-6 rounded-full shadow-sm drop-shadow-sm" />
+      class="size-6 rounded-full shadow-sm drop-shadow-sm"
+    />
   </div>
 </template>

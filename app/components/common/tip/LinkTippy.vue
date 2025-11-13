@@ -1,16 +1,23 @@
 <script setup lang="ts">
 defineOptions({
-  inheritAttrs: false
-})
+  inheritAttrs: false,
+});
 
-const { class: className, content, hover, size = 'md', to, variant = 'link' } = defineProps<{
-  class?: HTMLAttributes['class']
-  to?: string
-  hover?: any
-  content?: string
-  variant?: any
-  size?: any
-}>()
+const {
+  class: className,
+  content,
+  hover,
+  size = "md",
+  to,
+  variant = "link",
+} = defineProps<{
+  class?: HTMLAttributes["class"];
+  to?: string;
+  hover?: any;
+  content?: string;
+  variant?: any;
+  size?: any;
+}>();
 </script>
 
 <template>
@@ -19,17 +26,13 @@ const { class: className, content, hover, size = 'md', to, variant = 'link' } = 
       :size
       :hover
       v-bind="$attrs"
-      :class="cn('!gap-1', className)"
+      :class="cn('gap-1!', className)"
       :variant
-      @click="navigateTo(to)">
+      @click="navigateTo(to)"
+    >
       {{ content }}
 
-      <icon
-        name="link-2"
-        class="
-          size-4.5
-          **:stroke-[2]
-        " />
+      <icon name="link-2" class="size-4.5 **:stroke-[2]" />
     </Button>
   </div>
 </template>

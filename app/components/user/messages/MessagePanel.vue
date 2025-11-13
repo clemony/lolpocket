@@ -9,7 +9,8 @@ import {
 defineOptions({
   meta: {
     name: 'Inbox',
-    badge: computed (() => as().inbox.messages.filter(m => !m.read).length).value,
+    badge: computed(() => as().inbox.messages.filter(m => !m.read).length)
+      .value,
     class: '**:stroke-1.5',
     icon: 'lucide:mail',
   },
@@ -30,12 +31,12 @@ defineOptions({
         <div class="px-3">
           <Input
             placeholder="Search messages..."
-            class="input mb-3 h-12 !bg-b1" />
+            class="input mb-3 h-12 bg-b1!" />
         </div>
       </template>
     </SidebarHeaderWrapper>
 
-    <div class="-mt-4 !flex w-full flex-col items-start gap-0 overflow-hidden">
+    <div class="-mt-4 flex! w-full flex-col items-start gap-0 overflow-hidden">
       <template v-if="as().inbox?.messages.length">
         <div
           v-for="(message, i) in sortedMessages"

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const props = defineProps<{
-  class?: HTMLAttributes['class']
-}>()
+  class?: HTMLAttributes["class"];
+}>();
 </script>
 
 <template>
@@ -9,13 +9,14 @@ const props = defineProps<{
     :class="
       cn(
         `
-          cursor-pointer gap-3 text-2 !text-nc/90
+          cursor-pointer gap-3 text-2 text-nc/90!
           focus:bg-b3/15
           data-[state=open]:bg-b3/15
         `,
         props.class,
       )
-    ">
+    "
+  >
     <slot />
   </DropdownMenuSubTrigger>
 </template>

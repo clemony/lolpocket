@@ -1,77 +1,70 @@
 const item: Item = {
   id: 3086,
-  name: 'Zeal',
+  name: "Zeal",
   buildsFrom: [
     {
       id: 1018,
-      name: 'Cloak of Agility',
-      gold: 600
+      name: "Cloak of Agility",
+      gold: 600,
     },
     {
       id: 1042,
-      name: 'Dagger',
-      gold: 250
-    }
+      name: "Dagger",
+      gold: 250,
+    },
   ],
   buildsInto: [
     {
       id: 3046,
-      name: 'Phantom Dancer',
-      gold: 2650
+      name: "Phantom Dancer",
+      gold: 2650,
     },
     {
       id: 6675,
-      name: 'Navori Flickerblade',
-      gold: 2650
+      name: "Navori Flickerblade",
+      gold: 2650,
     },
     {
       id: 3085,
-      name: 'Runaan\'s Hurricane',
-      gold: 2650
+      name: "Runaan's Hurricane",
+      gold: 2650,
     },
     {
       id: 3094,
-      name: 'Rapid Firecannon',
-      gold: 2650
+      name: "Rapid Firecannon",
+      gold: 2650,
     },
     {
       id: 4403,
-      name: 'The Golden Spatula',
-      gold: 7187
+      name: "The Golden Spatula",
+      gold: 7187,
     },
     {
       id: 6671,
-      name: 'Galeforce',
-      gold: 3500
-    }
+      name: "Galeforce",
+      gold: 3500,
+    },
   ],
-  icon: 'https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3086_fighter_t2_zeal.png',
-  maps: [
-    11,
-    12,
-    21,
-    35
-  ],
+  icon: "https://raw.communitydragon.org/15.15/plugins/rcp-be-lol-game-data/global/default/assets/items/icons2d/3086_fighter_t2_zeal.png",
+  maps: [11, 12, 21, 35],
   noEffects: true,
-  rank: 'Epic',
+  rank: "Epic",
   removed: false,
   shop: {
     prices: {
       combined: 350,
       sell: 480,
-      total: 1200
+      total: 1200,
     },
-    tags: [
-      'MARKSMAN',
-      'MOVEMENT'
-    ]
+    tags: ["MARKSMAN", "MOVEMENT"],
   },
-  simpleDescription: 'Slight bonuses to Critical Strike Chance, Move Speed and Attack Speed',
+  simpleDescription:
+    "Slight bonuses to Critical Strike Chance, Move Speed and Attack Speed",
   specialRecipe: 0,
   stats: {
     attackSpeed: 15,
     criticalStrikeChance: 15,
-    percentMovespeed: 4
-  }
-}
-export default item
+    percentMovespeed: 4,
+  },
+};
+export default item;

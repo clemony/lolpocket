@@ -2,22 +2,22 @@
 import type {
   DropdownMenuRadioItemEmits,
   DropdownMenuRadioItemProps,
-} from 'reka-ui'
+} from "reka-ui";
 import {
   DropdownMenuItemIndicator,
   DropdownMenuRadioItem,
   useForwardPropsEmits,
-} from 'reka-ui'
+} from "reka-ui";
 
 const props = defineProps<
-  DropdownMenuRadioItemProps & { class?: HTMLAttributes['class'] }
->()
+  DropdownMenuRadioItemProps & { class?: HTMLAttributes["class"] }
+>();
 
-const emits = defineEmits<DropdownMenuRadioItemEmits>()
+const emits = defineEmits<DropdownMenuRadioItemEmits>();
 
-const delegatedProps = reactiveOmit(props, 'class')
+const delegatedProps = reactiveOmit(props, "class");
 
-const forwarded = useForwardPropsEmits(delegatedProps, emits)
+const forwarded = useForwardPropsEmits(delegatedProps, emits);
 </script>
 
 <template>
@@ -36,14 +36,13 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
         `,
         props.class,
       )
-    ">
+    "
+  >
     <IconWrapper>
       <icon
         name="tick-sm"
-        class="
-          absolute size-5.5 opacity-0 dst transition-opacity duration-200
-          group-data-[state=checked]/radio:opacity-100
-        " />
+        class="absolute size-5.5 opacity-0 dst transition-opacity duration-200 group-data-[state=checked]/radio:opacity-100"
+      />
     </IconWrapper>
     <slot />
   </DropdownMenuRadioItem>

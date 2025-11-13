@@ -1,84 +1,53 @@
-@import 'tailwindcss';
-@import '../theme.css';
-@import 'tippy.js/dist/svg-arrow.css';
+@import "tailwindcss";
+@import "../theme.css";
+@import "tippy.js/dist/svg-arrow.css";
 
-@import 'tippy.js/animations/shift-toward-subtle.css';
-@import 'tippy.js/animations/shift-toward.css';
+@import "tippy.js/animations/shift-toward-subtle.css";
+@import "tippy.js/animations/shift-toward.css";
 
-.tippy-content {
-  @apply bg-transparent;
-}
 @utility tippy-box {
   @apply border !z-60 w-auto max-w-80 rounded-field backdrop-blur-md  drop-shadow-[1px_1px_2px_#0000006] shadow-md;
 
-  &[data-inertia][data-state='visible'] {
+  &[data-inertia][data-state="visible"] {
     transition-timing-function: cubic-bezier(0.28, 0.93, 0.75, 1.38);
   }
 
-  &[data-theme~='neutral-0'],
-  &[data-theme~='base-0'] {
-    @apply p-0 max-w-none;
-
-    &[data-theme~='neutral-0'] {
-      @apply !w-[258px] !max-w-[258px];
-    }
-    .tippy-content {
-      @apply p-0 max-w-none;
-    }
+  &[data-theme~="neutral, tippy-clean"] {
+    @apply !w-[258px] !max-w-[258px];
   }
-  &[data-theme~='sidebar'] {
-    @apply !my-0  fixed !p-0 border-l-black border-r max-h-screen   !-top-15 !left-0 rounded-r-xl !min-w-110 w-110 shadow-none drop-shadow-md  drop-shadow-black/9 border-l-0 border-b3  border-y-1;
 
+  &[data-theme~="sidebar"] {
     .tippy-content {
       @apply !p-0 !m-0 !h-screen  w-full left-0 top-0;
     }
   }
 
-  &[data-theme~='sidebar-dropdown'] {
-    @apply h-fit max-h-46    -translate-y-20 translate-x-1;
+  &[data-theme~="tippy-clean"] {
+    @apply! p-0 max-w-none;
+    .tippy-content {
+      @apply !p-0 max-w-none;
+    }
   }
 
-  .tippy-content&:not-[data-theme='neutral-0']&:not-[data-theme='base-0'] {
+  .tippy-content:not([data-theme="tippy-clean"]) {
     @apply px-3 py-1 text-2  whitespace-pre inline-block font-medium **:text-2;
   }
 
-  &[data-placement='bottom'] > .tippy-svg-arrow,
-  &[data-placement='top'] > .tippy-svg-arrow,
-  &[data-placement='left'] > .tippy-svg-arrow,
-  &[data-placement='right'] > .tippy-svg-arrow {
-    @apply !z-61 *:!z-61;
-  }
-
-  &[data-placement='right'] > .tippy-svg-arrow > svg {
-    @apply !right-1/2 !-top-px;
-  }
-  &[data-placement~='left'] > .tippy-svg-arrow > svg {
-    @apply !left-1/2 !-top-px;
-  }
-  &[data-placement~='bottom'] > .tippy-svg-arrow > svg {
-    @apply !-left-px !bottom-1/2;
-  }
-  &[data-placement~='top'] > .tippy-svg-arrow > svg {
-    @apply !left-px !top-1/2;
-  }
-
   /* default / contrast */
-  &[data-theme~='neutral-0'],
-  &[data-theme~='neutral'] {
-    @apply bg-neutral/86  border-b3/30   inset-shadow-white/10;
+  &[data-theme~="neutral"] {
+    @apply bg-neutral/86  border-b3/30  backdrop-blur-md inset-shadow-white/10;
 
     .tippy-content {
       @apply text-nc/80 **:text-nc/80;
     }
 
     & > .tippy-svg-arrow > svg:first-child {
-      @apply text-neutral/80 dss **:fill-neutral/80  mask-b-from-58% mask-b-to-64%;
+      @apply **:!text-neutral/40 dss **:!fill-neutral/60  mask-b-from-58% mask-b-to-61%;
     }
   }
 
   /* base color */
-  &[data-theme~='base-0'],
-  &[data-theme~='base'] {
+  &[data-theme~="base"] {
     @apply border-b3/80 text-bc/90 !bg-b1/90;
 
     & > .tippy-svg-arrow > svg:first-child {
@@ -86,7 +55,7 @@
     }
   }
 
-  &[data-theme~='error'] {
+  &[data-theme~="error"] {
     @apply bg-domination/86  border-b3/30   inset-shadow-white/10;
 
     .tippy-content {
@@ -99,11 +68,32 @@
   }
 
   /* blur transparent */
-  &[data-theme~='blur'] {
+  &[data-theme~="blur"] {
     @apply bg-transparent border-0 p-0 shadow-none text-bc/80;
 
     & > .tippy-svg-arrow {
       @apply hidden;
     }
+  }
+
+  /* arrows */
+  &[data-placement="bottom"] > .tippy-svg-arrow,
+  &[data-placement="top"] > .tippy-svg-arrow,
+  &[data-placement="left"] > .tippy-svg-arrow,
+  &[data-placement="right"] > .tippy-svg-arrow {
+    @apply !z-61 *:!z-61;
+  }
+
+  &[data-placement="right"] > .tippy-svg-arrow > svg {
+    @apply !right-1/2 !-top-px;
+  }
+  &[data-placement~="left"] > .tippy-svg-arrow > svg {
+    @apply !left-1/2 !-top-px;
+  }
+  &[data-placement~="bottom"] > .tippy-svg-arrow > svg {
+    @apply !-left-px !bottom-1/2;
+  }
+  &[data-placement~="top"] > .tippy-svg-arrow > svg {
+    @apply !left-0 !top-1/2;
   }
 }

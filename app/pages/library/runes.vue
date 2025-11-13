@@ -3,7 +3,7 @@ import { pathIndex } from '~~/shared/indexes'
 
 definePageMeta({
   title: 'Runes',
-  icon: 'i-lol-rune-circle',
+  icon: 'lp:rune-circle',
   listClass: '!size-5.5 ',
   path: '/library/runes',
 })
@@ -29,7 +29,7 @@ const test = ref<PathName>(pathIndex[selectedPath.value])
 
       <CloseButton
         tip="Close"
-        class="absolute top-0 right-0 !shadow-none btn-ghost"
+        class="absolute top-0 right-0 shadow-none! btn-ghost"
         @click="selectedRune = null" />
     </div>
 
@@ -46,7 +46,7 @@ const test = ref<PathName>(pathIndex[selectedPath.value])
           base="indicator"
           class="
             field-box h-19 w-full grid-cols-5 items-center justify-evenly
-            !rounded-box bg-b2/40 shadow-warm
+            rounded-box! bg-b2/40 shadow-warm
           ">
           <div
             class="

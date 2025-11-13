@@ -1,22 +1,22 @@
 <script lang="ts" setup>
-import { toast } from '~/base/notification/toast/use-toast'
+import { toast } from "~/base/notification/toast/use-toast";
 
 definePageMeta({
-  name: 'Reset Password',
-  title: 'Forgot password?',
-  description: 'Np. They\'re free. We\'ll get you a new one.',
-  icon: 'key',
-  layout: 'basic',
-})
+  name: "Reset Password",
+  title: "Forgot password?",
+  description: "Np. They're free. We'll get you a new one.",
+  icon: "key",
+  layout: "basic",
+});
 
-const password = ref('')
+const password = ref("");
 
 function handleReset() {
   toast({
-    title: 'Password reset link sent!',
+    title: "Password reset link sent!",
     description:
-      'Check your email for a message from the customer support lolpocat.',
-  })
+      "Check your email for a message from the customer support lolpocat.",
+  });
 }
 </script>
 
@@ -32,7 +32,8 @@ function handleReset() {
               type="email"
               class="h-12"
               placeholder="m@example.com"
-              required />
+              required
+            />
           </div>
           <div class="grid w-full gap-y-2">
             <Button
@@ -40,7 +41,8 @@ function handleReset() {
               size="12"
               type="submit"
               class="h-14 w-full font-medium"
-              @click="handleReset()">
+              @click="handleReset()"
+            >
               Send Reset Link
             </Button>
 
@@ -49,11 +51,9 @@ function handleReset() {
               variant="link"
               size="12"
               hover="link"
-              class="
-                underline-offset-1.5 h-14 w-full justify-center gap-3
-                justify-self-start
-              "
-              @click="navigateTo('/login')">
+              class="underline-offset-1.5 h-14 w-full justify-center gap-3 justify-self-start"
+              @click="navigateTo('/login')"
+            >
               Remembered it? Log in
             </Button>
           </div>

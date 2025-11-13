@@ -7,6 +7,7 @@ defineOptions({
   },
 })
 
+const { close, open } = useAppSidebar()
 const routes = useRouter().getRoutes()
 
 const navLinks = computed(() => {
@@ -14,7 +15,7 @@ const navLinks = computed(() => {
     routes.find(r => r.path === '/backpack'),
     routes.find(r => r.path === '/library'),
     routes.find(r => r.path === '/tools'),
-    routes.find(r => r.path === '/support')
+    routes.find(r => r.path === '/support'),
   ]
 })
 </script>
@@ -27,7 +28,7 @@ const navLinks = computed(() => {
       **:text-3
     ">
     <Collapsible
-      v-for="parentRoute, i in navLinks"
+      v-for="(parentRoute, i) in navLinks"
       :key="parentRoute.name"
       v-model:open="ui().collapseStates.panel.nav[i + 1]"
       :i="i + 1">
@@ -53,9 +54,12 @@ const navLinks = computed(() => {
         "
         menu>
         <SidebarBtnLink
-          v-for="child in parentRoute?.children.sort((a, b) => (Number(a.meta.order) - Number(b.meta.order)))"
+          v-for="child in parentRoute?.children.sort(
+            (a, b) => Number(a.meta.order) - Number(b.meta.order),
+          )"
           :key="child?.name"
-          :item="child" />
+          :to="child"
+          @click="close()" />
       </CollapsibleContent>
 
       <CollapsibleContent
@@ -67,23 +71,25 @@ const navLinks = computed(() => {
         "
         menu>
         <SidebarBtnLink
-          v-for="child in parentRoute?.children.filter(p => ['docs', 'about'].includes(String(p.name))).sort((a, b) => (Number(a.meta.order) - Number(b.meta.order)))"
+          v-for="child in parentRoute?.children
+            .filter((p) => ['docs', 'about'].includes(String(p.name)))
+            .sort((a, b) => Number(a.meta.order) - Number(b.meta.order))"
           :key="child?.name"
-          :item="child" />
+          :to="child"
+          @click="close()" />
 
         <Collapsible :default-open="false">
           <CollapsibleTrigger
             class="
-              flex h-10 w-full flex-nowrap items-center justify-start !gap-3.25
+              flex h-10 w-full flex-nowrap items-center justify-start gap-3.25!
               overflow-hidden pr-1 pl-1.5 font-medium text-nowrap text-bc/50
-              capitalize !duration-0
-              hover:!text-bc hover:underline
+              capitalize duration-0!
+              hover:text-bc! hover:underline
             ">
             <span class="relative grid size-4.5 shrink-0 place-items-center">
-
               <CaretRotate
                 direction="right"
-                class="!size-5" />
+                class="size-5!" />
             </span>
             Policies & Terms
             <Grow />
@@ -96,9 +102,12 @@ const navLinks = computed(() => {
             "
             menu>
             <SidebarBtnLink
-              v-for="child in parentRoute?.children.filter(p => !['docs', 'about'].includes(String(p.name))).sort((a, b) => (Number(a.meta.order) - Number(b.meta.order)))"
+              v-for="child in parentRoute?.children
+                .filter((p) => !['docs', 'about'].includes(String(p.name)))
+                .sort((a, b) => Number(a.meta.order) - Number(b.meta.order))"
               :key="child?.name"
-              :item="child" />
+              :to="child"
+              @click="close()" />
           </CollapsibleContent>
         </Collapsible>
       </CollapsibleContent>

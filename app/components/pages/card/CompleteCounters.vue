@@ -1,32 +1,31 @@
 <script lang="ts" setup>
-import type { Pocket } from '~~/shared/schema'
+import type { Pocket } from "~~/shared/schema";
 
 const props = defineProps<{
-  pocket: Pocket
-}>()
+  pocket: Pocket;
+}>();
 
-const pocket = ref(props.pocket)
+const pocket = ref(props.pocket);
 
 const championsLength = computed(() => {
-  return pocket.value.champions.length
-})
+  return pocket.value.champions.length;
+});
 
 const rolesLength = computed(() => {
-  return pocket.value.roles.length ?? 0
-})
+  return pocket.value.roles.length ?? 0;
+});
 
 const spellsLength = computed(() => {
-  return pocket.value.spells.length
-})
+  return pocket.value.spells.length;
+});
 
 const itemsLength = computed(() => {
   if (pocket.value.items.length === 1 && !pocket.value.items[0].items.length) {
-    return 0
+    return 0;
+  } else {
+    return pocket.value.items.length;
   }
-  else {
-    return pocket.value.items.length
-  }
-})
+});
 /* const runeSetsLength = computed (() => {
   if (pocket.value.runes.length === 1) {
     const set = ref(pocket.value.runes[0])
@@ -63,17 +62,16 @@ const itemsLength = computed(() => {
 
 <template>
   <div
-    class="
-      -ml-1.5 flex w-full items-center justify-evenly gap-7
-      **:select-none
-    ">
+    class="-ml-1.5 flex w-full items-center justify-evenly gap-7 **:select-none"
+  >
     <slot />
 
     <div
       v-tippy="
         `${championsLength ? championsLength : 'no'} pocket pick${pocket.champions.length === 1 ? '' : 's'}`
       "
-      class="flex items-center gap-1.5">
+      class="flex items-center gap-1.5"
+    >
       <i-no-champ class="size-8.5 opacity-80 dst" />
 
       <span class="font-medium dst">{{ championsLength }}</span>
@@ -81,7 +79,8 @@ const itemsLength = computed(() => {
 
     <div
       v-tippy="`${rolesLength ? rolesLength : 'no'} selected roles`"
-      class="flex items-center gap-3">
+      class="flex items-center gap-3"
+    >
       <i-roles-all class="size-5 opacity-80 dst" />
 
       <span class="font-medium dst">{{ rolesLength }}</span>
@@ -89,10 +88,9 @@ const itemsLength = computed(() => {
 
     <div
       v-tippy="`${spellsLength ? spellsLength : 'no'} spells`"
-      class="flex items-center gap-2">
-      <icon
-        name="game-icons:fire-spell-cast"
-        class="size-6 opacity-70 dst" />
+      class="flex items-center gap-2"
+    >
+      <icon name="game-icons:fire-spell-cast" class="size-6 opacity-70 dst" />
 
       <span class="font-medium dst">{{ spellsLength }}</span>
     </div>
@@ -104,10 +102,9 @@ const itemsLength = computed(() => {
 
     <div
       v-tippy="`${itemsLength ? itemsLength : 'no'} item sets`"
-      class="flex items-center gap-2.5">
-      <icon
-        name="bow"
-        class="size-6 dst" />
+      class="flex items-center gap-2.5"
+    >
+      <icon name="bow" class="size-6 dst" />
 
       <span class="font-medium dst">{{ itemsLength }}</span>
     </div>

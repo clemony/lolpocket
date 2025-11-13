@@ -1,31 +1,28 @@
 <script lang="ts" setup>
 const props = defineProps<{
-  class?: HTMLAttributes['class']
-  sideOffset?: number
-  type?: string
-  hasData?: boolean
-}>()
+  class?: HTMLAttributes["class"];
+  sideOffset?: number;
+  type?: string;
+  hasData?: boolean;
+}>();
 
-const emit = defineEmits(['update:open'])
+const emit = defineEmits(["update:open"]);
 
-const isOpen = ref(false)
-const hasData = computed(() => props.hasData)
+const isOpen = ref(false);
+const hasData = computed(() => props.hasData);
 watchEffect(() => {
-  emit('update:open', isOpen.value)
-})
+  emit("update:open", isOpen.value);
+});
 </script>
 
 <template>
   <Popover v-model:open="isOpen">
     <PopoverTrigger
-      class="btn relative flex btn-square items-center btn-neutral">
-      <icon
-        name="search-bold"
-        class="-mt-px size-4.5 shrink-0 text-nc" />
+      class="btn relative flex btn-square items-center btn-neutral"
+    >
+      <icon name="search-bold" class="-mt-px size-4.5 shrink-0 text-nc" />
 
-      <StatusIndicator
-        v-if="hasData"
-        class="-top-0.5 -right-0.25" />
+      <StatusIndicator v-if="hasData" class="-top-0.5 -right-0.25" />
     </PopoverTrigger>
 
     <CustomPopoverContent
@@ -34,17 +31,14 @@ watchEffect(() => {
       align="end"
       :side-offset="2"
       side="bottom"
-      @open-auto-focus.prevent>
+      @open-auto-focus.prevent
+    >
       <ItemSearch
         placeholder="Type or click a suggestion"
-        class="
-          sticky top-0 left-0 z-2 h-13 w-full rounded-t-lg border-4
-          border-neutral/30 !bg-accent shadow-none
-          **:!text-nc
-          [&_svg]:size-4
-        "
+        class="sticky top-0 left-0 z-2 h-13 w-full rounded-t-lg border-4 border-neutral/30 bg-accent! shadow-none **:text-nc! [&_svg]:size-4"
         set-focus
-        @update:query="(e) => e" />
+        @update:query="(e) => e"
+      />
 
       <div class="grid overflow-hidden">
         <!--   <div class="size-full border-r border-r-accent overflow-y-auto max-h-115">
@@ -54,9 +48,7 @@ watchEffect(() => {
           <LazyItemCommandTags />
         </div> -->
         <div class="relative size-full h-117 overflow-hidden">
-          <div
-            as="div"
-            class="absolute inset-0 top-0 left-0 overflow-y-scroll">
+          <div as="div" class="absolute inset-0 top-0 left-0 overflow-y-scroll">
             <div>
               <LazyItemCommandTypes />
 

@@ -23,7 +23,7 @@ const menu = [
     icon: 'strikethrough',
   },
   {
-    name: 'separator'
+    name: 'separator',
   },
   {
     action: () => editor.commands.toggleHeading({ level: 1 }),
@@ -37,9 +37,9 @@ const menu = [
 </script>
 
 <template>
-  <div class="!z-66 flex w-max flex-nowrap items-center gap-1 px-1 py-1.5">
+  <div class="z-66! flex w-max flex-nowrap items-center gap-1 px-1 py-1.5">
     <template
-      v-for="item, i in menu"
+      v-for="(item, i) in menu"
       :key="i">
       <Button
         v-if="!item.name"
@@ -49,7 +49,12 @@ const menu = [
         @click="item.action()">
         <icon
           :name="item.icon"
-          :class="cn('', { 'size-3.75 **:stroke-[2.6]': !['h1', 'h2'].includes(item.icon), 'size-4 ': item.icon === 'lucide:underline, bold' })" />
+          :class="
+            cn('', {
+              'size-3.75 **:stroke-[2.6]': !['h1', 'h2'].includes(item.icon),
+              'size-4 ': item.icon === 'lucide:underline, bold',
+            })
+          " />
       </Button>
       <Separator
         v-if="item.name === 'separator'"

@@ -2,4 +2,4 @@
 export default {
   content: [],
   theme: {},
-}
+};

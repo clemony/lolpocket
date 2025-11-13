@@ -1,69 +1,36 @@
-import type { JSONContent } from '@tiptap/core'
-import * as v from 'valibot'
-import { patchIndex } from '../indexes'
-import { FixedArray, getDeepDefaults, MinMaxArray } from './utils/helpers'
-import { pType } from './utils/pType'
-
-/* export interface UserPockets {
-  all: Pocket[]
-  archived: string[]
-  pinned: string[]
-} */
-
-// Location
-export const PocketLocationSchema = v.object({
-  folder: v.fallback(v.string(), ''), // normalized instead of nullable
-  pinned: v.fallback(v.boolean(), false),
-  trashed: v.optional(
-    v.pipe(
-      v.string(),
-      v.transform((s) => {
-        const d = new Date(s)
-        if (Number.isNaN(d.getTime()))
-          throw new Error('Invalid trashed date')
-        return d
-      })
-    )
-  ),
-})
+import * as v from "valibot"
+import { FixedArray, getDeepDefaults, MinMaxArray } from "./utils/helpers"
+import { pType } from "./utils/pType"
 
 // Items
 export const ItemSetSchema = v.object({
-  id: v.fallback(v.string(), ''),
-  name: v.fallback(v.string(), ''),
+  id: v.pipe(v.string(), v.uuid("item set uuid malformed")),
+  name: v.fallback(v.string(), ""),
   items: v.fallback(MinMaxArray(v.number(), 0, 20), []),
 })
 
 // Runes
 export const RunesPrimarySchema = v.object({
-  path: v.fallback(v.string(), ''),
+  path: v.fallback(v.string(), ""),
   runes: v.fallback(FixedArray(v.number(), 3), [0, 0, 0]),
 })
 
 export const RunesSecondarySchema = v.object({
-  path: v.fallback(v.string(), ''),
+  path: v.fallback(v.string(), ""),
   runes: v.fallback(FixedArray(v.number(), 2), [0, 0]),
 })
 
 // Spells (always 2 slots)
 export const SpellSetSchema = v.object({
-  id: v.fallback(v.string(), ''),
+  id: v.pipe(v.string(), v.uuid("spell set uuid malformed")),
   d: v.fallback(v.number(), 0),
   f: v.fallback(v.number(), 0),
 })
 
-// --- Types ---
-export type PocketLocation = v.InferOutput<typeof PocketLocationSchema>
-export type ItemSet = v.InferOutput<typeof ItemSetSchema>
-export type SpellSet = v.InferOutput<typeof SpellSetSchema>
-export type RunesPrimary = v.InferOutput<typeof RunesPrimarySchema>
-export type RunesSecondary = v.InferOutput<typeof RunesSecondarySchema>
-/* export type ShardSet = v.InferOutput<typeof ShardSchema> */
-
 // Rune Set
 
 export const RuneSetSchema = v.object({
-  id: v.fallback(v.string(), ''),
+  id: v.pipe(v.string(), v.uuid("rune set uuid malformed")),
   keystone: v.nullable(v.number()),
   primary: RunesPrimarySchema,
   secondary: RunesSecondarySchema,
@@ -72,142 +39,57 @@ export const RuneSetSchema = v.object({
 
 export type RuneSet = v.InferOutput<typeof RuneSetSchema>
 
-// Main Set
-
-const MainSchema = v.object({
-  champion: v.fallback(v.string(), ''),
-  items: v.fallback(v.string(), ''),
-  role: v.fallback(v.string(), 'All'),
-  runes: v.fallback(v.string(), ''),
-  spells: v.fallback(v.string(), ''),
-})
-
 // --- Pocket Schema ---
 export const PocketSchema = v.object({
-  key: v.optional(v.string()),
+  key: v.pipe(v.string(), v.uuid("pocket uuid malformed")),
   name: v.optional(v.string()),
-  ouuid: v.fallback(v.string(), 'mysterious pocket'),
-  uuid: v.fallback(v.string(), 'missing uuid'),
+  ouuid: v.fallback(
+    v.pipe(v.string(), v.uuid("original author uuid malformed")),
+    "mysterious pocket"
+  ),
+  uuid: v.pipe(v.string(), v.uuid("author uuid malformed")),
 
   //
-  guide: v.optional(v.array(v.string())),
-  icon: v.optional(v.string()),
-  main: v.optional(MainSchema),
+  guide: v.nullable(v.array(v.string())),
+  icon: v.nullable(v.string("icon not a string")),
 
-  //
-  champions: v.optional(v.array(v.string())),
-  items: v.optional(v.array(ItemSetSchema)),
-  roles: v.optional(v.array(v.string())),
-  runes: v.optional(v.array(RuneSetSchema)),
-  spells: v.optional(v.array(SpellSetSchema)),
+  // main set
+  _champion: v.nullish(v.string("champion key not a string")),
+  _items: v.fallback(
+    v.pipe(v.string(), v.uuid("item set uuid malformed")),
+    null
+  ),
+  _role: v.fallback(v.string("role missing"), "All"),
+  _runes: v.fallback(
+    v.pipe(v.string(), v.uuid("rune set uuid malformed")),
+    null
+  ),
+  _spells: v.fallback(
+    v.pipe(v.string(), v.uuid("spell set uuid malformed")),
+    null
+  ),
+
+  // arrays
+  champions: v.nullish(v.array(v.string())),
+  items: v.nullish(v.array(ItemSetSchema)),
+  roles: v.nullish(v.array(v.string())),
+  runes: v.nullish(v.array(RuneSetSchema)),
+  spells: v.nullish(v.array(SpellSetSchema)),
 
   //
   comments: v.fallback(v.boolean(), false),
   likes: v.fallback(v.number(), 1),
   public: v.fallback(v.boolean(), false),
-  tags: v.optional(v.array(v.string())),
-  thread: v.nullable(v.string()),
+  tags: v.nullish(v.array(v.string())),
 
   //
-  created: v.optional(v.string()),
-  updated: v.optional(v.string()),
+  created: v.pipe(v.string(), v.isoTimestamp("incorrect date format")),
+  updated: v.pipe(v.string(), v.isoTimestamp("incorrect date format")),
 })
 
-// --- Type ---
+// --- Types ---
+export type ItemSet = v.InferOutput<typeof ItemSetSchema>
+export type SpellSet = v.InferOutput<typeof SpellSetSchema>
+export type RunesPrimary = v.InferOutput<typeof RunesPrimarySchema>
+export type RunesSecondary = v.InferOutput<typeof RunesSecondarySchema>
 export type Pocket = v.InferOutput<typeof PocketSchema>
-
-// --- Pocket Factory ---
-
-export function newRuneSet(): RuneSet {
-  return {
-    id: crypto.randomUUID(),
-    keystone: null,
-    primary: {
-      path: '',
-      runes: [0, 0, 0],
-    },
-    secondary: {
-      path: '',
-      runes: [0, 0],
-    },
-    shards: [0, 0, 0],
-  }
-}
-
-export async function generatePocket(pockets: Pocket[]) {
-  pockets.push(newPocket())
-}
-
-export function newItemSet(): ItemSet {
-  const a = getDeepDefaults(ItemSetSchema)
-  a.id = crypto.randomUUID()
-  a.name = generateName()
-  return a
-}
-
-export function resetRuneSet(set: RuneSet): RuneSet {
-  const id = set.id
-  const a = getDeepDefaults(RuneSetSchema)
-  a.id = id
-  return a
-}
-
-export function newSpellSet(): SpellSet {
-  const a = getDeepDefaults(SpellSetSchema)
-  a.id = crypto.randomUUID()
-  return a
-}
-
-export function addSpellSet(pocket: Pocket | string) {
-  let set = <SpellSet[]>[]
-  set = pType(pocket).spells
-  const a = getDeepDefaults(SpellSetSchema)
-  a.id = crypto.randomUUID()
-  set.push(a)
-}
-
-export function addRuneSet(pocket: Pocket | string) {
-  const p = pType(pocket)
-  if (p.runes.length >= 10)
-    return 'Max amount of rune sets reached!'
-
-  let set = <RuneSet[]>[]
-  set = p.runes
-  const a = newRuneSet()
-  a.id = crypto.randomUUID()
-  set.push(a)
-}
-
-export function newPocket(): Pocket {
-  return {
-    // data
-    key: crypto.randomUUID(),
-    name: generateName(),
-    ouuid: as().account.puuid,
-    uuid: as().account.puuid,
-
-    // info
-    guide: [],
-    icon: '',
-    main: { champion: '', items: '', role: 'All', runes: '', spells: '' },
-
-    // sets
-    champions: [],
-    items: [newItemSet()],
-    roles: ['all'],
-    runes: [newRuneSet()],
-    spells: [newSpellSet()],
-
-    // social
-    comments: false,
-    likes: 0,
-    public: false,
-    tags: [],
-    thread: null,
-
-    // time
-    created: new Date().toISOString(),
-    updated: new Date().toISOString(),
-  }
-}
-// protected: false,

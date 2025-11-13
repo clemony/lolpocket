@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { NuxtLink } from '#components'
-import { NavigationMenuLink } from 'reka-ui'
+import { NuxtLink } from "#components";
+import { NavigationMenuLink } from "reka-ui";
 
 const {
   at,
@@ -9,14 +9,14 @@ const {
   nuxt,
   to,
 } = defineProps<{
-  class?: HTMLAttributes['class']
-  to?: string
-  hash?: boolean
-  at?: boolean
-  nuxt?: boolean
-}>()
+  class?: HTMLAttributes["class"];
+  to?: string;
+  hash?: boolean;
+  at?: boolean;
+  nuxt?: boolean;
+}>();
 
-const component = computed(() => (nuxt ? NuxtLink : NavigationMenuLink))
+const component = computed(() => (nuxt ? NuxtLink : NavigationMenuLink));
 </script>
 
 <template>
@@ -31,15 +31,10 @@ const component = computed(() => (nuxt ? NuxtLink : NavigationMenuLink))
         className,
       )
     "
-    @click="navigateTo(to)">
-    <icon
-      v-if="at"
-      name="at"
-      class="size-3.75" />
-    <icon
-      v-if="hash"
-      name="hash"
-      class="size-3.75" />
+    @click="navigateTo(to)"
+  >
+    <icon v-if="at" name="at" class="size-3.75" />
+    <icon v-if="hash" name="hash" class="size-3.75" />
     <slot />
   </component>
 </template>

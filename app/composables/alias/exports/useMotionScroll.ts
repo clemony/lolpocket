@@ -1,1 +1,1 @@
-export { useScroll as useMotionScroll } from 'motion-v'
+export { useScroll as useMotionScroll } from "motion-v";

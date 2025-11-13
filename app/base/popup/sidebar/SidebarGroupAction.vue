@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import type { PrimitiveProps } from 'reka-ui'
-import { Primitive } from 'reka-ui'
+import type { PrimitiveProps } from "reka-ui";
+import { Primitive } from "reka-ui";
 
 const props = defineProps<
   PrimitiveProps & {
-    class?: HTMLAttributes['class']
+    class?: HTMLAttributes["class"];
   }
->()
+>();
 </script>
 
 <template>
@@ -32,7 +32,8 @@ const props = defineProps<
         'group-data-[collapsible=icon]:hidden',
         props.class,
       )
-    ">
+    "
+  >
     <slot />
   </Primitive>
 </template>

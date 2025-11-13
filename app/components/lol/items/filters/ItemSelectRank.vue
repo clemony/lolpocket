@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import { itemRanks } from '#shared/references'
+import { itemRanks } from "#shared/references";
 
-const ranks = ref(itemRanks)
-console.log('🌱 - ranks:', ranks)
+const ranks = ref(itemRanks);
+console.log("🌱 - ranks:", ranks);
 function onClick(rank: string): void {
-  if (rank === is().filters.rank)
-    is().filters.rank = null
+  if (rank === is().filters.rank) is().filters.rank = null;
 }
 </script>
 
@@ -16,15 +15,16 @@ function onClick(rank: string): void {
       :key="rank.name"
       variant="ghost"
       size="sm"
-      class="justify-start !gap-4 !pl-3 capitalize shadow-none">
-
+      class="justify-start gap-4! pl-3! capitalize shadow-none"
+    >
       <input
         v-model="is().filters.rank"
         type="radio"
         name="item-rank"
         :value="rank.name"
         class="peer hidden"
-        @click="onClick(rank.name)" />
+        @click="onClick(rank.name)"
+      />
       <span class="grid size-5 place-items-center">
         <icon
           v-if="rank.icon"
@@ -32,7 +32,8 @@ function onClick(rank: string): void {
             color: rank.color,
           }"
           :name="rank.icon"
-          class="absolute size-5" />
+          class="absolute size-5"
+        />
       </span>
       <span class="grow">
         {{ rank.name }}
@@ -50,8 +51,8 @@ function onClick(rank: string): void {
       <icon
         v-if="is().filters.rank === rank.name"
         name="tick-sm"
-        class="size-6 dst" />
-
+        class="size-6 dst"
+      />
     </Label>
   </div>
 </template>

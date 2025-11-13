@@ -1,27 +1,27 @@
 <script setup lang="ts">
-import type { ContextMenuContentEmits, ContextMenuContentProps } from 'reka-ui'
-import { motion } from 'motion-v'
+import type { ContextMenuContentEmits, ContextMenuContentProps } from "reka-ui";
+import { motion } from "motion-v";
 import {
   ContextMenuContent,
   ContextMenuPortal,
   useForwardPropsEmits,
-} from 'reka-ui'
+} from "reka-ui";
 
 defineOptions({
   inheritAttrs: false,
-})
+});
 const props = defineProps<
   ContextMenuContentProps & {
-    class?: HTMLAttributes['class']
-    align?: Align
-    side?: Side
+    class?: HTMLAttributes["class"];
+    align?: Align;
+    side?: Side;
   }
->()
-const emits = defineEmits<ContextMenuContentEmits>()
+>();
+const emits = defineEmits<ContextMenuContentEmits>();
 
-const delegatedProps = reactiveOmit(props, 'class')
+const delegatedProps = reactiveOmit(props, "class");
 
-const forwarded = useForwardPropsEmits(delegatedProps, emits)
+const forwarded = useForwardPropsEmits(delegatedProps, emits);
 
 const variants = {
   hidden: {
@@ -32,15 +32,13 @@ const variants = {
     opacity: 1,
     scale: 1,
   },
-}
+};
 </script>
 
 <template>
   <ContextMenuPortal>
     <AnimatePresence>
-      <ContextMenuContent
-        as-child
-        v-bind="forwarded">
+      <ContextMenuContent as-child v-bind="forwarded">
         <motion.div
           :variants="variants"
           initial="hidden"
@@ -59,7 +57,8 @@ const variants = {
               `,
               props.class,
             )
-          ">
+          "
+        >
           <slot />
         </motion.div>
       </ContextMenuContent>

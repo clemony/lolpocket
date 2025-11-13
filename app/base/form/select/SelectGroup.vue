@@ -1,22 +1,20 @@
 <script setup lang="ts">
-import type { SelectGroupProps } from 'reka-ui'
-import { SelectGroup } from 'reka-ui'
+import type { SelectGroupProps } from "reka-ui";
+import { SelectGroup } from "reka-ui";
 
 const props = defineProps<
-  SelectGroupProps & { class?: HTMLAttributes['class'] }
->()
+  SelectGroupProps & { class?: HTMLAttributes["class"] }
+>();
 
 const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
+  const { class: _, ...delegated } = props;
 
-  return delegated
-})
+  return delegated;
+});
 </script>
 
 <template>
-  <SelectGroup
-    :class="cn('w-full', props.class)"
-    v-bind="delegatedProps">
+  <SelectGroup :class="cn('w-full', props.class)" v-bind="delegatedProps">
     <slot />
   </SelectGroup>
 </template>

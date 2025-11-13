@@ -1,2 +1,2 @@
-export * from './fetchInBatches'
-export * from './fetchMatchData'
+export * from "./fetchInBatches";
+export * from "./fetchMatchData";
